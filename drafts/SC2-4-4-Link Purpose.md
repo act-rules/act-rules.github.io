@@ -1,5 +1,6 @@
 Back to [[2.4.4 Link Purpose (In Context)]]
 
+
 ## Background
 - [http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html#pdlinkcontextdef programmatically determined link context]
 - [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/ H30: Providing link text that describes the purpose of a link for anchor elements]
@@ -14,29 +15,30 @@ Back to [[2.4.4 Link Purpose (In Context)]]
 - [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F63 F63: Failure of Success Criterion 2.4.4 due to providing link context only in content that is not related to the link]
 - [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F89 F89 - providing null alt text on an image that is the only content of a link]
 
+
 ## Assumptions
 - This test checks for actual links, not links whose role has been mapped to other UI elements using ARIA (example role="button").
 - This test does not check for missing alt attribute for `<area>` tags in image maps, that is covered under [[SC2-4-4-image-map]]
 
-## Test properties
 
-| Property         | Value
-|------------------|----
-|Test name         |Link Purpose
-|Success Criterion |[[ 2.4.4 Link Purpose (In Context)]]
-|Test mode         |SemiAuto
-|Test environment  |HTML source or DOM
-|Test subject      |single web page
+## Test properties
+| Property          | Value
+|-------------------|----
+| Test name         | Link Purpose
+| Success Criterion | [[ 2.4.4 Link Purpose (In Context)]]
+| Test mode         | SemiAuto
+| Test environment  | HTML source or DOM
+| Test subject      | Single web page
 
 
 ## Test procedure
 ### Selector
-Test method: [semi-automatic]
+Test method: [automatic]
 - All anchor tags with an "href" attribute on a webpage, excluding anchor tags that have been mapped to other elements using ARIA roles.
 - All elements with a `role="link"` attribute.
 
 ### Step 1 - Check for Accessible Name
-Test method: [semi-automatic]
+Test method: [automatic]
 
 - For each link, use the accessible name algorithm to derive the link's accessible name: see [http://www.w3.org/TR/html-aapi/#a-element HTML to Platform Accessibility APIs Implementation Guide] - section 6.10
 # If link has an aria-labelledby attribute, the link's accessible name is the value of its associated element.
@@ -46,31 +48,38 @@ Test method: [semi-automatic]
 
 If none of the above yield a usable text string for the link:
 return
-{{Failed
-|testcase = SC2-4-4-link-text
-|id = SC2-4-4-link-text-fail1
-|error =  No accessible name for link.
-}}
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC2-4-4-link-text
+| ID       | SC2-4-4-link-text-fail1
+| Error    | No accessible name for link.
+
 else go to [[Step 2]]
 
 ### Step 2 - Check for Uniqueness.
 Test method: [semi-automatic]
+
 Compare the calculated accessible names (see step 1) of all links on the page.
+
 If all accessible names are unique then:
 Return
-{{Passed
-|testcase = SC2-4-4-link-text
-|id = SC2-4-4-link-text-pass1
-}}
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC2-4-4-link-text
+| ID       | SC2-4-4-link-text-pass1
 
 else go to [[Step 3]]
 
 ### Step 3 - Check Link Targets
 Test method: [semi-automatic]
+
 The following data structure is necessary for the remaining steps in this test:
-# Create a group of all links whose accessible name is identical. (from here on refered to as a "group item")
-# Add the group to a datastructure such as a list or an array.
-# Repeat procedure until you have explored all the links on the page.
+
+- Create a group of all links whose accessible name is identical. (from here on refered to as a "group item")
+- Add the group to a datastructure such as a list or an array.
+- Repeat procedure until you have explored all the links on the page.
 
 Now you have a collection of links grouped by their accessible names. In other wordsWithin each group item, all links have the same accessible name. We know we have at least one group item, since we got past [[Step 2]]. In the remaining steps we need to check for other factors that may explain why link texts are the same, and determine whether other factors exist that distinguish link texts.
 
@@ -82,12 +91,14 @@ Now you have a collection of links grouped by their accessible names. In other w
 If a group item of links fails all checks, the test fails.
 
 Check if links with identical accessible name go to the same destination.
-If all links in a group item go to same destination
-Return
-{{Passed
-|testcase = SC2-4-4-link-text
-|id = SC2-4-4-link-text-pass2
-}}
+
+If all links in a group item go to same destination, return
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC2-4-4-link-text
+| ID       | SC2-4-4-link-text-pass2
+
 else go to [[Step 4]]
 
 ### Step 4 - Add Accessible Description
@@ -100,17 +111,21 @@ Compute the link´s accessible description (see html to platform guide, section 
 Compare links with their accessible names combined with their accessible descriptions.
 If the combination of accessible name and accessible description uniquely identifies all links in a group item:
 Return
-{{Passed
-|testcase = SC2-4-4-link-text
-|id = SC2-4-4-link-text-pass3
-}}
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC2-4-4-link-text
+| ID       | SC2-4-4-link-text-pass3
 
 else go to [[Step 5]]
 
 ### Step 5 - Calculate Context
 Test method: [semi-automatic]
+
 Explore links together with their [http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html#pdlinkcontextdef programmatically determined link context]
+
 This includes textual content of:
+
 - Same paragraph as link
 - Same list item as link
 - Same table cell as link (if table role is not marked with presentation)
@@ -118,39 +133,43 @@ This includes textual content of:
 
 For each link, construct a variable which contains the link's accessible name, description and context. Repeat the uniqueness check.
 
-If all links in a group item, considered together with their computed accessible description and programatically determinable context are unique:
-Return
-{{Passed
-|testcase = SC2-4-4-link-text
-|id = SC2-4-4-link-text-pass4
-}}
+If all links in a group item, considered together with their computed accessible description and programatically determinable context are unique: Return
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC2-4-4-link-text
+| ID       | SC2-4-4-link-text-pass4
+
 else go to [[Step 6]]
 
 ### Step 6 - Links are ambiguous to All Users
 Test method: [manual]
+
 (links may be ambiguous to users in general, need interactive testing).
+
 For all remaining links in a given group item, present them to human testers.
+
 Ask the testers if they can uniquely identify the purpose of each link within a group from its on-screen location or visible context.
 
-{{UserInput
-|presented-item = A set of links with identical name/accessible description and context as well as their location on the webpage highlighted visually.
-|requires-context = Yes links on screen (links in visual context)
-|requires-interaction = No (unless we recommend user activates and follows each link, which we might want to do)
-|question = "The text description of these x links is the same. By looking at the screen, can you visually identify the purpose of these links better than the text can?
-|help = The link text presented to you should uniquely identify the purpose of each link on the page. For these links that is not the case. Can you, by looking at the links on your screen, identify the different destinations or context of these links better than by just looking at the accessible link text?
+**User input question:**
+| Presented item       | A set of links with identical name/accessible description and context as well as their location on the webpage highlighted visually.
+| Requires context     | Yes links on screen (links in visual context)
+| Requires Interaction | No (unless we recommend user activates and follows each link, which we might want to do)
+| Question             | "The text description of these x links is the same. By looking at the screen, can you visually identify the purpose of these links better than the text can?
+| Help                 | The link text presented to you should uniquely identify the purpose of each link on the page. For these links that is not the case. Can you, by looking at the links on your screen, identify the different destinations or context of these links better than by just looking at the accessible link text?
 |repair = What would you propose as a good text description of the link, e.g. for those who can't see  it on the screen?
-}}
-If yes
-return
-{{Failed
-|testcase = SC2-4-4-link-text
-|id = SC2-4-4-link-text-fail2
-|error = Link text, together with description and context, is not sufficient to identify the link purpose.
-}}
-else
-(link text meant to be ambiguous to all users)
-Return
-{{Passed
-|testcase = SC2-4-4-link-text
-|id = SC2-4-4-link-text-pass5
-}}
+
+If yes return
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC2-4-4-link-text
+| ID       | SC2-4-4-link-text-fail2
+| Error    | Link text, together with description and context, is not sufficient to identify the link purpose.
+
+else (link text meant to be ambiguous to all users), return
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC2-4-4-link-text
+| ID       | SC2-4-4-link-text-pass5

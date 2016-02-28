@@ -14,94 +14,91 @@ This test checks that tags of an HTML or XHTML document are nested correctly. So
 
 
 ## Assumptions
-
 *no known assumptions*
 
-## Test properties
 
-| Property         | Value
-|------------------|----
-|Test requirement  |[[4.1.1 Parsing]]
-|Test mode         |automatic
-|Test environment  | HTML source
-|Test subject      | single web page
+## Test properties
+| Property          | Value
+|-------------------|----
+| Test requirement  | [[4.1.1 Parsing]]
+| Test mode         | Automatic
+| Test environment  | HTML source
+| Test subject      | Single web page
 
 
 ## Test procedure
+
 ### Selector
-Test method: [semi-automatic]
+Test method: [automatic]
 
 Select all opening and closing tags in the HTML document
 
 ### Step 1: Verify opening tag attributes=
-Test method: [semi-automatic]
+Test method: [automatic]
 
 - IF the tag is a closing tag:
-** GO TO step 4
+  - GO TO step 4
 
 ### Step 2: Check unclosed opening tags=
-Test method: [semi-automatic]
+Test method: [automatic]
 
 - Locate the closing tag that corresponds to the current tag
 - IF there was no closing tag
-**  IF the element type requires a closing tag:
-***   RETURN SC4-1-1-tag-nesting-fail1
-**  IF the document is an XML page AND the tag is not self-closing:
-***   RETURN SC4-1-1-tag-nesting-fail2
-**  ELSE RETURN SC4-1-1-tag-nesting-pass1
+  - IF the element type requires a closing tag:
+    - RETURN SC4-1-1-tag-nesting-fail1
+  - IF the document is an XML page AND the tag is not self-closing:
+    - RETURN SC4-1-1-tag-nesting-fail2
+  - ELSE RETURN SC4-1-1-tag-nesting-pass1
 
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC4-1-1-tag-nesting
+| Error    | This element requires a closing tag.
+| Pointer  | selector result
+| ID       | SC4-1-1-tag-nesting-fail1
 
-{{Failed
-|testcase = SC4-1-1-tag-nesting
-|error = This element requires a closing tag.
-|pointer = selector result
-|id = SC4-1-1-tag-nesting-fail1
-}}
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC4-1-1-tag-nesting
+| Error    | Element must use self-closing syntax.
+| Pointer  | selector result
+| ID       | SC4-1-1-tag-nesting-fail2
 
-{{Failed
-|testcase = SC4-1-1-tag-nesting
-|error = Element must use self-closing syntax.
-|pointer = selector result
-|id = SC4-1-1-tag-nesting-fail2
-}}
-
-{{Passed
-|testcase = SC4-1-1-tag-nesting
-|pointer = selector result
-|id = SC4-1-1-tag-nesting-pass1
-}}
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC4-1-1-tag-nesting
+| Pointer  | selector result
+| ID       | SC4-1-1-tag-nesting-pass1
 
 ### Step 3: Check that tags are closed in the right place=
-Test method: [semi-automatic]
+Test method: [automatic]
 
 - Make a list childTags of tags that follow the current tag, until it's closing tag
 - IF childTags has an opening tag for each closing tag in the list:
-**  return SC4-1-1-tag-nesting-pass2
+  - return SC4-1-1-tag-nesting-pass2
 - ELSE IF NOT ALL these unopened closing tags does not fail STEP 4:
-**  return SC4-1-1-tag-nesting-fail3
+  - return SC4-1-1-tag-nesting-fail3
 
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC4-1-1-tag-nesting
+| Pointer  | selector result
+| ID       | SC4-1-1-tag-nesting-pass2
 
-{{Passed
-|testcase = SC4-1-1-tag-nesting
-|pointer = selector result
-|id = SC4-1-1-tag-nesting-pass2
-}}
-
-{{Failed
-|testcase = SC4-1-1-tag-nesting
-|error = Element is incorrectly nested
-|pointer = selector result
-|id = SC4-1-1-tag-nesting-fail3
-}}
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC4-1-1-tag-nesting
+| Error    | Element is incorrectly nested
+| Pointer  | selector result
+| ID       | SC4-1-1-tag-nesting-fail3
 
 ### Step 4: Closing tags have a corresponding opening tag=
 - IF The current closing tag does not have a corresponging opening tag:
-**  Return SC4-1-1-tag-nesting-fail4
+  - Return SC4-1-1-tag-nesting-fail4
 
-
-{{Failed
-|testcase = SC4-1-1-tag-nesting
-|error = Closing tag does not have a corresponding opening tag
-|pointer = selector result
-|id = SC4-1-1-tag-nesting-fail4
-}}
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC4-1-1-tag-nesting
+| Error    | Closing tag does not have a corresponding opening tag
+| Pointer  | selector result
+| ID       | SC4-1-1-tag-nesting-fail4

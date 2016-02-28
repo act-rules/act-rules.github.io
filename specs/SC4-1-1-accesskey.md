@@ -3,69 +3,59 @@ This test belongs to [[4.1.1 Parsing]].
 {{status|1|1104}}
 [[Category:Completed]]
 
-## Description
 
+## Description
 This test checks accesskey attribute for all elements to have a unique value.
 
-## Background
 
+## Background
 - [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/F17 F17: Failure of Success Criterion 1.3.1 and 4.1.1 due to insufficient information in DOM to determine one-to-one relationships (e.g., between labels with same id) in HTML]
 - [http://wiki.egovmon.no/wiki/SC4.1.1#ID:_F17-1| eGovMon test F17-1]
 
-## Assumptions
 
+## Assumptions
 - If the accesskey value has multiple characters the user agent picks the first character and ignores the rest. http://www.whatwg.org/specs/web-apps/current-work/multipage/interaction.html#the-accesskey-attribute
 
-## Test properties
 
-!Property
-!Values
-|-
-|Test name
-|Provide unique accesskeys
-|-
-|Test requirement
-|[[4.1.1 Parsing]]
-|-
-|Test mode
-|Automatic
-|-
-|Test environment
-|DOM
-|-
-|Test subject
-|single web page
-|}
+## Test properties
+| Property          | Value
+|-------------------|----
+| Test name         | Provide unique accesskeys
+| Test requirement  | [[4.1.1 Parsing]]
+| Test mode         | Automatic
+| Test environment  | DOM
+| Test subject      | single web page
+
 
 ## Test procedure
 
 ### Selector
-Test method: [semi-automatic]
+Test method: [automatic]
 
 Select any element with an accesskey attribute. The following CSS selector could be used: *[accesskey]
 
 ### Step 1
-Test method: [semi-automatic]
+Test method: [automatic]
 
 - IF there is no list called 'knownAccesskeys':
-**  Create an empty list 'knownAccesskeys;
+  -  Create an empty list 'knownAccesskeys;
 - Take the first character of the ACCESSKEY attribute as FirstChar
 - IF the FirstChar exists in 'knownAccesskeys':
-**  Return SC4-1-1-accesskey-fail1
+  - Return SC4-1-1-accesskey-fail1
 - ELSE:
-** Add the FirstChar to 'knownAccesskeys'
-**  Return SC4-1-1-accesskey-pass1
+  - Add the FirstChar to 'knownAccesskeys'
+  - Return SC4-1-1-accesskey-pass1
 
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC4-1-1-accesskey
+| Pointer  | selector result
+| ID       | SC4-1-1-accesskey-pass1
 
-{{Passed
-|testcase = SC4-1-1-accesskey
-|pointer = selector result
-|id = SC4-1-1-accesskey-pass1
-}}
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC4-1-1-accesskey
+| Error    | The accesskey of this element has occurred before on this page
+| Pointer  | selector result
+| ID       | SC4-1-1-accesskey-fail1
 
-{{Failed
-|testcase = SC4-1-1-accesskey
-|error = The accesskey of this element has occurred before on this page
-|pointer = selector result
-|id = SC4-1-1-accesskey-fail1
-}}

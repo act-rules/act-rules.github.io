@@ -16,32 +16,32 @@ This test checks that attributes of an element are unique.
 
 
 ## Assumptions
-
 *no known assumptions*
 
-## Test properties
 
+## Test properties
 | Property         | Value
 |------------------|----
 | Test requirement | [4.1.1 Parsing]
-| Test mode        | automatic
+| Test mode        | Automatic
 | Test environment | HTML source
-| Test subject     | single web page
+| Test subject     | Single web page
 
 
 ## Test procedure
 
-### Selector Test method: [semi-automatic]
+### Selector
+Test method: [automatic]
 
 Select all opening tags in the HTML document
 
-### Step 1 Test method: [semi-automatic]
+### Step 1
+Test method: [automatic]
 
 - Make a list of all the attribute names on the current tag
 - IF any of the attributes occurs more the once:
-  *  Return SC4-1-1-unique-attrs-fail1
+  - Return SC4-1-1-unique-attrs-fail1
 - ELSE Return SC4-1-1-unique-attrs-pass1
-
 
 | Outcome  | Passed
 |----------|-----
@@ -56,4 +56,3 @@ Select all opening tags in the HTML document
 | Testcase | SC4-1-1-unique-attrs
 | Error    | Attribute <attribute-name> was used more then once on the element <pointer>
 | Pointer  | selector result
-

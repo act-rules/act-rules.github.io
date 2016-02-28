@@ -27,32 +27,32 @@ This test does not prescribe which of these definitions to use as long as one of
 
 ## Test properties
 
-| Property         | Value
-|------------------|----
-|Success Criterion |[[3.1.1 Language of Page]]
-|Test mode         |semiAuto
-|Test environment  |DOM
-|Test subject      |single web page
+| Property          | Value
+|-------------------|----
+| Success Criterion | [[3.1.1 Language of Page]]
+| Test mode         | SemiAuto
+| Test environment  | DOM
+| Test subject      | Single web page
 
 
 ## Test procedure
 
 ### Selector
-Test method: [semi-automatic]
+Test method: [automatic]
 L1 = value of `lang` attribute.
 
 ### Step 1
-Test method: [semi-automatic]
+Test method: [automatic]
 Select a continuous run of text from one or more consecutive `p`-elements. If no `p`-elements exist, select any text from the body of the web page. The text should be at least 300 characters in length and not contain any language changes, i.e. lang-attributes on the element or its parent. If no such text is found, continue with [[#Step 2|Step 2]].
 
 Use a [[language identification algorithm]] to check if L1 is the language of the selected text.
 
 If yes, return
 
-{{Passed
-|testcase = SC311-text
-|id = SC311-text-pass1
-}}
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC311-text
+| ID       | SC311-text-pass1
 
 Else continue with [[#Step 2|Step 2]].
 
@@ -68,16 +68,16 @@ Help text: "Primary language" means the language of the majority of the text on 
 
 If yes, return
 
-{{Passed
-|testcase = SC311-text
-|id = SC311-text-pass2
-}}
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC311-text
+| ID       | SC311-text-pass2
 
 Else return
 
-{{Failed
-|testcase = SC311-text
-|id = SC311-text-fail1
-|error = The primary language of the page is not specified correctly.
-|info = L1
-}}
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC311-text
+| ID       | SC311-text-fail1
+| Error    | The primary language of the page is not specified correctly.
+| Info     | L1

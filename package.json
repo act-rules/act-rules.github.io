@@ -1,0 +1,32 @@
+{
+  "name": "auto-wcag",
+  "version": "1.0.0",
+  "description": "Test case definitions for wcag 2.0 conformance testing",
+  "main": "dist/index.html",
+  "dependencies": {
+    "marked": "^0.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "node build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auto-wcag/auto-wcag.git"
+  },
+  "keywords": [
+    "wcag",
+    "a11y",
+    "accessibility",
+    "auto-wcag",
+    "w3c",
+    "wai",
+    "wcag20"
+  ],
+  "author": "Wilco Fiers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/auto-wcag/auto-wcag/issues"
+  },
+  "homepage": "https://github.com/auto-wcag/auto-wcag#readme"
+}

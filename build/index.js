@@ -1,7 +1,8 @@
 
-var readDir = require('./read-dir-recursive');
 var marked = require('marked');
 var Handlebars = require('handlebars');
+var readDir = require('./read-dir-recursive');
+var createRulesMdFile = require('./build-criterion');
 
 var fs = require('fs-extra');
 var path = require('path');
@@ -11,6 +12,9 @@ var rulesDir = path.resolve(__dirname, '../rules/');
 var outDir = path.resolve(__dirname, '../dist/');
 var templatePath = path.resolve(__dirname, './spec-template.html');
 var tmpRuleDir = path.join(pagesDir, './rules/');
+
+// Create a rules file
+createRulesMdFile();
 
 // Empty the output directory
 fs.emptydirSync(outDir);

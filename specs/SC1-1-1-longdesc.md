@@ -74,7 +74,9 @@ Test method: [manual]
 
 Concatenate the results of [[Text Alternative Computation]] Algorithm run on the element and assign it to variable T1.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Image with T1 and the content of the page referenced by the longdesc  at the referenced anchor point (if applicable)
 | Question             | Does the alternative provide an extended description of the image additionally to T1?
 | Help                 | If the images contribute meaning to the page or provide any functionality or convey information additional to the pages text, this must be described. The alternative may be an entire page. The main content of which should provide the description.

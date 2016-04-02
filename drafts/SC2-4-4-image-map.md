@@ -78,7 +78,9 @@ else return
 ### Step 4: Does the text of the link describe its purpose? (H24, G91)
 Test method: [manual]
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | The alt attribute of the area element, and the image with the current area highlighted
 | Requires context     | yes
 | Requires Interaction | no

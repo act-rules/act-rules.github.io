@@ -59,7 +59,9 @@ Create a list of pages with identical page titles where each list item consists 
 For each item in this list.
 Present the page title to user and ask the usre to open at least two of the URLs associated with that title in a separate window or tab and inspect the content of those pages.
  
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | A list of URLs (to webpages with identical titles).
 | Requires context     | yes
 | Requires Interaction | yes

@@ -93,7 +93,9 @@ Test method: [manual]
 
 For each remaining table that matches the selector, ask user to confirm that the table is not a data table.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | A table (or page with location of table highlighted)
 | Question             | Does the table look like an actual datatable?
 | Help                 | A datatable is a table that: Visually looks like a table and, b. When you look at a cell in the table, you need to check its column header or row header to fully understand the content of that cell.

@@ -41,7 +41,9 @@ The entire web page.
 Test method: [manual]
 Check if the web page provides links to navigate to related web pages.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Web page.
 | Requires context     | yes
 | Requires Interaction | yes
@@ -59,7 +61,9 @@ Test method: [manual]
 
 Check if the web page provides a search form or a link to the search page.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Web page.
 | Requires context     | yes
 | Requires Interaction | yes
@@ -82,7 +86,9 @@ Test method: [manual]
 
 Check if the web page provides a link to the site map.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Web page.
 | Requires context     | yes
 | Requires Interaction | yes
@@ -98,7 +104,9 @@ Test method: [manual]
 
 Check if the site map is a valid site map.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Site map.
 | Requires context     | yes
 | Requires Interaction | yes
@@ -121,7 +129,9 @@ Test method: [manual]
 
 Check if the web page provides a list of links to all other web pages.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Web page.
 | Requires context     | yes
 | Requires Interaction | yes

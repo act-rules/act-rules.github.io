@@ -76,7 +76,9 @@ Test method: [automatic]
 
 Check if there is no moving or scrolling content or blinking content longer than 5 seconds.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Web page.
 | Requires context     | no
 | Requires Interaction | no
@@ -97,7 +99,9 @@ Test method: [manual]
 
 Check if there is a mechanism to pause or stop the moving, scrolling or blinking content.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Web page.
 | Requires context     | yes
 | Requires Interaction | yes

@@ -34,7 +34,9 @@ Select form element with submit button (input[@type='submit'] or input[@type='im
 ### Step 1
 Test method: [manual]
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | selected form including all form controls
 | Requires context     | no
 | Requires Interaction | yes
@@ -53,7 +55,9 @@ else continue with [[#Step 2]]
 ### Step 2
 Test method: [manual]
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | *(same as in Step 1)*
 | Requires context     | yes
 | Requires Interaction | no

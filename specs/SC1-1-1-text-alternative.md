@@ -84,7 +84,9 @@ else continue with [[#Step 8: compute text alternative]]
 ### Step 4: ask for informational or functional group of images (ARIA10 and G196)
 Test method: [manual]
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Parent element containing group of images
 | Question             | Does this combination of images provide information or functionality?
 | Help                 | An example for an informative group of images is the combination of five stars to display a rating-result.
@@ -111,7 +113,9 @@ Concatenate the results of [[Text Alternative Computation]] Algorithm run on all
 
 All items of the group should be removed from the set of selector-matches after this step.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Parent element containing group of images
 | Question             | Does T1 sufficiently describe the group of images?
 | Help                 | If the images contribute meaning to the page or provide any functionality or convey information additional to the pages text, this must be described. Please refer to the [https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description explanations concerning sufficient short text alternatives] for further information.
@@ -142,7 +146,9 @@ Concatenate the results of [[Text Alternative Computation]] Algorithm run on all
 
 All items of the group should be removed from the set of selector-matches after this step.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Parent element containing group of images
 | Question             | Does T1 sufficiently describe the group of images?
 | Help                 | If the images contribute meaning to the page or provide any functionality or convey information additional to the pages text, this must be described. Please refer to the [https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description explanations concerning sufficient short text alternatives] for further information.
@@ -231,7 +237,9 @@ else Continue with [[#Step 12: ask if decorative (no text alternative)]]
 ### Step 12: ask if decorative (no text alternative)
 Test method: [manual]
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Current element
 | Question             | Is this element solely for decorative purposes?
 | Help                 | Answer with 'Yes', if it is a decorative element such as a spacer, line or menu-background solely used for layout purposes or an eyecatching element that don't convey information useful for understanding the content of the page.
@@ -282,7 +290,9 @@ else continue with [[#Step 15: ask if decorative (valid text alternative) (F38)]
 ### Step 15: ask if decorative (valid text alternative) (F38)
 Test method: [manual]
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Current element
 | Question             | Is this element solely for decorative purposes?
 | Help                 | Answer with 'Yes', if it is a decorative element such as a spacer, line or menu-background solely used for layout purposes or an eyecatching element that don't convey information useful for understanding the content of the page.
@@ -319,7 +329,9 @@ else return
 ### Step 17: ask if sufficiently described by textual alternative
 Test method: [manual]
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Current element
 | Question             | Does the textual alternative T1 sufficiently describe the element?
 | Help                 | If the element contributes meaning to the page or provides any functionality or conveys information additional to the pages text, this must be described. Please refer to the [https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description explanations concerning sufficient short text alternatives] for further information.
@@ -339,7 +351,9 @@ else continue with [[#Step 18: ask if sufficiently described by adjacent text]]
 ### Step 18: ask if sufficiently described by adjacent text
 Test method: [manual]
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Current element in context
 | Question             | Is the element sufficiently described by adjacent text?
 | Help                 | If the element shows content, which is redundant to real text nearby, answer 'Yes'. Otherwise, or if the element provides any functionality, answer 'No'. Please refer to the [https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description explanations concerning sufficient short text alternatives] for further information.

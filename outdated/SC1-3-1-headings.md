@@ -75,7 +75,9 @@ else return
 ### Step 3: heading markup is used when content is a heading (H42)
 Test method: [manual]
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Heading with the corresponding text
 | Question             | Does the text is a heading with a correct level?
 | Help                 |
@@ -106,7 +108,9 @@ else, return
 ### Step 4: Examine element with role="heading" (ARIA12)
 Test method: [manual]
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | element, the content of the element, and aria-level attribute (if exist)
 | Question             | Does the text is a heading with a correct level?
 | Help                 |
@@ -133,7 +137,9 @@ else return
 ### Step 5: using changes in text presentation to convey information (F2)
 Test method: [manual]
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | strong,b and div,span,p that has CSS class="heading" with the content of them
 | Question             | Does the text is a heading?
 | Help                 |

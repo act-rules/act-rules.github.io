@@ -6,9 +6,9 @@ This test checks that images do not convey information when added to the page us
 
 
 ## Background
-- [http://www.w3.org/WAI/GL/WCAG20-TECHS/C9 C9: Using CSS to include decorative images]
-- [http://www.w3.org/TR/WCAG20-TECHS/F3 F3: Failure of Success Criterion 1.1.1 due to using CSS to include images that convey important information]
-- [http://research.microsoft.com/pubs/149305/1509.pdf Detecting Text in Natural Scenes with Stroke Width Transform]
+- [C9: Using CSS to include decorative images](http://www.w3.org/WAI/GL/WCAG20-TECHS/C9)
+- [F3: Failure of Success Criterion 1.1.1 due to using CSS to include images that convey important information](http://www.w3.org/TR/WCAG20-TECHS/F3)
+- [Detecting Text in Natural Scenes with Stroke Width Transform](http://research.microsoft.com/pubs/149305/1509.pdf)
 
 
 ## Assumptions
@@ -74,7 +74,9 @@ Check if the element is really used for solely decorative purposes.
 
 To prepare the element for presentation to the user, all calculated CSS properties of the element must be stored and its child elements must be removed.
 
-**UserInput**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | presented-item   | Element containing background images without child elements but with previously calculated CSS properites applied.
 | question         | Is this image solely for decorative purposes?
 | help             | Answer with 'Yes', if it is a decorative image such as a separator, line or menu-background solely used for layout purposes or an image that doesn't convey information useful for understanding the content of the page.
@@ -97,7 +99,9 @@ Get any text from this ancestor, including shadow dom text and assign it to vari
 
 To prepare the element for presentation to the user, all calculated CSS properties of the element must be stored and its child elements must be removed.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Element containing background images without child elements but with previously calculated CSS properites applied.
 | Question             | Does T1 sufficiently describe the element?
 | Help                 | If the element shows content, which is redundant T1, answer 'Yes'. Otherwise, or if the element provides any functionality, answer 'No'.

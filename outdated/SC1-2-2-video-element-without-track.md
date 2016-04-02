@@ -51,7 +51,9 @@ Test method: [manual]
 
 Check that the content is video-only.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Media content
 | Requires context     | yes
 | Requires Interaction | yes
@@ -72,7 +74,9 @@ Test method: [manual]
 
 Check that the video-only content is prerecorded.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Whole page
 | Requires context     | yes
 | Requires Interaction | yes
@@ -93,7 +97,9 @@ Test method: [manual]
 
 Check that the prerecorded video-only content is not purely decorative and has relevant information for the context of the web page.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Whole page
 | Requires context     | yes
 | Requires Interaction | yes
@@ -114,7 +120,9 @@ Test method: [manual]
 
 Check that there is an alternative version available for the prerecorded video-only content.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Whole page
 | Requires context     | yes
 | Requires Interaction | yes
@@ -136,7 +144,9 @@ Test method: [manual]
 
 Check that the alternative version has the same information presented as the video-only content.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | The video-only content and the alternative version
 | Requires context     | yes
 | Requires Interaction | yes

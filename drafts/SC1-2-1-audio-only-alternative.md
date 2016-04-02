@@ -6,9 +6,9 @@ This test checks that for prerecorded audio-only content an alternative version 
 
 
 ## Background
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G158 G158: Providing an alternative for time-based media for audio-only content]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F30 F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F67 F67: Failure of Success Criterion 1.1.1 and 1.2.1 due to providing long descriptions for non-text content that does not serve the same purpose or does not present the same information]
+- [G158: Providing an alternative for time-based media for audio-only content](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G158)
+- [F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F30)
+- [F67: Failure of Success Criterion 1.1.1 and 1.2.1 due to providing long descriptions for non-text content that does not serve the same purpose or does not present the same information](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F67)
 
 
 ## Assumptions
@@ -47,7 +47,9 @@ Test method: [manual]
 
 Check that the audio-only content is prerecorded.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Whole page
 | Requires context     | yes
 | Requires Interaction | yes
@@ -68,7 +70,9 @@ Test method: [manual]
 
 Check that the prerecorded audio-only content is not purely decorative and has relevant information for the context of the web page.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Whole page
 | Requires context     | yes
 | Requires Interaction | yes
@@ -89,7 +93,9 @@ Test method: [manual]
 
 Check that there is an alternative version available for the prerecorded audio-only content.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Whole page
 | Requires context     | yes
 | Requires Interaction | yes

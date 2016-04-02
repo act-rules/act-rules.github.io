@@ -95,7 +95,9 @@ Test method: [manual]
 
 Check if the video plays audio.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Web page with an automatically started sound.
 | Requires context     | yes
 | Requires Interaction | no
@@ -116,7 +118,9 @@ Test method: [manual]
 
 Check if a mechanism to control the sound is provided as one of the first five links or buttons on the web page.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Web page with an automatically started sound.
 | Requires context     | yes
 | Requires Interaction | yes

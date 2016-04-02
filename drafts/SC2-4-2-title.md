@@ -81,7 +81,9 @@ Test method: [manual]
 
 Prompt user to look at the title and content of the page.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Web page (with title either highlighted or in a seperate textbox).
 | Requires context     | yes
 | Requires Interaction | no

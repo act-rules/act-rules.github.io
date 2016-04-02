@@ -151,7 +151,9 @@ For all remaining links in a given group item, present them to human testers.
 
 Ask the testers if they can uniquely identify the purpose of each link within a group from its on-screen location or visible context.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | A set of links with identical name/accessible description and context as well as their location on the webpage highlighted visually.
 | Requires context     | Yes links on screen (links in visual context)
 | Requires Interaction | No (unless we recommend user activates and follows each link, which we might want to do)

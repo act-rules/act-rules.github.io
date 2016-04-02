@@ -6,11 +6,11 @@ This test checks the sufficient provision of a long text description for element
 
 
 ## Background
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/ARIA15 ARIA15: Using aria-describedby to provide descriptions of images]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G73 G73: Providing a long description in another location with a link to it that is immediately adjacent to the non-text content]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G74 G74: Providing a long description in text near the non-text content, with a reference to the location of the long description in the short description]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G92 G92: Providing long description for non-text content that serves the same purpose and presents the same information]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F67 F67: Failure of Success Criterion 1.1.1 and 1.2.1 due to providing long descriptions for non-text content that does not serve the same purpose or does not present the same information]
+- [ARIA15: Using aria-describedby to provide descriptions of images](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/ARIA15)
+- [G73: Providing a long description in another location with a link to it that is immediately adjacent to the non-text content](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G73)
+- [G74: Providing a long description in text near the non-text content, with a reference to the location of the long description in the short description](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G74)
+- [G92: Providing long description for non-text content that serves the same purpose and presents the same information](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G92)
+- [F67: Failure of Success Criterion 1.1.1 and 1.2.1 due to providing long descriptions for non-text content that does not serve the same purpose or does not present the same information](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F67)
 - The proper provision of a short text alternative is checked in [[SC1-1-1-text-alternative]].
 
 
@@ -80,7 +80,9 @@ Test method: [manual]
 
 Concatenate the results of [[Text Alternative Computation]] Algorithm run on the element itself and assign it to variable T1 and on all elements referenced by the `aria-describedby` attribute and assign it to variable T2.
 
-**User input question:**
+**User Input Question:**
+| Property             | Value
+|----------------------|---------
 | Presented item       | Element with T1 and T2
 | Question             | Does T2 provide an extended description of the image additionally to T1?
 | Help                 | If the image contributes meaning to the page or provide any functionality or conveys information additional to the pages text, this must be described.

@@ -28,14 +28,9 @@ files.forEach(function (file) {
 
 	(links || []).forEach(function (oldLink) {
 		var stripped = oldLink.substr(1, oldLink.length -2);
-		var bits = stripped.split(' ');
+		var bits = stripped.split(/|\s/g);
 
-		if (stripped[0] === '#') {
-			var link = stripped.toLowerCase().replace(/\s/g, '_');
-			var linkText = stripped.substr(1);
-			text = text.replace(oldLink, '[' + linkText + '$](' + link + ')' );
-
-		} else if (bits.length >= 2) {
+		if (bits.length >= 2) {
 			var link = bits.shift();
 			var newLink = '[' + bits.join(' ') + '](' + link + ')';
 			text = text.replace(oldLink, newLink);

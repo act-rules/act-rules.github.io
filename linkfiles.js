@@ -13,7 +13,7 @@ function readRecursively(dir) {
 			var files = readRecursively(path.join(dir, file));
 			allFiles = allFiles.concat(files);
 		}
-		return allFiles
+		return allFiles;
 	}, []);
 }
 
@@ -23,13 +23,10 @@ files = files.concat(readRecursively('./outdated'));
 
 files.forEach(function (file) {
 	var text = fs.readFileSync(file, 'utf-8');
-	text = text.replace(/\[\[/g, '[');
-	text = text.replace(/\]\]/g, ']');
 
-	var links = text.match(/\[[^\]]+\]/g);
+	var links = text.match(/\[http[^\]]+\]/g);
 
-	links.forEach(function (oldLink) {
-		// strip [ and ]
+	(links || []).forEach(function (oldLink) {
 		var stripped = oldLink.substr(1, oldLink.length -2);
 		var bits = stripped.split(' ');
 
@@ -42,13 +39,8 @@ files.forEach(function (file) {
 			var link = bits.shift();
 			var newLink = '[' + bits.join(' ') + '](' + link + ')';
 			text = text.replace(oldLink, newLink);
-			
-		} else {
-			text = text.replace(oldLink, '[' + stripped + '$](' + stripped + ')');
 		}
 	});
-
-	text = text.replace(/\$\]/g, ']');
 
 	fs.writeFileSync(file, text);
 });

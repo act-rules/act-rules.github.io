@@ -6,10 +6,10 @@ This test checks that the primary language of the content is specified correctly
 
 ## Background
 
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H57  H57: Using language attributes on the html element]
-- [http://wiki.egovmon.no/wiki/SC3.1.1 eGovMon test for H57]
-- [http://www.rfc-editor.org/rfc/bcp/bcp47.txt BCP 47: Tags for the Identification of Languages]
-- [http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry IANA language subtag registry]
+- [ H57: Using language attributes on the html element](httphttp://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H57)
+- [eGovMon test for H57](httphttp://wiki.egovmon.no/wiki/SC3.1.1)
+- [BCP 47: Tags for the Identification of Languages](httphttp://www.rfc-editor.org/rfc/bcp/bcp47.txt)
+- [IANA language subtag registry](httphttp://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)
 
 ## Assumptions
 - The comparison of language-code does not look for exact matches. Technique H57 states: "Use of the primary code is important for this technique." which means that region subtags can be ignored in the comparison, i.e. "en-GB" is the same as "en".
@@ -59,7 +59,7 @@ Test method: [manual]
 Present the page to the user.<br/>
 Question: Is L1 the primary language of this page?
 
-*Note that language code L1 should be presented in human readable form, e.g. using the description from the [http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry language subtag registry].*
+*Note that language code L1 should be presented in human readable form, e.g. using the description from the [language subtag registry](httphttp://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).*
 
 Help text: "Primary language" means the language of the majority of the text on the page or the language of the interface (navigation menu etc.) of the page.
 

@@ -1,11 +1,6 @@
 This test case belongs to [[1.1.1 Non-text Content]]
 
 
-## Status
-{{status|1.0}}
-[[Category:Completed‏‎]]
-
-
 ## Description
 This test checks the sufficient provision of a long text description for elements using the `aria-describedby` attribute.
 

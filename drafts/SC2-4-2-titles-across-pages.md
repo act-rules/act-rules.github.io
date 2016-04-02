@@ -1,11 +1,6 @@
 Back to Success Criterion [[2.4.2 Page Titled]]
 
 
-## Status
-{{status|0: For review|861}}
-[[Category:Review]]
-
-
 ## Description
 This test checks that webpage titles are used to uniquely identify the purpose of individual webpages by comparing titles of webpages on the same website.
 

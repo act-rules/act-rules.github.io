@@ -1,11 +1,6 @@
 This test belongs to [[3.1.2 Language of Parts]].
 
 
-## Status
-{{status|1|844}}
-[[Category:Completed]]
-
-
 ## Description
 This test checks the value of the `xml:lang` attributes.
 

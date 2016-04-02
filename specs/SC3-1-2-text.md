@@ -1,11 +1,6 @@
 This test belongs to [[3.1.2 Language of Parts]].
 
 
-## Status
-{{status|1|674}}
-[[Category:Completed]]
-
-
 ## Description
 This test checks that changes in human language are marked up correctly in the web content.
 

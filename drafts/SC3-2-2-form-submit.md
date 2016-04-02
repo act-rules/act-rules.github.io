@@ -1,8 +1,5 @@
 This test belongs to [[3.2.2 On Input]].
 
-## Status
-{{status|For review|1059}}
-
 
 ## Description
 This test checks that forms with submit button initiate a change of context only when submit is used. Any other behavior must be explained to the user at the beginning of the form.

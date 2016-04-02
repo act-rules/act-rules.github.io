@@ -1,4 +1,3 @@
-
 ## Description
 This test checks whether or not fieldset elements have been used above a certain number of elements.
 

@@ -1,7 +1,4 @@
 
-## Status
-{{draft}}
-
 
 ## Description
 This test checks that no non-textual information is conveyed by a sequence character.

@@ -1,8 +1,5 @@
 This test belongs to [[4.1.1 Parsing]].
 
-{{status|1|1104}}
-[[Category:Completed]]
-
 
 ## Description
 This test checks accesskey attribute for all elements to have a unique value.

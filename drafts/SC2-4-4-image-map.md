@@ -1,11 +1,6 @@
 Back to [[2.4.4 Link Purpose (In Context)]]
 
 
-## Status
-{{status|0.1: For review|2033}}
-[[Category:Review]]
-
-
 ## Description
 This test checks if each `area` element contains an `alt` attribute that is not empty. If two or more `alt` values in the collection of `area` elements are equal, the corresponding `href` value should also be equal.
 

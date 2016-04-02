@@ -1,10 +1,6 @@
 This test belongs to [[3.2.2 On Input]].
 
 
-## Status
-{{status|For review|1058}}
-
-
 ## Description
 This test checks forms that initiate a change of context without submit button.
 

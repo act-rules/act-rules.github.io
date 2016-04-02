@@ -1,7 +1,5 @@
 This test case belongs to [[1.3.1 Info and Relationships]]
 
-[[Category:Review]]
-
 
 ## Description
 This test checks that tables used for layout purposes do not contain tabular data or markup.

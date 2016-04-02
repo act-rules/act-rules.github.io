@@ -1,6 +1,3 @@
-{{status|0: For review|907}}
-
-
 ## Description
 This test case checks that frames and iframes have a none-empty title attribute
 

@@ -1,10 +1,6 @@
 This test belongs to [[1.3.1 Info and Relationships]].
 
 
-## Status
-{{draft}}
-
-
 ## Description
 This test checks if a table with caption does not contain a summary with the same text.
 

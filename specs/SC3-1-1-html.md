@@ -1,10 +1,6 @@
 This test belongs to [[3.1.1 Language of Page]].
 
 
-## Status
-{{status|1|841}}
-
-
 ## Description
 This test checks that the primary language of the web content can be programmatically determined.
 

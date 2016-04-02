@@ -1,11 +1,6 @@
 This test belongs to [[3.1.2 Language of Parts]].
 
 
-## Status
-{{status|1|666}}
-[[Category:Completed]]
-
-
 ## Description
 This test checks that `lang` attributes within the body of a web page are correct.
 

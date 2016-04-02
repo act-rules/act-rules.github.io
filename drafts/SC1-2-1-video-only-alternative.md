@@ -1,7 +1,3 @@
-## Status
-{{status|0: Draft|288}}
-
-
 ## Description
 This test checks captions in video elements without a track element.
 

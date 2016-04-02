@@ -1,11 +1,6 @@
 Back to [[2.4.2 Page Titled]]
 
 
-## Status
-{{status|0.2: For review|1827}}
-[[Category:Review]]
-
-
 ## Description
 This test checks that the page title (`<title` element in the head section of a webpage) a. exists, and b. identifies the role or content of the web page.
 

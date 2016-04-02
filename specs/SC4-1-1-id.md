@@ -1,10 +1,6 @@
 
 This test belongs to [[4.1.1 Parsing]].
 
-## Status
-{{status|1|1100}}
-[[Category:Completed]]
-
 
 ## Description
 This test checks id attribute for all elements to have a unique value.

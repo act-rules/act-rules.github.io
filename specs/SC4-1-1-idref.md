@@ -1,9 +1,5 @@
 This test belongs to [[4.1.1 Parsing]].
 
-## Status
-{{status|1|1106}}
-[[Category:Completed]]
-
 
 ## Description
 This test checks that each element referred to from an idref attribute exists.

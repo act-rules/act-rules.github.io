@@ -1,12 +1,6 @@
 This test belongs to [[3.2.3 Consistent Navigation]].
 
 
-## Status
-{{status|0.1: For review|1775}}
-{{status|0: For review|1127}}
-[[Category:Review]]
-
-
 ## Description
 This test checks if the order of navigational components and repeated links within a set of Web pages remains consistent.
 

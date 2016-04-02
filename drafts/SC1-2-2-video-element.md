@@ -1,8 +1,3 @@
-
-## Status
-{{status|0: Draft|288}}
-
-
 ## Description
 This test checks captions in video elements with a track element. So, this one test the quality of the given captions. Note that instead of a pass or fail, we could also return a graded rating scheme. This can be the case if for example emotions are captured, and only one emotion is forgotten. We could return a 90% pass?
 

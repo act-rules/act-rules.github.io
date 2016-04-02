@@ -1,10 +1,6 @@
 This test belongs to [[3.1.1 Language of Page]].
 
 
-## Status
-{{status|1|837}}
-
-
 ## Description
 This test checks the value of the `xml:lang` attribute.
 

@@ -1,11 +1,6 @@
 This test case belongs to [[1.1.1 Non-text Content]]
 
 
-## Status
-{{status|1.1: Completed}}
-[[Category:Completed]]
-
-
 ## Description
 This test checks the sufficient provision of a long text description for non-text content using the `longdesc` attribute. This test doesn't check the accessibility of a page referenced to from the longdesc attribute and this page must be checked separately.
 

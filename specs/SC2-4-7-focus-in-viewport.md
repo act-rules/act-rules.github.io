@@ -1,11 +1,6 @@
 This test case belongs to [[2.4.7 Focus Visible]]
 
 
-## Status
-{{status|1.0: Completed|2360}}
-[[Category:Completed]]
-
-
 ## Description
 This test checks that all elements that receive focus are visible in the viewport.
 

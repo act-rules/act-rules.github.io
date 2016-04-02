@@ -1,11 +1,6 @@
 This test belongs to [[1.1.1 Non-text Content]].
 
 
-## Status
-{{status|1.0: Completed|1499}}
-[[Category:Completed‏‎]]
-
-
 ## Description
 This test checks that non-text elements conveying information are providing sufficient textual alternatives or, if purely decorative, are hidden from assistive technologies.
 

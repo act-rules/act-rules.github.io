@@ -1,11 +1,6 @@
 This test belongs to [[4.1.1 Parsing]].
 
 
-## Status
-{{status|1|1110}}
-[[Category:Completed]]
-
-
 ## Description
 This test checks that attributes of an element are unique.
 

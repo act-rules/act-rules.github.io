@@ -1,13 +1,6 @@
 Back to Success Criterion [[1.2.1_Audio-only_and_Video-only_(Prerecorded)]]
 
 
-## Status
-{{status|0.3: Review|2326}}
-{{status|0.2: Review|2121}}
-{{status|0.1: Draft}}
-[[Category:Review]]
-
-
 ## Description
 This test checks that for prerecorded audio-only content an alternative version exists, which is relevant and descriptive for the audio-only content.
 

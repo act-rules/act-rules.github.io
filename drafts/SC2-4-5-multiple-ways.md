@@ -1,11 +1,6 @@
 Back to Success Criterion [[2.4.5 Multiple Ways]]
 
 
-## Status
-{{status|0.1: For review|2133}}
-[[Category:Review]]
-
-
 ## Description
 This test checks that there are at least two of the following elements available on the web page:
 - link to site map

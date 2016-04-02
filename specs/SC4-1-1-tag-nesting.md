@@ -1,9 +1,5 @@
 This test belongs to [[4.1.1 Parsing]].
 
-## Status
-{{status|1|1113}}
-[[Category:Completed]]
-
 
 ## Description
 This test checks that tags of an HTML or XHTML document are nested correctly. So that elements that must be closed are, elements that shouldn't be aren't, and that elements are closed in the correct order.

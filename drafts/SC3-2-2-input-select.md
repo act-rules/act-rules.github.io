@@ -1,10 +1,6 @@
 This test belongs to [[3.2.2 On Input]].
 
 
-## Status
-{{status|For review|1073}}
-
-
 ## Description
 This test checks form controls outside form elements.
 

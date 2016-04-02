@@ -1,12 +1,6 @@
 This test belongs to [[2.4.4 Link Purpose (In Context)]] and [[4.1.2 Name, Role, Value]].
 
 
-## Status
-{{status|0.2: For review|1998}}
-{{status|0.1: For review|653}}
-[[Category:Review]]
-
-
 ## Description
 This test checks that all links have a name.
 

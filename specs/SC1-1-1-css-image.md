@@ -1,11 +1,6 @@
 This test case belongs to [[1.1.1 Non-text Content]]
 
 
-## Status
-{{status|1.0: Completed|1911}}
-[[Category:Completed]]
-
-
 ## Description
 This test checks that images do not convey information when added to the page using CSS. If the image conveys information, it is checked for a description provided in text nearby.
 

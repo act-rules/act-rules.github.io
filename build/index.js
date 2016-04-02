@@ -26,14 +26,16 @@ pages.forEach(function (pagePath) {
 	var markdownText = fs.readFileSync(pagePath, 'utf-8');
 	var htmlText = marked(markdownText);
 
+	var dirCount = path.relative(outDir, pagePath).split(path.sep).length - 3;
+
 	var html = template.replace('{{content}}', htmlText);
 	var compiledTemplate = Handlebars.compile(html);
-	html = compiledTemplate({
-		'title': path.basename(pagePath, '.md')
-	});
-
 	var outPath = pagePath.replace(pagesDir, outDir).replace('.md', '.html');
-	fs.outputFileSync(outPath, html);
+
+	fs.outputFileSync(outPath, compiledTemplate({
+		'title': path.basename(pagePath, '.md'),
+		'root': '../'.repeat(dirCount)
+	}));
 	console.log('created file at', outPath);
 });
 

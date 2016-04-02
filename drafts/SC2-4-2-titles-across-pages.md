@@ -1,5 +1,5 @@
 
-# SC2-4-2-titles-across-pages 
+# SC2-4-2-titles-across-pages
 
 Back to Success Criterion [[2.4.2 Page Titled]]
 
@@ -63,6 +63,7 @@ For each item in this list.
 Present the page title to user and ask the usre to open at least two of the URLs associated with that title in a separate window or tab and inspect the content of those pages.
  
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | A list of URLs (to webpages with identical titles).

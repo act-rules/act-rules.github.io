@@ -1,5 +1,5 @@
 
-# SC3-2-2-form-submit 
+# SC3-2-2-form-submit
 
 This test belongs to [[3.2.2 On Input]].
 
@@ -38,6 +38,7 @@ Select form element with submit button (input[@type='submit'] or input[@type='im
 Test method: [manual]
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | selected form including all form controls
@@ -59,6 +60,7 @@ else continue with [[#Step 2]]
 Test method: [manual]
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | *(same as in Step 1)*

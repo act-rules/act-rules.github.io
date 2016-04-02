@@ -51,6 +51,7 @@ Test method: [manual]
 Check that the audio-only content is prerecorded.
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Whole page
@@ -74,6 +75,7 @@ Test method: [manual]
 Check that the prerecorded audio-only content is not purely decorative and has relevant information for the context of the web page.
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Whole page
@@ -97,6 +99,7 @@ Test method: [manual]
 Check that there is an alternative version available for the prerecorded audio-only content.
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Whole page

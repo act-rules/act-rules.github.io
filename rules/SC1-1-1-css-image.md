@@ -1,5 +1,5 @@
 
-# SC1-1-1-css-image 
+# SC1-1-1-css-image
 
 This test case belongs to [[1.1.1 Non-text Content]]
 
@@ -78,6 +78,7 @@ Check if the element is really used for solely decorative purposes.
 To prepare the element for presentation to the user, all calculated CSS properties of the element must be stored and its child elements must be removed.
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | presented-item   | Element containing background images without child elements but with previously calculated CSS properites applied.
@@ -103,6 +104,7 @@ Get any text from this ancestor, including shadow dom text and assign it to vari
 To prepare the element for presentation to the user, all calculated CSS properties of the element must be stored and its child elements must be removed.
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Element containing background images without child elements but with previously calculated CSS properites applied.

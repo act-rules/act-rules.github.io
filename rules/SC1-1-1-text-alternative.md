@@ -1,5 +1,5 @@
 
-# SC1-1-1-text-alternative 
+# SC1-1-1-text-alternative
 
 This test belongs to [[1.1.1 Non-text Content]].
 
@@ -88,6 +88,7 @@ else continue with [[#Step 8: compute text alternative]]
 Test method: [manual]
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Parent element containing group of images
@@ -117,6 +118,7 @@ Concatenate the results of [[Text Alternative Computation]] Algorithm run on all
 All items of the group should be removed from the set of selector-matches after this step.
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Parent element containing group of images
@@ -150,6 +152,7 @@ Concatenate the results of [[Text Alternative Computation]] Algorithm run on all
 All items of the group should be removed from the set of selector-matches after this step.
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Parent element containing group of images
@@ -241,6 +244,7 @@ else Continue with [[#Step 12: ask if decorative (no text alternative)]]
 Test method: [manual]
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Current element
@@ -294,6 +298,7 @@ else continue with [[#Step 15: ask if decorative (valid text alternative) (F38)]
 Test method: [manual]
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Current element
@@ -333,6 +338,7 @@ else return
 Test method: [manual]
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Current element
@@ -355,6 +361,7 @@ else continue with [[#Step 18: ask if sufficiently described by adjacent text]]
 Test method: [manual]
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Current element in context

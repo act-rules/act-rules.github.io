@@ -83,6 +83,7 @@ Test method: [manual]
 Concatenate the results of [[Text Alternative Computation]] Algorithm run on the element itself and assign it to variable T1 and on all elements referenced by the `aria-describedby` attribute and assign it to variable T2.
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Element with T1 and T2

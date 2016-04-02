@@ -1,5 +1,5 @@
 
-# SC1-4-2-audio-control-audio 
+# SC1-4-2-audio-control-audio
 
 Back to Success Criterion [[1.4.2 Audio Control]]
 
@@ -99,6 +99,7 @@ Test method: [manual]
 Check if the video plays audio.
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Web page with an automatically started sound.
@@ -122,6 +123,7 @@ Test method: [manual]
 Check if a mechanism to control the sound is provided as one of the first five links or buttons on the web page.
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Web page with an automatically started sound.

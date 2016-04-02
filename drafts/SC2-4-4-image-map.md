@@ -1,5 +1,5 @@
 
-# SC2-4-4-image-map 
+# SC2-4-4-image-map
 
 Back to [[2.4.4 Link Purpose (In Context)]]
 
@@ -82,6 +82,7 @@ else return
 Test method: [manual]
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | The alt attribute of the area element, and the image with the current area highlighted

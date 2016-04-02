@@ -1,5 +1,5 @@
 
-# SC2-4-5-multiple-ways 
+# SC2-4-5-multiple-ways
 
 Back to Success Criterion [[2.4.5 Multiple Ways]]
 
@@ -45,6 +45,7 @@ Test method: [manual]
 Check if the web page provides links to navigate to related web pages.
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Web page.
@@ -65,6 +66,7 @@ Test method: [manual]
 Check if the web page provides a search form or a link to the search page.
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Web page.
@@ -90,6 +92,7 @@ Test method: [manual]
 Check if the web page provides a link to the site map.
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Web page.
@@ -108,6 +111,7 @@ Test method: [manual]
 Check if the site map is a valid site map.
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Site map.
@@ -133,6 +137,7 @@ Test method: [manual]
 Check if the web page provides a list of links to all other web pages.
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Web page.

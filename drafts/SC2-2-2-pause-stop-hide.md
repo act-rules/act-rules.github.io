@@ -1,5 +1,5 @@
 
-# SC2-2-2-pause-stop-hide 
+# SC2-2-2-pause-stop-hide
 
 Back to Success Criterion [[2.2.2 Pause, Stop, Hide]]
 
@@ -80,6 +80,7 @@ Test method: [automatic]
 Check if there is no moving or scrolling content or blinking content longer than 5 seconds.
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Web page.
@@ -103,6 +104,7 @@ Test method: [manual]
 Check if there is a mechanism to pause or stop the moving, scrolling or blinking content.
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Web page.

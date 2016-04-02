@@ -1,5 +1,5 @@
 
-# SC3-2-2-input-select 
+# SC3-2-2-input-select
 
 This test belongs to [[3.2.2 On Input]].
 
@@ -52,6 +52,7 @@ If yes, continue with [[#Step 2]].
 Test method: [manual]
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | selected form controls

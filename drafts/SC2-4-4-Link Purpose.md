@@ -1,5 +1,5 @@
 
-# SC2-4-4-Link Purpose 
+# SC2-4-4-Link Purpose
 
 Back to [[2.4.4 Link Purpose (In Context)]]
 
@@ -155,6 +155,7 @@ For all remaining links in a given group item, present them to human testers.
 Ask the testers if they can uniquely identify the purpose of each link within a group from its on-screen location or visible context.
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | A set of links with identical name/accessible description and context as well as their location on the webpage highlighted visually.

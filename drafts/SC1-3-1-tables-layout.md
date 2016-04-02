@@ -1,5 +1,5 @@
 
-# SC1-3-1-tables-layout 
+# SC1-3-1-tables-layout
 
 This test case belongs to [[1.3.1 Info and Relationships]]
 
@@ -97,6 +97,7 @@ Test method: [manual]
 For each remaining table that matches the selector, ask user to confirm that the table is not a data table.
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | A table (or page with location of table highlighted)

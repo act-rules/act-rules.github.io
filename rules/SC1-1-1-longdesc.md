@@ -1,5 +1,5 @@
 
-# SC1-1-1-longdesc 
+# SC1-1-1-longdesc
 
 This test case belongs to [[1.1.1 Non-text Content]]
 
@@ -78,6 +78,7 @@ Test method: [manual]
 Concatenate the results of [[Text Alternative Computation]] Algorithm run on the element and assign it to variable T1.
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Image with T1 and the content of the page referenced by the longdesc  at the referenced anchor point (if applicable)

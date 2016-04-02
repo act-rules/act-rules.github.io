@@ -1,5 +1,5 @@
 
-# SC2-4-2-title 
+# SC2-4-2-title
 
 Back to [[2.4.2 Page Titled]]
 
@@ -85,6 +85,7 @@ Test method: [manual]
 Prompt user to look at the title and content of the page.
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Web page (with title either highlighted or in a seperate textbox).

@@ -74,6 +74,7 @@ else return
 Test method: [manual]
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | Heading with the corresponding text
@@ -107,6 +108,7 @@ else, return
 Test method: [manual]
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | element, the content of the element, and aria-level attribute (if exist)
@@ -136,6 +138,7 @@ else return
 Test method: [manual]
 
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | strong,b and div,span,p that has CSS class="heading" with the content of them

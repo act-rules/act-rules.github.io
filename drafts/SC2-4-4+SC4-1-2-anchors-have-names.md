@@ -6,7 +6,7 @@ This test checks that all links have a name.
 
 
 ## Background
-- [http://www.w3.org/TR/WCAG20-TECHS/F89.html  F89: Failure of Success Criteria 2.4.4, 2.4.9 and 4.1.2 due to using null alt on an image where the image is the only content in a link]
+- [F89: Failure of Success Criteria 2.4.4, 2.4.9 and 4.1.2 due to using null alt on an image where the image is the only content in a link](http://www.w3.org/TR/WCAG20-TECHS/F89.html)
 
 
 ## Assumptions

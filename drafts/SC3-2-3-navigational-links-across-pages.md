@@ -6,9 +6,9 @@ This test checks if the order of navigational components and repeated links with
 
 
 ## Background
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G61 G61: Presenting repeated components in the same relative order each time they appear]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/F66 F66: Failure of Success Criterion 3.2.3 due to presenting navigation links in a different relative order on different pages]
-- WCAG2 defines [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/F66 same relative order] as follows: "Same relative order means that secondary navigation items may be in between the link items on some pages. They can be present without affecting the outcome of this test."
+- [G61: Presenting repeated components in the same relative order each time they appear](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G61)
+- [F66: Failure of Success Criterion 3.2.3 due to presenting navigation links in a different relative order on different pages](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/F66)
+- WCAG2 defines [same relative order](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/F66) as follows: "Same relative order means that secondary navigation items may be in between the link items on some pages. They can be present without affecting the outcome of this test."
 
 
 ## Assumptions

@@ -28,7 +28,7 @@ files.forEach(function (file) {
 
 	(links || []).forEach(function (oldLink) {
 		var stripped = oldLink.substr(1, oldLink.length -2);
-		var bits = stripped.split(/|\s/g);
+		var bits = stripped.split(/[|\s]+/g);
 
 		if (bits.length >= 2) {
 			var link = bits.shift();

@@ -6,10 +6,10 @@ This test checks that forms with submit button initiate a change of context only
 
 
 ## Background
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F36 F36: Failure of Success Criterion 3.2.2 due to automatically submitting a form and presenting new content without prior warning when the last field in the form is given a value]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F37 F37: Failure of Success Criterion 3.2.2 due to launching a new window without prior warning when the selection of a radio button, check box or select list is changed]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G13 G13: Describing what will happen before a change to a form control that causes a change of context to occur is made]
-- WCAG 2.0 Glossary entry for [http://www.w3.org/TR/WCAG20/#context-changedef change of context]
+- [F36: Failure of Success Criterion 3.2.2 due to automatically submitting a form and presenting new content without prior warning when the last field in the form is given a value](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F36)
+- [F37: Failure of Success Criterion 3.2.2 due to launching a new window without prior warning when the selection of a radio button, check box or select list is changed](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F37)
+- [G13: Describing what will happen before a change to a form control that causes a change of context to occur is made](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G13)
+- WCAG 2.0 Glossary entry for [change of context](http://www.w3.org/TR/WCAG20/#context-changedef)
 
 
 ## Assumptions

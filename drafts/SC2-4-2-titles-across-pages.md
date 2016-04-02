@@ -10,8 +10,8 @@ All pages tested should be on the same website (with same domain). Page titles o
 
 
 ## Background
-- [http://www.w3.org/TR/WCAG20-TECHS/G127.html G127: Identifying a Web page's relationship to a larger collection of Web pages]
-- [http://www.w3.org/TR/WCAG20-TECHS/F25.html F25: Failure of Success Criterion 2.4.2 due to the title of a Web page not identifying the contents]
+- [G127: Identifying a Web page's relationship to a larger collection of Web pages](http://www.w3.org/TR/WCAG20-TECHS/G127.html)
+- [F25: Failure of Success Criterion 2.4.2 due to the title of a Web page not identifying the contents](http://www.w3.org/TR/WCAG20-TECHS/F25.html)
 
 - Case of missing, invalid or multiple title elements for a single webpage are covered in test [[SC2-4-2-title]] this test does not duplicate these checks.
 - If no pages with same domain are linked from the page where the test is run, the test automatically passes (for best results, run this test from the front page or main page of the website).

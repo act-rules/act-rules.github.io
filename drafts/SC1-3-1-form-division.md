@@ -2,8 +2,8 @@
 This test checks whether or not fieldset elements have been used above a certain number of elements.
 
 ## Background
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/H71| H71: Providing a description for groups of form controls using fieldset and legend elements]
-- [http://wiki.egovmon.no/wiki/SC3.3.2#ID:_H71-1|eGovMon test H71-1]
+- [H71: Providing a description for groups of form controls using fieldset and legend elements](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/H71)
+- [eGovMon test H71-1](http://wiki.egovmon.no/wiki/SC3.3.2#ID:_H71-1)
 
 
 ## Assumptions

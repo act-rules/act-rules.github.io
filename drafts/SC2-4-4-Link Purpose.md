@@ -2,18 +2,18 @@ Back to [[2.4.4 Link Purpose (In Context)]]
 
 
 ## Background
-- [http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html#pdlinkcontextdef programmatically determined link context]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/ H30: Providing link text that describes the purpose of a link for anchor elements]
-- [http://www.w3.org/TR/wai-aria/roles#textalternativecomputation Accessible Name Calculation algorithm]
-- [http://www.w3.org/TR/html-aapi/#a-element HTML to Platform Accessibility APIs Implementation Guide] (section 6.10)
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/ARIA7 ARIA7: Using aria-labelledby for link purpose]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/ARIA8 ARIA8: Using aria-label for link purpose]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H77 H77: Identifying the purpose of a link using link text combined with its enclosing list item]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H78 H78: Identifying the purpose of a link using link text combined with its enclosing paragraph]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H79 H79: Identifying the purpose of a link in a data table using the link text combined with its enclosing table cell and associated table header cells ]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H81 H81: Identifying the purpose of a link in a nested list using link text combined with its parent list item ]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F63 F63: Failure of Success Criterion 2.4.4 due to providing link context only in content that is not related to the link]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F89 F89 - providing null alt text on an image that is the only content of a link]
+- [programmatically determined link context](http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html#pdlinkcontextdef)
+- [H30: Providing link text that describes the purpose of a link for anchor elements](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/)
+- [Accessible Name Calculation algorithm](http://www.w3.org/TR/wai-aria/roles#textalternativecomputation)
+- [HTML to Platform Accessibility APIs Implementation Guide](http://www.w3.org/TR/html-aapi/#a-element) (section 6.10)
+- [ARIA7: Using aria-labelledby for link purpose](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/ARIA7)
+- [ARIA8: Using aria-label for link purpose](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/ARIA8)
+- [H77: Identifying the purpose of a link using link text combined with its enclosing list item](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H77)
+- [H78: Identifying the purpose of a link using link text combined with its enclosing paragraph](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H78)
+- [H79: Identifying the purpose of a link in a data table using the link text combined with its enclosing table cell and associated table header cells ](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H79)
+- [H81: Identifying the purpose of a link in a nested list using link text combined with its parent list item ](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H81)
+- [F63: Failure of Success Criterion 2.4.4 due to providing link context only in content that is not related to the link](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F63)
+- [F89 - providing null alt text on an image that is the only content of a link](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F89)
 
 
 ## Assumptions
@@ -40,7 +40,7 @@ Test method: [automatic]
 ### Step 1 - Check for Accessible Name
 Test method: [automatic]
 
-- For each link, use the accessible name algorithm to derive the link's accessible name: see [http://www.w3.org/TR/html-aapi/#a-element HTML to Platform Accessibility APIs Implementation Guide] - section 6.10
+- For each link, use the accessible name algorithm to derive the link's accessible name: see [HTML to Platform Accessibility APIs Implementation Guide](http://www.w3.org/TR/html-aapi/#a-element) - section 6.10
 # If link has an aria-labelledby attribute, the link's accessible name is the value of its associated element.
 # Otherwise check for aria-label. If an aria-label attribute is present, the link's accessible name is the text string value of that attribute.
 # Otherwise use the link element subtree (value of the link content, if any). This include alt texts for images.
@@ -122,7 +122,7 @@ else go to [[Step 5]]
 ### Step 5 - Calculate Context
 Test method: [semi-automatic]
 
-Explore links together with their [http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html#pdlinkcontextdef programmatically determined link context]
+Explore links together with their [programmatically determined link context](http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html#pdlinkcontextdef)
 
 This includes textual content of:
 

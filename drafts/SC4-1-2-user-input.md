@@ -3,9 +3,9 @@ This test checks the existence of associated labels at every form control that t
 
 
 ## Background
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/G131| G131: Providing descriptive labels]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/H44.html| H44: Using label elements to associate text labels with form controls]
-- [http://wiki.egovmon.no/wiki/SC3.3.2#ID:_G131-1|eGovMon test G131-1]
+- [G131: Providing descriptive labels](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/G131)
+- [H44: Using label elements to associate text labels with form controls](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/H44.html)
+- [eGovMon test G131-1](http://wiki.egovmon.no/wiki/SC3.3.2#ID:_G131-1)
 
 
 ## Assumptions

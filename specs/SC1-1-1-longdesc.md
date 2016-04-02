@@ -6,11 +6,11 @@ This test checks the sufficient provision of a long text description for non-tex
 
 
 ## Background
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G73 G73: Providing a long description in another location with a link to it that is immediately adjacent to the non-text content]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G74 G74: Providing a long description in text near the non-text content, with a reference to the location of the long description in the short description]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G92 G92: Providing long description for non-text content that serves the same purpose and presents the same information]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H45 H45: Using longdesc]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F67 F67: Failure of Success Criterion 1.1.1 and 1.2.1 due to providing long descriptions for non-text content that does not serve the same purpose or does not present the same information]
+- [G73: Providing a long description in another location with a link to it that is immediately adjacent to the non-text content](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G73)
+- [G74: Providing a long description in text near the non-text content, with a reference to the location of the long description in the short description](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G74)
+- [G92: Providing long description for non-text content that serves the same purpose and presents the same information](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G92)
+- [H45: Using longdesc](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H45)
+- [F67: Failure of Success Criterion 1.1.1 and 1.2.1 due to providing long descriptions for non-text content that does not serve the same purpose or does not present the same information](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F67)
 - The proper provision of a short text alternative is checked in [[SC1-1-1-text-alternative]]
 
 

@@ -11,9 +11,9 @@ Check if images meet [[1.4.1 Use of Color]].
 
 
 ## Background
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/G14.html G14: Ensuring that information conveyed by color differences is also available in text]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/G111.html G111: Using color and pattern]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/F13.html F13: Failure of Success Criterion 1.1.1 and 1.4.1 due to having a text alternative that does not include information that is conveyed by color differences in the image]
+- [G14: Ensuring that information conveyed by color differences is also available in text](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/G14.html)
+- [G111: Using color and pattern](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/G111.html)
+- [F13: Failure of Success Criterion 1.1.1 and 1.4.1 due to having a text alternative that does not include information that is conveyed by color differences in the image](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/F13.html)
 - Comments from UWEM 2.0 draft:
 - Not automatable.
 - Cannot automatically determine if colour of images is used to convey information.

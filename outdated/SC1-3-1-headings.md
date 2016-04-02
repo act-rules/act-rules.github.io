@@ -11,11 +11,11 @@ This test checks that a page is properly organized using headings.
 
 
 ## Background
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/G141 G141: Organizing a page using headings]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/H42 H42: Using h1-h6 to identify headings]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F43.html F43: Failure of Success Criterion 1.3.1 due to using structural markup in a way that does not represent relationships in the content]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/ARIA12 ARIA12: Using role=heading to identify headings]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F2.html F2: Failure of Success Criterion 1.3.1 due to using changes in text presentation to convey information without using the appropriate markup or text]
+- [G141: Organizing a page using headings](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/G141)
+- [H42: Using h1-h6 to identify headings](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/H42)
+- [F43: Failure of Success Criterion 1.3.1 due to using structural markup in a way that does not represent relationships in the content](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F43.html)
+- [ARIA12: Using role=heading to identify headings](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/ARIA12)
+- [F2: Failure of Success Criterion 1.3.1 due to using changes in text presentation to convey information without using the appropriate markup or text](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F2.html)
 
 
 ## Assumptions

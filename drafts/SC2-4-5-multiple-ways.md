@@ -10,10 +10,10 @@ This test checks that there are at least two of the following elements available
 
 
 ## Background
-- [http://www.w3.org/TR/WCAG20-TECHS/G63.html G63: Providing a site map]
-- [http://www.w3.org/TR/WCAG20-TECHS/G125.html G125: Providing links to navigate to related Web pages]
-- [http://www.w3.org/TR/WCAG20-TECHS/G126.html G126: Providing a list of links to all other Web pages]
-- [http://www.w3.org/TR/WCAG20-TECHS/G161.html G161: Providing a search function to help users find content]
+- [G63: Providing a site map](http://www.w3.org/TR/WCAG20-TECHS/G63.html)
+- [G125: Providing links to navigate to related Web pages](http://www.w3.org/TR/WCAG20-TECHS/G125.html)
+- [G126: Providing a list of links to all other Web pages](http://www.w3.org/TR/WCAG20-TECHS/G126.html)
+- [G161: Providing a search function to help users find content](http://www.w3.org/TR/WCAG20-TECHS/G161.html)
 
 
 ## Assumptions

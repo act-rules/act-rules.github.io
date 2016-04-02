@@ -4,8 +4,8 @@ This test checks if every button element has a name.
 
 
 ## Background
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/H91.html| H91: Using HTML form controls and links]
-- [http://wiki.egovmon.no/wiki/SC4.1.2#ID:_H91-2|eGovMon test H91-2]
+- [H91: Using HTML form controls and links](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/H91.html)
+- [eGovMon test H91-2](http://wiki.egovmon.no/wiki/SC4.1.2#ID:_H91-2)
 
 
 ## Assumptions

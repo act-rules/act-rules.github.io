@@ -6,9 +6,9 @@ This test checks the value of the `xml:lang` attribute.
 
 
 ## Background
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H57  H57: Using language attributes on the html element]
-- [http://wiki.egovmon.no/wiki/SC3.1.1#Element_html eGovMon test for H57]
-- [http://www.rfc-editor.org/rfc/bcp/bcp47.txt BCP 47: Tags for the Identification of Languages]
+- [H57: Using language attributes on the html element](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H57)
+- [eGovMon test for H57](http://wiki.egovmon.no/wiki/SC3.1.1#Element_html)
+- [BCP 47: Tags for the Identification of Languages](http://www.rfc-editor.org/rfc/bcp/bcp47.txt)
 
 
 ## Assumptions

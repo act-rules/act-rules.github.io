@@ -15,8 +15,8 @@ First Draft
 
 
 ## Background
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/F81.html F81: Failure of Success Criterion 1.4.1 due to identifying required or error fields using color differences only]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/H92.html H92: Including a text cue for colored form control labels]
+- [F81: Failure of Success Criterion 1.4.1 due to identifying required or error fields using color differences only](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/F81.html)
+- [H92: Including a text cue for colored form control labels](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/H92.html)
 - from the UWEM 2.0 draft:
 - F81: Human input for sampling would be helpful to identify forms page.
 - F81: Not programmatically determinable if a field is required or has an error. Interactive tests can not be done.

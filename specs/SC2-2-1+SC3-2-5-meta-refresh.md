@@ -6,9 +6,9 @@ This test checks if meta element is not used for delayed redirecting or refreshi
 
 
 ## Background
-- [http://www.w3.org/TR/WCAG20-TECHS/H76.html H76: Using meta refresh to create an instant client-side redirect]
-- [http://www.w3.org/TR/WCAG20-TECHS/F40.html F40: Failure of Success Criterion 2.2.1 and 2.2.4 due to using meta redirect with a time limit]
-- [http://www.w3.org/TR/WCAG20-TECHS/F41.html F41: Failure of Success Criterion 2.2.1, 2.2.4, and 3.2.5 due to using meta refresh with a time-out]
+- [H76: Using meta refresh to create an instant client-side redirect](http://www.w3.org/TR/WCAG20-TECHS/H76.html)
+- [F40: Failure of Success Criterion 2.2.1 and 2.2.4 due to using meta redirect with a time limit](http://www.w3.org/TR/WCAG20-TECHS/F40.html)
+- [F41: Failure of Success Criterion 2.2.1, 2.2.4, and 3.2.5 due to using meta refresh with a time-out](http://www.w3.org/TR/WCAG20-TECHS/F41.html)
 
 
 ## Assumptions

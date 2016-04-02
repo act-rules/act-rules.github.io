@@ -6,10 +6,10 @@ This test checks that changes in human language are marked up correctly in the w
 
 
 ## Background
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H58  H58: Using language attributes to identify changes in the human language]
-- [http://wiki.egovmon.no/wiki/SC3.1.2#Element_self::text.28.29 eGovMon test for SC3.1.2]
-- [http://www.rfc-editor.org/rfc/bcp/bcp47.txt BCP 47: Tags for the Identification of Languages]
-- [http://www.w3.org/TR/1999/REC-html401-19991224/struct/dirlang.html#h-8.1.2 HTML 4.01 Inheritance of language codes]
+- [H58: Using language attributes to identify changes in the human language](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H58)
+- [eGovMon test for SC3.1.2](http://wiki.egovmon.no/wiki/SC3.1.2#Element_self::text.28.29)
+- [BCP 47: Tags for the Identification of Languages](http://www.rfc-editor.org/rfc/bcp/bcp47.txt)
+- [HTML 4.01 Inheritance of language codes](http://www.w3.org/TR/1999/REC-html401-19991224/struct/dirlang.html#h-8.1.2)
 
 
 ## Assumptions
@@ -34,7 +34,7 @@ This test checks that changes in human language are marked up correctly in the w
 Test method: [automatic]
 
 Select consecutive run of text to which a single language attribute applies.<br/>
-L1 = language of the selected text as determined by [http://www.w3.org/TR/1999/REC-html401-19991224/struct/dirlang.html#h-8.1.2 HTML 4.01 Inheritance of language codes].
+L1 = language of the selected text as determined by [HTML 4.01 Inheritance of language codes](http://www.w3.org/TR/1999/REC-html401-19991224/struct/dirlang.html#h-8.1.2).
 
 *Note: This test is applied to natural language text. The test is not applicable to content of `<script>`-elements, attribute values, and text contained in HTML comments.*
 
@@ -68,7 +68,7 @@ Test method: [manual]
 Present the selected text to the user.<br/>
 Question: Is L1 the *only* language used in this text?
 
-*Note that language codes should be presented in human readable form, e.g. using the description from the [http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry language subtag registry].*
+*Note that language codes should be presented in human readable form, e.g. using the description from the [language subtag registry](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).*
 
 Help text: If the text contains a phrase or sentence in another language, please answer "no". If there are only single words in another language and the rest of the text is in L1, please answer "yes".
 

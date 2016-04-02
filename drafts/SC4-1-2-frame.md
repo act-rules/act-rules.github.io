@@ -3,8 +3,8 @@ This test case checks that frames and iframes have a none-empty title attribute
 
 
 ## Background
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/H64.html H64: Using the title attribute of the frame and iframe elements]
-- [http://wiki.egovmon.no/wiki/SC4.1.2#ID:_H64-1 eGovMon test H64-1]
+- [H64: Using the title attribute of the frame and iframe elements](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/H64.html)
+- [eGovMon test H64-1](http://wiki.egovmon.no/wiki/SC4.1.2#ID:_H64-1)
 
 
 ## Assumptions

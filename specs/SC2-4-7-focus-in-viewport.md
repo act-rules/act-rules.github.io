@@ -6,8 +6,8 @@ This test checks that all elements that receive focus are visible in the viewpor
 
 
 ## Background
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G149 G149: Using user interface components that are highlighted by the user agent when they receive focus]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/C15 C15: Using CSS to change the presentation of a user interface component when it receives focus]
+- [G149: Using user interface components that are highlighted by the user agent when they receive focus](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G149)
+- [C15: Using CSS to change the presentation of a user interface component when it receives focus](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/C15)
 
 
 ## Assumptions

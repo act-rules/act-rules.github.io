@@ -6,9 +6,9 @@ This test checks the value of the `xml:lang` attributes.
 
 
 ## Background
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H58  H58: Using language attributes to identify changes in the human language]
-- [http://wiki.egovmon.no/wiki/SC3.1.2 eGovMon test for SC3.1.2]
-- [http://www.rfc-editor.org/rfc/bcp/bcp47.txt BCP 47: Tags for the Identification of Languages]
+- [H58: Using language attributes to identify changes in the human language](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H58)
+- [eGovMon test for SC3.1.2](http://wiki.egovmon.no/wiki/SC3.1.2)
+- [BCP 47: Tags for the Identification of Languages](http://www.rfc-editor.org/rfc/bcp/bcp47.txt)
 
 
 ## Assumptions

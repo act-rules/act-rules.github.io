@@ -6,9 +6,9 @@ This test checks if a table with caption does not contain a summary with the sam
 
 
 ## Background
-- [http://www.w3.org/TR/WCAG20-TECHS/H39.html H39: Using caption elements to associate data table captions with data tables]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/H73.html H73: Using the summary attribute of the table element to give an overview of data tables]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/H51.html H51: Using table markup to present tabular information]
+- [H39: Using caption elements to associate data table captions with data tables](http://www.w3.org/TR/WCAG20-TECHS/H39.html)
+- [H73: Using the summary attribute of the table element to give an overview of data tables](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/H73.html)
+- [H51: Using table markup to present tabular information](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/H51.html)
 
 
 ## Assumptions

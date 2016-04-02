@@ -6,11 +6,11 @@ This test checks that there isn't an automatically started sound after the web p
 
 
 ## Background
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G60 G60: Playing a sound that turns off automatically within three seconds]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G170 G170: Providing a control near the beginning of the Web page that turns off sounds that play automatically]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G171 G171: Playing sounds only on user request]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F23 F23: Failure of 1.4.2 due to playing a sound longer than 3 seconds where there is no mechanism to turn it off]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F93 F93: Failure of Success Criterion 1.4.2 for absence of a way to pause or stop an HTML5 media element that autoplays]
+- [G60: Playing a sound that turns off automatically within three seconds](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G60)
+- [G170: Providing a control near the beginning of the Web page that turns off sounds that play automatically](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G170)
+- [G171: Playing sounds only on user request](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G171)
+- [F23: Failure of 1.4.2 due to playing a sound longer than 3 seconds where there is no mechanism to turn it off](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F23)
+- [F93: Failure of Success Criterion 1.4.2 for absence of a way to pause or stop an HTML5 media element that autoplays](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F93)
 
 
 ## Assumptions

@@ -5,8 +5,8 @@ This test belongs to [[4.1.1 Parsing]].
 This test checks that tags of an HTML or XHTML document are nested correctly. So that elements that must be closed are, elements that shouldn't be aren't, and that elements are closed in the correct order.
 
 ## Background
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/H74 H74: Ensuring that opening and closing tags are used according to specification]
-- [http://wiki.egovmon.no/wiki/SC4.1.1#All_HTML_code eGovMon test ID: H74-1]
+- [H74: Ensuring that opening and closing tags are used according to specification](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/H74)
+- [eGovMon test ID: H74-1](http://wiki.egovmon.no/wiki/SC4.1.1#All_HTML_code)
 
 
 ## Assumptions

@@ -6,9 +6,9 @@ This test checks forms that initiate a change of context without submit button.
 
 
 ## Background
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G13 G13: Describing what will happen before a change to a form control that causes a change of context to occur is made]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H84 H84: Using a button with a select element to perform an action]
-- [http://wiki.egovmon.no/wiki/SC3.2.2#Element_form eGovMon test for G13 and H84]
+- [G13: Describing what will happen before a change to a form control that causes a change of context to occur is made](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G13)
+- [H84: Using a button with a select element to perform an action](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H84)
+- [eGovMon test for G13 and H84](http://wiki.egovmon.no/wiki/SC3.2.2#Element_form)
 
 
 ## Assumptions

@@ -6,17 +6,17 @@ This test checks that moving, blinking, scrolling, or auto-updating information 
 
 
 ## Background
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/G4 G4: Allowing the content to be paused and restarted from where it was paused]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/G11 G11: Creating content that blinks for less than 5 seconds]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/G152 G152: Setting animated gif images to stop blinking after n cycles (within 5 seconds)]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/G186 G186: Using a control in the Web page that stops moving, blinking, or auto-updating content]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/G187 G187: Using a technology to include blinking content that can be turned off via the user agent]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/G191 G191: Providing a link, button, or other mechanism that reloads the page without any blinking content]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F4 F4: Failure of Success Criterion 2.2.2 due to using text-decoration:blink without a mechanism to stop it in less than five seconds]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F7 F7: Failure of Success Criterion 2.2.2 due to an object or applet, such as Java or Flash, that has blinking content without a mechanism to pause the content that blinks for more than five seconds]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F16 F16: Failure of Success Criterion 2.2.2 due to including scrolling content where movement is not essential to the activity without also including a mechanism to pause and restart the content]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F47 F47: Failure of Success Criterion 2.2.2 due to using the blink element]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F50 F50: Failure of Success Criterion 2.2.2 due to a script that causes a blink effect without a mechanism to stop the blinking at 5 seconds or less]
+- [G4: Allowing the content to be paused and restarted from where it was paused](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/G4)
+- [G11: Creating content that blinks for less than 5 seconds](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/G11)
+- [G152: Setting animated gif images to stop blinking after n cycles (within 5 seconds)](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/G152)
+- [G186: Using a control in the Web page that stops moving, blinking, or auto-updating content](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/G186)
+- [G187: Using a technology to include blinking content that can be turned off via the user agent](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/G187)
+- [G191: Providing a link, button, or other mechanism that reloads the page without any blinking content](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/G191)
+- [F4: Failure of Success Criterion 2.2.2 due to using text-decoration:blink without a mechanism to stop it in less than five seconds](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F4)
+- [F7: Failure of Success Criterion 2.2.2 due to an object or applet, such as Java or Flash, that has blinking content without a mechanism to pause the content that blinks for more than five seconds](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F7)
+- [F16: Failure of Success Criterion 2.2.2 due to including scrolling content where movement is not essential to the activity without also including a mechanism to pause and restart the content](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F16)
+- [F47: Failure of Success Criterion 2.2.2 due to using the blink element](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F47)
+- [F50: Failure of Success Criterion 2.2.2 due to a script that causes a blink effect without a mechanism to stop the blinking at 5 seconds or less](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F50)
 
 
 ## Assumptions

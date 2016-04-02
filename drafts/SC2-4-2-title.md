@@ -6,11 +6,11 @@ This test checks that the page title (`<title` element in the head section of a 
 
 
 ## Background
-- [http://www.w3.org/TR/WCAG20-TECHS/G88.html G88: Providing descriptive titles for Web pages]
-- [http://www.w3.org/TR/WCAG20-TECHS/H25.html H25: Providing a title using the title element]
-- [http://www.w3.org/TR/WCAG20-TECHS/F25.html F25: Failure of Success Criterion 2.4.2 due to the title of a Web page not identifying the contents]
+- [G88: Providing descriptive titles for Web pages](http://www.w3.org/TR/WCAG20-TECHS/G88.html)
+- [H25: Providing a title using the title element](http://www.w3.org/TR/WCAG20-TECHS/H25.html)
+- [F25: Failure of Success Criterion 2.4.2 due to the title of a Web page not identifying the contents](http://www.w3.org/TR/WCAG20-TECHS/F25.html)
 ## Assumptions
-- Technique ARIA 1 is not considered for this test, although it was added in a recent [http://www.w3.org/TR/2014/NOTE-UNDERSTANDING-WCAG20-20140408/complete-diff.html update of the Understanding WCAG 2.0 document].
+- Technique ARIA 1 is not considered for this test, although it was added in a recent [update of the Understanding WCAG 2.0 document](http://www.w3.org/TR/2014/NOTE-UNDERSTANDING-WCAG20-20140408/complete-diff.html).
 - If there are more than one `<title>` elements this test will throw an error.
 
 

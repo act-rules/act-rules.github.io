@@ -6,13 +6,13 @@ This test checks that tables used for layout purposes do not contain tabular dat
 
 
 ## Background
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/G140 G140: Separating information and structure from presentation to enable different presentations | Techniques for WCAG 2.0]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/H39 H39: Using caption elements to associate data table captions with data tables | Techniques for WCAG 2.0]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/H51 H51: Using table markup to present tabular information | Techniques for WCAG 2.0]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/H73 H73: Using the summary attribute of the table element to give an overview of data tables | Techniques for WCAG 2.0]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F46 F46: Failure of Success Criterion 1.3.1 due to using th elements, caption elements, or non-empty summary attributes in layout tables | Techniques for WCAG]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F91 F91: Failure of Success Criterion 1.3.1 for not correctly marking up table headers | Techniques for WCAG 2.0]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F92 F92: Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information | Techniques for WCAG 2.0]
+- [G140: Separating information and structure from presentation to enable different presentations Techniques for WCAG 2.0](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/G140)
+- [H39: Using caption elements to associate data table captions with data tables Techniques for WCAG 2.0](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/H39)
+- [H51: Using table markup to present tabular information Techniques for WCAG 2.0](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/H51)
+- [H73: Using the summary attribute of the table element to give an overview of data tables Techniques for WCAG 2.0](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/H73)
+- [F46: Failure of Success Criterion 1.3.1 due to using th elements, caption elements, or non-empty summary attributes in layout tables Techniques for WCAG](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F46)
+- [F91: Failure of Success Criterion 1.3.1 for not correctly marking up table headers Techniques for WCAG 2.0](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F91)
+- [F92: Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information Techniques for WCAG 2.0](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F92)
 
 
 ## Assumptions

@@ -6,24 +6,24 @@ This test checks that non-text elements conveying information are providing suff
 
 
 ## Background
-- [http://www.w3.org/TR/2014/REC-wai-aria-20140320/roles#textalternativecomputation WAI-ARIA 1.0 - Text Alternative Computation]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/ARIA6 ARIA6: Using aria-label to provide labels for objects]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/ARIA10 ARIA10: Using aria-labelledby to provide a text alternative for non-text content]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F38 F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F30 F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F39 F39: Failure of Success Criterion 1.1.1 due to providing a text alternative that is not null (e.g., alt="spacer" or alt="image") for images that should be ignored by assistive technology]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F65 F65: Failure of Success Criterion 1.1.1 due to omitting the alt attribute on img elements, area elements, and input elements of type "image"]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G196 G196: Using a text alternative on one item within a group of images that describes all items in the group]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H2 H2: Combining adjacent image and text links for the same resource]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H30 H30: Providing link text that describes the purpose of a link for anchor elements]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H37 H37: Using alt attributes on img elements]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H53 H53: Using the body of the object element]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H67 H67: Using null alt text and no title attribute on img elements for images that AT should ignore]
+- [WAI-ARIA 1.0 - Text Alternative Computation](http://www.w3.org/TR/2014/REC-wai-aria-20140320/roles#textalternativecomputation)
+- [ARIA6: Using aria-label to provide labels for objects](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/ARIA6)
+- [ARIA10: Using aria-labelledby to provide a text alternative for non-text content](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/ARIA10)
+- [F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F38)
+- [F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F30)
+- [F39: Failure of Success Criterion 1.1.1 due to providing a text alternative that is not null (e.g., alt="spacer" or alt="image") for images that should be ignored by assistive technology](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F39)
+- [F65: Failure of Success Criterion 1.1.1 due to omitting the alt attribute on img elements, area elements, and input elements of type "image"](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/F65)
+- [G196: Using a text alternative on one item within a group of images that describes all items in the group](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G196)
+- [H2: Combining adjacent image and text links for the same resource](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H2)
+- [H30: Providing link text that describes the purpose of a link for anchor elements](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H30)
+- [H37: Using alt attributes on img elements](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H37)
+- [H53: Using the body of the object element](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H53)
+- [H67: Using null alt text and no title attribute on img elements for images that AT should ignore](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H67)
 
 
 ## Assumptions
 - The techniques used for providing a textual alternative are accessibility supported. For more information read  [[Accessibility Support]].
-- All elements are contained in the mark-up code in the examined web page snapshot. [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F20 F20: Failure of Success Criterion 1.1.1 and 4.1.2 due to not updating text alternatives when changes to non-text content occur] is not tested.
+- All elements are contained in the mark-up code in the examined web page snapshot. [F20: Failure of Success Criterion 1.1.1 and 4.1.2 due to not updating text alternatives when changes to non-text content occur](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F20) is not tested.
 - Groups of images consist of `img` elements that are adjacent to each other and not wrapped in containers.
 - The smallest readable font can be displayed on a matrix with a height of 5 and a width of 3. Smaller elements are considered decorative automatically.
 
@@ -118,7 +118,7 @@ All items of the group should be removed from the set of selector-matches after 
 |----------------------|---------
 | Presented item       | Parent element containing group of images
 | Question             | Does T1 sufficiently describe the group of images?
-| Help                 | If the images contribute meaning to the page or provide any functionality or convey information additional to the pages text, this must be described. Please refer to the [https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description explanations concerning sufficient short text alternatives] for further information.
+| Help                 | If the images contribute meaning to the page or provide any functionality or convey information additional to the pages text, this must be described. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
 | Requir               | If no, could you suggest a sufficient textual alternative?
 | Requires context     | yes
 | Requires Interaction | yes
@@ -151,7 +151,7 @@ All items of the group should be removed from the set of selector-matches after 
 |----------------------|---------
 | Presented item       | Parent element containing group of images
 | Question             | Does T1 sufficiently describe the group of images?
-| Help                 | If the images contribute meaning to the page or provide any functionality or convey information additional to the pages text, this must be described. Please refer to the [https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description explanations concerning sufficient short text alternatives] for further information.
+| Help                 | If the images contribute meaning to the page or provide any functionality or convey information additional to the pages text, this must be described. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
 | Requir               | If no, could you suggest a sufficient textual alternative?
 | Requires context     | yes
 | Requires Interaction | yes
@@ -334,7 +334,7 @@ Test method: [manual]
 |----------------------|---------
 | Presented item       | Current element
 | Question             | Does the textual alternative T1 sufficiently describe the element?
-| Help                 | If the element contributes meaning to the page or provides any functionality or conveys information additional to the pages text, this must be described. Please refer to the [https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description explanations concerning sufficient short text alternatives] for further information.
+| Help                 | If the element contributes meaning to the page or provides any functionality or conveys information additional to the pages text, this must be described. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
 | Requir               | If no, could you suggest a sufficient textual alternative?
 | Requires context     | yes
 | Requires Interaction | yes
@@ -356,7 +356,7 @@ Test method: [manual]
 |----------------------|---------
 | Presented item       | Current element in context
 | Question             | Is the element sufficiently described by adjacent text?
-| Help                 | If the element shows content, which is redundant to real text nearby, answer 'Yes'. Otherwise, or if the element provides any functionality, answer 'No'. Please refer to the [https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description explanations concerning sufficient short text alternatives] for further information.
+| Help                 | If the element shows content, which is redundant to real text nearby, answer 'Yes'. Otherwise, or if the element provides any functionality, answer 'No'. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
 | Requir               | If no, could you suggest a sufficient textual alternative?
 | Requires context     | yes
 | Requires Interaction | no

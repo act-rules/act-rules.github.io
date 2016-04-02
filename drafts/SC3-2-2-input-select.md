@@ -6,9 +6,9 @@ This test checks form controls outside form elements.
 
 
 ## Background
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G13 G13: Describing what will happen before a change to a form control that causes a change of context to occur is made]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H84 H84: Using a button with a select element to perform an action]
-- [http://wiki.egovmon.no/wiki/SC3.2.2#Element_input.5B.40type.3D.27radio.27.5D.2C_input.5B.40type.3D.27checkbox.27.5D.2C_or_select_not_contained_in_a_form_element eGovMon test for G13]
+- [G13: Describing what will happen before a change to a form control that causes a change of context to occur is made](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G13)
+- [H84: Using a button with a select element to perform an action](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/H84)
+- [eGovMon test for G13](http://wiki.egovmon.no/wiki/SC3.2.2#Element_input.5B.40type.3D.27radio.27.5D.2C_input.5B.40type.3D.27checkbox.27.5D.2C_or_select_not_contained_in_a_form_element)
 
 
 ## Assumptions

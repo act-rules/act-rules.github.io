@@ -6,9 +6,9 @@ This test checks if each `area` element contains an `alt` attribute that is not 
 
 
 ## Background
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/H24.html H24: Providing text alternatives for the area elements of image maps]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/G91.html G91: Providing link text that describes the purpose of a link]
-- [http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/H30.html H30: Providing link text that describes the purpose of a link for anchor elements]
+- [H24: Providing text alternatives for the area elements of image maps](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/H24.html)
+- [G91: Providing link text that describes the purpose of a link](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/G91.html)
+- [H30: Providing link text that describes the purpose of a link for anchor elements](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/H30.html)
 
 
 ## Assumptions
@@ -86,7 +86,7 @@ Test method: [manual]
 | Requires Interaction | no
 | Question             | Does the text alternative describe the purpose of the highlighted area
 |answer-options = yes/no
-| Help                 | If the area contains text this should be included in the text alternative. The purpose of that area on the image must be described. Please refer to the [https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description explanations concerning sufficient short text alternatives] for further information.
+| Help                 | If the area contains text this should be included in the text alternative. The purpose of that area on the image must be described. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
 |repair = If no, could you suggest a sufficient textual alternative?
 
 if yes, return

@@ -10,8 +10,8 @@ Check if text meets [[1.4.1 Use of Color]].
 
 ## Background
 
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/G14.html G14: Ensuring that information conveyed by color differences is also available in text]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/G182.html G182: Ensuring that additional visual cues are available when text color differences are used to convey information]
+- [G14: Ensuring that information conveyed by color differences is also available in text](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/G14.html)
+- [G182: Ensuring that additional visual cues are available when text color differences are used to convey information](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/G182.html)
 - Comments from UWEM 2.0 draft:
 - Not automatable.
 - Cannot automatically determine if colour of particular words or other content is used to convey information.

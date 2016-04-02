@@ -5,9 +5,9 @@ This test checks that no non-textual information is conveyed by a sequence chara
 
 
 ## Background
-- [http://www.w3.org/TR/WCAG20-TECHS/H86 H86: Providing text alternatives for ASCII art, emoticons, and leetspeak]
-- [http://www.w3.org/TR/WCAG20-TECHS/F72.html F72: Failure of Success Criterion 1.1.1 due to using ASCII art without providing a text alternative]
-- [http://www.w3.org/WAI/ER/IG/ert/AsciiArt.htm WAI: ASCII art detection algorithms ]
+- [H86: Providing text alternatives for ASCII art, emoticons, and leetspeak](http://www.w3.org/TR/WCAG20-TECHS/H86)
+- [F72: Failure of Success Criterion 1.1.1 due to using ASCII art without providing a text alternative](http://www.w3.org/TR/WCAG20-TECHS/F72.html)
+- [WAI: ASCII art detection algorithms ](http://www.w3.org/WAI/ER/IG/ert/AsciiArt.htm)
 
 
 ## Assumptions

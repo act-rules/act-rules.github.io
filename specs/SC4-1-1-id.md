@@ -7,9 +7,9 @@ This test checks id attribute for all elements to have a unique value.
 
 
 ## Background
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/H93| H93: Ensuring that id attributes are unique on a Web page]
-- [http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/F77| F77: Failure of Success Criterion 4.1.1 due to duplicate values of type ID]
-- [http://wiki.egovmon.no/wiki/SC4.1.1#ID:_F77-1|eGovMon test F77-1]
+- [H93: Ensuring that id attributes are unique on a Web page](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/H93)
+- [F77: Failure of Success Criterion 4.1.1 due to duplicate values of type ID](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/F77)
+- [eGovMon test F77-1](http://wiki.egovmon.no/wiki/SC4.1.1#ID:_F77-1)
 
 
 ## Assumptions

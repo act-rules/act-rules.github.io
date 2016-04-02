@@ -2,7 +2,7 @@
 // var readRecursively = require('fs-readdir-recursive');
 var marked = require('marked');
 
-var fs = require('fs');
+var fs = require('fs-extra');
 var path = require('path');
 
 var specDir = path.resolve(__dirname, '../specs/');
@@ -25,7 +25,7 @@ specFiles.forEach(function (fileName) {
 	.replace('<!-- spec -->', specHtml);
 
 	var htmlPath = path.join(outDir, fileName.replace('.md', '.html'));
-	fs.writeFileSync(htmlPath, html);
+	fs.outputFileSync(htmlPath, html);
 	console.log('created file at', htmlPath);
 
 });

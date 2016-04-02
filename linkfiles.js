@@ -24,18 +24,18 @@ files = files.concat(readRecursively('./outdated'));
 files.forEach(function (file) {
 	var text = fs.readFileSync(file, 'utf-8');
 
-	var links = text.match(/\[http[^\]]+\]/g);
+	text = '\n# '+ file.replace('.md', '') + ' \n\n' + text;
 
-	(links || []).forEach(function (oldLink) {
-		var stripped = oldLink.substr(1, oldLink.length -2);
-		var bits = stripped.split(/[|\s]+/g);
-
-		if (bits.length >= 2) {
-			var link = bits.shift();
-			var newLink = '[' + bits.join(' ') + '](' + link + ')';
-			text = text.replace(oldLink, newLink);
-		}
-	});
+	// var links = text.match(/\[http[^\]]+\]/g);
+	// (links || []).forEach(function (oldLink) {
+	// 	var stripped = oldLink.substr(1, oldLink.length -2);
+	// 	var bits = stripped.split(/[|\s]+/g);
+	// 	if (bits.length >= 2) {
+	// 		var link = bits.shift();
+	// 		var newLink = '[' + bits.join(' ') + '](' + link + ')';
+	// 		text = text.replace(oldLink, newLink);
+	// 	}
+	// });
 
 	fs.writeFileSync(file, text);
 });

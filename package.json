@@ -4,6 +4,7 @@
   "description": "Test case definitions for wcag 2.0 conformance testing",
   "main": "dist/index.html",
   "dependencies": {
+    "fs-extra": "^0.26.7",
     "marked": "^0.3.5"
   },
   "devDependencies": {},

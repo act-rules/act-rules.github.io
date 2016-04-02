@@ -21,7 +21,7 @@ specFiles.forEach(function (fileName) {
 	var specHtml = marked(specMd);
 
 	var html = template
-	.replace('<!-- title -->', fileName)
+	.replace('<!-- title -->', path.basename(fileName, '.md'))
 	.replace('<!-- spec -->', specHtml);
 
 	var htmlPath = path.join(outDir, fileName.replace('.md', '.html'));

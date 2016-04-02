@@ -1,4 +1,7 @@
 
+# SC1-1-1-character-based-non-textual 
+
+
 
 ## Description
 This test checks that no non-textual information is conveyed by a sequence character.

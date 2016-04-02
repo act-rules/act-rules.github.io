@@ -1,3 +1,6 @@
+
+# SC1-1-1-css-image 
+
 This test case belongs to [[1.1.1 Non-text Content]]
 
 

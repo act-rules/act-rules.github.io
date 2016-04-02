@@ -1,3 +1,6 @@
+
+# SC2-4-5-multiple-ways 
+
 Back to Success Criterion [[2.4.5 Multiple Ways]]
 
 

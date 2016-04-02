@@ -1,3 +1,6 @@
+
+# SC3-1-1-xml-lang 
+
 This test belongs to [[3.1.1 Language of Page]].
 
 

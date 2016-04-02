@@ -1,3 +1,6 @@
+
+# SC2-4-7-visible-link-focus 
+
 ## Description
 This test checks that if links receive focus their style is changed in such a way that focus is recognized by the user.
 

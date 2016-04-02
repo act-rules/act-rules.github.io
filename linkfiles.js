@@ -24,7 +24,7 @@ files = files.concat(readRecursively('./outdated'));
 files.forEach(function (file) {
 	var text = fs.readFileSync(file, 'utf-8');
 
-	text = '\n# '+ file.replace('.md', '') + ' \n\n' + text;
+	text = '\n# '+ path.basename(file, '.md') + ' \n\n' + text;
 
 	// var links = text.match(/\[http[^\]]+\]/g);
 	// (links || []).forEach(function (oldLink) {

@@ -1,6 +1,5 @@
 
-# SC1-1-1-character-based-non-textual 
-
+# SC1-1-1-character-based-non-textual
 
 
 ## Description

@@ -1,15 +1,10 @@
 
-# SC1-4-1-img 
+# SC1-4-1-img
 
 Check if images meet [[1.4.1 Use of Color]].
 
 
-## Status
-
-1: First Draft
-
-### Open issues
-
+## Open issues
 - Failure F13 relates to two SCs. How to handle that?
 
 

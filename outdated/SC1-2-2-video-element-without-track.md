@@ -1,12 +1,8 @@
 
-# SC1-2-2-video-element-without-track 
+# SC1-2-2-video-element-without-track
 
 Back to Success Criterion [[1.2.1_Audio-only_and_Video-only_(Prerecorded)]]
 
-## Status
-{{status|0.2: Review|2124}}
-{{status|0.1: Draft|2053}}
-[[Category:Review‏‎]]
 
 ## Description
 This test checks that for prerecorded video-only content an alternative text or audio version exists, which is relevant and descriptive for the video-only content.

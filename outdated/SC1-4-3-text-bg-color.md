@@ -1,11 +1,8 @@
 
-# SC1-4-3-text-bg-color 
+# SC1-4-3-text-bg-color
 
 * partially automatable test (tool can produce some results, user input required to perform the full test)
 
-## Status
-
-# First Draft
 
 ### Open issues
 

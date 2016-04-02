@@ -1,13 +1,10 @@
 
-# SC1-4-1-form 
+# SC1-4-1-form
 
 Check if forms meet [[1.4.1 Use of Color]].
 
 semi-automatable test
 
-
-## Status
-First Draft
 
 ### Open issues
 - Consider to connect this test to the user sample.

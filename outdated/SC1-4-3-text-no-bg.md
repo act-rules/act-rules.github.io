@@ -1,11 +1,7 @@
 
-# SC1-4-3-text-no-bg 
+# SC1-4-3-text-no-bg
 
 automatable test (tool only)
-
-
-## Status
-First Draft
 
 
 ### Open issues

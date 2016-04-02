@@ -1,8 +1,7 @@
 
-# SC1-1-1-aria-describedby 
+# SC1-1-1-aria-describedby
 
 This test case belongs to [[1.1.1 Non-text Content]]
-
 
 ## Description
 This test checks the sufficient provision of a long text description for elements using the `aria-describedby` attribute.

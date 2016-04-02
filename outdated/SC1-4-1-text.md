@@ -1,14 +1,10 @@
 
-# SC1-4-1-text 
+# SC1-4-1-text
 
 Check if text meets [[1.4.1 Use of Color]].
 
-## Status
-
-1: First Draft
 
 ### Open issues
-
 *to do*
 
 ## Background

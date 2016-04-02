@@ -1,12 +1,7 @@
 
-# SC1-3-1-headings 
+# SC1-3-1-headings
 
 This test belongs to [[1.3.1 Info and Relationships]].
-
-
-## Status
-{{status|0.1: For review|2084}}
-[[Category:Review]]
 
 
 ## Description

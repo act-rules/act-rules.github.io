@@ -1,5 +1,5 @@
 
-# SC3-1-1-text 
+# SC3-1-1-text
 
 This test belongs to [[3.1.1 Language of Page]].
 
@@ -38,11 +38,11 @@ This test does not prescribe which of these definitions to use as long as one of
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 L1 = value of `lang` attribute.
 
 ### Step 1
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 Select a continuous run of text from one or more consecutive `p`-elements. If no `p`-elements exist, select any text from the body of the web page. The text should be at least 300 characters in length and not contain any language changes, i.e. lang-attributes on the element or its parent. If no such text is found, continue with [[#Step 2|Step 2]].
 
 Use a [[language identification algorithm]] to check if L1 is the language of the selected text.
@@ -57,7 +57,7 @@ If yes, return
 Else continue with [[#Step 2|Step 2]].
 
 ### Step 2
-Test method: [manual]
+Test method: [automatic][earl:manual]
 
 Present the page to the user.<br/>
 Question: Is L1 the primary language of this page?
@@ -81,3 +81,9 @@ Else return
 | ID       | SC311-text-fail1
 | Error    | The primary language of the page is not specified correctly.
 | Info     | L1
+
+
+
+[earl:automatic]: ../earl/automatic.md
+[earl:semiauto]: ../earl/semiauto.md
+[earl:manual]: ../earl/manual.md

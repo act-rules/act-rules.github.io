@@ -30,7 +30,7 @@ This test checks that all elements that receive focus are visible in the viewpor
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 Each element that matches one of the following CSS selectors
 - `a[href]:not([tabindex=-1])`,
@@ -41,7 +41,7 @@ Each element that matches one of the following CSS selectors
 - `*[tabindex]:not([tabindex=-1])`
 
 ### Step 1
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 Give focus to the selected element.
 
@@ -61,3 +61,9 @@ If no, return:
 | Testcase | SC2-4-7-focus-in-viewport
 | ID       | SC2-4-7-focus-in-viewport-failed
 | Error    | The element should be inside the viewport when it receives focus
+
+
+
+[earl:automatic]: ../earl/automatic.md
+[earl:semiauto]: ../earl/semiauto.md
+[earl:manual]: ../earl/manual.md

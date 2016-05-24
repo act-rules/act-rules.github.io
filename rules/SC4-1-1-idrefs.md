@@ -1,5 +1,5 @@
 
-# SC4-1-1-idrefs 
+# SC4-1-1-idrefs
 
 This test belongs to [[4.1.1 Parsing]].
 
@@ -29,12 +29,12 @@ This test checks that each element referred to from an idrefs attribute exists.
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 Select each td and th element with a headers attribute, and each element with an aria IDREFS attribute. The CSS selector "td[headers], th[headers], *[aria-controls], *[aria-describedby], *[aria-flowto], *[aria-labelledby], *[aria-owns]" can be used.
 
 ### Step 1
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 - Make a list of idRefVals by splitting the IDREFS attribute on whitespace characters
 - Trim each value in idRefVals by removing all whitespace characters
@@ -57,3 +57,9 @@ Test method: [automatic]
 | Error    | The attribute {IDREFS attribute} refers to an element with the id {idRefVal} which does not exist on the page.
 | Pointer  | selector result
 | ID       | SC4-1-1-idrefs-fail1
+
+
+
+[earl:automatic]: ../earl/automatic.md
+[earl:semiauto]: ../earl/semiauto.md
+[earl:manual]: ../earl/manual.md

@@ -1,5 +1,5 @@
 
-# SC3-1-1-xml-lang 
+# SC3-1-1-xml-lang
 
 This test belongs to [[3.1.1 Language of Page]].
 
@@ -31,13 +31,13 @@ This test checks the value of the `xml:lang` attribute.
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 Select `<html>` element with `xml:lang` attribute.
 
 `html[@xml:lang]`
 
 ### Step 1
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 Check that the `<html>` element contains also a `lang` attribute.
 
@@ -50,7 +50,7 @@ If no `lang` is specified, return
 | Error    | No lang attribute found. Only xml:lang.
 
 ### Step 2
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 L1 = value of `xml:lang`<br/>
 L2 = value of `lang`
@@ -72,3 +72,9 @@ Else, return
 |----------|-----
 | Testcase | SC311-xml-lang
 | ID       | SC311-xml-lang-pass1
+
+
+
+[earl:automatic]: ../earl/automatic.md
+[earl:semiauto]: ../earl/semiauto.md
+[earl:manual]: ../earl/manual.md

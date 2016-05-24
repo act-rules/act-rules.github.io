@@ -1,5 +1,5 @@
 
-# SC2-2-1+SC3-2-5-meta-refresh 
+# SC2-2-1+SC3-2-5-meta-refresh
 
 This test belongs to [[2.2.1 Timing Adjustable]], and to [[3.2.5 Change on Request]]
 
@@ -31,12 +31,12 @@ This test checks if meta element is not used for delayed redirecting or refreshi
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 Select each element matching: `meta[http-equiv="refresh"][content]`
 
 ### Step 1
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 Take the value of the content attribute of the selected element.
 
@@ -60,3 +60,9 @@ Else return:
 | ID       | SC2-2-1+SC3-2-5-meta-refresh-failed
 | Error    | Meta refresh should not be used unless it is instantaneous.
 | Pointer  | Selected element
+
+
+
+[earl:automatic]: ../earl/automatic.md
+[earl:semiauto]: ../earl/semiauto.md
+[earl:manual]: ../earl/manual.md

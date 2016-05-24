@@ -1,5 +1,5 @@
 
-# SC2-4-7-focus-in-viewport 
+# SC2-4-7-focus-in-viewport
 
 This test case belongs to [[2.4.7 Focus Visible]]
 
@@ -33,12 +33,12 @@ This test checks that all elements that receive focus are visible in the viewpor
 Test method: [automatic]
 
 Each element that matches one of the following CSS selectors
-- a[href]:not([tabindex=-1]),
-- button:not([tabindex=-1]),
-- select:not([tabindex=-1]),
-- textarea:not([tabindex=-1]),
-- input:not([tabindex=-1]):not([type=hidden]),
-- *[tabindex]:not([tabindex=-1])
+- `a[href]:not([tabindex=-1])`,
+- `button:not([tabindex=-1])`,
+- `select:not([tabindex=-1])`,
+- `textarea:not([tabindex=-1])`,
+- `input:not([tabindex=-1]):not([type=hidden])`,
+- `*[tabindex]:not([tabindex=-1])`
 
 ### Step 1
 Test method: [automatic]

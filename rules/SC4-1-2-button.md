@@ -34,9 +34,9 @@ Select any button element. The following CSS selector could be used: â€œbuttonâ€
 ### Step 1
 Test method: [automatic][earl:automatic]
 
-- IF there is [[non-empty]] text within the button element:
+- IF there is [non-empty](../definitions/non-empty.md) text within the button element:
   - Return SC412-button-pass;
-- IF the button element has a title attribute with a [[non-empty]] value:
+- IF the button element has a title attribute with a [non-empty](../definitions/non-empty.md) value:
   - Return SC412-button-pass;
 - ELSE Return SC412-button-fail;
 

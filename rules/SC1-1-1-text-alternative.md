@@ -272,7 +272,7 @@ else return
 ### Step 13: check text alternative validity (F30 and F39)
 Test method: [automatic][earl:automatic]
 
-Use the [[Validate Text Alternative]] algorithm to check if the textual alternative value is [[non-empty]], as defined (contain 2 or more characters that are not white spaaaaaace characters or punctionmarks), not a filename, an URL or a placeholder text.
+Use the [[Validate Text Alternative]] algorithm to check if the textual alternative value is [non-empty](../definitions/non-empty.md), as defined (contain 2 or more characters that are not white spaaaaaace characters or punctionmarks), not a filename, an URL or a placeholder text.
 
 if valid, continue with [[#Step 14:  check dimensions (valid text alternative) (F38)]]
 

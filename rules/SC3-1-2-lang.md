@@ -19,7 +19,7 @@ This test checks that `lang` attributes within the body of a web page are correc
 | Property          | Value
 |-------------------|----
 | Test name         | Languages within the body
-| Success Criterion | [[3.1.2 Language of Parts]]
+| Success Criterion | 3.1.2 Language of Parts
 | Test mode         | Automatic
 | Test environment  | DOM
 | Test subject      | Single web page

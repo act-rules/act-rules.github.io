@@ -18,7 +18,7 @@ This test checks the value of the `xml:lang` attribute.
 | Property          | Value
 |-------------------|----
 | Test name         | Use identical xml:lang and lang attributes
-| Success Criterion | [[3.1.1 Language of Page]]
+| Success Criterion | 3.1.1 Language of Page
 | Test mode         | Automatic
 | Test environment  | DOM
 | Test subject      | Single web page

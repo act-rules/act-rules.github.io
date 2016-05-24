@@ -17,7 +17,7 @@ This test checks that all elements that receive focus are visible in the viewpor
 | Property          | Value
 |-------------------|----
 | Test name         | Focused element visible in viewport
-| Success Criterion | [[2.4.7 Focus Visible]]
+| Success Criterion | 2.4.7 Focus Visible
 | Test mode         | Automatic
 | Test environment  | Remote Controlled User Agent
 | Test subject      | Single web page

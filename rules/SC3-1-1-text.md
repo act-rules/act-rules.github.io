@@ -25,7 +25,7 @@ This test does not prescribe which of these definitions to use as long as one of
 
 | Property          | Value
 |-------------------|----
-| Success Criterion | [[3.1.1 Language of Page]]
+| Success Criterion | 3.1.1 Language of Page
 | Test mode         | SemiAuto
 | Test environment  | DOM
 | Test subject      | Single web page

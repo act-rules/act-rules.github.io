@@ -21,7 +21,7 @@ This test checks that changes in human language are marked up correctly in the w
 ## Test properties
 | Property          | Value
 |-------------------|----
-| Success Criterion | [[3.1.2 Language of Parts]]
+| Success Criterion | 3.1.2 Language of Parts
 | Test mode         | SemiAuto
 | Test environment  | DOM
 | Test subject      | Single web page

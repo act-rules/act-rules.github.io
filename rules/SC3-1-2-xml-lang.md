@@ -18,7 +18,7 @@ This test checks the value of the `xml:lang` attributes.
 | Property          | Value
 |-------------------|----
 | Test name         | Language of Parts
-| Success Criterion | [[3.1.2 Language of Parts]]
+| Success Criterion | 3.1.2 Language of Parts
 | Test mode         | Automatic
 | Test environment  | DOM
 | Test subject      | Single web page

@@ -17,7 +17,7 @@ This test checks accesskey attribute for all elements to have a unique value.
 | Property          | Value
 |-------------------|----
 | Test name         | Provide unique accesskeys
-| Test requirement  | [[4.1.1 Parsing]]
+| Test requirement  | 4.1.1 Parsing
 | Test mode         | Automatic
 | Test environment  | DOM
 | Test subject      | single web page

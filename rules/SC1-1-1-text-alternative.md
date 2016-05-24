@@ -31,7 +31,7 @@ This test checks that non-text elements conveying information are providing suff
 | Property          | Value
 |-------------------|----
 | Test name         | Provision of short text alternative
-| Success Criterion | [[1.1.1 Non-text Content]]
+| Success Criterion | 1.1.1 Non-text Content
 | Test mode         | SemiAuto
 | Test environment  | Rendered page
 | Test subject      | Web page state

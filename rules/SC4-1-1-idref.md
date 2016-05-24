@@ -17,7 +17,7 @@ This test checks that each element referred to from an idref attribute exists.
 | Property          | Value
 |-------------------|----
 | Test name         | Reference elements
-| Test requirement  | [[4.1.1 Parsing]]
+| Test requirement  | 4.1.1 Parsing
 | Test mode         | Automatic
 | Test environment  | DOM
 | Test subject      | Single web page

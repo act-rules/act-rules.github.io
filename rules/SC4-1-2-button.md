@@ -16,7 +16,7 @@ This test checks if every button element has a name.
 ## Test properties
 | Property          | Value
 |-------------------|----
-| Success Criterion | [[4.1.2 Name, Role, Value]]
+| Success Criterion | 4.1.2 Name, Role, Value
 | Test mode         | automatic
 | Test environment  | DOM
 | Test subject      | single web page

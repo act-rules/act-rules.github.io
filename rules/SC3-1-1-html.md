@@ -19,7 +19,7 @@ This test checks that the primary language of the web content can be programmati
 | Property          | Value
 |-------------------|----
 | Test name         | Primary language of page
-| Success Criterion | [[3.1.1 Language of Page]]
+| Success Criterion | 3.1.1 Language of Page
 | Test mode         | Automatic
 | Test environment  | DOM
 | Test subject      | single web page

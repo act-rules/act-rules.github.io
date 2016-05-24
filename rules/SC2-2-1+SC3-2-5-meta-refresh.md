@@ -18,7 +18,7 @@ This test checks if meta element is not used for delayed redirecting or refreshi
 | Property          | Value
 |-------------------|----
 | Test name         | Meta refresh and redirect is not used
-| Success Criterion | [[2.2.1 Timing Adjustable]], [[3.2.5 Change on Request]]
+| Success Criterion | 2.2.1 Timing Adjustable, 3.2.5 Change on Request
 | Test mode         | Automatic
 | Test environment  | DOM
 | Test subject      | Single web page

@@ -1,8 +1,4 @@
-
 # SC2-4-7-focus-in-viewport
-
-This test case belongs to [[2.4.7 Focus Visible]]
-
 
 ## Description
 This test checks that all elements that receive focus are visible in the viewport.

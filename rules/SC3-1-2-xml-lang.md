@@ -1,8 +1,4 @@
-
 # SC3-1-2-xml-lang
-
-This test belongs to [[3.1.2 Language of Parts]].
-
 
 ## Description
 This test checks the value of the `xml:lang` attributes.

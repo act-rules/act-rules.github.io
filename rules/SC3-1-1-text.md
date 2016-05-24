@@ -1,8 +1,4 @@
-
 # SC3-1-1-text
-
-This test belongs to [[3.1.1 Language of Page]].
-
 
 ## Description
 This test checks that the primary language of the content is specified correctly by the language attribute of the `<html>`-element.

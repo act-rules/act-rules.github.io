@@ -1,8 +1,4 @@
-
 # SC3-1-2-text
-
-This test belongs to [[3.1.2 Language of Parts]].
-
 
 ## Description
 This test checks that changes in human language are marked up correctly in the web content.

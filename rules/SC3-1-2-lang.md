@@ -1,8 +1,4 @@
-
 # SC3-1-2-lang
-
-This test belongs to [[3.1.2 Language of Parts]].
-
 
 ## Description
 This test checks that `lang` attributes within the body of a web page are correct.

@@ -1,8 +1,4 @@
-
 # SC1-1-1-text-alternative
-
-This test belongs to [[1.1.1 Non-text Content]].
-
 
 ## Description
 This test checks that non-text elements conveying information are providing sufficient textual alternatives or, if purely decorative, are hidden from assistive technologies.

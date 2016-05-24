@@ -1,8 +1,4 @@
-
 # SC1-4-2-audio-control-audio
-
-Back to Success Criterion [[1.4.2 Audio Control]]
-
 
 ## Description
 This test checks that there isn't an automatically started sound after the web page is loaded. If the sound plays automatically this test checks that the sound is no longer than 3 seconds or that there is at the top of the web page a mechanism to control the sound.

@@ -1,9 +1,4 @@
-
 # SC4-1-1-id
-
-
-This test belongs to [[4.1.1 Parsing]].
-
 
 ## Description
 This test checks id attribute for all elements to have a unique value.

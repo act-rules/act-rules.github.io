@@ -1,8 +1,4 @@
-
 # SC2-2-1+SC3-2-5-meta-refresh
-
-This test belongs to [[2.2.1 Timing Adjustable]], and to [[3.2.5 Change on Request]]
-
 
 ## Description
 This test checks if meta element is not used for delayed redirecting or refreshing.

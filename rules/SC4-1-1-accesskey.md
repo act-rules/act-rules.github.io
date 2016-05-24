@@ -1,8 +1,4 @@
-
 # SC4-1-1-accesskey
-
-This test belongs to [[4.1.1 Parsing]].
-
 
 ## Description
 This test checks accesskey attribute for all elements to have a unique value.

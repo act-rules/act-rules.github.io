@@ -1,8 +1,4 @@
-
 # SC4-1-1-idref
-
-This test belongs to [[4.1.1 Parsing]].
-
 
 ## Description
 This test checks that each element referred to from an idref attribute exists.

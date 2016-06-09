@@ -1,9 +1,4 @@
-
-# SC4-1-1-id 
-
-
-This test belongs to [[4.1.1 Parsing]].
-
+# SC4-1-1-id
 
 ## Description
 This test checks id attribute for all elements to have a unique value.
@@ -23,7 +18,7 @@ This test checks id attribute for all elements to have a unique value.
 | Property          | Value
 |-------------------|----
 | Test name         | Define ids for elements
-| Test requirement  | [[4.1.1 Parsing]]
+| Test requirement  | 4.1.1 Parsing
 | Test mode         | Automatic
 | Test environment  | DOM
 | Test subject      | Single web page
@@ -32,12 +27,12 @@ This test checks id attribute for all elements to have a unique value.
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 Select any element with an id attribute. The following CSS selector could be used: *[id]
 
 ### Step 1
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 - IF there is no list called 'knownIDs':
   - Create an empty list 'knownIDs;
@@ -59,3 +54,9 @@ Test method: [automatic]
 | Error    | The ID of this element has occurred before on this page
 | Pointer  | selector result
 | ID       | SC4-1-1-id-fail1
+
+
+
+[earl:automatic]: ../earl/automatic.md
+[earl:semiauto]: ../earl/semiauto.md
+[earl:manual]: ../earl/manual.md

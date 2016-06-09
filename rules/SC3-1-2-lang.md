@@ -1,8 +1,4 @@
-
-# SC3-1-2-lang 
-
-This test belongs to [[3.1.2 Language of Parts]].
-
+# SC3-1-2-lang
 
 ## Description
 This test checks that `lang` attributes within the body of a web page are correct.
@@ -23,7 +19,7 @@ This test checks that `lang` attributes within the body of a web page are correc
 | Property          | Value
 |-------------------|----
 | Test name         | Languages within the body
-| Success Criterion | [[3.1.2 Language of Parts]]
+| Success Criterion | 3.1.2 Language of Parts
 | Test mode         | Automatic
 | Test environment  | DOM
 | Test subject      | Single web page
@@ -32,7 +28,7 @@ This test checks that `lang` attributes within the body of a web page are correc
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 
 `descendent-or-self::body[@lang]`
@@ -40,7 +36,7 @@ Test method: [automatic]
 This test is applied to all elements with `lang` attribute in the body of the web page (including the body element itself).
 
 ### Step 1
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 L1 = value of `lang` attribute.
 
@@ -63,3 +59,9 @@ Else, return
 |----------|-----
 | Testcase | SC312-lang
 | ID       | SC312-lang-pass1
+
+
+
+[earl:automatic]: ../earl/automatic.md
+[earl:semiauto]: ../earl/semiauto.md
+[earl:manual]: ../earl/manual.md

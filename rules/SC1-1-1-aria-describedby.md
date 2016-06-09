@@ -1,7 +1,4 @@
-
 # SC1-1-1-aria-describedby
-
-This test case belongs to [[1.1.1 Non-text Content]]
 
 ## Description
 This test checks the sufficient provision of a long text description for elements using the `aria-describedby` attribute.
@@ -26,7 +23,7 @@ This test checks the sufficient provision of a long text description for element
 | Property          | Value
 |-------------------|----
 | Test name         | Proper use of aria-describedby
-| Success Criterion | [[1.1.1 Non-text Content]]
+| Success Criterion | 1.1.1 Non-text Content
 | Test mode         | SemiAuto
 | Test environment  | Rendered page
 | Test subject      | Web page state
@@ -36,7 +33,7 @@ This test checks the sufficient provision of a long text description for element
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 Select following elements providing an `aria-describedby` attribute:
 - `img` elements
@@ -48,11 +45,11 @@ Select following elements providing an `aria-describedby` attribute:
 ````
 
 ### Step 1
-Test mode: [automatic]
+Test mode: [automatic][earl:automatic]
 
 Check if at least one of the `aria-describedby` attribute values is a valid identifier.
 
-if yes, continue with [[#Step 2]]
+if yes, continue with [step 2](#step-2)
 
 else, return
 
@@ -63,11 +60,11 @@ else, return
 | Error    | None of the aria-describedby attribute values is a valid identifier.
 
 ### Step 2
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 Check if at least one of the elements referenced by the valid `aria-describedby` attribute values exists.
 
-if yes, continue with [[#Step 3]]
+if yes, continue with [step 3](#step-3)
 
 else, return
 
@@ -78,7 +75,7 @@ else, return
 | Error    | None of the elements referenced by aria-describedby exists.
 
 ### Step 3
-Test method: [manual]
+Test method: [manual][earl:manual]
 
 Concatenate the results of [[Text Alternative Computation]] Algorithm run on the element itself and assign it to variable T1 and on all elements referenced by the `aria-describedby` attribute and assign it to variable T2.
 
@@ -107,3 +104,8 @@ else return
 | Testcase | SC1-1-1-aria-describedby
 | ID       | SC1-1-1-aria-describedby–fail3
 | Error    | The long description provided using aria-describedby is not sufficiently descriptive.
+
+
+[earl:automatic]: ../earl/automatic.md
+[earl:semiauto]: ../earl/semiauto.md
+[earl:manual]: ../earl/manual.md

@@ -1,8 +1,4 @@
-
-# SC4-1-1-idref 
-
-This test belongs to [[4.1.1 Parsing]].
-
+# SC4-1-1-idref
 
 ## Description
 This test checks that each element referred to from an idref attribute exists.
@@ -21,7 +17,7 @@ This test checks that each element referred to from an idref attribute exists.
 | Property          | Value
 |-------------------|----
 | Test name         | Reference elements
-| Test requirement  | [[4.1.1 Parsing]]
+| Test requirement  | 4.1.1 Parsing
 | Test mode         | Automatic
 | Test environment  | DOM
 | Test subject      | Single web page
@@ -30,12 +26,12 @@ This test checks that each element referred to from an idref attribute exists.
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 Select each label element with a for attribute and each element with a aria-activedescendant attribute. The CSS selector "label[for], *[aria-activedescendant]" can be used.
 
 ### Step 1
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 - Take the attribute with the IDREF (for=""/aria-activedescendant) value as IdrefAttr
 - Trim the IdrefAttr of whitespace characters
@@ -58,3 +54,9 @@ Test method: [automatic]
 | Error    | The attribute {IdrefAttr} refers to an element that does not exist on the page.
 | Pointer  | selector result
 | ID       | SC4-1-1-idref-fail1
+
+
+
+[earl:automatic]: ../earl/automatic.md
+[earl:semiauto]: ../earl/semiauto.md
+[earl:manual]: ../earl/manual.md

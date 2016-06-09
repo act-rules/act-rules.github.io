@@ -1,0 +1,11 @@
+TODO
+
+## Automatic
+
+
+
+## Semiauto
+
+
+
+## Manual

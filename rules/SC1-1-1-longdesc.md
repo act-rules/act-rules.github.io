@@ -1,8 +1,4 @@
-
 # SC1-1-1-longdesc
-
-This test case belongs to [[1.1.1 Non-text Content]]
-
 
 ## Description
 This test checks the sufficient provision of a long text description for non-text content using the `longdesc` attribute. This test doesn't check the accessibility of a page referenced to from the longdesc attribute and this page must be checked separately.
@@ -25,7 +21,7 @@ This test checks the sufficient provision of a long text description for non-tex
 | Property          | Value
 |-------------------|----
 | Test name         | Proper use of longdesc
-| Success Criterion | [[1.1.1 Non-text Content]]
+| Success Criterion | 1.1.1 Non-text Content
 | Test mode         | SemiAuto
 | Test environment  | Rendered page
 | Test subject      | Web page state
@@ -36,16 +32,16 @@ This test checks the sufficient provision of a long text description for non-tex
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 `//img[@longdesc]`
 
 ### Step 1
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 Check if the `longdesc` attribute value is a valid URL
 
-if yes, continue with [[#Step 2]]
+if yes, continue with [step 2][#step-2]
 
 else, return
 
@@ -56,12 +52,12 @@ else, return
 | Error    | LONGDESC attribute value is not a valid URL
 
 ### Step 2
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 Check if the resource referenced in the `longdesc` attribute value exists
 
 if yes,
-continue with [[#Step 3]]
+continue with [step 3][#step-3]
 
 else, return
 
@@ -73,7 +69,7 @@ else, return
 | Info     |  The URL given as LONGDESC value was not retrievable.
 
 ### Step 3
-Test method: [manual]
+Test method: [automatic][earl:manual]
 
 Concatenate the results of [[Text Alternative Computation]] Algorithm run on the element and assign it to variable T1.
 
@@ -103,3 +99,9 @@ else, return
 | ID       | SC1-1-1-longdesc–fail3
 | Error    | Long description not sufficiently descriptive.
 | Info     | Collection of repair suggestions
+
+
+
+[earl:automatic]: ../earl/automatic.md
+[earl:semiauto]: ../earl/semiauto.md
+[earl:manual]: ../earl/manual.md

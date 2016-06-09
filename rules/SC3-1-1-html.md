@@ -1,8 +1,4 @@
-
-# SC3-1-1-html 
-
-This test belongs to [[3.1.1 Language of Page]].
-
+# SC3-1-1-html
 
 ## Description
 This test checks that the primary language of the web content can be programmatically determined.
@@ -23,7 +19,7 @@ This test checks that the primary language of the web content can be programmati
 | Property          | Value
 |-------------------|----
 | Test name         | Primary language of page
-| Success Criterion | [[3.1.1 Language of Page]]
+| Success Criterion | 3.1.1 Language of Page
 | Test mode         | Automatic
 | Test environment  | DOM
 | Test subject      | single web page
@@ -32,11 +28,11 @@ This test checks that the primary language of the web content can be programmati
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 Select the `html` element.
 
 ### Step 1
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 If `lang` attribute exists: <br/>
 L1 = value of `lang` attribute. <br/>
@@ -54,7 +50,7 @@ else (only `xml:lang` exists) <br/>
 *Do nothing. (This case is covered by [[SC3-1-1-xml-lang]].)*
 
 ### Step 2
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 Compare L1 to BCP 47.
 
@@ -75,3 +71,9 @@ Else, return
 |----------|-----
 | Testcase | SC311-html
 | ID       | SC311-text-pass1
+
+
+
+[earl:automatic]: ../earl/automatic.md
+[earl:semiauto]: ../earl/semiauto.md
+[earl:manual]: ../earl/manual.md

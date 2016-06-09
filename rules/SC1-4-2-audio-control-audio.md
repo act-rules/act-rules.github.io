@@ -1,8 +1,4 @@
-
 # SC1-4-2-audio-control-audio
-
-Back to Success Criterion [[1.4.2 Audio Control]]
-
 
 ## Description
 This test checks that there isn't an automatically started sound after the web page is loaded. If the sound plays automatically this test checks that the sound is no longer than 3 seconds or that there is at the top of the web page a mechanism to control the sound.
@@ -36,12 +32,12 @@ This test checks that there isn't an automatically started sound after the web p
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 `//*[self::audio or self::video]`
 
 ### Step 1
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 Check if the <audio> or <video> is paused. Check `paused` property.
 
@@ -52,10 +48,10 @@ If true, return:
 | Testcase | SC1-4-2-audio-control
 | ID       | SC1-4-2-audio-control-pass1
 
-Else continue with [[#Step 2]]
+Else continue with [step 2][#step-2]
 
 ### Step 2
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 Check if the sound is muted. Check `muted` property.
 
@@ -66,21 +62,21 @@ If true, return:
 | Testcase | SC1-4-2-audio-control
 | ID       | SC1-4-2-audio-control-pass2
 
-Else continue with [[#Step 3]]
+Else continue with [step 3][#step-3]
 
 ### Step 3
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 Check that the sound is no longer than 3 seconds.
 
 Check `duration` property is no longer than 3 seconds.
 
-If true, continue with [[#Step 4]]
+If true, continue with [step 4][#step-4]
 
 Else continue with [[#Step 5]]
 
 ### Step 4
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 Check if the sound has a loop. Check `loop` property.
 
@@ -94,7 +90,7 @@ Else, return:
 | ID       | SC1-4-2-audio-control-pass3
 
 ### Step 5
-Test method: [manual]
+Test method: [automatic][earl:manual]
 
 Check if the video plays audio.
 
@@ -118,7 +114,7 @@ Else, return:
 | ID       | SC1-4-2-audio-control-pass4
 
 ### Step 6
-Test method: [manual]
+Test method: [automatic][earl:manual]
 
 Check if a mechanism to control the sound is provided as one of the first five links or buttons on the web page.
 
@@ -147,3 +143,8 @@ Else, return:
 | ID       | SC1-4-2-audio-control-fail1
 | Error    | No mechanism to control the automaticaly started sound available at the top of the web page.
 
+
+
+[earl:automatic]: ../earl/automatic.md
+[earl:semiauto]: ../earl/semiauto.md
+[earl:manual]: ../earl/manual.md

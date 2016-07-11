@@ -1,8 +1,4 @@
-
-# SC4-1-1-unique-attrs 
-
-This test belongs to [[4.1.1 Parsing]].
-
+# SC4-1-1-unique-attrs
 
 ## Description
 This test checks that attributes of an element are unique.
@@ -20,7 +16,7 @@ This test checks that attributes of an element are unique.
 ## Test properties
 | Property         | Value
 |------------------|----
-| Test requirement | [4.1.1 Parsing]
+| Test requirement | 4.1.1 Parsing
 | Test mode        | Automatic
 | Test environment | HTML source
 | Test subject     | Single web page
@@ -29,12 +25,12 @@ This test checks that attributes of an element are unique.
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 Select all opening tags in the HTML document
 
 ### Step 1
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 - Make a list of all the attribute names on the current tag
 - IF any of the attributes occurs more the once:
@@ -54,3 +50,9 @@ Test method: [automatic]
 | Testcase | SC4-1-1-unique-attrs
 | Error    | Attribute <attribute-name> was used more then once on the element <pointer>
 | Pointer  | selector result
+
+
+
+[earl:automatic]: ../earl/automatic.md
+[earl:semiauto]: ../earl/semiauto.md
+[earl:manual]: ../earl/manual.md

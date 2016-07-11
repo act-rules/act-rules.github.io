@@ -1,8 +1,4 @@
-
-# SC4-1-1-accesskey 
-
-This test belongs to [[4.1.1 Parsing]].
-
+# SC4-1-1-accesskey
 
 ## Description
 This test checks accesskey attribute for all elements to have a unique value.
@@ -21,7 +17,7 @@ This test checks accesskey attribute for all elements to have a unique value.
 | Property          | Value
 |-------------------|----
 | Test name         | Provide unique accesskeys
-| Test requirement  | [[4.1.1 Parsing]]
+| Test requirement  | 4.1.1 Parsing
 | Test mode         | Automatic
 | Test environment  | DOM
 | Test subject      | single web page
@@ -30,12 +26,12 @@ This test checks accesskey attribute for all elements to have a unique value.
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 Select any element with an accesskey attribute. The following CSS selector could be used: *[accesskey]
 
 ### Step 1
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 - IF there is no list called 'knownAccesskeys':
   -  Create an empty list 'knownAccesskeys;
@@ -59,3 +55,8 @@ Test method: [automatic]
 | Pointer  | selector result
 | ID       | SC4-1-1-accesskey-fail1
 
+
+
+[earl:automatic]: ../earl/automatic.md
+[earl:semiauto]: ../earl/semiauto.md
+[earl:manual]: ../earl/manual.md

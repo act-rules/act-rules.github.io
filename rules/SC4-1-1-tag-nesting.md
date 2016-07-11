@@ -1,8 +1,4 @@
-
-# SC4-1-1-tag-nesting 
-
-This test belongs to [[4.1.1 Parsing]].
-
+# SC4-1-1-tag-nesting
 
 ## Description
 This test checks that tags of an HTML or XHTML document are nested correctly. So that elements that must be closed are, elements that shouldn't be aren't, and that elements are closed in the correct order.
@@ -19,7 +15,7 @@ This test checks that tags of an HTML or XHTML document are nested correctly. So
 ## Test properties
 | Property          | Value
 |-------------------|----
-| Test requirement  | [[4.1.1 Parsing]]
+| Test requirement  | 4.1.1 Parsing
 | Test mode         | Automatic
 | Test environment  | HTML source
 | Test subject      | Single web page
@@ -28,18 +24,18 @@ This test checks that tags of an HTML or XHTML document are nested correctly. So
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 Select all opening and closing tags in the HTML document
 
 ### Step 1: Verify opening tag attributes=
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 - IF the tag is a closing tag:
   - GO TO step 4
 
 ### Step 2: Check unclosed opening tags=
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 - Locate the closing tag that corresponds to the current tag
 - IF there was no closing tag
@@ -70,7 +66,7 @@ Test method: [automatic]
 | ID       | SC4-1-1-tag-nesting-pass1
 
 ### Step 3: Check that tags are closed in the right place=
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 - Make a list childTags of tags that follow the current tag, until it's closing tag
 - IF childTags has an opening tag for each closing tag in the list:
@@ -101,3 +97,9 @@ Test method: [automatic]
 | Error    | Closing tag does not have a corresponding opening tag
 | Pointer  | selector result
 | ID       | SC4-1-1-tag-nesting-fail4
+
+
+
+[earl:automatic]: ../earl/automatic.md
+[earl:semiauto]: ../earl/semiauto.md
+[earl:manual]: ../earl/manual.md

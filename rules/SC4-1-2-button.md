@@ -1,6 +1,4 @@
-
-# SC4-1-2-button 
-
+# SC4-1-2-button
 
 ## Description
 This test checks if every button element has a name.
@@ -18,7 +16,7 @@ This test checks if every button element has a name.
 ## Test properties
 | Property          | Value
 |-------------------|----
-| Success Criterion | [[4.1.2 Name, Role, Value]]
+| Success Criterion | 4.1.2 Name, Role, Value
 | Test mode         | automatic
 | Test environment  | DOM
 | Test subject      | single web page
@@ -27,16 +25,16 @@ This test checks if every button element has a name.
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
 Select any button element. The following CSS selector could be used: “button”
 
 ### Step 1
-Test method: [automatic]
+Test method: [automatic][earl:automatic]
 
-- IF there is [[non-empty]] text within the button element:
+- IF there is [non-empty](../definitions/non-empty.md) text within the button element:
   - Return SC412-button-pass;
-- IF the button element has a title attribute with a [[non-empty]] value:
+- IF the button element has a title attribute with a [non-empty](../definitions/non-empty.md) value:
   - Return SC412-button-pass;
 - ELSE Return SC412-button-fail;
 
@@ -52,3 +50,9 @@ Test method: [automatic]
 | Error    | failed to give an anchor element a name
 | Info     | This button element has no filled title attribute nor text content.
 | ID       |  SC412-button-fail
+
+
+
+[earl:automatic]: ../earl/automatic.md
+[earl:semiauto]: ../earl/semiauto.md
+[earl:manual]: ../earl/manual.md

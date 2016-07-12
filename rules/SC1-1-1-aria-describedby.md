@@ -1,8 +1,10 @@
-# SC1-1-1-aria-describedby
+---
+layout: rule
+ruleId: SC1-1-1-aria-describedby
+---
 
 ## Description
 This test checks the sufficient provision of a long text description for elements using the `aria-describedby` attribute.
-
 
 ## Background
 - [ARIA15: Using aria-describedby to provide descriptions of images](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/ARIA15)

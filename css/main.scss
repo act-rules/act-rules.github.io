@@ -1,14 +1,17 @@
+---
+# Tell Jekyll to parse this file
+---
 
-  main a {
-    text-decoration: underline;
-  }
-  td, th {
-    padding: .2em 1em;
-    min-width:10em;
-  }
-  table {
-    margin-bottom:1em;
-  }
-  tr {
-    border-bottom:solid 1px #DDD;
-  }
+main a {
+  text-decoration: underline;
+}
+td, th {
+  padding: .2em 1em;
+  min-width:10em;
+}
+table {
+  margin-bottom:1em;
+}
+tr {
+  border-bottom:solid 1px #DDD;
+}

@@ -1,5 +1,4 @@
 ---
-layout: rule
 ruleId: SC1-1-1-aria-describedby
 ---
 
@@ -107,7 +106,6 @@ else return
 | ID       | SC1-1-1-aria-describedby–fail3
 | Error    | The long description provided using aria-describedby is not sufficiently descriptive.
 
-
-[earl:automatic]: ../earl/automatic.md
-[earl:semiauto]: ../earl/semiauto.md
-[earl:manual]: ../earl/manual.md
+[earl:automatic]: ../pages/test-modes.md#automatic
+[earl:semiauto]: ../pages/test-modes.md#semiauto
+[earl:manual]: ../pages/test-modes.md#manual

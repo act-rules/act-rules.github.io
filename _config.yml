@@ -7,5 +7,23 @@ description: >
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://auto-wcag/github.io/"
 
-# Build settings
 markdown: kramdown
+# Use github markdown
+kramdown:
+  input: GFM
+
+collections:
+  rules:
+    output: true
+  drafts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: rules
+    values:
+      layout: rule
+
+exclude:
+- build

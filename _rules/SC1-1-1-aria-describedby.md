@@ -1,5 +1,8 @@
 ---
 ruleId: SC1-1-1-aria-describedby
+requirements:
+  - name: 1.1.1 Non-text Content
+    reference: https://www.w3.org/TR/WCAG20/#text-equiv-all
 ---
 
 ## Description

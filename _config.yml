@@ -11,6 +11,8 @@ markdown: kramdown
 # Use github markdown
 kramdown:
   input: GFM
+  auto_ids: true
+  toc_levels: 2..3
 
 collections:
   rules:

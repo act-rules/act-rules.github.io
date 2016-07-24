@@ -27,7 +27,7 @@ This test checks that there isn't an automatically started sound after the web p
 |-------------------|----
 | Test name         | Audio control
 | Test requirement  | SC 1.4.2
-| Test mode         | SemiAuto
+| Test mode         | Semi-automatic
 | Test environment  | DOM
 | Test subject      | Single web page
 | User profile      | Requires hearing
@@ -36,13 +36,13 @@ This test checks that there isn't an automatically started sound after the web p
 
 ### Selector
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 `//*[self::audio or self::video]`
 
 ### Step 1
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Check if the `audio` or `video` is paused. Check `paused` property.
 
@@ -57,7 +57,7 @@ Else continue with [step 2][#step-2]
 
 ### Step 2
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Check if the sound is muted. Check `muted` property.
 
@@ -72,7 +72,7 @@ Else continue with [step 3][#step-3]
 
 ### Step 3
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Check that the sound is no longer than 3 seconds.
 
@@ -84,7 +84,7 @@ Else continue with [Step 5](#step-5)
 
 ### Step 4
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Check if the sound has a loop. Check `loop` property.
 
@@ -99,7 +99,7 @@ Else, return:
 
 ### Step 5
 
-Test mode: [automatic][earl:manual]
+Test mode: [automatic][MANUAL]
 
 Check if the video plays audio.
 
@@ -124,7 +124,7 @@ Else, return:
 
 ### Step 6
 
-Test mode: [automatic][earl:manual]
+Test mode: [automatic][MANUAL]
 
 Check if a mechanism to control the sound is provided as one of the first five links or buttons on the web page.
 
@@ -153,6 +153,5 @@ Else, return:
 | ID       | SC1-4-2-audio-control-fail1
 | Error    | No mechanism to control the automaticaly started sound available at the top of the web page.
 
-[earl:automatic]: ../pages/test-modes.html#automatic
-[earl:semiauto]: ../pages/test-modes.html#semiauto
-[earl:manual]: ../pages/test-modes.html#manual
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

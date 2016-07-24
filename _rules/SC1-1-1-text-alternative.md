@@ -37,7 +37,7 @@ This test checks that non-text elements conveying information are providing suff
 |-------------------|----
 | Test name         | Provision of short text alternative
 | Success Criterion | 1.1.1 Non-text Content
-| Test mode         | SemiAuto
+| Test mode         | Semi-automatic
 | Test environment  | Rendered page
 | Test subject      | Web page state
 | User expertise and skills | No prior knowledge
@@ -47,13 +47,13 @@ This test checks that non-text elements conveying information are providing suff
 
 ### Selector
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 `//*[self::img or self::input[@type="image"] or self::area or self::embed or self::object]`
 
 ### Step 1: check element type (F65)
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Check if the element is of type `<img>`,`<area>` or `input[type=”image”]`
 
@@ -63,7 +63,7 @@ else continue with [Step 8: compute text alternative](#step-8-compute-text-alter
 
 ### Step 2: check mandatory attributes (F65)
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Check if one of the following attributes is present: ` aria-labelledby` with valid destinations or ` alt` , ` aria-label`, ` title`.
 
@@ -79,7 +79,7 @@ else return
 
 ### Step 3: check for img siblings (ARIA10 and G196)
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Check if the selected element is an `<img>` element and has adjacent siblings of type `<img>`.
 
@@ -89,7 +89,7 @@ else continue with [Step 8: compute text alternative](#step-8-compute-text-alter
 
 ### Step 4: ask for informational or functional group of images (ARIA10 and G196)
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 **User Input Question:**
 
@@ -106,7 +106,7 @@ if yes, continue with [Step 5: check for aria-labelledby implementation (ARIA10)
 else continue with [Step 8: compute text alternative](#step-8-compute-text-alternative)
 
 ### Step 5: check for aria-labelledby implementation (ARIA10)
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Check if the parent element of the current group has `role="img"` and an `aria-labelledby` attribute.
 
@@ -116,9 +116,9 @@ else continue with [Step 7: ask if sufficiently described by textual alternative
 
 ### Step 6: ask if sufficiently described by textual alternative (ARIA10)
 
-Test mode: [automatic][earl:manual]
+Test mode: [automatic][MANUAL]
 
-Concatenate the results of [Text Alternative Computation][algorithms/text-alt] Algorithm run on all elements referenced in the `aria-labelledby` attribute and assign it to variable T1.
+Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run on all elements referenced in the `aria-labelledby` attribute and assign it to variable T1.
 
 All items of the group should be removed from the set of selector-matches after this step.
 
@@ -151,9 +151,9 @@ else return
 
 ### Step 7: ask if sufficiently described by textual alternative (G196)
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
-Concatenate the results of [Text Alternative Computation][algorithms/text-alt] Algorithm run on all images and assign it to variable T1.
+Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run on all images and assign it to variable T1.
 
 All items of the group should be removed from the set of selector-matches after this step.
 
@@ -186,9 +186,9 @@ else return
 
 ### Step 8: compute text alternative
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
-Use the [Text Alternative Computation][algorithms/text-alt] Algorithm to compute the textual alternative provided and assign it to variable T1.
+Use the [Text Alternative Computation][TXTALT] Algorithm to compute the textual alternative provided and assign it to variable T1.
 
 If T1 is empty and the current element is an `<img>`
 
@@ -204,7 +204,7 @@ continue with [Step 13: check text alternative validity (F30 and F39)](#step-13-
 
 ### Step 9: check if child of anchor (H2)
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Check if the `img` is child of an `<a>` element.
 
@@ -214,7 +214,7 @@ else continue with [Step 11: check dimensions (no text alternative)](#step-11-ch
 
 ### Step 10: check for anchor text (H2)
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Note: The `img` has no textual alternative at this test step.
 
@@ -237,7 +237,7 @@ else return
 
 ### Step 11: check dimensions (no text alternative)
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Check if the elements height is less or equal 5px or the elements width is less or equal 3px.
 
@@ -252,7 +252,7 @@ else Continue with [Step 12: ask if decorative (no text alternative)](#step-12-a
 
 ### Step 12: ask if decorative (no text alternative)
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 **User Input Question:**
 
@@ -281,7 +281,7 @@ else return
 | Info     | Suggestions for textual alternative: {collection of repair-answers}
 
 ### Step 13: check text alternative validity (F30 and F39)
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Use the [Validate Text Alternative][algorithms/valid-alt] algorithm to check if the textual alternative value is [non-empty](../definitions/non-empty.md), as defined (contain 2 or more characters that are not white spaaaaaace characters or punctionmarks), not a filename, an URL or a placeholder text.
 
@@ -298,7 +298,7 @@ else return
 
 ### Step 14: check dimensions (valid text alternative) (F38)
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Check if the elements height is less or equal 5px or the elements width is less or equal 3px.
 
@@ -308,7 +308,7 @@ else continue with [Step 15: ask if decorative (valid text alternative) (F38)](#
 
 ### Step 15: ask if decorative (valid text alternative) (F38)
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 **User Input Question:**
 
@@ -326,7 +326,7 @@ else continue with [Step 17: ask if sufficiently described by textual alternativ
 
 ### Step 16: check for empty alt (F38)
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 *Note: The image has a textual alternative at this test step.*
 
@@ -350,7 +350,7 @@ else return
 
 ### Step 17: ask if sufficiently described by textual alternative
 
-Test mode: [automatic][earl:manual]
+Test mode: [automatic][MANUAL]
 
 **User Input Question:**
 
@@ -374,7 +374,7 @@ else continue with [[#Step 18: ask if sufficiently described by adjacent text]]
 
 ### Step 18: ask if sufficiently described by adjacent text
 
-Test mode: [automatic][earl:manual]
+Test mode: [automatic][MANUAL]
 
 **User Input Question:**
 
@@ -408,9 +408,8 @@ else return
 - Activity diagram of test steps related to techniques and failures
 [[File:1.1.1. text alternative.png|frameless|1069px|Detailed graphical alternative to text above]]
 
-[earl:automatic]: ../pages/test-modes.html#automatic
-[earl:semiauto]: ../pages/test-modes.html#semiauto
-[earl:manual]: ../pages/test-modes.html#manual
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual
 [pages/acc-support]: ../pages/accessibility-support.html
-[algorithms/text-alt]: ../pages/algorithms/text-alt.html
+[TXTALT]: ../pages/TXTALT.html
 [algorithms/valid-alt]: ../pages/algorithms/validate-text-alt.html

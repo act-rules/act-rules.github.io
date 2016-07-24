@@ -24,7 +24,7 @@ This test checks that images do not convey information when added to the page us
 |-------------------|----
 | Test name         | CSS background decorative
 | Success Criterion | 1.1.1 Non-text Content
-| Test mode         | SemiAuto
+| Test mode         | Semi-automatic
 | Test environment  | rendered page
 | Test subject      | Web page state
 | User expertise and skills | no prior knowledge
@@ -34,7 +34,7 @@ This test checks that images do not convey information when added to the page us
 
 ### Selector
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Single element, which background property contains one or more URIs
 
@@ -47,7 +47,7 @@ Single element, which background property contains one or more URIs
 
 ### Step 1
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Check if the computed `backgroundRepeat` property is set and its value is other than no-repeat.
 
@@ -62,7 +62,7 @@ else, continue with [step 2](#step-2)
 
 ### Step 2
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Check if the height of all images added by the background-property is less or equals 5 pixels or its width is less or equals 3 pixels.
 
@@ -77,7 +77,7 @@ else, continue with [step 3](#step-3)
 
 ### Step 3
 
-Test mode: [automatic][earl:manual]
+Test mode: [automatic][MANUAL]
 
 Check if the element is really used for solely decorative purposes.
 
@@ -103,7 +103,7 @@ else continue with [step 4](#step-4)
 
 ### Step 4
 
-Test mode: [automatic][earl:manual]
+Test mode: [automatic][MANUAL]
 
 Get the current elements nearest ancestor with its display style set to block.
 Get any text from this ancestor, including shadow dom text and assign it to variable T1.
@@ -137,6 +137,5 @@ else return
 | Error    | The image added by CSS is not decorative and not described in adjacent text.
 | Info     | Suggestions for texual alternative: {collection of repair-answers}
 
-[earl:automatic]: ../pages/test-modes.html#automatic
-[earl:semiauto]: ../pages/test-modes.html#semiauto
-[earl:manual]: ../pages/test-modes.html#manual
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

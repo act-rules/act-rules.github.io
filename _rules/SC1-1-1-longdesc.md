@@ -26,7 +26,7 @@ This test checks the sufficient provision of a long text description for non-tex
 |-------------------|----
 | Test name         | Proper use of longdesc
 | Success Criterion | 1.1.1 Non-text Content
-| Test mode         | SemiAuto
+| Test mode         | Semi-automatic
 | Test environment  | Rendered page
 | Test subject      | Web page state
 | User expertise and skills | No prior knowledge
@@ -36,13 +36,13 @@ This test checks the sufficient provision of a long text description for non-tex
 
 ### Selector
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 `//img[@longdesc]`
 
 ### Step 1
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Check if the `longdesc` attribute value is a valid URL
 
@@ -58,7 +58,7 @@ else, return
 
 ### Step 2
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Check if the resource referenced in the `longdesc` attribute value exists
 
@@ -75,9 +75,9 @@ else, return
 
 ### Step 3
 
-Test mode: [automatic][earl:manual]
+Test mode: [automatic][MANUAL]
 
-Concatenate the results of [Text Alternative Computation][algorithms/text-alt] Algorithm run on the element and assign it to variable T1.
+Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run on the element and assign it to variable T1.
 
 **User Input Question:**
 
@@ -106,7 +106,7 @@ else, return
 | Error    | Long description not sufficiently descriptive.
 | Info     | Collection of repair suggestions
 
-[earl:automatic]: ../pages/test-modes.html#automatic
-[earl:semiauto]: ../pages/test-modes.html#semiauto
-[earl:manual]: ../pages/test-modes.html#manual
-[algorithms/text-alt]: ../pages/algorithms/text-alt.html
+[AUTO]: ../pages/test-modes.html#automatic
+[SEMAUT]: ../pages/test-modes.html#semiauto
+[MANUAL]: ../pages/test-modes.html#manual
+[TXTALT]: ../pages/TXTALT.html

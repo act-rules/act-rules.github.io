@@ -29,7 +29,7 @@ This test checks the sufficient provision of a long text description for element
 |-------------------|----
 | Test name         | Proper use of aria-describedby
 | Success Criterion | 1.1.1 Non-text Content
-| Test mode         | SemiAuto
+| Test mode         | Semi-automatic
 | Test environment  | Rendered page
 | Test subject      | Web page state
 | User profile      | Requires sight
@@ -38,7 +38,7 @@ This test checks the sufficient provision of a long text description for element
 
 ### Selector
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Select following elements providing an `aria-describedby` attribute:
 
@@ -52,7 +52,7 @@ Select following elements providing an `aria-describedby` attribute:
 
 ### Step 1
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Check if at least one of the `aria-describedby` attribute values is a valid identifier.
 
@@ -68,7 +68,7 @@ else, return
 
 ### Step 2
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Check if at least one of the elements referenced by the valid `aria-describedby` attribute values exists.
 
@@ -84,9 +84,9 @@ else, return
 
 ### Step 3
 
-Test mode: [manual][earl:manual]
+Test mode: [manual][MANUAL]
 
-Concatenate the results of [Text Alternative Computation][algorithms/text-alt] Algorithm run on the element itself and assign it to variable T1 and on all elements referenced by the `aria-describedby` attribute and assign it to variable T2.
+Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run on the element itself and assign it to variable T1 and on all elements referenced by the `aria-describedby` attribute and assign it to variable T2.
 
 **User Input Question:**
 
@@ -114,7 +114,6 @@ else return
 | ID       | SC1-1-1-aria-describedby–fail3
 | Error    | The long description provided using aria-describedby is not sufficiently descriptive.
 
-[earl:automatic]: ../pages/test-modes.html#automatic
-[earl:semiauto]: ../pages/test-modes.html#semiauto
-[earl:manual]: ../pages/test-modes.html#manual
-[algorithms/text-alt]: ../pages/algorithms/text-alt.html
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual
+[TXTALT]: ../pages/TXTALT.html

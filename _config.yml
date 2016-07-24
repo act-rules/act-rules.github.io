@@ -30,6 +30,11 @@ defaults:
       type: rules
     values:
       layout: rule
+  - scope:
+      path: ""
+      type: drafts
+    values:
+      layout: draft
 
 exclude:
 - build

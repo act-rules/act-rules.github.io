@@ -20,4 +20,11 @@ main {
   h2, h3 {
     border-bottom:solid 1px #DDD;
   }
+  .draft-note {
+    border:solid orange 2px;
+    border-radius: 3px;
+    background: #FFC;
+    color: #C00;
+    padding: .2em 1em;
+  }
 }

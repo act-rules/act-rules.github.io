@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>{{ site.title | escape }}{% if page.title %} - {{ page.title | escape }}{% endif %}</title>
+  <title>{{ page.title | escape }} - {{ site.title | escape }}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
@@ -22,7 +22,7 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="{{ site.baseurl }}/pages/rules.html">Rules</a></li>
+        <li><a href="{{ site.baseurl }}/pages/drafts.html">Drafts</a></li>
         <li><a href="{{ site.baseurl }}/pages/methodology.html">
             Test Methodology
         </a></li>

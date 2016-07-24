@@ -1,6 +1,14 @@
 ---
-ruleId: SC1-1-1-longdesc
-criterion_name: 1.1.1 Non-text Content
+# [Rule Metadata](../pages/metadata.md)
+rule-id: SC1-1-1-longdesc
+name: Proper use of longdesc
+test-mode: semi-automatic
+
+criteria:
+- text-equiv-all: 1.1.1 Non-text Content (level A)
+
+authors:
+- http://github.com/...: Frank Berker
 ---
 
 ## Description

@@ -1,7 +1,14 @@
 ---
-ruleId: SC1-1-1-aria-describedby
-criterion_name: 1.1.1 Non-text Content
-criterion_spec: wcag20:text-equiv-all
+# [Rule Metadata](../pages/metadata.md)
+rule-id: SC1-1-1-aria-describedby
+name: Proper use of aria-describedby
+test-mode: semi-automatic
+
+criteria:
+- text-equiv-all: 1.1.1 Non-text Content (level A)
+
+authors:
+- http://github.com/...: Frank Berker
 ---
 
 ## Description
@@ -62,8 +69,8 @@ else, return
 
 | Outcome  | Failed
 |----------|-----
-| Testcase | SC1-1-1-aria-describedby
-| ID       | SC1-1-1-aria-describedby-fail1
+| Testcase | {{ page.rule-id }}
+| ID       | {{ page.rule-id }}-fail1
 | Error    | None of the aria-describedby attribute values is a valid identifier.
 
 ### Step 2
@@ -78,8 +85,8 @@ else, return
 
 | Outcome  | Failed
 |----------|-----
-| Testcase | SC1-1-1-aria-describedby
-| ID       | SC1-1-1-aria-describedby-fail2
+| Testcase | {{ page.rule-id }}
+| ID       | {{ page.rule-id }}-fail2
 | Error    | None of the elements referenced by aria-describedby exists.
 
 ### Step 3
@@ -103,15 +110,15 @@ if yes, return
 
 | Outcome  | Passed
 |----------|-----
-| Testcase | SC1-1-1-aria-describedby
-| ID       | SC1-1-1-aria-describedby-pass1
+| Testcase | {{ page.rule-id }}
+| ID       | {{ page.rule-id }}-pass1
 
 else return
 
 | Outcome  | Failed
 |----------|-----
-| Testcase | SC1-1-1-aria-describedby
-| ID       | SC1-1-1-aria-describedby–fail3
+| Testcase | {{ page.rule-id }}
+| ID       | {{ page.rule-id }}–fail3
 | Error    | The long description provided using aria-describedby is not sufficiently descriptive.
 
 [AUTO]: ../pages/test-modes.html#automatic

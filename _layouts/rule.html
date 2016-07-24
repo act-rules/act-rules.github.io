@@ -1,0 +1,16 @@
+---
+layout: default
+title: {{ page.ruleId }}
+---
+
+<p>Late updated: <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+
+{% if page.authors %}
+  <p>Created by {% for author in page.authors %}
+    {% for authorDetails in author %}
+      <a href="{{ authorDetails[0] }}">{{ authorDetails[1] }}</a>
+    {% endfor %},
+  {% endfor %}</p>
+{% endif %}
+
+{{ content }}

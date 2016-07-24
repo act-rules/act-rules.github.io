@@ -1,6 +1,14 @@
 ---
-ruleId: SC1-4-2-audio-control-audio
-criterion_name: 1.4.2 Audio Control
+# [Rule Metadata](../pages/metadata.md)
+rule-id: SC1-4-2-audio-control-audio
+name: Audio control
+test-mode: semi-automatic
+
+criteria:
+- visual-audio-contrast-dis-audio: 1.4.2 Audio Control (level A)
+
+authors:
+- http://github.com/...: Frank Berker
 ---
 
 ## Description

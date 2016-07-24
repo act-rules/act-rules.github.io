@@ -1,7 +1,14 @@
 ---
-ruleId: SC1-1-1-text-alternative
-criterion_name: 1.1.1 Non-text Content
-criterion_spec: wcag20:text-equiv-all
+# [Rule Metadata](../pages/metadata.md)
+rule-id: SC1-1-1-text-alternative
+name: Provision of short text alternative
+test-mode: semi-automatic
+
+criteria:
+- text-equiv-all: 1.1.1 Non-text Content (level A)
+
+authors:
+- http://github.com/...: Frank Berker
 ---
 
 ## Description

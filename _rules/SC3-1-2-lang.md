@@ -1,4 +1,16 @@
-# SC3-1-2-lang
+---
+# [Rule Metadata](../pages/metadata.md)
+
+rule_id: SC3-1-2-lang
+name: Languages within the body
+test_mode: automatic
+
+criteria:
+- meaning-other-lang-id: 3.1.2 Language of Parts (Level AA)
+
+authors:
+- https://github.com/...: Annika Nietzio
+---
 
 ## Description
 
@@ -13,7 +25,7 @@ This test checks that `lang` attributes within the body of a web page are correc
 ## Assumptions
 
 - The comparison of language-code does not look for exact matches. Technique H57 states: "Use of the primary code is important for this technique." which means that region subtags can be ignored in the comparison, i.e. "en-GB" is the same as "en".
-- This test checks the `lang` attributes. The `xml:lang` attributes are not taken into account because tests have shown, that `xml:lang` is ignored by screenreaders. (Both Jaws 15 with FF and IE and NVDA with FF go by lang attribute, xml:lang is ignored.) The `xml:lang` attributes are checked by a separate test: [[SC3-1-2-xml-lang]].
+- This test checks the `lang` attributes. The `xml:lang` attributes are not taken into account because tests have shown, that `xml:lang` is ignored by screenreaders. (Both Jaws 15 with FF and IE and NVDA with FF go by lang attribute, xml:lang is ignored.) The `xml:lang` attributes are checked by a separate test: [SC3-1-2-xml-lang](SC3-1-2-xml-lang.md).
 
 ## Test properties
 
@@ -31,7 +43,9 @@ This test checks that `lang` attributes within the body of a web page are correc
 
 Test mode: [automatic][AUTO]
 
-`descendent-or-self::body[@lang]`
+```
+descendent-or-self::body[@lang]
+```
 
 This test is applied to all elements with `lang` attribute in the body of the web page (including the body element itself).
 

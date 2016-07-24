@@ -22,7 +22,7 @@ This test checks that the primary language of the web content can be programmati
 ## Assumptions
 
 - The comparison of language codes does not look for exact matches. Technique H57 states: "Use of the primary code is important for this technique." which means that region subtags can be ignored in the comparison, i.e. "en-GB" is the same as "en".
-- This test checks the `lang` attribute of the `<html>` element. The xml:lang attribute is not taken into account because tests have shown, that xml:lang is ignored by screenreaders. (Both Jaws 15 with FF and IE and NVDA with FF go by lang attribute, xml:lang is ignored.) The `xml:lang` attribute is checked by a separate test: [[SC3-1-1-xml-lang]].
+- This test checks the `lang` attribute of the `html` element. The xml:lang attribute is not taken into account because tests have shown, that xml:lang is ignored by screenreaders. (Both Jaws 15 with FF and IE and NVDA with FF go by lang attribute, xml:lang is ignored.) The `xml:lang` attribute is checked by a separate test: [SC3-1-1-xml-lang](SC3-1-1-xml-lang.md).
 
 ## Test properties
 
@@ -46,23 +46,23 @@ Select the `html` element.
 
 Test mode: [automatic][AUTO]
 
-If `lang` attribute exists: <br/>
+If `lang` attribute exists:
 
-L1 = value of `lang` attribute. <br/>
+L1 = value of `lang` attribute.
 
-Continue with [[#Step2]].
+Continue with [Step2](#step-2).
 
 else if neither `lang` nor `xml:lang` are specified, return
 
 | Outcome  | Failed
 |----------|-----
-| Testcase | SC311-html
-| ID       | SC311-html-fail1
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-fail1
 | Error    | No language attribute found.
 
-else (only `xml:lang` exists) <br/>
+else (only `xml:lang` exists)
 
-*Do nothing. (This case is covered by [[SC3-1-1-xml-lang]].)*
+*Do nothing. (This case is covered by [SC3-1-1-xml-lang](SC3-1-1-xml-lang.md).)*
 
 ### Step 2
 
@@ -74,8 +74,8 @@ If L1 is not on the list, return
 
 | Outcome  | Failed
 |----------|-----
-| Testcase | SC311-html
-| ID       | SC311-html-fail2
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-fail2
 | Error    | Unknown language code.
 | Info     | L1
 
@@ -85,8 +85,8 @@ Else, return
 
 | Outcome  | Passed
 |----------|-----
-| Testcase | SC311-html
-| ID       | SC311-text-pass1
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-pass1
 
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual

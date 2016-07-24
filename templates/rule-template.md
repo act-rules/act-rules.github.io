@@ -1,3 +1,16 @@
+---
+# [Rule Metadata](../pages/metadata.md)
+rule_id: 
+name: 
+test_mode: 
+
+criteria:
+- 
+- 
+
+authors:
+---
+
 # SC#-#-#-name
 
 The test template contains a plain language description of the test, some background information, and a list of all assumptions. The test properties are summarized in a table. The actual test is defined by the selector, a number of steps and a formal description of the test outcomes.

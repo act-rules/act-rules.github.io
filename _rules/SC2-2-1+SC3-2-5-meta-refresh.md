@@ -1,4 +1,13 @@
-# SC2-2-1+SC3-2-5-meta-refresh
+---
+# [Rule Metadata](../pages/metadata.md)
+rule_id: SC2-2-1+SC3-2-5-meta-refresh
+name: Meta refresh and redirect is not used
+test_mode: automatic
+
+criteria:
+- time-limits-required-behaviors: 2.2.1 Timing Adjustable (Level A)
+- consistent-behavior-no-extreme-changes-context: 3.2.5 Change on Request (Level AAA)
+---
 
 ## Description
 
@@ -47,16 +56,16 @@ If the integer is invalid or 0, return:
 
 | Outcome  | Passed
 |----------|-----
-| Testcase | SC2-2-1+SC3-2-5-meta-refresh
-| ID       | SC2-2-1+SC3-2-5-meta-refresh-passed
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-passed
 | Pointer  | Selected element
 
 Else return:
 
 | Outcome  | Failed
 |----------|-----
-| Testcase | SC2-2-1+SC3-2-5-meta-refresh
-| ID       | SC2-2-1+SC3-2-5-meta-refresh-failed
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-failed
 | Error    | Meta refresh should not be used unless it is instantaneous.
 | Pointer  | Selected element
 

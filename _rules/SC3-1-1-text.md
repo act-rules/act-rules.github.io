@@ -7,6 +7,9 @@ test_mode: semi-automatic
 
 criteria:
 - meaning-doc-lang-id: 3.1.1 Language of Page
+
+authors:
+- https://github.com/...: Annika Nietzio
 ---
 
 ## Description

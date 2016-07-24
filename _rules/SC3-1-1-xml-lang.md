@@ -1,4 +1,16 @@
-# SC3-1-1-xml-lang
+---
+# [Rule Metadata](../pages/metadata.md)
+
+rule_id: SC3-1-1-xml-lang
+name: Use identical xml:lang and lang attributes
+test_mode: automatic
+
+criteria:
+- meaning-doc-lang-id: 3.1.1 Language of Page
+
+authors:
+- https://github.com/...: Annika Nietzio
+---
 
 ## Description
 
@@ -12,7 +24,7 @@ This test checks the value of the `xml:lang` attribute.
 
 ## Assumptions
 
-- Tests have shown that `xml:lang` is ignored by screenreaders. (Both Jaws 15 with FF and IE and NVDA with FF go by lang attribute, xml:lang is ignored.) This test identifies pages that use only the  `xml:lang` attribute.
+- Tests have shown that `xml:lang` is ignored by screenreaders. (Both Jaws 15 with FF and IE and NVDA with FF go by lang attribute, xml:lang is ignored.) This test identifies pages that use only the `xml:lang` attribute.
 
 ## Test properties
 
@@ -30,7 +42,7 @@ This test checks the value of the `xml:lang` attribute.
 
 Test mode: [automatic][AUTO]
 
-Select `<html>` element with `xml:lang` attribute.
+Select `html` element with `xml:lang` attribute.
 
 `html[@xml:lang]`
 
@@ -38,21 +50,21 @@ Select `<html>` element with `xml:lang` attribute.
 
 Test mode: [automatic][AUTO]
 
-Check that the `<html>` element contains also a `lang` attribute.
+Check that the `html` element contains also a `lang` attribute.
 
 If no `lang` is specified, return
 
 | Outcome  | Failed
 |----------|-----
-| Testcase | SC311-xml-lang
-| ID       | SC311-xml-lang-fail1
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-fail1
 | Error    | No lang attribute found. Only xml:lang.
 
 ### Step 2
 
 Test mode: [automatic][AUTO]
 
-L1 = value of `xml:lang`<br/>
+L1 = value of `xml:lang`
 
 L2 = value of `lang`
 
@@ -62,8 +74,8 @@ If the L1 and L2 differ, return
 
 | Outcome  | Failed
 |----------|-----
-| Testcase | SC311-xml-lang
-| ID       | SC311-xml-lang-fail2
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-fail2
 | Error    | Contradicting language codes.
 | Info     | L1, L2
 
@@ -71,8 +83,8 @@ Else, return
 
 | Outcome  | Passed
 |----------|-----
-| Testcase | SC311-xml-lang
-| ID       | SC311-xml-lang-pass1
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-pass1
 
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual

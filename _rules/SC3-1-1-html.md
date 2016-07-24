@@ -3,10 +3,10 @@
 
 rule_id: SC3-1-1-html
 name: Primary language of page
-test_mode: Automatic
+test_mode: automatic
 
 criteria:
-- meaning-doc-lang-id: 3.1.1 Language of Page
+- meaning-doc-lang-id: 3.1.1 Language of Page (Level A)
 
 authors:
 - https://github.com/...: Annika Nietzio

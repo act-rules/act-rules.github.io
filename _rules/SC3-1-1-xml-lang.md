@@ -6,7 +6,7 @@ name: Use identical xml:lang and lang attributes
 test_mode: automatic
 
 criteria:
-- meaning-doc-lang-id: 3.1.1 Language of Page
+- meaning-doc-lang-id: 3.1.1 Language of Page (Level A)
 
 authors:
 - https://github.com/...: Annika Nietzio

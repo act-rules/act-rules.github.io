@@ -27,7 +27,7 @@ This test checks that all elements that receive focus are visible in the viewpor
 
 ### Selector
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Each element that matches one of the following CSS selectors
 
@@ -40,7 +40,7 @@ Each element that matches one of the following CSS selectors
 
 ### Step 1
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Give focus to the selected element.
 

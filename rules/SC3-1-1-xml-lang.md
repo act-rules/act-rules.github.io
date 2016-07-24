@@ -28,7 +28,7 @@ This test checks the value of the `xml:lang` attribute.
 
 ### Selector
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Select `<html>` element with `xml:lang` attribute.
 
@@ -36,7 +36,7 @@ Select `<html>` element with `xml:lang` attribute.
 
 ### Step 1
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Check that the `<html>` element contains also a `lang` attribute.
 
@@ -50,7 +50,7 @@ If no `lang` is specified, return
 
 ### Step 2
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 L1 = value of `xml:lang`<br/>
 

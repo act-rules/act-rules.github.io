@@ -26,13 +26,13 @@ This test checks that attributes of an element are unique.
 
 ### Selector
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Select all opening tags in the HTML document
 
 ### Step 1
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 - Make a list of all the attribute names on the current tag
 - IF any of the attributes occurs more the once:

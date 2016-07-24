@@ -29,7 +29,7 @@ This test checks that `lang` attributes within the body of a web page are correc
 
 ### Selector
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 `descendent-or-self::body[@lang]`
 
@@ -37,7 +37,7 @@ This test is applied to all elements with `lang` attribute in the body of the we
 
 ### Step 1
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 L1 = value of `lang` attribute.
 

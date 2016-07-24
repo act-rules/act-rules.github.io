@@ -28,13 +28,13 @@ This test checks id attribute for all elements to have a unique value.
 
 ### Selector
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Select any element with an id attribute. The following CSS selector could be used: *[id]
 
 ### Step 1
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 - IF there is no list called 'knownIDs':
   - Create an empty list 'knownIDs;

@@ -31,7 +31,7 @@ This test checks that changes in human language are marked up correctly in the w
 
 ### Selector
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Select consecutive run of text to which a single language attribute applies.<br/>
 
@@ -41,7 +41,7 @@ L1 = language of the selected text as determined by [HTML 4.01 Inheritance of la
 
 ### Step 1
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Use a [[language identification algorithm]] to determine L2 = the language actually used in the selected text.
 
@@ -67,20 +67,25 @@ Else return
 
 ### Step 2
 
-Test mode: [automatic][earl:manual]
+Test mode: [manual][MANUAL]
 
 Present the selected text to the user.<br/>
 
 Question: Is L1 the *only* language used in this text?
 
 *Note that language codes should be presented in human readable form, e.g. using the description from the [language subtag registry](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).*
+
 Help text: If the text contains a phrase or sentence in another language, please answer "no". If there are only single words in another language and the rest of the text is in L1, please answer "yes".
+
 If yes, return
+
 | Outcome  | Passed
 |----------|-----
 | Testcase | SC312-text
 | ID       | SC312-text-pass2
+
 Else return
+
 | Outcome  | Failed
 |----------|-----
 | Testcase | SC312-text

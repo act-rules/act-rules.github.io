@@ -37,13 +37,13 @@ This test does not prescribe which of these definitions to use as long as one of
 
 ### Selector
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 L1 = value of `lang` attribute.
 
 ### Step 1
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Select a continuous run of text from one or more consecutive `p`-elements. If no `p`-elements exist, select any text from the body of the web page. The text should be at least 300 characters in length and not contain any language changes, i.e. lang-attributes on the element or its parent. If no such text is found, continue with [[#Step 2|Step 2]].
 

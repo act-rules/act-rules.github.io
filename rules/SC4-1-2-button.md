@@ -26,13 +26,13 @@ This test checks if every button element has a name.
 
 ### Selector
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Select any button element. The following CSS selector could be used: “button”
 
 ### Step 1
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 - IF there is [non-empty](../definitions/non-empty.md) text within the button element:
   - Return SC412-button-pass;

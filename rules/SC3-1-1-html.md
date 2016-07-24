@@ -29,13 +29,13 @@ This test checks that the primary language of the web content can be programmati
 
 ### Selector
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Select the `html` element.
 
 ### Step 1
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 If `lang` attribute exists: <br/>
 
@@ -57,7 +57,7 @@ else (only `xml:lang` exists) <br/>
 
 ### Step 2
 
-Test mode: [automatic][earl:automatic]
+Test mode: [automatic][AUTO]
 
 Compare L1 to BCP 47.
 

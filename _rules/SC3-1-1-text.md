@@ -15,10 +15,10 @@ This test checks that the primary language of the content is specified correctly
 
 ## Background
 
-- [ H57: Using language attributes on the html element](httphttp://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H57)
-- [eGovMon test for H57](httphttp://wiki.egovmon.no/wiki/SC3.1.1)
-- [BCP 47: Tags for the Identification of Languages](httphttp://www.rfc-editor.org/rfc/bcp/bcp47.txt)
-- [IANA language subtag registry](httphttp://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)
+- [ H57: Using language attributes on the html element](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H57)
+- [eGovMon test for H57](http://wiki.egovmon.no/wiki/SC3.1.1)
+- [BCP 47: Tags for the Identification of Languages](http://www.rfc-editor.org/rfc/bcp/bcp47.txt)
+- [IANA language subtag registry](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)
 
 ## Assumptions
 
@@ -54,7 +54,7 @@ L1 = value of `lang` attribute.
 
 Test mode: [automatic][AUTO]
 
-Select a continuous run of text from one or more consecutive `p`-elements. If no `p`-elements exist, select any text from the body of the web page. The text should be at least 300 characters in length and not contain any language changes, i.e. lang-attributes on the element or its parent. If no such text is found, continue with [Step 2](#-step 2).
+Select a continuous run of text from one or more consecutive `p` elements. If no `p` elements exist, select any text from the body of the web page. The text should be at least 300 characters in length and not contain any language changes, i.e. `lang` attributes on the element or its parent. If no such text is found, continue with [Step 2](#-step 2).
 
 Use a [language identification algorithm][LNGFND] to check if L1 is the language of the selected text.
 
@@ -62,10 +62,10 @@ If yes, return
 
 | Outcome  | Passed
 |----------|-----
-| Testcase | SC311-text
-| ID       | SC311-text-pass1
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-text-pass1
 
-Else continue with [[#Step 2|Step 2]].
+Else continue with [Step 2](#step-2).
 
 ### Step 2
 
@@ -83,19 +83,18 @@ If yes, return
 
 | Outcome  | Passed
 |----------|-----
-| Testcase | SC311-text
-| ID       | SC311-text-pass2
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-pass2
 
 Else return
 
 | Outcome  | Failed
 |----------|-----
-| Testcase | SC311-text
-| ID       | SC311-text-fail1
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-fail1
 | Error    | The primary language of the page is not specified correctly.
 | Info     | L1
 
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual
 [LNGFND]: ../pages/algorithms/lang-identification.html
-

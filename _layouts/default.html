@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <title>{{ site.title | escape }}{% if page.title %} - {{ page.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
@@ -33,6 +33,10 @@
 </nav>
 
 <main class="container">
+  {% if page.title %}
+    <h1>{{ page.title }}</h1>
+  {% endif %}
+
   {{ content }}
 </main>
 

@@ -1,8 +1,6 @@
 ---
-layout: default
+title: Test Modes
 ---
-
-# Test methods
 
 Test methods are taken as a concept from the Evaluation And Report Language (EARL). It defines three modes:
 

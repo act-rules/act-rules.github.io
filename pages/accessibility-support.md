@@ -1,6 +1,5 @@
 ---
-layout: default
+title: Accessibility Support
 ---
 
-# Accessibility Support
-
+...

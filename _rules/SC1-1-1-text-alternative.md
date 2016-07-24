@@ -89,7 +89,7 @@ else continue with [Step 8: compute text alternative](#step-8-compute-text-alter
 
 ### Step 4: ask for informational or functional group of images (ARIA10 and G196)
 
-Test mode: [automatic][earl:manual]
+Test mode: [automatic][earl:automatic]
 
 **User Input Question:**
 
@@ -151,7 +151,7 @@ else return
 
 ### Step 7: ask if sufficiently described by textual alternative (G196)
 
-Test mode: [automatic][earl:manual]
+Test mode: [automatic][earl:automatic]
 
 Concatenate the results of [Text Alternative Computation][algorithms/text-alt] Algorithm run on all images and assign it to variable T1.
 
@@ -237,7 +237,7 @@ else return
 
 ### Step 11: check dimensions (no text alternative)
 
-Test mode: [automatic][earl:manual]
+Test mode: [automatic][earl:automatic]
 
 Check if the elements height is less or equal 5px or the elements width is less or equal 3px.
 
@@ -252,7 +252,7 @@ else Continue with [Step 12: ask if decorative (no text alternative)](#step-12-a
 
 ### Step 12: ask if decorative (no text alternative)
 
-Test mode: [automatic][earl:manual]
+Test mode: [automatic][earl:automatic]
 
 **User Input Question:**
 

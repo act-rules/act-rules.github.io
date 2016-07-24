@@ -1,8 +1,6 @@
 ---
-layout: default
+title: Basic Aggregation Algorithm
 ---
-
-# Basic aggregation algorithm
 
 Each test case of the Auto-WCAG group is related to a specific WCAG 2.0 success criterion. A success criterion can (and usually does) have multiple test cases associated with it. Each test case can have one of three outcomes: Pass, CannotTell and Fail. The results of individual test cases can be combined in the following manner, to find the result of a specific success criterion.
 

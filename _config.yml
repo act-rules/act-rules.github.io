@@ -23,6 +23,10 @@ collections:
 defaults:
   - scope:
       path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
       type: rules
     values:
       layout: rule

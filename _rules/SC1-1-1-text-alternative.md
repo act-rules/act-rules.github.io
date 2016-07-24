@@ -1,5 +1,6 @@
 ---
 # [Rule Metadata](../pages/metadata.md)
+
 rule_id: SC1-1-1-text-alternative
 name: Provision of short text alternative
 test_mode: semi-automatic

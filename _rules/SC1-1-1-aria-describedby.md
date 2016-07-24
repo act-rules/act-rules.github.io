@@ -1,5 +1,6 @@
 ---
 # [Rule Metadata](../pages/metadata.md)
+
 rule_id: SC1-1-1-aria-describedby
 name: Proper use of aria-describedby
 test_mode: semi-automatic
@@ -69,8 +70,8 @@ else, return
 
 | Outcome  | Failed
 |----------|-----
-| Testcase | {{ page.rule-id }}
-| ID       | {{ page.rule-id }}-fail1
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-fail1
 | Error    | None of the aria-describedby attribute values is a valid identifier.
 
 ### Step 2
@@ -85,8 +86,8 @@ else, return
 
 | Outcome  | Failed
 |----------|-----
-| Testcase | {{ page.rule-id }}
-| ID       | {{ page.rule-id }}-fail2
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-fail2
 | Error    | None of the elements referenced by aria-describedby exists.
 
 ### Step 3
@@ -110,15 +111,15 @@ if yes, return
 
 | Outcome  | Passed
 |----------|-----
-| Testcase | {{ page.rule-id }}
-| ID       | {{ page.rule-id }}-pass1
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-pass1
 
 else return
 
 | Outcome  | Failed
 |----------|-----
-| Testcase | {{ page.rule-id }}
-| ID       | {{ page.rule-id }}–fail3
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}–fail3
 | Error    | The long description provided using aria-describedby is not sufficiently descriptive.
 
 [AUTO]: ../pages/test-modes.html#automatic

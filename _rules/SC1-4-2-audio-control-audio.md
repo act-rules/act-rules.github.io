@@ -1,5 +1,6 @@
 ---
 # [Rule Metadata](../pages/metadata.md)
+
 rule_id: SC1-4-2-audio-control-audio
 name: Audio control
 test_mode: semi-automatic

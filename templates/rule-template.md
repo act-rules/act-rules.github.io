@@ -1,11 +1,11 @@
 ---
 # [Rule Metadata](../pages/metadata.md)
+
 rule_id: 
 name: 
 test_mode: 
 
 criteria:
-- 
 - 
 
 authors:

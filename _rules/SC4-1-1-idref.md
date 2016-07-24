@@ -1,4 +1,13 @@
-# SC4-1-1-idref
+---
+# [Rule Metadata](../pages/metadata.md)
+
+rule_id: SC4-1-1-idref
+name: Reference elements
+test_mode: automatic
+
+criteria:
+- ensure-compat-parses: 4.1.1 Parsing (Level A)
+---
 
 ## Description
 
@@ -29,31 +38,32 @@ This test checks that each element referred to from an idref attribute exists.
 
 Test mode: [automatic][AUTO]
 
-Select each label element with a for attribute and each element with a aria-activedescendant attribute. The CSS selector "label[for], *[aria-activedescendant]" can be used.
+Select each label element with a for attribute and each element with a aria-activedescendant attribute. The CSS selector `label[for], *[aria-activedescendant]` can be used.
 
 ### Step 1
 
 Test mode: [automatic][AUTO]
 
-- Take the attribute with the IDREF (for=""/aria-activedescendant) value as IdrefAttr
+- Take the attribute with the IDREF (for="" / aria-activedescendant) value as IdrefAttr
 - Trim the IdrefAttr of whitespace characters
 - Select element IdTarget, by looking up the first element that has an ID attribute that matches the IdrefAttr
 - IF idTarget exists:
-  - Return SC4-1-1-idref-pass1
+  - Return {{ page.rule_id }}-pass1
 - ELSE:
-  - Return SC4-1-1-idref-fail1
+  - Return {{ page.rule_id }}-fail1
 
 | Outcome  | Passed
 |----------|-----
-| Testcase | SC4-1-1-idref
+| Testcase | {{ page.rule_id }}
 | Pointer  | selector result
-| ID       | SC4-1-1-idref-pass1
+| ID       | {{ page.rule_id }}-pass1
+
 | Outcome  | Failed
 |----------|-----
-| Testcase | SC4-1-1-idref
+| Testcase | {{ page.rule_id }}
 | Error    | The attribute {IdrefAttr} refers to an element that does not exist on the page.
 | Pointer  | selector result
-| ID       | SC4-1-1-idref-fail1
+| ID       | {{ page.rule_id }}-fail1
 
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual

@@ -1,4 +1,13 @@
-# SC4-1-1-unique-attrs
+---
+# [Rule Metadata](../pages/metadata.md)
+
+rule_id: SC4-1-1-unique-attrs
+name: Attributes are unique
+test_mode: automatic
+
+criteria:
+- ensure-compat-parses: 4.1.1 Parsing (Level A)
+---
 
 ## Description
 
@@ -36,19 +45,19 @@ Test mode: [automatic][AUTO]
 
 - Make a list of all the attribute names on the current tag
 - IF any of the attributes occurs more the once:
-  - Return SC4-1-1-unique-attrs-fail1
-- ELSE Return SC4-1-1-unique-attrs-pass1
+  - Return {{ page.rule_id }}-fail1
+- ELSE Return {{ page.rule_id }}-pass1
 
 | Outcome  | Passed
 |----------|-----
-| ID       | SC4-1-1-unique-attrs-pass1
-| Testcase | SC4-1-1-unique-attrs
+| ID       | {{ page.rule_id }}-pass1
+| Testcase | {{ page.rule_id }}
 | Pointer  | selector result
 
 | Outcome  | Failed
 |----------|-----
-| ID       | SC4-1-1-unique-attrs-fail1
-| Testcase | SC4-1-1-unique-attrs
+| ID       | {{ page.rule_id }}-fail1
+| Testcase | {{ page.rule_id }}
 | Error    | Attribute <attribute-name> was used more then once on the element <pointer>
 | Pointer  | selector result
 

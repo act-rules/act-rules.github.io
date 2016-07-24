@@ -1,4 +1,13 @@
-# SC4-1-2-button
+---
+# [Rule Metadata](../pages/metadata.md)
+
+rule_id: SC4-1-2-button
+name: Button has name
+test_mode: automatic
+
+criteria:
+- ensure-compat-rsv: 4.1.2 Name, Role, Value (Level A)
+---
 
 ## Description
 
@@ -28,28 +37,30 @@ This test checks if every button element has a name.
 
 Test mode: [automatic][AUTO]
 
-Select any button element. The following CSS selector could be used: “button”
+Select any button element. The following CSS selector could be used: `button`
 
 ### Step 1
 
 Test mode: [automatic][AUTO]
 
-- IF there is [non-empty](../definitions/non-empty.md) text within the button element:
-  - Return SC412-button-pass;
-- IF the button element has a title attribute with a [non-empty](../definitions/non-empty.md) value:
-  - Return SC412-button-pass;
-- ELSE Return SC412-button-fail;
+- IF there is [non-empty][NEMPTY] text within the button element:
+  - Return {{ page.rule_id }}-pass;
+- IF the button element has a title attribute with a [non-empty][NEMPTY] value:
+  - Return {{ page.rule_id }}-pass;
+- ELSE Return {{ page.rule_id }}-fail;
 
 | Outcome  | Passed
 |----------|-----
-| Testcase | SC412-button
-| ID       | SC412-button-pass
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-pass
+
 | Outcome  | Failed
 |----------|-----
-| Testcase | SC412-button
+| Testcase | {{ page.rule_id }}
 | Error    | failed to give an anchor element a name
 | Info     | This button element has no filled title attribute nor text content.
-| ID       |  SC412-button-fail
+| ID       | {{ page.rule_id }}-fail
 
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual
+[NEMPTY]: ../pages/algorihms/none-empty.html

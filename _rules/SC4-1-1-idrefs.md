@@ -1,4 +1,13 @@
-# SC4-1-1-idrefs
+---
+# [Rule Metadata](../pages/metadata.md)
+
+rule_id: SC4-1-1-idrefs
+name: Reference multiple elements
+test_mode: automatic
+
+criteria:
+- ensure-compat-parses: 4.1.1 Parsing (Level A)
+---
 
 ## Description
 
@@ -17,7 +26,7 @@ This test checks that each element referred to from an idrefs attribute exists.
 
 | Property          | Value
 |-------------------|----
-| Success Criterion | [[4.1.1 Parsing]]
+| Success Criterion | 4.1.1 Parsing
 | Test mode         | Automatic
 | Test environment  | DOM
 | Test subject      | Single web page
@@ -28,7 +37,11 @@ This test checks that each element referred to from an idrefs attribute exists.
 
 Test mode: [automatic][AUTO]
 
-Select each td and th element with a headers attribute, and each element with an aria IDREFS attribute. The CSS selector "td[headers], th[headers], *[aria-controls], *[aria-describedby], *[aria-flowto], *[aria-labelledby], *[aria-owns]" can be used.
+Select each td and th element with a headers attribute, and each element with an aria IDREFS attribute. The following CSS selector can be used:
+
+```
+td[headers], th[headers], *[aria-controls], *[aria-describedby], *[aria-flowto], *[aria-labelledby], *[aria-owns]
+```
 
 ### Step 1
 
@@ -39,21 +52,22 @@ Test mode: [automatic][AUTO]
 - FOR EACH idRefVal in idRefVals
   - Get element IdTarget, by looking up the first element that has an ID attribute that matches idRefVal
   - IF idTarget exists:
-    - Return SC4-1-1-idrefs-pass1
+    - Return {{ page.rule_id }}-pass1
   - ELSE:
-    - Return SC4-1-1-idrefs-fail1
+    - Return {{ page.rule_id }}-fail1
 
 | Outcome  | Passed
 |----------|-----
-| Testcase | SC4-1-1-idrefs
+| Testcase | {{ page.rule_id }}
 | Pointer  | selector result
-| ID       | SC4-1-1-idrefs-pass1
+| ID       | {{ page.rule_id }}-pass1
+
 | Outcome  | Failed
 |----------|-----
-| Testcase | SC4-1-1-idrefs
+| Testcase | {{ page.rule_id }}
 | Error    | The attribute {IDREFS attribute} refers to an element with the id {idRefVal} which does not exist on the page.
 | Pointer  | selector result
-| ID       | SC4-1-1-idrefs-fail1
+| ID       | {{ page.rule_id }}-fail1
 
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual

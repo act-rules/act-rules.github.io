@@ -1,4 +1,16 @@
-# SC3-1-2-xml-lang
+---
+# [Rule Metadata](../pages/metadata.md)
+
+rule_id: SC3-1-2-xml-lang
+name: Language of Parts
+test_mode: automatic
+
+criteria:
+- meaning-other-lang-id: 3.1.2 Language of Parts (Level AA)
+
+authors:
+- https://github.com/...: Annika Nietzio
+---
 
 ## Description
 
@@ -32,7 +44,9 @@ Test mode: [automatic][AUTO]
 
 Select the element with `xml:lang` attribute.
 
-`descendent-or-self::body[@xml:lang]`
+```
+descendent-or-self::body[@xml:lang]
+```
 
 ### Step 1
 
@@ -52,7 +66,7 @@ If no `lang` is specified, return
 
 Test mode: [automatic][AUTO]
 
-L1 = value of `xml:lang`<br/>
+L1 = value of `xml:lang`
 
 L2 = value of `lang`
 

@@ -4,15 +4,16 @@
 This test checks that tags of an HTML or XHTML document are nested correctly. So that elements that must be closed are, elements that shouldn't be aren't, and that elements are closed in the correct order.
 
 ## Background
+
 - [H74: Ensuring that opening and closing tags are used according to specification](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/H74)
 - [eGovMon test ID: H74-1](http://wiki.egovmon.no/wiki/SC4.1.1#All_HTML_code)
 
-
 ## Assumptions
+
 *no known assumptions*
 
-
 ## Test properties
+
 | Property          | Value
 |-------------------|----
 | Test requirement  | 4.1.1 Parsing
@@ -20,21 +21,23 @@ This test checks that tags of an HTML or XHTML document are nested correctly. So
 | Test environment  | HTML source
 | Test subject      | Single web page
 
-
 ## Test procedure
 
 ### Selector
+
 Test mode: [automatic][earl:automatic]
 
 Select all opening and closing tags in the HTML document
 
 ### Step 1: Verify opening tag attributes=
+
 Test mode: [automatic][earl:automatic]
 
 - IF the tag is a closing tag:
   - GO TO step 4
 
 ### Step 2: Check unclosed opening tags=
+
 Test mode: [automatic][earl:automatic]
 
 - Locate the closing tag that corresponds to the current tag
@@ -51,14 +54,12 @@ Test mode: [automatic][earl:automatic]
 | Error    | This element requires a closing tag.
 | Pointer  | selector result
 | ID       | SC4-1-1-tag-nesting-fail1
-
 | Outcome  | Failed
 |----------|-----
 | Testcase | SC4-1-1-tag-nesting
 | Error    | Element must use self-closing syntax.
 | Pointer  | selector result
 | ID       | SC4-1-1-tag-nesting-fail2
-
 | Outcome  | Passed
 |----------|-----
 | Testcase | SC4-1-1-tag-nesting
@@ -66,6 +67,7 @@ Test mode: [automatic][earl:automatic]
 | ID       | SC4-1-1-tag-nesting-pass1
 
 ### Step 3: Check that tags are closed in the right place=
+
 Test mode: [automatic][earl:automatic]
 
 - Make a list childTags of tags that follow the current tag, until it's closing tag
@@ -79,7 +81,6 @@ Test mode: [automatic][earl:automatic]
 | Testcase | SC4-1-1-tag-nesting
 | Pointer  | selector result
 | ID       | SC4-1-1-tag-nesting-pass2
-
 | Outcome  | Failed
 |----------|-----
 | Testcase | SC4-1-1-tag-nesting
@@ -88,6 +89,7 @@ Test mode: [automatic][earl:automatic]
 | ID       | SC4-1-1-tag-nesting-fail3
 
 ### Step 4: Closing tags have a corresponding opening tag=
+
 - IF The current closing tag does not have a corresponging opening tag:
   - Return SC4-1-1-tag-nesting-fail4
 
@@ -98,8 +100,5 @@ Test mode: [automatic][earl:automatic]
 | Pointer  | selector result
 | ID       | SC4-1-1-tag-nesting-fail4
 
-
-
-[earl:automatic]: ../earl/automatic.md
-[earl:semiauto]: ../earl/semiauto.md
-[earl:manual]: ../earl/manual.md
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

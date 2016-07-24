@@ -1,19 +1,20 @@
 # SC2-4-7-focus-in-viewport
 
 ## Description
+
 This test checks that all elements that receive focus are visible in the viewport.
 
-
 ## Background
+
 - [G149: Using user interface components that are highlighted by the user agent when they receive focus](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G149)
 - [C15: Using CSS to change the presentation of a user interface component when it receives focus](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/C15)
 
-
 ## Assumptions
+
 - Focus styles are only applied when the focus of browser viewport has the focus of the operating system. Scripts that give focus to elements do not update the style of that element unless the user is focused on this particular viewport in the OS.
 
-
 ## Test properties
+
 | Property          | Value
 |-------------------|----
 | Test name         | Focused element visible in viewport
@@ -22,13 +23,14 @@ This test checks that all elements that receive focus are visible in the viewpor
 | Test environment  | Remote Controlled User Agent
 | Test subject      | Single web page
 
-
 ## Test procedure
 
 ### Selector
+
 Test mode: [automatic][earl:automatic]
 
 Each element that matches one of the following CSS selectors
+
 - `a[href]:not([tabindex=-1])`,
 - `button:not([tabindex=-1])`,
 - `select:not([tabindex=-1])`,
@@ -37,6 +39,7 @@ Each element that matches one of the following CSS selectors
 - `*[tabindex]:not([tabindex=-1])`
 
 ### Step 1
+
 Test mode: [automatic][earl:automatic]
 
 Give focus to the selected element.
@@ -58,8 +61,5 @@ If no, return:
 | ID       | SC2-4-7-focus-in-viewport-failed
 | Error    | The element should be inside the viewport when it receives focus
 
-
-
-[earl:automatic]: ../earl/automatic.md
-[earl:semiauto]: ../earl/semiauto.md
-[earl:manual]: ../earl/manual.md
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

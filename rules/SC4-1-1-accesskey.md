@@ -1,19 +1,20 @@
 # SC4-1-1-accesskey
 
 ## Description
+
 This test checks accesskey attribute for all elements to have a unique value.
 
-
 ## Background
+
 - [F17: Failure of Success Criterion 1.3.1 and 4.1.1 due to insufficient information in DOM to determine one-to-one relationships (e.g., between labels with same id) in HTML](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/F17)
 - [eGovMon test F17-1](http://wiki.egovmon.no/wiki/SC4.1.1#ID:_F17-1)
 
-
 ## Assumptions
+
 - If the accesskey value has multiple characters the user agent picks the first character and ignores the rest. http://www.whatwg.org/specs/web-apps/current-work/multipage/interaction.html#the-accesskey-attribute
 
-
 ## Test properties
+
 | Property          | Value
 |-------------------|----
 | Test name         | Provide unique accesskeys
@@ -22,15 +23,16 @@ This test checks accesskey attribute for all elements to have a unique value.
 | Test environment  | DOM
 | Test subject      | single web page
 
-
 ## Test procedure
 
 ### Selector
+
 Test mode: [automatic][earl:automatic]
 
 Select any element with an accesskey attribute. The following CSS selector could be used: *[accesskey]
 
 ### Step 1
+
 Test mode: [automatic][earl:automatic]
 
 - IF there is no list called 'knownAccesskeys':
@@ -47,7 +49,6 @@ Test mode: [automatic][earl:automatic]
 | Testcase | SC4-1-1-accesskey
 | Pointer  | selector result
 | ID       | SC4-1-1-accesskey-pass1
-
 | Outcome  | Failed
 |----------|-----
 | Testcase | SC4-1-1-accesskey
@@ -55,8 +56,5 @@ Test mode: [automatic][earl:automatic]
 | Pointer  | selector result
 | ID       | SC4-1-1-accesskey-fail1
 
-
-
-[earl:automatic]: ../earl/automatic.md
-[earl:semiauto]: ../earl/semiauto.md
-[earl:manual]: ../earl/manual.md
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

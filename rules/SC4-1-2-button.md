@@ -1,19 +1,20 @@
 # SC4-1-2-button
 
 ## Description
+
 This test checks if every button element has a name.
 
-
 ## Background
+
 - [H91: Using HTML form controls and links](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/H91.html)
 - [eGovMon test H91-2](http://wiki.egovmon.no/wiki/SC4.1.2#ID:_H91-2)
 
-
 ## Assumptions
+
 - The test case does not look at buttons with img content
 
-
 ## Test properties
+
 | Property          | Value
 |-------------------|----
 | Success Criterion | 4.1.2 Name, Role, Value
@@ -21,15 +22,16 @@ This test checks if every button element has a name.
 | Test environment  | DOM
 | Test subject      | single web page
 
-
 ## Test procedure
 
 ### Selector
+
 Test mode: [automatic][earl:automatic]
 
 Select any button element. The following CSS selector could be used: “button”
 
 ### Step 1
+
 Test mode: [automatic][earl:automatic]
 
 - IF there is [non-empty](../definitions/non-empty.md) text within the button element:
@@ -38,12 +40,10 @@ Test mode: [automatic][earl:automatic]
   - Return SC412-button-pass;
 - ELSE Return SC412-button-fail;
 
-
 | Outcome  | Passed
 |----------|-----
 | Testcase | SC412-button
 | ID       | SC412-button-pass
-
 | Outcome  | Failed
 |----------|-----
 | Testcase | SC412-button
@@ -51,8 +51,5 @@ Test mode: [automatic][earl:automatic]
 | Info     | This button element has no filled title attribute nor text content.
 | ID       |  SC412-button-fail
 
-
-
-[earl:automatic]: ../earl/automatic.md
-[earl:semiauto]: ../earl/semiauto.md
-[earl:manual]: ../earl/manual.md
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

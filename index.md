@@ -1,14 +1,32 @@
 ---
 layout: default
 ---
-# Auto-WCAG Rules
+<h1>Auto-WCAG Rules</h1>
 
 To learn about Auto-WCAG itself visit the auto-wcag Community Group website at [w3.org/community/auto-wcag/](https://www.w3.org/community/auto-wcag/).
 
-<ul>
+<table>
+  <thead>
+    <tr>
+      <th>Rule name</th>
+      <th>Test mode</th>
+      <th>WCAG criterion</th>
+    </tr>
+  </thead>
   {% for rule in site.rules %}
-	<li><a href="{{ rule.url }}">
-	    {{ rule.title }}
-	</a></li>
+  <tr>
+    <th><a href="{{ rule.url }}">{{
+      rule.name
+    }}<br>(<i>{{ rule.rule-id }}</i>)</a></th>
+    <td>{{ rule.test-mode }}</td>
+    <td><ul>
+      {% for criterion in rule.criteria %}
+        <li>{% for critSpec in criterion %}
+          <a href="https://www.w3.org/TR/WCAG20/#{{ critSpec[0] }}"
+            target="_blank">{{ critSpec[1] }}</a>
+        {% endfor %}</li>
+      {% endfor %}
+    </ul></td>
+  </tr>
   {% endfor %}
-</ul>
+</table>

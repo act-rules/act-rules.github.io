@@ -11,8 +11,6 @@ criteria:
 authors:
 ---
 
-# SC#-#-#-name
-
 The test template contains a plain language description of the test, some background information, and a list of all assumptions. The test properties are summarized in a table. The actual test is defined by the selector, a number of steps and a formal description of the test outcomes.
 
 The format of the test properties and outcomes is aligned with EARL.
@@ -26,12 +24,12 @@ For the name of the test case use the following format: **SC#-#-#-identifier**
 
 - **identifier**: This must be a lower case identifier of the test, preferable no more then 3 words. It can only contain alphanumeric values or a dash (-).
 
-
 ## Description
+
 This test checks ...
 
-
 ## Background
+
 - Links to Techniques for WCAG 2.0
 - Latest version: Techniques for WCAG 2.0 W3C Working Group Note 8 April 2014
 - Link to other methodologies, test specifications or tools
@@ -39,33 +37,32 @@ This test checks ...
 - The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible auto-wcag refers to those. Another source for test cases is the W3C Before and After Demonstration.
 - Other references
 
-
 ## Assumptions
+
 - Make a list
 
-
 ## Test properties
+
 | Properties        | Values
 |-------------------|-----------
 | Test name         | User friendly test name
-| Success criterion | [x.x.x name](url-to-understanding-doc)
+| Success criterion | x.x.x name
 | Test mode         | automated / semiautomated / manual
 | Test environment  | HTML, DOM, DOM + CSS, Rendered page, Rendered page + server, Webdriver
 | Test Subject      | Single page, multiple pages, web page state, Document fragment
 | User profile      | (optional) e.g. Requires sight
 
-
 ## Test procedure
 
-
 ### Selector
-Test method: [automatic][earl:automatic]
+
+Test method: [automatic][AUTO]
 
 How to get the right elements
 
-
 ### Step 1
-Test method: [automatic][earl:automatic]
+
+Test method: [automatic][AUTO]
 
 Check if at least one of the elements referenced by the valid `aria-describedby` attribute values exists.
 
@@ -78,13 +75,11 @@ else, return
 | ID       | SC1-1-1-aria-describedby-fail1
 | Error    | None of the elements referenced by aria-describedby exists.
 
-
 ### Step 2
-Test method: [manual][earl:manual]
+
+Test method: [manual][MANUAL]
 
 ...
 
-
-[earl:automatic]: pages/test-modes.md#automatic
-[earl:semiauto]: pages/test-modes.md#automatic
-[earl:manual]:  pages/test-modes.md#manual
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

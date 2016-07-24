@@ -1,18 +1,30 @@
-# SC#-#-#-name
+---
+# [Rule Metadata](../pages/metadata.md)
+
+rule_id: 
+name: 
+test_mode: 
+
+criteria:
+- 
+
+authors:
+---
 
 ## Description
 
-
+The
 
 ## Background
--
 
+-
 
 ## Assumptions
+
 -
 
-
 ## Test properties
+
 | Properties        | Values
 |-------------------|-----------
 | Test name         |
@@ -25,17 +37,15 @@
 
 ## Test procedure
 
-
 ### Selector
+
 Test method:
 
 
 ### Step 1
+
 Test method:
 
 
-
-
-[earl:automatic]: pages/test-modes.md#automatic
-[earl:semiauto]: pages/test-modes.md#automatic
-[earl:manual]:  pages/test-modes.md#manual
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

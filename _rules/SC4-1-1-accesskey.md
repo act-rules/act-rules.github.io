@@ -1,4 +1,13 @@
-# SC4-1-1-accesskey
+---
+# [Rule Metadata](../pages/metadata.md)
+
+rule_id: SC4-1-1-accesskey
+name: Provide unique accesskeys
+test_mode: automatic
+
+criteria:
+- ensure-compat-parses: 4.1.1 Parsing (Level A)
+---
 
 ## Description
 
@@ -11,7 +20,7 @@ This test checks accesskey attribute for all elements to have a unique value.
 
 ## Assumptions
 
-- If the accesskey value has multiple characters the user agent picks the first character and ignores the rest. http://www.whatwg.org/specs/web-apps/current-work/multipage/interaction.html#the-accesskey-attribute
+- If the accesskey value has multiple characters the user agent picks the first character and ignores the rest. See: [WHATWG on Interaction](http://www.whatwg.org/specs/web-apps/current-work/multipage/interaction.html#the-accesskey-attribute).
 
 ## Test properties
 
@@ -39,22 +48,23 @@ Test mode: [automatic][AUTO]
   -  Create an empty list 'knownAccesskeys;
 - Take the first character of the ACCESSKEY attribute as FirstChar
 - IF the FirstChar exists in 'knownAccesskeys':
-  - Return SC4-1-1-accesskey-fail1
+  - Return {{ page.rule_id }}-fail1
 - ELSE:
   - Add the FirstChar to 'knownAccesskeys'
-  - Return SC4-1-1-accesskey-pass1
+  - Return {{ page.rule_id }}-pass1
 
 | Outcome  | Passed
 |----------|-----
-| Testcase | SC4-1-1-accesskey
+| Testcase | {{ page.rule_id }}
 | Pointer  | selector result
-| ID       | SC4-1-1-accesskey-pass1
+| ID       | {{ page.rule_id }}-pass1
+
 | Outcome  | Failed
 |----------|-----
-| Testcase | SC4-1-1-accesskey
+| Testcase | {{ page.rule_id }}
 | Error    | The accesskey of this element has occurred before on this page
 | Pointer  | selector result
-| ID       | SC4-1-1-accesskey-fail1
+| ID       | {{ page.rule_id }}-fail1
 
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual

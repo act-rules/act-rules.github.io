@@ -1,4 +1,16 @@
-# SC3-1-2-text
+---
+# [Rule Metadata](../pages/metadata.md)
+
+rule_id: SC3-1-2-text
+name: Lang attribute matches text
+test_mode: semi-automatic
+
+criteria:
+- meaning-other-lang-id: 3.1.2 Language of Parts (Level AA)
+
+authors:
+- https://github.com/...: Annika Nietzio
+---
 
 ## Description
 
@@ -14,9 +26,9 @@ This test checks that changes in human language are marked up correctly in the w
 ## Assumptions
 
 - The comparison of language-code does not look for exact matches. Technique H57 states: "Use of the primary code is important for this technique." which means that region subtags can be ignored in the comparison, i.e. "en-GB" is the same as "en".
-- This test applies only to visible text, i.e. the text of `alt` or `title`-attributes is not checked. `alt`-attributes are covered by [[1.1.1 Non-text Content]].
+- This test applies only to visible text, i.e. the text of `alt` or `title`-attributes is not checked. `alt` attributes are covered by 1.1.1 Non-text Content.
 - Single words in another language do not have to be marked as language changes.
-- This test assumes that the language of the web content has been specified in the `lang` attribute of the element (see also [[SC3-1-2-lang]]). The `xml:lang` attribute is not taken into account because tests have shown, that `xml:lang` is ignored by screenreaders.
+- This test assumes that the language of the web content has been specified in the `lang` attribute of the element (see also [SC3-1-2-lang](SC3-1-2-lang.md)). The `xml:lang` attribute is not taken into account because tests have shown, that `xml:lang` is ignored by screenreaders.
 
 ## Test properties
 
@@ -37,31 +49,31 @@ Select consecutive run of text to which a single language attribute applies.<br/
 
 L1 = language of the selected text as determined by [HTML 4.01 Inheritance of language codes](http://www.w3.org/TR/1999/REC-html401-19991224/struct/dirlang.html#h-8.1.2).
 
-*Note: This test is applied to natural language text. The test is not applicable to content of `<script>`-elements, attribute values, and text contained in HTML comments.*
+*Note: This test is applied to natural language text. The test is not applicable to content of `script` elements, attribute values, and text contained in HTML comments.*
 
 ### Step 1
 
 Test mode: [automatic][AUTO]
 
-Use a [[language identification algorithm]] to determine L2 = the language actually used in the selected text.
+Use a [language identification algorithm][LANGFND] to determine L2 = the language actually used in the selected text.
 
-If L2 can not be determined by the algorithm.<br/>
+If L2 can not be determined by the algorithm.
 
-Continue with [[#Step 2|Step 2]].
+Continue with [Step 2](#step-2).
 
 If L2 is equal to L1, return
 
 | Outcome  | Passed
 |----------|-----
-| Testcase | SC312-text
-| ID       | SC312-text-pass1
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-pass1
 
 Else return
 
 | Outcome  | Failed
 |----------|-----
-| Testcase | SC312-text
-| ID       | SC312-text-fail1
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-fail1
 | Error    | The language of the text is not specified correctly.
 | Info     | L1, L2
 
@@ -69,7 +81,7 @@ Else return
 
 Test mode: [manual][MANUAL]
 
-Present the selected text to the user.<br/>
+Present the selected text to the user.
 
 Question: Is L1 the *only* language used in this text?
 
@@ -81,17 +93,18 @@ If yes, return
 
 | Outcome  | Passed
 |----------|-----
-| Testcase | SC312-text
-| ID       | SC312-text-pass2
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-pass2
 
 Else return
 
 | Outcome  | Failed
 |----------|-----
-| Testcase | SC312-text
-| ID       | SC312-text-fail2
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-fail2
 | Error    | The language of the text is not specified correctly.
 | Info     | L1, L2
 
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual
+[LNGFND]: ../pages/algorithms/lang-identification.html

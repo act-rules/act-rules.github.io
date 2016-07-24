@@ -118,4 +118,4 @@ else, return
 [AUTO]: ../pages/test-modes.html#automatic
 [SEMAUT]: ../pages/test-modes.html#semiauto
 [MANUAL]: ../pages/test-modes.html#manual
-[TXTALT]: ../pages/TXTALT.html
+[TXTALT]: ../pages/algorithms/text-alternative-compute.html

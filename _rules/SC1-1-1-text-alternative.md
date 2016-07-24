@@ -34,7 +34,7 @@ This test checks that non-text elements conveying information are providing suff
 
 ## Assumptions
 
-- The techniques used for providing a textual alternative are accessibility supported. For more information read  [Accessibility Support][pages/acc-support].
+- The techniques used for providing a textual alternative are accessibility supported. For more information read  [Accessibility Support][ACCSUP].
 - All elements are contained in the mark-up code in the examined web page snapshot. [F20: Failure of Success Criterion 1.1.1 and 4.1.2 due to not updating text alternatives when changes to non-text content occur](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F20) is not tested.
 - Groups of images consist of `img` elements that are adjacent to each other and not wrapped in containers.
 - The smallest readable font can be displayed on a matrix with a height of 5 and a width of 3. Smaller elements are considered decorative automatically.
@@ -291,7 +291,7 @@ else return
 ### Step 13: check text alternative validity (F30 and F39)
 Test mode: [automatic][AUTO]
 
-Use the [Validate Text Alternative][algorithms/valid-alt] algorithm to check if the textual alternative value is [non-empty](../definitions/non-empty.md), as defined (contain 2 or more characters that are not white spaaaaaace characters or punctionmarks), not a filename, an URL or a placeholder text.
+Use the [Validate Text Alternative][ALT_OK] algorithm to check if the textual alternative value is [non-empty](../definitions/non-empty.md), as defined (contain 2 or more characters that are not white spaaaaaace characters or punctionmarks), not a filename, an URL or a placeholder text.
 
 if valid, continue with [Step 14: check dimensions (valid text alternative) (F38)](#step-14-check-dimensions-valid-text-alternative-f38)
 
@@ -418,6 +418,8 @@ else return
 
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual
-[pages/acc-support]: ../pages/accessibility-support.html
-[TXTALT]: ../pages/TXTALT.html
-[algorithms/valid-alt]: ../pages/algorithms/validate-text-alt.html
+[ACCSUP]: ../pages/accessibility-support.html
+[TXTALT]: ../pages/algorithms/text-alternative-compute.html
+[ALT_OK]: ../pages/algorithms/validate-text-alt.html
+
+Text Alternative Computation

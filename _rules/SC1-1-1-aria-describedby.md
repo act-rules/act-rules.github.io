@@ -124,4 +124,4 @@ else return
 
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual
-[TXTALT]: ../pages/TXTALT.html
+[TXTALT]: ../pages/algorithms/text-alternative-compute.html

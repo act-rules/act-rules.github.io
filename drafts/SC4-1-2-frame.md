@@ -26,12 +26,12 @@ This test case checks that frames and iframes have a none-empty title attribute
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test mode: [automatic]
 
 Select any frame or iframe element.
 
 ### Step 1
-Test method: [automatic]
+Test mode: [automatic]
 
 If the selected element does not have a title attribute, or a title with only [[non-empty]] text, return:
 
@@ -43,7 +43,7 @@ If the selected element does not have a title attribute, or a title with only [[
 
 
 ### Step 2
-Test method: [manual]
+Test mode: [manual]
 
 Present the iframe to the user, alongside the following question.<br/>
 frame_title = The value of the title attribute of the frame <br/>

@@ -27,12 +27,12 @@ This test checks the existence of associated labels at every form control that t
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test mode: [automatic]
 
 Select every input element, except for elements of the type hidden, button, image and submit, as well as any select and textarea elements
 
 ### Step 1
-Test method: [automatic]
+Test mode: [automatic]
 
 - IF the current element has a [[non-empty]] label element associated to its id by a for attribute:
   - Return SC412-user-input-pass;

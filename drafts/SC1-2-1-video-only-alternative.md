@@ -34,12 +34,12 @@ This procedure describes those situations
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test mode: [automatic]
 
 <VIDEO> not containing a TRACK attribute
 
 ### Step 1
-Test method: [manual]
+Test mode: [manual]
 
 - Check if the main content contains text (hl: this could be an extra, automatic, step)
 - IF the main content doesn't have text.
@@ -63,7 +63,7 @@ hl: is this - in theory - not possible using aria-labelledby or zria-describedby
 | Info     | F75: media presents more information than is presented on the page
 
 ### Step 2
-Test method: [manual]
+Test mode: [manual]
 
 - Listen to the audio
 - IF the audio is describing video-only content
@@ -76,7 +76,7 @@ QUESTION: how can we automatic determine video-only content if audio is added?
 | Testcase | SC122-video-only-added-audio
 
 ### Step 3
-Test method: [automatic]
+Test mode: [automatic]
 
 First check if the video doesn't contain text at all.
 - Check if any of the video frames (may use samples nth seconds) includes text
@@ -89,7 +89,7 @@ First check if the video doesn't contain text at all.
 | Error    | no caption provided with the video
 
 ### Step 4
-Test method: [automatic]
+Test mode: [automatic]
 
 - FOR EACH spoken audio fragment
   - FOR EACH of the corresponding video frames
@@ -106,7 +106,7 @@ Probably more forgiving: 80% of spoken audio fragments should include text?
 | Error    | Not all dialogs are covered in the captions
 
 ### Step 5
-Test method: [manual]
+Test mode: [manual]
 
 - FOR EACH spoken audio fragment
   - IF the content of the spoken text has NOT the same meaning as the caption text
@@ -118,7 +118,7 @@ Test method: [manual]
 | Error    | The text of the captions doesn't correspond to the spoken text
 
 ### Step 6
-Test method: [automatic]
+Test mode: [automatic]
 
 From this step we will check if non spoken visual information captured, captions are more than subtitles.
 
@@ -135,7 +135,7 @@ Check to see is a speaker is presented in a fixed frame with unchanging backgrou
 NOTE: not sure if we should add this step, but if this step can be done fully automatic with frame scanning, we can skip additional manual steps.
 
 ### Step 7
-Test method: [manual]
+Test mode: [manual]
 
 Check for each sound if it is important and has descriptive text
 
@@ -146,7 +146,7 @@ Check for each sound if it is important and has descriptive text
 | Pointer  | video-id and timecode
 
 ### Step 8
-Test method: [manual]
+Test mode: [manual]
 
 Check for each background fragment if it is important and the corresponding frame has a captioned text
 
@@ -157,7 +157,7 @@ Check for each background fragment if it is important and the corresponding fram
 | Pointer  | videoid and timecode
 
 ### Step 9
-Test method: [manual]
+Test mode: [manual]
 
 Check for each speaker fragment if its frame has a captioned identification
 
@@ -167,7 +167,7 @@ Check for each speaker fragment if its frame has a captioned identification
 | Error    | Speaker not identified in the captions
 
 ### Step 10
-Test method: [manual]
+Test mode: [manual]
 
 Check for each emotion if it is important and the corresponding frame has a descriptive text
 

@@ -34,7 +34,7 @@ No assumptions yet
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test mode: [automatic]
 
 Select:
 
@@ -48,7 +48,7 @@ Select:
 |text = What are other elements that are wrongly used as heading?
 }}
 ### Step 1: check element type
-Test method: [semi-automatic]
+Test mode: [semi-automatic]
 
 - Check if the element is of type `h1,h2,h3,h4,h5,h6` continue with [[#Step 2: heading content is non-empty (H42)]]
 - Check if the element has attribute role="heading" continue with [[#Step 4: Examine element with role="heading" (ARIA12)]]
@@ -56,7 +56,7 @@ Test method: [semi-automatic]
 
 
 ### Step 2: heading content is non-empty (H42)
-Test method: [automatic]
+Test mode: [automatic]
 
 Check if the content of h1,h2,h3,h4,h5,h6 is [[Non-empty]].
 
@@ -71,7 +71,7 @@ else return
 | Error    | The heading element must have content.
 
 ### Step 3: heading markup is used when content is a heading (H42)
-Test method: [manual]
+Test mode: [manual]
 
 **User Input Question:**
 
@@ -105,7 +105,7 @@ else, return
 |text = shall we fail 1.3.1 when h1 contains a wrong element e.g. table? or it is only a failure of 4.1.1 as it is an invalid code. Maybe this case this test should return a cann't tell and a failure for 4.1.1.
 }}
 ### Step 4: Examine element with role="heading" (ARIA12)
-Test method: [manual]
+Test mode: [manual]
 
 **User Input Question:**
 
@@ -135,7 +135,7 @@ else return
 | Info     |
 
 ### Step 5: using changes in text presentation to convey information (F2)
-Test method: [manual]
+Test mode: [manual]
 
 **User Input Question:**
 

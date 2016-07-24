@@ -36,13 +36,13 @@ This test checks the sufficient provision of a long text description for non-tex
 
 ### Selector
 
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 `//img[@longdesc]`
 
 ### Step 1
 
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 Check if the `longdesc` attribute value is a valid URL
 
@@ -58,12 +58,11 @@ else, return
 
 ### Step 2
 
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 Check if the resource referenced in the `longdesc` attribute value exists
 
-if yes,
-continue with [step 3][#step-3]
+if yes, continue with [step 3][#step-3]
 
 else, return
 
@@ -76,7 +75,7 @@ else, return
 
 ### Step 3
 
-Test method: [automatic][earl:manual]
+Test mode: [automatic][earl:manual]
 
 Concatenate the results of [Text Alternative Computation][algorithms/text-alt] Algorithm run on the element and assign it to variable T1.
 

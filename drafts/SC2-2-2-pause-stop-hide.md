@@ -40,12 +40,12 @@ This test assumes that the moving, blinking, scrolling, or auto-updating content
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test mode: [automatic]
 
 The entire web page.
 
 ### Step 1 (F47)
-Test method: [automatic]
+Test mode: [automatic]
 
 Check in the code for the presence of the `<blink>` element.
 
@@ -60,7 +60,7 @@ If true:
 Else, continue with [[#Step 2 (F4)]]
 
 ### Step 2 (F4)
-Test method: [automatic]
+Test mode: [automatic]
 
 Check in the code if the `text-decoration:blink` property is set.
 
@@ -75,7 +75,7 @@ If true:
 Else, continue with [[#Step 3]]
 
 ### Step 3
-Test method: [automatic]
+Test mode: [automatic]
 
 Check if there is no moving or scrolling content or blinking content longer than 5 seconds.
 
@@ -99,7 +99,7 @@ Else:
 | ID       | SC2-2-2-pause-stop-hide-pass1
 
 ### Step 4
-Test method: [manual]
+Test mode: [manual]
 
 Check if there is a mechanism to pause or stop the moving, scrolling or blinking content.
 

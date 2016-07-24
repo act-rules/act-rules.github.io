@@ -33,12 +33,12 @@ List of [[Introduction_to_auto-wcag_test_design#All_assumptions|all assumptions]
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test mode: [automatic]
 
 Select elements using the following selector: `map[name] area`, if the `name` attribute of the `map` element is referred to by a `usemap` attribute of an `img` element in the same document.
 
 ### Step 1: Check for non-empty `alt` attributes (H24)
-Test method: [automatic]
+Test mode: [automatic]
 
 Check if the `area` element has an `alt` attribute that contains [[non-empty]] text.
 
@@ -53,7 +53,7 @@ else return
 | Error    | The `area` element must have an `alt` attribute that is not empty.
 
 ### Step 2: Check for uniqueness of the `alt` attribute value
-Test method: [automatic]
+Test mode: [automatic]
 
 For each set of `area` elements enclosed by a `map` element:
 - Make an array of the `alt` attribute values in the `area` elements;
@@ -64,7 +64,7 @@ if duplicate values exist, continue with [[#Step 3: Check duplicate alt attribut
 else continue with [[#Step 4: Does the text of the link describe its purpose? (H24, G91)]]
 
 ### Step 3: Check duplicate `alt` attribute values for identical `href`s
-Test method: [automatic]
+Test mode: [automatic]
 
 For each duplicate `alt` attribute value in the same set of `area` elements, make an array of the `href` attribute values in the `area` elements;
 
@@ -79,7 +79,7 @@ else return
 | Error    | `area` elements have identical link texts, but point to different URLs
 
 ### Step 4: Does the text of the link describe its purpose? (H24, G91)
-Test method: [manual]
+Test mode: [manual]
 
 **User Input Question:**
 

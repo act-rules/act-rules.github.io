@@ -30,7 +30,7 @@ This test checks that changes in human language are marked up correctly in the w
 ## Test procedure
 
 ### Selector
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 Select consecutive run of text to which a single language attribute applies.<br/>
 L1 = language of the selected text as determined by [HTML 4.01 Inheritance of language codes](http://www.w3.org/TR/1999/REC-html401-19991224/struct/dirlang.html#h-8.1.2).
@@ -38,7 +38,7 @@ L1 = language of the selected text as determined by [HTML 4.01 Inheritance of la
 *Note: This test is applied to natural language text. The test is not applicable to content of `<script>`-elements, attribute values, and text contained in HTML comments.*
 
 ### Step 1
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 Use a [[language identification algorithm]] to determine L2 = the language actually used in the selected text.
 
@@ -62,7 +62,7 @@ Else return
 | Info     | L1, L2
 
 ### Step 2
-Test method: [automatic][earl:manual]
+Test mode: [automatic][earl:manual]
 
 Present the selected text to the user.<br/>
 Question: Is L1 the *only* language used in this text?

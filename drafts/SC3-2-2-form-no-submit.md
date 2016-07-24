@@ -31,11 +31,11 @@ This test checks forms that initiate a change of context without submit button.
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test mode: [automatic]
 Select `form` element without submit button (input[@type='submit'] or input[@type='image'] or button[@type='submit']).
 
 ### Step 1
-Test method: [automatic]
+Test mode: [automatic]
 
 Does the form contain only one form control from the following list:
 - one group of radio buttons (input[@type='radio'][@name=name])
@@ -54,7 +54,7 @@ If no, return
 If yes, continue with [[#Step 2]].
 
 ### Step 2
-Test method: [manual]
+Test mode: [manual]
 
 **User Input Question:**
 

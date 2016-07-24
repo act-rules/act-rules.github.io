@@ -27,12 +27,12 @@ This test checks if meta element is not used for delayed redirecting or refreshi
 ## Test procedure
 
 ### Selector
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 Select each element matching: `meta[http-equiv="refresh"][content]`
 
 ### Step 1
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 Take the value of the content attribute of the selected element.
 

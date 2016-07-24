@@ -25,12 +25,12 @@ This test checks whether or not fieldset elements have been used above a certain
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test mode: [automatic]
 
 Select any form element.
 
 ### Step 1
-Test method: [automatic]
+Test mode: [automatic]
 
 - Create an empty “amount” integer;
 - Fill “amount” with: the amount of input elements in the selected form element. (elements: input[@type='text'], input[@type='password'], input[@type='file'], select, textarea);

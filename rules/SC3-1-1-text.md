@@ -34,11 +34,11 @@ This test does not prescribe which of these definitions to use as long as one of
 ## Test procedure
 
 ### Selector
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 L1 = value of `lang` attribute.
 
 ### Step 1
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 Select a continuous run of text from one or more consecutive `p`-elements. If no `p`-elements exist, select any text from the body of the web page. The text should be at least 300 characters in length and not contain any language changes, i.e. lang-attributes on the element or its parent. If no such text is found, continue with [[#Step 2|Step 2]].
 
 Use a [[language identification algorithm]] to check if L1 is the language of the selected text.
@@ -53,7 +53,7 @@ If yes, return
 Else continue with [[#Step 2|Step 2]].
 
 ### Step 2
-Test method: [automatic][earl:manual]
+Test mode: [automatic][earl:manual]
 
 Present the page to the user.<br/>
 Question: Is L1 the primary language of this page?

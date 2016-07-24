@@ -35,7 +35,7 @@ This test checks that for prerecorded audio-only content an alternative version 
 ## Test procedure
 
 ### Selector
-Test method: [manual]
+Test mode: [manual]
 
 All pages including elements capable of playing audio.
 
@@ -46,7 +46,7 @@ Those can be identified by including
 - elements having an attribute value containing a media file format, such as .wav, .aif, .aiff, .mp3, .ogg, .oga, .mov, .mid, .rm, .ra, .ram, .wma, .asf, .swf, .dcr, .avi, .mpg, .mpeg, .mp4, .m4v, .webm, .flv, .isma   (`//*[contains(@*,'.mid') or contains(@*,'.mp3') or ... ]`)
 
 ### Step 1
-Test method: [manual]
+Test mode: [manual]
 
 Check that the audio-only content is prerecorded.
 
@@ -70,7 +70,7 @@ else return:
 | ID       | SC1-2-1-audio-only-alternative-inapplicable1
 
 ### Step 2
-Test method: [manual]
+Test mode: [manual]
 
 Check that the prerecorded audio-only content is not purely decorative and has relevant information for the context of the web page.
 
@@ -94,7 +94,7 @@ If yes, return:
 else continue with [[#Step 3]]
 
 ### Step 3
-Test method: [manual]
+Test mode: [manual]
 
 Check that there is an alternative version available for the prerecorded audio-only content.
 

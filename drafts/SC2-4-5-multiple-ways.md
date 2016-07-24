@@ -37,11 +37,11 @@ This test checks that there are at least two of the following elements available
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test mode: [automatic]
 The entire web page.
 
 ### Step 1 (G125)
-Test method: [manual]
+Test mode: [manual]
 Check if the web page provides links to navigate to related web pages.
 
 **User Input Question:**
@@ -61,7 +61,7 @@ If true: variable ‘multiple-ways’ value + 1.
 Continue to [[#Step 2 (G161)]].
 
 ### Step 2 (G161)
-Test method: [manual]
+Test mode: [manual]
 
 Check if the web page provides a search form or a link to the search page.
 
@@ -87,7 +87,7 @@ If variable ‘multiple-ways’ has a value of 2 or more, return:
 Else continue to [[#Step 3 (G63)]].
 
 ### Step 3 (G63)
-Test method: [manual]
+Test mode: [manual]
 
 Check if the web page provides a link to the site map.
 
@@ -106,7 +106,7 @@ If true: continue to [[#Step 4 (G63)]].
 Else continue to [[#Step 5 (G126)]].
 
 ### Step 4 (G63)
-Test method: [manual]
+Test mode: [manual]
 
 Check if the site map is a valid site map.
 
@@ -132,7 +132,7 @@ If variable ‘multiple-ways’ has a value of 2 or more, return:
 Else continue to [[#Step 5 (G126)]].
 
 ### Step 5 (G126)
-Test method: [manual]
+Test mode: [manual]
 
 Check if the web page provides a list of links to all other web pages.
 

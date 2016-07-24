@@ -26,13 +26,13 @@ This test checks to see if all radio buttons and check boxes with the same name 
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test mode: [automatic]
 
 Select any radio buttons and check boxes. The following CSS selector could be used:
 `input[type=radio], input[type=checkbox]
 
 ### Step 1
-Test method: [automatic]
+Test mode: [automatic]
 
 - IF there is no list 'checkednames':
   - Create an empty list 'checkednames';

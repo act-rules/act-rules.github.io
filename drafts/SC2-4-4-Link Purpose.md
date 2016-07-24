@@ -36,12 +36,12 @@ Back to [[2.4.4 Link Purpose (In Context)]]
 
 ## Test procedure
 ### Selector
-Test method: [automatic]
+Test mode: [automatic]
 - All anchor tags with an "href" attribute on a webpage, excluding anchor tags that have been mapped to other elements using ARIA roles.
 - All elements with a `role="link"` attribute.
 
 ### Step 1 - Check for Accessible Name
-Test method: [automatic]
+Test mode: [automatic]
 
 - For each link, use the accessible name algorithm to derive the link's accessible name: see [HTML to Platform Accessibility APIs Implementation Guide](http://www.w3.org/TR/html-aapi/#a-element) - section 6.10
 # If link has an aria-labelledby attribute, the link's accessible name is the value of its associated element.
@@ -61,7 +61,7 @@ return
 else go to [[Step 2]]
 
 ### Step 2 - Check for Uniqueness.
-Test method: [semi-automatic]
+Test mode: [semi-automatic]
 
 Compare the calculated accessible names (see step 1) of all links on the page.
 
@@ -76,7 +76,7 @@ Return
 else go to [[Step 3]]
 
 ### Step 3 - Check Link Targets
-Test method: [semi-automatic]
+Test mode: [semi-automatic]
 
 The following data structure is necessary for the remaining steps in this test:
 
@@ -105,7 +105,7 @@ If all links in a group item go to same destination, return
 else go to [[Step 4]]
 
 ### Step 4 - Add Accessible Description
-Test method: [semi-automatic]
+Test mode: [semi-automatic]
 For each link in a group of links with identical accessible name:
 Compute the link´s accessible description (see html to platform guide, section 6.10 as referenced above).
 - Look for an aria-describedby attribute on a link. If present add the text of the target note to the link's accessible description node.
@@ -123,7 +123,7 @@ Return
 else go to [[Step 5]]
 
 ### Step 5 - Calculate Context
-Test method: [semi-automatic]
+Test mode: [semi-automatic]
 
 Explore links together with their [programmatically determined link context](http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html#pdlinkcontextdef)
 
@@ -146,7 +146,7 @@ If all links in a group item, considered together with their computed accessible
 else go to [[Step 6]]
 
 ### Step 6 - Links are ambiguous to All Users
-Test method: [manual]
+Test mode: [manual]
 
 (links may be ambiguous to users in general, need interactive testing).
 

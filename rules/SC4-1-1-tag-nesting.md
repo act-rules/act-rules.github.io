@@ -24,18 +24,18 @@ This test checks that tags of an HTML or XHTML document are nested correctly. So
 ## Test procedure
 
 ### Selector
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 Select all opening and closing tags in the HTML document
 
 ### Step 1: Verify opening tag attributes=
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 - IF the tag is a closing tag:
   - GO TO step 4
 
 ### Step 2: Check unclosed opening tags=
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 - Locate the closing tag that corresponds to the current tag
 - IF there was no closing tag
@@ -66,7 +66,7 @@ Test method: [automatic][earl:automatic]
 | ID       | SC4-1-1-tag-nesting-pass1
 
 ### Step 3: Check that tags are closed in the right place=
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 - Make a list childTags of tags that follow the current tag, until it's closing tag
 - IF childTags has an opening tag for each closing tag in the list:

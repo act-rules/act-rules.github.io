@@ -26,7 +26,7 @@ This test checks that all elements that receive focus are visible in the viewpor
 ## Test procedure
 
 ### Selector
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 Each element that matches one of the following CSS selectors
 - `a[href]:not([tabindex=-1])`,
@@ -37,7 +37,7 @@ Each element that matches one of the following CSS selectors
 - `*[tabindex]:not([tabindex=-1])`
 
 ### Step 1
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 Give focus to the selected element.
 

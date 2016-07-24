@@ -30,12 +30,12 @@ This test checks that the page title (`<title` element in the head section of a 
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test mode: [automatic]
 
 `<head>`
 
 ### Step 1
-Test method: [automatic]
+Test mode: [automatic]
 
 Check that there is a `<title>` element in the `<head>` section of the html document.
 
@@ -50,7 +50,7 @@ if no, return
 if yes, continue with [[step 2]]
 
 ### Step 2
-Test method: [automatic]
+Test mode: [automatic]
 
 Check for multiple title elements in head section of page.
 
@@ -65,7 +65,7 @@ if yes, return
 if no, continue with [[step 3]]
 
 ### Step 3
-Test method: [automatic]
+Test mode: [automatic]
 
 Check if the title is a filename or a URL (for file name, check for patterns ending with a . and a known file extension).
 
@@ -80,7 +80,7 @@ if yes, return
 if no, continue with [[step 4]]
 
 ### Step 4
-Test method: [manual]
+Test mode: [manual]
 
 Prompt user to look at the title and content of the page.
 

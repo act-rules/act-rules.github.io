@@ -31,26 +31,26 @@ http://www.bitvtest.de/infothek/artikel/lesen/talking-head-captions.html
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test mode: [automatic]
 
 <VIDEO> containing a TRACK attribute
 
 ### Step 1
-Test method: [automatic]
+Test mode: [automatic]
 
 Track element contains 'kind'-attribute with value 'captions'
 
 If the step returns true, go to step 3 with the value of 'src'
 
 ### Step 2
-Test method: [automatic]
+Test mode: [automatic]
 
 Track element contains 'kind'- attribute with value 'subtitles'
 
 NOTE: success criterion doesn't take into account language changes. So it is valid to have spoken text in language 1, subtitles in language 2 and page content in language 3. We prefer captions as they include non-spoken text as well
 
 ### Step 3
-Test method: [automatic]
+Test mode: [automatic]
 
 src contains file
 
@@ -60,7 +60,7 @@ src contains file
 | Error    | no caption file provided with the video
 
 ### Step 4
-Test method: [automatic]
+Test mode: [automatic]
 
 File content contains time codes and text
 
@@ -70,7 +70,7 @@ File content contains time codes and text
 | Error    | empty caption file provided with the video
 
 ### Step 5
-Test method: [automatic]
+Test mode: [automatic]
 
 file contains valid time and text combinations
 
@@ -80,7 +80,7 @@ file contains valid time and text combinations
 | Error    | no valid caption data provided with the video
 
 ### Step 6
-Test method: [automatic]
+Test mode: [automatic]
 
 For each spoken audio fragment a timecode and text exists
 
@@ -90,7 +90,7 @@ For each spoken audio fragment a timecode and text exists
 | Error    | Not all dialogs are covered in the captions
 
 ### Step 7
-Test method: [automatic]
+Test mode: [automatic]
 
 For each spoken audio fragment the content of the spoken text has the same meaning as the caption text
 
@@ -100,7 +100,7 @@ For each spoken audio fragment the content of the spoken text has the same meani
 | Error    | The text of the captions doesn't correspond to the spoken text
 
 ### Step 8
-Test method: [automatic]
+Test mode: [automatic]
 
 Check to see is a speaker is presented in a fixed frame with unchanging background ('talking head' video).
 For each frame check if the image is similar to the other frames.
@@ -112,7 +112,7 @@ For each frame check if the image is similar to the other frames.
 NOTE: not sure if we should add this step, but if this step can be done fully automatic with frame scanning, we can skip additional manual steps.
 
 ### Step 9
-Test method: [manual]
+Test mode: [manual]
 
 Check for each sound if it is important and has a timecode and descriptive text
 
@@ -123,7 +123,7 @@ Check for each sound if it is important and has a timecode and descriptive text
 | Pointer  | video-id and timecode
 
 ### Step 10
-Test method: [manual]
+Test mode: [manual]
 
 Check for each background fragment if it is important and has a captioned text
 
@@ -134,7 +134,7 @@ Check for each background fragment if it is important and has a captioned text
 | Pointer  | videoid and timecode
 
 ### Step 11
-Test method: [manual]
+Test mode: [manual]
 
 Check for each speaker fragment if it has a captioned identification
 
@@ -144,7 +144,7 @@ Check for each speaker fragment if it has a captioned identification
 | Error    | Speaker not identified in the captions
 
 ### Step 12
-Test method: [manual]
+Test mode: [manual]
 
 Check for each emotion if it is important and has a captioned text
 

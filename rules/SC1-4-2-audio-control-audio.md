@@ -32,12 +32,12 @@ This test checks that there isn't an automatically started sound after the web p
 ## Test procedure
 
 ### Selector
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 `//*[self::audio or self::video]`
 
 ### Step 1
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 Check if the <audio> or <video> is paused. Check `paused` property.
 
@@ -51,7 +51,7 @@ If true, return:
 Else continue with [step 2][#step-2]
 
 ### Step 2
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 Check if the sound is muted. Check `muted` property.
 
@@ -65,7 +65,7 @@ If true, return:
 Else continue with [step 3][#step-3]
 
 ### Step 3
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 Check that the sound is no longer than 3 seconds.
 
@@ -76,7 +76,7 @@ If true, continue with [step 4][#step-4]
 Else continue with [[#Step 5]]
 
 ### Step 4
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 Check if the sound has a loop. Check `loop` property.
 
@@ -90,7 +90,7 @@ Else, return:
 | ID       | SC1-4-2-audio-control-pass3
 
 ### Step 5
-Test method: [automatic][earl:manual]
+Test mode: [automatic][earl:manual]
 
 Check if the video plays audio.
 
@@ -114,7 +114,7 @@ Else, return:
 | ID       | SC1-4-2-audio-control-pass4
 
 ### Step 6
-Test method: [automatic][earl:manual]
+Test mode: [automatic][earl:manual]
 
 Check if a mechanism to control the sound is provided as one of the first five links or buttons on the web page.
 

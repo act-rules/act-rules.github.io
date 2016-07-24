@@ -34,7 +34,7 @@ This test checks if the order of navigational components and repeated links with
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test mode: [automatic]
 
 Select the following elements:
 - elements with `role="navigation"`
@@ -45,7 +45,7 @@ Select the following elements:
 N1 = list of all selected elements.
 
 ### Step 1
-Test method: [automatic]
+Test mode: [automatic]
 
 If there are [[internal links]] on the current page (P1)
 
@@ -59,7 +59,7 @@ else return
 | ID       | SC3-2-3-Navigational-links-across-pages-inapplicable1
 
 ### Step 2
-Test method: [semi-automatic]
+Test mode: [semi-automatic]
 
 Download all the pages determined by the list constructed in [[#Step 1]] (P2 .. Pn).
 Apply the [[#Selector]] of this test case to the pages, selecting lists N2 ... Nn for P2 ... Pn.
@@ -74,7 +74,7 @@ If all lists N2 ... Nn are empty, return
 Else continue with [[#Step 3]].
 
 ### Step 3
-Test method: [semi-automatic]
+Test mode: [semi-automatic]
 
 The elements on list Nj are identified by the element type and the id of the element or the id of the first ancestor with an id. If there is no ancestor with id, the id is left empty.
 
@@ -91,7 +91,7 @@ If N1 does not have the same relative order as N2 ... Nn, return
 else continue with [[#Step 4]]
 
 ### Step 4
-Test method: [semi-automatic]
+Test mode: [semi-automatic]
 
 Lj = list of link texts of all the navigational links in Nj.
 

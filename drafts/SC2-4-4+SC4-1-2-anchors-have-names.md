@@ -29,12 +29,12 @@ This test assumes that all image elements have alt attributes (see [[SC1-1-1-img
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test mode: [automatic]
 
 Select the following elements: ` a[href]`.
 
 ### Step 1
-Test method: [automatic]
+Test mode: [automatic]
 
 If the link contains [[rendered text]] that is [[non-empty]], return:
 
@@ -47,7 +47,7 @@ If the link contains [[rendered text]] that is [[non-empty]], return:
 Else continue to [[#Step 2]]
 
 ### Step 2
-Test method: [automatic]
+Test mode: [automatic]
 
 Concatenate the link's `title` and `aria-label` attribute, and the [[text content]] of an element referred to with the `aria-labeledby` attribute, in variable T1.
 
@@ -64,7 +64,7 @@ Else continue to [[#Step 3]]
 Open question: Is the title ignored with aria-label
 
 ### Step 3
-Test method: [automatic]
+Test mode: [automatic]
 
 Take all `img` elements from the selected element (if any), that do not have `[role=presentation]` and are not hidden through `display:none` or `visibility:hidden`.
 

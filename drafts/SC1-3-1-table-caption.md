@@ -31,11 +31,11 @@ No assumptions yet
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test mode: [automatic]
 Tables that have both summary and caption elements.
 
 ### Step 1
-Test method: [automatic]
+Test mode: [automatic]
 
 Check if the summary duplicates the caption.
 

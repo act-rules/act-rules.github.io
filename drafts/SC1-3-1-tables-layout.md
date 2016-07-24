@@ -45,7 +45,7 @@ According to WCAG this includes:
 ## Test procedure
  
 ### Selector
-Test method: [automatic]
+Test mode: [automatic]
 
 Select all tables on the page marked as presentational (using role="presentation" on the table element.
 
@@ -56,7 +56,7 @@ In addition, select tables with all of the following characteristics (see condit
 - No (or empty) summary attribute
 
 ### Step 1 - Check if actual data tables have wrongly been marked as presentational using ARIA
-Test method: [automatic]
+Test mode: [automatic]
 
 for each table with role="presentation".
 
@@ -77,7 +77,7 @@ If yes,
 else, continue with [[#Step 2]]
 
 ### step 2
-Test method: [automatic]
+Test mode: [automatic]
 
 Check if any `<td>` cell has a headers attribute or a scope attribute.
 
@@ -92,7 +92,7 @@ If yes,
 else, continue with [[#Step 3]]
 
 ### step 3
-Test method: [manual]
+Test mode: [manual]
 
 For each remaining table that matches the selector, ask user to confirm that the table is not a data table.
 

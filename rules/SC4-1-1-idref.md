@@ -26,12 +26,12 @@ This test checks that each element referred to from an idref attribute exists.
 ## Test procedure
 
 ### Selector
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 Select each label element with a for attribute and each element with a aria-activedescendant attribute. The CSS selector "label[for], *[aria-activedescendant]" can be used.
 
 ### Step 1
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 - Take the attribute with the IDREF (for=""/aria-activedescendant) value as IdrefAttr
 - Trim the IdrefAttr of whitespace characters

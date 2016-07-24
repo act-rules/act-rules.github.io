@@ -31,11 +31,11 @@ This test checks that forms with submit button initiate a change of context only
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test mode: [automatic]
 Select form element with submit button (input[@type='submit'] or input[@type='image'] or button[@type='submit']).
 
 ### Step 1
-Test method: [manual]
+Test mode: [manual]
 
 **User Input Question:**
 
@@ -57,7 +57,7 @@ if no, return
 else continue with [[#Step 2]]
 
 ### Step 2
-Test method: [manual]
+Test mode: [manual]
 
 **User Input Question:**
 

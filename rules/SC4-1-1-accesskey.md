@@ -26,12 +26,12 @@ This test checks accesskey attribute for all elements to have a unique value.
 ## Test procedure
 
 ### Selector
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 Select any element with an accesskey attribute. The following CSS selector could be used: *[accesskey]
 
 ### Step 1
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 - IF there is no list called 'knownAccesskeys':
   -  Create an empty list 'knownAccesskeys;

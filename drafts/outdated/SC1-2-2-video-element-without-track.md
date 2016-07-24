@@ -33,7 +33,7 @@ This test checks that for prerecorded video-only content an alternative text or 
 ## Test procedure
 
 ### Selector
-Test method: [manual]
+Test mode: [manual]
 All pages including elements capable of playing video.
 
 Those can be identified by including elements having an attribute value containing a media file format, such as  .mov, .rm, .ram, .asf, .swf, .dcr, .avi, .mpg, .mpeg, .mp4, .m4v, .webm, .flv, .isma
@@ -46,7 +46,7 @@ e.g. animated `<canvas>`: [[http://randomibis.com/coolclock This clock]]
 or `<svg>`: [[http://codecanyon.net/item/animatrix-creative-drawing-svg-animations-plugin/full_screen_preview/10853599?ref=jqueryrain&ref=jqueryrain&clickthrough_id=466882247&redirect_back=true This animation]]
 
 ### Step 1
-Test method: [manual]
+Test mode: [manual]
 
 Check that the content is video-only.
 
@@ -70,7 +70,7 @@ else return:
 | ID       | SC1-2-1-video-only-alternative-inapplicable1
 
 ### Step 2
-Test method: [manual]
+Test mode: [manual]
 
 Check that the video-only content is prerecorded.
 
@@ -94,7 +94,7 @@ else return:
 | ID       | SC1-2-1-video-only-alternative-inapplicable2
 
 ### Step 3
-Test method: [manual]
+Test mode: [manual]
 
 Check that the prerecorded video-only content is not purely decorative and has relevant information for the context of the web page.
 
@@ -118,7 +118,7 @@ If yes, return:
 else continue with [[#Step 4]]
 
 ### Step 4
-Test method: [manual]
+Test mode: [manual]
 
 Check that there is an alternative version available for the prerecorded video-only content.
 
@@ -143,7 +143,7 @@ else return:
 | Error    | Missing alternative version.
 
 ### Step 5
-Test method: [manual]
+Test mode: [manual]
 
 Check that the alternative version has the same information presented as the video-only content.
 

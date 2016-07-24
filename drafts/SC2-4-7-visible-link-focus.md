@@ -30,12 +30,12 @@ This test checks that if links receive focus their style is changed in such a wa
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test mode: [automatic]
 
 Select each visible anchor element on the page which does not have a negative tabindex attribute set
 
 ### Step 1: Outline visibility
-Test method: [automatic]
+Test mode: [automatic]
 
 Set OUTLINE_NO_FOCUS to be the CSS outline of the selected element.
 

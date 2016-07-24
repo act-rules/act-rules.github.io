@@ -31,11 +31,11 @@ This test checks form controls outside form elements.
 ## Test procedure
 
 ### Selector
-Test method: [automatic]
+Test mode: [automatic]
 Select input[@type='radio'], input[@type='checkbox'], or select not contained in a form element.
 
 ### Step 1
-Test method: [automatic]
+Test mode: [automatic]
 
 Does the form control have a non-empty event-handler attribute?
 
@@ -49,7 +49,7 @@ If no, return
 If yes, continue with [[#Step 2]].
 
 ### Step 2
-Test method: [manual]
+Test mode: [manual]
 
 **User Input Question:**
 

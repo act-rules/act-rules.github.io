@@ -27,13 +27,13 @@ This test checks the value of the `xml:lang` attribute.
 ## Test procedure
 
 ### Selector
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 Select `<html>` element with `xml:lang` attribute.
 
 `html[@xml:lang]`
 
 ### Step 1
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 Check that the `<html>` element contains also a `lang` attribute.
 
@@ -46,7 +46,7 @@ If no `lang` is specified, return
 | Error    | No lang attribute found. Only xml:lang.
 
 ### Step 2
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 L1 = value of `xml:lang`<br/>
 L2 = value of `lang`

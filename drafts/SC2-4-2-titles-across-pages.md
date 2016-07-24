@@ -36,11 +36,11 @@ All pages tested should be on the same website (with same domain). Page titles o
 ## Test procedure
  
 ### Selector
-Test method: [semi-automatic]
+Test mode: [semi-automatic]
 Extract `<title>` element from the `<head>` section of all pages in the collection. To create a page collection, follow all links from the page currently being tested, include all pages on same domain. Exclude all pages with no title elements or multiple title elements (they are covered in a different test).
  
 ### Step 1
-Test method: [semi-automatic]
+Test mode: [semi-automatic]
 
 If more than one page is returned, and all pages in the set have identical titles.
 
@@ -55,7 +55,7 @@ return
 Else, continue with [[Step 2]]
 
 ### Step 2
-Test method: [manual]
+Test mode: [manual]
 
 Create a list of pages with identical page titles where each list item consists of the page title and a ntested list of all URLs where that title is used.
 

@@ -38,7 +38,7 @@ This test checks the sufficient provision of a long text description for element
 
 ### Selector
 
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 Select following elements providing an `aria-describedby` attribute:
 
@@ -68,7 +68,7 @@ else, return
 
 ### Step 2
 
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 Check if at least one of the elements referenced by the valid `aria-describedby` attribute values exists.
 
@@ -84,7 +84,7 @@ else, return
 
 ### Step 3
 
-Test method: [manual][earl:manual]
+Test mode: [manual][earl:manual]
 
 Concatenate the results of [Text Alternative Computation][algorithms/text-alt] Algorithm run on the element itself and assign it to variable T1 and on all elements referenced by the `aria-describedby` attribute and assign it to variable T2.
 

@@ -30,7 +30,7 @@ This test checks that images do not convey information when added to the page us
 ## Test procedure
 
 ### Selector
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 Single element, which background property contains one or more URIs
 - `object.style.background.match(url)`
@@ -40,7 +40,7 @@ Single element, which background property contains one or more URIs
 *Note that the computed style has to be analyzed. Depending on the rendering technology these can be retrieved by using `runtimeStyle`, `currentStyle` or `getComputedStyle`.*
 
 ### Step 1
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 Check if the computed `backgroundRepeat` property is set and its value is other than no-repeat.
 
@@ -54,7 +54,7 @@ if yes, return
 else, continue with [step 2](#step-2)
 
 ### Step 2
-Test method: [automatic][earl:automatic]
+Test mode: [automatic][earl:automatic]
 
 Check if the height of all images added by the background-property is less or equals 5 pixels or its width is less or equals 3 pixels.
 
@@ -68,7 +68,7 @@ if yes, return
 else, continue with [step 3](#step-3)
 
 ### Step 3
-Test method: [automatic][earl:manual]
+Test mode: [automatic][earl:manual]
 Check if the element is really used for solely decorative purposes.
 
 To prepare the element for presentation to the user, all calculated CSS properties of the element must be stored and its child elements must be removed.
@@ -92,7 +92,7 @@ if yes, return
 else continue with [step 4](#step-4)
 
 ### Step 4
-Test method: [automatic][earl:manual]
+Test mode: [automatic][earl:manual]
 
 Get the current elements nearest ancestor with its display style set to block.
 Get any text from this ancestor, including shadow dom text and assign it to variable T1.

@@ -17,8 +17,8 @@ To learn about Auto-WCAG itself visit the auto-wcag Community Group website at [
   <tr>
     <th><a href="{{ rule.url }}">{{
       rule.name
-    }}<br>(<i>{{ rule.rule-id }}</i>)</a></th>
-    <td>{{ rule.test-mode }}</td>
+    }}<br>(<i>{{ rule.rule_id }}</i>)</a></th>
+    <td>{{ rule.test_mode }}</td>
     <td><ul>
       {% for criterion in rule.criteria %}
         <li>{% for critSpec in criterion %}

@@ -1,8 +1,8 @@
 ---
 # [Rule Metadata](../pages/metadata.md)
-rule-id: SC1-1-1-text-alternative
+rule_id: SC1-1-1-text-alternative
 name: Provision of short text alternative
-test-mode: semi-automatic
+test_mode: semi-automatic
 
 criteria:
 - text-equiv-all: 1.1.1 Non-text Content (level A)

@@ -1,8 +1,8 @@
 ---
 # [Rule Metadata](../pages/metadata.md)
-rule-id: SC1-1-1-aria-describedby
+rule_id: SC1-1-1-aria-describedby
 name: Proper use of aria-describedby
-test-mode: semi-automatic
+test_mode: semi-automatic
 
 criteria:
 - text-equiv-all: 1.1.1 Non-text Content (level A)

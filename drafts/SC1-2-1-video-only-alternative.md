@@ -34,13 +34,13 @@ This procedure describes those situations
 
 ### Selector
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 <VIDEO> not containing a TRACK attribute
 
 ### Step 1
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 - Check if the main content contains text (hl: this could be an extra, automatic, step)
 - IF the main content doesn't have text.
@@ -66,7 +66,7 @@ hl: is this - in theory - not possible using aria-labelledby or zria-describedby
 
 ### Step 2
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 - Listen to the audio
 - IF the audio is describing video-only content
@@ -80,7 +80,7 @@ QUESTION: how can we automatic determine video-only content if audio is added?
 
 ### Step 3
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 First check if the video doesn't contain text at all.
 
@@ -95,7 +95,8 @@ First check if the video doesn't contain text at all.
 
 ### Step 4
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
+
 - FOR EACH spoken audio fragment
   - FOR EACH of the corresponding video frames
     - IF the corresponding video frame contains text
@@ -112,7 +113,7 @@ Probably more forgiving: 80% of spoken audio fragments should include text?
 
 ### Step 5
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 - FOR EACH spoken audio fragment
   - IF the content of the spoken text has NOT the same meaning as the caption text
@@ -125,7 +126,7 @@ Test mode: [manual]
 
 ### Step 6
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 From this step we will check if non spoken visual information captured, captions are more than subtitles.
 
@@ -143,7 +144,7 @@ NOTE: not sure if we should add this step, but if this step can be done fully au
 
 ### Step 7
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 Check for each sound if it is important and has descriptive text
 
@@ -155,7 +156,7 @@ Check for each sound if it is important and has descriptive text
 
 ### Step 8
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 Check for each background fragment if it is important and the corresponding frame has a captioned text
 
@@ -167,7 +168,7 @@ Check for each background fragment if it is important and the corresponding fram
 
 ### Step 9
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 Check for each speaker fragment if its frame has a captioned identification
 
@@ -178,7 +179,7 @@ Check for each speaker fragment if its frame has a captioned identification
 
 ### Step 10
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 Check for each emotion if it is important and the corresponding frame has a descriptive text
 
@@ -190,3 +191,6 @@ Check for each emotion if it is important and the corresponding frame has a desc
 | Outcome  | Passed
 |----------|-----
 | Testcase | SC 1.2.2 video
+
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

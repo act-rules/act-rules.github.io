@@ -29,17 +29,17 @@ This test checks that the page title (`<title` element in the head section of a 
 
 ### Selector
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 `<head>`
 
 ### Step 1
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 Check that there is a `<title>` element in the `<head>` section of the html document.
 
-if no, return
+If no, return
 
 | Outcome  | Failed
 |----------|-----
@@ -47,11 +47,11 @@ if no, return
 | ID       | SC2-4-2-title-fail1
 | Error    | Missing title element
 
-if yes, continue with [[step 2]]
+Else, continue with [[step 2]]
 
 ### Step 2
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 Check for multiple title elements in head section of page.
 
@@ -63,11 +63,11 @@ if yes, return
 | ID       | SC2-4-2-title-fail2
 | Error    | multiple title elements in head section.
 
-if no, continue with [[step 3]]
+Else, continue with [[step 3]]
 
 ### Step 3
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 Check if the title is a filename or a URL (for file name, check for patterns ending with a . and a known file extension).
 
@@ -83,7 +83,7 @@ if no, continue with [[step 4]]
 
 ### Step 4
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 Prompt user to look at the title and content of the page.
 
@@ -113,3 +113,6 @@ if yes, return
 |----------|-----
 | Testcase | SC2-4-2-title
 | ID       | SC2-4-2-title-pass1
+
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

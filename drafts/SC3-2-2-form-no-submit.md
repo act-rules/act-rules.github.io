@@ -30,13 +30,13 @@ This test checks forms that initiate a change of context without submit button.
 
 ### Selector
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 Select `form` element without submit button (input[@type='submit'] or input[@type='image'] or button[@type='submit']).
 
 ### Step 1
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 Does the form contain only one form control from the following list:
 
@@ -58,7 +58,7 @@ If yes, continue with [[#Step 2]].
 
 ### Step 2
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 **User Input Question:**
 
@@ -84,3 +84,6 @@ Else, return
 |----------|-----
 | Testcase | SC3-2-2-form-no-submit
 | ID       | SC3-2-2-form-no-submit-pass1
+
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

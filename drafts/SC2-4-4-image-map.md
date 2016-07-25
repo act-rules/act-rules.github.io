@@ -32,13 +32,13 @@ List of [[Introduction_to_auto-wcag_test_design#All_assumptions|all assumptions]
 
 ### Selector
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 Select elements using the following selector: `map[name] area`, if the `name` attribute of the `map` element is referred to by a `usemap` attribute of an `img` element in the same document.
 
 ### Step 1: Check for non-empty `alt` attributes (H24)
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 Check if the `area` element has an `alt` attribute that contains [[non-empty]] text.
 
@@ -54,7 +54,7 @@ else return
 
 ### Step 2: Check for uniqueness of the `alt` attribute value
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 For each set of `area` elements enclosed by a `map` element:
 
@@ -67,7 +67,7 @@ else continue with [[#Step 4: Does the text of the link describe its purpose? (H
 
 ### Step 3: Check duplicate `alt` attribute values for identical `href`s
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 For each duplicate `alt` attribute value in the same set of `area` elements, make an array of the `href` attribute values in the `area` elements;
 
@@ -83,7 +83,7 @@ else return
 
 ### Step 4: Does the text of the link describe its purpose? (H24, G91)
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 **User Input Question:**
 
@@ -111,3 +111,6 @@ else return
 | Testcase | SC2-4-4-image-map
 | ID       | SC2-4-4-image-map-failed3
 | Error    | the text alternative specified by the `alt` attribute does not serve the same purpose as the part of the image map image referenced by the area element of the imagemap.
+
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

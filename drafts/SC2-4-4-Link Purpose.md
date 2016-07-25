@@ -36,14 +36,14 @@ Back to [[2.4.4 Link Purpose (In Context)]]
 
 ### Selector
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 - All anchor tags with an "href" attribute on a webpage, excluding anchor tags that have been mapped to other elements using ARIA roles.
 - All elements with a `role="link"` attribute.
 
 ### Step 1 - Check for Accessible Name
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 For each link, use the accessible name algorithm to derive the link's accessible name: see [HTML to Platform Accessibility APIs Implementation Guide](http://www.w3.org/TR/html-aapi/#a-element) - section 6.10
 
@@ -68,7 +68,7 @@ else go to [[Step 2]]
 
 ### Step 2 - Check for Uniqueness.
 
-Test mode: [semi-automatic]
+Test mode: [automatic][AUTO]
 
 Compare the calculated accessible names (see step 1) of all links on the page.
 
@@ -83,7 +83,7 @@ else go to [[Step 3]]
 
 ### Step 3 - Check Link Targets
 
-Test mode: [semi-automatic]
+Test mode: [automatic][AUTO]
 
 The following data structure is necessary for the remaining steps in this test:
 
@@ -113,7 +113,7 @@ else go to [[Step 4]]
 
 ### Step 4 - Add Accessible Description
 
-Test mode: [semi-automatic]
+Test mode: [automatic][AUTO]
 
 For each link in a group of links with identical accessible name:
 
@@ -135,7 +135,7 @@ else go to [[Step 5]]
 
 ### Step 5 - Calculate Context
 
-Test mode: [semi-automatic]
+Test mode: [automatic][AUTO]
 
 Explore links together with their [programmatically determined link context](http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html#pdlinkcontextdef)
 
@@ -159,7 +159,7 @@ else go to [[Step 6]]
 
 ### Step 6 - Links are ambiguous to All Users
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 (links may be ambiguous to users in general, need interactive testing).
 For all remaining links in a given group item, present them to human testers.
@@ -190,3 +190,6 @@ else (link text meant to be ambiguous to all users), return
 |----------|-----
 | Testcase | SC2-4-4-link-text
 | ID       | SC2-4-4-link-text-pass5
+
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

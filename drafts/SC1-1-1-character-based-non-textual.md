@@ -35,3 +35,6 @@ All text nodes with exception of those contained in `script` and `style` element
 //*[not(self::script or self::style)]/text()
 
 ### Step 1
+
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

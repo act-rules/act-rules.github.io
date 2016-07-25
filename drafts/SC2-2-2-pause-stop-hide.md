@@ -39,13 +39,13 @@ moving, blinking, scrolling, or auto-updating content is not part of an activity
 
 ### Selector
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 The entire web page.
 
 ### Step 1 (F47)
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 Check in the code for the presence of the `<blink>` element.
 
@@ -61,9 +61,9 @@ Else, continue with [[#Step 2 (F4)]]
 
 ### Step 2 (F4)
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
-Check in the code if the `text-decoration:blink` property is set.
+Check in the code if the `text-decoration: blink` property is set.
 
 If true:
 
@@ -77,7 +77,7 @@ Else, continue with [[#Step 3]]
 
 ### Step 3
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 Check if there is no moving or scrolling content or blinking content longer than 5 seconds.
 
@@ -102,7 +102,7 @@ Else:
 
 ### Step 4
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 Check if there is a mechanism to pause or stop the moving, scrolling or blinking content.
 
@@ -130,3 +130,6 @@ Else:
 | Testcase | SC2-2-2-pause-stop-hide
 | ID       | SC2-2-2-pause-stop-hide-fail3
 | Error    | No mechanism available to pause or stop the moving, scrolling or blinking content.
+
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

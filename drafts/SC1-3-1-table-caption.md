@@ -30,13 +30,13 @@ No assumptions yet
 
 ### Selector
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 Tables that have both summary and caption elements.
 
 ### Step 1
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 Check if the summary duplicates the caption.
 
@@ -54,3 +54,6 @@ else return
 |----------|-----
 | Testcase | SC1-3-1-table-caption
 | ID       | SC1-3-1-table-caption-passed1
+
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

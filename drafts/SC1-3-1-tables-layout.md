@@ -44,7 +44,7 @@ Tables that have no tabular mark-up are interpreted by assistive technologies as
  
 ### Selector
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 Select all tables on the page marked as presentational (using role="presentation" on the table element.
 
@@ -56,7 +56,7 @@ In addition, select tables with all of the following characteristics (see condit
 
 ### Step 1 - Check if actual data tables have wrongly been marked as presentational using ARIA
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 for each table with role="presentation".
 Check if table contains
@@ -77,7 +77,7 @@ else, continue with [[#Step 2]]
 
 ### step 2
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 Check if any `<td>` cell has a headers attribute or a scope attribute.
 
@@ -93,7 +93,7 @@ else, continue with [[#Step 3]]
 
 ### step 3
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 For each remaining table that matches the selector, ask user to confirm that the table is not a data table.
 
@@ -121,3 +121,6 @@ else
 |----------|-----
 | Testcase | SC1-3-1-tables-layout
 | ID       | SC1-3-1-tables-layout-pass1
+
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

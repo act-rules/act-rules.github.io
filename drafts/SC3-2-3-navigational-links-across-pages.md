@@ -23,17 +23,17 @@ This test checks if the order of navigational components and repeated links with
 
 | Property          | Value
 |-------------------|----
-| Success Criterion |[[3.2.3 Consistent Navigation]]
-| Test name         |Presentation of navigational components
-| Test mode         |Automatic
-| Test environment  |HTML source or DOM
+| Success Criterion | [[3.2.3 Consistent Navigation]]
+| Test name         | Presentation of navigational components
+| Test mode         | Automatic
+| Test environment  | HTML source or DOM
 | Test subject      | Multiple web pages
 
 ## Test procedure
 
 ### Selector
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 Select the following elements:
 
@@ -46,7 +46,7 @@ N1 = list of all selected elements.
 
 ### Step 1
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 If there are [[internal links]] on the current page (P1)
 
@@ -61,7 +61,7 @@ else return
 
 ### Step 2
 
-Test mode: [semi-automatic]
+Test mode: [automatic][AUTO]
 
 Download all the pages determined by the list constructed in [[#Step 1]] (P2 .. Pn).
 
@@ -78,7 +78,7 @@ Else continue with [[#Step 3]].
 
 ### Step 3
 
-Test mode: [semi-automatic]
+Test mode: [automatic][AUTO]
 
 The elements on list Nj are identified by the element type and the id of the element or the id of the first ancestor with an id. If there is no ancestor with id, the id is left empty.
 
@@ -96,7 +96,7 @@ else continue with [[#Step 4]]
 
 ### Step 4
 
-Test mode: [semi-automatic]
+Test mode: [automatic][AUTO]
 
 Lj = list of link texts of all the navigational links in Nj.
 
@@ -119,3 +119,6 @@ else, return
 |----------|-----
 | Testcase | SC3-2-3-Navigational-links-across-pages
 | ID       | SC3-2-3-Navigational-links-across-pages-pass1
+
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

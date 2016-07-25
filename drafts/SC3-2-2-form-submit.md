@@ -29,13 +29,13 @@ This test checks that forms with submit button initiate a change of context only
 
 ### Selector
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 Select form element with submit button (input[@type='submit'] or input[@type='image'] or button[@type='submit']).
 
 ### Step 1
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 **User Input Question:**
 
@@ -58,7 +58,7 @@ else continue with [[#Step 2]]
 
 ### Step 2
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 **User Input Question:**
 
@@ -84,3 +84,6 @@ Else, return
 |----------|-----
 | Testcase | SC3-2-2-form-submit
 | ID       | SC3-2-2-form-no-submit-pass2
+
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

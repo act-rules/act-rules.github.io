@@ -31,13 +31,13 @@ http://www.bitvtest.de/infothek/artikel/lesen/talking-head-captions.html
 
 ### Selector
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 <VIDEO> containing a TRACK attribute
 
 ### Step 1
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 Track element contains 'kind'-attribute with value 'captions'
 
@@ -45,7 +45,7 @@ If the step returns true, go to step 3 with the value of 'src'
 
 ### Step 2
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 Track element contains 'kind'- attribute with value 'subtitles'
 
@@ -53,7 +53,7 @@ NOTE: success criterion doesn't take into account language changes. So it is val
 
 ### Step 3
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 src contains file
 
@@ -64,7 +64,7 @@ src contains file
 
 ### Step 4
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 File content contains time codes and text
 
@@ -75,7 +75,7 @@ File content contains time codes and text
 
 ### Step 5
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 file contains valid time and text combinations
 
 | Outcome  | Failed
@@ -85,7 +85,7 @@ file contains valid time and text combinations
 
 ### Step 6
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 For each spoken audio fragment a timecode and text exists
 
@@ -96,7 +96,7 @@ For each spoken audio fragment a timecode and text exists
 
 ### Step 7
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 For each spoken audio fragment the content of the spoken text has the same meaning as the caption text
 
@@ -107,7 +107,7 @@ For each spoken audio fragment the content of the spoken text has the same meani
 
 ### Step 8
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 Check to see is a speaker is presented in a fixed frame with unchanging background ('talking head' video).
 
@@ -121,7 +121,7 @@ NOTE: not sure if we should add this step, but if this step can be done fully au
 
 ### Step 9
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 Check for each sound if it is important and has a timecode and descriptive text
 
@@ -133,7 +133,7 @@ Check for each sound if it is important and has a timecode and descriptive text
 
 ### Step 10
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 Check for each background fragment if it is important and has a captioned text
 
@@ -145,7 +145,7 @@ Check for each background fragment if it is important and has a captioned text
 
 ### Step 11
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 Check for each speaker fragment if it has a captioned identification
 
@@ -156,7 +156,7 @@ Check for each speaker fragment if it has a captioned identification
 
 ### Step 12
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 Check for each emotion if it is important and has a captioned text
 
@@ -168,3 +168,6 @@ Check for each emotion if it is important and has a captioned text
 | Outcome  | Passed
 |----------|-----
 | Testcase | SC 1.2.2 video
+
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

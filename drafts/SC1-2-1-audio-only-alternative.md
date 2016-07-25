@@ -34,7 +34,7 @@ This test checks that for prerecorded audio-only content an alternative version 
 
 ### Selector
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 All pages including elements capable of playing audio.
 
@@ -46,7 +46,7 @@ Those can be identified by including
 
 ### Step 1
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 Check that the audio-only content is prerecorded.
 
@@ -71,7 +71,7 @@ else return:
 
 ### Step 2
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 Check that the prerecorded audio-only content is not purely decorative and has relevant information for the context of the web page.
 
@@ -96,7 +96,7 @@ else continue with [[#Step 3]]
 
 ### Step 3
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 Check that there is an alternative version available for the prerecorded audio-only content.
 
@@ -124,3 +124,6 @@ else return:
 | Testcase | SC1-2-1-audio-only-alternative
 | ID       | SC1-2-1-audio-only-alternative-fail1
 | Error    | Missing or insufficient alternative version.
+
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

@@ -26,7 +26,7 @@ This test checks to see if all radio buttons and check boxes with the same name 
 
 ### Selector
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 Select any radio buttons and check boxes. The following CSS selector could be used:
 
@@ -36,7 +36,7 @@ input[type=radio], input[type=checkbox]
 
 ### Step 1
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 - IF there is no list 'checkednames':
   - Create an empty list 'checkednames';
@@ -77,3 +77,6 @@ Test mode: [automatic]
 | Error    | failed to group elements in fieldsets correctly
 | Info     | two radiobutton or checkbox input elements within the same fieldset don't share the same name.
 | ID       |  SC131-radiocheck-fail2
+
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

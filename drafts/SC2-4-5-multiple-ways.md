@@ -27,23 +27,23 @@ This test checks that there are at least two of the following elements available
 
 | Property          | Value
 |-------------------|----
-| Test name         |Multiple ways
-| Test requirement  |[[2.4.5 Multiple Ways]]
-| Test mode         |manual
-| Test environment  |rendered page
-| Test subject      |multiple web pages
+| Test name         | Multiple ways
+| Test requirement  | [[2.4.5 Multiple Ways]]
+| Test mode         | manual
+| Test environment  | rendered page
+| Test subject      | multiple web pages
 
 ## Test procedure
 
 ### Selector
 
-Test mode: [automatic]
+Test mode: [automatic][AUTO]
 
 The entire web page.
 
 ### Step 1 (G125)
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 Check if the web page provides links to navigate to related web pages.
 
@@ -64,7 +64,7 @@ Continue to [[#Step 2 (G161)]].
 
 ### Step 2 (G161)
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 Check if the web page provides a search form or a link to the search page.
 
@@ -91,7 +91,7 @@ Else continue to [[#Step 3 (G63)]].
 
 ### Step 3 (G63)
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 Check if the web page provides a link to the site map.
 
@@ -111,7 +111,7 @@ Else continue to [[#Step 5 (G126)]].
 
 ### Step 4 (G63)
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 Check if the site map is a valid site map.
 
@@ -138,7 +138,7 @@ Else continue to [[#Step 5 (G126)]].
 
 ### Step 5 (G126)
 
-Test mode: [manual]
+Test mode: [manual][MANUAL]
 
 Check if the web page provides a list of links to all other web pages.
 
@@ -169,3 +169,6 @@ Else return:
 | ID       | SC2-4-5-multiple-ways-failed1
 | Error    | Not enough ways to access the web page.
 | Info     |
+
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

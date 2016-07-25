@@ -1,7 +1,5 @@
 # SC1-3-1-table-caption 
 
-This test belongs to [[1.3.1 Info and Relationships]].
-
 ## Description
 
 This test checks if a table with caption does not contain a summary with the same text.
@@ -20,7 +18,7 @@ No assumptions yet
 
 | Property          | Value
 |-------------------|----
-| Success Criterion | [[1.3.1 Info and Relationships]]
+| Success Criterion | 1.3.1 Info and Relationships
 | Test name         |
 | Test mode         | Automatic
 | Test environment  | DOM
@@ -32,7 +30,7 @@ No assumptions yet
 
 Test mode: [automatic][AUTO]
 
-Tables that have both summary and caption elements.
+`table` Elements that have both a `summary` attribute and a `caption` element.
 
 ### Step 1
 

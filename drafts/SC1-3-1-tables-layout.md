@@ -1,7 +1,5 @@
 # SC1-3-1-tables-layout
 
-This test case belongs to [[1.3.1 Info and Relationships]]
-
 ## Description
 
 This test checks that tables used for layout purposes do not contain tabular data or markup.
@@ -20,10 +18,10 @@ This test checks that tables used for layout purposes do not contain tabular dat
 
 Tables that have no tabular mark-up are interpreted by assistive technologies as layout tables. According to WCAG this includes:
 
-- No header cells: that is <pre><th></pre> cels, or <pre><td></pre> cells with ARIA roles rowheader and columnheader.
-- No <pre><caption></pre> element.
-- No (or empty) summary attribute.
-- No scope or header attributes on table cells.
+- No header cells: that is `th` elements, or `td` with ARIA roles rowheader and columnheader.
+- No `caption` element.
+- No (or empty) `summary` attribute.
+- No `scope` or `headers` attributes on table cells.
 - Tables with single column or row, or tables with less than two rows containing two valid data cells are automatically marked as layout tables by assistive technologies. A cell is considered valid
   - if its size can be obtained and is between 200 and 16000 pixels, or
   - if its size can't be obtained and it contains text (Cells only containing graphics are not considered valid).
@@ -33,7 +31,7 @@ Tables that have no tabular mark-up are interpreted by assistive technologies as
 | Property          | Value
 |-------------------|----
 | Test name         | Tables Layout
-| Success Criterion | [[1.3.1 Info and Relationships]]
+| Success Criterion | 1.3.1 Info and Relationships
 | Test mode         | SemiAuto
 | Test environment  | rendered page
 | Test subject      | Entire web page
@@ -50,8 +48,8 @@ Select all tables on the page marked as presentational (using role="presentation
 
 In addition, select tables with all of the following characteristics (see conditions for layout tables listed above):
 
-- Tables with no designated header cells (<pre><th></pre> cells or <pre><td></pre> cells with ARIA roles rowheader and columnheader.
-- No <pre><caption></pre> tag
+- Tables with no designated header cells (`th` elements or `td>` elements with ARIA roles rowheader and columnheader.
+- No `caption` tag
 - No (or empty) summary attribute
 
 ### Step 1 - Check if actual data tables have wrongly been marked as presentational using ARIA
@@ -59,9 +57,10 @@ In addition, select tables with all of the following characteristics (see condit
 Test mode: [automatic][AUTO]
 
 for each table with role="presentation".
+
 Check if table contains
 
-- header cels
+- header cells
 - a caption element or or summary attribute
 - a cell with a scope or headers attribute
 
@@ -73,13 +72,13 @@ If yes,
 | ID       | SC1-3-1-tables-layout-fail1
 | Error    |  A datatable is marked as presentational for assistive technologies.
 
-else, continue with [[#Step 2]]
+else, continue with [Step 2](#step-2)
 
 ### step 2
 
 Test mode: [automatic][AUTO]
 
-Check if any `<td>` cell has a headers attribute or a scope attribute.
+Check if any `td` element has a `headers` attribute or a `scope` attribute.
 
 If yes,
 
@@ -89,7 +88,7 @@ If yes,
 | ID       | SC1-3-1-tables-layout-fail2
 | Error    | Layout tables cannot associate a cell with other cels.
 
-else, continue with [[#Step 3]]
+else, continue with [Step 3](#step-3)
 
 ### step 3
 

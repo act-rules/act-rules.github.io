@@ -1,7 +1,5 @@
 # SC2-4-2-title
 
-Back to [[2.4.2 Page Titled]]
-
 ## Description
 
 This test checks that the page title (`<title` element in the head section of a webpage) a. exists, and b. identifies the role or content of the web page.
@@ -20,7 +18,7 @@ This test checks that the page title (`<title` element in the head section of a 
 | Property          | Value
 |-------------------|----
 | Test name         | Page Title
-| Test requirement  | [[2.4.2 Page Titled]]
+| Test requirement  | 2.4.2 Page Titled
 | Test mode         | semiAuto
 | Test environment  | HTML source or DOM
 | Test subject      | single web page
@@ -31,13 +29,13 @@ This test checks that the page title (`<title` element in the head section of a 
 
 Test mode: [automatic][AUTO]
 
-`<head>`
+Select the `head` element
 
 ### Step 1
 
 Test mode: [automatic][AUTO]
 
-Check that there is a `<title>` element in the `<head>` section of the html document.
+Check that there is a `title` element in the html document.
 
 If no, return
 
@@ -47,7 +45,7 @@ If no, return
 | ID       | SC2-4-2-title-fail1
 | Error    | Missing title element
 
-Else, continue with [[step 2]]
+Else, continue with [Step 2](#step-2)
 
 ### Step 2
 
@@ -63,7 +61,7 @@ if yes, return
 | ID       | SC2-4-2-title-fail2
 | Error    | multiple title elements in head section.
 
-Else, continue with [[step 3]]
+Else, continue with [step 3](#step-3)
 
 ### Step 3
 
@@ -79,7 +77,7 @@ if yes, return
 | ID       | SC2-4-2-title-fail3
 | Error    | filename or URL used as title
 
-if no, continue with [[step 4]]
+if no, continue with [step 4](#step-4)
 
 ### Step 4
 

@@ -1,7 +1,5 @@
 # SC3-2-2-form-submit
 
-This test belongs to [[3.2.2 On Input]].
-
 ## Description
 
 This test checks that forms with submit button initiate a change of context only when submit is used. Any other behavior must be explained to the user at the beginning of the form.
@@ -19,7 +17,7 @@ This test checks that forms with submit button initiate a change of context only
 
 | Property          | Value
 |-------------------|----
-| Success Criterion | [[3.2.2 On Input]]
+| Success Criterion | 3.2.2 On Input
 | Test mode         | SemiAuto
 | Test environment  | DOM (+ server connection ???)
 | Test subject      | Single web page
@@ -31,7 +29,7 @@ This test checks that forms with submit button initiate a change of context only
 
 Test mode: [automatic][AUTO]
 
-Select form element with submit button (input[@type='submit'] or input[@type='image'] or button[@type='submit']).
+Select form element with submit button (`input[@type='submit'] or input[@type='image'] or button[@type='submit']`).
 
 ### Step 1
 
@@ -54,7 +52,7 @@ if no, return
 | Testcase | SC3-2-2-form-submit
 | ID       | SC3-2-2-form-submit-pass1
 
-else continue with [[#Step 2]]
+else continue with [Step 2](#step-2)
 
 ### Step 2
 

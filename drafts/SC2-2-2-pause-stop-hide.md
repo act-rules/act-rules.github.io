@@ -1,7 +1,5 @@
 # SC2-2-2-pause-stop-hide
 
-Back to Success Criterion [[2.2.2 Pause, Stop, Hide]]
-
 ## Description
 
 This test checks that moving, blinking, scrolling, or auto-updating information doesn’t distract users during their interaction with a web page.
@@ -29,7 +27,7 @@ moving, blinking, scrolling, or auto-updating content is not part of an activity
 | Property          | Value
 |-------------------|----
 | Test name         | Pause, stop, hide
-| Test requirement  | [[2.2.2 Pause, Stop, Hide]]
+| Test requirement  | 2.2.2 Pause, Stop, Hide
 | Test mode         | SemiAuto
 | Test environment  | rendered page
 | Test subject      | Single web page
@@ -47,7 +45,7 @@ The entire web page.
 
 Test mode: [automatic][AUTO]
 
-Check in the code for the presence of the `<blink>` element.
+Check in the code for the presence of the `blink` element.
 
 If true:
 
@@ -57,7 +55,7 @@ If true:
 | ID       | SC2-2-2-pause-stop-hide-fail1
 | Error    | Blink element is not allowed.
 
-Else, continue with [[#Step 2 (F4)]]
+Else, continue with [Step 2 (F4)](#step-2-f4)
 
 ### Step 2 (F4)
 
@@ -73,7 +71,7 @@ If true:
 | ID       | SC2-2-2-pause-stop-hide-fail2
 | Error    | Text-decoration:blink property is not allowed.
 
-Else, continue with [[#Step 3]]
+Else, continue with [Step 3](#step-3)
 
 ### Step 3
 
@@ -91,7 +89,7 @@ Check if there is no moving or scrolling content or blinking content longer than
 | Question             | Is there on the web page moving or scrolling content or blinking content that lasts more than 5 seconds?
 | Help                 | Examples of moving or scrolling content are a scrolling banner or a news carousel. Examples of blinking content are animated images, GIF and Flash animations.
 
-If yes, continue with [[#Step 4]].
+If yes, continue with [Step 4](#step-4)
 
 Else:
 

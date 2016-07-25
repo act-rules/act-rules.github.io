@@ -32,7 +32,10 @@ This test checks that no non-textual information is conveyed by a sequence chara
 ### Selector
 
 All text nodes with exception of those contained in `script` and `style` elements
+
+```xpath
 //*[not(self::script or self::style)]/text()
+```
 
 ### Step 1
 

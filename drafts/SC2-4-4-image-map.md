@@ -1,7 +1,5 @@
 # SC2-4-4-image-map
 
-Back to [[2.4.4 Link Purpose (In Context)]]
-
 ## Description
 
 This test checks if each `area` element contains an `alt` attribute that is not empty. If two or more `alt` values in the collection of `area` elements are equal, the corresponding `href` value should also be equal.
@@ -14,15 +12,16 @@ This test checks if each `area` element contains an `alt` attribute that is not 
 
 ## Assumptions
 
-- `<area>` elements that are not enclosed by a `<map>` element will not serve any purpose and are therefore excluded from the test
-List of [[Introduction_to_auto-wcag_test_design#All_assumptions|all assumptions]]
+- `area` elements that are not enclosed by a `<map>` element will not serve any purpose and are therefore excluded from the test
+
+List of [all assumptions][ASUMPT].
 
 ## Test properties
 
 | Property          | Value
 |-------------------|----
 | Test name         | Area Element Has Alt Attribute
-| Success Criterion | [[ 2.4.4 Link Purpose (In Context)]]
+| Success Criterion | 2.4.4 Link Purpose (In Context)
 | Test mode         | SemiAuto
 | Test environment  | HTML source and DOM
 | Test subject      | Single web page
@@ -40,9 +39,9 @@ Select elements using the following selector: `map[name] area`, if the `name` at
 
 Test mode: [automatic][AUTO]
 
-Check if the `area` element has an `alt` attribute that contains [[non-empty]] text.
+Check if the `area` element has an `alt` attribute that contains [non-empty text][NEMPTY].
 
-if yes, continue with [[#Step 2: Check for uniqueness of the alt attribute value]]
+if yes, continue with [Step 2][STEP2]
 
 else return
 
@@ -61,9 +60,9 @@ For each set of `area` elements enclosed by a `map` element:
 - Make an array of the `alt` attribute values in the `area` elements;
 - Check for duplicate values.
 
-if duplicate values exist, continue with [[#Step 3: Check duplicate alt attribute values for identical hrefs]]
+if duplicate values exist, continue with [Step 3][STEP_3]
 
-else continue with [[#Step 4: Does the text of the link describe its purpose? (H24, G91)]]
+else continue with [Step 4][STEP_4]
 
 ### Step 3: Check duplicate `alt` attribute values for identical `href`s
 
@@ -71,7 +70,7 @@ Test mode: [automatic][AUTO]
 
 For each duplicate `alt` attribute value in the same set of `area` elements, make an array of the `href` attribute values in the `area` elements;
 
-if the `href` attribute values are identical, continue with [[#Step 4: Does the text of the link describe its purpose? (H24, G91)]]
+if the `href` attribute values are identical, continue with [Step 4][STEP_4]
 
 else return
 
@@ -95,7 +94,7 @@ Test mode: [manual][MANUAL]
 | Question             | Does the text alternative describe the purpose of the highlighted area
 |answer-options = yes/no
 | Help                 | If the area contains text this should be included in the text alternative. The purpose of that area on the image must be described. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
-|repair = If no, could you suggest a sufficient textual alternative?
+|repair                | If no, could you suggest a sufficient textual alternative?
 
 if yes, return
 
@@ -114,3 +113,8 @@ else return
 
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual
+[STEP_2]: #step-2-check-for-uniqueness-of-the-alt-attribute-value
+[STEP_3]: #step-3-check-duplicate-alt-attribute-values-for-identical-href-s
+[STEP_4]: #step-4-does-the-text-of-the-link-describe-its-purpose-h24-g91
+[ASUMPT]: ../pages/assumptions.html
+[NEMPTY]: ../pages/algorihms/none-empty.html

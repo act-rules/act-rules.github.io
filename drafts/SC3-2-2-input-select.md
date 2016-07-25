@@ -1,7 +1,5 @@
 # SC3-2-2-input-select
 
-This test belongs to [[3.2.2 On Input]].
-
 ## Description
 
 This test checks form controls outside form elements.
@@ -20,7 +18,7 @@ This test checks form controls outside form elements.
 
 | Property          | Value
 |-------------------|----
-| Success Criterion | [[3.2.2 On Input]]
+| Success Criterion | 3.2.2 On Input
 | Test mode         | SemiAuto
 | Test environment  | DOM (+ server connection ???)
 | Test subject      | Single web page
@@ -32,7 +30,7 @@ This test checks form controls outside form elements.
 
 Test mode: [automatic][AUTO]
 
-Select input[@type='radio'], input[@type='checkbox'], or select not contained in a form element.
+Select `input[@type='radio']`, `input[@type='checkbox']`, or select not contained in a form element.
 
 ### Step 1
 
@@ -47,7 +45,7 @@ If no, return
 | Testcase | SC3-2-2-input-select
 | ID       | SC3-2-2-input-select-pass1
 
-If yes, continue with [[#Step 2]].
+If yes, continue with [Step 2](#step-2).
 
 ### Step 2
 

@@ -18,7 +18,7 @@ This test checks the existence of associated labels at every form control that t
 
 | Property          | Value
 |-------------------|----
-| Success Criterion | [[4.1.2 Name, Role, Value]]
+| Success Criterion | 4.1.2 Name, Role, Value
 | Test mode         | Automatic
 | Test environment  | DOM
 | Test subject      | Single web page
@@ -35,13 +35,13 @@ Select every input element, except for elements of the type hidden, button, imag
 
 Test mode: [automatic][AUTO]
 
-- IF the current element has a [[non-empty]] label element associated to its id by a for attribute:
+- IF the current element has a [non-empty][NEMPTY] `label` element associated to its id by a `for` attribute:
   - Return SC412-user-input-pass;
-- IF the current element has [[non-empty]] title attribute:
+- IF the current element has [non-empty][NEMPTY] `title` attribute:
   - Return SC412-user-input-pass;
-- IF the current element has a [[non-empty]] aria-label attribute:
+- IF the current element has a [non-empty][NEMPTY] `aria-label` attribute:
   - Return SC412-user-input-pass;
-- IF the current element has a aria-labelledby attribute that refers to an existing [[non-empty]] element:
+- IF the current element has a `aria-labelledby` attribute that refers to an existing [non-empty][NEMPTY] element:
   - Return SC412-user-input-pass;
 - ELSE Return SC412-user-input-fail;
 
@@ -59,3 +59,4 @@ Test mode: [automatic][AUTO]
 
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual
+[NEMPTY]: ../pages/algorihms/none-empty.html

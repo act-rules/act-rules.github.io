@@ -1,6 +1,4 @@
-# SC3-2-3-navigational-links-across-pages 
-
-This test belongs to [[3.2.3 Consistent Navigation]].
+# SC3-2-3-navigational-links-across-pages
 
 ## Description
 
@@ -23,7 +21,7 @@ This test checks if the order of navigational components and repeated links with
 
 | Property          | Value
 |-------------------|----
-| Success Criterion | [[3.2.3 Consistent Navigation]]
+| Success Criterion | 3.2.3 Consistent Navigation
 | Test name         | Presentation of navigational components
 | Test mode         | Automatic
 | Test environment  | HTML source or DOM
@@ -39,7 +37,7 @@ Select the following elements:
 
 - elements with `role="navigation"`
 - `&lt;nav&gt;` elements
-- `&lt;ul&gt;` and `&lt;ol&gt;` elements that contain `&lt;li&gt;` elements with [[internal links]] and the list does not contain any other text, images or user input elements outside of links. Sometimes the active menu item (current page) is a text and not a link. If the list contains one item that is not a link, this list should still be selected.
+- `&lt;ul&gt;` and `&lt;ol&gt;` elements that contain `&lt;li&gt;` elements with [internal links][INTLNK] and the list does not contain any other text, images or user input elements outside of links. Sometimes the active menu item (current page) is a text and not a link. If the list contains one item that is not a link, this list should still be selected.
 - Lists nested within other lists are considered a single list. From them the outermost list element or nav element is selected.
 
 N1 = list of all selected elements.
@@ -48,9 +46,9 @@ N1 = list of all selected elements.
 
 Test mode: [automatic][AUTO]
 
-If there are [[internal links]] on the current page (P1)
+If there are [internal links][INTLNK] on the current page (P1)
 
-Make list of all [[internal links]] and continue with [[#Step 2]]
+Make list of all [internal links][INTLNK] and continue with [Step 2](#step-2)
 
 else return
 
@@ -63,9 +61,9 @@ else return
 
 Test mode: [automatic][AUTO]
 
-Download all the pages determined by the list constructed in [[#Step 1]] (P2 .. Pn).
+Download all the pages determined by the list constructed in Step 1 (P2 .. Pn).
 
-Apply the [[#Selector]] of this test case to the pages, selecting lists N2 ... Nn for P2 ... Pn.
+Apply the [Selector](#selector) of this test case to the pages, selecting lists N2 ... Nn for P2 ... Pn.
 
 If all lists N2 ... Nn are empty, return
 
@@ -74,7 +72,7 @@ If all lists N2 ... Nn are empty, return
 | Testcase | SC3-2-3-Navigational-links-across-pages
 | ID       | SC3-2-3-Navigational-links-across-pages-inapplicable2
 
-Else continue with [[#Step 3]].
+Else continue with [Step 3](#step-3).
 
 ### Step 3
 
@@ -92,7 +90,7 @@ If N1 does not have the same relative order as N2 ... Nn, return
 | ID       | SC3-2-3-Navigational-links-across-pages-fail1
 | Error    | Navigational components of pages are not in the same relative order.
 
-else continue with [[#Step 4]]
+else continue with [Step 4](#step-4)
 
 ### Step 4
 
@@ -122,3 +120,4 @@ else, return
 
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual
+[INTLNK]: ../pages/algoritms/internal-links.html

@@ -1,7 +1,5 @@
 # SC1-2-1-audio-only-alternative
 
-Back to Success Criterion [[1.2.1_Audio-only_and_Video-only_(Prerecorded)]]
-
 ## Description
 
 This test checks that for prerecorded audio-only content an alternative version exists, which is relevant and descriptive for the audio-only content.
@@ -22,13 +20,13 @@ This test checks that for prerecorded audio-only content an alternative version 
 
 | Property          | Value
 |-------------------|----
-| Test name         |Alternate version of prerecorded audio-only
-| Test requirement  |[[1.2.1 Audio-only and Video-only (Prerecorded)]]
-| Test mode         |manual
-| Test environment  |rendered page + server connection
-| Test subject      |single web page
-| User expertise and skills |no prior knowledge
-| User profile      |Requires hearing
+| Test name         | Alternate version of prerecorded audio-only
+| Test requirement  | 1.2.1 Audio-only and Video-only (Prerecorded)
+| Test mode         | manual
+| Test environment  | rendered page + server connection
+| Test subject      | single web page
+| User expertise and skills | no prior knowledge
+| User profile      | Requires hearing
 
 ## Test procedure
 
@@ -40,7 +38,7 @@ All pages including elements capable of playing audio.
 
 Those can be identified by including
 
-- `<audio>` elements
+- `audio` elements
 - elements having resources with a mimetype containing the string "audio" in their http-header
 - elements having an attribute value containing a media file format, such as .wav, .aif, .aiff, .mp3, .ogg, .oga, .mov, .mid, .rm, .ra, .ram, .wma, .asf, .swf, .dcr, .avi, .mpg, .mpeg, .mp4, .m4v, .webm, .flv, .isma   (`//*[contains(@*,'.mid') or contains(@*,'.mp3') or ... ]`)
 
@@ -60,7 +58,7 @@ Check that the audio-only content is prerecorded.
 | Question             | Is the audio-only content prerecorded?
 | Help                 | Usually live content is explicitly marked as such. You can also try to navigate to the end of the media. On live content you will not be able to. If the content is prerecorded, select “Yes”. Else select “No”.
 
-If yes, continue with [[#Step 2]]
+If yes, continue with [Step 2](#step-2)
 
 else return:
 
@@ -92,7 +90,7 @@ If yes, return:
 | Testcase | SC1-2-1-audio-only-alternative
 | ID       | SC1-2-1-audio-only-alternative-pass1
 
-else continue with [[#Step 3]]
+Else continue with [Step 3](#step-3)
 
 ### Step 3
 
@@ -117,7 +115,7 @@ If yes, return:
 | Testcase | SC1-2-1-audio-only-alternative
 | ID       | SC1-2-1-audio-only-alternative-pass2
 
-else return:
+Else return:
 
 | Outcome  | Failed
 |----------|-----

@@ -1,7 +1,5 @@
 # SC2-4-4-Link Purpose
 
-Back to [[2.4.4 Link Purpose (In Context)]]
-
 ## Background
 
 - [programmatically determined link context](http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html#pdlinkcontextdef)
@@ -20,14 +18,14 @@ Back to [[2.4.4 Link Purpose (In Context)]]
 ## Assumptions
 
 - This test checks for actual links, not links whose role has been mapped to other UI elements using ARIA (example role="button").
-- This test does not check for missing alt attribute for `<area>` tags in image maps, that is covered under [[SC2-4-4-image-map]]
+- This test does not check for missing alt attribute for `<area>` tags in image maps, that is covered under [SC2-4-4-image-map](SC2-4-4-image-map.md)
 
 ## Test properties
 
 | Property          | Value
 |-------------------|----
 | Test name         | Link Purpose
-| Success Criterion | [[ 2.4.4 Link Purpose (In Context)]]
+| Success Criterion | 2.4.4 Link Purpose (In Context)
 | Test mode         | SemiAuto
 | Test environment  | HTML source or DOM
 | Test subject      | Single web page
@@ -38,7 +36,7 @@ Back to [[2.4.4 Link Purpose (In Context)]]
 
 Test mode: [automatic][AUTO]
 
-- All anchor tags with an "href" attribute on a webpage, excluding anchor tags that have been mapped to other elements using ARIA roles.
+- All anchor tags with an `href` attribute on a webpage, excluding anchor tags that have been mapped to other elements using ARIA roles.
 - All elements with a `role="link"` attribute.
 
 ### Step 1 - Check for Accessible Name
@@ -47,16 +45,15 @@ Test mode: [automatic][AUTO]
 
 For each link, use the accessible name algorithm to derive the link's accessible name: see [HTML to Platform Accessibility APIs Implementation Guide](http://www.w3.org/TR/html-aapi/#a-element) - section 6.10
 
-If link has an aria-labelledby attribute, the link's accessible name is the value of its associated element.
+If link has an `aria-labelledby` attribute, the link's accessible name is the value of its associated element.
 
-Otherwise check for aria-label. If an aria-label attribute is present, the link's accessible name is the text string value of that attribute.
+Otherwise check for aria-label. If an `aria-label` attribute is present, the link's accessible name is the text string value of that attribute.
 
-Otherwise use the link element subtree (value of the link content, if any). This include alt texts for images.
+Otherwise use the `a` element subtree (value of the link content, if any). This include alt texts for images.
 
 Otherwise use the link's title attribute.
 
-If none of the above yield a usable text string for the link:
-return
+If none of the above yield a usable text string for the link: return
 
 | Outcome  | Failed
 |----------|-----
@@ -64,7 +61,7 @@ return
 | ID       | SC2-4-4-link-text-fail1
 | Error    | No accessible name for link.
 
-else go to [[Step 2]]
+else go to [Step 2]
 
 ### Step 2 - Check for Uniqueness.
 
@@ -79,7 +76,7 @@ If all accessible names are unique, return:
 | Testcase | SC2-4-4-link-text
 | ID       | SC2-4-4-link-text-pass1
 
-else go to [[Step 3]]
+else go to [Step 3][STEP_3]
 
 ### Step 3 - Check Link Targets
 
@@ -91,7 +88,7 @@ The following data structure is necessary for the remaining steps in this test:
 - Add the group to a data structure such as a list or an array.
 - Repeat procedure until you have explored all the links on the page.
 
-Now you have a collection of links grouped by their accessible names. In other wordsWithin each group item, all links have the same accessible name. We know we have at least one group item, since we got past [[Step 2]]. In the remaining steps we need to check for other factors that may explain why link texts are the same, and determine whether other factors exist that distinguish link texts.
+Now you have a collection of links grouped by their accessible names. In other wordsWithin each group item, all links have the same accessible name. We know we have at least one group item, since we got past Step 2. In the remaining steps we need to check for other factors that may explain why link texts are the same, and determine whether other factors exist that distinguish link texts.
 
 - If all links in a group item point to same resource, they can have the same link text (this step).
 - All links within a group item have same accessible name, but their accessible description (created by use of aria-describedby attribute or the title attribute) makes the link text unique (next step).
@@ -109,7 +106,7 @@ If all links in a group item go to same destination, return
 | Testcase | SC2-4-4-link-text
 | ID       | SC2-4-4-link-text-pass2
 
-else go to [[Step 4]]
+else go to [Step 4][STEP_4]
 
 ### Step 4 - Add Accessible Description
 
@@ -131,7 +128,7 @@ If the combination of accessible name and accessible description uniquely identi
 | Testcase | SC2-4-4-link-text
 | ID       | SC2-4-4-link-text-pass3
 
-else go to [[Step 5]]
+else go to [Step 5][STEP_5]
 
 ### Step 5 - Calculate Context
 
@@ -155,7 +152,7 @@ If all links in a group item, considered together with their computed accessible
 | Testcase | SC2-4-4-link-text
 | ID       | SC2-4-4-link-text-pass4
 
-else go to [[Step 6]]
+else go to [Step 6][STEP_6]
 
 ### Step 6 - Links are ambiguous to All Users
 
@@ -193,3 +190,8 @@ else (link text meant to be ambiguous to all users), return
 
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual
+[STEP_2]: #step-2-check-for-uniqueness
+[STEP_3]: #step-3-check-link-targets
+[STEP_4]: #step-4-add-accessible-description
+[STEP_5]: #step-5-calculate-context
+[STEP_6]: #step-6-links-are-ambiguous-to-all-users

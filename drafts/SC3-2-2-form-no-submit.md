@@ -1,7 +1,5 @@
 # SC3-2-2-form-no-submit
 
-This test belongs to [[3.2.2 On Input]].
-
 ## Description
 
 This test checks forms that initiate a change of context without submit button.
@@ -20,7 +18,7 @@ This test checks forms that initiate a change of context without submit button.
 
 | Property          | Value
 |-------------------|----
-| Success Criterion | [[3.2.2 On Input]]
+| Success Criterion | 3.2.2 On Input
 | Test mode         | SemiAuto
 | Test environment  | DOM (+ server connection ???)
 | Test subject      | Single web page
@@ -32,7 +30,7 @@ This test checks forms that initiate a change of context without submit button.
 
 Test mode: [automatic][AUTO]
 
-Select `form` element without submit button (input[@type='submit'] or input[@type='image'] or button[@type='submit']).
+Select `form` element without submit button (`input[@type='submit'] or input[@type='image'] or button[@type='submit']`).
 
 ### Step 1
 
@@ -41,7 +39,7 @@ Test mode: [automatic][AUTO]
 Does the form contain only one form control from the following list:
 
 - one group of radio buttons (input[@type='radio'][@name=name])
-- one checkbox (input[@type='checkbox'])
+- one checkbox (`input[@type='checkbox']`)
 - one select element
 
 and not other form controls?
@@ -54,7 +52,7 @@ If no, return
 | ID       | SC3-2-2-form-no-submit-fail1
 | Error    | The form has several fields and no submit button.
 
-If yes, continue with [[#Step 2]].
+Else, continue with [Step 2](#step-2).
 
 ### Step 2
 

@@ -2,7 +2,7 @@
 
 ## Description
 
-This test checks whether or not fieldset elements have been used above a certain number of elements.
+This test checks whether or not `fieldset` elements have been used above a certain number of elements.
 
 ## Background
 
@@ -11,13 +11,13 @@ This test checks whether or not fieldset elements have been used above a certain
 
 ## Assumptions
 
-- There is no other valid way to divide forms other then fieldset elements
+- There is no other valid way to divide forms other then `fieldset` elements
 
 ## Test properties
 
 | Property          | Value
 |-------------------|----
-| Success Criterion | [[1.3.1 Info and Relationships]]
+| Success Criterion | 1.3.1 Info and Relationships
 | Test mode         | Automatic
 | Test environment  | DOM
 | Test subject      | Single web page
@@ -35,7 +35,7 @@ Select any form element.
 Test mode: [automatic][AUTO]
 
 - Create an empty “amount” integer;
-- Fill “amount” with: the amount of input elements in the selected form element. (elements: input[@type='text'], input[@type='password'], input[@type='file'], select, textarea);
+- Fill “amount” with: the amount of input elements in the selected form element. (elements: `input[@type='text']`, `input[@type='password']`, `input[@type='file']`, `select`, `textarea`);
 - IF “amount” is higher than 8 AND no element in the selected element is a fieldset element:
   - Return SC131-form-division-possiblefail;
 - ELSE:

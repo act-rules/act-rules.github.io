@@ -33,29 +33,29 @@ http://www.bitvtest.de/infothek/artikel/lesen/talking-head-captions.html
 
 Test mode: [automatic][AUTO]
 
-<VIDEO> containing a TRACK attribute
+`video` element containing a `track` attribute
 
 ### Step 1
 
 Test mode: [automatic][AUTO]
 
-Track element contains 'kind'-attribute with value 'captions'
+Track element contains `kind` attribute with value `captions`
 
-If the step returns true, go to step 3 with the value of 'src'
+If the step returns true, go to step 3 with the value of `src`
 
 ### Step 2
 
 Test mode: [automatic][AUTO]
 
-Track element contains 'kind'- attribute with value 'subtitles'
+Track element contains `kind` attribute with value `subtitles`
 
-NOTE: success criterion doesn't take into account language changes. So it is valid to have spoken text in language 1, subtitles in language 2 and page content in language 3. We prefer captions as they include non-spoken text as well
+**Note**: success criterion doesn't take into account language changes. So it is valid to have spoken text in language 1, subtitles in language 2 and page content in language 3. We prefer captions as they include non-spoken text as well
 
 ### Step 3
 
 Test mode: [automatic][AUTO]
 
-src contains file
+`src` contains file
 
 | Outcome  | Failed
 |----------|-----
@@ -76,6 +76,7 @@ File content contains time codes and text
 ### Step 5
 
 Test mode: [automatic][AUTO]
+
 file contains valid time and text combinations
 
 | Outcome  | Failed

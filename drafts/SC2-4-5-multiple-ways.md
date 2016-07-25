@@ -1,7 +1,5 @@
 # SC2-4-5-multiple-ways
 
-Back to Success Criterion [[2.4.5 Multiple Ways]]
-
 ## Description
 
 This test checks that there are at least two of the following elements available on the web page:
@@ -28,7 +26,7 @@ This test checks that there are at least two of the following elements available
 | Property          | Value
 |-------------------|----
 | Test name         | Multiple ways
-| Test requirement  | [[2.4.5 Multiple Ways]]
+| Test requirement  | 2.4.5 Multiple Ways
 | Test mode         | manual
 | Test environment  | rendered page
 | Test subject      | multiple web pages
@@ -60,7 +58,7 @@ Create variable ‘multiple-ways’ and set value to ‘0’.
 
 If true: variable ‘multiple-ways’ value + 1.
 
-Continue to [[#Step 2 (G161)]].
+Continue to [Step 2 (G161)](#step-2-g161).
 
 ### Step 2 (G161)
 
@@ -87,7 +85,7 @@ If variable ‘multiple-ways’ has a value of 2 or more, return:
 | Testcase | SC2-4-5-multiple-ways
 | ID       | SC2-4-5-multiple-ways-passed1
 
-Else continue to [[#Step 3 (G63)]].
+Else continue to [Step 3 (G63)](#step-3-g63).
 
 ### Step 3 (G63)
 
@@ -105,9 +103,9 @@ Check if the web page provides a link to the site map.
 | Question             | Does the web page provide a link to the site map?
 | Help                 | A site map is a web page that provides links to all the web pages of the web site. If the web page has a link to the site map select “Yes”. Else select “No”.
 
-If true: continue to [[#Step 4 (G63)]].
+If true: continue to [Step 4 (G63)](#step-4-g63).
 
-Else continue to [[#Step 5 (G126)]].
+Else continue to [Step 5 (G126)](#step-5-g126).
 
 ### Step 4 (G63)
 
@@ -134,7 +132,7 @@ If variable ‘multiple-ways’ has a value of 2 or more, return:
 | Testcase | SC2-4-5-multiple-ways
 | ID       | SC2-4-5-multiple-ways-passed2
 
-Else continue to [[#Step 5 (G126)]].
+Else continue to [Step 5 (G126)](#step-5-g126).
 
 ### Step 5 (G126)
 

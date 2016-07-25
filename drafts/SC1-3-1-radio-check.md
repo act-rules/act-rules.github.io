@@ -17,7 +17,7 @@ This test checks to see if all radio buttons and check boxes with the same name 
 
 | Property          | Value
 |-------------------|----
-| Success Criterion | [[1.3.1 Info and Relationships]]
+| Success Criterion | 1.3.1 Info and Relationships
 | Test mode         | Automatic
 | Test environment  | DOM
 | Test subject      | Single web page
@@ -30,7 +30,7 @@ Test mode: [automatic][AUTO]
 
 Select any radio buttons and check boxes. The following CSS selector could be used:
 
-```
+```CSS
 input[type=radio], input[type=checkbox]
 ```
 
@@ -40,13 +40,13 @@ Test mode: [automatic][AUTO]
 
 - IF there is no list 'checkednames':
   - Create an empty list 'checkednames';
-- IF the value of the name attribute of the selected input element exists in 'checkednames':
+- IF the value of the `name` attribute of the selected `input` element exists in 'checkednames':
   - Return SC131-radiocheck-pass;
-- IF the selected element is a child of a fieldset element:
+- IF the selected element is a child of a `fieldset` element:
   - Create an empty variable 'current fieldset';
   - Put the fieldset the selected element is a child from into 'current fieldset';
   - FOR every selected element:
-    - IF the selected element has the same value in the name attribute as the current selected element:
+    - IF the selected element has the same value in the `name` attribute as the current selected element:
       - IF the selected element is a child of the 'current fieldset' element:
         - Continue;
       - ELSE:
@@ -56,7 +56,7 @@ Test mode: [automatic][AUTO]
         - Return SC131-radiocheck-fail2;
       - ELSE:
         - Continue;
-- Put the value of the name attribute of the selected input element into 'checkednames';
+- Put the value of the `name` attribute of the selected `input` element into 'checkednames';
 - Return SC131-radiocheck-pass;
 
 | Outcome  | Passed

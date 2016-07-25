@@ -21,7 +21,7 @@ This test checks that if links receive focus their style is changed in such a wa
 
 | Property          | Value
 |-------------------|----
-| Success Criterion | [[2.4.7 Focus Visible]]
+| Success Criterion | 2.4.7 Focus Visible
 | Test mode         | Automatic
 | Test environment  | Rendered page
 | Test subject      | Single web page
@@ -64,7 +64,7 @@ If any of the CSS properties border, color, box-shadow or background is differen
 | Testcase | SC2-4-7-visible-link-focus
 | ID       | SC2-4-7-visible-link-focus-pass-2
 
-Otherwise return:
+Else, return
 
 | Outcome  | Failed
 |----------|-----

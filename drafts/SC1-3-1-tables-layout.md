@@ -1,11 +1,13 @@
-
 # SC1-3-1-tables-layout
+
 This test case belongs to [[1.3.1 Info and Relationships]]
 
 ## Description
+
 This test checks that tables used for layout purposes do not contain tabular data or markup.
 
 ## Background
+
 - [G140: Separating information and structure from presentation to enable different presentations Techniques for WCAG 2.0](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/G140)
 - [H39: Using caption elements to associate data table captions with data tables Techniques for WCAG 2.0](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/H39)
 - [H51: Using table markup to present tabular information Techniques for WCAG 2.0](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/H51)
@@ -15,17 +17,19 @@ This test checks that tables used for layout purposes do not contain tabular dat
 - [F92: Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information Techniques for WCAG 2.0](http://www.w3.org/TR/2015/NOTE-WCAG20-TECHS-20150226/F92)
 
 ## Assumptions
-Tables that have no tabular mark-up are interpretted by assistive technologies as layout tables.
-According to WCAG this includes:
+
+Tables that have no tabular mark-up are interpreted by assistive technologies as layout tables. According to WCAG this includes:
+
 - No header cells: that is <pre><th></pre> cels, or <pre><td></pre> cells with ARIA roles rowheader and columnheader.
 - No <pre><caption></pre> element.
 - No (or empty) summary attribute.
 - No scope or header attributes on table cells.
-- Tables with single column or row, or tables with less than two rows containing two valid datacells are automatically marked as layout tables by assistive technologies. A cell is considered valid
+- Tables with single column or row, or tables with less than two rows containing two valid data cells are automatically marked as layout tables by assistive technologies. A cell is considered valid
   - if its size can be obtained and is between 200 and 16000 pixels, or
   - if its size can't be obtained and it contains text (Cells only containing graphics are not considered valid).
 
 ## Test properties
+
 | Property          | Value
 |-------------------|----
 | Test name         | Tables Layout
@@ -39,40 +43,62 @@ According to WCAG this includes:
 ## Test procedure
  
 ### Selector
+
 Test mode: [automatic]
+
 Select all tables on the page marked as presentational (using role="presentation" on the table element.
+
 In addition, select tables with all of the following characteristics (see conditions for layout tables listed above):
+
 - Tables with no designated header cells (<pre><th></pre> cells or <pre><td></pre> cells with ARIA roles rowheader and columnheader.
 - No <pre><caption></pre> tag
 - No (or empty) summary attribute
+
 ### Step 1 - Check if actual data tables have wrongly been marked as presentational using ARIA
+
 Test mode: [automatic]
+
 for each table with role="presentation".
 Check if table contains
+
 - header cels
 - a caption element or or summary attribute
 - a cell with a scope or headers attribute
+
 If yes,
+
 | Outcome  | Failed
 |----------|-----
 | Testcase | SC1-3-1-tables-layout
 | ID       | SC1-3-1-tables-layout-fail1
 | Error    |  A datatable is marked as presentational for assistive technologies.
+
 else, continue with [[#Step 2]]
+
 ### step 2
+
 Test mode: [automatic]
+
 Check if any `<td>` cell has a headers attribute or a scope attribute.
+
 If yes,
+
 | Outcome  | Failed
 |----------|-----
 | Testcase | SC1-3-1-tables-layout
 | ID       | SC1-3-1-tables-layout-fail2
 | Error    | Layout tables cannot associate a cell with other cels.
+
 else, continue with [[#Step 3]]
+
 ### step 3
+
 Test mode: [manual]
+
 For each remaining table that matches the selector, ask user to confirm that the table is not a data table.
+
 **User Input Question:**
+
 | Property             | Value
 |----------------------|---------
 | Presented item       | A table (or page with location of table highlighted)
@@ -80,13 +106,17 @@ For each remaining table that matches the selector, ask user to confirm that the
 | Help                 | A datatable is a table that: Visually looks like a table and, b. When you look at a cell in the table, you need to check its column header or row header to fully understand the content of that cell.
 | Requires context     | no
 | Requires Interaction | no
+
 if yes
+
 | Outcome  | Failed
 |----------|-----
 | Testcase | SC1-3-1-tables-layout
 | ID       | SC1-3-1-tables-layout-fail3
 | Error    | Table containing tabular data is presented as a layout table.
+
 else
+
 | Outcome  | Passed
 |----------|-----
 | Testcase | SC1-3-1-tables-layout

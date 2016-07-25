@@ -1,16 +1,20 @@
-
 # SC1-3-1-radio-check 
+
 ## Description
+
 This test checks to see if all radio buttons and check boxes with the same name are grouped in a fieldset element.
 
 ## Background
+
 - [H71: Providing a description for groups of form controls using fieldset and legend elements](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/H71)
 - [eGovMon test H71-2](http://wiki.egovmon.no/wiki/SC3.3.2#ID:_H71-2)
 
 ## Assumptions
+
 *no known assumptions*
 
 ## Test properties
+
 | Property          | Value
 |-------------------|----
 | Success Criterion | [[1.3.1 Info and Relationships]]
@@ -19,12 +23,21 @@ This test checks to see if all radio buttons and check boxes with the same name 
 | Test subject      | Single web page
 
 ## Test procedure
+
 ### Selector
+
 Test mode: [automatic]
+
 Select any radio buttons and check boxes. The following CSS selector could be used:
-`input[type=radio], input[type=checkbox]
+
+```
+input[type=radio], input[type=checkbox]
+```
+
 ### Step 1
+
 Test mode: [automatic]
+
 - IF there is no list 'checkednames':
   - Create an empty list 'checkednames';
 - IF the value of the name attribute of the selected input element exists in 'checkednames':
@@ -50,12 +63,14 @@ Test mode: [automatic]
 |----------|-----
 | Testcase | SC131-radiocheck
 | ID       | SC131-radiocheck-pass
+
 | Outcome  | Failed
 |----------|-----
 | Testcase | SC131-radiocheck
 | Error    | failed to group elements in fieldset correctly
 | Info     | two radio button or check box input elements with the same name are not in the same fieldset
 | ID       |  SC131-radiocheck-fail1
+
 | Outcome  | Failed
 |----------|-----
 | Testcase | SC131-radiocheck

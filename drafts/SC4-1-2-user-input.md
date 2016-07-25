@@ -29,7 +29,7 @@ This test checks the existence of associated labels at every form control that t
 
 Test mode: [automatic][AUTO]
 
-Select every input element, except for elements of the type hidden, button, image and submit, as well as any select and textarea elements
+Select every `input` element, except for elements of the `type` hidden, button, image and submit, as well as any `select` and `textarea` elements
 
 ### Step 1
 

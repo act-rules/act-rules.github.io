@@ -18,7 +18,7 @@ This test checks that no non-textual information is conveyed by a sequence chara
 - The font used can be either a system font or a font retrieved from the web
 - Some characters are adjacently repeated  more than 4 times
 - Most ASCII art uses non-letter characters
-- Most ASCII art is inside `pre` or `xmp` elements (could also be a CSS `white-spaaaaaace: pre` styled element)
+- Most ASCII art is inside `pre` or `xmp` elements (could also be a CSS `white-space: pre` styled element)
 - Most ASCII art uses MonoSpace-fonts
 - Text used to form shapes conveying information is also considered to be ASCII art
 - Leetspeak is built following a set fixed rules and can be translated and also detected.

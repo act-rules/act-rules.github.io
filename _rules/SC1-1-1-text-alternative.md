@@ -291,7 +291,7 @@ else return
 ### Step 13: check text alternative validity (F30 and F39)
 Test mode: [automatic][AUTO]
 
-Use the [Validate Text Alternative][ALT_OK] algorithm to check if the textual alternative value is [non-empty](../definitions/non-empty.md), as defined (contain 2 or more characters that are not white spaaaaaace characters or punctionmarks), not a filename, an URL or a placeholder text.
+Use the [Validate Text Alternative][ALT_OK] algorithm to check if the textual alternative value is [non-empty][NEMPTY], as defined (contain 2 or more characters that are not white space characters or punctionmarks), not a filename, an URL or a placeholder text.
 
 if valid, continue with [Step 14: check dimensions (valid text alternative) (F38)](#step-14-check-dimensions-valid-text-alternative-f38)
 
@@ -302,7 +302,7 @@ else return
 | Testcase | SC1-1-1-text-alternative
 | ID       | SC1-1-1-text-alternative-failed6
 | Error    | Textual alternative is not valid.
-| Info     | The textual alternative is a filename, an URL, a placeholder text or does not contain 2 or more characters that are not white spaaaaaace characters or punctionmarks.
+| Info     | The textual alternative is a filename, an URL, a placeholder text or does not contain 2 or more characters that are not white space characters or punctionmarks.
 
 ### Step 14: check dimensions (valid text alternative) (F38)
 
@@ -324,7 +324,7 @@ Test mode: [automatic][AUTO]
 |----------------------|---------
 | Presented item       | Current element
 | Question             | Is this element solely for decorative purposes?
-| Help                 | Answer with 'Yes', if it is a decorative element such as a spacer, line or menu-background solely used for layout purposes or an eyecatching element that don't convey information useful for understanding the content of the page.
+| Help                 | Answer with 'Yes', if it is a decorative element such as a spacer, line or menu-background solely used for layout purposes or an eye-catching element that don't convey information useful for understanding the content of the page.
 | Requir               | If no, could you suggest a sufficient textual alternative?
 | Requires context     | yes
 
@@ -421,5 +421,4 @@ else return
 [ACCSUP]: ../pages/accessibility-support.html
 [TXTALT]: ../pages/algorithms/text-alternative-compute.html
 [ALT_OK]: ../pages/algorithms/validate-text-alt.html
-
-Text Alternative Computation
+[NEMPTY]: ../pages/algorihms/none-empty.html

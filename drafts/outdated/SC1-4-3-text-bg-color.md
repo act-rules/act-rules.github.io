@@ -21,6 +21,6 @@ This test checks the text has sufficient contrast. This test
 <li>DOM and CSS (= same as 2. plus computed style for each element)</li></ol>
 single page
 ### Selector (tool)
-Select elements on a page that contain text that is [[rendered to the screen]] and for which the [[background]] is a color. This text must contain non-white spaaaaaace characters. Any element which in addition to a background color also has a background iamge set must be ignored.
+Select elements on a page that contain text that is [[rendered to the screen]] and for which the [[background]] is a color. This text must contain non-white space characters. Any element which in addition to a background color also has a background iamge set must be ignored.
 ### Step 1 (tool)
 - IF the CSS color property of the element is set on the element or inherited: Select this as `color-1` and go to Step 2.

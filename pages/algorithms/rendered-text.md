@@ -1,0 +1,1 @@
+An element is considered to have "rendered text" when it contains text nodes that do not inherit from an element that is styled with <code>display:none</code> or <code>visibility:hidden</code>. The rendered text is a string of the concatenated text of all these text nodes.

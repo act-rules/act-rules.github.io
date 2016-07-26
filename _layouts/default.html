@@ -6,10 +6,9 @@
   <title>{{ page.title | escape }} - {{ site.title | escape }}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="stylesheet" href="/css/bootstrap.css">
-
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 </head>
 <body>
 
@@ -23,10 +22,76 @@
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li><a href="{{ site.baseurl }}/pages/drafts.html">Drafts</a></li>
-        <li><a href="{{ site.baseurl }}/pages/methodology.html">
-            Test Methodology
-        </a></li>
-        <li><a href="https://www.w3.org/community/auto-wcag/">Auto-WCAG Website</a></li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
+          role="button" aria-haspopup="true" aria-expanded="false">
+            Rule Creation
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.w3.org/community/auto-wcag">
+              Official website
+            </a></li>
+            <li><a href="https://www.w3.org/community/auto-wcag/about-us/">
+              About Auto-WCAG
+            </a></li>
+            <li><a href="https://www.w3.org/community/auto-wcag/about-us/">
+              How to contribute
+            </a></li>
+            <li><a href="https://www.w3.org/community/auto-wcag/about-us/">
+              GitHub repository
+            </a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
+          role="button" aria-haspopup="true" aria-expanded="false">
+            Rule Structure
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ site.baseurl }}/pages/methodology.html">
+              Definitions
+            </a></li>
+            <li><a href="{{ site.baseurl }}/pages/methodology.html">
+              Result aggregation
+            </a></li>
+            <li><a href="{{ site.baseurl }}/pages/test-modes.html">
+              Test modes
+            </a></li>
+            <li><a>
+              Algorithms
+            </a></li>
+            <li><a>
+              User questions
+            </a></li>
+            <li><a>
+              Accessibility support
+            </a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
+          role="button" aria-haspopup="true" aria-expanded="false">
+            About Auto-WCAG
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.w3.org/community/auto-wcag">
+              Official website
+            </a></li>
+            <li><a href="https://www.w3.org/community/auto-wcag/about-us/">
+              About Auto-WCAG
+            </a></li>
+            <li><a href="https://www.w3.org/community/auto-wcag/about-us/">
+              How to contribute
+            </a></li>
+            <li><a href="https://www.w3.org/community/auto-wcag/about-us/">
+              GitHub repository
+            </a></li>
+          </ul>
+        </li>
+
       </ul>
     </div><!--/.nav-collapse -->
   </div>
@@ -40,7 +105,7 @@
   {{ content }}
 </main>
 
-<footer id="footer"><nav class="row"><div class="container">
+<footer id="footer"><nav class="container"><div class="row">
   <div class="col-sm-4">
     <h2>About Auto-WCAG</h2>
     <ul>
@@ -76,5 +141,7 @@
 
 </div></nav></footer>
 
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@ criteria:
 - text-equiv-all: 1.1.1 Non-text Content (level A)
 
 authors:
-- http://github.com/...: Frank Berker
+- Frank Berker
 ---
 
 ## Description

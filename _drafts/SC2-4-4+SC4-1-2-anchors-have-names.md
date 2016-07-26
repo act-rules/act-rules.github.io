@@ -10,7 +10,7 @@ criteria:
 - ensure-compat-rsv: 4.1.2 Name, Role, Value (Level A)
 
 authors:
-- http://github.com/wilcofiers: Wilco Fiers
+- Wilco Fiers
 ---
 
 ## Description

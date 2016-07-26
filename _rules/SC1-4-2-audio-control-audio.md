@@ -9,7 +9,7 @@ criteria:
 - visual-audio-contrast-dis-audio: 1.4.2 Audio Control (level A)
 
 authors:
-- http://github.com/...: Frank Berker
+- Frank Berker
 ---
 
 ## Description

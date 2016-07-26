@@ -9,7 +9,7 @@ criteria:
 - meaning-other-lang-id: 3.1.2 Language of Parts (Level AA)
 
 authors:
-- https://github.com/...: Annika Nietzio
+- Annika Nietzio
 ---
 
 ## Description

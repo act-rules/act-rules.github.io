@@ -10,6 +10,8 @@ criteria:
 
 authors:
 - Frank Berker
+- test
+- test 2
 ---
 
 ## Description

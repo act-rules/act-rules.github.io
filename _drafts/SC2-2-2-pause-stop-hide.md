@@ -1,4 +1,14 @@
-# SC2-2-2-pause-stop-hide
+---
+rule_id: SC2-2-2-pause-stop-hide
+name: Pause, stop, hide
+test_mode: semi-automatic
+
+criteria:
+- 2.2.2 # Pause, Stop, Hide (level A)
+
+authors:
+
+---
 
 ## Description
 

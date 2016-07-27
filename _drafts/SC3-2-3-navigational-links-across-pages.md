@@ -1,4 +1,14 @@
-# SC3-2-3-navigational-links-across-pages
+---
+rule_id: SC3-2-3-navigational-links-across-pages
+name: Presentation of navigational components
+test_mode: automatic
+
+criteria:
+- 3.2.3 # Consistent Navigation
+
+authors:
+
+---
 
 ## Description
 

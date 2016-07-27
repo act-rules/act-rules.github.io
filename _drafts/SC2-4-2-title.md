@@ -1,4 +1,14 @@
-# SC2-4-2-title
+---
+rule_id: SC2-4-2-title
+name: Page Title
+test_mode: semi-automatic
+
+criteria:
+- 2.4.2 # Page Titled (Level A)
+
+authors:
+
+---
 
 ## Description
 

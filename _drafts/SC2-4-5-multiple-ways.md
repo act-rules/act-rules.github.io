@@ -1,4 +1,14 @@
-# SC2-4-5-multiple-ways
+---
+rule_id: SC2-4-5-multiple-ways
+name: Multiple ways
+test_mode: manual
+
+criteria:
+- 2.4.5 # Multiple Ways
+
+authors:
+
+---
 
 ## Description
 

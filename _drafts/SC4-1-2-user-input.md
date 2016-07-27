@@ -1,4 +1,14 @@
-# SC4-1-2-user-input 
+---
+rule_id: SC4-1-2-user-input
+name: 
+test_mode: automatic
+
+criteria:
+- 4.1.2 # Name, Role, Value
+
+authors:
+
+---
 
 ## Description
 

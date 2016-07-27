@@ -1,4 +1,14 @@
-# SC3-2-2-form-submit
+---
+rule_id: SC3-2-2-form-submit
+name: 
+test_mode: semi-automatic
+
+criteria:
+- 3.2.2 # On Input
+
+authors:
+
+---
 
 ## Description
 

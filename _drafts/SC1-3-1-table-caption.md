@@ -1,4 +1,14 @@
-# SC1-3-1-table-caption 
+---
+rule_id: SC1-3-1-table-caption
+name: 
+test_mode: automatic
+
+criteria:
+- 1.3.1 # Info and relationships (level A)
+
+authors:
+
+---
 
 ## Description
 

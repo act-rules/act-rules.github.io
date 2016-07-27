@@ -1,4 +1,14 @@
-# SC2-4-7-visible-link-focus 
+---
+rule_id: SC2-4-7-visible-link-focus 
+name: 
+test_mode: automatic
+
+criteria:
+- 2.4.7 # Focus Visible
+
+authors:
+
+---
 
 ## Description
 

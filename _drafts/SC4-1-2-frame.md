@@ -44,7 +44,7 @@ Select any frame or iframe element.
 
 Test mode: [automatic][AUTO]
 
-If the selected element does not have a title attribute, or a title with only [[non-empty]] text, return:
+If the selected element does not have a title attribute, or a title with only [non-empty](NEMPTY) text, return:
 
 | Outcome  | Failed
 |----------|-----
@@ -81,3 +81,4 @@ If no, return
 
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual
+[NEMPTY]: ../pages/algorihms/none-empty.html

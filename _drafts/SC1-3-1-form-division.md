@@ -7,7 +7,7 @@ name:
 test_mode: automatic
 
 criteria:
-- content-structure-separation-programmatic: 1.3.1 Info and Relationships (Level A)
+- 1.3.1 # Info and Relationships (Level A)
 
 authors:
 

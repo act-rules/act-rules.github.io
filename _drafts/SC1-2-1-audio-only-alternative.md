@@ -6,7 +6,7 @@ name: Alternate version of prerecorded audio-only
 test_mode: manual
 
 criteria:
-- media-equiv-av-only-alt: 1.2.1 Audio-only and Video-only (Prerecorded) (Level A)
+- 1.2.1 # Audio-only and Video-only (Prerecorded) (Level A)
 
 authors:
 

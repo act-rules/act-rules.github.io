@@ -6,7 +6,7 @@ name: Audio control
 test_mode: semi-automatic
 
 criteria:
-- visual-audio-contrast-dis-audio: 1.4.2 Audio Control (level A)
+- 1.4.2 # Audio Control (level A)
 
 authors:
 - Frank Berker

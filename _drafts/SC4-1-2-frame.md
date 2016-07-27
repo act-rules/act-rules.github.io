@@ -6,7 +6,7 @@ name: Proper use of aria-describedby
 test_mode: semi-automatic
 
 criteria:
-- ensure-compat-rsv: 4.1.2 Name, Role, Value (Level A)
+- 4.1.2 # Name, Role, Value (Level A)
 
 authors:
 - Wilco Fiers

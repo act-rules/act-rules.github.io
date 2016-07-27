@@ -6,8 +6,8 @@ name: Meta refresh and redirect is not used
 test_mode: automatic
 
 criteria:
-- time-limits-required-behaviors: 2.2.1 Timing Adjustable (Level A)
-- consistent-behavior-no-extreme-changes-context: 3.2.5 Change on Request (Level AAA)
+- 2.2.1 # Timing Adjustable (Level A)
+- 3.2.5 # Change on Request (Level AAA)
 ---
 
 ## Description

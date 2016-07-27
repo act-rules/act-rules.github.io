@@ -6,7 +6,7 @@ name: HTML lang matches text
 test_mode: semi-automatic
 
 criteria:
-- meaning-doc-lang-id: 3.1.1 Language of Page (Level A)
+- 3.1.1 # Language of Page (Level A)
 
 authors:
 - Annika Nietzio

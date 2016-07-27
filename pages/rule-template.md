@@ -19,14 +19,15 @@ For the name of the test case use the following format: **SC#-#-#-identifier**
 ---
 # [Rule Metadata](../pages/metadata.md)
 
-rule_id: 
+rule_id: SC#-#-#-something
 name: 
-test_mode: 
+test_mode: automatic / semi-automatic / manual
 
 criteria:
-- 
+- x.x.x # Criterion handle as a YAML comment + level
 
 authors:
+- Your Name # As used in /data/contributors.yml
 ---
 
 ## Description

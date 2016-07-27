@@ -6,7 +6,7 @@ name: Languages within the body
 test_mode: automatic
 
 criteria:
-- meaning-other-lang-id: 3.1.2 Language of Parts (Level AA)
+- 3.1.2 # Language of Parts (Level AA)
 
 authors:
 - Annika Nietzio

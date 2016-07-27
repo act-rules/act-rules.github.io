@@ -6,7 +6,7 @@ name: Proper use of aria-describedby
 test_mode: semi-automatic
 
 criteria:
-- text-equiv-all: 1.1.1 Non-text Content (level A)
+- 1.1.1 # Non-text Content (level A)
 
 authors:
 - Frank Berker

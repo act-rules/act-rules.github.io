@@ -6,7 +6,7 @@ name: Button has name
 test_mode: automatic
 
 criteria:
-- ensure-compat-rsv: 4.1.2 Name, Role, Value (Level A)
+- 4.1.2 # Name, Role, Value (Level A)
 ---
 
 ## Description

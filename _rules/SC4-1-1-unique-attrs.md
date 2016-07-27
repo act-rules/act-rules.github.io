@@ -6,7 +6,7 @@ name: Attributes are unique
 test_mode: automatic
 
 criteria:
-- ensure-compat-parses: 4.1.1 Parsing (Level A)
+- 4.1.1 # Parsing (Level A)
 ---
 
 ## Description

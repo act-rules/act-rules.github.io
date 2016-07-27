@@ -6,8 +6,8 @@ name: Anchor elements have a name
 test_mode: automatic
 
 criteria:
-- navigation-mechanisms-refs: 2.4.4 Link Purpose (In Context) (Level A)
-- ensure-compat-rsv: 4.1.2 Name, Role, Value (Level A)
+- 2.4.4 # Link Purpose (In Context) (Level A)
+- 4.1.2 # Name, Role, Value (Level A)
 
 authors:
 - Wilco Fiers

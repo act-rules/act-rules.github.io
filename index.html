@@ -22,10 +22,17 @@ layout: default
     <td>{{ rule.test_mode }}</td>
     <td><ul>
       {% for criterion in rule.criteria %}
-        <li>{% for critSpec in criterion %}
-          <a href="https://www.w3.org/TR/WCAG20/#{{ critSpec[0] }}"
-            target="_blank">{{ critSpec[1] }}</a>
-        {% endfor %}</li>
+        <li>
+          {% if site.data.criteria[criterion] %}
+            <a href="{{ site.data.criteria[criterion].url }}" target="_blank">
+            {{ site.data.criteria[criterion].num }}
+            {{ site.data.criteria[criterion].handle }}
+            (Level {{ site.data.criteria[criterion].level }})
+            </a>
+          {% else %}
+            {{ criterion }} (unknown)
+          {% endif %}
+        </li>
       {% endfor %}
     </ul></td>
   </tr>

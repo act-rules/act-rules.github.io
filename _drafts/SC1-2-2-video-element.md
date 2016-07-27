@@ -7,7 +7,7 @@ name:
 test_mode: semi-automatic
 
 criteria:
-- media-equiv-captions: 1.2.2 Captions (Prerecorded) (Level A)
+- 1.2.2 # Captions (Prerecorded) (Level A)
 
 authors:
 

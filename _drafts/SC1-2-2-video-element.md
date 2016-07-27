@@ -1,4 +1,17 @@
-# SC1-2-2-video-element
+
+---
+# [Rule Metadata](../pages/metadata.md)
+
+rule_id: SC1-2-2-video-element
+name: 
+test_mode: semi-automatic
+
+criteria:
+- media-equiv-captions: 1.2.2 Captions (Prerecorded) (Level A)
+
+authors:
+
+---
 
 ## Description
 
@@ -9,8 +22,8 @@ http://www.bitvtest.de/infothek/artikel/lesen/talking-head-captions.html
 
 ## Background
 
-- http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html
-- QUAIL test for video captions: https://github.com/quailjs/quail/blob/dev/src/js/components/video.js
+- [Understanding 1.2.2 Captions (prerecorded)](http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
+- [QuailJS test for video captions](https://github.com/quailjs/quail/blob/dev/src/js/components/video.js)
 
 ## Assumptions
 

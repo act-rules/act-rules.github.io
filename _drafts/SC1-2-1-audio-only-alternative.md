@@ -1,4 +1,16 @@
-# SC1-2-1-audio-only-alternative
+---
+# [Rule Metadata](../pages/metadata.md)
+
+rule_id: SC1-2-1-audio-only-alternative
+name: Alternate version of prerecorded audio-only
+test_mode: manual
+
+criteria:
+- media-equiv-av-only-alt: 1.2.1 Audio-only and Video-only (Prerecorded) (Level A)
+
+authors:
+
+---
 
 ## Description
 

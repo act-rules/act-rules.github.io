@@ -1,4 +1,16 @@
-# SC1-2-1-video-only-alternative 
+---
+# [Rule Metadata](../pages/metadata.md)
+
+rule_id: SC1-2-1-video-only-alternative
+name: 
+test_mode: semi-automatic
+
+criteria:
+- media-equiv-av-only-alt: 1.2.1 Audio-only and Video-only (Prerecorded) (Level A)
+
+authors:
+
+---
 
 ## Description
 
@@ -13,11 +25,11 @@ This procedure describes those situations
 
 ## Background
 
-- http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html
+- [Understanding 1.2.1 Audio-only and Video-only (Prerecorded)](http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
 
 ## Assumptions
 
-- Test device renders html5 video (phantomJS doesn't render)
+- Test device renders HTML5 video (phantomJS doesn't render)
 
 ## Test properties
 
@@ -36,7 +48,7 @@ This procedure describes those situations
 
 Test mode: [automatic][AUTO]
 
-<VIDEO> not containing a TRACK attribute
+`video` element not containing a `track` attribute
 
 ### Step 1
 

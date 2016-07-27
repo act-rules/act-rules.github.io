@@ -1,4 +1,17 @@
-# SC1-3-1-form-division 
+
+---
+# [Rule Metadata](../pages/metadata.md)
+
+rule_id: SC1-3-1-form-division
+name: 
+test_mode: automatic
+
+criteria:
+- content-structure-separation-programmatic: 1.3.1 Info and Relationships (Level A)
+
+authors:
+
+---
 
 ## Description
 

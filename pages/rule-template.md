@@ -1,14 +1,5 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
-
-rule_id: 
-name: 
-test_mode: 
-
-criteria:
-- 
-
-authors:
+title: Auto-WCAG Rule Template
 ---
 
 The test template contains a plain language description of the test, some background information, and a list of all assumptions. The test properties are summarized in a table. The actual test is defined by the selector, a number of steps and a formal description of the test outcomes.
@@ -23,6 +14,20 @@ For the name of the test case use the following format: **SC#-#-#-identifier**
 - **+SC#-#-#**: This can be used if the test case applies to multiple success criteria, such as SC1-1-1+SC4-1-2-identifier. The numbers are in the same order as they are used in WCAG.
 
 - **identifier**: This must be a lower case identifier of the test, preferable no more then 3 words. It can only contain alphanumeric values or a dash (-).
+
+```markdown
+---
+# [Rule Metadata](../pages/metadata.md)
+
+rule_id: 
+name: 
+test_mode: 
+
+criteria:
+- 
+
+authors:
+---
 
 ## Description
 
@@ -72,7 +77,7 @@ else, return
 
 | Outcome  | Failed
 |----------|-----
-| ID       | SC1-1-1-aria-describedby-fail1
+| ID       | {{ page.rule_id }}-fail1
 | Error    | None of the elements referenced by aria-describedby exists.
 
 ### Step 2
@@ -83,3 +88,5 @@ Test method: [manual][MANUAL]
 
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual
+
+```

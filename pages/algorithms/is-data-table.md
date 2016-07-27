@@ -1,6 +1,10 @@
+---
+title: Identifying Data Tables
+---
+
 ## How QUAIL determines if a table is being used for layout or data
 
-Note: This script is written by Kevin Miller and code is under MIT license.
+*Note*: This script is written by Kevin Miller and code is under MIT license.
 Most of this is informed by an academic paper (http://www2002.org/CDROM/refereed/199/). Note that these tests are ordered by ease of computation to speed things up, if a test says something is a layout table, we stop there. This is all encompassed in the quail.isDataTable method.
 
 ### Number of rows

@@ -1,4 +1,6 @@
-# Valid text alternative
+---
+title: Valid text alternative
+---
 
 Algorithm to check validity of textual alternative. It must be [non-empty][NEMPTY], not a filename, an URL or a placeholder.
 

@@ -1,4 +1,6 @@
-# Short text description
+---
+title: Short text description
+---
 
 ## Description
 This algorithm shall provide decision support to the users evaluating the sufficiency of short text descriptions.

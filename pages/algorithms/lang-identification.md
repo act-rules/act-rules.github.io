@@ -1,4 +1,6 @@
-# Language identification
+---
+title: Language identification
+---
 
 A language identification algorithm is used the determine the language of a given text. 
 

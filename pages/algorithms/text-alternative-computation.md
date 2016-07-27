@@ -1,4 +1,6 @@
-# Text Alternative Computation
+---
+title: Text Alternative Computation
+---
 
 # Draft pseudo-code 
 

@@ -1,7 +1,4 @@
-
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC1-3-1-form-division
 name: 
 test_mode: automatic

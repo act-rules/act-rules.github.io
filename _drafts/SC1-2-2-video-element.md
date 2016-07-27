@@ -1,7 +1,4 @@
-
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC1-2-2-video-element
 name: 
 test_mode: semi-automatic

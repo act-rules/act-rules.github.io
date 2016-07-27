@@ -1,6 +1,4 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC2-4-4+SC4-1-2-anchors-have-names
 name: Anchor elements have a name
 test_mode: automatic

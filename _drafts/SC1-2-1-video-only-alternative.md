@@ -1,6 +1,4 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC1-2-1-video-only-alternative
 name: 
 test_mode: semi-automatic

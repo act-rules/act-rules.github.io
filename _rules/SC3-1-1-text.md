@@ -1,6 +1,4 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC3-1-1-text
 name: HTML lang matches text
 test_mode: semi-automatic

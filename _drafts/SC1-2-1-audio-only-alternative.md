@@ -1,6 +1,4 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC1-2-1-audio-only-alternative
 name: Alternate version of prerecorded audio-only
 test_mode: manual

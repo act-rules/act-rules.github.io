@@ -1,6 +1,4 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC3-1-2-lang
 name: Languages within the body
 test_mode: automatic

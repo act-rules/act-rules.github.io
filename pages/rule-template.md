@@ -17,8 +17,6 @@ For the name of the test case use the following format: **SC#-#-#-identifier**
 
 ```markdown
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC#-#-#-something
 name: 
 test_mode: automatic / semi-automatic / manual

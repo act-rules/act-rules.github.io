@@ -1,6 +1,4 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC4-1-1-id
 name: Define ids for elements
 test_mode: automatic

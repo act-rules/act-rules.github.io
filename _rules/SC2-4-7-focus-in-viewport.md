@@ -1,6 +1,4 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC2-4-7-focus-in-viewport
 name: Focused element visible in viewport
 test_mode: automatic

@@ -1,6 +1,4 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC4-1-1-tag-nesting
 name: Tags nested correctly
 test_mode: automatic

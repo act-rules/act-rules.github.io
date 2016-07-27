@@ -1,6 +1,4 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC4-1-2-frame
 name: Proper use of aria-describedby
 test_mode: semi-automatic

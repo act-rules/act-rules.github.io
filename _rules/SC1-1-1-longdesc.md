@@ -1,6 +1,4 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC1-1-1-longdesc
 name: Proper use of longdesc
 test_mode: semi-automatic

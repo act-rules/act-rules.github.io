@@ -1,6 +1,4 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC4-1-2-button
 name: Button has name
 test_mode: automatic

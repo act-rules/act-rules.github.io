@@ -1,6 +1,4 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC4-1-1-accesskey
 name: Provide unique accesskeys
 test_mode: automatic

@@ -1,6 +1,4 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC1-1-1-css-image
 name: CSS background decorative
 test_mode: semi-automatic

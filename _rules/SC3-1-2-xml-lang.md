@@ -1,6 +1,4 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC3-1-2-xml-lang
 name: Language of Parts
 test_mode: automatic

@@ -35,6 +35,9 @@ defaults:
       type: drafts
     values:
       layout: draft
+      name: undefined
+      rule_id: undefined
+      test_mode: undefined
 
 exclude:
-- build
+- _drafts/early-stage

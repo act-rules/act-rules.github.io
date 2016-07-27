@@ -1,15 +1,13 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC3-1-2-text
 name: Lang attribute matches text
 test_mode: semi-automatic
 
 criteria:
-- meaning-other-lang-id: 3.1.2 Language of Parts (Level AA)
+- 3.1.2 # Language of Parts (Level AA)
 
 authors:
-- https://github.com/...: Annika Nietzio
+- Annika Nietzio
 ---
 
 ## Description

@@ -1,12 +1,10 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC4-1-2-button
 name: Button has name
 test_mode: automatic
 
 criteria:
-- ensure-compat-rsv: 4.1.2 Name, Role, Value (Level A)
+- 4.1.2 # Name, Role, Value (Level A)
 ---
 
 ## Description

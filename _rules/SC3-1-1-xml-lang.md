@@ -1,15 +1,13 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC3-1-1-xml-lang
 name: Use identical xml:lang and lang attributes
 test_mode: automatic
 
 criteria:
-- meaning-doc-lang-id: 3.1.1 Language of Page (Level A)
+- 3.1.1 # Language of Page (Level A)
 
 authors:
-- https://github.com/...: Annika Nietzio
+- Annika Nietzio
 ---
 
 ## Description

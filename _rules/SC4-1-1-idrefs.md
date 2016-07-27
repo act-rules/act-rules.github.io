@@ -1,12 +1,10 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC4-1-1-idrefs
 name: Reference multiple elements
 test_mode: automatic
 
 criteria:
-- ensure-compat-parses: 4.1.1 Parsing (Level A)
+- 4.1.1 # Parsing (Level A)
 ---
 
 ## Description

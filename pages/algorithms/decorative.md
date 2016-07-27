@@ -1,3 +1,3 @@
-Decorative
+# Decorative
 
-serving only an aesthetic purpose, providing no information, and having no functionality.
+Serving only an aesthetic purpose, providing no information, and having no functionality.

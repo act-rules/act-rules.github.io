@@ -1,15 +1,13 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC1-4-2-audio-control-audio
 name: Audio control
 test_mode: semi-automatic
 
 criteria:
-- visual-audio-contrast-dis-audio: 1.4.2 Audio Control (level A)
+- 1.4.2 # Audio Control (level A)
 
 authors:
-- http://github.com/...: Frank Berker
+- Frank Berker
 ---
 
 ## Description

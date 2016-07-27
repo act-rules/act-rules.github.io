@@ -1,15 +1,13 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
-
 rule_id: SC1-1-1-css-image
 name: CSS background decorative
 test_mode: semi-automatic
 
 criteria:
-- text-equiv-all: 1.1.1 Non-text Content (level A)
+- 1.1.1 # Non-text Content (level A)
 
 authors:
-- http://github.com/...: Frank Berker
+- Frank Berker
 ---
 
 ## Description

@@ -1,9 +1,10 @@
-{{status|0.1: For review|1395}}
-{{status|0: For review|1182}}
-[[Category:Review]]
+# Text Alternative Computation
 
-== Draft pseudo-code of [http://www.w3.org/TR/wai-aria/roles#namecalculation Text Alternative Computation Algorithm in current WAI-ARIA Recommendation ] ==
-<pre>
+# Draft pseudo-code 
+
+Source: [Text Alternative Computation Algorithm in current WAI-ARIA Recommendation](http://www.w3.org/TR/wai-aria/roles#namecalculation)
+
+```
 Node node
 Text accumulatedText
 Array EMBEDDED_CONTROLS = {textbox, button, combobox, option, range, spinbutton, slider}
@@ -92,9 +93,10 @@ function addCSS_AfterAndReturn(node, Text text) {
 	}
 	return text;
 }
-</pre>
+```
 
-== Draft UML activity diagram of [http://www.w3.org/TR/wai-aria/roles#namecalculation Text Alternative Computation Algorithm in current WAI-ARIA Recommendation ] ==
-[[File:TextAlternativeComputation.png|alt=Activity diagram of Text Alternative Computation]]
+## Draft UML activity diagram
 
-[[Category:Algorithm]]
+Based on of [Text Alternative Computation Algorithm in current WAI-ARIA Recommendation](http://www.w3.org/TR/wai-aria/roles#namecalculation) ==
+
+![Activity diagram of Text Alternative Computation](TextAlternativeComputation.png)

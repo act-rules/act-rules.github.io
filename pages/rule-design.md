@@ -1,5 +1,5 @@
 ---
-title: Rule Fundamentals
+title: Rule Design
 ---
 
 The [auto-wcag test design](Introduction_to_auto-wcag_test_design) builds on WCAG 2.0 and its supporting documents. To achieve the [[auto-wcag goals]] the following approach is suggested:

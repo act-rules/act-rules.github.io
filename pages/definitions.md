@@ -1,5 +1,5 @@
 ---
-titel: Metadata
+titel: Definitions
 ---
 
 ## Rule ID
@@ -7,7 +7,6 @@ titel: Metadata
 
 ## Rule name
 ...
-
 
 ## test mode
 ...

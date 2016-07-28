@@ -24,7 +24,7 @@ This test checks that the primary language of the content is specified correctly
 ## Assumptions
 
 - The comparison of language-code does not look for exact matches. Technique H57 states: "Use of the primary code is important for this technique." which means that region subtags can be ignored in the comparison, i.e. "en-GB" is the same as "en".
-- This test assumes that the language of the web page has been specified in the `lang` attribute of the `html` element (see also [SC3-1-1-html](SC3-1-1-html.md)). The `xml:lang` attribute is not taken into account because tests have shown, that `xml:lang` is ignored by screenreaders.
+- This test assumes that the language of the web page has been specified in the `lang` attribute of the `html` element (see also [SC3-1-1-html](SC3-1-1-html.html)). The `xml:lang` attribute is not taken into account because tests have shown, that `xml:lang` is ignored by screenreaders.
 - There are different possible definitions of "primary language" of a web page:
   1. language of the majority of content
   2. language of interface

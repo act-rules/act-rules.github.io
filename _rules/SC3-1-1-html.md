@@ -23,7 +23,7 @@ This test checks that the primary language of the web content can be programmati
 ## Assumptions
 
 - The comparison of language codes does not look for exact matches. Technique H57 states: "Use of the primary code is important for this technique." which means that region subtags can be ignored in the comparison, i.e. "en-GB" is the same as "en".
-- This test checks the `lang` attribute of the `html` element. The xml:lang attribute is not taken into account because tests have shown, that xml:lang is ignored by screenreaders. (Both Jaws 15 with FF and IE and NVDA with FF go by lang attribute, xml:lang is ignored.) The `xml:lang` attribute is checked by a separate test: [SC3-1-1-xml-lang](SC3-1-1-xml-lang.md).
+- This test checks the `lang` attribute of the `html` element. The xml:lang attribute is not taken into account because tests have shown, that xml:lang is ignored by screenreaders. (Both Jaws 15 with FF and IE and NVDA with FF go by lang attribute, xml:lang is ignored.) The `xml:lang` attribute is checked by a separate test: [SC3-1-1-xml-lang](SC3-1-1-xml-lang.html).
 
 ## Test properties
 
@@ -63,7 +63,7 @@ else if neither `lang` nor `xml:lang` are specified, return
 
 else (only `xml:lang` exists)
 
-*Do nothing. (This case is covered by [SC3-1-1-xml-lang](SC3-1-1-xml-lang.md).)*
+*Do nothing. (This case is covered by [SC3-1-1-xml-lang](SC3-1-1-xml-lang.html).)*
 
 ### Step 2
 

@@ -26,7 +26,7 @@ This test checks that changes in human language are marked up correctly in the w
 - The comparison of language-code does not look for exact matches. Technique H57 states: "Use of the primary code is important for this technique." which means that region subtags can be ignored in the comparison, i.e. "en-GB" is the same as "en".
 - This test applies only to visible text, i.e. the text of `alt` or `title`-attributes is not checked. `alt` attributes are covered by 1.1.1 Non-text Content.
 - Single words in another language do not have to be marked as language changes.
-- This test assumes that the language of the web content has been specified in the `lang` attribute of the element (see also [SC3-1-2-lang](SC3-1-2-lang.md)). The `xml:lang` attribute is not taken into account because tests have shown, that `xml:lang` is ignored by screenreaders.
+- This test assumes that the language of the web content has been specified in the `lang` attribute of the element (see also [SC3-1-2-lang](SC3-1-2-lang.html)). The `xml:lang` attribute is not taken into account because tests have shown, that `xml:lang` is ignored by screenreaders.
 
 ## Test properties
 

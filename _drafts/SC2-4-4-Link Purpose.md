@@ -28,7 +28,7 @@ authors:
 ## Assumptions
 
 - This test checks for actual links, not links whose role has been mapped to other UI elements using ARIA (example role="button").
-- This test does not check for missing alt attribute for `<area>` tags in image maps, that is covered under [SC2-4-4-image-map](SC2-4-4-image-map.md)
+- This test does not check for missing alt attribute for `<area>` tags in image maps, that is covered under [SC2-4-4-image-map](SC2-4-4-image-map.html)
 
 ## Test properties
 

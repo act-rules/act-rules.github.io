@@ -2,7 +2,7 @@
 title: Rule Design
 ---
 
-The [auto-wcag test design](Introduction_to_auto-wcag_test_design) builds on WCAG 2.0 and its supporting documents. To achieve the [[auto-wcag goals]] the following approach is suggested:
+The auto-wcag test design builds on WCAG 2.0 and its supporting documents. To achieve the auto-wcag goals the following approach is suggested:
 
 - Use **selectors** to group the tests by page element and Success Criterion.
 - Define the **test subject and its environment**.

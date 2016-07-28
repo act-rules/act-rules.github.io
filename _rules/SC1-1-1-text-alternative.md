@@ -71,7 +71,7 @@ else continue with [Step 8: compute text alternative](#step-8-compute-text-alter
 
 Test mode: [automatic][AUTO]
 
-Check if one of the following attributes is present: ` aria-labelledby` with valid destinations or ` alt` , ` aria-label`, ` title`.
+Check if one of the following attributes is present: `aria-labelledby` with valid destinations or `alt` , `aria-label`, `title`.
 
 if yes, continue with [Step 3: check for img siblings (ARIA10 and G196)](#step-3-check-for-img-siblings-aria10-and-g196)
 
@@ -81,13 +81,13 @@ else return
 |----------|-----
 | Testcase | SC1-1-1-text-alternative
 | ID       | SC1-1-1-text-alternative-failed1
-| Error    | The element must provide one of the following attributes: ` alt` , ` aria-label`, ` title` or a ` aria-labelledby`.
+| Error    | The element must provide one of the following attributes: `alt` , `aria-label`, `title` or a `aria-labelledby`.
 
 ### Step 3: check for img siblings (ARIA10 and G196)
 
 Test mode: [automatic][AUTO]
 
-Check if the selected element is an `<img>` element and has adjacent siblings of type `<img>`.
+Check if the selected element is an `img` element and has adjacent siblings of type `img`.
 
 if yes, continue with [Step 4: ask for informational or functional group of images (ARIA10 and G196)](#step-4-ask-for-informational-or-functional-group-of-images-aria10-and-g196)
 

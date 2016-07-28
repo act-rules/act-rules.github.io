@@ -43,11 +43,11 @@ This test checks that changes in human language are marked up correctly in the w
 
 Test mode: [automatic][AUTO]
 
-Select consecutive run of text to which a single language attribute applies.<br/>
+Select consecutive run of text to which a single language attribute applies.
 
 L1 = language of the selected text as determined by [HTML 4.01 Inheritance of language codes](http://www.w3.org/TR/1999/REC-html401-19991224/struct/dirlang.html#h-8.1.2).
 
-*Note: This test is applied to natural language text. The test is not applicable to content of `script` elements, attribute values, and text contained in HTML comments.*
+*Note*: This test is applied to natural language text. The test is not applicable to content of `script` elements, attribute values, and text contained in HTML comments.
 
 ### Step 1
 

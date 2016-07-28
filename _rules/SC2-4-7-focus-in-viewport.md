@@ -5,6 +5,9 @@ test_mode: automatic
 
 criteria:
 - 2.4.7 # Focus Visible (Level AA)
+
+author:
+
 ---
 
 ## Description

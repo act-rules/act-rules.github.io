@@ -38,6 +38,10 @@ defaults:
       name: undefined
       rule_id: undefined
       test_mode: undefined
+  - scope:
+      path: pages/algorithms
+    values:
+      category: algorithms
 
 exclude:
 - _drafts/early-stage

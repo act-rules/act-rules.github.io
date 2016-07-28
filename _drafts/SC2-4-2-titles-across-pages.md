@@ -16,13 +16,13 @@ This test checks that webpage titles are used to uniquely identify the purpose o
 
 ## Assumptions
 
-All pages tested should be on the same website (with same domain). Page titles on external websites are out of the scope of the test. Page will necessarily not include pages that require user interaction or pages hosted behind a login. Such pages have to be tested individually using [SC2-4-2-title](SC2-4-2-title.md).
+All pages tested should be on the same website (with same domain). Page titles on external websites are out of the scope of the test. Page will necessarily not include pages that require user interaction or pages hosted behind a login. Such pages have to be tested individually using [SC2-4-2-title](SC2-4-2-title.html).
 
 ## Background
 
 - [G127: Identifying a Web page's relationship to a larger collection of Web pages](http://www.w3.org/TR/WCAG20-TECHS/G127.html)
 - [F25: Failure of Success Criterion 2.4.2 due to the title of a Web page not identifying the contents](http://www.w3.org/TR/WCAG20-TECHS/F25.html)
-- Case of missing, invalid or multiple title elements for a single webpage are covered in test [SC2-4-2-title](SC2-4-2-title.md) this test does not duplicate these checks.
+- Case of missing, invalid or multiple title elements for a single webpage are covered in test [SC2-4-2-title](SC2-4-2-title.html) this test does not duplicate these checks.
 - If no pages with same domain are linked from the page where the test is run, the test automatically passes (for best results, run this test from the front page or main page of the website).
 - If every page in the sample has identical titles, the test automatically fails.
 - If one or more group of pages within the website have identical titles, users are asked to evaluate each group.

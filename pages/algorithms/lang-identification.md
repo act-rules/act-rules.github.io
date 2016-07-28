@@ -2,12 +2,11 @@
 title: Language identification
 ---
 
-A language identification algorithm is used the determine the language of a given text. 
+A language identification algorithm is used the determine the language of a given text.  Some languages can be determined reliably from their character use alone. In these cases it is sufficient to analyse the characters and encoding of the web content. For languages sharing the same script (such as languages using the latin alphabet), the distinction is more difficult.
 
-Some languages can be determined reliably from their script alone. In these cases it is sufficient to analyse the characters and encoding of the web content.
+# Use statistical methods.
 
-For languages sharing the same script (such as languages using the latin alphabet), the distinction is more difficult.
-State-of-the-art approaches use statistical methods. A widely used approach are supervised machine learning algorithms  based on character n-grams. These algorithms are trained on example texts in a known language. The generated model can be used to label unknown text.
+A widely used approach are supervised machine learning algorithms  based on character n-grams. These algorithms are trained on example texts in a known language. The generated model can be used to label unknown text.
 
 This class of algorithms has the following properties:
 
@@ -16,9 +15,10 @@ This class of algorithms has the following properties:
 - Only one language is assigned to each chunk of text. Languages changes can not be detected with the basic approach.
 - Problems to distinguish languages that are closely related (such as Danish and Norwegian).
 
-## auto-wcag recommendation
-The auto-wcag group does not recommend the use of any particular algorithm. Instead each tool that uses automatic language identification should disclose which algorithm, implementation, or third party libraries are used.
+## Auto-WCAG recommendation
+
+The Auto-WCAG group does not recommend the use of any particular algorithm. Instead each tool that uses automatic language identification should disclose which algorithm, implementation, or third party libraries are used.
 
 ## Background
 
-[http://en.wikipedia.org/wiki/Language_identification List of implementations (both libraries and web services)] from Wikipedia
+[List of implementations (both libraries and web services)](http://en.wikipedia.org/wiki/Language_identification) from Wikipedia.

@@ -2,7 +2,7 @@
 title: Identifying Data Tables
 ---
 
-## How QUAIL determines if a table is being used for layout or data
+## Identifying Tables in QuailJS
 
 *Note*: This script is written by Kevin Miller and code is under MIT license.
 Most of this is informed by an academic paper (http://www2002.org/CDROM/refereed/199/). Note that these tests are ordered by ease of computation to speed things up, if a test says something is a layout table, we stop there. This is all encompassed in the quail.isDataTable method.
@@ -17,7 +17,7 @@ If a table has another table element within it, this is probably a layout table.
 
 ### Appropriate headers
 
-If a table has made it this far, we look to see if there is an appropriate usage of <th> elements. If there is a group of <th> elements in a <thead> element, and especially if there are <th> elements with a scope attribute, then we are assuming the document author was thinking about a data table, and flag this as a data table.
+Next, check if there is an appropriate usage of `th` elements. If there is a group of `th` elements in a `thead` element, and especially if there are `th` elements with a scope attribute, then we are assuming the document author was thinking about a data table, and flag this as a data table.
 
 ### Cell spanning
 
@@ -31,52 +31,52 @@ We take a standard deviation for both content length and content type, then make
 
 ## Code
 
-```javascript
-isDataTable : function(table) {
-    //If there are less than three rows, why do a table?
-    if(table.find('tr').length < 3) {
-      return false;
-    }
-    //If you are scoping a table, it's probably not being used for layout
-    if(table.find('th[scope]').length) {
-      return true;
-    }
-    var numberRows = table.find('tr:has(td)').length;
-    //Check for odd cell spanning
-    var spanCells = table.find('td[rowspan], td[colspan]');
-    var isDataTable = true;
-    if(spanCells.length) {
-      var spanIndex = {};
-      spanCells.each(function() {
-        if(typeof spanIndex[$(this).index()] === 'undefined') {
-          spanIndex[$(this).index()] = 0;
-        }
-        spanIndex[$(this).index()]++;
-      });
-      $.each(spanIndex, function(index, count) {
-        if(count < numberRows) {
-          isDataTable = false;
-        }
-      });
-    }
-    //If there are sub tables, but not in the same column row after row, this is a layout table
-    var subTables = table.find('table');
-    if(subTables.length) {
-      var subTablesIndexes = {};
-      subTables.each(function() {
-        var parentIndex = $(this).parent('td').index();
-        if(parentIndex !== false && typeof subTablesIndexes[parentIndex] === 'undefined') {
-          subTablesIndexes[parentIndex] = 0;
-        }
-        subTablesIndexes[parentIndex]++;
-      });
-      $.each(subTablesIndexes, function(index, count) {
-        if(count < numberRows) {
-          isDataTable = false;
-        }
-      });
-    }
-    return isDataTable;
- },
- ```
+``` javascript
+function isDataTable (table) {
+  //If there are less than three rows, why do a table?
+  if(table.find('tr').length < 3) {
+    return false;
+  }
+  //If you are scoping a table, it's probably not being used for layout
+  if(table.find('th[scope]').length) {
+    return true;
+  }
+  var numberRows = table.find('tr:has(td)').length;
+  //Check for odd cell spanning
+  var spanCells = table.find('td[rowspan], td[colspan]');
+  var isDataTable = true;
+  if(spanCells.length) {
+    var spanIndex = {};
+    spanCells.each(function() {
+      if(typeof spanIndex[$(this).index()] === 'undefined') {
+        spanIndex[$(this).index()] = 0;
+      }
+      spanIndex[$(this).index()]++;
+    });
+    $.each(spanIndex, function(index, count) {
+      if(count < numberRows) {
+        isDataTable = false;
+      }
+    });
+  }
+  //If there are sub tables, but not in the same column row after row, this is a layout table
+  var subTables = table.find('table');
+  if(subTables.length) {
+    var subTablesIndexes = {};
+    subTables.each(function() {
+      var parentIndex = $(this).parent('td').index();
+      if(parentIndex !== false && typeof subTablesIndexes[parentIndex] === 'undefined') {
+        subTablesIndexes[parentIndex] = 0;
+      }
+      subTablesIndexes[parentIndex]++;
+    });
+    $.each(subTablesIndexes, function(index, count) {
+      if(count < numberRows) {
+        isDataTable = false;
+      }
+    });
+  }
+  return isDataTable;
+}
+```
 

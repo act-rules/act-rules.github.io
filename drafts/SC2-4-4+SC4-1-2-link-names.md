@@ -31,7 +31,7 @@ This rule checks that all links have an accessible name.
 |-------------------|----
 | Test name         | Links have an accessible name
 | Success Criterion | 2.4.4 Link Purpose (In Context), 4.1.2 Name, Role, Value
-| Test mode         | Automatic
+| Test mode         | automatic
 | Test environment  | Rendered page
 | Test subject      | Single web page
 
@@ -121,7 +121,7 @@ Else return:
 
 Test mode: [automatic][AUTO]
 
-Concatenate the selected element's `aria-label` attribute, and the [text content][NEMPTY] of an element referred to with the `aria-labeledby` attribute, in variable T3.
+Concatenate the selected element's `aria-label` attribute, and the [text content][TXTCNT] of an element referred to with the `aria-labeledby` attribute, in variable T3.
 
 If T3 contains [non-empty][NEMPTY] text, return:
 
@@ -144,3 +144,4 @@ Dlese, return:
 [NEMPTY]: ../pages/algorihms/none-empty.html
 [TXTALT]: ../pages/algorithms/text-alternative-compute.html
 [RNDTXT]: ../pages/algorithms/rendered-text.html
+[TXTCNT]: ../pages/algorithms/text-content.html

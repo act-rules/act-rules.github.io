@@ -14,7 +14,7 @@ layout: default
   </thead>
   {% for draft in site.drafts %}
   <tr>
-    <th><a href="{{ draft.url }}">{{
+    <th><a href="{{ draft.url | prepend: site.baseurl }}">{{
       draft.name
     }}<br>(<i>{{ draft.rule_id }}</i>)</a></th>
     <td>{{ draft.test_mode }}</td>

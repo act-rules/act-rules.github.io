@@ -16,7 +16,7 @@ layout: default
   </thead>
   {% for rule in site.rules %}
   <tr>
-    <th><a href="{{ rule.url }}">{{
+    <th><a href="{{ rule.url | prepend: site.baseurl }}">{{
       rule.name
     }}<br>(<i>{{ rule.rule_id }}</i>)</a></th>
     <td>{{ rule.test_mode }}</td>

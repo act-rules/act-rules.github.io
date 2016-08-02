@@ -3,7 +3,9 @@ layout: default
 title: {{ page.rule_id }}
 ---
 
-<p>Late updated: <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+{% if page.date %}
+  <p>Late updated: <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+{% endif %}
 
 {% if page.authors %}
   <p>Created by: {% for author in page.authors %}{%

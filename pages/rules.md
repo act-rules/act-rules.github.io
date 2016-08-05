@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # WCAG 2.0 
 
 ## Principle 1 Perceivable

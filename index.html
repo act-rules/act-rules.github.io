@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<h1>Auto-WCAG Rules</h1>
+
+<p>To learn about Auto-WCAG itself visit the auto-wcag Community Group website at <a href="https://www.w3.org/community/auto-wcag/">w3.org/community/auto-wcag/</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rule name</th>
+      <th>Test mode</th>
+      <th>WCAG criterion</th>
+    </tr>
+  </thead>
+  {% for rule in site.rules %}
+  <tr>
+    <th><a href="{{ rule.url | prepend: site.baseurl }}">{{
+      rule.name
+    }}<br>(<i>{{ rule.rule_id }}</i>)</a></th>
+    <td>{{ rule.test_mode }}</td>
+    <td><ul>
+      {% for criterion in rule.criteria %}
+        <li>
+          {% if site.data.criteria[criterion] %}
+            <a href="{{ site.data.criteria[criterion].url }}" target="_blank">
+            {{ site.data.criteria[criterion].num }}
+            {{ site.data.criteria[criterion].handle }}
+            (Level {{ site.data.criteria[criterion].level }})
+            </a>
+          {% else %}
+            {{ criterion }} (unknown)
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul></td>
+  </tr>
+  {% endfor %}
+</table>

@@ -1,0 +1,26 @@
+---
+layout: default
+title: {{ page.rule_id }}
+---
+
+{% if page.date %}
+  <p>Late updated: <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+{% endif %}
+
+{% if page.authors %}
+  <p>Created by: {% for author in page.authors %}{%
+      if site.data.contributors[author] 
+    %}<a href="{{ site.data.contributors[author].site }}">{{
+      	site.data.contributors[author].name
+    }}</a>{%
+  	  else
+  	%}{{  author  }}{%
+	  endif
+	%}{% 
+	  if forloop.last == false
+	%}, {%
+	  endif
+  %}{% endfor %}</p>
+{% endif %}
+
+{{ content }}

@@ -1,4 +1,6 @@
-# Auto-WCAG Terminology
+---
+title: Auto-WCAG Terminology
+---
 
 ## Rule
 
@@ -9,7 +11,6 @@ The rule defines:
  - a set of assumptions about the environment (e.g. the way in which technologies are used)
  - a set of logical steps to carry out the procedure
  - a set of possible results
-
 
 ## Test
 

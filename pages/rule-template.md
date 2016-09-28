@@ -18,8 +18,10 @@ For the name of the test case use the following format: **SC#-#-#-identifier**
 ```markdown
 ---
 rule_id: SC#-#-#-something
-name: 
+name:
 test_mode: automatic / semi-automatic / manual
+Environment: Source file / HTTP response / DOM / Rendered page
+
 
 criteria:
 - x.x.x # Criterion handle as a YAML comment + level
@@ -30,7 +32,31 @@ authors:
 
 ## Description
 
-This test checks ...
+This rule checks ...
+
+## Assumptions
+
+- Make a list
+
+## Test procedure
+
+### Selector
+
+Select all elements that match the following CSS selector:
+
+    *[role]
+
+### Step 1
+
+Check if at least one of the elements referenced by the valid `aria-describedby` attribute values exists.
+
+if yes, continue with [step 2](#step-2)
+
+else, return [step1-fail](#step1-fail)
+
+### Step 2
+
+...
 
 ## Background
 
@@ -41,51 +67,38 @@ This test checks ...
 - The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible auto-wcag refers to those. Another source for test cases is the W3C Before and After Demonstration.
 - Other references
 
-## Assumptions
 
-- Make a list
+## Outcome
 
-## Test properties
+The resulting assertion is as follows,
 
-| Properties        | Values
-|-------------------|-----------
-| Test name         | User friendly test name
-| Success criterion | x.x.x name
-| Test mode         | automated / semiautomated / manual
-| Test environment  | HTML, DOM, DOM + CSS, Rendered page, Rendered page + server, Webdriver
-| Test Subject      | Single page, multiple pages, web page state, Document fragment
-| User profile      | (optional) e.g. Requires sight
+  {
+    "@type": "Assertion",
+    "@id": "rule-id-fail-name",
+      "test": "auto-wcag:rule-id",
+      "subject": (selected element),
+      "mode": "automatic",
+      "result": (One TestResult from below)
+    }
 
-## Test procedure
+### step1-pass1
 
-### Selector
-
-Test method: [automatic][AUTO]
-
-How to get the right elements
-
-### Step 1
-
-Test method: [automatic][AUTO]
-
-Check if at least one of the elements referenced by the valid `aria-describedby` attribute values exists.
-
-if yes, continue with [step 2](#step-2)
-
-else, return
-
-| Outcome  | Failed
-|----------|-----
-| ID       | {{ page.rule_id }}-fail1
-| Error    | None of the elements referenced by aria-describedby exists.
-
-### Step 2
-
-Test method: [manual][MANUAL]
-
+    {
+      "@type": "TestResult",
+      "outcome": "Passed",
 ...
 
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual
+### step1-fail1
+
+    {
+      "@type": "TestResult",
+      "outcome": "Failed",
+      "description": "None of the elements referenced by aria-describedby exists."
+    }
+
+## Implementation Tests
+
+Implementation tests are available at [rulename tests](url)
+
 
 ```

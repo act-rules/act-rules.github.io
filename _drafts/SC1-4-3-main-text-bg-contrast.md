@@ -1,9 +1,19 @@
-# SC1-4-3-main-text-bg-contrast
+---
+rule_id: SC1-4-3-main-text-bg-contrast
+name: Main text background contrast
+test_mode: semi-automatic
+
+criteria:
+- 1.4.3 # Contrast (Minimum) (level AA)
+
+authors:
+- Emma Pratt Richens
+- Rob Fentress
+---
 
 ## Description
+
 This test checks that the main body of text content on a page contrasts sufficiently with the background, gradient or image behind it.
-
-
 
 ## Background
 
@@ -17,7 +27,6 @@ This test checks that the main body of text content on a page contrasts sufficie
 - It is possible to determine the text color
 - It is possible to determine the colors behind the text
 
-
 ## Test properties
 | Properties        | Values
 |-------------------|-----------
@@ -27,8 +36,6 @@ This test checks that the main body of text content on a page contrasts sufficie
 | Test environment  | DOM + CSS, Rendered page
 | Test Subject      | Web page state
 | User profile      | Requires sight
-
-
 
 ## Test procedure
 

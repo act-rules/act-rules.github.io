@@ -33,7 +33,7 @@ This test checks that the main body of text content on a page contrasts sufficie
 | Test name         | Main-text - background contrast
 | Success criterion | 1.4.3 Contrast minimum
 | Test mode         | SemiAuto
-| Test environment  | DOM + CSS, Rendered page
+| Test environment  | (DOM + CSS) Rendered page
 | Test Subject      | Web page state
 | User profile      | Requires sight
 

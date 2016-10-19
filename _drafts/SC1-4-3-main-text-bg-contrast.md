@@ -1,6 +1,6 @@
 ---
 rule_id: SC1-4-3-main-text-bg-contrast
-name: Main text background contrast
+name: Text-background contrast
 test_mode: semi-automatic
 
 criteria:
@@ -13,7 +13,7 @@ authors:
 
 ## Description
 
-This test checks that the main body of text content on a page contrasts sufficiently with the background, gradient or image behind it.
+This test checks that the text content on a page contrasts sufficiently with the background, gradient or image behind it.
 
 ## Background
 
@@ -25,24 +25,25 @@ This test checks that the main body of text content on a page contrasts sufficie
 - [F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text)](https://www.w3.org/TR/WCAG20-TECHS/F83.html)
 
 ## Assumptions
-- It is possible to determine what is the main body of text
-- The text is not an image
-- It is possible to determine the text color
-- It is possible to determine the colors behind the text
+- Code validates to a published grammar (eg. 4.1.1 and 4.1.2)
 
 ## Test properties
 | Properties        | Values
 |-------------------|-----------
-| Test name         | Main-text - background contrast
+| Test name         | Text-background contrast
 | Success criterion | 1.4.3 Contrast minimum
-| Test mode         | SemiAuto
-| Test environment  | (DOM + CSS) Rendered page
-| Test Subject      | Web page state
+| Test mode         | semiautomated
+| Test environment  | Rendered page
+| Test Subject      | Single page
 | User profile      | Requires sight
 
 ## Test procedure
 
 <!---
+Contrast of links to text and visited links etc is a separate criteria.
+
+For now this ruleset does not cover text in images, except SVG.
+
 Not sure about the order of the steps as there is no one situation that would pass without checking the others. Wonder if this would mean changing how things are grouped into:
 1. determine text stuff.
 2. determine ratio required.
@@ -52,16 +53,17 @@ Not sure about the order of the steps as there is no one situation that would pa
 
 
 ### Selector
-Test method: [automatic][earl:automatic]
+Test method: [automatic]
 
-Look at each text containing element within the main content container that is not empty.
-eg. body > main > (h*/p/li/label/span/div etc)
+Find each text node within the page.
+eg. node.nodeType = 3;
+eg. //\*[text()]
 
 
-For each text element:
+For each text node:
 
 ### Step 1
-Test method: [automatic][earl:automatic]
+Test method: [automatic]
 
 - determine the computed text color, size and weight.
 - determine the nearest ancestor with a computed background color.
@@ -75,7 +77,7 @@ Test method: [automatic][earl:automatic]
 
 
 ### Step 2
-Test method: [automatic][earl:automatic]
+Test method: [automatic]
 
 - determine if there is another element, eg a sibling, positioned behind the text.
 - determine that element's background color.
@@ -84,7 +86,7 @@ Test method: [automatic][earl:automatic]
 
 
 ### Step 3
-Test method: [automatic][earl:automatic]
+Test method: [automatic]
 
 - determine if the nearest ancestor or other element has a programatic gradient background.
 - determine the direction of the gradient.
@@ -94,7 +96,7 @@ Test method: [automatic][earl:automatic]
 
 
 ###Step 4
-Test method: [automatic][earl:automatic]
+Test method: [automatic]
 
 - determine if the text has a border and/or shadow.
 - determine the width of border/shadow above/below/left/right of the text.
@@ -107,7 +109,7 @@ Test method: [automatic][earl:automatic]
 
 
 ###Step 5
-Test method: [semiauto][earl:semiauto]
+Test method: [semiauto]
 
 - determine if any of the background, gradient, border or shadow colors are semi-opaque.
 - when comparing with the text color, calculate the semi-opaque color as though the text color were behind it.
@@ -118,7 +120,7 @@ Test method: [semiauto][earl:semiauto]
 
 
 ### Step 6
-Test method: [manual][earl:manual]
+Test method: [manual]
 
 - determine if background behind the text is an image.
 - determine that there is no border/shadow/semi-opaque layer to help with contrast.
@@ -129,8 +131,7 @@ Test method: [manual][earl:manual]
 (an image background must still have a background color behind it with the required color contrast, in case the image does not load)
 
 
+...
 
-
-[earl:automatic]: ../earl/automatic.md
-[earl:semiauto]: ../earl/semiauto.md
-[earl:manual]: ../earl/manual.md
+[AUTO]: ../pages/test-modes.html#automatic
+[MANUAL]: ../pages/test-modes.html#manual

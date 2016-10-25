@@ -1,5 +1,5 @@
 ---
-rule_id: SC1-4-3-main-text-bg-contrast
+rule_id: SC1-4-3-text-bg-contrast
 name: Text-background contrast
 test_mode: semi-automatic
 
@@ -61,6 +61,10 @@ eg. //\*[text()]
 
 
 For each text node:
+Step 1
+Does text node have a foreground color set if yes, step 2
+Step 2
+Does te a background color set
 
 ### Step 1
 Test method: [automatic]
@@ -69,7 +73,9 @@ Test method: [automatic]
 - determine the nearest ancestor with a computed background color.
 - determine if that ancestor is still positioned behind the text (text not re-positioned).
 - determine that ancestor's background color.
-- determine the contrast ratio required.
+- determine the contrast ratio required. 
+    - If bold and font-size*72/96 is less than 14, then if contrast ratio is greater than or equal to 4.5
+    - If not bold and font-size*72/96 is less than 18, then if contrast ratio is greater than or equal to 18 then it has a valid contrast ratio
 - determine the contrast ratio of the text color and background color.
 - determine if it meets the required contrast ratio.
 
@@ -79,7 +85,7 @@ Test method: [automatic]
 ### Step 2
 Test method: [automatic]
 
-- determine if there is another element, eg a sibling, positioned behind the text.
+- determine if there is another element, eg a sibling (**could it be anything else, such as a child?**), positioned behind the text.
 - determine that element's background color.
 - determine the contrast ratio of the text color and this background color.
 - determine if it meets the required contrast ratio.
@@ -92,7 +98,7 @@ Test method: [automatic]
 - determine the direction of the gradient.
 - determine the background color closest to the text in the direction where the shade is most similar to the text color.
 - determine the contrast ratio of the text color and this background color.
-- determine if it meets the required contrast ratio.
+- determine if it meets the required contrast ratio. **Is this sufficient?  This only determines one portion of the contrast**
 
 
 ###Step 4
@@ -116,7 +122,7 @@ Test method: [semiauto]
 - determine the contrast ratio of the text color and the calculated semi-opaque color.
 - determine if it meets the required contrast ratio.
 
-(semi-opaque backgrounds are often employed to help provide sufficitent contrast with a variable background such as an image, where the poorest contrast would be where part of that variable background is the same shade as the text color)
+(semi-opaque backgrounds are often employed to help provide sufficient contrast with a variable background such as an image, where the poorest contrast would be where part of that variable background is the same shade as the text color)
 
 
 ### Step 6

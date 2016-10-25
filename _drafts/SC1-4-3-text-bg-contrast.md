@@ -13,7 +13,7 @@ authors:
 
 ## Description
 
-This test checks that the text content on a page contrasts sufficiently with the background, gradient or image behind it.
+This test checks that the text nodes on a page contrast sufficiently with the background, gradient or image behind them.
 
 ## Background
 
@@ -42,13 +42,18 @@ This test checks that the text content on a page contrasts sufficiently with the
 <!---
 Contrast of links to text and visited links etc is a separate criteria.
 
-For now this ruleset does not cover text in images, except SVG.
+For now this ruleset does not cover text in images, except SVG, or text in canvas or video elements or WebGL or Flash etc.
 
 Not sure about the order of the steps as there is no one situation that would pass without checking the others. Wonder if this would mean changing how things are grouped into:
 1. determine text stuff.
 2. determine ratio required.
 3. determine what to contrast it with (and if test can be automated).
 4. check if requirement is met.
+
+ - gradient text??  text masks??  filters on text/bg rendered or not??
+ - not aliased text for pixel to pixel comparison with background image, return percentage of checks that pass
+ - what about canvas or video behind text??
+ - Should this also apply to PDF??
 -->
 
 
@@ -66,7 +71,7 @@ Does text node have a foreground color set if yes, step 2
 Step 2
 Does te a background color set
 
-### Step 1
+### Scenario 1 - text and ancestor background colors
 Test method: [automatic]
 
 - determine the computed text color, size and weight.
@@ -82,7 +87,7 @@ Test method: [automatic]
 (an unstyled page should pass this, as should a page where an image fails to load or a newer style is unsupported)
 
 
-### Step 2
+### Scenario 2 - non-ancestor positioned behind text
 Test method: [automatic]
 
 - determine if there is another element, eg a sibling (**could it be anything else, such as a child?**), positioned behind the text.
@@ -91,7 +96,7 @@ Test method: [automatic]
 - determine if it meets the required contrast ratio.
 
 
-### Step 3
+### Scenario 3 - element behind text also has a programmatic gradient
 Test method: [automatic]
 
 - determine if the nearest ancestor or other element has a programatic gradient background.
@@ -101,7 +106,7 @@ Test method: [automatic]
 - determine if it meets the required contrast ratio. **Is this sufficient?  This only determines one portion of the contrast**
 
 
-###Step 4
+### Scenario 4 - text has properties that could be considered the background
 Test method: [automatic]
 
 - determine if the text has a border and/or shadow.
@@ -114,7 +119,7 @@ Test method: [automatic]
 (a text border/shadow of sufficient width may help provide sufficient contrast)
 
 
-###Step 5
+### Scenario 5 - the background (whatever it is) has opacity less than solid
 Test method: [semiauto]
 
 - determine if any of the background, gradient, border or shadow colors are semi-opaque.
@@ -125,10 +130,10 @@ Test method: [semiauto]
 (semi-opaque backgrounds are often employed to help provide sufficient contrast with a variable background such as an image, where the poorest contrast would be where part of that variable background is the same shade as the text color)
 
 
-### Step 6
+### Scenario 6 - the background is varied, such as an image
 Test method: [manual]
 
-- determine if background behind the text is an image.
+- determine if background behind the text is an image (or canvas or HTML video???).
 - determine that there is no border/shadow/semi-opaque layer to help with contrast.
 - determine the color of a suitable number of samples from the image beside the text.
 - determine the contrast ratio of the text color and each of these sampled colors.

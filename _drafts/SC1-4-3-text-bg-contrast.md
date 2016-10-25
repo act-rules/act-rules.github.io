@@ -71,6 +71,56 @@ Does text node have a foreground color set if yes, step 2
 Step 2
 Does te a background color set
 
+
+### Step 1
+Test method: [automatic][AUTO]
+
+Check if the text node has an applied color property (ie. not default).
+
+if no, continue with [step 2](#step-2)
+
+else, continue with [step 3](#step-3)
+
+
+### Step 2
+Test method: [automatic][AUTO]
+
+Check if there is a background applied behind the text (ie. not default).
+
+if yes, return a fail
+
+| Outcome  | Failed
+|----------|-----
+| ID       | {{ page.rule_id }}-fail2
+| Error    | Text node has no color property, but there is a background set behind it.
+
+else, return a pass
+
+| Outcome  | Pass
+|----------|-----
+| ID       | {{ page.rule_id }}-pass2
+
+
+### Step 3
+Test method: [automatic][AUTO]
+
+Check if there is a background color applied behind the text (ie. not default). (Note: which element?)
+
+if yes, return a pass
+
+| Outcome  | Pass
+|----------|-----
+| ID       | {{ page.rule_id }}-pass3
+
+else, return a fail
+
+| Outcome  | Failed
+|----------|-----
+| ID       | {{ page.rule_id }}-fail3
+| Error    | Text node has color property, but there is no background colour set behind it.
+
+---
+
 ### Scenario 1 - text and ancestor background colors
 Test method: [automatic]
 

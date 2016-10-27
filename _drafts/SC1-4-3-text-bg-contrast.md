@@ -50,10 +50,10 @@ Not sure about the order of the steps as there is no one situation that would pa
 3. determine what to contrast it with (and if test can be automated).
 4. check if requirement is met.
 
- - gradient text??  text masks??  filters on text/bg rendered or not??
- - not aliased text for pixel to pixel comparison with background image, return percentage of checks that pass
- - what about canvas or video behind text??
- - Should this also apply to PDF??
+ - gradient text?  text masks?  filters on text/bg rendered or not? - Wilco: deal with basic stuff first and note this for future work.
+ - not aliased text for pixel to pixel comparison with background image, return percentage of checks that pass, is this too detailed an approach? - Frank: shared http://www.brandwood.com/a11y/ which grabs a selection of colours from the bg image and compares with text colour and produces a range of results.
+ - what about canvas or video behind text? - Wilco: start with deferring to a human, looking deeper can happen later.
+ - Should this also apply to PDF? - Wilco: no, only HTML (and probably not SVG - be explicit in assumptions/selector).
 -->
 
 

@@ -1,6 +1,6 @@
 ---
 rule_id: SC1-3-1-p-as-heading
-name: 
+name:
 test_mode: semi-automatic
 
 criteria:
@@ -12,11 +12,14 @@ authors:
 
 ## Description
 
-...
+This rule tests p elements, to ensure they should not have been marked up as a heading.
 
 ## Background
 
-...
+- https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html
+- https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/H42
+- https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G141
+- http://accessibility.psu.edu/headingshtml/
 
 ## Assumptions
 
@@ -34,6 +37,7 @@ Select each `p` element that meets the following:
 - It contains non-empty text
 - It has one or more sibling `p` elements after it
 - It does not contain a text paragraph (see definition)
+- It does not have a role attribute
 
 ### Step 1: Differing style
 
@@ -112,8 +116,8 @@ Ask the user to make a final judgment of the possible header.
 |----------------------|---------
 | Presented item       | selected element
 | Requires context     | yes
-| Question             | ...
-| Help                 | ...
+| Question             | Is this element a heading for the section following it?
+| Help                 | Headings are a name or brief description for of an area on a (web) page. They give structure to a page, and are often used to skim the page.
 
 If yes, return
 
@@ -137,7 +141,7 @@ Text paragraph:
 
 Defining text style:
 
-: Locate the highest element that could be used to style all the text in 
+: Locate the highest element that could be used to style all the text in
   the element. The computed style of this element is the Defining text style
 
   Example: Here the `i` element can style all text
@@ -146,7 +150,7 @@ Defining text style:
   <p>  <i>Text <b>here</b></i> </p>
   ```
 
-## Cases
+## Implementation tests
 
 ### Inapplicable
 
@@ -230,7 +234,7 @@ Cant tell 2:
 	<p><b>A paragraph!</b></p>
 	<p>A paragraph!</p>
 
-Cant tell 3: 
+Cant tell 3:
 
 	<blockquote>
 	  <p><i>Some text</i></p>

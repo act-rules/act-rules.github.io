@@ -46,7 +46,16 @@ else, return [step1-fail](#step1-fail)
 
 ### Step 2
 
-...
+Give the user the following question:
+
+| Property     | Value
+|--------------|---------
+| Highlight    | Element A1 and B2
+| Question     | Does T2 provide an extended description of the image additionally to T1?
+| Help         | If the image contributes meaning to the page or provide any functionality or conveys information additional to the pages text, this must be described.
+| User profile | Requires <sight / hearing / fine motor control / HTML Knowledge / Accessibility knowledge / ...>
+| context      | yes | Optional
+| Interaction  | yes | Optional
 
 ## Background
 

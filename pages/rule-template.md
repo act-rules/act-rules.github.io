@@ -9,12 +9,11 @@ Use the [empty test template](rule-template-empty.md) to create new auto-wcag ru
 ```markdown
 ---
 rule_id: SC#-#-#-something
-name:
+name: Short descriptive name
 test_mode: automatic / semi-automatic / manual
-Environment: Source file / HTTP response / DOM / Rendered page
+Environment: Markup Document / DOM Structure / Web Browser / WebDriver
 
-
-criteria:
+success_criterion:
 - x.x.x # Criterion handle as a YAML comment + level
 
 authors:

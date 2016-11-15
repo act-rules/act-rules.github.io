@@ -99,4 +99,10 @@ The resulting assertion is as follows,
 
 Implementation tests are available at: [rulename tests](rule-id.test.md)
 
+## Change log
+
+### Version 1.1
+- Something
+- Something else
+
 ```

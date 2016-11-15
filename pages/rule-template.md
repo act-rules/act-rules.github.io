@@ -66,38 +66,37 @@ Give the user the following question:
 - The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible auto-wcag refers to those. Another source for test cases is the W3C Before and After Demonstration.
 - Other references
 
-
 ## Outcome
 
 The resulting assertion is as follows,
 
-  {
-    "@type": "Assertion",
-    "@id": "rule-id-fail-name",
-      "test": "auto-wcag:rule-id",
-      "subject": (selected element),
-      "mode": "automatic",
-      "result": (One TestResult from below)
-    }
-
-### step1-pass1
-
-    {
-      "@type": "TestResult",
-      "outcome": "Passed",
-...
+| Property | Value
+|----------|----------
+| type     | Assertion
+| id       | rule-id-fail-name
+| test     | auto-wcag:rule-id
+| subject  | *the selected element*
+| mode     | automatic
+| result   | <One TestResult from below>
 
 ### step1-fail1
 
-    {
-      "@type": "TestResult",
-      "outcome": "Failed",
-      "description": "None of the elements referenced by aria-describedby exists."
-    }
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | None of the elements referenced by aria-describedby exists.
+
+### step1-pass1
+
+| Property | Value
+|----------|----------
+| type     | TestResult
+| outcome  | Passed
+| ...      | ...
 
 ## Implementation Tests
 
-Implementation tests are available at [rulename tests](url)
-
+Implementation tests are available at: [rulename tests](rule-id.test.md)
 
 ```

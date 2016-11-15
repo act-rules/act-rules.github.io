@@ -1,5 +1,5 @@
 ---
-rule_id: SC1-4-1-link-in-text-style
+rule_id: SC1-4-1-link-style-in-text
 name: Inline links are distinguishable
 test_mode: automatic
 
@@ -20,14 +20,14 @@ This rule checks that links that are embedded in a block of text can be distingu
 - [G183: Using a contrast ratio of 3:1 with surrounding text and providing additional visual cues on focus for links or controls where color alone is used to identify them](http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G183)
 - [C15: Using CSS to change the presentation of a user interface component when it receives focus](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/C15:)
 - [Color contrast (WCAG 2.0 definition)](http://www.w3.org/TR/WCAG20/#contrast-ratiodef)
+- [Axe-core implementation of link-in-text-block](https://dequeuniversity.com/rules/worldspace/2.0/link-in-text-block)
 
 ## Assumptions
 
-- This test assumes that the 3:1 contrast difference between text is minimal to what would be sufficient to meet WCAG 2.0. This value is part of G183 technique, but is not specified in the 1.4.1 success criterion.
-- This tests assumes that one of the following shorthand CSS-properties (or the related expanded properties) is used to make the link visually evident: `background`, `border`, `color`, `font`, or `text-decoration`.
-- This test assumes that any use of border will make links sufficiently distinguishable
-- This test assumes that the different font is presented to the user.
-- Use of a `border`, of 1 or more pixels, not set to none, and not with a color of transparent, is assumed to be distinguishable
+- This test assumes that the 3:1 contrast difference between text is minimal to what would be sufficient to meet WCAG 2.0. This value is part of technique G183, but is not specified in the 1.4.1 success criterion.
+- This tests assumes that one of the following shorthand CSS properties (or the related expanded properties e.g. `background-color`) is used to make the link visually evident: `background`, `color`, `font`, or `text-decoration`.
+- This test assumes that any change in font is sufficiently distinguishable, and that fonts are loaded when they are present.
+- Use of a `border`, of 1 or more pixels, not set to none, and not with a color of transparent, is assumed to be sufficiently distinguishable
 
 ## Test properties
 
@@ -43,15 +43,13 @@ This rule checks that links that are embedded in a block of text can be distingu
 
 ## Test procedure
 
-*Note*: This rule requires applying focus and hover. The page should be restored to it's original test state after this rule hs completed.
-
 ### Selector
 
 Test mode: [automatic][AUTO]
 
-1. Select each element that matches `a[href]:not(role), *[role=link]` 
+1. Select each element that matches `a[href]:not(role), *[role=link]`
 
-2. From this, take elements that meet the following requirements:
+2. From this list, select elements that meet the following requirements:
 
   - `link.textContent` is [non-empty][NEMPTY] text
   - Its nearest ancestor that is a [block-like element](#block-like-element) has:
@@ -77,11 +75,11 @@ Else continue with [Step 2](#step-2-link-contrast)
 
 Test mode: [automatic][AUTO]
 
-Determine `color` and `background-color` of the link and it's block-like ancestor. If the background-color is transparent, use getElementsFromPoint to locate the closest underlying element that does have a `background-color` and use that value.
+Determine `color` and `background-color` of the link and it's block-like ancestor. If the background-color is transparent, locate the closest underlying element that does have a `background-color` and use that value. (GetElementsFromPoint can be used for this.)
 
 1. C1 = contrast difference of surrounding text `color` and link `color`
 
-2. C2 = contrast difference surrounding text `background-colo` and link `background-color`
+2. C2 = contrast difference surrounding text `background-color` and link `background-color`
 
 If C1 or C2 is more than 3:1, continue with [Step 3](#step-3-focus-state)
 
@@ -142,7 +140,7 @@ Else, return:
 
 From the element, get the computed CSS value of the `display` property.
 
-Check that the value is not `inline` or starts with `inline-`.
+Check that the value is not `inline` or `ruby` or starts with `inline-` or `ruby-`.
 
 If yes, the element is a block-like element.
 
@@ -158,11 +156,11 @@ For one of these to be a distinguishing border, all the following must be true:
 
 If either `border-top`, `border-bottom` or `outline` is distinguishable, the link has a distinguishing border.
 
-### Distinguishing Style 
+### Distinguishing Style
 
-Next, compare the style properties `font-family`, `font-weight`, `font-style`, `text-decoration` of the link, to that of the block-like ancestor. 
+Next, compare the style properties `font-family`, `font-weight`, `font-style`, `text-decoration` of the link, to that of the block-like ancestor.
 
-If any of the properties have a different value for the one then for the other, the style is distinguishable.
+If any of the properties have a different value for the one than for the other, the style is distinguishable.
 
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual

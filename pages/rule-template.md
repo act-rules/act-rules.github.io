@@ -11,7 +11,7 @@ Use the [empty test template](rule-template-empty.md) to create new auto-wcag ru
 rule_id: SC#-#-#-something
 name: Short descriptive name
 test_mode: automatic / semi-automatic / manual
-Environment: Markup Document / DOM Structure / Web Browser / WebDriver
+environment: Markup Document / DOM Structure / Web Browser / WebDriver
 
 success_criterion:
 - x.x.x # Criterion handle as a YAML comment + level

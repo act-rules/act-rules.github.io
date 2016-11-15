@@ -32,9 +32,9 @@ This rule checks ...
 
 ### Selector
 
-Select all elements that match the following CSS selector:
+Select all elements that <has / matches> the following < CSS selector / XPATH selector / features>:
 
-    *[role]
+    * > selector[type=css]
 
 ### Step 1
 

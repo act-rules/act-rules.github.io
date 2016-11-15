@@ -2,18 +2,9 @@
 title: Auto-WCAG Rule Template
 ---
 
-The test template contains a plain language description of the test, some background information, and a list of all assumptions. The test properties are summarized in a table. The actual test is defined by the selector, a number of steps and a formal description of the test outcomes.
+The rule template contains a plain language description of the rule, some background information, and a list of all assumptions. The test procedure is defined by the selector, a number of steps and a description of the possible outcomes.
 
-The format of the test properties and outcomes is aligned with EARL.
-Use the [empty test template](rule-template-empty.md) to create new auto-wcag tests on this wiki.
-
-For the name of the test case use the following format: **SC#-#-#-identifier**
-
-- **SC#-#-#**: This is an identifier for the criterion to which the test case applies. #-#-# stands for the number of that criterion, such as SC4-1-2.
-
-- **+SC#-#-#**: This can be used if the test case applies to multiple success criteria, such as SC1-1-1+SC4-1-2-identifier. The numbers are in the same order as they are used in WCAG.
-
-- **identifier**: This must be a lower case identifier of the test, preferable no more then 3 words. It can only contain alphanumeric values or a dash (-).
+Use the [empty test template](rule-template-empty.md) to create new auto-wcag rule. When creating a new rule, first read [rule design](rule-design.md).
 
 ```markdown
 ---

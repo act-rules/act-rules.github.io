@@ -2,8 +2,9 @@
 rule_id: SC1-4-3-text-bg-contrast
 name: Text-background contrast
 test_mode: semi-automatic
+environment: web browser
 
-criteria:
+success_criterion:
 - 1.4.3 # Contrast (Minimum) (level AA)
 
 authors:
@@ -15,7 +16,7 @@ authors:
 
 This test checks that the text nodes on a page contrast sufficiently with the background, gradient or image behind them.
 
-## Background
+### Background
 
 - [Understanding SC 1.4.3](https://www.w3.org/TR/2014/NOTE-UNDERSTANDING-WCAG20-20140311/visual-audio-contrast-contrast.html)
 - [Contrast (Minimum) Understanding SC 1.4.3](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
@@ -26,16 +27,10 @@ This test checks that the text nodes on a page contrast sufficiently with the ba
 
 ## Assumptions
 - Code validates to a published grammar (eg. 4.1.1 and 4.1.2)
+- Only checking HTML text nodes, not text in images
+- Requires a rendered page (manual steps will require sight)
+- Only checking text nodes on a single page at a time
 
-## Test properties
-| Properties        | Values
-|-------------------|-----------
-| Test name         | Text-background contrast
-| Success criterion | 1.4.3 Contrast minimum
-| Test mode         | semiautomated
-| Test environment  | Rendered page
-| Test Subject      | Single page
-| User profile      | Requires sight
 
 ## Test procedure
 

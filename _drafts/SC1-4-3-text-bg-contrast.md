@@ -53,68 +53,76 @@ Not sure about the order of the steps as there is no one situation that would pa
 
 
 ### Selector
-Test method: [automatic]
 
-Find each text node within the page.
-eg. node.nodeType = 3;
-eg. //\*[text()]
-
-
-For each text node:
-Step 1
-Does text node have a foreground color set if yes, step 2
-Step 2
-Does te a background color set
+Select all elements that match the following XPath or Javascript selector:
+* //\*[text()]
+* node.nodeType = 3;
 
 
 ### Step 1
-Test method: [automatic][AUTO]
 
 Check if the text node has an applied color property (ie. not default).
 
 if no, continue with [step 2](#step-2)
-
 else, continue with [step 3](#step-3)
 
+### Step 2 (text node is default)
 
-### Step 2
-Test method: [automatic][AUTO]
+Check if there is a background applied behind the text (ie. not default). <!-- Note: which element? -->
 
-Check if there is a background applied behind the text (ie. not default).
+if yes, return [step2-fail](#step2-fail)
+else, continue with [step 5](#step-5)
 
-if yes, return a fail
+### Step 3 (text node is colored)
 
-| Outcome  | Failed
-|----------|-----
-| ID       | {{ page.rule_id }}-fail2
-| Error    | Text node has no color property, but there is a background set behind it.
+Check if there is a background color applied behind the text (ie. not default). <!-- Note: which element? -->
 
-else, return a pass
+if no, return [step3-fail](#step3-fail)
+else, continue with [step 4](#step-4)
 
-| Outcome  | Pass
-|----------|-----
-| ID       | {{ page.rule_id }}-pass2
+### Step 4
+
+Check if the colors applied to text and background contrast sufficiently for the size and boldness of text. <!-- Note: this will need some detail about ratios, text sizes, etc. -->
+
+if yes, return [step4-fail](#step4-fail)
+else, continue with [step 5](#step-5)
+
+### Step 5
+
+Check if something else is applying colour to background or text. <!-- Note: getting into Scenario 2 - should this move to a different rule? Or stay here? -->
 
 
-### Step 3
-Test method: [automatic][AUTO]
+## Outcome
 
-Check if there is a background color applied behind the text (ie. not default). (Note: which element?)
+### step2-fail
 
-if yes, return a pass
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Text node has no color property, but there is a background set behind it.
 
-| Outcome  | Pass
-|----------|-----
-| ID       | {{ page.rule_id }}-pass3
+### step3-fail
 
-else, return a fail
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Text node has color property, but there is no background colour set behind it.
 
-| Outcome  | Failed
-|----------|-----
-| ID       | {{ page.rule_id }}-fail3
-| Error    | Text node has color property, but there is no background colour set behind it.
+### step4-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Text node color property and background colour property no not contrast sufficiently (for the text size and weight).
+
+
 
 ---
+
+## Scenarios (visible notes during rule development)
 
 ### Scenario 1 - text and ancestor background colors
 Test method: [automatic]

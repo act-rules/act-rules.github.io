@@ -89,7 +89,7 @@ else, continue with [step 5](#step-5)
 
 ### Step 5
 
-Check if something else is applying colour to background or text. <!-- Note: getting into Scenario 2 - should this move to a different rule? Or stay here? -->
+Check if something else is applying color to background or text. <!-- Note: getting into Scenario 2 - should this move to a different rule? Or stay here? -->
 
 
 ## Outcome
@@ -100,7 +100,7 @@ Check if something else is applying colour to background or text. <!-- Note: get
 |-------------|----------
 | type        | TestResult
 | outcome     | Failed
-| description | Text node has no color property, but there is a background set behind it.
+| description | Text node has no color property, but there is a background color set behind it.
 
 ### step3-fail
 
@@ -108,7 +108,7 @@ Check if something else is applying colour to background or text. <!-- Note: get
 |-------------|----------
 | type        | TestResult
 | outcome     | Failed
-| description | Text node has color property, but there is no background colour set behind it.
+| description | Text node has color property, but there is no background color set behind it.
 
 ### step4-fail
 
@@ -116,7 +116,7 @@ Check if something else is applying colour to background or text. <!-- Note: get
 |-------------|----------
 | type        | TestResult
 | outcome     | Failed
-| description | Text node color property and background colour property no not contrast sufficiently (for the text size and weight).
+| description | Text node color property and background color property no not contrast sufficiently (for the text size and weight).
 
 
 

@@ -9,14 +9,14 @@ title: {{ page.rule_id }}
 
 {% if page.authors %}
   <p>Created by: {% for author in page.authors %}{%
-      if site.data.contributors[author] 
+      if site.data.contributors[author]
     %}<a href="{{ site.data.contributors[author].site }}">{{
       	site.data.contributors[author].name
     }}</a>{%
   	  else
   	%}{{  author  }}{%
 	  endif
-	%}{% 
+	%}{%
 	  if forloop.last == false
 	%}, {%
 	  endif

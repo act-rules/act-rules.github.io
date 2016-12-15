@@ -22,8 +22,10 @@ This test checks that the text nodes on a page contrast sufficiently with the ba
 - [Contrast (Minimum) Understanding SC 1.4.3](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 - [G18: Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text](https://www.w3.org/TR/WCAG20-TECHS/G18)
 - [G145: Ensuring that a contrast ratio of at least 3:1 exists between text (and images of text) and background behind the text](https://www.w3.org/TR/WCAG20-TECHS/G145)
-- [F24: specifying foreground colors without specifying background colors](https://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/F24)
+- [F24: specifying foreground colors without specifying background colors](https://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/F24) 
 - [F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text)](https://www.w3.org/TR/WCAG20-TECHS/F83.html)
+
+<!-- the F24 scenario should probably be kept separate from the rest of the colour contrast stuff ... but would these still need to be checked for suitable contrast?? -->
 
 ## Assumptions
 - Code validates to a published grammar (eg. 4.1.1 and 4.1.2)
@@ -34,7 +36,7 @@ This test checks that the text nodes on a page contrast sufficiently with the ba
 
 ## Test procedure
 
-<!---
+<!--
 Contrast of links to text and visited links etc is a separate criteria.
 
 For now this ruleset does not cover text in images, except SVG, or text in canvas or video elements or WebGL or Flash etc.

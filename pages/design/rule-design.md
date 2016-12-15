@@ -26,7 +26,7 @@ For the name of the test case use the following format: **SC#-#-#-identifier**
 
 - **+SC#-#-#**: This can be used if the test case applies to multiple success criteria, such as SC1-1-1+SC4-1-2-identifier. The numbers are in the same order as they are used in WCAG.
 
-- **identifier**: This must be a lower case identifier of the test, preferable no more then 3 words. It can only contain alphanumeric values or a dash (-).
+- **identifier**: This must be a lower case identifier of the test, preferably no more then 3 words. It can only contain alphanumeric values or a dash (-).
 
 ## Assumptions
 

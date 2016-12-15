@@ -4,6 +4,12 @@ The Auto-WCAG Rules repository is where the Auto-WCAG community group maintains 
 
 Visit the [Auto-WCAG Rules website](https://auto-wcag/github.io/auto-wcag/_site/) for the latest rules and drafts.
 
+## Related W3C Activities
+
+The Auto-WCAG Community Group is the primary contributor of rules to the Accessibility Conformance Testing (ACT) Taskforce for the W3C. The ACT Taskforce is currently developing the standard around which rules can be created, and is planning to put together a suite of rules on how WCAG 2 (and beyond) should be tested.
+
+For more information, see [ACT Overview - What is ACT](https://www.w3.org/WAI/GL/task-forces/conformance-testing/wiki/ACT_Overview_-_What_is_ACT).
+
 ## Write rules, not tools
 
 An Auto-WCAG rule is a step by step description of how an accessibility test tool should run a certain conformance test for the [Web Content Accessibility Guidelines][WCAG20]. The rules are written without a specific implementation in mind. The goal is not to create an accessibility test tool. Instead we aim to harmonize between existing tools, and improve their transparency and the overall quality of their results.

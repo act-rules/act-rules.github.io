@@ -2,26 +2,18 @@
 title: Auto-WCAG Rule Template
 ---
 
-The test template contains a plain language description of the test, some background information, and a list of all assumptions. The test properties are summarized in a table. The actual test is defined by the selector, a number of steps and a formal description of the test outcomes.
+The rule template contains a plain language description of the rule, some background information, and a list of all assumptions. The test procedure is defined by the selector, a number of steps and a description of the possible outcomes.
 
-The format of the test properties and outcomes is aligned with EARL.
-Use the [empty test template](rule-template-empty.md) to create new auto-wcag tests on this wiki.
-
-For the name of the test case use the following format: **SC#-#-#-identifier**
-
-- **SC#-#-#**: This is an identifier for the criterion to which the test case applies. #-#-# stands for the number of that criterion, such as SC4-1-2.
-
-- **+SC#-#-#**: This can be used if the test case applies to multiple success criteria, such as SC1-1-1+SC4-1-2-identifier. The numbers are in the same order as they are used in WCAG.
-
-- **identifier**: This must be a lower case identifier of the test, preferable no more then 3 words. It can only contain alphanumeric values or a dash (-).
+Use the [empty test template](rule-template-empty.md) to create new auto-wcag rule. When creating a new rule, first read [rule design](rule-design.md).
 
 ```markdown
 ---
 rule_id: SC#-#-#-something
-name: 
+name: Short descriptive name
 test_mode: automatic / semi-automatic / manual
+environment: Markup Document / DOM Structure / Web Browser / WebDriver
 
-criteria:
+success_criterion:
 - x.x.x # Criterion handle as a YAML comment + level
 
 authors:
@@ -30,7 +22,7 @@ authors:
 
 ## Description
 
-This test checks ...
+This rule checks ...
 
 ## Background
 
@@ -45,47 +37,72 @@ This test checks ...
 
 - Make a list
 
-## Test properties
-
-| Properties        | Values
-|-------------------|-----------
-| Test name         | User friendly test name
-| Success criterion | x.x.x name
-| Test mode         | automated / semiautomated / manual
-| Test environment  | HTML, DOM, DOM + CSS, Rendered page, Rendered page + server, Webdriver
-| Test Subject      | Single page, multiple pages, web page state, Document fragment
-| User profile      | (optional) e.g. Requires sight
-
 ## Test procedure
 
 ### Selector
 
-Test method: [automatic][AUTO]
+Select all elements that <has / matches> the following < CSS selector / XPATH selector / features>:
 
-How to get the right elements
+    * > selector[type=css]
 
 ### Step 1
-
-Test method: [automatic][AUTO]
 
 Check if at least one of the elements referenced by the valid `aria-describedby` attribute values exists.
 
 if yes, continue with [step 2](#step-2)
 
-else, return
-
-| Outcome  | Failed
-|----------|-----
-| ID       | {{ page.rule_id }}-fail1
-| Error    | None of the elements referenced by aria-describedby exists.
+else, return [step1-fail](#step1-fail)
 
 ### Step 2
 
-Test method: [manual][MANUAL]
+Give the user the following question:
 
-...
+| Property     | Value
+|--------------|---------
+| Highlight    | Element A1 and B2
+| Question     | Does T2 provide an extended description of the image additionally to T1?
+| Help         | If the image contributes meaning to the page or provide any functionality or conveys information additional to the pages text, this must be described.
+| User profile | Requires <sight / hearing / fine motor control / HTML Knowledge / Accessibility knowledge / ...>
+| context      | yes | Optional
+| Interaction  | yes | Optional
 
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual
+## Outcome
+
+The resulting assertion is as follows,
+
+| Property | Value
+|----------|----------
+| type     | Assertion
+| id       | rule-id-fail-name
+| test     | auto-wcag:rule-id
+| subject  | *the selected element*
+| mode     | automatic
+| result   | <One TestResult from below>
+
+### step1-fail1
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | None of the elements referenced by aria-describedby exists.
+
+### step1-pass1
+
+| Property | Value
+|----------|----------
+| type     | TestResult
+| outcome  | Passed
+| ...      | ...
+
+## Implementation Tests
+
+Implementation tests are available at: [rulename tests](rule-id.test.md)
+
+## Change log
+
+### Version 1.1
+- Something
+- Something else
 
 ```

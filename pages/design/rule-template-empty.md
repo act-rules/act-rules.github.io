@@ -1,51 +1,73 @@
 ---
-# [Rule Metadata](../pages/metadata.md)
+rule_id:
+name:
+test_mode: automatic / semi-automatic / manual
+Environment: Markup Document / DOM Structure / Web Browser / WebDriver
 
-rule_id: 
-name: 
-test_mode: 
-
-criteria:
-- 
+success_criterion:
+- x.x.x
 
 authors:
+-
 ---
 
 ## Description
 
-The
-
-## Background
-
--
+This rule checks ...
 
 ## Assumptions
 
--
-
-## Test properties
-
-| Properties        | Values
-|-------------------|-----------
-| Test name         |
-| Success criterion |
-| Test mode         |
-| Test environment  |
-| Test Subject      |
-| User profile      |
-
+*There are currently no assumptions*
 
 ## Test procedure
 
 ### Selector
 
-Test method:
+Select all elements that <has / matches> the following < CSS selector / XPATH selector / features>:
 
+    <selector>
 
 ### Step 1
 
-Test method:
+Check if
 
+if yes,
 
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual
+else, return [step1-fail](#step1-fail)
+
+## Background
+
+-
+
+## Outcome
+
+The resulting assertion is as follows,
+
+| Property | Value
+|----------|----------
+| type     | Assertion
+| id       |
+| test     |
+| subject  |
+| mode     |
+| result   |
+
+### step1-fail1
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description |
+
+### step1-pass1
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
+
+## Implementation Tests
+
+Implementation tests are available at: [rulename tests]()

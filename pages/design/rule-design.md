@@ -4,17 +4,29 @@ title: Rule Design
 
 The Auto-WCAG rule design builds on WCAG 2.0 and its supporting documents. To achieve the Auto-WCAG goals the following approach is suggested:
 
-1. **Description**: Brief description of what the rule does
+1. **Rule identifier**: The identifier for the rule
 
-2. **Background**: A list of resources that support the workings of the rule.
+2. **Description**: Brief description of what the rule does
 
-3. **[Assumptions](#assumptions)**: Explicitly state all assumptions made by the rule to ensure accountability of the results.
+3. **Background**: A list of resources that support the workings of the rule.
 
-4. **[Rule properties](#rule-properties)**: Define the test subject and its environment, as well as other meta data.
+4. **[Assumptions](#assumptions)**: Explicitly state all assumptions made by the rule to ensure accountability of the results.
 
-5. **[Selector](#selector)**: Use selectors to group the tests by page element and Success Criterion.
+5. **[Rule properties](#rule-properties)**: Define the test subject and its environment, as well as other meta data.
+
+6. **[Selector](#selector)**: Use selectors to group the tests by page element and Success Criterion.
 
 - **[Test steps](#test-steps)**: Describe complete flow and testing logic, i.e. test procedures that can reach a conclusion if the web content passes or fails a Success Criterion.
+
+## Rule identifier
+
+For the name of the test case use the following format: **SC#-#-#-identifier**
+
+- **SC#-#-#**: This is an identifier for the criterion to which the test case applies. #-#-# stands for the number of that criterion, such as SC4-1-2.
+
+- **+SC#-#-#**: This can be used if the test case applies to multiple success criteria, such as SC1-1-1+SC4-1-2-identifier. The numbers are in the same order as they are used in WCAG.
+
+- **identifier**: This must be a lower case identifier of the test, preferably no more then 3 words. It can only contain alphanumeric values or a dash (-).
 
 ## Assumptions
 
@@ -98,7 +110,7 @@ The selectors must be **unambiguous**. Whenever possible selectors should be giv
 
 The following options for **machine-readable** selectors used by Auto-WCAG:
 
-- **CSS selectors**: 
+- **CSS selectors**:
   1. W3C Recommendation: [http://www.w3.org/TR/css3-selectors/ Selectors Level 3].
   2. Work in progress [Selectors Level 4](http://www.w3.org/TR/2013/WD-selectors4-20130502/) and [Non-element Selectors Module Level 1](http://www.w3.org/TR/2014/WD-selectors-nonelement-1-20140603/)
 

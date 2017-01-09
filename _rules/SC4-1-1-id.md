@@ -1,12 +1,14 @@
 ---
 rule_id: SC4-1-1-id
-name: Define ids for elements
+name: Define unique ids for elements
 test_mode: automatic
+environment: DOM Structure
 
-criteria:
+success_criterion:
 - 4.1.1 # Parsing (Level A)
 
-author:
+authors:
+- Wilco Fiers
 
 ---
 
@@ -14,58 +16,70 @@ author:
 
 This test checks id attribute for all elements to have a unique value.
 
-## Background
+### Background
 
 - [H93: Ensuring that id attributes are unique on a Web page](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/H93)
 - [F77: Failure of Success Criterion 4.1.1 due to duplicate values of type ID](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/F77)
 - [eGovMon test F77-1](http://wiki.egovmon.no/wiki/SC4.1.1#ID:_F77-1)
 
-## Assumptions
+### Assumptions
 
-*no known assumptions*
-
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Test name         | Define ids for elements
-| Test requirement  | 4.1.1 Parsing
-| Test mode         | Automatic
-| Test environment  | DOM
-| Test subject      | Single web page
+- assumes a full page has loaded to enable comparison
 
 ## Test procedure
 
 ### Selector
 
-Test mode: [automatic][AUTO]
+Select any element with an id attribute. The following CSS selector could be used: 
 
-Select any element with an id attribute. The following CSS selector could be used: `*[id]`
+    `*[id]`
 
 ### Step 1
 
-Test mode: [automatic][AUTO]
+If there is no list called 'knownIDs', create an empty list 'knownIDs.
 
-- IF there is no list called 'knownIDs':
-  - Create an empty list 'knownIDs;
-- IF the value of the ID attribute exists in 'knownIDs':
-  - Return {{ page.rule_id }}-fail1
-- ELSE:
-  - Add the value of the ID attribute of the selected element to 'knownIDs'
-  - Return {{ page.rule_id }}-pass1
+Continue with [step 2](#step-2)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-pass1
+### Step 2
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Error    | The ID of this element has occurred before on this page
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-fail1
+For each element, check if the id attribute exists in 'knownIDs'.
 
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual
+if yes, return [step2-fail](#step2-fail)
+
+else, add the value for the id attribute of the selected element to 'knownIDs'
+
+### Step 3
+
+Confirm there were no fails.
+
+if yes, return [step3-pass](#step3-pass)
+
+## Outcome
+
+### step2-fail
+
+| Property    | Value
+|-------------|-----
+| type        | TestResult
+| outcome     | Failed
+| description | An id attribute is duplicated on the page.
+
+### step3-pass
+
+| Property    | Value
+|-------------|-----
+| type        | TestResult
+| outcome     | Passed
+| description | All id attributes are unique on the page.
+
+## Implementation Tests
+
+Implementation tests are available at: [SC4-1-1-id Tests](SC4-1-1-id.test.md)
+
+## Change log
+
+### Version 1.1
+- edit to fit revised format for rules
+
+### Version 1.0
+- add default author fields

@@ -62,7 +62,7 @@ if yes, return [step3-pass](#step3-pass)
 |-------------|-----
 | type        | TestResult
 | outcome     | Failed
-| description | An id attribute is duplicated on the page.
+| description | ID <attribute-value> is duplicated on the page.
 
 ### step3-pass
 

@@ -1,6 +1,6 @@
 ---
 rule_id: SC4-1-1-id
-name: Define unique ids for elements
+name: Provide unique ids
 test_mode: automatic
 environment: DOM Structure
 
@@ -36,13 +36,11 @@ Select any element with an id attribute. The following CSS selector could be use
 
 ### Step 1
 
-If there is no list called 'knownIDs', create an empty list 'knownIDs.
-
-Continue with [step 2](#step-2)
+If there is no list called 'knownIDs', create an empty list 'knownIDs'.
 
 ### Step 2
 
-For each element, check if the id attribute exists in 'knownIDs'.
+For each element, check if the id attribute value exists in 'knownIDs'.
 
 if yes, return [step2-fail](#step2-fail)
 

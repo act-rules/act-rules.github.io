@@ -124,4 +124,4 @@ The following options for **machine-readable** selectors used by Auto-WCAG:
 
 The selectors help the user (or tool) identify what has to be checked. The goal of the Auto-WCAG test design is to cover the complete workflow, i.e. all steps / all tests that are necessary to reach a conclusion. The procedure contains automated and manual steps. Usually a combination of both.
 
-The results for the individual steps / tests are combined to reach a conclusion about the success criterion. All success criteria use the same [basic aggregation algorithm](result-aggregation.html).
+The results for the individual steps / tests are combined to reach a conclusion about the success criterion. All success criteria use the same [basic aggregation algorithm](/pages/structure/aggregation.html).

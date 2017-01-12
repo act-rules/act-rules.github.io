@@ -29,8 +29,6 @@ This rule checks that links that are embedded in a block of text can be distingu
 - This test assumes that any change in font is sufficiently distinguishable, and that fonts are loaded when they are present.
 - Use of a `border`, of 1 or more pixels, not set to none, and not with a color of transparent, is assumed to be sufficiently distinguishable
 
-
-
 ## Test properties
 
 | Property          | Value

@@ -2,65 +2,74 @@
 rule_id: SC4-1-1-unique-attrs
 name: Attributes are unique
 test_mode: automatic
+environment: Markup Document
 
-criteria:
+success_criterion:
 - 4.1.1 # Parsing (Level A)
 
-author:
+authors:
+- Wilco Fiers
 
 ---
 
 ## Description
 
-This test checks that attributes of an element are unique.
+This test checks that the attributes of an element are unique.
 
-## Background
+### Background
 
 - [eGovMon H94-1](http://wiki.egovmon.no/wiki/SC4.1.1#ID:_H94-1)
 - [Ensuring that elements do not contain duplicate attributes](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/H94 H94)
 
-## Assumptions
+### Assumptions
 
 *no known assumptions*
-
-## Test properties
-
-| Property         | Value
-|------------------|----
-| Test requirement | 4.1.1 Parsing
-| Test mode        | Automatic
-| Test environment | HTML source
-| Test subject     | Single web page
 
 ## Test procedure
 
 ### Selector
 
-Test mode: [automatic][AUTO]
-
 Select all opening tags in the HTML document
 
 ### Step 1
 
-Test mode: [automatic][AUTO]
+For each tag, make a list of all the attribute names on the tag. Do any of the attributes occur more than once in the list?
 
-- Make a list of all the attribute names on the current tag
-- IF any of the attributes occurs more the once:
-  - Return {{ page.rule_id }}-fail1
-- ELSE Return {{ page.rule_id }}-pass1
+if yes, return [step1-fail](#step1-fail)
 
-| Outcome  | Passed
-|----------|-----
-| ID       | {{ page.rule_id }}-pass1
-| Testcase | {{ page.rule_id }}
-| Pointer  | selector result
+### Step 2
 
-| Outcome  | Failed
-|----------|-----
-| ID       | {{ page.rule_id }}-fail1
-| Testcase | {{ page.rule_id }}
-| Error    | Attribute <attribute-name> was used more then once on the element <pointer>
-| Pointer  | selector result
+Confirm there were no fails.
 
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual
+if yes, return [step2-pass](#step2-pass)
+
+## Outcome
+
+### step1-fail
+
+| Property    | Value
+|-------------|-----
+| type        | TestResult
+| outcome     | Failed
+| description | Attribute <attribute-name> is used more than once on element <pointer>.
+
+### step2-pass
+
+| Property    | Value
+|-------------|-----
+| type        | TestResult
+| outcome     | Passed
+| description | Attributes only occur once per element.
+
+## Implementation Tests
+
+Implementation tests are available at: [SC4-1-1-unique-attrs Tests](SC4-1-1-unique-attrs.test.md)
+
+## Change log
+
+### Version 1.1
+- edit to fit revised format for rules
+
+### Version 1.0
+- add default author fields
+

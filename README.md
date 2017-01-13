@@ -2,7 +2,7 @@
 
 The Auto-WCAG Rules repository is where the Auto-WCAG community group maintains the rules they designed for (semi-)automated accessibility testing. Within the rules directory you will find all the rules recommended by the Auto-WCAG community group for implementation in automated test tools.
 
-Visit the [Auto-WCAG Rules website](https://auto-wcag/github.io/auto-wcag/_site/) for the latest rules and drafts.
+Visit the [Auto-WCAG Rules website](https://auto-wcag.github.io/auto-wcag/) for the latest rules and drafts.
 
 ## Related W3C Activities
 
@@ -18,7 +18,7 @@ If you want to know more about us, visit our website at: [www.w3.org/community/a
 
 ## Implementing Auto-WCAG Rules
 
-Anyone developing their own accessibility testing tool is free to based this on the Auto-WCAG rules. We encourage you to document any deviations from those rules if you do so, and make these changes known to your users. Also take note that the Auto-WCAG Rules come with an aggregation algorithm describing how they all fits together, and require the tool to do some pre and post processing. All of which is described in the [test methodology](https://auto-wcag/github.io/auto-wcag/_site/pages/methodology.html).
+Anyone developing their own accessibility testing tool is free to based this on the Auto-WCAG rules. We encourage you to document any deviations from those rules if you do so, and make these changes known to your users. Also take note that the Auto-WCAG Rules come with an aggregation algorithm describing how they all fits together, and require the tool to do some pre and post processing. All of which is described in the [test methodology](https://auto-wcag.github.io/auto-wcag/pages/design/rule-design.html).
 
 ## Contribute
 

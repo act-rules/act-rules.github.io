@@ -25,7 +25,7 @@ This test checks that the text nodes on a page contrast sufficiently with the ba
 - [F24: specifying foreground colors without specifying background colors](https://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/F24) 
 - [F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text)](https://www.w3.org/TR/WCAG20-TECHS/F83.html)
 
-<!-- the F24 scenario should probably be kept separate from the rest of the colour contrast stuff ... but would these still need to be checked for suitable contrast?? -->
+<!-- Should the F24 scenario be kept separate from the rest of the colour contrast stuff ... it is relevant and uses same selectors -->
 
 ## Assumptions
 - Code validates to a published grammar (eg. 4.1.1 and 4.1.2)
@@ -41,72 +41,70 @@ Contrast of links to text and visited links etc is a separate criteria.
 
 For now this ruleset does not cover text in images, except SVG, or text in canvas or video elements or WebGL or Flash etc.
 
-Not sure about the order of the steps as there is no one situation that would pass without checking the others. Wonder if this would mean changing how things are grouped into:
-1. determine text stuff.
-2. determine ratio required.
-3. determine what to contrast it with (and if test can be automated).
-4. check if requirement is met.
+Suggested structure for this rule:
+1. locate text node and determine if there is a specified color
+2. locate background node and determine id there is a specified background color (parent or getElementsFromPoint)
+3. if one exists, but not other, fail against F24
+4. if both exist, determine if they contrast sufficiently (not sure on pass/fail if both are default)
+5. determine if any other styles are applied that would affect color and require further testing
 
- - gradient text?  text masks?  filters on text/bg rendered or not? - Wilco: deal with basic stuff first and note this for future work.
- - not aliased text for pixel to pixel comparison with background image, return percentage of checks that pass, is this too detailed an approach? - Frank: shared http://www.brandwood.com/a11y/ which grabs a selection of colours from the bg image and compares with text colour and produces a range of results.
- - what about canvas or video behind text? - Wilco: start with deferring to a human, looking deeper can happen later.
- - Should this also apply to PDF? - Wilco: no, only HTML (and probably not SVG - be explicit in assumptions/selector).
+What styles could impact on colors? (Wilco: deal with basic stuff first and note this for future work)
+- text/bg gradients, text/bg opacity, text/bg filters, text aliasing?, text borders, text shadows, text masks, bg images (Frank: shared http://www.brandwood.com/a11y/)
+ 
+What about canvas or video behind text? (Wilco: start with deferring to a human, looking deeper can happen later)
+Should this also apply to PDF? (Wilco: no, only HTML, and probably not SVG - be explicit in assumptions/selector)
+
 -->
 
 
 ### Selector
 
-Select all elements that match the following XPath or Javascript selector:
+Select elements that match the following XPath or Javascript selector:
 * //\*[text()]
 * node.nodeType = 3;
 
 
 ### Step 1
 
-Check if the text node has an applied/computed color property (ie. not default).
+Determine if the text node has an applied/computed "color" property (ie. not default). Record the text-color value; unknown or null if default.
 
-if no, continue with [step 2](#step-2)
-else, continue with [step 3](#step-3)
+Continue with [step 2](#step-2)
 
-<!-- Note: Determining which element is providing a background to the text is not as straight-forward as looking at the parent and up the ancestry tree, because sibling elements can be positioned and layered over one another. Presuming there is a programmatic way to look through the layers in way similar to what might generate a 3-D page view. -->
+### Step 2
 
-### Step 2 (text node is default)
+Determine if the parent, or another layer behind the text node, has an applied/computed "background-color" (ie. not default). Record the background-color value; unknown or null if default.
 
-Check if the parent, or another layer behind the text node, has an applied/computed background-color (ie. not default). 
+<!-- Note: Determining which element is providing a background to the text is not as straight-forward as looking at the parent and up the ancestry tree, because sibling elements can be positioned and layered over one another. Presuming there is a programmatic way to list the layers (as 3D view can) ... possibly getElementsFromPoint : https://twitter.com/ChromiumDev/status/576081837165912064 -->
 
-if yes, return [step2-fail](#step2-fail)
-else, continue with [step 5](#step-5)
+Continue with [step 3](#step-3)
 
-<!-- Note: If we could pass a variable from Step 1 to Step 2, Step 2 and 3 that make the same check could become one step. -->
+### Step 3
 
-### Step 3 (text node is colored)
+Check if one recorded value is unknown or null, while the other is a color.
 
-Check if the parent, or another layer behind the text node, has an applied/computed background-color (ie. not default). 
-
-if no, return [step3-fail](#step3-fail)
+if yes, return [step3-fail](#step3-fail)
 else, continue with [step 4](#step-4)
 
 ### Step 4
 
-Check if the colors applied to text and background contrast sufficiently for the size and boldness of text. <!-- Note: this will need some detail about ratios, text sizes, etc. -->
+Check if the text-color and background-color contrast sufficiently for the size and boldness of text. Record the contrast-ratio.
 
-if yes, return [step4-fail](#step4-fail)
+<!-- Note: this will need some detail about ratios, text sizes, etc. -->
+
+if no, return [step4-fail](#step4-fail)
 else, continue with [step 5](#step-5)
 
 ### Step 5
 
-Check if something else is applying color to background or text. <!-- Note: getting into Scenario 2 - should this move to a different rule? Or stay here? -->
+Determine if any other styles are applied to the text node or background element would affect the colour contrast. Record text-styles and background-styles. (see comments)
+
+<!-- Note: this is getting into the complexity of the scenarios in the comments below. For now, deferring this to a future version of the rule. In future, this could clarify on what size border or shadow impacts on whether the style or background needs to be contrasted with when not matching text color, etc. -->
+
+if yes, return [step5-warning](#step5-warning)
+else, return [step 5-pass](#step-5-pass)
 
 
 ## Outcome
-
-### step2-fail
-
-| Property    | Value
-|-------------|----------
-| type        | TestResult
-| outcome     | Failed
-| description | Text node has no color property, but there is a background-color set on a layer behind it.
 
 ### step3-fail
 
@@ -114,7 +112,7 @@ Check if something else is applying color to background or text. <!-- Note: gett
 |-------------|----------
 | type        | TestResult
 | outcome     | Failed
-| description | Text node has color property, but there is no background-color set on a layer behind it.
+| description | Text node or background has color property, while the other does not (see F24).
 
 ### step4-fail
 
@@ -122,11 +120,26 @@ Check if something else is applying color to background or text. <!-- Note: gett
 |-------------|----------
 | type        | TestResult
 | outcome     | Failed
-| description | Text node color property and background-color property do not contrast sufficiently (for the text size and weight).
+| description | Text node color property and background color property do not contrast sufficiently (for the text size and weight).
+
+### step5-warning
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Warning
+| description | Further contrast tests are needed for text node and background, because of [text-styles] and/or [background-styles].
+
+### step5-pass
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Pass
+| description | Text node and background appear to contrast sufficiently: [contrast-ratio].
 
 
-
----
+<!--
 
 ## Scenarios (visible notes during rule development, further coded comments visible in raw/edit views)
 
@@ -192,6 +205,7 @@ Test method: [manual]
 
 (an image background must still have a background color behind it with the required color contrast, in case the image does not load)
 
+-->
 
 ...
 

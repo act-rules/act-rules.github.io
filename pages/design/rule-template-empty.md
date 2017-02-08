@@ -2,7 +2,7 @@
 rule_id:
 name:
 test_mode: automatic / semi-automatic / manual
-Environment: Markup Document / DOM Structure / Web Browser / WebDriver
+environment: Markup Document / DOM Structure / Web Browser / WebDriver
 
 success_criterion:
 - x.x.x
@@ -14,6 +14,10 @@ authors:
 ## Description
 
 This rule checks ...
+
+## Background
+
+-
 
 ## Assumptions
 
@@ -35,22 +39,18 @@ if yes,
 
 else, return [step1-fail](#step1-fail)
 
-## Background
-
--
-
 ## Outcome
 
 The resulting assertion is as follows,
 
+
 | Property | Value
 |----------|----------
 | type     | Assertion
-| id       |
-| test     |
-| subject  |
-| mode     |
-| result   |
+| test     | auto-wcag:{{ page.rule_id }}
+| subject  | *the selected element*
+| mode     | auto-wcag:{{ page.test_mode }}
+| result   | <One TestResult from below>
 
 ### step1-fail1
 
@@ -70,4 +70,12 @@ The resulting assertion is as follows,
 
 ## Implementation Tests
 
-Implementation tests are available at: [rulename tests]()
+There are currently no tests available for this rule.
+
+Implementation tests are available at: [rulename tests](rule-id.test.md)
+
+## Change log
+
+### Version 1.0
+
+- Set up the initial rule

@@ -73,7 +73,6 @@ The resulting assertion is as follows,
 | Property | Value
 |----------|----------
 | type     | Assertion
-| id       | rule-id-fail-name
 | test     | auto-wcag:rule-id
 | subject  | *the selected element*
 | mode     | automatic

@@ -31,7 +31,6 @@ Select all elements that matches the following CSS selector:
 
     input[type=image],
     area,
-    input:not(role) img, input:not(role) *[role=image],
     button:not(role) img, button:not(role) *[role=image],
     a[href]:not(role) img, a[href]:not(role) *[role=image],
     *[role=button] img, *[role=button] *[role=image]

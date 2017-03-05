@@ -14,7 +14,7 @@ authors:
 
 ## Description
 
-This rule checks images that are marked as decorative, do not require a text alternative.
+This rule checks images that are marked as decorative, do not require a text alternative. Elements that are the sole content of an interactive element
 
 *Editor note*: This rule is designed to replace (parts of) [/rules/SC1-1-1-text-alternative]
 
@@ -38,15 +38,9 @@ Select all elements that matches the following CSS selector:
     img[role="presentation"],
     img[role="none"]
 
-Exclude elements from the list of selected elements if it is a descended of an element that matches the following CSS selector:
+Check if the element is descendant of an element [Interactive element](../pages/algorithms/interactive.html), excluding elements of type `select`, `textarea` and `input`.
 
-    a[href]:not([tabindex=-1]),
-    button:not([tabindex=-1]),
-    *[role=link][tabindex][:not([tabindex=-1]),
-    *[role=button][tabindex]:not([tabindex=-1])
-
-
-*Editor note:* We should test if `*[role=link]` is picked up as a link if it does not have tabindex on it. If so we might want to remove the `[tabindex]` part of the selector.
+If it is a descendant of such an element, AND if the selected element is the only [content](../pages/algorithms/content.html) of this element, *exclude it* from the list of selected elements.
 
 ### Step 1
 
@@ -113,4 +107,4 @@ The resulting assertion is as follows,
 
 ## Implementation Tests
 
-Implementation tests are available at: [{{ page.rule_id}} tests](../draft-tests/{{ page.rule_id }}.md)
+Implementation tests are available at: [{{ page.rule_id}} tests](../draft-tests/{{ page.rule_id }}.html)

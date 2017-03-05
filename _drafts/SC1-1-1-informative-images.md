@@ -26,16 +26,13 @@ This rule checks that images are given a description, and that the description g
 
 ### Selector
 
-
 Select all elements that matches the following CSS selector:
 
     img:not([alt=""]),
-    img:not([role="presentation"])
+    img:not([role="presentation"]),
+    img:not([role="none"])
 
-Exclude elements from the list of selected elements if it is a descended of an element that matches the following CSS selector:
-
-    a[href], button, input, *[role=link], *[role=button]
-
+**Exclude** the image if it is the only [content](../pages/algorithms/content.html) of an [Interactive element](../pages/algorithms/interactive.html) (ignoring `select`, `textarea` and `input` as those would be invalid).
 
 ### Step 1
 

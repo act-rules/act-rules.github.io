@@ -14,13 +14,13 @@ authors:
 
 ## Description
 
-This rule checks images that are marked as decorative, do not require a text alternative. Elements that are the sole content of an interactive element
+This rule checks images that are marked as decorative, do not require a text alternative. Images that are the only content of an interactive element are not covered by this rule, as they are tested by [SC1-1-1+SC-4-1-2-interactive-images](SC1-1-1+SC-4-1-2-interactive-images.html).
 
 *Editor note*: This rule is designed to replace (parts of) [/rules/SC1-1-1-text-alternative]
 
 ## Assumptions
 
-*There are currently no assumptions*
+- The `contenteditable` attribute is not used in such a way that it impacts which element is, and which is not interactive.
 
 ## Background
 
@@ -38,22 +38,9 @@ Select all elements that matches the following CSS selector:
     img[role="presentation"],
     img[role="none"]
 
-Check if the element is descendant of an element [Interactive element](../pages/algorithms/interactive.html), excluding elements of type `select`, `textarea` and `input`.
-
-If it is a descendant of such an element, AND if the selected element is the only [content](../pages/algorithms/content.html) of this element, *exclude it* from the list of selected elements.
+**Exclude** the image if it is the only [content](../pages/algorithms/content.html) of an [Interactive element](../pages/algorithms/interactive.html) (ignoring `select`, `textarea` and `input` as those would be invalid).
 
 ### Step 1
-
-Check that the selected node does not match the following CSS selector:
-
-    [aria-describedby]:not([aria-describedby=""]),
-    [longdesc]:not([longdesc=""])
-
-If the node does match, go to [Step 2](#step-2).
-
-Else, return [step1-fail1](#step1-fail1)
-
-### Step 2
 
 Give the user the following question:
 
@@ -65,9 +52,9 @@ Give the user the following question:
 | User profile         | Requires sight
 | Context              | yes
 
-if yes, return [step2-pass](#step2-pass)
+if yes, return [step1-pass](#step1-pass)
 
-else, return [step2-fail](#step2-fail)
+else, return [step1-fail](#step1-fail)
 
 ## Outcome
 
@@ -87,17 +74,9 @@ The resulting assertion is as follows,
 |-------------|----------
 | type        | TestResult
 | outcome     | Failed
-| description | The image has markup of both a complex image (`aria-labelledby` or `longdesc`) and a decorative image (`alt=""`, `role=presentation` or `role=none`).
-
-### step2-fail
-
-| Property    | Value
-|-------------|----------
-| type        | TestResult
-| outcome     | Failed
 | description | The image is marked up as decorative, even though it has an informative function.
 
-### step2-pass
+### step1-pass
 
 | Property    | Value
 |-------------|----------

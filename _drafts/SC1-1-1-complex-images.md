@@ -57,6 +57,14 @@ The resulting assertion is as follows,
 | mode     |
 | result   |
 
+### step1-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | The image has markup of both a complex image (`aria-labelledby` or `longdesc`) and a decorative image (`alt=""`, `role=presentation` or `role=none`).
+
 ### step1-fail1
 
 | Property    | Value

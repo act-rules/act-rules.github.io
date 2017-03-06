@@ -48,7 +48,7 @@ Give the user the following question:
 |----------------------|---------
 | Presented item       | Selected element
 | Question             | Is this element solely for decorative purposes?
-| Help                 | Answer with 'Yes', if it is a decorative element such as a spacer, line or menu-background solely used for layout purposes or an eyecatching element that don't convey information useful for understanding the content of the page.
+| Help                 | Answer with 'Yes', if it is a decorative element such as a spacer, line or menu-background solely used for layout purposes or an eye-catching element that don't convey information useful for understanding the content of the page.
 | User profile         | Requires sight
 | Context              | yes
 

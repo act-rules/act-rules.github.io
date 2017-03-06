@@ -18,9 +18,13 @@ This rule checks that images are given a description, and that the description g
 
 *Editor note*: This rule is designed to replace (parts of) [/rules/SC1-1-1-text-alternative]
 
+## Background
+
+-
+
 ## Assumptions
 
-*There are currently no assumptions*
+- The `contenteditable` attribute is not used in such a way that it impacts which element is, and which is not interactive.
 
 ## Test procedure
 
@@ -28,7 +32,8 @@ This rule checks that images are given a description, and that the description g
 
 Select all elements that matches the following CSS selector:
 
-    img:not([alt=""]),
+    img:not([alt=""]):not([title]),
+    img[title=""]:not([alt=""]),
     img:not([role="presentation"]),
     img:not([role="none"])
 
@@ -36,15 +41,28 @@ Select all elements that matches the following CSS selector:
 
 ### Step 1
 
-Check if
+Find, using the [accessible name calculation algorithm](../pages/algorithms/anc.html), the *text alternative* of the selected element.
 
-if yes,
+If the *text alternative* is [non-empty](../pages/algorithms/non-text.html), continue with [Step 2](#step-2).
 
-else, return [step1-fail](#step1-fail)
+Else, return [step1-fail](#step1-fail)
 
-## Background
+### Step 2
 
--
+Give the user the following question:
+
+| Property             | Value
+|----------------------|---------
+| Presented item       | Current element
+| Question             | Does the textual alternative "*<< text alternative >>*" sufficiently describe the element?
+| Help                 | If the element contributes meaning to the page or provides any functionality or conveys information additional to the pages text, this must be described. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
+| Repair               | If no, could you suggest a sufficient textual alternative?
+| Requires context     | yes
+| Requires Interaction | yes
+
+if yes, return [step2-pass](#step2-pass)
+
+else, return [step2-fail](#step2-fail)
 
 ## Outcome
 
@@ -53,28 +71,35 @@ The resulting assertion is as follows,
 | Property | Value
 |----------|----------
 | type     | Assertion
-| id       |
-| test     |
-| subject  |
-| mode     |
-| result   |
+| test     | {{ page.rule_id }}
+| mode     | semi-automatic
+| subject  | << The tested page >>
+| result   | << one of the following >>
 
-### step1-fail1
+### step1-fail
 
 | Property    | Value
 |-------------|----------
 | type        | TestResult
 | outcome     | Failed
-| description |
+| description | The image must have an accessible name.
 
-### step1-pass1
+### step2-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | The accessible name insufficiently describes the image.
+
+### step2-pass
 
 | Property    | Value
 |-------------|----------
 | type        | TestResult
 | outcome     | Passed
-| description |
+| description | The accessible name sufficiently describes the image.
 
 ## Implementation Tests
 
-Implementation tests are available at: [rulename tests]()
+Implementation tests are available at: [{{ page.rule_id}} tests](../draft-tests/{{ page.rule_id }}.html)

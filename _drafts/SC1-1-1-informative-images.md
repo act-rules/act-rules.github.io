@@ -16,7 +16,7 @@ authors:
 
 This rule checks that images are given a description, and that the description given to an image contains equivalent information.
 
-*Editor note*: This rule is designed to replace (parts of) [/rules/SC1-1-1-text-alternative]
+*Editor note*: This rule is designed to replace (parts of) [SC1-1-1-text-alternative](/rules/SC1-1-1-text-alternative.html)
 
 ## Background
 

@@ -17,7 +17,7 @@ authors:
 
 This rule checks image buttons and image links are have a text alternative, and that this alternative is descriptive of either the image or of the purpose of the interactive element.
 
-*Editor note*: This rule is designed to replace (parts of) [/rules/SC1-1-1-text-alternative]
+*Editor note*: This rule is designed to replace (parts of) [SC1-1-1-text-alternative](/rules/SC1-1-1-text-alternative.html)
 
 ## Assumptions
 

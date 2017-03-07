@@ -16,7 +16,7 @@ authors:
 
 This images checks that when an longer description is provided, that it exists and that it correctly describes the image.
 
-*Editor note*: This rule is designed to replace (parts of) [/rules/SC1-1-1-text-alternative]
+*Editor note*: This rule is designed to replace (parts of) [SC1-1-1-text-alternative](/rules/SC1-1-1-text-alternative.html)
 
 ## Assumptions
 

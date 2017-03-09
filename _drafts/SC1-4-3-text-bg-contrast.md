@@ -98,7 +98,9 @@ else, continue with [step 5](#step-5)
 
 Determine if any other styles are applied to the text node or background element would affect the colour contrast. Record text-styles and background-styles. (see comments)
 
-<!-- Note: this is getting into the complexity of the scenarios in the comments below. For now, deferring this to a future version of the rule. In future, this could clarify on what size border or shadow impacts on whether the style or background needs to be contrasted with when not matching text color, etc. -->
+<!-- Note: this is getting into the complexity of the scenarios in the comments below. For now, deferring this to a future version of the rule. In future, this could clarify on what size border or shadow impacts on whether the style or background needs to be contrasted with when not matching text color, etc. 
+     ACTION: consider passing this to a user instead of giving a warning
+-->
 
 if yes, return [step5-warning](#step5-warning)
 else, return [step 5-pass](#step-5-pass)

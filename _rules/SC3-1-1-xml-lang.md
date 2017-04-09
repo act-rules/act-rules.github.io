@@ -2,6 +2,7 @@
 rule_id: SC3-1-1-xml-lang
 name: Use identical xml:lang and lang attributes
 test_mode: automatic
+environment: DOM Structure
 
 criteria:
 - 3.1.1 # Language of Page (Level A)

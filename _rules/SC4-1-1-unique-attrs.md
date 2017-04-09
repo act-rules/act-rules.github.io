@@ -2,6 +2,7 @@
 rule_id: SC4-1-1-unique-attrs
 name: Attributes are unique
 test_mode: automatic
+environment: Markup Document
 
 criteria:
 - 4.1.1 # Parsing (Level A)

@@ -2,6 +2,7 @@
 rule_id: SC4-1-2-button
 name: Button has name
 test_mode: automatic
+environment: DOM Structure
 
 criteria:
 - 4.1.2 # Name, Role, Value (Level A)

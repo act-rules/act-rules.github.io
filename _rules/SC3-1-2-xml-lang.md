@@ -29,11 +29,9 @@ This test checks the value of the `xml:lang` attributes.
 
 ### Selector
 
-Select the element with `xml:lang` attribute.
+Select all elements that match the following XPATH selector:
 
-```
-descendent-or-self::body[@xml:lang]
-```
+    descendent-or-self::body[@xml:lang]
 
 ### Step 1
 

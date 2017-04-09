@@ -30,7 +30,9 @@ This test checks if meta element is not used for delayed redirecting or refreshi
 
 ### Selector
 
-Select each element matching: `meta[http-equiv="refresh"][content]`
+Select all elements that match the following CSS selector:
+
+    meta[http-equiv="refresh"][content]
 
 ### Step 1
 

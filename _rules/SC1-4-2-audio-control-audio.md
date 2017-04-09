@@ -33,7 +33,10 @@ This test checks that there isn't an automatically started sound after the web p
 
 ### Selector
 
-`//*[self::audio or self::video]`
+Select all elements that match the following XPATH selector(s):
+
+- `//*[self::audio` or
+- `self::video]`
 
 ### Step 1
 

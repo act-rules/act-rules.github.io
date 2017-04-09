@@ -42,7 +42,11 @@ This test checks that non-text elements conveying information are providing suff
 
 ### Selector
 
-`//*[self::img or self::input[@type="image"] or self::area or self::embed or self::object]`
+Select all elements that match the following XPATH selector(s):
+
+- `//*[self::img` or
+- `self::input[@type="image"]` or
+- `self::area or self::embed or self::object]`
 
 ### Step 1: check element type (F65)
 

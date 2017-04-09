@@ -34,15 +34,11 @@ This test checks the sufficient provision of a long text description for element
 
 ### Selector
 
-Select following elements providing an `aria-describedby` attribute:
+Select all elements that match the following CSS selector:
 
-- `img` elements
-- `input` elements of `type="image"`
-- all elements with `role="image"`
-
-````
-//*[self::img[@aria-describedby] or self::input[@type="image" and @aria-describedby] or self::*[@role="image" and @aria-describedby]]
-````
+    img[aria-describedby],
+    input[type="image"][aria-describedby],
+    [role="image"][aria-describedby]
 
 ### Step 1
 

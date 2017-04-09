@@ -28,7 +28,7 @@ This test checks that all elements that receive focus are visible in the viewpor
 
 ### Selector
 
-Each element that matches one of the following CSS selectors
+Select all elements that match the following CSS selector:
 
 - `a[href]:not([tabindex=-1])`,
 - `button:not([tabindex=-1])`,

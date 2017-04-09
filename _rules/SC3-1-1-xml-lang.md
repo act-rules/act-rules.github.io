@@ -29,9 +29,9 @@ This test checks the value of the `xml:lang` attribute.
 
 ### Selector
 
-Select `html` element with `xml:lang` attribute.
+Select all elements that matches the following CSS selector:
 
-`html[@xml:lang]`
+    html[@xml:lang]
 
 ### Step 1
 

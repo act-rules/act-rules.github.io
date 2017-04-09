@@ -32,7 +32,9 @@ This test checks the sufficient provision of a long text description for non-tex
 
 ### Selector
 
-`//img[@longdesc]`
+Select all elements that match the following XPATH selector:
+
+    //img[@longdesc]
 
 ### Step 1
 

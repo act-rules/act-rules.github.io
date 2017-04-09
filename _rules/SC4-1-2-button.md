@@ -28,9 +28,9 @@ This test checks if every button element has a name.
 
 ### Selector
 
-Select any button element. The following CSS selector could be used:
+Select all elements that match the following XPATH selector:
 
-    `button`
+    button
 
 ### Step 1
 

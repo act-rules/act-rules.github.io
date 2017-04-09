@@ -30,7 +30,7 @@ This test checks that images do not convey information when added to the page us
 
 ### Selector
 
-Single element, which background property contains one or more URIs
+Select all elements that has one or more of the following properties, containing one or more URIs:
 
 - `object.style.background.match(url)`
 - `object.style.backgroundImage.match(url)`

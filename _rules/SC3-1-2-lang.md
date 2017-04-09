@@ -30,9 +30,9 @@ This test checks that `lang` attributes within the body of a web page are correc
 
 ### Selector
 
-```
-descendent-or-self::body[@lang]
-```
+Select all elements that match the following XPATH selector:
+
+    descendent-or-self::body[@lang]
 
 This test is applied to all elements with `lang` attribute in the body of the web page (including the body element itself).
 

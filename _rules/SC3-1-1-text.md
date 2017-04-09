@@ -39,7 +39,11 @@ This test does not prescribe which of these definitions to use as long as one of
 
 ### Selector
 
-L1 = value of `lang` attribute.
+Select all elements that matches the following CSS selector:
+
+    *[lang]
+
+Use the value of the lang attribute as L1
 
 ### Step 1
 

@@ -29,7 +29,9 @@ This test checks id attribute for all elements to have a unique value.
 
 ### Selector
 
-Select any element with an id attribute. The following CSS selector could be used: `*[id]`
+Select all elements that match the following CSS selector:
+
+    *[id]
 
 ### Step 1
 

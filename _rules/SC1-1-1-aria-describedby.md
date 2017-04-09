@@ -46,13 +46,7 @@ Check if at least one of the `aria-describedby` attribute values is a valid iden
 
 if yes, continue with [step 2](#step-2)
 
-else, return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail1
-| Error    | None of the aria-describedby attribute values is a valid identifier.
+else, return [step1-fail](#step1-fail)
 
 ### Step 2
 
@@ -60,13 +54,7 @@ Check if at least one of the elements referenced by the valid `aria-describedby`
 
 if yes, continue with [step 3](#step-3)
 
-else, return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail2
-| Error    | None of the elements referenced by aria-describedby exists.
+else, return [step2-fail](#step2-fail)
 
 ### Step 3
 
@@ -84,20 +72,9 @@ Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run 
 | Requires context     | yes
 | Requires Interaction | yes
 
-if yes, return
+if yes, return [step3-pass](#step3-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-pass1
-
-else return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}–fail3
-| Error    | The long description provided using aria-describedby is not sufficiently descriptive.
+else return [step3-fail](#step3-fail)
 
 ## Outcome
 
@@ -111,5 +88,35 @@ The resulting assertion is as follows,
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
 
+### step1-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-fail1
+| Error    | None of the aria-describedby attribute values is a valid identifier.
+
+### step2-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-fail2
+| Error    | None of the elements referenced by aria-describedby exists.
+
+### step3-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-pass1
+
+### step3-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}–fail3
+| Error    | The long description provided using aria-describedby is not sufficiently descriptive.
 
 [TXTALT]: ../pages/algorithms/text-alternative-compute.html

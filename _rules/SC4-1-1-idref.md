@@ -36,22 +36,9 @@ Select each label element with a for attribute and each element with a aria-acti
 - Trim the IdrefAttr of whitespace characters
 - Select element IdTarget, by looking up the first element that has an ID attribute that matches the IdrefAttr
 - IF idTarget exists:
-  - Return {{ page.rule_id }}-pass1
+  - Return [step1-fail](#step1-pass)
 - ELSE:
-  - Return {{ page.rule_id }}-fail1
-
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-pass1
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Error    | The attribute {IdrefAttr} refers to an element that does not exist on the page.
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-fail1
+  - Return [step1-fail](#step1-fail)
 
 ## Outcome
 
@@ -64,3 +51,20 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
+
+### step1-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| Pointer  | selector result
+| ID       | {{ page.rule_id }}-pass1
+
+### step1-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| Error    | The attribute {IdrefAttr} refers to an element that does not exist on the page.
+| Pointer  | selector result
+| ID       | {{ page.rule_id }}-fail1

@@ -36,23 +36,10 @@ Select any element with an accesskey attribute. The following CSS selector could
   -  Create an empty list 'knownAccesskeys;
 - Take the first character of the ACCESSKEY attribute as FirstChar
 - IF the FirstChar exists in 'knownAccesskeys':
-  - Return {{ page.rule_id }}-fail1
+  - Return [step1-fail](#step1-fail)
 - ELSE:
   - Add the FirstChar to 'knownAccesskeys'
-  - Return {{ page.rule_id }}-pass1
-
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-pass1
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Error    | The accesskey of this element has occurred before on this page
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-fail1
+  - Return [step1-pass](#step1-pass)
 
 ## Outcome
 
@@ -65,3 +52,20 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
+
+### step1-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| Error    | The accesskey of this element has occurred before on this page
+| Pointer  | selector result
+| ID       | {{ page.rule_id }}-fail1
+
+### step1-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| Pointer  | selector result
+| ID       | {{ page.rule_id }}-pass1

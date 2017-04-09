@@ -43,12 +43,7 @@ Select all elements that has one or more of the following properties, containing
 
 Check if the computed `backgroundRepeat` property is set and its value is other than no-repeat.
 
-if yes, return
-
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-css-image
-| ID       | SC1-1-1-css-image-pass1
+if yes, return [step1-pass](#step1-pass)
 
 else, continue with [step 2](#step-2)
 
@@ -56,12 +51,7 @@ else, continue with [step 2](#step-2)
 
 Check if the height of all images added by the background-property is less or equals 5 pixels or its width is less or equals 3 pixels.
 
-if yes, return
-
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-css-image
-| ID       | SC1-1-1-css-image-pass2
+if yes, return [step2-pass](#step2-pass)
 
 else, continue with [step 3](#step-3)
 
@@ -81,12 +71,7 @@ To prepare the element for presentation to the user, all calculated CSS properti
 | requires-context     | yes
 | User profile         | Requires sight
 
-if yes, return
-
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-css-image
-| ID       | SC1-1-1-css-image-pass3
+if yes, return [step3-pass](#step3-pass)
 
 else continue with [step 4](#step-4)
 
@@ -109,21 +94,9 @@ To prepare the element for presentation to the user, all calculated CSS properti
 | Requires context     | yes
 | Requires Interaction | yes
 
-if yes, return
+if yes, return [step4-pass](#step4-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-css-image
-| ID       | SC1-1-1-css-image-pass4
-
-else return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-css-image
-| ID       | SC1-1-1-css-image-fail1
-| Error    | The image added by CSS is not decorative and not described in adjacent text.
-| Info     | Suggestions for texual alternative: {collection of repair-answers}
+else return [step4-fail](#step4-fail)
 
 ## Outcome
 
@@ -136,3 +109,40 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
+
+### step1-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC1-1-1-css-image
+| ID       | SC1-1-1-css-image-pass1
+
+### step2-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC1-1-1-css-image
+| ID       | SC1-1-1-css-image-pass2
+
+### step3-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC1-1-1-css-image
+| ID       | SC1-1-1-css-image-pass3
+
+### step4-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC1-1-1-css-image
+| ID       | SC1-1-1-css-image-pass4
+
+### step4-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC1-1-1-css-image
+| ID       | SC1-1-1-css-image-fail1
+| Error    | The image added by CSS is not decorative and not described in adjacent text.
+| Info     | Suggestions for texual alternative: {collection of repair-answers}

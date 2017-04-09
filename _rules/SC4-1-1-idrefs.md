@@ -41,22 +41,9 @@ td[headers], th[headers], *[aria-controls], *[aria-describedby], *[aria-flowto],
 - FOR EACH idRefVal in idRefVals
   - Get element IdTarget, by looking up the first element that has an ID attribute that matches idRefVal
   - IF idTarget exists:
-    - Return {{ page.rule_id }}-pass1
+    - Return [step1-fail](#step1-pass)
   - ELSE:
-    - Return {{ page.rule_id }}-fail1
-
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-pass1
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Error    | The attribute {IDREFS attribute} refers to an element with the id {idRefVal} which does not exist on the page.
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-fail1
+    - Return [step1-fail](#step1-fail)
 
 ## Outcome
 
@@ -69,3 +56,20 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
+
+### step1-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| Pointer  | selector result
+| ID       | {{ page.rule_id }}-pass1
+
+### step1-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| Error    | The attribute {IDREFS attribute} refers to an element with the id {idRefVal} which does not exist on the page.
+| Pointer  | selector result
+| ID       | {{ page.rule_id }}-fail1

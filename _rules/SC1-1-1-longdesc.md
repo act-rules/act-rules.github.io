@@ -42,13 +42,7 @@ Check if the `longdesc` attribute value is a valid URL
 
 if yes, continue with [step 2][#step-2]
 
-else, return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-longdesc
-| ID       | SC1-1-1-longdesc-fail1
-| Error    | LONGDESC attribute value is not a valid URL
+else, return [step1-fail](#step1-fail)
 
 ### Step 2
 
@@ -56,14 +50,7 @@ Check if the resource referenced in the `longdesc` attribute value exists
 
 if yes, continue with [step 3][#step-3]
 
-else, return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-longdesc
-| ID       | SC1-1-1-longdesc-fail2
-| Error    | LONGDESC reference does not exist
-| Info     |  The URL given as LONGDESC value was not retrievable.
+else, return [step2-fail](#step2-fail)
 
 ### Step 3
 
@@ -81,21 +68,9 @@ Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run 
 | Requires context     | yes
 | Requires Interaction | yes
 
-if yes, return
+if yes, return [step3-pass](#step3-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-longdesc
-| ID       | SC1-1-1-longdesc-pass1
-
-else, return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-longdesc
-| ID       | SC1-1-1-longdesc–fail3
-| Error    | Long description not sufficiently descriptive.
-| Info     | Collection of repair suggestions
+else, return [step3-fail](#step3-fail)
 
 ## Outcome
 
@@ -108,5 +83,38 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
+
+###  step1-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC1-1-1-longdesc
+| ID       | SC1-1-1-longdesc-fail1
+| Error    | LONGDESC attribute value is not a valid URL
+
+###  step2-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC1-1-1-longdesc
+| ID       | SC1-1-1-longdesc-fail2
+| Error    | LONGDESC reference does not exist
+| Info     |  The URL given as LONGDESC value was not retrievable.
+
+###  step3-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC1-1-1-longdesc
+| ID       | SC1-1-1-longdesc-pass1
+
+###  step3-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC1-1-1-longdesc
+| ID       | SC1-1-1-longdesc–fail3
+| Error    | Long description not sufficiently descriptive.
+| Info     | Collection of repair suggestions
 
 [TXTALT]: ../pages/algorithms/text-alternative-compute.html

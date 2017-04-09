@@ -42,23 +42,11 @@ L1 = value of `lang` attribute.
 
 Compare L1 to BCP 47.
 
-If L1 is not on the list, return
+If L1 is not on the list, return [step1-fail](#step1-fail)
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC312-lang
-| ID       | SC312-lang-fail1
-| Error    | Unknown language code.
-| Info     | L1
+Else, return [step1-pass](#step1-pass)
 
 *Note that this step also fails if L1 contains only whitespace or is empty.*
-
-Else, return
-
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC312-lang
-| ID       | SC312-lang-pass1
 
 ## Outcome
 
@@ -71,3 +59,19 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
+
+### step1-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC312-lang
+| ID       | SC312-lang-fail1
+| Error    | Unknown language code.
+| Info     | L1
+
+### step1-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC312-lang
+| ID       | SC312-lang-pass1

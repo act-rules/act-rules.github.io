@@ -43,20 +43,9 @@ Give focus to the selected element.
 
 Check that the offsetTop is equal or greater than 0 AND that the offset left minus the textIndent is equal or greater than 0
 
-If yes, return:
+If yes, return [step1-pass](#step1-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC2-4-7-focus-in-viewport
-| ID       | SC2-4-7-focus-in-viewport-passed1
-
-If no, return:
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC2-4-7-focus-in-viewport
-| ID       | SC2-4-7-focus-in-viewport-failed
-| Error    | The element should be inside the viewport when it receives focus
+If no, return [step1-fail](#step1-fail)
 
 ## Outcome
 
@@ -69,3 +58,18 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
+
+### step1-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC2-4-7-focus-in-viewport
+| ID       | SC2-4-7-focus-in-viewport-passed1
+
+### step1-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC2-4-7-focus-in-viewport
+| ID       | SC2-4-7-focus-in-viewport-failed
+| Error    | The element should be inside the viewport when it receives focus

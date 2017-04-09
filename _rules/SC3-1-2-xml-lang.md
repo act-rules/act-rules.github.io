@@ -37,13 +37,7 @@ Select all elements that match the following XPATH selector:
 
 Check that the selected element contains also a `lang` attribute.
 
-If no `lang` is specified, return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC312-xml-lang
-| ID       | SC312-xml-lang-fail1
-| Error    | No lang attribute found.
+If no `lang` is specified, return [step1-fail](#step1-fail)
 
 ### Step 2
 
@@ -53,21 +47,9 @@ L2 = value of `lang`
 
 Compare L1 and L2.
 
-If the L1 and L2 differ, return
+If the L1 and L2 differ, return [step2-fail](#step2-fail)
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC312-xml-lang
-| ID       | SC312-xml-lang-fail2
-| Error    | Contradicting language attributes.
-| Info     | L1, L2
-
-Else, return
-
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC312-xml-lang
-| ID       | SC312-xml-lang-pass1
+Else, return [step2-pass](#step2-pass)
 
 ## Outcome
 
@@ -80,3 +62,27 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
+
+### step1-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC312-xml-lang
+| ID       | SC312-xml-lang-fail1
+| Error    | No lang attribute found.
+
+### step2-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC312-xml-lang
+| ID       | SC312-xml-lang-fail2
+| Error    | Contradicting language attributes.
+| Info     | L1, L2
+
+### step2-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC312-xml-lang
+| ID       | SC312-xml-lang-pass1

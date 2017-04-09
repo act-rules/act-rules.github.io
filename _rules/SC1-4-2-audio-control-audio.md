@@ -42,12 +42,7 @@ Select all elements that match the following XPATH selector(s):
 
 Check if the `audio` or `video` is paused. Check `paused` property.
 
-If true, return:
-
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-4-2-audio-control
-| ID       | SC1-4-2-audio-control-pass1
+If true, return [step1-pass](#step1-pass)
 
 Else continue with [step 2][#step-2]
 
@@ -55,12 +50,7 @@ Else continue with [step 2][#step-2]
 
 Check if the sound is muted. Check `muted` property.
 
-If true, return:
-
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-4-2-audio-control
-| ID       | SC1-4-2-audio-control-pass2
+If true, return [step2-pass](#step2-pass)
 
 Else continue with [step 3][#step-3]
 
@@ -80,12 +70,7 @@ Check if the sound has a loop. Check `loop` property.
 
 If true, continue with [Step 5](#step-5)
 
-Else, return:
-
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-4-2-audio-control
-| ID       | SC1-4-2-audio-control-pass3
+Else, return [step4-pass](#step4-pass)
 
 ### Step 5
 
@@ -104,12 +89,7 @@ Check if the video plays audio.
 
 If yes, continue with [Step 6](#step-6).
 
-Else, return:
-
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-4-2-audio-control
-| ID       | SC1-4-2-audio-control-pass4
+Else, return [step5-pass](#step5-pass)
 
 ### Step 6
 
@@ -126,20 +106,9 @@ Check if a mechanism to control the sound is provided as one of the first five l
 | Requires context     | yes
 | Requires Interaction | yes
 
-If yes, return:
+If yes, return [step6-pass](#step6-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-4-2-audio-control
-| ID       | SC1-4-2-audio-control-pass5
-
-Else, return:
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-4-2-audio-control
-| ID       | SC1-4-2-audio-control-fail1
-| Error    | No mechanism to control the automaticaly started sound available at the top of the web page.
+Else, return [step6-fail](#step6-fail)
 
 ## Outcome
 
@@ -152,3 +121,46 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
+
+### step1-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC1-4-2-audio-control
+| ID       | SC1-4-2-audio-control-pass1
+
+### step2-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC1-4-2-audio-control
+| ID       | SC1-4-2-audio-control-pass2
+
+### step4-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC1-4-2-audio-control
+| ID       | SC1-4-2-audio-control-pass3
+
+### step5-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC1-4-2-audio-control
+| ID       | SC1-4-2-audio-control-pass4
+
+### step6-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC1-4-2-audio-control
+| ID       | SC1-4-2-audio-control-pass5
+
+### step6-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC1-4-2-audio-control
+| ID       | SC1-4-2-audio-control-fail1
+| Error    | No mechanism to control the automaticaly started sound available at the top of the web page.

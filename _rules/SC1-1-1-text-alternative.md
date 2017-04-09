@@ -62,13 +62,7 @@ Check if one of the following attributes is present: `aria-labelledby` with vali
 
 if yes, continue with [Step 3: check for img siblings (ARIA10 and G196)](#step-3-check-for-img-siblings-aria10-and-g196)
 
-else return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-failed1
-| Error    | The element must provide one of the following attributes: `alt` , `aria-label`, `title` or a `aria-labelledby`.
+else return [step2-fail](#step2-fail)
 
 ### Step 3: check for img siblings (ARIA10 and G196)
 
@@ -121,21 +115,9 @@ All items of the group should be removed from the set of selector-matches after 
 | Requires context     | yes
 | Requires Interaction | yes
 
-if yes, return
+if yes, return [step6-pass](#step6-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-passed1
-
-else return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-failed2
-| Error    | Textual alternative T1 does not sufficiently describe the group of images.
-| Info     | Suggestions for textual alternative: {collection of repair-answers}
+else return [step6-fail](#step6-fail)
 
 ### Step 7: ask if sufficiently described by textual alternative (G196)
 
@@ -155,21 +137,9 @@ All items of the group should be removed from the set of selector-matches after 
 | Requires context     | yes
 | Requires Interaction | yes
 
-if yes, return
+if yes, return [step7-pass](#step7-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-passed2
-
-else return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-failed3
-| Error    | Textual alternative T1 does not sufficiently describe the group of images.
-| Info     | Suggestions for textual alternative: {collection of repair-answers}
+else return [step7-fail](#step7-fail)
 
 ### Step 8: compute text alternative
 
@@ -201,31 +171,15 @@ Note: The `img` has no textual alternative at this test step.
 
 Check if the parent anchor element or any of its children contains text.
 
-if yes, return
+if yes, return [step10-pass](#step10-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-passed3
-
-else return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-failed4
-| Error    | No text alternative for image contained in link without link text.
+else return [step10-fail](#step10-fail)
 
 ### Step 11: check dimensions (no text alternative)
 
 Check if the elements height is less or equal 5px or the elements width is less or equal 3px.
 
-if yes, return
-
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-passed4
+if yes, return [step11-pass](#step11-pass)
 
 else Continue with [Step 12: ask if decorative (no text alternative)](#step-12-ask-if-decorative-no-text-alternative)
 
@@ -242,21 +196,9 @@ else Continue with [Step 12: ask if decorative (no text alternative)](#step-12-a
 | Repair               | If no, could you suggest a sufficient textual alternative?
 | Requires context     | yes
 
-if yes, return
+if yes, return [step12-pass](#step12-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-passed5
-
-else return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-failed5
-| Error    | No sufficiently descriptive textual alternative for an element, which is not pure decoration.
-| Info     | Suggestions for textual alternative: {collection of repair-answers}
+else return [step12-fail](#step12-fail)
 
 ### Step 13: check text alternative validity (F30 and F39)
 
@@ -264,14 +206,7 @@ Use the [Validate Text Alternative][ALT_OK] algorithm to check if the textual al
 
 if valid, continue with [Step 14: check dimensions (valid text alternative) (F38)](#step-14-check-dimensions-valid-text-alternative-f38)
 
-else return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-failed6
-| Error    | Textual alternative is not valid.
-| Info     | The textual alternative is a filename, an URL, a placeholder text or does not contain 2 or more characters that are not white space characters or punctionmarks.
+else return [step13-fail](#step13-fail)
 
 ### Step 14: check dimensions (valid text alternative) (F38)
 
@@ -304,21 +239,9 @@ else continue with [Step 17: ask if sufficiently described by textual alternativ
 
 If the current element is an `img`, check, if an empty `alt` attribute or `role="presentation"` is provided.
 
-if yes, return
+if yes, return [step16-pass](#step16-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-passed6
-
-else return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-failed7
-| Error    | Image assessed as decorative cannot be ignored by assistive technologies
-| Info     | An empty `alt` attribute or `role=”presentation”` must be set.
+else return [step16-fail](#step16-fail)
 
 ### Step 17: ask if sufficiently described by textual alternative
 
@@ -334,12 +257,7 @@ else return
 | Requires context     | yes
 | Requires Interaction | yes
 
-if yes, return
-
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-passed7
+if yes, return [step17-pass](#step17-pass)
 
 else continue with [[#Step 18: ask if sufficiently described by adjacent text]]
 
@@ -357,21 +275,9 @@ else continue with [[#Step 18: ask if sufficiently described by adjacent text]]
 | Requires context     | yes
 | Requires Interaction | no
 
-if yes, return
+if yes, return [step18-pass](#step18-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-passed8
-
-else return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-failed8
-| Error    | Textual alternative T1 is not sufficiently descriptive and the element is also not described in adjacent text.
-| Info     | Suggestions for textual alternative: {collection of repair-answers}
+else return [step18-fail](#step18-fail)
 
 - Activity diagram of transitions between steps 1 to 18
 [[File:1.1.1. test step overview.png|frameless|1046px|Graphical alternative of steps one to eighteen]]
@@ -389,6 +295,132 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
+
+### step2-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC1-1-1-text-alternative
+| ID       | SC1-1-1-text-alternative-failed1
+| Error    | The element must provide one of the following attributes: `alt` , `aria-label`, `title` or a `aria-labelledby`.
+
+### step6-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC1-1-1-text-alternative
+| ID       | SC1-1-1-text-alternative-passed1
+
+### step6-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC1-1-1-text-alternative
+| ID       | SC1-1-1-text-alternative-failed2
+| Error    | Textual alternative T1 does not sufficiently describe the group of images.
+| Info     | Suggestions for textual alternative: {collection of repair-answers}
+
+### step7-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC1-1-1-text-alternative
+| ID       | SC1-1-1-text-alternative-passed2
+
+### step7-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC1-1-1-text-alternative
+| ID       | SC1-1-1-text-alternative-failed3
+| Error    | Textual alternative T1 does not sufficiently describe the group of images.
+| Info     | Suggestions for textual alternative: {collection of repair-answers}
+
+### step10-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC1-1-1-text-alternative
+| ID       | SC1-1-1-text-alternative-passed3
+
+### step10-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC1-1-1-text-alternative
+| ID       | SC1-1-1-text-alternative-failed4
+| Error    | No text alternative for image contained in link without link text.
+
+### step11-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC1-1-1-text-alternative
+| ID       | SC1-1-1-text-alternative-passed4
+
+### step12-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC1-1-1-text-alternative
+| ID       | SC1-1-1-text-alternative-passed5
+
+### step12-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC1-1-1-text-alternative
+| ID       | SC1-1-1-text-alternative-failed5
+| Error    | No sufficiently descriptive textual alternative for an element, which is not pure decoration.
+| Info     | Suggestions for textual alternative: {collection of repair-answers}
+
+### step13-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC1-1-1-text-alternative
+| ID       | SC1-1-1-text-alternative-failed6
+| Error    | Textual alternative is not valid.
+| Info     | The textual alternative is a filename, an URL, a placeholder text or does not contain 2 or more characters that are not white space characters or punctionmarks.
+
+### step16-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC1-1-1-text-alternative
+| ID       | SC1-1-1-text-alternative-passed6
+
+### step16-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC1-1-1-text-alternative
+| ID       | SC1-1-1-text-alternative-failed7
+| Error    | Image assessed as decorative cannot be ignored by assistive technologies
+| Info     | An empty `alt` attribute or `role=”presentation”` must be set.
+
+### step17-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC1-1-1-text-alternative
+| ID       | SC1-1-1-text-alternative-passed7
+
+### step18-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | SC1-1-1-text-alternative
+| ID       | SC1-1-1-text-alternative-passed8
+
+### step18-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | SC1-1-1-text-alternative
+| ID       | SC1-1-1-text-alternative-failed8
+| Error    | Textual alternative T1 is not sufficiently descriptive and the element is also not described in adjacent text.
+| Info     | Suggestions for textual alternative: {collection of repair-answers}
 
 [ACCSUP]: ../pages/accessibility-support.html
 [TXTALT]: ../pages/algorithms/text-alternative-compute.html

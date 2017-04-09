@@ -37,13 +37,7 @@ Select all elements that matches the following CSS selector:
 
 Check that the `html` element contains also a `lang` attribute.
 
-If no `lang` is specified, return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail1
-| Error    | No lang attribute found. Only xml:lang.
+If no `lang` is specified, return [step1-fail](#step1-fail)
 
 ### Step 2
 
@@ -53,21 +47,9 @@ L2 = value of `lang`
 
 Compare L1 and L2.
 
-If the L1 and L2 differ, return
+If the L1 and L2 differ, return [step2-fail](#step2-fail)
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail2
-| Error    | Contradicting language codes.
-| Info     | L1, L2
-
-Else, return
-
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-pass1
+Else, return [step2-pass](#step2-pass)
 
 ## Outcome
 
@@ -81,5 +63,26 @@ The resulting assertion is as follows,
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
 
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual
+### step1-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-fail1
+| Error    | No lang attribute found. Only xml:lang.
+
+### step2-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-fail2
+| Error    | Contradicting language codes.
+| Info     | L1, L2
+
+### step2-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-pass1

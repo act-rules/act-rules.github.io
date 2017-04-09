@@ -38,23 +38,10 @@ Select all elements that match the following CSS selector:
 - IF there is no list called 'knownIDs':
   - Create an empty list 'knownIDs;
 - IF the value of the ID attribute exists in 'knownIDs':
-  - Return {{ page.rule_id }}-fail1
+  - Return [step1-fail](#step1-fail)
 - ELSE:
   - Add the value of the ID attribute of the selected element to 'knownIDs'
-  - Return {{ page.rule_id }}-pass1
-
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-pass1
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Error    | The ID of this element has occurred before on this page
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-fail1
+  - Return [step1-pass](#step1-pass)
 
 ## Outcome
 
@@ -67,3 +54,20 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
+
+### step1-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| Error    | The ID of this element has occurred before on this page
+| Pointer  | selector result
+| ID       | {{ page.rule_id }}-fail1
+
+### step1-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| Pointer  | selector result
+| ID       | {{ page.rule_id }}-pass1

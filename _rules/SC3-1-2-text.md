@@ -47,21 +47,9 @@ If L2 can not be determined by the algorithm.
 
 Continue with [Step 2](#step-2).
 
-If L2 is equal to L1, return
+If L2 is equal to L1, return [step1-pass](#step1-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-pass1
-
-Else return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail1
-| Error    | The language of the text is not specified correctly.
-| Info     | L1, L2
+Else return [step1-fail](#step1-fail)
 
 ### Step 2
 
@@ -73,21 +61,9 @@ Question: Is L1 the *only* language used in this text?
 
 Help text: If the text contains a phrase or sentence in another language, please answer "no". If there are only single words in another language and the rest of the text is in L1, please answer "yes".
 
-If yes, return
+If yes, return [step2-pass](#step2-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-pass2
-
-Else return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail2
-| Error    | The language of the text is not specified correctly.
-| Info     | L1, L2
+Else return [step2-fail](#step2-fail)
 
 ## Outcome
 
@@ -100,5 +76,37 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
+
+### step1-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-pass1
+
+### step1-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-fail1
+| Error    | The language of the text is not specified correctly.
+| Info     | L1, L2
+
+### step2-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-pass2
+
+### step2-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-fail2
+| Error    | The language of the text is not specified correctly.
+| Info     | L1, L2
 
 [LNGFND]: ../pages/algorithms/lang-identification.html

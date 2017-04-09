@@ -42,22 +42,9 @@ Remove any characters starting after the first comma or semicolon from the value
 
 Parse the remainder to an integer.
 
-If the integer is invalid or 0, return:
+If the integer is invalid or 0, return [step1-pass](#step1-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-passed
-| Pointer  | Selected element
-
-Else return:
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-failed
-| Error    | Meta refresh should not be used unless it is instantaneous.
-| Pointer  | Selected element
+Else return [step1-fail](#step1-fail)
 
 ## Outcome
 
@@ -70,3 +57,20 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
+
+### step1-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-passed
+| Pointer  | Selected element
+
+### step1-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-failed
+| Error    | Meta refresh should not be used unless it is instantaneous.
+| Pointer  | Selected element

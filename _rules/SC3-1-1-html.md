@@ -40,13 +40,7 @@ L1 = value of `lang` attribute.
 
 Continue with [Step2](#step-2).
 
-else if neither `lang` nor `xml:lang` are specified, return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail1
-| Error    | No language attribute found.
+else if neither `lang` nor `xml:lang` are specified, return [step1-fail](#step1-fail)
 
 else (only `xml:lang` exists)
 
@@ -56,23 +50,11 @@ else (only `xml:lang` exists)
 
 Compare L1 to BCP 47.
 
-If L1 is not on the list, return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail2
-| Error    | Unknown language code.
-| Info     | L1
+If L1 is not on the list, return [step2-fail](#step2-fail)
 
 *Note that this step also fails if L1 contains only whitespace or is empty.*
 
-Else, return
-
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-pass1
+Else, return [step2-pass](#step2-pass)
 
 ## Outcome
 
@@ -85,3 +67,27 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
+
+### step1-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-fail1
+| Error    | No language attribute found.
+
+### step2-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-fail2
+| Error    | Unknown language code.
+| Info     | L1
+
+### step2-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-pass1

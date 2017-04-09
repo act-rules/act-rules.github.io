@@ -51,12 +51,7 @@ Select a continuous run of text from one or more consecutive `p` elements. If no
 
 Use a [language identification algorithm][LNGFND] to check if L1 is the language of the selected text.
 
-If yes, return
-
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-text-pass1
+If yes, return [step1-pass](#step1-pass)
 
 Else continue with [Step 2](#step-2).
 
@@ -70,21 +65,9 @@ Question: Is L1 the primary language of this page?
 
 Help text: "Primary language" means the language of the majority of the text on the page or the language of the interface (navigation menu etc.) of the page.
 
-If yes, return
+If yes, return [step2-pass](#step2-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-pass2
-
-Else return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail1
-| Error    | The primary language of the page is not specified correctly.
-| Info     | L1
+Else return [step2-fail](#step2-fail)
 
 ## Outcome
 
@@ -97,5 +80,28 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
+
+### step1-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-text-pass1
+
+### step2-pass
+
+| Outcome  | Passed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-pass2
+
+### step2-fail
+
+| Outcome  | Failed
+|----------|-----
+| Testcase | {{ page.rule_id }}
+| ID       | {{ page.rule_id }}-fail1
+| Error    | The primary language of the page is not specified correctly.
+| Info     | L1
 
 [LNGFND]: ../pages/algorithms/lang-identification.html

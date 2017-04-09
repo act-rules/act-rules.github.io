@@ -90,33 +90,34 @@ The resulting assertion is as follows,
 
 ### step1-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail1
-| Error    | None of the aria-describedby attribute values is a valid identifier.
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | None of the aria-describedby attribute values is a valid identifier.
 
 ### step2-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail2
-| Error    | None of the elements referenced by aria-describedby exists.
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | None of the elements referenced by aria-describedby exists.
 
 ### step3-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-pass1
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step3-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}–fail3
-| Error    | The long description provided using aria-describedby is not sufficiently descriptive.
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | The long description provided using aria-describedby is not sufficiently descriptive.
 
 [TXTALT]: ../pages/algorithms/text-alternative-compute.html

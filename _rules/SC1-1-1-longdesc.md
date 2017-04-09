@@ -86,35 +86,36 @@ The resulting assertion is as follows,
 
 ###  step1-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-longdesc
-| ID       | SC1-1-1-longdesc-fail1
-| Error    | LONGDESC attribute value is not a valid URL
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | LONGDESC attribute value is not a valid URL
 
 ###  step2-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-longdesc
-| ID       | SC1-1-1-longdesc-fail2
-| Error    | LONGDESC reference does not exist
-| Info     |  The URL given as LONGDESC value was not retrievable.
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | LONGDESC reference does not exist
+| info        | The URL given as LONGDESC value was not retrievable.
 
 ###  step3-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-longdesc
-| ID       | SC1-1-1-longdesc-pass1
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ###  step3-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-longdesc
-| ID       | SC1-1-1-longdesc–fail3
-| Error    | Long description not sufficiently descriptive.
-| Info     | Collection of repair suggestions
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Long description not sufficiently descriptive.
+| info        | Collection of repair suggestions
 
 [TXTALT]: ../pages/algorithms/text-alternative-compute.html

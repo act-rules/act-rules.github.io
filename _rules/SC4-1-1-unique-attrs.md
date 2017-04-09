@@ -66,7 +66,6 @@ The resulting assertion is as follows,
 |-------------|----------
 | type        | TestResult
 | outcome     | Passed
-| description |
 
 ## Implementation Tests
 

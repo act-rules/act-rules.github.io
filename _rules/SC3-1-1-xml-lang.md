@@ -65,24 +65,24 @@ The resulting assertion is as follows,
 
 ### step1-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail1
-| Error    | No lang attribute found. Only xml:lang.
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | No lang attribute found. Only xml:lang.
 
 ### step2-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail2
-| Error    | Contradicting language codes.
-| Info     | L1, L2
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Contradicting language codes L1 and L2.
 
 ### step2-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-pass1
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |

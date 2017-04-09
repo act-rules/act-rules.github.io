@@ -54,17 +54,16 @@ The resulting assertion is as follows,
 
 ### step1-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-pass1
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step1-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Error    | The attribute {IdrefAttr} refers to an element that does not exist on the page.
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-fail1
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | The attribute {IdrefAttr} refers to an element that does not exist on the page.

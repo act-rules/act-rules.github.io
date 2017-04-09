@@ -62,16 +62,16 @@ The resulting assertion is as follows,
 
 ### step1-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC312-lang
-| ID       | SC312-lang-fail1
-| Error    | Unknown language code.
-| Info     | L1
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Unknown language code L1
 
 ### step1-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC312-lang
-| ID       | SC312-lang-pass1
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |

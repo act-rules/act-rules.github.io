@@ -70,24 +70,24 @@ The resulting assertion is as follows,
 
 ### step1-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail1
-| Error    | No language attribute found.
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | No language attribute found.
 
 ### step2-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail2
-| Error    | Unknown language code.
-| Info     | L1
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Unknown language code.
 
 ### step2-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-pass1
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |

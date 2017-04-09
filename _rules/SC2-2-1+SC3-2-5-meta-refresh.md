@@ -60,17 +60,16 @@ The resulting assertion is as follows,
 
 ### step1-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-passed
-| Pointer  | Selected element
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step1-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-failed
-| Error    | Meta refresh should not be used unless it is instantaneous.
-| Pointer  | Selected element
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Meta refresh should not be used unless it is instantaneous.

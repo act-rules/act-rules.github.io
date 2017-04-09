@@ -72,52 +72,48 @@ The resulting assertion is as follows,
 
 ### step2-fail1
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Error    | This element requires a closing tag.
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-fail1
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | This element requires a closing tag.
 
 ### step2-fail2
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Error    | Element must use self-closing syntax.
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-fail2
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Element must use self-closing syntax.
 
 ### step2-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-pass1
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step3-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-pass2
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step3-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Error    | Element is incorrectly nested
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-fail3
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Element is incorrectly nested
 
 ### step4-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Error    | Closing tag does not have a corresponding opening tag
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-fail4
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Closing tag does not have a corresponding opening tag

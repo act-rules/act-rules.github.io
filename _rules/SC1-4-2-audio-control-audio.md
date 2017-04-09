@@ -124,43 +124,48 @@ The resulting assertion is as follows,
 
 ### step1-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-4-2-audio-control
-| ID       | SC1-4-2-audio-control-pass1
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step2-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-4-2-audio-control
-| ID       | SC1-4-2-audio-control-pass2
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step4-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-4-2-audio-control
-| ID       | SC1-4-2-audio-control-pass3
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step5-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-4-2-audio-control
-| ID       | SC1-4-2-audio-control-pass4
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step6-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-4-2-audio-control
-| ID       | SC1-4-2-audio-control-pass5
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step6-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-4-2-audio-control
-| ID       | SC1-4-2-audio-control-fail1
-| Error    | No mechanism to control the automaticaly started sound available at the top of the web page.
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | No mechanism to control the automaticaly started sound available at the top of the web page.

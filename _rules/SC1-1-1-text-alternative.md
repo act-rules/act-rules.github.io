@@ -298,129 +298,137 @@ The resulting assertion is as follows,
 
 ### step2-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-failed1
-| Error    | The element must provide one of the following attributes: `alt` , `aria-label`, `title` or a `aria-labelledby`.
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | The element must provide one of the following attributes: `alt` , `aria-label`, `title` or a `aria-labelledby`.
 
 ### step6-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-passed1
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step6-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-failed2
-| Error    | Textual alternative T1 does not sufficiently describe the group of images.
-| Info     | Suggestions for textual alternative: {collection of repair-answers}
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Textual alternative T1 does not sufficiently describe the group of images.
+| info        | Suggestions for textual alternative: {collection of repair-answers}
 
 ### step7-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-passed2
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step7-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-failed3
-| Error    | Textual alternative T1 does not sufficiently describe the group of images.
-| Info     | Suggestions for textual alternative: {collection of repair-answers}
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Textual alternative T1 does not sufficiently describe the group of images.
+| info        | Suggestions for textual alternative: {collection of repair-answers}
 
 ### step10-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-passed3
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step10-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-failed4
-| Error    | No text alternative for image contained in link without link text.
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | No text alternative for image contained in link without link text.
 
 ### step11-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-passed4
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step12-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-passed5
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step12-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-failed5
-| Error    | No sufficiently descriptive textual alternative for an element, which is not pure decoration.
-| Info     | Suggestions for textual alternative: {collection of repair-answers}
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | No sufficiently descriptive textual alternative for an element, which is not pure decoration.
+| info        | Suggestions for textual alternative: {collection of repair-answers}
 
 ### step13-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-failed6
-| Error    | Textual alternative is not valid.
-| Info     | The textual alternative is a filename, an URL, a placeholder text or does not contain 2 or more characters that are not white space characters or punctionmarks.
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Textual alternative is not valid.
+| info        | The textual alternative is a filename, an URL, a placeholder text or does not contain 2 or more characters that are not white space characters or punctionmarks.
 
 ### step16-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-passed6
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step16-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-failed7
-| Error    | Image assessed as decorative cannot be ignored by assistive technologies
-| Info     | An empty `alt` attribute or `role=”presentation”` must be set.
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Image assessed as decorative cannot be ignored by assistive technologies
+| info        | An empty `alt` attribute or `role=”presentation”` must be set.
 
 ### step17-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-passed7
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step18-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-passed8
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step18-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-text-alternative
-| ID       | SC1-1-1-text-alternative-failed8
-| Error    | Textual alternative T1 is not sufficiently descriptive and the element is also not described in adjacent text.
-| Info     | Suggestions for textual alternative: {collection of repair-answers}
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Textual alternative T1 is not sufficiently descriptive and the element is also not described in adjacent text.
+| info        | Suggestions for textual alternative: {collection of repair-answers}
 
 [ACCSUP]: ../pages/accessibility-support.html
 [TXTALT]: ../pages/algorithms/text-alternative-compute.html

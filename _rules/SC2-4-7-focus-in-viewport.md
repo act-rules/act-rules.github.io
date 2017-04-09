@@ -61,15 +61,16 @@ The resulting assertion is as follows,
 
 ### step1-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC2-4-7-focus-in-viewport
-| ID       | SC2-4-7-focus-in-viewport-passed1
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step1-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC2-4-7-focus-in-viewport
-| ID       | SC2-4-7-focus-in-viewport-failed
-| Error    | The element should be inside the viewport when it receives focus
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | The element should be inside the viewport when it receives focus

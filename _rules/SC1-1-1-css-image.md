@@ -112,37 +112,41 @@ The resulting assertion is as follows,
 
 ### step1-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-css-image
-| ID       | SC1-1-1-css-image-pass1
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step2-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-css-image
-| ID       | SC1-1-1-css-image-pass2
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step3-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-css-image
-| ID       | SC1-1-1-css-image-pass3
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step4-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-css-image
-| ID       | SC1-1-1-css-image-pass4
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
 
 ### step4-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-css-image
-| ID       | SC1-1-1-css-image-fail1
-| Error    | The image added by CSS is not decorative and not described in adjacent text.
-| Info     | Suggestions for texual alternative: {collection of repair-answers}
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | The image added by CSS is not decorative and not described in adjacent text.
+| info        | Suggestions for textual alternative: {collection of repair-answers}

@@ -65,24 +65,24 @@ The resulting assertion is as follows,
 
 ### step1-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC312-xml-lang
-| ID       | SC312-xml-lang-fail1
-| Error    | No lang attribute found.
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | No lang attribute found.
 
 ### step2-fail
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC312-xml-lang
-| ID       | SC312-xml-lang-fail2
-| Error    | Contradicting language attributes.
-| Info     | L1, L2
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Contradicting language attributes.
 
 ### step2-pass
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC312-xml-lang
-| ID       | SC312-xml-lang-pass1
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |

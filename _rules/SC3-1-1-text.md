@@ -47,13 +47,9 @@ This test does not prescribe which of these definitions to use as long as one of
 
 ### Selector
 
-Test mode: [automatic][AUTO]
-
 L1 = value of `lang` attribute.
 
 ### Step 1
-
-Test mode: [automatic][AUTO]
 
 Select a continuous run of text from one or more consecutive `p` elements. If no `p` elements exist, select any text from the body of the web page. The text should be at least 300 characters in length and not contain any language changes, i.e. `lang` attributes on the element or its parent. If no such text is found, continue with [Step 2](#-step 2).
 
@@ -69,8 +65,6 @@ If yes, return
 Else continue with [Step 2](#step-2).
 
 ### Step 2
-
-Test mode: [manual][MANUAL]
 
 Present the page to the user.
 
@@ -108,6 +102,4 @@ The resulting assertion is as follows,
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
 
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual
 [LNGFND]: ../pages/algorithms/lang-identification.html

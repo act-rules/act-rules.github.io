@@ -43,7 +43,6 @@ else, return [step1-fail](#step1-fail)
 
 The resulting assertion is as follows,
 
-
 | Property | Value
 |----------|----------
 | type     | Assertion

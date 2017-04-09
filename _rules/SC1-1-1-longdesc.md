@@ -43,13 +43,9 @@ This test checks the sufficient provision of a long text description for non-tex
 
 ### Selector
 
-Test mode: [automatic][AUTO]
-
 `//img[@longdesc]`
 
 ### Step 1
-
-Test mode: [automatic][AUTO]
 
 Check if the `longdesc` attribute value is a valid URL
 
@@ -65,8 +61,6 @@ else, return
 
 ### Step 2
 
-Test mode: [automatic][AUTO]
-
 Check if the resource referenced in the `longdesc` attribute value exists
 
 if yes, continue with [step 3][#step-3]
@@ -81,8 +75,6 @@ else, return
 | Info     |  The URL given as LONGDESC value was not retrievable.
 
 ### Step 3
-
-Test mode: [automatic][MANUAL]
 
 Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run on the element and assign it to variable T1.
 
@@ -125,7 +117,4 @@ The resulting assertion is as follows,
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
 
-[AUTO]: ../pages/test-modes.html#automatic
-[SEMAUT]: ../pages/test-modes.html#semiauto
-[MANUAL]: ../pages/test-modes.html#manual
 [TXTALT]: ../pages/algorithms/text-alternative-compute.html

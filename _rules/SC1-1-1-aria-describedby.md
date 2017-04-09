@@ -44,8 +44,6 @@ This test checks the sufficient provision of a long text description for element
 
 ### Selector
 
-Test mode: [automatic][AUTO]
-
 Select following elements providing an `aria-describedby` attribute:
 
 - `img` elements
@@ -57,8 +55,6 @@ Select following elements providing an `aria-describedby` attribute:
 ````
 
 ### Step 1
-
-Test mode: [automatic][AUTO]
 
 Check if at least one of the `aria-describedby` attribute values is a valid identifier.
 
@@ -74,8 +70,6 @@ else, return
 
 ### Step 2
 
-Test mode: [automatic][AUTO]
-
 Check if at least one of the elements referenced by the valid `aria-describedby` attribute values exists.
 
 if yes, continue with [step 3](#step-3)
@@ -89,8 +83,6 @@ else, return
 | Error    | None of the elements referenced by aria-describedby exists.
 
 ### Step 3
-
-Test mode: [manual][MANUAL]
 
 Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run on the element itself and assign it to variable T1 and on all elements referenced by the `aria-describedby` attribute and assign it to variable T2.
 
@@ -132,6 +124,5 @@ The resulting assertion is as follows,
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
 
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual
+
 [TXTALT]: ../pages/algorithms/text-alternative-compute.html

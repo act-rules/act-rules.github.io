@@ -37,8 +37,6 @@ This test checks that all elements that receive focus are visible in the viewpor
 
 ### Selector
 
-Test mode: [automatic][AUTO]
-
 Each element that matches one of the following CSS selectors
 
 - `a[href]:not([tabindex=-1])`,
@@ -49,8 +47,6 @@ Each element that matches one of the following CSS selectors
 - `*[tabindex]:not([tabindex=-1])`
 
 ### Step 1
-
-Test mode: [automatic][AUTO]
 
 Give focus to the selected element.
 
@@ -82,6 +78,3 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
-
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual

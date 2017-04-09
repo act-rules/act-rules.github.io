@@ -40,13 +40,9 @@ This test checks if meta element is not used for delayed redirecting or refreshi
 
 ### Selector
 
-Test mode: [automatic][AUTO]
-
 Select each element matching: `meta[http-equiv="refresh"][content]`
 
 ### Step 1
-
-Test mode: [automatic][AUTO]
 
 Take the value of the content attribute of the selected element.
 
@@ -82,6 +78,3 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
-
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual

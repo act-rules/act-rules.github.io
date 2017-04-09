@@ -37,13 +37,9 @@ This test checks that each element referred to from an idref attribute exists.
 
 ### Selector
 
-Test mode: [automatic][AUTO]
-
 Select each label element with a for attribute and each element with a aria-activedescendant attribute. The CSS selector `label[for], *[aria-activedescendant]` can be used.
 
 ### Step 1
-
-Test mode: [automatic][AUTO]
 
 - Take the attribute with the IDREF (for="" / aria-activedescendant) value as IdrefAttr
 - Trim the IdrefAttr of whitespace characters
@@ -77,6 +73,3 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
-
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual

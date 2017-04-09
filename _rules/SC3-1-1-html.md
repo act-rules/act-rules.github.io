@@ -39,13 +39,9 @@ This test checks that the primary language of the web content can be programmati
 
 ### Selector
 
-Test mode: [automatic][AUTO]
-
 Select the `html` element.
 
 ### Step 1
-
-Test mode: [automatic][AUTO]
 
 If `lang` attribute exists:
 
@@ -66,8 +62,6 @@ else (only `xml:lang` exists)
 *Do nothing. (This case is covered by [SC3-1-1-xml-lang](SC3-1-1-xml-lang.html).)*
 
 ### Step 2
-
-Test mode: [automatic][AUTO]
 
 Compare L1 to BCP 47.
 
@@ -100,6 +94,3 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
-
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual

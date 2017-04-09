@@ -36,8 +36,6 @@ This test checks that each element referred to from an idrefs attribute exists.
 
 ### Selector
 
-Test mode: [automatic][AUTO]
-
 Select each td and th element with a headers attribute, and each element with an aria IDREFS attribute. The following CSS selector can be used:
 
 ```
@@ -45,8 +43,6 @@ td[headers], th[headers], *[aria-controls], *[aria-describedby], *[aria-flowto],
 ```
 
 ### Step 1
-
-Test mode: [automatic][AUTO]
 
 - Make a list of idRefVals by splitting the IDREFS attribute on whitespace characters
 - Trim each value in idRefVals by removing all whitespace characters
@@ -81,6 +77,3 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
-
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual

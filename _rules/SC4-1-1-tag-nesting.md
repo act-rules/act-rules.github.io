@@ -36,20 +36,14 @@ This test checks that tags of an HTML or XHTML document are nested correctly. So
 
 ### Selector
 
-Test mode: [automatic][AUTO]
-
 Select all opening and closing tags in the HTML document
 
 ### Step 1: Verify opening tag attributes=
-
-Test mode: [automatic][AUTO]
 
 - IF the tag is a closing tag:
   - GO TO step 4
 
 ### Step 2: Check unclosed opening tags=
-
-Test mode: [automatic][AUTO]
 
 - Locate the closing tag that corresponds to the current tag
 - IF there was no closing tag
@@ -80,8 +74,6 @@ Test mode: [automatic][AUTO]
 | ID       | {{ page.rule_id }}-pass1
 
 ### Step 3: Check that tags are closed in the right place=
-
-Test mode: [automatic][AUTO]
 
 - Make a list childTags of tags that follow the current tag, until it's closing tag
 - IF childTags has an opening tag for each closing tag in the list:
@@ -125,6 +117,3 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
-
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual

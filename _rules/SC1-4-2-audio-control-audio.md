@@ -43,13 +43,9 @@ This test checks that there isn't an automatically started sound after the web p
 
 ### Selector
 
-Test mode: [automatic][AUTO]
-
 `//*[self::audio or self::video]`
 
 ### Step 1
-
-Test mode: [automatic][AUTO]
 
 Check if the `audio` or `video` is paused. Check `paused` property.
 
@@ -64,8 +60,6 @@ Else continue with [step 2][#step-2]
 
 ### Step 2
 
-Test mode: [automatic][AUTO]
-
 Check if the sound is muted. Check `muted` property.
 
 If true, return:
@@ -79,8 +73,6 @@ Else continue with [step 3][#step-3]
 
 ### Step 3
 
-Test mode: [automatic][AUTO]
-
 Check that the sound is no longer than 3 seconds.
 
 Check `duration` property is no longer than 3 seconds.
@@ -90,8 +82,6 @@ If true, continue with [step 4][#step-4]
 Else continue with [Step 5](#step-5)
 
 ### Step 4
-
-Test mode: [automatic][AUTO]
 
 Check if the sound has a loop. Check `loop` property.
 
@@ -105,8 +95,6 @@ Else, return:
 | ID       | SC1-4-2-audio-control-pass3
 
 ### Step 5
-
-Test mode: [automatic][MANUAL]
 
 Check if the video plays audio.
 
@@ -130,8 +118,6 @@ Else, return:
 | ID       | SC1-4-2-audio-control-pass4
 
 ### Step 6
-
-Test mode: [automatic][MANUAL]
 
 Check if a mechanism to control the sound is provided as one of the first five links or buttons on the web page.
 
@@ -171,6 +157,3 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
-
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual

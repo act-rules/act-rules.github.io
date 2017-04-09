@@ -53,13 +53,9 @@ This test checks that non-text elements conveying information are providing suff
 
 ### Selector
 
-Test mode: [automatic][AUTO]
-
 `//*[self::img or self::input[@type="image"] or self::area or self::embed or self::object]`
 
 ### Step 1: check element type (F65)
-
-Test mode: [automatic][AUTO]
 
 Check if the element is of type `<img>`,`<area>` or `input[type=”image”]`
 
@@ -85,8 +81,6 @@ else return
 
 ### Step 3: check for img siblings (ARIA10 and G196)
 
-Test mode: [automatic][AUTO]
-
 Check if the selected element is an `img` element and has adjacent siblings of type `img`.
 
 if yes, continue with [Step 4: ask for informational or functional group of images (ARIA10 and G196)](#step-4-ask-for-informational-or-functional-group-of-images-aria10-and-g196)
@@ -94,8 +88,6 @@ if yes, continue with [Step 4: ask for informational or functional group of imag
 else continue with [Step 8: compute text alternative](#step-8-compute-text-alternative)
 
 ### Step 4: ask for informational or functional group of images (ARIA10 and G196)
-
-Test mode: [automatic][AUTO]
 
 **User Input Question:**
 
@@ -112,7 +104,6 @@ if yes, continue with [Step 5: check for aria-labelledby implementation (ARIA10)
 else continue with [Step 8: compute text alternative](#step-8-compute-text-alternative)
 
 ### Step 5: check for aria-labelledby implementation (ARIA10)
-Test mode: [automatic][AUTO]
 
 Check if the parent element of the current group has `role="img"` and an `aria-labelledby` attribute.
 
@@ -121,8 +112,6 @@ if yes, continue with [Step 6: ask if sufficiently described by textual alternat
 else continue with [Step 7: ask if sufficiently described by textual alternative (G196)](#step-7-ask-if-sufficiently-described-by-textual-alternative-g196)
 
 ### Step 6: ask if sufficiently described by textual alternative (ARIA10)
-
-Test mode: [automatic][MANUAL]
 
 Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run on all elements referenced in the `aria-labelledby` attribute and assign it to variable T1.
 
@@ -157,8 +146,6 @@ else return
 
 ### Step 7: ask if sufficiently described by textual alternative (G196)
 
-Test mode: [automatic][AUTO]
-
 Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run on all images and assign it to variable T1.
 
 All items of the group should be removed from the set of selector-matches after this step.
@@ -192,8 +179,6 @@ else return
 
 ### Step 8: compute text alternative
 
-Test mode: [automatic][AUTO]
-
 Use the [Text Alternative Computation][TXTALT] Algorithm to compute the textual alternative provided and assign it to variable T1.
 
 If T1 is empty and the current element is an `<img>`
@@ -210,8 +195,6 @@ continue with [Step 13: check text alternative validity (F30 and F39)](#step-13-
 
 ### Step 9: check if child of anchor (H2)
 
-Test mode: [automatic][AUTO]
-
 Check if the `img` is child of an `<a>` element.
 
 If yes, continue with [Step 10: check for anchor text (H2)](#step-10-check-for-anchor-text-h2)
@@ -219,8 +202,6 @@ If yes, continue with [Step 10: check for anchor text (H2)](#step-10-check-for-a
 else continue with [Step 11: check dimensions (no text alternative)](#step-11-check-dimensions-no-text-alternative)
 
 ### Step 10: check for anchor text (H2)
-
-Test mode: [automatic][AUTO]
 
 Note: The `img` has no textual alternative at this test step.
 
@@ -243,8 +224,6 @@ else return
 
 ### Step 11: check dimensions (no text alternative)
 
-Test mode: [automatic][AUTO]
-
 Check if the elements height is less or equal 5px or the elements width is less or equal 3px.
 
 if yes, return
@@ -257,8 +236,6 @@ if yes, return
 else Continue with [Step 12: ask if decorative (no text alternative)](#step-12-ask-if-decorative-no-text-alternative)
 
 ### Step 12: ask if decorative (no text alternative)
-
-Test mode: [automatic][AUTO]
 
 **User Input Question:**
 
@@ -287,7 +264,6 @@ else return
 | Info     | Suggestions for textual alternative: {collection of repair-answers}
 
 ### Step 13: check text alternative validity (F30 and F39)
-Test mode: [automatic][AUTO]
 
 Use the [Validate Text Alternative][ALT_OK] algorithm to check if the textual alternative value is [non-empty][NEMPTY], as defined (contain 2 or more characters that are not white space characters or punctionmarks), not a filename, an URL or a placeholder text.
 
@@ -304,8 +280,6 @@ else return
 
 ### Step 14: check dimensions (valid text alternative) (F38)
 
-Test mode: [automatic][AUTO]
-
 Check if the elements height is less or equal 5px or the elements width is less or equal 3px.
 
 if yes, continue with [Step 16: check for empty alt (F38)](#step-16-check-for-empty-alt-f38)
@@ -313,8 +287,6 @@ if yes, continue with [Step 16: check for empty alt (F38)](#step-16-check-for-em
 else continue with [Step 15: ask if decorative (valid text alternative) (F38)](#step-15-ask-if-decorative-valid-text-alternative-f38)
 
 ### Step 15: ask if decorative (valid text alternative) (F38)
-
-Test mode: [automatic][AUTO]
 
 **User Input Question:**
 
@@ -331,8 +303,6 @@ if yes, continue with [Step 16: check for empty alt (F38)](#step-16-check-for-em
 else continue with [Step 17: ask if sufficiently described by textual alternative](#step-17-ask-if-sufficiently-described-by-textual-alternative)
 
 ### Step 16: check for empty alt (F38)
-
-Test mode: [automatic][AUTO]
 
 *Note: The image has a textual alternative at this test step.*
 
@@ -356,8 +326,6 @@ else return
 
 ### Step 17: ask if sufficiently described by textual alternative
 
-Test mode: [automatic][MANUAL]
-
 **User Input Question:**
 
 | Property             | Value
@@ -379,8 +347,6 @@ if yes, return
 else continue with [[#Step 18: ask if sufficiently described by adjacent text]]
 
 ### Step 18: ask if sufficiently described by adjacent text
-
-Test mode: [automatic][MANUAL]
 
 **User Input Question:**
 
@@ -426,8 +392,6 @@ The resulting assertion is as follows,
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
 
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual
 [ACCSUP]: ../pages/accessibility-support.html
 [TXTALT]: ../pages/algorithms/text-alternative-compute.html
 [ALT_OK]: ../pages/algorithms/validate-text-alt.html

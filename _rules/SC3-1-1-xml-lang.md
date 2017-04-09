@@ -38,15 +38,11 @@ This test checks the value of the `xml:lang` attribute.
 
 ### Selector
 
-Test mode: [automatic][AUTO]
-
 Select `html` element with `xml:lang` attribute.
 
 `html[@xml:lang]`
 
 ### Step 1
-
-Test mode: [automatic][AUTO]
 
 Check that the `html` element contains also a `lang` attribute.
 
@@ -59,8 +55,6 @@ If no `lang` is specified, return
 | Error    | No lang attribute found. Only xml:lang.
 
 ### Step 2
-
-Test mode: [automatic][AUTO]
 
 L1 = value of `xml:lang`
 

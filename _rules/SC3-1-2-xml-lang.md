@@ -38,8 +38,6 @@ This test checks the value of the `xml:lang` attributes.
 
 ### Selector
 
-Test mode: [automatic][AUTO]
-
 Select the element with `xml:lang` attribute.
 
 ```
@@ -47,8 +45,6 @@ descendent-or-self::body[@xml:lang]
 ```
 
 ### Step 1
-
-Test mode: [automatic][AUTO]
 
 Check that the selected element contains also a `lang` attribute.
 
@@ -61,8 +57,6 @@ If no `lang` is specified, return
 | Error    | No lang attribute found.
 
 ### Step 2
-
-Test mode: [automatic][AUTO]
 
 L1 = value of `xml:lang`
 
@@ -97,6 +91,3 @@ The resulting assertion is as follows,
 | subject  | *the selected element*
 | mode     | auto-wcag:{{ page.test_mode }}
 | result   | <One TestResult from below>
-
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual

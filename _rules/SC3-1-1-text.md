@@ -96,6 +96,18 @@ Else return
 | Error    | The primary language of the page is not specified correctly.
 | Info     | L1
 
+## Outcome
+
+The resulting assertion is as follows,
+
+| Property | Value
+|----------|----------
+| type     | Assertion
+| test     | auto-wcag:{{ page.rule_id }}
+| subject  | *the selected element*
+| mode     | auto-wcag:{{ page.test_mode }}
+| result   | <One TestResult from below>
+
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual
 [LNGFND]: ../pages/algorithms/lang-identification.html

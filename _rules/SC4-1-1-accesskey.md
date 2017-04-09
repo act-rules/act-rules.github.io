@@ -67,5 +67,17 @@ Test mode: [automatic][AUTO]
 | Pointer  | selector result
 | ID       | {{ page.rule_id }}-fail1
 
+## Outcome
+
+The resulting assertion is as follows,
+
+| Property | Value
+|----------|----------
+| type     | Assertion
+| test     | auto-wcag:{{ page.rule_id }}
+| subject  | *the selected element*
+| mode     | auto-wcag:{{ page.test_mode }}
+| result   | <One TestResult from below>
+
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual

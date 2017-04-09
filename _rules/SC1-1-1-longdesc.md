@@ -113,6 +113,18 @@ else, return
 | Error    | Long description not sufficiently descriptive.
 | Info     | Collection of repair suggestions
 
+## Outcome
+
+The resulting assertion is as follows,
+
+| Property | Value
+|----------|----------
+| type     | Assertion
+| test     | auto-wcag:{{ page.rule_id }}
+| subject  | *the selected element*
+| mode     | auto-wcag:{{ page.test_mode }}
+| result   | <One TestResult from below>
+
 [AUTO]: ../pages/test-modes.html#automatic
 [SEMAUT]: ../pages/test-modes.html#semiauto
 [MANUAL]: ../pages/test-modes.html#manual

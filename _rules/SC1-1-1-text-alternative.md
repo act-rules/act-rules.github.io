@@ -414,6 +414,18 @@ else return
 - Activity diagram of test steps related to techniques and failures
 [[File:1.1.1. text alternative.png|frameless|1069px|Detailed graphical alternative to text above]]
 
+## Outcome
+
+The resulting assertion is as follows,
+
+| Property | Value
+|----------|----------
+| type     | Assertion
+| test     | auto-wcag:{{ page.rule_id }}
+| subject  | *the selected element*
+| mode     | auto-wcag:{{ page.test_mode }}
+| result   | <One TestResult from below>
+
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual
 [ACCSUP]: ../pages/accessibility-support.html

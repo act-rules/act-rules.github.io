@@ -144,5 +144,17 @@ else return
 | Error    | The image added by CSS is not decorative and not described in adjacent text.
 | Info     | Suggestions for texual alternative: {collection of repair-answers}
 
+## Outcome
+
+The resulting assertion is as follows,
+
+| Property | Value
+|----------|----------
+| type     | Assertion
+| test     | auto-wcag:{{ page.rule_id }}
+| subject  | *the selected element*
+| mode     | auto-wcag:{{ page.test_mode }}
+| result   | <One TestResult from below>
+
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual

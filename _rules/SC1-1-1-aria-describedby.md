@@ -120,6 +120,18 @@ else return
 | ID       | {{ page.rule_id }}–fail3
 | Error    | The long description provided using aria-describedby is not sufficiently descriptive.
 
+## Outcome
+
+The resulting assertion is as follows,
+
+| Property | Value
+|----------|----------
+| type     | Assertion
+| test     | auto-wcag:{{ page.rule_id }}
+| subject  | *the selected element*
+| mode     | auto-wcag:{{ page.test_mode }}
+| result   | <One TestResult from below>
+
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual
 [TXTALT]: ../pages/algorithms/text-alternative-compute.html

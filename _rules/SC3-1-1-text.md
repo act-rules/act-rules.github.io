@@ -34,15 +34,6 @@ This test does not prescribe which of these definitions to use as long as one of
 
 *Note that all language changes must be marked correctly independent of the chosen definition. This is covered by 3.1.2 Language of Parts.*
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Success Criterion | 3.1.1 Language of Page
-| Test mode         | SemiAuto
-| Test environment  | DOM
-| Test subject      | Single web page
-
 ## Test procedure
 
 ### Selector

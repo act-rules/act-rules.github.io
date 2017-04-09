@@ -28,17 +28,6 @@ This test checks that there isn't an automatically started sound after the web p
 - The test assumes that video is rendered in the `video` element. Therefore this test checks exclusive video content in the `video` element.
 - This test states that the links or buttons for the mechanism to control the sound is one of the first five links or buttons on the web page. This is more specific then the WCAG documentation.
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Test name         | Audio control
-| Test requirement  | SC 1.4.2
-| Test mode         | Semi-automatic
-| Test environment  | DOM
-| Test subject      | Single web page
-| User profile      | Requires hearing
-
 ## Test procedure
 
 ### Selector
@@ -103,10 +92,11 @@ Check if the video plays audio.
 | Property             | Value
 |----------------------|---------
 | Presented item       | Web page with an automatically started sound.
-| Requires context     | yes
-| Requires Interaction | no
 | Question             | Is there audio playing on the web page?
 | Help                 | There should not be audio playing automatically on the web page loads.
+| User profile         | Requires hearing
+| Requires context     | yes
+| Requires Interaction | no
 
 If yes, continue with [Step 6](#step-6).
 
@@ -126,10 +116,11 @@ Check if a mechanism to control the sound is provided as one of the first five l
 | Property             | Value
 |----------------------|---------
 | Presented item       | Web page with an automatically started sound.
-| Requires context     | yes
-| Requires Interaction | yes
 | Question             | Does the web page provide a mechanism to control the sound as one of the first five links or buttons?
 | Help                 | A mechanism to pause or stop the video or audio, or control the volume or mute the audio must be available on the web page. The mechanism must be located as one of the first five links or buttons of the web page. This way people (with screen readers) can turn off the sound before reading the web page. To inspect this, use the tab key to navigate through the web page.
+| User profile         | Requires hearing
+| Requires context     | yes
+| Requires Interaction | yes
 
 If yes, return:
 

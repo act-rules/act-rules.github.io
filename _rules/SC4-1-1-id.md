@@ -24,16 +24,6 @@ This test checks id attribute for all elements to have a unique value.
 
 *no known assumptions*
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Test name         | Define ids for elements
-| Test requirement  | 4.1.1 Parsing
-| Test mode         | Automatic
-| Test environment  | DOM
-| Test subject      | Single web page
-
 ## Test procedure
 
 ### Selector

@@ -37,18 +37,6 @@ This test checks that non-text elements conveying information are providing suff
 - Groups of images consist of `img` elements that are adjacent to each other and not wrapped in containers.
 - The smallest readable font can be displayed on a matrix with a height of 5 and a width of 3. Smaller elements are considered decorative automatically.
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Test name         | Provision of short text alternative
-| Success Criterion | 1.1.1 Non-text Content
-| Test mode         | Semi-automatic
-| Test environment  | Rendered page
-| Test subject      | Web page state
-| User expertise and skills | No prior knowledge
-| User profile      | Requires sight
-
 ## Test procedure
 
 ### Selector
@@ -64,8 +52,6 @@ if yes, continue with [Step 2: check mandatory attributes (F65)](#step-2-check-m
 else continue with [Step 8: compute text alternative](#step-8-compute-text-alternative)
 
 ### Step 2: check mandatory attributes (F65)
-
-Test mode: [automatic][AUTO]
 
 Check if one of the following attributes is present: `aria-labelledby` with valid destinations or `alt` , `aria-label`, `title`.
 
@@ -96,6 +82,7 @@ else continue with [Step 8: compute text alternative](#step-8-compute-text-alter
 | Presented item       | Parent element containing group of images
 | Question             | Does this combination of images provide information or functionality?
 | Help                 | An example for an informative group of images is the combination of five stars to display a rating-result.
+| User profile         | Requires sight
 | Requires context     | yes
 | Requires Interaction | yes
 
@@ -124,7 +111,8 @@ All items of the group should be removed from the set of selector-matches after 
 | Presented item       | Parent element containing group of images
 | Question             | Does T1 sufficiently describe the group of images?
 | Help                 | If the images contribute meaning to the page or provide any functionality or convey information additional to the pages text, this must be described. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
-| Requir               | If no, could you suggest a sufficient textual alternative?
+| User profile         | Requires sight
+| Repair               | If no, could you suggest a sufficient textual alternative?
 | Requires context     | yes
 | Requires Interaction | yes
 
@@ -157,7 +145,8 @@ All items of the group should be removed from the set of selector-matches after 
 | Presented item       | Parent element containing group of images
 | Question             | Does T1 sufficiently describe the group of images?
 | Help                 | If the images contribute meaning to the page or provide any functionality or convey information additional to the pages text, this must be described. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
-| Requir               | If no, could you suggest a sufficient textual alternative?
+| User profile         | Requires sight
+| Repair               | If no, could you suggest a sufficient textual alternative?
 | Requires context     | yes
 | Requires Interaction | yes
 
@@ -243,8 +232,9 @@ else Continue with [Step 12: ask if decorative (no text alternative)](#step-12-a
 |----------------------|---------
 | Presented item       | Current element
 | Question             | Is this element solely for decorative purposes?
-| Help                 | Answer with 'Yes', if it is a decorative element such as a spacer, line or menu-background solely used for layout purposes or an eyecatching element that don't convey information useful for understanding the content of the page.
-| Requir               | If no, could you suggest a sufficient textual alternative?
+| Help                 | Answer with 'Yes', if it is a decorative element such as a spacer, line or menu-background solely used for layout purposes or an eye-catching element that don't convey information useful for understanding the content of the page.
+| User profile         | Requires sight
+| Repair               | If no, could you suggest a sufficient textual alternative?
 | Requires context     | yes
 
 if yes, return
@@ -295,7 +285,8 @@ else continue with [Step 15: ask if decorative (valid text alternative) (F38)](#
 | Presented item       | Current element
 | Question             | Is this element solely for decorative purposes?
 | Help                 | Answer with 'Yes', if it is a decorative element such as a spacer, line or menu-background solely used for layout purposes or an eye-catching element that don't convey information useful for understanding the content of the page.
-| Requir               | If no, could you suggest a sufficient textual alternative?
+| User profile         | Requires sight
+| Repair               | If no, could you suggest a sufficient textual alternative?
 | Requires context     | yes
 
 if yes, continue with [Step 16: check for empty alt (F38)](#step-16-check-for-empty-alt-f38)
@@ -333,7 +324,8 @@ else return
 | Presented item       | Current element
 | Question             | Does the textual alternative T1 sufficiently describe the element?
 | Help                 | If the element contributes meaning to the page or provides any functionality or conveys information additional to the pages text, this must be described. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
-| Requir               | If no, could you suggest a sufficient textual alternative?
+| User profile         | Requires sight
+| Repair               | If no, could you suggest a sufficient textual alternative?
 | Requires context     | yes
 | Requires Interaction | yes
 
@@ -355,7 +347,8 @@ else continue with [[#Step 18: ask if sufficiently described by adjacent text]]
 | Presented item       | Current element in context
 | Question             | Is the element sufficiently described by adjacent text?
 | Help                 | If the element shows content, which is redundant to real text nearby, answer 'Yes'. Otherwise, or if the element provides any functionality, answer 'No'. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
-| Requir               | If no, could you suggest a sufficient textual alternative?
+| User profile         | Requires sight
+| Repair               | If no, could you suggest a sufficient textual alternative?
 | Requires context     | yes
 | Requires Interaction | no
 

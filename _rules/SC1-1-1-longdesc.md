@@ -27,18 +27,6 @@ This test checks the sufficient provision of a long text description for non-tex
 
 - The test assumes that a page referenced within the longdesc attribute is accessible.
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Test name         | Proper use of longdesc
-| Success Criterion | 1.1.1 Non-text Content
-| Test mode         | Semi-automatic
-| Test environment  | Rendered page
-| Test subject      | Web page state
-| User expertise and skills | No prior knowledge
-| User profile      | Requires sight
-
 ## Test procedure
 
 ### Selector
@@ -85,7 +73,8 @@ Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run 
 | Presented item       | Image with T1 and the content of the page referenced by the longdesc  at the referenced anchor point (if applicable)
 | Question             | Does the alternative provide an extended description of the image additionally to T1?
 | Help                 | If the images contribute meaning to the page or provide any functionality or convey information additional to the pages text, this must be described. The alternative may be an entire page. The main content of which should provide the description.
-| Requir               | If no, could you suggest an alternative, which would sufficiently describe the image?
+| Repair               | If no, could you suggest an alternative, which would sufficiently describe the image?
+| User profile         | Requires sight
 | Requires context     | yes
 | Requires Interaction | yes
 

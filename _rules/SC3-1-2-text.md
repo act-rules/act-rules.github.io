@@ -28,15 +28,6 @@ This test checks that changes in human language are marked up correctly in the w
 - Single words in another language do not have to be marked as language changes.
 - This test assumes that the language of the web content has been specified in the `lang` attribute of the element (see also [SC3-1-2-lang](SC3-1-2-lang.html)). The `xml:lang` attribute is not taken into account because tests have shown, that `xml:lang` is ignored by screenreaders.
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Success Criterion | 3.1.2 Language of Parts
-| Test mode         | SemiAuto
-| Test environment  | DOM
-| Test subject      | Single web page
-
 ## Test procedure
 
 ### Selector

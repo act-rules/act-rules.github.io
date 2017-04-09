@@ -29,17 +29,6 @@ This test checks the sufficient provision of a long text description for element
 - If the `aria-describedby` attribute is provided, a long description was intended and is needed for the element.
 - This test assumes that `role="image"` is properly used.
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Test name         | Proper use of aria-describedby
-| Success Criterion | 1.1.1 Non-text Content
-| Test mode         | Semi-automatic
-| Test environment  | Rendered page
-| Test subject      | Web page state
-| User profile      | Requires sight
-
 ## Test procedure
 
 ### Selector
@@ -94,6 +83,7 @@ Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run 
 | Question             | Does T2 provide an extended description of the image additionally to T1?
 | Help                 | If the image contributes meaning to the page or provide any functionality or conveys information additional to the pages text, this must be described.
 | Repair               | If no, could you suggest an long text alternative, which would sufficiently describe the image?
+| User profile         | Requires sight
 | Requires context     | yes
 | Requires Interaction | yes
 

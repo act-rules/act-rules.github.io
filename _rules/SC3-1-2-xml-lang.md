@@ -24,16 +24,6 @@ This test checks the value of the `xml:lang` attributes.
 
 - Tests have shown that `xml:lang` is ignored by screenreaders. (Both Jaws 15 with FF and IE and NVDA with FF go by lang attribute, xml:lang is ignored.) This test identifies pages that use only the  `xml:lang` attribute.
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Test name         | Language of Parts
-| Success Criterion | 3.1.2 Language of Parts
-| Test mode         | Automatic
-| Test environment  | DOM
-| Test subject      | Single web page
-
 ## Test procedure
 
 ### Selector

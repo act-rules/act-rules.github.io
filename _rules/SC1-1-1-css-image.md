@@ -25,18 +25,6 @@ This test checks that images do not convey information when added to the page us
 - Readable characters can be formed on a space of minimum 5 x 3 pixels. This test assumes that no images are used for applying vertical text.
 - Additionally to the tests defined here, the image can be processed to detect shapes, symmetry or characters.
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Test name         | CSS background decorative
-| Success Criterion | 1.1.1 Non-text Content
-| Test mode         | Semi-automatic
-| Test environment  | rendered page
-| Test subject      | Web page state
-| User expertise and skills | no prior knowledge
-| User profile      | Requires sight
-
 ## Test procedure
 
 ### Selector
@@ -86,10 +74,11 @@ To prepare the element for presentation to the user, all calculated CSS properti
 
 | Property             | Value
 |----------------------|---------
-| presented-item   | Element containing background images without child elements but with previously calculated CSS properites applied.
-| question         | Is this image solely for decorative purposes?
-| help             | Answer with 'Yes', if it is a decorative image such as a separator, line or menu-background solely used for layout purposes or an image that doesn't convey information useful for understanding the content of the page.
-| requires-context | yes
+| presented-item       | Element containing background images without child elements but with previously calculated CSS properites applied.
+| question             | Is this image solely for decorative purposes?
+| help                 | Answer with 'Yes', if it is a decorative image such as a separator, line or menu-background solely used for layout purposes or an image that doesn't convey information useful for understanding the content of the page.
+| requires-context     | yes
+| User profile         | Requires sight
 
 if yes, return
 
@@ -114,7 +103,8 @@ To prepare the element for presentation to the user, all calculated CSS properti
 | Presented item       | Element containing background images without child elements but with previously calculated CSS properites applied.
 | Question             | Does T1 sufficiently describe the element?
 | Help                 | If the element shows content, which is redundant T1, answer 'Yes'. Otherwise, or if the element provides any functionality, answer 'No'.
-| Requir               | If no, could you suggest a sufficient textual alternative?
+| Repair               | If no, could you suggest a sufficient textual alternative?
+| User profile         | Requires sight
 | Requires context     | yes
 | Requires Interaction | yes
 

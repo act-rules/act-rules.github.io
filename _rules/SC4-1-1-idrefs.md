@@ -23,15 +23,6 @@ This test checks that each element referred to from an idrefs attribute exists.
 
 *no known assumptions*
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Success Criterion | 4.1.1 Parsing
-| Test mode         | Automatic
-| Test environment  | DOM
-| Test subject      | Single web page
-
 ## Test procedure
 
 ### Selector

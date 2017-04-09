@@ -23,16 +23,6 @@ This test checks accesskey attribute for all elements to have a unique value.
 
 - If the accesskey value has multiple characters the user agent picks the first character and ignores the rest. See: [WHATWG on Interaction](http://www.whatwg.org/specs/web-apps/current-work/multipage/interaction.html#the-accesskey-attribute).
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Test name         | Provide unique accesskeys
-| Test requirement  | 4.1.1 Parsing
-| Test mode         | Automatic
-| Test environment  | DOM
-| Test subject      | single web page
-
 ## Test procedure
 
 ### Selector

@@ -23,16 +23,6 @@ This test checks that all elements that receive focus are visible in the viewpor
 
 - Focus styles are only applied when the focus of browser viewport has the focus of the operating system. Scripts that give focus to elements do not update the style of that element unless the user is focused on this particular viewport in the OS.
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Test name         | Focused element visible in viewport
-| Success Criterion | 2.4.7 Focus Visible
-| Test mode         | Automatic
-| Test environment  | Remote Controlled User Agent
-| Test subject      | Single web page
-
 ## Test procedure
 
 ### Selector

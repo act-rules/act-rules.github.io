@@ -23,15 +23,6 @@ This test checks that tags of an HTML or XHTML document are nested correctly. So
 
 *no known assumptions*
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Test requirement  | 4.1.1 Parsing
-| Test mode         | Automatic
-| Test environment  | HTML source
-| Test subject      | Single web page
-
 ## Test procedure
 
 ### Selector

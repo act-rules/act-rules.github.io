@@ -8,7 +8,7 @@ criteria:
 - 2.4.7 # Focus Visible (Level AA)
 
 author:
-
+- Wilco Fiers
 ---
 
 ## Description

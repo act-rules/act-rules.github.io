@@ -2,6 +2,7 @@
 rule_id: SC3-1-1-text
 name: HTML lang matches text
 test_mode: semi-automatic
+environment: DOM Structure
 
 criteria:
 - 3.1.1 # Language of Page (Level A)

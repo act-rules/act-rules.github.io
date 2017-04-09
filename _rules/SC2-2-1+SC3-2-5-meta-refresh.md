@@ -2,6 +2,7 @@
 rule_id: SC2-2-1+SC3-2-5-meta-refresh
 name: Meta refresh and redirect is not used
 test_mode: automatic
+environment: DOM Structure
 
 criteria:
 - 2.2.1 # Timing Adjustable (Level A)

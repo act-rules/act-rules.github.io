@@ -2,6 +2,7 @@
 rule_id: SC3-1-2-lang
 name: Languages within the body
 test_mode: automatic
+environment: DOM Structure
 
 criteria:
 - 3.1.2 # Language of Parts (Level AA)

@@ -2,6 +2,7 @@
 rule_id: SC1-4-2-audio-control-audio
 name: Audio control
 test_mode: semi-automatic
+environment: DOM Structure
 
 criteria:
 - 1.4.2 # Audio Control (level A)

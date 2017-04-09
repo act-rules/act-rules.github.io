@@ -2,6 +2,7 @@
 rule_id: SC1-1-1-aria-describedby
 name: Proper use of aria-describedby
 test_mode: semi-automatic
+environment: Web Browser
 
 criteria:
 - 1.1.1 # Non-text Content (level A)

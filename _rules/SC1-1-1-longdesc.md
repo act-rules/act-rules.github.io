@@ -2,8 +2,9 @@
 rule_id: SC1-1-1-longdesc
 name: Proper use of longdesc
 test_mode: semi-automatic
+environment: Web Browser
 
-criteria:
+success_criterion:
 - 1.1.1 # Non-text Content (level A)
 
 authors:
@@ -27,93 +28,94 @@ This test checks the sufficient provision of a long text description for non-tex
 
 - The test assumes that a page referenced within the longdesc attribute is accessible.
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Test name         | Proper use of longdesc
-| Success Criterion | 1.1.1 Non-text Content
-| Test mode         | Semi-automatic
-| Test environment  | Rendered page
-| Test subject      | Web page state
-| User expertise and skills | No prior knowledge
-| User profile      | Requires sight
-
 ## Test procedure
 
 ### Selector
 
-Test mode: [automatic][AUTO]
+Select all elements that match the following XPATH selector:
 
-`//img[@longdesc]`
+    //img[@longdesc]
 
 ### Step 1
-
-Test mode: [automatic][AUTO]
 
 Check if the `longdesc` attribute value is a valid URL
 
 if yes, continue with [step 2][#step-2]
 
-else, return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-longdesc
-| ID       | SC1-1-1-longdesc-fail1
-| Error    | LONGDESC attribute value is not a valid URL
+else, return [step1-fail](#step1-fail)
 
 ### Step 2
-
-Test mode: [automatic][AUTO]
 
 Check if the resource referenced in the `longdesc` attribute value exists
 
 if yes, continue with [step 3][#step-3]
 
-else, return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-longdesc
-| ID       | SC1-1-1-longdesc-fail2
-| Error    | LONGDESC reference does not exist
-| Info     |  The URL given as LONGDESC value was not retrievable.
+else, return [step2-fail](#step2-fail)
 
 ### Step 3
-
-Test mode: [automatic][MANUAL]
 
 Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run on the element and assign it to variable T1.
 
 **User Input Question:**
 
-| Property             | Value
-|----------------------|---------
-| Presented item       | Image with T1 and the content of the page referenced by the longdesc  at the referenced anchor point (if applicable)
-| Question             | Does the alternative provide an extended description of the image additionally to T1?
-| Help                 | If the images contribute meaning to the page or provide any functionality or convey information additional to the pages text, this must be described. The alternative may be an entire page. The main content of which should provide the description.
-| Requir               | If no, could you suggest an alternative, which would sufficiently describe the image?
-| Requires context     | yes
-| Requires Interaction | yes
+| Property     | Value
+|--------------|---------
+| highlight    | Image with T1 and the content of the page referenced by the longdesc  at the referenced anchor point (if applicable)
+| question     | Does the alternative provide an extended description of the image additionally to T1?
+| help         | If the images contribute meaning to the page or provide any functionality or convey information additional to the pages text, this must be described. The alternative may be an entire page. The main content of which should provide the description.
+| repair       | If no, could you suggest an alternative, which would sufficiently describe the image?
+| user_profile | Requires sight
+| context      | yes
+| interaction  | yes
 
-if yes, return
+if yes, return [step3-pass](#step3-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-1-1-longdesc
-| ID       | SC1-1-1-longdesc-pass1
+else, return [step3-fail](#step3-fail)
 
-else, return
+## Outcome
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-1-1-longdesc
-| ID       | SC1-1-1-longdesc–fail3
-| Error    | Long description not sufficiently descriptive.
-| Info     | Collection of repair suggestions
+The resulting assertion is as follows,
 
-[AUTO]: ../pages/test-modes.html#automatic
-[SEMAUT]: ../pages/test-modes.html#semiauto
-[MANUAL]: ../pages/test-modes.html#manual
+| Property | Value
+|----------|----------
+| type     | Assertion
+| test     | auto-wcag:{{ page.rule_id }}
+| subject  | *the selected element*
+| mode     | auto-wcag:{{ page.test_mode }}
+| result   | <One TestResult from below>
+
+###  step1-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | LONGDESC attribute value is not a valid URL
+
+###  step2-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | LONGDESC reference does not exist
+| info        | The URL given as LONGDESC value was not retrievable.
+
+###  step3-pass
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
+
+###  step3-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Long description not sufficiently descriptive.
+| info        | Collection of repair suggestions
+
 [TXTALT]: ../pages/algorithms/text-alternative-compute.html

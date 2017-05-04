@@ -2,13 +2,14 @@
 rule_id: SC2-2-1+SC3-2-5-meta-refresh
 name: Meta refresh and redirect is not used
 test_mode: automatic
+environment: DOM Structure
 
-criteria:
+success_criterion:
 - 2.2.1 # Timing Adjustable (Level A)
 - 3.2.5 # Change on Request (Level AAA)
 
 author:
-
+- Wilco Fiers
 ---
 
 ## Description
@@ -25,28 +26,15 @@ This test checks if meta element is not used for delayed redirecting or refreshi
 
 - This test assumes no functionality was provided by the website for the user to adjust the timer.
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Test name         | Meta refresh and redirect is not used
-| Success Criterion | 2.2.1 Timing Adjustable, 3.2.5 Change on Request
-| Test mode         | Automatic
-| Test environment  | DOM
-| Test subject      | Single web page
-
-
 ## Test procedure
 
 ### Selector
 
-Test mode: [automatic][AUTO]
+Select all elements that match the following CSS selector:
 
-Select each element matching: `meta[http-equiv="refresh"][content]`
+    meta[http-equiv="refresh"][content]
 
 ### Step 1
-
-Test mode: [automatic][AUTO]
 
 Take the value of the content attribute of the selected element.
 
@@ -54,22 +42,34 @@ Remove any characters starting after the first comma or semicolon from the value
 
 Parse the remainder to an integer.
 
-If the integer is invalid or 0, return:
+If the integer is invalid or 0, return [step1-pass](#step1-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-passed
-| Pointer  | Selected element
+Else return [step1-fail](#step1-fail)
 
-Else return:
+## Outcome
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-failed
-| Error    | Meta refresh should not be used unless it is instantaneous.
-| Pointer  | Selected element
+The resulting assertion is as follows,
 
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual
+| Property | Value
+|----------|----------
+| type     | Assertion
+| test     | auto-wcag:{{ page.rule_id }}
+| subject  | *the selected element*
+| mode     | auto-wcag:{{ page.test_mode }}
+| result   | <One TestResult from below>
+
+### step1-pass
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
+
+### step1-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Meta refresh should not be used unless it is instantaneous.

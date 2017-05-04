@@ -76,14 +76,14 @@ else continue with [Step 8: compute text alternative](#step-8-compute-text-alter
 
 **User Input Question:**
 
-| Property             | Value
-|----------------------|---------
-| Presented item       | Parent element containing group of images
-| Question             | Does this combination of images provide information or functionality?
-| Help                 | An example for an informative group of images is the combination of five stars to display a rating-result.
-| User profile         | Requires sight
-| Requires context     | yes
-| Requires Interaction | yes
+| Property     | Value
+|--------------|---------
+| highlight    | Parent element containing group of images
+| question     | Does this combination of images provide information or functionality?
+| help         | An example for an informative group of images is the combination of five stars to display a rating-result.
+| user_profile | Requires sight
+| context      | yes
+| interaction  | no
 
 if yes, continue with [Step 5: check for aria-labelledby implementation (ARIA10)](#step-5-check-for-aria-labelledby-implementation-aria10)
 
@@ -105,15 +105,15 @@ All items of the group should be removed from the set of selector-matches after 
 
 **User Input Question:**
 
-| Property             | Value
-|----------------------|---------
-| Presented item       | Parent element containing group of images
-| Question             | Does T1 sufficiently describe the group of images?
-| Help                 | If the images contribute meaning to the page or provide any functionality or convey information additional to the pages text, this must be described. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
-| User profile         | Requires sight
-| Repair               | If no, could you suggest a sufficient textual alternative?
-| Requires context     | yes
-| Requires Interaction | yes
+| Property     | Value
+|--------------|---------
+| highlight    | Parent element containing group of images
+| question     | Does T1 sufficiently describe the group of images?
+| help         | If the images contribute meaning to the page or provide any functionality or convey information additional to the pages text, this must be described. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
+| user_profile | Requires sight
+| repair       | If no, could you suggest a sufficient textual alternative?
+| context      | yes
+| interaction  | no
 
 if yes, return [step6-pass](#step6-pass)
 
@@ -127,15 +127,15 @@ All items of the group should be removed from the set of selector-matches after 
 
 **User Input Question:**
 
-| Property             | Value
-|----------------------|---------
-| Presented item       | Parent element containing group of images
-| Question             | Does T1 sufficiently describe the group of images?
-| Help                 | If the images contribute meaning to the page or provide any functionality or convey information additional to the pages text, this must be described. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
-| User profile         | Requires sight
-| Repair               | If no, could you suggest a sufficient textual alternative?
-| Requires context     | yes
-| Requires Interaction | yes
+| Property     | Value
+|--------------|---------
+| highlight    | Parent element containing group of images
+| question     | Does T1 sufficiently describe the group of images?
+| help         | If the images contribute meaning to the page or provide any functionality or convey information additional to the pages text, this must be described. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
+| user_profile | Requires sight
+| repair       | If no, could you suggest a sufficient textual alternative?
+| context      | yes
+| interaction  | no
 
 if yes, return [step7-pass](#step7-pass)
 
@@ -187,14 +187,15 @@ else Continue with [Step 12: ask if decorative (no text alternative)](#step-12-a
 
 **User Input Question:**
 
-| Property             | Value
-|----------------------|---------
-| Presented item       | Current element
-| Question             | Is this element solely for decorative purposes?
-| Help                 | Answer with 'Yes', if it is a decorative element such as a spacer, line or menu-background solely used for layout purposes or an eye-catching element that don't convey information useful for understanding the content of the page.
-| User profile         | Requires sight
-| Repair               | If no, could you suggest a sufficient textual alternative?
-| Requires context     | yes
+| Property     | Value
+|--------------|---------
+| highlight    | Current element
+| question     | Is this element solely for decorative purposes?
+| help         | Answer with 'Yes', if it is a decorative element such as a spacer, line or menu-background solely used for layout purposes or an eye-catching element that don't convey information useful for understanding the content of the page.
+| user_profile | Requires sight
+| repair       | If no, could you suggest a sufficient textual alternative?
+| context      | yes
+| interaction  | no
 
 if yes, return [step12-pass](#step12-pass)
 
@@ -220,14 +221,15 @@ else continue with [Step 15: ask if decorative (valid text alternative) (F38)](#
 
 **User Input Question:**
 
-| Property             | Value
-|----------------------|---------
-| Presented item       | Current element
-| Question             | Is this element solely for decorative purposes?
-| Help                 | Answer with 'Yes', if it is a decorative element such as a spacer, line or menu-background solely used for layout purposes or an eye-catching element that don't convey information useful for understanding the content of the page.
-| User profile         | Requires sight
-| Repair               | If no, could you suggest a sufficient textual alternative?
-| Requires context     | yes
+| Property     | Value
+|--------------|---------
+| highlight    | Current element
+| question     | Is this element solely for decorative purposes?
+| help         | Answer with 'Yes', if it is a decorative element such as a spacer, line or menu-background solely used for layout purposes or an eye-catching element that don't convey information useful for understanding the content of the page.
+| user_profile | Requires sight
+| repair       | If no, could you suggest a sufficient textual alternative?
+| context      | yes
+| interaction  | no
 
 if yes, continue with [Step 16: check for empty alt (F38)](#step-16-check-for-empty-alt-f38)
 
@@ -247,15 +249,15 @@ else return [step16-fail](#step16-fail)
 
 **User Input Question:**
 
-| Property             | Value
-|----------------------|---------
-| Presented item       | Current element
-| Question             | Does the textual alternative T1 sufficiently describe the element?
-| Help                 | If the element contributes meaning to the page or provides any functionality or conveys information additional to the pages text, this must be described. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
-| User profile         | Requires sight
-| Repair               | If no, could you suggest a sufficient textual alternative?
-| Requires context     | yes
-| Requires Interaction | yes
+| Property     | Value
+|--------------|---------
+| highlight    | Current element
+| question     | Does the textual alternative T1 sufficiently describe the element?
+| help         | If the element contributes meaning to the page or provides any functionality or conveys information additional to the pages text, this must be described. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
+| user_profile | Requires sight
+| repair       | If no, could you suggest a sufficient textual alternative?
+| context      | yes
+| interaction  | no
 
 if yes, return [step17-pass](#step17-pass)
 
@@ -265,15 +267,15 @@ else continue with [[#Step 18: ask if sufficiently described by adjacent text]]
 
 **User Input Question:**
 
-| Property             | Value
-|----------------------|---------
-| Presented item       | Current element in context
-| Question             | Is the element sufficiently described by adjacent text?
-| Help                 | If the element shows content, which is redundant to real text nearby, answer 'Yes'. Otherwise, or if the element provides any functionality, answer 'No'. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
-| User profile         | Requires sight
-| Repair               | If no, could you suggest a sufficient textual alternative?
-| Requires context     | yes
-| Requires Interaction | no
+| Property     | Value
+|--------------|---------
+| highlight    | Current element in context
+| question     | Is the element sufficiently described by adjacent text?
+| help         | If the element shows content, which is redundant to real text nearby, answer 'Yes'. Otherwise, or if the element provides any functionality, answer 'No'. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
+| user_profile | Requires sight
+| repair       | If no, could you suggest a sufficient textual alternative?
+| context      | yes
+| interaction  | no
 
 if yes, return [step18-pass](#step18-pass)
 

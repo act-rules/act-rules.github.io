@@ -58,15 +58,15 @@ Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run 
 
 **User Input Question:**
 
-| Property             | Value
-|----------------------|---------
-| Presented item       | Image with T1 and the content of the page referenced by the longdesc  at the referenced anchor point (if applicable)
-| Question             | Does the alternative provide an extended description of the image additionally to T1?
-| Help                 | If the images contribute meaning to the page or provide any functionality or convey information additional to the pages text, this must be described. The alternative may be an entire page. The main content of which should provide the description.
-| Repair               | If no, could you suggest an alternative, which would sufficiently describe the image?
-| User profile         | Requires sight
-| Requires context     | yes
-| Requires Interaction | yes
+| Property     | Value
+|--------------|---------
+| highlight    | Image with T1 and the content of the page referenced by the longdesc  at the referenced anchor point (if applicable)
+| question     | Does the alternative provide an extended description of the image additionally to T1?
+| help         | If the images contribute meaning to the page or provide any functionality or convey information additional to the pages text, this must be described. The alternative may be an entire page. The main content of which should provide the description.
+| repair       | If no, could you suggest an alternative, which would sufficiently describe the image?
+| user_profile | Requires sight
+| context      | yes
+| interaction  | yes
 
 if yes, return [step3-pass](#step3-pass)
 

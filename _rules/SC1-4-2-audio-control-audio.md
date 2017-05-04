@@ -78,14 +78,14 @@ Check if the video plays audio.
 
 **User Input Question:**
 
-| Property             | Value
-|----------------------|---------
-| Presented item       | Web page with an automatically started sound.
-| Question             | Is there audio playing on the web page?
-| Help                 | There should not be audio playing automatically on the web page loads.
-| User profile         | Requires hearing
-| Requires context     | yes
-| Requires Interaction | no
+| Property     | Value
+|--------------|---------
+| highlight    | Web page with an automatically started sound.
+| question     | Is there audio playing on the web page?
+| help         | There should not be audio playing automatically on the web page loads.
+| user_profile | Requires hearing
+| context      | yes
+| interaction  | no
 
 If yes, continue with [Step 6](#step-6).
 
@@ -97,14 +97,14 @@ Check if a mechanism to control the sound is provided as one of the first five l
 
 **User Input Question:**
 
-| Property             | Value
-|----------------------|---------
-| Presented item       | Web page with an automatically started sound.
-| Question             | Does the web page provide a mechanism to control the sound as one of the first five links or buttons?
-| Help                 | A mechanism to pause or stop the video or audio, or control the volume or mute the audio must be available on the web page. The mechanism must be located as one of the first five links or buttons of the web page. This way people (with screen readers) can turn off the sound before reading the web page. To inspect this, use the tab key to navigate through the web page.
-| User profile         | Requires hearing
-| Requires context     | yes
-| Requires Interaction | yes
+| Property     | Value
+|--------------|---------
+| highlight    | Web page with an automatically started sound.
+| question     | Does the web page provide a mechanism to control the sound as one of the first five links or buttons?
+| help         | A mechanism to pause or stop the video or audio, or control the volume or mute the audio must be available on the web page. The mechanism must be located as one of the first five links or buttons of the web page. This way people (with screen readers) can turn off the sound before reading the web page. To inspect this, use the tab key to navigate through the web page.
+| user_profile | Requires hearing
+| context      | yes
+| interaction  | yes
 
 If yes, return [step6-pass](#step6-pass)
 

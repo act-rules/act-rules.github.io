@@ -63,13 +63,13 @@ To prepare the element for presentation to the user, all calculated CSS properti
 
 **User Input Question:**
 
-| Property             | Value
-|----------------------|---------
-| presented-item       | Element containing background images without child elements but with previously calculated CSS properites applied.
-| question             | Is this image solely for decorative purposes?
-| help                 | Answer with 'Yes', if it is a decorative image such as a separator, line or menu-background solely used for layout purposes or an image that doesn't convey information useful for understanding the content of the page.
-| requires-context     | yes
-| User profile         | Requires sight
+| Property     | Value
+|--------------|---------
+| highlight    | Element containing background images without child elements but with previously calculated CSS properites applied.
+| question     | Is this image solely for decorative purposes?
+| help         | Answer with 'Yes', if it is a decorative image such as a separator, line or menu-background solely used for layout purposes or an image that doesn't convey information useful for understanding the content of the page.
+| context      | yes
+| user_profile | Requires sight
 
 if yes, return [step3-pass](#step3-pass)
 
@@ -84,15 +84,15 @@ To prepare the element for presentation to the user, all calculated CSS properti
 
 **User Input Question:**
 
-| Property             | Value
-|----------------------|---------
-| Presented item       | Element containing background images without child elements but with previously calculated CSS properites applied.
-| Question             | Does T1 sufficiently describe the element?
-| Help                 | If the element shows content, which is redundant T1, answer 'Yes'. Otherwise, or if the element provides any functionality, answer 'No'.
-| Repair               | If no, could you suggest a sufficient textual alternative?
-| User profile         | Requires sight
-| Requires context     | yes
-| Requires Interaction | yes
+| Property     | Value
+|--------------|---------
+| highlight    | Element containing background images without child elements but with previously calculated CSS properites applied.
+| question     | Does T1 sufficiently describe the element?
+| help         | If the element shows content, which is redundant T1, answer 'Yes'. Otherwise, or if the element provides any functionality, answer 'No'.
+| repair       | If no, could you suggest a sufficient textual alternative?
+| user_profile | Requires sight
+| context      | yes
+| interaction  | yes
 
 if yes, return [step4-pass](#step4-pass)
 

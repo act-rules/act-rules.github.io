@@ -4,7 +4,7 @@ name: Proper use of aria-describedby
 test_mode: semi-automatic
 environment: Web Browser
 
-criteria:
+success_criterion:
 - 1.1.1 # Non-text Content (level A)
 
 authors:

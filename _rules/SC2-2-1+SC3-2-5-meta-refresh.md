@@ -4,7 +4,7 @@ name: Meta refresh and redirect is not used
 test_mode: automatic
 environment: DOM Structure
 
-criteria:
+success_criterion:
 - 2.2.1 # Timing Adjustable (Level A)
 - 3.2.5 # Change on Request (Level AAA)
 

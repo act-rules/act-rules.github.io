@@ -4,7 +4,7 @@ name: Focused element visible in viewport
 test_mode: automatic
 environment: WebDriver
 
-criteria:
+success_criterion:
 - 2.4.7 # Focus Visible (Level AA)
 
 author:

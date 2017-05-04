@@ -4,7 +4,7 @@ name: HTML lang matches text
 test_mode: semi-automatic
 environment: DOM Structure
 
-criteria:
+success_criterion:
 - 3.1.1 # Language of Page (Level A)
 
 authors:

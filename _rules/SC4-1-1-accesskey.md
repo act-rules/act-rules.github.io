@@ -4,7 +4,7 @@ name: Provide unique accesskeys
 test_mode: automatic
 environment: DOM Structure
 
-criteria:
+success_criterion:
 - 4.1.1 # Parsing (Level A)
 
 author:

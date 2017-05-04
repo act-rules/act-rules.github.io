@@ -4,7 +4,7 @@ name: Tags nested correctly
 test_mode: automatic
 environment: Markup Document
 
-criteria:
+success_criterion:
 - 4.1.1 # Parsing (Level A)
 
 author:

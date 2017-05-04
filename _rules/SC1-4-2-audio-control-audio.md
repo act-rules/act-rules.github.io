@@ -4,7 +4,7 @@ name: Audio control
 test_mode: semi-automatic
 environment: DOM Structure
 
-criteria:
+success_criterion:
 - 1.4.2 # Audio Control (level A)
 
 authors:

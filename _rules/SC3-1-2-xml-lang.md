@@ -4,7 +4,7 @@ name: Language of Parts
 test_mode: automatic
 environment: DOM Structure
 
-criteria:
+success_criterion:
 - 3.1.2 # Language of Parts (Level AA)
 
 authors:

@@ -4,7 +4,7 @@ name: Lang attribute matches text
 test_mode: semi-automatic
 environment: DOM Structure
 
-criteria:
+success_criterion:
 - 3.1.2 # Language of Parts (Level AA)
 
 authors:

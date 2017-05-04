@@ -4,7 +4,7 @@ name: Primary language of page
 test_mode: automatic
 environment: DOM Structure
 
-criteria:
+success_criterion:
 - 3.1.1 # Language of Page (Level A)
 
 authors:

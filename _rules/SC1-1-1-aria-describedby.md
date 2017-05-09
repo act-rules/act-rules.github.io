@@ -2,8 +2,9 @@
 rule_id: SC1-1-1-aria-describedby
 name: Proper use of aria-describedby
 test_mode: semi-automatic
+environment: Web Browser
 
-criteria:
+success_criterion:
 - 1.1.1 # Non-text Content (level A)
 
 authors:
@@ -29,97 +30,94 @@ This test checks the sufficient provision of a long text description for element
 - If the `aria-describedby` attribute is provided, a long description was intended and is needed for the element.
 - This test assumes that `role="image"` is properly used.
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Test name         | Proper use of aria-describedby
-| Success Criterion | 1.1.1 Non-text Content
-| Test mode         | Semi-automatic
-| Test environment  | Rendered page
-| Test subject      | Web page state
-| User profile      | Requires sight
-
 ## Test procedure
 
 ### Selector
 
-Test mode: [automatic][AUTO]
+Select all elements that match the following CSS selector:
 
-Select following elements providing an `aria-describedby` attribute:
-
-- `img` elements
-- `input` elements of `type="image"`
-- all elements with `role="image"`
-
-````
-//*[self::img[@aria-describedby] or self::input[@type="image" and @aria-describedby] or self::*[@role="image" and @aria-describedby]]
-````
+    img[aria-describedby],
+    input[type="image"][aria-describedby],
+    [role="image"][aria-describedby]
 
 ### Step 1
-
-Test mode: [automatic][AUTO]
 
 Check if at least one of the `aria-describedby` attribute values is a valid identifier.
 
 if yes, continue with [step 2](#step-2)
 
-else, return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail1
-| Error    | None of the aria-describedby attribute values is a valid identifier.
+else, return [step1-fail](#step1-fail)
 
 ### Step 2
-
-Test mode: [automatic][AUTO]
 
 Check if at least one of the elements referenced by the valid `aria-describedby` attribute values exists.
 
 if yes, continue with [step 3](#step-3)
 
-else, return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail2
-| Error    | None of the elements referenced by aria-describedby exists.
+else, return [step2-fail](#step2-fail)
 
 ### Step 3
-
-Test mode: [manual][MANUAL]
 
 Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run on the element itself and assign it to variable T1 and on all elements referenced by the `aria-describedby` attribute and assign it to variable T2.
 
 **User Input Question:**
 
-| Property             | Value
-|----------------------|---------
-| Presented item       | Element with T1 and T2
-| Question             | Does T2 provide an extended description of the image additionally to T1?
-| Help                 | If the image contributes meaning to the page or provide any functionality or conveys information additional to the pages text, this must be described.
-| Repair               | If no, could you suggest an long text alternative, which would sufficiently describe the image?
-| Requires context     | yes
-| Requires Interaction | yes
+| Property     | Value
+|--------------|---------
+| highlight    | Element with T1 and T2
+| question     | Does T2 provide an extended description of the image additionally to T1?
+| help         | If the image contributes meaning to the page or provide any functionality or conveys information additional to the pages text, this must be described.
+| repair       | If no, could you suggest an long text alternative, which would sufficiently describe the image?
+| user_profile | Requires sight
+| context      | yes
+| interaction  | yes
 
-if yes, return
+if yes, return [step3-pass](#step3-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-pass1
+else return [step3-fail](#step3-fail)
 
-else return
+## Outcome
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}–fail3
-| Error    | The long description provided using aria-describedby is not sufficiently descriptive.
+The resulting assertion is as follows,
 
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual
+| Property | Value
+|----------|----------
+| type     | Assertion
+| test     | auto-wcag:{{ page.rule_id }}
+| subject  | *the selected element*
+| mode     | auto-wcag:{{ page.test_mode }}
+| result   | <One TestResult from below>
+
+### step1-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | None of the aria-describedby attribute values is a valid identifier.
+
+### step2-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | None of the elements referenced by aria-describedby exists.
+
+### step3-pass
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
+
+### step3-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | The long description provided using aria-describedby is not sufficiently descriptive.
+
 [TXTALT]: ../pages/algorithms/text-alternative-compute.html

@@ -2,12 +2,13 @@
 rule_id: SC4-1-1-unique-attrs
 name: Attributes are unique
 test_mode: automatic
+environment: Markup Document
 
-criteria:
+success_criterion:
 - 4.1.1 # Parsing (Level A)
 
 author:
-
+- Wilco Fiers
 ---
 
 ## Description
@@ -23,44 +24,61 @@ This test checks that attributes of an element are unique.
 
 *no known assumptions*
 
-## Test properties
-
-| Property         | Value
-|------------------|----
-| Test requirement | 4.1.1 Parsing
-| Test mode        | Automatic
-| Test environment | HTML source
-| Test subject     | Single web page
-
 ## Test procedure
 
 ### Selector
-
-Test mode: [automatic][AUTO]
 
 Select all opening tags in the HTML document
 
 ### Step 1
 
-Test mode: [automatic][AUTO]
+Make a list of all the attribute names on the current tag
 
-- Make a list of all the attribute names on the current tag
-- IF any of the attributes occurs more the once:
-  - Return {{ page.rule_id }}-fail1
-- ELSE Return {{ page.rule_id }}-pass1
+Check if any of the attributes occurs more the once:
 
-| Outcome  | Passed
-|----------|-----
-| ID       | {{ page.rule_id }}-pass1
-| Testcase | {{ page.rule_id }}
-| Pointer  | selector result
+Return [step1-fail][#step1-fail]
 
-| Outcome  | Failed
-|----------|-----
-| ID       | {{ page.rule_id }}-fail1
-| Testcase | {{ page.rule_id }}
-| Error    | Attribute <attribute-name> was used more then once on the element <pointer>
-| Pointer  | selector result
+Else, return [step1-pass][#step1-fail]
 
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual
+## Outcome
+
+The resulting assertion is as follows,
+
+| Property | Value
+|----------|----------
+| type     | Assertion
+| test     | auto-wcag:{{ page.rule_id }}
+| subject  | *the selected element*
+| mode     | auto-wcag:{{ page.test_mode }}
+| result   | <One TestResult from below>
+
+### step1-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Attribute <attribute-name> was used more then once on the element <pointer>
+
+### step1-pass
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+
+## Implementation Tests
+
+There are currently no tests available for this rule.
+
+Implementation tests are available at: [rulename tests](rule-id.test.md)
+
+## Change log
+
+### Version 1.1
+
+- Updated to new format
+
+### Version 1.0
+
+- Set up the initial rule

@@ -2,12 +2,14 @@
 rule_id: SC4-1-1-id
 name: Define ids for elements
 test_mode: automatic
+environment: DOM Structure
 
-criteria:
+success_criterion:
 - 4.1.1 # Parsing (Level A)
 
 author:
-
+- Kamyar Rasta
+- Wilco Fiers
 ---
 
 ## Description
@@ -24,48 +26,48 @@ This test checks id attribute for all elements to have a unique value.
 
 *no known assumptions*
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Test name         | Define ids for elements
-| Test requirement  | 4.1.1 Parsing
-| Test mode         | Automatic
-| Test environment  | DOM
-| Test subject      | Single web page
-
 ## Test procedure
 
 ### Selector
 
-Test mode: [automatic][AUTO]
+Select all elements that match the following CSS selector:
 
-Select any element with an id attribute. The following CSS selector could be used: `*[id]`
+    *[id]
 
 ### Step 1
-
-Test mode: [automatic][AUTO]
 
 - IF there is no list called 'knownIDs':
   - Create an empty list 'knownIDs;
 - IF the value of the ID attribute exists in 'knownIDs':
-  - Return {{ page.rule_id }}-fail1
+  - Return [step1-fail](#step1-fail)
 - ELSE:
   - Add the value of the ID attribute of the selected element to 'knownIDs'
-  - Return {{ page.rule_id }}-pass1
+  - Return [step1-pass](#step1-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-pass1
+## Outcome
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Error    | The ID of this element has occurred before on this page
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-fail1
+The resulting assertion is as follows,
 
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual
+| Property | Value
+|----------|----------
+| type     | Assertion
+| test     | auto-wcag:{{ page.rule_id }}
+| subject  | *the selected element*
+| mode     | auto-wcag:{{ page.test_mode }}
+| result   | <One TestResult from below>
+
+### step1-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | The ID of this element has occurred before on this page
+
+### step1-pass
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |

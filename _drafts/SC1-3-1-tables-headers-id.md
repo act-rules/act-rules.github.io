@@ -49,7 +49,7 @@ if yes, continue with [step 2](#step-2)
 
 else, return a fail:
 
-| Outcome  | Fail
+| Outcome  | Failed
 |----------|-----
 | ID       | SC1-3-1-tables-headers-id-fail1
 | Error    | A `headers` value in the table has no matching `id`.
@@ -69,13 +69,13 @@ Give the user the following question:
 
 if yes:
 
-| Outcome  | Pass
+| Outcome  | Passed
 |----------|-----
 | ID       | SC1-3-1-tables-headers-id-pass2
 
 else, return a fail:
 
-| Outcome  | Fail
+| Outcome  | Failed
 |----------|-----
 | ID       | SC1-3-1-tables-headers-id-fail2
 | Error    | Table cell's `id` references an incorrect `th` or `td` via 'headers' attribute.

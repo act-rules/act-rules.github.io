@@ -40,16 +40,15 @@ This rule checks that links that are embedded in a block of text can be distingu
 
     a[href]:not(role), *[role=link]
 
-2. From this list, select elements that meet the following requirements:
+2. Remove any elements who's `textContent` property is [non-empty][NEMPTY] text
 
-  - `link.textContent` is [non-empty][NEMPTY] text, AND
-  - Its nearest ancestor that is a [block-like element](#block-like-element) has:
-    - A different text color than the text color of the link, AND
-    - [rendered text][RNDTXT] that is not contained in the link.
+3. Remove any elements who's nearest [block-like ancestor](#block-like-element) does NOT have:
+
+    - [non-empty][NEMPTY] [rendered text][RNDTXT] that is NOT contained in any link, and which does not exclusively consist of [separator characters][separator-characters]
 
 ### Step 1: Initial state
 
-Check that the link (or another element that only wraps the link) has a [distinguishing border][DSBRDR], a `background-image`, or a [distinguishing style][DSSTYL].
+Check that the link (or another element that contains all that link's content) has a distinguishing [style][DSSTYL], a [distinguishing border][DSBRDR], or a `background-image`.
 
 If yes, return [step1-pass](#step1-pass)
 
@@ -167,9 +166,13 @@ Next, compare the style properties `font-family`, `font-weight`, `font-style`, `
 
 If any of the properties have a different value for the one than for the other, the style is distinguishable.
 
+### Separator characters
+
+A separator character is a character that is used to separate links. This practice is common in things like breadcrumb trails and footers. The following characters are considered separator characters: `/`, `\`, `|` `>`, `<`, `-`, `,` `+`.
+
 [AUTO]: ../pages/test-modes.html#automatic
 [MANUAL]: ../pages/test-modes.html#manual
 [NEMPTY]: ../pages/algorithms/none-empty.html
-[RDNTXT]: ../pages/algorithms/rendered-text.html
+[RNDTXT]: ../pages/algorithms/rendered-text.html
 [DSBRDR]: #distinguishing-border
 [DSSTYL]: #distinguishing-style

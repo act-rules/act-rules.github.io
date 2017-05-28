@@ -2,8 +2,9 @@
 rule_id: SC3-1-1-text
 name: HTML lang matches text
 test_mode: semi-automatic
+environment: DOM Structure
 
-criteria:
+success_criterion:
 - 3.1.1 # Language of Page (Level A)
 
 authors:
@@ -34,43 +35,27 @@ This test does not prescribe which of these definitions to use as long as one of
 
 *Note that all language changes must be marked correctly independent of the chosen definition. This is covered by 3.1.2 Language of Parts.*
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Success Criterion | 3.1.1 Language of Page
-| Test mode         | SemiAuto
-| Test environment  | DOM
-| Test subject      | Single web page
-
 ## Test procedure
 
 ### Selector
 
-Test mode: [automatic][AUTO]
+Select all elements that matches the following CSS selector:
 
-L1 = value of `lang` attribute.
+    *[lang]
+
+Use the value of the lang attribute as L1
 
 ### Step 1
-
-Test mode: [automatic][AUTO]
 
 Select a continuous run of text from one or more consecutive `p` elements. If no `p` elements exist, select any text from the body of the web page. The text should be at least 300 characters in length and not contain any language changes, i.e. `lang` attributes on the element or its parent. If no such text is found, continue with [Step 2](#-step 2).
 
 Use a [language identification algorithm][LNGFND] to check if L1 is the language of the selected text.
 
-If yes, return
-
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-text-pass1
+If yes, return [step1-pass](#step1-pass)
 
 Else continue with [Step 2](#step-2).
 
 ### Step 2
-
-Test mode: [manual][MANUAL]
 
 Present the page to the user.
 
@@ -80,22 +65,44 @@ Question: Is L1 the primary language of this page?
 
 Help text: "Primary language" means the language of the majority of the text on the page or the language of the interface (navigation menu etc.) of the page.
 
-If yes, return
+If yes, return [step2-pass](#step2-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-pass2
+Else return [step2-fail](#step2-fail)
 
-Else return
+## Outcome
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail1
-| Error    | The primary language of the page is not specified correctly.
-| Info     | L1
+The resulting assertion is as follows,
 
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual
+| Property | Value
+|----------|----------
+| type     | Assertion
+| test     | auto-wcag:{{ page.rule_id }}
+| subject  | *the selected element*
+| mode     | auto-wcag:{{ page.test_mode }}
+| result   | <One TestResult from below>
+
+### step1-pass
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
+
+### step2-pass
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
+
+### step2-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | The primary language of the page is not specified correctly.
+
 [LNGFND]: ../pages/algorithms/lang-identification.html

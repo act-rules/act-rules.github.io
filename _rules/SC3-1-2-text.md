@@ -2,8 +2,9 @@
 rule_id: SC3-1-2-text
 name: Lang attribute matches text
 test_mode: semi-automatic
+environment: DOM Structure
 
-criteria:
+success_criterion:
 - 3.1.2 # Language of Parts (Level AA)
 
 authors:
@@ -28,20 +29,9 @@ This test checks that changes in human language are marked up correctly in the w
 - Single words in another language do not have to be marked as language changes.
 - This test assumes that the language of the web content has been specified in the `lang` attribute of the element (see also [SC3-1-2-lang](SC3-1-2-lang.html)). The `xml:lang` attribute is not taken into account because tests have shown, that `xml:lang` is ignored by screenreaders.
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Success Criterion | 3.1.2 Language of Parts
-| Test mode         | SemiAuto
-| Test environment  | DOM
-| Test subject      | Single web page
-
 ## Test procedure
 
 ### Selector
-
-Test mode: [automatic][AUTO]
 
 Select consecutive run of text to which a single language attribute applies.
 
@@ -51,33 +41,17 @@ L1 = language of the selected text as determined by [HTML 4.01 Inheritance of la
 
 ### Step 1
 
-Test mode: [automatic][AUTO]
-
 Use a [language identification algorithm][LANGFND] to determine L2 = the language actually used in the selected text.
 
 If L2 can not be determined by the algorithm.
 
 Continue with [Step 2](#step-2).
 
-If L2 is equal to L1, return
+If L2 is equal to L1, return [step1-pass](#step1-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-pass1
-
-Else return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail1
-| Error    | The language of the text is not specified correctly.
-| Info     | L1, L2
+Else return [step1-fail](#step1-fail)
 
 ### Step 2
-
-Test mode: [manual][MANUAL]
 
 Present the selected text to the user.
 
@@ -87,22 +61,52 @@ Question: Is L1 the *only* language used in this text?
 
 Help text: If the text contains a phrase or sentence in another language, please answer "no". If there are only single words in another language and the rest of the text is in L1, please answer "yes".
 
-If yes, return
+If yes, return [step2-pass](#step2-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-pass2
+Else return [step2-fail](#step2-fail)
 
-Else return
+## Outcome
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail2
-| Error    | The language of the text is not specified correctly.
-| Info     | L1, L2
+The resulting assertion is as follows,
 
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual
+| Property | Value
+|----------|----------
+| type     | Assertion
+| test     | auto-wcag:{{ page.rule_id }}
+| subject  | *the selected element*
+| mode     | auto-wcag:{{ page.test_mode }}
+| result   | <One TestResult from below>
+
+### step1-pass
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
+
+### step1-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | The language of the text is not specified correctly.
+
+### step2-pass
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |
+
+### step2-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | The language of the text is not specified correctly.
+
 [LNGFND]: ../pages/algorithms/lang-identification.html

@@ -2,12 +2,14 @@
 rule_id: SC4-1-1-accesskey
 name: Provide unique accesskeys
 test_mode: automatic
+environment: DOM Structure
 
-criteria:
+success_criterion:
 - 4.1.1 # Parsing (Level A)
 
 author:
-
+- Kamyar Rasta
+- Wilco Fiers
 ---
 
 ## Description
@@ -23,49 +25,47 @@ This test checks accesskey attribute for all elements to have a unique value.
 
 - If the accesskey value has multiple characters the user agent picks the first character and ignores the rest. See: [WHATWG on Interaction](http://www.whatwg.org/specs/web-apps/current-work/multipage/interaction.html#the-accesskey-attribute).
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Test name         | Provide unique accesskeys
-| Test requirement  | 4.1.1 Parsing
-| Test mode         | Automatic
-| Test environment  | DOM
-| Test subject      | single web page
-
 ## Test procedure
 
 ### Selector
-
-Test mode: [automatic][AUTO]
 
 Select any element with an accesskey attribute. The following CSS selector could be used: *[accesskey]
 
 ### Step 1
 
-Test mode: [automatic][AUTO]
-
 - IF there is no list called 'knownAccesskeys':
   -  Create an empty list 'knownAccesskeys;
 - Take the first character of the ACCESSKEY attribute as FirstChar
 - IF the FirstChar exists in 'knownAccesskeys':
-  - Return {{ page.rule_id }}-fail1
+  - Return [step1-fail](#step1-fail)
 - ELSE:
   - Add the FirstChar to 'knownAccesskeys'
-  - Return {{ page.rule_id }}-pass1
+  - Return [step1-pass](#step1-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-pass1
+## Outcome
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Error    | The accesskey of this element has occurred before on this page
-| Pointer  | selector result
-| ID       | {{ page.rule_id }}-fail1
+The resulting assertion is as follows,
 
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual
+| Property | Value
+|----------|----------
+| type     | Assertion
+| test     | auto-wcag:{{ page.rule_id }}
+| subject  | *the selected element*
+| mode     | auto-wcag:{{ page.test_mode }}
+| result   | <One TestResult from below>
+
+### step1-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | The accesskey of this element has occurred before on this page
+
+### step1-pass
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |

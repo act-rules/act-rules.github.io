@@ -2,8 +2,9 @@
 rule_id: SC3-1-1-xml-lang
 name: Use identical xml:lang and lang attributes
 test_mode: automatic
+environment: DOM Structure
 
-criteria:
+success_criterion:
 - 3.1.1 # Language of Page (Level A)
 
 authors:
@@ -24,43 +25,21 @@ This test checks the value of the `xml:lang` attribute.
 
 - Tests have shown that `xml:lang` is ignored by screenreaders. (Both Jaws 15 with FF and IE and NVDA with FF go by lang attribute, xml:lang is ignored.) This test identifies pages that use only the `xml:lang` attribute.
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Test name         | Use identical xml:lang and lang attributes
-| Success Criterion | 3.1.1 Language of Page
-| Test mode         | Automatic
-| Test environment  | DOM
-| Test subject      | Single web page
-
 ## Test procedure
 
 ### Selector
 
-Test mode: [automatic][AUTO]
+Select all elements that matches the following CSS selector:
 
-Select `html` element with `xml:lang` attribute.
-
-`html[@xml:lang]`
+    html[@xml:lang]
 
 ### Step 1
 
-Test mode: [automatic][AUTO]
-
 Check that the `html` element contains also a `lang` attribute.
 
-If no `lang` is specified, return
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail1
-| Error    | No lang attribute found. Only xml:lang.
+If no `lang` is specified, return [step1-fail](#step1-fail)
 
 ### Step 2
-
-Test mode: [automatic][AUTO]
 
 L1 = value of `xml:lang`
 
@@ -68,21 +47,42 @@ L2 = value of `lang`
 
 Compare L1 and L2.
 
-If the L1 and L2 differ, return
+If the L1 and L2 differ, return [step2-fail](#step2-fail)
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-fail2
-| Error    | Contradicting language codes.
-| Info     | L1, L2
+Else, return [step2-pass](#step2-pass)
 
-Else, return
+## Outcome
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-pass1
+The resulting assertion is as follows,
 
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual
+| Property | Value
+|----------|----------
+| type     | Assertion
+| test     | auto-wcag:{{ page.rule_id }}
+| subject  | *the selected element*
+| mode     | auto-wcag:{{ page.test_mode }}
+| result   | <One TestResult from below>
+
+### step1-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | No lang attribute found. Only xml:lang.
+
+### step2-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Contradicting language codes L1 and L2.
+
+### step2-pass
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+| description |

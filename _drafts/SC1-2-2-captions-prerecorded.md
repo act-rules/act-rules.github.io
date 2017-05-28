@@ -1,3 +1,15 @@
+---
+rule_id: SC1-2-2-captions-prerecorded
+name: Captions on prerecorded synchronized media
+test_mode: semi-automatic
+
+criteria:
+- 1.2.2 # Captions (Prerecorded) (Level A)
+
+authors:
+
+---
+
 # SC1-2-2-captions-prerecorded
 
 ## Description

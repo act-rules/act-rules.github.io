@@ -64,7 +64,7 @@ Determine `color` and `background-color` of the link and it's block-like ancesto
 
 If C1 or C2 is more than 3:1, continue with [Step 3](#step-3-focus-state)
 
-Else, return [step2-fail](#step2-fail)
+Else continue with [Step 5][#step-5]
 
 ### Step 3: focus state
 
@@ -74,7 +74,7 @@ Check that the focused link has a [distinguishing border][DSBRDR], a `background
 
 If yes, continue with [Step 4](#step-4-hover-state)
 
-Else, return [step3-fail](#step3-fail)
+Else continue with [Step 5][#step-5]
 
 ### Step 4: Hover state
 
@@ -86,7 +86,25 @@ Check that the focused link has a [distinguishing border][DSBRDR], a `background
 
 If yes, return [step4-pass](#step4-pass)
 
-Else, return [step4-fail](#step4-fail)
+Else continue with [Step 5][#step-5]
+
+### Step 5
+
+If the user in not available, return [step5-cannottell](#step5-cannottell)
+
+Else, give the user the following question:
+
+| Property     | Value
+|--------------|---------
+| Highlight    | The selected element
+| Question     | Can this link be distinguished from the rest of the text, without relying on the color alone.
+| Help         | Links can be made distinguishable in many ways including underlines, the addition of a link icon, or other style changes.
+| User profile | Requires sight
+| context      | yes
+
+if yes, return  [step5-pass](#step5-pass)
+
+else, return [step5-fail](#step5-fail)
 
 ## Outcome
 
@@ -107,22 +125,6 @@ The resulting assertion is as follows,
 | type        | TestResult
 | outcome     | Passed
 
-### step2-fail
-
-| Property    | Value
-|-------------|----------
-| type        | TestResult
-| outcome     | Failed
-| description | The link is not sufficiently distinguishable from the surrounding text
-
-### step3-fail
-
-| Property    | Value
-|-------------|----------
-| type        | TestResult
-| outcome     | Failed
-| description | The link is not sufficiently distinguishable from the surrounding text when it receives focus.
-
 ### step4-pass
 
 | Property    | Value
@@ -130,13 +132,27 @@ The resulting assertion is as follows,
 | type        | TestResult
 | outcome     | Passed
 
-### step4-fail
+### step5-cannottell
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.name }}
-| ID       | {{ page.name }}-fail3
-| Error    | The link is not sufficiently distinguishable from the surrounding text when it is hovered over with the mouse pointer.
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | CannotTell
+
+### step5-pass
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+
+### step5-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | The link is not sufficiently distinguishable from the surrounding text.
 
 ## Algorithms
 

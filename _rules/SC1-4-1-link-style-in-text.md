@@ -24,8 +24,8 @@ This rule checks that links that are embedded in a block of text can be distingu
 
 ## Assumptions
 
-- This test assumes that the 3:1 contrast difference between text is minimal to what would be sufficient to meet WCAG 2.0. This value is part of technique G183, but is not specified in the 1.4.1 success criterion.
-- This tests assumes that one of the following shorthand CSS properties (or the related expanded properties e.g. `background-color`) is used to make the link visually evident: `background`, `color`, `font`, or `text-decoration`.
+- This test assumes that the 3:1 contrast difference between the link text and the surrounding text would be sufficient to meet WCAG 2.0. This value is part of technique G183, but is not specified in the 1.4.1 success criterion.
+- This test assumes that one of the following shorthand CSS properties (or the related expanded properties e.g. `background-color`) is used to make the link visually evident: `background`, `color`, `font`, or `text-decoration`.
 - This test assumes that any change in font is sufficiently distinguishable, and that fonts are loaded when they are present.
 - Use of a `border`, of 1 or more pixels, not set to none, and not with a color of transparent, is assumed to be sufficiently distinguishable
 

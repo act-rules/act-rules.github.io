@@ -2,8 +2,9 @@
 rule_id: SC1-4-1-link-style-in-text
 name: Inline links are distinguishable
 test_mode: automatic
+environment: Web Browser
 
-criteria:
+success_criterion:
 - 1.4.1 # Use of Color (Level A)
 
 authors:
@@ -29,51 +30,32 @@ This rule checks that links that are embedded in a block of text can be distingu
 - This test assumes that any change in font is sufficiently distinguishable, and that fonts are loaded when they are present.
 - Use of a `border`, of 1 or more pixels, not set to none, and not with a color of transparent, is assumed to be sufficiently distinguishable
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Test name         | Inline links are distinguishable
-| Success Criterion | 1.4.1 Use of Color
-| Test mode         | Automatic
-| Test environment  | Remote Controlled User Agent
-| Test subject      | Single web page or DOM document fragment
+## Test procedure
 
 *Note*: Tools only able to process HTML + CSS can implement the first two step and ignore step 3 through 4, returning 'cantTell' instead. A tool could ask the user to perform step 3 and 4 manually, in which case the test would be semi-automatic instead.
 
-## Test procedure
-
 ### Selector
 
-Test mode: [automatic][AUTO]
+1. Select all elements that matches the following CSS selector:
 
-1. Select each element that matches `a[href]:not(role), *[role=link]`
+    a[href]:not(role), *[role=link]
 
 2. From this list, select elements that meet the following requirements:
 
-  - `link.textContent` is [non-empty][NEMPTY] text
+  - `link.textContent` is [non-empty][NEMPTY] text, AND
   - Its nearest ancestor that is a [block-like element](#block-like-element) has:
     - A different text color than the text color of the link, AND
     - [rendered text][RNDTXT] that is not contained in the link.
 
 ### Step 1: Initial state
 
-Test mode: [automatic][AUTO]
+Check that the link (or another element that only wraps the link) has a [distinguishing border][DSBRDR], a `background-image`, or a [distinguishing style][DSSTYL].
 
-Check that the link has a [distinguishing border][DSBRDR], a `background-image`, or a [distinguishing style][DSSTYL].
-
-If yes, return
-
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.name }}
-| ID       | {{ page.name }}-pass1
+If yes, return [step1-pass](#step1-pass)
 
 Else continue with [Step 2](#step-2-link-contrast)
 
 ### Step 2: Link contrast
-
-Test mode: [automatic][AUTO]
 
 Determine `color` and `background-color` of the link and it's block-like ancestor. If the background-color is transparent, locate the closest underlying element that does have a `background-color` and use that value. (GetElementsFromPoint can be used for this.)
 
@@ -83,17 +65,9 @@ Determine `color` and `background-color` of the link and it's block-like ancesto
 
 If C1 or C2 is more than 3:1, continue with [Step 3](#step-3-focus-state)
 
-Else, return:
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.name }}
-| ID       | {{ page.name }}-fail1
-| Error    | The link is not sufficiently distinguishable from the surrounding text
+Else, return [step2-fail](#step2-fail)
 
 ### Step 3: focus state
-
-Test mode: [automatic][AUTO]
 
 Give focus to the link.
 
@@ -101,17 +75,9 @@ Check that the focused link has a [distinguishing border][DSBRDR], a `background
 
 If yes, continue with [Step 4](#step-4-hover-state)
 
-Else, return:
-
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.name }}
-| ID       | {{ page.name }}-fail2
-| Error    | The link is not sufficiently distinguishable from the surrounding text when it receives focus.
+Else, return [step3-fail](#step3-fail)
 
 ### Step 4: Hover state
-
-Test mode: [automatic][AUTO]
 
 Remove the focus from the link.
 
@@ -119,14 +85,53 @@ Move the mouse pointer to the center of the link.
 
 Check that the focused link has a [distinguishing border][DSBRDR], a `background-image`, or a [distinguishing style][DSSTYL].
 
-If yes, return:
+If yes, return [step4-pass](#step4-pass)
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.name }}
-| ID       | {{ page.name }}-pass2
+Else, return [step4-fail](#step4-fail)
 
-Else, return:
+## Outcome
+
+The resulting assertion is as follows,
+
+| Property | Value
+|----------|----------
+| type     | Assertion
+| test     | auto-wcag:{{ page.rule_id }}
+| subject  | *the selected element*
+| mode     | auto-wcag:{{ page.test_mode }}
+| result   | <One TestResult from below>
+
+### step1-pass
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+
+### step2-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | The link is not sufficiently distinguishable from the surrounding text
+
+### step3-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | The link is not sufficiently distinguishable from the surrounding text when it receives focus.
+
+### step4-pass
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+
+### step4-fail
 
 | Outcome  | Failed
 |----------|-----

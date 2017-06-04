@@ -2,8 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
-  <title>{{ page.title | escape }} - {{ site.title | escape }}</title>
+{% if page.rule_id and page.layout == 'rule' %}
+  {% assign page_title = page.rule_id | prepend: "Rule: " %}
+{% else %}
+  {% if page.rule_id and page.layout == 'testcase' %}
+    {% assign page_title = page.rule_id | prepend: "Test Cases for " %}
+  {% else %}
+    {% assign page_title = page.title %}
+  {% endif %}
+{% endif %}
+  <title>
+     {{ page_title }} - {{ site.title | escape }}
+  </title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
@@ -94,8 +104,8 @@
 </nav>
 
 <main class="container">
-  {% if page.title %}
-    <h1>{{ page.title }}</h1>
+  {% if page_title %}
+    <h1>{{ page_title }}</h1>
   {% endif %}
 
   {{ content }}

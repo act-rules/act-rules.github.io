@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<p>Back to rule:
+  <a href="{%
+    if page.draft != true
+      %}../rules/{{ page.rule_id }}.html{%
+    else
+      %}../drafts/{{ page.rule_id }}.html{%
+    endif
+  %}">{{ page.rule_id }}</a>
+</p>
+
+<p>Elements that match <code>[data-outcome="inapplicable"]</code> should be ignored by the rule. Elements that match <code>[data-outcome="failed"]</code> should be returned as failed, and those matching <code>[data-outcome="passed"]</code> should be passed. Other elements may match other rules, these results should be ignored for the purpose of this test file.</p>
+
+{{ content }}

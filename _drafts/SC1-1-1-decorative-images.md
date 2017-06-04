@@ -1,7 +1,7 @@
 ---
 rule_id: SC1-1-1-decorative-images
 name: Alternatives for decorative images
-test_mode: semi-automatic
+test_mode: manual
 Environment: Web Browser
 
 success_criterion:
@@ -48,7 +48,7 @@ Give the user the following question:
 |----------------------|---------
 | Presented item       | Selected element
 | Question             | Is this element solely for decorative purposes?
-| Help                 | Answer with 'Yes', if it is a decorative element such as a spacer, line or menu-background solely used for layout purposes or an eye-catching element that don't convey information useful for understanding the content of the page.
+| Help                 | Answer with 'Yes', if it is a decorative element such as a spacer, line or background solely used for layout purposes or an element that doesn't convey new information, useful for understanding the content of the page.
 | User profile         | Requires sight
 | Context              | yes
 
@@ -64,7 +64,7 @@ The resulting assertion is as follows,
 |----------|----------
 | type     | Assertion
 | test     | {{ page.rule_id }}
-| mode     | semi-automatic
+| mode     | manual
 | subject  | << The tested page >>
 | result   | << one of the following >>
 

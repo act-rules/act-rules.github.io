@@ -2,12 +2,13 @@
 rule_id: SC4-1-2-button
 name: Button has name
 test_mode: automatic
+environment: DOM Structure
 
-criteria:
+success_criterion:
 - 4.1.2 # Name, Role, Value (Level A)
 
 author:
-
+- Wilco Fiers
 ---
 
 ## Description
@@ -23,45 +24,58 @@ This test checks if every button element has a name.
 
 - The test case does not look at buttons with img content
 
-## Test properties
-
-| Property          | Value
-|-------------------|----
-| Success Criterion | 4.1.2 Name, Role, Value
-| Test mode         | automatic
-| Test environment  | DOM
-| Test subject      | single web page
-
 ## Test procedure
 
 ### Selector
 
-Test mode: [automatic][AUTO]
+Select all elements that match the following XPATH selector:
 
-Select any button element. The following CSS selector could be used: `button`
+    button
 
 ### Step 1
 
-Test mode: [automatic][AUTO]
+Check if there is [non-empty][NEMPTY] text within the button element
 
-- IF there is [non-empty][NEMPTY] text within the button element:
-  - Return {{ page.rule_id }}-pass;
-- IF the button element has a title attribute with a [non-empty][NEMPTY] value:
-  - Return {{ page.rule_id }}-pass;
-- ELSE Return {{ page.rule_id }}-fail;
+Or if the button element has a `title` attribute with a [non-empty][NEMPTY]
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| ID       | {{ page.rule_id }}-pass
+Return [step1-pass][#step1-pass]
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | {{ page.rule_id }}
-| Error    | failed to give an anchor element a name
-| Info     | This button element has no filled title attribute nor text content.
-| ID       | {{ page.rule_id }}-fail
+Else, return [step1-fail][#step1-fail]
 
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual
-[NEMPTY]: ../pages/algorihms/none-empty.html
+## Outcome
+
+The resulting assertion is as follows,
+
+| Property | Value
+|----------|----------
+| type     | Assertion
+| test     | auto-wcag:{{ page.rule_id }}
+| subject  | *the selected element*
+| mode     | {{ page.test_mode }}
+| result   | <One TestResult from below>
+
+### step1-fail
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | failed to give an anchor element a name
+| info        | This button element has no filled title attribute nor text content.
+
+### step1-pass
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Passed
+
+## Implementation Tests
+
+There are currently no tests
+
+## Change log
+
+### Version 1.1
+
+- Edit to fit revised format for rules

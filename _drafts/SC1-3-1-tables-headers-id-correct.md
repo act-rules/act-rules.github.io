@@ -1,7 +1,7 @@
 ---
 rule_id: SC1-3-1-tables-headers-id
 name: Tables headers-id associations
-test_mode: semi-automatic
+test_mode: automatic
 environment:  DOM Structure
 
 success_criterion:
@@ -20,7 +20,6 @@ This rule checks that data table headers-id associations are used correctly.
 - [F90: Failure of Success Criterion 1.3.1 for incorrectly associating table headers and content via the headers and id attributes](https://www.w3.org/TR/WCAG20-TECHS/F90.html)
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/TR/WCAG20-TECHS/H43.html)
 - [F46: Failure of Success Criterion 1.3.1 due to using th elements, caption elements, or non-empty summary attributes in layout tables](https://www.w3.org/TR/WCAG20-TECHS/F46.html)
-- Auto-WCAG SC1-3-1-tables-layout
 
 ## Assumptions
 

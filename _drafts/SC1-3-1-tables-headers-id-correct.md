@@ -1,7 +1,7 @@
 ---
-rule_id: SC1-3-1-tables-headers-id
-name: Tables headers-id associations
-test_mode: automatic
+rule_id: SC1-3-1-tables-headers-id-correct
+name: Tables headers-id associations correct
+test_mode: semi-automatic
 environment:  DOM Structure
 
 success_criterion:
@@ -13,7 +13,7 @@ authors:
 
 ## Description
 
-This rule checks that data table headers-id associations are used correctly.
+This rule checks that data table headers-id associations reference correct targets in the correct order.
 
 ## Background
 
@@ -29,7 +29,9 @@ This rule checks that data table headers-id associations are used correctly.
 
 ### Selector
 
-Select all elements that match the following CSS selector:
+Loop outward from most deeply nested table.
+
+For each un-marked table, select all elements that match the following CSS selector:
 
     table:not([role=presentation]) th[headers],
     table:not([role=presentation]) td[headers],
@@ -38,48 +40,92 @@ Select all elements that match the following CSS selector:
 
 ### Step 1
 
-Test method: [automatic][AUTO]
+Mark table complete.
 
 For each value in each cell `headers` attribute,
 
-check that the value references a cell `id` attribute value within the same table,
+find the the 'td' or 'th' referenced,
 
-if yes, continue with [step 2](#step-2)
-
-else, return a fail:
-
-| Outcome  | Failed
-|----------|-----
-| ID       | SC1-3-1-tables-headers-id-fail1
-| Error    | A `headers` value in the table has no matching `id`.
-
-### Step 2
-
-Test method: [manual][MANUAL]
-
-Give the user the following question:
+give the user the following question:
 
 | Property             | Value
 |----------------------|---------
 | Presented item       | Highlight a table cell and the related "header" cell.
 | Question             | Is the cell appropriately categorized by or semantically related with the associated "header" cell?
-| Requires context     | Yes, an understanding of the data relationships in the table.
-| Requires interaction | No
+| Requires context     | Yes. An understanding of the data relationships in the table.
+| Requires interaction | Yes. Answering the question allows test to proceed to the next step or iteration.
 
-if yes:
+if yes, continue with [step 2](#step-2)
 
-| Outcome  | Passed
-|----------|-----
-| ID       | SC1-3-1-tables-headers-id-pass2
+else, return [step1-fail1](#step1-fail1).
 
-else, return a fail:
+### Step 2
 
-| Outcome  | Failed
-|----------|-----
-| ID       | SC1-3-1-tables-headers-id-fail2
-| Error    | Table cell's `id` references an incorrect `th` or `td` via 'headers' attribute.
+For each value in each cell `headers` attribute,
 
-...
+find the the 'td' or 'th' referenced,
 
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual
+give the user the following question:
+
+| Property             | Value
+|----------------------|---------
+| Presented item       | Highlight a table cell and the related "header" cell. Display the sequence order of the header cell as a number value, as specified by the order in which the header's `id` appears within the cell's `headers` attribute.
+| Question             | Is the number of the related header consistent with the desired reading sequence?
+| Requires context     | Yes. An understanding of the data relationships in the table.
+| Requires interaction | Yes. Answering the question allows the test to proceed to the next iteration.
+
+if yes, return [step2-pass1](#step2-pass1)
+
+else, return [step2-fail1](#step2-fail1).
+
+## Outcome
+
+The resulting assertion is as follows,
+
+| Property | Value
+|----------|----------
+| type     | Assertion
+| test     | auto-wcag:SC1-3-1-tables-headers-id-correct
+| subject  | *the selected element*
+| mode     | semi-automatic
+| result   | One TestResult from below
+
+### step1-fail1
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Table cell references an incorrect `th` or `td` via the `headers` attribute.
+
+
+### step1-pass1
+
+| Property | Value
+|----------|----------
+| type     | TestResult
+| outcome  | Passed
+
+### step2-fail1
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Table cell references a `th` or `td` via the `headers` in an incorrect order.
+
+### step2-pass1
+
+| Property | Value
+|----------|----------
+| type     | TestResult
+| outcome  | Passed
+
+## Implementation Tests
+
+Implementation tests are available at: <placeholder>
+
+## Change log
+
+### Version 0.1
+- Initial draft of rule.

@@ -1,6 +1,6 @@
 ---
-rule_id: SC1-3-1-tables-headers-id
-name: Tables headers-id associations
+rule_id: SC1-3-1-tables-headers-id-valid
+name: Tables headers-id associations valid
 test_mode: automatic
 environment:  DOM Structure
 
@@ -44,44 +44,49 @@ Mark table completed.
 
 For each value in each cell `headers` attribute,
 
-check that the value references a cell `id` attribute value within the selected table,
+check that the value references a cell `id` attribute value within the currently selected table,
 
-if yes, return [step1-pass](#step1-pass)
+if yes, return [step1-pass1](#step1-pass1)
 
-else, return [step1-fail](#step1-fail).
+else, return [step1-fail1](#step1-fail1).
 
-| Outcome  | Failed
-|----------|-----
-| ID       | SC1-3-1-tables-headers-id-fail1
-| Error    | A `headers` value in the table has no matching `id`.
+## Outcome
 
-### Step 2
+The resulting assertion is as follows,
 
-Test method: [manual][MANUAL]
+| Property | Value
+|----------|----------
+| type     | Assertion
+| test     | auto-wcag:SC1-3-1-tables-headers-id-valid
+| subject  | *the selected element*
+| mode     | automatic
+| result   | One TestResult from below
 
-Give the user the following question:
+### step1-fail1
 
-| Property             | Value
-|----------------------|---------
-| Presented item       | Highlight a table cell and the related "header" cell.
-| Question             | Is the cell appropriately categorized by or semantically related with the associated "header" cell?
-| Requires context     | Yes, an understanding of the data relationships in the table.
-| Requires interaction | No
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Failed
+| description | Table cell references an invalid `th` or `td` via the `headers` attribute.
 
-if yes:
+### step1-pass1
 
-| Outcome  | Passed
-|----------|-----
-| ID       | SC1-3-1-tables-headers-id-pass2
+| Property | Value
+|----------|----------
+| type     | TestResult
+| outcome  | Passed
 
-else, return a fail:
+## Implementation Tests
 
-| Outcome  | Failed
-|----------|-----
-| ID       | SC1-3-1-tables-headers-id-fail2
-| Error    | Table cell's `id` references an incorrect `th` or `td` via 'headers' attribute.
+Implementation tests are available at: <placeholder>
 
-...
+## Change log
 
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual
+### Version 0.2
+- Refactored into an automatic rule (this one) and a semi-automatic rule, [tables headers id correct](auto-wcag:SC1-3-1-tables-headers-id-correct).
+- Selector corrected.
+- Ensures selector tests only a single table at a time (for nested tables).
+- Conforms to rule template.
+
+

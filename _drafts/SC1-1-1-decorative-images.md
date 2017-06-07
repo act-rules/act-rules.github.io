@@ -48,11 +48,7 @@ Give the user the following question:
 |----------------------|---------
 | Presented item       | Selected element
 | Question             | Is this element solely for decorative purposes?
-<<<<<<< HEAD
 | Help                 | Answer with 'Yes', if it is a decorative element such as a spacer, line or background solely used for layout purposes or an element that doesn't convey new information, useful for understanding the content of the page.
-=======
-| Help                 | Answer with 'Yes', if it is a decorative element such as a spacer, line or menu-background solely used for layout purposes or an eye-catching element that don't convey information useful for understanding the content of the page.
->>>>>>> master
 | User profile         | Requires sight
 | Context              | yes
 
@@ -68,11 +64,7 @@ The resulting assertion is as follows,
 |----------|----------
 | type     | Assertion
 | test     | {{ page.rule_id }}
-<<<<<<< HEAD
 | mode     | manual
-=======
-| mode     | semi-automatic
->>>>>>> master
 | subject  | << The tested page >>
 | result   | << one of the following >>
 

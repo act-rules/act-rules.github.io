@@ -18,7 +18,7 @@ title: Auto-WCAG Rules
     }}<br>(<i>{{ rule.rule_id }}</i>)</a></th>
     <td>{{ rule.test_mode }}</td>
     <td><ul>
-      {% for criterion in rule.criteria %}
+      {% for criterion in rule.success_criterion %}
         <li>
           {% if site.data.criteria[criterion] %}
             <a href="{{ site.data.criteria[criterion].url }}" target="_blank">

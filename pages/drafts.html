@@ -19,7 +19,7 @@ layout: default
     }}<br>(<i>{{ draft.rule_id }}</i>)</a></th>
     <td>{{ draft.test_mode }}</td>
     <td><ul>
-      {% for criterion in draft.criteria %}
+      {% for criterion in draft.success_criterion %}
         <li>
           {% if site.data.criteria[criterion] %}
             <a href="{{ site.data.criteria[criterion].url }}" target="_blank">

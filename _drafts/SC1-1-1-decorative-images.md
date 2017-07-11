@@ -14,7 +14,7 @@ authors:
 
 ## Description
 
-This rule checks images that are marked as decorative, do not require a text alternative. Images that are the only content of an interactive element are not covered by this rule, as they are tested by [SC1-1-1+SC-4-1-2-interactive-images](SC1-1-1+SC-4-1-2-interactive-images.html).
+This rule checks if images that are marked as decorative do not require a text alternative. Images that are the only content of an interactive element are not covered by this rule, as they are tested by [SC1-1-1+SC-4-1-2-interactive-images](SC1-1-1+SC-4-1-2-interactive-images.html).
 
 *Editor note*: This rule is designed to replace (parts of) [SC1-1-1-text-alternative](/rules/SC1-1-1-text-alternative.html)
 

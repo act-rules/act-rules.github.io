@@ -24,6 +24,7 @@ This rule checks that data table headers-id associations reference correct targe
 ## Assumptions
 
 - Tables are [well-formed, according to the HTML5.1 specification.](https://www.w3.org/TR/html51/tabular-data.html#forming-a-table).
+- Tables pass [tables headers id valid](auto-wcag:SC1-3-1-tables-headers-id-valid).
 
 ## Test procedure
 
@@ -44,7 +45,7 @@ Mark table complete.
 
 For each value in each cell `headers` attribute,
 
-find the the 'td' or 'th' referenced,
+find the 'th' referenced,
 
 give the user the following question:
 
@@ -52,8 +53,8 @@ give the user the following question:
 |----------------------|---------
 | Presented item       | Highlight a table cell and the related "header" cell.
 | Question             | Is the cell appropriately categorized by or semantically related with the associated "header" cell?
-| Requires context     | Yes. An understanding of the data relationships in the table.
-| Requires interaction | Yes. Answering the question allows test to proceed to the next step or iteration.
+| Requires context     | Yes.
+| Requires interaction | Yes.
 
 if yes, continue with [step 2](#step-2)
 
@@ -63,16 +64,16 @@ else, return [step1-fail1](#step1-fail1).
 
 For each value in each cell `headers` attribute,
 
-find the the 'td' or 'th' referenced,
+find the 'th' referenced,
 
 give the user the following question:
 
 | Property             | Value
 |----------------------|---------
-| Presented item       | Highlight a table cell and the related "header" cell. Display the sequence order of the header cell as a number value, as specified by the order in which the header's `id` appears within the cell's `headers` attribute.
+| Presented item       | Highlight a table cell and the related header cell. Display the sequence order of the header cell as a number value, as specified by the order in which the header's `id` appears within the cell's `headers` attribute.
 | Question             | Is the number of the related header consistent with the desired reading sequence?
-| Requires context     | Yes. An understanding of the data relationships in the table.
-| Requires interaction | Yes. Answering the question allows the test to proceed to the next iteration.
+| Requires context     | Yes.
+| Requires interaction | Yes.
 
 if yes, return [step2-pass1](#step2-pass1)
 
@@ -96,7 +97,7 @@ The resulting assertion is as follows,
 |-------------|----------
 | type        | TestResult
 | outcome     | Failed
-| description | Table cell references an incorrect `th` or `td` via the `headers` attribute.
+| description | Table cell references an incorrect `th` via the `headers` attribute.
 
 
 ### step1-pass1
@@ -112,7 +113,7 @@ The resulting assertion is as follows,
 |-------------|----------
 | type        | TestResult
 | outcome     | Failed
-| description | Table cell references a `th` or `td` via the `headers` in an incorrect order.
+| description | Table cell references a `th` via the `headers` in an incorrect order.
 
 ### step2-pass1
 
@@ -126,6 +127,11 @@ The resulting assertion is as follows,
 Implementation tests are available at: <placeholder>
 
 ## Change log
+
+### Version 0.2
+- Removed explanations from Requires context and Requires interaction rows in Step 1 and Step 2 questions.
+- Rule now conforms to HTML 5.1 spec: `headers` can only reference a `th`.
+- Added recommended dependency on [tables headers id valid](auto-wcag:SC1-3-1-tables-headers-id-valid).
 
 ### Version 0.1
 - Initial draft of rule.

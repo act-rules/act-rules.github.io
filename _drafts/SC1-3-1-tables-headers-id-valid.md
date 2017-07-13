@@ -44,7 +44,7 @@ Mark table completed.
 
 For each value in each cell `headers` attribute,
 
-check that the value references a cell `id` attribute value within the currently selected table,
+check that the value references an `id` attribute value of a `th` within the currently selected table,
 
 if yes, return [step1-pass1](#step1-pass1)
 
@@ -68,7 +68,7 @@ The resulting assertion is as follows,
 |-------------|----------
 | type        | TestResult
 | outcome     | Failed
-| description | Table cell references an invalid `th` or `td` via the `headers` attribute.
+| description | Table cell's `headers` attribute contains an `id` that does not correspond to a `th` in the same table.
 
 ### step1-pass1
 
@@ -82,6 +82,9 @@ The resulting assertion is as follows,
 Implementation tests are available at: <placeholder>
 
 ## Change log
+
+### Version 0.3
+- Rule now conforms to HTML 5.1 spec: `headers` can only reference a `th`.
 
 ### Version 0.2
 - Refactored into an automatic rule (this one) and a semi-automatic rule, [tables headers id correct](auto-wcag:SC1-3-1-tables-headers-id-correct).

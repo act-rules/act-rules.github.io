@@ -79,3 +79,9 @@ There are currently no tests
 ### Version 1.1
 
 - Edit to fit revised format for rules
+
+
+### Version 1.2
+
+- Removed Punctuation Connectors from the Non-empty definition.
+

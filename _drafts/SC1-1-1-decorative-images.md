@@ -20,7 +20,8 @@ This rule checks if images that are marked as decorative do not require a text a
 
 ## Assumptions
 
-- The `contenteditable` attribute is not used in such a way that it impacts which element is, and which is not interactive.
+- The `contenteditable` attribute is not used in such a way that it impacts which element is or is not interactive.
+- The rule assumes that the role attribute has a valid value, and that the value is not overwritten.
 
 ## Background
 
@@ -31,14 +32,11 @@ This rule checks if images that are marked as decorative do not require a text a
 
 ### Selector
 
-Select all elements that matches the following CSS selector:
+Select any `img` element that has no text as it's accessible name, following the [Text Alternative Computation](https://www.w3.org/TR/accname-aam-1.1/#mapping_additional_nd_te).
 
-    img[alt=""]:not([title]),
-    img[alt=""][title=""],
-    img[role="presentation"],
-    img[role="none"]
+**Exclude** the image if it is the only [content](../pages/algorithms/content.html) of an [Interactive element](../pages/algorithms/interactive.html) that gets its [name from contents](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent) (ignoring such elements as `select`, `textarea` and `input`, as well as roles such as `textbox` and `scrollbar`).
 
-**Exclude** the image if it is the only [content](../pages/algorithms/content.html) of an [Interactive element](../pages/algorithms/interactive.html) (ignoring `select`, `textarea` and `input` as those would be invalid).
+Note: The text alternative of an img element is empty if it does not have text in the `alt`, `title` or `aria-label` attribute, and if `aria-labelledby` isn't used. If the role is set to `none` or `presentation` the element is also considered decorative.
 
 ### Step 1
 

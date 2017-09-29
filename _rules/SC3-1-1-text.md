@@ -68,9 +68,9 @@ If the user in not available, return [step2-cannottell](#step2-cannottell)
 | highlight    | 
 | question     | Is L1 the primary language of this page?
 | help         | "Primary language" means the language of the majority of the text on the page or the language of the interface (navigation menu etc.) of the page.
-| user_profile | 
-| context      | 
-| interaction  | 
+| user_profile | Understand the primary language 
+| context      | yes
+| interaction  | no
 
 *Note that language code L1 should be presented in human readable form, e.g. using the description from the [language subtag registry](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).*
 

@@ -62,6 +62,8 @@ Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run 
 
 **User Input Question:**
 
+If the user in not available, return [step3-cannottell](#step3-cannottell)
+
 | Property     | Value
 |--------------|---------
 | highlight    | Element with T1 and T2
@@ -103,6 +105,14 @@ The resulting assertion is as follows,
 | type        | TestResult
 | outcome     | Failed
 | description | None of the elements referenced by aria-describedby exists.
+
+### step3-cannottell
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | Cannot tell
+| description | It is not possible to determine if the long description provided using aria-describedby is sufficiently descriptive.
 
 ### step3-pass
 

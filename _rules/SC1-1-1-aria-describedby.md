@@ -60,9 +60,9 @@ else, return [step2-fail](#step2-fail)
 
 Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run on the element itself and assign it to variable T1 and on all elements referenced by the `aria-describedby` attribute and assign it to variable T2.
 
-**User Input Question:**
-
 If the user in not available, return [step3-cannottell](#step3-cannottell)
+
+**User Input Question:**
 
 | Property     | Value
 |--------------|---------

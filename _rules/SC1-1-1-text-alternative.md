@@ -103,7 +103,7 @@ Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run 
 
 All items of the group should be removed from the set of selector-matches after this step.
 
-If the user in not available, return [step6-cannottell](#step6-cannottell)
+If the user in not available, return [step6-undetermined](#step6-undetermined)
 
 **User Input Question:**
 
@@ -127,7 +127,7 @@ Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run 
 
 All items of the group should be removed from the set of selector-matches after this step.
 
-If the user in not available, return [step7-cannottell](#step7-cannottell)
+If the user in not available, return [step7-undetermined](#step7-undetermined)
 
 **User Input Question:**
 
@@ -189,7 +189,7 @@ else Continue with [Step 12: ask if decorative (no text alternative)](#step-12-a
 
 ### Step 12: ask if decorative (no text alternative)
 
-If the user in not available, return [step12-cannottell](#step12-cannottell)
+If the user in not available, return [step12-undetermined](#step12-undetermined)
 
 **User Input Question:**
 
@@ -271,7 +271,7 @@ else continue with [[#Step 18: ask if sufficiently described by adjacent text]]
 
 ### Step 18: ask if sufficiently described by adjacent text
 
-If the user in not available, return [step18-cannottell](#step18-cannottell)
+If the user in not available, return [step18-undetermined](#step18-undetermined)
 
 **User Input Question:**
 
@@ -314,12 +314,12 @@ The resulting assertion is as follows,
 | outcome     | Failed
 | description | The element must provide one of the following attributes: `alt` , `aria-label`, `title` or a `aria-labelledby`.
 
-### step6-cannottell
+### step6-undetermined
 
 | Property    | Value
 |-------------|----------
 | type        | TestResult
-| outcome     | Cannot tell
+| outcome     | Undetermined
 | description | It is not possible to determine if the textual alternative is sufficiently descriptive.
 
 ### step6-pass
@@ -339,12 +339,12 @@ The resulting assertion is as follows,
 | description | Textual alternative T1 does not sufficiently describe the group of images.
 | info        | Suggestions for textual alternative: {collection of repair-answers}
 
-### step7-cannottell
+### step7-undetermined
 
 | Property    | Value
 |-------------|----------
 | type        | TestResult
-| outcome     | Cannot tell
+| outcome     | Undetermined
 | description | It is not possible to determine if the textual alternative is sufficiently descriptive.
 
 ### step7-pass
@@ -388,12 +388,12 @@ The resulting assertion is as follows,
 | outcome     | Passed
 | description |
 
-### step12-cannottell
+### step12-undetermined
 
 | Property    | Value
 |-------------|----------
 | type        | TestResult
-| outcome     | Cannot tell
+| outcome     | Undetermined
 | description | It is not possible to determine if this element is solely for decorative purposes.
 
 ### step12-pass
@@ -447,12 +447,12 @@ The resulting assertion is as follows,
 | outcome     | Passed
 | description |
 
-### step18-cannottell
+### step18-undetermined
 
 | Property    | Value
 |-------------|----------
 | type        | TestResult
-| outcome     | Cannot tell
+| outcome     | Undetermined
 | description | It is not possible to determine if the element is sufficiently described by adjacent text.
 
 ### step18-pass

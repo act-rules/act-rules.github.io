@@ -59,7 +59,7 @@ Else continue with [Step 2](#step-2).
 
 Present the page to the user.
 
-If the user in not available, return [step2-cannottell](#step2-cannottell)
+If the user in not available, return [step2-undetermined](#step2-undetermined)
 
 **User Input Question:**
 
@@ -98,12 +98,12 @@ The resulting assertion is as follows,
 | outcome     | Passed
 | description |
 
-### step2-cannottell
+### step2-undetermined
 
 | Property    | Value
 |-------------|----------
 | type        | TestResult
-| outcome     | Cannot tell
+| outcome     | Undetermined
 | description | It is not possible to determine if the primary language of the page is specified correctly.
 
 ### step2-pass

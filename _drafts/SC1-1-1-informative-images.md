@@ -54,7 +54,7 @@ Give the user the following question:
 |----------------------|---------
 | Presented item       | Current element
 | Question             | Does the textual alternative "*<< text alternative >>*" sufficiently describe the element?
-| Help                 | If the element contributes meaning to the page or provides any functionality or conveys information additional to the pages text, this must be described. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
+| Help                 | If the element contributes meaning to the page or provides any functionality or conveys information complementary to the content of the page, this must be described. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
 | Repair               | If no, could you suggest a sufficient textual alternative?
 | Requires context     | yes
 | Requires Interaction | yes

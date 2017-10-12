@@ -1,5 +1,5 @@
 ---
-title: Content (element type)
+title: Interactive element
 ---
 
 1. An element is interactive if tabindex is not turned off on a standard interactive HMTL element. These will match the following selector:
@@ -10,7 +10,7 @@ AND also match:
 
     *:not([tabindex=-1]):not([role])
 
-2. An element is interactive if it has an ARIA role that inherits from the abstract `widget` role, and if it matches the following selector:
+2. An element is interactive if it has an ARIA role that inherits from the abstract `widget` role and matches the following selector:
 
     *[tabindex][:not([tabindex=-1])
 

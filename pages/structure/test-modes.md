@@ -24,4 +24,4 @@ Where the test was partially carried out by software tools, but where human inpu
 ## Manual
 *As defined in EARL*
 
-Where the test was carried out automatically by the software tool and without any human intervention.
+When a test involves user input to come to a pass or fail conclusion, the rule is considered to be manual.

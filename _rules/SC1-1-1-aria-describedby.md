@@ -60,7 +60,7 @@ else, return [step2-fail](#step2-fail)
 
 Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run on the element itself and assign it to variable T1 and on all elements referenced by the `aria-describedby` attribute and assign it to variable T2.
 
-If the user in not available, return [step3-undetermined](#step3-undetermined)
+If the user is not available, return [step3-cannottell](#step3-cannottell)
 
 **User Input Question:**
 
@@ -69,7 +69,7 @@ If the user in not available, return [step3-undetermined](#step3-undetermined)
 | highlight    | Element with T1 and T2
 | question     | Does T2 provide an extended description of the image additionally to T1?
 | help         | If the image contributes meaning to the page or provide any functionality or conveys information additional to the pages text, this must be described.
-| repair       | If no, could you suggest an long text alternative, which would sufficiently describe the image?
+| repair       | If no, could you suggest a long text alternative, which would sufficiently describe the image?
 | user_profile | Requires sight
 | context      | yes
 | interaction  | yes
@@ -106,12 +106,12 @@ The resulting assertion is as follows,
 | outcome     | Failed
 | description | None of the elements referenced by aria-describedby exists.
 
-### step3-undetermined
+### step3-cannottell
 
 | Property    | Value
 |-------------|----------
 | type        | TestResult
-| outcome     | Undetermined
+| outcome     | CannotTell
 | description | It is not possible to determine if the long description provided using aria-describedby is sufficiently descriptive.
 
 ### step3-pass

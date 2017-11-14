@@ -55,7 +55,7 @@ Else return [step1-fail](#step1-fail)
 
 Present the selected text to the user.
 
-If the user in not available, return [step2-undetermined](#step2-undetermined)
+If the user is not available, return [step2-cannottell](#step2-cannottell)
 
 **User Input Question:**
 
@@ -102,12 +102,12 @@ The resulting assertion is as follows,
 | outcome     | Failed
 | description | The language of the text is not specified correctly.
 
-### step2-undetermined
+### step2-cannottell
 
 | Property    | Value
 |-------------|----------
 | type        | TestResult
-| outcome     | Undetermined
+| outcome     | CannotTell
 | description | It is not possible to determine if the language of the text is specified correctly.
 
 ### step2-pass

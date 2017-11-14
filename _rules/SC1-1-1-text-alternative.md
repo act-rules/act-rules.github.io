@@ -259,7 +259,7 @@ else return [step16-fail](#step16-fail)
 |--------------|---------
 | highlight    | Current element
 | question     | Does the textual alternative T1 sufficiently describe the element?
-| help         | If the element contributes meaning to the page or provides any functionality or conveys information additional to the pages text, this must be described. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
+| help         | If the element contributes meaning to the page or provides any functionality or conveys information complementary to the content of the page, this must be described. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
 | user_profile | Requires sight
 | repair       | If no, could you suggest a sufficient textual alternative?
 | context      | yes

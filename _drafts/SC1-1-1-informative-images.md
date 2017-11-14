@@ -20,7 +20,9 @@ This rule checks that images are given a description, and that the description g
 
 ## Background
 
--
+- https://www.w3.org/WAI/tutorials/images/informative/
+- https://www.w3.org/TR/WCAG20-TECHS/H37.html
+- https://www.w3.org/TR/WCAG20-TECHS/G94.html
 
 ## Assumptions
 
@@ -30,14 +32,11 @@ This rule checks that images are given a description, and that the description g
 
 ### Selector
 
-Select all elements that matches the following CSS selector:
+Select any `img` element that has text as it's accessible name, following the [Text Alternative Computation](https://www.w3.org/TR/accname-aam-1.1/#mapping_additional_nd_te).
 
-    img:not([alt=""]):not([title]),
-    img[title=""]:not([alt=""]),
-    img:not([role="presentation"]),
-    img:not([role="none"])
+**Exclude** the image if it is the only [content](../pages/algorithms/content.html) of an [Interactive element](../pages/algorithms/interactive.html) that gets its [name from contents](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent) (ignoring such elements as `select`, `textarea` and `input`, as well as roles such as `textbox` and `scrollbar`).
 
-**Exclude** the image if it is the only [content](../pages/algorithms/content.html) of an [Interactive element](../pages/algorithms/interactive.html) (ignoring `select`, `textarea` and `input` as those would be invalid).
+Note: The text alternative of an img element is empty if it does not have text in the `alt`, `title` or `aria-label` attribute, and if `aria-labelledby` isn't used. If the role is set to `none` or `presentation` the element is also considered decorative.
 
 ### Step 1
 
@@ -55,7 +54,7 @@ Give the user the following question:
 |----------------------|---------
 | Presented item       | Current element
 | Question             | Does the textual alternative "*<< text alternative >>*" sufficiently describe the element?
-| Help                 | If the element contributes meaning to the page or provides any functionality or conveys information additional to the pages text, this must be described. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
+| Help                 | If the element contributes meaning to the page or provides any functionality or conveys information complementary to the content of the page, this must be described. Please refer to the [explanations concerning sufficient short text alternatives](https://www.w3.org/community/auto-wcag/wiki/Sufficient_short_text_description) for further information.
 | Repair               | If no, could you suggest a sufficient textual alternative?
 | Requires context     | yes
 | Requires Interaction | yes

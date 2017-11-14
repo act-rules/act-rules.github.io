@@ -68,8 +68,8 @@ If the user is not available, return [step3-cannottell](#step3-cannottell)
 |--------------|---------
 | highlight    | Element with T1 and T2
 | question     | Does T2 provide an extended description of the image additionally to T1?
-| help         | If the image contributes meaning to the page or provide any functionality or conveys information additional to the pages text, this must be described.
-| repair       | If no, could you suggest a long text alternative, which would sufficiently describe the image?
+| help         | If the image contributes meaning to the page or provide any functionality or conveys information complementary to the content of the page, this must be described.
+| repair       | If no, could you suggest an long text alternative, which would sufficiently describe the image?
 | user_profile | Requires sight
 | context      | yes
 | interaction  | yes

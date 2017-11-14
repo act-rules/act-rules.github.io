@@ -76,7 +76,7 @@ Else, return [step4-pass](#step4-pass)
 
 Check if the video plays audio.
 
-If the user in not available, return [step5-undetermined](#step5-undetermined)
+If the user is not available, return [step5-cannottell](#step5-cannottell)
 
 **User Input Question:**
 
@@ -97,7 +97,7 @@ Else, return [step5-pass](#step5-pass)
 
 Check if a mechanism to control the sound is provided as one of the first five links or buttons on the web page.
 
-If the user in not available, return [step6-undetermined](#step6-undetermined)
+If the user is not available, return [step6-cannottell](#step6-cannottell)
 
 **User Input Question:**
 
@@ -150,12 +150,12 @@ The resulting assertion is as follows,
 | outcome     | Passed
 | description |
 
-### step5-undetermined
+### step5-cannottell
 
 | Property    | Value
 |-------------|----------
 | type        | TestResult
-| outcome     | Undetermined
+| outcome     | CannotTell
 | description | It is not possible to determine if there is audio playing on the web page.
 
 ### step5-pass
@@ -166,12 +166,12 @@ The resulting assertion is as follows,
 | outcome     | Passed
 | description |
 
-### step6-undetermined
+### step6-cannottell
 
 | Property    | Value
 |-------------|----------
 | type        | TestResult
-| outcome     | Undetermined
+| outcome     | CannotTell
 | description | It is not possible to determine if the web page provides a mechanism to control the sound as one of the first five links or buttons.
 
 ### step6-pass

@@ -61,6 +61,8 @@ Check if the element is really used for solely decorative purposes.
 
 To prepare the element for presentation to the user, all calculated CSS properties of the element must be stored and its child elements must be removed.
 
+If the user is not available, return [step3-cannottell](#step3-cannottell)
+
 **User Input Question:**
 
 | Property     | Value
@@ -81,6 +83,8 @@ Get the current elements nearest ancestor with its display style set to block.
 Get any text from this ancestor, including shadow dom text and assign it to variable T1.
 
 To prepare the element for presentation to the user, all calculated CSS properties of the element must be stored and its child elements must be removed.
+
+If the user in not available, return [step4-cannottell](#step4-cannottell)
 
 **User Input Question:**
 
@@ -126,6 +130,14 @@ The resulting assertion is as follows,
 | outcome     | Passed
 | description |
 
+### step3-cannottell
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | CannotTell
+| description | It is not possible to determine if the image is solely for decorative purposes
+
 ### step3-pass
 
 | Property    | Value
@@ -133,6 +145,14 @@ The resulting assertion is as follows,
 | type        | TestResult
 | outcome     | Passed
 | description |
+
+### step4-cannottell
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | CannotTell
+| description | It is not possible to determine if a suitable description is provided in text nearby
 
 ### step4-pass
 

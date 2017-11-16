@@ -60,6 +60,8 @@ else, return [step2-fail](#step2-fail)
 
 Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run on the element itself and assign it to variable T1 and on all elements referenced by the `aria-describedby` attribute and assign it to variable T2.
 
+If the user is not available, return [step3-cannottell](#step3-cannottell)
+
 **User Input Question:**
 
 | Property     | Value
@@ -103,6 +105,14 @@ The resulting assertion is as follows,
 | type        | TestResult
 | outcome     | Failed
 | description | None of the elements referenced by aria-describedby exists.
+
+### step3-cannottell
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | CannotTell
+| description | It is not possible to determine if the long description provided using aria-describedby is sufficiently descriptive.
 
 ### step3-pass
 

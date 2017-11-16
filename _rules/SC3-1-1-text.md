@@ -59,11 +59,20 @@ Else continue with [Step 2](#step-2).
 
 Present the page to the user.
 
-Question: Is L1 the primary language of this page?
+If the user is not available, return [step2-cannottell](#step2-cannottell)
+
+**User Input Question:**
+
+| Property     | Value
+|--------------|---------
+| highlight    | 
+| question     | Is L1 the primary language of this page?
+| help         | "Primary language" means the language of the majority of the text on the page or the language of the interface (navigation menu etc.) of the page.
+| user_profile | Understand the primary language 
+| context      | yes
+| interaction  | no
 
 *Note that language code L1 should be presented in human readable form, e.g. using the description from the [language subtag registry](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).*
-
-Help text: "Primary language" means the language of the majority of the text on the page or the language of the interface (navigation menu etc.) of the page.
 
 If yes, return [step2-pass](#step2-pass)
 
@@ -88,6 +97,14 @@ The resulting assertion is as follows,
 | type        | TestResult
 | outcome     | Passed
 | description |
+
+### step2-cannottell
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | CannotTell
+| description | It is not possible to determine if the primary language of the page is specified correctly.
 
 ### step2-pass
 

@@ -55,11 +55,20 @@ Else return [step1-fail](#step1-fail)
 
 Present the selected text to the user.
 
-Question: Is L1 the *only* language used in this text?
+If the user is not available, return [step2-cannottell](#step2-cannottell)
+
+**User Input Question:**
+
+| Property     | Value
+|--------------|---------
+| highlight    | 
+| question     | Is L1 the *only* language used in this text?
+| help         | If the text contains a phrase or sentence in another language, please answer "no". If there are only single words in another language and the rest of the text is in L1, please answer "yes".
+| user_profile | Understand the languages used in the text.
+| context      | yes
+| interaction  | no
 
 *Note that language codes should be presented in human readable form, e.g. using the description from the [language subtag registry](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).*
-
-Help text: If the text contains a phrase or sentence in another language, please answer "no". If there are only single words in another language and the rest of the text is in L1, please answer "yes".
 
 If yes, return [step2-pass](#step2-pass)
 
@@ -92,6 +101,14 @@ The resulting assertion is as follows,
 | type        | TestResult
 | outcome     | Failed
 | description | The language of the text is not specified correctly.
+
+### step2-cannottell
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | CannotTell
+| description | It is not possible to determine if the language of the text is specified correctly.
 
 ### step2-pass
 

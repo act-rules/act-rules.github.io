@@ -1,0 +1,27 @@
+---
+layout: null
+---
+{
+  "name": "auto-wcag",
+  "license": "https://www.w3.org/community/about/agreements/cla/",
+  "a11y-selectors": {
+    "passedSelector": "*[data-outcome=\"passed\"]",
+    "failedSelector": "*[data-outcome=\"failed\"]",
+    "inapplicableSelector": "*[data-outcome=\"inapplicable\"]"
+  },
+  "a11y-testcases": [{% for testcase in site.rule-tests %}
+    {
+      "url": "https://auto-wcag.github.io/auto-wcag/rule-tests/{{
+        testcase.rule_id
+      }}.html",
+      "rule": "auto-wcag:{{ testcase.rule_id }}",
+      "successCriteria": [{%
+        for criterion in testcase.success_criterion
+          %}"{{ site.data.criteria[criterion].id }}"{%
+        unless forloop.last 
+          %}, {%
+        endunless
+      %}{% endfor %}]
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}]
+}

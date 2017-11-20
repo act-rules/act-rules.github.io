@@ -56,6 +56,8 @@ else, return [step2-fail](#step2-fail)
 
 Concatenate the results of [Text Alternative Computation][TXTALT] Algorithm run on the element and assign it to variable T1.
 
+If the user is not available, return [step3-cannottell](#step3-cannottell)
+
 **User Input Question:**
 
 | Property     | Value
@@ -100,6 +102,14 @@ The resulting assertion is as follows,
 | outcome     | Failed
 | description | LONGDESC reference does not exist
 | info        | The URL given as LONGDESC value was not retrievable.
+
+### step3-cannottell
+
+| Property    | Value
+|-------------|----------
+| type        | TestResult
+| outcome     | CannotTell
+| description | It is not possible to determine if the long description provided is sufficiently descriptive.
 
 ###  step3-pass
 

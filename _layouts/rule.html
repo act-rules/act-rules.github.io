@@ -1,7 +1,10 @@
 ---
 layout: default
-title: {{ page.rule_id }}
 ---
+
+{% if page.draft %}
+  <p class="draft-note"><strong>Please note, this is a draft</strong></p>
+{% endif %}
 
 {% if page.date %}
   <p>Late updated: <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>

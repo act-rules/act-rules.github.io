@@ -44,6 +44,8 @@ Test mode: [automatic][AUTO]
 
 Select each visible anchor element on the page which does not have a negative tabindex attribute set
 
+For each selected item, go through the following steps:
+
 ### Step 1: Outline visibility
 
 Test mode: [automatic][AUTO]

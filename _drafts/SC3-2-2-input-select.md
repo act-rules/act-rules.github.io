@@ -42,6 +42,8 @@ Test mode: [automatic][AUTO]
 
 Select `input[@type='radio']`, `input[@type='checkbox']`, or select not contained in a form element.
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 Test mode: [automatic][AUTO]

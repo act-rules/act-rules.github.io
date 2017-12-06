@@ -39,6 +39,8 @@ Select all elements that has one or more of the following properties, containing
 
 *Note that the computed style has to be analyzed. Depending on the rendering technology these can be retrieved by using `runtimeStyle`, `currentStyle` or `getComputedStyle`.*
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 Check if the computed `backgroundRepeat` property is set and its value is other than no-repeat.

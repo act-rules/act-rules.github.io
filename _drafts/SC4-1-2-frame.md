@@ -40,6 +40,8 @@ Test mode: [automatic][AUTO]
 
 Select any frame or iframe element.
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 Test mode: [automatic][AUTO]

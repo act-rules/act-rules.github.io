@@ -45,6 +45,8 @@ Select elements matching the following CSS selector:
 
 	a[href]:not([role]), *[role=link]
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 Test mode: [automatic][AUTO]

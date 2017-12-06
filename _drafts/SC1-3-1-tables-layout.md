@@ -62,6 +62,8 @@ In addition, select tables with all of the following characteristics (see condit
 - No `caption` tag
 - No (or empty) summary attribute
 
+For each selected item, go through the following steps:
+
 ### Step 1 - Check if actual data tables have wrongly been marked as presentational using ARIA
 
 Test mode: [automatic][AUTO]

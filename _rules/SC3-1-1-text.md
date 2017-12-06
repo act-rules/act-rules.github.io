@@ -43,6 +43,8 @@ Select all elements that matches the following CSS selector:
 
     *[lang]
 
+For each selected item, go through the following steps:
+
 Use the value of the lang attribute as L1
 
 ### Step 1

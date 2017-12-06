@@ -31,6 +31,8 @@ This test checks accesskey attribute for all elements to have a unique value.
 
 Select any element with an accesskey attribute. The following CSS selector could be used: *[accesskey]
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 - IF there is no list called 'knownAccesskeys':

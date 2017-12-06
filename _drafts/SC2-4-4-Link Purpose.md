@@ -49,6 +49,8 @@ Test mode: [automatic][AUTO]
 - All anchor tags with an `href` attribute on a webpage, excluding anchor tags that have been mapped to other elements using ARIA roles.
 - All elements with a `role="link"` attribute.
 
+For each selected item, go through the following steps:
+
 ### Step 1 - Check for Accessible Name
 
 Test mode: [automatic][AUTO]

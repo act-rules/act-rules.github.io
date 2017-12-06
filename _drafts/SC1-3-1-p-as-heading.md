@@ -39,6 +39,8 @@ Select each `p` element that meets the following:
 - It does not contain a text paragraph (see definition)
 - It does not have a role attribute
 
+For each selected item, go through the following steps:
+
 ### Step 1: Differing style
 
 Test mode: [automatic][]

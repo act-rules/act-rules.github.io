@@ -38,6 +38,8 @@ For each un-marked table, select all elements that match the following CSS selec
     table:not([role=none]) th[headers],
     table:not([role=none]) td[headers]
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 Mark table completed.

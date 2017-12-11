@@ -14,7 +14,7 @@ success_criterion:
 
 <h2>inapplicable</h2>
 
-<div data-outcome="incomplee">
+<div data-outcome="incomplete">
     <!-- HTML code here -->
 </div>
 
@@ -35,6 +35,8 @@ success_criterion:
   data-outcome-id="step1-fail">
     <!-- HTML code here -->
 </div>
+
+<!-- more test cases -->
 
 <h2>step#-pass/fail</h2>
 

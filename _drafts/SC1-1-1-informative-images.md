@@ -63,6 +63,10 @@ if yes, return [step2-pass](#step2-pass)
 
 else, return [step2-fail](#step2-fail)
 
+# Step 3
+
+Do more things!
+
 ## Outcome
 
 The resulting assertion is as follows,

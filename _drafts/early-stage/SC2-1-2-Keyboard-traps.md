@@ -17,8 +17,8 @@ This test checks that it is possible to navigate by keyboard through all content
 ## Background
 
 - [H57: Using language attributes on the html element](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H57)
-- [eGovMon test for H57](http://wiki.egovmon.no/wiki/SC3.1.1#Element_html)
-- [BCP 47: Tags for the Identification of Languages](http://www.rfc-editor.org/rfc/bcp/bcp47.txt)
+- [G21: Ensuring that users are not trapped in content](https://www.w3.org/TR/WCAG20-TECHS/G21.html)
+- [F10: Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining multiple content formats in a way that traps users inside one format type](https://www.w3.org/TR/WCAG20-TECHS/F10.html)
 
 ## Assumptions
 

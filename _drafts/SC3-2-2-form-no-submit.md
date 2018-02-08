@@ -42,6 +42,8 @@ Test mode: [automatic][AUTO]
 
 Select `form` element without submit button (`input[@type='submit'] or input[@type='image'] or button[@type='submit']`).
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 Test mode: [automatic][AUTO]

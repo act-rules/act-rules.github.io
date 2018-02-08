@@ -30,7 +30,9 @@ Assumes a full page has loaded to enable comparison.
 
 ### Selector
 
-Select all elements that match the following CSS selector: *[id]
+Select all elements that match the following CSS selector: `*[id]`
+
+For each selected item, go through the following steps:
 
 ### Step 1
 

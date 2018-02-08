@@ -34,6 +34,8 @@ Select all elements that match the following CSS selector:
 
     meta[http-equiv="refresh"][content]
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 Take the value of the content attribute of the selected element.

@@ -63,6 +63,7 @@ Select elements that match the following XPath or Javascript selector:
 * //\*[text()]
 * node.nodeType = 3;
 
+For each selected item, go through the following steps:
 
 ### Step 1
 

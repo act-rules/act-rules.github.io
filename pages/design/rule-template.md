@@ -45,6 +45,8 @@ Select all elements that <has / matches> the following < CSS selector / XPATH se
 
     * > selector[type=css]
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 Check if at least one of the elements referenced by the valid `aria-describedby` attribute values exists.

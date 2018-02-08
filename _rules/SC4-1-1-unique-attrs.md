@@ -15,6 +15,8 @@ author:
 
 This test checks that attributes of an element are unique.
 
+For each selected item, go through the following steps:
+
 ## Background
 
 - [eGovMon H94-1](http://wiki.egovmon.no/wiki/SC4.1.1#ID:_H94-1)

@@ -31,6 +31,8 @@ Select all elements that <has / matches> the following < CSS selector / XPATH se
 
     <selector>
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 Check if

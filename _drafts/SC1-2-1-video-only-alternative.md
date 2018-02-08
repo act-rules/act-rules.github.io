@@ -48,6 +48,8 @@ Test mode: [automatic][AUTO]
 
 `video` element not containing a `track` attribute
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 Test mode: [manual][MANUAL]

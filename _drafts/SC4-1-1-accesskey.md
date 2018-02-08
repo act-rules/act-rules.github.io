@@ -30,7 +30,9 @@ This test checks accesskey attribute for all elements to have a unique value.
 
 ### Selector
 
-Select all elements that match the following CSS selector: *[accesskey]
+Select all elements that match the following CSS selector: `*[accesskey]`
+
+For each selected item, go through the following steps:
 
 ### Step 1
 

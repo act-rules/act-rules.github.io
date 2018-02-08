@@ -38,6 +38,8 @@ Select any `img` element that has no text as it's accessible name, following the
 
 Note: The text alternative of an img element is empty if it does not have text in the `alt`, `title` or `aria-label` attribute, and if `aria-labelledby` isn't used. If the role is set to `none` or `presentation` the element is also considered decorative.
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 Give the user the following question:

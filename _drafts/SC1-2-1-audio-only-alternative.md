@@ -52,6 +52,8 @@ Those can be identified by including
 - elements having resources with a mimetype containing the string "audio" in their http-header
 - elements having an attribute value containing a media file format, such as .wav, .aif, .aiff, .mp3, .ogg, .oga, .mov, .mid, .rm, .ra, .ram, .wma, .asf, .swf, .dcr, .avi, .mpg, .mpeg, .mp4, .m4v, .webm, .flv, .isma   (`//*[contains(@*,'.mid') or contains(@*,'.mp3') or ... ]`)
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 Test mode: [manual][MANUAL]

@@ -42,6 +42,8 @@ Test mode: [automatic][AUTO]
 
 `table` Elements that have both a `summary` attribute and a `caption` element.
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 Test mode: [automatic][AUTO]

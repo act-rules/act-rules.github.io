@@ -46,6 +46,8 @@ This rule checks that links that are embedded in a block of text can be distingu
 
     - [non-empty][NEMPTY] [rendered text][RNDTXT] that is NOT contained in any link, and which does not exclusively consist of [separator characters][separator-characters]
 
+For each selected item, go through the following steps:
+
 ### Step 1: Initial state
 
 Check that the link (or another element that contains all that link's content) has a distinguishing [style][DSSTYL], a [distinguishing border][DSBRDR], or a `background-image`.

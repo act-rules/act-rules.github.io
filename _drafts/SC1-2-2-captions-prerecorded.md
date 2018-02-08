@@ -49,6 +49,8 @@ Those can be identified by including elements having an attribute value containi
 
     XPath: //*[contains(@*,'.mov') or contains(@*,'.rm') or ... ]
 
+For each selected item, go through the following steps:
+
 ### Step 1
 Test method: [manual]
 

@@ -37,6 +37,8 @@ Select all elements that match the following CSS selector:
 - `input:not([tabindex=-1]):not([type=hidden])`,
 - `*[tabindex]:not([tabindex=-1])`
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 Give focus to the selected element.

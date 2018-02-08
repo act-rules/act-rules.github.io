@@ -48,6 +48,8 @@ Select all elements that match the following XPATH selector(s):
 - `self::input[@type="image"]` or
 - `self::area or self::embed or self::object]`
 
+For each selected item, go through the following steps:
+
 ### Step 1: check element type (F65)
 
 Check if the element is of type `<img>`,`<area>` or `input[type=”image”]`

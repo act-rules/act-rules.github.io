@@ -31,6 +31,8 @@ This test checks that tags of an HTML or XHTML document are nested correctly. So
 
 Select all opening and closing tags in the HTML document
 
+For each selected item, go through the following steps:
+
 ### Step 1: Verify opening tag attributes=
 
 - IF the tag is a closing tag:

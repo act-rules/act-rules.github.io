@@ -31,6 +31,8 @@ This test checks that attributes of an element are unique.
 
 Select all opening tags in the HTML code.
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 Make a list of all the attribute names on the tag. Do any of the attributes occur more than once in the list?

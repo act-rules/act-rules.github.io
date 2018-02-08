@@ -40,6 +40,8 @@ Select all elements that match the following CSS selector:
     input[type="image"][aria-describedby],
     [role="image"][aria-describedby]
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 Check if at least one of the `aria-describedby` attribute values is a valid identifier.

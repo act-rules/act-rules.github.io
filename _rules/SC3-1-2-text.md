@@ -39,6 +39,8 @@ L1 = language of the selected text as determined by [HTML 4.01 Inheritance of la
 
 *Note*: This test is applied to natural language text. The test is not applicable to content of `script` elements, attribute values, and text contained in HTML comments.
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 Use a [language identification algorithm][LANGFND] to determine L2 = the language actually used in the selected text.

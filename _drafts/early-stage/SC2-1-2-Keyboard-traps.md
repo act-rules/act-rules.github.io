@@ -1,20 +1,18 @@
-
 ---
-rule_id: SC3-1-1-html
-name: Primary language of page
-test_mode: automatic
-environment: DOM Structure
+rule_id: SC2-1-2-Keyboard-traps
+name: There are no keyboard traps on the web page
+test_mode: manual
 
-success_criterion:
-- 3.1.1 # Language of Page (Level A)
+criteria:
+- 2.1.2 No keyboard traps
 
 authors:
-- Annika Nietzio
+- GSF / DRO
 ---
 
 ## Description
 
-This test checks that the primary language of the web content can be programmatically determined.
+This test checks that it is possible to navigate by keyboard through all content on the web page without being stuck in any elements on the page.
 
 ## Background
 

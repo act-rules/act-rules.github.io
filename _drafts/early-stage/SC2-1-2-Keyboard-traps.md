@@ -16,22 +16,23 @@ This test checks that it is possible to navigate by keyboard through all content
 
 ## Background
 
-- [H57: Using language attributes on the html element](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H57)
+- [Understanding SC 2.1.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-trapping.html)
 - [G21: Ensuring that users are not trapped in content](https://www.w3.org/TR/WCAG20-TECHS/G21.html)
 - [F10: Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining multiple content formats in a way that traps users inside one format type](https://www.w3.org/TR/WCAG20-TECHS/F10.html)
 
 ## Assumptions
 
-- The comparison of language codes does not look for exact matches. Technique H57 states: "Use of the primary code is important for this technique." which means that region subtags can be ignored in the comparison, i.e. "en-GB" is the same as "en".
-- This test checks the `lang` attribute of the `html` element. The xml:lang attribute is not taken into account because tests have shown, that xml:lang is ignored by screenreaders. (Both Jaws 15 with FF and IE and NVDA with FF go by lang attribute, xml:lang is ignored.) The `xml:lang` attribute is checked by a separate test: [SC3-1-1-xml-lang](SC3-1-1-xml-lang.html).
+
 
 ## Test procedure
 
 ### Selector
 
-Select the `html` element.
+
 
 ### Step 1
+
+Are there elements on the page that are possible to reach through keyboard navigation?
 
 If `lang` attribute exists:
 

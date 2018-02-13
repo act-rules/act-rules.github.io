@@ -11,7 +11,7 @@ Web accessibility testing is highly reliant on human judgment. Not only that, bu
 
 The objective of this community is to create and maintain rules to test WCAG, that can be used to test and monitor web accessibility in a scalable manner. These rules will be either automated, or semi-automated, in which tools assist non-expert users to evaluate web accessibility. The rules consist of small, atomic test steps that look if specific elements on a web page meet WCAG 2 success criteria.
 
-Each rule has a selector, looking for one ‘type’ of content on a web page. This piece of content is then run through a series of automatic or manual steps. For each element found in the selector, a rule will indicate if it passed of failed.
+Each rule has a certain applicability, targeting one ‘type’ of content on a web page. This piece of content is then tested against a series of automatic or manual expectations. For each applicable element a rule will indicate if it passed of failed.
 
 By comparing the test results with results from expert accessibility evaluators, we aim to track the accuracy of the tests we’ve developed. This allows us for an iterative improvement and adjustment of the tests as web development practices change and evolve.
 

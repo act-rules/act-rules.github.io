@@ -10,8 +10,14 @@ Use the [empty test template](rule-template-empty.md) to create new auto-wcag ru
 ---
 rule_id: SC#-#-#-something
 name: Short descriptive name
-test_mode: automatic / semi-automatic / manual
 environment: Markup Document / DOM Structure / Web Browser / WebDriver
+group: group-id # Optional
+
+test_aspects: # Remove what is not applicable
+- DOM Tree
+- CSS Styling
+- HTTP messages
+- Accessibility Tree
 
 success_criterion:
 - x.x.x # Criterion handle as a YAML comment + level
@@ -32,69 +38,28 @@ This rule checks ...
 - Links to test cases, test suites, unit tests, etc.
 - The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible auto-wcag refers to those. Another source for test cases is the W3C Before and After Demonstration.
 - Other references
-
+  
 ## Assumptions
 
 - Make a list
 
 ## Test procedure
 
-### Selector
+### Applicability
 
-Select all elements that <has / matches> the following < CSS selector / XPATH selector / features>:
+The rule applies to any (??) element ...
 
-    * > selector[type=css]
+### Expectation (1)
 
-For each selected item, go through the following steps:
+Each target element ...
 
-### Step 1
+### Expectation 2
 
-Check if at least one of the elements referenced by the valid `aria-describedby` attribute values exists.
+Each target element [that meets expectation 1, and] ...
 
-if yes, continue with [step 2](#step-2)
+## Accessibility Support
 
-else, return [step1-fail](#step1-fail)
-
-### Step 2
-
-Give the user the following question:
-
-| Property     | Value
-|--------------|---------
-| Highlight    | Element A1 and B2
-| Question     | Does T2 provide an extended description of the image additionally to T1?
-| Help         | If the image contributes meaning to the page or provide any functionality or conveys information complementary to the content of the page, this must be described.
-| User profile | Requires <sight / hearing / fine motor control / HTML Knowledge / Accessibility knowledge / ...>
-| context      | yes | Optional
-| Interaction  | yes | Optional
-
-## Outcome
-
-The resulting assertion is as follows,
-
-| Property | Value
-|----------|----------
-| type     | Assertion
-| test     | auto-wcag:rule-id
-| subject  | *the selected element*
-| mode     | automatic
-| result   | <One TestResult from below>
-
-### step1-fail1
-
-| Property    | Value
-|-------------|----------
-| type        | TestResult
-| outcome     | Failed
-| description | None of the elements referenced by aria-describedby exists.
-
-### step1-pass1
-
-| Property | Value
-|----------|----------
-| type     | TestResult
-| outcome  | Passed
-| ...      | ...
+Support for XXX is known to be limited in some assistive technologies. If any of those assistive technologies is part of the accessibility support baseline of a test, any applicable element must **fail** this rule.
 
 ## Implementation Tests
 

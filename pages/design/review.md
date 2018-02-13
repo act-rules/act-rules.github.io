@@ -12,7 +12,7 @@ When a proposal in step 1 is done, a pull request is created to update the rule 
 
 1. Editorial comments can be resolved immediately by updating the pull request. 
 
-2. For any comments that can't be resolved immediately, a new issue is created. Once the pull request is discussed during an Auto-WCAG call, the pull request is merged in. The team working on this rule continues working on the new issue that was created, going back to step 1.
+2. For comments that can't be resolved immediately, a new issue is created. Once the pull request is discussed during an Auto-WCAG call, the pull request is merged in. The team working on this rule continues working on the new issue that was created, going back to step 1.
 
 3. If no comments come in, the issue can be merged in after it has been discussed on an Auto-WCAG call. If the authors feel the rule is ready for publication, and they have merged the pull request into draft, they can open a new pull request, which must have "FINAL" in the pull request name, to move the rule from `_drafts` to `_rules`. This will publish the rule. The rule needs at least **3 approved votes** before it can be merged from people who weren't the editors. If new comments come in, the pull request must be closed without merging, and a new issue is created to work on the fix.
 

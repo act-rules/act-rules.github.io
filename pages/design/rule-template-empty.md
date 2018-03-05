@@ -1,5 +1,4 @@
 ---
-rule_id:
 name:
 group: # Optional
 description: |

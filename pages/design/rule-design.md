@@ -14,7 +14,7 @@ The Auto-WCAG rule design builds on WCAG 2.x and its supporting documents. To ac
 
 5. **[Applicability](#applicability)**: Identify which elements on a page (if any) are to be tested using the rule.
 
-6. **[Expectations](#expectations)**: Assert everything what must be true about the target elements, in order for them to pass the rule.
+6. **[Expectations](#expectations)**: Assert what must be true about the target elements, in order for them to pass the rule.
 
 ## Rule Properties
 
@@ -37,7 +37,7 @@ A test aspect is a part of a test subject that must be available in order to pro
 - CSS Styling: CSS applied to lay out and style the DOM Tree
 - Accessibility Tree: The tree that user agents expose to the accessibility API
 
-Other aspects may be necessary for testing. These can be added as well as long as they are sufficiently defined.
+Other aspects may be necessary for testing. These can be added as long as they are sufficiently defined.
 
 ### Authors
 
@@ -67,6 +67,6 @@ For more details, see [ACT Rules Format: Applicability](https://w3c.github.io/wc
 
 The applicability help the testers (or test tools) identify what has to be checked. Following that, the expectations are statements that must be true for the applicable elements to pass the rule. If any of the expectations is false, than the target element failed the rule. 
 
-Each expectation exposes a reason why an element may not meet a particular conformance requirement. The expectations can be "linked", in that one has to be met before a second can be tested. For example, a rule testing link names may have as its first expectation "Target element has an accessible name", and as a second expectation "Expectation 1 is true for the target element, and the accessible name is describes the function of the target element".
+Each expectation exposes a reason why an element may not meet a particular conformance requirement. The expectations can be "linked", in that one has to be met before a second can be tested. For example, a rule testing link names may have as its first expectation "Target element has an accessible name", and as a second expectation "Expectation 1 is true for the target element, and the accessible name describes the function of the target element".
 
 For more details, see [ACT Rules Format: Expectations](https://w3c.github.io/wcag-act/act-rules-format.html#expectations)

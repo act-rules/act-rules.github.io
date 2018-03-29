@@ -2,51 +2,134 @@
 # Tell Jekyll to parse this file
 ---
 
-table {
-  margin-bottom:1em;
-}
-tr {
-  border-bottom:solid 1px #DDD;
+
+/*!
+ * IE10 viewport hack for Surface/desktop Windows 8 bug
+ * Copyright 2014-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+/*
+ * See the Getting Started docs for more information:
+ * http://getbootstrap.com/getting-started/#support-ie10-width
+ */
+ @-ms-viewport     { width: device-width; }
+ @-o-viewport      { width: device-width; }
+ @viewport         { width: device-width; }
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
 }
 
-main {
-  a {
-    text-decoration: underline;
-  }
-  td, th {
-    padding: .2em 1em;
-    min-width:10em;
-  }
-  h2, h3 {
-    border-bottom:solid 1px #DDD;
-  }
-  .draft-note {
-    border:solid orange 2px;
-    border-radius: 3px;
-    background: #FFC;
-    color: #C00;
-    padding: .2em 1em;
-  }
+$brush-accent: #003349;
+$brush-white: #fff;
+$brush-black: #000;
+$brush-transparent: transparent;
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    color: $brush-accent;
+    font-family: 'Open Sans', sans-serif;
+
+    > p {
+        color: $brush-accent;
+    }
+    
+    > .navbar{
+        background-color: $brush-accent;
+        color: $brush-white;
+
+        &.navbar-default {
+            border-color: $brush-white;
+        }
+
+        .navbar-header{
+            .navbar-brand {
+                color: $brush-white;
+            }
+        }
+
+        .navbar-collapse {
+            >ul.nav {
+                >li {
+                    >a {
+                        color: $brush-white;
+                        &:hover {
+                            opacity: 0.9;
+                            color: $brush-white;
+                        }
+                    }
+                    &.dropdown {
+                        &.open {
+                            >a {
+                                color: $brush-white;
+                                background-color: lighten($brush-accent, 5%);
+                            }
+                        }
+
+                        
+                        >ul.dropdown-menu {
+                            border-radius: 0;
+                            background-color: $brush-accent;
+
+                            >li {
+                                >a {
+                                    color: $brush-white;
+                                    &:hover {
+                                        opacity: 0.9;
+                                        color: $brush-white;
+                                        background-color: lighten($brush-accent, 5%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    > .container {
+        padding: 60px 15px 0;
+        .text-muted {
+            margin: 20px 0;
+        }
+    }
+
+    code {
+        font-size: 80%;
+    }
+
 }
 
-#footer {
-  background: #333;
-  color: #DDD;
-  margin: 2em 0 0;
-  padding:.5em 0 2em;
 
-  h2 {
-    font-size:1.2em;
-  }
-  a {
-    color: #AAA;
-    text-decoration:none;
-  }
-  a[href] {
-    color: #FFF;
-    text-decoration:underline;
-  }
-  ul {
-    padding-left:1em;
-  }
-}
+// table {
+//   margin-bottom:1em;
+// }
+// tr {
+//   border-bottom:solid 1px #DDD;
+// }
+
+// main {
+//   a {
+//     text-decoration: underline;
+//   }
+//   td, th {
+//     padding: .2em 1em;
+//     min-width:10em;
+//   }
+//   h2, h3 {
+//     border-bottom:solid 1px #DDD;
+//   }
+//   .draft-note {
+//     border:solid orange 2px;
+//     border-radius: 3px;
+//     background: #FFC;
+//     color: #C00;
+//     padding: .2em 1em;
+//   }
+// }

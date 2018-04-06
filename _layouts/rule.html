@@ -2,8 +2,12 @@
 layout: default
 ---
 
+{% assign ruleId = page.url | remove: "/rules/" | remove: "/drafts/" | remove: ".html" %}
 {% if page.draft %}
+  {% assign status = "draft" %}
   <p class="draft-note"><strong>Please note, this is a draft</strong></p>
+{% else %}
+  {% assign status = "rule" %}
 {% endif %}
 
 {% if page.date %}
@@ -17,7 +21,7 @@ layout: default
       	site.data.contributors[author].name
     }}</a>{%
   	  else
-  	%}{{  author  }}{%
+  	%}{{ author }}{%
 	  endif
 	%}{%
 	  if forloop.last == false
@@ -26,4 +30,50 @@ layout: default
   %}{% endfor %}</p>
 {% endif %}
 
+{% if page.description %}
+  <h2 id="description">Description</h2>
+  <p>{{ page.description | markdownify }}</p>
+{% endif %}
+
+{% if page.success_criterion %}
+  <h2 id="requirements">Accessibility Requirements</h2>
+  <p>This conformance rule relates to:</p>
+  <ul>
+  {% for critId in page.success_criterion %}
+    {% assign criterion = site.data.criteria[critId] %}
+    <li>
+      <a href="https://www.w3.org/TR/WCAG20/#{{ criterion.id }}">
+        Success Criterion {{ criterion.num }} ({{ criterion.handle }})
+      </a>
+      <ul>
+        <li><a href="https://www.w3.org/WAI/WCAG20/quickref/#{{ criterion.id }}">
+          How to Meet {{ criterion.num }} ({{ criterion.handle }})
+        </a></li>
+        <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/{{ criterion.id }}.html">
+          Understanding Success Criterion {{ criterion.num }} ({{ criterion.handle }})
+        </a></li>
+      </ul>
+    </li>
+  {% endfor %}
+  </ul>
+{% endif %}
+
 {{ content }}
+
+{% if page.test_aspects %}
+  <h2 id="test-aspects">Test Aspects</h2>
+  Test aspects are defined as part of the <a href="https://w3c.github.io/wcag-act/act-rules-format.html#input-aspects-common">ACT Rules format 1.0</a>.
+  <ul>
+  {% for aspect in page.test_aspects %}
+    <li>{{ aspect | markdownify }}</li>
+  {% endfor %}
+  </ul>
+{% endif %}
+
+<h2 id="related-resources">Related Resources</h2>
+<ul>
+  <li><a href="../{{status}}-tests/{{ ruleId }}.test.html">Test cases</a></li>
+  <li><a href="https://github.com/auto-wcag/auto-wcag/issues?q=is%3Aopen+is%3Aissue+{{ ruleId }}">Known issues</a></li>
+  <li><a href="https://github.com/auto-wcag/auto-wcag/commits/master/_{{status}}s/{{ ruleId }}.md">Previous versions</a></li>
+  <li><a href="https://github.com/auto-wcag/auto-wcag/edit/master/_drafts/{{ ruleId }}.md">Propose an update</a></li>
+</ul>

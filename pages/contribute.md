@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Ccontribute to Auto-WCAG
+title: Contribute to Auto-WCAG
 ---
 
 Auto-WCAG is a group open to anyone interested in accessibility, accessibility testing or automated testing. We welcome contributions from anyone, either though Github issues and pull requests, or by contribution to our monthly teleconferences.

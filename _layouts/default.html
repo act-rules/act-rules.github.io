@@ -167,12 +167,29 @@
     <script src="{{ site.baseurl }}/assets/js/bootstrap.min.js"></script>
     <script>
       $(document).ready(function () {
-        var tables, i;
-        tables = document.getElementsByTagName('table');
-        for (i=0;i<tables.length;i++) {
-          tables[i].className = 'table table-striped table-hover';
-        }
+        // append class names to table
+        $('table').each(function() {
+          $(this).addClass('table table-striped table-hover');
+        });
+
+        $('div.language-html')
+            .each(function() {
+              var codeSnippet = $(this);
+              var iFrame = codeSnippet.next();
+              if(iFrame.prop('tagName').toLowerCase() === 'iframe') {
+
+                //wrap code snippet by figure
+                codeSnippet.wrap('<figure></figure>')
+                $('<figcaption>Code Snippet:</figcaption>').insertBefore(codeSnippet);
+
+                code.wrap("<div class='embed-wrapper'></div>")
+                iframe.appendTo(code.parent());
+              }
+            });
       });
     </script>
+
+   
+
   </body>
 </html>

@@ -98,6 +98,29 @@ body {
         .text-muted {
             margin: 20px 0;
         }
+
+        .embed-wrapper {
+            display: flex;
+            width: 100%;
+            margin-bottom: 5rem;
+
+            >div.language-html {
+                margin-right: 0.5rem;
+                margin-bottom: 0;
+                order: 1;
+                flex: 1;
+            }
+            >iframe {
+                margin-left: 0.5rem;
+                order: 1;
+                flex: 1;
+            }
+        }
+
+        >div.language-html {
+            margin-bottom: 5rem;
+        }
+        
     }
 
     code {

@@ -11,6 +11,7 @@ test_aspects:
 - DOM Tree # The tree that HTML is parsed into.
 
 authors:
+- Annika Nietzio
 - Jey Nandakumar
 ---
 

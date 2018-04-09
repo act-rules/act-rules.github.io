@@ -98,8 +98,7 @@ module Jekyll
       end
 
       def render_block(snippet, url)
-        outCode = Liquid::Template.parse('<figure> {{code}} </figure>')
-        out = Liquid::Template.parse('{{code}} <iframe src="{{url}}"></iframe>').render(
+        out = Liquid::Template.parse('{{code}} <div class="frame-container"> <header><span>Example Output:</span> <a target="_blank" href="{{url}}">Open in a new tab/ window</a> </header> <iframe src="{{url}}"></iframe> </div>').render(
           {
             'code' => snippet,
             'url' => url

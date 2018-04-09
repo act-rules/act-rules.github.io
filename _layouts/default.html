@@ -172,20 +172,18 @@
           $(this).addClass('table table-striped table-hover');
         });
 
+        // find every language-html and iframe next to eachother and flex them in 2 column layout
         $('div.language-html')
-            .each(function() {
-              var codeSnippet = $(this);
-              var iFrame = codeSnippet.next();
-              if(iFrame.prop('tagName').toLowerCase() === 'iframe') {
-
-                //wrap code snippet by figure
-                codeSnippet.wrap('<figure></figure>')
-                $('<figcaption>Code Snippet:</figcaption>').insertBefore(codeSnippet);
-
-                code.wrap("<div class='embed-wrapper'></div>")
-                iframe.appendTo(code.parent());
-              }
-            });
+        .each(function() {
+          var codeSnippet = $(this);
+          var frameContainer = codeSnippet.next();
+          if(frameContainer.attr('class') === 'frame-container') {
+            codeSnippet.wrap('<figure></figure>')
+            $('<figcaption>Code Snippet:</figcaption>').insertBefore(codeSnippet);
+            codeSnippet.parent().wrap("<div class='embed-wrapper'></div>")
+            frameContainer.appendTo(codeSnippet.parent().parent());
+          }
+        });
       });
     </script>
 

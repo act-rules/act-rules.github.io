@@ -19,9 +19,7 @@ success_criterion:
 
 <<EMBED_START>>
 ```html
-
-        <button>Test</button>
-      
+<button>Test</button>      
 ```
 <<EMBED_END>>
 

@@ -31,8 +31,3 @@ success_criterion:
   data-user-responses="[false]">
     <img alt="" id="target">
 </div>
-
-
-<script>
-  console.log('test')
-</script>

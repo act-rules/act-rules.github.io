@@ -14,7 +14,7 @@ title: Auto-WCAG Drafts
   <tr>
     <th><a href="{{ draft.url | prepend: site.baseurl }}">{{
       draft.name
-    }}<br>(<i>{{ draft.rule_id }}</i>)</a></th>
+    }}<br>(<i>{{ draft.url | remove: "/drafts/" | remove: ".html" }}</i>)</a></th>
     <td>{{ draft.test_mode }}</td>
     <td><ul>
       {% for criterion in draft.success_criterion %}

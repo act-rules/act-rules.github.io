@@ -19,6 +19,10 @@ success_criterion:
 <html xml:lang="fr" lang="fr">
 ```
 
+```html
+<html lang="fr" xml:lang="xyz">
+```
+
 ## Failed
 
 ```html
@@ -30,7 +34,7 @@ success_criterion:
 ```
 
 ```html
-<html lang="fr" xml:lang="xyz">
+<html xml:lang="xyz" lang="fr">
 ```
 
 ## Inapplicable

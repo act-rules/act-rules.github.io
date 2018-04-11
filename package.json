@@ -6,7 +6,7 @@
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
       "dev": "bundle exec jekyll serve",
-      "build": "bundle install && bundle exec jekyll build"
+      "build": "gem install bundler && bundle install && bundle exec jekyll build"
     },
     "repository": {
       "type": "git",

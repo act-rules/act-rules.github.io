@@ -10,15 +10,15 @@ module Jekyll
       priority :highest
 
       KEY_EMBEDS_DIR = '_draft-testcase-embeds/'
-      KEY_MATCH_EMBED_START = "<<EMBED_START>>"
-      KEY_MATCH_EMBED_END = "<<EMBED_END>>"
+      KEY_MATCH_EMBED_START = '<<EMBED_START>>'
+      KEY_MATCH_EMBED_END = '<<EMBED_END>>'
+      INCLUDE_FILE_TYPE = '.html'
       MESSAGES = {
         'WRONG_START' => 'Cannot start with [frame_embed_end]. Please wrap content with ' + KEY_MATCH_EMBED_START + ' and '+ KEY_MATCH_EMBED_END + ' in the right sequence.',
         'WRONG_SEQUENCE' => 'Expects ' + KEY_MATCH_EMBED_START + ' and '+ KEY_MATCH_EMBED_END + ' in the right sequence.',
         'ODD_TAG_COUNT' => 'Expects even pairs of' + KEY_MATCH_EMBED_START + ' and ' + KEY_MATCH_EMBED_END + '. Odd number of tags identified in page '
       }
-      INCLUDE_FILE_TYPE = '.html'
-
+      
       def initialize(p)
         super(p)
       end

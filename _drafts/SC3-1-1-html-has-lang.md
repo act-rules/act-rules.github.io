@@ -23,7 +23,7 @@ The root element of the page, if it is an `html` element.
 
 ### Expectation
 
-- The test target has a `lang` or `xml:lang` attribute
+The test target has a `lang` or `xml:lang` attribute.
 
 ## Assumptions
 

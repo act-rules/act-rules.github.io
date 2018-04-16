@@ -23,9 +23,9 @@ The root node of the page, if it is an `html` element with both `lang` and `xml:
 
 ### Expectation
 
-- The value of the primary language sub-tag for the `lang` and `xml:lang` attributes are the same.
+The value of the primary language sub-tag for the `lang` and `xml:lang` attributes are the same.
 
-**Note:** language tags are not case sensitive
+**Note:** Language tags are not case sensitive.
 
 ## Assumptions
 

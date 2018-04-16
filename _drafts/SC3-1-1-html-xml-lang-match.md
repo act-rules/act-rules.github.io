@@ -2,7 +2,7 @@
 name: SC3-1-1-html-xml-lang-match
 
 description:
-The rule checks that for the `html` element, there is no mismatch between the primary language in `lang` and `xml:lang` attributes, if both are used.
+ The rule checks that for the `html` element, there is no mismatch between the primary language in `lang` and `xml:lang` attributes, if both are used.
 
 success_criterion:
 - 3.1.1

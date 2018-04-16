@@ -8,7 +8,7 @@ success_criterion:
 - 3.1.1
 
 test_aspects:
-- DOM Tree # The tree that HTML is parsed into.
+- DOM Tree
 
 authors:
 - Annika Nietzio
@@ -19,11 +19,11 @@ authors:
 
 ### Applicability
 
-The root node of the page, if it is an `html` element.
+The root element of the page, if it is an `html` element.
 
 ### Expectation
 
-- The element has a `lang` or `xml:lang` attribute
+- The test target has a `lang` or `xml:lang` attribute
 
 ## Assumptions
 

@@ -19,7 +19,7 @@ authors:
 
 ### Applicability
 
-The root node of the page, if it is an `html` element with a `lang` and/or `xml:lang` attribute.
+The root element of the page, if it is an `html` element with a `lang` and/or `xml:lang` attribute.
 
 ### Expectation
 

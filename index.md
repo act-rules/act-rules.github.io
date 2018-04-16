@@ -19,5 +19,3 @@ Contributing is open to anyone. We welcome any new issues or pull requests for c
 
 **[Join the Auto-WcAG community group now!](https://www.w3.org/community/wp-login.php?redirect_to=%2Fcommunity%2Fauto-wcag%2Fjoin)** or [Learn more about contributing to Auto-WCAG](pages/contribute.html).
 
-
-test webhook

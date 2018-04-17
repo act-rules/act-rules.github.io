@@ -34,7 +34,7 @@ success_criterion:
 ```
 
 ```html
-<html xml:lang="xyz" lang="fr">
+<html xml:lang="xyz" lang="xyz">
 ```
 
 ## Inapplicable

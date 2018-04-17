@@ -27,6 +27,7 @@ The root node of the page, if it is an `html` element with both `lang` and `xml:
 
 **Note:** language tags are not case sensitive
 
+
 ## Assumptions
 
 *There are currently no assumptions*
@@ -42,3 +43,8 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang
 - https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/xml:lang
 - https://www.w3.org/TR/WCAG20-TECHS/H57.html
+
+## Implementation Tests
+
+Implementation tests are available at: [{{ page.name}} tests](../draft-tests/{{ page.name }}.html)
+

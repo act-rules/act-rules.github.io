@@ -1,7 +1,7 @@
 ---
 name: SC3-1-1-html-has-lang
 
-description:
+description: |
   This rule checks that the `html` element has a `lang` or `xml:lang` attribute.
 
 success_criterion:

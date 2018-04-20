@@ -1,7 +1,7 @@
 ---
 name: SC3-1-1-html-xml-lang-match
 
-description:
+description: |
  The rule checks that for the `html` element, there is no mismatch between the primary language in `lang` and `xml:lang` attributes, if both are used.
 
 success_criterion:
@@ -29,7 +29,7 @@ The value of the primary language sub-tag for the `lang` and `xml:lang` attribut
 
 ## Assumptions
 
-*There are currently no assumptions*
+- Although there is no known way that an inappropriate secondary sub-tag in the lang or xml:lang attribute (such as "en-XYZ") can lead to accessibility issues, it is conceivable that with specific assistive technologies on some languages, there can be exceptions. In that case lang and xml:lang should have matching secondary sub-tags.
 
 ## Accessibility Support
 

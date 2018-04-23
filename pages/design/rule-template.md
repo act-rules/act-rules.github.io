@@ -4,7 +4,7 @@ title: Auto-WCAG Rule Template
 
 The rule template contains a plain language description of the rule, some background information, and a list of all assumptions. The test procedure is defined by the selector, a number of steps and a description of the possible outcomes.
 
-Use the [empty test template](rule-template-empty.md) to create new auto-wcag rule. When creating a new rule, first read [rule design](rule-design.md).
+Use the [empty test template](rule-template-empty.html) to create new auto-wcag rule. When creating a new rule, first read [rule design](rule-design.html).
 
 ```markdown
 ---

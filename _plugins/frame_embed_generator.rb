@@ -98,7 +98,7 @@ module Jekyll
         lang = 'html' # hard-code to html
         out = "<div class='embed-wrapper'>"\
             "<div class='code-wrapper'> <figcaption>Code Snippet:</figcaption> {% highlight #{lang} %} #{snippet} {% endhighlight %} </div>"\
-            "<div class='frame-container'> <header><span>Example Output:</span> <a target='_blank' href='{{url}}'>Open in a new tab/ window</a> </header> <iframe src='{{url}}'></iframe> </div>"\
+            "<div class='frame-container'> <header><span>Example Output:</span> <a target='_blank' href='#{url}'>Open in a new tab/ window</a> </header> <iframe src='#{url}'></iframe> </div>"\
           '</div>'
         out
       end

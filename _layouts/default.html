@@ -165,29 +165,6 @@
     
     <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
     <script src="{{ site.baseurl }}/assets/js/bootstrap.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        // append class names to table
-        $('table').each(function() {
-          $(this).addClass('table table-striped table-hover');
-        });
-
-        // find every language-html and iframe next to eachother and flex them in 2 column layout
-        $('div.language-html')
-        .each(function() {
-          var codeSnippet = $(this);
-          var frameContainer = codeSnippet.next();
-          if(frameContainer.attr('class') === 'frame-container') {
-            codeSnippet.wrap('<figure></figure>')
-            $('<figcaption>Code Snippet:</figcaption>').insertBefore(codeSnippet);
-            codeSnippet.parent().wrap("<div class='embed-wrapper'></div>")
-            frameContainer.appendTo(codeSnippet.parent().parent());
-          }
-        });
-      });
-    </script>
-
    
-
   </body>
 </html>

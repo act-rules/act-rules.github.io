@@ -10,16 +10,14 @@ module Jekyll
       priority :highest
 
       KEY_EMBEDS_DIR = '_draft-testcase-embeds/'
-      KEY_MATCH_EMBED_START = '<<EMBED_START>>'
-      KEY_MATCH_EMBED_END = '<<EMBED_END>>'
+      KEY_MATCH_CODE_TAG_BACKTICK = '```'
       INCLUDE_FILE_TYPE = '.html'
       MESSAGES = {
-        'WRONG_START' => 'Cannot start with [frame_embed_end]. Please wrap content with ' + KEY_MATCH_EMBED_START + ' and '+ KEY_MATCH_EMBED_END + ' in the right sequence.',
-        'WRONG_SEQUENCE' => 'Expects ' + KEY_MATCH_EMBED_START + ' and '+ KEY_MATCH_EMBED_END + ' in the right sequence.',
-        'ODD_TAG_COUNT' => 'Expects even pairs of' + KEY_MATCH_EMBED_START + ' and ' + KEY_MATCH_EMBED_END + '. Odd number of tags identified in page '
+        'ODD_TAG_COUNT' => 'Expects even pairs of' + KEY_MATCH_CODE_TAG_BACKTICK + ' and ' + KEY_MATCH_CODE_TAG_BACKTICK + '. Odd number of tags identified in page '
       }
       
       def initialize(p)
+        @markdown = Converters::Markdown.new
         super(p)
       end
 
@@ -40,52 +38,45 @@ module Jekyll
           end
         end
       end
+
+      def get_code_tag_line_indices(document)
+        indices = []
+        spread_indices = []
+        is_odd = false
+        document.content.each_line.with_index do |line, index|
+          if line[KEY_MATCH_CODE_TAG_BACKTICK]
+            if is_odd
+              spread_indices.push(index)
+            end
+            is_odd ^= true
+            indices.push(index)
+          end
+          if is_odd
+            spread_indices.push(index)
+          end
+        end
+        return indices, spread_indices
+      end
   
       def create_frame_embed_content(document, site)  
         doc_name_with_type = document.url.split('/').reverse[0]
         doc_name = doc_name_with_type.gsub(INCLUDE_FILE_TYPE, '')
         doc_path = document.url.sub(doc_name_with_type, '')
-
-        indices = []
-        spread_indices = []
-        prev_match_line = nil
-        is_in_block = false
+        all_indices = get_code_tag_line_indices(document)
+        indices =  all_indices[0]
+        spread_indices = all_indices[1]
         hash = Hash.new
-
-        document.content.each_line.with_index do |line, index|
-          if line[KEY_MATCH_EMBED_START] || line[KEY_MATCH_EMBED_END] 
-            if(prev_match_line === nil && line[KEY_MATCH_EMBED_END])
-              fail MESSAGES['WRONG_START']
-            elsif(prev_match_line != nil && line[prev_match_line])
-              fail MESSAGES['WRONG_SEQUENCE']
-            else
-              if(line[KEY_MATCH_EMBED_START])
-                is_in_block = true
-                spread_indices.push(index)
-              elsif(line[KEY_MATCH_EMBED_END])
-                is_in_block = false
-                spread_indices.push(index)
-              end
-              indices.push(index)
-              prev_match_line = line
-            end
-          elsif 
-            if(is_in_block == true)
-              spread_indices.push(index)
-            end
-          end
-        end
 
         if(indices.length % 2 == 0)
           $i = 0
           while $i < indices.length  do
             content_including_tags = document.content.lines[indices[$i]..indices[$i+1]]
-            content_excluding_tags = document.content.lines[indices[$i]+1..indices[$i+1]-1]
             file_name = doc_name + '-' + SecureRandom.uuid + INCLUDE_FILE_TYPE
             file_path = site.source + '/' + KEY_EMBEDS_DIR + file_name
             file_url = '../' + KEY_EMBEDS_DIR + file_name
-            hash[indices[$i].to_s] = render_block(content_excluding_tags, file_url)
             file_content = get_file_content(content_including_tags)
+            code_lang = get_highlight_lang(content_including_tags[0])
+            hash[indices[$i].to_s] =  render_code_and_frame(code_lang, file_content, file_url)
             make_frame_src_file(file_path, file_content)
             $i += 2
           end
@@ -96,15 +87,19 @@ module Jekyll
         doc_content = get_md_content(document.content, spread_indices, hash)
         document.content = doc_content
       end
+      def get_highlight_lang(opening_tag)
+        lang = 'html'
+        language_tag = opening_tag.gsub(KEY_MATCH_CODE_TAG_BACKTICK, '')
+        lang = language_tag.length <= 0 ? lang : language_tag.downcase
+        lang
+      end
 
-      def render_block(snippet, url)
-        out = Liquid::Template.parse('{{code}} <div class="frame-container"> <header><span>Example Output:</span> <a target="_blank" href="{{url}}">Open in a new tab/ window</a> </header> <iframe src="{{url}}"></iframe> </div>').render(
-          {
-            'code' => snippet,
-            'url' => url
-          },
-          strict_variables: true
-        )
+      def render_code_and_frame(lang, snippet, url)
+        lang = 'html' # hard-code to html
+        out = "<div class='embed-wrapper'>"\
+            "<div class='code-wrapper'> <figcaption>Code Snippet:</figcaption> {% highlight #{lang} %} #{snippet} {% endhighlight %} </div>"\
+            "<div class='frame-container'> <header><span>Example Output:</span> <a target='_blank' href='{{url}}'>Open in a new tab/ window</a> </header> <iframe src='{{url}}'></iframe> </div>"\
+          '</div>'
         out
       end
 
@@ -127,7 +122,7 @@ module Jekyll
         # NOTE: assumption here that only html is present
         out = []
         c.each.with_index do |line, index|
-          if(line[KEY_MATCH_EMBED_START] || line[KEY_MATCH_EMBED_END] || line['```'])
+          if(line[KEY_MATCH_CODE_TAG_BACKTICK])
             # ignore
           elsif
             out.push(line)

@@ -1,3 +1,6 @@
-_site
 .idea
 *.iml
+*.log
+
+_site
+_draft-testcase-embeds

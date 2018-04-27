@@ -61,3 +61,4 @@ defaults:
 
 exclude:
 - _drafts/early-stage
+- _draft-testcase-embeds

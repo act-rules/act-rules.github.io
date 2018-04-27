@@ -25,13 +25,15 @@ The root element of the page, if it is an `html` element.
 
 The test target has a `lang` or `xml:lang` attribute.
 
+**Note**: HTML 5 recommends using `lang` instead of `xml:lang`. This is not known to impact accessibility, which is why use of both is permitted by this rule.
+
 ## Assumptions
 
 *There are currently no assumptions*
 
 ## Accessibility support
 
-There are no major accessibility support issues known for this rule.
+There are known combinations of a popular operating system with browsers and assistive technologies that do not support the `lang` and `xml:lang` attributes.
 
 ## Background
 

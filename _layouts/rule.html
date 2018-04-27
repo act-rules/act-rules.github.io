@@ -58,7 +58,31 @@ layout: default
   </ul>
 {% endif %}
 
+
 {{ content }}
+
+<!-- Embedding implementation tests -->
+<!-- for each every document -->
+{% for doc in site.documents %} 
+  <!-- narrow down all documents in draft-tests directory -->
+  {% if doc.url contains "draft-tests/" %}
+    <!-- check if page name exists -->
+    <!-- get doc name -->
+    {% assign docUrlArray = doc.url | split: "/" %}
+    {% assign docName = docUrlArray.last %}
+    <!-- get page name -->
+    {% assign pageUrlArray = page.url | split: "/" %}
+    {% assign pageName = pageUrlArray.last %}
+    <!-- if exists - add link to implementation tests -->
+    {% if pageName == docName  %}
+      <h2>Implementation Tests</h2>
+      <p>
+        Implementation tests are available at: <a href="../draft-tests/{{ page.name }}.html">{{ page.name }} tests</a>.
+      </p>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
 
 {% if page.test_aspects %}
   <h2 id="test-aspects">Test Aspects</h2>

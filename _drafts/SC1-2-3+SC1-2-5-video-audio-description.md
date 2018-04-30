@@ -51,3 +51,43 @@ There are no major accessibility support issues known for this rule.
 [visible in the page]: ../pages/algorithms/visible-in-the-page.html
 [text transcript]: https://www.w3.org/TR/WCAG20/#alt-time-based-mediadef
 [audio]: https://www.w3.org/TR/WCAG20/#audiodef
+
+## Test Cases
+
+## Passed
+
+```html
+<video src="../test-assets/rabbit-video-with-voiceover.mp4" controls></video>
+```
+
+```html
+TODO: Video with separate audio description
+```
+
+## Failed
+
+```html
+<video src="../test-assets/rabbit-video.mp4" controls></video>
+```
+
+```html
+<video src="../test-assets/rabbit-video-with-incorrect-voiceover.mp4" controls></video>
+```
+
+```html
+TODO: Video with separate incorrect audio description
+```
+
+## Inapplicable
+
+```html
+TODO: a source to a live video
+```
+
+```html
+<video src="../test-assets/rabbit-video-silent.mp4" controls></video>
+```
+
+```html
+<video src="../test-assets/rabbit-video.mp4" controls style="display: none;"></video>
+```

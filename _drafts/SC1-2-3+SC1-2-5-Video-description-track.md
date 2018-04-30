@@ -51,3 +51,41 @@ The visual information of each test target not available through its audio is de
 [visible in the page]: ../pages/algorithms/visible-in-the-page.html
 [text transcript]: https://www.w3.org/TR/WCAG20/#alt-time-based-mediadef
 [audio]: https://www.w3.org/TR/WCAG20/#audiodef
+
+## Test Cases
+
+## Passed
+
+```html
+<video src="../test-assets/rabbit-video.mp4" controls>
+  <track kind="descriptions" src="rabbit-video-descriptions.vtt">
+</video>
+```
+
+## Failed
+
+```html
+<video src="../test-assets/rabbit-video.mp4" controls>
+  <track kind="descriptions" src="rabbit-video-incorrect-descriptions.vtt">
+</video>
+```
+
+## Inapplicable
+
+```html
+<video src="../test-assets/rabbit-video.mp4" controls></video>
+```
+
+```html
+TODO: a source to a live video
+```
+
+```html
+<video src="../test-assets/rabbit-video.mp4" controls style="display: none;">
+  <track kind="descriptions" src="rabbit-video-descriptions.vtt">
+</video>
+```
+
+```html
+<video src="../test-assets/rabbit-video-silent.mp4" controls></video>
+```

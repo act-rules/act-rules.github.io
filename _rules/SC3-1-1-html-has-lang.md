@@ -42,3 +42,31 @@ There are known combinations of a popular operating system with browsers and ass
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang
 - https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/xml:lang
 - https://www.w3.org/TR/WCAG20-TECHS/H57.html
+
+## Test Cases
+
+### Passed
+
+```html
+<html lang="en">
+```
+
+```html
+<html xml:lang="en">
+```
+
+```html
+<html xml:lang="en" lang="en">
+```
+
+### Failed
+
+```html
+<html>
+```
+
+### Inapplicable
+
+```html
+<svg lang="en">
+```

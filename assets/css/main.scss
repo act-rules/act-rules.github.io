@@ -26,6 +26,7 @@ html {
 $brush-accent: #003349;
 $brush-white: #fff;
 $brush-black: #000;
+$brush-warning: #FF530D;
 $brush-transparent: transparent;
 
 body {
@@ -94,6 +95,13 @@ body {
 
     > .container {
         padding: 60px 15px 0;
+
+        .draft-note {
+            background-color: $brush-warning;
+            color: $brush-white;
+            padding: 2rem;
+        }
+
         .text-muted {
             margin: 20px 0;
         }

@@ -44,7 +44,30 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 - https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/xml:lang
 - https://www.w3.org/TR/WCAG20-TECHS/H57.html
 
-## Implementation Tests
+## Test Cases
 
-Implementation tests are available at: [{{ page.name}} tests](../draft-tests/{{ page.name }}.html)
+### Passed
 
+```html
+<html lang="en" xml:lang="en">
+```
+
+```html
+<html lang="en" xml:lang="En">
+```
+
+```html
+<html lang="en" xml:lang="en-GB">
+```
+
+### Failed
+
+```html
+<html lang="fr" xml:lang="en">
+```
+
+### Inapplicable
+
+```html
+<svg lang="en" xml:lang="en">
+```

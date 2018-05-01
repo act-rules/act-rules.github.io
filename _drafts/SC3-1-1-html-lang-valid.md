@@ -2,7 +2,7 @@
 name: SC3-1-1-html-lang-valid
 
 description: |
-This rule checks the lang or xml:lang attribute conforms to [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt).
+  This rule checks the lang or xml:lang attribute conforms to [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt).
 
 success_criterion:
 - 3.1.1

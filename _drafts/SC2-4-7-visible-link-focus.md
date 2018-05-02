@@ -3,7 +3,7 @@ rule_id: SC2-4-7-visible-link-focus
 name: 
 test_mode: automatic
 
-criteria:
+success_criterion:
 - 2.4.7 # Focus Visible
 
 authors:

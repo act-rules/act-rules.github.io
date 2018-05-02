@@ -3,7 +3,7 @@ rule_id: SC4-1-2-frame
 name: Proper use of aria-describedby
 test_mode: semi-automatic
 
-criteria:
+success_criterion:
 - 4.1.2 # Name, Role, Value (Level A)
 
 authors:

@@ -3,7 +3,7 @@ rule_id: SC1-2-1-video-only-alternative
 name: 
 test_mode: semi-automatic
 
-criteria:
+success_criterion:
 - 1.2.1 # Audio-only and Video-only (Prerecorded) (Level A)
 
 authors:

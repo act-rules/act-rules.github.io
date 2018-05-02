@@ -1,5 +1,5 @@
 ---
-name: SC2-4-2-title
+name: HTML Page has a title
 
 description: |
   This rule checks that the HTML page has a title

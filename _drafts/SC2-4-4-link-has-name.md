@@ -1,5 +1,5 @@
 ---
-name: SC2-4-4-link-has-name
+name: Links have an accessible name
 description: |
   Each link has an accessible name
 
@@ -25,7 +25,7 @@ The rule applies to any HTML or SVG element with the semantic role of `link` tha
 
 ### Expectation
 
-Each target element has an [accessible name][] that is [non-empty][].
+Each target element has an [accessible name][] that is [non-empty][]
 
 ## Assumptions
 
@@ -35,51 +35,61 @@ Each target element has an [accessible name][] that is [non-empty][].
 
 There are no major accessibility support issues known for this rule.
 
-@@@TO DO: Accessibility Support in SVG???
-
 ## Background
 
-- Links to Techniques for WCAG 2.0
-- Latest version: Techniques for WCAG 2.0 W3C Working Group Note 8 April 2014
-- Link to other methodologies, test specifications or tools
-- Links to test cases, test suites, unit tests, etc.
+- [https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=244#navigation-mechanisms-refs](https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=244#navigation-mechanisms-refs)
+- [ARIA7: Using aria-labelledby for link purpose](https://www.w3.org/TR/WCAG20-TECHS/ARIA7.html)
+- [ARIA8: Using aria-label for link purpose](https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html)
+- [F89: Failure of Success Criteria 2.4.4, 2.4.9 and 4.1.2 due to using null alt on an image where the image is the only content in a link](http://www.w3.org/TR/WCAG20-TECHS/F89.html)
 - The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible auto-wcag refers to those. Another source for test cases is the W3C Before and After Demonstration.
-- Other references
 
 ## Test Cases
 
 ### Passed
 ```html
-<a href="http://www.w3.org/WAI">Web Accessibility Initiative (WAI)</a>
+<a href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
 ```
 
 ```html
 <button role="link">Click me!</button>
 ```
 
-```html
+### Failed
 
+```html
+<div>
+  <p>
+    Some detailed article, but the link to read more is placed with no relevance to the text, thereby the link has lost context.
+  </p>
+  <p>
+    <a href="readmore.html">Read More...</a>
+  </p>
+</div>
 ```
 
-### Failed
 ```html
-
+<table>
+   <tr> 
+       <td>Song: Ed Sheeran - Galway Girl.</td>
+   </tr>
+   <tr>
+       <td>
+        <a href="assets/download.html">
+          Download Now
+        </a>
+       </td>
+   </tr>
+ </table>
 ```
 
 ### Inapplicable
 ```html
 <a href="http://www.w3.org/WAI" role="button">Web Accessibility Initiative (WAI)</a>
 ```
+
 ------
 
-## exposed to assistive technologies
-
-Elements that should be contained in the accessibility tree as described in [Core Accessibility API Mappings 1.1](https://www.w3.org/TR/core-aam-1.1/#mapping_general)
-
-## visible on the page
-
-
-[accessible name]: TODO
-[non-empty]: 
-[exposed to assistive technologies]: 
-[visible on the page]: 
+[non-empty]: ../pages/algorithms/non-empty.html
+[accessible name]: ../pages/algorithms/accessible-name.html 
+[exposed to assistive technologies]: ../pages/algorithms/exposed-to-assistive-technologies.html
+[visible on the page]: ../pages/algorithms/visible-on-the-page.html

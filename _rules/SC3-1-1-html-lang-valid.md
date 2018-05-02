@@ -1,5 +1,5 @@
 ---
-name: SC3-1-1-html-lang-valid
+name: HTML Lang attribute validity
 
 description: |
   This rule checks the lang or xml:lang attribute conforms to [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt).

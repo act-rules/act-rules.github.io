@@ -11,6 +11,7 @@ test_aspects:
 - DOM Tree
 
 authors:
+- Bryn Anderson
 - Jey Nandakumar
 ---
 

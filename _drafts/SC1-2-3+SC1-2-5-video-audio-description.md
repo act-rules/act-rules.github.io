@@ -64,7 +64,25 @@ There are no major accessibility support issues known for this rule.
 ```
 
 ```html
-TODO: Video with separate audio description
+<link rel="stylesheet" href="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-core/ozplayer.min.css">
+<link rel="stylesheet" href="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-skin/highlights-blue.css">
+<link rel="stylesheet" href="https://ozplayer.global.ssl.fastly.net/3.3/transcript.css">
+
+<figure id="ozplayer-1-container" class="ozplayer-container">
+  <div data-controls="stack" class="ozplayer" id="ozplayer-1">
+    <video controls="controls" preload="none">
+      <source src="../test-assets/rabbit-video.mp4" type="video/mp4"></source>
+    </video>
+    <audio data-default="default" preload="none">
+      <source src="../test-assets/rabbit-video-audio-description.mp3" type="audio/mp3" ></source>
+    </audio>
+  </div>
+</figure>
+
+<script src="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-core/mediaelement.min.js"></script>
+<script src="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-core/ozplayer.free.js"></script>
+<script src="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-lang/en.js"></script>
+<script src="https://ozplayer.global.ssl.fastly.net/3.3/config.js"></script>
 ```
 
 ## Failed
@@ -84,7 +102,25 @@ TODO: Video with separate audio description
 ```
 
 ```html
-TODO: Video with separate incorrect audio description
+<link rel="stylesheet" href="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-core/ozplayer.min.css">
+<link rel="stylesheet" href="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-skin/highlights-blue.css">
+<link rel="stylesheet" href="https://ozplayer.global.ssl.fastly.net/3.3/transcript.css">
+
+<figure id="ozplayer-1-container" class="ozplayer-container">
+  <div data-controls="stack" class="ozplayer" id="ozplayer-1">
+    <video controls="controls" preload="none">
+      <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
+    </video>
+    <audio data-default="default" preload="none">
+      <source src="../test-assets/rabbit-video/incorrect-audio-description.mp3" type="audio/mp3" ></source>
+    </audio>
+  </div>
+</figure>
+
+<script src="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-core/mediaelement.min.js"></script>
+<script src="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-core/ozplayer.free.js"></script>
+<script src="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-lang/en.js"></script>
+<script src="https://ozplayer.global.ssl.fastly.net/3.3/config.js"></script>
 ```
 
 ## Inapplicable

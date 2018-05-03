@@ -62,28 +62,40 @@ There are no major accessibility support issues known for this rule.
 ## Passed
 
 ```html
-<video src="../test-assets/rabbit-video.mp4" controls></video>
+<video controls>
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+</video>
 <p>The above video shows a giant fat rabbit climbing out of a hole in the ground. 
 He stretches, yaws, and then starts walking. 
 Then he stops to scratch his bottom.</p>
 ```
 
 ```html
-<video src="../test-assets/rabbit-video.mp4" controls></video>
+<video controls>
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+</video>
 <a href="/test-assets/rabbit-video-transcript.html">Transcript</p>
 ```
 
 ## Failed
 
 ```html
-<video src="../test-assets/rabbit-video.mp4" controls></video>
+<video controls>
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+</video>
 <p>The above video shows a giant fat dog climbing out of a hole in the ground. 
 He stretches, yaws, and then starts walking. 
 Then he stops to scratch his bottom.</p>
 ```
 
 ```html
-<video src="../test-assets/rabbit-video.mp4" controls></video>
+<video controls>
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+</video>
 <a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</p>
 ```
 
@@ -94,5 +106,8 @@ TODO: a source to a live video
 ```
 
 ```html
-<video src="../test-assets/rabbit-video.mp4" controls style="display: none;"></video>
+<video controls style="display: none;">
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+</video>
 ```

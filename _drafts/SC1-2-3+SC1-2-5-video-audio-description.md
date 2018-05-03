@@ -57,7 +57,10 @@ There are no major accessibility support issues known for this rule.
 ## Passed
 
 ```html
-<video src="../test-assets/rabbit-video-with-voiceover.mp4" controls></video>
+<video controls>
+  <source src="../test-assets/rabbit-video/video-with-voiceover.mp4" type="video/mp4"></source>
+  <source src="../test-assets/rabbit-video/video-with-voiceover.webm" type="video/webm"></source>
+</video>
 ```
 
 ```html
@@ -67,11 +70,17 @@ TODO: Video with separate audio description
 ## Failed
 
 ```html
-<video src="../test-assets/rabbit-video.mp4" controls></video>
+<video controls>
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+</video>
 ```
 
 ```html
-<video src="../test-assets/rabbit-video-with-incorrect-voiceover.mp4" controls></video>
+<video controls>
+  <source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4"></source>
+  <source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm"></source>
+</video>
 ```
 
 ```html
@@ -85,9 +94,15 @@ TODO: a source to a live video
 ```
 
 ```html
-<video src="../test-assets/rabbit-video-silent.mp4" controls></video>
+<video controls>
+  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
+  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
+</video>
 ```
 
 ```html
-<video src="../test-assets/rabbit-video.mp4" controls style="display: none;"></video>
+<video controls style="display: none;">
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+</video>
 ```

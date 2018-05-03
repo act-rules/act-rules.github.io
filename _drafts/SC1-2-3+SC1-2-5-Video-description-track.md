@@ -59,7 +59,9 @@ This means that the rule can only provide a pass for these succescriteria if acc
 ## Passed
 
 ```html
-<video src="../test-assets/rabbit-video.mp4" controls>
+<video controls>
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
   <track kind="descriptions" src="rabbit-video-descriptions.vtt">
 </video>
 ```
@@ -67,7 +69,9 @@ This means that the rule can only provide a pass for these succescriteria if acc
 ## Failed
 
 ```html
-<video src="../test-assets/rabbit-video.mp4" controls>
+<video controls>
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
   <track kind="descriptions" src="rabbit-video-incorrect-descriptions.vtt">
 </video>
 ```
@@ -75,7 +79,10 @@ This means that the rule can only provide a pass for these succescriteria if acc
 ## Inapplicable
 
 ```html
-<video src="../test-assets/rabbit-video.mp4" controls></video>
+<video controls>
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+</video>
 ```
 
 ```html
@@ -83,11 +90,17 @@ TODO: a source to a live video
 ```
 
 ```html
-<video src="../test-assets/rabbit-video.mp4" controls style="display: none;">
+<video controls style="display: none;">
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
   <track kind="descriptions" src="rabbit-video-descriptions.vtt">
 </video>
 ```
 
 ```html
-<video src="../test-assets/rabbit-video-silent.mp4" controls></video>
+<video controls>
+  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
+  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
+  <track kind="descriptions" src="rabbit-video-descriptions.vtt">
+</video>
 ```

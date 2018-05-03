@@ -4,9 +4,9 @@ description: |
   Each button element has an accessible name
 
 success_criterion:
-- 4.1.2 # Name, Role, Value
+- 4.1.2
 
-test_aspects: # Remove what is not applicable
+test_aspects:
 - DOM Tree
 - CSS Styling
 
@@ -27,7 +27,7 @@ Each target element has an [accessible name][] that is [non-empty][].
 
 ## Assumptions
 
-- The rule assumes that all buttons are user interface components as defined by WCAG 2. When the button role is used incorrectly, the assumption may not be true.
+- The rule assumes that all buttons are user interface components as defined by WCAG 2.
 
 ## Accessibility Support
 

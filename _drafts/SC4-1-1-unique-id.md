@@ -20,7 +20,7 @@ authors:
 
 ### Applicability
 
-Any element with an `id` attribute.
+Each test target has an `id` attribute that is unique within the [document context](https://github.com/auto-wcag/auto-wcag/pull/110/files#insert-link-here) of the element.
 
 ### Expectation
 
@@ -58,7 +58,7 @@ There are no major accessibility support issues known for this rule.
 <div id="my-elm"></div>
 <script>
   var myElm = document.getElementById('my-elm');
-  var shadow = myElm.attachShadow({ move: 'open' });
+  var shadow = myElm.attachShadow({ mode: 'open' });
   shadow.innerHTML = '<b id="my-elm"><slot /></b>';
 </script>
 ```

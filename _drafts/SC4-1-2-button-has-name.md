@@ -58,6 +58,34 @@ There are no major accessibility support issues known for this rule.
 <input type='submit' value='Submit'>
 ```
 
+```html
+<button aria-label="My button"></button>
+```
+
+```html
+<button aria-hidden='true'>
+</button>
+```
+
+```html
+<button disabled>Delete</button>
+```
+
+```html
+<html>
+  <style>
+    .notInPage {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+    }
+  </style>
+  <body>
+    <button class='notInPage'>Save</button>
+  </body>
+</html>
+```
+
 ## Failed
 
 ```html

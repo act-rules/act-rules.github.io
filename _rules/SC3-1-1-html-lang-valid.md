@@ -77,6 +77,14 @@ There are known combinations of a popular operating system with browsers and ass
 <html xml:lang="xyz" lang="xyz">
 ```
 
+```html
+<html lang="">
+```
+
+```html
+<html xml:lang="">
+```
+
 ## Inapplicable
 
 ```html

@@ -2,7 +2,7 @@
 name: Existence of HTML Lang attribute
 
 description: |
-  This rule checks that the `html` element has a `lang` or `xml:lang` attribute.
+  This rule checks that the `html` element has a [non-empty][] `lang` or `xml:lang` attribute.
 
 success_criterion:
 - 3.1.1
@@ -65,8 +65,22 @@ There are known combinations of a popular operating system with browsers and ass
 <html>
 ```
 
+```html
+<html xml:lang="">
+```
+
+```html
+<html lang="">
+```
+
+```html
+<html xml:lang="" lang="">
+```
+
 ### Inapplicable
 
 ```html
 <svg lang="en">
 ```
+
+[non-empty]: ../pages/algorithms/non-empty.html

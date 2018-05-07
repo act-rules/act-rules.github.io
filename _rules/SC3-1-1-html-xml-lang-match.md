@@ -19,7 +19,7 @@ authors:
 
 ### Applicability
 
-The root node of the page, if it is an `html` element with both `lang` and `xml:lang` attributes.
+The root node of the page, if it is an `html` element with both [non-empty][] `lang` and `xml:lang` attributes.
 
 ### Expectation
 
@@ -71,3 +71,13 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 ```html
 <svg lang="en" xml:lang="en">
 ```
+
+```html
+<html lang="fr" xml:lang="">
+```
+
+```html
+<html lang="" xml:lang="">
+```
+
+[non-empty]: ../pages/algorithms/non-empty.html

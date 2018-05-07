@@ -19,7 +19,7 @@ authors:
 
 ### Applicability
 
-The root element of the page, if it is an `html` element with a `lang` and/or `xml:lang` attribute.
+The root element of the page, if it is an `html` element with a [non-empty][] `lang` and/or `xml:lang` attribute.
 
 ### Expectation
 
@@ -77,14 +77,6 @@ There are known combinations of a popular operating system with browsers and ass
 <html xml:lang="xyz" lang="xyz">
 ```
 
-```html
-<html lang="">
-```
-
-```html
-<html xml:lang="">
-```
-
 ## Inapplicable
 
 ```html
@@ -94,3 +86,13 @@ There are known combinations of a popular operating system with browsers and ass
 ```html
 <svg xml:lang="fr">
 ```
+
+```html
+<html lang="">
+```
+
+```html
+<html xml:lang="">
+```
+
+[non-empty]: ../pages/algorithms/non-empty.html

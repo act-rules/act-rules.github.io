@@ -59,6 +59,14 @@ There are known combinations of a popular operating system with browsers and ass
 <html xml:lang="en" lang="en">
 ```
 
+```html
+<html xml:lang="" lang="en">
+```
+
+```html
+<html xml:lang="en" lang="">
+```
+
 ### Failed
 
 ```html

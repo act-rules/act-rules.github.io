@@ -3,7 +3,7 @@ rule_id: SC3-2-2-form-no-submit
 name: 
 test_mode: semi-automatic
 
-criteria:
+success_criterion:
 - 3.2.2 # On Input
 
 authors:

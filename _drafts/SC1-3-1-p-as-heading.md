@@ -3,7 +3,7 @@ rule_id: SC1-3-1-p-as-heading
 name:
 test_mode: semi-automatic
 
-criteria:
+success_criterion:
 - 1.3.1 # Info and relationships (level A)
 
 authors:

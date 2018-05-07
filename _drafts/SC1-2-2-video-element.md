@@ -3,7 +3,7 @@ rule_id: SC1-2-2-video-element
 name: 
 test_mode: semi-automatic
 
-criteria:
+success_criterion:
 - 1.2.2 # Captions (Prerecorded) (Level A)
 
 authors:

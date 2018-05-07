@@ -3,7 +3,7 @@ rule_id: SC1-3-1-tables-layout
 name: Tables Layout
 test_mode: semi-automatic
 
-criteria:
+success_criterion:
 - 1.3.1 # Info and relationships (level A)
 
 authors:

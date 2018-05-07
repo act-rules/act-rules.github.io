@@ -3,7 +3,7 @@ rule_id: SC2-4-4-image-map
 name: Area Element Has Alt Attribute
 test_mode: semi-automatic
 
-criteria:
+success_criterion:
 - 2.4.4 # Link Purpose (In Context)
 
 authors:

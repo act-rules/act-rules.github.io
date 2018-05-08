@@ -36,7 +36,6 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 - https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=411#qr-ensure-compat-parses
-- https://www.w3.org/TR/WCAG20-TECHS/H74.html
 - https://www.w3.org/TR/WCAG20-TECHS/H93.html
 - https://www.w3.org/TR/WCAG20-TECHS/H94.html
 
@@ -59,7 +58,7 @@ There are no major accessibility support issues known for this rule.
 <script>
   var myElm = document.getElementById('my-elm');
   var shadow = myElm.attachShadow({ mode: 'open' });
-  shadow.innerHTML = '<b id="my-elm"><slot /></b>';
+  shadow.innerHTML = '<b id="my-elm"><slot></slot></b>';
 </script>
 ```
 
@@ -72,6 +71,11 @@ There are no major accessibility support issues known for this rule.
 
 ```html
 <div id="my-div"> This is my first element</div>
+<svg id="my-div"> This is my second element</svg>
+```
+
+```html
+<div id="my-div" style="display:none"> This is my first element</div>
 <svg id="my-div"> This is my second element</svg>
 ```
 

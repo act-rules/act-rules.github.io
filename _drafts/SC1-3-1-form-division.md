@@ -3,7 +3,7 @@ rule_id: SC1-3-1-form-division
 name: 
 test_mode: automatic
 
-criteria:
+success_criterion:
 - 1.3.1 # Info and Relationships (Level A)
 
 authors:

@@ -71,12 +71,20 @@ _There are no major accessibility support issues known for this rule._
 
 ```html
 <html>
-    <head>
-      <title>Title of the page.</title>
-    </head>
-    <body>
-      <title>Title of the page.</title>
-    </body>
+  <head>
+    <title>Title of the page.</title>
+  </head>
+  <body>
+    <title>Title of the page.</title>
+  </body>
+</html>
+```
+
+```html
+<html>
+  <body>
+    <title>Title of the page.</title>
+  </body>
 </html>
 ```
 

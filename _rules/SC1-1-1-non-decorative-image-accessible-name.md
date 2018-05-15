@@ -94,8 +94,7 @@ Certain assistive technologies can be set up to ignore the `title` attribute, wh
 </svg>
 ```
 
-------
-[semantic role]()
-[exposed to assistive technologies]()
-[accessible name]()
-[non-empty]()
+[semantic role]: ../pages/algorithms/semantic-role.html
+[exposed to assistive technologies]: ../pages/algorithms/exposed-to-assistive-technologies.html
+[accessible name]: ../pages/algorithms/accessible-name.html
+[non-empty]: ../pages/algorithms/non-empty.html

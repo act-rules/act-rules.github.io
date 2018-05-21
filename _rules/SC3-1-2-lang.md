@@ -2,7 +2,7 @@
 name: Validity of lang attribute value in html body elements
 
 description:
-- This rule checks that `lang` and/or `xml:lang` attribute on elements within the `body` of a web page conforms to [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt).
+- This rule checks that `lang` or `xml:lang` attribute on elements within the `body` of a web page conforms to [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt).
 
 success_criterion:
 - 3.1.2
@@ -19,22 +19,18 @@ authors:
 
 ### Applicability
 
-- Any DOM element, other than the root DOM node with a [non-empty][] `lang` and/or `xml:lang` attribute.
+- Any DOM element, within the `body` of a webpage with a [non-empty][] `lang` or `xml:lang` attribute.
 
-**Note**: To retrieve all DOM nodes with a `lang` and or `xml:lang` attribute, other than the root node use -
+**Note**: To retrieve all DOM elements with a `lang` or `xml:lang` attribute, other than the root element use -
 `descendent-or-self::body[@lang]` -or-  `descendent-or-self::body[@xml:lang]`.
 
 ### Expectation
 
-- The value of the `lang` and/or `xml:lang` conforms to [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt).
+- The value of the `lang` or `xml:lang` conforms to [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt).
 
 ## Assumptions
 
 *There are currently no assumptions*
-
-## Accessibility support
-
-Most assistive technologies will rely solely on the `lang` attribute for determining the language of the page. The requirement tested in this rule will only give rise to accessibility issues in cases where assistive technologies are inconsistent about how they determine the language of the page.
 
 ## Background
 
@@ -57,6 +53,10 @@ Most assistive technologies will rely solely on the `lang` attribute for determi
 
 ```html
 <blockquote lang="fr-CH"></blockquote>
+```
+
+```html
+<p lang="en" xml:lang="en-GB">Good Morning.</p>
 ```
 
 ### Failed

@@ -51,7 +51,7 @@ There are no major accessibility support issues known for this rule.
 ```
 
 ```html
-<button value='Save Page'></button>
+<button value='Save Page' aria-label='Save Page'>Save Page</button>
 ```
 
 ```html
@@ -59,12 +59,7 @@ There are no major accessibility support issues known for this rule.
 ```
 
 ```html
-<button aria-label="My button"></button>
-```
-
-```html
-<button aria-hidden='true'>
-</button>
+<button aria-label="My button">My button</button>
 ```
 
 ```html
@@ -99,10 +94,15 @@ There are no major accessibility support issues known for this rule.
 </div>
 ```
 
+```html
+<button aria-hidden='true'>
+</button>
+```
+
 ## Inapplicable
 
 ```html
-<input type='image' vale='download'>
+<input type='image' value='download'>
 ```
 
 ------

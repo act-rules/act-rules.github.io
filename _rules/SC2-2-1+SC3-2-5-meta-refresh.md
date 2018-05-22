@@ -53,12 +53,6 @@ There are no major accessibility support issues known for this rule.
 ```
 
 ```html
-  <head>           
-    <meta http-equiv="refresh" content="foo; URL='https://auto-wcag.github.io/auto-wcag/'" />    
-  </head>
-```
-
-```html
 <!-- first valid <meta http-equiv="refresh"> redirects immediately  -->
 <head>
   <meta http-equiv="refresh" content="0; http://example.com" />
@@ -166,4 +160,25 @@ There are no major accessibility support issues known for this rule.
 <head>
   <meta http-equiv="refresh" content=" http://example.com" />
 </head>
+```
+
+```html
+<!-- content attribute is invalid and therefore inapplicable. -->
+<head>
+  <meta http-equiv="refresh" content="+5; http://example.com">
+</head>
+```
+
+```html
+<!-- content attribute is invalid and therefore inapplicable. -->
+<head>
+  <meta http-equiv="refresh" content="-5; http://example.com">
+</head>
+```
+
+```html
+<!-- content attribute is invalid and therefore inapplicable. -->
+<head>           
+    <meta http-equiv="refresh" content="foo; URL='https://auto-wcag.github.io/auto-wcag/'" />    
+  </head>
 ```

@@ -88,6 +88,17 @@ _There are no major accessibility support issues known for this rule._
 </html>
 ```
 
+```html
+<html>
+  <head>
+    <title> <!-- this page has an empty first title --> </title>
+  </head>
+  <body>
+    <title>Title of the page.</title>
+  </body>
+</html>
+```
+
 ### Failed
 
 ```html
@@ -107,6 +118,7 @@ _There are no major accessibility support issues known for this rule._
   <iframe src="../test-assets/sc2-4-2-title-page-with-title.html"></iframe>
 </html>
 ```
+
 ### Inapplicable
 
 ```html

@@ -25,11 +25,9 @@ The rule applies to the first valid `<meta http-equiv="refresh">` element with a
 
 ### Expectation
 
-The value before the first semicolon, comma or space (representing seconds) of the value of the `content` attribute is not a number greater than 0.
+The `time` of the `content` attribute, when parsed according to [Refresh state (`http-equiv="refresh"`)](https://www.w3.org/TR/html/document-metadata.html#statedef-http-equiv-refresh), is not greater than 0.
 
-**Note**: Semi-colon, comma or space is optional in the `content` attribute. When none is present, the value of the attribute should be considered as a whole. See [meta-refresh](https://www.w3.org/TR/html/document-metadata.html#statedef-http-equiv-refresh) for parsing instructions.
-
- ## Assumptions  
+## Assumptions  
 
 - This test assumes no functionality was provided by the website for the user to adjust the timer. 
 
@@ -60,24 +58,6 @@ There are no major accessibility support issues known for this rule.
   </head>  
 ```
 
-```html
-<head>
-<meta http-equiv=refresh content=" -00.12 foo">
-</head>
-```
-
-```html
-<head>
-<meta http-equiv="refresh" content="; 30">
-</head>
-```
-
-```html
-<head>
-<meta http-equiv="refresh" content="">
-</head>
-```
-
 html```
 <!-- first valid <meta http-equiv="refresh"> redirects immediately  -->
 <head>
@@ -87,20 +67,9 @@ html```
 ```
 
 html```
+<!-- redirects immediately -->
 <head>
   <meta http-equiv="refresh" content="0 http://example.com" />
-</head>
-```
-
-html```
-<head>
-  <meta http-equiv="refresh" content=" http://example.com" />
-</head>
-```
-
-html```
-<head>
-  <meta http-equiv="refresh" content="http://example.com" />
 </head>
 ```
 
@@ -121,7 +90,7 @@ html```
 ```
 
 html```
-<!-- first <meta http-equiv="refresh"> element is not valid -->
+<!-- first <meta http-equiv="refresh"> element is not valid, second one redirects after 5 seconds -->
 <head>
   <meta http-equiv="refresh" content="0: http://example.com" />
   <meta http-equiv="refresh" content="5; http://example.com" />
@@ -158,8 +127,43 @@ html```
 ```
 
 html```
-<!-- <meta http-equiv="refresh"> element is not valid -->
+<!-- content attribute is invalid and therefore inapplicable. -->
 <head>
   <meta http-equiv="refresh" content="0: http://example.com" />
+</head>
+```
+
+```html
+<!-- content attribute is invalid and therefore inapplicable. -->
+<head>
+<meta http-equiv=refresh content=" -00.12 foo">
+</head>
+```
+
+```html
+<!-- content attribute is invalid and therefore inapplicable. -->
+<head>
+<meta http-equiv="refresh" content="; 30">
+</head>
+```
+
+```html
+<!-- content attribute is invalid and therefore inapplicable. -->
+<head>
+<meta http-equiv="refresh" content="">
+</head>
+```
+
+html```
+<!-- content attribute is invalid and therefore inapplicable. -->
+<head>
+  <meta http-equiv="refresh" content="http://example.com" />
+</head>
+```
+
+html```
+<!-- content attribute is invalid and therefore inapplicable. -->
+<head>
+  <meta http-equiv="refresh" content=" http://example.com" />
 </head>
 ```

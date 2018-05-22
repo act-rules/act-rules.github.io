@@ -3,7 +3,7 @@ rule_id: SC2-4-4+SC4-1-2-link-names
 name: Links have an accessible name
 test_mode: automatic
 
-criteria:
+success_criterion:
 - 2.4.4 # Link Purpose (In Context) (Level A)
 - 4.1.2 # Name, Role, Value (Level A)
 

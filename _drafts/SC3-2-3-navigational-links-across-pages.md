@@ -3,7 +3,7 @@ rule_id: SC3-2-3-navigational-links-across-pages
 name: Presentation of navigational components
 test_mode: automatic
 
-criteria:
+success_criterion:
 - 3.2.3 # Consistent Navigation
 
 authors:

@@ -3,7 +3,7 @@ rule_id: SC2-2-2-pause-stop-hide
 name: Pause, stop, hide
 test_mode: semi-automatic
 
-criteria:
+success_criterion:
 - 2.2.2 # Pause, Stop, Hide (level A)
 
 authors:

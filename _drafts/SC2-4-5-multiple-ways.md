@@ -3,7 +3,7 @@ rule_id: SC2-4-5-multiple-ways
 name: Multiple ways
 test_mode: manual
 
-criteria:
+success_criterion:
 - 2.4.5 # Multiple Ways
 
 authors:

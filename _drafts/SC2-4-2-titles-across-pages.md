@@ -3,7 +3,7 @@ rule_id: SC2-4-2-titles-across-pages
 name: Titles Across Pages
 test_mode: semi-automatic
 
-criteria:
+success_criterion:
 - 2.4.2 # Page Titled (Level A)
 
 authors:

@@ -91,10 +91,10 @@ _There are no major accessibility support issues known for this rule._
 ```html
 <html>
   <head>
-    <title> <!-- this page has an empty first title --> </title>
+    <title>Title of the page.</title>
   </head>
   <body>
-    <title>Title of the page.</title>
+     <title> <!-- empty title --> </title> 
   </body>
 </html>
 ```
@@ -116,6 +116,17 @@ _There are no major accessibility support issues known for this rule._
 ```html
 <html>
   <iframe src="../test-assets/sc2-4-2-title-page-with-title.html"></iframe>
+</html>
+```
+
+```html
+<html>
+  <head>
+    <title> <!-- this page has an empty first title --> </title>
+  </head>
+  <body>
+    <title>Title of the page.</title>
+  </body>
 </html>
 ```
 

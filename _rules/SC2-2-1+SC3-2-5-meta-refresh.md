@@ -29,7 +29,7 @@ The `time` of the `content` attribute, when parsed according to [Refresh state (
 
 ## Assumptions  
 
-- This test assumes no functionality was provided by the website for the user to adjust the timer. 
+This test assumes no functionality was provided by the website for the user to adjust the timer. 
 
 ## Accessibility Support 
 
@@ -49,16 +49,16 @@ There are no major accessibility support issues known for this rule.
 <!-- redirects immediately -->
   <head>           
     <meta http-equiv="refresh" content="0; URL='https://auto-wcag.github.io/auto-wcag/'" />    
-  </head>  
+  </head>  
 ```
 
 ```html
   <head>           
     <meta http-equiv="refresh" content="foo; URL='https://auto-wcag.github.io/auto-wcag/'" />    
-  </head>  
+  </head>
 ```
 
-html```
+```html
 <!-- first valid <meta http-equiv="refresh"> redirects immediately  -->
 <head>
   <meta http-equiv="refresh" content="0; http://example.com" />
@@ -66,7 +66,7 @@ html```
 </head>
 ```
 
-html```
+```html
 <!-- redirects immediately -->
 <head>
   <meta http-equiv="refresh" content="0 http://example.com" />
@@ -89,7 +89,7 @@ html```
 </head>
 ```
 
-html```
+```html
 <!-- first <meta http-equiv="refresh"> element is not valid, second one redirects after 5 seconds -->
 <head>
   <meta http-equiv="refresh" content="0: http://example.com" />
@@ -126,7 +126,7 @@ html```
 </head>
 ```
 
-html```
+```html
 <!-- content attribute is invalid and therefore inapplicable. -->
 <head>
   <meta http-equiv="refresh" content="0: http://example.com" />
@@ -154,14 +154,14 @@ html```
 </head>
 ```
 
-html```
+```html
 <!-- content attribute is invalid and therefore inapplicable. -->
 <head>
   <meta http-equiv="refresh" content="http://example.com" />
 </head>
 ```
 
-html```
+```html
 <!-- content attribute is invalid and therefore inapplicable. -->
 <head>
   <meta http-equiv="refresh" content=" http://example.com" />

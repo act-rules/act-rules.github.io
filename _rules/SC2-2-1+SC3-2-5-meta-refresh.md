@@ -19,13 +19,15 @@ authors:
 
 ### Applicability
 
-The rule applies to any `content` attribute in a `meta` element that contains the `http-equiv` attribute with value `"refresh"` (case-insensitive).
+The rule applies to the first valid `<meta http-equiv="refresh">` element with a `content` attribute in a document.
+
+**Note**: See [meta-refresh](https://www.w3.org/TR/html/document-metadata.html#statedef-http-equiv-refresh) for validity of `<meta http-equiv="refresh">` element.
 
 ### Expectation
 
-The value before the first semicolon or comma (representing seconds) of the value of the `content` attribute is not a number greater than 0.
+The value before the first semicolon, comma or space (representing seconds) of the value of the `content` attribute is not a number greater than 0.
 
-**Note**: Semi-colon or comma is optional in the `content` attribute. When none is present, the value of the attribute should be considered as a whole. See [meta-refresh](https://www.w3.org/TR/html51/document-metadata.html#statedef-http-equiv-refresh) for parsing instructions.
+**Note**: Semi-colon, comma or space is optional in the `content` attribute. When none is present, the value of the attribute should be considered as a whole. See [meta-refresh](https://www.w3.org/TR/html/document-metadata.html#statedef-http-equiv-refresh) for parsing instructions.
 
  ## Assumptions  
 
@@ -46,6 +48,7 @@ There are no major accessibility support issues known for this rule.
 ### Passed
 
 ```html
+<!-- redirects immediately -->
   <head>           
     <meta http-equiv="refresh" content="0; URL='https://auto-wcag.github.io/auto-wcag/'" />    
   </head>  
@@ -69,40 +72,94 @@ There are no major accessibility support issues known for this rule.
 </head>
 ```
 
+```html
+<head>
+<meta http-equiv="refresh" content="">
+</head>
+```
+
+html```
+<!-- first valid <meta http-equiv="refresh"> redirects immediately  -->
+<head>
+  <meta http-equiv="refresh" content="0; http://example.com" />
+  <meta http-equiv="refresh" content="5; http://example.com" />
+</head>
+```
+
+html```
+<head>
+  <meta http-equiv="refresh" content="0 http://example.com" />
+</head>
+```
+
+html```
+<head>
+  <meta http-equiv="refresh" content=" http://example.com" />
+</head>
+```
+
+html```
+<head>
+  <meta http-equiv="refresh" content="http://example.com" />
+</head>
+```
+
 ### Failed
 
 ```html
+<!-- refreshes after 30 seconds -->
 <head>
 <meta http-equiv="refresh" content="30">
 </head>
 ```
+
 ```html
+<!-- redirects after 30 seconds -->
 <head>
 <meta http-equiv="refresh" content="30; URL='https://auto-wcag.github.io/auto-wcag/'">
 </head>
 ```
 
+html```
+<!-- first <meta http-equiv="refresh"> element is not valid -->
+<head>
+  <meta http-equiv="refresh" content="0: http://example.com" />
+  <meta http-equiv="refresh" content="5; http://example.com" />
+</head>
+```
+
 ### Inapplicable
 ```html
+<!-- no content attribute -->
 <head>
 <meta http-equiv="refresh">
 </head>
 ```
 
 ```html
+<!-- no content attribute -->
 <head>
 <meta http-equiv="">
 </head>
 ```
 
 ```html
+<!-- no http-equiv="refresh" attribute -->
 <head>
 <meta content="30">
 </head>
 ```
 
 ```html
+<!-- no http-equiv="refresh" or content attribute -->
 <head>
 <meta>
+</head>
+```
+
+html```
+<!-- <meta http-equiv="refresh"> element is not valid -->
+<head>
+  <meta http-equiv="refresh" content="0: http://example.com" />
 </head>
 ```

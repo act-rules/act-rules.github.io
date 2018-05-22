@@ -2,7 +2,7 @@
 name: SC3-1-1-html-xml-lang-match
 
 description: |
- The rule checks that for the `html` element, there is no mismatch between the primary language in `lang` and `xml:lang` attributes, if both are used.
+ The rule checks that for the `html` element, there is no mismatch between the primary language in [non-empty][] `lang` and `xml:lang` attributes, if both are used, and that it conforms to [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt).
 
 success_criterion:
 - 3.1.1
@@ -19,18 +19,18 @@ authors:
 
 ### Applicability
 
-The root node of the page, if it is an `html` element with both [non-empty][] `lang` and `xml:lang` attributes.
+The root element of the page, if it is an `html` element with both [non-empty][] `lang` and `xml:lang` attributes.
 
 ### Expectation
 
 The value of the primary language sub-tag for the `lang` and `xml:lang` attributes are the same.
 
-**Note:** Language tags are not case sensitive.
+**Note**: HTML 5 specification requires the `lang` and `xml:lang` attributes to match exactly. This is not known to impact accessibility, which is why it is permitted in this rule.
 
 
 ## Assumptions
 
-- Although there is no known way that an inappropriate secondary sub-tag in the lang or xml:lang attribute (such as "en-XYZ") can lead to accessibility issues, it is conceivable that with specific assistive technologies on some languages, there can be exceptions. In that case lang and xml:lang should have matching secondary sub-tags.
+- Although there is no known way that an inappropriate secondary sub-tag in the `lang` or `xml:lang` attribute (such as "en-XYZ") can lead to accessibility issues, it is conceivable that with specific assistive technologies on some languages, there can be exceptions. In that case `lang` and `xml:lang` should have matching secondary sub-tags.
 
 ## Accessibility Support
 

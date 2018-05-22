@@ -11,9 +11,7 @@ test_aspects:
 
 authors:
 - Bryn Anderson
-- Jey Nandakumar
-- Kamyar Rasta
-- Wilco Fiers
+- Anne Thyme
 ---
 
 ## Test procedure

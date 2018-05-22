@@ -1,5 +1,5 @@
 ---
-title: Visible to the Page.
+title: Visible on the Page.
 ---
 
 Elements should be visible on the page, and also meet the requirements for color contrast and visibility when focused. For more details, check out:

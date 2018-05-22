@@ -19,13 +19,11 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML or SVG element with the semantic role of `link` that are [visible on the page][] or [exposed to assistive technologies][].
-
-**Note**: Roles can be [implicit](https://www.w3.org/TR/html-aria/#dfn-implicit-aria-semantics) through the element name or explicit through the [role attribute](https://www.w3.org/TR/html52/dom.html#aria-role-attribute).
+The rule applies to any HTML or SVG element with the [semantic role][] of `link` that is [visible on the page][] or [exposed to assistive technologies][].
 
 ### Expectation
 
-Each target element has an [accessible name][] that is [non-empty][]
+Each target element has an [accessible name][] that is [non-empty][].
 
 ## Assumptions
 
@@ -41,7 +39,6 @@ There are no major accessibility support issues known for this rule.
 - [ARIA7: Using aria-labelledby for link purpose](https://www.w3.org/TR/WCAG20-TECHS/ARIA7.html)
 - [ARIA8: Using aria-label for link purpose](https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html)
 - [F89: Failure of Success Criteria 2.4.4, 2.4.9 and 4.1.2 due to using null alt on an image where the image is the only content in a link](http://www.w3.org/TR/WCAG20-TECHS/F89.html)
-- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible auto-wcag refers to those. Another source for test cases is the W3C Before and After Demonstration.
 
 ## Test Cases
 
@@ -83,6 +80,7 @@ There are no major accessibility support issues known for this rule.
 ```
 
 ### Inapplicable
+
 ```html
 <a href="http://www.w3.org/WAI" role="button">Web Accessibility Initiative (WAI)</a>
 ```
@@ -91,5 +89,6 @@ There are no major accessibility support issues known for this rule.
 
 [non-empty]: ../pages/algorithms/non-empty.html
 [accessible name]: ../pages/algorithms/accessible-name.html 
+[semantic role]: ../pages/algorithms/semantic-role.html 
 [exposed to assistive technologies]: ../pages/algorithms/exposed-to-assistive-technologies.html
 [visible on the page]: ../pages/algorithms/visible-on-the-page.html

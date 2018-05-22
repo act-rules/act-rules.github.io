@@ -1,5 +1,5 @@
 ---
-name: Existence of HTML Lang attribute
+name: HTML has lang attribute
 
 description: |
   This rule checks that the `html` element has a [non-empty][] `lang` or `xml:lang` attribute.
@@ -23,7 +23,7 @@ The root element of the page, if it is an `html` element.
 
 ### Expectation
 
-The test target has a `lang` or `xml:lang` attribute.
+The test target has a [non-empty][] `lang` or `xml:lang` attribute.
 
 **Note**: HTML5 recommends using `lang` instead of `xml:lang`. This is not known to impact accessibility, which is why use of both is permitted by this rule.
 
@@ -65,6 +65,14 @@ There are known combinations of a popular operating system with browsers and ass
 
 ```html
 <html xml:lang="en" lang="">
+```
+
+```html
+<html lang="xyz">
+```
+
+```html
+<html xml:lang="xyz">
 ```
 
 ### Failed

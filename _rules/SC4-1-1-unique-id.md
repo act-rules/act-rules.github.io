@@ -18,11 +18,11 @@ authors:
 
 ### Applicability
 
-Each test target has an `id` attribute that is unique within the [document context](https://github.com/auto-wcag/auto-wcag/pull/110/files#insert-link-here) of the element.
+Any element that has an `id` attribute within a document.
 
 ### Expectation
 
-All `id` attribute values are unique.
+Each test target has an `id` attribute value that is unique within the [document context][] of the element.
 
 ## Assumptions
 
@@ -33,6 +33,7 @@ There are currently no assumptions.
 There are no major accessibility support issues known for this rule.
 
 ## Background
+
 - https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=411#qr-ensure-compat-parses
 - https://www.w3.org/TR/WCAG20-TECHS/H93.html
 - https://www.w3.org/TR/WCAG20-TECHS/H94.html
@@ -86,3 +87,5 @@ There are no major accessibility support issues known for this rule.
 ```html
 <div xml:id="my-div">This is my first element</div>
 ```
+
+[document context]: ../pages/algorithms/document-context.html

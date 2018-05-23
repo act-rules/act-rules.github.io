@@ -1,8 +1,8 @@
 ---
-name: Validity of lang attribute value in html body elements
+name: Valid body lang attribute
 
 description:
-- This rule checks that `lang` or `xml:lang` attribute on elements within the `body` of a web page conforms to [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt).
+- This rule checks that `lang` or `xml:lang` attributes on elements within the `body` of a web page conforms to [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt).
 
 success_criterion:
 - 3.1.2
@@ -19,14 +19,14 @@ authors:
 
 ### Applicability
 
-- Any DOM element, within the `body` of a webpage with a [non-empty][] `lang` or `xml:lang` attribute.
+Any DOM element, within the `body` of a webpage with a [non-empty][] `lang` or `xml:lang` attribute.
 
 **Note**: To retrieve all DOM elements with a `lang` or `xml:lang` attribute, other than the root element use -
 `descendent-or-self::body[@lang]` -or-  `descendent-or-self::body[@xml:lang]`.
 
 ### Expectation
 
-- The value of the `lang` or `xml:lang` conforms to [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt).
+The value of the `lang` or `xml:lang` conforms to [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt).
 
 ## Assumptions
 
@@ -73,6 +73,10 @@ authors:
 
 ```html
 <article lang=""></article>
+```
+
+```html
+<article xml:lang=""></article>
 ```
 
 [non-empty]: ../pages/algorithms/non-empty.html

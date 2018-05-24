@@ -3,7 +3,7 @@ rule_id: SC3-2-2-input-select
 name: 
 test_mode: semi-automatic
 
-criteria:
+success_criterion:
 - 3.2.2 # On Input
 
 authors:
@@ -41,6 +41,8 @@ This test checks form controls outside form elements.
 Test mode: [automatic][AUTO]
 
 Select `input[@type='radio']`, `input[@type='checkbox']`, or select not contained in a form element.
+
+For each selected item, go through the following steps:
 
 ### Step 1
 

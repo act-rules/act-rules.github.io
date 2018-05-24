@@ -3,7 +3,7 @@ rule_id: SC1-3-1-tables-layout
 name: Tables Layout
 test_mode: semi-automatic
 
-criteria:
+success_criterion:
 - 1.3.1 # Info and relationships (level A)
 
 authors:
@@ -61,6 +61,8 @@ In addition, select tables with all of the following characteristics (see condit
 - Tables with no designated header cells (`th` elements or `td>` elements with ARIA roles rowheader and columnheader.
 - No `caption` tag
 - No (or empty) summary attribute
+
+For each selected item, go through the following steps:
 
 ### Step 1 - Check if actual data tables have wrongly been marked as presentational using ARIA
 

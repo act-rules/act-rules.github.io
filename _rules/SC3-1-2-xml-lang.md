@@ -33,6 +33,8 @@ Select all elements that match the following XPATH selector:
 
     descendent-or-self::body[@xml:lang]
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 Check that the selected element contains also a `lang` attribute.

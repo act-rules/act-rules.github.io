@@ -3,7 +3,7 @@ rule_id: SC3-2-2-form-submit
 name: 
 test_mode: semi-automatic
 
-criteria:
+success_criterion:
 - 3.2.2 # On Input
 
 authors:
@@ -40,6 +40,8 @@ This test checks that forms with submit button initiate a change of context only
 Test mode: [automatic][AUTO]
 
 Select form element with submit button (`input[@type='submit'] or input[@type='image'] or button[@type='submit']`).
+
+For each selected item, go through the following steps:
 
 ### Step 1
 

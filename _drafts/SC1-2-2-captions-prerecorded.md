@@ -3,7 +3,7 @@ rule_id: SC1-2-2-captions-prerecorded
 name: Captions on prerecorded synchronized media
 test_mode: semi-automatic
 
-criteria:
+success_criterion:
 - 1.2.2 # Captions (Prerecorded) (Level A)
 
 authors:
@@ -48,6 +48,8 @@ All pages including elements capable of playing video.
 Those can be identified by including elements having an attribute value containing a media file format, such as  .mov, .rm, .ram, .asf, .swf, .dcr, .avi, .mpg, .mpeg, .mp4, .m4v, .webm, .flv, .isma
 
     XPath: //*[contains(@*,'.mov') or contains(@*,'.rm') or ... ]
+
+For each selected item, go through the following steps:
 
 ### Step 1
 Test method: [manual]

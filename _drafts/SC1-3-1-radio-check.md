@@ -3,7 +3,7 @@ rule_id: SC1-3-1-radio-check
 name: 
 test_mode: automatic
 
-criteria:
+success_criterion:
 - 1.3.1 # Info and relationships (level A)
 
 authors:
@@ -43,6 +43,8 @@ Select any radio buttons and check boxes. The following CSS selector could be us
 ```CSS
 input[type=radio], input[type=checkbox]
 ```
+
+For each selected item, go through the following steps:
 
 ### Step 1
 

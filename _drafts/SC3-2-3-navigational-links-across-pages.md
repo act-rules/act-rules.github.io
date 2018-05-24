@@ -3,7 +3,7 @@ rule_id: SC3-2-3-navigational-links-across-pages
 name: Presentation of navigational components
 test_mode: automatic
 
-criteria:
+success_criterion:
 - 3.2.3 # Consistent Navigation
 
 authors:
@@ -51,6 +51,8 @@ Select the following elements:
 - Lists nested within other lists are considered a single list. From them the outermost list element or nav element is selected.
 
 N1 = list of all selected elements.
+
+For each selected item, go through the following steps:
 
 ### Step 1
 

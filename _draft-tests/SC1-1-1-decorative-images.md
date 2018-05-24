@@ -5,6 +5,13 @@ success_criterion:
 - 1.1.1 # Non-text Content (level A)
 ---
 
+---
+rule_id: SC1-1-1-decorative-images
+
+success_criterion:
+- 1.1.1 # Non-text Content (level A)
+---
+
 <h2>inapplicable</h2>
 
 <p><strong>To do</strong></p>

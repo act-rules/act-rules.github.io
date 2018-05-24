@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Ccontribute to Auto-WCAG
+title: Contribute to Auto-WCAG
 ---
 
 Auto-WCAG is a group open to anyone interested in accessibility, accessibility testing or automated testing. We welcome contributions from anyone, either though Github issues and pull requests, or by contribution to our monthly teleconferences.
@@ -21,8 +21,6 @@ The best way to stay informed about the activities of Auto-WCAG is to become a m
    This request will be sent to your organization's representative in the W3C's
    Advisory Committee.
 
-## Participate in our montly calls
+## Participate in our monthly calls
 
-Auto-WCAG has conference calls every 4 weeks on Thursdays at 16:00 Central European Time. Participating in these calls is the easiest way to become an active contributor. The invitation and agenda for these meetings is sent out through the mailing list a few days in advance.
-
-
+Auto-WCAG has conference calls every month (usually) on the second Thursdays at 16:00 Central European Time. Participating in these calls is the easiest way to become an active contributor. The invitation and agenda for these meetings is sent out through the mailing list a few days in advance.

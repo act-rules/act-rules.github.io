@@ -3,7 +3,7 @@ rule_id: SC1-3-1-p-as-heading
 name:
 test_mode: semi-automatic
 
-criteria:
+success_criterion:
 - 1.3.1 # Info and relationships (level A)
 
 authors:
@@ -38,6 +38,8 @@ Select each `p` element that meets the following:
 - It has one or more sibling `p` elements after it
 - It does not contain a text paragraph (see definition)
 - It does not have a role attribute
+
+For each selected item, go through the following steps:
 
 ### Step 1: Differing style
 

@@ -3,7 +3,7 @@ rule_id: SC4-1-2-user-input
 name: 
 test_mode: automatic
 
-criteria:
+success_criterion:
 - 4.1.2 # Name, Role, Value
 
 authors:
@@ -40,6 +40,8 @@ This test checks the existence of associated labels at every form control that t
 Test mode: [automatic][AUTO]
 
 Select every `input` element, except for elements of the `type` hidden, button, image and submit, as well as any `select` and `textarea` elements
+
+For each selected item, go through the following steps:
 
 ### Step 1
 

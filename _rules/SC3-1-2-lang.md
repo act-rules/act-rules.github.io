@@ -36,6 +36,8 @@ Select all elements that match the following XPATH selector:
 
 This test is applied to all elements with `lang` attribute in the body of the web page (including the body element itself).
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 L1 = value of `lang` attribute.

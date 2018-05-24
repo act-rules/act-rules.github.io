@@ -3,7 +3,7 @@ rule_id: SC2-4-4+SC4-1-2-anchors-have-names
 name: Anchor elements have a name
 test_mode: automatic
 
-criteria:
+success_criterion:
 - 2.4.4 # Link Purpose (In Context) (Level A)
 - 4.1.2 # Name, Role, Value (Level A)
 
@@ -40,6 +40,8 @@ This rule checks that all links have a name.
 Test mode: [automatic][AUTO]
 
 Select the following elements: `a[href]`.
+
+For each selected item, go through the following steps:
 
 ### Step 1
 

@@ -3,7 +3,7 @@ rule_id: SC4-1-2-frame
 name: Proper use of aria-describedby
 test_mode: semi-automatic
 
-criteria:
+success_criterion:
 - 4.1.2 # Name, Role, Value (Level A)
 
 authors:
@@ -39,6 +39,8 @@ This test case checks that frames and iframes have a none-empty title attribute
 Test mode: [automatic][AUTO]
 
 Select any frame or iframe element.
+
+For each selected item, go through the following steps:
 
 ### Step 1
 

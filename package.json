@@ -1,0 +1,21 @@
+{
+  "name": "auto-wcag",
+  "version": "1.0.0",
+  "description": "auto-wcag",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bundle exec jekyll serve",
+    "proof": "bundle exec jekyll build && bundle exec htmlproofer ./_site --only-4xx --check-html --allow_hash_href --assume-extension --alt-ignore '/.*/'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auto-wcag/auto-wcag.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/auto-wcag/auto-wcag/issues"
+  },
+  "homepage": "https://github.com/auto-wcag/auto-wcag#readme"
+}

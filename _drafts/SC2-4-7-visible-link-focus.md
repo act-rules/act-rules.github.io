@@ -3,7 +3,7 @@ rule_id: SC2-4-7-visible-link-focus
 name: 
 test_mode: automatic
 
-criteria:
+success_criterion:
 - 2.4.7 # Focus Visible
 
 authors:
@@ -43,6 +43,8 @@ This test checks that if links receive focus their style is changed in such a wa
 Test mode: [automatic][AUTO]
 
 Select each visible anchor element on the page which does not have a negative tabindex attribute set
+
+For each selected item, go through the following steps:
 
 ### Step 1: Outline visibility
 

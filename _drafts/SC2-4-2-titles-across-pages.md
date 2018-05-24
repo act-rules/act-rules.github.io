@@ -3,7 +3,7 @@ rule_id: SC2-4-2-titles-across-pages
 name: Titles Across Pages
 test_mode: semi-automatic
 
-criteria:
+success_criterion:
 - 2.4.2 # Page Titled (Level A)
 
 authors:
@@ -45,7 +45,9 @@ All pages tested should be on the same website (with same domain). Page titles o
 Test mode: [automatic][AUTO]
 
 Extract `title` element from the `head` section of all pages in the collection. To create a page collection, follow all links from the page currently being tested, include all pages on same domain. Exclude all pages with no title elements or multiple title elements (they are covered in a different test).
- 
+
+For each selected item, go through the following steps:
+
 ### Step 1
 
 Test mode: [automatic][AUTO]

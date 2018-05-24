@@ -3,7 +3,7 @@ rule_id: SC1-2-2-video-element
 name: 
 test_mode: semi-automatic
 
-criteria:
+success_criterion:
 - 1.2.2 # Captions (Prerecorded) (Level A)
 
 authors:
@@ -44,6 +44,8 @@ http://www.bitvtest.de/infothek/artikel/lesen/talking-head-captions.html
 Test mode: [automatic][AUTO]
 
 `video` element containing a `track` attribute
+
+For each selected item, go through the following steps:
 
 ### Step 1
 

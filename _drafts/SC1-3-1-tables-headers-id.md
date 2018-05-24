@@ -32,6 +32,8 @@ This rule checks that data table `headers` attributes have values that reference
 
 Select all elements that match `th[headers]` or `td[headers]`.
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 For each value in each cell `headers` attribute,

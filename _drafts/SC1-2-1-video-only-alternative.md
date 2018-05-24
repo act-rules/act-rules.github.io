@@ -3,7 +3,7 @@ rule_id: SC1-2-1-video-only-alternative
 name: 
 test_mode: semi-automatic
 
-criteria:
+success_criterion:
 - 1.2.1 # Audio-only and Video-only (Prerecorded) (Level A)
 
 authors:
@@ -47,6 +47,8 @@ This procedure describes those situations
 Test mode: [automatic][AUTO]
 
 `video` element not containing a `track` attribute
+
+For each selected item, go through the following steps:
 
 ### Step 1
 

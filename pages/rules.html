@@ -3,7 +3,7 @@ layout: default
 title: Auto-WCAG Rules
 ---
 
-<table>
+<table class="table table-striped table-hover">
   <thead>
     <tr>
       <th>Rule name</th>
@@ -15,7 +15,7 @@ title: Auto-WCAG Rules
   <tr>
     <th><a href="{{ rule.url | prepend: site.baseurl }}">{{
       rule.name
-    }}<br>(<i>{{ rule.rule_id }}</i>)</a></th>
+    }}<br>(<i>{{ rule.url | remove: "/rules/" | remove: ".html" }}</i>)</a></th>
     <td>{{ rule.test_mode }}</td>
     <td><ul>
       {% for criterion in rule.success_criterion %}

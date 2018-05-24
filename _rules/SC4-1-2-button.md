@@ -15,6 +15,8 @@ author:
 
 This test checks if every button element has a name.
 
+For each selected item, go through the following steps:
+
 ## Background
 
 - [H91: Using HTML form controls and links](http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/H91.html)

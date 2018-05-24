@@ -40,6 +40,7 @@ Exclude elements from the list of selected elements if:
 
   - They are `img` or `[role=image]` elements, and the button or link that contains it contains additional [non-text content][] or images.
 
+For each selected item, go through the following steps:
 
 ### Step 1
 

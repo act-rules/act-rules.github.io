@@ -3,7 +3,7 @@ rule_id: SC1-3-1-table-caption
 name: 
 test_mode: automatic
 
-criteria:
+success_criterion:
 - 1.3.1 # Info and relationships (level A)
 
 authors:
@@ -41,6 +41,8 @@ No assumptions yet
 Test mode: [automatic][AUTO]
 
 `table` Elements that have both a `summary` attribute and a `caption` element.
+
+For each selected item, go through the following steps:
 
 ### Step 1
 

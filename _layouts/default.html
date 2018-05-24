@@ -1,176 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-{% if page.rule_id and page.layout == 'rule' %}
-  {% assign page_title = page.rule_id | prepend: "Rule: " %}
-{% else %}
-  {% if page.rule_id and page.layout == 'testcase' %}
-    {% assign page_title = page.rule_id | prepend: "Test Cases for " %}
-  {% else %}
-    {% assign page_title = page.title %}
-  {% endif %}
-{% endif %}
-  <title>
-     {{ page_title }} - {{ site.title | escape }}
-  </title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <head>
+    <meta charset="utf-8">
+    {% if page.rule_id and page.layout == 'rule' %}
+      {% assign page_title = page.rule_id | prepend: "Rule: " %}
+    {% else %}
+      {% if page.rule_id and page.layout == 'testcase' %}
+        {% assign page_title = page.rule_id | prepend: "Test Cases for " %}
+      {% else %}
+        {% assign page_title = page.title %}
+      {% endif %}
+    {% endif %}
+    <title>
+      {{ page_title }} - {{ site.title | escape }}
+    </title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  </head>
+  <body>
 
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap.min.css">
-</head>
-<body>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" 
+            class="navbar-toggle collapsed" 
+            data-toggle="collapse" 
+            data-target="#navbar" 
+            aria-expanded="false" 
+            aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" 
+            href="{{ site.baseurl }}/">
+              Auto-WCAG
+          </a>
+        </div>
+        <div id="navbar" 
+          class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="{{ site.baseurl }}/pages/rules.html">Rules</a>
+            </li>
+            <li>
+              <a href="{{ site.baseurl }}/pages/drafts.html">Drafts</a>
+            </li>
+            
+            <!-- Rule Creation -->
+            <li class="dropdown">
+              <a href="#" 
+                class="dropdown-toggle" 
+                data-toggle="dropdown" 
+                role="button" 
+                aria-haspopup="true" 
+                aria-expanded="false">
+                Rule Creation <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="{{ site.baseurl }}/pages/design/rule-design.html">
+                    Rule design
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ site.baseurl }}/pages/design/review.html">
+                    Review process
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ site.baseurl }}/pages/design/rule-template.html">
+                    Rule template
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ site.baseurl }}/pages/design/test-template.html">
+                    Test case template
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ site.baseurl }}/pages/design/style-guide.html">
+                    Style guide
+                  </a>
+                </li>
+              </ul>
+            </li>
 
-<nav class="navbar navbar-inverse">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="{{ site.baseurl }}/">
-        Auto-WCAG
-      </a>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
+            <!-- Rule Structure -->
+            <li class="dropdown">
+              <a href="#" 
+                class="dropdown-toggle" 
+                data-toggle="dropdown" 
+                role="button" 
+                aria-haspopup="true" 
+                aria-expanded="false">
+                Rule Structure <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="{{ site.baseurl }}/pages/structure/terminology.html">Terminology</a>
+                </li>
+                <li>
+                  <a href="{{ site.baseurl }}/pages/structure/test-modes.html">Test modes</a>
+                </li>
+                <li>
+                  <a href="{{ site.baseurl }}/pages/algorithms/">Algorithms</a>
+                </li>
+                <li>
+                  <a href="{{ site.baseurl }}/pages/structure/aggregation.html">Result aggregation</a>
+                </li>
+                <li>
+                  <a href="{{ site.baseurl }}/pages/structure/user-questions.html">User questions</a>
+                </li>
+                <li>
+                  <a href="{{ site.baseurl }}/pages/structure/accessibility-support.html">Accessibility support</a>
+                </li>
+              </ul>
+            </li>
 
-        <li><a href="{{ site.baseurl }}/pages/rules.html">Rules</a></li>
-        <li><a href="{{ site.baseurl }}/pages/drafts.html">Drafts</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-          role="button" aria-haspopup="true" aria-expanded="false">
-            Rule Creation
-          <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="{{ site.baseurl }}/pages/design/rule-design.html">
-              Rule design
-            </a></li>
-            <li><a href="{{ site.baseurl }}/pages/design/review.html">
-              Review process
-            </a></li>
-            <li><a href="{{ site.baseurl }}/pages/design/rule-template.html">
-              Rule template
-            </a></li>
-            <li><a href="{{ site.baseurl }}/pages/design/test-template.html">
-              Test case template
-            </a></li>
-            <li><a href="{{ site.baseurl }}/pages/design/style-guide.html">
-              Style guide
-            </a></li>
+            <!-- About -->
+            <li class="dropdown">
+              <a href="#" 
+                class="dropdown-toggle" 
+                data-toggle="dropdown" 
+                role="button" 
+                aria-haspopup="true" 
+                aria-expanded="false">
+                About <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="{{ site.baseurl }}/pages/about.html">About Us</a>
+                </li>
+                <li>
+                  <a href="{{ site.baseurl }}/pages/contribute.html">How to contribute</a>
+                </li>
+                <li>
+                  <a href="https://github.com/auto-wcag/auto-wcag/">GitHub repository</a>
+                </li>
+              </ul>
+            </li>
+
           </ul>
-        </li>
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-          role="button" aria-haspopup="true" aria-expanded="false">
-            Rule Structure
-          <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="{{ site.baseurl }}/pages/structure/terminology.html">
-              Terminology
-            </a></li>
-            <li><a href="{{ site.baseurl }}/pages/structure/test-modes.html">
-              Test modes
-            </a></li>
-            <li><a href="{{ site.baseurl }}/pages/algorithms/">
-              Algorithms
-            </a></li>
-            <li><a href="{{ site.baseurl }}/pages/structure/aggregation.html">
-              Result aggregation
-            </a></li>
-            <li><a href="{{ site.baseurl }}/pages/structure/user-questions.html">
-              User questions
-            </a></li>
-            <li><a href="{{ site.baseurl }}/pages/structure/accessibility-support.html">
-              Accessibility support
-            </a></li>
-          </ul>
-        </li>
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-          role="button" aria-haspopup="true" aria-expanded="false">
-            About Auto-WCAG
-          <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="{{ site.baseurl }}/pages/about.html">
-              About Us
-            </a></li>
-            <li><a href="{{ site.baseurl }}/pages/contribute.html">
-              How to contribute
-            </a></li>
-            <li><a href="https://github.com/auto-wcag/auto-wcag/">GitHub repository</a></li>
-          </ul>
-        </li>
-
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div>
-</nav>
-
-<main class="container">
-  {% if page_title %}
-    <h1>{{ page_title }}</h1>
-  {% endif %}
-
-  {{ content }}
-</main>
-
-<footer id="footer"><nav class="container"><div class="row">
-  <div class="col-sm-4">
-    <h2>Rule Creation</h2>
-    <ul>
-      <li><a href="{{ site.baseurl }}/pages/design/rule-design.html">
-        Rule design
-      </a></li>
-      <li><a href="{{ site.baseurl }}/pages/design/review.html">
-        Review process
-      </a></li>
-      <li><a href="{{ site.baseurl }}/pages/design/rule-template.html">
-        Rule template
-      </a></li>
-      <li><a href="{{ site.baseurl }}/pages/design/style-guide.html">
-        Style guide
-      </a></li>
-    </ul>
-
-  </div> <div class="col-sm-4">
-    <h2>Rule Structure</h2>
-    <ul>
-      <li><a href="{{ site.baseurl }}/pages/structure/terminology.html">
-        Terminology
-      </a></li>
-      <li><a href="{{ site.baseurl }}/pages/structure/test-modes.html">
-        Test modes
-      </a></li>
-      <li><a href="{{ site.baseurl }}/pages/algorithms/">
-        Algorithms
-      </a></li>
-      <li><a href="{{ site.baseurl }}/pages/structure/aggregation.html">
-        Result aggregation
-      </a></li>
-      <li><a href="{{ site.baseurl }}/pages/structure/user-questions.html">
-        User questions
-      </a></li>
-      <li><a href="{{ site.baseurl }}/pages/structure/accessibility-support.html">
-        Accessibility support
-      </a></li>
-    </ul>
-
-  </div> <div class="col-sm-4">
-    <h2>About Auto-WCAG</h2>
-    <ul>
-      <li><a href="{{ site.baseurl }}/pages/about.html">
-        About Us
-      </a></li>
-      <li><a href="{{ site.baseurl }}/pages/contribute.html">
-        How to contribute
-      </a></li>
-      <li><a href="https://www.w3.org/community/auto-wcag/about-us/">GitHub repository</a></li>
-    </ul>
-  </div>
-
-</div></nav></footer>
-
-<script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
-<script src="{{ site.baseurl }}/assets/js/bootstrap.min.js"></script>
-</body>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <!-- Begin page content -->
+    <main class="container">
+      {% if page_title %}
+        <div class="page-header">
+          <h1>{{ page_title }}</h1>
+        </div>
+      {% endif %}
+      <p>
+        {{ content }}
+      </p>
+    </main>
+    
+    <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/bootstrap.min.js"></script>
+   
+  </body>
 </html>

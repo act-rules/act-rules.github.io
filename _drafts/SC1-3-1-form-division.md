@@ -3,7 +3,7 @@ rule_id: SC1-3-1-form-division
 name: 
 test_mode: automatic
 
-criteria:
+success_criterion:
 - 1.3.1 # Info and Relationships (Level A)
 
 authors:
@@ -39,6 +39,8 @@ This test checks whether or not `fieldset` elements have been used above a certa
 Test mode: [automatic][AUTO]
 
 Select any form element.
+
+For each selected item, go through the following steps:
 
 ### Step 1
 

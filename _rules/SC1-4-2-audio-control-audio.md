@@ -38,6 +38,8 @@ Select all elements that match the following XPATH selector(s):
 - `//*[self::audio` or
 - `self::video]`
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 Check if the `audio` or `video` is paused. Check `paused` property.

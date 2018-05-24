@@ -3,7 +3,7 @@ rule_id: SC1-2-1-audio-only-alternative
 name: Alternate version of prerecorded audio-only
 test_mode: manual
 
-criteria:
+success_criterion:
 - 1.2.1 # Audio-only and Video-only (Prerecorded) (Level A)
 
 authors:
@@ -51,6 +51,8 @@ Those can be identified by including
 - `audio` elements
 - elements having resources with a mimetype containing the string "audio" in their http-header
 - elements having an attribute value containing a media file format, such as .wav, .aif, .aiff, .mp3, .ogg, .oga, .mov, .mid, .rm, .ra, .ram, .wma, .asf, .swf, .dcr, .avi, .mpg, .mpeg, .mp4, .m4v, .webm, .flv, .isma   (`//*[contains(@*,'.mid') or contains(@*,'.mp3') or ... ]`)
+
+For each selected item, go through the following steps:
 
 ### Step 1
 

@@ -33,6 +33,8 @@ Select all elements that matches the following CSS selector:
 
     html[@xml:lang]
 
+For each selected item, go through the following steps:
+
 ### Step 1
 
 Check that the `html` element contains also a `lang` attribute.

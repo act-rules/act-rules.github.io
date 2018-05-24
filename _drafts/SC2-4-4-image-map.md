@@ -3,7 +3,7 @@ rule_id: SC2-4-4-image-map
 name: Area Element Has Alt Attribute
 test_mode: semi-automatic
 
-criteria:
+success_criterion:
 - 2.4.4 # Link Purpose (In Context)
 
 authors:
@@ -44,6 +44,8 @@ List of [all assumptions][ASUMPT].
 Test mode: [automatic][AUTO]
 
 Select elements using the following selector: `map[name] area`, if the `name` attribute of the `map` element is referred to by a `usemap` attribute of an `img` element in the same document.
+
+For each selected item, go through the following steps:
 
 ### Step 1: Check for non-empty `alt` attributes (H24)
 

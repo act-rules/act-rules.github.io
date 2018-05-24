@@ -3,7 +3,7 @@ rule_id: SC2-4-4-Link Purpose
 name: Link Purpose
 test_mode: semi-automatic
 
-criteria:
+success_criterion:
 - 2.4.4 # Link Purpose (In Context)
 
 authors:
@@ -48,6 +48,8 @@ Test mode: [automatic][AUTO]
 
 - All anchor tags with an `href` attribute on a webpage, excluding anchor tags that have been mapped to other elements using ARIA roles.
 - All elements with a `role="link"` attribute.
+
+For each selected item, go through the following steps:
 
 ### Step 1 - Check for Accessible Name
 

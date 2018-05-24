@@ -136,19 +136,55 @@ var trapOn = false ;
 <button id="btn2" class="target"  onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
 <a id="link2" href="#">Link 2</a>
 ```
+## Test Cases
+
+### Passed
+
+```html
+<a href ="#">Link 1</a>
+<button class="target">Button1</button>
+```
+
+```html
+<a href ="#" style="visibility: hidden;">Link 1</a>
+<button class="target" style="visibility: hidden;">Button1</button>
+```
+
+```html
+<div tabindex=“1”>Text</div>
+<!-- something with tabindex=0 ? -->
+```
+
+### Failed
+
+```html
+<a href="#">Link 1</a>
+<button class="target" onblur="setTimeout(() => this.focus(), 10)">Button1</button>
+```
+
+```html
+<button class="target" onblur="setTimeout(() => this.nextSibling.focus(), 10)">Button1</button>
+<button class="target" onblur="setTimeout(() => this.previousSibling.focus(), 10)">Button2</button>
+```
 ### Inapplicable
 
 ```html
-<!-- Not a keyboard trap (interactive element) -->
-
-<a id="link1" href="#">Link 1</a>
-<button id="btn1">Button 1</button>
-<button id="btn2">Button 2</button>
-<a id="link2" href="#">Link 2</a>
+<h1>Page 1</h1>
 ```
 
+```html
+<a href="#" tabindex="-1">Tab key cannot reach here!</a>
+<!-- Element you can't reach -->
+```
+```html
+<button type="button" disabled>Click Me!</button>
+<!-- Disabled element -->
+```
+
+```html
+<button type="button" style=“display: none;”>Click Me!</button>
+<!-- Hidden element -->
+```
 
 [focusable]: ../pages/algorithms/focusable.html
 [standard keyboard navigation]: ../pages/algorithms/standard-keyboard-navigation.html
-[visible on the page]: ../pages/algorithms/visible-on-the-page.html
-[exposed to assistive technologies]: ../pages/algorithms/exposed-to-assistive-technologies.html

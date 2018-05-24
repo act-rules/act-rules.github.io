@@ -71,10 +71,10 @@ There are no major accessibility support issues known for this rule.
 var trapOn = false ;
 </script>
 
-<p class="target">Press the Esc-key to Exit</p>
+<p class="target">Press the M-key to Exit</p>
 <a id="link1" href="#">Link 1</a>
 <button id="btn1" class="target" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">Button 1</button>
-<button id="btn2" class="target" onkeydown="(function(e){ if (e.keyCode === 27){trapOn=false;document.getElementById('link2').focus();}})(event)" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
+<button id="btn2" class="target" onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
 <a id="link2" href="#">Link 2</a>
 ```
 
@@ -87,8 +87,8 @@ var trapOn = false ;
 
 <a id="link1" href="#">Link 1</a>
 <button id="btn1" class="target" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">Button 1</button>
-<p class="target">Press the Esc-key to Exit</p>
-<button id="btn2" class="target" onkeydown="(function(e){ if (e.keyCode === 27){trapOn=false;document.getElementById('link2').focus();}})(event)" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
+<p class="target">Press the M-key to Exit</p>
+<button id="btn2" class="target" onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
 <a id="link2" href="#">Link 2</a>
 ````
 
@@ -104,7 +104,7 @@ var trapOn = false ;
 
 <a id="link1" href="#">Link 1</a>
 <button id="btn1" class="target" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">Button 1</button>
-<button id="btn2" class="target" onkeydown="(function(e){ if (e.keyCode === 27){trapOn=false;document.getElementById('link2').focus();}})(event)" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
+<button id="btn2" class="target" onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
 <a id="link2" href="#">Link 2</a>
 ````
 
@@ -118,7 +118,7 @@ var trapOn = false ;
 <p class="target">Go to the next element</p>
 <a id="link1" href="#">Link 1</a>
 <button id="btn1" class="target" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">Button 1</button>
-<button id="btn2" class="target" onkeydown="(function(e){ if (e.keyCode === 27){trapOn=false;document.getElementById('link2').focus();}})(event)" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
+<button id="btn2" class="target" onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
 <a id="link2" href="#">Link 2</a>
 ````
 
@@ -131,7 +131,7 @@ var trapOn = false ;
 
 <a id="link1" href="#">Link 1</a>
 <button id="btn1" class="target" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">Button 1</button>
-<p class="target">Press the Esc-key to Exit</p>
+<p class="target">Press the M-key to Exit</p>
 <button id="btn2" class="target"  onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
 <a id="link2" href="#">Link 2</a>
 ```

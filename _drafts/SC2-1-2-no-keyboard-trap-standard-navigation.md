@@ -67,17 +67,18 @@ There are no major accessibility support issues known for this rule.
 
 ```html
 <div tabindex=“1”>Text</div>
-<!-- something with tabindex=0 ? -->
 ```
 
 ### Failed
 
 ```html
+<!-- keyboard trap one element -->
 <a href="#">Link 1</a>
 <button class="target" onblur="setTimeout(() => this.focus(), 10)">Button1</button>
 ```
 
 ```html
+<!-- keyboard trap group -->
 <button class="target" onblur="setTimeout(() => this.nextSibling.focus(), 10)">Button1</button>
 <button class="target" onblur="setTimeout(() => this.previousSibling.focus(), 10)">Button2</button>
 ```
@@ -88,17 +89,17 @@ There are no major accessibility support issues known for this rule.
 ```
 
 ```html
-<a href="#" tabindex="-1">Tab key cannot reach here!</a>
 <!-- Element you can't reach -->
+<a href="#" tabindex="-1">Tab key cannot reach here!</a>
 ```
 ```html
-<button type="button" disabled>Click Me!</button>
 <!-- Disabled element -->
+<button type="button" disabled>Click Me!</button>
 ```
 
 ```html
-<button type="button" style=“display: none;”>Click Me!</button>
 <!-- Hidden element -->
+<button type="button" style=“display: none;”>Click Me!</button>
 ```
 
 [focusable]: ../pages/algorithms/focusable.html

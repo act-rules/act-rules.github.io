@@ -66,109 +66,36 @@ There are no major accessibility support issues known for this rule.
 ### Passed
 
 ```html
-<!-- Keyboard trap with help information in a paragraph before, and where the method adviced works -->
-
-<script>
-var trapOn = false ;
-</script>
-
-<p class="target">Press the Esc-key to Exit</p>
-<a id="link1" href="#">Link 1</a>
-<button id="btn1" class="target" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">Button 1</button>
-<button id="btn2" class="target" onkeydown="(function(e){ if (e.keyCode === 27){trapOn=false;document.getElementById('link2').focus();}})(event)" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
-<a id="link2" href="#">Link 2</a>
-```
-
-```html
-<!-- Keyboard trap with help information within the trap, and where the method adviced works --> 
-
-<script>
-var trapOn = false ;
-</script>
-
-<a id="link1" href="#">Link 1</a>
-<button id="btn1" class="target" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">Button 1</button>
-<p class="target">Press the Esc-key to Exit</p>
-<button id="btn2" class="target" onkeydown="(function(e){ if (e.keyCode === 27){trapOn=false;document.getElementById('link2').focus();}})(event)" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
-<a id="link2" href="#">Link 2</a>
-````
-
-
-### Failed
-
-```html
-<!-- Keyboard trap with no instructions  -->
-
-<script>
-var trapOn = false ;
-</script>
-
-<a id="link1" href="#">Link 1</a>
-<button id="btn1" class="target" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">Button 1</button>
-<button id="btn2" class="target" onkeydown="(function(e){ if (e.keyCode === 27){trapOn=false;document.getElementById('link2').focus();}})(event)" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
-<a id="link2" href="#">Link 2</a>
-````
-
-```html
-<!-- Keyboard trap with instructions that doesn't give advice on the method for proceeding -->
-
-<script>
-var trapOn = false ;
-</script>
-
-<p class="target">Go to the next element</p>
-<a id="link1" href="#">Link 1</a>
-<button id="btn1" class="target" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">Button 1</button>
-<button id="btn2" class="target" onkeydown="(function(e){ if (e.keyCode === 27){trapOn=false;document.getElementById('link2').focus();}})(event)" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
-<a id="link2" href="#">Link 2</a>
-````
-
-```html
-<!-- Keyboard trap with help text, where the method adviced doesn't work --> 
-
-<script>
-var trapOn = false ;
-</script>
-
-<a id="link1" href="#">Link 1</a>
-<button id="btn1" class="target" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">Button 1</button>
-<p class="target">Press the Esc-key to Exit</p>
-<button id="btn2" class="target"  onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
-<a id="link2" href="#">Link 2</a>
-```
-## Test Cases
-
-### Passed
-
-```html
+<!-- Standard link and button -->
 <a href ="#">Link 1</a>
 <button class="target">Button1</button>
 ```
 
 ```html
+<!-- Hidden link and button -->
 <a href ="#" style="visibility: hidden;">Link 1</a>
 <button class="target" style="visibility: hidden;">Button1</button>
 ```
 
-```html
-<div tabindex=“1”>Text</div>
-<!-- something with tabindex=0 ? -->
-```
+
 
 ### Failed
 
 ```html
+<!-- Key trap one element -->
 <a href="#">Link 1</a>
 <button class="target" onblur="setTimeout(() => this.focus(), 10)">Button1</button>
 ```
 
 ```html
+<!-- Key trap group of elements -->
 <button class="target" onblur="setTimeout(() => this.nextSibling.focus(), 10)">Button1</button>
 <button class="target" onblur="setTimeout(() => this.previousSibling.focus(), 10)">Button2</button>
 ```
 ### Inapplicable
 
 ```html
+<!-- Heading -->
 <h1>Page 1</h1>
 ```
 

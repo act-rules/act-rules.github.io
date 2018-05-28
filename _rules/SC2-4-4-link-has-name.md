@@ -44,16 +44,48 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 ```html
+<!-- <a> element with accessible name through content -->
 <a href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
 ```
 
 ```html
+<!-- element with eplicit role of link with accessible name through content -->
+<div role="link"> Web Accessibility Initiative (WAI) </div>
+```
+
+```html
+<!-- Button with the role of link -->
 <button role="link">Click me!</button>
 ```
 
-### Failed
+```html
+<!-- Accessible name for link via aria-label -->
+<a href="http://www.w3.org/WAI"><img src="#" aria-label="This is a link"/></a>
+```
 
 ```html
+<!-- Link named via title on link -->
+<a href="http://www.w3.org/WAI" title="This is a link"><img src="#" /></a>
+```
+
+```html
+<!-- Link named via title on image -->
+<a href="http://www.w3.org/WAI"><img src="#" title="This is a link"/></a>
+```
+
+```html
+<!-- Link with both image and text -->
+<a href="http://www.w3.org/WAI"><img src="#" />This is my link text</a>
+```
+
+```html
+<!-- Accessible name for link via aria-labelledby -->
+<a href="http://www.w3.org/WAI"><img src="#" aria-labelledby="id1"/></a>
+<div id="id1">This is my link text</div>
+```
+
+```html
+<!-- Passing because this rule doesn't consider whether the accessible name is descriptive enough -->
 <div>
   <p>
     Some detailed article, but the link to read more is placed with no relevance to the text, thereby the link has lost context.
@@ -64,28 +96,65 @@ There are no major accessibility support issues known for this rule.
 </div>
 ```
 
+### Failed
+
 ```html
-<table>
-   <tr> 
-       <td>Song: Ed Sheeran - Galway Girl.</td>
-   </tr>
-   <tr>
-       <td>
-        <a href="assets/download.html">
-          Download Now
-        </a>
-       </td>
-   </tr>
- </table>
+<!-- Image link without accessible name-->
+<a href="http://www.w3.org/WAI"><img src="#" /></a>
+```
+
+```html
+<!-- Image link where image is marked as decorative -->
+<a href="http://www.w3.org/WAI"><img src="#" alt="" /></a>
+```
+
+```html
+<!-- Link with icon inserted via font-awesome -->
+<a href="http://www.w3.org/WAI"><i class="fa fa-download"></i></a>
+```
+
+```html
+<!-- Link with image that has empty title -->
+<a href="http://www.w3.org/WAI"><img src="#" title=""/></a>
+```
+
+```html
+<!-- Link with image that has empty aria-labelledby -->
+<a href="http://www.w3.org/WAI"><img src="#" aria-labelledy="id1"/></a>
+<div id="id1"></div>
+```
+
+```html
+<!-- Aria-labelledby references to a non-existing id -->
+<a href="http://www.w3.org/WAI"><img src="#" aria-labelledby="id1" /></a>
+```
+
+```html
+<!-- Non-visible link-->
+<a href="http://www.w3.org/WAI" style="visibility: hidden;"><img src="#" /></a>
+```
+
+```html
+<!-- Non-visible link-->
+<a href="http://www.w3.org/WAI" style="left: -9999px; position: absolute;"><img src="#" /></a>
+```
+
+```html
+<!-- Not exposed to assistive technologies -->
+<a href="http://www.w3.org/WAI" aria-hidden="true"><img src="#" /></a>
 ```
 
 ### Inapplicable
 
 ```html
+<!-- <a> element that has had its role changed -->
 <a href="http://www.w3.org/WAI" role="button">Web Accessibility Initiative (WAI)</a>
 ```
 
-------
+```html
+<!-- Not visible and not eposed to assistive technologies -->
+<a href="http://www.w3.org/WAI" style="display: none;"><img src="#" /></a>
+```
 
 [non-empty]: ../pages/algorithms/non-empty.html
 [accessible name]: ../pages/algorithms/accessible-name.html 

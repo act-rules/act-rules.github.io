@@ -34,7 +34,7 @@ The page contains at least one `title` element.
 
 ### Expectation 2
 
-The first `title` element contains [non-empty text][].
+The first `title` element contains [non-empty text](#non-empty).
 
 ## Assumptions
 
@@ -138,4 +138,4 @@ _There are no major accessibility support issues known for this rule._
 </svg>
 ```
 
-[non-empty text]: ../pages/algorithms/non-empty.html
+

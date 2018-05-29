@@ -1,5 +1,6 @@
 ---
 title: Accessible Name
+key: accessible-name
 ---
 
 The accessible name is the name of a user interface element. Each platform accessibility API provides the accessible name property. 

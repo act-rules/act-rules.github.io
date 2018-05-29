@@ -72,7 +72,7 @@ module Jekyll
 				out = []
 				d.content.each_line.with_index do |line, index|
 					if(line['#' + term])
-						anchor_url = d.url
+						anchor_url = s.baseurl + d.url
 						anchor = "<a class='glossary-usage-link' href='#{anchor_url}'>#{ d.data['name'] + ' (' + d.data['slug'] + ')' }</a>"
 						out.push(anchor)
 					end
@@ -104,8 +104,7 @@ module Jekyll
 					gh.each do |k, v|
 						if(line['#' + k])
 							g_out = "<div class='glossary-item'>"\
-								"<a id='#{v["key"]}' href='#'></a>"\
-								"<h3 class='title'>#{ v['title']}</h3>"\
+								"<a id='#{v["key"]}' href='#{s.baseurl}#{v['url']}'><h3>#{ v['title']}</h3></a>"\
 								"#{ get_page_content(s, v['url']) }"\
 							'</div></div>'
 							out = out << g_out

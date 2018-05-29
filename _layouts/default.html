@@ -3,22 +3,14 @@
   <head>
     <meta charset="utf-8">
     {% if page.layout == 'rule' %}
-
-      {% if page.rule_id != 'undefined' %}
-        {% assign page_title = page.rule_id | prepend: "Rule: " %}
-      {% else %}
-        {% assign page_title = page.name | prepend: "Rule: " %}
-      {% endif %}
-
+      {% assign page_title = page.name | prepend: "Rule: " %}
     {% else %}
       {% if page.layout == 'testcase' %}
-
         {% if page.rule_id != 'undefined' %}
           {% assign page_title = page.rule_id | prepend: "Test Cases for " %}
         {% else %}
           {% assign page_title = page.name | prepend: "Test Cases for " %}
         {% endif %}
-
       {% else %}
         {% assign page_title = page.title %}
       {% endif %}

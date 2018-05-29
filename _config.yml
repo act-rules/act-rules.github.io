@@ -60,5 +60,7 @@ defaults:
       category: algorithms
 
 exclude:
-- _drafts/early-stage
 - _draft-testcase-embeds
+- _drafts/early-stage
+- _drafts/outdated
+- _rules/outdated

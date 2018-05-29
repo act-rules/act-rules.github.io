@@ -55,8 +55,10 @@ defaults:
       layout: testcase
       draft: true
   - scope:
-      path: pages/algorithms
+      path: "pages/algorithms"
+      type: pages
     values:
+      layout: algorithm
       category: algorithms
 
 exclude:

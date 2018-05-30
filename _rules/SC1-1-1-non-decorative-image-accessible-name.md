@@ -21,7 +21,7 @@ authors:
 
 The rule applies to any HTML element with the [semantic role][] of `image` that is [exposed to assistive technologies][].
 
-**NOTE**: Any image marked as decorative, by using either `role="presentation"`, `role="none"` or an empty `alt` attribute in combination with either no `title` attribute or an empty `title` attribute, does not have the role of `image` according to [Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria-1.1/)
+**NOTE**: Any image marked as decorative, by using either `role="presentation"`, `role="none"` or an empty `alt` attribute, does not have the role of `image` according to [ARIA in HTML](https://www.w3.org/TR/html-aria/#img-alt)
 
 ### Expectation
 

@@ -1,5 +1,5 @@
 ---
-name: Non-decorative image has accessible name
+name: Image has accessible name
 description: |
   Each image that is not marked as decorative, has an accessible name
 

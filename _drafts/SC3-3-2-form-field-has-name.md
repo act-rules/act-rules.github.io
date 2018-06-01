@@ -76,20 +76,3 @@ Certain assistive technologies can be set up to ignore the title attribute, whic
   <option value="opel">Opel</option>
 </select>
 ```
-
-------
-
-## exposed to assistive technologies
-
-Elements that should be contained in the accessibility tree as described in [Core Accessibility API Mappings 1.1](https://www.w3.org/TR/core-aam-1.1/#mapping_general)
-
-## visible on the page
-
-##semantic role 
-Roles can be [implicit](https://www.w3.org/TR/html-aria/#dfn-implicit-aria-semantics) through the element name or explicit through the [role attribute](https://www.w3.org/TR/html52/dom.html#aria-role-attribute).
-
-[accessible name]: ../pages/algorithms/accessible-name.html
-[visible on the page]: ../pages/algorithms/visible-on-page.html
-[non-empty]: ../pages/algorithms/non-empty.html
-[exposed to assistive technologies]: ../pages/algorithms/exposed-to-assistive-technologies.html
-[semantic role]: ../pages/algorithms/semantic-role.html

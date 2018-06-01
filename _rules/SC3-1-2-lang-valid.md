@@ -19,7 +19,7 @@ authors:
 
 ### Applicability
 
-Any DOM element, within the `body` of a webpage with a [non-empty][] `lang` or `xml:lang` attribute.
+Any DOM element, within the `body` of a webpage with a [non-empty](#non-empty) `lang` or `xml:lang` attribute.
 
 **Note**: To retrieve all DOM elements with a `lang` or `xml:lang` attribute, other than the root element use -
 `descendent-or-self::body[@lang]` -or-  `descendent-or-self::body[@xml:lang]`.
@@ -78,5 +78,3 @@ The value of the `lang` or `xml:lang` conforms to [BCP 47](https://www.ietf.org/
 ```html
 <article xml:lang=""></article>
 ```
-
-[non-empty]: ../pages/algorithms/non-empty.html

@@ -1,5 +1,6 @@
 ---
 title: Accessible Name
+key: accessible-name
 ---
 
 The programatically determined name of a user interface element that is exposed to assistive technologies.

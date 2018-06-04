@@ -1,7 +1,7 @@
 ---
 name: Links have an accessible name
 description: |
-  Each link has an [accessible name](#accessible-name)
+  Each link has an accessible name
 
 success_criterion:
 - 4.1.2 # Name, Role, Value

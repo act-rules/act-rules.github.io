@@ -1,7 +1,7 @@
 ---
 name: label and name from content mismatch
 description: |
-  Interactive elements labelled through their content must have their visible label as part of their accessible name
+  Interactive elements labelled through their content must have their visible label as part of their [accessible name](#accessible-name)
 
 success_criterion:
 - 2.5.3 # Label in Name
@@ -23,14 +23,14 @@ authors:
 
 This rule applies to any element that has:
 * a [widget role](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent), and 
-* [visible text content][], and
+* [visible text content](#visible-text-content), and
 * an `aria-label` or `aria-labelledby` attribute.
 
 **Note**: At time of writing this rule, the [widget roles](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent) are: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
 
 ### Expectation 1
 
-The complete [visible text content][] of the target element either matches or is contained within it's [accessible name][]. Leading and trailing whitespace and difference in case sensitivity should be ignored.
+The complete [visible text content](#visible-text-content) of the target element either matches or is contained within it's [accessible name](#accessible-name). Leading and trailing whitespace and difference in case sensitivity should be ignored.
 
 ## Assumptions
 
@@ -101,8 +101,3 @@ There are no major accessibility support issues known for this rule.
 <!-- Non-text content -->
 <button aria-label="close">X</button>
 ```
-
-[accessible name]: ../pages/algorithms/accessible-name.html
-[semantic roles]: ../pages/algorithms/semantic-role.html
-[visible on the page]: ../pages/algorithms/visible-on-page.html
-[visible text content]: ../pages/algorithms/rendered-text-content.html

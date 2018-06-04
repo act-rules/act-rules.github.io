@@ -19,9 +19,7 @@ authors:
 
 ### Applicability
 
-The rule applies to the first valid `<meta http-equiv="refresh">` element with a `content` attribute in a document.
-
-**Note**: See [meta-refresh](https://www.w3.org/TR/html/document-metadata.html#statedef-http-equiv-refresh) for validity of `<meta http-equiv="refresh">` element.
+The rule applies to the first [valid](https://www.w3.org/TR/html/document-metadata.html#statedef-http-equiv-refresh) `<meta http-equiv="refresh">` element with a `content` attribute in a document.
 
 ### Expectation
 

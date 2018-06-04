@@ -1,7 +1,7 @@
 ---
 name: Image has accessible name
 description: |
-  Each image that is not marked as decorative, has an accessible name
+  Each image that is not marked as decorative, has an [accessible name](#accessible-name)
 
 success_criterion:
 - 1.1.1 # Non-Text Content
@@ -19,13 +19,13 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML element with the [semantic role][] of `image` that is [exposed to assistive technologies][].
+The rule applies to any HTML element with the [semantic role](#semantic-role) of `image` that is [exposed to assistive technologies](#exposed-to-assistive-technologies).
 
 **NOTE**: Any image marked as decorative, by using either `role="presentation"`, `role="none"` or an empty `alt` attribute, does not have the role of `image` according to [ARIA in HTML](https://www.w3.org/TR/html-aria/#img-alt).
 
 ### Expectation
 
-Each target element has an [accessible name][] that is [non-empty][].
+Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty).
 
 ## Assumptions
 
@@ -33,7 +33,7 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-Certain assistive technologies can be set up to ignore the `title` attribute, which means that to some users the `title` attribute will not act as an accessible name.
+Certain assistive technologies can be set up to ignore the `title` attribute, which means that to some users the `title` attribute will not act as an [accessible name](#accessible-name).
 
 ## Background
 - [G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G94)
@@ -90,11 +90,6 @@ Certain assistive technologies can be set up to ignore the `title` attribute, wh
 
 ```html
 <svg width="100" height="100">
-<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
 </svg>
 ```
-
-[semantic role]: ../pages/algorithms/semantic-role.html
-[exposed to assistive technologies]: ../pages/algorithms/exposed-to-assistive-technologies.html
-[accessible name]: ../pages/algorithms/accessible-name.html
-[non-empty]: ../pages/algorithms/non-empty.html

@@ -19,7 +19,7 @@ authors:
 
 ### Applicability
 
-The root element of the page, if it is an `html` element with a [non-empty][] `lang` and/or `xml:lang` attribute.
+The root element of the page, if it is an `html` element with a [non-empty](#non-empty) `lang` and/or `xml:lang` attribute.
 
 ### Expectation
 
@@ -94,5 +94,3 @@ There are known combinations of a popular operating system with browsers and ass
 ```html
 <html xml:lang="">
 ```
-
-[non-empty]: ../pages/algorithms/non-empty.html

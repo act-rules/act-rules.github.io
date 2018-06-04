@@ -23,17 +23,20 @@ The rule applies to the first [valid](https://www.w3.org/TR/html/document-metada
 
 ### Expectation
 
-The `time` of the `content` attribute, when parsed according to [Refresh state (`http-equiv="refresh"`)](https://www.w3.org/TR/html/document-metadata.html#statedef-http-equiv-refresh), is not greater than 0.
+The `time` of the `content` attribute is not greater than 0.
+
+**Note**: See [Refresh state (`http-equiv="refresh"`)](https://www.w3.org/TR/html/document-metadata.html#statedef-http-equiv-refresh) for a precise description on how to determine the `time`.
 
 ## Assumptions  
 
-This test assumes no functionality was provided by the website for the user to adjust the timer. 
+* This test assumes no functionality was provided by the website for the user to adjust the timer. 
+* This test assumes that the refresh was not [essential](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html#essentialdef), which is listed as a valid exception to SC 2.2.1.
 
 ## Accessibility Support 
 
 There are no major accessibility support issues known for this rule.
 
- ## Background  
+## Background  
 
 - H76: Using meta refresh to create an instant client-side redirect
 - F40: Failure of Success Criterion 2.2.1 and 2.2.4 due to using meta redirect with a time limit

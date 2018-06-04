@@ -2,7 +2,7 @@
 name: SC3-1-1-html-xml-lang-match
 
 description: |
- The rule checks that for the `html` element, there is no mismatch between the primary language in [non-empty][] `lang` and `xml:lang` attributes, if both are used, and that it conforms to [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt).
+ The rule checks that for the `html` element, there is no mismatch between the primary language in [non-empty](#non-empty) `lang` and `xml:lang` attributes, if both are used, and that it conforms to [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt).
 
 success_criterion:
 - 3.1.1
@@ -19,7 +19,7 @@ authors:
 
 ### Applicability
 
-The root element of the page, if it is an `html` element with both [non-empty][] `lang` and `xml:lang` attributes.
+The root element of the page, if it is an `html` element with both [non-empty](#non-empty) `lang` and `xml:lang` attributes.
 
 ### Expectation
 
@@ -79,5 +79,3 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 ```html
 <html lang="" xml:lang="">
 ```
-
-[non-empty]: ../pages/algorithms/non-empty.html

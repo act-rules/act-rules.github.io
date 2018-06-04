@@ -18,7 +18,7 @@ authors:
 
 ### Applicability
 
-Any element that has an `id` attribute within a document.
+Any element that has an `id` attribute.
 
 ### Expectation
 

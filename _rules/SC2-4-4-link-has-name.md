@@ -1,7 +1,7 @@
 ---
 name: Links have an accessible name
 description: |
-  Each link has an accessible name
+  Each link has an [accessible name](#accessible-name)
 
 success_criterion:
 - 4.1.2 # Name, Role, Value
@@ -19,11 +19,11 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML or SVG element with the [semantic role][] of `link` that is [visible on the page][] or [exposed to assistive technologies][].
+The rule applies to any HTML or SVG element with the [semantic role](#semantic-role) of `link` that is [visible on the page](#visible-on-the-page) or [exposed to assistive technologies](#exposed-to-assistive-technologies).
 
 ### Expectation
 
-Each target element has an [accessible name][] that is [non-empty][].
+Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty).
 
 ## Assumptions
 
@@ -155,9 +155,3 @@ There are no major accessibility support issues known for this rule.
 <!-- Not visible and not eposed to assistive technologies -->
 <a href="http://www.w3.org/WAI" style="display: none;"><img src="#" /></a>
 ```
-
-[non-empty]: ../pages/algorithms/non-empty.html
-[accessible name]: ../pages/algorithms/accessible-name.html 
-[semantic role]: ../pages/algorithms/semantic-role.html 
-[exposed to assistive technologies]: ../pages/algorithms/exposed-to-assistive-technologies.html
-[visible on the page]: ../pages/algorithms/visible-on-the-page.html

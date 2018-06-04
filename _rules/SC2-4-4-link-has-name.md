@@ -131,11 +131,6 @@ There are no major accessibility support issues known for this rule.
 
 ```html
 <!-- Non-visible link-->
-<a href="http://www.w3.org/WAI" style="visibility: hidden;"><img src="#" /></a>
-```
-
-```html
-<!-- Non-visible link-->
 <a href="http://www.w3.org/WAI" style="left: -9999px; position: absolute;"><img src="#" /></a>
 ```
 
@@ -154,4 +149,9 @@ There are no major accessibility support issues known for this rule.
 ```html
 <!-- Not visible and not eposed to assistive technologies -->
 <a href="http://www.w3.org/WAI" style="display: none;"><img src="#" /></a>
+```
+
+```html
+<!-- Non-visible link-->
+<a href="http://www.w3.org/WAI" style="visibility: hidden;">Some text</a>
 ```

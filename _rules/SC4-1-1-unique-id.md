@@ -22,7 +22,7 @@ Any element that has an `id` attribute within a document.
 
 ### Expectation
 
-Each test target has an `id` attribute value that is unique within the [document context][] of the element.
+Each test target has an `id` attribute value that is unique within the [document context](#document-context) of the element.
 
 ## Assumptions
 
@@ -87,5 +87,3 @@ There are no major accessibility support issues known for this rule.
 ```html
 <div xml:id="my-div">This is my first element</div>
 ```
-
-[document context]: ../pages/algorithms/document-context.html

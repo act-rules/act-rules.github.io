@@ -32,7 +32,7 @@ The auditory information of each test target is available through a caption, or 
 
 ## Accessibility support
 
-There are no major accessibility support issues known for this rule.
+While the HTML specifications allows the use of `track` elements inside of `audio` elements, there is currently limited to no support for this in mayor web browsers.
 
 ## Background
 

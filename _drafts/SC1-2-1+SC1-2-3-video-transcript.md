@@ -24,11 +24,11 @@ authors:
 
 ### Applicability
 
-The rule applies to any [non-streaming][] video element [visible in the page][]
+The rule applies to any [non-streaming][] video element [visible on the page][]
 
 ### Expectation 1
 
-A [text transcript][] is available for the test target, either on the page or available through a link (or some other mechanism).
+A [text transcript][] is available for the test target, either on the page or available through a link.
 
 ### Expectation 2
 
@@ -54,7 +54,7 @@ There are no major accessibility support issues known for this rule.
 [audio output]: ../pages/algorithms/audio-output.html
 [visual output]: ../pages/algorithms/visual-output.html
 [non-streaming]: ../pages/algorithms/non-streaming-media-element.html
-[visible in the page]: ../pages/algorithms/visible-in-the-page.html
+[visible on the page]: ../pages/algorithms/visible-on-the-page.html
 [text transcript]: https://www.w3.org/TR/WCAG20/#alt-time-based-mediadef
 
 ## Test Cases

@@ -2,7 +2,7 @@
 name: video element transcript
 group: SC1-2-video-element
 description: |
-  Non-streaming video elements must have all audio and visual information available in a transcript.
+  Non-streaming `video` elements must have all audio and visual information available in a transcript.
 
 success_criterion:
 - 1.2.1 # Audio-only and Video-only (Prerecorded)
@@ -24,7 +24,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any [non-streaming][] video element [visible on the page][]
+The rule applies to any [non-streaming][] `video` element [visible on the page][]
 
 ### Expectation 1
 

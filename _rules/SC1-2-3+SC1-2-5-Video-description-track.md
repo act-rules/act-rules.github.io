@@ -2,7 +2,7 @@
 name: Video element description track
 group: SC1-2-video-element
 description: |
-  This rule checks that description tracks that come with  non-streaming video elements are descriptive.
+  This rule checks that description tracks that come with  non-streaming `video` elements are descriptive.
 
 success_criterion:
 - 1.2.3 # Audio Description or Media Alternative (Prerecorded)
@@ -24,7 +24,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any [non-streaming][] video element [visible on the page][] where the video contains [audio][] and a `track` element with a `kind="description"` attribute.
+The rule applies to any [non-streaming][] `video` element [visible on the page][] where the video contains [audio][] and a `track` element with a `kind="description"` attribute.
 
 ### Expectation
 

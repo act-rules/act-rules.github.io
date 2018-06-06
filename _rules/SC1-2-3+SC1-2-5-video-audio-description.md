@@ -2,7 +2,7 @@
 name: audio described video element
 group: SC1-2-video-element
 description: |
-  Non-streaming video elements must not contain any visual information that is not expressed in the audio
+  Non-streaming `video` elements must not contain any visual information that is not expressed in the audio
 
 success_criterion:
 - 1.2.3 # Audio Description or Media Alternative (Prerecorded)
@@ -23,7 +23,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any [non-streaming][] video element [visible on the page][] where the video contains [audio][].
+The rule applies to any [non-streaming][] `video` element [visible on the page][] where the video contains [audio][].
 
 ### Expectation
 

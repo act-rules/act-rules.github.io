@@ -1,8 +1,7 @@
 ---
 name: audio elements captions
-group: NA
 description: |
-  Non-streaming audio elements must not contain auditory information that is not expressed in captions or a text alternative.
+  Non-streaming `audio` elements must not contain auditory information that is not expressed in captions or a text alternative.
 
 success_criterion:
 - 1.2.1 # Audio-only and Video-only (Prerecorded)
@@ -21,11 +20,11 @@ authors:
 
 ### Applicability
 
-The rule applies to any [non-streaming][] audio element [audible on the page][].
+The rule applies to any [non-streaming][] `audio` element [audible on the page][].
 
 ### Expectation
 
-The auditory information of each test target is available through a caption, or through a [text transcript][] that is available either on the page or through a link (or some other mechanism).
+The auditory information of each test target is available through a caption, or through a [text transcript][] that is available either on the page or through a link.
 
 ## Assumptions
 

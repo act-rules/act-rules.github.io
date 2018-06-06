@@ -126,10 +126,6 @@ There are no major accessibility support issues known for this rule.
 ## Inapplicable
 
 ```html
-TODO: a source to a live video
-```
-
-```html
 <video controls>
   <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>

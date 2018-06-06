@@ -88,10 +88,6 @@ This means that the rule can only provide a pass for these succescriteria if acc
 ```
 
 ```html
-TODO: a source to a live video
-```
-
-```html
 <video controls style="display: none;">
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>

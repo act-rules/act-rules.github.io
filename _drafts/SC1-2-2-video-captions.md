@@ -54,7 +54,7 @@ There are no major accessibility support issues known for this rule.
 
 ```html
 <video src="../test-assets/perspective-video/perspective-video.mp4" controls>
-  <track src="perspective-caption.vtt" kind="captions">
+  <track src="/test-assets/perspective-video/perspective-caption.vtt" kind="captions">
 </video>
 ```
 
@@ -66,7 +66,7 @@ There are no major accessibility support issues known for this rule.
 
 ```html
 <video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls>
-  <track src="perspective-incorrect-caption.vtt" kind="captions">
+  <track src="/test-assets/perspective-video/perspective-incorrect-caption.vtt" kind="captions">
 </video>
 ```
 
@@ -77,7 +77,7 @@ There are no major accessibility support issues known for this rule.
 ```
 
 ```html
-<video src="../test-assets/perspective-video.mp4" controls style="display: none;"></video>
+<video src="../test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>
 ```
 
 [audio output]: ../pages/algorithms/audio-output.html

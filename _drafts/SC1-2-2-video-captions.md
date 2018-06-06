@@ -1,7 +1,7 @@
 ---
 name: video captions
 description: |
-  Captions are available for audio information in non-streaming video elements.
+  Captions are available for audio information in non-streaming `video` elements.
 
 success_criterion:
 - 1.2.2 # Captions (Prerecorded)

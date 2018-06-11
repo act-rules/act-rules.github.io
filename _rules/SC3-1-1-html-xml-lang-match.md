@@ -27,7 +27,6 @@ The value of the primary language sub-tag for the `lang` and `xml:lang` attribut
 
 **Note**: HTML 5 specification requires the `lang` and `xml:lang` attributes to match exactly. This is not known to impact accessibility, which is why it is permitted in this rule.
 
-
 ## Assumptions
 
 - Although there is no known way that an inappropriate secondary sub-tag in the `lang` or `xml:lang` attribute (such as "en-XYZ") can lead to accessibility issues, it is conceivable that with specific assistive technologies on some languages, there can be exceptions. In that case `lang` and `xml:lang` should have matching secondary sub-tags.

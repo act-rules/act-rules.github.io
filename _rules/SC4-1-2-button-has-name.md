@@ -19,7 +19,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any element with the role of `button`, except for `input` elements of `type="image"` that are [visible on the page][] or [exposed to assistive technologies][].
+The rule applies to any element with the [semantic role](#semantic-role) of `button`, except for `input` elements of `type="image"` that are [visible on the page][] or [exposed to assistive technologies][].
 
 ### Expectation
 

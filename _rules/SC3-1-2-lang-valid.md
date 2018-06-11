@@ -44,37 +44,76 @@ The value of the `lang` or `xml:lang` conforms to [BCP 47](https://www.ietf.org/
 ### Passed
 
 ```html
-<article lang="en"></article>
+<html>
+<body> 
+  <article lang="en"></article>
+</body>
+</html>
 ```
 
 ```html
-<p xml:lang="DE"></p>
+<html>
+<body>
+  <p xml:lang="DE"></p>
+</body>
+</html>
 ```
 
 ```html
-<blockquote lang="fr-CH"></blockquote>
+<html>
+<body>
+  <blockquote lang="fr-CH"></blockquote>
+</body>
+</html>
 ```
 
 ```html
-<p lang="en" xml:lang="en-GB">Good Morning.</p>
+<html>
+<body>
+  <p lang="en" xml:lang="en-GB">Good Morning.</p>
+</body>
+</html>
 ```
 
 ### Failed
 
 ```html
-<article lang="dutch"></article>
+<html>
+<body>
+  <article lang="dutch"></article>
+</body>
+</html>
 ```
 
 ```html
-<p xml:lang="english"></p>
+<html>
+<body>
+  <p xml:lang="english"></p>
+</body>
+</html>
 ```
 
 ### Inapplicable
 
 ```html
-<article lang=""></article>
+<html lang="en">
+<body>
+</body>
+</html>
 ```
 
 ```html
+<html>
+<body>
+<article lang=""></article>
+</body>
+</html>
+```
+
+```html
+<html>
+<body>
 <article xml:lang=""></article>
+</body>
+</html>
 ```

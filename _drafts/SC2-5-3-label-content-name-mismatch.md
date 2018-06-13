@@ -14,7 +14,6 @@ authors:
 - Anne Thyme Nørregaard
 - Bryn Anderson
 - Jey Nandakumar
-- Wilco Fiers
 ---
 
 ## Test procedure

@@ -114,8 +114,6 @@ document.getElementById("helptext").innerHTML = "<p>Press the M-key to Exit</p>"
 
 ```
 
-
-
 ### Failed
 
 ```html
@@ -158,6 +156,7 @@ var trapOn = false ;
 <button id="btn2" class="target"  onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
 <a id="link2" href="#">Link 2</a>
 ```
+
 ### Inapplicable
 
 ```html
@@ -168,7 +167,6 @@ var trapOn = false ;
 <button id="btn2">Button 2</button>
 <a id="link2" href="#">Link 2</a>
 ```
-
 
 [focusable]: ../pages/algorithms/focusable.html
 [standard keyboard navigation]: ../pages/algorithms/standard-keyboard-navigation.html

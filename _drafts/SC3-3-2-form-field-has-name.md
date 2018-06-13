@@ -42,7 +42,6 @@ Certain assistive technologies can be set up to ignore the title attribute, whic
 ## Background
 
 - https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html
-- https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html
 
 ## Test cases
 

@@ -21,7 +21,7 @@ authors:
 This rule applies to:
 - any element that is [exposed to assistive technologies](#exposed-to-assistive-technologies), and
 - that has a [semantic role](#semantic-role) that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and 
-- does not have a required context role that itself inherits from one of those roles.
+- does not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
 
 **Note**: All elements that are semantic form controls, either implicitly through native HTML elements or explicitly through use of ARIA roles, inherit from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` roles. The required context role defines the owning container in which a given role is allowed. Form controls with a required context role that is itself a form control, e.g. `<option>` within a `<select>`, are not applicable to this rule as only the top-most form control requires an accessible name.
 

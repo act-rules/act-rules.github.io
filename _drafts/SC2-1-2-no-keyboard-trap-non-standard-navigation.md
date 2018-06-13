@@ -65,7 +65,7 @@ There are no major accessibility support issues known for this rule.
 ### Passed
 
 ```html
-<!-- Keyboard trap with help information in a paragraph before, and where the method adviced works -->
+<!-- Keyboard trap with help information in a paragraph before, and where the method advised works -->
 
 <script>
 var trapOn = false ;
@@ -79,7 +79,7 @@ var trapOn = false ;
 ```
 
 ```html
-<!-- Keyboard trap with help information within the trap, and where the method adviced works --> 
+<!-- Keyboard trap with help information within the trap, and where the method advised works --> 
 
 <script>
 var trapOn = false ;
@@ -94,6 +94,24 @@ var trapOn = false ;
 
 ```html
 <!-- Keyboard trap with "help" link that once clicked exposes the instructions.  -->
+
+<script>
+var trapOn = false ;
+
+function showHelpText(){
+document.getElementById("helptext").innerHTML = "<p>Press the M-key to Exit</p>";
+}
+</script>
+
+<div onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)">
+<a id="link1" href="#">Link 1</a>
+<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('helpLink').focus();})(event)">Button 1</button>
+<a id="helpLink" href="#" onclick="showHelpText()">How to go the next element</a>
+<div id="helptext"></div>
+<button id="btn2" class="target" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
+</div>
+<a id="link2" href="#">Link 2</a>
+
 ```
 
 
@@ -114,7 +132,7 @@ var trapOn = false ;
 ````
 
 ```html
-<!-- Keyboard trap with instructions that doesn't give advice on the method for proceeding -->
+<!-- Keyboard trap with instructions that doesn't give advise on the method for proceeding -->
 
 <script>
 var trapOn = false ;
@@ -128,7 +146,7 @@ var trapOn = false ;
 ````
 
 ```html
-<!-- Keyboard trap with help text, where the method adviced doesn't work --> 
+<!-- Keyboard trap with help text, where the method advised doesn't work --> 
 
 <script>
 var trapOn = false ;

@@ -18,8 +18,8 @@ authors:
 
 ### Applicability
 
-The rules applies to:
-- any element that is or [exposed to assistive technologies](#exposed-to-assistive-technologies),
+This rule applies to:
+- any element that is [exposed to assistive technologies](#exposed-to-assistive-technologies), and
 - that has a [semantic role](#semantic-role) that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and 
 - does not have a required context role that itself inherits from one of those roles.
 

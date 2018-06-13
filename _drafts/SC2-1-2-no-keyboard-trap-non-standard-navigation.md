@@ -5,7 +5,7 @@ group:
 - SC2-1-2-no-keyboard-trap-non-standard-navigation (current)
 
 description: |
-  This rule checks if the user is advised on a method for non-standard keyboard navigation to navigate through focusable content on a web page without becoming trapped in any element.
+  This rule checks if it is possible to use non-standard keyboard navigation to navigate through content where focus is trapped when using standard ways of keyboard navigation.
 
 success_criterion: 
 - 2.1.2 # No Keyboard Trap
@@ -27,13 +27,13 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML or SVG element on a web page that is [focusable][] and reachable through [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sequential-focus-navigation) where focus cannot cycle to the browser UI by using [standard keyboard navigation][].
+The rule applies to any HTML or SVG element on a web page that is [focusable][] where focus cannot cycle to the browser UI by using [standard keyboard navigation][].
 
 ### Expectation 1
 
-For each target element help information is [visible on the page][] and [exposed to assistive technologies][] or can be navigated to from within the keyboard trap.
+For each target element help information is [visible on the page][] and [exposed to assistive technologies][] or can be accessed from within the keyboard trap.
 
-**Note**: As per Success Criterion 2.1.1 Keyboard the help information should be accessible through a keyboard interface. This however is the test subject for another ACT rule.
+**Note**: As per WCAG 2.0 Success Criterion 2.1.1 Keyboard the help information should be accessible through a keyboard interface.
 
 ### Expectation 2
 
@@ -71,9 +71,9 @@ There are no major accessibility support issues known for this rule.
 var trapOn = false ;
 </script>
 
-<p class="target">Press the M-key to Exit</p>
+<p>Press the M-key to Exit</p>
 <a id="link1" href="#">Link 1</a>
-<button id="btn1" class="target" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">Button 1</button>
+<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">Button 1</button>
 <button id="btn2" class="target" onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
 <a id="link2" href="#">Link 2</a>
 ```
@@ -86,11 +86,16 @@ var trapOn = false ;
 </script>
 
 <a id="link1" href="#">Link 1</a>
-<button id="btn1" class="target" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">Button 1</button>
-<p class="target">Press the M-key to Exit</p>
+<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">Button 1</button>
+<p>Press the M-key to Exit</p>
 <button id="btn2" class="target" onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
 <a id="link2" href="#">Link 2</a>
 ````
+
+```html
+<!-- Keyboard trap with "help" link that once clicked exposes the instructions.  -->
+```
+
 
 
 ### Failed
@@ -103,7 +108,7 @@ var trapOn = false ;
 </script>
 
 <a id="link1" href="#">Link 1</a>
-<button id="btn1" class="target" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">Button 1</button>
+<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">Button 1</button>
 <button id="btn2" class="target" onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
 <a id="link2" href="#">Link 2</a>
 ````
@@ -115,9 +120,9 @@ var trapOn = false ;
 var trapOn = false ;
 </script>
 
-<p class="target">Go to the next element</p>
+<p>Go to the next element</p>
 <a id="link1" href="#">Link 1</a>
-<button id="btn1" class="target" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">Button 1</button>
+<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">Button 1</button>
 <button id="btn2" class="target" onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
 <a id="link2" href="#">Link 2</a>
 ````
@@ -130,8 +135,8 @@ var trapOn = false ;
 </script>
 
 <a id="link1" href="#">Link 1</a>
-<button id="btn1" class="target" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">Button 1</button>
-<p class="target">Press the M-key to Exit</p>
+<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">Button 1</button>
+<p>Press the M-key to Exit</p>
 <button id="btn2" class="target"  onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
 <a id="link2" href="#">Link 2</a>
 ```

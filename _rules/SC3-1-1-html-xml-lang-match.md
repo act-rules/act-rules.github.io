@@ -19,7 +19,7 @@ authors:
 
 ### Applicability
 
-The root element of the page, if it is an `html` element with both [non-empty](#non-empty) `lang` and `xml:lang` attributes.
+The root element of the page, if it is an `html` element with both [non-empty](#non-empty) `lang` and `xml:lang` attributes that conform to [PCB 47](https://www.ietf.org/rfc/bcp/bcp47.txt).
 
 ### Expectation
 

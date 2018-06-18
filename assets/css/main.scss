@@ -20,8 +20,8 @@
 html {
     position: relative;
     min-height: 100%;
+    overflow-x: hidden; /* Prevent scroll on narrow devices */
 }
-
 
 $brush-accent: #003349;
 $brush-white: #fff;
@@ -96,6 +96,10 @@ body {
         padding: 60px 15px 0;
         .text-muted {
             margin: 20px 0;
+        }
+
+        .glossary-usage-link{
+            display: block;
         }
 
         .embed-wrapper {

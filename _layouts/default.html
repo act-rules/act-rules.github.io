@@ -2,11 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    {% if page.rule_id and page.layout == 'rule' %}
-      {% assign page_title = page.rule_id | prepend: "Rule: " %}
+    {% if page.layout == 'rule' %}
+      {% assign page_title = page.name | prepend: "Rule: " %}
     {% else %}
-      {% if page.rule_id and page.layout == 'testcase' %}
-        {% assign page_title = page.rule_id | prepend: "Test Cases for " %}
+      {% if page.layout == 'testcase' %}
+        {% if page.rule_id != 'undefined' %}
+          {% assign page_title = page.rule_id | prepend: "Test Cases for " %}
+        {% else %}
+          {% assign page_title = page.name | prepend: "Test Cases for " %}
+        {% endif %}
       {% else %}
         {% assign page_title = page.title %}
       {% endif %}
@@ -162,6 +166,8 @@
         {{ content }}
       </p>
     </main>
+
+
     
     <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
     <script src="{{ site.baseurl }}/assets/js/bootstrap.min.js"></script>

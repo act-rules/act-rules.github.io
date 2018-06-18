@@ -33,6 +33,7 @@ defaults:
       path: ""
       type: rules
     values:
+      name: undefined
       layout: rule
   - scope:
       path: ""
@@ -41,7 +42,6 @@ defaults:
       layout: rule
       draft: true
       name: undefined
-      rule_id: undefined
       test_mode: undefined
   - scope:
       path: ""
@@ -55,10 +55,14 @@ defaults:
       layout: testcase
       draft: true
   - scope:
-      path: pages/algorithms
+      path: "pages/algorithms"
+      type: pages
     values:
+      layout: algorithm
       category: algorithms
 
 exclude:
-- _drafts/early-stage
 - _draft-testcase-embeds
+- _drafts/early-stage
+- _drafts/outdated
+- _rules/outdated

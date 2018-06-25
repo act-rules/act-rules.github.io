@@ -2,7 +2,7 @@
 name: Validity of HTML Lang attribute
 
 description: |
-  This rule checks the lang or xml:lang attribute conforms to [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt).
+  This rule checks the lang or xml:lang attribute has a valid language subtag.
 
 success_criterion:
 - 3.1.1
@@ -23,9 +23,7 @@ The root element of the page, if it is an `html` element with a [non-empty](#non
 
 ### Expectation
 
-The value of the `lang` or `xml:lang` attribute conforms to [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt).
-
-**Note**: If both `lang` and `xml:lang` exists, then only `lang` is tested for conformance.
+The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-language-subtag) if the attribute is [non-empty](#non-empty).
 
 ## Assumptions
 
@@ -34,6 +32,8 @@ The value of the `lang` or `xml:lang` attribute conforms to [BCP 47](https://www
 ## Accessibility Support
 
 There are known combinations of a popular operating system with browsers and assistive technologies that do not support the `lang` and `xml:lang` attributes.
+
+While HTML5 specification indicates that `xml:lang` attribute takes priority over `lang` attribute, certain assistive technologies prioritise `lang` over `xml:lang` instead.
 
 ## Background
 
@@ -60,7 +60,11 @@ There are known combinations of a popular operating system with browsers and ass
 ```
 
 ```html
-<html lang="fr" xml:lang="xyz">
+<html lang="fr" xml:lang="">
+```
+
+```html
+<html lang="" xml:lang="nl">
 ```
 
 ## Failed

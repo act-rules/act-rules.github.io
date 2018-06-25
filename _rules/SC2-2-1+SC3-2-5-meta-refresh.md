@@ -101,23 +101,9 @@ There are no major accessibility support issues known for this rule.
 ```
 
 ```html
-<!-- no content attribute -->
-<head>
-<meta http-equiv="">
-</head>
-```
-
-```html
 <!-- no http-equiv="refresh" attribute -->
 <head>
 <meta content="30">
-</head>
-```
-
-```html
-<!-- no http-equiv="refresh" or content attribute -->
-<head>
-<meta>
 </head>
 ```
 
@@ -131,7 +117,7 @@ There are no major accessibility support issues known for this rule.
 ```html
 <!-- content attribute is invalid and therefore inapplicable. -->
 <head>
-<meta http-equiv=refresh content=" -00.12 foo">
+<meta http-equiv=refresh content="-00.12 foo">
 </head>
 ```
 
@@ -152,34 +138,13 @@ There are no major accessibility support issues known for this rule.
 ```html
 <!-- content attribute is invalid and therefore inapplicable. -->
 <head>
-  <meta http-equiv="refresh" content="http://example.com" />
-</head>
-```
-
-```html
-<!-- content attribute is invalid and therefore inapplicable. -->
-<head>
-  <meta http-equiv="refresh" content=" http://example.com" />
-</head>
-```
-
-```html
-<!-- content attribute is invalid and therefore inapplicable. -->
-<head>
   <meta http-equiv="refresh" content="+5; http://example.com">
 </head>
 ```
 
 ```html
 <!-- content attribute is invalid and therefore inapplicable. -->
-<head>
-  <meta http-equiv="refresh" content="-5; http://example.com">
-</head>
-```
-
-```html
-<!-- content attribute is invalid and therefore inapplicable. -->
 <head>           
-    <meta http-equiv="refresh" content="foo; URL='https://auto-wcag.github.io/auto-wcag/'" />    
-  </head>
+  <meta http-equiv="refresh" content="foo; URL='https://auto-wcag.github.io/auto-wcag/'" />    
+</head>
 ```

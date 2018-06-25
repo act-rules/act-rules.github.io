@@ -2,7 +2,7 @@
 name: HTML has lang attribute
 
 description: |
-  This rule checks that the `html` element has a [non-empty](#non-empty) `lang` or `xml:lang` attribute.
+  This rule checks that the `html` element has a non-empty `lang` or `xml:lang` attribute.
 
 success_criterion:
 - 3.1.1

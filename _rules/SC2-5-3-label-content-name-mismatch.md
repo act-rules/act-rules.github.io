@@ -1,7 +1,7 @@
 ---
 name: label and name from content mismatch
 description: |
-  Interactive elements labelled through their content must have their visible label as part of their [accessible name](#accessible-name)
+  Interactive elements labelled through their content must have their visible label as part of their accessible name
 
 success_criterion:
 - 2.5.3 # Label in Name

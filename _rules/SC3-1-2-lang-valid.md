@@ -21,9 +21,6 @@ authors:
 
 Any DOM element, within the `body` of a webpage with a [non-empty](#non-empty) `lang` or `xml:lang` attribute.
 
-**Note**: To retrieve all DOM elements with a `lang` or `xml:lang` attribute, other than the root element use -
-`descendent-or-self::body[@lang]` -or-  `descendent-or-self::body[@xml:lang]`.
-
 ### Expectation
 
 The value of the `lang` or `xml:lang` conforms to [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt).

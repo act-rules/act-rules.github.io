@@ -27,13 +27,11 @@ The rule applies to any HTML element with the [semantic role](#semantic-role) of
 
 Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty).
 
-## Assumptions
-
-_There are currently no assumptions_
-
 ## Accessibility Support
 
-Certain assistive technologies can be set up to ignore the `title` attribute, which means that to some users the `title` attribute will not act as an [accessible name](#accessible-name).
+There is a known combinations of a popular browser and assistive technology that does not support `title` as an [accessible name](#accessible-name).
+
+Certain assistive technologies can be set up to ignore the `title` attribute, which means that to some users the `title` attribute will not act as an accessible name.
 
 ## Background
 - [G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G94)
@@ -78,10 +76,6 @@ Certain assistive technologies can be set up to ignore the `title` attribute, wh
 
 ```html
 <img alt="" />
-```
-
-```html
-<img alt="" title="W3C logo" />
 ```
 
 ```html

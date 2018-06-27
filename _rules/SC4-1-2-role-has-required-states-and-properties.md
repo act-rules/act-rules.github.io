@@ -1,6 +1,7 @@
 ---
 name: Role has required states and properties
-description: | Elements that has a semantic role must also specify all required states and properties
+description: |
+  Elements that has a semantic role must also specify all required states and properties
   
 success_criterion:
 - 4.1.2 # Name, Role, Value

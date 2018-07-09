@@ -43,6 +43,7 @@ There are no major accessibility support issues known for this rule.
 ## Test Cases
 
 ### Passed
+
 ```html
 <!-- <a> element with accessible name through content -->
 <a href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
@@ -85,15 +86,24 @@ There are no major accessibility support issues known for this rule.
 ```
 
 ```html
-<!-- Passing because this rule doesn't consider whether the accessible name is descriptive enough -->
-<div>
-  <p>
-    Some detailed article, but the link to read more is placed with no relevance to the text, thereby the link has lost context.
-  </p>
-  <p>
-    <a href="readmore.html">Read More...</a>
-  </p>
-</div>
+<!-- When link is off screen -->
+<html>
+  <style>
+    .offScreenLink {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+    }
+  </style>
+  <body>
+		<a class="offScreenLink" href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
+  </body>
+</html>
+```
+
+```html
+<!-- Link is not in accessibility tree -->
+<a aria-hidden="true" href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
 ```
 
 ### Failed

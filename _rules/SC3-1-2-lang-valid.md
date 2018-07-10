@@ -1,8 +1,8 @@
 ---
 name: Valid body lang attribute
 
-description:
-- This rule checks that `lang` or `xml:lang` attributes on elements within the `body` of a web page has a valid language subtag.
+description: |
+ This rule checks that `lang` or `xml:lang` attributes on elements within the `body` of a web page has a valid language subtag.
 
 success_criterion:
 - 3.1.2

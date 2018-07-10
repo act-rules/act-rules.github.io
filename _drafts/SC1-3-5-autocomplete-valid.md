@@ -88,6 +88,10 @@ The intent of this rule is to ensure that the `autocomplete` attribute can be us
 ```
 
 ```html
+<input type="text" autocomplete="section-primary billing street-address />
+```
+
+```html
 <input autocomplete="section-primary shipping work email" />
 ```
 
@@ -122,7 +126,7 @@ The intent of this rule is to ensure that the `autocomplete` attribute can be us
 
 ```html
 <!-- Incorrect element -->
-<button autocomplete="username"></button
+<button autocomplete="username"></button>
 ```
 
 ```html
@@ -137,7 +141,7 @@ The intent of this rule is to ensure that the `autocomplete` attribute can be us
 
 ```html
 <!-- Off screen and not focusable -->
-<input autocomplete="username" tabindex="-1" style="position:absolute; top:-9999em">
+<input autocomplete="username" aria-hidden="true" style="position:absolute; top:-9999em">
 ```
 
 ```html

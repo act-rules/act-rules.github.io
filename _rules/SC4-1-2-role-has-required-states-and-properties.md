@@ -55,11 +55,6 @@ If browsers and/or assistive technologies supports leaving out [required states 
 <select role="combobox"></select>
 ```
 
-```html
-<!-- Element has wrong value type for required states and properties -->
-<select role="combobox" aria-controls=""></select>
-```
-
 ### Inapplicable
 
 ```html

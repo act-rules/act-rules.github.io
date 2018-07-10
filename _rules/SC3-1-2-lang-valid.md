@@ -1,8 +1,8 @@
 ---
 name: Valid body lang attribute
 
-description:
-- This rule checks that `lang` or `xml:lang` attributes on elements within the `body` of a web page conforms to [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt).
+description: |
+ This rule checks that `lang` or `xml:lang` attributes on elements within the `body` of a web page has a valid language subtag.
 
 success_criterion:
 - 3.1.2
@@ -23,7 +23,7 @@ Any DOM element, within the `body` of a webpage with a [non-empty](#non-empty) `
 
 ### Expectation
 
-The value of the `lang` or `xml:lang` conforms to [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt).
+The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-language-subtag) if the attribute is [non-empty](#non-empty).
 
 ## Assumptions
 

@@ -45,7 +45,7 @@ If browsers and/or assistive technologies supports leaving out [required states 
 ```html
 <!-- Element has correct required states and properties -->
 <div id="someElementId">...</div>
-<select role="combobox" aria-controls=''someElementId"></select>
+<select role="combobox" aria-controls=""someElementId"></select>
 ```
 
 ### Failed

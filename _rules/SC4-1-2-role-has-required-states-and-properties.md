@@ -54,6 +54,11 @@ If browsers and/or assistive technologies supports leaving out [required states 
 <select role="combobox"></select>
 ```
 
+```html
+<!-- Missing required state, 'aria-selected'. It's not considered sufficient that 'false' is an implicit value for 'aria-selected' -->
+<select role="option"></select>
+```
+
 ### Inapplicable
 
 ```html

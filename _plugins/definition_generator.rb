@@ -91,7 +91,7 @@ module Jekyll
 			if(data)
 				to_append_data = "<div class='definition-usages'>"\
 					"<h3 class='title'>Usages:</h3>"\
-					"#{data}"\
+					"#{data.join}"\
 				'</div></div>'
 				text = File.read(url)
 				new_contents = text.gsub(/<!--PLUGIN::APPEND-BACKLINK-TO-RULE-->/, to_append_data)

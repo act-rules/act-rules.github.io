@@ -17,11 +17,7 @@ kramdown:
 collections:
   rules:
     output: true
-  rule-tests:
-    output: true
   drafts:
-    output: true
-  draft-tests:
     output: true
 
 defaults:
@@ -43,17 +39,6 @@ defaults:
       draft: true
       name: undefined
       test_mode: undefined
-  - scope:
-      path: ""
-      type: rule-tests
-    values:
-      layout: testcase
-  - scope:
-      path: ""
-      type: draft-tests
-    values:
-      layout: testcase
-      draft: true
   - scope:
       path: "pages/algorithms"
       type: pages

@@ -19,9 +19,9 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML element with the [semantic role](#semantic-role) of `image` that is [exposed to assistive technologies](#exposed-to-assistive-technologies).
+The rule applies to any HTML element with the [semantic role](#semantic-role) of `img` that is [exposed to assistive technologies](#exposed-to-assistive-technologies).
 
-**NOTE**: Any image marked as decorative, by using either `role="presentation"`, `role="none"` or an empty `alt` attribute, does not have the role of `image` according to [ARIA in HTML](https://www.w3.org/TR/html-aria/#img-alt).
+**NOTE**: Any image marked as decorative, by using either `role="presentation"`, `role="none"` or an empty `alt` attribute, does not have the role of image according to [ARIA in HTML](https://www.w3.org/TR/html-aria/#img-alt).
 
 ### Expectation
 

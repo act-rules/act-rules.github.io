@@ -10,10 +10,14 @@ title: Auto-WCAG Rules
       <th>Description</th>
       <th width='35%'>Meta Data</th>
     </tr>
-  </thead>
-  {% for rule in site.rules %}
+	</thead>
+	{% assign rulesAndDrafts = site.rules | concat: site.drafts | sort: 'name' %}
+  {% for rule in rulesAndDrafts %}
   <tr>
     <td>
+			{% if rule.draft %}
+				<p class="draft-note slim vertical">Draft</p>
+			{% endif %}
 			<a href="{{ rule.url | prepend: site.baseurl }}">{{rule.name}}</a>
 		</td>
     <td>
@@ -50,3 +54,5 @@ title: Auto-WCAG Rules
   </tr>
   {% endfor %}
 </table>
+
+

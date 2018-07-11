@@ -99,7 +99,28 @@ body {
         .draft-note {
             background-color: $brush-warning;
             color: $brush-white;
-            padding: 2rem;
+						padding: 2rem;
+						
+						&.slim {
+							font-weight: 300;
+							text-transform: uppercase;;
+							padding: 0 5px;
+							display: inline;
+							font-size: 75%;
+						}
+
+						&.vertical{
+							transform: rotate(-90deg) translateX(-5px) translateY(-35px);
+							position: absolute;
+						}
+
+						&.in-rule{
+							transform: rotate(-90deg);
+							position: fixed;
+							left: -14px;
+							top: 113px;
+						}
+
         }
 
         .text-muted {

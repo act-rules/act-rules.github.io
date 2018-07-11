@@ -29,7 +29,7 @@ Each target element has an [accessible name](#accessible-name) that is [non-empt
 
 ## Accessibility Support
 
-There is a known combinations of a popular browser and assistive technology that does not support `title` as an [accessible name](#accessible-name).
+There is a known combinations of a popular browser and assistive technology that does not by default support `title` as an [accessible name](#accessible-name).
 
 Certain assistive technologies can be set up to ignore the `title` attribute, which means that to some users the `title` attribute will not act as an accessible name.
 
@@ -48,41 +48,50 @@ Certain assistive technologies can be set up to ignore the `title` attribute, wh
 ### Passed
 
 ```html
+<!-- accessible name -->
 <img alt="W3C logo" />
 ```
 
 ```html
+<!-- non-image element with image role and accessible name -->
 <div role="image" aria-label="W3C logo"></div>
 ```
 
 ```html
+<!-- accessible name but not always supported -->
 <img title="W3C logo" />
 ```
 
 ### Failed
 ```html
+<!-- no accessible name -->
 <img />
 ```
 
 ```html
+<!-- non-image element with image role but no accessible name -->
 <div role="image"></div>
 ```
 
 ```html
+<!-- image element inside a div positioned off screen with no accessible name -->
 <div style="margin-left:-9999px;"><img /></div>
 ```
 
 ### Inapplicable
 
 ```html
+<!-- decorative image -->
 <img alt="" />
 ```
 
 ```html
+<!-- decorative image -->
 <img role="presentation" />
 ```
 
 ```html
+<!-- non-image element -->
 <svg width="100" height="100">
   <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
 </svg>

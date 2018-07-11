@@ -1,5 +1,6 @@
 ---
 name: Buttons have an accessible name
+
 description: |
   Each button element has an accessible name
 
@@ -19,7 +20,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any element with the [semantic role](#semantic-role) of `button`, except for `input` elements of `type="image"` that are [visible on the page][] or [exposed to assistive technologies][].
+The rule applies to elements that are [visible on the page][] or [exposed to assistive technologies][] with the [semantic role](#semantic-role) of `button`, except for `input` elements of `type="image"`.
 
 ### Expectation
 
@@ -51,7 +52,7 @@ There are no major accessibility support issues known for this rule.
 ```
 
 ```html
-<button value='Save Page' aria-label='Save Page'>Save Page</button>
+<button aria-label='Save Page'>Save Page</button>
 ```
 
 ```html
@@ -59,7 +60,17 @@ There are no major accessibility support issues known for this rule.
 ```
 
 ```html
-<button aria-label="My button">My button</button>
+<button aria-label="My button"></button>
+```
+
+<!-- pass: span tag with role button and has name defined by aria-label -->
+```html
+<span role="button" aria-label="My button"></button>
+```
+
+<!-- pass: summary element has a default sematic role of button -->
+```html
+<summary>Press Here</summary>
 ```
 
 ```html
@@ -99,10 +110,53 @@ There are no major accessibility support issues known for this rule.
 </button>
 ```
 
+<!-- fail: span tag with role button with no name -->
+```html
+<span role="button"></button>
+```
+
+<!-- fail: off screen button with no name -->
+```html
+<html>
+  <style>
+    .notInPage {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+    }
+  </style>
+  <body>
+    <button class='notInPage'></button>
+  </body>
+</html>
+```
+
 ## Inapplicable
 
+<!-- inapplicable: input type image -->
 ```html
 <input type='image' value='download'>
+```
+
+<!-- inapplicable: not visible in page and not exposed to assistive technologies -->
+```html
+<html>
+  <style>
+    .notInPage {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+    }
+  </style>
+  <body>
+    <button class='notInPage' aria-hidden='true'>Confirm</button>
+  </body>
+</html>
+```
+
+<!-- inapplicable: role overridden to link for button element -->
+```html
+<button role='link'>take me somewhere</button>
 ```
 
 ------

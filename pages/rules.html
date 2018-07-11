@@ -3,35 +3,50 @@ layout: default
 title: Auto-WCAG Rules
 ---
 
-<table class="table table-striped table-hover">
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Rule name</th>
-      <th>Test mode</th>
-      <th>WCAG criterion</th>
+			<th width='25%'>Name</th>
+      <th>Description</th>
+      <th width='35%'>Meta Data</th>
     </tr>
   </thead>
   {% for rule in site.rules %}
   <tr>
-    <th><a href="{{ rule.url | prepend: site.baseurl }}">{{
-      rule.name
-    }}<br>(<i>{{ rule.url | remove: "/rules/" | remove: ".html" }}</i>)</a></th>
-    <td>{{ rule.test_mode }}</td>
-    <td><ul>
-      {% for criterion in rule.success_criterion %}
-        <li>
-          {% if site.data.criteria[criterion] %}
-            <a href="{{ site.data.criteria[criterion].url }}" target="_blank">
-            {{ site.data.criteria[criterion].num }}
-            {{ site.data.criteria[criterion].handle }}
-            (Level {{ site.data.criteria[criterion].level }})
-            </a>
-          {% else %}
-            {{ criterion }} (unknown)
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul></td>
+    <td>
+			<a href="{{ rule.url | prepend: site.baseurl }}">{{rule.name}}</a>
+		</td>
+    <td>
+			{{ rule.description }}
+		</td>
+    <td>
+			<table class="table">
+				<tr>
+					<th scope="row">Rule Id:</th>
+					<td>{{ rule.url | remove: "/rules/" | remove: ".html" }}</td>
+				</tr>
+				<tr>
+					<th scope="row" width='60px'>WCAG Criterion: </th>
+					<td>
+						<ul style="list-style: none; padding-left: 0;">
+							{% for criterion in rule.success_criterion %}
+								<li>
+									{% if site.data.criteria[criterion] %}
+										<a href="{{ site.data.criteria[criterion].url }}" target="_blank">
+										{{ site.data.criteria[criterion].num }}
+										{{ site.data.criteria[criterion].handle }}
+										(Level {{ site.data.criteria[criterion].level }})
+										</a>
+									{% else %}
+										{{ criterion }} (unknown)
+									{% endif %}
+								</li>
+							{% endfor %}
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</td>
   </tr>
   {% endfor %}
 </table>

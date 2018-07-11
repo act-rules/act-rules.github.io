@@ -1,7 +1,7 @@
 # Steps 
 # read list of all algorithm keys -> make an object/ hash
 # parse each draft/ rule and find usage of algorithm keys -> make an object/ hash
-# overwrite respective md files with definitions yml & list of key terms at the bottom
+# overwrite respective md files & list of definition at the bottom of the page
 
 module Jekyll
 	class DefinitionGenerator < Generator
@@ -32,7 +32,7 @@ module Jekyll
 				end
 			end
 
-			# hool to liten to site post_write event 
+			# hook to liten to site post_write event 
 			# append definitions to pages
 			# append list of usages of definitions in rule pages to definition index page.
 			Hooks.register :site, :post_write do |site|

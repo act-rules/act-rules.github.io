@@ -26,7 +26,7 @@ For each test target all [required states and properties](https://www.w3.org/TR/
 
 ## Assumptions
 
-- Even though browsers and/or assistive technologies seem to support leaving out at least some [required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) if an [implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole) is specified in [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole), we do not consider it enough to pass this rule, that WAI-ARIA specifies an implicit value for the required states or properties for a role.
+This rule assumes that it is not sufficient to rely on browser support for [implicit values for roles](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole) to satisfy this accessibility requirement. Browsers should support implicit values for roles as per WAI-ARIA [values for states and properties](https://www.w3.org/TR/wai-aria/#state_prop_values): _“When a value is indicated as the default, the user agent MUST follow the behavior prescribed by this value when the state or property is empty or unspecified.”_ But WAI-ARIA also prescribes on [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) that _“Content authors MUST provide a non-empty value for required states and properties. Content authors MUST NOT use the value undefined for required states and properties, unless undefined is an explicitly-supported value of that state or property."_ For this particular rule, the responsibility for living up to the accessibility requirement in these cases is placed with the content author. See more about the implications of this in the ”Accessibility Support” section for this rule.
 
 ## Accessibility Support
 

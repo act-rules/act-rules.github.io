@@ -24,6 +24,8 @@ Any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-
 
 For each test target all [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for that role as specified by [WAI-ARIA](https://www.w3.org/TR/wai-aria) are present.
 
+**Note:** This rule does not test whether the required states and properties has a correct value, only that the attributes are present.
+
 ## Assumptions
 
 This rule assumes that it is not sufficient to rely on browser support for [implicit values for roles](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole) to satisfy this accessibility requirement. Browsers should support implicit values for roles as per WAI-ARIA [values for states and properties](https://www.w3.org/TR/wai-aria/#state_prop_values): _“When a value is indicated as the default, the user agent MUST follow the behavior prescribed by this value when the state or property is empty or unspecified.”_ But WAI-ARIA also prescribes on [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) that _“Content authors MUST provide a non-empty value for required states and properties. Content authors MUST NOT use the value undefined for required states and properties, unless undefined is an explicitly-supported value of that state or property."_ For this particular rule, the responsibility for living up to the accessibility requirement in these cases is placed with the content author. See more about the implications of this in the ”Accessibility Support” section for this rule.
@@ -43,19 +45,25 @@ If browsers and/or assistive technologies supports leaving out [required states 
 ### Passed
 
 ```html
-<!-- Element has required states and properties -->
-<select role="combobox" aria-controls=""></select>
+<!-- Element has required states (no properties required for this role) -->
+<select role="option" aria-selected></select>
+```
+
+```html
+<!-- Element has required properties (no states required for this role) -->
+<div 
+<select role="combobox" aria-controls="someElementId"></select>
 ```
 
 ### Failed
 
 ```html
-<!-- Element does not list required states and properties -->
+<!-- Element does not list required states and properties (´aria-controls´ is required property for ´combobox´) -->
 <select role="combobox"></select>
 ```
 
 ```html
-<!-- Missing required state, 'aria-selected'. It's not considered sufficient that 'false' is an implicit value for 'aria-selected' -->
+<!-- Missing required state, 'aria-selected', for ´option´. It's not considered sufficient that 'aria-selected' has an implicit value (´false´) specified -->
 <select role="option"></select>
 ```
 

@@ -1,12 +1,9 @@
 ---
 name: video element transcript
-group: SC1-2-video-element
 description: |
   Non-streaming `video` elements must have all audio and visual information available in a transcript.
 
 success_criterion:
-- 1.2.1 # Audio-only and Video-only (Prerecorded)
-- 1.2.3 # Audio Description or Media Alternative (Prerecorded)
 - 1.2.8 # Media Alternative (Prerecorded)
 
 test_aspects:
@@ -24,15 +21,17 @@ authors:
 
 ### Applicability
 
-The rule applies to any [non-streaming][] `video` element [visible on the page][]
+The rule applies to any [non-streaming](#non-streaming) `video` element [visible on the page](#visible-on-the-page) where the video contains audio.
 
 ### Expectation 1
 
-A [text transcript][] is available for the test target, either on the page or available through a link.
+A text transcript is available for the test target, either on the page or available through a link.
 
 ### Expectation 2
 
-The [text transcript][] (from expectation 1) contains all the visual and auditory information of the test target.
+The text transcript (from expectation 1) contains all the visual and auditory information of the test target.
+
+**Note**: A "text transcript" in the context of this rule is defined in WCAG 2 as a [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
 
 ## Assumptions
 
@@ -50,12 +49,6 @@ There are no major accessibility support issues known for this rule.
 - https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G78
 - https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G173
 - https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G203
-
-[audio output]: ../pages/algorithms/audio-output.html
-[visual output]: ../pages/algorithms/visual-output.html
-[non-streaming]: ../pages/algorithms/non-streaming-media-element.html
-[visible on the page]: ../pages/algorithms/visible-on-the-page.html
-[text transcript]: https://www.w3.org/TR/WCAG20/#alt-time-based-mediadef
 
 ## Test Cases
 

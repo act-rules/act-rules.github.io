@@ -1,12 +1,7 @@
 ---
 name: audio described video element
-group: SC1-2-video-element
 description: |
-  Non-streaming `video` elements must not contain any visual information that is not expressed in the audio
-
-success_criterion:
-- 1.2.3 # Audio Description or Media Alternative (Prerecorded)
-- 1.2.5 # Audio Description (Prerecorded)
+  Non-streaming `video` elements must have all visual information also contained in the audio
 
 test_aspects:
 - DOM Tree
@@ -23,7 +18,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any [non-streaming][] `video` element [visible on the page][] where the video contains [audio][].
+The rule applies to any [non-streaming](#non-streaming) `video` element [visible on the page](#visible-on-the-page) where the video contains audio.
 
 ### Expectation
 
@@ -40,17 +35,9 @@ There are no major accessibility support issues known for this rule.
 ## Background
 
 - http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc.html
-- http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc-only.html
 - https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G78
 - https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G173
 - https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G8
-
-[audio output]: ../pages/algorithms/audio-output.html
-[visual output]: ../pages/algorithms/visual-output.html
-[non-streaming]: ../pages/algorithms/non-streaming-media-element.html
-[visible in the page]: ../pages/algorithms/visible-in-the-page.html
-[text transcript]: https://www.w3.org/TR/WCAG20/#alt-time-based-mediadef
-[audio]: https://www.w3.org/TR/WCAG20/#audiodef
 
 ## Test Cases
 

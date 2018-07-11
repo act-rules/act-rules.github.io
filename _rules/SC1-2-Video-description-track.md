@@ -1,12 +1,7 @@
 ---
 name: Video element description track
-group: SC1-2-video-element
 description: |
-  This rule checks that description tracks that come with  non-streaming `video` elements are descriptive.
-
-success_criterion:
-- 1.2.3 # Audio Description or Media Alternative (Prerecorded)
-- 1.2.5 # Audio Description (Prerecorded)
+  This rule checks that description tracks that come with non-streaming `video` elements are descriptive.
 
 test_aspects:
 - DOM Tree
@@ -19,18 +14,17 @@ authors:
 - Brian Bors
 ---
 
-
 ## Test Procedure
 
 ### Applicability
 
-The rule applies to any [non-streaming][] `video` element [visible on the page][] where the video contains [audio][] and a `track` element with a `kind="description"` attribute.
+The rule applies to any [non-streaming](#non-streaming) `video` element [visible on the page](#visible-on-the-page) where the video contains audio and a `track` element with a `kind="description"` attribute.
 
 ### Expectation
 
-The visual information of each test target not available through its audio is described with a description track element.
+The visual information of each test target not available through its audio is described with a description `track` element.
 
-*Note*: Multiple description track elements may be useful for different languages, but at least one must match the language of the video.
+*Note*: Multiple description `track` elements may be useful for different languages, but at least one must match the language of the video.
 
 ## Assumptions
 
@@ -48,13 +42,6 @@ This means that the rule can only provide a pass for these succescriteria if acc
 - http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc-only.html
 - https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G78
 - https://www.w3.org/WAI/GL/2016/WD-WCAG20-TECHS-20160105/H96
-
-[audio output]: ../pages/algorithms/audio-output.html
-[visual output]: ../pages/algorithms/visual-output.html
-[non-streaming]: ../pages/algorithms/non-streaming-media-element.html
-[visible on the page]: ../pages/algorithms/visible-on-the-page.html
-[text transcript]: https://www.w3.org/TR/WCAG20/#alt-time-based-mediadef
-[audio]: https://www.w3.org/TR/WCAG20/#audiodef
 
 ## Test Cases
 

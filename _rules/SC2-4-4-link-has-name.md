@@ -19,7 +19,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML or SVG element with the [semantic role](#semantic-role) of `link` that is [visible on the page](#visible-on-the-page) or [exposed to assistive technologies](#exposed-to-assistive-technologies).
+The rule applies to any HTML element with the [semantic role](#semantic-role) of `link` that is [visible on the page](#visible-on-the-page) or [exposed to assistive technologies](#exposed-to-assistive-technologies).
 
 ### Expectation
 

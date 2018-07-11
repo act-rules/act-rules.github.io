@@ -9,8 +9,8 @@ success_criterion:
 test_aspects:
 - DOM Tree
 - CSS Styling
-- [Audio output][]
-- [Visual output][]
+- [Audio output]{#audio-output}
+- [Visual output]{#audio-output}
 
 authors:
 - Wilco Fiers
@@ -21,11 +21,11 @@ authors:
 
 ### Applicability
 
-The rule applies to any [non-streaming][] `video` element [visible on the page][] where the video contains [audio][].
+The rule applies to any [non-streaming](#non-streaming) `video` element [visible on the page](#visible-on-the-page) where the video contains [audio](#audio).
 
 ### Expectation
 
-Of each test target, audio information that is not expressed visually in the video, is available through [captions][].
+For each test target, audio information that is not expressed visually in the video, is available through [captions](#captions).
 
 *Note*: Captions can be either embedded in the video file itself or can be made available trough a separate track.
 
@@ -67,6 +67,16 @@ There are no major accessibility support issues known for this rule.
 ```html
 <video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls>
   <track src="/test-assets/perspective-video/perspective-incorrect-caption.vtt" kind="captions">
+</video>
+```
+
+```html
+<p>The video below shows a man working on a keyboard. A voiceover is heard 
+  saying the following text: Web accessibility perspectives. Keyboard 
+  compatibility. Not being able to use your computer because your mouse 
+  doesn't work, is frustrating. Many people use only the keyboard to navigate 
+  websites. Either through preference or circumstance.</p>
+<video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls>
 </video>
 ```
 

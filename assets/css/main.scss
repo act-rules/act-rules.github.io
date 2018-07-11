@@ -154,5 +154,11 @@ body {
         @extend .table !optional;
         @extend .table-striped !optional;
         @extend .table-hover !optional;
-    }
+		}
+		
+		.definition-usages {
+			> .definition-usage-link {
+				display: block
+			}
+		}
 }

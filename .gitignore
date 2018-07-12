@@ -1,9 +1,8 @@
 .idea
 *.iml
 *.log
-
 .sass-cache
 
-
 _site
-_draft-testcase-embeds
+_testcases-embeds/
+_testcases-export/

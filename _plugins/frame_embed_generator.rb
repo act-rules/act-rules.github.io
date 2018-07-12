@@ -1,5 +1,6 @@
 require 'securerandom'
 require 'fileutils'
+require 'json'
 
 module Jekyll
   module FrameEmbed
@@ -9,7 +10,7 @@ module Jekyll
       safe true
       priority :highest
 
-      KEY_EMBEDS_DIR = '_draft-testcase-embeds/'
+      KEY_EMBEDS_DIR =  JSON.parse(File.read('package.json'))['testcases-embeds-dir']
       KEY_MATCH_CODE_TAG_BACKTICK = '```'
       INCLUDE_FILE_TYPE = '.html'
       MESSAGES = {

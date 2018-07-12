@@ -31,9 +31,10 @@
 	<!-- TODO:FAVICON after branding -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 	<!-- CSS -->
-	<link rel="stylesheet" href="{{ site.baseurl }}/assets/bootstrap/css/bootstrap.min.css"> 
-	<link rel="stylesheet" href="{{ site.baseurl }}/assets/font-awesome/css/font-awesome.min.css"> 
-	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs.min.css">
+
 	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
@@ -148,7 +149,7 @@
 						<li class="dropdown">
 							<a href="https://github.com/auto-wcag/auto-wcag/" 
 								role="link">
-								<i class="fa fa-github scale-2x"></i>
+								<i class="fab fa-github scale-2x"></i>
 							</a>
 						</li>
 					</ul>
@@ -183,7 +184,7 @@
 									<br>								
 									<a href="https://github.com/auto-wcag/auto-wcag/" 
 										role="link" class="desc">
-										<i class="fa fa-github scale-5x"></i>
+										<i class="fab fa-github-square scale-5x"></i>
 									</a>
 									<br><br><br><br>
 									<a class="btn btn-cta" href="https://github.com/auto-wcag/auto-wcag/" >
@@ -208,8 +209,10 @@
 
 	</div>
 	<!-- Javascript -->    
-	<script type="text/javascript" src="{{ site.baseurl }}/assets/jquery/jquery-1.12.3.min.js"></script>
-	<script type="text/javascript" src="{{ site.baseurl }}/assets/bootstrap/js/bootstrap.min.js"></script>
-	
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
 </body>
 </html>

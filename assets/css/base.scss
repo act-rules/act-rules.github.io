@@ -32,16 +32,12 @@ a {
 	}
 }
 
-pre, code {
-	background-color: lighten($color-primary, 45%);
-	color: $black;
-	font-weight: 500;
-	display: inline-block;
-}
 
 pre {
 	border-radius: 0;
-	display: block;
+	padding: 0;
+	background-color: none;
+	border-color: $light-grey;
 }
 
 .btn, a.btn {
@@ -91,7 +87,6 @@ select {
 	appearance: none;  /* for mobile safari */
 	-webkit-appearance: none;
 }
-
 
 .navbar{
 	border-radius: 0;
@@ -231,10 +226,7 @@ select {
 					}
 					iframe {
 						width: 100%;
-						border: 1px solid $color-primary;
-						iframe {
-							border: 1px solid $color-primary;
-						}
+						border: 1px solid $light-grey;
 					}
 			}
 	}

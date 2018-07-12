@@ -2,5 +2,8 @@
 *.iml
 *.log
 
+.sass-cache
+
+
 _site
 _draft-testcase-embeds

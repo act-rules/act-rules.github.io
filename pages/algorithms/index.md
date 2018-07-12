@@ -1,5 +1,5 @@
 ---
-title: Algorithms
+title: Definitions
 ---
 
 {% for algorithms in site.pages %}

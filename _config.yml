@@ -6,6 +6,8 @@ description: >
   Google search results) and in your feed.xml site description.
 baseurl: "/auto-wcag"
 url: "http://auto-wcag/github.io/"
+sass:
+    sass_dir: assets/css
 
 markdown: kramdown
 # Use github markdown

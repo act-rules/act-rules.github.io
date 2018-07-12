@@ -94,6 +94,7 @@ select {
 
 
 .navbar{
+	border-radius: 0;
 	background-color: $color-primary;
 	color: $smoky-white;
 
@@ -242,7 +243,6 @@ select {
 
 .cards-section {
 	padding: 60px 0;
-	background: $smoky-grey;
 	
 	.title {
 			margin-top: 0;

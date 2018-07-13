@@ -37,11 +37,11 @@ While HTML5 specification indicates that `xml:lang` attribute takes priority ove
 
 ## Background
 
-- https://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H57
-- https://www.ietf.org/rfc/bcp/bcp47.txt
-- https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang
-- https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/xml:lang
-- https://www.w3.org/TR/WCAG20-TECHS/H57.html
+- [https://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H57](https://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H57)
+- [https://www.ietf.org/rfc/bcp/bcp47.txt](https://www.ietf.org/rfc/bcp/bcp47.txt)
+- [https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang)
+- [https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/xml:lang](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/xml:lang)
+- [https://www.w3.org/TR/WCAG20-TECHS/H57.html](https://www.w3.org/TR/WCAG20-TECHS/H57.html)
 
 ## Test Cases
 

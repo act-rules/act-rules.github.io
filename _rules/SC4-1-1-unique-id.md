@@ -34,9 +34,9 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=411#qr-ensure-compat-parses
-- https://www.w3.org/TR/WCAG20-TECHS/H93.html
-- https://www.w3.org/TR/WCAG20-TECHS/H94.html
+- [https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=411#qr-ensure-compat-parses](https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=411#qr-ensure-compat-parses)
+- [https://www.w3.org/TR/WCAG20-TECHS/H93.html](https://www.w3.org/TR/WCAG20-TECHS/H93.html)
+- [https://www.w3.org/TR/WCAG20-TECHS/H94.html](https://www.w3.org/TR/WCAG20-TECHS/H94.html)
 
 ## Test Cases
 

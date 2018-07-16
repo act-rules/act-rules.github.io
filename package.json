@@ -15,7 +15,7 @@
     "url": "git+https://github.com/auto-wcag/auto-wcag.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "https://auto-wcag.github.io/auto-wcag/license.html",
   "bugs": {
     "url": "https://github.com/auto-wcag/auto-wcag/issues"
   },

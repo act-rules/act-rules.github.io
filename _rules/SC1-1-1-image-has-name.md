@@ -1,7 +1,7 @@
 ---
 name: Image has accessible name
 description: |
-  Each image that is not marked as decorative, has an [accessible name](#accessible-name)
+  Each image that is not marked as decorative, has an accessible name
 
 success_criterion:
 - 1.1.1 # Non-Text Content

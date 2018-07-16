@@ -1,5 +1,6 @@
 require 'securerandom'
 require 'fileutils'
+require 'json'
 
 module Jekyll
   module FrameEmbed
@@ -9,26 +10,25 @@ module Jekyll
       safe true
       priority :highest
 
-      KEY_EMBEDS_DIR = '_draft-testcase-embeds/'
+      KEY_EMBEDS_DIR =  JSON.parse(File.read('package.json'))['testcases-embeds-dir']
       KEY_MATCH_CODE_TAG_BACKTICK = '```'
       INCLUDE_FILE_TYPE = '.html'
       MESSAGES = {
         'ODD_TAG_COUNT' => 'Expects even pairs of' + KEY_MATCH_CODE_TAG_BACKTICK + ' and ' + KEY_MATCH_CODE_TAG_BACKTICK + '. Odd number of tags identified in page '
       }
       
-      def initialize(p)
+			def initialize(config)
+				puts 'FrameEmbedGenerator Invoked'
         @markdown = Converters::Markdown.new
-        super(p)
+				super(config)
       end
 
       def generate(site)
-        # Hooks
-        Hooks.register :site, :post_write do |site|
-          FileUtils.copy_entry KEY_EMBEDS_DIR, site.dest + '/' + KEY_EMBEDS_DIR
-        end
+
         # Clean directory
         base_dir = site.source + '/' + KEY_EMBEDS_DIR
         FileUtils.rm_f Dir.glob("#{base_dir}/*")
+
         # Create empty directory
         Dir.mkdir(base_dir) unless File.exists?(base_dir)
         # Loop documents and create test case embeds
@@ -37,6 +37,12 @@ module Jekyll
             create_frame_embed_content(doc, site)
           end
         end
+
+        # Hook after post_write and then copy across generated frame embed documents
+        Hooks.register :site, :post_write do |site|
+          FileUtils.copy_entry KEY_EMBEDS_DIR, site.dest + '/' + KEY_EMBEDS_DIR
+        end
+
       end
 
       def get_code_tag_line_indices(document)
@@ -87,6 +93,7 @@ module Jekyll
         doc_content = get_md_content(document.content, spread_indices, hash)
         document.content = doc_content
       end
+      
       def get_highlight_lang(opening_tag)
         lang = 'html'
         language_tag = opening_tag.gsub(KEY_MATCH_CODE_TAG_BACKTICK, '')
@@ -140,6 +147,8 @@ module Jekyll
           f.write(file_content) 
         end
       end
+
+      private
     
       def fail(msg)
         Jekyll.logger.error 'Fatal (Frame Embed):', msg

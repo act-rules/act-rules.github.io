@@ -1,5 +1,6 @@
 ---
 title: Language identification
+key: language-identification
 ---
 
 A language identification algorithm is used the determine the language of a given text.  Some languages can be determined reliably from their character use alone. In these cases it is sufficient to analyse the characters and encoding of the web content. For languages sharing the same script (such as languages using the latin alphabet), the distinction is more difficult.

@@ -1,5 +1,6 @@
 ---
 title: Surrounding text
+key: surrounding-text
 ---
 
 In order for people with disabilities to be able to use this text - the text must be "programmatically determinable." This means that the text must be able to be read and used by the assistive technologies (and the accessibility features in browsers) that people with disabilities use.

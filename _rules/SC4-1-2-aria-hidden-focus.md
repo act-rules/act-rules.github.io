@@ -18,9 +18,9 @@ authors:
 
 ### Applicability
 
-The rule applies to any element with a `aria-hidden="true"` attribute.
+The rule applies to any element with an `aria-hidden="true"` attribute.
 
-**Note**: Using `aria-hidden="false"` on a decendent of an element with `aria-hidden="true"` **does not** expose that element. `aria-hidden="true"` hides everything inside of it from assistive technologies.
+**Note**: Using `aria-hidden="false"` on a decendent of an element with `aria-hidden="true"` **does not** expose that element. `aria-hidden="true"` hides itself and all its content from assistive technologies.
 
 ### Expectation
 

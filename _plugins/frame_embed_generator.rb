@@ -1,5 +1,6 @@
 require 'securerandom'
 require 'fileutils'
+require 'json'
 
 module Jekyll
   module FrameEmbed
@@ -9,16 +10,17 @@ module Jekyll
       safe true
       priority :highest
 
-      KEY_EMBEDS_DIR = '_draft-testcase-embeds/'
+      KEY_EMBEDS_DIR =  JSON.parse(File.read('package.json'))['testcases-embeds-dir']
       KEY_MATCH_CODE_TAG_BACKTICK = '```'
       INCLUDE_FILE_TYPE = '.html'
       MESSAGES = {
         'ODD_TAG_COUNT' => 'Expects even pairs of' + KEY_MATCH_CODE_TAG_BACKTICK + ' and ' + KEY_MATCH_CODE_TAG_BACKTICK + '. Odd number of tags identified in page '
       }
       
-      def initialize(config)
+			def initialize(config)
+				puts 'FrameEmbedGenerator Invoked'
         @markdown = Converters::Markdown.new
-        super(config)
+				super(config)
       end
 
       def generate(site)

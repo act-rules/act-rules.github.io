@@ -6,6 +6,8 @@ description: >
   Google search results) and in your feed.xml site description.
 baseurl: "/auto-wcag"
 url: "http://auto-wcag/github.io/"
+sass:
+    sass_dir: assets/css
 
 markdown: kramdown
 # Use github markdown
@@ -17,11 +19,7 @@ kramdown:
 collections:
   rules:
     output: true
-  rule-tests:
-    output: true
   drafts:
-    output: true
-  draft-tests:
     output: true
 
 defaults:
@@ -44,17 +42,6 @@ defaults:
       name: undefined
       test_mode: undefined
   - scope:
-      path: ""
-      type: rule-tests
-    values:
-      layout: testcase
-  - scope:
-      path: ""
-      type: draft-tests
-    values:
-      layout: testcase
-      draft: true
-  - scope:
       path: "pages/algorithms"
       type: pages
     values:
@@ -62,7 +49,8 @@ defaults:
       category: algorithms
 
 exclude:
-- _draft-testcase-embeds
+- _testcases-embeds
+- _testcases-export
 - _drafts/early-stage
 - _drafts/outdated
 - _rules/outdated

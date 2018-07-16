@@ -18,14 +18,12 @@ authors:
 
 ### Applicability
 
-This rule applies to:
-- any element that is [exposed to assistive technologies](#exposed-to-assistive-technologies), and
-- that has a [semantic role](#semantic-role) that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and 
+This rule applies to any element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) and that has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider, spinbutton`, `switch`, `textbox`.
+
+**Note**: The list of roles is derived by taking all the ARIA 1.1 roles that:
+- has a [semantic roles](#semantic-role) that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and 
 - does not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
-
-**Note**: All elements that are semantic form controls, either implicitly through native HTML elements or explicitly through use of ARIA roles, inherit from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` roles. The required context role defines the owning container in which a given role is allowed. Form controls with a required context role that is itself a form control, e.g. `<option>` within a `<select>`, are not applicable to this rule as only the top-most form control requires an accessible name.
-
-**Note**: At the time of writing this rule the semantic roles that inherit from the abstract `input` or `select` role and do not have a required context role that itself inherits from one of those roles are: `checkbox`, `combobox`, `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider, spinbutton`, `switch`, `textbox`.
+- Remove the `option` role, because it does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means WCAG 2 does not require it to have an accessible name.
 
 ### Expectation
 
@@ -48,28 +46,93 @@ Certain assistive technologies can be set up to ignore the title attribute, whic
 ### Passed
 
 ```html
-<input type="text" name="firstname" id="firstname" />
+<!-- implicit role with implicit label -->
+<label>
+  first name
+  <input />
+</label>
+```
+
+```html
+<!-- implicit role with aria-label -->
+<input aria-label="last name" disabled />
+```
+
+```html
+<!-- implicit role with explicit label -->
+<label for="country">Country</label>
+<select id="country">
+  <option></option>
+</select>
+```
+
+```html
+<!-- implicit role with aria-labelledby -->
+<div id="country">Country</div>
+<textarea aria-labelledby="address"></textarea>
+```
+
+```html
+<!-- explicit role -->
+<div aria-label="country" role="combobox" aria-disabled="true">England</div>
 ```
 
 ### Failed
 
 ```html
-<input type="text" id="firstname" />
+<!-- No accessible name -->
+<input />
+```
+
+```html
+<!-- Non-focusable still need an accessible name -->
+<input tabindex="-1" />
+```
+
+```html
+<!-- aria-Label with empty text string -->
+<div aria-label=" " role="combobox">England</div>
+```
+
+```html
+<!-- Label does not exist -->
+<div aria-labelledby="non-existing" role="combobox">England</div>
+```
+
+```html
+<!-- Implicit label not supported on div elements -->
+<label>
+  first name
+  <div role="textbox"></div>
+</label>
+```
+
+```html
+<!-- Explicit label not supported on div elements -->
+<label for="lastname">first name</label>
+<div role="textbox" id="lastname"></div>
 ```
 
 ### Inapplicable 
 
 ```html
-<input type="text" name="firstname" id="firstname" style="display:none;" />
+<!-- Hidden to everyone -->
+<input aria-label="firstname" style="display:none;" />
 ```
 
 ```html
-<input type="text" disabled name="firstname" id="firstname" />
+<!-- Hidden to assistive technologies -->
+<input aria-hidden="true" aria-label="firstname" />
 ```
  
 ```html
+<!-- Explicitly set the role to something that isn't a form field -->
+<input role="presentation" />
+```
+
+```html
 <!-- option inherits from input, but has a required context role of listbox which inherits from select. We should therefore not consider option as applicable. -->
-<select>
+<select role="none">
   <option value="volvo">Volvo</option>
   <option value="saab">Saab</option>
   <option value="opel">Opel</option>

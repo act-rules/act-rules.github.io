@@ -7,9 +7,10 @@ module Jekyll
 	class DefinitionGenerator < Generator
 		
 		safe true
-		priority :highest
+		priority :high
 
 		def initialize(config)
+			puts 'DefinitionGenerator Invoked'
 			super(config)
 		end
 

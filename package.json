@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "auto-wcag",
   "main": "index.js",
+	"testcases-embeds-dir": "_testcases-embeds/",
+	"testcases-export-dir": "_testcases-export/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bundle exec jekyll serve",
-    "proof": "bundle exec jekyll build && bundle exec htmlproofer ./_site --only-4xx --check-html --allow_hash_href --assume-extension --alt-ignore '/.*/'"
+		"proof": "bundle exec jekyll build && bundle exec htmlproofer ./_site --only-4xx --check-html --allow_hash_href --assume-extension --alt-ignore '/.*/'"
   },
   "repository": {
     "type": "git",

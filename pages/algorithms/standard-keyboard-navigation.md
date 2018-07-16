@@ -1,6 +1,8 @@
 ---
 title: Standard keyboard navigation
+key: standard-keyboard-navigation
 ---
+
 Standard keyboard navigation entails using one or more of the following:
 - Tab key
 - Shift+Tab

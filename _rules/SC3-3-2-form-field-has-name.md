@@ -20,10 +20,10 @@ authors:
 
 This rule applies to any element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) and that has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider, spinbutton`, `switch`, `textbox`.
 
-**Note**: The list of roles is derived by taking all the ARIA 1.1 roles that:
-- has a [semantic roles](#semantic-role) that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and 
+**Note**: The list of roles is derived by taking all the [ARIA](https://www.w3.org/TR/wai-aria-1.1/) 1.1 roles that:
+- have a [semantic roles](#semantic-role) that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and 
 - does not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
-- Remove the `option` role, because it does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means WCAG 2 does not require it to have an accessible name.
+- The `option` role is not part of the list of applicable roles, because it does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an accessible name.
 
 ### Expectation
 
@@ -90,7 +90,7 @@ Certain assistive technologies can be set up to ignore the title attribute, whic
 ```
 
 ```html
-<!-- aria-Label with empty text string -->
+<!-- aria-label with empty text string -->
 <div aria-label=" " role="combobox">England</div>
 ```
 

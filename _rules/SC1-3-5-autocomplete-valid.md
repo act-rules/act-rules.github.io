@@ -18,12 +18,12 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML `input`, `select` and `textarea` element with a [non-empty]() `autocomplete` attribute, except if one of the following is true:
+The rule applies to any HTML `input`, `select` and `textarea` element with a [non-empty](#non-empty) `autocomplete` attribute, except if one of the following is true:
 
-- The element is **not** [[visible on the page]] or [[exposed to assistive technologies]]
+- The element is **not** [visible on the page](#visible-on-the-page) or [exposed to assistive technologies](#exposed-to-assistive-technologies)
 - The element is an `input` element a `type` of `hidden`, `button`, `submit` or `reset`
 - The element has a `disabled` or `aria-disabled="true"` attribute
-- The element has `tabindex="-1"` and has a [[semantic role]] that is not a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget_roles)
+- The element has `tabindex="-1"` and has a [semantic role](#semantic-role) that is not a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget_roles)
 
 ### Expectation 1
 
@@ -36,13 +36,13 @@ The autocomplete term(s) follow the [HTML 5.2 specification](https://www.w3.org/
 1. Has a section-* value _(optional)_
 2. Has either "shipping" or "billing" _(optional)_
 3. Has "home", "work", "mobile", "fax" or "pager" _(optional, only for "email", "impp", "tel" or "tel-*")_
-4. Has a [correct autocomplete field][#correct-autocomplete-field] _(required)_
+4. Has a [correct autocomplete field](#correct-autocomplete-field) _(required)_
 
 **Note**: Autocomplete terms are case insensitive. When multiple terms are used, they must be used in the correct order.
 
 ### Exepctation 3
 
-The [correct autocomplete field][#correct-autocomplete-field] is an [appropriate field for the form control][#appropriate-field-for-the-form-control].
+The [correct autocomplete field](#correct-autocomplete-field) is an [appropriate field for the form control](#appropriate-field-for-the-form-control).
 
 ## Assumptions
 
@@ -56,19 +56,21 @@ While `autocomplete` in a promising technique for supporting personalisation in 
 
 The intent of this rule is to ensure that the `autocomplete` attribute can be used to suport personalization. Many users may find it easier to fill out forms if those can be styled or layed out in a way that is familiar to them. Assistive technologies can do this when a form control is marked up in such a way that its purpose can be understood. For instance, assistive technologies could add familiar icons and colors to different fields, making it easier for the user to understand what the form does. 
 
-- https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html
-- https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable
-- https://www.w3.org/TR/html52/sec-forms.html#sec-autofill
+- [https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html)
+- [https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable](https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable)
+- [https://www.w3.org/TR/html52/sec-forms.html#sec-autofill](https://www.w3.org/TR/html52/sec-forms.html#sec-autofill)
 
 ## Test Cases
 
 ### Passed
 
 ```html
+<!-- single autocomplete term -->
 <input autocomplete="username" />
 ```
 
 ```html
+<!-- single autocomplete term for select -->
 <select autocomplete="bday-month">
   <option>January</option>
   <option>...</option>
@@ -76,22 +78,27 @@ The intent of this rule is to ensure that the `autocomplete` attribute can be us
 ```
 
 ```html
+<!-- Autocomplete term, only valid for textarea -->
 <textarea autocomplete="Street-Address"></textarea>
 ```
 
 ```html
+<!-- Two autocomplete terms -->
 <input autocomplete="Work EMail" />
 ```
 
 ```html
+<!-- Autocomplete using section-* -->
 <input autocomplete="section-partner email" />
 ```
 
 ```html
+<!-- Tripple autocomplete terms -->
 <input type="text" autocomplete="section-primary billing street-address />
 ```
 
 ```html
+<!-- Full length autocomplete terms -->
 <input autocomplete="section-primary shipping work email" />
 ```
 
@@ -140,7 +147,7 @@ The intent of this rule is to ensure that the `autocomplete` attribute can be us
 ```
 
 ```html
-<!-- Off screen and not focusable -->
+<!-- Off screen and hidden to assistive technologies -->
 <input autocomplete="username" aria-hidden="true" style="position:absolute; top:-9999em">
 ```
 
@@ -168,14 +175,3 @@ The intent of this rule is to ensure that the `autocomplete` attribute can be us
 <!-- non-widget element -->
 <input type="button" role="none" tabindex="-1" autocomplete="username">
 ```
-
-## Definitions
-
-### Correct autocomplete field
-
-Any field name listed in the autocomplete fields table from the HTML 5.2 specification:
-https://www.w3.org/TR/html52/sec-forms.html#inappropriate-for-the-control
-
-### Eppropriate field for the form control
-
-The field name listed in the autocomplete fields table from the HTML 5.2 specification is used in the `autocomplete` attribute of an element 

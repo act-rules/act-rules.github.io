@@ -114,7 +114,7 @@ module Jekyll
 						definition = "<div class='definition-item'>"\
 							"<a id='#{v["key"]}' href='#{site.baseurl}#{v['url']}'><h3>#{ v['title']}</h3></a>"\
 							"#{ get_page_content(site, v['url']) }"\
-						'</div></div>'
+						'</div>'
 						# only add if definition does not exist already
 						out.push(definition) unless out.include?(definition)
 					end

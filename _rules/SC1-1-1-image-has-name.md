@@ -19,19 +19,17 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML element with the [semantic role](#semantic-role) of `img` that is [exposed to assistive technologies](#exposed-to-assistive-technologies).
-
-**NOTE**: Any image marked as decorative, by using either `role="presentation"`, `role="none"` or an empty `alt` attribute, does not have the role of image according to [ARIA in HTML](https://www.w3.org/TR/html-aria/#img-alt).
+The rule applies to HTML `img` elements or any HTML element with the [semantic role](#semantic-role) of `img` that is exposed to assistive technologies.
 
 ### Expectation
 
-Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty).
+Each target element has an accessible name that is non-empty or is marked as decorative.
+
+**NOTE**: An `img` element can be marked as decorative, by using either `role="presentation"`, `role="none"` or an empty alt attribute `alt=""`.
 
 ## Accessibility Support
 
-There is a known combinations of a popular browser and assistive technology that does not by default support `title` as an [accessible name](#accessible-name).
-
-Certain assistive technologies can be set up to ignore the `title` attribute, which means that to some users the `title` attribute will not act as an accessible name.
+There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name](#accessible-name).
 
 ## Background
 - [G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G94)
@@ -88,6 +86,11 @@ Certain assistive technologies can be set up to ignore the `title` attribute, wh
 ```html
 <!-- decorative image -->
 <img role="presentation" />
+```
+
+```html
+<!-- img element with no role -->
+<img role="none" />
 ```
 
 ```html

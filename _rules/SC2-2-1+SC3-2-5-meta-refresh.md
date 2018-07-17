@@ -23,7 +23,7 @@ The rule applies to the first [valid](https://www.w3.org/TR/html/document-metada
 
 ### Expectation
 
-The `time` of the `content` attribute is not greater than 0.
+The `time` of the `content` attribute is not between 0 and 72000 (20 hours).
 
 **Note**: See [Refresh state (`http-equiv="refresh"`)](https://www.w3.org/TR/html/document-metadata.html#statedef-http-equiv-refresh) for a precise description on how to determine the `time`.
 
@@ -65,6 +65,13 @@ There are no major accessibility support issues known for this rule.
 <!-- redirects immediately -->
 <head>
   <meta http-equiv="refresh" content="0 http://example.com" />
+</head>
+```
+
+```html
+<!-- redirects after 20 hours -->
+<head>
+  <meta http-equiv="refresh" content="72000; http://example.com" />
 </head>
 ```
 

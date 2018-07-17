@@ -21,7 +21,7 @@ authors:
 The rule applies to any HTML `input`, `select` and `textarea` element with a [non-empty](#non-empty) `autocomplete` attribute, except if one of the following is true:
 
 - The element is **not** [visible on the page](#visible-on-the-page) or [exposed to assistive technologies](#exposed-to-assistive-technologies)
-- The element is an `input` element a `type` of `hidden`, `button`, `submit` or `reset`
+- The element is an `input` element with a `type` property of `hidden`, `button`, `submit` or `reset`
 - The element has a `disabled` or `aria-disabled="true"` attribute
 - The element has `tabindex="-1"` and has a [semantic role](#semantic-role) that is not a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget_roles)
 
@@ -46,7 +46,7 @@ The [correct autocomplete field](#correct-autocomplete-field) is an [appropriate
 
 ## Assumptions
 
-For this rule, it is assumed that the `autocomplete` attribute is not used on form fields that does not correspond to a autocomplete field described in the HTML 5.2 specification. If the `autocomplete` field is used to describe "custom" taxonomy, rather than that described in the specification, this rule may produce incorrect results.
+For this rule, it is assumed that the `autocomplete` attribute is not used on form fields that do not correspond to a autocomplete field described in the HTML 5.2 specification. If the `autocomplete` field is used to describe "custom" taxonomy, rather than that described in the specification, this rule may produce incorrect results.
 
 ## Accessibility support
 

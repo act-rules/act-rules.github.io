@@ -1,5 +1,6 @@
 ---
 title: Short text description
+key: short-text-description
 ---
 
 ## Description

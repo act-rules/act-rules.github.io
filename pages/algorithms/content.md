@@ -1,5 +1,6 @@
 ---
 title: Content (element type)
+key: content
 ---
 
 1. A node in the DOM tree is considered `content` when it is a text node that does not consist of exclusively whitespace characters and that is not a descendant of a `head`, `script` or `style` element.

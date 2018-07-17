@@ -34,7 +34,7 @@ The page contains at least one `title` element.
 
 ### Expectation 2
 
-The first `title` element contains [non-empty text][].
+The first `title` element contains [non-empty text](#non-empty).
 
 ## Assumptions
 
@@ -46,10 +46,10 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html
-- https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=242#qr-navigation-mechanisms-title
-- https://www.w3.org/TR/WCAG20-TECHS/G88.html
-- https://www.w3.org/TR/WCAG20-TECHS/H25.html
+- [https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
+- [https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=242#qr-navigation-mechanisms-title](https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=242#qr-navigation-mechanisms-title)
+- [https://www.w3.org/TR/WCAG20-TECHS/G88.html](https://www.w3.org/TR/WCAG20-TECHS/G88.html)
+- [https://www.w3.org/TR/WCAG20-TECHS/H25.html](https://www.w3.org/TR/WCAG20-TECHS/H25.html)
 - The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible auto-wcag refers to those. Another source for test cases is the W3C Before and After Demonstration.
 
 ## Test Cases
@@ -138,4 +138,4 @@ _There are no major accessibility support issues known for this rule._
 </svg>
 ```
 
-[non-empty text]: ../pages/algorithms/non-empty.html
+

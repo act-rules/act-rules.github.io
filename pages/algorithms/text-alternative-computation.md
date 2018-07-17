@@ -1,5 +1,6 @@
 ---
 title: Text Alternative Computation
+key: text-alternative-computation
 ---
 
 # Draft pseudo-code 

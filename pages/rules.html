@@ -3,35 +3,109 @@ layout: default
 title: Auto-WCAG Rules
 ---
 
-<table class="table table-striped table-hover">
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Rule name</th>
-      <th>Test mode</th>
-      <th>WCAG criterion</th>
+			<th width='25%'>Name</th>
+      <th>Description</th>
+      <th width='35%'>Meta Data</th>
     </tr>
-  </thead>
-  {% for rule in site.rules %}
+	</thead>
+	<!-- {% assign rulesAndDrafts = site.rules | concat: site.drafts | sort: 'name' %} -->
+	{% assign rulesAndDrafts = site.rules | sort: 'name' %}
+  {% for rule in rulesAndDrafts %}
   <tr>
-    <th><a href="{{ rule.url | prepend: site.baseurl }}">{{
-      rule.name
-    }}<br>(<i>{{ rule.url | remove: "/rules/" | remove: ".html" }}</i>)</a></th>
-    <td>{{ rule.test_mode }}</td>
-    <td><ul>
-      {% for criterion in rule.success_criterion %}
-        <li>
-          {% if site.data.criteria[criterion] %}
-            <a href="{{ site.data.criteria[criterion].url }}" target="_blank">
-            {{ site.data.criteria[criterion].num }}
-            {{ site.data.criteria[criterion].handle }}
-            (Level {{ site.data.criteria[criterion].level }})
-            </a>
-          {% else %}
-            {{ criterion }} (unknown)
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul></td>
+    <td>
+			<a href="{{ rule.url | prepend: site.baseurl }}">{{rule.name}}</a>
+			{% if rule.draft %}
+				<p class="draft-note slim">Draft</p>
+			{% endif %}
+		</td>
+    <td>
+			{{ rule.description }}
+		</td>
+    <td>
+			<table class="table">
+				<tr>
+					<th scope="row">Rule Id:</th>
+					<td>{{ rule.url | remove: "/rules/" | remove: ".html" }}</td>
+				</tr>
+				<tr>
+					<th scope="row" width='60px'>WCAG Criterion: </th>
+					<td>
+						<ul style="list-style: none; padding-left: 0;">
+							{% for criterion in rule.success_criterion %}
+								<li>
+									{% if site.data.criteria[criterion] %}
+										<a href="{{ site.data.criteria[criterion].url }}" target="_blank">
+										{{ site.data.criteria[criterion].num }}
+										{{ site.data.criteria[criterion].handle }}
+										(Level {{ site.data.criteria[criterion].level }})
+										</a>
+									{% else %}
+										{{ criterion }} (unknown)
+									{% endif %}
+								</li>
+							{% endfor %}
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</td>
   </tr>
   {% endfor %}
 </table>
+
+
+<section class="cards-section text-center">
+	<!-- 		
+	<h2 class="title">
+		Download Test Cases of Rules
+	</h2>
+	
+	<div class="intro">
+		<p>
+			Each of the test cases with the rules can be downloaded for integration with your test tool from here.
+		</p>
+		<div class="cta-container">
+			<a class="btn btn-primary btn-cta"
+				href="http://themes.3rdwavemedia.com/" 
+				target="_blank">
+				<i class="fas fa-file-download"></i>
+				Download Now
+			</a>
+		</div>
+	</div> 
+	-->
+
+	<div id="cards-wrapper" class="cards-wrapper row">
+		<div class="item item-primary col-md-6 col-sm-6 col-xs-6">
+			<div class="item-inner">
+				<a class="link" href="https://github.com/auto-wcag/auto-wcag/pulls">
+					<h3 class="title">DRAFT RULES</h3>
+					<div class="icon-holder">
+						<i aria-hidden="true" class="fab fa-firstdraft fa-5x"></i>
+					</div>
+					<p class="intro">
+						Click here for an overview of the work in progress rules.
+					</p>
+				</a>
+			</div>
+		</div>
+		<div class="item item-primary col-md-6 col-sm-6 col-xs-6">
+				<div class="item-inner">
+					<a class="link" href="https://github.com/auto-wcag/auto-wcag/issues">
+						<h3 class="title">ISSUES</h3>
+						<div class="icon-holder">
+							<i aria-hidden="true" class="fas fa-bug fa-5x">
+							</i>
+						</div>
+						<p class="intro">
+							Click here for an overview of the issues tackled by the project.
+						</p>
+					</a>
+				</div>
+			</div>
+	</div>
+
+</section>

@@ -1,9 +1,10 @@
 ---
 title: Accessible Name
+key: accessible-name
 ---
 
-The accessible name is the name of a user interface element. Each platform accessibility API provides the accessible name property. 
+The programatically determined name of a user interface element that is exposed to assistive technologies.
 
-The value of the accessible name may be derived from a visible (e.g., the visible text on a button) or invisible (e.g., the text alternative that describes an icon) property of the user interface element.
+The accessible name is calculated using the [accessible name computation](https://www.w3.org/TR/accname).
 
-For more details, check out [https://www.w3.org/TR/accname-1.1/](https://www.w3.org/TR/accname-1.1/)
+For native markup languages, such as HTML and SVG, additional information on how to calculate the accessible name can be found in https://www.w3.org/TR/html-aam/#accessible-name-and-description-computation and https://www.w3.org/TR/svg-aam/#mapping_additional.

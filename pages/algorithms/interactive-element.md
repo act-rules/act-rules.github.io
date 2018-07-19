@@ -1,5 +1,6 @@
 ---
 title: Interactive element
+key: interactive-element
 ---
 
 1. An element is interactive if tabindex is not turned off on a standard interactive HMTL element. These will match the following selector:

@@ -1,5 +1,6 @@
 ---
 title: Identifying Data Tables
+key: is-data-table
 ---
 
 ## Identifying Tables in QuailJS

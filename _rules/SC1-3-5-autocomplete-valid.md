@@ -20,7 +20,7 @@ authors:
 
 The rule applies to any HTML `input`, `select` and `textarea` element with a [non-empty](#non-empty) `autocomplete` attribute, except if one of the following is true:
 
-- The element is **not** [visible on the page](#visible-on-the-page) or [exposed to assistive technologies](#exposed-to-assistive-technologies)
+- The element is not [visible on the page](#visible-on-the-page) and not [exposed to assistive technologies](#exposed-to-assistive-technologies)
 - The element is an `input` element with a `type` property of `hidden`, `button`, `submit` or `reset`
 - The element has a `disabled` or `aria-disabled="true"` attribute
 - The element has `tabindex="-1"` and has a [semantic role](#semantic-role) that is not a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget_roles)

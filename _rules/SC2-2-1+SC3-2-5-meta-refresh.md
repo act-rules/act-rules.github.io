@@ -23,7 +23,7 @@ The rule applies to the first [valid](https://www.w3.org/TR/html/document-metada
 
 ### Expectation
 
-The `time` of the `content` attribute is not between 0 and 72000 (20 hours).
+The `time` of the `content` attribute is 0 or bigger than 72000 (20 hours).
 
 **Note**: See [Refresh state (`http-equiv="refresh"`)](https://www.w3.org/TR/html/document-metadata.html#statedef-http-equiv-refresh) for a precise description on how to determine the `time`.
 
@@ -38,9 +38,9 @@ There are no major accessibility support issues known for this rule.
 
 ## Background  
 
-- H76: Using meta refresh to create an instant client-side redirect
-- F40: Failure of Success Criterion 2.2.1 and 2.2.4 due to using meta redirect with a time limit
-- F41: Failure of Success Criterion 2.2.1, 2.2.4, and 3.2.5 due to using meta refresh with a time-out
+- [H76: Using meta refresh to create an instant client-side redirect](https://www.w3.org/TR/WCAG-TECHS/H76.html)
+- [F40: Failure of Success Criterion 2.2.1 and 2.2.4 due to using meta redirect with a time limit](https://www.w3.org/TR/WCAG-TECHS/F40.html)
+- [F41: Failure of Success Criterion 2.2.1, 2.2.4, and 3.2.5 due to using meta refresh with a time-out](https://www.w3.org/TR/WCAG-TECHS/F41.html)
 
 ## Test Cases
 
@@ -58,13 +58,6 @@ There are no major accessibility support issues known for this rule.
 <head>
   <meta http-equiv="refresh" content="0; http://example.com" />
   <meta http-equiv="refresh" content="5; http://example.com" />
-</head>
-```
-
-```html
-<!-- redirects immediately -->
-<head>
-  <meta http-equiv="refresh" content="0 http://example.com" />
 </head>
 ```
 

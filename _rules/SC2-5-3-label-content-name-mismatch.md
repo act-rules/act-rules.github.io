@@ -21,7 +21,7 @@ authors:
 ### Applicability
 
 This rule applies to any element that has:
-* a [widget role](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent), and 
+* a [semantic role](#semantic-role) that is a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent), and 
 * [visible text content](#visible-text-content), and
 * an `aria-label` or `aria-labelledby` attribute.
 

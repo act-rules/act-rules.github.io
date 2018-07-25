@@ -27,9 +27,11 @@ This rule applies to any element that has:
 
 **Note**: [widget roles](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent) are: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
 
-### Expectation 1
+### Expectation
 
-The complete [visible text content](#visible-text-content) of the target element either matches or is contained within it's [accessible name](#accessible-name). Leading and trailing whitespace and difference in case sensitivity should be ignored.
+The complete [visible text content](#visible-text-content) of the target element either matches or is contained within its [accessible name](#accessible-name).
+
+**Note**: Leading and trailing whitespace and difference in case sensitivity should be ignored.
 
 ## Assumptions
 

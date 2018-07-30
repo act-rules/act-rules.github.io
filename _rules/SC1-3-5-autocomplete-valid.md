@@ -27,15 +27,15 @@ The rule applies to any HTML `input`, `select` and `textarea` element with a [no
 
 ### Expectation 1
 
-The `autocomplete` attribute is a single term, or a space seperated list of terms.
+The `autocomplete` attribute is a single term, or a space separated list of terms.
 
 ### Expectation 2
 
-The autocomplete term(s) follow the [HTML 5.2 specification](https://www.w3.org/TR/html52/sec-forms.html#autofill-detail-tokens), which requires that it/they match the following:
+The autocomplete term(s) follow the [HTML 5.2 specification](https://www.w3.org/TR/html52/sec-forms.html#autofill-detail-tokens), which requires that it/they match the following in the correct order:
 
-1. Has a section-* value _(optional)_
+1. Has a value that starts with "section-" _(optional)_
 2. Has either "shipping" or "billing" _(optional)_
-3. Has "home", "work", "mobile", "fax" or "pager" _(optional, only for "email", "impp", "tel" or "tel-*")_
+3. Has either "home", "work", "mobile", "fax" or "pager" _(optional, only for "email", "impp", "tel" or "tel-*")_
 4. Has a [correct autocomplete field](#correct-autocomplete-field) _(required)_
 
 **Note**: Autocomplete terms are case insensitive. When multiple terms are used, they must be used in the correct order.
@@ -125,7 +125,7 @@ The intent of this rule is to ensure that the `autocomplete` attribute can be us
 ```
 
 ```html
-<!-- inappropriate field type -->
+<!-- Autocomplete is inappropriate for the type of field -->
 <input type="number" autocomplete="email" />
 ```
 

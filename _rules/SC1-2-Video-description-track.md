@@ -28,7 +28,7 @@ The visual information of each test target not available through its audio is de
 
 ## Assumptions
 
-*There are currently no assumptions*
+This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the poster.
 
 ## Accessibility support
 
@@ -48,6 +48,7 @@ This means that the rule can only provide a pass for these succescriteria if acc
 ## Passed
 
 ```html
+<!-- A video element with a track element that contains descriptions.-->
 <video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
@@ -58,6 +59,7 @@ This means that the rule can only provide a pass for these succescriteria if acc
 ## Failed
 
 ```html
+<!-- A video element with a track element that contains incorrect descriptions.-->
 <video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
@@ -69,12 +71,14 @@ This means that the rule can only provide a pass for these succescriteria if acc
 
 ```html
 <video controls>
+<!-- A video element without a track element.-->
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
 ```
 
 ```html
+<!-- A video element that is not visible on the page.-->
 <video controls style="display: none;">
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
@@ -83,6 +87,7 @@ This means that the rule can only provide a pass for these succescriteria if acc
 ```
 
 ```html
+<!-- A video element without audio.-->
 <video controls>
   <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>

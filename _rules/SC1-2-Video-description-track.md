@@ -18,7 +18,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any [non-streaming](#non-streaming) `video` element [visible on the page](#visible-on-the-page) where the video contains audio and a `track` element with a `kind="description"` attribute.
+The rule applies to any [non-streaming](#non-streaming) `video` element [visible on the page](#visible-on-the-page) where the video contains audio and a `track` element with a `kind="descriptions"` attribute.
 
 ### Expectation
 

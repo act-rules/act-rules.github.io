@@ -49,10 +49,12 @@ There are no major accessibility support issues known for this rule.
 ### Passed
 
 ```html
+<!-- A video element that has captions for all the audio backed into it.-->
 <video src="../test-assets/perspective-video/perspective-video-with-captions.mp4" controls></video>
 ```
 
 ```html
+<!-- A video element with an associated track element that contain captions for all the audio.-->
 <video src="../test-assets/perspective-video/perspective-video.mp4" controls>
   <track src="/test-assets/perspective-video/perspective-caption.vtt" kind="captions">
 </video>
@@ -61,16 +63,19 @@ There are no major accessibility support issues known for this rule.
 ### Failed
 
 ```html
+<!-- A video element with any form of captions.-->
 <video src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 ```html
+<!-- A video element with an associated track element that contain incorrect captions.-->
 <video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls>
   <track src="/test-assets/perspective-video/perspective-incorrect-caption.vtt" kind="captions">
 </video>
 ```
 
 ```html
+<!-- A video element with a text on the same page that described the audio in the video.-->
 <p>The video below shows a man working on a keyboard. A voiceover is heard 
   saying the following text: Web accessibility perspectives. Keyboard 
   compatibility. Not being able to use your computer because your mouse 
@@ -80,13 +85,26 @@ There are no major accessibility support issues known for this rule.
 </video>
 ```
 
+```html
+<!-- A video element with an explicitly associated text on the same page that described the audio in the video.-->
+<p id="text">The video below shows a man working on a keyboard. A voiceover is heard 
+  saying the following text: Web accessibility perspectives. Keyboard 
+  compatibility. Not being able to use your computer because your mouse 
+  doesn't work, is frustrating. Many people use only the keyboard to navigate 
+  websites. Either through preference or circumstance.</p>
+<video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls ariadescribedby="text">
+</video>
+```
+
 ### Inapplicable
 
 ```html
+<!-- A video element without audio.-->
 <video src="../test-assets/perspective-video/perspective-video-silent.mp4" controls></video>
 ```
 
 ```html
+<!-- A video element without that is not visible on the page.-->
 <video src="../test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>
 ```
 

@@ -31,7 +31,7 @@ For each test target, audio information that is not expressed visually in the vi
 
 ## Assumptions
 
-*There are currently no assumptions*
+This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the poster.
 
 ## Accessibility support
 

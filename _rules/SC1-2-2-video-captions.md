@@ -46,36 +46,47 @@ There are no major accessibility support issues known for this rule.
 
 ## Test Cases
 
-### Passed
+### Pass example 1
+
+A video element that has captions for all the audio backed into it.
 
 ```html
-<!-- A video element that has captions for all the audio backed into it.-->
 <video src="../test-assets/perspective-video/perspective-video-with-captions.mp4" controls></video>
 ```
 
+### Pass example 2
+
+A video element with an associated track element that contain captions for all the audio.
+
 ```html
-<!-- A video element with an associated track element that contain captions for all the audio.-->
 <video src="../test-assets/perspective-video/perspective-video.mp4" controls>
   <track src="/test-assets/perspective-video/perspective-caption.vtt" kind="captions">
 </video>
 ```
 
-### Failed
+### Failure example 1
+
+A video element with any form of captions.
 
 ```html
-<!-- A video element with any form of captions.-->
 <video src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
+### Failure example 2
+
+A video element with an associated track element that contain incorrect captions.
+
 ```html
-<!-- A video element with an associated track element that contain incorrect captions.-->
 <video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls>
   <track src="/test-assets/perspective-video/perspective-incorrect-caption.vtt" kind="captions">
 </video>
 ```
 
+### Failure example 3
+
+A video element with a text on the same page that described the audio in the video.
+
 ```html
-<!-- A video element with a text on the same page that described the audio in the video.-->
 <p>The video below shows a man working on a keyboard. A voiceover is heard 
   saying the following text: Web accessibility perspectives. Keyboard 
   compatibility. Not being able to use your computer because your mouse 
@@ -85,8 +96,11 @@ There are no major accessibility support issues known for this rule.
 </video>
 ```
 
+### Failure example 4
+
+A video element with an explicitly associated text on the same page that described the audio in the video.
+
 ```html
-<!-- A video element with an explicitly associated text on the same page that described the audio in the video.-->
 <p id="text">The video below shows a man working on a keyboard. A voiceover is heard 
   saying the following text: Web accessibility perspectives. Keyboard 
   compatibility. Not being able to use your computer because your mouse 
@@ -96,21 +110,18 @@ There are no major accessibility support issues known for this rule.
 </video>
 ```
 
-### Inapplicable
+### Inapplicable example 1
+
+A video element without audio.
 
 ```html
-<!-- A video element without audio.-->
 <video src="../test-assets/perspective-video/perspective-video-silent.mp4" controls></video>
 ```
 
+### Inapplicable example 2
+
+A video element without that is not visible on the page.
+
 ```html
-<!-- A video element without that is not visible on the page.-->
 <video src="../test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>
 ```
-
-[audio output]: ../pages/algorithms/audio-output.html
-[visual output]: ../pages/algorithms/video-output.html
-[non-streaming]: ../pages/algorithms/non-streaming.html
-[visible on the page]: ../pages/algorithms/visible-on-the-page.html
-[audio]: https://www.w3.org/TR/WCAG20/#audiodef
-[captions]: https://www.w3.org/TR/WCAG20/#captionsdef

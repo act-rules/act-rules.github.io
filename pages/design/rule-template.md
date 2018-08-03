@@ -59,9 +59,7 @@ Support for XXX is known to be limited in some assistive technologies. If any of
 
 ## Test Cases
 
-### Passed
-
-#### Pass example 1
+### Pass example 1
 
 Briefly describe what passed in the html code below
 
@@ -69,9 +67,12 @@ Briefly describe what passed in the html code below
 <!-- passing html code snippet -->
 ```
 
-### Failed
+### Pass example X
 
-#### Failure example 1
+... Add one test case for each "reason" an element can pass
+
+
+### Failure example 1
 
 Briefly describe what failed in the html code below
 
@@ -79,15 +80,22 @@ Briefly describe what failed in the html code below
 <!-- failing html code snippet -->
 ```
 
-### Inapplicable
+### Failure example X
 
-#### Inapplicable example 1
+... Add one test case for each "reason" an element can fail
+
+### Inapplicable example 1
 
 Briefly describe why the html code snippet is inapplicable
 
 ```html
 <!-- inapplicable code snippet -->
 ```
+
+### Inapplicable example X
+
+... Add one test case for each "reason" an element can be inapplicable
+
 ````
 
 ## Composed rules

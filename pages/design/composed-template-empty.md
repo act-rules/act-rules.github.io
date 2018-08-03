@@ -25,8 +25,6 @@ For each test target, the outcome of << Logic here >>:
 
 - 
 - 
-- 
-
 
 ## Assumptions
 
@@ -43,9 +41,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Test Cases
 
-### Passed
-
-#### Pass example 1
+### Pass example 1
 
 Description...
 
@@ -53,9 +49,23 @@ Description...
 <!-- code -->
 ```
 
-### Failed
+### Pass example 2
 
-#### Failure example 1
+...
+
+### Failure example 1
+
+Description...
+
+```html
+<!-- code -->
+```
+
+### Failure example 2
+
+...
+
+### Inapplicable example 1
 
 Description...
 
@@ -63,12 +73,6 @@ Description...
 <!-- code -->
 ```
 
-### Inapplicable
+### Inapplicable example 2
 
-#### Inapplicable example 1
-
-Description...
-
-```html
-<!-- code -->
-```
+...

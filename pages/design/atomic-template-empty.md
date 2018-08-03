@@ -37,20 +37,38 @@ There are no major accessibility support issues known for this rule.
 
 ## Test Cases
 
-### Passed
+### Pass example 1
+
+Description...
 
 ```html
-<!--  -->
+<!-- code -->
 ```
 
-### Failed
+### Pass example 2
+
+...
+
+### Failure example 1
+
+Description...
 
 ```html
-<!-- -->
+<!-- code -->
 ```
 
-### Inapplicable
+### Failure example 2
+
+...
+
+### Inapplicable example 1
+
+Description...
 
 ```html
-<!--  -->
+<!-- code -->
 ```
+
+### Inapplicable example 2
+
+...

@@ -1,6 +1,5 @@
 ---
 name:
-group: # Optional
 description: |
   This rule checks ...
 
@@ -35,3 +34,23 @@ There are no major accessibility support issues known for this rule.
 ## Background
 
 - 
+
+## Test Cases
+
+### Passed
+
+```html
+<!--  -->
+```
+
+### Failed
+
+```html
+<!-- -->
+```
+
+### Inapplicable
+
+```html
+<!--  -->
+```

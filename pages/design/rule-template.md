@@ -4,16 +4,15 @@ title: Auto-WCAG Rule Template
 
 The rule template contains a plain language description of the rule, some background information, and a list of all assumptions. The test procedure is defined by the selector, a number of steps and a description of the possible outcomes.
 
-Use the [empty test template](rule-template-empty.html) to create new auto-wcag rule. When creating a new rule, first read [rule design](rule-design.html).
+Use the [empty atomic rule template](atomic-template-empty.html) to create new auto-wcag rule. When creating a new rule, first read [rule design](rule-design.html).
 
-```markdown
+````markdown
 ---
 name: Short descriptive name
-group: group-id # Optional
 description: | # Use "|" for multi-line text
   This rule checks ...
 
-success_criterion:
+success_criterion: 
 - x.x.x # Criterion handle as a YAML comment + level
 
 test_aspects: # Remove what is not applicable
@@ -58,4 +57,41 @@ Support for XXX is known to be limited in some assistive technologies. If any of
 - The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible auto-wcag refers to those. Another source for test cases is the W3C Before and After Demonstration.
 - Other references
 
+## Test Cases
+
+### Passed
+
+#### Pass example 1
+
+Briefly describe what passed in the html code below
+
+```html
+<!-- passing html code snippet -->
 ```
+
+### Failed
+
+#### Failure example 1
+
+Briefly describe what failed in the html code below
+
+```html
+<!-- failing html code snippet -->
+```
+
+### Inapplicable
+
+#### Inapplicable example 1
+
+Briefly describe why the html code snippet is inapplicable
+
+```html
+<!-- inapplicable code snippet -->
+```
+````
+
+## Composed rules
+
+Composed rules are rules that take results from different rules and through some logic come to a single result. For example: SC 1.2.3 allows video to pass with either a transcript, an audio description, or if it is a media alternative. Each of these would be atomic rules, that are used in a composed rule. The composed rule than describes that at least one of these must pass for the composed rule to pass.
+
+For more about composed rules, see the [ACT Rules Format](https://www.w3.org/TR/act-rules-format/#composed-rules). To create a composed rule, use the [empty composed rule template](./composed-template-empty.html).

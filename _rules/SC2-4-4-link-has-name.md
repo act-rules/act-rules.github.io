@@ -5,6 +5,7 @@ description: |
 
 success_criterion:
 - 4.1.2 # Name, Role, Value
+- 2.4.4
 
 test_aspects: # Remove what is not applicable
 - DOM Tree
@@ -27,7 +28,7 @@ Each target element has an [accessible name](#accessible-name) that is [non-empt
 
 ## Assumptions
 
-- The rule assumes that all links are user interface components as defined by WCAG 2. When the link role is used incorrectly, this assumption may not be true.
+- The rule assumes that all links are [user interface components](https://www.w3.org/TR/WCAG20/#user-interface-componentdef) as defined by WCAG 2. When the link role is used incorrectly, this assumption may not be true.
 
 ## Accessibility Support
 

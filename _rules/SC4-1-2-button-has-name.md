@@ -20,11 +20,11 @@ authors:
 
 ### Applicability
 
-The rule applies to elements that are [visible on the page][] or [exposed to assistive technologies][] with the [semantic role](#semantic-role) of `button`, except for `input` elements of `type="image"`.
+The rule applies to elements that are [visible on the page](#visible-on-the-page) or [exposed to assistive technologies](#exposed-to-assistive-technologies) with the [semantic role](#semantic-role) of `button`, except for `input` elements of `type="image"`.
 
 ### Expectation
 
-Each target element has an [accessible name][] that is [non-empty][].
+Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty)
 
 ## Assumptions
 
@@ -38,10 +38,8 @@ There are no major accessibility support issues known for this rule.
 
 - [https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
 - [https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=412#qr-ensure-compat-rsv](https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=412#qr-ensure-compat-rsv)
-- [ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used](ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used)
+- [ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used](https://www.w3.org/TR/WCAG20-TECHS/ARIA14.html)
 - [https://www.w3.org/TR/WCAG20-TECHS/ARIA16.html](https://www.w3.org/TR/WCAG20-TECHS/ARIA16.html)
-- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible auto-wcag refers to those. Another source for test cases is the W3C Before and After Demonstration.
-- Other references
 
 # Test cases
 
@@ -52,11 +50,11 @@ There are no major accessibility support issues known for this rule.
 ```
 
 ```html
-<button aria-label='Save Page'>Save Page</button>
+<button aria-label="Save Page">Save Page</button>
 ```
 
 ```html
-<input type='submit' value='Submit'>
+<input type="submit" value="Submit">
 ```
 
 ```html
@@ -100,19 +98,18 @@ There are no major accessibility support issues known for this rule.
     Some detailed article, but the link to read more is placed with no relevance to the text, thereby the link has lost context.
   </p>
   <p>
-    <button type='button' value='read more...'></button>
+    <button type="button" value="read more..."></button>
   </p>
 </div>
 ```
 
 ```html
-<button aria-hidden='true'>
-</button>
+<button aria-hidden="true"></button>
 ```
 
 <!-- fail: span tag with role button with no name -->
 ```html
-<span role="button"></button>
+<span role="button"></span>
 ```
 
 <!-- fail: off screen button with no name -->
@@ -158,10 +155,3 @@ There are no major accessibility support issues known for this rule.
 ```html
 <button role='link'>take me somewhere</button>
 ```
-
-------
-
-[non-empty]: ../pages/algorithms/non-empty.html
-[accessible name]: ../pages/algorithms/accessible-name.html 
-[exposed to assistive technologies]: ../pages/algorithms/exposed-to-assistive-technologies.html
-[visible on the page]: ../pages/algorithms/visible-on-the-page.html

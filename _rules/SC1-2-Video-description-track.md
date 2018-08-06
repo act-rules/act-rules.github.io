@@ -1,12 +1,7 @@
 ---
 name: Video element description track
-group: SC1-2-video-element
 description: |
-  This rule checks that non-streaming video elements with a description track have that track be descriptive.
-
-success_criterion:
-- 1.2.3 # Audio Description or Media Alternative (Prerecorded)
-- 1.2.5 # Audio Description (Prerecorded)
+  This rule checks that description tracks that come with non-streaming `video` elements are descriptive.
 
 test_aspects:
 - DOM Tree
@@ -17,22 +12,23 @@ test_aspects:
 authors:
 - Wilco Fiers
 - Brian Bors
+---
 
 ## Test Procedure
 
 ### Applicability
 
-The rule applies to any [non-streaming][] video element [visible in the page][] where the video contains [audio][] and a `track` element with a `kind="description"` attribute.
+The rule applies to any [non-streaming](#non-streaming) `video` element [visible on the page](#visible-on-the-page) where the video contains audio and a `track` element with a `kind="descriptions"` attribute.
 
 ### Expectation
 
-The visual information of each test target not available through its audio is describes with a description track element.
+The visual information of each test target not available through its audio is described with a description `track` element.
 
-*Note*: Multiple description track elements may be useful for different languages, but at least one must match the language of the video.
+*Note*: Multiple description `track` elements may be useful for different languages, but at least one must match the language of the video.
 
 ## Assumptions
 
-*There are currently no assumptions*
+This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the poster.
 
 ## Accessibility support
 
@@ -47,18 +43,12 @@ This means that the rule can only provide a pass for these succescriteria if acc
 - https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G78
 - https://www.w3.org/WAI/GL/2016/WD-WCAG20-TECHS-20160105/H96
 
-[audio output]: ../pages/algorithms/audio-output.html
-[visual output]: ../pages/algorithms/visual-output.html
-[non-streaming]: ../pages/algorithms/non-streaming-media-element.html
-[visible in the page]: ../pages/algorithms/visible-in-the-page.html
-[text transcript]: https://www.w3.org/TR/WCAG20/#alt-time-based-mediadef
-[audio]: https://www.w3.org/TR/WCAG20/#audiodef
-
 ## Test Cases
 
 ## Passed
 
 ```html
+<!-- A video element with a track element that contains descriptions.-->
 <video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
@@ -69,6 +59,7 @@ This means that the rule can only provide a pass for these succescriteria if acc
 ## Failed
 
 ```html
+<!-- A video element with a track element that contains incorrect descriptions.-->
 <video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
@@ -80,16 +71,14 @@ This means that the rule can only provide a pass for these succescriteria if acc
 
 ```html
 <video controls>
+<!-- A video element without a track element.-->
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
 ```
 
 ```html
-TODO: a source to a live video
-```
-
-```html
+<!-- A video element that is not visible on the page.-->
 <video controls style="display: none;">
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
@@ -98,6 +87,7 @@ TODO: a source to a live video
 ```
 
 ```html
+<!-- A video element without audio.-->
 <video controls>
   <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>

@@ -20,7 +20,7 @@
 		{% endif %}
 	{% endif %}
 	<title>
-		{{ page_title }} - {{ site.title | escape }}
+		{{ page_title }} {{ site.title | escape }}
 	</title>
 	<!-- Meta -->
 	<meta charset="utf-8">
@@ -205,6 +205,14 @@
 				</div>
 			</div>
 		</div>
+
+		<footer class="footer">
+			<div class="container">
+				<small>
+					{{ site.title | escape }} | <a class=right href="{{ site.baseurl }}/license.html">License</a>
+				</small>
+			</div>
+	</footer>
 
 
 	</div>

@@ -1,77 +1,150 @@
 ---
-rule_id: SC2-2-1+SC3-2-5-meta-refresh
-name: Meta refresh and redirect is not used
-test_mode: automatic
-environment: DOM Structure
+name: Meta-refresh no delay
+description: |
+  This rule checks that the meta element is not used for delayed redirecting or refreshing.
 
 success_criterion:
-- 2.2.1 # Timing Adjustable (Level A)
-- 3.2.5 # Change on Request (Level AAA)
+- 2.2.1 # Timing Adjustable
+- 3.2.5 # Change on Request
 
-author:
+test_aspects:
+- DOM Tree
+
+authors:
+- Anne Thyme Nørregaard
 - Wilco Fiers
 ---
 
-## Description
-
-This test checks if meta element is not used for delayed redirecting or refreshing.
-
-## Background
-
-- [H76: Using meta refresh to create an instant client-side redirect](http://www.w3.org/TR/WCAG20-TECHS/H76.html)
-- [F40: Failure of Success Criterion 2.2.1 and 2.2.4 due to using meta redirect with a time limit](http://www.w3.org/TR/WCAG20-TECHS/F40.html)
-- [F41: Failure of Success Criterion 2.2.1, 2.2.4, and 3.2.5 due to using meta refresh with a time-out](http://www.w3.org/TR/WCAG20-TECHS/F41.html)
-
-## Assumptions
-
-- This test assumes no functionality was provided by the website for the user to adjust the timer.
-
 ## Test procedure
 
-### Selector
+### Applicability
 
-Select all elements that match the following CSS selector:
+The rule applies to the first [valid](https://www.w3.org/TR/html/document-metadata.html#statedef-http-equiv-refresh) `<meta http-equiv="refresh">` element with a `content` attribute in a document.
 
-    meta[http-equiv="refresh"][content]
+### Expectation
 
-For each selected item, go through the following steps:
+The `time` of the `content` attribute is 0 or bigger than 72000 (20 hours).
 
-### Step 1
+**Note**: See [Refresh state (`http-equiv="refresh"`)](https://www.w3.org/TR/html/document-metadata.html#statedef-http-equiv-refresh) for a precise description on how to determine the `time`.
 
-Take the value of the content attribute of the selected element.
+## Assumptions  
 
-Remove any characters starting after the first comma or semicolon from the value.
+* This test assumes no functionality was provided by the website for the user to adjust the timer. 
+* This test assumes that the refresh was not [essential](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html#essentialdef), which is listed as a valid exception to SC 2.2.1.
 
-Parse the remainder to an integer.
+## Accessibility Support 
 
-If the integer is invalid or 0, return [step1-pass](#step1-pass)
+There are no major accessibility support issues known for this rule.
 
-Else return [step1-fail](#step1-fail)
+## Background  
 
-## Outcome
+- [H76: Using meta refresh to create an instant client-side redirect](https://www.w3.org/TR/WCAG-TECHS/H76.html)
+- [F40: Failure of Success Criterion 2.2.1 and 2.2.4 due to using meta redirect with a time limit](https://www.w3.org/TR/WCAG-TECHS/F40.html)
+- [F41: Failure of Success Criterion 2.2.1, 2.2.4, and 3.2.5 due to using meta refresh with a time-out](https://www.w3.org/TR/WCAG-TECHS/F41.html)
 
-The resulting assertion is as follows,
+## Test Cases
 
-| Property | Value
-|----------|----------
-| type     | Assertion
-| test     | auto-wcag:{{ page.rule_id }}
-| subject  | *the selected element*
-| mode     | auto-wcag:{{ page.test_mode }}
-| result   | <One TestResult from below>
+### Passed
 
-### step1-pass
+```html
+<!-- redirects immediately -->
+  <head>           
+    <meta http-equiv="refresh" content="0; URL='https://auto-wcag.github.io/auto-wcag/'" />    
+  </head>  
+```
 
-| Property    | Value
-|-------------|----------
-| type        | TestResult
-| outcome     | Passed
-| description |
+```html
+<!-- first valid <meta http-equiv="refresh"> redirects immediately  -->
+<head>
+  <meta http-equiv="refresh" content="0; http://example.com" />
+  <meta http-equiv="refresh" content="5; http://example.com" />
+</head>
+```
 
-### step1-fail
+```html
+<!-- redirects after 20 hours -->
+<head>
+  <meta http-equiv="refresh" content="72000; http://example.com" />
+</head>
+```
 
-| Property    | Value
-|-------------|----------
-| type        | TestResult
-| outcome     | Failed
-| description | Meta refresh should not be used unless it is instantaneous.
+### Failed
+
+```html
+<!-- refreshes after 30 seconds -->
+<head>
+<meta http-equiv="refresh" content="30">
+</head>
+```
+
+```html
+<!-- redirects after 30 seconds -->
+<head>
+<meta http-equiv="refresh" content="30; URL='https://auto-wcag.github.io/auto-wcag/'">
+</head>
+```
+
+```html
+<!-- first <meta http-equiv="refresh"> element is not valid, second one redirects after 5 seconds -->
+<head>
+  <meta http-equiv="refresh" content="0: http://example.com" />
+  <meta http-equiv="refresh" content="5; http://example.com" />
+</head>
+```
+
+### Inapplicable
+```html
+<!-- no content attribute -->
+<head>
+<meta http-equiv="refresh">
+</head>
+```
+
+```html
+<!-- no http-equiv="refresh" attribute -->
+<head>
+<meta content="30">
+</head>
+```
+
+```html
+<!-- content attribute is invalid and therefore inapplicable. -->
+<head>
+  <meta http-equiv="refresh" content="0: http://example.com" />
+</head>
+```
+
+```html
+<!-- content attribute is invalid and therefore inapplicable. -->
+<head>
+<meta http-equiv=refresh content="-00.12 foo">
+</head>
+```
+
+```html
+<!-- content attribute is invalid and therefore inapplicable. -->
+<head>
+<meta http-equiv="refresh" content="; 30">
+</head>
+```
+
+```html
+<!-- content attribute is invalid and therefore inapplicable. -->
+<head>
+<meta http-equiv="refresh" content="">
+</head>
+```
+
+```html
+<!-- content attribute is invalid and therefore inapplicable. -->
+<head>
+  <meta http-equiv="refresh" content="+5; http://example.com">
+</head>
+```
+
+```html
+<!-- content attribute is invalid and therefore inapplicable. -->
+<head>           
+  <meta http-equiv="refresh" content="foo; URL='https://auto-wcag.github.io/auto-wcag/'" />    
+</head>
+```

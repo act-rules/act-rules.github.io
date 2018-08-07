@@ -6,6 +6,7 @@ title: Auto-WCAG Rules
 <table class="table table-striped">
   <thead>
     <tr>
+			<th width='5%'>#</th>
 			<th width='25%'>Name</th>
       <th>Description</th>
       <th width='35%'>Meta Data</th>
@@ -15,6 +16,9 @@ title: Auto-WCAG Rules
 	{% assign rulesAndDrafts = site.rules | sort: 'name' %}
   {% for rule in rulesAndDrafts %}
   <tr>
+		<td>
+			{{ forloop.index }}
+		</td>
     <td>
 			<a href="{{ rule.url | prepend: site.baseurl }}">{{rule.name}}</a>
 			{% if rule.draft %}

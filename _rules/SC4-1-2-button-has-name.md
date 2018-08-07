@@ -46,32 +46,32 @@ There are no major accessibility support issues known for this rule.
 ## Passed
 
 ```html
+<!-- Regular button -->
 <button>My button</button>
 ```
 
 ```html
-<button aria-label="Save Page">Save Page</button>
-```
-
-```html
+<!-- Value attribute as the accessible name -->
 <input type="submit" value="Submit">
 ```
 
 ```html
+<!-- aria-label for the accessible name -->
 <button aria-label="My button"></button>
 ```
 
-<!-- pass: span tag with role button and has name defined by aria-label -->
 ```html
+<!-- span tag with role button and has name defined by aria-label -->
 <span role="button" aria-label="My button"></button>
 ```
 
-<!-- pass: summary element has a default sematic role of button -->
 ```html
+<!-- summary element has a default sematic role of button -->
 <summary>Press Here</summary>
 ```
 
 ```html
+<!-- disabled elements are also applicable -->
 <button disabled>Delete</button>
 ```
 
@@ -85,6 +85,7 @@ There are no major accessibility support issues known for this rule.
     }
   </style>
   <body>
+    <!-- Off screen elements should be tested -->
     <button class='notInPage'>Save</button>
   </body>
 </html>
@@ -93,49 +94,27 @@ There are no major accessibility support issues known for this rule.
 ## Failed
 
 ```html
-<div>
-  <p>
-    Some detailed article, but the link to read more is placed with no relevance to the text, thereby the link has lost context.
-  </p>
-  <p>
-    <button type="button" value="read more..."></button>
-  </p>
-</div>
+<!-- value attribute does NOT give an accessible name, only for input elements -->
+<button type="button" value="read more"></button>
 ```
 
 ```html
+<!-- aria-hidden buttons should be tested -->
 <button aria-hidden="true"></button>
 ```
 
-<!-- fail: span tag with role button with no name -->
 ```html
+<!-- span tag with role button with no name -->
 <span role="button"></span>
-```
-
-<!-- fail: off screen button with no name -->
-```html
-<html>
-  <style>
-    .notInPage {
-      position: absolute;
-      left: -9999px;
-      top: -9999px;
-    }
-  </style>
-  <body>
-    <button class='notInPage'></button>
-  </body>
-</html>
 ```
 
 ## Inapplicable
 
-<!-- inapplicable: input type image -->
 ```html
+<!-- Image buttons are tested in a different rule -->
 <input type='image' value='download'>
 ```
 
-<!-- inapplicable: not visible in page and not exposed to assistive technologies -->
 ```html
 <html>
   <style>
@@ -146,12 +125,13 @@ There are no major accessibility support issues known for this rule.
     }
   </style>
   <body>
+    <!-- not visible in page and not exposed to assistive technologies -->
     <button class='notInPage' aria-hidden='true'>Confirm</button>
   </body>
 </html>
 ```
 
-<!-- inapplicable: role overridden to link for button element -->
 ```html
+<!-- inapplicable: role overridden to link for button element -->
 <button role='link'>take me somewhere</button>
 ```

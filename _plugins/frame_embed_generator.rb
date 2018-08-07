@@ -11,7 +11,8 @@ module Jekyll
       priority :highest
 
       KEY_EMBEDS_DIR =  JSON.parse(File.read('package.json'))['testcases-embeds-dir']
-      KEY_MATCH_CODE_TAG_BACKTICK = '```'
+			KEY_MATCH_CODE_TAG_BACKTICK = '```'
+			KEYWORD_NO_FRAME_IN_MARKDOWN = 'no-frame'
       INCLUDE_FILE_TYPE = '.html'
       MESSAGES = {
         'ODD_TAG_COUNT' => 'Expects even pairs of' + KEY_MATCH_CODE_TAG_BACKTICK + ' and ' + KEY_MATCH_CODE_TAG_BACKTICK + '. Odd number of tags identified in page '
@@ -75,15 +76,18 @@ module Jekyll
 
         if(indices.length % 2 == 0)
           $i = 0
-          while $i < indices.length  do
-            content_including_tags = document.content.lines[indices[$i]..indices[$i+1]]
-            file_name = doc_name + '-' + SecureRandom.uuid + INCLUDE_FILE_TYPE
-            file_path = site.source + '/' + KEY_EMBEDS_DIR + file_name
-            file_url = '../' + KEY_EMBEDS_DIR + file_name
-            file_content = get_file_content(content_including_tags)
-            code_lang = get_highlight_lang(content_including_tags[0])
-            hash[indices[$i].to_s] =  render_code_and_frame(code_lang, file_content, file_url)
-            make_frame_src_file(file_path, file_content)
+          while $i < indices.length do
+						content_including_tags = document.content.lines[indices[$i]..indices[$i+1]]
+						# read markdown declaration and look for any keywords to skip iframe generation (if specified)
+						should_not_render_frame = content_including_tags[0][KEYWORD_NO_FRAME_IN_MARKDOWN]
+
+						file_name = doc_name + '-' + SecureRandom.uuid + INCLUDE_FILE_TYPE
+						file_path = site.source + '/' + KEY_EMBEDS_DIR + file_name
+						file_url = '../' + KEY_EMBEDS_DIR + file_name
+						file_content = get_file_content(content_including_tags)
+						hash[indices[$i].to_s] =  render_code_and_frame(file_content, file_url, should_not_render_frame)
+						make_frame_src_file(file_path, file_content)
+
             $i += 2
           end
         else 
@@ -101,11 +105,12 @@ module Jekyll
         lang
       end
 
-      def render_code_and_frame(lang, snippet, url)
-        lang = 'html' # hard-code to html
+			def render_code_and_frame(snippet, url, no_frame)
+				code = "<div class='code-wrapper'> <figcaption>Code Snippet:</figcaption> {% highlight html %} #{snippet} {% endhighlight %} </div>"
+				frame = no_frame ? "<div class='frame-container'> </div>" : "<div class='frame-container'> <header><span>Example Output:</span> <a target='_blank' href='#{url}'>Open in a new tab/ window</a> </header> <iframe src='#{url}'></iframe> </div>"
         out = "<div class='embed-wrapper'>"\
-            "<div class='code-wrapper'> <figcaption>Code Snippet:</figcaption> {% highlight #{lang} %} #{snippet} {% endhighlight %} </div>"\
-            "<div class='frame-container'> <header><span>Example Output:</span> <a target='_blank' href='#{url}'>Open in a new tab/ window</a> </header> <iframe src='#{url}'></iframe> </div>"\
+            "#{code}"\
+            "#{frame}"\
           '</div>'
         out
       end
@@ -140,10 +145,10 @@ module Jekyll
 
       def make_frame_src_file(
         file_name, 
-        file_content) 
-        file_mode = 'w+'
-       
-        File.open(file_name, file_mode) do |f|     
+				file_content) 
+				file_mode = 'w+'
+				
+				File.open(file_name, file_mode) do |f|     
           f.write(file_content) 
         end
       end

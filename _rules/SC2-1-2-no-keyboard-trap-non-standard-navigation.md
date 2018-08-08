@@ -29,6 +29,8 @@ authors:
 
 The rule applies to any HTML or SVG element on a web page that is [focusable][] where focus cannot cycle to the browser UI by using [standard keyboard navigation][].
 
+**Note**: The WCAG 2.0 success criterion 2.1.2 applies to all content where focus can be moved to through keyboard navigation.
+
 ### Expectation 1
 
 For each target element help information is [visible on the page][] and [exposed to assistive technologies][] or can be accessed from within the keyboard trap.
@@ -47,7 +49,6 @@ For each target element focus can cycle to the browser UI by using the method ad
 
 ## Assumptions
 
-- The WCAG success criterion applies to all content where focus can be moved to through keyboard navigation.
 - It is not possible to use unmodified arrow or tab keys, or other standard exit methods to move focus away.
 - The focus order in keyboard navigation is cyclical, not linear, meaning that the focus order will cycle to the first/last element when it moves away from the last/first element.
 

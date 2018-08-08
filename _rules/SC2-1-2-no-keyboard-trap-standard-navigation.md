@@ -30,6 +30,8 @@ authors:
 
 The rule applies to any HTML or SVG element on a web page that is [focusable][].
 
+**Note**: The WCAG 2.0 success criterion 2.1.2 applies to all content where focus can be moved to through keyboard navigation.
+
 ### Expectation
 
 For each target element focus can cycle to the browser UI by using [standard keyboard navigation][].
@@ -86,9 +88,9 @@ There are no major accessibility support issues known for this rule.
 
 ```html
 <!-- A focusable element inbetween to keyboard traps -->
-<button onblur="setTimeout(() => this.focus(), 10)">Button 1</button>
-<button class="target" >Button 2</button>
-<button onblur="setTimeout(() => this.focus(), 10)">Button 3</button>
+<button onblur="setTimeout(() => this.focus(), 10)">Button 1</button>
+<button class="target" >Button 2</button>
+<button onblur="setTimeout(() => this.focus(), 10)">Button 3</button>
 ```
 
 ### Inapplicable

@@ -45,7 +45,7 @@ layout: default
         {% assign c = site.data.sc-urls[sc] %}
         <li>
           <a href="{{ c.url }}">
-            {{ c.num }} ({{ c.handle }})
+            {{ c.num }} ({{ c.handle }}) - (Level: {{c.level}})
           </a>
         </li>
         {% if forloop.last == false %}, {% endif %}

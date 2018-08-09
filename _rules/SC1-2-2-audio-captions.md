@@ -1,12 +1,16 @@
 ---
 name: audio elements captions
+
 description: |
   Non-streaming `audio` elements must have a text alternative or captions for all included auditory information.
+
+success_criterion:
+- 1.2.2
 
 test_aspects:
 - DOM Tree
 - CSS Styling
-- [Audio output](#audio-output)
+- Audio output
 
 authors:
 - Wilco Fiers

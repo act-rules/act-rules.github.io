@@ -66,7 +66,7 @@ There are no major accessibility support issues known for this rule.
 ```
 
 ```html
-<!-- summary element has a default sematic role of button -->
+<!-- summary element has a default semantic role of button -->
 <summary>Press Here</summary>
 ```
 
@@ -106,6 +106,22 @@ There are no major accessibility support issues known for this rule.
 ```html
 <!-- span tag with role button with no name -->
 <span role="button"></span>
+```
+
+```html
+<!-- off screen element with out an accessible name -->
+<html>
+  <style>
+    .notInPage {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+    }
+  </style>
+  <body>
+    <button class='notInPage' value='delete'></button>
+  </body>
+</html>
 ```
 
 ## Inapplicable

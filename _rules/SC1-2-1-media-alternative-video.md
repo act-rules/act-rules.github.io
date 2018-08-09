@@ -4,9 +4,6 @@ name: Video-only as a media alternative for text
 description: |
   This rule checks non-streaming silent `video` is a media alternative for text on the page.
 
-success_criterion:
-- 1.2.1
-
 test_aspects:
 - DOM Tree
 - CSS Styling

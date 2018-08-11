@@ -80,7 +80,7 @@ module Jekyll
 			passed_failed_inapplicable_indices = []
 			is_odd = false
 			document.content.each_line.with_index do |line, index|
-				if(line['### Passed'] || line['### Failed'] || line['### Inapplicable']) 
+				if(line['# Passed'] || line['# Failed'] || line['# Inapplicable'])
 					passed_failed_inapplicable_indices.push(index)
 				end
 				if line[KEY_MATCH_CODE_TAG_BACKTICK]
@@ -141,7 +141,6 @@ module Jekyll
 					content_including_tags = document.content.lines[indices[$i]..indices[$i+1]]
 					# read markdown declaration and look for any keywords to skip iframe generation (if specified)
 					should_not_render_frame = content_including_tags[0][KEYWORD_NO_FRAME_IN_MARKDOWN]
-
 					test_case_type = get_test_case_type(indices[$i].to_i, p_f_i_indices)
 
 					# construct file name

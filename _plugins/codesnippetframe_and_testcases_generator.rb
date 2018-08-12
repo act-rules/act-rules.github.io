@@ -1,12 +1,13 @@
 require 'securerandom'
 require 'fileutils'
 require 'json'
+require 'zip'
 
 module Jekyll
 	class CodeSnippetFrameAndTestCasesGenerator < Generator
 
 		safe true
-		priority :highest
+		priority :lowest
 
 		KEY_WCAG_TESTCASES_DIR = 'wcag-testcases'
 		KEY_EMBEDS_DIR =  JSON.parse(File.read('package.json'))['testcases-embeds-dir']
@@ -51,11 +52,23 @@ module Jekyll
 				create_exportable_testcases(site)
 			end
 		end
+
+		def compress(path)
+			path.sub!(%r[/$],'')
+			archive = File.join(path,File.basename(path))+'.zip'
+			FileUtils.rm archive, :force=>true
+		
+			Zip::File.open(archive, 'w') do |zipfile|
+				Dir["#{path}/**/**"].reject{|f|f==archive}.each do |file|
+					zipfile.add(file.sub(path+'/',''),file)
+				end
+			end
+		end
 		
 		def create_exportable_testcases(site)
-			# Clean export directoru
+			# Clean export directory
 			dir = site.source + '/' + KEY_WCAG_TESTCASES_DIR
-			FileUtils.rm_f Dir.glob("#{dir}/*")
+			FileUtils.rm_f(dir)
 			
 			# construct json of output
 			result = JSON.pretty_generate({
@@ -72,6 +85,9 @@ module Jekyll
 
 			# copy test case files
 			FileUtils.copy_entry KEY_EMBEDS_DIR,  KEY_WCAG_TESTCASES_DIR + '/assets'
+
+			# create a zip file of the same
+			compress(KEY_WCAG_TESTCASES_DIR)
 		end
 
 		def get_code_tag_line_indices(document)

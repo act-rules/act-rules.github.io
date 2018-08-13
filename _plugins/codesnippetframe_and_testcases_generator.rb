@@ -31,12 +31,18 @@ module Jekyll
 		end
 
 		def generate(site)
-			# Clean directory
-			base_dir = site.source + '/' + KEY_EMBEDS_DIR
-			FileUtils.rm_f Dir.glob("#{base_dir}/*")
-
+			# Clean and create testcase embeds directory
+			testcases_base_dir = site.source + '/' + KEY_EMBEDS_DIR
+			FileUtils.rm_f Dir.glob("#{testcases_base_dir}/*")
 			# Create empty directory
-			Dir.mkdir(base_dir) unless File.exists?(base_dir)
+			Dir.mkdir(testcases_base_dir) unless File.exists?(testcases_base_dir)
+
+			# Clean and create testcase export directory
+			exports_base_dir = site.source + '/' + KEY_WCAG_TESTCASES_DIR
+			FileUtils.rm_f Dir.glob("#{exports_base_dir}/*")
+			# Create empty directory
+			Dir.mkdir(exports_base_dir) unless File.exists?(exports_base_dir)
+			
 			# Loop documents and create test case embeds
 			site.documents.each do |doc|
 				if (doc.url[INCLUDE_FILE_TYPE])
@@ -66,10 +72,6 @@ module Jekyll
 		end
 		
 		def create_exportable_testcases(site)
-			# Clean export directory
-			dir = site.source + '/' + KEY_WCAG_TESTCASES_DIR
-			FileUtils.rm_f(dir)
-			
 			# construct json of output
 			result = JSON.pretty_generate({
 				name: 'auto-wcag',

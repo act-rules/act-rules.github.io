@@ -4,7 +4,7 @@
   "description": "auto-wcag",
   "main": "index.js",
 	"testcases-embeds-dir": "_testcases-embeds/",
-	"testcases-export-dir": "_testcases-export/",
+	"testcases-export-dir": "wcag-testcases/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "bundle exec jekyll serve",

@@ -69,7 +69,7 @@ Certain assistive technologies can be set up to ignore the title attribute, whic
 ```html
 <!-- implicit role with aria-labelledby -->
 <div id="country">Country</div>
-<textarea aria-labelledby="address"></textarea>
+<textarea aria-labelledby="country"></textarea>
 ```
 
 ```html

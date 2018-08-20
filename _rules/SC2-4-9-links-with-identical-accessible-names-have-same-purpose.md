@@ -126,6 +126,22 @@ Has the same content but are using different layouts:
 <a href="/test-assets/link-purpose/page3.html">Link text</a>
 ```
 
+#### Passed example 9
+
+Links created via scripting with explicit role of link: 
+
+```html
+<span role="link"
+   onclick="location='/test-assets/link-purpose/link-purpose/index.html.html'">
+Link text
+</span>
+
+<span role="link"
+   onclick="location='/test-assets/link-purpose/link-purpose/index.html'">
+Link text
+</span>
+```
+
 ### Failed
 
 #### Failed example 1
@@ -155,6 +171,22 @@ Case-sensitivity in file name:
 <a href="/test-assets/link-purpose/Page1.html">Link text</a>
 ```
 
+#### Failed example 4
+
+Links created via scripting with explicit role of link: 
+
+```html
+<span role="link"
+   onclick="location='/test-assets/link-purpose/link-purpose/page1.html'">
+Link text
+</span>
+
+<span role="link"
+   onclick="location='/test-assets/link-purpose/link-purpose/contact.html'">
+Link text
+</span>
+```
+
 ### Inapplicable 
 
 #### Inapplicable example 1
@@ -163,7 +195,7 @@ Case-sensitivity in file name:
 
 ```html
 <a>Link text</a>
-<area aria-label="Link text"></area>
+<area aria-label="Link text">
 ```
 
 #### Inapplicable example 2
@@ -173,4 +205,29 @@ No identical link texts:
 ```html
 <a href="/test-assets/link-purpose">Link text 1</a>
 <a href="/test-assets/link-purpose">Link text 2</a>
+```
+
+#### Inapplicable example 3
+
+Link is not exposed to assistive technologies;
+
+```html
+<a href="/test-assets/link-purpose" style="display:none">Link text 1</a>
+<a href="/test-assets/link-purpose">Link text 2</a>
+```
+
+#### Inapplicable example 4
+
+Links created via scripting, but doesn't have semantic role of link:
+
+```html
+<span
+   onclick="location='/test-assets/link-purpose/link-purpose/page1.html'">
+Link text
+</span>
+
+<span
+   onclick="location='/test-assets/link-purpose/link-purpose/contact.html'">
+Link text
+</span>
 ```

@@ -9,6 +9,7 @@ Use the [empty atomic rule template](atomic-template-empty.html) to create new a
 ````markdown
 ---
 name: Short descriptive name
+rule_type: atomic
 description: | # Use "|" for multi-line text
   This rule checks ...
 
@@ -59,7 +60,9 @@ Support for XXX is known to be limited in some assistive technologies. If any of
 
 ## Test Cases
 
-### Pass example 1
+### Passed
+
+#### Pass example 1
 
 Briefly describe what passed in the html code below
 
@@ -67,12 +70,13 @@ Briefly describe what passed in the html code below
 <!-- passing html code snippet -->
 ```
 
-### Pass example X
+#### Pass example X
 
 ... Add one test case for each "reason" an element can pass
 
+### Failed
 
-### Failure example 1
+#### Failure example 1
 
 Briefly describe what failed in the html code below
 
@@ -80,11 +84,13 @@ Briefly describe what failed in the html code below
 <!-- failing html code snippet -->
 ```
 
-### Failure example X
+#### Failure example X
 
 ... Add one test case for each "reason" an element can fail
 
-### Inapplicable example 1
+### Inapplicable
+
+#### Inapplicable example 1
 
 Briefly describe why the html code snippet is inapplicable
 
@@ -92,7 +98,7 @@ Briefly describe why the html code snippet is inapplicable
 <!-- inapplicable code snippet -->
 ```
 
-### Inapplicable example X
+#### Inapplicable example X
 
 ... Add one test case for each "reason" an element can be inapplicable
 

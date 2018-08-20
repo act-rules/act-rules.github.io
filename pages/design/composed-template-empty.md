@@ -1,5 +1,6 @@
 ---
 name:
+rule_type: composed
 description: |
   This rule checks ...
 
@@ -41,7 +42,9 @@ There are no major accessibility support issues known for this rule.
 
 ## Test Cases
 
-### Pass example 1
+### Passed
+
+#### Pass example 1
 
 Description...
 
@@ -49,11 +52,13 @@ Description...
 <!-- code -->
 ```
 
-### Pass example 2
+#### Pass example 2
 
 ...
 
-### Failure example 1
+### Failed
+
+#### Failure example 1
 
 Description...
 
@@ -61,11 +66,13 @@ Description...
 <!-- code -->
 ```
 
-### Failure example 2
+#### Failure example 2
 
 ...
 
-### Inapplicable example 1
+### Inapplicable
+
+#### Inapplicable example 1
 
 Description...
 
@@ -73,6 +80,6 @@ Description...
 <!-- code -->
 ```
 
-### Inapplicable example 2
+#### Inapplicable example 2
 
 ...

@@ -29,11 +29,11 @@ For each test target, the outcome of << Logic here >>:
 
 ## Assumptions
 
-*There are currently no assumptions*
+*There are currently no assumptions.*
 
 ## Accessibility support
 
-There are no major accessibility support issues known for this rule.
+*There are no major accessibility support issues known for this rule.8
 
 ## Background
 

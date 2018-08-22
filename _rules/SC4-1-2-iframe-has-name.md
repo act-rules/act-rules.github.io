@@ -60,7 +60,7 @@ Usage of `title` attribute to describe the `iframe` content.
 Usage of `aria-label` attribute to describe the `frame` content.
 
 ```html
-<iframe role="applo" aria-label="Advertisement of tours to Great Wall of China" src="../test-assets/SC4-1-2-frame-doc.html" >
+<iframe role="application" aria-label="Advertisement of tours to Great Wall of China" src="../test-assets/SC4-1-2-frame-doc.html" >
 </iframe>
 ```
 

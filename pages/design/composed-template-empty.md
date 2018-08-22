@@ -33,7 +33,7 @@ For each test target, the outcome of << Logic here >>:
 
 ## Accessibility support
 
-*There are no major accessibility support issues known for this rule.8
+*There are no major accessibility support issues known for this rule.*
 
 ## Background
 

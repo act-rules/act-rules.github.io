@@ -112,7 +112,7 @@ Usage of non existing `aria-labelledby` reference element to describe the `ifram
 
 ## Inapplicable
 
-Does not apply an non `iframe` element.
+Does not apply to non `iframe` element.
 
 ```html
 <button role='link'>take me somewhere</button>

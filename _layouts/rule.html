@@ -11,8 +11,14 @@ layout: default
   {% assign status = "rule" %}
 {% endif %}
 
-{% if page.date %}
-  <p>Late updated: <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+{% if page.last-modified-timestamp %}
+  <p>Late updated: 
+		<time 
+			datetime="{{ page.last-modified-timestamp | date_to_xmlschema }}" 
+			itemprop="dateModified">
+			{{ page.last-modified-timestamp | date: "%b %-d, %Y" }}
+		</time>
+	</p>
 {% endif %}
 
 {% if page.authors %}

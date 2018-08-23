@@ -40,6 +40,10 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 
 ### Passed
 
+#### Pass example 1
+
+Valid `lang` value.
+
 ```html
 <html>
 <body> 
@@ -47,6 +51,10 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 </body>
 </html>
 ```
+
+#### Pass example 2
+
+Valid `xml:lang` value.
 
 ```html
 <html>
@@ -56,6 +64,10 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 </html>
 ```
 
+#### Pass example 3
+
+Valid `lang` value.
+
 ```html
 <html>
 <body>
@@ -63,6 +75,10 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 </body>
 </html>
 ```
+
+#### Pass example 4
+
+Valid `lang` and `xml:lang` value.
 
 ```html
 <html>
@@ -74,6 +90,10 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 
 ### Failed
 
+#### Fail example 1
+
+Not valid `lang` value.
+
 ```html
 <html>
 <body>
@@ -81,6 +101,10 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 </body>
 </html>
 ```
+
+#### Fail example 2
+
+Not valid `xml:lang` value.
 
 ```html
 <html>
@@ -92,12 +116,20 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 
 ### Inapplicable
 
+#### Inapplicable example 1
+
+Not applicable to `html` as the rule is for `body` elements.
+
 ```html
 <html lang="en">
 <body>
 </body>
 </html>
 ```
+
+#### Inapplicable example 2
+
+Empty `lang` value.
 
 ```html
 <html>
@@ -106,6 +138,10 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 </body>
 </html>
 ```
+
+#### Inapplicable example 3
+
+Empty `xml:lang` value.
 
 ```html
 <html>

@@ -48,11 +48,13 @@ There are no major accessibility support issues known for this rule.
 
 ## Test cases
 
-
 ### Passed
 
+#### Pass example 1
+
+An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative.
+
 ```html
-<!-- An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative. -->
 <p>A part of a speech by John F. Kennedy: We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win, and the others, too.</p>
 <p>You can also listen to the audio file below to hear the above part of the speech.</p>
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
@@ -60,28 +62,40 @@ There are no major accessibility support issues known for this rule.
 
 ### Failed
 
+#### Fail example 1
+
+An audio element that describes some of the text on the same page. The audio contains more information than the text does.
+
 ```html
-<!-- An audio element that describes some of the text on the same page. The audio contains more information than the text does. -->
 <p>A part of a speech by John F. Kennedy: We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard.</p>
 <p>You can also listen to the audio file below to hear the above part of the speech.</p>
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
+#### Fail example 2
+
+An audio element that describes some of the text on the same page. The text is not visible on the page.
+
 ```html
-<!-- An audio element that describes some of the text on the same page. The text is not visible on the page. -->
 <p style="display: none;">A part of a speech by John F. Kennedy: We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win, and the others, too.</p>
 <p>You can also listen to the audio file below to hear the above part of the speech.</p>
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
+#### Fail example 3
+
+An audio element that describes some of the text on the same page. The text on the page does not label the audio as an alternative.
+
 ```html
-<!-- An audio element that describes some of the text on the same page. The text on the page does not label the audio as an alternative. -->
 <p>A part of a speech by John F. Kennedy: We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win, and the others, too.</p>
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
+#### Fail example 4
+
+An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the label is not visible on the page.
+
 ```html
-<!-- An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the label is not visible on the page. -->
 <p>A part of a speech by John F. Kennedy: We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win, and the others, too.</p>
 <p style="display: none;">You can also listen to the audio file below to hear the above part of the speech.</p>
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
@@ -89,15 +103,21 @@ There are no major accessibility support issues known for this rule.
 
 ### Inapplicable
 
+#### Inapplicable example 1
+
+An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the controls are not visible on the page.
+
 ```html
-<!-- An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the controls are not visible on the page. -->
 <p>A part of a speech by John F. Kennedy: We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win, and the others, too.</p>
 <p>You can also listen to the audio file below to hear the above part of the speech.</p>
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls style="display: none;"> </audio>
 ```
 
+#### Inapplicable example 2
+
+An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but there are no controls.
+
 ```html
-<!-- An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but there are no controls. -->
 <p>A part of a speech by John F. Kennedy: We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win, and the others, too.</p>
 <p>You can also listen to the audio file below to hear the above part of the speech.</p>
 <audio src="../test-assets/moon-audio/moon-speech.mp3" > </audio>

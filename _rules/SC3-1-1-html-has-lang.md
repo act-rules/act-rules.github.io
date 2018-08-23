@@ -47,29 +47,57 @@ There are known combinations of a popular operating system with browsers and ass
 
 ### Passed
 
+#### Pass example 1
+
+Has non-empty `lang`.
+
 ```html
 <html lang="en">
 ```
+
+#### Pass example 2
+
+Has non-empty `xml:lang`.
 
 ```html
 <html xml:lang="en">
 ```
 
+#### Pass example 3
+
+Has non-empty `lang` and `xml:lang`.
+
 ```html
 <html xml:lang="en" lang="en">
 ```
+
+#### Pass example 4
+
+Has non-empty `lang`.
 
 ```html
 <html xml:lang="" lang="en">
 ```
 
+#### Pass example 5
+
+Has non-empty `xml:lang`.
+
 ```html
 <html xml:lang="en" lang="">
 ```
 
+#### Pass example 6
+
+Has `lang`.
+
 ```html
 <html lang="xyz">
 ```
+
+#### Pass example 7
+
+Has `xml:lang`.
 
 ```html
 <html xml:lang="xyz">
@@ -77,23 +105,43 @@ There are known combinations of a popular operating system with browsers and ass
 
 ### Failed
 
+#### Fail example 1
+
+Has no `lang` or `xml:lang` attribute.
+
 ```html
 <html>
 ```
+
+#### Fail example 2
+
+Has empty `xml:lang`.
 
 ```html
 <html xml:lang="">
 ```
 
+#### Fail example 3
+
+Has empty `lang`.
+
 ```html
 <html lang="">
 ```
+
+#### Fail example 4
+
+Has empty `lang` and `xml:lang`.
 
 ```html
 <html xml:lang="" lang="">
 ```
 
 ### Inapplicable
+
+#### Inapplicable example 1
+
+Not applicable on `svg`.
 
 ```html
 <svg lang="en">

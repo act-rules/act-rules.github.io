@@ -42,15 +42,21 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
+#### Pass example 1
+
 ```html
 <div id="my-div"> This is my first element</div>
 ```
+
+#### Pass example 2
 
 ```html
 <div id="my-div1"> This is my first element</div>
 <div id="my-div2"> This is my second element</div>
 <svg id="my-div3"> This is my third element</svg>
 ```
+
+#### Pass example 3
 
 ```html
 <div id="my-elm"></div>
@@ -63,15 +69,21 @@ There are no major accessibility support issues known for this rule.
 
 ### Failed
 
+#### Fail example 1
+
 ```html
 <div id="my-div"> This is my first element</div>
-<div id="my-div"> This is my second element</svg>
+<div id="my-div"> This is my second element</div>
 ```
+
+#### Fail example 2
 
 ```html
 <div id="my-div"> This is my first element</div>
 <svg id="my-div"> This is my second element</svg>
 ```
+
+#### Fail example 3
 
 ```html
 <div id="my-div" style="display:none"> This is my first element</div>
@@ -80,9 +92,13 @@ There are no major accessibility support issues known for this rule.
 
 ### Inapplicable
 
+#### Inapplicable example 1
+
 ```html
 <div>This is my first element</div>
 ```
+
+#### Inapplicable example 2
 
 ```html
 <div xml:id="my-div">This is my first element</div>

@@ -47,21 +47,41 @@ While HTML5 specification indicates that `xml:lang` attribute takes priority ove
 
 ## Passed
 
+#### Pass example 1
+
+Has valid `lang`.
+
 ```html
 <html lang="fr">
 ```
+
+#### Pass example 2
+
+Has valid `xml:lang`.
 
 ```html
 <html xml:lang="fr">
 ```
 
+#### Pass example 3
+
+Has valid `lang` and `xml:lang`
+
 ```html
 <html xml:lang="fr" lang="fr">
 ```
 
+#### Pass example 4
+
+Has valid `lang`.
+
 ```html
 <html lang="fr" xml:lang="">
 ```
+
+#### Pass example 5
+
+Has valid `xml:lang`.
 
 ```html
 <html lang="" xml:lang="nl">
@@ -69,13 +89,25 @@ While HTML5 specification indicates that `xml:lang` attribute takes priority ove
 
 ## Failed
 
+#### Fail example 1
+
+Has invalid `lang`.
+
 ```html
 <html lang="xyz">
 ```
 
+#### Fail example 2
+
+Has invalid `xml:lang`.
+
 ```html
 <html xml:lang="xyz">
 ```
+
+#### Fail example 3
+
+Has invalid `lang` and `xml:lang`.
 
 ```html
 <html xml:lang="xyz" lang="xyz">
@@ -83,17 +115,33 @@ While HTML5 specification indicates that `xml:lang` attribute takes priority ove
 
 ## Inapplicable
 
+#### Inapplicable example 1
+
+Not applicable to `svg`.
+
 ```html
 <svg lang="fr">
 ```
+
+#### Inapplicable example 2
+
+Not applicable to `svg`.
 
 ```html
 <svg xml:lang="fr">
 ```
 
+#### Inapplicable example 3
+
+Empty `lang` value.
+
 ```html
 <html lang="">
 ```
+
+#### Inapplicable example 4
+
+Empty `xml:lang` value.
 
 ```html
 <html xml:lang="">

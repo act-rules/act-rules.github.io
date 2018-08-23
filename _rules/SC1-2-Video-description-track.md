@@ -47,8 +47,11 @@ This means that the rule can only provide a pass for these succescriteria if acc
 
 ## Passed
 
+#### Pass example 1
+
+A video element with a track element that contains descriptions.
+
 ```html
-<!-- A video element with a track element that contains descriptions.-->
 <video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
@@ -58,8 +61,11 @@ This means that the rule can only provide a pass for these succescriteria if acc
 
 ## Failed
 
+#### Fail example 1
+
+A video element with a track element that contains incorrect descriptions.
+
 ```html
-<!-- A video element with a track element that contains incorrect descriptions.-->
 <video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
@@ -69,16 +75,22 @@ This means that the rule can only provide a pass for these succescriteria if acc
 
 ## Inapplicable
 
+#### Inapplicable example 1
+
+A video element without a track element.
+
 ```html
 <video controls>
-<!-- A video element without a track element.-->
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
 ```
 
+#### Inapplicable example 2
+
+A video element that is not visible on the page.
+
 ```html
-<!-- A video element that is not visible on the page.-->
 <video controls style="display: none;">
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
@@ -86,8 +98,11 @@ This means that the rule can only provide a pass for these succescriteria if acc
 </video>
 ```
 
+#### Inapplicable example 3
+
+A video element without audio.
+
 ```html
-<!-- A video element without audio.-->
 <video controls>
   <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>

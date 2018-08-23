@@ -54,8 +54,11 @@ There are no major accessibility support issues known for this rule.
 
 ## Passed
 
+#### Pass example 1
+
+A video element with a text transcript on the same page.
+
 ```html
-<!-- A video element with a text transcript on the same page.-->
 <video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
@@ -65,8 +68,11 @@ He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
+#### Pass example 2
+
+A video element with a link to a text transcript on a different page.
+
 ```html
-<!-- A video element with a link to a text transcript on a different page.-->
 <video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
@@ -76,8 +82,11 @@ Then he stops to scratch his bottom.</p>
 
 ## Failed
 
+#### Fail example 1
+
+A video element with an incorrect text transcript on the same page.
+
 ```html
-<!-- A video element with an incorrect text transcript on the same page.-->
 <video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
@@ -87,8 +96,11 @@ He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
+#### Fail example 2
+
+A video element with a link to an incorrect text transcript on a different page.
+
 ```html
-<!-- A video element with a link to an incorrect text transcript on a different page.-->
 <video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
@@ -98,8 +110,11 @@ Then he stops to scratch his bottom.</p>
 
 ## Inapplicable
 
+#### Inapplicable example 1
+
+A video element that is not visible on the page.
+
 ```html
-<!-- A video element that is not visible on the page.-->
 <video controls style="display: none;">
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
@@ -107,8 +122,11 @@ Then he stops to scratch his bottom.</p>
 <a href="/test-assets/rabbit-video-transcript.html">Transcript</p>
 ```
 
+#### Inapplicable example 2
+
+A video element without audio.
+
 ```html
-<!-- A video element without audio.-->
 <video controls>
   <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>

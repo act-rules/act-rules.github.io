@@ -41,39 +41,60 @@ There are no major accessibility support issues known for this rule.
 - [ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used](https://www.w3.org/TR/WCAG20-TECHS/ARIA14.html)
 - [https://www.w3.org/TR/WCAG20-TECHS/ARIA16.html](https://www.w3.org/TR/WCAG20-TECHS/ARIA16.html)
 
-# Test cases
+## Test cases
 
-## Passed
+### Passed
+
+#### Pass example 1
+
+Regular button.
 
 ```html
-<!-- Regular button -->
 <button>My button</button>
 ```
 
+#### Pass example 2
+
+Value attribute as the accessible name.
+
 ```html
-<!-- Value attribute as the accessible name -->
 <input type="submit" value="Submit">
 ```
 
+#### Pass example 3
+
+`aria-label` for the accessible name.
+
 ```html
-<!-- aria-label for the accessible name -->
 <button aria-label="My button"></button>
 ```
 
+#### Pass example 4
+
+Span tag with role button and has name defined by aria-label.
+
 ```html
-<!-- span tag with role button and has name defined by aria-label -->
 <span role="button" aria-label="My button"></button>
 ```
 
+#### Pass example 5
+
+Summary element has a default semantic role of button.
 ```html
-<!-- summary element has a default semantic role of button -->
 <summary>Press Here</summary>
 ```
 
+#### Pass example 6
+
+Disabled elements are also applicable.
+
 ```html
-<!-- disabled elements are also applicable -->
 <button disabled>Delete</button>
 ```
+
+#### Pass example 7
+
+Off screen elements should be tested.
 
 ```html
 <html>
@@ -85,31 +106,42 @@ There are no major accessibility support issues known for this rule.
     }
   </style>
   <body>
-    <!-- Off screen elements should be tested -->
     <button class='notInPage'>Save</button>
   </body>
 </html>
 ```
 
-## Failed
+### Failed
+
+#### Fail example 1
+
+Value attribute does NOT give an accessible name, only for input elements.
 
 ```html
-<!-- value attribute does NOT give an accessible name, only for input elements -->
 <button type="button" value="read more"></button>
 ```
 
+#### Fail example 2
+
+`aria-hidden` buttons should be tested.
+
 ```html
-<!-- aria-hidden buttons should be tested -->
 <button aria-hidden="true"></button>
 ```
 
+#### Fail example 3
+
+Span tag with role button with no name.
+
 ```html
-<!-- span tag with role button with no name -->
 <span role="button"></span>
 ```
 
+#### Fail example 4
+
+Off screen element with out an accessible name.
+
 ```html
-<!-- off screen element with out an accessible name -->
 <html>
   <style>
     .notInPage {
@@ -124,12 +156,19 @@ There are no major accessibility support issues known for this rule.
 </html>
 ```
 
-## Inapplicable
+### Inapplicable
+
+#### Inapplicable example 1
+
+Image buttons are tested in a different rule
 
 ```html
-<!-- Image buttons are tested in a different rule -->
 <input type='image' value='download'>
 ```
+
+#### Inapplicable example 2
+
+Not visible in page and not exposed to assistive technologies.
 
 ```html
 <html>
@@ -141,13 +180,15 @@ There are no major accessibility support issues known for this rule.
     }
   </style>
   <body>
-    <!-- not visible in page and not exposed to assistive technologies -->
     <button class='notInPage' aria-hidden='true'>Confirm</button>
   </body>
 </html>
 ```
 
+#### Inapplicable example 3
+
+Inapplicable: role overridden to link for button element.
+
 ```html
-<!-- inapplicable: role overridden to link for button element -->
 <button role='link'>take me somewhere</button>
 ```

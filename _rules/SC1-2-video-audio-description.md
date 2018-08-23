@@ -43,16 +43,22 @@ There are no major accessibility support issues known for this rule.
 
 ## Passed
 
+#### Pass example 1
+
+A video element with a voiceover that describes the visual information.
+
 ```html
-<!-- A video element with a voiceover that describes the visual information.-->
 <video controls>
   <source src="../test-assets/rabbit-video/video-with-voiceover.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video-with-voiceover.webm" type="video/webm"></source>
 </video>
 ```
 
+#### Pass example 2
+
+A video element with an audio description.
+
 ```html
-<!-- A video element with an audio description.-->
 <link rel="stylesheet" href="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-core/ozplayer.min.css">
 <link rel="stylesheet" href="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-skin/highlights-blue.css">
 <link rel="stylesheet" href="https://ozplayer.global.ssl.fastly.net/3.3/transcript.css">
@@ -76,24 +82,33 @@ There are no major accessibility support issues known for this rule.
 
 ## Failed
 
+#### Fail example 1
+
+A video element without an audio description.
+
 ```html
-<!-- A video element without an audio description.-->
 <video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
 ```
 
+#### Fail example 2
+
+A video element with an incorrect audio description.
+
 ```html
-<!-- A video element with an incorrect audio description.-->
 <video controls>
   <source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm"></source>
 </video>
 ```
 
+#### Fail example 3
+
+A video element with an incorrect audio description.
+
 ```html
-<!-- A video element with an incorrect audio description.-->
 <link rel="stylesheet" href="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-core/ozplayer.min.css">
 <link rel="stylesheet" href="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-skin/highlights-blue.css">
 <link rel="stylesheet" href="https://ozplayer.global.ssl.fastly.net/3.3/transcript.css">
@@ -117,16 +132,22 @@ There are no major accessibility support issues known for this rule.
 
 ## Inapplicable
 
+#### Inapplicable example 1
+
+A video element without audio.
+
 ```html
-<!-- A video element without audio.-->
 <video controls>
   <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 ```
 
+#### Inapplicable example 2
+
+A video element that is not visible on the page.
+
 ```html
-<!-- A video element that is not visible on the page.-->
 <video controls style="display: none;">
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>

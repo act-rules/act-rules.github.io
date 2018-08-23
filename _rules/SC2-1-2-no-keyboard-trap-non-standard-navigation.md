@@ -27,19 +27,19 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML or SVG element on a web page that is [focusable][] where focus cannot cycle to the browser UI by using [standard keyboard navigation][].
+The rule applies to any HTML or SVG element on a web page that is [focusable](#focusable) where focus cannot cycle to the browser UI by using [standard keyboard navigation](#standard-keyboard-navigation).
 
 **Note**: The WCAG 2.0 success criterion 2.1.2 applies to all content where focus can be moved to through keyboard navigation.
 
 ### Expectation 1
 
-For each target element help information is [visible on the page][] and [exposed to assistive technologies][] or can be accessed from within the keyboard trap.
+For each target element help information is [visible on the page](#visible-on-the-page) and [exposed to assistive technologies](#exposes-to-assistive-technologies) or can be accessed from within the keyboard trap.
 
 **Note**: As per WCAG 2.0 Success Criterion 2.1.1 Keyboard the help information should be accessible through a keyboard interface.
 
 ### Expectation 2
 
-The help information explains how to cycle to the browser UI, or on how to get to a point from where it is possible to cycle to the browser UI, using [standard keyboard navigation][].
+The help information explains how to cycle to the browser UI, or on how to get to a point from where it is possible to cycle to the browser UI, using [standard keyboard navigation](#standard-keyboard-navigation).
 
 ### Expectation 3
 
@@ -65,9 +65,11 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-```html
-<!-- Keyboard trap with help information in a paragraph before, and where the method advised works -->
+#### Pass example 1
 
+Keyboard trap with help information in a paragraph before, and where the method advised works.
+
+```html
 <script>
 var trapOn = false ;
 </script>
@@ -79,9 +81,11 @@ var trapOn = false ;
 <a id="link2" href="#">Link 2</a>
 ```
 
-```html
-<!-- Keyboard trap with help information within the trap, and where the method advised works --> 
+#### Pass example 2
 
+Keyboard trap with help information within the trap, and where the method advised works.
+
+```html
 <script>
 var trapOn = false ;
 </script>
@@ -117,9 +121,11 @@ document.getElementById("helptext").innerHTML = "<p>Press the M-key to Exit</p>"
 
 ### Failed
 
-```html
-<!-- Keyboard trap with no instructions  -->
+#### Fail example 1
 
+Keyboard trap with no instructions.
+
+```html
 <script>
 var trapOn = false ;
 </script>
@@ -160,16 +166,13 @@ var trapOn = false ;
 
 ### Inapplicable
 
-```html
-<!-- Not a keyboard trap (interactive element) -->
+#### Inapplicable example 1
 
+Not a keyboard trap (interactive element).
+
+```html
 <a id="link1" href="#">Link 1</a>
 <button id="btn1">Button 1</button>
 <button id="btn2">Button 2</button>
 <a id="link2" href="#">Link 2</a>
 ```
-
-[focusable]: ../pages/algorithms/focusable.html
-[standard keyboard navigation]: ../pages/algorithms/standard-keyboard-navigation.html
-[visible on the page]: ../pages/algorithms/visible-on-the-page.html
-[exposed to assistive technologies]: ../pages/algorithms/exposed-to-assistive-technologies.html

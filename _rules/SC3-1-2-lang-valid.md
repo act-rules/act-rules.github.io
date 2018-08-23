@@ -42,7 +42,7 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 
 #### Pass example 1
 
-Valid `lang` value.
+The `lang` attribute specified has a non-empty value & a valid primary language subtag.
 
 ```html
 <html>
@@ -54,7 +54,7 @@ Valid `lang` value.
 
 #### Pass example 2
 
-Valid `xml:lang` value.
+The `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
 
 ```html
 <html>
@@ -66,7 +66,7 @@ Valid `xml:lang` value.
 
 #### Pass example 3
 
-Valid `lang` value.
+The `lang` attribute specified has a non-empty value & a valid primary language subtag. The region section in the value is ignored by the rule.
 
 ```html
 <html>
@@ -78,7 +78,7 @@ Valid `lang` value.
 
 #### Pass example 4
 
-Valid `lang` and `xml:lang` value.
+The `lang` and `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
 
 ```html
 <html>
@@ -92,7 +92,7 @@ Valid `lang` and `xml:lang` value.
 
 #### Fail example 1
 
-Not valid `lang` value.
+The `lang` attribute value is not a valid primary language subtag.
 
 ```html
 <html>
@@ -104,7 +104,7 @@ Not valid `lang` value.
 
 #### Fail example 2
 
-Not valid `xml:lang` value.
+The `xml:lang` attribute value is not a valid primary language subtag.
 
 ```html
 <html>
@@ -118,7 +118,8 @@ Not valid `xml:lang` value.
 
 #### Inapplicable example 1
 
-Not applicable to `html` as the rule is for `body` elements.
+
+The rule applies to elements with the `body` of a webpage. `html` elements are ignored by the rule.
 
 ```html
 <html lang="en">
@@ -129,7 +130,7 @@ Not applicable to `html` as the rule is for `body` elements.
 
 #### Inapplicable example 2
 
-Empty `lang` value.
+An empty value for `lang` attribute is ignored by this rule, as the applicability specifies only non-empty values.
 
 ```html
 <html>
@@ -141,7 +142,7 @@ Empty `lang` value.
 
 #### Inapplicable example 3
 
-Empty `xml:lang` value.
+An empty value for `xml:lang` attribute is ignored by this rule, as the applicability specifies only non-empty values.
 
 ```html
 <html>

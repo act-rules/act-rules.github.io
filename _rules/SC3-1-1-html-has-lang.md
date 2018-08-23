@@ -49,7 +49,7 @@ There are known combinations of a popular operating system with browsers and ass
 
 #### Pass example 1
 
-Has non-empty `lang`.
+The `lang` attribute specified has a non-empty value.
 
 ```html
 <html lang="en">
@@ -57,7 +57,7 @@ Has non-empty `lang`.
 
 #### Pass example 2
 
-Has non-empty `xml:lang`.
+The `xml:lang` attribute specified has a non-empty value.
 
 ```html
 <html xml:lang="en">
@@ -65,7 +65,7 @@ Has non-empty `xml:lang`.
 
 #### Pass example 3
 
-Has non-empty `lang` and `xml:lang`.
+The `lang` and `xml:lang` attribute specified has a non-empty value.
 
 ```html
 <html xml:lang="en" lang="en">
@@ -73,7 +73,7 @@ Has non-empty `lang` and `xml:lang`.
 
 #### Pass example 4
 
-Has non-empty `lang`.
+The `lang` attribute specified has a non-empty value. The rule expects a non-empty value on either the `lang` or `xml:lang` attributes.
 
 ```html
 <html xml:lang="" lang="en">
@@ -81,7 +81,7 @@ Has non-empty `lang`.
 
 #### Pass example 5
 
-Has non-empty `xml:lang`.
+The `xml:lang` attribute specified has a non-empty value. The rule expects a non-empty value on either the `lang` or `xml:lang` attributes.
 
 ```html
 <html xml:lang="en" lang="">
@@ -89,7 +89,7 @@ Has non-empty `xml:lang`.
 
 #### Pass example 6
 
-Has `lang`.
+The `lang` attribute specified has a non-empty value. The rule does not verify the validity of the value specified and checks only for presence of a value.
 
 ```html
 <html lang="xyz">
@@ -97,7 +97,7 @@ Has `lang`.
 
 #### Pass example 7
 
-Has `xml:lang`.
+The `xml:lang` attribute specified has a non-empty value. The rule does not verify the validity of the value specified and checks only for presence of a value.
 
 ```html
 <html xml:lang="xyz">
@@ -107,7 +107,7 @@ Has `xml:lang`.
 
 #### Fail example 1
 
-Has no `lang` or `xml:lang` attribute.
+There were no `lang` or `xml:lang` attribute specified.
 
 ```html
 <html>
@@ -115,7 +115,7 @@ Has no `lang` or `xml:lang` attribute.
 
 #### Fail example 2
 
-Has empty `xml:lang`.
+The `xml:lang` attribute specified has an empty value.
 
 ```html
 <html xml:lang="">
@@ -123,7 +123,7 @@ Has empty `xml:lang`.
 
 #### Fail example 3
 
-Has empty `lang`.
+The `lang` attribute specified has an empty value.
 
 ```html
 <html lang="">
@@ -131,7 +131,7 @@ Has empty `lang`.
 
 #### Fail example 4
 
-Has empty `lang` and `xml:lang`.
+The `lang` and `xml:lang` attribute specified has an empty value.
 
 ```html
 <html xml:lang="" lang="">
@@ -141,7 +141,7 @@ Has empty `lang` and `xml:lang`.
 
 #### Inapplicable example 1
 
-Not applicable on `svg`.
+The rule does not apply to `svg` element.
 
 ```html
 <svg lang="en">

@@ -49,7 +49,7 @@ While HTML5 specification indicates that `xml:lang` attribute takes priority ove
 
 #### Pass example 1
 
-Has valid `lang`.
+The `lang` attribute specified has a non-empty value & a valid primary language subtag.
 
 ```html
 <html lang="fr">
@@ -57,7 +57,7 @@ Has valid `lang`.
 
 #### Pass example 2
 
-Has valid `xml:lang`.
+The `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
 
 ```html
 <html xml:lang="fr">
@@ -65,7 +65,7 @@ Has valid `xml:lang`.
 
 #### Pass example 3
 
-Has valid `lang` and `xml:lang`
+The `lang` and `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
 
 ```html
 <html xml:lang="fr" lang="fr">
@@ -73,7 +73,7 @@ Has valid `lang` and `xml:lang`
 
 #### Pass example 4
 
-Has valid `lang`.
+The `lang` attribute specified has a non-empty value & a valid primary language subtag. The rule checks for the presence of either `lang` or `xml:lang`. Empty value specified for the other attribute is ignored.
 
 ```html
 <html lang="fr" xml:lang="">
@@ -81,7 +81,7 @@ Has valid `lang`.
 
 #### Pass example 5
 
-Has valid `xml:lang`.
+The `xml:lang` attribute specified has a non-empty value & a valid primary language subtag. The rule checks for the presence of either `lang` or `xml:lang`. Empty value specified for the other attribute is ignored.
 
 ```html
 <html lang="" xml:lang="nl">
@@ -91,7 +91,7 @@ Has valid `xml:lang`.
 
 #### Fail example 1
 
-Has invalid `lang`.
+The `lang` attribute value is not a valid primary language subtag.
 
 ```html
 <html lang="xyz">
@@ -99,7 +99,7 @@ Has invalid `lang`.
 
 #### Fail example 2
 
-Has invalid `xml:lang`.
+The `xml:lang` attribute value is not a valid primary language subtag.
 
 ```html
 <html xml:lang="xyz">
@@ -107,7 +107,7 @@ Has invalid `xml:lang`.
 
 #### Fail example 3
 
-Has invalid `lang` and `xml:lang`.
+Both the `lang` and `xml:lang` value specified are not valid values for primary language subtag.
 
 ```html
 <html xml:lang="xyz" lang="xyz">
@@ -117,7 +117,7 @@ Has invalid `lang` and `xml:lang`.
 
 #### Inapplicable example 1
 
-Not applicable to `svg`.
+The rule applies to `html` element and hence usage of `lang` attribute in `svg` element is not applicable.
 
 ```html
 <svg lang="fr">
@@ -125,7 +125,7 @@ Not applicable to `svg`.
 
 #### Inapplicable example 2
 
-Not applicable to `svg`.
+The rule applies to `html` element and hence usage of `xml:lang` attribute in `svg` element is not applicable.
 
 ```html
 <svg xml:lang="fr">
@@ -133,7 +133,7 @@ Not applicable to `svg`.
 
 #### Inapplicable example 3
 
-Empty `lang` value.
+An empty value for `lang` attribute is ignored by this rule, as the applicability specifies only non-empty values.
 
 ```html
 <html lang="">
@@ -141,7 +141,7 @@ Empty `lang` value.
 
 #### Inapplicable example 4
 
-Empty `xml:lang` value.
+An empty value for `xml:lang` attribute is ignored by this rule, as the applicability specifies only non-empty values.
 
 ```html
 <html xml:lang="">

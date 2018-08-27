@@ -18,7 +18,7 @@ authors:
 
 ### Applicability
 
-Any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has an [explicit semantic role](#semantic-role). 
+Any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has an [explicit semantic role](#semantic-role), except if the element has an implicit semantic role that is identical to the explicit semantic role. 
 
 ### Expectation
 

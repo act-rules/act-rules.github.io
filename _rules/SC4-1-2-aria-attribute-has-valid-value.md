@@ -42,7 +42,7 @@ _There are no major accessibility support issues known for this rule._
 - [Overview of possible ´aria-*´ attribute value types](https://www.w3.org/TR/wai-aria/#propcharacteristic_value)
 - [Uniform Resource Identifier (URI): Generic Syntax (RFC 3986)](https://www.ietf.org/rfc/rfc3986.txt)
 
-## Test Cases // UPDATE
+## Test Cases # UPDATE
 
 ### Passed
 

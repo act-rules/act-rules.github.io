@@ -28,7 +28,7 @@ For each test target all [required states and properties](https://www.w3.org/TR/
 
 ## Assumptions
 
-This rule assumes that it is not sufficient to rely on user agent support for [implicit values for roles](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole) to satisfy this accessibility requirement. 
+- This rule assumes that it is not sufficient to rely on user agent support for [implicit values for roles](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole) to satisfy this accessibility requirement. 
 
 User agent support for implicit values for roles is only a SHOULD in the the [Core Accessibility API Mappings 1.1](https://www.w3.org/TR/core-aam-1.1/#statePropertyMappingGeneralRules): 
 > "Where the author has not provided values for required attributes, user agents SHOULD process as if the default value was provided."
@@ -42,6 +42,8 @@ But WAI-ARIA also prescribes on [required states and properties](https://www.w3.
 The conflicting information around user agent support for implicit values for roles has been raised with the ARIA Working Group as https://github.com/w3c/aria/issues/787. Until the Auto-WCAG Community Group gets clarification from the ARIA Working Group, we assume for this rule, that the responsibility for living up to the accessibility requirement, even in cases where the role has an implicit value, is placed with the content author. 
 
 See more about the implications of this in the ”Accessibility Support” section for this rule.
+
+- This rule assumes that there is no element that has an [implicit semantic role](#semantic-role), but does not define native attributes that are mapped to all of the [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for this role. This assumption is the basis for limiting the Applicability to [explicit semantic roles](#semantic-role) only.
 
 ## Accessibility Support
 

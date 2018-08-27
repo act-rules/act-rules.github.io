@@ -22,9 +22,9 @@ Any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-
 
 ### Expectation
 
-For each test target all [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for that role as specified by [WAI-ARIA](https://www.w3.org/TR/wai-aria) are present and [non-empty](#non-empty), unless they have a default value specified through [implicit value for roles](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole).
+For each test target all attributes listed under [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) in [WAI-ARIA](https://www.w3.org/TR/wai-aria) for that role are present and [non-empty](#non-empty), unless they have a default value listed under [implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole).
 
-**Note:** This rule does not test whether the required states and properties has a correct value, only that the attributes are present.
+**Note:** This rule does not test whether the required states and properties has a correct value, only that the attributes are present and [non-empty](#non-empty).
 
 ## Assumptions
 

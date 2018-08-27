@@ -40,7 +40,7 @@ _There are no major accessibility support issues known for this rule._
 
 - [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/ARIA5)
 - [Overview of possible ´aria-*´ attribute value types](https://www.w3.org/TR/wai-aria/#propcharacteristic_value)
--  [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt)
+- [Uniform Resource Identifier (URI): Generic Syntax (RFC 3986)](https://www.ietf.org/rfc/rfc3986.txt)
 
 ## Test Cases // UPDATE
 

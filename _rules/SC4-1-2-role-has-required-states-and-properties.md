@@ -28,11 +28,22 @@ For each test target all [required states and properties](https://www.w3.org/TR/
 
 ## Assumptions
 
-This rule assumes that it is not sufficient to rely on browser support for [implicit values for roles](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole) to satisfy this accessibility requirement. Browsers should support implicit values for roles as per WAI-ARIA [values for states and properties](https://www.w3.org/TR/wai-aria/#state_prop_values): _“When a value is indicated as the default, the user agent MUST follow the behavior prescribed by this value when the state or property is empty or unspecified.”_ But WAI-ARIA also prescribes on [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) that _“Content authors MUST provide a non-empty value for required states and properties. Content authors MUST NOT use the value undefined for required states and properties, unless undefined is an explicitly-supported value of that state or property."_ For this particular rule, the responsibility for living up to the accessibility requirement in these cases is placed with the content author. See more about the implications of this in the ”Accessibility Support” section for this rule.
+This rule assumes that it is not sufficient to rely on user agent support for [implicit values for roles](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole) to satisfy this accessibility requirement. 
+
+User agent support for implicit values for roles is only a SHOULD in the the [Core Accessibility API Mappings 1.1](https://www.w3.org/TR/core-aam-1.1/#statePropertyMappingGeneralRules): _"Where the author has not provided values for required attributes, user agents SHOULD process as if the default value was provided,"_ 
+
+WAI-ARIA [values for states and properties](https://www.w3.org/TR/wai-aria/#state_prop_values) however has the same requirement as a MUST: _“When a value is indicated as the default, the user agent MUST follow the behavior prescribed by this value when the state or property is empty or unspecified”_. 
+But WAI-ARIA also prescribes on [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) that _“Content authors MUST provide a non-empty value for required states and properties. Content authors MUST NOT use the value undefined for required states and properties, unless undefined is an explicitly-supported value of that state or property."_ 
+
+The conflicting information around user agent support for implicit values for roles has been raised with the ARIA Working Group as https://github.com/w3c/aria/issues/787. Until the Auto-WCAG Community Group gets clarification from the ARIA Working Group, we assume for this rule, that the responsibility for living up to the accessibility requirement, even in cases where the role has an implicit value, is placed with the content author. 
+
+See more about the implications of this in the ”Accessibility Support” section for this rule.
 
 ## Accessibility Support
 
-If browsers and/or assistive technologies supports leaving out [required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) if an [implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole) is specified in [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole), failing this rule may not cause actual accessibility issues for users of assistive technologies. 
+If browsers and/or assistive technologies support leaving out [required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) if an [implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole) is specified in [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole), failing this rule may not cause actual accessibility issues for users of assistive technologies. 
+
+**Note:** The required states and properties that are impacted by this can be found in the Core Accessibility API Mappings 1.1 [Overview of default values for missing required attributes](https://www.w3.org/TR/core-aam-1.1/#authorErrorDefaultValuesTable).
 
 ## Background
 

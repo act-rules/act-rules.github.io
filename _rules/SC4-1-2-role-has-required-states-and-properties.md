@@ -22,34 +22,35 @@ Any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-
 
 ### Expectation
 
-For each test target all [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for that role as specified by [WAI-ARIA](https://www.w3.org/TR/wai-aria) are present and [non-empty](#non-empty).
+For each test target all [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for that role as specified by [WAI-ARIA](https://www.w3.org/TR/wai-aria) are present and [non-empty](#non-empty), unless they have a default value specified through [implicit value for roles](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole).
 
 **Note:** This rule does not test whether the required states and properties has a correct value, only that the attributes are present.
 
 ## Assumptions
 
-- This rule assumes that it is not sufficient to rely on user agent support for [implicit values for roles](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole) to satisfy this accessibility requirement. 
+- This rule assumes that there is no element that has an [implicit semantic role](#semantic-role), but does not define native attributes that are mapped to all of the [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for this role. This assumption is the basis for limiting the Applicability to [explicit semantic roles](#semantic-role) only.
 
-User agent support for implicit values for roles is only a SHOULD in the the [Core Accessibility API Mappings 1.1](https://www.w3.org/TR/core-aam-1.1/#statePropertyMappingGeneralRules): 
-> "Where the author has not provided values for required attributes, user agents SHOULD process as if the default value was provided."
+- This rule assumes that it is sufficient to rely on user agent support for [implicit values for roles](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole) to satisfy this accessibility requirement. 
 
-WAI-ARIA [values for states and properties](https://www.w3.org/TR/wai-aria/#state_prop_values) however has the same requirement as a MUST: 
+User agent support for implicit values for roles is a MUST in 
+WAI-ARIA [values for states and properties](https://www.w3.org/TR/wai-aria/#state_prop_values):
 > “When a value is indicated as the default, the user agent MUST follow the behavior prescribed by this value when the state or property is empty or unspecified." 
 
-But WAI-ARIA also prescribes on [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) that:
+However, there is a bit uncertainty about this, since the same requirement is only a SHOULD in the the [Core Accessibility API Mappings 1.1](https://www.w3.org/TR/core-aam-1.1/#statePropertyMappingGeneralRules): 
+> "Where the author has not provided values for required attributes, user agents SHOULD process as if the default value was provided."
+
+WAI-ARIA also prescribes on [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) that:
 > “Content authors MUST provide a non-empty value for required states and properties. Content authors MUST NOT use the value undefined for required states and properties, unless undefined is an explicitly-supported value of that state or property." 
 
-The conflicting information around user agent support for implicit values for roles has been raised with the ARIA Working Group as https://github.com/w3c/aria/issues/787. Until the Auto-WCAG Community Group gets clarification from the ARIA Working Group, we assume for this rule, that the responsibility for living up to the accessibility requirement, even in cases where the role has an implicit value, is placed with the content author. 
+The conflicting information around user agent support for implicit values for roles has been raised with the ARIA Working Group as https://github.com/w3c/aria/issues/787. Until the Auto-WCAG Community Group gets clarification from the ARIA Working Group, we assume for this rule, that relying on the default values is enough to satisfy this accessibility requirement.
 
-See more about the implications of this in the ”Accessibility Support” section for this rule.
-
-- This rule assumes that there is no element that has an [implicit semantic role](#semantic-role), but does not define native attributes that are mapped to all of the [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for this role. This assumption is the basis for limiting the Applicability to [explicit semantic roles](#semantic-role) only.
+See more about the possible implications of any lacking user agent support for implicit values for roles in the ”Accessibility Support” section for this rule.
 
 ## Accessibility Support
 
-If browsers and/or assistive technologies support leaving out [required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) if an [implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole) is specified in [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole), failing this rule may not cause actual accessibility issues for users of assistive technologies. 
+If browsers and/or assistive technologies support leaving out [required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) if an [implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole) is specified in [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole), failing this rule may not cause actual accessibility issues for users of assistive technologies. Testing showed that there seems to be general support for implcit values for roles across popular browsers.
 
-**Note:** The required states and properties that are impacted by this can be found in the Core Accessibility API Mappings 1.1 [Overview of default values for missing required attributes](https://www.w3.org/TR/core-aam-1.1/#authorErrorDefaultValuesTable).
+**Note:** The required states and properties that could be impacted by this can be found in the Core Accessibility API Mappings 1.1 [Overview of default values for missing required attributes](https://www.w3.org/TR/core-aam-1.1/#authorErrorDefaultValuesTable).
 
 ## Background
 
@@ -66,33 +67,41 @@ If browsers and/or assistive technologies support leaving out [required states a
 Element has required states (no properties required for this role)
 
 ```html
-<select role="option" aria-selected></select>
+<div role="option" aria-selected="false"></div>
 ```
 
 #### Passed example 2
 
+Implicit value for roles: ´option´ role has an implicit value (´false´) specified for the required state ´aria-selected´
+
+```html
+<div role="option"></div>
+```
+
+#### Passed example 3
+
 Element has required properties (no states required for this role)
 
 ```html
-<select role="combobox" aria-controls="someElementId"></select>
+<div role="combobox" aria-controls="someElementId"></div>
 ```
 
 ### Failed
 
 #### Failed example 1
 
-Missing required state, 'aria-selected', for ´option´. It's not considered sufficient that 'aria-selected' has an implicit value (´false´) specified
+Element does not list required states and properties (´aria-controls´ is required property for ´combobox´)
 
 ```html
-<select role="option"></select>
+<div role="combobox"></div>
 ```
 
 #### Failed example 2
 
-Element does not list required states and properties (´aria-controls´ is required property for ´combobox´)
+Required states and properties does not have non-empty value
 
 ```html
-<select role="combobox"></select>
+<div role="combobox" aria-controls=""></div>
 ```
 
 ### Inapplicable
@@ -103,4 +112,20 @@ Element does not have a semantic role
 
 ```html
 <div>Some Content</div>
+```
+
+#### Inapplicable example 2
+
+Element does not have an explicit semantic role
+
+```html
+<nav></nav>
+```
+
+#### Inapplicable example 3
+
+Element has an implicit semantic role that is identical to the explicit semantic role
+
+```html
+<input type="checkbox" role="checkbox">
 ```

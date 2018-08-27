@@ -18,11 +18,11 @@ authors:
 
 ### Applicability
 
-Any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has a [semantic role](#semantic-role). 
+Any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has an [explicit semantic role](#semantic-role). 
 
 ### Expectation
 
-For each test target all [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for that role as specified by [WAI-ARIA](https://www.w3.org/TR/wai-aria) are present.
+For each test target all [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for that role as specified by [WAI-ARIA](https://www.w3.org/TR/wai-aria) are present and [non-empty](#non-empty).
 
 **Note:** This rule does not test whether the required states and properties has a correct value, only that the attributes are present.
 

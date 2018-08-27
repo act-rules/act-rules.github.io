@@ -61,32 +61,46 @@ If browsers and/or assistive technologies support leaving out [required states a
 
 ### Passed
 
+#### Passed example 1
+
+Element has required states (no properties required for this role)
+
 ```html
-<!-- Element has required states (no properties required for this role) -->
 <select role="option" aria-selected></select>
 ```
 
+#### Passed example 2
+
+Element has required properties (no states required for this role)
+
 ```html
-<!-- Element has required properties (no states required for this role) -->
-<div 
 <select role="combobox" aria-controls="someElementId"></select>
 ```
 
 ### Failed
 
-```html
-<!-- Element does not list required states and properties (´aria-controls´ is required property for ´combobox´) -->
-<select role="combobox"></select>
-```
+#### Failed example 1
+
+Missing required state, 'aria-selected', for ´option´. It's not considered sufficient that 'aria-selected' has an implicit value (´false´) specified
 
 ```html
-<!-- Missing required state, 'aria-selected', for ´option´. It's not considered sufficient that 'aria-selected' has an implicit value (´false´) specified -->
 <select role="option"></select>
+```
+
+#### Failed example 2
+
+Element does not list required states and properties (´aria-controls´ is required property for ´combobox´)
+
+```html
+<select role="combobox"></select>
 ```
 
 ### Inapplicable
 
+#### Inapplicable example 1
+
+Element does not have a semantic role
+
 ```html
-<!-- Element does not have a semantic role-->
 <div>Some Content</div>
 ```

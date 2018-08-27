@@ -48,7 +48,7 @@ See more about the possible implications of any lacking user agent support for i
 
 ## Accessibility Support
 
-If browsers and/or assistive technologies do not support leaving out [required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) if an [implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole) is specified in [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole), passing this rule may not be enough to avoid accessibility issues due to missing required states and properties. Testing in browsers have however showed that there seems to be general support for implicit values for roles across popular browsers.
+If browsers and/or assistive technologies do not support leaving out [required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) if an [implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole) is specified in [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole), passing this rule may not be enough to avoid accessibility issues due to missing required states and properties. Testing with assistive technologies have however showed that there seems to be general support for implicit values for roles.
 
 **Note:** The required states and properties that could be impacted by this can be found in the Core Accessibility API Mappings 1.1 [Overview of default values for missing required attributes](https://www.w3.org/TR/core-aam-1.1/#authorErrorDefaultValuesTable).
 

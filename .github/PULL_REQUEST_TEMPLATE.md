@@ -1,12 +1,17 @@
 << Describe the changes >>
 
-Closes issue:
+Closes issue: (ADD ISSUE NUMBER HERE)
 
-## Reviewer checks
+## Guidance the the PR (pull request) creator
 
-**Required fields, to be filled out by PR reviewer(s)**
+**When creating PR:**
 - [ ] Make sure you requesting to **pull a issue/feature/bugfix branch** (right side) to the master branch (left side).
 - [ ] Make sure the pull request is prefixed with `Rule:` or `Algorithm:` or `Chore:` based on work involved.
+
+**After creating PR:**
+- [ ] Add yourself (and co-authors) as "Assignees" for PR
+- [ ] Add relevant project (e.g. "Q3 2018 Status") to PR
+- [ ] Close the issue that the PR resolves (and make sure the issue is references in the top of this comment)
 
 # How to Review And Approve
 - Go to the “files changed” tab, there you will have the option to leave comments on different lines. 

@@ -61,8 +61,8 @@ Content not focusable by default.
 Content hidden through CSS.
 
 ```html
-<div aria-hidden="true">
-    <a href="/" style="display:none">Link</a>
+<div aria-hidden="true" data-rule-target>
+	<a href="/" style="display:none">Link</a>
 </div>
 ```
 
@@ -71,8 +71,8 @@ Content hidden through CSS.
 Content made unfocusable through tabindex.
 
 ```html
-<div aria-hidden="true">
-    <button tabindex="-1">Some button</button>
+<div aria-hidden="true" data-rule-target>
+	<button tabindex="-1">Some button</button>
 </div>
 ```
 
@@ -91,8 +91,8 @@ Content made unfocusable through disabled.
 Focusable off screen link.
 
 ```html
-<div aria-hidden="true">
-    <a href="/" style="position:absolute; top:-999em">Link</a>
+<div aria-hidden="true" data-rule-target>
+	<a href="/" style="position:absolute; top:-999em">Link</a>
 </div>
 ```
 
@@ -101,8 +101,8 @@ Focusable off screen link.
 Focusable form field, incorrectly disabled.
 
 ```html
-<div aria-hidden="true">
-    <input aria-disabled="true" />
+<div aria-hidden="true" data-rule-target>
+	<input aria-disabled="true" />
 </div>
 ```
 
@@ -111,8 +111,8 @@ Focusable form field, incorrectly disabled.
 `aria-hidden=false` does not negate aria-hidden true.
 
 ```html
-<div aria-hidden="true">
-    <div aria-hidden="false">
+<div aria-hidden="true" data-rule-target>
+    <div aria-hidden="false" data-rule-target>
         <button tabindex="-1">Some button</button>
     </div>
 </div>
@@ -131,7 +131,7 @@ Focusable content through `tabindex`.
 Focusable summary element
 
 ```html
-<details aria-hidden="true">
+<details aria-hidden="true" data-rule-target>
     <summary>Some button</summary>
     <p>Some details</p>
 </details>
@@ -160,7 +160,7 @@ Ignore `aria-hidden` false.
 Incorrect value of `aria-hidden`.
 
 ```html
-<div aria-hidden="yes">
+<div aria-hidden="yes" data-rule-target>
 	<p>Some text</p>
 </div>
 ```

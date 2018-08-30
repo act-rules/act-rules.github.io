@@ -52,7 +52,7 @@ Implicit role with implicit label.
 ```html
 <label>
   first name
-  <input />
+  <input data-rule-target/>
 </label>
 ```
 
@@ -70,7 +70,7 @@ Implicit role with explicit label
 
 ```html
 <label for="country">Country</label>
-<select id="country">
+<select id="country" data-rule-target>
   <option></option>
 </select>
 ```
@@ -81,7 +81,7 @@ Implicit role with `aria-labelledby`.
 
 ```html
 <div id="country">Country</div>
-<textarea aria-labelledby="country"></textarea>
+<textarea aria-labelledby="country" data-rule-target></textarea>
 ```
 
 #### Pass example 5
@@ -133,7 +133,7 @@ Implicit label not supported on div elements.
 ```html
 <label>
   first name
-  <div role="textbox"></div>
+  <div role="textbox" data-rule-target></div>
 </label>
 ```
 
@@ -143,7 +143,7 @@ Explicit label not supported on div elements.
 
 ```html
 <label for="lastname">first name</label>
-<div role="textbox" id="lastname"></div>
+<div role="textbox" id="lastname" data-rule-target></div>
 ```
 
 ### Inapplicable 

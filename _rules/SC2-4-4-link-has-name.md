@@ -124,7 +124,7 @@ When `link` is off screen.
     }
   </style>
   <body>
-		<a class="offScreenLink" href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
+		<a data-rule-target class="offScreenLink" href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
   </body>
 </html>
 ```

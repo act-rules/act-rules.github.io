@@ -48,26 +48,28 @@ While the HTML specifications allows the use of `track` elements inside of `audi
 
 #### Pass example 1
 
+Audio with controls and internal transcript
+
 ```html
-<!-- Audio with controls and internal transcript -->
-<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <p>The above audio contains the following speech: We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win, and the others, too.</p>
 ```
 
 #### Pass example 2
 
+Audio with controls and external transcript
+
 ```html
-<!-- Audio with controls and external transcript -->
-<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</p>
 ```
 
 #### Pass example 3
 
+Audio with autoplay, external transcript, and with a text description on the page
+
 ```html (no-iframe)
-<!-- Audio with autoplay and external transcript -->
-<!-- Audio with a text description on the page -->
-<audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
+<audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
 <a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</p>
 ```
 
@@ -75,17 +77,19 @@ While the HTML specifications allows the use of `track` elements inside of `audi
 
 #### Fail example 1
 
+Audio with controls and incorrect internal transcript
+
 ```html
-<!-- Audio with controls and incorrect internal transcript -->
-<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <p>The above audio contains the following speech: We choose to go to the cheese in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win, and the others, too.</p>
 ```
 
 #### Fail example 2
 
+Audio with controls and incorrect external transcript
+
 ```html
-<!-- Audio with controls and incorrect external transcript -->
-<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</p>
 ```
 
@@ -94,8 +98,7 @@ While the HTML specifications allows the use of `track` elements inside of `audi
 Audio with autoplay and incorrect external transcript
 
 ```html (no-iframe)
-
-<audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
+<audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
 <a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</p>
 ```
 

@@ -46,47 +46,77 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 ### Passed
 
+#### Pass example 1
+
+`html` element with matching value for `lang` and `xml:lang`.
+
 ```html
 <html lang="en" xml:lang="en">
 ```
+
+#### Pass example 2
+
+`html` element with varied case but matching value for `lang` and `xml:lang`.
 
 ```html
 <html lang="en" xml:lang="En">
 ```
 
+#### Pass example 3
+
+`html` element with varied case but matching primary sub-tag value for `lang` and `xml:lang`.
+
 ```html
 <html lang="en" xml:lang="en-GB">
 ```
+
+#### Pass example 4
+
+`html` element with varied case but matching primary sub-tag value for `lang` and `xml:lang`.
 
 ```html
 <html lang="en-GB" xml:lang="en">
 ```
 
+#### Pass example 5
+
+`html` element with varied case but matching primary sub-tag value for `lang` and `xml:lang`, albeit the value `XYZ` is not valid.
+
 ```html
-<!-- lang/xml:lang value does not confirm to BCP 47 -->
 <html lang="en-XYZ" xml:lang="en">
 ```
 
 ### Failed
 
+#### Fail example 1
+
+`html` element with non-matching value for `lang` and `xml:lang`.
+
 ```html
 <html lang="fr" xml:lang="en">
 ```
 
-```html
-<!-- lang/xml:lang value does not confirm to BCP 47 -->
-<html lang="en-XYZ" xml:lang="en">
-```
-
 ### Inapplicable
+
+#### Inapplicable example 1
+
+`svg` element is not applicable for this rule.
 
 ```html
 <svg lang="en" xml:lang="en">
 ```
 
+#### Inapplicable example 2
+
+`xml:lang` is empty, the rule mandates `non-empty` values.
+
 ```html
 <html lang="fr" xml:lang="">
 ```
+
+#### Inapplicable example 3
+
+Only `non-empty` values are considered.
 
 ```html
 <html lang="" xml:lang="">

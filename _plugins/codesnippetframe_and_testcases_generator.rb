@@ -12,11 +12,10 @@ module Jekyll
 		KEY_WCAG_TESTCASES_DIR = 'wcag-testcases'
 		KEY_EMBEDS_DIR =  JSON.parse(File.read('package.json'))['testcases-embeds-dir']
 		KEY_MATCH_CODE_TAG_BACKTICK = '```'
-		KEYWORD_NO_FRAME_IN_MARKDOWN = '(no-frame)'
+		KEYWORD_NO_FRAME_IN_MARKDOWN = '(no-iframe)'
 		INCLUDE_FILE_TYPE = '.html'
 		MESSAGES = {
-			'ODD_TAG_COUNT' => 'Expects even pairs of' + KEY_MATCH_CODE_TAG_BACKTICK + ' and ' + KEY_MATCH_CODE_TAG_BACKTICK + '. Odd number of tags identified in page ',
-			'TEST_CASE_OUT_OF_BOUNDS' => 'Markdown error, test case declared outside of its section'
+			'ODD_TAG_COUNT' => 'Expects even pairs of' + KEY_MATCH_CODE_TAG_BACKTICK + ' and ' + KEY_MATCH_CODE_TAG_BACKTICK + '. Odd number of tags identified in page '
 		}
 		
 		# Exportable Test-Cases
@@ -204,8 +203,12 @@ module Jekyll
 		end
 
 		def render_code_and_frame(snippet, url, no_frame)
-			code = "<div class='code-wrapper'> <figcaption>Code Snippet:</figcaption> {% highlight html %} #{snippet} {% endhighlight %} </div>"
-			frame = no_frame ? "" : "<div class='frame-container'> <header><span>Example Output:</span> <a target='_blank' href='#{url}'>Open in a new tab/ window</a> </header> <iframe src='#{url}'></iframe> </div>"
+			title_code_snippet = "<span>Code Snippet: </span>"
+			titie_example_output = "<span>Example Output: </span>"
+			open_new_window_anchor = "<a style='float:right' target='_blank' href='#{url}'>Open in a new tab/ window</a>"
+			title_figcaption = no_frame ? "#{title_code_snippet} #{open_new_window_anchor}" : "#{title_code_snippet}"
+			code = "<div class='code-wrapper'> <figcaption style='clear:both'>#{title_figcaption}</figcaption> {% highlight html %} #{snippet} {% endhighlight %} </div>"
+			frame = no_frame ? "" : "<div class='frame-container'> <header>#{titie_example_output} #{open_new_window_anchor} </header> <iframe src='#{url}'></iframe> </div>"
 			out = "<div class='embed-wrapper'>"\
 					"#{code}"\
 					"#{frame}"\

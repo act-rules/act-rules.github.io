@@ -47,29 +47,57 @@ There are known combinations of a popular operating system with browsers and ass
 
 ### Passed
 
+#### Pass example 1
+
+The `lang` attribute specified has a non-empty value.
+
 ```html
 <html lang="en">
 ```
+
+#### Pass example 2
+
+The `xml:lang` attribute specified has a non-empty value.
 
 ```html
 <html xml:lang="en">
 ```
 
+#### Pass example 3
+
+The `lang` and `xml:lang` attribute specified has a non-empty value.
+
 ```html
 <html xml:lang="en" lang="en">
 ```
+
+#### Pass example 4
+
+The `lang` attribute specified has a non-empty value. The rule expects a non-empty value on either the `lang` or `xml:lang` attributes.
 
 ```html
 <html xml:lang="" lang="en">
 ```
 
+#### Pass example 5
+
+The `xml:lang` attribute specified has a non-empty value. The rule expects a non-empty value on either the `lang` or `xml:lang` attributes.
+
 ```html
 <html xml:lang="en" lang="">
 ```
 
+#### Pass example 6
+
+The `lang` attribute specified has a non-empty value. The rule does not verify the validity of the value specified and checks only for presence of a value.
+
 ```html
 <html lang="xyz">
 ```
+
+#### Pass example 7
+
+The `xml:lang` attribute specified has a non-empty value. The rule does not verify the validity of the value specified and checks only for presence of a value.
 
 ```html
 <html xml:lang="xyz">
@@ -77,23 +105,43 @@ There are known combinations of a popular operating system with browsers and ass
 
 ### Failed
 
+#### Fail example 1
+
+There were no `lang` or `xml:lang` attribute specified.
+
 ```html
 <html>
 ```
+
+#### Fail example 2
+
+The `xml:lang` attribute specified has an empty value.
 
 ```html
 <html xml:lang="">
 ```
 
+#### Fail example 3
+
+The `lang` attribute specified has an empty value.
+
 ```html
 <html lang="">
 ```
+
+#### Fail example 4
+
+The `lang` and `xml:lang` attribute specified has an empty value.
 
 ```html
 <html xml:lang="" lang="">
 ```
 
 ### Inapplicable
+
+#### Inapplicable example 1
+
+The rule does not apply to `svg` element.
 
 ```html
 <svg lang="en">

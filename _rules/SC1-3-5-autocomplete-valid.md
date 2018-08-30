@@ -64,114 +64,177 @@ The intent of this rule is to ensure that the `autocomplete` attribute can be us
 
 ### Passed
 
+#### Pass example 1
+
+Single autocomplete term.
+
 ```html
-<!-- single autocomplete term -->
 <input autocomplete="username" />
 ```
 
+#### Pass example 2
+
+Single autocomplete term for select.
+
 ```html
-<!-- single autocomplete term for select -->
 <select autocomplete="bday-month">
   <option>January</option>
   <option>...</option>
 </select>
 ```
 
+#### Pass example 3
+
+Autocomplete term, only valid for textarea.
+
 ```html
-<!-- Autocomplete term, only valid for textarea -->
 <textarea autocomplete="Street-Address"></textarea>
 ```
 
+#### Pass example 4
+
+Two autocomplete terms.
+
 ```html
-<!-- Two autocomplete terms -->
 <input autocomplete="Work EMail" />
 ```
 
+#### Pass example 5
+
+Autocomplete using section-*
+
 ```html
-<!-- Autocomplete using section-* -->
 <input autocomplete="section-partner email" />
 ```
 
+#### Pass example 6
+
+Triple autocomplete terms.
+
 ```html
-<!-- Tripple autocomplete terms -->
 <input type="text" autocomplete="section-primary billing street-address />
 ```
 
+#### Pass example 7
+
+Full length autocomplete terms.
+
 ```html
-<!-- Full length autocomplete terms -->
 <input autocomplete="section-primary shipping work email" />
 ```
 
 ### Failed
 
+#### Fail example 1
+
+Unknown autocomplete term.
 ```html
-<!-- Unknown autocomplete term -->
+
 <input autocomplete="badterm" />
 ```
 
+#### Fail example 2
+
+term `work` not allowed before `photo`.
+
 ```html
-<!-- "work" not allowed before "photo" -->
 <input autocomplete="work photo" />
 ```
 
+#### Fail example 3
+
+Invalid order of terms.
+
 ```html
-<!-- invalid order of terms -->
 <input autocomplete="work shipping email" />
 ```
 
+#### Fail example 4
+
+Comma seperated rather than space separated list.
+
 ```html
-<!-- comma seperated rather than space separated list -->
 <input autocomplete="work,email" />
 ```
 
+#### Fail example 5
+
+Autocomplete is inappropriate for the type of field.
+
 ```html
-<!-- Autocomplete is inappropriate for the type of field -->
 <input type="number" autocomplete="email" />
 ```
 
 ### Inapplicable
 
+#### Inapplicable example 1
+
+Incorrect element.
+
 ```html
-<!-- Incorrect element -->
 <button autocomplete="username"></button>
 ```
 
+#### Inapplicable example 2
+
+Empty attribute.
+
 ```html
-<!-- Empty attribute -->
 <input autocomplete="">
 ```
 
+#### Inapplicable example 3
+
+Hidden through `display:none`.
+
 ```html
-<!-- Hidden through display:none -->
 <input autocomplete="username" style="display:none">
 ```
 
+#### Inapplicable example 4
+
+Off screen and hidden to assistive technologies
+
 ```html
-<!-- Off screen and hidden to assistive technologies -->
 <input autocomplete="username" aria-hidden="true" style="position:absolute; top:-9999em">
 ```
 
+#### Inapplicable example 5
+
+type `input` button.
+
 ```html
-<!-- input button -->
 <input type="button" autocomplete="username">
 ```
 
+#### Inapplicable example 6
+
+type `hidden`.
+
 ```html
-<!-- hidden -->
 <input type="hidden" autocomplete="username">
 ```
 
+#### Inapplicable example 7
+
+Native disabled.
+
 ```html
-<!-- native disabled -->
 <input autocomplete="username" disabled>
 ```
 
+#### Inapplicable example 8
+
+Using `aria-disabled`.
+
 ```html
-<!-- ARIA disabled -->
 <input autocomplete="username" aria-disabled="true">
 ```
 
+#### Inapplicable example 9
+
+Non-widget element.
+
 ```html
-<!-- non-widget element -->
 <input type="button" role="none" tabindex="-1" autocomplete="username">
 ```

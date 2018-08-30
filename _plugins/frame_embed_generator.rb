@@ -12,7 +12,7 @@ module Jekyll
 
       KEY_EMBEDS_DIR =  JSON.parse(File.read('package.json'))['testcases-embeds-dir']
 			KEY_MATCH_CODE_TAG_BACKTICK = '```'
-			KEYWORD_NO_FRAME_IN_MARKDOWN = '(no-frame)'
+			KEYWORD_NO_FRAME_IN_MARKDOWN = '(no-iframe)'
       INCLUDE_FILE_TYPE = '.html'
       MESSAGES = {
         'ODD_TAG_COUNT' => 'Expects even pairs of' + KEY_MATCH_CODE_TAG_BACKTICK + ' and ' + KEY_MATCH_CODE_TAG_BACKTICK + '. Odd number of tags identified in page '

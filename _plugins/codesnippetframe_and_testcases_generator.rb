@@ -9,8 +9,9 @@ module Jekyll
 		safe true
 		priority :lowest
 
-		KEY_WCAG_TESTCASES_DIR = 'wcag-testcases'
-		KEY_EMBEDS_DIR =  JSON.parse(File.read('package.json'))['testcases-embeds-dir']
+		PKG = JSON.parse(File.read('package.json'))
+		KEY_WCAG_TESTCASES_DIR = PKG['testcases-export-dir']
+		KEY_EMBEDS_DIR =  PKG['testcases-embeds-dir']
 		KEY_MATCH_CODE_TAG_BACKTICK = '```'
 		KEYWORD_NO_FRAME_IN_MARKDOWN = '(no-iframe)'
 		INCLUDE_FILE_TYPE = '.html'
@@ -19,6 +20,7 @@ module Jekyll
 		}
 		
 		# Exportable Test-Cases
+		EXP_TESTS = []
 		EXPORTABLE_TESTCASES = { 
 			# dynamically build object
 		}
@@ -32,15 +34,17 @@ module Jekyll
 		def generate(site)
 			# Clean and create testcase embeds directory
 			testcases_base_dir = site.source + '/' + KEY_EMBEDS_DIR
-			FileUtils.rm_f Dir.glob("#{testcases_base_dir}/*")
+			FileUtils.rm_f Dir.glob("#{testcases_base_dir}/*") unless File.directory?(testcases_base_dir)
+
 			# Create empty directory
-			Dir.mkdir(testcases_base_dir) unless File.exists?(testcases_base_dir)
+			Dir.mkdir(testcases_base_dir) unless File.directory?(testcases_base_dir)
 
 			# Clean and create testcase export directory
 			exports_base_dir = site.source + '/' + KEY_WCAG_TESTCASES_DIR
-			FileUtils.rm_f Dir.glob("#{exports_base_dir}/*")
+			FileUtils.rm_f Dir.glob("#{exports_base_dir}/*") unless File.directory?(exports_base_dir)
+
 			# Create empty directory
-			Dir.mkdir(exports_base_dir) unless File.exists?(exports_base_dir)
+			Dir.mkdir(exports_base_dir) unless File.directory?(exports_base_dir)
 			
 			# Loop documents and create test case embeds
 			site.documents.each do |doc|
@@ -73,9 +77,9 @@ module Jekyll
 		def create_exportable_testcases(site)
 			# construct json of output
 			result = JSON.pretty_generate({
-				name: 'auto-wcag',
-				license: "https://auto-wcag.github.io/auto-wcag/license.html",
-				description: "Test Cases for Rules",
+				name: PKG['name'],
+				license: PKG['license'],
+				description: "Test Cases for #{PKG['name']} rules",
 				"a11y-testcases": EXPORTABLE_TESTCASES
 			});
 
@@ -192,8 +196,6 @@ module Jekyll
 			doc_content = get_md_content(document.content, spread_indices, embedded_testcases_hash)
 			document.content = doc_content
 		end
-		
-
 		
 		def get_highlight_lang(opening_tag)
 			lang = 'html'

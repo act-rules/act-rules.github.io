@@ -11,7 +11,8 @@ Closes issue: (ADD ISSUE NUMBER HERE)
 **After creating PR:**
 - [ ] Add yourself (and co-authors) as "Assignees" for PR
 - [ ] Add relevant project (e.g. "Q3 2018 Status") to PR
-- [ ] Close the issue that the PR resolves (and make sure the issue is references in the top of this comment)
+- [ ] OPTIONAL: If you want anyone in particular to review your pull request, assign them as "Reviewers".
+- [ ] Close the issue that the PR resolves (and make sure the issue is referenced in the top of this comment)
 
 # How to Review And Approve
 - Go to the “files changed” tab, there you will have the option to leave comments on different lines. 

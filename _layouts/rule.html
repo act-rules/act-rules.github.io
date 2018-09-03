@@ -6,13 +6,19 @@ layout: default
 
 {% if page.draft %}
   {% assign status = "draft" %}
-  <p class="draft-note"><strong>Please note, this is a draft</strong></p>
+  <p class="draft-note slim">draft</p>
 {% else %}
   {% assign status = "rule" %}
 {% endif %}
 
-{% if page.date %}
-  <p>Late updated: <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+{% if page.last-modified-timestamp %}
+  <p>Late updated: 
+		<time 
+			datetime="{{ page.last-modified-timestamp | date_to_xmlschema }}" 
+			itemprop="dateModified">
+			{{ page.last-modified-timestamp | date: "%b %-d, %Y" }}
+		</time>
+	</p>
 {% endif %}
 
 {% if page.authors %}
@@ -36,15 +42,16 @@ layout: default
   </p>
 {% endif %}
 
+
 {% if page.success_criterion %}
   <p>
     Success_criterion: 
     <ul>
-      {% for sc in page.success_criterion %}
-        {% assign c = site.data.criteria[sc] %}
+			{% for sc in page.success_criterion %}
+        {% assign c = site.data.sc-urls[sc] %}
         <li>
-          <a href="https://www.w3.org/TR/WCAG20/#{{ criterion.id }}">
-            {{ c.num }} ({{ c.handle }})
+          <a href="{{ c.url }}">
+            {{ c.num }} ({{ c.handle }}) - (Level: {{c.level}})
           </a>
         </li>
         {% if forloop.last == false %}, {% endif %}
@@ -63,18 +70,22 @@ layout: default
   <p>This conformance rule relates to:</p>
   <ul>
   {% for critId in page.success_criterion %}
-    {% assign criterion = site.data.criteria[critId] %}
+    {% assign criterion = site.data.sc-urls[critId] %}
     <li>
-      <a href="https://www.w3.org/TR/WCAG20/#{{ criterion.id }}">
+      <a href="{{ criterion.url }}">
         Success Criterion {{ criterion.num }} ({{ criterion.handle }})
       </a>
       <ul>
-        <li><a href="https://www.w3.org/WAI/WCAG20/quickref/#{{ criterion.id }}">
-          How to Meet {{ criterion.num }} ({{ criterion.handle }})
-        </a></li>
-        <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/{{ criterion.id }}.html">
-          Understanding Success Criterion {{ criterion.num }} ({{ criterion.handle }})
-        </a></li>
+        <li>
+					<a href="{{ criterion.howToMeetUrl }}">
+          	How to Meet {{ criterion.num }} ({{ criterion.handle }})
+					</a>
+				</li>
+        <li>
+					<a href="{{ criterion.understandingUrl }}">
+          	Understanding Success Criterion {{ criterion.num }} ({{ criterion.handle }})
+					</a>
+				</li>
       </ul>
     </li>
   {% endfor %}
@@ -83,19 +94,23 @@ layout: default
 
 {{ content }}
 
-<!--INSERT-GLOSSARY-HERE-->
+<!-- DO NOT DELETE BELOW - This is used by a plugin to insert content -->
+<!--PLUGIN::APPEND-DEFINITION-->
+<!-- DO NOT DELETE ABOVE - This is used by a plugin to insert content -->
 
-{% if page.test_aspects %}
-  <h2 id="test-aspects">Test Aspects</h2>
-  Test aspects are defined as part of the <a href="https://w3c.github.io/wcag-act/act-rules-format.html#input-aspects-common">ACT Rules format 1.0</a>.
-  <ul>
-  {% for aspect in page.test_aspects %}
-    <li>{{ aspect | markdownify }}</li>
-  {% endfor %}
-  </ul>
-{% endif %}
+<div class="container">
+	{% if page.test_aspects %}
+		<h2 id="test-aspects">Test Aspects</h2>
+		Test aspects are defined as part of the <a href="https://w3c.github.io/wcag-act/act-rules-format.html#input-aspects-common">ACT Rules format 1.0</a>.
+		<ul>
+		{% for aspect in page.test_aspects %}
+			<li>{{ aspect | markdownify }}</li>
+		{% endfor %}
+		</ul>
+	{% endif %}
 
-<h2 id="related-resources">Related Resources</h2>
-<ul>
-  <li><a href="https://github.com/auto-wcag/auto-wcag/issues?q=is%3Aopen+is%3Aissue+{{ ruleId }}">Known issues</a></li>
-</ul>
+	<h2 id="related-resources">Related Resources</h2>
+	<ul>
+		<li><a href="https://github.com/auto-wcag/auto-wcag/issues?q=is%3Aopen+is%3Aissue+{{ ruleId }}">Known issues</a></li>
+	</ul>
+</div>

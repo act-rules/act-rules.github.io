@@ -1,11 +1,11 @@
 ---
-name: Validity of ARIA attribute specified
+name: Validity of ARIA attribute
 
 description: |
- This rule checks that the `aria-*` attribute specified is valid.
+ This rule checks that the `aria-` attribute specified is defined in ARIA 1.1.
 
 success_criterion:
-- 4.1.1
+- 4.1.2
 
 test_aspects:
 - DOM Tree
@@ -18,11 +18,11 @@ authors:
 
 ### Applicability
 
-Any DOM element within the `body` of a webpage with an `aria-*` attribute.
+Any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) with an attribute that starts with `aria-`.
 
 ### Expectation
 
-The `aria-*` attribute specified is a valid attribute.
+Each target element that has an attribute which starts with `aria-` is defined in ARIA 1.1.
 
 ## Assumptions
 
@@ -47,7 +47,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Pass example 1
 
-Valid attribute `aria-atomic` on element `article`
+A valid ARIA1.1 attribute `aria-atomic` is used on element `article`.
 
 ```html
 <article aria-atomic>This is a decription of something cool...</article>
@@ -55,7 +55,7 @@ Valid attribute `aria-atomic` on element `article`
 
 #### Pass example 2
 
-Valid attribute `aria-modal` on element `div` with role `dialog`
+A valid ARIA1.1 attribute `aria-modal` on element `div` with role `dialog`
 
 ```html
 <div role="dialog" aria-modal>Contains modal content...</div>
@@ -63,7 +63,7 @@ Valid attribute `aria-modal` on element `div` with role `dialog`
 
 #### Pass example 3
 
-Valid attribute `aria-live` on element with role `alert`
+A valid ARIA1.1 attribute `aria-live` on element with role `alert`
 
 ```html
 <div role="alert" aria-live="assertive">Your session will expire in 60 seconds.</div>
@@ -71,7 +71,7 @@ Valid attribute `aria-live` on element with role `alert`
 
 #### Pass example 4
 
-Valid `aria-*` attributes on element `input` with role `spinbutton`
+Muliple valid ARIA1.1 attributes `aria-*` are specified on element `input` with role `spinbutton`
 
 ```html
 <input
@@ -87,7 +87,7 @@ Valid `aria-*` attributes on element `input` with role `spinbutton`
 
 #### Fail example 1
 
-`aria-not-checked` is not a valid attribute.
+`aria-not-checked` is not a defined attribute in ARIA1.1.
 
 ```html
 <li role="menuitemcheckbox" aria-not-checked="true">List Item</li>
@@ -95,7 +95,7 @@ Valid `aria-*` attributes on element `input` with role `spinbutton`
 
 #### Fail example 2
 
-`aria-labelled` is not a valid attribute.
+`aria-labelled` is not a defined attribute in ARIA1.1.
 
 ```html
 <span id="label">Birthday:</span>
@@ -106,7 +106,7 @@ Valid `aria-*` attributes on element `input` with role `spinbutton`
 
 #### Inapplicable example 1
 
-`aria-rowcount` not applicable to element `canvas`.
+`aria-rowcount` not applicable to element `canvas`, and also `aria-rowcount` needs a context role of `grid`.
 
 ```html
 <canvas aria-rowcount="2000">

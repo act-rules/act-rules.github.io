@@ -1,5 +1,5 @@
 ---
-name: SC3-1-1-html-xml-lang-match
+name: Matching HTML lang and xml:lang attribute
 
 description: |
  The rule checks that for the `html` element, there is no mismatch between the primary language in non-empty `lang` and `xml:lang` attributes, if both are used.

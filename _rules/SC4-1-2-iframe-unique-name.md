@@ -19,17 +19,15 @@ authors:
 
 ### Applicability
 
-The rule applies to `iframe` elements within a given [document context](#document-context) that have either `title`, `aria-label` or `aria-labelled-by` attribute.
-
-**Note: This rule does not ensure that the `iframe` targets with the same `src` destination have the same title. It only checks `title` of a given frame for uniqueness across the document context.**
+The rule applies to `iframe` elements within a given [document context](#document-context) and [exposed to assistive technologies](#exposed-to-assistive-technologies) that have a [non-empty](#non-empty) accesible name.
 
 ### Expectation
 
-Each test target has a `title`, `aria-label` or `aria-labelledby` attribute value that is unique within the [document context](#document-context) of the element.
+Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty) and is unique within the [document context](#document-context).
 
- ## Assumptions
+## Assumptions
 
-The rule assumes that the target `iframe` is used as an user interface component, unless explicity overridden by specifying `tabindex="-1"`.
+*There are currently no assumptions*
 
 ## Accessibility Support
 
@@ -46,7 +44,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Pass example 1
 
-Usage of `title` attribute to describe the `iframe` content, and only one iframe with in document context.
+Usage of `title` attribute to describe the `iframe` content, and there is only one iframe with in document context.
 
 ```html
 <iframe title="List of Contributors" role="document" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
@@ -55,7 +53,7 @@ Usage of `title` attribute to describe the `iframe` content, and only one iframe
 
 #### Pass example 2
 
-Multiple `iframe` elements in the document having different `title` descriptions
+Multiple `iframe` elements in the document having different `title` descriptions as accessible name.
 
 ```html
 <iframe title="List of Contributors to Repository 1" role="document" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
@@ -66,7 +64,7 @@ Multiple `iframe` elements in the document having different `title` descriptions
 
 #### Pass example 3
 
-Multiple `iframe` elements in the document having different `aria-label` descriptions.
+Multiple `iframe` elements in the document having different `aria-label` descriptions as accessible name.
 
 ```html
 <iframe aria-label="List of Contributors to Repository 1" role="document" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
@@ -77,13 +75,14 @@ Multiple `iframe` elements in the document having different `aria-label` descrip
 
 #### Pass example 4
 
-Multiple `iframe` elements in the document having different `aria-labelledby` descriptions.
+Multiple `iframe` elements in the document having different `aria-labelledby` descriptions as accessible name.
 
 ```html
 <div id="desc-for-title">List of Contributors</div>
 <iframe aria-labelledby="desc-for-title" role="document" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
 </iframe>
-<iframe aria-labelledby="desc-for-title" role="document" src="../test-assets/SC4-1-2-iframe-unique-name-doc2.html">
+<div id="desc-for-title1">List of Reviewers</div>
+<iframe aria-labelledby="desc-for-title1" role="document" src="../test-assets/SC4-1-2-iframe-unique-name-doc2.html">
 </iframe>
 ```
 
@@ -91,7 +90,7 @@ Multiple `iframe` elements in the document having different `aria-labelledby` de
 
 #### Fail example 1
 
-Multiple frames having the same `title` within a given document context
+Multiple frames having the same `title` within a given document context.
 
 ```html
 <iframe title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
@@ -102,7 +101,7 @@ Multiple frames having the same `title` within a given document context
 
 #### Fail example 2
 
-Multiple frames having the same `aria-label` within a given document context
+Multiple frames having the same `aria-label` within a given document context.
 
 ```html
 <iframe aria-label="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
@@ -126,11 +125,20 @@ Multiple frames having the same name given by `title` and `aria-label` within a 
 
 #### Inapplicable example 1
 
-Does not apply to non `iframe` elements that are nested.
+Accessible name provided is empty.
 
 ```html
-<iframe title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
+<iframe title="" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
 </iframe>
-<iframe aria-label="List of Contributors Clone" src="../test-assets/SC4-1-2-iframe-unique-name-doc3.html">
+<iframe aria-label="" src="../test-assets/SC4-1-2-iframe-unique-name-doc3.html">
 </iframe>
+```
+
+Does not apply to non `iframe` elements.
+
+```html
+<object title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
+</object>
+<object aria-label="List of Contributors Clone" src="../test-assets/SC4-1-2-iframe-unique-name-doc3.html">
+</object>
 ```

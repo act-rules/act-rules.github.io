@@ -4,7 +4,6 @@
   "description": "auto-wcag",
 	"main": "index.js",
 	"site-url-prefix": "https://auto-wcag.github.io/auto-wcag",
-	"raw-git-url-prefix": "https://raw.githubusercontent.com/auto-wcag/auto-wcag/master",
 	"testcases-embeds-dir": "_testcases-embeds/",
 	"testcases-export-dir": "a11y-testcases/",
 	"testcases-export-filename": "a11y-testcases.json",

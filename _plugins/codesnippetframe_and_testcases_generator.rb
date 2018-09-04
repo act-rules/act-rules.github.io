@@ -47,6 +47,7 @@ module Jekyll
 			# Hook after post_write and then copy across generated frame embed documents
 			Hooks.register :site, :post_write do |site|
 				# Copy files from _testcases-embeds to generated site directory
+				# this is used for iframe src url generation
 				FileUtils.copy_entry PKG['testcases-embeds-dir'], site.dest + '/' + PKG['testcases-embeds-dir']
 				# create json and files for exportable test cases
 				create_testcases(site)
@@ -219,7 +220,7 @@ module Jekyll
 					t['rule_page'] = "#{PKG['site-url-prefix']}/rules/#{rule_id}.html"
 					t['test'] = meta["test"]
 					t['url'] = meta["url"]
-					t['raw_url'] = "#{PKG['raw-git-url-prefix']}/#{PKG['testcases-export-dir']}#{meta["url"]}" 
+					t['raw_url'] = "#{PKG['site-url-prefix']}/#{PKG['testcases-export-dir']}#{meta["url"]}" 
 					t['selector'] = meta["selector"]
 					t['type'] = tc_type
 					# push to exports

@@ -6,8 +6,8 @@
 	"site-url-prefix": "https://auto-wcag.github.io/auto-wcag",
 	"raw-git-url-prefix": "https://raw.githubusercontent.com/auto-wcag/auto-wcag/master",
 	"testcases-embeds-dir": "_testcases-embeds/",
-	"testcases-export-dir": "wcag-testcases/",
-	"testcases-export-filename": "wcag-testcases.json",
+	"testcases-export-dir": "a11y-testcases/",
+	"testcases-export-filename": "a11y-testcases.json",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "bundle exec jekyll serve",

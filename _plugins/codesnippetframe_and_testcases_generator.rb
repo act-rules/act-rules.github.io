@@ -1,4 +1,3 @@
-require 'securerandom'
 require 'fileutils'
 require 'json'
 require 'zip'
@@ -31,15 +30,11 @@ module Jekyll
 			# Clean and create testcase embeds directory
 			testcases_base_dir = site.source + '/' + PKG['testcases-embeds-dir']
 			FileUtils.rm_f Dir.glob("#{testcases_base_dir}/*") unless File.directory?(testcases_base_dir)
-
-			# Create empty directory
 			Dir.mkdir(testcases_base_dir) unless File.directory?(testcases_base_dir)
 
 			# Clean and create testcase export directory
 			exports_base_dir = site.source + '/' + PKG['testcases-export-dir']
 			FileUtils.rm_f Dir.glob("#{exports_base_dir}/*") unless File.directory?(exports_base_dir)
-
-			# Create empty directory
 			Dir.mkdir(exports_base_dir) unless File.directory?(exports_base_dir)
 			
 			# Loop documents and create test case embeds
@@ -80,7 +75,7 @@ module Jekyll
 			});
 
 			# write json 
-			json_file_path = "#{PKG['testcases-export-dir']}/wcag-testcases.json"
+			json_file_path = "#{PKG['testcases-export-dir']}/#{PKG['testcases-export-filename']}"
 			FileUtils.mkdir_p(PKG['testcases-export-dir']) unless File.directory?(PKG['testcases-export-dir'])
 			write_file(json_file_path, result)
 
@@ -155,8 +150,8 @@ module Jekyll
 				'inapplicable' => []
 			}
 
-				# iterate through each index and construct content
-				# ensure that indices exists in pair, if there is a start, there be an end :)
+			# iterate through each index and construct content
+			# ensure that indices exists in pair, if there is a start, there be an end :)
 			if(indices.length % 2 == 0)
 				
 				$i = 0
@@ -167,9 +162,13 @@ module Jekyll
 					# read markdown declaration and look for any keywords to skip iframe generation (if specified)
 					should_not_render_frame = content_including_tags[0][KEYWORD_NO_FRAME_IN_MARKDOWN]
 					test_case_type = get_test_case_type(indices[$i].to_i, p_f_i_indices)
-
+				
 					# construct file name
-					file_name = doc_name + '_' + test_case_type + '_' + SecureRandom.uuid + INCLUDE_FILE_TYPE
+					test_index = testcases[test_case_type.to_s].length + 1
+					random_id = "#{test_case_type}_example_#{test_index}"
+
+					# puts test_count[test_case_type]
+					file_name = "#{doc_name}_#{test_case_type}_example_#{test_index}#{INCLUDE_FILE_TYPE}"
 					# construct file path
 					file_path = site.source + '/' + PKG['testcases-embeds-dir'] + file_name
 					# construct file url
@@ -220,7 +219,7 @@ module Jekyll
 					t['rule_page'] = "#{PKG['site-url-prefix']}/rules/#{rule_id}.html"
 					t['test'] = meta["test"]
 					t['url'] = meta["url"]
-					t['raw_url'] = "#{PKG['raw-git-url-prefix']}/wcag-testcases/#{meta["url"]}" 
+					t['raw_url'] = "#{PKG['raw-git-url-prefix']}/#{PKG['testcases-export-dir']}#{meta["url"]}" 
 					t['selector'] = meta["selector"]
 					t['type'] = tc_type
 					# push to exports

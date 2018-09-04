@@ -1,0 +1,6 @@
+<div id="my-elm" data-rule-target></div>
+<script>
+  var myElm = document.getElementById('my-elm');
+  var shadow = myElm.attachShadow({ mode: 'open' });
+  shadow.innerHTML = '<b id="my-elm" data-rule-target><slot></slot></b>';
+</script>

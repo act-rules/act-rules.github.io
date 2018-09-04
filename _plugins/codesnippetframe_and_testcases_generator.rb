@@ -10,6 +10,7 @@ module Jekyll
 		priority :lowest
 
 		PKG = JSON.parse(File.read('package.json'))
+		
 		KEY_WCAG_TESTCASES_DIR = PKG['testcases-export-dir']
 		KEY_EMBEDS_DIR =  PKG['testcases-embeds-dir']
 		KEY_MATCH_CODE_TAG_BACKTICK = '```'
@@ -18,12 +19,10 @@ module Jekyll
 		MESSAGES = {
 			'ODD_TAG_COUNT' => 'Expects even pairs of' + KEY_MATCH_CODE_TAG_BACKTICK + ' and ' + KEY_MATCH_CODE_TAG_BACKTICK + '. Odd number of tags identified in page '
 		}
+		SC_DATA = JSON.parse(File.read('_data/sc-urls.json'))
 		
 		# Exportable Test-Cases
-		EXP_TESTS = []
-		EXPORTABLE_TESTCASES = { 
-			# dynamically build object
-		}
+		EXPORTABLE_TESTS = []
 		
 		def initialize(config)
 			puts 'FrameEmbedGenerator Invoked'
@@ -58,7 +57,7 @@ module Jekyll
 				# Copy files from _testcases-embeds to generated site directory
 				FileUtils.copy_entry KEY_EMBEDS_DIR, site.dest + '/' + KEY_EMBEDS_DIR
 				# create json and files for exportable test cases in 'wcag-testcases directory'
-				create_exportable_testcases(site)
+				create_testcases(site)
 			end
 		end
 
@@ -74,13 +73,13 @@ module Jekyll
 			end
 		end
 		
-		def create_exportable_testcases(site)
+		def create_testcases(site)
 			# construct json of output
 			result = JSON.pretty_generate({
 				name: PKG['name'],
 				license: PKG['license'],
 				description: "Test Cases for #{PKG['name']} rules",
-				"a11y-testcases": EXPORTABLE_TESTCASES
+				"a11y-testcases": EXPORTABLE_TESTS
 			});
 
 			# write json 
@@ -118,7 +117,6 @@ module Jekyll
 			return indices, spread_indices, passed_failed_inapplicable_indices
 		end
 
-		
 		def get_test_case_type(current_index, p_f_i_indices)
 			pass_index = p_f_i_indices[0].to_i
 			fail_index = p_f_i_indices[1].to_i
@@ -139,6 +137,13 @@ module Jekyll
 			doc_name_with_type = document.url.split('/').reverse[0]
 			doc_name = doc_name_with_type.gsub(INCLUDE_FILE_TYPE, '')
 			doc_path = document.url.sub(doc_name_with_type, '')
+			doc_scs = document["success_criterion"]
+			doc_testcases_sc_meta = []
+			doc_scs.each do |sc|
+				doc_testcases_sc_meta.push(SC_DATA[sc]["scId"])
+			end
+		
+
 			all_indices = get_code_tag_line_indices(document)
 			indices =  all_indices[0]
 			spread_indices = all_indices[1]
@@ -175,9 +180,19 @@ module Jekyll
 
 					# constuct a hash which contains all the 
 					# code-snippet and iframe embedded
-					embedded_testcases_hash[indices[$i].to_s] =  render_code_and_frame(file_content, file_url, should_not_render_frame)
+					embedded_testcases_hash[indices[$i].to_s] = render_code_and_frame(file_content, file_url, should_not_render_frame)
 					testcase_url = file_url.gsub('../_testcases-embeds/', 'assets/')
-					testcases[test_case_type.to_s].push(testcase_url)
+					testcase_selector = "*"
+					if file_content.include? "data-rule-target"
+						testcase_selector = "*[data-rule-target]"
+					end
+				
+					tc_meta = {}
+					tc_meta["selector"] = testcase_selector
+					tc_meta["url"] = testcase_url
+					tc_meta["test"] = doc_testcases_sc_meta
+
+					testcases[test_case_type.to_s].push(tc_meta)
 
 					# write iframe content to file
 					write_file(file_path, file_content)
@@ -190,11 +205,29 @@ module Jekyll
 			end
 
 			# construct exportable testcases hash
-			EXPORTABLE_TESTCASES[doc_name.to_s] = testcases
+			process_testcases(doc_name.to_s, testcases)
 
 			# generate document content and re-write with changes
 			doc_content = get_md_content(document.content, spread_indices, embedded_testcases_hash)
 			document.content = doc_content
+		end
+
+		def process_testcases(rule_id, testcases)
+			testcases.each do |tc_type, tc_meta|
+				tc_meta.each do |meta|
+					# create test-case object
+					t = {}
+					t['rule_id'] = rule_id
+					t['rule_page'] = "#{PKG['site-url-prefix']}/rules/#{rule_id}.html"
+					t['test'] = meta["test"]
+					t['url'] = meta["url"]
+					t['raw_url'] = "#{PKG['raw-git-url-prefix']}/wcag-testcases/#{meta["url"]}" 
+					t['selector'] = meta["selector"]
+					t['type'] = tc_type
+					# push to exports
+					EXPORTABLE_TESTS.push(t)
+				end
+			end
 		end
 		
 		def get_highlight_lang(opening_tag)

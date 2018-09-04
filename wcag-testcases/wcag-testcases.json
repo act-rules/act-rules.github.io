@@ -1,0 +1,175 @@
+{
+  "name": "auto-wcag",
+  "license": "https://auto-wcag.github.io/auto-wcag/license.html",
+  "description": "Test Cases for auto-wcag rules",
+  "a11y-testcases": [
+    {
+      "rule_id": "SC4-1-2-button-has-name",
+      "rule_page": "https://auto-wcag.github.io/auto-wcag/rules/SC4-1-2-button-has-name.html",
+      "test": [
+        "WCAG2:name-role-value",
+        "WCAG2:timing-adjustable"
+      ],
+      "url": "assets/SC4-1-2-button-has-name_passed_4d8234a1-8bb2-471a-95f2-d2efcb5e15fc.html",
+      "raw_url": "https://raw.githubusercontent.com/auto-wcag/auto-wcag/master/wcag-testcases/assets/SC4-1-2-button-has-name_passed_4d8234a1-8bb2-471a-95f2-d2efcb5e15fc.html",
+      "selector": "*",
+      "type": "passed"
+    },
+    {
+      "rule_id": "SC4-1-2-button-has-name",
+      "rule_page": "https://auto-wcag.github.io/auto-wcag/rules/SC4-1-2-button-has-name.html",
+      "test": [
+        "WCAG2:name-role-value",
+        "WCAG2:timing-adjustable"
+      ],
+      "url": "assets/SC4-1-2-button-has-name_passed_d742c869-1df7-44bb-be3d-9e7504acec88.html",
+      "raw_url": "https://raw.githubusercontent.com/auto-wcag/auto-wcag/master/wcag-testcases/assets/SC4-1-2-button-has-name_passed_d742c869-1df7-44bb-be3d-9e7504acec88.html",
+      "selector": "*",
+      "type": "passed"
+    },
+    {
+      "rule_id": "SC4-1-2-button-has-name",
+      "rule_page": "https://auto-wcag.github.io/auto-wcag/rules/SC4-1-2-button-has-name.html",
+      "test": [
+        "WCAG2:name-role-value",
+        "WCAG2:timing-adjustable"
+      ],
+      "url": "assets/SC4-1-2-button-has-name_passed_0cd6389a-d396-436e-84d4-684b1393c015.html",
+      "raw_url": "https://raw.githubusercontent.com/auto-wcag/auto-wcag/master/wcag-testcases/assets/SC4-1-2-button-has-name_passed_0cd6389a-d396-436e-84d4-684b1393c015.html",
+      "selector": "*",
+      "type": "passed"
+    },
+    {
+      "rule_id": "SC4-1-2-button-has-name",
+      "rule_page": "https://auto-wcag.github.io/auto-wcag/rules/SC4-1-2-button-has-name.html",
+      "test": [
+        "WCAG2:name-role-value",
+        "WCAG2:timing-adjustable"
+      ],
+      "url": "assets/SC4-1-2-button-has-name_passed_4e8b0154-3cd3-40db-a46d-413cb47416cb.html",
+      "raw_url": "https://raw.githubusercontent.com/auto-wcag/auto-wcag/master/wcag-testcases/assets/SC4-1-2-button-has-name_passed_4e8b0154-3cd3-40db-a46d-413cb47416cb.html",
+      "selector": "*",
+      "type": "passed"
+    },
+    {
+      "rule_id": "SC4-1-2-button-has-name",
+      "rule_page": "https://auto-wcag.github.io/auto-wcag/rules/SC4-1-2-button-has-name.html",
+      "test": [
+        "WCAG2:name-role-value",
+        "WCAG2:timing-adjustable"
+      ],
+      "url": "assets/SC4-1-2-button-has-name_passed_3079802c-8bce-4ef1-bb95-41b1c265ee61.html",
+      "raw_url": "https://raw.githubusercontent.com/auto-wcag/auto-wcag/master/wcag-testcases/assets/SC4-1-2-button-has-name_passed_3079802c-8bce-4ef1-bb95-41b1c265ee61.html",
+      "selector": "*",
+      "type": "passed"
+    },
+    {
+      "rule_id": "SC4-1-2-button-has-name",
+      "rule_page": "https://auto-wcag.github.io/auto-wcag/rules/SC4-1-2-button-has-name.html",
+      "test": [
+        "WCAG2:name-role-value",
+        "WCAG2:timing-adjustable"
+      ],
+      "url": "assets/SC4-1-2-button-has-name_passed_0aa58805-8089-4ef6-a88a-11430a1c09aa.html",
+      "raw_url": "https://raw.githubusercontent.com/auto-wcag/auto-wcag/master/wcag-testcases/assets/SC4-1-2-button-has-name_passed_0aa58805-8089-4ef6-a88a-11430a1c09aa.html",
+      "selector": "*",
+      "type": "passed"
+    },
+    {
+      "rule_id": "SC4-1-2-button-has-name",
+      "rule_page": "https://auto-wcag.github.io/auto-wcag/rules/SC4-1-2-button-has-name.html",
+      "test": [
+        "WCAG2:name-role-value",
+        "WCAG2:timing-adjustable"
+      ],
+      "url": "assets/SC4-1-2-button-has-name_passed_02544bed-6e5d-4975-8cbf-a77b3f7115fe.html",
+      "raw_url": "https://raw.githubusercontent.com/auto-wcag/auto-wcag/master/wcag-testcases/assets/SC4-1-2-button-has-name_passed_02544bed-6e5d-4975-8cbf-a77b3f7115fe.html",
+      "selector": "*[data-rule-target]",
+      "type": "passed"
+    },
+    {
+      "rule_id": "SC4-1-2-button-has-name",
+      "rule_page": "https://auto-wcag.github.io/auto-wcag/rules/SC4-1-2-button-has-name.html",
+      "test": [
+        "WCAG2:name-role-value",
+        "WCAG2:timing-adjustable"
+      ],
+      "url": "assets/SC4-1-2-button-has-name_failed_5a25e8b6-e2f7-439d-9b7f-e2e4d2c6059d.html",
+      "raw_url": "https://raw.githubusercontent.com/auto-wcag/auto-wcag/master/wcag-testcases/assets/SC4-1-2-button-has-name_failed_5a25e8b6-e2f7-439d-9b7f-e2e4d2c6059d.html",
+      "selector": "*",
+      "type": "failed"
+    },
+    {
+      "rule_id": "SC4-1-2-button-has-name",
+      "rule_page": "https://auto-wcag.github.io/auto-wcag/rules/SC4-1-2-button-has-name.html",
+      "test": [
+        "WCAG2:name-role-value",
+        "WCAG2:timing-adjustable"
+      ],
+      "url": "assets/SC4-1-2-button-has-name_failed_0b209f40-145b-4824-9dea-82b4d8d17fe5.html",
+      "raw_url": "https://raw.githubusercontent.com/auto-wcag/auto-wcag/master/wcag-testcases/assets/SC4-1-2-button-has-name_failed_0b209f40-145b-4824-9dea-82b4d8d17fe5.html",
+      "selector": "*",
+      "type": "failed"
+    },
+    {
+      "rule_id": "SC4-1-2-button-has-name",
+      "rule_page": "https://auto-wcag.github.io/auto-wcag/rules/SC4-1-2-button-has-name.html",
+      "test": [
+        "WCAG2:name-role-value",
+        "WCAG2:timing-adjustable"
+      ],
+      "url": "assets/SC4-1-2-button-has-name_failed_16d66305-f29e-482b-9671-10a6b87c5712.html",
+      "raw_url": "https://raw.githubusercontent.com/auto-wcag/auto-wcag/master/wcag-testcases/assets/SC4-1-2-button-has-name_failed_16d66305-f29e-482b-9671-10a6b87c5712.html",
+      "selector": "*",
+      "type": "failed"
+    },
+    {
+      "rule_id": "SC4-1-2-button-has-name",
+      "rule_page": "https://auto-wcag.github.io/auto-wcag/rules/SC4-1-2-button-has-name.html",
+      "test": [
+        "WCAG2:name-role-value",
+        "WCAG2:timing-adjustable"
+      ],
+      "url": "assets/SC4-1-2-button-has-name_failed_fed03fe4-55d7-4747-832f-357ceaf659d4.html",
+      "raw_url": "https://raw.githubusercontent.com/auto-wcag/auto-wcag/master/wcag-testcases/assets/SC4-1-2-button-has-name_failed_fed03fe4-55d7-4747-832f-357ceaf659d4.html",
+      "selector": "*[data-rule-target]",
+      "type": "failed"
+    },
+    {
+      "rule_id": "SC4-1-2-button-has-name",
+      "rule_page": "https://auto-wcag.github.io/auto-wcag/rules/SC4-1-2-button-has-name.html",
+      "test": [
+        "WCAG2:name-role-value",
+        "WCAG2:timing-adjustable"
+      ],
+      "url": "assets/SC4-1-2-button-has-name_inapplicable_ab763150-f440-45ff-a837-c79f08dedf65.html",
+      "raw_url": "https://raw.githubusercontent.com/auto-wcag/auto-wcag/master/wcag-testcases/assets/SC4-1-2-button-has-name_inapplicable_ab763150-f440-45ff-a837-c79f08dedf65.html",
+      "selector": "*",
+      "type": "inapplicable"
+    },
+    {
+      "rule_id": "SC4-1-2-button-has-name",
+      "rule_page": "https://auto-wcag.github.io/auto-wcag/rules/SC4-1-2-button-has-name.html",
+      "test": [
+        "WCAG2:name-role-value",
+        "WCAG2:timing-adjustable"
+      ],
+      "url": "assets/SC4-1-2-button-has-name_inapplicable_e6830496-14c5-4a79-81d8-22df2fe3e371.html",
+      "raw_url": "https://raw.githubusercontent.com/auto-wcag/auto-wcag/master/wcag-testcases/assets/SC4-1-2-button-has-name_inapplicable_e6830496-14c5-4a79-81d8-22df2fe3e371.html",
+      "selector": "*[data-rule-target]",
+      "type": "inapplicable"
+    },
+    {
+      "rule_id": "SC4-1-2-button-has-name",
+      "rule_page": "https://auto-wcag.github.io/auto-wcag/rules/SC4-1-2-button-has-name.html",
+      "test": [
+        "WCAG2:name-role-value",
+        "WCAG2:timing-adjustable"
+      ],
+      "url": "assets/SC4-1-2-button-has-name_inapplicable_8c14d5a9-0d21-4d81-af47-c8481ac0aab0.html",
+      "raw_url": "https://raw.githubusercontent.com/auto-wcag/auto-wcag/master/wcag-testcases/assets/SC4-1-2-button-has-name_inapplicable_8c14d5a9-0d21-4d81-af47-c8481ac0aab0.html",
+      "selector": "*",
+      "type": "inapplicable"
+    }
+  ]
+}

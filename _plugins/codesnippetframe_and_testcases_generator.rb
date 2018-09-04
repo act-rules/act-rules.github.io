@@ -10,9 +10,6 @@ module Jekyll
 		priority :lowest
 
 		PKG = JSON.parse(File.read('package.json'))
-		
-		KEY_WCAG_TESTCASES_DIR = PKG['testcases-export-dir']
-		KEY_EMBEDS_DIR =  PKG['testcases-embeds-dir']
 		KEY_MATCH_CODE_TAG_BACKTICK = '```'
 		KEYWORD_NO_FRAME_IN_MARKDOWN = '(no-iframe)'
 		INCLUDE_FILE_TYPE = '.html'
@@ -32,14 +29,14 @@ module Jekyll
 
 		def generate(site)
 			# Clean and create testcase embeds directory
-			testcases_base_dir = site.source + '/' + KEY_EMBEDS_DIR
+			testcases_base_dir = site.source + '/' + PKG['testcases-embeds-dir']
 			FileUtils.rm_f Dir.glob("#{testcases_base_dir}/*") unless File.directory?(testcases_base_dir)
 
 			# Create empty directory
 			Dir.mkdir(testcases_base_dir) unless File.directory?(testcases_base_dir)
 
 			# Clean and create testcase export directory
-			exports_base_dir = site.source + '/' + KEY_WCAG_TESTCASES_DIR
+			exports_base_dir = site.source + '/' + PKG['testcases-export-dir']
 			FileUtils.rm_f Dir.glob("#{exports_base_dir}/*") unless File.directory?(exports_base_dir)
 
 			# Create empty directory
@@ -55,8 +52,8 @@ module Jekyll
 			# Hook after post_write and then copy across generated frame embed documents
 			Hooks.register :site, :post_write do |site|
 				# Copy files from _testcases-embeds to generated site directory
-				FileUtils.copy_entry KEY_EMBEDS_DIR, site.dest + '/' + KEY_EMBEDS_DIR
-				# create json and files for exportable test cases in 'wcag-testcases directory'
+				FileUtils.copy_entry PKG['testcases-embeds-dir'], site.dest + '/' + PKG['testcases-embeds-dir']
+				# create json and files for exportable test cases
 				create_testcases(site)
 			end
 		end
@@ -83,15 +80,15 @@ module Jekyll
 			});
 
 			# write json 
-			json_file_path = "#{KEY_WCAG_TESTCASES_DIR}/wcag-testcases.json"
-			FileUtils.mkdir_p(KEY_WCAG_TESTCASES_DIR) unless File.directory?(KEY_WCAG_TESTCASES_DIR)
+			json_file_path = "#{PKG['testcases-export-dir']}/wcag-testcases.json"
+			FileUtils.mkdir_p(PKG['testcases-export-dir']) unless File.directory?(PKG['testcases-export-dir'])
 			write_file(json_file_path, result)
 
 			# copy test case files
-			FileUtils.copy_entry KEY_EMBEDS_DIR,  KEY_WCAG_TESTCASES_DIR + '/assets'
+			FileUtils.copy_entry PKG['testcases-embeds-dir'], PKG['testcases-export-dir'] + '/assets'
 
 			# create a zip file of the same
-			compress(KEY_WCAG_TESTCASES_DIR)
+			compress(PKG['testcases-export-dir'])
 		end
 
 		def get_code_tag_line_indices(document)
@@ -139,8 +136,10 @@ module Jekyll
 			doc_path = document.url.sub(doc_name_with_type, '')
 			doc_scs = document["success_criterion"]
 			doc_testcases_sc_meta = []
-			doc_scs.each do |sc|
-				doc_testcases_sc_meta.push(SC_DATA[sc]["scId"])
+			if(doc_scs != nil)
+				doc_scs.each do |sc|
+					doc_testcases_sc_meta.push(SC_DATA[sc]["scId"])
+				end
 			end
 		
 
@@ -172,9 +171,9 @@ module Jekyll
 					# construct file name
 					file_name = doc_name + '_' + test_case_type + '_' + SecureRandom.uuid + INCLUDE_FILE_TYPE
 					# construct file path
-					file_path = site.source + '/' + KEY_EMBEDS_DIR + file_name
+					file_path = site.source + '/' + PKG['testcases-embeds-dir'] + file_name
 					# construct file url
-					file_url = '../' + KEY_EMBEDS_DIR + file_name
+					file_url = '../' + PKG['testcases-embeds-dir'] + file_name
 					# construct file content
 					file_content = get_file_content(content_including_tags)
 

@@ -4,4 +4,4 @@
 .sass-cache
 _site
 _testcases-embeds/*.*
-a11y-testcases
+auto-wcag-testcases

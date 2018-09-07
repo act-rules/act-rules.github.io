@@ -17,6 +17,9 @@ module Jekyll
 		}
 		SC_DATA = JSON.parse(File.read('_data/sc-urls.json'))
 		
+		# Export all rule ids
+		# this will be essential for generating a mapping between rules from auto-wcag to respective test engines/ tools
+		EXPORTABLE_RULES = {}
 		# Exportable Test-Cases
 		EXPORTABLE_TESTS = []
 		
@@ -67,20 +70,27 @@ module Jekyll
 		end
 		
 		def create_testcases(site)
-			
-			# construct json of output
-			result = JSON.pretty_generate({
-				name: PKG['name'],
+			# create directory if not exists
+			FileUtils.mkdir_p(PKG['testcases-export-dir']) unless File.directory?(PKG['testcases-export-dir'])
+
+			# write rules json
+			rules_result = JSON.pretty_generate({
+				name: "#{PKG['name']} rules",
+				website: "#{PKG['site-url-prefix']}/rules.html",
+				description: "List of rules in auto wcag which can be mapped against testing engine via test runner",
+				"a11y-rules": EXPORTABLE_RULES
+			})
+			write_file("#{PKG['testcases-export-dir']}/#{PKG['rules-export-filename']}", rules_result)
+
+			# write testcases json 
+			testcases_result = JSON.pretty_generate({
+				name: "#{PKG['name']} test cases",
 				website: PKG['site-url-prefix'],
 				license: PKG['license'],
-				description: "Test Cases for #{PKG['name']} rules",
+				description: "Test Cases of #{PKG['name']} rules",
 				"a11y-testcases": EXPORTABLE_TESTS
 			});
-
-			# write json 
-			json_file_path = "#{PKG['testcases-export-dir']}/#{PKG['testcases-export-filename']}"
-			FileUtils.mkdir_p(PKG['testcases-export-dir']) unless File.directory?(PKG['testcases-export-dir'])
-			write_file(json_file_path, result)
+			write_file("#{PKG['testcases-export-dir']}/#{PKG['testcases-export-filename']}", testcases_result)
 
 			# copy test case files
 			FileUtils.copy_entry PKG['testcases-embeds-dir'], PKG['testcases-export-dir'] + '/assets'
@@ -208,6 +218,9 @@ module Jekyll
 			# construct exportable testcases hash
 			process_testcases(doc_name.to_s, testcases)
 
+			# construt exportable rules  hash
+			process_rules(doc_name.to_s)
+
 			# generate document content and re-write with changes
 			doc_content = get_md_content(document.content, spread_indices, embedded_testcases_hash)
 			document.content = doc_content
@@ -218,17 +231,20 @@ module Jekyll
 				tc_meta.each do |meta|
 					# create test-case object
 					t = {}
-					t['url'] = meta["url"]
-					t['raw_url'] = "#{PKG['site-url-prefix']}/#{PKG['testcases-export-dir']}#{meta["url"]}" 
-					t['success_criteria'] = meta["successCriteria"]
+					t['url'] = "#{PKG['site-url-prefix']}/#{PKG['testcases-export-dir']}#{meta["url"]}" 
+					t['relativeUrl'] = meta["url"]
+					t['successCriteria'] = meta["successCriteria"]
 					t[tc_type.to_s] = meta["selector"]
-					t['expected_result'] = tc_type.to_s
-					t['rule_id'] = rule_id
-					t['rule_page'] = "#{PKG['site-url-prefix']}/rules/#{rule_id}.html"
-					# push to exports
+					t['ruleId'] = rule_id
+					t['rulePage'] = "#{PKG['site-url-prefix']}/rules/#{rule_id}.html"
+					# push to export tests
 					EXPORTABLE_TESTS.push(t)
 				end
 			end
+		end
+
+		def process_rules(rule_id)
+			EXPORTABLE_RULES[rule_id] = ['List of rules to be mapped to test engine']
 		end
 		
 		def get_highlight_lang(opening_tag)

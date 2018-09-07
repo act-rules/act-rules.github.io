@@ -67,9 +67,11 @@ module Jekyll
 		end
 		
 		def create_testcases(site)
+			
 			# construct json of output
 			result = JSON.pretty_generate({
 				name: PKG['name'],
+				website: PKG['site-url-prefix'],
 				license: PKG['license'],
 				description: "Test Cases for #{PKG['name']} rules",
 				"a11y-testcases": EXPORTABLE_TESTS
@@ -181,15 +183,15 @@ module Jekyll
 					# code-snippet and iframe embedded
 					embedded_testcases_hash[indices[$i].to_s] = render_code_and_frame(file_content, file_url, should_not_render_frame)
 					testcase_url = file_url.gsub('../_testcases-embeds/', 'assets/')
-					testcase_selector = "*"
+					testcase_selector = ["*"]
 					if file_content.include? "data-rule-target"
-						testcase_selector = "*[data-rule-target]"
+						testcase_selector = ["*[data-rule-target]"]
 					end
 				
 					tc_meta = {}
 					tc_meta["selector"] = testcase_selector
 					tc_meta["url"] = testcase_url
-					tc_meta["test"] = doc_testcases_sc_meta
+					tc_meta["successCriteria"] = doc_testcases_sc_meta
 
 					testcases[test_case_type.to_s].push(tc_meta)
 
@@ -216,13 +218,13 @@ module Jekyll
 				tc_meta.each do |meta|
 					# create test-case object
 					t = {}
-					t['rule_id'] = rule_id
-					t['rule_page'] = "#{PKG['site-url-prefix']}/rules/#{rule_id}.html"
-					t['test'] = meta["test"]
 					t['url'] = meta["url"]
 					t['raw_url'] = "#{PKG['site-url-prefix']}/#{PKG['testcases-export-dir']}#{meta["url"]}" 
-					t['selector'] = meta["selector"]
-					t['type'] = tc_type
+					t['success_criteria'] = meta["successCriteria"]
+					t[tc_type.to_s] = meta["selector"]
+					t['expected_result'] = tc_type.to_s
+					t['rule_id'] = rule_id
+					t['rule_page'] = "#{PKG['site-url-prefix']}/rules/#{rule_id}.html"
 					# push to exports
 					EXPORTABLE_TESTS.push(t)
 				end

@@ -16,7 +16,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any set of HTML or SVG element with the semantic role of `img`, in a document, exposed to assistive technologies, that have an identical [accessible name]().
+The rule applies to any set of HTML or SVG element with the semantic role of `img`, exposed to assistive technologies, that have an identical [accessible name]().
 
 ### Expectation
 

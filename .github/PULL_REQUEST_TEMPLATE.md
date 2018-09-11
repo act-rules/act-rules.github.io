@@ -2,7 +2,7 @@
 
 Closes issue: (ADD ISSUE NUMBER HERE)
 
-## Guidance the the PR (pull request) creator
+## Guidance for the PR (pull request) creator
 
 **When creating PR:**
 - [ ] Make sure you requesting to **pull a issue/feature/bugfix branch** (right side) to the master branch (left side).

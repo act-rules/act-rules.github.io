@@ -1,5 +1,5 @@
 ---
-name: Valid use of duplicate accessible names
+name: Valid use of duplicate accessible names for images
 description: |
 	This rule checks that there is a valid reason for having a set of images with identical accessible names.
 

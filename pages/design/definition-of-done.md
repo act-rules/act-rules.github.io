@@ -4,8 +4,7 @@ title: Definition of "Done"
 
 ## What is this? 
 
-It is important that we in the Auto-WCAG Community Group have a shared understanding of what it means for work to be complete. 
-The Definition of "Done" can be used to assess when work is complete.
+It is important that we in the Auto-WCAG Community Group have a shared understanding of what it means for work to be complete.  The Definition of "Done" can be used to assess when work is complete. ([The Scrum Guide](https://www.scrumguides.org/scrum-guide.html#artifact-transparency-done).
 It can be used by rule authors as well as reviewers as a checklist to assess whether a rule is done or if it needs another iteration.
 Sticking to the Definition of "Done" ensures a high quality in rules published by the Auto-WCAG Community Group, and ensures transparency in our work. 
 

@@ -23,6 +23,6 @@ The Definition of "Done" is a living document, and might change as the rule writ
     - For the Applicability and Expectations, consider if the definition for [semantic role](#semantic-role) (including specifics of explicit and implicit semantic role) could be used to describe the targets of the rule.
 - The rule links to any relevant documentation, e.g. [Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/) and [Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG-TECHS/), specifications used, etc.
 - The name of the rule is written in plain language, with capitalized initial letter
-- The file name of the rule follows the Auto-WCAG naming convention (link out is needed)
+- The file name of the rule follows the Auto-WCAG naming convention
 - The rule has been spellchecked
 - All links are working, or the linked files are included in the same pull request

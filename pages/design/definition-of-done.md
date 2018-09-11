@@ -13,11 +13,8 @@ Sticking to the Definition of "Done" ensures a high quality in rules published b
 The Definition of "Done" is a living document, and might change as the rule writing community develops and matures.
 
 ## The Definition of "Done"
-- The relation between the rule and its accessibility requirements is as described in the [ACT Rules Format](https://www.w3.org/TR/act-rules-format/) under [Accessibility Requirements](https://www.w3.org/TR/act-rules-format/#structure-accessibility-requirements). This includes:
-    - The rule is an appropriate test for the accessibility requirement it sets out to test, e.g. from [WCAG 2](https://www.w3.org/TR/WCAG21/), and in line with the supporting documents, e.g. [Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/) and [Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG-TECHS/)
-    - Failing the rule will for sure mean failing the accessibility requirements (success criteria) linked to under the "Success criteria" heading. If this is not true, the success criteria can instead be mentioned under the heading "Background".
-    - Failing this rule will not mean failing other accessibility requirements (success criteria) than the ones linked to from this rule. If this was the case, these accessibility requirements needed to be added.
-    - The rule allows for solutions both through native markup languages and other technologies such as WAI-ARIA
+- The relation between the rule and its accessibility requirements is as described in the [ACT Rules Format](https://www.w3.org/TR/act-rules-format/) under [Accessibility Requirements](https://www.w3.org/TR/act-rules-format/#structure-accessibility-requirements). 
+    - Remember to also check that the rule is in line with supporting documentation, e.g. [Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/) and [Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG-TECHS/)
 - Applicability (for [atomic](https://www.w3.org/TR/act-rules-format/#test-applicability) / [composed rules](https://www.w3.org/TR/act-rules-format/#aggregation-applicability)) and Expectations (for [atomic](https://www.w3.org/TR/act-rules-format/#test-expectations) / [composed rules](https://www.w3.org/TR/act-rules-format/#aggregation-expectations)) live up to the requirements for these sections in the [ACT Rules Format](https://www.w3.org/TR/act-rules-format/)
 - Requirements for use of atomic and composed rules are followed, see [Rule Types](https://www.w3.org/TR/act-rules-format/#rule-types) in the [ACT Rules Format](https://www.w3.org/TR/act-rules-format/)
 - The rule follows the Auto-WCAG [rule template](/design/rule-template.html), especially in relation to headings, styling, test case descriptions, etc.

@@ -5,7 +5,7 @@ description: |
 
 success_criterion:
 - 2.2.1 # Timing Adjustable
-- 3.2.5 # Change on Request
+- 2.2.3 # Interruptions
 
 test_aspects:
 - DOM Tree

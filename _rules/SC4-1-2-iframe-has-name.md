@@ -5,7 +5,6 @@ description: |
  Each iframe element has an accessible name
 
 success_criterion:
-- 2.4.1 # Bypass Blocks (A)
 - 4.1.2 # Name, Role, Value (A)
 
 test_aspects:
@@ -51,7 +50,7 @@ _There are no major accessibility support issues known for this rule._
 Usage of `title` attribute to describe the `iframe` content.
 
 ```html
-<iframe title="List of Contributors" role="document" src="../test-assets/SC4-1-2-frame-doc.html">
+<iframe title="List of Contributors" src="../test-assets/SC4-1-2-frame-doc.html">
 </iframe>
 ```
 
@@ -60,7 +59,7 @@ Usage of `title` attribute to describe the `iframe` content.
 Usage of `aria-label` attribute to describe the `frame` content.
 
 ```html
-<iframe role="application" aria-label="Advertisement of tours to Great Wall of China" src="../test-assets/SC4-1-2-frame-doc.html" >
+<iframe aria-label="Advertisement of tours to Great Wall of China" src="../test-assets/SC4-1-2-frame-doc.html" >
 </iframe>
 ```
 
@@ -137,7 +136,7 @@ Usage of `alt` attribute to describe content is not valid.
 Does not apply to non `iframe` element.
 
 ```html
-<button role='link'>take me somewhere</button>
+<button>take me somewhere</button>
 ```
 
 #### Inapplicable example 2

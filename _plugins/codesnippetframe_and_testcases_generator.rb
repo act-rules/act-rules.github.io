@@ -97,6 +97,9 @@ module Jekyll
 
 			# create a zip file of the same
 			compress(PKG['config']['testcases-export-dir'])
+
+			# copy to site directory
+			FileUtils.copy_entry PKG['config']['testcases-export-dir'], site.dest + '/' + PKG['config']['testcases-export-dir']
 		end
 
 		def get_code_tag_line_indices(document)

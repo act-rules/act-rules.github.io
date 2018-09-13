@@ -1,12 +1,12 @@
 ---
-name: IFrame has an accessible name
+name: iframe has an accessible name
 
 description: |
  Each iframe element has an accessible name
 
 success_criterion:
-- 4.1.2
-- 2.4.1
+- 2.4.1 # Bypass Blocks (A)
+- 4.1.2 # Name, Role, Value (A)
 
 test_aspects:
 - DOM Tree
@@ -20,27 +20,27 @@ authors:
 
 ### Applicability
 
-The rule applies to `iframe` elements that are [visible on the page](#visible-on-the-page) and [focusable](#focusable).
+The rule applies to `iframe` elements that are [exposed to assistive technologies](#exposed-to-assistive-technologies).
 
-**Note: `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.**
+**Note:** `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
 
 ### Expectation
 
-Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty), provided by using the `title`, `aria-label`, or `aria-labelledby` attributes.
+Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty).
 
 ## Assumptions
 
-- The rule assumes that the target `iframe` is used as an user interface component, unless explicity overridden by specifying `tabindex="-1"`.
+- The rule assumes that the target `iframe` is used as an user interface component.
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- [http://www.w3.org/TR/WCAG20-TECHS/H64.html](http://www.w3.org/TR/WCAG20-TECHS/H64.html)
-- [https://www.w3.org/TR/2008/REC-WCAG20-20081211/#ensure-compat-rsv](https://www.w3.org/TR/2008/REC-WCAG20-20081211/#ensure-compat-rsv)
-- [http://www.w3.org/TR/WCAG20/#navigation-mechanisms-skip](http://www.w3.org/TR/WCAG20/#navigation-mechanisms-skip)
+- [H64: Using the title attribute of the frame and iframe elements](http://www.w3.org/TR/WCAG20-TECHS/H64.html)
+- [Understanding Success Criterion 4.1.2 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
+- [Understanding Success Criterion 2.4.1 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 
 ## Test cases
 
@@ -74,24 +74,6 @@ Usage of `aria-labelledby` attribute to describe the `iframe` content.
 </iframe>
 ```
 
-#### Pass example 4
-
-Usage of `tabindex="-1"` to escape navigation and makes `iframe` non [focusable](#focusable).
-
-```html
-<iframe src="../test-assets/SC4-1-2-frame-doc.html" tabindex="-1">
-</iframe>
-```
-
-#### Pass example 5
-
-Usage of `aria-hidden="true"` does not expose `iframe` to [assistive technologies](#exposed-to-assistive-technologies).
-
-```html
-<iframe aria-hidden="true" src="../test-assets/SC4-1-2-frame-doc.html">
-</iframe>
-```
-
 ### Failed
 
 #### Fail example 1
@@ -105,7 +87,7 @@ Usage of `name` attribute to describe the `iframe` content is not valid.
 
 #### Fail example 2
 
-`iframe` with no `title` attribute to describe content is not valid.
+`iframe` with no `title`/`aria-label`/`aria-labelledby` attribute to describe content is not valid.
 
 ```html
 <iframe src="../test-assets/SC4-1-2-frame-doc.html" >
@@ -139,6 +121,15 @@ Usage of non existing `aria-labelledby` reference element to describe the `ifram
 </iframe>
 ```
 
+#### Fail example 6
+
+Usage of `alt` attribute to describe content is not valid.
+
+```html
+<iframe alt="List of Contributors" src="../test-assets/SC4-1-2-frame-doc.html">
+</iframe>
+```
+
 ### Inapplicable
 
 #### Inapplicable example 1
@@ -147,4 +138,13 @@ Does not apply to non `iframe` element.
 
 ```html
 <button role='link'>take me somewhere</button>
+```
+
+#### Inapplicable example 2
+
+Usage of `aria-hidden="true"` does not expose `iframe` to [assistive technologies](#exposed-to-assistive-technologies).
+
+```html
+<iframe aria-hidden="true" src="../test-assets/SC4-1-2-frame-doc.html">
+</iframe>
 ```

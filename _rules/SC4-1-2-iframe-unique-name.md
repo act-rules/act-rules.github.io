@@ -23,7 +23,7 @@ The rule applies to `iframe` elements within a given [document context](#documen
 
 ### Expectation
 
-Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty) and is unique within the [document context](#document-context).
+Each target element has an [accessible name](#accessible-name) that is unique within the [document context](#document-context).
 
 ## Assumptions
 
@@ -47,7 +47,7 @@ There are no major accessibility support issues known for this rule.
 Usage of `title` attribute to describe the `iframe` content, and there is only one iframe with in document context.
 
 ```html
-<iframe title="List of Contributors" role="document" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
+<iframe title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
 </iframe>
 ```
 
@@ -56,9 +56,9 @@ Usage of `title` attribute to describe the `iframe` content, and there is only o
 Multiple `iframe` elements in the document having different `title` descriptions as accessible name.
 
 ```html
-<iframe title="List of Contributors to Repository 1" role="document" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
+<iframe title="List of Contributors to Repository 1" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
 </iframe>
-<iframe title="List of Contributors to Repository 2" role="document" src="../test-assets/SC4-1-2-iframe-unique-name-doc2.html">
+<iframe title="List of Contributors to Repository 2" src="../test-assets/SC4-1-2-iframe-unique-name-doc2.html">
 </iframe>
 ```
 
@@ -67,9 +67,9 @@ Multiple `iframe` elements in the document having different `title` descriptions
 Multiple `iframe` elements in the document having different `aria-label` descriptions as accessible name.
 
 ```html
-<iframe aria-label="List of Contributors to Repository 1" role="document" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
+<iframe aria-label="List of Contributors to Repository 1" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
 </iframe>
-<iframe aria-label="List of Contributors to Repository 2" role="document" src="../test-assets/SC4-1-2-iframe-unique-name-doc2.html">
+<iframe aria-label="List of Contributors to Repository 2" src="../test-assets/SC4-1-2-iframe-unique-name-doc2.html">
 </iframe>
 ```
 
@@ -79,10 +79,10 @@ Multiple `iframe` elements in the document having different `aria-labelledby` de
 
 ```html
 <div id="desc-for-title">List of Contributors</div>
-<iframe aria-labelledby="desc-for-title" role="document" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
+<iframe aria-labelledby="desc-for-title" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
 </iframe>
 <div id="desc-for-title1">List of Reviewers</div>
-<iframe aria-labelledby="desc-for-title1" role="document" src="../test-assets/SC4-1-2-iframe-unique-name-doc2.html">
+<iframe aria-labelledby="desc-for-title1" src="../test-assets/SC4-1-2-iframe-unique-name-doc2.html">
 </iframe>
 ```
 
@@ -133,6 +133,17 @@ Accessible name provided is empty.
 <iframe aria-label="" src="../test-assets/SC4-1-2-iframe-unique-name-doc3.html">
 </iframe>
 ```
+
+#### Inapplicable example 2
+
+Usage of `alt` attribute to describe content is not valid.
+
+```html
+<iframe alt="Some" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
+</iframe>
+```
+
+#### Inapplicable example 3
 
 Does not apply to non `iframe` elements.
 

@@ -3,13 +3,15 @@ layout: default
 title: Contribute to Auto-WCAG
 ---
 
-Auto-WCAG is a [W3C](https://www.w3.org/) [Community Group](https://www.w3.org/community/) open to anyone interested in accessibility or accessibility testing, manually or automated. 
+Auto-WCAG is a [W3C](https://www.w3.org/) [Community Group](https://www.w3.org/community/) open to anyone interested in accessibility testing, manually or automated. 
 
-We welcome contributions from anyone, and there are many ways to contribute, from Github issues and pull requests, to contribution to our monthly teleconferences.
+We welcome contributions from everyone, and there are many ways to contribute, from Github issues and pull requests, to contribution to our monthly teleconferences.
 
-You don't have to be a member of the Auto-WCAG Community Group to contribute by [giving feedback on rules](#give-feedback-on-rules) or [suggesting new rules](#suggest-new-rules).
+You don't have to be a member of the Auto-WCAG Community Group to contribute.
 
-If you want to get even more out of your involvement in our rule creation project, you can officially [join the Auto-WCAG Community Group](#join-the-Auto-WCAG-Community-Group) to get on the mailing list and participate in monthly teleconferences.
+If you want to get even more out of your involvement in our rule creation project, you can officially join the Auto-WCAG Community Group to get on the mailing list and participate in monthly teleconferences.
+
+<button name="button" onclick="#join-the-Auto-WCAG-Community-Group">Learn more about how to join the Auto-WCAG Community Group</button>
 
 ## Overview of how you can contribute
 
@@ -27,10 +29,12 @@ If you want to get even more out of your involvement in our rule creation projec
 
 ## Give feedback on rules
 
-Anyone can provide feedback on rules on our open [Auto-WCAG Github repository](https://github.com/auto-wcag/auto-wcag), so you don't even have to be a member of the Auto-WCAG Community Group to contribute in this way.
+Feedback on rules is encouraged on our open [Auto-WCAG Github repository](https://github.com/auto-wcag/auto-wcag), so you don't even have to be a member of the Auto-WCAG Community Group to contribute in this way.
+
+If you "watch" the repository, you will get notifications when changes are happening.
 
 ### Feedback for ideas and early drafts (Issues on Github) 
-Rules and Algorithms (shared terms across rules) that are Github Issues can be everything from just a title to a quite finished rule. The issues will be prefixed with either "Rule:" (or possibly "New Rule:") or "Algorithm". 
+Rules and Definitions (shared terms across rules) that are Github Issues can be everything from just a title to a quite finished rule. The issues will be prefixed with either "Rule:" (or possibly "New Rule:") or "Algorithm". 
 
 The top comment on an issue should hold the updated rule or algorithm, and underneath there will be a thread of comments and a history of actions related to the issue. 
 
@@ -40,23 +44,23 @@ Start giving feedback on issues:
 
 - See the [ideas and early drafts that might need input](https://github.com/auto-wcag/auto-wcag/issues) 
 
-- Use the [checklist for reviewers](#) (TBD) to guide your review
+- Use the [Definition of "Done"](../pages/design/definition-of-done.html) to guide your review
 - Learn more about [commenting on issues](#) (TBD)
 
 ### Feedback and reviews for draft rules (Pull Requests on Github)
 
-Pull requests holds rule drafts that are more finished than the ones in Issues. You can sign up as a reviewer and follow the rule through iterations. A rule needs three approvals, and if a rule has the label "Reviewer wanted", we need more people to sign up for reviewing it. But even if three people are already signed up, we can always use more eyes on it.
+Pull requests are rule drafts that are ready for peer reviews. You can sign up as a reviewer and follow the rule through iterations. A rule needs three approvals, and if a rule has the label "Reviewer wanted", we need more people to sign up for reviewing it. But even if three people are already signed up, we can always use more eyes on it.
 
 You can both add single comments to a pull request and do a full review. 
 
-**Only approve a rule** if you feel confident (to the best of your knowledge) that this rule is 100% ready to be a published ACT rule. Please also refer to the [checklist for reviewers](#) (TBD).
+**Only approve a rule** if you feel confident (to the best of your knowledge) that this rule is 100% ready to be a published ACT rule. Please also refer to the [Definition of "Done"](../pages/design/definition-of-done.html).
 
 If you for some reason are not so confident, you can always leave a comment for the things that you have an opinion about, without doing a full review.
 
 Start giving feedback and doing reviews for draft rules:
 
 - See the [draft rules, algorithms and more that need more reviewers](https://github.com/auto-wcag/auto-wcag/pulls?q=is%3Aopen+is%3Apr+label%3A%22reviewer+wanted%22)
-- Use the [checklist for reviewers](#) (TBD) to guide your review
+- Use the [Definition of "Done"](../pages/design/definition-of-done.html) to guide your review
 - Learn more about [reviewing and commenting on pull requests](#) (TBD)
 
 ### Feedback/corrections for published rules
@@ -119,3 +123,5 @@ The invitation and agenda for these meetings is sent out through the mailing lis
 1. To join the Auto-WCAG Community Group, you need a W3C Account. If you don’t already have one, [get a W3C account here](https://www.w3.org/accounts/request).
 2. Go to [Join the Auto-WCAG community group now!](https://www.w3.org/community/wp-login.php?redirect_to=%2Fcommunity%2Fauto-wcag%2Fjoin) and join the group.
 3. If you work for a W3C Member organization, you will need to request approval. This request will be sent to your organization’s representative in the W3C’s Advisory Committee.
+
+<button name="button" onclick="https://www.w3.org/community/wp-login.php?redirect_to=%2Fcommunity%2Fauto-wcag%2Fjoin">Join the Auto-WCAG Community Group</button>

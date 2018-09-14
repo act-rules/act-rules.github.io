@@ -1,5 +1,6 @@
 ---
 name: Links with identical accessible names have same purpose
+test_type: atomic
 
 description: |
   This rule checks that identical accessible names are only used for links that have the same purpose
@@ -21,11 +22,11 @@ authors:
 
 The rule applies to any two or more HTML or SVG elements that have the [semantic role](#semantic-role) of link, are [exposed to assistive technologies](#exposed-to-assistive-technologies) and that have the same [accessible name](#accessible-name).
 
-**Note:** Leading and trailing whitespace and difference in case sensitivity should be ignored when deciding whether the [accessible names](#accessible-name) are the same.
-
 ### Expectation
 
-For each set of target elements, activating the links resolves, after any redirects, to resources that fulfil the same purpose in relation to the purpose indicated by the [accessible names](#accessible-name) of the link.
+When activated, the links in each set of target elements resolve to resources that fulfil the same purpose in relation to the purpose indicated by the [accessible names](#accessible-name) of the link.
+
+**Note:** Resolving the links includes potential redirects.
 
 **Note:** Web pages and documents (e.g. PDFs, office formats etc.) may fulfil the same purpose in relation to the link, even if the resources:
 * are located on different URLs, including different domains
@@ -39,7 +40,7 @@ For each set of target elements, activating the links resolves, after any redire
 
 ## Assumptions
 
-* This rule assumes that the purpose of the links for links with identical link texts would not be ambiguous to users in general, which is the exception mentioned in the success criterion 2.4.9 Link Purpose (Link Only).
+* This rule assumes that the purpose of the links for links with identical link texts would not be ambiguous to users in general, which is the exception mentioned in [Understanding Success Criterion 2.4.9: Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html).
 
 ## Accessibility support
 
@@ -47,7 +48,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- [Understanding SC 2.4.9](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-link.html)
+- [Understanding Success Criterion 2.4.9: Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html)
 - [URL normalization](#url-normalization)
 
 ## Test Cases

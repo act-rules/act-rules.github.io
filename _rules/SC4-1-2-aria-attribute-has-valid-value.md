@@ -60,75 +60,75 @@ Element with valid true/false value
 <div role="textbox" aria-required="true"></div>
 ```
 
- #### Passed example 2
+#### Passed example 2
  
- Element with valid true/false/undefined value
+Element with valid true/false/undefined value
  
- ```html
+```html
 <div role="button" aria-expanded="undefined"></div>
 ```
 
- #### Passed example 3
+#### Passed example 3
  
- Element with valid tristate value
+Element with valid tristate value
  
- ```html
+```html
 <div role="button" aria-pressed="mixed"></div>
 ```
 
- #### Passed example 4
+#### Passed example 4
  
- Element with valid ID reference value
+Element with valid ID reference value
  
- ```html
+```html
 <div role="textbox" aria-errormessage="my-error"></div>
 ```
 
- #### Passed example 5
+#### Passed example 5
  
- Element with valid ID reference list value
+Element with valid ID reference list value
  
- ```html
+```html
 <div role="combobox" aria-owns="my-textbox my-grid"></div>
 ```
 
- #### Passed example 6
+#### Passed example 6
  
- Element with valid integer value
+Element with valid integer value
  
- ```html
+```html
 <div role="gridcell" aria-rowindex="2">Fred</div>
 ```
 
- #### Passed example 7
+#### Passed example 7
  
- Element with valid number value
+Element with valid number value
  
- ```html
+```html
 <div role="spinbutton" aria-valuemin="1.0" aria-valuemax="2.0" aria-valuenow="1.5"></div>
 ```
 
- #### Passed example 8
+#### Passed example 8
  
- Element with valid string value
+Element with valid string value
  
- ```html
+```html
 <div role="searchbox" aria-placeholder="MM-DD-YYYY">MM-DD-YYYY</div>
 ```
 
- #### Passed example 9
+#### Passed example 9
  
- Element with valid token value, attribute inappropriate for the role.
+Element with valid token value, attribute inappropriate for the role.
  
- ```html
+```html
 <div role="button" aria-orientation="horizontal"></div>
 ```
 
- #### Passed example 10
+#### Passed example 10
  
- Element with valid token list value
+Element with valid token list value
  
- ```html
+```html
 <div role="dialog" aria-dropeffect="copy move"></div>
 ```
 

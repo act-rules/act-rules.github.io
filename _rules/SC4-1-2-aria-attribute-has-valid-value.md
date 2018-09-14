@@ -1,8 +1,10 @@
 ---
 name: ARIA attribute has valid value
+test_type: atomic
+
 description: |
-  This rule checks that `aria-*` attributes have a valid value
-  
+   This rule checks that all ARIA 1.1 attributes (`aria-*`) have valid values
+   
 success_criterion:
 - 4.1.2 # Name, Role, Value
 
@@ -11,6 +13,7 @@ test_aspects:
 - CSS Styling
 
 authors:
+- Wilco Fiers
 - Anne Thyme Nørregaard
 ---
 
@@ -18,18 +21,19 @@ authors:
 
 ### Applicability
 
-Any non-empty attribute that is placed on an HTML or SVG element, and where the attribute name starts with `aria-`.
+Any [non-empty](#non-empty) attribute that is placed on an HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies), and where the attribute name starts with `aria-` and where the attribute can be found in [WAI-ARIA 1.1, Definitions of States and Properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
 
 ### Expectation
 
-Each of the applicable attributes have a valid value according to the [value type](https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value) for the given state or property (`aria-*` attribute) as specified by [WAI-ARIA](https://www.w3.org/TR/wai-aria).
+Each test target has a valid value according to the [value type](https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value) for that `aria-*` attribute as specified by [WAI-ARIA 1.1, Definitions of States and Properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
 
 **Note:** 
-- If the value of the `aria-*` attribute is of value type `ID Reference` or `ID Reference List` ensure that an element with the given id exists in the document. 
-- If the value of the `aria-*` attribute is of value type `URI` ensure that it matches the [generic URI syntax](https://www.ietf.org/rfc/rfc3986.txt).
+- For value types `ID Reference` and `ID Reference List` this rule does not require that elements with the given id(s) exists in the document. 
+- For value type `URI` ensure that the value matches the [generic URI syntax](https://www.ietf.org/rfc/rfc3986.txt). This rule does not require that the destination URL exists. 
 
 ## Assumptions
 
+- Checking that IDs referenced in value types `ID Reference` and `ID Reference List` is considered out of scope for this rule. 
 - Checking that linked resources in `aria-*` attributes with value type `URI` are available is considered out of scope for this rule. For this rule it is considered sufficient that the value matches the [generic URI syntax](https://www.ietf.org/rfc/rfc3986.txt).
 
 ## Accessibility Support
@@ -38,7 +42,9 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/ARIA5)
+- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
+[ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/ARIA5)
+- [WAI-ARIA 1.1, Definitions of States and Properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def)
 - [Overview of possible ´aria-*´ attribute value types](https://www.w3.org/TR/wai-aria/#propcharacteristic_value)
 - [Uniform Resource Identifier (URI): Generic Syntax (RFC 3986)](https://www.ietf.org/rfc/rfc3986.txt)
 
@@ -46,22 +52,171 @@ _There are no major accessibility support issues known for this rule._
 
 ### Passed
 
-Element has correct value for `aria-*` attribute
+#### Passed example 1
 
-```html
-<div id="someElementId">...</div>
-<select role="combobox" aria-controls="someElementId"></select>
+Element with valid true/false value
+
+ ```html
+<div role="textbox" aria-required="true"></div>
+```
+
+ #### Passed example 2
+ 
+ Element with valid true/false/undefined value
+ 
+ ```html
+<div role="button" aria-expanded="undefined"></div>
+```
+
+ #### Passed example 3
+ 
+ Element with valid tristate value
+ 
+ ```html
+<div role="button" aria-pressed="mixed"></div>
+```
+
+ #### Passed example 4
+ 
+ Element with valid ID reference value
+ 
+ ```html
+<div role="textbox" aria-errormessage="my-error"></div>
+```
+
+ #### Passed example 5
+ 
+ Element with valid ID reference list value
+ 
+ ```html
+<div role="combobox" aria-owns="my-textbox my-grid"></div>
+```
+
+ #### Passed example 6
+ 
+ Element with valid integer value
+ 
+ ```html
+<div role="gridcell" aria-rowindex="2">Fred</div>
+```
+
+ #### Passed example 7
+ 
+ Element with valid number value
+ 
+ ```html
+<div role="spinbutton" aria-valuemin="1.0" aria-valuemax="2.0" aria-valuenow="1.5"></div>
+```
+
+ #### Passed example 8
+ 
+ Element with valid string value
+ 
+ ```html
+<div role="searchbox" aria-placeholder="MM-DD-YYYY">MM-DD-YYYY</div>
+```
+
+ #### Passed example 9
+ 
+ Element with valid token value, attribute inappropriate for the role.
+ 
+ ```html
+<div role="button" aria-orientation="horizontal"></div>
+```
+
+ #### Passed example 10
+ 
+ Element with valid token list value
+ 
+ ```html
+<div role="dialog" aria-dropeffect="copy move"></div>
 ```
 
 ### Failed
 
-Element has wrong value type for `aria-*` attribute
+#### Failed example 1
+
+Element with invalid true/false value
 
 ```html
-<select role="combobox" aria-controls=""></select>
+<div role="textbox" aria-required="undefined"></div>
+```
+
+#### Failed example 2
+
+Element with invalid true/false/undefined value
+
+```html
+<div role="button" aria-expanded="mixed"></div>
+```
+
+#### Failed example 3
+
+Element with invalid tristate value
+
+```html
+<div role="button" aria-pressed="horizontal"></div>
+```
+
+#### Failed example 4
+
+Element with invalid ID reference value, space not allowed in a single ID
+
+```html
+<div role="textbox" aria-errormessage="error1 error2"></div>
+```
+
+#### Failed example 5
+
+Element with invalid integer value
+
+```html
+<div role="gridcell" aria-rowindex="2.5">Fred</div>
+```
+
+#### Failed example 6
+
+Element with invalid number value
+
+```html
+<div role="spinbutton" aria-valuemin="one" aria-valuemax="three" aria-valuenow="two"></div>
+```
+
+#### Failed example 7
+
+Element with invalid token value
+
+```html
+<div role="main" aria-live="nope"></div>
+```
+
+#### Failed example 8
+
+Element with invalid token list value
+
+```html
+<div role="dialog" aria-dropeffect="invalid move"></div>
+```
+
+#### Failed example 9
+
+Element with invalid empty aria attribute for token value
+
+```html
+<div role="button" aria-expanded="collapsed" aria-live="off"></div>
+```
+ 
+#### Failed example 10
+ 
+Element with invalid true/false/undefined value for custom element
+ 
+```html
+<my-button role="button" aria-expanded="collapsed"></my-button>
 ```
 
 ### Inapplicable
+
+#### Inapplicable example 1
 
 Element does not have any `aria-*` attributes
 
@@ -69,8 +224,33 @@ Element does not have any `aria-*` attributes
 <div>Some Content</div>
 ```
 
+#### Inapplicable example 2
+
 Element has ARIA role, but no attributes that start with `aria-`
 
 ```html
 <div role="button">Some Content</div>
+```
+
+#### Inapplicable example 3
+
+Element with null ARIA attribute
+```html
+<div role="checkbox" aria-checked></div>
+```
+
+#### Inapplicable example 4
+
+Element with empty ARIA attribute
+
+```html
+<div role="searchbox" aria-labelledby=""></div>
+```
+
+#### Inapplicable example 5
+
+Element with ARIA attribute, where element isn't HTML or SVG
+  
+ ```html
+  <math aria-hidden="true"></math>
 ```

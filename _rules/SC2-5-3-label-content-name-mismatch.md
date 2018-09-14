@@ -31,8 +31,6 @@ This rule applies to any element that has:
 
 The complete [visible text content](#visible-text-content) of the target element either matches or is contained within its [accessible name](#accessible-name).
 
-**Note**: Leading and trailing whitespace and difference in case sensitivity should be ignored.
-
 ## Assumptions
 
 _There are currently no assumptions_

@@ -30,7 +30,7 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-When a required owned element is not an immediate child, but rather a nested descendant, certain AT have issues recognizing the owned element.
+When a required owned element is not a child, but rather a descendant, certain AT have issues recognizing the owned element.
 
 ## Background
 

@@ -5,10 +5,11 @@ description: |
 	The rule checks that a role has at least one of its required owned elements.
 
 success_criterion:
-- 1.3.1
+- 1.3.1 # Info and Relationships (A)
 
 test_aspects:
 - DOM Tree
+- CSS Styling
 
 authors:
 - Audrey Maniez
@@ -19,11 +20,14 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has an explicit [semantic role](#semantic-role).
+The rule applies to any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has an explicit [semantic role](#semantic-role) that has [required owned elements](https://www.w3.org/TR/wai-aria-1.1/#mustContain) listed for that role in [WAI-ARIA](https://www.w3.org/TR/wai-aria).
 
 ### Expectation
 
 For each test target at least one instance of one [required owned element](https://www.w3.org/TR/wai-aria-1.1/#mustContain) listed for that role in [WAI-ARIA](https://www.w3.org/TR/wai-aria) is present as a [semantic role](#semantic-role) for an element [owned](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element) by the test target.
+
+**Note:**
+- When a widget is missing required owned elements due to script execution or loading, authors [MUST]((w3.org/TR/wai-aria-1.1/#mustContain)) mark a containing element with `aria-busy` equal to `true`.
 
 ## Assumptions
 
@@ -31,13 +35,14 @@ For each test target at least one instance of one [required owned element](https
 
 ## Accessibility Support
 
-When a required owned element is not an immediate child, but rather a nested descendant, certain AT have some issues recognize child in that configuration which can be negated by defining a valid role for intermediate elements.
+When a required owned element is not an immediate child, but rather a nested descendant, certain AT have issues recognizing the owned element.
 
 ## Background
 
 - [Required Owned Element](https://www.w3.org/TR/wai-aria-1.1/#mustContain)
 - [Owned Element](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element)
 - [HTML in ARIA](https://www.w3.org/TR/html-aria/)
+- [Implicit WAI-ARIA Semantics](https://www.w3.org/TR/wai-aria-1.1/#implicit_semantics)
 
 ## Test Cases
 
@@ -45,7 +50,7 @@ When a required owned element is not an immediate child, but rather a nested des
 
 #### Passed example 1
 
-Element `ul` with role `list` has atleast one child node `span` with the required owned element `listitem` as an explicit semantic role.
+Element `ul` with role `list` has at least one child node `span` with the required owned element `listitem` as an explicit semantic role.
 
 ```html
 <ul role='list'>
@@ -151,6 +156,17 @@ Nested required owned element(s) using the `containing` notation for respective 
 </div>
 ```
 
+#### Passed example 8
+
+Element `div` with `list` role  contains a required owned element with implicit role of `listitem`.
+
+```html
+<div role='list'>
+   <li>
+   </li>
+</div>
+```
+
 ### Failed
 
 #### Failed example 1
@@ -177,7 +193,7 @@ Element with role `tablist` is missing required owned element `tab`.
 
 #### Failed example 3
 
-Nested required owned element(s) missing role(s).
+Element with role grid is missing required owned element rowgroup, even though the containing required owned element is present.
 
 ```html
 <div role="grid">

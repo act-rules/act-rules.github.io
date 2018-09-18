@@ -94,7 +94,9 @@ module Jekyll
 
 			# copy test case files
 			FileUtils.copy_entry PKG['config']['testcases-embeds-dir'], PKG['config']['testcases-export-dir'] + '/assets'
-
+			# copy test case assets
+			FileUtils.copy_entry PKG['config']['testcases-assets-dir'], PKG['config']['testcases-export-dir'] + '/' + PKG['config']['testcases-assets-dir']
+			
 			# create a zip file of the same
 			compress(PKG['config']['testcases-export-dir'])
 
@@ -153,7 +155,6 @@ module Jekyll
 				end
 			end
 		
-
 			all_indices = get_code_tag_line_indices(document)
 			indices =  all_indices[0]
 			spread_indices = all_indices[1]

@@ -1,7 +1,7 @@
 ---
 name: Image accessibile name is placeholder text
 description: |
-	This rule checks for images using generic placeholder text.
+	This rule checks for images that use generic placeholder text.
 
 success_criterion:
 - 1.1.1 # Non-text Content
@@ -16,11 +16,11 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML `img` elements, exposed to assistive technologies, with a non-empty `alt` attribute that is equal to the accessible name.
+The rule applies to any HTML `img` element that is exposed to assistive technologies, where the element has a non-empty `alt` attribute that is equal to the accessible name of the element.
 
 ### Expectation
 
-Each test target `alt` attribute does not use [placeholder text](#placeholder-text) to describe the purpose of the image.
+Each test target has an `alt` attribute that does not use [placeholder text](#placeholder-text) to describe the purpose of the image.
 
 ## Assumptions
 

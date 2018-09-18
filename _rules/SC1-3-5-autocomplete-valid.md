@@ -112,7 +112,7 @@ Autocomplete using section-*
 Triple autocomplete terms.
 
 ```html
-<input type="text" autocomplete="section-primary billing street-address />
+<input type="text" autocomplete="section-primary billing street-address" />
 ```
 
 #### Pass example 7

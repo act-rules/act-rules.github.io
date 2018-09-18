@@ -196,9 +196,9 @@ module Jekyll
 					# code-snippet and iframe embedded
 					embedded_testcases_hash[indices[$i].to_s] = render_code_and_frame(file_content, file_url, should_not_render_frame)
 					testcase_url = file_url.gsub('../_testcases-embeds/', 'assets/')
-					testcase_selector = ["*"]
+					testcase_selector = "body > :first-child"
 					if file_content.include? "data-rule-target"
-						testcase_selector = ["*[data-rule-target]"]
+						testcase_selector = "*[data-rule-target]"
 					end
 				
 					tc_meta = {}
@@ -237,7 +237,8 @@ module Jekyll
 					t['url'] = "#{PKG['config']['site-url-prefix']}/#{PKG['config']['testcases-export-dir']}#{meta["url"]}" 
 					t['relativeUrl'] = meta["url"]
 					t['successCriteria'] = meta["successCriteria"]
-					t[tc_type.to_s] = meta["selector"]
+					t['selector'] = meta["selector"]
+					t['expected'] = tc_type.to_s
 					t['ruleId'] = rule_id
 					t['rulePage'] = "#{PKG['config']['site-url-prefix']}/rules/#{rule_id}.html"
 					# push to export tests

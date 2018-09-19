@@ -144,5 +144,5 @@ The `lang` and `xml:lang` attribute specified has an empty value.
 The rule does not apply to `svg` element.
 
 ```html
-<svg lang="en">
+<svg lang="en"></svg>
 ```

@@ -114,7 +114,7 @@ Valid `title` provided.
     <title>Title of the page.</title>
   </head>
   <body>
-     <title> <!-- empty title --> </title> 
+     <title></title> 
   </body>
 </html>
 ```
@@ -137,7 +137,7 @@ Empty `title`.
 
 ```html
 <html>
-  <title> <!-- this page has an empty title --> </title>
+  <title></title>
 </html>
 ```
 
@@ -158,7 +158,7 @@ Empty first `title`.
 ```html
 <html>
   <head>
-    <title> <!-- this page has an empty first title --> </title>
+    <title></title>
   </head>
   <body>
     <title>Title of the page.</title>

@@ -83,7 +83,7 @@ No accessible name
 
 Non-image element with image role but no accessible name.
 ```html
-<div role="image"></div>
+<div role="img"></div>
 ```
 
 #### Fail example 3

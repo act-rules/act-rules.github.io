@@ -24,7 +24,7 @@ A play button is an interactive element that when activated, plays the audio. Th
 
 ### Expectation 1
 
-The auditory information of each test target is available as text (directly or via text alternatives) that is [visible on the page](#visible-on-the-page) and [exposed to assistive technolgies](#exposed-to-assistive-technologies).
+The auditory information of each test target is available as text (directly or via text alternatives) that is [visible on the page](#visible-on-the-page) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation 2
 

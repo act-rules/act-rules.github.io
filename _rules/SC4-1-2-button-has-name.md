@@ -20,7 +20,7 @@ authors:
 
 ### Applicability
 
-The rule applies to elements that are [visible on the page](#visible-on-the-page) or [exposed to assistive technologies](#exposed-to-assistive-technologies) with the [semantic role](#semantic-role) of `button`, except for `input` elements of `type="image"`.
+The rule applies to elements that are [visible on the page](#visible-on-the-page) or [included in the accessibility tree](#included-in-the-accessibility-tree) with the [semantic role](#semantic-role) of `button`, except for `input` elements of `type="image"`.
 
 ### Expectation
 

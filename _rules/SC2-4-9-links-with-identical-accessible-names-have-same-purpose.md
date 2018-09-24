@@ -36,7 +36,7 @@ When activated, the links in each set of target elements resolve to resources th
 
 **Note:** If the same content is presented in different formats, the format itself is often part of the link purpose, e.g. an article as both HTML and PDF.
 
-**Note:** If the [normalized](#url-normalization) value of the ´href´ is identical, the resources are identical, thus fulfilling the same purpose. [Relative URLs](https://www.w3.org/TR/WD-html40-970917/htmlweb.html#relative-urls) first need to be resolved to full URLs before doing the comparison.
+**Note:** If the [normalized](#url-normalisation) value of the ´href´ is identical, the resources are identical, thus fulfilling the same purpose. [Relative URLs](https://www.w3.org/TR/WD-html40-970917/htmlweb.html#relative-urls) first need to be resolved to full URLs before doing the comparison.
 
 ## Assumptions
 
@@ -49,7 +49,7 @@ There are no major accessibility support issues known for this rule.
 ## Background
 
 - [Understanding Success Criterion 2.4.9: Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html)
-- [URL normalization](#url-normalization)
+- [URL normalization](#url-normalisation)
 
 ## Test Cases
 

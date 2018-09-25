@@ -88,7 +88,7 @@ Visible label doesn't match accessible name.
 Not all of visible label is included in accessible name.
 
 ```html
-<button name="link" aria-label="the full">The full label</div>
+<button name="link" aria-label="the full">The full label</button>
 ```
 
 ### Inapplicable 

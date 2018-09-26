@@ -17,11 +17,9 @@ authors:
 ## Test procedure
 
 ### Applicability
-
-The rule applies to any HTML `img` element that is exposed to assistive technologies, where the element has a non-empty `alt` attribute that is equal to the accessible name of the element, and where the `alt` attribute of the element references the file name and extension of the `src` attribute of the element.
+The rule applies to any HTML `img` element that is exposed to assistive technologies, where the `alt` attribute of the element contains the file name specified in the `src` attribute of the element.
 
 ### Expectation
-
 Each test target has an `alt` attribute that serves as an appropriate text alternative as described in [F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)](https://www.w3.org/TR/WCAG20-TECHS/F30.html).
 
 ## Assumptions
@@ -57,8 +55,23 @@ The accessible name is the image file name and does not serve as an appropriate 
 
 ### Inapplicable example 1
 
-No reference to a file extension or file path in the accessible name.
+Mot exposed to assisstive technologies.
 
 ```html
-<img src="/example.pdf" alt="an example of a PDF file">
+<img role="presentation">
+```
+### Inapplicable example 1
+
+Image is not exposed to assisstive technologies.
+
+```html
+<img src="/image.jpg" alt="">
+
+```
+### Inapplicable example 2
+
+Image alt does not contain the image filename.
+
+```html
+<img src="/image.jpg" alt="blue sky">
 ```

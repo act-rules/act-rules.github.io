@@ -1,7 +1,7 @@
 ---
-name: accessible name is image file name
+name: image alt contains image file name
 description: |
-  This rule checks that the accessible name of an image is not its file name.
+  This rule checks that an image alt appropriately contains its file name.
 
 success_criterion:
 - 1.1.1 # Non-Text Content

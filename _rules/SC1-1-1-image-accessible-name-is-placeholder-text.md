@@ -1,7 +1,7 @@
 ---
 name: Image accessible name is placeholder text
 description: |
-	This rule checks that the accessible name of an image is not a generic placeholder text.
+  This rule checks that the accessible name of an image is not a generic placeholder text.
 
 success_criterion:
 - 1.1.1 # Non-text Content

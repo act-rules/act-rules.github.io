@@ -39,7 +39,7 @@ Each test target has an `alt` attribute that serves as an appropriate text alter
 
 ### Pass example 1
 
-Image depicting a PDF file format, uses the .pdf extension in the accessible name.
+Image alt contains the image file name.
 
 ```html
 <img scr="/example.pdf" alt="an example of a .pdf file">

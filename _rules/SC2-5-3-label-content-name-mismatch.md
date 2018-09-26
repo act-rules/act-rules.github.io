@@ -70,7 +70,7 @@ Character insensitivity between visible label and accessible name.
 Full visible label is contained in the accessible name.
 
 ```html
-<button name="link" aria-label="Next Page in the list">Next Page</div>
+<button name="link" aria-label="Next Page in the list">Next Page</button>
 ```
 
 ### Failed
@@ -80,7 +80,7 @@ Full visible label is contained in the accessible name.
 Visible label doesn't match accessible name.
 
 ```html
-<div role="link" aria-label="OK">Next</a>
+<div role="link" aria-label="OK">Next</div>
 ```
 
 #### Fail example 2
@@ -106,7 +106,7 @@ Not a widget role.
 Widget role that does not support name from content.
 
 ```html
-<input type="email" aria-label="E-mail">Contact</input>
+<input type="email" aria-label="E-mail" value='Contact'>
 ```
 
 #### Inapplicable example 3
@@ -114,7 +114,7 @@ Widget role that does not support name from content.
 Non-widget role that supports name from content.
 
 ```html
-<div role="tooltip" aria-label="OK">Next</a>
+<div role="tooltip" aria-label="OK">Next</div>
 ```
 
 #### Inapplicable example 4
@@ -122,7 +122,7 @@ Non-widget role that supports name from content.
 No rendered text in name from content.
 
 ```html
-<div role="tooltip" aria-label="OK"></a>
+<div role="tooltip" aria-label="OK"></div>
 ```
 
 #### Inapplicable example 5

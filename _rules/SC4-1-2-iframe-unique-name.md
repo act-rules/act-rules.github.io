@@ -153,3 +153,25 @@ Does not apply to non `iframe` elements.
 <object aria-label="List of Contributors Clone" src="../test-assets/SC4-1-2-iframe-unique-name-doc3.html">
 </object>
 ```
+
+#### Inapplicable example 4
+
+No accessible name is provided
+
+```html
+<iframe src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
+</iframe>
+<iframe src="../test-assets/SC4-1-2-iframe-unique-name-doc3.html">
+</iframe>
+```
+
+#### Inapplicable example 5
+
+Does not apply to `iframe` elements that are not exposed to assistive technologies.
+
+```html
+<iframe aria-hidden="true" title="Document One" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
+</iframe>
+<iframe aria-hidden="true" aria-label="Document One" src="../test-assets/SC4-1-2-iframe-unique-name-doc3.html">
+</iframe>
+```

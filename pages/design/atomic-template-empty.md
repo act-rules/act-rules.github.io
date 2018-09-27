@@ -6,13 +6,13 @@ description: |
   This rule checks ...
 
 success_criterion:
-- x.x.x
+- x.x.x # (Name of Success Criterion)
 
 test_aspects:
-- 
+- # (e.g. HTTP Messages, DOM Tree, CSS Styling, Accessibility Tree, Language, etc.,)
 
 authors:
--
+- # (full names as found in /_data/contributors.yml@master - if not yet listed, please have authors added to the list)
 ---
 
 ## Test Procedure
@@ -35,13 +35,13 @@ Each target element ...
 
 ## Background
 
-- 
+- (e.g. WCAG Techniques or links with background information mentioned in Applicability, Expectations or Assumptions)
 
 ## Test Cases
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 Description...
 
@@ -49,13 +49,13 @@ Description...
 <!-- code -->
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 ...
 
 ### Failed
 
-#### Failure example 1
+#### Failed example 1
 
 Description...
 
@@ -63,7 +63,7 @@ Description...
 <!-- code -->
 ```
 
-#### Failure example 2
+#### Failed example 2
 
 ...
 

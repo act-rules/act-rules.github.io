@@ -104,8 +104,8 @@ Briefly describe why the html code snippet is inapplicable
 
 ````
 
-## Composed rules
+## Composite rules
 
-Composed rules are rules that take results from different rules and through some logic come to a single result. For example: SC 1.2.3 allows video to pass with either a transcript, an audio description, or if it is a media alternative. Each of these would be atomic rules, that are used in a composed rule. The composed rule than describes that at least one of these must pass for the composed rule to pass.
+Composite rules are rules that take results from different rules and through some logic come to a single result. For example: SC 1.2.3 allows video to pass with either a transcript, an audio description, or if it is a media alternative. Each of these would be atomic rules, that are used in a composite rule. The composite rule than describes that at least one of these must pass for the composite rule to pass.
 
-For more about composed rules, see the [ACT Rules Format](https://www.w3.org/TR/act-rules-format/#composed-rules). To create a composed rule, use the [empty composed rule template](./composed-template-empty.html).
+For more about composite rules, see the [ACT Rules Format](https://www.w3.org/TR/act-rules-format/#composed-rules). To create a composite rule, use the [empty composite rule template](./composite-template-empty.html).

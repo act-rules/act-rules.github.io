@@ -1,17 +1,17 @@
 ---
 name:
-rule_type: composed
+rule_type: composite
 description: |
   This rule checks ...
 
 success_criterion:
-- x.y.z
+- x.x.x # (Name of Success Criterion)
 
 atomic_rules:
 - 
 
 authors:
--
+- # (full names as found in /_data/contributors.yml@master - if not yet listed, please have authors added to the list)
 ---
 
 ## Aggregation Definition
@@ -22,9 +22,8 @@ The rule applies to any (??) element ...
 
 ### Expectation
 
-For each test target, the outcome of << Logic here >>:
-
-- 
+For each test target, the outcome of (at least one of / all of / any of etc.) the following rules is (passed / failed / etc.):
+- (list atomic rules that are used in this composite rule)
 - 
 
 ## Assumptions
@@ -37,14 +36,14 @@ For each test target, the outcome of << Logic here >>:
 
 ## Background
 
-- 
+- - (e.g. WCAG Techniques or links with background information mentioned in Applicability, Expectations or Assumptions)
 
 
 ## Test Cases
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 Description...
 
@@ -52,13 +51,13 @@ Description...
 <!-- code -->
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 ...
 
 ### Failed
 
-#### Failure example 1
+#### Failed example 1
 
 Description...
 
@@ -66,7 +65,7 @@ Description...
 <!-- code -->
 ```
 
-#### Failure example 2
+#### Failed example 2
 
 ...
 

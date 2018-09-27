@@ -16,7 +16,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML element with the semantic role of `img` that is exposed to assistive technologies, where the element has a non-empty accessible name.
+The rule applies to any HTML element with the [semantic role](#semantic-role) of `img` that is [exposed to assistive technologies](#exposed-to-assistive-technologies), where the element has a [non-empty](#non-empty) [accessible name](#accessible-name).
 
 ### Expectation
 
@@ -24,7 +24,7 @@ Each test target accessible name does not use [placeholder text](#placeholder-te
 
 ## Assumptions
 
-*There are currently no assumptions.
+*There are currently no assumptions.*
 
 ## Accessibility support
 
@@ -38,23 +38,23 @@ Each test target accessible name does not use [placeholder text](#placeholder-te
 
 ### Pass example 1
 
-alt text acurately describing the image of a Twitter icon.
+Accessible name text acurately describing the image.
 
 ```html
-<img src="/twitter_largeicon.png" alt="twitter">
+<img src="https://www.w3.org/WAI/demos/bad/after/img/weather.png" alt="sun amd cloud weather graphic">
 ```
 
 ### Failure example 1
 
-Generic alt text that does not describe the purpose of the image.
+Generic accessible name text that does not describe the purpose of the image.
 
 ```html
-<img src="/twitter_largeicon.png" alt="image">
+<img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg.png" alt="image">
 ```
 
 ### Inapplicable example 1
 
-Marked decorative with alt attribute
+Marked decorative.
 
 ```html
 <img src="/background.png" alt="">
@@ -62,7 +62,7 @@ Marked decorative with alt attribute
 
 ### Inapplicable example 2
 
-Marked decorative with role="presentation"
+Marked decorative.
 
 ```html
 <img src="/background.png" role="presentation">

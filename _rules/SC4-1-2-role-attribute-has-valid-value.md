@@ -3,7 +3,7 @@ name: Role attribute has valid value
 test_type: atomic
 
 description: |
-   This rule checks that, elements with a role attribute have valid values
+   This rule checks that elements with a role attribute have valid values
    
 success_criterion:
 - 4.1.2 # Name, Role, Value
@@ -31,7 +31,9 @@ Each test target has at least one valid value as specified in the [WAI-ARIA 1.1,
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+Older browsers do not support fallback roles. If multiple roles are used in the role attribute, the attribute is ignored.
+
+At the moment, none of the major assistive technologies support all roles.
 
 ## Background
 
@@ -56,26 +58,16 @@ Element with valid `role` value.
 Element with multiple valid `role` value.
  
 ```html
-<span role="button command" ng-click='$ctrl.doSomething()'></span>
+<span role="button link"></span>
 ```
 
 #### Passed example 3
- 
-Element with valid `role` value.
- 
-```html
-<div role="dialog" aria-busy="true" aria-modal></div>
-```
-
-#### Passed example 2
  
 Element with at least one valid `role` value.
  
 ```html
 <img role="presentation xyz" src="">
 ```
-
-
 
 ### Failed
 
@@ -99,13 +91,21 @@ Element with multiple invalid `role` value.
 
 #### Inapplicable example 1
 
+Element with empty `role` attribute.
+
+```html
+<div role=" ">Some Content</div>
+```
+
+#### Inapplicable example 2
+
 Element does not have `role` attribute.
 
 ```html
 <div>Some Content</div>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable example 3
 
 Element with null `role` attribute.
 

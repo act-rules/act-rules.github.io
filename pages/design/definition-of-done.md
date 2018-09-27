@@ -13,6 +13,7 @@ Sticking to the Definition of "Done" ensures a high quality in rules published b
 The Definition of "Done" is a living document, and might change as the rule writing community develops and matures.
 
 ## The Definition of "Done"
+
 - The relation between the rule and its accessibility requirements is as described in the [ACT Rules Format](https://www.w3.org/TR/act-rules-format/) under [Accessibility Requirements](https://www.w3.org/TR/act-rules-format/#structure-accessibility-requirements). 
     - Remember to also check that the rule is in line with supporting documentation, e.g. [Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/) and [Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG-TECHS/)
 - Applicability (for [atomic](https://www.w3.org/TR/act-rules-format/#test-applicability) / [composed rules](https://www.w3.org/TR/act-rules-format/#aggregation-applicability)) and Expectations (for [atomic](https://www.w3.org/TR/act-rules-format/#test-expectations) / [composed rules](https://www.w3.org/TR/act-rules-format/#aggregation-expectations)) live up to the requirements for these sections in the [ACT Rules Format](https://www.w3.org/TR/act-rules-format/)

@@ -19,7 +19,10 @@ authors:
 
 ### Applicability
 
-The rule applies to `iframe` elements within a given [document context](#document-context) and [exposed to assistive technologies](#exposed-to-assistive-technologies) that have a [non-empty](#non-empty) accesible name.
+The rule applies to `iframe` elements within a given [document context](#document-context) and [exposed to assistive technologies](#exposed-to-assistive-technologies) that have a [non-empty](#non-empty) accessible name.
+
+**Note:** 
+- Nested `iframe` contents treat the parent `iframe` element as the [document context](#document-context).
 
 ### Expectation
 
@@ -85,6 +88,32 @@ Multiple `iframe` elements in the document having different `aria-labelledby` de
 <iframe aria-labelledby="desc-for-title1" src="../test-assets/SC4-1-2-iframe-unique-name-doc2.html">
 </iframe>
 ```
+
+#### Pass example 5
+
+`frames` having the same `title` within a given document context, but one of them is not exposed to assistive technologies.
+
+```html
+<iframe aria-hidden="true" title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
+</iframe>
+<iframe title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc2.html">
+</iframe>
+```
+
+
+#### Pass example 5
+
+`frames` are allowed to have the same `title` across different document contexts.
+
+```html
+<iframe title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
+</iframe>
+<iframe title="List of Contributors 2" src="../test-assets/SC4-1-2-iframe-unique-name-doc2.html">
+  <iframe title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
+  </iframe>
+</iframe>
+```
+
 
 ### Failed
 

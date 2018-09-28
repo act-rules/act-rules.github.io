@@ -142,9 +142,9 @@ Does not apply to non `iframe` element.
 
 #### Inapplicable example 2
 
-Usage of `aria-hidden="true"` does not expose `iframe` to [assistive technologies](#exposed-to-assistive-technologies).
+`iframe` is not exposed to assistive technologies.
 
 ```html
-<iframe aria-hidden="true" src="../test-assets/SC4-1-2-frame-doc.html">
+<iframe style="display:none;" src="../test-assets/SC4-1-2-frame-doc.html">
 </iframe>
 ```

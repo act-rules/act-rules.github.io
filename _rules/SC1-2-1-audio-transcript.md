@@ -1,11 +1,8 @@
 ---
-name: audio elements captions
+name: audio elements transcript
 
 description: |
-  Non-streaming `audio` elements must have a text alternative or captions for all included auditory information.
-
-success_criterion:
-- 1.2.2
+  Non-streaming `audio` elements must have a text alternative for all included auditory information.
 
 test_aspects:
 - DOM Tree
@@ -27,7 +24,7 @@ A play button is an interactive element that when activated, plays the audio. Th
 
 ### Expectation
 
-The auditory information of each test target is available through a caption, or through a [text transcript](#text-transcript) that is available either on the page or through a link.
+The auditory information of each test target is available through a [text transcript](#text-transcript) that is available either on the page or through a link.
 
 ## Assumptions
 
@@ -35,7 +32,7 @@ The auditory information of each test target is available through a caption, or 
 
 ## Accessibility support
 
-While the HTML specifications allows the use of `track` elements inside of `audio` elements, there is currently limited to no support for this in major web browsers.
+There are no major accessibility support issues known for this rule.
 
 ## Background
 

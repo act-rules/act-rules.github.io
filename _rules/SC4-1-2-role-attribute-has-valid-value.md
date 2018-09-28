@@ -3,13 +3,14 @@ name: Role attribute has valid value
 test_type: atomic
 
 description: |
-   This rule checks that elements with a role attribute have valid values
+   This rule checks that role attributes have valid values
    
 success_criterion:
 - 4.1.2 # Name, Role, Value
 
 test_aspects:
 - DOM Tree
+- CSS Styling
 
 authors:
 - Jey Nandakumar
@@ -31,7 +32,7 @@ Each test target has at least one valid value as specified in the [WAI-ARIA 1.1,
 
 ## Accessibility Support
 
-Older browsers do not support fallback roles. If multiple roles are used in the role attribute, the attribute is ignored.
+Older browsers do not support fallback roles. If multiple values are used in the role attribute, the attribute is ignored.
 
 At the moment, none of the major assistive technologies support all roles.
 
@@ -55,7 +56,7 @@ Element with valid `role` value.
 
 #### Passed example 2
  
-Element with multiple valid `role` value.
+Element with multiple valid `role` values.
  
 ```html
 <span role="button link"></span>
@@ -76,7 +77,7 @@ Element with at least one valid `role` value.
 Element with invalid `role` value.
 
 ```html
-<input role="dialog" value="123">
+<input role="invalid" value="123">
 ```
 
 #### Failed example 2
@@ -84,7 +85,7 @@ Element with invalid `role` value.
 Element with multiple invalid `role` value.
 
 ```html
-<input type="text" role="complementary contentinfo">
+<input type="text" role="invalid role">
 ```
 
 ### Inapplicable
@@ -111,4 +112,12 @@ Element with null `role` attribute.
 
 ```html
 <div role>Some Content</div>
+```
+
+#### Inapplicable example 4
+
+Element that is not exposed to assistive technologies.
+
+```html
+<div aria-hidden="true" role="banner">Some Content</div>
 ```

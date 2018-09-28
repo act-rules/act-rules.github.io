@@ -45,11 +45,8 @@ There are no major accessibility support issues known for this rule.
 ## Background
 
 - https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html
-- https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc.html
-- https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-text-doc.html
-- https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G78
-- https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G173
-- https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G203
+- https://www.w3.org/TR/WCAG20-TECHS/G159.html
+
 
 ## Test Cases
 

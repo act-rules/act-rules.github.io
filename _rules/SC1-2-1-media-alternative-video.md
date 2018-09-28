@@ -42,7 +42,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- 
+- https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html
 
 ## Test cases
 

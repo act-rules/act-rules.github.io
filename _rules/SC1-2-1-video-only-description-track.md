@@ -38,10 +38,8 @@ This means that the rule can only provide a pass for these succescriteria if acc
 
 ## Background
 
-- http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc.html
-- http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc-only.html
-- https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G78
-- https://www.w3.org/WAI/GL/2016/WD-WCAG20-TECHS-20160105/H96
+- https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html
+- https://www.w3.org/TR/WCAG20-TECHS/H96.html
 
 ## Test Cases
 

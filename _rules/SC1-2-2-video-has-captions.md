@@ -1,5 +1,5 @@
 ---
-name: video captions
+name: video has captions
 description: |
   Captions are available for audio information in non-streaming `video` elements.
 
@@ -25,13 +25,13 @@ The rule applies to any [non-streaming](#non-streaming) `video` element [visible
 
 ### Expectation
 
-For each test target, audio information that is not expressed visually in the video, is available through [captions](#captions).
+For each test target, audio information that is not conveyed visually in the video, is available through [captions](#captions).
 
 *Note*: Captions can be either embedded in the video file itself or can be made available trough a separate track.
 
 ## Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the poster.
+This rule assumes that the video element is used to play a video (for example, not only used to display an  image), and that there is a mechanism to start the video.
 
 ## Accessibility support
 

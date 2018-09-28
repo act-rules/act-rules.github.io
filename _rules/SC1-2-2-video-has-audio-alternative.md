@@ -1,7 +1,7 @@
 ---
-name: Vídeo audio alternative
+name: Vídeo has audio alternative
 description: |
-  This rule checks that video elements have an alternative for the auditive information.
+  This rule checks that video elements have an alternative for information conveyed through audio
 
 success_criterion:
 - 1.2.2
@@ -31,7 +31,7 @@ For each test target, the outcome of at least one of the following rules is pass
 
 ## Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the poster.
+This rule assumes that the video element is used to play a video (for example, not only used to display an image), and that there is a mechanism to start the video.
 
 ## Accessibility support
 
@@ -48,7 +48,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Pass example 1
 
-A video element with an associated track element that contain captions for all the audio.
+A video element with an associated track element that contains captions for all the audio.
 
 ```html
 <video src="../test-assets/perspective-video/perspective-video.mp4" controls>

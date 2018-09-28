@@ -19,7 +19,7 @@ authors:
 
 ### Applicability
 
-The rule applies to HTML `img` elements or any HTML element with the [semantic role](#semantic-role) of `img` that is exposed to assistive technologies.
+The rule applies to HTML `img` elements or any HTML element with the [semantic role](#semantic-role) of `img` that is [exposed to assistive technologies](#exposed-to-assistive-technologies).
 
 ### Expectation
 
@@ -58,7 +58,7 @@ Image has accessible name
 Non-image element with image role and accessible name
 
 ```html
-<div role="image" aria-label="W3C logo"></div>
+<div role="img" aria-label="W3C logo"></div>
 ```
 
 #### Pass example 3

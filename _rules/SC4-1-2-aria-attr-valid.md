@@ -51,7 +51,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Pass example 1
 
-A valid ARIA1.1 attribute `aria-atomic` is used on element `article`.
+A valid ARIA 1.1 attribute `aria-atomic` is used on element `article`.
 
 ```html
 <article aria-atomic>This is a decription of something cool...</article>
@@ -59,7 +59,7 @@ A valid ARIA1.1 attribute `aria-atomic` is used on element `article`.
 
 #### Pass example 2
 
-A valid ARIA1.1 attribute `aria-modal` on element `div` with role `dialog`
+A valid ARIA 1.1 attribute `aria-modal` on element `div` with role `dialog`
 
 ```html
 <div role="dialog" aria-modal>Contains modal content...</div>
@@ -67,7 +67,7 @@ A valid ARIA1.1 attribute `aria-modal` on element `div` with role `dialog`
 
 #### Pass example 3
 
-A valid ARIA1.1 attribute `aria-live` on element with role `alert`
+A valid ARIA 1.1 attribute `aria-live` on element with role `alert`
 
 ```html
 <div role="alert" aria-live="assertive">Your session will expire in 60 seconds.</div>
@@ -75,7 +75,7 @@ A valid ARIA1.1 attribute `aria-live` on element with role `alert`
 
 #### Pass example 4
 
-Muliple valid ARIA1.1 attributes `aria-*` are specified on element `input` with role `spinbutton`
+Muliple valid ARIA 1.1 attributes `aria-*` are specified on element `input` with role `spinbutton`
 
 ```html
 <input
@@ -91,7 +91,7 @@ Muliple valid ARIA1.1 attributes `aria-*` are specified on element `input` with 
 
 #### Fail example 1
 
-`aria-not-checked` is not a defined attribute in ARIA1.1.
+`aria-not-checked` is not a defined attribute in ARIA 1.1.
 
 ```html
 <li role="menuitemcheckbox" aria-not-checked="true">List Item</li>
@@ -99,7 +99,7 @@ Muliple valid ARIA1.1 attributes `aria-*` are specified on element `input` with 
 
 #### Fail example 2
 
-`aria-labelled` is not a defined attribute in ARIA1.1.
+`aria-labelled` is not a defined attribute in ARIA 1.1.
 
 ```html
 <span id="label">Birthday:</span>
@@ -110,9 +110,9 @@ Muliple valid ARIA1.1 attributes `aria-*` are specified on element `input` with 
 
 #### Inapplicable example 1
 
-`aria-rowcount` not applicable to element `canvas`, and also `aria-rowcount` needs a context role of `grid`.
+Element with out `aria-*` attribute.
 
 ```html
-<canvas aria-rowcount="2000">
+<canvas>
 <canvas>
 ```

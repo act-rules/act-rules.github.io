@@ -18,15 +18,18 @@ authors:
 
 ### Applicability
 
-Any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) with an attribute that starts with `aria-`.
+Any attribute that starts with `aria-`.
 
 ### Expectation
 
-Each target element that has an attribute which starts with `aria-` is defined in ARIA 1.1.
+Each target attribute which starts with `aria-` is defined in [WAI ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/).
 
 ## Assumptions
 
-*There are currently no assumptions*
+`aria-` attributes are used to provide assistive technologies with accessibility information. This rule does not cater to any custom `aria-` attribute that does not fall under the [WAI ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) specification.
+
+This 
+If someone decides to make up their own `aria-` attribute and do some scripting to do other stuff with it, this rule won't account for that.
 
 ## Accessibility Support
 
@@ -39,7 +42,8 @@ There are no major accessibility support issues known for this rule.
 - [http://www.w3.org/TR/WCAG20-TECHS/G108](http://www.w3.org/TR/WCAG20-TECHS/G108)
 - [http://oaa-accessibility.org/examples/](http://oaa-accessibility.org/examples/)
 - [http://www.w3.org/TR/WCAG20/#ensure-compat-rsv](http://www.w3.org/TR/WCAG20/#ensure-compat-rsv)
--[https://developers.google.com/web/fundamentals/accessibility/semantics-aria/](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/)
+- [https://developers.google.com/web/fundamentals/accessibility/semantics-aria/](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/)
+- [WAI ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/)
 
 ## Test cases
 

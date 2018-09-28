@@ -51,42 +51,42 @@ See [Video element description track: accessibility support](SC1-2-Video-descrip
 
 ## Test Cases
 
-### Pass example 1
+#### Pass example 1
 
 A video element with a voiceover that describes the visual information.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/video-with-voiceover.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/video-with-voiceover.webm" type="video/webm"></source>
+  <source src="../test-assets/rabbit-video/video-with-voiceover.mp4" type="video/mp4"/>
+  <source src="../test-assets/rabbit-video/video-with-voiceover.webm" type="video/webm"/>
 </video>
 ```
 
-### Pass example 2
+#### Pass example 2
 
 A video element with a link to a text transcript.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"/>
 </video>
 <a href="/test-assets/rabbit-video-transcript.html">Transcript</p>
 ```
 
-### Pass example 3
+#### Pass example 3
 
 A video element with a track element that contains descriptions.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
-  <track kind="descriptions" src="rabbit-video-descriptions.vtt">
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"/>
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"/>
+  <track kind="descriptions" src="rabbit-video-descriptions.vtt"/>
 </video>
 ```
 
-### Pass example 4
+#### Pass example 4
 
 A video element that describes some of the text on the same page. The text on the page labels the video as an alternative.
 
@@ -100,42 +100,44 @@ A video element that describes some of the text on the same page. The text on th
 </video>
 ```
 
-### Failure example 1
+### Failed
+
+#### Fail example 1
 
 A video element with an incorrect audio description.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm"></source>
+  <source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4"/>
+  <source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm"/>
 </video>
 ```
 
-### Failure example 2
+#### Fail example 2
 
 A video element with a link to an incorrect text transcript on a different page.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 <a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</p>
 ```
 
-### Failure example 3
+#### Fail example 3
 
 A video element with a track element that contains incorrect descriptions.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
   <track kind="descriptions" src="rabbit-video-incorrect-descriptions.vtt">
 </video>
 ```
 
-### Failure example 4
+#### Fail example 4
 
 A video element that describes some of the text on the same page. The video contains more information than the text does.
 
@@ -146,25 +148,28 @@ A video element that describes some of the text on the same page. The video cont
   See the video below to watch the same information again in video form.</p>
 <video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls>
 </video>
+```
 
-### Inapplicable example 1
+### Inapplicable
+
+#### Inapplicable example 1
 
 A video element without audio.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
+  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
 </video>
 ```
 
-### Inapplicable example 2
+#### Inapplicable example 2
 
 A video element that is not visible on the page.
 
 ```html
 <video controls style="display: none;">
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```

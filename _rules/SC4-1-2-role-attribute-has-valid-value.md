@@ -24,7 +24,7 @@ Any [non-empty](#non-empty) `role` attribute that is placed on an HTML or SVG el
 
 ### Expectation
 
-Each test target has at least one valid value as specified in the [WAI-ARIA 1.1, roles](https://www.w3.org/TR/wai-aria-1.1/#roles_categorization).
+Each test target has at least one non-abstract valid value as specified in the [WAI-ARIA 1.1, roles](https://www.w3.org/TR/wai-aria-1.1/#roles_categorization).
 
 ## Assumptions
 

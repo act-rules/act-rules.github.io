@@ -29,7 +29,7 @@ Each target element has an [accessible name](#accessible-name) that is [non-empt
 
 ## Assumptions
 
-- The rule assumes that the target `iframe` is used as an user interface component.
+- The rule assumes that the target `iframe` is used as an [user interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components).
 
 ## Accessibility Support
 
@@ -40,6 +40,7 @@ _There are no major accessibility support issues known for this rule._
 - [H64: Using the title attribute of the frame and iframe elements](http://www.w3.org/TR/WCAG20-TECHS/H64.html)
 - [Understanding Success Criterion 4.1.2 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
 - [Understanding Success Criterion 2.4.1 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
+- [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)
 
 ## Test cases
 
@@ -56,7 +57,7 @@ Usage of `title` attribute to describe the `iframe` content.
 
 #### Pass example 2
 
-Usage of `aria-label` attribute to describe the `frame` content.
+Usage of `aria-label` attribute to describe the `iframe` content.
 
 ```html
 <iframe aria-label="Advertisement of tours to Great Wall of China" src="../test-assets/SC4-1-2-frame-doc.html" >
@@ -86,7 +87,7 @@ Usage of `name` attribute to describe the `iframe` content is not valid.
 
 #### Fail example 2
 
-`iframe` with no `title`/`aria-label`/`aria-labelledby` attribute to describe content is not valid.
+`iframe` with no `title`, `aria-label` or `aria-labelledby` attribute to describe content is not valid.
 
 ```html
 <iframe src="../test-assets/SC4-1-2-frame-doc.html" >

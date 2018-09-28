@@ -19,7 +19,7 @@ authors:
 
 ### Applicability
 
-The rule applies to `iframe` elements within a given [document context](#document-context) and [exposed to assistive technologies](#exposed-to-assistive-technologies) that have a [non-empty](#non-empty) accessible name.
+The rule applies to `iframe` elements that are [exposed to assistive technologies](#exposed-to-assistive-technologies) and have a [non-empty](#non-empty) accessible name.
 
 **Note:** 
 - Nested `iframe` contents treat the parent `iframe` element as the [document context](#document-context).
@@ -94,26 +94,25 @@ Multiple `iframe` elements in the document having different `aria-labelledby` de
 `frames` having the same `title` within a given document context, but one of them is not exposed to assistive technologies.
 
 ```html
-<iframe aria-hidden="true" title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
+<iframe style="display:none;" title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
 </iframe>
 <iframe title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc2.html">
 </iframe>
 ```
 
 
-#### Pass example 5
+#### Pass example 6
 
-`frames` are allowed to have the same `title` across different document contexts.
+`iframes` are allowed to have the same `title` across different document contexts. In this example `iframe#level2-frame1` has a parent document content of `iframe#level1-frame2`, and does not share root `level1` document context.
 
 ```html
-<iframe title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
+<iframe id="level1-frame1" title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
 </iframe>
-<iframe title="List of Contributors 2" src="../test-assets/SC4-1-2-iframe-unique-name-doc2.html">
-  <iframe title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
+<iframe id="level1-frame2" title="List of Contributors 2" src="../test-assets/SC4-1-2-iframe-unique-name-doc2.html">
+  <iframe id="level2-frame1" title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
   </iframe>
 </iframe>
 ```
-
 
 ### Failed
 
@@ -199,8 +198,8 @@ No accessible name is provided
 Does not apply to `iframe` elements that are not exposed to assistive technologies.
 
 ```html
-<iframe aria-hidden="true" title="Document One" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
+<iframe style="display:none;" title="Document One" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
 </iframe>
-<iframe aria-hidden="true" aria-label="Document One" src="../test-assets/SC4-1-2-iframe-unique-name-doc3.html">
+<iframe style="display:none;" aria-label="Document One" src="../test-assets/SC4-1-2-iframe-unique-name-doc3.html">
 </iframe>
 ```

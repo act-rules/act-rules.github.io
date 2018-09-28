@@ -1,5 +1,5 @@
 ---
-name: audio described video element
+name: video element audio described
 description: |
   Non-streaming `video` elements must have all visual information also contained in the audio
 

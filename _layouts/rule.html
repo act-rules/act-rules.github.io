@@ -36,15 +36,16 @@ layout: default
   </p>
 {% endif %}
 
+
 {% if page.success_criterion %}
   <p>
     Success_criterion: 
     <ul>
-      {% for sc in page.success_criterion %}
-        {% assign c = site.data.criteria[sc] %}
+			{% for sc in page.success_criterion %}
+        {% assign c = site.data.sc-urls[sc] %}
         <li>
-          <a href="https://www.w3.org/TR/WCAG20/#{{ criterion.id }}">
-            {{ c.num }} ({{ c.handle }})
+          <a href="{{ c.url }}">
+            {{ c.num }} ({{ c.handle }}) - (Level: {{c.level}})
           </a>
         </li>
         {% if forloop.last == false %}, {% endif %}
@@ -63,18 +64,22 @@ layout: default
   <p>This conformance rule relates to:</p>
   <ul>
   {% for critId in page.success_criterion %}
-    {% assign criterion = site.data.criteria[critId] %}
+    {% assign criterion = site.data.sc-urls[critId] %}
     <li>
-      <a href="https://www.w3.org/TR/WCAG20/#{{ criterion.id }}">
+      <a href="{{ criterion.url }}">
         Success Criterion {{ criterion.num }} ({{ criterion.handle }})
       </a>
       <ul>
-        <li><a href="https://www.w3.org/WAI/WCAG20/quickref/#{{ criterion.id }}">
-          How to Meet {{ criterion.num }} ({{ criterion.handle }})
-        </a></li>
-        <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/{{ criterion.id }}.html">
-          Understanding Success Criterion {{ criterion.num }} ({{ criterion.handle }})
-        </a></li>
+        <li>
+					<a href="{{ criterion.howToMeetUrl }}">
+          	How to Meet {{ criterion.num }} ({{ criterion.handle }})
+					</a>
+				</li>
+        <li>
+					<a href="{{ criterion.understandingUrl }}">
+          	Understanding Success Criterion {{ criterion.num }} ({{ criterion.handle }})
+					</a>
+				</li>
       </ul>
     </li>
   {% endfor %}

@@ -6,17 +6,21 @@ title: Auto-WCAG Rules
 <table class="table table-striped">
   <thead>
     <tr>
+			<th width='3%'>#</th>
 			<th width='25%'>Name</th>
       <th>Description</th>
-      <th width='35%'>Meta Data</th>
+      <th width='35%'>WCAG Criterion</th>
     </tr>
 	</thead>
 	<!-- {% assign rulesAndDrafts = site.rules | concat: site.drafts | sort: 'name' %} -->
 	{% assign rulesAndDrafts = site.rules | sort: 'name' %}
   {% for rule in rulesAndDrafts %}
   <tr>
+		<td>
+			{{ forloop.index }}
+		</td>
     <td>
-			<a href="{{ rule.url | prepend: site.baseurl }}">{{rule.name}}</a>
+			<a class='rule-list-title' href="{{ rule.url | prepend: site.baseurl }}">{{rule.name}}</a>
 			{% if rule.draft %}
 				<p class="draft-note slim">Draft</p>
 			{% endif %}
@@ -24,33 +28,20 @@ title: Auto-WCAG Rules
     <td>
 			{{ rule.description }}
 		</td>
-    <td>
-			<table class="table">
-				<tr>
-					<th scope="row">Rule Id:</th>
-					<td>{{ rule.url | remove: "/rules/" | remove: ".html" }}</td>
-				</tr>
-				<tr>
-					<th scope="row" width='60px'>WCAG Criterion: </th>
-					<td>
-						<ul style="list-style: none; padding-left: 0;">
-							{% for criterion in rule.success_criterion %}
-								<li>
-									{% if site.data.criteria[criterion] %}
-										<a href="{{ site.data.criteria[criterion].url }}" target="_blank">
-										{{ site.data.criteria[criterion].num }}
-										{{ site.data.criteria[criterion].handle }}
-										(Level {{ site.data.criteria[criterion].level }})
-										</a>
-									{% else %}
-										{{ criterion }} (unknown)
-									{% endif %}
-								</li>
-							{% endfor %}
-						</ul>
-					</td>
-				</tr>
-			</table>
+		<td>
+			<ul style="list-style: none; padding-left: 0;">
+				{% for criterion in rule.success_criterion %}
+					<li>
+						{% if site.data.sc-urls[criterion] %}
+							<a href="{{ site.data.criteria[criterion].url }}" target="_blank">
+								{{ site.data.sc-urls[criterion].num }} {{ site.data.sc-urls[criterion].handle }} - (Level: {{ site.data.sc-urls[criterion].level }})
+							</a>
+						{% else %}
+							{{ criterion }} (unknown)
+						{% endif %}
+					</li>
+				{% endfor %}
+			</ul>
 		</td>
   </tr>
   {% endfor %}

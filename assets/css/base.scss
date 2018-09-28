@@ -36,7 +36,6 @@ a {
 
 
 pre {
-	border-radius: 0;
 	padding: 0;
 	background-color: none;
 	border-color: $light-grey;
@@ -156,16 +155,37 @@ select {
 
 .container {
 
-	h2 {
-		margin-top: 60px;
-	}
+	&.floating-header {
+		transition: 0.5s all;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		background-color: $white;
+		z-index: 1;
 
+		// adding drop shadow for floating header
+		&:after {
+			content: '';
+			position: absolute;
+			width: 200%;
+			height: 1px;
+			background-color: rgba(0, 0, 0, 0.15);
+			left: -50%;
+			box-shadow: 0px 1px 15px black;
+			z-index: -1;
+		}
+	}
 
 	.scale-2x{
 		transform: scale(2);
 	}
 	.scale-5x{
 		transform: scale(5);
+	}
+
+	.rule-list-title {
+		text-transform: capitalize;
 	}
 
 	.draft-note {
@@ -224,6 +244,7 @@ select {
 					}
 					iframe {
 						width: 100%;
+						border-radius: 4px;
 						border: 1px solid $light-grey;
 					}
 			}

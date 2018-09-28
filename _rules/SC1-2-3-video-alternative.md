@@ -43,14 +43,20 @@ See [Video element description track: accessibility support](SC1-2-Video-descrip
 
 ## Background
 
-- http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc.html
-- http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc-only.html
-- https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G78
-- https://www.w3.org/WAI/GL/2016/WD-WCAG20-TECHS-20160105/H96
-- https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G173
-- https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G8
+- [Understanding Success Criterion 1.2.5: Audio Description (Prerecorded)
+](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html)
+- [G78: Providing a second, user-selectable, audio track that includes audio descriptions
+](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G78)
+- [H96: Using the track element to provide audio descriptions
+](https://www.w3.org/WAI/GL/2016/WD-WCAG20-TECHS-20160105/H96)
+- [G173: Providing a version of a movie with audio descriptions
+](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G173)
+- [G8: Providing a movie with extended audio descriptions
+](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G8)
 
 ## Test Cases
+
+### Passed
 
 #### Pass example 1
 

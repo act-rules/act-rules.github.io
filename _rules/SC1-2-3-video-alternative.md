@@ -1,5 +1,6 @@
 ---
 name: video with audio has an accessible alternative
+rule_type: composite
 description: |
   This rule checks video elements with audio have an alternative available as audio or as text
 
@@ -17,7 +18,7 @@ authors:
 - Brian Bors
 ---
 
-## Aggregation Definition
+## Test Procedure
 
 ### Applicability
 
@@ -34,7 +35,7 @@ For each test target, the outcome of at least one of the following rules is pass
 
 ## Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the poster.
+This rule assumes that the video element is used to play a video (for example, not only used to display an image), and that there is a mechanism to start the video.
 
 ## Accessibility support
 

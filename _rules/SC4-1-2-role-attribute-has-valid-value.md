@@ -119,5 +119,5 @@ Element with null `role` attribute.
 Element that is not exposed to assistive technologies.
 
 ```html
-<div aria-hidden="true" role="banner">Some Content</div>
+<div style="display:none;" role="banner">Some Content</div>
 ```

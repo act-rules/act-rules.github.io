@@ -47,21 +47,41 @@ While HTML5 specification indicates that `xml:lang` attribute takes priority ove
 
 ## Passed
 
+#### Pass example 1
+
+The `lang` attribute specified has a non-empty value & a valid primary language subtag.
+
 ```html
 <html lang="fr">
 ```
+
+#### Pass example 2
+
+The `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
 
 ```html
 <html xml:lang="fr">
 ```
 
+#### Pass example 3
+
+The `lang` and `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
+
 ```html
 <html xml:lang="fr" lang="fr">
 ```
 
+#### Pass example 4
+
+The `lang` attribute specified has a non-empty value & a valid primary language subtag. The rule checks for the presence of either `lang` or `xml:lang`. Empty value specified for the other attribute is ignored.
+
 ```html
 <html lang="fr" xml:lang="">
 ```
+
+#### Pass example 5
+
+The `xml:lang` attribute specified has a non-empty value & a valid primary language subtag. The rule checks for the presence of either `lang` or `xml:lang`. Empty value specified for the other attribute is ignored.
 
 ```html
 <html lang="" xml:lang="nl">
@@ -69,13 +89,25 @@ While HTML5 specification indicates that `xml:lang` attribute takes priority ove
 
 ## Failed
 
+#### Fail example 1
+
+The `lang` attribute value is not a valid primary language subtag.
+
 ```html
 <html lang="xyz">
 ```
 
+#### Fail example 2
+
+The `xml:lang` attribute value is not a valid primary language subtag.
+
 ```html
 <html xml:lang="xyz">
 ```
+
+#### Fail example 3
+
+Both the `lang` and `xml:lang` value specified are not valid values for primary language subtag.
 
 ```html
 <html xml:lang="xyz" lang="xyz">
@@ -83,17 +115,33 @@ While HTML5 specification indicates that `xml:lang` attribute takes priority ove
 
 ## Inapplicable
 
+#### Inapplicable example 1
+
+The rule applies to `html` element and hence usage of `lang` attribute in `svg` element is not applicable.
+
 ```html
 <svg lang="fr">
 ```
+
+#### Inapplicable example 2
+
+The rule applies to `html` element and hence usage of `xml:lang` attribute in `svg` element is not applicable.
 
 ```html
 <svg xml:lang="fr">
 ```
 
+#### Inapplicable example 3
+
+An empty value for `lang` attribute is ignored by this rule, as the applicability specifies only non-empty values.
+
 ```html
 <html lang="">
 ```
+
+#### Inapplicable example 4
+
+An empty value for `xml:lang` attribute is ignored by this rule, as the applicability specifies only non-empty values.
 
 ```html
 <html xml:lang="">

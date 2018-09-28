@@ -11,8 +11,14 @@ layout: default
   {% assign status = "rule" %}
 {% endif %}
 
-{% if page.date %}
-  <p>Late updated: <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+{% if page.last-modified-timestamp %}
+  <p>Last updated: 
+		<time 
+			datetime="{{ page.last-modified-timestamp | date_to_xmlschema }}" 
+			itemprop="dateModified">
+			{{ page.last-modified-timestamp | date: "%b %-d, %Y" }}
+		</time>
+	</p>
 {% endif %}
 
 {% if page.authors %}
@@ -39,7 +45,7 @@ layout: default
 
 {% if page.success_criterion %}
   <p>
-    Success_criterion: 
+    Success Criterion: 
     <ul>
 			{% for sc in page.success_criterion %}
         {% assign c = site.data.sc-urls[sc] %}
@@ -47,8 +53,8 @@ layout: default
           <a href="{{ c.url }}">
             {{ c.num }} ({{ c.handle }}) - (Level: {{c.level}})
           </a>
+          {% if forloop.last == false %}, {% endif %}
         </li>
-        {% if forloop.last == false %}, {% endif %}
       {% endfor %}
     </ul>
   </p>

@@ -19,6 +19,7 @@ wcagData['principles'].forEach((p) => {
 			urls[sc.num] = {
 				num: sc.num,
 				url,
+				scId: sc.id,
 				howToMeetUrl,
 				understandingUrl,
 				handle: sc.handle,

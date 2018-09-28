@@ -46,105 +46,147 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
+#### Pass example 1
+
+Redirects immediately.
+
 ```html
-<!-- redirects immediately -->
   <head>           
-    <meta http-equiv="refresh" content="0; URL='https://auto-wcag.github.io/auto-wcag/'" />    
+    <meta data-rule-target http-equiv="refresh" content="0; URL='https://auto-wcag.github.io/auto-wcag/'" />    
   </head>  
 ```
 
+#### Pass example 2
+
+First valid `<meta http-equiv="refresh">` redirects immediately.
+
 ```html
-<!-- first valid <meta http-equiv="refresh"> redirects immediately  -->
 <head>
-  <meta http-equiv="refresh" content="0; http://example.com" />
-  <meta http-equiv="refresh" content="5; http://example.com" />
+  <meta data-rule-target http-equiv="refresh" content="0; http://example.com" />
+  <meta data-rule-target http-equiv="refresh" content="5; http://example.com" />
 </head>
 ```
 
+#### Pass example 3
+
+Redirects after 20 hours.
+
 ```html
-<!-- redirects after 20 hours -->
 <head>
-  <meta http-equiv="refresh" content="72000; http://example.com" />
+  <meta data-rule-target http-equiv="refresh" content="72000; http://example.com" />
 </head>
 ```
 
 ### Failed
 
+#### Fail example 1
+
+Refreshes after 30 seconds.
+
 ```html
-<!-- refreshes after 30 seconds -->
 <head>
-<meta http-equiv="refresh" content="30">
+	<meta data-rule-target http-equiv="refresh" content="30">
 </head>
 ```
 
+#### Fail example 2
+
+Redirects after 30 seconds.
+
 ```html
-<!-- redirects after 30 seconds -->
 <head>
-<meta http-equiv="refresh" content="30; URL='https://auto-wcag.github.io/auto-wcag/'">
+	<meta data-rule-target http-equiv="refresh" content="30; URL='https://auto-wcag.github.io/auto-wcag/'">
 </head>
 ```
 
+#### Fail example 3
+
+First `<meta http-equiv="refresh">` element is not valid, second one redirects after 5 seconds.
+
 ```html
-<!-- first <meta http-equiv="refresh"> element is not valid, second one redirects after 5 seconds -->
 <head>
-  <meta http-equiv="refresh" content="0: http://example.com" />
-  <meta http-equiv="refresh" content="5; http://example.com" />
+  <meta data-rule-target http-equiv="refresh" content="0: http://example.com" />
+  <meta data-rule-target http-equiv="refresh" content="5; http://example.com" />
 </head>
 ```
 
 ### Inapplicable
+
+#### Inapplicable example 1
+
+No `content` attribute.
+
 ```html
-<!-- no content attribute -->
 <head>
-<meta http-equiv="refresh">
+	<meta data-rule-target http-equiv="refresh">
 </head>
 ```
 
+#### Inapplicable example 2
+
+No `http-equiv="refresh"` attribute.
+
 ```html
-<!-- no http-equiv="refresh" attribute -->
 <head>
-<meta content="30">
+	<meta data-rule-target content="30">
 </head>
 ```
 
+#### Inapplicable example 3
+
+`content` attribute is invalid and therefore inapplicable.
+
 ```html
-<!-- content attribute is invalid and therefore inapplicable. -->
 <head>
-  <meta http-equiv="refresh" content="0: http://example.com" />
+  <meta data-rule-target http-equiv="refresh" content="0: http://example.com" />
 </head>
 ```
 
+#### Inapplicable example 4
+
+`content` attribute is invalid and therefore inapplicable.
+
 ```html
-<!-- content attribute is invalid and therefore inapplicable. -->
 <head>
-<meta http-equiv=refresh content="-00.12 foo">
+	<meta data-rule-target http-equiv=refresh content="-00.12 foo">
 </head>
 ```
 
+#### Inapplicable example 5
+
+`content` attribute is invalid and therefore inapplicable.
+
 ```html
-<!-- content attribute is invalid and therefore inapplicable. -->
 <head>
-<meta http-equiv="refresh" content="; 30">
+	<meta data-rule-target http-equiv="refresh" content="; 30">
 </head>
 ```
 
+#### Inapplicable example 6
+
+`content` attribute is invalid and therefore inapplicable.
 ```html
-<!-- content attribute is invalid and therefore inapplicable. -->
 <head>
-<meta http-equiv="refresh" content="">
+	<meta data-rule-target http-equiv="refresh" content="">
 </head>
 ```
 
+#### Inapplicable example 7
+
+`content` attribute is invalid and therefore inapplicable.
+
 ```html
-<!-- content attribute is invalid and therefore inapplicable. -->
 <head>
-  <meta http-equiv="refresh" content="+5; http://example.com">
+  <meta data-rule-target http-equiv="refresh" content="+5; http://example.com">
 </head>
 ```
 
+#### Inapplicable example 8
+
+`content` attribute is invalid and therefore inapplicable.
+
 ```html
-<!-- content attribute is invalid and therefore inapplicable. -->
 <head>           
-  <meta http-equiv="refresh" content="foo; URL='https://auto-wcag.github.io/auto-wcag/'" />    
+  <meta data-rule-target http-equiv="refresh" content="foo; URL='https://auto-wcag.github.io/auto-wcag/'" />    
 </head>
 ```

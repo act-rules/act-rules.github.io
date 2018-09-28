@@ -51,6 +51,10 @@ This means that the rule can only provide a pass for these succescriteria if acc
 
 A video element with a track element that contains descriptions.
 
+#### Pass example 1
+
+A video element with a track element that contains descriptions.
+
 ```html
 <video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
@@ -65,6 +69,10 @@ A video element with a track element that contains descriptions.
 
 A video element with a track element that contains incorrect descriptions.
 
+#### Fail example 1
+
+A video element with a track element that contains incorrect descriptions.
+
 ```html
 <video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
@@ -74,6 +82,10 @@ A video element with a track element that contains incorrect descriptions.
 ```
 
 ### Inapplicable
+
+#### Inapplicable example 1
+
+A video element without a track element.
 
 #### Inapplicable example 1
 

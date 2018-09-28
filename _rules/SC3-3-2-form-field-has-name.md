@@ -45,93 +45,138 @@ Certain assistive technologies can be set up to ignore the title attribute, whic
 
 ### Passed
 
+#### Pass example 1
+
+Implicit role with implicit label.
+
 ```html
-<!-- implicit role with implicit label -->
 <label>
   first name
-  <input />
+  <input data-rule-target/>
 </label>
 ```
 
+#### Pass example 2
+
+Implicit role with aria-label
+
 ```html
-<!-- implicit role with aria-label -->
 <input aria-label="last name" disabled />
 ```
 
+#### Pass example 3
+
+Implicit role with explicit label
+
 ```html
-<!-- implicit role with explicit label -->
 <label for="country">Country</label>
-<select id="country">
+<select id="country" data-rule-target>
   <option></option>
 </select>
 ```
 
-```html
-<!-- implicit role with aria-labelledby -->
-<div id="country">Country</div>
-<textarea aria-labelledby="country"></textarea>
-```
+#### Pass example 4
+
+Implicit role with `aria-labelledby`.
 
 ```html
-<!-- explicit role -->
+<div id="country">Country</div>
+<textarea aria-labelledby="country" data-rule-target></textarea>
+```
+
+#### Pass example 5
+
+Explicit role.
+
+```html
 <div aria-label="country" role="combobox" aria-disabled="true">England</div>
 ```
 
 ### Failed
 
+#### Fail example 1
+
+No accessible name.
+
 ```html
-<!-- No accessible name -->
 <input />
 ```
 
+#### Fail example 2
+
+Non-focusable still need an accessible name.
+
 ```html
-<!-- Non-focusable still need an accessible name -->
 <input tabindex="-1" />
 ```
 
+#### Fail example 3
+
+`aria-label` with empty text string
+
 ```html
-<!-- aria-label with empty text string -->
 <div aria-label=" " role="combobox">England</div>
 ```
 
+#### Fail example 4
+
+Label does not exist.
+
 ```html
-<!-- Label does not exist -->
 <div aria-labelledby="non-existing" role="combobox">England</div>
 ```
 
+#### Fail example 5
+
+Implicit label not supported on div elements.
+
 ```html
-<!-- Implicit label not supported on div elements -->
 <label>
   first name
-  <div role="textbox"></div>
+  <div role="textbox" data-rule-target></div>
 </label>
 ```
 
+#### Fail example 6
+
+Explicit label not supported on div elements.
+
 ```html
-<!-- Explicit label not supported on div elements -->
 <label for="lastname">first name</label>
-<div role="textbox" id="lastname"></div>
+<div role="textbox" id="lastname" data-rule-target></div>
 ```
 
 ### Inapplicable 
 
+#### Inapplicable example 1
+
+Hidden to everyone.
+
 ```html
-<!-- Hidden to everyone -->
 <input aria-label="firstname" style="display:none;" />
 ```
 
+#### Inapplicable example 2
+
+Hidden to assistive technologies.
+
 ```html
-<!-- Hidden to assistive technologies -->
 <input aria-hidden="true" aria-label="firstname" />
 ```
- 
+
+#### Inapplicable example 3
+
+Explicitly set the role to something that isn't a form field.
+
 ```html
-<!-- Explicitly set the role to something that isn't a form field -->
 <input role="presentation" />
 ```
 
+#### Inapplicable example 4
+
+Option inherits from input, but has a required context role of listbox which inherits from select. We should therefore not consider option as applicable.
+
 ```html
-<!-- option inherits from input, but has a required context role of listbox which inherits from select. We should therefore not consider option as applicable. -->
 <select role="none">
   <option value="volvo">Volvo</option>
   <option value="saab">Saab</option>

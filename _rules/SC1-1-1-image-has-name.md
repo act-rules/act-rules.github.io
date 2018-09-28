@@ -45,56 +45,85 @@ There is a known combination of a popular browser and assistive technology that 
 
 ### Passed
 
+#### Pass example 1
+
+Image has accessible name
+
 ```html
-<!-- accessible name -->
 <img alt="W3C logo" />
 ```
 
+#### Pass example 2
+
+Non-image element with image role and accessible name
+
 ```html
-<!-- non-image element with image role and accessible name -->
 <div role="image" aria-label="W3C logo"></div>
 ```
 
+#### Pass example 3
+
+Accessible name but not always supported.
+
 ```html
-<!-- accessible name but not always supported -->
 <img title="W3C logo" />
 ```
 
 ### Failed
+
+#### Fail example 1
+
+No accessible name
+
 ```html
-<!-- no accessible name -->
 <img />
 ```
 
+#### Fail example 2
+
+Non-image element with image role but no accessible name.
 ```html
-<!-- non-image element with image role but no accessible name -->
-<div role="image"></div>
+<div role="img"></div>
 ```
 
+#### Fail example 3
+
+Image element inside a div positioned off screen with no accessible name.
 ```html
-<!-- image element inside a div positioned off screen with no accessible name -->
 <div style="margin-left:-9999px;"><img /></div>
 ```
 
 ### Inapplicable
 
+#### Inapplicable example 1
+
+decorative image.
+
 ```html
-<!-- decorative image -->
 <img alt="" />
 ```
 
+#### Inapplicable example 2
+
+decorative image.
+
 ```html
-<!-- decorative image -->
 <img role="presentation" />
 ```
 
+#### Inapplicable example 3
+
+`img` element with no role.
+
 ```html
-<!-- img element with no role -->
 <img role="none" />
 ```
 
+#### Inapplicable example 4
+
+Non-image element.
+
 ```html
-<!-- non-image element -->
 <svg width="100" height="100">
   <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
 </svg>

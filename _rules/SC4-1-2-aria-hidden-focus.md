@@ -48,63 +48,90 @@ A focusable element with `aria-hidden="true"` is ignored as part of the reading 
 
 ### Passed
 
+#### Pass example 1
+
+Content not focusable by default.
+
 ```html
-<!-- Content not focusable by default -->
 <p aria-hidden="true">Some text</p>
 ```
 
+#### Pass example 2
+
+Content hidden through CSS.
+
 ```html
-<!-- Content hidden through CSS -->
-<div aria-hidden="true">
-    <a href="/" style="display:none">Link</a>
+<div aria-hidden="true" data-rule-target>
+	<a href="/" style="display:none">Link</a>
 </div>
 ```
 
+#### Pass example 3
+
+Content made unfocusable through tabindex.
+
 ```html
-<!-- Content made unfocusable through tabindex -->
-<div aria-hidden="true">
-    <button tabindex="-1">Some button</button>
+<div aria-hidden="true" data-rule-target>
+	<button tabindex="-1">Some button</button>
 </div>
 ```
 
+#### Pass example 4
+
+Content made unfocusable through disabled.
+
 ```html
-<!-- Content made unfocusable through disabled -->
 <input disabled aria-hidden="true" />
 ```
 
 ### Failed
 
+#### Fail example 1
+
+Focusable off screen link.
+
 ```html
-<!-- Focusable off screen link -->
-<div aria-hidden="true">
-    <a href="/" style="position:absolute; top:-999em">Link</a>
+<div aria-hidden="true" data-rule-target>
+	<a href="/" style="position:absolute; top:-999em">Link</a>
 </div>
 ```
 
+#### Fail example 2
+
+Focusable form field, incorrectly disabled.
+
 ```html
-<!-- Focusable form field, incorrectly disabled -->
-<div aria-hidden="true">
-    <input aria-disabled="true" />
+<div aria-hidden="true" data-rule-target>
+	<input aria-disabled="true" />
 </div>
 ```
 
+#### Fail example 3
+
+`aria-hidden=false` does not negate aria-hidden true.
+
 ```html
-<!-- aria-hidden=false does not negate aria-hidden true -->
-<div aria-hidden="true">
-    <div aria-hidden="false">
+<div aria-hidden="true" data-rule-target>
+    <div aria-hidden="false" data-rule-target>
         <button tabindex="-1">Some button</button>
     </div>
 </div>
 ```
 
+#### Fail example 4
+
+Focusable content through `tabindex`.
+
 ```html
-<!-- Focusable content through tabindex -->
 <p tabindex="0" aria-hidden="true">Some text</p>
 ```
 
+#### Fail example 5
+
+Focusable summary element
+
 ```html
-<!-- Focusable summary element -->
-<details aria-hidden="true">
+<details aria-hidden="true" data-rule-target>
     <summary>Some button</summary>
     <p>Some details</p>
 </details>
@@ -112,19 +139,28 @@ A focusable element with `aria-hidden="true"` is ignored as part of the reading 
 
 ### Inapplicable
 
+#### Inapplicable example 1
+
+Ignore `aria-hidden` with null value.
+
 ```html
-<!-- Ignore aria-hidden with null value -->
 <button tabindex="-1" aria-hidden>Some button</button>
 ```
 
+#### Inapplicable example 2
+
+Ignore `aria-hidden` false.
+
 ```html
-<!-- Ignore aria-hidden false -->
 <p aria-hidden="false">Some text</p>
 ```
 
+#### Inapplicable example 3
+
+Incorrect value of `aria-hidden`.
+
 ```html
-<!-- Incorrect value of aria-hidden -->
-<div aria-hidden="yes">
-    <p>Some text</p>
+<div aria-hidden="yes" data-rule-target>
+	<p>Some text</p>
 </div>
 ```

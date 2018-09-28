@@ -28,13 +28,13 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML or SVG element on a web page that is [focusable][].
+The rule applies to any HTML or SVG element on a web page that is [focusable](#focusable).
 
 **Note**: The WCAG 2.0 success criterion 2.1.2 applies to all content where focus can be moved to through keyboard navigation.
 
 ### Expectation
 
-For each target element focus can cycle to the browser UI by using [standard keyboard navigation][].
+For each target element focus can cycle to the browser UI by using [standard keyboard navigation](#standard-keyboard-navigation).
 
 **Note**: Cycling back to the browser UI can be done both by moving forward through the tab order and by moving backwards. It is not possible to fulfil this expectation by using browser specific shortcuts to return to the browser UI.
 
@@ -57,37 +57,56 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
+#### Pass example 1
+
+No trap for keyboard navigation.
+
 ```html
 <a href ="#">Link 1</a>
 <button class="target">Button1</button>
 ```
 
+#### Pass example 2
+
+Using `tabindex="1"`.
+
 ```html
-<!-- Tab index 1 -->
 <div tabindex=“1”>Text</div>
 ```
 
+#### Pass example 3
+
+Using `tabindex="-1"`.
+
 ```html
-<!-- Tab index -1 -->
 <div tabindex=“-1”>Text</div>
 ```
 
 ### Failed
 
+#### Fail example 1
+
+Keyboard trap one element.
+
 ```html
-<!-- Keyboard trap one element -->
 <a href="#">Link 1</a>
 <button class="target" onblur="setTimeout(() => this.focus(), 10)">Button1</button>
 ```
 
+#### Fail example 2
+
+Keyboard trap group.
+
 ```html
-<!-- Keyboard trap group -->
 <button class="target" onblur="setTimeout(() => this.nextSibling.focus(), 10)">Button1</button>
 <button class="target" onblur="setTimeout(() => this.previousSibling.focus(), 10)">Button2</button>
 ```
 
+#### Fail example 3
+
+A focusable element inbetween to keyboard traps.
+
 ```html
-<!-- A focusable element inbetween to keyboard traps -->
 <button onblur="setTimeout(() => this.focus(), 10)">Button 1</button>
 <button class="target" >Button 2</button>
 <button onblur="setTimeout(() => this.focus(), 10)">Button 3</button>
@@ -95,26 +114,35 @@ There are no major accessibility support issues known for this rule.
 
 ### Inapplicable
 
+#### Inapplicable example 1
+
+No focusable element.
+
 ```html
-<!-- No focusable element -->
 <h1>Page 1</h1>
 ```
 
+#### Inapplicable example 2
+
+Disabled element.
+
 ```html
-<!-- Disabled element -->
 <button type="button" disabled>Click Me!</button>
 ```
 
+#### Inapplicable example 3
+
+Hidden element using `display:none`
+
 ```html
-<!-- Hidden element using display:none -->
 <button type="button" style=“display:none;”>Click Me!</button>
 ```
 
+#### Inapplicable example 4
+
+Hidden element using `visibility:hidden`.
+
 ```html
-<!-- Hidden element using visibility:hidden -->
 <a href ="#" style="visibility:hidden;">Link 1</a>
 <button class="target" style="visibility:hidden;">Button1</button>
 ```
-
-[focusable]: ../pages/algorithms/focusable.html
-[standard keyboard navigation]: ../pages/algorithms/standard-keyboard-navigation.html

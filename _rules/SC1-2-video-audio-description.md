@@ -47,6 +47,10 @@ There are no major accessibility support issues known for this rule.
 
 A video element with a voiceover that describes the visual information.
 
+#### Pass example 1
+
+A video element with a voiceover that describes the visual information.
+
 ```html
 <video controls>
   <source src="../test-assets/rabbit-video/video-with-voiceover.mp4" type="video/mp4" />
@@ -65,7 +69,7 @@ A video element with an audio description.
 
 <figure id="ozplayer-1-container" class="ozplayer-container">
   <div data-controls="stack" class="ozplayer" id="ozplayer-1">
-    <video controls="controls" preload="none">
+    <video data-rule-target controls="controls" preload="none">
       <source src="../test-assets/rabbit-video.mp4" type="video/mp4" />
     </video>
     <audio data-default="default" preload="none">
@@ -81,6 +85,10 @@ A video element with an audio description.
 ```
 
 ### Failed
+
+#### Fail example 1
+
+A video element without an audio description.
 
 #### Fail example 1
 
@@ -115,7 +123,7 @@ A video element with an incorrect audio description.
 
 <figure id="ozplayer-1-container" class="ozplayer-container">
   <div data-controls="stack" class="ozplayer" id="ozplayer-1">
-    <video controls="controls" preload="none">
+    <video data-rule-target controls="controls" preload="none">
       <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
     </video>
     <audio data-default="default" preload="none">
@@ -131,6 +139,10 @@ A video element with an incorrect audio description.
 ```
 
 ### Inapplicable
+
+#### Inapplicable example 1
+
+A video element without audio.
 
 #### Inapplicable example 1
 

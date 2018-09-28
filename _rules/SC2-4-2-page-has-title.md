@@ -56,11 +56,19 @@ _There are no major accessibility support issues known for this rule._
 
 ### Passed
 
+#### Pass example 1
+
+This page has a `title`.
+
 ```html
 <html>
   <title>This page has a title</title>
 </html>
 ```
+
+#### Pass example 2
+
+This page give a `title` to an iframe.
 
 ```html
 <html>
@@ -69,6 +77,10 @@ _There are no major accessibility support issues known for this rule._
 </html>
 ```
 
+#### Pass example 3
+
+This page has a `title`.
+
 ```html
 <html>
   <head>
@@ -80,6 +92,10 @@ _There are no major accessibility support issues known for this rule._
 </html>
 ```
 
+#### Pass example 4
+
+Valid `title` provided.
+
 ```html
 <html>
   <body>
@@ -88,18 +104,26 @@ _There are no major accessibility support issues known for this rule._
 </html>
 ```
 
+#### Pass example 5
+
+Valid `title` provided.
+
 ```html
 <html>
   <head>
     <title>Title of the page.</title>
   </head>
   <body>
-     <title> <!-- empty title --> </title> 
+     <title></title> 
   </body>
 </html>
 ```
 
 ### Failed
+
+#### Fail example 1
+
+This page has no `title`.
 
 ```html
 <html>
@@ -107,11 +131,19 @@ _There are no major accessibility support issues known for this rule._
 </html>
 ```
 
+#### Fail example 2
+
+Empty `title`.
+
 ```html
 <html>
-  <title> <!-- this page has an empty title --> </title>
+  <title></title>
 </html>
 ```
+
+#### Fail example 3
+
+No `title` provided.
 
 ```html
 <html>
@@ -119,10 +151,14 @@ _There are no major accessibility support issues known for this rule._
 </html>
 ```
 
+#### Fail example 4
+
+Empty first `title`.
+
 ```html
 <html>
   <head>
-    <title> <!-- this page has an empty first title --> </title>
+    <title></title>
   </head>
   <body>
     <title>Title of the page.</title>
@@ -132,10 +168,12 @@ _There are no major accessibility support issues known for this rule._
 
 ### Inapplicable
 
+#### Inapplicable example 1
+
+Not applicable to `svg` element.
+
 ```html
 <svg>
   <title>This is an SVG</title>
 </svg>
 ```
-
-

@@ -2,12 +2,10 @@
   "name": "auto-wcag",
   "version": "1.0.0",
   "description": "auto-wcag",
-  "main": "index.js",
-	"testcases-embeds-dir": "_testcases-embeds/",
-	"testcases-export-dir": "_testcases-export/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "bundle exec jekyll serve",
+		"build": "bundle exec jekyll build",
 		"generate-wcag-data": "node wcag-url-generator",
 		"proof": "bundle exec jekyll build && bundle exec htmlproofer ./_site --only-4xx --check-html --allow_hash_href --assume-extension --alt-ignore '/.*/'"
   },
@@ -20,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/auto-wcag/auto-wcag/issues"
   },
-  "homepage": "https://github.com/auto-wcag/auto-wcag#readme"
+  "homepage": "https://github.com/auto-wcag/auto-wcag#readme",
+  "config": { 
+    "site-url-prefix": "https://auto-wcag.github.io/auto-wcag",
+    "testcases-embeds-dir": "_testcases-embeds/",
+    "testcases-assets-dir": "test-assets/",
+	  "testcases-export-dir": "auto-wcag-testcases/",
+	  "testcases-export-filename": "testcases.json",
+	  "rules-export-filename": "rules.json"
+  }
 }

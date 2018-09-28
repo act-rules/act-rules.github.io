@@ -1,8 +1,6 @@
 ---
-title: Visible to the Page.
-key: visible-on-the-page
+title: Visible
+key: visible
 ---
 
-Elements should be visible on the page, and also meet the requirements for color contrast and visibility when focused. For more details, check out:
-- [https://www.w3.org/TR/WCAG20-TECHS/G18.html](https://www.w3.org/TR/WCAG20-TECHS/G18.html)
-- [https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html)
+An element is considered visible if the element generates one or more [layout boxes](https://www.w3.org/TR/cssom-view/#layout-box) with non-zero surface areas, is not fully transparent, resides within an area of the viewport that can be reached via scrolling, and either has no [parent](https://www.w3.org/TR/dom/#concept-tree-parent) or has a [parent](https://www.w3.org/TR/dom/#concept-tree-parent) that itself is visible.

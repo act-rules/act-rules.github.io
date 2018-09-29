@@ -21,7 +21,7 @@ authors:
 
 ### Applicability
 
-Any [non-empty](#non-empty) attribute that is placed on an HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies), and where the attribute name starts with `aria-` and where the attribute can be found in [WAI-ARIA 1.1, Definitions of States and Properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
+Any [non-empty](#non-empty) attribute that is placed on an HTML or SVG element, where the attribute name starts with `aria-` and can be found in [WAI-ARIA 1.1, Definitions of States and Properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
 
 ### Expectation
 
@@ -33,8 +33,9 @@ Each test target has a valid value according to the [value type](https://www.w3.
 
 ## Assumptions
 
-- Checking that IDs referenced in value types `ID Reference` and `ID Reference List` is considered out of scope for this rule. 
-- Checking that linked resources in `aria-*` attributes with value type `URI` are available is considered out of scope for this rule. For this rule it is considered sufficient that the value matches the [generic URI syntax](https://www.ietf.org/rfc/rfc3986.txt).
+- This rule assumes that WAI-ARIA attributes on elements that are not [exposed to assistive technologies](#exposed-to-assistive-technologies)) can still impact users. For example, anything referenced through aria-labelledby does not have to be exposed to assistive technologies in order for it to become part of the accessible name. Therefore this rule is not limited to elements that are exposed to assistive technologies.
+- This rule assumes that the author of the web content is only using `"aria-*"` attributes to express logic defined in the WAI-ARIA specifications. If an someone is using `"aria-*"` attributes to express custom states/properties that they are using in scripts for other purposes, this rule would be incorrect.
+
 
 ## Accessibility Support
 

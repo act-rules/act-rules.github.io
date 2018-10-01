@@ -54,7 +54,7 @@ Generic accessible name text that does not describe the purpose of the image.
 
 ### Inapplicable example 1
 
-Marked decorative.
+Marked decorative with `alt=""`.
 
 ```html
 <img src="/background.png" alt="">
@@ -62,7 +62,7 @@ Marked decorative.
 
 ### Inapplicable example 2
 
-Marked decorative.
+Marked decorative with `role="presentation"`.
 
 ```html
 <img src="/background.png" role="presentation">

@@ -22,7 +22,7 @@ Any HTML or SVG element that has an [explicit semantic role](#semantic-role), ex
 
 ### Expectation
 
-For each test target, the [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for the role is present, unless the attribute has a default value listed under [implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole). The list of required attributes for a role can be found in [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria)"
+For each test target, any [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for the role are present, unless the state or property has a default value listed under [implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole). The list of required states and properties for a role can be found in [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria)"
 
 **Note:** This rule does not test whether the required states and properties has a correct value, only that the attributes are present and [non-empty](#non-empty).
 
@@ -63,6 +63,22 @@ Implicit value for roles: ´option´ role has an implicit value (´false´) spec
 ```
 
 #### Passed example 3
+
+Implicit value for roles: ´option´ role has an implicit value (´false´) specified for the required state ´aria-selected´, here defined without value
+
+```html
+<div role="option" aria-selected></div>
+```
+
+#### Passed example 4
+
+Implicit value for roles: ´option´ role has an implicit value (´false´) specified for the required state ´aria-selected´, here defined with only whitespace instead of a value
+
+```html
+<div role="option" aria-selected=" "></div>
+```
+
+#### Passed example 5
 
 Element has required properties (no states required for this role)
 

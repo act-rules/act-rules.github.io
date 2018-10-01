@@ -1,7 +1,7 @@
 ---
 name: Role has required states and properties
 description: |
-  Elements that has a semantic role must also specify all required states and properties
+  Elements that has an explicit role must also specify all required states and properties
   
 success_criterion:
 - 4.1.2 # Name, Role, Value
@@ -22,7 +22,7 @@ Any HTML or SVG element that has an [explicit semantic role](#semantic-role), ex
 
 ### Expectation
 
-For each test target, any [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for the role are present, unless the state or property has a default value listed under [implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole). The list of required states and properties for a role can be found in [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria)"
+For each test target, the [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for the role are present, unless the state or property has a default value listed under [implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole). The list of required states and properties for a role can be found in [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria)"
 
 **Note:** This rule does not test whether the required states and properties has a correct value, only that the attributes are present and [non-empty](#non-empty).
 

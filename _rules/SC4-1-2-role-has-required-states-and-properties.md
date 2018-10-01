@@ -1,7 +1,7 @@
 ---
 name: Role has required states and properties
 description: |
-  Elements that has an explicit role must also specify all required states and properties
+  Elements that have an explicit role must also specify all required states and properties
   
 success_criterion:
 - 4.1.2 # Name, Role, Value

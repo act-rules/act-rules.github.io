@@ -1,6 +1,6 @@
 ---
 title: Generic placeholder text
-key: generic placeholder text
+key: generic-placeholder-text
 ---
 
 Generic placeholder text is text content that is ambiguous in its meaning and does therefore not provide any useful information in the context in which the text is used.

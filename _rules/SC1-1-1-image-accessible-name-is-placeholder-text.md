@@ -16,7 +16,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML element with the [semantic role](#semantic-role) of `img` that is [exposed to assistive technologies](#exposed-to-assistive-technologies), where the element has a [non-empty](#non-empty) [accessible name](#accessible-name).
+The rule applies to any HTML element with the [semantic role](#semantic-role) of `img` that is [exposed to assistive technologies](#exposed-to-assistive-technologies), where the element has a [non-empty](#non-empty), [accessible name](#accessible-name).
 
 ### Expectation
 

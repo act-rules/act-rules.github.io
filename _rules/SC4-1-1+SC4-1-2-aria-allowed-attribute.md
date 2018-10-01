@@ -1,7 +1,7 @@
 ---
 name: ARIA allowed attribute
 description: | 
-  This rule checks that `aria-*` attributes are allowed for the element they are on.
+  This rule checks that `aria-*` attributes are allowed for the element they are specified on.
 
 success_criterion:
 - 4.1.1 # Parsing (A)
@@ -19,11 +19,11 @@ authors:
 
 ### Applicability
 
-Any attribute that is placed on an HTML or SVG element and where the attribute name starts with `aria-`.
+Any attribute that is placed on an HTML or SVG element where the attribute name starts with `aria-`.
 
 ### Expectation
 
-The `aria-*` attribute is either listed under [Supported States and Properties](https://www.w3.org/TR/wai-aria-1.1/#states_and_properties) in [WAI-ARIA](https://www.w3.org/TR/wai-aria) for the [semantic role](#semantic-role) of the element that the attribute is placed on, or it is found on the list of [Global States and Properties](https://www.w3.org/TR/wai-aria-1.1/#global_states).
+The `aria-*` attribute is either listed under [Supported States and Properties](https://www.w3.org/TR/wai-aria-1.1/#states_and_properties) in [WAI-ARIA](https://www.w3.org/TR/wai-aria) for the [semantic role](#semantic-role) of the element that the attribute is specified on, or it is found on the list of [Global States and Properties](https://www.w3.org/TR/wai-aria-1.1/#global_states).
 
 **Note:** [Global States and Properties](https://www.w3.org/TR/wai-aria-1.1/#global_states) are supported by all roles and by all base markup elements.
 

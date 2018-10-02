@@ -1,18 +1,13 @@
 ---
 name: No keyboard trap standard navigation
-
-group:
-- SC2-1-2-no-keyboard-trap-standard-navigation
-- SC2-1-2-no-keyboard-trap-non-standard-navigation
+test_type: atomic
 
 description: |
   This rule checks if it is possible to use standard keyboard navigation to navigate through all content on a web page without becoming trapped in any element.
 
-success_criterion: 
-- 2.1.2 # No Keyboard Trap
-
 test aspects:
 - DOM Tree
+- CSS Styling
 
 authors:
 - Dagfinn Rømen
@@ -49,9 +44,9 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-trapping.html
-- https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G21
-- https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F10
+- [Understanding Success Criterion 2.1.2: No Keyboard Trap](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html)
+- [G21: Ensuring that users are not trapped in content](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G21)
+- [F10: Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining multiple content formats in a way that traps users inside one format type](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F10)
 
 ## Test Cases
 

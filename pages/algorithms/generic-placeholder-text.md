@@ -9,7 +9,7 @@ Typically, generic placeholder text is inserted by authoring tools to populate c
 
 In the English language, examples of generic placeholder text used to populate the `alt` attribute of HTML `img` elements include, but is not limited to:
 
-- "default"
 - "image"
 - "spacer"
-
+- "picture"
+- "default"

@@ -30,7 +30,7 @@ For each test target, the [required states and properties](https://www.w3.org/TR
 
 ## Assumptions
 
-- This rule assumes that native HTML and SVG elements have native attributes that are mapped to all of the [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for the [implicit semantic role](#semantic-role) of the element. This assumption is the basis for limiting the Applicability to [explicit semantic roles](#semantic-role) only.
+- The applicability of this rule is limited to [explicit semantic roles](#semantic-role) based on an assumption that all native HTML and SVG elements have native attributes that are mapped to all of the [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for the [implicit semantic role](#semantic-role) of the element.
 
 ## Accessibility Support
 

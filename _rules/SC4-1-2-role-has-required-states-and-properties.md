@@ -22,13 +22,15 @@ Any HTML or SVG element that has an [explicit semantic role](#semantic-role), ex
 
 ### Expectation
 
-For each test target, the [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for the role are present, unless the state or property has a default value listed under [implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole). The list of required states and properties for a role can be found in [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria)"
+For each test target, the [required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) for the role are present, unless the state or property has a default value listed under [implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole). 
+
+**Note:** The list of required states and properties for each role can be found in [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1).
 
 **Note:** This rule does not test whether the required states and properties has a correct value, only that the attributes are present and [non-empty](#non-empty).
 
 ## Assumptions
 
-- This rule assumes that there is no element that has an [implicit semantic role](#semantic-role), and at the same time does not define native attributes that are mapped to all of the [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for this role. This assumption is the basis for limiting the Applicability to [explicit semantic roles](#semantic-role) only.
+- This rule assumes that native HTML and SVG elements have native attributes that are mapped to all of the [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for the [implicit semantic role](#semantic-role) of the element. This assumption is the basis for limiting the Applicability to [explicit semantic roles](#semantic-role) only.
 
 ## Accessibility Support
 
@@ -80,10 +82,18 @@ Implicit value for roles: ´option´ role has an implicit value (´false´) spec
 
 #### Passed example 5
 
-Element has required properties (no states required for this role)
+Element has required properties, and required state `aria-expanded` has an implicit value
 
 ```html
 <div role="combobox" aria-controls="someElementId"></div>
+```
+
+#### Passed example 6
+
+Element has required properties, but with incorrect value since no element with with the given id(s) exists in the document
+
+```html
+<div role="combobox" aria-controls="foo"></div>
 ```
 
 ### Failed

@@ -5,4 +5,4 @@ key: visible
 
 Elements or text perceivable through sight.
 
-An element or text is visible if making it fully transparent would make any change in rendered pixels within the scrollable part of the viewport.
+An element, or text within an element, is considered visible if making the element or text fully transparent would cause a difference in the pixels rendered within any area of the viewport that can be reached via scrolling.

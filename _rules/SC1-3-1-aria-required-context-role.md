@@ -18,7 +18,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has an explicit [semantic role](#semantic-role) that has [required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope) listed for that role in [WAI-ARIA](https://www.w3.org/TR/wai-aria).
+The rule applies to any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has an explicit [semantic role](#semantic-role) with a [WAI-ARIA required context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
 
 ### Expectation
 

@@ -30,7 +30,7 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-When a required owned element is not a child, but rather a descendant, certain AT have issues recognizing the owned element.
+This rule relies on assistive technologies to recognize owned elements, also when they are nested descendants that are not immediate children. Certain assistive technologies cannot recognize owned elements that not immediate children, unless workarounds are used.
 
 ## Background
 

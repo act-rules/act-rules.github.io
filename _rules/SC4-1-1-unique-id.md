@@ -20,13 +20,13 @@ authors:
 
 ### Applicability
 
-Any element that has an `id` attribute.
+Any [`id`][id] attribute specified on an HTML or SVG element.
 
 **Note:** Elements that are neither [exposed to assistive technologies](#exposed-to-assistive-technologies) nor [visible on the page](#visible-on-the-page) are still considered for this rule.
 
 ### Expectation
 
-Each test target has an `id` attribute value that is unique within the [document context](#document-context) of the element.
+The value of the attribute is unique across all other `id` attributes specified on HTML or SVG elements that exist within the same [tree](#https://www.w3.org/TR/dom/#concept-tree) as the element on which the applicable `id` attribute is specified. These are the elements that are [descendants](#https://www.w3.org/TR/dom/#concept-tree-descendant) of the [root](#https://www.w3.org/TR/dom/#concept-tree-root) of the element on which the applicable `id` attribute is specified.
 
 ## Assumptions
 

@@ -20,11 +20,11 @@ authors:
 
 ### Applicability
 
-The rule applies to any two or more HTML or SVG elements that have the [semantic role](#semantic-role) of link, are [exposed to assistive technologies](#exposed-to-assistive-technologies) and that have the same [accessible name](#accessible-name).
+This rule applies to any two or more HTML or SVG elements that have the [semantic role](#semantic-role) of link, are [exposed to assistive technologies](#exposed-to-assistive-technologies) and that have the same [accessible name](#accessible-name).
 
 ### Expectation
 
-When activated, the links in each set of target elements resolve to resources that fulfil the same purpose in relation to the purpose indicated by the [accessible names](#accessible-name) of the link.
+When activated, the links in each set of target elements resolve to resources that fulfill the same purpose indicated by the [accessible names](#accessible-name) of the link.
 
 **Note:** Resolving the links includes potential redirects.
 
@@ -40,7 +40,7 @@ When activated, the links in each set of target elements resolve to resources th
 
 ## Assumptions
 
-* This rule assumes that the purpose of the links for links with identical link texts would not be ambiguous to users in general, which is the exception mentioned in [Understanding Success Criterion 2.4.9: Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html).
+* This rule assumes that the purpose of the links for links with identical link texts would not be ambiguous to users in general.
 
 ## Accessibility support
 
@@ -70,7 +70,7 @@ Links resolves to same page due to case-insensitivity on server:
 
 ```html
 <a href="/Test-Assets/Link-Purpose/index.html">Link text</a>
-<a href="/test-assets/link-purpose/index.html>Link text</a>
+<a href="/test-assets/link-purpose/index.html">Link text</a>
 ```
 
 #### Passed example 3

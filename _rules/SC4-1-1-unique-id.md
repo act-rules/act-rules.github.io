@@ -1,5 +1,5 @@
 ---
-name: unique element id attributes
+name: Id attribute is unique
 rule_type: atomic
 
 description: |

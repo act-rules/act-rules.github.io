@@ -21,21 +21,19 @@ authors:
 
 ### Applicability
 
-Any [non-empty](#non-empty) attribute that is placed on an HTML or SVG element, where the attribute name starts with `aria-` and can be found in [WAI-ARIA 1.1, Definitions of States and Properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
+Any [non-empty](#non-empty) attribute that is specified on an HTML or SVG element, where the attribute name starts with `aria-` and can be found in [WAI-ARIA 1.1, Definitions of States and Properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
 
 ### Expectation
 
 Each test target has a valid value according to the [value type](https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value) for that `aria-*` attribute as specified by [WAI-ARIA 1.1, Definitions of States and Properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
 
 **Note:** 
-- For value types `ID Reference` and `ID Reference List` this rule does not require that elements with the given id(s) exists in the document. 
+- For value types `ID Reference` and `ID Reference List` this rule does not require that elements with the given id(s) exists in the document, unless the attribute is a [WAI-ARIA required property](https://www.w3.org/TR/wai-aria-1.1/#requiredState) for the [semantic role](#semantic-role) of the element on which the property is specified.
 - For value type `URI` ensure that the value matches the [generic URI syntax](https://www.ietf.org/rfc/rfc3986.txt). This rule does not require that the destination URL exists. 
 
 ## Assumptions
 
 - This rule assumes that WAI-ARIA attributes on elements that are not [exposed to assistive technologies](#exposed-to-assistive-technologies)) can still impact users. For example, anything referenced through aria-labelledby does not have to be exposed to assistive technologies in order for it to become part of the accessible name. Therefore this rule is not limited to elements that are exposed to assistive technologies.
-- This rule assumes that the author of the web content is only using `"aria-*"` attributes to express logic defined in the WAI-ARIA specifications. If an someone is using `"aria-*"` attributes to express custom states/properties that they are using in scripts for other purposes, this rule would be incorrect.
-
 
 ## Accessibility Support
 

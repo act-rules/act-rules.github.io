@@ -1,12 +1,14 @@
 ---
 name: Descriptive headings
-description: |
-This rule checks that headings describe the topic or purpose of the content.
+test_type: atomic
 
-success_criterion: 
+description: |
+   This rule checks that headings describe the topic or purpose of the content.
+   
+success_criterion:
 - 2.4.6 # Headings and labels
 
-test aspects:
+test_aspects:
 - DOM Tree
 
 authors:

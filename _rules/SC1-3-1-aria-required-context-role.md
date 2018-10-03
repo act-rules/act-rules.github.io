@@ -52,19 +52,6 @@ Element with role ´listitem´ is contained within its required context role ´l
 
 #### Passed example 2
 
-Multiple levels of required context roles.
-
-```html
-<div role="table">
-    <div role="row">
-        <div role="cell"></div>
-    </div>
-</div>
-</div>
-```
-
-#### Passed example 3
-
 Element with role ´listitem´ is contained within its required context role ´list´, through the implicit role of ´ul´.
 
 ```html
@@ -73,7 +60,7 @@ Element with role ´listitem´ is contained within its required context role ´l
 </ul>
 ```
 
-#### Passed example 4
+#### Passed example 3
 
 Element contained within its required context role even though it is not a direct child of the context role.
 

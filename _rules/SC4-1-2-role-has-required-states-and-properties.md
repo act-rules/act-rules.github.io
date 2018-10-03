@@ -22,11 +22,9 @@ Any HTML or SVG element that has an [explicit semantic role](#semantic-role), ex
 
 ### Expectation
 
-For each test target, the [required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) for the role are present, unless the state or property has a default value listed under [implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole). 
+For each test target, the [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) for the role are present, unless the state or property has a default value listed under [WAI-ARIA implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole). 
 
-**Note:** The list of required states and properties for each role can be found in [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1).
-
-**Note:** This rule does not test whether the required states and properties has a correct value, only that the attributes are present and [non-empty](#non-empty).
+**Note:** This rule does not test whether the required states and properties have correct values, only that the attributes are present and [non-empty](#non-empty).
 
 ## Assumptions
 
@@ -34,7 +32,7 @@ For each test target, the [required states and properties](https://www.w3.org/TR
 
 ## Accessibility Support
 
-This rule relies on browsers and assistive technologies to support leaving out [required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) when an [implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole) is specified in [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1).
+This rule relies on browsers and assistive technologies to support leaving out [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) when a [WAI-ARIA implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole) is specified in [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1).
 
 **Note:** The required states and properties with implicit values can be found in the Core Accessibility API Mappings 1.1 [Overview of default values for missing required attributes](https://www.w3.org/TR/core-aam-1.1/#authorErrorDefaultValuesTable).
 

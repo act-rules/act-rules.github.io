@@ -35,7 +35,7 @@ Each target element describes the topic or purpose of the subsequent content.
 
 ## Assumptions
 
-- Heading markup is covered by success criterion 1.3.1 Info and Relationships.
+Heading markup is covered by success criterion 1.3.1 Info and Relationships.
 
 ## Accessibility Support
 
@@ -82,7 +82,7 @@ Heading marked up with h-element with an image that describes the topic or purpo
 
 #### Passed example 4
 
-Heading marked up with h-element that is a single character that describes the topic or purpose of the following section of content
+Heading marked up with h-element that is a single character that describes the topic or purpose of the following section of content.
 
 ```html
 <h1 class="target">A</h1>

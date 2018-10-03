@@ -53,26 +53,38 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
+#### Passed example 1
+
+Heading marked up with h-element that describes the topic or purpose of the following section of content.
+
 ```html
-<!-- Heading marked up with h-element that describes the topic or purpose of the following section of content -->
 <h1 class="target">Opening Hours</h1>
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
+#### Passed example 2
+
+Heading marked up with role="heading" that describes the topic or purpose of the following section of content.
+
 ```html
-<!-- Heading marked up with role="heading" that describes the topic or purpose of the following section of content -->
 <span role="heading">Opening Hours</span>
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
+#### Passed example 3
+
+Heading marked up with h-element with an image that describes the topic or purpose of the following section of content.
+
 ```html
-<!-- Heading marked up with h-element with an image that describes the topic or purpose of the following section of content -->
 <h1 class="target"><img scr="../test-assets/opening_hours_icon.png" alt="Opening hours"></img></h1>
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
+#### Passed example 4
+
+Heading marked up with h-element that is a single character that describes the topic or purpose of the following section of content
+
 ```html
-<!-- Heading marked up with h-element that is a single character that describes the topic or purpose of the following section of content -->
 <h1 class="target">A</h1>
 <dl>  
 <dt>airplane</dt>
@@ -84,27 +96,39 @@ There are no major accessibility support issues known for this rule.
 
 ### Failed
 
+#### Failed example 1
+
+Heading marked up with h-element that does not describe the topic or purpose of the following section of content.
+
 ```html
-<!-- Heading marked up with h-element that does not describe the topic or purpose of the following section of content -->
 <h1 class="target">Weather</h1>
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
+#### Failed example 2
+
+Heading marked up with role="heading" that does not describe the topic or purpose of the following section of content.
+
 ```html
-<!-- Heading marked up with role="heading" that does not describe the topic or purpose of the following section of content -->
 <span role="heading">Weather</span>
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
 ### Inapplicable
 
+#### Inapplicable example 1
+
+No heading.
+
 ```html
-<!-- No heading -->
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
+#### Inapplicable example 2
+
+Heading that is not visible to users.
+
 ```html
-<!-- Heading that is not visible to users -->
 <h1 style="display: none;">Opening hours</h1>
 <p>We are open Monday through Friday from 10 to 16</p>
 ```

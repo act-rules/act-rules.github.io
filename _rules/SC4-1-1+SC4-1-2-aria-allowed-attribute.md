@@ -19,13 +19,11 @@ authors:
 
 ### Applicability
 
-Any attribute that is placed on an HTML or SVG element where the attribute name starts with `aria-`.
+Any attribute that is specified on an HTML or SVG element where the attribute name starts with `aria-`.
 
 ### Expectation
 
-The `aria-*` attribute is either listed under [Supported States and Properties](https://www.w3.org/TR/wai-aria-1.1/#states_and_properties) in [WAI-ARIA](https://www.w3.org/TR/wai-aria) for the [semantic role](#semantic-role) of the element that the attribute is specified on, or it is found on the list of [Global States and Properties](https://www.w3.org/TR/wai-aria-1.1/#global_states).
-
-**Note:** [Global States and Properties](https://www.w3.org/TR/wai-aria-1.1/#global_states) are supported by all roles and by all base markup elements.
+The target attribute is either listed under [WAI-ARIA 1.1 Supported States and Properties](https://www.w3.org/TR/wai-aria-1.1/#states_and_properties) for the [semantic role](#semantic-role) of the element that the attribute is specified on, or it is found on the list of [WAI-ARIA 1.1 Global States and Properties](https://www.w3.org/TR/wai-aria-1.1/#global_states).
 
 ## Assumptions
 

@@ -1,5 +1,5 @@
 ---
-name: IFrame has a unique accessible name
+name: iframe has a unique accessible name
 
 description: |
  Each iframe element has a unique accessible name
@@ -21,12 +21,13 @@ authors:
 
 The rule applies to `iframe` elements that are [exposed to assistive technologies](#exposed-to-assistive-technologies) and have a [non-empty](#non-empty) accessible name.
 
-**Note:** 
-- Nested `iframe` contents treat the parent `iframe` element as the [document context](#document-context).
-
 ### Expectation
 
 Each target element has an [accessible name](#accessible-name) that is unique within the [document context](#document-context).
+
+**Note:** 
+- `iframes` with the same `src` can have the same [accessible name](#accessible-name).
+- Nested `iframe` contents treat the parent `iframe` element as the [document context](#document-context).
 
 ## Assumptions
 
@@ -47,7 +48,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Pass example 1
 
-Usage of `title` attribute to describe the `iframe` content, and there is only one iframe with in document context.
+Usage of `title` attribute to describe the `iframe` content, and there is only one iframe within document context.
 
 ```html
 <iframe title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
@@ -91,7 +92,7 @@ Multiple `iframe` elements in the document having different `aria-labelledby` de
 
 #### Pass example 5
 
-`frames` having the same `title` within a given document context, but one of them is not exposed to assistive technologies.
+`iframes` having the same `title` within a given document context, but one of them is not exposed to assistive technologies.
 
 ```html
 <iframe style="display:none;" title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
@@ -103,7 +104,7 @@ Multiple `iframe` elements in the document having different `aria-labelledby` de
 
 #### Pass example 6
 
-`iframes` are allowed to have the same `title` across different document contexts. In this example `iframe#level2-frame1` has a parent document content of `iframe#level1-frame2`, and does not share root `level1` document context.
+`iframes` are allowed to have the same `title` across different document contexts. In this example `iframe` with `id` `level2-frame1` has a parent document context of `iframe` with `id` `level1-frame2`, and does not share the document context of `iframe` with `id` `level1-frame1`.
 
 ```html
 <iframe id="level1-frame1" title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">

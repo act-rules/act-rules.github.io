@@ -1,5 +1,5 @@
 ---
-name: image accessible name is image file name
+name: image accessible name is image filename
 description: |
   This rule checks that `img` elements that use their source filename as their accessible name, do so without loss of infomation to the user.
 
@@ -51,7 +51,7 @@ The `img` element's accessible name acurately describes the image.
 
 ### Failure example 1
 
-The `img` element's accessible name matches the image's file name which does not acurately describe the image.
+The `img` element's accessible name matches the image's filename which does not acurately describe the image.
 
 ```html
 <img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="teaser_right2.jpg">

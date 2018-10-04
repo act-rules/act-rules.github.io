@@ -2,7 +2,7 @@
 name: iframe has a unique accessible name
 
 description: |
- Each iframe element has a unique accessible name
+ The accessible name for each iframe is unique
 
 success_criterion:
 - 4.1.2
@@ -19,15 +19,15 @@ authors:
 
 ### Applicability
 
-The rule applies to `iframe` elements that are [exposed to assistive technologies](#exposed-to-assistive-technologies) and have a [non-empty](#non-empty) accessible name.
+The rule applies to `iframe` elements that are [exposed to assistive technologies](#exposed-to-assistive-technologies) and have a [non-empty](#non-empty) [accessible name](#accessible-name).
 
 ### Expectation
 
-Each target element has an [accessible name](#accessible-name) that is unique within the [document context](#document-context).
+Each target element has an [accessible name](#accessible-name) that is unique across all other accessible names for `iframes` within the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the target element.
 
 **Note:** 
 - `iframes` with the same `src` can have the same [accessible name](#accessible-name).
-- Nested `iframe` contents treat the parent `iframe` element as the [document context](#document-context).
+- Nested `iframe` contents treat the parent `iframe` element as the [document tree](https://www.w3.org/TR/dom41/#document-trees).
 
 ## Assumptions
 
@@ -39,8 +39,8 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- [http://www.w3.org/TR/WCAG20-TECHS/H64.html](http://www.w3.org/TR/WCAG20-TECHS/H64.html)
-- [https://www.w3.org/TR/2008/REC-WCAG20-20081211/#ensure-compat-rsv](https://www.w3.org/TR/2008/REC-WCAG20-20081211/#ensure-compat-rsv)
+- [H64: Using the title attribute of the frame and iframe elements](http://www.w3.org/TR/WCAG20-TECHS/H64.html)
+- [WCAG 2.0: Name, Role, Value: Understanding SC 4.1.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
 
 ## Test cases
 
@@ -48,7 +48,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Pass example 1
 
-Usage of `title` attribute to describe the `iframe` content, and there is only one iframe within document context.
+Usage of `title` attribute to describe the `iframe` content, and there is only one iframe within document tree.
 
 ```html
 <iframe title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
@@ -92,7 +92,7 @@ Multiple `iframe` elements in the document having different `aria-labelledby` de
 
 #### Pass example 5
 
-`iframes` having the same `title` within a given document context, but one of them is not exposed to assistive technologies.
+`iframes` having the same `title` within a given document tree, but one of them is not exposed to assistive technologies.
 
 ```html
 <iframe style="display:none;" title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
@@ -104,7 +104,7 @@ Multiple `iframe` elements in the document having different `aria-labelledby` de
 
 #### Pass example 6
 
-`iframes` are allowed to have the same `title` across different document contexts. In this example `iframe` with `id` `level2-frame1` has a parent document context of `iframe` with `id` `level1-frame2`, and does not share the document context of `iframe` with `id` `level1-frame1`.
+`iframes` are allowed to have the same `title` across different document tree. In this example `iframe` with `id` `level2-frame1` has a parent document tree of `iframe` with `id` `level1-frame2`, and does not share the document tree of `iframe` with `id` `level1-frame1`.
 
 ```html
 <iframe id="level1-frame1" title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
@@ -119,7 +119,7 @@ Multiple `iframe` elements in the document having different `aria-labelledby` de
 
 #### Fail example 1
 
-Multiple frames having the same `title` within a given document context.
+Multiple frames having the same `title` within a given document tree.
 
 ```html
 <iframe title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
@@ -130,7 +130,7 @@ Multiple frames having the same `title` within a given document context.
 
 #### Fail example 2
 
-Multiple frames having the same `aria-label` within a given document context.
+Multiple frames having the same `aria-label` within a given document tree.
 
 ```html
 <iframe aria-label="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
@@ -141,7 +141,7 @@ Multiple frames having the same `aria-label` within a given document context.
 
 #### Fail example 3
 
-Multiple frames having the same name given by `title` and `aria-label` within a given document context
+Multiple frames having the same accessible name given by `title` and `aria-label` within a given document tree
 
 ```html
 <iframe title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
@@ -165,7 +165,7 @@ Accessible name provided is empty.
 
 #### Inapplicable example 2
 
-Usage of `alt` attribute to describe content is not valid.
+`alt` cannot be used to provide accessible name for iframe.
 
 ```html
 <iframe alt="Some" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">

@@ -26,7 +26,7 @@ Any `id` attribute specified on an HTML or SVG element.
 
 ### Expectation
 
-The value of the attribute is unique across all other `id` attributes specified on HTML or SVG elements that exist within the same [tree](#https://www.w3.org/TR/dom/#concept-tree) as the element on which the applicable `id` attribute is specified. These are the elements that are [descendants](#https://www.w3.org/TR/dom/#concept-tree-descendant) of the [root](#https://www.w3.org/TR/dom/#concept-tree-root) of the element on which the applicable `id` attribute is specified.
+The value of the attribute is unique across all other `id` attributes specified on HTML or SVG elements that exist within the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the element on which the applicable `id` attribute is specified.
 
 ## Assumptions
 

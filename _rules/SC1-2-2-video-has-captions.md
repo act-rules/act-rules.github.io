@@ -9,8 +9,8 @@ success_criterion:
 test_aspects:
 - DOM Tree
 - CSS Styling
-- [Audio output]{#audio-output}
-- [Visual output]{#audio-output}
+- Audio output
+- Visual output
 
 authors:
 - Wilco Fiers

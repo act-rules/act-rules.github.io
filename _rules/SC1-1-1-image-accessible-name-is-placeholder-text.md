@@ -16,7 +16,7 @@ authors:
 
 ### Applicability
 
-The rule applies to HTML `input type="image" `and `area` elements or any HTML element with the semantic role of `img` [exposed to assistive technologies](#exposed-to-assistive-technologies), with a [non-empty](#non-empty), [accessible name](#accessible-name).
+The rule applies to HTML `input type="image" `and `area` elements or any HTML element with the semantic role of `img` [exposed to assistive technologies](#exposed-to-assistive-technologies), with a [non-empty](#non-empty) [accessible name](#accessible-name).
 
 ### Expectation
 

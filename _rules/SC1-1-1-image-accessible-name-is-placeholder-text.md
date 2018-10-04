@@ -6,7 +6,7 @@ description: |
 success_criterion:
 - 1.1.1 # Non-text Content
 
-test_aspects
+test_aspects:
 - DOM Tree
 - CSS Styling
 

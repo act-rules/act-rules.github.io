@@ -1,5 +1,5 @@
 ---
-name: ARIA attribute has valid value
+name: ARIA state or property has valid value
 test_type: atomic
 
 description: |
@@ -28,12 +28,12 @@ Any [non-empty](#non-empty) [WAI-ARIA 1.1 state or property](https://www.w3.org/
 Each test target has a valid value according to its [WAI-ARIA 1.1 value type](https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value).
 
 **Note:** 
-- For value types `ID Reference` and `ID Reference List` this rule does not require that elements with the given id(s) exists in the document, unless the attribute is a [WAI-ARIA required property](https://www.w3.org/TR/wai-aria-1.1/#requiredState) for the [semantic role](#semantic-role) of the element on which the property is specified.
+- For value types `ID Reference` and `ID Reference List` this rule does not require that elements with the given id(s) exists in the document, unless the property is a [WAI-ARIA required property](https://www.w3.org/TR/wai-aria-1.1/#requiredState) for the [semantic role](#semantic-role) of the element on which the property is specified.
 - For value type `URI` ensure that the value matches the [generic URI syntax](https://www.ietf.org/rfc/rfc3986.txt). This rule does not require that the destination URL exists. 
 
 ## Assumptions
 
-- This rule assumes that WAI-ARIA attributes on elements that are not [included in the accessibility tree](#exposed-to-assistive-technologies) or [focusable](#focusable) can still impact users. For example, anything referenced through `aria-labelledby` does not have to be included in the accessibility tree in order for it to become part of the [accessible name](#accessible-name). Therefore this rule is not limited to elements that are included in the accessibility tree or focusable.
+- This rule assumes that [WAI-ARIA 1.1 states and properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) on elements that are not [included in the accessibility tree](#exposed-to-assistive-technologies) or [focusable](#focusable) can still impact users. For example, anything referenced through `aria-labelledby` does not have to be included in the accessibility tree in order for it to become part of the [accessible name](#accessible-name). Therefore this rule is not limited to elements that are included in the accessibility tree or focusable.
 
 ## Accessibility Support
 
@@ -44,7 +44,7 @@ _There are no major accessibility support issues known for this rule._
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 - [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/ARIA5)
 - [WAI-ARIA 1.1, Definitions of States and Properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def)
-- [Overview of possible ´aria-*´ attribute value types](https://www.w3.org/TR/wai-aria/#propcharacteristic_value)
+- [WAI-ARIA 1.1, Characteristics of States and Properties, Value](https://www.w3.org/TR/wai-aria/#propcharacteristic_value)
 - [Uniform Resource Identifier (URI): Generic Syntax (RFC 3986)](https://www.ietf.org/rfc/rfc3986.txt)
 
 ## Test Cases
@@ -53,7 +53,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed example 1
 
-Element with valid true/false value
+`aria-required` property with valid true/false value
 
  ```html
 <div role="textbox" aria-required="true"></div>
@@ -61,7 +61,7 @@ Element with valid true/false value
 
 #### Passed example 2
  
-Element with valid true/false/undefined value
+`aria-expanded` state with valid true/false/undefined value
  
 ```html
 <div role="button" aria-expanded="undefined"></div>
@@ -69,7 +69,7 @@ Element with valid true/false/undefined value
 
 #### Passed example 3
  
-Element with valid tristate value
+`aria-pressed` state with valid tristate value
  
 ```html
 <div role="button" aria-pressed="mixed"></div>
@@ -77,7 +77,7 @@ Element with valid tristate value
 
 #### Passed example 4
  
-Element with valid ID reference value
+`aria-errormessage` property with valid ID reference value
  
 ```html
 <div role="textbox" aria-errormessage="my-error"></div>
@@ -85,7 +85,7 @@ Element with valid ID reference value
 
 #### Passed example 5
  
-Element with valid ID reference list value
+`aria-owns` property with valid ID reference list value
  
 ```html
 <div role="combobox" aria-owns="my-textbox my-grid"></div>
@@ -93,7 +93,7 @@ Element with valid ID reference list value
 
 #### Passed example 6
  
-Element with valid integer value
+`aria-rowindex` property with valid integer value
  
 ```html
 <div role="gridcell" aria-rowindex="2">Fred</div>
@@ -101,7 +101,7 @@ Element with valid integer value
 
 #### Passed example 7
  
-Element with valid number value
+`aria-valuemin`, `aria-valuemax` and `aria-valuenow` properties with valid number values
  
 ```html
 <div role="spinbutton" aria-valuemin="1.0" aria-valuemax="2.0" aria-valuenow="1.5"></div>
@@ -109,7 +109,7 @@ Element with valid number value
 
 #### Passed example 8
  
-Element with valid string value
+`aria-placeholder` property with valid string value
  
 ```html
 <div role="searchbox" aria-placeholder="MM-DD-YYYY">MM-DD-YYYY</div>
@@ -117,7 +117,7 @@ Element with valid string value
 
 #### Passed example 9
  
-Element with valid token value, attribute inappropriate for the role.
+`aria-orientation` property with valid token value (property inappropriate for the role)
  
 ```html
 <div role="button" aria-orientation="horizontal"></div>
@@ -125,7 +125,7 @@ Element with valid token value, attribute inappropriate for the role.
 
 #### Passed example 10
  
-Element with valid token list value
+`aria-dropeffect` property with valid token list value
  
 ```html
 <div role="dialog" aria-dropeffect="copy move"></div>
@@ -135,7 +135,7 @@ Element with valid token list value
 
 #### Failed example 1
 
-Element with invalid true/false value
+`aria-required` property with invalid true/false value
 
 ```html
 <div role="textbox" aria-required="undefined"></div>
@@ -143,7 +143,7 @@ Element with invalid true/false value
 
 #### Failed example 2
 
-Element with invalid true/false/undefined value
+`aria-expanded` state with invalid true/false/undefined value
 
 ```html
 <div role="button" aria-expanded="mixed"></div>
@@ -151,7 +151,7 @@ Element with invalid true/false/undefined value
 
 #### Failed example 3
 
-Element with invalid tristate value
+`aria-pressed` state with invalid tristate value
 
 ```html
 <div role="button" aria-pressed="horizontal"></div>
@@ -159,7 +159,7 @@ Element with invalid tristate value
 
 #### Failed example 4
 
-Element with invalid ID reference value, space not allowed in a single ID
+`aria-errormessage` property with invalid ID reference value, since space is not allowed in a single ID
 
 ```html
 <div role="textbox" aria-errormessage="error1 error2"></div>
@@ -167,7 +167,7 @@ Element with invalid ID reference value, space not allowed in a single ID
 
 #### Failed example 5
 
-Element with invalid integer value
+`aria-rowindex` property with invalid integer value
 
 ```html
 <div role="gridcell" aria-rowindex="2.5">Fred</div>
@@ -175,7 +175,7 @@ Element with invalid integer value
 
 #### Failed example 6
 
-Element with invalid number value
+`aria-valuemin`, `aria-valuemax` and `aria-valuenow` property with invalid number values
 
 ```html
 <div role="spinbutton" aria-valuemin="one" aria-valuemax="three" aria-valuenow="two"></div>
@@ -183,7 +183,7 @@ Element with invalid number value
 
 #### Failed example 7
 
-Element with invalid token value
+`aria-live` property with invalid token value
 
 ```html
 <div role="main" aria-live="nope"></div>
@@ -196,18 +196,10 @@ Element with invalid token list value
 ```html
 <div role="dialog" aria-dropeffect="invalid move"></div>
 ```
-
+ 
 #### Failed example 9
-
-Element with invalid empty aria attribute for token value
-
-```html
-<div role="button" aria-expanded="collapsed" aria-live="off"></div>
-```
  
-#### Failed example 10
- 
-Element with invalid true/false/undefined value for custom element
+`aria-expanded` state with invalid true/false/undefined value for custom element
  
 ```html
 <my-button role="button" aria-expanded="collapsed"></my-button>
@@ -217,7 +209,7 @@ Element with invalid true/false/undefined value for custom element
 
 #### Inapplicable example 1
 
-Element does not have any `aria-*` attributes
+Element does not have any ARIA states or properties
 
 ```html
 <div>Some Content</div>
@@ -225,7 +217,7 @@ Element does not have any `aria-*` attributes
 
 #### Inapplicable example 2
 
-Element has ARIA role, but no attributes that start with `aria-`
+Element has ARIA role, but no ARIA states or properties
 
 ```html
 <div role="button">Some Content</div>
@@ -233,14 +225,15 @@ Element has ARIA role, but no attributes that start with `aria-`
 
 #### Inapplicable example 3
 
-Element with null ARIA attribute
+`aria-checked` state with empty value
+
 ```html
 <div role="checkbox" aria-checked></div>
 ```
 
 #### Inapplicable example 4
 
-Element with empty ARIA attribute
+`aria-labelledby` property with empty value
 
 ```html
 <div role="searchbox" aria-labelledby=""></div>
@@ -248,8 +241,8 @@ Element with empty ARIA attribute
 
 #### Inapplicable example 5
 
-Element with ARIA attribute, where element isn't HTML or SVG
-  
+`aria-hidden` state on an element that is not an HTML or SVG element
+
  ```html
   <math aria-hidden="true"></math>
 ```

@@ -3,7 +3,7 @@ name: ARIA attribute has valid value
 test_type: atomic
 
 description: |
-   This rule checks that all ARIA 1.1 attributes (`aria-*`) have valid values
+   This rule checks that all ARIA 1.1 states and properties have valid values
    
 success_criterion:
 - 4.1.2 # Name, Role, Value
@@ -21,11 +21,11 @@ authors:
 
 ### Applicability
 
-Any [non-empty](#non-empty) attribute that is specified on an HTML or SVG element, where the attribute name starts with `aria-` and can be found in [WAI-ARIA 1.1, Definitions of States and Properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
+Any [non-empty](#non-empty) [WAI-ARIA 1.1 states or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) that is specified on an HTML or SVG element.
 
 ### Expectation
 
-Each test target has a valid value according to the [value type](https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value) for that `aria-*` attribute as specified by [WAI-ARIA 1.1, Definitions of States and Properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
+Each test target has a valid value according to its [WAI-ARIA 1.1 value type](https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value).
 
 **Note:** 
 - For value types `ID Reference` and `ID Reference List` this rule does not require that elements with the given id(s) exists in the document, unless the attribute is a [WAI-ARIA required property](https://www.w3.org/TR/wai-aria-1.1/#requiredState) for the [semantic role](#semantic-role) of the element on which the property is specified.

@@ -33,7 +33,7 @@ Each test target has a valid value according to its [WAI-ARIA 1.1 value type](ht
 
 ## Assumptions
 
-- This rule assumes that WAI-ARIA attributes on elements that are not [exposed to assistive technologies](#exposed-to-assistive-technologies)) can still impact users. For example, anything referenced through aria-labelledby does not have to be exposed to assistive technologies in order for it to become part of the accessible name. Therefore this rule is not limited to elements that are exposed to assistive technologies.
+- This rule assumes that WAI-ARIA attributes on elements that are not [included in the accessibility tree](#exposed-to-assistive-technologies) or [focusable](#focusable) can still impact users. For example, anything referenced through `aria-labelledby` does not have to be included in the accessibility tree in order for it to become part of the [accessible name](#accessible-name). Therefore this rule is not limited to elements that are included in the accessibility tree or focusable.
 
 ## Accessibility Support
 

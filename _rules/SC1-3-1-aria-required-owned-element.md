@@ -20,11 +20,11 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has an explicit [semantic role](#semantic-role) that has [required owned elements](https://www.w3.org/TR/wai-aria-1.1/#mustContain) listed for that role in [WAI-ARIA](https://www.w3.org/TR/wai-aria).
+This rule applies to any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) with a role that requires it to own some element(s). This is only applicable to elements that have an explicit [semantic role](#semantic-role). Which roles have required owned elements is defined in [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/).
 
 ### Expectation
 
-For each test target at least one instance of one [required owned element](https://www.w3.org/TR/wai-aria-1.1/#mustContain) listed for that role in [WAI-ARIA](https://www.w3.org/TR/wai-aria) is present as a [semantic role](#semantic-role) for an element [owned](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element) by the test target.
+For each test target, at least one instance of one [required owned element](https://www.w3.org/TR/wai-aria-1.1/#mustContain) listed for that role in [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/), is present.
 
 **Note:**
 - When a widget is missing required owned elements due to script execution or loading, authors [MUST]((w3.org/TR/wai-aria-1.1/#mustContain)) mark a containing element with `aria-busy` equal to `true`.

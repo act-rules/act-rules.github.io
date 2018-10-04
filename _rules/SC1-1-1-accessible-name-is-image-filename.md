@@ -82,7 +82,7 @@ Image accessible name does not contain the image filename.
 
 ### Inapplicable example 4
 
-The `img` `alt` does not accurately describe the image but is overridden by `aria-label` which does accurately describe the image.
+The `img` `alt` does not accurately describe the image but is overridden by `aria-label` which does accurately describes the image.
 
 ```html
 <img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="teaser_right2.jpg" aria-label="modanna lily">

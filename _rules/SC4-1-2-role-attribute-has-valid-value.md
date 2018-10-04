@@ -3,7 +3,7 @@ name: Role attribute has valid value
 test_type: atomic
 
 description: |
-   This rule checks that role attributes have valid values
+   This rule checks that each role attribute has at least one valid value
    
 success_criterion:
 - 4.1.2 # Name, Role, Value
@@ -24,7 +24,7 @@ Any [non-empty](#non-empty) `role` attribute that is placed on an HTML or SVG el
 
 ### Expectation
 
-Each test target has at least one non-abstract valid value as specified in the [WAI-ARIA 1.1, roles](https://www.w3.org/TR/wai-aria-1.1/#roles_categorization).
+Each test target has at least one non-abstract valid value as specified in the [WAI-ARIA 1.1 Categorization of Roles](https://www.w3.org/TR/wai-aria-1.1/#roles_categorization).
 
 ## Assumptions
 
@@ -34,12 +34,12 @@ Each test target has at least one non-abstract valid value as specified in the [
 
 Older browsers do not support fallback roles. If multiple values are used in the role attribute, the attribute is ignored.
 
-At the moment, none of the major assistive technologies support all roles.
+At the moment, none of the major assistive technologies support all `[WAI-ARIA 1.1 roles](https://www.w3.org/TR/wai-aria-1.1/#roles_categorization)`.
 
 ## Background
 
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
-- [WAI-ARIA 1.1, roles categories](https://www.w3.org/TR/wai-aria-1.1/#roles_categorization)
+- [WAI-ARIA 1.1 Categorization of Roles](https://www.w3.org/TR/wai-aria-1.1/#roles_categorization)
 - [MDN: Using ARIA: Roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#Roles)
 
 ## Test Cases
@@ -119,5 +119,5 @@ Element with null `role` attribute.
 Element that is not exposed to assistive technologies.
 
 ```html
-<div style="display:none;" role="banner">Some Content</div>
+<div aria-hidden="true" role="banner">Some Content</div>
 ```

@@ -3,7 +3,7 @@ name: ARIA state or property has valid value
 test_type: atomic
 
 description: |
-   This rule checks that all ARIA states and properties have valid values
+   This rule checks that each ARIA state or property has a valid value
    
 success_criterion:
 - 4.1.2 # Name, Role, Value

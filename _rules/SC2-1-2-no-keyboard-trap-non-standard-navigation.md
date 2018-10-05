@@ -118,7 +118,7 @@ document.getElementById("helptext").innerHTML = "<p>Press the M-key to Exit</p>"
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 Keyboard trap with no instructions.
 
@@ -133,7 +133,7 @@ var trapOn = false ;
 <a id="link2" href="#">Link 2</a>
 ````
 
-#### Fail example 2
+#### Failed example 2
 
 Keyboard trap with instructions that doesn't give advise on the method for proceeding
 
@@ -149,7 +149,7 @@ var trapOn = false ;
 <a id="link2" href="#">Link 2</a>
 ````
 
-#### Fail example 3
+#### Failed example 3
 
 Keyboard trap with help text, where the method advised doesn't work
 

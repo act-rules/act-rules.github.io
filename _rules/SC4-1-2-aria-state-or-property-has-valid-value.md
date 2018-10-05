@@ -27,7 +27,7 @@ Any [non-empty](#non-empty) [WAI-ARIA 1.1 state or property](https://www.w3.org/
 
 Each test target has a valid value according to its [WAI-ARIA 1.1 value type](https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value).
 
-For value types `ID Reference` and `ID Reference List`, a valid value for a [WAI-ARIA required propertiy](https://www.w3.org/TR/wai-aria-1.1/#requiredState) requires that the element(s) with the given id(s) exists in the same [document tree] or [shadow tree] as the element that sepcifies the target attribute. For non-required properties, this is not a requirement.
+For value types `ID Reference` and `ID Reference List`, a valid value for a [WAI-ARIA required propertiy](https://www.w3.org/TR/wai-aria-1.1/#requiredState) requires that the element(s) with the given id(s) exists in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the element that sepcifies the target attribute. For non-required properties, this is not a requirement.
 
 For value type `URI`, a valid value matches the [generic URI syntax](https://www.ietf.org/rfc/rfc3986.txt).
 

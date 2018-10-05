@@ -22,7 +22,7 @@ The rule applies to any HTML or SVG element that is [exposed to assistive techno
 
 ### Expectation
 
-Each target element is [owned](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element) by an element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has a [semantic role](#semantic-role) matching one of the [required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope) listed for that role in [WAI-ARIA](https://www.w3.org/TR/wai-aria).
+Each target element is [owned (per WAI-ARIA)](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element) by an element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has a [semantic role](#semantic-role) matching one of the [WAI-ARIA required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope).
 
 ## Assumptions
 
@@ -30,7 +30,7 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-This rule relies on assistive technologies to recognize owned elements, also when they are nested descendants that are not immediate children. Certain assistive technologies cannot recognize owned elements that not immediate children, unless workarounds are used.
+This rule relies on assistive technologies to recognize owned elements, as defined by [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria). This includes when they are nested descendants that are not immediate children. However, some assistive technologies do not recognize owned elements that are not immediate children, unless workarounds are used.
 
 ## Background
 

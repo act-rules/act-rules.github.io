@@ -27,13 +27,18 @@ Any [non-empty](#non-empty) [WAI-ARIA 1.1 state or property](https://www.w3.org/
 
 Each test target has a valid value according to its [WAI-ARIA 1.1 value type](https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value).
 
+For value types `ID Reference` and `ID Reference List`, a valid value for a [WAI-ARIA required propertiy](https://www.w3.org/TR/wai-aria-1.1/#requiredState) requires that the element(s) with the given id(s) exists in the same [document tree] or [shadow tree] as the element that sepcifies the target attribute. For non-required properties, this is not a requirement.
+
+For value type `URI`, a valid value matches the [generic URI syntax](https://www.ietf.org/rfc/rfc3986.txt).
+
 **Note:** 
-- For value types `ID Reference` and `ID Reference List` this rule does not require that elements with the given id(s) exists in the document, unless the property is a [WAI-ARIA required property](https://www.w3.org/TR/wai-aria-1.1/#requiredState) for the [semantic role](#semantic-role) of the element on which the property is specified.
-- For value type `URI` ensure that the value matches the [generic URI syntax](https://www.ietf.org/rfc/rfc3986.txt). This rule does not require that the destination URL exists. 
+- For value type `URI`, this rule does not require that the destination URL exists. 
 
 ## Assumptions
 
-- This rule assumes that [WAI-ARIA 1.1 states and properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) on elements that are not [included in the accessibility tree](#exposed-to-assistive-technologies) or [focusable](#focusable) can still impact users. For example, anything referenced through `aria-labelledby` does not have to be included in the accessibility tree in order for it to become part of the [accessible name](#accessible-name). Therefore this rule is not limited to elements that are included in the accessibility tree or focusable.
+- All [WAI-ARIA 1.1 states and properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def), including those on elements that are not [included in the accessibility tree](#exposed-to-assistive-technologies) or [focusable](#focusable), are part of the applicability.
+
+**Note:** Elements that are not [included in the accessibility tree](#included-in-the-accessibility-tree) or [focusable](#focusable) can still impact users. For example, anything referenced through `aria-labelledby` does not have to be included in the accessibility tree in order for it to become part of the [accessible name](#accessible-name). Therefore this rule is not limited to elements that are included in the accessibility tree or focusable.
 
 ## Accessibility Support
 

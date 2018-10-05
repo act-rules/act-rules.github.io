@@ -27,12 +27,12 @@ Any [non-empty](#non-empty) [WAI-ARIA 1.1 state or property](https://www.w3.org/
 
 Each test target has a valid value according to its [WAI-ARIA 1.1 value type](https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value).
 
-For value types `ID Reference` and `ID Reference List`, a valid value for a [WAI-ARIA required propertiy](https://www.w3.org/TR/wai-aria-1.1/#requiredState) requires that the element(s) with the given id(s) exists in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the element that sepcifies the target attribute. For non-required properties, this is not a requirement.
+For value types `ID Reference` and `ID Reference List`, a valid value for a [WAI-ARIA required property](https://www.w3.org/TR/wai-aria-1.1/#requiredState) requires that the element(s) with the given id(s) exists in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the element that specifies the target attribute. For non-required properties, this is not a requirement.
 
 For value type `URI`, a valid value matches the [generic URI syntax](https://www.ietf.org/rfc/rfc3986.txt).
 
 **Note:** 
-For value type `URI`, this rule does not require that the destination URL exists. 
+For value type `URI`, this rule does not require that the destination URI exists. 
 
 ## Assumptions
 
@@ -136,6 +136,15 @@ _There are no major accessibility support issues known for this rule._
 <div role="dialog" aria-dropeffect="copy move"></div>
 ```
 
+#### Passed example 11
+
+`aria-controls`, which is a required property for the role `scrollbar`, has `ID Reference` that references an element existing in the same document tree. 
+
+```html
+<div id="content1">Lorem ipsum...</div>
+<div role="scrollbar" aria-controls="content1" aria-orientation="vertical" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25"></div>
+```
+
 ### Failed
 
 #### Failed example 1
@@ -208,6 +217,14 @@ Element with invalid token list value
  
 ```html
 <my-button role="button" aria-expanded="collapsed"></my-button>
+```
+
+#### Failed example 10
+
+`aria-controls`, which is a required property for the role `scrollbar`, references an element that does not exist in the same document tree.
+
+```html
+<div role="scrollbar" aria-controls="content1" aria-orientation="vertical" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25"></div>
 ```
 
 ### Inapplicable

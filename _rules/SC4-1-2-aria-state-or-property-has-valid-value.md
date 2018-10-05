@@ -32,7 +32,7 @@ For value types `ID Reference` and `ID Reference List`, a valid value for a [WAI
 For value type `URI`, a valid value matches the [generic URI syntax](https://www.ietf.org/rfc/rfc3986.txt).
 
 **Note:** 
-- For value type `URI`, this rule does not require that the destination URL exists. 
+For value type `URI`, this rule does not require that the destination URL exists. 
 
 ## Assumptions
 

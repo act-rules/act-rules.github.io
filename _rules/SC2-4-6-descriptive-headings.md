@@ -10,6 +10,7 @@ success_criterion:
 
 test_aspects:
 - DOM Tree
+- Accessibility Tree
 
 authors:
 - Dagfinn Rømen
@@ -21,13 +22,15 @@ authors:
 
 ### Applicability
 
-This rule applies to any element with the [semantic role](#semantic-role) of `heading`.
+This rule applies to any element with the [semantic role](#semantic-role) of `heading` that is either visible or included in the [accessibility tree](#accessibility tree).
 
 **Note**: The WCAG 2.0 success criterion 2.4.6 applies to all headings. "Heading" is used in its general sense and includes titles and other ways to add a heading to different types of content.
 
 **Note**: Heading content defines the header of a section (whether explicitly marked up using sectioning content elements, or implied by the heading content itself).
 
 **Note**: A section is a self-contained portion of written content that deals with one or more related topics or thoughts. A section may consist of one or more paragraphs and include graphics, tables, lists and sub-sections.
+
+**Note**: Correct heading markup is covered by success criterion 1.3.1 Info and Relationships.
 
 ### Expectation
 
@@ -36,8 +39,7 @@ Each target element describes the topic or purpose of the subsequent content.
 **Note**: Headings do not need to be lengthy. A word, or even a single character, may suffice.
 
 ## Assumptions
-
-Heading markup is covered by success criterion 1.3.1 Info and Relationships.
+_There are currently no assumptions_
 
 ## Accessibility Support
 
@@ -66,7 +68,7 @@ Heading marked up with h-element that describes the topic or purpose of the foll
 
 #### Passed example 2
 
-Heading marked up with role="heading" that describes the topic or purpose of the following section of content.
+Heading marked up with `role="heading"` that describes the topic or purpose of the following section of content.
 
 ```html
 <span role="heading">Opening Hours</span>
@@ -109,7 +111,7 @@ Heading marked up with h-element that does not describe the topic or purpose of 
 
 #### Failed example 2
 
-Heading marked up with role="heading" that does not describe the topic or purpose of the following section of content.
+Heading marked up with `role="heading"` that does not describe the topic or purpose of the following section of content.
 
 ```html
 <span role="heading">Weather</span>

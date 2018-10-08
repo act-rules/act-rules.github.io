@@ -20,7 +20,7 @@ authors:
 
 ### Applicability
 
-Any [non-empty](#non-empty) `role` attribute that is placed on an HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies).
+Any [non-empty](#non-empty) `role` attribute that is specified on an HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies).
 
 ### Expectation
 
@@ -32,9 +32,9 @@ Each test target has at least one non-abstract valid value as specified in the [
 
 ## Accessibility Support
 
-Older browsers do not support fallback roles. If multiple values are used in the role attribute, the attribute is ignored.
-
-At the moment, none of the major assistive technologies support all `[WAI-ARIA 1.1 roles](https://www.w3.org/TR/wai-aria-1.1/#roles_categorization)`.
+Older browsers do not support more than one token in the value for a role attribute. If multiple values are used in the role attribute, the attribute is ignored in these browsers.
+ 
+**Note:** Having a whitespace separated list of more than one token in the value of the role attribute is used for what is known as `fallback roles`. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role](#semantic-role) of the element, and so forth.
 
 ## Background
 

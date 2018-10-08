@@ -46,7 +46,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Test Cases
 
-### Pass example 1
+### Passed example 1
 
 A video element with an associated track element that contains captions for all the audio.
 
@@ -56,7 +56,7 @@ A video element with an associated track element that contains captions for all 
 </video>
 ```
 
-### Pass example 2
+### Passed example 2
 
 A video element that describes some of the text on the same page. The text on the page labels the video as an alternative.
 

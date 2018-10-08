@@ -98,6 +98,21 @@ Heading marked up with h-element that is a single character that describes the t
 </dl>
 ```
 
+#### Passed example 5
+Heading marked up with `role="heading"` that describes the topic or purpose of the following section of content and is visible only in the Accessibility Tree.
+
+```html
+<span role="heading" style="position: absolute !important; top: -9999px !important; left: -9999px !important;">Opening Hours</span>
+<p style="position: absolute !important; top: -9999px !important; left: -9999px !important;">We are open Monday through Friday from 10 to 16</p>
+```
+
+#### Passed example 6
+Heading marked up with h-element that describes the topic or purpose of the following section of content and is not visible in the Accessibility Tree.
+```html
+<h1 class="target" aria-hidden="true">Opening Hours</h1>
+<p>We are open Monday through Friday from 10 to 16</p>
+```
+
 ### Failed
 
 #### Failed example 1
@@ -115,6 +130,22 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 ```html
 <span role="heading">Weather</span>
+<p>We are open Monday through Friday from 10 to 16</p>
+```
+
+#### Failed example 3
+
+Heading marked up with `role="heading"` that does not describes the topic or purpose of the following section of content and is visible only in the Accessibility Tree.
+
+```html
+<span role="heading" style="position: absolute !important; top: -9999px !important; left: -9999px !important;">Weather</span>
+<p style="position: absolute !important; top: -9999px !important; left: -9999px !important;">We are open Monday through Friday from 10 to 16</p>
+```
+
+#### Failed example 4
+Heading marked up with h-element that dose not describes the topic or purpose of the following section of content and is not visible in the Accessibility Tree.
+```html
+<h1 class="target" aria-hidden="true">Weather</h1>
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 

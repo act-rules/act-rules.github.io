@@ -45,7 +45,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 A valid ARIA 1.1 attribute `aria-atomic` is used on element `article`.
 
@@ -53,7 +53,7 @@ A valid ARIA 1.1 attribute `aria-atomic` is used on element `article`.
 <article aria-atomic>This is a decription of something cool...</article>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 A valid ARIA 1.1 attribute `aria-modal` on element `div` with role `dialog`
 
@@ -61,7 +61,7 @@ A valid ARIA 1.1 attribute `aria-modal` on element `div` with role `dialog`
 <div role="dialog" aria-modal>Contains modal content...</div>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 A valid ARIA 1.1 attribute `aria-live` on element `div` with role `alert`
 
@@ -69,7 +69,7 @@ A valid ARIA 1.1 attribute `aria-live` on element `div` with role `alert`
 <div role="alert" aria-live="assertive">Your session will expire in 60 seconds.</div>
 ```
 
-#### Pass example 4
+#### Passed example 4
 
 Muliple valid ARIA 1.1 attributes `aria-*` are specified on element `input` with role `spinbutton`
 
@@ -85,7 +85,7 @@ Muliple valid ARIA 1.1 attributes `aria-*` are specified on element `input` with
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 `aria-not-checked` is not a defined attribute in ARIA 1.1.
 
@@ -93,7 +93,7 @@ Muliple valid ARIA 1.1 attributes `aria-*` are specified on element `input` with
 <li role="menuitemcheckbox" aria-not-checked="true">List Item</li>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 `aria-labelled` is not a defined attribute in ARIA 1.1.
 

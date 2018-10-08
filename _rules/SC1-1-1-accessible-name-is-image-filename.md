@@ -43,7 +43,7 @@ Each test target accessible name can be used in place of the elements non-text c
 
 ### Pass example 1
 
-The `img` element's accessible name accurately describes the image.
+The element's accessible name matches the image filename which accurately describes the image.
 
 ```html
 <img scr="https://www.w3.org/WAI/demos/bad/img/w3c" alt="w3c">
@@ -51,7 +51,7 @@ The `img` element's accessible name accurately describes the image.
 
 ### Failure example 1
 
-The `img` element's accessible name matches the image filename which does not acurately describe the image.
+The element's accessible name matches the image filename which does not acurately describe the image.
 
 ```html
 <img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="teaser_right2.jpg">
@@ -59,14 +59,14 @@ The `img` element's accessible name matches the image filename which does not ac
 
 ### Inapplicable example 1
 
-Image is not exposed to assistive technologies.
+The image is not exposed to assistive technologies.
 
 ```html
 <img role="presentation">
 ```
 ### Inapplicable example 2
 
-Image is not exposed to assisstive technologies.
+The image is not exposed to assisstive technologies.
 
 ```html
 <img alt="">
@@ -74,7 +74,7 @@ Image is not exposed to assisstive technologies.
 
 ### Inapplicable example 3
 
-Image accessible name does not contain the image filename.
+The image accessible name does not contain the image filename.
 
 ```html
 <img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="modanna lily">
@@ -82,7 +82,7 @@ Image accessible name does not contain the image filename.
 
 ### Inapplicable example 4
 
-The `alt` attribute uses the filename, but the accessible name is actually calculated with the `aria-label` value, which doesn't use the filename.
+The image `alt` attribute matches the filename but is overidden by the `aria-label` value which takes precedence in the accessible name calculation.
 
 ```html
 <img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="teaser_right2.jpg" aria-label="modanna lily">

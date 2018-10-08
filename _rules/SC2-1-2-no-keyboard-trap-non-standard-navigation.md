@@ -61,7 +61,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 Keyboard trap with help information in a paragraph before, and where the method advised works.
 
@@ -77,7 +77,7 @@ var trapOn = false ;
 <a id="link2" href="#">Link 2</a>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 Keyboard trap with help information within the trap, and where the method advised works.
 
@@ -93,9 +93,11 @@ var trapOn = false ;
 <a id="link2" href="#">Link 2</a>
 ````
 
-```html
-<!-- Keyboard trap with "help" link that once clicked exposes the instructions.  -->
+#### Passed example 3
 
+Keyboard trap with "help" link that once clicked exposes the instructions.
+
+```html
 <script>
 var trapOn = false ;
 
@@ -112,12 +114,11 @@ document.getElementById("helptext").innerHTML = "<p>Press the M-key to Exit</p>"
 <button id="btn2" class="target" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
 </div>
 <a id="link2" href="#">Link 2</a>
-
 ```
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 Keyboard trap with no instructions.
 
@@ -132,9 +133,11 @@ var trapOn = false ;
 <a id="link2" href="#">Link 2</a>
 ````
 
-```html
-<!-- Keyboard trap with instructions that doesn't give advise on the method for proceeding -->
+#### Failed example 2
 
+Keyboard trap with instructions that doesn't give advise on the method for proceeding
+
+```html
 <script>
 var trapOn = false ;
 </script>
@@ -146,9 +149,11 @@ var trapOn = false ;
 <a id="link2" href="#">Link 2</a>
 ````
 
-```html
-<!-- Keyboard trap with help text, where the method advised doesn't work --> 
+#### Failed example 3
 
+Keyboard trap with help text, where the method advised doesn't work
+
+```html
 <script>
 var trapOn = false ;
 </script>

@@ -1,7 +1,7 @@
 ---
 name: Image accessible name is placeholder text
 description: |
-  This rule checks that the accessible name of an image is not a generic placeholder text.
+  This rule checks that image elements that use generic placeholder text as their accessible name, do so without loss of infomation to the user.
 
 success_criterion:
 - 1.1.1 # Non-text Content
@@ -16,11 +16,11 @@ authors:
 
 ### Applicability
 
-The rule applies to HTML `input type="image" `and `area` elements or any HTML element with the semantic role of `img` [exposed to assistive technologies](#exposed-to-assistive-technologies), with a [non-empty](#non-empty) [accessible name](#accessible-name).
+The rule applies to HTML `input type="image" `and `area` elements or any HTML element with the semantic role of `img` [exposed to assistive technologies](#exposed-to-assistive-technologies), where the [accessible name](#accessible-name) exclusively uses [generic placeholder text](#generic-placeholder-text).
 
 ### Expectation
 
-Each test target accessible name does not use [placeholder text](#placeholder-text) to describe the purpose of the image.
+Each test target accessible name can be used in place of the elements non-text content without loss of information to the user.
 
 ## Assumptions
 
@@ -32,21 +32,22 @@ Each test target accessible name does not use [placeholder text](#placeholder-te
 
 ## Background
 
-[Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)](https://www.w3.org/TR/WCAG20-TECHS/F30.html)
+- [https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
+- [Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)](https://www.w3.org/TR/WCAG20-TECHS/F30.html)
 
 ## Test Cases
 
 ### Pass example 1
 
-Accessible name text acurately describing the image.
+The element's accessible name uses generic placeholder text which accurately describes the image.
 
 ```html
-<img src="https://www.w3.org/WAI/demos/bad/after/img/weather.png" alt="sun amd cloud weather graphic">
+<img alt="oage"> (need a source file)
 ```
 
 ### Failure example 1
 
-Generic accessible name text that does not describe the purpose of the image.
+The element's accessible name uses generic placeholder text which does not accurately describes the image.
 
 ```html
 <img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg.png" alt="image">
@@ -54,7 +55,7 @@ Generic accessible name text that does not describe the purpose of the image.
 
 ### Inapplicable example 1
 
-Marked decorative with `alt=""`.
+The image is marked decorative with `alt=""`.
 
 ```html
 <img src="/background.png" alt="">
@@ -62,7 +63,7 @@ Marked decorative with `alt=""`.
 
 ### Inapplicable example 2
 
-Marked decorative with `role="presentation"`.
+The image is marked decorative with `role="presentation"`.
 
 ```html
 <img src="/background.png" role="presentation">
@@ -70,7 +71,7 @@ Marked decorative with `role="presentation"`.
 
 ### Inapplicable example 3
 
-The `img` alt uses generic placeholder text but is overridden by `aria-label` which accurately describes the image.
+The image `alt` value uses generic placeholder but is overidden by the `aria-label` value which takes precedence in the accessible name calculation.
 
 ```html
 <img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="image" aria-label="modanna lily">

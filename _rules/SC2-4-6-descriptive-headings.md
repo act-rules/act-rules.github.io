@@ -22,7 +22,7 @@ authors:
 
 ### Applicability
 
-This rule applies to any element with the [semantic role](#semantic-role) of `heading` that is either visible or included in the [accessibility tree](#accessibility tree).
+This rule applies to any element with the [semantic role](#semantic-role) of `heading` that is either visible or included in the accessibility tree.
 
 **Note**: The WCAG 2.0 success criterion 2.4.6 applies to all headings. "Heading" is used in its general sense and includes titles and other ways to add a heading to different types of content.
 
@@ -30,20 +30,18 @@ This rule applies to any element with the [semantic role](#semantic-role) of `he
 
 **Note**: A section is a self-contained portion of written content that deals with one or more related topics or thoughts. A section may consist of one or more paragraphs and include graphics, tables, lists and sub-sections.
 
-**Note**: Correct heading markup is covered by success criterion 1.3.1 Info and Relationships.
-
 ### Expectation
 
-Each target element describes the topic or purpose of the subsequent content.
+Each target element describes the topic or purpose of the subsequent section.
 
 **Note**: Headings do not need to be lengthy. A word, or even a single character, may suffice.
 
 ## Assumptions
-_There are currently no assumptions_
+_There are currently no assumptions._
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 
@@ -135,7 +133,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed example 3
 
-Heading marked up with `role="heading"` that does not describes the topic or purpose of the following section of content and is visible only in the Accessibility Tree.
+Heading marked up with `role="heading"` that does not describe the topic or purpose of the following section of content and is visible only in the Accessibility Tree.
 
 ```html
 <span role="heading" style="position: absolute !important; top: -9999px !important; left: -9999px !important;">Weather</span>
@@ -143,7 +141,7 @@ Heading marked up with `role="heading"` that does not describes the topic or pur
 ```
 
 #### Failed example 4
-Heading marked up with h-element that dose not describes the topic or purpose of the following section of content and is not visible in the Accessibility Tree.
+Heading marked up with h-element that dose not describe the topic or purpose of the following section of content and is not visible in the Accessibility Tree.
 ```html
 <h1 class="target" aria-hidden="true">Weather</h1>
 <p>We are open Monday through Friday from 10 to 16</p>

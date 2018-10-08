@@ -121,7 +121,7 @@ The `lang` attribute value has a valid primary language subtag, but a syntactica
 ```html
 <html>
 <body>
-  <p data-rule-target lang="en-US_GB"></p>
+  <p data-rule-target lang="en-US-GB"></p>
 </body>
 </html>
 ```

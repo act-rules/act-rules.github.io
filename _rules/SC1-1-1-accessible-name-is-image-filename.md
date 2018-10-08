@@ -1,7 +1,7 @@
 ---
 name: image accessible name is image filename
 description: |
-  This rule checks that `img` elements that use their source filename as their accessible name, do so without loss of infomation to the user.
+  This rule checks that images elements that use their source filename as their accessible name, do so without loss of infomation to the user.
 
 success_criterion:
 - 1.1.1 # Non-Text Content
@@ -20,7 +20,7 @@ authors:
 
 The rule applies to HTML `input type="image" `and `area` elements or any HTML element with the semantic role of `img` [exposed to assistive technologies](#exposed-to-assistive-technologies), where the [accessible name](#accessible-name) value exactly matches the filename specified in the `src` attribute.
 
-**Note**: URL query strings, case sensitivey, forward and trailing whitespace should be ignored. For example `src="/foo/bar.jpg?baz "` has a file name "bar.jpg".
+**Note**: URL query strings, case sensitivity, forward and trailing whitespace should be ignored. For example `src="/foo/bar.jpg?baz "` has a filename "bar.jpg".
 
 ### Expectation
 
@@ -43,7 +43,7 @@ Each test target accessible name can be used in place of the elements non-text c
 
 ### Pass example 1
 
-The `img` element's accessible name acurately describes the image.
+The `img` element's accessible name accurately describes the image.
 
 ```html
 <img scr="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c">
@@ -51,7 +51,7 @@ The `img` element's accessible name acurately describes the image.
 
 ### Failure example 1
 
-The `img` element's accessible name matches the image's filename which does not acurately describe the image.
+The `img` element's accessible name matches the image filename which does not acurately describe the image.
 
 ```html
 <img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="teaser_right2.jpg">
@@ -59,7 +59,7 @@ The `img` element's accessible name matches the image's filename which does not 
 
 ### Inapplicable example 1
 
-Mot exposed to assisstive technologies.
+Image is not exposed to assisstive technologies.
 
 ```html
 <img role="presentation">

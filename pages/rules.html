@@ -9,7 +9,8 @@ title: Auto-WCAG Rules
 			<th width='3%'>#</th>
 			<th width='25%'>Name</th>
       <th>Description</th>
-      <th width='35%'>WCAG Criterion</th>
+			<th width='35%'>WCAG Criterion</th>
+			<th width='10%'>Implementations</th>
     </tr>
 	</thead>
 	<!-- {% assign rulesAndDrafts = site.rules | concat: site.drafts | sort: 'name' %} -->
@@ -43,31 +44,29 @@ title: Auto-WCAG Rules
 				{% endfor %}
 			</ul>
 		</td>
+		<td>
+			{% assign ruleId = rule.id | remove: "/rules/" %}
+			{% assign implementations_count = site.data.implementations[ruleId] %}
+			<a href="{{ site.baseurl }}/pages/implementations.html">
+				{% if implementations_count == Nil %}
+					NEW
+				{% endif %}
+				{% if implementations_count == 0 %}
+					NEW
+				{% endif %}
+				{% if implementations_count == 1 %}
+					IN PROGRESS
+				{% endif %}
+				{% if implementations_count >= 3 %}
+					DONE
+				{% endif %}
+			</a>
+		</td>
   </tr>
   {% endfor %}
 </table>
 
-
 <section class="cards-section text-center">
-	<!-- 		
-	<h2 class="title">
-		Download Test Cases of Rules
-	</h2>
-	
-	<div class="intro">
-		<p>
-			Each of the test cases with the rules can be downloaded for integration with your test tool from here.
-		</p>
-		<div class="cta-container">
-			<a class="btn btn-primary btn-cta"
-				href="http://themes.3rdwavemedia.com/" 
-				target="_blank">
-				<i class="fas fa-file-download"></i>
-				Download Now
-			</a>
-		</div>
-	</div> 
-	-->
 
 	<div id="cards-wrapper" class="cards-wrapper row">
 		<div class="item item-primary col-md-4 col-sm-4 col-xs-12">

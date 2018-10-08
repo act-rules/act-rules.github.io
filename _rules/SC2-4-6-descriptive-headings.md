@@ -1,5 +1,5 @@
 ---
-name: Descriptive headings
+name: Heading is descriptive
 test_type: atomic
 
 description: |
@@ -21,11 +21,13 @@ authors:
 
 ### Applicability
 
-The rule applies to any element with the the [semantic role](#semantic-role) of `heading`.
+This rule applies to any element with the [semantic role](#semantic-role) of `heading`.
 
-**Note**: The WCAG 2.0 success criterion 2.4.6 applies to all headings.
+**Note**: The WCAG 2.0 success criterion 2.4.6 applies to all headings. "Heading" is used in its general sense and includes titles and other ways to add a heading to different types of content.
 
 **Note**: Heading content defines the header of a section (whether explicitly marked up using sectioning content elements, or implied by the heading content itself).
+
+**Note**: A section is a self-contained portion of written content that deals with one or more related topics or thoughts. A section may consist of one or more paragraphs and include graphics, tables, lists and sub-sections.
 
 ### Expectation
 
@@ -43,11 +45,11 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html
-- https://www.w3.org/TR/WCAG20-TECHS/G130.html
-- https://www.w3.org/TR/WCAG20-TECHS/H42.html
-- https://www.w3.org/TR/WCAG20-TECHS/ARIA12.html
-- https://www.w3.org/TR/html52/dom.html#heading-content
+- [Understanding Success Criterion 2.4.6: Headings and Labels](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html) 
+- [G130: Providing descriptive headings](https://www.w3.org/WAI/WCAG21/Techniques/general/G130)
+- [H42: Using h1-h6 to identify headings](https://www.w3.org/WAI/WCAG21/Techniques/html/H42)
+- [ARIA12: Using role=heading to identify headings](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA12)
+- [HTML 5.2 Standard - Heading content](https://www.w3.org/TR/html52/dom.html#heading-content)
 
 ## Test Cases
 

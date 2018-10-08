@@ -27,7 +27,7 @@ Each target element has an [accessible name](#accessible-name) that is unique ac
 
 **Note:** 
 - `iframes` with the same `src` can have the same [accessible name](#accessible-name).
-- Nested `iframe` contents treat the parent `iframe` element as the [document tree](https://www.w3.org/TR/dom41/#document-trees).
+- An `iframe` creates an embedded browsing context. The content of this browsing context is not part of the [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) that it is embedded in.
 
 ## Assumptions
 
@@ -46,7 +46,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 Usage of `title` attribute to describe the `iframe` content, and there is only one iframe within document tree.
 
@@ -55,7 +55,7 @@ Usage of `title` attribute to describe the `iframe` content, and there is only o
 </iframe>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 Multiple `iframe` elements in the document having different `title` descriptions as accessible name.
 
@@ -66,7 +66,7 @@ Multiple `iframe` elements in the document having different `title` descriptions
 </iframe>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 Multiple `iframe` elements in the document having different `aria-label` descriptions as accessible name.
 
@@ -77,7 +77,7 @@ Multiple `iframe` elements in the document having different `aria-label` descrip
 </iframe>
 ```
 
-#### Pass example 4
+#### Passed example 4
 
 Multiple `iframe` elements in the document having different `aria-labelledby` descriptions as accessible name.
 
@@ -90,19 +90,19 @@ Multiple `iframe` elements in the document having different `aria-labelledby` de
 </iframe>
 ```
 
-#### Pass example 5
+#### Passed example 5
 
 `iframes` having the same `title` within a given document tree, but one of them is not exposed to assistive technologies.
 
 ```html
-<iframe style="display:none;" title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
+<iframe aria-hidden='true' title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
 </iframe>
 <iframe title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc2.html">
 </iframe>
 ```
 
 
-#### Pass example 6
+#### Passed example 6
 
 `iframes` are allowed to have the same `title` across different document tree. In this example `iframe` with `id` `level2-frame1` has a parent document tree of `iframe` with `id` `level1-frame2`, and does not share the document tree of `iframe` with `id` `level1-frame1`.
 
@@ -117,7 +117,7 @@ Multiple `iframe` elements in the document having different `aria-labelledby` de
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 Multiple frames having the same `title` within a given document tree.
 
@@ -128,7 +128,7 @@ Multiple frames having the same `title` within a given document tree.
 </iframe>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 Multiple frames having the same `aria-label` within a given document tree.
 
@@ -139,7 +139,7 @@ Multiple frames having the same `aria-label` within a given document tree.
 </iframe>
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 Multiple frames having the same accessible name given by `title` and `aria-label` within a given document tree
 

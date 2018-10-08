@@ -1,7 +1,7 @@
 ---
 name: image accessible name is image filename
 description: |
-  This rule checks that images elements that use their source filename as their accessible name, do so without loss of infomation to the user.
+  This rule checks that image elements that use their source filename as their accessible name, do so without loss of infomation to the user.
 
 success_criterion:
 - 1.1.1 # Non-Text Content
@@ -82,7 +82,7 @@ Image accessible name does not contain the image filename.
 
 ### Inapplicable example 4
 
-The `img` `alt` does not accurately describe the image but is overridden by `aria-label` which does accurately describes the image.
+The `alt` attribute uses the filename, but the accessible name is actually calculated with the `aria-label` value, which doesn't use the filename.
 
 ```html
 <img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="teaser_right2.jpg" aria-label="modanna lily">

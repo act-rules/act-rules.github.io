@@ -59,7 +59,7 @@ The `img` element's accessible name matches the image filename which does not ac
 
 ### Inapplicable example 1
 
-Image is not exposed to assisstive technologies.
+Image is not exposed to assistive technologies.
 
 ```html
 <img role="presentation">

@@ -2,7 +2,7 @@
 name: ARIA required owned elements
 
 description: |
-	The rule checks that a role has at least one of its required owned elements.
+	This rule checks that each role has at least one of its required owned elements.
 
 success_criterion:
 - 1.3.1 # Info and Relationships (A)
@@ -20,11 +20,11 @@ authors:
 
 ### Applicability
 
-This rule applies to any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) with a role that requires it to own some element(s). This is only applicable to elements that have an explicit [semantic role](#semantic-role). Which roles have required owned elements is defined in [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/).
+This rule applies to any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has an explicit [semantic role](#semantic-role) that has [WAI-ARIA required owned elements](https://www.w3.org/TR/wai-aria/#mustContain).
 
 ### Expectation
 
-For each test target, at least one instance of one [required owned element](https://www.w3.org/TR/wai-aria-1.1/#mustContain) listed for that role in [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/), is present.
+For each test target, at least one instance of one [WAI-ARIA required owned element](https://www.w3.org/TR/wai-aria-1.1/#mustContain) is present.
 
 **Note:**
 - When a widget is missing required owned elements due to script execution or loading, authors [MUST]((w3.org/TR/wai-aria-1.1/#mustContain)) mark a containing element with `aria-busy` equal to `true`.
@@ -35,7 +35,7 @@ For each test target, at least one instance of one [required owned element](http
 
 ## Accessibility Support
 
-When a required owned element is not an immediate child, but rather a nested descendant, certain AT have issues recognizing the owned element.
+This rule relies on assistive technologies to recognize owned elements, as defined by [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria). This includes when they are nested descendants that are not immediate children. However, some assistive technologies do not recognize owned elements that are not immediate children, unless workarounds are used.
 
 ## Background
 
@@ -63,13 +63,13 @@ Element `ul` with role `list` has at least one child node `span` with the requir
 
 #### Passed example 2
 
-Element `ol` with role `tablist` has child node `li` with the required owned element `tab` as an explicit semantic role.
+Element `div` with role `tablist` has child node `span` with the required owned element `tab` as an explicit semantic role.
 
 ```html
-<ol role='tablist'>
-	<li role='tab'>
-	</li>
-</ol>
+<div role='tablist'>
+	<span role='tab'>
+	</span>
+</div>
 ```
 
 #### Passed example 3

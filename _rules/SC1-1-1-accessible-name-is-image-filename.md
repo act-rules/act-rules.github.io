@@ -46,7 +46,7 @@ Each test target accessible name can be used in place of the elements non-text c
 The `img` element's accessible name accurately describes the image.
 
 ```html
-<img scr="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c">
+<img scr="https://www.w3.org/WAI/demos/bad/img/w3c" alt="w3c">
 ```
 
 ### Failure example 1

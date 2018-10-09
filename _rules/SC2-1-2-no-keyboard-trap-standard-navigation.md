@@ -52,7 +52,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 No trap for keyboard navigation.
 
@@ -61,7 +61,7 @@ No trap for keyboard navigation.
 <button class="target">Button1</button>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 Using `tabindex="1"`.
 
@@ -69,7 +69,7 @@ Using `tabindex="1"`.
 <div tabindex=“1”>Text</div>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 Using `tabindex="-1"`.
 
@@ -79,7 +79,7 @@ Using `tabindex="-1"`.
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 Keyboard trap one element.
 
@@ -88,7 +88,7 @@ Keyboard trap one element.
 <button class="target" onblur="setTimeout(() => this.focus(), 10)">Button1</button>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 Keyboard trap group.
 
@@ -97,7 +97,7 @@ Keyboard trap group.
 <button class="target" onblur="setTimeout(() => this.previousSibling.focus(), 10)">Button2</button>
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 A focusable element inbetween to keyboard traps.
 

@@ -57,17 +57,17 @@ module Jekyll
 			end
 		end
 
-		def compress(path)
-			path.sub!(%r[/$],'')
-			archive = File.join(path,File.basename(path))+'.zip'
-			FileUtils.rm archive, :force=>true
+		# def compress(path)
+		# 	path.sub!(%r[/$],'')
+		# 	archive = File.join(path,File.basename(path))+'.zip'
+		# 	FileUtils.rm archive, :force=>true
 		
-			Zip::File.open(archive, 'w') do |zipfile|
-				Dir["#{path}/**/**"].reject{|f|f==archive}.each do |file|
-					zipfile.add(file.sub(path+'/',''),file)
-				end
-			end
-		end
+		# 	Zip::File.open(archive, 'w') do |zipfile|
+		# 		Dir["#{path}/**/**"].reject{|f|f==archive}.each do |file|
+		# 			zipfile.add(file.sub(path+'/',''),file)
+		# 		end
+		# 	end
+		# end
 		
 		def create_testcases(site)
 			# create directory if not exists
@@ -98,7 +98,7 @@ module Jekyll
 			FileUtils.copy_entry PKG['config']['testcases-assets-dir'], PKG['config']['testcases-export-dir'] + '/' + PKG['config']['testcases-assets-dir']
 			
 			# create a zip file of the same
-			compress(PKG['config']['testcases-export-dir'])
+			# compress(PKG['config']['testcases-export-dir'])
 
 			# copy to site directory
 			FileUtils.copy_entry PKG['config']['testcases-export-dir'], site.dest + '/' + PKG['config']['testcases-export-dir']

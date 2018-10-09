@@ -56,7 +56,7 @@ _There are no major accessibility support issues known for this rule._
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 This page has a `title`.
 
@@ -66,7 +66,7 @@ This page has a `title`.
 </html>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 This page give a `title` to an iframe.
 
@@ -77,7 +77,7 @@ This page give a `title` to an iframe.
 </html>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 This page has a `title`.
 
@@ -92,7 +92,7 @@ This page has a `title`.
 </html>
 ```
 
-#### Pass example 4
+#### Passed example 4
 
 Valid `title` provided.
 
@@ -104,7 +104,7 @@ Valid `title` provided.
 </html>
 ```
 
-#### Pass example 5
+#### Passed example 5
 
 Valid `title` provided.
 
@@ -121,7 +121,7 @@ Valid `title` provided.
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 This page has no `title`.
 
@@ -131,7 +131,7 @@ This page has no `title`.
 </html>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 Empty `title`.
 
@@ -141,7 +141,7 @@ Empty `title`.
 </html>
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 No `title` provided.
 
@@ -151,7 +151,7 @@ No `title` provided.
 </html>
 ```
 
-#### Fail example 4
+#### Failed example 4
 
 Empty first `title`.
 

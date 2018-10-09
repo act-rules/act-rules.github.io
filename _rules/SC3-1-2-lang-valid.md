@@ -40,7 +40,7 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 The `lang` attribute specified has a non-empty value & a valid primary language subtag.
 
@@ -52,7 +52,7 @@ The `lang` attribute specified has a non-empty value & a valid primary language 
 </html>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 The `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
 
@@ -64,7 +64,7 @@ The `xml:lang` attribute specified has a non-empty value & a valid primary langu
 </html>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 The `lang` attribute specified has a non-empty value & a valid primary language subtag. The region section in the value is ignored by the rule.
 
@@ -76,7 +76,7 @@ The `lang` attribute specified has a non-empty value & a valid primary language 
 </html>
 ```
 
-#### Pass example 4
+#### Passed example 4
 
 The `lang` and `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
 
@@ -90,7 +90,7 @@ The `lang` and `xml:lang` attribute specified has a non-empty value & a valid pr
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 The `lang` attribute value is not a valid primary language subtag.
 
@@ -102,7 +102,7 @@ The `lang` attribute value is not a valid primary language subtag.
 </html>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 The `xml:lang` attribute value is not a valid primary language subtag.
 

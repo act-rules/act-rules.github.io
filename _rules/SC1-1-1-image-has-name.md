@@ -45,7 +45,7 @@ There is a known combination of a popular browser and assistive technology that 
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 Image has accessible name
 
@@ -53,7 +53,7 @@ Image has accessible name
 <img alt="W3C logo" />
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 Non-image element with image role and accessible name
 
@@ -61,7 +61,7 @@ Non-image element with image role and accessible name
 <div role="img" aria-label="W3C logo"></div>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 Accessible name but not always supported.
 
@@ -71,7 +71,7 @@ Accessible name but not always supported.
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 No accessible name
 
@@ -79,14 +79,14 @@ No accessible name
 <img />
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 Non-image element with image role but no accessible name.
 ```html
 <div role="img"></div>
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 Image element inside a div positioned off screen with no accessible name.
 ```html

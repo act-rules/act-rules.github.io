@@ -11,7 +11,6 @@ module Jekyll
 		PKG = JSON.parse(File.read('package.json'))
 		KEY_MATCH_CODE_TAG_BACKTICK = '```'
 		KEYWORD_NO_FRAME_IN_MARKDOWN = '(no-iframe)'
-		INCLUDE_FILE_TYPE = '.html'
 		MESSAGES = {
 			'ODD_TAG_COUNT' => 'Expects even pairs of' + KEY_MATCH_CODE_TAG_BACKTICK + ' and ' + KEY_MATCH_CODE_TAG_BACKTICK + '. Odd number of tags identified in page '
 		}
@@ -42,7 +41,7 @@ module Jekyll
 			
 			# Loop documents and create test case embeds
 			site.documents.each do |doc|
-				if (doc.url[INCLUDE_FILE_TYPE])
+				if (doc.url['.html'])
 					create_frame_embed_content(doc, site)
 				end
 			end
@@ -144,7 +143,7 @@ module Jekyll
 
 		def create_frame_embed_content(document, site)  
 			doc_name_with_type = document.url.split('/').reverse[0]
-			doc_name = doc_name_with_type.gsub(INCLUDE_FILE_TYPE, '')
+			doc_name = doc_name_with_type.gsub('.html', '').gsub('.svg', '')
 			doc_path = document.url.sub(doc_name_with_type, '')
 			doc_scs = document["success_criterion"]
 			doc_testcases_sc_meta = []
@@ -182,7 +181,8 @@ module Jekyll
 					test_index = testcases[test_case_type.to_s].length + 1
 
 					# puts test_count[test_case_type]
-					file_name = "#{doc_name}_#{test_case_type}_example_#{test_index}#{INCLUDE_FILE_TYPE}"
+					file_type = get_highlight_lang(content_including_tags[0]).gsub(/[[:space:]]/, '')
+					file_name = "#{doc_name}_#{test_case_type}_example_#{test_index}.#{file_type}"
 					# construct file path
 					file_path = site.source + '/' + PKG['config']['testcases-embeds-dir'] + file_name
 					# construct file url

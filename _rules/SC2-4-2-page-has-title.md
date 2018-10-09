@@ -172,7 +172,7 @@ Empty first `title`.
 
 Not applicable to `svg` element.
 
-```html
+```svg
 <svg>
   <title>This is an SVG</title>
 </svg>

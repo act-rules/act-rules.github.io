@@ -1,11 +1,12 @@
 ---
 name: No keyboard trap
 rule_type: composite
-description: |
-  This rule checks if it is possible to use standard keyboard navigation to navigate through all content on a web page without becoming trapped in any element, or that it is possible to use non-standard keyboard navigation to navigate through content where focus is trapped when using standard ways of keyboard navigation.
 
+description: |
+   This rule checks for keyboard traps. This includes use of both standard and non-standard keyboard navigation to navigate through all content without becoming trapped.
+   
 success_criterion:
-- 2.1.2 # No Keyboard Trap (A)
+- 2.1.2 # No Keyboard Trap
 
 atomic_rules:
 - [No keyboard trap standard navigation](SC2-1-2-no-keyboard-trap-standard-navigation)
@@ -21,9 +22,9 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML or SVG element on a web page that is [focusable](#focusable).
+The rule applies to any HTML or SVG element that is [focusable](#focusable).
 
-Note: The WCAG 2.0 success criterion 2.1.2 applies to all content, not just HTML or SVG, where focus can be moved to through keyboard navigation.
+**Note**: This rule is only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
 
 ### Expectation
 

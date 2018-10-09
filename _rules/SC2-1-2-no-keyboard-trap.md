@@ -9,8 +9,8 @@ success_criterion:
 - 2.1.2 # No Keyboard Trap
 
 atomic_rules:
-- [No keyboard trap standard navigation](SC2-1-2-no-keyboard-trap-standard-navigation)
-- [No keyboard trap non-standard navigation](SC2-1-2-no-keyboard-trap-non-standard-navigation)
+- SC2-1-2-no-keyboard-trap-standard-navigation
+- SC2-1-2-no-keyboard-trap-non-standard-navigation
 
 authors:
 - Geir Sindre Fossøy

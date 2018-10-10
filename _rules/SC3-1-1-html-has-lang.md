@@ -143,6 +143,6 @@ The `lang` and `xml:lang` attribute specified has an empty value.
 
 The rule does not apply to `svg` element.
 
-```html
-<svg lang="en"></svg>
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" lang="en"></svg>
 ```

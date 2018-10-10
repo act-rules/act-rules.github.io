@@ -119,16 +119,16 @@ Both the `lang` and `xml:lang` value specified are not valid values for primary 
 
 The rule applies to `html` element and hence usage of `lang` attribute in `svg` element is not applicable.
 
-```html
-<svg lang="fr">
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" lang="fr">
 ```
 
 #### Inapplicable example 2
 
 The rule applies to `html` element and hence usage of `xml:lang` attribute in `svg` element is not applicable.
 
-```html
-<svg xml:lang="fr">
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="fr">
 ```
 
 #### Inapplicable example 3

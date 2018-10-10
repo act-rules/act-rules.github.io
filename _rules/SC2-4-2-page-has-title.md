@@ -173,7 +173,7 @@ Empty first `title`.
 Not applicable to `svg` element.
 
 ```svg
-<svg>
+<svg xmlns="http://www.w3.org/2000/svg">
   <title>This is an SVG</title>
 </svg>
 ```

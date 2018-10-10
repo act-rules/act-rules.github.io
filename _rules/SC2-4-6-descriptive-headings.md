@@ -22,7 +22,7 @@ authors:
 
 ### Applicability
 
-This rule applies to any element with the [semantic role](#semantic-role) of `heading` that is either visible or included in the accessibility tree.
+This rule applies to any element with the [semantic role](#semantic-role) of heading that is either visible or included in the accessibility tree.
 
 **Note**: The WCAG 2.0 success criterion 2.4.6 applies to all headings. "Heading" is used in its general sense and includes titles and other ways to add a heading to different types of content.
 
@@ -97,15 +97,18 @@ Heading marked up with h-element that is a single character that describes the t
 ```
 
 #### Passed example 5
-Heading marked up with `role="heading"` that describes the topic or purpose of the following section of content and is visible only in the Accessibility Tree.
+
+Heading marked up with `role="heading"` that describes the topic or purpose of the following section of content. The heading is positioned off screen and is included in the Accessibility Tree.
 
 ```html
-<span role="heading" style="position: absolute !important; top: -9999px !important; left: -9999px !important;">Opening Hours</span>
-<p style="position: absolute !important; top: -9999px !important; left: -9999px !important;">We are open Monday through Friday from 10 to 16</p>
+<span role="heading" style="position: absolute; top: -9999px; left: -9999px;">Opening Hours</span>
+<p style="position: absolute; top: -9999px; left: -9999px;">We are open Monday through Friday from 10 to 16</p>
 ```
 
 #### Passed example 6
-Heading marked up with h-element that describes the topic or purpose of the following section of content and is not visible in the Accessibility Tree.
+
+Heading marked up with h-element that describes the topic or purpose of the following section of content. The heading is visible, but is not included in the Accessibility Tree.
+
 ```html
 <h1 class="target" aria-hidden="true">Opening Hours</h1>
 <p>We are open Monday through Friday from 10 to 16</p>
@@ -133,15 +136,17 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed example 3
 
-Heading marked up with `role="heading"` that does not describe the topic or purpose of the following section of content and is visible only in the Accessibility Tree.
+Heading marked up with `role="heading"` that does not describe the topic or purpose of the following section of content. The heading is positioned off screen and is included in the Accessibility Tree.
 
 ```html
-<span role="heading" style="position: absolute !important; top: -9999px !important; left: -9999px !important;">Weather</span>
-<p style="position: absolute !important; top: -9999px !important; left: -9999px !important;">We are open Monday through Friday from 10 to 16</p>
+<span role="heading" style="position: absolute; top: -9999px; left: -9999px;">Weather</span>
+<p style="position: absolute; top: -9999px; left: -9999px;">We are open Monday through Friday from 10 to 16</p>
 ```
 
 #### Failed example 4
-Heading marked up with h-element that dose not describe the topic or purpose of the following section of content and is not visible in the Accessibility Tree.
+
+Heading marked up with h-element that dose not describe the topic or purpose of the following section of content. The heading is visible, but is not included in the Accessibility Tree.
+
 ```html
 <h1 class="target" aria-hidden="true">Weather</h1>
 <p>We are open Monday through Friday from 10 to 16</p>
@@ -159,7 +164,7 @@ No heading.
 
 #### Inapplicable example 2
 
-Heading that is not visible to users.
+Heading that is neither visible to users, nor included in the accessibility tree.
 
 ```html
 <h1 style="display: none;">Opening hours</h1>

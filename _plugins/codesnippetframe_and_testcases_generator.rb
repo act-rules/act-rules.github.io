@@ -251,7 +251,7 @@ module Jekyll
 		
 		def get_highlight_lang(opening_tag)
 			lang = 'html'
-			language_tag = opening_tag.gsub(KEY_MATCH_CODE_TAG_BACKTICK, '')
+			language_tag = opening_tag.gsub(KEY_MATCH_CODE_TAG_BACKTICK, '').gsub(KEYWORD_NO_FRAME_IN_MARKDOWN, '')
 			lang = language_tag.length <= 0 ? lang : language_tag.downcase
 			lang
 		end

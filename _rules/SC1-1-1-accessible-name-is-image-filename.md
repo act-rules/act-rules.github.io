@@ -1,7 +1,7 @@
 ---
 name: Image accessible name is filename
 description: |
-  This rule checks that image elements that use their source filename as their accessible name, do so without loss of infomation to the user.
+  This rule checks that image elements that use their source filename as their accessible name do so without loss of infomation to the user.
 
 success_criterion:
 - 1.1.1 # Non-Text Content
@@ -18,13 +18,13 @@ authors:
 
 ### Applicability
 
-The rule applies to HTML `input type="image" `and `area` elements or any HTML element with the semantic role of `img` [exposed to assistive technologies](#exposed-to-assistive-technologies), where the [accessible name](#accessible-name) value exactly matches the filename specified in the `src` attribute.
+The rule applies to HTML `input type="image"` and `area` elements, or any HTML element with the semantic role of `img` [exposed to assistive technologies](#exposed-to-assistive-technologies), where the [accessible name](#accessible-name) value exactly matches the filename specified in the `src` attribute.
 
-**Note**: URL query strings, case sensitivity, forward and trailing whitespace should be ignored. For example `src="/foo/bar.jpg?baz "` has a filename "bar.jpg".
+**Note**: URL query strings, difference in letter casing, and forward and trailing whitespace should be ignored. For example `src="/foo/bar.jpg?baz "` has a filename `bar.jpg`.
 
 ### Expectation
 
-Each test target accessible name can be used in place of the elements non-text content without loss of information to the user.
+Each test target has an accessible name that can be used in place of the [non-text content](https://www.w3.org/TR/WCAG21/#dfn-non-text-content) of the element without loss of information to the user.
 
 ## Assumptions
 

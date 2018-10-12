@@ -50,7 +50,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative.
 
@@ -62,7 +62,7 @@ An audio element that describes some of the text on the same page. The text on t
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 An audio element that describes some of the text on the same page. The audio contains more information than the text does.
 
@@ -72,7 +72,7 @@ An audio element that describes some of the text on the same page. The audio con
 <audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 An audio element that describes some of the text on the same page. The text is not visible on the page.
 
@@ -82,7 +82,7 @@ An audio element that describes some of the text on the same page. The text is n
 <audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 An audio element that describes some of the text on the same page. The text on the page does not label the audio as an alternative.
 
@@ -91,7 +91,7 @@ An audio element that describes some of the text on the same page. The text on t
 <audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
-#### Fail example 4
+#### Failed example 4
 
 An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the label is not visible on the page.
 

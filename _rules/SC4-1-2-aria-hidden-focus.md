@@ -48,7 +48,7 @@ A focusable element with `aria-hidden="true"` is ignored as part of the reading 
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 Content not focusable by default.
 
@@ -56,7 +56,7 @@ Content not focusable by default.
 <p aria-hidden="true">Some text</p>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 Content hidden through CSS.
 
@@ -66,7 +66,7 @@ Content hidden through CSS.
 </div>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 Content made unfocusable through tabindex.
 
@@ -76,7 +76,7 @@ Content made unfocusable through tabindex.
 </div>
 ```
 
-#### Pass example 4
+#### Passed example 4
 
 Content made unfocusable through disabled.
 
@@ -86,7 +86,7 @@ Content made unfocusable through disabled.
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 Focusable off screen link.
 
@@ -96,7 +96,7 @@ Focusable off screen link.
 </div>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 Focusable form field, incorrectly disabled.
 
@@ -106,7 +106,7 @@ Focusable form field, incorrectly disabled.
 </div>
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 `aria-hidden=false` does not negate aria-hidden true.
 
@@ -118,7 +118,7 @@ Focusable form field, incorrectly disabled.
 </div>
 ```
 
-#### Fail example 4
+#### Failed example 4
 
 Focusable content through `tabindex`.
 
@@ -126,7 +126,7 @@ Focusable content through `tabindex`.
 <p tabindex="0" aria-hidden="true">Some text</p>
 ```
 
-#### Fail example 5
+#### Failed example 5
 
 Focusable summary element
 

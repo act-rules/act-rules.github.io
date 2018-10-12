@@ -45,7 +45,7 @@ Certain assistive technologies can be set up to ignore the title attribute, whic
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 Implicit role with implicit label.
 
@@ -56,7 +56,7 @@ Implicit role with implicit label.
 </label>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 Implicit role with aria-label
 
@@ -64,7 +64,7 @@ Implicit role with aria-label
 <input aria-label="last name" disabled />
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 Implicit role with explicit label
 
@@ -75,7 +75,7 @@ Implicit role with explicit label
 </select>
 ```
 
-#### Pass example 4
+#### Passed example 4
 
 Implicit role with `aria-labelledby`.
 
@@ -84,7 +84,7 @@ Implicit role with `aria-labelledby`.
 <textarea aria-labelledby="country" data-rule-target></textarea>
 ```
 
-#### Pass example 5
+#### Passed example 5
 
 Explicit role.
 
@@ -94,7 +94,7 @@ Explicit role.
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 No accessible name.
 
@@ -102,7 +102,7 @@ No accessible name.
 <input />
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 Non-focusable still need an accessible name.
 
@@ -110,7 +110,7 @@ Non-focusable still need an accessible name.
 <input tabindex="-1" />
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 `aria-label` with empty text string
 
@@ -118,7 +118,7 @@ Non-focusable still need an accessible name.
 <div aria-label=" " role="combobox">England</div>
 ```
 
-#### Fail example 4
+#### Failed example 4
 
 Label does not exist.
 
@@ -126,7 +126,7 @@ Label does not exist.
 <div aria-labelledby="non-existing" role="combobox">England</div>
 ```
 
-#### Fail example 5
+#### Failed example 5
 
 Implicit label not supported on div elements.
 
@@ -137,7 +137,7 @@ Implicit label not supported on div elements.
 </label>
 ```
 
-#### Fail example 6
+#### Failed example 6
 
 Explicit label not supported on div elements.
 

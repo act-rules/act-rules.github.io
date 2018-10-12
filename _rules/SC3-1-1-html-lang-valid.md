@@ -47,7 +47,7 @@ While HTML5 specification indicates that `xml:lang` attribute takes priority ove
 
 ## Passed
 
-#### Pass example 1
+#### Passed example 1
 
 The `lang` attribute specified has a non-empty value & a valid primary language subtag.
 
@@ -55,7 +55,7 @@ The `lang` attribute specified has a non-empty value & a valid primary language 
 <html lang="fr">
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 The `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
 
@@ -63,7 +63,7 @@ The `xml:lang` attribute specified has a non-empty value & a valid primary langu
 <html xml:lang="fr">
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 The `lang` and `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
 
@@ -71,7 +71,7 @@ The `lang` and `xml:lang` attribute specified has a non-empty value & a valid pr
 <html xml:lang="fr" lang="fr">
 ```
 
-#### Pass example 4
+#### Passed example 4
 
 The `lang` attribute specified has a non-empty value & a valid primary language subtag. The rule checks for the presence of either `lang` or `xml:lang`. Empty value specified for the other attribute is ignored.
 
@@ -79,7 +79,7 @@ The `lang` attribute specified has a non-empty value & a valid primary language 
 <html lang="fr" xml:lang="">
 ```
 
-#### Pass example 5
+#### Passed example 5
 
 The `xml:lang` attribute specified has a non-empty value & a valid primary language subtag. The rule checks for the presence of either `lang` or `xml:lang`. Empty value specified for the other attribute is ignored.
 
@@ -89,7 +89,7 @@ The `xml:lang` attribute specified has a non-empty value & a valid primary langu
 
 ## Failed
 
-#### Fail example 1
+#### Failed example 1
 
 The `lang` attribute value is not a valid primary language subtag.
 
@@ -97,7 +97,7 @@ The `lang` attribute value is not a valid primary language subtag.
 <html lang="xyz">
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 The `xml:lang` attribute value is not a valid primary language subtag.
 
@@ -105,7 +105,7 @@ The `xml:lang` attribute value is not a valid primary language subtag.
 <html xml:lang="xyz">
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 Both the `lang` and `xml:lang` value specified are not valid values for primary language subtag.
 
@@ -119,16 +119,16 @@ Both the `lang` and `xml:lang` value specified are not valid values for primary 
 
 The rule applies to `html` element and hence usage of `lang` attribute in `svg` element is not applicable.
 
-```html
-<svg lang="fr">
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" lang="fr">
 ```
 
 #### Inapplicable example 2
 
 The rule applies to `html` element and hence usage of `xml:lang` attribute in `svg` element is not applicable.
 
-```html
-<svg xml:lang="fr">
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="fr">
 ```
 
 #### Inapplicable example 3

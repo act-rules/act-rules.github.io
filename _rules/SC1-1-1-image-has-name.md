@@ -19,7 +19,7 @@ authors:
 
 ### Applicability
 
-The rule applies to HTML `img` elements or any HTML element with the [semantic role](#semantic-role) of `img` that is [exposed to assistive technologies](#exposed-to-assistive-technologies).
+The rule applies to HTML `img` elements or any HTML element with the [semantic role](#semantic-role) of `img` that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation
 

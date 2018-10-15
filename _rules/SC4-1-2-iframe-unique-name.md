@@ -23,10 +23,9 @@ The rule applies to `iframe` elements that are [exposed to assistive technologie
 
 ### Expectation
 
-Each target element has an [accessible name](#accessible-name) that is unique across all other accessible names for `iframes` within the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the target element.
+Each target element has an [accessible name](#accessible-name) that is unique across all other accessible names for `iframe` elements within the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees), where the `src` attributes are different.
 
 **Note:** 
-- `iframes` with the same `src` can have the same [accessible name](#accessible-name).
 - An `iframe` creates an embedded browsing context. The content of this browsing context is not part of the [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) that it is embedded in.
 
 ## Assumptions

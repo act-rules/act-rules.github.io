@@ -16,7 +16,7 @@ authors:
 
 ### Applicability
 
-The rule applies to HTML `input type="image"` and `area` elements, or any HTML element with the semantic role of `img` [exposed to assistive technologies](#exposed-to-assistive-technologies), where the [accessible name](#accessible-name) exclusively uses [generic placeholder text](#generic-placeholder-text).
+The rule applies to HTML `input type="image"` or `area` elements, or any HTML element with the semantic role of `img`, where the element is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has an [accessible name](#accessible-name) that exclusively uses [generic placeholder text](#generic-placeholder-text).
 
 ### Expectation
 

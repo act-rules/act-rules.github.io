@@ -34,7 +34,7 @@ Each test target has at least one non-abstract valid value as specified in the [
 
 Older browsers do not support more than one token in the value for a role attribute. If multiple values are used in the role attribute, the attribute is ignored in these browsers.
  
-**Note:** Having a whitespace separated list of more than one token in the value of the role attribute is used for what is known as `fallback roles`. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role](#semantic-role) of the element, and so forth.
+**Note:** Having a whitespace separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role](#semantic-role) of the element, and so forth.
 
 ## Background
 

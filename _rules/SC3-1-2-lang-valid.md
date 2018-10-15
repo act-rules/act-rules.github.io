@@ -114,6 +114,18 @@ The `xml:lang` attribute value is not a valid primary language subtag.
 </html>
 ```
 
+#### Fail example 3
+
+The `lang` attribute value has a valid primary language subtag, but a syntactically invalid region subtag.
+
+```html
+<html>
+<body>
+  <p data-rule-target lang="en-US-GB"></p>
+</body>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable example 1

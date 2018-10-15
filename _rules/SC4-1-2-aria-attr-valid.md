@@ -26,7 +26,7 @@ Each target attribute is defined in [WAI ARIA 1.1](https://www.w3.org/TR/wai-ari
 
 ## Assumptions
 
-This rule does not cater to any custom `aria-` attribute that does not fall under the [WAI ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) specification.
+There are currently no assumptions.
 
 ## Accessibility Support
 

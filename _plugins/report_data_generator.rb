@@ -1,14 +1,10 @@
 require 'json'
-require 'csv'
 
 def create_implementors_csv
-  # map of rule id to implementors count
+  # map of rule id to implementations count
   implementations = {}
-
-  # create file with heading
-  CSV.open('_data/implementors.csv', 'wb') do |csv|
-    csv << ['name', 'version', 'created', 'report']
-  end
+  # map of list of implementors/ report
+  implementors = []
 
   # iterate directory of reports and construct data
   Dir.glob('report/*.json') do |report_file|
@@ -18,7 +14,7 @@ def create_implementors_csv
     # parse the data
     data_hash = JSON.parse(file)
 
-    # iterate and create rule implementation count
+    # create rule implementations count
     data_rule_status = data_hash['ruleStatus']
     data_rule_status.each_with_index { |val, index| 
       rule_id = val['ruleId']
@@ -35,14 +31,17 @@ def create_implementors_csv
       f.write(implementations.to_json)
     end
 
+    # create implementors data
+    implementors.push({
+      name: data_hash['testSystem']['name'],
+      version:  data_hash['testSystem']['version'],
+      created: data_hash['creator']['name'],
+      report: report_file
+    })
+
     # save implementors data
-    CSV.open('_data/implementors.csv', 'a+') do |csv|
-      csv << [
-        data_hash['testSystem']['name'],
-        data_hash['testSystem']['version'],
-        data_hash['creator']['name'],
-        report_file
-      ]
+    File.open("_data/implementors.json","w") do |f|
+      f.write(implementors.to_json)
     end
   end
 end

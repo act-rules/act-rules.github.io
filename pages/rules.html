@@ -10,7 +10,11 @@ title: Auto-WCAG Rules
 			<th width='25%'>Name</th>
       <th>Description</th>
 			<th width='35%'>WCAG Criterion</th>
-			<th width='10%'>Implementations</th>
+			<th width='10%'>
+				<a href="{{ site.baseurl }}/pages/implementations.html">
+					Implementations
+				</a>
+			</th>
     </tr>
 	</thead>
 	<!-- {% assign rulesAndDrafts = site.rules | concat: site.drafts | sort: 'name' %} -->
@@ -47,20 +51,15 @@ title: Auto-WCAG Rules
 		<td>
 			{% assign ruleId = rule.id | remove: "/rules/" %}
 			{% assign implementations_count = site.data.implementations[ruleId] %}
-			<a href="{{ site.baseurl }}/pages/implementations.html">
-				{% if implementations_count == Nil %}
-					NEW
-				{% endif %}
-				{% if implementations_count == 0 %}
-					NEW
-				{% endif %}
-				{% if implementations_count == 1 %}
-					IN PROGRESS
-				{% endif %}
-				{% if implementations_count >= 3 %}
-					DONE
-				{% endif %}
-			</a>
+			{% if implementations_count == Nil or implementations_count == 0 %}
+				NEW
+			{% endif %}
+			{% if implementations_count == 1 %}
+				IN PROGRESS
+			{% endif %}
+			{% if implementations_count >= 3 %}
+				DONE
+			{% endif %}
 		</td>
   </tr>
   {% endfor %}

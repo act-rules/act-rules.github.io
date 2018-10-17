@@ -1,12 +1,12 @@
 {
   "testSystem": {
-    "name": "axe",
-    "version": "3.1.2",
-    "url": "https://npmjs.com/package/axe-core"
+    "name": "Example test tool",
+    "version": "1.0.0",
+    "url": ""
   },
   "creator": {
-    "name": "Deque Systems",
-    "url": "https://www.deque.com/"
+    "name": "",
+    "url": ""
   },
   "testEnvironment": {
     "name": "Web Browser",
@@ -15,9 +15,6 @@
   "ruleStatus": [
     {
       "ruleId": "SC1-1-1-image-has-name",
-      "axeIds": [
-        "image-alt"
-      ],
       "ruleStatus": "automated",
       "testCaseResults": [
         {
@@ -74,9 +71,6 @@
     },
     {
       "ruleId": "SC1-2-2-audio-captions",
-      "axeIds": [
-        "audio-caption"
-      ],
       "ruleStatus": "incorrect",
       "testCaseResults": [
         {
@@ -123,9 +117,6 @@
     },
     {
       "ruleId": "SC1-2-Video-description-track",
-      "axeIds": [
-        "video-description"
-      ],
       "ruleStatus": "incorrect",
       "testCaseResults": [
         {
@@ -157,9 +148,6 @@
     },
     {
       "ruleId": "SC1-3-5-autocomplete-valid",
-      "axeIds": [
-        "autocomplete-valid"
-      ],
       "ruleStatus": "automated",
       "testCaseResults": [
         {
@@ -271,9 +259,6 @@
     },
     {
       "ruleId": "SC2-4-2-page-has-title",
-      "axeIds": [
-        "document-title"
-      ],
       "ruleStatus": "automated",
       "testCaseResults": [
         {
@@ -325,9 +310,6 @@
     },
     {
       "ruleId": "SC2-4-4-link-has-name",
-      "axeIds": [
-        "link-name"
-      ],
       "ruleStatus": "automated",
       "testCaseResults": [
         {
@@ -434,9 +416,6 @@
     },
     {
       "ruleId": "SC3-1-1-html-has-lang",
-      "axeIds": [
-        "html-has-lang"
-      ],
       "ruleStatus": "automated",
       "testCaseResults": [
         {
@@ -497,322 +476,7 @@
       ]
     },
     {
-      "ruleId": "SC3-1-1-html-lang-valid",
-      "axeIds": [
-        "html-lang-valid"
-      ],
-      "ruleStatus": "incorrect",
-      "testCaseResults": [
-        {
-          "ruleId": "SC3-1-1-html-lang-valid",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-1-html-lang-valid_passed_example_1.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-1-html-lang-valid",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-1-html-lang-valid_passed_example_2.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-1-html-lang-valid",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-1-html-lang-valid_passed_example_3.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-1-html-lang-valid",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-1-html-lang-valid_passed_example_4.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-1-html-lang-valid",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-1-html-lang-valid_passed_example_5.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-1-html-lang-valid",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-1-html-lang-valid_failed_example_1.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-1-html-lang-valid",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-1-html-lang-valid_failed_example_2.html",
-          "testcaseStatus": "incorrect"
-        },
-        {
-          "ruleId": "SC3-1-1-html-lang-valid",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-1-html-lang-valid_failed_example_3.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-1-html-lang-valid",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-1-html-lang-valid_inapplicable_example_1.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-1-html-lang-valid",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-1-html-lang-valid_inapplicable_example_2.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-1-html-lang-valid",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-1-html-lang-valid_inapplicable_example_3.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-1-html-lang-valid",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-1-html-lang-valid_inapplicable_example_4.html",
-          "testcaseStatus": "automated"
-        }
-      ]
-    },
-    {
-      "ruleId": "SC3-1-1-html-xml-lang-match",
-      "axeIds": [
-        "html-xml-lang-mismatch"
-      ],
-      "ruleStatus": "automated",
-      "testCaseResults": [
-        {
-          "ruleId": "SC3-1-1-html-xml-lang-match",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-1-html-xml-lang-match_passed_example_1.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-1-html-xml-lang-match",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-1-html-xml-lang-match_passed_example_2.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-1-html-xml-lang-match",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-1-html-xml-lang-match_passed_example_3.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-1-html-xml-lang-match",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-1-html-xml-lang-match_passed_example_4.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-1-html-xml-lang-match",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-1-html-xml-lang-match_passed_example_5.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-1-html-xml-lang-match",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-1-html-xml-lang-match_failed_example_1.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-1-html-xml-lang-match",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-1-html-xml-lang-match_inapplicable_example_1.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-1-html-xml-lang-match",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-1-html-xml-lang-match_inapplicable_example_2.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-1-html-xml-lang-match",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-1-html-xml-lang-match_inapplicable_example_3.html",
-          "testcaseStatus": "automated"
-        }
-      ]
-    },
-    {
-      "ruleId": "SC3-1-2-lang-valid",
-      "axeIds": [
-        "valid-lang"
-      ],
-      "ruleStatus": "automated",
-      "testCaseResults": [
-        {
-          "ruleId": "SC3-1-2-lang-valid",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-2-lang-valid_passed_example_1.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-2-lang-valid",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-2-lang-valid_passed_example_2.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-2-lang-valid",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-2-lang-valid_passed_example_3.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-2-lang-valid",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-2-lang-valid_passed_example_4.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-2-lang-valid",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-2-lang-valid_failed_example_1.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-2-lang-valid",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-2-lang-valid_failed_example_2.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-2-lang-valid",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-2-lang-valid_inapplicable_example_1.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-2-lang-valid",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-2-lang-valid_inapplicable_example_2.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-1-2-lang-valid",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-1-2-lang-valid_inapplicable_example_3.html",
-          "testcaseStatus": "automated"
-        }
-      ]
-    },
-    {
-      "ruleId": "SC3-3-2-form-field-has-name",
-      "axeIds": [
-        "label"
-      ],
-      "ruleStatus": "incorrect",
-      "testCaseResults": [
-        {
-          "ruleId": "SC3-3-2-form-field-has-name",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-3-2-form-field-has-name_passed_example_1.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-3-2-form-field-has-name",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-3-2-form-field-has-name_passed_example_2.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-3-2-form-field-has-name",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-3-2-form-field-has-name_passed_example_3.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-3-2-form-field-has-name",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-3-2-form-field-has-name_passed_example_4.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-3-2-form-field-has-name",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-3-2-form-field-has-name_passed_example_5.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-3-2-form-field-has-name",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-3-2-form-field-has-name_failed_example_1.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-3-2-form-field-has-name",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-3-2-form-field-has-name_failed_example_2.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-3-2-form-field-has-name",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-3-2-form-field-has-name_failed_example_3.html",
-          "testcaseStatus": "incorrect"
-        },
-        {
-          "ruleId": "SC3-3-2-form-field-has-name",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-3-2-form-field-has-name_failed_example_4.html",
-          "testcaseStatus": "incorrect"
-        },
-        {
-          "ruleId": "SC3-3-2-form-field-has-name",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-3-2-form-field-has-name_failed_example_5.html",
-          "testcaseStatus": "incorrect"
-        },
-        {
-          "ruleId": "SC3-3-2-form-field-has-name",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-3-2-form-field-has-name_failed_example_6.html",
-          "testcaseStatus": "incorrect"
-        },
-        {
-          "ruleId": "SC3-3-2-form-field-has-name",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-3-2-form-field-has-name_inapplicable_example_1.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-3-2-form-field-has-name",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-3-2-form-field-has-name_inapplicable_example_2.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC3-3-2-form-field-has-name",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-3-2-form-field-has-name_inapplicable_example_3.html",
-          "testcaseStatus": "incorrect"
-        },
-        {
-          "ruleId": "SC3-3-2-form-field-has-name",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC3-3-2-form-field-has-name_inapplicable_example_4.html",
-          "testcaseStatus": "incorrect"
-        }
-      ]
-    },
-    {
-      "ruleId": "SC4-1-1-unique-id",
-      "axeIds": [
-        "duplicate-id",
-        "duplicate-id-active",
-        "duplicate-id-aria"
-      ],
-      "ruleStatus": "incorrect",
-      "testCaseResults": [
-        {
-          "ruleId": "SC4-1-1-unique-id",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC4-1-1-unique-id_failed_example_1.html",
-          "testcaseStatus": "incorrect"
-        },
-        {
-          "ruleId": "SC4-1-1-unique-id",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC4-1-1-unique-id_inapplicable_example_1.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC4-1-1-unique-id",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC4-1-1-unique-id_inapplicable_example_2.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC4-1-1-unique-id",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC4-1-1-unique-id_inapplicable_example_3.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC4-1-1-unique-id",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC4-1-1-unique-id_inapplicable_example_4.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC4-1-1-unique-id",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC4-1-1-unique-id_inapplicable_example_5.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC4-1-1-unique-id",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC4-1-1-unique-id_inapplicable_example_6.html",
-          "testcaseStatus": "automated"
-        },
-        {
-          "ruleId": "SC4-1-1-unique-id",
-          "testcaseUrl": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC4-1-1-unique-id_inapplicable_example_7.html",
-          "testcaseStatus": "automated"
-        }
-      ]
-    },
-    {
       "ruleId": "SC4-1-2-button-has-name",
-      "axeIds": [
-        "button-name"
-      ],
       "ruleStatus": "automated",
       "testCaseResults": [
         {

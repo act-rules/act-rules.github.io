@@ -3,6 +3,8 @@ title: Visible
 key: visible
 ---
 
-Elements or text perceivable through sight.
+Content perceivable through sight.
 
-An element, or text within an element, is considered visible if making the element or text fully transparent would cause a difference in the pixels rendered within any area of the viewport that can be reached via scrolling.
+Content is considered visible, if making it fully transparent would result in a difference in the pixels rendered within any area of the viewport. This included pixels that are reached by scrolling.
+
+[Content is defined in WCAG](https://www.w3.org/TR/WCAG21/#dfn-content).

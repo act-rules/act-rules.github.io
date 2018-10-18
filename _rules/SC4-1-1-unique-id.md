@@ -22,7 +22,7 @@ authors:
 
 Any `id` attribute specified on an HTML or SVG element.
 
-Elements that are neither [exposed to assistive technologies](#exposed-to-assistive-technologies) nor [visible on the page](#visible-on-the-page) are still considered for this rule.
+**Note:** Elements that are neither [exposed to assistive technologies](#exposed-to-assistive-technologies) nor [visible on the page](#visible-on-the-page) are still considered for this rule.
 
 ### Expectation
 

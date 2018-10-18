@@ -42,7 +42,7 @@ For value type `URI`, this rule does not require that the destination URI exists
 
 ## Assumptions
 
-- This rule assumes that elements that are not [included in the accessibility tree](#included-in-the-accessibility-tree) or are [focusable](#focusable) can still impact users. Therefore the applicability of this rule is not limited to [WAI-ARIA 1.1 states and properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) on elements that are included in the accessibility tree or focusable.
+This rule assumes that elements that are not [included in the accessibility tree](#included-in-the-accessibility-tree) or are [focusable](#focusable) can still impact users. Therefore the applicability of this rule is not limited to [WAI-ARIA 1.1 states and properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) on elements that are included in the accessibility tree or focusable.
 
 **Note:**  For example, anything referenced through `aria-labelledby` does not have to be [included in the accessibility tree](#included-in-the-accessibility-tree) in order for it to become part of the [accessible name](#accessible-name).
 

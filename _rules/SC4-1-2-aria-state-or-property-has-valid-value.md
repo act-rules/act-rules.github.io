@@ -31,7 +31,7 @@ Each test target has a valid value according to its [WAI-ARIA 1.1 value type](ht
 
 For value types `ID Reference` and `ID Reference List` for [WAI-ARIA required properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) at least one of the elements with the given ids exists in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the element that specifies the target attribute. 
 
-**Note:** For non-required properties, there is no requirement that the elements with the given ids actually exists.
+**Note:** This expectation only applies to [WAI-ARIA required properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState). For non-required properties, there is no requirement that the elements with the given ids actually exists.
 
 ### Expectation 3
 

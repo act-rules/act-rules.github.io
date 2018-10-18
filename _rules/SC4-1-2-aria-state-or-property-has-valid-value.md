@@ -27,7 +27,7 @@ Any [non-empty](#non-empty) [WAI-ARIA 1.1 state or property](https://www.w3.org/
 
 Each test target has a valid value according to its [WAI-ARIA 1.1 value type](https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value).
 
-For value types `ID Reference` and `ID Reference List`, a valid value for a [WAI-ARIA required property](https://www.w3.org/TR/wai-aria-1.1/#requiredState) requires that the element(s) with the given id(s) exists in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the element that specifies the target attribute. For non-required properties, this is not a requirement.
+For value types `ID Reference` and `ID Reference List`, a valid value for a [WAI-ARIA required property](https://www.w3.org/TR/wai-aria-1.1/#requiredState) requires that at least one of the elements with the given ids exists in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the element that specifies the target attribute. For non-required properties, this is not a requirement.
 
 For value type `URI`, a valid value matches the [generic URI syntax](https://www.ietf.org/rfc/rfc3986.txt).
 
@@ -143,6 +143,15 @@ _There are no major accessibility support issues known for this rule._
 ```html
 <div id="content1">Lorem ipsum...</div>
 <div role="scrollbar" aria-controls="content1" aria-orientation="vertical" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25"></div>
+```
+
+#### Passed example 12
+
+`aria-controls`, which is a required property for the role `scrollbar`, has `ID Reference` that references an element existing in the same document tree. 
+
+```html
+<div id="content1">Lorem ipsum...</div>
+<div role="scrollbar" aria-controls="content1 content2" aria-orientation="vertical" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25"></div>
 ```
 
 ### Failed

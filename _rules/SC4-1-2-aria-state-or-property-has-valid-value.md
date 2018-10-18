@@ -138,16 +138,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed example 11
 
-`aria-controls`, which is a required property for the role `scrollbar`, has `ID Reference list` that references an element existing in the same document tree. 
-
-```html
-<div id="content1">Lorem ipsum...</div>
-<div role="scrollbar" aria-controls="content1" aria-orientation="vertical" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25"></div>
-```
-
-#### Passed example 12
-
-`aria-controls`, which is a required property for the role `scrollbar`, has `ID Reference list` that references one element existing in the same document tree, and one that doesn't.
+`aria-controls`, which is a required property for the role `scrollbar`, has `ID Reference list` that references at least one element existing in the same document tree. 
 
 ```html
 <div id="content1">Lorem ipsum...</div>

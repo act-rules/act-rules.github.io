@@ -35,7 +35,7 @@ For value types `ID Reference` and `ID Reference List` for [WAI-ARIA required pr
 
 ### Expectation 3
 
-For value type `URI`, a valid value matches the [generic URI syntax](https://www.ietf.org/rfc/rfc3986.txt).
+For value type `URI` the value matches the [generic URI syntax](https://www.ietf.org/rfc/rfc3986.txt).
 
 **Note:** 
 For value type `URI`, this rule does not require that the destination URI exists. 

@@ -23,11 +23,17 @@ authors:
 
 Any [non-empty](#non-empty) [WAI-ARIA 1.1 state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) that is specified on an HTML or SVG element.
 
-### Expectation
+### Expectation 1
 
 Each test target has a valid value according to its [WAI-ARIA 1.1 value type](https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value).
 
-For value types `ID Reference` and `ID Reference List`, a valid value for a [WAI-ARIA required property](https://www.w3.org/TR/wai-aria-1.1/#requiredState) requires that at least one of the elements with the given ids exists in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the element that specifies the target attribute. For non-required properties, this is not a requirement.
+### Expectation 2
+
+For value types `ID Reference` and `ID Reference List` for [WAI-ARIA required properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) at least one of the elements with the given ids exists in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the element that specifies the target attribute. 
+
+**Note:** For non-required properties, there is no requirement that the elements with the given ids actually exists.
+
+### Expectation 3
 
 For value type `URI`, a valid value matches the [generic URI syntax](https://www.ietf.org/rfc/rfc3986.txt).
 

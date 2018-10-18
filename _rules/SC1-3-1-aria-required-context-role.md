@@ -18,7 +18,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has an explicit [semantic role](#semantic-role) with a [WAI-ARIA required context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
+The rule applies to any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has an explicit [semantic role](#semantic-role) with a [WAI-ARIA required context role](https://www.w3.org/TR/wai-aria-1.1/#scope), except if the element has an implicit semantic role that is identical to its explicit semantic role.
 
 ### Expectation
 
@@ -30,7 +30,7 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-This rule relies on assistive technologies to recognize owned elements, as defined by [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria). This includes when they are nested descendants that are not immediate children. However, some assistive technologies do not recognize owned elements that are not immediate children, unless workarounds are used.
+This rule relies on assistive technologies to recognize owned elements, as defined by [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria). This includes when they are descendants that are not children. However, some assistive technologies do not recognize owned elements that are not children, unless workarounds are used.
 
 ## Background
 
@@ -42,7 +42,7 @@ This rule relies on assistive technologies to recognize owned elements, as defin
 
 #### Passed example 1
 
-Element with role ´listitem´ is contained within its required context role ´list´, expressed as an explicit role.
+Element with role `listitem` is contained within its required context role `list`, expressed as an explicit role.
 
 ```html
 <div role="list">
@@ -52,7 +52,7 @@ Element with role ´listitem´ is contained within its required context role ´l
 
 #### Passed example 2
 
-Element with role ´listitem´ is contained within its required context role ´list´, through the implicit role of ´ul´.
+Element with role `listitem` is contained within its required context role `list`, through the implicit role of `ul`.
 
 ```html
 <ul>

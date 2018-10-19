@@ -110,7 +110,7 @@ First `<meta http-equiv="refresh">` element is not valid, second one redirects a
 </head>
 ```
 
-#### Passed example 4
+#### Failed example 4
 
 Redirects after exactly 20 hours.
 

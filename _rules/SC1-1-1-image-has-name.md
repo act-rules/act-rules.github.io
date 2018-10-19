@@ -63,7 +63,7 @@ Non-image element with image role and accessible name
 
 #### Passed example 3
 
-Accessible name but not always accessibility supported.
+Accessible name but not always accessibility supported
 
 ```html
 <img title="W3C logo" />
@@ -105,14 +105,16 @@ No accessible name
 
 #### Failed example 2
 
-Non-image element with image role but no accessible name.
+Non-image element with image role but no accessible name
+
 ```html
 <div role="img"></div>
 ```
 
 #### Failed example 3
 
-Image element inside a div positioned off screen with no accessible name.
+Image element inside a div positioned off screen with no accessible name
+
 ```html
 <div style="margin-left:-9999px;"><img /></div>
 ```

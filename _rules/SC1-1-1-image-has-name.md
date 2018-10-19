@@ -47,7 +47,7 @@ There is a known combination of a popular browser and assistive technology that 
 
 #### Passed example 1
 
-Image has accessible name
+HTML `img` element has accessible name
 
 ```html
 <img alt="W3C logo" />
@@ -55,7 +55,7 @@ Image has accessible name
 
 #### Passed example 2
 
-Non-image element with image role and accessible name
+Element with role of `img` and accessible name
 
 ```html
 <div role="img" aria-label="W3C logo"></div>
@@ -71,7 +71,7 @@ Accessible name but not always accessibility supported
 
 #### Passed example 4
 
-HTML `img` element marked as decorative through empty `alt` attribute
+HTML `img` element marked as [decorative](#decorative) through empty `alt` attribute
 
 ```html
 <img alt="" />
@@ -79,7 +79,7 @@ HTML `img` element marked as decorative through empty `alt` attribute
 
 #### Passed example 5
 
-HTML `img` element marked as decorative through `role="presentation"`
+HTML `img` element marked as [decorative](#decorative) through `role="presentation"`
 
 ```html
 <img role="presentation" />
@@ -87,17 +87,25 @@ HTML `img` element marked as decorative through `role="presentation"`
 
 #### Passed example 6
 
-HTML `img` element marked as decorative through `role="none"`
+HTML `img` element marked as [decorative](#decorative) through `role="none"`
 
 ```html
 <img role="none" />
+```
+
+#### Passed example 7
+
+HTML `img` element is not [included in the accessibility tree](#included-in-the-accessibility-tree) but has accessible name
+
+```html
+<img alt="W3C logo" aria-hidden="true" />
 ```
 
 ### Failed
 
 #### Failed example 1
 
-No accessible name
+No accessible name and is not marked as [decorative](#decorative)
 
 ```html
 <img />
@@ -113,10 +121,18 @@ Non-image element with image role but no accessible name
 
 #### Failed example 3
 
-Image element inside a div positioned off screen with no accessible name
+Image element inside a `div` positioned off screen with no accessible name and is not marked as [decorative](#decorative)
 
 ```html
 <div style="margin-left:-9999px;"><img /></div>
+```
+
+#### Failed example 4
+
+HTML `img` element is not [included in the accessibility tree](#included-in-the-accessibility-tree), does not have accessible name and is not marked as decorative
+
+```html
+<img aria-hidden="true" />
 ```
 
 ### Inapplicable

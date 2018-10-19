@@ -10,7 +10,7 @@ success_criterion:
 
 test_aspects:
 - DOM Tree
-- Accessibility Tree
+- CSS Styling
 
 authors:
 - Dagfinn Rømen
@@ -22,7 +22,7 @@ authors:
 
 ### Applicability
 
-This rule applies to any element with the [semantic role](#semantic-role) of heading that is either visible or included in the accessibility tree.
+This rule applies to any element with the [semantic role](#semantic-role) of heading that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 **Note**: The WCAG 2.0 success criterion 2.4.6 applies to all headings. "Heading" is used in its general sense and includes titles and other ways to add a heading to different types of content.
 

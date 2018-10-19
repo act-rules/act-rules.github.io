@@ -23,7 +23,7 @@ Any attribute that is specified on an HTML or SVG element where the attribute na
 
 ### Expectation
 
-The target attribute is either listed under [WAI-ARIA 1.1 Supported States and Properties](https://www.w3.org/TR/wai-aria-1.1/#states_and_properties) for the [semantic role](#semantic-role) of the element that the attribute is specified on, or it is found on the list of [WAI-ARIA 1.1 Global States and Properties](https://www.w3.org/TR/wai-aria-1.1/#global_states).
+The target attribute is either found on the list of [WAI-ARIA 1.1 Global States and Properties](https://www.w3.org/TR/wai-aria-1.1/#global_states), or is listed under [WAI-ARIA 1.1 Supported States and Properties](https://www.w3.org/TR/wai-aria-1.1/#states_and_properties) for the [semantic role](#semantic-role) of the element that the attribute is specified on, if the element has a semantic role.
 
 **Note:** Assessing the value of the attribute is out of scope for this rule.
 

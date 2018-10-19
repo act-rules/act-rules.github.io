@@ -3,7 +3,7 @@ name: Role attribute has valid value
 test_type: atomic
 
 description: |
-   This rule checks that each role attribute has at least one valid value
+   This rule checks that each role attribute has a valid value
    
 success_criterion:
 - 4.1.2 # Name, Role, Value
@@ -22,9 +22,13 @@ authors:
 
 Any [non-empty](#non-empty) `role` attribute that is specified on an HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies).
 
+**Note:** Having a whitespace separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role](#semantic-role) of the element, and so forth.
+
 ### Expectation
 
-Each test target has at least one non-abstract valid value as specified in the [WAI-ARIA 1.1 Categorization of Roles](https://www.w3.org/TR/wai-aria-1.1/#roles_categorization).
+Each test target has a valid value that corresponds to a non-abstract [WAI-ARIA](https://www.w3.org/TR/wai-aria) role.
+
+**Note:** Which specific roles to consider may depend on the type of content under test, such as web pages or digital publications, and are not limited to those defined by [WAI-ARIA](https://www.w3.org/TR/wai-aria)  alone. Roles defined in separate WAI-ARIA modules, such as the [Digital Publishing Module](https://www.w3.org/TR/dpub-aria/) or the [Graphics Module](https://www.w3.org/TR/graphics-aria/), may also be considered for this rule.
 
 ## Assumptions
 
@@ -33,8 +37,6 @@ Each test target has at least one non-abstract valid value as specified in the [
 ## Accessibility Support
 
 Older browsers do not support more than one token in the value for a role attribute. If multiple values are used in the role attribute, the attribute is ignored in these browsers.
- 
-**Note:** Having a whitespace separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role](#semantic-role) of the element, and so forth.
 
 ## Background
 

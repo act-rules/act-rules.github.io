@@ -9,7 +9,6 @@ success_criterion:
 
 test_aspects:
 - DOM Tree
-- CSS Styling
 
 authors:
 - Anne Thyme Nørregaard

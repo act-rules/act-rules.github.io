@@ -19,7 +19,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML element with the [semantic role](#semantic-role) of `img` that is [included in the accessibility tree](#included-in-the-accessibility-tree), and any HTML `img` element.
+This rule applies to any HTML element with the [semantic role](#semantic-role) of `img` that is [included in the accessibility tree](#included-in-the-accessibility-tree), and any HTML `img` element.
 
 ### Expectation
 

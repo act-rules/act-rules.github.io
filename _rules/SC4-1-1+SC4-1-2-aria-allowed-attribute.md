@@ -1,7 +1,7 @@
 ---
 name: ARIA allowed attribute
 description: | 
-  This rule checks that `aria-*` attributes are allowed for the element they are specified on.
+  This rule checks that WAI-ARIA states or properties are allowed for the element they are specified on.
 
 success_criterion:
 - 4.1.1 # Parsing (A)
@@ -19,7 +19,7 @@ authors:
 
 ### Applicability
 
-Any attribute that is specified on an HTML or SVG element where the attribute name starts with `aria-`.
+Any [WAI-ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) that is specified on an HTML or SVG element.
 
 ### Expectation
 
@@ -93,7 +93,7 @@ Global state that is supported by all base markup elements.
 
 #### Inapplicable example 1
 
-No attribute that starts with `aria-`.
+No [WAI-ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
 
 ```html
 <div role="region"></div>

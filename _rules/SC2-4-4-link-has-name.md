@@ -20,7 +20,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML element with the [semantic role](#semantic-role) of `link` that is [visible on the page](#visible-on-the-page), [included in the accessibility tree](#included-in-the-accessibility-tree) or [focusable](#focusable).
+The rule applies to any HTML element with the [semantic role](#semantic-role) of `link` that is [visible on the page](#visible-on-the-page) or [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation
 

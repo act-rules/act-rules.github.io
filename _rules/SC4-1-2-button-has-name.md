@@ -20,7 +20,7 @@ authors:
 
 ### Applicability
 
-The rule applies to elements that are [visible on the page](#visible-on-the-page) or [included in the accessibility tree](#included-in-the-accessibility-tree) with the [semantic role](#semantic-role) of `button`, except for `input` elements of `type="image"`.
+The rule applies to elements that are [included in the accessibility tree](#included-in-the-accessibility-tree) with the [semantic role](#semantic-role) of `button`, except for `input` elements of `type="image"`.
 
 ### Expectation
 
@@ -123,23 +123,15 @@ Value attribute does NOT give an accessible name, only for input elements.
 
 #### Failed example 2
 
-`aria-hidden` buttons should be tested.
-
-```html
-<button aria-hidden="true"></button>
-```
-
-#### Failed example 3
-
 Span tag with role button with no name.
 
 ```html
 <span role="button"></span>
 ```
 
-#### Failed example 4
+#### Failed example 3
 
-Off screen element with out an accessible name.
+Off screen element without an accessible name.
 
 ```html
 <html>
@@ -160,7 +152,7 @@ Off screen element with out an accessible name.
 
 #### Inapplicable example 1
 
-Image buttons are tested in a different rule
+Image buttons are tested in a different rule.
 
 ```html
 <input type='image' value='download'>
@@ -168,7 +160,7 @@ Image buttons are tested in a different rule
 
 #### Inapplicable example 2
 
-Not visible in page and not exposed to assistive technologies.
+Not included in the accessibility tree.
 
 ```html
 <html>
@@ -191,4 +183,12 @@ Inapplicable: role overridden to link for button element.
 
 ```html
 <button role='link'>take me somewhere</button>
+```
+
+#### Failed example 4
+
+`aria-hidden` buttons should be tested.
+
+```html
+<button aria-hidden="true"></button>
 ```

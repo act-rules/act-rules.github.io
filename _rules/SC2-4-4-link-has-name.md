@@ -20,7 +20,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML element with the [semantic role](#semantic-role) of `link` that is [visible on the page](#visible-on-the-page) or [included in the accessibility tree](#included-in-the-accessibility-tree).
+The rule applies to any HTML element with the [semantic role](#semantic-role) of `link` that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation
 
@@ -129,14 +129,6 @@ When `link` is off screen.
 </html>
 ```
 
-#### Passed example 10
-
-Link is not in accessibility tree.
-
-```html
-<a aria-hidden="true" href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
-```
-
 ### Failed
 
 #### Failed example 1
@@ -196,14 +188,6 @@ Non-visible link.
 <a href="http://www.w3.org/WAI" style="left: -9999px; position: absolute;"><img src="#" /></a>
 ```
 
-#### Failed example 8
-
-Not exposed to assistive technologies.
-
-```html
-<a href="http://www.w3.org/WAI" aria-hidden="true"><img src="#" /></a>
-```
-
 ### Inapplicable
 
 #### Inapplicable example 1
@@ -216,7 +200,7 @@ Not exposed to assistive technologies.
 
 #### Inapplicable example 2
 
-Not visible and not eposed to assistive technologies.
+Not included in the accessibility tree due to `display:none`.
 
 ```html
 <a href="http://www.w3.org/WAI" style="display: none;"><img src="#" /></a>
@@ -224,8 +208,16 @@ Not visible and not eposed to assistive technologies.
 
 #### Inapplicable example 3
 
-Non-visible link.
+Not included in the accessibility tree due to `visibility: hidden`.
 
 ```html
 <a href="http://www.w3.org/WAI" style="visibility: hidden;">Some text</a>
+```
+
+#### Inapplicable example 10
+
+Not included in the accessibility tree due to `aria-hideden="true"`.
+
+```html
+<a aria-hidden="true" href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
 ```

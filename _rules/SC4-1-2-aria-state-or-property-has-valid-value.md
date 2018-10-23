@@ -27,15 +27,11 @@ Any [non-empty](#non-empty) [WAI-ARIA 1.1 state or property](https://www.w3.org/
 
 Each test target has a valid value according to its [WAI-ARIA 1.1 value type](https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value).
 
-### Expectation 2
-
 For value types `ID Reference` and `ID Reference List` for [WAI-ARIA required properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) at least one of the elements with the given ids exists in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the element that specifies the target attribute. 
 
-**Note:** This expectation only applies to [WAI-ARIA required properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState). For non-required properties, there is no requirement that the elements with the given ids actually exists.
-
-### Expectation 3
-
 For value type `URI` the value matches the [generic URI syntax](https://www.ietf.org/rfc/rfc3986.txt).
+
+**Note:** Only for [WAI-ARIA required properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) with value types `ID Reference` and `ID Reference List` is there a requirement that the elements with the given ids actually exists. For non-required properties, this is not a requirement.
 
 **Note:** 
 For value type `URI`, this rule does not require that the destination URI exists. 

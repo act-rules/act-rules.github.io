@@ -48,7 +48,7 @@ The attribute is either an [inherited](https://www.w3.org/TR/wai-aria/#inherited
 
 #### Passed example 1
 
-`aria-pressed` attribute is allowed for role `button`.
+`aria-pressed` state is supported for role `button`.
 
 ```html
 <div role="button" aria-pressed="false"></div>
@@ -56,7 +56,7 @@ The attribute is either an [inherited](https://www.w3.org/TR/wai-aria/#inherited
 
 #### Passed example 2
 
-`aria-pressed` attribute is allowed for `role=button` that is the implicit role for `button` element.
+`aria-pressed` state is supported for `role=button` that is the implicit role for `button` element.
 
 ```html
 <button aria-pressed="false"></button>
@@ -70,22 +70,62 @@ Global state that is supported by all base markup elements.
 <div aria-hidden="true"></div>
 ```
 
+#### Passed example 4
+
+`aria-label` state is inherited for role `button`
+
+```html
+<div role="button" aria-label="OK"></div>
+```
+
+#### Passed example 5
+
+`aria-checked` state is required for role `aria-checkbox`
+
+```html
+<div role="checkbox" aria-checked="false"></div>
+```
+
+#### Passed example 6
+
+`aria-controls` property is supported for role `combobox`
+
+```html
+<div role="combobox" aria-controls="id1"></div>
+```
+
+#### Passed example 7
+
+WAI-ARIA states and properties with empty value are also applicable to this rule
+
+```html
+<div role="combobox" aria-controls></div>
+```
+
+#### Passed example 8
+
+WAI-ARIA states and properties with empty value, specified as an empty string, are also applicable to this rule
+
+```html
+<div role="combobox" aria-controls=""></div>
+```
+
 ### Failed
 
 #### Failed example 1
 
-`aria-pressed` attribute is not allowed for role `checkbox`.
+`aria-sort` property is neither inherited, supported, nor required for role `button`.
 
 ```html
-<div role="checkbox" aria-pressed="false"></div>
+<div role="button" aria-sort=""></div>
 ```
 
 #### Failed example 2
 
-`aria-pressed` attribute is not allowed for `role=checkbox` that is the implicit role for `input` elements of type `checkbox`.
+`aria-sort` attribute is neither inherited, supported, nor required for `role=button` that is the implicit role for `button` element.
 
 ```html
-<input type="checkbox" aria-pressed="false">
+<button aria-sort=""></button>
 ```
 
 ### Inapplicable

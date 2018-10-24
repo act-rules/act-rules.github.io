@@ -23,7 +23,7 @@ Any [WAI-ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_
 
 ### Expectation
 
-The target attribute is either listed under [WAI-ARIA 1.1 Supported States and Properties](https://www.w3.org/TR/wai-aria-1.1/#states_and_properties) for the [semantic role](#semantic-role) of the element that the attribute is specified on, or it is found on the list of [WAI-ARIA 1.1 Global States and Properties](https://www.w3.org/TR/wai-aria-1.1/#global_states).
+The attribute is either an [inherited](https://www.w3.org/TR/wai-aria/#inheritedattributes), [supported](https://www.w3.org/TR/wai-aria/#supportedState), or [required](https://www.w3.org/TR/wai-aria/#requiredState) [state](https://www.w3.org/TR/wai-aria/#dfn-state) or [property](https://www.w3.org/TR/wai-aria/#dfn-property) of the [semantic role](#semantic-role) of the element on which the attribute is specified. If the element has no semantic role, the attribute must be a [global state or property](https://www.w3.org/TR/wai-aria-1.1/#global_states).
 
 **Note:** Assessing the value of the attribute is out of scope for this rule.
 

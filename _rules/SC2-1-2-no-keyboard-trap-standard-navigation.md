@@ -5,7 +5,7 @@ test_type: atomic
 description: |
   This rule checks if it is possible to use standard keyboard navigation to navigate through all content on a web page without becoming trapped in any element.
 
-test aspects:
+test_aspects:
 - DOM Tree
 - CSS Styling
 

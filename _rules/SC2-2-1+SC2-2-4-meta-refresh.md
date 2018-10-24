@@ -5,6 +5,7 @@ description: |
 
 success_criterion:
 - 2.2.1 # Timing Adjustable
+- 2.2.4 # Interruptions
 - 3.2.5 # Change on Request
 
 test_aspects:

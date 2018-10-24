@@ -24,7 +24,7 @@ authors:
 
 The rule only applies to any HTML or SVG element that is [focusable](#focusable).
 
-**Note**: This rule is only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
+**Note**: This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
 
 ### Expectation
 
@@ -177,7 +177,7 @@ var trapOn = false ;
 
 #### Failed example  5
 
-Keyboard trap with instructions that doesn't give advise on the method for proceeding
+Keyboard trap with instructions that doesn't give advise on the method for proceeding.
 
 ```html
 <script>
@@ -192,7 +192,7 @@ var trapOn = false ;
 ````
 #### Failed example  6
 
-Keyboard trap with help text, where the method advised doesn't work
+Keyboard trap with help text, where the method advised doesn't work.
 
 ```html
 <script>
@@ -226,7 +226,7 @@ Disabled element.
 
 #### Inapplicable example 3
 
-Hidden element using `display:none`
+Hidden element using `display:none`.
 
 ```html
 <button type="button" style=“display:none;”>Click Me!</button>

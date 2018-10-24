@@ -24,15 +24,13 @@ authors:
 
 This rule applies to any element with the [semantic role](#semantic-role) of heading that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree).
 
-**Note**: The WCAG 2.0 success criterion 2.4.6 applies to all headings. "Heading" is used in its general sense and includes titles and other ways to add a heading to different types of content.
-
-**Note**: Heading content defines the header of a section (whether explicitly marked up using sectioning content elements, or implied by the heading content itself).
-
-**Note**: A section is a self-contained portion of written content that deals with one or more related topics or thoughts. A section may consist of one or more paragraphs and include graphics, tables, lists and sub-sections.
+**Note**: This rule only applies to elements with the [semantic role](#semantic-role) of heading. Thus, it is a partial check for WCAG 2.0 success criterion 2.4.6, which applies to all headings. "Heading" is used in its general sense and includes titles and other ways to add a heading to different types of content.
 
 ### Expectation
 
 Each target element describes the topic or purpose of the subsequent section.
+
+**Note**: Heading content defines the header of a section (whether explicitly marked up using sectioning content elements, or implied by the heading content itself). A section is a self-contained portion of written content that deals with one or more related topics or thoughts. A section may consist of one or more paragraphs and include graphics, tables, lists and sub-sections.
 
 **Note**: Headings do not need to be lengthy. A word, or even a single character, may suffice.
 

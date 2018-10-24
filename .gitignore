@@ -2,7 +2,6 @@
 *.iml
 *.log
 .sass-cache
-
 _site
-_testcases-embeds/
-_testcases-export/
+_testcases-embeds/*.*
+auto-wcag-testcases

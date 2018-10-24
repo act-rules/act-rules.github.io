@@ -47,7 +47,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 Redirects immediately.
 
@@ -57,7 +57,7 @@ Redirects immediately.
   </head>  
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 First valid `<meta http-equiv="refresh">` redirects immediately.
 
@@ -68,7 +68,7 @@ First valid `<meta http-equiv="refresh">` redirects immediately.
 </head>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 Redirects after 20 hours.
 
@@ -80,7 +80,7 @@ Redirects after 20 hours.
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 Refreshes after 30 seconds.
 
@@ -90,7 +90,7 @@ Refreshes after 30 seconds.
 </head>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 Redirects after 30 seconds.
 
@@ -100,7 +100,7 @@ Redirects after 30 seconds.
 </head>
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 First `<meta http-equiv="refresh">` element is not valid, second one redirects after 5 seconds.
 

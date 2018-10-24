@@ -50,7 +50,6 @@ defaults:
 
 exclude:
 - _testcases-embeds
-- _testcases-export
 - _drafts/early-stage
 - _drafts/outdated
 - _rules/outdated

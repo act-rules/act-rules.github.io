@@ -47,7 +47,7 @@ There are known combinations of a popular operating system with browsers and ass
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 The `lang` attribute specified has a non-empty value.
 
@@ -55,7 +55,7 @@ The `lang` attribute specified has a non-empty value.
 <html lang="en">
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 The `xml:lang` attribute specified has a non-empty value.
 
@@ -63,7 +63,7 @@ The `xml:lang` attribute specified has a non-empty value.
 <html xml:lang="en">
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 The `lang` and `xml:lang` attribute specified has a non-empty value.
 
@@ -71,7 +71,7 @@ The `lang` and `xml:lang` attribute specified has a non-empty value.
 <html xml:lang="en" lang="en">
 ```
 
-#### Pass example 4
+#### Passed example 4
 
 The `lang` attribute specified has a non-empty value. The rule expects a non-empty value on either the `lang` or `xml:lang` attributes.
 
@@ -79,7 +79,7 @@ The `lang` attribute specified has a non-empty value. The rule expects a non-emp
 <html xml:lang="" lang="en">
 ```
 
-#### Pass example 5
+#### Passed example 5
 
 The `xml:lang` attribute specified has a non-empty value. The rule expects a non-empty value on either the `lang` or `xml:lang` attributes.
 
@@ -87,7 +87,7 @@ The `xml:lang` attribute specified has a non-empty value. The rule expects a non
 <html xml:lang="en" lang="">
 ```
 
-#### Pass example 6
+#### Passed example 6
 
 The `lang` attribute specified has a non-empty value. The rule does not verify the validity of the value specified and checks only for presence of a value.
 
@@ -95,7 +95,7 @@ The `lang` attribute specified has a non-empty value. The rule does not verify t
 <html lang="xyz">
 ```
 
-#### Pass example 7
+#### Passed example 7
 
 The `xml:lang` attribute specified has a non-empty value. The rule does not verify the validity of the value specified and checks only for presence of a value.
 
@@ -105,7 +105,7 @@ The `xml:lang` attribute specified has a non-empty value. The rule does not veri
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 There were no `lang` or `xml:lang` attribute specified.
 
@@ -113,7 +113,7 @@ There were no `lang` or `xml:lang` attribute specified.
 <html>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 The `xml:lang` attribute specified has an empty value.
 
@@ -121,7 +121,7 @@ The `xml:lang` attribute specified has an empty value.
 <html xml:lang="">
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 The `lang` attribute specified has an empty value.
 
@@ -129,7 +129,7 @@ The `lang` attribute specified has an empty value.
 <html lang="">
 ```
 
-#### Fail example 4
+#### Failed example 4
 
 The `lang` and `xml:lang` attribute specified has an empty value.
 
@@ -143,6 +143,6 @@ The `lang` and `xml:lang` attribute specified has an empty value.
 
 The rule does not apply to `svg` element.
 
-```html
-<svg lang="en">
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" lang="en"></svg>
 ```

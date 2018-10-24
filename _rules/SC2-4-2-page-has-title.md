@@ -56,7 +56,7 @@ _There are no major accessibility support issues known for this rule._
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 This page has a `title`.
 
@@ -66,7 +66,7 @@ This page has a `title`.
 </html>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 This page give a `title` to an iframe.
 
@@ -77,7 +77,7 @@ This page give a `title` to an iframe.
 </html>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 This page has a `title`.
 
@@ -92,7 +92,7 @@ This page has a `title`.
 </html>
 ```
 
-#### Pass example 4
+#### Passed example 4
 
 Valid `title` provided.
 
@@ -104,7 +104,7 @@ Valid `title` provided.
 </html>
 ```
 
-#### Pass example 5
+#### Passed example 5
 
 Valid `title` provided.
 
@@ -114,14 +114,14 @@ Valid `title` provided.
     <title>Title of the page.</title>
   </head>
   <body>
-     <title> <!-- empty title --> </title> 
+     <title></title> 
   </body>
 </html>
 ```
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 This page has no `title`.
 
@@ -131,17 +131,17 @@ This page has no `title`.
 </html>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 Empty `title`.
 
 ```html
 <html>
-  <title> <!-- this page has an empty title --> </title>
+  <title></title>
 </html>
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 No `title` provided.
 
@@ -151,14 +151,14 @@ No `title` provided.
 </html>
 ```
 
-#### Fail example 4
+#### Failed example 4
 
 Empty first `title`.
 
 ```html
 <html>
   <head>
-    <title> <!-- this page has an empty first title --> </title>
+    <title></title>
   </head>
   <body>
     <title>Title of the page.</title>
@@ -172,8 +172,8 @@ Empty first `title`.
 
 Not applicable to `svg` element.
 
-```html
-<svg>
+```svg
+<svg xmlns="http://www.w3.org/2000/svg">
   <title>This is an SVG</title>
 </svg>
 ```

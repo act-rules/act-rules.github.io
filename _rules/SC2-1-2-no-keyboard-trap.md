@@ -22,7 +22,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML or SVG element that is [focusable](#focusable).
+The rule only applies to any HTML or SVG element that is [focusable](#focusable).
 
 **Note**: This rule is only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
 

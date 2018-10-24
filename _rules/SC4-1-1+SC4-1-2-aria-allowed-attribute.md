@@ -4,7 +4,6 @@ description: |
   This rule checks that WAI-ARIA states or properties are allowed for the element they are specified on.
 
 success_criterion:
-- 4.1.1 # Parsing (A)
 - 4.1.2 # Name, Role, Value (A)
 
 test_aspects:

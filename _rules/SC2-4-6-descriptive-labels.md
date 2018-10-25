@@ -3,7 +3,7 @@ name: Label is descriptive
 test_type: atomic
 
 description: |
-  This rule checks that labels describe the purpose of the interface components.
+  This rule checks that labels describe the purpose of form field elements.
 
 success_criterion:
 - 2.4.6 # Headings and labels
@@ -23,16 +23,14 @@ authors:
 
 This rule applies to any `label` element or HTML element referenced by aria-labelledby that is 
 - [visible](#visible) and included in the accessibility tree.
-- associated with an HTML element that has one of the form field roles in the list further down.
-
-The form field [semantic roles](#semantic-role) to be considered for this rule are: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider, spinbutton`, `switch` and `textbox`.
+- associated with an HTML element that has one of the listed form field [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
 
 **Note**: The list of form field roles is derived by taking all the [ARIA](https://www.w3.org/TR/wai-aria-1.1/) 1.1 roles that:
 - have a [semantic roles](#semantic-role) that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and 
 - does not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
 - The `option` role is not part of the list of applicable roles, because it does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an accessible name.
 
-**Note**: This rule is a partial check for WCAG 2.0 success criterion 2.4.6, which applies to all labels. "Label" is used in its general sense and includes text or other components with a text alternative that is presented to a user to identify a component within Web content.
+**Note**: This rule is a partial check for WCAG 2.1 success criterion 2.4.6, which applies to all labels. "Label" is used in its general sense and includes text or other components with a text alternative that is presented to a user to identify a component within Web content.
 
 ### Expectation
 
@@ -61,16 +59,16 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed example 1
 
-Label that is coded with the `<label>` element and describes the purpose of the associated element.
+Label that is coded with the `label` element and describes the purpose of the associated element.
 
 ```html
-<label for ="fname">First name:</label>
+<label for="fname">First name:</label>
 <input id="fname" type="text" name="fname"/>
 ```
 
 #### Passed example 2
 
-Label that that is coded with the `<p>` element and associated by the aria-labelledby attribute. The label describes the purpose of the associated element.
+Label that that is coded with the `p` element and associated by the aria-labelledby attribute. The label describes the purpose of the associated element.
 
 ```html
 <p id="label_fname">First name:</p>
@@ -81,16 +79,16 @@ Label that that is coded with the `<p>` element and associated by the aria-label
 
 #### Failed example 1
 
-Label that is coded with the `<label>` element and does not describe the purpose of the associated element.
+Label that is coded with the `label` element and does not describe the purpose of the associated element.
 
 ```html
-<label for ="fname">Menu</label>
+<label for="fname">Menu</label>
 <input id="fname" type="text" name="fname"/>
 ```
 
 #### Failed example 2
 
-Label that that is coded with the `<p>` element and associated by the aria-labelledby attribute. The label does not describe the purpose of the associated element.
+Label that that is coded with the `p` element and associated by the aria-labelledby attribute. The label does not describe the purpose of the associated element.
 
 ```html
 <p id="label_fname">Menu</p>
@@ -101,16 +99,27 @@ Label that that is coded with the `<p>` element and associated by the aria-label
 
 #### Inapplicable example 1
 
-Hidden label.
+Hidden `label` element.
 
 ```html
-<!-- code -->
+<label for="fname" style:"display:none;">First name:</label>
+<input id="fname" type="text" name="fname"/>
 ```
 
 #### Inapplicable example 2
 
-Label that is not associated with a form field element.
+Hidden `p` element that associated by the aria-labelledby attribute.
 
 ```html
-<!-- code -->
+<p id="label_fname" style:"display:none;">First name:</p>
+<input aria-labelledby="label_fname" type="text" name="fname"/>
+```
+
+#### Inapplicable example 3
+
+The `label` element is associated with an HTML element that does not have a form field semantic role.
+
+```html
+<label for="fname" style:"display:none;">First name:</label>
+<p id="fname"/>
 ```

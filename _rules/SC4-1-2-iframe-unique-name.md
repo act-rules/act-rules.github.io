@@ -19,11 +19,11 @@ authors:
 
 ### Applicability
 
-The rule applies to `iframe` elements that are [exposed to assistive technologies](#exposed-to-assistive-technologies) and have a [non-empty](#non-empty) [accessible name](#accessible-name).
+The rule applies to `iframe` elements that are [included in the accessibility tree](#included-in-the-accessibility-tree) and have a [non-empty](#non-empty) [accessible name](#accessible-name).
 
 ### Expectation
 
-Each target element has an [accessible name](#accessible-name) that is unique within all applicable `iframes` within the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees), where the `src` attributes are different.
+Each target element has an [accessible name](#accessible-name) that is unique across accessible names of all applicable `iframe` within the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees), where the `src` attributes are different.
 
 **Note:** 
 - An `iframe` creates an embedded browsing context. The content of this browsing context is not part of the [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) that it is embedded in.
@@ -91,7 +91,7 @@ Multiple `iframe` elements in the document having different `aria-labelledby` de
 
 #### Passed example 5
 
-`iframes` having the same `title` within a given document tree, but one of them is not exposed to assistive technologies.
+`iframe` having the same `title` within a given document tree, but one of them is not included in the accessibility tree.
 
 ```html
 <iframe aria-hidden='true' title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
@@ -102,7 +102,7 @@ Multiple `iframe` elements in the document having different `aria-labelledby` de
 
 #### Passed example 6
 
-`iframes` are allowed to have the same `title` across different document trees. In this example `iframe` with `id` `level2-frame1` has a parent document tree of `iframe` with `id` `level1-frame2`, and does not share the document tree of `iframe` with `id` `level1-frame1`.
+`iframe` are allowed to have the same `title` across different document trees. In this example `iframe` with `id` `level2-frame1` has a parent document tree of `iframe` with `id` `level1-frame2`, and does not share the document tree of `iframe` with `id` `level1-frame1`.
 
 ```html
 <iframe id="level1-frame1" title="List of Contributors" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">
@@ -217,7 +217,7 @@ No accessible name is provided
 
 #### Inapplicable example 6
 
-Does not apply to `iframe` elements that are not exposed to assistive technologies.
+Does not apply to `iframe` elements that are not included in the accessibility tree.
 
 ```html
 <iframe style="display:none;" title="Document One" src="../test-assets/SC4-1-2-iframe-unique-name-doc1.html">

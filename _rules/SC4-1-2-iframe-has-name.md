@@ -19,7 +19,7 @@ authors:
 
 ### Applicability
 
-The rule applies to `iframe` elements that are [exposed to assistive technologies](#exposed-to-assistive-technologies).
+The rule applies to `iframe` elements that are [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 **Note:** `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
 
@@ -142,7 +142,7 @@ Does not apply to non `iframe` element.
 
 #### Inapplicable example 2
 
-`iframe` is not exposed to assistive technologies.
+`iframe` is not included in the accessibility tree.
 
 ```html
 <iframe style="display:none;" src="../test-assets/SC4-1-2-frame-doc.html">

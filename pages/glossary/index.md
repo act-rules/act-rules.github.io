@@ -11,7 +11,7 @@ title: Glossary
 	</thead>
 
   {% for item in site.pages %}
-  {% if item.category == "glossary"%}
+  {% if item.category == "glossary" and item.key %}
   <tr>
     <td>
       <a class='rule-list-title' href="{{ item.url | prepend: site.baseurl }}">{{item.title}}</a>

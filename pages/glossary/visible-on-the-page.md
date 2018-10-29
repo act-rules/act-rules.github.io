@@ -1,5 +1,5 @@
 ---
-title: Visible to the Page
+title: Visible on the Page
 key: visible-on-the-page
 ---
 

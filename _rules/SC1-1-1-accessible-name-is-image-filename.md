@@ -24,7 +24,7 @@ The rule applies to HTML `input type="image"` or `area` elements, or any HTML el
 
 ### Expectation
 
-Each test target has an accessible name that can be used in place of the [non-text content](https://www.w3.org/TR/WCAG21/#dfn-non-text-content) of the element without loss of information to the user.
+Each test target has an accessible name that serves an equivalent purposecan of the [non-text content](https://www.w3.org/TR/WCAG21/#dfn-non-text-content).
 
 ## Assumptions
 
@@ -46,7 +46,7 @@ Each test target has an accessible name that can be used in place of the [non-te
 The element's accessible name matches the image filename which accurately describes the image.
 
 ```html
-<img scr="https://www.w3.org/WAI/demos/bad/img/w3c" alt="w3c">
+<img src="https://www.w3.org/WAI/demos/bad/img/w3c" alt="w3c">
 ```
 
 ### Failure example 1

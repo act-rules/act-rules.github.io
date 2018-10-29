@@ -18,7 +18,7 @@ authors:
 
 ### Applicability
 
-The rule applies to HTML `input type="image"` or `area` elements, or any HTML element with the semantic role of `img`, where the element is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has an [accessible name](#accessible-name) that matches the filename specified in the `src` attribute.
+The rule applies to HTML `input` element with a [`type`](https://www.w3.org/TR/html/sec-forms.html#dom-htmlinputelement-type) of `image`, or `area` elements, or any HTML element with the semantic role of `img`, where the element is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has an [accessible name](#accessible-name) that matches the filename specified in the `src` attribute.
 
 **Note**: URL query strings, difference in letter casing, and forward and trailing whitespace should be ignored. For example `src="/foo/bar.jpg?baz "` has a filename `bar.jpg`.
 

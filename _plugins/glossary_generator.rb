@@ -80,7 +80,7 @@ module Jekyll
 				if(line['#' + term])
 					anchor_url = s.baseurl + d.url
 					anchor = "<a class='glossary-usage-link' href='#{anchor_url}'>#{ d.data['name'] + ' (' + d.data['slug'] + ')' }</a>"
-					out.push(anchor)
+					out.push(anchor) unless out.include?(anchor)
 				end
 			end
 			out

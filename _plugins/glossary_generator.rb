@@ -20,7 +20,7 @@ module Jekyll
 
 			# hook to listen to page pre_render event
 			Hooks.register :pages, :pre_render do |page|
-				if (page.url['/algorithms'])
+				if (page.url['/glossary'])
 					page_meta = page.data
 					page_key = (page_meta['key'] && page_meta['key'].length > 0) ? page_meta["key"] : nil
 					if(page_key)
@@ -34,18 +34,18 @@ module Jekyll
 			end
 
 			# hook to liten to site post_write event 
-			# append definitions to pages
-			# append list of usages of definitions in rule pages to definition index page.
+			# append glossary to pages
+			# append list of usages of glossary in rule pages to definition index page.
 			Hooks.register :site, :post_write do |site|
-				update_rule_pages_with_definitions(site, hash)
+				update_rule_pages_with_glossary(site, hash)
 				update_definition_page_with_rule_backlink(site, hash)
 			end
 		end
 
-		def update_rule_pages_with_definitions(site, hash)
+		def update_rule_pages_with_glossary(site, hash)
 			site.documents.each do |doc|
 				if (doc.url['/drafts'] || doc.url['/rules'])
-					data = get_definitions_for_document(site, doc, hash)
+					data = get_glossary_for_document(site, doc, hash)
 					append_definition(site.dest + doc.url, data)
 				end
 			end
@@ -66,13 +66,11 @@ module Jekyll
 			end
 
 			site.pages.each do |page|
-				if (page.url['/algorithms'])
+				if (page.url['/glossary'])
 					append_backlink_to_rule(site.dest + page.url, h[page.data['key']])
 				end
 			end
 		end
-
-
 
 		private 
 
@@ -81,7 +79,7 @@ module Jekyll
 			d.content.each_line.with_index do |line, index|
 				if(line['#' + term])
 					anchor_url = s.baseurl + d.url
-					anchor = "<a class='definition-usage-link' href='#{anchor_url}'>#{ d.data['name'] + ' (' + d.data['slug'] + ')' }</a>"
+					anchor = "<a class='glossary-usage-link' href='#{anchor_url}'>#{ d.data['name'] + ' (' + d.data['slug'] + ')' }</a>"
 					out.push(anchor)
 				end
 			end
@@ -90,7 +88,7 @@ module Jekyll
 	
 		def append_backlink_to_rule(url, data)
 			if(data)
-				to_append_data = "<div class='definition-usages'>"\
+				to_append_data = "<div class='glossary-usages'>"\
 					"<h3 class='title'>Usages:</h3>"\
 					"#{data.join}"\
 				'</div></div>'
@@ -106,7 +104,7 @@ module Jekyll
 			File.open(url, "w") {|file| file.puts new_contents }
 		end
 
-		def get_definitions_for_document(site, doc, hash)
+		def get_glossary_for_document(site, doc, hash)
 			out = []
 			doc.content.each_line.with_index do |line, index|
 				hash.each do |k, v|
@@ -121,7 +119,7 @@ module Jekyll
 				end
 			end
 
-			out.length > 0 ? "<h2>Definitions</h2><div class='definition-list'>#{out.join(' ')}</div>" : ""
+			out.length > 0 ? "<h2>Glossary</h2><div class='glossary-list container'>#{out.join(' ')}</div>" : ""
 		end
 
 		def get_page_content(site, url)

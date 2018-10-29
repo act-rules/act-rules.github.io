@@ -185,9 +185,9 @@ Inapplicable: role overridden to link for button element.
 <button role='link'>take me somewhere</button>
 ```
 
-#### Failed example 4
+#### Inapplicable example 4
 
-`aria-hidden` buttons should be tested.
+Not included in the accessibility tree due to `aria-hidden`.
 
 ```html
 <button aria-hidden="true"></button>

@@ -30,7 +30,7 @@ Each target element has a label indicating the `video` is an alternative to text
 
 ### Expectation 3
 
-The label (from expectation 2) is [visible on the page](#visible-on-the-page) and [exposed to assistive technolgies](#exposed-to-assistive-technologies)
+The label (from expectation 2) is [visible on the page](#visible-on-the-page) and [included in the accessibility tree](#included-in-the-accessibility-tree)
 
 ## Assumptions
 

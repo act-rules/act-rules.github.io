@@ -24,7 +24,7 @@ The rule applies to the first [valid](https://www.w3.org/TR/html/document-metada
 
 ### Expectation
 
-The `time` of the `content` attribute is 0 or bigger than 72000 (20 hours).
+The `time` of the `content` attribute is 0 or greater than 72000 (20 hours).
 
 **Note**: See [Refresh state (`http-equiv="refresh"`)](https://www.w3.org/TR/html/document-metadata.html#statedef-http-equiv-refresh) for a precise description on how to determine the `time`.
 
@@ -70,11 +70,11 @@ First valid `<meta http-equiv="refresh">` redirects immediately.
 
 #### Passed example 3
 
-Redirects after 20 hours.
+Redirects after more than 20 hours.
 
 ```html
 <head>
-  <meta data-rule-target http-equiv="refresh" content="72000; http://example.com" />
+  <meta data-rule-target http-equiv="refresh" content="72001; http://example.com" />
 </head>
 ```
 
@@ -108,6 +108,16 @@ First `<meta http-equiv="refresh">` element is not valid, second one redirects a
 <head>
   <meta data-rule-target http-equiv="refresh" content="0: http://example.com" />
   <meta data-rule-target http-equiv="refresh" content="5; http://example.com" />
+</head>
+```
+
+#### Failed example 4
+
+Redirects after exactly 20 hours.
+
+```html
+<head>
+  <meta data-rule-target http-equiv="refresh" content="72000; http://example.com" />
 </head>
 ```
 

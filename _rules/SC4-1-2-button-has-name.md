@@ -168,7 +168,7 @@ Image buttons are tested in a different rule
 
 #### Inapplicable example 2
 
-Not visible in page and not exposed to assistive technologies.
+Not visible in page and not included in the accessibility tree.
 
 ```html
 <html>

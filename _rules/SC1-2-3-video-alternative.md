@@ -39,8 +39,8 @@ This rule assumes that a mechanism is available to start the video and that the 
 
 ## Accessibility support
 
-See [Video element description track: accessibility support](SC1-2-Video-description-track.html#accessibility-support).
-See [Video with audio has audio description: accessibility support](SC1-2-video-audio-description.html#accessibility-support).
+See [Video element description track: accessibility support](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-Video-description-track.html#accessibility-support.html).
+See [Video with audio has audio description: accessibility support](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-audio-description.html#accessibility-support.html).
 
 ## Background
 

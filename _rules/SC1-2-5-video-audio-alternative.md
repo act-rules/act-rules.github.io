@@ -27,9 +27,9 @@ The rule applies to any [non-streaming](#non-streaming) `video` element [visible
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [video element audio described](SC1-2-video-audio-description)
-- [Video element description track](SC1-2-video-description-track)
-- [Video as a media alternative for text](SC1-2-video-media-alternative)
+- [video element audio described](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-audio-description.html)
+- [Video element description track](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-description-track.html)
+- [Video as a media alternative for text](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-media-alternative.html)
 
 ## Assumptions
 
@@ -37,21 +37,16 @@ This rule assumes that a mechanism is available to start the video and that the 
 
 ## Accessibility support
 
-See [Video element description track: accessibility support](SC1-2-Video-description-track.html#accessibility-support).
-See [Video with audio has audio description: accessibility support](SC1-2-video-audio-description.html#accessibility-support).
+See [Video element description track: accessibility support](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-Video-description-track.html#accessibility-support).
+See [Video with audio has audio description: accessibility support](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-audio-description.html#accessibility-support).
 
 ## Background
 
-- [Understanding Success Criterion 1.2.5: Audio Description (Prerecorded)
-](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html)
-- [G78: Providing a second, user-selectable, audio track that includes audio descriptions
-](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G78)
-- [H96: Using the track element to provide audio descriptions
-](https://www.w3.org/WAI/GL/2016/WD-WCAG20-TECHS-20160105/H96)
-- [G173: Providing a version of a movie with audio descriptions
-](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G173)
-- [G8: Providing a movie with extended audio descriptions
-](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G8)
+- [Understanding Success Criterion 1.2.5: Audio Description (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html)
+- [G78: Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G78)
+- [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/GL/2016/WD-WCAG20-TECHS-20160105/H96)
+- [G173: Providing a version of a movie with audio descriptions](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G173)
+- [G8: Providing a movie with extended audio descriptions](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G8)
 
 ## Test Cases
 

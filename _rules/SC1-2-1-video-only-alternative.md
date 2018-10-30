@@ -11,7 +11,7 @@ atomic_rules:
 - SC1-2-1-media-alternative-video
 - SC1-2-1-video-only-description-track
 - SC1-2-1-video-only-element-transcript
-- SC1-2-1-video-only-audio-alternative (TODO)
+- SC1-2-1-video-only-audio-alternative
 
 authors:
 - Wilco Fiers
@@ -95,9 +95,18 @@ Then he stops to scratch his bottom.</p>
 
 #### Pass example 4
 
-TODO add examples from the 
-- SC1-2-1-video-only-audio-alternative (TODO)
-rule (Also include failure and inapplicable examples)
+A video element without audio has a seperate audio track that describes the visual information.
+
+```html
+<video controls>
+  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+</video>
+
+<audio controls>
+  <source src="../test-assets/rabbit-video/audio-description.mp3" type="audio/mpeg">
+</audio>
+```
 
 ### Failed
 
@@ -136,6 +145,21 @@ A silent video element with a link to an incorrect text transcript on a differen
   <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</p>
+```
+
+#### Fail example 4
+
+A video element without audio has a seperate audio track that incorrectly describes the visual information.
+
+```html
+<video controls>
+  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+</video>
+
+<audio controls>
+  <source src="../test-assets/rabbit-video/incorrect-audio-description.mp3" type="audio/mpeg">
+</audio>
 ```
 
 ### Inapplicable

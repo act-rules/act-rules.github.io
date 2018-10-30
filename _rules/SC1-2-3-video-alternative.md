@@ -2,7 +2,7 @@
 name: video with audio has audio descriptions or transcript
 rule_type: composite
 description: |
-  This rule checks video elements with audio have an alternative available as audio or as text
+  This rule checks video elements with audio have an alternative for the video content as audio or as text.
 
 success_criterion:
 - 1.2.3 # Audio Description or Media Alternative (Prerecorded)

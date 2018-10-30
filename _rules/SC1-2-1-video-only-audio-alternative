@@ -33,8 +33,8 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html
-- https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G166
+- [Understanding SC 1.2.1:Audio-only and Video-only (Prerecorded)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
+- [G166:Providing audio that describes the important video content and describing it as such](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G166) 
 
 ## Test Cases
 

@@ -55,32 +55,6 @@ A video element without audio has a seperate audio track that describes the visu
 </audio>
 ```
 
-#### Pass example 2
-
-A video element without audio has an audio description.
-
-```html
-<link rel="stylesheet" href="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-core/ozplayer.min.css">
-<link rel="stylesheet" href="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-skin/highlights-blue.css">
-<link rel="stylesheet" href="https://ozplayer.global.ssl.fastly.net/3.3/transcript.css">
-
-<figure id="ozplayer-1-container" class="ozplayer-container">
-  <div data-controls="stack" class="ozplayer" id="ozplayer-1">
-    <video data-rule-target controls="controls" preload="none">
-      <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-    </video>
-    <audio data-default="default" preload="none">
-      <source src="../test-assets/rabbit-video/rabbit-video-audio-description.mp3" type="audio/mp3"  />
-    </audio>
-  </div>
-</figure>
-
-<script src="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-core/mediaelement.min.js"></script>
-<script src="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-core/ozplayer.free.js"></script>
-<script src="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-lang/en.js"></script>
-<script src="https://ozplayer.global.ssl.fastly.net/3.3/config.js"></script>
-```
-
 ### Failed
 
 #### Fail example 1
@@ -107,32 +81,6 @@ A video element without audio has a seperate audio track that incorrectly descri
 <audio controls>
   <source src="../test-assets/rabbit-video/incorrect-audio-description.mp3" type="audio/mpeg">
 </audio>
-```
-
-#### Fail example 3
-
-A video element without sound with an incorrect audio description.
-
-```html
-<link rel="stylesheet" href="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-core/ozplayer.min.css">
-<link rel="stylesheet" href="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-skin/highlights-blue.css">
-<link rel="stylesheet" href="https://ozplayer.global.ssl.fastly.net/3.3/transcript.css">
-
-<figure id="ozplayer-1-container" class="ozplayer-container">
-  <div data-controls="stack" class="ozplayer" id="ozplayer-1">
-    <video data-rule-target controls="controls" preload="none">
-      <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-    </video>
-    <audio data-default="default" preload="none">
-      <source src="../test-assets/rabbit-video/incorrect-audio-description.mp3" type="audio/mp3"  />
-    </audio>
-  </div>
-</figure>
-
-<script src="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-core/mediaelement.min.js"></script>
-<script src="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-core/ozplayer.free.js"></script>
-<script src="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-lang/en.js"></script>
-<script src="https://ozplayer.global.ssl.fastly.net/3.3/config.js"></script>
 ```
 
 ### Inapplicable

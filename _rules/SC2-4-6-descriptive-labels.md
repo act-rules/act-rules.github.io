@@ -1,5 +1,5 @@
 ---
-name: Label is descriptive
+name: Form field label is descriptive
 test_type: atomic
 
 description: |
@@ -23,8 +23,8 @@ authors:
 
 This rule applies to any HTML `label` element or other element referenced by `aria-labelledby` that is
 
-- [visible](#visible) and included in the accessibility tree.
-- associated with an HTML element that has one of the listed form field [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
+- [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility tree).
+- programmatically associated with an HTML element that has one of the listed form field [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
 
 **Note**: The list of form field roles is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
 - have a [semantic role](#semantic-role) that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and 

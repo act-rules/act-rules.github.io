@@ -30,7 +30,7 @@ Each target element has an [accessible name](#accessible-name) that is unique ac
 
 ## Assumptions
 
-*There are currently no assumptions*
+There are no good use cases for repeating the [accessible name](#accessible-name) for different `iframe`.
 
 ## Accessibility Support
 

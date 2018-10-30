@@ -81,7 +81,7 @@ Label that is coded with the `p` element and associated by the aria-labelledby a
 Implicit label that is coded with the `label` element and describes the purpose of the associated element.
 
 ```html
-<label><input id="fname" type="text" name="fname"/>First name:</label>
+<label>First name:<input id="fname" type="text" name="fname"/></label>
 ```
 
 ### Failed
@@ -109,7 +109,7 @@ Label that is coded with the `p` element and associated by the aria-labelledby a
 Implicit label that is coded with the `label` element and does not describe the purpose of the associated element.
 
 ```html
-<label><input id="fname" type="text" name="fname"/>First name:</label>
+<label>Menu<input id="fname" type="text" name="fname"/></label>
 ```
 
 ### Inapplicable

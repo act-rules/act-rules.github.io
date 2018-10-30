@@ -1,8 +1,6 @@
 ---
 name: audio only has a text alternative
-
 rule_type: composite
-
 description: |
   This rule checks if audio only elements have a text alternative available
 
@@ -18,6 +16,7 @@ authors:
 - Brian Bors
 - John Hicks
 - Rafal Charlampozicz
+---
 
 ## Test Procedure
 

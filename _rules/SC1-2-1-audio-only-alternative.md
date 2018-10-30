@@ -21,7 +21,9 @@ authors:
 
 ### Applicability
 
-The rule applies to any [non-streaming](#non-streaming) `audio` element [visible on the page](#visible-on-the-page).
+The rule applies to any [non-streaming](#non-streaming-media-element) `audio` element that is playing or with a "play button".
+
+A play button is an interactive element that when activated, plays the audio. The play button must be [visibile on the page](#visible-on-the-page) or [exposed to assistive technologies](#exposed-to-assistive-technologies)
 
 ### Expectation
 
@@ -32,11 +34,11 @@ For each test target, the outcome of at least one of the following rules is pass
 
 ## Assumptions
 
-Find standard text TODO
+*There are currently no assumptions*
 
 ## Accessibility support
 
-Find standard text TODO
+There are no major accessibility support issues known for this rule.
 
 ## Background
 

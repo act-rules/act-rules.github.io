@@ -150,6 +150,22 @@ Heading marked up with `h` element that dose not describe the topic or purpose o
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
+#### Failed example 5
+
+Empty heading marked up with `h` element.
+
+```html
+<h1></h1>
+```
+
+#### Failed example 6
+
+Empty heading marked up with `role="heading"`.
+
+```html
+<p role="heading" level="1"></p>
+```
+
 ### Inapplicable
 
 #### Inapplicable example 1

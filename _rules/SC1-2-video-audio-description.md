@@ -30,7 +30,7 @@ This rule assumes that a mechanism is available to start the video and that the 
 
 ## Accessibility support
 
-There are no major accessibility support issues known for this rule.
+There are only a few implementations of video players (without third party technologies) that support audio description tracks at the time of writing.
 
 ## Background
 
@@ -42,10 +42,6 @@ There are no major accessibility support issues known for this rule.
 ## Test Cases
 
 ### Passed
-
-#### Pass example 1
-
-A video element with a voiceover that describes the visual information.
 
 #### Pass example 1
 
@@ -87,10 +83,6 @@ A video element with an audio description.
 **Note:** The ozplayer implementation is only an example and is not meant as an endorsment of the ozplayer.
 
 ### Failed
-
-#### Fail example 1
-
-A video element without an audio description.
 
 #### Fail example 1
 
@@ -141,10 +133,6 @@ A video element with an incorrect audio description.
 ```
 
 ### Inapplicable
-
-#### Inapplicable example 1
-
-A video element without audio.
 
 #### Inapplicable example 1
 

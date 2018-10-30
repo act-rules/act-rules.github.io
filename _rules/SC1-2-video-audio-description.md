@@ -34,10 +34,10 @@ There are only a few implementations of video players (without third party techn
 
 ## Background
 
-- http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc.html
-- https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G78
-- https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G173
-- https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G8
+- [Understanding Success Criterion 1.2.3: Audio Description or Media Alternative (Prerecorded)](http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc.html)
+- [G78:Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G78)
+- [G173:Providing a version of a movie with audio descriptions](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G173)
+- [G8:Providing a movie with extended audio descriptions](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G8)
 
 ## Test Cases
 

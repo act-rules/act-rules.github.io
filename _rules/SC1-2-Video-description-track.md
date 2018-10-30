@@ -38,18 +38,14 @@ This means that the rule can only provide a pass for these succescriteria if acc
 
 ## Background
 
-- http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc.html
-- http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc-only.html
-- https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G78
-- https://www.w3.org/WAI/GL/2016/WD-WCAG20-TECHS-20160105/H96
+- [Understanding Success Criterion 1.2.3: Audio Description or Media Alternative (Prerecorded)](http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc.html)
+- [Understanding Success Criterion 1.2.5: Audio Description (Prerecorded)](http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc-only.html)
+- [G78:Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G78)
+- [H96:Using the track element to provide audio descriptions](https://www.w3.org/WAI/GL/2016/WD-WCAG20-TECHS-20160105/H96)
 
 ## Test Cases
 
 ### Passed
-
-#### Pass example 1
-
-A video element with a track element that contains descriptions.
 
 #### Pass example 1
 
@@ -69,10 +65,6 @@ A video element with a track element that contains descriptions.
 
 A video element with a track element that contains incorrect descriptions.
 
-#### Fail example 1
-
-A video element with a track element that contains incorrect descriptions.
-
 ```html
 <video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
@@ -82,10 +74,6 @@ A video element with a track element that contains incorrect descriptions.
 ```
 
 ### Inapplicable
-
-#### Inapplicable example 1
-
-A video element without a track element.
 
 #### Inapplicable example 1
 

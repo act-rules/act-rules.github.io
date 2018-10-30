@@ -69,11 +69,19 @@ Label that is coded with the `label` element and describes the purpose of the as
 
 #### Passed example 2
 
-Label that that is coded with the `p` element and associated by the aria-labelledby attribute. The label describes the purpose of the associated element.
+Label that is coded with the `p` element and associated by the aria-labelledby attribute. The label describes the purpose of the associated element.
 
 ```html
 <p id="label_fname">First name:</p>
 <input aria-labelledby="label_fname" type="text" name="fname"/>
+```
+
+#### Passed example 3
+
+Implicit label that is coded with the `label` element and describes the purpose of the associated element.
+
+```html
+<label><input id="fname" type="text" name="fname"/>First name:</label>
 ```
 
 ### Failed
@@ -89,11 +97,19 @@ Label that is coded with the `label` element and does not describe the purpose o
 
 #### Failed example 2
 
-Label that that is coded with the `p` element and associated by the aria-labelledby attribute. The label does not describe the purpose of the associated element.
+Label that is coded with the `p` element and associated by the aria-labelledby attribute. The label does not describe the purpose of the associated element.
 
 ```html
 <p id="label_fname">Menu</p>
 <input aria-labelledby="label_fname" type="text" name="fname"/>
+```
+
+#### Failed example 3
+
+Implicit label that is coded with the `label` element and does not describe the purpose of the associated element.
+
+```html
+<label><input id="fname" type="text" name="fname"/>First name:</label>
 ```
 
 ### Inapplicable

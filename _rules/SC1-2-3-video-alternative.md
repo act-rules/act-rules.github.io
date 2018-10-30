@@ -28,10 +28,10 @@ The rule applies to any [non-streaming](#non-streaming) `video` element [visible
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [video element audio described](SC1-2-video-audio-description)
-- [video element transcript](SC1-2-video-transcript)
-- [Video element description track](SC1-2-video-description-track)
-- [Video as a media alternative for text](SC1-2-video-media-alternative)
+- [video element audio described](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-audio-description.html)
+- [video element transcript](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-transcript.html)
+- [Video element description track](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-description-track.html)
+- [Video as a media alternative for text](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-media-alternative.html)
 
 ## Assumptions
 

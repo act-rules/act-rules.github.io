@@ -13,6 +13,11 @@ title: Auto-WCAG Rules
 				<th class="sort" data-sort="name" width='25%'>Name</th>
 				<th class="sort" data-sort="description">Description</th>
 				<th class="sort" data-sort="wcagCriterion" width='35%'>WCAG Criterion</th>
+                <th class="sort" data-sort="implementations" width='10%'>
+                    <a href="{{ site.baseurl }}/pages/implementations.html">
+                        Implementations
+                    </a>
+                </th>
 			</tr>
 		</thead>
 		<tbody class="list">
@@ -47,6 +52,19 @@ title: Auto-WCAG Rules
 						{% endfor %}
 					</ul>
 				</td>
+				<td class='implementations'>
+						{% assign ruleId = rule.id | remove: "/rules/" %}
+						{% assign implementations_count = site.data.implementations[ruleId] %}
+						{% if implementations_count == Nil or implementations_count == 0 %}
+						NEW
+						{% endif %}
+						{% if implementations_count == 1 %}
+						IN PROGRESS
+						{% endif %}
+						{% if implementations_count >= 3 %}
+						DONE
+						{% endif %}
+				</td>
 			</tr>
 			{% endfor %}
 		</tbody>
@@ -56,7 +74,7 @@ title: Auto-WCAG Rules
 <script type='text/javascript'>
 	// enable sorting and filtering in rules table
 	var ruleTable = new List('rules-table', { 
-		valueNames: [ 'index', 'name', 'description', 'wcagCriterion' ] 
+		valueNames: [ 'index', 'name', 'description', 'wcagCriterion', 'implementations' ]
 	});
 	// sort by index asc as a defacto
 	ruleTable.sort('index', { order: "asc" });

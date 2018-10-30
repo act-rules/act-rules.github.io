@@ -1,56 +1,45 @@
 ---
-name: No keyboard trap non-standard navigation
-test_type: atomic
+name: No keyboard trap
+rule_type: composite
 
 description: |
-  This rule checks if it is possible to use non-standard keyboard navigation to navigate through content where focus is trapped when using standard ways of keyboard navigation.
+   This rule checks for keyboard traps. This includes use of both standard and non-standard keyboard navigation to navigate through all content without becoming trapped.
+   
+success_criterion:
+- 2.1.2 # No Keyboard Trap
 
-test_aspects:
-- DOM Tree
-- CSS Styling
+atomic_rules:
+- SC2-1-2-no-keyboard-trap-standard-navigation
+- SC2-1-2-no-keyboard-trap-non-standard-navigation
 
 authors:
-- Dagfinn Rømen
 - Geir Sindre Fossøy
-- Malin Øvrebø
-- Shadi Abou-Zahra
-- Carlos Duarte
+- Dagfinn Rømen
 - Anne Thyme Nørregaard
-- Stein Erik Skotkjerra
 ---
 
-## Test procedure
+## Aggregation Definition
 
 ### Applicability
 
-The rule applies to any HTML or SVG element that is [focusable](#focusable) where focus cannot cycle to the browser UI by using [standard keyboard navigation](#standard-keyboard-navigation).
+The rule only applies to any HTML or SVG element that is [focusable](#focusable).
 
 **Note**: This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
 
-### Expectation 1
+### Expectation
 
-For each target element help information is [visible on the page](#visible-on-the-page) and [included in the accessibility tree](#included-in-the-accessibility-tree) or can be accessed from within the keyboard trap.
+For each test target, the outcome of one of the following rules is "passed":
 
-**Note**: As per WCAG 2.0 Success Criterion 2.1.1 Keyboard the help information should be accessible through a keyboard interface.
-
-### Expectation 2
-
-The help information explains how to cycle to the browser UI, or on how to get to a point from where it is possible to cycle to the browser UI, using [standard keyboard navigation](#standard-keyboard-navigation).
-
-### Expectation 3
-
-For each target element focus can cycle to the browser UI by using the method advised in the help information.
-
-**Note**: Cycling back to the browser UI can be done both by moving forward through the tab order and by moving backwards. It is not possible to fulfil this expectation by using browser specific shortcuts to return to the browser UI.
+- [No keyboard trap standard navigation](SC2-1-2-no-keyboard-trap-standard-navigation)
+- [No keyboard trap non-standard navigation](SC2-1-2-no-keyboard-trap-non-standard-navigation)
 
 ## Assumptions
 
-- It is not possible to use unmodified arrow or tab keys, or other standard exit methods to move focus away.
-- The focus order in keyboard navigation is cyclical, not linear, meaning that the focus order will cycle to the first/last element when it moves away from the last/first element.
+_There are currently no assumptions._
 
 ## Accessibility support
 
-There are no major accessibility support issues known for this rule.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 
@@ -63,6 +52,31 @@ There are no major accessibility support issues known for this rule.
 ### Passed
 
 #### Passed example 1
+
+No trap for keyboard navigation.
+
+```html
+<a href ="#">Link 1</a>
+<button class="target">Button1</button>
+```
+
+#### Passed example 2
+
+Using `tabindex="1"`.
+
+```html
+<div tabindex=“1”>Text</div>
+```
+
+#### Passed example 3
+
+Using `tabindex="-1"`.
+
+```html
+<div tabindex=“-1”>Text</div>
+```
+
+#### Passed example 4
 
 Keyboard trap with help information in a paragraph before, and where the method advised works.
 
@@ -78,7 +92,7 @@ var trapOn = false ;
 <a id="link2" href="#">Link 2</a>
 ```
 
-#### Passed example 2
+#### Passed example 5
 
 Keyboard trap with help information within the trap, and where the method advised works.
 
@@ -94,7 +108,7 @@ var trapOn = false ;
 <a id="link2" href="#">Link 2</a>
 ````
 
-#### Passed example 3
+#### Passed example 6
 
 Keyboard trap with "help" link that once clicked exposes the instructions.
 
@@ -121,6 +135,34 @@ document.getElementById("helptext").innerHTML = "<p>Press the M-key to Exit</p>"
 
 #### Failed example 1
 
+Keyboard trap one element.
+
+```html
+<a href="#">Link 1</a>
+<button class="target" onblur="setTimeout(() => this.focus(), 10)">Button1</button>
+```
+
+#### Failed example 2
+
+Keyboard trap group.
+
+```html
+<button class="target" onblur="setTimeout(() => this.nextSibling.focus(), 10)">Button1</button>
+<button class="target" onblur="setTimeout(() => this.previousSibling.focus(), 10)">Button2</button>
+```
+
+#### Failed example 3
+
+A focusable element inbetween to keyboard traps.
+
+```html
+<button onblur="setTimeout(() => this.focus(), 10)">Button 1</button>
+<button class="target" >Button 2</button>
+<button onblur="setTimeout(() => this.focus(), 10)">Button 3</button>
+```
+
+#### Failed example 4
+
 Keyboard trap with no instructions.
 
 ```html
@@ -134,7 +176,7 @@ var trapOn = false ;
 <a id="link2" href="#">Link 2</a>
 ````
 
-#### Failed example 2
+#### Failed example  5
 
 Keyboard trap with instructions that doesn't give advise on the method for proceeding.
 
@@ -149,8 +191,7 @@ var trapOn = false ;
 <button id="btn2" class="target" onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
 <a id="link2" href="#">Link 2</a>
 ````
-
-#### Failed example 3
+#### Failed example  6
 
 Keyboard trap with help text, where the method advised doesn't work.
 
@@ -166,15 +207,37 @@ var trapOn = false ;
 <a id="link2" href="#">Link 2</a>
 ```
 
-### Inapplicable
+### Inapplicable example 2
 
 #### Inapplicable example 1
 
-Not a keyboard trap (interactive element).
+No focusable element.
 
 ```html
-<a id="link1" href="#">Link 1</a>
-<button id="btn1">Button 1</button>
-<button id="btn2">Button 2</button>
-<a id="link2" href="#">Link 2</a>
+<h1>Page 1</h1>
+```
+
+#### Inapplicable example 2
+
+Disabled element.
+
+```html
+<button type="button" disabled>Click Me!</button>
+```
+
+#### Inapplicable example 3
+
+Hidden element using `display:none`.
+
+```html
+<button type="button" style=“display:none;”>Click Me!</button>
+```
+
+#### Inapplicable example 4
+
+Hidden element using `visibility:hidden`.
+
+```html
+<a href ="#" style="visibility:hidden;">Link 1</a>
+<button class="target" style="visibility:hidden;">Button1</button>
 ```

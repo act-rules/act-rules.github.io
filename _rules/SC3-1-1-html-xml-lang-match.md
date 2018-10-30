@@ -46,7 +46,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 `html` element with matching value for `lang` and `xml:lang`.
 
@@ -54,7 +54,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 <html lang="en" xml:lang="en">
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 `html` element with varied case but matching value for `lang` and `xml:lang`.
 
@@ -62,7 +62,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 <html lang="en" xml:lang="En">
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 `html` element with varied case but matching primary sub-tag value for `lang` and `xml:lang`.
 
@@ -70,7 +70,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 <html lang="en" xml:lang="en-GB">
 ```
 
-#### Pass example 4
+#### Passed example 4
 
 `html` element with varied case but matching primary sub-tag value for `lang` and `xml:lang`.
 
@@ -78,7 +78,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 <html lang="en-GB" xml:lang="en">
 ```
 
-#### Pass example 5
+#### Passed example 5
 
 `html` element with varied case but matching primary sub-tag value for `lang` and `xml:lang`, albeit the value `XYZ` is not valid.
 
@@ -88,7 +88,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 `html` element with non-matching value for `lang` and `xml:lang`.
 
@@ -102,8 +102,8 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 `svg` element is not applicable for this rule.
 
-```html
-<svg lang="en" xml:lang="en">
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" lang="en" xml:lang="en">
 ```
 
 #### Inapplicable example 2

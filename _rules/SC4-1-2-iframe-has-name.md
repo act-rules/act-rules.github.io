@@ -19,7 +19,7 @@ authors:
 
 ### Applicability
 
-The rule applies to `iframe` elements that are [exposed to assistive technologies](#exposed-to-assistive-technologies).
+The rule applies to `iframe` elements that are [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 **Note:** `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
 
@@ -46,7 +46,7 @@ _There are no major accessibility support issues known for this rule._
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 Usage of `title` attribute to describe the `iframe` content.
 
@@ -55,7 +55,7 @@ Usage of `title` attribute to describe the `iframe` content.
 </iframe>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 Usage of `aria-label` attribute to describe the `iframe` content.
 
@@ -64,7 +64,7 @@ Usage of `aria-label` attribute to describe the `iframe` content.
 </iframe>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 Usage of `aria-labelledby` attribute to describe the `iframe` content.
 
@@ -76,7 +76,7 @@ Usage of `aria-labelledby` attribute to describe the `iframe` content.
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 Usage of `name` attribute to describe the `iframe` content is not valid.
 
@@ -85,7 +85,7 @@ Usage of `name` attribute to describe the `iframe` content is not valid.
 </iframe>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 `iframe` with no `title`, `aria-label` or `aria-labelledby` attribute to describe content is not valid.
 
@@ -94,7 +94,7 @@ Usage of `name` attribute to describe the `iframe` content is not valid.
 </iframe>
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 Empty `title` attribute is not valid.
 
@@ -103,7 +103,7 @@ Empty `title` attribute is not valid.
 </iframe>
 ```
 
-#### Fail example 4
+#### Failed example 4
 
 Empty `aria-label` attribute to describe the `frame` content is not valid.
 
@@ -112,7 +112,7 @@ Empty `aria-label` attribute to describe the `frame` content is not valid.
 </iframe>
 ```
 
-#### Fail example 5
+#### Failed example 5
 
 Usage of non existing `aria-labelledby` reference element to describe the `iframe` content is not valid.
 
@@ -121,7 +121,7 @@ Usage of non existing `aria-labelledby` reference element to describe the `ifram
 </iframe>
 ```
 
-#### Fail example 6
+#### Failed example 6
 
 Usage of `alt` attribute to describe content is not valid.
 
@@ -142,7 +142,7 @@ Does not apply to non `iframe` element.
 
 #### Inapplicable example 2
 
-`iframe` is not exposed to assistive technologies.
+`iframe` is not included in the accessibility tree.
 
 ```html
 <iframe style="display:none;" src="../test-assets/SC4-1-2-frame-doc.html">

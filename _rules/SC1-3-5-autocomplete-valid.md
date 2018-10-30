@@ -20,7 +20,7 @@ authors:
 
 The rule applies to any HTML `input`, `select` and `textarea` element with a [non-empty](#non-empty) `autocomplete` attribute, except if one of the following is true:
 
-- The element is not [visible on the page](#visible-on-the-page) and not [exposed to assistive technologies](#exposed-to-assistive-technologies)
+- The element is not [visible on the page](#visible-on-the-page), not [included in the accessibility tree](#included-in-the-accessibility-tree), and not [focusable](#focusable)
 - The element is an `input` element with a `type` property of `hidden`, `button`, `submit` or `reset`
 - The element has a `disabled` or `aria-disabled="true"` attribute
 - The element has `tabindex="-1"` and has a [semantic role](#semantic-role) that is not a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget_roles)
@@ -64,7 +64,7 @@ The intent of this rule is to ensure that the `autocomplete` attribute can be us
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 Single autocomplete term.
 
@@ -72,7 +72,7 @@ Single autocomplete term.
 <input autocomplete="username" />
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 Single autocomplete term for select.
 
@@ -83,7 +83,7 @@ Single autocomplete term for select.
 </select>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 Autocomplete term, only valid for textarea.
 
@@ -91,7 +91,7 @@ Autocomplete term, only valid for textarea.
 <textarea autocomplete="Street-Address"></textarea>
 ```
 
-#### Pass example 4
+#### Passed example 4
 
 Two autocomplete terms.
 
@@ -99,7 +99,7 @@ Two autocomplete terms.
 <input autocomplete="Work EMail" />
 ```
 
-#### Pass example 5
+#### Passed example 5
 
 Autocomplete using section-*
 
@@ -107,7 +107,7 @@ Autocomplete using section-*
 <input autocomplete="section-partner email" />
 ```
 
-#### Pass example 6
+#### Passed example 6
 
 Triple autocomplete terms.
 
@@ -115,7 +115,7 @@ Triple autocomplete terms.
 <input type="text" autocomplete="section-primary billing address-line1" />
 ```
 
-#### Pass example 7
+#### Passed example 7
 
 Full length autocomplete terms.
 
@@ -125,7 +125,7 @@ Full length autocomplete terms.
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 Unknown autocomplete term.
 ```html
@@ -133,7 +133,7 @@ Unknown autocomplete term.
 <input autocomplete="badterm" />
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 term `work` not allowed before `photo`.
 
@@ -141,7 +141,7 @@ term `work` not allowed before `photo`.
 <input autocomplete="work photo" />
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 Invalid order of terms.
 
@@ -149,7 +149,7 @@ Invalid order of terms.
 <input autocomplete="work shipping email" />
 ```
 
-#### Fail example 4
+#### Failed example 4
 
 Comma seperated rather than space separated list.
 
@@ -157,7 +157,7 @@ Comma seperated rather than space separated list.
 <input autocomplete="work,email" />
 ```
 
-#### Fail example 5
+#### Failed example 5
 
 Autocomplete is inappropriate for the type of field.
 

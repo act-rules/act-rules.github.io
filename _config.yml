@@ -42,11 +42,11 @@ defaults:
       name: undefined
       test_mode: undefined
   - scope:
-      path: "pages/algorithms"
+      path: "pages/glossary"
       type: pages
     values:
-      layout: algorithm
-      category: algorithms
+      layout: glossary
+      category: glossary
 
 exclude:
 - _testcases-embeds

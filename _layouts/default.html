@@ -8,17 +8,17 @@
 <head>
 	<!-- Resolve Page Title -->
 	{% if page.layout == 'rule' %}
-	{% assign page_title = page.name | prepend: "Rule: " %}
+		{% assign page_title = page.name | prepend: "Rule: " %}
 	{% else %}
-	{% if page.layout == 'testcase' %}
-	{% if page.rule_id != 'undefined' %}
-	{% assign page_title = page.rule_id | prepend: "Test Cases for " %}
-	{% else %}
-	{% assign page_title = page.name | prepend: "Test Cases for " %}
-	{% endif %}
-	{% else %}
-	{% assign page_title = page.title %}
-	{% endif %}
+		{% if page.layout == 'testcase' %}
+			{% if page.rule_id != 'undefined' %}
+				{% assign page_title = page.rule_id | prepend: "Test Cases for " %}
+			{% else %}
+				{% assign page_title = page.name | prepend: "Test Cases for " %}
+			{% endif %}
+		{% else %}
+			{% assign page_title = page.title %}
+		{% endif %}
 	{% endif %}
 	<title>
 		{{ page_title }} {{ site.title | escape }}
@@ -37,24 +37,20 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
 	 crossorigin="anonymous">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs.min.css">
-
 	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
-
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
+	<!-- Javascript -->    
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+	<script type="text/javascript" src="//stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script type="text/javascript" src="{{site.baseurl}}/assets/js/jquery.stickyelement.js"></script>
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
-
-	<!-- Javascript -->
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-	 crossorigin="anonymous"></script>
-	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-	<script type="text/javascript" src="{{site.baseurl}}/assets/js/jquery.stickyelement.js"></script>
-
 </head>
 
 <body>
@@ -80,10 +76,17 @@
 						<li>
 							<a href="{{ site.baseurl }}/pages/rules.html">Rules</a>
 						</li>
+
+						<!-- Glossary -->
+						<li>
+							<a href="{{ site.baseurl }}/pages/glossary/">Glossary</a>
+						</li>
+                        
 						<!-- Implementations -->
 						<li>
-							<a href="{{ site.baseurl }}/pages/Implementations.html">Implementations</a>
+								<a href="{{ site.baseurl }}/pages/Implementations.html">Implementations</a>
 						</li>
+						
 						<!-- Rule Creation -->
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -124,9 +127,6 @@
 								</li>
 								<li>
 									<a href="{{ site.baseurl }}/pages/structure/test-modes.html">Test modes</a>
-								</li>
-								<li>
-									<a href="{{ site.baseurl }}/pages/algorithms/">Definitions</a>
 								</li>
 								<li>
 									<a href="{{ site.baseurl }}/pages/structure/aggregation.html">Result aggregation</a>
@@ -220,9 +220,8 @@
 				</small>
 			</div>
 		</footer>
-
-
 	</div>
+	<!-- Javascript -->
 	<script>
 		// initialize highlightjs
 		hljs.initHighlightingOnLoad();

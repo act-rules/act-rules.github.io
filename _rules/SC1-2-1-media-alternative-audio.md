@@ -20,11 +20,11 @@ authors:
 
 The rule applies to any [non-streaming](#non-streaming-media-element) `audio` element that is playing or with a "play button".
 
-A play button is an interactive element that when activated, plays the audio. The play button must be ]visibile on the page](#visible-on-the-page) or [exposed to assistive technologies](#exposed-to-assistive-technologies)
+A play button is an interactive element that when activated, plays the audio. The play button must be ]visibile on the page](#visible-on-the-page) or [included in the accessibility tree](#included-in-the-accessibility-tree)
 
 ### Expectation 1
 
-The auditory information of each test target is available as text (directly or via text alternatives) that is [visible on the page](#visible-on-the-page) and [exposed to assistive technolgies](#exposed-to-assistive-technologies).
+The auditory information of each test target is available as text (directly or via text alternatives) that is [visible on the page](#visible-on-the-page) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation 2
 
@@ -32,7 +32,7 @@ Each target element has a label indicating the `audio` is an alternative to text
 
 ### Expectation 3
 
-The label (from expectation 2) is [visible on the page](#visible-on-the-page) and [exposed to assistive technolgies](#exposed-to-assistive-technologies)
+The label (from expectation 2) is [visible on the page](#visible-on-the-page) and [included in the accessibility tree](#included-in-the-accessibility-tree)
 
 ## Assumptions
 
@@ -50,7 +50,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative.
 
@@ -62,7 +62,7 @@ An audio element that describes some of the text on the same page. The text on t
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 An audio element that describes some of the text on the same page. The audio contains more information than the text does.
 
@@ -72,7 +72,7 @@ An audio element that describes some of the text on the same page. The audio con
 <audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 An audio element that describes some of the text on the same page. The text is not visible on the page.
 
@@ -82,7 +82,7 @@ An audio element that describes some of the text on the same page. The text is n
 <audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 An audio element that describes some of the text on the same page. The text on the page does not label the audio as an alternative.
 
@@ -91,7 +91,7 @@ An audio element that describes some of the text on the same page. The text on t
 <audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
-#### Fail example 4
+#### Failed example 4
 
 An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the label is not visible on the page.
 

@@ -5,6 +5,7 @@ description: |
 
 success_criterion:
 - 2.2.1 # Timing Adjustable
+- 2.2.4 # Interruptions
 - 3.2.5 # Change on Request
 
 test_aspects:
@@ -23,7 +24,7 @@ The rule applies to the first [valid](https://www.w3.org/TR/html/document-metada
 
 ### Expectation
 
-The `time` of the `content` attribute is 0 or bigger than 72000 (20 hours).
+The `time` of the `content` attribute is 0 or greater than 72000 (20 hours).
 
 **Note**: See [Refresh state (`http-equiv="refresh"`)](https://www.w3.org/TR/html/document-metadata.html#statedef-http-equiv-refresh) for a precise description on how to determine the `time`.
 
@@ -46,7 +47,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 Redirects immediately.
 
@@ -56,7 +57,7 @@ Redirects immediately.
   </head>  
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 First valid `<meta http-equiv="refresh">` redirects immediately.
 
@@ -67,19 +68,19 @@ First valid `<meta http-equiv="refresh">` redirects immediately.
 </head>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
-Redirects after 20 hours.
+Redirects after more than 20 hours.
 
 ```html
 <head>
-  <meta data-rule-target http-equiv="refresh" content="72000; http://example.com" />
+  <meta data-rule-target http-equiv="refresh" content="72001; http://example.com" />
 </head>
 ```
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 Refreshes after 30 seconds.
 
@@ -89,7 +90,7 @@ Refreshes after 30 seconds.
 </head>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 Redirects after 30 seconds.
 
@@ -99,7 +100,7 @@ Redirects after 30 seconds.
 </head>
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 First `<meta http-equiv="refresh">` element is not valid, second one redirects after 5 seconds.
 
@@ -107,6 +108,16 @@ First `<meta http-equiv="refresh">` element is not valid, second one redirects a
 <head>
   <meta data-rule-target http-equiv="refresh" content="0: http://example.com" />
   <meta data-rule-target http-equiv="refresh" content="5; http://example.com" />
+</head>
+```
+
+#### Failed example 4
+
+Redirects after exactly 20 hours.
+
+```html
+<head>
+  <meta data-rule-target http-equiv="refresh" content="72000; http://example.com" />
 </head>
 ```
 

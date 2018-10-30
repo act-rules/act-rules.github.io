@@ -43,7 +43,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Passed
 
-#### Pass example 1
+#### Passed example 1
 
 A video element with a voiceover that describes the visual information.
 
@@ -54,7 +54,7 @@ A video element with a voiceover that describes the visual information.
 </video>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 A video element with an audio description.
 
@@ -82,7 +82,7 @@ A video element with an audio description.
 
 ## Failed
 
-#### Fail example 1
+#### Failed example 1
 
 A video element without an audio description.
 
@@ -93,7 +93,7 @@ A video element without an audio description.
 </video>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 A video element with an incorrect audio description.
 
@@ -104,7 +104,7 @@ A video element with an incorrect audio description.
 </video>
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 A video element with an incorrect audio description.
 

@@ -46,7 +46,9 @@ There are no major accessibility support issues known for this rule.
 
 ## Test Cases
 
-### Pass example 1
+### Passed
+
+#### Passed example 1
 
 A video element with an associated track element that contains captions for all the audio.
 
@@ -56,7 +58,7 @@ A video element with an associated track element that contains captions for all 
 </video>
 ```
 
-### Pass example 2
+#### Passed example 2
 
 A video element that describes some of the text on the same page. The text on the page labels the video as an alternative.
 
@@ -70,7 +72,9 @@ A video element that describes some of the text on the same page. The text on th
 </video>
 ```
 
-### Failure example 1
+### Failed
+
+#### Failed example 1
 
 A video element without any form of captions.
 
@@ -78,7 +82,7 @@ A video element without any form of captions.
 <video src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
-### Failure example 2
+#### Failed example 2
 
 A video element that describes some of the text on the same page. The video contains more information than the text does.
 
@@ -91,7 +95,9 @@ A video element that describes some of the text on the same page. The video cont
 </video>
 ```
 
-### Inapplicable example 1
+### Inapplicable
+
+#### Inapplicable example 1
 
 A video element without that is not visible on the page.
 
@@ -99,7 +105,7 @@ A video element without that is not visible on the page.
 <video src="../test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>
 ```
 
-### Inapplicable example 2
+#### Inapplicable example 2
 
 A video element without audio.
 

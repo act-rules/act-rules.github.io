@@ -1,5 +1,5 @@
 ---
-name: video with audio has an accessible alternative
+name: video with audio has audio description
 rule_type: composite
 description: |
   This rule checks video elements with audio have audio description

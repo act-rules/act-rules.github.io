@@ -55,7 +55,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed example 1
 
-Heading marked up with h-element that describes the topic or purpose of the following section of content.
+Heading marked up with `h` element that describes the topic or purpose of the following section of content.
 
 ```html
 <h1 class="target">Opening Hours</h1>
@@ -73,7 +73,7 @@ Heading marked up with `role="heading"` that describes the topic or purpose of t
 
 #### Passed example 3
 
-Heading marked up with h-element with an image that describes the topic or purpose of the following section of content.
+Heading marked up with `h` element with an image that describes the topic or purpose of the following section of content.
 
 ```html
 <h1 class="target"><img scr="../test-assets/opening_hours_icon.png" alt="Opening hours"></img></h1>
@@ -82,7 +82,7 @@ Heading marked up with h-element with an image that describes the topic or purpo
 
 #### Passed example 4
 
-Heading marked up with h-element that is a single character that describes the topic or purpose of the following section of content.
+Heading marked up with `h` element that is a single character that describes the topic or purpose of the following section of content.
 
 ```html
 <h1 class="target">A</h1>
@@ -105,7 +105,7 @@ Heading marked up with `role="heading"` that describes the topic or purpose of t
 
 #### Passed example 6
 
-Heading marked up with h-element that describes the topic or purpose of the following section of content. The heading is visible, but is not included in the Accessibility Tree.
+Heading marked up with `h` element that describes the topic or purpose of the following section of content. The heading is visible, but is not included in the Accessibility Tree.
 
 ```html
 <h1 class="target" aria-hidden="true">Opening Hours</h1>
@@ -116,7 +116,7 @@ Heading marked up with h-element that describes the topic or purpose of the foll
 
 #### Failed example 1
 
-Heading marked up with h-element that does not describe the topic or purpose of the following section of content.
+Heading marked up with `h` element that does not describe the topic or purpose of the following section of content.
 
 ```html
 <h1 class="target">Weather</h1>
@@ -143,7 +143,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed example 4
 
-Heading marked up with h-element that dose not describe the topic or purpose of the following section of content. The heading is visible, but is not included in the Accessibility Tree.
+Heading marked up with `h` element that dose not describe the topic or purpose of the following section of content. The heading is visible, but is not included in the Accessibility Tree.
 
 ```html
 <h1 class="target" aria-hidden="true">Weather</h1>

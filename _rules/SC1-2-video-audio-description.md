@@ -70,10 +70,10 @@ A video element with an audio description.
 <figure id="ozplayer-1-container" class="ozplayer-container">
   <div data-controls="stack" class="ozplayer" id="ozplayer-1">
     <video data-rule-target controls="controls" preload="none">
-      <source src="../test-assets/rabbit-video.mp4" type="video/mp4" />
+      <source src="../test-assets/rabit-video/video.mp4" type="video/mp4" />
     </video>
     <audio data-default="default" preload="none">
-      <source src="../test-assets/rabbit-video-audio-description.mp3" type="audio/mp3"  />
+      <source src="../test-assets/rabbit-video/audio-description.mp3" type="audio/mp3"  />
     </audio>
   </div>
 </figure>
@@ -83,6 +83,8 @@ A video element with an audio description.
 <script src="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-lang/en.js"></script>
 <script src="https://ozplayer.global.ssl.fastly.net/3.3/config.js"></script>
 ```
+
+**Note:** The ozplayer implementation is only an example and is not meant as an endorsment of the ozplayer.
 
 ### Failed
 

@@ -18,11 +18,11 @@ authors:
 
 ### Applicability
 
-The rule applies to any [non-streaming](#non-streaming) `video` element [visible on the page](#visible-on-the-page) where the video doesn't contain audio and a `track` element with a `kind="descriptions"` attribute.
+The rule applies to any [non-streaming](#non-streaming) `video` element [visible on the page](#visible-on-the-page) where the video doesn't contain audio and does contain a `track` element with a `kind="descriptions"` attribute.
 
 ### Expectation
 
-The visual information of each test target is described with a description `track` element.
+The visual information of each test target is described with a description `track` element that has the same language as the video.
 
 *Note*: Multiple description `track` elements may be useful for different languages, but at least one must match the language of the video.
 

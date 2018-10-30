@@ -30,10 +30,10 @@ The rule applies to any [non-streaming](#non-streaming) `video` element [visible
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [media alternative video](SC1-2-1-media-alternative-video)
-- [video only description track](SC1-2-1-video-only-description-track)
-- [video only element transcript](SC1-2-1-video-only-element-transcript)
-- [video only audio alternative](SC1-2-1-video-only-audio-alternative)
+- [media alternative video](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-1-media-alternative-video.html)
+- [video only description track](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-1-video-only-description-track.html)
+- [video only element transcript](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-1-video-only-element-transcript.html)
+- [video only audio alternative](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-1-video-only-audio-alternative.html)
 
 ## Assumptions
 
@@ -41,13 +41,12 @@ This rule assumes that a mechanism is available to start the video and that the 
 
 ## Accessibility support
 
-See [Video only element description track: accessibility support](SC1-2-1-Video-only-description-track.html#accessibility-support).
+See [Video only element description track: accessibility support](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-1-Video-only-description-track.html#accessibility-support).
 
 ## Background
 
-- https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html
-- https://www.w3.org/TR/WCAG20-TECHS/H96.html
-- https://www.w3.org/TR/WCAG20-TECHS/G159.html
+- [Understanding SC 1.2.1:Audio-only and Video-only (Prerecorded)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
+- [H96:Using the track element to provide audio descriptions](https://www.w3.org/TR/WCAG20-TECHS/H96.html) 
 
 ## Test Cases
 

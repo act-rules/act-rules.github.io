@@ -54,7 +54,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Passed
 
-#### Pass example 1
+#### Passed example 1
 
 A video element with a text transcript on the same page.
 
@@ -68,7 +68,7 @@ He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 A video element with a link to a text transcript on a different page.
 
@@ -82,7 +82,7 @@ A video element with a link to a text transcript on a different page.
 
 ## Failed
 
-#### Fail example 1
+#### Failed example 1
 
 A video element with an incorrect text transcript on the same page.
 
@@ -96,7 +96,7 @@ He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 A video element with a link to an incorrect text transcript on a different page.
 

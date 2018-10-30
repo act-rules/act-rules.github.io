@@ -20,7 +20,7 @@ authors:
 
 ### Applicability
 
-The rule applies to elements that are [visible on the page](#visible-on-the-page) or [exposed to assistive technologies](#exposed-to-assistive-technologies) with the [semantic role](#semantic-role) of `button`, except for `input` elements of `type="image"`.
+The rule applies to elements that are [visible on the page](#visible-on-the-page), [included in the accessibility tree](#included-in-the-accessibility-tree), or [focusable](#focusable) with the [semantic role](#semantic-role) of `button`, except for `input` elements of `type="image"`.
 
 ### Expectation
 
@@ -45,7 +45,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 Regular button.
 
@@ -53,7 +53,7 @@ Regular button.
 <button>My button</button>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 Value attribute as the accessible name.
 
@@ -61,7 +61,7 @@ Value attribute as the accessible name.
 <input type="submit" value="Submit">
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 `aria-label` for the accessible name.
 
@@ -69,7 +69,7 @@ Value attribute as the accessible name.
 <button aria-label="My button"></button>
 ```
 
-#### Pass example 4
+#### Passed example 4
 
 Span tag with role button and has name defined by aria-label.
 
@@ -77,14 +77,14 @@ Span tag with role button and has name defined by aria-label.
 <span role="button" aria-label="My button"></button>
 ```
 
-#### Pass example 5
+#### Passed example 5
 
 Summary element has a default semantic role of button.
 ```html
 <summary>Press Here</summary>
 ```
 
-#### Pass example 6
+#### Passed example 6
 
 Disabled elements are also applicable.
 
@@ -92,7 +92,7 @@ Disabled elements are also applicable.
 <button disabled>Delete</button>
 ```
 
-#### Pass example 7
+#### Passed example 7
 
 Off screen elements should be tested.
 
@@ -113,7 +113,7 @@ Off screen elements should be tested.
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 Value attribute does NOT give an accessible name, only for input elements.
 
@@ -121,7 +121,7 @@ Value attribute does NOT give an accessible name, only for input elements.
 <button type="button" value="read more"></button>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 `aria-hidden` buttons should be tested.
 
@@ -129,7 +129,7 @@ Value attribute does NOT give an accessible name, only for input elements.
 <button aria-hidden="true"></button>
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 Span tag with role button with no name.
 
@@ -137,7 +137,7 @@ Span tag with role button with no name.
 <span role="button"></span>
 ```
 
-#### Fail example 4
+#### Failed example 4
 
 Off screen element with out an accessible name.
 
@@ -168,7 +168,7 @@ Image buttons are tested in a different rule
 
 #### Inapplicable example 2
 
-Not visible in page and not exposed to assistive technologies.
+Not visible in page and not included in the accessibility tree.
 
 ```html
 <html>

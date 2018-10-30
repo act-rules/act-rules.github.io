@@ -21,7 +21,8 @@
   "homepage": "https://github.com/auto-wcag/auto-wcag#readme",
   "config": { 
     "site-url-prefix": "https://auto-wcag.github.io/auto-wcag",
-	  "testcases-embeds-dir": "_testcases-embeds/",
+    "testcases-embeds-dir": "_testcases-embeds/",
+    "testcases-assets-dir": "test-assets/",
 	  "testcases-export-dir": "auto-wcag-testcases/",
 	  "testcases-export-filename": "testcases.json",
 	  "rules-export-filename": "rules.json"

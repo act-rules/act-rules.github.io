@@ -20,7 +20,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML element with the [semantic role](#semantic-role) of `link` that is [visible on the page](#visible-on-the-page) or [exposed to assistive technologies](#exposed-to-assistive-technologies).
+The rule applies to any HTML element with the [semantic role](#semantic-role) of `link` that is [visible on the page](#visible-on-the-page), [included in the accessibility tree](#included-in-the-accessibility-tree) or [focusable](#focusable).
 
 ### Expectation
 
@@ -45,7 +45,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 `<a>` element with accessible name through content.
 
@@ -53,7 +53,7 @@ There are no major accessibility support issues known for this rule.
 <a href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 Element with eplicit role of link with accessible name through content.
 
@@ -61,7 +61,7 @@ Element with eplicit role of link with accessible name through content.
 <div role="link"> Web Accessibility Initiative (WAI) </div>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 `Button` with the role of `link`.
 
@@ -69,7 +69,7 @@ Element with eplicit role of link with accessible name through content.
 <button role="link">Click me!</button>
 ```
 
-#### Pass example 4
+#### Passed example 4
 
 Accessible name for link via `aria-label`
 
@@ -77,7 +77,7 @@ Accessible name for link via `aria-label`
 <a href="http://www.w3.org/WAI"><img src="#" aria-label="This is a link"/></a>
 ```
 
-#### Pass example 5
+#### Passed example 5
 
 Link named via `title` om link.
 
@@ -85,7 +85,7 @@ Link named via `title` om link.
 <a href="http://www.w3.org/WAI" title="This is a link"><img src="#" /></a>
 ```
 
-#### Pass example 6
+#### Passed example 6
 
 Link named via `title` on image.
 
@@ -93,7 +93,7 @@ Link named via `title` on image.
 <a href="http://www.w3.org/WAI"><img src="#" title="This is a link"/></a>
 ```
 
-#### Pass example 7
+#### Passed example 7
 
 Link with both `image` and `text`.
 
@@ -101,7 +101,7 @@ Link with both `image` and `text`.
 <a href="http://www.w3.org/WAI"><img src="#" />This is my link text</a>
 ```
 
-#### Pass example 8
+#### Passed example 8
 
 Accessible name for link via `aria-labelledby`.
 
@@ -110,7 +110,7 @@ Accessible name for link via `aria-labelledby`.
 <div id="id1">This is my link text</div>
 ```
 
-#### Pass example 9
+#### Passed example 9
 
 When `link` is off screen.
 
@@ -129,7 +129,7 @@ When `link` is off screen.
 </html>
 ```
 
-#### Pass example 10
+#### Passed example 10
 
 Link is not in accessibility tree.
 
@@ -139,7 +139,7 @@ Link is not in accessibility tree.
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 Image link without accessible name.
 
@@ -147,7 +147,7 @@ Image link without accessible name.
 <a href="http://www.w3.org/WAI"><img src="#" /></a>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 Image link where image is marked as decorative.
 
@@ -155,7 +155,7 @@ Image link where image is marked as decorative.
 <a href="http://www.w3.org/WAI"><img src="#" alt="" /></a>
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 Link with icon inserted via font-awesome.
 
@@ -163,7 +163,7 @@ Link with icon inserted via font-awesome.
 <a href="http://www.w3.org/WAI"><i class="fa fa-download"></i></a>
 ```
 
-#### Fail example 4
+#### Failed example 4
 
 Link with image that has empty title.
 
@@ -171,7 +171,7 @@ Link with image that has empty title.
 <a href="http://www.w3.org/WAI"><img src="#" title=""/></a>
 ```
 
-#### Fail example 5
+#### Failed example 5
 
 Link with image that has empty `aria-labelledby`.
 
@@ -180,7 +180,7 @@ Link with image that has empty `aria-labelledby`.
 <div id="id1"></div>
 ```
 
-#### Fail example 6
+#### Failed example 6
 
 Aria-labelledby references to a non-existing id.
 
@@ -188,7 +188,7 @@ Aria-labelledby references to a non-existing id.
 <a href="http://www.w3.org/WAI"><img src="#" aria-labelledby="id1" /></a>
 ```
 
-#### Fail example 7
+#### Failed example 7
 
 Non-visible link.
 
@@ -196,9 +196,9 @@ Non-visible link.
 <a href="http://www.w3.org/WAI" style="left: -9999px; position: absolute;"><img src="#" /></a>
 ```
 
-#### Fail example 8
+#### Failed example 8
 
-Not exposed to assistive technologies.
+Not included in the accessibility tree.
 
 ```html
 <a href="http://www.w3.org/WAI" aria-hidden="true"><img src="#" /></a>

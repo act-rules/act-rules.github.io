@@ -12,7 +12,7 @@ layout: default
 {% endif %}
 
 {% if page.last-modified-timestamp %}
-  <p>Late updated: 
+  <p>Last updated: 
 		<time 
 			datetime="{{ page.last-modified-timestamp | date_to_xmlschema }}" 
 			itemprop="dateModified">
@@ -45,7 +45,7 @@ layout: default
 
 {% if page.success_criterion %}
   <p>
-    Success_criterion: 
+    Success Criterion: 
     <ul>
 			{% for sc in page.success_criterion %}
         {% assign c = site.data.sc-urls[sc] %}
@@ -53,8 +53,8 @@ layout: default
           <a href="{{ c.url }}">
             {{ c.num }} ({{ c.handle }}) - (Level: {{c.level}})
           </a>
+          {% if forloop.last == false %}, {% endif %}
         </li>
-        {% if forloop.last == false %}, {% endif %}
       {% endfor %}
     </ul>
   </p>
@@ -98,7 +98,7 @@ layout: default
 <!--PLUGIN::APPEND-DEFINITION-->
 <!-- DO NOT DELETE ABOVE - This is used by a plugin to insert content -->
 
-<div class="container">
+<div>
 	{% if page.test_aspects %}
 		<h2 id="test-aspects">Test Aspects</h2>
 		Test aspects are defined as part of the <a href="https://w3c.github.io/wcag-act/act-rules-format.html#input-aspects-common">ACT Rules format 1.0</a>.

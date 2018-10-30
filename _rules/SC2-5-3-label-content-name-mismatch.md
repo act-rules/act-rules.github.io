@@ -49,7 +49,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 Visible label and accessible name matches when trailing white spaces are removed.
 
@@ -57,7 +57,7 @@ Visible label and accessible name matches when trailing white spaces are removed
 <div role="link" aria-label="next page ">next page</div>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 Character insensitivity between visible label and accessible name.
 
@@ -65,30 +65,30 @@ Character insensitivity between visible label and accessible name.
 <div role="link" aria-label="Next Page">next page</div>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 Full visible label is contained in the accessible name.
 
 ```html
-<button name="link" aria-label="Next Page in the list">Next Page</div>
+<button name="link" aria-label="Next Page in the list">Next Page</button>
 ```
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 Visible label doesn't match accessible name.
 
 ```html
-<div role="link" aria-label="OK">Next</a>
+<div role="link" aria-label="OK">Next</div>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 Not all of visible label is included in accessible name.
 
 ```html
-<button name="link" aria-label="the full">The full label</div>
+<button name="link" aria-label="the full">The full label</button>
 ```
 
 ### Inapplicable 
@@ -106,7 +106,7 @@ Not a widget role.
 Widget role that does not support name from content.
 
 ```html
-<input type="email" aria-label="E-mail">Contact</input>
+<input type="email" aria-label="E-mail" value='Contact'>
 ```
 
 #### Inapplicable example 3
@@ -114,7 +114,7 @@ Widget role that does not support name from content.
 Non-widget role that supports name from content.
 
 ```html
-<div role="tooltip" aria-label="OK">Next</a>
+<div role="tooltip" aria-label="OK">Next</div>
 ```
 
 #### Inapplicable example 4
@@ -122,7 +122,7 @@ Non-widget role that supports name from content.
 No rendered text in name from content.
 
 ```html
-<div role="tooltip" aria-label="OK"></a>
+<div role="tooltip" aria-label="OK"></div>
 ```
 
 #### Inapplicable example 5

@@ -36,8 +36,8 @@ Currently the description track is not supported by most assistive technology. V
 
 ## Background
 
-- https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html
-- https://www.w3.org/TR/WCAG20-TECHS/H96.html
+- [Understanding SC 1.2.1:Audio-only and Video-only (Prerecorded)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html) 
+- [H96:Using the track element to provide audio descriptions](https://www.w3.org/TR/WCAG20-TECHS/H96.html) 
 
 ## Test Cases
 

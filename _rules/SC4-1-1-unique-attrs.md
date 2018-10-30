@@ -119,7 +119,7 @@ SVG, at least one attribute is duplicated.
 
 #### Inapplicable example 1
 
-Code is XML, and not an HTML or SVG document.
+Code is XML, and not HTML or SVG.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -128,7 +128,7 @@ Code is XML, and not an HTML or SVG document.
 
 #### Inapplicable example 2
 
-Code is JavaScript, and not an HTML or SVG document.
+Code is JavaScript, and not HTML or SVG.
 
 ```js
 var foo = '<img src="image.jpg" alt="" alt="image" />'

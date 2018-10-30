@@ -47,6 +47,6 @@ def create_implementors_csv
 end
 
 # Hook for all the documents
-Jekyll::Hooks.register :site, :pre_render do
+Jekyll::Hooks.register :site, :after_init do
 	create_implementors_csv
 end

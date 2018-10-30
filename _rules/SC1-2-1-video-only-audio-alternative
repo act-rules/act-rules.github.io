@@ -87,7 +87,7 @@ A video element without audio has a seperate audio track that incorrectly descri
 
 #### Inapplicable example 1
 
-A video element audio.
+A video element with audio.
 
 ```html
 <video controls>

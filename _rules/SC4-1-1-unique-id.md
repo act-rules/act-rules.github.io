@@ -1,5 +1,5 @@
 ---
-name: unique element id attributes
+name: Id attribute is unique
 rule_type: atomic
 
 description: |
@@ -20,13 +20,13 @@ authors:
 
 ### Applicability
 
-Any element that has an `id` attribute.
+Any `id` attribute specified on an HTML or SVG element.
 
 **Note:** Elements that are neither [included in the accessibility tree](#included-in-the-accessibility-tree) nor [visible on the page](#visible-on-the-page) are still considered for this rule.
 
 ### Expectation
 
-Each test target has an `id` attribute value that is unique within the [document context](#document-context) of the element.
+The value of the attribute is unique across all other `id` attributes specified on HTML or SVG elements that exist within the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the element on which the applicable `id` attribute is specified.
 
 ## Assumptions
 

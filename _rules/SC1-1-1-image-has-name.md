@@ -93,14 +93,6 @@ HTML `img` element marked as [decorative](#decorative) through `role="none"`
 <img role="none" />
 ```
 
-#### Passed example 7
-
-HTML `img` element is not [included in the accessibility tree](#included-in-the-accessibility-tree) but has accessible name
-
-```html
-<img alt="W3C logo" aria-hidden="true" />
-```
-
 ### Failed
 
 #### Failed example 1
@@ -127,14 +119,6 @@ Image element inside a `div` positioned off screen with no accessible name and i
 <div style="margin-left:-9999px;"><img /></div>
 ```
 
-#### Failed example 4
-
-HTML `img` element is not [included in the accessibility tree](#included-in-the-accessibility-tree), does not have accessible name and is not marked as decorative
-
-```html
-<img aria-hidden="true" />
-```
-
 ### Inapplicable
 
 #### Inapplicable example 1
@@ -153,4 +137,12 @@ Element with [semantic role](#semantic-role) of `img` is not [included in the ac
 
 ```html
 <div role="img" aria-hidden="true"></div>
+```
+
+#### Inapplicable example 3
+
+HTML `img` element is not [included in the accessibility tree](#included-in-the-accessibility-tree) 
+
+```html
+<img alt="W3C logo" aria-hidden="true" />
 ```

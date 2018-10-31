@@ -28,7 +28,7 @@ This rule applies to any element with the [semantic role](#semantic-role) of hea
 
 ### Expectation
 
-Each target element describes the topic or purpose of its [section of the content](#section-of-the-content).
+Each target element describes the topic or purpose of its [section of the content](#section-of-content).
 
 **Note**: Headings do not need to be lengthy. A word, or even a single character, may suffice.
 

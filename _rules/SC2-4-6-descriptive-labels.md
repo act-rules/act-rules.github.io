@@ -23,7 +23,7 @@ authors:
 
 This rule applies to any HTML `label` element or other element referenced by `aria-labelledby` that is
 
-- [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility tree).
+- either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree).
 - programmatically associated with an HTML element that has one of the listed form field [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
 
 **Note**: The list of form field roles is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:

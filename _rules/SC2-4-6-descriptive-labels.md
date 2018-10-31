@@ -23,7 +23,7 @@ authors:
 
 This rule applies to any HTML `label` element or other element referenced by `aria-labelledby` that is
 
-- either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree).
+- either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree), and
 - programmatically associated with an HTML element that has one of the listed form field [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
 
 **Note**: The list of form field roles is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
@@ -84,6 +84,43 @@ Implicit label that is coded with the `label` element and describes the purpose 
 <label>First name:<input id="fname" type="text" name="fname"/></label>
 ```
 
+#### Passed example 4
+
+Label is visible, but not included in accessibility tree
+
+```html
+<p id="label_fname" aria-hidden="true">First name:</p>
+<input aria-labelledby="label_fname" type="text" name="fname"/>
+```
+
+#### Passed example 5
+
+Label is included in accessibility tree, but not visible
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.hidden {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+</head>
+<body>
+
+<p id="label_fname" class="hidden">First name:</p>
+<input aria-labelledby="label_fname" type="text" name="fname"/>
+
+</body>
+</html>
+```
+
 ### Failed
 
 #### Failed example 1
@@ -112,6 +149,43 @@ Implicit label that is coded with the `label` element and does not describe the 
 <label>Menu<input id="fname" type="text" name="fname"/></label>
 ```
 
+#### Passed example 4
+
+Label is visible, but not included in accessibility tree, and does not describe the purpose of the associated element.
+
+```html
+<p id="label_fname" aria-hidden="true">Menu</p>
+<input aria-labelledby="label_fname" type="text" name="fname"/>
+```
+
+#### Passed example 5
+
+Label is included in accessibility tree, but not visible, and does not describe the purpose of the associated element.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.hidden {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+</head>
+<body>
+
+<p id="label_fname" class="hidden">Menu</p>
+<input aria-labelledby="label_fname" type="text" name="fname"/>
+
+</body>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable example 1
@@ -125,7 +199,7 @@ Implicit label that is coded with the `label` element and does not describe the 
 
 #### Inapplicable example 2
 
-Hidden `p` element that associated by the aria-labelledby attribute.
+Programatically associated `p` element that is neither visible nor included in the accessibility tree
 
 ```html
 <p id="label_fname" style:"display:none;">First name:</p>

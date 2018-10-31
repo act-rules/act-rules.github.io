@@ -98,27 +98,8 @@ Label is visible, but not included in accessibility tree
 Label is included in accessibility tree, but not visible
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-
-<style>
-.hidden {
-	position:absolute;
-	left:-10000px;
-	top:auto;
-	width:1px;
-	height:1px;
-	overflow:hidden;
-}
-</head>
-<body>
-
-<p id="label_fname" class="hidden">First name:</p>
+<p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">First name:</p>
 <input aria-labelledby="label_fname" type="text" name="fname"/>
-
-</body>
-</html>
 ```
 
 ### Failed
@@ -163,27 +144,8 @@ Label is visible, but not included in accessibility tree, and does not describe 
 Label is included in accessibility tree, but not visible, and does not describe the purpose of the associated element.
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-
-<style>
-.hidden {
-	position:absolute;
-	left:-10000px;
-	top:auto;
-	width:1px;
-	height:1px;
-	overflow:hidden;
-}
-</head>
-<body>
-
-<p id="label_fname" class="hidden">Menu</p>
+<p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">Menu</p>
 <input aria-labelledby="label_fname" type="text" name="fname"/>
-
-</body>
-</html>
 ```
 
 ### Inapplicable

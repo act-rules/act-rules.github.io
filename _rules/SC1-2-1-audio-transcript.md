@@ -1,5 +1,5 @@
 ---
-name: audio elements transcript
+name: audio elements have a transcript
 
 description: |
   Non-streaming `audio` elements must have a text alternative for all included auditory information.
@@ -63,7 +63,7 @@ Audio with controls and external transcript
 
 #### Pass example 3
 
-Audio with autoplay, external transcript, and with a text description on the page
+Audio with autoplay and external transcript
 
 ```html (no-iframe)
 <audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" autoplay></audio>

@@ -25,6 +25,31 @@
     "testcases-assets-dir": "test-assets/",
 	  "testcases-export-dir": "auto-wcag-testcases/",
 	  "testcases-export-filename": "testcases.json",
-	  "rules-export-filename": "rules.json"
+    "rules-export-filename": "rules.json",
+    "@context": {
+      "earl": "http://www.w3.org/ns/earl#",
+      "xlink": "http://www.w3.org/1999/xlink/",
+      "tcdl": "http://bentoweb.org/refs/TCDL2.0/",
+      "a11y-testcases": {
+        "@id": "tcdl:testCaseDescription",
+        "@container": "@list"
+      },
+      "url": "https://schema.org/URL",
+      "expected": {
+        "@id": "tcdl:expectedResult",
+        "@type": "@vocab"
+      },
+      "passed": {
+        "@id": "earl:passed"
+      },
+      "failed": {
+        "@id": "earl:failed"
+      },
+      "inapplicable": {
+        "@id": "earl:inapplicable"
+      },
+      "ruleId": "https://schema.org/identifier",
+      "rulePage": "https://schema.org/URL"
+    }
   }
 }

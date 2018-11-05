@@ -55,18 +55,6 @@ module Jekyll
 				create_testcases(site)
 			end
 		end
-
-		# def compress(path)
-		# 	path.sub!(%r[/$],'')
-		# 	archive = File.join(path,File.basename(path))+'.zip'
-		# 	FileUtils.rm archive, :force=>true
-		
-		# 	Zip::File.open(archive, 'w') do |zipfile|
-		# 		Dir["#{path}/**/**"].reject{|f|f==archive}.each do |file|
-		# 			zipfile.add(file.sub(path+'/',''),file)
-		# 		end
-		# 	end
-		# end
 		
 		def create_testcases(site)
 			# create directory if not exists
@@ -83,6 +71,7 @@ module Jekyll
 
 			# write testcases json 
 			testcases_result = JSON.pretty_generate({
+				"@context": PKG['config']['@context'],
 				name: "#{PKG['name']} test cases",
 				website: PKG['config']['site-url-prefix'],
 				license: PKG['license'],
@@ -95,10 +84,6 @@ module Jekyll
 			FileUtils.copy_entry PKG['config']['testcases-embeds-dir'], PKG['config']['testcases-export-dir'] + '/assets'
 			# copy test case assets
 			FileUtils.copy_entry PKG['config']['testcases-assets-dir'], PKG['config']['testcases-export-dir'] + '/' + PKG['config']['testcases-assets-dir']
-			
-			# create a zip file of the same
-			# compress(PKG['config']['testcases-export-dir'])
-
 			# copy to site directory
 			FileUtils.copy_entry PKG['config']['testcases-export-dir'], site.dest + '/' + PKG['config']['testcases-export-dir']
 		end
@@ -144,14 +129,6 @@ module Jekyll
 		def create_frame_embed_content(document, site)  
 			doc_name_with_type = document.url.split('/').reverse[0]
 			doc_name = doc_name_with_type.gsub('.html', '').gsub('.svg', '')
-			doc_path = document.url.sub(doc_name_with_type, '')
-			doc_scs = document["success_criterion"]
-			doc_testcases_sc_meta = []
-			if(doc_scs != nil)
-				doc_scs.each do |sc|
-					doc_testcases_sc_meta.push(SC_DATA[sc]["scId"])
-				end
-			end
 		
 			all_indices = get_code_tag_line_indices(document)
 			indices =  all_indices[0]
@@ -194,16 +171,9 @@ module Jekyll
 					# code-snippet and iframe embedded
 					embedded_testcases_hash[indices[$i].to_s] = render_code_and_frame(file_content, file_url, should_not_render_frame)
 					testcase_url = file_url.gsub('../_testcases-embeds/', 'assets/')
-					testcase_selector = "body > :first-child"
-					if file_content.include? "data-rule-target"
-						testcase_selector = "*[data-rule-target]"
-					end
 				
 					tc_meta = {}
-					tc_meta["selector"] = testcase_selector
 					tc_meta["url"] = testcase_url
-					tc_meta["successCriteria"] = doc_testcases_sc_meta
-
 					testcases[test_case_type.to_s].push(tc_meta)
 
 					# write iframe content to file
@@ -233,9 +203,6 @@ module Jekyll
 					# create test-case object
 					t = {}
 					t['url'] = "#{PKG['config']['site-url-prefix']}/#{PKG['config']['testcases-export-dir']}#{meta["url"]}" 
-					t['relativeUrl'] = meta["url"]
-					t['successCriteria'] = meta["successCriteria"]
-					t['selector'] = meta["selector"]
 					t['expected'] = tc_type.to_s
 					t['ruleId'] = rule_id
 					t['rulePage'] = "#{PKG['config']['site-url-prefix']}/rules/#{rule_id}.html"

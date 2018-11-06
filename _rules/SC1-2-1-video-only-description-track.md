@@ -1,5 +1,5 @@
 ---
-name: Video only element description track
+name: Video only element has description track
 description: |
   This rule checks that description tracks that come with non-streaming `video` elements, without audio, are descriptive.
 

@@ -1,5 +1,5 @@
 ---
-name: video only audio alternative
+name: video only has audio alternative
 description: |
   Non-streaming `video` elements without audio must have an audio alternative
 

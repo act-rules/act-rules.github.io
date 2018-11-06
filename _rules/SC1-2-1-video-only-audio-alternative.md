@@ -42,7 +42,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Pass example 1
 
-A video element without audio has a seperate audio track that describes the visual information.
+A video element without audio has a separate audio track that describes the visual information.
 
 ```html
 <video controls>
@@ -70,7 +70,7 @@ A video element without an audio track.
 
 #### Fail example 2
 
-A video element without audio has a seperate audio track that incorrectly describes the visual information.
+A video element without audio has a separate audio track that incorrectly describes the visual information.
 
 ```html
 <video controls>

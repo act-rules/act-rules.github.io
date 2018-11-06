@@ -1,11 +1,8 @@
 
 ---
-name: video only element transcript
+name: video only element has transcript
 description: |
   Non-streaming `video` elements without audio must have all visual information available in a transcript.
-
-success_criterion:
-- 
 
 test_aspects:
 - DOM Tree

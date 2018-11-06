@@ -94,7 +94,7 @@ Then he stops to scratch his bottom.</p>
 
 #### Pass example 4
 
-A video element without audio has a seperate audio track that describes the visual information.
+A video element without audio has a separate audio track that describes the visual information.
 
 ```html
 <video controls>
@@ -148,7 +148,7 @@ A silent video element with a link to an incorrect text transcript on a differen
 
 #### Fail example 4
 
-A video element without audio has a seperate audio track that incorrectly describes the visual information.
+A video element without audio has a separate audio track that incorrectly describes the visual information.
 
 ```html
 <video controls>

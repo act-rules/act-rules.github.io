@@ -18,13 +18,11 @@ authors:
 
 ### Applicability
 
-The rule applies to HTML `input` element with a [`type`](https://www.w3.org/TR/html/sec-forms.html#dom-htmlinputelement-type) of `image`, or `area` elements, or any HTML element with the semantic role of `img`, where the element is [included in the accessibility tree](#included-in-the-accessibility-tree) and has an [accessible name](#accessible-name) that is equivalent to the [filename](#filename) specified in the `src` attribute.
-
-**Note**: Difference in letter casing, and forward and trailing whitespace should be ignored. 
+The rule applies to HTML `input` element with a [`type`](https://www.w3.org/TR/html/sec-forms.html#dom-htmlinputelement-type) of `image`, or `area` elements, or any HTML element with the semantic role of `img`, where the element is [included in the accessibility tree](#included-in-the-accessibility-tree) and has an [accessible name](#accessible-name) that is equivalent to the [filename](#filename) specified in the `src` attribute. Difference in letter casing, and forward and trailing whitespace should be ignored. 
 
 ### Expectation
 
-Each test target has an accessible name that serves an equivalent purposecan of the [non-text content](https://www.w3.org/TR/WCAG21/#dfn-non-text-content).
+Each test target has an accessible name that serves an equivalent purpose can of the [non-text content](https://www.w3.org/TR/WCAG21/#dfn-non-text-content).
 
 ## Assumptions
 

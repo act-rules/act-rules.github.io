@@ -37,13 +37,13 @@ Each test target has an accessible name that serves an equivalent purposecan of 
 ## Background
 
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
-- [F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F30)
+- [F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)](https://www.w3.org/WAI/WCAG21/Techniques/failures/F30)
 
 ## Test Cases
 
 ### Pass example 1
 
-The element's accessible name matches the image filename which accurately describes the image.
+The `img` element's accessible name uses the filename and accurately describes the image.
 
 ```html
 <img src="https://www.w3.org/WAI/demos/bad/img/w3c" alt="w3c">
@@ -51,7 +51,8 @@ The element's accessible name matches the image filename which accurately descri
 
 ### Failure example 1
 
-The element's accessible name matches the image filename which does not acurately describe the image.
+
+The `img` element's accessible name matches the image filename which does not acurately describe the image.
 
 ```html
 <img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="teaser_right2.jpg">
@@ -59,14 +60,14 @@ The element's accessible name matches the image filename which does not acuratel
 
 ### Inapplicable example 1
 
-The image is not exposed to assistive technologies.
+The `img` element is not exposed to assistive technologies.
 
 ```html
 <img role="presentation">
 ```
 ### Inapplicable example 2
 
-The image is not exposed to assisstive technologies.
+The `img` element is not exposed to assisstive technologies.
 
 ```html
 <img alt="">
@@ -74,7 +75,7 @@ The image is not exposed to assisstive technologies.
 
 ### Inapplicable example 3
 
-The image accessible name does not contain the image filename.
+The `img` element's accessible name does not contain the image filename.
 
 ```html
 <img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="modanna lily">
@@ -82,7 +83,7 @@ The image accessible name does not contain the image filename.
 
 ### Inapplicable example 4
 
-The image `alt` attribute matches the filename but is overidden by the `aria-label` value which takes precedence in the accessible name calculation.
+The `img` element's `alt` attribute matches the filename but is overidden by the `aria-label` value which takes precedence in the accessible name calculation.
 
 ```html
 <img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="teaser_right2.jpg" aria-label="modanna lily">

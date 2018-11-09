@@ -47,7 +47,7 @@ The `lang` attribute specified has a non-empty value & a valid primary language 
 ```html
 <html>
 <body> 
-  <article data-rule-target lang="en"></article>
+  <article lang="en"></article>
 </body>
 </html>
 ```
@@ -59,7 +59,7 @@ The `xml:lang` attribute specified has a non-empty value & a valid primary langu
 ```html
 <html>
 <body>
-  <p data-rule-target xml:lang="DE"></p>
+  <p xml:lang="DE"></p>
 </body>
 </html>
 ```
@@ -71,7 +71,7 @@ The `lang` attribute specified has a non-empty value & a valid primary language 
 ```html
 <html>
 <body>
-  <blockquote data-rule-target lang="fr-CH"></blockquote>
+  <blockquote lang="fr-CH"></blockquote>
 </body>
 </html>
 ```
@@ -83,7 +83,7 @@ The `lang` and `xml:lang` attribute specified has a non-empty value & a valid pr
 ```html
 <html>
 <body>
-  <p data-rule-target lang="en" xml:lang="en-GB">Good Morning.</p>
+  <p lang="en" xml:lang="en-GB">Good Morning.</p>
 </body>
 </html>
 ```
@@ -97,7 +97,7 @@ The `lang` attribute value is not a valid primary language subtag.
 ```html
 <html>
 <body>
-  <article data-rule-target lang="dutch"></article>
+  <article lang="dutch"></article>
 </body>
 </html>
 ```
@@ -109,7 +109,7 @@ The `xml:lang` attribute value is not a valid primary language subtag.
 ```html
 <html>
 <body>
-  <p data-rule-target xml:lang="english"></p>
+  <p xml:lang="english"></p>
 </body>
 </html>
 ```
@@ -121,7 +121,7 @@ The `lang` attribute value has a valid primary language subtag, but a syntactica
 ```html
 <html>
 <body>
-  <p data-rule-target lang="en-US-GB"></p>
+  <p lang="en-US-GB"></p>
 </body>
 </html>
 ```
@@ -135,7 +135,7 @@ The rule applies to elements with the `body` of a webpage. `html` elements are i
 
 ```html
 <html lang="en">
-	<body data-rule-target>
+	<body>
 	</body>
 </html>
 ```
@@ -147,7 +147,7 @@ An empty value for `lang` attribute is ignored by this rule, as the applicabilit
 ```html
 <html>
 	<body>
-		<article data-rule-target lang=""></article>
+		<article lang=""></article>
 	</body>
 </html>
 ```
@@ -159,7 +159,7 @@ An empty value for `xml:lang` attribute is ignored by this rule, as the applicab
 ```html
 <html>
 	<body>
-		<article data-rule-target xml:lang=""></article>
+		<article xml:lang=""></article>
 	</body>
 </html>
 ```

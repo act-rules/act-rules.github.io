@@ -53,7 +53,7 @@ Redirects immediately.
 
 ```html
   <head>           
-    <meta data-rule-target http-equiv="refresh" content="0; URL='https://auto-wcag.github.io/auto-wcag/'" />    
+    <meta http-equiv="refresh" content="0; URL='https://auto-wcag.github.io/auto-wcag/'" />    
   </head>  
 ```
 
@@ -63,8 +63,8 @@ First valid `<meta http-equiv="refresh">` redirects immediately.
 
 ```html
 <head>
-  <meta data-rule-target http-equiv="refresh" content="0; http://example.com" />
-  <meta data-rule-target http-equiv="refresh" content="5; http://example.com" />
+  <meta http-equiv="refresh" content="0; http://example.com" />
+  <meta http-equiv="refresh" content="5; http://example.com" />
 </head>
 ```
 
@@ -74,7 +74,7 @@ Redirects after more than 20 hours.
 
 ```html
 <head>
-  <meta data-rule-target http-equiv="refresh" content="72001; http://example.com" />
+  <meta http-equiv="refresh" content="72001; http://example.com" />
 </head>
 ```
 
@@ -86,7 +86,7 @@ Refreshes after 30 seconds.
 
 ```html
 <head>
-	<meta data-rule-target http-equiv="refresh" content="30">
+	<meta http-equiv="refresh" content="30">
 </head>
 ```
 
@@ -96,7 +96,7 @@ Redirects after 30 seconds.
 
 ```html
 <head>
-	<meta data-rule-target http-equiv="refresh" content="30; URL='https://auto-wcag.github.io/auto-wcag/'">
+	<meta http-equiv="refresh" content="30; URL='https://auto-wcag.github.io/auto-wcag/'">
 </head>
 ```
 
@@ -106,8 +106,8 @@ First `<meta http-equiv="refresh">` element is not valid, second one redirects a
 
 ```html
 <head>
-  <meta data-rule-target http-equiv="refresh" content="0: http://example.com" />
-  <meta data-rule-target http-equiv="refresh" content="5; http://example.com" />
+  <meta http-equiv="refresh" content="0: http://example.com" />
+  <meta http-equiv="refresh" content="5; http://example.com" />
 </head>
 ```
 
@@ -117,7 +117,7 @@ Redirects after exactly 20 hours.
 
 ```html
 <head>
-  <meta data-rule-target http-equiv="refresh" content="72000; http://example.com" />
+  <meta http-equiv="refresh" content="72000; http://example.com" />
 </head>
 ```
 
@@ -129,7 +129,7 @@ No `content` attribute.
 
 ```html
 <head>
-	<meta data-rule-target http-equiv="refresh">
+	<meta http-equiv="refresh">
 </head>
 ```
 
@@ -139,7 +139,7 @@ No `http-equiv="refresh"` attribute.
 
 ```html
 <head>
-	<meta data-rule-target content="30">
+	<meta content="30">
 </head>
 ```
 
@@ -149,7 +149,7 @@ No `http-equiv="refresh"` attribute.
 
 ```html
 <head>
-  <meta data-rule-target http-equiv="refresh" content="0: http://example.com" />
+  <meta http-equiv="refresh" content="0: http://example.com" />
 </head>
 ```
 
@@ -159,7 +159,7 @@ No `http-equiv="refresh"` attribute.
 
 ```html
 <head>
-	<meta data-rule-target http-equiv=refresh content="-00.12 foo">
+	<meta http-equiv=refresh content="-00.12 foo">
 </head>
 ```
 
@@ -169,7 +169,7 @@ No `http-equiv="refresh"` attribute.
 
 ```html
 <head>
-	<meta data-rule-target http-equiv="refresh" content="; 30">
+	<meta http-equiv="refresh" content="; 30">
 </head>
 ```
 
@@ -178,7 +178,7 @@ No `http-equiv="refresh"` attribute.
 `content` attribute is invalid and therefore inapplicable.
 ```html
 <head>
-	<meta data-rule-target http-equiv="refresh" content="">
+	<meta http-equiv="refresh" content="">
 </head>
 ```
 
@@ -188,7 +188,7 @@ No `http-equiv="refresh"` attribute.
 
 ```html
 <head>
-  <meta data-rule-target http-equiv="refresh" content="+5; http://example.com">
+  <meta http-equiv="refresh" content="+5; http://example.com">
 </head>
 ```
 
@@ -198,6 +198,6 @@ No `http-equiv="refresh"` attribute.
 
 ```html
 <head>           
-  <meta data-rule-target http-equiv="refresh" content="foo; URL='https://auto-wcag.github.io/auto-wcag/'" />    
+  <meta http-equiv="refresh" content="foo; URL='https://auto-wcag.github.io/auto-wcag/'" />    
 </head>
 ```

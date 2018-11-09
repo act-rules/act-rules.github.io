@@ -146,13 +146,6 @@ module Jekyll
 			doc_name = doc_name_with_type.gsub('.html', '').gsub('.svg', '')
 			doc_path = document.url.sub(doc_name_with_type, '')
 			doc_scs = document["success_criterion"]
-			doc_testcases_sc_meta = []
-			if(doc_scs != nil)
-				doc_scs.each do |sc|
-					doc_testcases_sc_meta.push(SC_DATA[sc]["scId"])
-				end
-			end
-		
 			all_indices = get_code_tag_line_indices(document)
 			indices =  all_indices[0]
 			spread_indices = all_indices[1]
@@ -193,17 +186,9 @@ module Jekyll
 					# constuct a hash which contains all the 
 					# code-snippet and iframe embedded
 					embedded_testcases_hash[indices[$i].to_s] = render_code_and_frame(file_content, file_url, should_not_render_frame)
-					testcase_url = file_url.gsub('../_testcases-embeds/', 'assets/')
-					testcase_selector = "body > :first-child"
-					if file_content.include? "data-rule-target"
-						testcase_selector = "*[data-rule-target]"
-					end
-				
+					testcase_url = file_url.gsub('../_testcases-embeds/', 'assets/')				
 					tc_meta = {}
-					tc_meta["selector"] = testcase_selector
 					tc_meta["url"] = testcase_url
-					tc_meta["successCriteria"] = doc_testcases_sc_meta
-
 					testcases[test_case_type.to_s].push(tc_meta)
 
 					# write iframe content to file
@@ -233,9 +218,6 @@ module Jekyll
 					# create test-case object
 					t = {}
 					t['url'] = "#{PKG['config']['site-url-prefix']}/#{PKG['config']['testcases-export-dir']}#{meta["url"]}" 
-					t['relativeUrl'] = meta["url"]
-					t['successCriteria'] = meta["successCriteria"]
-					t['selector'] = meta["selector"]
 					t['expected'] = tc_type.to_s
 					t['ruleId'] = rule_id
 					t['rulePage'] = "#{PKG['config']['site-url-prefix']}/rules/#{rule_id}.html"

@@ -65,7 +65,7 @@ A video element with an audio description.
 
 <figure id="ozplayer-1-container" class="ozplayer-container">
   <div data-controls="stack" class="ozplayer" id="ozplayer-1">
-    <video data-rule-target controls="controls" preload="none">
+    <video controls="controls" preload="none">
       <source src="../test-assets/rabbit-video.mp4" type="video/mp4"></source>
     </video>
     <audio data-default="default" preload="none">
@@ -115,7 +115,7 @@ A video element with an incorrect audio description.
 
 <figure id="ozplayer-1-container" class="ozplayer-container">
   <div data-controls="stack" class="ozplayer" id="ozplayer-1">
-    <video data-rule-target controls="controls" preload="none">
+    <video controls="controls" preload="none">
       <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
     </video>
     <audio data-default="default" preload="none">

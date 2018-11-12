@@ -58,7 +58,7 @@ A video element without audio. The text on the page labels the video as an alter
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
   Keyboard compatibility is described in WCAG.
   See the video below to watch the same information again in video form.</p>
-<video data-rule-target src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls>
+<video src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls>
 </video>
 ```
 
@@ -74,7 +74,7 @@ A video element that describes some of the text on the same page. The video cont
   doesn't work, is frustrating. Either through preference or circumstance. This is solved by keyboard compatibility. 
   Keyboard compatibility is described in WCAG.
   See the video below to watch the same information again in video form.</p>
-<video data-rule-target src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls>
+<video src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls>
 </video>
 ```
 
@@ -88,7 +88,7 @@ A video element that describes some of the text on the same page. The text is no
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
   Keyboard compatibility is described in WCAG.
   See the video below to watch the same information again in video form.</p>
-<video data-rule-target src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls>
+<video src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls>
 </video>
 ```
 
@@ -101,7 +101,7 @@ A video element that describes some of the text on the same page. The text on th
   doesn't work, is frustrating. Many people use only the keyboard to navigate 
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
   Keyboard compatibility is described in WCAG.</p>
-<video data-rule-target src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls>
+<video src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls>
 </video>
 ```
 
@@ -115,7 +115,7 @@ A video element that describes some of the text on the same page. The text on th
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
   Keyboard compatibility is described in WCAG.</p>
   <p style="display: none;">See the video below to watch the same information again in video form.</p>
-<video data-rule-target src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls>
+<video src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls>
 </video>
 ```
 
@@ -131,7 +131,7 @@ A video element with audio.
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
   Keyboard compatibility is described in WCAG.
   See the video below to watch the same information again in video form.</p>
-<video data-rule-target src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls>
+<video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls>
 </video>
 ```
 
@@ -145,6 +145,6 @@ A video element that describes some of the text on the same page. The text on th
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
   Keyboard compatibility is described in WCAG.
   See the video below to watch the same information again in video form.</p>
-<video data-rule-target src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls style="display: none;">
+<video src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls style="display: none;">
 </video>
 ```

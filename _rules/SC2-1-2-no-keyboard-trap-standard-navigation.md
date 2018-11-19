@@ -5,7 +5,7 @@ test_type: atomic
 description: |
   This rule checks if it is possible to use standard keyboard navigation to navigate through all content on a web page without becoming trapped in any element.
 
-test aspects:
+test_aspects:
 - DOM Tree
 - CSS Styling
 
@@ -23,9 +23,9 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML or SVG element on a web page that is [focusable](#focusable).
+The rule applies to any HTML or SVG element that is [focusable](#focusable).
 
-**Note**: The WCAG 2.0 success criterion 2.1.2 applies to all content where focus can be moved to through keyboard navigation.
+**Note**: This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
 
 ### Expectation
 
@@ -45,8 +45,8 @@ There are no major accessibility support issues known for this rule.
 ## Background
 
 - [Understanding Success Criterion 2.1.2: No Keyboard Trap](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html)
-- [G21: Ensuring that users are not trapped in content](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G21)
-- [F10: Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining multiple content formats in a way that traps users inside one format type](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F10)
+- [G21: Ensuring that users are not trapped in content](https://www.w3.org/WAI/WCAG21/Techniques/general/G21)
+- [F10: Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining multiple content formats in a way that traps users inside one format type](https://www.w3.org/WAI/WCAG21/Techniques/failures/F10)
 
 ## Test Cases
 
@@ -127,7 +127,7 @@ Disabled element.
 
 #### Inapplicable example 3
 
-Hidden element using `display:none`
+Hidden element using `display:none`.
 
 ```html
 <button type="button" style=“display:none;”>Click Me!</button>

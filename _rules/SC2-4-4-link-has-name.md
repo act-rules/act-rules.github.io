@@ -124,7 +124,7 @@ When `link` is off screen.
     }
   </style>
   <body>
-		<a data-rule-target class="offScreenLink" href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
+		<a class="offScreenLink" href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
   </body>
 </html>
 ```
@@ -186,6 +186,14 @@ Non-visible link.
 
 ```html
 <a href="http://www.w3.org/WAI" style="left: -9999px; position: absolute;"><img src="#" /></a>
+```
+
+#### Failed example 8
+
+Not included in the accessibility tree.
+
+```html
+<a href="http://www.w3.org/WAI" aria-hidden="true"><img src="#" /></a>
 ```
 
 ### Inapplicable

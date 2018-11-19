@@ -1,15 +1,13 @@
 ---
 name: ARIA allowed attribute
 description: | 
-  This rule checks that `aria-*` attributes are allowed for the element they are specified on.
+  This rule checks that WAI-ARIA states or properties are allowed for the element they are specified on.
 
 success_criterion:
-- 4.1.1 # Parsing (A)
 - 4.1.2 # Name, Role, Value (A)
 
 test_aspects:
 - DOM Tree
-- CSS Styling
 
 authors:
 - Anne Thyme Nørregaard
@@ -19,11 +17,11 @@ authors:
 
 ### Applicability
 
-Any attribute that is specified on an HTML or SVG element where the attribute name starts with `aria-`.
+Any [WAI-ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) that is specified on an HTML or SVG element.
 
 ### Expectation
 
-The target attribute is either listed under [WAI-ARIA 1.1 Supported States and Properties](https://www.w3.org/TR/wai-aria-1.1/#states_and_properties) for the [semantic role](#semantic-role) of the element that the attribute is specified on, or it is found on the list of [WAI-ARIA 1.1 Global States and Properties](https://www.w3.org/TR/wai-aria-1.1/#global_states).
+The attribute is either an [inherited](https://www.w3.org/TR/wai-aria/#inheritedattributes), [supported](https://www.w3.org/TR/wai-aria/#supportedState), or [required](https://www.w3.org/TR/wai-aria/#requiredState) [state](https://www.w3.org/TR/wai-aria/#dfn-state) or [property](https://www.w3.org/TR/wai-aria/#dfn-property) of the [semantic role](#semantic-role) of the element on which the attribute is specified. If the element has no semantic role, the attribute must be a [global state or property](https://www.w3.org/TR/wai-aria-1.1/#global_states).
 
 **Note:** Assessing the value of the attribute is out of scope for this rule.
 
@@ -49,7 +47,7 @@ The target attribute is either listed under [WAI-ARIA 1.1 Supported States and P
 
 #### Passed example 1
 
-`aria-pressed` attribute is allowed for role `button`.
+`aria-pressed` state is supported for role `button`.
 
 ```html
 <div role="button" aria-pressed="false"></div>
@@ -57,7 +55,7 @@ The target attribute is either listed under [WAI-ARIA 1.1 Supported States and P
 
 #### Passed example 2
 
-`aria-pressed` attribute is allowed for `role=button` that is the implicit role for `button` element.
+`aria-pressed` state is supported for `role=button` that is the implicit role for `button` element.
 
 ```html
 <button aria-pressed="false"></button>
@@ -71,29 +69,69 @@ Global state that is supported by all base markup elements.
 <div aria-hidden="true"></div>
 ```
 
+#### Passed example 4
+
+`aria-label` state is inherited for role `button`
+
+```html
+<div role="button" aria-label="OK"></div>
+```
+
+#### Passed example 5
+
+`aria-checked` state is required for role `aria-checkbox`
+
+```html
+<div role="checkbox" aria-checked="false"></div>
+```
+
+#### Passed example 6
+
+`aria-controls` property is supported for role `combobox`
+
+```html
+<div role="combobox" aria-controls="id1"></div>
+```
+
+#### Passed example 7
+
+WAI-ARIA states and properties with empty value are also applicable to this rule
+
+```html
+<div role="combobox" aria-controls></div>
+```
+
+#### Passed example 8
+
+WAI-ARIA states and properties with empty value, specified as an empty string, are also applicable to this rule
+
+```html
+<div role="combobox" aria-controls=""></div>
+```
+
 ### Failed
 
 #### Failed example 1
 
-`aria-pressed` attribute is not allowed for role `checkbox`.
+`aria-sort` property is neither inherited, supported, nor required for role `button`.
 
 ```html
-<div role="checkbox" aria-pressed="false"></div>
+<div role="button" aria-sort=""></div>
 ```
 
 #### Failed example 2
 
-`aria-pressed` attribute is not allowed for `role=checkbox` that is the implicit role for `input` elements of type `checkbox`.
+`aria-sort` attribute is neither inherited, supported, nor required for `role=button` that is the implicit role for `button` element.
 
 ```html
-<input type="checkbox" aria-pressed="false">
+<button aria-sort=""></button>
 ```
 
 ### Inapplicable
 
 #### Inapplicable example 1
 
-No attribute that starts with `aria-`.
+No [WAI-ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
 
 ```html
 <div role="region"></div>

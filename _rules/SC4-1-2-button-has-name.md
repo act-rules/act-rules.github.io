@@ -106,7 +106,7 @@ Off screen elements should be tested.
     }
   </style>
   <body>
-    <button data-rule-target class='notInPage'>Save</button>
+    <button class='notInPage'>Save</button>
   </body>
 </html>
 ```
@@ -143,7 +143,7 @@ Off screen element without an accessible name.
     }
   </style>
   <body>
-    <button data-rule-target class='notInPage' value='delete'></button>
+    <button class='notInPage' value='delete'></button>
   </body>
 </html>
 ```
@@ -160,7 +160,7 @@ Image buttons are tested in a different rule.
 
 #### Inapplicable example 2
 
-Not included in the accessibility tree.
+Not visible in page and not included in the accessibility tree.
 
 ```html
 <html>
@@ -172,7 +172,7 @@ Not included in the accessibility tree.
     }
   </style>
   <body>
-    <button data-rule-target class='notInPage' aria-hidden='true'>Confirm</button>
+    <button class='notInPage' aria-hidden='true'>Confirm</button>
   </body>
 </html>
 ```

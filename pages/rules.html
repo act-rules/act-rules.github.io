@@ -3,72 +3,84 @@ layout: default
 title: Auto-WCAG Rules
 ---
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-			<th width='3%'>#</th>
-			<th width='25%'>Name</th>
-      <th>Description</th>
-      <th width='35%'>WCAG Criterion</th>
-    </tr>
-	</thead>
-	<!-- {% assign rulesAndDrafts = site.rules | concat: site.drafts | sort: 'name' %} -->
-	{% assign rulesAndDrafts = site.rules | sort: 'name' %}
-  {% for rule in rulesAndDrafts %}
-  <tr>
-		<td>
-			{{ forloop.index }}
-		</td>
-    <td>
-			<a class='rule-list-title' href="{{ rule.url | prepend: site.baseurl }}">{{rule.name}}</a>
-			{% if rule.draft %}
-				<p class="draft-note slim">Draft</p>
-			{% endif %}
-		</td>
-    <td>
-			{{ rule.description }}
-		</td>
-		<td>
-			<ul style="list-style: none; padding-left: 0;">
-				{% for criterion in rule.success_criterion %}
-					<li>
-						{% if site.data.sc-urls[criterion] %}
-							<a href="{{ site.data.criteria[criterion].url }}" target="_blank">
-								{{ site.data.sc-urls[criterion].num }} {{ site.data.sc-urls[criterion].handle }} - (Level: {{ site.data.sc-urls[criterion].level }})
-							</a>
-						{% else %}
-							{{ criterion }} (unknown)
+<div id="rules-table">
+	<input class="search" placeholder="Search rule..." />
+  
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th class="sort" data-sort="index" width='8%'>#</th>
+				<th class="sort" data-sort="name" width='25%'>Name</th>
+				<th class="sort" data-sort="description">Description</th>
+				<th class="sort" data-sort="wcagCriterion" width='35%'>WCAG Criterion</th>
+                <th class="sort" data-sort="implementations" width='10%'>
+                    <a href="{{ site.baseurl }}/pages/implementations.html">
+                        Implementations
+                    </a>
+                </th>
+			</tr>
+		</thead>
+		<tbody class="list">
+			<!-- {% assign rulesAndDrafts = site.rules | concat: site.drafts | sort: 'name' %} -->
+			{% assign rulesAndDrafts = site.rules | sort: 'name' %}
+			{% for rule in rulesAndDrafts %}
+			<tr>
+				<td class="index">
+					{{ forloop.index }}
+				</td>
+				<td class='name'>
+					<a class='rule-list-title' href="{{ rule.url | prepend: site.baseurl }}">{{rule.name}}</a>
+					{% if rule.draft %}
+						<p class="draft-note slim">Draft</p>
+					{% endif %}
+				</td>
+				<td class="description">
+					{{ rule.description }}
+				</td>
+				<td class='wcagCriterion'>
+					<ul style="list-style: none; padding-left: 0;">
+						{% for criterion in rule.success_criterion %}
+							<li>
+								{% if site.data.sc-urls[criterion] %}
+									<a href="{{ site.data.criteria[criterion].url }}" target="_blank">
+										{{ site.data.sc-urls[criterion].num }} {{ site.data.sc-urls[criterion].handle }} - (Level: {{ site.data.sc-urls[criterion].level }})
+									</a>
+								{% else %}
+									{{ criterion }} (unknown)
+								{% endif %}
+							</li>
+						{% endfor %}
+					</ul>
+				</td>
+				<td class='implementations'>
+						{% assign ruleId = rule.id | remove: "/rules/" %}
+						{% assign implementations_count = site.data.implementations[ruleId] %}
+						{% if implementations_count == Nil or implementations_count == 0 %}
+						NEW
 						{% endif %}
-					</li>
-				{% endfor %}
-			</ul>
-		</td>
-  </tr>
-  {% endfor %}
-</table>
+						{% if implementations_count == 1 %}
+						IN PROGRESS
+						{% endif %}
+						{% if implementations_count >= 3 %}
+						DONE
+						{% endif %}
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
 
+<script type='text/javascript'>
+	// enable sorting and filtering in rules table
+	var ruleTable = new List('rules-table', { 
+		valueNames: [ 'index', 'name', 'description', 'wcagCriterion', 'implementations' ]
+	});
+	// sort by index asc as a defacto
+	ruleTable.sort('index', { order: "asc" });
+</script>
 
 <section class="cards-section text-center">
-	<!-- 		
-	<h2 class="title">
-		Download Test Cases of Rules
-	</h2>
-	
-	<div class="intro">
-		<p>
-			Each of the test cases with the rules can be downloaded for integration with your test tool from here.
-		</p>
-		<div class="cta-container">
-			<a class="btn btn-primary btn-cta"
-				href="http://themes.3rdwavemedia.com/" 
-				target="_blank">
-				<i class="fas fa-file-download"></i>
-				Download Now
-			</a>
-		</div>
-	</div> 
-	-->
-
 	<div id="cards-wrapper" class="cards-wrapper row">
 		<div class="item item-primary col-md-6 col-sm-6 col-xs-12">
 			<div class="item-inner">
@@ -97,19 +109,5 @@ title: Auto-WCAG Rules
 					</a>
 				</div>
 			</div>
-			<!-- <div class="item item-primary col-md-4 col-sm-4 col-xs-12">
-				<div class="item-inner">
-					<a class="link" href="{{ site.baseurl }}/auto-wcag-testcases/auto-wcag-testcases.zip">
-						<h3 class="title">DOWNLOAD TESTS</h3>
-						<div class="icon-holder">
-							<i aria-hidden="true"  class="fas fa-download fa-5x"></i>
-						</div>
-						<p class="intro">
-							Download all the testcases for the rules.
-						</p>
-					</a>
-				</div>
-			</div> -->
 	</div>
-
 </section>

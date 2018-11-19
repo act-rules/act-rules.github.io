@@ -1,5 +1,5 @@
 ---
-title: Visible Text Content.
+title: Visible Text Content
 key: visible-text-content
 ---
 

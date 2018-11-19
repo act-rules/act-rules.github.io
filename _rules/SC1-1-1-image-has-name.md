@@ -19,7 +19,7 @@ authors:
 
 ### Applicability
 
-The rule applies to HTML `img` elements or any HTML element with the [semantic role](#semantic-role) of `img` that is exposed to assistive technologies.
+The rule applies to HTML `img` elements or any HTML element with the [semantic role](#semantic-role) of `img` that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation
 
@@ -45,7 +45,7 @@ There is a known combination of a popular browser and assistive technology that 
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 Image has accessible name
 
@@ -53,15 +53,15 @@ Image has accessible name
 <img alt="W3C logo" />
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 Non-image element with image role and accessible name
 
 ```html
-<div role="image" aria-label="W3C logo"></div>
+<div role="img" aria-label="W3C logo"></div>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 Accessible name but not always supported.
 
@@ -71,7 +71,7 @@ Accessible name but not always supported.
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 No accessible name
 
@@ -79,14 +79,14 @@ No accessible name
 <img />
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 Non-image element with image role but no accessible name.
 ```html
 <div role="img"></div>
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 Image element inside a div positioned off screen with no accessible name.
 ```html
@@ -123,8 +123,8 @@ decorative image.
 
 Non-image element.
 
-```html
-<svg width="100" height="100">
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
   <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
 </svg>
 ```

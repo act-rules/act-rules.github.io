@@ -23,7 +23,7 @@ authors:
 
 The rule applies to any [non-streaming](#non-streaming-media-element) `audio` element that is playing or with a "play button".
 
-A play button is an interactive element that when activated, plays the audio. The play button must be ]visibile on the page](#visible-on-the-page) or [exposed to assistive technologies](#exposed-to-assistive-technologies)
+A play button is an interactive element that when activated, plays the audio. The play button must be [visible on the page](#visible-on-the-page) or [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation
 
@@ -46,59 +46,59 @@ While the HTML specifications allows the use of `track` elements inside of `audi
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 Audio with controls and internal transcript
 
 ```html
-<audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <p>The above audio contains the following speech: We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win, and the others, too.</p>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 Audio with controls and external transcript
 
 ```html
-<audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</p>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 Audio with autoplay, external transcript, and with a text description on the page
 
 ```html (no-iframe)
-<audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
+<audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
 <a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</p>
 ```
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 Audio with controls and incorrect internal transcript
 
 ```html
-<audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <p>The above audio contains the following speech: We choose to go to the cheese in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win, and the others, too.</p>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 Audio with controls and incorrect external transcript
 
 ```html
-<audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</p>
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 Audio with autoplay and incorrect external transcript
 
 ```html (no-iframe)
-<audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
+<audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
 <a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</p>
 ```
 

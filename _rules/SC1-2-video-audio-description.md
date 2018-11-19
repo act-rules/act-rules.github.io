@@ -43,7 +43,7 @@ There are only a few implementations of video players (without third party techn
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 A video element with a voiceover that describes the visual information.
 
@@ -54,7 +54,7 @@ A video element with a voiceover that describes the visual information.
 </video>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 A video element with an audio description.
 
@@ -66,7 +66,7 @@ A video element with an audio description.
 <figure id="ozplayer-1-container" class="ozplayer-container">
   <div data-controls="stack" class="ozplayer" id="ozplayer-1">
     <video data-rule-target controls="controls" preload="none">
-      <source src="../test-assets/rabit-video/video.mp4" type="video/mp4" />
+      <source src="../test-assets/rabbit-video.mp4" type="video/mp4"></source>
     </video>
     <audio data-default="default" preload="none">
       <source src="../test-assets/rabbit-video/audio-description.mp3" type="audio/mp3"  />
@@ -84,7 +84,7 @@ A video element with an audio description.
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 A video element without an audio description.
 
@@ -95,7 +95,7 @@ A video element without an audio description.
 </video>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 A video element with an incorrect audio description.
 
@@ -106,7 +106,7 @@ A video element with an incorrect audio description.
 </video>
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 A video element with an incorrect audio description.
 
@@ -118,7 +118,7 @@ A video element with an incorrect audio description.
 <figure id="ozplayer-1-container" class="ozplayer-container">
   <div data-controls="stack" class="ozplayer" id="ozplayer-1">
     <video data-rule-target controls="controls" preload="none">
-      <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
+      <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
     </video>
     <audio data-default="default" preload="none">
       <source src="../test-assets/rabbit-video/incorrect-audio-description.mp3" type="audio/mp3"  />

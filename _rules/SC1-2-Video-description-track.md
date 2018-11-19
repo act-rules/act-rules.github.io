@@ -47,7 +47,7 @@ This means that the rule can only provide a pass for these succescriteria if acc
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 A video element with a track element that contains descriptions.
 
@@ -61,7 +61,7 @@ A video element with a track element that contains descriptions.
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 A video element with a track element that contains incorrect descriptions.
 

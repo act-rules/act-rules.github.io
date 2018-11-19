@@ -49,7 +49,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 Visible label and accessible name matches when trailing white spaces are removed.
 
@@ -57,7 +57,7 @@ Visible label and accessible name matches when trailing white spaces are removed
 <div role="link" aria-label="next page ">next page</div>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 Character insensitivity between visible label and accessible name.
 
@@ -65,7 +65,7 @@ Character insensitivity between visible label and accessible name.
 <div role="link" aria-label="Next Page">next page</div>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 Full visible label is contained in the accessible name.
 
@@ -75,7 +75,7 @@ Full visible label is contained in the accessible name.
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 Visible label doesn't match accessible name.
 
@@ -83,7 +83,7 @@ Visible label doesn't match accessible name.
 <div role="link" aria-label="OK">Next</div>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 Not all of visible label is included in accessible name.
 

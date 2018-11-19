@@ -3,5 +3,9 @@
 *.log
 .sass-cache
 _site
+# auto generated testcases
 _testcases-embeds/*.*
 auto-wcag-testcases
+# auto generated implementations data
+_data/implementations.json
+_data/implementors.json

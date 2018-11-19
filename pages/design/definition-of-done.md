@@ -20,7 +20,7 @@ The Definition of "Done" is a living document, and might change as the rule writ
 - Requirements for use of atomic and composed rules are followed, see [Rule Types](https://www.w3.org/TR/act-rules-format/#rule-types) in the [ACT Rules Format](https://www.w3.org/TR/act-rules-format/)
 - The rule follows the Auto-WCAG [rule template](/design/rule-template.html), especially in relation to headings, styling, test case descriptions, etc.
 - The rule is using Auto-WCAG [Glossary terms](https://auto-wcag.github.io/auto-wcag/pages/algorithms/) whenever possible. Be particularly aware of the following much-used algorithms:
-    - For the Applicability, consider if the definitions [exposed to assistive technologies](#exposed-to-assistive-technologies) and [visible on the page](#visible-on-the-page) should be used to narrow down the scope of the rule.
+    - For the Applicability, consider if the definitions [included in the accessibility tree](#included-in-the-accessibility-tree) and [visible on the page](#visible-on-the-page) should be used to narrow down the scope of the rule.
     - For the Applicability and Expectations, consider if the definition for [semantic role](#semantic-role) (including specifics of explicit and implicit semantic role) could be used to describe the targets of the rule.
 - The rule links to any relevant documentation, e.g. [Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/) and [Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG-TECHS/), specifications used, etc.
 - The name of the rule is written in plain language, with capitalized initial letter

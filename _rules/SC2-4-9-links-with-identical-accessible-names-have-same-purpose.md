@@ -20,7 +20,7 @@ authors:
 
 ### Applicability
 
-This rule applies to any two or more HTML or SVG elements that have the [semantic role](#semantic-role) of link, are [exposed to assistive technologies](#exposed-to-assistive-technologies) and that have the same [accessible name](#accessible-name).
+This rule applies to any two or more HTML or SVG elements that have the [semantic role](#semantic-role) of link, are [included in the accessibility tree](#included-in-the-accessibility-tree) and that have the same [accessible name](#accessible-name).
 
 ### Expectation
 

@@ -22,7 +22,7 @@ The rule applies to HTML `input` element with a [`type`](https://www.w3.org/TR/h
 
 ### Expectation
 
-Each test target has an accessible name that serves an equivalent purpose can of the [non-text content](https://www.w3.org/TR/WCAG21/#dfn-non-text-content).
+Each test target has an accessible name that serves only an equivalent purpose of the [non-text content](https://www.w3.org/TR/WCAG21/#dfn-non-text-content).
 
 ## Assumptions
 
@@ -48,7 +48,6 @@ The `img` element's accessible name uses the filename and accurately describes t
 ```
 
 ### Failure example 1
-
 
 The `img` element's accessible name matches the image filename which does not acurately describe the image.
 

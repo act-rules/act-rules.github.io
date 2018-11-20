@@ -18,7 +18,7 @@ authors:
 
 ### Applicability
 
-The rule applies to HTML `input` element with a [`type`](https://www.w3.org/TR/html/sec-forms.html#dom-htmlinputelement-type) of `image`, or `area` elements, or any [non-decorative](#decorative) HTML element with the semantic role of `img`, where the element is [included in the accessibility tree](#included-in-the-accessibility-tree) and has an [accessible name](#accessible-name) that is equivalent to the [filename](#filename) specified in the `src` attribute. Difference in letter casing, and forward and trailing whitespace should be ignored. 
+The rule applies to HTML `input` elements with a [`type`](https://www.w3.org/TR/html/sec-forms.html#dom-htmlinputelement-type) of `image`, or `area` elements, or any HTML element with the semantic role of `img`, where the element is [non-decorative](#decorative) and is [included in the accessibility tree](#included-in-the-accessibility-tree) and has an [accessible name](#accessible-name) that is equivalent to the [filename](#filename) specified in the `src` attribute. Difference in letter casing, and forward and trailing whitespace should be ignored. 
 
 ### Expectation
 
@@ -52,7 +52,15 @@ The `img` element's accessible name uses the filename and accurately describes t
 The `img` element's accessible name matches the image filename which does not acurately describe the image.
 
 ```html
-<img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="teaser_right2.jpg">
+<img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="teaser_right2">
+```
+
+### Failure example 2
+
+The `img` element's accessible name matches the image filename. In this example the file extension is redundant and results in the accessible name not accurately describing the image.
+
+```html
+<img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png">
 ```
 
 ### Inapplicable example 1

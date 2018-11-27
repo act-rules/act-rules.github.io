@@ -28,7 +28,7 @@ The auditory information of each test target is available as text (directly or v
 
 ### Expectation 2
 
-Each target element has a label indicating the `audio` is an alternative to text on the page.
+Each target element is labelled as an audio alterive for text on the page.
 
 ### Expectation 3
 

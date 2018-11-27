@@ -48,7 +48,7 @@ A focusable element with `aria-hidden="true"` is ignored as part of the reading 
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 Content not focusable by default.
 
@@ -56,27 +56,27 @@ Content not focusable by default.
 <p aria-hidden="true">Some text</p>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 Content hidden through CSS.
 
 ```html
-<div aria-hidden="true" data-rule-target>
+<div aria-hidden="true">
 	<a href="/" style="display:none">Link</a>
 </div>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 Content made unfocusable through tabindex.
 
 ```html
-<div aria-hidden="true" data-rule-target>
+<div aria-hidden="true">
 	<button tabindex="-1">Some button</button>
 </div>
 ```
 
-#### Pass example 4
+#### Passed example 4
 
 Content made unfocusable through disabled.
 
@@ -86,39 +86,39 @@ Content made unfocusable through disabled.
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 Focusable off screen link.
 
 ```html
-<div aria-hidden="true" data-rule-target>
+<div aria-hidden="true">
 	<a href="/" style="position:absolute; top:-999em">Link</a>
 </div>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 Focusable form field, incorrectly disabled.
 
 ```html
-<div aria-hidden="true" data-rule-target>
+<div aria-hidden="true">
 	<input aria-disabled="true" />
 </div>
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 `aria-hidden=false` does not negate aria-hidden true.
 
 ```html
-<div aria-hidden="true" data-rule-target>
-    <div aria-hidden="false" data-rule-target>
+<div aria-hidden="true">
+    <div aria-hidden="false">
         <button tabindex="-1">Some button</button>
     </div>
 </div>
 ```
 
-#### Fail example 4
+#### Failed example 4
 
 Focusable content through `tabindex`.
 
@@ -126,12 +126,12 @@ Focusable content through `tabindex`.
 <p tabindex="0" aria-hidden="true">Some text</p>
 ```
 
-#### Fail example 5
+#### Failed example 5
 
 Focusable summary element
 
 ```html
-<details aria-hidden="true" data-rule-target>
+<details aria-hidden="true">
     <summary>Some button</summary>
     <p>Some details</p>
 </details>
@@ -160,7 +160,7 @@ Ignore `aria-hidden` false.
 Incorrect value of `aria-hidden`.
 
 ```html
-<div aria-hidden="yes" data-rule-target>
+<div aria-hidden="yes">
 	<p>Some text</p>
 </div>
 ```

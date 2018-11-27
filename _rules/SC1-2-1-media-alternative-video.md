@@ -22,7 +22,7 @@ The rule applies to any [non-streaming](#non-streaming) `video` element that is 
 
 ### Expectation 1
 
-All the information contained in each target element is available as text (directly or via text alternatives) that is [visible on the page](#visible-on-the-page) and [exposed to assistive technolgies](#exposed-to-assistive-technologies).
+All the information contained in each target element is available as text (directly or via text alternatives) that is [visible on the page](#visible-on-the-page) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation 2
 
@@ -30,7 +30,7 @@ Each target element has a label indicating the `video` is an alternative to text
 
 ### Expectation 3
 
-The label (from expectation 2) is [visible on the page](#visible-on-the-page) and [exposed to assistive technolgies](#exposed-to-assistive-technologies)
+The label (from expectation 2) is [visible on the page](#visible-on-the-page) and [included in the accessibility tree](#included-in-the-accessibility-tree)
 
 ## Assumptions
 
@@ -48,7 +48,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 A video element without audio. The text on the page labels the video as an alternative.
 
@@ -58,13 +58,13 @@ A video element without audio. The text on the page labels the video as an alter
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
   Keyboard compatibility is described in WCAG.
   See the video below to watch the same information again in video form.</p>
-<video data-rule-target src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls>
+<video src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls>
 </video>
 ```
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 A video element that describes some of the text on the same page. The video contains more information than the text does.
 
@@ -74,11 +74,11 @@ A video element that describes some of the text on the same page. The video cont
   doesn't work, is frustrating. Either through preference or circumstance. This is solved by keyboard compatibility. 
   Keyboard compatibility is described in WCAG.
   See the video below to watch the same information again in video form.</p>
-<video data-rule-target src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls>
+<video src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls>
 </video>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 A video element that describes some of the text on the same page. The text is not visible on the page.
 
@@ -88,11 +88,11 @@ A video element that describes some of the text on the same page. The text is no
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
   Keyboard compatibility is described in WCAG.
   See the video below to watch the same information again in video form.</p>
-<video data-rule-target src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls>
+<video src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls>
 </video>
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 A video element that describes some of the text on the same page. The text on the page does not label the video as an alternative.
 
@@ -101,11 +101,11 @@ A video element that describes some of the text on the same page. The text on th
   doesn't work, is frustrating. Many people use only the keyboard to navigate 
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
   Keyboard compatibility is described in WCAG.</p>
-<video data-rule-target src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls>
+<video src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls>
 </video>
 ```
 
-#### Fail example 4
+#### Failed example 4
 
 A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the label is not visible on the page.
 
@@ -115,7 +115,7 @@ A video element that describes some of the text on the same page. The text on th
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
   Keyboard compatibility is described in WCAG.</p>
   <p style="display: none;">See the video below to watch the same information again in video form.</p>
-<video data-rule-target src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls>
+<video src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls>
 </video>
 ```
 
@@ -131,7 +131,7 @@ A video element with audio.
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
   Keyboard compatibility is described in WCAG.
   See the video below to watch the same information again in video form.</p>
-<video data-rule-target src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls>
+<video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls>
 </video>
 ```
 
@@ -145,6 +145,6 @@ A video element that describes some of the text on the same page. The text on th
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
   Keyboard compatibility is described in WCAG.
   See the video below to watch the same information again in video form.</p>
-<video data-rule-target src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls style="display: none;">
+<video src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls style="display: none;">
 </video>
 ```

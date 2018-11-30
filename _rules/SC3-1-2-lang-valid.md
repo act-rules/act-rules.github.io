@@ -88,6 +88,20 @@ The `lang` and `xml:lang` attribute specified has a non-empty value & a valid pr
 </html>
 ```
 
+#### Passed example 5
+
+The `lang` attribute specified has a non-empty value & a valid primary language subtag. The language is not directly declare in the `anchor` element but in the `span`, otherwise the `title` attribute would inherit the language subtab.   
+
+```html
+<html>
+<body> 
+  <a title="Change language to French" href="fr">
+    <span lang="fr">Français</span>
+  </a>
+</body>
+</html>
+```
+
 ### Failed
 
 #### Failed example 1
@@ -122,6 +136,18 @@ The `lang` attribute value has a valid primary language subtag, but a syntactica
 <html>
 <body>
   <p lang="en-US-GB"></p>
+</body>
+</html>
+```
+
+#### Fail example 4
+
+The `lang` attribute specified has a valid primary language subtag, but the language is directly declare in the `anchor` element the `title` attribute will inherit the language subtab.   
+
+```html
+<html>
+<body>
+  <a lang="fr" title="Change language to French" href="fr">Français</a>
 </body>
 </html>
 ```

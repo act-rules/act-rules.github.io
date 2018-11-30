@@ -8,17 +8,17 @@
 <head>
 	<!-- Resolve Page Title -->
 	{% if page.layout == 'rule' %}
-		{% assign page_title = page.name | prepend: "Rule: " %}
+	{% assign page_title = page.name | prepend: "Rule: " %}
 	{% else %}
-		{% if page.layout == 'testcase' %}
-			{% if page.rule_id != 'undefined' %}
-				{% assign page_title = page.rule_id | prepend: "Test Cases for " %}
-			{% else %}
-				{% assign page_title = page.name | prepend: "Test Cases for " %}
-			{% endif %}
-		{% else %}
-			{% assign page_title = page.title %}
-		{% endif %}
+	{% if page.layout == 'testcase' %}
+	{% if page.rule_id != 'undefined' %}
+	{% assign page_title = page.rule_id | prepend: "Test Cases for " %}
+	{% else %}
+	{% assign page_title = page.name | prepend: "Test Cases for " %}
+	{% endif %}
+	{% else %}
+	{% assign page_title = page.title %}
+	{% endif %}
 	{% endif %}
 	<title>
 		{{ page_title }} {{ site.title | escape }}
@@ -40,12 +40,17 @@
 	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-	<!-- Javascript -->    
-	<script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<!-- Javascript -->
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+	 crossorigin="anonymous"></script>
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
 	<script type="text/javascript" src="//stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/native-promise-only/0.8.1/npo.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jsonld/0.4.12/jsonld.min.js"></script>
 	<script type="text/javascript" src="{{site.baseurl}}/assets/js/jquery.stickyelement.js"></script>
+	<script type="text/javascript" src="{{site.baseurl}}/assets/js/default.js"></script>
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -81,12 +86,12 @@
 						<li>
 							<a href="{{ site.baseurl }}/pages/glossary/">Glossary</a>
 						</li>
-                        
+
 						<!-- Implementations -->
 						<li>
-								<a href="{{ site.baseurl }}/pages/implementations.html">Implementations</a>
+							<a href="{{ site.baseurl }}/pages/implementations.html">Implementations</a>
 						</li>
-						
+
 						<!-- Rule Creation -->
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -221,12 +226,6 @@
 			</div>
 		</footer>
 	</div>
-	<!-- Javascript -->
-	<script>
-		// initialize highlightjs
-		hljs.initHighlightingOnLoad();
-	</script>
-
 </body>
 
 </html>

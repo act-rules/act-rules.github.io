@@ -3,9 +3,9 @@
  * @param {Function} callback callback
  * @param {Array<String>} reports List of urls to test tool reports (json)
  */
-var getTestToolImplementations = (function () {
+var getTestToolImplementations = (function() {
   var callbacks = []
-  var implementations = null;
+  var implementations = null
 
   /**
    * Given a report, get transformed (json ld framed) response
@@ -13,154 +13,160 @@ var getTestToolImplementations = (function () {
    */
   function getJsonLdFramedDataForReport(url) {
     var jsonLdFrame = {
-      "@context": {
-        "earl": "http://www.w3.org/ns/earl#",
-        "WCAG": "https://www.w3.org/TR/WCAG/#",
-        "http": "http://www.w3.org/2011/http#",
-        "cnt": "http://www.w3.org/2011/content#",
-        "dc": "http://purl.org/dc/terms#",
-        "ptr": "https://www.w3.org/2009/pointers#",
-        "doap": "http://usefulinc.com/ns/doap#",
-        "foaf": "http://xmlns.com/foaf/spec/#",
-        "vendor": {
-          "@id": "doap:vendor"
+      '@context': {
+        earl: 'http://www.w3.org/ns/earl#',
+        WCAG: 'https://www.w3.org/TR/WCAG/#',
+        http: 'http://www.w3.org/2011/http#',
+        cnt: 'http://www.w3.org/2011/content#',
+        dc: 'http://purl.org/dc/terms#',
+        ptr: 'https://www.w3.org/2009/pointers#',
+        doap: 'http://usefulinc.com/ns/doap#',
+        foaf: 'http://xmlns.com/foaf/spec/#',
+        vendor: {
+          '@id': 'doap:vendor'
         },
-        "vendorTool": {
-          "@id": "doap:name"
+        vendorTool: {
+          '@id': 'doap:name'
         },
-        "assertedBy": {
-          "@id": "earl:assertedBy",
-          "@type": "@id"
+        assertedBy: {
+          '@id': 'earl:assertedBy',
+          '@type': '@id'
         },
-        "result": {
-          "@id": "earl:result",
-          "@type": "@id"
+        result: {
+          '@id': 'earl:result',
+          '@type': '@id'
         },
-        "test": {
-          "@id": "earl:test"
+        test: {
+          '@id': 'earl:test'
         },
-        "outcome": {
-          "@id": "earl:outcome",
-          "@type": "@vocab"
+        outcome: {
+          '@id': 'earl:outcome',
+          '@type': '@vocab'
         },
-        "passed": {
-          "@id": "earl:passed"
+        passed: {
+          '@id': 'earl:passed'
         },
-        "failed": {
-          "@id": "earl:failed"
+        failed: {
+          '@id': 'earl:failed'
         },
-        "inapplicable": {
-          "@id": "earl:inapplicable"
+        inapplicable: {
+          '@id': 'earl:inapplicable'
         },
-        "cantTell": {
-          "@id": "earl:cantTell"
+        cantTell: {
+          '@id': 'earl:cantTell'
         },
-        "undefined": {
-          "@id": "earl:undefined"
+        undefined: {
+          '@id': 'earl:undefined'
         },
-        "subject": {
-          "@id": "earl:subject"
+        subject: {
+          '@id': 'earl:subject'
         },
-        "mode": {
-          "@id": "earl:mode",
-          "@type": "@vocab"
+        mode: {
+          '@id': 'earl:mode',
+          '@type': '@vocab'
         },
-        "automatic": {
-          "@id": "earl:automatic"
+        automatic: {
+          '@id': 'earl:automatic'
         },
-        "info": {
-          "@id": "earl:info"
+        info: {
+          '@id': 'earl:info'
         },
-        "pointer": {
-          "@id": "earl:pointer"
-        },
-
-        "body": {
-          "@id": "http:body"
-        },
-        "statusCodeValue": {
-          "@id": "http:statusCodeValue"
-        },
-        "methodName": {
-          "@id": "http:methodName"
-        },
-        "requestURI": {
-          "@id": "http:requestURI"
+        pointer: {
+          '@id': 'earl:pointer'
         },
 
-        "chars": {
-          "@id": "cnt:chars"
+        body: {
+          '@id': 'http:body'
         },
-        "characterEncoding": {
-          "@id": "cnt:characterEncoding"
+        statusCodeValue: {
+          '@id': 'http:statusCodeValue'
         },
-
-        "source": {
-          "@id": "dc:source"
+        methodName: {
+          '@id': 'http:methodName'
         },
-
-        "assertions": {
-          "@reverse": "earl:subject"
+        requestURI: {
+          '@id': 'http:requestURI'
         },
 
-        "expression": {
-          "@id": "ptr:expression"
+        chars: {
+          '@id': 'cnt:chars'
         },
-        "reference": {
-          "@id": "ptr:reference"
+        characterEncoding: {
+          '@id': 'cnt:characterEncoding'
+        },
+
+        source: {
+          '@id': 'dc:source'
+        },
+
+        assertions: {
+          '@reverse': 'earl:subject'
+        },
+
+        expression: {
+          '@id': 'ptr:expression'
+        },
+        reference: {
+          '@id': 'ptr:reference'
         }
       },
-      "@type": "earl:Assertion"
+      '@type': 'earl:Assertion'
     }
-    return new Promise(function (resolve, reject) {
-      axios.get(url)
-        .then(function (response) {
-          var reportResult = response.data;
+    return new Promise(function(resolve, reject) {
+      axios
+        .get(url)
+        .then(function(response) {
+          var reportResult = response.data
 
           // frame the response
-          jsonld.frame(reportResult, jsonLdFrame, function (err, result) {
+          jsonld.frame(reportResult, jsonLdFrame, function(
+            err,
+            result
+          ) {
             if (err) {
-              reject('Unable to transform (jsonld frame) report data', err)
+              reject(
+                'Unable to transform (jsonld frame) report data',
+                err
+              )
             }
             // resolve
-            result.reportUrl = response.request.responseURL;
+            result.reportUrl = response.request.responseURL
             resolve(result)
-          });
+          })
         })
-        .catch(function (error) {
+        .catch(function(error) {
           reject(error)
-        });
+        })
     })
   }
 
-
-  return function (options) {
-
-    var callback = options.callback || function () { };
-    var reports = options.reports || null;
+  return function(options) {
+    var callback = options.callback || function() {}
+    var reports = options.reports || null
 
     if (implementations) {
       callback(implementations)
-      return;
+      return
     }
 
     callbacks.push(callback)
 
-    if (callbacks.length > 1) { // already triggered a fetch call - wait for results
+    if (callbacks.length > 1) {
+      // already triggered a fetch call - wait for results
       return
     }
 
-    var promises = reports.reduce(function (out, reportUrl) {
+    var promises = reports.reduce(function(out, reportUrl) {
       var p = getJsonLdFramedDataForReport(reportUrl)
       out.push(p)
-      return out;
+      return out
     }, [])
 
     Promise.all(promises)
-      .then(function (data) {
+      .then(function(data) {
         implementations = data
         if (callbacks && callbacks.length) {
-          callbacks.forEach(function (cb, index, arr) {
+          callbacks.forEach(function(cb, index, arr) {
             cb(implementations)
             if (index === arr.length - 1) {
               callbacks = []
@@ -168,7 +174,7 @@ var getTestToolImplementations = (function () {
           })
         }
       })
-      .catch(function (err) {
+      .catch(function(err) {
         throw new Error('Error getting report data', err)
       })
   }
@@ -180,7 +186,7 @@ var getTestToolImplementations = (function () {
 function run() {
   // initialize highlightjs
   if (window.hljs) {
-    hljs.initHighlightingOnLoad();
+    hljs.initHighlightingOnLoad()
   }
 
   // fetch implementation reports

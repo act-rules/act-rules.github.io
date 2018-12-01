@@ -7,7 +7,8 @@
     "dev": "bundle exec jekyll serve",
     "build": "bundle exec jekyll build",
     "generate-wcag-data": "node wcag-url-generator",
-    "proof": "bundle exec jekyll build && bundle exec htmlproofer ./_site --only-4xx --check-html --allow_hash_href --assume-extension --alt-ignore '/.*/'"
+    "proof": "bundle exec jekyll build && bundle exec htmlproofer ./_site --only-4xx --check-html --allow_hash_href --assume-extension --alt-ignore '/.*/'",
+    "fmt": "prettier --write '*'.{js} '*/**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,8 @@
     "testcases-export-dir": "auto-wcag-testcases/",
     "testcases-export-filename": "testcases.json",
     "rules-export-filename": "rules.json"
+  },
+  "devDependencies": {
+    "prettier": "^1.15.3"
   }
 }

@@ -18,7 +18,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any [non-streaming](#non-streaming) `video` element that is [visible on the page](#visible-on-the-page), where the video doesn't contains audio.
+The rule applies to any [non-streaming](#non-streaming) `video` element that is [visible on the page](#visible-on-the-page), where the video doesn't contain audio.
 
 ### Expectation 1
 

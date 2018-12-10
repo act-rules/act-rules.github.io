@@ -26,7 +26,7 @@ A play button is an interactive element that when activated, plays the audio. Th
 
 The auditory information of each test target is available through a text transcript that is available either on the page or through a link.
 
-**Note**: A "text transcript" in the context of this rule is defined in WCAG 2 as a [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
+**Note**: A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
 
 ## Assumptions
 
@@ -76,6 +76,14 @@ Audio with autoplay and external transcript
 
 #### Failed example 1
 
+Audio with controls and no transcript
+
+```html
+<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+```
+
+#### Failed example 2
+
 Audio with controls and incorrect internal transcript
 
 ```html
@@ -83,7 +91,7 @@ Audio with controls and incorrect internal transcript
 <p>The above audio contains the following speech: We choose to go to the cheese in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win, and the others, too.</p>
 ```
 
-#### Failed example 2
+#### Failed example 3
 
 Audio with controls and incorrect external transcript
 
@@ -92,7 +100,7 @@ Audio with controls and incorrect external transcript
 <a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</p>
 ```
 
-#### Failed example 3
+#### Failed example 4
 
 Audio with autoplay and incorrect external transcript
 

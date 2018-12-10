@@ -1,4 +1,3 @@
-
 ---
 name: video only element has transcript
 description: |

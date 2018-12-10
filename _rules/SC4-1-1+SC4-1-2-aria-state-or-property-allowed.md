@@ -1,5 +1,5 @@
 ---
-name: ARIA allowed attribute
+name: ARIA state or property allowed
 description: | 
   This rule checks that WAI-ARIA states or properties are allowed for the element they are specified on.
 

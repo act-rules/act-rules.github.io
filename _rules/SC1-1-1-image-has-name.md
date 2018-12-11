@@ -97,7 +97,7 @@ HTML `img` element marked as [decorative](#decorative) through `role="none"`
 
 #### Failed example 1
 
-No accessible name and is not marked as [decorative](#decorative)
+HTML `img` element that is not marked as [decorative](#decorative) and does not have accessible name
 
 ```html
 <img />

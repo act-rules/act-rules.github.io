@@ -105,7 +105,7 @@ No accessible name and is not marked as [decorative](#decorative)
 
 #### Failed example 2
 
-Non-image element with image role but no accessible name
+Element with role of `img` but no accessible name
 
 ```html
 <div role="img"></div>

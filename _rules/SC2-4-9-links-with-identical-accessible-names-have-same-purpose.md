@@ -32,7 +32,7 @@ When activated, the links in each set of target elements resolve to resources th
 * are located on different URLs, including different domains
 * present different navigation options, e.g. through bread crumbs or local sub menus
 * contain different amounts of information and/or differently worded information
-* are using different layouts.
+* use different layouts.
 
 **Note:** If the same content is presented in different formats, the format itself is often part of the link purpose, e.g. an article as both HTML and PDF.
 
@@ -120,7 +120,7 @@ Pages contain different amounts of information and/or differently worded informa
 
 #### Passed example 8
 
-Has the same content but are using different layouts:
+Has the same content but use different layouts:
 
 ```html
 <a href="/test-assets/link-purpose/page1.html">Link text</a>

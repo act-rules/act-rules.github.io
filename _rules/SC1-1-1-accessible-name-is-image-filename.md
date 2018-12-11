@@ -1,7 +1,7 @@
 ---
 name: Image accessible name is filename
 description: |
-  This rule checks that image elements that use their source filename as their accessible name do so without loss of infomation to the user.
+  This rule checks that image elements that use their source filename as their accessible name do so without loss of information to the user.
 
 success_criterion:
 - 1.1.1 # Non-Text Content

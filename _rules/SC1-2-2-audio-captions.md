@@ -61,7 +61,7 @@ Audio with controls and external transcript
 
 ```html
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
-<a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</p>
+<a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</a>
 ```
 
 #### Passed example 3
@@ -70,7 +70,7 @@ Audio with autoplay, external transcript, and with a text description on the pag
 
 ```html (no-iframe)
 <audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
-<a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</p>
+<a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</a>
 ```
 
 ### Failed
@@ -90,7 +90,7 @@ Audio with controls and incorrect external transcript
 
 ```html
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
-<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</p>
+<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</a>
 ```
 
 #### Failed example 3
@@ -99,7 +99,7 @@ Audio with autoplay and incorrect external transcript
 
 ```html (no-iframe)
 <audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
-<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</p>
+<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</a>
 ```
 
 ### Inapplicable

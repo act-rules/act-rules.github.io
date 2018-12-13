@@ -20,13 +20,13 @@ authors:
 
 The rule applies to any [non-streaming](#non-streaming-media-element) `audio` element that is:
 - playing; or,
-- has a "play button" that is [visibile on the page](#visible-on-the-page) or [exposed to assistive technologies](#exposed-to-assistive-technologies).
+- has a "play button" that is [visibile](#visible) and [included-in-the-accessibility-tree](#included-in-the-accessibility-tree).
 
 **Note:** A play button is an interactive element that when activated, plays the audio. 
 
 ### Expectation
 
-The auditory information of each test target is available through a text transcript that is available either on the page or through a link.
+The auditory information of each test target is available through a text transcript that is available either on the page or through a link. The text transcript needs to be [visibile](#visible) and [included-in-the-accessibility-tree](#included-in-the-accessibility-tree).
 
 **Note**: A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
 

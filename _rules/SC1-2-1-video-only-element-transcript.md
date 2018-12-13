@@ -20,15 +20,11 @@ authors:
 
 The rule applies to any [non-streaming](#non-streaming) `video` element [visible on the page](#visible-on-the-page) where the video doesn't contain audio.
 
-### Expectation 1
+### Expectation
 
-A text transcript is available for the test target, either on the page or available through a link.
+The visual information of each test target is available through a text transcript that is available either on the page or through a link. The text transcript needs to be [visibile](#visible) and [included-in-the-accessibility-tree](#included-in-the-accessibility-tree).
 
-### Expectation 2
-
-The text transcript (from expectation 1) contains all the visual information of the test target.
-
-**Note**: A "text transcript" in the context of this rule is defined in WCAG 2 as a [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
+**Note**: A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
 
 ## Assumptions
 

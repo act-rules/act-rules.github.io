@@ -22,7 +22,9 @@ authors:
 
 ### Applicability
 
-The rule applies to any [non-streaming](#non-streaming-media-element) `audio` element that is playing or has a "play button".  If a play button exists the rule applies if the button is [visibile on the page](#visible-on-the-page) or [exposed to assistive technologies](#exposed-to-assistive-technologies)
+The rule applies to any [non-streaming](#non-streaming-media-element) `audio` element that is:
+- playing; or,
+- has a "play button" that is [visibile on the page](#visible-on-the-page) or [exposed to assistive technologies](#exposed-to-assistive-technologies).
 
 **Note:** A play button is an interactive element that when activated, plays the audio. 
 

@@ -19,7 +19,7 @@ authors:
 
 ### Applicability
 
-This rule applies to any two ore more `iframe` elements that are [included in the accessibility tree](#included-in-the-accessibility-tree) and have the same [non-empty](#non-empty) [accessible name](#accessible-name), within the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees), where the `src` attributes are different.
+This rule applies to any two ore more `iframe` elements that are [included in the accessibility tree](#included-in-the-accessibility-tree) and have the same [non-empty](#non-empty) [accessible name](#accessible-name), within the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees), where the `src` attributes refer to different pages.
 
 ### Expectation
 

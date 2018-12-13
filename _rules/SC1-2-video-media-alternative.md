@@ -25,11 +25,9 @@ All the information contained in each target element is available as text (direc
 
 ### Expectation 2
 
-Each target element has a label indicating the `video` is an alternative to text on the page.
+Each target element is labeled as an alternative to text on the page. This label is [visible on the page](#visible-on-the-page) and [exposed to assistive technolgies](#exposed-to-assistive-technologies).
 
-### Expectation 3
-
-The label (from expectation 2) is [visible on the page](#visible-on-the-page) and [exposed to assistive technolgies](#exposed-to-assistive-technologies)
+**Note:** The word label in this expectation is not refering to the `label` element.
 
 ## Assumptions
 

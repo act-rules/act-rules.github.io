@@ -18,19 +18,19 @@ authors:
 
 ### Applicability
 
-The rule applies to any [non-streaming][] `video` element that is [visible on the page](#visible-on-the-page), where the video doesn't contains audio.
+The rule applies to any [non-streaming][] `video` element that is [visible](#visible), where the video doesn't contains audio.
 
 ### Expectation 1
 
-All the information contained in each target element is available as text (directly or via text alternatives) that is [visible on the page](#visible-on-the-page) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+All the information contained in each target element is available as text (directly or via text alternatives) that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation 2
 
-Each target element is labelled as an video alterive for text on the page.
+Each target element is labelled as an video alternative for text on the page.
 
 ### Expectation 3
 
-The label (from expectation 2) is [visible on the page](#visible-on-the-page) and [included in the accessibility tree](#included-in-the-accessibility-tree)
+The label (from expectation 2) is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree)
 
 ## Assumptions
 

@@ -46,7 +46,7 @@ There is a known combination of a popular browser and assistive technology that 
 
 #### Passed example 1
 
-Image button element with accessible name through `alt attribute
+Image button element with accessible name through `alt` attribute
 
 ```html
 <input type="image" name="submit" src="button.gif" alt="Submit" />

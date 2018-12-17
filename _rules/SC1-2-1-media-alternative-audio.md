@@ -20,19 +20,19 @@ authors:
 
 The rule applies to any [non-streaming](#non-streaming-media-element) `audio` element that is playing or with a "play button".
 
-A play button is an interactive element that when activated, plays the audio. The play button must be ]visibile on the page](#visible-on-the-page) or [included in the accessibility tree](#included-in-the-accessibility-tree)
+A play button is an interactive element that when activated, plays the audio. The play button must be ]visibile](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree)
 
 ### Expectation 1
 
-The auditory information of each test target is available as text (directly or via text alternatives) that is [visible on the page](#visible-on-the-page) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+The auditory information of each test target is available as text (directly or via text alternatives) that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation 2
 
-Each target element is labelled as an audio alterive for text on the page.
+Each target element is labelled as an audio alternative for text on the page.
 
 ### Expectation 3
 
-The label (from expectation 2) is [visible on the page](#visible-on-the-page) and [included in the accessibility tree](#included-in-the-accessibility-tree)
+The label (from expectation 2) is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree)
 
 ## Assumptions
 

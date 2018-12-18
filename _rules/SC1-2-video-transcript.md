@@ -23,13 +23,9 @@ authors:
 
 The rule applies to any [non-streaming](#non-streaming) `video` element [visible](#visible) where the video contains audio.
 
-### Expectation 1
+### Expectation
 
-A text transcript is available for the test target, either on the page or available through a link.
-
-### Expectation 2
-
-The text transcript (from expectation 1) contains all the visual and auditory information of the test target.
+A text transcript containing all the visual and auditory information of the test target is available, either on the page or available through a link.
 
 **Note**: A "text transcript" in the context of this rule is defined in WCAG 2 as a [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
 
@@ -51,7 +47,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Test Cases
 
-## Passed
+### Passed
 
 #### Passed example 1
 
@@ -79,7 +75,7 @@ A video element with a link to a text transcript on a different page.
 <a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
 ```
 
-## Failed
+### Failed
 
 #### Failed example 1
 
@@ -107,7 +103,7 @@ A video element with a link to an incorrect text transcript on a different page.
 <a href="../test-assets/rabbit-video/incorrect-transcript.html">Transcript</p>
 ```
 
-## Inapplicable
+### Inapplicable
 
 #### Inapplicable example 1
 

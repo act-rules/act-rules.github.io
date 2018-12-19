@@ -38,8 +38,8 @@ _There are no major accessibility support issues known for this rule._
 ## Background
 
 - [H64: Using the title attribute of the frame and iframe elements](http://www.w3.org/TR/WCAG20-TECHS/H64.html)
-- [Understanding Success Criterion 4.1.2 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
-- [Understanding Success Criterion 2.4.1 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
+- [Understanding Success Criterion 4.1.2](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
+- [Understanding Success Criterion 2.4.1](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html)
 - [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)
 
 ## Test cases

@@ -21,7 +21,7 @@ The rule applies to any [non-streaming](#non-streaming) `video` element that is 
 
 ### Expectation 1
 
-All the information contained in each target element is available as text (directly or via text alternatives) that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+All the information contained in each target element is available as text that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation 2
 

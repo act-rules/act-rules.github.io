@@ -6,7 +6,7 @@ description: |
 test_aspects:
 - DOM Tree
 - CSS Styling
-- [Audio output](#audio-output)
+- Audio output
 
 authors:
 - Wilco Fiers

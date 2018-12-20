@@ -4,7 +4,6 @@ description: |
   Each form field element has an accessible name
 
 success_criterion:
-- 3.3.2 # Labels or Instructions
 - 4.1.2 # Name, Role, Value
 
 test_aspects:

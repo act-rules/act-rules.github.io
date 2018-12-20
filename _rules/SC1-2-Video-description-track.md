@@ -28,13 +28,13 @@ The visual information of each test target not available through its audio is de
 
 ## Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the poster.
+This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
 ## Accessibility support
 
-Currently the description track is not supported by most assistive technology. Accessibility support for the description track attribute is relativly low to non-existent. Video players may be able to work around the lack of support for the discription track by using aria-live but few do this today.
+Currently the description track is not supported by most assistive technology. Accessibility support for the description track attribute is relativly low to non-existent. Video players may be able to work around the lack of support for the description track by using aria-live but few do this today.
 
-This means that the rule can only provide a pass for these succescriteria if accessistive technology support the description track or if the video player that is used has implemented such a work around.
+This means that the rule can only provide a pass for these succes criteria if assistive technology support the description track or if the video player that is used has implemented such a work around.
 
 ## Background
 

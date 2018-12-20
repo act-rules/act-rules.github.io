@@ -26,7 +26,7 @@ The visual information of each test target is available through its audio, or th
 
 ## Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the poster.
+This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
 ## Accessibility support
 
@@ -131,6 +131,8 @@ A video element with an incorrect audio description.
 <script src="https://ozplayer.global.ssl.fastly.net/3.3/ozplayer-lang/en.js"></script>
 <script src="https://ozplayer.global.ssl.fastly.net/3.3/config.js"></script>
 ```
+
+**Note:** The ozplayer implementation is only an example and is not meant as an endorsment of the ozplayer.
 
 ### Inapplicable
 

@@ -1,53 +1,44 @@
 ---
-name: Short descriptive name
+name: Document title is descriptive
 rule_type: atomic
-description: | # Use "|" for multi-line text
-  This rule checks ...
+description: |
+  This rule checks that the document title describes the topic or purpose of the document.
 
 success_criterion: 
-- x.x.x # Criterion handle as a YAML comment + level
+-	2.4.2 # Page Titled (A)
 
 test_aspects: # Remove what is not applicable
 - DOM Tree
-- CSS Styling
-- HTTP messages
-- Accessibility Tree
-- Language
 
 authors:
-- Your Name # As used in /data/contributors.yml
+- Anne Thyme Nørregaard
+-	Corbb O’Connor 
+
 ---
 
 ## Test procedure
 
 ### Applicability
 
-The rule applies to any (??) element ...
+This rule applies to the first title element containing textual content in a document where the document element is an HTML <html> element.
 
-### Expectation (1)
+### Expectation
 
-Each target element ...
-
-### Expectation 2
-
-Each target element [that meets expectation 1, and] ...
+Each target element describes the topic or purpose of the overall content of the document.
 
 ## Assumptions
 
-- Make a list
+- (REWRITE) Because browsers only recognize the first title element it is not necessary to check other ones.
 
 ## Accessibility Support
 
-Support for XXX is known to be limited in some assistive technologies. If any of those assistive technologies is part of the accessibility support baseline of a test, any applicable element must **fail** this rule.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- Links to Techniques for WCAG 2.0
-- Latest version: Techniques for WCAG 2.0 W3C Working Group Note 8 April 2014
-- Link to other methodologies, test specifications or tools
-- Links to test cases, test suites, unit tests, etc.
-- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible auto-wcag refers to those. Another source for test cases is the W3C Before and After Demonstration.
-- Other references
+- [Understanding Success Criterion 2.4.2: Page Titled](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
+- [G88: Providing descriptive titles for Web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G88)
+- [H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG21/Techniques/html/H25)
 
 ## Test Cases
 
@@ -68,34 +59,92 @@ The <title> tag describes the content of the page.
 </html>
 ```
 
-#### Passed example X
+#### Passed example 1
 
-... Add one test case for each "reason" an element can pass
+Two <title> tags where the first one describes the content of the page.
+
+```html
+<html>
+  <head>
+    <title>Clementine harvesting season</title>
+    <title>Apple harvesting season</title>
+  </head>
+  <body>
+    <p>Clementines will be ready to harvest from late October through February.</p>
+  </body>
+</html>
+```
+
+#### Passed example 3
+
+Even though the descriptive <title> tag is not placed in the body, the rule still passes since the browser fixes it, and it doesn't cause any known accessibility issues.
+
+```html
+<html>
+  <head>
+  </head>
+  <body>
+    <title>Clementine harvesting season</title>
+    <p>Clementines will be ready to harvest from late October through February.</p>
+  </body>
+</html>
+```
 
 ### Failed
 
 #### Failed example 1
 
-Briefly describe what failed in the html code below
+XXX
 
 ```html
-<!-- failing html code snippet -->
+<html>
+  <head>
+    <title>Apple harvesting season</title>
+  </head>
+  <body>
+    <p>Clementines will be ready to harvest from late October through February.</p>
+  </body>
+</html>
 ```
-
-#### Failed example X
-
-... Add one test case for each "reason" an element can fail
 
 ### Inapplicable
 
 #### Inapplicable example 1
 
-Briefly describe why the html code snippet is inapplicable
+XXX
 
 ```html
-<!-- inapplicable code snippet -->
+<html>
+  <head>
+  </head>
+  <body>
+    <p>Clementines will be ready to harvest from late October through February.</p>
+  </body>
+</html>
 ```
 
-#### Inapplicable example X
+#### Inapplicable example 2
 
-... Add one test case for each "reason" an element can be inapplicable
+XXX
+
+```html
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <p>Clementines will be ready to harvest from late October through February.</p>
+  </body>
+</html>
+```
+
+#### Inapplicable example 3
+
+This document has a <title> element but is inapplicable since the document element is an SVG <svg> element:
+
+```svg
+<svg xmlns="http://www.w3.org/2000/svg">
+  <title>This is a circle</title>
+  <circle cx="150" cy="75" r="50" fill="green"></circle>
+</svg>
+```

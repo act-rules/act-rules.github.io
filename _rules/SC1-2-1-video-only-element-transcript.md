@@ -114,6 +114,8 @@ Then he stops to scratch his bottom.</p>
 
 #### Failed example 4
 
+A silent video element with a text transcript on the same page that is not included in the accessibility tree.
+
 ```html
 <video controls data-rule-target>
   <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>

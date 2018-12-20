@@ -31,7 +31,7 @@ Each target element is labelled as a video alternative for text on the page. Thi
 
 ## Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the poster.
+This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
 ## Accessibility support
 
@@ -48,8 +48,11 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
+#### Pass example 1
+
+A video element that describes some of the text on the same page. The text on the page labels the video as an alternative.
+
 ```html
-<!-- A video element that describes some of the text on the same page. The text on the page labels the video as an alternative.-->
 <p>Not being able to use your computer because your mouse 
   doesn't work, is frustrating. Many people use only the keyboard to navigate 
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
@@ -61,8 +64,11 @@ There are no major accessibility support issues known for this rule.
 
 ### Failed
 
+#### Fail example 1
+
+A video element that describes some of the text on the same page. The video contains more information than the text does.
+
 ```html
-<!-- A video element that describes some of the text on the same page. The video contains more information than the text does.-->
 <p>Not being able to use your computer because your mouse 
   doesn't work, is frustrating. Either through preference or circumstance. This is solved by keyboard compatibility. 
   Keyboard compatibility is described in WCAG.
@@ -71,8 +77,11 @@ There are no major accessibility support issues known for this rule.
 </video>
 ```
 
+#### Fail example 2
+
+A video element that describes some of the text on the same page. The text is not visible on the page.
+
 ```html
-<!-- A video element that describes some of the text on the same page. The text is not visible on the page.-->
 <p style="display: none;">Not being able to use your computer because your mouse 
   doesn't work, is frustrating. Many people use only the keyboard to navigate 
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
@@ -82,8 +91,11 @@ There are no major accessibility support issues known for this rule.
 </video>
 ```
 
+#### Fail example 3
+
+A video element that describes some of the text on the same page. The text on the page does not label the video as an alternative.
+
 ```html
-<!-- A video element that describes some of the text on the same page. The text on the page does not label the video as an alternative.-->
 <p>Not being able to use your computer because your mouse 
   doesn't work, is frustrating. Many people use only the keyboard to navigate 
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
@@ -92,8 +104,11 @@ There are no major accessibility support issues known for this rule.
 </video>
 ```
 
+#### Fail example 4
+
+A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the label is not visible on the page.
+
 ```html
-<!-- A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the label is not visible on the page.-->
 <p>Not being able to use your computer because your mouse 
   doesn't work, is frustrating. Many people use only the keyboard to navigate 
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
@@ -105,8 +120,11 @@ There are no major accessibility support issues known for this rule.
 
 ### Inapplicable
 
+#### Inapplicable example 1
+
+A video element without audio. The text on the page labels the video as an alternative.
+
 ```html
-<!-- A video element without audio. The text on the page labels the video as an alternative.-->
 <p>Not being able to use your computer because your mouse 
   doesn't work, is frustrating. Many people use only the keyboard to navigate 
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
@@ -116,8 +134,11 @@ There are no major accessibility support issues known for this rule.
 </video>
 ```
 
+#### Inapplicable example 2
+
+A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the video is not visible on the page.
+
 ```html
-<!-- A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the video is not visible on the page.-->
 <p>Not being able to use your computer because your mouse 
   doesn't work, is frustrating. Many people use only the keyboard to navigate 
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 

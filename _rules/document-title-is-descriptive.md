@@ -55,10 +55,17 @@ Support for XXX is known to be limited in some assistive technologies. If any of
 
 #### Passed example 1
 
-Briefly describe what passed in the html code below
+The <title> tag describes the content of the page. 
 
 ```html
-<!-- passing html code snippet -->
+<html>
+  <head>
+    <title>Clementine harvesting season</title>
+  </head>
+  <body>
+    <p>Clementines will be ready to harvest from late October through February.</p>
+  </body>
+</html>
 ```
 
 #### Passed example X

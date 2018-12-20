@@ -27,13 +27,13 @@ The rule applies to any [non-streaming](#non-streaming) `video` element [visible
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [video element audio described](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-audio-description.html)
+- [Video element audio described](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-audio-description.html)
 - [Video element description track](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-description-track.html)
 - [Video as a media alternative for text](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-media-alternative.html)
 
 ## Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the poster.
+This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
 ## Accessibility support
 

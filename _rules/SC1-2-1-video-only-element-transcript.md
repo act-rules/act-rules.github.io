@@ -98,6 +98,32 @@ A silent video element with a link to an incorrect text transcript on a differen
 <a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</p>
 ```
 
+#### Failed example 3
+
+A silent video element with an invisible text transcript on the same page.
+
+```html
+<video controls data-rule-target>
+  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
+  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
+</video>
+<p style="text-indent: -9999px;">The above video shows a giant fat rabbit climbing out of a hole in the ground. 
+He stretches, yaws, and then starts walking. 
+Then he stops to scratch his bottom.</p>
+```
+
+#### Failed example 4
+
+```html
+<video controls data-rule-target>
+  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
+  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
+</video>
+<p aria-hidden="true">The above video shows a giant fat rabbit climbing out of a hole in the ground. 
+He stretches, yaws, and then starts walking. 
+Then he stops to scratch his bottom.</p>
+```
+
 ## Inapplicable
 
 #### Inapplicable example 1

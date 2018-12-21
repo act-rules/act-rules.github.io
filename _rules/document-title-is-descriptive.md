@@ -5,7 +5,7 @@ description: |
   This rule checks that the document title describes the topic or purpose of the document.
 
 success_criterion: 
--	2.4.2 # Page Titled (A)
+- 2.4.2 # Page Titled (A)
 
 test_aspects:
 - DOM Tree

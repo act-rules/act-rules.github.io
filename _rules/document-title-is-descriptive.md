@@ -12,7 +12,7 @@ test_aspects:
 
 authors:
 - Anne Thyme Nørregaard
--	Corbb O’Connor 
+- Corbb O’Connor 
 
 ---
 
@@ -20,15 +20,15 @@ authors:
 
 ### Applicability
 
-This rule applies to the first title element containing textual content in a document where the document element is an HTML <html> element.
+This rule applies to the first [non-empty] `title` element in a [document](https://www.w3.org/TR/dom/#concept-document) where the [document element](https://www.w3.org/TR/dom/#document-element) is an HTML `<html>` element.
 
 ### Expectation
 
-Each target element describes the topic or purpose of the overall content of the document.
+Each target element describes the topic or purpose of the overall content of the [document](https://www.w3.org/TR/dom/#concept-document).
 
 ## Assumptions
 
-- (REWRITE) Because browsers only recognize the first title element it is not necessary to check other ones.
+- This rule assumes that browsers only recognize the first `title` element if multiple `title` elements are present in the [document](https://www.w3.org/TR/dom/#concept-document). Testing shows that this in general is the case. Therefore the scope of this rule is limited to only checking the first `title` element in a document.
 
 ## Accessibility Support
 
@@ -37,8 +37,8 @@ _There are no major accessibility support issues known for this rule._
 ## Background
 
 - [Understanding Success Criterion 2.4.2: Page Titled](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
-- [G88: Providing descriptive titles for Web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G88)
-- [H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG21/Techniques/html/H25)
+- [Technique G88: Providing descriptive titles for Web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G88)
+- [Technique H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG21/Techniques/html/H25)
 
 ## Test Cases
 
@@ -111,7 +111,7 @@ XXX
 
 #### Inapplicable example 1
 
-XXX
+No `title` element present in document.
 
 ```html
 <html>
@@ -125,7 +125,7 @@ XXX
 
 #### Inapplicable example 2
 
-XXX
+`title` element present in document, but is empty.
 
 ```html
 <html>
@@ -139,6 +139,21 @@ XXX
 ```
 
 #### Inapplicable example 3
+
+`title` element present in document, but does not meet the definition for [non-empty text string](#non-empty).
+
+```html
+<html>
+  <head>
+    <title>;)</title>
+  </head>
+  <body>
+    <p>Clementines will be ready to harvest from late October through February.</p>
+  </body>
+</html>
+```
+
+#### Inapplicable example 4
 
 This document has a <title> element but is inapplicable since the document element is an SVG <svg> element:
 

@@ -20,7 +20,7 @@ authors:
 
 ### Applicability
 
-This rule applies to the first [non-empty] `title` element in a [document](https://www.w3.org/TR/dom/#concept-document) where the [document element](https://www.w3.org/TR/dom/#document-element) is an HTML `<html>` element.
+This rule applies to the first [non-empty](#non-empty) HTML `title` element in a [document](https://www.w3.org/TR/dom/#concept-document) where the [document element](https://www.w3.org/TR/dom/#document-element) is an HTML `<html>` element.
 
 ### Expectation
 

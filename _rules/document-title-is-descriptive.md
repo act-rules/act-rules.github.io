@@ -155,7 +155,7 @@ No `title` element present in document.
 
 #### Inapplicable example 4
 
-This document has a <title> element but is inapplicable since the document element is an SVG <svg> element:
+This document has a <title> element but is inapplicable since the document element is an SVG <svg> element.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">

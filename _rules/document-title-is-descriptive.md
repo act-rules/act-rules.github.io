@@ -46,7 +46,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed example 1
 
-The <title> tag describes the content of the page. 
+The ´title´ element describes the content of the document.
 
 ```html
 <html>
@@ -61,7 +61,7 @@ The <title> tag describes the content of the page.
 
 #### Passed example 1
 
-Two <title> tags where the first one describes the content of the page.
+Two <title> tags where the first one describes the content of the document.
 
 ```html
 <html>
@@ -77,7 +77,7 @@ Two <title> tags where the first one describes the content of the page.
 
 #### Passed example 3
 
-Even though the descriptive <title> tag is not placed in the body, the rule still passes since the browser fixes it, and it doesn't cause any known accessibility issues.
+Even though the descriptive `title` element is not placed within the `head` element that is the context the element can be used in [according to the HTML specification](https://www.w3.org/TR/html/document-metadata.html#the-title-element), the rule still passes, since the browser fixes it, and it doesn't cause any known accessibility issues.
 
 ```html
 <html>
@@ -94,7 +94,7 @@ Even though the descriptive <title> tag is not placed in the body, the rule stil
 
 #### Failed example 1
 
-XXX
+`title` is not descriptive of the content of the document.
 
 ```html
 <html>

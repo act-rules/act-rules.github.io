@@ -7,7 +7,7 @@ description: |
 success_criterion: 
 -	2.4.2 # Page Titled (A)
 
-test_aspects: # Remove what is not applicable
+test_aspects:
 - DOM Tree
 
 authors:

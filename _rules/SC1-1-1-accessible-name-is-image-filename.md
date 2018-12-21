@@ -18,7 +18,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML `input` element with a [`type`](https://www.w3.org/TR/html/sec-forms.html#dom-htmlinputelement-type) of `image`, or any HTML `area` element, or any HTML element with the [semantic role](#semantic-role) of `img`. Applicable elements are [non-decorative](#decorative), [included in the accessibility tree](#included-in-the-accessibility-tree), and have an [accessible name](#accessible-name) that is equivalent to the [filename](#filename) specified in the `src` attribute. Difference in letter casing, and forward and trailing whitespace should be ignored.
+The rule applies to any HTML `input` element with a [`type`](https://www.w3.org/TR/html/sec-forms.html#dom-htmlinputelement-type) of `image`, or any HTML element with the [semantic role](#semantic-role) of `img` that has a `scr` attribute. Applicable elements are [non-decorative](#decorative), [included in the accessibility tree](#included-in-the-accessibility-tree), and have an [accessible name](#accessible-name) that is equivalent to the [filename](#filename) specified in the `src` attribute. Difference in letter casing, and forward and trailing whitespace should be ignored.
 
 ### Expectation
 
@@ -41,10 +41,18 @@ Each test target has an accessible name that serves only an equivalent purpose o
 
 ### Pass example 1
 
-The `img` element's accessible name uses the filename and accurately describes the image.
+The `img` element's accessible name uses the filename which accurately describes the image.
 
 ```html
 <img src="https://www.w3.org/WAI/demos/bad/img/w3c" alt="w3c">
+```
+
+### Pass example 2
+
+The `input` element with a `type` of `image` has an accessible name that uses the filename which accurately describes the image.
+
+```html
+<input type="image" src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="W3C">
 ```
 
 ### Failure example 1
@@ -56,6 +64,14 @@ The `img` element's accessible name matches the image filename which does not ac
 ```
 
 ### Failure example 2
+
+The `input` element with a `type` of `image` has an accessible name that uses the filename which does not accurately describes the image.
+
+```html
+<input type="image" src="https://www.w3.org/WAI/demos/bad/before/img/top_weather.gif" alt="top_weather">
+```
+
+### Failure example 3
 
 The `img` element's accessible name matches the image filename. In this example the file extension is redundant and results in the accessible name not accurately describing the image.
 

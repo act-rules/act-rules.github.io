@@ -1,5 +1,6 @@
 ---
 name: video only has audio alternative
+rule_type: atomic
 description: |
   Non-streaming `video` elements without audio must have an audio alternative
 

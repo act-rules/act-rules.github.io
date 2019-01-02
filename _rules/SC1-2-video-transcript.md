@@ -1,5 +1,6 @@
 ---
 name: video element transcript
+rule_type: atomic
 description: |
   Non-streaming `video` elements must have all audio and visual information available in a transcript.
 

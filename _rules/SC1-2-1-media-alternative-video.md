@@ -1,6 +1,8 @@
 ---
 name: Video-only as a media alternative for text
 
+rule_type: atomic
+
 description: |
   This rule checks non-streaming silent `video` is a media alternative for text on the page.
 

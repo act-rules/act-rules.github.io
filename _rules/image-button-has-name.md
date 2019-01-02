@@ -62,7 +62,7 @@ Image button element with accessible name through `aria-label`
 
 #### Passed example 3
 
-Image button element with accessible name through `titl` attribute
+Image button element with accessible name through `title` attribute
 
 ```html
 <input type="image" name="submit" src="button.gif" title="Submit" />

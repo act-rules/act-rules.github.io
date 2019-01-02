@@ -1,5 +1,6 @@
 ---
 name: Video only element has description track
+rule_type: atomic
 description: |
   This rule checks that description tracks that come with non-streaming `video` elements, without audio, are descriptive.
 

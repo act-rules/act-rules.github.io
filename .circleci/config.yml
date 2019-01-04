@@ -1,15 +1,34 @@
 version: 2
+
+defaults: &defaults
+  docker:
+    - image: circleci/ruby:2.4.3-node-browsers
+
+restore_dependency_cache: &restore_dependency_cache
+  restore_cache:
+    keys:
+      - v1-npm-cache-{{ checksum "package.json" }}
+      - v1-npm-cache-
+
 jobs:
-  deploy:
-    docker:
-      - image: circleci/ruby:2.4.3-node-browsers
+  dependencies:
+    <<: *defaults
     steps:
       - checkout
       - run: npm install
       - run: bundle install
+      - save_cache:
+          key: v1-npm-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+  deploy:
+    <<: *defaults
+    steps:
+      - checkout
+      - <<: *restore_dependency_cache
       - run: bundle exec jekyll build
       - deploy:
-          name: Deploy Release to GitHub
+          name: Deploy to GitHub Pages
           command: |
             if [ $CIRCLE_BRANCH == 'master' ]; then
               bash .circleci/publish-gh-pages.sh
@@ -18,7 +37,10 @@ workflows:
   version: 2
   build:
     jobs:
-      - deploy
-         filters:
+      - dependencies
+      - deploy:
+          requires:
+            - dependencies
+          filters:
             branches:
               only: master

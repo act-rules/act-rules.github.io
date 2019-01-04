@@ -16,7 +16,6 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      - run: bundle install
       - save_cache:
           key: v1-npm-cache-{{ checksum "package.json" }}
           paths:
@@ -26,6 +25,7 @@ jobs:
     steps:
       - checkout
       - <<: *restore_dependency_cache
+      - run: bundle install
       - run: bundle exec jekyll build
       - deploy:
           name: Deploy to GitHub Pages

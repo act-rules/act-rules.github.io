@@ -123,7 +123,7 @@
               <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="{{ site.baseurl }}/">
-              Auto-WCAG
+              {{ site.title }}
             </a>
           </div>
           <div id="navbar" class="collapse navbar-collapse">
@@ -246,9 +246,8 @@
               <!-- Github -->
               <li class="dropdown">
                 <a
-                  href="https://github.com/auto-wcag/auto-wcag/"
-                  role="link"
-                >
+                  href="{{site.data.package.repository.url}}"
+                  role="link">
                   <i class="fab fa-github scale-2x"></i>
                 </a>
               </li>
@@ -276,7 +275,7 @@
                   <h3 class="promo-title">Contribute</h3>
                   <br />
                   <a
-                    href="https://github.com/auto-wcag/auto-wcag/"
+                    href="{{site.data.package.repository.url}}"
                     role="link"
                     class="desc"
                   >
@@ -285,7 +284,7 @@
                   <br /><br /><br /><br />
                   <a
                     class="btn btn-cta"
-                    href="https://github.com/auto-wcag/auto-wcag/"
+                    href="{{site.data.package.repository.url}}"
                   >
                     GitHub
                   </a>
@@ -298,10 +297,10 @@
                     <p>
                       Contributing is open to anyone. We welcome any
                       new issues or pull requests for changes.
-                      Auto-WCAG has conference calls every 4 weeks. If
+                      {{site.title}} has conference calls every 4 weeks. If
                       you are interested in becoming an active
                       contributor or reviewer, we ask that you join
-                      the Auto-WCAG community group through the W3C
+                      the {{site.title}} community group through the W3C
                       Website. This requires setting up a W3C account,
                       may require approval by the organization you
                       work for if they are a W3C member.
@@ -309,12 +308,12 @@
                     <a
                       class="btn btn-cta"
                       href="{{ site.baseurl }}/pages/contribute.html"
-                      >Learn more about contributing to Auto-WCAG</a
+                      >Learn more about contributing to {{site.title}}</a
                     >
                     <a
                       class="btn btn-cta"
                       href="https://www.w3.org/community/wp-login.php?redirect_to=%2Fcommunity%2Fauto-wcag%2Fjoin"
-                      >Join the Auto-WcAG community group now!</a
+                      >Join the {{site.title}} community group now!</a
                     >
                   </div>
                   <!--//desc-->

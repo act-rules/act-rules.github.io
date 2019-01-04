@@ -15,7 +15,7 @@ rm -R _site/
 
 # commit and push
 git add -fA
-git commit --allow-empty -m "$(git log develop -1 --pretty=%B)"
+git commit --allow-empty -m "update gh pages"
 git push origin test-deploy
 
 echo "deployed successfully"

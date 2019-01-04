@@ -53,3 +53,4 @@ exclude:
 - _drafts/early-stage
 - _drafts/outdated
 - _rules/outdated
+- pages/design/outdated

@@ -3,8 +3,8 @@ git config user.name "$USER_NAME"
 git config user.email "$USER_EMAIL"
 
 # checkout & pull gh-pages branch
-git checkout test-deploy
-git pull origin test-deploy
+git checkout gh-pages
+git pull origin gh-pages
 
 # remove all files except the generated site directory and required git folders
 find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
@@ -16,6 +16,6 @@ rm -R _site/
 # commit and push
 git add -fA
 git commit --allow-empty -m "update gh pages"
-git push origin test-deploy
+git push origin gh-pages
 
 echo "deployed successfully"

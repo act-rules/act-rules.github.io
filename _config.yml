@@ -53,3 +53,11 @@ exclude:
 - _drafts/early-stage
 - _drafts/outdated
 - _rules/outdated
+- draft-tests
+- node_modules
+- package.json
+- package-lock.json
+- Gemfile
+- Gemfile.lock
+- README.md
+- wcag-url-generator.js

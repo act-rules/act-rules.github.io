@@ -37,7 +37,10 @@ workflows:
   version: 2
   build:
     jobs:
-      - dependencies
+      - dependencies:
+          filters:
+            branches:
+              only: master
       - deploy:
           requires:
             - dependencies

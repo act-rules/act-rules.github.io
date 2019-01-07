@@ -93,7 +93,7 @@ Content made unfocusable through disabled.
 ```html
 <div aria-hidden="true">
     <div aria-hidden="false">
-        <button>Some button</button>
+        <button tabindex="-1">Some button</button>
     </div>
 </div>
 ```

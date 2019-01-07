@@ -7,7 +7,7 @@ git checkout gh-pages
 git pull origin gh-pages
 
 # remove all files except the generated site directory and required git folders
-find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
+find . -maxdepth 1 ! -name '_site' ! -name '.circleci' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
 
 # move generated site in the root folder and remove the empty generated site folder
 mv _site/* .

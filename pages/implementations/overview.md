@@ -1,26 +1,10 @@
 ---
 layout: default
-title: Implementations & Coverage Report
+title: Implementation Overview
 ---
 
-<!-- List of implementations -->
-<table class="table table-striped">
-  <thead>
-    <tr>
-			<th width='3%'>#</th>
-			<th>Test System Name</th>
-      <th>Version</th>
-			<th>Created By</th>
-			<th>Report</th>
-    </tr>
-	</thead>
-  <tbody id='pageImplementationsTblBody' >
-    <!-- Rows are injected dynamically -->
-  </tbody>
-</table>
+The rules authored in the {{site.title}} group, comes with several test cases, which are designed for easy use by test tools.
 
-<!-- Javascript -->
-<script type="text/javascript" src="{{site.baseurl}}/assets/js/page-implementations.js"></script>
 
 # {{ site.title }} Test Cases
 
@@ -29,11 +13,8 @@ The test cases of {{ site.title }} rules are made available at [{{site.baseurl}}
 A test case for a given rule is represented as shown by the below excerpt, where:
 - `url`: is the standalone page containing the test case.
 - `expected`: is the expected outcome of the test case, pertaining to the rule.
-- `ruleId`: {}
-- `rule`: 
-- `ruleUrl`:
-
-<!-- TODO: the above structure may have to change due to file name changes -->
+- `ruleId`: is the unique identifier for the rule.
+- `rulePage`: is the page containing a detailed rule description.
 
 ```json
  "a11y-testcases": [
@@ -41,12 +22,7 @@ A test case for a given rule is represented as shown by the below excerpt, where
       "url": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC1-1-1-image-has-name_passed_example_1.html",
       "expected": "passed",
       "ruleId": "SC1-1-1-image-has-name",
-      "rulePage": "https://auto-wcag.github.io/auto-wcag/rules/SC1-1-1-image-has-name.html",
-      "rule": {
-        "id": "xxxxxx",
-        "title": "Image has name",
-        "url": "https://auto-wcag.github.io/auto-wcag/rules/SC1-1-1-image-has-name.html"
-      }
+      "rulePage": "https://auto-wcag.github.io/auto-wcag/rules/SC1-1-1-image-has-name.html"
     },
     ...
  ]
@@ -54,9 +30,11 @@ A test case for a given rule is represented as shown by the below excerpt, where
 
 The above test cases can be consumed to run against a test tool. The generated results are welcome to be submitted as implementation to the auto-wcag community.
 
+
 # {{ site.title }} Implementation
 
 Submitting implementations from various test tools, helps not only showcase the coverage of test cases authored for the rule, but to build a robust understanding of the WCAG rules and the respective implementations.
+
 Any test tool authors are welcome to submit the implementation results for the above test cases to the {{site.title}} community. 
 The implementation manifest should be a valid [JSON-LD](https://json-ld.org/spec/latest/json-ld/) document, where the assertions are expressed using [EARL](https://www.w3.org/TR/EARL10-Schema/).
 The manifest contains a list of assertion results for each of the test cases. 
@@ -130,6 +108,9 @@ An example assertion for a test case, is as below:
   ...
 ]
 ```
+
+The implementation report can be made available in the above format via a URL.
+
 
 # Available tooling
 

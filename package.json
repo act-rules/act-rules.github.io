@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "auto-wcag",
   "scripts": {
+    "start": "npm run dev",
+    "dev": "npm install && bundle install && bundle exec jekyll serve",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bundle exec jekyll serve",
     "build": "bundle exec jekyll build",
     "generate-wcag-data": "node wcag-url-generator",
     "proof": "bundle exec jekyll build && bundle exec htmlproofer ./_site --only-4xx --check-html --allow_hash_href --assume-extension --alt-ignore '/.*/'",

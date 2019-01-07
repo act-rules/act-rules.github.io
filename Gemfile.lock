@@ -91,7 +91,7 @@ PLATFORMS
 
 DEPENDENCIES
   html-proofer
-  jekyll
+  jekyll (>= 3.8.4)
   json
   rack (>= 2.0.6)
   rack-test

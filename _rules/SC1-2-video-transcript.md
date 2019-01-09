@@ -22,7 +22,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any [non-streaming](#non-streaming) `video` element [visible](#visible) where the video contains audio.
+The rule applies to every [non-streaming](#non-streaming) `video` element that is [visible](#visible) where the video contains audio.
 
 ### Expectation
 
@@ -55,7 +55,7 @@ There are no major accessibility support issues known for this rule.
 A video element with a text transcript on the same page.
 
 ```html
-<video controls data-rule-target>
+<video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
@@ -69,7 +69,7 @@ Then he stops to scratch his bottom.</p>
 A video element with a link to a text transcript on a different page.
 
 ```html
-<video controls data-rule-target>
+<video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
@@ -83,7 +83,7 @@ A video element with a link to a text transcript on a different page.
 A video element with an incorrect text transcript on the same page.
 
 ```html
-<video controls data-rule-target>
+<video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
@@ -97,7 +97,7 @@ Then he stops to scratch his bottom.</p>
 A video element with a link to an incorrect text transcript on a different page.
 
 ```html
-<video controls data-rule-target>
+<video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
@@ -111,7 +111,7 @@ A video element with a link to an incorrect text transcript on a different page.
 A video element that is not visible on the page.
 
 ```html
-<video controls style="display: none;" data-rule-target>
+<video controls style="display: none;">
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
@@ -123,7 +123,7 @@ A video element that is not visible on the page.
 A video element without audio.
 
 ```html
-<video controls data-rule-target>
+<video controls>
   <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>

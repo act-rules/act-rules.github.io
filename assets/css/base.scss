@@ -94,8 +94,8 @@ select {
 }
 
 .dropdown-toggle:focus {
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset:-2px;
+	outline: 5px auto rgba(256, 256, 256, 0.65);
+	outline-offset: -2px;
 }
 
 .navbar{

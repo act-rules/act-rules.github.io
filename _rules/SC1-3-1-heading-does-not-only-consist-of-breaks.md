@@ -123,3 +123,11 @@ Element does not have the semantic role of heading
 ```html
 <div></div>
 ```
+
+#### Inapplicable example 4
+
+`h2`element is not included in the accessibility tree
+
+```html
+<h2 aria-hidden="true"></h2>
+```

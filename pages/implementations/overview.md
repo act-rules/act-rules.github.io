@@ -3,12 +3,15 @@ layout: default
 title: Implementation Overview
 ---
 
-The rules authored in the {{site.title}} group, comes with several test cases, which are designed for easy use by test tools.
+The {{site.title}} rules are authored for reliable `WCAG` testing. In order to facilitate this goal each rule has a variety of test cases in the categories of `passed`, `failed` and `inapplicable`. Incorporating a rule from the {{site.title}} into your test tool, is considered an **implementation**. The test cases provided for the rules can be used to infer if an implementation yields the `expected` results.
 
+In the spirit of Open source collaboration, the {{site.title}} welcomes [contributions]({{ site.baseurl }}/pages/contribute.html) of implementation statistics, to aid as a coverage metric of the rules. This in turn helps to improve the accuracy and completeness of both the rules and the test tools.
 
-# {{ site.title }} Test Cases
+The below sections go into greater detail on the structure of a test case, tools for using the test cases, the anatomy of an implementation report and how to submit an implementation report, back to the community.
 
-The test cases of {{ site.title }} rules are made available at [{{site.baseurl}}/auto-wcag-testcases/testcases.json]({{site.baseurl}}/auto-wcag-testcases/testcases.json).
+## {{ site.title }} Test Cases
+
+The rules authored in the {{site.title}}, comes with several test cases, which are designed for easy consumption by test tools. The test cases are made available regularly at [{{site.baseurl}}/auto-wcag-testcases/testcases.json]({{site.baseurl}}/auto-wcag-testcases/testcases.json).
 
 A test case for a given rule is represented as shown by the below excerpt, where:
 - `url`: is the standalone page containing the test case.
@@ -28,18 +31,25 @@ A test case for a given rule is represented as shown by the below excerpt, where
  ]
 ```
 
-The above test cases can be consumed to run against a test tool. The generated results are welcome to be submitted as implementation to the auto-wcag community.
+
+## Available tooling for using {{site.title}} Test Cases
+
+The community has authored an open source tool, that demonstrates consumption of the {{site.title}} test cases against a test tool. 
+
+Contributions to the `testrunner` tool, and or other tooling of similar nature are welcome. 
+
+Refer [contribution guide]({{ site.baseurl }}/pages/contribute.html).
+
+Tool Name | Tool URL | Language |  Tool Description
+---|---|---|---
+`testrunner` | [https://github.com/auto-wcag/testrunner](https://github.com/auto-wcag/testrunner) | JavaScript | A [puppeteer](https://github.com/GoogleChrome/puppeteer) based implementation that allows running a configurable test tool against all the above {{ site.title }} test cases on a per page basis, and returns raw results.
 
 
-# {{ site.title }} Implementation
+## {{ site.title }} Implementation Report
 
-Submitting implementations from various test tools, helps not only showcase the coverage of test cases authored for the rule, but to build a robust understanding of the WCAG rules and the respective implementations.
+Incorporating a {{site.title}} rule into your test tool, is considered an **implementation**. Submitting implementations from various test tools, helps not only showcase the coverage of test cases authored for the rule, but to build a robust understanding of the WCAG rules and the respective implementations.
 
-Any test tool authors are welcome to submit the implementation results for the above test cases to the {{site.title}} community. 
-The implementation manifest should be a valid [JSON-LD](https://json-ld.org/spec/latest/json-ld/) document, where the assertions are expressed using [EARL](https://www.w3.org/TR/EARL10-Schema/).
-The manifest contains a list of assertion results for each of the test cases. 
-
-An example assertion for a test case, is as below:
+Test tool authors are welcome to submit the implementation results for the above test cases to the {{site.title}} community. The implementation report should be a valid [JSON-LD](https://json-ld.org/spec/latest/json-ld/) document, where the assertions are expressed using [EARL](https://www.w3.org/TR/EARL10-Schema/). Also, note that the report contains a list of assertion results for each of the test cases. An example assertion for a test case, is as below:
 
 ```json
 [
@@ -70,6 +80,9 @@ An example assertion for a test case, is as below:
       },
       "pointer": {
         "@type": "ptr:CSSSelectorPointer"
+      },
+      "test": { 
+        "@type": "@id" 
       }
     },
     "@type": "WebPage",
@@ -79,7 +92,7 @@ An example assertion for a test case, is as below:
         "@type": "Assertion",
         "mode": "earl:automatic",
         "assertedBy": {
-          "@id": "==== YOUR TOOL ID & VERSION ====",
+          "@id": "URL by which the specific version of your tool can be identified",
           "@type": [
             "earl:Assertor",
             "earl:Software",
@@ -92,10 +105,7 @@ An example assertion for a test case, is as below:
             "foaf:name": "==== YOUR ORGANIZATION NAME ===="
           }
         },
-        "test": {
-          "@type": "TestCase",
-          "@id": "==== LINK TO RULE DESCRIPTION ===="
-        },
+        "test": "Link to rule description",
         "result": {
           "@type": "TestResult",
           "info": "Ensures <img> elements have alternate text or a role of none or presentation",
@@ -109,14 +119,19 @@ An example assertion for a test case, is as below:
 ]
 ```
 
-The implementation report can be made available in the above format via a URL.
+## How to submit your implementation metrics
 
+In order to submit your implementation metrics, it is recommended that the report be made available via a URL, in the above format, and an issue be opened for the same requesting that implementation metric be added to the site data.
 
-# Available tooling
+The implementations are interpreted by the site, which are then listed in the [coverage report]({{ site.baseurl }}/pages/implementations/coverage.html). Each rule also has an implementation flag based on the above reports. The flags are as below:
 
-Below is a list of Open Source tooling, that enables both consumption of the {{site.title}} test cases, and for the generation of the manifest.
+Flag | Description
+---|---
+`New` | The rule has no implementation
+`In progress` | The rule has at least one implementation but no more than 2 implementations
+`Done` | The rule has 3 or more implementations
 
-
-Tool Name | Tool URL | Language |  Tool Description
----|---|---|---
-Testrunner | https://github.com/auto-wcag/testrunner | JavaScript | A [puppeteer](https://github.com/GoogleChrome/puppeteer) based implementation that allows running a configurable test tool against all the above {{ site.title }} test cases on a per page basis, and returns raw results.
+See pages:
+- [Coverage Metrics]({{ site.baseurl }}/pages/implementations/coverage.html)
+- [Rule Implementation Metrics]({{ site.baseurl }}/pages/rules.html)
+  

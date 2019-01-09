@@ -16,7 +16,10 @@ restore_dependency_cache: &restore_dependency_cache
       - v1-npm-cache-
 
 jobs:
-  base: echo circleci base job
+  base: 
+    <<: *defaults
+    steps: 
+      - run: echo circleci base job
   dependencies:
     <<: *defaults
     steps:

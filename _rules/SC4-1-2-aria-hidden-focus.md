@@ -122,13 +122,25 @@ Focusable form field, incorrectly disabled.
 
 #### Failed example 3
 
+`aria-hidden=false` does not negate aria-hidden true.	
+
+ ```html	
+<div aria-hidden="true">
+    <div aria-hidden="false">
+        <button>Some button</button>
+    </div>
+</div>
+```
+
+#### Failed example 4
+
 Focusable content through `tabindex`.
 
 ```html
 <p tabindex="0" aria-hidden="true">Some text</p>
 ```
 
-#### Failed example 4
+#### Failed example 5
 
 Focusable summary element
 

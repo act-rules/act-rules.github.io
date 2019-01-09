@@ -1,3 +1,1 @@
-# This file is essential to disable jekyll static site generation (so that ghpages does not automatically pick up changes into master branch).
-# This site is served via gh-pages by dynamic building using a custom deployer - [Auto WCAG Deployer](https://github.com/auto-wcag/auto-wcag-deployer)
-# The deployer picks up the changes via a webhook.
+# disable gh-pages generation

@@ -1,6 +1,8 @@
 ---
 name: HTML has lang attribute
 
+rule_type: atomic
+
 description: |
   This rule checks that the `html` element has a non-empty `lang` or `xml:lang` attribute.
 
@@ -19,7 +21,7 @@ authors:
 
 ### Applicability
 
-The root element of the page, if it is an `html` element.
+The root element of the [page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element.
 
 ### Expectation
 

@@ -1,6 +1,8 @@
 ---
 name: Video-only as a media alternative for text
 
+rule_type: atomic
+
 description: |
   This rule checks non-streaming silent `video` is a media alternative for text on the page.
 
@@ -18,23 +20,21 @@ authors:
 
 ### Applicability
 
-The rule applies to any [non-streaming][] `video` element that is [visible on the page](#visible-on-the-page), where the video doesn't contains audio.
+The rule applies to any [non-streaming](#non-streaming) `video` element that is [visible](#visible), where the video doesn't contain audio.
 
 ### Expectation 1
 
-All the information contained in each target element is available as text (directly or via text alternatives) that is [visible on the page](#visible-on-the-page) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+All the information contained in each target element is available as text (directly or via text alternatives) that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation 2
 
-Each target element has a label indicating the `video` is an alternative to text on the page.
+Each target element is labelled as a video alternative for text on the page. This label is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
-### Expectation 3
-
-The label (from expectation 2) is [visible on the page](#visible-on-the-page) and [included in the accessibility tree](#included-in-the-accessibility-tree)
+**Note:** The term label does not refer to the `label` element.
 
 ## Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the poster.
+This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
 ## Accessibility support
 
@@ -42,7 +42,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- 
+- [Understanding SC 1.2.1:Audio-only and Video-only (Prerecorded)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html) 
 
 ## Test cases
 

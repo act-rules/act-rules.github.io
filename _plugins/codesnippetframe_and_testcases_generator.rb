@@ -157,8 +157,6 @@ module Jekyll
 				
 					# construct file name
 					test_index = testcases[test_case_type.to_s].length + 1
-
-					# puts test_count[test_case_type]
 					file_type = get_highlight_lang(content_including_tags[0]).gsub(/[[:space:]]/, '')
 					file_name = "#{doc_name}_#{test_case_type}_example_#{test_index}.#{file_type}"
 					# construct file path

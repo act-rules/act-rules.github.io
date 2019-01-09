@@ -172,20 +172,19 @@ module Jekyll
 				
 					# construct file name
 					test_index = testcases[test_case_type.to_s].length + 1
-
-					# puts test_count[test_case_type]
 					file_type = get_highlight_lang(content_including_tags[0]).gsub(/[[:space:]]/, '')
 					file_name = "#{doc_name}_#{test_case_type}_example_#{test_index}.#{file_type}"
 					# construct file path
 					file_path = site.source + '/' + PKG['config']['testcases-embeds-dir'] + file_name
 					# construct file url
 					file_url = '../' + PKG['config']['testcases-embeds-dir'] + file_name
+					temp_file_url = "#{PKG['config']['site-url-prefix']}/#{PKG['config']['testcases-export-dir']}assets/" + file_name
 					# construct file content
 					file_content = get_file_content(content_including_tags)
 
 					# constuct a hash which contains all the 
 					# code-snippet and iframe embedded
-					embedded_testcases_hash[indices[$i].to_s] = render_code_and_frame(file_content, file_url, should_not_render_frame)
+					embedded_testcases_hash[indices[$i].to_s] = render_code_and_frame(file_content, temp_file_url, should_not_render_frame)
 					testcase_url = file_url.gsub('../_testcases-embeds/', 'assets/')				
 					tc_meta = {}
 					tc_meta["url"] = testcase_url

@@ -16,6 +16,7 @@ restore_dependency_cache: &restore_dependency_cache
       - v1-npm-cache-
 
 jobs:
+  base: echo circleci base job
   dependencies:
     <<: *defaults
     steps:
@@ -43,6 +44,7 @@ workflows:
   version: 2
   build_and_deploy:
     jobs:
+      - base
       - dependencies:
           filters:
             branches:

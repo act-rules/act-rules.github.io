@@ -54,12 +54,12 @@ There are no major accessibility support issues known for this rule.
 
 ## Passed
 
-#### Pass example 1
+#### Passed example 1
 
 A video element with a text transcript on the same page.
 
 ```html
-<video controls data-rule-target>
+<video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
@@ -68,26 +68,26 @@ He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 A video element with a link to a text transcript on a different page.
 
 ```html
-<video controls data-rule-target>
+<video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
-<a href="/test-assets/rabbit-video-transcript.html">Transcript</p>
+<a href="/test-assets/rabbit-video-transcript.html">Transcript</a>
 ```
 
 ## Failed
 
-#### Fail example 1
+#### Failed example 1
 
 A video element with an incorrect text transcript on the same page.
 
 ```html
-<video controls data-rule-target>
+<video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
@@ -96,16 +96,16 @@ He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 A video element with a link to an incorrect text transcript on a different page.
 
 ```html
-<video controls data-rule-target>
+<video controls>
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
-<a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</p>
+<a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</a>
 ```
 
 ## Inapplicable
@@ -115,11 +115,11 @@ A video element with a link to an incorrect text transcript on a different page.
 A video element that is not visible on the page.
 
 ```html
-<video controls style="display: none;" data-rule-target>
+<video controls style="display: none;">
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
-<a href="/test-assets/rabbit-video-transcript.html">Transcript</p>
+<a href="/test-assets/rabbit-video-transcript.html">Transcript</a>
 ```
 
 #### Inapplicable example 2
@@ -127,9 +127,9 @@ A video element that is not visible on the page.
 A video element without audio.
 
 ```html
-<video controls data-rule-target>
+<video controls>
   <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<a href="/test-assets/rabbit-video-transcript.html">Transcript</p>
+<a href="/test-assets/rabbit-video-transcript.html">Transcript</a>
 ```

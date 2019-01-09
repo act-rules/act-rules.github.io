@@ -1,5 +1,7 @@
 ---
-name: unique element id attributes
+name: Id attribute is unique
+rule_type: atomic
+
 description: |
   This rule checks that all `id` attribute values on a single page are unique.
 
@@ -18,11 +20,13 @@ authors:
 
 ### Applicability
 
-Any element that has an `id` attribute.
+Any `id` attribute specified on an HTML or SVG element.
+
+**Note:** Elements that are neither [included in the accessibility tree](#included-in-the-accessibility-tree) nor [visible on the page](#visible-on-the-page) are still considered for this rule.
 
 ### Expectation
 
-Each test target has an `id` attribute value that is unique within the [document context](#document-context) of the element.
+The value of the attribute is unique across all other `id` attributes specified on HTML or SVG elements that exist within the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the element on which the applicable `id` attribute is specified.
 
 ## Assumptions
 
@@ -42,63 +46,79 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
+
+Only one `id` within the document context
 
 ```html
 <div id="my-div"> This is my first element</div>
 ```
 
-#### Pass example 2
+#### Passed example 2
+
+All `id`s are unique within the document context
 
 ```html
-<div id="my-div1" data-rule-target> This is my first element</div>
-<div id="my-div2" data-rule-target> This is my second element</div>
-<svg id="my-div3" data-rule-target> This is my third element</svg>
+<div id="my-div1"> This is my first element</div>
+<div id="my-div2"> This is my second element</div>
+<svg id="my-div3"> This is my third element</svg>
 ```
 
-#### Pass example 3
+#### Passed example 3
+
+`id` in shadow DOM is for the same element as `id` in light DOM
 
 ```html
-<div id="my-elm" data-rule-target></div>
+<div id="my-elm"></div>
 <script>
   var myElm = document.getElementById('my-elm');
   var shadow = myElm.attachShadow({ mode: 'open' });
-  shadow.innerHTML = '<b id="my-elm" data-rule-target><slot></slot></b>';
+  shadow.innerHTML = '<b id="my-elm" ><slot></slot></b>';
 </script>
 ```
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
+
+Several elements have identical `id`
 
 ```html
-<div id="my-div" data-rule-target> This is my first element</div>
-<div id="my-div" data-rule-target> This is my second element</div>
+<div id="my-div"> This is my first element</div>
+<div id="my-div"> This is my second element</div>
 ```
 
-#### Fail example 2
+#### Failed example 2
+
+Elements of different types have identical `id`
 
 ```html
-<div data-rule-target id="my-div"> This is my first element</div>
-<svg data-rule-target id="my-div"> This is my second element</svg>
+<div  id="my-div"> This is my first element</div>
+<svg  id="my-div"> This is my second element</svg>
 ```
 
-#### Fail example 3
+#### Failed example 3
+
+Having `display: none` on an element still makes it applicable to this rule
 
 ```html
-<div data-rule-target id="my-div" style="display:none"> This is my first element</div>
-<svg data-rule-target id="my-div"> This is my second element</svg>
+<div id="my-div" style="display:none"> This is my first element</div>
+<svg id="my-div"> This is my second element</svg>
 ```
 
 ### Inapplicable
 
 #### Inapplicable example 1
 
+No `id` on element
+
 ```html
 <div>This is my first element</div>
 ```
 
 #### Inapplicable example 2
+
+XML `id` not applicable to this rule
 
 ```html
 <div xml:id="my-div">This is my first element</div>

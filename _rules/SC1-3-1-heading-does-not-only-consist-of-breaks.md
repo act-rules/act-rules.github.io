@@ -19,7 +19,7 @@ authors:
 
 ### Applicability
 
-This rule applies to any element with the [semantic role](#semantic-role) of `heading` that does not contain unicode characters in other [categories]((https://www.fileformat.info/info/unicode/category/index.htm)) than the seperator categories.
+This rule applies to any element with the [semantic role](#semantic-role) of `heading` that is [included in the accessibility tree](#included-in-the-accessibility-tree), and does not contain unicode characters in other [categories]((https://www.fileformat.info/info/unicode/category/index.htm)) than the seperator categories.
 
 ### Expectation 1
 

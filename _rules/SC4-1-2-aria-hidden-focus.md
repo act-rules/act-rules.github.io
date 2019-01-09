@@ -88,7 +88,7 @@ Content made unfocusable through disabled.
 
 #### Passed example 5
 
-`aria-hidden` can't be reset once you've set it to true on an ancestor.
+`aria-hidden` can't be reset once set to true on an ancestor.
 
 ```html
 <div aria-hidden="true">
@@ -122,7 +122,7 @@ Focusable form field, incorrectly disabled.
 
 #### Failed example 3
 
-`aria-hidden=false` does not negate aria-hidden true.	
+`aria-hidden` can't be reset once set to true on an ancestor.
 
  ```html	
 <div aria-hidden="true">

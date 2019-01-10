@@ -2,7 +2,7 @@
 name: Heading does not only consist of breaks
 rule_type: atomic
 description: | 
-  This rule checks that heading elements do not have `br`, `wbr` elements or unicode separator characters as their only content.
+  This rule checks that heading elements do not have `br` elements or unicode separator characters as their only content.
 
 success_criterion: 
 - 1.3.1 # Info and Relationships (A)
@@ -23,7 +23,7 @@ This rule applies to any element with the [semantic role](#semantic-role) of `he
 
 ### Expectation 1
 
-The target element does not contain HTML `br` or `wbr` elements.
+The target element does not contain HTML `br` elements.
 
 ### Expectation 2
 
@@ -35,13 +35,12 @@ This rule assumes that having an element that unintentionally shows up programat
 
 ## Accessibility Support
 
-Handling of headings containing only `br` and `wbr` elements and unicode characters in the seperator categories varies between different assistive technologies. This means that even though the outcome of this rule is *failed*, users of certain assistive technologies might not experience an issue.
+Handling of headings containing only `br` elements and unicode characters in the seperator categories varies between different assistive technologies. This means that even though the outcome of this rule is *failed*, users of certain assistive technologies might not experience an issue.
 
 ## Background
 
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [The br element](https://www.w3.org/TR/html/textlevel-semantics.html#the-br-element)
-- [The wbr element](https://www.w3.org/TR/html/textlevel-semantics.html#the-wbr-element)
 - [Unicode Character Categories](https://www.fileformat.info/info/unicode/category/index.htm)
 
 ## Test Cases
@@ -83,14 +82,6 @@ Element with the semantic role of heading is empty
 ```
 
 #### Failed example 2
-
-`h2` contains `wbr` element as only content
-
-```html
-<h2><wbr /></h2>
-```
-
-#### Failed example 3
 
 `h2` contains `&nbsp`(no break space character) as only content
 

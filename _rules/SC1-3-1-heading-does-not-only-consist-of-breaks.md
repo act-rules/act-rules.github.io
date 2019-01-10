@@ -19,15 +19,13 @@ authors:
 
 ### Applicability
 
-This rule applies to any element with the [semantic role](#semantic-role) of `heading` that is [included in the accessibility tree](#included-in-the-accessibility-tree), and does not contain unicode characters in other [categories]((https://www.fileformat.info/info/unicode/category/index.htm)) than the seperator categories.
+This rule applies to any HTML element with the [semantic role](#semantic-role) of `heading` that is [included in the accessibility tree].
 
 ### Expectation 1
 
-The target element does not contain HTML `br` elements.
+None of the target elements has an [accessible name](#accessible-name) that contains only spaces.
 
-### Expectation 2
-
-The content of each target element does not contain unicode characters in the seperator categories. 
+**Note:** In the [Accessible Name and Description Computation](https://www.w3.org/TR/accname-1.1/#mapping_additional_nd_te) all carriage returns, newlines, tabs, and form-feeds are replaced with a single space.
 
 ## Assumptions
 
@@ -35,7 +33,7 @@ This rule assumes that having an element that unintentionally shows up programat
 
 ## Accessibility Support
 
-Handling of headings containing only `br` elements and unicode characters in the seperator categories varies between different assistive technologies. This means that even though the outcome of this rule is *failed*, users of certain assistive technologies might not experience an issue.
+Handling of headings containing only carriage returns, newlines, tabs, and form-feeds varies between different assistive technologies and browsers. This means that even though the outcome of this rule is *failed*, users of certain assistive technologies might not experience an issue.
 
 ## Background
 
@@ -57,18 +55,18 @@ Handling of headings containing only `br` elements and unicode characters in the
 
 #### Passed example 2
 
-`h2` element only contains a space, not a unicode character in the seperator character categories
-
-```html
-<h2> </h2>
-```
-
-#### Passed example 3
-
 Element with the semantic role of heading is empty
 
 ```html
 <div role="heading"></div>
+```
+
+#### Passed example 3
+
+`h2` element has other content than spaces
+
+```html
+<h2>'</h2>
 ```
 
 ### Failed
@@ -89,25 +87,17 @@ Element with the semantic role of heading is empty
 <h2>&nbsp </h2>
 ```
 
+#### Failed example 3
+
+`h2` element only contains a space
+
+```html
+<h2> </h2>
+```
+
 ### Inapplicable
 
 #### Inapplicable example 1
-
-`h2` element contains unicode characters in other categories than the seperator categories.
-
-```html
-<h2>This is a heading</h2>
-```
-
-#### Inapplicable example 2
-
-`h2` element contains unicode characters in other categories than the seperator categories.
-
-```html
-<h2>#$@&%*!</h2>
-```
-
-#### Inapplicable example 3
 
 Element does not have the semantic role of heading
 
@@ -115,7 +105,7 @@ Element does not have the semantic role of heading
 <div></div>
 ```
 
-#### Inapplicable example 4
+#### Inapplicable example 2
 
 `h2`element is not included in the accessibility tree
 

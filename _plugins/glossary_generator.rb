@@ -110,7 +110,7 @@ module Jekyll
 				hash.each do |k, v|
 					if(line['#' + k])
 						definition = "<div class='definition-item'>"\
-							"<h3><a id='#{v["key"]}' href='#{site.baseurl}#{v['url']}'>#{ v['title']}</a></h3>"\
+							"<h3><a id='#{v["key"]}' href='#{site.data['package']['pages']['url']}#{v['url']}'>#{ v['title']}</a></h3>"\
 							"#{ get_page_content(site, v['url']) }"\
 						'</div>'
 						# only add if definition does not exist already

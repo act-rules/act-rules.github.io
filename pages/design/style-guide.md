@@ -1,5 +1,5 @@
 ---
-title: Auto-WCAG Rules Style Guide
+title: Style Guide
 ---
 
 This style guide provides instructions on how to formulate and format your rules. **[Learn how to design a rule](rule-design.html)**, before starting with this guide.
@@ -8,7 +8,7 @@ This style guide provides instructions on how to formulate and format your rules
 
 Rules are written in markdown, specifically GitHub Flavored Markdown (GFM). Markdown is a markup language designed for easy readability. It is a way to formalize the way many people would add structure to their page if they were using a plain text format. For example, an empty line to indicate the start of a new paragraph, or use of `-` or `*` or `1.`, `2.`, etc. at the beginning of a line to indicate an unordered or ordered list.
 
-The markdown files will be presented in two different places. On the Auto-WCAG Rules website, which uses the Kramdown library to convert the markdown to HTML. On the GitHub project the documents can also be used. This means that the rules are processed by two similar *but slightly different* markdown libraries. 
+The markdown files will be presented in two different places. On the {{site.title}} Rules website, which uses the Kramdown library to convert the markdown to HTML. On the GitHub project the documents can also be used. This means that the rules are processed by two similar *but slightly different* markdown libraries. 
 
 ## Formatting And Language
 

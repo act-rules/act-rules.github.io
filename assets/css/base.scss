@@ -164,6 +164,15 @@ select {
 
 .container {
 
+	.page-header {
+		font-weight: bold;
+		text-transform: capitalize;
+	}
+
+	.padding-15{
+		padding: 15px;
+	}
+
 	.modal-dialog{
 		width: 85%;
 	}

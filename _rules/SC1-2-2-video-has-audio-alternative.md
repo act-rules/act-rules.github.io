@@ -11,7 +11,7 @@ success_criterion:
 
 atomic_rules:
 - SC1-2-video-media-alternative
-- SC1-2-2-video-caption
+- SC1-2-2-video-has-captions
 
 authors:
 - Wilco Fiers
@@ -29,8 +29,8 @@ The rule applies to any [non-streaming][#non-streaming-media-element] `video` el
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [Video as a media alternative for text](#SC1-2-video-media-alternative)
-- [Video captions](#SC1-2-2-video-caption)
+- [Video as a media alternative for text](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-media-alternative.html)
+- [Video captions](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-2-video-has-captions.html)
 
 ## Assumptions
 

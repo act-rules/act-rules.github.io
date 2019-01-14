@@ -11,7 +11,7 @@ The below sections go into greater detail on the structure of a test case, tools
 
 ## {{ site.title }} Test Cases
 
-The rules authored in the {{site.title}}, comes with several test cases, which are designed for easy consumption by test tools. The test cases are made available regularly at [{{site.url}}/auto-wcag-testcases/testcases.json]({{site.url}}/auto-wcag-testcases/testcases.json).
+The rules authored in the {{site.title}}, comes with several test cases, which are designed for easy consumption by test tools. The test cases are made available regularly at [{{site.data.package.config.testcases.url}}]({{site.data.package.config.testcases.url}}).
 
 A test case for a given rule is represented as shown by the below excerpt, where:
 - `url`: is the standalone page containing the test case.

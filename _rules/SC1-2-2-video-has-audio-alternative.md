@@ -1,5 +1,8 @@
 ---
-name: Vídeo has audio alternative
+name: Video has audio alternative
+
+rule_type: atomic
+
 description: |
   This rule checks that video elements have an alternative for information conveyed through audio
 
@@ -11,7 +14,7 @@ atomic_rules:
 - SC1-2-2-video-caption
 
 authors:
-- Wilco fiers
+- Wilco Fiers
 - Brian Bors
 
 ---
@@ -20,7 +23,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any [non-streaming][#non-streaming-video-element] `video` element that is [visible on the page](#visible-on-the-page), where the video contains audio.
+The rule applies to any [non-streaming][#non-streaming-media-element] `video` element that is [visible on the page](#visible-on-the-page), where the video contains audio.
 
 ### Expectation
 
@@ -68,7 +71,7 @@ A video element that describes some of the text on the same page. The text on th
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
   Keyboard compatibility is described in WCAG.
   See the video below to watch the same information again in video form.</p>
-<video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls>
+<video src="../test-assets/perspective-video/perspective-video.mp4" controls>
 </video>
 ```
 
@@ -91,7 +94,7 @@ A video element that describes some of the text on the same page. The video cont
   doesn't work, is frustrating. Either through preference or circumstance. This is solved by keyboard compatibility. 
   Keyboard compatibility is described in WCAG.
   See the video below to watch the same information again in video form.</p>
-<video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls>
+<video src="../test-assets/perspective-video/perspective-video.mp4" controls>
 </video>
 ```
 

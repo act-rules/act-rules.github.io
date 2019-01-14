@@ -50,7 +50,7 @@
     />
     <link
       rel="stylesheet"
-      href="{{ site.baseurl }}/assets/css/main.css"
+      href="assets/css/main.css"
     />
     <link
       rel="canonical"
@@ -90,11 +90,11 @@
     ></script>
     <script
       type="text/javascript"
-      src="{{site.baseurl}}/assets/js/jquery.stickyelement.js"
+      src="assets/js/jquery.stickyelement.js"
     ></script>
     <script
       type="text/javascript"
-      src="{{site.baseurl}}/assets/js/default.js"
+      src="assets/js/default.js"
     ></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -123,7 +123,7 @@
               <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="{{ site.baseurl }}/">
-              Auto-WCAG
+              {{ site.title }}
             </a>
           </div>
           <div id="navbar" class="collapse navbar-collapse">
@@ -142,12 +142,30 @@
                 >
               </li>
 
-              <!-- Implementations -->
-              <li>
-                <a
-                  href="{{ site.baseurl }}/pages/implementations.html"
-                  >Implementations</a
-                >
+             
+
+            <!-- Implementations -->
+            <li class="dropdown">
+                <a href="#"
+                  class="dropdown-toggle"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false">
+                  Implementations <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="{{ site.baseurl }}/pages/implementations/overview.html">
+                      Overview
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ site.baseurl }}/pages/implementations/coverage.html">
+                      Coverage
+                    </a>
+                  </li>
+                </ul>
               </li>
 
               <!-- Rule Creation -->
@@ -232,9 +250,8 @@
               <!-- Github -->
               <li class="dropdown">
                 <a
-                  href="https://github.com/auto-wcag/auto-wcag/"
-                  role="link"
-                >
+                  href="{{site.data.package.repository.url}}"
+                  role="link">
                   <i class="fab fa-github scale-2x"></i>
                 </a>
               </li>
@@ -262,7 +279,7 @@
                   <h3 class="promo-title">Contribute</h3>
                   <br />
                   <a
-                    href="https://github.com/auto-wcag/auto-wcag/"
+                    href="{{site.data.package.repository.url}}"
                     role="link"
                     class="desc"
                   >
@@ -271,7 +288,7 @@
                   <br /><br /><br /><br />
                   <a
                     class="btn btn-cta"
-                    href="https://github.com/auto-wcag/auto-wcag/"
+                    href="{{site.data.package.repository.url}}"
                   >
                     GitHub
                   </a>
@@ -284,10 +301,10 @@
                     <p>
                       Contributing is open to anyone. We welcome any
                       new issues or pull requests for changes.
-                      Auto-WCAG has conference calls every 4 weeks. If
+                      {{site.title}} has conference calls every 4 weeks. If
                       you are interested in becoming an active
                       contributor or reviewer, we ask that you join
-                      the Auto-WCAG community group through the W3C
+                      the {{site.title}} community group through the W3C
                       Website. This requires setting up a W3C account,
                       may require approval by the organization you
                       work for if they are a W3C member.
@@ -295,12 +312,12 @@
                     <a
                       class="btn btn-cta"
                       href="{{ site.baseurl }}/pages/contribute.html"
-                      >Learn more about contributing to Auto-WCAG</a
+                      >Learn more about contributing to {{site.title}}</a
                     >
                     <a
                       class="btn btn-cta"
                       href="https://www.w3.org/community/wp-login.php?redirect_to=%2Fcommunity%2Fauto-wcag%2Fjoin"
-                      >Join the Auto-WcAG community group now!</a
+                      >Join the {{site.title}} community group now!</a
                     >
                   </div>
                   <!--//desc-->

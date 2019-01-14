@@ -16,9 +16,9 @@ This class of algorithms has the following properties:
 - Only one language is assigned to each chunk of text. Languages changes can not be detected with the basic approach.
 - Problems to distinguish languages that are closely related (such as Danish and Norwegian).
 
-## Auto-WCAG recommendation
+## Recommendation
 
-The Auto-WCAG group does not recommend the use of any particular algorithm. Instead each tool that uses automatic language identification should disclose which algorithm, implementation, or third party libraries are used.
+The {{site.title}} group does not recommend the use of any particular algorithm. Instead each tool that uses automatic language identification should disclose which algorithm, implementation, or third party libraries are used.
 
 ## Background
 

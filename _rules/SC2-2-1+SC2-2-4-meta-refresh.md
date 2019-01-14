@@ -53,7 +53,7 @@ Redirects immediately.
 
 ```html
   <head>           
-    <meta http-equiv="refresh" content="0; URL='https://auto-wcag.github.io/auto-wcag/'" />    
+    <meta http-equiv="refresh" content="0; URL='https://github.com'" />    
   </head>  
 ```
 
@@ -96,7 +96,7 @@ Redirects after 30 seconds.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="30; URL='https://auto-wcag.github.io/auto-wcag/'">
+	<meta http-equiv="refresh" content="30; URL='https://github.com'">
 </head>
 ```
 
@@ -198,6 +198,6 @@ No `http-equiv="refresh"` attribute.
 
 ```html
 <head>           
-  <meta http-equiv="refresh" content="foo; URL='https://auto-wcag.github.io/auto-wcag/'" />    
+  <meta http-equiv="refresh" content="foo; URL='https://github.com'" />
 </head>
 ```

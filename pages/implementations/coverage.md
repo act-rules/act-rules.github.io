@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Implementations & Coverage Report
+title: Implementations Coverage
 ---
 
 <!-- List of implementations -->

@@ -93,6 +93,11 @@ select {
 	-webkit-appearance: none;
 }
 
+.dropdown-toggle:focus {
+	outline: 5px auto rgba(256, 256, 256, 0.65);
+	outline-offset: -2px;
+}
+
 .navbar{
 	border-radius: 0;
 	background-color: $color-primary;

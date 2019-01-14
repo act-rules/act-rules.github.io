@@ -5,13 +5,13 @@ title: Implementation Overview
 
 The {{site.title}} rules are authored for reliable `WCAG` testing. In order to facilitate this goal each rule has a variety of test cases in the categories of `passed`, `failed` and `inapplicable`. Incorporating a rule from the {{site.title}} into your test tool, is considered an **implementation**. The test cases provided for the rules can be used to infer if an implementation yields the `expected` results.
 
-In the spirit of Open source collaboration, the {{site.title}} welcomes [contributions]({{ site.baseurl }}/pages/contribute.html) of implementation statistics, to aid as a coverage metric of the rules. This in turn helps to improve the accuracy and completeness of both the rules and the test tools.
+In the spirit of Open source collaboration, the {{site.title}} welcomes [contributions]({{ site.url }}/pages/contribute.html) of implementation statistics, to aid as a coverage metric of the rules. This in turn helps to improve the accuracy and completeness of both the rules and the test tools.
 
 The below sections go into greater detail on the structure of a test case, tools for using the test cases, the anatomy of an implementation report and how to submit an implementation report, back to the community.
 
 ## {{ site.title }} Test Cases
 
-The rules authored in the {{site.title}}, comes with several test cases, which are designed for easy consumption by test tools. The test cases are made available regularly at [{{site.baseurl}}/auto-wcag-testcases/testcases.json]({{site.baseurl}}/auto-wcag-testcases/testcases.json).
+The rules authored in the {{site.title}}, comes with several test cases, which are designed for easy consumption by test tools. The test cases are made available regularly at [{{site.url}}/auto-wcag-testcases/testcases.json]({{site.url}}/auto-wcag-testcases/testcases.json).
 
 A test case for a given rule is represented as shown by the below excerpt, where:
 - `url`: is the standalone page containing the test case.
@@ -38,7 +38,7 @@ The community has authored an open source tool, that demonstrates consumption of
 
 Contributions to the `testrunner` tool, and or other tooling of similar nature are welcome. 
 
-Refer [contribution guide]({{ site.baseurl }}/pages/contribute.html).
+Refer [contribution guide]({{ site.url }}/pages/contribute.html).
 
 Tool Name | Tool URL | Language |  Tool Description
 ---|---|---|---
@@ -123,7 +123,7 @@ Test tool authors are welcome to submit the implementation results for the above
 
 In order to submit your implementation metrics, it is recommended that the report be made available via a URL, in the above format, and an issue be opened for the same requesting that implementation metric be added to the site data.
 
-The implementations are interpreted by the site, which are then listed in the [coverage report]({{ site.baseurl }}/pages/implementations/coverage.html). Each rule also has an implementation flag based on the above reports. The flags are as below:
+The implementations are interpreted by the site, which are then listed in the [coverage report]({{ site.url }}/pages/implementations/coverage.html). Each rule also has an implementation flag based on the above reports. The flags are as below:
 
 Flag | Description
 ---|---
@@ -132,6 +132,6 @@ Flag | Description
 `Done` | The rule has 3 or more implementations
 
 See pages:
-- [Coverage Metrics]({{ site.baseurl }}/pages/implementations/coverage.html)
-- [Rule Implementation Metrics]({{ site.baseurl }}/pages/rules.html)
+- [Coverage Metrics]({{ site.url }}/pages/implementations/coverage.html)
+- [Rule Implementation Metrics]({{ site.url }}/pages/rules.html)
   

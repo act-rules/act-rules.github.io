@@ -14,7 +14,7 @@ title: Rules
 				<th class="sort" data-sort="description">Description</th>
 				<th class="sort" data-sort="wcagCriterion" width='35%'>WCAG Criterion</th>
 					<th class="sort" data-sort="implementations" width='10%'>
-							<a href="{{ site.baseurl }}/pages/implementations.html">
+							<a href="{{ site.url }}/pages/implementations.html">
 									Implementations
 							</a>
 					</th>
@@ -29,7 +29,7 @@ title: Rules
 					{{ forloop.index }}
 				</td>
 				<td class='name'>
-					<a class='rule-list-title' href="{{ rule.url | prepend: site.baseurl }}">{{rule.name}}</a>
+					<a class='rule-list-title' href="{{ rule.url | prepend: site.url }}">{{rule.name}}</a>
 					{% if rule.draft %}
 						<p class="draft-note slim">Draft</p>
 					{% endif %}
@@ -64,7 +64,7 @@ title: Rules
 </div>
 
 <!-- Javascript -->
-<script type="text/javascript" src="{{site.baseurl}}/assets/js/page-rules.js"></script>
+<script type="text/javascript" src="{{site.url}}/assets/js/page-rules.js"></script>
 
 <section class="cards-section text-center">
 	<div id="cards-wrapper" class="cards-wrapper row">

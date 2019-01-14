@@ -2,7 +2,6 @@
 # read list of all algorithm keys -> make an object/ hash
 # parse each draft/ rule and find usage of algorithm keys -> make an object/ hash
 # overwrite respective md files & list of definition at the bottom of the page
-
 module Jekyll
 	class DefinitionGenerator < Generator
 		
@@ -78,7 +77,7 @@ module Jekyll
 			out = []
 			d.content.each_line.with_index do |line, index|
 				if(line['#' + term])
-					anchor_url = s.baseurl + d.url
+					anchor_url = d.url
 					anchor = "<a class='glossary-usage-link' href='#{anchor_url}'>#{ d.data['name'] + ' (' + d.data['slug'] + ')' }</a>"
 					out.push(anchor) unless out.include?(anchor)
 				end
@@ -105,12 +104,13 @@ module Jekyll
 		end
 
 		def get_glossary_for_document(site, doc, hash)
+
 			out = []
 			doc.content.each_line.with_index do |line, index|
 				hash.each do |k, v|
 					if(line['#' + k])
 						definition = "<div class='definition-item'>"\
-							"<h3><a id='#{v["key"]}' href='#{site.data['package']['pages']['url']}#{v['url']}'>#{ v['title']}</a></h3>"\
+							"<h3><a id='#{v["key"]}' href='#{v['url']}'>#{ v['title']}</a></h3>"\
 							"#{ get_page_content(site, v['url']) }"\
 						'</div>'
 						# only add if definition does not exist already

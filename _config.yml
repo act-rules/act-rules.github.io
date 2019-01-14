@@ -2,9 +2,9 @@
 title: Auto WCAG Rules
 description: >
   Accessibility conformance testing rules for HTML.
-baseurl: "auto-wcag"
+url: https://auto-wcag.github.io/auto-wcag/
 sass:
-    sass_dir: assets/css
+  sass_dir: assets/css
 markdown: kramdown
 kramdown:
   input: GFM

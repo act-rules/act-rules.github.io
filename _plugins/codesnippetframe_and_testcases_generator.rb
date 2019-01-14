@@ -162,7 +162,7 @@ module Jekyll
 					# construct file path
 					file_path = site.source + '/' + PKG['config']['testcases']['dir']['embeds'] + file_name
 					# construct file url
-					file_url = '../' + PKG['config']['testcases']['dir']['embeds'] + file_name
+					file_url = '../' + PKG['config']['testcases']['dir']['export-files'] + file_name
 					# construct file content
 					file_content = get_file_content(content_including_tags)
 

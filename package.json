@@ -35,7 +35,8 @@
       "dir": {
         "embeds": "_testcases-embeds/",
         "assets": "test-assets/",
-        "export": "exported-testcases/"
+        "export": "exported-testcases/",
+        "export-files": "exported-testcases/assets/"
       }
     }
   },

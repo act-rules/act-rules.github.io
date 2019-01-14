@@ -1,10 +1,10 @@
 ---
-title: Auto-WCAG Rule Template
+title: Rule Template
 ---
 
 The rule template contains a plain language description of the rule, some background information, and a list of all assumptions. The test procedure is defined by the selector, a number of steps and a description of the possible outcomes.
 
-Use the [empty atomic rule template](atomic-template-empty.html) to create new auto-wcag rule. When creating a new rule, first read [rule design](rule-design.html).
+Use the [empty atomic rule template](atomic-template-empty.html) to create new rule. When creating a new rule, first read [rule design](rule-design.html).
 
 ### Atomic Rule template
 
@@ -47,7 +47,12 @@ Each target element ...
 
 ## Background
 
-- (e.g. WCAG Techniques or links with background information mentioned in Applicability, Expectations or Assumptions)
+- Links to Techniques for WCAG 2.0
+- Latest version: Techniques for WCAG 2.0 W3C Working Group Note 8 April 2014
+- Link to other methodologies, test specifications or tools
+- Links to test cases, test suites, unit tests, etc.
+- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible {{site.title}} refers to those. Another source for test cases is the W3C Before and After Demonstration.
+- Other references
 
 ## Test Cases
 
@@ -141,8 +146,12 @@ For each test target, the outcome of (at least one of / all of / any of etc.) th
 
 ## Background
 
-- - (e.g. WCAG Techniques or links with background information mentioned in Applicability, Expectations or Assumptions)
-
+- Links to Techniques for WCAG 2.0
+- Latest version: Techniques for WCAG 2.0 W3C Working Group Note 8 April 2014
+- Link to other methodologies, test specifications or tools
+- Links to test cases, test suites, unit tests, etc.
+- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible {{site.title}} refers to those. Another source for test cases is the W3C Before and After Demonstration.
+- Other references
 
 ## Test Cases
 

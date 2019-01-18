@@ -32,7 +32,7 @@ Each test target has a valid value that corresponds to a non-abstract [WAI-ARIA]
 
 ## Assumptions
 
-- The role is being used to comply to WCAG.
+- The ARIA `role` is being used to comply to WCAG.
 
 ## Accessibility Support
 

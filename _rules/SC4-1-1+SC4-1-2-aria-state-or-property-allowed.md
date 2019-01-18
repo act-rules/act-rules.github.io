@@ -27,7 +27,7 @@ The attribute is either an [inherited](https://www.w3.org/TR/wai-aria/#inherited
 
 ## Assumptions
 
-- The role is being used to comply to WCAG.
+- The ARIA `state` or `property` is being used to comply to WCAG.
 
 ## Accessibility support
 

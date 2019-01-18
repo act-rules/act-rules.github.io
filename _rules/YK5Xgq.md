@@ -22,9 +22,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any `element` that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree) of the [page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) that is not embedded.
-
-**Note:** Pages may be embedded inside other pages through elements such as `iframes` and `object` elements.
+The rule applies to any `element` that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree) of the [page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s).
 
 ### Expectation
 

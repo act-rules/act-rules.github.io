@@ -124,7 +124,7 @@ Focusable form field, incorrectly disabled.
 
 `aria-hidden` can't be reset once set to true on an ancestor.
 
- ```html	
+```html	
 <div aria-hidden="true">
     <div aria-hidden="false">
         <button>Some button</button>

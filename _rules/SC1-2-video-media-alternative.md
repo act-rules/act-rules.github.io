@@ -22,11 +22,11 @@ The rule applies to every [non-streaming](#non-streaming) `video` element that i
 
 ### Expectation 1
 
-All the information contained in each target element is available as text that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+All the information contained in each test target is available as text that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation 2
 
-Each target element is labelled as a video alternative for text on the page. This label is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+Each test target is labelled as a video alternative for text on the page. This label is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 **Note:** The term label does not refer to the `label` element.
 

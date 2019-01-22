@@ -18,11 +18,11 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has an explicit [semantic role](#semantic-role) with a [WAI-ARIA required context role](https://www.w3.org/TR/wai-aria-1.1/#scope), except if the element has an implicit semantic role that is identical to its explicit semantic role.
+The rule applies to any HTML or SVG element that is [included in the accessibility tree](#included-in-the-accessibility-tree) and has an explicit [semantic role](#semantic-role) with a [WAI-ARIA required context role](https://www.w3.org/TR/wai-aria-1.1/#scope), except if the element has an implicit semantic role that is identical to its explicit semantic role.
 
 ### Expectation
 
-Each target element is [owned (per WAI-ARIA)](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element) by an element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has a [semantic role](#semantic-role) matching one of the [WAI-ARIA required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope).
+Each target element has an [owner element](owner-element) that has a [semantic role](#semantic-role) matching one of the [WAI-ARIA required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope).
 
 ## Assumptions
 

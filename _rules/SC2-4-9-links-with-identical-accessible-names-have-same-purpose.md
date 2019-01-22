@@ -24,19 +24,13 @@ This rule applies to any two or more HTML or SVG elements that have the [semanti
 
 ### Expectation
 
-When activated, the links in each set of target elements resolve to resources that fulfill the same purpose indicated by the [accessible names](#accessible-name) of the link.
+When activated, the links in each set of target elements resolve to resources that fulfill an [equivalent purpose](#equivalent-purpose) in relation to the [accessible names](#accessible-name) of the link.
 
 **Note:** Resolving the links includes potential redirects.
 
-**Note:** Web pages and documents (e.g. PDFs, office formats etc.) may fulfil the same purpose in relation to the link, even if the resources:
-* are located on different URLs, including different domains
-* present different navigation options, e.g. through bread crumbs or local sub menus
-* contain different amounts of information and/or differently worded information
-* use different layouts.
-
-**Note:** If the same content is presented in different formats, the format itself is often part of the link purpose, e.g. an article as both HTML and PDF.
-
 **Note:** If the [URL parsed](https://www.w3.org/TR/html52/infrastructure.html#parsing-urls) values of the ´href´ is identical, the resources are identical, thus fulfilling the same purpose.
+
+**Note:** Fully parsed URLs may be different, but still lead to the same resource after making the HTTP request, due to redirects and DNS aliasing. For example, these URLs are all fully normalised: http://example.com/, http://www.example.com/, https://www.example.com/. But the server can be configured to serve the same site for http and https, and the same site for example.com and www.example.com. This is common, but not guaranteed. Wheres parsing is very quick to do automatically, resolving HTTP aliases is slow (can take 5 seconds or longer per request). 
 
 ## Assumptions
 

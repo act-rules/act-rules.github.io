@@ -22,7 +22,7 @@ The rule applies to any HTML or SVG element that is [included in the accessibili
 
 ### Expectation
 
-Each target element has an [owner element](owner-element) that has a [semantic role](#semantic-role) matching one of the [WAI-ARIA required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope).
+The [owner element](owner-element) for each target element has a [semantic role](#semantic-role) matching one of the [WAI-ARIA required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope) for the target element.
 
 ## Assumptions
 
@@ -30,7 +30,7 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-This rule relies on assistive technologies to recognize owned elements, as defined by [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria). This includes when they are descendants that are not children. However, some assistive technologies do not recognize owned elements that are not children, unless workarounds are used.
+This rule relies on assistive technologies to recognize [owner elements](#owner-elements). This includes when they are descendants that are not children. However, some assistive technologies do not recognize owned elements that are not children, unless workarounds are used.
 
 ## Background
 

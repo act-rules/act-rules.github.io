@@ -10,8 +10,7 @@ Elements in the accessibility tree are exposed to assistive technologies, allowi
 An element is included in the accessibility tree if it is a DOM node in the flattened DOM tree that meets the following criteria:
 
 1. It isn't hidden through WAI-ARIA or CSS, and
-2. It does not have a [semantic role](#semantic-role) of `none` or `presentation`, and
-3. it has one or more of the following:
+2. it has one or more of the following:
    * It has a [semantic role](#semantic-role), or
    * It has an accessible name that, when trimmed of whitespace, is not an empty string, or
    * it owns another element though an `aria-owns` attribute, or

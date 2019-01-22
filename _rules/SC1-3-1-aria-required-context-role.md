@@ -76,6 +76,18 @@ Element contained within its required context role even though it is not a direc
 </div>
 ```
 
+#### Passed example 4
+
+`aria-owns` used to give the target element the right context role.
+
+```html
+<div role="list" aria-owns="id1">
+  <div role="tabpanel">
+    <div id="id1" role="listitem"></div>
+   </div>
+</div>
+```
+
 ### Failed
 
 #### Failed example 1
@@ -103,6 +115,52 @@ Element not contained within its required context role.
 ```html
 <div role="list"></div>
     <div role="listitem"></div>
+```
+
+#### Failed example 4
+
+Context role is not included in the accessibility tree.
+
+```html
+<div role="list" aria-hidden="true">
+    <div role="listitem"></div>
+</div>
+```
+
+#### Failed example 5
+
+Element with role `listitem` has a closer ancestor, that is included in the accessibility tree, than the role `list` that should have been its context role
+
+```html
+<div role="list">
+    <div aria-label="menu">
+         <div role="listitem"></div>
+    <div>
+</div>
+```
+
+#### Failed example 6
+
+Element with role `listitem` has a closer ancestor, that is included in the accessibility tree, than the role `list` that should have been its context role
+
+```html
+<div role="list">
+  <div role="tabpanel">
+    <div role="listitem"></div>
+   </div>
+</div>
+```
+
+#### Failed example 7
+
+The owner element is the first element that references the target element through `aria-owns`, which results in the wrong context role.
+
+```html
+<div role="tabpanel" aria-owns="id1">
+  <div role="list" aria-owns="id1">
+    <div id="id1" role="listitem"></div>
+   </div>
+</div>
 ```
 
 ### Inapplicable

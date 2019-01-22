@@ -1,9 +1,9 @@
 ---
-name: Links with identical accessible names have same purpose
+name: Links with identical accessible names serve equivalent purpose
 test_type: atomic
 
 description: |
-  This rule checks that identical accessible names are only used for links that have the same purpose
+  This rule checks that identical accessible names are only used for links that serve an equivalent purpose
 
 success_criterion: 
 - 2.4.9 # Link Purpose (Link Only)
@@ -30,7 +30,7 @@ When activated, the links in each set of target elements resolve to resources th
 
 ## Assumptions
 
-* This rule assumes that the purpose of the links for links with identical link texts would not be ambiguous to users in general.
+* This rule assumes that the purpose of the links for links with identical names would not be ambiguous to users in general.
 
 ## Accessibility support
 
@@ -56,15 +56,6 @@ Identical link text leads to identical URLs:
 
 #### Passed example 2
 
-Links resolves to same page due to case-insensitivity on server:
-
-```html
-<a href="/Test-Assets/Link-Purpose/index.html">Link text</a>
-<a href="/test-assets/link-purpose/index.html">Link text</a>
-```
-
-#### Passed example 3
-
 Links resolves to same page after redirect:
 
 ```html
@@ -72,7 +63,7 @@ Links resolves to same page after redirect:
 <a href="/test-assets/link-purpose/redirect.html>Link text</a>
 ```
 
-#### Passed example 4
+#### Passed example 3
 
 Identical pages are located on different URLs:
 
@@ -81,16 +72,16 @@ Identical pages are located on different URLs:
 <a href="/test-assets/link-purpose/index-copy.html>Link text</a>
 ```
 
-#### Passed example 5
+#### Passed example 4
 
 Same link text used for links going to pages where the content section is the same, but where the navigation options (bread crumbs and local sub menus) differ due to different placement in navigation hierarchy:
 
 ```html
 <a href="/test-assets/link-purpose/about/contact.html">Link text</a>
-<a href="/test-assets/link-purpose/careers/contact.html>Link text</a>
+<a href="/test-assets/link-purpose/careers/contact.html">Link text</a>
 ```
 
-#### Passed example 6
+#### Passed example 5
 
 URLs differ due to trailing slashes:
 
@@ -99,7 +90,7 @@ URLs differ due to trailing slashes:
 <a href="/test-assets/link-purpose/link-purpose/">Link text</a>
 ```
 
-#### Passed example 7
+#### Passed example 6
 
 Pages contain different amounts of information and/or differently worded information, but fulfils same purpose in relation to the link:
 
@@ -108,7 +99,7 @@ Pages contain different amounts of information and/or differently worded informa
 <a href="/test-assets/link-purpose/page2.html">Link text</a>
 ```
 
-#### Passed example 8
+#### Passed example 7
 
 Has the same content but use different layouts:
 
@@ -117,13 +108,13 @@ Has the same content but use different layouts:
 <a href="/test-assets/link-purpose/page3.html">Link text</a>
 ```
 
-#### Passed example 9
+#### Passed example 8
 
 Links created via scripting with explicit role of link: 
 
 ```html
 <span role="link"
-   onclick="location='/test-assets/link-purpose/link-purpose/index.html.html'">
+   onclick="location='/test-assets/link-purpose/link-purpose/index.html'">
 Link text
 </span>
 
@@ -154,15 +145,6 @@ Same link text used for links going to web pages with same name, but with differ
 ```
 
 #### Failed example 3
-
-Case-sensitivity in file name:
-
-```html
-<a href="/test-assets/link-purpose/page1.html">Link text</a> 
-<a href="/test-assets/link-purpose/Page1.html">Link text</a>
-```
-
-#### Failed example 4
 
 Links created via scripting with explicit role of link: 
 
@@ -203,7 +185,7 @@ No identical link texts:
 Link is not exposed to assistive technologies;
 
 ```html
-<a href="/test-assets/link-purpose" style="display:none">Link text 1</a>
+<a href="/test-assets/link-purpose" aria-hidden="true">Link text 1</a>
 <a href="/test-assets/link-purpose">Link text 2</a>
 ```
 

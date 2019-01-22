@@ -30,8 +30,6 @@ When activated, the links in each set of target elements resolve to resources th
 
 **Note:** If the [URL parsed](https://www.w3.org/TR/html52/infrastructure.html#parsing-urls) values of the ´href´ is identical, the resources are identical, thus fulfilling the same purpose.
 
-**Note:** Fully parsed URLs may be different, but still lead to the same resource after making the HTTP request, due to redirects and DNS aliasing. For example, these URLs are all fully normalised: http://example.com/, http://www.example.com/, https://www.example.com/. But the server can be configured to serve the same site for http and https, and the same site for example.com and www.example.com. This is common, but not guaranteed. Wheres parsing is very quick to do automatically, resolving HTTP aliases is slow (can take 5 seconds or longer per request). 
-
 ## Assumptions
 
 * This rule assumes that the purpose of the links for links with identical link texts would not be ambiguous to users in general.

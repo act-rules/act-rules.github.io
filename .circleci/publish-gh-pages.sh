@@ -15,7 +15,7 @@ rm -R _site/
 
 # commit and push
 git add -fA
-git commit --allow-empty -m "update gh pages"
+git commit --allow-empty -m "update gh pages [ci skip]"
 git push origin gh-pages
 
 echo "deployed successfully"

@@ -2,7 +2,7 @@
 title: Rule Design
 ---
 
-The Auto-WCAG rule design builds on WCAG 2.x and its supporting documents. To achieve the Auto-WCAG goals the following approach is suggested:
+The {{site.title}} rule design builds on WCAG 2.x and its supporting documents. To achieve the {{site.title}} goals the following approach is suggested:
 
 1. **[Rule properties](#rule-properties)**: Define the test subject and its environment, as well as other meta data.
 
@@ -45,7 +45,7 @@ Names of the Authors. These must be an exact match of names in `_data/contributo
 
 ## Assumptions
 
-Many accessibility evaluations (especially automated tools) make assumptions about the structure of the web content and the way in which (web) technologies are used. Such assumptions influence the outcome of a test. If the assumptions are made implicitly, it will be difficult to interpret the test result. Comparability and reproduction of results by other tools are limited. Therefore the Auto-WCAG test include a list of all assumptions made by the design of the rule.
+Many accessibility evaluations (especially automated tools) make assumptions about the structure of the web content and the way in which (web) technologies are used. Such assumptions influence the outcome of a test. If the assumptions are made implicitly, it will be difficult to interpret the test result. Comparability and reproduction of results by other tools are limited. Therefore the {{site.title}} test include a list of all assumptions made by the design of the rule.
 
 > *For example:* A rule for 1.4.1 Use of Color has to make an assumption with CSS-properties are used to make a link visually evident. Typically something like `background`, `border`, `color`, `font`, or `text-decoration`.
 
@@ -53,7 +53,7 @@ While most assumptions relate to the rule itself, there are some assumptions tha
 
 - It is assumed that the tested web page is the one that has to conform to WCAG 2.0 and that there is no [conforming alternative version](http://www.w3.org/TR/WCAG20/#conforming-alternate-versiondef).
 
-- It is assumed that the following technologies are accessibility supported: HTML, CSS, WAI-ARIA, ... (See also Auto-WCAG's [explanation on Accessibility Support](accessibility-support.html)).
+- It is assumed that the following technologies are accessibility supported: HTML, CSS, WAI-ARIA, ... (See also {{site.title}}'s [explanation on Accessibility Support](accessibility-support.html)).
 
 ## Applicability
 

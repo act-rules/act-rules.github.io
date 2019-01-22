@@ -1,5 +1,8 @@
 ---
-name: Vídeo has audio alternative
+name: Video has audio alternative
+
+rule_type: atomic
+
 description: |
   This rule checks that video elements have an alternative for information conveyed through audio
 
@@ -8,10 +11,10 @@ success_criterion:
 
 atomic_rules:
 - SC1-2-video-media-alternative
-- SC1-2-2-video-caption
+- SC1-2-2-video-has-captions
 
 authors:
-- Wilco fiers
+- Wilco Fiers
 - Brian Bors
 
 ---
@@ -26,8 +29,8 @@ The rule applies to every [non-streaming][#non-streaming-video-element] `video` 
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [Video as a media alternative for text](#SC1-2-video-media-alternative)
-- [Video captions](#SC1-2-2-video-caption)
+- [Video as a media alternative for text](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-media-alternative.html)
+- [Video captions](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-2-video-has-captions.html)
 
 ## Assumptions
 
@@ -68,7 +71,7 @@ A video element that describes some of the text on the same page. The text on th
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
   Keyboard compatibility is described in WCAG.
   See the video below to watch the same information again in video form.</p>
-<video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls>
+<video src="../test-assets/perspective-video/perspective-video.mp4" controls>
 </video>
 ```
 
@@ -91,7 +94,7 @@ A video element that describes some of the text on the same page. The video cont
   doesn't work, is frustrating. Either through preference or circumstance. This is solved by keyboard compatibility. 
   Keyboard compatibility is described in WCAG.
   See the video below to watch the same information again in video form.</p>
-<video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls>
+<video src="../test-assets/perspective-video/perspective-video.mp4" controls>
 </video>
 ```
 

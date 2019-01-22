@@ -30,8 +30,8 @@ The rule only applies to any HTML or SVG element that is [focusable](#focusable)
 
 For each test target, the outcome of one of the following rules is "passed":
 
-- [No keyboard trap standard navigation](SC2-1-2-no-keyboard-trap-standard-navigation)
-- [No keyboard trap non-standard navigation](SC2-1-2-no-keyboard-trap-non-standard-navigation)
+- [No keyboard trap standard navigation](https://auto-wcag.github.io/auto-wcag/rules/SC2-1-2-no-keyboard-trap-standard-navigation.html)
+- [No keyboard trap non-standard navigation](https://auto-wcag.github.io/auto-wcag/rules/SC2-1-2-no-keyboard-trap-non-standard-navigation.html)
 
 ## Assumptions
 

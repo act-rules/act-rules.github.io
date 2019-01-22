@@ -1,11 +1,11 @@
 ---
 layout: default
-title: About Auto-WCAG
+title: About Us
 ---
 
 ## Our Vision
 
-Web accessibility testing is highly reliant on human judgment. Not only that, but it requires a significant understanding of both web technologies and assistive technologies. This makes automated testing and testing by people lacking these skills challenging. The Auto-WCAG community group believes that by taking on these challenges we can enable developers to solve parts of the accessibility questions, before ever involving accessibility experts. This means problems can be caught earlier in the development and accessibility experts can use their time more efficiently. Both of which will lead to more accessible products.
+Web accessibility testing is highly reliant on human judgment. Not only that, but it requires a significant understanding of both web technologies and assistive technologies. This makes automated testing and testing by people lacking these skills challenging. The {{ site. title }} community group believes that by taking on these challenges we can enable developers to solve parts of the accessibility questions, before ever involving accessibility experts. This means problems can be caught earlier in the development and accessibility experts can use their time more efficiently. Both of which will lead to more accessible products.
 
 ## What We Do
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Implementations & Coverage Report
+title: Implementations Coverage
 ---
 
 <!-- List of implementations -->
@@ -20,4 +20,4 @@ title: Implementations & Coverage Report
 </table>
 
 <!-- Javascript -->
-<script type="text/javascript" src="{{site.baseurl}}/assets/js/page-implementations.js"></script>
+<script type="text/javascript" src="{{site.url}}/assets/js/page-implementations.js"></script>

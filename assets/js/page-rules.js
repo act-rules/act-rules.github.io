@@ -5,15 +5,12 @@ function enableFilteringAndSortingInTable() {
   // enable sorting and filtering in rules table
   var ruleTable = new List('rules-table', {
     valueNames: [
-      'index',
-      'name',
+      'ludate',
+      { name: 'name', attr: 'data-rule-name' },
       'description',
-      'wcagCriterion',
-      'implementations'
     ]
   })
-  // sort by index asc as a defacto
-  ruleTable.sort('index', { order: 'asc' })
+  ruleTable.sort('ludate', { order: 'desc' })
 }
 
 /**
@@ -65,6 +62,9 @@ function buildImplementationStatusColumn(implementationData) {
 
 // dom ready
 $(function() {
+  // filering and sorting
+  enableFilteringAndSortingInTable()
+
   // get implementations data
   getTestToolImplementations({
     callback: function(result) {

@@ -1,5 +1,5 @@
 ---
-name: Image accessible name is filename
+name: Filename is valid accessible name
 description: |
   This rule checks that image elements that use their source filename as their accessible name do so without loss of information to the user.
 

@@ -28,8 +28,6 @@ When activated, the links in each set of target elements resolve to resources th
 
 **Note:** Resolving the links includes potential redirects.
 
-**Note:** If the [URL parsed](https://www.w3.org/TR/html52/infrastructure.html#parsing-urls) values of the ´href´ is identical, the resources are identical, thus fulfilling the same purpose.
-
 ## Assumptions
 
 * This rule assumes that the purpose of the links for links with identical link texts would not be ambiguous to users in general.

@@ -1,5 +1,5 @@
 ---
-title: Auto-WCAG Terminology
+title: Terminology
 ---
 
 ## Rule

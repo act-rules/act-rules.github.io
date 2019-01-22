@@ -1,27 +1,22 @@
 # Site settings
-title: Auto-WCAG Rules
+title: Auto WCAG Rules
 description: >
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "/auto-wcag"
-url: "http://auto-wcag/github.io/"
+  Accessibility conformance testing rules for HTML.
+url: https://auto-wcag.github.io/auto-wcag
+plugins:
+  - jekyll-last-modified-at
 sass:
-    sass_dir: assets/css
-
+  sass_dir: assets/css
 markdown: kramdown
-# Use github markdown
 kramdown:
   input: GFM
   auto_ids: true
   toc_levels: 2..3
-
 collections:
   rules:
     output: true
   drafts:
     output: true
-
 defaults:
   - scope:
       path: ""
@@ -42,14 +37,22 @@ defaults:
       name: undefined
       test_mode: undefined
   - scope:
-      path: "pages/algorithms"
+      path: "pages/glossary"
       type: pages
     values:
-      layout: algorithm
-      category: algorithms
-
+      layout: glossary
+      category: glossary
 exclude:
 - _testcases-embeds
 - _drafts/early-stage
 - _drafts/outdated
 - _rules/outdated
+- pages/design/outdated
+- draft-tests
+- node_modules
+- package.json
+- package-lock.json
+- Gemfile
+- Gemfile.lock
+- README.md
+- wcag-url-generator.js

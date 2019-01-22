@@ -60,7 +60,7 @@ Links resolves to same page after redirect:
 
 ```html
 <a href="/test-assets/link-purpose/index.html">Link text</a>
-<a href="/test-assets/link-purpose/redirect.html>Link text</a>
+<a href="/test-assets/link-purpose/redirect.html">Link text</a>
 ```
 
 #### Passed example 3
@@ -69,7 +69,7 @@ Identical pages are located on different URLs:
 
 ```html
 <a href="/test-assets/link-purpose/index.html">Link text</a>
-<a href="/test-assets/link-purpose/index-copy.html>Link text</a>
+<a href="/test-assets/link-purpose/index-copy.html">Link text</a>
 ```
 
 #### Passed example 4

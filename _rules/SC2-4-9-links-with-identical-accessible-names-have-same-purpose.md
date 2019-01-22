@@ -36,7 +36,7 @@ When activated, the links in each set of target elements resolve to resources th
 
 **Note:** If the same content is presented in different formats, the format itself is often part of the link purpose, e.g. an article as both HTML and PDF.
 
-**Note:** If the [normalized](#url-normalisation) value of the ´href´ is identical, the resources are identical, thus fulfilling the same purpose. [Relative URLs](https://www.w3.org/TR/WD-html40-970917/htmlweb.html#relative-urls) first need to be resolved to full URLs before doing the comparison.
+**Note:** If the [normalized](#url-normalisation) value of the ´href´ is identical, the resources are identical, thus fulfilling the same purpose. [Relative URLs](https://url.spec.whatwg.org/#syntax-url-relative) first need to be resolved to full URLs before doing the comparison.
 
 ## Assumptions
 

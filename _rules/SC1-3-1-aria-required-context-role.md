@@ -30,7 +30,7 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-This rule relies on assistive technologies to recognize [owner elements](#owner-elements). This includes when they are descendants that are not children. However, some assistive technologies do not recognize owned elements that are not children, unless workarounds are used.
+This rule relies on assistive technologies to recognize [owner elements](#owner-element). This includes when the owner elements are ancestors that are not parents of the target element. However, some assistive technologies do not recognize owner elements that are not parents, unless workarounds are used.
 
 ## Background
 

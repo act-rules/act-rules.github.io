@@ -50,8 +50,8 @@ There are no major accessibility support issues known for this rule.
 Identical link text leads to identical URLs:
 
 ```html
-<a href="/test-assets/link-purpose/index.html">Link text</a>
-<a href="/test-assets/link-purpose/index.html">Link text</a>
+<a href="/test-assets/6cbcbe/index.html">Link text</a>
+<a href="/test-assets/6cbcbe/index.html">Link text</a>
 ```
 
 #### Passed example 2
@@ -59,8 +59,8 @@ Identical link text leads to identical URLs:
 Links resolves to same page after redirect:
 
 ```html
-<a href="/test-assets/link-purpose/index.html">Link text</a>
-<a href="/test-assets/link-purpose/redirect.html">Link text</a>
+<a href="/test-assets/6cbcbe/index.html">Link text</a>
+<a href="/test-assets/6cbcbe/redirect.html">Link text</a>
 ```
 
 #### Passed example 3
@@ -68,8 +68,8 @@ Links resolves to same page after redirect:
 Identical pages are located on different URLs:
 
 ```html
-<a href="/test-assets/link-purpose/index.html">Link text</a>
-<a href="/test-assets/link-purpose/index-copy.html">Link text</a>
+<a href="/test-assets/6cbcbe/index.html">Link text</a>
+<a href="/test-assets/6cbcbe/index-copy.html">Link text</a>
 ```
 
 #### Passed example 4
@@ -77,8 +77,8 @@ Identical pages are located on different URLs:
 Same link text used for links going to pages where the content section is the same, but where the navigation options (bread crumbs and local sub menus) differ due to different placement in navigation hierarchy:
 
 ```html
-<a href="/test-assets/link-purpose/about/contact.html">Link text</a>
-<a href="/test-assets/link-purpose/careers/contact.html">Link text</a>
+<a href="/test-assets/6cbcbe/about/contact.html">Link text</a>
+<a href="/test-assets/6cbcbe/careers/contact.html">Link text</a>
 ```
 
 #### Passed example 5
@@ -86,8 +86,8 @@ Same link text used for links going to pages where the content section is the sa
 URLs differ due to trailing slashes:
 
 ```html
-<a href="/test-assets/link-purpose/link-purpose">Link text</a> 
-<a href="/test-assets/link-purpose/link-purpose/">Link text</a>
+<a href="/test-assets/6cbcbe/">Link text</a> 
+<a href="/test-assets/6cbcbe">Link text</a>
 ```
 
 #### Passed example 6
@@ -95,8 +95,8 @@ URLs differ due to trailing slashes:
 Pages contain different amounts of information and/or differently worded information, but fulfils same purpose in relation to the link:
 
 ```html
-<a href="/test-assets/link-purpose/page1.html">Link text</a>
-<a href="/test-assets/link-purpose/page2.html">Link text</a>
+<a href="/test-assets/6cbcbe/page1.html">Link text</a>
+<a href="/test-assets/6cbcbe/page2.html">Link text</a>
 ```
 
 #### Passed example 7
@@ -104,22 +104,22 @@ Pages contain different amounts of information and/or differently worded informa
 Has the same content but use different layouts:
 
 ```html
-<a href="/test-assets/link-purpose/page1.html">Link text</a>
-<a href="/test-assets/link-purpose/page3.html">Link text</a>
+<a href="/test-assets/6cbcbe/page1.html">Link text</a>
+<a href="/test-assets/6cbcbe/page3.html">Link text</a>
 ```
 
 #### Passed example 8
 
-Links created via scripting with explicit role of link: 
+Links created via scripting with explicit role of link, but leads to the same resource: 
 
 ```html
 <span role="link"
-   onclick="location='/test-assets/link-purpose/link-purpose/index.html'">
+   onclick="location='/test-assets/6cbcbe/index.html'">
 Link text
 </span>
 
 <span role="link"
-   onclick="location='/test-assets/link-purpose/link-purpose/index.html'">
+   onclick="location='/test-assets/6cbcbe/index.html'">
 Link text
 </span>
 ```
@@ -140,22 +140,22 @@ Same link text used for links going to different resources:
 Same link text used for links going to web pages with same name, but with different information:
 
 ```html
-<a href="/test-assets/link-purpose/social-sciences/contact.html">Contact us</a> 
-<a href="/test-assets/link-purpose/humanities/contact.html">Contact us</a>
+<a href="/test-assets/6cbcbe/careers/contact.html">Contact us</a> 
+<a href="/test-assets/6cbcbe/humanities/contact.html">Contact us</a>
 ```
 
 #### Failed example 3
 
-Links created via scripting with explicit role of link: 
+Links created via scripting with explicit role of link, but leads to resources offering different information: 
 
 ```html
 <span role="link"
-   onclick="location='/test-assets/link-purpose/link-purpose/page1.html'">
+   onclick="location='/test-assets/6cbcbe/careers/contact.html'">
 Link text
 </span>
 
 <span role="link"
-   onclick="location='/test-assets/link-purpose/link-purpose/contact.html'">
+   onclick="location='/test-assets/6cbcbe/humanities/contact.html'">
 Link text
 </span>
 ```
@@ -176,8 +176,8 @@ Link text
 No identical link texts:
 
 ```html
-<a href="/test-assets/link-purpose">Link text 1</a>
-<a href="/test-assets/link-purpose">Link text 2</a>
+<a href="/test-assets/6cbcbe/page1.html">Link text 1</a>
+<a href="/test-assets/6cbcbe/page2.html">Link text 2</a>
 ```
 
 #### Inapplicable example 3
@@ -185,8 +185,8 @@ No identical link texts:
 Link is not exposed to assistive technologies;
 
 ```html
-<a href="/test-assets/link-purpose" aria-hidden="true">Link text 1</a>
-<a href="/test-assets/link-purpose">Link text 2</a>
+<a href="/test-assets/6cbcbe/page1.html" aria-hidden="true">Link text 1</a>
+<a href="/test-assets/6cbcbe/pabe2.html">Link text 2</a>
 ```
 
 #### Inapplicable example 4
@@ -195,12 +195,12 @@ Links created via scripting, but doesn't have semantic role of link:
 
 ```html
 <span
-   onclick="location='/test-assets/link-purpose/link-purpose/page1.html'">
+   onclick="location='/test-assets/6cbcbe/page1.html'">
 Link text
 </span>
 
 <span
-   onclick="location='/test-assets/link-purpose/link-purpose/contact.html'">
+   onclick="location='/test-assets/6cbcbe/page2.html'">
 Link text
 </span>
 ```

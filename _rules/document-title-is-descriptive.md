@@ -20,7 +20,7 @@ authors:
 
 ### Applicability
 
-This rule applies to the first [non-empty](#non-empty) HTML `title` element in a [document](https://www.w3.org/TR/dom/#concept-document) where the [document element](https://www.w3.org/TR/dom/#document-element) is an HTML `<html>` element.
+This rule applies to the first HTML `title` element in a [document](https://www.w3.org/TR/dom/#concept-document) where the [document element](https://www.w3.org/TR/dom/#document-element) is an HTML `<html>` element, if the first HTML `title` element is [non-empty](#non-empty).
 
 ### Expectation
 
@@ -107,6 +107,23 @@ Even though the descriptive `title` element is not placed within the `head` elem
 </html>
 ```
 
+### Failed example 2
+
+Even though a correct `title` element is put in the `head` of the document, this rule only looks at the first `title` element.
+
+```html
+<html>
+  <head>
+    <title>Apple harvesting season</title>
+    <title>Clementine harvesting season</title>
+  </head>
+  <body>
+    <p>Clementines will be ready to harvest from late October through February.</p>
+  </body>
+</html>
+```
+
+
 ### Inapplicable
 
 #### Inapplicable example 1
@@ -155,11 +172,27 @@ No `title` element present in document.
 
 #### Inapplicable example 4
 
-This document has a <title> element but is inapplicable since the document element is an SVG <svg> element.
+This document has a `<title>` element but is inapplicable since the document element is an SVG <svg> element.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">
   <title>This is a circle</title>
   <circle cx="150" cy="75" r="50" fill="green"></circle>
 </svg>
+```
+
+### Inapplicable example 5
+
+First `<title>` element is empty
+
+```html
+<html>
+  <head>
+    <title></title>
+    <title>Clementine harvesting season</title>
+  </head>
+  <body>
+    <p>Clementines will be ready to harvest from late October through February.</p>
+  </body>
+</html>
 ```

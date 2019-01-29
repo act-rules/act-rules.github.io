@@ -140,7 +140,7 @@ Same link text used for links going to different resources:
 Same link text used for links going to web pages with same name, but with different information:
 
 ```html
-<a href="/test-assets/6cbcbe/careers/contact.html">Contact us</a> 
+<a href="/test-assets/6cbcbe/about/contact.html">Contact us</a> 
 <a href="/test-assets/6cbcbe/admissions/contact.html">Contact us</a>
 ```
 
@@ -155,7 +155,7 @@ Link text
 </span>
 
 <span role="link"
-   onclick="location='/test-assets/6cbcbe/humanities/contact.html'">
+   onclick="location='/test-assets/6cbcbe/admissions/contact.html'">
 Link text
 </span>
 ```
@@ -176,8 +176,8 @@ Link text
 No identical link texts:
 
 ```html
-<a href="/test-assets/6cbcbe/page1.html">Contact main office</a>
-<a href="/test-assets/6cbcbe/page2.html">Contact Faculty of Humanities</a>
+<a href="/test-assets/6cbcbe/about/contact.html">Contact main office</a>
+<a href="/test-assets/6cbcbe/admissions/contact.html">Contact admissions office</a>
 ```
 
 #### Inapplicable example 3

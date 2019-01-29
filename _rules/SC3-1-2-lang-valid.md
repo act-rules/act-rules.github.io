@@ -27,7 +27,7 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 
 ## Assumptions
 
-*There are currently no assumptions*
+The `lang` or `xml:lang` attribute is being used to comply to WCAG.
 
 ## Background
 

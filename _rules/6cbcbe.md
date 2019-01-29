@@ -141,7 +141,7 @@ Same link text used for links going to web pages with same name, but with differ
 
 ```html
 <a href="/test-assets/6cbcbe/careers/contact.html">Contact us</a> 
-<a href="/test-assets/6cbcbe/humanities/contact.html">Contact us</a>
+<a href="/test-assets/6cbcbe/admissions/contact.html">Contact us</a>
 ```
 
 #### Failed example 3

@@ -101,7 +101,7 @@ Pages contain different amounts of information and/or differently worded informa
 
 #### Passed example 7
 
-Has the same content but use different layouts:
+Pages have the same content but use different layouts:
 
 ```html
 <a href="/test-assets/6cbcbe/page1.html">Contact us</a>
@@ -191,7 +191,7 @@ Link is not exposed to assistive technologies;
 
 #### Inapplicable example 4
 
-Links created via scripting, but doesn't have semantic role of link:
+Links created via scripting, but without the semantic role of link:
 
 ```html
 <span

@@ -150,7 +150,7 @@ Links created via scripting with explicit role of link, but leads to resources o
 
 ```html
 <span role="link"
-   onclick="location='/test-assets/6cbcbe/careers/contact.html'">
+   onclick="location='/test-assets/6cbcbe/about/contact.html'">
 Link text
 </span>
 

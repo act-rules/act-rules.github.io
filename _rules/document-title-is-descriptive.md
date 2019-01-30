@@ -59,7 +59,7 @@ The ´title´ element describes the content of the document.
 </html>
 ```
 
-#### Passed example 1
+#### Passed example 2
 
 Two <title> tags where the first one describes the content of the document.
 

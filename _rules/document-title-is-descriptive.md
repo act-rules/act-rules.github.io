@@ -24,7 +24,7 @@ This rule applies to the first HTML `title` element in a [document](https://www.
 
 ### Expectation
 
-Each target element describes the topic or purpose of the overall content of the [document](https://www.w3.org/TR/dom/#concept-document).
+The target element describes the topic or purpose of the overall content of the [document](https://www.w3.org/TR/dom/#concept-document).
 
 ## Assumptions
 

@@ -1,8 +1,8 @@
 ---
-name: Heading does not only consist of breaks
+name: Heading name does not only contain spaces
 rule_type: atomic
 description: | 
-  This rule checks that heading elements do not have `br` elements or unicode separator characters as their only content.
+  This rule checks that each heading does not have an accessible name that only contains spaces.
 
 success_criterion: 
 - 1.3.1 # Info and Relationships (A)
@@ -33,13 +33,13 @@ This rule assumes that having an element that unintentionally shows up programat
 
 ## Accessibility Support
 
-Handling of headings containing only carriage returns, newlines, tabs, and form-feeds varies between different assistive technologies and browsers. This means that even though the outcome of this rule is *failed*, users of certain assistive technologies might not experience an issue.
+Handling of headings containing only spaces, space characters, carriage returns, newlines, tabs, and form-feeds varies between different assistive technologies and browsers. This means that even though the outcome of this rule is *failed*, users of certain assistive technology and browser combinations might not experience an issue.
 
 ## Background
-
+- In some screen reader and browser combinations, headings containing only spaces, space characters, carriage returns, newlines, tabs, and form-feeds will show up as empty headings, confusing the user experience. For a screen reader user it will be hard to get an overview of the heading structure of the page, if "unused" headings are included in the heading structure, and it can be hard to know if the heading is just white space that has accidentally been marked up as a heading, or if it is an actual heading that for some reason doesn't have an accessible name. Since this is a case where the programatically determinable structure of the page doesn't match the visual presentation, this is a violation of success criterion [1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships).
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [The br element](https://www.w3.org/TR/html/textlevel-semantics.html#the-br-element)
-- [Unicode Character Categories](https://www.fileformat.info/info/unicode/category/index.htm)
+- [Unicode Characters in the 'Separator, Space' Category](https://www.fileformat.info/info/unicode/category/Zs/list.htm)
 
 ## Test Cases
 
@@ -47,7 +47,7 @@ Handling of headings containing only carriage returns, newlines, tabs, and form-
 
 #### Passed example 1
 
-`h2` element is empty
+`h2` element is empty.
 
 ```html
 <h2></h2>
@@ -55,7 +55,7 @@ Handling of headings containing only carriage returns, newlines, tabs, and form-
 
 #### Passed example 2
 
-Element with the semantic role of heading is empty
+Element with the semantic role of heading is empty.
 
 ```html
 <div role="heading"></div>
@@ -63,7 +63,7 @@ Element with the semantic role of heading is empty
 
 #### Passed example 3
 
-`h2` element has other content than spaces
+`h2` element has other content than spaces.
 
 ```html
 <h2>'</h2>
@@ -73,7 +73,7 @@ Element with the semantic role of heading is empty
 
 #### Failed example 1
 
-`h2` contains `br` element as only content
+`h2` element contains `br` element as only content.
 
 ```html
 <h2><br /></h2>
@@ -81,25 +81,65 @@ Element with the semantic role of heading is empty
 
 #### Failed example 2
 
-`h2` contains `&nbsp`(no break space character) as only content
+`h2` contains `&nbsp;`(no break space character) as only content.
 
 ```html
-<h2>&nbsp </h2>
+<h2>&nbsp;</h2>
 ```
 
 #### Failed example 3
 
-`h2` element only contains a space
+`h2` element only contains a space.
 
 ```html
 <h2> </h2>
+```
+
+#### Failed example 4
+
+`h2` element contains `&#32;` (space) character as only content.
+
+```html
+<h2>&#32;</h2>
+```
+
+#### Failed example 5
+
+`h2` element contains `&ensp;` (en-space) character as only content.
+
+```html
+<h2>&ensp;</h2>
+```
+
+#### Failed example 5
+
+`h2` element contains `&emsp;` (em-space) character as only content.
+
+```html
+<h2>&emsp;</h2>
+```
+
+#### Failed example 5
+
+`h2` element contains `&thinsp;` (thin space) character as only content.
+
+```html
+<h2>&thinsp;</h2>
+```
+
+#### Failed example 6
+
+`h2` element contains `<br />` as only content that affects the accessible name computation.
+
+```html
+<h2><span><br /></span></h2>
 ```
 
 ### Inapplicable
 
 #### Inapplicable example 1
 
-Element does not have the semantic role of heading
+Element does not have the semantic role of heading.
 
 ```html
 <div></div>
@@ -107,7 +147,7 @@ Element does not have the semantic role of heading
 
 #### Inapplicable example 2
 
-`h2`element is not included in the accessibility tree
+`h2` element is not included in the accessibility tree.
 
 ```html
 <h2 aria-hidden="true"></h2>

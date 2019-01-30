@@ -1,9 +1,9 @@
 ---
-name: No audio in auto-play
+name: No audio auto-play audio lasts more than 3 seconds
 test_type: atomic
 
 description: |
-  This rule checks that each auto-play audio or video elements does not have any audio.
+  This rule checks that each auto-play audio or video elements does not have any audio that last more than 3 seconds.
 success_criterion: 
 - 2.4.7 # Focus Visible
 
@@ -22,7 +22,7 @@ This rule applies to any HTML `audio` or `video` element that has a `duration` o
 
 ## Expectation
 
-For each test target, there is no audio playing.
+For each test target, there is no audio playing, or the audio does not last more than 3 seconds.
  
 ## Assumptions
 

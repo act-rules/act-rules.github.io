@@ -4,6 +4,7 @@ test_type: atomic
 
 description: |
   This rule checks that each auto-play audio or video elements does not have any audio that last more than 3 seconds.
+
 success_criterion: 
 - 1.4.2 # Audio Control
 

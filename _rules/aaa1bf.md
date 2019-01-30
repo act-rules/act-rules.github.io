@@ -5,12 +5,12 @@ test_type: atomic
 description: |
   This rule checks that each auto-play audio or video elements does not have any audio that last more than 3 seconds.
 success_criterion: 
-- 2.4.7 # Focus Visible
+- 1.4.2 # Audio Control
 
 test_aspects:
 - DOM Tree
 - CSS Styling
-- 
+- Audio output
 
 authors:
 - Anne Thyme Nørregaard

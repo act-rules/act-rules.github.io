@@ -1,10 +1,10 @@
 ---
-name: `cell` with `headers` attribute is exclusively used to refers to other cell in the `table`
+name: `headers` attribute only refers to `cells` in the same `table`
 
 test_type: atomic
 
 description: |
-  This rule checks that all cells in a `table` element that uses the `headers` attribute must only refer to other cells of the same table.
+  This rule checks that the `headers` attribute must only refer to `cells` in the same `table`.
 
 test_aspects:
 - DOM Tree

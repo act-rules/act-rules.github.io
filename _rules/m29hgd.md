@@ -18,7 +18,7 @@ authors:
 
 ### Applicability
 
-This rule applies to any element with the [semantic role](#semantic-role) of `cell` within the `table` element, that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree)
+This rule applies to any element with the [semantic role](#semantic-role) of `cell`, `columnheader` or `rowheader` within the `table` element, that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation
 
@@ -36,7 +36,6 @@ Each target element with the `headers` attribute refers to other `cells` of the 
 
 - [Understanding Success Criterion 1.3.1: Information and relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H43)
-- [F90: Incorrectly associating table headers and content via the headers and id attributes](https://www.w3.org/WAI/WCAG21/Techniques/failures/F90)
 
 ## Test Cases
 
@@ -44,7 +43,7 @@ Each target element with the `headers` attribute refers to other `cells` of the 
 
 #### Passed example 1
 
-The `cell` is associated with two columns. The `headers` attribute on the  `cell` lists the `id` of all associated `headers`.
+The `headers` attribute on the  `cell` lists the `id(s)` within the same `table`.
 
 ```html
 <table>
@@ -64,7 +63,7 @@ The `cell` is associated with two columns. The `headers` attribute on the  `cell
 
 #### Passed example 2
 
-Each data `cells` are associated with `two` columns. The `headers` attribute on each data cell lists the `id` of all associated `headers`.
+A `table` with multiple `columnheader(s)`, where the `headers` attribute on the  `cell` lists the `id(s)` within the same `table`.
 
 ```html
 <table>
@@ -90,7 +89,7 @@ Each data `cells` are associated with `two` columns. The `headers` attribute on 
 
 #### Failed example 1
 
-The data `cell` is associated with two headers but the `headers` attribute is missing. 
+The `cell` that the `headers` attribute refers to, does not exist within the same `table`. (Note: Simple 1-to-1 column to cell mapping)
 
 ```html
 <table>
@@ -99,14 +98,34 @@ The data `cell` is associated with two headers but the `headers` attribute is mi
     <th id="header2">Exams</th>
   </tr>
   <tr>
-    <td colspan="2">15%</td>
+    <td headers="header3">15%</td>
+    <td headers="header3">15%</td>
   </tr>
 </table>
 ```
 
 #### Failed example 2
 
-The `headers` attribute on the data `cell` should lists both headers `id` (`headers1`and `header2`) but only lists one (`header1`).
+One of the `id(s)` referenced in the `headers` attribute does not exist within the same `table`.
+
+```html
+<table>
+  <tr>
+    <th colspan="2" id="header1">Projects</th>
+  </tr>
+  <tr>
+    <th id="e1" headers="header1">1</th>
+    <th id="e2" headers="header1">2</th>
+  </tr>
+  <tr>
+    <td colspan="2" headers="header1 e1 NOT-EXIST">15%</td>
+  </tr>
+</table>
+```
+
+#### Failed example 3
+
+The `cell` that the `headers` attribute refers to, does not exist within the same `table` (Note: Complex table with cells having `colspan`).
 
 ```html
 <table>
@@ -115,7 +134,7 @@ The `headers` attribute on the data `cell` should lists both headers `id` (`head
     <th id="header2">Exams</th>
   </tr>
   <tr>
-    <td colspan="2" headers="header1">15%</td>
+    <td colspan="2" headers="header3">15%</td>
   </tr>
 </table>
 ```
@@ -157,17 +176,33 @@ A table used for presentation only, that has a `role="presentation"`.
 
 #### Inapplicable example 3
 
-The rule only applies to `table` element.
+The rule only applies only to `table` element.
 
 ```html
 <div role="table">
- <div role="row">
-  <div class="columnheader" id="header1">Projects</div>
-  <div class="columnheader" id="header2">Exams</div>
- </div>
- <div role="row">
-  <div role="cell" headers="header2">15%</div>
-  <div role="cell" headers="header1">15%</div>
- </div>
+  <div role="row">
+    <div class="columnheader" id="header1">Projects</div>
+    <div class="columnheader" id="header2">Exams</div>
+  </div>
+  <div role="row">
+    <div role="cell" headers="header2">15%</div>
+    <div role="cell" headers="header1">15%</div>
+  </div>
 </div>
+```
+
+#### Inapplicable example 4
+
+No `headers` attribute is defined for table `cell`.
+
+```html
+<table>
+  <tr>
+    <th id="header1">Projects</th>
+    <th id="header2">Exams</th>
+  </tr>
+  <tr>
+    <td colspan="2">15%</td>
+  </tr>
+</table>
 ```

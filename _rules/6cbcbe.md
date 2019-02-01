@@ -3,7 +3,7 @@ name: Links with identical accessible names serve equivalent purpose
 test_type: atomic
 
 description: |
-  This rule checks that identical accessible names are only used for links that serve an equivalent purpose
+  This rule checks that links with identical accessible names serve an equivalent purpose.
 
 success_criterion: 
 - 2.4.9 # Link Purpose (Link Only)
@@ -30,7 +30,7 @@ When activated, the links in each set of target elements resolve to resources th
 
 ## Assumptions
 
-* This rule assumes that the purpose of the links for links with identical names would not be ambiguous to users in general.
+This rule assumes that the purpose of the links for links with identical names would not be ambiguous to users in general.
 
 ## Accessibility support
 

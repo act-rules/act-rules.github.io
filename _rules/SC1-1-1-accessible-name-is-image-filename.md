@@ -39,7 +39,9 @@ Each test target has an accessible name that serves only an equivalent purpose o
 
 ## Test Cases
 
-### Pass example 1
+### Passed
+
+#### Pass example 1
 
 The `img` element's accessible name uses the filename which accurately describes the image.
 
@@ -47,7 +49,7 @@ The `img` element's accessible name uses the filename which accurately describes
 <img src="https://www.w3.org/WAI/demos/bad/img/w3c" alt="w3c">
 ```
 
-### Pass example 2
+#### Pass example 2
 
 The `input` element with a `type` of `image` has an accessible name that uses the filename which accurately describes the image.
 
@@ -55,7 +57,9 @@ The `input` element with a `type` of `image` has an accessible name that uses th
 <input type="image" src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="W3C">
 ```
 
-### Failure example 1
+### Falied
+
+#### Falied example 1
 
 The `img` element's accessible name matches the image filename which does not accurately describe the image.
 
@@ -63,7 +67,7 @@ The `img` element's accessible name matches the image filename which does not ac
 <img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="teaser_right2">
 ```
 
-### Failure example 2
+#### Falied example 2
 
 The `input` element with a `type` of `image` has an accessible name that uses the filename which does not accurately describes the image.
 
@@ -71,7 +75,7 @@ The `input` element with a `type` of `image` has an accessible name that uses th
 <input type="image" src="https://www.w3.org/WAI/demos/bad/before/img/top_weather.gif" alt="top_weather">
 ```
 
-### Failure example 3
+#### Falied example 3
 
 The `img` element's accessible name matches the image filename. In this example the file extension is redundant and results in the accessible name not accurately describing the image.
 
@@ -79,14 +83,16 @@ The `img` element's accessible name matches the image filename. In this example 
 <img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png">
 ```
 
-### Inapplicable example 1
+### Inapplicable
+
+#### Inapplicable example 1
 
 The `img` element is not exposed to assistive technologies.
 
 ```html
 <img role="presentation">
 ```
-### Inapplicable example 2
+#### Inapplicable example 2
 
 The `img` element is not exposed to assisstive technologies.
 
@@ -94,7 +100,7 @@ The `img` element is not exposed to assisstive technologies.
 <img alt="">
 ```
 
-### Inapplicable example 3
+#### Inapplicable example 3
 
 The `img` element's accessible name does not contain the image filename.
 
@@ -102,7 +108,7 @@ The `img` element's accessible name does not contain the image filename.
 <img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="modanna lily">
 ```
 
-### Inapplicable example 4
+#### Inapplicable example 4
 
 The `img` element's `alt` attribute matches the filename but is overidden by the `aria-label` value which takes precedence in the accessible name calculation.
 

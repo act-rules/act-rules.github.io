@@ -22,7 +22,7 @@ The rule applies to any HTML `input` element with a [`type`](https://www.w3.org/
 
 ### Expectation
 
-Each test target has an accessible name that serves only an equivalent purpose of the [non-text content](https://www.w3.org/TR/WCAG21/#dfn-non-text-content).
+Each test target has an accessible name that serves an equivalent purpose of the [non-text content](https://www.w3.org/TR/WCAG21/#dfn-non-text-content).
 
 ## Assumptions
 

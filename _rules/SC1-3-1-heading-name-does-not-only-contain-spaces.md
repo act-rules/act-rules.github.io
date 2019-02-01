@@ -36,6 +36,7 @@ This rule assumes that having an element that unintentionally shows up programat
 Handling of headings containing only spaces, space characters, carriage returns, newlines, tabs, and form-feeds varies between different assistive technologies and browsers. This means that even though the outcome of this rule is *failed*, users of certain assistive technology and browser combinations might not experience an issue.
 
 ## Background
+
 - In some screen reader and browser combinations, headings containing only spaces, space characters, carriage returns, newlines, tabs, and form-feeds will show up as empty headings, confusing the user experience. For a screen reader user it will be hard to get an overview of the heading structure of the page, if "unused" headings are included in the heading structure, and it can be hard to know if the heading is just white space that has accidentally been marked up as a heading, or if it is an actual heading that for some reason doesn't have an accessible name. Since this is a case where the programatically determinable structure of the page doesn't match the visual presentation, this is a violation of success criterion [1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships).
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [The br element](https://www.w3.org/TR/html/textlevel-semantics.html#the-br-element)

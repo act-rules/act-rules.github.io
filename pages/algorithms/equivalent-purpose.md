@@ -5,7 +5,7 @@ key: equivalent-purpose
 
 For two resources to serve an equivalent purpose, they can either be identical, or both/all deliver on the promise that was made when sending the user to the resources.
 
-Resources can be identical even though the links to them are different. 
+Resources can be identical even though the link URLs to them are different. 
 
 If the [parsed URLs](https://www.w3.org/TR/html52/infrastructure.html#parsing-urls) for two resources are identical, the resources themselves are identical, thus serving an equivalent purpose. 
 

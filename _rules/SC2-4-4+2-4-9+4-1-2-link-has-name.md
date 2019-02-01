@@ -5,7 +5,8 @@ description: |
 
 success_criterion:
 - 4.1.2 # Name, Role, Value
-- 2.4.4
+- 2.4.4 # Link Purpose (In Context)
+- 2.4.9 # Link Purpose (Link Only)
 
 test_aspects: # Remove what is not applicable
 - DOM Tree

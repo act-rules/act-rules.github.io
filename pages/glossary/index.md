@@ -14,7 +14,7 @@ title: Glossary
   {% if item.category == "glossary" and item.key %}
   <tr>
     <td>
-      <a class='rule-list-title' href="{{ item.url | prepend: site.baseurl }}">{{item.title}}</a>
+      <a class='rule-list-title' href="{{ item.url | prepend: site.url }}">{{item.title}}</a>
     </td>
     <td>
       {{ item.key }}

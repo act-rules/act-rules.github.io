@@ -17,4 +17,4 @@ AND also match:
 
 **Editor note:** We should test if `*[role=link]` is picked up as a link if it does not have tabindex on it. If so we might want to remove the `[tabindex]` part of the selector.
 
-For a list of roles that inherit from the widget role, see the ARIA specification here: https://www.w3.org/TR/wai-aria-1.1/#widget_roles
+For a list of roles that inherit from the widget role, see the WAI-ARIA specification here: https://www.w3.org/TR/wai-aria-1.1/#widget_roles

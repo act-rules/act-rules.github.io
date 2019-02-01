@@ -1,6 +1,8 @@
 ---
 name: Audio-only as a media alternative for text
 
+rule_type: atomic
+
 description: |
   This rule checks `audio` is a media alternative for text on the page.
 
@@ -18,9 +20,12 @@ authors:
 
 ### Applicability
 
-The rule applies to any [non-streaming](#non-streaming-media-element) `audio` element that is playing or with a "play button".
 
-A play button is an interactive element that when activated, plays the audio. The play button must be [visibile](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree)
+The rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:
+- playing; or,
+- has a "play button" that is [visibile](#visible) and [included-in-the-accessibility-tree](#included-in-the-accessibility-tree).
+
+**Note:** A play button is an interactive element that when activated, plays the audio. 
 
 ### Expectation 1
 
@@ -34,6 +39,8 @@ Each target element is labelled as an audio alternative for text on the page.
 
 The label (from expectation 2) is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree)
 
+**Note:** The term label does not refer to the `label` element.
+
 ## Assumptions
 
 *There are currently no assumptions*
@@ -44,7 +51,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- 
+- [Understanding SC 1.2.1:Audio-only and Video-only (Prerecorded)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html) 
 
 ## Test cases
 
@@ -120,5 +127,6 @@ An audio element that describes some of the text on the same page. The text on t
 ```html
 <p>A part of a speech by John F. Kennedy: We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win, and the others, too.</p>
 <p>You can also listen to the audio file below to hear the above part of the speech.</p>
-<audio src="../test-assets/moon-audio/moon-speech.mp3" > </audio>
+
+<audio src="../test-assets/moon-audio/moon-speech.mp3"> </audio>
 ```

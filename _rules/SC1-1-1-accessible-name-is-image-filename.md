@@ -24,7 +24,7 @@ Applicable elements have an [accessible name](#accessible-name) that is equivale
 
 ### Expectation
 
-Each test target has an accessible name that serves an equivalent purpose of the [non-text content](https://www.w3.org/TR/WCAG21/#dfn-non-text-content).
+Each test target has an accessible name that serves an equivalent purpose to the [non-text content](https://www.w3.org/TR/WCAG21/#dfn-non-text-content).
 
 ## Assumptions
 

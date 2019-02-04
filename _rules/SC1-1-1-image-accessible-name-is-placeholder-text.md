@@ -1,7 +1,7 @@
 ---
 name: Placeholder text is valid accessible name
 description: |
-  This rule checks that image elements that use generic placeholder text as their accessible name do so without loss of infomation to the user.
+  This rule checks that image elements that use generic placeholder text as their accessible name do so without loss of information to the user.
 
 success_criterion:
 - 1.1.1 # Non-text Content
@@ -44,7 +44,7 @@ Each test target has an accessible name that serves an equivalent purpose to the
 The element's accessible name uses generic placeholder text which accurately describes the image.
 
 ```html
-<img alt="oage"> (need a source file)
+<img alt="spacer"> (need a source file)
 ```
 
 ### Failed
@@ -54,7 +54,15 @@ The element's accessible name uses generic placeholder text which accurately des
 The element's accessible name uses generic placeholder text which does not accurately describes the image.
 
 ```html
-<img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg.png" alt="image">
+<img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="image">
+```
+
+#### Failed example 2
+
+The `input` element with a `type` of `image` has an accessible name that uses generic placeholder text which does not accurately describes the image.
+
+```html
+<img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="image">
 ```
 
 ### Inapplicable

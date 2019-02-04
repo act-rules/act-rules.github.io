@@ -1,5 +1,5 @@
 ---
-name: Image accessible name is placeholder text
+name: Placeholder text is valid accessible name
 description: |
   This rule checks that image elements that use generic placeholder text as their accessible name do so without loss of infomation to the user.
 
@@ -16,11 +16,11 @@ authors:
 
 ### Applicability
 
-The rule applies to HTML `input type="image"` or `area` elements, or any HTML element with the semantic role of `img`, where the element is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has an [accessible name](#accessible-name) that exclusively uses [generic placeholder text](#generic-placeholder-text).
+he rule applies to any HTML `input` element with a [`type`](https://www.w3.org/TR/html/sec-forms.html#dom-htmlinputelement-type) of `image`, or any HTML element with the [semantic role](#semantic-role) of `img`, that has an [accessible name](#accessible-name) that uses [generic placeholder text](#generic-placeholder-text).
 
 ### Expectation
 
-Each test target has an accessible name that can be used in place of the [non-text content](https://www.w3.org/TR/WCAG21/#dfn-non-text-content) of the element without loss of information to the user.
+Each test target has an accessible name that serves an equivalent purpose to the [non-text content](https://www.w3.org/TR/WCAG21/#dfn-non-text-content).
 
 ## Assumptions
 
@@ -37,7 +37,9 @@ Each test target has an accessible name that can be used in place of the [non-te
 
 ## Test Cases
 
-### Pass example 1
+### Passed
+
+#### Passed example 1
 
 The element's accessible name uses generic placeholder text which accurately describes the image.
 
@@ -45,7 +47,9 @@ The element's accessible name uses generic placeholder text which accurately des
 <img alt="oage"> (need a source file)
 ```
 
-### Failure example 1
+### Failed
+
+#### Failed example 1
 
 The element's accessible name uses generic placeholder text which does not accurately describes the image.
 
@@ -53,7 +57,9 @@ The element's accessible name uses generic placeholder text which does not accur
 <img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg.png" alt="image">
 ```
 
-### Inapplicable example 1
+### Inapplicable
+
+#### Inapplicable example 1
 
 The image is marked decorative with `alt=""`.
 
@@ -61,7 +67,7 @@ The image is marked decorative with `alt=""`.
 <img src="/background.png" alt="">
 ```
 
-### Inapplicable example 2
+#### Inapplicable example 2
 
 The image is marked decorative with `role="presentation"`.
 
@@ -69,7 +75,7 @@ The image is marked decorative with `role="presentation"`.
 <img src="/background.png" role="presentation">
 ```
 
-### Inapplicable example 3
+#### Inapplicable example 3
 
 The image `alt` value uses generic placeholder but is overidden by the `aria-label` value which takes precedence in the accessible name calculation.
 

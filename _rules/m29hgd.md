@@ -1,10 +1,10 @@
 ---
-name: `headers` attribute only refers to `cells` in the same `table`
+name: `headers` attribute only refers to `cells` in the same `table` element
 
 test_type: atomic
 
 description: |
-  This rule checks that the `headers` attribute must only refer to `cells` in the same `table`.
+  This rule checks that the `headers` attribute must only refer to `cells` in the same `table` element
 
 test_aspects:
 - DOM Tree
@@ -18,15 +18,15 @@ authors:
 
 ### Applicability
 
-This rule applies to any element with the [semantic role](#semantic-role) of `cell`, `columnheader` or `rowheader` within the `table` element, that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree).
+This rule applies to `td` and `th` elements with a `headers` attribute and within a `table` element, that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation
 
-Each target element with the `headers` attribute refers to other `cells` of the same `table`.
+Each target element with the `headers` attribute refers to other `cells` of the same `table` element.
 
 ## Assumptions
 
-*There are currently no assumptions*
+- This test assumes that `headers` pointing to an `idref` of a non-existent element is a failure.
 
 ## Accessibility support
 

@@ -10,8 +10,8 @@ test_aspects:
 - DOM Tree
 
 authors:
-- Audrey Maniez
 - Jey Nandakumar
+- Audrey Maniez
 ---
 
 ## Test Procedure

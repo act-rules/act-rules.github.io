@@ -18,7 +18,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML `input` element with a [`type`](https://www.w3.org/TR/html/sec-forms.html#dom-htmlinputelement-type) of `image`, or any HTML element with the [semantic role](#semantic-role) of `img`, that has an [accessible name](#accessible-name) that is equivalent to the [filename](#filename) specified in the `src` attribute. Difference in letter casing, and forward and trailing whitespace should be ignored.
+The rule applies to any HTML `input` element with a [`type`](https://www.w3.org/TR/html/sec-forms.html#dom-htmlinputelement-type) of `image`, or any HTML element with the [semantic role](#semantic-role) of `img`, is [included in the accessibility tree](#included-in-the-accessibility-tree), and has an [accessible name](#accessible-name) that is equivalent to the [filename](#filename) specified in the `src` attribute. Difference in letter casing, and forward and trailing whitespace should be ignored.
 
 ### Expectation
 
@@ -87,17 +87,17 @@ The `img` element's accessible name matches the image filename. In this example 
 
 #### Inapplicable example 1
 
-The `img` element is not exposed to assistive technologies.
+The `img` element does not haveth the semantic role of image.
 
 ```html
 <img role="presentation">
 ```
 #### Inapplicable example 2
 
-The `img` element is not exposed to assisstive technologies.
+The `img` element is not included in the accessibility tree
 
 ```html
-<img alt="">
+<img display="none">
 ```
 
 #### Inapplicable example 3

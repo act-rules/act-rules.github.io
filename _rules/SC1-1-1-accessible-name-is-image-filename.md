@@ -97,7 +97,7 @@ The `img` element does not haveth the semantic role of image.
 The `img` element is not included in the accessibility tree
 
 ```html
-<img display="none">
+<img style="display:none;">
 ```
 
 #### Inapplicable example 3

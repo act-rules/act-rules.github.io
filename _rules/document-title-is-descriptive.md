@@ -20,7 +20,9 @@ authors:
 
 ### Applicability
 
-This rule applies to the first HTML `title` element in a [document](https://www.w3.org/TR/dom/#concept-document) where the [document element](https://www.w3.org/TR/dom/#document-element) is an HTML `<html>` element, if the first HTML `title` element is [non-empty](#non-empty).
+This rule applies to the [document title](https://html.spec.whatwg.org/multipage/dom.html#the-title-element-2) in a [document](https://www.w3.org/TR/dom/#concept-document) where the [document element](https://www.w3.org/TR/dom/#document-element) is an HTML `<html>` element, if the `<title>` element is [non-empty](#non-empty).
+
+**Note:** Due to the definition of [document title](https://html.spec.whatwg.org/multipage/dom.html#the-title-element-2) this rule only applies to the first `<title>` element in the document, even if there are more `<title>` elements in the document.
 
 ### Expectation
 
@@ -28,15 +30,15 @@ The target element describes the topic or purpose of the overall content of the 
 
 ## Assumptions
 
-- This rule assumes that browsers only recognize the first `title` element if multiple `title` elements are present in the [document](https://www.w3.org/TR/dom/#concept-document). Testing shows that this in general is the case. Therefore the scope of this rule is limited to only checking the first `title` element in a document.
+_There are no assumptions for this rule._
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+- This rule assumes that browsers only recognize the first `<title>` element if multiple `<title>` elements are present in the [document](https://www.w3.org/TR/dom/#concept-document). Testing shows that this in general is the case. Therefore the scope of this rule is limited to only checking the first `<title>` element in a document.
 
 ## Background
 
-- [Understanding Success Criterion 2.4.2: Page Titled](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
+- [Understanding Success Criterion 2.4.2: Paged](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
 - This rule is testing [Technique G88: Providing descriptive titles for Web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G88)
 - A prerequisite for this rule is that [Technique H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG21/Techniques/html/H25) is used for living up to 2.4.2 Page Titled
 
@@ -46,7 +48,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed example 1
 
-The ´title´ element describes the content of the document.
+The ´<title>´ element describes the content of the document.
 
 ```html
 <html>
@@ -61,7 +63,7 @@ The ´title´ element describes the content of the document.
 
 #### Passed example 2
 
-Two <title> tags where the first one describes the content of the document.
+Two `<title>` tags where the first one describes the content of the document.
 
 ```html
 <html>
@@ -77,7 +79,7 @@ Two <title> tags where the first one describes the content of the document.
 
 #### Passed example 3
 
-Even though the descriptive `title` element is not placed within the `head` element that is the context the element can be used in [according to the HTML specification](https://www.w3.org/TR/html/document-metadata.html#the-title-element), the rule still passes, since the browser fixes it, and it doesn't cause any known accessibility issues.
+Even though the descriptive `<title>` element is not placed within the `<head>` element that is the context the element can be used in [according to the HTML specification](https://www.w3.org/TR/html/document-metadata.html#the-title-element), the rule still passes, since the browser fixes it, and it doesn't cause any known accessibility issues.
 
 ```html
 <html>
@@ -94,7 +96,7 @@ Even though the descriptive `title` element is not placed within the `head` elem
 
 #### Failed example 1
 
-`title` is not descriptive of the content of the document.
+`<title>` is not descriptive of the content of the document.
 
 ```html
 <html>
@@ -109,7 +111,7 @@ Even though the descriptive `title` element is not placed within the `head` elem
 
 ### Failed example 2
 
-Even though a correct `title` element is put in the `head` of the document, this rule only looks at the first `title` element.
+Even though a correct `<title>` element is put in the `<head>` of the document, this rule only looks at the first `<title>` element.
 
 ```html
 <html>
@@ -128,7 +130,7 @@ Even though a correct `title` element is put in the `head` of the document, this
 
 #### Inapplicable example 1
 
-No `title` element present in document.
+No `<title>` element present in document.
 
 ```html
 <html>
@@ -142,7 +144,7 @@ No `title` element present in document.
 
 #### Inapplicable example 2
 
-`title` element present in document, but is empty.
+`<title>` element present in document, but is empty.
 
 ```html
 <html>
@@ -157,7 +159,7 @@ No `title` element present in document.
 
 #### Inapplicable example 3
 
-`title` element present in document, but does not meet the definition for [non-empty text string](#non-empty).
+`<title>` element present in document, but does not meet the definition for [non-empty text string](#non-empty).
 
 ```html
 <html>

@@ -87,14 +87,14 @@ The `img` element's accessible name matches the image filename. In this example 
 
 #### Inapplicable example 1
 
-The `img` element does not haveth the semantic role of image.
+The `img` element doesn't have the semantic role of image.
 
 ```html
 <img role="presentation">
 ```
 #### Inapplicable example 2
 
-The `img` element is not included in the accessibility tree
+The `img` element is not included in the accessibility tree.
 
 ```html
 <img style="display:none;">

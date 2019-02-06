@@ -1,0 +1,103 @@
+---
+name: SVG image has name
+description: |
+  This rule checks that each SVG image element that is not marked as decorative, has an accessible name.
+
+success_criterion:
+- 1.1.1 # Non-Text Content
+
+test_aspects:
+- DOM Tree
+- CSS Styling
+
+authors:
+- Bryn Anderson
+---
+
+## Test procedure
+
+### Applicability
+
+The rule applies to any `SVG` `image` element, or any `SVG` element with the [semantic role](#semantic-role) of `img` that is [included in the accessibility tree](#included-in-the-accessibility-tree)
+
+### Expectation
+
+Each target element has a non-empty accessible name.
+
+## Assumptions
+
+*There are currently no assumptions*
+
+## Accessibility support
+
+ *There are no major accessibility support issues known for this rule.*
+
+## Background
+
+- [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
+- [F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)](https://www.w3.org/WAI/WCAG21/Techniques/failures/F30)
+- https://www.w3.org/TR/svg-aam-1.0/#mapping_general
+- https://www.w3.org/TR/svg-aam-1.0/#mapping_role_table
+- https://www.w3.org/TR/svg-aam-1.0/#include_elements
+
+
+## Test Cases
+
+### Passed
+
+#### Pass example 1
+
+_description..._
+
+```html
+
+```
+
+#### Pass example 2
+
+_description..._
+
+```html
+
+```
+
+### Falied
+
+#### Falied example 1
+
+_description..._
+
+```html
+
+```
+
+#### Falied example 2
+
+_description..._
+
+```html
+
+```
+
+#### Falied example 3
+
+_description..._
+
+```html
+
+```
+
+### Inapplicable
+
+#### Inapplicable example 1
+
+_description..._
+```html
+
+```
+#### Inapplicable example 2
+
+_description..._
+```html
+
+```

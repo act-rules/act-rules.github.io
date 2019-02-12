@@ -65,7 +65,7 @@ Links resolves to same resource after redirect:
 
 #### Passed example 3
 
-Identical pages are located on different URLs:
+Resources are not the same, since the links resolve to different URLs, but the resources are completely identical, thus serving the same purpose:
 
 ```html
 <a href="/test-assets/6cbcbe/index.html">Contact us</a>

@@ -7,7 +7,7 @@ description: |
 success_criterion: 
 - 1.3.1 # Info and Relationships (A)
 
-test_aspects: # Remove what is not applicable
+test_aspects:
 - DOM Tree
 - CSS Styling
 
@@ -19,9 +19,9 @@ authors:
 
 ### Applicability
 
-This rule applies to any HTML element with the [semantic role](#semantic-role) of `heading` that is [included in the accessibility tree].
+This rule applies to any HTML element with the [semantic role](#semantic-role) of `heading` that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
-### Expectation 1
+### Expectation
 
 None of the target elements has an [accessible name](#accessible-name) that contains only spaces.
 
@@ -112,7 +112,7 @@ Element with the semantic role of heading is empty.
 <h2>&ensp;</h2>
 ```
 
-#### Failed example 5
+#### Failed example 6
 
 `h2` element contains `&emsp;` (em-space) character as only content.
 
@@ -120,7 +120,7 @@ Element with the semantic role of heading is empty.
 <h2>&emsp;</h2>
 ```
 
-#### Failed example 5
+#### Failed example 7
 
 `h2` element contains `&thinsp;` (thin space) character as only content.
 
@@ -128,7 +128,7 @@ Element with the semantic role of heading is empty.
 <h2>&thinsp;</h2>
 ```
 
-#### Failed example 6
+#### Failed example 8
 
 `h2` element contains `<br />` as only content that affects the accessible name computation.
 

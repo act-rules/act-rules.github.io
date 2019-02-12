@@ -5,6 +5,9 @@ key: owner-element
 
 
 If the node is referenced by an element through the `aria-owns` attribute, then the owner element is the first node in the DOM tree that references it through `aria-owns`.
+
+> **Note:** When using `aria-owns`, hiding the owner element through WAI-ARIA (`aria-hidden="true"`) or CSS (`display:none` or `visibility:hidden`) will not change the ownership, but should instead hide all elements owned by the owner element.
+
 Otherwise, the owner element is the closest ancestor that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 Nodes that are not included in the accessibility tree do not have an owner element.

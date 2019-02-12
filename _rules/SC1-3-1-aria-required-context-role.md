@@ -24,6 +24,8 @@ The rule applies to any HTML or SVG element that is [included in the accessibili
 
 The [owner element](owner-element) for each target element has a [semantic role](#semantic-role) matching one of the [WAI-ARIA required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope) for the target element.
 
+**Note:** The definition of [owner element](owner-element) used in this rule is diverging from the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element). See more in the [owner element](owner-element) definition.
+
 ## Assumptions
 
 _There are currently no assumptions_
@@ -130,6 +132,9 @@ Element with role `listitem` has a closer ancestor, that is included in the acce
 </div>
 ```
 
+**Note:** This test case follows the definition of [owner element](owner-element) used in this rule. If implemented differently, this definition could cause differences in outcome for this test case. 
+
+
 #### Failed example 5
 
 Element with role `listitem` has a closer ancestor, that is included in the accessibility tree, than the role `list` that should have been its context role
@@ -153,6 +158,8 @@ The owner element is the first element that references the target element throug
    </div>
 </div>
 ```
+
+**Note:** This test case follows the definition of [owner element](owner-element) used in this rule. If implemented differently, this definition could cause differences in outcome for this test case. 
 
 ### Inapplicable
 

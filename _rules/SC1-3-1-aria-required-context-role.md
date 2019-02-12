@@ -120,16 +120,6 @@ Element not contained within its required context role.
 
 #### Failed example 4
 
-Context role is not included in the accessibility tree.
-
-```html
-<div role="list" aria-hidden="true">
-    <div role="listitem"></div>
-</div>
-```
-
-#### Failed example 5
-
 Element with role `listitem` has a closer ancestor, that is included in the accessibility tree, than the role `list` that should have been its context role
 
 ```html
@@ -140,7 +130,7 @@ Element with role `listitem` has a closer ancestor, that is included in the acce
 </div>
 ```
 
-#### Failed example 6
+#### Failed example 5
 
 Element with role `listitem` has a closer ancestor, that is included in the accessibility tree, than the role `list` that should have been its context role
 
@@ -152,7 +142,7 @@ Element with role `listitem` has a closer ancestor, that is included in the acce
 </div>
 ```
 
-#### Failed example 7
+#### Failed example 6
 
 The owner element is the first element that references the target element through `aria-owns`, which results in the wrong context role.
 
@@ -188,4 +178,14 @@ Role does not have any required context roles listed in WAI-ARIA spec.
 
 ```html
 <div role="radio"></div>
+```
+
+#### Failed example 4
+
+Element is not exposed to assistive technologies, since decendant has `aria-hidden` attribute with value set to `true`.
+
+```html
+<div role="list" aria-hidden="true">
+    <div role="listitem"></div>
+</div>
 ```

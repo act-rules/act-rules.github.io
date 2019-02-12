@@ -20,7 +20,7 @@ authors:
 
 ### Applicability
 
-This rule applies to any two or more HTML or SVG elements that have the [semantic role](#semantic-role) of link, are [included in the accessibility tree](#included-in-the-accessibility-tree) and that have the same [non-empty](#non-empty) [accessible name](#accessible-name).
+This rule applies to any two or more HTML or SVG elements that have the [semantic role](#semantic-role) of link, are [included in the accessibility tree](#included-in-the-accessibility-tree), and that have the same [non-empty](#non-empty) [accessible name](#accessible-name).
 
 ### Expectation
 
@@ -47,7 +47,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed example 1
 
-Identical link text leads to identical URLs:
+A set of two `<a>` elements have the same accessible name and link to the same resource.
 
 ```html
 <a href="/test-assets/6cbcbe/index.html">Contact us</a>
@@ -182,7 +182,7 @@ No identical link texts:
 
 #### Inapplicable example 3
 
-Link is not exposed to assistive technologies;
+Link is not included in the accesssibility tree:
 
 ```html
 <a href="/test-assets/6cbcbe/page1.html" aria-hidden="true">Contact Us</a>

@@ -24,7 +24,7 @@ This rule applies to any two or more HTML or SVG elements that have the [semanti
 
 ### Expectation
 
-When activated, the links in each set of target elements resolve to resources that fulfill an [equivalent purpose](#equivalent-purpose) in relation to the [accessible names](#accessible-name) of the link.
+When activated, the links in each set of target elements resolve to the [same resource](#same-resource) or to different resources that fulfill an [equivalent purpose](#equivalent-purpose) in relation to the [accessible names](#accessible-name) of the link
 
 **Note:** Resolving the links includes potential redirects.
 

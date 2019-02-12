@@ -56,7 +56,7 @@ A set of two `<a>` elements have the same accessible name and link to the same r
 
 #### Passed example 2
 
-Links resolves to same page after redirect:
+Links resolves to same resource after redirect:
 
 ```html
 <a href="/test-assets/6cbcbe/index.html">Contact us</a>
@@ -101,7 +101,7 @@ Pages contain different amounts of information and/or differently worded informa
 
 #### Passed example 7
 
-Pages have the same content but use different layouts:
+Pages have the same advertised key content but use different layouts:
 
 ```html
 <a href="/test-assets/6cbcbe/page1.html">Contact us</a>
@@ -137,7 +137,7 @@ Same link text used for links going to different resources:
 
 #### Failed example 2
 
-Same link text used for links going to web pages with same name, but with different information:
+Same link text used for links going to web pages that are similar, but has different information in the content:
 
 ```html
 <a href="/test-assets/6cbcbe/about/contact.html">Contact us</a> 
@@ -146,7 +146,7 @@ Same link text used for links going to web pages with same name, but with differ
 
 #### Failed example 3
 
-Links created via scripting with explicit role of link, but leads to resources offering different information: 
+Links created via scripting with explicit role of link, but leads to different resources that offer different content: 
 
 ```html
 <span role="link"

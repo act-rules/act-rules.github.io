@@ -27,6 +27,10 @@ Each target element has an [accessible name](#accessible-name) that is [non-empt
 
 **NOTE**: An `img` element can be marked as decorative, by using either `role="presentation"`, `role="none"` or an empty alt attribute `alt=""`.
 
+## Assumptions 
+
+_There are currently no assumptions._
+
 ## Accessibility Support
 
 There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name](#accessible-name).

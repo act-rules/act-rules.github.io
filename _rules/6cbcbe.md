@@ -95,8 +95,8 @@ URLs differ due to trailing slashes:
 Pages contain different amounts of information and/or differently worded information, but fulfils same purpose in relation to the link:
 
 ```html
-<a href="/test-assets/6cbcbe/page1.html">Contact us</a>
-<a href="/test-assets/6cbcbe/page2.html">Contact us</a>
+<a href="/test-assets/6cbcbe/page1.html">Call us</a>
+<a href="/test-assets/6cbcbe/page2.html">Call us</a>
 ```
 
 #### Passed example 7

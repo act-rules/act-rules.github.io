@@ -10,8 +10,8 @@ test_aspects:
 - DOM Tree
 
 authors:
-- Audrey Maniez
 - Jey Nandakumar
+- Audrey Maniez
 ---
 
 ## Test Procedure
@@ -45,7 +45,7 @@ Each target element refers to data `cells` of the same `table`.
 
 #### Passed example 1
 
-The `columnheader` refers to `cells` of the same table.
+The `columnheader` refers to `cells` within the same `table`.
 
 ```html
 <table>
@@ -63,12 +63,46 @@ The `columnheader` refers to `cells` of the same table.
 </table>
 ```
 
+#### Passed example 2
+
+The `columnheader` refers to `cells` within the same `table`.
+
+```html
+<table>
+  <tr> 
+    <td headers="header1">
+      Projects
+    </td>
+    <th id="header1">
+      Projects
+    </th> 
+  </tr>
+</table>
+```
+
+#### Passed example 3
+
+The `columnheader` refers to `cells` within the same `table`.
+
+```html
+<table>
+  <tr> 
+    <td aria-labelledby="header1">
+      Description
+    </td>
+    <th id="header1">
+      Description
+    </th> 
+  </tr>
+</table>
+```
+
 
 ### Failed
 
 #### Failed example 1
 
-The headers are not referenced by the cells. 
+The `columnheader` do not refer to `cells` within the `table`.
 
 ```html
 <table>
@@ -100,4 +134,27 @@ The rule only applies only to `table` element.
   <div role="cell" headers="header1">15%</div>
  </div>
 </div>
+```
+
+#### Inapplicable example 2
+
+The rule only applies to `table` element that is included in the accessibility tree, `table` is marked as `role=presentation`.
+
+```html
+<table role="presentation">
+  <tr> <th>Time</th> </tr>
+  <tr> <th>Date</th> </tr>
+</table>
+```
+
+
+#### Inapplicable example 3
+
+The rule only applies to `table` element that is included in the accessibility tree, `table` is marked as `aria-hidden=true`.
+
+```html
+<table aria-hidden="true">
+  <tr> <th>Time</th> </tr>
+  <tr> <th>Date</th> </tr>
+</table>
 ```

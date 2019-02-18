@@ -1,33 +1,38 @@
 ---
-name: CSS orientation lock via media queries
+name: Page has no orientation lock specified using CSS media queries
 
-test_type: atomic
+rule_type: atomic
 
 description: |
-  This rule checks that page content is not locked to any specific display orientation, using CSS media queries.
+  This rule checks that page content is not locked to any specific display orientation using CSS media queries, and the content is operable in all display orientations.
+
+success_criterion:
+- 1.3.4 # (Orientation)
 
 test_aspects:
 - DOM Tree
 - CSS Styling
 
 authors:
-- Audrey Maniez
 - Jey Nandakumar
+- Audrey Maniez
 ---
 
 ## Test Procedure
 
 ### Applicability
 
-The rule applies to any `element` that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree) of the [page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s).
+The rule applies to any `element` that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation
 
-Each target element does not have any `css` applied, that locks the page content to a preferred orientation.
+Each target element does not have any `CSS` media queries applied, that locks the page content to a specific orientation.
 
 ## Assumptions
 
-* This test assumes that a specific display orientation is not [essential](https://www.w3.org/TR/WCAG21/#dfn-essential), which is listed as a valid exception to [SC 1.3.4]((https://www.w3.org/WAI/WCAG21/Understanding/orientation.html)). Examples where a particular display orientation may be essential are a bank check, a piano application, slides for a projector or television, or virtual reality content where binary display orientation is not applicable.
+- The rule does not take consider existence of any control on the page that can handle or change the orientation on demand.
+
+- The rule assumes that a specific display orientation is not [essential](https://www.w3.org/TR/WCAG21/#dfn-essential), which is listed as a valid exception to [Success Criterion 1.3.4 Orientation]((https://www.w3.org/WAI/WCAG21/Understanding/orientation.html)). Examples where a particular display orientation may be essential are a bank check, a piano application, slides for a projector or television, or virtual reality content where binary display orientation is not applicable.
 
 ## Accessibility support
 

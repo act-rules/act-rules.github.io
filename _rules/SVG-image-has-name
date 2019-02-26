@@ -1,7 +1,7 @@
 ---
 name: SVG image has name
 description: |
-  This rule checks that each SVG image element that is not marked as decorative, has an accessible name.
+  This rule checks that each SVG image element that is included in the accessibility tree has an accessible name.
 
 success_criterion:
 - 1.1.1 # Non-Text Content
@@ -18,7 +18,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any `SVG` `image` element, or any `SVG` element with the [semantic role](#semantic-role) of `img` that is [included in the accessibility tree](#included-in-the-accessibility-tree)
+The rule applies to any `SVG` element that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation
 
@@ -30,7 +30,7 @@ Each target element has a non-empty accessible name.
 
 ## Accessibility support
 
- *There are no major accessibility support issues known for this rule.*
+Browser and assitive technology support for SVG `title` and `desc` elements is currently inconsistent. Providing suplimentedary information using WAI ARIA is recommended.
 
 ## Background
 

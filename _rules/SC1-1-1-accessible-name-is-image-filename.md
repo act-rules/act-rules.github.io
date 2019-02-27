@@ -41,7 +41,7 @@ Each test target has an accessible name that serves an equivalent purpose to the
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 The `img` element's accessible name uses the filename which accurately describes the image.
 
@@ -49,7 +49,7 @@ The `img` element's accessible name uses the filename which accurately describes
 <img src="https://www.w3.org/WAI/demos/bad/img/w3c" alt="w3c">
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 The `input` element with a `type` of `image` has an accessible name that uses the filename which accurately describes the image.
 
@@ -57,9 +57,9 @@ The `input` element with a `type` of `image` has an accessible name that uses th
 <input type="image" src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="W3C">
 ```
 
-### Falied
+### Failed
 
-#### Falied example 1
+#### Failed example 1
 
 The `img` element's accessible name matches the image filename which does not accurately describe the image.
 
@@ -67,7 +67,7 @@ The `img` element's accessible name matches the image filename which does not ac
 <img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="teaser_right2">
 ```
 
-#### Falied example 2
+#### Failed example 2
 
 The `input` element with a `type` of `image` has an accessible name that uses the filename which does not accurately describes the image.
 
@@ -75,7 +75,7 @@ The `input` element with a `type` of `image` has an accessible name that uses th
 <input type="image" src="https://www.w3.org/WAI/demos/bad/before/img/top_weather.gif" alt="top_weather">
 ```
 
-#### Falied example 3
+#### Failed example 3
 
 The `img` element's accessible name matches the image filename. In this example the file extension is redundant and results in the accessible name not accurately describing the image.
 

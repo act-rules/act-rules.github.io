@@ -12,3 +12,5 @@ Depending on the server, URLs can either be case-sensitive or case-insenstive, m
 Fully parsed URLs can be different, but still lead to the same resource after making the HTTP request, due to redirects and DNS aliasing. For example, these URLs are all fully normalised: http://example.com/, http://www.example.com/, https://www.example.com/. The server can however be configured to serve the same site for http and https, and the same site for example.com and www.example.com. This is common, but not guaranteed. 
 
 **Note:** Whereas parsing is very quick to do automatically, resolving HTTP aliases is slow. It can take 5 seconds or longer per request. 
+
+Some types of redirects are also caused by user agents, e.g. ensuring that http://example.com/ and http://example.com resolves to the same resource.

@@ -24,7 +24,7 @@ This rule applies to any two or more HTML or SVG elements that have the [semanti
 
 ### Expectation
 
-When activated, the links in each set of target elements resolve to the [same resource](#same-resource) or to different resources that fulfill an [equivalent purpose](#equivalent-purpose) in relation to the [accessible names](#accessible-name) of the link
+When activated, the links in each set of target elements resolve to the [same resource](#same-resource) or to different resources that fulfill an [equivalent purpose](#equivalent-purpose).
 
 **Note:** Resolving the links includes potential redirects.
 
@@ -39,7 +39,7 @@ There are no major accessibility support issues known for this rule.
 ## Background
 
 - [Understanding Success Criterion 2.4.9: Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html)
-- [URL parsing](#https://www.w3.org/TR/html52/infrastructure.html#parsing-urls)
+- [URL parsing](https://www.w3.org/TR/html52/infrastructure.html#parsing-urls)
 
 ## Test Cases
 
@@ -83,7 +83,7 @@ Same link text used for links going to pages where the content section is the sa
 
 #### Passed example 5
 
-URLs differ due to trailing slashes:
+URLs differ due to trailing slashes, but resolves to the same resource after redirects caused by user agent:
 
 ```html
 <a href="/test-assets/6cbcbe/">Contact us</a> 

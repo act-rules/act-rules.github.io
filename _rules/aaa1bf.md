@@ -1,5 +1,5 @@
 ---
-name: No audio auto-play audio lasts more than 3 seconds
+name: No auto-play audio lasts more than 3 seconds
 test_type: atomic
 
 description: |

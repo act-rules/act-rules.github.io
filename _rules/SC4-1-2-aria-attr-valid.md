@@ -26,7 +26,7 @@ Each target attribute is defined in [WAI ARIA 1.1](https://www.w3.org/TR/wai-ari
 
 ## Assumptions
 
-There are currently no assumptions.
+The ARIA `attribute` is being used to comply to WCAG.
 
 ## Accessibility Support
 

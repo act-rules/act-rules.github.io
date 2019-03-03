@@ -1,6 +1,6 @@
 ---
 name: No keyboard trap standard navigation
-test_type: atomic
+rule_type: atomic
 
 description: |
   This rule checks if it is possible to use standard keyboard navigation to navigate through all content on a web page without becoming trapped in any element.

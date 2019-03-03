@@ -1,6 +1,6 @@
 ---
 name: ARIA state or property has valid value
-test_type: atomic
+rule_type: atomic
 
 description: |
    This rule checks that each ARIA state or property has a valid value

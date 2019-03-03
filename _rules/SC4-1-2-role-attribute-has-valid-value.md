@@ -1,6 +1,6 @@
 ---
 name: Role attribute has valid value
-test_type: atomic
+rule_type: atomic
 
 description: |
    This rule checks that each role attribute has a valid value

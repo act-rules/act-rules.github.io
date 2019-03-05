@@ -63,7 +63,6 @@ const placeholderValues =
           ],
         },
       },
-      `gatsby-plugin-catch-links`,
       `gatsby-plugin-sass`,
       {
         resolve: `gatsby-source-filesystem`,

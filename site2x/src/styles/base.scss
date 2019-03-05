@@ -11,6 +11,10 @@ h1, h2, h3, h4, h5, h6 {
   @include header-style($fg-primary)
 }
 
+hr {
+  opacity: 0.1;
+}
+
 table {
 	border-collapse: collapse;
 	width: 100%;

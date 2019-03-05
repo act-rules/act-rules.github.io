@@ -14,7 +14,7 @@ section.layout-container {
     background-color: $bg-secondary;
     color: $fg-secondary;
     max-width: 275px;
-    padding: 0 1rem;
+    padding-left: 1rem;
 
     >div.logo {
       flex-shrink: 0;
@@ -27,63 +27,43 @@ section.layout-container {
         @include reset-list();
         >li {
           transition: all ease;
-          >a {
+          a {
             @include header-style($fg-secondary);
             text-transform: uppercase;
             font-size: 0.83em;
-            font-weight: bold;
             position: relative;
             &:hover {
               color: $accent;
             }
-            &::after {
-              content: '';
-              position: absolute;
-              right: 1rem;
-              top: 3px;
-              width: 0; 
-              height: 0; 
-              border-left: 5px solid transparent;
-              border-right: 5px solid transparent;
-              border-top: 5px solid currentColor;
-              opacity: 0;
-              transform: rotate(-90deg);
-            }
-            &.has-child {
-              &::after {
+            &.active{
+              color: $accent;
+              &::after{
                 opacity: 1;
               }
+            }
+            &.parent-item{
+              color: currentColor;
+            }
+            &::after{
+              content: '';
+              right: 0;
+              top: -9px;
+              height: 30px;
+              position: absolute;
+              width: 7px;
+              background-color: $accent;
+              opacity: 0;
             }
           }
           >ul {
             @include reset-list();
             padding-inline-start: 1rem;
-            padding-inline-end: 1rem;
-            display: none;
+            padding-inline-end: 0rem;
             >li {
               >a {
-                @include header-style($fg-secondary);
                 text-transform: capitalize;
-                color: $fg-secondary;
-                text-decoration: none;
-                display: block;
-                font-size: 90%;
-                &:hover {
-                  color: $accent;
-                }
+                padding-right: 1rem;
               }
-            }
-          }
-          &.expanded {
-            >a {
-              &.has-child {
-                &::after {
-                  transform: rotate(0deg);
-                }
-              }
-            }
-            >ul {
-              display: block;
             }
           }
         }
@@ -117,7 +97,34 @@ section.layout-container {
       &.rules-page{
         .rules-listing {
           >article {
-           
+            border-bottom: 1px solid $sep;
+            padding: 2rem 0;
+
+            &:last-child{
+              border-bottom: none;
+            }
+
+            div.meta {
+              span {
+                padding: 0.25rem 0.5rem;
+                
+                
+                &.heading {
+                  background-color: $sep;
+                }
+                &.meta-item {
+                  background-color: $bg-secondary;
+                  color: $fg-secondary;
+                  border-left: 1px solid $sep;
+                  cursor: pointer;
+
+                  &:hover {
+                    color: $accent;
+                  }
+                }
+
+              }
+            }
           }
         }
       }

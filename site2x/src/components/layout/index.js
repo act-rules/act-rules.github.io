@@ -22,7 +22,7 @@ class Layout extends React.Component {
       const { path, context } = node
       return (
         <li key={index}>
-          <Link to={path}>{context.title}</Link>
+          <Link activeClassName='active' to={path}>{context.title}</Link>
         </li>
       )
     })
@@ -97,25 +97,6 @@ class Layout extends React.Component {
           data => {
             const { getSiteTitle, getTopLevelNavigation, getNonRulesNavigation } = data
 
-          
-
-            const accordionListItem = (e) => {
-              if (!e.target) {
-                e.stopPropagation()
-                return;
-              }
-              const nodeName = e.target.nodeName.toUpperCase();
-              if (nodeName !== 'A') {
-                e.stopPropagation()
-                return;
-              }
-              if (!Array.from(e.target.classList).includes('parent-item')) {
-                e.stopPropagation()
-                return;
-              }
-              e.currentTarget.classList.toggle('expanded')
-            }
-
             return (
               <section className='layout-container'>
                 <aside>
@@ -126,16 +107,19 @@ class Layout extends React.Component {
                   </div>
                   <nav className="navigation">
                     <ul>
+                      <hr />
                       {/* Top level Navigation */}
                       {getTopLevelNavigation.group.map((item) => this.getListItemFromEdges(item.edges))}
+                      <hr />
                       {/* Rules */}
                       <li>
-                        <Link to="/rules/">Rules</Link>
+                        <Link to="/rules/" activeClassName="active">Rules</Link>
                       </li>
                       {/* Glossary */}
                       <li>
-                        <Link to="/glossary/">Glossary</Link>
+                        <Link to="/glossary/" activeClassName="active">Glossary</Link>
                       </li>
+                      <hr />
                       {/* Other Navigation */}
                       {
                         getNonRulesNavigation.group.map((item, index) => {
@@ -145,20 +129,20 @@ class Layout extends React.Component {
                           }
                           const groupKey = `${fieldValue}-${index}`
                           return (
-                            <li key={groupKey}
-                              onClick={(e) => accordionListItem(e)}>
-                              <a
-                                className={"parent-item " + (totalCount ? 'has-child' : 'hidden')}>
-                                {fieldValue}
-                              </a>
-                              <ul>
-                                {this.getListItemFromEdges(edges)}
-                              </ul>
-                            </li>
+                            <>
+                              <li key={groupKey}>
+                                <a className='parent-item'>
+                                  {fieldValue}
+                                </a>
+                                <ul>
+                                  {this.getListItemFromEdges(edges)}
+                                </ul>
+                              </li>
+                              <hr/>
+                            </>
                           )
                         })
                       }
-
                     </ul>
                   </nav>
                 </aside>

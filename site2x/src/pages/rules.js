@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from 'gatsby'
 import Layout from "../components/layout/"
 import SEO from "../components/seo"
 
@@ -23,22 +24,25 @@ export default ({ data }) => {
         <section className='rules-listing'>
           {
             edges.map(({ node }, index) => {
-              const { frontmatter, id } = node
+              const { frontmatter, id, fields } = node
               const { name, description, rule_type, success_criterion, authors, atomic_rules } = frontmatter
+              const { slug } = fields
               return (
                 <article key={id}>
-                  <h2>{name}</h2>
-                  <div>
-                    <span>
-                      <span className='heading'>SUCCESS CRITERION:</span>
+                  <Link to={slug}>
+                    <h2>{name}</h2>
+                  </Link>
+                  <div className='meta'>
+                    <div>
+                      <span className='heading'>SUCCESS CRITERION</span>
                       {
-                        success_criterion.map((sc, index) => {
+                        success_criterion.map((sc) => {
                           return (
-                            <span key={sc}>{sc}</span>
+                            <span key={sc} className='meta-item'>{sc}</span>
                           )
                         })
                       }
-                    </span>
+                    </div>
                   </div>
 
                   <p>{description}</p>
@@ -59,7 +63,7 @@ query {
       markdownType: { eq: "rules"}
     }
     frontmatter: {
-      rule_type: { ne: "atomic" }
+      success_criterion: { ne: null }
     }
   }) {
     totalCount
@@ -75,6 +79,7 @@ query {
         }
         fields {
           markdownType
+          slug
         }
       }
     }

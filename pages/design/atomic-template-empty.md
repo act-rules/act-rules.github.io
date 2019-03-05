@@ -1,6 +1,6 @@
 ---
 name:
-test_type: atomic
+rule_type: atomic
 
 description: |
   This rule checks ...

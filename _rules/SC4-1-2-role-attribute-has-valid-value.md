@@ -1,6 +1,6 @@
 ---
 name: Role attribute has valid value
-test_type: atomic
+rule_type: atomic
 
 description: |
    This rule checks that each role attribute has a valid value
@@ -32,7 +32,7 @@ Each test target has a valid value that corresponds to a non-abstract [WAI-ARIA]
 
 ## Assumptions
 
-*There are currently no assumptions*
+- The ARIA `role` is being used to comply to WCAG.
 
 ## Accessibility Support
 

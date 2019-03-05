@@ -1,6 +1,6 @@
 ---
 name: aria-hidden with focusable content
-test_type: atomic
+rule_type: atomic
 
 description: |
   This rule checks `aria-hidden` elements do not contain focusable elements

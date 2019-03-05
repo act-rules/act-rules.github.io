@@ -1,6 +1,6 @@
 ---
 name: Form field label is descriptive
-test_type: atomic
+rule_type: atomic
 
 description: |
   This rule checks that labels describe the purpose of form field elements.

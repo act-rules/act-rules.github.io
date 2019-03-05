@@ -33,7 +33,7 @@ _There are currently no assumptions_
 ## Accessibility Support
 
 This rule relies on assistive technologies to recognize [owner elements](#owner-element). This includes when the owner elements are ancestors that are not parents of the target element. However, some assistive technologies do not recognize owner elements that are not parents, unless workarounds are used.
-Furthermore, `aria-owns` has limited support in user agents.
+Furthermore, `aria-owns` has limited support in some user agents.
 
 ## Background
 
@@ -187,7 +187,7 @@ Role does not have any required context roles listed in WAI-ARIA spec.
 <div role="radio"></div>
 ```
 
-#### Failed example 4
+#### Inapplicable example 4
 
 Element is not exposed to assistive technologies, since decendant has `aria-hidden` attribute with value set to `true`.
 

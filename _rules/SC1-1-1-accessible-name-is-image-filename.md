@@ -84,6 +84,7 @@ The `img` element doesn't have the semantic role of image.
 ```html
 <img role="presentation">
 ```
+
 #### Inapplicable example 2
 
 The `img` element is not included in the accessibility tree.

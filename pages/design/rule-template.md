@@ -51,7 +51,7 @@ Each target element ...
 - Latest version: Techniques for WCAG 2.0 W3C Working Group Note 8 April 2014
 - Link to other methodologies, test specifications or tools
 - Links to test cases, test suites, unit tests, etc.
-- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible {{site.title}} refers to those. Another source for test cases is the W3C Before and After Demonstration.
+- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible [site-title] refers to those. Another source for test cases is the W3C Before and After Demonstration.
 - Other references
 
 ## Test Cases
@@ -150,7 +150,7 @@ For each test target, the outcome of (at least one of / all of / any of etc.) th
 - Latest version: Techniques for WCAG 2.0 W3C Working Group Note 8 April 2014
 - Link to other methodologies, test specifications or tools
 - Links to test cases, test suites, unit tests, etc.
-- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible {{site.title}} refers to those. Another source for test cases is the W3C Before and After Demonstration.
+- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible [site-title] refers to those. Another source for test cases is the W3C Before and After Demonstration.
 - Other references
 
 ## Test Cases

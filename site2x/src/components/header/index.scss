@@ -1,0 +1,9 @@
+@import './../../styles/variables';
+
+header.app-header {
+  h2 {
+    padding: 4rem 0;
+    color: $accent;
+    font-weight: bolder;
+  }
+}

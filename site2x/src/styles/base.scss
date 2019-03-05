@@ -1,0 +1,50 @@
+@import './variables';
+@import './mixins';
+
+body {
+  font-family: 'Karla', sans-serif;
+  color: $fg-secondary;
+  font-size: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include header-style($fg-primary)
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	float: left;
+   
+	thead {
+		border-bottom: 3px solid $sep;
+		th {
+      font-weight: 400;
+			text-align: left;
+      font-size: 1.25em;
+      @include header-style($fg-primary);
+      display: table-cell;
+		}
+	}
+
+	tbody {
+		border-bottom: 3px solid $accent;
+		tr {
+			border-bottom: 2px solid $sep;
+       
+			td {
+				padding: 1rem 0;
+
+				a {
+					text-decoration: none;
+					display: inline-block;
+					margin: 0 .5em 0 0;
+					&:hover, &:active, &:focus {
+						color: darken($fg-primary, 10%);
+						border: none;
+					}
+				}
+			}
+		}
+	}
+}

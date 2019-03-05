@@ -1,0 +1,126 @@
+
+@import './../../styles/base.scss';
+@import './../../styles/variables';
+@import './../../styles/mixins';
+
+section.layout-container {
+  @include fixed-stretch();
+  overflow: hidden;
+  display: flex;
+
+  >aside {
+    @include flex-column();
+    flex-shrink: 0;
+    background-color: $bg-secondary;
+    color: $fg-secondary;
+    max-width: 275px;
+    padding: 0 1rem;
+
+    >div.logo {
+      flex-shrink: 0;
+    }
+
+    >nav {
+      @include flex-scroll-container();
+
+      >ul {
+        @include reset-list();
+        >li {
+          transition: all ease;
+          >a {
+            @include header-style($fg-secondary);
+            text-transform: uppercase;
+            font-size: 0.83em;
+            font-weight: bold;
+            position: relative;
+            &:hover {
+              color: $accent;
+            }
+            &::after {
+              content: '';
+              position: absolute;
+              right: 1rem;
+              top: 3px;
+              width: 0; 
+              height: 0; 
+              border-left: 5px solid transparent;
+              border-right: 5px solid transparent;
+              border-top: 5px solid currentColor;
+              opacity: 0;
+              transform: rotate(-90deg);
+            }
+            &.has-child {
+              &::after {
+                opacity: 1;
+              }
+            }
+          }
+          >ul {
+            @include reset-list();
+            padding-inline-start: 1rem;
+            padding-inline-end: 1rem;
+            display: none;
+            >li {
+              >a {
+                @include header-style($fg-secondary);
+                text-transform: capitalize;
+                color: $fg-secondary;
+                text-decoration: none;
+                display: block;
+                font-size: 90%;
+                &:hover {
+                  color: $accent;
+                }
+              }
+            }
+          }
+          &.expanded {
+            >a {
+              &.has-child {
+                &::after {
+                  transform: rotate(0deg);
+                }
+              }
+            }
+            >ul {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  >main {
+    @include flex-column();
+    @include flex-scroll-container();
+    flex: 1;
+    color: $fg-primary;
+    line-height: 1.5;
+    padding: 0 8rem;
+
+    .page-container {
+      margin: 4rem 0;
+
+      h1{
+        border-bottom: 1px solid $sep;
+        padding: 2rem 0;
+        text-transform: uppercase;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &.rules-page{
+        .rules-listing {
+          >article {
+           
+          }
+        }
+      }
+    }
+  } 
+}

@@ -1,0 +1,34 @@
+@mixin flex-column() {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-scroll-container() {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+@mixin fixed-stretch() {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+@mixin header-style($color) {
+  font-family: 'Spectral', serif;
+  text-transform: capitalize;
+  color: $color;
+  text-decoration: none;
+  margin: 1.5rem 0;
+  display: block;
+  cursor: pointer;
+}
+
+@mixin reset-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

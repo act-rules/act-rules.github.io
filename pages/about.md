@@ -5,7 +5,7 @@ title: About Us
 
 ## Our Vision
 
-Web accessibility testing is highly reliant on human judgment. Not only that, but it requires a significant understanding of both web technologies and assistive technologies. This makes automated testing and testing by people lacking these skills challenging. The {{ site. title }} community group believes that by taking on these challenges we can enable developers to solve parts of the accessibility questions, before ever involving accessibility experts. This means problems can be caught earlier in the development and accessibility experts can use their time more efficiently. Both of which will lead to more accessible products.
+Web accessibility testing is highly reliant on human judgment. Not only that, but it requires a significant understanding of both web technologies and assistive technologies. This makes automated testing and testing by people lacking these skills challenging. The [site-title] believes that by taking on these challenges we can enable developers to solve parts of the accessibility questions, before ever involving accessibility experts. This means problems can be caught earlier in the development and accessibility experts can use their time more efficiently. Both of which will lead to more accessible products.
 
 ## What We Do
 
@@ -15,4 +15,4 @@ Each rule has a certain applicability, targeting one ‘type’ of content on a 
 
 By comparing the test results with results from expert accessibility evaluators, we aim to track the accuracy of the tests we’ve developed. This allows us for an iterative improvement and adjustment of the tests as web development practices change and evolve.
 
-A list of published rules is available on the [rules page](rules.html).
+A list of published rules is available on the [site-page-rules].

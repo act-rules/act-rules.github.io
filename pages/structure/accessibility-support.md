@@ -6,9 +6,9 @@ title: Accessibility Support
 
 ## Accessibility Support (document/section)
 
-This research effort (test suite, document, application) is focused on fostering and promoting the concept of developers '''Building to Spec''' both semantically and syntactically, rather than building to a current browser or assistive technologies (user-agent/AT) limited implementation support of specifications - or some version of jury-rigging or optimizing code to favor one UA/AT over another. Specifically {{site.title}}s testing rules are defined by the current specifications for WCAG2, HTML4, HTML5, (CSS3 ?) and ARIA1.
+This research effort (test suite, document, application) is focused on fostering and promoting the concept of developers '''Building to Spec''' both semantically and syntactically, rather than building to a current browser or assistive technologies (user-agent/AT) limited implementation support of specifications - or some version of jury-rigging or optimizing code to favor one UA/AT over another. Specifically [site-title]s testing rules are defined by the current specifications for WCAG2, HTML4, HTML5, (CSS3 ?) and ARIA1.
 
-As this effort matures and new technologies reach CR, they will included/added to data that governs the {{site.title}} test rules.
+As this effort matures and new technologies reach CR, they will included/added to data that governs the [site-title] test rules.
 
 Note that as these new CR specs (HTML5, ARIA1) gain wider support on the web, the WCAG Working Group at the same time, regularly releases (approx. every 6 months) both the WCAG 2 Techniques/Failures and Understanding WCAG 2 documents, with new content that is relevant to those newer specs. Additionally the new content and techniques address previous poorly supported disability groups (Cognitive) as well as changing technology delivery methods (Mobile).
 

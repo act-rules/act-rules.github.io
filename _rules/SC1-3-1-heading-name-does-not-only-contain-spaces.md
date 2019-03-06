@@ -25,6 +25,8 @@ This rule applies to any HTML element with the [semantic role](#semantic-role) o
 
 The target element does not contain HTML `br` or `wbr` elements or [unicode characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf) in the [seperator](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153) categories as their only content that is relevant for the [accessible name](#accessible-name) computation.
 
+
+
 ## Assumptions
 
 This rule assumes that having an element that unintentionally shows up programmatically to a user of assistive technologies as a heading element, but is not shown visually as a heading on the page, is a violation of WCAG success criterion 1.3.1 Info and Relationships.
@@ -82,6 +84,14 @@ Element with the semantic role of heading is empty.
 
 ```html
 <h2><img src="#" alt="Orange harvesting season"> </h2>
+```
+
+#### Passed example 6
+
+`h2` element contains `<span>` as only content, and this does not affect accessible name computation.
+
+```html
+<h2><span></span></h2>
 ```
 
 ### Failed

@@ -1,7 +1,7 @@
 ---
 name: ARIA required context role
 description: | 
-  This rule checks that a role does not exist outside of its required context roles
+  This rule checks that a role does not exist outside of its required context roles.
 
 success_criterion:
 - 1.3.1 # Info and Relationships
@@ -22,9 +22,9 @@ The rule applies to any HTML or SVG element that is [included in the accessibili
 
 ### Expectation
 
-The [owner element](owner-element) for each target element has a [semantic role](#semantic-role) matching one of the [WAI-ARIA required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope) for the target element.
+The target element is [owned by](#owned-by) an element that has a [semantic role](#semantic-role) matching one of the [WAI-ARIA required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope) for the target element.
 
-**Note:** The definition of [owner element](owner-element) used in this rule is diverging from the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element). See more in the [owner element](owner-element) definition.
+**Note:** The definition of [owned by](#owned-by) used in this rule is diverging from the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element). See more in the [owned by](#owned-by) definition.
 
 ## Assumptions
 
@@ -32,7 +32,7 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-This rule relies on assistive technologies to recognize [owner elements](#owner-element). This includes when the owner elements are ancestors that are not parents of the target element. However, some assistive technologies do not recognize owner elements that are not parents, unless workarounds are used.
+This rule relies on assistive technologies to recognize which elements are [owned by](#owned-by) each other. This includes when the element is owned by another element that is an ancester, but not a parent of the target element. Some assistive technologies does not accept these `owned by` relationships, unless workarounds are used.
 Furthermore, `aria-owns` has limited support in some user agents.
 
 ## Background
@@ -103,7 +103,7 @@ No context role.
 
 #### Failed example 2
 
-Wrong context role
+Wrong context role.
 
 ```html
 <div role="tablist">
@@ -122,7 +122,7 @@ Element not contained within its required context role.
 
 #### Failed example 4
 
-Element with role `listitem` has a closer ancestor, that is included in the accessibility tree, than the role `list` that should have been its context role
+Element with role `listitem` has a closer ancestor, that is included in the accessibility tree, than the role `list` that should have been its context role.
 
 ```html
 <div role="list">
@@ -132,12 +132,12 @@ Element with role `listitem` has a closer ancestor, that is included in the acce
 </div>
 ```
 
-**Note:** This test case follows the definition of [owner element](owner-element) used in this rule. If implemented differently, this definition could cause differences in outcome for this test case. 
+**Note:** This test case follows the definition of [owned by](#owned-by) used in this rule. If implemented differently, this definition could cause differences in outcome for this test case. 
 
 
 #### Failed example 5
 
-Element with role `listitem` has a closer ancestor, that is included in the accessibility tree, than the role `list` that should have been its context role
+Element with role `listitem` has a closer ancestor, that is included in the accessibility tree, than the role `list` that should have been its context role.
 
 ```html
 <div role="list">
@@ -149,7 +149,7 @@ Element with role `listitem` has a closer ancestor, that is included in the acce
 
 #### Failed example 6
 
-The owner element is the first element that references the target element through `aria-owns`, which results in the wrong context role.
+The element with the semantic role of `list` is [owned by](#owned-by) the first element that references it element through `aria-owns`, which results in the wrong context role.
 
 ```html
 <div role="tabpanel" aria-owns="id1">
@@ -159,13 +159,13 @@ The owner element is the first element that references the target element throug
 </div>
 ```
 
-**Note:** This test case follows the definition of [owner element](owner-element) used in this rule. If implemented differently, this definition could cause differences in outcome for this test case. 
+**Note:** This test case follows the definition of [owned by](#owned-by) used in this rule. If implemented differently, this definition could cause differences in outcome for this test case.
 
 ### Inapplicable
 
 #### Inapplicable example 1
 
-Element does not have an explicit semantic role
+Element does not have an explicit semantic role.
 
 ```html
 <ul></ul>

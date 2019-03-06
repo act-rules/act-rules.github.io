@@ -1,15 +1,15 @@
 ---
-title: Owner element
-key: owner-element
+title: Owned by
+key: owned-by
 ---
 
+An element A is owned by element B if both elements exist within the same [document tree]() or [shadow tree]() and either:
 
-If the node is referenced by an element through the `aria-owns` attribute, then the owner element is the first node in the DOM tree that references it through `aria-owns`.
+1. Element A is the first element within the tree, in [tree order](), whose ID is included within the `aria-owns` attribute of element B.
+2. Element B is the closest ancestor of element A that is included in the accessibility tree.
 
-> **Note:** When using `aria-owns`, hiding the owner element through WAI-ARIA (`aria-hidden="true"`) or CSS (`display:none` or `visibility:hidden`) will not change the ownership, but should instead hide all elements owned by the owner element.
+Nodes that are not included in the accessibility tree cannot be owned by other elements.
 
-Otherwise, the owner element is the closest ancestor that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+> **Note:** When using `aria-owns`, hiding the owner element through WAI-ARIA (`aria-hidden="true"`) or CSS (`display:none` or `visibility:hidden`) will not change the ownership, but should instead hide all elements owned by the element.
 
-Nodes that are not included in the accessibility tree do not have an owner element.
-
- > **Note:** This definition is diverging from the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element). The reason is that the WAI-ARIA definition was found to provide too little guidance on how to handle specific edge cases where several elements compete about the ownership, and it seem that browser implementations of this are diverging a lot. This definition seeks to find a reasonable middle ground, but will have to be updated if the WAI-ARIA definition changes.
+> **Note:** This definition is diverging from the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element). The reason is that the WAI-ARIA definition was found to provide too little guidance on how to handle specific edge cases where several elements compete about the ownership, and it seem that browser implementations of this are diverging a lot. This definition seeks to find a reasonable middle ground, but will have to be updated if the WAI-ARIA definition changes.

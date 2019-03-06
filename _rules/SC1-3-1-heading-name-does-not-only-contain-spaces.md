@@ -23,7 +23,7 @@ This rule applies to any HTML element with the [semantic role](#semantic-role) o
 
 ### Expectation
 
-The target element does not contain HTML `br` or `wbr` elements or [unicode characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf) in the [seperator](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153) categories as their only content.
+The target element does not contain HTML `br` or `wbr` elements or [unicode characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf) in the [seperator](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153) categories as their only content that can affect the [accessible name](#accessible-name) calculation.
 
 ## Assumptions
 

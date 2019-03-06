@@ -65,7 +65,23 @@ Element with the semantic role of heading is empty.
 `h2` element has other content than `br` or `wbr` elements or unicode characters in the seperator categories.
 
 ```html
-<h2>'</h2>
+<h2>' </h2>
+```
+
+#### Passed example 4
+
+`h2` element has an `aria-label` that is relevant for the accessible name calculation.
+
+```html
+<h2 aria-label="Orange harvesting season"> </h2>
+```
+
+#### Passed example 5
+
+`h2` element has content that is relevant for the accessible name calculation.
+
+```html
+<h2><img src="#" alt="Orange harvesting season"> </h2>
 ```
 
 ### Failed
@@ -132,6 +148,14 @@ Element with the semantic role of heading is empty.
 
 ```html
 <h2><span><br /></span></h2>
+```
+
+#### Failed example 9
+
+`h2` element has an image as content, but it is marked as decorative and as such not relevant for the accessible name computation.
+
+```html
+<h2><img src="#" alt=""> </h2>
 ```
 
 ### Inapplicable

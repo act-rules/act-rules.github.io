@@ -13,6 +13,7 @@ test_aspects:
 
 authors:
 - Anne Thyme Nørregaard
+- Kasper Isagerc
 ---
 
 ## Test procedure
@@ -23,9 +24,10 @@ This rule applies to any HTML element with the [semantic role](#semantic-role) o
 
 ### Expectation
 
-The target element does not contain HTML `br` or `wbr` elements or [unicode characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf) in the [seperator](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153) categories as their only content that is relevant for the [accessible name](#accessible-name) computation.
-
-
+The target element either:
+- contains text nodes that do not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153), or 
+- does not contain any HTML `<br>` or `<wbr>` elements, or 
+- has an accessible name that does not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153).
 
 ## Assumptions
 

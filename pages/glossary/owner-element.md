@@ -3,10 +3,10 @@ title: Owned by
 key: owned-by
 ---
 
-An element A is owned by element B if both elements exist within the same [document tree]() or [shadow tree]() and either:
+An element A is owned by element B if both elements exist within the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) and either:
 
-1. Element A is the first element within the tree, in [tree order](), whose ID is included within the `aria-owns` attribute of element B.
-2. Element B is the closest ancestor of element A that is included in the accessibility tree.
+1. Element A is the first element within the tree, in [tree order](https://www.w3.org/TR/dom/#concept-tree-order), whose ID is included within the `aria-owns` attribute of element B.
+2. Element B is the closest ancestor of element A that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 Nodes that are not included in the accessibility tree cannot be owned by other elements.
 

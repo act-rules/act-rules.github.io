@@ -1,8 +1,8 @@
 ---
-name: Heading name does not only contain spaces
+name: Heading does not only consist of breaks
 rule_type: atomic
 description: | 
-  This rule checks that each heading does not have an accessible name that only contains spaces.
+  This rule checks that heading elements do not have `br` or `wbr` elements or unicode separator characters as their only content.
 
 success_criterion: 
 - 1.3.1 # Info and Relationships (A)
@@ -23,9 +23,7 @@ This rule applies to any HTML element with the [semantic role](#semantic-role) o
 
 ### Expectation
 
-None of the target elements has an [accessible name](#accessible-name) that contains only spaces.
-
-**Note:** In the [Accessible Name and Description Computation](https://www.w3.org/TR/accname-1.1/#mapping_additional_nd_te) all carriage returns, newlines, tabs, and form-feeds are replaced with a single space.
+The target element does not contain HTML `br` or `wbr` elements or [unicode characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf) in the [seperator](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153) categories as their only content.
 
 ## Assumptions
 
@@ -64,7 +62,7 @@ Element with the semantic role of heading is empty.
 
 #### Passed example 3
 
-`h2` element has other content than spaces.
+`h2` element has other content than `br` or `wbr` elements or unicode characters in the seperator categories.
 
 ```html
 <h2>'</h2>

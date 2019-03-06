@@ -196,3 +196,10 @@ Element is not exposed to assistive technologies, since decendant has `aria-hidd
     <div role="listitem"></div>
 </div>
 ```
+#### Inapplicable example 5
+
+Element has an explicit semantic role, but it is identical to the implicit semantic role, making the element inapplicable.
+
+```html
+<li role="listitem"></li>
+```

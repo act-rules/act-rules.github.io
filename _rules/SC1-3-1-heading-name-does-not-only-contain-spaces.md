@@ -13,7 +13,7 @@ test_aspects:
 
 authors:
 - Anne Thyme Nørregaard
-- Kasper Isagerc
+- Kasper Isager
 ---
 
 ## Test procedure

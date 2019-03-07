@@ -25,7 +25,7 @@ The rule applies to any HTML element with the [semantic role](#semantic-role) of
 
 ### Expectation
 
-Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty).
+Each target element has an [accessible name](#accessible-name) that contains [textual content](#textual-content).
 
 ## Assumptions
 

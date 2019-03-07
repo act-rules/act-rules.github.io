@@ -22,14 +22,14 @@ authors:
 
 This rule applies to any element that has:
 * a [semantic role](#semantic-role) that is a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent), and 
-* [visible](#visible) [textual content](#textual-content), and
+* [visible](#visible) [text content](#text-content), and
 * an `aria-label` or `aria-labelledby` attribute.
 
 **Note**: [widget roles](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent) are: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
 
 ### Expectation
 
-The complete [visible](#visible) [textual content](#textual-content) of the target element, that does not fall into the [non-text content](#non-text-content) category, either matches or is contained within its [accessible name](#accessible-name).
+The complete [visible](#visible) [text content](#text-content) of the target element, that does not fall into the [non-text content](#non-text-content) category, either matches or is contained within its [accessible name](#accessible-name).
 
 **Note**: Leading and trailing whitespace and difference in case sensitivity should be ignored.
 

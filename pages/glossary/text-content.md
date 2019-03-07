@@ -1,9 +1,8 @@
 ---
-title: Text content
-key: text-content
+title: Textual content
+key: textual-content
 ---
 
-The textual content is a concatenated string of all text nodes within an element and all textual alternatives within an element. This includes all the [rendered text][] as well as the text alternative returned by the [Text Alternative Computation][] of all `img` elements that are not set to `role=presentation`. The strings are to be concatenated in the order in which they appear in the DOM tree.
+A string of characters is considered textual-content if it contains one or more characters from the [letter or number categories of Unicode]( https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153). This definition applies to the string as a whole, regardless of any other characters the string might contain.
 
-[rendered text]: rendered-text.html
-[text alternative computation]: text-alternative.html
+**Note:** This definition differs from the [WCAG definition of `text`](https://www.w3.org/TR/WCAG21/#dfn-text), since it also requires that "the sequence is expressing something in human language", which is not evaluated as part of this definition. 

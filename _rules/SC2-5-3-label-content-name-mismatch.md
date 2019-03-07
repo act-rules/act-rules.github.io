@@ -29,7 +29,7 @@ This rule applies to any element that has:
 
 ### Expectation
 
-The complete [visible text content](#visible-text-content) of the target element either matches or is contained within its [accessible name](#accessible-name).
+The complete [visible](#visible) [textual content](#textual-content) of the target element, that does not fall into the [non-text content](#non-text-content) category, either matches or is contained within its [accessible name](#accessible-name).
 
 **Note**: Leading and trailing whitespace and difference in case sensitivity should be ignored.
 

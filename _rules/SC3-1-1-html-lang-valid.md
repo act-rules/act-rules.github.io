@@ -19,7 +19,7 @@ authors:
 
 ### Applicability
 
-The root element of the page, if it is an `html` element with a [non-empty](#non-empty) `lang` and/or `xml:lang` attribute.
+The root element of the page, if it is an `html` element with a `lang` and/or `xml:lang` attribute that is not the empty string ("").
 
 ### Expectation
 

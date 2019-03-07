@@ -92,7 +92,7 @@ URLs differ due to trailing slashes, but resolves to the same resource after red
 
 #### Passed example 6
 
-Pages contain different amounts of information and/or differently worded information, but fulfils same purpose in relation to the link:
+Pages contain different amounts of information and/or differently worded information, but fulfils the same purpose in relation to the link:
 
 ```html
 <a href="/test-assets/6cbcbe/page1.html">Call us</a>
@@ -137,7 +137,7 @@ Same link text used for links going to different resources:
 
 #### Failed example 2
 
-Same link text used for links going to web pages that are similar, but has different information in the content:
+Same link text used for links going to web pages that are similar, but have different information in their content:
 
 ```html
 <a href="/test-assets/6cbcbe/about/contact.html">Contact us</a> 

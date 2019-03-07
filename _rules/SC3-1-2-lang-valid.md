@@ -19,11 +19,11 @@ authors:
 
 ### Applicability
 
-Any DOM element, within the `body` of a webpage with a [non-empty](#non-empty) `lang` or `xml:lang` attribute.
+Any DOM element, within the `body` of a webpage with a `lang` or `xml:lang` attribute that is not the empty string ("").
 
 ### Expectation
 
-The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-language-subtag) if the attribute is [non-empty](#non-empty).
+The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-language-subtag) if the attribute is not the empty string ("").
 
 ## Assumptions
 

@@ -19,9 +19,9 @@ authors:
 
 ## Test procedure
 
-### Applicability
+### ApplicabilityTo 
 
-Any [non-empty](#non-empty) [WAI-ARIA 1.1 state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) that is specified on an HTML or SVG element.
+Any [WAI-ARIA 1.1 state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) that is not the empty string (""), and that is specified on an HTML or SVG element.
 
 ### Expectation 1
 

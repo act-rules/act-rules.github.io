@@ -25,7 +25,7 @@ The rule applies to `iframe` elements that are [included in the accessibility tr
 
 ### Expectation
 
-Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty).
+Each target element has an [accessible name](#accessible-name) that contains [textual content](#textual-content).
 
 ## Assumptions
 

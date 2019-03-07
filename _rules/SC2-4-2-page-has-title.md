@@ -34,7 +34,7 @@ The page contains at least one `title` element.
 
 ### Expectation 2
 
-The first `title` element contains [non-empty text](#non-empty).
+The first `title` element contains [textual content](#textual-content).
 
 ## Assumptions
 

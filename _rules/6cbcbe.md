@@ -230,7 +230,7 @@ No identical link texts:
 Link is not included in the accesssibility tree:
 
 ```html
-<a href="/test-assets/6cbcbe/page1.html" aria-hidden="true">Contact Us</a>
+<a href="/test-assets/6cbcbe/page1.html" aria-hidden="true" tabindex="-1">Contact Us</a>
 <a href="/test-assets/6cbcbe/pabe2.html">Contact Us</a>
 ```
 

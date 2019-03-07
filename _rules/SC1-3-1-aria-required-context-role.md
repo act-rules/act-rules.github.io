@@ -28,7 +28,7 @@ The target element is [owned by](#owned-by) an element that has a [semantic role
 
 ## Assumptions
 
-_There are currently no assumptions_
+This rule assumes that the explicit [semantic role](#semantic-role) on the target element is being used with the intention to comply to WCAG. If the semantic role on the target element is incorrectly used, and any relationships between elements are already programmatically determinable, failing this rule might not result in accessibility issues for real users.
 
 ## Accessibility Support
 

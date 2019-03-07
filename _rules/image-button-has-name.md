@@ -26,7 +26,7 @@ The rule applies to any HTML `input` element with a `type` attribute in the `Ima
 
 ### Expectation
 
-Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty).
+Each target element has an [accessible name](#accessible-name) that contains [textual content](#textual-content).
 
 ## Assumptions
 

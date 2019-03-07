@@ -47,7 +47,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed example 1
 
-A set of two `<a>` elements have the same accessible name and link to the same resource.
+A set of two HTML `<a>` elements have the same accessible name and link to the same resource.
 
 ```html
 <a href="/test-assets/6cbcbe/index.html">Contact us</a>
@@ -124,6 +124,24 @@ Link text
 </span>
 ```
 
+#### Passed example 9
+
+A set of two SVG `<a>` elements have the same accessible name and link to the same resource. 
+
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <a href="http://facebook.com" aria-label="Follow us">
+    <circle cx="50" cy="40" r="35"/>
+  </a>
+
+  <a href="http://facebook.com">
+    <text x="50" y="90" text-anchor="middle">
+      Follow us
+    </text>
+  </a>
+</svg>
+```
+
 ### Failed
 
 #### Failed example 1
@@ -158,6 +176,33 @@ Link text
    onclick="location='/test-assets/6cbcbe/admissions/contact.html'">
 Link text
 </span>
+```
+
+#### Failed example 4
+
+Same accessible name used for image links going to different resources:
+
+```html
+<a href="http://facebook.com"><img src="facebook.jpg" alt="Follow us" /></a> 
+<a href="http://twitter.com"><img src="twitter.jpg" alt="Follow us" /></a>
+```
+
+#### Failed example 5
+
+A set of two SVG `<a>` elements have the same accessible name but links to different resources:
+
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <a href="http://facebook.com" aria-label="Follow us">
+    <circle cx="50" cy="40" r="35"/>
+  </a>
+
+  <a href="http://twitter.com">
+    <text x="50" y="90" text-anchor="middle">
+      Follow us
+    </text>
+  </a>
+</svg>
 ```
 
 ### Inapplicable 
@@ -203,4 +248,22 @@ Contact Us
    onclick="location='/test-assets/6cbcbe/page2.html'">
 Contact Us
 </span>
+```
+
+#### Inapplicable example 5
+
+Links do not have accessible names:
+
+```html
+<a href="http://facebook.com"></a> 
+<a href="http://twitter.com"></a>
+```
+
+#### Inapplicable example 6
+
+Image links do not have accessible names:
+
+```html
+<a href="http://facebook.com"><img src="facebook.jpg" /></a> 
+<a href="http://twitter.com"><img src="twitter.jpg" /></a>
 ```

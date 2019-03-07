@@ -27,7 +27,7 @@ This rule applies to any element that is [included in the accessibility tree](#i
 
 ### Expectation
 
-Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty).
+Each target element has an [accessible name](#accessible-name) that contains [textual content](#textual-content).
 
 ## Assumptions
 

@@ -30,7 +30,7 @@ When activated, the links in each set of target elements resolve to the [same re
 
 ## Assumptions
 
-This rule assumes that the purpose of the links for links with identical names would not be ambiguous to users in general.
+This rule assumes that the purpose of the links with identical names would not be ambiguous to users in general when seen in context on the web page, as users of assistive technologies in this case is not at a disadvantage when viewing the link out of context, e.g. on a list of links in a screen reader.
 
 ## Accessibility support
 

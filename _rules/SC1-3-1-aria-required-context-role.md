@@ -84,6 +84,15 @@ Element contained within its required context role even though it is not a direc
 `aria-owns` used to give the target element the right context role.
 
 ```html
+<div role="list" aria-owns="id1"></div>
+<div id="id1" role="listitem"></div>
+```
+
+#### Passed example 5
+
+`aria-owns` trumps ownership by closest ancestor, giving the element with role of `listitem` the correct context role.
+
+```html
 <div role="list" aria-owns="id1">
   <div role="tabpanel">
     <div id="id1" role="listitem"></div>

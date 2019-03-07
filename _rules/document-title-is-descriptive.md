@@ -20,9 +20,9 @@ authors:
 
 ### Applicability
 
-This rule applies to the [document title](https://html.spec.whatwg.org/multipage/dom.html#the-title-element-2) in a [document](https://www.w3.org/TR/dom/#concept-document) where the [document element](https://www.w3.org/TR/dom/#document-element) is an HTML `<html>` element, if the `<title>` element is [non-empty](#non-empty).
+This rule applies to the [document title](https://www.w3.org/TR/html5/single-page.html#dom-tree-accessors) in a [document](https://www.w3.org/TR/dom/#concept-document) where the [document element](https://www.w3.org/TR/dom/#document-element) is an HTML `<html>` element **and** the `<title>` element is [non-empty](#non-empty).
 
-**Note:** Due to the definition of [document title](https://html.spec.whatwg.org/multipage/dom.html#the-title-element-2) this rule only applies to the first `<title>` element in the document, even if there are more `<title>` elements in the document.
+**Note:** Due to the definition of [document title](https://www.w3.org/TR/html5/single-page.html#dom-tree-accessors) this rule only applies to the first `<title>` element in the document, even if there are more `<title>` elements in the document.
 
 ### Expectation
 
@@ -38,7 +38,7 @@ _There are no assumptions for this rule._
 
 ## Background
 
-- [Understanding Success Criterion 2.4.2: Paged](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
+- [Understanding Success Criterion 2.4.2: Page titled](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
 - This rule is testing [Technique G88: Providing descriptive titles for Web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G88)
 - A prerequisite for this rule is that [Technique H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG21/Techniques/html/H25) is used for living up to 2.4.2 Page Titled
 
@@ -63,7 +63,7 @@ The ´<title>´ element describes the content of the document.
 
 #### Passed example 2
 
-Two `<title>` tags where the first one describes the content of the document.
+Two `<title>` elements where the first one describes the content of the document.
 
 ```html
 <html>

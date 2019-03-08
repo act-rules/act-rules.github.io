@@ -1,5 +1,5 @@
 ---
-name: SC3-1-1-html-xml-lang-match
+name: HTML lang and xml:lang match
 
 description: |
  The rule checks that for the `html` element, there is no mismatch between the primary language in non-empty `lang` and `xml:lang` attributes, if both are used.
@@ -46,47 +46,77 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 ### Passed
 
+#### Passed example 1
+
+`html` element with matching value for `lang` and `xml:lang`.
+
 ```html
 <html lang="en" xml:lang="en">
 ```
+
+#### Passed example 2
+
+`html` element with varied case but matching value for `lang` and `xml:lang`.
 
 ```html
 <html lang="en" xml:lang="En">
 ```
 
+#### Passed example 3
+
+`html` element with varied case but matching primary sub-tag value for `lang` and `xml:lang`.
+
 ```html
 <html lang="en" xml:lang="en-GB">
 ```
+
+#### Passed example 4
+
+`html` element with varied case but matching primary sub-tag value for `lang` and `xml:lang`.
 
 ```html
 <html lang="en-GB" xml:lang="en">
 ```
 
+#### Passed example 5
+
+`html` element with varied case but matching primary sub-tag value for `lang` and `xml:lang`, albeit the value `XYZ` is not valid.
+
 ```html
-<!-- lang/xml:lang value does not confirm to BCP 47 -->
 <html lang="en-XYZ" xml:lang="en">
 ```
 
 ### Failed
 
+#### Failed example 1
+
+`html` element with non-matching value for `lang` and `xml:lang`.
+
 ```html
 <html lang="fr" xml:lang="en">
 ```
 
-```html
-<!-- lang/xml:lang value does not confirm to BCP 47 -->
-<html lang="en-XYZ" xml:lang="en">
-```
-
 ### Inapplicable
 
-```html
-<svg lang="en" xml:lang="en">
+#### Inapplicable example 1
+
+`svg` element is not applicable for this rule.
+
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" lang="en" xml:lang="en">
 ```
+
+#### Inapplicable example 2
+
+`xml:lang` is empty, the rule mandates `non-empty` values.
 
 ```html
 <html lang="fr" xml:lang="">
 ```
+
+#### Inapplicable example 3
+
+Only `non-empty` values are considered.
 
 ```html
 <html lang="" xml:lang="">

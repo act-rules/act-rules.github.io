@@ -1,6 +1,8 @@
 ---
 name: Video-only as a media alternative for text
 
+rule_type: atomic
+
 description: |
   This rule checks non-streaming silent `video` is a media alternative for text on the page.
 
@@ -18,23 +20,25 @@ authors:
 
 ### Applicability
 
-The rule applies to any [non-streaming][] `video` element that is [visible on the page](#visible-on-the-page), where the video doesn't contains audio.
+The rule applies to every [non-streaming](#non-streaming) `video` element that is [visible](#visible), where the video doesn't contain audio.
 
 ### Expectation 1
 
-All the information contained in each target element is available as text (directly or via text alternatives) that is [visible on the page](#visible-on-the-page) and [exposed to assistive technolgies](#exposed-to-assistive-technologies).
+All the information contained in each target element is available as text (directly or via text alternatives) that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation 2
 
-Each target element has a label indicating the `video` is an alternative to text on the page.
+Each target element is labelled as an video alternative for text on the page.
 
 ### Expectation 3
 
-The label (from expectation 2) is [visible on the page](#visible-on-the-page) and [exposed to assistive technolgies](#exposed-to-assistive-technologies)
+The label (from expectation 2) is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree)
+
+**Note:** The term label does not refer to the `label` element.
 
 ## Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the poster.
+This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
 ## Accessibility support
 
@@ -42,15 +46,17 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- 
+- [Understanding SC 1.2.1:Audio-only and Video-only (Prerecorded)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html) 
 
 ## Test cases
 
-
 ### Passed
 
+#### Passed example 1
+
+A video element without audio. The text on the page labels the video as an alternative.
+
 ```html
-<!-- A video element without audio. The text on the page labels the video as an alternative.-->
 <p>Not being able to use your computer because your mouse 
   doesn't work, is frustrating. Many people use only the keyboard to navigate 
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
@@ -62,9 +68,12 @@ There are no major accessibility support issues known for this rule.
 
 ### Failed
 
-TODO
+#### Failed example 1
+
+A video element that describes some of the text on the same page. The video contains more information than the text does.
+
 ```html
-<!-- A video element that describes some of the text on the same page. The video contains more information than the text does.-->
+
 <p>Not being able to use your computer because your mouse 
   doesn't work, is frustrating. Either through preference or circumstance. This is solved by keyboard compatibility. 
   Keyboard compatibility is described in WCAG.
@@ -73,8 +82,11 @@ TODO
 </video>
 ```
 
+#### Failed example 2
+
+A video element that describes some of the text on the same page. The text is not visible on the page.
+
 ```html
-<!-- A video element that describes some of the text on the same page. The text is not visible on the page.-->
 <p style="display: none;">Not being able to use your computer because your mouse 
   doesn't work, is frustrating. Many people use only the keyboard to navigate 
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
@@ -84,8 +96,11 @@ TODO
 </video>
 ```
 
+#### Failed example 3
+
+A video element that describes some of the text on the same page. The text on the page does not label the video as an alternative.
+
 ```html
-<!-- A video element that describes some of the text on the same page. The text on the page does not label the video as an alternative.-->
 <p>Not being able to use your computer because your mouse 
   doesn't work, is frustrating. Many people use only the keyboard to navigate 
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
@@ -94,8 +109,11 @@ TODO
 </video>
 ```
 
+#### Failed example 4
+
+A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the label is not visible on the page.
+
 ```html
-<!-- A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the label is not visible on the page.-->
 <p>Not being able to use your computer because your mouse 
   doesn't work, is frustrating. Many people use only the keyboard to navigate 
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
@@ -107,8 +125,11 @@ TODO
 
 ### Inapplicable
 
+#### Inapplicable example 1
+
+A video element with audio.
+
 ```html
-<!-- A video element with audio.-->
 <p>Not being able to use your computer because your mouse 
   doesn't work, is frustrating. Many people use only the keyboard to navigate 
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
@@ -118,8 +139,11 @@ TODO
 </video>
 ```
 
+#### Inapplicable example 2
+
+A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the video is not visible on the page.
+
 ```html
-<!-- A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the video is not visible on the page.-->
 <p>Not being able to use your computer because your mouse 
   doesn't work, is frustrating. Many people use only the keyboard to navigate 
   websites. Either through preference or circumstance. This is solved by keyboard compatibility. 

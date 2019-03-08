@@ -1,5 +1,7 @@
 ---
 name: aria-hidden with focusable content
+rule_type: atomic
+
 description: |
   This rule checks `aria-hidden` elements do not contain focusable elements
 
@@ -48,48 +50,47 @@ A focusable element with `aria-hidden="true"` is ignored as part of the reading 
 
 ### Passed
 
+#### Passed example 1
+
+Content not focusable by default.
+
 ```html
-<!-- Content not focusable by default -->
 <p aria-hidden="true">Some text</p>
 ```
 
+#### Passed example 2
+
+Content hidden through CSS.
+
 ```html
-<!-- Content hidden through CSS -->
 <div aria-hidden="true">
-    <a href="/" style="display:none">Link</a>
+	<a href="/" style="display:none">Link</a>
 </div>
 ```
 
+#### Passed example 3
+
+Content made unfocusable through tabindex.
+
 ```html
-<!-- Content made unfocusable through tabindex -->
 <div aria-hidden="true">
-    <button tabindex="-1">Some button</button>
+	<button tabindex="-1">Some button</button>
 </div>
 ```
 
+#### Passed example 4
+
+Content made unfocusable through disabled.
+
 ```html
-<!-- Content made unfocusable through disabled -->
 <input disabled aria-hidden="true" />
 ```
 
-### Failed
+#### Passed example 5
+
+`aria-hidden` can't be reset once set to true on an ancestor.
 
 ```html
-<!-- Focusable off screen link -->
-<div aria-hidden="true">
-    <a href="/" style="position:absolute; top:-999em">Link</a>
-</div>
-```
-
-```html
-<!-- Focusable form field, incorrectly disabled -->
-<div aria-hidden="true">
-    <input aria-disabled="true" />
-</div>
-```
-
-```html
-<!-- aria-hidden=false does not negate aria-hidden true -->
 <div aria-hidden="true">
     <div aria-hidden="false">
         <button tabindex="-1">Some button</button>
@@ -97,13 +98,53 @@ A focusable element with `aria-hidden="true"` is ignored as part of the reading 
 </div>
 ```
 
+### Failed
+
+#### Failed example 1
+
+Focusable off screen link.
+
 ```html
-<!-- Focusable content through tabindex -->
+<div aria-hidden="true">
+	<a href="/" style="position:absolute; top:-999em">Link</a>
+</div>
+```
+
+#### Failed example 2
+
+Focusable form field, incorrectly disabled.
+
+```html
+<div aria-hidden="true">
+	<input aria-disabled="true" />
+</div>
+```
+
+#### Failed example 3
+
+`aria-hidden` can't be reset once set to true on an ancestor.
+
+```html	
+<div aria-hidden="true">
+    <div aria-hidden="false">
+        <button>Some button</button>
+    </div>
+</div>
+```
+
+#### Failed example 4
+
+Focusable content through `tabindex`.
+
+```html
 <p tabindex="0" aria-hidden="true">Some text</p>
 ```
 
+#### Failed example 5
+
+Focusable summary element
+
 ```html
-<!-- Focusable summary element -->
 <details aria-hidden="true">
     <summary>Some button</summary>
     <p>Some details</p>
@@ -112,19 +153,28 @@ A focusable element with `aria-hidden="true"` is ignored as part of the reading 
 
 ### Inapplicable
 
+#### Inapplicable example 1
+
+Ignore `aria-hidden` with null value.
+
 ```html
-<!-- Ignore aria-hidden with null value -->
 <button tabindex="-1" aria-hidden>Some button</button>
 ```
 
+#### Inapplicable example 2
+
+Ignore `aria-hidden` false.
+
 ```html
-<!-- Ignore aria-hidden false -->
 <p aria-hidden="false">Some text</p>
 ```
 
+#### Inapplicable example 3
+
+Incorrect value of `aria-hidden`.
+
 ```html
-<!-- Incorrect value of aria-hidden -->
 <div aria-hidden="yes">
-    <p>Some text</p>
+	<p>Some text</p>
 </div>
 ```

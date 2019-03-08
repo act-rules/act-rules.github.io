@@ -1,18 +1,13 @@
 ---
 name: No keyboard trap standard navigation
-
-group:
-- SC2-1-2-no-keyboard-trap-standard-navigation
-- SC2-1-2-no-keyboard-trap-non-standard-navigation
+rule_type: atomic
 
 description: |
   This rule checks if it is possible to use standard keyboard navigation to navigate through all content on a web page without becoming trapped in any element.
 
-success_criterion: 
-- 2.1.2 # No Keyboard Trap
-
-test aspects:
+test_aspects:
 - DOM Tree
+- CSS Styling
 
 authors:
 - Dagfinn Rømen
@@ -28,13 +23,13 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML or SVG element on a web page that is [focusable][].
+The rule applies to any HTML or SVG element that is [focusable](#focusable).
 
-**Note**: The WCAG 2.0 success criterion 2.1.2 applies to all content where focus can be moved to through keyboard navigation.
+**Note**: This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
 
 ### Expectation
 
-For each target element focus can cycle to the browser UI by using [standard keyboard navigation][].
+For each target element focus can cycle to the browser UI by using [standard keyboard navigation](#standard-keyboard-navigation).
 
 **Note**: Cycling back to the browser UI can be done both by moving forward through the tab order and by moving backwards. It is not possible to fulfil this expectation by using browser specific shortcuts to return to the browser UI.
 
@@ -49,45 +44,64 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-trapping.html
-- https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G21
-- https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F10
+- [Understanding Success Criterion 2.1.2: No Keyboard Trap](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html)
+- [G21: Ensuring that users are not trapped in content](https://www.w3.org/WAI/WCAG21/Techniques/general/G21)
+- [F10: Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining multiple content formats in a way that traps users inside one format type](https://www.w3.org/WAI/WCAG21/Techniques/failures/F10)
 
 ## Test Cases
 
 ### Passed
+
+#### Passed example 1
+
+No trap for keyboard navigation.
 
 ```html
 <a href ="#">Link 1</a>
 <button class="target">Button1</button>
 ```
 
+#### Passed example 2
+
+Using `tabindex="1"`.
+
 ```html
-<!-- Tab index 1 -->
 <div tabindex=“1”>Text</div>
 ```
 
+#### Passed example 3
+
+Using `tabindex="-1"`.
+
 ```html
-<!-- Tab index -1 -->
 <div tabindex=“-1”>Text</div>
 ```
 
 ### Failed
 
+#### Failed example 1
+
+Keyboard trap one element.
+
 ```html
-<!-- Keyboard trap one element -->
 <a href="#">Link 1</a>
 <button class="target" onblur="setTimeout(() => this.focus(), 10)">Button1</button>
 ```
 
+#### Failed example 2
+
+Keyboard trap group.
+
 ```html
-<!-- Keyboard trap group -->
 <button class="target" onblur="setTimeout(() => this.nextSibling.focus(), 10)">Button1</button>
 <button class="target" onblur="setTimeout(() => this.previousSibling.focus(), 10)">Button2</button>
 ```
 
+#### Failed example 3
+
+A focusable element inbetween to keyboard traps.
+
 ```html
-<!-- A focusable element inbetween to keyboard traps -->
 <button onblur="setTimeout(() => this.focus(), 10)">Button 1</button>
 <button class="target" >Button 2</button>
 <button onblur="setTimeout(() => this.focus(), 10)">Button 3</button>
@@ -95,26 +109,35 @@ There are no major accessibility support issues known for this rule.
 
 ### Inapplicable
 
+#### Inapplicable example 1
+
+No focusable element.
+
 ```html
-<!-- No focusable element -->
 <h1>Page 1</h1>
 ```
 
+#### Inapplicable example 2
+
+Disabled element.
+
 ```html
-<!-- Disabled element -->
 <button type="button" disabled>Click Me!</button>
 ```
 
+#### Inapplicable example 3
+
+Hidden element using `display:none`.
+
 ```html
-<!-- Hidden element using display:none -->
 <button type="button" style=“display:none;”>Click Me!</button>
 ```
 
+#### Inapplicable example 4
+
+Hidden element using `visibility:hidden`.
+
 ```html
-<!-- Hidden element using visibility:hidden -->
 <a href ="#" style="visibility:hidden;">Link 1</a>
 <button class="target" style="visibility:hidden;">Button1</button>
 ```
-
-[focusable]: ../pages/algorithms/focusable.html
-[standard keyboard navigation]: ../pages/algorithms/standard-keyboard-navigation.html

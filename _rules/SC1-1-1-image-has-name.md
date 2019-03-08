@@ -19,13 +19,17 @@ authors:
 
 ### Applicability
 
-The rule applies to HTML `img` elements or any HTML element with the [semantic role](#semantic-role) of `img` that is exposed to assistive technologies.
+The rule applies to HTML `img` elements or any HTML element with the [semantic role](#semantic-role) of `img` that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation
 
 Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty) or is marked as [decorative](#decorative).
 
 **NOTE**: An `img` element can be marked as decorative, by using either `role="presentation"`, `role="none"` or an empty alt attribute `alt=""`.
+
+## Assumptions 
+
+_There are currently no assumptions._
 
 ## Accessibility Support
 
@@ -45,57 +49,104 @@ There is a known combination of a popular browser and assistive technology that 
 
 ### Passed
 
+#### Passed example 1
+
+HTML `img` element has accessible name
+
 ```html
-<!-- accessible name -->
 <img alt="W3C logo" />
 ```
 
-```html
-<!-- non-image element with image role and accessible name -->
-<div role="image" aria-label="W3C logo"></div>
-```
+#### Passed example 2
+
+Element with role of `img` and accessible name
 
 ```html
-<!-- accessible name but not always supported -->
+<div role="img" aria-label="W3C logo"></div>
+```
+
+#### Passed example 3
+
+Accessible name but not always accessibility supported
+
+```html
 <img title="W3C logo" />
 ```
 
-### Failed
+#### Passed example 4
+
+HTML `img` element marked as [decorative](#decorative) through empty `alt` attribute
+
 ```html
-<!-- no accessible name -->
+<img alt="" />
+```
+
+#### Passed example 5
+
+HTML `img` element marked as [decorative](#decorative) through `role="presentation"`
+
+```html
+<img role="presentation" />
+```
+
+#### Passed example 6
+
+HTML `img` element marked as [decorative](#decorative) through `role="none"`
+
+```html
+<img role="none" />
+```
+
+### Failed
+
+#### Failed example 1
+
+HTML `img` element that is not marked as [decorative](#decorative) and does not have accessible name
+
+```html
 <img />
 ```
 
-```html
-<!-- non-image element with image role but no accessible name -->
-<div role="image"></div>
-```
+#### Failed example 2
+
+Element with role of `img` but no accessible name
 
 ```html
-<!-- image element inside a div positioned off screen with no accessible name -->
+<div role="img"></div>
+```
+
+#### Failed example 3
+
+Image element inside a `div` positioned off screen with no accessible name and is not marked as [decorative](#decorative)
+
+```html
 <div style="margin-left:-9999px;"><img /></div>
 ```
 
 ### Inapplicable
 
-```html
-<!-- decorative image -->
-<img alt="" />
-```
+#### Inapplicable example 1
 
-```html
-<!-- decorative image -->
-<img role="presentation" />
-```
+Element that does not have the [semantic role](#semantic-role) of `img`
 
-```html
-<!-- img element with no role -->
-<img role="none" />
-```
-
-```html
-<!-- non-image element -->
-<svg width="100" height="100">
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
   <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
 </svg>
+```
+
+#### Inapplicable example 2
+
+Element with [semantic role](#semantic-role) of `img` is not [included in the accessibility tree](#included-in-the-accessibility-tree)
+
+```html
+<div role="img" aria-hidden="true"></div>
+```
+
+#### Inapplicable example 3
+
+HTML `img` element is not [included in the accessibility tree](#included-in-the-accessibility-tree) 
+
+```html
+<img alt="W3C logo" aria-hidden="true" />
 ```

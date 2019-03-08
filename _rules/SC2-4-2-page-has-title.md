@@ -50,17 +50,25 @@ _There are no major accessibility support issues known for this rule._
 - [https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=242#qr-navigation-mechanisms-title](https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=242#qr-navigation-mechanisms-title)
 - [https://www.w3.org/TR/WCAG20-TECHS/G88.html](https://www.w3.org/TR/WCAG20-TECHS/G88.html)
 - [https://www.w3.org/TR/WCAG20-TECHS/H25.html](https://www.w3.org/TR/WCAG20-TECHS/H25.html)
-- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible auto-wcag refers to those. Another source for test cases is the W3C Before and After Demonstration.
+- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible {{site.title}} refers to those. Another source for test cases is the W3C Before and After Demonstration.
 
 ## Test Cases
 
 ### Passed
+
+#### Passed example 1
+
+This page has a `title`.
 
 ```html
 <html>
   <title>This page has a title</title>
 </html>
 ```
+
+#### Passed example 2
+
+This page give a `title` to an iframe.
 
 ```html
 <html>
@@ -69,6 +77,10 @@ _There are no major accessibility support issues known for this rule._
 </html>
 ```
 
+#### Passed example 3
+
+This page has a `title`.
+
 ```html
 <html>
   <head>
@@ -80,6 +92,10 @@ _There are no major accessibility support issues known for this rule._
 </html>
 ```
 
+#### Passed example 4
+
+Valid `title` provided.
+
 ```html
 <html>
   <body>
@@ -88,18 +104,26 @@ _There are no major accessibility support issues known for this rule._
 </html>
 ```
 
+#### Passed example 5
+
+Valid `title` provided.
+
 ```html
 <html>
   <head>
     <title>Title of the page.</title>
   </head>
   <body>
-     <title> <!-- empty title --> </title> 
+     <title></title> 
   </body>
 </html>
 ```
 
 ### Failed
+
+#### Failed example 1
+
+This page has no `title`.
 
 ```html
 <html>
@@ -107,11 +131,19 @@ _There are no major accessibility support issues known for this rule._
 </html>
 ```
 
+#### Failed example 2
+
+Empty `title`.
+
 ```html
 <html>
-  <title> <!-- this page has an empty title --> </title>
+  <title></title>
 </html>
 ```
+
+#### Failed example 3
+
+No `title` provided.
 
 ```html
 <html>
@@ -119,10 +151,14 @@ _There are no major accessibility support issues known for this rule._
 </html>
 ```
 
+#### Failed example 4
+
+Empty first `title`.
+
 ```html
 <html>
   <head>
-    <title> <!-- this page has an empty first title --> </title>
+    <title></title>
   </head>
   <body>
     <title>Title of the page.</title>
@@ -132,10 +168,12 @@ _There are no major accessibility support issues known for this rule._
 
 ### Inapplicable
 
-```html
-<svg>
+#### Inapplicable example 1
+
+Not applicable to `svg` element.
+
+```svg
+<svg xmlns="http://www.w3.org/2000/svg">
   <title>This is an SVG</title>
 </svg>
 ```
-
-

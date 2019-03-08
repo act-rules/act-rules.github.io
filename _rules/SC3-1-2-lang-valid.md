@@ -40,6 +40,10 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 
 ### Passed
 
+#### Passed example 1
+
+The `lang` attribute specified has a non-empty value & a valid primary language subtag.
+
 ```html
 <html>
 <body> 
@@ -47,6 +51,10 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 </body>
 </html>
 ```
+
+#### Passed example 2
+
+The `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
 
 ```html
 <html>
@@ -56,6 +64,10 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 </html>
 ```
 
+#### Passed example 3
+
+The `lang` attribute specified has a non-empty value & a valid primary language subtag. The region section in the value is ignored by the rule.
+
 ```html
 <html>
 <body>
@@ -63,6 +75,10 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 </body>
 </html>
 ```
+
+#### Passed example 4
+
+The `lang` and `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
 
 ```html
 <html>
@@ -74,6 +90,10 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 
 ### Failed
 
+#### Failed example 1
+
+The `lang` attribute value is not a valid primary language subtag.
+
 ```html
 <html>
 <body>
@@ -81,6 +101,10 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 </body>
 </html>
 ```
+
+#### Failed example 2
+
+The `xml:lang` attribute value is not a valid primary language subtag.
 
 ```html
 <html>
@@ -90,27 +114,52 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 </html>
 ```
 
+#### Fail example 3
+
+The `lang` attribute value has a valid primary language subtag, but a syntactically invalid region subtag.
+
+```html
+<html>
+<body>
+  <p lang="en-US-GB"></p>
+</body>
+</html>
+```
+
 ### Inapplicable
+
+#### Inapplicable example 1
+
+
+The rule applies to elements with the `body` of a webpage. `html` elements are ignored by the rule.
 
 ```html
 <html lang="en">
-<body>
-</body>
+	<body>
+	</body>
 </html>
 ```
 
-```html
-<html>
-<body>
-<article lang=""></article>
-</body>
-</html>
-```
+#### Inapplicable example 2
+
+An empty value for `lang` attribute is ignored by this rule, as the applicability specifies only non-empty values.
 
 ```html
 <html>
-<body>
-<article xml:lang=""></article>
-</body>
+	<body>
+		<article lang=""></article>
+	</body>
+</html>
+```
+
+#### Inapplicable example 3
+
+An empty value for `xml:lang` attribute is ignored by this rule, as the applicability specifies only non-empty values.
+
+```html
+<html>
+	<body>
+		<article xml:lang=""></article>
+	</body>
 </html>
 ```

@@ -49,56 +49,86 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
+#### Passed example 1
+
+Visible label and accessible name matches when trailing white spaces are removed.
+
 ```html
-<!-- Visible label and accessible name matches when trailing white spaces are removed -->
 <div role="link" aria-label="next page ">next page</div>
 ```
 
+#### Passed example 2
+
+Character insensitivity between visible label and accessible name.
+
 ```html
-<!-- Character insensitivity between visible label and accessible name -->
 <div role="link" aria-label="Next Page">next page</div>
 ```
 
+#### Passed example 3
+
+Full visible label is contained in the accessible name.
+
 ```html
-<!-- Full visible label is contained in the accessible name -->
-<button name="link" aria-label="Next Page in the list">Next Page</div>
+<button name="link" aria-label="Next Page in the list">Next Page</button>
 ```
 
 ### Failed
 
-```html
-<!-- Visible label doesn't match accessible name -->
-<div role="link" aria-label="OK">Next</a>
-```
+#### Failed example 1
+
+Visible label doesn't match accessible name.
 
 ```html
-<!-- Not all of visible label is included in accessible name -->
-<button name="link" aria-label="the full">The full label</div>
+<div role="link" aria-label="OK">Next</div>
+```
+
+#### Failed example 2
+
+Not all of visible label is included in accessible name.
+
+```html
+<button name="link" aria-label="the full">The full label</button>
 ```
 
 ### Inapplicable 
 
+#### Inapplicable example 1
+
+Not a widget role.
+
 ```html
-<!-- Not a widget role -->
 <a aria-label="OK">Next</a>
 ```
 
-```html
-<!-- Widget role that does not support name from content -->
-<input type="email" aria-label="E-mail">Contact</input>
-```
+#### Inapplicable example 2
+
+Widget role that does not support name from content.
 
 ```html
-<!-- Non-widget role that supports name from content -->
-<div role="tooltip" aria-label="OK">Next</a>
+<input type="email" aria-label="E-mail" value='Contact'>
 ```
 
-```html
-<!-- No rendered text in name from content -->
-<div role="tooltip" aria-label="OK"></a>
-```
+#### Inapplicable example 3
+
+Non-widget role that supports name from content.
 
 ```html
-<!-- Non-text content -->
+<div role="tooltip" aria-label="OK">Next</div>
+```
+
+#### Inapplicable example 4
+
+No rendered text in name from content.
+
+```html
+<div role="tooltip" aria-label="OK"></div>
+```
+
+#### Inapplicable example 5
+
+Non-text content.
+
+```html
 <button aria-label="close">X</button>
 ```

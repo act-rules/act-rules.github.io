@@ -20,7 +20,7 @@ authors:
 
 The rule applies to any HTML `input`, `select` and `textarea` element with a [non-empty](#non-empty) `autocomplete` attribute, except if one of the following is true:
 
-- The element is not [visible on the page](#visible-on-the-page) and not [exposed to assistive technologies](#exposed-to-assistive-technologies)
+- The element is not [visible on the page](#visible-on-the-page), and not [included in the accessibility tree](#included-in-the-accessibility-tree)
 - The element is an `input` element with a `type` property of `hidden`, `button`, `submit` or `reset`
 - The element has a `disabled` or `aria-disabled="true"` attribute
 - The element has `tabindex="-1"` and has a [semantic role](#semantic-role) that is not a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget_roles)
@@ -64,114 +64,177 @@ The intent of this rule is to ensure that the `autocomplete` attribute can be us
 
 ### Passed
 
+#### Passed example 1
+
+Single autocomplete term.
+
 ```html
-<!-- single autocomplete term -->
 <input autocomplete="username" />
 ```
 
+#### Passed example 2
+
+Single autocomplete term for select.
+
 ```html
-<!-- single autocomplete term for select -->
 <select autocomplete="bday-month">
   <option>January</option>
   <option>...</option>
 </select>
 ```
 
+#### Passed example 3
+
+Autocomplete term, only valid for textarea.
+
 ```html
-<!-- Autocomplete term, only valid for textarea -->
 <textarea autocomplete="Street-Address"></textarea>
 ```
 
+#### Passed example 4
+
+Two autocomplete terms.
+
 ```html
-<!-- Two autocomplete terms -->
 <input autocomplete="Work EMail" />
 ```
 
+#### Passed example 5
+
+Autocomplete using section-*
+
 ```html
-<!-- Autocomplete using section-* -->
 <input autocomplete="section-partner email" />
 ```
 
-```html
-<!-- Tripple autocomplete terms -->
-<input type="text" autocomplete="section-primary billing street-address />
-```
+#### Passed example 6
+
+Triple autocomplete terms.
 
 ```html
-<!-- Full length autocomplete terms -->
+<input type="text" autocomplete="section-primary billing address-line1" />
+```
+
+#### Passed example 7
+
+Full length autocomplete terms.
+
+```html
 <input autocomplete="section-primary shipping work email" />
 ```
 
 ### Failed
 
+#### Failed example 1
+
+Unknown autocomplete term.
 ```html
-<!-- Unknown autocomplete term -->
+
 <input autocomplete="badterm" />
 ```
 
+#### Failed example 2
+
+term `work` not allowed before `photo`.
+
 ```html
-<!-- "work" not allowed before "photo" -->
 <input autocomplete="work photo" />
 ```
 
+#### Failed example 3
+
+Invalid order of terms.
+
 ```html
-<!-- invalid order of terms -->
 <input autocomplete="work shipping email" />
 ```
 
+#### Failed example 4
+
+Comma seperated rather than space separated list.
+
 ```html
-<!-- comma seperated rather than space separated list -->
 <input autocomplete="work,email" />
 ```
 
+#### Failed example 5
+
+Autocomplete is inappropriate for the type of field.
+
 ```html
-<!-- Autocomplete is inappropriate for the type of field -->
 <input type="number" autocomplete="email" />
 ```
 
 ### Inapplicable
 
+#### Inapplicable example 1
+
+Incorrect element.
+
 ```html
-<!-- Incorrect element -->
 <button autocomplete="username"></button>
 ```
 
+#### Inapplicable example 2
+
+Empty attribute.
+
 ```html
-<!-- Empty attribute -->
 <input autocomplete="">
 ```
 
+#### Inapplicable example 3
+
+Hidden through `display:none`.
+
 ```html
-<!-- Hidden through display:none -->
 <input autocomplete="username" style="display:none">
 ```
 
+#### Inapplicable example 4
+
+Off screen and hidden to assistive technologies
+
 ```html
-<!-- Off screen and hidden to assistive technologies -->
 <input autocomplete="username" aria-hidden="true" style="position:absolute; top:-9999em">
 ```
 
+#### Inapplicable example 5
+
+type `input` button.
+
 ```html
-<!-- input button -->
 <input type="button" autocomplete="username">
 ```
 
+#### Inapplicable example 6
+
+type `hidden`.
+
 ```html
-<!-- hidden -->
 <input type="hidden" autocomplete="username">
 ```
 
+#### Inapplicable example 7
+
+Native disabled.
+
 ```html
-<!-- native disabled -->
 <input autocomplete="username" disabled>
 ```
 
+#### Inapplicable example 8
+
+Using `aria-disabled`.
+
 ```html
-<!-- ARIA disabled -->
 <input autocomplete="username" aria-disabled="true">
 ```
 
+#### Inapplicable example 9
+
+Non-widget element.
+
 ```html
-<!-- non-widget element -->
 <input type="button" role="none" tabindex="-1" autocomplete="username">
 ```

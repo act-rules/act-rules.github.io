@@ -1,17 +1,13 @@
 ---
 name: No keyboard trap non-standard navigation
-group:
-- SC2-1-2-no-keyboard-trap-standard-navigation
-- SC2-1-2-no-keyboard-trap-non-standard-navigation (current)
+rule_type: atomic
 
 description: |
   This rule checks if it is possible to use non-standard keyboard navigation to navigate through content where focus is trapped when using standard ways of keyboard navigation.
 
-success_criterion: 
-- 2.1.2 # No Keyboard Trap
-
-test aspects:
+test_aspects:
 - DOM Tree
+- CSS Styling
 
 authors:
 - Dagfinn Rømen
@@ -27,19 +23,19 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML or SVG element on a web page that is [focusable][] where focus cannot cycle to the browser UI by using [standard keyboard navigation][].
+The rule applies to any HTML or SVG element that is [focusable](#focusable) where focus cannot cycle to the browser UI by using [standard keyboard navigation](#standard-keyboard-navigation).
 
-**Note**: The WCAG 2.0 success criterion 2.1.2 applies to all content where focus can be moved to through keyboard navigation.
+**Note**: This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
 
 ### Expectation 1
 
-For each target element help information is [visible on the page][] and [exposed to assistive technologies][] or can be accessed from within the keyboard trap.
+For each target element help information is [visible on the page](#visible-on-the-page) and [included in the accessibility tree](#included-in-the-accessibility-tree) or can be accessed from within the keyboard trap.
 
 **Note**: As per WCAG 2.0 Success Criterion 2.1.1 Keyboard the help information should be accessible through a keyboard interface.
 
 ### Expectation 2
 
-The help information explains how to cycle to the browser UI, or on how to get to a point from where it is possible to cycle to the browser UI, using [standard keyboard navigation][].
+The help information explains how to cycle to the browser UI, or on how to get to a point from where it is possible to cycle to the browser UI, using [standard keyboard navigation](#standard-keyboard-navigation).
 
 ### Expectation 3
 
@@ -58,16 +54,19 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-trapping.html
-- https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G21
+- [Understanding Success Criterion 2.1.2: No Keyboard Trap](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html)
+- [G21: Ensuring that users are not trapped in content](https://www.w3.org/WAI/WCAG21/Techniques/general/G21)
+- [F10: Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining multiple content formats in a way that traps users inside one format type](https://www.w3.org/WAI/WCAG21/Techniques/failures/F10)
 
 ## Test Cases
 
 ### Passed
 
-```html
-<!-- Keyboard trap with help information in a paragraph before, and where the method advised works -->
+#### Passed example 1
 
+Keyboard trap with help information in a paragraph before, and where the method advised works.
+
+```html
 <script>
 var trapOn = false ;
 </script>
@@ -79,9 +78,11 @@ var trapOn = false ;
 <a id="link2" href="#">Link 2</a>
 ```
 
-```html
-<!-- Keyboard trap with help information within the trap, and where the method advised works --> 
+#### Passed example 2
 
+Keyboard trap with help information within the trap, and where the method advised works.
+
+```html
 <script>
 var trapOn = false ;
 </script>
@@ -93,9 +94,11 @@ var trapOn = false ;
 <a id="link2" href="#">Link 2</a>
 ````
 
-```html
-<!-- Keyboard trap with "help" link that once clicked exposes the instructions.  -->
+#### Passed example 3
 
+Keyboard trap with "help" link that once clicked exposes the instructions.
+
+```html
 <script>
 var trapOn = false ;
 
@@ -112,14 +115,15 @@ document.getElementById("helptext").innerHTML = "<p>Press the M-key to Exit</p>"
 <button id="btn2" class="target" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">Button 2</button>
 </div>
 <a id="link2" href="#">Link 2</a>
-
 ```
 
 ### Failed
 
-```html
-<!-- Keyboard trap with no instructions  -->
+#### Failed example 1
 
+Keyboard trap with no instructions.
+
+```html
 <script>
 var trapOn = false ;
 </script>
@@ -130,9 +134,11 @@ var trapOn = false ;
 <a id="link2" href="#">Link 2</a>
 ````
 
-```html
-<!-- Keyboard trap with instructions that doesn't give advise on the method for proceeding -->
+#### Failed example 2
 
+Keyboard trap with instructions that doesn't give advise on the method for proceeding.
+
+```html
 <script>
 var trapOn = false ;
 </script>
@@ -144,9 +150,11 @@ var trapOn = false ;
 <a id="link2" href="#">Link 2</a>
 ````
 
-```html
-<!-- Keyboard trap with help text, where the method advised doesn't work --> 
+#### Failed example 3
 
+Keyboard trap with help text, where the method advised doesn't work.
+
+```html
 <script>
 var trapOn = false ;
 </script>
@@ -160,16 +168,13 @@ var trapOn = false ;
 
 ### Inapplicable
 
-```html
-<!-- Not a keyboard trap (interactive element) -->
+#### Inapplicable example 1
 
+Not a keyboard trap (interactive element).
+
+```html
 <a id="link1" href="#">Link 1</a>
 <button id="btn1">Button 1</button>
 <button id="btn2">Button 2</button>
 <a id="link2" href="#">Link 2</a>
 ```
-
-[focusable]: ../pages/algorithms/focusable.html
-[standard keyboard navigation]: ../pages/algorithms/standard-keyboard-navigation.html
-[visible on the page]: ../pages/algorithms/visible-on-the-page.html
-[exposed to assistive technologies]: ../pages/algorithms/exposed-to-assistive-technologies.html

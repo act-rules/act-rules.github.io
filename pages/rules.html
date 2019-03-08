@@ -1,102 +1,113 @@
 ---
 layout: default
-title: Auto-WCAG Rules
+title: Rules
 ---
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-			<th width='3%'>#</th>
-			<th width='25%'>Name</th>
-      <th>Description</th>
-      <th width='35%'>WCAG Criterion</th>
-    </tr>
-	</thead>
-	<!-- {% assign rulesAndDrafts = site.rules | concat: site.drafts | sort: 'name' %} -->
-	{% assign rulesAndDrafts = site.rules | sort: 'name' %}
-  {% for rule in rulesAndDrafts %}
-  <tr>
-		<td>
-			{{ forloop.index }}
-		</td>
-    <td>
-			<a class='rule-list-title' href="{{ rule.url | prepend: site.baseurl }}">{{rule.name}}</a>
-			{% if rule.draft %}
-				<p class="draft-note slim">Draft</p>
-			{% endif %}
-		</td>
-    <td>
-			{{ rule.description }}
-		</td>
-		<td>
-			<ul style="list-style: none; padding-left: 0;">
-				{% for criterion in rule.success_criterion %}
-					<li>
-						{% if site.data.sc-urls[criterion] %}
-							<a href="{{ site.data.criteria[criterion].url }}" target="_blank">
-								{{ site.data.sc-urls[criterion].num }} {{ site.data.sc-urls[criterion].handle }} - (Level: {{ site.data.sc-urls[criterion].level }})
-							</a>
-						{% else %}
-							{{ criterion }} (unknown)
-						{% endif %}
-					</li>
-				{% endfor %}
-			</ul>
-		</td>
-  </tr>
-  {% endfor %}
-</table>
+<div id="rules-table">
+	<input class="search" placeholder="Search rule..." />
 
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th class="hidden" data-sort="ludate">Last Updated Date</th>
+				<th class="sort" data-sort="name" width='25%'>Name</th>
+				<th class="sort" data-sort="description">Description</th>
+				<th width='25%'>WCAG Criterion</th>
+				<th width='8%'>
+					<a href="{{ site.url }}/pages/implementations/coverage.html">
+						Implementations
+					</a>
+				</th>
+			</tr>
+		</thead>
+		<tbody class="list">
+			{% for rule in site.rules %}
+			{% if rule.success_criterion %}
+			<tr>
+				<td class="ludate hidden">{{rule.last_modified_at}}</td>
+				<td class='name' data-rule-name="{{rule.name}}">
+					<a class='rule-list-title' href="{{ rule.url | prepend: site.url }}">
+						{{rule.name}}
+					</a>
+					{% if rule.draft %}
+					<p class="draft-note slim">Draft</p>
+					{% endif %}
+
+
+					<br><br>
+					{% if rule.atomic_rules %}
+					<b><i>Atomic Rules:</i></b>
+					{% for ar in rule.atomic_rules %}
+					<ul>
+						<li>
+							<a href="{{ site.url }}/rules/{{ar}}.html">
+								{{ ar }}
+							</a>
+						</li>
+					</ul>
+					{% endfor %}
+					{% endif %}
+				</td>
+				<td class="description">{{ rule.description | markdownify }}</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						{% for criterion in rule.success_criterion %}
+						<li>
+							{% if site.data.sc-urls[criterion] %}
+							<a href="{{ site.data.criteria[criterion].url }}" target="_blank">
+								{{ site.data.sc-urls[criterion].num }} {{ site.data.sc-urls[criterion].handle }} (Level: {{
+								site.data.sc-urls[criterion].level }})
+							</a>
+							{% else %}
+							{{ criterion }} (unknown)
+							{% endif %}
+						</li>
+						{% endfor %}
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="{{ rule.id | replace: '/rules/', '' }}" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			{% endif %}
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="{{site.url}}/assets/js/page-rules.js"></script>
 
 <section class="cards-section text-center">
-	<!-- 		
-	<h2 class="title">
-		Download Test Cases of Rules
-	</h2>
-	
-	<div class="intro">
-		<p>
-			Each of the test cases with the rules can be downloaded for integration with your test tool from here.
-		</p>
-		<div class="cta-container">
-			<a class="btn btn-primary btn-cta"
-				href="http://themes.3rdwavemedia.com/" 
-				target="_blank">
-				<i class="fas fa-file-download"></i>
-				Download Now
-			</a>
-		</div>
-	</div> 
-	-->
-
 	<div id="cards-wrapper" class="cards-wrapper row">
-		<div class="item item-primary col-md-6 col-sm-6 col-xs-6">
+		<div class="item item-primary col-md-6 col-sm-6 col-xs-12">
 			<div class="item-inner">
-				<a class="link" href="https://github.com/auto-wcag/auto-wcag/pulls">
+				<a class="link" href="{{site.data.package.pulls.url}}">
 					<h3 class="title">DRAFT RULES</h3>
 					<div class="icon-holder">
 						<i aria-hidden="true" class="fab fa-firstdraft fa-5x"></i>
 					</div>
 					<p class="intro">
-						Click here for an overview of the work in progress rules.
+						See all currently authored rules.
 					</p>
 				</a>
 			</div>
 		</div>
-		<div class="item item-primary col-md-6 col-sm-6 col-xs-6">
-				<div class="item-inner">
-					<a class="link" href="https://github.com/auto-wcag/auto-wcag/issues">
-						<h3 class="title">ISSUES</h3>
-						<div class="icon-holder">
-							<i aria-hidden="true" class="fas fa-bug fa-5x">
-							</i>
-						</div>
-						<p class="intro">
-							Click here for an overview of the issues tackled by the project.
-						</p>
-					</a>
-				</div>
+		<div class="item item-primary col-md-6 col-sm-6 col-xs-12">
+			<div class="item-inner">
+				<a class="link" href="{{site.data.package.bugs.url}}">
+					<h3 class="title">ISSUES</h3>
+					<div class="icon-holder">
+						<i aria-hidden="true" class="fas fa-bug fa-5x">
+						</i>
+					</div>
+					<p class="intro">
+						See all issues & feel free to contribute.
+					</p>
+				</a>
 			</div>
+		</div>
 	</div>
-
 </section>

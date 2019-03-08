@@ -125,9 +125,17 @@ When `link` is off screen.
     }
   </style>
   <body>
-		<a class="offScreenLink" href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
+		<a class="offScreenLink" href="http://www.w3.org/WAI">Web Accessibility Initiative (WAI)</a>
   </body>
 </html>
+```
+
+#### Passed example 10
+
+`Area` element with `href` attribute has accessible name.
+
+```html
+<area shape="rect" coords="0,0,82,126" href="http://www.w3.org/WAI" alt="Web Accessibility Initiative (WAI)">
 ```
 
 ### Failed
@@ -205,6 +213,14 @@ Link is completely empty, but still shows up in focus order, so it should have a
 <a href="http://www.w3.org/WAI"></a>
 ```
 
+#### Failed example 10
+
+`Area` element with `href` attribute does not have accessible name.
+
+```html
+<area shape="rect" coords="0,0,82,126" href="http://www.w3.org/WAI">
+```
+
 ### Inapplicable
 
 #### Inapplicable example 1
@@ -231,10 +247,18 @@ Not included in the accessibility tree due to `visibility: hidden`.
 <a href="http://www.w3.org/WAI" style="visibility: hidden;">Some text</a>
 ```
 
-#### Inapplicable example 10
+#### Inapplicable example 4
 
-Not included in the accessibility tree due to `aria-hideden="true"`.
+Not included in the accessibility tree due to `aria-hidden="true"`.
 
 ```html
 <a aria-hidden="true" href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
+```
+
+#### Inapplicable example 5
+
+`Area` element without `href` attribute does not have role of `link`.
+
+```html
+<area shape="rect" coords="0,0,82,126">
 ```

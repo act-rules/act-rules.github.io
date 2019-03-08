@@ -5,6 +5,7 @@ test_type: atomic
 
  description: |
   This rule checks that all elements that can receive focus has a focus styling that is visibly different from the normal styling.
+  
  success_criterion: 
 - 2.4.7 # Focus Visible
 

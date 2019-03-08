@@ -18,11 +18,11 @@ test_type: atomic
 
 ## Applicability
 
-This rule applies to all elements that can receive focus.
+This rule applies to all elements that is [focusable](#focusable).
 
 ## Expectation
 
-When the target element's focus state is triggered, a [visible](#visible) change in text style, border, box-shadow, background-image or color occurs for the element.
+When the target element's [focus state](#focus-state) is triggered, a [change in appearance](#change-in-appearance) occurs for the element.
 
 ## Assumptions
 

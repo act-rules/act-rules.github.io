@@ -30,7 +30,7 @@ Each target element has a non-empty accessible name.
 
 ## Accessibility support
 
-Browser and assitive technology support for SVG `title` and `desc` elements is currently inconsistent. Providing suplimentedary information using WAI ARIA is recommended.
+Browser and assitive technology support for SVG `title` and `desc` elements is currently inconsistent. Using WAI ARIA in combination with the `img` role for non-decorative `svg` elements significantly.
 
 ## Background
 
@@ -40,64 +40,106 @@ Browser and assitive technology support for SVG `title` and `desc` elements is c
 - https://www.w3.org/TR/svg-aam-1.0/#mapping_role_table
 - https://www.w3.org/TR/svg-aam-1.0/#include_elements
 
-
 ## Test Cases
 
 ### Passed
 
 #### Pass example 1
 
-_description..._
+The populated `svg` `text` element contains text content which serves as the accessible name
 
 ```html
+<svg width="100" height="100">
+	<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
+  	<text font-size="36" fill="black" font-family="Verdana" text-anchor="middle" alignment-baseline="middle" x="22" y="34.4">A yellow circle</text>
+</svg>
 
 ```
 
 #### Pass example 2
 
-_description..._
+The poulated `svg` `title` element includes the `svg` in the accessibility tree and serves as the accessible name.
 
 ```html
-
+<svg width="100" height="100">
+  <title>A yellow circle</title>
+	<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
+</svg>
 ```
 
-### Falied
+#### Pass example 3
 
-#### Falied example 1
-
-_description..._
+The `svg` element's populated `aria-label` includes the `svg` in the accessibility tree and serves as the accessible name.
 
 ```html
-
+<svg width="100" height="100" aria-label="A yellow circle">
+	<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
+</svg>
 ```
 
-#### Falied example 2
+### Failed
 
-_description..._
+#### Failed example 1
+
+The `svg` `text` element is included in the accessibility tree but has no text content or accessible name.
 
 ```html
-
+<svg width="100" height="100">
+	<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
+  	<text font-size="36" fill="black" font-family="Verdana" text-anchor="middle" alignment-baseline="middle" x="22" y="34.4"></text>
+</svg>
 ```
 
-#### Falied example 3
+#### Failed example 2
 
-_description..._
+The `svg` element is included in the accessibility tree using `img` role but the element does not have an accessible name.
 
 ```html
+<svg width="100" height="100" role="img">
+  <circle role="none" cx="50" cy="50" r="40" fill="yellow"></circle>
+</svg>
+```
 
+#### Failed example 3
+
+The `svg` element is included in the accessibility tree using a valid `tabindex` integer but does not have an accessible name.
+
+```html
+<svg tabindex="0" width="100" height="100" >
+<circle cx="50" cy="50" r="40" fill="yellow"></circle>
+</svg>
 ```
 
 ### Inapplicable
 
 #### Inapplicable example 1
 
-_description..._
-```html
+The `svg` element is not included in the accessibility tree 
 
+```html
+<svg width="100" height="100">
+<circle cx="50" cy="50" r="40" fill="yellow"></circle>
+</svg>
 ```
+
 #### Inapplicable example 2
 
-_description..._
-```html
+The `svg` element has an accessible name using the `title` element but is excluded from the accessibility tree using the `aria-hidden` attribute.
 
+```html
+<svg aria-hidden="true" width="100" height="100">
+  <title>A yellow circle</title>
+  <circle role="none" cx="50" cy="50" r="40" fill="yellow"></circle>
+</svg>
+```
+
+#### Inapplicable example 3
+
+The `svg` element is not included in the accessibility tree because the `title` element is empty.
+
+```html
+<svg width="100" height="100" role="img">
+  <title> </title>
+  <circle role="none" cx="50" cy="50" r="40" fill="yellow"></circle>
+</svg>
 ```

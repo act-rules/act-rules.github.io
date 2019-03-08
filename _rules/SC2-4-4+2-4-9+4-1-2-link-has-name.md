@@ -197,6 +197,14 @@ Not included in the accessibility tree.
 <a href="http://www.w3.org/WAI" aria-hidden="true"><img src="#" /></a>
 ```
 
+#### Failed example 9
+
+Link is completely empty, but still shows up in focus order, so it should have an accessible name.
+
+```html
+<a href="http://www.w3.org/WAI"></a>
+```
+
 ### Inapplicable
 
 #### Inapplicable example 1

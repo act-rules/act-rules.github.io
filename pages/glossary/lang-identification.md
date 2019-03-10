@@ -18,7 +18,7 @@ This class of algorithms has the following properties:
 
 ## Recommendation
 
-The [site-title] group does not recommend the use of any particular algorithm. Instead each tool that uses automatic language identification should disclose which algorithm, implementation, or third party libraries are used.
+The group does not recommend the use of any particular algorithm. Instead each tool that uses automatic language identification should disclose which algorithm, implementation, or third party libraries are used.
 
 ## Background
 

@@ -3,15 +3,15 @@ layout: default
 title: How to Contribute
 ---
 
-[site-title] is a [W3C](https://www.w3.org/) [Community Group](https://www.w3.org/community/) open to anyone interested in accessibility testing, manually or automated. 
+WCAG-ACT-RULES-CG is a [W3C](https://www.w3.org/) [Community Group](https://www.w3.org/community/) open to anyone interested in accessibility testing, manually or automated. 
 
 We welcome contributions from everyone, and there are many ways to contribute, from Github issues and pull requests, to contribution to our monthly teleconferences.
 
 You don't have to be a member of the Community Group to contribute.
 
-If you want to get even more out of your involvement in our rule creation project, you can officially join the [site-title] to get on the mailing list and participate in monthly teleconferences.
+If you want to get even more out of your involvement in our rule creation project, you can officially join the WCAG-ACT-RULES-CG to get on the mailing list and participate in monthly teleconferences.
 
-<button name="button" onclick="#join-the-Community-Group">Learn more about how to join [site-title]</button>
+<button name="button" onclick="#join-the-Community-Group">Learn more about how to join WCAG-ACT-RULES-CG</button>
 
 ## Overview of how you can contribute
 
@@ -83,7 +83,7 @@ When you submit a rule, we expect you to be responsible for the rule the whole w
 
 If you are not ready to carry a rule all the way through the process, you can partner up with someone else who wants to do it.
 
-Partnering up with someone outside of your own organisation for rule writing will sharpen the rule, which is why we often do that in the [site-title] work.
+Partnering up with someone outside of your own organisation for rule writing will sharpen the rule, which is why we often do that in our work.
 
 Depending on how polished your rule proposal is, you can either add your idea as an issue or a pull request. 
 
@@ -99,28 +99,28 @@ If you have a ready rule draft, you can submit it as a [pull request]({{site.dat
 
 Before contributing a new rule, we recommend you check its validity with several experienced accessibility auditors first. This helps you identify potential stumbling blocks early in the rule design. 
 
-If you want to use the experts in the [site-title] for this, submit your rule suggestion as an Issue (see [Submit an idea for discussion](#) (TBD)). 
+If you want to use the experts in the WCAG-ACT-RULES-CG for this, submit your rule suggestion as an Issue (see [Submit an idea for discussion](#) (TBD)). 
 
 [Learn more about the process for submitting rules as pull requests](#) (TBD)
 
 ## Join the Community Group
 
-The best way to stay informed about the activities of [site-title] is to become a member.
+The best way to stay informed about the activities of WCAG-ACT-RULES-CG is to become a member.
 
 ### Mailing list keeps you up to date
 
 By becoming a member you will be added to the mailing list, and you will receive all the latest updates, meeting invites etc.
 
 ### Participate in our monthly calls
-The Community Group has conference calls every month. It is (usually) on the second Thursday of the month at 16:00 to 17:30 Central European Time. [See the meeting time in your own timezone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=[site-title]+meeting&iso=20180920T16&p1=259&ah=1&am=30).
+The Community Group has conference calls every month. It is (usually) on the second Thursday of the month at 16:00 to 17:30 Central European Time. [See the meeting time in your own timezone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=WCAG-ACT-RULES-CG+meeting&iso=20180920T16&p1=259&ah=1&am=30).
 
-Participating in the [site-title] conference calls is the easiest way to become an active contributor, get to know the other members of the Community Group, and learn from the shared pool of knowledge held by the accessibility experts in the group. 
+Participating in our conference calls is the easiest way to become an active contributor, get to know the other members of the Community Group, and learn from the shared pool of knowledge held by the accessibility experts in the group. 
 
 The invitation and agenda for these meetings is sent out through the mailing list a few days in advance. The dates for the next 3 meetings can also be found on the agenda.
 
 ### How to join the Community Group
 
-1. To join [site-title], you need a W3C Account. If you don’t already have one, [get a W3C account here](https://www.w3.org/accounts/request).
+1. To join WCAG-ACT-RULES-CG, you need a W3C Account. If you don’t already have one, [get a W3C account here](https://www.w3.org/accounts/request).
 2. Go to [Join the community group now!](https://www.w3.org/community/wp-login.php?redirect_to=%2Fcommunity%2Fauto-wcag%2Fjoin) and join the group.
 3. If you work for a W3C Member organization, you will need to request approval. This request will be sent to your organization’s representative in the W3C’s Advisory Committee.
 

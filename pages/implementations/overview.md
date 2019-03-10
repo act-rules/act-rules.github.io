@@ -3,15 +3,15 @@ layout: default
 title: Overview
 ---
 
-The [site-title] rules are authored for reliable `WCAG` testing. In order to facilitate this goal each rule has a variety of test cases in the categories of `passed`, `failed` and `inapplicable`. Incorporating a rule from the [site-title] into your test tool, is considered an **implementation**. The test cases provided for the rules can be used to infer if an implementation yields the `expected` results.
+The WCAG-ACT-RULES-CG rules are authored for reliable `WCAG` testing. In order to facilitate this goal each rule has a variety of test cases in the categories of `passed`, `failed` and `inapplicable`. Incorporating a rule from the into your test tool, is considered an **implementation**. The test cases provided for the rules can be used to infer if an implementation yields the `expected` results.
 
-In the spirit of Open source collaboration, the [site-title] welcomes [contributions]({{ site.url }}/pages/contribute.html) of implementation statistics, to aid as a coverage metric of the rules. This in turn helps to improve the accuracy and completeness of both the rules and the test tools.
+In the spirit of Open source collaboration, we welcomes [contributions]({{ site.url }}/pages/contribute.html) of implementation statistics, to aid as a coverage metric of the rules. This in turn helps to improve the accuracy and completeness of both the rules and the test tools.
 
 The below sections go into greater detail on the structure of a test case, tools for using the test cases, the anatomy of an implementation report and how to submit an implementation report, back to the community.
 
 ## Test Cases
 
-The rules authored in the [site-title], comes with several test cases, which are designed for easy consumption by test tools. The test cases are made available regularly at [{{site.data.package.config.testcases.url}}]({{site.data.package.config.testcases.url}}).
+The authored rules, comes with several test cases, which are designed for easy consumption by test tools. The test cases are made available regularly at [{{site.data.package.config.testcases.url}}]({{site.data.package.config.testcases.url}}).
 
 A test case for a given rule is represented as shown by the below excerpt, where:
 - `url`: is the standalone page containing the test case.
@@ -47,9 +47,9 @@ Tool Name | Tool URL | Language |  Tool Description
 
 ## Implementation Report
 
-Incorporating a [site-title] rule into your test tool, is considered an **implementation**. Submitting implementations from various test tools, helps not only showcase the coverage of test cases authored for the rule, but to build a robust understanding of the WCAG rules and the respective implementations.
+Incorporating a rule into your test tool, is considered an **implementation**. Submitting implementations from various test tools, helps not only showcase the coverage of test cases authored for the rule, but to build a robust understanding of the WCAG rules and the respective implementations.
 
-Test tool authors are welcome to submit the implementation results for the above test cases to the [site-title]. The implementation report should be a valid [JSON-LD](https://json-ld.org/spec/latest/json-ld/) document, where the assertions are expressed using [EARL](https://www.w3.org/TR/EARL10-Schema/). Also, note that the report contains a list of assertion results for each of the test cases. An example assertion for a test case, is as below:
+Test tool authors are welcome to submit the implementation results for the above test cases to the WCAG-ACT-RULES-CG. The implementation report should be a valid [JSON-LD](https://json-ld.org/spec/latest/json-ld/) document, where the assertions are expressed using [EARL](https://www.w3.org/TR/EARL10-Schema/). Also, note that the report contains a list of assertion results for each of the test cases. An example assertion for a test case, is as below:
 
 ```json
 [

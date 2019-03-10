@@ -3,7 +3,7 @@ import Layout from "../components/layout/"
 
 export default ({ data }) => {
   const { markdownRemark } = data
-  const { html, frontmatter } = markdownRemark
+  const { html, frontmatter, tableOfContents } = markdownRemark
 
   return (
     <Layout>
@@ -17,6 +17,7 @@ export default ({ data }) => {
             {frontmatter.rule_type}
           </div>
         </header>
+        <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
         {/* frontmatter */}
         <section>
           <ul>
@@ -39,6 +40,7 @@ export default ({ data }) => {
 export const query = graphql`query($slug: String!) {
   markdownRemark(fields: { slug: { eq: $slug } }) {      
     html      
+    tableOfContents
     frontmatter {       
       name      
       rule_type

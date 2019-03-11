@@ -22,7 +22,7 @@ authors:
 
 The rule applies to any HTML `input` element with a `type` attribute in the `Image Button` state, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
-**Note:** The specification of the `[type](https://www.w3.org/TR/html/sec-forms.html#element-attrdef-input-type)` attribute describes in detail how to map the value of the attribute to its corresponding state.
+**Note:** The specification of the [`type`](https://www.w3.org/TR/html/sec-forms.html#element-attrdef-input-type) attribute describes in detail how to map the value of the attribute to its corresponding state.
 
 ### Expectation
 

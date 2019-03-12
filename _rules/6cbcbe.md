@@ -20,7 +20,7 @@ authors:
 
 ### Applicability
 
-This rule applies to any two or more HTML or SVG elements that have the [semantic role](#semantic-role) of `link`, or a role that inherits from the `link` role, are [included in the accessibility tree](#included-in-the-accessibility-tree), and that have [matching](#matching-text-content) [non-empty](#non-empty) [accessible name](#accessible-name).
+This rule applies to any two or more HTML or SVG elements that have the [semantic role](#semantic-role) of `link`, or a role that inherits from the `link` role, are [included in the accessibility tree](#included-in-the-accessibility-tree), and that have [matching](#matching-text-content) [accessible names](#accessible-name) that contain [text content](#text-content).
 
 ### Expectation
 

@@ -71,3 +71,11 @@ button {
 code[class*="language-"], pre[class*="language-"] {
 	white-space: unset;
 }
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	border: none;
+	border-radius: 0;
+	background-color: $bg-secondary;
+	font-size: 90%;
+}

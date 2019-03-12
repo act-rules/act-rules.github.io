@@ -11,14 +11,19 @@ exports.onCreateNode = (options) => {
   if (node.internal.type === `MarkdownRemark`) {
     const nodeData = getNodeData(options)
     createNodeField({ node, name: `slug`, value: nodeData.path })
+    createNodeField({ node, name: `fileName`, value: nodeData.fileName })
     createNodeField({ node, name: `sourceInstanceName`, value: nodeData.sourceInstanceName })
     createNodeField({ node, name: `markdownType`, value: nodeData.markdownType })
+
+   
   }
 
   // TODO: Docs, enhance page fields to allow for grouping
   if (node.internal.type === 'SitePage') {
     createNodeField({ node, name: `slug`, value: node.path });
+    
     if (node.context) {
+      createNodeField({ node, name: `fileName`, value: node.context.fileName })
       createNodeField({ node, name: `title`, value: node.context.title })
       createNodeField({ node, name: `sourceInstanceName`, value: node.context.sourceInstanceName })
       createNodeField({ node, name: `markdownType`, value: node.context.markdownType })
@@ -59,6 +64,7 @@ exports.createPages = ({ graphql, actions }) => {
         component: path.resolve(getComponent(node.fields.markdownType)),
         context: {
           slug: node.fields.slug, // used for page query
+          fileName: node.fields.fileName,
           sourceInstanceName: node.fields.sourceInstanceName,
           markdownType: node.fields.markdownType,
           title: node.frontmatter.name

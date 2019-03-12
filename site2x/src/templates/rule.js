@@ -1,10 +1,10 @@
 import React from "react"
 import Layout from "../components/layout/"
-import { getSuccessCriterion, getAuthors, getAtomicRules, getTestAspects } from './../utils/render-fragments'
+import { getSuccessCriterion, getAuthors, getAtomicRulesForRule, getTestAspects } from './../utils/render-fragments'
 
 
 export default ({ data }) => {
-  const { markdownRemark } = data
+  const { markdownRemark, allRules } = data
   const { html, frontmatter, tableOfContents } = markdownRemark
 
   const getRuleType = (rule_type) => {
@@ -51,7 +51,7 @@ export default ({ data }) => {
               {getTestAspects(frontmatter.test_aspects)}
             </li>
             <li>
-              {getAtomicRules(frontmatter.atomic_rules)}
+              {getAtomicRulesForRule(frontmatter.atomic_rules, allRules.edges, true)}
             </li>
             <li>
               {getAuthors(frontmatter.authors)}
@@ -59,27 +59,46 @@ export default ({ data }) => {
           </ul>
           <span className='heading'>Table of Contents</span>
           <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
-
-
-
         </aside>
       </section>
     </Layout>
   )
 }
 
-export const query = graphql`query($slug: String!) {
-  markdownRemark(fields: { slug: { eq: $slug } }) {      
-    html      
-    tableOfContents
-    frontmatter {       
-      name      
-      rule_type
-      description
-      success_criterion
-      test_aspects
-      atomic_rules
-      authors
-    }    
-  }  
-}`
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {      
+      html      
+      tableOfContents
+      frontmatter {       
+        name      
+        rule_type
+        description
+        success_criterion
+        test_aspects
+        atomic_rules
+        authors
+      }    
+    }
+    allRules: allMarkdownRemark(
+      filter: {
+        fields: {
+          markdownType: { eq: "rules"}
+        }
+      }
+    ) {
+      totalCount
+      edges {
+        node {
+          fields {
+            fileName {
+              relativePath
+            }
+            markdownType
+            slug
+          }
+        }
+      }
+    }
+  }
+`

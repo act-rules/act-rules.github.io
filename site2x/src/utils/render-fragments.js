@@ -64,14 +64,16 @@ export function getTestAspects(test_aspects) {
   return (
     <>
       <span className='heading'>Test Aspects</span>
-      <p>{test_aspects}</p>
+      {
+        test_aspects.map((ta) => <p>{ta}</p>)
+      }
     </>
   )
 }
 
 
-export function getAtomicRules(aRules) {
-  if (!aRules) {
+export function getAtomicRulesForRule(atomicRulesForRule, allRules, stripBasePath = false) {
+  if (!atomicRulesForRule) {
     return null;
   }
   return (
@@ -79,9 +81,17 @@ export function getAtomicRules(aRules) {
       <div className='meta'>
         <span className='heading'>Atomic Rules</span>
         {
-          aRules.map((rule) => {
+          atomicRulesForRule.map((rule) => {
+            let atomicRule = allRules.find((atomicRule) => {
+              return atomicRule.node.fields.fileName.relativePath.toLowerCase()
+                === `${rule.toLowerCase()}.md`
+            })
+            const aHref = stripBasePath
+              ? atomicRule.node.fields.slug.replace('rules/', '')
+              : atomicRule.node.fields.slug;
             return (
               <a className='sc-item'
+                href={aHref}
                 key={rule}>
                 {rule}
               </a>

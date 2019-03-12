@@ -6,9 +6,11 @@ const getNodeData = (options) => {
   const fileNode = getNode(node.parent)
   const { sourceInstanceName, relativePath } = fileNode
 
+
   const defaults = {
     sourceInstanceName: sourceInstanceName,
-    markdownType: getMarkdownType(relativePath, sourceInstanceName)
+    markdownType: getMarkdownType(relativePath, sourceInstanceName),
+    fileName: relativePath
   }
 
   switch (sourceInstanceName) {

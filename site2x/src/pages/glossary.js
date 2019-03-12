@@ -14,20 +14,21 @@ export default ({ data }) => {
         keywords={[`gatsby`, `application`, `react`]}
       />
 
-      <section className='page-container'>
+      <section className='page-container page-glossary'>
         <h1>Glossary</h1>
+        <section className='listing'>
         {
           edges.map(({ node }) => {
             const { frontmatter, html } = node
             return (
               <article key={node.id}>
                 <h2>{frontmatter.title}</h2>
-                <a id={frontmatter.title}>{frontmatter.title}</a>
                 <div dangerouslySetInnerHTML={{ __html: html }} />
               </article>
             )
           })
         }
+        </section>
       </section>
     </Layout>
   )
@@ -35,7 +36,13 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark (filter: {fields: {markdownType: {eq: "glossary"}}}) {
+    allMarkdownRemark (
+      sort: {
+        fields: [frontmatter___title]
+        order: ASC
+      }
+      filter: {fields: {markdownType: {eq: "glossary"}}}
+      ) {
       totalCount
       edges {
         node {

@@ -2,8 +2,6 @@
 @import './../../styles/variables';
 @import './../../styles/mixins';
 
-// To get work done quickly, nested all styles here
-
 section.layout-container {
   @include fixed-stretch();
   overflow: hidden;
@@ -190,6 +188,54 @@ section.layout-container {
                   background-color: transparent;
                 }
               }
+            }
+          }
+        }
+      }
+
+      // Styles for glossary page
+      &.page-glossary{
+        .listing {
+          counter-reset: glossary-item; 
+          
+          >article {
+            border: 1px solid $sep;
+            padding: 0.5rem;
+            position: relative;
+            background-color: $bg-primary;
+
+            &:nth-child(2n) {
+              background-color: lighten($sep, 2%);
+              &::before{
+                background-color: lighten($sep, 2%);
+              }
+            }
+
+            // Index/ counter
+            &:before {
+              counter-increment: glossary-item;
+              content: counter(glossary-item); 
+              position: absolute;
+              width: 30px;
+              left: -31px;
+              top: -1px;
+              border: 1px solid $sep;
+              border-right: none;
+              font-weight: bold;
+              text-align: center;
+              padding: 11px 0;
+              background-color: $bg-primary;
+            }
+
+            &:hover{
+              border: 1px solid $accent;
+              &::before{
+                border-color: $accent;
+              }
+            }
+
+            h2 {
+              margin: 0;
             }
           }
         }

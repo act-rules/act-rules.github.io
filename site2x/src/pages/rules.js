@@ -1,17 +1,12 @@
 import React from "react"
 import { Link } from 'gatsby'
-
 import Layout from "../components/layout/"
 import SEO from "../components/seo"
-
-import { getSuccessCriterion, getAuthors, getAtomicRules } from './../utils/render-fragments'
-
+import { getSuccessCriterion, getAuthors, getAtomicRulesForRule } from './../utils/render-fragments'
 
 export default ({ data }) => {
-  const { getRules } = data
-  const { edges, totalCount } = getRules
-
-
+  const { rules, allRules } = data
+  const { edges, totalCount } = rules
 
   return (
     <Layout>
@@ -45,7 +40,7 @@ export default ({ data }) => {
                     <p>{description}</p>
                   </main>
                   {/* atomic rules */}
-                  {getAtomicRules(atomic_rules)}
+                  {getAtomicRulesForRule(atomic_rules, allRules.edges)}
                   {/* authors */}
                   {getAuthors(authors)}
                 </article>
@@ -60,7 +55,7 @@ export default ({ data }) => {
 
 export const query = graphql`
 query {
-  getRules: allMarkdownRemark(
+  rules: allMarkdownRemark(
     sort: {
       fields: [frontmatter___name]
       order: ASC
@@ -87,6 +82,26 @@ query {
           authors
         }
         fields {
+          markdownType
+          slug
+        }
+      }
+    }
+  }
+  allRules: allMarkdownRemark(
+    filter: {
+      fields: {
+        markdownType: { eq: "rules"}
+      }
+    }
+  ) {
+    totalCount
+    edges {
+      node {
+        fields {
+          fileName {
+            relativePath
+          }
           markdownType
           slug
         }

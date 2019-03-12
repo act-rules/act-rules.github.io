@@ -1,6 +1,6 @@
 ---
 name: Heading is descriptive
-test_type: atomic
+rule_type: atomic
 
 description: |
    This rule checks that headings describe the topic or purpose of the content.

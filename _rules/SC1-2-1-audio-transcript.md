@@ -20,7 +20,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any [non-streaming](#non-streaming-media-element) `audio` element that is:
+The rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:
 - playing; or,
 - has a "play button" that is [visibile](#visible) and [included-in-the-accessibility-tree](#included-in-the-accessibility-tree).
 
@@ -28,7 +28,7 @@ The rule applies to any [non-streaming](#non-streaming-media-element) `audio` el
 
 ### Expectation
 
-The auditory information of each test target is available through a text transcript that is available either on the page or through a link. The text transcript needs to be [visibile](#visible) and [included-in-the-accessibility-tree](#included-in-the-accessibility-tree).
+The auditory information of each test target is available through a text transcript. That text transcript is [visibile](#visible) and [included-in-the-accessibility-tree](#included-in-the-accessibility-tree), either on the page or through a link.
 
 **Note**: A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
 

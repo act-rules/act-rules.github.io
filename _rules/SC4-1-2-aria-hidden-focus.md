@@ -1,5 +1,7 @@
 ---
 name: aria-hidden with focusable content
+rule_type: atomic
+
 description: |
   This rule checks `aria-hidden` elements do not contain focusable elements
 
@@ -84,6 +86,18 @@ Content made unfocusable through disabled.
 <input disabled aria-hidden="true" />
 ```
 
+#### Passed example 5
+
+`aria-hidden` can't be reset once set to true on an ancestor.
+
+```html
+<div aria-hidden="true">
+    <div aria-hidden="false">
+        <button tabindex="-1">Some button</button>
+    </div>
+</div>
+```
+
 ### Failed
 
 #### Failed example 1
@@ -108,12 +122,12 @@ Focusable form field, incorrectly disabled.
 
 #### Failed example 3
 
-`aria-hidden=false` does not negate aria-hidden true.
+`aria-hidden` can't be reset once set to true on an ancestor.
 
-```html
+```html	
 <div aria-hidden="true">
     <div aria-hidden="false">
-        <button tabindex="-1">Some button</button>
+        <button>Some button</button>
     </div>
 </div>
 ```

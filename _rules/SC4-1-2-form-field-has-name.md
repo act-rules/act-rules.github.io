@@ -4,7 +4,6 @@ description: |
   Each form field element has an accessible name
 
 success_criterion:
-- 3.3.2 # Labels or Instructions
 - 4.1.2 # Name, Role, Value
 
 test_aspects:
@@ -41,6 +40,9 @@ Certain assistive technologies can be set up to ignore the title attribute, whic
 ## Background
 
 - https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html
+- https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html
+
+**Note**: This rule does not fail 3.3.2 as there are sufficient techniques within 3.3.2 that don't need the elements to have an accessible name. For example "G131: Providing descriptive labels" **AND** "G162: Positioning labels to maximize predictability of relationships" would be sufficient.
 
 ## Test cases
 

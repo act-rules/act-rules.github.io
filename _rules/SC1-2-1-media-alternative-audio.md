@@ -20,7 +20,8 @@ authors:
 
 ### Applicability
 
-The rule applies to any [non-streaming](#non-streaming-media-element) `audio` element that is:
+
+The rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:
 - playing; or,
 - has a "play button" that is [visibile](#visible) and [included-in-the-accessibility-tree](#included-in-the-accessibility-tree).
 
@@ -32,7 +33,11 @@ The auditory information of each test target is available as text (directly or v
 
 ### Expectation 2
 
-Each target element is labelled as an audio alternative for text on the page. This label is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+Each target element is labelled as an audio alternative for text on the page.
+
+### Expectation 3
+
+The label (from expectation 2) is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree)
 
 **Note:** The term label does not refer to the `label` element.
 

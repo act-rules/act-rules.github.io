@@ -17,7 +17,7 @@ module Jekyll
 		SC_DATA = JSON.parse(File.read('_data/sc-urls.json'))
 		
 		# Export all rule ids
-		# this will be essential for generating a mapping between rules from auto-wcag to respective test engines/ tools
+		# this will be essential for generating a mapping between rules to respective test engines/ tools
 		EXPORTABLE_RULES = {}
 		# Exportable Test-Cases
 		EXPORTABLE_TESTS = []
@@ -30,12 +30,12 @@ module Jekyll
 
 		def generate(site)
 			# Clean and create testcase embeds directory
-			testcases_base_dir = site.source + '/' + PKG['config']['testcases-embeds-dir']
+			testcases_base_dir = site.source + '/' + PKG['config']['testcases']['dir']['embeds']
 			FileUtils.rm_f Dir.glob("#{testcases_base_dir}/*") unless File.directory?(testcases_base_dir)
 			Dir.mkdir(testcases_base_dir) unless File.directory?(testcases_base_dir)
 
 			# Clean and create testcase export directory
-			exports_base_dir = site.source + '/' + PKG['config']['testcases-export-dir']
+			exports_base_dir = site.source + '/' + PKG['config']['testcases']['dir']['export']
 			FileUtils.rm_f Dir.glob("#{exports_base_dir}/*") unless File.directory?(exports_base_dir)
 			Dir.mkdir(exports_base_dir) unless File.directory?(exports_base_dir)
 			
@@ -50,57 +50,42 @@ module Jekyll
 			Hooks.register :site, :post_write do |site|
 				# Copy files from _testcases-embeds to generated site directory
 				# this is used for iframe src url generation
-				FileUtils.copy_entry PKG['config']['testcases-embeds-dir'], site.dest + '/' + PKG['config']['testcases-embeds-dir']
+				FileUtils.copy_entry PKG['config']['testcases']['dir']['embeds'], site.dest + '/' + PKG['config']['testcases']['dir']['embeds']
 				# create json and files for exportable test cases
 				create_testcases(site)
 			end
 		end
-
-		# def compress(path)
-		# 	path.sub!(%r[/$],'')
-		# 	archive = File.join(path,File.basename(path))+'.zip'
-		# 	FileUtils.rm archive, :force=>true
-		
-		# 	Zip::File.open(archive, 'w') do |zipfile|
-		# 		Dir["#{path}/**/**"].reject{|f|f==archive}.each do |file|
-		# 			zipfile.add(file.sub(path+'/',''),file)
-		# 		end
-		# 	end
-		# end
 		
 		def create_testcases(site)
 			# create directory if not exists
-			FileUtils.mkdir_p(PKG['config']['testcases-export-dir']) unless File.directory?(PKG['config']['testcases-export-dir'])
+			FileUtils.mkdir_p(PKG['config']['testcases']['dir']['export']) unless File.directory?(PKG['config']['testcases']['dir']['export'])
 
 			# write rules json
 			rules_result = JSON.pretty_generate({
 				name: "#{PKG['name']} rules",
-				website: "#{PKG['config']['site-url-prefix']}/rules.html",
-				description: "List of rules in auto wcag which can be mapped against testing engine via test runner",
-				"a11y-rules": EXPORTABLE_RULES
+				website: "#{site.data['package']['pages']['url']}/rules.html",
+				description: "List of rules in which can be mapped against testing engine via test runner",
+				rules: EXPORTABLE_RULES
 			})
-			write_file("#{PKG['config']['testcases-export-dir']}/#{PKG['config']['rules-export-filename']}", rules_result)
+			write_file("#{PKG['config']['testcases']['dir']['export']}/rules.json", rules_result)
 
 			# write testcases json 
 			testcases_result = JSON.pretty_generate({
 				name: "#{PKG['name']} test cases",
-				website: PKG['config']['site-url-prefix'],
+				website: site.data['package']['pages']['url'],
 				license: PKG['license'],
 				description: "Test Cases of #{PKG['name']} rules",
-				"a11y-testcases": EXPORTABLE_TESTS
+				testcases: EXPORTABLE_TESTS
 			});
-			write_file("#{PKG['config']['testcases-export-dir']}/#{PKG['config']['testcases-export-filename']}", testcases_result)
+			write_file("#{PKG['config']['testcases']['dir']['export']}/testcases.json", testcases_result)
 
 			# copy test case files
-			FileUtils.copy_entry PKG['config']['testcases-embeds-dir'], PKG['config']['testcases-export-dir'] + '/assets'
+			FileUtils.copy_entry PKG['config']['testcases']['dir']['embeds'], PKG['config']['testcases']['dir']['export'] + '/assets'
 			# copy test case assets
-			FileUtils.copy_entry PKG['config']['testcases-assets-dir'], PKG['config']['testcases-export-dir'] + '/' + PKG['config']['testcases-assets-dir']
-			
-			# create a zip file of the same
-			# compress(PKG['config']['testcases-export-dir'])
+			FileUtils.copy_entry PKG['config']['testcases']['dir']['assets'], PKG['config']['testcases']['dir']['export'] + '/' + PKG['config']['testcases']['dir']['assets']
 
 			# copy to site directory
-			FileUtils.copy_entry PKG['config']['testcases-export-dir'], site.dest + '/' + PKG['config']['testcases-export-dir']
+			FileUtils.copy_entry PKG['config']['testcases']['dir']['export'], site.dest + '/' + PKG['config']['testcases']['dir']['export']
 		end
 
 		def get_code_tag_line_indices(document)
@@ -175,16 +160,15 @@ module Jekyll
 					file_type = get_highlight_lang(content_including_tags[0]).gsub(/[[:space:]]/, '')
 					file_name = "#{doc_name}_#{test_case_type}_example_#{test_index}.#{file_type}"
 					# construct file path
-					file_path = site.source + '/' + PKG['config']['testcases-embeds-dir'] + file_name
+					file_path = site.source + '/' + PKG['config']['testcases']['dir']['embeds'] + file_name
 					# construct file url
-					file_url = '../' + PKG['config']['testcases-embeds-dir'] + file_name
-					temp_file_url = "#{PKG['config']['site-url-prefix']}/#{PKG['config']['testcases-export-dir']}assets/" + file_name
+					file_url = '../' + PKG['config']['testcases']['dir']['export-files'] + file_name
 					# construct file content
 					file_content = get_file_content(content_including_tags)
 
 					# constuct a hash which contains all the 
 					# code-snippet and iframe embedded
-					embedded_testcases_hash[indices[$i].to_s] = render_code_and_frame(file_content, temp_file_url, should_not_render_frame)
+					embedded_testcases_hash[indices[$i].to_s] = render_code_and_frame(file_content, file_url, should_not_render_frame)
 					testcase_url = file_url.gsub('../_testcases-embeds/', 'assets/')				
 					tc_meta = {}
 					tc_meta["url"] = testcase_url
@@ -201,7 +185,7 @@ module Jekyll
 			end
 
 			# construct exportable testcases hash
-			process_testcases(doc_name.to_s, testcases)
+			process_testcases(site, doc_name.to_s, testcases)
 
 			# construt exportable rules  hash
 			process_rules(doc_name.to_s)
@@ -211,15 +195,15 @@ module Jekyll
 			document.content = doc_content
 		end
 
-		def process_testcases(rule_id, testcases)
+		def process_testcases(site, rule_id, testcases)
 			testcases.each do |tc_type, tc_meta|
 				tc_meta.each do |meta|
 					# create test-case object
 					t = {}
-					t['url'] = "#{PKG['config']['site-url-prefix']}/#{PKG['config']['testcases-export-dir']}#{meta["url"]}" 
+					t['url'] = "#{site.data['package']['pages']['url']}/#{PKG['config']['testcases']['dir']['export']}#{meta["url"]}" 
 					t['expected'] = tc_type.to_s
 					t['ruleId'] = rule_id
-					t['rulePage'] = "#{PKG['config']['site-url-prefix']}/rules/#{rule_id}.html"
+					t['rulePage'] = "#{site.data['package']['pages']['url']}/rules/#{rule_id}.html"
 					# push to export tests
 					EXPORTABLE_TESTS.push(t)
 				end

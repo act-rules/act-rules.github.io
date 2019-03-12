@@ -93,6 +93,11 @@ select {
 	-webkit-appearance: none;
 }
 
+.dropdown-toggle:focus {
+	outline: 5px auto rgba(256, 256, 256, 0.65);
+	outline-offset: -2px;
+}
+
 .navbar{
 	border-radius: 0;
 	background-color: $color-primary;
@@ -158,6 +163,15 @@ select {
 }
 
 .container {
+
+	.page-header {
+		font-weight: bold;
+		text-transform: capitalize;
+	}
+
+	.padding-15{
+		padding: 15px;
+	}
 
 	.modal-dialog{
 		width: 85%;

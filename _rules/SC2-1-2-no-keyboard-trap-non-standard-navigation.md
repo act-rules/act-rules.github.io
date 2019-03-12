@@ -1,6 +1,6 @@
 ---
 name: No keyboard trap non-standard navigation
-test_type: atomic
+rule_type: atomic
 
 description: |
   This rule checks if it is possible to use non-standard keyboard navigation to navigate through content where focus is trapped when using standard ways of keyboard navigation.

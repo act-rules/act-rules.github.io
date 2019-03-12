@@ -16,6 +16,17 @@ section.layout-container {
     max-width: 275px;
     padding-left: 1rem;
     position: relative;
+    transition: all 2ms;
+
+    &:after{
+      content: '\2630';
+      position: absolute;
+      right: -40px;
+      top: 0;
+      padding: 15px;
+      background-color: $bg-secondary;
+      opacity: 0;
+    }
 
     >div.logo {
       flex-shrink: 0;
@@ -201,4 +212,57 @@ section.layout-container {
 }
 
 
-// media queries
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 480px) {
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (max-width : 1024px) {
+  section.layout-container {
+    >aside{
+      position: absolute;
+      left: -220px;
+      top: 0;
+      bottom: 0;
+      max-width: 230px;
+      display: table;
+      z-index: 1;
+      &:after{
+        opacity: 1;
+      }
+      &:hover{
+        left: 0;
+        &::after{
+          color: $accent;
+        }
+      }
+    }
+    >main{
+      .page-container {
+        &.rules-page{
+          .rules-listing {
+            >article {
+              flex-direction: column;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}

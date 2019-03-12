@@ -27,7 +27,7 @@ This rule applies to any element that is [included in the accessibility tree](#i
 
 ### Expectation
 
-Each target element has an [accessible name](#accessible-name) that contains [text content](#text-content).
+Each target element has an [accessible name](#accessible-name) that contains [letters or numbers](#letters-or-numbers).
 
 ## Assumptions
 

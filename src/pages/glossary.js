@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from 'gatsby'
 import Layout from "../components/layout/"
 import SEO from "../components/seo"
 
@@ -17,17 +18,17 @@ export default ({ data }) => {
       <section className='page-container page-glossary'>
         <h1>Glossary</h1>
         <section className='listing'>
-        {
-          edges.map(({ node }) => {
-            const { frontmatter, html } = node
-            return (
-              <article key={node.id}>
-                <h2>{frontmatter.title}</h2>
-                <div dangerouslySetInnerHTML={{ __html: html }} />
-              </article>
-            )
-          })
-        }
+          {
+            edges.map(({ node }) => {
+              const { frontmatter, html } = node
+              return (
+                <article key={node.id}>
+                  <h2>{frontmatter.title}</h2>
+                  <div dangerouslySetInnerHTML={{ __html: html }} />
+                </article>
+              )
+            })
+          }
         </section>
       </section>
     </Layout>

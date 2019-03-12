@@ -38,7 +38,7 @@ section.layout-container {
         @include reset-list();
         >li {
           transition: all ease;
-          a {
+          a, p {
             @include header-style($fg-secondary);
             text-transform: uppercase;
             font-size: 0.83em;

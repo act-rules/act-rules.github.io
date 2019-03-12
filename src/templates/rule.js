@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout/"
+import { graphql} from 'gatsby'
 import { getSuccessCriterion, getAuthors, getAtomicRulesForRule, getTestAspects } from './../utils/render-fragments'
 
 

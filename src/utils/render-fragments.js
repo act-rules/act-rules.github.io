@@ -1,7 +1,7 @@
 
 import React from "react"
-import scUrls from './../../../_data/sc-urls'
-import contributors from './../../../_data/contributors'
+import scUrls from './../../_data/sc-urls'
+import contributors from './../../_data/contributors'
 
 export function getSuccessCriterion(success_criterion) {
   if (!success_criterion) {

@@ -1,7 +1,8 @@
 import React from "react"
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Layout from "../components/layout/"
 import SEO from "../components/seo"
+
 import { getSuccessCriterion, getAuthors, getAtomicRulesForRule } from './../utils/render-fragments'
 
 export default ({ data }) => {

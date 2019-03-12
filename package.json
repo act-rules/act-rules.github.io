@@ -1,34 +1,59 @@
 {
   "name": "WCAG-ACT-RULES-CG",
-  "version": "1.0.0",
   "description": "Accessibility conformance testing rules for HTML",
-  "scripts": {
-    "start": "npm run dev",
-    "copy": "copyfiles package.json _data",
-    "setup": "npm install && bundle install && npm run copy",
-    "proof": "bundle exec jekyll build && bundle exec htmlproofer ./_site --only-4xx --check-html --allow_hash_href --assume-extension --alt-ignore '/.*/'",
-    "fmt": "prettier --write '*'.{js} '*/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "generate-wcag-data": "node wcag-url-generator",
-    "dev": "npm run setup && bundle exec jekyll serve",
-    "build": "npm run setup && bundle exec jekyll build"
-  },
+  "version": "1.0.0",
   "author": "WCAG ACT RULES CG",
+  "dependencies": {
+    "gatsby": "^2.1.19",
+    "gatsby-image": "^2.0.30",
+    "gatsby-plugin-manifest": "^2.0.20",
+    "gatsby-plugin-offline": "^2.0.24",
+    "gatsby-plugin-prefetch-google-fonts": "^1.4.0",
+    "gatsby-plugin-react-helmet": "^3.0.7",
+    "gatsby-plugin-sass": "^2.0.10",
+    "gatsby-plugin-sharp": "^2.0.23",
+    "gatsby-remark-autolink-headers": "^2.0.15",
+    "gatsby-remark-prismjs": "^3.2.4",
+    "gatsby-source-filesystem": "^2.0.23",
+    "gatsby-transformer-remark": "^2.3.0",
+    "gatsby-transformer-sharp": "^2.1.15",
+    "node-sass": "^4.11.0",
+    "normalize.css": "^8.0.1",
+    "prismjs": "^1.15.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-helmet": "^5.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.16.4"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "licenseTODO": "https://auto-wcag.github.io/auto-wcag/license.html",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "gen-wcag-data": "node ./build/wcag-url-generator"
+  },
   "homepage": "https://github.com/auto-wcag/auto-wcag#readme",
-  "license": "https://auto-wcag.github.io/auto-wcag/license.html",
   "repository": {
     "type": "git",
     "url": "https://github.com/auto-wcag/auto-wcag.git"
   },
   "bugs": {
-    "url": "https://github.com/auto-wcag/auto-wcag/issues"
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "pulls": {
     "url": "https://github.com/auto-wcag/auto-wcag/pulls"
   },
-  "pages": {
-    "url": "https://auto-wcag.github.io/auto-wcag"
-  },
+  "website": "https://auto-wcag.github.io/auto-wcag",
   "config": {
     "testcases": {
       "url": "https://auto-wcag.github.io/auto-wcag/exported-testcases/testcases.json",
@@ -39,9 +64,5 @@
         "export-files": "exported-testcases/assets/"
       }
     }
-  },
-  "devDependencies": {
-    "copyfiles": "^2.1.0",
-    "prettier": "^1.15.3"
   }
 }

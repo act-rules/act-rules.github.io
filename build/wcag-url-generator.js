@@ -1,7 +1,14 @@
-// https://github.com/w3c/wai-wcag-quickref/blob/gh-pages/_data/wcag21.json
-const wcagData = require('./_data/wcag21-en.json') // Note: perhaps can fetch this dynamically to allow to keep up with changes to this json
+
 const fs = require('fs')
-const outputFile = './_data/sc-urls.json'
+const path = require('path')
+
+/**
+ * Note: perhaps can fetch this dynamically to allow to keep up with changes to this json
+ * -> https://github.com/w3c/wai-wcag-quickref/blob/gh-pages/_data/wcag21.json
+ */
+const wcagData = require('./../_data/wcag21-en.json') 
+const outputFile = path.join(__dirname, '..', '_data', 'sc-urls.json')
+
 const urlPrefix = `https://www.w3.org/TR/WCAG`
 const urls = {}
 

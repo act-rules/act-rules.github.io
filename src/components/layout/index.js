@@ -131,9 +131,9 @@ class Layout extends React.Component {
                           return (
                             <>
                               <li key={groupKey}>
-                                <a className='parent-item'>
+                                <p className='parent-item'>
                                   {fieldValue}
-                                </a>
+                                </p>
                                 <ul>
                                   {this.getListItemFromEdges(edges)}
                                 </ul>

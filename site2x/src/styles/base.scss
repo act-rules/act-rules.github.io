@@ -52,3 +52,18 @@ table {
 		}
 	}
 }
+
+
+button {
+  padding: 1em;
+  line-height: 1em;
+  display: inline-block;
+  letter-spacing: 0.1em;
+	transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+	@include btn($accent, $fg-secondary);
+	cursor: pointer;
+
+  &.secondary {
+    @include btn($fg-secondary, $accent);
+  }
+}

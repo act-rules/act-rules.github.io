@@ -41,7 +41,7 @@ export default ({ data }) => {
       return null;
     }
     return (
-      <aside style={{ width: `150px` }}>
+      <aside style={{ width: `200px` }}>
         <div className='meta'>
           <span className='heading'>Authors</span>
           {
@@ -74,7 +74,7 @@ export default ({ data }) => {
       return null;
     }
     return (
-      <aside style={{ width: `250px` }}>
+      <aside style={{ width: `275px` }}>
         <div className='meta'>
           <span className='heading'>Atomic Rules</span>
           {
@@ -108,14 +108,16 @@ export default ({ data }) => {
           {
             edges.map(({ node }, index) => {
               const { frontmatter, id, fields } = node
-              const { name, description, rule_type, success_criterion, authors, atomic_rules } = frontmatter
+              const { name, description, success_criterion, authors, atomic_rules } = frontmatter
               const { slug } = fields
               return (
                 <article key={id}>
                   <main>
                     {/* rule id */}
                     <Link to={slug}>
-                      <h2>{name}</h2>
+                      <h2>
+                        {name}
+                      </h2>
                     </Link>
                     {/* rule sc's */}
                     {getSuccessCriterion(success_criterion)}
@@ -139,14 +141,20 @@ export default ({ data }) => {
 
 export const query = graphql`
 query {
-  getRules: allMarkdownRemark(filter: {
-    fields: {
-      markdownType: { eq: "rules"}
+  getRules: allMarkdownRemark(
+    sort: {
+      fields: [frontmatter___name]
+      order: ASC
     }
-    frontmatter: {
-      success_criterion: { ne: null }
+    filter: {
+      fields: {
+        markdownType: { eq: "rules"}
+      }
+      frontmatter: {
+        success_criterion: { ne: null }
+      }
     }
-  }) {
+  ) {
     totalCount
     edges {
       node {

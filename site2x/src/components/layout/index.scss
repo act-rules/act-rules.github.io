@@ -17,17 +17,6 @@ section.layout-container {
     padding-left: 1rem;
     position: relative;
 
-    // &::before{
-    //   content: ' ';
-    //   position: absolute;
-    //   height: 100%;
-    //   background-color: $bg-secondary;
-    //   z-index: -1;
-    //   transform: skew(-10deg);
-    //   top: 0;
-    //   bottom: 0;
-    // }
-
     >div.logo {
       flex-shrink: 0;
     }
@@ -89,7 +78,7 @@ section.layout-container {
     flex: 1;
     color: $fg-primary;
     line-height: 1.5;
-    padding: 0 8rem;
+    padding: 0 6rem;
 
     .page-container {
       margin: 4rem 0;
@@ -108,18 +97,47 @@ section.layout-container {
         }
       }
 
+      // Styles for rules page
       &.rules-page{
         .rules-listing {
+          counter-reset: rule-item; 
+          
           >article {
-            border-top: 1px solid transparent;
-            border-bottom: 1px solid $sep;
-            padding: 1.5rem 0;
+            border: 1px solid $sep;
+            padding: 0.5rem;
             display: flex;
             flex-direction: row;
+            position: relative;
+            background-color: $bg-primary;
+
+            &:nth-child(2n) {
+              background-color: lighten($sep, 2%);
+              &::before{
+                background-color: lighten($sep, 2%);
+              }
+            }
+
+            // Index/ counter
+            &:before {
+              counter-increment: rule-item;
+              content: counter(rule-item); 
+              position: absolute;
+              width: 30px;
+              left: -31px;
+              top: -1px;
+              border: 1px solid $sep;
+              border-right: none;
+              font-weight: bold;
+              text-align: center;
+              padding: 11px 0;
+              background-color: $bg-primary;
+            }
 
             &:hover{
-              border-top: 1px solid $accent;
-              border-bottom: 1px solid $accent;
+              border: 1px solid $accent;
+              &::before{
+                border-color: $accent;
+              }
             }
 
             div.meta {
@@ -154,19 +172,16 @@ section.layout-container {
                 margin: 0;
                 margin-bottom: 0.5rem;
               }
-
               &:last-child{
                 border-bottom: none;
               }
               p {
                 font-weight: bold;
               }
-
             }
 
             >aside {
               border-left: 1px solid $sep;
-              
               div.meta{
                 span.heading{
                   display: inline-block;
@@ -184,3 +199,6 @@ section.layout-container {
     }
   } 
 }
+
+
+// media queries

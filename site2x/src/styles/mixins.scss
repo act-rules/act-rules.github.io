@@ -32,3 +32,24 @@
   padding: 0;
   list-style: none;
 }
+
+// Solid and Hollow buttons mixin by the @poopsplat
+@mixin btn($background, $color) {
+  border: 3px solid rgba(255,255,255,0); // You'll want to customize this
+  color: $color;
+  background: $background;
+  &:hover, &:focus, &:active {
+    color: $background;
+    background: $color;
+    border-color: $background;
+  }
+  &.-hollow {
+    background: none;
+    color: $background;
+    border: 3px solid $background; // The thickness should correspond with the thickness set above
+    &:hover, &:focus, &:active {
+      color: $color;
+      background: $background;
+    }
+  }
+}

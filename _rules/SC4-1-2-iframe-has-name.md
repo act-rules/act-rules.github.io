@@ -25,7 +25,7 @@ The rule applies to `iframe` elements that are [included in the accessibility tr
 
 ### Expectation
 
-Each target element has an [accessible name](#accessible-name) that contains [text content](#text-content).
+Each target element has an [accessible name](#accessible-name) that contains [letters or numbers](#letters-or-numbers).
 
 ## Assumptions
 

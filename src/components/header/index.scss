@@ -1,8 +1,13 @@
 @import './../../styles/variables';
 
 header.app-header {
+  svg {
+    padding: 2rem 0;
+    transform: rotate(180deg)
+  }
   h2 {
-    padding: 3rem 0;
+    padding: 1rem 0;
+    margin: 0;
     color: $accent;
     font-weight: bolder;
     width: 150px;

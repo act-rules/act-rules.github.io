@@ -1,11 +1,15 @@
-
-[x] links to rule id (atomic rules) are not href'd
-
 [ ] glossary usage
 
 [ ] rule - get glossary items & add to page
-[ ] rule - resolve glossary links
+[ ] rule - resolve glossary links with in page & add to sidebar
 
-[ ] get all testcases
+[ ] website navigation - partial link highlighting
+[ ] rule page - partial link highlighting
 
-[ ] license page
+[ ] generate testcases assets & json
+
+
+DONE
+
+[x] links to rule id (atomic rules) are not href'd
+[x] license page

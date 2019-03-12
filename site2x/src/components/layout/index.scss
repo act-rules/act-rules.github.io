@@ -1,7 +1,8 @@
-
-@import './../../styles/base.scss';
+@import './../../styles/base';
 @import './../../styles/variables';
 @import './../../styles/mixins';
+
+// To get work done quickly, nested all styles here
 
 section.layout-container {
   @include fixed-stretch();
@@ -92,24 +93,10 @@ section.layout-container {
     padding: 0 6rem;
 
     .page-container {
-      margin: 4rem 0;
-
-      h1{
-        border-bottom: 1px solid $sep;
-        padding: 2rem 0;
-        text-transform: uppercase;
-        margin-bottom: 0;
-        text-decoration: none;
-      }
-
-      h2, h3, h4, h5, h6 {
-        &:hover {
-          text-decoration: underline;
-        }
-      }
+      @include page-container-default-styles;
 
       // Styles for rules page
-      &.rules-page{
+      &.page-rules{
         .rules-listing {
           counter-reset: rule-item; 
           
@@ -208,7 +195,77 @@ section.layout-container {
         }
       }
     }
+
+
+    // Style for a rule page
+    .page-rule {
+      display: flex;
+      @include page-container-default-styles;
+      align-items: flex-start;
+      padding-right: 250px;
+
+      main {
+        flex: 1;
+        padding-bottom: 6rem;
+      }
+
+      aside.toc {
+        flex: inherit;
+        position: fixed;
+        right: 0;
+        top: 0;
+        border-left: 1px solid $sep;
+        max-width: 250px;
+        overflow: auto;
+        height: 100%;
+        bottom: 0;
+        padding-right: 1.5rem;
+        font-size: 90%;
+
+        span.heading {
+          padding: 0.25rem 0.5rem;
+          @include header-style($fg-primary);
+          text-transform: uppercase;
+          font-size: 80%;
+          background-color: $sep;
+          margin: 1.5rem 0.5rem 0.5rem 0;
+          display: inline-block;
+        }
+
+        ul{
+          @include reset-list;
+          margin: 0.5rem 0;
+          &.meta-data{
+            margin-top: 6rem;
+          }
+          li {
+            span, a {
+              display: inline-block;
+            }
+            p{
+              margin: 0 0 0 0.5rem;
+              text-transform: uppercase;
+            }
+            a{
+              cursor: pointer;
+              text-decoration: none;
+              padding: 0.25rem 0.5rem;
+              text-transform: uppercase;
+              display: block;
+              &:hover {
+                color: $accent;
+              }
+            }
+          }
+          ul {
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+  
   } 
+
 }
 
 
@@ -216,7 +273,6 @@ section.layout-container {
 @media only screen 
 and (min-width : 320px) 
 and (max-width : 480px) {
-
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -243,7 +299,7 @@ and (max-width : 1024px) {
     }
     >main{
       .page-container {
-        &.rules-page{
+        &.page-rules{
           .rules-listing {
             >article {
               flex-direction: column;
@@ -258,11 +314,9 @@ and (max-width : 1024px) {
 /* Desktops and laptops ----------- */
 @media only screen 
 and (min-width : 1224px) {
-/* Styles */
 }
 
 /* Large screens ----------- */
 @media only screen 
 and (min-width : 1824px) {
-/* Styles */
 }

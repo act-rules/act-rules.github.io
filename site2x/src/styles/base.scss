@@ -67,3 +67,7 @@ button {
     @include btn($fg-secondary, $accent);
   }
 }
+
+code[class*="language-"], pre[class*="language-"] {
+	white-space: unset;
+}

@@ -22,7 +22,7 @@ The rule applies to any `SVG` element that is [included in the accessibility tre
 
 ### Expectation
 
-Each target element has a non-empty accessible name.
+Each target element has a [non-empty](#non-empty) accessible name.
 
 ## Assumptions
 

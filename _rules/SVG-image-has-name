@@ -30,7 +30,7 @@ Each target element has a [non-empty](#non-empty) accessible name.
 
 ## Accessibility support
 
-Browser and assitive technology support for SVG `title` and `desc` elements is currently inconsistent. Using WAI ARIA in combination with the `img` role for non-decorative `svg` elements significantly.
+Browser and assitive technology support for SVG `title` and `desc` elements is currently inconsistent. Using WAI ARIA in combination with the `img` role for non-decorative `svg` elements significantly improves accessibility brwoser support.
 
 ## Background
 

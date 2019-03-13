@@ -3,7 +3,7 @@ name: No auto-play audio lasts more than 3 seconds
 test_type: atomic
 
 description: |
-  This rule checks that each auto-play audio or video elements does not have any audio that last more than 3 seconds.
+  This rule checks that none of the auto-play audio or video elements have audio that last more than 3 seconds.
 
 success_criterion: 
 - 1.4.2 # Audio Control

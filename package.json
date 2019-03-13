@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "author": "WCAG ACT RULES CG",
   "dependencies": {
+    "axios": "^0.18.0",
+    "jsonld": "^1.5.4",
+    "make-dir": "^2.1.0",
     "gatsby": "^2.1.19",
     "gatsby-image": "^2.0.30",
     "gatsby-plugin-manifest": "^2.0.20",
@@ -34,13 +37,15 @@
   "license": "MIT",
   "licenseTODO": "https://auto-wcag.github.io/auto-wcag/license.html",
   "scripts": {
+    "prebuild": "npm run gen-wcag-data && npm run get-implementations",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "gen-wcag-data": "node ./build/wcag-url-generator"
+    "get-implementations": "node ./build/get-implementations",
+    "get-wcag-sc-metadata": "node ./build/get-wcag-sc-metadata"
   },
   "homepage": "https://github.com/auto-wcag/auto-wcag#readme",
   "repository": {
@@ -55,6 +60,13 @@
   },
   "website": "https://auto-wcag.github.io/auto-wcag",
   "config": {
+    "references": {
+      "wcag21": "https://raw.githubusercontent.com/w3c/wai-wcag-quickref/gh-pages/_data/wcag21.json"
+    },
+    "implementations": {
+      "alfa": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/alfa-report.json",
+      "axe": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/axe-report.json"
+    },
     "testcases": {
       "url": "https://auto-wcag.github.io/auto-wcag/exported-testcases/testcases.json",
       "dir": {

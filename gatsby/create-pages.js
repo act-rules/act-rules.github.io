@@ -1,6 +1,5 @@
 const path = require('path')
 const getComponent = require('./get-component')
-const re = require('gfm-code-block-regex');
 
 const createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -30,16 +29,6 @@ const createPages = ({ graphql, actions }) => {
     const markdownPages = data.allMarkdownRemark.edges
 
     enhanceMarkdownContext(markdownPages, createPage)
-    getCodeSnippets(markdownPages)
-  })
-}
-
-function getCodeSnippets(markdownPages) {
-  markdownPages.forEach(({ node }) => {
-    const { rawMarkdownBody } = node
-    var match = re().exec(rawMarkdownBody);
-    console.log(match)
-
   })
 }
 

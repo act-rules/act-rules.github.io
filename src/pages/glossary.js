@@ -9,7 +9,6 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      {/* TODO: SEO */}
       <SEO title="Glossary" keywords={[`Glossary`]} />
 
       <section className="page-container page-glossary">

@@ -5,15 +5,15 @@ import SEO from "../components/seo"
 
 export default ({ data }) => {
   const { allMarkdownRemark } = data
-  const { edges } = allMarkdownRemark
+  const { edges, totalCount } = allMarkdownRemark
 
   return (
     <Layout>
       {/* TODO: SEO */}
-      <SEO title="Glossary" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Glossary" keywords={[`Glossary`]} />
 
       <section className="page-container page-glossary">
-        <h1>Glossary</h1>
+        <h1>Glossary ({totalCount})</h1>
         <section className="listing">
           {edges.map(({ node }) => {
             const { frontmatter, html } = node

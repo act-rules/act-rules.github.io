@@ -88,7 +88,7 @@ section.layout-container {
     flex: 1;
     color: $fg-primary;
     line-height: 1.5;
-    padding: 0 6rem;
+    padding: 0 5rem;
 
     .page-container {
       @include page-container-default-styles;
@@ -319,6 +319,15 @@ section.layout-container {
 @media only screen 
 and (min-width : 320px) 
 and (max-width : 480px) {
+  section.layout-container {
+    >main {
+      .page-rule {
+        aside.toc {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 /* iPads (portrait and landscape) ----------- */

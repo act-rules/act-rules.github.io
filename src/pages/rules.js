@@ -15,8 +15,7 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      {/* TODO: SEO */}
-      <SEO title="Rules" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Rules" keywords={[`Rules`]} />
       <section className="page-container page-rules">
         {/* Heading */}
         <h1>Rules ({totalCount})</h1>

@@ -12,7 +12,9 @@ export function getSuccessCriterion(success_criterion) {
       {success_criterion.map(sc => {
         const scData = scUrls[sc]
         return (
-          <a className="sc-item" key={sc} href={scData.url}>
+          <a className="sc-item"
+            key={sc}
+            href={scData.url}>
             {scData.num} {scData.scId}
           </a>
         )
@@ -38,7 +40,9 @@ export function getAuthors(authors) {
             return null
           }
           return (
-            <a className="sc-item" href={authorData.site} key={authorData.name}>
+            <a className="sc-item"
+              href={authorData.site}
+              key={authorData.name}>
               @{authorData.name}
             </a>
           )
@@ -55,9 +59,7 @@ export function getTestAspects(test_aspects) {
   return (
     <>
       <span className="heading">Test Aspects</span>
-      {test_aspects.map(ta => (
-        <p>{ta}</p>
-      ))}
+      {test_aspects.map(ta => (<p key={ta}>{ta}</p>))}
     </>
   )
 }
@@ -85,7 +87,9 @@ export function getAtomicRulesForRule(
             ? atomicRule.node.fields.slug.replace("rules/", "")
             : atomicRule.node.fields.slug
           return (
-            <a className="sc-item" href={aHref} key={rule}>
+            <a className="sc-item"
+              href={aHref}
+              key={rule}>
               {rule}
             </a>
           )

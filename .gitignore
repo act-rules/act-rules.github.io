@@ -69,20 +69,5 @@ yarn-error.log
 .yarn-integrity
 
 
-## TODO: these need to go
-
-# Defaults
-node_modules
-*.log
-
-# Ide
-.idea
-.vscode
-
-# Site
-.sass-cache
-_site
-
-# auto generated testcases
-_testcases-embeds/*.*
-exported-testcases
+# this is temporary
+_testcases-embeds

@@ -20,8 +20,9 @@ class Layout extends React.Component {
     return edges.map((edge, index) => {
       const { node } = edge
       const { path, context } = node
+      const key = `${context.title}${path}`
       return (
-        <li key={index}>
+        <li key={key}>
           <Link activeClassName='active' to={path}>{context.title}</Link>
         </li>
       )
@@ -112,11 +113,11 @@ class Layout extends React.Component {
                       {getTopLevelNavigation.group.map((item) => this.getListItemFromEdges(item.edges))}
                       <hr />
                       {/* Rules */}
-                      <li>
+                      <li key='rules'>
                         <Link to="/rules/" activeClassName="active">Rules</Link>
                       </li>
                       {/* Glossary */}
-                      <li>
+                      <li key='glossary'>
                         <Link to="/glossary/" activeClassName="active">Glossary</Link>
                       </li>
                       <hr />
@@ -129,17 +130,16 @@ class Layout extends React.Component {
                           }
                           const groupKey = `${fieldValue}-${index}`
                           return (
-                            <>
-                              <li key={groupKey}>
-                                <p className='parent-item'>
-                                  {fieldValue}
-                                </p>
-                                <ul>
-                                  {this.getListItemFromEdges(edges)}
-                                </ul>
-                              </li>
-                              <hr/>
-                            </>
+
+                            <li key={groupKey}>
+                              <p className='parent-item'>
+                                {fieldValue}
+                              </p>
+                              <ul>
+                                {this.getListItemFromEdges(edges)}
+                              </ul>
+                              <hr />
+                            </li>
                           )
                         })
                       }

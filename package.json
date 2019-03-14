@@ -92,6 +92,7 @@
     "gatsby-prismjs-dracula": "^0.1.15"
   },
   "devDependencies": {
+    "gfm-code-blocks": "^1.0.0",
     "prettier": "^1.16.4"
   },
   "keywords": [

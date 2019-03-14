@@ -30,7 +30,11 @@ const createPageAddMdContext = (options) => {
 
     const { allMarkdownRemark } = data;
     const { edges } = allMarkdownRemark
-    
+
+    /**
+     * iterate each markdown file
+     * - and create more context
+     */
     edges.forEach(({ node }) => {
       const slug = node.fields.slug;
       const markdownType = node.fields.markdownType;

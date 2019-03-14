@@ -34,6 +34,11 @@ const createPageGenerateTestcases = (options) => {
     const testCaseTitleRegExp = /^#### (.*)/m
     const testcases = []
 
+    /**
+     * iterate all rule pages
+     * -> get code snippets
+     * -> and their relevant titles
+     */
     allRulePages
       .forEach((markdownPage, index) => {
         const { node } = markdownPage
@@ -44,9 +49,14 @@ const createPageGenerateTestcases = (options) => {
         const codeSnippets = codeBlocks(rawMarkdownBody);
 
         if (codeTitles.length !== codeSnippets.length) {
-          throw new Error(`Number of matching titles for code snippets is wrong. Check markdown '${name}' for irregularities.`)
+          throw new Error(`Number of matching titles for code snippets is wrong. Check markdown '${name}' for irregularities. Slug: '${slug}'`)
         }
 
+        /**
+         * iterate each code snippet
+         * -> create a testcase file
+         * -> and add meta of testcase to `testcases.json`
+         */
         codeSnippets
           .forEach((codeBlock, index) => {
             const title = codeTitles[index]

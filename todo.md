@@ -7,13 +7,14 @@ Rule Page:
 - [] replace all glossary links with actual links
 - [x] links to rule id (atomic rules) are not href'd
 - [ ] live preview of code snippet in `iframe`
+- [] (Optional) copy code to clipboard
 
 Implementations:
 - [x] fetch implementation data and build static data
 - [x] construct coverage page
 
 Testcases:
-- [ ] generate test cases assets & expose `json`
+- [x] generate test cases assets & expose `json`
 
 Site (Optional enhancement):
 - [ ] website navigation - partial link highlighting

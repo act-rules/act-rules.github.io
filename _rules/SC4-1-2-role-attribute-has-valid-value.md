@@ -52,7 +52,7 @@ Older browsers do not support more than one token in the value for a role attrib
 
 Element with valid `role` value.
 
- ```html
+```html
 <input type="text" role="textbox">
 ```
 

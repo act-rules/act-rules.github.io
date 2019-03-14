@@ -48,7 +48,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-### Passed example 1
+#### Passed example 1
 
 A video element that has captions for all the audio backed into it.
 
@@ -56,7 +56,7 @@ A video element that has captions for all the audio backed into it.
 <video src="../test-assets/perspective-video/perspective-video-with-captions.mp4" controls></video>
 ```
 
-### Passed example 2
+#### Passed example 2
 
 A video element with an associated track element that contain captions for all the audio.
 

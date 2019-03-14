@@ -95,7 +95,7 @@ Image button element with empty `alt` attribute
 <input type="image" name="submit" src="button.gif" alt="" />
 ```
 
-### Failed example 3
+#### Failed example 3
 
 Image button with aria-labelledby that does not reference an id that exists in the same document
 
@@ -137,7 +137,7 @@ Image is not a button image
  <img alt="W3C logo" />
 ```
 
-#### Inapplicable example 4
+#### Inapplicable example 5
 
 Image button is not included in the accessibility tree
 

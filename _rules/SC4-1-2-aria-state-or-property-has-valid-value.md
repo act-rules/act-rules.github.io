@@ -62,7 +62,7 @@ _There are no major accessibility support issues known for this rule._
 
 `aria-required` property with valid true/false value
 
- ```html
+```html
 <div role="textbox" aria-required="true"></div>
 ```
 
@@ -267,6 +267,6 @@ Element has ARIA role, but no ARIA states or properties
 
 `aria-hidden` state on an element that is not an HTML or SVG element
 
- ```html
+```html
   <math aria-hidden="true"></math>
 ```

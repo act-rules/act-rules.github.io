@@ -1,6 +1,6 @@
 ---
-title: Included text content
-key: included-text-content
+title: Included characters
+key: included-characters
 ---
 
-TBD
+A sequence of [characters](#character) is considered included in another if the latter includes any consecutive sequence of characters that [matches](#matches) the former.

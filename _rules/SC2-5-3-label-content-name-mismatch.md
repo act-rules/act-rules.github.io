@@ -31,8 +31,6 @@ This rule applies to any element that has:
 
 The complete [visible](#visible) [text](https://www.w3.org/TR/WCAG21/#dfn-text) of the target element either [matches](#matching-text-content) or is [included](#included-text-content) within its [accessible name](#accessible-name).
 
-**Note**: Leading and trailing whitespace and difference in case sensitivity should be ignored.
-
 ## Assumptions
 
 _There are currently no assumptions_

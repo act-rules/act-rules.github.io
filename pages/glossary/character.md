@@ -17,3 +17,9 @@ A character is not to be confused with a [grapheme](https://en.wikipedia.org/wik
 A character is a [code point](http://unicode.org/glossary/#code_point), specifically an integer, that a computer uses for representing a value within the Unicode system. 
 
 As such, multiple characters may represent the same glyph and multiple glyphs may represent the same grapheme.
+
+## Examples
+
+ As an example of the difference between a [character][], a [glyph][], and a [grapheme][], consider the Latin letter "a". `a` corresponds to a [character][] with the [code point][] U+0061. It is also a [glyph][] that represents the small Latin letter `a`, which is one representation of the [grapheme][] Latin letter "a". However, `A` corresponds to a [character][] with the [code point][] U+0041 and as such is a different [character][] and [glyph][] than `a`.
+
+ While both `A` and `a` represent the same [grapheme][] while being different [characters][character] and [glyphs][glyph], it is also possible for a [glyph][] to be representated by different [characters][character]. For example, [Unicode][] provides at least two ways of representing an `a` with an accent, such as `á`: Either as the [character][] with the [code point][] U+00E1 or as a combination of the [characters][character] `a` (U+0041) and `´` (U+0301).

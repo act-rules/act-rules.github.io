@@ -1,4 +1,5 @@
 const createPageAddMdContext = require('./create-page-add-md-context')
+const createPageGenerateTestcases = require('./create-page-generate-testcases')
 
 const createPages = (options) => {
 
@@ -8,8 +9,9 @@ const createPages = (options) => {
      */
     createPageAddMdContext(options),
     /**
-     * Create test case files
+     * Create test case files & meta data
      */
+    createPageGenerateTestcases(options)
   ])
 }
 

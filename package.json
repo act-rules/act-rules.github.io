@@ -123,7 +123,10 @@
   "pulls": {
     "url": "https://github.com/auto-wcag/auto-wcag/pulls"
   },
-  "website": "https://auto-wcag.github.io/auto-wcag",
+  "www" : {
+    "url": "//auto-wcag.github.io/auto-wcag",
+    "baseDir": "./public"
+  },
   "config": {
     "references": {
       "wcag21": "https://raw.githubusercontent.com/w3c/wai-wcag-quickref/gh-pages/_data/wcag21.json"
@@ -131,15 +134,6 @@
     "implementations": {
       "alfa": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/alfa-report.json",
       "axe": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/axe-report.json"
-    },
-    "testcases": {
-      "url": "https://auto-wcag.github.io/auto-wcag/exported-testcases/testcases.json",
-      "dir": {
-        "embeds": "_testcases-embeds/",
-        "assets": "test-assets/",
-        "export": "exported-testcases/",
-        "export-files": "exported-testcases/assets/"
-      }
     }
   }
 }

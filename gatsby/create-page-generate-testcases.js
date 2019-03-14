@@ -1,9 +1,10 @@
 const codeBlocks = require('gfm-code-blocks');
+const { www: { url, baseDir }, name: pkgName, description } = require('./../package.json')
+const createFile = require('./../build/create-file')
 const getAllMatchesForRegex = require('./get-all-matches-for-regex')
-const testCaseTitleRegExp = /^#### (.*)/m
+
 const createPageGenerateTestcases = (options) => {
-  const { graphql, actions } = options
-  const { createPage } = actions
+  const { graphql } = options
 
   return graphql(`{
     allMarkdownRemark(
@@ -16,6 +17,7 @@ const createPageGenerateTestcases = (options) => {
           rawMarkdownBody
           fields {
             markdownType
+            slug
           }
           frontmatter {
             name
@@ -28,60 +30,70 @@ const createPageGenerateTestcases = (options) => {
       Promise.reject(errors)
     }
 
-
     const allRulePages = data.allMarkdownRemark.edges;
-    allRulePages.forEach((markdownPage, index) => {
-      const { node } = markdownPage
-      const { rawMarkdownBody, frontmatter } = node
-      const { name } = frontmatter
-      if (index === 0) {
-        const allCodeBlockTitleMatches = getAllMatchesForRegex(testCaseTitleRegExp, rawMarkdownBody)
-        const allCodeBlockMatches = codeBlocks(rawMarkdownBody);
+    const testCaseTitleRegExp = /^#### (.*)/m
+    const testcases = []
 
-        allCodeBlockMatches.forEach(codeBlock => {
-          const { code, start } = codeBlock
-          return;
-          // const title = findTitleForCodeBlock(codeBlock, allCodeBlockTitleMatches)
-          // console.log(title);
-        })
-      }
-    })
+    allRulePages
+      .forEach((markdownPage, index) => {
+        const { node } = markdownPage
+        const { rawMarkdownBody, frontmatter, fields } = node
+        const { name } = frontmatter
+        const { slug } = fields
+        const codeTitles = getAllMatchesForRegex(testCaseTitleRegExp, rawMarkdownBody)
+        const codeSnippets = codeBlocks(rawMarkdownBody);
+
+        if (codeTitles.length !== codeSnippets.length) {
+          throw new Error(`Number of matching titles for code snippets is wrong. Check markdown '${name}' for irregularities.`)
+        }
+
+        codeSnippets
+          .forEach((codeBlock, index) => {
+            const title = codeTitles[index]
+            if (!title) {
+              throw new Error('No title found for code snippet.')
+            }
+
+            const { code, type = 'html' } = codeBlock
+
+            const uniqueId = slug.replace('rules/', '')
+            const titleCurated = title.value.split(' ').map(t => t.toLowerCase())
+
+            const testcaseFileName = `${uniqueId}-${titleCurated.join('-')}.${type}`;
+            const testcasePath = `testcases/${testcaseFileName}`
+            /**
+             * Create testcase file
+             */
+            createFile(`${baseDir}/${testcasePath}`, code)
+
+            /**
+             * Create meta data for testcase(s)
+             */
+            const testcase = {
+              url: `${url}/${testcasePath}`,
+              expected: titleCurated[0],
+              ruleId: uniqueId,
+              ruleName: name,
+              rulePage: `${url}/${slug}`
+            }
+            testcases.push(testcase)
+          })
+      })
+
+    /**
+     * Create `testcases.json`
+     */
+    const testcasesData = {
+      name: `${pkgName} test cases`,
+      website: url,
+      license: `${url}/pages/license/`,
+      description,
+      testcases
+    }
+    createFile(`${baseDir}/testcases.json`, JSON.stringify(testcasesData, undefined, 2))
+
+    console.log(`DONE!!! Generated Test Cases Data.`)
   })
 }
-
-function findTitleForCodeBlock(codeBlock, titles) {
-  const { start } = codeBlock
-  console.log(codeBlock)
-  console.log(titles);
-  console.log('===============');
-  const distanceFromTitles = titles
-    .map(title => {
-      const { end } = title
-      const distance = start - end;
-      return distance;
-    })
-    .filter(distance => distance > 0)
-    .sort()
-  const [matchedTitleDistance, ...rest] = distanceFromTitles
-
-  const title = titles.find(title => {
-    const { end } = title
-    const distance = Math.abs(start-end)
-    return distance === matchedTitleDistance
-  })
-  return title;
-}
-
 
 module.exports = createPageGenerateTestcases
-
-
-/**
- *
- // sort both lists, find header index (where closest or less than),
-// [50, 58, 65 ....
-// regex -> [55, 63, ....
-
- * * regex for catching passed/ failed - `/^#### (.*)/m`
- * regex for catching code blocks -
- */

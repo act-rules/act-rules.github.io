@@ -1,9 +1,12 @@
 ---
 title: Test Cases
-order: 3
 ---
 
-The authored rules, comes with several test cases, which are designed for easy consumption by test tools. The test cases are made available regularly at [{{site.data.package.config.testcases.url}}]({{site.data.package.config.testcases.url}}).
+The authored rules, comes with several test cases, which are designed for easy consumption by test tools. The test cases are made available regularly & automatically on every successful commit (to the master branch).
+ 
+ <a class='btn' href='/testcases.json'>
+  See All Test Cases
+ </a>
 
 A test case for a given rule is represented as shown by the below excerpt, where:
 - `url`: is the standalone page containing the test case.
@@ -14,24 +17,12 @@ A test case for a given rule is represented as shown by the below excerpt, where
 ```json
  "a11y-testcases": [
     {
-      "url": "https://auto-wcag.github.io/auto-wcag/auto-wcag-testcases/assets/SC1-1-1-image-has-name_passed_example_1.html",
+      "url": "//auto-wcag.github.io/auto-wcag/testcases/937e33-passed-example-1.html",
       "expected": "passed",
-      "ruleId": "SC1-1-1-image-has-name",
-      "rulePage": "https://auto-wcag.github.io/auto-wcag/rules/SC1-1-1-image-has-name.html"
+      "ruleId": "937e33",
+      "ruleName": "ARIA attribute is valid",
+      "rulePage": "//auto-wcag.github.io/auto-wcag/rules/937e33"
     },
     ...
  ]
 ```
-
-
-## Available tooling for using Test Cases
-
-The community has authored an open source tool, that demonstrates consumption of the test cases against a test tool. 
-
-Contributions to the `testrunner` tool, and or other tooling of similar nature are welcome. 
-
-Refer [contribution guide]({{ site.url }}/pages/contribute.html).
-
-Tool Name | Tool URL | Language |  Tool Description
----|---|---|---
-`testrunner` | [https://github.com/auto-wcag/testrunner](https://github.com/auto-wcag/testrunner) | JavaScript | A [puppeteer](https://github.com/GoogleChrome/puppeteer) based implementation that allows running a configurable test tool against all the above test cases on a per page basis, and returns raw results.

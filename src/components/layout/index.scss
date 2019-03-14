@@ -97,6 +97,10 @@ section.layout-container {
     .page-container {
       @include page-container-default-styles;
 
+      h2 {
+        margin-top: 3rem;
+      }
+
       // Styles for rules page
       &.page-rules{
         .rules-listing {

@@ -1,6 +1,5 @@
 ---
 title: Overview
-order: 1
 ---
 
 The WCAG-ACT-RULES-CG rules are authored for reliable `WCAG` testing. 
@@ -11,4 +10,4 @@ Incorporating a rule from the WCAG-ACT-RULES-CG into your test tool, is consider
 
 In the spirit of Open source collaboration, we welcomes [contributions](/pages/contribute) of implementation statistics, to aid as a coverage metric of the rules. This in turn helps to improve the accuracy and completeness of both the rules and the test tools.
 
-The sections [testcases](/pages/implementations/testcases), [reporting](/pages/implementations/reporting), [coverage](/pages/implementations/coverage) respectively, go into greater detail on the structure of a test case, tools for using the test cases, the anatomy of an implementation report and how to submit an implementation report, back to the community.
+Refer other section under implementations, which go into greater detail on the structure of a test case, tools for using the test cases, the anatomy of an implementation report and how to submit an implementation report, back to the community.

@@ -28,13 +28,13 @@ The rule applies to any page where the root element is an `html` element, and wh
 
 ### Expectation 1
 
-The page contains at least one `title` element.
+The root element has at least one [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) that is an HTML `title` element.
 
-**Note**: The `title` element exists in other namespaces such as SVG. These are not `title` elements for HTML document and should be ignored.
+**Note**: The `title` element exists in other namespaces such as SVG. These are not HTML `title` elements and should be ignored for this rule.
 
 ### Expectation 2
 
-The first `title` element contains [non-empty text](#non-empty).
+The first `title` element contains [letters or numbers](#letters-or-numbers).
 
 ## Assumptions
 
@@ -46,11 +46,10 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- [https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
-- [https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=242#qr-navigation-mechanisms-title](https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=242#qr-navigation-mechanisms-title)
-- [https://www.w3.org/TR/WCAG20-TECHS/G88.html](https://www.w3.org/TR/WCAG20-TECHS/G88.html)
-- [https://www.w3.org/TR/WCAG20-TECHS/H25.html](https://www.w3.org/TR/WCAG20-TECHS/H25.html)
-- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible {{site.title}} refers to those. Another source for test cases is the W3C Before and After Demonstration.
+- [Understanding Success Criterion 2.4.2: Page Titled](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
+- [WCAG 2.1 Technique G88: Providing descriptive titles for Web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G88)
+- [WCAG 2.1 Technique H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG21/Techniques/html/H25)
+
 
 ## Test Cases
 

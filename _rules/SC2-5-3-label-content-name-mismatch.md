@@ -29,7 +29,7 @@ This rule applies to any element that has:
 
 ### Expectation
 
-The complete [visible](#visible) [text](https://www.w3.org/TR/WCAG21/#dfn-text) of the target element either [matches](#matching-text-content) or is [included](#included-text-content) within its [accessible name](#accessible-name).
+The complete [visible](#visible) [text](https://www.w3.org/TR/WCAG21/#dfn-text) of the target element is [included](#included-text-content) within its [accessible name](#accessible-name).
 
 ## Assumptions
 

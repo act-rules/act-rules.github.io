@@ -1,12 +1,12 @@
 ---
-name: ARIA state or property has valid value
+name: Required ARIA state or property has valid value
 rule_type: atomic
 
 description: |
-   This rule checks that each ARIA state or property has a valid value
+   This rule checks that each required WAI-ARIA state or property has a valid value
    
 success_criterion:
-- 4.1.2 # Name, Role, Value
+- 1.3.1 # Info and Relationships
 
 test_aspects:
 - DOM Tree
@@ -21,17 +21,18 @@ authors:
 
 ### Applicability
 
-Any [non-empty](#non-empty) [WAI-ARIA 1.1 state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) that is specified on an HTML or SVG element.
+Any [WAI-ARIA required state or property](https://www.w3.org/TR/wai-aria-1.1/#requiredState) that 
+- is specified on an HTML or SVG element that is [included in the accessibility tree](#included-in-the-accessibility-tree),
+- is not the empty string (""), and
+- does not have a default value listed under [WAI-ARIA implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole).
 
 ### Expectation 1
 
 Each test target has a valid value according to its [WAI-ARIA 1.1 value type](https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value).
 
-For value types `ID Reference` and `ID Reference List` for [WAI-ARIA required properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) at least one of the elements with the given ids exists in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the element that specifies the target attribute. 
+For value types `ID Reference` and `ID Reference List` at least one of the elements with the given ids exists in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the element that specifies the target attribute. 
 
 For value type `URI` the value matches the [generic URI syntax](https://www.ietf.org/rfc/rfc3986.txt).
-
-**Note:** Only for [WAI-ARIA required properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) with value types `ID Reference` and `ID Reference List` is there a requirement that the elements with the given ids actually exists. For non-required properties, this is not a requirement.
 
 **Note:** 
 For value type `URI`, this rule does not require that the destination URI exists. 
@@ -39,6 +40,7 @@ For value type `URI`, this rule does not require that the destination URI exists
 ## Assumptions
 
 - This rule assumes that elements that are not [included in the accessibility tree](#included-in-the-accessibility-tree) or are [focusable](#focusable) can still impact users. Therefore the applicability of this rule is not limited to [WAI-ARIA 1.1 states and properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) on elements that are included in the accessibility tree or are focusable.
+
 **Note:**  For example, anything referenced through `aria-labelledby` does not have to be [included in the accessibility tree](#included-in-the-accessibility-tree) in order for it to become part of the [accessible name](#accessible-name).
 - The ARIA `state` or `property` is being used to comply to WCAG.
 

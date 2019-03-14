@@ -3,6 +3,68 @@
   "description": "Accessibility conformance testing rules for HTML",
   "version": "1.0.0",
   "author": "WCAG ACT RULES CG",
+  "contributors": [
+    {
+      "name": "Anne Thyme Nørregaard",
+      "url": "https://github.com/annethyme"
+    },
+    {
+      "name": "Audrey Maniez",
+      "url": "https://github.com/audreymaniez"
+    },
+    {
+      "name": "Brian Bors",
+      "url": "https://www.linkedin.com/in/brianbors/"
+    },
+    {
+      "name": "Bryn Anderson",
+      "url": "https://github.com/brynanders"
+    },
+    {
+      "name": "Carlos Duarte",
+      "url": "https://github.com/carlosapaduarte"
+    },
+    {
+      "name": "Dagfinn Rømen",
+      "url": "https://github.com/DagfinnRomen"
+    },
+    {
+      "name": "Emma Pratt Richens",
+      "url": "https://github.com/EmmaJP"
+    },
+    {
+      "name": "Frank Berker",
+      "url": "https://github.com/yetanothereye"
+    },
+    {
+      "name": "Geir Sindre Fossøy",
+      "url": "https://github.com/geirsf"
+    },
+    {
+      "name": "Jey Nandakumar",
+      "url": "https://github.com/jkodu"
+    },
+    {
+      "name": "Malin Øvrebø",
+      "url": "https: //github.com/MaliinO"
+    },
+    {
+      "name": "Rob Fentress",
+      "url": "https://github.com/robfentress"
+    },
+    {
+      "name": "Shadi Abou-Zahra",
+      "url": "https://github.com/nitedog"
+    },
+    {
+      "name": "Stein Erik Skotkjerra",
+      "url": "https://github.com/skotkjerra"
+    },
+    {
+      "name": "Wilco Fiers",
+      "url": "https://github.com/wilcofiers}"
+    }
+  ],
   "dependencies": {
     "axios": "^0.18.0",
     "jsonld": "^1.5.4",
@@ -26,7 +88,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "gatsby-prismjs-dracula": "^0.1.15"
   },
   "devDependencies": {
     "prettier": "^1.16.4"
@@ -37,15 +100,16 @@
   "license": "MIT",
   "licenseTODO": "https://auto-wcag.github.io/auto-wcag/license.html",
   "scripts": {
-    "prebuild": "npm run gen-wcag-data && npm run get-implementations",
+    "prebuild": "npm run get-data",
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "npm run get-data && gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "get-implementations": "node ./build/get-implementations",
-    "get-wcag-sc-metadata": "node ./build/get-wcag-sc-metadata"
+    "get-wcag-sc-metadata": "node ./build/get-wcag-sc-metadata",
+    "get-data": "npm run get-wcag-sc-metadata && npm run get-implementations"
   },
   "homepage": "https://github.com/auto-wcag/auto-wcag#readme",
   "repository": {

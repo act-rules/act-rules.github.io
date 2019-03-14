@@ -1,6 +1,7 @@
 @import './../../styles/variables';
 
-header.app-header {
+a.app-header {
+  text-decoration: none;
   svg {
     padding: 2rem 0;
     transform: rotate(180deg)

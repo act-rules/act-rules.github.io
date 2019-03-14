@@ -17,16 +17,18 @@ class Layout extends React.Component {
   }
 
   getListItemFromEdges(edges) {
-    return edges.map((edge, index) => {
-      const { node } = edge
-      const { path, context } = node
-      const key = `${context.title}${path}`
-      return (
-        <li key={key}>
-          <Link activeClassName='active' to={path}>{context.title}</Link>
-        </li>
-      )
-    })
+    return edges
+      .map((edge) => {
+        const { node } = edge
+        const { path, context } = node
+
+        const key = `${context.title}${path}`
+        return (
+          <li key={key}>
+            <Link activeClassName='active' to={path}>{context.title}</Link>
+          </li>
+        )
+      })
   }
 
   render() {
@@ -97,7 +99,6 @@ class Layout extends React.Component {
         render={
           data => {
             const { getSiteTitle, getTopLevelNavigation, getNonRulesNavigation } = data
-
             return (
               <section className='layout-container'>
                 <aside>
@@ -123,25 +124,25 @@ class Layout extends React.Component {
                       <hr />
                       {/* Other Navigation */}
                       {
-                        getNonRulesNavigation.group.map((item, index) => {
-                          const { totalCount, edges, fieldValue } = item
-                          if (totalCount <= 0) {
-                            return null;
-                          }
-                          const groupKey = `${fieldValue}-${index}`
-                          return (
-
-                            <li key={groupKey}>
-                              <p className='parent-item'>
-                                {fieldValue}
-                              </p>
-                              <ul>
-                                {this.getListItemFromEdges(edges)}
-                              </ul>
-                              <hr />
-                            </li>
-                          )
-                        })
+                        getNonRulesNavigation.group
+                          .map((item, index) => {
+                            const { totalCount, edges, fieldValue } = item
+                            if (totalCount <= 0) {
+                              return null;
+                            }
+                            const groupKey = `${fieldValue}-${index}`
+                            return (
+                              <li key={groupKey}>
+                                <p className='parent-item'>
+                                  {fieldValue}
+                                </p>
+                                <ul>
+                                  {this.getListItemFromEdges(edges)}
+                                </ul>
+                                <hr />
+                              </li>
+                            )
+                          })
                       }
                     </ul>
                   </nav>

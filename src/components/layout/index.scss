@@ -11,6 +11,7 @@ section.layout-container {
     @include flex-column();
     flex-shrink: 0;
     background-color: $bg-secondary;
+    border-right: 1px solid $bg-primary;
     color: $fg-secondary;
     max-width: 275px;
     padding-left: 1rem;
@@ -20,11 +21,14 @@ section.layout-container {
     &:after{
       content: '\2630';
       position: absolute;
-      right: -40px;
-      top: 0;
+      right: -44px;
+      top: 5px;
       padding: 15px;
       background-color: $bg-secondary;
+      border: 1px solid $bg-primary;
       opacity: 0;
+      border-left: none;
+      cursor: pointer;
     }
 
     >div.logo {
@@ -248,10 +252,12 @@ section.layout-container {
       display: flex;
       @include page-container-default-styles;
       align-items: flex-start;
-      padding-right: 250px;
+      padding-right: 225px;
 
       main {
         flex: 1;
+        position: relative;
+        width: 100%;
         padding-bottom: 6rem;
       }
 
@@ -260,7 +266,8 @@ section.layout-container {
         position: fixed;
         right: 0;
         top: 0;
-        border-left: 1px solid $sep;
+        border-left: 1px solid $bg-secondary;
+        background-color: $sep;
         max-width: 250px;
         overflow: auto;
         height: 100%;
@@ -270,11 +277,11 @@ section.layout-container {
 
         span.heading {
           padding: 0.25rem 0.5rem;
-          @include header-style($fg-primary);
+          @include header-style($fg-secondary);
           text-transform: uppercase;
           font-size: 80%;
-          background-color: $sep;
-          margin: 1.5rem 0.5rem 0.5rem 0;
+          background-color: $bg-secondary;
+          margin: 1rem 0.5rem 0.5rem 0;
           display: inline-block;
         }
 
@@ -319,15 +326,6 @@ section.layout-container {
 @media only screen 
 and (min-width : 320px) 
 and (max-width : 480px) {
-  section.layout-container {
-    >main {
-      .page-rule {
-        aside.toc {
-          display: none;
-        }
-      }
-    }
-  }
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -360,6 +358,12 @@ and (max-width : 1024px) {
               flex-direction: column;
             }
           }
+        }
+      }
+      .page-rule {
+        padding-right: 0;
+        aside.toc {
+          display: none;
         }
       }
     }

@@ -68,6 +68,9 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
+# Data
+_data/
+!_data/*.md
 
 # this is temporary
 _testcases-embeds

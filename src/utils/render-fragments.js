@@ -1,6 +1,6 @@
 import React from "react"
 import scUrls from "./../../_data/sc-urls"
-import contributors from "./../../_data/contributors"
+import pkg from './../../package.json'
 
 export function getSuccessCriterion(success_criterion) {
   if (!success_criterion) {
@@ -32,7 +32,7 @@ export function getAuthors(authors) {
       <div className="meta">
         <span className="heading">Authors</span>
         {authors.map(author => {
-          const authorData = contributors.find(c => {
+          const authorData = pkg.contributors.find(c => {
             return c.name.toLowerCase() === author.toLowerCase()
           })
           if (!authorData) {
@@ -41,7 +41,7 @@ export function getAuthors(authors) {
           }
           return (
             <a className="sc-item"
-              href={authorData.site}
+              href={authorData.url}
               key={authorData.name}>
               @{authorData.name}
             </a>

@@ -1,4 +1,3 @@
-
 const getNodeData = require('./get-node-data')
 
 const onCreateNode = (options) => {

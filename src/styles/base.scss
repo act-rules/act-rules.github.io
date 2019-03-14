@@ -21,24 +21,24 @@ table {
 	float: left;
    
 	thead {
-		border-bottom: 3px solid $sep;
+		border-bottom: 2px solid $accent;
+		
 		th {
-      font-weight: 400;
+			@include header-style($fg-primary);
+      font-weight: bold;
 			text-align: left;
-      font-size: 1.25em;
-      @include header-style($fg-primary);
-      display: table-cell;
+			display: table-cell;
+			background-color: $sep;
+			padding: 0.5rem;
+			text-transform: uppercase;
 		}
 	}
 
 	tbody {
-		border-bottom: 3px solid $accent;
 		tr {
 			border-bottom: 2px solid $sep;
-       
 			td {
-				padding: 1rem 0;
-
+				padding: 0.5rem;
 				a {
 					text-decoration: none;
 					display: inline-block;
@@ -68,14 +68,9 @@ button {
   }
 }
 
-code[class*="language-"], pre[class*="language-"] {
-	white-space: unset;
+pre[class*="language-"]{
+	background-color: $bg-secondary !important;
 }
-
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-	border: none;
-	border-radius: 0;
-	background-color: $bg-secondary;
-	font-size: 90%;
+pre[class*="language-"], code[class*="language-"]{
+	background-color: $bg-secondary !important;
 }

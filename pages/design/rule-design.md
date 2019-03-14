@@ -41,7 +41,7 @@ Other aspects may be necessary for testing. These can be added as long as they a
 
 ### Authors
 
-Names of the Authors. These must be an exact match of names in `_data/contributors.yml`.
+Names of the Authors. These must be an exact match of names in `contributors` property in  `package.json`.
 
 ## Assumptions
 

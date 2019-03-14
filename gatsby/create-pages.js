@@ -34,18 +34,25 @@ const createPages = ({ graphql, actions }) => {
 
 function enhanceMarkdownContext(markdownPages, createPage) {
   markdownPages.forEach(({ node }) => {
+    const slug = node.fields.slug;
+    const markdownType = node.fields.markdownType;
+    const fileName = node.fields.fileName;
+    const sourceInstanceName = node.fields.sourceInstanceName;
+    const frontmatterName = node.frontmatter.name;
+    const frontmatterTitle = node.frontmatter.title;
+    const frontmatterRuleType = node.frontmatter.rule_type;
     createPage({
-      path: node.fields.slug,
-      component: path.resolve(getComponent(node.fields.markdownType)),
+      path: slug,
+      component: path.resolve(getComponent(markdownType, slug)),
       context: {
-        slug: node.fields.slug, // used for page query
-        fileName: node.fields.fileName,
-        sourceInstanceName: node.fields.sourceInstanceName,
-        markdownType: node.fields.markdownType,
-        title: node.frontmatter.name
-          ? node.frontmatter.name
-          : node.frontmatter.title,
-        ruleType: node.frontmatter.rule_type
+        slug,
+        fileName: fileName,
+        sourceInstanceName: sourceInstanceName,
+        markdownType,
+        title: frontmatterName
+          ? frontmatterName
+          : frontmatterTitle,
+        ruleType: frontmatterRuleType
       }
     })
   })

@@ -81,7 +81,7 @@ Script, no attributes are duplicated. HTML or SVG code within a script should be
 
 ```html
 <script>
-	var foo = '<img src="image.jpg" alt="" alt="image" />';
+	var foo = '<img src="image.jpg" alt="" alt="image" />'
 </script>
 ```
 
@@ -129,5 +129,5 @@ Code is XML, and not HTML or SVG.
 Code is JavaScript, and not HTML or SVG.
 
 ```js
-var foo = '<img src="image.jpg" alt="" alt="image" />';
+var foo = '<img src="image.jpg" alt="" alt="image" />'
 ```

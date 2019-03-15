@@ -68,7 +68,7 @@ Keyboard trap with help information in a paragraph before, and where the method 
 
 ```html
 <script>
-	var trapOn = false;
+	var trapOn = false
 </script>
 
 <p>Press the M-key to Exit</p>
@@ -96,7 +96,7 @@ Keyboard trap with help information within the trap, and where the method advise
 
 ```html
 <script>
-	var trapOn = false;
+	var trapOn = false
 </script>
 
 <a id="link1" href="#">Link 1</a>
@@ -124,11 +124,11 @@ Keyboard trap with "help" link that once clicked exposes the instructions.
 
 ```html
 <script>
-	var trapOn = false;
+	var trapOn = false
 
 	function showHelpText() {
 		document.getElementById('helptext').innerHTML =
-			'<p>Press the M-key to Exit</p>';
+			'<p>Press the M-key to Exit</p>'
 	}
 </script>
 
@@ -165,7 +165,7 @@ Keyboard trap with no instructions.
 
 ```html
 <script>
-	var trapOn = false;
+	var trapOn = false
 </script>
 
 <a id="link1" href="#">Link 1</a>
@@ -192,7 +192,7 @@ Keyboard trap with instructions that doesn't give advise on the method for proce
 
 ```html
 <script>
-	var trapOn = false;
+	var trapOn = false
 </script>
 
 <p>Go to the next element</p>
@@ -220,7 +220,7 @@ Keyboard trap with help text, where the method advised doesn't work.
 
 ```html
 <script>
-	var trapOn = false;
+	var trapOn = false
 </script>
 
 <a id="link1" href="#">Link 1</a>

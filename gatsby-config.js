@@ -1,5 +1,5 @@
-const pkg = require('./package.json');
-const siteTitle = pkg.name.split('-').join(' ');
+const pkg = require('./package.json')
+const siteTitle = pkg.name.split('-').join(' ')
 
 module.exports = {
 	siteMetadata: {
@@ -87,7 +87,7 @@ module.exports = {
 			},
 		},
 	],
-};
+}
 
 /**
  * regex for matching glossary items -  `/(?:__|[*#])|\[(.*?)\]\(#.*?\)/g`

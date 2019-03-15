@@ -1,6 +1,6 @@
 {
   "endOfLine": "lf",
-  "semi": true,
+  "semi": false,
   "printWidth": 80,
   "tabWidth": 2,
   "useTabs": true,

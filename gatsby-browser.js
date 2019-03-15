@@ -1,1 +1,1 @@
-import 'gatsby-prismjs-dracula';
+import 'gatsby-prismjs-dracula'

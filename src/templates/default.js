@@ -1,25 +1,25 @@
-import React from 'react';
-import Layout from '../components/layout/';
-import { graphql } from 'gatsby';
+import React from 'react'
+import Layout from '../components/layout/'
+import { graphql } from 'gatsby'
 
 function template(content, data) {
 	if (!data) {
-		return content;
+		return content
 	}
 	return content.replace(/\[(.*?)\]/g, (match, key) => {
-		const value = data[key.toLowerCase()];
+		const value = data[key.toLowerCase()]
 		if (typeof value !== 'undefined') {
-			return value;
+			return value
 		}
-		return match;
-	});
+		return match
+	})
 }
 
 export default ({ data }) => {
-	const { markdownRemark, getSiteData } = data;
-	const { html, frontmatter } = markdownRemark;
+	const { markdownRemark, getSiteData } = data
+	const { html, frontmatter } = markdownRemark
 
-	const values = JSON.parse(getSiteData.siteMetadata.placeholderValues);
+	const values = JSON.parse(getSiteData.siteMetadata.placeholderValues)
 
 	return (
 		<Layout>
@@ -32,8 +32,8 @@ export default ({ data }) => {
 				/>
 			</section>
 		</Layout>
-	);
-};
+	)
+}
 
 export const query = graphql`
 	query($slug: String!) {
@@ -50,4 +50,4 @@ export const query = graphql`
 			}
 		}
 	}
-`;
+`

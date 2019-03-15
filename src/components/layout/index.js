@@ -1,38 +1,38 @@
-import 'normalize.css';
-import './index.scss';
+import 'normalize.css'
+import './index.scss'
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import { StaticQuery, graphql, Link } from 'gatsby';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { StaticQuery, graphql, Link } from 'gatsby'
 
-import Header from '../header/index';
+import Header from '../header/index'
 
 class Layout extends React.Component {
 	constructor(props) {
-		super(props);
+		super(props)
 		this.state = {
 			showMenu: true,
-		};
+		}
 	}
 
 	getListItemFromEdges(edges) {
 		return edges.map(edge => {
-			const { node } = edge;
-			const { path, context } = node;
+			const { node } = edge
+			const { path, context } = node
 
-			const key = `${context.title}${path}`;
+			const key = `${context.title}${path}`
 			return (
 				<li key={key}>
 					<Link activeClassName="active" to={path}>
 						{context.title}
 					</Link>
 				</li>
-			);
-		});
+			)
+		})
 	}
 
 	render() {
-		const { children } = this.props;
+		const { children } = this.props
 		return (
 			<StaticQuery
 				query={graphql`
@@ -93,7 +93,7 @@ class Layout extends React.Component {
 						getSiteTitle,
 						getTopLevelNavigation,
 						getNonRulesNavigation,
-					} = data;
+					} = data
 					return (
 						<section className="layout-container">
 							<aside>
@@ -123,33 +123,33 @@ class Layout extends React.Component {
 										<hr />
 										{/* Other Navigation */}
 										{getNonRulesNavigation.group.map((item, index) => {
-											const { totalCount, edges, fieldValue } = item;
+											const { totalCount, edges, fieldValue } = item
 											if (totalCount <= 0) {
-												return null;
+												return null
 											}
-											const groupKey = `${fieldValue}-${index}`;
+											const groupKey = `${fieldValue}-${index}`
 											return (
 												<li key={groupKey}>
 													<p className="parent-item">{fieldValue}</p>
 													<ul>{this.getListItemFromEdges(edges)}</ul>
 													<hr />
 												</li>
-											);
+											)
 										})}
 									</ul>
 								</nav>
 							</aside>
 							<main>{children}</main>
 						</section>
-					);
+					)
 				}}
 			/>
-		);
+		)
 	}
 }
 
 Layout.propTypes = {
 	children: PropTypes.node.isRequired,
-};
+}
 
-export default Layout;
+export default Layout

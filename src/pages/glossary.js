@@ -1,11 +1,11 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '../components/layout/';
-import SEO from '../components/seo';
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/layout/'
+import SEO from '../components/seo'
 
 export default ({ data }) => {
-	const { allMarkdownRemark } = data;
-	const { edges, totalCount } = allMarkdownRemark;
+	const { allMarkdownRemark } = data
+	const { edges, totalCount } = allMarkdownRemark
 
 	return (
 		<Layout>
@@ -15,19 +15,19 @@ export default ({ data }) => {
 				<h1>Glossary ({totalCount})</h1>
 				<section className="listing">
 					{edges.map(({ node }) => {
-						const { frontmatter, html } = node;
+						const { frontmatter, html } = node
 						return (
 							<article key={node.id}>
 								<h2>{frontmatter.title}</h2>
 								<div dangerouslySetInnerHTML={{ __html: html }} />
 							</article>
-						);
+						)
 					})}
 				</section>
 			</section>
 		</Layout>
-	);
-};
+	)
+}
 
 export const query = graphql`
 	query {
@@ -51,4 +51,4 @@ export const query = graphql`
 			}
 		}
 	}
-`;
+`

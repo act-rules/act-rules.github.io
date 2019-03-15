@@ -1,28 +1,28 @@
-import React from 'react';
-import Layout from '../components/layout/';
-import { graphql } from 'gatsby';
+import React from 'react'
+import Layout from '../components/layout/'
+import { graphql } from 'gatsby'
 import {
 	getSuccessCriterion,
 	getAuthors,
 	getAtomicRulesForRule,
 	getTestAspects,
-} from './../utils/render-fragments';
+} from './../utils/render-fragments'
 
 export default ({ data }) => {
-	const { markdownRemark, allRules } = data;
-	const { html, frontmatter, tableOfContents } = markdownRemark;
+	const { markdownRemark, allRules } = data
+	const { html, frontmatter, tableOfContents } = markdownRemark
 
 	const getRuleType = rule_type => {
 		if (!rule_type) {
-			return null;
+			return null
 		}
 		return (
 			<li>
 				<span className="heading">Rule Type</span>
 				<p>{rule_type}</p>
 			</li>
-		);
-	};
+		)
+	}
 
 	return (
 		<Layout>
@@ -61,8 +61,8 @@ export default ({ data }) => {
 				</aside>
 			</section>
 		</Layout>
-	);
-};
+	)
+}
 
 export const query = graphql`
 	query($slug: String!) {
@@ -96,4 +96,4 @@ export const query = graphql`
 			}
 		}
 	}
-`;
+`

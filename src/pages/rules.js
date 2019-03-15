@@ -1,17 +1,17 @@
-import React from 'react';
-import { Link, graphql } from 'gatsby';
-import Layout from '../components/layout/';
-import SEO from '../components/seo';
+import React from 'react'
+import { Link, graphql } from 'gatsby'
+import Layout from '../components/layout/'
+import SEO from '../components/seo'
 
 import {
 	getSuccessCriterion,
 	getAuthors,
 	getAtomicRulesForRule,
-} from './../utils/render-fragments';
+} from './../utils/render-fragments'
 
 export default ({ data }) => {
-	const { rules, allRules } = data;
-	const { edges, totalCount } = rules;
+	const { rules, allRules } = data
+	const { edges, totalCount } = rules
 
 	return (
 		<Layout>
@@ -22,15 +22,15 @@ export default ({ data }) => {
 				{/* Table of rules */}
 				<section className="rules-listing">
 					{edges.map(({ node }, index) => {
-						const { frontmatter, id, fields } = node;
+						const { frontmatter, id, fields } = node
 						const {
 							name,
 							description,
 							success_criterion,
 							authors,
 							atomic_rules,
-						} = frontmatter;
-						const { slug } = fields;
+						} = frontmatter
+						const { slug } = fields
 						return (
 							<article key={id}>
 								<main>
@@ -48,13 +48,13 @@ export default ({ data }) => {
 								{/* authors */}
 								{getAuthors(authors)}
 							</article>
-						);
+						)
 					})}
 				</section>
 			</section>
 		</Layout>
-	);
-};
+	)
+}
 
 export const query = graphql`
 	query {
@@ -101,4 +101,4 @@ export const query = graphql`
 			}
 		}
 	}
-`;
+`

@@ -1,10 +1,10 @@
-import React from 'react';
-import Layout from '../components/layout/';
-import { graphql } from 'gatsby';
+import React from 'react'
+import Layout from '../components/layout/'
+import { graphql } from 'gatsby'
 
 export default ({ data }) => {
-	const { markdownRemark } = data;
-	const { html, frontmatter } = markdownRemark;
+	const { markdownRemark } = data
+	const { html, frontmatter } = markdownRemark
 
 	return (
 		<Layout>
@@ -13,8 +13,8 @@ export default ({ data }) => {
 				<div dangerouslySetInnerHTML={{ __html: html }} />
 			</div>
 		</Layout>
-	);
-};
+	)
+}
 
 export const query = graphql`
 	query($slug: String!) {
@@ -25,4 +25,4 @@ export const query = graphql`
 			}
 		}
 	}
-`;
+`

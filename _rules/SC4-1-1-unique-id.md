@@ -71,9 +71,9 @@ All `id`s are unique within the document context
 ```html
 <div id="my-elm"></div>
 <script>
-	var myElm = document.getElementById('my-elm');
-	var shadow = myElm.attachShadow({ mode: 'open' });
-	shadow.innerHTML = '<b id="my-elm" ><slot></slot></b>';
+	var myElm = document.getElementById('my-elm')
+	var shadow = myElm.attachShadow({ mode: 'open' })
+	shadow.innerHTML = '<b id="my-elm" ><slot></slot></b>'
 </script>
 ```
 

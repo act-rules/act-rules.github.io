@@ -1,4 +1,4 @@
-const { createFilePath } = require('gatsby-source-filesystem');
+const { createFilePath } = require('gatsby-source-filesystem')
 
 /**
  * Get node data, to enhance metadata of pages
@@ -6,30 +6,30 @@ const { createFilePath } = require('gatsby-source-filesystem');
  * @param {Object} options options passed by gatsby node callback
  */
 const getNodeData = options => {
-	const { node, getNode } = options;
-	const fileNode = getNode(node.parent);
-	const { sourceInstanceName, relativePath } = fileNode;
+	const { node, getNode } = options
+	const fileNode = getNode(node.parent)
+	const { sourceInstanceName, relativePath } = fileNode
 
 	const defaults = {
 		sourceInstanceName: sourceInstanceName,
 		markdownType: getMarkdownType(relativePath, sourceInstanceName),
 		fileName: relativePath,
-	};
+	}
 
 	switch (sourceInstanceName) {
 		case 'rules':
-			const url = node.id.slice(0, 6);
+			const url = node.id.slice(0, 6)
 			return {
 				...defaults,
 				path: `${sourceInstanceName}/${url}`,
-			};
+			}
 		default:
 			return {
 				...defaults,
 				path: `${sourceInstanceName}${createFilePath({ node, getNode })}`,
-			};
+			}
 	}
-};
+}
 
 /**
  * Get markdown type
@@ -39,18 +39,18 @@ const getNodeData = options => {
  */
 function getMarkdownType(path, sourceInstanceName) {
 	if (sourceInstanceName === 'rules') {
-		return 'rules';
+		return 'rules'
 	}
 	if (/glossary/.test(path)) {
-		return 'glossary';
+		return 'glossary'
 	}
 	if (/implementations/.test(path)) {
-		return 'implementations';
+		return 'implementations'
 	}
 	if (/design/.test(path) || /structure/.test(path)) {
-		return 'documentation';
+		return 'documentation'
 	}
-	return null;
+	return null
 }
 
-module.exports = getNodeData;
+module.exports = getNodeData

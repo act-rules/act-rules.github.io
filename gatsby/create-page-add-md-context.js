@@ -1,9 +1,9 @@
-const path = require('path');
-const getComponent = require('./get-component');
+const path = require('path')
+const getComponent = require('./get-component')
 
 const createPageAddMdContext = options => {
-	const { graphql, actions } = options;
-	const { createPage } = actions;
+	const { graphql, actions } = options
+	const { createPage } = actions
 
 	return graphql(`
 		{
@@ -27,24 +27,24 @@ const createPageAddMdContext = options => {
 		}
 	`).then(({ errors, data }) => {
 		if (errors) {
-			Promise.reject(errors);
+			Promise.reject(errors)
 		}
 
-		const { allMarkdownRemark } = data;
-		const { edges } = allMarkdownRemark;
+		const { allMarkdownRemark } = data
+		const { edges } = allMarkdownRemark
 
 		/**
 		 * iterate each markdown file
 		 * - and create more context
 		 */
 		edges.forEach(({ node }) => {
-			const slug = node.fields.slug;
-			const markdownType = node.fields.markdownType;
-			const fileName = node.fields.fileName;
-			const sourceInstanceName = node.fields.sourceInstanceName;
-			const frontmatterName = node.frontmatter.name;
-			const frontmatterTitle = node.frontmatter.title;
-			const frontmatterRuleType = node.frontmatter.rule_type;
+			const slug = node.fields.slug
+			const markdownType = node.fields.markdownType
+			const fileName = node.fields.fileName
+			const sourceInstanceName = node.fields.sourceInstanceName
+			const frontmatterName = node.frontmatter.name
+			const frontmatterTitle = node.frontmatter.title
+			const frontmatterRuleType = node.frontmatter.rule_type
 			createPage({
 				path: slug,
 				component: path.resolve(getComponent(markdownType, slug)),
@@ -56,9 +56,9 @@ const createPageAddMdContext = options => {
 					title: frontmatterName ? frontmatterName : frontmatterTitle,
 					ruleType: frontmatterRuleType,
 				},
-			});
-		});
-	});
-};
+			})
+		})
+	})
+}
 
-module.exports = createPageAddMdContext;
+module.exports = createPageAddMdContext

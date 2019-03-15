@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout';
-import { graphql } from 'gatsby';
-import implementations from './../../_data/implementations';
+import React from 'react'
+import Layout from '../components/layout'
+import { graphql } from 'gatsby'
+import implementations from './../../_data/implementations'
 
 export default ({ data }) => {
-	const { markdownRemark } = data;
-	const { html, frontmatter } = markdownRemark;
+	const { markdownRemark } = data
+	const { html, frontmatter } = markdownRemark
 
 	return (
 		<Layout>
@@ -42,7 +42,7 @@ export default ({ data }) => {
 											</a>
 										</td>
 									</tr>
-								);
+								)
 							})}
 						</tbody>
 					</table>
@@ -51,8 +51,8 @@ export default ({ data }) => {
 				<div dangerouslySetInnerHTML={{ __html: html }} />
 			</section>
 		</Layout>
-	);
-};
+	)
+}
 
 export const query = graphql`
 	query($slug: String!) {
@@ -63,4 +63,4 @@ export const query = graphql`
 			}
 		}
 	}
-`;
+`

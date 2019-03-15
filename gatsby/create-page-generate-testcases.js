@@ -31,7 +31,9 @@ const createPageGenerateTestcases = (options) => {
     }
 
     const allRulePages = data.allMarkdownRemark.edges;
-    const testCaseTitleRegExp = /^#### (.*)/m
+    const regExIsTestcaseTitle = /^#### (.*)/m
+    const regExCodeType = /```svg/gm
+
     const testcases = []
 
     /**
@@ -45,7 +47,7 @@ const createPageGenerateTestcases = (options) => {
         const { rawMarkdownBody, frontmatter, fields } = node
         const { name } = frontmatter
         const { slug } = fields
-        const codeTitles = getAllMatchesForRegex(testCaseTitleRegExp, rawMarkdownBody)
+        const codeTitles = getAllMatchesForRegex(regExIsTestcaseTitle, rawMarkdownBody)
         const codeSnippets = codeBlocks(rawMarkdownBody);
 
         if (codeTitles.length !== codeSnippets.length) {
@@ -64,7 +66,12 @@ const createPageGenerateTestcases = (options) => {
               throw new Error('No title found for code snippet.')
             }
 
-            const { code, type = 'html' } = codeBlock
+            const { code } = codeBlock
+            let { type = 'html' } = codeBlock
+
+            if (regExCodeType.test(codeBlock.block.substring(0, 15))) {
+              type = 'svg'
+            }
 
             const uniqueId = slug.replace('rules/', '')
             const titleCurated = title.value.split(' ').map(t => t.toLowerCase())
@@ -98,6 +105,7 @@ const createPageGenerateTestcases = (options) => {
       website: url,
       license: `${url}/pages/license/`,
       description,
+      count: testcases.length,
       testcases
     }
     createFile(`${baseDir}/testcases.json`, JSON.stringify(testcasesData, undefined, 2))

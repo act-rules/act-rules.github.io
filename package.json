@@ -104,7 +104,7 @@
     "prebuild": "npm run get-data",
     "build": "gatsby build",
     "develop": "npm run get-data && gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
+    "format": "prettier --write *.{json,md,js,jsx} './{_data,_rules,build,gatsby,pages,src,test-assets}/**/*.{json,md,js,jsx}'",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",

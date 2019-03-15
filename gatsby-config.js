@@ -88,13 +88,3 @@ module.exports = {
 		},
 	],
 }
-
-/**
- * regex for matching glossary items -  `/(?:__|[*#])|\[(.*?)\]\(#.*?\)/g`
- * regex for catching passed/ failed - `/^#### (.*)/m`
- * regex for catching code blocks -
- */
-
-// sort both lists, find header index (where closest or less than),
-// [50, 58, 65 ....
-// regex -> [55, 63, ....

@@ -1,4 +1,5 @@
-const getAllMatchesForRegex = (regex, compareString) => {
+const getAllMatchesForRegex = (regex, compareString, computeIndexes = true) => {
+
 	if (typeof compareString !== 'string') {
 		throw new TypeError('Expected a string to match.')
 	}
@@ -10,9 +11,14 @@ const getAllMatchesForRegex = (regex, compareString) => {
 		if (match) {
 			const actualMatch = match[0]
 			const matchValue = match[1]
+			const indices = computeIndexes
+				? {
+					start: match.index,
+					end: match.index + matchValue.length,
+				}
+				: {}
 			const block = {
-				start: match.index,
-				end: match.index + matchValue.length,
+				...indices,
 				value: matchValue,
 				block: actualMatch,
 			}

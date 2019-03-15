@@ -1,3 +1,8 @@
+/**
+ * Enhance markdown pages with more context
+ * -> get all data necessary from `on-create-node` callback
+ * -> extend `context` object on `markdown` pages
+ */
 const path = require('path')
 const getComponent = require('./get-component')
 

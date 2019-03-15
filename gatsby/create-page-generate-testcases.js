@@ -1,3 +1,11 @@
+/**
+ * Create test case files & meta data
+ * -> create test cases files into `./public/testcases/`
+ * -> copy `./test-assets/*` into `./public`
+ * -> create `testcases.json` into `./public`
+ */
+
+const { ncp } = require('ncp')
 const codeBlocks = require('gfm-code-blocks')
 const {
 	www: { url, baseDir },
@@ -6,40 +14,16 @@ const {
 } = require('./../package.json')
 const createFile = require('./../build/create-file')
 const getAllMatchesForRegex = require('./get-all-matches-for-regex')
-const { ncp } = require('ncp')
+const queries = require('./queries')
+const regexps = require('./reg-exps')
 
 const createPageGenerateTestcases = options => {
 	const { graphql } = options
 
-	return graphql(`
-		{
-			allMarkdownRemark(
-				sort: { fields: [frontmatter___name], order: ASC }
-				filter: { fields: { markdownType: { eq: "rules" } } }
-			) {
-				totalCount
-				edges {
-					node {
-						rawMarkdownBody
-						fields {
-							markdownType
-							slug
-						}
-						frontmatter {
-							name
-						}
-					}
-				}
-			}
-		}
-	`).then(({ errors, data }) => {
+	return graphql(queries.getAllRules).then(({ errors, data }) => {
 		if (errors) {
 			Promise.reject(errors)
 		}
-
-		const allRulePages = data.allMarkdownRemark.edges
-		const regExIsTestcaseTitle = /^#### (.*)/m
-		const regExCodeType = /```svg/gm
 
 		const testcases = []
 
@@ -48,13 +32,14 @@ const createPageGenerateTestcases = options => {
 		 * -> get code snippets
 		 * -> and their relevant titles
 		 */
-		allRulePages.forEach((markdownPage, index) => {
+		const allRulePages = data.allMarkdownRemark.edges
+		allRulePages.forEach((markdownPage) => {
 			const { node } = markdownPage
 			const { rawMarkdownBody, frontmatter, fields } = node
 			const { name } = frontmatter
 			const { slug } = fields
 			const codeTitles = getAllMatchesForRegex(
-				regExIsTestcaseTitle,
+				regexps.testcaseTitle,
 				rawMarkdownBody
 			)
 			const codeSnippets = codeBlocks(rawMarkdownBody)
@@ -79,7 +64,7 @@ const createPageGenerateTestcases = options => {
 				const { code } = codeBlock
 				let { type = 'html' } = codeBlock
 
-				if (regExCodeType.test(codeBlock.block.substring(0, 15))) {
+				if (regexps.testcaseCodeSnippetTypeIsSvg.test(codeBlock.block.substring(0, 15))) {
 					type = 'svg'
 				}
 

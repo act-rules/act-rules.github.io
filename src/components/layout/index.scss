@@ -211,6 +211,7 @@ section.layout-container {
             padding: 0.5rem;
             position: relative;
             background-color: $bg-primary;
+            display: flex;
 
             &:nth-child(2n) {
               background-color: lighten($sep, 2%);
@@ -245,6 +246,19 @@ section.layout-container {
             h2 {
               margin: 0;
             }
+            >main {
+              flex: 1
+            }
+
+            >aside {
+              padding: 1.5rem;
+              border-left: 1px solid $sep;
+              min-width: 35%;
+              a {
+                display: block;
+              }
+            }
+            
           }
         }
       }
@@ -363,6 +377,13 @@ and (max-width : 1024px) {
             }
           }
         }
+        &.page-glossary {
+          .listing {
+            > article {
+              flex-direction: column;
+            }
+          }
+        }
       }
       .page-rule {
         padding-right: 0;
@@ -370,6 +391,7 @@ and (max-width : 1024px) {
           display: none;
         }
       }
+     
     }
   }
 }

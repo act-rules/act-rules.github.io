@@ -2,6 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout/'
 import SEO from '../components/seo'
+import { getGlossaryUsageInRules } from './../utils/render-fragments'
+import glossaryUsages from './../../_data/glossary-usages.json'
 
 export default ({ data }) => {
 	const { allMarkdownRemark } = data
@@ -11,15 +13,22 @@ export default ({ data }) => {
 		<Layout>
 			<SEO title="Glossary" keywords={[`Glossary`]} />
 
+
 			<section className="page-container page-glossary">
 				<h1>Glossary ({totalCount})</h1>
 				<section className="listing">
 					{edges.map(({ node }) => {
 						const { frontmatter, html } = node
+						const { key } = frontmatter
+						const usedInRules = glossaryUsages[`#${key}`]
 						return (
 							<article key={node.id}>
-								<h2>{frontmatter.title}</h2>
-								<div dangerouslySetInnerHTML={{ __html: html }} />
+								<main>
+									<h2>{frontmatter.title} ({key})</h2>
+									<i>key: <u>{key}</u></i>
+									<div dangerouslySetInnerHTML={{ __html: html }} />
+								</main>
+								{getGlossaryUsageInRules(usedInRules)}
 							</article>
 						)
 					})}
@@ -42,6 +51,7 @@ export const query = graphql`
 					html
 					frontmatter {
 						title
+						key
 					}
 					fields {
 						markdownType

@@ -1,6 +1,7 @@
 import React from 'react'
 import scUrls from './../../_data/sc-urls'
 import pkg from './../../package.json'
+import {Link} from 'gatsby'
 
 export function getSuccessCriterion(success_criterion) {
 	if (!success_criterion) {
@@ -91,6 +92,24 @@ export function getAtomicRulesForRule(
 					)
 				})}
 			</div>
+		</aside>
+	)
+}
+
+export function getGlossaryUsageInRules(usages) {
+	if (!usages) {
+		return null
+	}
+	return (
+		<aside>
+			<h3>Used In Rules:</h3>
+			{
+				usages.map(usage => (
+					<Link key={usage.slug} to={usage.slug}>
+						{usage.name}
+					</Link>
+				))
+			}
 		</aside>
 	)
 }

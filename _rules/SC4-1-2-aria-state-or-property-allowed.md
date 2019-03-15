@@ -1,16 +1,16 @@
 ---
 name: ARIA state or property allowed
-description: | 
+description: |
   This rule checks that WAI-ARIA states or properties are allowed for the element they are specified on.
 
 success_criterion:
-- 4.1.2 # Name, Role, Value (A)
+  - 4.1.2 # Name, Role, Value (A)
 
 test_aspects:
-- DOM Tree
+  - DOM Tree
 
 authors:
-- Anne Thyme Nørregaard
+  - Anne Thyme Nørregaard
 ---
 
 ## Test procedure
@@ -31,13 +31,13 @@ The attribute is either an [inherited](https://www.w3.org/TR/wai-aria/#inherited
 
 ## Accessibility support
 
-*There are no major accessibility support issues known for this rule.*
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 
 - [Understanding Success Criterion 4.1.1: Parsing](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value
-](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
+  ](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 - [WAI-ARIA 1.1, Supported States and Properties](https://www.w3.org/TR/wai-aria-1.1/#states_and_properties)
 - [WAI-ARIA 1.1, Global States and Properties](https://www.w3.org/TR/wai-aria-1.1/#global_states)
 

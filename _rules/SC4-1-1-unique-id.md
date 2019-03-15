@@ -6,14 +6,14 @@ description: |
   This rule checks that all `id` attribute values on a single page are unique.
 
 success_criterion:
-- 4.1.1 # Success Criterion 4.1.1 (Parsing)
+  - 4.1.1 # Success Criterion 4.1.1 (Parsing)
 
 test_aspects:
-- DOM Tree
+  - DOM Tree
 
 authors:
-- Bryn Anderson
-- Anne Thyme
+  - Bryn Anderson
+  - Anne Thyme
 ---
 
 ## Test procedure
@@ -51,7 +51,7 @@ There are no major accessibility support issues known for this rule.
 Only one `id` within the document context
 
 ```html
-<div id="my-div"> This is my first element</div>
+<div id="my-div">This is my first element</div>
 ```
 
 #### Passed example 2
@@ -59,9 +59,9 @@ Only one `id` within the document context
 All `id`s are unique within the document context
 
 ```html
-<div id="my-div1"> This is my first element</div>
-<div id="my-div2"> This is my second element</div>
-<svg id="my-div3"> This is my third element</svg>
+<div id="my-div1">This is my first element</div>
+<div id="my-div2">This is my second element</div>
+<svg id="my-div3">This is my third element</svg>
 ```
 
 #### Passed example 3
@@ -71,9 +71,9 @@ All `id`s are unique within the document context
 ```html
 <div id="my-elm"></div>
 <script>
-  var myElm = document.getElementById('my-elm');
-  var shadow = myElm.attachShadow({ mode: 'open' });
-  shadow.innerHTML = '<b id="my-elm" ><slot></slot></b>';
+	var myElm = document.getElementById('my-elm');
+	var shadow = myElm.attachShadow({ mode: 'open' });
+	shadow.innerHTML = '<b id="my-elm" ><slot></slot></b>';
 </script>
 ```
 
@@ -84,8 +84,8 @@ All `id`s are unique within the document context
 Several elements have identical `id`
 
 ```html
-<div id="my-div"> This is my first element</div>
-<div id="my-div"> This is my second element</div>
+<div id="my-div">This is my first element</div>
+<div id="my-div">This is my second element</div>
 ```
 
 #### Failed example 2
@@ -93,8 +93,8 @@ Several elements have identical `id`
 Elements of different types have identical `id`
 
 ```html
-<div  id="my-div"> This is my first element</div>
-<svg  id="my-div"> This is my second element</svg>
+<div id="my-div">This is my first element</div>
+<svg id="my-div">This is my second element</svg>
 ```
 
 #### Failed example 3
@@ -102,8 +102,8 @@ Elements of different types have identical `id`
 Having `display: none` on an element still makes it applicable to this rule
 
 ```html
-<div id="my-div" style="display:none"> This is my first element</div>
-<svg id="my-div"> This is my second element</svg>
+<div id="my-div" style="display:none">This is my first element</div>
+<svg id="my-div">This is my second element</svg>
 ```
 
 ### Inapplicable

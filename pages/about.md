@@ -2,11 +2,9 @@
 title: About Us
 ---
 
-
 The WCAG-ACT-RULES-CG, founded in 2014, is a W3C community with the focused to develop reliable [rules](pages/rules.html) for WCAG testing, both automated and semi-automated. We aim to assist developers of test tools to improve the accuracy and completeness of their tools.
 
 Creating (semi)automated [rules](pages/rules.html) to tests WCAG is key to affordable, large scale research. These rules are designed in a way that they are usable by people with a variety of skills. The results too should be informative, not just to developers, but to website managers, policy makers and disability advocates and other interested parties.
-
 
 ## Our Vision
 
@@ -21,7 +19,6 @@ Each rule has a certain applicability, targeting one ‘type’ of content on a 
 By comparing the test results with results from expert accessibility evaluators, we aim to track the accuracy of the tests we’ve developed. This allows us for an iterative improvement and adjustment of the tests as web development practices change and evolve.
 
 A list of published rules is available on the [site-page-rules].
-
 
 ## Related W3C Activities
 

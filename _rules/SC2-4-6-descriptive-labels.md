@@ -6,15 +6,15 @@ description: |
   This rule checks that labels describe the purpose of form field elements.
 
 success_criterion:
-- 2.4.6 # Headings and labels
+  - 2.4.6 # Headings and labels
 
 test_aspects:
-- DOM Tree
-- CSS Styling
+  - DOM Tree
+  - CSS Styling
 
 authors:
-- Dagfinn Rømen
-- Geir Sindre Fossøy
+  - Dagfinn Rømen
+  - Geir Sindre Fossøy
 ---
 
 ## Test Procedure
@@ -27,7 +27,8 @@ This rule applies to any HTML `label` element or other element referenced by `ar
 - is programmatically associated with an HTML element that has one of the listed form field [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
 
 **Note**: The list of form field roles is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
-- have a [semantic role](#semantic-role) that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and 
+
+- have a [semantic role](#semantic-role) that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
 - does not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
 - The `option` role is not part of the list of applicable roles, because it does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an accessible name.
 
@@ -49,7 +50,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- [Understanding Success Criterion 2.4.6: Headings and Labels](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html) 
+- [Understanding Success Criterion 2.4.6: Headings and Labels](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html)
 - [G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG21/Techniques/general/G131)
 - [H44: Using label elements to associate text labels with form controls](https://www.w3.org/WAI/WCAG21/Techniques/html/H44)
 - [ARIA16: Using aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA16)
@@ -64,7 +65,7 @@ Label that is coded with the `label` element and describes the purpose of the as
 
 ```html
 <label for="fname">First name:</label>
-<input id="fname" type="text" name="fname"/>
+<input id="fname" type="text" name="fname" />
 ```
 
 #### Passed example 2
@@ -73,7 +74,7 @@ Label that is coded with the `p` element and associated by the aria-labelledby a
 
 ```html
 <p id="label_fname">First name:</p>
-<input aria-labelledby="label_fname" type="text" name="fname"/>
+<input aria-labelledby="label_fname" type="text" name="fname" />
 ```
 
 #### Passed example 3
@@ -90,7 +91,7 @@ Label is visible, but not included in accessibility tree
 
 ```html
 <p id="label_fname" aria-hidden="true">First name:</p>
-<input aria-labelledby="label_fname" type="text" name="fname"/>
+<input aria-labelledby="label_fname" type="text" name="fname" />
 ```
 
 #### Passed example 5
@@ -98,8 +99,10 @@ Label is visible, but not included in accessibility tree
 Label is included in accessibility tree, but not visible
 
 ```html
-<p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">First name:</p>
-<input aria-labelledby="label_fname" type="text" name="fname"/>
+<p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">
+	First name:
+</p>
+<input aria-labelledby="label_fname" type="text" name="fname" />
 ```
 
 ### Failed
@@ -109,8 +112,7 @@ Label is included in accessibility tree, but not visible
 Label that is coded with the `label` element and does not describe the purpose of the associated element.
 
 ```html
-<label for="fname">Menu</label>
-<input id="fname" type="text" name="fname"/>
+<label for="fname">Menu</label> <input id="fname" type="text" name="fname" />
 ```
 
 #### Failed example 2
@@ -119,7 +121,7 @@ Label that is coded with the `p` element and associated by the aria-labelledby a
 
 ```html
 <p id="label_fname">Menu</p>
-<input aria-labelledby="label_fname" type="text" name="fname"/>
+<input aria-labelledby="label_fname" type="text" name="fname" />
 ```
 
 #### Failed example 3
@@ -136,7 +138,7 @@ Label is visible, but not included in accessibility tree, and does not describe 
 
 ```html
 <p id="label_fname" aria-hidden="true">Menu</p>
-<input aria-labelledby="label_fname" type="text" name="fname"/>
+<input aria-labelledby="label_fname" type="text" name="fname" />
 ```
 
 #### Passed example 5
@@ -144,8 +146,10 @@ Label is visible, but not included in accessibility tree, and does not describe 
 Label is included in accessibility tree, but not visible, and does not describe the purpose of the associated element.
 
 ```html
-<p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">Menu</p>
-<input aria-labelledby="label_fname" type="text" name="fname"/>
+<p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">
+	Menu
+</p>
+<input aria-labelledby="label_fname" type="text" name="fname" />
 ```
 
 ### Inapplicable
@@ -182,5 +186,5 @@ The `label` element is associated with an HTML element that does not have a form
 No `label` element.
 
 ```html
-<input id="fname" type="text" name="fname"/>
+<input id="fname" type="text" name="fname" />
 ```

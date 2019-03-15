@@ -40,7 +40,6 @@ There are two concepts that must work together to ensure that information can be
 1. Authors must rely only on using technologies that are accessibility-supported - and -
 2. Authors must use those technologies properly in order for the information to be programmatically determinable - and hence presentable, by AT (and user agents) to users with disabilities
 
-
 #### 1. Programmatically Determinable
 
 Content: MUST Work with AT:

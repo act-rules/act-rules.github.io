@@ -4,17 +4,17 @@ description: |
   Each link has an accessible name
 
 success_criterion:
-- 4.1.2 # Name, Role, Value
-- 2.4.4 # Link Purpose (In Context)
-- 2.4.9 # Link Purpose (Link Only)
+  - 4.1.2 # Name, Role, Value
+  - 2.4.4 # Link Purpose (In Context)
+  - 2.4.9 # Link Purpose (Link Only)
 
 test_aspects: # Remove what is not applicable
-- DOM Tree
-- CSS Styling
+  - DOM Tree
+  - CSS Styling
 
 authors:
-- Wilco Fiers
-- Anne Thyme Nørregaard
+  - Wilco Fiers
+  - Anne Thyme Nørregaard
 ---
 
 ## Test procedure
@@ -59,7 +59,7 @@ There are no major accessibility support issues known for this rule.
 Element with eplicit role of link with accessible name through content.
 
 ```html
-<div role="link"> Web Accessibility Initiative (WAI) </div>
+<div role="link">Web Accessibility Initiative (WAI)</div>
 ```
 
 #### Passed example 3
@@ -83,7 +83,7 @@ Accessible name for link via `aria-label`
 Link named via `title` om link.
 
 ```html
-<a href="http://www.w3.org/WAI" title="This is a link"><img src="#" /></a>
+<a href="http://www.w3.org/WAI" title="This is a link"><img src="#"/></a>
 ```
 
 #### Passed example 6
@@ -117,16 +117,18 @@ When `link` is off screen.
 
 ```html
 <html>
-  <style>
-    .offScreenLink {
-      position: absolute;
-      left: -9999px;
-      top: -9999px;
-    }
-  </style>
-  <body>
-		<a class="offScreenLink" href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
-  </body>
+	<style>
+		.offScreenLink {
+			position: absolute;
+			left: -9999px;
+			top: -9999px;
+		}
+	</style>
+	<body>
+		<a class="offScreenLink" href="http://www.w3.org/WAI">
+			Web Accessibility Initiative (WAI)
+		</a>
+	</body>
 </html>
 ```
 
@@ -137,7 +139,7 @@ When `link` is off screen.
 Image link without accessible name.
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="#" /></a>
+<a href="http://www.w3.org/WAI"><img src="#"/></a>
 ```
 
 #### Failed example 2
@@ -145,7 +147,7 @@ Image link without accessible name.
 Image link where image is marked as decorative.
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="#" alt="" /></a>
+<a href="http://www.w3.org/WAI"><img src="#" alt=""/></a>
 ```
 
 #### Failed example 3
@@ -178,7 +180,7 @@ Link with image that has empty `aria-labelledby`.
 Aria-labelledby references to a non-existing id.
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="#" aria-labelledby="id1" /></a>
+<a href="http://www.w3.org/WAI"><img src="#" aria-labelledby="id1"/></a>
 ```
 
 #### Failed example 7
@@ -186,7 +188,9 @@ Aria-labelledby references to a non-existing id.
 Non-visible link.
 
 ```html
-<a href="http://www.w3.org/WAI" style="left: -9999px; position: absolute;"><img src="#" /></a>
+<a href="http://www.w3.org/WAI" style="left: -9999px; position: absolute;"
+	><img src="#"
+/></a>
 ```
 
 #### Failed example 8
@@ -194,7 +198,7 @@ Non-visible link.
 Not included in the accessibility tree.
 
 ```html
-<a href="http://www.w3.org/WAI" aria-hidden="true"><img src="#" /></a>
+<a href="http://www.w3.org/WAI" aria-hidden="true"><img src="#"/></a>
 ```
 
 ### Inapplicable
@@ -204,7 +208,9 @@ Not included in the accessibility tree.
 `<a>` element that has had its role changed.
 
 ```html
-<a href="http://www.w3.org/WAI" role="button">Web Accessibility Initiative (WAI)</a>
+<a href="http://www.w3.org/WAI" role="button"
+	>Web Accessibility Initiative (WAI)</a
+>
 ```
 
 #### Inapplicable example 2
@@ -212,7 +218,7 @@ Not included in the accessibility tree.
 Not included in the accessibility tree due to `display:none`.
 
 ```html
-<a href="http://www.w3.org/WAI" style="display: none;"><img src="#" /></a>
+<a href="http://www.w3.org/WAI" style="display: none;"><img src="#"/></a>
 ```
 
 #### Inapplicable example 3
@@ -228,5 +234,7 @@ Not included in the accessibility tree due to `visibility: hidden`.
 Not included in the accessibility tree due to `aria-hideden="true"`.
 
 ```html
-<a aria-hidden="true" href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
+<a aria-hidden="true" href="http://www.w3.org/WAI">
+	Web Accessibility Initiative (WAI)
+</a>
 ```

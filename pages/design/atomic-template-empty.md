@@ -6,13 +6,13 @@ description: |
   This rule checks ...
 
 success_criterion:
-- x.x.x # (Name of Success Criterion)
+  - x.x.x # (Name of Success Criterion)
 
 test_aspects:
-- # (e.g. HTTP Messages, DOM Tree, CSS Styling, Accessibility Tree, Language, etc.,)
+  -  # (e.g. HTTP Messages, DOM Tree, CSS Styling, Accessibility Tree, Language, etc.,)
 
 authors:
-- # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
+  -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
 ---
 
 ## Test Procedure
@@ -27,11 +27,11 @@ Each target element ...
 
 ## Assumptions
 
-*There are currently no assumptions*
+_There are currently no assumptions_
 
 ## Accessibility support
 
-*There are no major accessibility support issues known for this rule.*
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 

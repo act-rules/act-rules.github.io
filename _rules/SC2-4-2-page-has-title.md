@@ -5,17 +5,17 @@ description: |
   This rule checks that the HTML page has a title
 
 success_criterion:
-- 2.4.2 # Page Titled
+  - 2.4.2 # Page Titled
 
 test_aspects:
-- DOM Tree
+  - DOM Tree
 
 authors:
-- Wilco Fiers
-- Stein Erik Skotkjerra
-- Bryn Anderson
-- Anne Thyme Nørregaard
-- Jey Nandakumar
+  - Wilco Fiers
+  - Stein Erik Skotkjerra
+  - Bryn Anderson
+  - Anne Thyme Nørregaard
+  - Jey Nandakumar
 ---
 
 ## Test procedure
@@ -62,7 +62,7 @@ This page has a `title`.
 
 ```html
 <html>
-  <title>This page has a title</title>
+	<title>This page has a title</title>
 </html>
 ```
 
@@ -72,8 +72,8 @@ This page give a `title` to an iframe.
 
 ```html
 <html>
-  <title>This page gives a title to an iframe</title>
-  <iframe src="../test-assets/sc2-4-2-title-page-without-title.html"></iframe>
+	<title>This page gives a title to an iframe</title>
+	<iframe src="../test-assets/sc2-4-2-title-page-without-title.html"></iframe>
 </html>
 ```
 
@@ -83,12 +83,12 @@ This page has a `title`.
 
 ```html
 <html>
-  <head>
-    <title>Title of the page.</title>
-  </head>
-  <body>
-    <title>Title of the page.</title>
-  </body>
+	<head>
+		<title>Title of the page.</title>
+	</head>
+	<body>
+		<title>Title of the page.</title>
+	</body>
 </html>
 ```
 
@@ -98,9 +98,9 @@ Valid `title` provided.
 
 ```html
 <html>
-  <body>
-    <title>Title of the page.</title>
-  </body>
+	<body>
+		<title>Title of the page.</title>
+	</body>
 </html>
 ```
 
@@ -110,12 +110,12 @@ Valid `title` provided.
 
 ```html
 <html>
-  <head>
-    <title>Title of the page.</title>
-  </head>
-  <body>
-     <title></title> 
-  </body>
+	<head>
+		<title>Title of the page.</title>
+	</head>
+	<body>
+		<title></title>
+	</body>
 </html>
 ```
 
@@ -127,7 +127,7 @@ This page has no `title`.
 
 ```html
 <html>
-  <h1>this page has no title</h1>
+	<h1>this page has no title</h1>
 </html>
 ```
 
@@ -137,7 +137,7 @@ Empty `title`.
 
 ```html
 <html>
-  <title></title>
+	<title></title>
 </html>
 ```
 
@@ -147,7 +147,7 @@ No `title` provided.
 
 ```html
 <html>
-  <iframe src="../test-assets/sc2-4-2-title-page-with-title.html"></iframe>
+	<iframe src="../test-assets/sc2-4-2-title-page-with-title.html"></iframe>
 </html>
 ```
 
@@ -157,12 +157,12 @@ Empty first `title`.
 
 ```html
 <html>
-  <head>
-    <title></title>
-  </head>
-  <body>
-    <title>Title of the page.</title>
-  </body>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<title>Title of the page.</title>
+	</body>
 </html>
 ```
 

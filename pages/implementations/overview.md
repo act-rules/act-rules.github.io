@@ -2,9 +2,9 @@
 title: Overview
 ---
 
-The WCAG-ACT-RULES-CG rules are authored for reliable `WCAG` testing. 
+The WCAG-ACT-RULES-CG rules are authored for reliable `WCAG` testing.
 
-In order to facilitate this goal each rule has a variety of test cases in the categories of `passed`, `failed` and `inapplicable`. 
+In order to facilitate this goal each rule has a variety of test cases in the categories of `passed`, `failed` and `inapplicable`.
 
 Incorporating a rule from the WCAG-ACT-RULES-CG into your test tool, is considered an **implementation**. The test cases provided for the rules can be used to infer if an implementation yields the `expected` results.
 

@@ -5,16 +5,15 @@ description: |
   This rule checks that HTML and SVG starting tags do not contain duplicated attributes.
 
 success_criterion:
-- 4.1.1 # Parsing
+  - 4.1.1 # Parsing
 
 test_aspects:
-- Source code
+  - Source code
 
 authors:
-- Wilco Fiers
-- Emma Pratt Richens
+  - Wilco Fiers
+  - Emma Pratt Richens
 ---
-
 
 ## Applicability
 
@@ -28,16 +27,15 @@ For each test target, there are no duplicated [attributes](https://www.w3.org/TR
 
 ## Assumptions
 
-*There are currently no assumptions.*
+_There are currently no assumptions._
 
 ## Accessibility support
 
-*There are no major accessibility support issues known for this rule.*
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 
 - - [H94: Ensuring that elements do not contain duplicate attributes](https://www.w3.org/TR/WCAG20-TECHS/H94.html)
-
 
 ## Test Cases
 
@@ -73,7 +71,7 @@ SVG, no attributes are duplicated.
 
 ```html
 <svg>
-  <line x1="0" y1="0" x2="200" y2="200" style="stroke-width:2" />
+	<line x1="0" y1="0" x2="200" y2="200" style="stroke-width:2" />
 </svg>
 ```
 
@@ -83,7 +81,7 @@ Script, no attributes are duplicated. HTML or SVG code within a script should be
 
 ```html
 <script>
-	var foo = '<img src="image.jpg" alt="" alt="image" />'
+	var foo = '<img src="image.jpg" alt="" alt="image" />';
 </script>
 ```
 
@@ -111,7 +109,7 @@ SVG, at least one attribute is duplicated.
 
 ```html
 <svg>
-  <line x1="0" y1="0" x1="200" y1="200" style="stroke-width:2" />
+	<line x1="0" y1="0" x1="200" y1="200" style="stroke-width:2" />
 </svg>
 ```
 
@@ -131,5 +129,5 @@ Code is XML, and not HTML or SVG.
 Code is JavaScript, and not HTML or SVG.
 
 ```js
-var foo = '<img src="image.jpg" alt="" alt="image" />'
+var foo = '<img src="image.jpg" alt="" alt="image" />';
 ```

@@ -24,7 +24,9 @@ export default ({ data }) => {
 						return (
 							<article key={node.id}>
 								<main>
-									<h2>{frontmatter.title} ({key})</h2>
+									<a id={key} href={`#${key}`}>
+										<h2>{frontmatter.title} ({key})</h2>
+									</a>
 									<i>key: <u>{key}</u></i>
 									<div dangerouslySetInnerHTML={{ __html: html }} />
 								</main>

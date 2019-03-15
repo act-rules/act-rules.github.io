@@ -242,7 +242,9 @@ section.layout-container {
                 border-color: $accent;
               }
             }
-
+            a{
+              text-decoration: none;
+            }
             h2 {
               margin: 0;
             }

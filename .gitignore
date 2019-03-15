@@ -71,6 +71,3 @@ yarn-error.log
 # Data
 _data/
 !_data/*.md
-
-# this is temporary
-_testcases-embeds

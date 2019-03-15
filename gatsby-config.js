@@ -5,14 +5,7 @@ module.exports = {
 	siteMetadata: {
 		title: siteTitle,
 		description: pkg.description,
-		author: pkg.author,
-		/**
-		 * JSON.stringify is to keep graphql happy,
-		 * as otherwise it endlessly complains about picking only properties necessary in the query
-		 */
-		placeholderValues: JSON.stringify({
-			'site-title': `<b>${siteTitle}</b>`,
-		}),
+		author: pkg.author
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,

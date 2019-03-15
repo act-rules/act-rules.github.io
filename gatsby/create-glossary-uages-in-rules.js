@@ -39,7 +39,6 @@ const createGlossaryUsagesInRules = options => {
         const { slug } = fields
 
         const glossaryMatches = getAllMatchesForRegex(regexps.glossaryReferenceInRules, rawMarkdownBody, false)
-        console.log(glossaryMatches);
 
         glossaryMatches
           .forEach((glossaryItem) => {

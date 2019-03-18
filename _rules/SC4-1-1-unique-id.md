@@ -20,7 +20,7 @@ authors:
 
 ### Applicability
 
-Any `id` attribute specified on an HTML or SVG element.
+Any `id` attribute which is not the empty string (""), specified on an HTML or SVG element.
 
 **Note:** Elements that are neither [included in the accessibility tree](#included-in-the-accessibility-tree) nor [visible on the page](#visible-on-the-page) are still considered for this rule.
 

@@ -1,9 +1,9 @@
 ---
-name: ARIA widget state has valid value
+name: Required state for ARIA widget has valid value
 rule_type: atomic
 
 description: |
-  This rule checks that each state for an ARIA widget has a valid value.
+  This rule checks that each required state for an ARIA widget has a valid value.
 
 success_criterion:
 - 4.1.2 # Name, Role, Value
@@ -20,7 +20,7 @@ authors:
 
 ### Applicability
 
-This rule applies to any [WAI-ARIA state](https://www.w3.org/TR/wai-aria-1.1/#dfn-state) that is not the empty string (""), and is specified on an HTML or SVG element that has a [WAI-ARIA widget role](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) and is [included in the accessibility tree](#included-in-the-accessibility-tree).
+This rule applies to any [required](https://www.w3.org/TR/wai-aria-1.1/#requiredState) [WAI-ARIA state](https://www.w3.org/TR/wai-aria-1.1/#dfn-state) that is not the empty string (""), and is specified on an HTML or SVG element that has a [WAI-ARIA widget role](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) and is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation
 
@@ -28,7 +28,7 @@ Each test target has a valid value according to its [WAI-ARIA 1.1 value type](ht
 
 ## Assumptions
 
-This rule assumes that the WAI-ARIA state has been specified with the intent of complying to WCAG.
+This rule assumes that the WAI-ARIA state has been specified with the intent of complying to WCAG by changing the state from [default value](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole) for that role.
 
 ## Accessibility support
 

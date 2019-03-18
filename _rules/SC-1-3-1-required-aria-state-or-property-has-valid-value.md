@@ -1,9 +1,9 @@
 ---
-name: Required ARIA state or property has valid value
+name: Required ARIA property has valid value
 rule_type: atomic
 
 description: |
-   This rule checks that each required WAI-ARIA state or property has a valid value.
+   This rule checks that each required WAI-ARIA property has a valid value.
    
 success_criterion:
 - 1.3.1 # Info and Relationships
@@ -24,11 +24,12 @@ authors:
 Any [WAI-ARIA required state or property](https://www.w3.org/TR/wai-aria-1.1/#requiredState) that 
 - is specified on an HTML or SVG element 
 - is one of the `aria-*` attributes included in the [accessible name computation](https://www.w3.org/TR/accname-1.1/#mapping_additional_nd_te), or is specified on an element that is [included in the accessibility tree](#included-in-the-accessibility-tree) or is [focusable](#focusable),
-- is not the empty string ("").
+- is not the empty string (""),
+- does not have a default value listed under [WAI-ARIA implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole).
 
 ### Expectation
 
-Each test target has a valid value according to its [WAI-ARIA 1.1 value type](https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value) or has a default value listed under [WAI-ARIA implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole).
+Each test target has a valid value according to its [WAI-ARIA 1.1 value type](https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value).
 
 For value types `ID Reference` and `ID Reference List` at least one of the elements with the given ids exists in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the element that specifies the target attribute. 
 
@@ -40,7 +41,7 @@ For value type `URI`, this rule does not require that the destination URI exists
 ## Assumptions
 
 - This rule assumes that elements that are not [included in the accessibility tree](#included-in-the-accessibility-tree) or are [focusable](#focusable) can still impact users if they are used for the [accessible name computation](https://www.w3.org/TR/accname-1.1/#mapping_additional_nd_te). Therefore the applicability of this rule also includes `aria-*` attributes that participate in the accessible name computation as well as [WAI-ARIA 1.1 states and properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) that are specified on elements that are included in the accessibility tree or are focusable.
-- The ARIA `state` or `property` is being used to comply to WCAG.
+- The ARIA `property` is being used to comply to WCAG.
 
 ## Accessibility Support
 

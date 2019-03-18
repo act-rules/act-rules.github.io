@@ -6,14 +6,14 @@ import { getGlossaryUsageInRules } from './../utils/render-fragments'
 import glossaryUsages from './../../_data/glossary-usages.json'
 
 export default ({ data }) => {
-	const { allMarkdownRemark } = data
-	const { edges, totalCount } = allMarkdownRemark
+	const { glossaryData, site } = data
+	const { edges, totalCount } = glossaryData
+
+	const updatedTitle = `Glossary | ${site.siteMetadata.title}`
 
 	return (
 		<Layout>
-			<SEO title="Glossary" keywords={[`Glossary`]} />
-
-
+			<SEO title={updatedTitle} keywords={site.siteMetadata.keywords} />
 			<section className="page-container page-glossary">
 				<h1>Glossary ({totalCount})</h1>
 				<section className="listing">
@@ -42,7 +42,7 @@ export default ({ data }) => {
 
 export const query = graphql`
 	query {
-		allMarkdownRemark(
+		glossaryData: allMarkdownRemark(
 			sort: { fields: [frontmatter___title], order: ASC }
 			filter: { fields: { markdownType: { eq: "glossary" } } }
 		) {
@@ -60,6 +60,12 @@ export const query = graphql`
 					}
 					excerpt
 				}
+			}
+		}
+		site {
+			siteMetadata {
+				title
+				keywords
 			}
 		}
 	}

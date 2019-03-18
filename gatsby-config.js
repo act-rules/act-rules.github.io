@@ -5,7 +5,8 @@ module.exports = {
 	siteMetadata: {
 		title: siteTitle,
 		description: pkg.description,
-		author: pkg.author
+		author: pkg.author,
+		keywords: pkg.keywords
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,

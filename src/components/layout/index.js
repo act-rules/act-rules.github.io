@@ -20,6 +20,10 @@ class Layout extends React.Component {
 			const { node } = edge
 			const { path, context } = node
 
+			if(!context || !context.title) {
+				return null;
+			}
+
 			const key = `${context.title}${path}`
 			return (
 				<li key={key}>
@@ -102,12 +106,16 @@ class Layout extends React.Component {
 								</div>
 								<nav className="navigation">
 									<ul>
-										<hr />
+										<li>
+											<hr />
+										</li>
 										{/* Top level Navigation */}
 										{getTopLevelNavigation.group.map(item =>
 											this.getListItemFromEdges(item.edges)
 										)}
-										<hr />
+										<li>
+											<hr />
+										</li>
 										{/* Rules */}
 										<li key="rules">
 											<Link to="/rules/" activeClassName="active">
@@ -120,7 +128,9 @@ class Layout extends React.Component {
 												Glossary
 											</Link>
 										</li>
-										<hr />
+										<li>
+											<hr />
+										</li>
 										{/* Other Navigation */}
 										{getNonRulesNavigation.group.map((item, index) => {
 											const { totalCount, edges, fieldValue } = item

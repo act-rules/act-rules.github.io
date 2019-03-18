@@ -10,12 +10,14 @@ import {
 } from './../utils/render-fragments'
 
 export default ({ data }) => {
-	const { rules, allRules } = data
+	const { rules, allRules, site } = data
 	const { edges, totalCount } = rules
+
+	const updatedTitle = `Rules | ${site.siteMetadata.title}`
 
 	return (
 		<Layout>
-			<SEO title="Rules" keywords={[`Rules`]} />
+			<SEO title={updatedTitle} keywords={site.siteMetadata.keywords} />
 			<section className="page-container page-rules">
 				{/* Heading */}
 				<h1>Rules ({totalCount})</h1>
@@ -98,6 +100,14 @@ export const query = graphql`
 						slug
 					}
 				}
+			}
+		}
+		site {
+			siteMetadata {
+				title
+				description
+				author
+				keywords
 			}
 		}
 	}

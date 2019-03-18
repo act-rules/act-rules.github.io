@@ -97,7 +97,10 @@
 		"prettier": "^1.16.4"
 	},
 	"keywords": [
-		"gatsby"
+		"WCAG",
+		"ACT Rules",
+		"Accessibility",
+		"W3C"
 	],
 	"license": "MIT",
 	"licenseTODO": "https://auto-wcag.github.io/auto-wcag/license.html",

@@ -1,7 +1,7 @@
 ---
 name: label and name from content mismatch
 description: |
-  Interactive elements labelled through their content must have their visible label as part of their accessible name
+  Interactive elements labelled through their content must have their visible label as part of their accessible name.
 
 success_criterion:
 - 2.5.3 # Label in Name
@@ -65,7 +65,7 @@ Character insensitivity between visible label and accessible name.
 
 #### Passed example 3
 
-Full visible label is contained in the accessible name.
+Full visible label is included in the accessible name.
 
 ```html
 <button name="link" aria-label="Next Page in the list">Next Page</button>
@@ -75,7 +75,7 @@ Full visible label is contained in the accessible name.
 
 #### Failed example 1
 
-Visible label doesn't match accessible name.
+Visible label is not included in accessible name.
 
 ```html
 <div role="link" aria-label="OK">Next</div>
@@ -125,7 +125,7 @@ No rendered text in name from content.
 
 #### Inapplicable example 5
 
-Non-text content.
+Sequence of characters in name from content is not expressing anything in human language and is therefore not considered [text](https://www.w3.org/TR/WCAG21/#dfn-text).
 
 ```html
 <button aria-label="close">X</button>

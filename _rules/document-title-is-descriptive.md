@@ -48,7 +48,7 @@ _There are no assumptions for this rule._
 
 #### Passed example 1
 
-The ´<title>´ element describes the content of the document.
+The `<title>` element describes the content of the document.
 
 ```html
 <html>

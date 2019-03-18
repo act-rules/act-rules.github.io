@@ -22,13 +22,13 @@ authors:
 
 ### Applicability
 
-The rule applies to any page where the root element is an `html` element, and which is not embedded in another page.
+The rule applies to any page where the [root](https://www.w3.org/TR/dom41/#concept-tree-root) element is an `html` element, and which is not embedded in another page.
 
 **Note**: Pages may be embedded inside other pages through elements such as iframes and object elements.
 
 ### Expectation 1
 
-The root element has at least one [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) that is an HTML `title` element.
+The [root](https://www.w3.org/TR/dom41/#concept-tree-root) element has at least one [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) that is an HTML `title` element.
 
 **Note**: The `title` element exists in other namespaces such as SVG. These are not HTML `title` elements and should be ignored for this rule.
 

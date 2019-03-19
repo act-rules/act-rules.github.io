@@ -11,7 +11,7 @@ module.exports = {
 		keywords: pkg.keywords,
 		baseHref: process.env.NODE_ENV === 'development'
 			? ''
-			: `${pkg}.www.url`
+			: `${pkg.www.url}`
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,

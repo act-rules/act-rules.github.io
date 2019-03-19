@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout/'
 import SEO from '../components/seo'
-
+import showdown from 'showdown'
 import {
 	getSuccessCriterion,
 	getAuthors,
@@ -14,6 +14,7 @@ export default ({ data }) => {
 	const { edges, totalCount } = rules
 
 	const updatedTitle = `Rules | ${site.siteMetadata.title}`
+	const converter = new showdown.Converter();
 
 	return (
 		<Layout>
@@ -43,7 +44,11 @@ export default ({ data }) => {
 									{/* rule sc's */}
 									{getSuccessCriterion(success_criterion)}
 									{/* rule description */}
-									<p>{description}</p>
+									<div
+										dangerouslySetInnerHTML={{
+											__html: converter.makeHtml(description)
+										}}
+									/>
 								</section>
 								{/* atomic rules */}
 								{getAtomicRulesForRule(atomic_rules, allRules.edges)}

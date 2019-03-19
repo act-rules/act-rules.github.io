@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout/'
 import { graphql } from 'gatsby'
+import showdown from 'showdown'
 import {
 	getSuccessCriterion,
 	getAuthors,
@@ -14,7 +15,7 @@ export default ({ data }) => {
 	const { rule, allRules, allGlossary, site } = data
 	const { html, frontmatter, tableOfContents, fields } = rule
 	const { slug } = fields
-
+	const converter = new showdown.Converter();
 	const updatedTitle = `Glossary | ${site.siteMetadata.title}`
 
 	const getRuleType = rule_type => {
@@ -23,7 +24,7 @@ export default ({ data }) => {
 		}
 		return (
 			<li>
-				<span role='heading' aria-level='1'  className="heading">Rule Type</span>
+				<span role='heading' aria-level='1' className="heading">Rule Type</span>
 				<p>{rule_type}</p>
 			</li>
 		)
@@ -109,7 +110,11 @@ export default ({ data }) => {
 					</header>
 					{/* Description */}
 					<br />
-					<p>{frontmatter.description}</p>
+					<div
+						dangerouslySetInnerHTML={{
+							__html: converter.makeHtml(frontmatter.description)
+						}}
+					/>
 					{/* html content */}
 					<div
 						dangerouslySetInnerHTML={{
@@ -138,7 +143,7 @@ export default ({ data }) => {
 						</li>
 						<li>{getAuthors(frontmatter.authors)}</li>
 					</ul>
-					<span role='heading' aria-level='1'  className="heading">Table of Contents</span>
+					<span role='heading' aria-level='1' className="heading">Table of Contents</span>
 					<div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
 					<ul>
 						{renderGlossaryUsedLink(slug)}

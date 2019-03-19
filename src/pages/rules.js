@@ -38,9 +38,9 @@ export default ({ data }) => {
 							<article key={id}>
 								<section>
 									{/* rule id */}
-									<Link to={slug}>
+									<a href={slug}>
 										<h2>{name}</h2>
-									</Link>
+									</a>
 									{/* rule sc's */}
 									{getSuccessCriterion(success_criterion)}
 									{/* rule description */}

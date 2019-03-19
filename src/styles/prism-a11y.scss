@@ -166,7 +166,7 @@
  }
 
 
-.language-text, code {
+.language-text {
 	background: $bg-primary !important;
   color: $fg-primary !important;
   font-weight: bold;
@@ -177,3 +177,7 @@
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
+code {
+  line-height: 1.5;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}

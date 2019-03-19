@@ -1,4 +1,5 @@
 const { createFilePath } = require('gatsby-source-filesystem')
+const customId = require('custom-id')
 
 /**
  * Get node data, to enhance metadata of pages
@@ -18,10 +19,10 @@ const getNodeData = options => {
 
 	switch (sourceInstanceName) {
 		case 'rules':
-			const url = node.id.slice(0, 6)
+			const hash = customId({name: relativePath})
 			return {
 				...defaults,
-				path: `${sourceInstanceName}/${url}`,
+				path: `${sourceInstanceName}/${hash}`,
 			}
 		default:
 			return {

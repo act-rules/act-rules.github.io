@@ -1,7 +1,6 @@
 const pkg = require('./package.json')
 const siteTitle = pkg.name.split('-').join(' ')
 
-console.log(process.env);
 
 module.exports = {
 	siteMetadata: {

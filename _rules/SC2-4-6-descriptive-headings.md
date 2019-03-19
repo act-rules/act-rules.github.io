@@ -13,6 +13,7 @@ test_aspects:
 - CSS Styling
 
 authors:
+- Anne Thyme Nørregaard
 - Dagfinn Rømen
 - Geir Sindre Fossøy
 - Carlos Duarte
@@ -22,13 +23,13 @@ authors:
 
 ### Applicability
 
-This rule applies to any element with the [semantic role](#semantic-role) of heading that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree).
+This rule applies to any element with the [semantic role](#semantic-role) of heading that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree), and that either contains text nodes that do not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153), or has an accessible name that does not only consist of Unicode separator characters.
 
 **Note**: This rule only applies to elements with the [semantic role](#semantic-role) of heading. Thus, it is a partial check for WCAG 2.0 success criterion 2.4.6, which applies to all headings. "Heading" is used in its general sense and includes headlines and other ways to add a heading to different types of content. This includes elements that are not marked up as headings in the code, but still act visually as headings, e.g. by larger and/or bolder text. 
 
 ### Expectation
 
-Each target element describes the topic or purpose of its [section of the content](#section-of-content).
+The text nodes and [accessible name](#accessible-name), if the two are different, of each target element describe the topic or purpose of the entirety or a part of its [section of the content](#section-of-content), or it has no section of the content.
 
 **Note**: Headings do not need to be lengthy. A word, or even a single character, may suffice.
 
@@ -110,6 +111,33 @@ Heading marked up with `h` element that describes the topic or purpose of its se
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
+#### Passed example 7
+
+Heading marked up with `h` element that describes the topic or purpose of a part of its section of the content.
+
+```html
+<h1 class="target">Oranges</h1>
+<p>I really like oranges.</p>
+<p>Apples are great too, though.</p>
+```
+
+#### Passed example 8
+
+Heading marked up with `h` element that doesn't have a section of content.
+
+```html
+<h1 class="target">Oranges on sale</h1>
+```
+
+#### Passed example 9
+
+Heading marked up with `h` element where both the visible text nodes as well as the accessible name describes the content, though the two are different.
+
+```html
+<h1 class="target" aria-label="Office opening hours">Opening Hours</h1>
+<p>We are open Monday through Friday from 10 to 16</p>
+```
+
 ### Failed
 
 #### Failed example 1
@@ -150,18 +178,21 @@ Heading marked up with `h` element that does not describe the topic or purpose o
 
 #### Failed example 5
 
-Empty heading marked up with `h` element.
+Heading marked up with `h` element where the visible text nodes describe the content, but the accessible name doesn't.
 
 ```html
-<h1></h1>
+<h1 aria-labelledby="id1">Opening hours</h1>
+<p>We are open Monday through Friday from 10 to 16</p>
+<p id="id1">Weather</p>
 ```
 
 #### Failed example 6
 
-Empty heading marked up with `role="heading"`.
+Heading marked up with `h` element where the accessible name describes the content, but the visible text nodes don't.
 
 ```html
-<p role="heading" level="1"></p>
+<h1 aria-label="Opening hours">Weather</h1>
+<p>We are open Monday through Friday from 10 to 16</p>
 ```
 
 ### Inapplicable
@@ -181,4 +212,20 @@ Heading that is neither visible to users, nor included in the accessibility tree
 ```html
 <h1 style="display: none;">Opening hours</h1>
 <p>We are open Monday through Friday from 10 to 16</p>
+```
+
+#### Inapplicable example 3
+
+Heading does not contain text nodes that do not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153), or has an accessible name that does not only consist of Unicode separator characters.
+
+```html
+<h1></h1>
+```
+
+#### Inapplicable example 4
+
+Heading does not contain text nodes that do not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153), or has an accessible name that does not only consist of Unicode separator characters.
+
+```html
+<h1 aria-label=" "></h1>
 ```

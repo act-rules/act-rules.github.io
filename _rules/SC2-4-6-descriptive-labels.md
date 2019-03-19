@@ -38,11 +38,11 @@ The [programmatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programma
 
 **Note**: Labels do not need to be lengthy. A word, or even a single character, may suffice.
 
-**Note:** In some cases, the context of the form field and its label also provides information relevant for determining the full purpose of the form field. An example is adress form fields grouped under headings or using fieldsets and legends that indicate which address is the shipping address and which one is the billing address. (MORE TO COME)
+**Note:** In some cases, the context of the form field and its label also provides information relevant for determining the full purpose of the form field. An example is adress form fields grouped under headings or using fieldsets and legends that indicate which address is the shipping address and which one is the billing address. (MORE TO COME)...
 
 ## Assumptions
 
-_There are currently no assumptions._
+This rule assumes that in cases where the context is also needed for determining the purpose of a form field, e.g. a case where a heading (MORE TO COME)...
 
 ## Accessibility support
 

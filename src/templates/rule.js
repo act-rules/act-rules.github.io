@@ -15,7 +15,7 @@ export default ({ data }) => {
 	const { rule, allRules, allGlossary, site } = data
 	const { html, frontmatter, tableOfContents, fields } = rule
 	const { slug } = fields
-	const converter = new showdown.Converter();
+	const converter = new showdown.Converter()
 	const updatedTitle = `Glossary | ${site.siteMetadata.title}`
 
 	const getRuleType = rule_type => {
@@ -24,13 +24,15 @@ export default ({ data }) => {
 		}
 		return (
 			<li>
-				<span role='heading' aria-level='1' className="heading">Rule Type</span>
+				<span role="heading" aria-level="1" className="heading">
+					Rule Type
+				</span>
 				<p>{rule_type}</p>
 			</li>
 		)
 	}
 
-	const getGlossaryItemsUsedInRule = (slug) => {
+	const getGlossaryItemsUsedInRule = slug => {
 		const keys = []
 		Object.keys(glossaryUsages).forEach(key => {
 			glossaryUsages[key].forEach(({ slug: s }) => {
@@ -42,58 +44,66 @@ export default ({ data }) => {
 		return keys
 	}
 
-	const renderGlossaryUsed = (slug) => {
+	const renderGlossaryUsed = slug => {
 		const usedKeys = getGlossaryItemsUsedInRule(slug)
 		if (!usedKeys) {
-			return null;
+			return null
 		}
 		const glossaries = allGlossary.edges.filter(({ node }) => {
-			const { frontmatter: { key } } = node
+			const {
+				frontmatter: { key },
+			} = node
 			return usedKeys.includes(`#${key}`)
 		})
 		if (!glossaries.length) {
-			return null;
+			return null
 		}
 		return (
 			<>
 				<br />
 				<hr />
-				<a id='glossary-listing' href='#glossary-listing'><h2>Referenced Glossary</h2></a>
-				{
-					glossaries.map(({ node }) => {
-						const { frontmatter, html } = node
-						const { key } = frontmatter
-						return (
-							<article key={node.id}>
-								<a id={key} href={`#${key}`}>
-									<h3>{frontmatter.title} ({key})</h3>
-								</a>
-								<i>key: <u>{key}</u></i>
-								<div dangerouslySetInnerHTML={{ __html: html }} />
-								<br />
-							</article>
-						)
-					})
-				}
+				<a id="glossary-listing" href="#glossary-listing">
+					<h2>Referenced Glossary</h2>
+				</a>
+				{glossaries.map(({ node }) => {
+					const { frontmatter, html } = node
+					const { key } = frontmatter
+					return (
+						<article key={node.id}>
+							<a id={key} href={`#${key}`}>
+								<h3>
+									{frontmatter.title} ({key})
+								</h3>
+							</a>
+							<i>
+								key: <u>{key}</u>
+							</i>
+							<div dangerouslySetInnerHTML={{ __html: html }} />
+							<br />
+						</article>
+					)
+				})}
 			</>
 		)
 	}
 
-	const renderGlossaryUsedLink = (slug) => {
+	const renderGlossaryUsedLink = slug => {
 		const usedKeys = getGlossaryItemsUsedInRule(slug)
 		if (!usedKeys) {
-			return null;
+			return null
 		}
 		const glossaries = allGlossary.edges.filter(({ node }) => {
-			const { frontmatter: { key } } = node
+			const {
+				frontmatter: { key },
+			} = node
 			return usedKeys.includes(`#${key}`)
 		})
 		if (!glossaries.length) {
-			return null;
+			return null
 		}
 		return (
 			<li>
-				<a href='#glossary-listing'>Referenced Glossary</a>
+				<a href="#glossary-listing">Referenced Glossary</a>
 			</li>
 		)
 	}
@@ -112,7 +122,7 @@ export default ({ data }) => {
 					<br />
 					<div
 						dangerouslySetInnerHTML={{
-							__html: converter.makeHtml(frontmatter.description)
+							__html: converter.makeHtml(frontmatter.description),
 						}}
 					/>
 					{/* html content */}
@@ -133,21 +143,19 @@ export default ({ data }) => {
 						<li>{getSuccessCriterion(frontmatter.success_criterion)}</li>
 						<li>{getTestAspects(frontmatter.test_aspects)}</li>
 						<li>
-							{
-								getAtomicRulesForRule(
-									frontmatter.atomic_rules,
-									allRules.edges,
-									true
-								)
-							}
+							{getAtomicRulesForRule(
+								frontmatter.atomic_rules,
+								allRules.edges,
+								true
+							)}
 						</li>
 						<li>{getAuthors(frontmatter.authors)}</li>
 					</ul>
-					<span role='heading' aria-level='1' className="heading">Table of Contents</span>
+					<span role="heading" aria-level="1" className="heading">
+						Table of Contents
+					</span>
 					<div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
-					<ul>
-						{renderGlossaryUsedLink(slug)}
-					</ul>
+					<ul>{renderGlossaryUsedLink(slug)}</ul>
 				</aside>
 			</section>
 		</Layout>

@@ -9,7 +9,9 @@ export function getSuccessCriterion(success_criterion) {
 	}
 	return (
 		<div className="meta">
-			<span role='heading' aria-level='1'  className="heading">SUCCESS CRITERION</span>
+			<span role="heading" aria-level="1" className="heading">
+				SUCCESS CRITERION
+			</span>
 			{success_criterion.map(sc => {
 				const scData = scUrls[sc]
 				return (
@@ -29,7 +31,9 @@ export function getAuthors(authors) {
 	return (
 		<aside style={{ width: `200px` }}>
 			<div className="meta">
-				<span role='heading' aria-level='1'  className="heading">Authors</span>
+				<span role="heading" aria-level="1" className="heading">
+					Authors
+				</span>
 				{authors.map(author => {
 					const authorData = pkg.contributors.find(c => {
 						return c.name.toLowerCase() === author.toLowerCase()
@@ -55,7 +59,9 @@ export function getTestAspects(test_aspects) {
 	}
 	return (
 		<>
-			<span role='heading' aria-level='1'  className="heading">Test Aspects</span>
+			<span role="heading" aria-level="1" className="heading">
+				Test Aspects
+			</span>
 			{test_aspects.map(ta => (
 				<p key={ta}>{ta}</p>
 			))}
@@ -74,7 +80,9 @@ export function getAtomicRulesForRule(
 	return (
 		<aside style={{ width: `275px` }}>
 			<div className="meta">
-				<span role='heading' aria-level='1'  className="heading">Atomic Rules</span>
+				<span role="heading" aria-level="1" className="heading">
+					Atomic Rules
+				</span>
 				{atomicRulesForRule.map(rule => {
 					let atomicRule = allRules.find(atomicRule => {
 						return (
@@ -103,13 +111,11 @@ export function getGlossaryUsageInRules(usages) {
 	return (
 		<aside>
 			<h3>Used In Rules:</h3>
-			{
-				usages.map(usage => (
-					<Link key={usage.slug} to={usage.slug}>
-						{usage.name}
-					</Link>
-				))
-			}
+			{usages.map(usage => (
+				<Link key={usage.slug} to={usage.slug}>
+					{usage.name}
+				</Link>
+			))}
 		</aside>
 	)
 }

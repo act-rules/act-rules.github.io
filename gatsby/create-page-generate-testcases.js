@@ -33,7 +33,7 @@ const createPageGenerateTestcases = options => {
 		 * -> and their relevant titles
 		 */
 		const allRulePages = data.allMarkdownRemark.edges
-		allRulePages.forEach((markdownPage) => {
+		allRulePages.forEach(markdownPage => {
 			const { node } = markdownPage
 			const { rawMarkdownBody, frontmatter, fields } = node
 			const { name } = frontmatter
@@ -64,7 +64,11 @@ const createPageGenerateTestcases = options => {
 				const { code } = codeBlock
 				let { type = 'html' } = codeBlock
 
-				if (regexps.testcaseCodeSnippetTypeIsSvg.test(codeBlock.block.substring(0, 15))) {
+				if (
+					regexps.testcaseCodeSnippetTypeIsSvg.test(
+						codeBlock.block.substring(0, 15)
+					)
+				) {
 					type = 'svg'
 				}
 

@@ -1,5 +1,5 @@
 const queries = {
-  getAllRules: `{
+	getAllRules: `{
     allMarkdownRemark(
       sort: { fields: [frontmatter___name], order: ASC }
       filter: { fields: { markdownType: { eq: "rules" } } }
@@ -18,7 +18,7 @@ const queries = {
         }
       }
     }
-  }`
+  }`,
 }
 
 module.exports = queries

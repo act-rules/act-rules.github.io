@@ -19,7 +19,7 @@ const getNodeData = options => {
 
 	switch (sourceInstanceName) {
 		case 'rules':
-			const hash = customId({name: relativePath})
+			const hash = customId({ name: relativePath })
 			return {
 				...defaults,
 				path: `${sourceInstanceName}/${hash}`,

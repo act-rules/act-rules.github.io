@@ -2,8 +2,7 @@ const createPageAddMdContext = require('./create-page-add-md-context')
 const createPageGenerateTestcases = require('./create-page-generate-testcases')
 const createGlossaryUsagesInRules = require('./create-glossary-uages-in-rules')
 
-const createPages = async (options) => {
-
+const createPages = async options => {
 	const promises = [
 		/**
 		 * Enhance markdown pages with more context
@@ -21,11 +20,11 @@ const createPages = async (options) => {
 		createPageGenerateTestcases(options),
 
 		/**
-		 * Create glossary usages 
+		 * Create glossary usages
 		 * -> for each glossary item (find references in each rule)
 		 * -> this is saved in `_data` which is later used in `pages/glossary`
 		 */
-		createGlossaryUsagesInRules(options)
+		createGlossaryUsagesInRules(options),
 	]
 
 	await Promise.all(promises)

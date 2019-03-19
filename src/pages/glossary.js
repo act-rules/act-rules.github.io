@@ -24,9 +24,13 @@ export default ({ data }) => {
 							<article key={node.id}>
 								<section>
 									<a id={key} href={`#${key}`}>
-										<h2>{frontmatter.title} ({key})</h2>
+										<h2>
+											{frontmatter.title} ({key})
+										</h2>
 									</a>
-									<i>key: <u>{key}</u></i>
+									<i>
+										key: <u>{key}</u>
+									</i>
 									<div dangerouslySetInnerHTML={{ __html: html }} />
 								</section>
 								{getGlossaryUsageInRules(usedInRules)}

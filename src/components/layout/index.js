@@ -20,8 +20,8 @@ class Layout extends React.Component {
 			const { node } = edge
 			const { path, context } = node
 
-			if(!context || !context.title) {
-				return null;
+			if (!context || !context.title) {
+				return null
 			}
 
 			const key = `${context.title}${path}`
@@ -30,7 +30,7 @@ class Layout extends React.Component {
 					<Link activeClassName="active" to={path}>
 						{context.title}
 					</Link>
-			</li>
+				</li>
 			)
 		})
 	}

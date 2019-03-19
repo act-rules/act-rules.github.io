@@ -13,10 +13,13 @@ export default ({ data }) => {
 		if (!data) {
 			return content
 		}
-		const baseUrl = site.siteMetadata.baseHref.length <= 0 ? window.location.origin : site.siteMetadata.baseHref
+		const baseUrl =
+			site.siteMetadata.baseHref.length <= 0
+				? window.location.origin
+				: site.siteMetadata.baseHref
 		return content.replace(/href="#(.*?)"/g, (match, key) => {
 			const glossaryKey = `#${key.toLowerCase()}`
-			if(!Object.keys(data).includes(glossaryKey)) {
+			if (!Object.keys(data).includes(glossaryKey)) {
 				return match
 			}
 
@@ -31,7 +34,7 @@ export default ({ data }) => {
 
 	const glossaryPaths = Object.keys(glossaryUsages).reduce((out, key) => {
 		out[key] = `glossary/${key}`
-		return out;
+		return out
 	}, {})
 
 	return (

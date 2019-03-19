@@ -14,7 +14,7 @@ export default ({ data }) => {
 	const { edges, totalCount } = rules
 
 	const updatedTitle = `Rules | ${site.siteMetadata.title}`
-	const converter = new showdown.Converter();
+	const converter = new showdown.Converter()
 
 	return (
 		<Layout>
@@ -46,7 +46,7 @@ export default ({ data }) => {
 									{/* rule description */}
 									<div
 										dangerouslySetInnerHTML={{
-											__html: converter.makeHtml(description)
+											__html: converter.makeHtml(description),
 										}}
 									/>
 								</section>

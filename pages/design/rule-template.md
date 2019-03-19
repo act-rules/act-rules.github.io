@@ -6,7 +6,7 @@ The rule template contains a plain language description of the rule, some backgr
 
 Use the [empty atomic rule template](atomic-template-empty.html) to create new rule. When creating a new rule, first read [rule design](rule-design.html).
 
-### Atomic Rule template
+## Atomic Rule template
 
 ````md
 ---

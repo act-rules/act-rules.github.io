@@ -8,11 +8,14 @@ import {
 	getTestAspects,
 } from './../utils/render-fragments'
 import glossaryUsages from './../../_data/glossary-usages.json'
+import SEO from '../components/seo'
 
 export default ({ data }) => {
-	const { rule, allRules, allGlossary } = data
+	const { rule, allRules, allGlossary, site } = data
 	const { html, frontmatter, tableOfContents, fields } = rule
 	const { slug } = fields
+
+	const updatedTitle = `Glossary | ${site.siteMetadata.title}`
 
 	const getRuleType = rule_type => {
 		if (!rule_type) {
@@ -20,7 +23,7 @@ export default ({ data }) => {
 		}
 		return (
 			<li>
-				<span className="heading">Rule Type</span>
+				<span role='heading' aria-level='1'  className="heading">Rule Type</span>
 				<p>{rule_type}</p>
 			</li>
 		)
@@ -47,6 +50,9 @@ export default ({ data }) => {
 			const { frontmatter: { key } } = node
 			return usedKeys.includes(`#${key}`)
 		})
+		if (!glossaries.length) {
+			return null;
+		}
 		return (
 			<>
 				<br />
@@ -72,11 +78,31 @@ export default ({ data }) => {
 		)
 	}
 
+	const renderGlossaryUsedLink = (slug) => {
+		const usedKeys = getGlossaryItemsUsedInRule(slug)
+		if (!usedKeys) {
+			return null;
+		}
+		const glossaries = allGlossary.edges.filter(({ node }) => {
+			const { frontmatter: { key } } = node
+			return usedKeys.includes(`#${key}`)
+		})
+		if (!glossaries.length) {
+			return null;
+		}
+		return (
+			<li>
+				<a href='#glossary-listing'>Referenced Glossary</a>
+			</li>
+		)
+	}
+
 	return (
 		<Layout>
+			<SEO title={updatedTitle} keywords={site.siteMetadata.keywords} />
 			<section className="page-rule">
 				{/* rule content */}
-				<main>
+				<section>
 					{/* title */}
 					<header>
 						<h1>{frontmatter.name}</h1>
@@ -92,7 +118,7 @@ export default ({ data }) => {
 					/>
 					{/* glossary */}
 					{renderGlossaryUsed(slug)}
-				</main>
+				</section>
 				{/* Toc */}
 				<aside className="toc">
 					{/* frontmatter */}
@@ -112,14 +138,11 @@ export default ({ data }) => {
 						</li>
 						<li>{getAuthors(frontmatter.authors)}</li>
 					</ul>
-					<span className="heading">Table of Contents</span>
+					<span role='heading' aria-level='1'  className="heading">Table of Contents</span>
 					<div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
 					<ul>
-						<li>
-							<a href='#glossary-listing'>Referenced Glossary</a>
-						</li>
+						{renderGlossaryUsedLink(slug)}
 					</ul>
-
 				</aside>
 			</section>
 		</Layout>
@@ -178,6 +201,12 @@ export const query = graphql`
 					}
 					excerpt
 				}
+			}
+		}
+		site {
+			siteMetadata {
+				title
+				keywords
 			}
 		}
 	}

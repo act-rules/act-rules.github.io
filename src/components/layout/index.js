@@ -30,7 +30,7 @@ class Layout extends React.Component {
 					<Link activeClassName="active" to={path}>
 						{context.title}
 					</Link>
-				</li>
+			</li>
 			)
 		})
 	}

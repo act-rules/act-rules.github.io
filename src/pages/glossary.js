@@ -8,7 +8,6 @@ import glossaryUsages from './../../_data/glossary-usages.json'
 export default ({ data }) => {
 	const { glossaryData, site } = data
 	const { edges, totalCount } = glossaryData
-
 	const updatedTitle = `Glossary | ${site.siteMetadata.title}`
 
 	return (
@@ -23,13 +22,13 @@ export default ({ data }) => {
 						const usedInRules = glossaryUsages[`#${key}`]
 						return (
 							<article key={node.id}>
-								<main>
+								<section>
 									<a id={key} href={`#${key}`}>
 										<h2>{frontmatter.title} ({key})</h2>
 									</a>
 									<i>key: <u>{key}</u></i>
 									<div dangerouslySetInnerHTML={{ __html: html }} />
-								</main>
+								</section>
 								{getGlossaryUsageInRules(usedInRules)}
 							</article>
 						)

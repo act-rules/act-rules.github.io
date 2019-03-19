@@ -1,1 +1,0 @@
-import 'gatsby-prismjs-dracula'

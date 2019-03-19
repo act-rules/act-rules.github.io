@@ -52,7 +52,6 @@ table {
 	}
 }
 
-
 button, .btn {
 	padding: 1em;
 	text-decoration: none;
@@ -60,23 +59,17 @@ button, .btn {
   display: inline-block;
   letter-spacing: 0.1em;
 	transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
-	@include btn($accent, $fg-secondary);
+	@include btn($bg-secondary, $fg-secondary, $accent);
 	cursor: pointer;
-
-  &.secondary {
-    @include btn($fg-secondary, $accent);
-  }
-}
-
-pre[class*="language-"]{
-	background-color: $bg-secondary !important;
-}
-pre[class*="language-"], code[class*="language-"]{
-	background-color: $bg-secondary !important;
 }
 
 blockquote {
 	margin: 2rem 0;
 	background-color: lighten($accent, 30%);
 	padding: 1rem;
+}
+
+em {
+	display: block;
+
 }

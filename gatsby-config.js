@@ -1,12 +1,17 @@
 const pkg = require('./package.json')
 const siteTitle = pkg.name.split('-').join(' ')
 
+console.log(process.env);
+
 module.exports = {
 	siteMetadata: {
 		title: siteTitle,
 		description: pkg.description,
 		author: pkg.author,
-		keywords: pkg.keywords
+		keywords: pkg.keywords,
+		baseHref: process.env.NODE_ENV === 'development'
+			? ''
+			: `${pkg}.www.url`
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,

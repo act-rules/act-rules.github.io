@@ -14,17 +14,17 @@ If you want to get even more out of your involvement in our rule creation projec
 
 ## Overview of how you can contribute
 
-- [Give feedback on rules](#Give-feedback-on-rules)
-  - [Feedback for ideas and early drafts (Issues on Github)](#)
-  - [Feedback and reviews for draft rules (Pull Requests on Github)](<#Feedback-for-ideas-and-early-drafts-(Issues-on-Github)>)
-  - [Feedback/corrections for published rules](#Feedback/corrections-for-published-rules)
-- [Suggest new rules](#Suggest-new-rules)
-  - [Submit an idea for discussion (Issue on Github)](<#Submit-an-idea-for-discussion-(Issue-on-Github)>)
-  - [Submit a draft for a rule (Pull Request on Github)](#Submit-a-draft-for-a-rule-(Pull-Request-on-Github)
-- [Join the Community Group](#Join-the-Community-Group)
-  - [Mailing list keeps you up to date](#Mailing-list-keeps-you-up-to-date)
-  - [Participate in our monthly calls](#Participate-in our-monthly-calls)
-  - [How to join the Community Group](#How-to-join-the-Community-Group)
+- [Give feedback on rules](#give-feedback-on-rules)
+  - [Feedback for ideas and early drafts (Issues on Github)](#feedback-for-ideas-and-early-drafts-issues-on-github)
+  - [Feedback and reviews for draft rules (Pull Requests on Github)](#feedback-and-reviews-for-draft-rules-pull-requests-on-github)
+  - [Feedback/corrections for published rules](#feedbackcorrections-for-published-rules)
+- [Suggest new rules](#suggest-new-rules)
+  - [Submit an idea for discussion (Issue on Github)](#submit-an-idea-for-discussion-issue-on-github)
+  - [Submit a draft for a rule (Pull Request on Github)](#submit-a-draft-for-a-rule-pull-request-on-github)
+- [Join the Community Group](#join-the-community-group)
+  - [Mailing list keeps you up to date](#mailing-list-keeps-you-up-to-date)
+  - [Participate in our monthly calls](#participate-in-our-monthly-calls)
+  - [How to join the Community Group](#how-to-join-the-community-group)
 
 ## Give feedback on rules
 

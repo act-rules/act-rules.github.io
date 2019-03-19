@@ -88,8 +88,7 @@
 		"prop-types": "^15.7.2",
 		"react": "^16.8.3",
 		"react-dom": "^16.8.3",
-		"react-helmet": "^5.2.0",
-		"gatsby-prismjs-dracula": "^0.1.15"
+		"react-helmet": "^5.2.0"
 	},
 	"devDependencies": {
 		"gfm-code-blocks": "^1.0.0",

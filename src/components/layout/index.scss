@@ -1,6 +1,7 @@
 @import './../../styles/base';
 @import './../../styles/variables';
 @import './../../styles/mixins';
+@import './../../styles/prism-a11y';
 
 section.layout-container {
   @include fixed-stretch();
@@ -167,7 +168,7 @@ section.layout-container {
               }
             }
 
-            >main {
+            >section {
               flex: 1;
               >a{
                 text-decoration: none;
@@ -248,7 +249,7 @@ section.layout-container {
             h2 {
               margin: 0;
             }
-            >main {
+            >section {
               flex: 1
             }
 
@@ -274,7 +275,7 @@ section.layout-container {
       align-items: flex-start;
       padding-right: 225px;
 
-      main {
+      section {
         flex: 1;
         position: relative;
         width: 100%;
@@ -322,7 +323,7 @@ section.layout-container {
             a{
               cursor: pointer;
               text-decoration: none;
-              padding: 0.25rem 0.5rem;
+              padding: 0rem 0.75rem;
               text-transform: uppercase;
               display: block;
               &:hover {
@@ -354,7 +355,7 @@ and (max-width : 1024px) {
   section.layout-container {
     >aside{
       position: absolute;
-      left: -220px;
+      left: -230px;
       top: 0;
       bottom: 0;
       max-width: 230px;
@@ -362,6 +363,9 @@ and (max-width : 1024px) {
       z-index: 1;
       &:after{
         opacity: 1;
+      }
+      &:focus-within{
+        left:0;
       }
       &:hover{
         left: 0;

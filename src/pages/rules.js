@@ -35,7 +35,7 @@ export default ({ data }) => {
 						const { slug } = fields
 						return (
 							<article key={id}>
-								<main>
+								<section>
 									{/* rule id */}
 									<Link to={slug}>
 										<h2>{name}</h2>
@@ -44,7 +44,7 @@ export default ({ data }) => {
 									{getSuccessCriterion(success_criterion)}
 									{/* rule description */}
 									<p>{description}</p>
-								</main>
+								</section>
 								{/* atomic rules */}
 								{getAtomicRulesForRule(atomic_rules, allRules.edges)}
 								{/* authors */}

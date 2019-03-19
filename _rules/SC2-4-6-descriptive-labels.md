@@ -35,7 +35,7 @@ This rule applies to any HTML `label` element or other element referenced by `ar
 
 ### Expectation
 
-Each target element describes the purpose of the associated form field element.
+Each target element, together with it's programmatically associated heading or legend elements, describes the purpose of the associated form field element.
 
 **Note**: Labels do not need to be lengthy. A word, or even a single character, may suffice.
 
@@ -100,6 +100,27 @@ Label is included in accessibility tree, but not visible
 ```html
 <p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">First name:</p>
 <input aria-labelledby="label_fname" type="text" name="fname"/>
+```
+
+#### Passed example 6
+
+The label alone is not enough to describe the purpose of the field, but together with it's context it is.
+
+```html
+<fieldset>
+  <legend>
+    Shipping adress
+  </legend>
+  <label for="shippingfname">First name:</label>
+  <input id="shippingfname" type="text" name="fname"/>
+</fieldset>
+<fieldset>
+  <legend>
+    Billing adress
+  </legend>
+  <label for="billingfname">First name:</label>
+  <input id="billingfname" type="text" name="fname"/>
+</fieldset>
 ```
 
 ### Failed

@@ -21,23 +21,24 @@ authors:
 
 ### Applicability
 
-This rule applies to any HTML `label` element or other element referenced by `aria-labelledby` that:
+This rule applies to each [programmatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) `label` element and [accessible name](#accessible-name) of an element that is [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree) and has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
 
-- is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree), and
-- is programmatically associated with an HTML element that has one of the listed form field [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
-
-**Note**: The list of form field roles is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
-- have a [semantic role](#semantic-role) that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and 
+**Note**: The list of applicable [semantic roles](#semantic-roles) is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
+- inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and 
 - does not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
+
+**Note:**
 - The `option` role is not part of the list of applicable roles, because it does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an accessible name.
 
-**Note**: This rule is a partial check for WCAG 2.1 success criterion 2.4.6, which applies to all labels. "Label" is used in its general sense and includes text or other components with a text alternative that is presented to a user to identify a component within Web content.
+**Note**: This rule is a partial check for WCAG 2.1 success criterion 2.4.6, which applies to all labels. "Label" in WCAG is used in its general sense and includes text or other components with a text alternative that is presented to a user to identify a component within Web content.
 
 ### Expectation
 
-Each target element describes the purpose of the associated form field element.
+The [programmatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) `label` element and [accessible name](#accessible-name), if the two are different, describe the purpose of the associated form field element.
 
 **Note**: Labels do not need to be lengthy. A word, or even a single character, may suffice.
+
+**Note:** TBD
 
 ## Assumptions
 

@@ -24,7 +24,7 @@ export default ({ data }) => {
 				<h1>Rules ({totalCount})</h1>
 				{/* Table of rules */}
 				<section className="rules-listing">
-					{edges.map(({ node }, index) => {
+					{edges.map(({ node }) => {
 						const { frontmatter, id, fields } = node
 						const {
 							name,
@@ -38,7 +38,7 @@ export default ({ data }) => {
 							<article key={id}>
 								<section>
 									{/* rule id */}
-									<a href={slug}>
+									<a href={slug.replace('rules/', '')}>
 										<h2>{name}</h2>
 									</a>
 									{/* rule sc's */}

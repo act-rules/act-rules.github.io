@@ -33,6 +33,8 @@ The [visible](#visible) [content](https://www.w3.org/TR/WCAG21/#dfn-content) of 
 
 **Note**: Headings do not need to be lengthy. A word, or even a single character, may suffice.
 
+**Note:** Having a heading that has no section of content might be a WCAG violation under other success criteria (e.g. 1.3.1 Info and Relationships, if the heading markup has been misused for purely presentational purposes), however, this is out of scope for this rule. 
+
 ### Expectation 2
 
 The [accessible name](#accessible-name) of each target element describes the topic or purpose of the entirety or a part of its [section of the content](#section-of-content), or the `heading` has no section of the content.
@@ -40,7 +42,7 @@ The [accessible name](#accessible-name) of each target element describes the top
 **Note:** Usually the accessible name will be the same as the visible content of the `heading`, but in some cases the two might be different, and in these cases both versions of the `heading` need to be evaluated.
 
 ## Assumptions
-_There are currently no assumptions._
+This rule assumes that while having a heading that has no section of content might be a WCAG violation under other success criteria (e.g. 1.3.1 Info and Relationships, if the heading markup has been misused for purely presentational purposes), this is allowed under success criterion 2.4.6 Headings and Labels: Headings and labels describe topic or purpose.
 
 ## Accessibility Support
 

@@ -18,7 +18,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any `SVG` element with the semantic role of `img` or `graphics-document`, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+The rule applies to any `svg` element with the semantic role of `img` or `graphics-document`, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation
 
@@ -47,7 +47,7 @@ Browser and assitive technology support for SVG `title` and `desc` elements is c
 
 #### Pass example 1
 
-The `svg` has a role of `img` which takes it's accessible name from it's `<title>` element.
+The `<svg>` element has a role of `img` which takes it's accessible name from it's `<title>` element.
 
 ```html
 <svg xmlns="https://www.w3.org/2000/svg" role="img" width="100" height="100">
@@ -58,7 +58,7 @@ The `svg` has a role of `img` which takes it's accessible name from it's `<title
 
 #### Pass example 2
 
-The `svg` has a role of `img` and an `aria-label` containing the accessible name.
+The `<svg>` element has a role of `img` and an `aria-label` containing the accessible name.
 
 ```html
 <svg xmlns="https://www.w3.org/2000/svg" role="img" width="100" height="100" aria-label="A yellow circle">
@@ -68,7 +68,7 @@ The `svg` has a role of `img` and an `aria-label` containing the accessible name
 
 #### Pass example 3
 
-The `svg` has the role of `img` which takes it's accessible name from it's child content, the `<text>` element.
+The `<svg>` element has the role of `img` which takes it's accessible name from it's child content, the `<text>` element.
 
 ```html
 <svg xmlns="https://www.w3.org/2000/svg" role="img" width="100" height="100">
@@ -79,7 +79,7 @@ The `svg` has the role of `img` which takes it's accessible name from it's child
 
 #### Pass example 4
 
-The `svg` has the role of `graphics-document` which takes it's accessible name from it's child content, the `<text>` element.
+The `<svg>` element has the role of `graphics-document` which takes it's accessible name from it's child content, the `<text>` element.
 
 ```html
 
@@ -100,7 +100,7 @@ The `svg` has the role of `graphics-document` which takes it's accessible name f
 
 #### Failed example 1
 
-The `svg` has a rle of `img` but has no accessible name.
+The `<svg>` element has a rle of `img` but has no accessible name.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" role="img" width="100" height="100">
@@ -110,7 +110,7 @@ The `svg` has a rle of `img` but has no accessible name.
 
 #### Failed example 2
 
-The `svg` element has an empty `title`.
+The `<svg>` element has an empty `title`.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" role="img">

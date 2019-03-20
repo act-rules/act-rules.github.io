@@ -34,7 +34,7 @@ The page contains at least one `title` element.
 
 ### Expectation 2
 
-The first `title` element contains [letters or numbers](#letters-or-numbers).
+The first `title` element has at least one [descendant](https://www.w3.org/TR/dom/#concept-tree-descendant) that is a [text node](https://www.w3.org/TR/dom/#text) that contains [letters or numbers](#letters-or-numbers).
 
 ## Assumptions
 

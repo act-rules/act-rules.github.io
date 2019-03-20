@@ -25,7 +25,7 @@ The root element of the [page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if
 
 ### Expectation
 
-The test target has an `lang` or `xml:lang` attribute that is not the empty string ("").
+The test target has a `lang` or `xml:lang` attribute that is not the empty string ("").
 
 **Note**: HTML5 recommends using `lang` instead of `xml:lang`. This is not known to impact accessibility, which is why use of both is permitted by this rule.
 

@@ -18,7 +18,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any `svg` element with the semantic role of `img` or `graphics-document`, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+The rule applies to any `svg` element with the [semantic role](#semantic-role) of `img` or `graphics-document`, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation
 

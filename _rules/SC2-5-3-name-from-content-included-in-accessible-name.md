@@ -1,5 +1,5 @@
 ---
-name: label and name from content mismatch
+name: Name from content included in accessible name
 description: |
   Interactive elements labelled through their content must have their visible label as part of their accessible name
 
@@ -22,16 +22,14 @@ authors:
 
 This rule applies to any element that has:
 * a [semantic role](#semantic-role) that is a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent), and 
-* [visible text content](#visible-text-content), and
+* [visible](#visible) [text](https://www.w3.org/TR/WCAG21/#dfn-text), and
 * an `aria-label` or `aria-labelledby` attribute.
 
 **Note**: [widget roles](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent) are: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
 
 ### Expectation
 
-The complete [visible text content](#visible-text-content) of the target element either matches or is contained within its [accessible name](#accessible-name).
-
-**Note**: Leading and trailing whitespace and difference in case sensitivity should be ignored.
+The complete [visible](#visible) [text](https://www.w3.org/TR/WCAG21/#dfn-text) of the target element is [included](#included-characters) within its [accessible name](#accessible-name).
 
 ## Assumptions
 
@@ -67,7 +65,7 @@ Character insensitivity between visible label and accessible name.
 
 #### Passed example 3
 
-Full visible label is contained in the accessible name.
+Full visible label is included in the accessible name.
 
 ```html
 <button name="link" aria-label="Next Page in the list">Next Page</button>
@@ -77,7 +75,7 @@ Full visible label is contained in the accessible name.
 
 #### Failed example 1
 
-Visible label doesn't match accessible name.
+Visible label is not included in accessible name.
 
 ```html
 <div role="link" aria-label="OK">Next</div>
@@ -127,7 +125,7 @@ No rendered text in name from content.
 
 #### Inapplicable example 5
 
-Non-text content.
+Sequence of characters in name from content is not expressing anything in human language and is therefore not considered [text](https://www.w3.org/TR/WCAG21/#dfn-text).
 
 ```html
 <button aria-label="close">X</button>

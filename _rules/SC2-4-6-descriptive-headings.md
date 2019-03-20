@@ -23,15 +23,21 @@ authors:
 
 ### Applicability
 
-This rule applies to any element with the [semantic role](#semantic-role) of heading that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree), and that either contains text nodes that do not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153), or has an accessible name that does not only consist of Unicode separator characters.
+This rule applies to any element with the [semantic role](#semantic-role) of `heading` that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree), and that either has [visible](#visible) [content](https://www.w3.org/TR/WCAG21/#dfn-content), or has an accessible name that does not only consist of Unicode separator characters.
 
 **Note**: This rule only applies to elements with the [semantic role](#semantic-role) of heading. Thus, it is a partial check for WCAG 2.0 success criterion 2.4.6, which applies to all headings. "Heading" is used in its general sense and includes headlines and other ways to add a heading to different types of content. This includes elements that are not marked up as headings in the code, but still act visually as headings, e.g. by larger and/or bolder text. 
 
-### Expectation
+### Expectation 1
 
-The text nodes and [accessible name](#accessible-name), if the two are different, of each target element describe the topic or purpose of the entirety or a part of its [section of the content](#section-of-content), or it has no section of the content.
+The [visible](#visible) [content](https://www.w3.org/TR/WCAG21/#dfn-content) of each target element describes the topic or purpose of the entirety or a part of its [section of the content](#section-of-content), or the `heading` has no section of the content.
 
 **Note**: Headings do not need to be lengthy. A word, or even a single character, may suffice.
+
+### Expectation 2
+
+The [accessible name](#accessible-name) of each target element describes the topic or purpose of the entirety or a part of its [section of the content](#section-of-content), or the `heading` has no section of the content.
+
+**Note:** Usually the accessible name will be the same as the visible content of the `heading`, but in some cases the two might be different, and in these cases both versions of the `heading` need to be evaluated.
 
 ## Assumptions
 _There are currently no assumptions._
@@ -136,6 +142,15 @@ Heading marked up with `h` element where both the visible text nodes as well as 
 ```html
 <h1 class="target" aria-label="Office opening hours">Opening Hours</h1>
 <p>We are open Monday through Friday from 10 to 16</p>
+```
+
+#### Passed example 10
+
+Visible heading is made up by an image of text, that also has an accessible name. Both visible content and accessible name is descriptive.
+
+```html
+<h1><img src="../test-assets/SC2-4-6-descriptive-headings/oranges.png" "alt="Oranges"></h1>
+<p>I really like oranges.</p>
 ```
 
 ### Failed

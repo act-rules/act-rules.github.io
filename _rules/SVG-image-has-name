@@ -18,7 +18,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any `SVG` element with the rle of `img` or `graphics-document`, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+The rule applies to any `SVG` element with the semantic role of `img` or `graphics-document`, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation
 
@@ -35,10 +35,11 @@ Browser and assitive technology support for SVG `title` and `desc` elements is c
 ## Background
 
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
-- [F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)](https://www.w3.org/WAI/WCAG21/Techniques/failures/F30)
-- https://www.w3.org/TR/svg-aam-1.0/#mapping_general
-- https://www.w3.org/TR/svg-aam-1.0/#mapping_role_table
-- https://www.w3.org/TR/svg-aam-1.0/#include_elements
+- [SVG Accessibility API Mappings](https://www.w3.org/TR/svg-aam-1.0)
+- [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0/)
+- [ARIA4: Using a WAI-ARIA role to expose the role of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA4)
+- [ARIA6: Using aria-label to provide labels for objects](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA6)
+- [ARIA10: Using aria-labelledby to provide a text alternative for non-text content](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA10)
 
 ## Test Cases
 

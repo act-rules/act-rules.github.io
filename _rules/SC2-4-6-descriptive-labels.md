@@ -21,7 +21,7 @@ authors:
 
 ### Applicability
 
-This rule applies to each [programmatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) `label` element and [accessible name](#accessible-name) of an element that is [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree) and has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
+This rule applies to each [accessible name](#accessible-name) for an element, or `label` element that is either [visible](#visible) or [included in the accessibility tree](#included in the accessibility tree) and has a [labeled control](https://www.w3.org/TR/html/sec-forms.html#labeled-control), that is [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree) and has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
 
 **Note**: The list of applicable [semantic roles](#semantic-roles) is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
 - inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and 
@@ -32,9 +32,15 @@ This rule applies to each [programmatically determinable](#https://www.w3.org/TR
 
 **Note**: This rule is a partial check for WCAG 2.1 success criterion 2.4.6, which applies to all labels. "Label" in WCAG is used in its general sense and includes text or other components with a text alternative that is presented to a user to identify a component within Web content.
 
-### Expectation
+### Expectation 1
 
-The [programmatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) `label` element and [accessible name](#accessible-name), if the two are different, describe the purpose of the associated form field element.
+The [programmatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) `label` element, together with its context, describe the purpose of the associated form field element.
+
+**Note:** Context in this case could be e.g. headings, fieldsets and legends, text that is located close by etc.
+
+### Expectation 2
+
+The [accessible name](#accessible-name), together with it's context, describe the purpose of the associated form field element.
 
 **Note**: Labels do not need to be lengthy. A word, or even a single character, may suffice.
 
@@ -42,7 +48,7 @@ The [programmatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programma
 
 ## Assumptions
 
-This rule assumes that in cases where the context is also needed for determining the purpose of a form field, e.g. a case where a heading (MORE TO COME)...
+This rule assumes that while having an important context that is not [programatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) might be a WCAG violation under other success criteria (e.g. 1.3.1 Info and Relationships, if text that has not been marked up as headings is used to split a form into different sections), this is allowed under success criterion 2.4.6 Headings and Labels: Headings and labels describe topic or purpose.
 
 ## Accessibility support
 
@@ -87,7 +93,7 @@ Implicit label that is coded with the `label` element and describes the purpose 
 
 #### Passed example 4
 
-Label is visible, but not included in accessibility tree
+Label is visible, but not included in accessibility tree.
 
 ```html
 <p id="label_fname" aria-hidden="true">First name:</p>
@@ -96,11 +102,39 @@ Label is visible, but not included in accessibility tree
 
 #### Passed example 5
 
-Label is included in accessibility tree, but not visible
+Label is included in accessibility tree, but not visible.
 
 ```html
 <p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">First name:</p>
 <input aria-labelledby="label_fname" type="text" name="fname"/>
+```
+
+#### Passed example 6
+
+Programatically determinable headings provide a context that together with the labels describe the purpose of the form fields.
+
+```html
+<h2>Shipping adress</h2>
+<label>Name<input id="name" type="text" name="name"/></label>
+<label>Street<input id="street" type="text" name="street"/></label>
+
+<h2>Billing adress</h2>
+<label>Name<input id="name" type="text" name="name"/></label>
+<label>Street<input id="street" type="text" name="street"/></label>
+````
+
+#### Passed example 6
+
+Surrounding text provides a context that together with the labels describe the purpose of the form fields.
+
+```html
+<div>Shipping adress:</div>
+<label>Name<input id="name" type="text" name="name"/></label>
+<label>Street<input id="street" type="text" name="street"/></label>
+
+<div>Billing adress</div>
+<label>Name<input id="name" type="text" name="name"/></label>
+<label>Street<input id="street" type="text" name="street"/></label>
 ```
 
 ### Failed
@@ -131,7 +165,7 @@ Implicit label that is coded with the `label` element and does not describe the 
 <label>Menu<input id="fname" type="text" name="fname"/></label>
 ```
 
-#### Passed example 4
+#### Failed example 4
 
 Label is visible, but not included in accessibility tree, and does not describe the purpose of the associated element.
 
@@ -140,7 +174,7 @@ Label is visible, but not included in accessibility tree, and does not describe 
 <input aria-labelledby="label_fname" type="text" name="fname"/>
 ```
 
-#### Passed example 5
+#### Failed example 5
 
 Label is included in accessibility tree, but not visible, and does not describe the purpose of the associated element.
 

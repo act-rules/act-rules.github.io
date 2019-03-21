@@ -25,7 +25,7 @@ This rule applies to any HTML element with the [semantic role](#semantic-role) o
 ### Expectation
 
 The target element either:
-- contains text nodes that do not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153), or 
+- contains [text nodes](https://www.w3.org/TR/dom/#text) that do not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153), or 
 - does not contain any HTML `<br>` elements, or 
 - has an accessible name that does not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153).
 

@@ -34,13 +34,13 @@ This rule applies to each [accessible name](#accessible-name) for an element, or
 
 ### Expectation 1
 
-The [programmatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) `label` element, together with its context, describe the purpose of the associated form field element.
+The [programmatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) `label` element, if there is any, together with its context, describe the purpose of the associated form field element.
 
 **Note:** Context in this case could be e.g. headings, fieldsets and legends, text that is located close by etc.
 
 ### Expectation 2
 
-The [accessible name](#accessible-name), together with it's context, describe the purpose of the associated form field element.
+The [accessible name](#accessible-name), if there is any, together with it's context, describe the purpose of the associated form field element.
 
 **Note**: Labels do not need to be lengthy. A word, or even a single character, may suffice.
 

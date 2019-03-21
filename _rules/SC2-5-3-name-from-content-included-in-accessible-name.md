@@ -20,12 +20,12 @@ authors:
 
 ### Applicability
 
-This rule applies to any element that has:
-* a [semantic role](#semantic-role) that is a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent), and 
-* [visible](#visible) [text](https://www.w3.org/TR/WCAG21/#dfn-text), and
-* an `aria-label` or `aria-labelledby` attribute.
+This rule applies to any HTML or SVG element that:
+* has a [semantic role](#semantic-role) that is a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent), and 
+* has [visible](#visible) [text](https://www.w3.org/TR/WCAG21/#dfn-text), and
+* has an `aria-label` or `aria-labelledby` attribute, or where all of or part of the [name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent) is not [visible](#visible).
 
-**Note**: [widget roles](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent) are: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
+**Note**: [widget roles](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [support name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent) are: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
 
 ### Expectation
 
@@ -71,6 +71,28 @@ Full visible label is included in the accessible name.
 <button name="link" aria-label="Next Page in the list">Next Page</button>
 ```
 
+#### Passed example 4
+
+Full visible label is included in the accessible name.
+
+```html
+<head>
+  <style>
+    .sr-only {
+      position:absolute;
+      left:-10000px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden;}
+  </style>
+</head>
+
+<body>
+  <a href="home.html">Read more<span style="sr-only"> about our pricing</span></a>
+</body>
+```
+
 ### Failed
 
 #### Failed example 1
@@ -87,6 +109,28 @@ Not all of visible label is included in accessible name.
 
 ```html
 <button name="link" aria-label="the full">The full label</button>
+```
+
+#### Failed example 3
+
+The full visible label is split out across the accessible name.
+
+```html
+<head>
+  <style>
+    .sr-only {
+      position:absolute;
+      left:-10000px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden;}
+  </style>
+</head>
+
+<body>
+  <a href="home.html">Link <span style="sr-only">that opens a new tab</span> to the homepage</a>
+</body>
 ```
 
 ### Inapplicable 

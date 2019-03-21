@@ -1,7 +1,7 @@
 ---
 name: ARIA required context role
 description: | 
-  This rule checks that a role does not exist outside of its required context roles.
+  This rule checks that a role does not exist outside of its required context.
 
 success_criterion:
 - 1.3.1 # Info and Relationships
@@ -28,11 +28,11 @@ The target element is [owned by](#owned-by) an element that has a [semantic role
 
 ## Assumptions
 
-This rule assumes that the explicit [semantic role](#semantic-role) on the target element is being used with the intention to comply to WCAG. If the explicit semantic role on the target element is incorrectly used, and any relationships between elements are already programmatically determinable, failing this rule might not result in accessibility issues for real users, and it should then not be considered a failure under WCAG success criterion 1.3.1 Info and Relationships.
+This rule assumes that the explicit [semantic role](#semantic-role) on the target element is being used with the intention to comply to WCAG. If the explicit semantic role on the target element is incorrectly used, and any relationships between elements are already programmatically determinable, failing this rule might not result in accessibility issues for users of assistive technologies, and it should then not be considered a failure under WCAG success criterion 1.3.1 Info and Relationships.
 
 ## Accessibility Support
 
-This rule relies on assistive technologies to recognize which elements are [owned by](#owned-by) each other. This includes when the element is owned by another element that is an ancester, but not a parent of the target element. Some assistive technologies does not accept these `owned by` relationships, unless workarounds are used.
+This rule relies on assistive technologies to recognize which elements are [owned by](#owned-by) each other. This includes when the element is owned by another element that is an ancestor, but not a parent of the target element. Some assistive technologies does not accept these owned by relationships, unless workarounds are used.
 Furthermore, `aria-owns` has limited support in some user agents.
 
 ## Background

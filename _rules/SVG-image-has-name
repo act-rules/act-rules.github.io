@@ -22,7 +22,7 @@ The rule applies to any `svg` element with the [semantic role](#semantic-role) o
 
 ### Expectation
 
-Each target element has a [non-empty](#non-empty) accessible name.
+Each target element has a an accessible name.
 
 ## Assumptions
 

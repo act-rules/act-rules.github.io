@@ -23,7 +23,7 @@ authors:
 This rule applies to any HTML or SVG element that:
 * has a [semantic role](#semantic-role) that is a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent), and 
 * has [visible](#visible) [text](https://www.w3.org/TR/WCAG21/#dfn-text), and
-* has an `aria-label` or `aria-labelledby` attribute, or where all of or part of the [name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent) is not [visible](#visible).
+* where the [visible](#visible) [text](https://www.w3.org/TR/WCAG21/#dfn-text) does not [match](#matching-characters) the [accessible name](#accessible-name).
 
 **Note**: [widget roles](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [support name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent) are: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
 

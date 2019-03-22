@@ -22,9 +22,9 @@ authors:
 
 ### Applicability
 
-The rule applies to any page where the [root](https://www.w3.org/TR/dom41/#concept-tree-root) element is an `html` element, and which is not embedded in another page.
+The rule applies to any page where the [document element](https://www.w3.org/TR/dom/#document-element) is an `html` element, and where the page is not embedded in another page.
 
-**Note**: Pages may be embedded inside other pages through elements such as iframes and object elements.
+**Note**: Pages may be embedded inside other pages through elements such as `iframe` and `object` elements.
 
 ### Expectation 1
 
@@ -66,7 +66,7 @@ This page has a `title` with content.
 
 #### Passed example 2
 
-This page give a `title` to an iframe.
+This page gives a `title` to an iframe.
 
 ```html
 <html>
@@ -176,7 +176,7 @@ The first `title` element is empty.
 
 #### Failed example 5
 
-The `title` only contains a seperator character.
+The `title` only contains a separator character.
 
 ```html
 <html>

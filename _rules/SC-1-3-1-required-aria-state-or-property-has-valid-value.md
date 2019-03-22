@@ -40,8 +40,8 @@ For value type `URI`, this rule does not require that the destination URI exists
 
 ## Assumptions
 
-- This rule assumes that elements that are not [included in the accessibility tree](#included-in-the-accessibility-tree) or are [focusable](#focusable) can still impact users if they are used for the [accessible name computation](https://www.w3.org/TR/accname-1.1/#mapping_additional_nd_te). Therefore the applicability of this rule also includes `aria-*` attributes that participate in the accessible name computation as well as [WAI-ARIA 1.1 states and properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) that are specified on elements that are included in the accessibility tree or are focusable.
-- The ARIA `property` is being used to comply to WCAG.
+- This rule assumes that elements that are not [included in the accessibility tree](#included-in-the-accessibility-tree) or are [focusable](#focusable) can still impact users if they are used for the [accessible name computation](https://www.w3.org/TR/accname-1.1/#mapping_additional_nd_te). Therefore the applicability of this rule also includes `aria-*` attributes that participate in the accessible name computation as well as [WAI-ARIA properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) that are specified on elements that are included in the accessibility tree or are focusable.
+- The WAI-ARIA `property` is being used to comply to WCAG.
 
 ## Accessibility Support
 

@@ -21,7 +21,10 @@ authors:
 
 ### Applicability
 
-This rule applies to each [accessible name](#accessible-name) for an element, or `label` element that is either [visible](#visible) or [included in the accessibility tree](#included in the accessibility tree) and has a [labeled control](https://www.w3.org/TR/html/sec-forms.html#labeled-control), that is [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree) and has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
+This rule applies to each element that:
+- has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`, and
+- is [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree), and 
+- is the [labeled control](https://www.w3.org/TR/html/sec-forms.html#labeled-control) of a `label` element that is either [visible](#visible) or [included in the accessibility tree](#included in the accessibility tree), or has an [accessible name].
 
 **Note**: The list of applicable [semantic roles](#semantic-roles) is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
 - inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and 
@@ -34,7 +37,7 @@ This rule applies to each [accessible name](#accessible-name) for an element, or
 
 ### Expectation 1
 
-The [programmatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) `label` element, if there is any, together with its context, describe the purpose of the associated form field element.
+The `label` element, if there is any, together with its context, describe the purpose of the associated form field element.
 
 **Note:** Context in this case could be e.g. headings, fieldsets and legends, text that is located close by etc.
 

@@ -20,9 +20,9 @@ authors:
 
 ### Applicability
 
-This rule applies to the [document title](https://www.w3.org/TR/html5/single-page.html#dom-tree-accessors) in a [document](https://www.w3.org/TR/dom/#concept-document) where the [document element](https://www.w3.org/TR/dom/#document-element) is an HTML `<html>` element **and** the `<title>` element contains [text nodes](https://www.w3.org/TR/dom/#text) that do not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153).
+This rule applies to the [document title](https://www.w3.org/TR/html5/single-page.html#dom-tree-accessors) in a [document](https://www.w3.org/TR/dom/#concept-document) where the [document element](https://www.w3.org/TR/dom/#document-element) is an HTML `html` element **and** the `title` element contains [text nodes](https://www.w3.org/TR/dom/#text) that do not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153).
 
-**Note:** Due to the definition of [document title](https://www.w3.org/TR/html5/single-page.html#dom-tree-accessors) this rule only applies to the first `<title>` element in the document, even if there are more `<title>` elements in the document.
+**Note:** Due to the definition of [document title](https://www.w3.org/TR/html5/single-page.html#dom-tree-accessors) this rule only applies to the first `title` element in the document, even if there are more `title` elements in the document.
 
 ### Expectation
 
@@ -34,7 +34,7 @@ _There are no assumptions for this rule._
 
 ## Accessibility Support
 
-- This rule assumes that browsers only recognize the first `<title>` element if multiple `<title>` elements are present in the [document](https://www.w3.org/TR/dom/#concept-document). Testing shows that this in general is the case. Therefore the scope of this rule is limited to only checking the first `<title>` element in a document.
+- This rule assumes that browsers only recognize the first `title` element if multiple `title` elements are present in the [document](https://www.w3.org/TR/dom/#concept-document). Testing shows that this in general is the case. Therefore the scope of this rule is limited to only checking the first `title` element in a document.
 
 ## Background
 
@@ -48,7 +48,8 @@ _There are no assumptions for this rule._
 
 #### Passed example 1
 
-The `<title>` element describes the content of the document.
+The `
+title>` element describes the content of the document.
 
 ```html
 <html>

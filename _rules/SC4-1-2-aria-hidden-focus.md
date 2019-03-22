@@ -70,7 +70,7 @@ Content hidden through CSS.
 
 #### Passed example 3
 
-Content made unfocusable through tabindex.
+Content taken out of sequential focus order using tabindex.
 
 ```html
 <div aria-hidden="true">
@@ -80,7 +80,7 @@ Content made unfocusable through tabindex.
 
 #### Passed example 4
 
-Content made unfocusable through disabled.
+Content made unfocusable through `disabled` attribute.
 
 ```html
 <input disabled aria-hidden="true" />
@@ -95,6 +95,16 @@ Content made unfocusable through disabled.
     <div aria-hidden="false">
         <button tabindex="-1">Some button</button>
     </div>
+</div>
+```
+
+#### Passed example 6
+
+Content taken out of sequential focus order using tabindex.
+
+```html
+<div aria-hidden="true">
+	<button tabindex="-2">Some button</button>
 </div>
 ```
 
@@ -142,7 +152,7 @@ Focusable content through `tabindex`.
 
 #### Failed example 5
 
-Focusable summary element
+Focusable `summary` element.
 
 ```html
 <details aria-hidden="true">

@@ -70,7 +70,7 @@ Content hidden through CSS.
 
 #### Passed example 3
 
-Content taken out of sequential focus order using tabindex.
+Content taken out of sequential focus order using `tabindex`.
 
 ```html
 <div aria-hidden="true">
@@ -100,7 +100,7 @@ Content made unfocusable through `disabled` attribute.
 
 #### Passed example 6
 
-Content taken out of sequential focus order using tabindex.
+Content taken out of sequential focus order using `tabindex`.
 
 ```html
 <div aria-hidden="true">

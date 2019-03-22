@@ -27,7 +27,7 @@ The rule applies to any HTML `input` element with a `type` attribute in the `Ima
 
 ### Expectation
 
-Each target element has an [accessible name](#accessible-name) that contains [letters or numbers](#letters-or-numbers).
+Each target element has an [accessible name](#accessible-name) that does not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153).
 
 ## Assumptions
 

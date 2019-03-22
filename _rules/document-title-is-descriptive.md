@@ -92,6 +92,22 @@ Even though the descriptive `<title>` element is not placed within the `<head>` 
 </html>
 ```
 
+#### Passed example 4
+
+`<title>` element with content present in document, and the title is descriptive of the content, even though it does not contain letters or numbers.
+
+```html
+<html>
+  <head>
+    <title>;)</title>
+  </head>
+  <body>
+    <h1>;)</h1>
+    <p>The winking emoticon is commonly used after a light-hearted or sarcastic remark. It is also a popular IM and e-mail emoticon shortcut.</p>
+  </body>
+</html>
+```
+
 ### Failed
 
 #### Failed example 1
@@ -109,7 +125,7 @@ Even though the descriptive `<title>` element is not placed within the `<head>` 
 </html>
 ```
 
-### Failed example 2
+#### Failed example 2
 
 Even though a correct `<title>` element is put in the `<head>` of the document, this rule only looks at the first `<title>` element.
 
@@ -125,6 +141,20 @@ Even though a correct `<title>` element is put in the `<head>` of the document, 
 </html>
 ```
 
+#### Failed example 3
+
+`<title>` element with content present in document, but it is not descriptive of the content.
+
+```html
+<html>
+  <head>
+    <title>;)</title>
+  </head>
+  <body>
+    <p>Clementines will be ready to harvest from late October through February.</p>
+  </body>
+</html>
+```
 
 ### Inapplicable
 
@@ -159,22 +189,7 @@ No `<title>` element present in document.
 
 #### Inapplicable example 3
 
-`<title>` element present in document, but does not meet the definition for [non-empty text string](#non-empty).
-
-```html
-<html>
-  <head>
-    <title>;)</title>
-  </head>
-  <body>
-    <p>Clementines will be ready to harvest from late October through February.</p>
-  </body>
-</html>
-```
-
-#### Inapplicable example 4
-
-This document has a `<title>` element but is inapplicable since the document element is an SVG <svg> element.
+This document has a `<title>` element but is inapplicable since the document element is an SVG `<svg>` element.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">
@@ -183,7 +198,7 @@ This document has a `<title>` element but is inapplicable since the document ele
 </svg>
 ```
 
-### Inapplicable example 5
+#### Inapplicable example 4
 
 First `<title>` element is empty
 

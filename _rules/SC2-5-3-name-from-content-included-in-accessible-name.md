@@ -33,7 +33,7 @@ The complete [visible](#visible) [text](https://www.w3.org/TR/WCAG21/#dfn-text) 
 
 ## Assumptions
 
-_There are currently no assumptions_
+This rule assumes that the [visible](#visible) [text](ttps://www.w3.org/TR/WCAG21/#dfn-text) has the same order as the text in the code, e.g. CSS has not been used to re-arrange pieces of text so that they are presented in a different order.
 
 ## Accessibility Support
 

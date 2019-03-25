@@ -2,7 +2,7 @@
 name: Heading does not only consist of seperators or breaks
 rule_type: atomic
 description: | 
-  This rule checks that heading elements do not have Unicode separator characters or `br` or `wbr` elements as their only content.
+  This rule checks that heading elements do not have Unicode separator characters or `br` elements as their only content.
 
 success_criterion: 
 - 1.3.1 # Info and Relationships (A)

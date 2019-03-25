@@ -19,7 +19,7 @@ authors:
 
 ## Applicability
 
-This rule applies to any HTML `audio` or `video` element with a `src` file content `duation` of more than 3 seconds, is set to `autoplay` and or `loop`, and has audio output that is not `paused` or `muted`.
+This rule applies to any HTML `<audio>` `<video>` or `<source>` `src` file content with a `duration` of more than 3 seconds, that is set to `autoplay` and or `loop`, and has audio output that is not `paused` or `muted`.
 
 ## Expectation
 
@@ -55,7 +55,7 @@ The `video` element audio does not play for longer than 3 seconds.
 The `video` element audio plays for longer than 3 seconds.
 
 ``` html
- <video autoplay="true" muted="true">
+ <video autoplay="true">
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
@@ -76,10 +76,10 @@ The `video` element is `muted`.
 
 ### Inapplicable example 2
 
-The `video` element has no audio output.
+The `video` element `src` file has no audio output.
 
 ``` html
- <video autoplay="true" muted="true">
+ <video autoplay="true">
   <source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4" />
   <source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm" />
 </video>
@@ -90,5 +90,5 @@ The `video` element has no audio output.
 The `audio` element does no `autoplay` attribute.
 
 ``` html
-  <audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay="true" controls></audio>
+  <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```

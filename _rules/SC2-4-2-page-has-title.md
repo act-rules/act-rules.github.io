@@ -28,7 +28,7 @@ The rule applies to any page where the [document element](https://www.w3.org/TR/
 
 ### Expectation 1
 
-The [root](https://www.w3.org/TR/dom41/#concept-tree-root) element has at least one [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) that is an HTML `title` element.
+The [document element](https://www.w3.org/TR/dom/#document-element) has at least one [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) that is an HTML `title` element.
 
 **Note**: The `title` element exists in other namespaces such as SVG. These are not HTML `title` elements and should be ignored for this rule.
 

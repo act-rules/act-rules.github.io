@@ -24,7 +24,7 @@ authors:
 This rule applies to any element that:
 - has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`, and
 - is [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree), and 
-- is the [labeled control](https://www.w3.org/TR/html/sec-forms.html#labeled-control) of a `label` element that is either [visible](#visible) or [included in the accessibility tree](#included in the accessibility tree), or has an [accessible name].
+- has an [accessible name](#accessible-name) or is the [labeled control](https://www.w3.org/TR/html/sec-forms.html#labeled-control) of a `label` element that is either [visible](#visible) or [included in the accessibility tree](#included in the accessibility tree).
 
 **Note**: The list of applicable [semantic roles](#semantic-roles) is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
 - inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and 
@@ -41,17 +41,19 @@ The `label` element, if there is any, together with its context, describe the pu
 
 **Note:** Context in this case could be e.g. headings, fieldsets and legends, text that is located close by etc.
 
+**Note**: Labels do not need to be lengthy. A word, or even a single character, may suffice.
+
 ### Expectation 2
 
 The [accessible name](#accessible-name), if there is any, together with it's context, describe the purpose of the associated form field element.
 
-**Note**: Labels do not need to be lengthy. A word, or even a single character, may suffice.
+**Note:** Context in this case could be e.g. headings, fieldsets and legends, text that is located close by etc.
 
-**Note:** In some cases, the context of the form field and its label also provides information relevant for determining the full purpose of the form field. An example is adress form fields grouped under headings or using fieldsets and legends that indicate which address is the shipping address and which one is the billing address. (MORE TO COME)...
+**Note**: Labels do not need to be lengthy. A word, or even a single character, may suffice.
 
 ## Assumptions
 
-This rule assumes that while having an important context that is not [programatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) might be a WCAG violation under other success criteria (e.g. 1.3.1 Info and Relationships, if text that has not been marked up as headings is used to split a form into different sections), this is allowed under success criterion 2.4.6 Headings and Labels: Headings and labels describe topic or purpose.
+This rule assumes that while having an important context that is not [programatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) might be a violation under other [WCAG](https://www.w3.org/TR/WCAG21/) success criteria (e.g. 1.3.1 Info and Relationships, if text that has not been marked up as headings is used to split a form into different sections), this is allowed under success criterion 2.4.6 Headings and Labels: Headings and labels describe topic or purpose.
 
 ## Accessibility support
 
@@ -140,6 +142,14 @@ Surrounding text provides a context that together with the labels describe the p
 <label>Street<input id="street" type="text" name="street"/></label>
 ```
 
+#### Passed example 7
+
+Accessible name created through "aria-label" describes the purpose of the associated element.
+
+```html
+<input aria-label="First name" id="fname" type="text" name="fname"/>
+```
+
 ### Failed
 
 #### Failed example 1
@@ -186,6 +196,14 @@ Label is included in accessibility tree, but not visible, and does not describe 
 <input aria-labelledby="label_fname" type="text" name="fname"/>
 ```
 
+#### Passed example 6
+
+Accessible name created through "aria-label" does not describes the purpose of the associated element.
+
+```html
+<input aria-label="Menu" id="fname" type="text" name="fname"/>
+```
+
 ### Inapplicable
 
 #### Inapplicable example 1
@@ -217,7 +235,7 @@ The `label` element is associated with an HTML element that does not have a form
 
 #### Inapplicable example 4
 
-No `label` element.
+No `label` element or accessible name.
 
 ```html
 <input id="fname" type="text" name="fname"/>

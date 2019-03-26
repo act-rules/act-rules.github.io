@@ -132,7 +132,7 @@ When `link` is off screen.
 
 #### Passed example 10
 
-`Area` element with `href` attribute has accessible name.
+`area` element with `href` attribute has accessible name.
 
 ```html
 <area shape="rect" coords="0,0,82,126" href="http://www.w3.org/WAI" alt="Web Accessibility Initiative (WAI)">
@@ -183,7 +183,7 @@ Link with image that has empty `aria-labelledby`.
 
 #### Failed example 6
 
-Aria-labelledby references to a non-existing id.
+`aria-labelledby` references to a non-existing id.
 
 ```html
 <a href="http://www.w3.org/WAI"><img src="#" aria-labelledby="id1" /></a>
@@ -215,7 +215,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 #### Failed example 10
 
-`Area` element with `href` attribute does not have accessible name.
+`area` element with `href` attribute does not have accessible name.
 
 ```html
 <area shape="rect" coords="0,0,82,126" href="http://www.w3.org/WAI">
@@ -257,7 +257,7 @@ Not included in the accessibility tree due to `aria-hidden="true"`.
 
 #### Inapplicable example 5
 
-`Area` element without `href` attribute does not have role of `link`.
+`area` element without `href` attribute does not have role of `link`.
 
 ```html
 <area shape="rect" coords="0,0,82,126">

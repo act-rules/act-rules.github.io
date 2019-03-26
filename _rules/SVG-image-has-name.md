@@ -1,7 +1,7 @@
 ---
-name: SVG image has name
+name: SVG image has accessible name
 description: |
-  This rule checks that each SVG image element that is included in the accessibility tree has an accessible name.
+  This rule checks that each SVG image element that is included in the accessibility tree, has an accessible name.
 
 success_criterion:
 - 1.1.1 # Non-Text Content

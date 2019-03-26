@@ -128,20 +128,6 @@ Programatically determinable headings provide a context that together with the l
 <label>Street<input id="street" type="text" name="street"/></label>
 ````
 
-#### Passed example 6
-
-Surrounding text provides a context that together with the labels describe the purpose of the form fields.
-
-```html
-<div>Shipping adress:</div>
-<label>Name<input id="name" type="text" name="name"/></label>
-<label>Street<input id="street" type="text" name="street"/></label>
-
-<div>Billing adress</div>
-<label>Name<input id="name" type="text" name="name"/></label>
-<label>Street<input id="street" type="text" name="street"/></label>
-```
-
 #### Passed example 7
 
 Accessible name created through "aria-label" describes the purpose of the associated element.

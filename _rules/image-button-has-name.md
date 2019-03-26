@@ -1,4 +1,3 @@
-
 ---
 name: Image button has accessible name
 rule_type: atomic

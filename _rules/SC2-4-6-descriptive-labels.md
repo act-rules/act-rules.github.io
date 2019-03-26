@@ -21,7 +21,7 @@ authors:
 
 ### Applicability
 
-This rule applies to each element that:
+This rule applies to any element that:
 - has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`, and
 - is [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree), and 
 - is the [labeled control](https://www.w3.org/TR/html/sec-forms.html#labeled-control) of a `label` element that is either [visible](#visible) or [included in the accessibility tree](#included in the accessibility tree), or has an [accessible name].
@@ -31,7 +31,7 @@ This rule applies to each element that:
 - does not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
 
 **Note:**
-- The `option` role is not part of the list of applicable roles, because it does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an accessible name.
+- The `option` role is not part of the list of applicable roles, because it has a required context role that inherits from the `select` role. Furthermore, `option` does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an accessible name.
 
 **Note**: This rule is a partial check for WCAG 2.1 success criterion 2.4.6, which applies to all labels. "Label" in WCAG is used in its general sense and includes text or other components with a text alternative that is presented to a user to identify a component within Web content.
 

@@ -56,7 +56,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed example 2
 
-Element with eplicit role of link with accessible name through content.
+Element with explicit role of link with accessible name through content.
 
 ```html
 <div role="link"> Web Accessibility Initiative (WAI) </div>
@@ -136,6 +136,14 @@ When `link` is off screen.
 
 ```html
 <area shape="rect" coords="0,0,82,126" href="http://www.w3.org/WAI" alt="Web Accessibility Initiative (WAI)">
+```
+
+#### Passed example 11
+
+`a` element where accessible name does not only consist of seperator characters.
+
+```html
+<a href="http://www.w3.org/WAI">:-)</a>
 ```
 
 ### Failed
@@ -219,6 +227,14 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 ```html
 <area shape="rect" coords="0,0,82,126" href="http://www.w3.org/WAI">
+```
+
+#### Failed example 11
+
+`a` element where accessible name through content only consist of seperator characters.
+
+```html
+<a href="http://www.w3.org/WAI"> </a>
 ```
 
 ### Inapplicable

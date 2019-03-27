@@ -74,6 +74,15 @@ Usage of `aria-labelledby` attribute to describe the `iframe` content.
 </iframe>
 ```
 
+#### Passed example 4
+
+Accessible name does not only consist of seperator characters.
+
+```html
+<iframe title=":-)" src="../test-assets/SC4-1-2-frame-doc.html">
+</iframe>
+```
+
 ### Failed
 
 #### Failed example 1
@@ -127,6 +136,15 @@ Usage of `alt` attribute to describe content is not valid.
 
 ```html
 <iframe alt="List of Contributors" src="../test-assets/SC4-1-2-frame-doc.html">
+</iframe>
+```
+
+#### Failed example 7
+
+Accessible name only consist of seperator characters.
+
+```html
+<iframe title=" " src="../test-assets/SC4-1-2-frame-doc.html">
 </iframe>
 ```
 

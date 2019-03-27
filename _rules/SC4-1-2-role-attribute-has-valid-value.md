@@ -90,14 +90,30 @@ Element with multiple invalid `role` value.
 <input type="text" role="invalid role">
 ```
 
+#### Failed example 3
+
+Element with role attribute that is not the empty string, neither a valid `role` value.
+
+```html
+<input type="text" role=" ">
+```
+
+#### Failed example 4
+
+Element with role attribute that is not the empty string (""), neither a valid `role` value.
+
+```html
+<input type="text" role="#">
+```
+
 ### Inapplicable
 
 #### Inapplicable example 1
 
-Element with empty `role` attribute.
+Element with `role` attribute that is the empty string ("").
 
 ```html
-<div role=" ">Some Content</div>
+<div role="">Some Content</div>
 ```
 
 #### Inapplicable example 2

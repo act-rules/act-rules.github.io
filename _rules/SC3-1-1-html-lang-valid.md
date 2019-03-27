@@ -121,6 +121,30 @@ The `lang` attribute value has a valid primary language subtag, but a syntactica
 <html lang="en-US-GB">
 ```
 
+#### Failed example 1
+
+The `lang` attribute value is not a valid primary language subtag.
+
+```html
+<html lang="123">
+```
+
+#### Failed example 1
+
+The `lang` attribute value is not a valid primary language subtag.
+
+```html
+<html lang="#!">
+```
+
+#### Failed example 1
+
+The `lang` attribute value is not a valid primary language subtag.
+
+```html
+<html lang=" ">
+```
+
 ## Inapplicable
 
 #### Inapplicable example 1
@@ -141,7 +165,7 @@ The rule applies to `html` element and hence usage of `xml:lang` attribute in `s
 
 #### Inapplicable example 3
 
-An empty value for `lang` attribute is ignored by this rule, as the applicability specifies only non-empty values.
+An empty value for `lang` attribute is ignored by this rule, as the applicability specifies only values that are not the empty string("").
 
 ```html
 <html lang="">
@@ -149,7 +173,7 @@ An empty value for `lang` attribute is ignored by this rule, as the applicabilit
 
 #### Inapplicable example 4
 
-An empty value for `xml:lang` attribute is ignored by this rule, as the applicability specifies only non-empty values.
+An empty value for `xml:lang` attribute is ignored by this rule, as the applicability specifies only values that are not the empty string("").
 
 ```html
 <html xml:lang="">

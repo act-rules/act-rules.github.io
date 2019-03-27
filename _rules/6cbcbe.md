@@ -26,7 +26,7 @@ This rule applies to a set of any two or more HTML or SVG elements that have the
 
 ### Expectation
 
-When activated, the links in each set of target elements resolve to the [same resource](#same-resource) or to different resources that fulfill an [equivalent purpose](#equivalent-purpose).
+When followed, the links in each set of target elements resolve to the [same resource](#same-resource) or to different resources that fulfill an [equivalent purpose](#equivalent-purpose).
 
 **Note:** Resolving the links includes potential redirects.
 

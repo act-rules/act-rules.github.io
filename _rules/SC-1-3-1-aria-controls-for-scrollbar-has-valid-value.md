@@ -1,5 +1,5 @@
 ---
-name: aria-controls for scrollbar references existing element
+name: aria-controls for scrollbar has valid value
 rule_type: atomic
 
 description: |

@@ -111,6 +111,14 @@ Off screen elements should be tested.
 </html>
 ```
 
+#### Passed example 8
+
+Button has accessible name that does not only consist of seperator characters.
+
+```html
+<button>:-)</button>
+```
+
 ### Failed
 
 #### Failed example 1
@@ -146,6 +154,14 @@ Off screen element without an accessible name.
     <button class='notInPage' value='delete'></button>
   </body>
 </html>
+```
+
+#### Failed example 4
+
+Button has an accessible name that only consists of seperator characters.
+
+```html
+<button> </button>
 ```
 
 ### Inapplicable

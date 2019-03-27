@@ -97,6 +97,14 @@ HTML `img` element marked as [decorative](#decorative) through `role="none"`
 <img role="none" />
 ```
 
+#### Passed example 6
+
+HTML `img` element has accessible name that does not only consist of seperator characters
+
+```html
+<img alt=":-)" />
+```
+
 ### Failed
 
 #### Failed example 1
@@ -121,6 +129,14 @@ Image element inside a `div` positioned off screen with no accessible name and i
 
 ```html
 <div style="margin-left:-9999px;"><img /></div>
+```
+
+#### Failed example 4
+
+HTML `img` element that has an accessible name that only consist of seperator characters
+
+```html
+<img aria-label=" "/>
 ```
 
 ### Inapplicable

@@ -106,7 +106,7 @@ Valid `title` provided.
 
 #### Passed example 5
 
-Valid `title` provided.
+First `title` element does not only contain seperator characters.
 
 ```html
 <html>
@@ -115,6 +115,18 @@ Valid `title` provided.
   </head>
   <body>
      <title></title> 
+  </body>
+</html>
+```
+
+#### Passed example 6
+
+`title` element does not only contain seperator characters.
+
+```html
+<html>
+  <body>
+    <title>:-)</title>
   </body>
 </html>
 ```
@@ -163,6 +175,16 @@ Empty first `title`.
   <body>
     <title>Title of the page.</title>
   </body>
+</html>
+```
+
+#### Failed example 5
+
+`title` only consist of seperator characters.
+
+```html
+<html>
+  <title> </title>
 </html>
 ```
 

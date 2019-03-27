@@ -95,6 +95,17 @@ Explicit role.
 <div aria-label="country" role="combobox" aria-disabled="true">England</div>
 ```
 
+#### Passed example 6
+
+Accessible name does not only consist of seperator characters.
+
+```html
+<label>
+  :-)
+  <input/>
+</label>
+```
+
 ### Failed
 
 #### Failed example 1
@@ -147,6 +158,14 @@ Explicit label not supported on div elements.
 ```html
 <label for="lastname">first name</label>
 <div role="textbox" id="lastname"></div>
+```
+
+#### Failed example 7
+
+Accessible name only consist of seperator characters.
+
+```html
+<label> <input/></label>
 ```
 
 ### Inapplicable 

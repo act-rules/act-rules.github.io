@@ -99,10 +99,34 @@ The `lang` attribute specified has a non-empty value. The rule does not verify t
 
 #### Passed example 7
 
-The `xml:lang` attribute specified has a non-empty value. The rule does not verify the validity of the value specified and checks only for presence of a value.
+The `xml:lang` attribute specifies a value that is not the empty string (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
 
 ```html
 <html xml:lang="xyz">
+```
+
+#### Passed example 8
+
+The `xml:lang` attribute specifies a value that is not the empty string (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
+
+```html
+<html xml:lang="123">
+```
+
+#### Passed example 9
+
+The `xml:lang` attribute specifies a value that is not the empty string (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
+
+```html
+<html xml:lang="#!">
+```
+
+#### Passed example 9
+
+The `xml:lang` attribute specifies a value that is not the empty string (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
+
+```html
+<html xml:lang=" ">
 ```
 
 ### Failed

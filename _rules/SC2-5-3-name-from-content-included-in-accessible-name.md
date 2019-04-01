@@ -21,7 +21,7 @@ authors:
 ### Applicability
 
 This rule applies to any HTML or SVG element that:
-* has a [semantic role](#semantic-role) that is a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent), and 
+* has a [semantic role](#semantic-role) that is a [widget role](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent), and 
 * has [visible](#visible) [text](https://www.w3.org/TR/WCAG21/#dfn-text), and
 * has an [accessible name](#accessible-name), even if the name is the empty string ("").
 

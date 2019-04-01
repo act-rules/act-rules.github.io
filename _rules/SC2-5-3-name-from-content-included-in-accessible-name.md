@@ -89,7 +89,7 @@ Full visible label is included in the accessible name.
 </head>
 
 <body>
-  <a href="home.html">Read more<span style="sr-only"> about our pricing</span></a>
+  <a href="home.html">Read more<span class="sr-only"> about our pricing</span></a>
 </body>
 ```
 
@@ -129,7 +129,7 @@ The full visible label is split out across the accessible name.
 </head>
 
 <body>
-  <a href="home.html">Link <span style="sr-only">that opens a new tab</span> to the homepage</a>
+  <a href="home.html">Link <span class="sr-only">that opens a new tab</span> to the homepage</a>
 </body>
 ```
 

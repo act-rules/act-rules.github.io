@@ -22,7 +22,7 @@ authors:
 
 This rule applies to the first HTML `title` element that 
 - is a [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) of a [document element](https://www.w3.org/TR/dom/#document-element) that is an HTML `html` element, and
-- contains [child text content](https://www.w3.org/TR/html/infrastructure.html#child-text-content) that do not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153).
+- contains [child text content](https://www.w3.org/TR/html/infrastructure.html#child-text-content) that does not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153).
 
 ### Expectation
 

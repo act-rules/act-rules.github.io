@@ -7,6 +7,7 @@ description: |
 
 success_criterion:
 - 1.3.1 # Info and Relationships
+- 4.1.2 # Name, Role, Value
 
 test_aspects:
 - DOM Tree

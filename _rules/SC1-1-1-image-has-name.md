@@ -23,7 +23,7 @@ The rule applies to HTML `img` elements or any HTML element with the [semantic r
 
 ### Expectation
 
-Each target element has an [accessible name](#accessible-name) that does not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153), or is marked as [decorative](#decorative).
+Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace), or is marked as [decorative](#decorative).
 
 **NOTE**: An `img` element can be marked as decorative, by using either `role="presentation"`, `role="none"` or an empty alt attribute, `alt=""`.
 

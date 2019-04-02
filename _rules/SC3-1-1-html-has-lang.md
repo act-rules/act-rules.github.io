@@ -25,7 +25,7 @@ The root element of the [page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if
 
 ### Expectation
 
-The test target has a `lang` or `xml:lang` attribute that is not the empty string ("").
+The test target has a `lang` or `xml:lang` attribute that is not empty ("").
 
 **Note**: HTML5 recommends using `lang` instead of `xml:lang`. This is not known to impact accessibility, which is why use of both is permitted by this rule.
 
@@ -99,7 +99,7 @@ The `lang` attribute specified has a non-empty value. The rule does not verify t
 
 #### Passed example 7
 
-The `xml:lang` attribute specifies a value that is not the empty string (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
+The `xml:lang` attribute specifies a value that is not empty (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
 
 ```html
 <html xml:lang="xyz">
@@ -107,7 +107,7 @@ The `xml:lang` attribute specifies a value that is not the empty string (""). Th
 
 #### Passed example 8
 
-The `xml:lang` attribute specifies a value that is not the empty string (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
+The `xml:lang` attribute specifies a value that is not empty (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
 
 ```html
 <html xml:lang="123">
@@ -115,7 +115,7 @@ The `xml:lang` attribute specifies a value that is not the empty string (""). Th
 
 #### Passed example 9
 
-The `xml:lang` attribute specifies a value that is not the empty string (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
+The `xml:lang` attribute specifies a value that is not empty (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
 
 ```html
 <html xml:lang="#!">
@@ -123,7 +123,7 @@ The `xml:lang` attribute specifies a value that is not the empty string (""). Th
 
 #### Passed example 9
 
-The `xml:lang` attribute specifies a value that is not the empty string (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
+The `xml:lang` attribute specifies a value that is not empty (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
 
 ```html
 <html xml:lang=" ">
@@ -141,7 +141,7 @@ There were no `lang` or `xml:lang` attribute specified.
 
 #### Failed example 2
 
-The `xml:lang` attribute specified has an empty value.
+The `xml:lang` attribute specified is empty ("").
 
 ```html
 <html xml:lang="">
@@ -149,7 +149,7 @@ The `xml:lang` attribute specified has an empty value.
 
 #### Failed example 3
 
-The `lang` attribute specified has an empty value.
+The `lang` attribute specified is empty ("").
 
 ```html
 <html lang="">
@@ -157,7 +157,7 @@ The `lang` attribute specified has an empty value.
 
 #### Failed example 4
 
-The `lang` and `xml:lang` attribute specified has an empty value.
+The `lang` and `xml:lang` attribute specified is empty ("").
 
 ```html
 <html xml:lang="" lang="">

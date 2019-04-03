@@ -22,7 +22,7 @@ authors:
 
 This rule applies to the first HTML `title` element that 
 - is a [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) of a [document element](https://www.w3.org/TR/dom/#document-element) that is an HTML `html` element, and
-- contains [child text content](https://www.w3.org/TR/html/infrastructure.html#child-text-content) that does not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153).
+- contains [child text content](https://www.w3.org/TR/html/infrastructure.html#child-text-content) that is not only [whitespace](#whitespace).
 
 ### Expectation
 
@@ -206,6 +206,37 @@ First `<title>` element is empty
 <html>
   <head>
     <title></title>
+    <title>Clementine harvesting season</title>
+  </head>
+  <body>
+    <p>Clementines will be ready to harvest from late October through February.</p>
+  </body>
+</html>
+```
+#### Inapplicable example 4
+
+First `<title>` element is empty
+
+```html
+<html>
+  <head>
+    <title></title>
+    <title>Clementine harvesting season</title>
+  </head>
+  <body>
+    <p>Clementines will be ready to harvest from late October through February.</p>
+  </body>
+</html>
+```
+
+#### Inapplicable example 5
+
+First `<title>` element contains only whitespace
+
+```html
+<html>
+  <head>
+    <title> </title>
     <title>Clementine harvesting season</title>
   </head>
   <body>

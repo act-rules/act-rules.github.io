@@ -113,7 +113,7 @@ Off screen elements should be tested.
 
 #### Passed example 8
 
-Button has accessible name that does not only consist of seperator characters.
+Button has accessible name that is not only whitespace.
 
 ```html
 <button>:-)</button>
@@ -158,7 +158,7 @@ Off screen element without an accessible name.
 
 #### Failed example 4
 
-Button has an accessible name that only consists of seperator characters.
+Button has an accessible name that is not only whitespace.
 
 ```html
 <button> </button>

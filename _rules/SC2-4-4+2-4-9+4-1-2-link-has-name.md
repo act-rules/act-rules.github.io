@@ -140,7 +140,7 @@ When `link` is off screen.
 
 #### Passed example 11
 
-`a` element where accessible name does not only consist of seperator characters.
+`a` element where accessible name does not only consist of whitespace.
 
 ```html
 <a href="http://www.w3.org/WAI">:-)</a>
@@ -231,7 +231,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 #### Failed example 11
 
-`a` element where accessible name through content only consist of seperator characters.
+`a` element where accessible name through content only consist of whitespace.
 
 ```html
 <a href="http://www.w3.org/WAI"> </a>

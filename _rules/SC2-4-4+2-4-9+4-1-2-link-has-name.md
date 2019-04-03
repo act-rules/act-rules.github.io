@@ -25,7 +25,7 @@ The rule applies to any HTML element with the [semantic role](#semantic-role) of
 
 ### Expectation
 
-Each target element has an [accessible name](#accessible-name) that does not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153).
+Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
 
 ## Assumptions
 

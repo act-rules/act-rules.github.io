@@ -20,7 +20,7 @@ authors:
 
 ### Applicability
 
-Any `role` attribute that is not the empty string (""), and that is specified on an HTML or SVG element that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+Any `role` attribute that is not empty (""), and that is specified on an HTML or SVG element that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 **Note:** Having a whitespace separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role](#semantic-role) of the element, and so forth.
 
@@ -92,7 +92,7 @@ Element with multiple invalid `role` value.
 
 #### Failed example 3
 
-Element with role attribute that is not the empty string, neither a valid `role` value.
+Element with role attribute that is not empty (""), neither a valid `role` value.
 
 ```html
 <input type="text" role=" ">
@@ -100,7 +100,7 @@ Element with role attribute that is not the empty string, neither a valid `role`
 
 #### Failed example 4
 
-Element with role attribute that is not the empty string (""), neither a valid `role` value.
+Element with role attribute that is not empty (""), neither a valid `role` value.
 
 ```html
 <input type="text" role="#">
@@ -110,7 +110,7 @@ Element with role attribute that is not the empty string (""), neither a valid `
 
 #### Inapplicable example 1
 
-Element with `role` attribute that is the empty string ("").
+Element with `role` attribute that is empty ("").
 
 ```html
 <div role="">Some Content</div>

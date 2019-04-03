@@ -19,11 +19,11 @@ authors:
 
 ### Applicability
 
-This rules applies to each HTML or SVG element that is a [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) of the `body` element and has a `lang` or `xml:lang` attribute that is not the empty string ("").
+This rules applies to each HTML or SVG element that is a [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) of the `body` element and has a `lang` or `xml:lang` attribute that is not empty ("").
 
 ### Expectation
 
-The `lang` and `xml:lang` attributes of the test target have a [valid language subtag](#valid-language-subtag) if the attribute is not the empty string ("").
+The `lang` and `xml:lang` attributes of the test target have a [valid language subtag](#valid-language-subtag) if the attribute is not empty ("").
 
 ## Assumptions
 
@@ -46,7 +46,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed example 1
 
-The `lang` attribute has a value that is not the empty string ("") and has a valid primary language subtag.
+The `lang` attribute has a value that is not empty ("") and has a valid primary language subtag.
 
 ```html
 <html>
@@ -58,7 +58,7 @@ The `lang` attribute has a value that is not the empty string ("") and has a val
 
 #### Passed example 2
 
-The `xml:lang` attribute has a value that is not the empty string ("") and has a valid primary language subtag.
+The `xml:lang` attribute has a value that is not empty ("") and has a valid primary language subtag.
 
 ```html
 <html>
@@ -70,7 +70,7 @@ The `xml:lang` attribute has a value that is not the empty string ("") and has a
 
 #### Passed example 3
 
-The `lang` attribute has a value that is not the empty string ("") and has a valid primary language subtag. The region section in the value is ignored by the rule.
+The `lang` attribute has a value that is not empty ("") and has a valid primary language subtag. The region section in the value is ignored by the rule.
 
 ```html
 <html>
@@ -82,7 +82,7 @@ The `lang` attribute has a value that is not the empty string ("") and has a val
 
 #### Passed example 4
 
-The `lang` and `xml:lang` attributes values that are not the empty string ("") and has valid primary language subtags.
+The `lang` and `xml:lang` attributes values that are not empty ("") and has valid primary language subtags.
 
 ```html
 <html>
@@ -94,7 +94,7 @@ The `lang` and `xml:lang` attributes values that are not the empty string ("") a
 
 #### Passed example 5
 
-The `lang` and `xml:lang` attributes values are either the empty string ("") or has a valid primary language subtag.
+The `lang` and `xml:lang` attributes values are either empty ("") or has a valid primary language subtag.
 
 ```html
 <html>
@@ -144,7 +144,7 @@ The `lang` attribute value has a valid primary language subtag, but a syntactica
 
 #### Failed example 4
 
-The `lang` attribute value is not the empty string and is not a valid primary language subtag.
+The `lang` attribute value is not empty ("") and is not a valid primary language subtag.
 
 ```html
 <html>
@@ -156,7 +156,7 @@ The `lang` attribute value is not the empty string and is not a valid primary la
 
 #### Failed example 5
 
-The `lang` attribute value is not the empty string and is not a valid primary language subtag.
+The `lang` attribute value is not empty ("") and is not a valid primary language subtag.
 
 ```html
 <html>
@@ -168,7 +168,7 @@ The `lang` attribute value is not the empty string and is not a valid primary la
 
 #### Failed example 5
 
-The `lang` attribute value is not the empty string and is not a valid primary language subtag.
+The `lang` attribute value is not empty ("") and is not a valid primary language subtag.
 
 ```html
 <html>
@@ -194,7 +194,7 @@ The rule applies to elements with the `body` of a webpage. `html` elements are i
 
 #### Inapplicable example 2
 
-An empty value for `lang` attribute is ignored by this rule, as the applicability specifies only values that are not the empty string ("").
+An empty value for `lang` attribute is ignored by this rule, as the applicability specifies only values that are not empty ("").
 
 ```html
 <html>
@@ -206,7 +206,7 @@ An empty value for `lang` attribute is ignored by this rule, as the applicabilit
 
 #### Inapplicable example 3
 
-An empty value for `xml:lang` attribute is ignored by this rule, as the applicability specifies only values that are not the empty string ("").
+An empty value for `xml:lang` attribute is ignored by this rule, as the applicability specifies only values that are not empty ("").
 
 ```html
 <html>

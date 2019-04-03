@@ -25,7 +25,7 @@ authors:
 
 This rule applies to any element with the [semantic role](#semantic-role) of `heading` that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree), and that either has [visible](#visible) [content](https://www.w3.org/TR/WCAG21/#dfn-content), or has an [accessible name](#accessible-name) that does not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153).
 
-**Note**: This rule only applies to elements with the [semantic role](#semantic-role) of `heading`. Thus, it is a partial check for WCAG 2.0 success criterion 2.4.6, which applies to all headings. "Heading" is used in its general sense and includes headlines and other ways to add a heading to different types of content. This includes elements that are not marked up as headings in the code, but still act visually as headings, e.g. by larger and/or bolder text. 
+**Note**: This rule only applies to elements with the [semantic role](#semantic-role) of `heading`. Thus, it is a partial check for WCAG 2.0 success criterion 2.4.6, which applies to all headings regardless of semantic programming. In the success criteria "heading" is used in the general sense and includes elements that are not marked up as headings in the code, but still act visually as headings, e.g. by larger and/or bolder text.
 
 ### Expectation 1
 
@@ -242,5 +242,5 @@ The heading marked up with `h` element does not contain visible content or has a
 The heading marked up with `role="heading"` does not contain visible content or has an accessible name that does not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153).
 
 ```html
-<h1 aria-label=" "></h1>
+<span role="heading"  aria-label=" "></span>
 ```

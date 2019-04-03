@@ -97,7 +97,7 @@ Explicit role.
 
 #### Passed example 6
 
-Accessible name does not only consist of seperator characters.
+The accessible name is not only whitespace.
 
 ```html
 <label>
@@ -118,7 +118,7 @@ No accessible name.
 
 #### Failed example 2
 
-Non-focusable still need an accessible name.
+Non-focusable element still needs an accessible name.
 
 ```html
 <input tabindex="-1" />
@@ -134,7 +134,7 @@ Non-focusable still need an accessible name.
 
 #### Failed example 4
 
-Label does not exist.
+The label does not exist.
 
 ```html
 <div aria-labelledby="non-existing" role="combobox">England</div>
@@ -142,7 +142,7 @@ Label does not exist.
 
 #### Failed example 5
 
-Implicit label not supported on div elements.
+The implicit label is not supported on `div` elements.
 
 ```html
 <label>
@@ -153,7 +153,7 @@ Implicit label not supported on div elements.
 
 #### Failed example 6
 
-Explicit label not supported on div elements.
+The explicit label is not supported on `div` elements.
 
 ```html
 <label for="lastname">first name</label>
@@ -162,7 +162,7 @@ Explicit label not supported on div elements.
 
 #### Failed example 7
 
-Accessible name only consist of seperator characters.
+The accessible name is not only whitespace.
 
 ```html
 <label> <input/></label>
@@ -188,7 +188,7 @@ Hidden to assistive technologies.
 
 #### Inapplicable example 3
 
-Explicitly set the role to something that isn't a form field.
+Role has explicitely been set to something that isn't a form field.
 
 ```html
 <input role="presentation" />

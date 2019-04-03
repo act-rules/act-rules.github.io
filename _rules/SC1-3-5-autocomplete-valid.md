@@ -18,7 +18,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML `input`, `select` and `textarea` element with a `autocomplete` attribute, that is not empty (""), except if one of the following is true:
+The rule applies to any HTML `input`, `select` and `textarea` element with a `autocomplete` attribute that is not empty (""), except if one of the following is true:
 
 - The element is not [visible on the page](#visible-on-the-page), and not [included in the accessibility tree](#included-in-the-accessibility-tree)
 - The element is an `input` element with a `type` property of `hidden`, `button`, `submit` or `reset`

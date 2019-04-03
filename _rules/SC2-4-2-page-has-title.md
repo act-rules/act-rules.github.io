@@ -34,7 +34,7 @@ The page contains at least one `title` element.
 
 ### Expectation 2
 
-The first `title` element contains [text nodes](https://www.w3.org/TR/dom/#text) that do not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153).
+The first `title` element contains [text nodes](https://www.w3.org/TR/dom/#text) that is not only [whitespace](#whitespace).
 
 ## Assumptions
 
@@ -106,7 +106,7 @@ Valid `title` provided.
 
 #### Passed example 5
 
-First `title` element does not only contain seperator characters.
+First `title` element does not only contain whitespace.
 
 ```html
 <html>
@@ -121,7 +121,7 @@ First `title` element does not only contain seperator characters.
 
 #### Passed example 6
 
-`title` element does not only contain seperator characters.
+`title` element does not only contain whitespace.
 
 ```html
 <html>
@@ -180,7 +180,7 @@ Empty first `title`.
 
 #### Failed example 5
 
-`title` only consist of seperator characters.
+`title` only consist of whitespace.
 
 ```html
 <html>

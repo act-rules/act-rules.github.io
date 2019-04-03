@@ -107,7 +107,7 @@ Element does not list required states and properties (´aria-controls´ is requi
 
 #### Failed example 2
 
-Required states and properties does not have a value that is not empty ("")
+Required states and properties do not have a value that is not empty ("")
 
 ```html
 <div role="combobox" aria-controls=""></div>

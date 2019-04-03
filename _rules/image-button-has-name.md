@@ -79,7 +79,7 @@ Image button element with accessible name through `aria-labelledby`
 
 #### Passed example 5
 
-Accessible name does not only consist of seperator characters.
+Accessible name is not only whitespace.
 
 ```html
 <input type="image" name="submit" src="button.gif" alt=":-)" />
@@ -121,7 +121,7 @@ Image button with aria-labelledby that does not reference an id that exists in t
 
 #### Failed example 4
 
-Accessible name only consist of seperator characters.
+Accessible name is not only whitespace.
 
 ```html
 <input type="image" name="submit" src="button.gif" alt=" " />

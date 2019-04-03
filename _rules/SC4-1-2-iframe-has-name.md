@@ -76,7 +76,7 @@ Usage of `aria-labelledby` attribute to describe the `iframe` content.
 
 #### Passed example 4
 
-Accessible name does not only consist of seperator characters.
+Accessible name is not only whitespace.
 
 ```html
 <iframe title=":-)" src="../test-assets/SC4-1-2-frame-doc.html">
@@ -141,7 +141,7 @@ Usage of `alt` attribute to describe content is not valid.
 
 #### Failed example 7
 
-Accessible name only consist of seperator characters.
+Accessible name is not only whitespace.
 
 ```html
 <iframe title=" " src="../test-assets/SC4-1-2-frame-doc.html">

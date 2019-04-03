@@ -23,7 +23,7 @@ The rule applies to any HTML `input`, `select` and `textarea` element with an `a
 - The element is not [visible on the page](#visible-on-the-page), and not [included in the accessibility tree](#included-in-the-accessibility-tree)
 - The element is an `input` element with a `type` property of `hidden`, `button`, `submit` or `reset`
 - The element has a `disabled` or `aria-disabled="true"` attribute
-- The element does not participate in [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation) and has a [semantic role](#semantic-role) that is not a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget_roles).
+- The element does not participate in [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation) and has a [semantic role](#semantic-role) that is not a [widget role](https://www.w3.org/TR/wai-aria-1.1/#widget_roles).
 
 ### Expectation 1
 
@@ -125,7 +125,7 @@ Full length autocomplete terms.
 
 #### Passed example 8
 
-The `input` element does not have a semantic role that is a widget, but still participates in sequential focus navigation, and has a single autocomplete term.
+The `input` element does not have a semantic role that is a widget role, but still participates in sequential focus navigation, and has a single autocomplete term.
 
 ```html
 <input role="none" autocomplete="username" />
@@ -133,7 +133,7 @@ The `input` element does not have a semantic role that is a widget, but still pa
 
 #### Passed example 9
 
-The `input` element does not participates in sequential focus navigation, but still has a semantic role that is a widget, and has a single autocomplete term.
+The `input` element does not participates in sequential focus navigation, but still has a semantic role that is a widget role, and has a single autocomplete term.
 
 ```html
 <input tabindex="-1" autocomplete="username" />
@@ -141,7 +141,7 @@ The `input` element does not participates in sequential focus navigation, but st
 
 #### Passed example 8
 
-The `input` element does not have a semantic role that is a widget, but still participates in sequential focus navigation since the [`tabindex` attribute](https://www.w3.org/TR/html/editing.html#the-tabindex-attribute) value is not a [valid integer](https://www.w3.org/TR/html/infrastructure.html#valid-integer), and has a single autocomplete term.
+The `input` element does not have a semantic role that is a widget role, but still participates in sequential focus navigation since the [`tabindex` attribute](https://www.w3.org/TR/html/editing.html#the-tabindex-attribute) value is not a [valid integer](https://www.w3.org/TR/html/infrastructure.html#valid-integer), and has a single autocomplete term.
 
 ```html
 <input role="none" tabindex="-1.5" autocomplete="username" />

@@ -19,7 +19,7 @@ authors:
 
 ### Applicability
 
-The root element of the page, if it is an `html` element with a `lang` and/or `xml:lang` attribute that is not the empty string ("").
+The root element of the page, if it is an `html` element with a `lang` and/or `xml:lang` attribute that is not empty ("").
 
 ### Expectation
 
@@ -165,7 +165,7 @@ The rule applies to `html` element and hence usage of `xml:lang` attribute in `s
 
 #### Inapplicable example 3
 
-An empty value for `lang` attribute is ignored by this rule, as the applicability specifies only values that are not the empty string("").
+An empty value for `lang` attribute is ignored by this rule, as the applicability specifies only values that are not empty ("").
 
 ```html
 <html lang="">
@@ -173,7 +173,7 @@ An empty value for `lang` attribute is ignored by this rule, as the applicabilit
 
 #### Inapplicable example 4
 
-An empty value for `xml:lang` attribute is ignored by this rule, as the applicability specifies only values that are not the empty string("").
+An empty value for `xml:lang` attribute is ignored by this rule, as the applicability specifies only values that are not empty ("").
 
 ```html
 <html xml:lang="">

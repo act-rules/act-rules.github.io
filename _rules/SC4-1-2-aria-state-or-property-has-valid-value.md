@@ -24,7 +24,7 @@ authors:
 Any [non-empty](#non-empty) [WAI-ARIA 1.1 state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) that 
 - is specified on an HTML or SVG element
 - is one of the `aria-*` attributes included in the [accessible name computation](https://www.w3.org/TR/accname-1.1/#mapping_additional_nd_te), or is specified on an element that is [included in the accessibility tree](#included-in-the-accessibility-tree) or is [focusable](#focusable),
-- is not the empty string ("").
+- is not empty ("").
 
 ### Expectation 1
 

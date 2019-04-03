@@ -51,7 +51,7 @@ There is a known combination of a popular browser and assistive technology that 
 
 #### Passed example 1
 
-HTML `img` element has accessible name
+The HTML `img` element has an accessible name
 
 ```html
 <img alt="W3C logo" />
@@ -59,7 +59,7 @@ HTML `img` element has accessible name
 
 #### Passed example 2
 
-Element with role of `img` and accessible name
+The element with role of `img` has an accessible name
 
 ```html
 <div role="img" aria-label="W3C logo"></div>
@@ -67,7 +67,7 @@ Element with role of `img` and accessible name
 
 #### Passed example 3
 
-Accessible name but not always accessibility supported
+The element has an accessible name, though the name is not always accessibility supported
 
 ```html
 <img title="W3C logo" />
@@ -75,7 +75,7 @@ Accessible name but not always accessibility supported
 
 #### Passed example 4
 
-HTML `img` element marked as [decorative](#decorative) through empty `alt` attribute
+The HTML `img` element is marked as [decorative](#decorative) through an empty `alt` attribute
 
 ```html
 <img alt="" />
@@ -83,7 +83,7 @@ HTML `img` element marked as [decorative](#decorative) through empty `alt` attri
 
 #### Passed example 5
 
-HTML `img` element marked as [decorative](#decorative) through `role="presentation"`
+The HTML `img` element is marked as [decorative](#decorative) through `role="presentation"`
 
 ```html
 <img role="presentation" />
@@ -91,7 +91,7 @@ HTML `img` element marked as [decorative](#decorative) through `role="presentati
 
 #### Passed example 6
 
-HTML `img` element marked as [decorative](#decorative) through `role="none"`
+The HTML `img` element is marked as [decorative](#decorative) through `role="none"`
 
 ```html
 <img role="none" />
@@ -99,7 +99,7 @@ HTML `img` element marked as [decorative](#decorative) through `role="none"`
 
 #### Passed example 6
 
-HTML `img` element has accessible name that does not only consist of whitespace
+The HTML `img` element has an accessible name that does not only consist of whitespace
 
 ```html
 <img alt=":-)" />
@@ -109,7 +109,7 @@ HTML `img` element has accessible name that does not only consist of whitespace
 
 #### Failed example 1
 
-HTML `img` element that is not marked as [decorative](#decorative) and does not have accessible name
+The HTML `img` element is not marked as [decorative](#decorative) and does not have an accessible name
 
 ```html
 <img />
@@ -117,7 +117,7 @@ HTML `img` element that is not marked as [decorative](#decorative) and does not 
 
 #### Failed example 2
 
-Element with role of `img` but no accessible name
+The element with role of `img` does not have an accessible name
 
 ```html
 <div role="img"></div>
@@ -125,7 +125,7 @@ Element with role of `img` but no accessible name
 
 #### Failed example 3
 
-Image element inside a `div` positioned off screen with no accessible name and is not marked as [decorative](#decorative)
+The `img` element inside a `div` positioned off screen has no accessible name and is not marked as [decorative](#decorative)
 
 ```html
 <div style="margin-left:-9999px;"><img /></div>
@@ -133,7 +133,7 @@ Image element inside a `div` positioned off screen with no accessible name and i
 
 #### Failed example 4
 
-HTML `img` element that has an accessible name that only consist of whitespace
+The HTML `img` element has an accessible name that only consist of whitespace
 
 ```html
 <img aria-label=" "/>
@@ -143,7 +143,7 @@ HTML `img` element that has an accessible name that only consist of whitespace
 
 #### Inapplicable example 1
 
-Element that does not have the [semantic role](#semantic-role) of `img`
+The element does not have the [semantic role](#semantic-role) of `img`
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
@@ -153,7 +153,7 @@ Element that does not have the [semantic role](#semantic-role) of `img`
 
 #### Inapplicable example 2
 
-Element with [semantic role](#semantic-role) of `img` is not [included in the accessibility tree](#included-in-the-accessibility-tree)
+The element has a [semantic role](#semantic-role) of `img`, but is not [included in the accessibility tree](#included-in-the-accessibility-tree)
 
 ```html
 <div role="img" aria-hidden="true"></div>

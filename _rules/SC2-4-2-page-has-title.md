@@ -34,7 +34,7 @@ The [document element](https://www.w3.org/TR/dom/#document-element) has at least
 
 ### Expectation 2
 
-The [child text content](https://www.w3.org/TR/html/infrastructure.html#child-text-content) of the first HTML `title` element that is a [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) of the [document element](https://www.w3.org/TR/dom/#document-element) does not only have [whitespace](#whitespace).
+The first HTML `title` element that is a [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) of the [document element](https://www.w3.org/TR/dom/#document-element) has [children](https://www.w3.org/TR/dom/#concept-tree-child) that are [text nodes] that are not only [whitespace](#whitespace).
 
 ## Assumptions
 

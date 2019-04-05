@@ -103,6 +103,14 @@ Text nodes in name from content are not expressing anything in human language an
 <button aria-label="close">:-)</button>
 ```
 
+#### Passed example 6
+
+Text nodes in name from content are not expressing anything in human language and does therefore not live up to the [WCAG definition of text](https://www.w3.org/TR/WCAG21/#dfn-text). In this case, "X" is used because it resembles a "close" icon, not to represent the character "X".
+
+```html
+<button aria-label="close">X</button>
+```
+
 ### Failed
 
 #### Failed example 1

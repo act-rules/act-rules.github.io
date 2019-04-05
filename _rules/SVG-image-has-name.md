@@ -130,3 +130,12 @@ The `svg` element has an accessible name but is not included in the accessibilit
 </svg>
 ```
 
+#### Inapplicable example 3
+ 
+The `svg` element is not included in the accessibility tree because the `<title>` element is empty.
+ 
+````html
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+	<title> </title>
+  	<circle role="none" cx="50" cy="50" r="40" fill="yellow"></circle>
+</svg>

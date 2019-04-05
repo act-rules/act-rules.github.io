@@ -122,10 +122,10 @@ The `svg` element does not have a role of `img` or `graphics-document`.
 
 #### Inapplicable example 2
 
-The `svg` element is not included in the accessibility tree.
+The `svg` element has an accessible name but is not included in the accessibility tree.
 
 ```html
-<svg width="100" height="100">
+<svg width="100" height="100" role="img" aria-label="A yellow circle" aria-hidden="true">
 <circle cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```

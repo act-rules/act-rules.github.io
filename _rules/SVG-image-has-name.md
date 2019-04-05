@@ -30,7 +30,7 @@ Each target element has a an accessible name.
 
 ## Accessibility support
 
-Browser and assitive technology support for SVG `title` and `desc` elements is currently inconsistent. Using WAI ARIA in combination with the `img` role for non-decorative `svg` elements significantly improves accessibility brwoser support.
+Browser and assistive technology support for SVG `title` and `desc` elements is currently inconsistent. Using WAI ARIA in combination with the `img` role for non-decorative `svg` elements significantly improves accessibility browser support.
 
 ## Background
 
@@ -47,10 +47,10 @@ Browser and assitive technology support for SVG `title` and `desc` elements is c
 
 #### Pass example 1
 
-The `<svg>` element has a role of `img` which takes it's accessible name from it's `<title>` element.
+The `<svg>` element has a role of `img` which takes its accessible name from its `<title>` element.
 
 ```html
-<svg xmlns="https://www.w3.org/2000/svg" role="img" width="100" height="100">
+<svg xmlns="http://www.w3.org/2000/svg" role="img" width="100" height="100">
   <title>A yellow circle</title>
 	<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
 </svg>
@@ -68,18 +68,7 @@ The `<svg>` element has a role of `img` and an `aria-label` containing the acces
 
 #### Pass example 3
 
-The `<svg>` element has the role of `img` which takes it's accessible name from it's child content, the `<text>` element.
-
-```html
-<svg xmlns="https://www.w3.org/2000/svg" role="img" width="100" height="100">
-	<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
-  	<text font-size="36" fill="black" font-family="Verdana" text-anchor="middle" alignment-baseline="middle" x="22" y="34.4">A yellow circle</text>
-</svg>
-```
-
-#### Pass example 4
-
-The `<svg>` element has the role of `graphics-document` which takes it's accessible name from it's child content, the `<text>` element.
+The `<svg>` element has the role of `graphics-document` which takes its accessible name from its child content, the `<text>` element.
 
 ```html
 
@@ -100,7 +89,7 @@ The `<svg>` element has the role of `graphics-document` which takes it's accessi
 
 #### Failed example 1
 
-The `<svg>` element has a rle of `img` but has no accessible name.
+The `<svg>` element has a role of `img` but has no accessible name.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" role="img" width="100" height="100">

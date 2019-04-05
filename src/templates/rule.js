@@ -16,7 +16,7 @@ export default ({ data }) => {
 	const { html, frontmatter, tableOfContents, fields } = rule
 	const { slug } = fields
 	const converter = new showdown.Converter()
-	const updatedTitle = `Glossary | ${site.siteMetadata.title}`
+	const updatedTitle = `Rule | ${frontmatter.name} | ${site.siteMetadata.title}`
 
 	const getRuleType = rule_type => {
 		if (!rule_type) {

@@ -104,7 +104,6 @@
 		"W3C"
 	],
 	"license": "MIT",
-	"licenseTODO": "https://auto-wcag.github.io/auto-wcag/license.html",
 	"scripts": {
 		"prebuild": "npm run get-data",
 		"build": "gatsby build",

@@ -15,6 +15,12 @@ class Layout extends React.Component {
 		}
 	}
 
+	handleHideShowMenu(e) {
+		this.setState(prevState => ({
+			showMenu: !prevState.showMenu
+		}));
+	}
+
 	getListItemFromEdges(edges) {
 		return edges.map(edge => {
 			const { node } = edge
@@ -100,7 +106,12 @@ class Layout extends React.Component {
 					} = data
 					return (
 						<section className="layout-container">
-							<aside>
+							<aside
+								className={(this.state.showMenu ? 'show' : 'hide')}>
+								<button className='nav-hide-show-menu btn-secondary'
+									onClick={e => this.handleHideShowMenu(e)}>
+									☰
+								</button>
 								<div className="logo">
 									<Header siteTitle={getSiteTitle.siteMetadata.title} />
 								</div>

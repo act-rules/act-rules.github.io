@@ -19,17 +19,20 @@ section.layout-container {
     position: relative;
     transition: all 2ms;
 
-    &:after{
-      content: '\2630';
+    button.nav-hide-show-menu {
       position: absolute;
-      right: -44px;
+      right: -50px;
+      z-index: 1;
       top: 5px;
-      padding: 15px;
-      background-color: $bg-secondary;
-      border: 1px solid $bg-primary;
-      opacity: 0;
-      border-left: none;
-      cursor: pointer;
+    }
+
+    &.hide{
+      left: -230px;
+      position: absolute;
+    }
+    &.show {
+      left: 0;
+      position: relative;
     }
 
     >div.logo {
@@ -350,27 +353,6 @@ and (max-width : 480px) {
 @media only screen 
 and (max-width : 1024px) {
   section.layout-container {
-    >aside{
-      position: absolute;
-      left: -230px;
-      top: 0;
-      bottom: 0;
-      max-width: 230px;
-      display: table;
-      z-index: 1;
-      &:after{
-        opacity: 1;
-      }
-      &:focus-within{
-        left:0;
-      }
-      &:hover{
-        left: 0;
-        &::after{
-          color: $accent;
-        }
-      }
-    }
     >main{
       .page-container {
         &.page-rules{

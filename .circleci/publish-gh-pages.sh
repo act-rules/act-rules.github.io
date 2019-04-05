@@ -6,12 +6,12 @@ git config user.email "$USER_EMAIL"
 git checkout gh-pages
 git pull origin gh-pages
 
-# remove all files except the generated site directory and required git folders
-find . -maxdepth 1 ! -name '_site' ! -name '.circleci' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
+# remove all files except the generated public directory and required git folders
+find . -maxdepth 1 ! -name 'public' ! -name '.circleci' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
 
-# move generated site in the root folder and remove the empty generated site folder
-mv _site/* .
-rm -R _site/
+# move generated public in the root folder and remove the empty generated public folder
+mv public/* .
+rm -R public/
 
 # commit and push
 git add -fA

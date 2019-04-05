@@ -30,11 +30,11 @@ module.exports = {
 			options: {
 				fonts: [
 					{
-						family: `Karla`,
+						family: `Lora`,
 						variants: [`400`, `700`],
 					},
 					{
-						family: `Spectral`,
+						family: `Roboto`,
 						variants: [`400`, `700`],
 					},
 				],

@@ -18,7 +18,7 @@
 }
 
 @mixin header-style($color) {
-  font-family: 'Spectral', serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: capitalize;
   color: $color;
   text-decoration: none;
@@ -42,6 +42,17 @@
     background: $color;
     border-color: $background;
   }
+  &.btn-secondary {
+    border: 3px solid transparent; 
+    color: $color;
+    background: $background;
+    &:hover, &:focus, &:active {
+      color: $accent;
+    }
+    &:active {
+      transform: translate(1px, 1px)
+    }
+  }
 }
 
 
@@ -54,11 +65,9 @@
     margin-bottom: 0;
     text-decoration: none;
   }
-
   h2, h3, h4, h5, h6 {
     &:hover {
       text-decoration: underline;
     }
   }
-
 }

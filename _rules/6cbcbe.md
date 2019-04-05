@@ -57,7 +57,7 @@ A set of two HTML `<a>` elements have the same accessible name and link to the s
 
 #### Passed example 2
 
-Links resolves to same resource after redirect:
+Links resolves to same resource after instant redirect:
 
 ```html
 <a href="/test-assets/6cbcbe/index.html">Contact us</a>

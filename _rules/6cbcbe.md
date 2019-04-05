@@ -27,8 +27,7 @@ This rule applies to any set of any two or more HTML or SVG elements that have t
 ### Expectation
 
 When followed, the links in each set of target elements resolve to the [same resource](#same-resource) or to different resources that fulfill an [equivalent purpose](#equivalent-purpose).
-
-**Note:** Resolving the links includes potential redirects.
+Resolving the links includes potential redirects, if the redirects happen instantly.
 
 ## Assumptions
 
@@ -205,6 +204,15 @@ A set of two SVG `<a>` elements have the same accessible name but links to diffe
     </text>
   </a>
 </svg>
+```
+
+#### Failed example 6
+
+Links resolves to same resource after redirect, but the redirect is not instant:
+
+```html
+<a href="/test-assets/6cbcbe/index.html">Contact us</a>
+<a href="/test-assets/6cbcbe/redirect1.html">Contact us</a>
 ```
 
 ### Inapplicable 

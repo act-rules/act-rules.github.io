@@ -3,9 +3,10 @@ name: aria-hidden with focusable content
 rule_type: atomic
 
 description: |
-  This rule checks `aria-hidden` elements do not contain focusable elements
+  This rule checks that elements with an `aria-hidden` attribute do not contain focusable elements
 
 success_criterion:
+- 1.3.1 # Info and Relationships
 - 4.1.2 # Name, Role, Value
 
 test_aspects:
@@ -22,7 +23,7 @@ authors:
 
 The rule applies to any element with an `aria-hidden="true"` attribute.
 
-**Note**: Using `aria-hidden="false"` on a decendent of an element with `aria-hidden="true"` **does not** expose that element. `aria-hidden="true"` hides itself and all its content from assistive technologies.
+**Note**: Using `aria-hidden="false"` on a descendent of an element with `aria-hidden="true"` **does not** expose that element. `aria-hidden="true"` hides itself and all its content from assistive technologies.
 
 ### Expectation
 
@@ -42,6 +43,7 @@ By adding `aria-hidden="true"` to an element, content authors ensure that assist
 
 A focusable element with `aria-hidden="true"` is ignored as part of the reading order, but still part of the focus order, making it's state of visible or hidden unclear.
 
+- https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html
 - https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html
 - https://www.w3.org/TR/wai-aria-1.1/#aria-hidden
 - https://www.w3.org/TR/html/editing.html#can-be-focused

@@ -161,7 +161,7 @@ class Layout extends React.Component {
 								</nav>
 							</aside>
 							<main>{children}</main>
-						</section>
+						</section >
 					)
 				}}
 			/>

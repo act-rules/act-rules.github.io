@@ -99,7 +99,7 @@ The `<svg>` element has a role of `img` but has no accessible name.
 
 #### Failed example 2
 
-The `<svg>` element has an empty `title`.
+The `img` role includes the `<svg>` element in the accessibility tree but the element has an empty accessible name `title` attribute.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" role="img">
@@ -112,7 +112,7 @@ The `<svg>` element has an empty `title`.
 
 #### Inapplicable example 1
 
-The `svg` element does nott have a role of `img` or `graphics-document`. 
+The `svg` element does not have a role of `img` or `graphics-document`. 
 
 ```html
 <svg width="100" height="100">

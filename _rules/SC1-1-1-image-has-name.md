@@ -151,3 +151,13 @@ HTML `img` element is not [included in the accessibility tree](#included-in-the-
 ```html
 <img alt="W3C logo" aria-hidden="true" />
 ```
+
+#### Inapplicable example 4
+
+Non-image element.
+
+```html
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+```

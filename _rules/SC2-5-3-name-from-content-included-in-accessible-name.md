@@ -27,11 +27,11 @@ This rule applies to any HTML or SVG element that:
 
 **Note**: [widget roles](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [support name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent) are: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
 
-**Note:** If a text node only has [whitespace](#whitespace), it is not [visible](#visible).
+**Note:** [Text nodes](https://www.w3.org/TR/dom/#text) with only [whitespace](#whitespace) are not [visible](#visible).
 
 ### Expectation
 
-The [visible](#visible) [text nodes](https://www.w3.org/TR/dom/#text) that are [descendants](https://www.w3.org/TR/dom41/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of the target element are [included](#included-characters) in their entirety within the [accessible name](#accessible-name) of the element, unless the [text nodes](https://www.w3.org/TR/dom/#text) does not express anything in [human language](https://www.w3.org/TR/WCAG21/#dfn-human-language-s) and therefore does not live up to the [WCAG definition of text](https://www.w3.org/TR/WCAG21/#dfn-text).
+The [visible](#visible) [text nodes](https://www.w3.org/TR/dom/#text) that are [descendants](https://www.w3.org/TR/dom41/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of the target element are [included](#included-characters) in their entirety within the [accessible name](#accessible-name) of the element, or the [text nodes](https://www.w3.org/TR/dom/#text) do not express anything in [human language](https://www.w3.org/TR/WCAG21/#dfn-human-language-s) and therefore do not live up to the [WCAG definition of text](https://www.w3.org/TR/WCAG21/#dfn-text).
 
 ## Assumptions
 
@@ -97,7 +97,7 @@ Full visible label is included in the accessible name.
 
 #### Passed example 5
 
-Text nodes in name from content are not expressing anything in human language and does therefore not live up to the [WCAG definition of text](https://www.w3.org/TR/WCAG21/#dfn-text).
+Text nodes in name from content are not expressing anything in human language and do therefore not live up to the [WCAG definition of text](https://www.w3.org/TR/WCAG21/#dfn-text).
 
 ```html
 <button aria-label="close">:-)</button>
@@ -105,7 +105,7 @@ Text nodes in name from content are not expressing anything in human language an
 
 #### Passed example 6
 
-Text nodes in name from content are not expressing anything in human language and does therefore not live up to the [WCAG definition of text](https://www.w3.org/TR/WCAG21/#dfn-text). In this case, "X" is used because it resembles a "close" icon, not to represent the character "X".
+Text nodes in name from content are not expressing anything in human language and do therefore not live up to the [WCAG definition of text](https://www.w3.org/TR/WCAG21/#dfn-text). In this case, "X" is used because it resembles a "close" icon, not to represent the character "X".
 
 ```html
 <button aria-label="close">X</button>
@@ -131,7 +131,7 @@ Not all of visible label is included in accessible name.
 
 #### Failed example 3
 
-The full visible label is split out across the accessible name.
+The full visible label is split out across the accessible name and is therefore not [included](#included-characters) in it.
 
 ```html
 <head>

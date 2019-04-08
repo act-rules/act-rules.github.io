@@ -234,7 +234,7 @@ The element is positioned off screen and hidden to assistive technologies
 
 #### Inapplicable example 5
 
-The `input` element is in the `button` state.
+The `input` element has a `type` attribute that is in the `button` state.
 
 ```html
 <input type="button" autocomplete="username">
@@ -242,7 +242,7 @@ The `input` element is in the `button` state.
 
 #### Inapplicable example 6
 
-The `input` element is in the `hidden` state.
+The `input` element has a `type` attribute that is in the `hidden` state.
 
 ```html
 <input type="hidden" autocomplete="username">

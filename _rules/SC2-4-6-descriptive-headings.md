@@ -23,7 +23,7 @@ authors:
 
 ### Applicability
 
-This rule applies to any element with the [semantic role](#semantic-role) of `heading` that is [visible](#visible).
+This rule applies to any [visible](#visible) element with the [semantic role](#semantic-role) of `heading`.
 
 **Note:**** Headings with only [whitespace](#whitespace) are not [visible](#visible).
 

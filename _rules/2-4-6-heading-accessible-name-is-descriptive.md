@@ -24,7 +24,7 @@ authors:
 This rule applies to any HTML or SVG element with the [semantic role](#semantic-role) of `heading` that:
 - is [included in the accessibility tree](#included-in-the-accessibility-tree),
 - has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace), and
-- does not have any [visible](#visible) [text nodes](), or where the [visible](#visible) [text nodes]() does not match the [accessible name](#accessible-name).
+- does not have any [visible](#visible) [text nodes](), or where the [visible](#visible) [text nodes]() does not [match](#matching-characters) the [accessible name](#accessible-name).
 
 **Note**: This rule only applies to elements with the [semantic role](#semantic-role) of `heading`. Thus, it is a partial check for WCAG 2.0 success criterion 2.4.6, which applies to all headings regardless of semantic programming. In the success criteria "heading" is used in the general sense and includes elements that are not marked up as headings in the code, but still act visually as headings, e.g. by larger and/or bolder text.
 

@@ -180,7 +180,7 @@ Empty first `title`.
 
 #### Failed example 5
 
-`title` only consist of whitespace.
+`title` only has whitespace.
 
 ```html
 <html>

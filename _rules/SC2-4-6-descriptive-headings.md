@@ -81,7 +81,7 @@ The heading marked up with `role="heading"` describes the topic or purpose of it
 The heading marked up with `h` element contains an image and an accessible name that describes the topic or purpose of its section of the content.
 
 ```html
-<h1><img scr="../test-assets/opening_hours_icon.png" alt="Opening hours"></img></h1>
+<h1><img scr="../test-assets/opening_hours_icon.png" alt="Opening hours"></h1>
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 

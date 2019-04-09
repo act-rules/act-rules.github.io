@@ -36,7 +36,7 @@ This rule applies to any element that:
 
 ### Expectation 1
 
-The `label` element, if there is any, together with its context, describe the purpose of the associated form field element.
+The `label` element, if there is any, describes the purpose of the associated form field element. The context of the element can be used to differentiate the purpose from other form fields on the same page.
 
 **Note:** In this case, context can be created by headings, fieldsets and legends, text that is near the control, etc.
 
@@ -44,7 +44,7 @@ The `label` element, if there is any, together with its context, describe the pu
 
 ### Expectation 2
 
-The [accessible name](#accessible-name), if there is any, together with its context, describe the purpose of the associated form field element.
+The [accessible name](#accessible-name), if there is any, describes the purpose of the associated form field element. The context of the element can be used to differentiate the purpose from other form fields on the same page.
 
 **Note:** In this case, context can be created by headings, fieldsets and legends, text that is near the control, etc.
 
@@ -52,7 +52,7 @@ The [accessible name](#accessible-name), if there is any, together with its cont
 
 ## Assumptions
 
-This rule assumes that while having an important context that is not [programatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) might be a violation under other [WCAG](https://www.w3.org/TR/WCAG21/) success criteria (e.g. 1.3.1 Info and Relationships, if text that has not been marked up as headings is used to split a form into different sections), this is allowed under success criterion 2.4.6 Headings and Labels: Headings and labels describe topic or purpose.
+This rule assumes that while having an differentiating context that is not [programatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) might be a violation under other [WCAG](https://www.w3.org/TR/WCAG21/) success criteria (e.g. 1.3.1 Info and Relationships, if text that has not been marked up as headings is used to split a form into different sections), this is allowed under success criterion 2.4.6 Headings and Labels: Headings and labels describe topic or purpose.
 
 ## Accessibility support
 
@@ -115,7 +115,7 @@ Label is included in accessibility tree, but not visible.
 
 #### Passed example 6
 
-Programatically determinable headings provide a context that together with the labels describe the purpose of the form fields.
+Programatically determinable headings provide a context that differentiates the purpose of the otherwise identically named form fields.
 
 ```html
 <h2>Shipping address</h2>
@@ -181,13 +181,22 @@ Label is included in accessibility tree, but not visible, and does not describe 
 <input aria-labelledby="label_fname" type="text" name="fname"/>
 ```
 
-#### Passed example 6
+#### Failed example 6
 
 Accessible name created through "aria-label" does not describes the purpose of the associated element.
 
 ```html
 <input aria-label="Menu" id="fname" type="text" name="fname"/>
 ```
+
+#### Failed example 7
+
+The `label` in itself does not describe the purpose of the form field, and while the context can be relied upon to differentiate form fields from each other, it is not sufficient to let rely on the context for describing the entire purpose of the form field.
+
+```html
+<h2>Name</h2>
+<label>Fill in: <input id="name" type="text" name="name"/></label>
+````
 
 ### Inapplicable
 

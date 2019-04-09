@@ -82,7 +82,7 @@ The `lang` attribute has a value that is not empty ("") and has a valid primary 
 
 #### Passed example 4
 
-The `lang` and `xml:lang` attributes values that are not empty ("") and has valid primary language subtags.
+The `lang` and `xml:lang` attribute values are not empty ("") and both have a valid primary language subtag.
 
 ```html
 <html>
@@ -94,7 +94,7 @@ The `lang` and `xml:lang` attributes values that are not empty ("") and has vali
 
 #### Passed example 5
 
-The `lang` and `xml:lang` attributes values are either empty ("") or has a valid primary language subtag.
+The `lang` and `xml:lang` attribute values are either empty ("") or have a valid primary language subtag.
 
 ```html
 <html>

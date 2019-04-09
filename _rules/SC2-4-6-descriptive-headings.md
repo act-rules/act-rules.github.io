@@ -3,7 +3,7 @@ name: Heading is descriptive
 rule_type: atomic
 
 description: |
-   This rule checks that headings describe the topic or purpose of the content.
+   This rule checks that visible headings describe the topic or purpose of the content.
    
 success_criterion:
 - 2.4.6 # Headings and labels
@@ -23,7 +23,7 @@ authors:
 
 ### Applicability
 
-This rule applies to any element with the [semantic role](#semantic-role) of `heading` that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree) and has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
+This rule applies to any element with the [semantic role](#semantic-role) of `heading` that is [visible](#visible).
 
 **Note:**** Headings with only [whitespace](#whitespace) are not [visible](#visible).
 
@@ -31,15 +31,9 @@ This rule applies to any element with the [semantic role](#semantic-role) of `he
 
 ### Expectation 1
 
-The [visible](#visible) heading, if there is any, of each target element describes the topic or purpose of its [section of the content](#section-of-content) in part or in its entirety, or the `heading` has no section of the content.
+The [visible](#visible) heading of each target element describes the topic or purpose of its [section of the content](#section-of-content) in part or in its entirety, or the `heading` has no section of the content.
 
 **Note**: Headings do not need to be lengthy. A word, or even a single character, may suffice.
-
-### Expectation 2
-
-The [accessible name](#accessible-name), if there is any, of each target element describes the topic or purpose of its [section of the content](#section-of-content) in part or its entirety, or the `heading` has no section of the content.
-
-**Note:** Usually the accessible name will be the same as the visible content of the `heading`, but in some cases the two might be different, and in these cases both versions of the `heading` need to be evaluated.
 
 ## Assumptions
 This rule assumes that while having a heading that has no section of content might be a WCAG violation under other success criteria (e.g. 1.3.1 Info and Relationships, if the heading markup has been misused for purely presentational purposes), this is allowed under success criterion 2.4.6 Headings and Labels: Headings and labels describe topic or purpose.
@@ -56,7 +50,7 @@ _There are no major accessibility support issues known for this rule._
 - [ARIA12: Using role=heading to identify headings](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA12)
 - [HTML 5.2 Standard - Heading content](https://www.w3.org/TR/html52/dom.html#heading-content)
 
-## Test Cases
+## Test Cases - NOT UPDATED
 
 ### Passed
 

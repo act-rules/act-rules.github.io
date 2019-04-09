@@ -34,7 +34,7 @@ The page contains at least one `title` element.
 
 ### Expectation 2
 
-The first `title` element has [text nodes](https://www.w3.org/TR/dom/#text) that does not only have [whitespace](#whitespace).
+The first `title` element has [text nodes](https://www.w3.org/TR/dom/#text) that do not only have [whitespace](#whitespace).
 
 ## Assumptions
 

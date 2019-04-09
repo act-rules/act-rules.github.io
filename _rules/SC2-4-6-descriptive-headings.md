@@ -23,13 +23,15 @@ authors:
 
 ### Applicability
 
-This rule applies to any element with the [semantic role](#semantic-role) of `heading` that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree), and that either has [visible](#visible) [content](https://www.w3.org/TR/WCAG21/#dfn-content), or has an [accessible name](#accessible-name) that does not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153).
+This rule applies to any element with the [semantic role](#semantic-role) of `heading` that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree) and has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
+
+**Note:**** Headings with only [whitespace](#whitespace) are not [visible](#visible).
 
 **Note**: This rule only applies to elements with the [semantic role](#semantic-role) of `heading`. Thus, it is a partial check for WCAG 2.0 success criterion 2.4.6, which applies to all headings regardless of semantic programming. In the success criteria "heading" is used in the general sense and includes elements that are not marked up as headings in the code, but still act visually as headings, e.g. by larger and/or bolder text.
 
 ### Expectation 1
 
-The [visible](#visible) [content](https://www.w3.org/TR/WCAG21/#dfn-content), if there is any, of each target element describes the topic or purpose of its [section of the content](#section-of-content) in part or in its entirety, or the `heading` has no section of the content.
+The [visible](#visible) heading, if there is any, of each target element describes the topic or purpose of its [section of the content](#section-of-content) in part or in its entirety, or the `heading` has no section of the content.
 
 **Note**: Headings do not need to be lengthy. A word, or even a single character, may suffice.
 
@@ -101,7 +103,7 @@ The heading marked up with `h` element is a single character that describes the 
 
 #### Passed example 5
 
-The heading marked up with `role="heading"` describes the topic or purpose of its section of the content. The heading is positioned off screen and is included in the Accessibility Tree.
+The heading marked up with `role="heading"` describes the topic or purpose of its section of the content. The heading is positioned off screen and is included in the accessibility tree.
 
 ```html
 <span role="heading" style="position: absolute; top: -9999px; left: -9999px;">Opening Hours</span>
@@ -231,7 +233,8 @@ The heading is neither visible to users, nor included in the accessibility tree.
 
 #### Inapplicable example 3
 
-The heading marked up with `h` element does not contain visible content or has an accessible name that does not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153).
+The heading marked up with `h` element does not contain visible content or has an accessible name that is not only [whitespace](#whitespace).
+
 
 ```html
 <h1></h1>
@@ -239,8 +242,16 @@ The heading marked up with `h` element does not contain visible content or has a
 
 #### Inapplicable example 4
 
-The heading marked up with `role="heading"` does not contain visible content or has an accessible name that does not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153).
+The heading marked up with `role="heading"` does not contain visible content or has an accessible name that is not only [whitespace](#whitespace).
 
 ```html
 <span role="heading"  aria-label=" "></span>
+```
+
+#### Inapplicable example 5 
+
+A heading with only breaks is not [visible](#visible).
+
+```html
+<h1><br><br><br></h1>
 ```

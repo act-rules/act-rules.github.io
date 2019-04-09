@@ -35,7 +35,8 @@ The [visible](#visible) [text nodes](https://www.w3.org/TR/dom/#text) that are [
 
 ## Assumptions
 
-This rule assumes that the [visible](#visible) [text](ttps://www.w3.org/TR/WCAG21/#dfn-text) has the same order as the text in the code, e.g. CSS has not been used to re-arrange pieces of text so that they are presented in a different order.
+- This rule assumes that the [visible](#visible) [text nodes](https://www.w3.org/TR/dom/#text) has the same order as the text in the code, e.g. CSS has not been used to re-arrange pieces of text so that they are presented in a different order.
+- This rule assumes that the whole set of [visible](#visible) [text nodes](https://www.w3.org/TR/dom/#text) of the element are styled, including placement, in such a way that a sighted user will perceive them all as part of the label of the element. An example where this would not be the case, is where styling is used to split up the visible text nodes in e.g. two parts and place one part further away, or give it a different styling that makes it appear as not connected to the element it labels.
 
 ## Accessibility Support
 

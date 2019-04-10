@@ -22,17 +22,17 @@ authors:
 
 ### Applicability
 
-The rule applies to any `element` that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+The rule applies to any `element` that is [visible](#visible).
 
 ### Expectation
 
-Each target element does not have any `CSS` media queries applied, that locks the page content to a specific orientation.
+Each target element does not have any `CSS` media queries applied, that locks the page content to a specific display orientation.
+
+**Note:** Examples where a particular display orientation may be [essential](https://www.w3.org/TR/WCAG21/#dfn-essential) are a bank check, a piano application, slides for a projector or television, or virtual reality content where binary display orientation is not applicable.
 
 ## Assumptions
 
 - The rule does not take consider existence of any control on the page that can handle or change the orientation on demand.
-
-- The rule assumes that a specific display orientation is not [essential](https://www.w3.org/TR/WCAG21/#dfn-essential), which is listed as a valid exception to [Success Criterion 1.3.4 Orientation]((https://www.w3.org/WAI/WCAG21/Understanding/orientation.html)). Examples where a particular display orientation may be essential are a bank check, a piano application, slides for a projector or television, or virtual reality content where binary display orientation is not applicable.
 
 ## Accessibility support
 
@@ -97,6 +97,19 @@ A page, where a set of `CSS media queries` negate the `orientation` lock, given 
 </html>
 ```
 
+#### Passed example 3 
+
+A page where there are no `stylesheets`, or any `styles`.
+
+```html
+<html lang="en">
+  <body>
+    I am a page with no styles
+  </body>
+</html>
+```
+
+
 ### Failed
 
 #### Failed example 1
@@ -141,16 +154,17 @@ A page, where orientation is locked via `style` specified on the `head`.
 </html>
 ```
 
+
 ### Inapplicable
 
 #### Inapplicable example 1
 
-A page where there are no `stylesheets`, or any `styles` that can modify the base style.
+A page where `body` is not visible.
 
 ```html
 <html lang="en">
-  <body>
-    I am a simple page
+  <body style="display: none">
+    I am hidden
   </body>
 </html>
 ```

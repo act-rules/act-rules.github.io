@@ -2,7 +2,7 @@
 name: Valid body lang attribute
 
 description: |
- This rule checks that `lang` or `xml:lang` attributes on elements within the `body` of a web page has a valid language subtag.
+ This rule checks that `lang` or `xml:lang` attributes on elements within the `body` of a web page have a valid language subtag.
 
 success_criterion:
 - 3.1.2
@@ -27,7 +27,7 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 
 ## Assumptions
 
-*There are currently no assumptions*
+This rule assumes that the presence of a lang or xml:lang attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
 
 ## Background
 

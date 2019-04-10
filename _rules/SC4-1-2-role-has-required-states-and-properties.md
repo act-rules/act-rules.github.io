@@ -17,7 +17,7 @@ authors:
 
 ### Applicability
 
-Any HTML or SVG element that has an [explicit semantic role](#semantic-role), except if the element has an [implicit semantic role](#implicit-role) that is identical to the explicit semantic role. 
+Any HTML or SVG element, that is [included-in-the-accessibility-tree](#included-in-the-accessibility-tree) and that has an [explicit semantic role](#semantic-role), except if the element has an [implicit semantic role](#implicit-role) that is identical to the explicit semantic role. 
 
 ### Expectation
 
@@ -137,4 +137,12 @@ Element has an implicit semantic role that is identical to the explicit semantic
 
 ```html
 <input type="checkbox" role="checkbox">
+```
+
+#### Inapplicable example 4
+
+Element does not list required states and properties (´aria-controls´ is required property for ´combobox´), but the element is not included in the accessibility tree
+
+```html
+<div role="combobox" style="display:none;"></div>
 ```

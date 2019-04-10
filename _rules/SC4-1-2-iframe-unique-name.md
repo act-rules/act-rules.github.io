@@ -20,9 +20,9 @@ authors:
 
 ### Applicability
 
-This rule applies to `iframe` elements that are [included in the accessibility tree](#included-in-the-accessibility-tree) and have the same [non-empty](#non-empty) [accessible name](#accessible-name).
+This rule applies to `iframe` elements that are [included in the accessibility tree](#included-in-the-accessibility-tree) and have [matching](matching-characters) [accessible name](#accessible-name), that do not only include whitespace.
 
-**Note**: `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
+**Note**: As the `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
 
 ### Expectation
 

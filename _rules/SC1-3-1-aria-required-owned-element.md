@@ -3,7 +3,6 @@ name: ARIA required owned elements
 
 description: |
 	This rule checks that each role has at least one of its required owned elements.
-
 success_criterion:
 - 1.3.1 # Info and Relationships (A)
 
@@ -20,7 +19,7 @@ authors:
 
 ### Applicability
 
-This rule applies to any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has an explicit [semantic role](#semantic-role) that has [WAI-ARIA required owned elements](https://www.w3.org/TR/wai-aria/#mustContain), except if the element has an implicit semantic role that is identical to the explicit semantic role.
+This rule applies to any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has an explicit [semantic role](#semantic-role) that has [WAI-ARIA required owned elements](https://www.w3.org/TR/wai-aria/#mustContain), except when the element has an implicit semantic role that is identical to its explicit semantic role.
 
 ### Expectation
 
@@ -74,16 +73,6 @@ Element `div` with role `tablist` has child node `span` with the required owned 
 
 #### Passed example 3
 
-Element with role `list` has `li` element which has an implicit semantic role of ´listitem´, which is a required owned element.
-
-```html
-<ul role='list'>
-	<li></li> <!-- implicit role -->
-</ul>
-```
-
-#### Passed example 4
-
 Multiple roles that each have an instance of their required owned elements present as child nodes.
 
 ```html
@@ -95,7 +84,7 @@ Multiple roles that each have an instance of their required owned elements prese
 </table>
 ```
 
-#### Passed example 5
+#### Passed example 4
 
 Multiple types of required owned elements are present.
 
@@ -107,7 +96,7 @@ Multiple types of required owned elements are present.
 </ul>
 ```
 
-#### Passed example 6
+#### Passed example 5
 
 Required owned element does not have to be an immediate child of the role, but could be any descendant. (See accessibility support notes for details).
 
@@ -133,7 +122,7 @@ Required owned element does not have to be an immediate child of the role, but c
 </div>
 ```
 
-#### Passed example 7
+#### Passed example 6
 
 Nested required owned element(s) using the `containing` notation for respective role(s).
 
@@ -156,9 +145,9 @@ Nested required owned element(s) using the `containing` notation for respective 
 </div>
 ```
 
-#### Passed example 8
+#### Passed example 7
 
-Element `div` with `list` role  contains a required owned element with implicit role of `listitem`.
+Element with role `list` contains a required owned element with implicit role of `listitem`.
 
 ```html
 <div role='list'>
@@ -167,11 +156,38 @@ Element `div` with `list` role  contains a required owned element with implicit 
 </div>
 ```
 
+#### Passed example 8
+
+Element with role `menubar` can have multiple required owned element (`menuitem` `menuitemcheckbox` and `menuitmeradio`) but only at least one is necessary.
+
+```html
+<div role='menubar'>
+   <div role='menuitem'>
+   </div>
+   <div role='menuitem'>
+   </div>
+</div>
+```
+
+#### Passed example 9
+
+Element with role `list` contains a required `listitem`, the relationship between both elements is made possible through the `aria-owns` properties.
+
+```html
+<div role="list" aria-owns="id1">
+</div>
+
+<div id="id1" role="listitem"></div>
+
+```
+
+**Note:** This test case follows the definition of [owned by](#owned-by) used in this rule. If implemented differently, this definition could cause differences in outcome for this test case.
+
 ### Failed
 
 #### Failed example 1
 
-Missing required owned element ´listitem´.
+Element with role `list` is missing required owned element `listitem`.
 
 ```html
 <ul role='list'>
@@ -193,7 +209,7 @@ Element with role `tablist` is missing required owned element `tab`.
 
 #### Failed example 3
 
-Element with role grid is missing required owned element rowgroup, even though the containing required owned element is present.
+Element with role `grid` is missing a required owned element `rowgroup`, even though the containing required owned element `row` is present.
 
 ```html
 <div role="grid">
@@ -210,11 +226,28 @@ Element with role grid is missing required owned element rowgroup, even though t
 </div>
 ```
 
+#### Failed example 4
+
+The element with the semantic role of `list` owned the element with the role `tab` through the `aria-owns` property, but it doesn't owned the required owned element `listitem`.
+
+```html
+<div role="list" aria-owns="id2">
+</div>
+
+<div role="tablist" aria-owns="id2">
+</div>
+
+<div id="id1" role="listitem"></div>
+<div id="id2" role="tab"></div>
+```
+
+**Note:** This test case follows the definition of [owned by](#owned-by) used in this rule. If implemented differently, this definition could cause differences in outcome for this test case.
+
 ### Inapplicable
 
 #### Inapplicable example 1
 
-Element is not exposed to assistive technologies.
+Element with explicite semantic role `list` is not exposed to assistive technologies.
 
 ```html
 <ul role='list' aria-hidden='true'>
@@ -234,7 +267,7 @@ Element has empty role.
 
 #### Inapplicable example 3
 
-Element has no role attribute.
+Element has no explicit semantic role.
 
 ```html
 <ul>

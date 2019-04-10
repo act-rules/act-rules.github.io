@@ -3,7 +3,7 @@ name: Links with identical accessible names serve equivalent purpose
 test_type: atomic
 
 description: |
-  This rule checks that links with identical accessible names serve an equivalent purpose.
+  This rule checks that links with identical accessible names resolve to the same resource or equivalent resources.
 
 success_criterion: 
 - 2.4.9 # Link Purpose (Link Only)
@@ -20,13 +20,13 @@ authors:
 
 ### Applicability
 
-This rule applies to any set of any two or more HTML or SVG elements that have the [semantic role](#semantic-role) of `link`, or a role that inherits from the `link` role, are [included in the accessibility tree](#included-in-the-accessibility-tree), and that have [matching](#matching-characaters) [accessible names](#accessible-name) that does not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153).
+This rule applies to any set of any two or more HTML or SVG elements that have the [semantic role](#semantic-role) of `link`, or a role that inherits from the `link` role, are [included in the accessibility tree](#included-in-the-accessibility-tree), and that have [matching](#matching-characaters) [accessible names](#accessible-name) that does not only consist of [whitespace](#whitespace).
 
 **Note:** The test target for this rule is the full set of link elements that share the same [matching](#matching-characters) [accessible name](#accessible-name).
 
 ### Expectation
 
-When followed, the links in each set of target elements resolve to the [same resource](#same-resource) or to different resources that fulfill an [equivalent purpose](#equivalent-purpose).
+When followed, the links in each set of target elements resolve to the [same resource](#same-resource) or to [equivalent resources](#equivalent-purpose).
 Resolving the links includes potential redirects, if the redirects happen instantly.
 
 ## Assumptions

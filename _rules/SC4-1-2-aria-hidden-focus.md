@@ -26,7 +26,7 @@ The rule applies to any element with an `aria-hidden="true"` attribute.
 
 ### Expectation
 
-None of the target elements are part of [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation), nor do they have [descendants](https://www.w3.org/TR/dom41/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) that participate in [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation).
+None of the target elements are part of [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation), nor do they have [descendants](https://www.w3.org/TR/dom41/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) that are part of [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation).
 
 ## Assumptions
 

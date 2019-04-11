@@ -150,7 +150,7 @@ The heading marked up with `h` element has visible text nodes and an accessible 
 
 #### Passed example 10
 
-The visible heading is made up of an image of text, that also has an accessible name. Both the visible content and the accessible name is describe the content.
+The visible heading is made up of an image of text, that also has an accessible name. Both the visible content and the accessible name describe the content.
 
 ```html
 <h1><img src="../test-assets/SC2-4-6-descriptive-headings/oranges.png" "alt="Oranges"></h1>

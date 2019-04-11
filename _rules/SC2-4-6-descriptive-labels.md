@@ -24,11 +24,11 @@ authors:
 This rule applies to any element that:
 - has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`, and
 - is [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree), and 
-- has an [accessible name](#accessible-name) or is the [labeled control](https://www.w3.org/TR/html/sec-forms.html#labeled-control) of a `label` element that is either [visible](#visible) or [included-in-the-accessibility-tree](#included in the accessibility tree).
+- has an [accessible name](#accessible-name) or is the [labeled control](https://www.w3.org/TR/html/sec-forms.html#labeled-control) of a `label` element that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 **Note**: The list of applicable [semantic roles](#semantic-roles) is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
-- inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and 
-- does not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
+- inherit from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and 
+- do not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
 
 **Note:** The `option` role is not part of the list of applicable roles, because it has a required context role that inherits from the `select` role. Furthermore, `option` does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an accessible name.
 
@@ -191,7 +191,7 @@ Accessible name created through "aria-label" does not describes the purpose of t
 
 #### Failed example 7
 
-The `label` in itself does not describe the purpose of the form field, and while the context can be relied upon to differentiate form fields from each other, it is not sufficient to let rely on the context for describing the entire purpose of the form field.
+The `label` in itself does not describe the purpose of the form field, and while the context can be relied upon to differentiate form fields from each other, it is not sufficient to rely on the context for describing the entire purpose of the form field.
 
 ```html
 <h2>Name</h2>
@@ -205,7 +205,7 @@ The `label` in itself does not describe the purpose of the form field, and while
 `Label` that is neither visible to users, nor included in the accessibility tree.
 
 ```html
-<label for="fname" style:"display:none;">First name:</label>
+<label for="fname" style="display:none;">First name:</label>
 <input id="fname" type="text" name="fname"/>
 ```
 
@@ -214,7 +214,7 @@ The `label` in itself does not describe the purpose of the form field, and while
 Programatically associated `p` element that is neither visible nor included in the accessibility tree.
 
 ```html
-<p id="label_fname" style:"display:none;">First name:</p>
+<p id="label_fname" style="display:none;">First name:</p>
 <input aria-labelledby="label_fname" type="text" name="fname"/>
 ```
 
@@ -223,7 +223,7 @@ Programatically associated `p` element that is neither visible nor included in t
 The `label` element is associated with an HTML element that does not have a form field semantic role.
 
 ```html
-<label for="fname" style:"display:none;">First name:</label>
+<label for="fname">First name:</label>
 <p id="fname"/>
 ```
 

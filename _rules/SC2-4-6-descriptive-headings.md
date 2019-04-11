@@ -31,13 +31,13 @@ This rule applies to any element with the [semantic role](#semantic-role) of `he
 
 ### Expectation 1
 
-The [visible](#visible) heading, if there is any, of each target element describes the topic or purpose of its [section of the content](#section-of-content) in part or in its entirety, or the `heading` has no section of the content.
+The [visible](#visible) heading, if there is any, of each target element describes the topic or purpose of its [visible](#visible) [section of the content](#section-of-content) in part or in its entirety, or the `heading` has no section of the content.
 
 **Note**: Headings do not need to be lengthy. A word, or even a single character, may suffice.
 
 ### Expectations 2
 
-The [accessible name](#accessible-name), if there is any, of each target element describes the topic or purpose of its [section of the content](#section-of-content) that is in part or its entirety, or the `heading` has no section of the content.
+The [accessible name](#accessible-name), if there is any, of each target element describes the topic or purpose of its [section of the content](#section-of-content) that is [included in the accessibility tree](#included-in-the-accessibility-tree) in part or its entirety, or the `heading` has no section of the content.
 
 **Note:** Usually the accessible name will be the same as the visible content of the heading, but in some cases the two might be different, and in these cases both versions of the heading need to be evaluated.
 

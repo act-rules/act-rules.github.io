@@ -3,7 +3,7 @@ name: Heading is descriptive
 rule_type: atomic
 
 description: |
-   This rule checks that visible headings describe the topic or purpose of the content.
+   This rule checks that headings describe the topic or purpose of the content.
    
 success_criterion:
 - 2.4.6 # Headings and labels
@@ -23,7 +23,7 @@ authors:
 
 ### Applicability
 
-This rule applies to any [visible](#visible) element with the [semantic role](#semantic-role) of `heading`.
+This rule applies to any element with the [semantic role](#semantic-role) of `heading` that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree) and has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
 
 **Note:**** Headings with only [whitespace](#whitespace) are not [visible](#visible).
 
@@ -31,7 +31,15 @@ This rule applies to any [visible](#visible) element with the [semantic role](#s
 
 ### Expectation 1
 
-The [visible](#visible) heading of each target element describes the topic or purpose of its [section of the content](#section-of-content) in part or in its entirety, or the `heading` has no section of the content.
+The [visible](#visible) heading, if there is any, of each target element describes the topic or purpose of its [section of the content](#section-of-content) in part or in its entirety, or the `heading` has no section of the content.
+
+**Note**: Headings do not need to be lengthy. A word, or even a single character, may suffice.
+
+### Expectations 2
+
+The [accessible name](#accessible-name), if there is any, of each target element describes the topic or purpose of its [section of the content](#section-of-content) that is in part or its entirety, or the `heading` has no section of the content.
+
+**Note:** Usually the accessible name will be the same as the visible content of the heading, but in some cases the two might be different, and in these cases both versions of the heading need to be evaluated.
 
 **Note**: Headings do not need to be lengthy. A word, or even a single character, may suffice.
 

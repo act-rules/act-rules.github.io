@@ -58,7 +58,7 @@ _There are no major accessibility support issues known for this rule._
 - [ARIA12: Using role=heading to identify headings](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA12)
 - [HTML 5.2 Standard - Heading content](https://www.w3.org/TR/html52/dom.html#heading-content)
 
-## Test Cases - NOT UPDATED
+## Test Cases - UPDATE IN PROGRESS
 
 ### Passed
 
@@ -157,6 +157,34 @@ The visible heading is made up of an image of text, that also has an accessible 
 <p>I really like oranges.</p>
 ```
 
+#### Passed example 11
+
+heading visible + incl. in acc. tree
+content not visible but included in the acc. tree
+
+
+#### Passed example 11
+
+heading incl. in acc. tree
+content only visible
+
+#### Passed example 11
+
+heading both visible and included in the acc. tree
+part of content is visible, part of it is incl. in acc. tree
+
+#### Passed example 12
+
+heading is visible, but not included in accessibility tree
+content is not visible, but included in the a accessibility tree
+heading is not descriptive, but it doesn't matter
+
+#### Passed example 13
+
+heading is included in accessibility tree, but not visible
+content is visible, but not included in accessibility tree
+heading is not descriptive, but it doesn't matter
+
 ### Failed
 
 #### Failed example 1
@@ -213,6 +241,16 @@ The heading marked up with `h` element has an accessible name that describes the
 <h1 aria-label="Opening hours">Weather</h1>
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
+
+### Failed example 7
+
+heading visible 
+part of content visible, and heading doesn't describe it
+
+### Failed example 8
+
+heading is included in the acc. tree
+part of content is included in acc. tree and heading doesn't describe it
 
 ### Inapplicable
 

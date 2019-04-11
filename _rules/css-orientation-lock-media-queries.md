@@ -22,11 +22,11 @@ authors:
 
 ### Applicability
 
-The rule applies to any `element` that is [visible](#visible).
+The rule applies to any `element` that is [visible](#visible) and has CSS media query styles targeting the display orientation.
 
 ### Expectation
 
-Each target element does not have any `CSS` media queries applied, that locks the page content to a specific display orientation.
+Each target element does not restrict its view and operation to a single display orientation, unless a specific display orientation is [essential](https://www.w3.org/TR/WCAG21/#dfn-essential).
 
 **Note:** Examples where a particular display orientation may be [essential](https://www.w3.org/TR/WCAG21/#dfn-essential) are a bank check, a piano application, slides for a projector or television, or virtual reality content where binary display orientation is not applicable.
 
@@ -50,26 +50,7 @@ Each target element does not have any `CSS` media queries applied, that locks th
 
 #### Passed example 1
 
-A page that has no `CSS media queries` that targets the orientation.
-
-```html
-<html lang="en">
-  <head>
-    <style>
-      html {
-        font-size: 22px;
-      }
-    </style>
-  </head>
-  <body>
-    Page Content
-  </body>
-</html>
-```
-
-#### Passed example 2
-
-A page, where a set of `CSS media queries` negate the `orientation` lock, given the order of CSS specificity.
+A page, where CSS media query styles negate orientation lock, and therefore does not restrict its view or operation.
 
 ```html
 <html lang="en">
@@ -97,18 +78,28 @@ A page, where a set of `CSS media queries` negate the `orientation` lock, given 
 </html>
 ```
 
-#### Passed example 3 
+#### Passed example 2
 
-A page where there are no `stylesheets`, or any `styles`.
+A page (piano application), where orientation lock is essential.
 
 ```html
 <html lang="en">
+  <head>
+    <style>
+      @media (orientation: portrait) {
+        body {
+          transform: rotate(90deg);
+        }
+      }
+    </style>
+  </head>
   <body>
-    I am a page with no styles
+    <main>
+      <!-- piano application -->
+    </main>
   </body>
 </html>
 ```
-
 
 ### Failed
 
@@ -159,12 +150,66 @@ A page, where orientation is locked via `style` specified on the `head`.
 
 #### Inapplicable example 1
 
+A page where there are no styles.
+
+```html
+<html lang="en">
+  <body>
+    I am a page with no styles
+  </body>
+</html>
+```
+
+#### Inapplicable example 2
+
+A page that has no CSS media query styles.
+
+```html
+<html lang="en">
+  <head>
+    <style>
+      html {
+        font-size: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    Page Content
+  </body>
+</html>
+```
+
+#### Inapplicable example 3
+
 A page where `body` is not visible.
 
 ```html
 <html lang="en">
   <body style="display: none">
     I am hidden
+  </body>
+</html>
+```
+
+#### Inapplicable example 4
+
+A page, where CSS media query styles targeting orientation lock is applied to an element that is not visible.
+
+```html
+<html lang="en">
+  <head>
+    <style>
+      @media (orientation: lanscape) {
+        body {
+          transform: rotate(270deg);
+        }
+      }
+    </style>
+  </head>
+  <body style="display:none;">
+    <main>
+      Page Content
+    </main>
   </body>
 </html>
 ```

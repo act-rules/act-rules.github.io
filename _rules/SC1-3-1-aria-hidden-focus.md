@@ -23,11 +23,11 @@ authors:
 
 The rule applies to any element with an `aria-hidden="true"` attribute.
 
-**Note**: Using `aria-hidden="false"` on a descendent of an element with `aria-hidden="true"` **does not** expose that element. `aria-hidden="true"` hides itself and all its content from assistive technologies.
+**Note**: Using `aria-hidden="false"` on a descendant of an element with `aria-hidden="true"` **does not** expose that element. `aria-hidden="true"` hides itself and all its content from assistive technologies.
 
 ### Expectation
 
-None of the target elements are [focusable](#focusable), nor do they contain a [focusable element](#focusable).
+None of the target elements are part of [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation), nor do they have [descendants](https://www.w3.org/TR/dom41/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) that are part of [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation).
 
 ## Assumptions
 
@@ -72,7 +72,7 @@ Content hidden through CSS.
 
 #### Passed example 3
 
-Content made unfocusable through tabindex.
+Content taken out of sequential focus order using `tabindex`.
 
 ```html
 <div aria-hidden="true">
@@ -82,7 +82,7 @@ Content made unfocusable through tabindex.
 
 #### Passed example 4
 
-Content made unfocusable through disabled.
+Content made unfocusable through `disabled` attribute.
 
 ```html
 <input disabled aria-hidden="true" />
@@ -97,6 +97,16 @@ Content made unfocusable through disabled.
 	<div aria-hidden="false">
 		<button tabindex="-1">Some button</button>
 	</div>
+</div>
+```
+
+#### Passed example 6
+
+Content taken out of sequential focus order using `tabindex`.
+
+```html
+<div aria-hidden="true">
+	<button tabindex="-2">Some button</button>
 </div>
 ```
 
@@ -144,7 +154,7 @@ Focusable content through `tabindex`.
 
 #### Failed example 5
 
-Focusable summary element
+Focusable `summary` element.
 
 ```html
 <details aria-hidden="true">

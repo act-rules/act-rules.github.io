@@ -138,3 +138,11 @@ Element has an implicit semantic role that is identical to the explicit semantic
 ```html
 <input type="checkbox" role="checkbox" />
 ```
+
+#### Inapplicable example 4
+
+Element does not list required states and properties (´aria-controls´ is required property for ´combobox´), but the element is not included in the accessibility tree
+
+```html
+<div role="combobox" style="display:none;"></div>
+```

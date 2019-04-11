@@ -22,19 +22,19 @@ authors:
 
 ### Applicability
 
-The rule applies to any page where the root element is an `html` element, and which is not embedded in another page.
+The rule applies to any page where the [document element](https://www.w3.org/TR/dom/#document-element) is an `html` element, and where the page is not embedded in another page.
 
-**Note**: Pages may be embedded inside other pages through elements such as iframes and object elements.
+**Note**: Pages may be embedded inside other pages through elements such as `iframe` and `object` elements.
 
 ### Expectation 1
 
-The page contains at least one `title` element.
+The [document element](https://www.w3.org/TR/dom/#document-element) has at least one [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) that is an HTML `title` element.
 
-**Note**: The `title` element exists in other namespaces such as SVG. These are not `title` elements for HTML document and should be ignored.
+**Note**: The `title` element exists in other namespaces such as SVG. These are not HTML `title` elements and should be ignored for this rule.
 
 ### Expectation 2
 
-The first `title` element contains [non-empty text](#non-empty).
+The first HTML `title` element that is a [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) of the [document element](https://www.w3.org/TR/dom/#document-element) has [children](https://www.w3.org/TR/dom/#concept-tree-child) that are [text nodes](https://www.w3.org/TR/dom/#text) that are not only [whitespace](#whitespace).
 
 ## Assumptions
 
@@ -58,7 +58,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed example 1
 
-This page has a `title`.
+This page has a `title` with content.
 
 ```html
 <html>
@@ -68,7 +68,7 @@ This page has a `title`.
 
 #### Passed example 2
 
-This page give a `title` to an iframe.
+This page gives a `title` to an iframe.
 
 ```html
 <html>
@@ -79,7 +79,7 @@ This page give a `title` to an iframe.
 
 #### Passed example 3
 
-This page has a `title`.
+This page has two `title` elements.
 
 ```html
 <html>
@@ -94,7 +94,7 @@ This page has a `title`.
 
 #### Passed example 4
 
-Valid `title` provided.
+The `title` is in the `body`.
 
 ```html
 <html>
@@ -106,7 +106,7 @@ Valid `title` provided.
 
 #### Passed example 5
 
-Valid `title` provided.
+The first `title` element has content.
 
 ```html
 <html>
@@ -119,11 +119,21 @@ Valid `title` provided.
 </html>
 ```
 
+#### Passed example 6
+
+The `title` only contains characters that are not letters or numbers.
+
+```html
+<html>
+  <title>#$@&%*!</title>
+</html>
+```
+
 ### Failed
 
 #### Failed example 1
 
-This page has no `title`.
+The page has no `title`.
 
 ```html
 <html>
@@ -133,7 +143,7 @@ This page has no `title`.
 
 #### Failed example 2
 
-Empty `title`.
+The `title` element is empty.
 
 ```html
 <html>
@@ -143,7 +153,7 @@ Empty `title`.
 
 #### Failed example 3
 
-No `title` provided.
+The page has no `title`.
 
 ```html
 <html>
@@ -153,7 +163,7 @@ No `title` provided.
 
 #### Failed example 4
 
-Empty first `title`.
+The first `title` element is empty.
 
 ```html
 <html>
@@ -166,11 +176,21 @@ Empty first `title`.
 </html>
 ```
 
+#### Failed example 5
+
+The `title` only contains a separator character.
+
+```html
+<html>
+  <title> </title>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable example 1
 
-Not applicable to `svg` element.
+This rule is not applicable to `svg` elements.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">

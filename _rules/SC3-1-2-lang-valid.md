@@ -2,7 +2,7 @@
 name: Valid body lang attribute
 
 description: |
- This rule checks that `lang` or `xml:lang` attributes on elements within the `body` of a web page has a valid language subtag.
+ This rule checks that `lang` or `xml:lang` attributes on elements within the `body` of a web page have a valid language subtag.
 
 success_criterion:
 - 3.1.2
@@ -27,7 +27,7 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 
 ## Assumptions
 
-*There are currently no assumptions*
+This rule assumes that the presence of a lang or xml:lang attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
 
 ## Background
 
@@ -40,76 +40,88 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 The `lang` attribute specified has a non-empty value & a valid primary language subtag.
 
 ```html
 <html>
 <body> 
-  <article data-rule-target lang="en"></article>
+  <article lang="en"></article>
 </body>
 </html>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 The `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
 
 ```html
 <html>
 <body>
-  <p data-rule-target xml:lang="DE"></p>
+  <p xml:lang="DE"></p>
 </body>
 </html>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 The `lang` attribute specified has a non-empty value & a valid primary language subtag. The region section in the value is ignored by the rule.
 
 ```html
 <html>
 <body>
-  <blockquote data-rule-target lang="fr-CH"></blockquote>
+  <blockquote lang="fr-CH"></blockquote>
 </body>
 </html>
 ```
 
-#### Pass example 4
+#### Passed example 4
 
 The `lang` and `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
 
 ```html
 <html>
 <body>
-  <p data-rule-target lang="en" xml:lang="en-GB">Good Morning.</p>
+  <p lang="en" xml:lang="en-GB">Good Morning.</p>
 </body>
 </html>
 ```
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 The `lang` attribute value is not a valid primary language subtag.
 
 ```html
 <html>
 <body>
-  <article data-rule-target lang="dutch"></article>
+  <article lang="dutch"></article>
 </body>
 </html>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 The `xml:lang` attribute value is not a valid primary language subtag.
 
 ```html
 <html>
 <body>
-  <p data-rule-target xml:lang="english"></p>
+  <p xml:lang="english"></p>
+</body>
+</html>
+```
+
+#### Fail example 3
+
+The `lang` attribute value has a valid primary language subtag, but a syntactically invalid region subtag.
+
+```html
+<html>
+<body>
+  <p lang="en-US-GB"></p>
 </body>
 </html>
 ```
@@ -123,7 +135,7 @@ The rule applies to elements with the `body` of a webpage. `html` elements are i
 
 ```html
 <html lang="en">
-	<body data-rule-target>
+	<body>
 	</body>
 </html>
 ```
@@ -135,7 +147,7 @@ An empty value for `lang` attribute is ignored by this rule, as the applicabilit
 ```html
 <html>
 	<body>
-		<article data-rule-target lang=""></article>
+		<article lang=""></article>
 	</body>
 </html>
 ```
@@ -147,7 +159,7 @@ An empty value for `xml:lang` attribute is ignored by this rule, as the applicab
 ```html
 <html>
 	<body>
-		<article data-rule-target xml:lang=""></article>
+		<article xml:lang=""></article>
 	</body>
 </html>
 ```

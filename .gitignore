@@ -1,8 +1,15 @@
-.idea
-*.iml
+# Defaults
+node_modules
 *.log
-.sass-cache
 
+# Ide
+.idea
+.vscode
+
+# Site
+.sass-cache
 _site
-_testcases-embeds/
-_testcases-export/
+
+# auto generated testcases
+_testcases-embeds/*.*
+exported-testcases

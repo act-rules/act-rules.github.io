@@ -62,6 +62,10 @@ line-height: 1.5;
 	}
 }
 
+.view-report-btn {
+	padding: 0;
+}
+
 .btn-cta {
 	padding: 7px 15px;
 	text-decoration: none;
@@ -87,6 +91,11 @@ textarea,
 select {
 	appearance: none;  /* for mobile safari */
 	-webkit-appearance: none;
+}
+
+.dropdown-toggle:focus {
+	outline: 5px auto rgba(256, 256, 256, 0.65);
+	outline-offset: -2px;
 }
 
 .navbar{
@@ -155,6 +164,19 @@ select {
 
 .container {
 
+	.page-header {
+		font-weight: bold;
+		text-transform: capitalize;
+	}
+
+	.padding-15{
+		padding: 15px;
+	}
+
+	.modal-dialog{
+		width: 85%;
+	}
+
 	&.floating-header {
 		transition: 0.5s all;
 		position: fixed;
@@ -207,8 +229,8 @@ select {
 
 	}
 	
-	.definition-usages {
-		> .definition-usage-link {
+	.glossary-usages {
+		> .glossary-usage-link {
 			display: block
 		}
 	}
@@ -224,9 +246,9 @@ select {
 					order: 1;
 					flex: 1;
 					figure {
-							div.language-html {
-									margin-bottom: 5rem;
-							}
+						div.language-html {
+								margin-bottom: 5rem;
+						}
 					}
 			}
 
@@ -248,6 +270,56 @@ select {
 						border: 1px solid $light-grey;
 					}
 			}
+	}
+
+	#rules-table {
+		$sort-transparent-border: 4px solid transparent;
+		$sort-colored-border: 4px solid currentColor;
+
+		input.search {
+			border-radius: 0;
+			padding: 10px 15px;
+			margin: 15px 0;
+			width: 100%;
+		}
+
+		.sort {
+			text-decoration: none;
+			cursor: pointer;
+			position: relative;
+
+			&:hover {
+				text-decoration: underline;
+				cursor: pointer;
+			}
+
+			&:after {
+				display: inline-block;
+				width: 0;
+				height: 0;
+				border-left: $sort-transparent-border;
+				border-right: $sort-transparent-border;
+				border-bottom: $sort-transparent-border;
+				content:"";
+				position: absolute;
+				top: 50%;
+				right: auto;
+				margin-left: 10px;
+				margin-top: -2px;
+			}
+
+			&.asc {
+				&:after {
+					border-top: $sort-colored-border;
+				}
+			}
+			&.desc {
+				&:after {
+					border-bottom: $sort-colored-border;
+				}
+			}
+		}
+		
 	}
 }
 
@@ -431,4 +503,50 @@ select {
 	.cards-section .item-inner {
 		padding: 30px 15px;
 	}
+}
+
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: rotateLoader 1.8s infinite ease-in-out;
+  animation: rotateLoader 1.8s infinite ease-in-out;
+}
+.loader {
+	color: currentColor;
+	margin: 0px auto;
+	position: relative;
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+	animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loader:before {
+  left: -1em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 1em;
+}
+@keyframes rotateLoader {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
 }

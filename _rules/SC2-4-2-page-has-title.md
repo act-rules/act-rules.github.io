@@ -22,19 +22,19 @@ authors:
 
 ### Applicability
 
-The rule applies to any page where the root element is an `html` element, and which is not embedded in another page.
+The rule applies to any page where the [document element](https://www.w3.org/TR/dom/#document-element) is an `html` element, and where the page is not embedded in another page.
 
-**Note**: Pages may be embedded inside other pages through elements such as iframes and object elements.
+**Note**: Pages may be embedded inside other pages through elements such as `iframe` and `object` elements.
 
 ### Expectation 1
 
-The page contains at least one `title` element.
+The [document element](https://www.w3.org/TR/dom/#document-element) has at least one [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) that is an HTML `title` element.
 
-**Note**: The `title` element exists in other namespaces such as SVG. These are not `title` elements for HTML document and should be ignored.
+**Note**: The `title` element exists in other namespaces such as SVG. These are not HTML `title` elements and should be ignored for this rule.
 
 ### Expectation 2
 
-The first `title` element contains [non-empty text](#non-empty).
+The first HTML `title` element that is a [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) of the [document element](https://www.w3.org/TR/dom/#document-element) has [children](https://www.w3.org/TR/dom/#concept-tree-child) that are [text nodes](https://www.w3.org/TR/dom/#text) that are not only [whitespace](#whitespace).
 
 ## Assumptions
 
@@ -46,19 +46,17 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- [https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
-- [https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=242#qr-navigation-mechanisms-title](https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=242#qr-navigation-mechanisms-title)
-- [https://www.w3.org/TR/WCAG20-TECHS/G88.html](https://www.w3.org/TR/WCAG20-TECHS/G88.html)
-- [https://www.w3.org/TR/WCAG20-TECHS/H25.html](https://www.w3.org/TR/WCAG20-TECHS/H25.html)
-- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible auto-wcag refers to those. Another source for test cases is the W3C Before and After Demonstration.
+- [Understanding Success Criterion 2.4.2: Page Titled](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
+- [WCAG 2.1 Technique H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG21/Techniques/html/H25)
+
 
 ## Test Cases
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
-This page has a `title`.
+This page has a `title` with content.
 
 ```html
 <html>
@@ -66,9 +64,9 @@ This page has a `title`.
 </html>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
-This page give a `title` to an iframe.
+This page gives a `title` to an iframe.
 
 ```html
 <html>
@@ -77,9 +75,9 @@ This page give a `title` to an iframe.
 </html>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
-This page has a `title`.
+This page has two `title` elements.
 
 ```html
 <html>
@@ -92,9 +90,9 @@ This page has a `title`.
 </html>
 ```
 
-#### Pass example 4
+#### Passed example 4
 
-Valid `title` provided.
+The `title` is in the `body`.
 
 ```html
 <html>
@@ -104,9 +102,9 @@ Valid `title` provided.
 </html>
 ```
 
-#### Pass example 5
+#### Passed example 5
 
-Valid `title` provided.
+The first `title` element has content.
 
 ```html
 <html>
@@ -114,36 +112,46 @@ Valid `title` provided.
     <title>Title of the page.</title>
   </head>
   <body>
-     <title> <!-- empty title --> </title> 
+     <title></title> 
   </body>
+</html>
+```
+
+#### Passed example 6
+
+The `title` only contains characters that are not letters or numbers.
+
+```html
+<html>
+  <title>#$@&%*!</title>
 </html>
 ```
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
-This page has no `title`.
-
-```html
-<html>
-  <h1>this page has no title</h1>
-</html>
-```
-
-#### Fail example 2
-
-Empty `title`.
+The page has no `title`.
 
 ```html
 <html>
-  <title> <!-- this page has an empty title --> </title>
+  <h1>This page has no title</h1>
 </html>
 ```
 
-#### Fail example 3
+#### Failed example 2
 
-No `title` provided.
+The `title` element is empty.
+
+```html
+<html>
+  <title></title>
+</html>
+```
+
+#### Failed example 3
+
+The page has no `title`.
 
 ```html
 <html>
@@ -151,14 +159,14 @@ No `title` provided.
 </html>
 ```
 
-#### Fail example 4
+#### Failed example 4
 
-Empty first `title`.
+The first `title` element is empty.
 
 ```html
 <html>
   <head>
-    <title> <!-- this page has an empty first title --> </title>
+    <title></title>
   </head>
   <body>
     <title>Title of the page.</title>
@@ -166,14 +174,24 @@ Empty first `title`.
 </html>
 ```
 
+#### Failed example 5
+
+The `title` only contains a separator character.
+
+```html
+<html>
+  <title> </title>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable example 1
 
-Not applicable to `svg` element.
+This rule is not applicable to `svg` elements.
 
-```html
-<svg>
+```svg
+<svg xmlns="http://www.w3.org/2000/svg">
   <title>This is an SVG</title>
 </svg>
 ```

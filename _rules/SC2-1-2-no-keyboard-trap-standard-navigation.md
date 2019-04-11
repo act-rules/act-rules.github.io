@@ -1,18 +1,13 @@
 ---
 name: No keyboard trap standard navigation
-
-group:
-- SC2-1-2-no-keyboard-trap-standard-navigation
-- SC2-1-2-no-keyboard-trap-non-standard-navigation
+rule_type: atomic
 
 description: |
   This rule checks if it is possible to use standard keyboard navigation to navigate through all content on a web page without becoming trapped in any element.
 
-success_criterion: 
-- 2.1.2 # No Keyboard Trap
-
-test aspects:
+test_aspects:
 - DOM Tree
+- CSS Styling
 
 authors:
 - Dagfinn Rømen
@@ -28,9 +23,9 @@ authors:
 
 ### Applicability
 
-The rule applies to any HTML or SVG element on a web page that is [focusable](#focusable).
+The rule applies to any HTML or SVG element that is [focusable](#focusable).
 
-**Note**: The WCAG 2.0 success criterion 2.1.2 applies to all content where focus can be moved to through keyboard navigation.
+**Note**: This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
 
 ### Expectation
 
@@ -49,15 +44,15 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-trapping.html
-- https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G21
-- https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F10
+- [Understanding Success Criterion 2.1.2: No Keyboard Trap](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html)
+- [G21: Ensuring that users are not trapped in content](https://www.w3.org/WAI/WCAG21/Techniques/general/G21)
+- [F10: Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining multiple content formats in a way that traps users inside one format type](https://www.w3.org/WAI/WCAG21/Techniques/failures/F10)
 
 ## Test Cases
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 No trap for keyboard navigation.
 
@@ -66,7 +61,7 @@ No trap for keyboard navigation.
 <button class="target">Button1</button>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 Using `tabindex="1"`.
 
@@ -74,7 +69,7 @@ Using `tabindex="1"`.
 <div tabindex=“1”>Text</div>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 Using `tabindex="-1"`.
 
@@ -84,7 +79,7 @@ Using `tabindex="-1"`.
 
 ### Failed
 
-#### Fail example 1
+#### Failed example 1
 
 Keyboard trap one element.
 
@@ -93,7 +88,7 @@ Keyboard trap one element.
 <button class="target" onblur="setTimeout(() => this.focus(), 10)">Button1</button>
 ```
 
-#### Fail example 2
+#### Failed example 2
 
 Keyboard trap group.
 
@@ -102,7 +97,7 @@ Keyboard trap group.
 <button class="target" onblur="setTimeout(() => this.previousSibling.focus(), 10)">Button2</button>
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 A focusable element inbetween to keyboard traps.
 
@@ -132,7 +127,7 @@ Disabled element.
 
 #### Inapplicable example 3
 
-Hidden element using `display:none`
+Hidden element using `display:none`.
 
 ```html
 <button type="button" style=“display:none;”>Click Me!</button>

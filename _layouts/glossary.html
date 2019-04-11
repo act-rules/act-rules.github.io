@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{% if page.key %}
+<h4><b><i>{{ page.key | prepend: "Key: " }}</i></b></h4>
+
+<hr>
+{% endif %}
+
+{{ content }}
+
+<!-- DO NOT DELETE BELOW - This is used by a plugin to insert content -->
+<!--PLUGIN::APPEND-BACKLINK-TO-RULE-->
+<!-- DO NOT DELETE ABOVE - This is used by a plugin to insert content -->

@@ -1,5 +1,5 @@
-# Auto-WCAG Rules repository
+# ACT Rules repository
 
-The Auto-WCAG Rules repository is where the Auto-WCAG community group maintains the rules they designed for (semi)automated accessibility testing. Within the rules directory you will find all the rules recommended by the Auto-WCAG community group for implementation in automated test tools.
+The ACT Rules Community Group (previously known as Auto-WCAG), is an open forum set up to document and harmonise the interpretation of W3C accessibility standards, such as WCAG and WAI-ARIA, for testing purposes.
 
-Visit the [Auto-WCAG Rules website](https://auto-wcag.github.io/auto-wcag/) for the latest rules and drafts.
+Visit the [ACT Rules website](https://auto-wcag.github.io/auto-wcag/) for the latest rules.

@@ -14,6 +14,13 @@ hr {
   opacity: 0.1;
 }
 
+a {
+	color: darken($accent, 20%);
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
 table {
 	border-collapse: collapse;
 	width: 100%;

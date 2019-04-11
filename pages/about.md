@@ -2,26 +2,35 @@
 title: About Us
 ---
 
-The WCAG-ACT-RULES-CG, founded in 2014, is a W3C community with the focused to develop reliable [rules](pages/rules.html) for WCAG testing, both automated and semi-automated. We aim to assist developers of test tools to improve the accuracy and completeness of their tools.
+## Mission Statement
 
-Creating (semi)automated [rules](pages/rules.html) to tests WCAG is key to affordable, large scale research. These rules are designed in a way that they are usable by people with a variety of skills. The results too should be informative, not just to developers, but to website managers, policy makers and disability advocates and other interested parties.
+The ACT Rules Community Group (previously known as Auto-WCAG), is an open forum set up to document and harmonise the interpretation of W3C accessibility standards, such as WCAG and WAI-ARIA, for testing purposes.
 
-## Our Vision
+The ACT Rules Community Group (ACT-R) achieves this by bringing together the people developing, implementing and using various accessibility testing tools and methodologies to document interpretations as test rules. Test rules are defined using the ACT Rules Format, and reviewed by the community. The process of researching, documenting, and sharing knowledge from different perspectives within the group, builds towards a common understanding. By publishing such test rules, ACT-R hopes to motivate organisations to share their own insights, and adopt commonly agreed test rules.
 
-Web accessibility testing is highly reliant on human judgment. Not only that, but it requires a significant understanding of both web technologies and assistive technologies. This makes automated testing and testing by people lacking these skills challenging. The WCAG-ACT-RULES-CG believes that by taking on these challenges we can enable developers to solve parts of the accessibility questions, before ever involving accessibility experts. This means problems can be caught earlier in the development and accessibility experts can use their time more efficiently. Both of which will lead to more accessible products.
+ACT-R is not set up to remove differences or impose changes on accessibility testing tools and methodologies. There is value in innovation and diverse approaches. Rather it aims to contribute to more consistent results, regardless of how the testing is done. Knowing when something meets a requirement, and when it does not, should be clear and consistent.
 
-## What We Do
+## Why Harmonisation Matters
 
-The objective of this community is to create and maintain rules to test WCAG, that can be used to test and monitor web accessibility in a scalable manner. These rules will be either automated, or semi-automated, in which tools assist non-expert users to evaluate web accessibility. The rules consist of small, atomic test steps that look if specific elements on a web page meet WCAG 2 success criteria.
+Accessibility compliance is becoming a legal requirement all around the world. This makes it increasingly important for organisations to understand exactly what they need to do to be compliant. Accessibility requirements such as WCAG 2.1 are often written in technology agnostic language. Interpretation exactly what those requirements mean for a specific technology requires interpretation. This interpretation can be different between different testers, between different organisations and in different regions around the world.
 
-Each rule has a certain applicability, targeting one ‘type’ of content on a web page. This piece of content is then tested against a series of automatic or manual expectations. For each applicable element a rule will indicate if it passed of failed.
+Knowing the interpretation that will be used to assess compliance to legal requirements is essential for organisations. Without this it is impossible for them to know whether or not they can be sued or fined. For those operating in different countries, consistency of that interpretation is also important. Inconsistent interpretations can lead to an overload of requirements, possibly even mutually exclusive requirements. The principle is simple, a website that is considered to conform to WCAG 2.1 Level AA in the US, should also be compliant in the EU.
 
-By comparing the test results with results from expert accessibility evaluators, we aim to track the accuracy of the tests we’ve developed. This allows us for an iterative improvement and adjustment of the tests as web development practices change and evolve.
+## Who We Are
 
-A list of published rules is available on the [site-page-rules].
+The ACT Rules Community Group is a group of accessibility tool vendors, test procedure authors, and accessibility test experts. The ACTR Community has no standing in the W3C, and does not develop W3C recommendations or notes. Rather, it researches and documents accessibility interpretations and makes this information available for the future improvement of documents produced by the Accessibility Guidelines Work Group.
 
-## Related W3C Activities
+The ACTR Community is an open community, meaning that anyone with an interest in our work is welcome to participate. The ACTR Community has three resources that are important to know about. Github, the community group page, and the ACTR Community website.
 
-The WCAG-ACT-RULES-CG is the primary contributor of rules to the Accessibility Conformance Testing (ACT) Taskforce for the W3C. The ACT Taskforce is currently developing the standard around which rules can be created, and is planning to put together a suite of rules on how WCAG 2x (and beyond) should be tested.
+- [ACTR Website](https://auto-wcag.github.io/auto-wcag) The ACTR Community website is where all the work is published. If you are interested to learn what rules have been agreed upon by the group, and who has implemented those, this is the place to go.
 
-For more information, see [ACT Overview - What is ACT](https://www.w3.org/WAI/GL/task-forces/conformance-testing/wiki/ACT_Overview_-_What_is_ACT).
+- [Github](https://github.com/auto-wcag/auto-wcag) All work in the community group happens on Github. To participate you will need a Github account and basic familiarity with Github. If you are new to Github, there are several great articles and video's on the web explaining the basics of Github. Here are a few:
+  - http://www.madebyloren.com/posts/github-for-writers
+  - https://www.youtube.com/watch?v=9XhbYHcaT9k&t=7s
+
+- [W3C Community Page](https://w3.org/community/auto-wcag/) This is the official page at the W3C. From here you can sign up to the community group. This requires a W3C account. If you work for a W3C member organisation, you will need approval from your organisation to join the group. This is also where the mailinglist archive can be found.
+
+The ACTR Community has calls twice a month, once for a US friendly time, and once for an Asia friendly time. To receive the agenda and calendar, you must be a member of the W3C Community Group. This will automatically sign you up for the mailinglist.
+
+
+> Note: The Auto-WCAG community can be found here: https://www.w3.org/community/auto-wcag/about-us/

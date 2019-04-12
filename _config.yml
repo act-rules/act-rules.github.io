@@ -1,8 +1,8 @@
 # Site settings
-title: Auto WCAG Rules
+title: ACT Rules Community website
 description: >
   Accessibility conformance testing rules for HTML.
-url: https://auto-wcag.github.io/auto-wcag
+url: https://act-rules.github.io/
 plugins:
   - jekyll-last-modified-at
 sass:

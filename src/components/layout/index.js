@@ -53,11 +53,10 @@ class Layout extends React.Component {
 							}
 						}
 						getTopLevelNavigation: allSitePage(
-							sort: { fields: [fields___title], order: ASC }
+							sort: { fields: [context___title], order: ASC }
 							filter: {
 								context: {
-									markdownType: { eq: null }
-									sourceInstanceName: { ne: null }
+									markdownType: { eq: "default" }
 								}
 							}
 						) {
@@ -77,9 +76,9 @@ class Layout extends React.Component {
 							}
 						}
 						getNonRulesNavigation: allSitePage(
-							sort: { fields: [fields___title], order: ASC }
+							sort: { fields: [context___title], order: ASC }
 							filter: {
-								context: { markdownType: { nin: [null, "rules", "glossary"] } }
+								context: { markdownType: { nin: ["default", "rules", "glossary"] } }
 							}
 						) {
 							group(field: context___markdownType) {

@@ -15,7 +15,7 @@ hr {
 }
 
 a {
-	color: darken($accent, 20%);
+	color: darken($accent, 30%);
 	&:hover {
 		opacity: 0.8;
 	}
@@ -71,7 +71,8 @@ button, .btn {
 
 blockquote {
 	margin: 2rem 0;
-	background-color: lighten($accent, 30%);
+	background-color: lighten($accent, 40%);
+	border: 1px solid $accent;
 	padding: 1rem;
 }
 

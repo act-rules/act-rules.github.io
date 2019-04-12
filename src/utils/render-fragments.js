@@ -29,7 +29,7 @@ export function getAuthors(authors) {
 		return null
 	}
 	return (
-		<aside style={{ width: `200px` }}>
+		<div className="side-notes">
 			<div className="meta">
 				<span role="heading" aria-level="1" className="heading">
 					Authors
@@ -49,7 +49,7 @@ export function getAuthors(authors) {
 					)
 				})}
 			</div>
-		</aside>
+		</div>
 	)
 }
 
@@ -78,7 +78,7 @@ export function getAtomicRulesForRule(
 		return null
 	}
 	return (
-		<aside style={{ width: `275px` }}>
+		<div className="side-notes">
 			<div className="meta">
 				<span role="heading" aria-level="1" className="heading">
 					Atomic Rules
@@ -100,7 +100,7 @@ export function getAtomicRulesForRule(
 					)
 				})}
 			</div>
-		</aside>
+		</div>
 	)
 }
 

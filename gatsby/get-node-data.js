@@ -51,7 +51,7 @@ function getMarkdownType(path, sourceInstanceName) {
 	if (/design/.test(path) || /structure/.test(path)) {
 		return 'documentation'
 	}
-	return null
+	return 'default'
 }
 
 module.exports = getNodeData

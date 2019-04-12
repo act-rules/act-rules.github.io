@@ -167,7 +167,7 @@
 
 
 .language-text {
-	background: $bg-primary !important;
+	background: lighten($bg-primary, 50%) !important;
   color: $fg-primary !important;
   font-weight: bold;
   padding: 0.1em;

@@ -135,7 +135,7 @@ export default ({ data }) => {
 					{renderGlossaryUsed(slug)}
 				</section>
 				{/* Toc */}
-				<aside className="toc">
+				<div className="toc">
 					{/* frontmatter */}
 
 					<ul className="meta-data">
@@ -156,7 +156,7 @@ export default ({ data }) => {
 					</span>
 					<div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
 					<ul>{renderGlossaryUsedLink(slug)}</ul>
-				</aside>
+				</div>
 			</section>
 		</Layout>
 	)

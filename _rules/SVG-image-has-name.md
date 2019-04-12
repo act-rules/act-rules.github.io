@@ -22,7 +22,7 @@ The rule applies to any [SVG](https://www.w3.org/2000/svg) element with the [sem
 
 ### Expectation
 
-Each target element has a an accessible name.
+Each target element has an accessible name.
 
 ## Assumptions
 

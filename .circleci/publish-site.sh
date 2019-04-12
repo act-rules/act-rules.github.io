@@ -2,9 +2,9 @@
 git config user.name "$USER_NAME"
 git config user.email "$USER_EMAIL"
 
-# checkout & pull gh-pages branch
-git checkout gh-pages
-git pull origin gh-pages
+# checkout & pull master branch
+git checkout master
+git pull origin master
 
 # remove all files except the generated public directory and required git folders
 find . -maxdepth 1 ! -name 'public' ! -name '.circleci' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
@@ -15,7 +15,7 @@ rm -R public/
 
 # commit and push
 git add -fA
-git commit --allow-empty -m "update gh pages [ci skip]"
-git push origin gh-pages
+git commit --allow-empty -m "update site [ci skip]"
+git push origin master
 
-echo "deployed successfully"
+echo "Site deployed successfully"

@@ -1,0 +1,139 @@
+{
+  "name": "WCAG-ACT-RULES-CG rules",
+  "website": "https://auto-wcag.github.io/auto-wcag/rules.html",
+  "description": "List of rules in which can be mapped against testing engine via test runner",
+  "rules": {
+    "SC1-1-1-accessible-name-is-image-filename": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC1-1-1-image-has-name": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC1-2-1-audio-only-alternative": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC1-2-1-audio-transcript": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC1-2-1-media-alternative-audio": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC1-2-1-media-alternative-video": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC1-2-1-video-only-alternative": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC1-2-1-video-only-audio-alternative": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC1-2-1-video-only-description-track": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC1-2-1-video-only-element-transcript": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC1-2-2-video-has-audio-alternative": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC1-2-2-video-has-captions": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC1-2-3-video-alternative": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC1-2-5-video-audio-alternative": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC1-2-video-audio-description": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC1-2-video-description-track": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC1-2-video-media-alternative": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC1-2-video-transcript": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC1-3-1-aria-hidden-focus": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC1-3-5-autocomplete-valid": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC2-1-2-no-keyboard-trap-non-standard-navigation": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC2-1-2-no-keyboard-trap-standard-navigation": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC2-1-2-no-keyboard-trap": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC2-2-1+SC2-2-4-meta-refresh": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC2-4-2-page-has-title": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC2-4-4+2-4-9+4-1-2-link-has-name": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC2-4-6-descriptive-headings": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC2-4-6-descriptive-labels": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC2-5-3-label-content-name-mismatch": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC3-1-1-html-has-lang": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC3-1-1-html-lang-valid": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC3-1-1-html-xml-lang-match": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC3-1-2-lang-valid": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC4-1-1-unique-attrs": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC4-1-1-unique-id": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC4-1-2-aria-attr-valid": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC4-1-2-aria-state-or-property-allowed": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC4-1-2-aria-state-or-property-has-valid-value": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC4-1-2-button-has-name": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC4-1-2-form-field-has-name": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC4-1-2-iframe-has-name": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC4-1-2-role-attribute-has-valid-value": [
+      "List of rules to be mapped to test engine"
+    ],
+    "SC4-1-2-role-has-required-states-and-properties": [
+      "List of rules to be mapped to test engine"
+    ],
+    "image-button-has-name": [
+      "List of rules to be mapped to test engine"
+    ]
+  }
+}

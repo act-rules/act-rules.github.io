@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+  <!-- Resolve Page Title -->
+  
+  <title>How to Contribute ACT Rules Community website</title>
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Accessibility conformance testing rules for HTML.
+" />
+  <meta name="author" content="" />
+  <!-- TODO:FAVICON after branding -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+    rel="stylesheet" type="text/css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs.min.css" />
+  <link rel="stylesheet" href="https://act-rules.github.io//assets/css/main.css" />
+  <link rel="canonical" href="https://act-rules.github.io/https://act-rules.github.io//pages/contribute.html" />
+
+  <!-- Javascript -->
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+  <script type="text/javascript" src="//stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/native-promise-only/0.8.1/npo.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jsonld/0.4.12/jsonld.min.js"></script>
+  <script type="text/javascript" src="https://act-rules.github.io//assets/js/jquery.stickyelement.js"></script>
+  <script type="text/javascript" src="https://act-rules.github.io//assets/js/default.js"></script>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+            aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://act-rules.github.io//">
+            ACT Rules Community website
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav mr-auto">
+            <!-- Rules -->
+            <li>
+              <a href="https://act-rules.github.io//pages/rules.html">Rules</a>
+            </li>
+
+            <!-- Glossary -->
+            <li>
+              <a href="https://act-rules.github.io//pages/glossary/">Glossary</a>
+            </li>
+
+
+
+            <!-- Implementations -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                Implementations <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="https://act-rules.github.io//pages/implementations/overview.html">
+                    Overview
+                  </a>
+                </li>
+                <li>
+                  <a href="https://act-rules.github.io//pages/implementations/coverage.html">
+                    Coverage
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Rule Creation -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                Rule Creation <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="https://act-rules.github.io//pages/design/rule-design.html">
+                    Rule design
+                  </a>
+                </li>
+                <li>
+                  <a href="https://act-rules.github.io//pages/design/review.html">
+                    Review process
+                  </a>
+                </li>
+                <li>
+                  <a href="https://act-rules.github.io//pages/design/rule-template.html">
+                    Rule template
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Rule Structure -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                Rule Structure <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="https://act-rules.github.io//pages/structure/terminology.html">Terminology</a>
+                </li>
+                <li>
+                  <a href="https://act-rules.github.io//pages/structure/accessibility-support.html">Accessibility support</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Contribute -->
+            <li>
+              <a href="https://github.com/auto-wcag/auto-wcag/">Contribute</a>
+            </li>
+
+            <!-- About Us -->
+            <li>
+              <a href="https://act-rules.github.io//pages/about.html">About Us</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav right">
+            <!-- Github -->
+            <li class="dropdown">
+              <a href="https://github.com/auto-wcag/auto-wcag.git" role="link">
+                <i class="fab fa-github scale-2x"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <!-- Begin page content -->
+    <main class="container">
+      
+      <div class="page-header">
+        <h1>How to Contribute</h1>
+      </div>
+      
+      <p><p>ACT Rules Community website is a <a href="https://www.w3.org/">W3C</a> <a href="https://www.w3.org/community/">Community Group</a> open to anyone interested in accessibility testing, manually or automated.</p>
+
+<p>We welcome contributions from everyone, and there are many ways to contribute, from Github issues and pull requests, to contribution to our monthly teleconferences.</p>
+
+<p>You don’t have to be a member of the Community Group to contribute.</p>
+
+<p>If you want to get even more out of your involvement in our rule creation project, you can officially join the ACT Rules Community website Community Group to get on the mailing list and participate in monthly teleconferences.</p>
+
+<p><button name="button" onclick="#join-the-ACT Rules Community website-Community-Group">Learn more about how to join the ACT Rules Community website Community Group</button></p>
+
+<h2 id="overview-of-how-you-can-contribute">Overview of how you can contribute</h2>
+
+<ul>
+  <li><a href="#Give-feedback-on-rules">Give feedback on rules</a>
+    <ul>
+      <li><a href="#">Feedback for ideas and early drafts (Issues on Github)</a></li>
+      <li><a href="#Feedback-for-ideas-and-early-drafts-(Issues-on-Github)">Feedback and reviews for draft rules (Pull Requests on Github)</a></li>
+      <li><a href="#Feedback/corrections-for-published-rules">Feedback/corrections for published rules</a></li>
+    </ul>
+  </li>
+  <li><a href="#Suggest-new-rules">Suggest new rules</a>
+    <ul>
+      <li><a href="#Submit-an-idea-for-discussion-(Issue-on-Github)">Submit an idea for discussion (Issue on Github)</a></li>
+      <li>[Submit a draft for a rule (Pull Request on Github)](#Submit-a-draft-for-a-rule-(Pull-Request-on-Github)</li>
+    </ul>
+  </li>
+  <li><a href="#Join-the-ACT Rules Community website-Community-Group">Join the ACT Rules Community website Community Group</a>
+    <ul>
+      <li><a href="#Mailing-list-keeps-you-up-to-date">Mailing list keeps you up to date</a></li>
+      <li><a href="#Participate-in our-monthly-calls">Participate in our monthly calls</a></li>
+      <li><a href="#How-to-join-the-ACT Rules Community website-Community-Group">How to join the ACT Rules Community website Community Group</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="give-feedback-on-rules">Give feedback on rules</h2>
+
+<p>Feedback on rules is encouraged on our open <a href="https://github.com/auto-wcag/auto-wcag.git">Github repository</a>, so you don’t even have to be a member of the Community Group to contribute in this way.</p>
+
+<p>If you “watch” the repository, you will get notifications when changes are happening.</p>
+
+<h3 id="feedback-for-ideas-and-early-drafts-issues-on-github">Feedback for ideas and early drafts (Issues on Github)</h3>
+<p>Rules and Definitions (shared terms across rules) that are Github Issues can be everything from just a title to a quite finished rule. The issues will be prefixed with either “Rule:” (or possibly “New Rule:”) or “Algorithm”.</p>
+
+<p>The top comment on an issue should hold the updated rule or algorithm, and underneath there will be a thread of comments and a history of actions related to the issue.</p>
+
+<p>Please feel free to add your own comments to issues.</p>
+
+<p>Start giving feedback on issues:</p>
+
+<ul>
+  <li>
+    <p>See the <a href="https://github.com/auto-wcag/auto-wcag/issues">ideas and early drafts that might need input</a></p>
+  </li>
+  <li>Use the <a href="../pages/design/definition-of-done.html">Definition of “Done”</a> to guide your review</li>
+  <li>Learn more about <a href="#">commenting on issues</a> (TBD)</li>
+</ul>
+
+<h3 id="feedback-and-reviews-for-draft-rules-pull-requests-on-github">Feedback and reviews for draft rules (Pull Requests on Github)</h3>
+
+<p>Pull requests are rule drafts that are ready for peer reviews. You can sign up as a reviewer and follow the rule through iterations. A rule needs three approvals, and if a rule has the label “Reviewer wanted”, we need more people to sign up for reviewing it. But even if three people are already signed up, we can always use more eyes on it.</p>
+
+<p>You can both add single comments to a pull request and do a full review.</p>
+
+<p><strong>Only approve a rule</strong> if you feel confident (to the best of your knowledge) that this rule is 100% ready to be a published ACT rule. Please also refer to the <a href="../pages/design/definition-of-done.html">Definition of “Done”</a>.</p>
+
+<p>If you for some reason are not so confident, you can always leave a comment for the things that you have an opinion about, without doing a full review.</p>
+
+<p>Start giving feedback and doing reviews for draft rules:</p>
+
+<ul>
+  <li>See the <a href="https://github.com/auto-wcag/auto-wcag/pulls?q=is%3Aopen+is%3Apr+label%3A%22reviewer+wanted%22">draft rules, algorithms and more that need more reviewers</a></li>
+  <li>Use the <a href="../pages/design/definition-of-done.html">Definition of “Done”</a> to guide your review</li>
+  <li>Learn more about <a href="#">reviewing and commenting on pull requests</a> (TBD)</li>
+</ul>
+
+<h3 id="feedbackcorrections-for-published-rules">Feedback/corrections for published rules</h3>
+<p>We welcome any input for changes, also for already published rules. The published rules should be as precise as possible, limiting the number of potential false positives and false negatives. For this it is important to draw on as many tool and methodology implementations and expert opinions as possible.</p>
+
+<p>Feedback and corrections for existing rules can target both on the sections of the rule itself (Applicability, Expectations, Accessibility Support, etc.) and the test cases, to e.g. expand the edge case coverage.</p>
+
+<p>You have several options for correcting existing rules:</p>
+
+<ul>
+  <li><strong>Open a discussion in an Issue:</strong> If you want to open a discussion, you can <a href="https://github.com/auto-wcag/auto-wcag/issues">open a new issue on Github</a> repository to discuss the issue with the existing rule. Learn more about <a href="#">creating issues</a> (TBD).</li>
+  <li><strong>Make the change yourself in a pull request:</strong> If you know exactly what you want changed, you can do the change yourself as a <a href="https://github.com/auto-wcag/auto-wcag/pulls">pull request on Github</a> and submit it for review. Learn more about <a href="#">creating pull requests</a> (TBD).</li>
+</ul>
+
+<h2 id="suggest-new-rules">Suggest new rules</h2>
+
+<p>Anyone can suggest new rules on our open <a href="https://github.com/auto-wcag/auto-wcag.git">Github repository</a>, so you don’t even have to be a member of the Community Group to contribute in this way.</p>
+
+<p>Whether you have a single great idea for an accessibility rule or you work for an organisation that wants to contribute a whole repository of rules, we welcome the contribution.</p>
+
+<p>When you submit a rule, we expect you to be responsible for the rule the whole way through the review process, including adjusting the rule as you receive feedback from others. It will take some time and effort, but the learning experience in it is great.</p>
+
+<p>If you are not ready to carry a rule all the way through the process, you can partner up with someone else who wants to do it.</p>
+
+<p>Partnering up with someone outside of your own organisation for rule writing will sharpen the rule, which is why we often do that in the ACT Rules Community website work.</p>
+
+<p>Depending on how polished your rule proposal is, you can either add your idea as an issue or a pull request.</p>
+
+<h3 id="submit-an-idea-for-discussion-issue-on-github">Submit an idea for discussion (Issue on Github)</h3>
+
+<p>For rule contributors with less Github experience, it is often easiest to start the rule design in a <a href="https://github.com/auto-wcag/auto-wcag/issues">Github issue</a>. This allows for easy editing and discussions with others, while the rule is taking shape.</p>
+
+<p><a href="#">Learn more about how we work in Github issues</a> (TBD).</p>
+
+<h3 id="submit-a-draft-for-a-rule-pull-request-on-github">Submit a draft for a rule (Pull Request on Github)</h3>
+
+<p>If you have a ready rule draft, you can submit it as a <a href="https://github.com/auto-wcag/auto-wcag/pulls">pull request</a> to go into the <a href="#">ACT Rules Community website review process</a> (TBD).</p>
+
+<p>Before contributing a new rule, we recommend you check its validity with several experienced accessibility auditors first. This helps you identify potential stumbling blocks early in the rule design.</p>
+
+<p>If you want to use the experts in the ACT Rules Community website Community Group for this, submit your rule suggestion as an Issue (see <a href="#">Submit an idea for discussion</a> (TBD)).</p>
+
+<p><a href="#">Learn more about the process for submitting rules as pull requests</a> (TBD)</p>
+
+<h2 id="join-the-act-rules-community-website-community-group">Join the ACT Rules Community website Community Group</h2>
+
+<p>The best way to stay informed about the activities of ACT Rules Community website is to become a member.</p>
+
+<h3 id="mailing-list-keeps-you-up-to-date">Mailing list keeps you up to date</h3>
+
+<p>By becoming a member you will be added to the mailing list, and you will receive all the latest updates, meeting invites etc.</p>
+
+<h3 id="participate-in-our-monthly-calls">Participate in our monthly calls</h3>
+<p>The ACT Rules Community website Community Group has conference calls every month. It is (usually) on the second Thursday of the month at 16:00 to 17:30 Central European Time. <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=ACT Rules Community website+meeting&amp;iso=20180920T16&amp;p1=259&amp;ah=1&amp;am=30">See the meeting time in your own timezone</a>.</p>
+
+<p>Participating in the ACT Rules Community website conference calls is the easiest way to become an active contributor, get to know the other members of the Community Group, and learn from the shared pool of knowledge held by the accessibility experts in the group.</p>
+
+<p>The invitation and agenda for these meetings is sent out through the mailing list a few days in advance. The dates for the next 3 meetings can also be found on the agenda.</p>
+
+<h3 id="how-to-join-the-act-rules-community-website-community-group">How to join the ACT Rules Community website Community Group</h3>
+
+<ol>
+  <li>To join the ACT Rules Community website Community Group, you need a W3C Account. If you don’t already have one, <a href="https://www.w3.org/accounts/request">get a W3C account here</a>.</li>
+  <li>Go to <a href="https://www.w3.org/community/wp-login.php?redirect_to=%2Fcommunity%2Fauto-wcag%2Fjoin">Join the ACT Rules Community website community group now!</a> and join the group.</li>
+  <li>If you work for a W3C Member organization, you will need to request approval. This request will be sent to your organization’s representative in the W3C’s Advisory Committee.</li>
+</ol>
+
+<p><button name="button" onclick="https://www.w3.org/community/wp-login.php?redirect_to=%2Fcommunity%2Fauto-wcag%2Fjoin">Join the ACT Rules Community website Community Group</button></p>
+</p>
+    </main>
+
+    <!-- contribute section -->
+    <div class="promo-block">
+      <div class="container">
+        <div class="promo-block-inner">
+          <div class="row">
+            <div class="figure-holder col-md-4 col-sm-6 col-xs-12">
+              <div class="content-holder-inner text-center">
+                <h3 class="promo-title">Contribute</h3>
+                <br />
+                <a href="https://github.com/auto-wcag/auto-wcag.git" role="link" class="desc">
+                  <i class="fab fa-github-square scale-5x"></i>
+                </a>
+                <br /><br /><br /><br />
+                <a class="btn btn-cta" href="https://github.com/auto-wcag/auto-wcag.git">
+                  GitHub
+                </a>
+              </div>
+            </div>
+            <!--//figure-holder-->
+            <div class="content-holder col-md-8 col-sm-6 col-xs-12">
+              <div class="content-holder-inner">
+                <div class="desc">
+                  <p>
+                    Contributing is open to anyone. We welcome any
+                    new issues or pull requests for changes.
+                    ACT Rules Community website has conference calls every 4 weeks. If
+                    you are interested in becoming an active
+                    contributor or reviewer, we ask that you join
+                    the ACT Rules Community website community group through the W3C
+                    Website. This requires setting up a W3C account,
+                    may require approval by the organization you
+                    work for if they are a W3C member.
+                  </p>
+                  <a class="btn btn-cta" href="https://act-rules.github.io//pages/contribute.html">Learn more about contributing
+                    to ACT Rules Community website</a>
+                  <a class="btn btn-cta" href="https://www.w3.org/community/wp-login.php?redirect_to=%2Fcommunity%2Fauto-wcag%2Fjoin">Join
+                    the ACT Rules Community website community group now!</a>
+                </div>
+                <!--//desc-->
+              </div>
+              <!--//content-holder-inner-->
+            </div>
+            <!--//content-holder-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <small>
+          ACT Rules Community website |
+          <a class="right" href="https://act-rules.github.io//license.html">License</a>
+        </small>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

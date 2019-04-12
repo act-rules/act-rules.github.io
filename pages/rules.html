@@ -1,9 +1,174 @@
----
-layout: default
-title: Rules
----
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
 
-<div id="rules-table">
+<head>
+  <!-- Resolve Page Title -->
+  
+  <title>Rules ACT Rules Community website</title>
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Accessibility conformance testing rules for HTML.
+" />
+  <meta name="author" content="" />
+  <!-- TODO:FAVICON after branding -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+    rel="stylesheet" type="text/css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs.min.css" />
+  <link rel="stylesheet" href="https://act-rules.github.io//assets/css/main.css" />
+  <link rel="canonical" href="https://act-rules.github.io/https://act-rules.github.io//pages/rules.html" />
+
+  <!-- Javascript -->
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+  <script type="text/javascript" src="//stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/native-promise-only/0.8.1/npo.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jsonld/0.4.12/jsonld.min.js"></script>
+  <script type="text/javascript" src="https://act-rules.github.io//assets/js/jquery.stickyelement.js"></script>
+  <script type="text/javascript" src="https://act-rules.github.io//assets/js/default.js"></script>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+            aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://act-rules.github.io//">
+            ACT Rules Community website
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav mr-auto">
+            <!-- Rules -->
+            <li>
+              <a href="https://act-rules.github.io//pages/rules.html">Rules</a>
+            </li>
+
+            <!-- Glossary -->
+            <li>
+              <a href="https://act-rules.github.io//pages/glossary/">Glossary</a>
+            </li>
+
+
+
+            <!-- Implementations -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                Implementations <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="https://act-rules.github.io//pages/implementations/overview.html">
+                    Overview
+                  </a>
+                </li>
+                <li>
+                  <a href="https://act-rules.github.io//pages/implementations/coverage.html">
+                    Coverage
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Rule Creation -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                Rule Creation <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="https://act-rules.github.io//pages/design/rule-design.html">
+                    Rule design
+                  </a>
+                </li>
+                <li>
+                  <a href="https://act-rules.github.io//pages/design/review.html">
+                    Review process
+                  </a>
+                </li>
+                <li>
+                  <a href="https://act-rules.github.io//pages/design/rule-template.html">
+                    Rule template
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Rule Structure -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                Rule Structure <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="https://act-rules.github.io//pages/structure/terminology.html">Terminology</a>
+                </li>
+                <li>
+                  <a href="https://act-rules.github.io//pages/structure/accessibility-support.html">Accessibility support</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Contribute -->
+            <li>
+              <a href="https://github.com/auto-wcag/auto-wcag/">Contribute</a>
+            </li>
+
+            <!-- About Us -->
+            <li>
+              <a href="https://act-rules.github.io//pages/about.html">About Us</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav right">
+            <!-- Github -->
+            <li class="dropdown">
+              <a href="https://github.com/auto-wcag/auto-wcag.git" role="link">
+                <i class="fab fa-github scale-2x"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <!-- Begin page content -->
+    <main class="container">
+      
+      <div class="page-header">
+        <h1>Rules</h1>
+      </div>
+      
+      <p><div id="rules-table">
 	<input class="search" placeholder="Search rule..." />
 
 	<table class="table table-striped">
@@ -14,77 +179,1438 @@ title: Rules
 				<th class="sort" data-sort="description">Description</th>
 				<th width='25%'>WCAG Criterion</th>
 				<th width='8%'>
-					<a href="{{ site.url }}/pages/implementations/coverage.html">
+					<a href="https://act-rules.github.io//pages/implementations/coverage.html">
 						Implementations
 					</a>
 				</th>
 			</tr>
 		</thead>
 		<tbody class="list">
-			{% for rule in site.rules %}
-			{% if rule.success_criterion %}
+			
+			
 			<tr>
-				<td class="ludate hidden">{{rule.last_modified_at}}</td>
-				<td class='name' data-rule-name="{{rule.name}}">
-					<a class='rule-list-title' href="{{ rule.url | prepend: site.url }}">
-						{{rule.name}}
+				<td class="ludate hidden">2019-03-26 09:43:21 +0000</td>
+				<td class='name' data-rule-name="Filename is valid accessible name">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC1-1-1-accessible-name-is-image-filename.html">
+						Filename is valid accessible name
 					</a>
-					{% if rule.draft %}
-					<p class="draft-note slim">Draft</p>
-					{% endif %}
+					
 
 
 					<br><br>
-					{% if rule.atomic_rules %}
-					<b><i>Atomic Rules:</i></b>
-					{% for ar in rule.atomic_rules %}
-					<ul>
-						<li>
-							<a href="{{ site.url }}/rules/{{ar}}.html">
-								{{ ar }}
-							</a>
-						</li>
-					</ul>
-					{% endfor %}
-					{% endif %}
+					
 				</td>
-				<td class="description">{{ rule.description | markdownify }}</td>
+				<td class="description"><p>This rule checks that image elements that use their source filename as their accessible name do so without loss of information to the user.</p>
+</td>
 				<td class='wcagCriterion' data-sc="">
 					<ul>
-						{% for criterion in rule.success_criterion %}
+						
 						<li>
-							{% if site.data.sc-urls[criterion] %}
-							<a href="{{ site.data.criteria[criterion].url }}" target="_blank">
-								{{ site.data.sc-urls[criterion].num }} {{ site.data.sc-urls[criterion].handle }} (Level: {{
-								site.data.sc-urls[criterion].level }})
+							
+							<a href="https://www.w3.org/TR/WCAG20/#text-equiv-all" target="_blank">
+								1.1.1 Non-text Content (Level: A)
 							</a>
-							{% else %}
-							{{ criterion }} (unknown)
-							{% endif %}
+							
 						</li>
-						{% endfor %}
+						
 					</ul>
 				</td>
 				<td class='implementations'>
-					<p data-rule-id="{{ rule.id | replace: '/rules/', '' }}" class='implementation-status loader'>
+					<p data-rule-id="SC1-1-1-accessible-name-is-image-filename" class='implementation-status loader'>
 						<!-- Generated data -->
 					</p>
 				</td>
 			</tr>
-			{% endif %}
-			{% endfor %}
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-03-26 09:43:21 +0000</td>
+				<td class='name' data-rule-name="Image has accessible name">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC1-1-1-image-has-name.html">
+						Image has accessible name
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>Each image that is not marked as decorative, has an accessible name</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#text-equiv-all" target="_blank">
+								1.1.1 Non-text Content (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC1-1-1-image-has-name" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-01-09 12:33:57 +0000</td>
+				<td class='name' data-rule-name="audio only has a text alternative">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC1-2-1-audio-only-alternative.html">
+						audio only has a text alternative
+					</a>
+					
+
+
+					<br><br>
+					
+					<b><i>Atomic Rules:</i></b>
+					
+					<ul>
+						<li>
+							<a href="https://act-rules.github.io//rules/SC1-2-1-audio-transcript.html">
+								SC1-2-1-audio-transcript
+							</a>
+						</li>
+					</ul>
+					
+					<ul>
+						<li>
+							<a href="https://act-rules.github.io//rules/SC1-2-1-media-alternative-audio.html">
+								SC1-2-1-media-alternative-audio
+							</a>
+						</li>
+					</ul>
+					
+					
+				</td>
+				<td class="description"><p>This rule checks if audio only elements have a text alternative available</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#media-equiv-av-only-alt" target="_blank">
+								1.2.1 Audio-only and Video-only (Prerecorded) (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC1-2-1-audio-only-alternative" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-01-09 12:33:57 +0000</td>
+				<td class='name' data-rule-name="video only has an accessibile alternative">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC1-2-1-video-only-alternative.html">
+						video only has an accessibile alternative
+					</a>
+					
+
+
+					<br><br>
+					
+					<b><i>Atomic Rules:</i></b>
+					
+					<ul>
+						<li>
+							<a href="https://act-rules.github.io//rules/SC1-2-1-media-alternative-video.html">
+								SC1-2-1-media-alternative-video
+							</a>
+						</li>
+					</ul>
+					
+					<ul>
+						<li>
+							<a href="https://act-rules.github.io//rules/SC1-2-1-video-only-description-track.html">
+								SC1-2-1-video-only-description-track
+							</a>
+						</li>
+					</ul>
+					
+					<ul>
+						<li>
+							<a href="https://act-rules.github.io//rules/SC1-2-1-video-only-element-transcript.html">
+								SC1-2-1-video-only-element-transcript
+							</a>
+						</li>
+					</ul>
+					
+					<ul>
+						<li>
+							<a href="https://act-rules.github.io//rules/SC1-2-1-video-only-audio-alternative.html">
+								SC1-2-1-video-only-audio-alternative
+							</a>
+						</li>
+					</ul>
+					
+					
+				</td>
+				<td class="description"><p>This rule checks if video elements without audio have an alternative available</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#media-equiv-av-only-alt" target="_blank">
+								1.2.1 Audio-only and Video-only (Prerecorded) (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC1-2-1-video-only-alternative" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-01-22 09:22:32 +0000</td>
+				<td class='name' data-rule-name="Video has audio alternative">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC1-2-2-video-has-audio-alternative.html">
+						Video has audio alternative
+					</a>
+					
+
+
+					<br><br>
+					
+					<b><i>Atomic Rules:</i></b>
+					
+					<ul>
+						<li>
+							<a href="https://act-rules.github.io//rules/SC1-2-video-media-alternative.html">
+								SC1-2-video-media-alternative
+							</a>
+						</li>
+					</ul>
+					
+					<ul>
+						<li>
+							<a href="https://act-rules.github.io//rules/SC1-2-2-video-has-captions.html">
+								SC1-2-2-video-has-captions
+							</a>
+						</li>
+					</ul>
+					
+					
+				</td>
+				<td class="description"><p>This rule checks that video elements have an alternative for information conveyed through audio</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#media-equiv-captions" target="_blank">
+								1.2.2 Captions (Prerecorded) (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC1-2-2-video-has-audio-alternative" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-01-22 09:22:32 +0000</td>
+				<td class='name' data-rule-name="video has captions">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC1-2-2-video-has-captions.html">
+						video has captions
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>Captions are available for audio information in non-streaming <code class="highlighter-rouge">video</code> elements.</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#media-equiv-captions" target="_blank">
+								1.2.2 Captions (Prerecorded) (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC1-2-2-video-has-captions" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-03-03 13:35:02 +0000</td>
+				<td class='name' data-rule-name="video with audio has audio descriptions or transcript">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC1-2-3-video-alternative.html">
+						video with audio has audio descriptions or transcript
+					</a>
+					
+
+
+					<br><br>
+					
+					<b><i>Atomic Rules:</i></b>
+					
+					<ul>
+						<li>
+							<a href="https://act-rules.github.io//rules/SC1-2-video-audio-description.html">
+								SC1-2-video-audio-description
+							</a>
+						</li>
+					</ul>
+					
+					<ul>
+						<li>
+							<a href="https://act-rules.github.io//rules/SC1-2-video-transcript.html">
+								SC1-2-video-transcript
+							</a>
+						</li>
+					</ul>
+					
+					<ul>
+						<li>
+							<a href="https://act-rules.github.io//rules/SC1-2-video-description-track.html">
+								SC1-2-video-description-track
+							</a>
+						</li>
+					</ul>
+					
+					<ul>
+						<li>
+							<a href="https://act-rules.github.io//rules/SC1-2-video-media-alternative.html">
+								SC1-2-video-media-alternative
+							</a>
+						</li>
+					</ul>
+					
+					
+				</td>
+				<td class="description"><p>This rule checks video elements with audio have an alternative for the video content as audio or as text.</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#media-equiv-audio-desc" target="_blank">
+								1.2.3 Audio Description or Media Alternative (Prerecorded) (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC1-2-3-video-alternative" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-03-03 13:35:02 +0000</td>
+				<td class='name' data-rule-name="video with audio has audio description">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC1-2-5-video-audio-alternative.html">
+						video with audio has audio description
+					</a>
+					
+
+
+					<br><br>
+					
+					<b><i>Atomic Rules:</i></b>
+					
+					<ul>
+						<li>
+							<a href="https://act-rules.github.io//rules/SC1-2-video-audio-description.html">
+								SC1-2-video-audio-description
+							</a>
+						</li>
+					</ul>
+					
+					<ul>
+						<li>
+							<a href="https://act-rules.github.io//rules/SC1-2-video-media-alternative.html">
+								SC1-2-video-media-alternative
+							</a>
+						</li>
+					</ul>
+					
+					<ul>
+						<li>
+							<a href="https://act-rules.github.io//rules/SC1-2-video-description-track.html">
+								SC1-2-video-description-track
+							</a>
+						</li>
+					</ul>
+					
+					
+				</td>
+				<td class="description"><p>This rule checks video elements with audio have audio description</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#media-equiv-audio-desc-only" target="_blank">
+								1.2.5 Audio Description (Prerecorded) (Level: AA)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC1-2-5-video-audio-alternative" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-01-22 09:22:32 +0000</td>
+				<td class='name' data-rule-name="video element transcript">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC1-2-video-transcript.html">
+						video element transcript
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>Non-streaming <code class="highlighter-rouge">video</code> elements must have all audio and visual information available in a transcript.</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#media-equiv-text-doc" target="_blank">
+								1.2.8 Media Alternative (Prerecorded) (Level: AAA)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC1-2-video-transcript" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-04-10 12:11:25 +0000</td>
+				<td class='name' data-rule-name="aria-hidden with focusable content">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC1-3-1-aria-hidden-focus.html">
+						aria-hidden with focusable content
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>This rule checks that elements with an <code class="highlighter-rouge">aria-hidden</code> attribute do not contain focusable elements</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#content-structure-separation-programmatic" target="_blank">
+								1.3.1 Info and Relationships (Level: A)
+							</a>
+							
+						</li>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#ensure-compat-rsv" target="_blank">
+								4.1.2 Name, Role, Value (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC1-3-1-aria-hidden-focus" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2018-11-19 09:12:10 +0000</td>
+				<td class='name' data-rule-name="Autocomplete valid">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC1-3-5-autocomplete-valid.html">
+						Autocomplete valid
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>This rule checks that the HTML autocomplete attribute has a correct value</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="" target="_blank">
+								1.3.5 Identify Input Purpose (Level: AA)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC1-3-5-autocomplete-valid" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-01-14 18:24:40 +0000</td>
+				<td class='name' data-rule-name="No keyboard trap">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC2-1-2-no-keyboard-trap.html">
+						No keyboard trap
+					</a>
+					
+
+
+					<br><br>
+					
+					<b><i>Atomic Rules:</i></b>
+					
+					<ul>
+						<li>
+							<a href="https://act-rules.github.io//rules/SC2-1-2-no-keyboard-trap-standard-navigation.html">
+								SC2-1-2-no-keyboard-trap-standard-navigation
+							</a>
+						</li>
+					</ul>
+					
+					<ul>
+						<li>
+							<a href="https://act-rules.github.io//rules/SC2-1-2-no-keyboard-trap-non-standard-navigation.html">
+								SC2-1-2-no-keyboard-trap-non-standard-navigation
+							</a>
+						</li>
+					</ul>
+					
+					
+				</td>
+				<td class="description"><p>This rule checks for keyboard traps. This includes use of both standard and non-standard keyboard navigation to navigate through all content without becoming trapped.</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#keyboard-operation-trapping" target="_blank">
+								2.1.2 No Keyboard Trap (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC2-1-2-no-keyboard-trap" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-01-11 12:16:35 +0000</td>
+				<td class='name' data-rule-name="Meta-refresh no delay">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC2-2-1+SC2-2-4-meta-refresh.html">
+						Meta-refresh no delay
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>This rule checks that the meta element is not used for delayed redirecting or refreshing.</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#time-limits-required-behaviors" target="_blank">
+								2.2.1 Timing Adjustable (Level: A)
+							</a>
+							
+						</li>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#time-limits-postponed" target="_blank">
+								2.2.4 Interruptions (Level: AAA)
+							</a>
+							
+						</li>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#consistent-behavior-no-extreme-changes-context" target="_blank">
+								3.2.5 Change on Request (Level: AAA)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC2-2-1+SC2-2-4-meta-refresh" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-04-10 12:04:24 +0000</td>
+				<td class='name' data-rule-name="HTML Page has a title">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC2-4-2-page-has-title.html">
+						HTML Page has a title
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>This rule checks that the HTML page has a title</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#navigation-mechanisms-title" target="_blank">
+								2.4.2 Page Titled (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC2-4-2-page-has-title" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-01-29 09:11:22 +0000</td>
+				<td class='name' data-rule-name="Links have an accessible name">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC2-4-4+2-4-9+4-1-2-link-has-name.html">
+						Links have an accessible name
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>Each link has an accessible name</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#ensure-compat-rsv" target="_blank">
+								4.1.2 Name, Role, Value (Level: A)
+							</a>
+							
+						</li>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#navigation-mechanisms-refs" target="_blank">
+								2.4.4 Link Purpose (In Context) (Level: A)
+							</a>
+							
+						</li>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#navigation-mechanisms-link" target="_blank">
+								2.4.9 Link Purpose (Link Only) (Level: AAA)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC2-4-4+2-4-9+4-1-2-link-has-name" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-03-03 13:35:41 +0000</td>
+				<td class='name' data-rule-name="Heading is descriptive">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC2-4-6-descriptive-headings.html">
+						Heading is descriptive
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>This rule checks that headings describe the topic or purpose of the content.</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#navigation-mechanisms-descriptive" target="_blank">
+								2.4.6 Headings and Labels (Level: AA)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC2-4-6-descriptive-headings" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-03-03 13:35:41 +0000</td>
+				<td class='name' data-rule-name="Form field label is descriptive">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC2-4-6-descriptive-labels.html">
+						Form field label is descriptive
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>This rule checks that labels describe the purpose of form field elements.</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#navigation-mechanisms-descriptive" target="_blank">
+								2.4.6 Headings and Labels (Level: AA)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC2-4-6-descriptive-labels" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2018-10-30 12:54:29 +0000</td>
+				<td class='name' data-rule-name="label and name from content mismatch">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC2-5-3-label-content-name-mismatch.html">
+						label and name from content mismatch
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>Interactive elements labelled through their content must have their visible label as part of their accessible name</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="" target="_blank">
+								2.5.3 Label in Name (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC2-5-3-label-content-name-mismatch" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-01-09 15:28:58 +0000</td>
+				<td class='name' data-rule-name="HTML has lang attribute">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC3-1-1-html-has-lang.html">
+						HTML has lang attribute
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>This rule checks that the <code class="highlighter-rouge">html</code> element has a non-empty <code class="highlighter-rouge">lang</code> or <code class="highlighter-rouge">xml:lang</code> attribute.</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#meaning-doc-lang-id" target="_blank">
+								3.1.1 Language of Page (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC3-1-1-html-has-lang" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2018-10-15 07:40:28 +0000</td>
+				<td class='name' data-rule-name="Validity of HTML Lang attribute">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC3-1-1-html-lang-valid.html">
+						Validity of HTML Lang attribute
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>This rule checks the lang or xml:lang attribute has a valid language subtag.</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#meaning-doc-lang-id" target="_blank">
+								3.1.1 Language of Page (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC3-1-1-html-lang-valid" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2018-10-10 12:03:07 +0000</td>
+				<td class='name' data-rule-name="HTML lang and xml:lang match">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC3-1-1-html-xml-lang-match.html">
+						HTML lang and xml:lang match
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>The rule checks that for the <code class="highlighter-rouge">html</code> element, there is no mismatch between the primary language in non-empty <code class="highlighter-rouge">lang</code> and <code class="highlighter-rouge">xml:lang</code> attributes, if both are used.</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#meaning-doc-lang-id" target="_blank">
+								3.1.1 Language of Page (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC3-1-1-html-xml-lang-match" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-03-21 15:50:33 +0000</td>
+				<td class='name' data-rule-name="Valid body lang attribute">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC3-1-2-lang-valid.html">
+						Valid body lang attribute
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>This rule checks that <code class="highlighter-rouge">lang</code> or <code class="highlighter-rouge">xml:lang</code> attributes on elements within the <code class="highlighter-rouge">body</code> of a web page have a valid language subtag.</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#meaning-other-lang-id" target="_blank">
+								3.1.2 Language of Parts (Level: AA)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC3-1-2-lang-valid" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2018-11-19 09:12:30 +0000</td>
+				<td class='name' data-rule-name="attributes are not duplicated">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC4-1-1-unique-attrs.html">
+						attributes are not duplicated
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>This rule checks that HTML and SVG starting tags do not contain duplicated attributes.</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#ensure-compat-parses" target="_blank">
+								4.1.1 Parsing (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC4-1-1-unique-attrs" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-03-12 10:37:42 +0000</td>
+				<td class='name' data-rule-name="Id attribute is unique">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC4-1-1-unique-id.html">
+						Id attribute is unique
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>This rule checks that all <code class="highlighter-rouge">id</code> attribute values on a single page are unique.</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#ensure-compat-parses" target="_blank">
+								4.1.1 Parsing (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC4-1-1-unique-id" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-03-02 20:03:11 +0000</td>
+				<td class='name' data-rule-name="ARIA attribute is valid">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC4-1-2-aria-attr-valid.html">
+						ARIA attribute is valid
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>This rule checks that each aria- attribute specified is defined in ARIA 1.1</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#ensure-compat-rsv" target="_blank">
+								4.1.2 Name, Role, Value (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC4-1-2-aria-attr-valid" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-04-10 12:01:16 +0000</td>
+				<td class='name' data-rule-name="ARIA state or property allowed">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC4-1-2-aria-state-or-property-allowed.html">
+						ARIA state or property allowed
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>This rule checks that WAI-ARIA states or properties are allowed for the element they are specified on.</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#ensure-compat-rsv" target="_blank">
+								4.1.2 Name, Role, Value (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC4-1-2-aria-state-or-property-allowed" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-03-03 13:35:41 +0000</td>
+				<td class='name' data-rule-name="ARIA state or property has valid value">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC4-1-2-aria-state-or-property-has-valid-value.html">
+						ARIA state or property has valid value
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>This rule checks that each ARIA state or property has a valid value</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#ensure-compat-rsv" target="_blank">
+								4.1.2 Name, Role, Value (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC4-1-2-aria-state-or-property-has-valid-value" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2018-11-19 09:12:10 +0000</td>
+				<td class='name' data-rule-name="Buttons have an accessible name">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC4-1-2-button-has-name.html">
+						Buttons have an accessible name
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>Each button element has an accessible name</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#ensure-compat-rsv" target="_blank">
+								4.1.2 Name, Role, Value (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC4-1-2-button-has-name" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-02-13 15:04:21 +0000</td>
+				<td class='name' data-rule-name="Form field has accessible name">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC4-1-2-form-field-has-name.html">
+						Form field has accessible name
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>Each form field element has an accessible name</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#ensure-compat-rsv" target="_blank">
+								4.1.2 Name, Role, Value (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC4-1-2-form-field-has-name" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-01-07 09:37:28 +0000</td>
+				<td class='name' data-rule-name="iframe has an accessible name">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC4-1-2-iframe-has-name.html">
+						iframe has an accessible name
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>Each iframe element has an accessible name</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#ensure-compat-rsv" target="_blank">
+								4.1.2 Name, Role, Value (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC4-1-2-iframe-has-name" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-03-03 13:35:41 +0000</td>
+				<td class='name' data-rule-name="Role attribute has valid value">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC4-1-2-role-attribute-has-valid-value.html">
+						Role attribute has valid value
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>This rule checks that each role attribute has a valid value</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#ensure-compat-rsv" target="_blank">
+								4.1.2 Name, Role, Value (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC4-1-2-role-attribute-has-valid-value" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-04-10 12:01:16 +0000</td>
+				<td class='name' data-rule-name="Role has required states and properties">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/SC4-1-2-role-has-required-states-and-properties.html">
+						Role has required states and properties
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>Elements that have an explicit role must also specify all required states and properties</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#ensure-compat-rsv" target="_blank">
+								4.1.2 Name, Role, Value (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="SC4-1-2-role-has-required-states-and-properties" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+				<td class="ludate hidden">2019-01-07 09:36:58 +0000</td>
+				<td class='name' data-rule-name="Image button has accessible name">
+					<a class='rule-list-title' href="https://act-rules.github.io//rules/image-button-has-name.html">
+						Image button has accessible name
+					</a>
+					
+
+
+					<br><br>
+					
+				</td>
+				<td class="description"><p>This rule checks that each image button element has an accessible name</p>
+</td>
+				<td class='wcagCriterion' data-sc="">
+					<ul>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#text-equiv-all" target="_blank">
+								1.1.1 Non-text Content (Level: A)
+							</a>
+							
+						</li>
+						
+						<li>
+							
+							<a href="https://www.w3.org/TR/WCAG20/#ensure-compat-rsv" target="_blank">
+								4.1.2 Name, Role, Value (Level: A)
+							</a>
+							
+						</li>
+						
+					</ul>
+				</td>
+				<td class='implementations'>
+					<p data-rule-id="image-button-has-name" class='implementation-status loader'>
+						<!-- Generated data -->
+					</p>
+				</td>
+			</tr>
+			
+			
 		</tbody>
 	</table>
 </div>
 
 <!-- Javascript -->
-<script type="text/javascript" src="{{site.url}}/assets/js/page-rules.js"></script>
+<script type="text/javascript" src="https://act-rules.github.io//assets/js/page-rules.js"></script>
 
 <section class="cards-section text-center">
 	<div id="cards-wrapper" class="cards-wrapper row">
 		<div class="item item-primary col-md-6 col-sm-6 col-xs-12">
 			<div class="item-inner">
-				<a class="link" href="{{site.data.package.pulls.url}}">
+				<a class="link" href="https://github.com/auto-wcag/auto-wcag/pulls">
 					<h3 class="title">DRAFT RULES</h3>
 					<div class="icon-holder">
 						<i aria-hidden="true" class="fab fa-firstdraft fa-5x"></i>
@@ -97,7 +1623,7 @@ title: Rules
 		</div>
 		<div class="item item-primary col-md-6 col-sm-6 col-xs-12">
 			<div class="item-inner">
-				<a class="link" href="{{site.data.package.bugs.url}}">
+				<a class="link" href="https://github.com/auto-wcag/auto-wcag/issues">
 					<h3 class="title">ISSUES</h3>
 					<div class="icon-holder">
 						<i aria-hidden="true" class="fas fa-bug fa-5x">
@@ -110,4 +1636,66 @@ title: Rules
 			</div>
 		</div>
 	</div>
-</section>
+</section></p>
+    </main>
+
+    <!-- contribute section -->
+    <div class="promo-block">
+      <div class="container">
+        <div class="promo-block-inner">
+          <div class="row">
+            <div class="figure-holder col-md-4 col-sm-6 col-xs-12">
+              <div class="content-holder-inner text-center">
+                <h3 class="promo-title">Contribute</h3>
+                <br />
+                <a href="https://github.com/auto-wcag/auto-wcag.git" role="link" class="desc">
+                  <i class="fab fa-github-square scale-5x"></i>
+                </a>
+                <br /><br /><br /><br />
+                <a class="btn btn-cta" href="https://github.com/auto-wcag/auto-wcag.git">
+                  GitHub
+                </a>
+              </div>
+            </div>
+            <!--//figure-holder-->
+            <div class="content-holder col-md-8 col-sm-6 col-xs-12">
+              <div class="content-holder-inner">
+                <div class="desc">
+                  <p>
+                    Contributing is open to anyone. We welcome any
+                    new issues or pull requests for changes.
+                    ACT Rules Community website has conference calls every 4 weeks. If
+                    you are interested in becoming an active
+                    contributor or reviewer, we ask that you join
+                    the ACT Rules Community website community group through the W3C
+                    Website. This requires setting up a W3C account,
+                    may require approval by the organization you
+                    work for if they are a W3C member.
+                  </p>
+                  <a class="btn btn-cta" href="https://act-rules.github.io//pages/contribute.html">Learn more about contributing
+                    to ACT Rules Community website</a>
+                  <a class="btn btn-cta" href="https://www.w3.org/community/wp-login.php?redirect_to=%2Fcommunity%2Fauto-wcag%2Fjoin">Join
+                    the ACT Rules Community website community group now!</a>
+                </div>
+                <!--//desc-->
+              </div>
+              <!--//content-holder-inner-->
+            </div>
+            <!--//content-holder-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <small>
+          ACT Rules Community website |
+          <a class="right" href="https://act-rules.github.io//license.html">License</a>
+        </small>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

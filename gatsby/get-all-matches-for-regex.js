@@ -6,7 +6,7 @@ const getAllMatchesForRegex = (regex, compareString, computeIndexes = true) => {
 	const blocks = []
 
 	function getMatch(str) {
-		const match = regex.exec(str)
+		const match = new RegExp(regex).exec(str)
 		if (match) {
 			const actualMatch = match[0]
 			const matchValue = match[1]

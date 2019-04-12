@@ -3,7 +3,7 @@ version: 2
 general:
   branches:
     only:
-     - master
+     - develop
 
 defaults: &defaults
   docker:
@@ -19,7 +19,7 @@ jobs:
   base: 
     <<: *defaults
     steps: 
-      - run: echo circleci base job
+      - run: echo "circleci job to not fail status checks"
   dependencies:
     <<: *defaults
     steps:
@@ -37,11 +37,8 @@ jobs:
       - run: bundle install
       - run: bundle exec jekyll build
       - deploy:
-          name: Deploy to GitHub Pages
-          command: |
-            if [ $CIRCLE_BRANCH == 'master' ]; then
-              bash .circleci/publish-gh-pages.sh
-            fi
+          name: Deploy to master branch from develop branch
+          command: bash .circleci/publish-site.sh
             
 workflows:
   version: 2
@@ -51,10 +48,10 @@ workflows:
       - dependencies:
           filters:
             branches:
-              only: master
+              only: develop
       - deploy:
           requires:
             - dependencies
           filters:
             branches:
-              only: master
+              only: develop

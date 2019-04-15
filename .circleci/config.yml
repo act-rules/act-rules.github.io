@@ -28,7 +28,7 @@ jobs:
       - checkout
       - run: npm install
       - save_cache:
-          key: v1-npm-cache-{{ checksum "package.json" }}
+          key: v3-npm-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
   deploy:

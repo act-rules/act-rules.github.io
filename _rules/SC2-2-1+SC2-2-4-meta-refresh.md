@@ -4,16 +4,16 @@ description: |
   This rule checks that the meta element is not used for delayed redirecting or refreshing.
 
 success_criterion:
-- 2.2.1 # Timing Adjustable
-- 2.2.4 # Interruptions
-- 3.2.5 # Change on Request
+  - 2.2.1 # Timing Adjustable
+  - 2.2.4 # Interruptions
+  - 3.2.5 # Change on Request
 
 test_aspects:
-- DOM Tree
+  - DOM Tree
 
 authors:
-- Anne Thyme Nørregaard
-- Wilco Fiers
+  - Anne Thyme Nørregaard
+  - Wilco Fiers
 ---
 
 ## Test procedure
@@ -28,16 +28,16 @@ The `time` of the `content` attribute is 0 or greater than 72000 (20 hours).
 
 **Note**: See [Refresh state (`http-equiv="refresh"`)](https://www.w3.org/TR/html/document-metadata.html#statedef-http-equiv-refresh) for a precise description on how to determine the `time`.
 
-## Assumptions  
+## Assumptions
 
-* This test assumes no functionality was provided by the website for the user to adjust the timer. 
-* This test assumes that the refresh was not [essential](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html#essentialdef), which is listed as a valid exception to SC 2.2.1.
+- This test assumes no functionality was provided by the website for the user to adjust the timer.
+- This test assumes that the refresh was not [essential](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html#essentialdef), which is listed as a valid exception to SC 2.2.1.
 
-## Accessibility Support 
+## Accessibility Support
 
 There are no major accessibility support issues known for this rule.
 
-## Background  
+## Background
 
 - [H76: Using meta refresh to create an instant client-side redirect](https://www.w3.org/TR/WCAG-TECHS/H76.html)
 - [F40: Failure of Success Criterion 2.2.1 and 2.2.4 due to using meta redirect with a time limit](https://www.w3.org/TR/WCAG-TECHS/F40.html)
@@ -52,9 +52,9 @@ There are no major accessibility support issues known for this rule.
 Redirects immediately.
 
 ```html
-  <head>           
-    <meta http-equiv="refresh" content="0; URL='https://github.com'" />    
-  </head>  
+<head>
+	<meta http-equiv="refresh" content="0; URL='https://github.com'" />
+</head>
 ```
 
 #### Passed example 2
@@ -63,8 +63,8 @@ First valid `<meta http-equiv="refresh">` redirects immediately.
 
 ```html
 <head>
-  <meta http-equiv="refresh" content="0; http://example.com" />
-  <meta http-equiv="refresh" content="5; http://example.com" />
+	<meta http-equiv="refresh" content="0; http://example.com" />
+	<meta http-equiv="refresh" content="5; http://example.com" />
 </head>
 ```
 
@@ -74,7 +74,7 @@ Redirects after more than 20 hours.
 
 ```html
 <head>
-  <meta http-equiv="refresh" content="72001; http://example.com" />
+	<meta http-equiv="refresh" content="72001; http://example.com" />
 </head>
 ```
 
@@ -86,7 +86,7 @@ Refreshes after 30 seconds.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="30">
+	<meta http-equiv="refresh" content="30" />
 </head>
 ```
 
@@ -96,7 +96,7 @@ Redirects after 30 seconds.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="30; URL='https://github.com'">
+	<meta http-equiv="refresh" content="30; URL='https://github.com'" />
 </head>
 ```
 
@@ -106,8 +106,8 @@ First `<meta http-equiv="refresh">` element is not valid, second one redirects a
 
 ```html
 <head>
-  <meta http-equiv="refresh" content="0: http://example.com" />
-  <meta http-equiv="refresh" content="5; http://example.com" />
+	<meta http-equiv="refresh" content="0: http://example.com" />
+	<meta http-equiv="refresh" content="5; http://example.com" />
 </head>
 ```
 
@@ -117,7 +117,7 @@ Redirects after exactly 20 hours.
 
 ```html
 <head>
-  <meta http-equiv="refresh" content="72000; http://example.com" />
+	<meta http-equiv="refresh" content="72000; http://example.com" />
 </head>
 ```
 
@@ -129,7 +129,7 @@ No `content` attribute.
 
 ```html
 <head>
-	<meta http-equiv="refresh">
+	<meta http-equiv="refresh" />
 </head>
 ```
 
@@ -139,7 +139,7 @@ No `http-equiv="refresh"` attribute.
 
 ```html
 <head>
-	<meta content="30">
+	<meta content="30" />
 </head>
 ```
 
@@ -149,7 +149,7 @@ No `http-equiv="refresh"` attribute.
 
 ```html
 <head>
-  <meta http-equiv="refresh" content="0: http://example.com" />
+	<meta http-equiv="refresh" content="0: http://example.com" />
 </head>
 ```
 
@@ -159,7 +159,7 @@ No `http-equiv="refresh"` attribute.
 
 ```html
 <head>
-	<meta http-equiv=refresh content="-00.12 foo">
+	<meta http-equiv="refresh" content="-00.12 foo" />
 </head>
 ```
 
@@ -169,16 +169,17 @@ No `http-equiv="refresh"` attribute.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="; 30">
+	<meta http-equiv="refresh" content="; 30" />
 </head>
 ```
 
 #### Inapplicable example 6
 
 `content` attribute is invalid and therefore inapplicable.
+
 ```html
 <head>
-	<meta http-equiv="refresh" content="">
+	<meta http-equiv="refresh" content="" />
 </head>
 ```
 
@@ -188,7 +189,7 @@ No `http-equiv="refresh"` attribute.
 
 ```html
 <head>
-  <meta http-equiv="refresh" content="+5; http://example.com">
+	<meta http-equiv="refresh" content="+5; http://example.com" />
 </head>
 ```
 
@@ -197,7 +198,7 @@ No `http-equiv="refresh"` attribute.
 `content` attribute is invalid and therefore inapplicable.
 
 ```html
-<head>           
-  <meta http-equiv="refresh" content="foo; URL='https://github.com'" />
+<head>
+	<meta http-equiv="refresh" content="foo; URL='https://github.com'" />
 </head>
 ```

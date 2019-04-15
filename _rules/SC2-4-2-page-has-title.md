@@ -5,17 +5,17 @@ description: |
   This rule checks that the HTML page has a title
 
 success_criterion:
-- 2.4.2 # Page Titled
+  - 2.4.2 # Page Titled
 
 test_aspects:
-- DOM Tree
+  - DOM Tree
 
 authors:
-- Wilco Fiers
-- Stein Erik Skotkjerra
-- Bryn Anderson
-- Anne Thyme Nørregaard
-- Jey Nandakumar
+  - Wilco Fiers
+  - Stein Erik Skotkjerra
+  - Bryn Anderson
+  - Anne Thyme Nørregaard
+  - Jey Nandakumar
 ---
 
 ## Test procedure
@@ -46,9 +46,11 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- [Understanding Success Criterion 2.4.2: Page Titled](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
-- [WCAG 2.1 Technique H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG21/Techniques/html/H25)
-
+- [https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
+- [https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=242#qr-navigation-mechanisms-title](https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=242#qr-navigation-mechanisms-title)
+- [https://www.w3.org/TR/WCAG20-TECHS/G88.html](https://www.w3.org/TR/WCAG20-TECHS/G88.html)
+- [https://www.w3.org/TR/WCAG20-TECHS/H25.html](https://www.w3.org/TR/WCAG20-TECHS/H25.html)
+- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible WCAG-ACT-RULES-CG refers to those. Another source for test cases is the W3C Before and After Demonstration.
 
 ## Test Cases
 
@@ -60,7 +62,7 @@ This page has a `title` with content.
 
 ```html
 <html>
-  <title>This page has a title</title>
+	<title>This page has a title</title>
 </html>
 ```
 
@@ -70,8 +72,8 @@ This page gives a `title` to an iframe.
 
 ```html
 <html>
-  <title>This page gives a title to an iframe</title>
-  <iframe src="../test-assets/sc2-4-2-title-page-without-title.html"></iframe>
+	<title>This page gives a title to an iframe</title>
+	<iframe src="../test-assets/sc2-4-2-title-page-without-title.html"></iframe>
 </html>
 ```
 
@@ -81,12 +83,12 @@ This page has two `title` elements.
 
 ```html
 <html>
-  <head>
-    <title>Title of the page.</title>
-  </head>
-  <body>
-    <title>Title of the page.</title>
-  </body>
+	<head>
+		<title>Title of the page.</title>
+	</head>
+	<body>
+		<title>Title of the page.</title>
+	</body>
 </html>
 ```
 
@@ -96,9 +98,9 @@ The `title` is in the `body`.
 
 ```html
 <html>
-  <body>
-    <title>Title of the page.</title>
-  </body>
+	<body>
+		<title>Title of the page.</title>
+	</body>
 </html>
 ```
 
@@ -108,12 +110,12 @@ The first `title` element has content.
 
 ```html
 <html>
-  <head>
-    <title>Title of the page.</title>
-  </head>
-  <body>
-     <title></title> 
-  </body>
+	<head>
+		<title>Title of the page.</title>
+	</head>
+	<body>
+		<title></title>
+	</body>
 </html>
 ```
 
@@ -135,7 +137,7 @@ The page has no `title`.
 
 ```html
 <html>
-  <h1>This page has no title</h1>
+	<h1>this page has no title</h1>
 </html>
 ```
 
@@ -145,7 +147,7 @@ The `title` element is empty.
 
 ```html
 <html>
-  <title></title>
+	<title></title>
 </html>
 ```
 
@@ -155,7 +157,7 @@ The page has no `title`.
 
 ```html
 <html>
-  <iframe src="../test-assets/sc2-4-2-title-page-with-title.html"></iframe>
+	<iframe src="../test-assets/sc2-4-2-title-page-with-title.html"></iframe>
 </html>
 ```
 
@@ -165,12 +167,12 @@ The first `title` element is empty.
 
 ```html
 <html>
-  <head>
-    <title></title>
-  </head>
-  <body>
-    <title>Title of the page.</title>
-  </body>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<title>Title of the page.</title>
+	</body>
 </html>
 ```
 

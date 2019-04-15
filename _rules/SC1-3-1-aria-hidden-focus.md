@@ -10,11 +10,11 @@ success_criterion:
 - 4.1.2 # Name, Role, Value
 
 test_aspects:
-- DOM Tree
-- CSS Styling
+  - DOM Tree
+  - CSS Styling
 
 authors:
-- Wilco Fiers
+  - Wilco Fiers
 ---
 
 ## Test Procedure
@@ -31,7 +31,7 @@ None of the target elements are part of [sequential focus navigation](https://ww
 
 ## Assumptions
 
-*There are currently no assumptions*
+_There are currently no assumptions_
 
 ## Accessibility support
 
@@ -94,9 +94,9 @@ Content made unfocusable through `disabled` attribute.
 
 ```html
 <div aria-hidden="true">
-    <div aria-hidden="false">
-        <button tabindex="-1">Some button</button>
-    </div>
+	<div aria-hidden="false">
+		<button tabindex="-1">Some button</button>
+	</div>
 </div>
 ```
 
@@ -136,11 +136,11 @@ Focusable form field, incorrectly disabled.
 
 `aria-hidden` can't be reset once set to true on an ancestor.
 
-```html	
+```html
 <div aria-hidden="true">
-    <div aria-hidden="false">
-        <button>Some button</button>
-    </div>
+	<div aria-hidden="false">
+		<button>Some button</button>
+	</div>
 </div>
 ```
 
@@ -158,8 +158,8 @@ Focusable `summary` element.
 
 ```html
 <details aria-hidden="true">
-    <summary>Some button</summary>
-    <p>Some details</p>
+	<summary>Some button</summary>
+	<p>Some details</p>
 </details>
 ```
 

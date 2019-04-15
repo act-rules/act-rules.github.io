@@ -5,16 +5,16 @@ description: |
   This rule checks video elements with audio have audio description
 
 success_criterion:
-- 1.2.5 # Audio Description (Prerecorded)§
+  - 1.2.5 # Audio Description (Prerecorded)§
 
 atomic_rules:
-- SC1-2-video-audio-description
-- SC1-2-video-media-alternative
-- SC1-2-video-description-track
+  - SC1-2-video-audio-description
+  - SC1-2-video-media-alternative
+  - SC1-2-video-description-track
 
 authors:
-- Wilco Fiers
-- Brian Bors
+  - Wilco Fiers
+  - Brian Bors
 ---
 
 ## Test Procedure
@@ -58,8 +58,14 @@ A video element with a voiceover that describes the visual information.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/video-with-voiceover.mp4" type="video/mp4"/>
-  <source src="../test-assets/rabbit-video/video-with-voiceover.webm" type="video/webm"/>
+	<source
+		src="../test-assets/rabbit-video/video-with-voiceover.mp4"
+		type="video/mp4"
+	/>
+	<source
+		src="../test-assets/rabbit-video/video-with-voiceover.webm"
+		type="video/webm"
+	/>
 </video>
 ```
 
@@ -69,9 +75,12 @@ A video element with a track element that contains descriptions.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"/>
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"/>
-  <track kind="descriptions" src="../test-assets/rabbit-video/descriptions.vtt"/>
+	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<track
+		kind="descriptions"
+		src="../test-assets/rabbit-video/descriptions.vtt"
+	/>
 </video>
 ```
 
@@ -80,13 +89,17 @@ A video element with a track element that contains descriptions.
 A video element that describes some of the text on the same page. The text on the page labels the video as an alternative.
 
 ```html
-<p>Not being able to use your computer because your mouse 
-  doesn't work, is frustrating. Many people use only the keyboard to navigate 
-  websites. Either through preference or circumstance. This is solved by keyboard compatibility. 
-  Keyboard compatibility is described in WCAG.
-  See the video below to watch the same information again in video form.</p>
-<video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls>
-</video>
+<p>
+	Not being able to use your computer because your mouse doesn't work, is
+	frustrating. Many people use only the keyboard to navigate websites. Either
+	through preference or circumstance. This is solved by keyboard compatibility.
+	Keyboard compatibility is described in WCAG. See the video below to watch the
+	same information again in video form.
+</p>
+<video
+	src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4"
+	controls
+></video>
 ```
 
 ### Failed
@@ -97,8 +110,14 @@ A video element with an incorrect audio description.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4"/>
-  <source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm"/>
+	<source
+		src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4"
+		type="video/mp4"
+	/>
+	<source
+		src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm"
+		type="video/webm"
+	/>
 </video>
 ```
 
@@ -108,9 +127,12 @@ A video element with a track element that contains incorrect descriptions.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
-  <track kind="descriptions" src="../test-assets/rabbit-video/incorrect-descriptions.vtt">
+	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<track
+		kind="descriptions"
+		src="../test-assets/rabbit-video/incorrect-descriptions.vtt"
+	/>
 </video>
 ```
 
@@ -134,8 +156,8 @@ A video element without audio.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
 </video>
 ```
 
@@ -145,7 +167,7 @@ A video element that is not visible on the page.
 
 ```html
 <video controls style="display: none;">
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```

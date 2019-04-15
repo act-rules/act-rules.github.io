@@ -5,15 +5,15 @@ description: |
   Each button element has an accessible name
 
 success_criterion:
-- 4.1.2
+  - 4.1.2
 
 test_aspects:
-- DOM Tree
-- CSS Styling
+  - DOM Tree
+  - CSS Styling
 
 authors:
-- Wilco Fiers
-- Stein Erik Skotkjerra
+  - Wilco Fiers
+  - Stein Erik Skotkjerra
 ---
 
 ## Test procedure
@@ -58,7 +58,7 @@ Regular button.
 Value attribute as the accessible name.
 
 ```html
-<input type="submit" value="Submit">
+<input type="submit" value="Submit" />
 ```
 
 #### Passed example 3
@@ -80,6 +80,7 @@ Span tag with role button and has name defined by aria-label.
 #### Passed example 5
 
 Summary element has a default semantic role of button.
+
 ```html
 <summary>Press Here</summary>
 ```
@@ -98,16 +99,16 @@ Off screen elements should be tested.
 
 ```html
 <html>
-  <style>
-    .notInPage {
-      position: absolute;
-      left: -9999px;
-      top: -9999px;
-    }
-  </style>
-  <body>
-    <button class='notInPage'>Save</button>
-  </body>
+	<style>
+		.notInPage {
+			position: absolute;
+			left: -9999px;
+			top: -9999px;
+		}
+	</style>
+	<body>
+		<button class="notInPage">Save</button>
+	</body>
 </html>
 ```
 
@@ -135,16 +136,16 @@ Off screen element without an accessible name.
 
 ```html
 <html>
-  <style>
-    .notInPage {
-      position: absolute;
-      left: -9999px;
-      top: -9999px;
-    }
-  </style>
-  <body>
-    <button class='notInPage' value='delete'></button>
-  </body>
+	<style>
+		.notInPage {
+			position: absolute;
+			left: -9999px;
+			top: -9999px;
+		}
+	</style>
+	<body>
+		<button class="notInPage" value="delete"></button>
+	</body>
 </html>
 ```
 
@@ -155,7 +156,7 @@ Off screen element without an accessible name.
 Image buttons are tested in a different rule.
 
 ```html
-<input type='image' value='download'>
+<input type="image" value="download" />
 ```
 
 #### Inapplicable example 2
@@ -164,16 +165,16 @@ Not visible in page and not included in the accessibility tree.
 
 ```html
 <html>
-  <style>
-    .notInPage {
-      position: absolute;
-      left: -9999px;
-      top: -9999px;
-    }
-  </style>
-  <body>
-    <button class='notInPage' aria-hidden='true'>Confirm</button>
-  </body>
+	<style>
+		.notInPage {
+			position: absolute;
+			left: -9999px;
+			top: -9999px;
+		}
+	</style>
+	<body>
+		<button class="notInPage" aria-hidden="true">Confirm</button>
+	</body>
 </html>
 ```
 
@@ -182,7 +183,7 @@ Not visible in page and not included in the accessibility tree.
 Inapplicable: role overridden to link for button element.
 
 ```html
-<button role='link'>take me somewhere</button>
+<button role="link">take me somewhere</button>
 ```
 
 #### Inapplicable example 4

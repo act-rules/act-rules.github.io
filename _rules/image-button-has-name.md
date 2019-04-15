@@ -1,19 +1,19 @@
 ---
 name: Image button has accessible name
 rule_type: atomic
-description: | 
+description: |
   This rule checks that each image button element has an accessible name 
 
-success_criterion: 
-- 1.1.1 # Non-Text Content (A)
-- 4.1.2 # Name, Role, Value (A)
+success_criterion:
+  - 1.1.1 # Non-Text Content (A)
+  - 4.1.2 # Name, Role, Value (A)
 
 test_aspects: # Remove what is not applicable
-- DOM Tree
-- CSS Styling
+  - DOM Tree
+  - CSS Styling
 
 authors:
-- Anne Thyme Nørregaard
+  - Anne Thyme Nørregaard
 ---
 
 ## Test procedure
@@ -95,7 +95,7 @@ Image button element with empty `alt` attribute
 <input type="image" name="submit" src="button.gif" alt="" />
 ```
 
-### Failed example 3
+#### Failed example 3
 
 Image button with aria-labelledby that does not reference an id that exists in the same document
 
@@ -134,13 +134,19 @@ Button with image inside is not an image button
 Image is not a button image
 
 ```html
- <img alt="W3C logo" />
+<img alt="W3C logo" />
 ```
 
-#### Inapplicable example 4
+#### Inapplicable example 5
 
 Image button is not included in the accessibility tree
 
 ```html
-<input type="image" name="submit" src="button.gif" alt="Submit" aria-hidden="true" />
+<input
+	type="image"
+	name="submit"
+	src="button.gif"
+	alt="Submit"
+	aria-hidden="true"
+/>
 ```

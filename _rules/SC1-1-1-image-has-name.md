@@ -4,15 +4,15 @@ description: |
   Each image that is not marked as decorative, has an accessible name
 
 success_criterion:
-- 1.1.1 # Non-Text Content
+  - 1.1.1 # Non-Text Content
 
 test_aspects:
-- DOM Tree
-- CSS Styling
+  - DOM Tree
+  - CSS Styling
 
 authors:
-- Anne Thyme Nørregaard
-- Stein Erik Skotkjerra
+  - Anne Thyme Nørregaard
+  - Stein Erik Skotkjerra
 ---
 
 ## Test procedure
@@ -27,7 +27,7 @@ Each target element has an [accessible name](#accessible-name) that is [non-empt
 
 **NOTE**: An `img` element can be marked as decorative, by using either `role="presentation"`, `role="none"` or an empty alt attribute `alt=""`.
 
-## Assumptions 
+## Assumptions
 
 _There are currently no assumptions._
 
@@ -36,13 +36,14 @@ _There are currently no assumptions._
 There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name](#accessible-name).
 
 ## Background
+
 - [G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G94)
 - [G95: Providing short text alternatives that provide a brief description of the non-text content](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G95)
 - [H37: Using alt attributes on img elements](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/H37)
 - [ARIA6: Using aria-label to provide labels for objects](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/ARIA6)
 - [ARIA10: Using aria-labelledby to provide a text alternative for non-text content](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/ARIA10)
 - [H67: Using null alt text and no title attribute on img elements for images that AT should ignore](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/H67)
-- [F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F38) 
+- [F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F38)
 - [F65: Failure of Success Criterion 1.1.1 due to omitting the alt attribute or text alternative on img elements, area elements, and input elements of type "image"](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F65)
 
 ## Test cases
@@ -145,7 +146,7 @@ Element with [semantic role](#semantic-role) of `img` is not [included in the ac
 
 #### Inapplicable example 3
 
-HTML `img` element is not [included in the accessibility tree](#included-in-the-accessibility-tree) 
+HTML `img` element is not [included in the accessibility tree](#included-in-the-accessibility-tree)
 
 ```html
 <img alt="W3C logo" aria-hidden="true" />

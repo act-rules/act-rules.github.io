@@ -1,0 +1,396 @@
+@import './../../styles/base';
+@import './../../styles/variables';
+@import './../../styles/mixins';
+@import './../../styles/prism-a11y';
+
+section.layout-container {
+  @include fixed-stretch();
+  overflow: hidden;
+  display: flex;
+
+  >aside {
+    @include flex-column();
+    @include flex-scroll-container();
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: $bg-secondary;
+    border-right: 1px solid $bg-primary;
+    color: $fg-secondary;
+    width: 225px;
+    padding-left: 1rem;
+    position: relative;
+    transition: all 2ms;
+   
+    button.nav-hide-show-menu {
+      position: fixed;
+      left: 240px;
+      z-index: 1;
+      top: 5px;
+    }
+
+    &.hide{
+      left: -230px;
+      position: absolute;
+
+      button.nav-hide-show-menu {
+        left: 10px;
+      }
+    }
+    &.show {
+      left: 0;
+      position: relative;
+    }
+
+    >div.logo {
+      flex-shrink: 0;
+    }
+
+    >nav {
+      >ul {
+        @include reset-list();
+        >li {
+          transition: all ease;
+          a, p {
+            @include header-style($fg-secondary);
+            text-transform: uppercase;
+            font-size: 0.83em;
+            position: relative;
+            &:hover {
+              color: $accent;
+            }
+            &.active{
+              color: $accent;
+              &::after{
+                opacity: 1;
+              }
+            }
+            &.parent-item{
+              color: currentColor;
+            }
+            &::after{
+              content: '';
+              right: 0;
+              top: -10px;
+              height: 30px;
+              position: absolute;
+              width: 7px;
+              background-color: $accent;
+              opacity: 0;
+            }
+          }
+          >ul {
+            @include reset-list();
+            padding-inline-start: 1rem;
+            padding-inline-end: 0rem;
+            >li {
+              >a {
+                text-transform: capitalize;
+                padding-right: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  >main {
+    @include flex-column();
+    @include flex-scroll-container();
+    flex: 1;
+    color: $fg-primary;
+    line-height: 1.5;
+    padding: 0 5rem;
+
+    .page-container {
+      @include page-container-default-styles;
+
+      h2 {
+        margin-top: 3rem;
+      }
+
+      // Styles for rules page
+      &.page-rules{
+        .rules-listing {
+          counter-reset: rule-item; 
+          
+          >article {
+            border: 1px solid $sep;
+            padding: 0.5rem;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            background-color: $bg-primary;
+
+            &:nth-child(2n) {
+              background-color: lighten($sep, 2%);
+              &::before{
+                background-color: lighten($sep, 2%);
+              }
+            }
+
+            // Index/ counter
+            &:before {
+              counter-increment: rule-item;
+              content: counter(rule-item); 
+              position: absolute;
+              width: 30px;
+              left: -31px;
+              top: -1px;
+              border: 1px solid $sep;
+              border-right: none;
+              font-weight: bold;
+              text-align: center;
+              padding: 11px 0;
+              background-color: $bg-primary;
+            }
+
+            &:hover{
+              border: 1px solid $accent;
+              &::before{
+                border-color: $accent;
+              }
+            }
+
+            div.meta {
+              font-size: 80%;
+              span.heading {
+                padding: 0.25rem 0.5rem;
+                border: 1px solid $sep;
+                text-transform: uppercase;
+                font-weight: bold;
+                display: inline;
+              }
+              a.sc-item {
+                background-color: $sep;
+                border: 1px solid $bg-primary;
+                cursor: pointer;
+                text-decoration: none;
+                padding: 0.25rem 0.5rem;
+                text-transform: uppercase;
+                display: inline-block;
+                &:hover {
+                  color: $accent;
+                }
+              }
+            }
+
+            >section {
+              flex: 1;
+              >a{
+                text-decoration: none;
+              }
+              h2{
+                margin: 0;
+                margin-bottom: 0.5rem;
+              }
+              &:last-child{
+                border-bottom: none;
+              }
+            }
+
+            >div.side-notes {
+              width: 200px;
+              border-left: 1px solid $sep;
+              div.meta{
+                span.heading{
+                  display: inline-block;
+                  background-color: $sep;
+                }
+                a.sc-item {
+                  display: block;
+                  background-color: transparent;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // Styles for glossary page
+      &.page-glossary{
+        .listing {
+          counter-reset: glossary-item; 
+          
+          >article {
+            border: 1px solid $sep;
+            padding: 0.5rem;
+            position: relative;
+            background-color: $bg-primary;
+            display: flex;
+
+            &:nth-child(2n) {
+              background-color: lighten($sep, 2%);
+              &::before{
+                background-color: lighten($sep, 2%);
+              }
+            }
+
+            // Index/ counter
+            &:before {
+              counter-increment: glossary-item;
+              content: counter(glossary-item); 
+              position: absolute;
+              width: 30px;
+              left: -31px;
+              top: -1px;
+              border: 1px solid $sep;
+              border-right: none;
+              font-weight: bold;
+              text-align: center;
+              padding: 11px 0;
+              background-color: $bg-primary;
+            }
+
+            &:hover{
+              border: 1px solid $accent;
+              &::before{
+                border-color: $accent;
+              }
+            }
+            a{
+              text-decoration: none;
+            }
+            h2 {
+              margin: 0;
+            }
+            >section {
+              flex: 1
+            }
+
+            >aside {
+              padding: 1.5rem;
+              border-left: 1px solid $sep;
+              min-width: 35%;
+              a {
+                display: block;
+              }
+            }
+            
+          }
+        }
+      }
+    }
+
+
+    // Style for a rule page
+    .page-rule {
+      display: flex;
+      @include page-container-default-styles;
+      align-items: flex-start;
+      padding-right: 225px;
+
+      section {
+        flex: 1;
+        position: relative;
+        width: 100%;
+        padding-bottom: 6rem;
+      }
+
+      div.toc {
+        flex: inherit;
+        position: fixed;
+        right: 0;
+        top: 0;
+        border-left: 1px solid $bg-secondary;
+        background-color: $sep;
+        max-width: 250px;
+        overflow: auto;
+        height: 100%;
+        bottom: 0;
+        padding-right: 1.5rem;
+        font-size: 90%;
+
+        span.heading {
+          padding: 0.25rem 0.5rem;
+          @include header-style($fg-secondary);
+          text-transform: uppercase;
+          font-size: 80%;
+          background-color: $bg-secondary;
+          margin: 1rem 0.5rem 0.5rem 0;
+          display: inline-block;
+        }
+
+        ul{
+          @include reset-list;
+          margin: 0.5rem 0;
+          &.meta-data{
+            margin-top: 6rem;
+          }
+          li {
+            span, a {
+              display: inline-block;
+            }
+            p{
+              margin: 0 0 0 0.5rem;
+              text-transform: uppercase;
+            }
+            a{
+              cursor: pointer;
+              text-decoration: none;
+              padding: 0rem 0.75rem;
+              text-transform: uppercase;
+              display: block;
+              &:hover {
+                color: $accent;
+              }
+            }
+          }
+          ul {
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+  
+  } 
+
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 480px) {
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (max-width : 1024px) {
+  section.layout-container {
+    >main{
+      .page-container {
+        &.page-rules{
+          .rules-listing {
+            >article {
+              flex-direction: column;
+            }
+          }
+        }
+        &.page-glossary {
+          .listing {
+            > article {
+              flex-direction: column;
+            }
+          }
+        }
+      }
+      .page-rule {
+        padding-right: 0;
+        div.toc {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+}

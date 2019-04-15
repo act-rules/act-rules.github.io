@@ -5,14 +5,14 @@ description: |
   This rule checks that description tracks that come with non-streaming `video` elements are descriptive.
 
 test_aspects:
-- DOM Tree
-- CSS Styling
-- Audio output
-- Visual output
+  - DOM Tree
+  - CSS Styling
+  - Audio output
+  - Visual output
 
 authors:
-- Wilco Fiers
-- Brian Bors
+  - Wilco Fiers
+  - Brian Bors
 ---
 
 ## Test Procedure
@@ -25,7 +25,7 @@ The rule applies to every [non-streaming](#non-streaming) `video` element that i
 
 The visual information of each test target not available through its audio is described with a description `track` element.
 
-*Note*: Multiple description `track` elements may be useful for different languages, but at least one must match the language of the video.
+_Note_: Multiple description `track` elements may be useful for different languages, but at least one must match the language of the video.
 
 ## Assumptions
 
@@ -54,9 +54,12 @@ A video element with a track element that contains descriptions.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
-  <track kind="descriptions" src="../test-assets/rabbit-video/descriptions.vtt" />
+	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<track
+		kind="descriptions"
+		src="../test-assets/rabbit-video/descriptions.vtt"
+	/>
 </video>
 ```
 
@@ -68,9 +71,12 @@ A video element with a track element that contains incorrect descriptions.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
-  <track kind="descriptions" src="../test-assets/rabbit-video/incorrect-descriptions.vtt" />
+	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<track
+		kind="descriptions"
+		src="../test-assets/rabbit-video/incorrect-descriptions.vtt"
+	/>
 </video>
 ```
 
@@ -82,8 +88,8 @@ A video element without a track element.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```
 
@@ -93,9 +99,12 @@ A video element that is not visible on the page.
 
 ```html
 <video controls style="display: none;">
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
-  <track kind="descriptions" src="../test-assets/rabbit-video/descriptions.vtt" />
+	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<track
+		kind="descriptions"
+		src="../test-assets/rabbit-video/descriptions.vtt"
+	/>
 </video>
 ```
 
@@ -105,8 +114,11 @@ A video element without audio.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
-  <track kind="descriptions" src="../test-assets/rabbit-video/descriptions.vtt" />
+	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+	<track
+		kind="descriptions"
+		src="../test-assets/rabbit-video/descriptions.vtt"
+	/>
 </video>
 ```

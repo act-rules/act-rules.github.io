@@ -7,19 +7,21 @@ general:
 
 defaults: &defaults
   docker:
-    - image: circleci/ruby:2.4.3-node-browsers
+    - image: circleci/node:10-browsers
 
 restore_dependency_cache: &restore_dependency_cache
   restore_cache:
     keys:
-      - v1-npm-cache-{{ checksum "package.json" }}
-      - v1-npm-cache-
+      - v2-npm-cache-{{ checksum "package.json" }}
+      - v2-npm-cache-
 
 jobs:
+  # A dummy placeholder job to not fail circleci status for other branches than `master`
   base: 
     <<: *defaults
     steps: 
       - run: echo "circleci job to not fail status checks"
+  # get deps
   dependencies:
     <<: *defaults
     steps:
@@ -34,8 +36,7 @@ jobs:
     steps:
       - checkout
       - <<: *restore_dependency_cache
-      - run: bundle install
-      - run: bundle exec jekyll build
+      - run: npm run build
       - deploy:
           name: Deploy to master branch from develop branch
           command: bash .circleci/publish-site.sh

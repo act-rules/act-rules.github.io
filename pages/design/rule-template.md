@@ -6,10 +6,9 @@ The rule template contains a plain language description of the rule, some backgr
 
 Use the [empty atomic rule template](atomic-template-empty.html) to create new rule. When creating a new rule, first read [rule design](rule-design.html).
 
-### Atomic Rule template
+## Atomic Rule template
 
 ````md
-
 ---
 name:
 rule_type: atomic
@@ -18,13 +17,13 @@ description: |
   This rule checks ...
 
 success_criterion:
-- x.x.x # (Name of Success Criterion)
+  - x.x.x # (Name of Success Criterion)
 
 test_aspects:
-- # (e.g. HTTP Messages, DOM Tree, CSS Styling, Accessibility Tree, Language, etc.,)
+  -  # (e.g. HTTP Messages, DOM Tree, CSS Styling, Accessibility Tree, Language, etc.,)
 
 authors:
-- # (full names as found in /_data/contributors.yml@master - if not yet listed, please have authors added to the list)
+  -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
 ---
 
 ## Test Procedure
@@ -39,11 +38,11 @@ Each target element ...
 
 ## Assumptions
 
-*There are currently no assumptions*
+_There are currently no assumptions_
 
 ## Accessibility support
 
-*There are no major accessibility support issues known for this rule.*
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 
@@ -51,7 +50,7 @@ Each target element ...
 - Latest version: Techniques for WCAG 2.0 W3C Working Group Note 8 April 2014
 - Link to other methodologies, test specifications or tools
 - Links to test cases, test suites, unit tests, etc.
-- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible {{site.title}} refers to those. Another source for test cases is the W3C Before and After Demonstration.
+- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible WCAG-ACT-RULES-CG refers to those. Another source for test cases is the W3C Before and After Demonstration.
 - Other references
 
 ## Test Cases
@@ -95,8 +94,8 @@ Description...
 ```
 
 #### Inapplicable example 2
-...
 
+...
 ````
 
 ## Composite rules
@@ -115,13 +114,13 @@ description: |
   This rule checks ...
 
 success_criterion:
-- x.x.x # (Name of Success Criterion)
+  - x.x.x # (Name of Success Criterion)
 
 atomic_rules:
-- 
+  -
 
 authors:
-- # (full names as found in /_data/contributors.yml@master - if not yet listed, please have authors added to the list)
+  -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
 ---
 
 ## Aggregation Definition
@@ -133,16 +132,17 @@ The rule applies to any (??) element ...
 ### Expectation
 
 For each test target, the outcome of (at least one of / all of / any of etc.) the following rules is (passed / failed / etc.):
+
 - (list atomic rules that are used in this composite rule)
-- 
+-
 
 ## Assumptions
 
-*There are currently no assumptions.*
+_There are currently no assumptions._
 
 ## Accessibility support
 
-*There are no major accessibility support issues known for this rule.*
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 
@@ -150,7 +150,7 @@ For each test target, the outcome of (at least one of / all of / any of etc.) th
 - Latest version: Techniques for WCAG 2.0 W3C Working Group Note 8 April 2014
 - Link to other methodologies, test specifications or tools
 - Links to test cases, test suites, unit tests, etc.
-- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible {{site.title}} refers to those. Another source for test cases is the W3C Before and After Demonstration.
+- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible WCAG-ACT-RULES-CG refers to those. Another source for test cases is the W3C Before and After Demonstration.
 - Other references
 
 ## Test Cases
@@ -196,5 +196,4 @@ Description...
 #### Inapplicable example 2
 
 ...
-
 ````

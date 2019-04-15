@@ -7,14 +7,14 @@ description: |
   This rule checks that the `html` element has a non-empty `lang` or `xml:lang` attribute.
 
 success_criterion:
-- 3.1.1
+  - 3.1.1
 
 test_aspects:
-- DOM Tree
+  - DOM Tree
 
 authors:
-- Annika Nietzio
-- Jey Nandakumar
+  - Annika Nietzio
+  - Jey Nandakumar
 ---
 
 ## Test Procedure
@@ -31,7 +31,7 @@ The test target has a [non-empty](#non-empty) `lang` or `xml:lang` attribute.
 
 ## Assumptions
 
-*There are currently no assumptions*
+_There are currently no assumptions_
 
 ## Accessibility support
 
@@ -54,7 +54,7 @@ There are known combinations of a popular operating system with browsers and ass
 The `lang` attribute specified has a non-empty value.
 
 ```html
-<html lang="en">
+<html lang="en"></html>
 ```
 
 #### Passed example 2
@@ -62,7 +62,7 @@ The `lang` attribute specified has a non-empty value.
 The `xml:lang` attribute specified has a non-empty value.
 
 ```html
-<html xml:lang="en">
+<html xml:lang="en"></html>
 ```
 
 #### Passed example 3
@@ -70,7 +70,7 @@ The `xml:lang` attribute specified has a non-empty value.
 The `lang` and `xml:lang` attribute specified has a non-empty value.
 
 ```html
-<html xml:lang="en" lang="en">
+<html xml:lang="en" lang="en"></html>
 ```
 
 #### Passed example 4
@@ -78,7 +78,7 @@ The `lang` and `xml:lang` attribute specified has a non-empty value.
 The `lang` attribute specified has a non-empty value. The rule expects a non-empty value on either the `lang` or `xml:lang` attributes.
 
 ```html
-<html xml:lang="" lang="en">
+<html xml:lang="" lang="en"></html>
 ```
 
 #### Passed example 5
@@ -86,7 +86,7 @@ The `lang` attribute specified has a non-empty value. The rule expects a non-emp
 The `xml:lang` attribute specified has a non-empty value. The rule expects a non-empty value on either the `lang` or `xml:lang` attributes.
 
 ```html
-<html xml:lang="en" lang="">
+<html xml:lang="en" lang=""></html>
 ```
 
 #### Passed example 6
@@ -94,7 +94,7 @@ The `xml:lang` attribute specified has a non-empty value. The rule expects a non
 The `lang` attribute specified has a non-empty value. The rule does not verify the validity of the value specified and checks only for presence of a value.
 
 ```html
-<html lang="xyz">
+<html lang="xyz"></html>
 ```
 
 #### Passed example 7
@@ -102,7 +102,7 @@ The `lang` attribute specified has a non-empty value. The rule does not verify t
 The `xml:lang` attribute specified has a non-empty value. The rule does not verify the validity of the value specified and checks only for presence of a value.
 
 ```html
-<html xml:lang="xyz">
+<html xml:lang="xyz"></html>
 ```
 
 ### Failed
@@ -112,7 +112,7 @@ The `xml:lang` attribute specified has a non-empty value. The rule does not veri
 There were no `lang` or `xml:lang` attribute specified.
 
 ```html
-<html>
+<html></html>
 ```
 
 #### Failed example 2
@@ -120,7 +120,7 @@ There were no `lang` or `xml:lang` attribute specified.
 The `xml:lang` attribute specified has an empty value.
 
 ```html
-<html xml:lang="">
+<html xml:lang=""></html>
 ```
 
 #### Failed example 3
@@ -128,7 +128,7 @@ The `xml:lang` attribute specified has an empty value.
 The `lang` attribute specified has an empty value.
 
 ```html
-<html lang="">
+<html lang=""></html>
 ```
 
 #### Failed example 4
@@ -136,7 +136,7 @@ The `lang` attribute specified has an empty value.
 The `lang` and `xml:lang` attribute specified has an empty value.
 
 ```html
-<html xml:lang="" lang="">
+<html xml:lang="" lang=""></html>
 ```
 
 ### Inapplicable

@@ -12,8 +12,8 @@ defaults: &defaults
 restore_dependency_cache: &restore_dependency_cache
   restore_cache:
     keys:
-      - v2-npm-cache-{{ checksum "package.json" }}
-      - v2-npm-cache-
+      - v3-npm-cache-{{ checksum "package.json" }}
+      - v3-npm-cache-
 
 jobs:
   # A dummy placeholder job to not fail circleci status for other branches than `master`

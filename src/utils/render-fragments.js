@@ -111,11 +111,15 @@ export function getGlossaryUsageInRules(usages) {
 	return (
 		<aside>
 			<h3>Used In Rules:</h3>
-			{usages.map(usage => (
-				<Link key={usage.slug} to={usage.slug}>
-					{usage.name}
-				</Link>
-			))}
+			<ul>
+				{usages.map(usage => (
+					<li>
+						<Link key={usage.slug} to={usage.slug}>
+							{usage.name}
+						</Link>
+					</li>
+				))}
+			</ul>
 		</aside>
 	)
 }

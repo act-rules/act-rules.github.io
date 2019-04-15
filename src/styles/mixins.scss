@@ -4,6 +4,12 @@
   flex-direction: column;
 }
 
+@mixin flex-row() {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+}
+
 @mixin flex-scroll-container() {
   flex-grow: 1;
   overflow-y: auto;

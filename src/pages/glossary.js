@@ -25,12 +25,10 @@ export default ({ data }) => {
 								<section>
 									<a id={key} href={`#${key}`}>
 										<h2>
-											{frontmatter.title} ({key})
+											{frontmatter.title}
 										</h2>
 									</a>
-									<i>
-										key: <u>{key}</u>
-									</i>
+									<i>key: {key}</i>
 									<div dangerouslySetInnerHTML={{ __html: html }} />
 								</section>
 								{getGlossaryUsageInRules(usedInRules)}

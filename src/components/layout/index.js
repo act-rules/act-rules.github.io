@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql, Link } from 'gatsby'
 
 import Header from '../header/index'
+import Footer from '../footer'
 
 class Layout extends React.Component {
 	constructor(props) {
@@ -116,9 +117,6 @@ class Layout extends React.Component {
 								</div>
 								<nav className="navigation">
 									<ul>
-										<li>
-											<hr />
-										</li>
 										{/* Top level Navigation */}
 										{getTopLevelNavigation.group.map(item =>
 											this.getListItemFromEdges(item.edges)
@@ -159,7 +157,14 @@ class Layout extends React.Component {
 									</ul>
 								</nav>
 							</aside>
-							<main>{children}</main>
+							<main>
+								<section>
+									{children}
+								</section>
+								<Footer>
+								</Footer>
+							</main>
+
 						</section >
 					)
 				}}

@@ -18,7 +18,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namespace with the [semantic role](#semantic-role) of or inherits from `img` or `graphics-document`, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+The rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namespace with a [semantic role](#semantic-role) of either `img` `graphics-document` `graphics-object` `graphics-symbol`, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation
 
@@ -68,12 +68,11 @@ The `<svg>` element has a role of `img` and an `aria-label` containing the acces
 
 #### Pass example 3
 
-The `<svg>` element has the role of `graphics-document` which takes its accessible name from its child content, the `<text>` element.
+The `<svg>` element has the role of `graphics-document` which takes its accessible name from its' child content, the `<title>` and `<desc>` elements.
 
 ```html
 
-<svg xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink" role="graphics-document">
+<svg xmlns="http://www.w3.org/2000/svg" role="graphics-document">
     <title>3 circles</title>
     <desc>3 yellow circles with a green stroke horizontally adjacent to each other
     </desc>
@@ -83,6 +82,36 @@ The `<svg>` element has the role of `graphics-document` which takes its accessib
 	<circle cx="250" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
     </g>
 </svg>
+```
+
+#### Pass example 4
+
+The `<circle>` element is included in the accessibility tree and takes its' accessible name from its' child content, the `<title>` element.
+
+```html
+<svg xmlns="http://www.w3.org/2000/svg">
+	<circle role="graphics-symbol" cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow">
+	    <title>Yellow circle</title>
+	</circle>
+</svg>
+```
+
+#### Pass example 5
+
+The `svg` element and both child `<g>` elements are included in the accessibility tree with the `graphics-document` and `graphics-object` roles. All three elements have accessibile names via the `title` and `aria-label` attributes.
+
+```html
+<svg xmlns="https://www.w3.org/2000/svg" width="600" height="400" viewBox="200 0 400 400" role="graphics-document">
+	<title>3 shapes</title>
+	<g role="graphics-object" aria-label="Blue rectangle" transform="translate(100,100)">
+        <desc>Large blue rectangle with two other shapes inside it</desc>
+		<rect fill="blue" role="graphics-object" aria-label=" large blue rectangle" width="200" height="100" y="-100" />
+		<g role="graphics-object" aria-label="small yellow rectangle in larger green rectangle" transform="translate(30,-90)">
+			<rect fill="green" width="50" height="90"/>
+			<rect fill="yellow" x="5" y="5" width="40" height="30" />
+			</g>
+		 </g>
+	</svg>
 ```
 
 ### Failed
@@ -108,24 +137,54 @@ The `img` role includes the `<svg>` element in the accessibility tree but the el
 </svg>
 ```
 
+#### Failed example 3
+
+The `svg` `<circle>` elements are included in the accessibility tree but do not have accessible names.
+
+```html
+<svg xmlns="http://www.w3.org/2000/svg" role="graphics-document">
+	<title>Yellow shapes</title>
+	<circle role="graphics-symbol" cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
+	<circle role="graphics-symbol" cx="150" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
+	<circle role="graphics-symbol" cx="250" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
+</svg>
+```
+#### Failed example 4
+
+The `<g>` elements are included in the accessibility tree with the `graphics-object` role but only one of the elements has an accessible name.
+
+```html
+<svg xmlns="https://www.w3.org/2000/svg" width="600" height="400" viewBox="200 0 400 400" role="graphics-document">
+	<title>3 shapes</title>
+	<g role="graphics-object" aria-label="Blue rectangle" transform="translate(100,100)">
+        <desc>Large blue rectangle with two other shapes inside it</desc>
+		<rect fill="blue" role="graphics-object" aria-label=" large blue rectangle" width="200" height="100" y="-100" />
+		<g role="graphics-object" transform="translate(30,-90)">
+			<rect fill="green" width="50" height="90"/>
+			<rect fill="yellow" x="5" y="5" width="40" height="30" />
+			</g>
+		 </g>
+	</svg>
+```
+
 ### Inapplicable
 
 #### Inapplicable example 1
 
-The `svg` element does not have a role of `img` or `graphics-document`. 
+The `svg` element does not have a role of `img` `graphics-document` `graphics-object` or `graphics-symbol`. 
 
 ```html
-<svg width="100" height="100">
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
 <circle cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```
 
 #### Inapplicable example 2
 
-The `svg` element has an accessible name but is not included in the accessibility tree.
+The `svg` element has an accessible name but the `aria-hidden` attribute excludes the element from the accessibility tree.
 
 ```html
-<svg width="100" height="100" role="img" aria-label="A yellow circle" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" role="img" aria-label="A yellow circle" aria-hidden="true">
 <circle cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```
@@ -134,8 +193,9 @@ The `svg` element has an accessible name but is not included in the accessibilit
  
 The `svg` element is not included in the accessibility tree because the `<title>` element is empty.
  
-````html
+```html
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
 	<title> </title>
   	<circle role="none" cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
+```

@@ -1,16 +1,13 @@
 ---
+id: 4b1c6c
 name: Iframes with identical accessible names serve equivalent purpose
-
 description: |
- This rule checks that iframes with identical accessible names serve an equivalent purpose
-
+ This rule checks that iframes with identical accessible names embed the same resource or equivalent resources.
 success_criterion:
 - 4.1.2
-
 test_aspects:
 - DOM Tree
 - CSS Styling
-
 authors:
 - Jey Nandakumar
 - Audrey Maniez
@@ -20,13 +17,13 @@ authors:
 
 ### Applicability
 
-This rule applies to `iframe` elements that are [included in the accessibility tree](#included-in-the-accessibility-tree) and have [matching](matching-characters) [accessible name](#accessible-name), that do not only include whitespace.
+This rule applies to any set of any two or more `iframe` elements in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) that are [included in the accessibility tree](#included-in-the-accessibility-tree), and that have [matching](#matching-characters) [accessible names](#accessible-name) that does not only consist of [whitespace](#whitespace).
 
-**Note**: As the `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
+**Note:** The test target for this rule is the full set of `iframe` elements within the same [document tree](https://www.w3.org/TR/dom41/#document-trees) that share the same [matching](#matching-characters) [accessible name](#accessible-name).
 
 ### Expectation
 
-Iframes with identical [accessible name](#accessible-name) in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) serve [equivalent purpose](#equivalent-purpose).
+The `iframes` in each set of target elements embeds the the [same resource](#same-resource) or [equivalent resources](#equivalent-purpose).
 
 ## Assumptions
 

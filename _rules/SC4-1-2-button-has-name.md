@@ -1,16 +1,13 @@
 ---
+id: 97a4e1
 name: Buttons have an accessible name
-
 description: |
   Each button element has an accessible name
-
 success_criterion:
   - 4.1.2
-
 test_aspects:
   - DOM Tree
   - CSS Styling
-
 authors:
   - Wilco Fiers
   - Stein Erik Skotkjerra

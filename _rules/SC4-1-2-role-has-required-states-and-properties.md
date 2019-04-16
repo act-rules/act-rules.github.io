@@ -1,14 +1,12 @@
 ---
+id: 4e8ab6
 name: Role has required states and properties
 description: |
   Elements that have an explicit role must also specify all required states and properties
-
 success_criterion:
   - 4.1.2 # Name, Role, Value
-
 test_aspects:
   - DOM Tree
-
 authors:
   - Anne Thyme Nørregaard
 ---

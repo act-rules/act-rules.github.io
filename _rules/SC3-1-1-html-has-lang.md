@@ -1,17 +1,13 @@
 ---
+id: b5c3f8
 name: HTML has lang attribute
-
 rule_type: atomic
-
 description: |
   This rule checks that the `html` element has a non-empty `lang` or `xml:lang` attribute.
-
 success_criterion:
   - 3.1.1
-
 test_aspects:
   - DOM Tree
-
 authors:
   - Annika Nietzio
   - Jey Nandakumar

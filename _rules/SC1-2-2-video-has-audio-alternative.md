@@ -1,18 +1,14 @@
 ---
+id: eac66b
 name: Video has audio alternative
-
 rule_type: atomic
-
 description: |
   This rule checks that video elements have an alternative for information conveyed through audio
-
 success_criterion:
   - 1.2.2
-
 atomic_rules:
   - SC1-2-video-media-alternative
   - SC1-2-2-video-has-captions
-
 authors:
   - Wilco Fiers
   - Brian Bors

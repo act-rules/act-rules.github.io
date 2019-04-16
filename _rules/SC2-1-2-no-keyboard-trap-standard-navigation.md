@@ -1,14 +1,12 @@
 ---
+id: a1b64e
 name: No keyboard trap standard navigation
 rule_type: atomic
-
 description: |
   This rule checks if it is possible to use standard keyboard navigation to navigate through all content on a web page without becoming trapped in any element.
-
 test_aspects:
   - DOM Tree
   - CSS Styling
-
 authors:
   - Dagfinn Rømen
   - Geir Sindre Fossøy

@@ -1,17 +1,14 @@
 ---
+id: 674b10
 name: Role attribute has valid value
 rule_type: atomic
-
 description: |
   This rule checks that each role attribute has a valid value
-
 success_criterion:
   - 4.1.2 # Name, Role, Value
-
 test_aspects:
   - DOM Tree
   - CSS Styling
-
 authors:
   - Jey Nandakumar
 ---

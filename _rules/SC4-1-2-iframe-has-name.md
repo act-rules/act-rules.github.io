@@ -1,16 +1,13 @@
 ---
+id: cae760
 name: iframe has an accessible name
-
 description: |
   Each iframe element has an accessible name
-
 success_criterion:
   - 4.1.2 # Name, Role, Value (A)
-
 test_aspects:
   - DOM Tree
   - CSS Styling
-
 authors:
   - Jey Nandakumar
 ---

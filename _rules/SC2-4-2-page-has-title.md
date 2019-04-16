@@ -1,15 +1,12 @@
 ---
+id: 2779a5
 name: HTML Page has a title
-
 description: |
   This rule checks that the HTML page has a title
-
 success_criterion:
   - 2.4.2 # Page Titled
-
 test_aspects:
   - DOM Tree
-
 authors:
   - Wilco Fiers
   - Stein Erik Skotkjerra

@@ -1,16 +1,14 @@
 ---
+id: bc659a
 name: Meta-refresh no delay
 description: |
   This rule checks that the meta element is not used for delayed redirecting or refreshing.
-
 success_criterion:
   - 2.2.1 # Timing Adjustable
   - 2.2.4 # Interruptions
   - 3.2.5 # Change on Request
-
 test_aspects:
   - DOM Tree
-
 authors:
   - Anne Thyme Nørregaard
   - Wilco Fiers

@@ -67,7 +67,7 @@
 	],
 	"dependencies": {
 		"axios": "^0.18.0",
-		"custom-id": "^1.2.0",
+		"fastmatter": "^2.1.1",
 		"gatsby": "^2.3.21",
 		"gatsby-image": "^2.0.30",
 		"gatsby-plugin-manifest": "^2.0.20",
@@ -116,19 +116,19 @@
 		"get-wcag-sc-metadata": "node ./build/get-wcag-sc-metadata",
 		"get-data": "npm run get-wcag-sc-metadata && npm run get-implementations"
 	},
-	"homepage": "https://github.com/auto-wcag/auto-wcag#readme",
+	"homepage": "https://github.com/act-rules/act-rules.github.io",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/auto-wcag/auto-wcag.git"
+		"url": "https://github.com/act-rules/act-rules.github.io"
 	},
 	"bugs": {
-		"url": "https://github.com/gatsbyjs/gatsby/issues"
+		"url": "https://github.com/act-rules/act-rules.github.io/issues"
 	},
 	"pulls": {
-		"url": "https://github.com/auto-wcag/auto-wcag/pulls"
+		"url": "https://github.com/act-rules/act-rules.github.io/pulls"
 	},
 	"www": {
-		"url": "//auto-wcag.github.io/auto-wcag",
+		"url": "https://act-rules.github.io",
 		"baseDir": "./public"
 	},
 	"config": {

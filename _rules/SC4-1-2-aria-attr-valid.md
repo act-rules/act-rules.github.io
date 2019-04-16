@@ -1,17 +1,14 @@
 ---
+id: 5f99a7
 name: ARIA attribute is valid
-
 description: |
- This rule checks that each aria- attribute specified is defined in ARIA 1.1
-
+  This rule checks that each aria- attribute specified is defined in ARIA 1.1
 success_criterion:
-- 4.1.2
-
+  - 4.1.2
 test_aspects:
-- DOM Tree
-
+  - DOM Tree
 authors:
-- Jey Nandakumar
+  - Jey Nandakumar
 ---
 
 ## Test procedure
@@ -26,7 +23,7 @@ Each target attribute is defined in [WAI ARIA 1.1](https://www.w3.org/TR/wai-ari
 
 ## Assumptions
 
-There are currently no assumptions.
+The ARIA `attribute` is being used to comply to WCAG.
 
 ## Accessibility Support
 
@@ -66,7 +63,9 @@ A valid ARIA 1.1 attribute `aria-modal` on element `div` with role `dialog`
 A valid ARIA 1.1 attribute `aria-live` on element `div` with role `alert`
 
 ```html
-<div role="alert" aria-live="assertive">Your session will expire in 60 seconds.</div>
+<div role="alert" aria-live="assertive">
+	Your session will expire in 60 seconds.
+</div>
 ```
 
 #### Passed example 4
@@ -75,12 +74,13 @@ Muliple valid ARIA 1.1 attributes `aria-*` are specified on element `input` with
 
 ```html
 <input
-  role="spinbutton"
-  aria-valuemax="100"
-  aria-valuemin="0"
-  aria-valuenow="25"
-  type="number"
-  value="25">
+	role="spinbutton"
+	aria-valuemax="100"
+	aria-valuemin="0"
+	aria-valuenow="25"
+	type="number"
+	value="25"
+/>
 ```
 
 ### Failed
@@ -99,7 +99,14 @@ Muliple valid ARIA 1.1 attributes `aria-*` are specified on element `input` with
 
 ```html
 <span id="label">Birthday:</span>
-<div contenteditable role="searchbox" aria-labelled="label" aria-placeholder="MM-DD-YYYY">01-01-2019</div>
+<div
+	contenteditable
+	role="searchbox"
+	aria-labelled="label"
+	aria-placeholder="MM-DD-YYYY"
+>
+	01-01-2019
+</div>
 ```
 
 ### Inapplicable
@@ -109,6 +116,5 @@ Muliple valid ARIA 1.1 attributes `aria-*` are specified on element `input` with
 Element without `aria-*` attribute.
 
 ```html
-<canvas>
-</canvas>
+<canvas> </canvas>
 ```

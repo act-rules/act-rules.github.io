@@ -1,19 +1,16 @@
 ---
+id: 674b10
 name: Role attribute has valid value
-test_type: atomic
-
+rule_type: atomic
 description: |
-   This rule checks that each role attribute has a valid value
-   
+  This rule checks that each role attribute has a valid value
 success_criterion:
-- 4.1.2 # Name, Role, Value
-
+  - 4.1.2 # Name, Role, Value
 test_aspects:
-- DOM Tree
-- CSS Styling
-
+  - DOM Tree
+  - CSS Styling
 authors:
-- Jey Nandakumar
+  - Jey Nandakumar
 ---
 
 ## Test procedure
@@ -28,11 +25,11 @@ Any [non-empty](#non-empty) `role` attribute that is specified on an HTML or SVG
 
 Each test target has a valid value that corresponds to a non-abstract [WAI-ARIA](https://www.w3.org/TR/wai-aria) role.
 
-**Note:** Which specific roles to consider may depend on the type of content under test, such as web pages or digital publications, and are not limited to those defined by [WAI-ARIA](https://www.w3.org/TR/wai-aria)  alone. Roles defined in separate WAI-ARIA modules, such as the [Digital Publishing Module](https://www.w3.org/TR/dpub-aria/) or the [Graphics Module](https://www.w3.org/TR/graphics-aria/), may also be considered for this rule.
+**Note:** Which specific roles to consider may depend on the type of content under test, such as web pages or digital publications, and are not limited to those defined by [WAI-ARIA](https://www.w3.org/TR/wai-aria) alone. Roles defined in separate WAI-ARIA modules, such as the [Digital Publishing Module](https://www.w3.org/TR/dpub-aria/) or the [Graphics Module](https://www.w3.org/TR/graphics-aria/), may also be considered for this rule.
 
 ## Assumptions
 
-*There are currently no assumptions*
+- The ARIA `role` is being used to comply to WCAG.
 
 ## Accessibility Support
 
@@ -52,24 +49,24 @@ Older browsers do not support more than one token in the value for a role attrib
 
 Element with valid `role` value.
 
- ```html
-<input type="text" role="textbox">
+```html
+<input type="text" role="textbox" />
 ```
 
 #### Passed example 2
- 
+
 Element with multiple valid `role` values.
- 
+
 ```html
 <span role="button link"></span>
 ```
 
 #### Passed example 3
- 
+
 Element with at least one valid `role` value.
- 
+
 ```html
-<img role="presentation xyz" src="">
+<img role="presentation xyz" src="" />
 ```
 
 ### Failed
@@ -79,7 +76,7 @@ Element with at least one valid `role` value.
 Element with invalid `role` value.
 
 ```html
-<input role="invalid" value="123">
+<input role="invalid" value="123" />
 ```
 
 #### Failed example 2
@@ -87,7 +84,7 @@ Element with invalid `role` value.
 Element with multiple invalid `role` value.
 
 ```html
-<input type="text" role="invalid role">
+<input type="text" role="invalid role" />
 ```
 
 ### Inapplicable

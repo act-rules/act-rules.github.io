@@ -1,18 +1,17 @@
 ---
+id: ee13b5
 name: video only element has transcript
 rule_type: atomic
 description: |
   Non-streaming `video` elements without audio must have all visual information available in a transcript.
-
 test_aspects:
-- DOM Tree
-- CSS Styling
-- Audio output
-- Visual output
-
+  - DOM Tree
+  - CSS Styling
+  - Audio output
+  - Visual output
 authors:
-- Wilco Fiers
-- Brian Bors
+  - Wilco Fiers
+  - Brian Bors
 ---
 
 ## Test Procedure
@@ -38,8 +37,7 @@ There are no major accessibility support issues known for this rule.
 ## Background
 
 - [Understanding SC 1.2.1:Audio-only and Video-only (Prerecorded)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
-- [G159:Providing an alternative for time-based media for video-only content](https://www.w3.org/TR/WCAG20-TECHS/G159.html) 
-
+- [G159:Providing an alternative for time-based media for video-only content](https://www.w3.org/TR/WCAG20-TECHS/G159.html)
 
 ## Test Cases
 
@@ -54,8 +52,8 @@ A silent video element with a text transcript on the same page.
   <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<p>The above video shows a giant fat rabbit climbing out of a hole in the ground. 
-He stretches, yaws, and then starts walking. 
+<p>The above video shows a giant fat rabbit climbing out of a hole in the ground.
+He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
@@ -82,8 +80,8 @@ A silent video element with an incorrect text transcript on the same page.
   <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<p>The above video shows a giant fat dog climbing out of a hole in the ground. 
-He stretches, yaws, and then starts walking. 
+<p>The above video shows a giant fat dog climbing out of a hole in the ground.
+He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
@@ -108,8 +106,8 @@ A silent video element with an invisible text transcript on the same page.
   <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<p style="text-indent: -9999px;">The above video shows a giant fat rabbit climbing out of a hole in the ground. 
-He stretches, yaws, and then starts walking. 
+<p style="text-indent: -9999px;">The above video shows a giant fat rabbit climbing out of a hole in the ground.
+He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
@@ -122,8 +120,8 @@ A silent video element with a text transcript on the same page that is not inclu
   <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<p aria-hidden="true">The above video shows a giant fat rabbit climbing out of a hole in the ground. 
-He stretches, yaws, and then starts walking. 
+<p aria-hidden="true">The above video shows a giant fat rabbit climbing out of a hole in the ground.
+He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 

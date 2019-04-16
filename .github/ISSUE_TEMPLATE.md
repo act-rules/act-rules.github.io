@@ -1,5 +1,6 @@
 ---
 name: Title of the rule
+rule_type: atomic (or) composite
 description: |
   Description of the rule
 

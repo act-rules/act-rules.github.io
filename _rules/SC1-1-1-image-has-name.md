@@ -1,15 +1,13 @@
 ---
+id: 23a2a8
 name: Image has accessible name
 description: |
   Each image that is not marked as decorative, has an accessible name
-
 success_criterion:
   - 1.1.1 # Non-Text Content
-
 test_aspects:
   - DOM Tree
   - CSS Styling
-
 authors:
   - Anne Thyme Nørregaard
   - Stein Erik Skotkjerra

@@ -1,15 +1,12 @@
 ---
+id: 5b7ae0
 name: HTML lang and xml:lang match
-
 description: |
   The rule checks that for the `html` element, there is no mismatch between the primary language in non-empty `lang` and `xml:lang` attributes, if both are used.
-
 success_criterion:
   - 3.1.1
-
 test_aspects:
   - DOM Tree # The tree that HTML is parsed into.
-
 authors:
   - Annika Nietzio
   - Jey Nandakumar

@@ -1,14 +1,12 @@
 ---
+id: e086e5
 name: Form field has accessible name
 description: |
   Each form field element has an accessible name
-
 success_criterion:
   - 4.1.2 # Name, Role, Value
-
 test_aspects:
   - DOM Tree
-
 authors:
   - Anne Thyme Nørregaard
   - Bryn Anderson

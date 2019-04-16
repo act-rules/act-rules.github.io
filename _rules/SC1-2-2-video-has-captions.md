@@ -1,17 +1,15 @@
 ---
+id: f51b46
 name: video has captions
 description: |
   Captions are available for audio information in non-streaming `video` elements.
-
 success_criterion:
   - 1.2.2 # Captions (Prerecorded)
-
 test_aspects:
   - DOM Tree
   - CSS Styling
   - Audio output
   - Visual output
-
 authors:
   - Wilco Fiers
   - Brian Bors

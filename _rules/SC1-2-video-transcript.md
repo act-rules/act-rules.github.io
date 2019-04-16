@@ -1,18 +1,16 @@
 ---
+id: 1a02b0
 name: video element transcript
 rule_type: atomic
 description: |
   Non-streaming `video` elements must have all audio and visual information available in a transcript.
-
 success_criterion:
   - 1.2.8 # Media Alternative (Prerecorded)
-
 test_aspects:
   - DOM Tree
   - CSS Styling
   - Audio output
   - Visual output
-
 authors:
   - Wilco Fiers
   - Brian Bors

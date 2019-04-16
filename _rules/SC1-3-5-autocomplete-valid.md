@@ -1,15 +1,13 @@
 ---
+id: 73f2c2
 name: Autocomplete valid
 description: |
   This rule checks that the HTML autocomplete attribute has a correct value
-
 success_criterion:
   - 1.3.5 # Identify Input Purpose
-
 test_aspects:
   - DOM Tree
   - CSS Styling
-
 authors:
   - Wilco Fiers
 ---

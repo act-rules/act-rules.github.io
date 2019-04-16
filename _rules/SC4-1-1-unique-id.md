@@ -1,16 +1,13 @@
 ---
+id: 3ea0c8
 name: Id attribute is unique
 rule_type: atomic
-
 description: |
   This rule checks that all `id` attribute values on a single page are unique.
-
 success_criterion:
   - 4.1.1 # Success Criterion 4.1.1 (Parsing)
-
 test_aspects:
   - DOM Tree
-
 authors:
   - Bryn Anderson
   - Anne Thyme

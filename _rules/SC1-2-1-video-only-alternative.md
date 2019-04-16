@@ -1,18 +1,16 @@
 ---
+id: c3232f
 name: video only has an accessibile alternative
 rule_type: composite
 description: |
   This rule checks if video elements without audio have an alternative available
-
 success_criterion:
   - 1.2.1 # Audio-only and Video-only (Prerecorded)
-
 atomic_rules:
   - SC1-2-1-media-alternative-video
   - SC1-2-1-video-only-description-track
   - SC1-2-1-video-only-element-transcript
   - SC1-2-1-video-only-audio-alternative
-
 authors:
   - Wilco Fiers
   - Brian Bors

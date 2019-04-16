@@ -1,17 +1,14 @@
 ---
+id: cc0f0a
 name: Form field label is descriptive
 rule_type: atomic
-
 description: |
   This rule checks that labels describe the purpose of form field elements.
-
 success_criterion:
   - 2.4.6 # Headings and labels
-
 test_aspects:
   - DOM Tree
   - CSS Styling
-
 authors:
   - Dagfinn Rømen
   - Geir Sindre Fossøy

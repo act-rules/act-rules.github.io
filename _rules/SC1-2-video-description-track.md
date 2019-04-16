@@ -1,15 +1,14 @@
 ---
+id: f196ce
 name: Video element description track
 rule_type: atomic
 description: |
   This rule checks that description tracks that come with non-streaming `video` elements are descriptive.
-
 test_aspects:
   - DOM Tree
   - CSS Styling
   - Audio output
   - Visual output
-
 authors:
   - Wilco Fiers
   - Brian Bors

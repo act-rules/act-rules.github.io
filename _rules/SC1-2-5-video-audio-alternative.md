@@ -1,17 +1,15 @@
 ---
+id: 1ec09b
 name: video with audio has audio description
 rule_type: composite
 description: |
   This rule checks video elements with audio have audio description
-
 success_criterion:
   - 1.2.5 # Audio Description (Prerecorded)§
-
 atomic_rules:
   - SC1-2-video-audio-description
   - SC1-2-video-media-alternative
   - SC1-2-video-description-track
-
 authors:
   - Wilco Fiers
   - Brian Bors

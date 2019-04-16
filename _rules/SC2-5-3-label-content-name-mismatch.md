@@ -1,15 +1,13 @@
 ---
+id: 2ee8b8
 name: label and name from content mismatch
 description: |
   Interactive elements labelled through their content must have their visible label as part of their accessible name
-
 success_criterion:
   - 2.5.3 # Label in Name
-
 test_aspects:
   - DOM Tree
   - CSS Styling
-
 authors:
   - Anne Thyme Nørregaard
   - Bryn Anderson

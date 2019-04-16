@@ -1,18 +1,14 @@
 ---
+id: b33eff
 name: Page has no orientation lock specified using CSS media queries
-
 rule_type: atomic
-
 description: |
   This rule checks that page content is not locked to any specific display orientation using CSS media queries, and the content is operable in all display orientations.
-
 success_criterion:
 - 1.3.4 # (Orientation)
-
 test_aspects:
 - DOM Tree
 - CSS Styling
-
 authors:
 - Jey Nandakumar
 - Audrey Maniez
@@ -32,7 +28,7 @@ Each target element does not restrict its view and operation to a single display
 
 ## Assumptions
 
-- The rule does not take consider existence of any control on the page that can handle or change the orientation on demand.
+- The rule does not consider the existence of any control on the page that can change the orientation on demand.
 
 ## Accessibility support
 
@@ -128,9 +124,6 @@ A page, where orientation is locked via `style` specified on the `head`.
 ```html
 <html lang="en">
   <head>
-    <!--
-      1. The style from the stylesheet applies `transform`
-    -->
     <style>
       @media (orientation: portrait) {
         body {
@@ -180,18 +173,6 @@ A page that has no CSS media query styles.
 ```
 
 #### Inapplicable example 3
-
-A page where `body` is not visible.
-
-```html
-<html lang="en">
-  <body style="display: none">
-    I am hidden
-  </body>
-</html>
-```
-
-#### Inapplicable example 4
 
 A page, where CSS media query styles targeting orientation lock is applied to an element that is not visible.
 

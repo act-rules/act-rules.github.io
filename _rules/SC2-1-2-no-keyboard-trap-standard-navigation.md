@@ -1,22 +1,20 @@
 ---
+id: a1b64e
 name: No keyboard trap standard navigation
 rule_type: atomic
-
 description: |
   This rule checks if it is possible to use standard keyboard navigation to navigate through all content on a web page without becoming trapped in any element.
-
 test_aspects:
-- DOM Tree
-- CSS Styling
-
+  - DOM Tree
+  - CSS Styling
 authors:
-- Dagfinn Rømen
-- Geir Sindre Fossøy
-- Malin Øvrebø
-- Shadi Abou-Zahra
-- Carlos Duarte
-- Anne Thyme Nørregaard
-- Stein Erik Skotkjerra
+  - Dagfinn Rømen
+  - Geir Sindre Fossøy
+  - Malin Øvrebø
+  - Shadi Abou-Zahra
+  - Carlos Duarte
+  - Anne Thyme Nørregaard
+  - Stein Erik Skotkjerra
 ---
 
 ## Test procedure
@@ -57,8 +55,7 @@ There are no major accessibility support issues known for this rule.
 No trap for keyboard navigation.
 
 ```html
-<a href ="#">Link 1</a>
-<button class="target">Button1</button>
+<a href="#">Link 1</a> <button class="target">Button1</button>
 ```
 
 #### Passed example 2
@@ -66,7 +63,7 @@ No trap for keyboard navigation.
 Using `tabindex="1"`.
 
 ```html
-<div tabindex=“1”>Text</div>
+<div tabindex="“1”">Text</div>
 ```
 
 #### Passed example 3
@@ -74,7 +71,7 @@ Using `tabindex="1"`.
 Using `tabindex="-1"`.
 
 ```html
-<div tabindex=“-1”>Text</div>
+<div tabindex="“-1”">Text</div>
 ```
 
 ### Failed
@@ -85,7 +82,9 @@ Keyboard trap one element.
 
 ```html
 <a href="#">Link 1</a>
-<button class="target" onblur="setTimeout(() => this.focus(), 10)">Button1</button>
+<button class="target" onblur="setTimeout(() => this.focus(), 10)">
+	Button1
+</button>
 ```
 
 #### Failed example 2
@@ -93,8 +92,15 @@ Keyboard trap one element.
 Keyboard trap group.
 
 ```html
-<button class="target" onblur="setTimeout(() => this.nextSibling.focus(), 10)">Button1</button>
-<button class="target" onblur="setTimeout(() => this.previousSibling.focus(), 10)">Button2</button>
+<button class="target" onblur="setTimeout(() => this.nextSibling.focus(), 10)">
+	Button1
+</button>
+<button
+	class="target"
+	onblur="setTimeout(() => this.previousSibling.focus(), 10)"
+>
+	Button2
+</button>
 ```
 
 #### Failed example 3
@@ -103,7 +109,7 @@ A focusable element inbetween to keyboard traps.
 
 ```html
 <button onblur="setTimeout(() => this.focus(), 10)">Button 1</button>
-<button class="target" >Button 2</button>
+<button class="target">Button 2</button>
 <button onblur="setTimeout(() => this.focus(), 10)">Button 3</button>
 ```
 
@@ -130,7 +136,7 @@ Disabled element.
 Hidden element using `display:none`.
 
 ```html
-<button type="button" style=“display:none;”>Click Me!</button>
+<button type="button" style="“display:none;”">Click Me!</button>
 ```
 
 #### Inapplicable example 4
@@ -138,6 +144,6 @@ Hidden element using `display:none`.
 Hidden element using `visibility:hidden`.
 
 ```html
-<a href ="#" style="visibility:hidden;">Link 1</a>
+<a href="#" style="visibility:hidden;">Link 1</a>
 <button class="target" style="visibility:hidden;">Button1</button>
 ```

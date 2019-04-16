@@ -1,17 +1,15 @@
 ---
+id: e086e5
 name: Form field has accessible name
 description: |
   Each form field element has an accessible name
-
 success_criterion:
-- 4.1.2 # Name, Role, Value
-
+  - 4.1.2 # Name, Role, Value
 test_aspects:
-- DOM Tree
-
+  - DOM Tree
 authors:
-- Anne Thyme Nørregaard
-- Bryn Anderson
+  - Anne Thyme Nørregaard
+  - Bryn Anderson
 ---
 
 ## Test procedure
@@ -21,7 +19,8 @@ authors:
 This rule applies to any element that is [included in the accessibility tree](#included-in-the-accessibility-tree), and that has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider, spinbutton`, `switch`, `textbox`.
 
 **Note**: The list of roles is derived by taking all the [ARIA](https://www.w3.org/TR/wai-aria-1.1/) 1.1 roles that:
-- have a [semantic roles](#semantic-role) that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and 
+
+- have a [semantic roles](#semantic-role) that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
 - does not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
 - The `option` role is not part of the list of applicable roles, because it does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an accessible name.
 
@@ -54,8 +53,8 @@ Implicit role with implicit label.
 
 ```html
 <label>
-  first name
-  <input/>
+	first name
+	<input />
 </label>
 ```
 
@@ -74,7 +73,7 @@ Implicit role with explicit label
 ```html
 <label for="country">Country</label>
 <select id="country">
-  <option></option>
+	<option></option>
 </select>
 ```
 
@@ -135,8 +134,8 @@ Implicit label not supported on div elements.
 
 ```html
 <label>
-  first name
-  <div role="textbox"></div>
+	first name
+	<div role="textbox"></div>
 </label>
 ```
 
@@ -149,7 +148,7 @@ Explicit label not supported on div elements.
 <div role="textbox" id="lastname"></div>
 ```
 
-### Inapplicable 
+### Inapplicable
 
 #### Inapplicable example 1
 
@@ -181,8 +180,8 @@ Option inherits from input, but has a required context role of listbox which inh
 
 ```html
 <select role="none">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
+	<option value="volvo">Volvo</option>
+	<option value="saab">Saab</option>
+	<option value="opel">Opel</option>
 </select>
 ```

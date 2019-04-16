@@ -1,18 +1,15 @@
 ---
+id: de46e4
 name: Valid body lang attribute
-
 description: |
- This rule checks that `lang` or `xml:lang` attributes on elements within the `body` of a web page has a valid language subtag.
-
+  This rule checks that `lang` or `xml:lang` attributes on elements within the `body` of a web page have a valid language subtag.
 success_criterion:
-- 3.1.2
-
+  - 3.1.2
 test_aspects:
-- DOM Tree
-
+  - DOM Tree
 authors:
-- Bryn Anderson
-- Jey Nandakumar
+  - Bryn Anderson
+  - Jey Nandakumar
 ---
 
 ## Test Procedure
@@ -27,7 +24,7 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 
 ## Assumptions
 
-*There are currently no assumptions*
+This rule assumes that the presence of a lang or xml:lang attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
 
 ## Background
 
@@ -46,9 +43,9 @@ The `lang` attribute specified has a non-empty value & a valid primary language 
 
 ```html
 <html>
-<body> 
-  <article lang="en"></article>
-</body>
+	<body>
+		<article lang="en"></article>
+	</body>
 </html>
 ```
 
@@ -58,9 +55,9 @@ The `xml:lang` attribute specified has a non-empty value & a valid primary langu
 
 ```html
 <html>
-<body>
-  <p xml:lang="DE"></p>
-</body>
+	<body>
+		<p xml:lang="DE"></p>
+	</body>
 </html>
 ```
 
@@ -70,9 +67,9 @@ The `lang` attribute specified has a non-empty value & a valid primary language 
 
 ```html
 <html>
-<body>
-  <blockquote lang="fr-CH"></blockquote>
-</body>
+	<body>
+		<blockquote lang="fr-CH"></blockquote>
+	</body>
 </html>
 ```
 
@@ -82,9 +79,9 @@ The `lang` and `xml:lang` attribute specified has a non-empty value & a valid pr
 
 ```html
 <html>
-<body>
-  <p lang="en" xml:lang="en-GB">Good Morning.</p>
-</body>
+	<body>
+		<p lang="en" xml:lang="en-GB">Good Morning.</p>
+	</body>
 </html>
 ```
 
@@ -96,9 +93,9 @@ The `lang` attribute value is not a valid primary language subtag.
 
 ```html
 <html>
-<body>
-  <article lang="dutch"></article>
-</body>
+	<body>
+		<article lang="dutch"></article>
+	</body>
 </html>
 ```
 
@@ -108,9 +105,9 @@ The `xml:lang` attribute value is not a valid primary language subtag.
 
 ```html
 <html>
-<body>
-  <p xml:lang="english"></p>
-</body>
+	<body>
+		<p xml:lang="english"></p>
+	</body>
 </html>
 ```
 
@@ -120,9 +117,9 @@ The `lang` attribute value has a valid primary language subtag, but a syntactica
 
 ```html
 <html>
-<body>
-  <p lang="en-US-GB"></p>
-</body>
+	<body>
+		<p lang="en-US-GB"></p>
+	</body>
 </html>
 ```
 
@@ -130,13 +127,11 @@ The `lang` attribute value has a valid primary language subtag, but a syntactica
 
 #### Inapplicable example 1
 
-
 The rule applies to elements with the `body` of a webpage. `html` elements are ignored by the rule.
 
 ```html
 <html lang="en">
-	<body>
-	</body>
+	<body></body>
 </html>
 ```
 

@@ -1,18 +1,15 @@
 ---
+id: 5b7ae0
 name: HTML lang and xml:lang match
-
 description: |
- The rule checks that for the `html` element, there is no mismatch between the primary language in non-empty `lang` and `xml:lang` attributes, if both are used.
-
+  The rule checks that for the `html` element, there is no mismatch between the primary language in non-empty `lang` and `xml:lang` attributes, if both are used.
 success_criterion:
-- 3.1.1
-
+  - 3.1.1
 test_aspects:
-- DOM Tree # The tree that HTML is parsed into.
-
+  - DOM Tree # The tree that HTML is parsed into.
 authors:
-- Annika Nietzio
-- Jey Nandakumar
+  - Annika Nietzio
+  - Jey Nandakumar
 ---
 
 ## Test Procedure
@@ -51,7 +48,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 `html` element with matching value for `lang` and `xml:lang`.
 
 ```html
-<html lang="en" xml:lang="en">
+<html lang="en" xml:lang="en"></html>
 ```
 
 #### Passed example 2
@@ -59,7 +56,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 `html` element with varied case but matching value for `lang` and `xml:lang`.
 
 ```html
-<html lang="en" xml:lang="En">
+<html lang="en" xml:lang="En"></html>
 ```
 
 #### Passed example 3
@@ -67,7 +64,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 `html` element with varied case but matching primary sub-tag value for `lang` and `xml:lang`.
 
 ```html
-<html lang="en" xml:lang="en-GB">
+<html lang="en" xml:lang="en-GB"></html>
 ```
 
 #### Passed example 4
@@ -75,7 +72,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 `html` element with varied case but matching primary sub-tag value for `lang` and `xml:lang`.
 
 ```html
-<html lang="en-GB" xml:lang="en">
+<html lang="en-GB" xml:lang="en"></html>
 ```
 
 #### Passed example 5
@@ -83,7 +80,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 `html` element with varied case but matching primary sub-tag value for `lang` and `xml:lang`, albeit the value `XYZ` is not valid.
 
 ```html
-<html lang="en-XYZ" xml:lang="en">
+<html lang="en-XYZ" xml:lang="en"></html>
 ```
 
 ### Failed
@@ -93,7 +90,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 `html` element with non-matching value for `lang` and `xml:lang`.
 
 ```html
-<html lang="fr" xml:lang="en">
+<html lang="fr" xml:lang="en"></html>
 ```
 
 ### Inapplicable
@@ -111,7 +108,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 `xml:lang` is empty, the rule mandates `non-empty` values.
 
 ```html
-<html lang="fr" xml:lang="">
+<html lang="fr" xml:lang=""></html>
 ```
 
 #### Inapplicable example 3
@@ -119,5 +116,5 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 Only `non-empty` values are considered.
 
 ```html
-<html lang="" xml:lang="">
+<html lang="" xml:lang=""></html>
 ```

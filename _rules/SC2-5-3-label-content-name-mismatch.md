@@ -1,19 +1,17 @@
 ---
+id: 2ee8b8
 name: label and name from content mismatch
 description: |
   Interactive elements labelled through their content must have their visible label as part of their accessible name
-
 success_criterion:
-- 2.5.3 # Label in Name
-
+  - 2.5.3 # Label in Name
 test_aspects:
-- DOM Tree
-- CSS Styling
-
+  - DOM Tree
+  - CSS Styling
 authors:
-- Anne Thyme Nørregaard
-- Bryn Anderson
-- Jey Nandakumar
+  - Anne Thyme Nørregaard
+  - Bryn Anderson
+  - Jey Nandakumar
 ---
 
 ## Test procedure
@@ -21,9 +19,10 @@ authors:
 ### Applicability
 
 This rule applies to any element that has:
-* a [semantic role](#semantic-role) that is a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent), and 
-* [visible text content](#visible-text-content), and
-* an `aria-label` or `aria-labelledby` attribute.
+
+- a [semantic role](#semantic-role) that is a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent), and
+- [visible text content](#visible-text-content), and
+- an `aria-label` or `aria-labelledby` attribute.
 
 **Note**: [widget roles](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent) are: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
 
@@ -91,7 +90,7 @@ Not all of visible label is included in accessible name.
 <button name="link" aria-label="the full">The full label</button>
 ```
 
-### Inapplicable 
+### Inapplicable
 
 #### Inapplicable example 1
 
@@ -106,7 +105,7 @@ Not a widget role.
 Widget role that does not support name from content.
 
 ```html
-<input type="email" aria-label="E-mail" value='Contact'>
+<input type="email" aria-label="E-mail" value="Contact" />
 ```
 
 #### Inapplicable example 3

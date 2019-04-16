@@ -1,20 +1,17 @@
 ---
+id: 6a7281
 name: ARIA state or property has valid value
 rule_type: atomic
-
 description: |
-   This rule checks that each ARIA state or property has a valid value
-   
+  This rule checks that each ARIA state or property has a valid value
 success_criterion:
-- 4.1.2 # Name, Role, Value
-
+  - 4.1.2 # Name, Role, Value
 test_aspects:
-- DOM Tree
-- CSS Styling
-
+  - DOM Tree
+  - CSS Styling
 authors:
-- Wilco Fiers
-- Anne Thyme Nørregaard
+  - Wilco Fiers
+  - Anne Thyme Nørregaard
 ---
 
 ## Test procedure
@@ -27,19 +24,19 @@ Any [non-empty](#non-empty) [WAI-ARIA 1.1 state or property](https://www.w3.org/
 
 Each test target has a valid value according to its [WAI-ARIA 1.1 value type](https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value).
 
-For value types `ID Reference` and `ID Reference List` for [WAI-ARIA required properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) at least one of the elements with the given ids exists in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the element that specifies the target attribute. 
+For value types `ID Reference` and `ID Reference List` for [WAI-ARIA required properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) at least one of the elements with the given ids exists in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the element that specifies the target attribute.
 
 For value type `URI` the value matches the [generic URI syntax](https://www.ietf.org/rfc/rfc3986.txt).
 
 **Note:** Only for [WAI-ARIA required properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) with value types `ID Reference` and `ID Reference List` is there a requirement that the elements with the given ids actually exists. For non-required properties, this is not a requirement.
 
-**Note:** 
-For value type `URI`, this rule does not require that the destination URI exists. 
+**Note:**
+For value type `URI`, this rule does not require that the destination URI exists.
 
 ## Assumptions
 
 - This rule assumes that elements that are not [included in the accessibility tree](#included-in-the-accessibility-tree) or are [focusable](#focusable) can still impact users. Therefore the applicability of this rule is not limited to [WAI-ARIA 1.1 states and properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) on elements that are included in the accessibility tree or are focusable.
-**Note:**  For example, anything referenced through `aria-labelledby` does not have to be [included in the accessibility tree](#included-in-the-accessibility-tree) in order for it to become part of the [accessible name](#accessible-name).
+  **Note:** For example, anything referenced through `aria-labelledby` does not have to be [included in the accessibility tree](#included-in-the-accessibility-tree) in order for it to become part of the [accessible name](#accessible-name).
 - The ARIA `state` or `property` is being used to comply to WCAG.
 
 ## Accessibility Support
@@ -62,89 +59,101 @@ _There are no major accessibility support issues known for this rule._
 
 `aria-required` property with valid true/false value
 
- ```html
+```html
 <div role="textbox" aria-required="true"></div>
 ```
 
 #### Passed example 2
- 
+
 `aria-expanded` state with valid true/false/undefined value
- 
+
 ```html
 <div role="button" aria-expanded="undefined"></div>
 ```
 
 #### Passed example 3
- 
+
 `aria-pressed` state with valid tristate value
- 
+
 ```html
 <div role="button" aria-pressed="mixed"></div>
 ```
 
 #### Passed example 4
- 
+
 `aria-errormessage` property with valid ID reference value
- 
+
 ```html
 <div role="textbox" aria-errormessage="my-error"></div>
 ```
 
 #### Passed example 5
- 
+
 `aria-owns` property with valid ID reference list value
- 
+
 ```html
 <div role="combobox" aria-owns="my-textbox my-grid"></div>
 ```
 
 #### Passed example 6
- 
+
 `aria-rowindex` property with valid integer value
- 
+
 ```html
 <div role="gridcell" aria-rowindex="2">Fred</div>
 ```
 
 #### Passed example 7
- 
+
 `aria-valuemin`, `aria-valuemax` and `aria-valuenow` properties with valid number values
- 
+
 ```html
-<div role="spinbutton" aria-valuemin="1.0" aria-valuemax="2.0" aria-valuenow="1.5"></div>
+<div
+	role="spinbutton"
+	aria-valuemin="1.0"
+	aria-valuemax="2.0"
+	aria-valuenow="1.5"
+></div>
 ```
 
 #### Passed example 8
- 
+
 `aria-placeholder` property with valid string value
- 
+
 ```html
 <div role="searchbox" aria-placeholder="MM-DD-YYYY">MM-DD-YYYY</div>
 ```
 
 #### Passed example 9
- 
+
 `aria-orientation` property with valid token value (property inappropriate for the role)
- 
+
 ```html
 <div role="button" aria-orientation="horizontal"></div>
 ```
 
 #### Passed example 10
- 
+
 `aria-dropeffect` property with valid token list value
- 
+
 ```html
 <div role="dialog" aria-dropeffect="copy move"></div>
 ```
 
 #### Passed example 11
 
-`aria-controls`, which is a required property for the role `scrollbar`, has `ID Reference list` that references at least one element existing in the same document tree. 
+`aria-controls`, which is a required property for the role `scrollbar`, has `ID Reference list` that references at least one element existing in the same document tree.
 
 ```html
 <div id="content1">Lorem ipsum...</div>
-<div role="scrollbar" aria-controls="content1 content2" aria-orientation="vertical" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25"></div>
+<div
+	role="scrollbar"
+	aria-controls="content1 content2"
+	aria-orientation="vertical"
+	aria-valuemax="100"
+	aria-valuemin="0"
+	aria-valuenow="25"
+></div>
 ```
 
 ### Failed
@@ -194,7 +203,12 @@ _There are no major accessibility support issues known for this rule._
 `aria-valuemin`, `aria-valuemax` and `aria-valuenow` property with invalid number values
 
 ```html
-<div role="spinbutton" aria-valuemin="one" aria-valuemax="three" aria-valuenow="two"></div>
+<div
+	role="spinbutton"
+	aria-valuemin="one"
+	aria-valuemax="three"
+	aria-valuenow="two"
+></div>
 ```
 
 #### Failed example 7
@@ -212,11 +226,11 @@ Element with invalid token list value
 ```html
 <div role="dialog" aria-dropeffect="invalid move"></div>
 ```
- 
+
 #### Failed example 9
- 
+
 `aria-expanded` state with invalid true/false/undefined value for custom element
- 
+
 ```html
 <my-button role="button" aria-expanded="collapsed"></my-button>
 ```
@@ -226,7 +240,14 @@ Element with invalid token list value
 `aria-controls`, which is a required property for the role `scrollbar`, references an element that does not exist in the same document tree.
 
 ```html
-<div role="scrollbar" aria-controls="content1" aria-orientation="vertical" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25"></div>
+<div
+	role="scrollbar"
+	aria-controls="content1"
+	aria-orientation="vertical"
+	aria-valuemax="100"
+	aria-valuemin="0"
+	aria-valuenow="25"
+></div>
 ```
 
 ### Inapplicable
@@ -267,6 +288,6 @@ Element has ARIA role, but no ARIA states or properties
 
 `aria-hidden` state on an element that is not an HTML or SVG element
 
- ```html
-  <math aria-hidden="true"></math>
+```html
+<math aria-hidden="true"></math>
 ```

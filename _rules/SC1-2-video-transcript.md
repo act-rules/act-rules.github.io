@@ -1,21 +1,19 @@
 ---
+id: 1a02b0
 name: video element transcript
 rule_type: atomic
 description: |
   Non-streaming `video` elements must have all audio and visual information available in a transcript.
-
 success_criterion:
-- 1.2.8 # Media Alternative (Prerecorded)
-
+  - 1.2.8 # Media Alternative (Prerecorded)
 test_aspects:
-- DOM Tree
-- CSS Styling
-- Audio output
-- Visual output
-
+  - DOM Tree
+  - CSS Styling
+  - Audio output
+  - Visual output
 authors:
-- Wilco Fiers
-- Brian Bors
+  - Wilco Fiers
+  - Brian Bors
 ---
 
 ## Test Procedure
@@ -59,8 +57,8 @@ A video element with a text transcript on the same page.
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
-<p>The above video shows a giant fat rabbit climbing out of a hole in the ground. 
-He stretches, yaws, and then starts walking. 
+<p>The above video shows a giant fat rabbit climbing out of a hole in the ground.
+He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
@@ -87,8 +85,8 @@ A video element with an incorrect text transcript on the same page.
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
-<p>The above video shows a giant fat dog climbing out of a hole in the ground. 
-He stretches, yaws, and then starts walking. 
+<p>The above video shows a giant fat dog climbing out of a hole in the ground.
+He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 

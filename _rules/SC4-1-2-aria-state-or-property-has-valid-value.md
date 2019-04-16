@@ -1,17 +1,14 @@
 ---
+id: 6a7281
 name: ARIA state or property has valid value
 rule_type: atomic
-
 description: |
   This rule checks that each ARIA state or property has a valid value
-
 success_criterion:
   - 4.1.2 # Name, Role, Value
-
 test_aspects:
   - DOM Tree
   - CSS Styling
-
 authors:
   - Wilco Fiers
   - Anne Thyme Nørregaard

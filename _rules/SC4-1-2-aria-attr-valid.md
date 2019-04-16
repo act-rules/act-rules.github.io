@@ -1,15 +1,12 @@
 ---
+id: 5f99a7
 name: ARIA attribute is valid
-
 description: |
   This rule checks that each aria- attribute specified is defined in ARIA 1.1
-
 success_criterion:
   - 4.1.2
-
 test_aspects:
   - DOM Tree
-
 authors:
   - Jey Nandakumar
 ---

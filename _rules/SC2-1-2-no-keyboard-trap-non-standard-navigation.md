@@ -1,14 +1,12 @@
 ---
+id: ebe86a
 name: No keyboard trap non-standard navigation
 rule_type: atomic
-
 description: |
   This rule checks if it is possible to use non-standard keyboard navigation to navigate through content where focus is trapped when using standard ways of keyboard navigation.
-
 test_aspects:
   - DOM Tree
   - CSS Styling
-
 authors:
   - Dagfinn Rømen
   - Geir Sindre Fossøy

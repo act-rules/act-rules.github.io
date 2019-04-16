@@ -1,17 +1,14 @@
 ---
+id: 80af7b
 name: No keyboard trap
 rule_type: composite
-
 description: |
   This rule checks for keyboard traps. This includes use of both standard and non-standard keyboard navigation to navigate through all content without becoming trapped.
-
 success_criterion:
   - 2.1.2 # No Keyboard Trap
-
 atomic_rules:
   - SC2-1-2-no-keyboard-trap-standard-navigation
   - SC2-1-2-no-keyboard-trap-non-standard-navigation
-
 authors:
   - Geir Sindre Fossøy
   - Dagfinn Rømen

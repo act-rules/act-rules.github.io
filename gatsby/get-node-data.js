@@ -1,5 +1,6 @@
+const fs = require('fs')
+const fm = require('fastmatter')
 const { createFilePath } = require('gatsby-source-filesystem')
-const customId = require('custom-id')
 
 /**
  * Get node data, to enhance metadata of pages
@@ -9,7 +10,7 @@ const customId = require('custom-id')
 const getNodeData = options => {
 	const { node, getNode } = options
 	const fileNode = getNode(node.parent)
-	const { sourceInstanceName, relativePath } = fileNode
+	const { sourceInstanceName, relativePath, absolutePath } = fileNode
 
 	const defaults = {
 		sourceInstanceName: sourceInstanceName,
@@ -19,10 +20,13 @@ const getNodeData = options => {
 
 	switch (sourceInstanceName) {
 		case 'rules':
-			const hash = customId({ name: relativePath })
+			const fileContents = fs.readFileSync(absolutePath, { encoding: 'utf-8' })
+			const { attributes } = fm(fileContents)
+			const { id } = attributes
+			console.log(id);
 			return {
 				...defaults,
-				path: `${sourceInstanceName}/${hash}`,
+				path: `${sourceInstanceName}/${id}`,
 			}
 		default:
 			return {

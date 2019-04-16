@@ -1,15 +1,12 @@
 ---
+id: bf051a
 name: Validity of HTML Lang attribute
-
 description: |
   This rule checks the lang or xml:lang attribute has a valid language subtag.
-
 success_criterion:
   - 3.1.1
-
 test_aspects:
   - DOM Tree
-
 authors:
   - Annika Nietzio
   - Jey Nandakumar

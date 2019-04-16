@@ -1,15 +1,14 @@
 ---
+id: ac7dc6
 name: Video only element has description track
 rule_type: atomic
 description: |
   This rule checks that description tracks that come with non-streaming `video` elements, without audio, are descriptive.
-
 test_aspects:
   - DOM Tree
   - CSS Styling
   - Audio output
   - Visual output
-
 authors:
   - Wilco Fiers
   - Brian Bors

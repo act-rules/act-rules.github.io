@@ -1,17 +1,14 @@
 ---
+id: b49b2e
 name: Heading is descriptive
 rule_type: atomic
-
 description: |
   This rule checks that headings describe the topic or purpose of the content.
-
 success_criterion:
   - 2.4.6 # Headings and labels
-
 test_aspects:
   - DOM Tree
   - CSS Styling
-
 authors:
   - Dagfinn Rømen
   - Geir Sindre Fossøy

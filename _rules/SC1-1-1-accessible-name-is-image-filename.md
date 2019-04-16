@@ -1,15 +1,13 @@
 ---
+id: 9eb3f6
 name: Filename is valid accessible name
 description: |
   This rule checks that image elements that use their source filename as their accessible name do so without loss of information to the user.
-
 success_criterion:
 - 1.1.1 # Non-Text Content
-
 test_aspects:
 - DOM Tree
 - CSS Styling
-
 authors:
 - Bryn Anderson
 ---

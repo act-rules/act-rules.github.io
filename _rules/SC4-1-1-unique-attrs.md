@@ -1,15 +1,13 @@
 ---
+id: e6952f
 name: attributes are not duplicated
 rule_type: atomic
 description: |
   This rule checks that HTML and SVG starting tags do not contain duplicated attributes.
-
 success_criterion:
   - 4.1.1 # Parsing
-
 test_aspects:
   - Source code
-
 authors:
   - Wilco Fiers
   - Emma Pratt Richens

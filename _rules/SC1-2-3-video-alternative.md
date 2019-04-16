@@ -1,18 +1,16 @@
 ---
+id: c5a4ea
 name: video with audio has audio descriptions or transcript
 rule_type: composite
 description: |
   This rule checks video elements with audio have an alternative for the video content as audio or as text.
-
 success_criterion:
   - 1.2.3 # Audio Description or Media Alternative (Prerecorded)
-
 atomic_rules:
   - SC1-2-video-audio-description
   - SC1-2-video-transcript
   - SC1-2-video-description-track
   - SC1-2-video-media-alternative
-
 authors:
   - Wilco Fiers
   - Brian Bors

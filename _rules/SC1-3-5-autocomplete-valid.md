@@ -1,17 +1,15 @@
 ---
+id: 73f2c2
 name: Autocomplete valid
 description: |
   This rule checks that the HTML autocomplete attribute has a correct value
-
 success_criterion:
-- 1.3.5 # Identify Input Purpose
-
+  - 1.3.5 # Identify Input Purpose
 test_aspects:
-- DOM Tree
-- CSS Styling
-
+  - DOM Tree
+  - CSS Styling
 authors:
-- Wilco Fiers
+  - Wilco Fiers
 ---
 
 ## Test Procedure
@@ -35,7 +33,7 @@ The autocomplete term(s) follow the [HTML 5.2 specification](https://www.w3.org/
 
 1. Has a value that starts with "section-" _(optional)_
 2. Has either "shipping" or "billing" _(optional)_
-3. Has either "home", "work", "mobile", "fax" or "pager" _(optional, only for "email", "impp", "tel" or "tel-*")_
+3. Has either "home", "work", "mobile", "fax" or "pager" _(optional, only for "email", "impp", "tel" or "tel-\*")_
 4. Has a [correct autocomplete field](#correct-autocomplete-field) _(required)_
 
 **Note**: Autocomplete terms are case insensitive. When multiple terms are used, they must be used in the correct order.
@@ -50,11 +48,11 @@ For this rule, it is assumed that the `autocomplete` attribute is not used on fo
 
 ## Accessibility support
 
-While `autocomplete` in a promising technique for supporting personalisation in HTML, support for this is fairly limited. 
+While `autocomplete` in a promising technique for supporting personalisation in HTML, support for this is fairly limited.
 
 ## Background
 
-The intent of this rule is to ensure that the `autocomplete` attribute can be used to suport personalization. Many users may find it easier to fill out forms if those can be styled or layed out in a way that is familiar to them. Assistive technologies can do this when a form control is marked up in such a way that its purpose can be understood. For instance, assistive technologies could add familiar icons and colors to different fields, making it easier for the user to understand what the form does. 
+The intent of this rule is to ensure that the `autocomplete` attribute can be used to suport personalization. Many users may find it easier to fill out forms if those can be styled or layed out in a way that is familiar to them. Assistive technologies can do this when a form control is marked up in such a way that its purpose can be understood. For instance, assistive technologies could add familiar icons and colors to different fields, making it easier for the user to understand what the form does.
 
 - [https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html)
 - [https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable](https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable)
@@ -78,8 +76,8 @@ Single autocomplete term for select.
 
 ```html
 <select autocomplete="bday-month">
-  <option>January</option>
-  <option>...</option>
+	<option>January</option>
+	<option>...</option>
 </select>
 ```
 
@@ -101,7 +99,7 @@ Two autocomplete terms.
 
 #### Passed example 5
 
-Autocomplete using section-*
+Autocomplete using section-\*
 
 ```html
 <input autocomplete="section-partner email" />
@@ -128,8 +126,8 @@ Full length autocomplete terms.
 #### Failed example 1
 
 Unknown autocomplete term.
-```html
 
+```html
 <input autocomplete="badterm" />
 ```
 
@@ -180,7 +178,7 @@ Incorrect element.
 Empty attribute.
 
 ```html
-<input autocomplete="">
+<input autocomplete="" />
 ```
 
 #### Inapplicable example 3
@@ -188,7 +186,7 @@ Empty attribute.
 Hidden through `display:none`.
 
 ```html
-<input autocomplete="username" style="display:none">
+<input autocomplete="username" style="display:none" />
 ```
 
 #### Inapplicable example 4
@@ -196,7 +194,11 @@ Hidden through `display:none`.
 Off screen and hidden to assistive technologies
 
 ```html
-<input autocomplete="username" aria-hidden="true" style="position:absolute; top:-9999em">
+<input
+	autocomplete="username"
+	aria-hidden="true"
+	style="position:absolute; top:-9999em"
+/>
 ```
 
 #### Inapplicable example 5
@@ -204,7 +206,7 @@ Off screen and hidden to assistive technologies
 type `input` button.
 
 ```html
-<input type="button" autocomplete="username">
+<input type="button" autocomplete="username" />
 ```
 
 #### Inapplicable example 6
@@ -212,7 +214,7 @@ type `input` button.
 type `hidden`.
 
 ```html
-<input type="hidden" autocomplete="username">
+<input type="hidden" autocomplete="username" />
 ```
 
 #### Inapplicable example 7
@@ -220,7 +222,7 @@ type `hidden`.
 Native disabled.
 
 ```html
-<input autocomplete="username" disabled>
+<input autocomplete="username" disabled />
 ```
 
 #### Inapplicable example 8
@@ -228,7 +230,7 @@ Native disabled.
 Using `aria-disabled`.
 
 ```html
-<input autocomplete="username" aria-disabled="true">
+<input autocomplete="username" aria-disabled="true" />
 ```
 
 #### Inapplicable example 9
@@ -236,5 +238,5 @@ Using `aria-disabled`.
 Non-widget element.
 
 ```html
-<input type="button" role="none" tabindex="-1" autocomplete="username">
+<input type="button" role="none" tabindex="-1" autocomplete="username" />
 ```

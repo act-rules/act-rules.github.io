@@ -1,18 +1,15 @@
 ---
+id: bf051a
 name: Validity of HTML Lang attribute
-
 description: |
   This rule checks the lang or xml:lang attribute has a valid language subtag.
-
 success_criterion:
-- 3.1.1
-
+  - 3.1.1
 test_aspects:
-- DOM Tree
-
+  - DOM Tree
 authors:
-- Annika Nietzio
-- Jey Nandakumar
+  - Annika Nietzio
+  - Jey Nandakumar
 ---
 
 ## Test Procedure
@@ -27,7 +24,7 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 
 ## Assumptions
 
-*There are currently no assumptions*
+_There are currently no assumptions_
 
 ## Accessibility Support
 
@@ -52,7 +49,7 @@ While HTML5 specification indicates that `xml:lang` attribute takes priority ove
 The `lang` attribute specified has a non-empty value & a valid primary language subtag.
 
 ```html
-<html lang="fr">
+<html lang="fr"></html>
 ```
 
 #### Passed example 2
@@ -60,7 +57,7 @@ The `lang` attribute specified has a non-empty value & a valid primary language 
 The `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
 
 ```html
-<html xml:lang="fr">
+<html xml:lang="fr"></html>
 ```
 
 #### Passed example 3
@@ -68,7 +65,7 @@ The `xml:lang` attribute specified has a non-empty value & a valid primary langu
 The `lang` and `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
 
 ```html
-<html xml:lang="fr" lang="fr">
+<html xml:lang="fr" lang="fr"></html>
 ```
 
 #### Passed example 4
@@ -76,7 +73,7 @@ The `lang` and `xml:lang` attribute specified has a non-empty value & a valid pr
 The `lang` attribute specified has a non-empty value & a valid primary language subtag. The rule checks for the presence of either `lang` or `xml:lang`. Empty value specified for the other attribute is ignored.
 
 ```html
-<html lang="fr" xml:lang="">
+<html lang="fr" xml:lang=""></html>
 ```
 
 #### Passed example 5
@@ -84,7 +81,7 @@ The `lang` attribute specified has a non-empty value & a valid primary language 
 The `xml:lang` attribute specified has a non-empty value & a valid primary language subtag. The rule checks for the presence of either `lang` or `xml:lang`. Empty value specified for the other attribute is ignored.
 
 ```html
-<html lang="" xml:lang="nl">
+<html lang="" xml:lang="nl"></html>
 ```
 
 ## Failed
@@ -94,7 +91,7 @@ The `xml:lang` attribute specified has a non-empty value & a valid primary langu
 The `lang` attribute value is not a valid primary language subtag.
 
 ```html
-<html lang="xyz">
+<html lang="xyz"></html>
 ```
 
 #### Failed example 2
@@ -102,7 +99,7 @@ The `lang` attribute value is not a valid primary language subtag.
 The `xml:lang` attribute value is not a valid primary language subtag.
 
 ```html
-<html xml:lang="xyz">
+<html xml:lang="xyz"></html>
 ```
 
 #### Failed example 3
@@ -110,7 +107,7 @@ The `xml:lang` attribute value is not a valid primary language subtag.
 Both the `lang` and `xml:lang` value specified are not valid values for primary language subtag.
 
 ```html
-<html xml:lang="xyz" lang="xyz">
+<html xml:lang="xyz" lang="xyz"></html>
 ```
 
 #### Fail example 4
@@ -118,7 +115,7 @@ Both the `lang` and `xml:lang` value specified are not valid values for primary 
 The `lang` attribute value has a valid primary language subtag, but a syntactically invalid region subtag.
 
 ```html
-<html lang="en-US-GB">
+<html lang="en-US-GB"></html>
 ```
 
 ## Inapplicable
@@ -144,7 +141,7 @@ The rule applies to `html` element and hence usage of `xml:lang` attribute in `s
 An empty value for `lang` attribute is ignored by this rule, as the applicability specifies only non-empty values.
 
 ```html
-<html lang="">
+<html lang=""></html>
 ```
 
 #### Inapplicable example 4
@@ -152,5 +149,5 @@ An empty value for `lang` attribute is ignored by this rule, as the applicabilit
 An empty value for `xml:lang` attribute is ignored by this rule, as the applicability specifies only non-empty values.
 
 ```html
-<html xml:lang="">
+<html xml:lang=""></html>
 ```

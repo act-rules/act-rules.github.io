@@ -1,18 +1,17 @@
 ---
+id: ac7dc6
 name: Video only element has description track
 rule_type: atomic
 description: |
   This rule checks that description tracks that come with non-streaming `video` elements, without audio, are descriptive.
-
 test_aspects:
-- DOM Tree
-- CSS Styling
-- Audio output
-- Visual output
-
+  - DOM Tree
+  - CSS Styling
+  - Audio output
+  - Visual output
 authors:
-- Wilco Fiers
-- Brian Bors
+  - Wilco Fiers
+  - Brian Bors
 ---
 
 ## Test Procedure
@@ -25,7 +24,7 @@ The rule applies to any [non-streaming](#non-streaming) `video` element [visible
 
 The visual information of each test target is described with a description `track` element that has the same language as the video or the same language as the page.
 
-*Note*: Multiple description `track` elements may be useful for different languages, but at least one must match the language of the video or the language of the page.
+_Note_: Multiple description `track` elements may be useful for different languages, but at least one must match the language of the video or the language of the page.
 
 ## Assumptions
 
@@ -37,8 +36,8 @@ Currently the description track is not supported by most assistive technology. V
 
 ## Background
 
-- [Understanding SC 1.2.1:Audio-only and Video-only (Prerecorded)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html) 
-- [H96:Using the track element to provide audio descriptions](https://www.w3.org/TR/WCAG20-TECHS/H96.html) 
+- [Understanding SC 1.2.1:Audio-only and Video-only (Prerecorded)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
+- [H96:Using the track element to provide audio descriptions](https://www.w3.org/TR/WCAG20-TECHS/H96.html)
 
 ## Test Cases
 
@@ -50,9 +49,9 @@ A video only element with a track element that contains descriptions.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
-  <track kind="descriptions" src="rabbit-video-descriptions.vtt" />
+	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+	<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
 </video>
 ```
 
@@ -64,9 +63,9 @@ A video only element with a track element that contains incorrect descriptions.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
-  <track kind="descriptions" src="rabbit-video-incorrect-descriptions.vtt" />
+	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+	<track kind="descriptions" src="rabbit-video-incorrect-descriptions.vtt" />
 </video>
 ```
 
@@ -78,8 +77,8 @@ A video only element without a track element.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
 </video>
 ```
 
@@ -89,9 +88,9 @@ A video only element that is not visible on the page.
 
 ```html
 <video controls style="display: none;">
-  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
-  <track kind="descriptions" src="rabbit-video-descriptions.vtt" />
+	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+	<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
 </video>
 ```
 
@@ -101,8 +100,8 @@ A video element with audio.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
-  <track kind="descriptions" src="rabbit-video-descriptions.vtt" />
+	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
 </video>
 ```

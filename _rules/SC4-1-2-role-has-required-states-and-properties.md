@@ -1,33 +1,33 @@
 ---
+id: 4e8ab6
 name: Role has required states and properties
 description: |
   Elements that have an explicit role must also specify all required states and properties
-  
 success_criterion:
-- 4.1.2 # Name, Role, Value
-
+  - 4.1.2 # Name, Role, Value
 test_aspects:
-- DOM Tree
-
+  - DOM Tree
 authors:
-- Anne Thyme Nørregaard
+  - Anne Thyme Nørregaard
 ---
 
 ## Test procedure
 
 ### Applicability
 
-Any HTML or SVG element that has an [explicit semantic role](#semantic-role), except if the element has an [implicit semantic role](#implicit-role) that is identical to the explicit semantic role. 
+Any HTML or SVG element that has an [explicit semantic role](#semantic-role), except if the element has an [implicit semantic role](#implicit-role) that is identical to the explicit semantic role.
 
 ### Expectation
 
-For each test target, the [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) for the role are present, unless the state or property has a default value listed under [WAI-ARIA implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole). 
+For each test target, the [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) for the role are present, unless the state or property has a default value listed under [WAI-ARIA implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole).
 
 **Note:** This rule does not test whether the required states and properties have correct values, only that the attributes are present and [non-empty](#non-empty).
 
 ## Assumptions
 
 - The applicability of this rule is limited to [explicit semantic roles](#semantic-role) based on an assumption that all native HTML and SVG elements have native attributes that are mapped to all of the [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for the [implicit semantic role](#semantic-role) of the element.
+
+- The ARIA `role` is being used to comply to WCAG.
 
 ## Accessibility Support
 
@@ -134,5 +134,13 @@ Element does not have an explicit semantic role
 Element has an implicit semantic role that is identical to the explicit semantic role
 
 ```html
-<input type="checkbox" role="checkbox">
+<input type="checkbox" role="checkbox" />
+```
+
+#### Inapplicable example 4
+
+Element does not list required states and properties (´aria-controls´ is required property for ´combobox´), but the element is not included in the accessibility tree
+
+```html
+<div role="combobox" style="display:none;"></div>
 ```

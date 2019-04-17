@@ -1,14 +1,11 @@
 ---
+id: a25f45
 name: `headers` attribute only refers to `cells` in the same `table` element
-
 test_type: atomic
-
 description: |
   This rule checks that the `headers` attribute must only refer to `cells` in the same `table` element
-
 test_aspects:
 - DOM Tree
-
 authors:
 - Jey Nandakumar
 - Audrey Maniez
@@ -18,24 +15,25 @@ authors:
 
 ### Applicability
 
-This rule applies to `td` and `th` elements with a `headers` attribute and within a `table` element, that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree).
+This rule applies to `td` and `th` elements with a `headers` attribute and within a `table` element with a [semantic role](#semantic-role) of `table` or `grid` or `treegrid`, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation
 
-Each target element with the `headers` attribute refers to other `cells` of the same `table` element.
+Each target element with the `headers` attribute refers to other `th` of the same `table` element.
 
 ## Assumptions
 
-- This test assumes that `headers` pointing to an `idref` of a non-existent element is a failure.
+- This test assumes that the `headers` attribute is only used to identify table headers. If other information is included in the headers attribute, the rule may fail on issues that are not accessibility concerns. For example, if `headers` is used to include information for script, this rule may not be accurate.
 
 ## Accessibility support
 
-*There are no major accessibility support issues known for this rule.*
+- `headers` attribute may not be consistently announced by assistive technologies.
 
 ## Background
 
 - [Understanding Success Criterion 1.3.1: Information and relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H43)
+- [Failure of Success Criterion 1.3.1 for incorrectly associating table headers and content via the headers and id attributes](https://www.w3.org/WAI/WCAG21/Techniques/failures/F90)
 
 ## Test Cases
 
@@ -49,6 +47,7 @@ The `headers` attribute on the  `cell` lists the `id(s)` within the same `table`
 <table>
   <thead>	
     <tr>
+      <td></td>
       <th id="header1">Projects</th>
       <th id="header2">Exams</th>
     </tr>
@@ -123,22 +122,6 @@ One of the `id(s)` referenced in the `headers` attribute does not exist within t
 </table>
 ```
 
-#### Failed example 3
-
-The `cell` that the `headers` attribute refers to, does not exist within the same `table` (Note: Complex table with cells having `colspan`).
-
-```html
-<table>
-  <tr>
-    <th id="header1">Projects</th>
-    <th id="header2">Exams</th>
-  </tr>
-  <tr>
-    <td colspan="2" headers="header3">15%</td>
-  </tr>
-</table>
-```
-
 ### Inapplicable
 
 #### Inapplicable example 1
@@ -203,6 +186,38 @@ No `headers` attribute is defined for table `cell`.
   </tr>
   <tr>
     <td colspan="2">15%</td>
+  </tr>
+</table>
+```
+
+#### Inapplicable example 5
+
+A table that is not visible. 
+
+```html
+<table style="display:none;">
+  <tr>
+    <th colspan="2">My document title</th>
+  </tr>
+  <tr>
+    <td><p>The excerpt</p></td>
+    <td><p>The content</p></td>
+  </tr>
+</table>
+```
+
+#### Inapplicable example 6
+
+A table that is not included in the accessibility tree. 
+
+```html
+<table aria-hidden="true">
+  <tr>
+    <th colspan="2">My document title</th>
+  </tr>
+  <tr>
+    <td><p>The excerpt</p></td>
+    <td><p>The content</p></td>
   </tr>
 </table>
 ```

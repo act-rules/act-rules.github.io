@@ -4,7 +4,6 @@
  * -> copy `./test-assets/*` into `./public`
  * -> create `testcases.json` into `./public`
  */
-
 const { ncp } = require('ncp')
 const codeBlocks = require('gfm-code-blocks')
 const {
@@ -36,7 +35,8 @@ const createPageGenerateTestcases = options => {
 		allRulePages.forEach(markdownPage => {
 			const { node } = markdownPage
 			const { rawMarkdownBody, frontmatter, fields } = node
-			const { name } = frontmatter
+			const { name, success_criterion } = frontmatter
+
 			const { slug } = fields
 			const codeTitles = getAllMatchesForRegex(
 				regexps.testcaseTitle,
@@ -90,6 +90,7 @@ const createPageGenerateTestcases = options => {
 					expected: titleCurated[0],
 					ruleId: uniqueId,
 					ruleName: name,
+					success_criterion,
 					rulePage: `${url}/${slug}`,
 				}
 				testcases.push(testcase)

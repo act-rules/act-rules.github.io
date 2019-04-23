@@ -14,6 +14,7 @@ const queries = {
           }
           frontmatter {
             name
+            success_criterion
           }
         }
       }

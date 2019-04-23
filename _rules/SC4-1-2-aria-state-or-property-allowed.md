@@ -5,6 +5,14 @@ description: |
   This rule checks that WAI-ARIA states or properties are allowed for the element they are specified on.
 success_criterion:
   - 4.1.2 # Name, Role, Value (A)
+
+accessibility_requirements:
+  technique:H37:
+    forConformance: false
+    satisfying: false
+  4.1.2:
+    satisfying: true
+
 test_aspects:
   - DOM Tree
 authors:
@@ -48,7 +56,7 @@ _There are no major accessibility support issues known for this rule._
 `aria-pressed` state is supported for role `button`.
 
 ```html
-<div role="button" aria-pressed="false"></div>
+<div role="button" aria-pressed="false">My button</div>
 ```
 
 #### Passed example 2
@@ -56,7 +64,7 @@ _There are no major accessibility support issues known for this rule._
 `aria-pressed` state is supported for `role=button` that is the implicit role for `button` element.
 
 ```html
-<button aria-pressed="false"></button>
+<button aria-pressed="false">My button</button>
 ```
 
 #### Passed example 3
@@ -64,7 +72,7 @@ _There are no major accessibility support issues known for this rule._
 Global state that is supported by all base markup elements.
 
 ```html
-<div aria-hidden="true"></div>
+<div aria-hidden="true">Hidden button</div>
 ```
 
 #### Passed example 4
@@ -72,7 +80,7 @@ Global state that is supported by all base markup elements.
 `aria-label` state is inherited for role `button`
 
 ```html
-<div role="button" aria-label="OK"></div>
+<div role="button" aria-label="OK">Go time</div>
 ```
 
 #### Passed example 5
@@ -80,7 +88,7 @@ Global state that is supported by all base markup elements.
 `aria-checked` state is required for role `aria-checkbox`
 
 ```html
-<div role="checkbox" aria-checked="false"></div>
+<div role="checkbox" aria-checked="false">Check me out</div>
 ```
 
 #### Passed example 6
@@ -89,6 +97,7 @@ Global state that is supported by all base markup elements.
 
 ```html
 <div role="combobox" aria-controls="id1"></div>
+<span id="id1"></span>
 ```
 
 #### Passed example 7
@@ -114,7 +123,7 @@ WAI-ARIA states and properties with empty value, specified as an empty string, a
 `aria-sort` property is neither inherited, supported, nor required for role `button`.
 
 ```html
-<div role="button" aria-sort=""></div>
+<div role="button" aria-sort="ascending">My button</div>
 ```
 
 #### Failed example 2
@@ -122,7 +131,7 @@ WAI-ARIA states and properties with empty value, specified as an empty string, a
 `aria-sort` attribute is neither inherited, supported, nor required for `role=button` that is the implicit role for `button` element.
 
 ```html
-<button aria-sort=""></button>
+<button aria-sort="ascending">Button</button>
 ```
 
 ### Inapplicable

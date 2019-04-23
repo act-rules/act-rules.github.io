@@ -32,8 +32,9 @@ This rule assumes that the explicit [semantic role](#semantic-role) on the targe
 
 ## Accessibility Support
 
-This rule relies on assistive technologies to recognize which elements are [owned by](#owned-by) each other. This includes when the element is owned by another element that is an ancestor, but not a parent of the target element. Some assistive technologies do not accept these owned by relationships, unless workarounds are used.
+- This rule relies on assistive technologies to recognize which elements are [owned by](#owned-by) each other. This includes when the element is owned by another element that is an ancestor, but not a parent of the target element. Some assistive technologies do not accept these owned by relationships, unless workarounds are used.
 Furthermore, `aria-owns` has limited support in some user agents.
+- Some user agents and assistive technologies ignore empty elements, which means they are not presented to all users. However, since this is handled inconsitently across user agents and assistive technologies, empty elements are applicable to this rule. 
 
 ## Background
 

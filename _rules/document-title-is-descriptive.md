@@ -48,7 +48,7 @@ _There are no assumptions for this rule._
 
 #### Passed example 1
 
-The `title>` element describes the content of the document.
+The `<title>` element describes the content of the document.
 
 ```html
 <html>
@@ -198,21 +198,6 @@ This document has a `<title>` element but is inapplicable since the document ele
 </svg>
 ```
 
-#### Inapplicable example 4
-
-First `<title>` element is empty
-
-```html
-<html>
-  <head>
-    <title></title>
-    <title>Clementine harvesting season</title>
-  </head>
-  <body>
-    <p>Clementines will be ready to harvest from late October through February.</p>
-  </body>
-</html>
-```
 #### Inapplicable example 4
 
 First `<title>` element is empty

@@ -114,12 +114,12 @@ Pages have the same advertised key content but use different layouts:
 Links created via scripting with explicit role of link, but leads to the same resource: 
 
 ```html
-<span role="link"
+<span role="link" tabindex="0"
    onclick="location='/test-assets/6cbcbe/index.html'">
 Link text
 </span>
 
-<span role="link"
+<span role="link" tabindex="0"
    onclick="location='/test-assets/6cbcbe/index.html'">
 Link text
 </span>
@@ -168,12 +168,12 @@ Same link text used for links going to web pages that are similar, but have diff
 Links created via scripting with explicit role of link, but leads to different resources that offer different content: 
 
 ```html
-<span role="link"
+<span role="link" tabindex="0"
    onclick="location='/test-assets/6cbcbe/about/contact.html'">
 Link text
 </span>
 
-<span role="link"
+<span role="link" tabindex="0"
    onclick="location='/test-assets/6cbcbe/admissions/contact.html'">
 Link text
 </span>

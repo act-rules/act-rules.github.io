@@ -135,6 +135,15 @@ Accessible name created through "aria-label" describes the purpose of the associ
 <input aria-label="First name" id="fname" type="text" name="fname"/>
 ```
 
+#### Passed example 8
+
+The non-descriptive label coded with the `label` element is through the accessible name calculation overwritten by an `aria-label` that is descriptive.
+
+```html
+<label for="fname">Fill in:</label>
+<input id="fname" type="text" name="fname" aria-label="First name:"/>
+```
+
 ### Failed
 
 #### Failed example 1
@@ -197,6 +206,15 @@ The `label` in itself does not describe the purpose of the form field, and while
 <h2>Name</h2>
 <label>Fill in: <input id="name" type="text" name="name"/></label>
 ````
+
+#### Failed example 8
+
+The descriptive label coded with the `label` element is through the accessible name calculation overwritten by an `aria-label` that is not descriptive.
+
+```html
+<label for="fname">First name:</label>
+<input id="fname" type="text" name="fname" aria-label="Fill in:"/>
+```
 
 ### Inapplicable
 

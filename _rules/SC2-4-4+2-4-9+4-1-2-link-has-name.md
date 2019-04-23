@@ -191,7 +191,7 @@ Link with image that has empty `aria-labelledby`.
 
 #### Failed example 6
 
-`aria-labelledby` references to a non-existing id.
+`aria-labelledby` references a non-existing id.
 
 ```html
 <a href="http://www.w3.org/WAI"><img src="#" aria-labelledby="id1" /></a>

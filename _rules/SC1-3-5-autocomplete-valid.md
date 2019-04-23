@@ -22,8 +22,8 @@ The rule applies to any HTML `input`, `select` and `textarea` element with an `a
 
 - The element is not [visible on the page](#visible-on-the-page), and not [included in the accessibility tree](#included-in-the-accessibility-tree)
 - The element is an `input` element with a `type` property of `hidden`, `button`, `submit` or `reset`
-- The element has a `disabled` or `aria-disabled="true"` attribute
-- The element does not participate in [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation) and has a [semantic role](#semantic-role) that is not a [widget role](https://www.w3.org/TR/wai-aria-1.1/#widget_roles).
+- The element has a `aria-disabled="true"` attribute
+- The element is not part of [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation) and has a [semantic role](#semantic-role) that is not a [widget role](https://www.w3.org/TR/wai-aria-1.1/#widget_roles).
 
 ### Expectation 1
 

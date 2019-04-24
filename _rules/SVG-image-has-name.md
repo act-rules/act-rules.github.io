@@ -45,7 +45,7 @@ Browser and assistive technology support for SVG `title` and `desc` elements is 
 
 ### Passed
 
-#### Pass example 1
+#### Passed example 1
 
 The `<svg>` element has a role of `img` which takes its accessible name from its `<title>` element.
 
@@ -56,7 +56,7 @@ The `<svg>` element has a role of `img` which takes its accessible name from its
 </svg>
 ```
 
-#### Pass example 2
+#### Passed example 2
 
 The `<svg>` element has a role of `img` and an `aria-label` containing the accessible name.
 
@@ -66,7 +66,7 @@ The `<svg>` element has a role of `img` and an `aria-label` containing the acces
 </svg>
 ```
 
-#### Pass example 3
+#### Passed example 3
 
 The `<svg>` element has the role of `graphics-document` which takes its accessible name from its' child content, the `<title>` and `<desc>` elements.
 
@@ -84,7 +84,7 @@ The `<svg>` element has the role of `graphics-document` which takes its accessib
 </svg>
 ```
 
-#### Pass example 4
+#### Passed example 4
 
 The `<circle>` element is included in the accessibility tree and takes its' accessible name from its' child content, the `<title>` element.
 
@@ -96,9 +96,9 @@ The `<circle>` element is included in the accessibility tree and takes its' acce
 </svg>
 ```
 
-#### Pass example 5
+#### Passed example 5
 
-The `svg` element and both child `<g>` elements are included in the accessibility tree with the `graphics-document` and `graphics-object` roles. All three elements have accessibile names via the `title` and `aria-label` attributes.
+The `<svg>` element and both descendant `<g>` elements are included in the accessibility tree with the `graphics-document` and `graphics-object` roles. The `svg` element gets its' accessible name via the `<title>` element and both `<g>` elements from their `aria-label` attributes.
 
 ```html
 <svg xmlns="https://www.w3.org/2000/svg" width="600" height="400" viewBox="200 0 400 400" role="graphics-document">
@@ -128,7 +128,7 @@ The `<svg>` element has a role of `img` but has no accessible name.
 
 #### Failed example 2
 
-The `img` role includes the `<svg>` element in the accessibility tree but the element has an empty accessible name `title` attribute.
+The `img` role includes the `<svg>` element in the accessibility tree but the element has no accessible name because the `<title>` element contains only whitespace.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" role="img">
@@ -191,11 +191,11 @@ The `svg` element has an accessible name but the `aria-hidden` attribute exclude
 
 #### Inapplicable example 3
  
-The `svg` element is not included in the accessibility tree because the `<title>` element is empty.
+The `svg` element is not included in the accessibility tree because the `<title>` element has no content.
  
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" role="img" width="100" height="100">
-	<title> </title>
+	<title></title>
   	<circle role="none" cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```

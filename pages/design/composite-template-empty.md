@@ -1,37 +1,40 @@
 ---
+id: 
 name:
 rule_type: composite
 description: |
   This rule checks ...
 
-success_criterion:
-  - x.x.x # (Name of Success Criterion)
+accessibility_requirements:
+  wcag20:x.x.x: # (Name of Success Criterion)
+    forConformance: true
+    failed: not satisfied
+    passed: satisfied | further testing needed
+    inapplicable: satisfied | further testing needed
 
-atomic_rules:
+input_rules:
   -
 
 authors:
   -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
 ---
 
-## Aggregation Definition
-
-### Applicability
+## Applicability
 
 The rule applies to any (??) element ...
 
-### Expectation
+## Expectation (1)
 
 For each test target, the outcome of (at least one of / all of / any of etc.) the following rules is (passed / failed / etc.):
 
 - (list atomic rules that are used in this composite rule)
--
+- ...
 
 ## Assumptions
 
 _There are currently no assumptions._
 
-## Accessibility support
+## Accessibility Support
 
 _There are no major accessibility support issues known for this rule._
 
@@ -43,7 +46,7 @@ _There are no major accessibility support issues known for this rule._
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 Description...
 
@@ -51,13 +54,13 @@ Description...
 <!-- code -->
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 ...
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Description...
 
@@ -65,13 +68,13 @@ Description...
 <!-- code -->
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 ...
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Description...
 
@@ -79,6 +82,6 @@ Description...
 <!-- code -->
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 ...

@@ -6,33 +6,36 @@ The rule template contains a plain language description of the rule, some backgr
 
 Use the [empty atomic rule template](atomic-template-empty.html) to create new rule. When creating a new rule, first read [rule design](rule-design.html).
 
-## Atomic Rule template
+## Atomic Rule Template
 
 ````md
 ---
+id: 
 name:
 rule_type: atomic
 
 description: |
   This rule checks ...
 
-success_criterion:
-  - x.x.x # (Name of Success Criterion)
+accessibility_requirements:
+  wcag20:x.x.x: # (Name of Success Criterion)
+    forConformance: true
+    failed: not satisfied
+    passed: satisfied | further testing needed
+    inapplicable: satisfied | further testing needed
 
-test_aspects:
+input_aspects:
   -  # (e.g. HTTP Messages, DOM Tree, CSS Styling, Accessibility Tree, Language, etc.,)
 
 authors:
   -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
 ---
 
-## Test Procedure
-
-### Applicability
+## Applicability
 
 The rule applies to any (??) element ...
 
-### Expectation (1)
+## Expectation (1)
 
 Each target element ...
 
@@ -40,7 +43,7 @@ Each target element ...
 
 _There are currently no assumptions_
 
-## Accessibility support
+## Accessibility Support
 
 _There are no major accessibility support issues known for this rule._
 
@@ -57,7 +60,7 @@ _There are no major accessibility support issues known for this rule._
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 Description...
 
@@ -65,13 +68,13 @@ Description...
 <!-- code -->
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 ...
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Description...
 
@@ -79,13 +82,13 @@ Description...
 <!-- code -->
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 ...
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Description...
 
@@ -93,54 +96,58 @@ Description...
 <!-- code -->
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 ...
 ````
 
-## Composite rules
+## Composite Rules
 
 Composite rules are rules that take results from different rules and through some logic come to a single result. For example: SC 1.2.3 allows video to pass with either a transcript, an audio description, or if it is a media alternative. Each of these would be atomic rules, that are used in a composite rule. The composite rule than describes that at least one of these must pass for the composite rule to pass.
 
 For more about composite rules, see the [ACT Rules Format](https://www.w3.org/TR/act-rules-format/#composed-rules). To create a composite rule, use the [empty composite rule template](./composite-template-empty.html).
 
-### Composite Rule template
+### Composite Rule Template
 
 ````md
 ---
+id: 
 name:
 rule_type: composite
+
 description: |
   This rule checks ...
 
-success_criterion:
-  - x.x.x # (Name of Success Criterion)
+accessibility_requirements:
+  wcag20:x.x.x: # (Name of Success Criterion)
+    forConformance: true
+    failed: not satisfied
+    passed: satisfied | further testing needed
+    inapplicable: satisfied | further testing needed
 
-atomic_rules:
+input_rules:
   -
 
 authors:
   -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
 ---
 
-## Aggregation Definition
-
-### Applicability
+## Applicability
 
 The rule applies to any (??) element ...
 
-### Expectation
+## Expectation
 
 For each test target, the outcome of (at least one of / all of / any of etc.) the following rules is (passed / failed / etc.):
 
 - (list atomic rules that are used in this composite rule)
--
+- ...
 
 ## Assumptions
 
 _There are currently no assumptions._
 
-## Accessibility support
+## Accessibility Support
 
 _There are no major accessibility support issues known for this rule._
 
@@ -157,7 +164,7 @@ _There are no major accessibility support issues known for this rule._
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 Description...
 
@@ -165,13 +172,13 @@ Description...
 <!-- code -->
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 ...
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Description...
 
@@ -179,13 +186,13 @@ Description...
 <!-- code -->
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 ...
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Description...
 
@@ -193,7 +200,7 @@ Description...
 <!-- code -->
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 ...
 ````

@@ -1,27 +1,30 @@
 ---
+id: 
 name:
 rule_type: atomic
 
 description: |
   This rule checks ...
 
-success_criterion:
-  - x.x.x # (Name of Success Criterion)
+accessibility_requirements:
+  wcag20:x.x.x: # (Name of Success Criterion)
+    forConformance: true
+    failed: not satisfied
+    passed: satisfied | further testing needed
+    inapplicable: satisfied | further testing needed
 
-test_aspects:
+input_aspects:
   -  # (e.g. HTTP Messages, DOM Tree, CSS Styling, Accessibility Tree, Language, etc.,)
 
 authors:
   -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
 ---
 
-## Test Procedure
-
-### Applicability
+## Applicability
 
 The rule applies to any (??) element ...
 
-### Expectation (1)
+## Expectation (1)
 
 Each target element ...
 
@@ -29,7 +32,7 @@ Each target element ...
 
 _There are currently no assumptions_
 
-## Accessibility support
+## Accessibility Support
 
 _There are no major accessibility support issues known for this rule._
 
@@ -41,7 +44,7 @@ _There are no major accessibility support issues known for this rule._
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 Description...
 
@@ -49,13 +52,13 @@ Description...
 <!-- code -->
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 ...
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Description...
 
@@ -63,13 +66,13 @@ Description...
 <!-- code -->
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 ...
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Description...
 
@@ -77,6 +80,6 @@ Description...
 <!-- code -->
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 ...

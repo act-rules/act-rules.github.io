@@ -47,7 +47,18 @@ Browser and assistive technology support for SVG `title` and `desc` elements is 
 
 #### Passed example 1
 
-The `<svg>` element has a role of `img` which takes its accessible name from its `<title>` element.
+The `<svg>` has an implicit role of `graphics-document` and takes its accessible name from its `<title>` element.
+
+```html
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+  <title>A yellow circle</title>
+	<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
+</svg>
+```
+
+#### Passed example 2
+
+The `<svg>` element has an explicit role of `img` and takes its accessible name from its `<title>` element.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" role="img" width="100" height="100">
@@ -56,7 +67,7 @@ The `<svg>` element has a role of `img` which takes its accessible name from its
 </svg>
 ```
 
-#### Passed example 2
+#### Passed example 3
 
 The `<svg>` element has a role of `img` and an `aria-label` containing the accessible name.
 
@@ -66,16 +77,14 @@ The `<svg>` element has a role of `img` and an `aria-label` containing the acces
 </svg>
 ```
 
-#### Passed example 3
+#### Passed example 4
 
-The `<svg>` element has the role of `graphics-document` which takes its accessible name from its' child content, the `<title>` and `<desc>` elements.
+The `<svg>` element has the role of `graphics-document` which takes its accessible name from its child `<title>` element. 
 
 ```html
 
 <svg xmlns="http://www.w3.org/2000/svg" role="graphics-document">
     <title>3 circles</title>
-    <desc>3 yellow circles with a green stroke horizontally adjacent to each other
-    </desc>
     <g role="group">
 	<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
 	<circle cx="150" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
@@ -84,9 +93,9 @@ The `<svg>` element has the role of `graphics-document` which takes its accessib
 </svg>
 ```
 
-#### Passed example 4
+#### Passed example 5
 
-The `<circle>` element is included in the accessibility tree and takes its' accessible name from its' child content, the `<title>` element.
+The `<circle>` element is included in the accessibility tree and takes its accessible name from its child `<title>` element.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg">
@@ -96,7 +105,7 @@ The `<circle>` element is included in the accessibility tree and takes its' acce
 </svg>
 ```
 
-#### Passed example 5
+#### Passed example 6
 
 The `<svg>` element and both descendant `<g>` elements are included in the accessibility tree with the `graphics-document` and `graphics-object` roles. The `svg` element gets its' accessible name via the `<title>` element and both `<g>` elements from their `aria-label` attributes.
 
@@ -175,7 +184,7 @@ The `svg` element does not have a role of `img` `graphics-document` `graphics-ob
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
-<circle cx="50" cy="50" r="40" fill="yellow"></circle>
+	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```
 
@@ -185,7 +194,7 @@ The `svg` element has an accessible name but the `aria-hidden` attribute exclude
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" role="img" aria-label="A yellow circle" aria-hidden="true">
-<circle cx="50" cy="50" r="40" fill="yellow"></circle>
+	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```
 

@@ -22,7 +22,7 @@ The rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namesp
 
 ### Expectation
 
-Each target element has an accessible name.
+Each target element has an accessible name that is not only [whitespace](#whitespace).
 
 ## Assumptions
 
@@ -106,8 +106,8 @@ The `svg` element and both child `<g>` elements are included in the accessibilit
 	<g role="graphics-object" aria-label="Blue rectangle" transform="translate(100,100)">
         <desc>Large blue rectangle with two other shapes inside it</desc>
 		<rect fill="blue" role="graphics-object" aria-label=" large blue rectangle" width="200" height="100" y="-100" />
-		<g role="graphics-object" aria-label="small yellow rectangle in larger green rectangle" transform="translate(30,-90)">
-			<rect fill="green" width="50" height="90"/>
+		<g role="graphics-object" aria-label="small yellow rectangle in larger green rectangle" transform="translate(30,-90)"> <!-- the aria-label descr -->
+			<rect fill="green" width="50" height="90"/> 
 			<rect fill="yellow" x="5" y="5" width="40" height="30" />
 			</g>
 		 </g>
@@ -194,7 +194,7 @@ The `svg` element has an accessible name but the `aria-hidden` attribute exclude
 The `svg` element is not included in the accessibility tree because the `<title>` element is empty.
  
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+<svg xmlns="http://www.w3.org/2000/svg" role="img" width="100" height="100">
 	<title> </title>
   	<circle role="none" cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>

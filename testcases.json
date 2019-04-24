@@ -1406,7 +1406,7 @@
       "rulePage": "https://act-rules.github.io/rules/23a2a8"
     },
     {
-      "url": "https://act-rules.github.io/testcases/23a2a8-9571c0d90af6e47b68242668ec0a2ac77711e6e4.svg",
+      "url": "https://act-rules.github.io/testcases/23a2a8-a0a42d69ad7a0e4a1da0ae3c0a9592878de2beaf.html",
       "expected": "inapplicable",
       "ruleId": "23a2a8",
       "ruleName": "Image has accessible name",
@@ -1427,7 +1427,7 @@
       "rulePage": "https://act-rules.github.io/rules/23a2a8"
     },
     {
-      "url": "https://act-rules.github.io/testcases/23a2a8-ca58ce5e0ed251ded054c94abdbf1c223872e6ba.html",
+      "url": "https://act-rules.github.io/testcases/23a2a8-96d6ac9962b228649c1d3e21585e1248a74f1129.html",
       "expected": "inapplicable",
       "ruleId": "23a2a8",
       "ruleName": "Image has accessible name",

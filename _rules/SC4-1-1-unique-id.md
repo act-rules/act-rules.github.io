@@ -103,6 +103,15 @@ Having `display: none` on an element still makes it applicable to this rule
 <svg id="my-div">This is my second element</svg>
 ```
 
+#### Failed example 4
+
+Duplicate ID on interactive elements
+
+```html
+<button id="foo">button 1</button>
+<button id="foo">button 2</button>
+```
+
 ### Inapplicable
 
 #### Inapplicable example 1

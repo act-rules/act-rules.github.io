@@ -191,14 +191,6 @@ Non-visible link.
 /></a>
 ```
 
-#### Failed example 8
-
-Not included in the accessibility tree.
-
-```html
-<a href="http://www.w3.org/WAI" aria-hidden="true"><img src="#"/></a>
-```
-
 ### Inapplicable
 
 #### Inapplicable example 1

@@ -1,0 +1,13 @@
+module.exports.bestMatchingRules = function bestMatchingRules (ruleAsserts) {
+  const mappedRules = ruleAsserts.filter(({ mapping }) => mapping !== false)
+  if (mappedRules.length === 0) {
+    return [{ mapping: false }]
+  }
+
+  const completeRules = mappedRules.filter(({ complete }) => complete === true)
+  if (completeRules.length === 0) {
+    return mappedRules;
+  }
+  console.log(completeRules)
+  return completeRules;
+}

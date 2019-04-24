@@ -110,14 +110,6 @@ Both the `lang` and `xml:lang` value specified are not valid values for primary 
 <html xml:lang="xyz" lang="xyz"></html>
 ```
 
-#### Fail example 4
-
-The `lang` attribute value has a valid primary language subtag, but a syntactically invalid region subtag.
-
-```html
-<html lang="en-US-GB"></html>
-```
-
 ## Inapplicable
 
 #### Inapplicable example 1

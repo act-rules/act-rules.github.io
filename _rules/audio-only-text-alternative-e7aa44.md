@@ -9,8 +9,8 @@ success_criterion:
   - 1.2.1 # Audio-only and Video-only (Prerecorded)
 
 atomic_rules:
-  - SC1-2-1-audio-transcript
-  - SC1-2-1-media-alternative-audio
+  - audio-have-transcript-2eb176
+  - audio-as-media-alternative-afb423
 
 authors:
   - Wilco Fiers

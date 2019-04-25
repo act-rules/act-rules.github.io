@@ -36,7 +36,7 @@ This rule applies to any element that:
 
 ### Expectation 1
 
-The `label` element, if there is any, describes the purpose of the associated form field element. The context of the element can be used to differentiate the purpose from other form fields on the same page.
+The [visible](#visible) `label` element, if there is any, describes the purpose of the associated form field element. The context of the element can be used to differentiate the purpose from other form fields on the same page.
 
 **Note:** In this case, context can be created by headings, fieldsets and legends, text that is near the control, etc.
 

@@ -615,88 +615,88 @@
       "rulePage": "https://act-rules.github.io/rules/97a4e1"
     },
     {
-      "url": "https://act-rules.github.io/testcases/undefined-4f5b411d33377792ee45ee553b9f24ee78dcacb6.html",
+      "url": "https://act-rules.github.io/testcases/c4a8a4-1749bf91924cd4043e3f39b7132998b15261d218.html",
       "expected": "passed",
-      "ruleId": "undefined",
+      "ruleId": "c4a8a4",
       "ruleName": "Document title is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/undefined"
+      "rulePage": "https://act-rules.github.io/rules/c4a8a4"
     },
     {
-      "url": "https://act-rules.github.io/testcases/undefined-dcc175eceb81e634080d7f8599313613496fea23.html",
+      "url": "https://act-rules.github.io/testcases/c4a8a4-ef3344e9a50030c02148b701e306d69e49f74ee1.html",
       "expected": "passed",
-      "ruleId": "undefined",
+      "ruleId": "c4a8a4",
       "ruleName": "Document title is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/undefined"
+      "rulePage": "https://act-rules.github.io/rules/c4a8a4"
     },
     {
-      "url": "https://act-rules.github.io/testcases/undefined-b764c2d9911c0fdcb4f55021b222f8031062d7d4.html",
+      "url": "https://act-rules.github.io/testcases/c4a8a4-72086eef1121778232cb2d87f0c58276c4aa1922.html",
       "expected": "passed",
-      "ruleId": "undefined",
+      "ruleId": "c4a8a4",
       "ruleName": "Document title is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/undefined"
+      "rulePage": "https://act-rules.github.io/rules/c4a8a4"
     },
     {
-      "url": "https://act-rules.github.io/testcases/undefined-d5a11f931cbd8e445051a5c51487d8319f818eac.html",
+      "url": "https://act-rules.github.io/testcases/c4a8a4-d3313ba8390e479b853dd3fa7a63148d1fb33bf8.html",
       "expected": "passed",
-      "ruleId": "undefined",
+      "ruleId": "c4a8a4",
       "ruleName": "Document title is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/undefined"
+      "rulePage": "https://act-rules.github.io/rules/c4a8a4"
     },
     {
-      "url": "https://act-rules.github.io/testcases/undefined-2a239e2e6ff87adfe787d18a803ea63e57b59c58.html",
+      "url": "https://act-rules.github.io/testcases/c4a8a4-89bc6e76c49cef7624393d202ecf0e1b7064b254.html",
       "expected": "failed",
-      "ruleId": "undefined",
+      "ruleId": "c4a8a4",
       "ruleName": "Document title is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/undefined"
+      "rulePage": "https://act-rules.github.io/rules/c4a8a4"
     },
     {
-      "url": "https://act-rules.github.io/testcases/undefined-fbc0b3254308a8411bdb28465b4c9690bc58b192.html",
+      "url": "https://act-rules.github.io/testcases/c4a8a4-5985d7439707029f076d29c8b889d88cba24a179.html",
       "expected": "failed",
-      "ruleId": "undefined",
+      "ruleId": "c4a8a4",
       "ruleName": "Document title is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/undefined"
+      "rulePage": "https://act-rules.github.io/rules/c4a8a4"
     },
     {
-      "url": "https://act-rules.github.io/testcases/undefined-6801f6cb6913436e80f8a828911318063807b1d2.html",
+      "url": "https://act-rules.github.io/testcases/c4a8a4-e907b2d76677afef7e1895af85e9df992fa30acc.html",
       "expected": "failed",
-      "ruleId": "undefined",
+      "ruleId": "c4a8a4",
       "ruleName": "Document title is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/undefined"
+      "rulePage": "https://act-rules.github.io/rules/c4a8a4"
     },
     {
-      "url": "https://act-rules.github.io/testcases/undefined-fe3c63f444e7ddf19f96f54c619a66038b3253cd.html",
+      "url": "https://act-rules.github.io/testcases/c4a8a4-aa2f687efef1b680617ebaf3235bf87ce428789f.html",
       "expected": "inapplicable",
-      "ruleId": "undefined",
+      "ruleId": "c4a8a4",
       "ruleName": "Document title is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/undefined"
+      "rulePage": "https://act-rules.github.io/rules/c4a8a4"
     },
     {
-      "url": "https://act-rules.github.io/testcases/undefined-e157e8eda3e78b9b3d2ee2c9be476ba93a791c1c.html",
+      "url": "https://act-rules.github.io/testcases/c4a8a4-a56d1a725bdcf8e87c4e369b574e4b8492698ae4.html",
       "expected": "inapplicable",
-      "ruleId": "undefined",
+      "ruleId": "c4a8a4",
       "ruleName": "Document title is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/undefined"
+      "rulePage": "https://act-rules.github.io/rules/c4a8a4"
     },
     {
-      "url": "https://act-rules.github.io/testcases/undefined-553c172aca8827f4d9217d44187ce3fc2d62973d.svg",
+      "url": "https://act-rules.github.io/testcases/c4a8a4-aa75f943fdbf4055f9ae736cd2551b346d459147.svg",
       "expected": "inapplicable",
-      "ruleId": "undefined",
+      "ruleId": "c4a8a4",
       "ruleName": "Document title is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/undefined"
+      "rulePage": "https://act-rules.github.io/rules/c4a8a4"
     },
     {
-      "url": "https://act-rules.github.io/testcases/undefined-0156c00879c59838538fa57e385baa4b6db24b2c.html",
+      "url": "https://act-rules.github.io/testcases/c4a8a4-f706616ed9315c1596d276c37a034474b36b0450.html",
       "expected": "inapplicable",
-      "ruleId": "undefined",
+      "ruleId": "c4a8a4",
       "ruleName": "Document title is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/undefined"
+      "rulePage": "https://act-rules.github.io/rules/c4a8a4"
     },
     {
-      "url": "https://act-rules.github.io/testcases/undefined-082ef1e1f330904ddca1749061d9dec8d24da4fe.html",
+      "url": "https://act-rules.github.io/testcases/c4a8a4-cd8c8b3764f69ad8e5be8dbf6e3bcd289858e3b0.html",
       "expected": "inapplicable",
-      "ruleId": "undefined",
+      "ruleId": "c4a8a4",
       "ruleName": "Document title is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/undefined"
+      "rulePage": "https://act-rules.github.io/rules/c4a8a4"
     },
     {
       "url": "https://act-rules.github.io/testcases/9eb3f6-458ae1885e68aaf2660ff66f81b057ae9efd9310.html",

@@ -1,18 +1,15 @@
 ---
+id: cae760
 name: iframe has an accessible name
-
 description: |
- Each iframe element has an accessible name
-
+  Each iframe element has an accessible name
 success_criterion:
-- 4.1.2 # Name, Role, Value (A)
-
+  - 4.1.2 # Name, Role, Value (A)
 test_aspects:
-- DOM Tree
-- CSS Styling
-
+  - DOM Tree
+  - CSS Styling
 authors:
-- Jey Nandakumar
+  - Jey Nandakumar
 ---
 
 ## Test procedure
@@ -38,8 +35,8 @@ _There are no major accessibility support issues known for this rule._
 ## Background
 
 - [H64: Using the title attribute of the frame and iframe elements](http://www.w3.org/TR/WCAG20-TECHS/H64.html)
-- [Understanding Success Criterion 4.1.2 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
-- [Understanding Success Criterion 2.4.1 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
+- [Understanding Success Criterion 4.1.2](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
+- [Understanding Success Criterion 2.4.1](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html)
 - [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)
 
 ## Test cases
@@ -51,7 +48,10 @@ _There are no major accessibility support issues known for this rule._
 Usage of `title` attribute to describe the `iframe` content.
 
 ```html
-<iframe title="List of Contributors" src="../test-assets/SC4-1-2-frame-doc.html">
+<iframe
+	title="List of Contributors"
+	src="../test-assets/SC4-1-2-frame-doc.html"
+>
 </iframe>
 ```
 
@@ -60,7 +60,10 @@ Usage of `title` attribute to describe the `iframe` content.
 Usage of `aria-label` attribute to describe the `iframe` content.
 
 ```html
-<iframe aria-label="Advertisement of tours to Great Wall of China" src="../test-assets/SC4-1-2-frame-doc.html" >
+<iframe
+	aria-label="Advertisement of tours to Great Wall of China"
+	src="../test-assets/SC4-1-2-frame-doc.html"
+>
 </iframe>
 ```
 
@@ -70,7 +73,10 @@ Usage of `aria-labelledby` attribute to describe the `iframe` content.
 
 ```html
 <div id="frame-title-helper">Watch highlights of the Worldcup</div>
-<iframe aria-labelledby="frame-title-helper" src="../test-assets/SC4-1-2-frame-doc.html">
+<iframe
+	aria-labelledby="frame-title-helper"
+	src="../test-assets/SC4-1-2-frame-doc.html"
+>
 </iframe>
 ```
 
@@ -81,7 +87,7 @@ Usage of `aria-labelledby` attribute to describe the `iframe` content.
 Usage of `name` attribute to describe the `iframe` content is not valid.
 
 ```html
-<iframe name="List of Contributors" src="../test-assets/SC4-1-2-frame-doc.html" >
+<iframe name="List of Contributors" src="../test-assets/SC4-1-2-frame-doc.html">
 </iframe>
 ```
 
@@ -90,8 +96,7 @@ Usage of `name` attribute to describe the `iframe` content is not valid.
 `iframe` with no `title`, `aria-label` or `aria-labelledby` attribute to describe content is not valid.
 
 ```html
-<iframe src="../test-assets/SC4-1-2-frame-doc.html" >
-</iframe>
+<iframe src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
 #### Failed example 3
@@ -99,8 +104,7 @@ Usage of `name` attribute to describe the `iframe` content is not valid.
 Empty `title` attribute is not valid.
 
 ```html
-<iframe title="" src="../test-assets/SC4-1-2-frame-doc.html" >
-</iframe>
+<iframe title="" src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
 #### Failed example 4
@@ -108,8 +112,7 @@ Empty `title` attribute is not valid.
 Empty `aria-label` attribute to describe the `frame` content is not valid.
 
 ```html
-<iframe aria-label="" src="../test-assets/SC4-1-2-frame-doc.html" >
-</iframe>
+<iframe aria-label="" src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
 #### Failed example 5
@@ -117,7 +120,10 @@ Empty `aria-label` attribute to describe the `frame` content is not valid.
 Usage of non existing `aria-labelledby` reference element to describe the `iframe` content is not valid.
 
 ```html
-<iframe aria-labelledby="does-not-exist" src="../test-assets/SC4-1-2-frame-doc.html">
+<iframe
+	aria-labelledby="does-not-exist"
+	src="../test-assets/SC4-1-2-frame-doc.html"
+>
 </iframe>
 ```
 

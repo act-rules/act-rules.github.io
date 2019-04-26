@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 471,
+  "count": 483,
   "testcases": [
     {
       "url": "https://act-rules.github.io/testcases/5f99a7-55f3ed0ec0f324514a0d223b737bc1e4c81593c7.html",
@@ -613,6 +613,90 @@
       "ruleId": "97a4e1",
       "ruleName": "Buttons have an accessible name",
       "rulePage": "https://act-rules.github.io/rules/97a4e1"
+    },
+    {
+      "url": "https://act-rules.github.io/testcases/undefined-4f5b411d33377792ee45ee553b9f24ee78dcacb6.html",
+      "expected": "passed",
+      "ruleId": "undefined",
+      "ruleName": "Document title is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/undefined"
+    },
+    {
+      "url": "https://act-rules.github.io/testcases/undefined-dcc175eceb81e634080d7f8599313613496fea23.html",
+      "expected": "passed",
+      "ruleId": "undefined",
+      "ruleName": "Document title is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/undefined"
+    },
+    {
+      "url": "https://act-rules.github.io/testcases/undefined-b764c2d9911c0fdcb4f55021b222f8031062d7d4.html",
+      "expected": "passed",
+      "ruleId": "undefined",
+      "ruleName": "Document title is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/undefined"
+    },
+    {
+      "url": "https://act-rules.github.io/testcases/undefined-d5a11f931cbd8e445051a5c51487d8319f818eac.html",
+      "expected": "passed",
+      "ruleId": "undefined",
+      "ruleName": "Document title is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/undefined"
+    },
+    {
+      "url": "https://act-rules.github.io/testcases/undefined-2a239e2e6ff87adfe787d18a803ea63e57b59c58.html",
+      "expected": "failed",
+      "ruleId": "undefined",
+      "ruleName": "Document title is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/undefined"
+    },
+    {
+      "url": "https://act-rules.github.io/testcases/undefined-fbc0b3254308a8411bdb28465b4c9690bc58b192.html",
+      "expected": "failed",
+      "ruleId": "undefined",
+      "ruleName": "Document title is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/undefined"
+    },
+    {
+      "url": "https://act-rules.github.io/testcases/undefined-6801f6cb6913436e80f8a828911318063807b1d2.html",
+      "expected": "failed",
+      "ruleId": "undefined",
+      "ruleName": "Document title is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/undefined"
+    },
+    {
+      "url": "https://act-rules.github.io/testcases/undefined-fe3c63f444e7ddf19f96f54c619a66038b3253cd.html",
+      "expected": "inapplicable",
+      "ruleId": "undefined",
+      "ruleName": "Document title is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/undefined"
+    },
+    {
+      "url": "https://act-rules.github.io/testcases/undefined-e157e8eda3e78b9b3d2ee2c9be476ba93a791c1c.html",
+      "expected": "inapplicable",
+      "ruleId": "undefined",
+      "ruleName": "Document title is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/undefined"
+    },
+    {
+      "url": "https://act-rules.github.io/testcases/undefined-553c172aca8827f4d9217d44187ce3fc2d62973d.svg",
+      "expected": "inapplicable",
+      "ruleId": "undefined",
+      "ruleName": "Document title is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/undefined"
+    },
+    {
+      "url": "https://act-rules.github.io/testcases/undefined-0156c00879c59838538fa57e385baa4b6db24b2c.html",
+      "expected": "inapplicable",
+      "ruleId": "undefined",
+      "ruleName": "Document title is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/undefined"
+    },
+    {
+      "url": "https://act-rules.github.io/testcases/undefined-082ef1e1f330904ddca1749061d9dec8d24da4fe.html",
+      "expected": "inapplicable",
+      "ruleId": "undefined",
+      "ruleName": "Document title is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/undefined"
     },
     {
       "url": "https://act-rules.github.io/testcases/9eb3f6-458ae1885e68aaf2660ff66f81b057ae9efd9310.html",

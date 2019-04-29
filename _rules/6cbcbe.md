@@ -20,7 +20,7 @@ authors:
 
 ### Applicability
 
-This rule applies to any set of any two or more HTML or SVG elements that have the [semantic role](#semantic-role) of `link`, or a role that inherits from the `link` role, are [included in the accessibility tree](#included-in-the-accessibility-tree), and that have [matching](#matching-characters) [accessible names](#accessible-name) that does not only consist of [whitespace](#whitespace).
+This rule applies to any set of any two or more HTML or SVG elements that have the [semantic role](#semantic-role) of `link`, or a role that inherits from the `link` role, are [included in the accessibility tree](#included-in-the-accessibility-tree), and that have [matching](#matching-characters) [accessible names](#accessible-name) that do not only consist of [whitespace](#whitespace).
 
 **Note:** The test target for this rule is the full set of link elements that share the same [matching](#matching-characters) [accessible name](#accessible-name).
 
@@ -93,7 +93,7 @@ URLs differ due to trailing slashes, but resolves to the same resource after red
 
 #### Passed example 6
 
-Pages contain different amounts of information and/or differently worded information, but fulfils the same purpose in relation to the link:
+Pages contain different amounts of information and/or differently worded information, but fulfil the same purpose in relation to the link:
 
 ```html
 <a href="/test-assets/6cbcbe/page1.html">Call us</a>
@@ -111,7 +111,7 @@ Pages have the same advertised key content but use different layouts:
 
 #### Passed example 8
 
-Links created via scripting with explicit role of link, but leads to the same resource: 
+Links created via scripting with explicit role of link, but lead to the same resource: 
 
 ```html
 <span role="link" tabindex="0"
@@ -165,7 +165,7 @@ Same accessible name used for links going to web pages that are similar, but hav
 
 #### Failed example 3
 
-Links created via scripting with explicit role of link, but leads to different resources that offer different content: 
+Links created via scripting with explicit role of link, but lead to resources that offer different content: 
 
 ```html
 <span role="link" tabindex="0"
@@ -190,7 +190,7 @@ Same accessible name used for image links going to different resources:
 
 #### Failed example 5
 
-A set of two SVG `<a>` elements have the same accessible name but links to different resources:
+A set of two SVG `<a>` elements have the same accessible name but link to different resources:
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -228,7 +228,7 @@ Links resolves to same resource after redirect, but the redirect is not instant:
 
 #### Inapplicable example 2
 
-No identical accessible names for links:
+Links with different accessible names:
 
 ```html
 <a href="/test-assets/6cbcbe/about/contact.html">Contact main office</a>

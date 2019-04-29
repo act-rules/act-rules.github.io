@@ -58,7 +58,7 @@ Multiple `iframe` within document tree have the same accessible name (given by `
 
 #### Passed example 2
 
-Multiple `iframe` within document tree have the same accessible name (given by `title` and `aria-label`) and embed the same ressource.
+Multiple `iframe` within document tree have the same accessible name (given by `title` and `aria-label`) and embed the same resource.
 
 ```html
 <iframe title="List of Contributors" src="../test-assets/iframe-unique-name-4b1c6c/page-one.html">
@@ -70,7 +70,7 @@ Multiple `iframe` within document tree have the same accessible name (given by `
 
 #### Passed example 3
 
-Multiple `iframe` within document tree have the same accessible name (given by `aria-labelledby`) and embed the same purpose.
+Multiple `iframe` within document tree have the same accessible name (given by `aria-labelledby`) and embed the same resource.
 
 ```html
 <div id="desc-for-title">List of Contributors</div>

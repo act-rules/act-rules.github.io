@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "@vocab": "http://xmlns.com/foaf/0.1/",
+    "id": "@id",
+    "type": "@type"
+  },
+  "id": "_:evaluator",
+  "type": "Person",
+  "name": ""
+}

@@ -1,16 +1,15 @@
 ---
-id: c5a4ea
-name: video with audio has audio descriptions or transcript
+id: 1ec09b
+name: video with audio has audio description
 rule_type: composite
 description: |
-  This rule checks video elements with audio have an alternative for the video content as audio or as text.
+  This rule checks video elements with audio have audio description
 success_criterion:
-  - 1.2.3 # Audio Description or Media Alternative (Prerecorded)
+  - 1.2.5 # Audio Description (Prerecorded)§
 atomic_rules:
-  - SC1-2-video-audio-description
-  - SC1-2-video-transcript
-  - SC1-2-video-description-track
-  - SC1-2-video-media-alternative
+  - video-audio-described-1ea59c
+  - video-media-alternative-ab4d13
+  - video-description-track-f196ce
 authors:
   - Wilco Fiers
   - Brian Bors
@@ -27,7 +26,6 @@ The rule applies to every [non-streaming](#non-streaming) `video` element that i
 For each test target, the outcome of at least one of the following rules is passed:
 
 - [Video element audio described](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-audio-description.html)
-- [Video element transcript](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-transcript.html)
 - [Video element description track](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-Video-description-track.html)
 - [Video as a media alternative for text](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-media-alternative.html)
 
@@ -37,21 +35,16 @@ This rule assumes that a mechanism is available to start the video and that the 
 
 ## Accessibility support
 
-See [Video element description track: accessibility support](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-Video-description-track.html#accessibility-support.html).
-See [Video with audio has audio description: accessibility support](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-audio-description.html#accessibility-support.html).
+See [Video element description track: accessibility support](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-Video-description-track.html#accessibility-support).
+See [Video with audio has audio description: accessibility support](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-audio-description.html#accessibility-support).
 
 ## Background
 
-- [Understanding Success Criterion 1.2.5: Audio Description (Prerecorded)
-  ](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html)
-- [G78: Providing a second, user-selectable, audio track that includes audio descriptions
-  ](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G78)
-- [H96: Using the track element to provide audio descriptions
-  ](https://www.w3.org/WAI/GL/2016/WD-WCAG20-TECHS-20160105/H96)
-- [G173: Providing a version of a movie with audio descriptions
-  ](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G173)
-- [G8: Providing a movie with extended audio descriptions
-  ](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G8)
+- [Understanding Success Criterion 1.2.5: Audio Description (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html)
+- [G78: Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G78)
+- [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/GL/2016/WD-WCAG20-TECHS-20160105/H96)
+- [G173: Providing a version of a movie with audio descriptions](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G173)
+- [G8: Providing a movie with extended audio descriptions](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G8)
 
 ## Test Cases
 
@@ -76,18 +69,6 @@ A video element with a voiceover that describes the visual information.
 
 #### Pass example 2
 
-A video element with a link to a text transcript.
-
-```html
-<video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"/>
-</video>
-<a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
-```
-
-#### Pass example 3
-
 A video element with a track element that contains descriptions.
 
 ```html
@@ -101,7 +82,7 @@ A video element with a track element that contains descriptions.
 </video>
 ```
 
-#### Pass example 4
+#### Pass example 3
 
 A video element that describes some of the text on the same page. The text on the page labels the video as an alternative.
 
@@ -140,18 +121,6 @@ A video element with an incorrect audio description.
 
 #### Fail example 2
 
-A video element with a link to an incorrect text transcript on a different page.
-
-```html
-<video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
-</video>
-<a href="../test-assets/rabbit-video/incorrect-transcript.html">Transcript</p>
-```
-
-#### Fail example 3
-
 A video element with a track element that contains incorrect descriptions.
 
 ```html
@@ -165,21 +134,16 @@ A video element with a track element that contains incorrect descriptions.
 </video>
 ```
 
-#### Fail example 4
+#### Fail example 3
 
-A video element that describes some of the text on the same page. The video contains more information than the text does.
+A video element with a link to a text transcript.
 
 ```html
-<p>
-	Not being able to use your computer because your mouse doesn't work, is
-	frustrating. Either through preference or circumstance. This is solved by
-	keyboard compatibility. Keyboard compatibility is described in WCAG. See the
-	video below to watch the same information again in video form.
-</p>
-<video
-	src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4"
-	controls
-></video>
+<video controls>
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"/>
+</video>
+<a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
 ```
 
 ### Inapplicable

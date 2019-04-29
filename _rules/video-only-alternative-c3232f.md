@@ -7,10 +7,10 @@ description: |
 success_criterion:
   - 1.2.1 # Audio-only and Video-only (Prerecorded)
 atomic_rules:
-  - SC1-2-1-media-alternative-video
-  - SC1-2-1-video-only-description-track
-  - SC1-2-1-video-only-element-transcript
-  - SC1-2-1-video-only-audio-alternative
+  - video-only-media-alternative-fd26cf
+  - video-only-description-track-ac7dc6
+  - video-only-element-transcript-ee13b5
+  - video-has-audio-alternative-eac66b
 authors:
   - Wilco Fiers
   - Brian Bors

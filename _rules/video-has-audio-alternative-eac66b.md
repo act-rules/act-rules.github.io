@@ -7,8 +7,8 @@ description: |
 success_criterion:
   - 1.2.2
 atomic_rules:
-  - SC1-2-video-media-alternative
-  - SC1-2-2-video-has-captions
+  - video-media-alternative-ab4d13
+  - video-has-captions-f51b46
 authors:
   - Wilco Fiers
   - Brian Bors

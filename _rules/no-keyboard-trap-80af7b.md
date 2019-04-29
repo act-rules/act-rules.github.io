@@ -7,8 +7,8 @@ description: |
 success_criterion:
   - 2.1.2 # No Keyboard Trap
 atomic_rules:
-  - SC2-1-2-no-keyboard-trap-standard-navigation
-  - SC2-1-2-no-keyboard-trap-non-standard-navigation
+  - no-keyboard-trap-standard-navigation-a1b64e
+  - no-keyboard-trap-non-standard-navigation-ebe86a
 authors:
   - Geir Sindre Fossøy
   - Dagfinn Rømen

@@ -4,12 +4,12 @@ name: Filename is valid accessible name
 description: |
   This rule checks that image elements that use their source filename as their accessible name do so without loss of information to the user.
 success_criterion:
-- 1.1.1 # Non-Text Content
+  - 1.1.1 # Non-Text Content
 test_aspects:
-- DOM Tree
-- CSS Styling
+  - DOM Tree
+  - CSS Styling
 authors:
-- Bryn Anderson
+  - Bryn Anderson
 ---
 
 ## Test procedure
@@ -24,11 +24,11 @@ Each test target has an accessible name that serves an equivalent purpose to the
 
 ## Assumptions
 
-*There are currently no assumptions*
+_There are currently no assumptions_
 
 ## Accessibility support
 
- *There are no major accessibility support issues known for this rule.*
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 
@@ -44,7 +44,7 @@ Each test target has an accessible name that serves an equivalent purpose to the
 The `img` element's accessible name uses the filename which accurately describes the image.
 
 ```html
-<img src="https://www.w3.org/WAI/demos/bad/img/w3c" alt="w3c">
+<img src="https://www.w3.org/WAI/demos/bad/img/w3c" alt="w3c" />
 ```
 
 #### Passed example 2
@@ -52,7 +52,9 @@ The `img` element's accessible name uses the filename which accurately describes
 The `img` element's accessible name uses the filename, which in combination with the `a` element accurately describes the image.
 
 ```html
-<a href="https://www.w3.org/WAI/demos/bad/img/w3c.png" download>Download <img src="w3c.png" alt="w3c.png"></a>
+<a href="https://www.w3.org/WAI/demos/bad/img/w3c.png" download
+	>Download <img src="w3c.png" alt="w3c.png"
+/></a>
 ```
 
 ### Failed
@@ -62,7 +64,7 @@ The `img` element's accessible name uses the filename, which in combination with
 The `img` element's accessible name matches the image filename. However the presence of the file extension in the accessible name is redundant and results in the accessible name not accurately describing the image.
 
 ```html
-<img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png">
+<img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png" />
 ```
 
 #### Failed example 2
@@ -70,7 +72,11 @@ The `img` element's accessible name matches the image filename. However the pres
 The `input` element with a `type` of `image` has an accessible name that matches the filename. However the presence of the file extension in the accessible name is redundant and results in the accessible name not accurately describing the image.
 
 ```html
-<input type="image" src="https://www.w3.org/WAI/demos/bad/before/img/top_weather.gif" alt="top_weather.gif">
+<input
+	type="image"
+	src="https://www.w3.org/WAI/demos/bad/before/img/top_weather.gif"
+	alt="top_weather.gif"
+/>
 ```
 
 ### Inapplicable
@@ -80,7 +86,7 @@ The `input` element with a `type` of `image` has an accessible name that matches
 The `img` element doesn't have the semantic role of image.
 
 ```html
-<img role="presentation">
+<img role="presentation" />
 ```
 
 #### Inapplicable example 2
@@ -88,7 +94,7 @@ The `img` element doesn't have the semantic role of image.
 The `img` element is not included in the accessibility tree.
 
 ```html
-<img style="display:none;">
+<img style="display:none;" />
 ```
 
 #### Inapplicable example 3
@@ -96,7 +102,10 @@ The `img` element is not included in the accessibility tree.
 The `img` element's accessible name is not equivalent to the file name specified in the `src` attribute.
 
 ```html
-<img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="modanna lily">
+<img
+	src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg"
+	alt="modanna lily"
+/>
 ```
 
 #### Inapplicable example 4
@@ -104,5 +113,9 @@ The `img` element's accessible name is not equivalent to the file name specified
 The `img` element's `alt` attribute matches the filename but is overridden by the `aria-label` value which takes precedence in the accessible name calculation.
 
 ```html
-<img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="teaser_right2.jpg" aria-label="modanna lily">
+<img
+	src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg"
+	alt="teaser_right2.jpg"
+	aria-label="modanna lily"
+/>
 ```

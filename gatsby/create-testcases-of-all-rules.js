@@ -5,7 +5,6 @@
  * -> create `testcases.json` into `./public`
  */
 
-
 const objectHash = require('object-hash')
 const codeBlocks = require('gfm-code-blocks')
 const {
@@ -22,119 +21,116 @@ const createTestcasesOfRuleOfEmReportTool = require('./create-testcases-of-rule-
 const createTestcasesOfAllRules = options => {
 	const { graphql } = options
 
-	return graphql(queries.getAllRules)
-		.then(async ({ errors, data }) => {
-			if (errors) {
-				Promise.reject(errors)
+	return graphql(queries.getAllRules).then(async ({ errors, data }) => {
+		if (errors) {
+			Promise.reject(errors)
+		}
+
+		let allRulesTestcases = []
+
+		/**
+		 * iterate all rule pages
+		 * -> get code snippets
+		 * -> and their relevant titles
+		 */
+		const allRulePages = data.allMarkdownRemark.edges
+
+		allRulePages.forEach(markdownPage => {
+			const { node } = markdownPage
+			const { rawMarkdownBody, frontmatter, fields } = node
+			const {
+				name: ruleName,
+				success_criterion: ruleSuccessCriterion,
+			} = frontmatter
+			const { slug } = fields
+			const ruleId = slug.replace('rules/', '')
+			const codeTitles = getAllMatchesForRegex(
+				regexps.testcaseTitle,
+				rawMarkdownBody
+			)
+			const codeSnippets = codeBlocks(rawMarkdownBody)
+
+			if (codeTitles.length !== codeSnippets.length) {
+				throw new Error(
+					`Number of matching titles for code snippets is wrong. Check markdown '${name}' for irregularities. Slug: '${slug}'`
+				)
 			}
 
-			let allRulesTestcases = []
-
 			/**
-			 * iterate all rule pages
-			 * -> get code snippets
-			 * -> and their relevant titles
+			 * iterate each code snippet
+			 * -> create a testcase file
+			 * -> and add meta of testcase to `testcases.json`
 			 */
-			const allRulePages = data.allMarkdownRemark.edges
-
-			allRulePages.forEach(markdownPage => {
-				const { node } = markdownPage
-				const { rawMarkdownBody, frontmatter, fields } = node
-				const {
-					name: ruleName,
-					success_criterion: ruleSuccessCriterion
-				} = frontmatter
-				const { slug } = fields
-				const ruleId = slug.replace('rules/', '')
-				const codeTitles = getAllMatchesForRegex(
-					regexps.testcaseTitle,
-					rawMarkdownBody
-				)
-				const codeSnippets = codeBlocks(rawMarkdownBody)
-
-				if (codeTitles.length !== codeSnippets.length) {
-					throw new Error(
-						`Number of matching titles for code snippets is wrong. Check markdown '${name}' for irregularities. Slug: '${slug}'`
-					)
+			const ruleTestcases = codeSnippets.reduce((out, codeBlock, index) => {
+				const title = codeTitles[index]
+				if (!title) {
+					throw new Error('No title found for code snippet.')
 				}
 
+				const { code, block } = codeBlock
+				let { type = 'html' } = codeBlock
+
+				if (regexps.testcaseCodeSnippetTypeIsSvg.test(block.substring(0, 15))) {
+					type = 'svg'
+				}
+
+				const codeId = objectHash({
+					block,
+					type,
+					ruleId,
+				})
+
+				const titleCurated = title.value.split(' ').map(t => t.toLowerCase())
+
+				const testcaseFileName = `${ruleId}/${codeId}.${type}`
+				const testcasePath = `testcases/${testcaseFileName}`
 				/**
-				 * iterate each code snippet
-				 * -> create a testcase file
-				 * -> and add meta of testcase to `testcases.json`
+				 * Create testcase file
 				 */
-				const ruleTestcases = codeSnippets.reduce((out, codeBlock, index) => {
-					const title = codeTitles[index]
-					if (!title) {
-						throw new Error('No title found for code snippet.')
-					}
-
-					const { code, block } = codeBlock
-					let { type = 'html' } = codeBlock
-
-					if (regexps.testcaseCodeSnippetTypeIsSvg.test(block.substring(0, 15))) {
-						type = 'svg'
-					}
-
-					const codeId = objectHash({
-						block,
-						type,
-						ruleId
-					})
-
-					const titleCurated = title.value.split(' ').map(t => t.toLowerCase())
-
-					const testcaseFileName = `${ruleId}/${codeId}.${type}`
-					const testcasePath = `testcases/${testcaseFileName}`
-					/**
-					 * Create testcase file
-					 */
-					createFile(`${baseDir}/${testcasePath}`, code)
-
-					/**
-					 * Create meta data for testcase(s)
-					 */
-					const testcase = {
-						testcaseId: codeId,
-						url: `${url}/${testcasePath}`,
-						expected: titleCurated[0],
-						ruleId,
-						ruleName,
-						rulePage: `${url}/${slug}`,
-					}
-
-					out.push(testcase)
-					return out;
-				}, [])
-
-				// add rule testcases to all testcases
-				allRulesTestcases = allRulesTestcases.concat(ruleTestcases)
+				createFile(`${baseDir}/${testcasePath}`, code)
 
 				/**
-				 * Create test cases of rule for use with `em report tool`
+				 * Create meta data for testcase(s)
 				 */
-				createTestcasesOfRuleOfEmReportTool({
+				const testcase = {
+					testcaseId: codeId,
+					url: `${url}/${testcasePath}`,
+					expected: titleCurated[0],
 					ruleId,
 					ruleName,
-					ruleTestcases,
-					ruleSuccessCriterion
-				})
+					rulePage: `${url}/${slug}`,
+				}
+
+				out.push(testcase)
+				return out
+			}, [])
+
+			// add rule testcases to all testcases
+			allRulesTestcases = allRulesTestcases.concat(ruleTestcases)
+
+			/**
+			 * Create test cases of rule for use with `em report tool`
+			 */
+			createTestcasesOfRuleOfEmReportTool({
+				ruleId,
+				ruleName,
+				ruleTestcases,
+				ruleSuccessCriterion,
 			})
-
-
-			/**
-			 * Copy `test-assets` that are used by `testcases`
-			 */
-			await copyTestcasesAssets()
-
-			/**
-			 * Generate `testcases.json`
-			 */
-			await createTestcasesJson(allRulesTestcases)
-
-
-			console.info(`\nDONE!!! Generated Test Cases.\n`)
 		})
+
+		/**
+		 * Copy `test-assets` that are used by `testcases`
+		 */
+		await copyTestcasesAssets()
+
+		/**
+		 * Generate `testcases.json`
+		 */
+		await createTestcasesJson(allRulesTestcases)
+
+		console.info(`\nDONE!!! Generated Test Cases.\n`)
+	})
 }
 
 module.exports = createTestcasesOfAllRules

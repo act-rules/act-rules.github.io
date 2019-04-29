@@ -3,7 +3,7 @@ id: 59796f
 name: Image button has accessible name
 rule_type: atomic
 description: |
-  This rule checks that each image button element has an accessible name 
+  This rule checks that each image button element has an accessible name
 success_criterion:
   - 1.1.1 # Non-Text Content (A)
   - 4.1.2 # Name, Role, Value (A)

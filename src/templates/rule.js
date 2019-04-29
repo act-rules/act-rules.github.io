@@ -73,9 +73,7 @@ export default ({ data }) => {
 					return (
 						<article key={node.id}>
 							<a id={key} href={`#${key}`}>
-								<h3>
-									{frontmatter.title}
-								</h3>
+								<h3>{frontmatter.title}</h3>
 							</a>
 							<i>
 								key: <u>{key}</u>
@@ -120,11 +118,13 @@ export default ({ data }) => {
 						{/* title */}
 						<h1>{frontmatter.name}</h1>
 						{/* testcase download */}
-						<a className='btn-secondary'
-							aria-label='test cases of rule for use in wcag em report tool'
-							target='_blank'
+						<a
+							className="btn-secondary"
+							aria-label="test cases of rule for use in wcag em report tool"
+							target="_blank"
 							rel="noopener noreferrer"
-							href={ruleTestcasesUrl}>
+							href={ruleTestcasesUrl}
+						>
 							See Testcases
 						</a>
 					</header>

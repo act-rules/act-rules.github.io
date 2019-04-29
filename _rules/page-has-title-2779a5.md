@@ -122,7 +122,7 @@ The `title` only contains characters that are not letters or numbers.
 
 ```html
 <html>
-  <title>#$@&%*!</title>
+	<title>#$@&%*!</title>
 </html>
 ```
 
@@ -179,7 +179,7 @@ The `title` only contains a separator character.
 
 ```html
 <html>
-  <title> </title>
+	<title> </title>
 </html>
 ```
 

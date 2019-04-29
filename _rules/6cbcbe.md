@@ -147,7 +147,7 @@ A set of two SVG `<a>` elements have the same accessible name and link to the sa
 
 #### Failed example 1
 
-Same link text used for links going to different resources:
+Same accessible name used for links going to different resources:
 
 ```html
 <a href="http://facebook.com">Follow us</a> 
@@ -156,7 +156,7 @@ Same link text used for links going to different resources:
 
 #### Failed example 2
 
-Same link text used for links going to web pages that are similar, but have different information in their content:
+Same accessible name used for links going to web pages that are similar, but have different information in their content:
 
 ```html
 <a href="/test-assets/6cbcbe/about/contact.html">Contact us</a> 
@@ -228,7 +228,7 @@ Links resolves to same resource after redirect, but the redirect is not instant:
 
 #### Inapplicable example 2
 
-No identical link texts:
+No identical accessible names for links:
 
 ```html
 <a href="/test-assets/6cbcbe/about/contact.html">Contact main office</a>

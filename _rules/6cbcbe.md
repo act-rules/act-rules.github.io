@@ -31,7 +31,7 @@ Resolving the links includes potential redirects, if the redirects happen instan
 
 ## Assumptions
 
-This rule assumes that the purpose of the links with identical names would not be ambiguous to users in general when seen in context on the web page, as users of assistive technologies in this case is not at a disadvantage when viewing the link out of context, e.g. on a list of links in a screen reader.
+This rule assumes that the purpose of the links with identical accessible names would not be ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.9 Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html). If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links out of context, e.g. on a list of links in a screen reader, which makes it more of a general user experience concern than an accessibility issue.
 
 ## Accessibility support
 

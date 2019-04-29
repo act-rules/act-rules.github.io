@@ -18,7 +18,7 @@ authors:
 
 ### Applicability
 
-The rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namespace with a [semantic role](#semantic-role) of either `img` `graphics-document` `graphics-object` `graphics-symbol`, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+The rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namespace with a [semantic role](#semantic-role) of either `img`, `graphics-document`, `graphics-object`, `graphics-symbol`, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ### Expectation
 
@@ -158,6 +158,7 @@ The `svg` `<circle>` elements are included in the accessibility tree but do not 
 	<circle role="graphics-symbol" cx="250" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
 </svg>
 ```
+
 #### Failed example 4
 
 The `<g>` elements are included in the accessibility tree with the `graphics-object` role but only one of the elements has an accessible name.

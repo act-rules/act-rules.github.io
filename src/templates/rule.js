@@ -17,6 +17,8 @@ export default ({ data }) => {
 	const { slug } = fields
 	const converter = new showdown.Converter()
 	const updatedTitle = `Rule | ${frontmatter.name} | ${site.siteMetadata.title}`
+	const ruleId = slug.replace('rules/', '')
+	const ruleTestcasesUrl = `/testcases/${ruleId}/rule-${ruleId}-testcases-for-em-report-tool.json`
 
 	const getRuleType = rule_type => {
 		if (!rule_type) {
@@ -114,9 +116,17 @@ export default ({ data }) => {
 			<section className="page-rule">
 				{/* rule content */}
 				<section>
-					{/* title */}
 					<header>
+						{/* title */}
 						<h1>{frontmatter.name}</h1>
+						{/* testcase download */}
+						<a className='btn-secondary'
+							aria-label='test cases of rule for use in wcag em report tool'
+							target='_blank'
+							rel="noopener noreferrer"
+							href={ruleTestcasesUrl}>
+							See Testcases
+						</a>
 					</header>
 					{/* Description */}
 					<br />

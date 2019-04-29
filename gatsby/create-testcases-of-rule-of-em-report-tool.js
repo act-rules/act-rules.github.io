@@ -35,10 +35,11 @@ const createTestcasesOfRuleOfEmReportTool = async options => {
   const matchingScTests = ruleScs.map(scNum => {
     return scUrlsMetaData[scNum].test.toLowerCase()
   })
+
   const auditResults = scEmReportAuditResult.map(auditResult => {
-    if(matchingScTests.includes(auditResult.test.toLowerCase())){
-      auditResult.result.outcome = 'earl:cantTell'
-    }
+    auditResult.result.outcome = (matchingScTests.includes(auditResult.test.toLowerCase()))
+      ? 'earl:cantTell'
+      : 'earl:inapplicable'
     return auditResult
   })
 
@@ -75,7 +76,7 @@ const createTestcasesOfRuleOfEmReportTool = async options => {
   }
 
   await createFile(
-    `${baseDir}/testcases/${ruleId}/em-report-json-${ruleId}.json`,
+    `${baseDir}/testcases/${ruleId}/rule-${ruleId}-testcases-for-em-report-tool.json`,
     JSON.stringify(json, undefined, 2)
   )
 }

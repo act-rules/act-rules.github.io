@@ -23,7 +23,7 @@ authors:
 This rule applies to any HTML or SVG element that:
 * has a [semantic role](#semantic-role) that is a [widget role](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent), and 
 * has [descendants](https://www.w3.org/TR/dom41/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) that are [visible](#visible) [text nodes](https://www.w3.org/TR/dom/#text), and
-* has an [accessible name](#accessible-name), even if the name is the empty string ("").
+* has an [accessible name](#accessible-name), even if the name is empty ("").
 
 **Note**: [widget roles](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [support name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent) are: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `switch`, `tab`, `treeitem`.
 

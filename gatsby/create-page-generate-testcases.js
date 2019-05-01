@@ -6,6 +6,7 @@
  */
 
 const { ncp } = require('ncp')
+const objectHash = require('object-hash')
 const codeBlocks = require('gfm-code-blocks')
 const {
 	www: { url, baseDir },
@@ -61,21 +62,23 @@ const createPageGenerateTestcases = options => {
 					throw new Error('No title found for code snippet.')
 				}
 
-				const { code } = codeBlock
+				const { code, block } = codeBlock
 				let { type = 'html' } = codeBlock
 
-				if (
-					regexps.testcaseCodeSnippetTypeIsSvg.test(
-						codeBlock.block.substring(0, 15)
-					)
-				) {
+				if (regexps.testcaseCodeSnippetTypeIsSvg.test(block.substring(0, 15))) {
 					type = 'svg'
 				}
 
-				const uniqueId = slug.replace('rules/', '')
+				const ruleId = slug.replace('rules/', '')
+				const codeId = objectHash({
+					block,
+					type,
+					ruleId
+				})
+
 				const titleCurated = title.value.split(' ').map(t => t.toLowerCase())
 
-				const testcaseFileName = `${uniqueId}-${titleCurated.join('-')}.${type}`
+				const testcaseFileName = `${ruleId}-${codeId}.${type}`
 				const testcasePath = `testcases/${testcaseFileName}`
 				/**
 				 * Create testcase file
@@ -88,7 +91,7 @@ const createPageGenerateTestcases = options => {
 				const testcase = {
 					url: `${url}/${testcasePath}`,
 					expected: titleCurated[0],
-					ruleId: uniqueId,
+					ruleId,
 					ruleName: name,
 					rulePage: `${url}/${slug}`,
 				}

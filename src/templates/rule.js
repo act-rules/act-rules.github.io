@@ -72,7 +72,7 @@ export default ({ data }) => {
 						<article key={node.id}>
 							<a id={key} href={`#${key}`}>
 								<h3>
-									{frontmatter.title} ({key})
+									{frontmatter.title}
 								</h3>
 							</a>
 							<i>

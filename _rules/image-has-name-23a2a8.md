@@ -126,10 +126,10 @@ Image element inside a `div` positioned off screen with no accessible name and i
 
 #### Inapplicable example 1
 
-Element that does not have the [semantic role](#semantic-role) of `img`
+Element is not an HTML element
 
-```svg
-<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+```html
+ <svg xmlns="http://www.w3.org/2000/svg" role="img" width="100" height="100">
   <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
 </svg>
 ```
@@ -152,10 +152,8 @@ HTML `img` element is not [included in the accessibility tree](#included-in-the-
 
 #### Inapplicable example 4
 
-Non-image element.
+The element is not a `img` element
 
 ```html
-<svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
-</svg>
+<div aria-label="W3C logo"></div>
 ```

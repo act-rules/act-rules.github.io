@@ -6,6 +6,8 @@ footer.app-footer {
   border-top: 1px solid $sep;
   height: 60px;
   width: auto;
+  z-index: 1;
+  background-color: $bg-primary;
 
   a {
     color: $accent;

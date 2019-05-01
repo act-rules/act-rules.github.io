@@ -63,7 +63,7 @@ No trap for keyboard navigation.
 Using `tabindex="1"`.
 
 ```html
-<div tabindex="“1”">Text</div>
+<div tabindex=“1”>Text</div>
 ```
 
 #### Passed example 3
@@ -71,7 +71,7 @@ Using `tabindex="1"`.
 Using `tabindex="-1"`.
 
 ```html
-<div tabindex="“-1”">Text</div>
+<div tabindex="-1">Text</div>
 ```
 
 ### Failed

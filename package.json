@@ -24,6 +24,10 @@
 			"name": "Carlos Duarte",
 			"url": "https://github.com/carlosapaduarte"
 		},
+    {
+      "name": "Corbb O'Connor",
+      "url": "https://github.com/corbb"
+    },
 		{
 			"name": "Dagfinn Rømen",
 			"url": "https://github.com/DagfinnRomen"
@@ -87,6 +91,7 @@
 		"ncp": "^2.0.0",
 		"node-sass": "^4.11.0",
 		"normalize.css": "^8.0.1",
+		"object-hash": "^1.3.1",
 		"prismjs": "^1.16.0",
 		"prop-types": "^15.7.2",
 		"react": "^16.8.6",

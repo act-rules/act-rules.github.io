@@ -22,7 +22,7 @@ The rule applies to any HTML or SVG element that is [included in the accessibili
 
 ### Expectation
 
-The target element is [owned by](#owned-by) an element that has a [semantic role](#semantic-role) matching one of the [WAI-ARIA required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope) for the target element.
+The target element is [owned by](#owned-by) an element that has a [semantic role](#semantic-role) that is one of the [WAI-ARIA required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope) of the target element.
 
 **Note:** The definition of [owned by](#owned-by) used in this rule is diverging from the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element). See more in the [owned by](#owned-by) definition.
 

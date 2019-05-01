@@ -1,4 +1,5 @@
 ---
+id: ffd0e9
 name: Heading does not only consist of seperators or breaks
 rule_type: atomic
 description: | 

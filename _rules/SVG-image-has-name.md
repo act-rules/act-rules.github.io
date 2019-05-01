@@ -1,4 +1,5 @@
 ---
+id: 7d6734
 name: SVG image has accessible name
 description: |
   This rule checks that each SVG image element that is included in the accessibility tree, has an accessible name.

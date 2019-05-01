@@ -1,4 +1,5 @@
 ---
+id: ff89c9
 name: ARIA required context role
 description: | 
   This rule checks that a role does not exist outside of its required context.

@@ -1,4 +1,5 @@
 ---
+id: b20e66
 name: Links with identical accessible names serve equivalent purpose
 test_type: atomic
 

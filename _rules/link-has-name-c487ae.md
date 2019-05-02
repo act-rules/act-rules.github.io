@@ -186,9 +186,9 @@ Aria-labelledby references to a non-existing id.
 Non-visible link.
 
 ```html
-<a href="http://www.w3.org/WAI" style="left: -9999px; position: absolute;"
-	><img src="#"
-/></a>
+<a href="http://www.w3.org/WAI" style="left: -9999px; position: absolute;">
+	<img src="#"/>
+</a>
 ```
 
 ### Inapplicable
@@ -198,9 +198,9 @@ Non-visible link.
 `<a>` element that has had its role changed.
 
 ```html
-<a href="http://www.w3.org/WAI" role="button"
-	>Web Accessibility Initiative (WAI)</a
->
+<a href="http://www.w3.org/WAI" role="button">
+	Web Accessibility Initiative (WAI)
+</a>
 ```
 
 #### Inapplicable example 2
@@ -219,9 +219,9 @@ Not included in the accessibility tree due to `visibility: hidden`.
 <a href="http://www.w3.org/WAI" style="visibility: hidden;">Some text</a>
 ```
 
-#### Inapplicable example 10
+#### Inapplicable example 4
 
-Not included in the accessibility tree due to `aria-hideden="true"`.
+Not included in the accessibility tree due to `aria-hidden="true"`.
 
 ```html
 <a aria-hidden="true" href="http://www.w3.org/WAI">

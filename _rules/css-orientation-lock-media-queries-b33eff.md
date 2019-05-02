@@ -54,7 +54,7 @@ A page, where CSS media query styles negate orientation lock, and therefore does
     <!--
       1. The style from the relative stylesheet applies `transform: rotate(90deg)`
     -->
-    <link rel="stylesheet" href="../test-assets/html-css-lock.css">
+    <link rel="stylesheet" href="../test-assets/css-orientation-lock-media-queries-b33eff/html-css-lock.css">
     <!--
       2. The below style negates the orientation lock
     -->
@@ -109,7 +109,7 @@ A page, where orientation is locked by applying `transform` style on `portrait` 
     <!--
       1. The style from the relative stylesheet applies `transform: rotate(90deg)`
     -->
-    <link rel="stylesheet" href="../test-assets/html-css-lock.css">
+    <link rel="stylesheet" href="../test-assets/css-orientation-lock-media-queries-b33eff/html-css-lock.css">
   </head>
   <body>
       Page Content

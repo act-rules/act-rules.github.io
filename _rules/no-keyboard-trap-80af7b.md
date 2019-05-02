@@ -311,7 +311,7 @@ Disabled element.
 Hidden element using `display:none`.
 
 ```html
-<button type="button" style="“display:none;”">Click Me!</button>
+<button type="button" style="display:none;">Click Me!</button>
 ```
 
 #### Inapplicable example 4

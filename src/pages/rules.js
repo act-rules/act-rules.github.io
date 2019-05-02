@@ -51,7 +51,7 @@ export default ({ data }) => {
 									/>
 								</section>
 								{/* atomic rules */}
-								{getAtomicRulesForRule(atomic_rules, allRules.edges)}
+								{getAtomicRulesForRule(atomic_rules, allRules.edges, true)}
 								{/* authors */}
 								{getAuthors(authors)}
 							</article>

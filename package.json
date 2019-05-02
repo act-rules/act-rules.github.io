@@ -25,6 +25,10 @@
 			"url": "https://github.com/carlosapaduarte"
 		},
 		{
+			"name": "Corbb O'Connor",
+			"url": "https://github.com/corbb"
+		},
+		{
 			"name": "Dagfinn Rømen",
 			"url": "https://github.com/DagfinnRomen"
 		},
@@ -68,34 +72,35 @@
 	"dependencies": {
 		"axios": "^0.18.0",
 		"fastmatter": "^2.1.1",
-		"gatsby": "^2.3.21",
-		"gatsby-image": "^2.0.30",
-		"gatsby-plugin-manifest": "^2.0.20",
+		"gatsby": "^2.3.24",
+		"gatsby-image": "^2.0.39",
+		"gatsby-plugin-manifest": "^2.0.29",
 		"gatsby-plugin-offline": "^2.0.24",
-		"gatsby-plugin-prefetch-google-fonts": "^1.4.0",
-		"gatsby-plugin-react-helmet": "^3.0.7",
+		"gatsby-plugin-prefetch-google-fonts": "^1.4.2",
+		"gatsby-plugin-react-helmet": "^3.0.12",
 		"gatsby-plugin-sass": "^2.0.10",
-		"gatsby-plugin-sharp": "^2.0.34",
+		"gatsby-plugin-sharp": "^2.0.35",
 		"gatsby-remark-autolink-headers": "^2.0.15",
-		"gatsby-remark-prismjs": "^3.2.4",
-		"gatsby-source-filesystem": "^2.0.23",
-		"gatsby-transformer-remark": "^2.3.0",
-		"gatsby-transformer-sharp": "^2.1.15",
+		"gatsby-remark-prismjs": "^3.2.8",
+		"gatsby-source-filesystem": "^2.0.29",
+		"gatsby-transformer-remark": "^2.3.8",
+		"gatsby-transformer-sharp": "^2.1.18",
 		"gfm-code-blocks": "^1.0.0",
 		"jsonld": "^1.5.4",
 		"make-dir": "^2.1.0",
 		"ncp": "^2.0.0",
 		"node-sass": "^4.11.0",
 		"normalize.css": "^8.0.1",
-		"prismjs": "^1.15.0",
+		"object-hash": "^1.3.1",
+		"prismjs": "^1.16.0",
 		"prop-types": "^15.7.2",
-		"react": "^16.8.3",
-		"react-dom": "^16.8.3",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
 		"react-helmet": "^5.2.0",
 		"showdown": "^1.9.0"
 	},
 	"devDependencies": {
-		"prettier": "^1.16.4"
+		"prettier": "^1.17.0"
 	},
 	"keywords": [
 		"WCAG",
@@ -105,6 +110,7 @@
 	],
 	"license": "MIT",
 	"scripts": {
+		"clean": "rm -rf .cache public",
 		"prebuild": "npm run get-data",
 		"build": "gatsby build",
 		"develop": "npm run get-data && gatsby develop",

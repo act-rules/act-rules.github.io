@@ -5,27 +5,28 @@
  * -> create `testcases.json` into `./public`
  */
 
-const { ncp } = require('ncp')
+const objectHash = require('object-hash')
 const codeBlocks = require('gfm-code-blocks')
 const {
 	www: { url, baseDir },
-	name: pkgName,
-	description,
 } = require('./../package.json')
-const createFile = require('./../build/create-file')
+const createFile = require('../build/create-file')
 const getAllMatchesForRegex = require('./get-all-matches-for-regex')
 const queries = require('./queries')
 const regexps = require('./reg-exps')
+const copyTestcasesAssets = require('./copy-testcases-assets')
+const createTestcasesJson = require('./create-testcases-json')
+const createTestcasesOfRuleOfEmReportTool = require('./create-testcases-of-rule-of-em-report-tool')
 
-const createPageGenerateTestcases = options => {
+const createTestcasesOfAllRules = options => {
 	const { graphql } = options
 
-	return graphql(queries.getAllRules).then(({ errors, data }) => {
+	return graphql(queries.getAllRules).then(async ({ errors, data }) => {
 		if (errors) {
 			Promise.reject(errors)
 		}
 
-		const testcases = []
+		let allRulesTestcases = []
 
 		/**
 		 * iterate all rule pages
@@ -33,11 +34,16 @@ const createPageGenerateTestcases = options => {
 		 * -> and their relevant titles
 		 */
 		const allRulePages = data.allMarkdownRemark.edges
+
 		allRulePages.forEach(markdownPage => {
 			const { node } = markdownPage
 			const { rawMarkdownBody, frontmatter, fields } = node
-			const { name } = frontmatter
+			const {
+				name: ruleName,
+				success_criterion: ruleSuccessCriterion,
+			} = frontmatter
 			const { slug } = fields
+			const ruleId = slug.replace('rules/', '')
 			const codeTitles = getAllMatchesForRegex(
 				regexps.testcaseTitle,
 				rawMarkdownBody
@@ -55,27 +61,28 @@ const createPageGenerateTestcases = options => {
 			 * -> create a testcase file
 			 * -> and add meta of testcase to `testcases.json`
 			 */
-			codeSnippets.forEach((codeBlock, index) => {
+			const ruleTestcases = codeSnippets.reduce((out, codeBlock, index) => {
 				const title = codeTitles[index]
 				if (!title) {
 					throw new Error('No title found for code snippet.')
 				}
 
-				const { code } = codeBlock
+				const { code, block } = codeBlock
 				let { type = 'html' } = codeBlock
 
-				if (
-					regexps.testcaseCodeSnippetTypeIsSvg.test(
-						codeBlock.block.substring(0, 15)
-					)
-				) {
+				if (regexps.testcaseCodeSnippetTypeIsSvg.test(block.substring(0, 15))) {
 					type = 'svg'
 				}
 
-				const uniqueId = slug.replace('rules/', '')
+				const codeId = objectHash({
+					block,
+					type,
+					ruleId,
+				})
+
 				const titleCurated = title.value.split(' ').map(t => t.toLowerCase())
 
-				const testcaseFileName = `${uniqueId}-${titleCurated.join('-')}.${type}`
+				const testcaseFileName = `${ruleId}/${codeId}.${type}`
 				const testcasePath = `testcases/${testcaseFileName}`
 				/**
 				 * Create testcase file
@@ -86,44 +93,44 @@ const createPageGenerateTestcases = options => {
 				 * Create meta data for testcase(s)
 				 */
 				const testcase = {
+					testcaseId: codeId,
 					url: `${url}/${testcasePath}`,
 					expected: titleCurated[0],
-					ruleId: uniqueId,
-					ruleName: name,
+					ruleId,
+					ruleName,
 					rulePage: `${url}/${slug}`,
 				}
-				testcases.push(testcase)
+
+				out.push(testcase)
+				return out
+			}, [])
+
+			// add rule testcases to all testcases
+			allRulesTestcases = allRulesTestcases.concat(ruleTestcases)
+
+			/**
+			 * Create test cases of rule for use with `em report tool`
+			 */
+			createTestcasesOfRuleOfEmReportTool({
+				ruleId,
+				ruleName,
+				ruleTestcases,
+				ruleSuccessCriterion,
 			})
 		})
 
 		/**
-		 * Copy test-assets directory
+		 * Copy `test-assets` that are used by `testcases`
 		 */
-		ncp('./test-assets', './public/test-assets', err => {
-			console.info(`\n\n DONE!!! Copied Test Assets Directory.`)
-			if (err) {
-				throw new Error(err)
-			}
-		})
+		await copyTestcasesAssets()
 
 		/**
-		 * Create `testcases.json`
+		 * Generate `testcases.json`
 		 */
-		const testcasesData = {
-			name: `${pkgName} test cases`,
-			website: url,
-			license: `${url}/pages/license/`,
-			description,
-			count: testcases.length,
-			testcases,
-		}
-		createFile(
-			`${baseDir}/testcases.json`,
-			JSON.stringify(testcasesData, undefined, 2)
-		)
+		await createTestcasesJson(allRulesTestcases)
 
-		console.info(`\n\n DONE!!! Generated Test Cases Data.`)
+		console.info(`\nDONE!!! Generated Test Cases.\n`)
 	})
 }
 
-module.exports = createPageGenerateTestcases
+module.exports = createTestcasesOfAllRules

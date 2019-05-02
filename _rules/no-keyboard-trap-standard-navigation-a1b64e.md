@@ -71,7 +71,7 @@ Using `tabindex="1"`.
 Using `tabindex="-1"`.
 
 ```html
-<div tabindex="“-1”">Text</div>
+<div tabindex="-1">Text</div>
 ```
 
 ### Failed

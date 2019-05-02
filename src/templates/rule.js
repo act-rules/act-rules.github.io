@@ -17,6 +17,8 @@ export default ({ data }) => {
 	const { slug } = fields
 	const converter = new showdown.Converter()
 	const updatedTitle = `Rule | ${frontmatter.name} | ${site.siteMetadata.title}`
+	const ruleId = slug.replace('rules/', '')
+	const ruleTestcasesUrl = `/testcases/${ruleId}/rule-${ruleId}-testcases-for-em-report-tool.json`
 
 	const getRuleType = rule_type => {
 		if (!rule_type) {
@@ -71,9 +73,7 @@ export default ({ data }) => {
 					return (
 						<article key={node.id}>
 							<a id={key} href={`#${key}`}>
-								<h3>
-									{frontmatter.title} ({key})
-								</h3>
+								<h3>{frontmatter.title}</h3>
 							</a>
 							<i>
 								key: <u>{key}</u>
@@ -114,8 +114,8 @@ export default ({ data }) => {
 			<section className="page-rule">
 				{/* rule content */}
 				<section>
-					{/* title */}
 					<header>
+						{/* title */}
 						<h1>{frontmatter.name}</h1>
 					</header>
 					{/* Description */}
@@ -156,6 +156,21 @@ export default ({ data }) => {
 					</span>
 					<div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
 					<ul>{renderGlossaryUsedLink(slug)}</ul>
+					<span role="heading" aria-level="1" className="heading">
+						Download Testcases
+					</span>
+					<ul>
+						<li>
+							<a
+								className="btn-secondary"
+								aria-label="test cases of rule for use in wcag em report tool"
+								target="_blank"
+								rel="noopener noreferrer"
+								href={ruleTestcasesUrl}>
+								For EM Report Tool
+							</a>
+						</li>
+					</ul>
 				</div>
 			</section>
 		</Layout>

@@ -6,11 +6,10 @@ import './index.scss'
 
 const Header = ({ siteTitle }) => (
 	<header className="app-header">
-		<Link to="/pages/about" >
+		<Link to="/pages/about">
 			<h2>{siteTitle}</h2>
 		</Link>
 	</header>
-
 )
 
 Header.propTypes = {

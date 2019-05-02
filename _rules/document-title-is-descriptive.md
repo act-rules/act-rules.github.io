@@ -5,23 +5,23 @@ rule_type: atomic
 description: |
   This rule checks that the document title describes the topic or purpose of the document.
 
-success_criterion: 
-- 2.4.2 # Page Titled (A)
+success_criterion:
+  - 2.4.2 # Page Titled (A)
 
 test_aspects:
-- DOM Tree
+  - DOM Tree
 
 authors:
-- Anne Thyme Nørregaard
-- Corbb O’Connor 
-
+  - Anne Thyme Nørregaard
+  - Corbb O’Connor
 ---
 
 ## Test procedure
 
 ### Applicability
 
-This rule applies to the first HTML `title` element that 
+This rule applies to the first HTML `title` element that
+
 - is a [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) of a [document element](https://www.w3.org/TR/dom/#document-element) that is an HTML `html` element, and
 - contains [children](https://www.w3.org/TR/dom/#concept-tree-child) that are [text nodes](https://www.w3.org/TR/dom/#text) that are not only [whitespace](#whitespace).
 
@@ -53,12 +53,14 @@ The `<title>` element describes the content of the document.
 
 ```html
 <html>
-  <head>
-    <title>Clementine harvesting season</title>
-  </head>
-  <body>
-    <p>Clementines will be ready to harvest from late October through February.</p>
-  </body>
+	<head>
+		<title>Clementine harvesting season</title>
+	</head>
+	<body>
+		<p>
+			Clementines will be ready to harvest from late October through February.
+		</p>
+	</body>
 </html>
 ```
 
@@ -68,13 +70,15 @@ Two `<title>` elements where the first one describes the content of the document
 
 ```html
 <html>
-  <head>
-    <title>Clementine harvesting season</title>
-    <title>Apple harvesting season</title>
-  </head>
-  <body>
-    <p>Clementines will be ready to harvest from late October through February.</p>
-  </body>
+	<head>
+		<title>Clementine harvesting season</title>
+		<title>Apple harvesting season</title>
+	</head>
+	<body>
+		<p>
+			Clementines will be ready to harvest from late October through February.
+		</p>
+	</body>
 </html>
 ```
 
@@ -84,12 +88,13 @@ Even though the descriptive `<title>` element is not placed within the `<head>` 
 
 ```html
 <html>
-  <head>
-  </head>
-  <body>
-    <title>Clementine harvesting season</title>
-    <p>Clementines will be ready to harvest from late October through February.</p>
-  </body>
+	<head> </head>
+	<body>
+		<title>Clementine harvesting season</title>
+		<p>
+			Clementines will be ready to harvest from late October through February.
+		</p>
+	</body>
 </html>
 ```
 
@@ -99,13 +104,16 @@ Even though the descriptive `<title>` element is not placed within the `<head>` 
 
 ```html
 <html>
-  <head>
-    <title>;)</title>
-  </head>
-  <body>
-    <h1>;)</h1>
-    <p>The winking emoticon is commonly used after a light-hearted or sarcastic remark. It is also a popular IM and e-mail emoticon shortcut.</p>
-  </body>
+	<head>
+		<title>;)</title>
+	</head>
+	<body>
+		<h1>;)</h1>
+		<p>
+			The winking emoticon is commonly used after a light-hearted or sarcastic
+			remark. It is also a popular IM and e-mail emoticon shortcut.
+		</p>
+	</body>
 </html>
 ```
 
@@ -117,12 +125,14 @@ Even though the descriptive `<title>` element is not placed within the `<head>` 
 
 ```html
 <html>
-  <head>
-    <title>Apple harvesting season</title>
-  </head>
-  <body>
-    <p>Clementines will be ready to harvest from late October through February.</p>
-  </body>
+	<head>
+		<title>Apple harvesting season</title>
+	</head>
+	<body>
+		<p>
+			Clementines will be ready to harvest from late October through February.
+		</p>
+	</body>
 </html>
 ```
 
@@ -132,13 +142,15 @@ Even though a correct `<title>` element is put in the `<head>` of the document, 
 
 ```html
 <html>
-  <head>
-    <title>Apple harvesting season</title>
-    <title>Clementine harvesting season</title>
-  </head>
-  <body>
-    <p>Clementines will be ready to harvest from late October through February.</p>
-  </body>
+	<head>
+		<title>Apple harvesting season</title>
+		<title>Clementine harvesting season</title>
+	</head>
+	<body>
+		<p>
+			Clementines will be ready to harvest from late October through February.
+		</p>
+	</body>
 </html>
 ```
 
@@ -148,12 +160,14 @@ Even though a correct `<title>` element is put in the `<head>` of the document, 
 
 ```html
 <html>
-  <head>
-    <title>;)</title>
-  </head>
-  <body>
-    <p>Clementines will be ready to harvest from late October through February.</p>
-  </body>
+	<head>
+		<title>;)</title>
+	</head>
+	<body>
+		<p>
+			Clementines will be ready to harvest from late October through February.
+		</p>
+	</body>
 </html>
 ```
 
@@ -165,11 +179,12 @@ No `<title>` element present in document.
 
 ```html
 <html>
-  <head>
-  </head>
-  <body>
-    <p>Clementines will be ready to harvest from late October through February.</p>
-  </body>
+	<head> </head>
+	<body>
+		<p>
+			Clementines will be ready to harvest from late October through February.
+		</p>
+	</body>
 </html>
 ```
 
@@ -179,12 +194,14 @@ No `<title>` element present in document.
 
 ```html
 <html>
-  <head>
-    <title></title>
-  </head>
-  <body>
-    <p>Clementines will be ready to harvest from late October through February.</p>
-  </body>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p>
+			Clementines will be ready to harvest from late October through February.
+		</p>
+	</body>
 </html>
 ```
 
@@ -205,13 +222,15 @@ First `<title>` element is empty
 
 ```html
 <html>
-  <head>
-    <title></title>
-    <title>Clementine harvesting season</title>
-  </head>
-  <body>
-    <p>Clementines will be ready to harvest from late October through February.</p>
-  </body>
+	<head>
+		<title></title>
+		<title>Clementine harvesting season</title>
+	</head>
+	<body>
+		<p>
+			Clementines will be ready to harvest from late October through February.
+		</p>
+	</body>
 </html>
 ```
 
@@ -221,12 +240,14 @@ First `<title>` element contains only whitespace
 
 ```html
 <html>
-  <head>
-    <title> </title>
-    <title>Clementine harvesting season</title>
-  </head>
-  <body>
-    <p>Clementines will be ready to harvest from late October through February.</p>
-  </body>
+	<head>
+		<title> </title>
+		<title>Clementine harvesting season</title>
+	</head>
+	<body>
+		<p>
+			Clementines will be ready to harvest from late October through February.
+		</p>
+	</body>
 </html>
 ```

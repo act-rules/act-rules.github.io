@@ -23,7 +23,6 @@ const getNodeData = options => {
 			const fileContents = fs.readFileSync(absolutePath, { encoding: 'utf-8' })
 			const { attributes } = fm(fileContents)
 			const { id } = attributes
-			console.log(id);
 			return {
 				...defaults,
 				path: `${sourceInstanceName}/${id}`,

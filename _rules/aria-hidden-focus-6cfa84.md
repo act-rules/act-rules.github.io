@@ -5,8 +5,8 @@ rule_type: atomic
 description: |
   This rule checks that elements with an `aria-hidden` attribute do not contain focusable elements
 success_criterion:
-- 1.3.1 # Info and Relationships
-- 4.1.2 # Name, Role, Value
+  - 1.3.1 # Info and Relationships
+  - 4.1.2 # Name, Role, Value
 test_aspects:
   - DOM Tree
   - CSS Styling

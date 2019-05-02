@@ -1,15 +1,13 @@
 ---
+id: bc4a75
 name: ARIA required owned elements
-
 description: |
 	This rule checks that each role has at least one of its required owned elements.
 success_criterion:
 - 1.3.1 # Info and Relationships (A)
-
 test_aspects:
 - DOM Tree
 - CSS Styling
-
 authors:
 - Audrey Maniez
 - Jey Nandakumar

@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 483,
+  "count": 504,
   "testcases": [
     {
       "testcaseId": "55f3ed0ec0f324514a0d223b737bc1e4c81593c7",
@@ -1532,6 +1532,174 @@
       "ruleId": "3ea0c8",
       "ruleName": "Id attribute is unique",
       "rulePage": "https://act-rules.github.io/rules/3ea0c8"
+    },
+    {
+      "testcaseId": "6bcfa4db9634c6b44581c92c4446f3b9aafcbb4c",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/6bcfa4db9634c6b44581c92c4446f3b9aafcbb4c.html",
+      "expected": "passed",
+      "ruleId": "4b1c6c",
+      "ruleName": "Iframes with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/4b1c6c"
+    },
+    {
+      "testcaseId": "d3837fb2339e92d7a66e07cff510fb1de2d4d163",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/d3837fb2339e92d7a66e07cff510fb1de2d4d163.html",
+      "expected": "passed",
+      "ruleId": "4b1c6c",
+      "ruleName": "Iframes with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/4b1c6c"
+    },
+    {
+      "testcaseId": "1f2804a732faaa1a675568a343ac5944b4f3eac0",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/1f2804a732faaa1a675568a343ac5944b4f3eac0.html",
+      "expected": "passed",
+      "ruleId": "4b1c6c",
+      "ruleName": "Iframes with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/4b1c6c"
+    },
+    {
+      "testcaseId": "1bb03a134c142663291d243f0508d81314b74a13",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/1bb03a134c142663291d243f0508d81314b74a13.html",
+      "expected": "passed",
+      "ruleId": "4b1c6c",
+      "ruleName": "Iframes with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/4b1c6c"
+    },
+    {
+      "testcaseId": "13d30fff7d78841ed311d95352aa86c66835f50a",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/13d30fff7d78841ed311d95352aa86c66835f50a.html",
+      "expected": "passed",
+      "ruleId": "4b1c6c",
+      "ruleName": "Iframes with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/4b1c6c"
+    },
+    {
+      "testcaseId": "427d0610d76e46beef047a676c186d8b3002e0e4",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/427d0610d76e46beef047a676c186d8b3002e0e4.html",
+      "expected": "passed",
+      "ruleId": "4b1c6c",
+      "ruleName": "Iframes with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/4b1c6c"
+    },
+    {
+      "testcaseId": "ac944ff6f5809543b393f77a3d3eaabcc0e33abe",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/ac944ff6f5809543b393f77a3d3eaabcc0e33abe.html",
+      "expected": "passed",
+      "ruleId": "4b1c6c",
+      "ruleName": "Iframes with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/4b1c6c"
+    },
+    {
+      "testcaseId": "5db3a461ed9373bf000c541402d3bd2c6a5b81fb",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/5db3a461ed9373bf000c541402d3bd2c6a5b81fb.html",
+      "expected": "passed",
+      "ruleId": "4b1c6c",
+      "ruleName": "Iframes with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/4b1c6c"
+    },
+    {
+      "testcaseId": "c86fb7087c534a8ed110bc6011f6ff60c70abf3f",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/c86fb7087c534a8ed110bc6011f6ff60c70abf3f.html",
+      "expected": "failed",
+      "ruleId": "4b1c6c",
+      "ruleName": "Iframes with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/4b1c6c"
+    },
+    {
+      "testcaseId": "516ca61c5ce975305f1b37c87b5f237301070a7f",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/516ca61c5ce975305f1b37c87b5f237301070a7f.html",
+      "expected": "failed",
+      "ruleId": "4b1c6c",
+      "ruleName": "Iframes with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/4b1c6c"
+    },
+    {
+      "testcaseId": "6cc8bb6758556ddcba11e89976f8040b62dcd651",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/6cc8bb6758556ddcba11e89976f8040b62dcd651.html",
+      "expected": "failed",
+      "ruleId": "4b1c6c",
+      "ruleName": "Iframes with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/4b1c6c"
+    },
+    {
+      "testcaseId": "a7a304e11088b6482329a6db6951a0a786085586",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/a7a304e11088b6482329a6db6951a0a786085586.html",
+      "expected": "inapplicable",
+      "ruleId": "4b1c6c",
+      "ruleName": "Iframes with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/4b1c6c"
+    },
+    {
+      "testcaseId": "ed51fa0ad018a0d0c3a108b0a41b0edb9d564d80",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/ed51fa0ad018a0d0c3a108b0a41b0edb9d564d80.html",
+      "expected": "inapplicable",
+      "ruleId": "4b1c6c",
+      "ruleName": "Iframes with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/4b1c6c"
+    },
+    {
+      "testcaseId": "1dccb7a527cb19fb49f3bd7d3f54b5c1a31b06c5",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/1dccb7a527cb19fb49f3bd7d3f54b5c1a31b06c5.html",
+      "expected": "inapplicable",
+      "ruleId": "4b1c6c",
+      "ruleName": "Iframes with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/4b1c6c"
+    },
+    {
+      "testcaseId": "4eecca93d89cd96594c8f1e5fffd58d7afcb8841",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/4eecca93d89cd96594c8f1e5fffd58d7afcb8841.html",
+      "expected": "inapplicable",
+      "ruleId": "4b1c6c",
+      "ruleName": "Iframes with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/4b1c6c"
+    },
+    {
+      "testcaseId": "99671a0c36e00e56fdfdb74a8967066cbc350606",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/99671a0c36e00e56fdfdb74a8967066cbc350606.html",
+      "expected": "inapplicable",
+      "ruleId": "4b1c6c",
+      "ruleName": "Iframes with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/4b1c6c"
+    },
+    {
+      "testcaseId": "8bedea37dd212bca4a10369cf3bab21d3eda69eb",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/8bedea37dd212bca4a10369cf3bab21d3eda69eb.html",
+      "expected": "inapplicable",
+      "ruleId": "4b1c6c",
+      "ruleName": "Iframes with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/4b1c6c"
+    },
+    {
+      "testcaseId": "f2eda5b0c4ad50f010c0073f4d840aeb0c6fad2c",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/f2eda5b0c4ad50f010c0073f4d840aeb0c6fad2c.html",
+      "expected": "inapplicable",
+      "ruleId": "4b1c6c",
+      "ruleName": "Iframes with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/4b1c6c"
+    },
+    {
+      "testcaseId": "845b7fa53f1aceafea130c8d645ebd17f587274b",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/845b7fa53f1aceafea130c8d645ebd17f587274b.html",
+      "expected": "inapplicable",
+      "ruleId": "4b1c6c",
+      "ruleName": "Iframes with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/4b1c6c"
+    },
+    {
+      "testcaseId": "bfa086955f7594f821bd6f8e3ff4987377881b26",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/bfa086955f7594f821bd6f8e3ff4987377881b26.html",
+      "expected": "inapplicable",
+      "ruleId": "4b1c6c",
+      "ruleName": "Iframes with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/4b1c6c"
+    },
+    {
+      "testcaseId": "31ffdfafce206c520634252c29978e48b77ad7bc",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/31ffdfafce206c520634252c29978e48b77ad7bc.html",
+      "expected": "inapplicable",
+      "ruleId": "4b1c6c",
+      "ruleName": "Iframes with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/4b1c6c"
     },
     {
       "testcaseId": "2400cdac870a6244889b8fccea54425320e8749f",

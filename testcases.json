@@ -2134,8 +2134,8 @@
       "rulePage": "https://act-rules.github.io/rules/80af7b"
     },
     {
-      "testcaseId": "1438402160ffef1bafd4896b7250db4191a8768f",
-      "url": "https://act-rules.github.io/testcases/80af7b/1438402160ffef1bafd4896b7250db4191a8768f.html",
+      "testcaseId": "ef698dcb80787790ad086be6abdc79493f02c5ab",
+      "url": "https://act-rules.github.io/testcases/80af7b/ef698dcb80787790ad086be6abdc79493f02c5ab.html",
       "expected": "inapplicable",
       "ruleId": "80af7b",
       "ruleName": "No keyboard trap",

@@ -1,11 +1,11 @@
 ---
-title: Semantic Role 
+title: Semantic Role
 key: semantic-role
 ---
 
 A semantic role is a semantic association that indicates an object's type. This allows tools to present and support interaction with the object in a manner that is consistent with user expectations about other objects of that type.
 
-[Roles](https://www.w3.org/TR/wai-aria-1.1/#dfn-role) can be [implicit](https://www.w3.org/TR/wai-aria/#implicit_semantics) through the element type or explicit through the [role attribute](https://www.w3.org/TR/html/dom.html#aria-role-attribute). 
+[Roles](https://www.w3.org/TR/wai-aria-1.1/#dfn-role) can be [implicit](https://www.w3.org/TR/wai-aria/#implicit_semantics) through the element type or explicit through the [role attribute](https://www.w3.org/TR/html/dom.html#aria-role-attribute).
 
 The role attribute takes a list of tokens. The semantic role is the first valid role in this list. If none of the tokens are valid, the implicit role will be used instead.
 
@@ -19,5 +19,6 @@ Other roles may be added as they become available. Not all roles will be support
 
 **Note**: For HTML elements the implicit roles are documented in [ARIA in HTML](https://www.w3.org/TR/html-aria/).
 
+## Acccessibility Support
 
-
+Some browsers and assistive technologies treat the tokens of the `role` attribute as case-sensitive. Unless lowercase letters are used for the value of the `role` attribute, not all user agents will be able to interpret the tokens correctly. ARIA in HTML also specifies that [authors must use lowercase letters for the `role` and `aria-*` attributes](https://www.w3.org/TR/html-aria/#case-sensitivity).

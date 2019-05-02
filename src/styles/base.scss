@@ -1,0 +1,81 @@
+@import './variables';
+@import './mixins';
+
+body {
+  font-family: 'Lora', serif;
+  color: $fg-secondary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include header-style($fg-primary)
+}
+
+hr {
+  opacity: 0.1;
+}
+
+a {
+	color: darken($accent, 30%);
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+   
+	thead {
+		border-bottom: 2px solid $accent;
+		
+		th {
+			@include header-style($fg-primary);
+      font-weight: bold;
+			text-align: left;
+			display: table-cell;
+			background-color: $sep;
+			padding: 0.5rem;
+			text-transform: uppercase;
+		}
+	}
+
+	tbody {
+		tr {
+			border-bottom: 2px solid $sep;
+			td {
+				padding: 0.5rem;
+				a {
+					text-decoration: none;
+					display: inline-block;
+					margin: 0 .5em 0 0;
+					&:hover, &:active, &:focus {
+						color: darken($fg-primary, 10%);
+						border: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+button, .btn {
+	padding: 1em;
+	text-decoration: none;
+  line-height: 1em;
+  display: inline-block;
+  letter-spacing: 0.1em;
+	transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+	@include btn($bg-secondary, $fg-secondary, $accent);
+	cursor: pointer;
+}
+
+blockquote {
+	margin: 2rem 0;
+	background-color: lighten($accent, 40%);
+	border: 1px solid $accent;
+	padding: 1rem;
+}
+
+em {
+	display: block;
+}

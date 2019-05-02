@@ -2,7 +2,7 @@
 title: Rule Design
 ---
 
-The {{site.title}} rule design builds on WCAG 2.x and its supporting documents. To achieve the {{site.title}} goals the following approach is suggested:
+The WCAG-ACT-RULES-CG rule design builds on WCAG 2.x and its supporting documents. To achieve the goals the following approach is suggested:
 
 1. **[Rule properties](#rule-properties)**: Define the test subject and its environment, as well as other meta data.
 
@@ -41,31 +41,31 @@ Other aspects may be necessary for testing. These can be added as long as they a
 
 ### Authors
 
-Names of the Authors. These must be an exact match of names in `_data/contributors.yml`.
+Names of the Authors. These must be an exact match of names in `contributors` property in `package.json`.
 
 ## Assumptions
 
-Many accessibility evaluations (especially automated tools) make assumptions about the structure of the web content and the way in which (web) technologies are used. Such assumptions influence the outcome of a test. If the assumptions are made implicitly, it will be difficult to interpret the test result. Comparability and reproduction of results by other tools are limited. Therefore the {{site.title}} test include a list of all assumptions made by the design of the rule.
+Many accessibility evaluations (especially automated tools) make assumptions about the structure of the web content and the way in which (web) technologies are used. Such assumptions influence the outcome of a test. If the assumptions are made implicitly, it will be difficult to interpret the test result. Comparability and reproduction of results by other tools are limited. Therefore the WCAG-ACT-RULES-CG test include a list of all assumptions made by the design of the rule.
 
-> *For example:* A rule for 1.4.1 Use of Color has to make an assumption with CSS-properties are used to make a link visually evident. Typically something like `background`, `border`, `color`, `font`, or `text-decoration`.
+> _For example:_ A rule for 1.4.1 Use of Color has to make an assumption with CSS-properties are used to make a link visually evident. Typically something like `background`, `border`, `color`, `font`, or `text-decoration`.
 
 While most assumptions relate to the rule itself, there are some assumptions that apply at other stages of the evaluation:
 
 - It is assumed that the tested web page is the one that has to conform to WCAG 2.0 and that there is no [conforming alternative version](http://www.w3.org/TR/WCAG20/#conforming-alternate-versiondef).
 
-- It is assumed that the following technologies are accessibility supported: HTML, CSS, WAI-ARIA, ... (See also {{site.title}}'s [explanation on Accessibility Support](accessibility-support.html)).
+- It is assumed that the following technologies are accessibility supported: HTML, CSS, WAI-ARIA, ... (See also WCAG-ACT-RULES-CG's [explanation on Accessibility Support](accessibility-support.html)).
 
 ## Applicability
 
 Applicability describes which (elements of) web pages should be tested using the rule. These elements are known as test targets. Applicability must be written in plain language, so that it can be used by QA testers. Applicability must rely on well defined properties of the technologies that are tested. For example, a rule may be applicable to all `video` elements, but it can not be applicable to all `object` elements used to show video, unless the term "video" is further defined.
 
-Finding objective definitions to use in rules can be difficult, if not outright impossible in some cases. The intent here is to ensure repeatability of the rule. Not everything in WCAG testing is entirely repeatable, but when it comes to rule applicability, this is a hard requirement. 
+Finding objective definitions to use in rules can be difficult, if not outright impossible in some cases. The intent here is to ensure repeatability of the rule. Not everything in WCAG testing is entirely repeatable, but when it comes to rule applicability, this is a hard requirement.
 
 For more details, see [ACT Rules Format: Applicability](https://w3c.github.io/wcag-act/act-rules-format.html#applicability)
 
 ## Expectations
 
-The applicability help the testers (or test tools) identify what has to be checked. Following that, the expectations are statements that must be true for the applicable elements to pass the rule. If any of the expectations is false, than the target element failed the rule. 
+The applicability help the testers (or test tools) identify what has to be checked. Following that, the expectations are statements that must be true for the applicable elements to pass the rule. If any of the expectations is false, than the target element failed the rule.
 
 Each expectation exposes a reason why an element may not meet a particular conformance requirement. The expectations can be "linked", in that one has to be met before a second can be tested. For example, a rule testing link names may have as its first expectation "Target element has an accessible name", and as a second expectation "Expectation 1 is true for the target element, and the accessible name describes the function of the target element".
 

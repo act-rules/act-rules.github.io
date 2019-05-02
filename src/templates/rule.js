@@ -117,16 +117,6 @@ export default ({ data }) => {
 					<header>
 						{/* title */}
 						<h1>{frontmatter.name}</h1>
-						{/* testcase download */}
-						<a
-							className="btn-secondary"
-							aria-label="test cases of rule for use in wcag em report tool"
-							target="_blank"
-							rel="noopener noreferrer"
-							href={ruleTestcasesUrl}
-						>
-							See Testcases
-						</a>
 					</header>
 					{/* Description */}
 					<br />
@@ -166,6 +156,21 @@ export default ({ data }) => {
 					</span>
 					<div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
 					<ul>{renderGlossaryUsedLink(slug)}</ul>
+					<span role="heading" aria-level="1" className="heading">
+						Download Testcases
+					</span>
+					<ul>
+						<li>
+							<a
+								className="btn-secondary"
+								aria-label="test cases of rule for use in wcag em report tool"
+								target="_blank"
+								rel="noopener noreferrer"
+								href={ruleTestcasesUrl}>
+								For EM Report Tool
+							</a>
+						</li>
+					</ul>
 				</div>
 			</section>
 		</Layout>

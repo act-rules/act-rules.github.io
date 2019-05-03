@@ -4,25 +4,26 @@ name: aria-hidden with focusable content
 rule_type: atomic
 description: |
   This rule checks that elements with an `aria-hidden` attribute do not contain focusable elements
-success_criterion:
-  - 1.3.1 # Info and Relationships
-  - 4.1.2 # Name, Role, Value
-test_aspects:
+accessibility_requirements:
+  - wcag20: 1.3.1 
+  - wcag20: 4.1.2
+  - failed: not satisfied
+  - passed: further testing needed
+  - inapplicable: further testing needed
+input_aspects:
   - DOM Tree
   - CSS Styling
 authors:
   - Wilco Fiers
 ---
 
-## Test Procedure
-
-### Applicability
+## Applicability
 
 The rule applies to any element with an `aria-hidden="true"` attribute.
 
 **Note**: Using `aria-hidden="false"` on a descendant of an element with `aria-hidden="true"` **does not** expose that element. `aria-hidden="true"` hides itself and all its content from assistive technologies.
 
-### Expectation
+## Expectation
 
 None of the target elements are part of [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation), nor do they have [descendants](https://www.w3.org/TR/dom41/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) that are part of [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation).
 
@@ -49,7 +50,7 @@ A focusable element with `aria-hidden="true"` is ignored as part of the reading 
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 Content not focusable by default.
 
@@ -57,7 +58,7 @@ Content not focusable by default.
 <p aria-hidden="true">Some text</p>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 Content hidden through CSS.
 
@@ -67,7 +68,7 @@ Content hidden through CSS.
 </div>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 Content taken out of sequential focus order using `tabindex`.
 
@@ -77,7 +78,7 @@ Content taken out of sequential focus order using `tabindex`.
 </div>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 Content made unfocusable through `disabled` attribute.
 
@@ -85,7 +86,7 @@ Content made unfocusable through `disabled` attribute.
 <input disabled aria-hidden="true" />
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 `aria-hidden` can't be reset once set to true on an ancestor.
 
@@ -97,7 +98,7 @@ Content made unfocusable through `disabled` attribute.
 </div>
 ```
 
-#### Passed example 6
+#### Passed Example 6
 
 Content taken out of sequential focus order using `tabindex`.
 
@@ -109,7 +110,7 @@ Content taken out of sequential focus order using `tabindex`.
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Focusable off screen link.
 
@@ -129,7 +130,7 @@ Focusable form field, incorrectly disabled.
 </div>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 `aria-hidden` can't be reset once set to true on an ancestor.
 
@@ -141,7 +142,7 @@ Focusable form field, incorrectly disabled.
 </div>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 Focusable content through `tabindex`.
 
@@ -149,7 +150,7 @@ Focusable content through `tabindex`.
 <p tabindex="0" aria-hidden="true">Some text</p>
 ```
 
-#### Failed example 5
+#### Failed Example 5
 
 Focusable `summary` element.
 
@@ -162,7 +163,7 @@ Focusable `summary` element.
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Ignore `aria-hidden` with null value.
 
@@ -170,7 +171,7 @@ Ignore `aria-hidden` with null value.
 <button tabindex="-1" aria-hidden>Some button</button>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 Ignore `aria-hidden` false.
 
@@ -178,7 +179,7 @@ Ignore `aria-hidden` false.
 <p aria-hidden="false">Some text</p>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 Incorrect value of `aria-hidden`.
 

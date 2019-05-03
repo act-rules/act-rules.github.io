@@ -4,9 +4,13 @@ name: ARIA state or property has valid value
 rule_type: atomic
 description: |
   This rule checks that each ARIA state or property has a valid value
-success_criterion:
-  - 4.1.2 # Name, Role, Value
-test_aspects:
+accessibility_requirements:
+  - wcag20: 4.1.2
+  - forConformance: true
+  - failed: not satisfied
+  - passed: further testing needed
+  - inapplicable: further testing needed
+input_aspects:
   - DOM Tree
   - CSS Styling
 authors:
@@ -14,13 +18,12 @@ authors:
   - Anne Thyme Nørregaard
 ---
 
-## Test procedure
 
-### Applicability
+## Applicability
 
 Any [non-empty](#non-empty) [WAI-ARIA 1.1 state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) that is specified on an HTML or SVG element.
 
-### Expectation 1
+## Expectation 1
 
 Each test target has a valid value according to its [WAI-ARIA 1.1 value type](https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value).
 
@@ -55,7 +58,7 @@ _There are no major accessibility support issues known for this rule._
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 `aria-required` property with valid true/false value
 
@@ -63,7 +66,7 @@ _There are no major accessibility support issues known for this rule._
 <div role="textbox" aria-required="true"></div>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 `aria-expanded` state with valid true/false/undefined value
 
@@ -71,7 +74,7 @@ _There are no major accessibility support issues known for this rule._
 <div role="button" aria-expanded="undefined"></div>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 `aria-pressed` state with valid tristate value
 
@@ -79,7 +82,7 @@ _There are no major accessibility support issues known for this rule._
 <div role="button" aria-pressed="mixed"></div>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 `aria-errormessage` property with valid ID reference value
 
@@ -87,7 +90,7 @@ _There are no major accessibility support issues known for this rule._
 <div role="textbox" aria-errormessage="my-error"></div>
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 `aria-owns` property with valid ID reference list value
 
@@ -95,7 +98,7 @@ _There are no major accessibility support issues known for this rule._
 <div role="combobox" aria-owns="my-textbox my-grid"></div>
 ```
 
-#### Passed example 6
+#### Passed Example 6
 
 `aria-rowindex` property with valid integer value
 
@@ -103,7 +106,7 @@ _There are no major accessibility support issues known for this rule._
 <div role="gridcell" aria-rowindex="2">Fred</div>
 ```
 
-#### Passed example 7
+#### Passed Example 7
 
 `aria-valuemin`, `aria-valuemax` and `aria-valuenow` properties with valid number values
 
@@ -116,7 +119,7 @@ _There are no major accessibility support issues known for this rule._
 ></div>
 ```
 
-#### Passed example 8
+#### Passed Example 8
 
 `aria-placeholder` property with valid string value
 
@@ -124,7 +127,7 @@ _There are no major accessibility support issues known for this rule._
 <div role="searchbox" aria-placeholder="MM-DD-YYYY">MM-DD-YYYY</div>
 ```
 
-#### Passed example 9
+#### Passed Example 9
 
 `aria-orientation` property with valid token value (property inappropriate for the role)
 
@@ -132,7 +135,7 @@ _There are no major accessibility support issues known for this rule._
 <div role="button" aria-orientation="horizontal"></div>
 ```
 
-#### Passed example 10
+#### Passed Example 10
 
 `aria-dropeffect` property with valid token list value
 
@@ -140,7 +143,7 @@ _There are no major accessibility support issues known for this rule._
 <div role="dialog" aria-dropeffect="copy move"></div>
 ```
 
-#### Passed example 11
+#### Passed Example 11
 
 `aria-controls`, which is a required property for the role `scrollbar`, has `ID Reference list` that references at least one element existing in the same document tree.
 
@@ -158,7 +161,7 @@ _There are no major accessibility support issues known for this rule._
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 `aria-required` property with invalid true/false value
 
@@ -166,7 +169,7 @@ _There are no major accessibility support issues known for this rule._
 <div role="textbox" aria-required="undefined"></div>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 `aria-expanded` state with invalid true/false/undefined value
 
@@ -174,7 +177,7 @@ _There are no major accessibility support issues known for this rule._
 <div role="button" aria-expanded="mixed"></div>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 `aria-pressed` state with invalid tristate value
 
@@ -182,7 +185,7 @@ _There are no major accessibility support issues known for this rule._
 <div role="button" aria-pressed="horizontal"></div>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 `aria-errormessage` property with invalid ID reference value, since space is not allowed in a single ID
 
@@ -190,7 +193,7 @@ _There are no major accessibility support issues known for this rule._
 <div role="textbox" aria-errormessage="error1 error2"></div>
 ```
 
-#### Failed example 5
+#### Failed Example 5
 
 `aria-rowindex` property with invalid integer value
 
@@ -198,7 +201,7 @@ _There are no major accessibility support issues known for this rule._
 <div role="gridcell" aria-rowindex="2.5">Fred</div>
 ```
 
-#### Failed example 6
+#### Failed Example 6
 
 `aria-valuemin`, `aria-valuemax` and `aria-valuenow` property with invalid number values
 
@@ -211,7 +214,7 @@ _There are no major accessibility support issues known for this rule._
 ></div>
 ```
 
-#### Failed example 7
+#### Failed Example 7
 
 `aria-live` property with invalid token value
 
@@ -219,7 +222,7 @@ _There are no major accessibility support issues known for this rule._
 <div role="main" aria-live="nope"></div>
 ```
 
-#### Failed example 8
+#### Failed Example 8
 
 Element with invalid token list value
 
@@ -227,7 +230,7 @@ Element with invalid token list value
 <div role="dialog" aria-dropeffect="invalid move"></div>
 ```
 
-#### Failed example 9
+#### Failed Example 9
 
 `aria-expanded` state with invalid true/false/undefined value for custom element
 
@@ -235,7 +238,7 @@ Element with invalid token list value
 <my-button role="button" aria-expanded="collapsed"></my-button>
 ```
 
-#### Failed example 10
+#### Failed Example 10
 
 `aria-controls`, which is a required property for the role `scrollbar`, references an element that does not exist in the same document tree.
 
@@ -252,7 +255,7 @@ Element with invalid token list value
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Element does not have any ARIA states or properties
 
@@ -260,7 +263,7 @@ Element does not have any ARIA states or properties
 <div>Some Content</div>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 Element has ARIA role, but no ARIA states or properties
 
@@ -268,7 +271,7 @@ Element has ARIA role, but no ARIA states or properties
 <div role="button">Some Content</div>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 `aria-checked` state with empty value
 
@@ -276,7 +279,7 @@ Element has ARIA role, but no ARIA states or properties
 <div role="checkbox" aria-checked></div>
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 `aria-labelledby` property with empty value
 
@@ -284,7 +287,7 @@ Element has ARIA role, but no ARIA states or properties
 <div role="searchbox" aria-labelledby=""></div>
 ```
 
-#### Inapplicable example 5
+#### Inapplicable Example 5
 
 `aria-hidden` state on an element that is not an HTML or SVG element
 

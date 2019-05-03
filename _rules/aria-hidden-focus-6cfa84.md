@@ -37,7 +37,7 @@ None of the target elements are part of [sequential focus navigation](https://ww
 
 _There are currently no assumptions_
 
-## Accessibility support
+## Accessibility Support
 
 There are no major accessibility support issues known for this rule.
 
@@ -126,7 +126,7 @@ Focusable off screen link.
 </div>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 Focusable form field, incorrectly disabled.
 

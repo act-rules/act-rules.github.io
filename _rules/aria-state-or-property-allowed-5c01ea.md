@@ -31,7 +31,7 @@ The attribute is either an [inherited](https://www.w3.org/TR/wai-aria/#inherited
 
 - ARIA roles, states and properties are used to provide new information to screen readers and other assistive technologies. If the information expressed through ARIA is already available in another way, failing this rule may not cause accessibility issues.
 
-## Accessibility support
+## Accessibility Support
 
 _There are no major accessibility support issues known for this rule._
 

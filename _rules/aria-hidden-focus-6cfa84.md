@@ -6,7 +6,13 @@ description: |
   This rule checks that elements with an `aria-hidden` attribute do not contain focusable elements
 accessibility_requirements:
   - wcag20: 1.3.1 
+  - forConfromance: true
+  - failed: not satisfied
+  - passed: further testing needed
+  - inapplicable: further testing needed
+  
   - wcag20: 4.1.2
+  - forConfromance: true
   - failed: not satisfied
   - passed: further testing needed
   - inapplicable: further testing needed

@@ -43,7 +43,7 @@ The label (from expectation 2) is [visible](#visible) and [included in the acces
 
 _There are currently no assumptions_
 
-## Accessibility support
+## Accessibility Support
 
 There are no major accessibility support issues known for this rule.
 
@@ -51,7 +51,7 @@ There are no major accessibility support issues known for this rule.
 
 - [Understanding SC 1.2.1:Audio-only and Video-only (Prerecorded)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
 
-## Test cases
+## Test Cases
 
 ### Passed
 

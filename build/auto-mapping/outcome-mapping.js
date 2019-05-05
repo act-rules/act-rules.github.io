@@ -1,7 +1,7 @@
 module.exports.outcomeMapping = {
-  failed: ['failed', 'incomplete', 'inapplicable'],
-  fail: ['failed', 'incomplete', 'inapplicable'],
-  passed: ['passed', 'incomplete', 'inapplicable'],
-  pass: ['passed', 'incomplete', 'inapplicable'],
-  inapplicable: ['passed', 'incomplete', 'inapplicable', 'untested'],
+  failed: ['failed', 'cantTell'],
+  fail: ['failed', 'cantTell'],
+  passed: ['passed', 'cantTell', 'inapplicable'],
+  pass: ['passed', 'cantTell', 'inapplicable'],
+  inapplicable: ['passed', 'cantTell', 'inapplicable', 'untested'],
 }

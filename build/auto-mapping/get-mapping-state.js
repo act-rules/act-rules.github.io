@@ -3,7 +3,7 @@ const { outcomeMapping } = require('./outcome-mapping')
 
 module.exports.getMappingState = function getMappingState (assertions) {
   const mapping = assertions.some(({ actual, expected }) => 
-    expected === 'failed' && actual === 'failed')
+    expected === 'failed' && ['failed', 'cantTell'].includes(actual))
 
   if (!mapping) {
     return { mapping: false };

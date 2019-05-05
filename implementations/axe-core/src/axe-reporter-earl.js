@@ -2,7 +2,8 @@ const context = require('../../../build/auto-mapping/context')
 const axeTypes = ['passes', 'incomplete', 'inapplicable', 'violations']
 const outcomeMap = {
   passes: 'passed',
-  violations: 'failed'
+  violations: 'failed',
+  incomplete: 'cantTell'
 }
 
 module.exports.axeReporterEarl = function axeReporterEarl ({

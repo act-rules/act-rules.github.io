@@ -5,7 +5,7 @@ const { version } = require('axe-core')
 
 const axeSource = readFileSync(require.resolve('axe-core'), 'utf8')
 const ignores = [
-  'Meta-refresh no delay',
+  'Meta-refresh no delay', // TODO: Figure out why these TCs throw
 ]
 
 /**

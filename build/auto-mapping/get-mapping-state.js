@@ -1,16 +1,10 @@
-const allowedResults = {
-  failed: ['failed', 'incomplete', 'inapplicable'],
-  fail: ['failed', 'incomplete', 'inapplicable'],
-  passed: ['passed', 'incomplete', 'inapplicable'],
-  pass: ['passed', 'incomplete', 'inapplicable'],
-  inapplicable: ['passed', 'incomplete', 'inapplicable'],
-}
+const assert = require('assert')
+const { outcomeMapping } = require('./outcome-mapping')
 
 module.exports.getMappingState = function getMappingState (assertions) {
   const mapping = assertions.some(({ actual, expected }) => 
     expected === 'failed' && actual === 'failed')
 
-  console.log(assertions)
   if (!mapping) {
     return { mapping: false };
   }
@@ -21,13 +15,17 @@ module.exports.getMappingState = function getMappingState (assertions) {
 
   const incorrect = assertions.filter((data) => {
     const { expected, actual } = data
-    if (!allowedResults[expected]) {
-      throw new TypeError(`Unknown result type ${expected}`)
-    }
+    assert(outcomeMapping[expected], `Unknown result type ${expected}`)
 
-    return !allowedResults[expected].includes(actual)
+    return !outcomeMapping[expected].includes(actual)
   }).map(({ url }) => url)
   const fullAuto = undefined
   
-  return { complete, incorrect }
+  return {
+    complete,
+    incorrect,
+    assertions: assertions.map(({ expected, actual, url }) => {
+      return { expected, actual, url }
+    })
+  }
 }

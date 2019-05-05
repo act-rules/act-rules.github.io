@@ -5,19 +5,19 @@ module.exports.mappingReport = function mappingReport (mappings, tool) {
   const incomplete = [['ACT-R ID', 'Rule Name', `${tool} Rules`]]
   const incorrect = []
 
-  for ([ actrRule, mapping ] of mappings) {
-    const ruleId = actrRule.ruleId;
-    const ruleName = truncate(actrRule.ruleName);
-    const mappedRules = mapping.map(({ ruleId }) => ruleId).join(' + ');
+  for (actrRule of mappings) {
+    const { implementation, ruleId } = actrRule
+    const ruleName = truncate(actrRule.ruleName)
+    const mappedRules = implementation.map(({ ruleId }) => ruleId).join(' + ')
 
-    if (isCompleted(mapping)) {
+    if (isCompleted(implementation)) {
       completed.push([ruleId, ruleName, mappedRules])
 
-    } else if (isCorrect(mapping)) {
+    } else if (isCorrect(implementation)) {
       incomplete.push([ruleId, ruleName, mappedRules])
 
     } else {
-      incorrect.push([actrRule, mapping])
+      incorrect.push([actrRule, implementation])
     }
   }
 

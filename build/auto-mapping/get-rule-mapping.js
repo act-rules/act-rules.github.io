@@ -1,90 +1,69 @@
-const { AxePuppeteer } = require('axe-puppeteer')
 const { bestMatchingRules } = require('./best-matching-rules')
 const { getMappingState } = require('./get-mapping-state')
+const assert = require('assert')
 
-const ignores = [
-  'Meta-refresh no delay',
-]
 
-module.exports.getRuleMapping = async function getRuleMapping (page, testcases, port, index = 0) {
+module.exports.getRuleMapping = async function getRuleMapping (pageRunner, testcases, port, index = 0) {
   console.log(`testing #${index}: ${testcases[0].ruleName} (${testcases[0].ruleId})`)
   process.stdout.write('  ');
   const testResults = []
 
   for (testcase of testcases) {
-    const results = await runTestCase(page, port, testcase)
-    if (typeof results === 'object') {
-      process.stdout.write('.');
-      testResults.push({ testcase, results })
+    const results = await pageRunner({
+      url: getTestUrl(testcase.url, port),
+      ruleName: testcase.ruleName,
+      success_criterion: testcase.success_criterion
+    })
 
-    } else {
-      process.stdout.write(`?(${testcase.url})`);
-      testResults.push({
-        testcase,
-        results: { untested: [{ id: '*' }] }
-      })
-    }
+    assert(typeof results === 'object', 'Expected `pageRunner` to return an object')
+
+    process.stdout.write('.');
+    testResults.push({ testcase, results })
   }
 
   process.stdout.write('\n');
-  return processTestResults(testResults)
+  return processTestResults(testResults, port)
 }
 
-async function runTestCase (page, port, { url, ruleName, success_criterion}) {
-  if (ignores.includes(ruleName)) {
-    return
-  }
-  const localUrl = url.replace('https://act-rules.github.io/', '')
-  const tags = (success_criterion || []).map(sc => 'wcag' + sc.replace(/\./g, ''))
-  if (tags.length === 0) {
-    return;
-  }
-  if (localUrl.includes('.svg')) {
-    return
-  }
-
-  await page.goto(`http://127.0.0.1:${port}/${localUrl}`)
-  const html = await page.$eval(':root', e => e.outerHTML);
-  if (html.includes('Not Found')) {
-    console.log(`Not Found http://127.0.0.1:${port}/${localUrl}`)
-    return;
-  }
-  const axeRunner = new AxePuppeteer(page)
-  axeRunner.withTags(tags)
-
-  // TODO: Properly handle timeout
-  const t = setTimeout(() => {
-    console.log(`Timed out on http://127.0.0.1:${port}/${localUrl}`)
-  }, 1000)
-
-  const results = await axeRunner.analyze()
-  clearTimeout(t);
-  return results;
+async function runTestCase (pageRunner, port, { url, ruleName, success_criterion }) {
+  return await pageRunner({
+    url: getTestUrl(url, port),
+    ruleName,
+    success_criterion
+  })
 }
 
-const keys = ['violations', 'inapplicable', 'passes', 'incomplete', 'untested']
-const typeMapping = {
-  violations: 'failed',
-  passes: 'passed'
-}
 
-function processTestResults (testResults) {
-  // TODO: This method should flatten the results
+function processTestResults (testResults, port) {
   const ruleData = {}
   for ({ results, testcase } of testResults) {
-    keys.forEach(type => (results[type] || []).forEach(result => {
-      // TODO: Add "untested" data to each ruleData
-
-      if (!ruleData[result.id]) {
-        ruleData[result.id] = []
+    // Create a mapping for each assertion
+    results['@graph'].forEach((assertion) => {
+      const testMapping = getTestCaseMapping(assertion)
+      if (!testMapping || testMapping.actual === 'untested') {
+        return
       }
+      if (!ruleData[testMapping.testTitle]) {
+        ruleData[testMapping.testTitle] = []
+      }
+      ruleData[testMapping.testTitle].push(testMapping)
+    })
+  }
 
-      ruleData[result.id].push({
-        expected: testcase.expected,
-        actual: typeMapping[type] || type,
-        url: localUrl(testcase.url)
-      })
-    }))
+  for ({ testcase } of testResults) {
+    const testUrl = getTestUrl(testcase.url, port)
+
+    // Push untested results for every test case without an assertion
+    Object.values(ruleData).forEach(testMappings => {
+      if (!testMappings.some(({ url }) => url === testUrl)) {
+        testMappings.push({
+          testTitle: testMappings[0].testTitle,
+          expected: testcase.expected,
+          actual: 'untested',
+          url: testUrl
+        })
+      }
+    })
   }
 
   const ruleAsserts = Object.keys(ruleData).map((ruleId) => {
@@ -97,6 +76,21 @@ function processTestResults (testResults) {
   return bestMatchingRules(ruleAsserts)
 }
 
-function localUrl (url) {
-  return url.replace('https://act-rules.github.io/testcases/', 'http://127.0.0.1:8080/')
+function getTestCaseMapping (assertion) {
+  if (typeof assertion !== 'object' || assertion['@type'] !== 'Assertion') {
+    return
+  }
+
+  const { subject = {}, test = {}, result = {} } = assertion
+  return {
+    testTitle: test.title,
+    expected: testcase.expected,
+    actual: result.outcome.replace('earl:', ''),
+    url: subject.source
+  }
+}
+
+function getTestUrl (url, port) {
+  const localUrl = url.replace('https://act-rules.github.io/', '')
+  return `http://127.0.0.1:${port}/${localUrl}`
 }

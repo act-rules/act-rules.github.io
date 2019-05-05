@@ -8,6 +8,6 @@ module.exports.bestMatchingRules = function bestMatchingRules (ruleAsserts) {
   if (completeRules.length === 0) {
     return mappedRules;
   }
-  console.log(completeRules)
+
   return completeRules;
 }

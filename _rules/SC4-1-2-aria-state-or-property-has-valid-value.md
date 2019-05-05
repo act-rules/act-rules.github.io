@@ -85,6 +85,7 @@ _There are no major accessibility support issues known for this rule._
 
 ```html
 <div role="textbox" aria-errormessage="my-error"></div>
+<div id="my-error" role="alert">Form field must not be empty</div>
 ```
 
 #### Passed example 5
@@ -93,6 +94,7 @@ _There are no major accessibility support issues known for this rule._
 
 ```html
 <div role="combobox" aria-owns="my-textbox my-grid"></div>
+<input id="my-grid" />
 ```
 
 #### Passed example 6
@@ -270,21 +272,13 @@ Element has ARIA role, but no ARIA states or properties
 
 #### Inapplicable example 3
 
-`aria-checked` state with empty value
-
-```html
-<div role="checkbox" aria-checked></div>
-```
-
-#### Inapplicable example 4
-
 `aria-labelledby` property with empty value
 
 ```html
 <div role="searchbox" aria-labelledby=""></div>
 ```
 
-#### Inapplicable example 5
+#### Inapplicable example 4
 
 `aria-hidden` state on an element that is not an HTML or SVG element
 

@@ -82,15 +82,14 @@ Implicit value for roles: ´option´ role has an implicit value (´false´) spec
 Element has required properties, and required state `aria-expanded` has an implicit value
 
 ```html
-<div role="combobox" aria-controls="someElementId"></div>
-```
-
-#### Passed example 6
-
-Element has required properties, but with incorrect value since no element with with the given id(s) exists in the document
-
-```html
-<div role="combobox" aria-controls="foo"></div>
+<div aria-label="Tag" role="combobox" aria-expanded="true" 
+  aria-owns="owned_listbox" aria-haspopup="listbox">
+  <input type="text" aria-autocomplete="list" aria-controls="owned_listbox" aria-activedescendant="selected_option">
+</div>
+<ul role="listbox" id="owned_listbox">
+  <li role="option">Zebra</li>
+  <li role="option" id="selected_option">Zoom</li>
+</ul>
 ```
 
 ### Failed

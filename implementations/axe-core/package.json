@@ -1,0 +1,16 @@
+{
+  "name": "axe-core-act-runner",
+  "version": "1.0.0",
+  "description": "An ACT Rules test runner for axe-core",
+  "main": "main.js",
+  "author": "Wilco Fiers",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "license": "MPL-2.0",
+  "dependencies": {
+    "axe-core": "^3.2.2-canary.b573b1c",
+    "axe-puppeteer": "^1.0.0",
+    "puppeteer": "^1.15.0"
+  }
+}

@@ -111,7 +111,7 @@ The `xml:lang` attribute value is not a valid primary language subtag.
 </html>
 ```
 
-#### Fail example 3
+#### Failed example 3
 
 The `lang` attribute value has a valid primary language subtag, but a syntactically invalid region subtag.
 

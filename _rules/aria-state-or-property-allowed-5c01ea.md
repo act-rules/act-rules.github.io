@@ -64,7 +64,7 @@ _There are no major accessibility support issues known for this rule._
 Global state that is supported by all base markup elements.
 
 ```html
-<div aria-hidden="true"></div>
+<div aria-busy="true"></div>
 ```
 
 #### Passed example 4

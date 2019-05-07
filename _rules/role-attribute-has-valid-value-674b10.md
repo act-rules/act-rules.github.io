@@ -66,7 +66,7 @@ Element with multiple valid `role` values.
 Element with at least one valid `role` value.
 
 ```html
-<img role="presentation xyz" src="" />
+<img role="img xyz" src="" />
 ```
 
 ### Failed

@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 504,
+  "count": 503,
   "testcases": [
     {
       "testcaseId": "55f3ed0ec0f324514a0d223b737bc1e4c81593c7",
@@ -78,8 +78,8 @@
       "rulePage": "https://act-rules.github.io/rules/5c01ea"
     },
     {
-      "testcaseId": "60223e3ea3266207df7779f95d0c45981b7fa16f",
-      "url": "https://act-rules.github.io/testcases/5c01ea/60223e3ea3266207df7779f95d0c45981b7fa16f.html",
+      "testcaseId": "1edeac7e144b8f5b84cc18dfbc04185601183f36",
+      "url": "https://act-rules.github.io/testcases/5c01ea/1edeac7e144b8f5b84cc18dfbc04185601183f36.html",
       "expected": "passed",
       "ruleId": "5c01ea",
       "ruleName": "ARIA state or property allowed",
@@ -2022,24 +2022,16 @@
       "rulePage": "https://act-rules.github.io/rules/c487ae"
     },
     {
-      "testcaseId": "ad3a2a2191f813072c494bb03bba8ccaf7e23deb",
-      "url": "https://act-rules.github.io/testcases/c487ae/ad3a2a2191f813072c494bb03bba8ccaf7e23deb.html",
+      "testcaseId": "238e5b1c4cea83cdc2b0116a09965e756c85d91f",
+      "url": "https://act-rules.github.io/testcases/c487ae/238e5b1c4cea83cdc2b0116a09965e756c85d91f.html",
       "expected": "failed",
       "ruleId": "c487ae",
       "ruleName": "Links have an accessible name",
       "rulePage": "https://act-rules.github.io/rules/c487ae"
     },
     {
-      "testcaseId": "76c926bb00c2e721b3273dbc00294da455b54b90",
-      "url": "https://act-rules.github.io/testcases/c487ae/76c926bb00c2e721b3273dbc00294da455b54b90.html",
-      "expected": "failed",
-      "ruleId": "c487ae",
-      "ruleName": "Links have an accessible name",
-      "rulePage": "https://act-rules.github.io/rules/c487ae"
-    },
-    {
-      "testcaseId": "4d493da9cac99f992ad1ca385c9b79b760f1a1f5",
-      "url": "https://act-rules.github.io/testcases/c487ae/4d493da9cac99f992ad1ca385c9b79b760f1a1f5.html",
+      "testcaseId": "b6158ffdfa9691d1d0d66020c3b68d99ed107f5b",
+      "url": "https://act-rules.github.io/testcases/c487ae/b6158ffdfa9691d1d0d66020c3b68d99ed107f5b.html",
       "expected": "inapplicable",
       "ruleId": "c487ae",
       "ruleName": "Links have an accessible name",
@@ -2470,8 +2462,8 @@
       "rulePage": "https://act-rules.github.io/rules/674b10"
     },
     {
-      "testcaseId": "70838a66d445fcf6e92752f39e2561f7ca82585b",
-      "url": "https://act-rules.github.io/testcases/674b10/70838a66d445fcf6e92752f39e2561f7ca82585b.html",
+      "testcaseId": "8682c4d2ef41c931ee4c0cee251f319c872adcb3",
+      "url": "https://act-rules.github.io/testcases/674b10/8682c4d2ef41c931ee4c0cee251f319c872adcb3.html",
       "expected": "passed",
       "ruleId": "674b10",
       "ruleName": "Role attribute has valid value",
@@ -2672,7 +2664,7 @@
     {
       "testcaseId": "1d545cad6c6f2daae5cd97b10227a103ca871e17",
       "url": "https://act-rules.github.io/testcases/de46e4/1d545cad6c6f2daae5cd97b10227a103ca871e17.html",
-      "expected": "fail",
+      "expected": "failed",
       "ruleId": "de46e4",
       "ruleName": "Valid body lang attribute",
       "rulePage": "https://act-rules.github.io/rules/de46e4"
@@ -2768,7 +2760,7 @@
     {
       "testcaseId": "90ac9c3118483559f1979bf7b4e57a46e3a63eaf",
       "url": "https://act-rules.github.io/testcases/bf051a/90ac9c3118483559f1979bf7b4e57a46e3a63eaf.html",
-      "expected": "fail",
+      "expected": "failed",
       "ruleId": "bf051a",
       "ruleName": "Validity of HTML Lang attribute",
       "rulePage": "https://act-rules.github.io/rules/bf051a"

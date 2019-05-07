@@ -5,7 +5,7 @@ rule_type: atomic
 description: |
   Each button element has an accessible name
 accessibility_requirements:
-  - wcag20: 4.1.2
+  - wcag20: 4.1.2 # Name, Role, Value
   - forConformance: true
   - failed: not satisfied
   - passed: further testing needed

@@ -5,11 +5,11 @@ rule_type: atomic
 description: |
   This rule checks the lang or xml:lang attribute has a valid language subtag.
 accessibility_requirements:
-  - wcag20: 3.1.1
-  - forConformance: true
-  - failed: not satisfied
-  - passed: further testing needed
-  - inapplicable: further testing needed
+  wcag20:3.1.1: Language of Page (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
 authors:

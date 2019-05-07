@@ -4,7 +4,8 @@ name: Video element description track
 rule_type: atomic
 description: |
   This rule checks that description tracks that come with non-streaming `video` elements are descriptive.
-test_aspects:
+accessibility_requirements:
+input_aspects:
   - DOM Tree
   - CSS Styling
   - Audio output
@@ -14,13 +15,12 @@ authors:
   - Brian Bors
 ---
 
-## Test Procedure
 
-### Applicability
+## Applicability
 
 The rule applies to every [non-streaming](#non-streaming) `video` element that is [visible](#visible) where the video contains audio and a `track` element with a `kind="descriptions"` attribute.
 
-### Expectation
+## Expectation
 
 The visual information of each test target not available through its audio is described with a description `track` element.
 
@@ -30,7 +30,7 @@ _Note_: Multiple description `track` elements may be useful for different langua
 
 This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
-## Accessibility support
+## Accessibility Support
 
 Currently the description track is not supported by most assistive technology. Accessibility support for the description track attribute is relativly low to non-existent. Video players may be able to work around the lack of support for the description track by using aria-live but few do this today.
 
@@ -47,7 +47,7 @@ This means that the rule can only provide a pass for these succes criteria if as
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 A video element with a track element that contains descriptions.
 
@@ -64,7 +64,7 @@ A video element with a track element that contains descriptions.
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 A video element with a track element that contains incorrect descriptions.
 
@@ -81,7 +81,7 @@ A video element with a track element that contains incorrect descriptions.
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 A video element without a track element.
 
@@ -92,7 +92,7 @@ A video element without a track element.
 </video>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 A video element that is not visible on the page.
 
@@ -107,7 +107,7 @@ A video element that is not visible on the page.
 </video>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 A video element without audio.
 

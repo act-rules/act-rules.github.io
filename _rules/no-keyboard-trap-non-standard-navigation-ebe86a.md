@@ -4,7 +4,8 @@ name: No keyboard trap non-standard navigation
 rule_type: atomic
 description: |
   This rule checks if it is possible to use non-standard keyboard navigation to navigate through content where focus is trapped when using standard ways of keyboard navigation.
-test_aspects:
+accessibility_requirements:
+input_aspects:
   - DOM Tree
   - CSS Styling
 authors:
@@ -17,25 +18,24 @@ authors:
   - Stein Erik Skotkjerra
 ---
 
-## Test procedure
 
-### Applicability
+## Applicability
 
 The rule applies to any HTML or SVG element that is [focusable](#focusable) where focus cannot cycle to the browser UI by using [standard keyboard navigation](#standard-keyboard-navigation).
 
 **Note**: This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
 
-### Expectation 1
+## Expectation 1
 
 For each target element help information is [visible on the page](#visible-on-the-page) and [included in the accessibility tree](#included-in-the-accessibility-tree) or can be accessed from within the keyboard trap.
 
 **Note**: As per WCAG 2.0 Success Criterion 2.1.1 Keyboard the help information should be accessible through a keyboard interface.
 
-### Expectation 2
+## Expectation 2
 
 The help information explains how to cycle to the browser UI, or on how to get to a point from where it is possible to cycle to the browser UI, using [standard keyboard navigation](#standard-keyboard-navigation).
 
-### Expectation 3
+## Expectation 3
 
 For each target element focus can cycle to the browser UI by using the method advised in the help information.
 
@@ -46,7 +46,7 @@ For each target element focus can cycle to the browser UI by using the method ad
 - It is not possible to use unmodified arrow or tab keys, or other standard exit methods to move focus away.
 - The focus order in keyboard navigation is cyclical, not linear, meaning that the focus order will cycle to the first/last element when it moves away from the last/first element.
 
-## Accessibility support
+## Accessibility Support
 
 There are no major accessibility support issues known for this rule.
 
@@ -60,7 +60,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 Keyboard trap with help information in a paragraph before, and where the method advised works.
 
@@ -88,7 +88,7 @@ Keyboard trap with help information in a paragraph before, and where the method 
 <a id="link2" href="#">Link 2</a>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 Keyboard trap with help information within the trap, and where the method advised works.
 
@@ -116,7 +116,7 @@ Keyboard trap with help information within the trap, and where the method advise
 <a id="link2" href="#">Link 2</a>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 Keyboard trap with "help" link that once clicked exposes the instructions.
 
@@ -157,7 +157,7 @@ Keyboard trap with "help" link that once clicked exposes the instructions.
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Keyboard trap with no instructions.
 
@@ -184,7 +184,7 @@ Keyboard trap with no instructions.
 <a id="link2" href="#">Link 2</a>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 Keyboard trap with instructions that doesn't give advise on the method for proceeding.
 
@@ -212,7 +212,7 @@ Keyboard trap with instructions that doesn't give advise on the method for proce
 <a id="link2" href="#">Link 2</a>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 Keyboard trap with help text, where the method advised doesn't work.
 
@@ -241,7 +241,7 @@ Keyboard trap with help text, where the method advised doesn't work.
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Not a keyboard trap (interactive element).
 

@@ -132,7 +132,7 @@ Implicit label that is coded with the `label` element and does not describe the 
 <label>Menu<input id="fname" type="text" name="fname"/></label>
 ```
 
-#### Passed Example 4
+#### Failed Example 4
 
 Label is visible, but not included in accessibility tree, and does not describe the purpose of the associated element.
 
@@ -141,7 +141,7 @@ Label is visible, but not included in accessibility tree, and does not describe 
 <input aria-labelledby="label_fname" type="text" name="fname" />
 ```
 
-#### Passed Example 5
+#### Failed Example 5
 
 Label is included in accessibility tree, but not visible, and does not describe the purpose of the associated element.
 

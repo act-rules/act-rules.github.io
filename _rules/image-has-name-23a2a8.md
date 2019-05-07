@@ -1,6 +1,7 @@
 ---
 id: 23a2a8
 name: Image has accessible name
+rule_type: atomic
 description: |
   Each image that is not marked as decorative, has an accessible name
 accessibility_requirements:

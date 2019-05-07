@@ -2,7 +2,7 @@
 id: 5f99a7
 name: ARIA attribute is valid 
 rule_type: atomic 
-description: 
+description: |
   This rule checks that each aria- attribute specified is defined in ARIA 1.1
 accessibility_requirements: 
    wcag20:4.1.2: # Name, Role, Value (A)

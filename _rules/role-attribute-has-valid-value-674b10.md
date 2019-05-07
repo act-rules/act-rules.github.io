@@ -4,24 +4,27 @@ name: Role attribute has valid value
 rule_type: atomic
 description: |
   This rule checks that each role attribute has a valid value
-success_criterion:
-  - 4.1.2 # Name, Role, Value
-test_aspects:
+accessibility_requirements:
+  wcag20:4.1.2: # Name, Role, Value (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
   - DOM Tree
   - CSS Styling
 authors:
   - Jey Nandakumar
 ---
 
-## Test procedure
 
-### Applicability
+## Applicability
 
 Any [non-empty](#non-empty) `role` attribute that is specified on an HTML or SVG element that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 **Note:** Having a whitespace separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role](#semantic-role) of the element, and so forth.
 
-### Expectation
+## Expectation
 
 Each test target has a valid value that corresponds to a non-abstract [WAI-ARIA](https://www.w3.org/TR/wai-aria) role.
 
@@ -45,7 +48,7 @@ Older browsers do not support more than one token in the value for a role attrib
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 Element with valid `role` value.
 
@@ -53,7 +56,7 @@ Element with valid `role` value.
 <input type="text" role="textbox" />
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 Element with multiple valid `role` values.
 
@@ -61,7 +64,7 @@ Element with multiple valid `role` values.
 <span role="button link"></span>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 Element with at least one valid `role` value.
 
@@ -71,7 +74,7 @@ Element with at least one valid `role` value.
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Element with invalid `role` value.
 
@@ -79,7 +82,7 @@ Element with invalid `role` value.
 <input role="invalid" value="123" />
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 Element with multiple invalid `role` value.
 
@@ -89,7 +92,7 @@ Element with multiple invalid `role` value.
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Element with empty `role` attribute.
 
@@ -97,7 +100,7 @@ Element with empty `role` attribute.
 <div role=" ">Some Content</div>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 Element does not have `role` attribute.
 
@@ -105,7 +108,7 @@ Element does not have `role` attribute.
 <div>Some Content</div>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 Element with null `role` attribute.
 
@@ -113,7 +116,7 @@ Element with null `role` attribute.
 <div role>Some Content</div>
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 Element that is not included in the accessibility tree.
 

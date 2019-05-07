@@ -86,7 +86,7 @@ A video element with an audio description.
 <script src="https://ozplayer.global.ssl.fastly.net/3.3/config.js"></script>
 ```
 
-**Note:** The ozplayer implementation is only an Example and is not meant as an endorsment of the ozplayer.
+**Note:** The ozplayer implementation is only an example and is not meant as an endorsment of the ozplayer.
 
 ### Failed
 

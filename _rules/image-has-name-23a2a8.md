@@ -3,9 +3,13 @@ id: 23a2a8
 name: Image has accessible name
 description: |
   Each image that is not marked as decorative, has an accessible name
-success_criterion:
-  - 1.1.1 # Non-Text Content
-test_aspects:
+accessibility_requirements:
+  wcag20:1.1.1: # Non-Text Content
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
   - DOM Tree
   - CSS Styling
 authors:
@@ -13,13 +17,12 @@ authors:
   - Stein Erik Skotkjerra
 ---
 
-## Test procedure
 
-### Applicability
+## Applicability
 
 The rule applies to HTML `img` elements or any HTML element with the [semantic role](#semantic-role) of `img` that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
-### Expectation
+## Expectation
 
 Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty) or is marked as [decorative](#decorative).
 
@@ -44,11 +47,11 @@ There is a known combination of a popular browser and assistive technology that 
 - [F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F38)
 - [F65: Failure of Success Criterion 1.1.1 due to omitting the alt attribute or text alternative on img elements, area elements, and input elements of type "image"](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F65)
 
-## Test cases
+## Test Cases
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 HTML `img` element has accessible name
 
@@ -56,7 +59,7 @@ HTML `img` element has accessible name
 <img alt="W3C logo" />
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 Element with role of `img` and accessible name
 
@@ -64,7 +67,7 @@ Element with role of `img` and accessible name
 <div role="img" aria-label="W3C logo"></div>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 Accessible name but not always accessibility supported
 
@@ -72,7 +75,7 @@ Accessible name but not always accessibility supported
 <img title="W3C logo" />
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 HTML `img` element marked as [decorative](#decorative) through empty `alt` attribute
 
@@ -80,7 +83,7 @@ HTML `img` element marked as [decorative](#decorative) through empty `alt` attri
 <img alt="" />
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 HTML `img` element marked as [decorative](#decorative) through `role="presentation"`
 
@@ -88,7 +91,7 @@ HTML `img` element marked as [decorative](#decorative) through `role="presentati
 <img role="presentation" />
 ```
 
-#### Passed example 6
+#### Passed Example 6
 
 HTML `img` element marked as [decorative](#decorative) through `role="none"`
 
@@ -98,7 +101,7 @@ HTML `img` element marked as [decorative](#decorative) through `role="none"`
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 HTML `img` element that is not marked as [decorative](#decorative) and does not have accessible name
 
@@ -106,7 +109,7 @@ HTML `img` element that is not marked as [decorative](#decorative) and does not 
 <img />
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 Element with role of `img` but no accessible name
 
@@ -114,7 +117,7 @@ Element with role of `img` but no accessible name
 <div role="img"></div>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 Image element inside a `div` positioned off screen with no accessible name and is not marked as [decorative](#decorative)
 
@@ -124,7 +127,7 @@ Image element inside a `div` positioned off screen with no accessible name and i
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Element is not an HTML element
 
@@ -141,7 +144,7 @@ Element is not an HTML element
 </svg>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 Element with [semantic role](#semantic-role) of `img` is not [included in the accessibility tree](#included-in-the-accessibility-tree)
 
@@ -149,7 +152,7 @@ Element with [semantic role](#semantic-role) of `img` is not [included in the ac
 <div role="img" aria-hidden="true"></div>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 HTML `img` element is not [included in the accessibility tree](#included-in-the-accessibility-tree)
 
@@ -157,7 +160,7 @@ HTML `img` element is not [included in the accessibility tree](#included-in-the-
 <img alt="W3C logo" aria-hidden="true" />
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 The element is not a `img` element
 

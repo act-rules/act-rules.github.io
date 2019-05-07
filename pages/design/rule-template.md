@@ -24,6 +24,18 @@ accessibility_requirements:
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
 
+  aria11:some-id: # <Some heading in WAI-ARIA>
+    forConformance: true
+    failed: not satisfied
+    passed: satisfied | further testing needed
+    inapplicable: satisfied | further testing needed
+
+  wcag-technique:H123: # <Technique title>
+    forConformance: false
+    failed: not satisfied
+    passed: satisfied | further testing needed
+    inapplicable: satisfied | further testing needed
+    
 input_aspects:
   -  # (e.g. HTTP Messages, DOM Tree, CSS Styling, Accessibility Tree, Language, etc.,)
 
@@ -125,6 +137,18 @@ accessibility_requirements:
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
 
+  aria11:some-id: # <Some heading in WAI-ARIA>
+    forConformance: true
+    failed: not satisfied
+    passed: satisfied | further testing needed
+    inapplicable: satisfied | further testing needed
+
+  wcag-technique:H123: # <Technique title>
+    forConformance: false
+    failed: not satisfied
+    passed: satisfied | further testing needed
+    inapplicable: satisfied | further testing needed
+
 input_rules:
   -
 
@@ -140,7 +164,7 @@ The rule applies to any (??) element ...
 
 For each test target, the outcome of (at least one of / all of / any of etc.) the following rules is (passed / failed / etc.):
 
-- (list atomic rules that are used in this composite rule)
+- [Rule name](relative_link_to_rule.html)
 - ...
 
 ## Assumptions

@@ -3,21 +3,24 @@ id: 4e8ab6
 name: Role has required states and properties
 description: |
   Elements that have an explicit role must also specify all required states and properties
-success_criterion:
-  - 4.1.2 # Name, Role, Value
+accessibility_requirements:
+  wcag20:4.1.2: # Name, Role, Value (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 test_aspects:
   - DOM Tree
 authors:
   - Anne Thyme Nørregaard
 ---
 
-## Test procedure
 
-### Applicability
+## Applicability
 
 Any HTML or SVG element that has an [explicit semantic role](#semantic-role), except if the element has an [implicit semantic role](#implicit-role) that is identical to the explicit semantic role.
 
-### Expectation
+## Expectation
 
 For each test target, the [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) for the role are present, unless the state or property has a default value listed under [WAI-ARIA implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole).
 
@@ -45,7 +48,7 @@ This rule relies on browsers and assistive technologies to support leaving out [
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 Element has required states (no properties required for this role)
 
@@ -53,7 +56,7 @@ Element has required states (no properties required for this role)
 <div role="option" aria-selected="false"></div>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 Implicit value for roles: ´option´ role has an implicit value (´false´) specified for the required state ´aria-selected´
 
@@ -61,7 +64,7 @@ Implicit value for roles: ´option´ role has an implicit value (´false´) spec
 <div role="option"></div>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 Implicit value for roles: ´option´ role has an implicit value (´false´) specified for the required state ´aria-selected´, here defined without value
 
@@ -69,7 +72,7 @@ Implicit value for roles: ´option´ role has an implicit value (´false´) spec
 <div role="option" aria-selected></div>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 Implicit value for roles: ´option´ role has an implicit value (´false´) specified for the required state ´aria-selected´, here defined with only whitespace instead of a value
 
@@ -77,7 +80,7 @@ Implicit value for roles: ´option´ role has an implicit value (´false´) spec
 <div role="option" aria-selected=" "></div>
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 Element has required properties, and required state `aria-expanded` has an implicit value
 
@@ -85,7 +88,7 @@ Element has required properties, and required state `aria-expanded` has an impli
 <div role="combobox" aria-controls="someElementId"></div>
 ```
 
-#### Passed example 6
+#### Passed Example 6
 
 Element has required properties, but with incorrect value since no element with with the given id(s) exists in the document
 
@@ -95,7 +98,7 @@ Element has required properties, but with incorrect value since no element with 
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Element does not list required states and properties (´aria-controls´ is required property for ´combobox´)
 
@@ -103,7 +106,7 @@ Element does not list required states and properties (´aria-controls´ is requi
 <div role="combobox"></div>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 Required states and properties does not have non-empty value
 
@@ -113,7 +116,7 @@ Required states and properties does not have non-empty value
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Element does not have a semantic role
 
@@ -121,7 +124,7 @@ Element does not have a semantic role
 <div>Some Content</div>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 Element does not have an explicit semantic role
 
@@ -129,7 +132,7 @@ Element does not have an explicit semantic role
 <nav></nav>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 Element has an implicit semantic role that is identical to the explicit semantic role
 
@@ -137,7 +140,7 @@ Element has an implicit semantic role that is identical to the explicit semantic
 <input type="checkbox" role="checkbox" />
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 Element does not list required states and properties (´aria-controls´ is required property for ´combobox´), but the element is not included in the accessibility tree
 

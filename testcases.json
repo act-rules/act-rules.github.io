@@ -1048,7 +1048,7 @@
     {
       "testcaseId": "334f32d645ad9264f060b80055971fb556382c4c",
       "url": "https://act-rules.github.io/testcases/cc0f0a/334f32d645ad9264f060b80055971fb556382c4c.html",
-      "expected": "passed",
+      "expected": "failed",
       "ruleId": "cc0f0a",
       "ruleName": "Form field label is descriptive",
       "rulePage": "https://act-rules.github.io/rules/cc0f0a"
@@ -1056,7 +1056,7 @@
     {
       "testcaseId": "567e247cf9558d078511d17155e6d8e9fbddb8eb",
       "url": "https://act-rules.github.io/testcases/cc0f0a/567e247cf9558d078511d17155e6d8e9fbddb8eb.html",
-      "expected": "passed",
+      "expected": "failed",
       "ruleId": "cc0f0a",
       "ruleName": "Form field label is descriptive",
       "rulePage": "https://act-rules.github.io/rules/cc0f0a"

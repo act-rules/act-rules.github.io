@@ -733,7 +733,7 @@
           "assertedBy": "_:evaluator",
           "subject": "_:website",
           "result": {
-            "outcome": "earl:cantTell",
+            "outcome": "earl:inapplicable",
             "description": "",
             "date": ""
           },

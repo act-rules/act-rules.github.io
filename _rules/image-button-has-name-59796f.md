@@ -4,25 +4,33 @@ name: Image button has accessible name
 rule_type: atomic
 description: |
   This rule checks that each image button element has an accessible name
-success_criterion:
-  - 1.1.1 # Non-Text Content (A)
-  - 4.1.2 # Name, Role, Value (A)
-test_aspects: # Remove what is not applicable
+accessibility_requirements:
+  - wcag20: 1.1.1 # Non-Text Content (A)
+  - forConformance: true
+  - failed: not satisfied
+  - passed: further testing needed
+  - inapplicable: further testing needed
+  
+  - wcag20: 4.1.2 # Name, Role, Value (A)
+  - forConformance: true
+  - failed: not satisfied
+  - passed: further testing needed
+  - inapplicable: further testing needed
+input_aspects: # Remove what is not applicable
   - DOM Tree
   - CSS Styling
 authors:
   - Anne Thyme Nørregaard
 ---
 
-## Test procedure
 
-### Applicability
+## Applicability
 
 The rule applies to any HTML `input` element with a `type` attribute in the `Image Button` state, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 **Note:** The specification of the `[type](https://www.w3.org/TR/html/sec-forms.html#element-attrdef-input-type)` attribute describes in detail how to map the value of the attribute to its corresponding state.
 
-### Expectation
+## Expectation
 
 Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty).
 
@@ -42,7 +50,7 @@ There is a known combination of a popular browser and assistive technology that 
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 Image button element with accessible name through `alt` attribute
 
@@ -50,7 +58,7 @@ Image button element with accessible name through `alt` attribute
 <input type="image" name="submit" src="button.gif" alt="Submit" />
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 Image button element with accessible name through `aria-label`
 
@@ -58,7 +66,7 @@ Image button element with accessible name through `aria-label`
 <input type="image" name="submit" src="button.gif" aria-label="Submit" />
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 Image button element with accessible name through `title` attribute
 
@@ -66,7 +74,7 @@ Image button element with accessible name through `title` attribute
 <input type="image" name="submit" src="button.gif" title="Submit" />
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 Image button element with accessible name through `aria-labelledby`
 
@@ -77,7 +85,7 @@ Image button element with accessible name through `aria-labelledby`
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Image button element with no attributes to give accessible name
 
@@ -85,7 +93,7 @@ Image button element with no attributes to give accessible name
 <input type="image" name="submit" src="button.gif" />
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 Image button element with empty `alt` attribute
 
@@ -93,7 +101,7 @@ Image button element with empty `alt` attribute
 <input type="image" name="submit" src="button.gif" alt="" />
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 Image button with aria-labelledby that does not reference an id that exists in the same document
 
@@ -103,7 +111,7 @@ Image button with aria-labelledby that does not reference an id that exists in t
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 HTML `button` element is not an image button
 
@@ -111,7 +119,7 @@ HTML `button` element is not an image button
 <button>My button</button>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 HTML `input` element with type with a `type` attribute in the `Button` state is not an image button
 
@@ -119,7 +127,7 @@ HTML `input` element with type with a `type` attribute in the `Button` state is 
 <input type="button">My button</input>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 Button with image inside is not an image button
 
@@ -127,7 +135,7 @@ Button with image inside is not an image button
 <button><img src="button.gif" /></button>
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 Image is not a button image
 
@@ -135,7 +143,7 @@ Image is not a button image
 <img alt="W3C logo" />
 ```
 
-#### Inapplicable example 5
+#### Inapplicable Example 5
 
 Image button is not included in the accessibility tree
 

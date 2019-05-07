@@ -4,7 +4,8 @@ name: video element audio described
 rule_type: atomic
 description: |
   Non-streaming `video` elements must have all visual information also contained in the audio
-test_aspects:
+accessibility_requirements:
+input_aspects:
   - DOM Tree
   - CSS Styling
   - Audio output
@@ -14,13 +15,12 @@ authors:
   - Brian Bors
 ---
 
-## Test Procedure
 
-### Applicability
+## Applicability
 
 The rule applies to every [non-streaming](#non-streaming) `video` element that is [visible](#visible) where the video contains audio.
 
-### Expectation
+## Expectation
 
 The visual information of each test target is available through its audio, or through an audio description track.
 
@@ -28,7 +28,7 @@ The visual information of each test target is available through its audio, or th
 
 This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
-## Accessibility support
+## Accessibility Support
 
 There are only a few implementations of video players (without third party technologies) that support audio description tracks at the time of writing.
 
@@ -43,7 +43,7 @@ There are only a few implementations of video players (without third party techn
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 A video element with a voiceover that describes the visual information.
 
@@ -60,7 +60,7 @@ A video element with a voiceover that describes the visual information.
 </video>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 A video element with an audio description.
 
@@ -90,7 +90,7 @@ A video element with an audio description.
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 A video element without an audio description.
 
@@ -101,7 +101,7 @@ A video element without an audio description.
 </video>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 A video element with an incorrect audio description.
 
@@ -118,7 +118,7 @@ A video element with an incorrect audio description.
 </video>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 A video element with an incorrect audio description.
 
@@ -148,7 +148,7 @@ A video element with an incorrect audio description.
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 A video element without audio.
 
@@ -159,7 +159,7 @@ A video element without audio.
 </video>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 A video element that is not visible on the page.
 

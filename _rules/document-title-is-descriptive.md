@@ -2,20 +2,16 @@
 id: c4a8a4
 name: Document title is descriptive
 rule_type: atomic
-
 description: |
   This rule checks that the document title describes the topic or purpose of the document.
-
 accessibility_requirements:
-  - wcag20: 2.4.2 # Page Titled
-  - forConformance: true
-  - failed: not satisfied
-  - passed: further testing needed
-  - inapplicable: further testing needed
-  
+  wcag20:2.4.2: # Page Titled (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-
 authors:
   - Anne Thyme Nørregaard
   - Corbb O’Connor

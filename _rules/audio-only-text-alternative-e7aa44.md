@@ -4,11 +4,15 @@ name: audio only has a text alternative
 rule_type: composite
 description: |
   This rule checks if audio only elements have a text alternative available
+  
+accessibility_requirements:
+  - wcag20: 1.2.1 # Audio-only and Video-only (Prerecorded)
+  - forConformance: true
+  - failed: not satisfied
+  - passed: further testing needed
+  - inapplicable: further testing needed
 
-success_criterion:
-  - 1.2.1 # Audio-only and Video-only (Prerecorded)
-
-atomic_rules:
+input_rules:
   - audio-have-transcript-2eb176
   - audio-as-media-alternative-afb423
 
@@ -19,9 +23,7 @@ authors:
   - Rafal Charlampozicz
 ---
 
-## Test Procedure
-
-### Applicability
+## Applicability
 
 The rule applies to any [non-streaming](#non-streaming-media-element) `audio` element that is:
 
@@ -30,7 +32,7 @@ The rule applies to any [non-streaming](#non-streaming-media-element) `audio` el
 
 **Note:** A play button is an interactive element that when activated, plays the audio.
 
-### Expectation
+## Expectation
 
 For each test target, the outcome of at least one of the following rules is passed:
 
@@ -41,7 +43,7 @@ For each test target, the outcome of at least one of the following rules is pass
 
 _There are currently no assumptions_
 
-## Accessibility support
+## Accessibility Support
 
 There are no major accessibility support issues known for this rule.
 
@@ -54,7 +56,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Pass example 1
+#### Pass Example 1
 
 Audio with controls and internal transcript
 
@@ -74,7 +76,7 @@ Audio with controls and internal transcript
 </p>
 ```
 
-#### Pass example 2
+#### Pass Example 2
 
 An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative.
 
@@ -100,7 +102,7 @@ An audio element that describes some of the text on the same page. The text on t
 
 ### Failed
 
-#### Fail example 1
+#### Fail Example 1
 
 Audio with controls and incorrect internal transcript
 
@@ -120,7 +122,7 @@ Audio with controls and incorrect internal transcript
 </p>
 ```
 
-#### Fail example 2
+#### Fail Example 2
 
 An audio element that describes some of the text on the same page. The text is not visible on the page.
 
@@ -146,7 +148,7 @@ An audio element that describes some of the text on the same page. The text is n
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Audio without controls.
 
@@ -154,7 +156,7 @@ Audio without controls.
 <audio src="../test-assets/moon-audio/moon-speech.mp3"></audio>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the controls are not visible on the page.
 

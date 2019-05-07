@@ -5,17 +5,16 @@ rule_type: atomic
 description: |
   This rule checks that each image button element has an accessible name
 accessibility_requirements:
-  - wcag20: 1.1.1 # Non-Text Content (A)
-  - forConformance: true
-  - failed: not satisfied
-  - passed: further testing needed
-  - inapplicable: further testing needed
-  
-  - wcag20: 4.1.2 # Name, Role, Value (A)
-  - forConformance: true
-  - failed: not satisfied
-  - passed: further testing needed
-  - inapplicable: further testing needed
+  wcag20:1.1.1: # Non-Text Content (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag20:4.1.2: # Name, Role, Value (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects: # Remove what is not applicable
   - DOM Tree
   - CSS Styling

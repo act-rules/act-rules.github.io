@@ -5,11 +5,11 @@ rule_type: atomic
 description: |
   This rule checks that image elements that use their source filename as their accessible name do so without loss of information to the user.
 accessibility_requirements:
-  - wcag20: 1.1.1 # Non-Text Content
-  - forConformance: true
-  - failed: not satisfied
-  - passed: further testing needed
-  - inapplicable: further testing needed
+  wcag20:1.1.1: # Non-Text Content (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling

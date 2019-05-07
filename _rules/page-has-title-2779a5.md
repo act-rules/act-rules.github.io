@@ -1,11 +1,16 @@
 ---
 id: 2779a5
 name: HTML Page has a title
+rule_type: atomic
 description: |
   This rule checks that the HTML page has a title
-success_criterion:
-  - 2.4.2 # Page Titled
-test_aspects:
+accessibility_requirements:
+  wcag20:2.4.2: # Page Titled (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
   - DOM Tree
 authors:
   - Wilco Fiers
@@ -15,21 +20,20 @@ authors:
   - Jey Nandakumar
 ---
 
-## Test procedure
 
-### Applicability
+## Applicability
 
 The rule applies to any page where the [document element](https://www.w3.org/TR/dom/#document-element) is an `html` element, and where the page is not embedded in another page.
 
 **Note**: Pages may be embedded inside other pages through elements such as `iframe` and `object` elements.
 
-### Expectation 1
+## Expectation 1
 
 The [document element](https://www.w3.org/TR/dom/#document-element) has at least one [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) that is an HTML `title` element.
 
 **Note**: The `title` element exists in other namespaces such as SVG. These are not HTML `title` elements and should be ignored for this rule.
 
-### Expectation 2
+## Expectation 2
 
 The first HTML `title` element that is a [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) of the [document element](https://www.w3.org/TR/dom/#document-element) has [children](https://www.w3.org/TR/dom/#concept-tree-child) that are [text nodes](https://www.w3.org/TR/dom/#text) that are not only [whitespace](#whitespace).
 
@@ -47,13 +51,13 @@ _There are no major accessibility support issues known for this rule._
 - [https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=242#qr-navigation-mechanisms-title](https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=242#qr-navigation-mechanisms-title)
 - [https://www.w3.org/TR/WCAG20-TECHS/G88.html](https://www.w3.org/TR/WCAG20-TECHS/G88.html)
 - [https://www.w3.org/TR/WCAG20-TECHS/H25.html](https://www.w3.org/TR/WCAG20-TECHS/H25.html)
-- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible WCAG-ACT-RULES-CG refers to those. Another source for test cases is the W3C Before and After Demonstration.
+- The WCAG 2.0 Techniques already contain Examples and code snippets to illustrate which content passes or fails the test. Whenever possible WCAG-ACT-RULES-CG refers to those. Another source for test cases is the W3C Before and After Demonstration.
 
 ## Test Cases
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 This page has a `title` with content.
 
@@ -63,7 +67,7 @@ This page has a `title` with content.
 </html>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 This page gives a `title` to an iframe.
 
@@ -74,7 +78,7 @@ This page gives a `title` to an iframe.
 </html>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 This page has two `title` elements.
 
@@ -89,7 +93,7 @@ This page has two `title` elements.
 </html>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 The `title` is in the `body`.
 
@@ -101,7 +105,7 @@ The `title` is in the `body`.
 </html>
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 The first `title` element has content.
 
@@ -116,7 +120,7 @@ The first `title` element has content.
 </html>
 ```
 
-#### Passed example 6
+#### Passed Example 6
 
 The `title` only contains characters that are not letters or numbers.
 
@@ -128,7 +132,7 @@ The `title` only contains characters that are not letters or numbers.
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 The page has no `title`.
 
@@ -138,7 +142,7 @@ The page has no `title`.
 </html>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 The `title` element is empty.
 
@@ -148,7 +152,7 @@ The `title` element is empty.
 </html>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 The page has no `title`.
 
@@ -158,7 +162,7 @@ The page has no `title`.
 </html>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 The first `title` element is empty.
 
@@ -173,7 +177,7 @@ The first `title` element is empty.
 </html>
 ```
 
-#### Failed example 5
+#### Failed Example 5
 
 The `title` only contains a separator character.
 
@@ -185,7 +189,7 @@ The `title` only contains a separator character.
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 This rule is not applicable to `svg` elements.
 

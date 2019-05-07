@@ -4,6 +4,7 @@ name: Audio-only as a media alternative for text
 rule_type: atomic
 description: |
   This rule checks `audio` is a media alternative for text on the page. 
+accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling

@@ -3,8 +3,9 @@ id: afb423
 name: Audio-only as a media alternative for text
 rule_type: atomic
 description: |
-  This rule checks `audio` is a media alternative for text on the page.
-test_aspects:
+  This rule checks `audio` is a media alternative for text on the page. 
+accessibility_requirements:
+input_aspects:
   - DOM Tree
   - CSS Styling
   - Audio output
@@ -13,9 +14,8 @@ authors:
   - Brian Bors
 ---
 
-## Test Procedure
 
-### Applicability
+## Applicability
 
 The rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:
 
@@ -24,15 +24,15 @@ The rule applies to every [non-streaming](#non-streaming-media-element) `audio` 
 
 **Note:** A play button is an interactive element that when activated, plays the audio.
 
-### Expectation 1
+## Expectation 1
 
 The auditory information of each test target is available as text (directly or via text alternatives) that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
-### Expectation 2
+## Expectation 2
 
 Each target element is labelled as an audio alternative for text on the page.
 
-### Expectation 3
+## Expectation 3
 
 The label (from expectation 2) is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree)
 
@@ -42,7 +42,7 @@ The label (from expectation 2) is [visible](#visible) and [included in the acces
 
 _There are currently no assumptions_
 
-## Accessibility support
+## Accessibility Support
 
 There are no major accessibility support issues known for this rule.
 
@@ -50,11 +50,11 @@ There are no major accessibility support issues known for this rule.
 
 - [Understanding SC 1.2.1:Audio-only and Video-only (Prerecorded)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
 
-## Test cases
+## Test Cases
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative.
 
@@ -76,7 +76,7 @@ An audio element that describes some of the text on the same page. The text on t
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 An audio element that describes some of the text on the same page. The audio contains more information than the text does.
 
@@ -93,7 +93,7 @@ An audio element that describes some of the text on the same page. The audio con
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 An audio element that describes some of the text on the same page. The text is not visible on the page.
 
@@ -113,7 +113,7 @@ An audio element that describes some of the text on the same page. The text is n
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 An audio element that describes some of the text on the same page. The text on the page does not label the audio as an alternative.
 
@@ -129,7 +129,7 @@ An audio element that describes some of the text on the same page. The text on t
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the label is not visible on the page.
 
@@ -151,7 +151,7 @@ An audio element that describes some of the text on the same page. The text on t
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the controls are not visible on the page.
 
@@ -175,7 +175,7 @@ An audio element that describes some of the text on the same page. The text on t
 ></audio>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but there are no controls.
 

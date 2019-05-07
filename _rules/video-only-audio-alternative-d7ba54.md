@@ -4,7 +4,8 @@ name: video only has audio alternative
 rule_type: atomic
 description: |
   Non-streaming `video` elements without audio must have an audio alternative
-test_aspects:
+accessibility_requirements:
+input_aspects:
   - DOM Tree
   - CSS Styling
   - Audio output
@@ -13,13 +14,12 @@ authors:
   - Brian Bors
 ---
 
-## Test Procedure
 
-### Applicability
+## Applicability
 
 The rule applies to any [non-streaming](#non-streaming) `video` element [visible](#visible) where the video doesn't contains audio.
 
-### Expectation
+## Expectation
 
 The visual information of each test target is available through an audio track.
 
@@ -27,7 +27,7 @@ The visual information of each test target is available through an audio track.
 
 This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
-## Accessibility support
+## Accessibility Support
 
 There are no major accessibility support issues known for this rule.
 
@@ -40,7 +40,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Pass example 1
+#### Pass Example 1
 
 A video element without audio has a separate audio track that describes the visual information.
 
@@ -60,7 +60,7 @@ A video element without audio has a separate audio track that describes the visu
 
 ### Failed
 
-#### Fail example 1
+#### Fail Example 1
 
 A video element without an audio track.
 
@@ -71,7 +71,7 @@ A video element without an audio track.
 </video>
 ```
 
-#### Fail example 2
+#### Fail Example 2
 
 A video element without audio has a separate audio track that incorrectly describes the visual information.
 
@@ -91,7 +91,7 @@ A video element without audio has a separate audio track that incorrectly descri
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 A video element with audio.
 
@@ -102,7 +102,7 @@ A video element with audio.
 </video>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 A video element without sound that is not visible on the page.
 

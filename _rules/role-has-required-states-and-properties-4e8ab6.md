@@ -10,7 +10,7 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-test_aspects:
+input_aspects:
   - DOM Tree
 authors:
   - Anne Thyme Nørregaard

@@ -4,18 +4,15 @@ name: audio only has a text alternative
 rule_type: composite
 description: |
   This rule checks if audio only elements have a text alternative available
-  
 accessibility_requirements:
-  - wcag20: 1.2.1 # Audio-only and Video-only (Prerecorded)
-  - forConformance: true
-  - failed: not satisfied
-  - passed: further testing needed
-  - inapplicable: further testing needed
-
+  wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_rules:
   - audio-have-transcript-2eb176
   - audio-as-media-alternative-afb423
-
 authors:
   - Wilco Fiers
   - Brian Bors

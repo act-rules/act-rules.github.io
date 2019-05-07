@@ -5,7 +5,7 @@ rule_type: atomic
 description: |
   Each form field element has an accessible name
 accessibility_requirements:
-  wcag20:4.1.2: # Name, Role, Value
+  wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true
     failed: not satisfied
     passed: further testing needed

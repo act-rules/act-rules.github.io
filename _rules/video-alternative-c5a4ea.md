@@ -4,9 +4,13 @@ name: video with audio has audio descriptions or transcript
 rule_type: composite
 description: |
   This rule checks video elements with audio have an alternative for the video content as audio or as text.
-success_criterion:
-  - 1.2.3 # Audio Description or Media Alternative (Prerecorded)
-atomic_rules:
+accessibility_requirements:
+  wcag20:1.2.3: # Audio Description or Media Alternative (Prerecorded) (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_rules:
   - video-audio-described-1ea59c
   - video-transcript-1a02b0
   - video-description-track-f196ce
@@ -18,11 +22,11 @@ authors:
 
 ## Test Procedure
 
-### Applicability
+## Applicability
 
 The rule applies to every [non-streaming](#non-streaming) `video` element that is [visible](#visible), where the video contains audio.
 
-### Expectation
+## Expectation
 
 For each test target, the outcome of at least one of the following rules is passed:
 
@@ -35,7 +39,7 @@ For each test target, the outcome of at least one of the following rules is pass
 
 This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
-## Accessibility support
+## Accessibility Support
 
 See [Video element description track: accessibility support](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-Video-description-track.html#accessibility-support.html).
 See [Video with audio has audio description: accessibility support](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-audio-description.html#accessibility-support.html).
@@ -57,7 +61,7 @@ See [Video with audio has audio description: accessibility support](https://auto
 
 ### Passed
 
-#### Pass example 1
+#### Pass Example 1
 
 A video element with a voiceover that describes the visual information.
 
@@ -74,7 +78,7 @@ A video element with a voiceover that describes the visual information.
 </video>
 ```
 
-#### Pass example 2
+#### Pass Example 2
 
 A video element with a link to a text transcript.
 
@@ -86,7 +90,7 @@ A video element with a link to a text transcript.
 <a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
 ```
 
-#### Pass example 3
+#### Pass Example 3
 
 A video element with a track element that contains descriptions.
 
@@ -101,7 +105,7 @@ A video element with a track element that contains descriptions.
 </video>
 ```
 
-#### Pass example 4
+#### Pass Example 4
 
 A video element that describes some of the text on the same page. The text on the page labels the video as an alternative.
 
@@ -121,7 +125,7 @@ A video element that describes some of the text on the same page. The text on th
 
 ### Failed
 
-#### Fail example 1
+#### Fail Example 1
 
 A video element with an incorrect audio description.
 
@@ -138,7 +142,7 @@ A video element with an incorrect audio description.
 </video>
 ```
 
-#### Fail example 2
+#### Fail Example 2
 
 A video element with a link to an incorrect text transcript on a different page.
 
@@ -150,7 +154,7 @@ A video element with a link to an incorrect text transcript on a different page.
 <a href="../test-assets/rabbit-video/incorrect-transcript.html">Transcript</p>
 ```
 
-#### Fail example 3
+#### Fail Example 3
 
 A video element with a track element that contains incorrect descriptions.
 
@@ -165,7 +169,7 @@ A video element with a track element that contains incorrect descriptions.
 </video>
 ```
 
-#### Fail example 4
+#### Fail Example 4
 
 A video element that describes some of the text on the same page. The video contains more information than the text does.
 
@@ -184,7 +188,7 @@ A video element that describes some of the text on the same page. The video cont
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 A video element without audio.
 
@@ -195,7 +199,7 @@ A video element without audio.
 </video>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 A video element that is not visible on the page.
 

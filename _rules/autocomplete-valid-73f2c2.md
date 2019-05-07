@@ -1,20 +1,24 @@
 ---
 id: 73f2c2
 name: Autocomplete valid
+rule_type: atomic
 description: |
   This rule checks that the HTML autocomplete attribute has a correct value
-success_criterion:
-  - 1.3.5 # Identify Input Purpose
-test_aspects:
+accessibility_requirements:
+  wcag21:1.3.5: # Identify Input Purpose (AA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
   - DOM Tree
   - CSS Styling
 authors:
   - Wilco Fiers
 ---
 
-## Test Procedure
 
-### Applicability
+## Applicability
 
 The rule applies to any HTML `input`, `select` and `textarea` element with a [non-empty](#non-empty) `autocomplete` attribute, except if one of the following is true:
 
@@ -23,11 +27,11 @@ The rule applies to any HTML `input`, `select` and `textarea` element with a [no
 - The element has a `disabled` or `aria-disabled="true"` attribute
 - The element has `tabindex="-1"` and has a [semantic role](#semantic-role) that is not a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget_roles)
 
-### Expectation 1
+## Expectation 1
 
 The `autocomplete` attribute is a single term, or a space separated list of terms.
 
-### Expectation 2
+## Expectation 2
 
 The autocomplete term(s) follow the [HTML 5.2 specification](https://www.w3.org/TR/html52/sec-forms.html#autofill-detail-tokens), which requires that it/they match the following in the correct order:
 
@@ -38,7 +42,7 @@ The autocomplete term(s) follow the [HTML 5.2 specification](https://www.w3.org/
 
 **Note**: Autocomplete terms are case insensitive. When multiple terms are used, they must be used in the correct order.
 
-### Exepctation 3
+## Expectation 3
 
 The [correct autocomplete field](#correct-autocomplete-field) is an [appropriate field for the form control](#appropriate-field-for-the-form-control).
 
@@ -46,7 +50,7 @@ The [correct autocomplete field](#correct-autocomplete-field) is an [appropriate
 
 For this rule, it is assumed that the `autocomplete` attribute is not used on form fields that do not correspond to a autocomplete field described in the HTML 5.2 specification. If the `autocomplete` field is used to describe "custom" taxonomy, rather than that described in the specification, this rule may produce incorrect results.
 
-## Accessibility support
+## Accessibility Support
 
 While `autocomplete` in a promising technique for supporting personalisation in HTML, support for this is fairly limited.
 
@@ -62,7 +66,7 @@ The intent of this rule is to ensure that the `autocomplete` attribute can be us
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 Single autocomplete term.
 
@@ -70,7 +74,7 @@ Single autocomplete term.
 <input autocomplete="username" />
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 Single autocomplete term for select.
 
@@ -81,7 +85,7 @@ Single autocomplete term for select.
 </select>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 Autocomplete term, only valid for textarea.
 
@@ -89,7 +93,7 @@ Autocomplete term, only valid for textarea.
 <textarea autocomplete="Street-Address"></textarea>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 Two autocomplete terms.
 
@@ -97,7 +101,7 @@ Two autocomplete terms.
 <input autocomplete="Work EMail" />
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 Autocomplete using section-\*
 
@@ -105,7 +109,7 @@ Autocomplete using section-\*
 <input autocomplete="section-partner email" />
 ```
 
-#### Passed example 6
+#### Passed Example 6
 
 Triple autocomplete terms.
 
@@ -113,7 +117,7 @@ Triple autocomplete terms.
 <input type="text" autocomplete="section-primary billing address-line1" />
 ```
 
-#### Passed example 7
+#### Passed Example 7
 
 Full length autocomplete terms.
 
@@ -123,7 +127,7 @@ Full length autocomplete terms.
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Unknown autocomplete term.
 
@@ -131,7 +135,7 @@ Unknown autocomplete term.
 <input autocomplete="badterm" />
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 term `work` not allowed before `photo`.
 
@@ -139,7 +143,7 @@ term `work` not allowed before `photo`.
 <input autocomplete="work photo" />
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 Invalid order of terms.
 
@@ -147,7 +151,7 @@ Invalid order of terms.
 <input autocomplete="work shipping email" />
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 Comma seperated rather than space separated list.
 
@@ -155,7 +159,7 @@ Comma seperated rather than space separated list.
 <input autocomplete="work,email" />
 ```
 
-#### Failed example 5
+#### Failed Example 5
 
 Autocomplete is inappropriate for the type of field.
 
@@ -165,7 +169,7 @@ Autocomplete is inappropriate for the type of field.
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Incorrect element.
 
@@ -173,7 +177,7 @@ Incorrect element.
 <button autocomplete="username"></button>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 Empty attribute.
 
@@ -181,7 +185,7 @@ Empty attribute.
 <input autocomplete="" />
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 Hidden through `display:none`.
 
@@ -189,7 +193,7 @@ Hidden through `display:none`.
 <input autocomplete="username" style="display:none" />
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 Off screen and hidden to assistive technologies
 
@@ -201,7 +205,7 @@ Off screen and hidden to assistive technologies
 />
 ```
 
-#### Inapplicable example 5
+#### Inapplicable Example 5
 
 type `input` button.
 
@@ -209,7 +213,7 @@ type `input` button.
 <input type="button" autocomplete="username" />
 ```
 
-#### Inapplicable example 6
+#### Inapplicable Example 6
 
 type `hidden`.
 
@@ -217,7 +221,7 @@ type `hidden`.
 <input type="hidden" autocomplete="username" />
 ```
 
-#### Inapplicable example 7
+#### Inapplicable Example 7
 
 Native disabled.
 
@@ -225,7 +229,7 @@ Native disabled.
 <input autocomplete="username" disabled />
 ```
 
-#### Inapplicable example 8
+#### Inapplicable Example 8
 
 Using `aria-disabled`.
 
@@ -233,7 +237,7 @@ Using `aria-disabled`.
 <input autocomplete="username" aria-disabled="true" />
 ```
 
-#### Inapplicable example 9
+#### Inapplicable Example 9
 
 Non-widget element.
 

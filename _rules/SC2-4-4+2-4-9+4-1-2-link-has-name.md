@@ -33,7 +33,7 @@ Each target element has an [accessible name](#accessible-name) that is not only 
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+For `area` elements that have a `href` attribute, but are not nested inside `map` elements, there seem to be differences between browsers and assistive technology on whether the `area` is considered [included in the accessibility tree](#included-in-the-accessibility-tree) or not.
 
 ## Background
 
@@ -135,7 +135,12 @@ When `link` is off screen.
 `area` element with `href` attribute has accessible name.
 
 ```html
-<area shape="rect" coords="0,0,82,126" href="http://www.w3.org/WAI" alt="Web Accessibility Initiative (WAI)">
+<img src="planets.gif" width="145" height="126" alt="Planets"
+usemap="#planetmap">
+
+<map name="planetmap">
+  <area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun">
+</map>
 ```
 
 #### Passed example 11
@@ -226,7 +231,12 @@ Link is completely empty, but still shows up in focus order, so it should have a
 `area` element with `href` attribute does not have accessible name.
 
 ```html
-<area shape="rect" coords="0,0,82,126" href="http://www.w3.org/WAI">
+<img src="planets.gif" width="145" height="126" alt="Planets"
+usemap="#planetmap">
+
+<map name="planetmap">
+  <area shape="rect" coords="0,0,82,126" href="sun.htm">
+</map>
 ```
 
 #### Failed example 11

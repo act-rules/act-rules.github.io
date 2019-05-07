@@ -1,6 +1,7 @@
 ---
 id: 4e8ab6
 name: Role has required states and properties
+rule_type: atomic
 description: |
   Elements that have an explicit role must also specify all required states and properties
 accessibility_requirements:

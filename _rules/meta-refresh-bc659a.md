@@ -3,24 +3,35 @@ id: bc659a
 name: Meta-refresh no delay
 description: |
   This rule checks that the meta element is not used for delayed redirecting or refreshing.
-success_criterion:
-  - 2.2.1 # Timing Adjustable
-  - 2.2.4 # Interruptions
-  - 3.2.5 # Change on Request
-test_aspects:
+accessibility_requirements:
+  wcag20:2.2.1: # Timing Adjustable (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag20:2.2.4: # Interruptions (AAA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag20:3.2.5: # Change on Request (AAA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
   - DOM Tree
 authors:
   - Anne Thyme Nørregaard
   - Wilco Fiers
 ---
 
-## Test procedure
 
-### Applicability
+## Applicability
 
 The rule applies to the first [valid](https://www.w3.org/TR/html/document-metadata.html#statedef-http-equiv-refresh) `<meta http-equiv="refresh">` element with a `content` attribute in a document.
 
-### Expectation
+## Expectation
 
 The `time` of the `content` attribute is 0 or greater than 72000 (20 hours).
 
@@ -45,7 +56,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 Redirects immediately.
 
@@ -55,7 +66,7 @@ Redirects immediately.
 </head>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 First valid `<meta http-equiv="refresh">` redirects immediately.
 
@@ -66,7 +77,7 @@ First valid `<meta http-equiv="refresh">` redirects immediately.
 </head>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 Redirects after more than 20 hours.
 
@@ -78,7 +89,7 @@ Redirects after more than 20 hours.
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Refreshes after 30 seconds.
 
@@ -88,7 +99,7 @@ Refreshes after 30 seconds.
 </head>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 Redirects after 30 seconds.
 
@@ -98,7 +109,7 @@ Redirects after 30 seconds.
 </head>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 First `<meta http-equiv="refresh">` element is not valid, second one redirects after 5 seconds.
 
@@ -109,7 +120,7 @@ First `<meta http-equiv="refresh">` element is not valid, second one redirects a
 </head>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 Redirects after exactly 20 hours.
 
@@ -121,7 +132,7 @@ Redirects after exactly 20 hours.
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 No `content` attribute.
 
@@ -131,7 +142,7 @@ No `content` attribute.
 </head>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 No `http-equiv="refresh"` attribute.
 
@@ -141,7 +152,7 @@ No `http-equiv="refresh"` attribute.
 </head>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 `content` attribute is invalid and therefore inapplicable.
 
@@ -151,7 +162,7 @@ No `http-equiv="refresh"` attribute.
 </head>
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 `content` attribute is invalid and therefore inapplicable.
 
@@ -161,7 +172,7 @@ No `http-equiv="refresh"` attribute.
 </head>
 ```
 
-#### Inapplicable example 5
+#### Inapplicable Example 5
 
 `content` attribute is invalid and therefore inapplicable.
 
@@ -171,7 +182,7 @@ No `http-equiv="refresh"` attribute.
 </head>
 ```
 
-#### Inapplicable example 6
+#### Inapplicable Example 6
 
 `content` attribute is invalid and therefore inapplicable.
 
@@ -181,7 +192,7 @@ No `http-equiv="refresh"` attribute.
 </head>
 ```
 
-#### Inapplicable example 7
+#### Inapplicable Example 7
 
 `content` attribute is invalid and therefore inapplicable.
 
@@ -191,7 +202,7 @@ No `http-equiv="refresh"` attribute.
 </head>
 ```
 
-#### Inapplicable example 8
+#### Inapplicable Example 8
 
 `content` attribute is invalid and therefore inapplicable.
 

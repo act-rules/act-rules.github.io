@@ -5,15 +5,27 @@ rule_type: composite
 description: |
   This rule checks ...
 
-accessibility_requirements:
-  wcag20:x.x.x: # (Name of Success Criterion)
+accessibility_requirements: # Remove whatever is not applicable
+  wcag20:x.x.x: # <Name of Success Criterion> (A | AA | AAA)
     forConformance: true
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
 
+  aria11:some-id: # <Some heading in WAI-ARIA>
+    forConformance: true
+    failed: not satisfied
+    passed: satisfied | further testing needed
+    inapplicable: satisfied | further testing needed
+
+  wcag-technique:H123: # <Technique title>
+    forConformance: false
+    failed: not satisfied
+    passed: satisfied | further testing needed
+    inapplicable: satisfied | further testing needed
+
 input_rules:
-  -
+  - # Include the ID of the rule
 
 authors:
   -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
@@ -25,9 +37,9 @@ The rule applies to any (??) element ...
 
 ## Expectation (1)
 
-For each test target, the outcome of (at least one of / all of / any of etc.) the following rules is (passed / failed / etc.):
+For each test target, the outcome of (at least one of | all of | any of etc.) the following rules is (passed / failed / etc.):
 
-- (list atomic rules that are used in this composite rule)
+- [Rule name](relative_link_to_rule.html)
 - ...
 
 ## Assumptions

@@ -5,11 +5,11 @@ rule_type: atomic
 description: |
   This rule checks that WAI-ARIA states or properties are allowed for the element they are specified on.
 accessibility_requirements:
-  - wcag20: 4.1.2
-  - forConformance: true
-  - failed: not satisfied
-  - passed: further testing needed
-  - inapplicable: further testing needed
+  wcag20:4.1.2: # Name, Role, Value (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
 authors:

@@ -1,6 +1,7 @@
 ---
 id: c487ae
 name: Links have an accessible name
+rule_type: atomic
 description: |
   Each link has an accessible name
 accessibility_requirements:

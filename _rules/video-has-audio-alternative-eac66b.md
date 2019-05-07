@@ -1,12 +1,16 @@
 ---
 id: eac66b
 name: Video has audio alternative
-rule_type: atomic
+rule_type: composite
 description: |
   This rule checks that video elements have an alternative for information conveyed through audio
-success_criterion:
-  - 1.2.2
-atomic_rules:
+accessibility_requirements:
+  wcag20:1.2.2: # Captions (Prerecorded) (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_rules:
   - video-media-alternative-ab4d13
   - video-has-captions-f51b46
 authors:
@@ -14,13 +18,12 @@ authors:
   - Brian Bors
 ---
 
-## Aggregation Definition
 
-### Applicability
+## Applicability
 
 The rule applies to every [non-streaming][#non-streaming-video-element] `video` element that is [visible](#visible), where the video contains audio.
 
-### Expectation
+## Expectation
 
 For each test target, the outcome of at least one of the following rules is passed:
 
@@ -31,7 +34,7 @@ For each test target, the outcome of at least one of the following rules is pass
 
 This rule assumes that the video element is used to play a video (for example, not only used to display an image), and that there is a mechanism to start the video.
 
-## Accessibility support
+## Accessibility Support
 
 There are no major accessibility support issues known for this rule.
 
@@ -46,7 +49,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 A video element with an associated track element that contains captions for all the audio.
 
@@ -59,7 +62,7 @@ A video element with an associated track element that contains captions for all 
 </video>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 A video element that describes some of the text on the same page. The text on the page labels the video as an alternative.
 
@@ -79,7 +82,7 @@ A video element that describes some of the text on the same page. The text on th
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 A video element without any form of captions.
 
@@ -90,7 +93,7 @@ A video element without any form of captions.
 ></video>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 A video element that describes some of the text on the same page. The video contains more information than the text does.
 
@@ -109,7 +112,7 @@ A video element that describes some of the text on the same page. The video cont
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 A video element without that is not visible on the page.
 
@@ -121,7 +124,7 @@ A video element without that is not visible on the page.
 ></video>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 A video element without audio.
 

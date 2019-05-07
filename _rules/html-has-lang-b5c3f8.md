@@ -4,22 +4,25 @@ name: HTML has lang attribute
 rule_type: atomic
 description: |
   This rule checks that the `html` element has a non-empty `lang` or `xml:lang` attribute.
-success_criterion:
-  - 3.1.1
-test_aspects:
+accessibility_requirements:
+  - wcag20: 3.1.1
+  - forConformance: true
+  - failed: not satisfied
+  - passed: further testing needed
+  - inapplicable: further testing needed
+input_aspects:
   - DOM Tree
 authors:
   - Annika Nietzio
   - Jey Nandakumar
 ---
 
-## Test Procedure
 
-### Applicability
+## Applicability
 
 The root element of the [page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element.
 
-### Expectation
+## Expectation
 
 The test target has a [non-empty](#non-empty) `lang` or `xml:lang` attribute.
 
@@ -29,7 +32,7 @@ The test target has a [non-empty](#non-empty) `lang` or `xml:lang` attribute.
 
 _There are currently no assumptions_
 
-## Accessibility support
+## Accessibility Support
 
 There are known combinations of a popular operating system with browsers and assistive technologies that do not support the `lang` and `xml:lang` attributes.
 
@@ -45,7 +48,7 @@ There are known combinations of a popular operating system with browsers and ass
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 The `lang` attribute specified has a non-empty value.
 
@@ -53,7 +56,7 @@ The `lang` attribute specified has a non-empty value.
 <html lang="en"></html>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 The `xml:lang` attribute specified has a non-empty value.
 
@@ -61,7 +64,7 @@ The `xml:lang` attribute specified has a non-empty value.
 <html xml:lang="en"></html>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 The `lang` and `xml:lang` attribute specified has a non-empty value.
 
@@ -69,7 +72,7 @@ The `lang` and `xml:lang` attribute specified has a non-empty value.
 <html xml:lang="en" lang="en"></html>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 The `lang` attribute specified has a non-empty value. The rule expects a non-empty value on either the `lang` or `xml:lang` attributes.
 
@@ -77,7 +80,7 @@ The `lang` attribute specified has a non-empty value. The rule expects a non-emp
 <html xml:lang="" lang="en"></html>
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 The `xml:lang` attribute specified has a non-empty value. The rule expects a non-empty value on either the `lang` or `xml:lang` attributes.
 
@@ -85,7 +88,7 @@ The `xml:lang` attribute specified has a non-empty value. The rule expects a non
 <html xml:lang="en" lang=""></html>
 ```
 
-#### Passed example 6
+#### Passed Example 6
 
 The `lang` attribute specified has a non-empty value. The rule does not verify the validity of the value specified and checks only for presence of a value.
 
@@ -93,7 +96,7 @@ The `lang` attribute specified has a non-empty value. The rule does not verify t
 <html lang="xyz"></html>
 ```
 
-#### Passed example 7
+#### Passed Example 7
 
 The `xml:lang` attribute specified has a non-empty value. The rule does not verify the validity of the value specified and checks only for presence of a value.
 
@@ -103,7 +106,7 @@ The `xml:lang` attribute specified has a non-empty value. The rule does not veri
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 There were no `lang` or `xml:lang` attribute specified.
 
@@ -111,7 +114,7 @@ There were no `lang` or `xml:lang` attribute specified.
 <html></html>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 The `xml:lang` attribute specified has an empty value.
 
@@ -119,7 +122,7 @@ The `xml:lang` attribute specified has an empty value.
 <html xml:lang=""></html>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 The `lang` attribute specified has an empty value.
 
@@ -127,7 +130,7 @@ The `lang` attribute specified has an empty value.
 <html lang=""></html>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 The `lang` and `xml:lang` attribute specified has an empty value.
 
@@ -137,7 +140,7 @@ The `lang` and `xml:lang` attribute specified has an empty value.
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 The rule does not apply to `svg` element.
 

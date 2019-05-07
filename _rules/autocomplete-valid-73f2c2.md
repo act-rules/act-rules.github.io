@@ -5,7 +5,7 @@ rule_type: atomic
 description: |
   This rule checks that the HTML autocomplete attribute has a correct value
 accessibility_requirements:
-  - wcag20: 1.3.5 # Identify Input Purpose
+  - wcag21: 1.3.5 # Identify Input Purpose
   - forConformance: true
   - failed: not satisfied
   - passed: further testing needed

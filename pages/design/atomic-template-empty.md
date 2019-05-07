@@ -6,9 +6,21 @@ rule_type: atomic
 description: |
   This rule checks ...
 
-accessibility_requirements:
-  wcag20:x.x.x: # (Name of Success Criterion)
+accessibility_requirements: # Remove whatever is not applicable
+  wcag20:x.x.x: # <Name of Success Criterion> (A | AA | AAA)
     forConformance: true
+    failed: not satisfied
+    passed: satisfied | further testing needed
+    inapplicable: satisfied | further testing needed
+    
+  aria11:some-id: # <Some heading in WAI-ARIA>
+    forConformance: true
+    failed: not satisfied
+    passed: satisfied | further testing needed
+    inapplicable: satisfied | further testing needed
+
+  wcag-technique:H123: # <Technique title>
+    forConformance: false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed

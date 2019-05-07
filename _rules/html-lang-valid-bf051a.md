@@ -1,24 +1,28 @@
 ---
 id: bf051a
 name: Validity of HTML Lang attribute
+rule_type: atomic
 description: |
   This rule checks the lang or xml:lang attribute has a valid language subtag.
-success_criterion:
-  - 3.1.1
-test_aspects:
+accessibility_requirements:
+  wcag20:3.1.1: Language of Page (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
   - DOM Tree
 authors:
   - Annika Nietzio
   - Jey Nandakumar
 ---
 
-## Test Procedure
 
-### Applicability
+## Applicability
 
 The root element of the page, if it is an `html` element with a [non-empty](#non-empty) `lang` and/or `xml:lang` attribute.
 
-### Expectation
+## Expectation
 
 The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-language-subtag) if the attribute is [non-empty](#non-empty).
 
@@ -44,7 +48,7 @@ While HTML5 specification indicates that `xml:lang` attribute takes priority ove
 
 ## Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 The `lang` attribute specified has a non-empty value & a valid primary language subtag.
 
@@ -52,7 +56,7 @@ The `lang` attribute specified has a non-empty value & a valid primary language 
 <html lang="fr"></html>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 The `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
 
@@ -60,7 +64,7 @@ The `xml:lang` attribute specified has a non-empty value & a valid primary langu
 <html xml:lang="fr"></html>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 The `lang` and `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
 
@@ -68,7 +72,7 @@ The `lang` and `xml:lang` attribute specified has a non-empty value & a valid pr
 <html xml:lang="fr" lang="fr"></html>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 The `lang` attribute specified has a non-empty value & a valid primary language subtag. The rule checks for the presence of either `lang` or `xml:lang`. Empty value specified for the other attribute is ignored.
 
@@ -76,7 +80,7 @@ The `lang` attribute specified has a non-empty value & a valid primary language 
 <html lang="fr" xml:lang=""></html>
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 The `xml:lang` attribute specified has a non-empty value & a valid primary language subtag. The rule checks for the presence of either `lang` or `xml:lang`. Empty value specified for the other attribute is ignored.
 
@@ -86,7 +90,7 @@ The `xml:lang` attribute specified has a non-empty value & a valid primary langu
 
 ## Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 The `lang` attribute value is not a valid primary language subtag.
 
@@ -94,7 +98,7 @@ The `lang` attribute value is not a valid primary language subtag.
 <html lang="xyz"></html>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 The `xml:lang` attribute value is not a valid primary language subtag.
 
@@ -102,7 +106,7 @@ The `xml:lang` attribute value is not a valid primary language subtag.
 <html xml:lang="xyz"></html>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 Both the `lang` and `xml:lang` value specified are not valid values for primary language subtag.
 
@@ -110,7 +114,8 @@ Both the `lang` and `xml:lang` value specified are not valid values for primary 
 <html xml:lang="xyz" lang="xyz"></html>
 ```
 
-#### Failed example 4
+
+#### Failed Example 4
 
 The `lang` attribute value has a valid primary language subtag, but a syntactically invalid region subtag.
 
@@ -120,7 +125,7 @@ The `lang` attribute value has a valid primary language subtag, but a syntactica
 
 ## Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 The rule applies to `html` element and hence usage of `lang` attribute in `svg` element is not applicable.
 
@@ -128,7 +133,7 @@ The rule applies to `html` element and hence usage of `lang` attribute in `svg` 
 <svg xmlns="http://www.w3.org/2000/svg" lang="fr">
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 The rule applies to `html` element and hence usage of `xml:lang` attribute in `svg` element is not applicable.
 
@@ -136,7 +141,7 @@ The rule applies to `html` element and hence usage of `xml:lang` attribute in `s
 <svg xmlns="http://www.w3.org/2000/svg" xml:lang="fr">
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 An empty value for `lang` attribute is ignored by this rule, as the applicability specifies only non-empty values.
 
@@ -144,7 +149,7 @@ An empty value for `lang` attribute is ignored by this rule, as the applicabilit
 <html lang=""></html>
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 An empty value for `xml:lang` attribute is ignored by this rule, as the applicability specifies only non-empty values.
 

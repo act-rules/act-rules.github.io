@@ -21,7 +21,6 @@ authors:
   - Corbb O’Connor
 ---
 
-## Test procedure
 
 ## Applicability
 

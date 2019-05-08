@@ -23,13 +23,15 @@ The rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namesp
 
 ### Expectation
 
-Each target element has an accessible name that is not only [whitespace](#whitespace).
+Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
 
 ## Assumptions
 
 *There are currently no assumptions*
 
 ## Accessibility support
+
+The [HTML Accessibility API Mappings](https://www.w3.org/TR/html-aam-1.0/#html-element-role-mappings) specify that the `<svg>` element has an implicit role of `graphics-document`. However browser support for `graphics-document` and the SVG Accessibility API Mappings is inconsistent.
 
 Browser and assistive technology support for SVG `title` and `desc` elements is currently inconsistent. Using WAI ARIA in combination with the `img` role for non-decorative `svg` elements significantly improves accessibility browser support.
 
@@ -178,11 +180,22 @@ The `<g>` elements are included in the accessibility tree with the `graphics-obj
 	</svg>
 ```
 
+#### Failed example 5
+ 
+The `<svg>` element has a role of `img` but the accessible name `<title>` element has no content.
+ 
+```html
+<svg xmlns="http://www.w3.org/2000/svg" role="img" width="100" height="100">
+	<title></title>
+  	<circle role="none" cx="50" cy="50" r="40" fill="yellow"></circle>
+</svg>
+```
+
 ### Inapplicable
 
 #### Inapplicable example 1
 
-The `svg` element does not have a role of `img` `graphics-document` `graphics-object` or `graphics-symbol`. 
+The `svg` element does not have a role of `img`, `graphics-document`, `graphics-object`, or `graphics-symbol`. 
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
@@ -197,16 +210,5 @@ The `svg` element has an accessible name but the `aria-hidden` attribute exclude
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" role="img" aria-label="A yellow circle" aria-hidden="true">
 	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
-</svg>
-```
-
-#### Inapplicable example 3
- 
-The `svg` element is not included in the accessibility tree because the `<title>` element has no content.
- 
-```html
-<svg xmlns="http://www.w3.org/2000/svg" role="img" width="100" height="100">
-	<title></title>
-  	<circle role="none" cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```

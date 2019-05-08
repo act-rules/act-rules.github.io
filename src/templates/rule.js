@@ -211,6 +211,10 @@ export const query = graphql`
 						markdownType
 						slug
 					}
+					frontmatter {
+						id
+						name
+					}
 				}
 			}
 		}

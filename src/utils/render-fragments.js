@@ -10,7 +10,9 @@ export function getAccessibilityRequirements(accessibility_requirements) {
 				<span role="heading" aria-level="1" className="heading">
 					accessibility Requirements
 				</span>
-				This rule is not required for conformance to WCAG at any level.
+				<p>
+					This rule is not required for conformance to WCAG at any level.
+				</p>
 			</div>
 		)
 	}
@@ -103,15 +105,16 @@ export function getInputRulesForRule(
 					Atomic Rules
 				</span>
 				{inputRules.map(inputRuleId => {
-					let atomicRule = allRules.find(rule =>
-						rule.node.fields.slug.includes(inputRuleId)
+					const atomicRule = allRules.find(rule =>
+						rule.node.frontmatter.id === inputRuleId
 					)
 					const aHref = stripBasePath
 						? atomicRule.node.fields.slug.replace('rules/', '')
 						: atomicRule.node.fields.slug
+					const name = atomicRule.node.frontmatter.name
 					return (
 						<a className="sc-item" href={aHref} key={inputRuleId}>
-							{inputRuleId}
+							{name}
 						</a>
 					)
 				})}

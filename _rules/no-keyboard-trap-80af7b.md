@@ -10,9 +10,9 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-atomic_rules:
-  - no-keyboard-trap-standard-navigation-a1b64e
-  - no-keyboard-trap-non-standard-navigation-ebe86a
+input_rules:
+  - a1b64e
+  - ebe86a
 authors:
   - Geir Sindre Fossøy
   - Dagfinn Rømen

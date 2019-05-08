@@ -11,8 +11,8 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_rules:
-  - audio-have-transcript-2eb176
-  - audio-as-media-alternative-afb423
+  - 2eb176
+  - afb423
 authors:
   - Wilco Fiers
   - Brian Bors

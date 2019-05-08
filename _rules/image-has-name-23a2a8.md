@@ -18,7 +18,6 @@ authors:
   - Stein Erik Skotkjerra
 ---
 
-
 ## Applicability
 
 The rule applies to HTML `img` elements or any HTML element with the [semantic role](#semantic-role) of `img` that is [included in the accessibility tree](#included-in-the-accessibility-tree).

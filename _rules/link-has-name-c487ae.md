@@ -28,7 +28,6 @@ authors:
   - Anne Thyme Nørregaard
 ---
 
-
 ## Applicability
 
 The rule applies to any HTML element with the [semantic role](#semantic-role) of `link` that is [included in the accessibility tree](#included-in-the-accessibility-tree).
@@ -199,7 +198,7 @@ Non-visible link.
 
 ```html
 <a href="http://www.w3.org/WAI" style="left: -9999px; position: absolute;">
-	<img src="#"/>
+	<img src="#" />
 </a>
 ```
 

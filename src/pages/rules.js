@@ -11,7 +11,12 @@ import {
 
 export default ({ data }) => {
 	const { rules, allRules, site } = data
-	const { edges, totalCount } = rules
+	const toListRules = rules.edges.filter(({ node }) => {
+		const { fields } = node
+		const { fastmatterAttributes } = fields
+		const { accessibility_requirements } = JSON.parse(fastmatterAttributes)
+		return !!accessibility_requirements
+	})
 
 	const updatedTitle = `Rules | ${site.siteMetadata.title}`
 	const converter = new showdown.Converter()
@@ -21,48 +26,39 @@ export default ({ data }) => {
 			<SEO title={updatedTitle} keywords={site.siteMetadata.keywords} />
 			<section className="page-container page-rules">
 				{/* Heading */}
-				<h1>Rules ({totalCount})</h1>
+				<h1>Rules ({toListRules.length})</h1>
 				{/* Table of rules */}
 				<section className="rules-listing">
-					{edges
-						.filter(({ node }) => {
-							const { fields } = node
-							const { fastmatterAttributes } = fields
-							const { accessibility_requirements } = JSON.parse(
-								fastmatterAttributes
-							)
-							return !!accessibility_requirements
-						})
-						.map(({ node }) => {
-							const { frontmatter, id, fields } = node
-							const { name, description, authors, input_rules } = frontmatter
-							const { slug, fastmatterAttributes } = fields
-							const { accessibility_requirements } = JSON.parse(
-								fastmatterAttributes
-							)
-							return (
-								<article key={id}>
-									<section>
-										{/* rule id */}
-										<a href={slug.replace('rules/', '')}>
-											<h2>{name}</h2>
-										</a>
-										{/* rule sc's */}
-										{getAccessibilityRequirements(accessibility_requirements)}
-										{/* rule description */}
-										<div
-											dangerouslySetInnerHTML={{
-												__html: converter.makeHtml(description),
-											}}
-										/>
-									</section>
-									{/* atomic rules */}
-									{getInputRulesForRule(input_rules, allRules.edges, true)}
-									{/* authors */}
-									{getAuthors(authors)}
-								</article>
-							)
-						})}
+					{toListRules.map(({ node }) => {
+						const { frontmatter, id, fields } = node
+						const { name, description, authors, input_rules } = frontmatter
+						const { slug, fastmatterAttributes } = fields
+						const { accessibility_requirements } = JSON.parse(
+							fastmatterAttributes
+						)
+						return (
+							<article key={id}>
+								<section>
+									{/* rule id */}
+									<a href={slug.replace('rules/', '')}>
+										<h2>{name}</h2>
+									</a>
+									{/* rule sc's */}
+									{getAccessibilityRequirements(accessibility_requirements)}
+									{/* rule description */}
+									<div
+										dangerouslySetInnerHTML={{
+											__html: converter.makeHtml(description),
+										}}
+									/>
+								</section>
+								{/* atomic rules */}
+								{getInputRulesForRule(input_rules, allRules.edges, true)}
+								{/* authors */}
+								{getAuthors(authors)}
+							</article>
+						)
+					})}
 				</section>
 			</section>
 		</Layout>

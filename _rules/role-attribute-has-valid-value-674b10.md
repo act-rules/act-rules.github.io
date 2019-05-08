@@ -17,7 +17,6 @@ authors:
   - Jey Nandakumar
 ---
 
-
 ## Applicability
 
 Any [non-empty](#non-empty) `role` attribute that is specified on an HTML or SVG element that is [included in the accessibility tree](#included-in-the-accessibility-tree).

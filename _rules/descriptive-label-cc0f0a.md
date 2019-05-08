@@ -18,7 +18,6 @@ authors:
   - Geir Sindre Fossøy
 ---
 
-
 ## Applicability
 
 This rule applies to any HTML `label` element or other element referenced by `aria-labelledby` that:

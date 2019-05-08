@@ -19,7 +19,6 @@ authors:
   - Carlos Duarte
 ---
 
-
 ## Applicability
 
 This rule applies to any element with the [semantic role](#semantic-role) of heading that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree).

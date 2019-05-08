@@ -17,7 +17,6 @@ authors:
   - Jey Nandakumar
 ---
 
-
 ## Applicability
 
 The rule applies to `iframe` elements that are [included in the accessibility tree](#included-in-the-accessibility-tree).

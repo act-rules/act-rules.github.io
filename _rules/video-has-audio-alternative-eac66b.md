@@ -11,13 +11,12 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_rules:
-  - video-media-alternative-ab4d13
-  - video-has-captions-f51b46
+  - ab4d13
+  - f51b46
 authors:
   - Wilco Fiers
   - Brian Bors
 ---
-
 
 ## Applicability
 

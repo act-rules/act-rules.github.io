@@ -11,10 +11,10 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_rules:
-  - video-audio-described-1ea59c
-  - video-transcript-1a02b0
-  - video-description-track-f196ce
-  - video-media-alternative-ab4d13
+  - 1ea59c
+  - 1a02b0
+  - f196ce
+  - ab4d13
 authors:
   - Wilco Fiers
   - Brian Bors

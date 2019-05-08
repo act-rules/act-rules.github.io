@@ -3,8 +3,8 @@ id: 80af7b
 name: No keyboard trap
 rule_type: composite
 description: |
-	This rule checks for keyboard traps. This includes use of both standard and non-standard keyboard navigation to navigate through all content without becoming trapped.
-accessibility_requirements: 
+  This rule checks for keyboard traps. This includes use of both standard and non-standard keyboard navigation to navigate through all content without becoming trapped.
+accessibility_requirements:
   wcag20:2.1.2: # No keyboard trap (A)
     forConformance: true
     failed: not satisfied
@@ -14,7 +14,7 @@ input_rules:
   - a1b64e
   - ebe86a
 authors:
-  - Geir Sindre Fossøy
+	- Geir Sindre Fossøy
   - Dagfinn Rømen
   - Anne Thyme Nørregaard
 ---

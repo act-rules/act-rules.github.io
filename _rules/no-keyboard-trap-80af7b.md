@@ -4,7 +4,7 @@ name: No keyboard trap
 rule_type: composite
 description: |
 	This rule checks for keyboard traps. This includes use of both standard and non-standard keyboard navigation to navigate through all content without becoming trapped.
-accessibility_requirements:
+accessibility_requirements: 
   wcag20:2.1.2: # No keyboard trap (A)
     forConformance: true
     failed: not satisfied

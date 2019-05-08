@@ -10,7 +10,7 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-input_rules:
+atomic_rules:
   - video-audio-described-1ea59c
   - video-media-alternative-ab4d13
   - video-description-track-f196ce

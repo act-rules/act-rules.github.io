@@ -10,7 +10,7 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-input_rules:
+atomic_rules:
   - video-media-alternative-ab4d13
   - video-has-captions-f51b46
 authors:

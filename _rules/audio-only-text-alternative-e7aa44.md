@@ -10,7 +10,7 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-input_rules:
+atomic_rules:
   - audio-have-transcript-2eb176
   - audio-as-media-alternative-afb423
 authors:

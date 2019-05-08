@@ -31,9 +31,11 @@ Each target element has an [accessible name](#accessible-name) that is not only 
 
 ## Accessibility support
 
-The [HTML Accessibility API Mappings](https://www.w3.org/TR/html-aam-1.0/#html-element-role-mappings) specify that the `<svg>` element has an implicit role of `graphics-document`. However browser support for `graphics-document` and the SVG Accessibility API Mappings is inconsistent.
+The [SVG Accessibility API Mappings](https://www.w3.org/TR/svg-aam-1.0/#include_elements) specifies that many elements in the SVG namespace are purely presentational and should not be included in the accessibility tree unless indicated otherwise through the use of text alternatve content and WAI ARIA attributes.
 
-Browser and assistive technology support for SVG `title` and `desc` elements is currently inconsistent. Using WAI ARIA in combination with the `img` role for non-decorative `svg` elements significantly improves accessibility browser support.
+The [HTML Accessibility API Mappings](https://www.w3.org/TR/html-aam-1.0/#html-element-role-mappings) specify that the `<svg>` element has an implicit role of `graphics-document`. However browser support for the `graphics-document` role and the [SVG Accessibility API Mappings](https://www.w3.org/TR/html-aam-1.0/#html-element-role-mappings) is inconsistent.
+
+Browser and assistive technology support for SVG `<title>` and `<desc>` elements is currently inconsistent. Using WAI ARIA in combination with the `img` role for non-decorative `<svg>` elements significantly improves accessibility browser support.
 
 ## Background
 
@@ -82,7 +84,7 @@ The `<svg>` element has a role of `img` and an `aria-label` containing the acces
 
 #### Passed example 4
 
-The `<svg>` element has the role of `graphics-document` which takes its accessible name from its child `<title>` element. 
+The `<svg>` element has an explicit role of `graphics-document` which takes its accessible name from its child `<title>` element. 
 
 ```html
 
@@ -205,11 +207,10 @@ The `<svg>` element has a role of `img` but has no accessible name. The `title` 
 
 #### Inapplicable example 1
 
-The `svg` element does not have a role of `img`, `graphics-document`, `graphics-object`, or `graphics-symbol`. 
+The `svg` element does not render any content to the screen and is therefore not included in the accessibility tree. 
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
-	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```
 

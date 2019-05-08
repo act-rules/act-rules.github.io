@@ -33,7 +33,7 @@ Each target element has an [accessible name](#accessible-name) that is not only 
 
 ## Accessibility Support
 
-For `area` elements that have a `href` attribute, but are not nested inside a `map` element, there seem to be differences between browsers and assistive technology on whether the `area` is considered [included in the accessibility tree](#included-in-the-accessibility-tree) or not.
+For `area` elements that have a `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on whether the `area` is considered [included in the accessibility tree](#included-in-the-accessibility-tree) or not.
 
 ## Background
 

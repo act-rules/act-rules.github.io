@@ -3,20 +3,39 @@ import scUrls from './../../_data/sc-urls'
 import pkg from './../../package.json'
 import { Link } from 'gatsby'
 
-export function getSuccessCriterion(success_criterion) {
-	if (!success_criterion) {
-		return null
+export function getAccessibilityRequirements(accessibility_requirements) {
+	if (!accessibility_requirements) {
+		return (
+			<div className="meta">
+				<span role="heading" aria-level="1" className="heading">
+					accessibility Requirements
+			</span>
+				This rule is not required for conformance to WCAG at any level.
+			</div>
+		)
 	}
+
+	const requirements = Object.keys(accessibility_requirements)
+		.filter(key => {
+			const value = accessibility_requirements[key]
+			if (!value) {
+				return false;
+			}
+			const { forConformance } = value
+			return !!forConformance
+		})
+		.map(key => key.split(':').pop())
+
 	return (
 		<div className="meta">
 			<span role="heading" aria-level="1" className="heading">
-				SUCCESS CRITERION
+				accessibility Requirements
 			</span>
-			{success_criterion.map(sc => {
+			{requirements.map(sc => {
 				const scData = scUrls[sc]
 				return (
 					<a className="sc-item" key={sc} href={scData.url}>
-						{scData.num} {scData.scId}
+						{scData.num} {scData.handle}
 					</a>
 				)
 			})}
@@ -53,8 +72,8 @@ export function getAuthors(authors) {
 	)
 }
 
-export function getTestAspects(test_aspects) {
-	if (!test_aspects) {
+export function getInputAspects(aspects) {
+	if (!aspects) {
 		return null
 	}
 	return (
@@ -62,19 +81,19 @@ export function getTestAspects(test_aspects) {
 			<span role="heading" aria-level="1" className="heading">
 				Test Aspects
 			</span>
-			{test_aspects.map(ta => (
+			{aspects.map(ta => (
 				<p key={ta}>{ta}</p>
 			))}
 		</>
 	)
 }
 
-export function getAtomicRulesForRule(
-	atomicRulesForRule,
+export function getInputRulesForRule(
+	inputRules,
 	allRules,
 	stripBasePath = false
 ) {
-	if (!atomicRulesForRule) {
+	if (!inputRules) {
 		return null
 	}
 	return (
@@ -83,7 +102,7 @@ export function getAtomicRulesForRule(
 				<span role="heading" aria-level="1" className="heading">
 					Atomic Rules
 				</span>
-				{atomicRulesForRule.map(rule => {
+				{inputRules.map(rule => {
 					let atomicRule = allRules.find(atomicRule => {
 						return (
 							atomicRule.node.fields.fileName.relativePath.toLowerCase() ===

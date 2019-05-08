@@ -5,7 +5,7 @@ rule_type: atomic
 description: |
   This rule checks that all `id` attribute values on a single page are unique.
 accessibility_requirements:
-  wcag20:4.1.1: Parsing (A)
+  wcag20:4.1.1: # Parsing (A)
     forConformance: true
     failed: not satisfied
     passed: further testing needed

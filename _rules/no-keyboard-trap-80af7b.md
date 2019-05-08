@@ -3,9 +3,13 @@ id: 80af7b
 name: No keyboard trap
 rule_type: composite
 description: |
-  This rule checks for keyboard traps. This includes use of both standard and non-standard keyboard navigation to navigate through all content without becoming trapped.
-success_criterion:
-  - 2.1.2 # No Keyboard Trap
+	This rule checks for keyboard traps. This includes use of both standard and non-standard keyboard navigation to navigate through all content without becoming trapped.
+accessibility_requirements:
+  wcag20:2.1.2: # No keyboard trap (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 atomic_rules:
   - no-keyboard-trap-standard-navigation-a1b64e
   - no-keyboard-trap-non-standard-navigation-ebe86a
@@ -48,7 +52,7 @@ _There are no major accessibility support issues known for this rule._
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 No trap for keyboard navigation.
 
@@ -56,7 +60,7 @@ No trap for keyboard navigation.
 <a href="#">Link 1</a> <button class="target">Button1</button>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 Using `tabindex="1"`.
 
@@ -64,7 +68,7 @@ Using `tabindex="1"`.
 <div tabindex="1">Text</div>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 Using `tabindex="-1"`.
 
@@ -72,7 +76,7 @@ Using `tabindex="-1"`.
 <div tabindex="-1">Text</div>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 Keyboard trap with help information in a paragraph before, and where the method advised works.
 
@@ -100,7 +104,7 @@ Keyboard trap with help information in a paragraph before, and where the method 
 <a id="link2" href="#">Link 2</a>
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 Keyboard trap with help information within the trap, and where the method advised works.
 
@@ -128,7 +132,7 @@ Keyboard trap with help information within the trap, and where the method advise
 <a id="link2" href="#">Link 2</a>
 ```
 
-#### Passed example 6
+#### Passed Example 6
 
 Keyboard trap with "help" link that once clicked exposes the instructions.
 
@@ -169,7 +173,7 @@ Keyboard trap with "help" link that once clicked exposes the instructions.
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Keyboard trap one element.
 
@@ -180,7 +184,7 @@ Keyboard trap one element.
 </button>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 Keyboard trap group.
 
@@ -196,7 +200,7 @@ Keyboard trap group.
 </button>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 A focusable element inbetween to keyboard traps.
 
@@ -206,7 +210,7 @@ A focusable element inbetween to keyboard traps.
 <button onblur="setTimeout(() => this.focus(), 10)">Button 3</button>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 Keyboard trap with no instructions.
 
@@ -233,7 +237,7 @@ Keyboard trap with no instructions.
 <a id="link2" href="#">Link 2</a>
 ```
 
-#### Failed example 5
+#### Failed Example 5
 
 Keyboard trap with instructions that doesn't give advise on the method for proceeding.
 
@@ -261,7 +265,7 @@ Keyboard trap with instructions that doesn't give advise on the method for proce
 <a id="link2" href="#">Link 2</a>
 ```
 
-#### Failed example 6
+#### Failed Example 6
 
 Keyboard trap with help text, where the method advised doesn't work.
 
@@ -288,9 +292,9 @@ Keyboard trap with help text, where the method advised doesn't work.
 <a id="link2" href="#">Link 2</a>
 ```
 
-### Inapplicable example 2
+### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 No focusable element.
 
@@ -298,7 +302,7 @@ No focusable element.
 <h1>Page 1</h1>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 Disabled element.
 
@@ -306,7 +310,7 @@ Disabled element.
 <button type="button" disabled>Click Me!</button>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 Hidden element using `display:none`.
 
@@ -314,7 +318,7 @@ Hidden element using `display:none`.
 <button type="button" style="display:none;">Click Me!</button>
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 Hidden element using `visibility:hidden`.
 

@@ -4,9 +4,9 @@ import Layout from '../components/layout/'
 import SEO from '../components/seo'
 import showdown from 'showdown'
 import {
-	getSuccessCriterion,
+	getAccessibilityRequirements,
 	getAuthors,
-	getAtomicRulesForRule,
+	getInputRulesForRule,
 } from './../utils/render-fragments'
 
 export default ({ data }) => {
@@ -24,39 +24,45 @@ export default ({ data }) => {
 				<h1>Rules ({totalCount})</h1>
 				{/* Table of rules */}
 				<section className="rules-listing">
-					{edges.map(({ node }) => {
-						const { frontmatter, id, fields } = node
-						const {
-							name,
-							description,
-							success_criterion,
-							authors,
-							atomic_rules,
-						} = frontmatter
-						const { slug } = fields
-						return (
-							<article key={id}>
-								<section>
-									{/* rule id */}
-									<a href={slug.replace('rules/', '')}>
-										<h2>{name}</h2>
-									</a>
-									{/* rule sc's */}
-									{getSuccessCriterion(success_criterion)}
-									{/* rule description */}
-									<div
-										dangerouslySetInnerHTML={{
-											__html: converter.makeHtml(description),
-										}}
-									/>
-								</section>
-								{/* atomic rules */}
-								{getAtomicRulesForRule(atomic_rules, allRules.edges, true)}
-								{/* authors */}
-								{getAuthors(authors)}
-							</article>
-						)
-					})}
+					{edges
+						.filter(({ node }) => {
+							const { fields } = node
+							const { fastmatterAttributes } = fields
+							const { accessibility_requirements } = JSON.parse(
+								fastmatterAttributes
+							)
+							return !!accessibility_requirements
+						})
+						.map(({ node }) => {
+							const { frontmatter, id, fields } = node
+							const { name, description, authors, input_rules } = frontmatter
+							const { slug, fastmatterAttributes } = fields
+							const { accessibility_requirements } = JSON.parse(
+								fastmatterAttributes
+							)
+							return (
+								<article key={id}>
+									<section>
+										{/* rule id */}
+										<a href={slug.replace('rules/', '')}>
+											<h2>{name}</h2>
+										</a>
+										{/* rule sc's */}
+										{getAccessibilityRequirements(accessibility_requirements)}
+										{/* rule description */}
+										<div
+											dangerouslySetInnerHTML={{
+												__html: converter.makeHtml(description),
+											}}
+										/>
+									</section>
+									{/* atomic rules */}
+									{getInputRulesForRule(input_rules, allRules.edges, true)}
+									{/* authors */}
+									{getAuthors(authors)}
+								</article>
+							)
+						})}
 				</section>
 			</section>
 		</Layout>
@@ -67,25 +73,23 @@ export const query = graphql`
 	query {
 		rules: allMarkdownRemark(
 			sort: { fields: [frontmatter___name], order: ASC }
-			filter: {
-				fields: { markdownType: { eq: "rules" } }
-				frontmatter: { success_criterion: { ne: null } }
-			}
+			filter: { fields: { markdownType: { eq: "rules" } } }
 		) {
 			totalCount
 			edges {
 				node {
+					fileAbsolutePath
 					id
 					frontmatter {
 						name
 						description
-						success_criterion
 						rule_type
-						atomic_rules
+						input_rules
 						authors
 					}
 					fields {
 						markdownType
+						fastmatterAttributes
 						slug
 					}
 				}

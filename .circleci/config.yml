@@ -12,15 +12,15 @@ defaults: &defaults
 restore_dependency_cache: &restore_dependency_cache
   restore_cache:
     keys:
-      - v3-npm-cache-{{ checksum "package.json" }}
-      - v3-npm-cache-
+      - v4-npm-cache-{{ checksum "package.json" }}
+      - v4-npm-cache-
 
 jobs:
-  # A dummy placeholder job to not fail circleci status for other branches than `master`
-  base: 
+  # Validate rules
+  validate: 
     <<: *defaults
     steps: 
-      - run: echo "circleci job to not fail status checks"
+      - run: npm run test:validate
   # get deps
   dependencies:
     <<: *defaults
@@ -28,7 +28,7 @@ jobs:
       - checkout
       - run: npm install
       - save_cache:
-          key: v3-npm-cache-{{ checksum "package.json" }}
+          key: v4-npm-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
   deploy:
@@ -45,7 +45,7 @@ workflows:
   version: 2
   build_and_deploy:
     jobs:
-      - base
+      - validate
       - dependencies:
           filters:
             branches:

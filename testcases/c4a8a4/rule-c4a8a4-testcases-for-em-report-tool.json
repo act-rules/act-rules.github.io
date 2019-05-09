@@ -681,7 +681,7 @@
           "assertedBy": "_:evaluator",
           "subject": "_:website",
           "result": {
-            "outcome": "earl:inapplicable",
+            "outcome": "earl:cantTell",
             "description": "",
             "date": ""
           },

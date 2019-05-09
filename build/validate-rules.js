@@ -60,7 +60,7 @@ const validate = async () => {
  */
 (async () => {
 
-  throw new Error(`I failed.`)
+  process.exit(1);
   // const isValid = await validate()
 
 })()

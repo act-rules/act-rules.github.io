@@ -37,7 +37,7 @@ This rule applies to any element that:
 
 ### Expectation 1
 
-The [visible](#visible) `label` element, if there is any, describes the purpose of the associated form field element. The context of the element can be used to differentiate the purpose from other form fields on the same page.
+The [visible](#visible) `label` element, if there is any, describes the purpose of the associated form field element. The [visible](#visible) context of the element can be used to differentiate the purpose from other form fields on the same page.
 
 **Note:** In this case, context can be created by headings, fieldsets and legends, text that is near the control, etc. Only [visible](#visible) elements should be considered as context for Expectation 1.
 
@@ -45,7 +45,7 @@ The [visible](#visible) `label` element, if there is any, describes the purpose 
 
 ### Expectation 2
 
-The [accessible name](#accessible-name), if there is any, describes the purpose of the associated form field element. The context of the element can be used to differentiate the purpose from other form fields on the same page.
+The [accessible name](#accessible-name), if there is any, describes the purpose of the associated form field element. The [visible](#visible) context of the element, or the context [included in the accessibility tree](#included-in-the-accessibility-tree) can be used to differentiate the purpose from other form fields on the same page.
 
 **Note:** In this case, context can be created by headings, fieldsets and legends, text that is near the control, etc. For Expectation 2, elements that are [included in the accessibility tree](#included-in-the-accessibility-tree) should be considered context as well, e.g. elements connected to the form field through `aria-describedby`, or using WAI-ARIA `group` role with an [accessible name](#accessible-name).
 

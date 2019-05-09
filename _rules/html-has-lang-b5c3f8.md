@@ -17,7 +17,6 @@ authors:
   - Jey Nandakumar
 ---
 
-
 ## Applicability
 
 The root element of the [page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element.

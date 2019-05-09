@@ -15,7 +15,6 @@ authors:
   - Brian Bors
 ---
 
-
 ## Applicability
 
 The rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:

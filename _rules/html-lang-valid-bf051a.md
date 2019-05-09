@@ -17,7 +17,6 @@ authors:
   - Jey Nandakumar
 ---
 
-
 ## Applicability
 
 The root element of the page, if it is an `html` element with a [non-empty](#non-empty) `lang` and/or `xml:lang` attribute.
@@ -113,7 +112,6 @@ Both the `lang` and `xml:lang` value specified are not valid values for primary 
 ```html
 <html xml:lang="xyz" lang="xyz"></html>
 ```
-
 
 #### Failed Example 4
 

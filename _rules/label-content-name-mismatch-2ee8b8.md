@@ -19,7 +19,6 @@ authors:
   - Jey Nandakumar
 ---
 
-
 ## Applicability
 
 This rule applies to any element that has:

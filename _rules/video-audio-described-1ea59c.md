@@ -15,7 +15,6 @@ authors:
   - Brian Bors
 ---
 
-
 ## Applicability
 
 The rule applies to every [non-streaming](#non-streaming) `video` element that is [visible](#visible) where the video contains audio.

@@ -18,7 +18,6 @@ authors:
   - Stein Erik Skotkjerra
 ---
 
-
 ## Applicability
 
 The rule applies to any HTML or SVG element that is [focusable](#focusable) where focus cannot cycle to the browser UI by using [standard keyboard navigation](#standard-keyboard-navigation).

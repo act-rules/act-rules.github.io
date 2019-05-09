@@ -16,7 +16,6 @@ authors:
   - Anne Thyme Nørregaard
 ---
 
-
 ## Applicability
 
 Any HTML or SVG element that has an [explicit semantic role](#semantic-role), except if the element has an [implicit semantic role](#implicit-role) that is identical to the explicit semantic role.

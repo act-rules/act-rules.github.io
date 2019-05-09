@@ -18,7 +18,6 @@ authors:
   - Stein Erik Skotkjerra
 ---
 
-
 ## Applicability
 
 The rule applies to any HTML or SVG element that is [focusable](#focusable).

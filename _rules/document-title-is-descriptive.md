@@ -17,7 +17,6 @@ authors:
   - Corbb O’Connor
 ---
 
-
 ## Applicability
 
 This rule applies to the first HTML `title` element that

@@ -14,6 +14,11 @@ const onCreateNode = options => {
 		createNodeField({ node, name: `fileName`, value: nodeData.fileName })
 		createNodeField({
 			node,
+			name: `fastmatterAttributes`,
+			value: nodeData.fastmatterAttributes,
+		})
+		createNodeField({
+			node,
 			name: `sourceInstanceName`,
 			value: nodeData.sourceInstanceName,
 		})

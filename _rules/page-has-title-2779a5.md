@@ -20,7 +20,6 @@ authors:
   - Jey Nandakumar
 ---
 
-
 ## Applicability
 
 The rule applies to any page where the [document element](https://www.w3.org/TR/dom/#document-element) is an `html` element, and where the page is not embedded in another page.

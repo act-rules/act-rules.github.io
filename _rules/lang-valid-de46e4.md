@@ -17,7 +17,6 @@ authors:
   - Jey Nandakumar
 ---
 
-
 ## Applicability
 
 Any DOM element, within the `body` of a webpage with a [non-empty](#non-empty) `lang` or `xml:lang` attribute.

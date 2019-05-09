@@ -18,7 +18,6 @@ authors:
   - Stein Erik Skotkjerra
 ---
 
-
 ## Applicability
 
 The rule applies to elements that are [included in the accessibility tree](#included-in-the-accessibility-tree) with the [semantic role](#semantic-role) of `button`, except for `input` elements of `type="image"`.

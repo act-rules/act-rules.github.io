@@ -11,17 +11,16 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_rules:
-  - video-only-media-alternative-fd26cf
-  - video-only-description-track-ac7dc6
-  - video-only-element-transcript-ee13b5
-  - video-has-audio-alternative-eac66b
+  - fd26cf
+  - ac7dc6
+  - ee13b5
+  - eac66b
 authors:
   - Wilco Fiers
   - Brian Bors
   - John Hicks
   - Rafal Charlampowicz
 ---
-
 
 ## Applicability
 

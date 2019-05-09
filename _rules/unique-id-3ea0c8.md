@@ -17,7 +17,6 @@ authors:
   - Anne Thyme
 ---
 
-
 ## Applicability
 
 Any `id` attribute which is not the empty string (""), specified on an HTML or SVG element.

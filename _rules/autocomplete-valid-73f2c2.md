@@ -17,7 +17,6 @@ authors:
   - Wilco Fiers
 ---
 
-
 ## Applicability
 
 The rule applies to any HTML `input`, `select` and `textarea` element with a [non-empty](#non-empty) `autocomplete` attribute, except if one of the following is true:

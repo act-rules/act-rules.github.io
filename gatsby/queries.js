@@ -7,14 +7,15 @@ const queries = {
       totalCount
       edges {
         node {
+          fileAbsolutePath
           rawMarkdownBody
           fields {
             markdownType
             slug
+            fastmatterAttributes
           }
           frontmatter {
             name
-            success_criterion
           }
         }
       }

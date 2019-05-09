@@ -49,7 +49,9 @@ workflows:
   build_and_deploy:
     jobs:
       - dependencies
-      - validate-rules
+      - validate-rules:
+          requires:
+            - dependencies
       - deploy:
           requires:
             - dependencies

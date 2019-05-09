@@ -8,6 +8,7 @@ general:
 defaults: &defaults
   docker:
     - image: circleci/node:10-browsers
+  working_directory: ~/act-rules.github.io
 
 restore_dependency_cache: &restore_dependency_cache
   restore_cache:

@@ -17,13 +17,6 @@ restore_dependency_cache: &restore_dependency_cache
       - v4-npm-cache-
 
 jobs:
-  # Validate rules
-  validate-rules: 
-    <<: *defaults
-    steps: 
-      - checkout
-      - run: npm install
-      - run: npm run test:validate-rules
   # get deps
   dependencies:
     <<: *defaults
@@ -34,6 +27,13 @@ jobs:
           key: v4-npm-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
+   # Validate rules
+  validate-rules: 
+    <<: *defaults
+    steps: 
+      - checkout
+      - <<: *restore_dependency_cache
+      - run: npm run test:validate-rules
   deploy:
     <<: *defaults
     steps:
@@ -48,11 +48,8 @@ workflows:
   version: 2
   build_and_deploy:
     jobs:
+      - dependencies
       - validate-rules
-      - dependencies:
-          filters:
-            branches:
-              only: develop
       - deploy:
           requires:
             - dependencies

@@ -13,8 +13,8 @@ defaults: &defaults
 restore_dependency_cache: &restore_dependency_cache
   restore_cache:
     keys:
-      - v4-npm-cache-{{ checksum "package.json" }}
-      - v4-npm-cache-
+      - v5-npm-cache-{{ checksum "package.json" }}
+      - v5-npm-cache-
 
 jobs:
   # get deps
@@ -24,7 +24,7 @@ jobs:
       - checkout
       - run: npm install
       - save_cache:
-          key: v4-npm-cache-{{ checksum "package.json" }}
+          key: v5-npm-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
    # Validate rules

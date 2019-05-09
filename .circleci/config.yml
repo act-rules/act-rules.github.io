@@ -18,12 +18,12 @@ restore_dependency_cache: &restore_dependency_cache
 
 jobs:
   # Validate rules
-  validate: 
+  validate-rules: 
     <<: *defaults
     steps: 
       - checkout
       - run: npm install
-      - run: npm run test:validate
+      - run: npm run test:validate-rules
   # get deps
   dependencies:
     <<: *defaults
@@ -48,7 +48,7 @@ workflows:
   version: 2
   build_and_deploy:
     jobs:
-      - validate
+      - validate-rules
       - dependencies:
           filters:
             branches:

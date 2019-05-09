@@ -20,6 +20,8 @@ jobs:
   validate: 
     <<: *defaults
     steps: 
+      - checkout
+      - run: npm install
       - run: npm run test:validate
   # get deps
   dependencies:

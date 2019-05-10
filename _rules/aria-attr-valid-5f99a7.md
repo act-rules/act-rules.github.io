@@ -30,7 +30,7 @@ The ARIA `attribute` is being used to comply to WCAG.
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 

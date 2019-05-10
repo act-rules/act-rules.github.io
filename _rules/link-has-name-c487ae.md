@@ -42,7 +42,7 @@ Each target element has an [accessible name](#accessible-name) that is [non-empt
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 

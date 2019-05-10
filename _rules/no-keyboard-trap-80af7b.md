@@ -36,7 +36,7 @@ For each test target, the outcome of one of the following rules is "passed":
 
 _There are currently no assumptions._
 
-## Accessibility support
+## Accessibility Support
 
 _There are no major accessibility support issues known for this rule._
 

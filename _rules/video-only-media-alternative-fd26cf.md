@@ -38,7 +38,7 @@ This rule assumes that a mechanism is available to start the video and that the 
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 

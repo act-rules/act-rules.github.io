@@ -36,7 +36,7 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 

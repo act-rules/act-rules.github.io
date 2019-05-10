@@ -44,7 +44,7 @@ The `time` of the `content` attribute is 0 or greater than 72000 (20 hours).
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 

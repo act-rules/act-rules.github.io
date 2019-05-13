@@ -1,47 +1,149 @@
 {
-  "name": "WCAG-ACT-RULES-CG",
-  "version": "1.0.0",
-  "description": "Accessibility conformance testing rules for HTML",
-  "scripts": {
-    "start": "npm run dev",
-    "copy": "copyfiles package.json _data",
-    "setup": "npm install && bundle install && npm run copy",
-    "proof": "bundle exec jekyll build && bundle exec htmlproofer ./_site --only-4xx --check-html --allow_hash_href --assume-extension --alt-ignore '/.*/'",
-    "fmt": "prettier --write '*'.{js} '*/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "generate-wcag-data": "node wcag-url-generator",
-    "dev": "npm run setup && bundle exec jekyll serve",
-    "build": "npm run setup && bundle exec jekyll build"
-  },
-  "author": "WCAG ACT RULES CG",
-  "homepage": "https://github.com/auto-wcag/auto-wcag#readme",
-  "license": "https://auto-wcag.github.io/auto-wcag/license.html",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/auto-wcag/auto-wcag.git"
-  },
-  "bugs": {
-    "url": "https://github.com/auto-wcag/auto-wcag/issues"
-  },
-  "pulls": {
-    "url": "https://github.com/auto-wcag/auto-wcag/pulls"
-  },
-  "pages": {
-    "url": "https://auto-wcag.github.io/auto-wcag"
-  },
-  "config": {
-    "testcases": {
-      "url": "https://auto-wcag.github.io/auto-wcag/exported-testcases/testcases.json",
-      "dir": {
-        "embeds": "_testcases-embeds/",
-        "assets": "test-assets/",
-        "export": "exported-testcases/",
-        "export-files": "exported-testcases/assets/"
-      }
-    }
-  },
-  "devDependencies": {
-    "copyfiles": "^2.1.0",
-    "prettier": "^1.15.3"
-  }
+	"name": "ACT-RULES-CG",
+	"description": "Accessibility conformance testing rules for HTML",
+	"version": "1.0.0",
+	"author": "WCAG ACT RULES CG",
+	"contributors": [
+		{
+			"name": "Anne Thyme Nørregaard",
+			"url": "https://github.com/annethyme"
+		},
+		{
+			"name": "Audrey Maniez",
+			"url": "https://github.com/audreymaniez"
+		},
+		{
+			"name": "Brian Bors",
+			"url": "https://www.linkedin.com/in/brianbors/"
+		},
+		{
+			"name": "Bryn Anderson",
+			"url": "https://github.com/brynanders"
+		},
+		{
+			"name": "Carlos Duarte",
+			"url": "https://github.com/carlosapaduarte"
+		},
+		{
+			"name": "Corbb O'Connor",
+			"url": "https://github.com/corbb"
+		},
+		{
+			"name": "Dagfinn Rømen",
+			"url": "https://github.com/DagfinnRomen"
+		},
+		{
+			"name": "Emma Pratt Richens",
+			"url": "https://github.com/EmmaJP"
+		},
+		{
+			"name": "Frank Berker",
+			"url": "https://github.com/yetanothereye"
+		},
+		{
+			"name": "Geir Sindre Fossøy",
+			"url": "https://github.com/geirsf"
+		},
+		{
+			"name": "Jey Nandakumar",
+			"url": "https://github.com/jkodu"
+		},
+		{
+			"name": "Malin Øvrebø",
+			"url": "https: //github.com/MaliinO"
+		},
+		{
+			"name": "Rob Fentress",
+			"url": "https://github.com/robfentress"
+		},
+		{
+			"name": "Shadi Abou-Zahra",
+			"url": "https://github.com/nitedog"
+		},
+		{
+			"name": "Stein Erik Skotkjerra",
+			"url": "https://github.com/skotkjerra"
+		},
+		{
+			"name": "Wilco Fiers",
+			"url": "https://github.com/wilcofiers}"
+		}
+	],
+	"dependencies": {
+		"axios": "^0.18.0",
+		"fastmatter": "^2.1.1",
+		"gatsby": "^2.4.2",
+		"gatsby-image": "^2.0.41",
+		"gatsby-plugin-manifest": "^2.1.1",
+		"gatsby-plugin-offline": "^2.1.0",
+		"gatsby-plugin-prefetch-google-fonts": "^1.4.2",
+		"gatsby-plugin-react-helmet": "^3.0.12",
+		"gatsby-plugin-sass": "^2.0.10",
+		"gatsby-plugin-sharp": "^2.0.36",
+		"gatsby-remark-autolink-headers": "^2.0.15",
+		"gatsby-remark-prismjs": "^3.2.9",
+		"gatsby-source-filesystem": "^2.0.33",
+		"gatsby-transformer-remark": "^2.3.12",
+		"gatsby-transformer-sharp": "^2.1.19",
+		"gfm-code-blocks": "^1.0.0",
+		"jsonld": "^1.6.0",
+		"make-dir": "^2.1.0",
+		"ncp": "^2.0.0",
+		"node-sass": "^4.12.0",
+		"normalize.css": "^8.0.1",
+		"object-hash": "^1.3.1",
+		"prismjs": "^1.16.0",
+		"prop-types": "^15.7.2",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"react-helmet": "^5.2.1",
+		"showdown": "^1.9.0"
+	},
+	"devDependencies": {
+		"prettier": "^1.17.0"
+	},
+	"keywords": [
+		"WCAG",
+		"ACT Rules",
+		"Accessibility",
+		"W3C"
+	],
+	"license": "MIT",
+	"scripts": {
+		"clean": "rm -rf .cache public",
+		"prebuild": "npm run get-data",
+		"build": "gatsby build",
+		"develop": "npm run get-data && gatsby develop",
+		"format": "prettier --write *.{json,md,js,jsx} './{_data,_rules,build,gatsby,pages,src,test-assets}/**/*.{json,md,js,jsx}'",
+		"start": "npm run clean && npm run develop",
+		"serve": "gatsby serve",
+		"test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+		"get-implementations": "node ./build/get-implementations",
+		"get-wcag-sc-metadata": "node ./build/get-wcag-sc-metadata",
+		"get-data": "npm run get-wcag-sc-metadata && npm run get-implementations"
+	},
+	"homepage": "https://github.com/act-rules/act-rules.github.io",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/act-rules/act-rules.github.io"
+	},
+	"bugs": {
+		"url": "https://github.com/act-rules/act-rules.github.io/issues"
+	},
+	"pulls": {
+		"url": "https://github.com/act-rules/act-rules.github.io/pulls"
+	},
+	"www": {
+		"url": "https://act-rules.github.io",
+		"baseDir": "./public"
+	},
+	"config": {
+		"references": {
+			"wcag21": "https://raw.githubusercontent.com/w3c/wai-wcag-quickref/gh-pages/_data/wcag21.json"
+		},
+		"implementations": {
+			"alfa": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/alfa-report.json",
+			"axe": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/axe-report.json"
+		}
+	}
 }

@@ -1,29 +1,33 @@
 ---
 id: a25f45
-name: `headers` attribute only refers to `cells` in the same `table` element
-test_type: atomic
+name: `headers` attribute only refers to cells in the same table element.
+rule_type: atomic
 description: |
-  This rule checks that the `headers` attribute must only refer to `cells` in the same `table` element
-test_aspects:
+  This rule checks that the headers attribute must only refer to cells in the same table element.
+accessibility_requirements:
+  wcag20:1.3.1: # Info and Relationships (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+input_aspects:
 - DOM Tree
 authors:
 - Jey Nandakumar
 - Audrey Maniez
 ---
 
-## Test Procedure
+## Applicability
 
-### Applicability
+This rule applies to `td` elements with a `headers` attribute, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
-This rule applies to `td` and `th` elements with a `headers` attribute and within a `table` element with a [semantic role](#semantic-role) of `table` or `grid` or `treegrid`, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+## Expectation
 
-### Expectation
-
-Each target element with the `headers` attribute refers to other `th` of the same `table` element.
+Each target element with the `headers` attribute refers to other `th` within the same `table` element.
 
 ## Assumptions
 
-- This test assumes that the `headers` attribute is only used to identify table headers. If other information is included in the headers attribute, the rule may fail on issues that are not accessibility concerns. For example, if `headers` is used to include information for script, this rule may not be accurate.
+- This test assumes that the `headers` attribute is only used to identify table headers. If other information is included in the `headers` attribute, the rule may fail on issues that are not accessibility concerns. For example, if `headers` is used to include information for script, this rule may not be accurate.
+- Tables using `headers` id associations are intended as data rather than [layout table](#layout-table).
 
 ## Accessibility support
 
@@ -33,21 +37,39 @@ Each target element with the `headers` attribute refers to other `th` of the sam
 
 - [Understanding Success Criterion 1.3.1: Information and relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H43)
-- [Failure of Success Criterion 1.3.1 for incorrectly associating table headers and content via the headers and id attributes](https://www.w3.org/WAI/WCAG21/Techniques/failures/F90)
+- [F90: Incorrectly associating table headers and content via the headers and id attributes](https://www.w3.org/WAI/WCAG21/Techniques/failures/F90)
 
 ## Test Cases
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
-The `headers` attribute on the  `cell` lists the `id(s)` within the same `table`.
+The `headers` attribute on the cell refers to `th` within the same `table`.
 
 ```html
 <table>
   <thead>	
     <tr>
-      <td></td>
+      <th id="header1">Projects</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td headers="header1">15%</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### Passed Example 2
+
+The `headers` attribute on the cell refers to `th` within the same `table`. Multiple headers are referenced for a cell with `colspan` of `2`.
+
+```html
+<table>
+  <thead>	
+    <tr>
       <th id="header1">Projects</th>
       <th id="header2">Exams</th>
     </tr>
@@ -60,9 +82,28 @@ The `headers` attribute on the  `cell` lists the `id(s)` within the same `table`
 </table>
 ```
 
-#### Passed example 2
+#### Passed Example 3
 
-A `table` with multiple `columnheader(s)`, where the `headers` attribute on the  `cell` lists the `id(s)` within the same `table`.
+The `headers` attribute on the cell refers to `td` with a role of `columnheader` within the same `table`.
+
+```html
+<table>
+  <thead>	
+    <tr>
+      <td role='columnheader' id="header1">Projects</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td headers="header1">15%</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### Passed Example 4
+
+A `table` with multiple `columnheader(s)`, where the `headers` attribute on the cell lists the `id(s)` of `th` within the same `table`.
 
 ```html
 <table>
@@ -86,9 +127,9 @@ A `table` with multiple `columnheader(s)`, where the `headers` attribute on the 
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
-The `cell` that the `headers` attribute refers to, does not exist within the same `table`. (Note: Simple 1-to-1 column to cell mapping)
+Cells with `headers` attribute, refers to non-existing `th` within the same `table`.
 
 ```html
 <table>
@@ -103,9 +144,9 @@ The `cell` that the `headers` attribute refers to, does not exist within the sam
 </table>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
-One of the `id(s)` referenced in the `headers` attribute does not exist within the same `table`.
+One of the cells with `headers` attribute, refers to `th` that does not exist within the same `table`.
 
 ```html
 <table>
@@ -124,9 +165,9 @@ One of the `id(s)` referenced in the `headers` attribute does not exist within t
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
-The relationship between data cell and headers is determined using the `scope` attribute and each data cell is associated with only one header, there's no need to use the `headers` attribute.
+There's no usage of the `headers` attribute.
 
 ```html
 <table>
@@ -141,7 +182,7 @@ The relationship between data cell and headers is determined using the `scope` a
 </table>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 A table used for presentation only, that has a `role="presentation"`. 
 
@@ -157,9 +198,9 @@ A table used for presentation only, that has a `role="presentation"`.
 </table>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
-The rule only applies only to `table` element.
+The rule applies only to `table` element.
 
 ```html
 <div role="table">
@@ -174,7 +215,7 @@ The rule only applies only to `table` element.
 </div>
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 No `headers` attribute is defined for table `cell`.
 
@@ -190,7 +231,7 @@ No `headers` attribute is defined for table `cell`.
 </table>
 ```
 
-#### Inapplicable example 5
+#### Inapplicable Example 5
 
 A table that is not visible. 
 
@@ -206,7 +247,7 @@ A table that is not visible.
 </table>
 ```
 
-#### Inapplicable example 6
+#### Inapplicable Example 6
 
 A table that is not included in the accessibility tree. 
 

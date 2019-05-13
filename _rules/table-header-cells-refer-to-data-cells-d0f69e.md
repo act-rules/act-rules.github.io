@@ -1,7 +1,7 @@
 ---
 id: d0f69e
 name: All table header cells refer to data cells
-test_type: atomic
+rule_type: atomic
 description: |
   This rule checks that each table header refers to data cells in a table element.
 accessibility_requirements:

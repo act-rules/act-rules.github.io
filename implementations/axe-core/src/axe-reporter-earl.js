@@ -52,6 +52,18 @@ module.exports.earlUntested = function earlUntested ({ url, version }) {
   }
 }
 
+module.exports.concatReport = function concatReport (testResults) {
+  // Flatten the graphs into a single array
+  const graphs = testResults.reduce((graph, result) => {
+    return graph.concat(result['@graph'])}
+  , [])
+
+  return {
+    '@context': testResults[0]['@context'],
+    '@graph': graphs
+  }
+}
+
 function earlAssertion ({
   source,
   version,

@@ -4,10 +4,15 @@ module.exports.mappingReport = function mappingReport (mappings, tool) {
   const completed = [['ACT-R ID', 'Rule Name', `${tool} Rules`]]
   const incomplete = [['ACT-R ID', 'Rule Name', `${tool} Rules`]]
   const incorrect = []
+  const unimplemented = []
 
   for (actrRule of mappings) {
     const { implementation, ruleId } = actrRule
     const ruleName = truncate(actrRule.ruleName)
+    if (!implementation) {
+      unimplemented.push({ ruleId, ruleName })
+      continue;
+    }
     const mappedRules = implementation.map(({ ruleId }) => ruleId).join(' + ')
 
     if (isCompleted(implementation)) {
@@ -25,7 +30,11 @@ module.exports.mappingReport = function mappingReport (mappings, tool) {
     `# Mapping for ${tool}`,
     getMarkdown('Implemented Rules', completed),
     getMarkdown('Partially Implemented Rules', incomplete),
-    incorrectMarkdown(incorrect, tool)
+    incorrectMarkdown(incorrect, tool),
+    showList(
+      'Unimplemented rules',
+      unimplemented.map(({ ruleId, ruleName }) => `${ruleName} (${ruleId})`)
+    )
   ].join('\n') + '\n'
 }
 
@@ -77,4 +86,11 @@ function truncate(str, max = 50) {
     ? str.substr(0, max - 3) + '...'
     : str
   )
+}
+
+function showList (heading, items) {
+  if (!items) {
+    return ''
+  }
+  return `\n## ${heading}\n\n` + items.map(str => '- ' + str).join('\n')
 }

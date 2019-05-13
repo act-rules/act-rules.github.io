@@ -1,45 +1,17 @@
-const { bestMatchingRules } = require('./best-matching-rules')
 const { getMappingState } = require('./get-mapping-state')
-const assert = require('assert')
+const { bestMatchingRules } = require('./best-matching-rules')
 
-
-module.exports.getRuleMapping = async function getRuleMapping (pageRunner, testcases, port, index = 0) {
-  console.log(`testing #${index}: ${testcases[0].ruleName} (${testcases[0].ruleId})`)
-  process.stdout.write('  ');
-  const testResults = []
-
-  for (testcase of testcases) {
-    const results = await pageRunner({
-      url: getTestUrl(testcase.url, port),
-      ruleName: testcase.ruleName,
-      success_criterion: testcase.success_criterion
+module.exports.getRuleMapping = function getRuleMapping (testCases, assertions) {
+  const ruleData = {}
+  testCases.forEach(testCase => {
+    const localUrl = getLocalUrl(testCase.url)
+    const tcAssertions = assertions.filter(assertion => {
+      return getSource(assertion).includes(localUrl)
     })
 
-    assert(typeof results === 'object', 'Expected `pageRunner` to return an object')
-
-    process.stdout.write('.');
-    testResults.push({ testcase, results })
-  }
-
-  process.stdout.write('\n');
-  return processTestResults(testResults, port)
-}
-
-async function runTestCase (pageRunner, port, { url, ruleName, success_criterion }) {
-  return await pageRunner({
-    url: getTestUrl(url, port),
-    ruleName,
-    success_criterion
-  })
-}
-
-
-function processTestResults (testResults, port) {
-  const ruleData = {}
-  for ({ results, testcase } of testResults) {
     // Create a mapping for each assertion
-    results['@graph'].forEach((assertion) => {
-      const testMapping = getTestCaseMapping(assertion)
+    tcAssertions.forEach((assertion) => {
+      const testMapping = getTestCaseMapping(assertion, testCase)
       if (!testMapping || testMapping.actual === 'untested') {
         return
       }
@@ -48,49 +20,67 @@ function processTestResults (testResults, port) {
       }
       ruleData[testMapping.testTitle].push(testMapping)
     })
-  }
+  })
 
-  for ({ testcase } of testResults) {
-    const testUrl = getTestUrl(testcase.url, port)
+  for (testCase of testCases) {
+    const localUrl = getLocalUrl(testCase.url)
 
     // Push untested results for every test case without an assertion
     Object.values(ruleData).forEach(testMappings => {
-      if (!testMappings.some(({ url }) => url === testUrl)) {
+      if (!testMappings.some(({ url }) => url && url.includes(localUrl))) {
         testMappings.push({
           testTitle: testMappings[0].testTitle,
-          expected: testcase.expected,
+          expected: testCase.expected,
           actual: 'untested',
-          url: testUrl
+          url: testCase.url
         })
       }
     })
   }
 
   const ruleAsserts = Object.keys(ruleData).map((ruleId) => {
-    return {
-      ruleId,
-      ...getMappingState(ruleData[ruleId])
-    }
+    const mappingState = getMappingState(ruleData[ruleId])
+    return { ruleId, ...mappingState }
   })
 
   return bestMatchingRules(ruleAsserts)
 }
 
-function getTestCaseMapping (assertion) {
-  if (typeof assertion !== 'object' || assertion['@type'] !== 'Assertion') {
-    return
-  }
-
-  const { subject = {}, test = {}, result = {} } = assertion
+function getTestCaseMapping (assertion, testCase) {
   return {
-    testTitle: test.title,
-    expected: testcase.expected,
-    actual: result.outcome.replace('earl:', ''),
-    url: subject.source
+    testTitle: getTestTitle(assertion),
+    url: getSource(assertion),
+    expected: testCase.expected,
+    actual: assertion.result.outcome.replace('earl:', '')
   }
 }
 
-function getTestUrl (url, port) {
-  const localUrl = url.replace('https://act-rules.github.io/', '')
-  return `http://127.0.0.1:${port}/${localUrl}`
+function getSource ({ subject }) {
+  if (typeof subject === 'string') {
+    return subject
+  } else if (subject.source) {
+    return (typeof subject.source === 'object'
+      ? subject.source['@id']
+      : subject.source
+    )
+  } else {
+    return subject['@id']
+  }
+}
+
+function getTestTitle ({ test, EMTest }) {
+  if (!test) {
+    return EMTest || null
+  }
+  if (typeof test === 'string') {
+    return test
+  }
+  if (test.title) {
+    return test.title
+  }
+  return test['@id'] || ''
+}
+
+function getLocalUrl (url) {
+  return url.substr(url.indexOf('/testcases/'))
 }

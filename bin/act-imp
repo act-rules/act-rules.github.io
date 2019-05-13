@@ -1,0 +1,45 @@
+#!/usr/bin/env node
+const assert = require('assert')
+const program = require('commander')
+const axios = require('axios')
+const reportFromGlob = require('./report-from-glob')
+const { version } = require('../package.json')
+const createFile = require('../build/create-file')
+const { implementationReport } = require('../build/implementation-report')
+const { mappingReport } = require('../build/auto-mapping')
+ 
+program
+  .version(version)
+  .option('-u, --url <url>', 'URL to EARL report')
+  .option('-l, --local <path>', 'Glob to match local EARL reports')
+  .option('-o, --output <path>', 'Path to JSON implementation report')
+  .parse(process.argv);
+
+const { url, local, output } = program;
+
+async function main () {
+  assert(output, '`output` is required')
+
+  let earlReports;
+  if (url) {
+    earlReports = (await axios.get(url)).data
+  } else if (local) {
+    earlReports = await reportFromGlob(local)
+  } else {
+    throw new Error('Provide `local` or `url`')
+  }
+
+  const implReport = await implementationReport(earlReports)
+  await createFile(output, JSON.stringify(implReport, null, 2), 'utf-8')
+ 
+  // Save Markdown report
+  // TODO: Make implementation name / version part of implReport.
+  const mdReport = mappingReport(implReport, 'Some tool')
+  console.log(mdReport)
+}
+
+// Execute
+main().catch(e => {
+  console.error(e)
+  process.exit(1)
+})

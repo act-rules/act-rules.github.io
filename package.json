@@ -67,6 +67,7 @@
 	],
 	"dependencies": {
 		"axios": "^0.18.0",
+		"commander": "^2.20.0",
 		"fastmatter": "^2.1.1",
 		"gatsby": "^2.3.21",
 		"gatsby-image": "^2.0.30",
@@ -82,7 +83,8 @@
 		"gatsby-transformer-remark": "^2.3.0",
 		"gatsby-transformer-sharp": "^2.1.15",
 		"gfm-code-blocks": "^1.0.0",
-		"jsonld": "^1.5.4",
+		"glob": "^7.1.4",
+		"jsonld": "^1.6.0",
 		"make-dir": "^2.1.0",
 		"markdown-table": "^1.1.2",
 		"ncp": "^2.0.0",
@@ -116,7 +118,14 @@
 		"test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
 		"get-implementations": "node ./build/get-implementations",
 		"get-wcag-sc-metadata": "node ./build/get-wcag-sc-metadata",
-		"get-data": "npm run get-wcag-sc-metadata && npm run get-implementations"
+		"get-data": "npm run get-wcag-sc-metadata && npm run get-implementations",
+		"report": "npm run report:rgaa && npm run report:axe && npm run report:alfa",
+		"report:rgaa": "bin/act-imp --local \"./implementations/rgaa/*.json\" --output ./public/reports/rgaa.json",
+		"report:axe": "bin/act-imp --local ./implementations/axe-core/axe-earl-results.json --output ./public/reports/axe.json",
+		"report:alfa": "bin/act-imp --url $npm_package_config_implementations_alfa --output ./public/reports/alpha.json"
+	},
+	"bin": {
+		"act-imp": "dist/bin/act-imp"
 	},
 	"homepage": "https://github.com/act-rules/act-rules.github.io",
 	"repository": {

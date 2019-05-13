@@ -1,9 +1,13 @@
-const { context } = require('./auto-mapping/context')
-const { implementationTest } = require('./auto-mapping/implementation-test')
+const context = require('./auto-mapping/context')
 const { mappingReport } = require('./auto-mapping/mapping-report')
+const { bestMatchingRules } = require('./auto-mapping/best-matching-rules')
+const { getMappingState } = require('./auto-mapping/get-mapping-state')
+const { getRuleMapping } = require('./auto-mapping/get-rule-mapping')
 
 module.exports = {
   context,
-  implementationTest,
   mappingReport,
+  getRuleMapping,
+  getMappingState,
+  bestMatchingRules
 }

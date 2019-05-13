@@ -4,24 +4,26 @@ name: Id attribute is unique
 rule_type: atomic
 description: |
   This rule checks that all `id` attribute values on a single page are unique.
-success_criterion:
-  - 4.1.1 # Success Criterion 4.1.1 (Parsing)
-test_aspects:
+accessibility_requirements:
+  wcag20:4.1.1: # Parsing (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
   - DOM Tree
 authors:
   - Bryn Anderson
   - Anne Thyme
 ---
 
-## Test procedure
-
-### Applicability
+## Applicability
 
 Any `id` attribute which is not the empty string (""), specified on an HTML or SVG element.
 
 **Note:** Elements that are neither [included in the accessibility tree](#included-in-the-accessibility-tree) nor [visible on the page](#visible-on-the-page) are still considered for this rule.
 
-### Expectation
+## Expectation
 
 The value of the attribute is unique across all other `id` attributes specified on HTML or SVG elements that exist within the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the element on which the applicable `id` attribute is specified.
 
@@ -43,7 +45,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 Only one `id` within the document context
 
@@ -51,7 +53,7 @@ Only one `id` within the document context
 <div id="my-div">This is my first element</div>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 All `id`s are unique within the document context
 
@@ -61,7 +63,7 @@ All `id`s are unique within the document context
 <svg id="my-div3">This is my third element</svg>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 `id` in shadow DOM is for the same element as `id` in light DOM
 
@@ -76,7 +78,7 @@ All `id`s are unique within the document context
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Several elements have identical `id`
 
@@ -85,7 +87,7 @@ Several elements have identical `id`
 <div id="my-div">This is my second element</div>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 Elements of different types have identical `id`
 
@@ -94,7 +96,7 @@ Elements of different types have identical `id`
 <svg id="my-div">This is my second element</svg>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 Having `display: none` on an element still makes it applicable to this rule
 
@@ -105,7 +107,7 @@ Having `display: none` on an element still makes it applicable to this rule
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 No `id` on element
 
@@ -113,7 +115,7 @@ No `id` on element
 <div>This is my first element</div>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 XML `id` not applicable to this rule
 

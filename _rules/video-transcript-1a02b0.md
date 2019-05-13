@@ -4,9 +4,13 @@ name: video element transcript
 rule_type: atomic
 description: |
   Non-streaming `video` elements must have all audio and visual information available in a transcript.
-success_criterion:
-  - 1.2.8 # Media Alternative (Prerecorded)
-test_aspects:
+accessibility_requirements:
+  wcag20:1.2.8: # Media Alternative (Prerecorded) (AAA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
   - DOM Tree
   - CSS Styling
   - Audio output
@@ -16,13 +20,11 @@ authors:
   - Brian Bors
 ---
 
-## Test Procedure
-
-### Applicability
+## Applicability
 
 The rule applies to every [non-streaming](#non-streaming) `video` element that is [visible](#visible) where the video contains audio.
 
-### Expectation
+## Expectation
 
 A text transcript containing all the visual and auditory information of the test target is available, either on the page or available through a link.
 
@@ -32,7 +34,7 @@ A text transcript containing all the visual and auditory information of the test
 
 This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
-## Accessibility support
+## Accessibility Support
 
 There are no major accessibility support issues known for this rule.
 
@@ -48,7 +50,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 A video element with a text transcript on the same page.
 
@@ -62,7 +64,7 @@ He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 A video element with a link to a text transcript on a different page.
 
@@ -76,7 +78,7 @@ A video element with a link to a text transcript on a different page.
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 A video element with an incorrect text transcript on the same page.
 
@@ -90,7 +92,7 @@ He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 A video element with a link to an incorrect text transcript on a different page.
 
@@ -104,7 +106,7 @@ A video element with a link to an incorrect text transcript on a different page.
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 A video element that is not visible on the page.
 
@@ -116,7 +118,7 @@ A video element that is not visible on the page.
 <a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 A video element without audio.
 

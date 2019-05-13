@@ -3,10 +3,10 @@ import Layout from '../components/layout/'
 import { graphql } from 'gatsby'
 import showdown from 'showdown'
 import {
-	getSuccessCriterion,
+	getAccessibilityRequirements,
 	getAuthors,
-	getAtomicRulesForRule,
-	getTestAspects,
+	getInputRulesForRule,
+	getInputAspects,
 } from './../utils/render-fragments'
 import glossaryUsages from './../../_data/glossary-usages.json'
 import SEO from '../components/seo'
@@ -14,9 +14,12 @@ import SEO from '../components/seo'
 export default ({ data }) => {
 	const { rule, allRules, allGlossary, site } = data
 	const { html, frontmatter, tableOfContents, fields } = rule
-	const { slug } = fields
+	const { slug, fastmatterAttributes } = fields
+	const { accessibility_requirements } = JSON.parse(fastmatterAttributes)
 	const converter = new showdown.Converter()
 	const updatedTitle = `Rule | ${frontmatter.name} | ${site.siteMetadata.title}`
+	const ruleId = slug.replace('rules/', '')
+	const ruleTestcasesUrl = `/testcases/${ruleId}/rule-${ruleId}-testcases-for-em-report-tool.json`
 
 	const getRuleType = rule_type => {
 		if (!rule_type) {
@@ -71,9 +74,7 @@ export default ({ data }) => {
 					return (
 						<article key={node.id}>
 							<a id={key} href={`#${key}`}>
-								<h3>
-									{frontmatter.title}
-								</h3>
+								<h3>{frontmatter.title}</h3>
 							</a>
 							<i>
 								key: <u>{key}</u>
@@ -114,8 +115,8 @@ export default ({ data }) => {
 			<section className="page-rule">
 				{/* rule content */}
 				<section>
-					{/* title */}
 					<header>
+						{/* title */}
 						<h1>{frontmatter.name}</h1>
 					</header>
 					{/* Description */}
@@ -140,11 +141,11 @@ export default ({ data }) => {
 
 					<ul className="meta-data">
 						{getRuleType(frontmatter.rule_type)}
-						<li>{getSuccessCriterion(frontmatter.success_criterion)}</li>
-						<li>{getTestAspects(frontmatter.test_aspects)}</li>
+						<li>{getAccessibilityRequirements(accessibility_requirements)}</li>
+						<li>{getInputAspects(frontmatter.input_aspects)}</li>
 						<li>
-							{getAtomicRulesForRule(
-								frontmatter.atomic_rules,
+							{getInputRulesForRule(
+								frontmatter.input_rules,
 								allRules.edges,
 								true
 							)}
@@ -156,6 +157,22 @@ export default ({ data }) => {
 					</span>
 					<div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
 					<ul>{renderGlossaryUsedLink(slug)}</ul>
+					<span role="heading" aria-level="1" className="heading">
+						Download Testcases
+					</span>
+					<ul>
+						<li>
+							<a
+								className="btn-secondary"
+								aria-label="test cases of rule for use in wcag em report tool"
+								target="_blank"
+								rel="noopener noreferrer"
+								href={ruleTestcasesUrl}
+							>
+								For EM Report Tool
+							</a>
+						</li>
+					</ul>
 				</div>
 			</section>
 		</Layout>
@@ -167,17 +184,18 @@ export const query = graphql`
 		rule: markdownRemark(fields: { slug: { eq: $slug } }) {
 			html
 			tableOfContents
+			fileAbsolutePath
 			frontmatter {
 				name
 				rule_type
 				description
-				success_criterion
-				test_aspects
-				atomic_rules
+				input_aspects
+				input_rules
 				authors
 			}
 			fields {
 				slug
+				fastmatterAttributes
 			}
 		}
 		allRules: allMarkdownRemark(
@@ -192,6 +210,10 @@ export const query = graphql`
 						}
 						markdownType
 						slug
+					}
+					frontmatter {
+						id
+						name
 					}
 				}
 			}

@@ -1,16 +1,20 @@
 ---
 id: c3232f
-name: video only has an accessibile alternative
+name: video only has an accessible alternative
 rule_type: composite
 description: |
   This rule checks if video elements without audio have an alternative available
-success_criterion:
-  - 1.2.1 # Audio-only and Video-only (Prerecorded)
-atomic_rules:
-  - video-only-media-alternative-fd26cf
-  - video-only-description-track-ac7dc6
-  - video-only-element-transcript-ee13b5
-  - video-has-audio-alternative-eac66b
+accessibility_requirements:
+  wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_rules:
+  - fd26cf
+  - ac7dc6
+  - ee13b5
+  - eac66b
 authors:
   - Wilco Fiers
   - Brian Bors
@@ -18,13 +22,11 @@ authors:
   - Rafal Charlampowicz
 ---
 
-## Test Procedure
-
-### Applicability
+## Applicability
 
 The rule applies to any [non-streaming](#non-streaming) `video` element [visible](#visible), where the video doesn't contain audio.
 
-### Expectation
+## Expectation
 
 For each test target, the outcome of at least one of the following rules is passed:
 
@@ -37,7 +39,7 @@ For each test target, the outcome of at least one of the following rules is pass
 
 This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
-## Accessibility support
+## Accessibility Support
 
 See [Video only element description track: accessibility support](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-1-Video-only-description-track.html#accessibility-support).
 
@@ -50,7 +52,7 @@ See [Video only element description track: accessibility support](https://auto-w
 
 ### Passed
 
-#### Pass example 1
+#### Pass Example 1
 
 A video element without audio. The text on the page labels the video as an alternative.
 
@@ -69,7 +71,7 @@ A video element without audio. The text on the page labels the video as an alter
 ></video>
 ```
 
-#### Pass example 2
+#### Pass Example 2
 
 A video only element with a track element that contains descriptions.
 
@@ -81,7 +83,7 @@ A video only element with a track element that contains descriptions.
 </video>
 ```
 
-#### Pass example 3
+#### Pass Example 3
 
 A silent video element with a text transcript on the same page.
 
@@ -95,7 +97,7 @@ He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
-#### Pass example 4
+#### Pass Example 4
 
 A video element without audio has a separate audio track that describes the visual information.
 
@@ -115,7 +117,7 @@ A video element without audio has a separate audio track that describes the visu
 
 ### Failed
 
-#### Fail example 1
+#### Fail Example 1
 
 A video element that describes some of the text on the same page. The text on the page does not label the video as an alternative.
 
@@ -133,7 +135,7 @@ A video element that describes some of the text on the same page. The text on th
 ></video>
 ```
 
-#### Fail example 2
+#### Fail Example 2
 
 A video only element with a track element that contains incorrect descriptions.
 
@@ -145,7 +147,7 @@ A video only element with a track element that contains incorrect descriptions.
 </video>
 ```
 
-#### Fail example 3
+#### Fail Example 3
 
 A silent video element with a link to an incorrect text transcript on a different page.
 
@@ -157,7 +159,7 @@ A silent video element with a link to an incorrect text transcript on a differen
 <a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</p>
 ```
 
-#### Fail example 4
+#### Fail Example 4
 
 A video element without audio has a separate audio track that incorrectly describes the visual information.
 
@@ -177,7 +179,7 @@ A video element without audio has a separate audio track that incorrectly descri
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 A video element with audio.
 
@@ -196,7 +198,7 @@ A video element with audio.
 ></video>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 A video only element that is not visible on the page.
 

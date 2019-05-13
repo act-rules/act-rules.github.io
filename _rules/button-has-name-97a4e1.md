@@ -1,11 +1,16 @@
 ---
 id: 97a4e1
 name: Buttons have an accessible name
+rule_type: atomic
 description: |
   Each button element has an accessible name
-success_criterion:
-  - 4.1.2
-test_aspects:
+accessibility_requirements:
+  wcag20:4.1.2: # Name, Role, Value (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
   - DOM Tree
   - CSS Styling
 authors:
@@ -13,13 +18,11 @@ authors:
   - Stein Erik Skotkjerra
 ---
 
-## Test procedure
-
-### Applicability
+## Applicability
 
 The rule applies to elements that are [included in the accessibility tree](#included-in-the-accessibility-tree) with the [semantic role](#semantic-role) of `button`, except for `input` elements of `type="image"`.
 
-### Expectation
+## Expectation
 
 Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty)
 
@@ -38,11 +41,11 @@ There are no major accessibility support issues known for this rule.
 - [ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used](https://www.w3.org/TR/WCAG20-TECHS/ARIA14.html)
 - [https://www.w3.org/TR/WCAG20-TECHS/ARIA16.html](https://www.w3.org/TR/WCAG20-TECHS/ARIA16.html)
 
-## Test cases
+## Test Cases
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 Regular button.
 
@@ -50,7 +53,7 @@ Regular button.
 <button>My button</button>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 Value attribute as the accessible name.
 
@@ -58,7 +61,7 @@ Value attribute as the accessible name.
 <input type="submit" value="Submit" />
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 `aria-label` for the accessible name.
 
@@ -66,7 +69,7 @@ Value attribute as the accessible name.
 <button aria-label="My button"></button>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 Span tag with role button and has name defined by aria-label.
 
@@ -74,7 +77,7 @@ Span tag with role button and has name defined by aria-label.
 <span role="button" aria-label="My button"></button>
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 Summary element has a default semantic role of button.
 
@@ -82,7 +85,7 @@ Summary element has a default semantic role of button.
 <summary>Press Here</summary>
 ```
 
-#### Passed example 6
+#### Passed Example 6
 
 Disabled elements are also applicable.
 
@@ -90,7 +93,7 @@ Disabled elements are also applicable.
 <button disabled>Delete</button>
 ```
 
-#### Passed example 7
+#### Passed Example 7
 
 Off screen elements should be tested.
 
@@ -111,7 +114,7 @@ Off screen elements should be tested.
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Value attribute does NOT give an accessible name, only for input elements.
 
@@ -119,7 +122,7 @@ Value attribute does NOT give an accessible name, only for input elements.
 <button type="button" value="read more"></button>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 Span tag with role button with no name.
 
@@ -127,7 +130,7 @@ Span tag with role button with no name.
 <span role="button"></span>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 Off screen element without an accessible name.
 
@@ -148,7 +151,7 @@ Off screen element without an accessible name.
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Image buttons are tested in a different rule.
 
@@ -156,7 +159,7 @@ Image buttons are tested in a different rule.
 <input type="image" value="download" />
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 Not visible in page and not included in the accessibility tree.
 
@@ -175,7 +178,7 @@ Not visible in page and not included in the accessibility tree.
 </html>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 Inapplicable: role overridden to link for button element.
 
@@ -183,7 +186,7 @@ Inapplicable: role overridden to link for button element.
 <button role="link">take me somewhere</button>
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 Not included in the accessibility tree due to `aria-hidden`.
 

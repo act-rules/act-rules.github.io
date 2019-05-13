@@ -1,24 +1,27 @@
 ---
 id: de46e4
 name: Valid body lang attribute
+rule_type: atomic
 description: |
   This rule checks that `lang` or `xml:lang` attributes on elements within the `body` of a web page have a valid language subtag.
-success_criterion:
-  - 3.1.2
-test_aspects:
+accessibility_requirements:
+  wcag20:3.1.2: # Language of Parts (AA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
   - DOM Tree
 authors:
   - Bryn Anderson
   - Jey Nandakumar
 ---
 
-## Test Procedure
-
-### Applicability
+## Applicability
 
 Any DOM element, within the `body` of a webpage with a [non-empty](#non-empty) `lang` or `xml:lang` attribute.
 
-### Expectation
+## Expectation
 
 The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-language-subtag) if the attribute is [non-empty](#non-empty).
 
@@ -37,7 +40,7 @@ This rule assumes that the presence of a lang or xml:lang attribute is being use
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 The `lang` attribute specified has a non-empty value & a valid primary language subtag.
 
@@ -49,7 +52,7 @@ The `lang` attribute specified has a non-empty value & a valid primary language 
 </html>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 The `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
 
@@ -61,7 +64,7 @@ The `xml:lang` attribute specified has a non-empty value & a valid primary langu
 </html>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 The `lang` attribute specified has a non-empty value & a valid primary language subtag. The region section in the value is ignored by the rule.
 
@@ -73,7 +76,7 @@ The `lang` attribute specified has a non-empty value & a valid primary language 
 </html>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 The `lang` and `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
 
@@ -87,7 +90,7 @@ The `lang` and `xml:lang` attribute specified has a non-empty value & a valid pr
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 The `lang` attribute value is not a valid primary language subtag.
 
@@ -99,7 +102,7 @@ The `lang` attribute value is not a valid primary language subtag.
 </html>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 The `xml:lang` attribute value is not a valid primary language subtag.
 
@@ -111,7 +114,7 @@ The `xml:lang` attribute value is not a valid primary language subtag.
 </html>
 ```
 
-#### Fail example 3
+#### Failed Example 3
 
 The `lang` attribute value has a valid primary language subtag, but a syntactically invalid region subtag.
 
@@ -125,7 +128,7 @@ The `lang` attribute value has a valid primary language subtag, but a syntactica
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 The rule applies to elements with the `body` of a webpage. `html` elements are ignored by the rule.
 
@@ -135,7 +138,7 @@ The rule applies to elements with the `body` of a webpage. `html` elements are i
 </html>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 An empty value for `lang` attribute is ignored by this rule, as the applicability specifies only non-empty values.
 
@@ -147,7 +150,7 @@ An empty value for `lang` attribute is ignored by this rule, as the applicabilit
 </html>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 An empty value for `xml:lang` attribute is ignored by this rule, as the applicability specifies only non-empty values.
 

@@ -4,9 +4,13 @@ name: Heading is descriptive
 rule_type: atomic
 description: |
   This rule checks that headings describe the topic or purpose of the content.
-success_criterion:
-  - 2.4.6 # Headings and labels
-test_aspects:
+accessibility_requirements:
+  wcag20:2.4.6: # Headings and labels (AA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
   - DOM Tree
   - CSS Styling
 authors:
@@ -15,15 +19,13 @@ authors:
   - Carlos Duarte
 ---
 
-## Test procedure
-
-### Applicability
+## Applicability
 
 This rule applies to any element with the [semantic role](#semantic-role) of heading that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 **Note**: This rule only applies to elements with the [semantic role](#semantic-role) of heading. Thus, it is a partial check for WCAG 2.0 success criterion 2.4.6, which applies to all headings. "Heading" is used in its general sense and includes headlines and other ways to add a heading to different types of content. This includes elements that are not marked up as headings in the code, but still act visually as headings, e.g. by larger and/or bolder text.
 
-### Expectation
+## Expectation
 
 Each target element describes the topic or purpose of its [section of the content](#section-of-content).
 
@@ -49,7 +51,7 @@ _There are no major accessibility support issues known for this rule._
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 Heading marked up with `h` element that describes the topic or purpose of its section of the content.
 
@@ -58,7 +60,7 @@ Heading marked up with `h` element that describes the topic or purpose of its se
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 Heading marked up with `role="heading"` that describes the topic or purpose of its section of the content.
 
@@ -67,7 +69,7 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 Heading marked up with `h` element with an image that describes the topic or purpose of its section of the content.
 
@@ -76,7 +78,7 @@ Heading marked up with `h` element with an image that describes the topic or pur
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 Heading marked up with `h` element that is a single character that describes the topic or purpose of its section of the content.
 
@@ -96,7 +98,7 @@ Heading marked up with `h` element that is a single character that describes the
 </dl>
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 Heading marked up with `role="heading"` that describes the topic or purpose of its section of the content. The heading is positioned off screen and is included in the Accessibility Tree.
 
@@ -109,7 +111,7 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 </p>
 ```
 
-#### Passed example 6
+#### Passed Example 6
 
 Heading marked up with `h` element that describes the topic or purpose of its section of the content. The heading is visible, but is not included in the Accessibility Tree.
 
@@ -120,7 +122,7 @@ Heading marked up with `h` element that describes the topic or purpose of its se
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Heading marked up with `h` element that does not describe the topic or purpose of its section of the content.
 
@@ -129,7 +131,7 @@ Heading marked up with `h` element that does not describe the topic or purpose o
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 Heading marked up with `role="heading"` that does not describe the topic or purpose of its section of the content.
 
@@ -138,7 +140,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 Heading marked up with `role="heading"` that does not describe the topic or purpose of its section of the content. The heading is positioned off screen and is included in the Accessibility Tree.
 
@@ -151,7 +153,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 </p>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 Heading marked up with `h` element that does not describe the topic or purpose of its section of the content. The heading is visible, but is not included in the Accessibility Tree.
 
@@ -160,7 +162,7 @@ Heading marked up with `h` element that does not describe the topic or purpose o
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
-#### Failed example 5
+#### Failed Example 5
 
 Empty heading marked up with `h` element.
 
@@ -168,7 +170,7 @@ Empty heading marked up with `h` element.
 <h1></h1>
 ```
 
-#### Failed example 6
+#### Failed Example 6
 
 Empty heading marked up with `role="heading"`.
 
@@ -178,7 +180,7 @@ Empty heading marked up with `role="heading"`.
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 No heading.
 
@@ -186,7 +188,7 @@ No heading.
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 Heading that is neither visible to users, nor included in the accessibility tree.
 

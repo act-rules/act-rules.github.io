@@ -1,26 +1,29 @@
 ---
 id: cae760
 name: iframe has an accessible name
+rule_type: atomic
 description: |
   Each iframe element has an accessible name
-success_criterion:
-  - 4.1.2 # Name, Role, Value (A)
-test_aspects:
+accessibility_requirements:
+  wcag20:4.1.2: # Name, Role, Value (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
   - DOM Tree
   - CSS Styling
 authors:
   - Jey Nandakumar
 ---
 
-## Test procedure
-
-### Applicability
+## Applicability
 
 The rule applies to `iframe` elements that are [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 **Note:** `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
 
-### Expectation
+## Expectation
 
 Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty).
 
@@ -39,11 +42,11 @@ _There are no major accessibility support issues known for this rule._
 - [Understanding Success Criterion 2.4.1](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html)
 - [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)
 
-## Test cases
+## Test Cases
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 Usage of `title` attribute to describe the `iframe` content.
 
@@ -55,7 +58,7 @@ Usage of `title` attribute to describe the `iframe` content.
 </iframe>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 Usage of `aria-label` attribute to describe the `iframe` content.
 
@@ -67,7 +70,7 @@ Usage of `aria-label` attribute to describe the `iframe` content.
 </iframe>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 Usage of `aria-labelledby` attribute to describe the `iframe` content.
 
@@ -82,7 +85,7 @@ Usage of `aria-labelledby` attribute to describe the `iframe` content.
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Usage of `name` attribute to describe the `iframe` content is not valid.
 
@@ -91,7 +94,7 @@ Usage of `name` attribute to describe the `iframe` content is not valid.
 </iframe>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 `iframe` with no `title`, `aria-label` or `aria-labelledby` attribute to describe content is not valid.
 
@@ -99,7 +102,7 @@ Usage of `name` attribute to describe the `iframe` content is not valid.
 <iframe src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 Empty `title` attribute is not valid.
 
@@ -107,7 +110,7 @@ Empty `title` attribute is not valid.
 <iframe title="" src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 Empty `aria-label` attribute to describe the `frame` content is not valid.
 
@@ -115,7 +118,7 @@ Empty `aria-label` attribute to describe the `frame` content is not valid.
 <iframe aria-label="" src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
-#### Failed example 5
+#### Failed Example 5
 
 Usage of non existing `aria-labelledby` reference element to describe the `iframe` content is not valid.
 
@@ -127,7 +130,7 @@ Usage of non existing `aria-labelledby` reference element to describe the `ifram
 </iframe>
 ```
 
-#### Failed example 6
+#### Failed Example 6
 
 Usage of `alt` attribute to describe content is not valid.
 
@@ -138,7 +141,7 @@ Usage of `alt` attribute to describe content is not valid.
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Does not apply to non `iframe` element.
 
@@ -146,7 +149,7 @@ Does not apply to non `iframe` element.
 <button>take me somewhere</button>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 `iframe` is not included in the accessibility tree.
 

@@ -79,7 +79,7 @@ const createGlossaryUsagesInRules = options => {
 			JSON.stringify(glossaryUsages, undefined, 2)
 		)
 
-		console.info(`\n\n DONE!!! Generated Glossary Usages Data.`)
+		console.info(`\nDONE!!! Generated Glossary Usages Data.\n`)
 	})
 }
 

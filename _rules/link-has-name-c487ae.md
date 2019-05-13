@@ -1,13 +1,26 @@
 ---
 id: c487ae
 name: Links have an accessible name
+rule_type: atomic
 description: |
   Each link has an accessible name
-success_criterion:
-  - 4.1.2 # Name, Role, Value
-  - 2.4.4 # Link Purpose (In Context)
-  - 2.4.9 # Link Purpose (Link Only)
-test_aspects: # Remove what is not applicable
+accessibility_requirements:
+  wcag20:4.1.2: # Name, Role, Value (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag20:2.4.4: # Link Purpose (In Context) (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag20:2.4.9: # Link Purpose (Link Only) (AAA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
   - DOM Tree
   - CSS Styling
 authors:
@@ -15,13 +28,11 @@ authors:
   - Anne Thyme Nørregaard
 ---
 
-## Test procedure
-
-### Applicability
+## Applicability
 
 The rule applies to any HTML element with the [semantic role](#semantic-role) of `link` that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
-### Expectation
+## Expectation
 
 Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty).
 
@@ -44,7 +55,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 `<a>` element with accessible name through content.
 
@@ -52,7 +63,7 @@ There are no major accessibility support issues known for this rule.
 <a href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 Element with eplicit role of link with accessible name through content.
 
@@ -60,7 +71,7 @@ Element with eplicit role of link with accessible name through content.
 <div role="link">Web Accessibility Initiative (WAI)</div>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 `Button` with the role of `link`.
 
@@ -68,7 +79,7 @@ Element with eplicit role of link with accessible name through content.
 <button role="link">Click me!</button>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 Accessible name for link via `aria-label`
 
@@ -76,7 +87,7 @@ Accessible name for link via `aria-label`
 <a href="http://www.w3.org/WAI"><img src="#" aria-label="This is a link"/></a>
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 Link named via `title` om link.
 
@@ -84,7 +95,7 @@ Link named via `title` om link.
 <a href="http://www.w3.org/WAI" title="This is a link"><img src="#"/></a>
 ```
 
-#### Passed example 6
+#### Passed Example 6
 
 Link named via `title` on image.
 
@@ -92,7 +103,7 @@ Link named via `title` on image.
 <a href="http://www.w3.org/WAI"><img src="#" title="This is a link"/></a>
 ```
 
-#### Passed example 7
+#### Passed Example 7
 
 Link with both `image` and `text`.
 
@@ -100,7 +111,7 @@ Link with both `image` and `text`.
 <a href="http://www.w3.org/WAI"><img src="#" />This is my link text</a>
 ```
 
-#### Passed example 8
+#### Passed Example 8
 
 Accessible name for link via `aria-labelledby`.
 
@@ -109,7 +120,7 @@ Accessible name for link via `aria-labelledby`.
 <div id="id1">This is my link text</div>
 ```
 
-#### Passed example 9
+#### Passed Example 9
 
 When `link` is off screen.
 
@@ -132,7 +143,7 @@ When `link` is off screen.
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Image link without accessible name.
 
@@ -140,7 +151,7 @@ Image link without accessible name.
 <a href="http://www.w3.org/WAI"><img src="#"/></a>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 Image link where image is marked as decorative.
 
@@ -148,7 +159,7 @@ Image link where image is marked as decorative.
 <a href="http://www.w3.org/WAI"><img src="#" alt=""/></a>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 Link with icon inserted via font-awesome.
 
@@ -156,7 +167,7 @@ Link with icon inserted via font-awesome.
 <a href="http://www.w3.org/WAI"><i class="fa fa-download"></i></a>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 Link with image that has empty title.
 
@@ -164,7 +175,7 @@ Link with image that has empty title.
 <a href="http://www.w3.org/WAI"><img src="#" title=""/></a>
 ```
 
-#### Failed example 5
+#### Failed Example 5
 
 Link with image that has empty `aria-labelledby`.
 
@@ -173,7 +184,7 @@ Link with image that has empty `aria-labelledby`.
 <div id="id1"></div>
 ```
 
-#### Failed example 6
+#### Failed Example 6
 
 Aria-labelledby references to a non-existing id.
 
@@ -181,37 +192,29 @@ Aria-labelledby references to a non-existing id.
 <a href="http://www.w3.org/WAI"><img src="#" aria-labelledby="id1"/></a>
 ```
 
-#### Failed example 7
+#### Failed Example 7
 
 Non-visible link.
 
 ```html
-<a href="http://www.w3.org/WAI" style="left: -9999px; position: absolute;"
-	><img src="#"
-/></a>
-```
-
-#### Failed example 8
-
-Not included in the accessibility tree.
-
-```html
-<a href="http://www.w3.org/WAI" aria-hidden="true"><img src="#"/></a>
+<a href="http://www.w3.org/WAI" style="left: -9999px; position: absolute;">
+	<img src="#" />
+</a>
 ```
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 `<a>` element that has had its role changed.
 
 ```html
-<a href="http://www.w3.org/WAI" role="button"
-	>Web Accessibility Initiative (WAI)</a
->
+<a href="http://www.w3.org/WAI" role="button">
+	Web Accessibility Initiative (WAI)
+</a>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 Not included in the accessibility tree due to `display:none`.
 
@@ -219,7 +222,7 @@ Not included in the accessibility tree due to `display:none`.
 <a href="http://www.w3.org/WAI" style="display: none;"><img src="#"/></a>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 Not included in the accessibility tree due to `visibility: hidden`.
 
@@ -227,9 +230,9 @@ Not included in the accessibility tree due to `visibility: hidden`.
 <a href="http://www.w3.org/WAI" style="visibility: hidden;">Some text</a>
 ```
 
-#### Inapplicable example 10
+#### Inapplicable Example 4
 
-Not included in the accessibility tree due to `aria-hideden="true"`.
+Not included in the accessibility tree due to `aria-hidden="true"`.
 
 ```html
 <a aria-hidden="true" href="http://www.w3.org/WAI">

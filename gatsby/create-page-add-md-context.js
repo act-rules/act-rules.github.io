@@ -20,6 +20,7 @@ const createPageAddMdContext = options => {
 							slug
 							sourceInstanceName
 							markdownType
+							fastmatterAttributes
 						}
 						frontmatter {
 							name
@@ -45,19 +46,22 @@ const createPageAddMdContext = options => {
 		edges.forEach(({ node }) => {
 			const slug = node.fields.slug
 			const markdownType = node.fields.markdownType
+			const fastmatterAttributes = node.fields.fastmatterAttributes
 			const fileName = node.fields.fileName
 			const sourceInstanceName = node.fields.sourceInstanceName
 			const frontmatterName = node.frontmatter.name
 			const frontmatterTitle = node.frontmatter.title
 			const frontmatterRuleType = node.frontmatter.rule_type
+
 			createPage({
 				path: slug,
 				component: path.resolve(getComponent(markdownType, slug)),
 				context: {
 					slug,
-					fileName: fileName,
-					sourceInstanceName: sourceInstanceName,
+					fileName,
+					sourceInstanceName,
 					markdownType,
+					fastmatterAttributes,
 					title: frontmatterName ? frontmatterName : frontmatterTitle,
 					ruleType: frontmatterRuleType,
 				},

@@ -1,11 +1,16 @@
 ---
 id: 2ee8b8
 name: label and name from content mismatch
+rule_type: atomic
 description: |
   Interactive elements labelled through their content must have their visible label as part of their accessible name
-success_criterion:
-  - 2.5.3 # Label in Name
-test_aspects:
+accessibility_requirements:
+  wcag20:2.5.3: # Label in Name
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
   - DOM Tree
   - CSS Styling
 authors:
@@ -14,9 +19,7 @@ authors:
   - Jey Nandakumar
 ---
 
-## Test procedure
-
-### Applicability
+## Applicability
 
 This rule applies to any element that has:
 
@@ -26,7 +29,7 @@ This rule applies to any element that has:
 
 **Note**: [widget roles](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent) are: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
 
-### Expectation
+## Expectation
 
 The complete [visible text content](#visible-text-content) of the target element either matches or is contained within its [accessible name](#accessible-name).
 
@@ -44,11 +47,11 @@ There are no major accessibility support issues known for this rule.
 
 - https://www.w3.org/TR/WCAG21/#label-in-name
 
-## Test cases
+## Test Cases
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 Visible label and accessible name matches when trailing white spaces are removed.
 
@@ -56,7 +59,7 @@ Visible label and accessible name matches when trailing white spaces are removed
 <div role="link" aria-label="next page ">next page</div>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 Character insensitivity between visible label and accessible name.
 
@@ -64,7 +67,7 @@ Character insensitivity between visible label and accessible name.
 <div role="link" aria-label="Next Page">next page</div>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 Full visible label is contained in the accessible name.
 
@@ -74,7 +77,7 @@ Full visible label is contained in the accessible name.
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Visible label doesn't match accessible name.
 
@@ -82,7 +85,7 @@ Visible label doesn't match accessible name.
 <div role="link" aria-label="OK">Next</div>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 Not all of visible label is included in accessible name.
 
@@ -92,7 +95,7 @@ Not all of visible label is included in accessible name.
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Not a widget role.
 
@@ -100,7 +103,7 @@ Not a widget role.
 <a aria-label="OK">Next</a>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 Widget role that does not support name from content.
 
@@ -108,7 +111,7 @@ Widget role that does not support name from content.
 <input type="email" aria-label="E-mail" value="Contact" />
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 Non-widget role that supports name from content.
 
@@ -116,7 +119,7 @@ Non-widget role that supports name from content.
 <div role="tooltip" aria-label="OK">Next</div>
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 No rendered text in name from content.
 
@@ -124,7 +127,7 @@ No rendered text in name from content.
 <div role="tooltip" aria-label="OK"></div>
 ```
 
-#### Inapplicable example 5
+#### Inapplicable Example 5
 
 Non-text content.
 

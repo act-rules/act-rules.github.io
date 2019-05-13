@@ -4,7 +4,8 @@ name: No keyboard trap standard navigation
 rule_type: atomic
 description: |
   This rule checks if it is possible to use standard keyboard navigation to navigate through all content on a web page without becoming trapped in any element.
-test_aspects:
+accessibility_requirements:
+input_aspects:
   - DOM Tree
   - CSS Styling
 authors:
@@ -17,15 +18,13 @@ authors:
   - Stein Erik Skotkjerra
 ---
 
-## Test procedure
-
-### Applicability
+## Applicability
 
 The rule applies to any HTML or SVG element that is [focusable](#focusable).
 
 **Note**: This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
 
-### Expectation
+## Expectation
 
 For each target element focus can cycle to the browser UI by using [standard keyboard navigation](#standard-keyboard-navigation).
 
@@ -36,7 +35,7 @@ For each target element focus can cycle to the browser UI by using [standard key
 - The focus order in keyboard navigation is cyclical, not linear, meaning that the focus order will cycle to the first/last element when it moves away from the last/first element.
 - The Browser UI is part of the focus navigation cycle of the page.
 
-## Accessibility support
+## Accessibility Support
 
 There are no major accessibility support issues known for this rule.
 
@@ -50,7 +49,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 No trap for keyboard navigation.
 
@@ -58,15 +57,15 @@ No trap for keyboard navigation.
 <a href="#">Link 1</a> <button class="target">Button1</button>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 Using `tabindex="1"`.
 
 ```html
-<div tabindex=“1”>Text</div>
+<div tabindex="“1”">Text</div>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 Using `tabindex="-1"`.
 
@@ -76,7 +75,7 @@ Using `tabindex="-1"`.
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Keyboard trap one element.
 
@@ -87,7 +86,7 @@ Keyboard trap one element.
 </button>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 Keyboard trap group.
 
@@ -103,7 +102,7 @@ Keyboard trap group.
 </button>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 A focusable element inbetween to keyboard traps.
 
@@ -115,7 +114,7 @@ A focusable element inbetween to keyboard traps.
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 No focusable element.
 
@@ -123,7 +122,7 @@ No focusable element.
 <h1>Page 1</h1>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 Disabled element.
 
@@ -131,7 +130,7 @@ Disabled element.
 <button type="button" disabled>Click Me!</button>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 Hidden element using `display:none`.
 
@@ -139,7 +138,7 @@ Hidden element using `display:none`.
 <button type="button" style="“display:none;”">Click Me!</button>
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 Hidden element using `visibility:hidden`.
 

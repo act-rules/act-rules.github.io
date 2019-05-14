@@ -29,8 +29,7 @@ This rule applies to any set of any two or more HTML or SVG elements that have t
 
 ## Expectation
 
-When followed, the links in each set of target elements resolve to the [same resource](#same-resource) or to [equivalent resources](#equivalent-purpose).
-Resolving the links includes potential redirects, if the redirects happen instantly.
+When followed, the links in each set of target elements resolve to the [same resource](#same-resource) or to [equivalent resources](#equivalent-purpose). Resolving the links includes potential redirects, if the redirects happen instantly.
 
 ## Assumptions
 

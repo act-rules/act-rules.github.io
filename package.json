@@ -1,8 +1,8 @@
 {
-	"name": "ACT-RULES-CG",
+	"name": "ACT-Rules-Community",
 	"description": "Accessibility conformance testing rules for HTML",
 	"version": "1.0.0",
-	"author": "WCAG ACT RULES CG",
+	"author": "ACT-Rules Community",
 	"contributors": [
 		{
 			"name": "Anne Thyme Nørregaard",

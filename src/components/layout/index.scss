@@ -19,13 +19,26 @@ section.layout-container {
     width: 225px;
     padding-left: 1rem;
     position: relative;
-    transition: all 2ms;
+    transition: all 0.25s;
+    z-index: 2;
    
     button.nav-hide-show-menu {
       position: fixed;
       left: 240px;
       z-index: 1;
       top: 5px;
+      border-radius: 50%;
+      transform: scale(0.7) translateX(-25px);
+      background-color: $accent;
+      border-color: $accent;
+      color: $fg-primary;
+      transition: all 0.25s;
+      transform-origin: center center;
+      &:hover {
+        background-color: $bg-primary;
+        border-color: $fg-primary;
+        transform: scale(1) translateX(-5px);
+      }
     }
 
     &.hide{
@@ -96,10 +109,11 @@ section.layout-container {
 
   >main {
     @include flex-column();
+    width: 100%;
     >section {
       @include flex-column();
       @include flex-scroll-container();
-      color: $fg-primary;
+      color: $black;
       line-height: 1.5;
       
 
@@ -119,7 +133,7 @@ section.layout-container {
               border: 1px solid $sep;
               padding: 0.5rem;
               display: flex;
-              flex-direction: row;
+              flex-direction: column;
               position: relative;
               background-color: $bg-primary;
 
@@ -146,30 +160,22 @@ section.layout-container {
                 background-color: $bg-primary;
               }
 
-              &:hover{
-                border: 1px solid $accent;
-                &::before{
-                  border-color: $accent;
-                }
-              }
-
               div.meta {
                 font-size: 80%;
                 span.heading {
                   padding: 0.25rem 0.5rem;
-                  border: 1px solid $sep;
-                  text-transform: uppercase;
+                  background-color: $sep;
+                  border: 1px solid $transparent;
+                  text-transform: capitalize;
+                  display: inline-block;
                   font-weight: bold;
-                  display: inline;
                 }
                 a.sc-item {
-                  background-color: $sep;
-                  border: 1px solid $bg-primary;
                   cursor: pointer;
                   text-decoration: none;
                   padding: 0.25rem 0.5rem;
-                  text-transform: uppercase;
-                  display: inline-block;
+                  text-transform: capitalize;
+                  display: block;
                   &:hover {
                     color: $accent;
                   }
@@ -191,11 +197,10 @@ section.layout-container {
               }
 
               >div.side-notes {
-                width: 200px;
-                border-left: 1px solid $sep;
                 div.meta{
                   span.heading{
                     display: inline-block;
+                    font-weight: bold;
                     background-color: $sep;
                   }
                   a.sc-item {
@@ -243,33 +248,27 @@ section.layout-container {
                 background-color: $bg-primary;
               }
 
-              &:hover{
-                border: 1px solid $accent;
-                &::before{
-                  border-color: $accent;
-                }
-              }
-              a{
-                text-decoration: none;
-              }
-              h2 {
+              h3, h4 {
                 margin: 0;
               }
+              i {
+                font-family: 'Courier New', Courier, monospace;
+              }
               >section {
-                flex: 1
+                flex: 1;
+                padding-right: 0.5rem;
               }
 
               >aside {
                 padding: 1.5rem;
-                border-left: 1px solid $sep;
-                min-width: 35%;
-
+                padding-left: 0;
+                width: 30%;
                 ul {
                   @include reset-list;
                 }
                 a {
                   display: block;
-                  text-decoration: underline;
+                  text-transform: capitalize;
                 }
               }
               
@@ -289,6 +288,37 @@ section.layout-container {
           position: relative;
           width: 100%;
           padding-bottom: 6rem;
+
+          ul.meta {
+            @include reset-list();
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $sep;
+            span.heading {
+              padding: 0.25rem 0.5rem;
+              background-color: $sep;
+              border: 1px solid $transparent;
+              text-transform: capitalize;
+              display: inline-block;
+              font-weight: bold;
+            }
+            p{
+              margin: 0;
+              display: block;
+              padding: 0.25rem 0.5rem;
+              text-transform: capitalize;
+            }
+            a.sc-item {
+              cursor: pointer;
+              text-decoration: none;
+              padding: 0.25rem 0.5rem;
+              text-transform: capitalize;
+              display: block;
+              &:hover {
+                color: $accent;
+              }
+            }
+          }
         }
 
         div.toc {
@@ -296,7 +326,7 @@ section.layout-container {
           position: fixed;
           right: 0;
           top: 0;
-          bottom: 60px;
+          bottom: 55px;
           border-left: 1px solid $bg-secondary;
           background-color: $sep;
           max-width: 200px;
@@ -304,23 +334,24 @@ section.layout-container {
           font-size: 80%;
           padding-right: 1.5rem;
           padding-bottom: 3rem;
-
+          
           span.heading {
             padding: 0.25rem 0.5rem;
             @include header-style($fg-secondary);
-            text-transform: uppercase;
+            text-transform: capitalize;
             font-size: 80%;
             background-color: $bg-secondary;
             margin: 1rem 0.5rem 0.5rem 0;
             display: inline-block;
+
+            &:first-child {
+              margin-top: 6rem;
+            }
           }
 
           ul{
             @include reset-list;
             margin: 0.5rem 0;
-            &.meta-data{
-              margin-top: 6rem;
-            }
             li {
               span, a {
                 display: inline-block;
@@ -359,7 +390,24 @@ section.layout-container {
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
 and (min-width : 320px) 
-and (max-width : 480px) {
+and (max-width : 575px) {
+  section.layout-container {
+    >main {
+      .page-container {
+        margin: 1.5rem 0 !important;
+        padding: 0 3rem !important;
+      }
+      .page-rule {
+        padding-right: 3rem !important;
+        div.toc {
+          display: none;
+        }
+      }
+      .app-footer {
+        display: none;
+      }
+    }
+  }
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -379,12 +427,20 @@ and (max-width : 1024px) {
           .listing {
             > article {
               flex-direction: column;
+              > aside {
+                width: 100% !important;
+              }
             }
           }
         }
       }
       .page-rule {
-        padding-right: 0;
+        padding-right: 4rem !important;
+        section {
+          ul.meta {
+            flex-direction: column;
+          }
+        }
         div.toc {
           display: none;
         }
@@ -395,10 +451,10 @@ and (max-width : 1024px) {
 
 /* Desktops and laptops ----------- */
 @media only screen 
-and (min-width : 1224px) {
+and (min-width : 1200px) {
 }
 
 /* Large screens ----------- */
 @media only screen 
-and (min-width : 1824px) {
+and (min-width : 1600px) {
 }

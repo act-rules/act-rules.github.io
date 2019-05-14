@@ -5,7 +5,6 @@ import SEO from '../components/seo'
 import showdown from 'showdown'
 import {
 	getAccessibilityRequirements,
-	getAuthors,
 	getInputRulesForRule,
 } from './../utils/render-fragments'
 
@@ -26,12 +25,12 @@ export default ({ data }) => {
 			<SEO title={updatedTitle} keywords={site.siteMetadata.keywords} />
 			<section className="page-container page-rules">
 				{/* Heading */}
-				<h1>Rules ({toListRules.length})</h1>
+				<h1>Rules</h1>
 				{/* Table of rules */}
 				<section className="rules-listing">
 					{toListRules.map(({ node }) => {
 						const { frontmatter, id, fields } = node
-						const { name, description, authors, input_rules } = frontmatter
+						const { name, description, input_rules } = frontmatter
 						const { slug, fastmatterAttributes } = fields
 						const { accessibility_requirements } = JSON.parse(
 							fastmatterAttributes
@@ -54,8 +53,6 @@ export default ({ data }) => {
 								</section>
 								{/* atomic rules */}
 								{getInputRulesForRule(input_rules, allRules.edges, true)}
-								{/* authors */}
-								{getAuthors(authors)}
 							</article>
 						)
 					})}
@@ -81,7 +78,6 @@ export const query = graphql`
 						description
 						rule_type
 						input_rules
-						authors
 					}
 					fields {
 						markdownType

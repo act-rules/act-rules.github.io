@@ -7,14 +7,14 @@ import glossaryUsages from './../../_data/glossary-usages.json'
 
 export default ({ data }) => {
 	const { glossaryData, site } = data
-	const { edges, totalCount } = glossaryData
+	const { edges } = glossaryData
 	const updatedTitle = `Glossary | ${site.siteMetadata.title}`
 
 	return (
 		<Layout>
 			<SEO title={updatedTitle} keywords={site.siteMetadata.keywords} />
 			<section className="page-container page-glossary">
-				<h1>Glossary ({totalCount})</h1>
+				<h1>Glossary</h1>
 				<section className="listing">
 					{edges.map(({ node }) => {
 						const { frontmatter, html } = node
@@ -24,7 +24,7 @@ export default ({ data }) => {
 							<article key={node.id}>
 								<section>
 									<a id={key} href={`#${key}`}>
-										<h2>{frontmatter.title}</h2>
+										<h3>{frontmatter.title}</h3>
 									</a>
 									<i>key: {key}</i>
 									<div dangerouslySetInnerHTML={{ __html: html }} />
@@ -45,7 +45,6 @@ export const query = graphql`
 			sort: { fields: [frontmatter___title], order: ASC }
 			filter: { fields: { markdownType: { eq: "glossary" } } }
 		) {
-			totalCount
 			edges {
 				node {
 					id

@@ -2,15 +2,17 @@
 title: How to Contribute
 ---
 
-WCAG-ACT-RULES-CG is a [W3C](https://www.w3.org/) [Community Group](https://www.w3.org/community/) open to anyone interested in accessibility testing, manually or automated.
+ACT-Rules Community is a [W3C](https://www.w3.org/) [Community Group](https://www.w3.org/community/) open to anyone interested in accessibility testing, manually or automated.
 
 We welcome contributions from everyone, and there are many ways to contribute, from Github issues and pull requests, to contribution to our monthly teleconferences.
 
 You don't have to be a member of the Community Group to contribute.
 
-If you want to get even more out of your involvement in our rule creation project, you can officially join the WCAG-ACT-RULES-CG to get on the mailing list and participate in monthly teleconferences.
+If you want to get even more out of your involvement in our rule creation project, you can officially join the ACT-Rules Community to get on the mailing list and participate in monthly teleconferences.
 
-<button name="button" onclick="#join-the-Community-Group">Learn more about how to join WCAG-ACT-RULES-CG</button>
+<a class="btn" href="#join-the-community-group">
+  Learn more about how to join ACT-Rules Community
+ </a>
 
 ## Overview of how you can contribute
 
@@ -100,13 +102,13 @@ If you have a ready rule draft, you can submit it as a [pull request]({{site.dat
 
 Before contributing a new rule, we recommend you check its validity with several experienced accessibility auditors first. This helps you identify potential stumbling blocks early in the rule design.
 
-If you want to use the experts in the WCAG-ACT-RULES-CG for this, submit your rule suggestion as an Issue (see [Submit an idea for discussion](#) (TBD)).
+If you want to use the experts in the ACT-Rules Community for this, submit your rule suggestion as an Issue (see [Submit an idea for discussion](#) (TBD)).
 
 [Learn more about the process for submitting rules as pull requests](#) (TBD)
 
 ## Join the Community Group
 
-The best way to stay informed about the activities of WCAG-ACT-RULES-CG is to become a member.
+The best way to stay informed about the activities of ACT-Rules Community is to become a member.
 
 ### Mailing list keeps you up to date
 
@@ -122,7 +124,7 @@ The invitation and agenda for these meetings is sent out through the mailing lis
 
 ### How to join the Community Group
 
-1. To join WCAG-ACT-RULES-CG, you need a W3C Account. If you don’t already have one, [get a W3C account here](https://www.w3.org/accounts/request).
+1. To join ACT-Rules Community, you need a W3C Account. If you don’t already have one, [get a W3C account here](https://www.w3.org/accounts/request).
 2. Go to [Join the community group now!](https://www.w3.org/community/wp-login.php?redirect_to=%2Fcommunity%2Fauto-wcag%2Fjoin) and join the group.
 3. If you work for a W3C Member organization, you will need to request approval. This request will be sent to your organization’s representative in the W3C’s Advisory Committee.
 

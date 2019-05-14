@@ -10,9 +10,7 @@ export function getAccessibilityRequirements(accessibility_requirements) {
 				<span role="heading" aria-level="1" className="heading">
 					accessibility Requirements
 				</span>
-				<p>
-					This rule is not required for conformance to WCAG at any level.
-				</p>
+				<p>This rule is not required for conformance to WCAG at any level.</p>
 			</div>
 		)
 	}
@@ -31,7 +29,7 @@ export function getAccessibilityRequirements(accessibility_requirements) {
 	return (
 		<div className="meta">
 			<span role="heading" aria-level="1" className="heading">
-				accessibility Requirements
+				Accessibility Requirements
 			</span>
 			{requirements.map(sc => {
 				const scData = scUrls[sc]
@@ -105,8 +103,8 @@ export function getInputRulesForRule(
 					Atomic Rules
 				</span>
 				{inputRules.map(inputRuleId => {
-					const atomicRule = allRules.find(rule =>
-						rule.node.frontmatter.id === inputRuleId
+					const atomicRule = allRules.find(
+						rule => rule.node.frontmatter.id === inputRuleId
 					)
 					const aHref = stripBasePath
 						? atomicRule.node.fields.slug.replace('rules/', '')
@@ -129,7 +127,7 @@ export function getGlossaryUsageInRules(usages) {
 	}
 	return (
 		<aside>
-			<h3>Used In Rules:</h3>
+			<h4>Used In Rules:</h4>
 			<ul>
 				{usages.map(usage => (
 					<li>

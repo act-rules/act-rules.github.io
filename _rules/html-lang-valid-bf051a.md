@@ -45,7 +45,7 @@ While HTML5 specification indicates that `xml:lang` attribute takes priority ove
 
 ## Test Cases
 
-## Passed
+### Passed
 
 #### Passed Example 1
 
@@ -87,7 +87,7 @@ The `xml:lang` attribute specified has a non-empty value & a valid primary langu
 <html lang="" xml:lang="nl"></html>
 ```
 
-## Failed
+### Failed
 
 #### Failed Example 1
 
@@ -121,7 +121,7 @@ The `lang` attribute value has a valid primary language subtag, but a syntactica
 <html lang="en-US-GB"></html>
 ```
 
-## Inapplicable
+### Inapplicable
 
 #### Inapplicable Example 1
 

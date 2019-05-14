@@ -29,6 +29,10 @@ The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-langu
 
 This rule assumes that the presence of a lang or xml:lang attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
 
+## Accessibility Support
+
+_There are no major accessibility support issues known for this rule._
+
 ## Background
 
 - [https://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H58](https://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H58)

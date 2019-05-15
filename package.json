@@ -149,5 +149,11 @@
 			"alfa": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/alfa-report.json",
 			"axe": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/axe-report.json"
 		}
-	}
+	},
+	"jest": {
+		"verbose": true,
+		"testPathIgnorePatterns": [
+			"<rootDir>/test/utils/"
+		]
+  }
 }

@@ -5,13 +5,13 @@ description: |
   This rule checks ...
 
 success_criterion:
-- x.x.x # (Name of Success Criterion)
+  - x.x.x # (Name of Success Criterion)
 
 atomic_rules:
-- 
+  -
 
 authors:
-- # (full names as found in /_data/contributors.yml@master - if not yet listed, please have authors added to the list)
+  -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
 ---
 
 ## Aggregation Definition
@@ -23,21 +23,21 @@ The rule applies to any (??) element ...
 ### Expectation
 
 For each test target, the outcome of (at least one of / all of / any of etc.) the following rules is (passed / failed / etc.):
+
 - (list atomic rules that are used in this composite rule)
-- 
+-
 
 ## Assumptions
 
-*There are currently no assumptions.*
+_There are currently no assumptions._
 
 ## Accessibility support
 
-*There are no major accessibility support issues known for this rule.*
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 
 - - (e.g. WCAG Techniques or links with background information mentioned in Applicability, Expectations or Assumptions)
-
 
 ## Test Cases
 

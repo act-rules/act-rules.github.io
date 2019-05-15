@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 503,
+  "count": 537,
   "testcases": [
     {
       "testcaseId": "55f3ed0ec0f324514a0d223b737bc1e4c81593c7",
@@ -478,6 +478,30 @@
       "rulePage": "https://act-rules.github.io/rules/73f2c2"
     },
     {
+      "testcaseId": "94982760f469e40a9d788244b2791ad7752cf348",
+      "url": "https://act-rules.github.io/testcases/73f2c2/94982760f469e40a9d788244b2791ad7752cf348.html",
+      "expected": "passed",
+      "ruleId": "73f2c2",
+      "ruleName": "Autocomplete valid",
+      "rulePage": "https://act-rules.github.io/rules/73f2c2"
+    },
+    {
+      "testcaseId": "b9e85545b1a57fbdab00e07314ceca614a434497",
+      "url": "https://act-rules.github.io/testcases/73f2c2/b9e85545b1a57fbdab00e07314ceca614a434497.html",
+      "expected": "passed",
+      "ruleId": "73f2c2",
+      "ruleName": "Autocomplete valid",
+      "rulePage": "https://act-rules.github.io/rules/73f2c2"
+    },
+    {
+      "testcaseId": "a62b8eaaeb15dcdceacf65574d182d99e0a07790",
+      "url": "https://act-rules.github.io/testcases/73f2c2/a62b8eaaeb15dcdceacf65574d182d99e0a07790.html",
+      "expected": "passed",
+      "ruleId": "73f2c2",
+      "ruleName": "Autocomplete valid",
+      "rulePage": "https://act-rules.github.io/rules/73f2c2"
+    },
+    {
       "testcaseId": "804d52f203dc470d99d779acbe26425bada58df9",
       "url": "https://act-rules.github.io/testcases/73f2c2/804d52f203dc470d99d779acbe26425bada58df9.html",
       "expected": "failed",
@@ -512,6 +536,14 @@
     {
       "testcaseId": "e22feb53b7d69b29e7e8f2a466d8fcd3124eade6",
       "url": "https://act-rules.github.io/testcases/73f2c2/e22feb53b7d69b29e7e8f2a466d8fcd3124eade6.html",
+      "expected": "failed",
+      "ruleId": "73f2c2",
+      "ruleName": "Autocomplete valid",
+      "rulePage": "https://act-rules.github.io/rules/73f2c2"
+    },
+    {
+      "testcaseId": "151c29fabfa2e44b127a32088b3fcb8695652936",
+      "url": "https://act-rules.github.io/testcases/73f2c2/151c29fabfa2e44b127a32088b3fcb8695652936.html",
       "expected": "failed",
       "ruleId": "73f2c2",
       "ruleName": "Autocomplete valid",
@@ -590,6 +622,14 @@
       "rulePage": "https://act-rules.github.io/rules/73f2c2"
     },
     {
+      "testcaseId": "41f8224419b9e2b0ab04c41305c7803a839d9b47",
+      "url": "https://act-rules.github.io/testcases/73f2c2/41f8224419b9e2b0ab04c41305c7803a839d9b47.html",
+      "expected": "inapplicable",
+      "ruleId": "73f2c2",
+      "ruleName": "Autocomplete valid",
+      "rulePage": "https://act-rules.github.io/rules/73f2c2"
+    },
+    {
       "testcaseId": "3f1791e11d02c11f950a13172fc1c03d9e84f7cf",
       "url": "https://act-rules.github.io/testcases/97a4e1/3f1791e11d02c11f950a13172fc1c03d9e84f7cf.html",
       "expected": "passed",
@@ -646,6 +686,14 @@
       "rulePage": "https://act-rules.github.io/rules/97a4e1"
     },
     {
+      "testcaseId": "3378832ac24e2a6460efededb922a1355a1ccfba",
+      "url": "https://act-rules.github.io/testcases/97a4e1/3378832ac24e2a6460efededb922a1355a1ccfba.html",
+      "expected": "passed",
+      "ruleId": "97a4e1",
+      "ruleName": "Buttons have an accessible name",
+      "rulePage": "https://act-rules.github.io/rules/97a4e1"
+    },
+    {
       "testcaseId": "a6c40a95f261ac27993f8205d91f7f4540f91f23",
       "url": "https://act-rules.github.io/testcases/97a4e1/a6c40a95f261ac27993f8205d91f7f4540f91f23.html",
       "expected": "failed",
@@ -664,6 +712,14 @@
     {
       "testcaseId": "9cd3d7152dbd99cc60b83939ffb3003ab1a3d7de",
       "url": "https://act-rules.github.io/testcases/97a4e1/9cd3d7152dbd99cc60b83939ffb3003ab1a3d7de.html",
+      "expected": "failed",
+      "ruleId": "97a4e1",
+      "ruleName": "Buttons have an accessible name",
+      "rulePage": "https://act-rules.github.io/rules/97a4e1"
+    },
+    {
+      "testcaseId": "6aeac528cde6c3953cda4aadaad073af85509e13",
+      "url": "https://act-rules.github.io/testcases/97a4e1/6aeac528cde6c3953cda4aadaad073af85509e13.html",
       "expected": "failed",
       "ruleId": "97a4e1",
       "ruleName": "Buttons have an accessible name",
@@ -902,6 +958,14 @@
       "rulePage": "https://act-rules.github.io/rules/e086e5"
     },
     {
+      "testcaseId": "e2aedb9840cf56aa4ed4c2cea8e90f7df9370327",
+      "url": "https://act-rules.github.io/testcases/e086e5/e2aedb9840cf56aa4ed4c2cea8e90f7df9370327.html",
+      "expected": "passed",
+      "ruleId": "e086e5",
+      "ruleName": "Form field has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/e086e5"
+    },
+    {
       "testcaseId": "c722b7b589a463b954d3d34824c6fc32588d0a79",
       "url": "https://act-rules.github.io/testcases/e086e5/c722b7b589a463b954d3d34824c6fc32588d0a79.html",
       "expected": "failed",
@@ -944,6 +1008,14 @@
     {
       "testcaseId": "934b30a38e189d724737ca32902a7d2da45b72f4",
       "url": "https://act-rules.github.io/testcases/e086e5/934b30a38e189d724737ca32902a7d2da45b72f4.html",
+      "expected": "failed",
+      "ruleId": "e086e5",
+      "ruleName": "Form field has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/e086e5"
+    },
+    {
+      "testcaseId": "9376b0535906a5790507d2f21aaff63658433db2",
+      "url": "https://act-rules.github.io/testcases/e086e5/9376b0535906a5790507d2f21aaff63658433db2.html",
       "expected": "failed",
       "ruleId": "e086e5",
       "ruleName": "Form field has accessible name",
@@ -1240,6 +1312,30 @@
     {
       "testcaseId": "481f5bacb412fa5d941f592b722d0e64db6237f2",
       "url": "https://act-rules.github.io/testcases/b5c3f8/481f5bacb412fa5d941f592b722d0e64db6237f2.html",
+      "expected": "passed",
+      "ruleId": "b5c3f8",
+      "ruleName": "HTML has lang attribute",
+      "rulePage": "https://act-rules.github.io/rules/b5c3f8"
+    },
+    {
+      "testcaseId": "ef11985ede45827ed3f9c1c52ce944a183cf0a31",
+      "url": "https://act-rules.github.io/testcases/b5c3f8/ef11985ede45827ed3f9c1c52ce944a183cf0a31.html",
+      "expected": "passed",
+      "ruleId": "b5c3f8",
+      "ruleName": "HTML has lang attribute",
+      "rulePage": "https://act-rules.github.io/rules/b5c3f8"
+    },
+    {
+      "testcaseId": "1c73bd3cb590378a031bb2242e5e2049e675b985",
+      "url": "https://act-rules.github.io/testcases/b5c3f8/1c73bd3cb590378a031bb2242e5e2049e675b985.html",
+      "expected": "passed",
+      "ruleId": "b5c3f8",
+      "ruleName": "HTML has lang attribute",
+      "rulePage": "https://act-rules.github.io/rules/b5c3f8"
+    },
+    {
+      "testcaseId": "7a2f86aded45e5e84753b4fdda502987d7a12387",
+      "url": "https://act-rules.github.io/testcases/b5c3f8/7a2f86aded45e5e84753b4fdda502987d7a12387.html",
       "expected": "passed",
       "ruleId": "b5c3f8",
       "ruleName": "HTML has lang attribute",
@@ -1734,6 +1830,22 @@
       "rulePage": "https://act-rules.github.io/rules/59796f"
     },
     {
+      "testcaseId": "4d797a9fddf365ae209130e381de006becda625e",
+      "url": "https://act-rules.github.io/testcases/59796f/4d797a9fddf365ae209130e381de006becda625e.html",
+      "expected": "passed",
+      "ruleId": "59796f",
+      "ruleName": "Image button has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/59796f"
+    },
+    {
+      "testcaseId": "d3344a3aaf532b7ec1347568509f96cadd8d873d",
+      "url": "https://act-rules.github.io/testcases/59796f/d3344a3aaf532b7ec1347568509f96cadd8d873d.html",
+      "expected": "passed",
+      "ruleId": "59796f",
+      "ruleName": "Image button has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/59796f"
+    },
+    {
       "testcaseId": "b4cf33cf32e6fbe05149de31fe2ab3480f7f2319",
       "url": "https://act-rules.github.io/testcases/59796f/b4cf33cf32e6fbe05149de31fe2ab3480f7f2319.html",
       "expected": "failed",
@@ -1752,6 +1864,14 @@
     {
       "testcaseId": "ba6e135ea5b6b57b49e024d3bbb5fcfa57a54fc5",
       "url": "https://act-rules.github.io/testcases/59796f/ba6e135ea5b6b57b49e024d3bbb5fcfa57a54fc5.html",
+      "expected": "failed",
+      "ruleId": "59796f",
+      "ruleName": "Image button has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/59796f"
+    },
+    {
+      "testcaseId": "d40c0add6e960291598091cc969d69efc29038a1",
+      "url": "https://act-rules.github.io/testcases/59796f/d40c0add6e960291598091cc969d69efc29038a1.html",
       "expected": "failed",
       "ruleId": "59796f",
       "ruleName": "Image button has accessible name",
@@ -1846,6 +1966,14 @@
       "rulePage": "https://act-rules.github.io/rules/23a2a8"
     },
     {
+      "testcaseId": "b7bc54b68b5f861c84def83b2cc8cde510072cfb",
+      "url": "https://act-rules.github.io/testcases/23a2a8/b7bc54b68b5f861c84def83b2cc8cde510072cfb.html",
+      "expected": "passed",
+      "ruleId": "23a2a8",
+      "ruleName": "Image has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/23a2a8"
+    },
+    {
       "testcaseId": "17be28658e16098158295ff4525a96b7d555b216",
       "url": "https://act-rules.github.io/testcases/23a2a8/17be28658e16098158295ff4525a96b7d555b216.html",
       "expected": "failed",
@@ -1864,6 +1992,14 @@
     {
       "testcaseId": "6450b8d331930deb30196ae89b6ebb14a30dfe63",
       "url": "https://act-rules.github.io/testcases/23a2a8/6450b8d331930deb30196ae89b6ebb14a30dfe63.html",
+      "expected": "failed",
+      "ruleId": "23a2a8",
+      "ruleName": "Image has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/23a2a8"
+    },
+    {
+      "testcaseId": "72698e313a0f61c5855364724d761d4fd0273fc8",
+      "url": "https://act-rules.github.io/testcases/23a2a8/72698e313a0f61c5855364724d761d4fd0273fc8.html",
       "expected": "failed",
       "ruleId": "23a2a8",
       "ruleName": "Image has accessible name",
@@ -1966,8 +2102,24 @@
       "rulePage": "https://act-rules.github.io/rules/c487ae"
     },
     {
-      "testcaseId": "9ca176b078d50ed93eb51b1158672dd44189ad02",
-      "url": "https://act-rules.github.io/testcases/c487ae/9ca176b078d50ed93eb51b1158672dd44189ad02.html",
+      "testcaseId": "bc75640eac3298e9f76dc81b1be82b40c7973e79",
+      "url": "https://act-rules.github.io/testcases/c487ae/bc75640eac3298e9f76dc81b1be82b40c7973e79.html",
+      "expected": "passed",
+      "ruleId": "c487ae",
+      "ruleName": "Links have an accessible name",
+      "rulePage": "https://act-rules.github.io/rules/c487ae"
+    },
+    {
+      "testcaseId": "0095a8a629d220f36a6762c03eb9a6506ccc4b23",
+      "url": "https://act-rules.github.io/testcases/c487ae/0095a8a629d220f36a6762c03eb9a6506ccc4b23.html",
+      "expected": "passed",
+      "ruleId": "c487ae",
+      "ruleName": "Links have an accessible name",
+      "rulePage": "https://act-rules.github.io/rules/c487ae"
+    },
+    {
+      "testcaseId": "8bb73f82482912a3c75386069b0e24e64b9f0602",
+      "url": "https://act-rules.github.io/testcases/c487ae/8bb73f82482912a3c75386069b0e24e64b9f0602.html",
       "expected": "passed",
       "ruleId": "c487ae",
       "ruleName": "Links have an accessible name",
@@ -2030,6 +2182,30 @@
       "rulePage": "https://act-rules.github.io/rules/c487ae"
     },
     {
+      "testcaseId": "9ba871f146c5ec702a66ea812ffa8b776030c363",
+      "url": "https://act-rules.github.io/testcases/c487ae/9ba871f146c5ec702a66ea812ffa8b776030c363.html",
+      "expected": "failed",
+      "ruleId": "c487ae",
+      "ruleName": "Links have an accessible name",
+      "rulePage": "https://act-rules.github.io/rules/c487ae"
+    },
+    {
+      "testcaseId": "c940fa099e21663d4fe1a7aae8be98016dd44e9b",
+      "url": "https://act-rules.github.io/testcases/c487ae/c940fa099e21663d4fe1a7aae8be98016dd44e9b.html",
+      "expected": "failed",
+      "ruleId": "c487ae",
+      "ruleName": "Links have an accessible name",
+      "rulePage": "https://act-rules.github.io/rules/c487ae"
+    },
+    {
+      "testcaseId": "909670314cba06b98ca6d9f764ebc6cf11055da4",
+      "url": "https://act-rules.github.io/testcases/c487ae/909670314cba06b98ca6d9f764ebc6cf11055da4.html",
+      "expected": "failed",
+      "ruleId": "c487ae",
+      "ruleName": "Links have an accessible name",
+      "rulePage": "https://act-rules.github.io/rules/c487ae"
+    },
+    {
       "testcaseId": "b6158ffdfa9691d1d0d66020c3b68d99ed107f5b",
       "url": "https://act-rules.github.io/testcases/c487ae/b6158ffdfa9691d1d0d66020c3b68d99ed107f5b.html",
       "expected": "inapplicable",
@@ -2056,6 +2232,14 @@
     {
       "testcaseId": "e236e380884824c869a8164f8c6ca055dc42a6eb",
       "url": "https://act-rules.github.io/testcases/c487ae/e236e380884824c869a8164f8c6ca055dc42a6eb.html",
+      "expected": "inapplicable",
+      "ruleId": "c487ae",
+      "ruleName": "Links have an accessible name",
+      "rulePage": "https://act-rules.github.io/rules/c487ae"
+    },
+    {
+      "testcaseId": "9ceed0ee0c1af175aa31f3b5692f14044a7b7216",
+      "url": "https://act-rules.github.io/testcases/c487ae/9ceed0ee0c1af175aa31f3b5692f14044a7b7216.html",
       "expected": "inapplicable",
       "ruleId": "c487ae",
       "ruleName": "Links have an accessible name",
@@ -2486,8 +2670,24 @@
       "rulePage": "https://act-rules.github.io/rules/674b10"
     },
     {
-      "testcaseId": "f1ae4f65f766d7af422de6a766545e79d30bdf00",
-      "url": "https://act-rules.github.io/testcases/674b10/f1ae4f65f766d7af422de6a766545e79d30bdf00.html",
+      "testcaseId": "046ea23344ada3a40cc1aac9aea5b105f3b209d7",
+      "url": "https://act-rules.github.io/testcases/674b10/046ea23344ada3a40cc1aac9aea5b105f3b209d7.html",
+      "expected": "failed",
+      "ruleId": "674b10",
+      "ruleName": "Role attribute has valid value",
+      "rulePage": "https://act-rules.github.io/rules/674b10"
+    },
+    {
+      "testcaseId": "ebb33c96347505fc4853cf4e6bbaa41eef2b977a",
+      "url": "https://act-rules.github.io/testcases/674b10/ebb33c96347505fc4853cf4e6bbaa41eef2b977a.html",
+      "expected": "failed",
+      "ruleId": "674b10",
+      "ruleName": "Role attribute has valid value",
+      "rulePage": "https://act-rules.github.io/rules/674b10"
+    },
+    {
+      "testcaseId": "646d5984f81cdde305305651f73686afdce45eff",
+      "url": "https://act-rules.github.io/testcases/674b10/646d5984f81cdde305305651f73686afdce45eff.html",
       "expected": "inapplicable",
       "ruleId": "674b10",
       "ruleName": "Role attribute has valid value",
@@ -2646,6 +2846,14 @@
       "rulePage": "https://act-rules.github.io/rules/de46e4"
     },
     {
+      "testcaseId": "3060e5a5ad5526d7581f310aab7244fbc1b67aa2",
+      "url": "https://act-rules.github.io/testcases/de46e4/3060e5a5ad5526d7581f310aab7244fbc1b67aa2.html",
+      "expected": "passed",
+      "ruleId": "de46e4",
+      "ruleName": "Valid body lang attribute",
+      "rulePage": "https://act-rules.github.io/rules/de46e4"
+    },
+    {
       "testcaseId": "f6f18d19b38152624efc680fc7d8e977e3adef9c",
       "url": "https://act-rules.github.io/testcases/de46e4/f6f18d19b38152624efc680fc7d8e977e3adef9c.html",
       "expected": "failed",
@@ -2664,6 +2872,30 @@
     {
       "testcaseId": "1d545cad6c6f2daae5cd97b10227a103ca871e17",
       "url": "https://act-rules.github.io/testcases/de46e4/1d545cad6c6f2daae5cd97b10227a103ca871e17.html",
+      "expected": "failed",
+      "ruleId": "de46e4",
+      "ruleName": "Valid body lang attribute",
+      "rulePage": "https://act-rules.github.io/rules/de46e4"
+    },
+    {
+      "testcaseId": "77a7913b99d4699b6c02d8556958baecd02d2f1a",
+      "url": "https://act-rules.github.io/testcases/de46e4/77a7913b99d4699b6c02d8556958baecd02d2f1a.html",
+      "expected": "failed",
+      "ruleId": "de46e4",
+      "ruleName": "Valid body lang attribute",
+      "rulePage": "https://act-rules.github.io/rules/de46e4"
+    },
+    {
+      "testcaseId": "934c6b46115c3c7113862a126c8f908f4f54fc82",
+      "url": "https://act-rules.github.io/testcases/de46e4/934c6b46115c3c7113862a126c8f908f4f54fc82.html",
+      "expected": "failed",
+      "ruleId": "de46e4",
+      "ruleName": "Valid body lang attribute",
+      "rulePage": "https://act-rules.github.io/rules/de46e4"
+    },
+    {
+      "testcaseId": "2b084e65b311b9ae0d099f2ba0f5c2e93a0d255f",
+      "url": "https://act-rules.github.io/testcases/de46e4/2b084e65b311b9ae0d099f2ba0f5c2e93a0d255f.html",
       "expected": "failed",
       "ruleId": "de46e4",
       "ruleName": "Valid body lang attribute",
@@ -2760,6 +2992,30 @@
     {
       "testcaseId": "90ac9c3118483559f1979bf7b4e57a46e3a63eaf",
       "url": "https://act-rules.github.io/testcases/bf051a/90ac9c3118483559f1979bf7b4e57a46e3a63eaf.html",
+      "expected": "failed",
+      "ruleId": "bf051a",
+      "ruleName": "Validity of HTML Lang attribute",
+      "rulePage": "https://act-rules.github.io/rules/bf051a"
+    },
+    {
+      "testcaseId": "c3dbda9659c700cc744bbec676605c5710d24fd0",
+      "url": "https://act-rules.github.io/testcases/bf051a/c3dbda9659c700cc744bbec676605c5710d24fd0.html",
+      "expected": "failed",
+      "ruleId": "bf051a",
+      "ruleName": "Validity of HTML Lang attribute",
+      "rulePage": "https://act-rules.github.io/rules/bf051a"
+    },
+    {
+      "testcaseId": "c3e03f9d40448ef02570fd4bb119bdd71051c95a",
+      "url": "https://act-rules.github.io/testcases/bf051a/c3e03f9d40448ef02570fd4bb119bdd71051c95a.html",
+      "expected": "failed",
+      "ruleId": "bf051a",
+      "ruleName": "Validity of HTML Lang attribute",
+      "rulePage": "https://act-rules.github.io/rules/bf051a"
+    },
+    {
+      "testcaseId": "8d622253843159dc039de629f12b129c5c892533",
+      "url": "https://act-rules.github.io/testcases/bf051a/8d622253843159dc039de629f12b129c5c892533.html",
       "expected": "failed",
       "ruleId": "bf051a",
       "ruleName": "Validity of HTML Lang attribute",
@@ -3390,6 +3646,14 @@
       "rulePage": "https://act-rules.github.io/rules/cae760"
     },
     {
+      "testcaseId": "e98a304275b9e736a84751744606781c97215871",
+      "url": "https://act-rules.github.io/testcases/cae760/e98a304275b9e736a84751744606781c97215871.html",
+      "expected": "passed",
+      "ruleId": "cae760",
+      "ruleName": "iframe has an accessible name",
+      "rulePage": "https://act-rules.github.io/rules/cae760"
+    },
+    {
       "testcaseId": "431df8a928e4bdb1312aa712b37f32d2f5aed932",
       "url": "https://act-rules.github.io/testcases/cae760/431df8a928e4bdb1312aa712b37f32d2f5aed932.html",
       "expected": "failed",
@@ -3432,6 +3696,14 @@
     {
       "testcaseId": "2fe9c48c7d392d621c857638c9b4f7b0b0138587",
       "url": "https://act-rules.github.io/testcases/cae760/2fe9c48c7d392d621c857638c9b4f7b0b0138587.html",
+      "expected": "failed",
+      "ruleId": "cae760",
+      "ruleName": "iframe has an accessible name",
+      "rulePage": "https://act-rules.github.io/rules/cae760"
+    },
+    {
+      "testcaseId": "90e796da8534abf8f69479384d7a386116670378",
+      "url": "https://act-rules.github.io/testcases/cae760/90e796da8534abf8f69479384d7a386116670378.html",
       "expected": "failed",
       "ruleId": "cae760",
       "ruleName": "iframe has an accessible name",

@@ -29,7 +29,7 @@ This rule applies to any element that is [included in the accessibility tree](#i
 
 ## Expectation
 
-Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty).
+Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
 
 ## Assumptions
 
@@ -97,6 +97,17 @@ Explicit role.
 <div aria-label="country" role="combobox" aria-disabled="true">England</div>
 ```
 
+#### Passed example 6
+
+The accessible name is not only whitespace.
+
+```html
+<label>
+  :-)
+  <input/>
+</label>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -109,7 +120,7 @@ No accessible name.
 
 #### Failed Example 2
 
-Non-focusable still need an accessible name.
+Non-focusable element still needs an accessible name.
 
 ```html
 <input tabindex="-1" />
@@ -125,7 +136,7 @@ Non-focusable still need an accessible name.
 
 #### Failed Example 4
 
-Label does not exist.
+The label does not exist.
 
 ```html
 <div aria-labelledby="non-existing" role="combobox">England</div>
@@ -133,7 +144,7 @@ Label does not exist.
 
 #### Failed Example 5
 
-Implicit label not supported on div elements.
+The implicit label is not supported on `div` elements.
 
 ```html
 <label>
@@ -144,14 +155,22 @@ Implicit label not supported on div elements.
 
 #### Failed Example 6
 
-Explicit label not supported on div elements.
+The explicit label is not supported on `div` elements.
 
 ```html
 <label for="lastname">first name</label>
 <div role="textbox" id="lastname"></div>
 ```
 
-### Inapplicable
+#### Failed example 7
+
+The accessible name is not only whitespace.
+
+```html
+<label> <input/></label>
+```
+
+### Inapplicable 
 
 #### Inapplicable Example 1
 
@@ -171,7 +190,7 @@ Hidden to assistive technologies.
 
 #### Inapplicable Example 3
 
-Explicitly set the role to something that isn't a form field.
+Role has explicitely been set to something that isn't a form field.
 
 ```html
 <input role="presentation" />

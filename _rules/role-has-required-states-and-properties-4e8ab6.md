@@ -24,7 +24,7 @@ Any HTML or SVG element that has an [explicit semantic role](#semantic-role), ex
 
 For each test target, the [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) for the role are present, unless the state or property has a default value listed under [WAI-ARIA implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole).
 
-**Note:** This rule does not test whether the required states and properties have correct values, only that the attributes are present and [non-empty](#non-empty).
+**Note:** This rule does not test whether the required states and properties have correct values, only that the attributes are present and are not empty ("").
 
 ## Assumptions
 
@@ -108,7 +108,7 @@ Element does not list required states and properties (´aria-controls´ is requi
 
 #### Failed Example 2
 
-Required states and properties does not have non-empty value
+Required states and properties do not have a value that is not empty ("")
 
 ```html
 <div role="combobox" aria-controls=""></div>

@@ -19,19 +19,19 @@ description: |
 
 accessibility_requirements:
   wcag20:x.x.x: # (Name of Success Criterion)
-    forConformance: true
+    forConformance: true | false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
 
-  aria11:some-id: # <Some heading in WAI-ARIA>
-    forConformance: true
+  aria11:x.x.x: # <Heading in WAI-ARIA>
+    forConformance: true | false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
 
-  wcag-technique:H123: # <Technique title>
-    forConformance: false
+  wcag-technique:x.x.x: # <Technique title>
+    forConformance: true | false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
@@ -132,19 +132,19 @@ description: |
 
 accessibility_requirements:
   wcag20:x.x.x: # (Name of Success Criterion)
-    forConformance: true
+    forConformance: true | false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
 
-  aria11:some-id: # <Some heading in WAI-ARIA>
-    forConformance: true
+  aria11:x.x.x: # <Heading in WAI-ARIA>
+    forConformance: true | false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
 
-  wcag-technique:H123: # <Technique title>
-    forConformance: false
+  wcag-technique:x.x.x: # <Technique title>
+    forConformance: true | false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed

@@ -19,7 +19,7 @@ authors:
 
 ## Applicability
 
-The root element of the page, if it is an `html` element with both [non-empty](#non-empty) `lang` and `xml:lang` attributes that has a [valid language subtag](#valid-language-subtag).
+The root element of the page, if it is an `html` element with both `lang` and `xml:lang` attributes that has a [valid language subtag](#valid-language-subtag).
 
 ## Expectation
 

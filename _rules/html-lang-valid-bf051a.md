@@ -19,7 +19,7 @@ authors:
 
 ## Applicability
 
-The root element of the page, if it is an `html` element with a [non-empty](#non-empty) `lang` and/or `xml:lang` attribute.
+The root element of the page, if it is an `html` element with a `lang` and/or `xml:lang` attribute that is not empty ("").
 
 ## Expectation
 
@@ -121,6 +121,30 @@ The `lang` attribute value has a valid primary language subtag, but a syntactica
 <html lang="en-US-GB"></html>
 ```
 
+#### Failed example 1
+
+The `lang` attribute value is not a valid primary language subtag.
+
+```html
+<html lang="123">
+```
+
+#### Failed example 1
+
+The `lang` attribute value is not a valid primary language subtag.
+
+```html
+<html lang="#!">
+```
+
+#### Failed example 1
+
+The `lang` attribute value is not a valid primary language subtag.
+
+```html
+<html lang=" ">
+```
+
 ## Inapplicable
 
 #### Inapplicable Example 1
@@ -141,7 +165,7 @@ The rule applies to `html` element and hence usage of `xml:lang` attribute in `s
 
 #### Inapplicable Example 3
 
-An empty value for `lang` attribute is ignored by this rule, as the applicability specifies only non-empty values.
+An empty value for `lang` attribute is ignored by this rule, as the applicability specifies only values that are not empty ("").
 
 ```html
 <html lang=""></html>
@@ -149,7 +173,7 @@ An empty value for `lang` attribute is ignored by this rule, as the applicabilit
 
 #### Inapplicable Example 4
 
-An empty value for `xml:lang` attribute is ignored by this rule, as the applicability specifies only non-empty values.
+An empty value for `xml:lang` attribute is ignored by this rule, as the applicability specifies only values that are not empty ("").
 
 ```html
 <html xml:lang=""></html>

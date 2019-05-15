@@ -1,0 +1,72 @@
+---
+id: 
+name: 
+rule_type: atomic
+
+description: |
+   
+
+accessibility_requirements: 
+  wcag20:2.4.9: # Link Purpose (Link Only) (AAA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+
+input_aspects:
+- DOM Tree
+- CSS Styling
+
+authors:
+- 
+---
+
+## Applicability
+
+This rule applies to 
+
+## Expectation
+
+
+## Assumptions
+
+
+## Accessibility support
+
+There are no major accessibility support issues known for this rule.
+
+## Background
+
+- 
+
+## Test Cases
+
+### Passed
+
+#### Passed Example 1
+
+
+```html
+
+```
+
+
+
+### Failed
+
+#### Failed Example 1
+
+
+```html
+
+```
+
+### Inapplicable 
+
+#### Inapplicable Example 1
+
+
+```html
+
+```
+

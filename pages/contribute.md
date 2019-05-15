@@ -12,7 +12,7 @@ If you want to get even more out of your involvement in our rule creation projec
 
 <a class="btn" href="#join-the-community-group">
   Learn more about how to join ACT-Rules Community
- </a>
+</a>
 
 ## Overview of how you can contribute
 
@@ -116,7 +116,7 @@ By becoming a member you will be added to the mailing list, and you will receive
 
 ### Participate in our monthly calls
 
-The Community Group has conference calls every month. It is (usually) on the second Thursday of the month at 16:00 to 17:30 Central European Time. [See the meeting time in your own timezone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=WCAG-ACT-RULES-CG+meeting&iso=20180920T16&p1=259&ah=1&am=30).
+The Community Group has conference calls every month. It is (usually) on the second Thursday of the month at 16:00 to 17:30 Central European Time. [See the meeting time in your own timezone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=ACT-R+call&iso=20190411T16&p1=16&ah=1&am=00).
 
 Participating in our conference calls is the easiest way to become an active contributor, get to know the other members of the Community Group, and learn from the shared pool of knowledge held by the accessibility experts in the group.
 
@@ -125,7 +125,10 @@ The invitation and agenda for these meetings is sent out through the mailing lis
 ### How to join the Community Group
 
 1. To join ACT-Rules Community, you need a W3C Account. If you don’t already have one, [get a W3C account here](https://www.w3.org/accounts/request).
-2. Go to [Join the community group now!](https://www.w3.org/community/wp-login.php?redirect_to=%2Fcommunity%2Fauto-wcag%2Fjoin) and join the group.
+2. Go to [Join the community group now!](https://www.w3.org/community/wp-login.php?redirect_to=%2Fcommunity%2Fact-r%2Fjoin) and join the group.
 3. If you work for a W3C Member organization, you will need to request approval. This request will be sent to your organization’s representative in the W3C’s Advisory Committee.
 
-<button name="button" onclick="https://www.w3.org/community/wp-login.php?redirect_to=%2Fcommunity%2Fauto-wcag%2Fjoin">Join the Community Group</button>
+
+<a class="btn" href="https://www.w3.org/community/wp-login.php?redirect_to=%2Fcommunity%2Fact-r%2Fjoin">
+  Join the Community Group
+</a>

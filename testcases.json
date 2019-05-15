@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 537,
+  "count": 558,
   "testcases": [
     {
       "testcaseId": "55f3ed0ec0f324514a0d223b737bc1e4c81593c7",
@@ -2244,6 +2244,174 @@
       "ruleId": "c487ae",
       "ruleName": "Links have an accessible name",
       "rulePage": "https://act-rules.github.io/rules/c487ae"
+    },
+    {
+      "testcaseId": "d81c4609dcdbf8aef9f23690af8d0754fd5487b7",
+      "url": "https://act-rules.github.io/testcases/b20e66/d81c4609dcdbf8aef9f23690af8d0754fd5487b7.html",
+      "expected": "passed",
+      "ruleId": "b20e66",
+      "ruleName": "Links with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/b20e66"
+    },
+    {
+      "testcaseId": "57122bcddcfa4d74b487acd9d79cfe36a4463e34",
+      "url": "https://act-rules.github.io/testcases/b20e66/57122bcddcfa4d74b487acd9d79cfe36a4463e34.html",
+      "expected": "passed",
+      "ruleId": "b20e66",
+      "ruleName": "Links with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/b20e66"
+    },
+    {
+      "testcaseId": "37b89bbdbd5299394f38264486f12c00e90b246a",
+      "url": "https://act-rules.github.io/testcases/b20e66/37b89bbdbd5299394f38264486f12c00e90b246a.html",
+      "expected": "passed",
+      "ruleId": "b20e66",
+      "ruleName": "Links with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/b20e66"
+    },
+    {
+      "testcaseId": "d72bc964be6eaadaf769d37bf3df88b631cb971b",
+      "url": "https://act-rules.github.io/testcases/b20e66/d72bc964be6eaadaf769d37bf3df88b631cb971b.html",
+      "expected": "passed",
+      "ruleId": "b20e66",
+      "ruleName": "Links with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/b20e66"
+    },
+    {
+      "testcaseId": "ee2b638d803b131259d9a261f153037081cb6004",
+      "url": "https://act-rules.github.io/testcases/b20e66/ee2b638d803b131259d9a261f153037081cb6004.html",
+      "expected": "passed",
+      "ruleId": "b20e66",
+      "ruleName": "Links with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/b20e66"
+    },
+    {
+      "testcaseId": "83b5d2ce830e263a4d7f0e3c30fb8c0aad1f05b8",
+      "url": "https://act-rules.github.io/testcases/b20e66/83b5d2ce830e263a4d7f0e3c30fb8c0aad1f05b8.html",
+      "expected": "passed",
+      "ruleId": "b20e66",
+      "ruleName": "Links with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/b20e66"
+    },
+    {
+      "testcaseId": "9d70924ba95b96e29cd7e0099f1ec85345f23d6e",
+      "url": "https://act-rules.github.io/testcases/b20e66/9d70924ba95b96e29cd7e0099f1ec85345f23d6e.html",
+      "expected": "passed",
+      "ruleId": "b20e66",
+      "ruleName": "Links with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/b20e66"
+    },
+    {
+      "testcaseId": "f127e38e1b66d7d4036e92e453fee92851c69efb",
+      "url": "https://act-rules.github.io/testcases/b20e66/f127e38e1b66d7d4036e92e453fee92851c69efb.html",
+      "expected": "passed",
+      "ruleId": "b20e66",
+      "ruleName": "Links with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/b20e66"
+    },
+    {
+      "testcaseId": "62b7f8eeaa318f472246a082d83f6bb8d4c4c8c4",
+      "url": "https://act-rules.github.io/testcases/b20e66/62b7f8eeaa318f472246a082d83f6bb8d4c4c8c4.html",
+      "expected": "passed",
+      "ruleId": "b20e66",
+      "ruleName": "Links with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/b20e66"
+    },
+    {
+      "testcaseId": "04242e019a65e4420fb05c550fee61e463f751ba",
+      "url": "https://act-rules.github.io/testcases/b20e66/04242e019a65e4420fb05c550fee61e463f751ba.html",
+      "expected": "failed",
+      "ruleId": "b20e66",
+      "ruleName": "Links with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/b20e66"
+    },
+    {
+      "testcaseId": "859c5b2056e191ce74443eba6058fb0847469b1f",
+      "url": "https://act-rules.github.io/testcases/b20e66/859c5b2056e191ce74443eba6058fb0847469b1f.html",
+      "expected": "failed",
+      "ruleId": "b20e66",
+      "ruleName": "Links with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/b20e66"
+    },
+    {
+      "testcaseId": "4bf035103957e3f87729fe9a8f30865e43a4bf41",
+      "url": "https://act-rules.github.io/testcases/b20e66/4bf035103957e3f87729fe9a8f30865e43a4bf41.html",
+      "expected": "failed",
+      "ruleId": "b20e66",
+      "ruleName": "Links with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/b20e66"
+    },
+    {
+      "testcaseId": "fa632eb8f3e4d430a9e530106d183081046fec0a",
+      "url": "https://act-rules.github.io/testcases/b20e66/fa632eb8f3e4d430a9e530106d183081046fec0a.html",
+      "expected": "failed",
+      "ruleId": "b20e66",
+      "ruleName": "Links with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/b20e66"
+    },
+    {
+      "testcaseId": "274832366f700c429c82308e4e1dedc9f7b719ee",
+      "url": "https://act-rules.github.io/testcases/b20e66/274832366f700c429c82308e4e1dedc9f7b719ee.html",
+      "expected": "failed",
+      "ruleId": "b20e66",
+      "ruleName": "Links with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/b20e66"
+    },
+    {
+      "testcaseId": "e1df5ee45c1df61d7c23dae298614bda0b5c2c2b",
+      "url": "https://act-rules.github.io/testcases/b20e66/e1df5ee45c1df61d7c23dae298614bda0b5c2c2b.html",
+      "expected": "failed",
+      "ruleId": "b20e66",
+      "ruleName": "Links with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/b20e66"
+    },
+    {
+      "testcaseId": "f8458a3ecaee2c670548ade945c41927f7792499",
+      "url": "https://act-rules.github.io/testcases/b20e66/f8458a3ecaee2c670548ade945c41927f7792499.html",
+      "expected": "inapplicable",
+      "ruleId": "b20e66",
+      "ruleName": "Links with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/b20e66"
+    },
+    {
+      "testcaseId": "d70463e8e3fb919fdfc81dc1ebb393b0aa47f9be",
+      "url": "https://act-rules.github.io/testcases/b20e66/d70463e8e3fb919fdfc81dc1ebb393b0aa47f9be.html",
+      "expected": "inapplicable",
+      "ruleId": "b20e66",
+      "ruleName": "Links with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/b20e66"
+    },
+    {
+      "testcaseId": "e7cbcc8dc5efcde52ae755ef35a0529c88641a8e",
+      "url": "https://act-rules.github.io/testcases/b20e66/e7cbcc8dc5efcde52ae755ef35a0529c88641a8e.html",
+      "expected": "inapplicable",
+      "ruleId": "b20e66",
+      "ruleName": "Links with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/b20e66"
+    },
+    {
+      "testcaseId": "883330e4797c76852ca13aec22af0773fff9feb6",
+      "url": "https://act-rules.github.io/testcases/b20e66/883330e4797c76852ca13aec22af0773fff9feb6.html",
+      "expected": "inapplicable",
+      "ruleId": "b20e66",
+      "ruleName": "Links with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/b20e66"
+    },
+    {
+      "testcaseId": "15fbb29a4858dc8920073f8d48305c042144d6f7",
+      "url": "https://act-rules.github.io/testcases/b20e66/15fbb29a4858dc8920073f8d48305c042144d6f7.html",
+      "expected": "inapplicable",
+      "ruleId": "b20e66",
+      "ruleName": "Links with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/b20e66"
+    },
+    {
+      "testcaseId": "1cbab0608cacf3eae621d203cd35dcb133006921",
+      "url": "https://act-rules.github.io/testcases/b20e66/1cbab0608cacf3eae621d203cd35dcb133006921.html",
+      "expected": "inapplicable",
+      "ruleId": "b20e66",
+      "ruleName": "Links with identical accessible names serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/b20e66"
     },
     {
       "testcaseId": "a53b440be238663a432475e253e037e4d039b78c",

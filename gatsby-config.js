@@ -1,9 +1,8 @@
 const pkg = require('./package.json')
-const siteTitle = pkg.name.split('-').join(' ')
 
 module.exports = {
 	siteMetadata: {
-		title: siteTitle,
+		title: pkg.author,
 		description: pkg.description,
 		author: pkg.author,
 		keywords: pkg.keywords,

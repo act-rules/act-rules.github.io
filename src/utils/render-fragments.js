@@ -126,8 +126,8 @@ export function getGlossaryUsageInRules(usages) {
 		return null
 	}
 	return (
-		<aside>
-			<h4>Used In Rules:</h4>
+		<div className='used-rules'>
+			<h3>Used In Rules:</h3>
 			<ul>
 				{usages.map(usage => (
 					<li>
@@ -137,6 +137,6 @@ export function getGlossaryUsageInRules(usages) {
 					</li>
 				))}
 			</ul>
-		</aside>
+		</div>
 	)
 }

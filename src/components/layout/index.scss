@@ -248,7 +248,7 @@ section.layout-container {
                 background-color: $bg-primary;
               }
 
-              h3, h4 {
+              h2, h3 {
                 margin: 0;
               }
               i {
@@ -259,7 +259,7 @@ section.layout-container {
                 padding-right: 0.5rem;
               }
 
-              >aside {
+              >div.used-rules {
                 padding: 1.5rem;
                 padding-left: 0;
                 width: 30%;

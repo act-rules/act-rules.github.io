@@ -24,7 +24,7 @@ export default ({ data }) => {
 							<article key={node.id}>
 								<section>
 									<a id={key} href={`#${key}`}>
-										<h3>{frontmatter.title}</h3>
+										<h2>{frontmatter.title}</h2>
 									</a>
 									<i>key: {key}</i>
 									<div dangerouslySetInnerHTML={{ __html: html }} />

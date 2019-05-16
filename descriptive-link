@@ -28,11 +28,11 @@ The rule applies to any HTML element with the [semantic role](#semantic-role) of
 
 ## Expectation 1
 
-Link text together with its [context](#context), if visible, should describe the purpose of the link
+Link text together with its [context](#context), if visible, describes the purpose of the link
 
 ## Expectation 2
 
-Accessible name together with its [context](#context) should describe the purpose of the link
+Accessible name together with its [context](#context) describes the purpose of the link
 
 ## Assumptions
 

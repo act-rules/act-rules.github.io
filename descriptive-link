@@ -1,35 +1,42 @@
 ---
 id: 
-name: 
+name: Link text is descriptive
 rule_type: atomic
 
-description: |
-   
+description: | 
+ This rule checks that all links describe their purpose
 
 accessibility_requirements: 
-  wcag20:2.4.9: # Link Purpose (Link Only) (AAA)
+  wcag20:2.4.4: # Link Purpose (In Context) 
     forConformance: true
     failed: not satisfied
-    passed: further testing needed
+    passed: satisfied
     inapplicable: further testing needed
 
 input_aspects:
 - DOM Tree
-- CSS Styling
 
 authors:
-- 
+- Carlos Duarte
+- Marie Trudelle 
+- Ramit Garg
 ---
 
 ## Applicability
 
-This rule applies to 
+The rule applies to any HTML element with the [semantic role](#semantic-role) of `link` that has an [accessible-name](#accessible-name) that is [non-empty](#non-empty).
 
-## Expectation
+## Expectation 1
 
+Link text together with its [context](#context), if visible, should describe the purpose of the link
+
+## Expectation 2
+
+Accessible name together with its [context](#context) should describe the purpose of the link
 
 ## Assumptions
 
+- The rule assumes that all links are [user interface components](https://www.w3.org/TR/WCAG20/#user-interface-componentdef) as defined by WCAG 2.
 
 ## Accessibility support
 
@@ -37,7 +44,9 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- 
+- [2.4.4 Link Purpose (In Context)](http://www.w3.org/TR/2008/REC-WCAG20-20081211/#navigation-mechanisms-refs)
+- [G91: Providing link text that describes the purpose of a link](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G91)
+- [G53: Identifying the purpose of a link using link text combined with the text of the enclosing sentence](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G53)
 
 ## Test Cases
 
@@ -47,6 +56,7 @@ There are no major accessibility support issues known for this rule.
 
 
 ```html
+
 
 ```
 

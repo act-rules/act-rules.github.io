@@ -75,8 +75,40 @@ There are no major accessibility support issues known for this rule.
 
 #### Inapplicable Example 1
 
+`<a>` with its role changed from link to another role
 
 ```html
-
+<a href="http://www.w3.org/WAI" role="button">Web Accessibility Initiative (WAI)</a>
 ```
 
+#### Inapplicable Example 2
+
+Link without accessible name
+
+```html
+<a href="http://www.w3.org/WAI" style="display: none;"><img src="#" /></a>
+```
+
+#### Inapplicable Example 3
+
+Link with empty accessible name
+
+```html
+<a href="http://www.w3.org/WAI"><img src="#" alt="" /></a>
+```
+
+#### Inapplicable Example 4
+
+Link with empty accessible name
+
+```html
+<a href="http://www.w3.org/WAI"><img src="#" title=""/></a>
+```
+
+#### Inapplicable Example 4
+
+Link with empty accessible name
+
+```html
+<a href="http://www.w3.org/WAI"><img src="#" aria-labelledby="id1" /></a>
+```

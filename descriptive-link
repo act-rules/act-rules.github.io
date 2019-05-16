@@ -57,7 +57,7 @@ There are no major accessibility support issues known for this rule.
 Link text describes the purpose of the link
 
 ```html
-<a href="#desc">Click to see the description of this product</a> 
+<a href="#desc">See the description of this product</a> 
 ```
 
 #### Passed Example 2
@@ -65,7 +65,7 @@ Link text describes the purpose of the link
 Accessible name describes the purpose of the link
 
 ```html
-<a href="#main" aria-label="Click to go to the main content of the page"></a>
+<a href="#main" aria-label="Go to the main content of the page"></a>
 ```
 
 #### Passed Example 3
@@ -81,7 +81,7 @@ Link text together with its context describes the purpose of the link
 Both link text together with its context and accessible name describe the purpose of the link
 
 ```html
-<a href="#" aria-label="Click me to order item">Click me</a><span aria-hidden="true"> to place item in shopping cart</span>
+<a href="#" aria-label="Order item">Place item</a><span aria-hidden="true"> in shopping cart</span>
 ```
 
 ### Failed
@@ -91,7 +91,7 @@ Both link text together with its context and accessible name describe the purpos
 Link text does not describe the purpose of the link
 
 ```html
-<a href="#desc">Click</a>
+<a href="#desc">More</a>
 ```
 
 #### Failed Example 2
@@ -115,7 +115,7 @@ Accessible name does not describe the purpose of the link
 
 #### Inapplicable Example 2
 
-Link without accessible name
+Link that is not visible and does not have an accessible name
 
 ```html
 <a href="http://www.w3.org/WAI" style="display: none;"><img src="#" /></a>

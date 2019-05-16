@@ -84,6 +84,23 @@ Both link text together with its context and accessible name describe the purpos
 <a href="#" aria-label="Order item">Place item</a><span aria-hidden="true"> in shopping cart</span>
 ```
 
+#### Passed Example 5
+
+Accessible name describes the purpose of the link
+
+```html
+<div role="link" aria-label="Skip to main content"></div>
+```
+
+#### Passed Example 6
+
+Link text describes the purpose of the link
+
+```html
+<span role="link">See description of the project</span>
+```
+
+
 ### Failed
 
 #### Failed Example 1
@@ -100,6 +117,23 @@ Accessible name does not describe the purpose of the link
 
 ```html
 <a href="#main" aria-label="Go"></a>
+```
+
+#### Failed Example 3
+
+Link text does not describe the purpose of the link
+
+```html
+<div role="link">More</div>
+```
+
+#### Failed Example 4
+
+Accessible name does not describe the purpose of the link
+
+```html
+<div role="link" aria-labelledby="id1"></div>
+<div id="id1">Go</div>
 ```
 
 

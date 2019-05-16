@@ -88,10 +88,20 @@ Both link text together with its context and accessible name describe the purpos
 
 #### Failed Example 1
 
+Link text does not describe the purpose of the link
 
 ```html
-
+<a href="#desc">Click</a>
 ```
+
+#### Failed Example 2
+
+Accessible name does not describe the purpose of the link
+
+```html
+<a href="#main" aria-label="Go"></a>
+```
+
 
 ### Inapplicable 
 

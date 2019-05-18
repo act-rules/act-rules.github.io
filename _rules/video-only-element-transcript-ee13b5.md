@@ -40,7 +40,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Test Cases
 
-## Passed
+### Passed
 
 #### Pass Example 1
 
@@ -68,7 +68,7 @@ A silent video element with a link to a text transcript on a different page.
 <a href="/test-assets/rabbit-video-transcript.html">Transcript</p>
 ```
 
-## Failed
+### Failed
 
 #### Fail Example 1
 
@@ -124,7 +124,7 @@ He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
-## Inapplicable
+### Inapplicable
 
 #### Inapplicable Example 1
 

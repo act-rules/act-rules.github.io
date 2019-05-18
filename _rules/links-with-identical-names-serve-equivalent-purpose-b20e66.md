@@ -2,21 +2,17 @@
 id: b20e66
 name: Links with identical accessible names serve equivalent purpose
 rule_type: atomic
-
 description: |
   This rule checks that links with identical accessible names resolve to the same resource or equivalent resources.
-
 accessibility_requirements: 
   wcag20:2.4.9: # Link Purpose (Link Only) (AAA)
     forConformance: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-
 input_aspects:
 - DOM Tree
 - CSS Styling
-
 authors:
 - Anne Thyme Nørregaard
 ---
@@ -35,7 +31,7 @@ When followed, the links in each set of target elements resolve to the [same res
 
 This rule assumes that the purpose of the links with identical accessible names would not be ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.9 Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html). If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links out of context, e.g. on a list of links in a screen reader, which makes it more of a general user experience concern than an accessibility issue.
 
-## Accessibility support
+## Accessibility Support
 
 There are no major accessibility support issues known for this rule.
 

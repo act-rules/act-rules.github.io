@@ -1,6 +1,6 @@
 const describeRule = require('./utils/describe-rule')
 
-describeRule('filename', (ruleData) => {
+describeRule('filename', ruleData => {
   const { filename, frontmatter } = ruleData
   const { id } = frontmatter
 

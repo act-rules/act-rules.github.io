@@ -16,7 +16,7 @@ class Layout extends React.Component {
 		}
 	}
 
-	handleHideShowMenu(e) {
+	handleHideShowMenu() {
 		this.setState(prevState => ({
 			showMenu: !prevState.showMenu,
 		}))
@@ -106,8 +106,8 @@ class Layout extends React.Component {
 						<section className="layout-container">
 							<aside className={this.state.showMenu ? 'show' : 'hide'}>
 								<button
-									className="nav-hide-show-menu btn-secondary"
-									onClick={e => this.handleHideShowMenu(e)}
+									className="nav-hide-show-menu"
+									onClick={e => this.handleHideShowMenu()}
 								>
 									☰
 								</button>

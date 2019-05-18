@@ -12,7 +12,7 @@ For more information, see [ACT Overview - What is ACT](https://www.w3.org/WAI/GL
 
 ## Write rules, not tools
 
-An ACT rule is a unambiguous description of what the results of accessibility test tools and methodologies be when running a  conformance test for the [Web Content Accessibility Guidelines][WCAG21]. The rules are written without a specific implementation in mind. The goal is not to create an accessibility test tool. Instead we aim to harmonize between existing tools, and improve their transparency and the overall quality of their results.
+An ACT rule is a unambiguous description of what the results of accessibility test tools and methodologies be when running a conformance test for the [Web Content Accessibility Guidelines][wcag21]. The rules are written without a specific implementation in mind. The goal is not to create an accessibility test tool. Instead we aim to harmonize between existing tools, and improve their transparency and the overall quality of their results.
 
 If you want to know more about us, visit our website at: [www.w3.org/community/act-r][act-r].
 
@@ -28,6 +28,5 @@ Auto-WCAG has conference calls every 4 weeks. If you are interested in becoming 
 
 **[Join the ACT-Rules community group now!](https://www.w3.org/community/wp-login.php?redirect_to=%2Fcommunity%2Fact-r%2Fjoin)** or visit [w3.org/community/act-r/][act-r] for more information.
 
-
-[WCAG21]: https://www.w3.org/TR/WCAG21/
+[wcag21]: https://www.w3.org/TR/WCAG21/
 [act-r]: https://www.w3.org/community/act-r/

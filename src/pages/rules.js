@@ -4,14 +4,18 @@ import Layout from '../components/layout/'
 import SEO from '../components/seo'
 import showdown from 'showdown'
 import {
-	getSuccessCriterion,
-	getAuthors,
-	getAtomicRulesForRule,
+	getAccessibilityRequirements,
+	getInputRulesForRule,
 } from './../utils/render-fragments'
 
 export default ({ data }) => {
 	const { rules, allRules, site } = data
-	const { edges, totalCount } = rules
+	const toListRules = rules.edges.filter(({ node }) => {
+		const { fields } = node
+		const { fastmatterAttributes } = fields
+		const { accessibility_requirements } = JSON.parse(fastmatterAttributes)
+		return !!accessibility_requirements
+	})
 
 	const updatedTitle = `Rules | ${site.siteMetadata.title}`
 	const converter = new showdown.Converter()
@@ -21,19 +25,16 @@ export default ({ data }) => {
 			<SEO title={updatedTitle} keywords={site.siteMetadata.keywords} />
 			<section className="page-container page-rules">
 				{/* Heading */}
-				<h1>Rules ({totalCount})</h1>
+				<h1>Rules</h1>
 				{/* Table of rules */}
 				<section className="rules-listing">
-					{edges.map(({ node }) => {
+					{toListRules.map(({ node }) => {
 						const { frontmatter, id, fields } = node
-						const {
-							name,
-							description,
-							success_criterion,
-							authors,
-							atomic_rules,
-						} = frontmatter
-						const { slug } = fields
+						const { name, description, input_rules } = frontmatter
+						const { slug, fastmatterAttributes } = fields
+						const { accessibility_requirements } = JSON.parse(
+							fastmatterAttributes
+						)
 						return (
 							<article key={id}>
 								<section>
@@ -42,7 +43,7 @@ export default ({ data }) => {
 										<h2>{name}</h2>
 									</a>
 									{/* rule sc's */}
-									{getSuccessCriterion(success_criterion)}
+									{getAccessibilityRequirements(accessibility_requirements)}
 									{/* rule description */}
 									<div
 										dangerouslySetInnerHTML={{
@@ -51,9 +52,7 @@ export default ({ data }) => {
 									/>
 								</section>
 								{/* atomic rules */}
-								{getAtomicRulesForRule(atomic_rules, allRules.edges)}
-								{/* authors */}
-								{getAuthors(authors)}
+								{getInputRulesForRule(input_rules, allRules.edges, true)}
 							</article>
 						)
 					})}
@@ -67,25 +66,22 @@ export const query = graphql`
 	query {
 		rules: allMarkdownRemark(
 			sort: { fields: [frontmatter___name], order: ASC }
-			filter: {
-				fields: { markdownType: { eq: "rules" } }
-				frontmatter: { success_criterion: { ne: null } }
-			}
+			filter: { fields: { markdownType: { eq: "rules" } } }
 		) {
 			totalCount
 			edges {
 				node {
+					fileAbsolutePath
 					id
 					frontmatter {
 						name
 						description
-						success_criterion
 						rule_type
-						atomic_rules
-						authors
+						input_rules
 					}
 					fields {
 						markdownType
+						fastmatterAttributes
 						slug
 					}
 				}
@@ -103,6 +99,10 @@ export const query = graphql`
 						}
 						markdownType
 						slug
+					}
+					frontmatter {
+						id
+						name
 					}
 				}
 			}

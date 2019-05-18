@@ -16,10 +16,10 @@ class Layout extends React.Component {
 		}
 	}
 
-	handleHideShowMenu(e) {
+	handleHideShowMenu() {
 		this.setState(prevState => ({
-			showMenu: !prevState.showMenu
-		}));
+			showMenu: !prevState.showMenu,
+		}))
 	}
 
 	getListItemFromEdges(edges) {
@@ -55,11 +55,7 @@ class Layout extends React.Component {
 						}
 						getTopLevelNavigation: allSitePage(
 							sort: { fields: [context___title], order: ASC }
-							filter: {
-								context: {
-									markdownType: { eq: "default" }
-								}
-							}
+							filter: { context: { markdownType: { eq: "default" } } }
 						) {
 							group(field: context___markdownType) {
 								fieldValue
@@ -79,7 +75,9 @@ class Layout extends React.Component {
 						getNonRulesNavigation: allSitePage(
 							sort: { fields: [context___title], order: ASC }
 							filter: {
-								context: { markdownType: { nin: ["default", "rules", "glossary"] } }
+								context: {
+									markdownType: { nin: ["default", "rules", "glossary"] }
+								}
 							}
 						) {
 							group(field: context___markdownType) {
@@ -106,10 +104,11 @@ class Layout extends React.Component {
 					} = data
 					return (
 						<section className="layout-container">
-							<aside
-								className={(this.state.showMenu ? 'show' : 'hide')}>
-								<button className='nav-hide-show-menu btn-secondary'
-									onClick={e => this.handleHideShowMenu(e)}>
+							<aside className={this.state.showMenu ? 'show' : 'hide'}>
+								<button
+									className="nav-hide-show-menu"
+									onClick={e => this.handleHideShowMenu()}
+								>
 									☰
 								</button>
 								<div className="logo">
@@ -158,14 +157,10 @@ class Layout extends React.Component {
 								</nav>
 							</aside>
 							<main>
-								<section>
-									{children}
-								</section>
-								<Footer>
-								</Footer>
+								<section>{children}</section>
+								<Footer />
 							</main>
-
-						</section >
+						</section>
 					)
 				}}
 			/>

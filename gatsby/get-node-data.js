@@ -1,5 +1,5 @@
 const fs = require('fs')
-const fm = require('fastmatter')
+const fastmatter = require('fastmatter')
 const { createFilePath } = require('gatsby-source-filesystem')
 
 /**
@@ -11,19 +11,19 @@ const getNodeData = options => {
 	const { node, getNode } = options
 	const fileNode = getNode(node.parent)
 	const { sourceInstanceName, relativePath, absolutePath } = fileNode
+	const fileContents = fs.readFileSync(absolutePath, { encoding: 'utf-8' })
+	const { attributes } = fastmatter(fileContents)
 
 	const defaults = {
 		sourceInstanceName: sourceInstanceName,
 		markdownType: getMarkdownType(relativePath, sourceInstanceName),
 		fileName: relativePath,
+		fastmatterAttributes: JSON.stringify(attributes),
 	}
 
 	switch (sourceInstanceName) {
 		case 'rules':
-			const fileContents = fs.readFileSync(absolutePath, { encoding: 'utf-8' })
-			const { attributes } = fm(fileContents)
 			const { id } = attributes
-			console.log(id);
 			return {
 				...defaults,
 				path: `${sourceInstanceName}/${id}`,

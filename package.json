@@ -1,8 +1,8 @@
 {
-	"name": "ACT-RULES-CG",
+	"name": "act-rules-community",
 	"description": "Accessibility conformance testing rules for HTML",
 	"version": "1.0.0",
-	"author": "WCAG ACT RULES CG",
+	"author": "ACT-Rules Community",
 	"contributors": [
 		{
 			"name": "Anne Thyme Nørregaard",
@@ -23,6 +23,10 @@
 		{
 			"name": "Carlos Duarte",
 			"url": "https://github.com/carlosapaduarte"
+		},
+		{
+			"name": "Corbb O'Connor",
+			"url": "https://github.com/corbb"
 		},
 		{
 			"name": "Dagfinn Rømen",
@@ -68,34 +72,37 @@
 	"dependencies": {
 		"axios": "^0.18.0",
 		"fastmatter": "^2.1.1",
-		"gatsby": "^2.3.24",
-		"gatsby-image": "^2.0.39",
-		"gatsby-plugin-manifest": "^2.0.29",
-		"gatsby-plugin-offline": "^2.0.24",
+		"gatsby": "^2.4.2",
+		"gatsby-image": "^2.0.41",
+		"gatsby-plugin-manifest": "^2.1.1",
+		"gatsby-plugin-offline": "^2.1.0",
 		"gatsby-plugin-prefetch-google-fonts": "^1.4.2",
 		"gatsby-plugin-react-helmet": "^3.0.12",
 		"gatsby-plugin-sass": "^2.0.10",
-		"gatsby-plugin-sharp": "^2.0.35",
+		"gatsby-plugin-sharp": "^2.0.36",
 		"gatsby-remark-autolink-headers": "^2.0.15",
-		"gatsby-remark-prismjs": "^3.2.8",
-		"gatsby-source-filesystem": "^2.0.29",
-		"gatsby-transformer-remark": "^2.3.8",
-		"gatsby-transformer-sharp": "^2.1.18",
+		"gatsby-remark-prismjs": "^3.2.9",
+		"gatsby-source-filesystem": "^2.0.33",
+		"gatsby-transformer-remark": "^2.3.12",
+		"gatsby-transformer-sharp": "^2.1.19",
 		"gfm-code-blocks": "^1.0.0",
-		"jsonld": "^1.5.4",
+		"jsonld": "^1.6.0",
 		"make-dir": "^2.1.0",
 		"ncp": "^2.0.0",
-		"node-sass": "^4.11.0",
+		"node-sass": "^4.12.0",
 		"normalize.css": "^8.0.1",
 		"object-hash": "^1.3.1",
 		"prismjs": "^1.16.0",
 		"prop-types": "^15.7.2",
 		"react": "^16.8.6",
 		"react-dom": "^16.8.6",
-		"react-helmet": "^5.2.0",
+		"react-helmet": "^5.2.1",
 		"showdown": "^1.9.0"
 	},
 	"devDependencies": {
+		"globby": "^9.2.0",
+		"jest": "^24.8.0",
+		"marked": "^0.6.2",
 		"prettier": "^1.17.0"
 	},
 	"keywords": [
@@ -106,13 +113,15 @@
 	],
 	"license": "MIT",
 	"scripts": {
+		"clean": "rm -rf .cache public",
 		"prebuild": "npm run get-data",
 		"build": "gatsby build",
 		"develop": "npm run get-data && gatsby develop",
 		"format": "prettier --write *.{json,md,js,jsx} './{_data,_rules,build,gatsby,pages,src,test-assets}/**/*.{json,md,js,jsx}'",
-		"start": "npm run develop",
+		"start": "npm run clean && npm run develop",
 		"serve": "gatsby serve",
-		"test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+		"test": "npm run test:rules",
+		"test:rules": "jest",
 		"get-implementations": "node ./build/get-implementations",
 		"get-wcag-sc-metadata": "node ./build/get-wcag-sc-metadata",
 		"get-data": "npm run get-wcag-sc-metadata && npm run get-implementations"
@@ -140,5 +149,11 @@
 			"alfa": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/alfa-report.json",
 			"axe": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/axe-report.json"
 		}
+	},
+	"jest": {
+		"verbose": true,
+		"testPathIgnorePatterns": [
+			"<rootDir>/test/utils/"
+		]
 	}
 }

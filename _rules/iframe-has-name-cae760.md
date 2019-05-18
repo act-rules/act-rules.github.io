@@ -88,8 +88,7 @@ Usage of `aria-labelledby` attribute to describe the `iframe` content.
 Accessible name is not only whitespace.
 
 ```html
-<iframe title=":-)" src="../test-assets/SC4-1-2-frame-doc.html">
-</iframe>
+<iframe title=":-)" src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
 ### Failed
@@ -153,8 +152,7 @@ Usage of `alt` attribute to describe content is not valid.
 Accessible name is not only whitespace.
 
 ```html
-<iframe title=" " src="../test-assets/SC4-1-2-frame-doc.html">
-</iframe>
+<iframe title=" " src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
 ### Inapplicable

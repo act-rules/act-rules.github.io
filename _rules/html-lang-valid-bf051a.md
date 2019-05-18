@@ -126,7 +126,7 @@ The `lang` attribute value has a valid primary language subtag, but a syntactica
 The `lang` attribute value is not a valid primary language subtag.
 
 ```html
-<html lang="123">
+<html lang="123"></html>
 ```
 
 #### Failed Example 6
@@ -134,7 +134,7 @@ The `lang` attribute value is not a valid primary language subtag.
 The `lang` attribute value is not a valid primary language subtag.
 
 ```html
-<html lang="#!">
+<html lang="#!"></html>
 ```
 
 #### Failed Example 7
@@ -142,7 +142,7 @@ The `lang` attribute value is not a valid primary language subtag.
 The `lang` attribute value is not a valid primary language subtag.
 
 ```html
-<html lang=" ">
+<html lang=" "></html>
 ```
 
 ### Inapplicable

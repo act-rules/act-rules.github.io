@@ -98,9 +98,9 @@ The `lang` and `xml:lang` attribute values are either empty ("") or have a valid
 
 ```html
 <html>
-<body>
-  <p lang="en" xml:lang="">Good Morning.</p>
-</body>
+	<body>
+		<p lang="en" xml:lang="">Good Morning.</p>
+	</body>
 </html>
 ```
 
@@ -148,9 +148,9 @@ The `lang` attribute value is not empty ("") and is not a valid primary language
 
 ```html
 <html>
-<body>
-  <article lang=" "></article>
-</body>
+	<body>
+		<article lang=" "></article>
+	</body>
 </html>
 ```
 
@@ -160,9 +160,9 @@ The `lang` attribute value is not empty ("") and is not a valid primary language
 
 ```html
 <html>
-<body>
-  <article lang="#!"></article>
-</body>
+	<body>
+		<article lang="#!"></article>
+	</body>
 </html>
 ```
 
@@ -172,9 +172,9 @@ The `lang` attribute value is not empty ("") and is not a valid primary language
 
 ```html
 <html>
-<body>
-  <article lang="123"></article>
-</body>
+	<body>
+		<article lang="123"></article>
+	</body>
 </html>
 ```
 

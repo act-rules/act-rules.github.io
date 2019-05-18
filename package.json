@@ -155,5 +155,5 @@
 		"testPathIgnorePatterns": [
 			"<rootDir>/test/utils/"
 		]
-  }
+	}
 }

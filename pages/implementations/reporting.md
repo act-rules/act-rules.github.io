@@ -8,7 +8,7 @@ title: Status & Reporting
 
 Incorporating a rule into your test tool, is considered an **implementation**. Submitting implementations from various test tools, helps not only showcase the coverage of test cases authored for the rule, but to build a robust understanding of the WCAG rules and the respective implementations.
 
-Test tool authors are welcome to submit the implementation results for the above test cases to the WCAG-ACT-RULES-CG. The implementation report should be a valid [JSON-LD](https://json-ld.org/spec/latest/json-ld/) document, where the assertions are expressed using [EARL](https://www.w3.org/TR/EARL10-Schema/).
+Test tool authors are welcome to submit the implementation results for the above test cases to the ACT-Rules Community. The implementation report should be a valid [JSON-LD](https://json-ld.org/spec/latest/json-ld/) document, where the assertions are expressed using [EARL](https://www.w3.org/TR/EARL10-Schema/).
 
 Also, note that the report contains a list of assertion results for each of the test cases (of each rule). An example assertion for a test case, is as below:
 

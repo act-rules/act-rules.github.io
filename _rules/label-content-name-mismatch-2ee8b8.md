@@ -93,6 +93,14 @@ Not all of visible label is included in accessible name.
 <button name="link" aria-label="the full">The full label</button>
 ```
 
+#### Failed Example 3
+
+Mathematical symbols can not be substitute for text.
+
+```html
+<a href="/" aria-label="Page two">Page 2</a>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1

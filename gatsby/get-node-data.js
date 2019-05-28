@@ -12,21 +12,24 @@ const getNodeData = options => {
 	const fileNode = getNode(node.parent)
 	const { sourceInstanceName, relativePath, absolutePath } = fileNode
 	const fileContents = fs.readFileSync(absolutePath, { encoding: 'utf-8' })
-	const { attributes } = fastmatter(fileContents)
-
+	const { attributes } = fastmatter(fileContents)	
 	const defaults = {
 		sourceInstanceName: sourceInstanceName,
 		markdownType: getMarkdownType(relativePath, sourceInstanceName),
 		fileName: relativePath,
-		fastmatterAttributes: JSON.stringify(attributes),
+		fastmatterAttributes: JSON.stringify(attributes)
 	}
 
 	switch (sourceInstanceName) {
 		case 'rules':
 			const { id } = attributes
+			const path = `${sourceInstanceName}/${id}`
+			const ruleChangelog = require(`./../_data/changelogs/${id}.json`)
+			const changelog = JSON.stringify(ruleChangelog)
 			return {
 				...defaults,
-				path: `${sourceInstanceName}/${id}`,
+				path,
+				changelog
 			}
 		default:
 			return {

@@ -14,7 +14,8 @@ import SEO from '../components/seo'
 export default ({ data }) => {
 	const { rule, allRules, allGlossary, site } = data
 	const { html, frontmatter, tableOfContents, fields } = rule
-	const { slug, fastmatterAttributes } = fields
+	const { slug, fastmatterAttributes, changelog } = fields
+	const ruleChangelog = JSON.parse(changelog)
 	const { accessibility_requirements } = JSON.parse(fastmatterAttributes)
 	const converter = new showdown.Converter()
 	const updatedTitle = `Rule | ${frontmatter.name} | ${site.siteMetadata.title}`
@@ -109,6 +110,48 @@ export default ({ data }) => {
 		)
 	}
 
+	const renderChangelog = () => {
+		if (!ruleChangelog.length) {
+			return null
+		}
+		return (
+			<>
+				<br />
+				<hr />
+				<a id="changelog" href="#changelog">
+					<h2>Changelog</h2>
+				</a>
+				<ul>
+					{ruleChangelog.map(log => {
+						const { commit, sanitized_subject_line } = log
+						const subject = sanitized_subject_line.split('-').join(' ')
+						const commitUrl = `https://github.com/act-rules/act-rules.github.io/commit/${commit}`
+						return (
+							<li key={commit}>
+								<a target="_blank"
+									rel="noopener noreferrer"
+									href={commitUrl}>
+									{subject}
+								</a>
+							</li>
+						)
+					})}
+				</ul>
+			</>
+		)
+	}
+
+	const changelogLink = () => {
+		if (!ruleChangelog.length) {
+			return null
+		}
+		return (
+			<li>
+				<a href="#changelog">Changelog</a>
+			</li>
+		)
+	}
+
 	return (
 		<Layout>
 			<SEO title={updatedTitle} keywords={site.siteMetadata.keywords} />
@@ -149,6 +192,8 @@ export default ({ data }) => {
 					/>
 					{/* glossary */}
 					{renderGlossaryUsed(slug)}
+					{/* changelog */}
+					{renderChangelog()}
 				</section>
 				{/* Toc */}
 				<div className="toc">
@@ -156,7 +201,12 @@ export default ({ data }) => {
 						Table of Contents
 					</span>
 					<div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
-					<ul>{renderGlossaryUsedLink(slug)}</ul>
+					<ul>
+						{renderGlossaryUsedLink(slug)}
+					</ul>
+					<ul>
+						{changelogLink()}
+					</ul>
 					<span role="heading" aria-level="1" className="heading">
 						Download Testcases
 					</span>
@@ -167,8 +217,7 @@ export default ({ data }) => {
 								aria-label="test cases of rule for use in wcag em report tool"
 								target="_blank"
 								rel="noopener noreferrer"
-								href={ruleTestcasesUrl}
-							>
+								href={ruleTestcasesUrl}>
 								For EM Report Tool
 							</a>
 						</li>
@@ -181,36 +230,37 @@ export default ({ data }) => {
 
 export const query = graphql`
 	query($slug: String!) {
-		rule: markdownRemark(fields: { slug: { eq: $slug } }) {
-			html
+						rule: markdownRemark(fields: {slug: {eq: $slug } }) {
+						html
 			tableOfContents
-			fileAbsolutePath
+					fileAbsolutePath
 			frontmatter {
-				name
+						name
 				rule_type
-				description
-				input_aspects
-				input_rules
-				authors
-			}
+					description
+					input_aspects
+					input_rules
+					authors
+				}
 			fields {
-				slug
+						slug
 				fastmatterAttributes
+					changelog
+				}
 			}
-		}
-		allRules: allMarkdownRemark(
-			filter: { fields: { markdownType: { eq: "rules" } } }
+			allRules: allMarkdownRemark(
+			filter: {fields: {markdownType: {eq: "rules" } } }
 		) {
-			totalCount
+						totalCount
 			edges {
-				node {
+						node {
 					fields {
 						fileName {
-							relativePath
-						}
-						markdownType
-						slug
-					}
+					relativePath
+				}
+				markdownType
+				slug
+			}
 					frontmatter {
 						id
 						name
@@ -219,12 +269,12 @@ export const query = graphql`
 			}
 		}
 		allGlossary: allMarkdownRemark(
-			sort: { fields: [frontmatter___title], order: ASC }
-			filter: { fields: { markdownType: { eq: "glossary" } } }
+			sort: {fields: [frontmatter___title], order: ASC }
+			filter: {fields: {markdownType: {eq: "glossary" } } }
 		) {
-			totalCount
+						totalCount
 			edges {
-				node {
+						node {
 					id
 					html
 					frontmatter {
@@ -239,10 +289,10 @@ export const query = graphql`
 			}
 		}
 		site {
-			siteMetadata {
-				title
-				keywords
+						siteMetadata {
+					title
+					keywords
+				}
 			}
 		}
-	}
-`
+	`

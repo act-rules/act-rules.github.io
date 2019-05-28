@@ -10,22 +10,44 @@ const onCreateNode = options => {
 	 */
 	if (node.internal.type === `MarkdownRemark`) {
 		const nodeData = getNodeData(options)
-		createNodeField({ node, name: `slug`, value: nodeData.path })
-		createNodeField({ node, name: `fileName`, value: nodeData.fileName })
+		const {
+			path,
+			fileName,
+			changelog,
+			fastmatterAttributes,
+			sourceInstanceName,
+			markdownType
+		} = nodeData
+		
+		createNodeField({
+			node,
+			name: `slug`,
+			value: path
+		})
+		createNodeField({
+			node,
+			name: `fileName`,
+			value: fileName
+		})
+		createNodeField({
+			node,
+			name: `changelog`,
+			value: changelog
+		})
 		createNodeField({
 			node,
 			name: `fastmatterAttributes`,
-			value: nodeData.fastmatterAttributes,
+			value: fastmatterAttributes,
 		})
 		createNodeField({
 			node,
 			name: `sourceInstanceName`,
-			value: nodeData.sourceInstanceName,
+			value: sourceInstanceName,
 		})
 		createNodeField({
 			node,
 			name: `markdownType`,
-			value: nodeData.markdownType,
+			value: markdownType,
 		})
 	}
 

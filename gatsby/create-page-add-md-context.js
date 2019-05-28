@@ -21,6 +21,7 @@ const createPageAddMdContext = options => {
 							sourceInstanceName
 							markdownType
 							fastmatterAttributes
+							changelog
 						}
 						frontmatter {
 							name
@@ -47,6 +48,7 @@ const createPageAddMdContext = options => {
 			const slug = node.fields.slug
 			const markdownType = node.fields.markdownType
 			const fastmatterAttributes = node.fields.fastmatterAttributes
+			const changelog = node.fields.changelog
 			const fileName = node.fields.fileName
 			const sourceInstanceName = node.fields.sourceInstanceName
 			const frontmatterName = node.frontmatter.name
@@ -62,7 +64,10 @@ const createPageAddMdContext = options => {
 					sourceInstanceName,
 					markdownType,
 					fastmatterAttributes,
-					title: frontmatterName ? frontmatterName : frontmatterTitle,
+					changelog,
+					title: frontmatterName
+						? frontmatterName
+						: frontmatterTitle,
 					ruleType: frontmatterRuleType,
 				},
 			})

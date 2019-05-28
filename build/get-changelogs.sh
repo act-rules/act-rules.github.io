@@ -12,6 +12,10 @@ do
   # create `changelogs` directory under `_data/`
   mkdir -p _data/changelogs
 
+  # debug
+  echo git hash-object $filepath
+  echo "--------------------"
+
   # get git log of rule
   # - inclusive of filenme changes
   # - create log (JSON) per file in `_data/changelogs/{id}.json`

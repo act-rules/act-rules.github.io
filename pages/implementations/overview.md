@@ -1,13 +1,25 @@
 ---
-title: Overview
+title: ACT Implementations
 ---
 
-The ACT-Rules Community rules are authored for reliable `WCAG` testing.
+<!-- Coverage status will be added automagically here -->
 
-In order to facilitate this goal each rule has a variety of test cases in the categories of `passed`, `failed` and `inapplicable`.
+ACT Rules can be implemented in automated test tools and test methodologies. Tools and methodologies based on the same set of rules will produce (largely) the same results. Each rule includes a number of test cases that are used to check if an implementation is correct. The ACT Rules Community keeps a list of implementations that are actively implementing ACT Rules. By comparing how many implementations rules have, we work out which rules are widely agreed upon, and which ones need further discussion.
 
-Incorporating a rule from the ACT-Rules Community into your test tool, is considered an **implementation**. The test cases provided for the rules can be used to infer if an implementation yields the `expected` results.
+## Status Reports
 
-In the spirit of Open source collaboration, we welcomes [contributions](/pages/contribute) of implementation statistics, to aid as a coverage metric of the rules. This in turn helps to improve the accuracy and completeness of both the rules and the test tools.
+The status of an ACT-R rule is dependent on how many implementations have adopted the rule. Once a sufficient number of implementations is reached, the ACT rule will be considered for submission for publication as a W3C note for WCAG.
 
-Refer other section under implementations, which go into greater detail on the structure of a test case, tools for using the test cases, the anatomy of an implementation report and how to submit an implementation report, back to the community.
+| Status        | Description                                                                 |
+| ------------- | --------------------------------------------------------------------------- |
+| `New`         | The rule has no implementation                                              |
+| `In Progress` | The rule has less than 3 implementations |
+| `Done`        | The rule has 3 or more implementations                                      |
+
+## Contribute An Implementation
+
+If you developed an accessibility tool or a testing methodology, and would like to have your implementation included in the ACT-R website, there are two ways you can do so.
+
+1. If you have a tool that can return a data format, you will need to run your tests against the [ACT-R test cases](../testcases/) and [submit a report](../reporting/).
+
+2. If you use manual test methodology, where you fill results into some report template or tool, you can [Use the WCAG-EM Report Tool](../wcag-em-tool/) instead to produce implementation reports.

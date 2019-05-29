@@ -65,7 +65,7 @@ section.layout-container {
           transition: all ease;
           a, p {
             @include header-style($fg-secondary);
-            text-transform: uppercase;
+            text-transform: capitalize;
             font-size: 0.83em;
             position: relative;
             &:hover {

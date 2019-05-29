@@ -35,7 +35,6 @@ table {
 			display: table-cell;
 			background-color: $sep;
 			padding: 0.5rem;
-			text-transform: uppercase;
 		}
 	}
 
@@ -76,6 +75,20 @@ blockquote {
 	padding: 1rem;
 }
 
-em {
-	display: block;
+figure {
+	background: #FFE;
+  margin: 0 1em;
+  padding: .5em 1em;
+  border: solid 1px #880;
+	border-radius: 4px;
+	display: inline-block;
+	
+	> figcaption {
+		margin-bottom: .5em;
+	}
+
+	> img {
+		display: block;
+		margin: 0 auto;
+	}
 }

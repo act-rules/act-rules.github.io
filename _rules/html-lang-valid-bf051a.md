@@ -19,7 +19,7 @@ authors:
 
 ## Applicability
 
-The root element of the page, if it is an `html` element with a [non-empty](#non-empty) `lang` and/or `xml:lang` attribute.
+The root element of the page, if it is an `html` element with a `lang` and/or `xml:lang` attribute that is not empty ("").
 
 ## Expectation
 
@@ -45,7 +45,7 @@ While HTML5 specification indicates that `xml:lang` attribute takes priority ove
 
 ## Test Cases
 
-## Passed
+### Passed
 
 #### Passed Example 1
 
@@ -87,7 +87,7 @@ The `xml:lang` attribute specified has a non-empty value & a valid primary langu
 <html lang="" xml:lang="nl"></html>
 ```
 
-## Failed
+### Failed
 
 #### Failed Example 1
 
@@ -121,7 +121,31 @@ The `lang` attribute value has a valid primary language subtag, but a syntactica
 <html lang="en-US-GB"></html>
 ```
 
-## Inapplicable
+#### Failed Example 5
+
+The `lang` attribute value is not a valid primary language subtag.
+
+```html
+<html lang="123"></html>
+```
+
+#### Failed Example 6
+
+The `lang` attribute value is not a valid primary language subtag.
+
+```html
+<html lang="#!"></html>
+```
+
+#### Failed Example 7
+
+The `lang` attribute value is not a valid primary language subtag.
+
+```html
+<html lang=" "></html>
+```
+
+### Inapplicable
 
 #### Inapplicable Example 1
 
@@ -141,7 +165,7 @@ The rule applies to `html` element and hence usage of `xml:lang` attribute in `s
 
 #### Inapplicable Example 3
 
-An empty value for `lang` attribute is ignored by this rule, as the applicability specifies only non-empty values.
+An empty value for `lang` attribute is ignored by this rule, as the applicability specifies only values that are not empty ("").
 
 ```html
 <html lang=""></html>
@@ -149,7 +173,7 @@ An empty value for `lang` attribute is ignored by this rule, as the applicabilit
 
 #### Inapplicable Example 4
 
-An empty value for `xml:lang` attribute is ignored by this rule, as the applicability specifies only non-empty values.
+An empty value for `xml:lang` attribute is ignored by this rule, as the applicability specifies only values that are not empty ("").
 
 ```html
 <html xml:lang=""></html>

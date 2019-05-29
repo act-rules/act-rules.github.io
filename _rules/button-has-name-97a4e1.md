@@ -24,7 +24,7 @@ The rule applies to elements that are [included in the accessibility tree](#incl
 
 ## Expectation
 
-Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty)
+Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
 
 ## Assumptions
 
@@ -112,6 +112,14 @@ Off screen elements should be tested.
 </html>
 ```
 
+#### Passed example 8
+
+Button has accessible name that is not only whitespace.
+
+```html
+<button>:-)</button>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -147,6 +155,14 @@ Off screen element without an accessible name.
 		<button class="notInPage" value="delete"></button>
 	</body>
 </html>
+```
+
+#### Failed example 4
+
+Button has an accessible name that is not only whitespace.
+
+```html
+<button></button>
 ```
 
 ### Inapplicable

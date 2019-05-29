@@ -7,7 +7,7 @@ import './index.scss'
 const Header = ({ siteTitle }) => (
 	<header className="app-header">
 		<Link to="/pages/about">
-			<h2>{siteTitle}</h2>
+			<h1>{siteTitle}</h1>
 		</Link>
 	</header>
 )

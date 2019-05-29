@@ -1,8 +1,8 @@
 {
-	"name": "ACT-RULES-CG",
+	"name": "act-rules-community",
 	"description": "Accessibility conformance testing rules for HTML",
 	"version": "1.0.0",
-	"author": "WCAG ACT RULES CG",
+	"author": "ACT-Rules Community",
 	"contributors": [
 		{
 			"name": "Anne Thyme Nørregaard",
@@ -100,6 +100,9 @@
 		"showdown": "^1.9.0"
 	},
 	"devDependencies": {
+		"globby": "^9.2.0",
+		"jest": "^24.8.0",
+		"marked": "^0.6.2",
 		"prettier": "^1.17.0"
 	},
 	"keywords": [
@@ -117,7 +120,8 @@
 		"format": "prettier --write *.{json,md,js,jsx} './{_data,_rules,build,gatsby,pages,src,test-assets}/**/*.{json,md,js,jsx}'",
 		"start": "npm run clean && npm run develop",
 		"serve": "gatsby serve",
-		"test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+		"test": "npm run test:rules",
+		"test:rules": "jest",
 		"get-implementations": "node ./build/get-implementations",
 		"get-wcag-sc-metadata": "node ./build/get-wcag-sc-metadata",
 		"get-data": "npm run get-wcag-sc-metadata && npm run get-implementations"
@@ -145,5 +149,11 @@
 			"alfa": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/alfa-report.json",
 			"axe": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/axe-report.json"
 		}
+	},
+	"jest": {
+		"verbose": true,
+		"testPathIgnorePatterns": [
+			"<rootDir>/test/utils/"
+		]
 	}
 }

@@ -1,6 +1,6 @@
 ---
 id: a25f45
-name: `headers` attribute only refers to cells in the same table element.
+name: headers attribute only refers to cells in the same table element.
 rule_type: atomic
 description: |
   This rule checks that the headers attribute must only refer to cells in the same table element.
@@ -10,15 +10,15 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
 input_aspects:
-- DOM Tree
+  - DOM Tree
 authors:
-- Jey Nandakumar
-- Audrey Maniez
+  - Jey Nandakumar
+  - Audrey Maniez
 ---
 
 ## Applicability
 
-This rule applies to `td` elements with a `headers` attribute, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+This rule applies to `td` elements with a `headers` attribute, that are [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ## Expectation
 
@@ -29,7 +29,7 @@ Each target element with the `headers` attribute refers to other `th` within the
 - This test assumes that the `headers` attribute is only used to identify table headers. If other information is included in the `headers` attribute, the rule may fail on issues that are not accessibility concerns. For example, if `headers` is used to include information for script, this rule may not be accurate.
 - Tables using `headers` id associations are intended as data rather than [layout table](#layout-table).
 
-## Accessibility support
+## Accessibility Support
 
 - `headers` attribute may not be consistently announced by assistive technologies.
 
@@ -189,18 +189,17 @@ A table used for presentation only, that has a `role="presentation"`.
 ```html
 <table role="presentation">
   <tr>
-    <th colspan="2">My document title</th>
+    <th id="header1">Project Status</th>
   </tr>
   <tr>
-    <td><p>The excerpt</p></td>
-    <td><p>The content</p></td>
+    <td>15%</td>
   </tr>
 </table>
 ```
 
 #### Inapplicable Example 3
 
-The rule applies only to `table` element.
+The rule applies only to `table > td` element.
 
 ```html
 <div role="table">
@@ -232,22 +231,6 @@ No `headers` attribute is defined for table `cell`.
 ```
 
 #### Inapplicable Example 5
-
-A table that is not visible. 
-
-```html
-<table style="display:none;">
-  <tr>
-    <th colspan="2">My document title</th>
-  </tr>
-  <tr>
-    <td><p>The excerpt</p></td>
-    <td><p>The content</p></td>
-  </tr>
-</table>
-```
-
-#### Inapplicable Example 6
 
 A table that is not included in the accessibility tree. 
 

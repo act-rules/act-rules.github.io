@@ -65,9 +65,7 @@ const createPageAddMdContext = options => {
 					markdownType,
 					fastmatterAttributes,
 					changelog,
-					title: frontmatterName
-						? frontmatterName
-						: frontmatterTitle,
+					title: frontmatterName ? frontmatterName : frontmatterTitle,
 					ruleType: frontmatterRuleType,
 				},
 			})

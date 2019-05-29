@@ -3,13 +3,18 @@ import Layout from '../components/layout/'
 import { graphql } from 'gatsby'
 import showdown from 'showdown'
 import {
+	getChangelog,
+	getChangelogLink,
+	getGlossaryUsed,
+	getGlossaryUsedLink,
+	getRuleType,
 	getAccessibilityRequirements,
 	getAuthors,
 	getInputRulesForRule,
 	getInputAspects,
 } from './../utils/render-fragments'
-import glossaryUsages from './../../_data/glossary-usages.json'
 import SEO from '../components/seo'
+import { repository } from './../../package.json'
 
 export default ({ data }) => {
 	const { rule, allRules, allGlossary, site } = data
@@ -19,138 +24,9 @@ export default ({ data }) => {
 	const { accessibility_requirements } = JSON.parse(fastmatterAttributes)
 	const converter = new showdown.Converter()
 	const updatedTitle = `Rule | ${frontmatter.name} | ${site.siteMetadata.title}`
-	const ruleId = slug.replace('rules/', '')
+	const ruleId = frontmatter.id
 	const ruleTestcasesUrl = `/testcases/${ruleId}/rule-${ruleId}-testcases-for-em-report-tool.json`
-
-	const getRuleType = rule_type => {
-		if (!rule_type) {
-			return null
-		}
-		return (
-			<li>
-				<span role="heading" aria-level="1" className="heading">
-					Rule Type
-				</span>
-				<p>{rule_type}</p>
-			</li>
-		)
-	}
-
-	const getGlossaryItemsUsedInRule = slug => {
-		const keys = []
-		Object.keys(glossaryUsages).forEach(key => {
-			glossaryUsages[key].forEach(({ slug: s }) => {
-				if (s === slug && !keys.includes(key)) {
-					keys.push(key)
-				}
-			})
-		})
-		return keys
-	}
-
-	const renderGlossaryUsed = slug => {
-		const usedKeys = getGlossaryItemsUsedInRule(slug)
-		if (!usedKeys) {
-			return null
-		}
-		const glossaries = allGlossary.edges.filter(({ node }) => {
-			const {
-				frontmatter: { key },
-			} = node
-			return usedKeys.includes(`#${key}`)
-		})
-		if (!glossaries.length) {
-			return null
-		}
-		return (
-			<>
-				<br />
-				<hr />
-				<a id="glossary-listing" href="#glossary-listing">
-					<h2>Referenced Glossary</h2>
-				</a>
-				{glossaries.map(({ node }) => {
-					const { frontmatter, html } = node
-					const { key } = frontmatter
-					return (
-						<article key={node.id}>
-							<a id={key} href={`#${key}`}>
-								<h3>{frontmatter.title}</h3>
-							</a>
-							<i>
-								key: <u>{key}</u>
-							</i>
-							<div dangerouslySetInnerHTML={{ __html: html }} />
-							<br />
-						</article>
-					)
-				})}
-			</>
-		)
-	}
-
-	const renderGlossaryUsedLink = slug => {
-		const usedKeys = getGlossaryItemsUsedInRule(slug)
-		if (!usedKeys) {
-			return null
-		}
-		const glossaries = allGlossary.edges.filter(({ node }) => {
-			const {
-				frontmatter: { key },
-			} = node
-			return usedKeys.includes(`#${key}`)
-		})
-		if (!glossaries.length) {
-			return null
-		}
-		return (
-			<li>
-				<a href="#glossary-listing">Referenced Glossary</a>
-			</li>
-		)
-	}
-
-	const renderChangelog = () => {
-		if (!ruleChangelog.length) {
-			return null
-		}
-		return (
-			<>
-				<br />
-				<hr />
-				<a id="changelog" href="#changelog">
-					<h2>Changelog</h2>
-				</a>
-				<ul>
-					{ruleChangelog.map(log => {
-						const { commit, sanitized_subject_line } = log
-						const subject = sanitized_subject_line.split('-').join(' ')
-						const commitUrl = `https://github.com/act-rules/act-rules.github.io/commit/${commit}`
-						return (
-							<li key={commit}>
-								<a target="_blank"
-									rel="noopener noreferrer"
-									href={commitUrl}>
-									{subject}
-								</a>
-							</li>
-						)
-					})}
-				</ul>
-			</>
-		)
-	}
-
-	const changelogLink = () => {
-		if (!ruleChangelog.length) {
-			return null
-		}
-		return (
-			<li>
-				<a href="#changelog">Changelog</a>
-			</li>
-		)
-	}
+	const issuesUrl = `${repository.url}/issues?q=${ruleId}`
 
 	return (
 		<Layout>
@@ -174,9 +50,8 @@ export default ({ data }) => {
 								true
 							)}
 						</li>
-						<li>{getAuthors(frontmatter.authors)}</li>
 					</ul>
-
+					<hr />
 					{/* Description */}
 					<br />
 					<div
@@ -191,9 +66,18 @@ export default ({ data }) => {
 						}}
 					/>
 					{/* glossary */}
-					{renderGlossaryUsed(slug)}
+					{getGlossaryUsed(slug, allGlossary)}
 					{/* changelog */}
-					{renderChangelog()}
+					{getChangelog(ruleChangelog)}
+					{/* acknowledgements */}
+					<br />
+					<hr />
+					<a id="acknowledgements" href="#acknowledgements">
+						<h2>Acknowledgements</h2>
+					</a>
+					<ul class="meta">
+						<li>{getAuthors(frontmatter.authors)}</li>
+					</ul>
 				</section>
 				{/* Toc */}
 				<div className="toc">
@@ -202,13 +86,14 @@ export default ({ data }) => {
 					</span>
 					<div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
 					<ul>
-						{renderGlossaryUsedLink(slug)}
-					</ul>
-					<ul>
-						{changelogLink()}
+						{getGlossaryUsedLink(slug, allGlossary)}
+						{getChangelogLink(ruleChangelog)}
+						<li>
+							<a href="#acknowledgements">Acknowledgements</a>
+						</li>
 					</ul>
 					<span role="heading" aria-level="1" className="heading">
-						Download Testcases
+						Useful Links
 					</span>
 					<ul>
 						<li>
@@ -217,8 +102,20 @@ export default ({ data }) => {
 								aria-label="test cases of rule for use in wcag em report tool"
 								target="_blank"
 								rel="noopener noreferrer"
-								href={ruleTestcasesUrl}>
-								For EM Report Tool
+								href={issuesUrl}
+							>
+								View Issues
+							</a>
+						</li>
+						<li>
+							<a
+								className="btn-secondary"
+								aria-label="test cases of rule for use in wcag em report tool"
+								target="_blank"
+								rel="noopener noreferrer"
+								href={ruleTestcasesUrl}
+							>
+								Testcases (EM Report Tool)
 							</a>
 						</li>
 					</ul>
@@ -230,37 +127,38 @@ export default ({ data }) => {
 
 export const query = graphql`
 	query($slug: String!) {
-						rule: markdownRemark(fields: {slug: {eq: $slug } }) {
-						html
+		rule: markdownRemark(fields: { slug: { eq: $slug } }) {
+			html
 			tableOfContents
-					fileAbsolutePath
+			fileAbsolutePath
 			frontmatter {
-						name
+				id
+				name
 				rule_type
-					description
-					input_aspects
-					input_rules
-					authors
-				}
-			fields {
-						slug
-				fastmatterAttributes
-					changelog
-				}
+				description
+				input_aspects
+				input_rules
+				authors
 			}
-			allRules: allMarkdownRemark(
-			filter: {fields: {markdownType: {eq: "rules" } } }
+			fields {
+				slug
+				fastmatterAttributes
+				changelog
+			}
+		}
+		allRules: allMarkdownRemark(
+			filter: { fields: { markdownType: { eq: "rules" } } }
 		) {
-						totalCount
+			totalCount
 			edges {
-						node {
+				node {
 					fields {
 						fileName {
-					relativePath
-				}
-				markdownType
-				slug
-			}
+							relativePath
+						}
+						markdownType
+						slug
+					}
 					frontmatter {
 						id
 						name
@@ -269,12 +167,12 @@ export const query = graphql`
 			}
 		}
 		allGlossary: allMarkdownRemark(
-			sort: {fields: [frontmatter___title], order: ASC }
-			filter: {fields: {markdownType: {eq: "glossary" } } }
+			sort: { fields: [frontmatter___title], order: ASC }
+			filter: { fields: { markdownType: { eq: "glossary" } } }
 		) {
-						totalCount
+			totalCount
 			edges {
-						node {
+				node {
 					id
 					html
 					frontmatter {
@@ -289,10 +187,10 @@ export const query = graphql`
 			}
 		}
 		site {
-						siteMetadata {
-					title
-					keywords
-				}
+			siteMetadata {
+				title
+				keywords
 			}
 		}
-	`
+	}
+`

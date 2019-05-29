@@ -16,23 +16,23 @@ const onCreateNode = options => {
 			changelog,
 			fastmatterAttributes,
 			sourceInstanceName,
-			markdownType
+			markdownType,
 		} = nodeData
-		
+
 		createNodeField({
 			node,
 			name: `slug`,
-			value: path
+			value: path,
 		})
 		createNodeField({
 			node,
 			name: `fileName`,
-			value: fileName
+			value: fileName,
 		})
 		createNodeField({
 			node,
 			name: `changelog`,
-			value: changelog
+			value: changelog,
 		})
 		createNodeField({
 			node,

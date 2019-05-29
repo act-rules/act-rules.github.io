@@ -51,7 +51,7 @@ export default ({ data }) => {
 										}}
 									/>
 								</section>
-								{/* atomic rules */}
+								{/* input rules */}
 								{getInputRulesForRule(input_rules, allRules.edges, true)}
 							</article>
 						)

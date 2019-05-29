@@ -162,7 +162,6 @@ section.layout-container {
               }
 
               div.meta {
-                font-size: 80%;
                 span.heading {
                   padding: 0.25rem 0.5rem;
                   background-color: $sep;
@@ -176,7 +175,6 @@ section.layout-container {
                   text-decoration: none;
                   padding: 0.25rem 0.5rem;
                   text-transform: capitalize;
-                  display: block;
                   &:hover {
                     color: $accent;
                   }
@@ -194,20 +192,6 @@ section.layout-container {
                 }
                 &:last-child{
                   border-bottom: none;
-                }
-              }
-
-              >div.side-notes {
-                div.meta{
-                  span.heading{
-                    display: inline-block;
-                    font-weight: bold;
-                    background-color: $sep;
-                  }
-                  a.sc-item {
-                    display: block;
-                    background-color: transparent;
-                  }
                 }
               }
             }
@@ -295,7 +279,6 @@ section.layout-container {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            border-bottom: 1px solid $sep;
             span.heading {
               padding: 0.25rem 0.5rem;
               background-color: $sep;
@@ -319,6 +302,9 @@ section.layout-container {
               &:hover {
                 color: $accent;
               }
+              &.block {
+                display:block;
+              }
             }
           }
         }
@@ -329,23 +315,20 @@ section.layout-container {
           right: 0;
           top: 0;
           bottom: 55px;
-          border-left: 1px solid $bg-secondary;
-          background-color: $sep;
-          max-width: 200px;
+          border-left: 1px solid $sep;
+          min-width: 225px;
+          max-width: 300px;
           overflow: auto;
-          font-size: 80%;
-          padding-right: 1.5rem;
+          font-size: 85%;
           padding-bottom: 3rem;
           
           span.heading {
             padding: 0.25rem 0.5rem;
-            @include header-style($fg-secondary);
+            @include header-style($fg-primary);
             text-transform: capitalize;
-            font-size: 80%;
-            background-color: $bg-secondary;
+            background-color: $sep;
             margin: 1rem 0.5rem 0.5rem 0;
             display: inline-block;
-
             &:first-child {
               margin-top: 6rem;
             }
@@ -358,15 +341,10 @@ section.layout-container {
               span, a {
                 display: inline-block;
               }
-              p{
-                margin: 0 0 0 0.5rem;
-
-              }
               a{
                 cursor: pointer;
                 text-decoration: none;
-                padding: 0rem 0.75rem;
-
+                padding: 0rem 1rem;
                 display: block;
                 &:hover {
                   color: $accent;

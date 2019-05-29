@@ -1,5 +1,5 @@
 ---
-title: Definition of "Done" 1.0
+title: Definition of Done
 ---
 
 ## What is this?

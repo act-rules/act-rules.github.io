@@ -26,11 +26,11 @@ authors:
 
 The rule applies to any HTML `input` element with a `type` attribute in the `Image Button` state, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
-**Note:** The specification of the `[type](https://www.w3.org/TR/html/sec-forms.html#element-attrdef-input-type)` attribute describes in detail how to map the value of the attribute to its corresponding state.
+**Note:** The specification of the [`type`](https://www.w3.org/TR/html/sec-forms.html#element-attrdef-input-type) attribute describes in detail how to map the value of the attribute to its corresponding state.
 
 ## Expectation
 
-Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty).
+Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
 
 ## Assumptions
 
@@ -81,6 +81,22 @@ Image button element with accessible name through `aria-labelledby`
 <div id="id1">Submit</div>
 ```
 
+#### Passed example 5
+
+Accessible name is not only whitespace.
+
+```html
+<input type="image" name="submit" src="button.gif" alt=":-)" />
+```
+
+#### Passed example 6
+
+Image button element with accessible name through `alt` attribute
+
+```html
+<input type="image" name="submit" src="button.gif" alt="123" />
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -105,6 +121,14 @@ Image button with aria-labelledby that does not reference an id that exists in t
 
 ```html
 <input type="image" name="submit" src="button.gif" aria-labelledby="id1" />
+```
+
+#### Failed example 4
+
+Accessible name is not only whitespace.
+
+```html
+<input type="image" name="submit" src="button.gif" alt=" " />
 ```
 
 ### Inapplicable

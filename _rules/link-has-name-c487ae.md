@@ -34,7 +34,7 @@ The rule applies to any HTML element with the [semantic role](#semantic-role) of
 
 ## Expectation
 
-Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty).
+Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
 
 ## Assumptions
 
@@ -42,7 +42,7 @@ Each target element has an [accessible name](#accessible-name) that is [non-empt
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+For `area` elements that have a `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on whether the `area` is considered [included in the accessibility tree](#included-in-the-accessibility-tree) or not.
 
 ## Background
 
@@ -65,7 +65,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 2
 
-Element with eplicit role of link with accessible name through content.
+Element with explicit role of link with accessible name through content.
 
 ```html
 <div role="link">Web Accessibility Initiative (WAI)</div>
@@ -134,11 +134,37 @@ When `link` is off screen.
 		}
 	</style>
 	<body>
-		<a class="offScreenLink" href="http://www.w3.org/WAI">
-			Web Accessibility Initiative (WAI)
-		</a>
+		<a class="offScreenLink" href="http://www.w3.org/WAI"
+			>Web Accessibility Initiative (WAI)</a
+		>
 	</body>
 </html>
+```
+
+#### Passed example 10
+
+`area` element with `href` attribute has accessible name.
+
+```html
+<img
+	src="planets.gif"
+	width="145"
+	height="126"
+	alt="Planets"
+	usemap="#planetmap"
+/>
+
+<map name="planetmap">
+	<area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun" />
+</map>
+```
+
+#### Passed example 11
+
+`a` element where accessible name does not only consist of whitespace.
+
+```html
+<a href="http://www.w3.org/WAI">:-)</a>
 ```
 
 ### Failed
@@ -186,7 +212,7 @@ Link with image that has empty `aria-labelledby`.
 
 #### Failed Example 6
 
-Aria-labelledby references to a non-existing id.
+`aria-labelledby` references a non-existing id.
 
 ```html
 <a href="http://www.w3.org/WAI"><img src="#" aria-labelledby="id1"/></a>
@@ -200,6 +226,40 @@ Non-visible link.
 <a href="http://www.w3.org/WAI" style="left: -9999px; position: absolute;">
 	<img src="#" />
 </a>
+```
+
+#### Failed example 9
+
+Link is completely empty, but still shows up in focus order, so it should have an accessible name.
+
+```html
+<a href="http://www.w3.org/WAI"></a>
+```
+
+#### Failed example 10
+
+`area` element with `href` attribute does not have accessible name.
+
+```html
+<img
+	src="planets.gif"
+	width="145"
+	height="126"
+	alt="Planets"
+	usemap="#planetmap"
+/>
+
+<map name="planetmap">
+	<area shape="rect" coords="0,0,82,126" href="sun.htm" />
+</map>
+```
+
+#### Failed example 11
+
+`a` element where accessible name through content only consist of whitespace.
+
+```html
+<a href="http://www.w3.org/WAI"> </a>
 ```
 
 ### Inapplicable
@@ -238,4 +298,12 @@ Not included in the accessibility tree due to `aria-hidden="true"`.
 <a aria-hidden="true" href="http://www.w3.org/WAI">
 	Web Accessibility Initiative (WAI)
 </a>
+```
+
+#### Inapplicable example 5
+
+`area` element without `href` attribute does not have role of `link`.
+
+```html
+<area shape="rect" coords="0,0,82,126" />
 ```

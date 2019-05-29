@@ -14,7 +14,8 @@ import {
 	getInputAspects,
 } from './../utils/render-fragments'
 import SEO from '../components/seo'
-import { repository } from './../../package.json'
+import { contributors, repository, config } from './../../package.json'
+
 
 export default ({ data }) => {
 	const { rule, allRules, allGlossary, site } = data
@@ -27,6 +28,7 @@ export default ({ data }) => {
 	const ruleId = frontmatter.id
 	const ruleTestcasesUrl = `/testcases/${ruleId}/rule-${ruleId}-testcases-for-em-report-tool.json`
 	const issuesUrl = `${repository.url}/issues?q=${ruleId}`
+	const ruleFormatInputAspects = config['rule-format-metadata']['input-aspects']
 
 	return (
 		<Layout>
@@ -42,7 +44,7 @@ export default ({ data }) => {
 					<ul className="meta">
 						{getRuleType(frontmatter.rule_type)}
 						<li>{getAccessibilityRequirements(accessibility_requirements)}</li>
-						<li>{getInputAspects(frontmatter.input_aspects)}</li>
+						<li>{getInputAspects(frontmatter.input_aspects, ruleFormatInputAspects)}</li>
 						<li>
 							{getInputRulesForRule(
 								frontmatter.input_rules,
@@ -68,7 +70,7 @@ export default ({ data }) => {
 					{/* glossary */}
 					{getGlossaryUsed(slug, allGlossary)}
 					{/* changelog */}
-					{getChangelog(ruleChangelog)}
+					{getChangelog(ruleChangelog, repository.url)}
 					{/* acknowledgements */}
 					<br />
 					<hr />
@@ -76,7 +78,7 @@ export default ({ data }) => {
 						<h2>Acknowledgements</h2>
 					</a>
 					<ul class="meta">
-						<li>{getAuthors(frontmatter.authors)}</li>
+						<li>{getAuthors(frontmatter.authors, contributors)}</li>
 					</ul>
 				</section>
 				{/* Toc */}

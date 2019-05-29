@@ -1,6 +1,5 @@
 import React from 'react'
 import scUrls from './../../_data/sc-urls'
-import { contributors, repository } from './../../package.json'
 import { Link } from 'gatsby'
 import {
 	Accordion,
@@ -11,7 +10,7 @@ import {
 } from 'react-accessible-accordion'
 import glossaryUsages from './../../_data/glossary-usages.json'
 
-export const getChangelog = ruleChangelog => {
+export const getChangelog = (ruleChangelog, url) => {
 	if (!ruleChangelog.length) {
 		return null
 	}
@@ -26,7 +25,7 @@ export const getChangelog = ruleChangelog => {
 				{ruleChangelog.map(log => {
 					const { commit, sanitized_subject_line } = log
 					const subject = sanitized_subject_line.split('-').join(' ')
-					const commitUrl = `${repository.url}/commit/${commit}`
+					const commitUrl = `${url}/commit/${commit}`
 					return (
 						<li key={commit}>
 							<a target="_blank" rel="noopener noreferrer" href={commitUrl}>
@@ -210,7 +209,7 @@ export function getAccessibilityRequirements(accessibility_requirements) {
 	)
 }
 
-export function getAuthors(authors) {
+export function getAuthors(authors, contributors) {
 	if (!authors) {
 		return null
 	}
@@ -241,18 +240,30 @@ export function getAuthors(authors) {
 	)
 }
 
-export function getInputAspects(aspects) {
+export function getInputAspects(aspects, ruleFormatInputAspects) {
 	if (!aspects) {
 		return null
 	}
 	return (
 		<>
 			<span role="heading" aria-level="1" className="heading">
-				Test Aspects
+				Input Aspects
 			</span>
-			{aspects.map(ta => (
-				<p key={ta}>{ta}</p>
-			))}
+			{
+				aspects.map(aspect => {
+					const aHref = ruleFormatInputAspects[aspect]
+						? ruleFormatInputAspects[aspect]
+						: ruleFormatInputAspects["default"]
+					return (
+						<a
+							className="sc-item block"
+							href={aHref}
+							key={aspect}>
+							{aspect}
+						</a>
+					)
+				})
+			}
 		</>
 	)
 }

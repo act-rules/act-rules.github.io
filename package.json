@@ -150,6 +150,16 @@
 		"implementations": {
 			"alfa": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/alfa-report.json",
 			"axe": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/axe-report.json"
+		},
+		"rule-format-metadata": {
+			"input-aspects": {
+				"default": "https://www.w3.org/TR/act-rules-aspects/#intro",
+				"HTTP Messages": "https://www.w3.org/TR/act-rules-aspects/#input-aspects-http",
+				"DOM Tree": "https://www.w3.org/TR/act-rules-aspects/#input-aspects-dom",
+				"CSS Styling": "https://www.w3.org/TR/act-rules-aspects/#input-aspects-css",
+				"Accessibility Tree": "https://www.w3.org/TR/act-rules-aspects/#input-aspects-accessibility",
+				"Language": "https://www.w3.org/TR/act-rules-aspects/#input-aspects-text"
+			}
 		}
 	},
 	"jest": {

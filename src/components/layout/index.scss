@@ -2,6 +2,7 @@
 @import './../../styles/variables';
 @import './../../styles/mixins';
 @import './../../styles/prism-a11y';
+@import './../../styles/override';
 
 section.layout-container {
   @include fixed-stretch();
@@ -292,6 +293,7 @@ section.layout-container {
           ul.meta {
             @include reset-list();
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             border-bottom: 1px solid $sep;
             span.heading {
@@ -301,6 +303,7 @@ section.layout-container {
               text-transform: capitalize;
               display: inline-block;
               font-weight: bold;
+              margin-top: 1em;
             }
             p{
               margin: 0;
@@ -313,7 +316,6 @@ section.layout-container {
               text-decoration: none;
               padding: 0.25rem 0.5rem;
               text-transform: capitalize;
-              display: block;
               &:hover {
                 color: $accent;
               }
@@ -436,11 +438,6 @@ and (max-width : 1024px) {
       }
       .page-rule {
         padding-right: 4rem !important;
-        section {
-          ul.meta {
-            flex-direction: column;
-          }
-        }
         div.toc {
           display: none;
         }

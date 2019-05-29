@@ -2,6 +2,13 @@ import React from 'react'
 import scUrls from './../../_data/sc-urls'
 import pkg from './../../package.json'
 import { Link } from 'gatsby'
+import {
+	Accordion,
+	AccordionItem,
+	AccordionItemHeading,
+	AccordionItemButton,
+	AccordionItemPanel,
+} from 'react-accessible-accordion';
 
 export function getAccessibilityRequirements(accessibility_requirements) {
 	if (!accessibility_requirements) {
@@ -31,14 +38,39 @@ export function getAccessibilityRequirements(accessibility_requirements) {
 			<span role="heading" aria-level="1" className="heading">
 				Accessibility Requirements
 			</span>
-			{requirements.map(sc => {
-				const scData = scUrls[sc]
-				return (
-					<a className="sc-item" key={sc} href={scData.url}>
-						{scData.num} {scData.handle}
-					</a>
-				)
-			})}
+			<Accordion
+				allowMultipleExpanded='true'
+				allowZeroExpanded='true'>
+				{
+					requirements.map(sc => {
+						const scData = scUrls[sc]
+						return (
+							<AccordionItem key={sc}>
+								<AccordionItemHeading>
+									<AccordionItemButton>
+										<a className="sc-item" key={sc} href={scData.url}>
+											{scData.num} {scData.handle}
+										</a>
+									</AccordionItemButton>
+								</AccordionItemHeading>
+								<AccordionItemPanel>
+									<ul>
+										<li><strong>Required for conformance</strong> </li>
+										<li>
+											Outcome mapping:
+                  		<ul>
+												<li>Any <code>failed</code> outcomes: not satisfied </li>
+												<li>All <code>passed</code> outcomes: further testing is needed </li>
+												<li>An <code>inapplicable</code> outcome: further testing is needed </li>
+											</ul>
+										</li>
+									</ul>
+								</AccordionItemPanel>
+							</AccordionItem>
+						)
+					})
+				}
+			</Accordion>
 		</div>
 	)
 }

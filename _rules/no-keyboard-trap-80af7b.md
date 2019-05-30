@@ -15,8 +15,8 @@ input_rules:
   - ebe86a
 authors:
   - Geir Sindre Fossøy
-    - Dagfinn Rømen
-    - Anne Thyme Nørregaard
+  - Dagfinn Rømen
+  - Anne Thyme Nørregaard
 ---
 
 ## Applicability

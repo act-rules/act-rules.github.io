@@ -1,9 +1,11 @@
 
 const describeRule = require('./utils/describe-rule')
+const { contributors } = require('./../package.json')
+const contributorsNames = contributors.map(contributor => contributor.name.toLowerCase())
 
 describeRule('frontmatter', (ruleData) => {
   const { frontmatter } = ruleData
-  const { rule_type } = frontmatter
+  const { rule_type, authors } = frontmatter
 
   /**
    * Check for `required` properties
@@ -36,4 +38,12 @@ describeRule('frontmatter', (ruleData) => {
       expect(frontmatter).not.toHaveProperty('input_rules');
     })
   }
+  
+  /**
+   * Check if listed `authors` have meta data as contributors in package.json
+   */
+  test.each(authors)('has contributor data for author: `%s`',
+    (author) => {
+      expect(contributorsNames).toContain(author.toLowerCase());
+    })
 })

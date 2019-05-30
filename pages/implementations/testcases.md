@@ -46,7 +46,7 @@ To run the test cases, go through each URL run the necessary tests on that page.
 
 2. Maintain a manual many-to-many mapping of rules in your implementation to ACT-R Rules
 
-Correctness of an implementation is based on the results for test cases. See [implementation mapping](../mapping/) for more information. 
+Correctness of an implementation is based on the results for test cases. See [implementation mapping](../mapping/) for more information.
 
 ## Contribute An Implementation
 

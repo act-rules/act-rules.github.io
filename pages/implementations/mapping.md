@@ -23,12 +23,12 @@ An implementation can also have multiple checks that when combined, map to a sin
 The correctness of an implementation is based on the results from running the [test cases](../testcases/) in a tool or test procedure. The three types of test cases have a range of outcomes that are allowed:
 
 | Test Case Type | Allowed outcomes                                   |
-|----------------|----------------------------------------------------|
+| -------------- | -------------------------------------------------- |
 | Passed         | `passed`, `cantTell` or `inapplicable`             |
 | Failed         | `failed` or `cantTell`                             |
 | Inapplicable   | `inapplicable`, `cantTell`, `passed` or `untested` |
 
-A check in an implementation that returns one of the allowed outcomes for all test cases in an ACT-R rule is a *correct implementation*. If the results don't include `cantTell`, that implementation is considered an _automated implementation_.
+A check in an implementation that returns one of the allowed outcomes for all test cases in an ACT-R rule is a _correct implementation_. If the results don't include `cantTell`, that implementation is considered an _automated implementation_.
 
 An implemented check that has all passed and inapplicable test cases correct, but only has some of the failed test cases correct is called a _partial implementation_. If there are partial implementations for an ACT-R rule that together get all failed test cases correct, this _set of checks_ is considered a _correct implementation_.
 

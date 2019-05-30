@@ -101,7 +101,7 @@ const createTestcasesOfAllRules = options => {
 					ruleId,
 					ruleName,
 					rulePage: `${url}/${slug}`,
-					requirementsMapping: Object.keys(ruleAccessibilityRequirements || {})
+					requirementsMapping: Object.keys(ruleAccessibilityRequirements || {}),
 				}
 
 				out.push(testcase)

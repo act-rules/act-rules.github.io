@@ -4,7 +4,7 @@ title: Submit an Implementation
 
 ## Submit an Implementation Report
 
-To submit an implementation report, you must run your test tool or test methodology against the [test cases](../testcases/) and produce a report. To have your implementation of ACT-R rules added to the ACT-R community website, you will need to provide a report using [EARL in JSON-LD](../earl-reports/). 
+To submit an implementation report, you must run your test tool or test methodology against the [test cases](../testcases/) and produce a report. To have your implementation of ACT-R rules added to the ACT-R community website, you will need to provide a report using [EARL in JSON-LD](../earl-reports/).
 
 1. [Join the ACT-R Community group](https://w3.org/community/act-r/). This ensures the community license agreement is signed.
 

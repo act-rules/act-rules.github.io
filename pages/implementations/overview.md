@@ -10,11 +10,11 @@ ACT Rules can be implemented in automated test tools and test methodologies. Too
 
 The status of an ACT-R rule is dependent on how many implementations have adopted the rule. Once a sufficient number of implementations is reached, the ACT rule will be considered for submission for publication as a W3C note for WCAG.
 
-| Status        | Description                                                                 |
-| ------------- | --------------------------------------------------------------------------- |
-| `New`         | The rule has no implementation                                              |
+| Status        | Description                              |
+| ------------- | ---------------------------------------- |
+| `New`         | The rule has no implementation           |
 | `In Progress` | The rule has less than 3 implementations |
-| `Done`        | The rule has 3 or more implementations                                      |
+| `Done`        | The rule has 3 or more implementations   |
 
 ## Contribute An Implementation
 

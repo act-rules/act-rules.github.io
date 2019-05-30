@@ -9,7 +9,7 @@ To display implementations on the ACT-R Community website, ACT-R use the [Evalua
 On the top level object, there should be a `@context` and `@graph`. The `@context` is a URL to a definition file that describes the data structure. The `@graph` property contains an array of `TestSubject` objects.
 
 ```json
-{ 
+{
   "@context": "https://act-rules.github.io/earl-context.json",
   "@graph": [ ... ]
 }
@@ -54,16 +54,20 @@ The following properties are required for each Assertion:
 
 ```json
 {
-  "@context": "https://act-rules.github.io/earl-context.json",
-  "@graph": [{
-    "@type": "TestSubject",
-    "source": "https://act-rules.github.io/testcases/a1b64e/6c3ac31577c3cb2d968fc26c4075dd533b5513fc.html",
-    "assertions": [{
-      "@type": "Assertion",
-      "test": { "title": "My Tool's rule title" },
-      "result": { "outcome": "earl:passed" }
-    }]
-  }]
+	"@context": "https://act-rules.github.io/earl-context.json",
+	"@graph": [
+		{
+			"@type": "TestSubject",
+			"source": "https://act-rules.github.io/testcases/a1b64e/6c3ac31577c3cb2d968fc26c4075dd533b5513fc.html",
+			"assertions": [
+				{
+					"@type": "Assertion",
+					"test": { "title": "My Tool's rule title" },
+					"result": { "outcome": "earl:passed" }
+				}
+			]
+		}
+	]
 }
 ```
 

@@ -1,9 +1,9 @@
 ---
 id: d0f69e
-name: All table header cells refer to data cells
+name: All table header cells has corresponding data cells
 rule_type: atomic
 description: |
-  This rule checks that each table header refers to data cells in a table element.
+  This rule checks that each table header has corresponding data cells in a table element.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true
@@ -18,17 +18,17 @@ authors:
 
 ## Applicability
 
-This rule applies to `th` elements in a `table` which are [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+This rule applies to `th` elements within a `table`, that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ## Expectation
 
-Each target element refers to data cells of the same `table`
+Each target element has corresponding data cells of the same `table`
 
 ## Assumptions
 
 - Tables are [well-formed, according to the HTML5.1 specification](https://www.w3.org/TR/html51/tabular-data.html#forming-a-table).
 
-## Accessibility support
+## Accessibility Support
 
 _There are no major accessibility support issues known for this rule._
 
@@ -36,6 +36,7 @@ _There are no major accessibility support issues known for this rule._
 
 - [Understanding Success Criterion 1.3.1: Information and relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H43)
+- [Forming relationships between data cells and header cells](https://www.w3.org/TR/html/tabular-data.html#forming-relationships-between-data-cells-and-header-cells)
 
 ## Test Cases
 
@@ -43,7 +44,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-`th` refers to cells within the same `table`.
+`th` has corresponding `cells` within the same `table`.
 
 ```html
 <table>
@@ -58,7 +59,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 2
 
-`th` refers to cells within the same `table`. Here the cells span multiple columns.
+`th` has corresponding `cells` within the same `table`. Here the cells span multiple columns.
 
 ```html
 <table>
@@ -78,7 +79,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 3
 
-The `columnheader` refers to `cells` within the same `table`, by usage of `headers` attribute.
+The `columnheader` has corresponding `cells` within the same `table`, by usage of `headers` attribute.
 
 ```html
 <table>
@@ -95,10 +96,10 @@ The `columnheader` refers to `cells` within the same `table`, by usage of `heade
 
 #### Passed Example 4
 
-The `columnheader` refers to cells within the same `table`, by usage of `aria-labelledby` attribute.
+The `columnheader` has corresponding `cells` within the same `table`, by usage of `aria-labelledby` attribute.
 
 ```html
-<table id="pass4">
+<table>
 	<tr>
 		<td aria-labelledby="hd2">Time</td>
 		<th id="hd2">05:44</th>
@@ -108,51 +109,62 @@ The `columnheader` refers to cells within the same `table`, by usage of `aria-la
 
 #### Passed example 5
 
- Each `th` element refers to cells within the same `table`, by usage of `scope` attribute.
+Each `th` element has corresponding `cells` within the same `table`, by usage of `scope` attribute.
 
- ```html
- <table>
-    <caption>Hogwarts Houses stars</caption>
+```html
+<table>
+  <caption>Hogwarts Houses stars</caption>
+  <tr>
+      <th scope="col">Name</th>
+      <th scope="col">House</th>
+  </tr>
+  <tr>
+      <th scope="row">Harry Potter</th>
+      <td>Gryffindor</td>
+  </tr>
+  <tr>
+      <th scope="row">Cedric Diggory</th>
+      <td>Hufflepuff</td>
+  </tr>
+  <tr>
+      <th scope="row">Cho Chang</th>
+      <td>Ravenclaw</td>
+  </tr>
     <tr>
-        <th scope="col">Name</th>
-        <th scope="col">House</th>
-    </tr>
-    <tr>
-        <th scope="row">Harry Potter</th>
-        <td>Gryffindor</td>
-    </tr>
-    <tr>
-        <th scope="row">Cedric Diggory</th>
-        <td>Hufflepuff</td>
-    </tr>
-    <tr>
-        <th scope="row">Cho Chang</th>
-        <td>Ravenclaw</td>
-    </tr>
-     <tr>
-        <th scope="row">Severus Snape</th>
-        <td>Slytherin</td>
-    </tr>
+      <th scope="row">Severus Snape</th>
+      <td>Slytherin</td>
+  </tr>
 </table>
- ```
+```
 
 ### Failed
 
 #### Failed Example 1
 
-The `columnheader` do not refer to `cells` within the `table`.
+There are no corresponding `cells` for each `th` element within the `table`.
 
 ```html
 <table>
 	<tr>
-		<th></th>
+		<th scope="col">Name</th>
+		<th scope="col">Age</th>
+		<th scope="col">Birthday</th>
+	</tr>
+	<tr>
+		<th scope="row">Jackie</th>
+		<td>5</td>
+		<td></td>
+	</tr>
+	<tr>
+		<th scope="row">Beth</th>
+		<td>8</td>
 	</tr>
 </table>
 ```
 
 #### Failed Example 2
 
-The `columnheader` do not refer to `cells` within the `table`, as cell is hidden.
+`th` has corresponding empty `cell`.
 
 ```html
 <table>
@@ -160,14 +172,45 @@ The `columnheader` do not refer to `cells` within the `table`, as cell is hidden
     <th>Time</th> 
   </tr>
   <tr> 
-    <td style="display: none">>24:00</td> 
+    <td></td> 
   </tr>
 </table>
+```
+
+#### Failed Example 3
+
+No data `cells` exist within the `table`.
+
+```html
+<table>
+	<tr>
+		<td>axe</td>
+		<td role="columnheader">AXE</td>
+	</tr>
+</table>
+
 ```
 
 ### Inapplicable
 
 #### Inapplicable Example 1
+
+The rule only applies only to `table > th` element. The `table` has no `th` elements.
+
+```html
+<table>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+  </tr>
+  <tr>
+    <td>Jane</td>
+    <td>Doe</td>
+  </tr>
+</table>
+```
+
+#### Inapplicable Example 2
 
 The rule only applies only to `table` & not layout table.
 
@@ -184,7 +227,7 @@ The rule only applies only to `table` & not layout table.
 </div>
 ```
 
-#### Inapplicable Example 2
+#### Inapplicable Example 3
 
 The rule only applies to `table` element that is included in the accessibility tree. The `table` is marked as `role=presentation`.
 
@@ -199,29 +242,14 @@ The rule only applies to `table` element that is included in the accessibility t
 </table>
 ```
 
-#### Inapplicable Example 3
-
-The rule only applies to `th` element that are included in the accessibility tree.
-
-```html
-<table>
-  <tr>  
-    <th aria-hidden='true'>Time</th> 
-  </tr>
-  <tr> 
-    <td>24:00</td> 
-  </tr>
-</table>
-```
-
 #### Inapplicable Example 4
 
-The rule only applies to `th` element that is `visible`.
+The rule only applies to `table` element that is included in the accessibility tree.
 
 ```html
-<table>
-  <tr> 
-    <th style="display: none">Time</th> 
+<table aria-hidden='true'>
+  <tr>  
+    <th>Time</th> 
   </tr>
   <tr> 
     <td>24:00</td> 

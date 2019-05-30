@@ -17,7 +17,7 @@ authors:
   - Wilco Fiers
   - Brian Bors
   - John Hicks
-  - Rafal Charlampozicz
+  - Rafal Charlampowicz
 ---
 
 ## Applicability

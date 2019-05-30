@@ -9,6 +9,10 @@
 			"url": "https://github.com/annethyme"
 		},
 		{
+			"name": "Annika Nietzio",
+			"url": "https://github.com/annika-FTB"
+		},
+		{
 			"name": "Audrey Maniez",
 			"url": "https://github.com/audreymaniez"
 		},
@@ -49,8 +53,16 @@
 			"url": "https://github.com/jkodu"
 		},
 		{
+			"name": "John Hicks",
+			"url": "https://github.com/john-urbilog"
+		},
+		{
 			"name": "Malin Øvrebø",
 			"url": "https: //github.com/MaliinO"
+		},
+		{
+			"name": "Rafal Charlampowicz",
+			"url": "https://github.com/Rafalchar"
 		},
 		{
 			"name": "Rob Fentress",
@@ -153,8 +165,11 @@
 	},
 	"jest": {
 		"verbose": true,
+		"bail": true,
 		"testPathIgnorePatterns": [
-			"<rootDir>/test/utils/"
+			"<rootDir>/test/utils/",
+			"<rootDir>/.cache/",
+			"<rootDir>/.public/"
 		]
 	}
 }

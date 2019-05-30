@@ -1,59 +1,97 @@
 ---
-name: Title of the rule
-rule_type: atomic (or) composite
+id: 
+name:
+rule_type: atomic
+
 description: |
-  Description of the rule
+  This rule checks ...
 
-success_criterion:
-- X.X.X (Eg: 2.1.2)
+accessibility_requirements: # Remove whatever is not applicable
+  wcag20:x.x.x: # <Name of Success Criterion> (A | AA | AAA)
+    forConformance: true | false
+    failed: not satisfied
+    passed: satisfied | further testing needed
+    inapplicable: satisfied | further testing needed
+    
+  aria11:x.x.x: # <Heading in WAI-ARIA>
+    forConformance:  true | false
+    failed: not satisfied
+    passed: satisfied | further testing needed
+    inapplicable: satisfied | further testing needed
 
-test_aspects:
-- Test Aspect (Eg: DOM Tree)
+  wcag-technique:x.x.x: # <Technique title>
+    forConformance:  true | false
+    failed: not satisfied
+    passed: satisfied | further testing needed
+    inapplicable: satisfied | further testing needed
+
+input_aspects:
+  -  # (e.g. HTTP Messages, DOM Tree, CSS Styling, Accessibility Tree, Language, etc.,)
 
 authors:
-- list of authors
+  -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
 ---
 
-## Test procedure
+## Applicability
 
-### Applicability
+The rule applies to any (??) element ...
 
-Applicability of the rule
+## Expectation (1)
 
-**Note**: Any Notes should follow this notation.
-
-### Expectation
-
-Expectations for the tests
+Each target element ...
 
 ## Assumptions
 
-_There are currently no assumptions/ add any assumptions as necessary_
+_There are currently no assumptions_
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule/ or add any support details as necessary_
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- List of links to any additional reading resources
+- (e.g. WCAG Techniques or links with background information mentioned in Applicability, Expectations or Assumptions)
 
 ## Test Cases
 
 ### Passed
 
+#### Passed Example 1
+
+Description...
+
 ```html
-Code snippet to demonstrate any passed test cases.
+<!-- code -->
 ```
+
+#### Passed Example 2
+
+...
 
 ### Failed
 
+#### Failed Example 1
+
+Description...
+
 ```html
-Code snippet to demonstrate any failed test cases.
+<!-- code -->
 ```
+
+#### Failed Example 2
+
+...
 
 ### Inapplicable
 
+#### Inapplicable Example 1
+
+Description...
+
 ```html
-Code snippet to demonstrate any inapplicable test cases.
+<!-- code -->
 ```
+
+#### Inapplicable Example 2
+
+...

@@ -14,7 +14,7 @@ input_aspects:
   - DOM Tree
 authors:
   - Bryn Anderson
-  - Anne Thyme
+  - Anne Thyme Nørregaard
 ---
 
 ## Applicability

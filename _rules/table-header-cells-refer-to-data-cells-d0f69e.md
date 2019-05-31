@@ -18,11 +18,11 @@ authors:
 
 ## Applicability
 
-This rule applies to `th` elements within a `table`, that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+This rule applies to `th` elements within a `table` that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ## Expectation
 
-Each target element has corresponding data cells of the same `table`
+Each target element is either the row header or the column header for data cells that is not empty (""), within the same `table`.
 
 ## Assumptions
 
@@ -101,8 +101,8 @@ The `columnheader` has corresponding `cells` within the same `table`, by usage o
 ```html
 <table>
 	<tr>
-		<td aria-labelledby="hd2">Time</td>
-		<th id="hd2">05:44</th>
+    <th id="hd2">Time</th>
+    <td aria-labelledby="hd2">05:44</td>
 	</tr>
 </table>
 ```
@@ -177,20 +177,6 @@ There are no corresponding `cells` for each `th` element within the `table`.
 </table>
 ```
 
-#### Failed Example 3
-
-No data `cells` exist within the `table`.
-
-```html
-<table>
-	<tr>
-		<td>axe</td>
-		<td role="columnheader">AXE</td>
-	</tr>
-</table>
-
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -212,7 +198,7 @@ The rule only applies only to `table > th` element. The `table` has no `th` elem
 
 #### Inapplicable Example 2
 
-The rule only applies only to `table` & not layout table.
+The rule only applies to `table` & not layout table.
 
 ```html
 <div role="table">
@@ -244,10 +230,10 @@ The rule only applies to `table` element that is included in the accessibility t
 
 #### Inapplicable Example 4
 
-The rule only applies to `table` element that is included in the accessibility tree.
+The rule only applies to `table` element that is visible.
 
 ```html
-<table aria-hidden='true'>
+<table style="display:none;">
   <tr>  
     <th>Time</th> 
   </tr>

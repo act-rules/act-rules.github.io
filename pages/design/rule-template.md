@@ -61,12 +61,40 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- Links to Techniques for WCAG 2.0
-- Latest version: Techniques for WCAG 2.0 W3C Working Group Note 8 April 2014
-- Link to other methodologies, test specifications or tools
-- Links to test cases, test suites, unit tests, etc.
-- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible WCAG-ACT-RULES-CG refers to those. Another source for test cases is the W3C Before and After Demonstration.
-- Other references
+<!-- Add an introduction if you want to add further information not available on another page -->
+
+### Understanding WCAG 
+
+<!-- Add links to understanding documents for all success criteria the rule maps to, either directly or through a composite rule. Remove if not applicable -->
+
+- [WCAG 2.0 - Understanding 4.1.2: Name, Role, Value](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
+
+### Related WCAG Techniques
+
+<!-- Add links to related techniques. Remove if not applicable -->
+
+- [G108: Using markup features to expose the name and role](https://www.w3.org/TR/WCAG20-TECHS/G108.html)
+
+### Standards and Definitions
+
+<!--
+Add links to related specifications or definitions within those specifications. Remove if not applicable
+
+- When linking to the entire specification, use the full name and number in the link text
+- When linking to a section, use the abbreviated name and version number of the specification, as well as the chapter name and number
+- When linking to a definition, use the abbreviated name and version number of the specification, followed by "definition:" and the definition term
+-->
+
+- [Accessible Rich Internet Applications 1.1](https://www.w3.org/TR/wai-aria-1.1/)
+- [WAI-ARIA 1.1: 6. Supported States and Properties](https://www.w3.org/TR/wai-aria/#states_and_properties)
+- [WCAG 2.1 definition: user interface component
+](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)
+
+### Further Reading
+
+<!-- Add links to related articles, blog posts, tools, other test suites, etc. Use the title of the article as a link text. Remove if not applicable -->
+
+- [Semantics and ARIA](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/)
 
 ## Test Cases
 
@@ -177,12 +205,40 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- Links to Techniques for WCAG 2.0
-- Latest version: Techniques for WCAG 2.0 W3C Working Group Note 8 April 2014
-- Link to other methodologies, test specifications or tools
-- Links to test cases, test suites, unit tests, etc.
-- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible WCAG-ACT-RULES-CG refers to those. Another source for test cases is the W3C Before and After Demonstration.
-- Other references
+<!-- Add an introduction if you want to add further information not available on another page -->
+
+### Understanding WCAG 
+
+<!-- Add links to understanding documents for all success criteria the rule maps to, either directly or through a composite rule. Remove if not applicable -->
+
+- [WCAG 2.0 - Understanding 4.1.2: Name, Role, Value](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
+
+### Related WCAG Techniques
+
+<!-- Add links to related techniques. Remove if not applicable -->
+
+- [G108: Using markup features to expose the name and role](https://www.w3.org/TR/WCAG20-TECHS/G108.html)
+
+### Standards and Definitions
+
+<!--
+Add links to related specifications or definitions within those specifications. Remove if not applicable
+
+- When linking to the entire specification, use the full name and number in the link text
+- When linking to a section, use the abbreviated name and version number of the specification, as well as the chapter name and number
+- When linking to a definition, use the abbreviated name and version number of the specification, followed by "definition:" and the definition term
+-->
+
+- [Accessible Rich Internet Applications 1.1](https://www.w3.org/TR/wai-aria-1.1/)
+- [WAI-ARIA 1.1: 6. Supported States and Properties](https://www.w3.org/TR/wai-aria/#states_and_properties)
+- [WCAG 2.1 definition: user interface component
+](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)
+
+### Further Reading
+
+<!-- Add links to related articles, blog posts, tools, other test suites, etc. Use the title of the article as a link text. Remove if not applicable -->
+
+- [Semantics and ARIA](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/)
 
 ## Test Cases
 

@@ -254,7 +254,7 @@ Programatically associated `p` element that is neither visible nor included in t
 <input aria-labelledby="label_fname" type="text" name="fname"/>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 The `label` element is associated with an HTML element that does not have a form field semantic role.
 

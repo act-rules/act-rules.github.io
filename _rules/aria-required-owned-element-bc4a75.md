@@ -1,11 +1,16 @@
 ---
 id: bc4a75
 name: ARIA required owned elements
+rule_type: atomic
 description: |
-	This rule checks that each role has at least one of its required owned elements.
-success_criterion:
-- 1.3.1 # Info and Relationships (A)
-test_aspects:
+ This rule checks that each role has at least one of its required owned elements.
+accessibility_requirements:
+ wcag20:1.3.1: # Info and Relationships (A)
+  forConformance: true
+  failed: not satisfied
+  passed: further testing needed
+  inapplicable: further testing needed
+input_aspects:
 - DOM Tree
 - CSS Styling
 authors:
@@ -13,13 +18,11 @@ authors:
 - Jey Nandakumar
 ---
 
-## Test procedure
-
-### Applicability
+## Applicability
 
 This rule applies to any HTML or SVG element that is [exposed to assistive technologies](#exposed-to-assistive-technologies) and has an explicit [semantic role](#semantic-role) that has [WAI-ARIA required owned elements](https://www.w3.org/TR/wai-aria/#mustContain), except when the owned element has an implicit semantic role that is identical to its explicit semantic role.
 
-### Expectation
+## Expectation
 
 The target element [owns](#owned-by) at least one instance of one of its [WAI-ARIA required owned element](https://www.w3.org/TR/wai-aria-1.1/#mustContain).
 

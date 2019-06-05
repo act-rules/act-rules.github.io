@@ -119,6 +119,21 @@ export default ({ data }) => {
 						{/* title */}
 						<h1>{frontmatter.name}</h1>
 					</header>
+					{/* frontmatter */}
+					<ul className="meta">
+						{getRuleType(frontmatter.rule_type)}
+						<li>{getAccessibilityRequirements(accessibility_requirements)}</li>
+						<li>{getInputAspects(frontmatter.input_aspects)}</li>
+						<li>
+							{getInputRulesForRule(
+								frontmatter.input_rules,
+								allRules.edges,
+								true
+							)}
+						</li>
+						<li>{getAuthors(frontmatter.authors)}</li>
+					</ul>
+
 					{/* Description */}
 					<br />
 					<div
@@ -137,21 +152,6 @@ export default ({ data }) => {
 				</section>
 				{/* Toc */}
 				<div className="toc">
-					{/* frontmatter */}
-
-					<ul className="meta-data">
-						{getRuleType(frontmatter.rule_type)}
-						<li>{getAccessibilityRequirements(accessibility_requirements)}</li>
-						<li>{getInputAspects(frontmatter.input_aspects)}</li>
-						<li>
-							{getInputRulesForRule(
-								frontmatter.input_rules,
-								allRules.edges,
-								true
-							)}
-						</li>
-						<li>{getAuthors(frontmatter.authors)}</li>
-					</ul>
 					<span role="heading" aria-level="1" className="heading">
 						Table of Contents
 					</span>

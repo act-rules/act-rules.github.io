@@ -103,8 +103,8 @@ The accessible name is not only whitespace.
 
 ```html
 <label>
-  :-)
-  <input/>
+	:-)
+	<input />
 </label>
 ```
 
@@ -167,10 +167,10 @@ The explicit label is not supported on `div` elements.
 The accessible name is not only whitespace.
 
 ```html
-<label> <input/></label>
+<label> <input /></label>
 ```
 
-### Inapplicable 
+### Inapplicable
 
 #### Inapplicable Example 1
 

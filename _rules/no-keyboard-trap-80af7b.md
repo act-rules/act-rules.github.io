@@ -14,7 +14,7 @@ input_rules:
   - a1b64e
   - ebe86a
 authors:
-	- Geir Sindre Fossøy
+  - Geir Sindre Fossøy
   - Dagfinn Rømen
   - Anne Thyme Nørregaard
 ---
@@ -36,7 +36,7 @@ For each test target, the outcome of one of the following rules is "passed":
 
 _There are currently no assumptions._
 
-## Accessibility support
+## Accessibility Support
 
 _There are no major accessibility support issues known for this rule._
 

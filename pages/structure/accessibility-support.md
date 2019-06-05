@@ -6,7 +6,7 @@ title: Accessibility Support
 
 ## Accessibility Support (document/section)
 
-This research effort (test suite, document, application) is focused on fostering and promoting the concept of developers '''Building to Spec''' both semantically and syntactically, rather than building to a current browser or assistive technologies (user-agent/AT) limited implementation support of specifications - or some version of jury-rigging or optimizing code to favor one UA/AT over another. Specifically WCAG-ACT-RULES-CG's testing rules are defined by the current specifications for WCAG2, HTML4, HTML5, (CSS3 ?) and ARIA1.
+This research effort (test suite, document, application) is focused on fostering and promoting the concept of developers '''Building to Spec''' both semantically and syntactically, rather than building to a current browser or assistive technologies (user-agent/AT) limited implementation support of specifications - or some version of jury-rigging or optimizing code to favor one UA/AT over another. Specifically ACT-Rules Community's testing rules are defined by the current specifications for WCAG2, HTML4, HTML5, (CSS3 ?) and ARIA1.
 
 As this effort matures and new technologies reach CR, they will included/added to data that governs the test rules.
 

@@ -281,5 +281,5 @@ Non-widget element that does not participate in sequential focus navigation.
 Non-widget element that does not participate in sequential focus navigation.
 
 ```html
-<input type="button" role="none" tabindex="-2" autocomplete="username">
+<input type="button" role="none" tabindex="-2" autocomplete="username" />
 ```

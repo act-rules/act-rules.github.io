@@ -1,6 +1,6 @@
 const {
 	www: { url, baseDir },
-	name: pkgName,
+	author,
 	description,
 } = require('./../package.json')
 const createFile = require('../build/create-file')
@@ -10,7 +10,7 @@ const createFile = require('../build/create-file')
  */
 const createTestcasesJson = async testcases => {
 	const AllTestcasesData = {
-		name: `${pkgName} test cases`,
+		name: `${author} test cases`,
 		website: url,
 		license: `${url}/pages/license/`,
 		description,

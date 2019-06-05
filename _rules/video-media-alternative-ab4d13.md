@@ -4,7 +4,8 @@ name: Video as a media alternative for text
 rule_type: atomic
 description: |
   This rule checks non-streaming `video` is a media alternative for text on the page.
-test_aspects:
+accessibility_requirements:
+input_aspects:
   - DOM Tree
   - CSS Styling
   - Audio output
@@ -13,17 +14,15 @@ authors:
   - Brian Bors
 ---
 
-## Test Procedure
-
-### Applicability
+## Applicability
 
 The rule applies to every [non-streaming](#non-streaming) `video` element that is [visible](#visible), where the video contains audio.
 
-### Expectation 1
+## Expectation 1
 
 All the information contained in each test target is available as text that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
-### Expectation 2
+## Expectation 2
 
 Each test target is labelled as a video alternative for text on the page. This label is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
@@ -33,7 +32,7 @@ Each test target is labelled as a video alternative for text on the page. This l
 
 This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
-## Accessibility support
+## Accessibility Support
 
 There are no major accessibility support issues known for this rule.
 
@@ -44,11 +43,11 @@ There are no major accessibility support issues known for this rule.
 - [G78:Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G78)
 - [H96:Using the track element to provide audio descriptions](https://www.w3.org/WAI/GL/2016/WD-WCAG20-TECHS-20160105/H96)
 
-## Test cases
+## Test Cases
 
 ### Passed
 
-#### Pass example 1
+#### Pass Example 1
 
 A video element that describes some of the text on the same page. The text on the page labels the video as an alternative.
 
@@ -68,7 +67,7 @@ A video element that describes some of the text on the same page. The text on th
 
 ### Failed
 
-#### Fail example 1
+#### Fail Example 1
 
 A video element that describes some of the text on the same page. The video contains more information than the text does.
 
@@ -85,7 +84,7 @@ A video element that describes some of the text on the same page. The video cont
 ></video>
 ```
 
-#### Fail example 2
+#### Fail Example 2
 
 A video element that describes some of the text on the same page. The text is not visible on the page.
 
@@ -103,7 +102,7 @@ A video element that describes some of the text on the same page. The text is no
 ></video>
 ```
 
-#### Fail example 3
+#### Fail Example 3
 
 A video element that describes some of the text on the same page. The text on the page does not label the video as an alternative.
 
@@ -120,7 +119,7 @@ A video element that describes some of the text on the same page. The text on th
 ></video>
 ```
 
-#### Fail example 4
+#### Fail Example 4
 
 A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the label is not visible on the page.
 
@@ -142,7 +141,7 @@ A video element that describes some of the text on the same page. The text on th
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 A video element without audio. The text on the page labels the video as an alternative.
 
@@ -160,7 +159,7 @@ A video element without audio. The text on the page labels the video as an alter
 ></video>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the video is not visible on the page.
 

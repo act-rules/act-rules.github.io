@@ -1,11 +1,16 @@
 ---
 id: f51b46
 name: video has captions
+rule_type: atomic
 description: |
   Captions are available for audio information in non-streaming `video` elements.
-success_criterion:
-  - 1.2.2 # Captions (Prerecorded)
-test_aspects:
+accessibility_requirements:
+  wcag20:1.2.2: # Captions (Prerecorded) (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
   - DOM Tree
   - CSS Styling
   - Audio output
@@ -15,13 +20,11 @@ authors:
   - Brian Bors
 ---
 
-## Test Procedure
-
-### Applicability
+## Applicability
 
 The rule applies to every [non-streaming](#non-streaming) `video` element thst is [visible](#visible) where the video contains [audio](#audio).
 
-### Expectation
+## Expectation
 
 For each test target, audio information that is not conveyed visually in the video, is available through [captions](#captions).
 
@@ -31,7 +34,7 @@ _Note_: Captions can be either embedded in the video file itself or can be made 
 
 This rule assumes that the video element is used to play a video (for example, not only used to display an image), and that there is a mechanism to start the video.
 
-## Accessibility support
+## Accessibility Support
 
 There are no major accessibility support issues known for this rule.
 
@@ -46,7 +49,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 A video element that has captions for all the audio backed into it.
 
@@ -57,7 +60,7 @@ A video element that has captions for all the audio backed into it.
 ></video>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 A video element with an associated track element that contain captions for all the audio.
 
@@ -72,7 +75,7 @@ A video element with an associated track element that contain captions for all t
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 A video element with any form of captions.
 
@@ -83,7 +86,7 @@ A video element with any form of captions.
 ></video>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 A video element with an associated track element that contain incorrect captions.
 
@@ -99,7 +102,7 @@ A video element with an associated track element that contain incorrect captions
 </video>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 A video element with a text on the same page that described the audio in the video.
 
@@ -117,7 +120,7 @@ A video element with a text on the same page that described the audio in the vid
 ></video>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 A video element with an explicitly associated text on the same page that described the audio in the video.
 
@@ -138,7 +141,7 @@ A video element with an explicitly associated text on the same page that describ
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 A video element without audio.
 
@@ -149,7 +152,7 @@ A video element without audio.
 ></video>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 A video element without that is not visible on the page.
 

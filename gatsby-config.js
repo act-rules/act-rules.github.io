@@ -1,9 +1,8 @@
 const pkg = require('./package.json')
-const siteTitle = pkg.name.split('-').join(' ')
 
 module.exports = {
 	siteMetadata: {
-		title: siteTitle,
+		title: pkg.author,
 		description: pkg.description,
 		author: pkg.author,
 		keywords: pkg.keywords,
@@ -17,12 +16,9 @@ module.exports = {
 			resolve: `gatsby-plugin-manifest`,
 			options: {
 				name: `gatsby-starter-default`,
-				short_name: `starter`,
 				start_url: `/`,
-				background_color: `#663399`,
-				theme_color: `#663399`,
-				display: `minimal-ui`,
-				icon: `src/images/logo.png`, // This path is relative to the root of the site.
+
+				icon: `src/images/logo.png`,
 			},
 		},
 		{

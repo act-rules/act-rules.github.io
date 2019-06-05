@@ -4,9 +4,10 @@
  * -> copy `./test-assets/*` into `./public`
  * -> create `testcases.json` into `./public`
  */
-
+const fs = require('fs')
 const objectHash = require('object-hash')
 const codeBlocks = require('gfm-code-blocks')
+const fastmatter = require('fastmatter')
 const {
 	www: { url, baseDir },
 } = require('./../package.json')
@@ -38,10 +39,11 @@ const createTestcasesOfAllRules = options => {
 		allRulePages.forEach(markdownPage => {
 			const { node } = markdownPage
 			const { rawMarkdownBody, frontmatter, fields } = node
+			const { fastmatterAttributes } = fields
 			const {
-				name: ruleName,
-				success_criterion: ruleSuccessCriterion,
-			} = frontmatter
+				accessibility_requirements: ruleAccessibilityRequirements,
+			} = JSON.parse(fastmatterAttributes)
+			const { name: ruleName } = frontmatter
 			const { slug } = fields
 			const ruleId = slug.replace('rules/', '')
 			const codeTitles = getAllMatchesForRegex(
@@ -115,7 +117,7 @@ const createTestcasesOfAllRules = options => {
 				ruleId,
 				ruleName,
 				ruleTestcases,
-				ruleSuccessCriterion,
+				ruleAccessibilityRequirements,
 			})
 		})
 

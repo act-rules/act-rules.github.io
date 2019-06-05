@@ -1,24 +1,27 @@
 ---
 id: 5b7ae0
 name: HTML lang and xml:lang match
+rule_type: atomic
 description: |
   The rule checks that for the `html` element, there is no mismatch between the primary language in non-empty `lang` and `xml:lang` attributes, if both are used.
-success_criterion:
-  - 3.1.1
-test_aspects:
+accessibility_requirements:
+  wcag20:3.1.1: # Language of Page (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
   - DOM Tree # The tree that HTML is parsed into.
 authors:
   - Annika Nietzio
   - Jey Nandakumar
 ---
 
-## Test Procedure
+## Applicability
 
-### Applicability
+The root element of the page, if it is an `html` element with both `lang` and `xml:lang` attributes that has a [valid language subtag](#valid-language-subtag).
 
-The root element of the page, if it is an `html` element with both [non-empty](#non-empty) `lang` and `xml:lang` attributes that has a [valid language subtag](#valid-language-subtag).
-
-### Expectation
+## Expectation
 
 The value of the primary language subtag (characters before the first dash) for the `lang` and `xml:lang` attributes are the same.
 
@@ -43,7 +46,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 `html` element with matching value for `lang` and `xml:lang`.
 
@@ -51,7 +54,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 <html lang="en" xml:lang="en"></html>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 `html` element with varied case but matching value for `lang` and `xml:lang`.
 
@@ -59,7 +62,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 <html lang="en" xml:lang="En"></html>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 `html` element with varied case but matching primary sub-tag value for `lang` and `xml:lang`.
 
@@ -67,7 +70,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 <html lang="en" xml:lang="en-GB"></html>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 `html` element with varied case but matching primary sub-tag value for `lang` and `xml:lang`.
 
@@ -75,7 +78,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 <html lang="en-GB" xml:lang="en"></html>
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 `html` element with varied case but matching primary sub-tag value for `lang` and `xml:lang`, albeit the value `XYZ` is not valid.
 
@@ -85,7 +88,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 `html` element with non-matching value for `lang` and `xml:lang`.
 
@@ -95,7 +98,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 `svg` element is not applicable for this rule.
 
@@ -103,7 +106,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 <svg xmlns="http://www.w3.org/2000/svg" lang="en" xml:lang="en">
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 `xml:lang` is empty, the rule mandates `non-empty` values.
 
@@ -111,7 +114,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 <html lang="fr" xml:lang=""></html>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 Only `non-empty` values are considered.
 

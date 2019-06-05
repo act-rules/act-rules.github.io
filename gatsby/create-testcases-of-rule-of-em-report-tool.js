@@ -12,7 +12,12 @@ const createFile = require('./../build/create-file')
  * Create testcases json file that can be used by
  */
 const createTestcasesOfRuleOfEmReportTool = async options => {
-	const { ruleId, ruleName, ruleTestcases, ruleSuccessCriterion } = options
+	const {
+		ruleId,
+		ruleName,
+		ruleTestcases,
+		ruleAccessibilityRequirements,
+	} = options
 
 	const title = `Report for ACT-R Rule - ${ruleName}`
 	const siteName = `ACT-R Rule - ${ruleName}`
@@ -29,7 +34,11 @@ const createTestcasesOfRuleOfEmReportTool = async options => {
 		}
 	})
 
-	const ruleScs = ruleSuccessCriterion === null ? [] : ruleSuccessCriterion
+	const ruleScs = ruleAccessibilityRequirements
+		? Object.keys(ruleAccessibilityRequirements).map(key => {
+				return key.split(':').pop()
+		  })
+		: []
 	const matchingScTests = ruleScs.map(scNum => {
 		return scUrlsMetaData[scNum].test.toLowerCase()
 	})

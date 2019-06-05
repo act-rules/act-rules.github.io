@@ -4,9 +4,13 @@ name: attributes are not duplicated
 rule_type: atomic
 description: |
   This rule checks that HTML and SVG starting tags do not contain duplicated attributes.
-success_criterion:
-  - 4.1.1 # Parsing
-test_aspects:
+accessibility_requirements:
+  wcag20:4.1.1: # Parsing (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
   - Source code
 authors:
   - Wilco Fiers
@@ -27,7 +31,7 @@ For each test target, there are no duplicated [attributes](https://www.w3.org/TR
 
 _There are currently no assumptions._
 
-## Accessibility support
+## Accessibility Support
 
 _There are no major accessibility support issues known for this rule._
 
@@ -39,7 +43,7 @@ _There are no major accessibility support issues known for this rule._
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 No attributes are duplicated.
 
@@ -47,7 +51,7 @@ No attributes are duplicated.
 <img src="image.jpg" alt="" />
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 No attributes, therefore no attributes are duplicated.
 
@@ -55,7 +59,7 @@ No attributes, therefore no attributes are duplicated.
 <br />
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 Empty attributes, no attributes are duplicated.
 
@@ -63,7 +67,7 @@ Empty attributes, no attributes are duplicated.
 <input type="checkbox" disabled readonly />
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 SVG, no attributes are duplicated.
 
@@ -73,7 +77,7 @@ SVG, no attributes are duplicated.
 </svg>
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 Script, no attributes are duplicated. HTML or SVG code within a script should be ignored.
 
@@ -85,7 +89,7 @@ Script, no attributes are duplicated. HTML or SVG code within a script should be
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 At least one attribute is duplicated.
 
@@ -93,7 +97,7 @@ At least one attribute is duplicated.
 <img src="image.jpg" alt="" alt="image" />
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 Empty attributes, at least one attribute is duplicated.
 
@@ -101,7 +105,7 @@ Empty attributes, at least one attribute is duplicated.
 <input type="checkbox" disabled="disabled" disabled readonly />
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 SVG, at least one attribute is duplicated.
 
@@ -113,7 +117,7 @@ SVG, at least one attribute is duplicated.
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Code is XML, and not HTML or SVG.
 
@@ -122,7 +126,7 @@ Code is XML, and not HTML or SVG.
 <earl:TestResult rdf:about="#result"></earl>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 Code is JavaScript, and not HTML or SVG.
 

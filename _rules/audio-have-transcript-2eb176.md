@@ -4,7 +4,9 @@ name: audio elements have a transcript
 rule_type: atomic
 description: |
   Non-streaming `audio` elements must have a text alternative for all included auditory information.
-test_aspects:
+accessibility_requirements:
+
+input_aspects:
   - DOM Tree
   - CSS Styling
   - Audio output
@@ -13,9 +15,7 @@ authors:
   - Brian Bors
 ---
 
-## Test Procedure
-
-### Applicability
+## Applicability
 
 The rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:
 
@@ -24,7 +24,7 @@ The rule applies to every [non-streaming](#non-streaming-media-element) `audio` 
 
 **Note:** A play button is an interactive element that when activated, plays the audio.
 
-### Expectation
+## Expectation
 
 The auditory information of each test target is available through a text transcript. That text transcript is [visibile](#visible) and [included-in-the-accessibility-tree](#included-in-the-accessibility-tree), either on the page or through a link.
 
@@ -34,7 +34,7 @@ The auditory information of each test target is available through a text transcr
 
 _There are currently no assumptions_
 
-## Accessibility support
+## Accessibility Support
 
 There are no major accessibility support issues known for this rule.
 
@@ -47,7 +47,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 Audio with controls and internal transcript
 
@@ -63,7 +63,7 @@ Audio with controls and internal transcript
 </p>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 Audio with controls and external transcript
 
@@ -72,7 +72,7 @@ Audio with controls and external transcript
 <a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</a>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 Audio with autoplay and external transcript
 
@@ -83,7 +83,7 @@ Audio with autoplay and external transcript
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Audio with controls and no transcript
 
@@ -91,7 +91,7 @@ Audio with controls and no transcript
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 Audio with controls and incorrect internal transcript
 
@@ -107,7 +107,7 @@ Audio with controls and incorrect internal transcript
 </p>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 Audio with controls and incorrect external transcript
 
@@ -118,7 +118,7 @@ Audio with controls and incorrect external transcript
 >
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 Audio with autoplay and incorrect external transcript
 
@@ -129,7 +129,7 @@ Audio with autoplay and incorrect external transcript
 >
 ```
 
-#### Failed example 5
+#### Failed Example 5
 
 Audio with controls and invisible internal transcript
 
@@ -145,7 +145,7 @@ Audio with controls and invisible internal transcript
 </p>
 ```
 
-#### Failed example 6
+#### Failed Example 6
 
 Audio with controls and internal transcript that is not exposed to the accessibility tree
 
@@ -163,7 +163,7 @@ Audio with controls and internal transcript that is not exposed to the accessibi
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Audio without controls.
 
@@ -171,7 +171,7 @@ Audio without controls.
 <audio src="../test-assets/moon-audio/moon-speech.mp3"></audio>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 Audio with hidden controls.
 

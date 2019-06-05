@@ -4,7 +4,8 @@ name: video only element has transcript
 rule_type: atomic
 description: |
   Non-streaming `video` elements without audio must have all visual information available in a transcript.
-test_aspects:
+accessibility_requirements:
+input_aspects:
   - DOM Tree
   - CSS Styling
   - Audio output
@@ -14,15 +15,13 @@ authors:
   - Brian Bors
 ---
 
-## Test Procedure
-
-### Applicability
+## Applicability
 
 The rule applies to any [non-streaming](#non-streaming) `video` element [visible](#visible) where the video doesn't contain audio.
 
-### Expectation
+## Expectation
 
-The visual information of each test target is available through a text transcript that is available either on the page or through a link. The text transcript needs to be [visibile](#visible) and [included-in-the-accessibility-tree](#included-in-the-accessibility-tree).
+The visual information of each test target is available through a text transcript that is available either on the page or through a link. The text transcript needs to be [visible](#visible) and [included-in-the-accessibility-tree](#included-in-the-accessibility-tree).
 
 **Note**: A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
 
@@ -30,7 +29,7 @@ The visual information of each test target is available through a text transcrip
 
 This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
-## Accessibility support
+## Accessibility Support
 
 There are no major accessibility support issues known for this rule.
 
@@ -41,9 +40,9 @@ There are no major accessibility support issues known for this rule.
 
 ## Test Cases
 
-## Passed
+### Passed
 
-#### Pass example 1
+#### Pass Example 1
 
 A silent video element with a text transcript on the same page.
 
@@ -57,7 +56,7 @@ He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
-#### Pass example 2
+#### Pass Example 2
 
 A silent video element with a link to a text transcript on a different page.
 
@@ -69,9 +68,9 @@ A silent video element with a link to a text transcript on a different page.
 <a href="/test-assets/rabbit-video-transcript.html">Transcript</p>
 ```
 
-## Failed
+### Failed
 
-#### Fail example 1
+#### Fail Example 1
 
 A silent video element with an incorrect text transcript on the same page.
 
@@ -85,7 +84,7 @@ He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
-#### Fail example 2
+#### Fail Example 2
 
 A silent video element with a link to an incorrect text transcript on a different page.
 
@@ -97,7 +96,7 @@ A silent video element with a link to an incorrect text transcript on a differen
 <a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</p>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 A silent video element with an invisible text transcript on the same page.
 
@@ -111,7 +110,7 @@ He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 A silent video element with a text transcript on the same page that is not included in the accessibility tree.
 
@@ -125,9 +124,9 @@ He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
-## Inapplicable
+### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 A silent video element that is not visible on the page.
 
@@ -139,7 +138,7 @@ A silent video element that is not visible on the page.
 <a href="/test-assets/rabbit-video-transcript.html">Transcript</p>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 A video element with audio.
 

@@ -1,20 +1,23 @@
 ---
 id: e086e5
 name: Form field has accessible name
+rule_type: atomic
 description: |
   Each form field element has an accessible name
-success_criterion:
-  - 4.1.2 # Name, Role, Value
-test_aspects:
+accessibility_requirements:
+  wcag20:4.1.2: # Name, Role, Value (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
   - DOM Tree
 authors:
   - Anne Thyme Nørregaard
   - Bryn Anderson
 ---
 
-## Test procedure
-
-### Applicability
+## Applicability
 
 This rule applies to any element that is [included in the accessibility tree](#included-in-the-accessibility-tree), and that has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider, spinbutton`, `switch`, `textbox`.
 
@@ -24,9 +27,9 @@ This rule applies to any element that is [included in the accessibility tree](#i
 - does not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
 - The `option` role is not part of the list of applicable roles, because it does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an accessible name.
 
-### Expectation
+## Expectation
 
-Each target element has an [accessible name](#accessible-name) that is [non-empty](#non-empty).
+Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
 
 ## Assumptions
 
@@ -43,11 +46,11 @@ Certain assistive technologies can be set up to ignore the title attribute, whic
 
 **Note**: This rule does not fail 3.3.2 as there are sufficient techniques within 3.3.2 that don't need the elements to have an accessible name. For example "G131: Providing descriptive labels" **AND** "G162: Positioning labels to maximize predictability of relationships" would be sufficient.
 
-## Test cases
+## Test Cases
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 Implicit role with implicit label.
 
@@ -58,7 +61,7 @@ Implicit role with implicit label.
 </label>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 Implicit role with aria-label
 
@@ -66,7 +69,7 @@ Implicit role with aria-label
 <input aria-label="last name" disabled />
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 Implicit role with explicit label
 
@@ -77,7 +80,7 @@ Implicit role with explicit label
 </select>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 Implicit role with `aria-labelledby`.
 
@@ -86,7 +89,7 @@ Implicit role with `aria-labelledby`.
 <textarea aria-labelledby="country"></textarea>
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 Explicit role.
 
@@ -94,9 +97,20 @@ Explicit role.
 <div aria-label="country" role="combobox" aria-disabled="true">England</div>
 ```
 
+#### Passed example 6
+
+The accessible name is not only whitespace.
+
+```html
+<label>
+	:-)
+	<input />
+</label>
+```
+
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 No accessible name.
 
@@ -104,15 +118,15 @@ No accessible name.
 <input />
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
-Non-focusable still need an accessible name.
+Non-focusable element still needs an accessible name.
 
 ```html
 <input tabindex="-1" />
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 `aria-label` with empty text string
 
@@ -120,17 +134,17 @@ Non-focusable still need an accessible name.
 <div aria-label=" " role="combobox">England</div>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
-Label does not exist.
+The label does not exist.
 
 ```html
 <div aria-labelledby="non-existing" role="combobox">England</div>
 ```
 
-#### Failed example 5
+#### Failed Example 5
 
-Implicit label not supported on div elements.
+The implicit label is not supported on `div` elements.
 
 ```html
 <label>
@@ -139,18 +153,26 @@ Implicit label not supported on div elements.
 </label>
 ```
 
-#### Failed example 6
+#### Failed Example 6
 
-Explicit label not supported on div elements.
+The explicit label is not supported on `div` elements.
 
 ```html
 <label for="lastname">first name</label>
 <div role="textbox" id="lastname"></div>
 ```
 
+#### Failed example 7
+
+The accessible name is not only whitespace.
+
+```html
+<label> <input /></label>
+```
+
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Hidden to everyone.
 
@@ -158,7 +180,7 @@ Hidden to everyone.
 <input aria-label="firstname" style="display:none;" />
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 Hidden to assistive technologies.
 
@@ -166,15 +188,15 @@ Hidden to assistive technologies.
 <input aria-hidden="true" aria-label="firstname" />
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
-Explicitly set the role to something that isn't a form field.
+Role has explicitely been set to something that isn't a form field.
 
 ```html
 <input role="presentation" />
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 Option inherits from input, but has a required context role of listbox which inherits from select. We should therefore not consider option as applicable.
 

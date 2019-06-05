@@ -4,28 +4,27 @@ name: Document title is descriptive
 rule_type: atomic
 description: |
   This rule checks that the document title describes the topic or purpose of the document.
-
-success_criterion:
-  - 2.4.2 # Page Titled (A)
-
-test_aspects:
+accessibility_requirements:
+  wcag20:2.4.2: # Page Titled (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
   - DOM Tree
-
 authors:
   - Anne Thyme Nørregaard
-  - Corbb O’Connor
+  - Corbb O'Connor
 ---
 
-## Test procedure
-
-### Applicability
+## Applicability
 
 This rule applies to the first HTML `title` element that
 
 - is a [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) of a [document element](https://www.w3.org/TR/dom/#document-element) that is an HTML `html` element, and
 - contains [children](https://www.w3.org/TR/dom/#concept-tree-child) that are [text nodes](https://www.w3.org/TR/dom/#text) that are not only [whitespace](#whitespace).
 
-### Expectation
+## Expectation
 
 The target element describes the topic or purpose of the overall content of the [document](https://www.w3.org/TR/dom/#concept-document).
 
@@ -47,7 +46,7 @@ _There are no assumptions for this rule._
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 The `<title>` element describes the content of the document.
 
@@ -64,7 +63,7 @@ The `<title>` element describes the content of the document.
 </html>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 Two `<title>` elements where the first one describes the content of the document.
 
@@ -82,7 +81,7 @@ Two `<title>` elements where the first one describes the content of the document
 </html>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 Even though the descriptive `<title>` element is not placed within the `<head>` element that is the context the element can be used in [according to the HTML specification](https://www.w3.org/TR/html/document-metadata.html#the-title-element), the rule still passes, since the browser fixes it, and it doesn't cause any known accessibility issues.
 
@@ -98,7 +97,7 @@ Even though the descriptive `<title>` element is not placed within the `<head>` 
 </html>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 `<title>` element with content present in document, and the title is descriptive of the content, even though it does not contain letters or numbers.
 
@@ -119,7 +118,7 @@ Even though the descriptive `<title>` element is not placed within the `<head>` 
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 `<title>` is not descriptive of the content of the document.
 
@@ -136,7 +135,7 @@ Even though the descriptive `<title>` element is not placed within the `<head>` 
 </html>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 Even though a correct `<title>` element is put in the `<head>` of the document, this rule only looks at the first `<title>` element.
 
@@ -154,7 +153,7 @@ Even though a correct `<title>` element is put in the `<head>` of the document, 
 </html>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 `<title>` element with content present in document, but it is not descriptive of the content.
 
@@ -173,7 +172,7 @@ Even though a correct `<title>` element is put in the `<head>` of the document, 
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 No `<title>` element present in document.
 
@@ -188,7 +187,7 @@ No `<title>` element present in document.
 </html>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 `<title>` element present in document, but is empty.
 
@@ -205,7 +204,7 @@ No `<title>` element present in document.
 </html>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 This document has a `<title>` element but is inapplicable since the document element is an SVG `<svg>` element.
 
@@ -216,7 +215,7 @@ This document has a `<title>` element but is inapplicable since the document ele
 </svg>
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 First `<title>` element is empty
 
@@ -234,7 +233,7 @@ First `<title>` element is empty
 </html>
 ```
 
-#### Inapplicable example 5
+#### Inapplicable Example 5
 
 First `<title>` element contains only whitespace
 

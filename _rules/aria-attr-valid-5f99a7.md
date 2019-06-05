@@ -1,23 +1,26 @@
 ---
 id: 5f99a7
 name: ARIA attribute is valid
+rule_type: atomic
 description: |
   This rule checks that each aria- attribute specified is defined in ARIA 1.1
-success_criterion:
-  - 4.1.2
-test_aspects:
+accessibility_requirements:
+  wcag20:4.1.2: # Name, Role, Value (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
   - DOM Tree
 authors:
   - Jey Nandakumar
 ---
 
-## Test procedure
-
-### Applicability
+## Applicability
 
 Any attribute that starts with `aria-`.
 
-### Expectation
+## Expectation
 
 Each target attribute is defined in [WAI ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/).
 
@@ -38,11 +41,11 @@ There are no major accessibility support issues known for this rule.
 - [Semantics and ARIA](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/)
 - [WAI ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/)
 
-## Test cases
+## Test Cases
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 A valid ARIA 1.1 attribute `aria-atomic` is used on element `article`.
 
@@ -50,7 +53,7 @@ A valid ARIA 1.1 attribute `aria-atomic` is used on element `article`.
 <article aria-atomic>This is a decription of something cool...</article>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 A valid ARIA 1.1 attribute `aria-modal` on element `div` with role `dialog`
 
@@ -58,7 +61,7 @@ A valid ARIA 1.1 attribute `aria-modal` on element `div` with role `dialog`
 <div role="dialog" aria-modal>Contains modal content...</div>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 A valid ARIA 1.1 attribute `aria-live` on element `div` with role `alert`
 
@@ -68,7 +71,7 @@ A valid ARIA 1.1 attribute `aria-live` on element `div` with role `alert`
 </div>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 Muliple valid ARIA 1.1 attributes `aria-*` are specified on element `input` with role `spinbutton`
 
@@ -85,7 +88,7 @@ Muliple valid ARIA 1.1 attributes `aria-*` are specified on element `input` with
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 `aria-not-checked` is not a defined attribute in ARIA 1.1.
 
@@ -93,7 +96,7 @@ Muliple valid ARIA 1.1 attributes `aria-*` are specified on element `input` with
 <li role="menuitemcheckbox" aria-not-checked="true">List Item</li>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 `aria-labelled` is not a defined attribute in ARIA 1.1.
 
@@ -111,7 +114,7 @@ Muliple valid ARIA 1.1 attributes `aria-*` are specified on element `input` with
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Element without `aria-*` attribute.
 

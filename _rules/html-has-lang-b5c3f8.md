@@ -108,7 +108,7 @@ The `xml:lang` attribute specifies a value that is not empty (""). The rule does
 The `xml:lang` attribute specifies a value that is not empty (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
 
 ```html
-<html xml:lang="123">
+<html xml:lang="123"></html>
 ```
 
 #### Passed example 9
@@ -116,7 +116,7 @@ The `xml:lang` attribute specifies a value that is not empty (""). The rule does
 The `xml:lang` attribute specifies a value that is not empty (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
 
 ```html
-<html xml:lang="#!">
+<html xml:lang="#!"></html>
 ```
 
 #### Passed example 9
@@ -124,7 +124,7 @@ The `xml:lang` attribute specifies a value that is not empty (""). The rule does
 The `xml:lang` attribute specifies a value that is not empty (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
 
 ```html
-<html xml:lang=" ">
+<html xml:lang=" "></html>
 ```
 
 ### Failed

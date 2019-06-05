@@ -138,7 +138,7 @@ The `img` element inside a `div` positioned off screen has no accessible name an
 The HTML `img` element has an accessible name that only consist of whitespace
 
 ```html
-<img aria-label=" "/>
+<img aria-label=" " />
 ```
 
 ### Inapplicable

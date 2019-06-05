@@ -4,9 +4,13 @@ name: Page has no orientation lock specified using CSS media queries
 rule_type: atomic
 description: |
   This rule checks that page content is not locked to any specific display orientation using CSS media queries, and the content is operable in all display orientations.
-success_criterion:
-- 1.3.4 # (Orientation)
-test_aspects:
+accessibility_requirements:
+ wcag20:1.3.4: # Orientation
+  forConformance: true
+  failed: not satisfied
+  passed: further testing needed
+  inapplicable: further testing needed
+input_aspects:
 - DOM Tree
 - CSS Styling
 authors:
@@ -14,13 +18,11 @@ authors:
 - Audrey Maniez
 ---
 
-## Test Procedure
-
-### Applicability
+## Applicability
 
 The rule applies to any `element` that is [visible](#visible) and has CSS media query styles targeting the display orientation.
 
-### Expectation
+## Expectation
 
 Each target element does not restrict its view and operation to a single display orientation, unless a specific display orientation is [essential](https://www.w3.org/TR/WCAG21/#dfn-essential).
 
@@ -30,7 +32,7 @@ Each target element does not restrict its view and operation to a single display
 
 - The rule does not consider the existence of any control on the page that can change the orientation on demand.
 
-## Accessibility support
+## Accessibility Support
 
 *There are no major accessibility support issues known for this rule.*
 

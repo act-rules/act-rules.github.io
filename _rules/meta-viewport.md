@@ -29,7 +29,6 @@ The `content` attribute of the test target:
 
 ## Assumptions
 
-
 ## Accessibility Support
 
 There are no major accessibility support issues known for this rule.
@@ -47,11 +46,9 @@ There are no major accessibility support issues known for this rule.
 The meta `viewport` do not define the `maximum-scale` and `user-scalable` properties.
 
 ````html
-
 <head>
 	<meta name="viewport" content="width=device-width" />
 </head>
-
 ````
 
 #### Passed Example 2
@@ -59,11 +56,9 @@ The meta `viewport` do not define the `maximum-scale` and `user-scalable` proper
 The meta `viewport` define the `user-scalable` so the user can still zoom in.
 
 ````html
-
 <head>
   <meta name="viewport" content="width=device-width, user-scalable=yes" />
 </head>
-
 ````
 
 #### Passed Example 3
@@ -71,11 +66,9 @@ The meta `viewport` define the `user-scalable` so the user can still zoom in.
 The meta `viewport` with an empty `content` attribute.
 
 ````html
-
 <head>
   <meta name="viewport" content="" />
 </head>
-
 ````
 
 ### Failed
@@ -85,11 +78,9 @@ The meta `viewport` with an empty `content` attribute.
 The meta `viewport` define the `user-scalable` so the user can't zoom in.
 
 ````html
-
 <head>
   <meta name="viewport" content="width=device-width, user-scalable=no" />
 </head>
-
 ````
 
 #### Failed Example 2
@@ -97,11 +88,9 @@ The meta `viewport` define the `user-scalable` so the user can't zoom in.
 The meta `viewport` set the `maximum-scale` to 1 so the user can't zoom in.
 
 ````html
-
 <head>
   <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 </head>
-
 ````
 
 #### Failed Example 3
@@ -109,11 +98,9 @@ The meta `viewport` set the `maximum-scale` to 1 so the user can't zoom in.
 The meta `viewport` set the `maximum-scale` to 2 so the user can't zoom in more than twice.
 
 ````html
-
 <head>
   <meta name="viewport" content="width=device-width, maximum-scale=2" />
 </head>
-
 ````
 
 ### Inapplicable
@@ -123,9 +110,7 @@ The meta `viewport` set the `maximum-scale` to 2 so the user can't zoom in more 
 The meta `viewport` is not present in the `<head>`.
 
 ````html
-
 <head>
   <meta http-equiv="refresh" content="0; URL='https://github.com'" />
 </head>
-
 ````

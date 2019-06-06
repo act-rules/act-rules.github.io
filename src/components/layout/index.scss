@@ -283,7 +283,8 @@ section.layout-container {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            h3.heading {
+            h3.heading, 
+            span.heading {
               padding: 0.25rem 0.5rem;
               background-color: $sep;
               border: 1px solid $transparent;
@@ -292,6 +293,7 @@ section.layout-container {
               font-weight: bold;
               margin-top: 1em;
               font-size: 90%;
+              color: $fg-primary;
               cursor: auto;
               &:hover {
                 text-decoration: none;

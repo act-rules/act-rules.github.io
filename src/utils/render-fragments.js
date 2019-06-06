@@ -134,9 +134,9 @@ export function getRuleType(rule_type) {
 	}
 	return (
 		<li>
-			<h3 className="heading">
+			<span className="heading">
 				Rule Type
-			</h3>
+			</span>
 			<p>{rule_type}</p>
 		</li>
 	)
@@ -146,9 +146,9 @@ export function getAccessibilityRequirements(accessibility_requirements, type = 
 	if (!accessibility_requirements) {
 		return (
 			<div className="meta">
-				<h3 className="heading">
+				<span className="heading">
 					accessibility Requirements
-				</h3>
+				</span>
 				<p>This rule is not required for conformance to WCAG at any level.</p>
 			</div>
 		)
@@ -167,9 +167,9 @@ export function getAccessibilityRequirements(accessibility_requirements, type = 
 
 	return (
 		<div className="meta">
-			<h3 className="heading">
+			<span className="heading">
 				Accessibility Requirements
-			</h3>
+			</span>
 			<ul>
 				{requirements.map(sc => {
 					const scData = scUrls[sc]
@@ -267,9 +267,9 @@ export function getInputAspects(aspects, ruleFormatInputAspects) {
 	}
 	return (
 		<>
-			<h3 className="heading">
+			<span className="heading">
 				Input Aspects
-			</h3>
+			</span>
 			<ul>
 				{
 					aspects.map(aspect => {

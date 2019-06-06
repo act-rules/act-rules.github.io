@@ -43,7 +43,7 @@ export default ({ data }) => {
 										<h2>{name}</h2>
 									</a>
 									{/* rule sc's */}
-									{getAccessibilityRequirements(accessibility_requirements)}
+									{getAccessibilityRequirements(accessibility_requirements, 'text')}
 									{/* rule description */}
 									<div
 										dangerouslySetInnerHTML={{

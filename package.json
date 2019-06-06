@@ -78,7 +78,7 @@
 		},
 		{
 			"name": "Wilco Fiers",
-			"url": "https://github.com/wilcofiers}"
+			"url": "https://github.com/wilcofiers"
 		}
 	],
 	"dependencies": {
@@ -109,7 +109,6 @@
 		"prismjs": "^1.16.0",
 		"prop-types": "^15.7.2",
 		"react": "^16.8.6",
-		"react-accessible-accordion": "^3.0.0",
 		"react-dom": "^16.8.6",
 		"react-helmet": "^5.2.1",
 		"showdown": "^1.9.0"
@@ -137,8 +136,7 @@
 		"test:rules": "jest",
 		"get-implementations": "node ./build/get-implementations",
 		"get-wcag-sc-metadata": "node ./build/get-wcag-sc-metadata",
-		"get-changelogs": "bash build/get-changelogs.sh",
-		"get-data": "npm run get-wcag-sc-metadata && npm run get-implementations && npm run get-changelogs"
+		"get-data": "npm run get-wcag-sc-metadata && npm run get-implementations"
 	},
 	"homepage": "https://github.com/act-rules/act-rules.github.io",
 	"repository": {

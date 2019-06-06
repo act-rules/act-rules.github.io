@@ -2,7 +2,6 @@
 @import './../../styles/variables';
 @import './../../styles/mixins';
 @import './../../styles/prism-a11y';
-@import './../../styles/override';
 
 section.layout-container {
   @include fixed-stretch();
@@ -162,18 +161,23 @@ section.layout-container {
               }
 
               div.meta {
-                span.heading {
+                h3.heading {
                   padding: 0.25rem 0.5rem;
                   background-color: $sep;
                   border: 1px solid $transparent;
                   text-transform: capitalize;
                   display: inline-block;
                   font-weight: bold;
+                  margin-top: 1em;
+                  font-size: 90%;
+                  cursor: auto;
+                  &:hover {
+                    text-decoration: none;
+                  }
                 }
                 a.sc-item {
                   cursor: pointer;
                   text-decoration: none;
-                  padding: 0.25rem 0.5rem;
                   text-transform: capitalize;
                   &:hover {
                     color: $accent;
@@ -279,7 +283,7 @@ section.layout-container {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            span.heading {
+            h3.heading {
               padding: 0.25rem 0.5rem;
               background-color: $sep;
               border: 1px solid $transparent;
@@ -287,6 +291,11 @@ section.layout-container {
               display: inline-block;
               font-weight: bold;
               margin-top: 1em;
+              font-size: 90%;
+              cursor: auto;
+              &:hover {
+                text-decoration: none;
+              }
             }
             p{
               margin: 0;
@@ -297,7 +306,6 @@ section.layout-container {
             a.sc-item {
               cursor: pointer;
               text-decoration: none;
-              padding: 0.25rem 0.5rem;
               text-transform: capitalize;
               &:hover {
                 color: $accent;

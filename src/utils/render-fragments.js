@@ -1,17 +1,10 @@
 import React from 'react'
 import scUrls from './../../_data/sc-urls'
 import { Link } from 'gatsby'
-import {
-	Accordion,
-	AccordionItem,
-	AccordionItemHeading,
-	AccordionItemButton,
-	AccordionItemPanel,
-} from 'react-accessible-accordion'
 import glossaryUsages from './../../_data/glossary-usages.json'
 
-export const getChangelog = (ruleChangelog, url) => {
-	if (!ruleChangelog.length) {
+export const getChangelog = (changelog, url, file) => {
+	if (!changelog.length) {
 		return null
 	}
 	return (
@@ -22,14 +15,25 @@ export const getChangelog = (ruleChangelog, url) => {
 				<h2>Changelog</h2>
 			</a>
 			<ul>
-				{ruleChangelog.map(log => {
-					const { commit, sanitized_subject_line } = log
-					const subject = sanitized_subject_line.split('-').join(' ')
-					const commitUrl = `${url}/commit/${commit}`
+				{changelog.map(log => {
+					const { commit: hash, msg, date } = log
+					const versionUrl = `${url}/blob/${hash}/${file}`
+					const changesUrl = `${url}/commit/${hash}`
+
 					return (
-						<li key={commit}>
-							<a target="_blank" rel="noopener noreferrer" href={commitUrl}>
-								{subject}
+						<li key={hash}>
+							{getDateTimeFromUnixTimestamp(date)} - {msg}
+							&nbsp;
+							<a target="_blank"
+								rel="noopener noreferrer"
+								href={versionUrl}>
+								See version
+							</a>
+							&nbsp;
+							<a target="_blank"
+								rel="noopener noreferrer"
+								href={changesUrl}>
+								See changes
 							</a>
 						</li>
 					)
@@ -39,8 +43,8 @@ export const getChangelog = (ruleChangelog, url) => {
 	)
 }
 
-export const getChangelogLink = ruleChangelog => {
-	if (!ruleChangelog.length) {
+export const getChangelogLink = changelog => {
+	if (!changelog.length) {
 		return null
 	}
 	return (
@@ -130,21 +134,21 @@ export function getRuleType(rule_type) {
 	}
 	return (
 		<li>
-			<span role="heading" aria-level="1" className="heading">
+			<h3 className="heading">
 				Rule Type
-			</span>
+			</h3>
 			<p>{rule_type}</p>
 		</li>
 	)
 }
 
-export function getAccessibilityRequirements(accessibility_requirements) {
+export function getAccessibilityRequirements(accessibility_requirements, type = 'details') {
 	if (!accessibility_requirements) {
 		return (
 			<div className="meta">
-				<span role="heading" aria-level="1" className="heading">
+				<h3 className="heading">
 					accessibility Requirements
-				</span>
+				</h3>
 				<p>This rule is not required for conformance to WCAG at any level.</p>
 			</div>
 		)
@@ -163,48 +167,61 @@ export function getAccessibilityRequirements(accessibility_requirements) {
 
 	return (
 		<div className="meta">
-			<span role="heading" aria-level="1" className="heading">
+			<h3 className="heading">
 				Accessibility Requirements
-			</span>
-			<Accordion allowMultipleExpanded="true" allowZeroExpanded="true">
+			</h3>
+			<ul>
 				{requirements.map(sc => {
 					const scData = scUrls[sc]
+					const { num, url, handle, wcagType, level } = scData
+
+					if (type === 'text') {
+						return (
+							<li key={sc}>
+								{num} {handle}
+							</li>
+						)
+					}
 					return (
-						<AccordionItem key={sc}>
-							<AccordionItemHeading>
-								<AccordionItemButton>
-									<a className="sc-item" key={sc} href={scData.url}>
-										{scData.num} {scData.handle}
-									</a>
-								</AccordionItemButton>
-							</AccordionItemHeading>
-							<AccordionItemPanel>
+						<li key={sc}>
+							<details >
+								<summary>
+									{num} {handle}
+								</summary>
 								<ul>
 									<li>
-										<strong>Required for conformance</strong>{' '}
+										<a
+											className="sc-item"
+											href={url}
+											target="_blank"
+											rel="noopener noreferrer">Learn More about {num} ({handle})
+								</a>
+									</li>
+									<li>
+										<strong>Required for conformance</strong>{' '} to WCAG {wcagType} level {level}
 									</li>
 									<li>
 										Outcome mapping:
 										<ul>
 											<li>
-												Any <code>failed</code> outcomes: not satisfied{' '}
-											</li>
+												Any <code>failed</code> outcomes: not satisfied
+										</li>
 											<li>
 												All <code>passed</code> outcomes: further testing is
-												needed{' '}
-											</li>
+													needed
+										</li>
 											<li>
 												An <code>inapplicable</code> outcome: further testing is
-												needed{' '}
-											</li>
+													needed
+										</li>
 										</ul>
 									</li>
 								</ul>
-							</AccordionItemPanel>
-						</AccordionItem>
+							</details>
+						</li>
 					)
 				})}
-			</Accordion>
+			</ul>
 		</div>
 	)
 }
@@ -215,27 +232,31 @@ export function getAuthors(authors, contributors) {
 	}
 	return (
 		<div>
-			<span role="heading" aria-level="1" className="heading">
+			<h3 className="heading">
 				Authors
-			</span>
-			{authors.map(author => {
-				const authorData = contributors.find(c => {
-					return c.name.toLowerCase() === author.toLowerCase()
-				})
-				if (!authorData) {
-					console.warn(`Author ${author}, not in contributor list.`)
-					return null
-				}
-				return (
-					<a
-						className="sc-item block"
-						href={authorData.url}
-						key={authorData.name}
-					>
-						@{authorData.name}
-					</a>
-				)
-			})}
+			</h3>
+			<ul>
+				{authors.map(author => {
+					const authorData = contributors.find(c => {
+						return c.name.toLowerCase() === author.toLowerCase()
+					})
+					if (!authorData) {
+						console.warn(`Author ${author}, not in contributor list.`)
+						return null
+					}
+					const { url, name } = authorData
+					return (
+						<li key={name}>
+							<a className="sc-item block"
+								target="_blank"
+								rel="noopener noreferrer"
+								href={url}>
+								{name}
+							</a>
+						</li>
+					)
+				})}
+			</ul>
 		</div>
 	)
 }
@@ -246,24 +267,26 @@ export function getInputAspects(aspects, ruleFormatInputAspects) {
 	}
 	return (
 		<>
-			<span role="heading" aria-level="1" className="heading">
+			<h3 className="heading">
 				Input Aspects
-			</span>
-			{
-				aspects.map(aspect => {
-					const aHref = ruleFormatInputAspects[aspect]
-						? ruleFormatInputAspects[aspect]
-						: ruleFormatInputAspects["default"]
-					return (
-						<a
-							className="sc-item block"
-							href={aHref}
-							key={aspect}>
-							{aspect}
-						</a>
-					)
-				})
-			}
+			</h3>
+			<ul>
+				{
+					aspects.map(aspect => {
+						const aHref = ruleFormatInputAspects[aspect]
+							? ruleFormatInputAspects[aspect]
+							: ruleFormatInputAspects["default"]
+						return (
+							<li key={aspect}>
+								<a className="sc-item block"
+									href={aHref}>
+									{aspect}
+								</a>
+							</li>
+						)
+					})
+				}
+			</ul>
 		</>
 	)
 }
@@ -279,9 +302,9 @@ export function getInputRulesForRule(
 	return (
 		<div className="side-notes">
 			<div className="meta">
-				<span role="heading" aria-level="1" className="heading">
+				<h3 className="heading">
 					Input Rules
-				</span>
+				</h3>
 				{inputRules.map(inputRuleId => {
 					const atomicRule = allRules.find(
 						rule => rule.node.frontmatter.id === inputRuleId
@@ -319,4 +342,20 @@ export function getGlossaryUsageInRules(usages) {
 			</ul>
 		</div>
 	)
+}
+
+/**
+ * Get formatted date from unix timestamp
+ * @param {String} unixtimestamp UNIX timestamp
+ */
+function getDateTimeFromUnixTimestamp(unixtimestamp) {
+	const months_arr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+	const date = new Date(unixtimestamp * 1000);
+	const year = date.getFullYear();
+	const month = months_arr[date.getMonth()];
+	const day = date.getDate();
+	const hours = date.getHours();
+	const minutes = "0" + date.getMinutes();
+	const seconds = "0" + date.getSeconds();
+	return `${month} ${day}, ${year} (${hours}:${minutes.substr(-2)}:${seconds.substr(-2)})`
 }

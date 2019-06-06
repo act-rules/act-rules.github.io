@@ -20,7 +20,8 @@ import { contributors, repository, config } from './../../package.json'
 export default ({ data }) => {
 	const { rule, allRules, allGlossary, site } = data
 	const { html, frontmatter, tableOfContents, fields } = rule
-	const { slug, fastmatterAttributes, changelog } = fields
+	const { slug, fastmatterAttributes, changelog, fileName } = fields
+	const { relativePath } = fileName
 	const ruleChangelog = JSON.parse(changelog)
 	const { accessibility_requirements } = JSON.parse(fastmatterAttributes)
 	const converter = new showdown.Converter()
@@ -70,19 +71,20 @@ export default ({ data }) => {
 					{/* glossary */}
 					{getGlossaryUsed(slug, allGlossary)}
 					{/* changelog */}
-					{getChangelog(ruleChangelog, repository.url)}
+					{getChangelog(ruleChangelog, repository.url, `_rules/${relativePath}`)}
 					{/* acknowledgements */}
 					<br />
 					<hr />
 					<a id="acknowledgements" href="#acknowledgements">
 						<h2>Acknowledgements</h2>
 					</a>
-					<ul class="meta">
+					<ul className="meta">
 						<li>{getAuthors(frontmatter.authors, contributors)}</li>
 					</ul>
 				</section>
 				{/* Toc */}
 				<div className="toc">
+					{/* todo:jey needs fixing up */}
 					<span role="heading" aria-level="1" className="heading">
 						Table of Contents
 					</span>
@@ -94,6 +96,7 @@ export default ({ data }) => {
 							<a href="#acknowledgements">Acknowledgements</a>
 						</li>
 					</ul>
+					{/* todo:jey needs fixing up */}
 					<span role="heading" aria-level="1" className="heading">
 						Useful Links
 					</span>
@@ -143,6 +146,9 @@ export const query = graphql`
 				authors
 			}
 			fields {
+				fileName {
+          relativePath
+        }
 				slug
 				fastmatterAttributes
 				changelog

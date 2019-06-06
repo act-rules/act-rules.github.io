@@ -1,6 +1,6 @@
 const getNodeData = require('./get-node-data')
 
-const onCreateNode = options => {
+const onCreateNode = async options => {
 	const { node, actions } = options
 	const { createNodeField } = actions
 
@@ -9,7 +9,7 @@ const onCreateNode = options => {
 	 * -> create extra property in the fields object
 	 */
 	if (node.internal.type === `MarkdownRemark`) {
-		const nodeData = getNodeData(options)
+		const nodeData = await getNodeData(options)
 		const {
 			path,
 			fileName,

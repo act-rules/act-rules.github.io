@@ -32,7 +32,11 @@ This rule applies to any HTML or SVG element that:
 
 ## Expectation
 
-The [visible](#visible) [text nodes](https://www.w3.org/TR/dom/#text) that are [descendants](https://www.w3.org/TR/dom41/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of the target element are [included](#included-characters) in their entirety within the [accessible name](#accessible-name) of the element, or the [text nodes](https://www.w3.org/TR/dom/#text) do not express anything in [human language](https://www.w3.org/TR/WCAG21/#dfn-human-language-s) and therefore do not live up to the [WCAG definition of text](https://www.w3.org/TR/WCAG21/#dfn-text).
+The [visible](#visible) [child text content](https://dom.spec.whatwg.org/#concept-child-text-content) that are [descendants](https://www.w3.org/TR/dom41/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of the target element:
+* are [included](#included-characters) in their entirety within the [accessible name](#accessible-name) of the element, or 
+* do not express anything in [human language](https://www.w3.org/TR/WCAG21/#dfn-human-language-s) and therefore do not live up to the [WCAG definition of text](https://www.w3.org/TR/WCAG21/#dfn-text).
+
+**Note:** Due to the definition of [included characters](#included-characters) the whole consequtive sequence of characters in the [visible](#visible) [child text content](https://dom.spec.whatwg.org/#concept-child-text-content) of the target element has to be included character-by-character in the [accessible name](#accessible-name) to meet the expectation of this rule.
 
 ## Assumptions
 

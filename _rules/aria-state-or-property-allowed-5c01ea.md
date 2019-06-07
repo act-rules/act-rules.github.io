@@ -125,7 +125,7 @@ WAI-ARIA states and properties with empty value, specified as an empty string, a
 `aria-sort` attribute is neither inherited, supported, nor required for `role=button` that is the implicit role for `button` element.
 
 ```html
-<button aria-sort="">Sort by year/button>
+<button aria-sort="">Sort by year</button>
 ```
 
 ### Inapplicable

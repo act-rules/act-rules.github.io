@@ -260,7 +260,6 @@ section.layout-container {
                   text-transform: capitalize;
                 }
               }
-              
             }
           }
         }
@@ -278,7 +277,10 @@ section.layout-container {
           width: 100%;
           padding-bottom: 6rem;
 
-          ul.meta {
+
+
+          ul.meta,
+          div.meta {
             @include reset-list();
             display: flex;
             flex-direction: column;

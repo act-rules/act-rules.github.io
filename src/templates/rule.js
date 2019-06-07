@@ -56,7 +56,6 @@ export default ({ data }) => {
 					</ul>
 					<hr />
 					{/* Description */}
-					<br />
 					<div
 						dangerouslySetInnerHTML={{
 							__html: converter.makeHtml(frontmatter.description),
@@ -68,19 +67,20 @@ export default ({ data }) => {
 							__html: html,
 						}}
 					/>
+					<hr />
 					{/* glossary */}
 					{getGlossaryUsed(slug, allGlossary)}
+					<hr />
 					{/* changelog */}
 					{getChangelog(ruleChangelog, repository.url, `_rules/${relativePath}`)}
 					{/* acknowledgements */}
-					<br />
 					<hr />
 					<a id="acknowledgements" href="#acknowledgements">
 						<h2>Acknowledgements</h2>
 					</a>
-					<ul className="meta">
-						<li>{getAuthors(frontmatter.authors, contributors)}</li>
-					</ul>
+					<div className="meta">
+						{getAuthors(frontmatter.authors, contributors)}
+					</div>
 				</section>
 				{/* Toc */}
 				<div className="toc">

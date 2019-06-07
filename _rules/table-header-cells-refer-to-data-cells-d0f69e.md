@@ -1,6 +1,6 @@
 ---
 id: d0f69e
-name: All table header cells has corresponding data cells
+name: All table header cells have corresponding data cells
 rule_type: atomic
 description: |
   This rule checks that each table header has corresponding data cells in a table element.
@@ -22,7 +22,7 @@ This rule applies to `th` elements within a `table` that is [visible](#visible) 
 
 ## Expectation
 
-Each target element is either the row header or the column header for data cells that is not empty (""), within the same `table`.
+Each target element is either the row header or the column header for data cells that are not empty (""), within the same `table`.
 
 ## Assumptions
 
@@ -141,7 +141,7 @@ Each `th` element has corresponding `cells` within the same `table`, by usage of
 
 #### Failed Example 1
 
-There are no corresponding `cells` for each `th` element within the `table`.
+Not all `th` elements within the `table` have corresponding `cells`.
 
 ```html
 <table>
@@ -181,7 +181,7 @@ There are no corresponding `cells` for each `th` element within the `table`.
 
 #### Inapplicable Example 1
 
-The rule only applies only to `table > th` element. The `table` has no `th` elements.
+The rule only applies to `table > th` element. The `table` has no `th` elements.
 
 ```html
 <table>

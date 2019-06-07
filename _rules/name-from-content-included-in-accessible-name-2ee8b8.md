@@ -4,9 +4,8 @@ name: Name from content included in accessible name
 rule_type: atomic
 description: |
   Interactive elements labelled through their content must have their visible label as part of their accessible name.
-
 accessibility_requirements:
-  wcag20:2.5.3: # Label in Name (A)
+  wcag21:2.5.3: # Label in Name (A)
     forConformance: true
     failed: not satisfied
     passed: further testing needed

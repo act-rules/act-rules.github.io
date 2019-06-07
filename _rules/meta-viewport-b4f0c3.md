@@ -19,7 +19,7 @@ authors:
 
 ## Applicability
 
-The rule applies to the first valid `<meta name="viewport">` element with a `content` attribute in a document.
+The rule applies to every `<meta name="viewport">` elements with a `content` attribute in a document.
 
 ## Expectation
 
@@ -29,9 +29,11 @@ The `content` attribute of the test target:
 
 ## Assumptions
 
+- There may be some inconsistencies with how different browser vendors interpret `<meta name="viewport">`.
+
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 

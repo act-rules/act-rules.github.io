@@ -14,7 +14,7 @@ input_aspects:
   - DOM Tree
 authors:
   - Anne Thyme Nørregaard
-  - Corbb O’Connor
+  - Corbb O'Connor
 ---
 
 ## Applicability

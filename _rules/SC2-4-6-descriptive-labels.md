@@ -143,12 +143,12 @@ Otherwise identically named form fields can be differentiated both visually and 
 
 ```html
 <h2 aria-hidden="true">Shipping address</h2>
-<p id="shipping" style="position: absolute; top: -9999px; left: -9999px;">(Shipping)</p>
+<p id="shipping" style="display:none">(Shipping)</p>
 <label>Name<input id="name" type="text" name="name" aria-describedby="shipping" /></label>(Shipping
 <label>Street<input id="street" type="text" name="street" aria-describedby="shipping" /></label>
 
 <h2 aria-hidden="true">Billing address</h2>
-<p id="shipping" style="position: absolute; top: -9999px; left: -9999px;">(Billing)</p>
+<p id="billing" style="display:none">(Billing)</p>
 <label>Name<input id="name" type="text" name="name" aria-describedby="billing"/></label>
 <label>Street<input id="street" type="text" name="street" aria-describedby="billing" /></label>
 ````

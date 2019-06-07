@@ -1,27 +1,29 @@
 ---
 id: ff89c9
 name: ARIA required context role
+rule_type: atomic
 description: | 
-  This rule checks that a role does not exist outside of its required context.
-
-success_criterion:
-- 1.3.1 # Info and Relationships
-
-test_aspects: 
+  This rule checks that a role exists inside its required context.
+accessibility_requirements:
+  wcag20:1.3.1: # Info and Relationships (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects: 
 - DOM Tree
 - CSS Styling
-
 authors:
 - Anne Thyme Nørregaard
 ---
 
-## Test procedure
-
-### Applicability
+## Applicability
 
 The rule applies to any HTML or SVG element that is [included in the accessibility tree](#included-in-the-accessibility-tree) and has an explicit [semantic role](#semantic-role) with a [WAI-ARIA required context role](https://www.w3.org/TR/wai-aria-1.1/#scope), except if the element has an implicit semantic role that is identical to its explicit semantic role.
 
-### Expectation
+**Note:** An example of an element that has an implicit semantic role that is identical to its explicit semantic role is an `<li>`element that has `role="listitem"`. Elements like these are not applicable to this rule.
+
+## Expectation
 
 The target element is [owned by](#owned-by) an element that has a [semantic role](#semantic-role) that is one of the [WAI-ARIA required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope) of the target element.
 
@@ -29,7 +31,7 @@ The target element is [owned by](#owned-by) an element that has a [semantic role
 
 ## Assumptions
 
-This rule assumes that the explicit [semantic role](#semantic-role) on the target element is being used with the intention to comply to WCAG. If the explicit semantic role on the target element is incorrectly used, and any relationships between elements are already programmatically determinable, failing this rule might not result in accessibility issues for users of assistive technologies, and it should then not be considered a failure under WCAG success criterion 1.3.1 Info and Relationships.
+This rule assumes that the explicit [semantic role](#semantic-role) on the target element is used with the intention to comply to WCAG. If the explicit semantic role on the target element is incorrectly used, and any relationships between elements are already programmatically determinable, failing this rule might not result in accessibility issues for users of assistive technologies, and it should then not be considered a failure under WCAG success criterion 1.3.1 Info and Relationships.
 
 ## Accessibility Support
 
@@ -45,7 +47,7 @@ Furthermore, `aria-owns` has limited support in some user agents.
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 Element with role `listitem` is contained within its required context role `list`, expressed as an explicit role.
 
@@ -55,7 +57,7 @@ Element with role `listitem` is contained within its required context role `list
 </div>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 Element with role `listitem` is contained within its required context role `list`, through the implicit role of `ul`.
 
@@ -65,7 +67,7 @@ Element with role `listitem` is contained within its required context role `list
 </ul>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 Element contained within its required context role even though it is not a direct child of the context role.
 
@@ -81,7 +83,7 @@ Element contained within its required context role even though it is not a direc
 </div>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 `aria-owns` used to give the target element the right context role.
 
@@ -90,7 +92,7 @@ Element contained within its required context role even though it is not a direc
 <div id="id1" role="listitem"></div>
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 `aria-owns` trumps ownership by closest ancestor, giving the element with role of `listitem` the correct context role.
 
@@ -104,7 +106,7 @@ Element contained within its required context role even though it is not a direc
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 No context role.
 
@@ -112,7 +114,7 @@ No context role.
 <div role="listitem"></div>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 Wrong context role.
 
@@ -122,7 +124,7 @@ Wrong context role.
 </div>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 Element not contained within its required context role.
 
@@ -131,7 +133,7 @@ Element not contained within its required context role.
     <div role="listitem"></div>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 Element with role `listitem` has a closer ancestor, that is included in the accessibility tree, than the role `list` that should have been its context role.
 
@@ -146,7 +148,7 @@ Element with role `listitem` has a closer ancestor, that is included in the acce
 **Note:** This test case follows the definition of [owned by](#owned-by) used in this rule. If implemented differently, this definition could cause differences in outcome for this test case. 
 
 
-#### Failed example 5
+#### Failed Example 5
 
 Element with role `listitem` has a closer ancestor, that is included in the accessibility tree, than the role `list` that should have been its context role.
 
@@ -158,7 +160,7 @@ Element with role `listitem` has a closer ancestor, that is included in the acce
 </div>
 ```
 
-#### Failed example 6
+#### Failed Example 6
 
 The element with the semantic role of `listitem` is [owned by](#owned-by) the first element that references it element through `aria-owns`, which results in the wrong context role.
 
@@ -174,7 +176,7 @@ The element with the semantic role of `listitem` is [owned by](#owned-by) the fi
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Element does not have an explicit semantic role.
 
@@ -190,7 +192,7 @@ Element is not exposed to assistive technologies.
 <div role="tab" aria-hidden="true"></div>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 Role does not have any required context roles listed in WAI-ARIA spec.
 
@@ -198,7 +200,7 @@ Role does not have any required context roles listed in WAI-ARIA spec.
 <div role="radio"></div>
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 Element is not exposed to assistive technologies, since decendant has `aria-hidden` attribute with value set to `true`.
 
@@ -207,7 +209,7 @@ Element is not exposed to assistive technologies, since decendant has `aria-hidd
     <div role="listitem"></div>
 </div>
 ```
-#### Inapplicable example 5
+#### Inapplicable Example 5
 
 Element has an explicit semantic role, but it is identical to the implicit semantic role, making the element inapplicable.
 

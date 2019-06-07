@@ -1,25 +1,26 @@
 ---
 id: 2ee8b8
 name: Name from content included in accessible name
+rule_type: atomic
 description: |
   Interactive elements labelled through their content must have their visible label as part of their accessible name.
 
-success_criterion:
-- 2.5.3 # Label in Name
-
-test_aspects:
+accessibility_requirements:
+  wcag20:2.5.3: # Label in Name (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
 - DOM Tree
 - CSS Styling
-
 authors:
 - Anne Thyme Nørregaard
 - Bryn Anderson
 - Jey Nandakumar
 ---
 
-## Test procedure
-
-### Applicability
+## Applicability
 
 This rule applies to any HTML or SVG element that:
 * has a [semantic role](#semantic-role) that is a [widget role](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent), and 
@@ -30,7 +31,7 @@ This rule applies to any HTML or SVG element that:
 
 **Note:** [Text nodes](https://www.w3.org/TR/dom/#text) with only [whitespace](#whitespace) are not [visible](#visible).
 
-### Expectation
+## Expectation
 
 The [visible](#visible) [text nodes](https://www.w3.org/TR/dom/#text) that are [descendants](https://www.w3.org/TR/dom41/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of the target element are [included](#included-characters) in their entirety within the [accessible name](#accessible-name) of the element, or the [text nodes](https://www.w3.org/TR/dom/#text) do not express anything in [human language](https://www.w3.org/TR/WCAG21/#dfn-human-language-s) and therefore do not live up to the [WCAG definition of text](https://www.w3.org/TR/WCAG21/#dfn-text).
 
@@ -51,7 +52,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 Visible label and accessible name matches when trailing white spaces are removed.
 
@@ -59,7 +60,7 @@ Visible label and accessible name matches when trailing white spaces are removed
 <div role="link" aria-label="next page ">next page</div>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 Character insensitivity between visible label and accessible name.
 
@@ -67,7 +68,7 @@ Character insensitivity between visible label and accessible name.
 <div role="link" aria-label="Next Page">next page</div>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 Full visible label is included in the accessible name.
 
@@ -75,7 +76,7 @@ Full visible label is included in the accessible name.
 <button name="link" aria-label="Next Page in the list">Next Page</button>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 Full visible label is included in the accessible name.
 
@@ -97,7 +98,7 @@ Full visible label is included in the accessible name.
 </body>
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 Text nodes in name from content are not expressing anything in human language and do therefore not live up to the [WCAG definition of text](https://www.w3.org/TR/WCAG21/#dfn-text).
 
@@ -105,7 +106,7 @@ Text nodes in name from content are not expressing anything in human language an
 <button aria-label="close">:-)</button>
 ```
 
-#### Passed example 6
+#### Passed Example 6
 
 Text nodes in name from content are not expressing anything in human language and do therefore not live up to the [WCAG definition of text](https://www.w3.org/TR/WCAG21/#dfn-text). In this case, "X" is used because it resembles a "close" icon, not to represent the character "X".
 
@@ -115,7 +116,7 @@ Text nodes in name from content are not expressing anything in human language an
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Visible label is not included in accessible name.
 
@@ -123,7 +124,7 @@ Visible label is not included in accessible name.
 <div role="link" aria-label="OK">Next</div>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 Not all of visible label is included in accessible name.
 
@@ -131,7 +132,7 @@ Not all of visible label is included in accessible name.
 <button name="link" aria-label="the full">The full label</button>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 The full visible label is split out across the accessible name and is therefore not [included](#included-characters) in it.
 
@@ -155,7 +156,7 @@ The full visible label is split out across the accessible name and is therefore 
 
 ### Inapplicable 
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Not a widget role.
 
@@ -163,7 +164,7 @@ Not a widget role.
 <a aria-label="OK">Next</a>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 Widget role that does not support name from content.
 
@@ -171,7 +172,7 @@ Widget role that does not support name from content.
 <input type="email" aria-label="E-mail" value='Contact'>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 Non-widget role that supports name from content.
 
@@ -179,7 +180,7 @@ Non-widget role that supports name from content.
 <div role="tooltip" aria-label="OK">Next</div>
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 No visible text nodes in name from content.
 

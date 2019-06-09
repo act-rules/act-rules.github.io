@@ -2,7 +2,7 @@
 title: Reporting Format
 ---
 
-To display implementations on the ACT-R Community website, ACT-R use the [Evaluation And Reporting Language](https://www.w3.org/TR/EARL10-Schema/) expressed using [JSON-LD](https://json-ld.org). Tool developers that have an EARL reporter should be able to provide their existing reports. If you don't already have an EARL reporter, we provided a basic data structure that you can use.
+To display a accessibility test tool or methodology on the ACT-R Community website, ACT-R use the [Evaluation And Reporting Language](https://www.w3.org/TR/EARL10-Schema/) expressed using [JSON-LD](https://json-ld.org). Tool developers that have an EARL reporter should be able to provide their existing reports. If you don't already have an EARL reporter, we provided a basic data structure that you can use.
 
 ### Context And Graph
 

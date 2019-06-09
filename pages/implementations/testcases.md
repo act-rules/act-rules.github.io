@@ -40,7 +40,7 @@ In the `testcases.json` file, test cases are included on the `testcases` array, 
 
 ## Running The Test Cases
 
-To run the test cases, go through each URL run the necessary tests on that page. Tools and test procedures do not need to have a one-to-one mapping to ACT-R rules. While you could run all tests in an implementation on every test case, for the sake of efficiency, we recommend doing one of the following:
+To run the test cases, go through each URL run the necessary tests on that page. Tools and test procedures do not need to have a one-to-one mapping to ACT-R rules. While you could run all tests in an implementation on every test case, for efficiency we recommend doing one of the following:
 
 1. Only run tests relevant for the `requirementsMapping` (e.g. for a test case that maps to success criterion 1.1.1, only run tests related to success criterion 1.1.1)
 

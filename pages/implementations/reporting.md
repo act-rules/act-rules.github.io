@@ -10,8 +10,8 @@ To submit an implementation report, you must run your test tool or test methodol
 
 2. [Open an issue](https://github.com/act-rules/act-rules.github.io/issues/new), proposing the new implementation. Please include the name of the implementation, and a URL to the EARL report.
 
-> Note: Refer [available tools](/pages/implementations/tools/) section, to see if any of them can be used to generate the report in the EARL format.
+> Note: Refer to the [available tools](/pages/implementations/tools/) section, to see if any of them can be used to generate the report in the EARL format.
 
 ## Third Party Submissions
 
-Submitting an implementation requires permission from the owner of the test tool / methodology that is proposed. If you wish to submit an implementation on behalf of an implementor, we will require written permission from the owner of the implementation sent to the ACT-R public mailinglist.
+Submitting an implementation requires permission from the owner of the test tool / methodology that is proposed. If you wish to submit an implementation on behalf of an implementor, we will require written permission from the owner of the implementation sent to the ACT-R public mailing list.

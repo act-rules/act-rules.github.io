@@ -101,6 +101,7 @@ const createTestcasesOfAllRules = options => {
 					ruleId,
 					ruleName,
 					rulePage: `${url}/${slug}`,
+					ruleAccessibilityRequirements
 				}
 
 				out.push(testcase)

@@ -91,14 +91,20 @@ Keyboard trap one element.
 Keyboard trap group.
 
 ```html
-<button class="target" onblur="setTimeout(() => this.nextElementSibling.focus(), 10)">
+<button
+	class="target"
+	onblur="setTimeout(() => this.nextElementSibling.focus(), 10)"
+>
 	Button1
 </button>
-<button class="target" onblur="setTimeout(() => this.previousElementSibling.focus(), 10)">
+<button
+	class="target"
+	onblur="setTimeout(() => this.previousElementSibling.focus(), 10)"
+>
 	Button2
 </button>
 <button>
-  Button3
+	Button3
 </button>
 ```
 

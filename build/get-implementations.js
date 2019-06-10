@@ -66,5 +66,5 @@ const tabulateImplementationData = data => {
 	const result = await Promise.all(promises)
 	const tabulatedData = tabulateImplementationData(result)
 	createFile(outputFile, JSON.stringify(tabulatedData, undefined, 2))
-	console.info('DONE!!! Generated Implementations Data.')
+	console.info('\nDONE!!! Generated Implementations Data.\n')
 })()

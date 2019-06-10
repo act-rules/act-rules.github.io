@@ -3,11 +3,14 @@
 
 body {
   font-family: 'Lora', serif;
-  color: $fg-secondary;
 }
 
 h1, h2, h3, h4, h5, h6 {
   @include header-style($fg-primary)
+}
+
+ul{
+	margin: 0;
 }
 
 hr {
@@ -15,7 +18,8 @@ hr {
 }
 
 a {
-	color: darken($accent, 30%);
+	color: darken($accent, 25%);
+	font-weight: 500;
 	&:hover {
 		opacity: 0.8;
 	}
@@ -27,7 +31,6 @@ table {
    
 	thead {
 		border-bottom: 2px solid $accent;
-		
 		th {
 			@include header-style($fg-primary);
       font-weight: bold;
@@ -48,6 +51,9 @@ table {
 					text-decoration: none;
 					display: inline-block;
 					margin: 0 .5em 0 0;
+					svg {
+						fill: currentColor;
+					}
 					&:hover, &:active, &:focus {
 						color: darken($fg-primary, 10%);
 						border: none;
@@ -55,6 +61,18 @@ table {
 				}
 			}
 		}
+	}
+
+	&.compact {
+		tbody {
+			tr {
+				border-bottom: none;
+				td {
+					padding: none;
+				}
+			}
+		}
+
 	}
 }
 
@@ -74,8 +92,4 @@ blockquote {
 	background-color: lighten($accent, 40%);
 	border: 1px solid $accent;
 	padding: 1rem;
-}
-
-em {
-	display: block;
 }

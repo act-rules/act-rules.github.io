@@ -1,12 +1,16 @@
 {
-	"name": "act-rules-cg",
+	"name": "act-rules-community",
 	"description": "Accessibility conformance testing rules for HTML",
 	"version": "1.0.0",
-	"author": "WCAG ACT RULES CG",
+	"author": "ACT-Rules Community",
 	"contributors": [
 		{
 			"name": "Anne Thyme Nørregaard",
 			"url": "https://github.com/annethyme"
+		},
+		{
+			"name": "Annika Nietzio",
+			"url": "https://github.com/annika-FTB"
 		},
 		{
 			"name": "Audrey Maniez",
@@ -23,6 +27,10 @@
 		{
 			"name": "Carlos Duarte",
 			"url": "https://github.com/carlosapaduarte"
+		},
+		{
+			"name": "Corbb O'Connor",
+			"url": "https://github.com/corbb"
 		},
 		{
 			"name": "Dagfinn Rømen",
@@ -45,8 +53,16 @@
 			"url": "https://github.com/jkodu"
 		},
 		{
+			"name": "John Hicks",
+			"url": "https://github.com/john-urbilog"
+		},
+		{
 			"name": "Malin Øvrebø",
 			"url": "https: //github.com/MaliinO"
+		},
+		{
+			"name": "Rafal Charlampowicz",
+			"url": "https://github.com/Rafalchar"
 		},
 		{
 			"name": "Rob Fentress",
@@ -62,44 +78,45 @@
 		},
 		{
 			"name": "Wilco Fiers",
-			"url": "https://github.com/wilcofiers}"
+			"url": "https://github.com/wilcofiers"
 		}
 	],
 	"dependencies": {
 		"axios": "^0.18.0",
 		"commander": "^2.20.0",
 		"fastmatter": "^2.1.1",
-		"gatsby": "^2.3.21",
-		"gatsby-image": "^2.0.30",
-		"gatsby-plugin-manifest": "^2.0.20",
-		"gatsby-plugin-offline": "^2.0.24",
-		"gatsby-plugin-prefetch-google-fonts": "^1.4.0",
-		"gatsby-plugin-react-helmet": "^3.0.7",
+		"gatsby": "^2.4.2",
+		"gatsby-image": "^2.0.41",
+		"gatsby-plugin-manifest": "^2.1.1",
+		"gatsby-plugin-offline": "^2.1.0",
+		"gatsby-plugin-prefetch-google-fonts": "^1.4.2",
+		"gatsby-plugin-react-helmet": "^3.0.12",
 		"gatsby-plugin-sass": "^2.0.10",
-		"gatsby-plugin-sharp": "^2.0.34",
+		"gatsby-plugin-sharp": "^2.0.36",
 		"gatsby-remark-autolink-headers": "^2.0.15",
-		"gatsby-remark-prismjs": "^3.2.4",
-		"gatsby-source-filesystem": "^2.0.23",
-		"gatsby-transformer-remark": "^2.3.0",
-		"gatsby-transformer-sharp": "^2.1.15",
+		"gatsby-remark-prismjs": "^3.2.9",
+		"gatsby-source-filesystem": "^2.0.33",
+		"gatsby-transformer-remark": "^2.3.12",
+		"gatsby-transformer-sharp": "^2.1.19",
 		"gfm-code-blocks": "^1.0.0",
-		"glob": "^7.1.4",
+		"globby": "^9.2.0",
 		"jsonld": "^1.6.0",
 		"make-dir": "^2.1.0",
-		"markdown-table": "^1.1.2",
+		"marked": "^0.6.2",
 		"ncp": "^2.0.0",
-		"node-sass": "^4.11.0",
+		"node-sass": "^4.12.0",
 		"normalize.css": "^8.0.1",
-		"prismjs": "^1.15.0",
+		"object-hash": "^1.3.1",
+		"prismjs": "^1.16.0",
 		"prop-types": "^15.7.2",
-		"react": "^16.8.3",
-		"react-dom": "^16.8.3",
-		"react-helmet": "^5.2.0",
-		"showdown": "^1.9.0",
-		"static-server": "^2.2.1"
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"react-helmet": "^5.2.1",
+		"showdown": "^1.9.0"
 	},
 	"devDependencies": {
-		"prettier": "^1.16.4"
+		"jest": "^24.8.0",
+		"prettier": "^1.17.0"
 	},
 	"keywords": [
 		"WCAG",
@@ -109,13 +126,15 @@
 	],
 	"license": "MIT",
 	"scripts": {
+		"clean": "rm -rf .cache public",
 		"prebuild": "npm run get-data",
 		"build": "gatsby build",
 		"develop": "npm run get-data && gatsby develop",
 		"format": "prettier --write *.{json,md,js,jsx} './{_data,_rules,build,gatsby,pages,src,test-assets}/**/*.{json,md,js,jsx}'",
-		"start": "npm run develop",
+		"start": "npm run clean && npm run develop",
 		"serve": "gatsby serve",
-		"test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+		"test": "npm run test:rules",
+		"test:rules": "jest",
 		"get-implementations": "node ./build/get-implementations",
 		"get-wcag-sc-metadata": "node ./build/get-wcag-sc-metadata",
 		"get-data": "npm run get-wcag-sc-metadata && npm run get-implementations",
@@ -150,14 +169,25 @@
 		"implementations": {
 			"alfa": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/alfa-report.json",
 			"axe": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/axe-report.json"
+		},
+		"rule-format-metadata": {
+			"input-aspects": {
+				"default": "https://www.w3.org/TR/act-rules-aspects/#intro",
+				"HTTP Messages": "https://www.w3.org/TR/act-rules-aspects/#input-aspects-http",
+				"DOM Tree": "https://www.w3.org/TR/act-rules-aspects/#input-aspects-dom",
+				"CSS Styling": "https://www.w3.org/TR/act-rules-aspects/#input-aspects-css",
+				"Accessibility Tree": "https://www.w3.org/TR/act-rules-aspects/#input-aspects-accessibility",
+				"Language": "https://www.w3.org/TR/act-rules-aspects/#input-aspects-text"
+			}
 		}
 	},
-	"eslintConfig": {
-		"parserOptions": {
-			"ecmaVersion": 2018
-		},
-		"env": {
-			"node": true
-		}
+	"jest": {
+		"verbose": true,
+		"bail": true,
+		"testPathIgnorePatterns": [
+			"<rootDir>/test/utils/",
+			"<rootDir>/.cache/",
+			"<rootDir>/.public/"
+		]
 	}
 }

@@ -7,7 +7,13 @@ const path = require('path')
 const axios = require('axios')
 const createFile = require('./create-file')
 const pkg = require('./../package.json')
-const outputFile = path.join(__dirname, '..', '_data', 'sc-urls.json')
+const outputFileScMetaData = path.join(__dirname, '..', '_data', 'sc-urls.json')
+const outputFileScEmReportAuditResult = path.join(
+	__dirname,
+	'..',
+	'_data',
+	'sc-em-report-audit-result.json'
+)
 
 const isScWcag20 = sc => {
 	const is20 = !(
@@ -34,10 +40,17 @@ const getMetaData = sc => {
 			? 'http://www.w3.org/TR/UNDERSTANDING-WCAG20/'
 			: 'https://www.w3.org/WAI/WCAG21/Understanding/'
 	}/${path}.html`
+	/**
+	 * Construct `test` - used by `wcag em report tool`
+	 */
+	const testPrefix = sc.id.split(':').shift()
+	const testName = sc.alt_id && sc.alt_id.length > 0 ? sc.alt_id : sc.id
 	return {
 		num: sc.num,
 		url,
 		scId: sc.id,
+		scAltId: sc.alt_id,
+		test: `${testPrefix}:${testName}`,
 		howToMeetUrl,
 		understandingUrl,
 		handle: sc.handle,
@@ -65,7 +78,38 @@ const getScMetaData = async url => {
 	if (!wcagReferenceUrl) {
 		throw new Error('No reference URL for WCAG21 is specified in config.')
 	}
-	const data = await getScMetaData(wcagReferenceUrl)
-	createFile(outputFile, JSON.stringify(data, undefined, 2))
-	console.info('DONE!!! Generated WCAG Success Criterion Data.')
+
+	/**
+	 * Create a list of success criteria meta data
+	 */
+	const scMetaData = await getScMetaData(wcagReferenceUrl)
+	await createFile(
+		outputFileScMetaData,
+		JSON.stringify(scMetaData, undefined, 2)
+	)
+
+	/**
+	 * Create wcag em report tool friendly audit result array
+	 */
+	const scEmReportAuditResult = Object.values(scMetaData).map(data => {
+		return {
+			type: 'Assertion',
+			test: data.test,
+			assertedBy: '_:evaluator',
+			subject: '_:website',
+			result: {
+				outcome: 'earl:inapplicable',
+				description: '',
+				date: '',
+			},
+			mode: 'earl:manual',
+			hasPart: [],
+		}
+	})
+	await createFile(
+		outputFileScEmReportAuditResult,
+		JSON.stringify(scEmReportAuditResult, undefined, 2)
+	)
+
+	console.info('\nDONE!!! Generated WCAG Success Criterion Data.\n')
 })()

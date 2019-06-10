@@ -114,7 +114,9 @@
 		"showdown": "^1.9.0"
 	},
 	"devDependencies": {
+		"husky": "^2.4.0",
 		"jest": "^24.8.0",
+		"lint-staged": "^8.2.0",
 		"prettier": "^1.17.0"
 	},
 	"keywords": [
@@ -179,6 +181,17 @@
 			"<rootDir>/test/utils/",
 			"<rootDir>/.cache/",
 			"<rootDir>/.public/"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm test"
+		}
+	},
+	"lint-staged": {
+		"*.{md,json,js,html}": [
+			"prettier --write",
+			"git add"
 		]
 	}
 }

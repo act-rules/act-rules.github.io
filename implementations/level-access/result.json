@@ -1,0 +1,592 @@
+{
+  "@context": {
+    "@vocab": "http://www.w3.org/ns/earl#",
+    "earl": "http://www.w3.org/ns/earl#",
+    "WCAG20": "http://www.w3.org/TR/WCAG20/#",
+    "WCAG21": "http://www.w3.org/TR/WCAG21/#",
+    "auto-wcag": "https://auto-wcag.github.io/auto-wcag/rules/",
+    "dct": "http://purl.org/dc/terms#",
+    "sch": "https://schema.org/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "foaf": "http://xmlns.com/foaf/spec/#",
+    "WebPage": "sch:WebPage",
+    "url": "dct:source",
+    "assertions": {
+      "@reverse": "subject"
+    },
+    "assertedBy": {
+      "@type": "@id"
+    },
+    "outcome": {
+      "@type": "@id"
+    },
+    "mode": {
+      "@type": "@id"
+    },
+    "pointer": {
+      "@type": "ptr:CSSSelectorPointer"
+    }
+  },
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "url": "https://act-rules.github.io/testcases/97a4e1/3f1791e11d02c11f950a13172fc1c03d9e84f7cf.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@id": "Level Access - Access Engine - Version 3.ACT-R",
+            "@type": [
+              "earl:Assertor",
+              "earl:Software",
+              "doap:Project"
+            ],
+            "doap:name": "Access Engine",
+            "doap:vendor": {
+              "@id": "https://www.levelaccess.com/",
+              "@type": "foaf:Organization",
+              "foaf:name": "Level Access Inc."
+            }
+          },
+          "test": {
+            "@type": "TestCase",
+            "@id": "Test_97a4e1.js",
+            "title": "Test97a4e1"
+          },
+          "result": {
+            "@type": "TestResult",
+            "info": "BUTTONS HAVE AN ACCESSIBLE NAME",
+            "outcome": "earl:passed",
+            "pointer": "button"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://act-rules.github.io/testcases/97a4e1/d408cca4ab3468dde1dec3fb48e51c508cbb70d7.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@id": "Level Access - Access Engine - Version 3.ACT-R",
+            "@type": [
+              "earl:Assertor",
+              "earl:Software",
+              "doap:Project"
+            ],
+            "doap:name": "Access Engine",
+            "doap:vendor": {
+              "@id": "https://www.levelaccess.com/",
+              "@type": "foaf:Organization",
+              "foaf:name": "Level Access Inc."
+            }
+          },
+          "test": {
+            "@type": "TestCase",
+            "@id": "Test_97a4e1.js",
+            "title": "Test97a4e1"
+          },
+          "result": {
+            "@type": "TestResult",
+            "info": "BUTTONS HAVE AN ACCESSIBLE NAME",
+            "outcome": "earl:passed",
+            "pointer": "input"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://act-rules.github.io/testcases/97a4e1/104a9256c8e8b0752c43ae0821daf92c18781ce8.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@id": "Level Access - Access Engine - Version 3.ACT-R",
+            "@type": [
+              "earl:Assertor",
+              "earl:Software",
+              "doap:Project"
+            ],
+            "doap:name": "Access Engine",
+            "doap:vendor": {
+              "@id": "https://www.levelaccess.com/",
+              "@type": "foaf:Organization",
+              "foaf:name": "Level Access Inc."
+            }
+          },
+          "test": {
+            "@type": "TestCase",
+            "@id": "Test_97a4e1.js",
+            "title": "Test97a4e1"
+          },
+          "result": {
+            "@type": "TestResult",
+            "info": "BUTTONS HAVE AN ACCESSIBLE NAME",
+            "outcome": "earl:passed",
+            "pointer": "button"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://act-rules.github.io/testcases/97a4e1/36c92faf3ffc34dc7a5820bdefdf5d534fb60e49.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@id": "Level Access - Access Engine - Version 3.ACT-R",
+            "@type": [
+              "earl:Assertor",
+              "earl:Software",
+              "doap:Project"
+            ],
+            "doap:name": "Access Engine",
+            "doap:vendor": {
+              "@id": "https://www.levelaccess.com/",
+              "@type": "foaf:Organization",
+              "foaf:name": "Level Access Inc."
+            }
+          },
+          "test": {
+            "@type": "TestCase",
+            "@id": "Test_97a4e1.js",
+            "title": "Test97a4e1"
+          },
+          "result": {
+            "@type": "TestResult",
+            "info": "BUTTONS HAVE AN ACCESSIBLE NAME",
+            "outcome": "earl:passed",
+            "pointer": "span"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://act-rules.github.io/testcases/97a4e1/064ac1119c78804ee67d6fc4001b86279675466f.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@id": "Level Access - Access Engine - Version 3.ACT-R",
+            "@type": [
+              "earl:Assertor",
+              "earl:Software",
+              "doap:Project"
+            ],
+            "doap:name": "Access Engine",
+            "doap:vendor": {
+              "@id": "https://www.levelaccess.com/",
+              "@type": "foaf:Organization",
+              "foaf:name": "Level Access Inc."
+            }
+          },
+          "test": {
+            "@type": "TestCase",
+            "@id": "Test_97a4e1.js",
+            "title": "Test97a4e1"
+          },
+          "result": {
+            "@type": "TestResult",
+            "info": "BUTTONS HAVE AN ACCESSIBLE NAME",
+            "outcome": "earl:passed",
+            "pointer": "summary"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://act-rules.github.io/testcases/97a4e1/46ceea6d3ce5a938db807802a3cd8914ce154c14.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@id": "Level Access - Access Engine - Version 3.ACT-R",
+            "@type": [
+              "earl:Assertor",
+              "earl:Software",
+              "doap:Project"
+            ],
+            "doap:name": "Access Engine",
+            "doap:vendor": {
+              "@id": "https://www.levelaccess.com/",
+              "@type": "foaf:Organization",
+              "foaf:name": "Level Access Inc."
+            }
+          },
+          "test": {
+            "@type": "TestCase",
+            "@id": "Test_97a4e1.js",
+            "title": "Test97a4e1"
+          },
+          "result": {
+            "@type": "TestResult",
+            "info": "BUTTONS HAVE AN ACCESSIBLE NAME",
+            "outcome": "earl:passed",
+            "pointer": "button"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://act-rules.github.io/testcases/97a4e1/cce47b593783fb76f84de37a53cd8af0f15a889f.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@id": "Level Access - Access Engine - Version 3.ACT-R",
+            "@type": [
+              "earl:Assertor",
+              "earl:Software",
+              "doap:Project"
+            ],
+            "doap:name": "Access Engine",
+            "doap:vendor": {
+              "@id": "https://www.levelaccess.com/",
+              "@type": "foaf:Organization",
+              "foaf:name": "Level Access Inc."
+            }
+          },
+          "test": {
+            "@type": "TestCase",
+            "@id": "Test_97a4e1.js",
+            "title": "Test97a4e1"
+          },
+          "result": {
+            "@type": "TestResult",
+            "info": "BUTTONS HAVE AN ACCESSIBLE NAME",
+            "outcome": "earl:passed",
+            "pointer": "button"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://act-rules.github.io/testcases/97a4e1/3378832ac24e2a6460efededb922a1355a1ccfba.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@id": "Level Access - Access Engine - Version 3.ACT-R",
+            "@type": [
+              "earl:Assertor",
+              "earl:Software",
+              "doap:Project"
+            ],
+            "doap:name": "Access Engine",
+            "doap:vendor": {
+              "@id": "https://www.levelaccess.com/",
+              "@type": "foaf:Organization",
+              "foaf:name": "Level Access Inc."
+            }
+          },
+          "test": {
+            "@type": "TestCase",
+            "@id": "Test_97a4e1.js",
+            "title": "Test97a4e1"
+          },
+          "result": {
+            "@type": "TestResult",
+            "info": "BUTTONS HAVE AN ACCESSIBLE NAME",
+            "outcome": "earl:passed",
+            "pointer": "button"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://act-rules.github.io/testcases/97a4e1/a6c40a95f261ac27993f8205d91f7f4540f91f23.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@id": "Level Access - Access Engine - Version 3.ACT-R",
+            "@type": [
+              "earl:Assertor",
+              "earl:Software",
+              "doap:Project"
+            ],
+            "doap:name": "Access Engine",
+            "doap:vendor": {
+              "@id": "https://www.levelaccess.com/",
+              "@type": "foaf:Organization",
+              "foaf:name": "Level Access Inc."
+            }
+          },
+          "test": {
+            "@type": "TestCase",
+            "@id": "Test_97a4e1.js",
+            "title": "Test97a4e1"
+          },
+          "result": {
+            "@type": "TestResult",
+            "info": "BUTTONS HAVE AN ACCESSIBLE NAME",
+            "outcome": "earl:failed",
+            "pointer": "button"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://act-rules.github.io/testcases/97a4e1/34247af6724ee7bcdc0a71e0def98d5410e7363e.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@id": "Level Access - Access Engine - Version 3.ACT-R",
+            "@type": [
+              "earl:Assertor",
+              "earl:Software",
+              "doap:Project"
+            ],
+            "doap:name": "Access Engine",
+            "doap:vendor": {
+              "@id": "https://www.levelaccess.com/",
+              "@type": "foaf:Organization",
+              "foaf:name": "Level Access Inc."
+            }
+          },
+          "test": {
+            "@type": "TestCase",
+            "@id": "Test_97a4e1.js",
+            "title": "Test97a4e1"
+          },
+          "result": {
+            "@type": "TestResult",
+            "info": "BUTTONS HAVE AN ACCESSIBLE NAME",
+            "outcome": "earl:failed",
+            "pointer": "span"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://act-rules.github.io/testcases/97a4e1/9cd3d7152dbd99cc60b83939ffb3003ab1a3d7de.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@id": "Level Access - Access Engine - Version 3.ACT-R",
+            "@type": [
+              "earl:Assertor",
+              "earl:Software",
+              "doap:Project"
+            ],
+            "doap:name": "Access Engine",
+            "doap:vendor": {
+              "@id": "https://www.levelaccess.com/",
+              "@type": "foaf:Organization",
+              "foaf:name": "Level Access Inc."
+            }
+          },
+          "test": {
+            "@type": "TestCase",
+            "@id": "Test_97a4e1.js",
+            "title": "Test97a4e1"
+          },
+          "result": {
+            "@type": "TestResult",
+            "info": "BUTTONS HAVE AN ACCESSIBLE NAME",
+            "outcome": "earl:failed",
+            "pointer": "button"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://act-rules.github.io/testcases/97a4e1/8eb7978d588ab8fd27918075581699ba3ec3d57e.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@id": "Level Access - Access Engine - Version 3.ACT-R",
+            "@type": [
+              "earl:Assertor",
+              "earl:Software",
+              "doap:Project"
+            ],
+            "doap:name": "Access Engine",
+            "doap:vendor": {
+              "@id": "https://www.levelaccess.com/",
+              "@type": "foaf:Organization",
+              "foaf:name": "Level Access Inc."
+            }
+          },
+          "test": {
+            "@type": "TestCase",
+            "@id": "Test_97a4e1.js",
+            "title": "Test97a4e1"
+          },
+          "result": {
+            "@type": "TestResult",
+            "info": "BUTTONS HAVE AN ACCESSIBLE NAME",
+            "outcome": "earl:failed",
+            "pointer": "button"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://act-rules.github.io/testcases/97a4e1/65cb12c42a8d46b2075f669dcabcceb0db074df8.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@id": "Level Access - Access Engine - Version 3.ACT-R",
+            "@type": [
+              "earl:Assertor",
+              "earl:Software",
+              "doap:Project"
+            ],
+            "doap:name": "Access Engine",
+            "doap:vendor": {
+              "@id": "https://www.levelaccess.com/",
+              "@type": "foaf:Organization",
+              "foaf:name": "Level Access Inc."
+            }
+          },
+          "test": {
+            "@type": "TestCase",
+            "@id": "Test_97a4e1.js",
+            "title": "Test97a4e1"
+          },
+          "result": {
+            "@type": "TestResult",
+            "info": "BUTTONS HAVE AN ACCESSIBLE NAME",
+            "outcome": "earl:inapplicable",
+            "pointer": "body"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://act-rules.github.io/testcases/97a4e1/20901e2525d4f6c77476caacf41ec9d5c234a59a.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@id": "Level Access - Access Engine - Version 3.ACT-R",
+            "@type": [
+              "earl:Assertor",
+              "earl:Software",
+              "doap:Project"
+            ],
+            "doap:name": "Access Engine",
+            "doap:vendor": {
+              "@id": "https://www.levelaccess.com/",
+              "@type": "foaf:Organization",
+              "foaf:name": "Level Access Inc."
+            }
+          },
+          "test": {
+            "@type": "TestCase",
+            "@id": "Test_97a4e1.js",
+            "title": "Test97a4e1"
+          },
+          "result": {
+            "@type": "TestResult",
+            "info": "BUTTONS HAVE AN ACCESSIBLE NAME",
+            "outcome": "earl:inapplicable",
+            "pointer": "body"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://act-rules.github.io/testcases/97a4e1/6cd354877d9f74fb27e250616b44abe1d70ed41e.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@id": "Level Access - Access Engine - Version 3.ACT-R",
+            "@type": [
+              "earl:Assertor",
+              "earl:Software",
+              "doap:Project"
+            ],
+            "doap:name": "Access Engine",
+            "doap:vendor": {
+              "@id": "https://www.levelaccess.com/",
+              "@type": "foaf:Organization",
+              "foaf:name": "Level Access Inc."
+            }
+          },
+          "test": {
+            "@type": "TestCase",
+            "@id": "Test_97a4e1.js",
+            "title": "Test97a4e1"
+          },
+          "result": {
+            "@type": "TestResult",
+            "info": "BUTTONS HAVE AN ACCESSIBLE NAME",
+            "outcome": "earl:inapplicable",
+            "pointer": "body"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://act-rules.github.io/testcases/97a4e1/e34c1f2a007d5711980c45f6051a3f2e52b66847.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@id": "Level Access - Access Engine - Version 3.ACT-R",
+            "@type": [
+              "earl:Assertor",
+              "earl:Software",
+              "doap:Project"
+            ],
+            "doap:name": "Access Engine",
+            "doap:vendor": {
+              "@id": "https://www.levelaccess.com/",
+              "@type": "foaf:Organization",
+              "foaf:name": "Level Access Inc."
+            }
+          },
+          "test": {
+            "@type": "TestCase",
+            "@id": "Test_97a4e1.js",
+            "title": "Test97a4e1"
+          },
+          "result": {
+            "@type": "TestResult",
+            "info": "BUTTONS HAVE AN ACCESSIBLE NAME",
+            "outcome": "earl:inapplicable",
+            "pointer": "body"
+          }
+        }
+      ]
+    }
+  ]
+}

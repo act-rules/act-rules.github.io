@@ -119,10 +119,11 @@
 		"get-implementations": "node ./build/get-implementations",
 		"get-wcag-sc-metadata": "node ./build/get-wcag-sc-metadata",
 		"get-data": "npm run get-wcag-sc-metadata && npm run get-implementations",
-		"report": "npm run report:rgaa && npm run report:axe && npm run report:alfa",
+		"report": "npm run report:rgaa && npm run report:axe && npm run report:alfa && npm run report:levelaccess",
 		"report:rgaa": "bin/act-imp --local \"./implementations/rgaa/*.json\" --output ./public/reports/rgaa.json",
 		"report:axe": "bin/act-imp --local ./implementations/axe-core/axe-earl-results.json --output ./public/reports/axe.json",
-		"report:alfa": "bin/act-imp --url $npm_package_config_implementations_alfa --output ./public/reports/alpha.json"
+		"report:alfa": "bin/act-imp --url $npm_package_config_implementations_alfa --output ./public/reports/alfa.json",
+		"report:levelaccess": "bin/act-imp --local ./implementations/level-access/result.json --output ./public/reports/levelaccess.json"
 	},
 	"bin": {
 		"act-imp": "dist/bin/act-imp"

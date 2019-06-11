@@ -16,7 +16,6 @@ import {
 import SEO from '../components/seo'
 import { contributors, repository, config } from './../../package.json'
 
-
 export default ({ data }) => {
 	const { rule, allRules, allGlossary, site } = data
 	const { html, frontmatter, tableOfContents, fields } = rule
@@ -45,7 +44,12 @@ export default ({ data }) => {
 					<ul className="meta">
 						{getRuleType(frontmatter.rule_type)}
 						<li>{getAccessibilityRequirements(accessibility_requirements)}</li>
-						<li>{getInputAspects(frontmatter.input_aspects, ruleFormatInputAspects)}</li>
+						<li>
+							{getInputAspects(
+								frontmatter.input_aspects,
+								ruleFormatInputAspects
+							)}
+						</li>
 						<li>
 							{getInputRulesForRule(
 								frontmatter.input_rules,
@@ -72,7 +76,11 @@ export default ({ data }) => {
 					{getGlossaryUsed(slug, allGlossary)}
 					<hr />
 					{/* changelog */}
-					{getChangelog(ruleChangelog, repository.url, `_rules/${relativePath}`)}
+					{getChangelog(
+						ruleChangelog,
+						repository.url,
+						`_rules/${relativePath}`
+					)}
 					{/* acknowledgements */}
 					<hr />
 					<a id="acknowledgements" href="#acknowledgements">
@@ -147,8 +155,8 @@ export const query = graphql`
 			}
 			fields {
 				fileName {
-          relativePath
-        }
+					relativePath
+				}
 				slug
 				fastmatterAttributes
 				changelog

@@ -54,7 +54,7 @@ const createTestcasesOfAllRules = options => {
 
 			if (codeTitles.length !== codeSnippets.length) {
 				throw new Error(
-					`Number of matching titles for code snippets is wrong. Check markdown '${name}' for irregularities. Slug: '${slug}'`
+					`Number of matching titles for code snippets is wrong. Check markdown '${ruleName}' for irregularities. Slug: '${slug}'`
 				)
 			}
 
@@ -101,7 +101,8 @@ const createTestcasesOfAllRules = options => {
 					ruleId,
 					ruleName,
 					rulePage: `${url}/${slug}`,
-					ruleAccessibilityRequirements
+					ruleAccessibilityRequirements,
+					requirementsMapping: Object.keys(ruleAccessibilityRequirements || {}),
 				}
 
 				out.push(testcase)

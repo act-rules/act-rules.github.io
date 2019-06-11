@@ -93,6 +93,7 @@
 		"gatsby-plugin-sass": "^2.0.10",
 		"gatsby-plugin-sharp": "^2.0.36",
 		"gatsby-remark-autolink-headers": "^2.0.15",
+		"gatsby-remark-copy-linked-files": "^2.0.12",
 		"gatsby-remark-prismjs": "^3.2.9",
 		"gatsby-source-filesystem": "^2.0.33",
 		"gatsby-transformer-remark": "^2.3.12",
@@ -114,7 +115,9 @@
 		"showdown": "^1.9.0"
 	},
 	"devDependencies": {
+		"husky": "^2.4.0",
 		"jest": "^24.8.0",
+		"lint-staged": "^8.2.0",
 		"prettier": "^1.17.0"
 	},
 	"keywords": [
@@ -179,6 +182,17 @@
 			"<rootDir>/test/utils/",
 			"<rootDir>/.cache/",
 			"<rootDir>/.public/"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm test"
+		}
+	},
+	"lint-staged": {
+		"*.{md,json,js,html}": [
+			"prettier --write",
+			"git add"
 		]
 	}
 }

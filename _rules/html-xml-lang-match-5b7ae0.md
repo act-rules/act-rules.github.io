@@ -3,7 +3,7 @@ id: 5b7ae0
 name: HTML lang and xml:lang match
 rule_type: atomic
 description: |
-  The rule checks that for the `html` element, there is no mismatch between the primary language in non-empty `lang` and `xml:lang` attributes, if both are used.
+  The rule checks that for the `html` element, the value of the primary language for the `lang` and `xml:lang` attributes are the same.
 accessibility_requirements:
   wcag20:3.1.1: # Language of Page (A)
     forConformance: true

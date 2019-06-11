@@ -25,7 +25,6 @@
 
 @mixin header-style($color) {
   font-family: 'Roboto', sans-serif;
-  text-transform: capitalize;
   color: $color;
   text-decoration: none;
   margin: 1rem 0;
@@ -68,7 +67,6 @@
   h1{
     border-bottom: 1px solid $sep;
     padding: 2rem 0;
-    text-transform: uppercase;
     margin-bottom: 0;
     text-decoration: none;
   }

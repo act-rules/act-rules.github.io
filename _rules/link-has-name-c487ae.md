@@ -34,7 +34,7 @@ The rule applies to any HTML element with the [semantic role](#semantic-role) of
 
 ## Expectation
 
-Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
+Each target element has an [accessible name](#accessible-name) that consists of characters other than [whitespace](#whitespace).
 
 ## Assumptions
 

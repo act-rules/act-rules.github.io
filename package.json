@@ -196,6 +196,7 @@
 				"tool": "Access42 (RGAA)",
 				"data": {
 					"type": "NPM",
+					"url": "https://github.com/act-rules/act-rules-implementation-rgaa/tree/master/reports",
 					"exec": "npm install https://github.com/act-rules/act-rules-implementation-rgaa/tarball/master",
 					"path": "act-rules-implementation-rgaa/reports/*.json"
 				}

@@ -20,7 +20,7 @@ const getImplementation = async framedReports => {
         implementation
       }
     })
-    .filter(result => (result.implementation && result.implementation.length > 0))
+    .filter(result => (result.implementation && result.implementation.length))
 }
 
 module.exports = getImplementation

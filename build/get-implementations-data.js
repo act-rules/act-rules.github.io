@@ -26,9 +26,9 @@ const init = async () => {
      * get implementation metrics from report
      */
     const implementation = await getImplementation(framedReport)
-
+    const filename = tool.split(' ').join('-').toLowerCase();
     await createFile(
-      `public/implementations/${tool}.json`,
+      `public/implementations/${filename}.json`,
       JSON.stringify(implementation, null, 2)
     )
   }

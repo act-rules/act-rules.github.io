@@ -5,7 +5,7 @@
  */
 const path = require('path')
 const axios = require('axios')
-const createFile = require('./create-file')
+const createFile = require('./../utils/create-file')
 const pkg = require('./../package.json')
 const outputFileScMetaData = path.join(__dirname, '..', '_data', 'sc-urls.json')
 const outputFileScEmReportAuditResult = path.join(

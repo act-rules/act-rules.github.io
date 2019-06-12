@@ -82,8 +82,10 @@
 		}
 	],
 	"dependencies": {
+		"act-rules-implementation-rgaa": "https://github.com/act-rules/act-rules-implementation-rgaa/tarball/master",
 		"axios": "^0.18.1",
 		"fastmatter": "^2.1.1",
+		"flat": "^4.1.0",
 		"gatsby": "^2.8.6",
 		"gatsby-image": "^2.1.2",
 		"gatsby-plugin-manifest": "^2.1.1",
@@ -93,13 +95,14 @@
 		"gatsby-plugin-sass": "^2.0.10",
 		"gatsby-plugin-sharp": "^2.1.3",
 		"gatsby-remark-autolink-headers": "^2.0.15",
+		"gatsby-remark-copy-linked-files": "^2.0.12",
 		"gatsby-remark-prismjs": "^3.2.11",
 		"gatsby-source-filesystem": "^2.0.38",
-		"gatsby-remark-copy-linked-files": "^2.0.12",
 		"gatsby-transformer-remark": "^2.3.12",
 		"gatsby-transformer-sharp": "^2.1.21",
 		"gfm-code-blocks": "^1.0.0",
 		"globby": "^9.2.0",
+		"is-url": "^1.2.4",
 		"jsonld": "^1.6.2",
 		"make-dir": "^2.1.0",
 		"marked": "^0.6.2",
@@ -112,7 +115,8 @@
 		"react": "^16.8.6",
 		"react-dom": "^16.8.6",
 		"react-helmet": "^5.2.1",
-		"showdown": "^1.9.0"
+		"showdown": "^1.9.0",
+		"testrunner": "git+https://github.com/act-rules/act-rules-implementation-rgaa"
 	},
 	"devDependencies": {
 		"husky": "^2.4.0",
@@ -138,9 +142,9 @@
 		"serve": "gatsby serve",
 		"test": "npm run test:rules",
 		"test:rules": "jest",
-		"get-implementations": "node ./build/get-implementations",
+		"get-implementations-data": "node ./build/get-implementations-data",
 		"get-wcag-sc-metadata": "node ./build/get-wcag-sc-metadata",
-		"get-data": "npm run get-wcag-sc-metadata && npm run get-implementations"
+		"get-data": "npm run get-wcag-sc-metadata && npm run get-implementations-data"
 	},
 	"homepage": "https://github.com/act-rules/act-rules.github.io",
 	"repository": {
@@ -161,10 +165,42 @@
 		"references": {
 			"wcag21": "https://raw.githubusercontent.com/w3c/wai-wcag-quickref/gh-pages/_data/wcag21.json"
 		},
-		"implementations": {
-			"alfa": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/alfa-report.json",
-			"axe": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/axe-report.json"
-		},
+		"testcases-url": "https://act-rules.github.io/testcases.json",
+		"implementations": [
+			{
+				"provider": "Level Access",
+				"tool": "Access Engine",
+				"data": {
+					"type": "JSON",
+					"path": "https://raw.githubusercontent.com/act-rules/act-rules-implementation-access-engine/master/report.json"
+				}
+			},
+			{
+				"provider": "Site Improve",
+				"tool": "Alfa",
+				"data": {
+					"type": "JSON",
+					"path": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/alfa-report.json"
+				}
+			},
+			{
+				"provider": "Deque Systems",
+				"tool": "Axe",
+				"data": {
+					"type": "JSON",
+					"path": "https://raw.githubusercontent.com/act-rules/act-rules-implementation-axe-core/master/report.json"
+				}
+			},
+			{
+				"provider": "Access42",
+				"tool": "Access42 (RGAA)",
+				"data": {
+					"type": "NPM",
+					"exec": "npm install https://github.com/act-rules/act-rules-implementation-rgaa/tarball/master",
+					"path": "act-rules-implementation-rgaa/reports/*.json"
+				}
+			}
+		],
 		"rule-format-metadata": {
 			"input-aspects": {
 				"default": "https://www.w3.org/TR/act-rules-aspects/#intro",

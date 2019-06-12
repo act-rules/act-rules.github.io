@@ -5,7 +5,7 @@
  */
 const queries = require('./queries')
 const regexps = require('./reg-exps')
-const createFile = require('./../build/create-file')
+const createFile = require('./../utils/create-file')
 const getAllMatchesForRegex = require('./get-all-matches-for-regex')
 
 const createGlossaryUsagesInRules = options => {

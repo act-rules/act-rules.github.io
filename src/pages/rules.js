@@ -6,6 +6,7 @@ import showdown from 'showdown'
 import {
 	getAccessibilityRequirements,
 	getInputRulesForRule,
+	getImplementationsCount
 } from './../utils/render-fragments'
 
 export default ({ data }) => {
@@ -56,6 +57,8 @@ export default ({ data }) => {
 								</section>
 								{/* input rules */}
 								{getInputRulesForRule(input_rules, allRules.edges, true)}
+								{/* implementation count */}
+								{getImplementationsCount(slug)}
 							</article>
 						)
 					})}

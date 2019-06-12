@@ -12,6 +12,8 @@ import {
 	getAuthors,
 	getInputRulesForRule,
 	getInputAspects,
+	getImplementations,
+	getImplementationsLink
 } from './../utils/render-fragments'
 import SEO from '../components/seo'
 import { contributors, repository, config } from './../../package.json'
@@ -81,6 +83,8 @@ export default ({ data }) => {
 						repository.url,
 						`_rules/${relativePath}`
 					)}
+					{/* implementations */}
+					{getImplementations(slug)}
 					{/* acknowledgements */}
 					<hr />
 					<a id="acknowledgements" href="#acknowledgements">
@@ -98,8 +102,12 @@ export default ({ data }) => {
 					</span>
 					<div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
 					<ul>
+						{/* glossary */}
 						{getGlossaryUsedLink(slug, allGlossary)}
+						{/* changelog */}
 						{getChangelogLink(ruleChangelog)}
+						{/* implementations */}
+						{getImplementationsLink(slug)}
 						<li>
 							<a href="#acknowledgements">Acknowledgements</a>
 						</li>

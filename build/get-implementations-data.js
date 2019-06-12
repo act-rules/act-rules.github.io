@@ -12,6 +12,11 @@ const init = async () => {
     throw new Error('No implementations are specified in `config` of `package.json`')
   }
 
+  /**
+   * Collect all implementations from various vendors
+   */
+  const implementationReports = {};
+
   for (let item of implementations) {
     const { provider, tool, data } = item
 
@@ -25,13 +30,71 @@ const init = async () => {
     /**
      * get implementation metrics from report
      */
-    const implementation = await getImplementation(framedReport)
+    const implementationStats = await getImplementation(framedReport)
+
+
+    /**
+     * create rule based metric
+     */
+    const report = {
+      tool,
+      provider,
+      data,
+      implementationStats
+    }
+    implementationReports[tool] = report
+
+    /**
+     * Note:
+     * These files are only generated for debugging
+     */
     const filename = tool.split(' ').join('-').toLowerCase();
     await createFile(
-      `public/implementations/${filename}.json`,
-      JSON.stringify(implementation, null, 2)
+      `_data/implementations/${filename}.json`,
+      JSON.stringify(report, null, 2)
     )
   }
+
+  /**
+   * transform data, to be grouped by rule id.
+   */
+  const groupedMetricByRuleId = {}
+
+  Object.values(implementationReports)
+    .forEach(report => {
+      const { tool, provider, data, implementationStats } = report;
+
+      implementationStats
+        .forEach(({ ruleId, implementation }) => {
+          if (!implementation) {
+            return
+          }
+
+          const { complete = false } = implementation
+          if (!complete) {
+            return
+          }
+
+          if (!groupedMetricByRuleId[ruleId]) {
+            groupedMetricByRuleId[ruleId] = []
+          }
+
+          groupedMetricByRuleId[ruleId].push({
+            tool,
+            provider,
+            data,
+            implementation
+          })
+        })
+    })
+
+  /**
+   * Create metrics in `_data` for usage in `site`
+   */
+  await createFile(
+    `_data/implementations-metrics.json`,
+    JSON.stringify(groupedMetricByRuleId, null, 2)
+  )
 }
 
 init()

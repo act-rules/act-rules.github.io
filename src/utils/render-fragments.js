@@ -2,6 +2,69 @@ import React from 'react'
 import scUrls from './../../_data/sc-urls'
 import { Link } from 'gatsby'
 import glossaryUsages from './../../_data/glossary-usages.json'
+import implementationMetrics from './../../_data/implementations-metrics.json'
+
+export const getImplementations = slug => {
+	const ruleId = slug.replace('rules/', '')
+	const metrics = implementationMetrics[ruleId]
+	if (!metrics) {
+		return null
+	}
+	return (
+		<>
+			<a id="implementation-metrics" href="#implementation-metrics">
+				<h2>Implementations</h2>
+			</a>
+			<table className="compact">
+				<thead>
+					<tr>
+						<th width="3%">#</th>
+						<th>Tool Name</th>
+						<th>Created By</th>
+						<th>Report</th>
+					</tr>
+				</thead>
+				<tbody>
+					{metrics.map((metric, index) => {
+						const { provider, tool, data } = metric
+						const reportUrl = data.type === `JSON`
+							? data.path
+							: data.url
+						return (
+							<tr key={provider}>
+								<td width="3%">{index + 1}</td>
+								<td>{tool}</td>
+								<td>{provider}</td>
+								<td>
+									<a
+										target="_blank"
+										rel="noopener noreferrer"
+										href={reportUrl}
+									>
+										View Report
+									</a>
+								</td>
+							</tr>
+						)
+					})}
+				</tbody>
+			</table>
+		</>
+	)
+}
+
+export const getImplementationsLink = slug => {
+	const ruleId = slug.replace('rules/', '')
+	const metrics = implementationMetrics[ruleId]
+	if (!metrics) {
+		return null
+	}
+	return (
+		<li>
+			<a href="#implementation-metrics">Implementations ({metrics.length})</a>
+		</li>
+	)
+}
 
 export const getChangelog = (changelog, url, file) => {
 	if (!changelog.length) {
@@ -349,20 +412,59 @@ export function getInputRulesForRule(
 		<div className="side-notes">
 			<div className="meta">
 				<h3 className="heading">Input Rules</h3>
-				{inputRules.map(inputRuleId => {
-					const atomicRule = allRules.find(
-						rule => rule.node.frontmatter.id === inputRuleId
-					)
-					const aHref = stripBasePath
-						? atomicRule.node.fields.slug.replace('rules/', '')
-						: atomicRule.node.fields.slug
-					const name = atomicRule.node.frontmatter.name
-					return (
-						<a className="sc-item block" href={aHref} key={inputRuleId}>
-							{name}
-						</a>
-					)
-				})}
+				<ul>
+					{inputRules.map(inputRuleId => {
+						const atomicRule = allRules.find(
+							rule => rule.node.frontmatter.id === inputRuleId
+						)
+						const aHref = stripBasePath
+							? atomicRule.node.fields.slug.replace('rules/', '')
+							: atomicRule.node.fields.slug
+						const name = atomicRule.node.frontmatter.name
+						return (
+							<li key={inputRuleId}>
+								<a className="sc-item block" 
+									href={aHref} >
+									{name}
+								</a>
+							</li>
+						)
+					})}
+				</ul>
+			</div>
+		</div>
+	)
+}
+
+
+export function getImplementationsCount(slug) {
+	const ruleId = slug.replace('rules/', '')
+	const metrics = implementationMetrics[ruleId]
+	if (!metrics) {
+		return null
+	}
+	return (
+		<div className="side-notes">
+			<div className="meta">
+				<h3 className="heading">Implementations ({metrics.length})</h3>
+				<ul>
+				{
+					metrics.map((metric, index) => {
+						const { provider, tool, data } = metric
+						const reportUrl = data.type === `JSON`
+							? data.path
+							: data.url
+						return (
+							<li key={provider}>
+								<a className="sc-item block" 
+									href={reportUrl} >
+									{tool} ({provider})
+								</a>
+							</li>
+						)
+					})
+				}
+				</ul>
 			</div>
 		</div>
 	)

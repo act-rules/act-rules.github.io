@@ -104,6 +104,26 @@ Element contained within its required context role even though it is not a direc
 </div>
 ```
 
+#### Passed Example 6
+
+Implicit ownership that crosses shadow boundary.
+
+```html
+<div id="host" role="list">
+  <div role="listitem">List item 1</div>
+</div>
+
+<script>
+  const host = document.querySelector("#host");
+  const root = host.attachShadow({ mode: "open" });
+
+  root.innerHTML = `
+    <slot></slot>
+    <div role="listitem">List item 2</div>
+  `;
+</script>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -173,6 +193,27 @@ The element with the semantic role of `listitem` is [owned by](#owned-by) the fi
 ```
 
 **Note:** This test case follows the definition of [owned by](#owned-by) used in this rule. If implemented differently, this definition could cause differences in outcome for this test case.
+
+#### Failed Example 7
+
+Explicit ownership that crosses shadow boundary.
+
+```html
+<div role="list" aria-owns="item">
+  <div role="listitem">List item 1</div>
+</div>
+
+<div id="host"></div>
+
+<script>
+  const host = document.querySelector("#host");
+  const root = host.attachShadow({ mode: "open" });
+
+  root.innerHTML = `
+    <div id="item" role="listitem">List item 2</div>
+  `;
+</script>
+```
 
 ### Inapplicable
 

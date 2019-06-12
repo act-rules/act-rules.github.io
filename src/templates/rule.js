@@ -13,7 +13,7 @@ import {
 	getInputRulesForRule,
 	getInputAspects,
 	getImplementations,
-	getImplementationsLink
+	getImplementationsLink,
 } from './../utils/render-fragments'
 import SEO from '../components/seo'
 import { contributors, repository, config } from './../../package.json'

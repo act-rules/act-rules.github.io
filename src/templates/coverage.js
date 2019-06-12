@@ -9,7 +9,9 @@ export default ({ data }) => {
 	const { html, frontmatter } = markdownRemark
 
 	const updatedTitle = `${frontmatter.title} | ${site.siteMetadata.title}`
-	const { config: { implementations } } = pkg
+	const {
+		config: { implementations },
+	} = pkg
 
 	return (
 		<Layout>
@@ -32,9 +34,7 @@ export default ({ data }) => {
 						<tbody>
 							{implementations.map((row, index) => {
 								const { provider, tool, data } = row
-								const reportUrl = data.type === `JSON`
-									? data.path
-									: data.url
+								const reportUrl = data.type === `JSON` ? data.path : data.url
 								return (
 									<tr key={row.provider}>
 										<td width="3%">{index + 1}</td>

@@ -27,20 +27,14 @@ export const getImplementations = slug => {
 				<tbody>
 					{metrics.map((metric, index) => {
 						const { provider, tool, data } = metric
-						const reportUrl = data.type === `JSON`
-							? data.path
-							: data.url
+						const reportUrl = data.type === `JSON` ? data.path : data.url
 						return (
 							<tr key={provider}>
 								<td width="3%">{index + 1}</td>
 								<td>{tool}</td>
 								<td>{provider}</td>
 								<td>
-									<a
-										target="_blank"
-										rel="noopener noreferrer"
-										href={reportUrl}
-									>
+									<a target="_blank" rel="noopener noreferrer" href={reportUrl}>
 										View Report
 									</a>
 								</td>
@@ -423,8 +417,7 @@ export function getInputRulesForRule(
 						const name = atomicRule.node.frontmatter.name
 						return (
 							<li key={inputRuleId}>
-								<a className="sc-item block" 
-									href={aHref} >
+								<a className="sc-item block" href={aHref}>
 									{name}
 								</a>
 							</li>
@@ -435,7 +428,6 @@ export function getInputRulesForRule(
 		</div>
 	)
 }
-
 
 export function getImplementationsCount(slug) {
 	const ruleId = slug.replace('rules/', '')
@@ -448,22 +440,17 @@ export function getImplementationsCount(slug) {
 			<div className="meta">
 				<h3 className="heading">Implementations ({metrics.length})</h3>
 				<ul>
-				{
-					metrics.map((metric, index) => {
+					{metrics.map((metric, index) => {
 						const { provider, tool, data } = metric
-						const reportUrl = data.type === `JSON`
-							? data.path
-							: data.url
+						const reportUrl = data.type === `JSON` ? data.path : data.url
 						return (
 							<li key={provider}>
-								<a className="sc-item block" 
-									href={reportUrl} >
+								<a className="sc-item block" href={reportUrl}>
 									{tool} ({provider})
 								</a>
 							</li>
 						)
-					})
-				}
+					})}
 				</ul>
 			</div>
 		</div>

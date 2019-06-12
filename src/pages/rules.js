@@ -6,7 +6,7 @@ import showdown from 'showdown'
 import {
 	getAccessibilityRequirements,
 	getInputRulesForRule,
-	getImplementationsCount
+	getImplementationsCount,
 } from './../utils/render-fragments'
 
 export default ({ data }) => {

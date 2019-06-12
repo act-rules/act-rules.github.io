@@ -1,105 +1,109 @@
-const { config: { implementations } } = require('./../package.json')
+const {
+	config: { implementations },
+} = require('./../package.json')
 const getFramedReport = require('./implementations/get-framed-report')
 const getImplementation = require('./implementations/get-implementation')
 const createFile = require('./../utils/create-file')
 
 /**
- * Create implementation metrics, that can be used in the site, 
+ * Create implementation metrics, that can be used in the site,
  * for each `implementation` provided as configuration in `package.json`.
  */
 const init = async () => {
-  if (!implementations || !Object.keys(implementations).length) {
-    throw new Error('No implementations are specified in `config` of `package.json`')
-  }
+	if (!implementations || !Object.keys(implementations).length) {
+		throw new Error(
+			'No implementations are specified in `config` of `package.json`'
+		)
+	}
 
-  /**
-   * Collect all implementations from various vendors
-   */
-  const implementationReports = {};
+	/**
+	 * Collect all implementations from various vendors
+	 */
+	const implementationReports = {}
 
-  for (let item of implementations) {
-    const { provider, tool, data } = item
+	for (let item of implementations) {
+		const { provider, tool, data } = item
 
-    console.info(`Get implementation data of ${tool} by ${provider}\n`)
+		console.info(`Get implementation data of ${tool} by ${provider}\n`)
 
-    /**
-     * fetch report & frame as required
-     */
-    const framedReport = await getFramedReport(data)
+		/**
+		 * fetch report & frame as required
+		 */
+		const framedReport = await getFramedReport(data)
 
-    /**
-     * get implementation metrics from report
-     */
-    const implementationStats = await getImplementation(framedReport)
+		/**
+		 * get implementation metrics from report
+		 */
+		const implementationStats = await getImplementation(framedReport)
 
+		/**
+		 * create rule based metric
+		 */
+		const report = {
+			tool,
+			provider,
+			data,
+			implementationStats,
+		}
+		implementationReports[tool] = report
 
-    /**
-     * create rule based metric
-     */
-    const report = {
-      tool,
-      provider,
-      data,
-      implementationStats
-    }
-    implementationReports[tool] = report
+		/**
+		 * Note:
+		 * These files are only generated for debugging
+		 */
+		const filename = tool
+			.split(' ')
+			.join('-')
+			.toLowerCase()
+		await createFile(
+			`_data/implementations/${filename}.json`,
+			JSON.stringify(report, null, 2)
+		)
+	}
 
-    /**
-     * Note:
-     * These files are only generated for debugging
-     */
-    const filename = tool.split(' ').join('-').toLowerCase();
-    await createFile(
-      `_data/implementations/${filename}.json`,
-      JSON.stringify(report, null, 2)
-    )
-  }
+	/**
+	 * transform data, to be grouped by rule id.
+	 */
+	const groupedMetricByRuleId = {}
 
-  /**
-   * transform data, to be grouped by rule id.
-   */
-  const groupedMetricByRuleId = {}
+	Object.values(implementationReports).forEach(report => {
+		const { tool, provider, data, implementationStats } = report
 
-  Object.values(implementationReports)
-    .forEach(report => {
-      const { tool, provider, data, implementationStats } = report;
+		implementationStats.forEach(({ ruleId, implementation }) => {
+			if (!implementation) {
+				return
+			}
 
-      implementationStats
-        .forEach(({ ruleId, implementation }) => {
-          if (!implementation) {
-            return
-          }
+			const { complete = false } = implementation
+			if (!complete) {
+				return
+			}
 
-          const { complete = false } = implementation
-          if (!complete) {
-            return
-          }
+			if (!groupedMetricByRuleId[ruleId]) {
+				groupedMetricByRuleId[ruleId] = []
+			}
 
-          if (!groupedMetricByRuleId[ruleId]) {
-            groupedMetricByRuleId[ruleId] = []
-          }
+			groupedMetricByRuleId[ruleId].push({
+				tool,
+				provider,
+				data,
+				implementation,
+			})
+		})
+	})
 
-          groupedMetricByRuleId[ruleId].push({
-            tool,
-            provider,
-            data,
-            implementation
-          })
-        })
-    })
-
-  /**
-   * Create metrics in `_data` for usage in `site`
-   */
-  await createFile(
-    `_data/implementations-metrics.json`,
-    JSON.stringify(groupedMetricByRuleId, null, 2)
-  )
+	/**
+	 * Create metrics in `_data` for usage in `site`
+	 */
+	await createFile(
+		`_data/implementations-metrics.json`,
+		JSON.stringify(groupedMetricByRuleId, null, 2)
+	)
 }
 
 init()
-  .then(() => console.info(`Implementations data generated.`))
-  .catch(err => {
-    console.error(err);
-    process.exit(1)
-  })
+	.then(() => console.info(`Implementations data generated.`))
+	.catch(err => {
+		console.error(err)
+		process.exit(1)
+	})

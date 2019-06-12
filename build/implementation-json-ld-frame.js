@@ -4,7 +4,7 @@ module.exports = {
 		WCAG: 'https://www.w3.org/TR/WCAG/#',
 		http: 'http://www.w3.org/2011/http#',
 		cnt: 'http://www.w3.org/2011/content#',
-		dc: 'http://purl.org/dc/terms#',
+		dct: 'http://purl.org/dc/terms/',
 		ptr: 'https://www.w3.org/2009/pointers#',
 		doap: 'http://usefulinc.com/ns/doap#',
 		foaf: 'http://xmlns.com/foaf/spec/#',
@@ -82,7 +82,7 @@ module.exports = {
 		},
 
 		source: {
-			'@id': 'dc:source',
+			'@id': 'dct:source',
 		},
 
 		assertions: {

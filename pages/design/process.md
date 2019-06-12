@@ -20,7 +20,7 @@ Short description: Initial review of the general concept and validity of the rul
 ### Enters this stage when: 
 - A new rule is first proposed.
 
-### Passes this stage when: 
+### Passes this stage and moves on to "To Do" when: 
 - Currently no explicit criteria for passing this stage, but 3 intial approvals from different organisations is recommended. This should give an indication on whether the rule can get 3 final approving reviews and get through Final Call later.
 
 ### Fails this stage and becomes "Rejected" when: 
@@ -46,9 +46,10 @@ Short description: Rules waiting to be picked up and worked on.
 - Rule ideas: Rules that have passed the "Ideas looking for initial approvals" stage, or
 - Published rules: Bugs that have been reported in for published rules.
 
-### Passes this stage when: 
+### Passes this stage and moves on to "In Progress" when: 
 
-### Fails this stage and moves back a stage when: 
+### Fails this stage and moves back a stage to "Ideas looking for initial approvals" when: 
+- ??? 
 
 ### Instructions for this stage
 
@@ -65,7 +66,7 @@ Short description: Rule writing
 ### Passes this stage when: 
 - There are no open comments from reviewers. 
 
-### Fails this stage and moves back a stage when: 
+### Fails this stage and moves back a stage to "To Do" when: 
 
 ### Instructions for this stage
 
@@ -84,7 +85,7 @@ Short description: Rule writing
 ### Passes this stage when: 
 - 3 approvals from different organisations have been given.
 
-### Fails this stage and moves back a stage when: 
+### Fails this stage and moves back a stage to "In Progress / Changes requested" when: 
 - "Changes requested" reviews comes in, which moves it back to "In progress / Changes Requested"
 
 ### Instructions for this stage
@@ -118,7 +119,7 @@ These changes are considered non-substantial and will not require a "Final call"
 ### Passes this stage when:
 - No changes or only changes that do not require a final call is made to the rule after Final Call is launched.
 
-### Fails this stage and moves back a stage when: 
+### Fails this stage and moves back two stages to "In Progress" when: 
 - Changes that do require a final call is made to the rule after Final Call is launched.
 
 If this happens, a new final call should be launched after the first one. It is recommended to let the first final call expire first, before launching a new one, to get a broad range of reviewers on board already in the first round to hopefully avoid multiple rounds of final calls for the same pull request.

@@ -28,10 +28,10 @@ const getNodeData = async options => {
 			const gitLog = await getGitLog({
 				file: `./_rules/${relativePath}`,
 				schema: {
-					commit: "%H",
-					msg: "%s",
-					date: "%ct"
-				}
+					commit: '%H',
+					msg: '%s',
+					date: '%ct',
+				},
 			})
 			return {
 				...defaults,

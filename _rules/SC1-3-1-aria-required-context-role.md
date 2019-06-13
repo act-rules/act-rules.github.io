@@ -106,11 +106,10 @@ Element contained within its required context role even though it is not a direc
 
 #### Passed Example 6
 
-Implicit ownership that crosses shadow boundary.
+Since implicit ownership can cross shadow boundaries, the element with the semantic role of `listitem` is contained within its required context role `list`.
 
 ```html
 <div id="host" role="list">
-  <div role="listitem">List item 1</div>
 </div>
 
 <script>
@@ -119,7 +118,7 @@ Implicit ownership that crosses shadow boundary.
 
   root.innerHTML = `
     <slot></slot>
-    <div role="listitem">List item 2</div>
+    <div role="listitem">List item 1</div>
   `;
 </script>
 ```
@@ -196,11 +195,10 @@ The element with the semantic role of `listitem` is [owned by](#owned-by) the fi
 
 #### Failed Example 7
 
-Explicit ownership that crosses shadow boundary.
+Since explicit ownership cannot cross shadow boundaries, the element with the semantic role of `listitem` does not have a context role.
 
 ```html
 <div role="list" aria-owns="item">
-  <div role="listitem">List item 1</div>
 </div>
 
 <div id="host"></div>
@@ -210,7 +208,7 @@ Explicit ownership that crosses shadow boundary.
   const root = host.attachShadow({ mode: "open" });
 
   root.innerHTML = `
-    <div id="item" role="listitem">List item 2</div>
+    <div id="item" role="listitem">List item 1</div>
   `;
 </script>
 ```

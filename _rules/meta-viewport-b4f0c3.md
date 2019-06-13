@@ -24,16 +24,16 @@ The rule applies to every `<meta name="viewport">` elements with a `content` att
 ## Expectation
 
 The `content` attribute of the test target: 
-- do not have the property `user-scalable` or it is set to `yes`
-- do not have the property `maximum-scale` 
+- does not have the property `user-scalable` or it is set to `yes`
+- does not have the property `maximum-scale` 
 
 ## Assumptions
 
-- There may be some inconsistencies with how different browser vendors interpret `<meta name="viewport">`.
+_There are currently no assumptions._
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+- There may be some inconsistencies with how different browser vendors interpret `<meta name="viewport">`.
 
 ## Background
 
@@ -45,7 +45,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The meta `viewport` do not define the `maximum-scale` and `user-scalable` properties.
+The `<meta name="viewport">` does not defines the `maximum-scale` and `user-scalable` properties.
 
 ````html
 <head>
@@ -55,7 +55,7 @@ The meta `viewport` do not define the `maximum-scale` and `user-scalable` proper
 
 #### Passed Example 2
 
-The meta `viewport` define the `user-scalable` so the user can still zoom in.
+The `<meta name="viewport">` defines the `user-scalable=yes` so the user can still zoom in.
 
 ````html
 <head>
@@ -65,7 +65,7 @@ The meta `viewport` define the `user-scalable` so the user can still zoom in.
 
 #### Passed Example 3
 
-The meta `viewport` with an empty `content` attribute.
+The `<meta name="viewport">` with an empty `content` attribute.
 
 ````html
 <head>
@@ -77,7 +77,7 @@ The meta `viewport` with an empty `content` attribute.
 
 #### Failed Example 1
 
-The meta `viewport` define the `user-scalable` so the user can't zoom in.
+The `<meta name="viewport">` defines the `user-scalable=no` so the user can't zoom in.
 
 ````html
 <head>
@@ -87,7 +87,7 @@ The meta `viewport` define the `user-scalable` so the user can't zoom in.
 
 #### Failed Example 2
 
-The meta `viewport` set the `maximum-scale` to 1 so the user can't zoom in.
+The `<meta name="viewport">` sets the `maximum-scale=1.0` to 1 so the user can't zoom in.
 
 ````html
 <head>
@@ -97,7 +97,7 @@ The meta `viewport` set the `maximum-scale` to 1 so the user can't zoom in.
 
 #### Failed Example 3
 
-The meta `viewport` set the `maximum-scale` to 2 so the user can't zoom in more than twice.
+The `<meta name="viewport">` sets the `maximum-scale=2` to 2 so the user can't zoom in more than twice.
 
 ````html
 <head>
@@ -109,7 +109,7 @@ The meta `viewport` set the `maximum-scale` to 2 so the user can't zoom in more 
 
 #### Inapplicable Example 1
 
-The meta `viewport` is not present in the `<head>`.
+The `<meta name="viewport">` is not present.
 
 ````html
 <head>

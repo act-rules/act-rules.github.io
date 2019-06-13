@@ -74,8 +74,12 @@ const init = async () => {
 				return
 			}
 
+			/**
+			 * Note:
+			 * only build metrics for implementations that are `complete`
+			 */
 			const { complete = false } = implementation
-			if (!complete) {
+			if (complete) {
 				return
 			}
 

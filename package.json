@@ -82,7 +82,9 @@
 		}
 	],
 	"dependencies": {
-		"act-rules-implementation-rgaa": "https://github.com/act-rules/act-rules-implementation-rgaa/tarball/master",
+		"act-rules-implementation-rgaa": "git+https://git@github.com/act-rules/act-rules-implementation-rgaa.git",
+		"act-rules-implementation-axe-core": "git+https://git@github.com/act-rules/act-rules-implementation-axe-core.git",
+		"act-rules-implementation-access-engine": "git+https://git@github.com/act-rules/act-rules-implementation-access-engine.git",
 		"axios": "^0.18.1",
 		"fastmatter": "^2.1.1",
 		"flat": "^4.1.0",
@@ -115,8 +117,7 @@
 		"react": "^16.8.6",
 		"react-dom": "^16.8.6",
 		"react-helmet": "^5.2.1",
-		"showdown": "^1.9.0",
-		"testrunner": "git+https://github.com/act-rules/act-rules-implementation-rgaa"
+		"showdown": "^1.9.0"
 	},
 	"devDependencies": {
 		"husky": "^2.4.0",
@@ -171,8 +172,8 @@
 				"provider": "Level Access",
 				"tool": "Access Engine",
 				"data": {
-					"type": "JSON",
-					"path": "https://raw.githubusercontent.com/act-rules/act-rules-implementation-access-engine/master/report.json"
+					"type": "NPM",
+					"path": "./node_modules/act-rules-implementation-access-engine/report.json"
 				}
 			},
 			{
@@ -187,17 +188,15 @@
 				"provider": "Deque Systems",
 				"tool": "Axe",
 				"data": {
-					"type": "JSON",
-					"path": "https://raw.githubusercontent.com/act-rules/act-rules-implementation-axe-core/master/report.json"
+					"type": "NPM",
+					"path": "./node_modules/act-rules-implementation-axe-core/report.json"
 				}
 			},
 			{
 				"provider": "Access42",
-				"tool": "Access42 (RGAA)",
+				"tool": "RGAA 3.0",
 				"data": {
 					"type": "NPM",
-					"url": "https://github.com/act-rules/act-rules-implementation-rgaa/tree/master/reports",
-					"exec": "npm install https://github.com/act-rules/act-rules-implementation-rgaa/tarball/master",
 					"path": "act-rules-implementation-rgaa/reports/*.json"
 				}
 			}

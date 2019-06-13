@@ -24,7 +24,7 @@ The rule applies to HTML `img` elements or any HTML element with the [semantic r
 
 ## Expectation
 
-Each target element has an [accessible name](#accessible-name) that consists of characters other than [whitespace](#whitespace).
+Each target element has an [accessible name](#accessible-name) that consists of characters other than [whitespace](#whitespace), or is marked as [decorative](#decorative).
 
 **NOTE**: An `img` element can be marked as decorative, by using either `role="presentation"`, `role="none"` or an empty alt attribute, `alt=""`.
 

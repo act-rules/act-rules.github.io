@@ -62,7 +62,7 @@ No trap for keyboard navigation.
 Using `tabindex="1"`.
 
 ```html
-<div tabindex="“1”">Text</div>
+<div tabindex="1">Text</div>
 ```
 
 #### Passed Example 3
@@ -91,14 +91,20 @@ Keyboard trap one element.
 Keyboard trap group.
 
 ```html
-<button class="target" onblur="setTimeout(() => this.nextSibling.focus(), 10)">
+<button
+	class="target"
+	onblur="setTimeout(() => this.nextElementSibling.focus(), 10)"
+>
 	Button1
 </button>
 <button
 	class="target"
-	onblur="setTimeout(() => this.previousSibling.focus(), 10)"
+	onblur="setTimeout(() => this.previousElementSibling.focus(), 10)"
 >
 	Button2
+</button>
+<button>
+	Button3
 </button>
 ```
 
@@ -135,7 +141,7 @@ Disabled element.
 Hidden element using `display:none`.
 
 ```html
-<button type="button" style="“display:none;”">Click Me!</button>
+<button type="button" style="display:none;">Click Me!</button>
 ```
 
 #### Inapplicable Example 4

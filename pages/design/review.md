@@ -1,5 +1,5 @@
 ---
-title: Rule Design and Review Process
+title: Review Process
 ---
 
 Coming soon

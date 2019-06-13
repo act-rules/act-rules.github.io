@@ -5,11 +5,12 @@ rule_type: atomic
 description: |
   This rule checks that each aria- attribute specified is defined in ARIA 1.1
 accessibility_requirements:
-  wcag20:4.1.2: # Name, Role, Value (A)
+	aria11:host_general_attrs:
+		title: ARIA 1.1, 7.2 State and Property Attributes
     forConformance: true
     failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
+    passed: satisfied
+    inapplicable: satisfied
 input_aspects:
   - DOM Tree
 authors:
@@ -26,7 +27,7 @@ Each target attribute is defined in [WAI ARIA 1.1](https://www.w3.org/TR/wai-ari
 
 ## Assumptions
 
-The ARIA `attribute` is being used to comply to WCAG.
+_There are currently no assumptions_
 
 ## Accessibility Support
 

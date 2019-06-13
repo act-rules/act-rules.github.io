@@ -5,11 +5,12 @@ rule_type: atomic
 description: |
   This rule checks that each ARIA state or property has a valid value
 accessibility_requirements:
-  wcag20:4.1.2: # Name, Role, Value (A)
+	aria11:propcharacteristic_value:
+		title: ARIA 1.1, 6.2.4 Value
     forConformance: true
     failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
+    passed: satisfied
+    inapplicable: satisfied
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -37,9 +38,7 @@ For value type `URI`, this rule does not require that the destination URI exists
 
 ## Assumptions
 
-- This rule assumes that elements that are not [included in the accessibility tree](#included-in-the-accessibility-tree) or are [focusable](#focusable) can still impact users. Therefore the applicability of this rule is not limited to [WAI-ARIA 1.1 states and properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) on elements that are included in the accessibility tree or are focusable.
-  **Note:** For example, anything referenced through `aria-labelledby` does not have to be [included in the accessibility tree](#included-in-the-accessibility-tree) in order for it to become part of the [accessible name](#accessible-name).
-- The ARIA `state` or `property` is being used to comply to WCAG.
+_There are currently no assumptions_
 
 ## Accessibility Support
 

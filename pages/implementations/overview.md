@@ -22,4 +22,4 @@ If you developed an accessibility tool or a testing methodology, and would like 
 
 1. If you have a tool that can return a data format, you will need to run your tests against the [ACT-R test cases](../testcases/) and [submit a report](../reporting/).
 
-2. If you use manual test methodology, where you fill results into some report template or tool, you can [Use the WCAG-EM Report Tool](../wcag-em-tool/) instead to produce implementation reports.
+2. If you have a manual test methodology, where you fill results into some report template or tool, you can [Use the WCAG-EM Report Tool](../wcag-em-tool/) instead to produce implementation reports.

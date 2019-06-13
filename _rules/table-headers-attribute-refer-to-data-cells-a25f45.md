@@ -22,7 +22,7 @@ This rule applies to `td` elements with a `headers` attribute, that are [include
 
 ## Expectation
 
-Each target element with the `headers` attribute refers to other `th` within the same `table` element.
+Each target element with the `headers` attribute refers to other `th` elements or cells with a [semantic role](#semantic-role) of `columnheader` or `rowheader` within the same `table` element.
 
 ## Assumptions
 

@@ -2,7 +2,7 @@
 title: License
 ---
 
-## W3C SOFTWARE AND DOCUMENT NOTICE AND LICENSE
+## W3C Software And Document Notice And License
 
 This work is being provided by the copyright holders under the following license.
 
@@ -18,8 +18,8 @@ Permission to **copy**, **modify**, and **distribute** this work, with or withou
 
 ### Disclaimer
 
-THIS WORK IS PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF THE SOFTWARE OR DOCUMENT WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+This work is provided "AS IS," and copyright holders make no representations or warranties, express or implied, including but not limited to, warranties of merchantability or fitness for any particular purpose or that the use of the software or document will not infringe any third party patents, copyrights, trademarks or other rights.
 
-COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE SOFTWARE OR DOCUMENT.
+Copyright holders will not be liable for any direct, indirect, special or consequential damages arising out of any use of the software or document.
 
 The name and trademarks of copyright holders may NOT be used in advertising or publicity pertaining to the work without specific, written prior permission. Title to copyright in this work will at all times remain with copyright holders.

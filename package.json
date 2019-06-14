@@ -171,34 +171,22 @@
 			{
 				"provider": "Level Access",
 				"tool": "Access Engine",
-				"data": {
-					"type": "NPM",
-					"path": "./node_modules/act-rules-implementation-access-engine/report.json"
-				}
+				"path": "./node_modules/act-rules-implementation-access-engine/report.json"
 			},
 			{
 				"provider": "Site Improve",
 				"tool": "Alfa",
-				"data": {
-					"type": "JSON",
-					"path": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/alfa-report.json"
-				}
+				"path": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/alfa-report.json"
 			},
 			{
 				"provider": "Deque Systems",
 				"tool": "Axe",
-				"data": {
-					"type": "NPM",
-					"path": "./node_modules/act-rules-implementation-axe-core/report.json"
-				}
+				"path": "./node_modules/act-rules-implementation-axe-core/report.json"
 			},
 			{
 				"provider": "Access42",
 				"tool": "RGAA 3.0",
-				"data": {
-					"type": "NPM",
-					"path": "act-rules-implementation-rgaa/reports/*.json"
-				}
+				"path": "act-rules-implementation-rgaa/reports/*.json"
 			}
 		],
 		"rule-format-metadata": {

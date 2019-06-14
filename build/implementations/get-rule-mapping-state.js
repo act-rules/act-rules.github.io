@@ -39,6 +39,7 @@ const getRuleMappingState = assertions => {
 	// const fullAuto = undefined
 
 	return {
+		id: assertions[0].title,
 		complete,
 		incorrect,
 		assertions: assertions.map(({ expected, actual, url }) => {

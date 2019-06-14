@@ -22,14 +22,14 @@ const init = async () => {
 	const implementationReports = {}
 
 	for (let item of implementations) {
-		const { provider, tool, data } = item
+		const { provider, tool, path } = item
 
-		console.info(`Get implementation data of ${tool} by ${provider}\n`)
+		console.info(`Get implementation of ${tool} by ${provider}\n`)
 
 		/**
 		 * fetch report & frame as required
 		 */
-		const framedReport = await getFramedReport(data)
+		const framedReport = await getFramedReport(path)
 
 		/**
 		 * get implementation metrics from report
@@ -42,7 +42,7 @@ const init = async () => {
 		const report = {
 			tool,
 			provider,
-			data,
+			path,
 			implementationStats,
 		}
 		implementationReports[tool] = report
@@ -67,7 +67,7 @@ const init = async () => {
 	const groupedMetricByRuleId = {}
 
 	Object.values(implementationReports).forEach(report => {
-		const { tool, provider, data, implementationStats } = report
+		const { tool, provider, path, implementationStats } = report
 
 		implementationStats.forEach(({ ruleId, implementation }) => {
 			if (!implementation) {
@@ -90,7 +90,7 @@ const init = async () => {
 			groupedMetricByRuleId[ruleId].push({
 				tool,
 				provider,
-				data,
+				path,
 				implementation,
 			})
 		})

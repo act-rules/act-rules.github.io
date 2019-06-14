@@ -1,3 +1,4 @@
+const flat = require('flat')
 const getTestcaseRelativeUrl = require('./get-testcase-relative-url')
 const getRuleMappingState = require('./get-rule-mapping-state')
 const getBestMatchingRules = require('./get-best-matching-rules')
@@ -29,7 +30,12 @@ function getRuleMapping(testcases, assertions) {
 
 		// Push untested results for every test case without an assertion
 		Object.values(ruleData).forEach(testMappings => {
-			if (!testMappings.some(({ url }) => url && url.includes(relativeUrl))) {
+			if (
+				!Object.values(testMappings)
+					.some(({ url }) =>
+						url && url.includes(relativeUrl)
+					)
+			) {
 				testMappings.push({
 					title: testMappings[0].title,
 					expected: tc.expected,

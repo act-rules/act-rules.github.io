@@ -3,7 +3,7 @@ const axios = require('axios')
 const jsonld = require('jsonld')
 const isUrl = require('is-url')
 const frameConfig = require('./json-ld-frame-config')
-const readFile = require('../read-file')
+const readFile = require('../../utils/read-file')
 
 const getFramedReport = async path => {
 	if (isUrl(path)) {

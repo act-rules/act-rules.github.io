@@ -2,16 +2,14 @@ import React from 'react'
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import SEO from '../components/seo'
-import pkg from './../../package.json'
 
 export default ({ data }) => {
 	const { markdownRemark, site } = data
 	const { html, frontmatter } = markdownRemark
 
 	const updatedTitle = `${frontmatter.title} | ${site.siteMetadata.title}`
-	const {
-		config: { implementations },
-	} = pkg
+
+	const implementations = [] // todo
 
 	return (
 		<Layout>

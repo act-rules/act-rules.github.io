@@ -152,8 +152,9 @@
 		"get:implementations": "npm run get:implementation:accessEngine && npm run get:implementation:alfa && npm run get:implementation:axe && npm run get:implementation:rgaa",
 		"create:implementations:metrics": "node ./build/create-implementation-metrics",
 		"implementations": "npm run get:implementations && npm run create:implementations:metrics",
+		"testcases": "node ./build/create-testcases",
 		"get:wcag:data": "node ./build/get-wcag-data",
-		"get:data": "npm run get:wcag:data && npm run implementations"
+		"get:data": "npm run get:wcag:data && npm run implementations && npm run testcases"
 	},
 	"homepage": "https://github.com/act-rules/act-rules.github.io",
 	"repository": {

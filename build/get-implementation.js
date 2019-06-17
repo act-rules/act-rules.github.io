@@ -1,8 +1,7 @@
-#!/usr/bin/env node
 const assert = require('assert')
 const program = require('commander')
 const { version } = require('../package.json')
-const createFile = require('./create-file')
+const createFile = require('../utils/create-file')
 const getFramedReport = require('./implementations/get-framed-report')
 const getImplementationForReport = require('./implementations/get-implementation-for-report')
 
@@ -20,7 +19,7 @@ const init = async (program) => {
   assert(tool, '`tool` is required');
   assert(path, '`path` is required')
 
-  console.info(`Get implementation of ${tool} by ${org}\n`)
+  console.info(`\nGet implementation of ${tool} by ${org}\n`)
 
   /**
    * fetch `report` & `frame` as required
@@ -68,7 +67,7 @@ program
  * Init
  */
 init(program)
-  .then(() => console.info(`Implementations data generated.`))
+  .then(() => console.info(`\nImplementations data generated.\n`))
   .catch(e => {
     console.error(e)
     process.exit(1)

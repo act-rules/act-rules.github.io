@@ -4,9 +4,9 @@
  * -> this is saved in `_data` which is later used in `pages/glossary`
  */
 const queries = require('./queries')
-const regexps = require('./reg-exps')
-const createFile = require('./../build/create-file')
-const getAllMatchesForRegex = require('./get-all-matches-for-regex')
+const regexps = require('../utils/reg-exps')
+const createFile = require('../utils/create-file')
+const getAllMatchesForRegex = require('../utils/get-all-matches-for-regex')
 
 const createGlossaryUsagesInRules = options => {
 	const { graphql } = options
@@ -79,7 +79,7 @@ const createGlossaryUsagesInRules = options => {
 			JSON.stringify(glossaryUsages, undefined, 2)
 		)
 
-		console.info(`\nDONE!!! Generated Glossary Usages Data.\n`)
+		console.info(`\nGenerated Glossary Usages Data.\n`)
 	})
 }
 

@@ -83,6 +83,7 @@ export default ({ data }) => {
 						repository.url,
 						`_rules/${relativePath}`
 					)}
+					<hr />
 					{/* implementations */}
 					{getImplementations(slug)}
 					{/* acknowledgements */}

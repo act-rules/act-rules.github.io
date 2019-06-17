@@ -1,12 +1,12 @@
 const {
 	www: { url, baseDir },
-} = require('./../package.json')
-const scUrlsMetaData = require('./../_data/sc-urls.json')
-const scEmReportAuditResult = require('./../_data/sc-em-report-audit-result.json')
-const graphContext = require('./../_data/wcag-em-report-tool-mappings/@graph-context.json')
-const graphAdditionalMeta = require('./../_data/wcag-em-report-tool-mappings/@graph-additional-meta.json')
-const graphEvaluatorMeta = require('./../_data/wcag-em-report-tool-mappings/@graph-evaluator-meta.json')
-const createFile = require('../build/create-file')
+} = require('./../../package.json')
+const scUrlsMetaData = require('./../../_data/sc-urls.json')
+const scEmReportAuditResult = require('./../../_data/sc-em-report-audit-result.json')
+const graphContext = require('./wcag-em-report-tool-mappings/@graph-context.json')
+const graphAdditionalMeta = require('./wcag-em-report-tool-mappings/@graph-additional-meta.json')
+const graphEvaluatorMeta = require('./wcag-em-report-tool-mappings/@graph-evaluator-meta.json')
+const createFile = require('../../utils/create-file')
 
 /**
  * Create testcases json file that can be used by

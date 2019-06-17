@@ -1,6 +1,6 @@
 const globby = require('globby')
-const readFile = require('./read-file')
-const createFile = require('./create-file')
+const readFile = require('../utils/read-file')
+const createFile = require('../utils/create-file')
 
 /**
  * Init
@@ -59,7 +59,7 @@ const init = async () => {
 }
 
 init()
-  .then(() => console.info(`Implementation metrics generated.`))
+  .then(() => console.info(`\nImplementation metrics generated.\n`))
   .catch(e => {
     console.error(e)
     process.exit(1)

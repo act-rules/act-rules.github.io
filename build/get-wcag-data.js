@@ -5,7 +5,7 @@
  */
 const path = require('path')
 const axios = require('axios')
-const createFile = require('./../build/create-file')
+const createFile = require('../utils/create-file')
 const pkg = require('./../package.json')
 const outputFileScMetaData = path.join(__dirname, '..', '_data', 'sc-urls.json')
 const outputFileScEmReportAuditResult = path.join(
@@ -111,5 +111,5 @@ const getScMetaData = async url => {
 		JSON.stringify(scEmReportAuditResult, undefined, 2)
 	)
 
-	console.info('\nDONE!!! Generated WCAG Success Criterion Data.\n')
+	console.info('\nGenerated WCAG Success Criterion Data.\n')
 })()

@@ -2,14 +2,13 @@ import React from 'react'
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import SEO from '../components/seo'
+import implementers from './../../_data/implementers'
 
 export default ({ data }) => {
 	const { markdownRemark, site } = data
 	const { html, frontmatter } = markdownRemark
 
 	const updatedTitle = `${frontmatter.title} | ${site.siteMetadata.title}`
-
-	const implementations = [] // todo
 
 	return (
 		<Layout>
@@ -22,30 +21,27 @@ export default ({ data }) => {
 					<table>
 						<thead>
 							<tr>
-								<th width="3%">#</th>
 								<th>Tool Name</th>
-								{/* <th>Version</th> */}
 								<th>Created By</th>
 								<th>Report</th>
 							</tr>
 						</thead>
 						<tbody>
-							{implementations.map((row, index) => {
-								const { provider, tool } = row
-								const reportUrl = `` // todo
+							{implementers.map(row => {
+								const { organisation, tool } = row
+								const filename = tool
+									.split(' ')
+									.join('-')
+									.toLowerCase()
+								const reportUrl = `/implementation/${filename}`
 								return (
-									<tr key={row.provider}>
-										<td width="3%">{index + 1}</td>
+									<tr key={tool}>
 										<td>{tool}</td>
 										{/* TODO: */}
 										{/* <td>{row.vendorToolVersion}</td> */}
-										<td>{provider}</td>
+										<td>{organisation}</td>
 										<td>
-											<a
-												target="_blank"
-												rel="noopener noreferrer"
-												href={reportUrl}
-											>
+											<a href={reportUrl}>
 												View Report
 											</a>
 										</td>

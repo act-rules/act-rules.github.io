@@ -15,14 +15,20 @@ const init = async () => {
       return JSON.parse(fileContent)
     })
 
-  /**
-  * transform data, to be grouped by rule id.
-  */
+  const implementers = []
   const implementationsGroupedByRuleId = {}
 
   reports.forEach(report => {
     const { tool, organisation, data } = report
 
+    /**
+     * Create data that can be used in `src/templates/coverage.js`
+     */
+    implementers.push(report)
+
+    /**
+     * Iterate each implementation & group by rule id
+     */
     data.forEach(({ ruleId, implementation }) => {
       if (!implementation) {
         return
@@ -48,6 +54,14 @@ const init = async () => {
       })
     })
   })
+
+  /**
+   * Create `implementations.json`
+   */
+  await createFile(
+    `_data/implementers.json`,
+    JSON.stringify(implementers, null, 2)
+  )
 
   /**
    * Create metrics in `_data` for usage in `site`

@@ -1,15 +1,11 @@
-const {
-	www: { url: siteUrl },
-} = require('./../../package.json')
-
 /**
  * Get relative (suffix) from url
  *
  * @param {String} url url
  */
 const getTestcaseRelativeUrl = url => {
-	const urlPrefix = `${siteUrl}/testcases/`
-	return url.substr(url.indexOf(urlPrefix))
+	const index = url.indexOf(`/testcases/`)
+	return url.substring(index)
 }
 
 module.exports = getTestcaseRelativeUrl

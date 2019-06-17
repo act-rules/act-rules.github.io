@@ -1,15 +1,12 @@
-const axios = require('axios')
-const { config } = require('./../../package.json')
+const testcasesData = require('./../../public/testcases.json')
 
 /**
  * Get testcases of rules
  * - group them by `ruleId`
  */
-const getTestcasesGroupedByRule = async () => {
-	const testcasesUrl = config['testcases-url']
-	const { data } = await axios.get(testcasesUrl)
-	const { testcases } = data
-
+const getTestcasesGroupedByRule = () => {
+	const { testcases } = testcasesData
+	
 	return testcases.reduce((out, testcase) => {
 		const { ruleId } = testcase
 		if (!out[ruleId]) {

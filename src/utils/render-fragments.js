@@ -25,14 +25,18 @@ export const getImplementations = slug => {
 				</thead>
 				<tbody>
 					{metrics.map(metric => {
-						const { provider, tool } = metric
-						const reportUrl =``
+						const { organisation, tool } = metric
+						const filename = tool
+							.split(' ')
+							.join('-')
+							.toLowerCase()
+						const reportUrl = `/implementation/${filename}#${ruleId}`
 						return (
-							<tr key={provider}>
+							<tr key={tool}>
 								<td>{tool}</td>
-								<td>{provider}</td>
+								<td>{organisation}</td>
 								<td>
-									<a target="_blank" rel="noopener noreferrer" href={reportUrl}>
+									<a href={reportUrl}>
 										View Report
 									</a>
 								</td>

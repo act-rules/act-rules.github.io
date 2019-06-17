@@ -17,6 +17,7 @@ const getImplementationForReport = async reports => {
 			const implementation = getRuleMapping(ruleTestcases, assertions)
 			return {
 				ruleId,
+				ruleName: ruleTestcases[0].ruleName,
 				implementation,
 			}
 		})

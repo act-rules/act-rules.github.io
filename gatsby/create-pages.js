@@ -1,5 +1,6 @@
 const createPageAddMdContext = require('./create-page-add-md-context')
 const createGlossaryUsagesInRules = require('./create-glossary-uages-in-rules')
+const createPageImplementerReport = require('./create-page-implementer-report')
 
 const createPages = async options => {
 	const promises = [
@@ -16,6 +17,11 @@ const createPages = async options => {
 		 * -> this is saved in `_data` which is later used in `pages/glossary`
 		 */
 		createGlossaryUsagesInRules(options),
+
+		/**
+		 * Create implementation report pages
+		 */
+		createPageImplementerReport(options)
 	]
 
 	await Promise.all(promises)

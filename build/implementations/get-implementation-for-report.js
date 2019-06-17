@@ -5,10 +5,10 @@ const getRuleMapping = require('./get-rule-mapping')
 /**
  * Get implementation metric from submitted report
  *
- * @param {Object|Array<Objects>} framedReports implementation reports
+ * @param {Object|Array<Objects>} reports implementation reports
  */
-const getImplementation = async framedReports => {
-	const assertions = getAssertions(framedReports)
+const getImplementationForReport = async reports => {
+	const assertions = getAssertions(reports)
 	const testcasesGroupedByRuleId = await getTestcasesGroupedByRule()
 
 	return Object.keys(testcasesGroupedByRuleId)
@@ -23,4 +23,4 @@ const getImplementation = async framedReports => {
 		.filter(result => result.implementation && result.implementation.length)
 }
 
-module.exports = getImplementation
+module.exports = getImplementationForReport

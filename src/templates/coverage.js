@@ -33,8 +33,8 @@ export default ({ data }) => {
 						</thead>
 						<tbody>
 							{implementations.map((row, index) => {
-								const { provider, tool, data } = row
-								const reportUrl = data.type === `JSON` ? data.path : data.url
+								const { provider, tool } = row
+								const reportUrl = `` // todo
 								return (
 									<tr key={row.provider}>
 										<td width="3%">{index + 1}</td>

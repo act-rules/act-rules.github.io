@@ -2,7 +2,7 @@ import React from 'react'
 import scUrls from './../../_data/sc-urls'
 import { Link } from 'gatsby'
 import glossaryUsages from './../../_data/glossary-usages.json'
-import implementationMetrics from './../../_data/implementations-metrics.json'
+import implementationMetrics from './../../_data/implementation-metrics.json'
 
 export const getImplementations = slug => {
 	const ruleId = slug.replace('rules/', '')
@@ -18,19 +18,17 @@ export const getImplementations = slug => {
 			<table className="compact">
 				<thead>
 					<tr>
-						<th width="3%">#</th>
 						<th>Tool Name</th>
 						<th>Created By</th>
 						<th>Report</th>
 					</tr>
 				</thead>
 				<tbody>
-					{metrics.map((metric, index) => {
-						const { provider, tool, data } = metric
-						const reportUrl = data.type === `JSON` ? data.path : data.url
+					{metrics.map(metric => {
+						const { provider, tool } = metric
+						const reportUrl =``
 						return (
 							<tr key={provider}>
-								<td width="3%">{index + 1}</td>
 								<td>{tool}</td>
 								<td>{provider}</td>
 								<td>
@@ -438,20 +436,7 @@ export function getImplementationsCount(slug) {
 	return (
 		<div className="side-notes">
 			<div className="meta">
-				<h3 className="heading">Implementations ({metrics.length})</h3>
-				<ul>
-					{metrics.map((metric, index) => {
-						const { provider, tool, data } = metric
-						const reportUrl = data.type === `JSON` ? data.path : data.url
-						return (
-							<li key={provider}>
-								<a className="sc-item block" href={reportUrl}>
-									{tool} ({provider})
-								</a>
-							</li>
-						)
-					})}
-				</ul>
+				<h3 className="heading">Implementations: {metrics.length}</h3>
 			</div>
 		</div>
 	)

@@ -82,10 +82,11 @@
 		}
 	],
 	"dependencies": {
-		"act-rules-implementation-rgaa": "git+https://git@github.com/act-rules/act-rules-implementation-rgaa.git",
-		"act-rules-implementation-axe-core": "git+https://git@github.com/act-rules/act-rules-implementation-axe-core.git",
 		"act-rules-implementation-access-engine": "git+https://git@github.com/act-rules/act-rules-implementation-access-engine.git",
+		"act-rules-implementation-axe-core": "git+https://git@github.com/act-rules/act-rules-implementation-axe-core.git",
+		"act-rules-implementation-rgaa": "git+https://git@github.com/act-rules/act-rules-implementation-rgaa.git",
 		"axios": "^0.18.1",
+		"commander": "^2.20.0",
 		"fastmatter": "^2.1.1",
 		"flat": "^4.1.0",
 		"gatsby": "^2.8.6",
@@ -135,17 +136,24 @@
 	"license": "MIT",
 	"scripts": {
 		"clean": "rm -rf .cache public",
-		"prebuild": "npm run get-data",
+		"prebuild": "npm run get:data",
 		"build": "gatsby build",
-		"develop": "npm run get-data && gatsby develop",
+		"predevelop": "npm run get:data",
+		"develop": "gatsby develop",
 		"format": "prettier --write *.{json,md,js,jsx} './{_data,_rules,build,gatsby,pages,src,test-assets}/**/*.{json,md,js,jsx}'",
 		"start": "npm run clean && npm run develop",
 		"serve": "gatsby serve",
 		"test": "npm run test:rules",
 		"test:rules": "jest",
-		"get-implementations-data": "node ./build/get-implementations-data",
-		"get-wcag-sc-metadata": "node ./build/get-wcag-sc-metadata",
-		"get-data": "npm run get-wcag-sc-metadata && npm run get-implementations-data"
+		"get:implementation:accessEngine": "node ./build/get-implementation --org \"Level Access\" --tool \"Access Engine\" --path \"./node_modules/act-rules-implementation-access-engine/report.json\"",
+		"get:implementation:alfa": "node ./build/get-implementation --org \"Site Improve\" --tool \"Alfa\" --path \"https://raw.githubusercontent.com/w3c/earl/master/earl-reports/alfa-report.json\"",
+		"get:implementation:axe": "node ./build/get-implementation --org \"Deque Systems\" --tool \"Axe\" --path \"./node_modules/act-rules-implementation-axe-core/report.json\"",
+		"get:implementation:rgaa": "node ./build/get-implementation --org \"Access42\" --tool \"RGAA 3.0\" --path $npm_package_config_implementations_rgaa",
+		"get:implementations": "npm run get:implementation:accessEngine && npm run get:implementation:alfa && npm run get:implementation:axe && npm run get:implementation:rgaa",
+		"create:implementations:metrics": "node ./build/create-implementation-metrics",
+		"implementations": "npm run get:implementations && npm run create:implementations:metrics",
+		"get:wcag:data": "node ./build/get-wcag-data",
+		"get:data": "npm run get:wcag:data && npm run implementations"
 	},
 	"homepage": "https://github.com/act-rules/act-rules.github.io",
 	"repository": {
@@ -167,28 +175,10 @@
 			"wcag21": "https://raw.githubusercontent.com/w3c/wai-wcag-quickref/gh-pages/_data/wcag21.json"
 		},
 		"testcases-url": "https://act-rules.github.io/testcases.json",
-		"implementations": [
-			{
-				"provider": "Level Access",
-				"tool": "Access Engine",
-				"path": "./node_modules/act-rules-implementation-access-engine/report.json"
-			},
-			{
-				"provider": "Site Improve",
-				"tool": "Alfa",
-				"path": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/alfa-report.json"
-			},
-			{
-				"provider": "Deque Systems",
-				"tool": "Axe",
-				"path": "./node_modules/act-rules-implementation-axe-core/report.json"
-			},
-			{
-				"provider": "Access42",
-				"tool": "RGAA 3.0",
-				"path": "act-rules-implementation-rgaa/reports/*.json"
-			}
-		],
+		"implementations": {
+			"axe": "./node_modules/act-rules-implementation-axe-core/report.json",
+			"rgaa": "./node_modules/act-rules-implementation-rgaa/reports/*.json"
+		},
 		"rule-format-metadata": {
 			"input-aspects": {
 				"default": "https://www.w3.org/TR/act-rules-aspects/#intro",

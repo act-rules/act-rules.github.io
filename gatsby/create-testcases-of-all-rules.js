@@ -11,7 +11,7 @@ const fastmatter = require('fastmatter')
 const {
 	www: { url, baseDir },
 } = require('./../package.json')
-const createFile = require('../utils/create-file')
+const createFile = require('../build/create-file')
 const getAllMatchesForRegex = require('./get-all-matches-for-regex')
 const queries = require('./queries')
 const regexps = require('./reg-exps')

@@ -3,7 +3,7 @@ const {
 	author,
 	description,
 } = require('./../package.json')
-const createFile = require('../utils/create-file')
+const createFile = require('../build/create-file')
 
 /**
  * Create `testcases.json`

@@ -1,9 +1,9 @@
-const fs = require('fs')
 const globby = require('globby')
 const axios = require('axios')
 const jsonld = require('jsonld')
 const isUrl = require('is-url')
 const frameConfig = require('./json-ld-frame-config')
+const readFile = require('../read-file')
 
 const getFramedReport = async path => {
 	if (isUrl(path)) {
@@ -13,7 +13,7 @@ const getFramedReport = async path => {
 
 	const reports = globby.sync([path])
 		.map(reportPath => {
-			const fileContent = fs.readFileSync(reportPath, { encoding: 'utf-8' })
+			const fileContent = readFile(reportPath)
 			return JSON.parse(fileContent)
 		})
 

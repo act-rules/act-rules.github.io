@@ -153,8 +153,9 @@
 		"create:implementations:metrics": "node ./build/create-implementation-metrics",
 		"implementations": "npm run get:implementations && npm run create:implementations:metrics",
 		"create:testcases": "node ./build/create-testcases",
+		"create:glossary": "node ./build/create-glossary-usages",
 		"get:wcag:data": "node ./build/get-wcag-data",
-		"get:data": "npm run get:wcag:data && npm run create:testcases && npm run implementations"
+		"get:data": "npm run get:wcag:data && npm run create:testcases && npm run create:glossary && npm run implementations"
 	},
 	"homepage": "https://github.com/act-rules/act-rules.github.io",
 	"repository": {

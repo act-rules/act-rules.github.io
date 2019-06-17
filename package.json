@@ -148,7 +148,7 @@
 		"get:implementation:accessEngine": "node ./build/get-implementation --org \"Level Access\" --tool \"Access Engine\" --path \"./node_modules/act-rules-implementation-access-engine/report.json\"",
 		"get:implementation:alfa": "node ./build/get-implementation --org \"Site Improve\" --tool \"Alfa\" --path \"https://raw.githubusercontent.com/w3c/earl/master/earl-reports/alfa-report.json\"",
 		"get:implementation:axe": "node ./build/get-implementation --org \"Deque Systems\" --tool \"Axe\" --path \"./node_modules/act-rules-implementation-axe-core/report.json\"",
-		"get:implementation:rgaa": "node ./build/get-implementation --org \"Access42\" --tool \"RGAA 3.0\" --path $npm_package_config_implementations_rgaa",
+		"get:implementation:rgaa": "node ./build/get-implementation --org \"Access42\" --tool \"RGAA 3.0\" --path \"./node_modules/act-rules-implementation-rgaa/reports/*.json\"",
 		"get:implementations": "npm run get:implementation:accessEngine && npm run get:implementation:alfa && npm run get:implementation:axe && npm run get:implementation:rgaa",
 		"create:implementations:metrics": "node ./build/create-implementation-metrics",
 		"implementations": "npm run get:implementations && npm run create:implementations:metrics",
@@ -175,11 +175,6 @@
 	"config": {
 		"references": {
 			"wcag21": "https://raw.githubusercontent.com/w3c/wai-wcag-quickref/gh-pages/_data/wcag21.json"
-		},
-		"testcases-url": "https://act-rules.github.io/testcases.json",
-		"implementations": {
-			"axe": "./node_modules/act-rules-implementation-axe-core/report.json",
-			"rgaa": "./node_modules/act-rules-implementation-rgaa/reports/*.json"
 		},
 		"rule-format-metadata": {
 			"input-aspects": {

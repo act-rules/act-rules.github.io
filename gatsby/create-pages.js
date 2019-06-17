@@ -13,7 +13,7 @@ const createPages = async options => {
 		/**
 		 * Create implementation report pages
 		 */
-		createPageImplementerReport(options)
+		createPageImplementerReport(options),
 	]
 
 	await Promise.all(promises)

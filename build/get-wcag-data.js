@@ -34,12 +34,12 @@ const getMetaData = sc => {
 		is20
 			? 'http://www.w3.org/WAI/WCAG20/quickref/#qr-'
 			: 'https://www.w3.org/WAI/WCAG21/quickref/#'
-		}${path}`
+	}${path}`
 	const understandingUrl = `${
 		is20
 			? 'http://www.w3.org/TR/UNDERSTANDING-WCAG20/'
 			: 'https://www.w3.org/WAI/WCAG21/Understanding/'
-		}/${path}.html`
+	}/${path}.html`
 	/**
 	 * Construct `test` - used by `wcag em report tool`
 	 */
@@ -73,7 +73,7 @@ const getScMetaData = async url => {
 	return scMetaData
 }
 
-(async () => {
+;(async () => {
 	const wcagReferenceUrl = pkg.config.references.wcag21
 	if (!wcagReferenceUrl) {
 		throw new Error('No reference URL for WCAG21 is specified in config.')

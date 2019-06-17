@@ -36,9 +36,7 @@ export const getImplementations = slug => {
 								<td>{tool}</td>
 								<td>{organisation}</td>
 								<td>
-									<a href={reportUrl}>
-										View Report
-									</a>
+									<a href={reportUrl}>View Report</a>
 								</td>
 							</tr>
 						)

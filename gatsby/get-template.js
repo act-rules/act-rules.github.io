@@ -4,7 +4,7 @@ const getTemplate = (type, slug) => {
 	const map = {
 		glossary: './src/templates/glossary.js',
 		rules: './src/templates/rule.js',
-		implementer: './src/templates/implementer.js'
+		implementer: './src/templates/implementer.js',
 	}
 
 	if (Object.keys(map).includes(type)) {

@@ -13,10 +13,9 @@ const init = async () => {
 	/**
 	 * Get all rules `markdown` data
 	 */
-	const rulesData = globby.sync([`./_rules/*.md`])
+	const rulesData = globby
+		.sync([`./_rules/*.md`])
 		.map(rulePath => getMarkdownData(rulePath))
-
-
 
 	/**
 	 * Eg:
@@ -35,7 +34,7 @@ const init = async () => {
 		const {
 			id: ruleId,
 			name: ruleName,
-			accessibility_requirements: ruleAccessibilityRequirements
+			accessibility_requirements: ruleAccessibilityRequirements,
 		} = frontmatter
 
 		const glossaryMatches = getAllMatchesForRegex(

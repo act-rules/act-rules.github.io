@@ -31,10 +31,9 @@ function getRuleMapping(testcases, assertions) {
 		// Push untested results for every test case without an assertion
 		Object.values(ruleData).forEach(testMappings => {
 			if (
-				!Object.values(testMappings)
-					.some(({ url }) =>
-						url && url.includes(relativeUrl)
-					)
+				!Object.values(testMappings).some(
+					({ url }) => url && url.includes(relativeUrl)
+				)
 			) {
 				testMappings.push({
 					title: testMappings[0].title,

@@ -11,11 +11,10 @@ const getFramedReport = async path => {
 		return await jsonld.frame(data, frameConfig)
 	}
 
-	const reports = globby.sync([path])
-		.map(reportPath => {
-			const fileContent = readFile(reportPath)
-			return JSON.parse(fileContent)
-		})
+	const reports = globby.sync([path]).map(reportPath => {
+		const fileContent = readFile(reportPath)
+		return JSON.parse(fileContent)
+	})
 
 	const result = []
 

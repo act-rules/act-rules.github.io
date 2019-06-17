@@ -1,4 +1,3 @@
-
 const globby = require('globby')
 const makeDir = require('make-dir')
 const objectHash = require('object-hash')
@@ -16,7 +15,7 @@ const createTestcasesOfRuleOfEmReportTool = require('./testcases/create-testcase
 
 /**
  * Create test case files & other meta-data  from test case in each rule.
- * 
+ *
  * -> create test cases files into `./public/testcases/`
  * -> copy `./test-assets/*` into `./public`
  * -> create `testcases.json` into `./public`
@@ -30,9 +29,9 @@ const init = async () => {
 	/**
 	 * Get all rules `markdown` data
 	 */
-	const rulesData = globby.sync([`./_rules/*.md`])
+	const rulesData = globby
+		.sync([`./_rules/*.md`])
 		.map(rulePath => getMarkdownData(rulePath))
-
 
 	let allRulesTestcases = []
 
@@ -46,12 +45,9 @@ const init = async () => {
 		const {
 			id: ruleId,
 			name: ruleName,
-			accessibility_requirements: ruleAccessibilityRequirements
+			accessibility_requirements: ruleAccessibilityRequirements,
 		} = frontmatter
-		const codeTitles = getAllMatchesForRegex(
-			regexps.testcaseTitle,
-			body
-		)
+		const codeTitles = getAllMatchesForRegex(regexps.testcaseTitle, body)
 
 		/**
 		 * get code blocks in markdown body
@@ -139,7 +135,6 @@ const init = async () => {
 	await createTestcasesJson(allRulesTestcases)
 
 	console.info(`\nGenerated Test Cases.\n`)
-
 }
 
 /**

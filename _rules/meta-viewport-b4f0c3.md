@@ -45,11 +45,11 @@ _There are currently no assumptions._
 
 #### Passed Example 1
 
-The `<meta name="viewport">` does not defines the `maximum-scale` and `user-scalable` properties.
+The `<meta name="viewport">` does not define the `maximum-scale` and `user-scalable` properties.
 
 ````html
 <head>
-	<meta name="viewport" content="width=device-width" />
+	<meta name="viewport" content="width=device-width">
 </head>
 ````
 
@@ -59,7 +59,7 @@ The `<meta name="viewport">` defines the `user-scalable=yes` so the user can sti
 
 ````html
 <head>
-  <meta name="viewport" content="width=device-width, user-scalable=yes" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
 </head>
 ````
 
@@ -69,7 +69,7 @@ The `<meta name="viewport">` with an empty `content` attribute.
 
 ````html
 <head>
-  <meta name="viewport" content="" />
+  <meta name="viewport" content="">
 </head>
 ````
 
@@ -81,27 +81,27 @@ The `<meta name="viewport">` defines the `user-scalable=no` so the user can't zo
 
 ````html
 <head>
-  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 ````
 
 #### Failed Example 2
 
-The `<meta name="viewport">` sets the `maximum-scale=1.0` to 1 so the user can't zoom in.
+The `<meta name="viewport">` sets the `maximum-scale=1.0` so the user can't zoom in.
 
 ````html
 <head>
-  <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
 </head>
 ````
 
 #### Failed Example 3
 
-The `<meta name="viewport">` sets the `maximum-scale=2` to 2 so the user can't zoom in more than twice.
+The `<meta name="viewport">` sets the `maximum-scale=2` so the user can't zoom in more than twice.
 
 ````html
 <head>
-  <meta name="viewport" content="width=device-width, maximum-scale=2" />
+  <meta name="viewport" content="width=device-width, maximum-scale=2">
 </head>
 ````
 
@@ -109,10 +109,12 @@ The `<meta name="viewport">` sets the `maximum-scale=2` to 2 so the user can't z
 
 #### Inapplicable Example 1
 
-The `<meta name="viewport">` is not present.
+The `<meta name="viewport">` is not present within the page.
 
 ````html
-<head>
-  <meta http-equiv="refresh" content="0; URL='https://github.com'" />
-</head>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; URL='https://github.com'">
+  </head>
+</html>
 ````

@@ -10,7 +10,7 @@ Use the [empty atomic rule template](atomic-template-empty.html) to create new r
 
 ````md
 ---
-id: 
+id:
 name:
 rule_type: atomic
 
@@ -35,7 +35,7 @@ accessibility_requirements:
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
-    
+
 input_aspects:
   -  # (e.g. HTTP Messages, DOM Tree, CSS Styling, Accessibility Tree, Language, etc.,)
 
@@ -151,7 +151,7 @@ For more about composite rules, see the [ACT Rules Format](https://www.w3.org/TR
 
 ````md
 ---
-id: 
+id:
 name:
 rule_type: composite
 

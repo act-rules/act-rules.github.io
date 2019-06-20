@@ -1,5 +1,5 @@
 ---
-id: 
+id:
 name:
 rule_type: atomic
 
@@ -12,15 +12,15 @@ accessibility_requirements: # Remove whatever is not applicable
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
-    
+
   aria11:x.x.x: # <Heading in WAI-ARIA>
-    forConformance:  true | false
+    forConformance: true | false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
 
   wcag-technique:x.x.x: # <Technique title>
-    forConformance:  true | false
+    forConformance: true | false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed

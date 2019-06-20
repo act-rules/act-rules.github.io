@@ -1,5 +1,5 @@
 ---
-id: 
+id:
 name:
 rule_type: composite
 description: |
@@ -25,7 +25,7 @@ accessibility_requirements: # Remove whatever is not applicable
     inapplicable: satisfied | further testing needed
 
 input_rules:
-  - # Include the ID of the rule
+  -  # Include the ID of the rule
 
 authors:
   -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)

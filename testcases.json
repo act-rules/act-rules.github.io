@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 558,
+  "count": 559,
   "testcases": [
     {
       "testcaseId": "55f3ed0ec0f324514a0d223b737bc1e4c81593c7",
@@ -1560,6 +1560,25 @@
     {
       "testcaseId": "3378832ac24e2a6460efededb922a1355a1ccfba",
       "url": "https://act-rules.github.io/testcases/97a4e1/3378832ac24e2a6460efededb922a1355a1ccfba.html",
+      "expected": "passed",
+      "ruleId": "97a4e1",
+      "ruleName": "Buttons have an accessible name",
+      "rulePage": "https://act-rules.github.io/rules/97a4e1",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      },
+      "requirementsMapping": [
+        "wcag20:4.1.2"
+      ]
+    },
+    {
+      "testcaseId": "9cf07b4a24c6a3e24dd6093d967599518d26846a",
+      "url": "https://act-rules.github.io/testcases/97a4e1/9cf07b4a24c6a3e24dd6093d967599518d26846a.html",
       "expected": "passed",
       "ruleId": "97a4e1",
       "ruleName": "Buttons have an accessible name",

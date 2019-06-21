@@ -158,8 +158,10 @@ Label is included in accessibility tree, but not visible, and does not describe 
 `Label` that is neither visible to users, nor included in the accessibility tree.
 
 ```html
-<label for="fname" style:"display:none;">First name:</label>
-<input id="fname" type="text" name="fname"/>
+<div style="display:none">
+  <label for="bad_label">Menu:</label>
+  <input id="fname" type="text" name="bad_label"/>
+</div>
 ```
 
 #### Inapplicable Example 2
@@ -167,8 +169,10 @@ Label is included in accessibility tree, but not visible, and does not describe 
 Programatically associated `p` element that is neither visible nor included in the accessibility tree.
 
 ```html
-<p id="label_fname" style:"display:none;">First name:</p>
-<input aria-labelledby="label_fname" type="text" name="fname"/>
+<div style="display:none">
+  <p id="bad_label">menu</p>
+  <input aria-labelledby="bad_label" type="text" name="fname"/>
+</div>
 ```
 
 #### Inapplicable Example 3
@@ -176,11 +180,20 @@ Programatically associated `p` element that is neither visible nor included in t
 The `label` element is associated with an HTML element that does not have a form field semantic role.
 
 ```html
-<label for="fname" style:"display:none;">First name:</label>
-<p id="fname"/>
+<label for="fname">First name</label>
+<p id="fname">bob</p>
 ```
 
 #### Inapplicable Example 4
+
+The element with `aria-labelledby` is not a form field.
+
+```html
+<i id="smile">Smile</i>
+<button aria-labelledby="smile">:-)</button>
+```
+
+#### Inapplicable Example 5
 
 No `label` element.
 

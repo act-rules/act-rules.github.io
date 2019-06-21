@@ -55,9 +55,9 @@ The `img` element's accessible name uses the filename which accurately describes
 The `img` element's accessible name uses the filename, which in combination with the `a` element accurately describes the image.
 
 ```html
-<a href="https://www.w3.org/WAI/demos/bad/img/w3c.png" download
-	>Download <img src="https://www.w3.org/WAI/demos/bad/img/w3c/w3c.png" alt="w3c.png"
-/></a>
+<a href="https://www.w3.org/WAI/demos/bad/img/w3c.png" download >
+	Download <img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png"/>
+</a>
 ```
 
 ### Failed

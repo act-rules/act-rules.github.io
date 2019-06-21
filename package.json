@@ -178,8 +178,6 @@
 		}
 	},
 	"jest": {
-		"verbose": true,
-		"bail": true,
 		"testPathIgnorePatterns": [
 			"<rootDir>/test/utils/",
 			"<rootDir>/.cache/",

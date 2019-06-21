@@ -8,7 +8,7 @@ function getComponent(type, slug) {
 		return map[type]
 	}
 
-	if (type === 'implementations' && slug.includes('reporting')) {
+	if (type === 'implementations' && slug.includes('overview')) {
 		return './src/templates/coverage.js'
 	}
 

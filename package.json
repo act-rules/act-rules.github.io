@@ -144,7 +144,7 @@
 		"start": "npm run clean && npm run develop",
 		"serve": "gatsby serve",
 		"test": "npm run test:rules",
-		"test:rules": "jest",
+		"test:rules": "jest --coverage",
 		"get:implementation:accessEngine": "node ./build/get-implementation --org 'Level Access' --tool 'Access Engine' --path './node_modules/act-rules-implementation-access-engine/report.json'",
 		"get:implementation:alfa": "node ./build/get-implementation --org 'Site Improve' --tool 'Alfa' --path 'https://raw.githubusercontent.com/w3c/earl/master/earl-reports/alfa-report.json'",
 		"get:implementation:axe": "node ./build/get-implementation --org 'Deque Systems' --tool 'Axe' --path './node_modules/act-rules-implementation-axe-core/report.json'",
@@ -191,6 +191,8 @@
 		"verbose": true,
 		"bail": true,
 		"testPathIgnorePatterns": [
+			"<rootDir>/test/rule/",
+
 			"<rootDir>/test/test-utils/",
 			"<rootDir>/.cache/",
 			"<rootDir>/.public/"

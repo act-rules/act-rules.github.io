@@ -6,6 +6,11 @@ const frameConfig = require('./json-ld-frame-config')
 const readFile = require('../../utils/read-file')
 
 const getFramedReport = async path => {
+
+	if(!path) {
+		throw new Error('Path should be provided from which report has to be obtained.');
+	}
+	
 	if (isUrl(path)) {
 		const { data } = await axios.get(path)
 		return await jsonld.frame(data, frameConfig)

@@ -1,5 +1,5 @@
-const getRulesData = require('./get-rules-data')
-const rules = getRulesData()
+const globby = require('globby')
+const getMarkdownData = require('../../utils/get-markdown-data')
 
 /**
  * 
@@ -7,6 +7,11 @@ const rules = getRulesData()
  * @param {Function} runTests function callback of `describe` block, which executes per rule
  */
 const describeRule = (groupName, runTests) => {
+
+  const rules = globby.sync([`./_rules/*.md`]).map(
+    rulePath => getMarkdownData(rulePath)
+  )
+
   rules.forEach(ruleData => {
     const { filename } = ruleData
     describe(filename, () => {

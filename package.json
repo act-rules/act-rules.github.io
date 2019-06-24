@@ -191,7 +191,7 @@
 		"verbose": true,
 		"bail": true,
 		"testPathIgnorePatterns": [
-			"<rootDir>/test/utils/",
+			"<rootDir>/test/test-utils/",
 			"<rootDir>/.cache/",
 			"<rootDir>/.public/"
 		]

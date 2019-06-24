@@ -141,7 +141,7 @@ const init = async () => {
  * Invoke
  */
 init()
-	.then(`Created testcases`)
+	.then(() => console.log('Completed: task: create:testcases'))
 	.catch(e => {
 		console.error(e)
 		process.write(1)

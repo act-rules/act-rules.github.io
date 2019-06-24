@@ -81,6 +81,9 @@ const init = async () => {
 	)
 }
 
+/**
+ * Invoke
+ */
 init()
-	.then(() => console.info(`\nGenerated Glossary Usages Data.\n`))
+	.then(() => console.info(`Completed: task: create:glossary\n`))
 	.catch(e => console.error(e))

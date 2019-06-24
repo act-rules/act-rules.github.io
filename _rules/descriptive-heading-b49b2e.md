@@ -53,7 +53,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-Heading marked up with `h` element that describes the topic or purpose of its section of the content.
+Heading marked up with `h1` element that describes the topic or purpose of its section of the content.
 
 ```html
 <h1 class="target">Opening Hours</h1>
@@ -65,22 +65,31 @@ Heading marked up with `h` element that describes the topic or purpose of its se
 Heading marked up with `role="heading"` that describes the topic or purpose of its section of the content.
 
 ```html
-<span role="heading">Opening Hours</span>
+<span role="heading" aria-level="1">Opening Hours</span>
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
 #### Passed Example 3
 
-Heading marked up with `h` element with an image that describes the topic or purpose of its section of the content.
+Heading marked up with `role="heading"` that describes the topic or purpose of its section of the content, with a default aria-level assigned.
 
 ```html
-<h1 class="target"><img scr="../test-assets/opening_hours_icon.png" alt="Opening hours"></img></h1>
+<span role="heading">Opening Hours</span>
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
 #### Passed Example 4
 
-Heading marked up with `h` element that is a single character that describes the topic or purpose of its section of the content.
+Heading marked up with `h1` element with an image that describes the topic or purpose of its section of the content.
+
+```html
+<h1 class="target"><img scr="../test-assets/opening_hours_icon.png" alt="Opening hours" /></h1>
+<p>We are open Monday through Friday from 10 to 16</p>
+```
+
+#### Passed Example 5
+
+Heading marked up with `h1` element that is a single character that describes the topic or purpose of its section of the content.
 
 ```html
 <h1 class="target">A</h1>
@@ -98,12 +107,13 @@ Heading marked up with `h` element that is a single character that describes the
 </dl>
 ```
 
-#### Passed Example 5
+#### Passed Example 6
 
-Heading marked up with `role="heading"` that describes the topic or purpose of its section of the content. The heading is positioned off screen and is included in the Accessibility Tree.
+Heading marked up with `role="heading"` that describes the topic or purpose of its section of the content. The heading is positioned off screen and is included in the accessibility tree.
 
 ```html
-<span role="heading" style="position: absolute; top: -9999px; left: -9999px;"
+<span role="heading" aria-level="1"
+	style="position: absolute; top: -9999px; left: -9999px;"
 	>Opening Hours</span
 >
 <p style="position: absolute; top: -9999px; left: -9999px;">
@@ -111,9 +121,9 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 </p>
 ```
 
-#### Passed Example 6
+#### Passed Example 7
 
-Heading marked up with `h` element that describes the topic or purpose of its section of the content. The heading is visible, but is not included in the Accessibility Tree.
+Heading marked up with `h1` element that describes the topic or purpose of its section of the content. The heading is visible, but is not included in the accessibility tree.
 
 ```html
 <h1 class="target" aria-hidden="true">Opening Hours</h1>
@@ -124,7 +134,7 @@ Heading marked up with `h` element that describes the topic or purpose of its se
 
 #### Failed Example 1
 
-Heading marked up with `h` element that does not describe the topic or purpose of its section of the content.
+Heading marked up with `h1` element that does not describe the topic or purpose of its section of the content.
 
 ```html
 <h1 class="target">Weather</h1>
@@ -136,13 +146,13 @@ Heading marked up with `h` element that does not describe the topic or purpose o
 Heading marked up with `role="heading"` that does not describe the topic or purpose of its section of the content.
 
 ```html
-<span role="heading">Weather</span>
+<span role="heading" aria-level="1">Weather</span>
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
 #### Failed Example 3
 
-Heading marked up with `role="heading"` that does not describe the topic or purpose of its section of the content. The heading is positioned off screen and is included in the Accessibility Tree.
+Heading marked up with `role="heading"` that does not describe the topic or purpose of its section of the content. The heading is positioned off screen and is included in the accessibility tree.
 
 ```html
 <span role="heading" style="position: absolute; top: -9999px; left: -9999px;"
@@ -155,27 +165,11 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed Example 4
 
-Heading marked up with `h` element that does not describe the topic or purpose of its section of the content. The heading is visible, but is not included in the Accessibility Tree.
+Heading marked up with `h1` element that does not describe the topic or purpose of its section of the content. The heading is visible, but is not included in the accessibility tree.
 
 ```html
 <h1 class="target" aria-hidden="true">Weather</h1>
 <p>We are open Monday through Friday from 10 to 16</p>
-```
-
-#### Failed Example 5
-
-Empty heading marked up with `h` element.
-
-```html
-<h1></h1>
-```
-
-#### Failed Example 6
-
-Empty heading marked up with `role="heading"`.
-
-```html
-<p role="heading" level="1"></p>
 ```
 
 ### Inapplicable
@@ -195,4 +189,20 @@ Heading that is neither visible to users, nor included in the accessibility tree
 ```html
 <h1 style="display: none;">Opening hours</h1>
 <p>We are open Monday through Friday from 10 to 16</p>
+```
+
+#### Inapplicable Example 3
+
+Empty heading marked up with `h1` is not visible.
+
+```html
+<h1></h1>
+```
+
+#### Inapplicable Example 4
+
+Empty heading marked up with `role="heading"` is not visible.
+
+```html
+<p role="heading" aria-level="1"></p>
 ```

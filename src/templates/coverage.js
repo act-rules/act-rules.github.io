@@ -17,7 +17,7 @@ export default ({ data }) => {
 				<h1>{frontmatter.title}</h1>
 
 				<section>
-					<h2>Status & Coverage Metrics</h2>
+					<h2>Implementation Overview</h2>
 					<table>
 						<thead>
 							<tr>

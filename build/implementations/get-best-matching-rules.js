@@ -10,7 +10,7 @@ const getBestMatchingRules = ruleAsserts => {
 	}
 
 	const completeRules = mappedRules.filter(({ complete }) => complete === true)
-	if (!completeRules) {
+	if (!completeRules.length) {
 		return mappedRules
 	}
 

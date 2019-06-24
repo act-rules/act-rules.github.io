@@ -11,13 +11,13 @@ const getFramedReport = async path => {
 		return await jsonld.frame(data, frameConfig)
 	}
 
-	const reports = globby.sync([path]).map(reportPath => {
+	const reportFiles = globby.sync([path]);
+	const reports = reportFiles.map(reportPath => {
 		const fileContent = readFile(reportPath)
 		return JSON.parse(fileContent)
 	})
 
 	const result = []
-
 	for (let report of reports) {
 		const framedReport = await jsonld.frame(report, frameConfig)
 		result.push(framedReport)

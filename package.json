@@ -85,6 +85,7 @@
 		"act-rules-implementation-access-engine": "git+https://git@github.com/act-rules/act-rules-implementation-access-engine.git",
 		"act-rules-implementation-axe-core": "git+https://git@github.com/act-rules/act-rules-implementation-axe-core.git",
 		"act-rules-implementation-rgaa": "git+https://git@github.com/act-rules/act-rules-implementation-rgaa.git",
+		"act-rules-implementation-trusted-tester": "git+https://git@github.com/act-rules/act-rules-implementation-trusted-tester.git",
 		"axios": "^0.18.1",
 		"commander": "^2.20.0",
 		"fastmatter": "^2.1.1",
@@ -149,7 +150,8 @@
 		"get:implementation:alfa": "node ./build/get-implementation --org 'Site Improve' --tool 'Alfa' --path 'https://raw.githubusercontent.com/w3c/earl/master/earl-reports/alfa-report.json'",
 		"get:implementation:axe": "node ./build/get-implementation --org 'Deque Systems' --tool 'Axe' --path './node_modules/act-rules-implementation-axe-core/report.json'",
 		"get:implementation:rgaa": "node ./build/get-implementation --org 'Access42' --tool 'RGAA 3.0' --path './node_modules/act-rules-implementation-rgaa/reports/*.json'",
-		"get:implementations": "npm run get:implementation:accessEngine && npm run get:implementation:alfa && npm run get:implementation:axe && npm run get:implementation:rgaa",
+		"get:implementation:trustedTester": "node ./build/get-implementation --org 'Trusted Tester' --tool 'Trusted Tester' --path './node_modules/act-rules-implementation-trusted-tester/reports/*.json'",
+		"get:implementations": "npm run get:implementation:accessEngine && npm run get:implementation:alfa && npm run get:implementation:axe && npm run get:implementation:rgaa && npm run get:implementation:trustedTester",
 		"create:implementations:metrics": "node ./build/create-implementation-metrics",
 		"implementations": "npm run get:implementations && npm run create:implementations:metrics",
 		"create:testcases": "node ./build/create-testcases",
@@ -195,11 +197,6 @@
 			"<rootDir>/.cache/",
 			"<rootDir>/.public/"
 		]
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "npm test"
-		}
 	},
 	"lint-staged": {
 		"*.{md,json,js,html}": [

@@ -8,7 +8,7 @@ accessibility_requirements:
   wcag20:2.4.2: # Page Titled (A)
     forConformance: true
     failed: not satisfied
-    passed: further testing needed
+    passed: satisfied
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree

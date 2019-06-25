@@ -1758,7 +1758,7 @@
         "wcag20:2.4.2": {
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       },
@@ -1777,7 +1777,7 @@
         "wcag20:2.4.2": {
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       },
@@ -1796,7 +1796,7 @@
         "wcag20:2.4.2": {
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       },
@@ -1815,7 +1815,7 @@
         "wcag20:2.4.2": {
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       },
@@ -1834,7 +1834,7 @@
         "wcag20:2.4.2": {
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       },
@@ -1853,7 +1853,7 @@
         "wcag20:2.4.2": {
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       },
@@ -1872,7 +1872,7 @@
         "wcag20:2.4.2": {
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       },
@@ -1891,7 +1891,7 @@
         "wcag20:2.4.2": {
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       },

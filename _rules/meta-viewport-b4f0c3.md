@@ -3,7 +3,7 @@ id: b4f0c3
 name: meta viewport
 rule_type: atomic
 description: |
-  This rule checks that the meta element is not used to block the user agent ability to zoom 
+  This rule checks that the meta element is not used to block the user agent ability to zoom. 
 accessibility_requirements:
   wcag20:1.4.10: # Reflow (AA)
     forConformance: true
@@ -24,8 +24,8 @@ The rule applies to every `<meta name="viewport">` elements with a `content` att
 ## Expectation
 
 The `content` attribute of the test target: 
-- does not have the property `user-scalable` or it is set to `yes`
-- does not have the property `maximum-scale` 
+- does not have the property `user-scalable` or it is set to `yes`and
+- does not have the property `maximum-scale`. 
 
 ## Assumptions
 

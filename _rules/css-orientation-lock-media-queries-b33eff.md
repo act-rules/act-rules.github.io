@@ -46,7 +46,7 @@ Each target element does not restrict its view and operation to a single display
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 A page, where CSS media query styles negate orientation lock, and therefore does not restrict its view or operation.
 
@@ -76,7 +76,7 @@ A page, where CSS media query styles negate orientation lock, and therefore does
 </html>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 A page (piano application), where orientation lock is essential.
 
@@ -101,7 +101,7 @@ A page (piano application), where orientation lock is essential.
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 A page, where orientation is locked by applying `transform` style on `portrait` media query (coming from a relative stylesheet).
 
@@ -119,7 +119,7 @@ A page, where orientation is locked by applying `transform` style on `portrait` 
 </html>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 A page, where orientation is locked via `style` specified on the `head`.
 
@@ -143,7 +143,7 @@ A page, where orientation is locked via `style` specified on the `head`.
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 A page where there are no styles.
 
@@ -155,7 +155,7 @@ A page where there are no styles.
 </html>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 A page that has no CSS media query styles.
 
@@ -174,7 +174,7 @@ A page that has no CSS media query styles.
 </html>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 A page, where CSS media query styles targeting orientation lock is applied to an element that is not visible.
 

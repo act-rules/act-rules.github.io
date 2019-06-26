@@ -41,7 +41,7 @@ This rule assumes that a mechanism is available to start the video and that the 
 
 ## Accessibility Support
 
-See [Video only element description track: accessibility support](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-1-Video-only-description-track.html#accessibility-support).
+See [Video Only Element Has Description Track: accessibility support](https://act-rules.github.io/rules/ac7dc6#accessibility-support).
 
 ## Background
 

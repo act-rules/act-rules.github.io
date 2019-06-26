@@ -28,8 +28,6 @@ The rule only applies to any HTML or SVG element that is [focusable](#focusable)
 ## Expectation
 
 For each test target, the outcome of one of the following rules is "passed":
-  - a1b64e
-  - ebe86a
 - [No keyboard trap standard navigation](https://act-rules.github.io/rules/a1b64e)
 - [No keyboard trap non-standard navigation](https://act-rules.github.io/rules/ebe86a)
 

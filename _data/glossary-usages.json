@@ -1,0 +1,514 @@
+{
+  "#included-in-the-accessibility-tree": [
+    {
+      "name": "ARIA state or property allowed",
+      "slug": "rules/5c01ea"
+    },
+    {
+      "name": "ARIA state or property has valid value",
+      "slug": "rules/6a7281"
+    },
+    {
+      "name": "Audio-only as a media alternative for text",
+      "slug": "rules/afb423"
+    },
+    {
+      "name": "Autocomplete valid",
+      "slug": "rules/73f2c2"
+    },
+    {
+      "name": "Buttons have an accessible name",
+      "slug": "rules/97a4e1"
+    },
+    {
+      "name": "Filename is valid accessible name",
+      "slug": "rules/9eb3f6"
+    },
+    {
+      "name": "Form field has accessible name",
+      "slug": "rules/e086e5"
+    },
+    {
+      "name": "Form field label is descriptive",
+      "slug": "rules/cc0f0a"
+    },
+    {
+      "name": "Heading is descriptive",
+      "slug": "rules/b49b2e"
+    },
+    {
+      "name": "Id attribute is unique",
+      "slug": "rules/3ea0c8"
+    },
+    {
+      "name": "Iframes with identical accessible names serve equivalent purpose",
+      "slug": "rules/4b1c6c"
+    },
+    {
+      "name": "Image button has accessible name",
+      "slug": "rules/59796f"
+    },
+    {
+      "name": "Image has accessible name",
+      "slug": "rules/23a2a8"
+    },
+    {
+      "name": "Links have an accessible name",
+      "slug": "rules/c487ae"
+    },
+    {
+      "name": "Links with identical accessible names serve equivalent purpose",
+      "slug": "rules/b20e66"
+    },
+    {
+      "name": "No keyboard trap non-standard navigation",
+      "slug": "rules/ebe86a"
+    },
+    {
+      "name": "Role attribute has valid value",
+      "slug": "rules/674b10"
+    },
+    {
+      "name": "Video as a media alternative for text",
+      "slug": "rules/ab4d13"
+    },
+    {
+      "name": "Video-only as a media alternative for text",
+      "slug": "rules/fd26cf"
+    },
+    {
+      "name": "audio elements have a transcript",
+      "slug": "rules/2eb176"
+    },
+    {
+      "name": "audio only has a text alternative",
+      "slug": "rules/e7aa44"
+    },
+    {
+      "name": "iframe has an accessible name",
+      "slug": "rules/cae760"
+    },
+    {
+      "name": "video only element has transcript",
+      "slug": "rules/ee13b5"
+    }
+  ],
+  "#semantic-role": [
+    {
+      "name": "ARIA state or property allowed",
+      "slug": "rules/5c01ea"
+    },
+    {
+      "name": "Autocomplete valid",
+      "slug": "rules/73f2c2"
+    },
+    {
+      "name": "Buttons have an accessible name",
+      "slug": "rules/97a4e1"
+    },
+    {
+      "name": "Filename is valid accessible name",
+      "slug": "rules/9eb3f6"
+    },
+    {
+      "name": "Form field has accessible name",
+      "slug": "rules/e086e5"
+    },
+    {
+      "name": "Form field label is descriptive",
+      "slug": "rules/cc0f0a"
+    },
+    {
+      "name": "Heading is descriptive",
+      "slug": "rules/b49b2e"
+    },
+    {
+      "name": "Image has accessible name",
+      "slug": "rules/23a2a8"
+    },
+    {
+      "name": "Links have an accessible name",
+      "slug": "rules/c487ae"
+    },
+    {
+      "name": "Links with identical accessible names serve equivalent purpose",
+      "slug": "rules/b20e66"
+    },
+    {
+      "name": "Role attribute has valid value",
+      "slug": "rules/674b10"
+    },
+    {
+      "name": "Role has required states and properties",
+      "slug": "rules/4e8ab6"
+    },
+    {
+      "name": "label and name from content mismatch",
+      "slug": "rules/2ee8b8"
+    }
+  ],
+  "#focusable": [
+    {
+      "name": "ARIA state or property has valid value",
+      "slug": "rules/6a7281"
+    },
+    {
+      "name": "No keyboard trap",
+      "slug": "rules/80af7b"
+    },
+    {
+      "name": "No keyboard trap non-standard navigation",
+      "slug": "rules/ebe86a"
+    },
+    {
+      "name": "No keyboard trap standard navigation",
+      "slug": "rules/a1b64e"
+    }
+  ],
+  "#accessible-name": [
+    {
+      "name": "ARIA state or property has valid value",
+      "slug": "rules/6a7281"
+    },
+    {
+      "name": "Buttons have an accessible name",
+      "slug": "rules/97a4e1"
+    },
+    {
+      "name": "Filename is valid accessible name",
+      "slug": "rules/9eb3f6"
+    },
+    {
+      "name": "Form field has accessible name",
+      "slug": "rules/e086e5"
+    },
+    {
+      "name": "Iframes with identical accessible names serve equivalent purpose",
+      "slug": "rules/4b1c6c"
+    },
+    {
+      "name": "Image button has accessible name",
+      "slug": "rules/59796f"
+    },
+    {
+      "name": "Image has accessible name",
+      "slug": "rules/23a2a8"
+    },
+    {
+      "name": "Links have an accessible name",
+      "slug": "rules/c487ae"
+    },
+    {
+      "name": "Links with identical accessible names serve equivalent purpose",
+      "slug": "rules/b20e66"
+    },
+    {
+      "name": "iframe has an accessible name",
+      "slug": "rules/cae760"
+    },
+    {
+      "name": "label and name from content mismatch",
+      "slug": "rules/2ee8b8"
+    }
+  ],
+  "#non-streaming-media-element": [
+    {
+      "name": "Audio-only as a media alternative for text",
+      "slug": "rules/afb423"
+    },
+    {
+      "name": "Video as a media alternative for text",
+      "slug": "rules/ab4d13"
+    },
+    {
+      "name": "Video element description track",
+      "slug": "rules/f196ce"
+    },
+    {
+      "name": "Video only element has description track",
+      "slug": "rules/ac7dc6"
+    },
+    {
+      "name": "Video-only as a media alternative for text",
+      "slug": "rules/fd26cf"
+    },
+    {
+      "name": "audio elements have a transcript",
+      "slug": "rules/2eb176"
+    },
+    {
+      "name": "audio only has a text alternative",
+      "slug": "rules/e7aa44"
+    },
+    {
+      "name": "video element audio described",
+      "slug": "rules/1ea59c"
+    },
+    {
+      "name": "video element transcript",
+      "slug": "rules/1a02b0"
+    },
+    {
+      "name": "video has captions",
+      "slug": "rules/f51b46"
+    },
+    {
+      "name": "video only element has transcript",
+      "slug": "rules/ee13b5"
+    },
+    {
+      "name": "video only has an accessible alternative",
+      "slug": "rules/c3232f"
+    },
+    {
+      "name": "video only has audio alternative",
+      "slug": "rules/d7ba54"
+    },
+    {
+      "name": "video with audio has audio description",
+      "slug": "rules/1ec09b"
+    },
+    {
+      "name": "video with audio has audio descriptions or transcript",
+      "slug": "rules/c5a4ea"
+    }
+  ],
+  "#visible": [
+    {
+      "name": "Audio-only as a media alternative for text",
+      "slug": "rules/afb423"
+    },
+    {
+      "name": "Form field label is descriptive",
+      "slug": "rules/cc0f0a"
+    },
+    {
+      "name": "Heading is descriptive",
+      "slug": "rules/b49b2e"
+    },
+    {
+      "name": "Video as a media alternative for text",
+      "slug": "rules/ab4d13"
+    },
+    {
+      "name": "Video element description track",
+      "slug": "rules/f196ce"
+    },
+    {
+      "name": "Video has audio alternative",
+      "slug": "rules/eac66b"
+    },
+    {
+      "name": "Video only element has description track",
+      "slug": "rules/ac7dc6"
+    },
+    {
+      "name": "Video-only as a media alternative for text",
+      "slug": "rules/fd26cf"
+    },
+    {
+      "name": "audio elements have a transcript",
+      "slug": "rules/2eb176"
+    },
+    {
+      "name": "audio only has a text alternative",
+      "slug": "rules/e7aa44"
+    },
+    {
+      "name": "video element audio described",
+      "slug": "rules/1ea59c"
+    },
+    {
+      "name": "video element transcript",
+      "slug": "rules/1a02b0"
+    },
+    {
+      "name": "video has captions",
+      "slug": "rules/f51b46"
+    },
+    {
+      "name": "video only element has transcript",
+      "slug": "rules/ee13b5"
+    },
+    {
+      "name": "video only has an accessible alternative",
+      "slug": "rules/c3232f"
+    },
+    {
+      "name": "video only has audio alternative",
+      "slug": "rules/d7ba54"
+    },
+    {
+      "name": "video with audio has audio description",
+      "slug": "rules/1ec09b"
+    },
+    {
+      "name": "video with audio has audio descriptions or transcript",
+      "slug": "rules/c5a4ea"
+    }
+  ],
+  "#visible-on-the-page": [
+    {
+      "name": "Autocomplete valid",
+      "slug": "rules/73f2c2"
+    },
+    {
+      "name": "Id attribute is unique",
+      "slug": "rules/3ea0c8"
+    },
+    {
+      "name": "No keyboard trap non-standard navigation",
+      "slug": "rules/ebe86a"
+    }
+  ],
+  "#correct-autocomplete-field": [
+    {
+      "name": "Autocomplete valid",
+      "slug": "rules/73f2c2"
+    }
+  ],
+  "#appropriate-field-for-the-form-control": [
+    {
+      "name": "Autocomplete valid",
+      "slug": "rules/73f2c2"
+    }
+  ],
+  "#whitespace": [
+    {
+      "name": "Buttons have an accessible name",
+      "slug": "rules/97a4e1"
+    },
+    {
+      "name": "Document title is descriptive",
+      "slug": "rules/c4a8a4"
+    },
+    {
+      "name": "Form field has accessible name",
+      "slug": "rules/e086e5"
+    },
+    {
+      "name": "HTML Page has a title",
+      "slug": "rules/2779a5"
+    },
+    {
+      "name": "Iframes with identical accessible names serve equivalent purpose",
+      "slug": "rules/4b1c6c"
+    },
+    {
+      "name": "Image button has accessible name",
+      "slug": "rules/59796f"
+    },
+    {
+      "name": "Image has accessible name",
+      "slug": "rules/23a2a8"
+    },
+    {
+      "name": "Links have an accessible name",
+      "slug": "rules/c487ae"
+    },
+    {
+      "name": "Links with identical accessible names serve equivalent purpose",
+      "slug": "rules/b20e66"
+    },
+    {
+      "name": "iframe has an accessible name",
+      "slug": "rules/cae760"
+    }
+  ],
+  "#filename": [
+    {
+      "name": "Filename is valid accessible name",
+      "slug": "rules/9eb3f6"
+    }
+  ],
+  "#valid-language-subtag": [
+    {
+      "name": "HTML lang and xml:lang match",
+      "slug": "rules/5b7ae0"
+    },
+    {
+      "name": "Valid body lang attribute",
+      "slug": "rules/de46e4"
+    },
+    {
+      "name": "Validity of HTML Lang attribute",
+      "slug": "rules/bf051a"
+    }
+  ],
+  "#section-of-content": [
+    {
+      "name": "Heading is descriptive",
+      "slug": "rules/b49b2e"
+    }
+  ],
+  "#matching-characters": [
+    {
+      "name": "Iframes with identical accessible names serve equivalent purpose",
+      "slug": "rules/4b1c6c"
+    },
+    {
+      "name": "Links with identical accessible names serve equivalent purpose",
+      "slug": "rules/b20e66"
+    }
+  ],
+  "#same-resource": [
+    {
+      "name": "Iframes with identical accessible names serve equivalent purpose",
+      "slug": "rules/4b1c6c"
+    },
+    {
+      "name": "Links with identical accessible names serve equivalent purpose",
+      "slug": "rules/b20e66"
+    }
+  ],
+  "#equivalent-resource": [
+    {
+      "name": "Iframes with identical accessible names serve equivalent purpose",
+      "slug": "rules/4b1c6c"
+    },
+    {
+      "name": "Links with identical accessible names serve equivalent purpose",
+      "slug": "rules/b20e66"
+    }
+  ],
+  "#decorative": [
+    {
+      "name": "Image has accessible name",
+      "slug": "rules/23a2a8"
+    }
+  ],
+  "#standard-keyboard-navigation": [
+    {
+      "name": "No keyboard trap non-standard navigation",
+      "slug": "rules/ebe86a"
+    },
+    {
+      "name": "No keyboard trap standard navigation",
+      "slug": "rules/a1b64e"
+    }
+  ],
+  "#implicit-role": [
+    {
+      "name": "Role has required states and properties",
+      "slug": "rules/4e8ab6"
+    }
+  ],
+  "#non-empty": [
+    {
+      "name": "Validity of HTML Lang attribute",
+      "slug": "rules/bf051a"
+    }
+  ],
+  "#visible-text-content": [
+    {
+      "name": "label and name from content mismatch",
+      "slug": "rules/2ee8b8"
+    }
+  ],
+  "#audio-output": [
+    {
+      "name": "video has captions",
+      "slug": "rules/f51b46"
+    }
+  ]
+}

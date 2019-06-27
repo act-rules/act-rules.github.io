@@ -22,11 +22,11 @@ authors:
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming) `video` element thst is [visible](#visible) where the video contains [audio](#audio).
+The rule applies to every [non-streaming](#non-streaming-media-element) `video` element thst is [visible](#visible) where the video contains [audio](#audio-output).
 
 ## Expectation
 
-For each test target, audio information that is not conveyed visually in the video, is available through [captions](#captions).
+For each test target, audio information that is not conveyed visually in the video, is available through [captions](https://www.w3.org/TR/WCAG21/#dfn-captions).
 
 _Note_: Captions can be either embedded in the video file itself or can be made available trough a separate track.
 

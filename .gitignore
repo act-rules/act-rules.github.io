@@ -71,3 +71,6 @@ yarn-error.log
 # Data
 _data/**/*.*
 !_data/wcag-em-report-tool-mappings/*.*
+
+# This is temporary to get CI passing for this PR
+!_data/glossary-usages.json

@@ -76,7 +76,7 @@ Value attribute as the accessible name.
 Span tag with role button and has name defined by aria-label.
 
 ```html
-<span role="button" aria-label="My button"></button>
+<span role="button" aria-label="My button"></span>
 ```
 
 #### Passed Example 5

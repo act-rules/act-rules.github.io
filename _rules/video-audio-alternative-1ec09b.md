@@ -145,7 +145,7 @@ A video element with a link to a text transcript.
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"/>
 </video>
-<a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
+<a href="../test-assets/rabbit-video/transcript.html">Transcript</a>
 ```
 
 ### Inapplicable

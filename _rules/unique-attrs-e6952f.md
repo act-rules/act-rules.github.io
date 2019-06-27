@@ -81,7 +81,7 @@ SVG, no attributes are duplicated.
 
 Script, no attributes are duplicated. HTML or SVG code within a script should be ignored.
 
-```html
+```html ignoreTest
 <script>
 	var foo = '<img src="image.jpg" alt="" alt="image" />'
 </script>
@@ -93,7 +93,7 @@ Script, no attributes are duplicated. HTML or SVG code within a script should be
 
 At least one attribute is duplicated.
 
-```html
+```html ignoreTest
 <img src="image.jpg" alt="" alt="image" />
 ```
 
@@ -101,7 +101,7 @@ At least one attribute is duplicated.
 
 Empty attributes, at least one attribute is duplicated.
 
-```html
+```html ignoreTest
 <input type="checkbox" disabled="disabled" disabled readonly />
 ```
 
@@ -109,7 +109,7 @@ Empty attributes, at least one attribute is duplicated.
 
 SVG, at least one attribute is duplicated.
 
-```html
+```html ignoreTest
 <svg>
 	<line x1="0" y1="0" x1="200" y1="200" style="stroke-width:2" />
 </svg>

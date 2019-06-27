@@ -48,8 +48,8 @@ A silent video element with a text transcript on the same page.
 
 ```html
 <video controls data-rule-target>
-  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
+  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4">
+  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm">
 </video>
 <p>The above video shows a giant fat rabbit climbing out of a hole in the ground.
 He stretches, yaws, and then starts walking.
@@ -62,10 +62,10 @@ A silent video element with a link to a text transcript on a different page.
 
 ```html
 <video controls data-rule-target>
-  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
+  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4">
+  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm">
 </video>
-<a href="/test-assets/rabbit-video-transcript.html">Transcript</p>
+<a href="/test-assets/rabbit-video-transcript.html">Transcript</a>
 ```
 
 ### Failed
@@ -76,8 +76,8 @@ A silent video element with an incorrect text transcript on the same page.
 
 ```html
 <video controls data-rule-target>
-  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
+  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4">
+  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm">
 </video>
 <p>The above video shows a giant fat dog climbing out of a hole in the ground.
 He stretches, yaws, and then starts walking.
@@ -90,10 +90,10 @@ A silent video element with a link to an incorrect text transcript on a differen
 
 ```html
 <video controls data-rule-target>
-  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
+  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4">
+  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm">
 </video>
-<a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</p>
+<a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</a>
 ```
 
 #### Failed Example 3
@@ -102,8 +102,8 @@ A silent video element with an invisible text transcript on the same page.
 
 ```html
 <video controls data-rule-target>
-  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
+  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4">
+  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm">
 </video>
 <p style="text-indent: -9999px;">The above video shows a giant fat rabbit climbing out of a hole in the ground.
 He stretches, yaws, and then starts walking.
@@ -116,8 +116,8 @@ A silent video element with a text transcript on the same page that is not inclu
 
 ```html
 <video controls data-rule-target>
-  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
+  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4">
+  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm">
 </video>
 <p aria-hidden="true">The above video shows a giant fat rabbit climbing out of a hole in the ground.
 He stretches, yaws, and then starts walking.
@@ -132,10 +132,10 @@ A silent video element that is not visible on the page.
 
 ```html
 <video controls style="display: none;" data-rule-target>
-  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
+  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4">
+  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm">
 </video>
-<a href="/test-assets/rabbit-video-transcript.html">Transcript</p>
+<a href="/test-assets/rabbit-video-transcript.html">Transcript</a>
 ```
 
 #### Inapplicable Example 2
@@ -144,8 +144,8 @@ A video element with audio.
 
 ```html
 <video controls data-rule-target>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4">
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm">
 </video>
-<a href="/test-assets/rabbit-video-transcript.html">Transcript</p>
+<a href="/test-assets/rabbit-video-transcript.html">Transcript</a>
 ```

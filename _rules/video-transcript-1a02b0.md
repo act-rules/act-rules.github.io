@@ -56,8 +56,8 @@ A video element with a text transcript on the same page.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4">
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm">
 </video>
 <p>The above video shows a giant fat rabbit climbing out of a hole in the ground.
 He stretches, yaws, and then starts walking.
@@ -70,10 +70,10 @@ A video element with a link to a text transcript on a different page.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4">
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm">
 </video>
-<a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
+<a href="../test-assets/rabbit-video/transcript.html">Transcript</a>
 ```
 
 ### Failed
@@ -84,8 +84,8 @@ A video element with an incorrect text transcript on the same page.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4">
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm">
 </video>
 <p>The above video shows a giant fat dog climbing out of a hole in the ground.
 He stretches, yaws, and then starts walking.
@@ -98,10 +98,10 @@ A video element with a link to an incorrect text transcript on a different page.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4">
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm">
 </video>
-<a href="../test-assets/rabbit-video/incorrect-transcript.html">Transcript</p>
+<a href="../test-assets/rabbit-video/incorrect-transcript.html">Transcript</a>
 ```
 
 ### Inapplicable
@@ -112,10 +112,10 @@ A video element that is not visible on the page.
 
 ```html
 <video controls style="display: none;">
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4">
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm">
 </video>
-<a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
+<a href="../test-assets/rabbit-video/transcript.html">Transcript</a>
 ```
 
 #### Inapplicable Example 2
@@ -124,8 +124,8 @@ A video element without audio.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
+  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4">
+  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm">
 </video>
-<a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
+<a href="../test-assets/rabbit-video/transcript.html">Transcript</a>
 ```

@@ -5,8 +5,8 @@ rule_type: atomic
 description: |
   This rule checks that WAI-ARIA states or properties are allowed for the element they are specified on.
 accessibility_requirements:
-  aria11:supportedState:
-    title: ARIA 1.1, 5.2.3 Supported States and Properties
+  aria11:state_property_processing:
+    title: ARIA 1.1, 7.6 State and Property Attribute Processing
     forConformance: true
     failed: not satisfied
     passed: satisfied

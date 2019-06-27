@@ -22,9 +22,9 @@ The ACT Rules Community Group is a group of accessibility tool vendors, test pro
 
 The ACTR Community is an open community, meaning that anyone with an interest in our work is welcome to participate. The ACTR Community has three resources that are important to know about. Github, the community group page, and the ACTR Community website.
 
-- [ACTR Website](https://auto-wcag.github.io/auto-wcag) The ACTR Community website is where all the work is published. If you are interested to learn what rules have been agreed upon by the group, and who has implemented those, this is the place to go.
+- [ACTR Website](https://act-rules.github.io/) The ACTR Community website is where all the work is published. If you are interested to learn what rules have been agreed upon by the group, and who has implemented those, this is the place to go.
 
-- [Github](https://github.com/auto-wcag/auto-wcag) All work in the community group happens on Github. To participate you will need a Github account and basic familiarity with Github. If you are new to Github, there are several great articles and video's on the web explaining the basics of Github. Here are a few:
+- [Github](https://github.com/act-rules/act-rules.github.io) All work in the community group happens on Github. To participate you will need a Github account and basic familiarity with Github. If you are new to Github, there are several great articles and video's on the web explaining the basics of Github. Here are a few:
 
   - http://www.madebyloren.com/posts/github-for-writers
   - https://www.youtube.com/watch?v=9XhbYHcaT9k&t=7s

@@ -20,7 +20,7 @@ export const getChangelog = (changelog, url, file) => {
 						const changesUrl = `${url}/commit/${hash}`
 						return (
 							<tr key={hash}>
-								<td>{getDateTimeFromUnixTimestamp(date)}</td>
+								<td nowrap="true">{getDateTimeFromUnixTimestamp(date)}</td>
 								<td>{msg}</td>
 								<td>
 									<a

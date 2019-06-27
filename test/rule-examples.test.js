@@ -17,22 +17,9 @@ const htmlHintRules = {
   "title-require": false
 }
 
-const offHintRulesForRuleMap = {
-  e6952f: {
-    "id-unique": false,
-    "attr-no-duplication": false,
-  },
-  '3ea0c8': {
-    "id-unique": false,
-  },
-  b20e66: {
-    "attr-lowercase": false,
-  }
-}
-
 describeRule('examples', (ruleData) => {
   const { frontmatter, body } = ruleData
-  const { id, name } = frontmatter
+  const { id, name, htmlHintIgnore } = frontmatter
 
   const codeBlocks = gfmCodeBlocks(body)
 
@@ -44,7 +31,7 @@ describeRule('examples', (ruleData) => {
        * - `xml`
        * - `js`
        */
-      if(/```(svg|js|xml)/gm.test(block.substring(0, 25))) {
+      if (/```(svg|js|xml)/gm.test(block.substring(0, 25))) {
         return false
       }
       return true;
@@ -52,10 +39,22 @@ describeRule('examples', (ruleData) => {
     .map(({ code }) => code)
 
   test.each(codeSnippets)('is valid HTML code - `%s`', snippet => {
+    /**
+     * Ignore `rules` specified in frontmatter of certain rules (if any)
+     */
+    const ignoreRules = htmlHintIgnore
+      ? htmlHintIgnore
+        .reduce((out, ignoreRule) => {
+          out[ignoreRule] = false
+          return out
+        }, {})
+      : undefined
+
     const rules = {
       ...htmlHintRules,
-      ...offHintRulesForRuleMap[id]
+      ...ignoreRules
     }
+    
     const errors = HTMLHint.default.verify(snippet, rules);
 
     if (errors.length) {

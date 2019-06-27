@@ -51,7 +51,7 @@ There are no major accessibility support issues known for this rule.
 A valid ARIA 1.1 attribute `aria-atomic` is used on element `article`.
 
 ```html
-<article aria-atomic>This is a decription of something cool...</article>
+<article aria-atomic="true">This is a decription of something cool...</article>
 ```
 
 #### Passed Example 2
@@ -59,7 +59,7 @@ A valid ARIA 1.1 attribute `aria-atomic` is used on element `article`.
 A valid ARIA 1.1 attribute `aria-modal` on element `div` with role `dialog`
 
 ```html
-<div role="dialog" aria-modal>Contains modal content...</div>
+<div role="dialog" aria-modal="true">Contains modal content...</div>
 ```
 
 #### Passed Example 3

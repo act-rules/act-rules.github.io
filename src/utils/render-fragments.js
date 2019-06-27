@@ -20,7 +20,7 @@ export const getChangelog = (changelog, url, file) => {
 						const changesUrl = `${url}/commit/${hash}`
 						return (
 							<tr key={hash}>
-								<td>{getDateTimeFromUnixTimestamp(date)}</td>
+								<td nowrap="true">{getDateTimeFromUnixTimestamp(date)}</td>
 								<td>{msg}</td>
 								<td>
 									<a
@@ -349,6 +349,7 @@ export function getInputRulesForRule(
 		<div className="side-notes">
 			<div className="meta">
 				<h3 className="heading">Input Rules</h3>
+				<ul>
 				{inputRules.map(inputRuleId => {
 					const atomicRule = allRules.find(
 						rule => rule.node.frontmatter.id === inputRuleId
@@ -358,11 +359,14 @@ export function getInputRulesForRule(
 						: atomicRule.node.fields.slug
 					const name = atomicRule.node.frontmatter.name
 					return (
-						<a className="sc-item block" href={aHref} key={inputRuleId}>
-							{name}
-						</a>
+						<li key={inputRuleId}>
+							<a className="sc-item block" href={aHref}>
+								{name}
+							</a>
+						</li>
 					)
 				})}
+				</ul>
 			</div>
 		</div>
 	)

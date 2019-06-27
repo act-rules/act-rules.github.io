@@ -1,17 +1,33 @@
 const gfmCodeBlocks = require('gfm-code-blocks')
 const HTMLHint = require("htmlhint");
 const describeRule = require('./utils/describe-rule')
+
 const htmlHintRules = {
+  // on rules
   "tagname-lowercase": true,
-  "attr-lowercase": false,
+  "attr-lowercase": true,
   "attr-value-double-quotes": true,
-  "doctype-first": false,
   "tag-pair": true,
   "spec-char-escape": true,
   "id-unique": true,
-  "src-not-empty": false,
   "attr-no-duplication": true,
+  // default off rules
+  "doctype-first": false,
+  "src-not-empty": false,
   "title-require": false
+}
+
+const offHintRulesForRuleMap = {
+  e6952f: {
+    "id-unique": false,
+    "attr-no-duplication": false,
+  },
+  '3ea0c8': {
+    "id-unique": false,
+  },
+  b20e66: {
+    "attr-lowercase": false,
+  }
 }
 
 describeRule('examples', (ruleData) => {
@@ -23,39 +39,24 @@ describeRule('examples', (ruleData) => {
   const codeSnippets = codeBlocks
     .filter(({ block }) => {
       /**
-       * ignore `svg` document example
+       * Ignore below types of examples
+       * - `svg`
+       * - `xml`
+       * - `js`
        */
-      if (/```svg/gm.test(block.substring(0, 20))) {
-        return false;
+      if(/```(svg|js|xml)/gm.test(block.substring(0, 25))) {
+        return false
       }
-
-      /**
-       * ignore `xml` document example
-       */
-      if (/```xml/gm.test(block.substring(0, 20))) {
-        return false;
-      }
-
-       /**
-       * ignore `js` document example
-       */
-      if (/```js/gm.test(block.substring(0, 20))) {
-        return false;
-      }
-
-      /**
-       * ignore examples marked with `ignoreTest`
-       */
-      if(/ignoreTest/gm.test(block.substring(0, 20))) {
-        return false;
-      }
-
       return true;
     })
     .map(({ code }) => code)
 
   test.each(codeSnippets)('is valid HTML code - `%s`', snippet => {
-    const errors = HTMLHint.default.verify(snippet, htmlHintRules);
+    const rules = {
+      ...htmlHintRules,
+      ...offHintRulesForRuleMap[id]
+    }
+    const errors = HTMLHint.default.verify(snippet, rules);
 
     if (errors.length) {
       console.log(`Rule Name: ${name} \n`);

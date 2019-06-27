@@ -82,7 +82,7 @@ All `id`s are unique within the document context
 
 Several elements have identical `id`
 
-```html ignoreTest
+```html
 <div id="my-div">This is my first element</div>
 <div id="my-div">This is my second element</div>
 ```
@@ -91,7 +91,7 @@ Several elements have identical `id`
 
 Elements of different types have identical `id`
 
-```html ignoreTest
+```html
 <div id="my-div">This is my first element</div>
 <svg id="my-div">This is my second element</svg>
 ```
@@ -100,7 +100,7 @@ Elements of different types have identical `id`
 
 Having `display: none` on an element still makes it applicable to this rule
 
-```html ignoreTest
+```html
 <div id="my-div" style="display:none">This is my first element</div>
 <svg id="my-div">This is my second element</svg>
 ```

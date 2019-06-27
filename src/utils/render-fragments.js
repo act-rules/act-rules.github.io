@@ -348,7 +348,7 @@ export function getInputRulesForRule(
 	return (
 		<div className="side-notes">
 			<div className="meta">
-				<h3 className="heading">Input Rules</h3>
+				<span className="heading">Input Rules</span>
 				<ul>
 				{inputRules.map(inputRuleId => {
 					const atomicRule = allRules.find(

@@ -1,6 +1,6 @@
 ---
 id: c3232f
-name: video only has an accessible alternative
+name: Video only has an accessible alternative
 rule_type: composite
 description: |
   This rule checks if video elements without audio have an alternative available

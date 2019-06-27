@@ -1,6 +1,6 @@
 ---
 id: c5a4ea
-name: video with audio has audio descriptions or transcript
+name: Video with audio has audio descriptions or transcript
 rule_type: composite
 description: |
   This rule checks video elements with audio have an alternative for the video content as audio or as text.

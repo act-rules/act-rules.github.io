@@ -7,7 +7,7 @@ const globby = require('globby')
 const regexps = require('../utils/reg-exps')
 const createFile = require('../utils/create-file')
 const getAllMatchesForRegex = require('../utils/get-all-matches-for-regex')
-const getMarkdownData = require('./../utils/get-markdown-data')
+const getMarkdownData = require('../utils/get-markdown-data')
 
 const init = async () => {
 	/**

@@ -99,6 +99,7 @@ const init = async () => {
 			const testcase = {
 				testcaseId: codeId,
 				url: `${url}/${testcasePath}`,
+				relativePath: testcasePath,
 				expected: titleCurated[0],
 				ruleId,
 				ruleName,

@@ -65,7 +65,7 @@ section.layout-container {
           transition: all ease;
           a, p {
             @include header-style($fg-secondary);
-            text-transform: uppercase;
+            text-transform: capitalize;
             font-size: 0.83em;
             position: relative;
             &:hover {
@@ -161,7 +161,7 @@ section.layout-container {
               }
 
               div.meta {
-                font-size: 80%;
+                h3.heading,
                 span.heading {
                   padding: 0.25rem 0.5rem;
                   background-color: $sep;
@@ -169,13 +169,17 @@ section.layout-container {
                   text-transform: capitalize;
                   display: inline-block;
                   font-weight: bold;
+                  margin-top: 1em;
+                  font-size: 90%;
+                  cursor: auto;
+                  &:hover {
+                    text-decoration: none;
+                  }
                 }
                 a.sc-item {
                   cursor: pointer;
                   text-decoration: none;
-                  padding: 0.25rem 0.5rem;
                   text-transform: capitalize;
-                  display: block;
                   &:hover {
                     color: $accent;
                   }
@@ -193,20 +197,6 @@ section.layout-container {
                 }
                 &:last-child{
                   border-bottom: none;
-                }
-              }
-
-              >div.side-notes {
-                div.meta{
-                  span.heading{
-                    display: inline-block;
-                    font-weight: bold;
-                    background-color: $sep;
-                  }
-                  a.sc-item {
-                    display: block;
-                    background-color: transparent;
-                  }
                 }
               }
             }
@@ -271,7 +261,6 @@ section.layout-container {
                   text-transform: capitalize;
                 }
               }
-              
             }
           }
         }
@@ -289,11 +278,15 @@ section.layout-container {
           width: 100%;
           padding-bottom: 6rem;
 
-          ul.meta {
+
+
+          ul.meta,
+          div.meta {
             @include reset-list();
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
-            border-bottom: 1px solid $sep;
+            h3.heading, 
             span.heading {
               padding: 0.25rem 0.5rem;
               background-color: $sep;
@@ -301,6 +294,13 @@ section.layout-container {
               text-transform: capitalize;
               display: inline-block;
               font-weight: bold;
+              margin-top: 1em;
+              font-size: 90%;
+              color: $fg-primary;
+              cursor: auto;
+              &:hover {
+                text-decoration: none;
+              }
             }
             p{
               margin: 0;
@@ -311,11 +311,12 @@ section.layout-container {
             a.sc-item {
               cursor: pointer;
               text-decoration: none;
-              padding: 0.25rem 0.5rem;
               text-transform: capitalize;
-              display: block;
               &:hover {
                 color: $accent;
+              }
+              &.block {
+                display:block;
               }
             }
           }
@@ -327,23 +328,20 @@ section.layout-container {
           right: 0;
           top: 0;
           bottom: 55px;
-          border-left: 1px solid $bg-secondary;
-          background-color: $sep;
-          max-width: 200px;
+          border-left: 1px solid $sep;
+          min-width: 225px;
+          max-width: 300px;
           overflow: auto;
-          font-size: 80%;
-          padding-right: 1.5rem;
+          font-size: 85%;
           padding-bottom: 3rem;
           
           span.heading {
             padding: 0.25rem 0.5rem;
-            @include header-style($fg-secondary);
+            @include header-style($fg-primary);
             text-transform: capitalize;
-            font-size: 80%;
-            background-color: $bg-secondary;
+            background-color: $sep;
             margin: 1rem 0.5rem 0.5rem 0;
             display: inline-block;
-
             &:first-child {
               margin-top: 6rem;
             }
@@ -356,15 +354,10 @@ section.layout-container {
               span, a {
                 display: inline-block;
               }
-              p{
-                margin: 0 0 0 0.5rem;
-
-              }
               a{
                 cursor: pointer;
                 text-decoration: none;
-                padding: 0rem 0.75rem;
-
+                padding: 0rem 1rem;
                 display: block;
                 &:hover {
                   color: $accent;
@@ -430,17 +423,15 @@ and (max-width : 1024px) {
               > aside {
                 width: 100% !important;
               }
+              >div.used-rules {
+                width: 100% !important;
+              }
             }
           }
         }
       }
       .page-rule {
         padding-right: 4rem !important;
-        section {
-          ul.meta {
-            flex-direction: column;
-          }
-        }
         div.toc {
           display: none;
         }

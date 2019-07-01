@@ -5,12 +5,6 @@ rule_type: atomic
 description: |
   This rule checks that each aria- attribute specified is defined in ARIA 1.1
 accessibility_requirements:
-  aria11:host_general_attrs:
-    title: ARIA 1.1, 7.2 State and Property Attributes
-    forConformance: true
-    failed: not satisfied
-    passed: satisfied
-    inapplicable: satisfied
 input_aspects:
   - DOM Tree
 authors:

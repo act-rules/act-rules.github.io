@@ -5,11 +5,12 @@ rule_type: atomic
 description: |
   This rule checks that WAI-ARIA states or properties are allowed for the element they are specified on.
 accessibility_requirements:
-  wcag20:4.1.2: # Name, Role, Value (A)
+  aria11:state_property_processing:
+    title: ARIA 1.1, 7.6 State and Property Attribute Processing
     forConformance: true
     failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
+    passed: satisfied
+    inapplicable: satisfied
 input_aspects:
   - DOM Tree
 authors:
@@ -28,7 +29,7 @@ The attribute is either an [inherited](https://www.w3.org/TR/wai-aria/#inherited
 
 ## Assumptions
 
-- ARIA roles, states and properties are used to provide new information to screen readers and other assistive technologies. If the information expressed through ARIA is already available in another way, failing this rule may not cause accessibility issues.
+_There are currently no assumptions_
 
 ## Accessibility Support
 

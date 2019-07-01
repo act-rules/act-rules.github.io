@@ -36,12 +36,18 @@ const createTestcasesOfRuleOfEmReportTool = async options => {
 
 	const ruleScs = ruleAccessibilityRequirements
 		? Object.keys(ruleAccessibilityRequirements).map(key => {
-				return key.split(':').pop()
-		  })
+			return key.split(':').pop()
+		})
 		: []
-	const matchingScTests = ruleScs.map(scNum => {
-		return scUrlsMetaData[scNum].test.toLowerCase()
-	})
+
+	const matchingScTests = ruleScs
+		.filter(scNum => {
+			if (scUrlsMetaData[scNum]) {
+				return true
+			}
+			return false
+		})
+		.map(scNum => scUrlsMetaData[scNum].test.toLowerCase())
 
 	const auditResults = scEmReportAuditResult.map(auditResult => {
 		auditResult.result.outcome = matchingScTests.includes(

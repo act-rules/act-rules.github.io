@@ -261,7 +261,7 @@ export function getAccessibilityRequirements(
 		)
 	}
 
-	const requirements = Object.keys(accessibility_requirements)
+	const conformanceRequirements = Object.keys(accessibility_requirements)
 		.filter(key => {
 			const value = accessibility_requirements[key]
 			if (!value) {
@@ -270,63 +270,98 @@ export function getAccessibilityRequirements(
 			const { forConformance } = value
 			return !!forConformance
 		})
-		.map(key => key.split(':').pop())
+
+	const wcagListing = (sc, listType) => {
+		const scData = scUrls[sc]
+
+		const { num, url, handle, wcagType, level } = scData
+
+		if (listType === 'text') {
+			return (
+				<li key={sc}>{num} {handle}</li>
+			)
+		}
+
+		return (
+			<li key={sc}>
+				<details>
+					<summary>
+						{num} {handle}
+					</summary>
+					<ul>
+						<li>
+							<a
+								className="sc-item"
+								href={url}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Learn More about {num} ({handle})
+							</a>
+						</li>
+						<li>
+							<strong>Required for conformance</strong> to WCAG {wcagType}{' '}
+							level {level}
+						</li>
+						<li>
+							Outcome mapping:
+							<ul>
+								<li>
+									Any <code>failed</code> outcomes: not satisfied
+								</li>
+								<li>
+									All <code>passed</code> outcomes: further testing is
+									needed
+								</li>
+								<li>
+									An <code>inapplicable</code> outcome: further testing is
+									needed
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</details>
+			</li>
+		)
+	}
+
+	const ariaListing = (key, req, listType) => {
+		const ref = key.split(':').slice(-1).pop();
+		
+		if (listType === 'text') {
+			return (
+				<li key={ref}>{req.title}</li>
+			)
+		}
+
+		const href = `https://www.w3.org/TR/wai-aria-1.1/#${ref}`
+		return (
+			<li key={ref}>
+				<a href={href}>
+					{req.title}
+				</a>
+			</li>
+		)
+	}
 
 	return (
 		<div className="meta">
 			<span className="heading">Accessibility Requirements</span>
 			<ul>
-				{requirements.map(sc => {
-					const scData = scUrls[sc]
-					const { num, url, handle, wcagType, level } = scData
-
-					if (type === 'text') {
-						return (
-							<li key={sc}>
-								{num} {handle}
-							</li>
-						)
+				{conformanceRequirements.map(req => {
+					if(req.toLowerCase().includes('aria11')) {
+						return ariaListing(req, accessibility_requirements[req], type)
 					}
+
+					if(req.toLowerCase().includes('wcag')) {
+						const sc = req.split(':').pop()
+						return wcagListing(sc, type)
+					}
+
 					return (
-						<li key={sc}>
-							<details>
-								<summary>
-									{num} {handle}
-								</summary>
-								<ul>
-									<li>
-										<a
-											className="sc-item"
-											href={url}
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											Learn More about {num} ({handle})
-										</a>
-									</li>
-									<li>
-										<strong>Required for conformance</strong> to WCAG {wcagType}{' '}
-										level {level}
-									</li>
-									<li>
-										Outcome mapping:
-										<ul>
-											<li>
-												Any <code>failed</code> outcomes: not satisfied
-											</li>
-											<li>
-												All <code>passed</code> outcomes: further testing is
-												needed
-											</li>
-											<li>
-												An <code>inapplicable</code> outcome: further testing is
-												needed
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</details>
-						</li>
+						<>
+							Accessibility Requirements have no mapping.
+						</>
 					)
 				})}
 			</ul>

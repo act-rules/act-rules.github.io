@@ -20,7 +20,7 @@ authors:
 
 ## Applicability
 
-The rule applies to any `element` that is [visible](#visible) and has CSS media query styles targeting the display orientation.
+The rule applies to any `element` that is [visible](#visible) and has a CSS `transform` style with a [rotate](https://drafts.csswg.org/css-transforms/#funcdef-transform-rotate) filter, set from a CSS media query with an [orientation](https://drafts.csswg.org/mediaqueries-3/#orientation) media feature (`horizontal` or `vertical`).
 
 ## Expectation
 
@@ -71,29 +71,6 @@ A page, where CSS media query styles negate orientation lock, and therefore does
   <body>
     <main>
       Page Content
-    </main>
-  </body>
-</html>
-```
-
-#### Passed Example 2
-
-A page (piano application), where orientation lock is essential.
-
-```html
-<html lang="en">
-  <head>
-    <style>
-      @media (orientation: portrait) {
-        body {
-          transform: rotate(90deg);
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <!-- piano application -->
     </main>
   </body>
 </html>

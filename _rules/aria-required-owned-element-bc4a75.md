@@ -31,7 +31,7 @@ The target element [owns](#owned-by) at least one instance of one of its [WAI-AR
 
 ## Assumptions
 
-*There are currently no assumptions*
+Attributes that start with `aria-` are used to set some state or property that should be picked up by assistive technologies. If any `aria-` attributes are not used for that purpose, the results of this rule may be incorrect.
 
 ## Accessibility Support
 

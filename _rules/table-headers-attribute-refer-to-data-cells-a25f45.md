@@ -22,7 +22,7 @@ This rule applies to `td` elements with a `headers` attribute, that are [include
 
 ## Expectation
 
-Each target element with the `headers` attribute refers to other `th` elements or cells with a [semantic role](#semantic-role) of `columnheader` or `rowheader` within the same `table` element.
+Each target element refers in its `headers` attribute to other `th` elements or cells with a [semantic role](#semantic-role) of `columnheader` or `rowheader` within the same `table` element.
 
 ## Assumptions
 
@@ -215,22 +215,6 @@ The rule applies only to `table > td` element.
 ```
 
 #### Inapplicable Example 4
-
-No `headers` attribute is defined for table `cell`.
-
-```html
-<table>
-  <tr>
-    <th id="header1">Projects</th>
-    <th id="header2">Exams</th>
-  </tr>
-  <tr>
-    <td colspan="2">15%</td>
-  </tr>
-</table>
-```
-
-#### Inapplicable Example 5
 
 A table that is not included in the accessibility tree. 
 

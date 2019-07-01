@@ -487,12 +487,6 @@
       "slug": "rules/a1b64e"
     }
   ],
-  "#implicit-role": [
-    {
-      "name": "Role has required states and properties",
-      "slug": "rules/4e8ab6"
-    }
-  ],
   "#non-empty": [
     {
       "name": "Validity of HTML Lang attribute",

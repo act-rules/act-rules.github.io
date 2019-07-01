@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import SEO from '../components/seo'
 
 export default ({ data }) => {
@@ -23,11 +23,9 @@ export default ({ data }) => {
 					const key = `${index}-${ruleId}`
 					return (
 						<div key={key}>
-							{/* <a id={ruleId} href={`#${ruleId}`}> */}
-							<h2>{ruleName}</h2>
-							{/* </a> */}
-							&nbsp;&nbsp;
-							<a href={`/rules/${ruleId}`}>View Rule</a>
+							<Link to={`/rules/${ruleId}`}>
+								<h2 id={`#${ruleId}`}>{ruleName}</h2>
+							</Link>
 							{
 								<table className="compact">
 									<thead>

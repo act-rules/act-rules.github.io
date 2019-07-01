@@ -12,17 +12,8 @@
       "ruleId": "5f99a7",
       "ruleName": "ARIA attribute is valid",
       "rulePage": "https://act-rules.github.io/rules/5f99a7",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      },
-      "requirementsMapping": [
-        "wcag20:4.1.2"
-      ]
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
     },
     {
       "testcaseId": "5eb5795bbd267479e08950e2d875309d6c98f805",
@@ -31,17 +22,8 @@
       "ruleId": "5f99a7",
       "ruleName": "ARIA attribute is valid",
       "rulePage": "https://act-rules.github.io/rules/5f99a7",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      },
-      "requirementsMapping": [
-        "wcag20:4.1.2"
-      ]
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
     },
     {
       "testcaseId": "fd830c9ba6e9ca7ab1833a958f1fb6471439ccc7",
@@ -50,17 +32,8 @@
       "ruleId": "5f99a7",
       "ruleName": "ARIA attribute is valid",
       "rulePage": "https://act-rules.github.io/rules/5f99a7",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      },
-      "requirementsMapping": [
-        "wcag20:4.1.2"
-      ]
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
     },
     {
       "testcaseId": "a8c22b201d4e664bc428a3110d8cd5e04edc6657",
@@ -69,17 +42,8 @@
       "ruleId": "5f99a7",
       "ruleName": "ARIA attribute is valid",
       "rulePage": "https://act-rules.github.io/rules/5f99a7",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      },
-      "requirementsMapping": [
-        "wcag20:4.1.2"
-      ]
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
     },
     {
       "testcaseId": "0ffdf518d87d1176543311da2d3dc97780aeabd2",
@@ -88,17 +52,8 @@
       "ruleId": "5f99a7",
       "ruleName": "ARIA attribute is valid",
       "rulePage": "https://act-rules.github.io/rules/5f99a7",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      },
-      "requirementsMapping": [
-        "wcag20:4.1.2"
-      ]
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
     },
     {
       "testcaseId": "2a71421b775e5d653af7940e1b44247acad6255b",
@@ -107,17 +62,8 @@
       "ruleId": "5f99a7",
       "ruleName": "ARIA attribute is valid",
       "rulePage": "https://act-rules.github.io/rules/5f99a7",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      },
-      "requirementsMapping": [
-        "wcag20:4.1.2"
-      ]
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
     },
     {
       "testcaseId": "cd908d4edbb9fe94badb0d53a3953de86a4ec680",
@@ -126,17 +72,8 @@
       "ruleId": "5f99a7",
       "ruleName": "ARIA attribute is valid",
       "rulePage": "https://act-rules.github.io/rules/5f99a7",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      },
-      "requirementsMapping": [
-        "wcag20:4.1.2"
-      ]
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
     },
     {
       "testcaseId": "cfaa2f5a95793320808dc8d850ce067c2df94255",
@@ -146,15 +83,16 @@
       "ruleName": "ARIA state or property allowed",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_property_processing": {
+          "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_property_processing"
       ]
     },
     {
@@ -165,15 +103,16 @@
       "ruleName": "ARIA state or property allowed",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_property_processing": {
+          "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_property_processing"
       ]
     },
     {
@@ -184,15 +123,16 @@
       "ruleName": "ARIA state or property allowed",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_property_processing": {
+          "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_property_processing"
       ]
     },
     {
@@ -203,15 +143,16 @@
       "ruleName": "ARIA state or property allowed",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_property_processing": {
+          "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_property_processing"
       ]
     },
     {
@@ -222,15 +163,16 @@
       "ruleName": "ARIA state or property allowed",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_property_processing": {
+          "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_property_processing"
       ]
     },
     {
@@ -241,15 +183,16 @@
       "ruleName": "ARIA state or property allowed",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_property_processing": {
+          "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_property_processing"
       ]
     },
     {
@@ -260,15 +203,16 @@
       "ruleName": "ARIA state or property allowed",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_property_processing": {
+          "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_property_processing"
       ]
     },
     {
@@ -279,15 +223,16 @@
       "ruleName": "ARIA state or property allowed",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_property_processing": {
+          "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_property_processing"
       ]
     },
     {
@@ -298,15 +243,16 @@
       "ruleName": "ARIA state or property allowed",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_property_processing": {
+          "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_property_processing"
       ]
     },
     {
@@ -317,15 +263,16 @@
       "ruleName": "ARIA state or property allowed",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_property_processing": {
+          "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_property_processing"
       ]
     },
     {
@@ -336,15 +283,16 @@
       "ruleName": "ARIA state or property allowed",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_property_processing": {
+          "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_property_processing"
       ]
     },
     {
@@ -355,15 +303,16 @@
       "ruleName": "ARIA state or property allowed",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_property_processing": {
+          "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_property_processing"
       ]
     },
     {
@@ -374,15 +323,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -393,15 +343,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -412,15 +363,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -431,15 +383,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -450,15 +403,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -469,15 +423,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -488,15 +443,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -507,15 +463,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -526,15 +483,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -545,15 +503,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -564,15 +523,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -583,15 +543,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -602,15 +563,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -621,15 +583,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -640,15 +603,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -659,15 +623,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -678,15 +643,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -697,15 +663,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -716,15 +683,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -735,15 +703,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -754,15 +723,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -773,15 +743,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -792,15 +763,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -811,15 +783,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -830,15 +803,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {
@@ -849,15 +823,16 @@
       "ruleName": "ARIA state or property has valid value",
       "rulePage": "https://act-rules.github.io/rules/6a7281",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:state_prop_values": {
+          "title": "ARIA 1.1, 6.3 Values for States and Properties",
           "forConformance": true,
           "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       },
       "requirementsMapping": [
-        "wcag20:4.1.2"
+        "aria11:state_prop_values"
       ]
     },
     {

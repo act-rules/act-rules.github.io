@@ -1,6 +1,6 @@
 ---
 id: e7aa44
-name: audio only has a text alternative
+name: Audio only has a text alternative
 rule_type: composite
 description: |
   This rule checks if audio only elements have a text alternative available

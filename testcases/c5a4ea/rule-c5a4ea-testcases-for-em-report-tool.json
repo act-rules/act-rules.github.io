@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - video with audio has audio descriptions or transcript",
+      "title": "Report for ACT-R Rule - Video with audio has audio descriptions or transcript",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - video with audio has audio descriptions or transcript",
+          "siteName": "ACT-R Rule - Video with audio has audio descriptions or transcript",
           "siteScope": "https://act-rules.github.io/testcases/c5a4ea/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

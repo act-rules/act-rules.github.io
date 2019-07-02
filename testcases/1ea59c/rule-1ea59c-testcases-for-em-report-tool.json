@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - video element audio described",
+      "title": "Report for ACT-R Rule - Video element audio described",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - video element audio described",
+          "siteName": "ACT-R Rule - Video element audio described",
           "siteScope": "https://act-rules.github.io/testcases/1ea59c/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

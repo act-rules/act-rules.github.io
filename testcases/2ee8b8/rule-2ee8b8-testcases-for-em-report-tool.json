@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - label and name from content mismatch",
+      "title": "Report for ACT-R Rule - Label and name from content mismatch",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - label and name from content mismatch",
+          "siteName": "ACT-R Rule - Label and name from content mismatch",
           "siteScope": "https://act-rules.github.io/testcases/2ee8b8/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

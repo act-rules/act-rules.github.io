@@ -20,7 +20,7 @@ authors:
 
 ## Applicability
 
-The rule applies to any `element` that is [visible](#visible) and has a CSS `transform` style with a [rotate](https://drafts.csswg.org/css-transforms/#funcdef-transform-rotate) filter, set from a CSS media query with an [orientation](https://drafts.csswg.org/mediaqueries-3/#orientation) media feature (`horizontal` or `vertical`).
+The rule applies to any `element` that is [visible](#visible) and has a CSS `transform` property with a [rotate](https://drafts.csswg.org/css-transforms/#funcdef-transform-rotate) transform-function, set from a CSS media query with an [orientation](https://drafts.csswg.org/mediaqueries-3/#orientation) media feature (`landscape` or `portrait`).
 
 ## Expectation
 
@@ -80,7 +80,7 @@ A page, where CSS media query styles negate orientation lock, and therefore does
 
 #### Failed Example 1
 
-A page, where orientation is locked by applying `transform` style on `portrait` media query (coming from a relative stylesheet).
+A page, where orientation is locked by applying `transform` property on `portrait` media query (coming from a relative stylesheet).
 
 ```html
 <html lang="en">

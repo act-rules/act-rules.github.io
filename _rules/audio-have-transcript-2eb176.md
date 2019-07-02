@@ -1,6 +1,6 @@
 ---
 id: 2eb176
-name: audio elements have a transcript
+name: Audio elements have a transcript
 rule_type: atomic
 description: |
   Non-streaming `audio` elements must have a text alternative for all included auditory information.

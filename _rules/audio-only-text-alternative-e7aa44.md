@@ -33,8 +33,8 @@ The rule applies to any [non-streaming](#non-streaming-media-element) `audio` el
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [Audio transcript](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-1-audio-transcript.html)
-- [Media alternative audio](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-1-media-alternative-audio.html)
+- [Audio elements have a transcript](https://act-rules.github.io/rules/2eb176)
+- [Audio-only as a media alternative for text](https://act-rules.github.io/rules/afb423)
 
 ## Assumptions
 

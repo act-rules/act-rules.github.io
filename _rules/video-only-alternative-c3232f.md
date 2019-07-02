@@ -30,10 +30,10 @@ The rule applies to any [non-streaming](#non-streaming) `video` element [visible
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [Media alternative video](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-1-media-alternative-video.html)
-- [Video only description track](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-1-video-only-description-track.html)
-- [Video only element transcript](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-1-video-only-element-transcript.html)
-- [Video only audio alternative](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-1-video-only-audio-alternative.html)
+- [Video-Only As A Media Alternative For Text](https://act-rules.github.io/rules/fd26cf)
+- [Video Only Element Has Description Track](https://act-rules.github.io/rules/ac7dc6)
+- [Video Only Element Has Transcript](https://act-rules.github.io/rules/ee13b5)
+- [Video Has Audio Alternative](https://act-rules.github.io/rules/eac66b)
 
 ## Assumptions
 
@@ -41,7 +41,7 @@ This rule assumes that a mechanism is available to start the video and that the 
 
 ## Accessibility Support
 
-See [Video only element description track: accessibility support](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-1-Video-only-description-track.html#accessibility-support).
+See [Video Only Element Has Description Track: accessibility support](https://act-rules.github.io/rules/ac7dc6#accessibility-support).
 
 ## Background
 

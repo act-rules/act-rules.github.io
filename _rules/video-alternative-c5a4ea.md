@@ -30,10 +30,10 @@ The rule applies to every [non-streaming](#non-streaming) `video` element that i
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [Video element audio described](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-audio-description.html)
-- [Video element transcript](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-transcript.html)
-- [Video element description track](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-Video-description-track.html)
-- [Video as a media alternative for text](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-media-alternative.html)
+- [Video element audio described](https://act-rules.github.io/rules/1ea59c)
+- [Video element transcript](https://act-rules.github.io/rules/1a02b0)
+- [Video element description track](https://act-rules.github.io/rules/f196ce)
+- [Video as a media alternative for text](https://act-rules.github.io/rules/ab4d13)
 
 ## Assumptions
 
@@ -41,8 +41,8 @@ This rule assumes that a mechanism is available to start the video and that the 
 
 ## Accessibility Support
 
-See [Video element description track: accessibility support](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-Video-description-track.html#accessibility-support.html).
-See [Video with audio has audio description: accessibility support](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-audio-description.html#accessibility-support.html).
+See [Video element audio described: accessibility support](https://act-rules.github.io/rules/1ea59c#accessibility-support).
+See [Video element description track: accessibility support](https://act-rules.github.io/rules/f196ce#accessibility-support).
 
 ## Background
 

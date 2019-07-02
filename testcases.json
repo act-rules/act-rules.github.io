@@ -3376,8 +3376,8 @@
       ]
     },
     {
-      "testcaseId": "80086595241b59593a26fdb2c9fea9b3ca434f68",
-      "url": "https://act-rules.github.io/testcases/b49b2e/80086595241b59593a26fdb2c9fea9b3ca434f68.html",
+      "testcaseId": "8a2d75ca59e755cf06f0aec4b0ed8ad49adb1726",
+      "url": "https://act-rules.github.io/testcases/b49b2e/8a2d75ca59e755cf06f0aec4b0ed8ad49adb1726.html",
       "expected": "passed",
       "ruleId": "b49b2e",
       "ruleName": "Heading is descriptive",

@@ -176,7 +176,7 @@ Invalid order of terms.
 
 #### Failed Example 4
 
-Comma seperated rather than space separated list.
+Comma separated rather than space separated list.
 
 ```html
 <input autocomplete="work,email" />

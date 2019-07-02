@@ -169,10 +169,10 @@ Off screen element without an accessible name.
 
 #### Failed example 4
 
-Button has an accessible name that is not only whitespace.
+Button has an accessible name that is only whitespace.
 
 ```html
-<button></button>
+<button> </button>
 ```
 
 ### Inapplicable

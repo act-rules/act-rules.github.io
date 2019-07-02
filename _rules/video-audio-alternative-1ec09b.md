@@ -1,6 +1,6 @@
 ---
 id: 1ec09b
-name: video with audio has audio description
+name: Video with audio has audio description
 rule_type: composite
 description: |
   This rule checks video elements with audio have audio description

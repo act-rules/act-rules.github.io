@@ -1026,6 +1026,116 @@
       ]
     },
     {
+      "testcaseId": "d89e4375cb4d368d970d59841daa06654aa1ec18",
+      "url": "https://act-rules.github.io/testcases/2eb176/d89e4375cb4d368d970d59841daa06654aa1ec18.html",
+      "expected": "passed",
+      "ruleId": "2eb176",
+      "ruleName": "Audio elements have a transcript",
+      "rulePage": "https://act-rules.github.io/rules/2eb176",
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
+    },
+    {
+      "testcaseId": "4b9ddf161bf9b18247df440a16ffbb6245bdc853",
+      "url": "https://act-rules.github.io/testcases/2eb176/4b9ddf161bf9b18247df440a16ffbb6245bdc853.html",
+      "expected": "passed",
+      "ruleId": "2eb176",
+      "ruleName": "Audio elements have a transcript",
+      "rulePage": "https://act-rules.github.io/rules/2eb176",
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
+    },
+    {
+      "testcaseId": "d061ca2dcb8cf8ac24bb60abc3b76c72fd90602d",
+      "url": "https://act-rules.github.io/testcases/2eb176/d061ca2dcb8cf8ac24bb60abc3b76c72fd90602d.html",
+      "expected": "passed",
+      "ruleId": "2eb176",
+      "ruleName": "Audio elements have a transcript",
+      "rulePage": "https://act-rules.github.io/rules/2eb176",
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
+    },
+    {
+      "testcaseId": "708cd860c4a13bb1db07cb0b0b7898e377205067",
+      "url": "https://act-rules.github.io/testcases/2eb176/708cd860c4a13bb1db07cb0b0b7898e377205067.html",
+      "expected": "failed",
+      "ruleId": "2eb176",
+      "ruleName": "Audio elements have a transcript",
+      "rulePage": "https://act-rules.github.io/rules/2eb176",
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
+    },
+    {
+      "testcaseId": "27464c597a3c6c7ef7c6e0675da65bd4afaa6aa7",
+      "url": "https://act-rules.github.io/testcases/2eb176/27464c597a3c6c7ef7c6e0675da65bd4afaa6aa7.html",
+      "expected": "failed",
+      "ruleId": "2eb176",
+      "ruleName": "Audio elements have a transcript",
+      "rulePage": "https://act-rules.github.io/rules/2eb176",
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
+    },
+    {
+      "testcaseId": "14c778f5525489ddf217c9effce1fbef88bfcafe",
+      "url": "https://act-rules.github.io/testcases/2eb176/14c778f5525489ddf217c9effce1fbef88bfcafe.html",
+      "expected": "failed",
+      "ruleId": "2eb176",
+      "ruleName": "Audio elements have a transcript",
+      "rulePage": "https://act-rules.github.io/rules/2eb176",
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
+    },
+    {
+      "testcaseId": "dee84a0871b29dd4da990dc8a7088a044b59044e",
+      "url": "https://act-rules.github.io/testcases/2eb176/dee84a0871b29dd4da990dc8a7088a044b59044e.html",
+      "expected": "failed",
+      "ruleId": "2eb176",
+      "ruleName": "Audio elements have a transcript",
+      "rulePage": "https://act-rules.github.io/rules/2eb176",
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
+    },
+    {
+      "testcaseId": "f90367e0c1c0950b970540e6ea88ff53d6d94661",
+      "url": "https://act-rules.github.io/testcases/2eb176/f90367e0c1c0950b970540e6ea88ff53d6d94661.html",
+      "expected": "failed",
+      "ruleId": "2eb176",
+      "ruleName": "Audio elements have a transcript",
+      "rulePage": "https://act-rules.github.io/rules/2eb176",
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
+    },
+    {
+      "testcaseId": "97834c2e47f21d1e9d9c9447a5469b7b249f48aa",
+      "url": "https://act-rules.github.io/testcases/2eb176/97834c2e47f21d1e9d9c9447a5469b7b249f48aa.html",
+      "expected": "failed",
+      "ruleId": "2eb176",
+      "ruleName": "Audio elements have a transcript",
+      "rulePage": "https://act-rules.github.io/rules/2eb176",
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
+    },
+    {
+      "testcaseId": "96e04f8d1ffff8320b028708e1e887de144a2142",
+      "url": "https://act-rules.github.io/testcases/2eb176/96e04f8d1ffff8320b028708e1e887de144a2142.html",
+      "expected": "inapplicable",
+      "ruleId": "2eb176",
+      "ruleName": "Audio elements have a transcript",
+      "rulePage": "https://act-rules.github.io/rules/2eb176",
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
+    },
+    {
+      "testcaseId": "74970ca22e4a306c1ec3fad0e1dc65ef1b09a0da",
+      "url": "https://act-rules.github.io/testcases/2eb176/74970ca22e4a306c1ec3fad0e1dc65ef1b09a0da.html",
+      "expected": "inapplicable",
+      "ruleId": "2eb176",
+      "ruleName": "Audio elements have a transcript",
+      "rulePage": "https://act-rules.github.io/rules/2eb176",
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
+    },
+    {
       "testcaseId": "330bb872da356cbfcf3320a39b4ca2ce5b128fa3",
       "url": "https://act-rules.github.io/testcases/e7aa44/330bb872da356cbfcf3320a39b4ca2ce5b128fa3.html",
       "expected": "pass",
@@ -9424,6 +9534,86 @@
       "requirementsMapping": []
     },
     {
+      "testcaseId": "334101b6f29da55f87cd62b915c290c81231b9eb",
+      "url": "https://act-rules.github.io/testcases/ee13b5/334101b6f29da55f87cd62b915c290c81231b9eb.html",
+      "expected": "pass",
+      "ruleId": "ee13b5",
+      "ruleName": "Video only element has transcript",
+      "rulePage": "https://act-rules.github.io/rules/ee13b5",
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
+    },
+    {
+      "testcaseId": "faeb4622697dc73d6eefdb9728c0372dc9aee15e",
+      "url": "https://act-rules.github.io/testcases/ee13b5/faeb4622697dc73d6eefdb9728c0372dc9aee15e.html",
+      "expected": "pass",
+      "ruleId": "ee13b5",
+      "ruleName": "Video only element has transcript",
+      "rulePage": "https://act-rules.github.io/rules/ee13b5",
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
+    },
+    {
+      "testcaseId": "03964a77dfb46f19d3d650e8fe4f4a1f94939c0e",
+      "url": "https://act-rules.github.io/testcases/ee13b5/03964a77dfb46f19d3d650e8fe4f4a1f94939c0e.html",
+      "expected": "fail",
+      "ruleId": "ee13b5",
+      "ruleName": "Video only element has transcript",
+      "rulePage": "https://act-rules.github.io/rules/ee13b5",
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
+    },
+    {
+      "testcaseId": "0863f345271c01f3d8f8c7c727b7b66ebf5723dc",
+      "url": "https://act-rules.github.io/testcases/ee13b5/0863f345271c01f3d8f8c7c727b7b66ebf5723dc.html",
+      "expected": "fail",
+      "ruleId": "ee13b5",
+      "ruleName": "Video only element has transcript",
+      "rulePage": "https://act-rules.github.io/rules/ee13b5",
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
+    },
+    {
+      "testcaseId": "7484ff9ed9b2b8cec7d903e9942d8af45545f791",
+      "url": "https://act-rules.github.io/testcases/ee13b5/7484ff9ed9b2b8cec7d903e9942d8af45545f791.html",
+      "expected": "failed",
+      "ruleId": "ee13b5",
+      "ruleName": "Video only element has transcript",
+      "rulePage": "https://act-rules.github.io/rules/ee13b5",
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
+    },
+    {
+      "testcaseId": "2b681a1ab04f7caea1ec0da61e13419f182d2e2d",
+      "url": "https://act-rules.github.io/testcases/ee13b5/2b681a1ab04f7caea1ec0da61e13419f182d2e2d.html",
+      "expected": "failed",
+      "ruleId": "ee13b5",
+      "ruleName": "Video only element has transcript",
+      "rulePage": "https://act-rules.github.io/rules/ee13b5",
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
+    },
+    {
+      "testcaseId": "c3ef22ac0260cd84653eaafbab351915ec449a70",
+      "url": "https://act-rules.github.io/testcases/ee13b5/c3ef22ac0260cd84653eaafbab351915ec449a70.html",
+      "expected": "inapplicable",
+      "ruleId": "ee13b5",
+      "ruleName": "Video only element has transcript",
+      "rulePage": "https://act-rules.github.io/rules/ee13b5",
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
+    },
+    {
+      "testcaseId": "f1617dfa171a57c4c5c5779f92207ecb5971e2df",
+      "url": "https://act-rules.github.io/testcases/ee13b5/f1617dfa171a57c4c5c5779f92207ecb5971e2df.html",
+      "expected": "inapplicable",
+      "ruleId": "ee13b5",
+      "ruleName": "Video only element has transcript",
+      "rulePage": "https://act-rules.github.io/rules/ee13b5",
+      "ruleAccessibilityRequirements": null,
+      "requirementsMapping": []
+    },
+    {
       "testcaseId": "68e1dfacb6988e6f6b09c65ea32b47851f7948ef",
       "url": "https://act-rules.github.io/testcases/c3232f/68e1dfacb6988e6f6b09c65ea32b47851f7948ef.html",
       "expected": "pass",
@@ -10388,196 +10578,6 @@
         "wcag20:1.3.1",
         "wcag20:4.1.2"
       ]
-    },
-    {
-      "testcaseId": "d89e4375cb4d368d970d59841daa06654aa1ec18",
-      "url": "https://act-rules.github.io/testcases/2eb176/d89e4375cb4d368d970d59841daa06654aa1ec18.html",
-      "expected": "passed",
-      "ruleId": "2eb176",
-      "ruleName": "audio elements have a transcript",
-      "rulePage": "https://act-rules.github.io/rules/2eb176",
-      "ruleAccessibilityRequirements": null,
-      "requirementsMapping": []
-    },
-    {
-      "testcaseId": "4b9ddf161bf9b18247df440a16ffbb6245bdc853",
-      "url": "https://act-rules.github.io/testcases/2eb176/4b9ddf161bf9b18247df440a16ffbb6245bdc853.html",
-      "expected": "passed",
-      "ruleId": "2eb176",
-      "ruleName": "audio elements have a transcript",
-      "rulePage": "https://act-rules.github.io/rules/2eb176",
-      "ruleAccessibilityRequirements": null,
-      "requirementsMapping": []
-    },
-    {
-      "testcaseId": "d061ca2dcb8cf8ac24bb60abc3b76c72fd90602d",
-      "url": "https://act-rules.github.io/testcases/2eb176/d061ca2dcb8cf8ac24bb60abc3b76c72fd90602d.html",
-      "expected": "passed",
-      "ruleId": "2eb176",
-      "ruleName": "audio elements have a transcript",
-      "rulePage": "https://act-rules.github.io/rules/2eb176",
-      "ruleAccessibilityRequirements": null,
-      "requirementsMapping": []
-    },
-    {
-      "testcaseId": "708cd860c4a13bb1db07cb0b0b7898e377205067",
-      "url": "https://act-rules.github.io/testcases/2eb176/708cd860c4a13bb1db07cb0b0b7898e377205067.html",
-      "expected": "failed",
-      "ruleId": "2eb176",
-      "ruleName": "audio elements have a transcript",
-      "rulePage": "https://act-rules.github.io/rules/2eb176",
-      "ruleAccessibilityRequirements": null,
-      "requirementsMapping": []
-    },
-    {
-      "testcaseId": "27464c597a3c6c7ef7c6e0675da65bd4afaa6aa7",
-      "url": "https://act-rules.github.io/testcases/2eb176/27464c597a3c6c7ef7c6e0675da65bd4afaa6aa7.html",
-      "expected": "failed",
-      "ruleId": "2eb176",
-      "ruleName": "audio elements have a transcript",
-      "rulePage": "https://act-rules.github.io/rules/2eb176",
-      "ruleAccessibilityRequirements": null,
-      "requirementsMapping": []
-    },
-    {
-      "testcaseId": "14c778f5525489ddf217c9effce1fbef88bfcafe",
-      "url": "https://act-rules.github.io/testcases/2eb176/14c778f5525489ddf217c9effce1fbef88bfcafe.html",
-      "expected": "failed",
-      "ruleId": "2eb176",
-      "ruleName": "audio elements have a transcript",
-      "rulePage": "https://act-rules.github.io/rules/2eb176",
-      "ruleAccessibilityRequirements": null,
-      "requirementsMapping": []
-    },
-    {
-      "testcaseId": "dee84a0871b29dd4da990dc8a7088a044b59044e",
-      "url": "https://act-rules.github.io/testcases/2eb176/dee84a0871b29dd4da990dc8a7088a044b59044e.html",
-      "expected": "failed",
-      "ruleId": "2eb176",
-      "ruleName": "audio elements have a transcript",
-      "rulePage": "https://act-rules.github.io/rules/2eb176",
-      "ruleAccessibilityRequirements": null,
-      "requirementsMapping": []
-    },
-    {
-      "testcaseId": "f90367e0c1c0950b970540e6ea88ff53d6d94661",
-      "url": "https://act-rules.github.io/testcases/2eb176/f90367e0c1c0950b970540e6ea88ff53d6d94661.html",
-      "expected": "failed",
-      "ruleId": "2eb176",
-      "ruleName": "audio elements have a transcript",
-      "rulePage": "https://act-rules.github.io/rules/2eb176",
-      "ruleAccessibilityRequirements": null,
-      "requirementsMapping": []
-    },
-    {
-      "testcaseId": "97834c2e47f21d1e9d9c9447a5469b7b249f48aa",
-      "url": "https://act-rules.github.io/testcases/2eb176/97834c2e47f21d1e9d9c9447a5469b7b249f48aa.html",
-      "expected": "failed",
-      "ruleId": "2eb176",
-      "ruleName": "audio elements have a transcript",
-      "rulePage": "https://act-rules.github.io/rules/2eb176",
-      "ruleAccessibilityRequirements": null,
-      "requirementsMapping": []
-    },
-    {
-      "testcaseId": "96e04f8d1ffff8320b028708e1e887de144a2142",
-      "url": "https://act-rules.github.io/testcases/2eb176/96e04f8d1ffff8320b028708e1e887de144a2142.html",
-      "expected": "inapplicable",
-      "ruleId": "2eb176",
-      "ruleName": "audio elements have a transcript",
-      "rulePage": "https://act-rules.github.io/rules/2eb176",
-      "ruleAccessibilityRequirements": null,
-      "requirementsMapping": []
-    },
-    {
-      "testcaseId": "74970ca22e4a306c1ec3fad0e1dc65ef1b09a0da",
-      "url": "https://act-rules.github.io/testcases/2eb176/74970ca22e4a306c1ec3fad0e1dc65ef1b09a0da.html",
-      "expected": "inapplicable",
-      "ruleId": "2eb176",
-      "ruleName": "audio elements have a transcript",
-      "rulePage": "https://act-rules.github.io/rules/2eb176",
-      "ruleAccessibilityRequirements": null,
-      "requirementsMapping": []
-    },
-    {
-      "testcaseId": "334101b6f29da55f87cd62b915c290c81231b9eb",
-      "url": "https://act-rules.github.io/testcases/ee13b5/334101b6f29da55f87cd62b915c290c81231b9eb.html",
-      "expected": "pass",
-      "ruleId": "ee13b5",
-      "ruleName": "video only element has transcript",
-      "rulePage": "https://act-rules.github.io/rules/ee13b5",
-      "ruleAccessibilityRequirements": null,
-      "requirementsMapping": []
-    },
-    {
-      "testcaseId": "faeb4622697dc73d6eefdb9728c0372dc9aee15e",
-      "url": "https://act-rules.github.io/testcases/ee13b5/faeb4622697dc73d6eefdb9728c0372dc9aee15e.html",
-      "expected": "pass",
-      "ruleId": "ee13b5",
-      "ruleName": "video only element has transcript",
-      "rulePage": "https://act-rules.github.io/rules/ee13b5",
-      "ruleAccessibilityRequirements": null,
-      "requirementsMapping": []
-    },
-    {
-      "testcaseId": "03964a77dfb46f19d3d650e8fe4f4a1f94939c0e",
-      "url": "https://act-rules.github.io/testcases/ee13b5/03964a77dfb46f19d3d650e8fe4f4a1f94939c0e.html",
-      "expected": "fail",
-      "ruleId": "ee13b5",
-      "ruleName": "video only element has transcript",
-      "rulePage": "https://act-rules.github.io/rules/ee13b5",
-      "ruleAccessibilityRequirements": null,
-      "requirementsMapping": []
-    },
-    {
-      "testcaseId": "0863f345271c01f3d8f8c7c727b7b66ebf5723dc",
-      "url": "https://act-rules.github.io/testcases/ee13b5/0863f345271c01f3d8f8c7c727b7b66ebf5723dc.html",
-      "expected": "fail",
-      "ruleId": "ee13b5",
-      "ruleName": "video only element has transcript",
-      "rulePage": "https://act-rules.github.io/rules/ee13b5",
-      "ruleAccessibilityRequirements": null,
-      "requirementsMapping": []
-    },
-    {
-      "testcaseId": "7484ff9ed9b2b8cec7d903e9942d8af45545f791",
-      "url": "https://act-rules.github.io/testcases/ee13b5/7484ff9ed9b2b8cec7d903e9942d8af45545f791.html",
-      "expected": "failed",
-      "ruleId": "ee13b5",
-      "ruleName": "video only element has transcript",
-      "rulePage": "https://act-rules.github.io/rules/ee13b5",
-      "ruleAccessibilityRequirements": null,
-      "requirementsMapping": []
-    },
-    {
-      "testcaseId": "2b681a1ab04f7caea1ec0da61e13419f182d2e2d",
-      "url": "https://act-rules.github.io/testcases/ee13b5/2b681a1ab04f7caea1ec0da61e13419f182d2e2d.html",
-      "expected": "failed",
-      "ruleId": "ee13b5",
-      "ruleName": "video only element has transcript",
-      "rulePage": "https://act-rules.github.io/rules/ee13b5",
-      "ruleAccessibilityRequirements": null,
-      "requirementsMapping": []
-    },
-    {
-      "testcaseId": "c3ef22ac0260cd84653eaafbab351915ec449a70",
-      "url": "https://act-rules.github.io/testcases/ee13b5/c3ef22ac0260cd84653eaafbab351915ec449a70.html",
-      "expected": "inapplicable",
-      "ruleId": "ee13b5",
-      "ruleName": "video only element has transcript",
-      "rulePage": "https://act-rules.github.io/rules/ee13b5",
-      "ruleAccessibilityRequirements": null,
-      "requirementsMapping": []
-    },
-    {
-      "testcaseId": "f1617dfa171a57c4c5c5779f92207ecb5971e2df",
-      "url": "https://act-rules.github.io/testcases/ee13b5/f1617dfa171a57c4c5c5779f92207ecb5971e2df.html",
-      "expected": "inapplicable",
-      "ruleId": "ee13b5",
-      "ruleName": "video only element has transcript",
-      "rulePage": "https://act-rules.github.io/rules/ee13b5",
-      "ruleAccessibilityRequirements": null,
-      "requirementsMapping": []
     },
     {
       "testcaseId": "124187ba5f1e6f54c000ca6033c24085661a06d0",

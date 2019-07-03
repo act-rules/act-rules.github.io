@@ -3,58 +3,57 @@ version: 2
 general:
   branches:
     only:
-     - master
+     - develop
 
 defaults: &defaults
   docker:
-    - image: circleci/ruby:2.4.3-node-browsers
+    - image: circleci/node:10-browsers
+  working_directory: ~/act-rules.github.io
 
 restore_dependency_cache: &restore_dependency_cache
   restore_cache:
     keys:
-      - v1-npm-cache-{{ checksum "package.json" }}
-      - v1-npm-cache-
+      - v6-npm-cache-{{ checksum "package.json" }}
+      - v6-npm-cache-
 
 jobs:
-  base: 
-    <<: *defaults
-    steps: 
-      - run: echo circleci base job
   dependencies:
     <<: *defaults
     steps:
       - checkout
       - run: npm install
       - save_cache:
-          key: v1-npm-cache-{{ checksum "package.json" }}
+          key: v6-npm-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
+  test: 
+    <<: *defaults
+    steps: 
+      - checkout
+      - <<: *restore_dependency_cache
+      - run: npm test
   deploy:
     <<: *defaults
     steps:
       - checkout
       - <<: *restore_dependency_cache
-      - run: bundle install
-      - run: bundle exec jekyll build
+      - run: npm run build
       - deploy:
-          name: Deploy to GitHub Pages
-          command: |
-            if [ $CIRCLE_BRANCH == 'master' ]; then
-              bash .circleci/publish-gh-pages.sh
-            fi
+          name: Deploy to master branch from develop branch
+          command: bash .circleci/publish-site.sh
             
 workflows:
   version: 2
   build_and_deploy:
     jobs:
-      - base
-      - dependencies:
-          filters:
-            branches:
-              only: master
+      - dependencies
+      - test:
+          requires:
+            - dependencies
       - deploy:
           requires:
             - dependencies
+            - test
           filters:
             branches:
-              only: master
+              only: develop

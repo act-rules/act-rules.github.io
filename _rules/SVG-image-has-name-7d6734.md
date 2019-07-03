@@ -25,7 +25,7 @@ The rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namesp
 
 ## Expectation
 
-Each target element has an [accessible name](#accessible-name) that is not [whitespace](#whitespace).
+Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
 
 ## Assumptions
 
@@ -52,7 +52,7 @@ Browser and assistive technology support for SVG `<title>` and `<desc>` elements
 
 #### Passed example 1
 
-The `<svg>` element has an implicit role of `graphics-document`, has visible content rendered by the `<circle>` element and, is included in the accessibility tree by the `<title>` that does not only whitespace.
+The `<svg>` element has an implicit role of `graphics-document`, has visible content rendered by the `<circle>` element and, is included in the accessibility tree by the `<title>` does not contain only whitespace.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
@@ -63,7 +63,7 @@ The `<svg>` element has an implicit role of `graphics-document`, has visible con
 
 #### Passed example 2
 
-The `<svg>` element has an explicit role of `img`, has visible content rendered by the `<circle>` element, and is included in the accessibility tree by the `<title>` that does not only whitespace.
+The `<svg>` element has an explicit role of `img`, has visible content rendered by the `<circle>` element, and is included in the accessibility tree by the `<title>` that does not contain only whitespace.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" role="img" width="100" height="100">
@@ -74,7 +74,7 @@ The `<svg>` element has an explicit role of `img`, has visible content rendered 
 
 #### Passed example 3
 
-The `<svg>` element has an explicit role of `img`, has visible content rendered by the `<circle>` element, and is included in the accessibility tree by the `aria-label` attribute that is not only whitespace.
+The `<svg>` element has an explicit role of `img`, has visible content rendered by the `<circle>` element, and is included in the accessibility tree by the `aria-label` attribute that is not only contain whitespace.
 
 ```html
 <svg xmlns="https://www.w3.org/2000/svg" role="img" width="100" height="100" aria-label="A yellow circle">
@@ -84,7 +84,7 @@ The `<svg>` element has an explicit role of `img`, has visible content rendered 
 
 #### Passed example 4
 
-The `<svg>` child `<g>` element has visible content, is included in the accessibility tree with the `graphics-document` role, and provides an accessible name through the `aria-label` attribute that is not only whitespace.
+The `<svg>` child `<g>` element has visible content, is included in the accessibility tree with the `graphics-object` role, and provides an accessible name through the `aria-label` attribute that is not only contain whitespace.
 
 ```html
 <svg xmlns="https://www.w3.org/2000/svg" width="600" height="400" viewBox="200 0 400 400" role="presentation">
@@ -197,7 +197,7 @@ The `svg` element has visible content rendered by the `<circle>` element, has an
 The `svg` element does not render any visible content.
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A yellow circle" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" role="img">
 	<defs>
 		<circle cx="50" cy="50" r="40" fill="yellow"></circle>
 	</defs>	

@@ -74,7 +74,7 @@ The `<svg>` element has an explicit role of `img`, has visible content rendered 
 
 #### Passed example 3
 
-The `<svg>` element has an explicit role of `img`, has visible content rendered by the `<circle>` element, and is included in the accessibility tree by the `aria-label` attribute that is not only contain whitespace.
+The `<svg>` element has an explicit role of `img`, has visible content rendered by the `<circle>` element, and is included in the accessibility tree by the `aria-label` attribute that is not only whitespace.
 
 ```html
 <svg xmlns="https://www.w3.org/2000/svg" role="img" width="100" height="100" aria-label="A yellow circle">
@@ -84,7 +84,7 @@ The `<svg>` element has an explicit role of `img`, has visible content rendered 
 
 #### Passed example 4
 
-The `<svg>` child `<g>` element has visible content, is included in the accessibility tree with the `graphics-object` role, and provides an accessible name through the `aria-label` attribute that is not only contain whitespace.
+The `<svg>` child `<g>` element has visible content, is included in the accessibility tree with the `graphics-object` role, and provides an accessible name through the `aria-label` attribute that is not only whitespace.
 
 ```html
 <svg xmlns="https://www.w3.org/2000/svg" width="600" height="400" viewBox="200 0 400 400" role="presentation">

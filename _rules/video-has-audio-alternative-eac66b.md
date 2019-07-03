@@ -26,8 +26,8 @@ The rule applies to every [non-streaming][#non-streaming-video-element] `video` 
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [Video as a media alternative for text](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-media-alternative.html)
-- [Video captions](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-2-video-has-captions.html)
+- [Video as a media alternative for text](https://act-rules.github.io/rules/ab4d13)
+- [Video has captions](https://act-rules.github.io/rules/f51b46)
 
 ## Assumptions
 

@@ -5,11 +5,12 @@ rule_type: atomic
 description: |
   This rule checks that WAI-ARIA states or properties are allowed for the element they are specified on.
 accessibility_requirements:
-  wcag20:4.1.2: # Name, Role, Value (A)
+  aria11:state_property_processing:
+    title: ARIA 1.1, 7.6 State and Property Attribute Processing
     forConformance: true
     failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
+    passed: satisfied
+    inapplicable: satisfied
 input_aspects:
   - DOM Tree
 authors:
@@ -28,7 +29,7 @@ The attribute is either an [inherited](https://www.w3.org/TR/wai-aria/#inherited
 
 ## Assumptions
 
-- ARIA roles, states and properties are used to provide new information to screen readers and other assistive technologies. If the information expressed through ARIA is already available in another way, failing this rule may not cause accessibility issues.
+_There are currently no assumptions_
 
 ## Accessibility Support
 
@@ -51,7 +52,7 @@ _There are no major accessibility support issues known for this rule._
 `aria-pressed` state is supported for role `button`.
 
 ```html
-<div role="button" aria-pressed="false"></div>
+<div role="button" aria-pressed="false">My button</div>
 ```
 
 #### Passed Example 2
@@ -59,7 +60,7 @@ _There are no major accessibility support issues known for this rule._
 `aria-pressed` state is supported for `role=button` that is the implicit role for `button` element.
 
 ```html
-<button aria-pressed="false"></button>
+<button aria-pressed="false">My button</button>
 ```
 
 #### Passed Example 3
@@ -67,7 +68,7 @@ _There are no major accessibility support issues known for this rule._
 Global state that is supported by all base markup elements.
 
 ```html
-<div aria-busy="true"></div>
+<div aria-busy="true">My busy button</div>
 ```
 
 #### Passed Example 4
@@ -83,7 +84,7 @@ Global state that is supported by all base markup elements.
 `aria-checked` state is required for role `aria-checkbox`
 
 ```html
-<div role="checkbox" aria-checked="false"></div>
+<div role="checkbox" aria-checked="false">My checkbox</div>
 ```
 
 #### Passed Example 6
@@ -91,7 +92,7 @@ Global state that is supported by all base markup elements.
 `aria-controls` property is supported for role `combobox`
 
 ```html
-<div role="combobox" aria-controls="id1"></div>
+<div role="combobox" aria-controls="id1">My combobox</div>
 ```
 
 #### Passed Example 7
@@ -99,7 +100,7 @@ Global state that is supported by all base markup elements.
 WAI-ARIA states and properties with empty value are also applicable to this rule
 
 ```html
-<div role="combobox" aria-controls></div>
+<div role="combobox" aria-controls>My combobox</div>
 ```
 
 #### Passed Example 8
@@ -107,7 +108,7 @@ WAI-ARIA states and properties with empty value are also applicable to this rule
 WAI-ARIA states and properties with empty value, specified as an empty string, are also applicable to this rule
 
 ```html
-<div role="combobox" aria-controls=""></div>
+<div role="combobox" aria-controls="">My combobox</div>
 ```
 
 ### Failed
@@ -117,7 +118,7 @@ WAI-ARIA states and properties with empty value, specified as an empty string, a
 `aria-sort` property is neither inherited, supported, nor required for role `button`.
 
 ```html
-<div role="button" aria-sort=""></div>
+<div role="button" aria-sort="">Sort by year</div>
 ```
 
 #### Failed Example 2
@@ -125,7 +126,7 @@ WAI-ARIA states and properties with empty value, specified as an empty string, a
 `aria-sort` attribute is neither inherited, supported, nor required for `role=button` that is the implicit role for `button` element.
 
 ```html
-<button aria-sort=""></button>
+<button aria-sort="">Sort by year</button>
 ```
 
 ### Inapplicable
@@ -135,7 +136,7 @@ WAI-ARIA states and properties with empty value, specified as an empty string, a
 No [WAI-ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
 
 ```html
-<div role="region"></div>
+<div role="region">A region of content</div>
 ```
 
 #### Inapplicable Example 2

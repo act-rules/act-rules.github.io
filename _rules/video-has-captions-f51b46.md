@@ -1,6 +1,6 @@
 ---
 id: f51b46
-name: video has captions
+name: Video has captions
 rule_type: atomic
 description: |
   Captions are available for audio information in non-streaming `video` elements.

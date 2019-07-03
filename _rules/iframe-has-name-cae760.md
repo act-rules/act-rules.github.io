@@ -1,6 +1,6 @@
 ---
 id: cae760
-name: iframe has an accessible name
+name: Iframe has an accessible name
 rule_type: atomic
 description: |
   Each iframe element has an accessible name

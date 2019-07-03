@@ -1,29 +1,27 @@
 ---
-name: No auto-play audio lasts more than 3 seconds
-test_type: atomic
-
+id: aaa1bf
+name: auto-play audio does not exceed 3 seconds
+rule_type: atomic
 description: |
-  This rule checks that none of the auto-play audio or video elements have audio that last more than 3 seconds.
-
-success_criterion: 
-- 1.4.2 # Audio Control
-
-test_aspects:
-- DOM Tree
-- CSS Styling
-- Audio output
-
+  auto-play audio content does not output audio for more than 3 seconds
+accessibility_requirements:
+input_aspects:
+  - DOM Tree
+  - CSS Styling
+  - Audio output
+  - Visual output
 authors:
-- Anne Thyme Nørregaard
+  - Anne Thyme Nørregaard
+  - Bryn Anderson
 ---
 
 ## Applicability
 
-This rule applies to any HTML `<audio>` `<video>` or `<source>` `src` file content with a `duration` of more than 3 seconds, that is set to `autoplay` and or `loop`, and has audio output that is not `paused` or `muted`.
+This rule applies to any HTML `<audio>`, `<video>` or `<source>` elements, with a `src` attribute referencing content with a duration of more than 3 seconds, that has an `autoplay` attribute equal to `true`, and that has either a `paused` or `muted` attribute equal to `false`.
 
 ## Expectation
 
-For each test target the audio does not last more than 3 seconds.
+For each test target the total audio output does not last more than 3 seconds.
  
 ## Assumptions
 
@@ -33,13 +31,19 @@ For each test target the audio does not last more than 3 seconds.
 
 There are no major accessibility support issues known for this rule.
 
+## Background
+
+- [Understanding Success Criterion 1.4.2: Audio Control](https://www.w3.org/WAI/WCAG21/Understanding/audio-control.html)
+- [F23: Failure of 1.4.2 due to playing a sound longer than 3 seconds where there is no mechanism to turn it off](https://www.w3.org/WAI/WCAG21/Techniques/failures/F23)
+- [G171: Playing sounds only on user request](https://www.w3.org/WAI/WCAG21/Techniques/general/G171)
+
 ## Test Cases
 
 ### Passed
 
 ### Passed example 1
 
-The `video` element audio does not play for longer than 3 seconds.
+The `<video>` element audio output does not last longer than 3 seconds.
 
 ``` html
  <video autoplay="true" muted="true">
@@ -52,7 +56,7 @@ The `video` element audio does not play for longer than 3 seconds.
 
 ### Failed example 1
 
-The `video` element audio plays for longer than 3 seconds.
+The `<video>` element audio plays for longer than 3 seconds.
 
 ``` html
  <video autoplay="true">
@@ -80,14 +84,14 @@ The `video` element `src` file has no audio output.
 
 ``` html
  <video autoplay="true">
-  <source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm" />
+  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
 </video>
 ```
 
 ### Inapplicable example 3
 
-The `audio` element does no `autoplay` attribute.
+The `audio` element does not autoplay.
 
 ``` html
   <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>

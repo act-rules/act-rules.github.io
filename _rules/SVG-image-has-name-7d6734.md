@@ -3,7 +3,7 @@ id: 7d6734
 name: SVG image has accessible name
 rule_type: atomic
 description: |
-   This rule checks that each SVG image element that is included in the accessibility tree has an accessible name.
+   This rule checks that each SVG image element that renders visible content that and is included in the accessibility tree has an accessible name.
 accessibility_requirements:
   wcag20:1.1.1: # Non-Text Content (A)
     forConformance: true

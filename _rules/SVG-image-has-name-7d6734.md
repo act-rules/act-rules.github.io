@@ -19,8 +19,6 @@ authors:
 
 ## Applicability
 
-The rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namespace with a [semantic role](#semantic-role) of either `img`, `graphics-document`, `graphics-object`, `graphics-symbol`, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
-
 The rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namespace with a [semantic role](#semantic-role) of either `img`, `graphics-document`, `graphics-object`, `graphics-symbol`, that is [visible](#visible), and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 **Note**: The [SVG Accessibility API Mappings](https://www.w3.org/TR/svg-aam-1.0/#include_elements) specifies that many elements in the SVG namespace are purely presentational and should not be included in the accessibility tree unless indicated otherwise through the use of text alternative content, an explicit WAI ARIA role, or a valid `tabindex` attribute.

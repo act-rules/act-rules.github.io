@@ -487,12 +487,6 @@
       "slug": "rules/a1b64e"
     }
   ],
-  "#empty": [
-    {
-      "name": "Validity of HTML Lang attribute",
-      "slug": "rules/bf051a"
-    }
-  ],
   "#visible-text-content": [
     {
       "name": "label and name from content mismatch",

@@ -164,7 +164,7 @@ The explicit label is not supported on `div` elements.
 
 #### Failed example 7
 
-The accessible name is not only whitespace.
+The accessible name is only whitespace.
 
 ```html
 <label> <input /></label>

@@ -5,11 +5,12 @@ rule_type: atomic
 description: |
   This rule checks that each ARIA state or property has a valid value
 accessibility_requirements:
-  wcag20:4.1.2: # Name, Role, Value (A)
+  aria11:state_prop_values:
+    title: ARIA 1.1, 6.3 Values for States and Properties
     forConformance: true
     failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
+    passed: satisfied
+    inapplicable: satisfied
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -37,9 +38,7 @@ For value type `URI`, this rule does not require that the destination URI exists
 
 ## Assumptions
 
-- This rule assumes that elements that are not [included in the accessibility tree](#included-in-the-accessibility-tree) or are [focusable](#focusable) can still impact users. Therefore the applicability of this rule is not limited to [WAI-ARIA 1.1 states and properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) on elements that are included in the accessibility tree or are focusable.
-  **Note:** For example, anything referenced through `aria-labelledby` does not have to be [included in the accessibility tree](#included-in-the-accessibility-tree) in order for it to become part of the [accessible name](#accessible-name).
-- The ARIA `state` or `property` is being used to comply to WCAG.
+This rule catches values that are undefined in WAI-ARIA, and where the resulting behaviour in user agents are also undefined in WAI-ARIA. This might lead to accessibility issues, if the intention was to use behaviour defined in WAI-ARIA. When values are used that do not have a defined behaviour in WAI-ARIA, the HTML/SVG specification decides what default values should be used, since it is defined here what should happen when an invalid value is used for an attribute. If the default value for invalid attribute values happens to match the author's intention for the value, there will not be an accessibility issue.
 
 ## Accessibility Support
 

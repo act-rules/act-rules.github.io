@@ -30,7 +30,7 @@ If you want to get even more out of your involvement in our rule creation projec
 
 ## Give feedback on rules
 
-Feedback on rules is encouraged on our open [Github repository]({{site.data.package.repository.url}}), so you don't even have to be a member of the Community Group to contribute in this way.
+Feedback on rules is encouraged on our open [Github repository](https://github.com/act-rules/act-rules.github.io), so you don't even have to be a member of the Community Group to contribute in this way.
 
 If you "watch" the repository, you will get notifications when changes are happening.
 
@@ -44,9 +44,9 @@ Please feel free to add your own comments to issues.
 
 Start giving feedback on issues:
 
-- See the [ideas and early drafts that might need input]({{site.data.package.bugs.url}})
+- See the [ideas and early drafts that might need input](https://github.com/act-rules/act-rules.github.io/issues)
 
-- Use the [Definition of "Done"](../pages/design/definition-of-done.html) to guide your review
+- Use the [Definition of "Done"](../design/definition-of-done) to guide your review
 - Learn more about [commenting on issues](#) (TBD)
 
 ### Feedback and reviews for draft rules (Pull Requests on Github)
@@ -55,14 +55,14 @@ Pull requests are rule drafts that are ready for peer reviews. You can sign up a
 
 You can both add single comments to a pull request and do a full review.
 
-**Only approve a rule** if you feel confident (to the best of your knowledge) that this rule is 100% ready to be a published ACT rule. Please also refer to the [Definition of "Done"](../pages/design/definition-of-done.html).
+**Only approve a rule** if you feel confident (to the best of your knowledge) that this rule is 100% ready to be a published ACT rule. Please also refer to the [Definition of "Done"](../design/definition-of-done).
 
 If you for some reason are not so confident, you can always leave a comment for the things that you have an opinion about, without doing a full review.
 
 Start giving feedback and doing reviews for draft rules:
 
-- See the [draft rules, algorithms and more that need more reviewers]({{site.data.package.pulls.url}}?q=is%3Aopen+is%3Apr+label%3A%22reviewer+wanted%22)
-- Use the [Definition of "Done"](../pages/design/definition-of-done.html) to guide your review
+- See the [draft rules, algorithms and more that need more reviewers](https://github.com/act-rules/act-rules.github.io/pulls?q=is%3Aopen+is%3Apr+label%3A%22reviewer+wanted%22)
+- Use the [Definition of "Done"](../design/definition-of-done) to guide your review
 - Learn more about [reviewing and commenting on pull requests](#) (TBD)
 
 ### Feedback/corrections for published rules
@@ -73,12 +73,12 @@ Feedback and corrections for existing rules can target both on the sections of t
 
 You have several options for correcting existing rules:
 
-- **Open a discussion in an Issue:** If you want to open a discussion, you can [open a new issue on Github]({{site.data.package.bugs.url}}) repository to discuss the issue with the existing rule. Learn more about [creating issues](#) (TBD).
-- **Make the change yourself in a pull request:** If you know exactly what you want changed, you can do the change yourself as a [pull request on Github]({{site.data.package.pulls.url}}) and submit it for review. Learn more about [creating pull requests](#) (TBD).
+- **Open a discussion in an Issue:** If you want to open a discussion, you can [open a new issue on Github](https://github.com/act-rules/act-rules.github.io/issues) repository to discuss the issue with the existing rule. Learn more about [creating issues](#) (TBD).
+- **Make the change yourself in a pull request:** If you know exactly what you want changed, you can do the change yourself as a [pull request on Github](https://github.com/act-rules/act-rules.github.io/pulls) and submit it for review. Learn more about [creating pull requests](#) (TBD).
 
 ## Suggest new rules
 
-Anyone can suggest new rules on our open [Github repository]({{site.data.package.repository.url}}), so you don't even have to be a member of the Community Group to contribute in this way.
+Anyone can suggest new rules on our open [Github repository](https://github.com/act-rules/act-rules.github.io), so you don't even have to be a member of the Community Group to contribute in this way.
 
 Whether you have a single great idea for an accessibility rule or you work for an organisation that wants to contribute a whole repository of rules, we welcome the contribution.
 
@@ -92,13 +92,13 @@ Depending on how polished your rule proposal is, you can either add your idea as
 
 ### Submit an idea for discussion (Issue on Github)
 
-For rule contributors with less Github experience, it is often easiest to start the rule design in a [Github issue]({{site.data.package.bugs.url}}). This allows for easy editing and discussions with others, while the rule is taking shape.
+For rule contributors with less Github experience, it is often easiest to start the rule design in a [Github issue](https://github.com/act-rules/act-rules.github.io/issues). This allows for easy editing and discussions with others, while the rule is taking shape.
 
 [Learn more about how we work in Github issues](#) (TBD).
 
 ### Submit a draft for a rule (Pull Request on Github)
 
-If you have a ready rule draft, you can submit it as a [pull request]({{site.data.package.pulls.url}}) to go into the [review process](#) (TBD).
+If you have a ready rule draft, you can submit it as a [pull request](https://github.com/act-rules/act-rules.github.io/pulls) to go into the [review process](#) (TBD).
 
 Before contributing a new rule, we recommend you check its validity with several experienced accessibility auditors first. This helps you identify potential stumbling blocks early in the rule design.
 

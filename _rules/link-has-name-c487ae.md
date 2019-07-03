@@ -89,7 +89,7 @@ Accessible name for link via `aria-label`
 
 #### Passed Example 5
 
-Link named via `title` om link.
+Link named via `title` on link.
 
 ```html
 <a href="http://www.w3.org/WAI" title="This is a link"><img src="#"/></a>

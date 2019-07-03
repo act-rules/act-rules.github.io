@@ -181,7 +181,7 @@ Element with role `listitem` has a closer ancestor, that is included in the acce
 
 #### Failed Example 6
 
-The element with the semantic role of `listitem` is [owned by](#owned-by) the first element that references it element through `aria-owns`, which results in the wrong context role.
+The element with the semantic role of `listitem` is [owned by](#owned-by) the first element that references it through `aria-owns`, which results in the wrong context role.
 
 ```html
 <div role="tabpanel" aria-owns="id1">

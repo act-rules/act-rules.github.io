@@ -85,6 +85,10 @@ module.exports = {
 			'@id': 'dct:source',
 		},
 
+		title: {
+			'@id': 'dct:title',
+		},
+
 		assertions: {
 			'@reverse': 'earl:subject',
 		},

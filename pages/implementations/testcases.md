@@ -18,7 +18,7 @@ In the `testcases.json` file, test cases are included on the `testcases` array, 
 - `ruleId`: Unique identifier for the rule.
 - `ruleName`: Title of the rule the test case is for
 - `rulePage`: Page containing a detailed rule description.
-- `requirementsMapping`: Array of success criteria and other accessibility requirements not satisfied when the rule `failed`
+- `ruleAccessibilityRequirements`: Array of success criteria and other accessibility requirements not satisfied when the rule `failed`
 
 ```json
 {
@@ -33,7 +33,7 @@ In the `testcases.json` file, test cases are included on the `testcases` array, 
       "ruleId": "5f99a7",
       "ruleName": "ARIA attribute is valid",
       "rulePage": "https://act-rules.github.io/rules/5f99a7",
-      "requirementsMapping": ["wcag20:4.1.2"]
+      "ruleAccessibilityRequirements": ["wcag20:4.1.2"]
     }, ... ]
 }
 ```
@@ -42,7 +42,7 @@ In the `testcases.json` file, test cases are included on the `testcases` array, 
 
 To run the test cases, go through each URL run the necessary tests on that page. Tools and test procedures do not need to have a one-to-one mapping to ACT-R rules. While you could run all tests in an implementation on every test case, for efficiency we recommend doing one of the following:
 
-1. Only run tests relevant for the `requirementsMapping` (e.g. for a test case that maps to success criterion 1.1.1, only run tests related to success criterion 1.1.1)
+1. Only run tests relevant for the `ruleAccessibilityRequirements` (e.g. for a test case that maps to success criterion 1.1.1, only run tests related to success criterion 1.1.1)
 
 2. Maintain a manual many-to-many mapping of rules in your implementation to ACT-R Rules
 

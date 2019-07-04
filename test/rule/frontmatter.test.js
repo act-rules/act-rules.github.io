@@ -1,6 +1,6 @@
 
-const describeRule = require('./utils/describe-rule')
-const { contributors } = require('./../package.json')
+const describeRule = require('../test-utils/describe-rule')
+const { contributors } = require('./../../package.json')
 const contributorsNames = contributors.map(contributor => contributor.name.toLowerCase())
 
 describeRule('frontmatter', (ruleData) => {

@@ -17,6 +17,18 @@ class Layout extends React.Component {
 		}
 	}
 
+	componentDidMount() {
+		const { hash } = window.location;
+		if (!hash) {
+			return
+		}
+		const el = document.getElementById(hash)
+		if (!el) {
+			return
+		}
+		el.scrollIntoView();
+	}
+
 	handleHideShowMenu() {
 		this.setState(prevState => ({
 			showMenu: !prevState.showMenu,

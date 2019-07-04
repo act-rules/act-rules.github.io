@@ -69,4 +69,4 @@ yarn-error.log
 .yarn-integrity
 
 # Data
-_data/**/*.*
+_data/

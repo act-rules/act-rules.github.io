@@ -300,8 +300,7 @@ export function getAccessibilityRequirements(
 							</a>
 						</li>
 						<li>
-							<strong>Required for conformance</strong> to WCAG {wcagType}{' '}
-							level {level}
+							<strong>Required for conformance</strong> to WCAG {wcagType}{' '} and above on level {level} and above
 						</li>
 						<li>
 							Outcome mapping:

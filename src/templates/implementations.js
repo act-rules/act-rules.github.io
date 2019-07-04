@@ -1,8 +1,8 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
-import implementations from './../../_data/implementations'
 import SEO from '../components/seo'
+import implementers from './../../_data/implementers'
 
 export default ({ data }) => {
 	const { markdownRemark, site } = data
@@ -21,29 +21,27 @@ export default ({ data }) => {
 					<table>
 						<thead>
 							<tr>
-								<th width="3%">#</th>
 								<th>Tool Name</th>
-								<th>Version</th>
 								<th>Created By</th>
 								<th>Report</th>
 							</tr>
 						</thead>
 						<tbody>
-							{implementations.map((row, index) => {
+							{implementers.map(row => {
+								const { organisation, tool } = row
+								const filename = tool
+									.split(' ')
+									.join('-')
+									.toLowerCase()
+								const reportUrl = `/implementation/${filename}`
 								return (
-									<tr key={row.vendorName}>
-										<td width="3%">{index + 1}</td>
-										<td>{row.vendorTool}</td>
-										<td>{row.vendorToolVersion}</td>
-										<td>{row.vendorName}</td>
+									<tr key={tool}>
+										<td>{tool}</td>
+										{/* TODO: */}
+										{/* <td>{row.vendorToolVersion}</td> */}
+										<td>{organisation}</td>
 										<td>
-											<a
-												target="_blank"
-												rel="noopener noreferrer"
-												href={row.reportUrl}
-											>
-												View Report
-											</a>
+											<a href={reportUrl}>View Report</a>
 										</td>
 									</tr>
 								)

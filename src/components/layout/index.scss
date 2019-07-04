@@ -124,6 +124,12 @@ section.layout-container {
           margin-top: 3rem;
         }
 
+        &.page-implementers {
+          h1, h2, h3, h4, h5, h6 { 
+            display: inline-block;
+          }
+        }
+
         // Styles for rules page
         &.page-rules{
           .rules-listing {
@@ -171,6 +177,7 @@ section.layout-container {
                   font-weight: bold;
                   margin-top: 1em;
                   font-size: 90%;
+                  color: inherit;
                   cursor: auto;
                   &:hover {
                     text-decoration: none;

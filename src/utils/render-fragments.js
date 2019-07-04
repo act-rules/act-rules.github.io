@@ -271,6 +271,27 @@ export function getAccessibilityRequirements(
 			return !!forConformance
 		})
 
+	const getOutcomeMapping = () => {
+		return (
+			<li>
+				Outcome mapping:
+				<ul>
+					<li>
+						Any <code>failed</code> outcomes: not satisfied
+					</li>
+					<li>
+						All <code>passed</code> outcomes: further testing is
+						needed
+					</li>
+					<li>
+						An <code>inapplicable</code> outcome: further testing is
+						needed
+					</li>
+				</ul>
+			</li>
+		)
+	}
+
 	const wcagListing = (sc, listType) => {
 		const scData = scUrls[sc]
 
@@ -300,25 +321,9 @@ export function getAccessibilityRequirements(
 							</a>
 						</li>
 						<li>
-							<strong>Required for conformance</strong> to WCAG {wcagType}{' '}
-							level {level}
+							<strong>Required for conformance</strong> to WCAG {wcagType}{' '} and above on level {level} and above
 						</li>
-						<li>
-							Outcome mapping:
-							<ul>
-								<li>
-									Any <code>failed</code> outcomes: not satisfied
-								</li>
-								<li>
-									All <code>passed</code> outcomes: further testing is
-									needed
-								</li>
-								<li>
-									An <code>inapplicable</code> outcome: further testing is
-									needed
-								</li>
-							</ul>
-						</li>
+						{getOutcomeMapping()}
 					</ul>
 				</details>
 			</li>
@@ -337,9 +342,26 @@ export function getAccessibilityRequirements(
 		const href = `https://www.w3.org/TR/wai-aria-1.1/#${ref}`
 		return (
 			<li key={ref}>
-				<a href={href}>
-					{req.title}
-				</a>
+				<details>
+					<summary>
+						{req.title}
+					</summary>
+					<ul>
+						<li>
+							<a
+								className="sc-item"
+								href={href}
+								target="_blank"
+								rel="noopener noreferrer">
+								Learn More about {req.title}
+							</a>
+						</li>
+						<li>
+							<strong>Required for conformance</strong>
+						</li>
+						{getOutcomeMapping()}
+					</ul>
+				</details>
 			</li>
 		)
 	}
@@ -485,7 +507,7 @@ export function getGlossaryUsageInRules(usages) {
 	}
 	return (
 		<div className="used-rules">
-			<h3>Used In Rules:</h3>
+			<h3>Used In Rules ({usages.length}):</h3>
 			<ul>
 				{usages.map(usage => (
 					<li>

@@ -17,7 +17,7 @@ const htmlHintRules = {
   "title-require": false
 }
 
-describeRule('examples', (ruleData) => {
+describeRule('test cases', (ruleData) => {
   const { frontmatter, body } = ruleData
   const { id, name, htmlHintIgnore } = frontmatter
 

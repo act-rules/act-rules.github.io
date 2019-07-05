@@ -14,11 +14,7 @@ input_aspects:
   - DOM Tree
   - CSS Styling
 authors:
-	- Anne Thyme Nørregaard
-htmlHintIgnore:
-  # https://www.npmjs.com/package/htmlhint 
-  # (used with `npm test` to ensure validity of code snippets)
-  - 'attr-lowercase'
+  - Anne Thyme Nørregaard
 ---
 
 ## Applicability
@@ -137,7 +133,7 @@ Links created via scripting with explicit role of link, but lead to the same res
 
 A set of two SVG `<a>` elements have the same accessible name and link to the same resource.
 
-```html
+```svg
 <svg
 	viewBox="0 0 100 100"
 	xmlns="http://www.w3.org/2000/svg"
@@ -210,7 +206,7 @@ Same accessible name used for image links going to different resources:
 
 A set of two SVG `<a>` elements have the same accessible name but link to different resources:
 
-```html
+```svg
 <svg
 	viewBox="0 0 100 100"
 	xmlns="http://www.w3.org/2000/svg"

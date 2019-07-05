@@ -13,8 +13,8 @@ defaults: &defaults
 restore_dependency_cache: &restore_dependency_cache
   restore_cache:
     keys:
-      - v7-npm-cache-{{ checksum "package.json" }}
-      - v7-npm-cache-
+      - v6-npm-cache-{{ checksum "package.json" }}
+      - v6-npm-cache-
 
 jobs:
   dependencies:
@@ -23,7 +23,7 @@ jobs:
       - checkout
       - run: npm install
       - save_cache:
-          key: v7-npm-cache-{{ checksum "package.json" }}
+          key: v6-npm-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
   test: 

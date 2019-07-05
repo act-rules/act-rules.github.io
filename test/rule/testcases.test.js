@@ -1,6 +1,6 @@
 const gfmCodeBlocks = require('gfm-code-blocks')
 const HTMLHint = require("htmlhint");
-const describeRule = require('./utils/describe-rule')
+const describeRule = require('./../test-utils/describe-rule')
 
 const htmlHintRules = {
   // on rules

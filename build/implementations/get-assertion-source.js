@@ -1,9 +1,3 @@
-const flat = require('flat')
-const isUrl = require('is-url')
-const {
-	www: { url: siteUrl },
-} = require('./../../package.json')
-
 /**
  * Given an assertion object
  * - get `source`, which resembles closest to the url of the testcase
@@ -14,10 +8,36 @@ const {
  * @param {Object} assertion assertion
  */
 const getAssertionSource = assertion => {
-	const flattenedAssertion = flat(assertion)
-	return Object.values(flattenedAssertion).find(value => {
-		return isUrl(value) && value.includes(siteUrl)
-	})
+	const { subject = undefined } = assertion
+
+	if (!subject) {
+		throw new Error(`No 'subject' property in assertion`)
+	}
+
+	if (typeof subject === 'string') {
+		return subject
+	}
+
+	const { source = undefined } = subject
+
+	if (!source) {
+		const sourceKey = Object.keys(subject).find(k => k.includes('source'))
+
+		if (!sourceKey) {
+			if (subject.hasOwnProperty(`@id`)) {
+				return subject['@id']
+			}
+			throw new Error(`No 'source' or '@id' property in subject of assertion`)
+		}
+
+		return subject[sourceKey]
+	}
+
+	if (typeof source === 'object') {
+		return source['@id']
+	}
+
+	return source
 }
 
 module.exports = getAssertionSource

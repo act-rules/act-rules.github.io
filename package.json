@@ -90,7 +90,6 @@
 		"axios": "^0.18.1",
 		"commander": "^2.20.0",
 		"fastmatter": "^2.1.1",
-		"flat": "^4.1.0",
 		"gatsby": "^2.8.6",
 		"gatsby-image": "^2.1.2",
 		"gatsby-plugin-manifest": "^2.1.1",

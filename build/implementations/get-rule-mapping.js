@@ -1,4 +1,3 @@
-const flat = require('flat')
 const getTestcaseRelativeUrl = require('./get-testcase-relative-url')
 const getRuleMappingState = require('./get-rule-mapping-state')
 const getBestMatchingRules = require('./get-best-matching-rules')

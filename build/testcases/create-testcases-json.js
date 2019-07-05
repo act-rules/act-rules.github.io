@@ -2,8 +2,8 @@ const {
 	www: { url, baseDir },
 	author,
 	description,
-} = require('./../package.json')
-const createFile = require('../build/create-file')
+} = require('./../../package.json')
+const createFile = require('../../utils/create-file')
 
 /**
  * Create `testcases.json`

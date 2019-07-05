@@ -1,6 +1,6 @@
 ---
 id: e6952f
-name: attributes are not duplicated
+name: Attributes are not duplicated
 rule_type: atomic
 description: |
   This rule checks that HTML and SVG starting tags do not contain duplicated attributes.

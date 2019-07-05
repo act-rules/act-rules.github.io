@@ -2,6 +2,63 @@ import React from 'react'
 import scUrls from './../../_data/sc-urls'
 import { Link } from 'gatsby'
 import glossaryUsages from './../../_data/glossary-usages.json'
+import implementationMetrics from './../../_data/implementation-metrics.json'
+
+export const getImplementations = slug => {
+	const ruleId = slug.replace('rules/', '')
+	const metrics = implementationMetrics[ruleId]
+	if (!metrics) {
+		return null
+	}
+	return (
+		<>
+			<a id="implementation-metrics" href="#implementation-metrics">
+				<h2>Implementations</h2>
+			</a>
+			<table className="compact">
+				<thead>
+					<tr>
+						<th>Tool Name</th>
+						<th>Created By</th>
+						<th>Report</th>
+					</tr>
+				</thead>
+				<tbody>
+					{metrics.map(metric => {
+						const { organisation, tool } = metric
+						const filename = tool
+							.split(' ')
+							.join('-')
+							.toLowerCase()
+						const reportUrl = `/implementation/${filename}#${ruleId}`
+						return (
+							<tr key={tool}>
+								<td>{tool}</td>
+								<td>{organisation}</td>
+								<td>
+									<a href={reportUrl}>View Report</a>
+								</td>
+							</tr>
+						)
+					})}
+				</tbody>
+			</table>
+		</>
+	)
+}
+
+export const getImplementationsLink = slug => {
+	const ruleId = slug.replace('rules/', '')
+	const metrics = implementationMetrics[ruleId]
+	if (!metrics) {
+		return null
+	}
+	return (
+		<li>
+			<a href="#implementation-metrics">Implementations ({metrics.length})</a>
+		</li>
+	)
+}
 
 export const getChangelog = (changelog, url, file) => {
 	if (!changelog.length) {
@@ -214,6 +271,27 @@ export function getAccessibilityRequirements(
 			return !!forConformance
 		})
 
+	const getOutcomeMapping = () => {
+		return (
+			<li>
+				Outcome mapping:
+				<ul>
+					<li>
+						Any <code>failed</code> outcomes: not satisfied
+					</li>
+					<li>
+						All <code>passed</code> outcomes: further testing is
+						needed
+					</li>
+					<li>
+						An <code>inapplicable</code> outcome: further testing is
+						needed
+					</li>
+				</ul>
+			</li>
+		)
+	}
+
 	const wcagListing = (sc, listType) => {
 		const scData = scUrls[sc]
 
@@ -243,25 +321,9 @@ export function getAccessibilityRequirements(
 							</a>
 						</li>
 						<li>
-							<strong>Required for conformance</strong> to WCAG {wcagType}{' '}
-							level {level}
+							<strong>Required for conformance</strong> to WCAG {wcagType}{' '} and above on level {level} and above
 						</li>
-						<li>
-							Outcome mapping:
-							<ul>
-								<li>
-									Any <code>failed</code> outcomes: not satisfied
-								</li>
-								<li>
-									All <code>passed</code> outcomes: further testing is
-									needed
-								</li>
-								<li>
-									An <code>inapplicable</code> outcome: further testing is
-									needed
-								</li>
-							</ul>
-						</li>
+						{getOutcomeMapping()}
 					</ul>
 				</details>
 			</li>
@@ -280,9 +342,26 @@ export function getAccessibilityRequirements(
 		const href = `https://www.w3.org/TR/wai-aria-1.1/#${ref}`
 		return (
 			<li key={ref}>
-				<a href={href}>
-					{req.title}
-				</a>
+				<details>
+					<summary>
+						{req.title}
+					</summary>
+					<ul>
+						<li>
+							<a
+								className="sc-item"
+								href={href}
+								target="_blank"
+								rel="noopener noreferrer">
+								Learn More about {req.title}
+							</a>
+						</li>
+						<li>
+							<strong>Required for conformance</strong>
+						</li>
+						{getOutcomeMapping()}
+					</ul>
+				</details>
 			</li>
 		)
 	}
@@ -385,23 +464,38 @@ export function getInputRulesForRule(
 			<div className="meta">
 				<span className="heading">Input Rules</span>
 				<ul>
-				{inputRules.map(inputRuleId => {
-					const atomicRule = allRules.find(
-						rule => rule.node.frontmatter.id === inputRuleId
-					)
-					const aHref = stripBasePath
-						? atomicRule.node.fields.slug.replace('rules/', '')
-						: atomicRule.node.fields.slug
-					const name = atomicRule.node.frontmatter.name
-					return (
-						<li key={inputRuleId}>
-							<a className="sc-item block" href={aHref}>
-								{name}
-							</a>
-						</li>
-					)
-				})}
+					{inputRules.map(inputRuleId => {
+						const atomicRule = allRules.find(
+							rule => rule.node.frontmatter.id === inputRuleId
+						)
+						const aHref = stripBasePath
+							? atomicRule.node.fields.slug.replace('rules/', '')
+							: atomicRule.node.fields.slug
+						const name = atomicRule.node.frontmatter.name
+						return (
+							<li key={inputRuleId}>
+								<a className="sc-item block" href={aHref}>
+									{name}
+								</a>
+							</li>
+						)
+					})}
 				</ul>
+			</div>
+		</div>
+	)
+}
+
+export function getImplementationsCount(slug) {
+	const ruleId = slug.replace('rules/', '')
+	const metrics = implementationMetrics[ruleId]
+	if (!metrics) {
+		return null
+	}
+	return (
+		<div className="side-notes">
+			<div className="meta">
+				<h3 className="heading">Implementations: {metrics.length}</h3>
 			</div>
 		</div>
 	)
@@ -413,7 +507,7 @@ export function getGlossaryUsageInRules(usages) {
 	}
 	return (
 		<div className="used-rules">
-			<h3>Used In Rules:</h3>
+			<h3>Used In Rules ({usages.length}):</h3>
 			<ul>
 				{usages.map(usage => (
 					<li>

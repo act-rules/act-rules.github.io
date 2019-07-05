@@ -3,8 +3,8 @@
  * -> get all data necessary from `on-create-node` callback
  * -> extend `context` object on `markdown` pages
  */
-const path = require('path')
-const getComponent = require('./get-component')
+
+const getTemplate = require('./get-template')
 
 const createPageAddMdContext = options => {
 	const { graphql, actions } = options
@@ -57,7 +57,7 @@ const createPageAddMdContext = options => {
 
 			createPage({
 				path: slug,
-				component: path.resolve(getComponent(markdownType, slug)),
+				component: getTemplate(markdownType, slug),
 				context: {
 					slug,
 					fileName,

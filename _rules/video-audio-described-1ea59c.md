@@ -1,6 +1,6 @@
 ---
 id: 1ea59c
-name: video element audio described
+name: Video element audio described
 rule_type: atomic
 description: |
   Non-streaming `video` elements must have all visual information also contained in the audio

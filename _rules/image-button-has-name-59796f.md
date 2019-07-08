@@ -125,7 +125,7 @@ Image button with aria-labelledby that does not reference an id that exists in t
 
 #### Failed example 4
 
-Accessible name is not whitespace.
+Accessible name is only whitespace.
 
 ```html
 <input type="image" name="submit" src="button.gif" alt=" " />

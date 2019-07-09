@@ -27,10 +27,10 @@ This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document
 For each test target, the outcome of at least one of the following rules is passed:
 
 - [HTML page has a main landmark](https://act-rules.github.io/rules/b40fd1)
+- [First focusable element is an internal link](https://act-rules.github.io/rules/e53727)
 
 
 For each test target, the outcome of at least one of the following rules is passed:
-- (G1: Adding a link at the top of each page that goes directly to the main content area)
 - (G123: Adding a link at the beginning of a block of repeated content to go to the end of the block)
 - (G124: Adding links at the top of the page to each area of the content)
 - (H69: Providing heading elements at the beginning of each section of content)

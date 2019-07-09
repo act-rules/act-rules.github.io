@@ -1,31 +1,25 @@
+const { copy } = require('fs-extra')
 const globby = require('globby')
-const makeDir = require('make-dir')
 const objectHash = require('object-hash')
 const codeBlocks = require('gfm-code-blocks')
-const {
-	www: { url, baseDir },
-} = require('./../package.json')
+const { www: { url } } = require('./../package.json')
 const getMarkdownData = require('./../utils/get-markdown-data')
 const createFile = require('../utils/create-file')
 const regexps = require('../utils/reg-exps')
 const getAllMatchesForRegex = require('../utils/get-all-matches-for-regex')
-const copyTestcasesAssets = require('./testcases/copy-testcases-assets')
 const createTestcasesJson = require('./testcases/create-testcases-json')
 const createTestcasesOfRuleOfEmReportTool = require('./testcases/create-testcases-of-rule-of-em-report-tool')
 
 /**
  * Create test case files & other meta-data  from test case in each rule.
  *
- * -> create test cases files into `./public/testcases/`
- * -> copy `./test-assets/*` into `./public`
- * -> create `testcases.json` into `./public`
+ * -> create test cases files into `_data` directory
+ * -> copy test assets into `_data` directory
+ * -> create `testcases.json`
+ * 
+ * These files will be copied into `public` directory during gatsby `preBootstrap` hook/ build
  */
 const init = async () => {
-	/**
-	 * Create `public` directory
-	 */
-	await makeDir(`public`)
-
 	/**
 	 * Get all rules `markdown` data
 	 */
@@ -40,13 +34,16 @@ const init = async () => {
 	 * -> get code snippets
 	 * -> and their relevant titles
 	 */
-	rulesData.forEach(ruleData => {
-		const { frontmatter, body } = ruleData
+	for (const { frontmatter, body } of rulesData) {
 		const {
 			id: ruleId,
 			name: ruleName,
 			accessibility_requirements: ruleAccessibilityRequirements,
 		} = frontmatter
+
+		/**
+		 * get all titles of test case examples (eg: #### Failed Example 1)
+		 */
 		const codeTitles = getAllMatchesForRegex(regexps.testcaseTitle, body)
 
 		/**
@@ -65,33 +62,31 @@ const init = async () => {
 		 * -> create a testcase file
 		 * -> and add meta of testcase to `testcases.json`
 		 */
-		const ruleTestcases = codeSnippets.reduce((out, codeBlock, index) => {
+		const ruleTestcases = []
+
+		for (const [index, codeSnippet] of codeSnippets.entries()) {
 			const title = codeTitles[index]
 			if (!title) {
 				throw new Error('No title found for code snippet.')
 			}
 
-			const { code, block } = codeBlock
-			let { type = 'html' } = codeBlock
+			const { code, block } = codeSnippet
+			let { type = 'html' } = codeSnippet
 
 			if (regexps.testcaseCodeSnippetTypeIsSvg.test(block.substring(0, 15))) {
 				type = 'svg'
 			}
 
-			const codeId = objectHash({
-				block,
-				type,
-				ruleId,
-			})
+			const codeId = objectHash({ block, type, ruleId })
 
 			const titleCurated = title.value.split(' ').map(t => t.toLowerCase())
-
 			const testcaseFileName = `${ruleId}/${codeId}.${type}`
 			const testcasePath = `testcases/${testcaseFileName}`
+
 			/**
 			 * Create testcase file
 			 */
-			createFile(`${baseDir}/${testcasePath}`, code)
+			await createFile(`_data/rules-testcases/${testcasePath}`, code)
 
 			/**
 			 * Create meta data for testcase(s)
@@ -106,10 +101,8 @@ const init = async () => {
 				rulePage: `${url}/rules/${ruleId}`,
 				ruleAccessibilityRequirements,
 			}
-
-			out.push(testcase)
-			return out
-		}, [])
+			ruleTestcases.push(testcase)
+		}
 
 		// add rule testcases to all testcases
 		allRulesTestcases = allRulesTestcases.concat(ruleTestcases)
@@ -117,32 +110,30 @@ const init = async () => {
 		/**
 		 * Create test cases of rule for use with `em report tool`
 		 */
-		createTestcasesOfRuleOfEmReportTool({
+		await createTestcasesOfRuleOfEmReportTool({
 			ruleId,
 			ruleName,
 			ruleTestcases,
 			ruleAccessibilityRequirements,
 		})
-	})
+	}
 
 	/**
 	 * Copy `test-assets` that are used by `testcases`
 	 */
-	await copyTestcasesAssets()
+	await copy('./test-assets', './_data/rules-testcases/test-assets')
 
 	/**
 	 * Generate `testcases.json`
 	 */
 	await createTestcasesJson(allRulesTestcases)
-
-	console.info(`\nGenerated Test Cases.\n`)
 }
 
 /**
  * Invoke
  */
 init()
-	.then(() => console.log('Completed: task: create:testcases'))
+	.then(() => console.log('Completed task: createTestcases'))
 	.catch(e => {
 		console.error(e)
 		process.write(1)

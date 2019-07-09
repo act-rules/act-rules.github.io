@@ -32,7 +32,9 @@ The first [focusable][#focusable] element of the [document element](#https://www
 
 ## Assumptions
 
-This rule assume that there any global dismissable information that only appears once per site (such as a cookie policy banner) have already been acknoledged and are not displayed any more.
+This rule assumes that any global dismissible information that only appears once per site has already been acknowledged and is not displayed any more.
+
+**Note**: the aim of such a link is to be able to skip repeated content (headers, navigation bar, ...) when viewing several pages of the same site. Many sites display a cookies policy banner which is stealing focus until dismissed (usually be viewing and accepting cookies policy). Since that content is *not* repeated (is it only shown once for the full site), it is not a problem to have it, and it may appear on any page of the site (depending where the user first comes in).
 
 ## Accessibility Support
 

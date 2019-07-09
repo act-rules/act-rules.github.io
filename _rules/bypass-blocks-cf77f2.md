@@ -1,22 +1,18 @@
 ---
+id: cf77f2
 name: Bypass Blocks
-test_type: composite
-
+rule_type: composite
 description: |
   This rule checks that each page has a mechanism to bypass blocks of content.
-
-success_criterion: 
-- 2.4.1 # Bypass Blocks (A)
-
-atomic_rules:
-- 
--
--
--
--
--
-
+accessibility_requirements:
+  wcag20:2.4.1: # Bypass Blocks (A)
+    forConformance: true
+    failed: not satisfied
+    passed: satisfied
+    inapplicable: further testing needed
+input_rules:
 authors:
+- Jean-Yves Moyen
 - Anne Thyme Nørregaard
 ---
 

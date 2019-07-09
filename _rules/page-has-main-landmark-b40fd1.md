@@ -1,5 +1,5 @@
 ---
-id: 
+id: b40fd1
 name: HTML page has a main landmark
 rule_type: atomic
 description: |

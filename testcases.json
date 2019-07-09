@@ -3625,9 +3625,9 @@
       }
     },
     {
-      "testcaseId": "f6f9ba66749037008e9b8e483bf8797c1a76f9fa",
-      "url": "https://act-rules.github.io/testcases/bf051a/f6f9ba66749037008e9b8e483bf8797c1a76f9fa.svg",
-      "relativePath": "testcases/bf051a/f6f9ba66749037008e9b8e483bf8797c1a76f9fa.svg",
+      "testcaseId": "455ed0f037647f3831ff9a4ebde4a1e6fcd7dad3",
+      "url": "https://act-rules.github.io/testcases/bf051a/455ed0f037647f3831ff9a4ebde4a1e6fcd7dad3.svg",
+      "relativePath": "testcases/bf051a/455ed0f037647f3831ff9a4ebde4a1e6fcd7dad3.svg",
       "expected": "inapplicable",
       "ruleId": "bf051a",
       "ruleName": "Validity of HTML Lang attribute",
@@ -3642,9 +3642,9 @@
       }
     },
     {
-      "testcaseId": "ad1c28aca2b6ec5b979abad65f19e8c09239ea44",
-      "url": "https://act-rules.github.io/testcases/bf051a/ad1c28aca2b6ec5b979abad65f19e8c09239ea44.html",
-      "relativePath": "testcases/bf051a/ad1c28aca2b6ec5b979abad65f19e8c09239ea44.html",
+      "testcaseId": "60c3d3121a00675b4724d5b9cb635c2f79f1519b",
+      "url": "https://act-rules.github.io/testcases/bf051a/60c3d3121a00675b4724d5b9cb635c2f79f1519b.html",
+      "relativePath": "testcases/bf051a/60c3d3121a00675b4724d5b9cb635c2f79f1519b.html",
       "expected": "inapplicable",
       "ruleId": "bf051a",
       "ruleName": "Validity of HTML Lang attribute",
@@ -3795,9 +3795,9 @@
       }
     },
     {
-      "testcaseId": "6e1f1ef3c93ce5f2911a61c93def490509ab32a3",
-      "url": "https://act-rules.github.io/testcases/5b7ae0/6e1f1ef3c93ce5f2911a61c93def490509ab32a3.svg",
-      "relativePath": "testcases/5b7ae0/6e1f1ef3c93ce5f2911a61c93def490509ab32a3.svg",
+      "testcaseId": "9d1397438bea784d70e961a2abcbdd7b7c2f7d9f",
+      "url": "https://act-rules.github.io/testcases/5b7ae0/9d1397438bea784d70e961a2abcbdd7b7c2f7d9f.svg",
+      "relativePath": "testcases/5b7ae0/9d1397438bea784d70e961a2abcbdd7b7c2f7d9f.svg",
       "expected": "inapplicable",
       "ruleId": "5b7ae0",
       "ruleName": "HTML lang and xml:lang match",

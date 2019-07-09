@@ -21,7 +21,7 @@ This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document
 
 The [document element](https://www.w3.org/TR/dom/#document-element) has at least one [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) with a [semantic role][#semantic-role] of `main`.
 
-**Note**: Authors SHOULD not use more than one element w%ith a [semantic role][#semantic-role] of `main`.
+**Note**: Authors SHOULD not use more than one element with a [semantic role][#semantic-role] of `main`.
 
 ## Assumptions
 

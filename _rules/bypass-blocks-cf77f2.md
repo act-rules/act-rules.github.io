@@ -12,6 +12,7 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_rules:
   - b40fd1
+  - e53727
 authors:
 - Jean-Yves Moyen
 - Anne Thyme Nørregaard

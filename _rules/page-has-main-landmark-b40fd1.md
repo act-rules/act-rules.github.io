@@ -33,7 +33,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- [ARIA11: Using ARIA landmarks to identify regions of a page](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/ARIA11)
+- [ARIA11: Using ARIA landmarks to identify regions of a page](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11)
 
 ## Test Cases
 

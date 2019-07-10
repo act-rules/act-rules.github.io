@@ -1,7 +1,7 @@
 const fs = require('fs')
 const fastmatter = require('fastmatter')
 const { createFilePath } = require('gatsby-source-filesystem')
-const getGitLog = require('./get-git-log')
+const getGitLog = require('./../utils/get-git-log')
 
 /**
  * Get node data, to enhance metadata of pages

@@ -1,5 +1,5 @@
 ---
-id: 
+id: 5effbb
 name: Link text is descriptive
 rule_type: atomic
 
@@ -15,6 +15,7 @@ accessibility_requirements:
 
 input_aspects:
 - DOM Tree
+- CSS Styling
 
 authors:
 - Carlos Duarte
@@ -24,21 +25,19 @@ authors:
 
 ## Applicability
 
-The rule applies to any HTML element with the [semantic role](#semantic-role) of `link` that has a [non-empty](#non-empty) [accessible-name](#accessible-name).
+The rule applies to any HTML element with the [semantic role](#semantic-role) of `link` that has an [accessible-name](#accessible-name) that is not the empty string ("").
 
-## Expectation 1
+## Expectation
 
-Link text together with its [context](#context), if visible, describes the purpose of the link
+Both the [text content](#text-content), if [visible](#visible), and the [accessible-name](#accessible-name) of the target element, together with its [visible](#visible) [context](#context) describe the purpose of the link.
 
-## Expectation 2
-
-Accessible name together with its [context](#context) describes the purpose of the link
+Note: Even though elements with the [semantic role](#semantic-role) of `link` [support name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent), their [text content](#text-content) and [accessible-name](#accessible-name) may be different if the content's author decides to. For this reason, this rules checks both [text content](#text-content) and [accessible-name](#accessible-name).
 
 ## Assumptions
 
 - The rule assumes that all links are [user interface components](https://www.w3.org/TR/WCAG20/#user-interface-componentdef) as defined by WCAG 2.
 
-## Accessibility support
+## Accessibility Support
 
 There are no major accessibility support issues known for this rule.
 

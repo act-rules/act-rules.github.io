@@ -24,32 +24,28 @@ This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document
 
 ## Expectation
 
-For each test target, the outcome of at least one of the following rules is passed:
+For each test target, either the outcome of at least one of the following rules is passed:
 
 - [First focusable element is an internal link](https://act-rules.github.io/rules/e53727)
-- G123 placeholder
-- G124 placeholder
-- [HTML page has a main landmark](https://act-rules.github.io/rules/b40fd1)
-- H69 placeholder
-- H70 + H64 placeholder
-- SCR28 placeholder
-
-
-
-For each test target, the outcome of at least one of the following rules is passed:
 - (G123: Adding a link at the beginning of a block of repeated content to go to the end of the block)
 - (G124: Adding links at the top of the page to each area of the content)
+- [HTML page has a main landmark](https://act-rules.github.io/rules/b40fd1)
 - (H69: Providing heading elements at the beginning of each section of content)
-- (H70: Using frame elements to group blocks of repeated material AND H64: Using the title attribute of the frame and iframe elements)
 - (SCR28: Using an expandable and collapsible menu to bypass block of content)
+
+or the outcome of both these rules is passed:
+- (H70: Using frame elements to group blocks of repeated material)
+- (H64: Using the title attribute of the frame and iframe elements)
 
 ## Assumptions
 
 This rule assumes that the document has blocks of content that are repeated in multiple documents within the same website. If this is not the case, there is no requirement for the type of mechanism tested in this rule.
 
+This rule assumes that one of the techniques listed here is used to comply to WCAG.
+
 ## Accessibility Support
 
-Techniques and solutions that identify regions of the page are perfectly valid ways of passing 2.4.1 Bypass blocks. They are, however, directed toward screen readers users and keyboard users will not benefit for these. Techniques and solutions based on links will benefit all users and are therefore recommended. 
+Techniques and solutions that identify blocks of content are perfectly valid ways of passing [SC 2.4.1 Bypass blocks](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html). They are, however, directed toward screen readers users and keyboard users will not benefit for these. Techniques and solutions based on links will benefit all users and are therefore recommended. 
 
 ## Background
 - [Understanding Success Criterion 2.4.1: Bypass Blocks](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html)

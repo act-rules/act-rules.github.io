@@ -1,6 +1,5 @@
 const createPageAddMdContext = require('./create-page-add-md-context')
-const createTestcasesOfAllRules = require('./create-testcases-of-all-rules')
-const createGlossaryUsagesInRules = require('./create-glossary-uages-in-rules')
+const createPageImplementerReport = require('./create-page-implementer-report')
 
 const createPages = async options => {
 	const promises = [
@@ -12,19 +11,9 @@ const createPages = async options => {
 		createPageAddMdContext(options),
 
 		/**
-		 * Create test case files & meta data
-		 * -> create test cases files into `./public/testcases/`
-		 * -> copy `./test-assets/*` into `./public`
-		 * -> create `testcases.json` into `./public`
+		 * Create implementation report pages
 		 */
-		createTestcasesOfAllRules(options),
-
-		/**
-		 * Create glossary usages
-		 * -> for each glossary item (find references in each rule)
-		 * -> this is saved in `_data` which is later used in `pages/glossary`
-		 */
-		createGlossaryUsagesInRules(options),
+		createPageImplementerReport(options),
 	]
 
 	await Promise.all(promises)

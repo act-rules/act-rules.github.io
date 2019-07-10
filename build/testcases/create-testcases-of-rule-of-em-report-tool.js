@@ -1,12 +1,10 @@
-const {
-	www: { url, baseDir },
-} = require('./../package.json')
-const scUrlsMetaData = require('./../_data/sc-urls.json')
-const scEmReportAuditResult = require('./../_data/sc-em-report-audit-result.json')
-const graphContext = require('./../_data/wcag-em-report-tool-mappings/@graph-context.json')
-const graphAdditionalMeta = require('./../_data/wcag-em-report-tool-mappings/@graph-additional-meta.json')
-const graphEvaluatorMeta = require('./../_data/wcag-em-report-tool-mappings/@graph-evaluator-meta.json')
-const createFile = require('./../build/create-file')
+const { www: { url } } = require('./../../package.json')
+const scUrlsMetaData = require('./../../_data/sc-urls.json')
+const scEmReportAuditResult = require('./../../_data/sc-em-report-audit-result.json')
+const graphContext = require('./wcag-em-report-tool-mappings/@graph-context.json')
+const graphAdditionalMeta = require('./wcag-em-report-tool-mappings/@graph-additional-meta.json')
+const graphEvaluatorMeta = require('./wcag-em-report-tool-mappings/@graph-evaluator-meta.json')
+const createFile = require('../../utils/create-file')
 
 /**
  * Create testcases json file that can be used by
@@ -22,6 +20,7 @@ const createTestcasesOfRuleOfEmReportTool = async options => {
 	const title = `Report for ACT-R Rule - ${ruleName}`
 	const siteName = `ACT-R Rule - ${ruleName}`
 	const siteScope = `${url}/testcases/${ruleId}/`
+	
 	const webpages = ruleTestcases.map((testcase, index) => {
 		const { url, testcaseId } = testcase
 		return {
@@ -88,7 +87,7 @@ const createTestcasesOfRuleOfEmReportTool = async options => {
 	}
 
 	await createFile(
-		`${baseDir}/testcases/${ruleId}/rule-${ruleId}-testcases-for-em-report-tool.json`,
+		`_data/rules-testcases/testcases/${ruleId}/rule-${ruleId}-testcases-for-em-report-tool.json`,
 		JSON.stringify(json, undefined, 2)
 	)
 }

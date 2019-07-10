@@ -1,4 +1,4 @@
-const testcasesData = require('./../../public/testcases.json')
+const testcasesData = require('./../../_data/rules-testcases/testcases.json')
 
 /**
  * Get testcases of rules

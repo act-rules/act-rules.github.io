@@ -103,7 +103,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 `svg` element is not applicable for this rule.
 
 ```svg
-<svg xmlns="http://www.w3.org/2000/svg" lang="en" xml:lang="en">
+<svg xmlns="http://www.w3.org/2000/svg" lang="en" xml:lang="en"></svg>
 ```
 
 #### Inapplicable Example 2

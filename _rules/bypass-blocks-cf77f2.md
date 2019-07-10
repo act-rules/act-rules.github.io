@@ -27,7 +27,12 @@ This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document
 For each test target, the outcome of at least one of the following rules is passed:
 
 - [First focusable element is an internal link](https://act-rules.github.io/rules/e53727)
+- G123 placeholder
+- G124 placeholder
 - [HTML page has a main landmark](https://act-rules.github.io/rules/b40fd1)
+- H69 placeholder
+- H70 + H64 placeholder
+- SCR28 placeholder
 
 
 

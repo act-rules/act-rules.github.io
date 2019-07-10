@@ -1,6 +1,4 @@
-const {
-	www: { url, baseDir },
-} = require('./../../package.json')
+const { www: { url } } = require('./../../package.json')
 const scUrlsMetaData = require('./../../_data/sc-urls.json')
 const scEmReportAuditResult = require('./../../_data/sc-em-report-audit-result.json')
 const graphContext = require('./wcag-em-report-tool-mappings/@graph-context.json')
@@ -22,6 +20,7 @@ const createTestcasesOfRuleOfEmReportTool = async options => {
 	const title = `Report for ACT-R Rule - ${ruleName}`
 	const siteName = `ACT-R Rule - ${ruleName}`
 	const siteScope = `${url}/testcases/${ruleId}/`
+	
 	const webpages = ruleTestcases.map((testcase, index) => {
 		const { url, testcaseId } = testcase
 		return {
@@ -88,7 +87,7 @@ const createTestcasesOfRuleOfEmReportTool = async options => {
 	}
 
 	await createFile(
-		`${baseDir}/testcases/${ruleId}/rule-${ruleId}-testcases-for-em-report-tool.json`,
+		`_data/rules-testcases/testcases/${ruleId}/rule-${ruleId}-testcases-for-em-report-tool.json`,
 		JSON.stringify(json, undefined, 2)
 	)
 }

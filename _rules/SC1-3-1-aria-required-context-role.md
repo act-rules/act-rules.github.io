@@ -21,7 +21,7 @@ authors:
 
 The rule applies to any HTML or SVG element that is [included in the accessibility tree](#included-in-the-accessibility-tree) and has an explicit [semantic role](#semantic-role) with a [WAI-ARIA required context role](https://www.w3.org/TR/wai-aria-1.1/#scope), except if the element has an implicit semantic role that is identical to its explicit semantic role.
 
-**Note:** An example of an element that has an implicit semantic role that is identical to its explicit semantic role is an `<li>`element that has `role="listitem"`. Elements like these are not applicable to this rule.
+**Note:** An example of an element that has an implicit semantic role that is identical to its explicit semantic role is an `<li>` element that has `role="listitem"`. This rule is not applicable to elements like this.
 
 ## Expectation
 
@@ -37,7 +37,7 @@ This rule assumes that the explicit [semantic role](#semantic-role) on the targe
 
 - This rule relies on assistive technologies to recognize which elements are [owned by](#owned-by) each other. This includes when the element is owned by another element that is an ancestor, but not a parent of the target element. Some assistive technologies do not accept these owned by relationships, unless workarounds are used.
 Furthermore, `aria-owns` has limited support in some user agents.
-- Some user agents and assistive technologies ignore empty elements, which means they are not presented to all users. However, since this is handled inconsitently across user agents and assistive technologies, empty elements are applicable to this rule. 
+- Some user agents and assistive technologies ignore empty elements, which means they are not presented to all users. However, since this is handled inconsitently across user agents and assistive technologies, this rule is applicable to empty elements. 
 
 ## Background
 
@@ -241,7 +241,7 @@ Role does not have any required context roles listed in WAI-ARIA spec.
 
 #### Inapplicable Example 4
 
-Element is not exposed to assistive technologies, since decendant has `aria-hidden` attribute with value set to `true`.
+Element is not exposed to assistive technologies, since descendant has `aria-hidden` attribute with value set to `true`.
 
 ```html
 <div role="list" aria-hidden="true">

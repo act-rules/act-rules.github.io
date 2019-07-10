@@ -1,12 +1,10 @@
-const describeRule = require('./utils/describe-rule')
-const getAllHeadingsFromMarkdownBody = require('./utils/get-all-headings-from-markdown-body')
-const getHeadingOfDepth = require('./utils/get-heading-of-depth')
+const describeRule = require('../test-utils/describe-rule')
+const getAllHeadingsFromMarkdownBody = require('../test-utils/get-all-headings-from-markdown-body')
+const getHeadingOfDepth = require('../test-utils/get-heading-of-depth')
 
 describeRule('headings', (ruleData) => {
   const { body } = ruleData
   const headings = getAllHeadingsFromMarkdownBody(body)
-
-  const level3Headings = getHeadingOfDepth(headings, 3)
 
   /**
    * Check for `required` `h2` headings

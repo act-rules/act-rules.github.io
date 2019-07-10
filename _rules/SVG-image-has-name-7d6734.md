@@ -3,7 +3,7 @@ id: 7d6734
 name: SVG image has accessible name
 rule_type: atomic
 description: |
-   This rule checks that each SVG image element that renders visible content that and is included in the accessibility tree has an accessible name.
+   This rule checks that each SVG image element that renders visible content and is included in the accessibility tree has an accessible name.
 accessibility_requirements:
   wcag20:1.1.1: # Non-Text Content (A)
     forConformance: true
@@ -52,32 +52,35 @@ Browser and assistive technology support for SVG `<title>` and `<desc>` elements
 
 #### Passed example 1
 
-The `<svg>` element has an implicit role of `graphics-document`, has visible content rendered by the `<circle>` element and, is included in the accessibility tree by the `<title>` does not contain only whitespace.
+The `<svg>` element has an implicit role of `graphics-document`, has visible content rendered by the `<circle>` element and, is included in the accessibility tree by the `<title>` that does not contain only whitespace.
 
 ```html
+<p>How many circles are there?</p>
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
-  <title>A yellow circle</title>
+  <title>1 circle</title>
 	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```
 
 #### Passed example 2
 
-The `<svg>` element has an explicit role of `img`, has visible content rendered by the `<circle>` element, and is included in the accessibility tree by the `<title>` that does not contain only whitespace.
+The `<svg>` element has an explicit role of `img` which includes the element in the accessibility tree. It has has visible content rendered by the `<circle>` element and gets its accessible name from the `<title>` element that does not contain only whitespace.
 
 ```html
+<p>How many circles are there?</p>
 <svg xmlns="http://www.w3.org/2000/svg" role="img" width="100" height="100">
-  <title>A yellow circle</title>
+  <title>1 circle/title>
 	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```
 
 #### Passed example 3
 
-The `<svg>` element has an explicit role of `img`, has visible content rendered by the `<circle>` element, and is included in the accessibility tree by the `aria-label` attribute that is not only whitespace.
+The `<svg>` element has an explicit role of `img` which includes the element in the accessibility tree. It has has visible content rendered by the `<circle>` element and gets its accessible name from the `aria-label` attribute that does not contain only whitespace.
 
 ```html
-<svg xmlns="https://www.w3.org/2000/svg" role="img" width="100" height="100" aria-label="A yellow circle">
+<p>How many circles are there?</p>
+<svg xmlns="https://www.w3.org/2000/svg" role="img" width="100" height="100" aria-label="1 circle">
 	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```
@@ -87,8 +90,9 @@ The `<svg>` element has an explicit role of `img`, has visible content rendered 
 The `<svg>` child `<g>` element has visible content, is included in the accessibility tree with the `graphics-object` role, and provides an accessible name through the `aria-label` attribute that is not only whitespace.
 
 ```html
-<svg xmlns="https://www.w3.org/2000/svg" width="600" height="400" viewBox="200 0 400 400" role="presentation">
-	<g role="graphics-object" aria-label="small yellow rectangle in larger green rectangle" transform="translate(30,-90)"> 
+<p>How many rectangles are there and what colors are they?</p>
+<svg xmlns="https://www.w3.org/2000/svg" width="600" height="400"  role="presentation">
+	<g role="graphics-object" aria-label="1 small yellow rectangle in 1 larger green rectangle"> 
 		<rect fill="green" width="50" height="90"/> 
 		<rect fill="yellow" x="5" y="5" width="40" height="30" />
 	</g>
@@ -102,6 +106,7 @@ The `<svg>` child `<g>` element has visible content, is included in the accessib
 The `<svg>` element is included in the accessibility tree with an explicit role of `img`, has visible content rendered by the `<circle>` element, but has no accessible name.
 
 ```html
+<p>How many circles are there?</p>
 <svg xmlns="http://www.w3.org/2000/svg" role="img" width="100" height="100">
 	<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
 </svg>
@@ -112,9 +117,10 @@ The `<svg>` element is included in the accessibility tree with an explicit role 
 The `<svg>` element is included in the accessibility tree with an explicit role of `img`, has visible content rendered by the `<circle>` element, but has only has whitespace in the `<title>` element that is being used for the accessible name.
 
 ```html
+<p>How many circles are there?</p>
 <svg xmlns="http://www.w3.org/2000/svg" role="img" width="100" height="100" >
 	<title> </title>
-  	<circle role="none" cx="50" cy="50" r="40" fill="yellow"></circle>
+  	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```
 
@@ -123,9 +129,10 @@ The `<svg>` element is included in the accessibility tree with an explicit role 
 The `<svg>` element is included in the accessibility tree with an explicit role of `img`, has visible content rendered by the `<circle>` element, but has no content in the `<title>` element that is being used for the accessible name.
  
 ```html
+<p>How many circles are there?</p>
 <svg xmlns="http://www.w3.org/2000/svg" role="img" width="100" height="100">
 	<title></title>
-  	<circle role="none" cx="50" cy="50" r="40" fill="yellow"></circle>
+  	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```
 
@@ -134,20 +141,11 @@ The `<svg>` element is included in the accessibility tree with an explicit role 
 The `<circle>` elements have visible content, are included in the accessibility tree with the explicit role `graphics-symbol` but they have no have accessible names.
 
 ```html
+<p>How many circles are there?</p>
 <svg xmlns="http://www.w3.org/2000/svg" role="presentation">
 	<circle role="graphics-symbol" cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
 	<circle role="graphics-symbol" cx="150" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
 	<circle role="graphics-symbol" cx="250" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
-</svg>
-```
-
-#### Failed example 5
- 
-The `<svg>` element has a role of `img`, has visible content rendered by the `<circle>` element, but no accessible name. The `title` attribute is not defined in the SVG namespace.
-
-```html
-<svg xmlns="http://www.w3.org/2000/svg" role="img" title="previous page">
-  	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```
 
@@ -156,6 +154,7 @@ The `<svg>` element has a role of `img`, has visible content rendered by the `<c
 The `<circle>` element has visible content, is included in the accessibility tree with a valid `tabindex` attribute, but has no accessible name.
 
 ```html
+<p>How many circles are there?</p>
 <svg xmlns="http://www.w3.org/2000/svg">
   	<circle tabindex="0" cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
@@ -174,7 +173,7 @@ The `svg` element does not render any visible content to the screen and is not i
 
 #### Inapplicable example 2
 
-The `<svg>` element has visible content rendered by the `<circle>` element but with no explicit role indicating its purpose it is not included in the accessibility tree.
+The `<svg>` element has visible content rendered by the `<circle>` element but with no explicit role or accessible name indicating its purpose it is not included in the accessibility tree.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">

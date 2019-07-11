@@ -25,7 +25,7 @@ This rule applies to any `frameset` element that is [included in the accessibili
 
 ## Expectations
 
-Each `frame` element which is a child of the target `frameset` and is [included in the accessibility tree](#included-in-the-accessibility-tree) has an [accessible name](#accessible-name) which does not contains only [withespaces](#whitespace).
+Each `frame` element which is a child of the target `frameset` and is [included in the accessibility tree](#included-in-the-accessibility-tree) has an [accessible name](#accessible-name) that is not only [withespaces](#whitespace).
 
 ## Assumptions
 

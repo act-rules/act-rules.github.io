@@ -5,7 +5,7 @@ key: layout-table
 
 Table that have no tabular mark-up are interpreted by assistive technologies as layout table. According to WCAG this includes:	
 
-- No header cells: that is `th` elements, or `td` with ARIA roles rowheader and columnheader.	
+- No header cells: that is `th` elements, or `td` with ARIA roles `rowheader` and `columnheader`.	
 - No `caption` element.	
 - No (or empty) `summary` attribute.	
 - No `scope` or `headers` attributes on table cells.	

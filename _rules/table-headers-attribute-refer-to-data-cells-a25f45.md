@@ -204,8 +204,8 @@ The rule applies only to `table > td` element.
 ```html
 <div role="table">
   <div role="row">
-    <div class="columnheader" id="header1">Projects</div>
-    <div class="columnheader" id="header2">Exams</div>
+    <div role="columnheader" id="header1">Projects</div>
+    <div role="columnheader" id="header2">Exams</div>
   </div>
   <div role="row">
     <div role="cell" headers="header2">15%</div>

@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 557,
+  "count": 555,
   "testcases": [
     {
       "testcaseId": "0dbcbdb2eace03d1e3a89e12f7ec33e615ce1a20",
@@ -614,9 +614,9 @@
       }
     },
     {
-      "testcaseId": "2cd197ef17f9e4abcb27efbabe74714822182ec6",
-      "url": "https://act-rules.github.io/testcases/6a7281/2cd197ef17f9e4abcb27efbabe74714822182ec6.html",
-      "relativePath": "testcases/6a7281/2cd197ef17f9e4abcb27efbabe74714822182ec6.html",
+      "testcaseId": "bc3318ff3769aeac3c9e3e06f59630f98acf6d19",
+      "url": "https://act-rules.github.io/testcases/6a7281/bc3318ff3769aeac3c9e3e06f59630f98acf6d19.html",
+      "relativePath": "testcases/6a7281/bc3318ff3769aeac3c9e3e06f59630f98acf6d19.html",
       "expected": "passed",
       "ruleId": "6a7281",
       "ruleName": "ARIA state or property has valid value",
@@ -632,9 +632,9 @@
       }
     },
     {
-      "testcaseId": "5733652bc8c13be7f6b757020651b6a87c878aa0",
-      "url": "https://act-rules.github.io/testcases/6a7281/5733652bc8c13be7f6b757020651b6a87c878aa0.html",
-      "relativePath": "testcases/6a7281/5733652bc8c13be7f6b757020651b6a87c878aa0.html",
+      "testcaseId": "cfe0638e919d2d0b88bbcbabd90d35de79c968d4",
+      "url": "https://act-rules.github.io/testcases/6a7281/cfe0638e919d2d0b88bbcbabd90d35de79c968d4.html",
+      "relativePath": "testcases/6a7281/cfe0638e919d2d0b88bbcbabd90d35de79c968d4.html",
       "expected": "passed",
       "ruleId": "6a7281",
       "ruleName": "ARIA state or property has valid value",
@@ -650,9 +650,9 @@
       }
     },
     {
-      "testcaseId": "230f118e0a0dc3e44639426c95963ec3d6aa7039",
-      "url": "https://act-rules.github.io/testcases/6a7281/230f118e0a0dc3e44639426c95963ec3d6aa7039.html",
-      "relativePath": "testcases/6a7281/230f118e0a0dc3e44639426c95963ec3d6aa7039.html",
+      "testcaseId": "8c23c572dc00ef2364246bae98fac3daabf0d71f",
+      "url": "https://act-rules.github.io/testcases/6a7281/8c23c572dc00ef2364246bae98fac3daabf0d71f.html",
+      "relativePath": "testcases/6a7281/8c23c572dc00ef2364246bae98fac3daabf0d71f.html",
       "expected": "passed",
       "ruleId": "6a7281",
       "ruleName": "ARIA state or property has valid value",
@@ -668,9 +668,9 @@
       }
     },
     {
-      "testcaseId": "d02b2845aded6d20470c55a35714e5adc586ce05",
-      "url": "https://act-rules.github.io/testcases/6a7281/d02b2845aded6d20470c55a35714e5adc586ce05.html",
-      "relativePath": "testcases/6a7281/d02b2845aded6d20470c55a35714e5adc586ce05.html",
+      "testcaseId": "fe53ee105c942fb90385b9f198d34a1bcdaf2e11",
+      "url": "https://act-rules.github.io/testcases/6a7281/fe53ee105c942fb90385b9f198d34a1bcdaf2e11.html",
+      "relativePath": "testcases/6a7281/fe53ee105c942fb90385b9f198d34a1bcdaf2e11.html",
       "expected": "passed",
       "ruleId": "6a7281",
       "ruleName": "ARIA state or property has valid value",
@@ -686,9 +686,9 @@
       }
     },
     {
-      "testcaseId": "0d0904d92f05aab8cadc53800eca30949369c882",
-      "url": "https://act-rules.github.io/testcases/6a7281/0d0904d92f05aab8cadc53800eca30949369c882.html",
-      "relativePath": "testcases/6a7281/0d0904d92f05aab8cadc53800eca30949369c882.html",
+      "testcaseId": "2a7787fe33cc25e3493452150d0898817c9d71fc",
+      "url": "https://act-rules.github.io/testcases/6a7281/2a7787fe33cc25e3493452150d0898817c9d71fc.html",
+      "relativePath": "testcases/6a7281/2a7787fe33cc25e3493452150d0898817c9d71fc.html",
       "expected": "passed",
       "ruleId": "6a7281",
       "ruleName": "ARIA state or property has valid value",
@@ -722,9 +722,9 @@
       }
     },
     {
-      "testcaseId": "11fe91ac9c47f31d36a76b37663b2cbb999a3fe4",
-      "url": "https://act-rules.github.io/testcases/6a7281/11fe91ac9c47f31d36a76b37663b2cbb999a3fe4.html",
-      "relativePath": "testcases/6a7281/11fe91ac9c47f31d36a76b37663b2cbb999a3fe4.html",
+      "testcaseId": "2789c68caa0012aeb31dfe30f7f5dd8739874b18",
+      "url": "https://act-rules.github.io/testcases/6a7281/2789c68caa0012aeb31dfe30f7f5dd8739874b18.html",
+      "relativePath": "testcases/6a7281/2789c68caa0012aeb31dfe30f7f5dd8739874b18.html",
       "expected": "passed",
       "ruleId": "6a7281",
       "ruleName": "ARIA state or property has valid value",
@@ -740,27 +740,9 @@
       }
     },
     {
-      "testcaseId": "b1c96ffd7e041e7c634a1907f0a311bdb8b58c7b",
-      "url": "https://act-rules.github.io/testcases/6a7281/b1c96ffd7e041e7c634a1907f0a311bdb8b58c7b.html",
-      "relativePath": "testcases/6a7281/b1c96ffd7e041e7c634a1907f0a311bdb8b58c7b.html",
-      "expected": "passed",
-      "ruleId": "6a7281",
-      "ruleName": "ARIA state or property has valid value",
-      "rulePage": "https://act-rules.github.io/rules/6a7281",
-      "ruleAccessibilityRequirements": {
-        "aria11:state_prop_values": {
-          "title": "ARIA 1.1, 6.3 Values for States and Properties",
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "satisfied"
-        }
-      }
-    },
-    {
-      "testcaseId": "7788a353a3ebca580dc5f3872002ff94a7f34d5a",
-      "url": "https://act-rules.github.io/testcases/6a7281/7788a353a3ebca580dc5f3872002ff94a7f34d5a.html",
-      "relativePath": "testcases/6a7281/7788a353a3ebca580dc5f3872002ff94a7f34d5a.html",
+      "testcaseId": "62349f83498f0e10f19e822dd98bdb211f83ba43",
+      "url": "https://act-rules.github.io/testcases/6a7281/62349f83498f0e10f19e822dd98bdb211f83ba43.html",
+      "relativePath": "testcases/6a7281/62349f83498f0e10f19e822dd98bdb211f83ba43.html",
       "expected": "passed",
       "ruleId": "6a7281",
       "ruleName": "ARIA state or property has valid value",
@@ -812,9 +794,9 @@
       }
     },
     {
-      "testcaseId": "998a63d99d9de6672b91f8cd6f3003a9c647f809",
-      "url": "https://act-rules.github.io/testcases/6a7281/998a63d99d9de6672b91f8cd6f3003a9c647f809.html",
-      "relativePath": "testcases/6a7281/998a63d99d9de6672b91f8cd6f3003a9c647f809.html",
+      "testcaseId": "0823ce8f6b24a484304325b3fbb012623d657f52",
+      "url": "https://act-rules.github.io/testcases/6a7281/0823ce8f6b24a484304325b3fbb012623d657f52.html",
+      "relativePath": "testcases/6a7281/0823ce8f6b24a484304325b3fbb012623d657f52.html",
       "expected": "failed",
       "ruleId": "6a7281",
       "ruleName": "ARIA state or property has valid value",
@@ -830,9 +812,9 @@
       }
     },
     {
-      "testcaseId": "60d59ecd0e777b490477cd94612eb90e09c28a81",
-      "url": "https://act-rules.github.io/testcases/6a7281/60d59ecd0e777b490477cd94612eb90e09c28a81.html",
-      "relativePath": "testcases/6a7281/60d59ecd0e777b490477cd94612eb90e09c28a81.html",
+      "testcaseId": "76c03c757f3dd7e89ca5749f6f824cae441aa6c2",
+      "url": "https://act-rules.github.io/testcases/6a7281/76c03c757f3dd7e89ca5749f6f824cae441aa6c2.html",
+      "relativePath": "testcases/6a7281/76c03c757f3dd7e89ca5749f6f824cae441aa6c2.html",
       "expected": "failed",
       "ruleId": "6a7281",
       "ruleName": "ARIA state or property has valid value",
@@ -848,9 +830,9 @@
       }
     },
     {
-      "testcaseId": "f052f0b5c65b26fee7ebb45798ce39cf56caae69",
-      "url": "https://act-rules.github.io/testcases/6a7281/f052f0b5c65b26fee7ebb45798ce39cf56caae69.html",
-      "relativePath": "testcases/6a7281/f052f0b5c65b26fee7ebb45798ce39cf56caae69.html",
+      "testcaseId": "81a4026035da499c42cceccff76e9cebe47457d2",
+      "url": "https://act-rules.github.io/testcases/6a7281/81a4026035da499c42cceccff76e9cebe47457d2.html",
+      "relativePath": "testcases/6a7281/81a4026035da499c42cceccff76e9cebe47457d2.html",
       "expected": "failed",
       "ruleId": "6a7281",
       "ruleName": "ARIA state or property has valid value",
@@ -866,9 +848,9 @@
       }
     },
     {
-      "testcaseId": "0ea64cfd885be25607a0fe34acb4079d3439c1c6",
-      "url": "https://act-rules.github.io/testcases/6a7281/0ea64cfd885be25607a0fe34acb4079d3439c1c6.html",
-      "relativePath": "testcases/6a7281/0ea64cfd885be25607a0fe34acb4079d3439c1c6.html",
+      "testcaseId": "c183eaf5681481a94dd60c135ebdd27794951f20",
+      "url": "https://act-rules.github.io/testcases/6a7281/c183eaf5681481a94dd60c135ebdd27794951f20.html",
+      "relativePath": "testcases/6a7281/c183eaf5681481a94dd60c135ebdd27794951f20.html",
       "expected": "failed",
       "ruleId": "6a7281",
       "ruleName": "ARIA state or property has valid value",
@@ -902,9 +884,9 @@
       }
     },
     {
-      "testcaseId": "7afbeab63b888554e7522f2222283d3371258888",
-      "url": "https://act-rules.github.io/testcases/6a7281/7afbeab63b888554e7522f2222283d3371258888.html",
-      "relativePath": "testcases/6a7281/7afbeab63b888554e7522f2222283d3371258888.html",
+      "testcaseId": "e2b41918a3c99461f661356c584f51252035d78d",
+      "url": "https://act-rules.github.io/testcases/6a7281/e2b41918a3c99461f661356c584f51252035d78d.html",
+      "relativePath": "testcases/6a7281/e2b41918a3c99461f661356c584f51252035d78d.html",
       "expected": "failed",
       "ruleId": "6a7281",
       "ruleName": "ARIA state or property has valid value",
@@ -956,9 +938,9 @@
       }
     },
     {
-      "testcaseId": "a6d1ac448c016baa2f2444b73b6df0eaa5fddb38",
-      "url": "https://act-rules.github.io/testcases/6a7281/a6d1ac448c016baa2f2444b73b6df0eaa5fddb38.html",
-      "relativePath": "testcases/6a7281/a6d1ac448c016baa2f2444b73b6df0eaa5fddb38.html",
+      "testcaseId": "2afc4bb374e2d1f2aa2bbaa6eb9d50a6bc76658a",
+      "url": "https://act-rules.github.io/testcases/6a7281/2afc4bb374e2d1f2aa2bbaa6eb9d50a6bc76658a.html",
+      "relativePath": "testcases/6a7281/2afc4bb374e2d1f2aa2bbaa6eb9d50a6bc76658a.html",
       "expected": "failed",
       "ruleId": "6a7281",
       "ruleName": "ARIA state or property has valid value",
@@ -1028,27 +1010,9 @@
       }
     },
     {
-      "testcaseId": "a061b366c406becdb3e17ea272c93e4476d9fdc8",
-      "url": "https://act-rules.github.io/testcases/6a7281/a061b366c406becdb3e17ea272c93e4476d9fdc8.html",
-      "relativePath": "testcases/6a7281/a061b366c406becdb3e17ea272c93e4476d9fdc8.html",
-      "expected": "inapplicable",
-      "ruleId": "6a7281",
-      "ruleName": "ARIA state or property has valid value",
-      "rulePage": "https://act-rules.github.io/rules/6a7281",
-      "ruleAccessibilityRequirements": {
-        "aria11:state_prop_values": {
-          "title": "ARIA 1.1, 6.3 Values for States and Properties",
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "satisfied"
-        }
-      }
-    },
-    {
-      "testcaseId": "33d5fb943d1646ea745f4e1eb0bab13906a2db06",
-      "url": "https://act-rules.github.io/testcases/6a7281/33d5fb943d1646ea745f4e1eb0bab13906a2db06.html",
-      "relativePath": "testcases/6a7281/33d5fb943d1646ea745f4e1eb0bab13906a2db06.html",
+      "testcaseId": "64d445158585196ed6368b7165b8d36919fe0349",
+      "url": "https://act-rules.github.io/testcases/6a7281/64d445158585196ed6368b7165b8d36919fe0349.html",
+      "relativePath": "testcases/6a7281/64d445158585196ed6368b7165b8d36919fe0349.html",
       "expected": "inapplicable",
       "ruleId": "6a7281",
       "ruleName": "ARIA state or property has valid value",

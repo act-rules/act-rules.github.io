@@ -51,7 +51,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-A video element that has captions for all the audio backed into it.
+A video element that has captions for all the audio baked into it.
 
 ```html
 <video

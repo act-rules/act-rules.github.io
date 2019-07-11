@@ -11,6 +11,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_rules:
+  - 306c8a
   - b40fd1
   - e53727
 authors:
@@ -34,11 +35,17 @@ For each test target, either the outcome of at least one of the following rules 
 
 or the outcome of both these rules is passed:
 - (H70: Using frame elements to group blocks of repeated material)
-- (H64: Using the title attribute of the frame and iframe elements)
+- [Each frame in a frameset has an accessible name](https://act-rules.github.io/rules/306c8a)
+
+> Note to selves: can we have "set of documents/DOM trees" as input aspect?
+
+> Note to selves: G124 requires a set of "first focusable elements" to be internal link to content. G1 only needs one (and must go to main content). They are both very similar and I have merged them into 1 rule but cannot check the intent (*i.e.* are the links going to a meaningful place?)
 
 > Note to selves: H70 is about using `frame` as part of `frameset`, which is deprecated in HTML5. H64 is exactly "Iframe has an accessible name - cae760" but is here used `frame` instead of `iframe`. cae760 specifically rules out `frame` because they are deprecated… Should we consider them as deprecated and ignore this technique (and that will go in the catch all "this rule assume that no other technique is used")?
 
 > Note to selves: Both G123 and H69 require something at the start of each block of content. This is going to be annoying to figure out what exactly is a block of content that needs such a think…
+
+> Note to selves: For SCR28, it is (relatively) easy to check if there is collapsible content in a page, but, as always, not to automatically check if it is "repeated content". There could be a semi-auto rule that first ask where is the repeated content and then auto-check if it's collapsible. However, that would put the question as the very first check and thus ask it for each page, which is rather annoying. Might be bearable if answers can be given at a site wide level and not on a per page basis.
 
 ## Assumptions
 
@@ -50,7 +57,7 @@ This rule assumes that one of the techniques listed here is used to comply to WC
 
 Techniques and solutions that identify blocks of content are perfectly valid ways of passing [SC 2.4.1 Bypass blocks](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html). They are, however, directed toward screen readers users and keyboard users will not benefit for these. Techniques and solutions based on links will benefit all users and are therefore recommended. 
 
-Users of Assistive Technologies may have trouble with frame. Additionally, the `frame` element is marked as obsolete in HTML 5. Therefore, if `frameset` are not already used to organise the content, other techniques are preferred to satisfy this rule.
+Users of Assistive Technologies may have trouble with frames. Additionally, the `frame` element is marked as obsolete in HTML 5. Therefore, if `frameset` are not already used to organise the content, other techniques are preferred to satisfy this rule.
 
 ## Background
 - [Understanding Success Criterion 2.4.1: Bypass Blocks](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html)

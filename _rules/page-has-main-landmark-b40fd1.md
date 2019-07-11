@@ -34,6 +34,7 @@ _There are no major accessibility support issues known for this rule._
 ## Background
 
 - [ARIA11: Using ARIA landmarks to identify regions of a page](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11)
+- [ARIA Landmarks Example](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html)
 
 ## Test Cases
 

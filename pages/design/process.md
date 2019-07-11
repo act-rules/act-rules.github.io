@@ -1,8 +1,8 @@
 ---
-title: Process
+title: Process (DRAFT)
 ---
 
-## Overview of process/workflow in ACT Rules Community Group:
+## [DRAFT]: Overview of process/workflow in ACT Rules Community Group:
 
 - Ideas looking for initial approvals
 - To Do

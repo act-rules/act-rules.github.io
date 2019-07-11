@@ -49,13 +49,15 @@ Short description: Rules waiting to be picked up and worked on.
 ### Passes this stage and moves on to "In Progress" when: 
 
 ### Fails this stage and moves back a stage to "Ideas looking for initial approvals" when: 
-- ??? 
+- TBD
 
 ### Instructions for this stage
 
 #### Rule author's job for this stage: 
+TBD
 
 #### Reviewer's job for this stage: 
+TBD
 
 ## In Progress / Changes Requested
 Short description: Rule writing
@@ -75,7 +77,7 @@ Short description: Rule writing
 - Resolve all comments from reviewers.
 
 #### Reviewer's job for this stage: 
-- ???
+- TBD
 
 ## Needs Reviews
 
@@ -89,10 +91,13 @@ Short description: Rule writing
 - "Changes requested" reviews comes in, which moves it back to "In progress / Changes Requested"
 
 ### Instructions for this stage
+TBD
 
 #### Rule author's job for this stage:
+TBD
 
 #### Reviewer's job for this stage: 
+TBD
 
 ## Final Call (aka Call for Consensus (CFC))
 
@@ -128,7 +133,7 @@ If this happens, a new final call should be launched after the first one. It is 
 
 #### Rule author's job for this stage: 
 - Send email out to all of ACT Rules Community Group that rule is in Final Call for the next 2 weeks.
-- ...
+- ... (TBD)
 
 #### Reviewer's job for this stage: 
 - Thorough reviews, take time to dive into the rule.

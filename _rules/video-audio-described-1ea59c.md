@@ -50,12 +50,10 @@ A video element with a voiceover that describes the visual information.
 <video controls>
 	<source
 		src="../test-assets/rabbit-video/video-with-voiceover.mp4"
-		type="video/mp4"
-	/>
+		type="video/mp4">
 	<source
 		src="../test-assets/rabbit-video/video-with-voiceover.webm"
-		type="video/webm"
-	/>
+		type="video/webm">
 </video>
 ```
 
@@ -74,7 +72,7 @@ A video element with an audio description.
       <source src="../test-assets/rabbit-video.mp4" type="video/mp4">
     </video>
     <audio data-default="default" preload="none">
-      <source src="../test-assets/rabbit-video/audio-description.mp3" type="audio/mp3"  />
+      <source src="../test-assets/rabbit-video/audio-description.mp3" type="audio/mp3">
     </audio>
   </div>
 </figure>
@@ -95,8 +93,8 @@ A video element without an audio description.
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4">
+	<source src="../test-assets/rabbit-video/video.webm" type="video/webm">
 </video>
 ```
 
@@ -108,12 +106,10 @@ A video element with an incorrect audio description.
 <video controls>
 	<source
 		src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4"
-		type="video/mp4"
-	/>
+		type="video/mp4">
 	<source
 		src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm"
-		type="video/webm"
-	/>
+		type="video/webm">
 </video>
 ```
 
@@ -132,7 +128,7 @@ A video element with an incorrect audio description.
       <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4">
     </video>
     <audio data-default="default" preload="none">
-      <source src="../test-assets/rabbit-video/incorrect-audio-description.mp3" type="audio/mp3"  />
+      <source src="../test-assets/rabbit-video/incorrect-audio-description.mp3" type="audio/mp3">
     </audio>
   </div>
 </figure>
@@ -153,8 +149,8 @@ A video element without audio.
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4">
+	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm">
 </video>
 ```
 
@@ -164,7 +160,7 @@ A video element that is not visible on the page.
 
 ```html
 <video controls style="display: none;">
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4">
+	<source src="../test-assets/rabbit-video/video.webm" type="video/webm">
 </video>
 ```

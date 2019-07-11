@@ -84,8 +84,8 @@ A video element with a link to a text transcript.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"/>
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4">
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm">
 </video>
 <a href="../test-assets/rabbit-video/transcript.html">Transcript</a>
 ```
@@ -96,8 +96,8 @@ A video element with a track element that contains descriptions.
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4">
+	<source src="../test-assets/rabbit-video/video.webm" type="video/webm">
 	<track
 		kind="descriptions"
 		src="../test-assets/rabbit-video/descriptions.vtt"
@@ -133,12 +133,10 @@ A video element with an incorrect audio description.
 <video controls>
 	<source
 		src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4"
-		type="video/mp4"
-	/>
+		type="video/mp4">
 	<source
 		src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm"
-		type="video/webm"
-	/>
+		type="video/webm">
 </video>
 ```
 
@@ -148,8 +146,8 @@ A video element with a link to an incorrect text transcript on a different page.
 
 ```html
 <video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4">
+  <source src="../test-assets/rabbit-video/video.webm" type="video/webm">
 </video>
 <a href="../test-assets/rabbit-video/incorrect-transcript.html">Transcript</a>
 ```
@@ -160,8 +158,8 @@ A video element with a track element that contains incorrect descriptions.
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4">
+	<source src="../test-assets/rabbit-video/video.webm" type="video/webm">
 	<track
 		kind="descriptions"
 		src="../test-assets/rabbit-video/incorrect-descriptions.vtt"
@@ -194,8 +192,8 @@ A video element without audio.
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4">
+	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm">
 </video>
 ```
 
@@ -205,7 +203,7 @@ A video element that is not visible on the page.
 
 ```html
 <video controls style="display: none;">
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4">
+	<source src="../test-assets/rabbit-video/video.webm" type="video/webm">
 </video>
 ```

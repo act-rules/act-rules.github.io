@@ -45,8 +45,8 @@ A video element without audio has a separate audio track that describes the visu
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4">
+	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm">
 </video>
 
 <audio controls>
@@ -65,8 +65,8 @@ A video element without an audio track.
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4">
+	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm">
 </video>
 ```
 
@@ -76,8 +76,8 @@ A video element without audio has a separate audio track that incorrectly descri
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4">
+	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm">
 </video>
 
 <audio controls>
@@ -96,8 +96,8 @@ A video element with audio.
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4">
+	<source src="../test-assets/rabbit-video/video.webm" type="video/webm">
 </video>
 ```
 
@@ -107,7 +107,7 @@ A video element without sound that is not visible on the page.
 
 ```html
 <video controls style="display: none;">
-	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4">
+	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm">
 </video>
 ```

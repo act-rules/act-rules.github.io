@@ -495,7 +495,7 @@ export function getImplementationsCount(slug) {
 	return (
 		<div className="side-notes">
 			<div className="meta">
-				<h3 className="heading">Implementations: {metrics.length}</h3>
+				<span className="heading">Implementations: {metrics.length}</span>
 			</div>
 		</div>
 	)

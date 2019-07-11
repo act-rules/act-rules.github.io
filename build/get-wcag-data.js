@@ -5,7 +5,7 @@
  */
 const path = require('path')
 const axios = require('axios')
-const createFile = require('./create-file')
+const createFile = require('../utils/create-file')
 const pkg = require('./../package.json')
 const outputFileScMetaData = path.join(__dirname, '..', '_data', 'sc-urls.json')
 const outputFileScEmReportAuditResult = path.join(
@@ -15,6 +15,10 @@ const outputFileScEmReportAuditResult = path.join(
 	'sc-em-report-audit-result.json'
 )
 
+/**
+ * Determine if a given success criteria is 2.0
+ * @param {Object} sc success criterion
+ */
 const isScWcag20 = sc => {
 	const is20 = !(
 		sc.versions &&
@@ -24,6 +28,10 @@ const isScWcag20 = sc => {
 	return is20
 }
 
+/**
+ * Get enhanced meta data of success criterion
+ * @param {Object} sc success criteria
+ */
 const getMetaData = sc => {
 	const urlPrefix = `https://www.w3.org/TR/WCAG`
 	const is20 = isScWcag20(sc)
@@ -34,12 +42,12 @@ const getMetaData = sc => {
 		is20
 			? 'http://www.w3.org/WAI/WCAG20/quickref/#qr-'
 			: 'https://www.w3.org/WAI/WCAG21/quickref/#'
-	}${path}`
+		}${path}`
 	const understandingUrl = `${
 		is20
 			? 'http://www.w3.org/TR/UNDERSTANDING-WCAG20/'
 			: 'https://www.w3.org/WAI/WCAG21/Understanding/'
-	}/${path}.html`
+		}/${path}.html`
 	/**
 	 * Construct `test` - used by `wcag em report tool`
 	 */
@@ -59,10 +67,14 @@ const getMetaData = sc => {
 	}
 }
 
-const getScMetaData = async url => {
-	const { data } = await axios.get(url)
+/**
+ * Get all WCAG SC reference data
+ * @param {String} url URL
+ */
+const getWaiWcagReferenceData = async url => {
+	const { data: { principles } } = await axios.get(url)
+
 	const scMetaData = {}
-	const { principles } = data
 	principles.forEach(p =>
 		p.guidelines.forEach(g =>
 			g.successcriteria.forEach(sc => {
@@ -73,8 +85,12 @@ const getScMetaData = async url => {
 	return scMetaData
 }
 
-;(async () => {
+/**
+ * Init
+ */
+const init = async () => {
 	const wcagReferenceUrl = pkg.config.references.wcag21
+
 	if (!wcagReferenceUrl) {
 		throw new Error('No reference URL for WCAG21 is specified in config.')
 	}
@@ -82,11 +98,8 @@ const getScMetaData = async url => {
 	/**
 	 * Create a list of success criteria meta data
 	 */
-	const scMetaData = await getScMetaData(wcagReferenceUrl)
-	await createFile(
-		outputFileScMetaData,
-		JSON.stringify(scMetaData, undefined, 2)
-	)
+	const scMetaData = await getWaiWcagReferenceData(wcagReferenceUrl)
+	await createFile(outputFileScMetaData, JSON.stringify(scMetaData, undefined, 2))
 
 	/**
 	 * Create wcag em report tool friendly audit result array
@@ -106,10 +119,13 @@ const getScMetaData = async url => {
 			hasPart: [],
 		}
 	})
-	await createFile(
-		outputFileScEmReportAuditResult,
-		JSON.stringify(scEmReportAuditResult, undefined, 2)
-	)
 
-	console.info('\nDONE!!! Generated WCAG Success Criterion Data.\n')
-})()
+	await createFile(outputFileScEmReportAuditResult, JSON.stringify(scEmReportAuditResult, undefined, 2))
+}
+
+/**
+ * Invoke
+ */
+init()
+	.then(() => console.info('Completed: task: get:wcag:data.\n'))
+	.catch(e => console.error(e))

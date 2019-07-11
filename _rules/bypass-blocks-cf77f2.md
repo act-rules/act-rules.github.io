@@ -8,7 +8,7 @@ accessibility_requirements:
   wcag20:2.4.1: # Bypass Blocks (A)
     forConformance: true
     failed: not satisfied
-    passed: satisfied
+    passed: further testing needed
     inapplicable: further testing needed
 input_rules:
   - b40fd1

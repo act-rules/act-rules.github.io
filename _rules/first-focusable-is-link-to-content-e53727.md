@@ -8,7 +8,7 @@ accessibility_requirements:
   wcag-technique:G1: # Adding a link at the top of each page that goes directly to the main content area
 		forConformance: false
 		failed: not satisfied
-		passed: satisfied
+		passed: further testing needed
 		inapplicable: further testing needed
 input_aspects:
 	- DOM Tree
@@ -29,6 +29,8 @@ The first [focusable][#focusable] element of the [document element](#https://www
 - has an [accessible name][#accessible-name] that is not only [whitespaces][whitespace]; and
 - is [visible][visible] when [focused][#focused]; and
 - refers to an element within the same [document](#https://www.w3.org/TR/dom/#concept-document).
+
+**Note**: This rule does not check the pertinence of the link (does it goes to the main content area?) Therefore, passing this rule is not enough to satisfy WCAG technique [G1: Adding a link at the top of each page that goes directly to the main content area](https://www.w3.org/WAI/WCAG21/Techniques/general/G1).
 
 ## Assumptions
 

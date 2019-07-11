@@ -26,9 +26,8 @@ This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document
 
 For each test target, either the outcome of at least one of the following rules is passed:
 
-- [First focusable element is an internal link](https://act-rules.github.io/rules/e53727)
+- [First focusable elements are internal links](https://act-rules.github.io/rules/e53727)
 - (G123: Adding a link at the beginning of a block of repeated content to go to the end of the block)
-- (G124: Adding links at the top of the page to each area of the content)
 - [HTML page has a main landmark](https://act-rules.github.io/rules/b40fd1)
 - (H69: Providing heading elements at the beginning of each section of content)
 - (SCR28: Using an expandable and collapsible menu to bypass block of content)
@@ -38,8 +37,6 @@ or the outcome of both these rules is passed:
 - (H64: Using the title attribute of the frame and iframe elements)
 
 > Note to selves: H70 is about using `frame` as part of `frameset`, which is deprecated in HTML5. H64 is exactly "Iframe has an accessible name - cae760" but is here used `frame` instead of `iframe`. cae760 specifically rules out `frame` because they are deprecated… Should we consider them as deprecated and ignore this technique (and that will go in the catch all "this rule assume that no other technique is used")?
-
-> Note to selves: G1/e53727 checks that the 1st focusable is a link to main content. G124 requires that the first *n* focusables are links to various parts of the content. How to make them different (especially with n=1)?
 
 > Note to selves: Both G123 and H69 require something at the start of each block of content. This is going to be annoying to figure out what exactly is a block of content that needs such a think…
 

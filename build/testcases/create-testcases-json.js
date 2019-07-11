@@ -1,9 +1,5 @@
-const {
-	www: { url, baseDir },
-	author,
-	description,
-} = require('./../package.json')
-const createFile = require('../build/create-file')
+const { www: { url }, author, description } = require('./../../package.json')
+const createFile = require('../../utils/create-file')
 
 /**
  * Create `testcases.json`
@@ -19,7 +15,7 @@ const createTestcasesJson = async testcases => {
 	}
 
 	await createFile(
-		`${baseDir}/testcases.json`,
+		`_data/rules-testcases/testcases.json`,
 		JSON.stringify(AllTestcasesData, undefined, 2)
 	)
 }

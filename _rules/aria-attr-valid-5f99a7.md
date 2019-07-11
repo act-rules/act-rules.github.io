@@ -5,11 +5,6 @@ rule_type: atomic
 description: |
   This rule checks that each aria- attribute specified is defined in ARIA 1.1
 accessibility_requirements:
-  wcag20:4.1.2: # Name, Role, Value (A)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
 authors:
@@ -26,7 +21,7 @@ Each target attribute is defined in [WAI ARIA 1.1](https://www.w3.org/TR/wai-ari
 
 ## Assumptions
 
-The ARIA `attribute` is being used to comply to WCAG.
+_There are currently no assumptions_
 
 ## Accessibility Support
 
@@ -50,7 +45,7 @@ There are no major accessibility support issues known for this rule.
 A valid ARIA 1.1 attribute `aria-atomic` is used on element `article`.
 
 ```html
-<article aria-atomic>This is a decription of something cool...</article>
+<article aria-atomic="true">This is a decription of something cool...</article>
 ```
 
 #### Passed Example 2
@@ -58,7 +53,7 @@ A valid ARIA 1.1 attribute `aria-atomic` is used on element `article`.
 A valid ARIA 1.1 attribute `aria-modal` on element `div` with role `dialog`
 
 ```html
-<div role="dialog" aria-modal>Contains modal content...</div>
+<div role="dialog" aria-modal="true">Contains modal content...</div>
 ```
 
 #### Passed Example 3

@@ -26,6 +26,8 @@ The rule applies to elements that are [included in the accessibility tree](#incl
 
 Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
 
+**Note**: `input` elements of type `submit` and `reset` can get their accessible name from a [default text](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset), as well as from a `value` or other attribute.
+
 ## Assumptions
 
 - The rule assumes that all buttons are user interface components as defined by WCAG 2.
@@ -74,7 +76,7 @@ Value attribute as the accessible name.
 Span tag with role button and has name defined by aria-label.
 
 ```html
-<span role="button" aria-label="My button"></button>
+<span role="button" aria-label="My button"></span>
 ```
 
 #### Passed Example 5
@@ -120,6 +122,14 @@ Button has accessible name that is not only whitespace.
 <button>:-)</button>
 ```
 
+#### Passed example 9
+
+Input button has an accessible name that comes from the default "reset" text.
+
+```html
+<input type="reset" />
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -159,10 +169,10 @@ Off screen element without an accessible name.
 
 #### Failed example 4
 
-Button has an accessible name that is not only whitespace.
+Button has an accessible name that is only whitespace.
 
 ```html
-<button></button>
+<button> </button>
 ```
 
 ### Inapplicable

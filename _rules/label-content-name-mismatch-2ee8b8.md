@@ -1,6 +1,6 @@
 ---
 id: 2ee8b8
-name: label and name from content mismatch
+name: Label and name from content mismatch
 rule_type: atomic
 description: |
   Interactive elements labelled through their content must have their visible label as part of their accessible name

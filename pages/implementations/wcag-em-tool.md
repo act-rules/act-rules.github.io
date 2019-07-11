@@ -22,11 +22,11 @@ If you have a manual test methodology, where you fill results into some report t
 
 ## Step 3: Run The Testcases
 
-1. Under each success criterion set to "Cannot tell" click "Show web pages to enter 
-individual results
+1. Under each success criterion set to "Cannot tell" click "Show web pages to enter
+   individual results
 
-2. For every page, answer "passed", "failed" "not present" or "cannot tell" (this has to be 
-done on each success criterion
+2. For every page, answer "passed", "failed" "not present" or "cannot tell" (this has to be
+   done on each success criterion
 
 3. Go to "report findings" and enter your name under "evaluator"
 

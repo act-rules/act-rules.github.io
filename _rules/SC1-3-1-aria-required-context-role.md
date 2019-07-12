@@ -241,7 +241,7 @@ Role does not have any required context roles listed in WAI-ARIA spec.
 
 #### Inapplicable Example 4
 
-Element is not exposed to assistive technologies, since descendant has `aria-hidden` attribute with value set to `true`.
+Element is not exposed to assistive technologies, since ancestor has `aria-hidden` attribute with value set to `true`.
 
 ```html
 <div role="list" aria-hidden="true">

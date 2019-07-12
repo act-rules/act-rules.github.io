@@ -19,6 +19,8 @@ title: Process [DRAFT]
 ## Ideas looking for initial approvals
 Initial review of the general concept and validity of the rule.
 
+The purpose of this stage is to avoid that people spend a huge amount of time on writing rules and reviewing details in them to then see the whole concept of the rule rejected when looking for a final review. 
+
 ### Enters this stage when: 
 - A new rule is first proposed.
 
@@ -37,9 +39,6 @@ Initial review of the general concept and validity of the rule.
 - Focus on whether the rule is a valid test for the accessibility requirements (WCAG success criteria) that it lists.
 - Focus on whether you can agree to the general concept of the rule, or if the idea needs to be tweaked or rejected all together.
 - Be honest about your concerns, since rejecting a rule at this point will save a lot of resources compared to rejecting it at the Final Call later.
-
-### Background 
-The purpose of this stage is to avoid that people spend a huge amount of time on writing rules and reviewing details in them to then see the whole concept of the rule rejected when looking for a final review. 
 
 ## To do
 Rules waiting to be picked up and worked on.
@@ -111,7 +110,9 @@ Rules that have been fixed up by the author and are ready for review again, aimi
    - ... anything else --> Use "Comment" status
 
 ## Final Call (aka Call for Consensus (CFC))
-Final gatekeeping mechanism where the whole community gets to object to a rule, if they don't agree to it.
+Final gatekeeping mechanism where the whole community gets to object to a rule, if they don't agree to it, and implementors get a shot at trying it out in practice and giving feedback based on real-life experience with the rule.
+
+We encourage initial implementations BEFORE publishing the rule, so that all the feedback from the implementation can get included in the original pull request, instead of being raised as new issues for already published rules - making even published rules quite unstable.
 
 ### Enters this stage when:
 - Rule has 3 approvals from other organisations.
@@ -157,9 +158,6 @@ If this happens, a new final call should be launched after the first one. It is 
    - Implementations are important at this stage, since we often find things that needs to be changed in rules as soon as we start implementing them, e.g. issues with test cases, ambiguities in applicability or expectations, missing definitions etc.
 - Be aware that this is last chance to object to the rule, on everything from spelling and grammar to accessibility requirements mapping and use of definitions.
 - Keep up to date on Final Calls using this list: https://github.com/act-rules/act-rules.github.io/labels/Final%20call
-
-### Background
-We encourage initial implementations BEFORE publishing the rule, so that all the feedback from the implementation can get included in the original pull request, instead of being raised as new issues for already published rules - making even published rules quite unstable.
 
 ### Done
 Published rules

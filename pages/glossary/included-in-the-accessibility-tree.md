@@ -5,7 +5,7 @@ key: included-in-the-accessibility-tree
 
 DOM nodes included as nodes in the accessibility tree of platform specific accessibility APIs. 
 
-Nodes in the accessibility tree are exposed to assistive technologies, allowing users to interact with the object in a way that meets the requirements of the individual user.
+Nodes in the accessibility tree are exposed to assistive technologies, allowing users to interact with the objects in a way that meets the requirements of the individual user.
 
 The general rules for when nodes are included in the accessibility tree are defined in the [core accessibility API mappings](https://www.w3.org/TR/core-aam/). For native markup languages, such as HTML and SVG, additional rules for when nodes are [included in the accessibility tree](#included-in-the-accessibility-tree) can be found in the [HTML accessibility API mappings](https://www.w3.org/TR/html-aam/) and the [SVG accessibility API mappings](https://www.w3.org/TR/svg-aam/).
  

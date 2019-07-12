@@ -121,12 +121,12 @@ Programatically determinable headings provide a context that differentiates the 
 
 ```html
 <h2>Shipping address</h2>
-<label>Name<input id="name" type="text" name="name"/></label>
-<label>Street<input id="street" type="text" name="street"/></label>
+<label>Name<input id="shipping-name" type="text" name="name"/></label>
+<label>Street<input id="shipping-street" type="text" name="street"/></label>
 
 <h2>Billing address</h2>
-<label>Name<input id="name" type="text" name="name"/></label>
-<label>Street<input id="street" type="text" name="street"/></label>
+<label>Name<input id="billing-name" type="text" name="name"/></label>
+<label>Street<input id="billing-street" type="text" name="street"/></label>
 ````
 
 #### Passed Example 7
@@ -144,13 +144,13 @@ Otherwise identically named form fields can be differentiated both visually and 
 ```html
 <h2 aria-hidden="true">Shipping address</h2>
 <p id="shipping" style="display:none">(Shipping)</p>
-<label>Name<input id="name" type="text" name="name" aria-describedby="shipping" /></label>(Shipping
-<label>Street<input id="street" type="text" name="street" aria-describedby="shipping" /></label>
+<label>Name<input id="shipping-name" type="text" name="name" aria-describedby="shipping" /></label>
+<label>Street<input id="shipping-street" type="text" name="street" aria-describedby="shipping" /></label>
 
 <h2 aria-hidden="true">Billing address</h2>
 <p id="billing" style="display:none">(Billing)</p>
-<label>Name<input id="name" type="text" name="name" aria-describedby="billing"/></label>
-<label>Street<input id="street" type="text" name="street" aria-describedby="billing" /></label>
+<label>Name<input id="billing-name" type="text" name="name" aria-describedby="billing"/></label>
+<label>Street<input id="billing-street" type="text" name="street" aria-describedby="billing" /></label>
 ````
 
 #### Passed Example 9

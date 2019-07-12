@@ -4,13 +4,13 @@ title: Process [DRAFT]
 
 ## Overview of process/workflow in ACT Rules Community Group:
 
-- Ideas looking for initial approvals
-- To Do
-- In Progress
-- Needs Reviews
-- Final Call
-- Done
-- Rejected
+- [Ideas looking for initial approvals](#Ideas-looking-for-initial-approvals)
+- [To Do](#To-Do)
+- [In Progress](#In-Progress)
+- [Needs Reviews](#Needs-Reviews)
+- [Final Call](#Final-Call)
+- [Done](#Done)
+- [Rejected](#Rejected)
 
 (see workflow on the board here: https://github.com/auto-wcag/auto-wcag/projects/5)
 

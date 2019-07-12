@@ -6,10 +6,14 @@ rule_type: atomic
 description: |
    This rule checks that headings describe the topic or purpose of the content.
    
-success_criterion:
-- 2.4.6 # Headings and labels
+accessibility_requirements:
+- wcag2.0:2.4.6 # Headings and labels (AA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 
-test_aspects:
+input_aspects:
 - DOM Tree
 - CSS Styling
 
@@ -20,9 +24,7 @@ authors:
 - Carlos Duarte
 ---
 
-## Test procedure
-
-### Applicability
+## Applicability
 
 This rule applies to any element with the [semantic role](#semantic-role) of `heading` that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree) and has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
 
@@ -30,13 +32,13 @@ This rule applies to any element with the [semantic role](#semantic-role) of `he
 
 **Note**: This rule only applies to elements with the [semantic role](#semantic-role) of `heading`. Thus, it is a partial check for WCAG 2.0 success criterion 2.4.6, which applies to all headings regardless of semantic programming. In the success criteria "heading" is used in the general sense and includes elements that are not marked up as headings in the code, but still act visually as headings, e.g. by larger and/or bolder text.
 
-### Expectation 1
+## Expectation 1
 
 The [visible](#visible) heading, if there is any, of each target element describes the topic or purpose of its [visible](#visible) [section of the content](#section-of-content) in part or in its entirety, or the `heading` has no [visible](#visible) [section of the content](#section-of-content).
 
 **Note**: Headings do not need to be lengthy. A word, or even a single character, may suffice.
 
-### Expectations 2
+## Expectation 2
 
 The [accessible name](#accessible-name), if there is any, of each target element describes the topic or purpose of its [section of the content](#section-of-content) that is [included in the accessibility tree](#included-in-the-accessibility-tree) in part or its entirety, or the `heading` has no [section of the content](#section-of-content) that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
@@ -63,7 +65,7 @@ _There are no major accessibility support issues known for this rule._
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 The heading marked up with an `h` element describes the topic or purpose of its section of the content.
 
@@ -72,7 +74,7 @@ The heading marked up with an `h` element describes the topic or purpose of its 
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 The heading marked up with `role="heading"` describes the topic or purpose of its section of the content.
 
@@ -81,7 +83,7 @@ The heading marked up with `role="heading"` describes the topic or purpose of it
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 The heading marked up with `h` element contains an image and an accessible name that describes the topic or purpose of its section of the content.
 
@@ -90,7 +92,7 @@ The heading marked up with `h` element contains an image and an accessible name 
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 The heading marked up with `h` element is a single character that describes the topic or purpose of its section of the content.
 
@@ -104,7 +106,7 @@ The heading marked up with `h` element is a single character that describes the 
 </dl>
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 The heading marked up with `role="heading"` describes the topic or purpose of its section of the content. The heading is positioned off screen and is included in the accessibility tree.
 
@@ -113,7 +115,7 @@ The heading marked up with `role="heading"` describes the topic or purpose of it
 <p style="position: absolute; top: -9999px; left: -9999px;">We are open Monday through Friday from 10 to 16</p>
 ```
 
-#### Passed example 6
+#### Passed Example 6
 
 The heading marked up with `h` element describes the topic or purpose of its section of the content. The heading is visible, but is not included in the Accessibility Tree.
 
@@ -122,7 +124,7 @@ The heading marked up with `h` element describes the topic or purpose of its sec
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
-#### Passed example 7
+#### Passed Example 7
 
 The heading marked up with `h` element describes the topic or purpose of a part of its section of the content.
 
@@ -132,7 +134,7 @@ The heading marked up with `h` element describes the topic or purpose of a part 
 <p>Apples are great too, though.</p>
 ```
 
-#### Passed example 8
+#### Passed Example 8
 
 The heading marked up with `h` element doesn't have a section of content.
 
@@ -140,7 +142,7 @@ The heading marked up with `h` element doesn't have a section of content.
 <h1>Oranges on sale</h1>
 ```
 
-#### Passed example 9
+#### Passed Example 9
 
 The heading marked up with `h` element has visible text nodes and an accessible name that both describe the content, though the two are different.
 
@@ -149,7 +151,7 @@ The heading marked up with `h` element has visible text nodes and an accessible 
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
-#### Passed example 10
+#### Passed Example 10
 
 The visible heading is made up of an image of text, that also has an accessible name. Both the visible content and the accessible name describe the content.
 
@@ -158,29 +160,29 @@ The visible heading is made up of an image of text, that also has an accessible 
 <p>I really like oranges.</p>
 ```
 
-#### Passed example 11
+#### Passed Example 11
 
 heading visible + incl. in acc. tree
 content not visible but included in the acc. tree
 
 
-#### Passed example 11
+#### Passed Example 11
 
 heading incl. in acc. tree
 content only visible
 
-#### Passed example 11
+#### Passed Example 11
 
 heading both visible and included in the acc. tree
 part of content is visible, part of it is incl. in acc. tree
 
-#### Passed example 12
+#### Passed Example 12
 
 heading is visible, but not included in accessibility tree
 content is not visible, but included in the a accessibility tree
 heading is not descriptive, but it doesn't matter
 
-#### Passed example 13
+#### Passed Example 13
 
 heading is included in accessibility tree, but not visible
 content is visible, but not included in accessibility tree
@@ -188,7 +190,7 @@ heading is not descriptive, but it doesn't matter
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 The heading marked up with `h` element does not describe the topic or purpose of its section of the content.
 
@@ -197,7 +199,7 @@ The heading marked up with `h` element does not describe the topic or purpose of
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 The heading marked up with `role="heading"` does not describe the topic or purpose of its section of the content.
 
@@ -206,7 +208,7 @@ The heading marked up with `role="heading"` does not describe the topic or purpo
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 The heading marked up with `role="heading"` does not describe the topic or purpose of its section of the content. The heading is positioned off screen and is included in the Accessibility Tree.
 
@@ -215,7 +217,7 @@ The heading marked up with `role="heading"` does not describe the topic or purpo
 <p style="position: absolute; top: -9999px; left: -9999px;">We are open Monday through Friday from 10 to 16</p>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 The heading marked up with `h` element does not describe the topic or purpose of its section of the content. The heading is visible, but is not included in the Accessibility Tree.
 
@@ -224,7 +226,7 @@ The heading marked up with `h` element does not describe the topic or purpose of
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
-#### Failed example 5
+#### Failed Example 5
 
 The heading marked up with `h` element has visible text nodes that describe the content, but the accessible name doesn't.
 
@@ -234,7 +236,7 @@ The heading marked up with `h` element has visible text nodes that describe the 
 <p id="id1">Weather</p>
 ```
 
-#### Failed example 6
+#### Failed Example 6
 
 The heading marked up with `h` element has an accessible name that describes the content, but the visible text nodes don't.
 
@@ -243,19 +245,19 @@ The heading marked up with `h` element has an accessible name that describes the
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
-### Failed example 7
+### Failed Example 7
 
 heading visible 
 part of content visible, and heading doesn't describe it
 
-### Failed example 8
+### Failed Example 8
 
 heading is included in the acc. tree
 part of content is included in acc. tree and heading doesn't describe it
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 No heading.
 
@@ -263,7 +265,7 @@ No heading.
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 The heading is neither visible to users, nor included in the accessibility tree.
 
@@ -272,7 +274,7 @@ The heading is neither visible to users, nor included in the accessibility tree.
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 The heading marked up with `h` element does not contain visible content or has an accessible name that is not only [whitespace](#whitespace).
 
@@ -281,7 +283,7 @@ The heading marked up with `h` element does not contain visible content or has a
 <h1></h1>
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 The heading marked up with `role="heading"` does not contain visible content or has an accessible name that is not only [whitespace](#whitespace).
 
@@ -289,7 +291,7 @@ The heading marked up with `role="heading"` does not contain visible content or 
 <span role="heading"  aria-label=" "></span>
 ```
 
-#### Inapplicable example 5 
+#### Inapplicable Example 5 
 
 A heading with only breaks is not [visible](#visible).
 

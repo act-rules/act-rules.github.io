@@ -1,8 +1,8 @@
 ---
-title: Process (DRAFT)
+title: Process [DRAFT]
 ---
 
-## [DRAFT]: Overview of process/workflow in ACT Rules Community Group:
+## Overview of process/workflow in ACT Rules Community Group:
 
 - Ideas looking for initial approvals
 - To Do
@@ -14,8 +14,10 @@ title: Process (DRAFT)
 
 (see workflow on the board here: https://github.com/auto-wcag/auto-wcag/projects/5)
 
+**Note:** The steps in the process, as outlined above, are agreed upon by the ACT Rules Community Group on teleconference calls. This document however, is still work in progress and is still missing bits and pieces.
+
 ## Ideas looking for initial approvals
-Short description: Initial review of the general concept and validity of the rule.
+Initial review of the general concept and validity of the rule.
 
 ### Enters this stage when: 
 - A new rule is first proposed.
@@ -40,27 +42,28 @@ Short description: Initial review of the general concept and validity of the rul
 The purpose of this stage is to avoid that people spend a huge amount of time on writing rules and reviewing details in them to then see the whole concept of the rule rejected when looking for a final review. 
 
 ## To do
-Short description: Rules waiting to be picked up and worked on.
+Rules waiting to be picked up and worked on.
 
 ### Enters this stage when: 
 - Rule ideas: Rules that have passed the "Ideas looking for initial approvals" stage, or
 - Published rules: Bugs that have been reported in for published rules.
 
 ### Passes this stage and moves on to "In Progress" when: 
+- When someone has picked up the rule and started working on it.
 
 ### Fails this stage and moves back a stage to "Ideas looking for initial approvals" when: 
-- TBD
+- The author decides that more discussion of the initial idea is needed.
 
 ### Instructions for this stage
 
 #### Rule author's job for this stage: 
-TBD
+- Decide whether this is a rule the author would like to pick up.
 
 #### Reviewer's job for this stage: 
-TBD
+- None
 
 ## In Progress / Changes Requested
-Short description: Rule writing
+Rule writing
 
 ### Enters this stage when: 
 - Work on a "To do" item is being picked up by someone.
@@ -69,6 +72,7 @@ Short description: Rule writing
 - There are no open comments from reviewers. 
 
 ### Fails this stage and moves back a stage to "To Do" when: 
+- Work on the rule is put on hold for a significant amount of time. The "On hold" label can be used to signal this to potential reviewers.
 
 ### Instructions for this stage
 
@@ -77,9 +81,10 @@ Short description: Rule writing
 - Resolve all comments from reviewers.
 
 #### Reviewer's job for this stage: 
-- TBD
+- None, unless specifically asked by the author to give feedback on something particular.
 
 ## Needs Reviews
+Rules that have been fixed up by the author and are ready for review again, aiming to get 3 approvals.
 
 ### Enters this stage when: 
 - All open comments have been resolved, and all "Changes requested" reviews dismissed.
@@ -91,15 +96,22 @@ Short description: Rule writing
 - "Changes requested" reviews comes in, which moves it back to "In progress / Changes Requested"
 
 ### Instructions for this stage
-TBD
 
 #### Rule author's job for this stage:
-TBD
+- Assign reviewers to the rule in Github.
+- IMPORTANT: Dismiss any outdated reviews and re-assign the person as a reviewer (this helps reviewers see, that the rule is ready for review again).
+- If reviews are missing, take it up on CG mailing list or teleconference calls.
 
 #### Reviewer's job for this stage: 
-TBD
+- Review the rule thoroughly.
+- Use the [Definition of Done](https://act-rules.github.io/pages/design/definition-of-done/) as a checklist for the review.
+- If you consider the rule to be:  
+   - ... ready for publication --> Use "Approve" status
+   - ... in need of changes, big or small (even if you didn't do a full review) --> Use "Request changes" status (and make comments)
+   - ... anything else --> Use "Comment" status
 
 ## Final Call (aka Call for Consensus (CFC))
+Final gatekeeping mechanism where the whole community gets to object to a rule, if they don't agree to it.
 
 ### Enters this stage when:
 - Rule has 3 approvals from other organisations.
@@ -122,7 +134,7 @@ These changes are considered non-substantial and will not require a "Final call"
 - Changes to the Assumptions, Background, Accessibility Support. If changes to these sections seem to impact the possible outcomes of a rule, probably these sections have been misused.
 
 ### Passes this stage when:
-- No changes or only changes that do not require a final call is made to the rule after Final Call is launched.
+- No changes or only changes that *do not* require a "Final call" is made to the rule after "Final Call" is launched.
 
 ### Fails this stage and moves back two stages to "In Progress" when: 
 - Changes that do require a final call is made to the rule after Final Call is launched.
@@ -132,8 +144,10 @@ If this happens, a new final call should be launched after the first one. It is 
 ### Instructions for this stage
 
 #### Rule author's job for this stage: 
-- Send email out to all of ACT Rules Community Group that rule is in Final Call for the next 2 weeks.
-- ... (TBD)
+- Send email out to all of ACT Rules Community Group that rule is in "Final call" for the next 2 weeks.
+- Follow up on feedback during the Final Call, and handle requested changes, evaluating whether they are of a type that MUST spawn a new "Final call":
+   - For changes that *does not* require a "Final call" (see above): Implement changes as soon as possible, and dismiss outdated reviews (to let all reviewers know that the pull request is review ready), and request a new review from that person.
+   - For changes that *does* require a new "Final call": Evaluate whether "Final call" should be allowed to run out before changes are made, or if changes should be made right away, but with a note that a new "Final call" will be required.
 
 #### Reviewer's job for this stage: 
 - Thorough reviews, take time to dive into the rule.
@@ -148,12 +162,14 @@ If this happens, a new final call should be launched after the first one. It is 
 We encourage initial implementations BEFORE publishing the rule, so that all the feedback from the implementation can get included in the original pull request, instead of being raised as new issues for already published rules - making even published rules quite unstable.
 
 ### Done
+Published rules
 
 ### Enters this stage when: 
 - A rule has received 3 approvals from 3 different organisations and successfully survived its 2 week Final Call (if applicable), and has been merged and is now shown on rules overview on the website: https://act-rules.github.io/rules/ (might take a few minutes to update after merge).
 
 ### Rejected
+Rules that have been rejected due to different reasons.
 
 ### Enters this stage when: 
 - Initial rules don't get the backing they need to move on through the process.
-- When a rule at any stage is dropped because it lacks backing in the Community Group.
+- When a rule at any stage is dropped because it lacks backing in the Community Group, e.g. because it is not considered feasible, or is subject to disagreement on whether the rule is actually testing for something that can improve accessibility.

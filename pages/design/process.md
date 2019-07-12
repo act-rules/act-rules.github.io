@@ -14,7 +14,7 @@ title: Process [DRAFT]
 
 (see workflow on the board here: https://github.com/auto-wcag/auto-wcag/projects/5)
 
-**Note:** The steps in the process, as outlined above, are agreed upon by the ACT Rules Community Group on teleconference calls. This document however, is still work in progress and is still missing bits and pieces.
+**Note:** The steps in the process, as outlined above, are agreed upon by the ACT Rules Community Group on teleconference calls. This document however, is still work in progress.
 
 ## Ideas looking for initial approvals
 Initial review of the general concept and validity of the rule.

@@ -18,11 +18,11 @@ authors:
 
 ## Applicability
 
-This rule applies to `th` elements within a `table` that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+This rule applies to `th` elements within a `table`, where the `table` is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ## Expectation
 
-Each target element is either the row header or the column header for data cells that are not empty (""), within the same `table`.
+Each target element is either the row header or the column header for data cells within the same `table`.
 
 ## Assumptions
 
@@ -141,39 +141,29 @@ Each `th` element has corresponding `cells` within the same `table`, by usage of
 
 #### Failed Example 1
 
-Not all `th` elements within the `table` have corresponding `cells`.
+`th` elements within the `table` do not have corresponding `cells`.
 
 ```html
 <table>
 	<tr>
-		<th scope="col">Name</th>
-		<th scope="col">Age</th>
-		<th scope="col">Birthday</th>
+		<th>Header 1</th>
 	</tr>
 	<tr>
-		<th scope="row">Jackie</th>
-		<td>5</td>
-		<td></td>
-	</tr>
-	<tr>
-		<th scope="row">Beth</th>
-		<td>8</td>
+		<th>Header 2</th>
 	</tr>
 </table>
 ```
 
 #### Failed Example 2
 
-`th` has corresponding empty `cell`.
+`th` does not have `cell`.
 
 ```html
 <table>
-  <tr> 
-    <th>Time</th> 
-  </tr>
-  <tr> 
-    <td></td> 
-  </tr>
+	<tr>
+		<td>Item 1</td>
+		<td role="columnheader">Item Header</td>
+	</tr>
 </table>
 ```
 
@@ -230,7 +220,7 @@ The rule only applies to `table` element that is included in the accessibility t
 
 #### Inapplicable Example 4
 
-The rule only applies to `table` element that is visible.
+The rule only applies to `table` element that is both visible and included in the accessibility tree.
 
 ```html
 <table style="display:none;">

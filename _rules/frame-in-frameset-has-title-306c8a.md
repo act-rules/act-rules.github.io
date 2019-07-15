@@ -1,9 +1,9 @@
 ---
 id: 306c8a
-name: Each frame in a frameset has a title
+name: Each frame has a title
 rule_type: atomic
 description: |
-  This rule checks that each frame within a frameset has a title attribute
+  This rule checks that each frame has a title attribute
 accessibility_requirements:
   wcag-technique:H64: # Using the title attribute of the frame and iframe elements
 		forConformance: false
@@ -19,13 +19,15 @@ authors:
 
 ## Applicability
 
-This rule applies to any `frameset` element that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+This rule applies to any `frame` element that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
-**Note**: `frameset` and `frame` are deprecated in HTML5. This rule is for testing older pages which used them in the first place. It is not a good idea to add `frameset` and `frame` to pages that do not contain any.
+**Note**: `frame` and `frameset` are deprecated in HTML5. This rule is for testing older pages which used them in the first place. It is not a good idea to add `frame` and `frameset` to pages that do not contain any.
 
 ## Expectations
 
-Each `frame` element which is a child of the target `frameset` and is [included in the accessibility tree](#included-in-the-accessibility-tree) has a title attribute whose value is not only [withespaces](#whitespace).
+The test target:
+- is [included in the accessibility tree](#included-in-the-accessibility-tree); and
+- has a `title` attribute whose value is not only [withespaces](#whitespace).
 
 ## Assumptions
 

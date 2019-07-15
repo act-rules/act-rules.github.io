@@ -11,10 +11,12 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_rules:
+  - 047fe0
   - 306c8a
   - 5effbb
   - 7b576d
   - b40fd1
+  - cefbef
   - e38767
   - e53727
 authors:
@@ -33,13 +35,15 @@ This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document
 
 - Each block of content repeated among the test targets passes rule [Link to skip block of content](https://act-rules.github.io/rules/7b576d)
 
+- The test target passes one of the following rules:
+  - [Document has headings](https://act-rules.github.io/rules/047fe0)
+  - [HTML page has a main landmark](https://act-rules.github.io/rules/b40fd1)
+
+- Each block of content repeated among the test targets passes rule [Block of content is expandable and collapsible](https://act-rules.github.io/rules/cefbef)
+
+
 
 For each test target, either the outcome of at least one of the following rules is passed:
-
-- [First focusable elements are internal links](https://act-rules.github.io/rules/e53727)
-- [HTML page has a main landmark](https://act-rules.github.io/rules/b40fd1)
-- (H69: Providing heading elements at the beginning of each section of content)
-- (SCR28: Using an expandable and collapsible menu to bypass block of content)
 
 or the outcome of both these rules is passed:
 - (H70: Using frame elements to group blocks of repeated material)
@@ -47,12 +51,6 @@ or the outcome of both these rules is passed:
 
 > Note to selves: H70 is about using `frame` as part of `frameset`, which is deprecated in HTML5. H64 is exactly "Iframe has an accessible name - cae760" but is here used `frame` instead of `iframe`. cae760 specifically rules out `frame` because they are deprecated… Should we consider them as deprecated and ignore this technique (and that will go in the catch all "this rule assume that no other technique is used")?
 => Do it with frames. See what happen.
-
-> Note to selves: Both G123 and H69 require something at the start of each block of content. This is going to be annoying to figure out what exactly is a block of content that needs such a think…
-=> H69 is essentially same as "heading is descriptive".
-
-> Note to selves: For SCR28, it is (relatively) easy to check if there is collapsible content in a page, but, as always, not to automatically check if it is "repeated content". There could be a semi-auto rule that first ask where is the repeated content and then auto-check if it's collapsible. However, that would put the question as the very first check and thus ask it for each page, which is rather annoying. Might be bearable if answers can be given at a site wide level and not on a per page basis.
-=> try set of pages as input. Write rule as "for each repeated, there exist a button/link"
 
 ## Assumptions
 

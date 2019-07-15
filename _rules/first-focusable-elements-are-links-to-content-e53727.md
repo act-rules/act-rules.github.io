@@ -25,21 +25,21 @@ authors:
 
 ## Applicability
 
-This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element.
+This rule applies to any HTML [focusable](#focusable) element within a [document](https://www.w3.org/TR/dom/#concept-document) where the [document element](https://www.w3.org/TR/dom/#document-element) is an HTML `html` element.
 
-## Expectations
+## Expectation 1
 
-Each of the first [focusable][#focusable] elements of the [document element](#https://www.w3.org/TR/dom/#document-element):
-- has [semantic role][#semantic-role] of link; and
+The test target:
 - has an [accessible name][#accessible-name] that is not only [whitespaces][whitespace]; and
 - is [visible][visible] when [focused][#focused]; and
-- refers to an element within the same [document](#https://www.w3.org/TR/dom/#concept-document).
+- is has a [semantic role](#semantic-role) of link; and
+- refers to an element within the same [document](https://www.w3.org/TR/dom/#concept-document).
+
+## Expectation 2
+
+Every [focusable](#focusable) element which is before the test target in focus order is passing Expectation 1.
 
 **Note**: This rule does not check the pertinence of the links (does it goes to the content area?) Therefore, passing this rule is not enough to satisfy WCAG technique [G1: Adding a link at the top of each page that goes directly to the main content area](https://www.w3.org/WAI/WCAG21/Techniques/general/G1) or [G124: Adding links at the top of the page to each area of the content](https://www.w3.org/WAI/WCAG21/Techniques/general/G124).
-
-**Note**: There is no requirement on the number of elements in that concerned by this rule (one is enough).
-
-**Note**: There is no requirement to mark which [focusable][#focusable] elements are concerned by this rule, apart from the fact that these need to be the first elements in focus order. There is no need to mark where that set of elements stops.
 
 ## Assumptions
 

@@ -1,9 +1,9 @@
 ---
 id: 306c8a
-name: Each frame in a frameset has an accessible name
+name: Each frame in a frameset has a title
 rule_type: atomic
 description: |
-  This rule checks that each frame within a frameset has an accessible name
+  This rule checks that each frame within a frameset has a title attribute
 accessibility_requirements:
   wcag-technique:H64: # Using the title attribute of the frame and iframe elements
 		forConformance: false
@@ -25,7 +25,7 @@ This rule applies to any `frameset` element that is [included in the accessibili
 
 ## Expectations
 
-Each `frame` element which is a child of the target `frameset` and is [included in the accessibility tree](#included-in-the-accessibility-tree) has an [accessible name](#accessible-name) that is not only [withespaces](#whitespace).
+Each `frame` element which is a child of the target `frameset` and is [included in the accessibility tree](#included-in-the-accessibility-tree) has a title attribute whose content is not only [withespaces](#whitespace).
 
 ## Assumptions
 

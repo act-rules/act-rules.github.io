@@ -19,12 +19,12 @@ authors:
 
 ## Applicability
 
-The rule applies to every `<meta name="viewport">` elements with a `content` attribute in a document.
+The rule applies to each `<meta name="viewport">` element with a `content` attribute.
 
 ## Expectation
 
 The `content` attribute of the test target: 
-- does not have the property `user-scalable` or it is set to `yes`and
+- either does not have the property `user-scalable` or has it set to yes; and
 - does not have the property `maximum-scale`. 
 
 ## Assumptions
@@ -37,7 +37,10 @@ _There are currently no assumptions._
 
 ## Background
 
+- [WCAG Success Criterion 1.4.10 Reflow](https://www.w3.org/TR/WCAG21/#reflow)
+- [Understanding Success Criterion 1.4.10: Reflow](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html)
 - [The `meta` element](https://www.w3.org/TR/html52/document-metadata.html#the-meta-element)
+
 
 ## Test Cases
 
@@ -45,7 +48,7 @@ _There are currently no assumptions._
 
 #### Passed Example 1
 
-The `<meta name="viewport">` does not define the `maximum-scale` and `user-scalable` properties.
+The `<meta name="viewport">` element does not define the `maximum-scale` and `user-scalable` properties.
 
 ````html
 <head>
@@ -55,7 +58,7 @@ The `<meta name="viewport">` does not define the `maximum-scale` and `user-scala
 
 #### Passed Example 2
 
-The `<meta name="viewport">` defines the `user-scalable=yes` so the user can still zoom in.
+The `<meta name="viewport">` element defines the `user-scalable=yes` so the user can still zoom in.
 
 ````html
 <head>
@@ -65,7 +68,7 @@ The `<meta name="viewport">` defines the `user-scalable=yes` so the user can sti
 
 #### Passed Example 3
 
-The `<meta name="viewport">` with an empty `content` attribute.
+The `<meta name="viewport">` element with an empty `content` attribute.
 
 ````html
 <head>
@@ -77,7 +80,7 @@ The `<meta name="viewport">` with an empty `content` attribute.
 
 #### Failed Example 1
 
-The `<meta name="viewport">` defines the `user-scalable=no` so the user can't zoom in.
+The `<meta name="viewport">` element defines the `user-scalable=no` so the user can't zoom in.
 
 ````html
 <head>
@@ -87,7 +90,7 @@ The `<meta name="viewport">` defines the `user-scalable=no` so the user can't zo
 
 #### Failed Example 2
 
-The `<meta name="viewport">` sets the `maximum-scale=1.0` so the user can't zoom in.
+The `<meta name="viewport">` element sets the `maximum-scale=1.0` so the user can't zoom in.
 
 ````html
 <head>
@@ -97,7 +100,7 @@ The `<meta name="viewport">` sets the `maximum-scale=1.0` so the user can't zoom
 
 #### Failed Example 3
 
-The `<meta name="viewport">` sets the `maximum-scale=2` so the user can't zoom in more than twice.
+The `<meta name="viewport">` element sets the `maximum-scale=2` so the user can't zoom in more than twice.
 
 ````html
 <head>
@@ -109,12 +112,24 @@ The `<meta name="viewport">` sets the `maximum-scale=2` so the user can't zoom i
 
 #### Inapplicable Example 1
 
-The `<meta name="viewport">` is not present within the page.
+The `<meta name="viewport">` element is not present within the page.
 
 ````html
 <html>
   <head>
     <meta http-equiv="refresh" content="0; URL='https://github.com'">
+  </head>
+</html>
+````
+
+#### Inapplicable Example 2
+
+The `<meta name="viewport">` element does not have `content` attribute.
+
+````html
+<html>
+  <head>
+    <meta name="viewport">
   </head>
 </html>
 ````

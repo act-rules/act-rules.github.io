@@ -25,7 +25,7 @@ This rule applies to any `frameset` element that is [included in the accessibili
 
 ## Expectations
 
-Each `frame` element which is a child of the target `frameset` and is [included in the accessibility tree](#included-in-the-accessibility-tree) has a title attribute whose content is not only [withespaces](#whitespace).
+Each `frame` element which is a child of the target `frameset` and is [included in the accessibility tree](#included-in-the-accessibility-tree) has a title attribute whose value is not only [withespaces](#whitespace).
 
 ## Assumptions
 

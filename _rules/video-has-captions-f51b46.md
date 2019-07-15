@@ -68,8 +68,7 @@ A video element with an associated track element that contain captions for all t
 <video src="../test-assets/perspective-video/perspective-video.mp4" controls>
 	<track
 		src="/test-assets/perspective-video/perspective-caption.vtt"
-		kind="captions"
-	/>
+		kind="captions">
 </video>
 ```
 
@@ -97,8 +96,7 @@ A video element with an associated track element that contain incorrect captions
 >
 	<track
 		src="/test-assets/perspective-video/perspective-incorrect-caption.vtt"
-		kind="captions"
-	/>
+		kind="captions">
 </video>
 ```
 

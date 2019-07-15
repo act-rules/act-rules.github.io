@@ -79,7 +79,7 @@ A video only element with a track element that contains descriptions.
 <video controls>
 	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4">
 	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm">
-	<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
+	<track kind="descriptions" src="rabbit-video-descriptions.vtt">
 </video>
 ```
 
@@ -143,7 +143,7 @@ A video only element with a track element that contains incorrect descriptions.
 <video controls>
 	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4">
 	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm">
-	<track kind="descriptions" src="rabbit-video-incorrect-descriptions.vtt" />
+	<track kind="descriptions" src="rabbit-video-incorrect-descriptions.vtt">
 </video>
 ```
 
@@ -172,8 +172,7 @@ A video element without audio has a separate audio track that incorrectly descri
 <audio controls>
 	<source
 		src="../test-assets/rabbit-video/incorrect-audio-description.mp3"
-		type="audio/mpeg"
-	/>
+		type="audio/mpeg">
 </audio>
 ```
 
@@ -194,8 +193,8 @@ A video element with audio.
 <video
 	data-rule-target
 	src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4"
-	controls
-></video>
+	controls>
+</video>
 ```
 
 #### Inapplicable Example 2
@@ -206,6 +205,6 @@ A video only element that is not visible on the page.
 <video controls style="display: none;">
 	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4">
 	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm">
-	<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
+	<track kind="descriptions" src="rabbit-video-descriptions.vtt">
 </video>
 ```

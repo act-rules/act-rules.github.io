@@ -56,8 +56,7 @@ A video element with a track element that contains descriptions.
 	<source src="../test-assets/rabbit-video/video.webm" type="video/webm">
 	<track
 		kind="descriptions"
-		src="../test-assets/rabbit-video/descriptions.vtt"
-	/>
+		src="../test-assets/rabbit-video/descriptions.vtt">
 </video>
 ```
 
@@ -73,8 +72,7 @@ A video element with a track element that contains incorrect descriptions.
 	<source src="../test-assets/rabbit-video/video.webm" type="video/webm">
 	<track
 		kind="descriptions"
-		src="../test-assets/rabbit-video/incorrect-descriptions.vtt"
-	/>
+		src="../test-assets/rabbit-video/incorrect-descriptions.vtt">
 </video>
 ```
 
@@ -101,8 +99,7 @@ A video element that is not visible on the page.
 	<source src="../test-assets/rabbit-video/video.webm" type="video/webm">
 	<track
 		kind="descriptions"
-		src="../test-assets/rabbit-video/descriptions.vtt"
-	/>
+		src="../test-assets/rabbit-video/descriptions.vtt">
 </video>
 ```
 
@@ -116,7 +113,6 @@ A video element without audio.
 	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm">
 	<track
 		kind="descriptions"
-		src="../test-assets/rabbit-video/descriptions.vtt"
-	/>
+		src="../test-assets/rabbit-video/descriptions.vtt">
 </video>
 ```

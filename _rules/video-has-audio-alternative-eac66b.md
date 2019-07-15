@@ -56,8 +56,7 @@ A video element with an associated track element that contains captions for all 
 <video src="../test-assets/perspective-video/perspective-video.mp4" controls>
 	<track
 		src="/test-assets/perspective-video/perspective-caption.vtt"
-		kind="captions"
-	/>
+		kind="captions">
 </video>
 ```
 
@@ -75,8 +74,8 @@ A video element that describes some of the text on the same page. The text on th
 </p>
 <video
 	src="../test-assets/perspective-video/perspective-video.mp4"
-	controls
-></video>
+	controls>
+</video>
 ```
 
 ### Failed
@@ -88,8 +87,8 @@ A video element without any form of captions.
 ```html
 <video
 	src="../test-assets/perspective-video/perspective-video.mp4"
-	controls
-></video>
+	controls>
+</video>
 ```
 
 #### Failed Example 2
@@ -105,8 +104,8 @@ A video element that describes some of the text on the same page. The video cont
 </p>
 <video
 	src="../test-assets/perspective-video/perspective-video.mp4"
-	controls
-></video>
+	controls>
+</video>
 ```
 
 ### Inapplicable

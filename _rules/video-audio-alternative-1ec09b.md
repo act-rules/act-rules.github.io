@@ -60,12 +60,10 @@ A video element with a voiceover that describes the visual information.
 <video controls>
 	<source
 		src="../test-assets/rabbit-video/video-with-voiceover.mp4"
-		type="video/mp4"
-	/>
+		type="video/mp4">
 	<source
 		src="../test-assets/rabbit-video/video-with-voiceover.webm"
-		type="video/webm"
-	/>
+		type="video/webm">
 </video>
 ```
 
@@ -79,8 +77,7 @@ A video element with a track element that contains descriptions.
 	<source src="../test-assets/rabbit-video/video.webm" type="video/webm">
 	<track
 		kind="descriptions"
-		src="../test-assets/rabbit-video/descriptions.vtt"
-	/>
+		src="../test-assets/rabbit-video/descriptions.vtt">
 </video>
 ```
 
@@ -129,8 +126,7 @@ A video element with a track element that contains incorrect descriptions.
 	<source src="../test-assets/rabbit-video/video.webm" type="video/webm">
 	<track
 		kind="descriptions"
-		src="../test-assets/rabbit-video/incorrect-descriptions.vtt"
-	/>
+		src="../test-assets/rabbit-video/incorrect-descriptions.vtt">
 </video>
 ```
 

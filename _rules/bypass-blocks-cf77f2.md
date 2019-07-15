@@ -12,6 +12,7 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_rules:
   - 306c8a
+  - 5effbb
   - b40fd1
   - e53727
 authors:
@@ -24,6 +25,12 @@ authors:
 This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `<html>` element.
 
 ## Expectation
+
+- There is at least one [focusable](#focusable) element within the test target that passes rule [First focusable elements are internal links](https://act-rules.github.io/rules/e53727); and
+- Each [focusable](#focusable) element within the test target that passes rule [First focusable elements are internal links](https://act-rules.github.io/rules/e53727) also passes rule [Link text is descriptive](https://act-rules.github.io/rules/5effbb)
+
+
+
 
 For each test target, either the outcome of at least one of the following rules is passed:
 
@@ -38,14 +45,17 @@ or the outcome of both these rules is passed:
 - [Each frame in a frameset has an accessible name](https://act-rules.github.io/rules/306c8a)
 
 > Note to selves: can we have "set of documents/DOM trees" as input aspect?
-
-> Note to selves: G124 requires a set of "first focusable elements" to be internal link to content. G1 only needs one (and must go to main content). They are both very similar and I have merged them into 1 rule but cannot check the intent (*i.e.* are the links going to a meaningful place?)
+=> probably not. Try and make people angry.
 
 > Note to selves: H70 is about using `frame` as part of `frameset`, which is deprecated in HTML5. H64 is exactly "Iframe has an accessible name - cae760" but is here used `frame` instead of `iframe`. cae760 specifically rules out `frame` because they are deprecated… Should we consider them as deprecated and ignore this technique (and that will go in the catch all "this rule assume that no other technique is used")?
+=> Do it with frames. See what happen.
 
 > Note to selves: Both G123 and H69 require something at the start of each block of content. This is going to be annoying to figure out what exactly is a block of content that needs such a think…
+=> H69 is essentially same as "heading is descriptive".
+=> G123 is just a big manual mess.
 
 > Note to selves: For SCR28, it is (relatively) easy to check if there is collapsible content in a page, but, as always, not to automatically check if it is "repeated content". There could be a semi-auto rule that first ask where is the repeated content and then auto-check if it's collapsible. However, that would put the question as the very first check and thus ask it for each page, which is rather annoying. Might be bearable if answers can be given at a site wide level and not on a per page basis.
+=> try set of pages as input. Write rule as "for each repeated, there exist a button/link"
 
 ## Assumptions
 

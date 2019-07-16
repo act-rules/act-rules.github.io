@@ -167,8 +167,9 @@ export const getChangelogLink = changelog => {
 
 export const getGlossaryUsed = (slug, allGlossary) => {
 	const usedKeys = getGlossaryItemsUsedInRule(slug)
-	if (!usedKeys) {
-		return null
+	// Always show the outcome definition:
+	if (!usedKeys.includes('#outcome')) {
+		usedKeys.push('#outcome')
 	}
 	const glossaries = allGlossary.edges.filter(({ node }) => {
 		const {
@@ -243,7 +244,7 @@ export function getRuleType(rule_type) {
 	return (
 		<li>
 			<span className="heading">Rule Type</span>
-			<p>{rule_type}</p>
+			<span>{rule_type}</span>
 		</li>
 	)
 }
@@ -255,15 +256,14 @@ export function getAccessibilityRequirements(
 	if (!accessibility_requirements) {
 		return (
 			<div className="meta">
-				<span className="heading">accessibility Requirements</span>
+				<span className="heading">Accessibility Requirements Mapping</span>
 				<p>This rule is not required for conformance to WCAG at any level.</p>
 			</div>
 		)
 	}
 
-	const conformanceRequirements = Object.keys(accessibility_requirements)
-		.filter(key => {
-			const value = accessibility_requirements[key]
+	const conformanceRequirements = Object.entries(accessibility_requirements)
+		.filter(([_, value]) => {
 			if (!value) {
 				return false
 			}
@@ -271,21 +271,23 @@ export function getAccessibilityRequirements(
 			return !!forConformance
 		})
 
-	const getOutcomeMapping = () => {
+	const getOutcomeMapping = ({
+		failed = 'not satisfied',
+		passed = 'further testing is needed',
+		inapplicable = 'further testing is needed'
+	} = {}) => {
 		return (
 			<li>
 				Outcome mapping:
 				<ul>
 					<li>
-						Any <code>failed</code> outcomes: not satisfied
+						Any <code>failed</code> outcomes: { failed }
 					</li>
 					<li>
-						All <code>passed</code> outcomes: further testing is
-						needed
+						All <code>passed</code> outcomes: { passed }
 					</li>
 					<li>
-						An <code>inapplicable</code> outcome: further testing is
-						needed
+						An <code>inapplicable</code> outcome: { inapplicable }
 					</li>
 				</ul>
 			</li>
@@ -299,7 +301,7 @@ export function getAccessibilityRequirements(
 
 		if (listType === 'text') {
 			return (
-				<li key={sc}>{num} {handle}</li>
+				<li key={sc}>{num} {handle} (Level: {level})</li>
 			)
 		}
 
@@ -307,7 +309,7 @@ export function getAccessibilityRequirements(
 			<li key={sc}>
 				<details>
 					<summary>
-						{num} {handle}
+						{num} {handle} (Level: {level})
 					</summary>
 					<ul>
 						<li>
@@ -330,12 +332,12 @@ export function getAccessibilityRequirements(
 		)
 	}
 
-	const ariaListing = (key, req, listType) => {
+	const ariaListing = (key, mapping, listType) => {
 		const ref = key.split(':').slice(-1).pop();
 		
 		if (listType === 'text') {
 			return (
-				<li key={ref}>{req.title}</li>
+				<li key={ref}>{mapping.title}</li>
 			)
 		}
 
@@ -344,7 +346,7 @@ export function getAccessibilityRequirements(
 			<li key={ref}>
 				<details>
 					<summary>
-						{req.title}
+						{mapping.title}
 					</summary>
 					<ul>
 						<li>
@@ -353,13 +355,13 @@ export function getAccessibilityRequirements(
 								href={href}
 								target="_blank"
 								rel="noopener noreferrer">
-								Learn More about {req.title}
+								Learn More about {mapping.title}
 							</a>
 						</li>
 						<li>
 							<strong>Required for conformance</strong>
 						</li>
-						{getOutcomeMapping()}
+						{getOutcomeMapping(mapping)}
 					</ul>
 				</details>
 			</li>
@@ -368,11 +370,11 @@ export function getAccessibilityRequirements(
 
 	return (
 		<div className="meta">
-			<span className="heading">Accessibility Requirements</span>
+			<span className="heading">Accessibility Requirements Mapping</span>
 			<ul>
-				{conformanceRequirements.map(req => {
+				{conformanceRequirements.map(([req, mapping]) => {
 					if(req.toLowerCase().includes('aria11')) {
-						return ariaListing(req, accessibility_requirements[req], type)
+						return ariaListing(req, mapping, type)
 					}
 
 					if(req.toLowerCase().includes('wcag')) {
@@ -525,7 +527,7 @@ export function getGlossaryUsageInRules(usages) {
  * Get formatted date from unix timestamp
  * @param {String} unixtimestamp UNIX timestamp
  */
-function getDateTimeFromUnixTimestamp(unixtimestamp) {
+export function getDateTimeFromUnixTimestamp(unixtimestamp) {
 	const months_arr = [
 		'Jan',
 		'Feb',

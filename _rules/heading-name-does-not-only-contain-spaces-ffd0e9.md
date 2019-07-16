@@ -17,13 +17,11 @@ authors:
 - Kasper Isager
 ---
 
-## Test procedure
-
-### Applicability
+## Applicability
 
 This rule applies to any HTML element with the [semantic role](#semantic-role) of `heading` that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
-### Expectation
+## Expectation
 
 The target element either:
 - contains [text nodes](https://www.w3.org/TR/dom/#text) that do not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153), or 
@@ -49,7 +47,7 @@ Handling of headings containing only spaces, space characters, carriage returns,
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 `h2` element is empty.
 
@@ -57,7 +55,7 @@ Handling of headings containing only spaces, space characters, carriage returns,
 <h2></h2>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 Element with the semantic role of heading is empty.
 
@@ -65,7 +63,7 @@ Element with the semantic role of heading is empty.
 <div role="heading"></div>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 `h2` element has other content than `br` or `wbr` elements or unicode characters in the seperator categories.
 
@@ -73,7 +71,7 @@ Element with the semantic role of heading is empty.
 <h2>' </h2>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 `h2` element has an `aria-label` that is relevant for the accessible name calculation.
 
@@ -81,7 +79,7 @@ Element with the semantic role of heading is empty.
 <h2 aria-label="Orange harvesting season"> </h2>
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 `h2` element has content that is relevant for the accessible name calculation.
 
@@ -89,7 +87,7 @@ Element with the semantic role of heading is empty.
 <h2><img src="#" alt="Orange harvesting season"> </h2>
 ```
 
-#### Passed example 6
+#### Passed Example 6
 
 `h2` element contains `<span>` as only content, and this does not affect accessible name computation.
 
@@ -99,7 +97,7 @@ Element with the semantic role of heading is empty.
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 `h2` element contains `br` element as only content.
 
@@ -107,7 +105,7 @@ Element with the semantic role of heading is empty.
 <h2><br /></h2>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 `h2` contains `&nbsp;`(no break space character) as only content.
 
@@ -115,7 +113,7 @@ Element with the semantic role of heading is empty.
 <h2>&nbsp;</h2>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 `h2` element only contains a space.
 
@@ -123,7 +121,7 @@ Element with the semantic role of heading is empty.
 <h2> </h2>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 `h2` element contains `&#32;` (space) character as only content.
 
@@ -131,7 +129,7 @@ Element with the semantic role of heading is empty.
 <h2>&#32;</h2>
 ```
 
-#### Failed example 5
+#### Failed Example 5
 
 `h2` element contains `&ensp;` (en-space) character as only content.
 
@@ -139,7 +137,7 @@ Element with the semantic role of heading is empty.
 <h2>&ensp;</h2>
 ```
 
-#### Failed example 6
+#### Failed Example 6
 
 `h2` element contains `&emsp;` (em-space) character as only content.
 
@@ -147,7 +145,7 @@ Element with the semantic role of heading is empty.
 <h2>&emsp;</h2>
 ```
 
-#### Failed example 7
+#### Failed Example 7
 
 `h2` element contains `&thinsp;` (thin space) character as only content.
 
@@ -155,7 +153,7 @@ Element with the semantic role of heading is empty.
 <h2>&thinsp;</h2>
 ```
 
-#### Failed example 8
+#### Failed Example 8
 
 `h2` element contains `<br />` as only content that affects the accessible name computation.
 
@@ -163,7 +161,7 @@ Element with the semantic role of heading is empty.
 <h2><span><br /></span></h2>
 ```
 
-#### Failed example 9
+#### Failed Example 9
 
 `h2` element has an image as content, but it is marked as decorative and as such not relevant for the accessible name computation.
 
@@ -173,7 +171,7 @@ Element with the semantic role of heading is empty.
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Element does not have the semantic role of heading.
 
@@ -181,7 +179,7 @@ Element does not have the semantic role of heading.
 <div></div>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 `h2` element is not included in the accessibility tree.
 

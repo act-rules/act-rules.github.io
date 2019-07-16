@@ -110,8 +110,7 @@ A video element without audio has a separate audio track that describes the visu
 <audio controls>
 	<source
 		src="../test-assets/rabbit-video/audio-description.mp3"
-		type="audio/mpeg"
-	/>
+		type="audio/mpeg">
 </audio>
 ```
 

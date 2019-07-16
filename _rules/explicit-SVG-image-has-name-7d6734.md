@@ -77,7 +77,6 @@ The `<svg>` element has an explicit role of `img` and an accessible name from th
 </svg>
 ```
 
-
 ### Failed
 
 #### Failed example 1

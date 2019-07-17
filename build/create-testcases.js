@@ -1,9 +1,7 @@
 const { copy } = require('fs-extra')
-const globby = require('globby')
 const objectHash = require('object-hash')
 const codeBlocks = require('gfm-code-blocks')
 const { www: { url } } = require('./../package.json')
-const getMarkdownData = require('./../utils/get-markdown-data')
 const createFile = require('../utils/create-file')
 const regexps = require('../utils/reg-exps')
 const getAllMatchesForRegex = require('../utils/get-all-matches-for-regex')
@@ -23,9 +21,7 @@ const init = async () => {
 	/**
 	 * Get all rules `markdown` data
 	 */
-	const rulesData = globby
-		.sync([`./_rules/*.md`])
-		.map(rulePath => getMarkdownData(rulePath))
+	const rulesData = getRulesMarkdownData()
 
 	let allRulesTestcases = []
 

@@ -7,6 +7,7 @@ const regexps = require('../utils/reg-exps')
 const getAllMatchesForRegex = require('../utils/get-all-matches-for-regex')
 const createTestcasesJson = require('./testcases/create-testcases-json')
 const createTestcasesOfRuleOfEmReportTool = require('./testcases/create-testcases-of-rule-of-em-report-tool')
+const getRulesMarkdownData = require('../utils/get-rules-markdown-data')
 
 /**
  * Create test case files & other meta-data  from test case in each rule.

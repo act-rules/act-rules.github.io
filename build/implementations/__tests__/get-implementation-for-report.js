@@ -1,5 +1,5 @@
-const getFramedReport = require('../../../build/implementations/get-framed-report')
-const getImplementationForReport = require('../../../build/implementations/get-implementation-for-report')
+const getFramedReport = require('../get-framed-report')
+const getImplementationForReport = require('../get-implementation-for-report')
 
 describe(`getImplementationForReport`, () => {
 

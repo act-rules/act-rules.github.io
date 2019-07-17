@@ -19,7 +19,7 @@ const htmlHintRules = {
 
 describeRule('test cases', (ruleData) => {
   const { frontmatter, body } = ruleData
-  const { id, name, htmlHintIgnore } = frontmatter
+  const { id, name, htmlHintIgnore = [] } = frontmatter
 
   const codeBlocks = gfmCodeBlocks(body)
 

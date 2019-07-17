@@ -28,21 +28,12 @@ describeRule('test cases', (ruleData) => {
     .map(({ code }) => code)
 
   test.each(codeSnippets)('is valid HTML code - `%s`', snippet => {
+
+    const rules = { ...htmlHintRules };
     /**
      * Ignore `rules` specified in frontmatter of certain rules (if any)
      */
-    const ignoreRules = htmlHintIgnore
-      ? htmlHintIgnore
-        .reduce((out, ignoreRule) => {
-          out[ignoreRule] = false
-          return out
-        }, {})
-      : undefined
-
-    const rules = {
-      ...htmlHintRules,
-      ...ignoreRules
-    }
+    htmlHintIgnore.forEach(ignoreRule => rules[ignoreRule] = false);
 
     const errors = HTMLHint.default.verify(snippet, rules);
 

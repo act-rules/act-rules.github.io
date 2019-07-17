@@ -1,5 +1,5 @@
-const getFramedReport = require('../../../build/implementations/get-framed-report')
-const getAssertions = require('../../../build/implementations/get-assertions')
+const getFramedReport = require('../get-framed-report')
+const getAssertions = require('../get-assertions')
 
 describe(`getAssertions`, () => {
   it('throws when no argument is specified', () =>

@@ -30,31 +30,20 @@ This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document
 
 ## Expectation
 
+Either at least one of the following conditions is true:
+- Each test target passes either [Document has headings](https://act-rules.github.io/rules/047fe0) or [HTML page has a main landmark](https://act-rules.github.io/rules/b40fd1); or
+- Each block of content repeated among the test targets passes rule [Link to skip block of content](https://act-rules.github.io/rules/7b576d); or
+- Each block of content repeated among the test targets passes rule [Block of content is expandable and collapsible](https://act-rules.github.io/rules/cefbef); or
+
+Or both these conditions are true:
 - There is at least one [focusable](#focusable) element within the test target that passes rule [First focusable elements are internal links](https://act-rules.github.io/rules/e53727); and
 - Each [focusable](#focusable) element within the test target that passes rule [First focusable elements are internal links](https://act-rules.github.io/rules/e53727) also passes rule [Link text is descriptive](https://act-rules.github.io/rules/5effbb)
 
-- Each block of content repeated among the test targets passes rule [Link to skip block of content](https://act-rules.github.io/rules/7b576d)
-
-- The test target passes one of the following rules:
-  - [Document has headings](https://act-rules.github.io/rules/047fe0)
-  - [HTML page has a main landmark](https://act-rules.github.io/rules/b40fd1)
-
-- Each block of content repeated among the test targets passes rule [Block of content is expandable and collapsible](https://act-rules.github.io/rules/cefbef)
-
-
-
-For each test target, either the outcome of at least one of the following rules is passed:
-
-or the outcome of both these rules is passed:
-- (H70: Using frame elements to group blocks of repeated material)
-- [Each frame in a frameset has an accessible name](https://act-rules.github.io/rules/306c8a)
-
-> Note to selves: H70 is about using `frame` as part of `frameset`, which is deprecated in HTML5. H64 is exactly "Iframe has an accessible name - cae760" but is here used `frame` instead of `iframe`. cae760 specifically rules out `frame` because they are deprecated… Should we consider them as deprecated and ignore this technique (and that will go in the catch all "this rule assume that no other technique is used")?
-=> Do it with frames. See what happen.
+Or both these conditions are true:
+- Each test target is organised using `frameset`, and the `frame` elements with content repeated among all test targets appear in the same location within each `frameset` of each test target; and
+- [Each frame in a frameset has an accessible name](https://act-rules.github.io/rules/306c8a) and passes [Frame title is descriptive](https://act-rules.github.io/rules/e38767)
 
 ## Assumptions
-
-This rule assumes that the document has blocks of content that are repeated in multiple documents within the same website. If this is not the case, there is no requirement for the type of mechanism tested in this rule.
 
 This rule assumes that one of the techniques listed here is used to comply to WCAG.
 

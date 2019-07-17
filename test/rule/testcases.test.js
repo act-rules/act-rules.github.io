@@ -24,18 +24,7 @@ describeRule('test cases', (ruleData) => {
   const codeBlocks = gfmCodeBlocks(body)
 
   const codeSnippets = codeBlocks
-    .filter(({ block }) => {
-      /**
-       * Ignore below types of examples
-       * - `svg`
-       * - `xml`
-       * - `js`
-       */
-      if (/```(svg|js|xml)/gm.test(block.substring(0, 25))) {
-        return false
-      }
-      return true;
-    })
+    .filter(({ block }) => (/html/gm.test(block.substring(0, 25))))
     .map(({ code }) => code)
 
   test.each(codeSnippets)('is valid HTML code - `%s`', snippet => {
@@ -54,7 +43,7 @@ describeRule('test cases', (ruleData) => {
       ...htmlHintRules,
       ...ignoreRules
     }
-    
+
     const errors = HTMLHint.default.verify(snippet, rules);
 
     if (errors.length) {

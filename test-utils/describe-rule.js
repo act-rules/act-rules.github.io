@@ -1,4 +1,4 @@
-const getRules = require('./get-rules')
+const getRules = require('../utils/get-rules')
 
 /**
  * describe rule helper

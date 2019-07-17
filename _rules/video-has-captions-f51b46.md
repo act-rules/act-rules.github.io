@@ -26,7 +26,7 @@ The rule applies to every [non-streaming](#non-streaming-media-element) `video` 
 
 ## Expectation
 
-For each test target, audio information that is not conveyed visually in the video, is available through [captions](#captions).
+For each test target, audio information that is not conveyed visually in the video, is available through [captions](https://www.w3.org/TR/WCAG21/#dfn-captions).
 
 _Note_: Captions can be either embedded in the video file itself or can be made available trough a separate track.
 

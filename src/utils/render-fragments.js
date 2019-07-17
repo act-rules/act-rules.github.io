@@ -301,7 +301,7 @@ export function getAccessibilityRequirements(
 
 		if (listType === 'text') {
 			return (
-				<li key={sc}>{num} {handle}</li>
+				<li key={sc}>{num} {handle} (Level: {level})</li>
 			)
 		}
 
@@ -309,7 +309,7 @@ export function getAccessibilityRequirements(
 			<li key={sc}>
 				<details>
 					<summary>
-						{num} {handle}
+						{num} {handle} (Level: {level})
 					</summary>
 					<ul>
 						<li>

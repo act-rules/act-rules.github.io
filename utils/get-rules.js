@@ -1,6 +1,5 @@
 const globby = require('globby')
-const getMarkdownData = require('../../utils/get-markdown-data')
-
+const getMarkdownData = require('./get-markdown-data')
 
 /**
  * Read all rules & parse the markdown

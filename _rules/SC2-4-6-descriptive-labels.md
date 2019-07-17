@@ -155,7 +155,7 @@ Otherwise identically named form fields can be differentiated both visually and 
 
 #### Passed Example 9
 
-`p` element that is neither visible nor included in the accessibility tree, but still provides an accessible name to the input field through `aria-describedby`.
+`p` element that is neither visible nor included in the accessibility tree, but still provides an accessible name to the input field through `aria-labelledby`.
 
 ```html
 <p id="label_fname" style="display:none;">First name:</p>
@@ -210,7 +210,7 @@ Label is included in accessibility tree, but not visible, and does not describe 
 
 #### Failed Example 6
 
-Accessible name created through `aria-label` does not describes the purpose of the associated element.
+Accessible name created through `aria-label` does not describe the purpose of the associated element.
 
 ```html
 <input aria-label="Menu" id="fname" type="text" name="fname"/>

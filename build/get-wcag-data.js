@@ -42,12 +42,12 @@ const getMetaData = sc => {
 		is20
 			? 'http://www.w3.org/WAI/WCAG20/quickref/#qr-'
 			: 'https://www.w3.org/WAI/WCAG21/quickref/#'
-		}${path}`
+	}${path}`
 	const understandingUrl = `${
 		is20
 			? 'http://www.w3.org/TR/UNDERSTANDING-WCAG20/'
 			: 'https://www.w3.org/WAI/WCAG21/Understanding/'
-		}/${path}.html`
+	}/${path}.html`
 	/**
 	 * Construct `test` - used by `wcag em report tool`
 	 */
@@ -72,7 +72,9 @@ const getMetaData = sc => {
  * @param {String} url URL
  */
 const getWaiWcagReferenceData = async url => {
-	const { data: { principles } } = await axios.get(url)
+	const {
+		data: { principles },
+	} = await axios.get(url)
 
 	const scMetaData = {}
 	principles.forEach(p =>
@@ -99,7 +101,10 @@ const init = async () => {
 	 * Create a list of success criteria meta data
 	 */
 	const scMetaData = await getWaiWcagReferenceData(wcagReferenceUrl)
-	await createFile(outputFileScMetaData, JSON.stringify(scMetaData, undefined, 2))
+	await createFile(
+		outputFileScMetaData,
+		JSON.stringify(scMetaData, undefined, 2)
+	)
 
 	/**
 	 * Create wcag em report tool friendly audit result array
@@ -120,7 +125,10 @@ const init = async () => {
 		}
 	})
 
-	await createFile(outputFileScEmReportAuditResult, JSON.stringify(scEmReportAuditResult, undefined, 2))
+	await createFile(
+		outputFileScEmReportAuditResult,
+		JSON.stringify(scEmReportAuditResult, undefined, 2)
+	)
 }
 
 /**

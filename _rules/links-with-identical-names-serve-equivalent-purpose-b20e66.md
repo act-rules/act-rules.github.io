@@ -49,8 +49,14 @@ There are no major accessibility support issues known for this rule.
 A set of two HTML `<a>` elements have the same accessible name and link to the same resource.
 
 ```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html"
+	>Contact us</a
+>
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html"
+	>Contact us</a
+>
 ```
 
 #### Passed Example 2
@@ -58,8 +64,14 @@ A set of two HTML `<a>` elements have the same accessible name and link to the s
 Links resolves to same resource after instant redirect:
 
 ```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/redirect.html">Contact us</a>
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html"
+	>Contact us</a
+>
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/redirect.html"
+	>Contact us</a
+>
 ```
 
 #### Passed Example 3
@@ -67,8 +79,14 @@ Links resolves to same resource after instant redirect:
 Resources are not the same, since the links resolve to different URLs, but the resources are completely identical, thus serving the same purpose:
 
 ```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index-copy.html">Contact us</a>
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html"
+	>Contact us</a
+>
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index-copy.html"
+	>Contact us</a
+>
 ```
 
 #### Passed Example 4
@@ -76,8 +94,14 @@ Resources are not the same, since the links resolve to different URLs, but the r
 Same link text used for links going to pages where the content section is the same, but where the navigation options (bread crumbs and local sub menus) differ due to different placement in navigation hierarchy:
 
 ```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/careers/contact.html">Contact us</a>
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
+	>Contact us</a
+>
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/careers/contact.html"
+	>Contact us</a
+>
 ```
 
 #### Passed Example 5
@@ -85,8 +109,14 @@ Same link text used for links going to pages where the content section is the sa
 URLs differ due to trailing slashes, but resolves to the same resource after redirects caused by user agent:
 
 ```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/">Contact us</a>
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66">Contact us</a>
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/"
+	>Contact us</a
+>
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66"
+	>Contact us</a
+>
 ```
 
 #### Passed Example 6
@@ -94,8 +124,14 @@ URLs differ due to trailing slashes, but resolves to the same resource after red
 Pages contain different amounts of information and/or differently worded information, but fulfil the same purpose in relation to the link:
 
 ```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html">Call us</a>
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html">Call us</a>
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html"
+	>Call us</a
+>
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html"
+	>Call us</a
+>
 ```
 
 #### Passed Example 7
@@ -103,8 +139,14 @@ Pages contain different amounts of information and/or differently worded informa
 Pages have the same advertised key content but use different layouts:
 
 ```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html">Contact us</a>
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page3.html">Contact us</a>
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html"
+	>Contact us</a
+>
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page3.html"
+	>Contact us</a
+>
 ```
 
 #### Passed Example 8
@@ -167,8 +209,14 @@ Same accessible name used for links going to different resources:
 Same accessible name used for links going to web pages that are similar, but have different information in their content:
 
 ```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a>
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
+	>Contact us</a
+>
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
+	>Contact us</a
+>
 ```
 
 #### Failed Example 3
@@ -229,8 +277,14 @@ A set of two SVG `<a>` elements have the same accessible name but link to differ
 Links resolves to same resource after redirect, but the redirect is not instant:
 
 ```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/redirect1.html">Contact us</a>
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html"
+	>Contact us</a
+>
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/redirect1.html"
+	>Contact us</a
+>
 ```
 
 ### Inapplicable
@@ -248,8 +302,12 @@ Links resolves to same resource after redirect, but the redirect is not instant:
 Links with different accessible names:
 
 ```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact main office</a>
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
+	>Contact main office</a
+>
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
 	>Contact admissions office</a
 >
 ```
@@ -259,10 +317,16 @@ Links with different accessible names:
 Link is not included in the accesssibility tree:
 
 ```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html" aria-hidden="true" tabindex="-1"
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html"
+	aria-hidden="true"
+	tabindex="-1"
 	>Contact Us</a
 >
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/pabe2.html">Contact Us</a>
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/pabe2.html"
+	>Contact Us</a
+>
 ```
 
 #### Inapplicable example 4
@@ -270,11 +334,15 @@ Link is not included in the accesssibility tree:
 Links created via scripting, but without the semantic role of link:
 
 ```html
-<span onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html'">
+<span
+	onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html'"
+>
 	Contact Us
 </span>
 
-<span onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html'">
+<span
+	onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html'"
+>
 	Contact Us
 </span>
 ```

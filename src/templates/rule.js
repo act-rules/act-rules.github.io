@@ -52,7 +52,10 @@ export default ({ data }) => {
 						</li>
 						<li>
 							<span className="heading">Last modified:</span>
-							<span> {getDateTimeFromUnixTimestamp(ruleChangelog[0].date)}</span>
+							<span>
+								{' '}
+								{getDateTimeFromUnixTimestamp(ruleChangelog[0].date)}
+							</span>
 						</li>
 						<li>{getAccessibilityRequirements(accessibility_requirements)}</li>
 						<li>
@@ -98,18 +101,16 @@ export default ({ data }) => {
 					</a>
 					<ul>
 						<li>
-							<a
-								target="_blank"
-								rel="noopener noreferrer"
-								href={issuesUrl}
-							>
+							<a target="_blank" rel="noopener noreferrer" href={issuesUrl}>
 								Github issues related to this rule
 							</a>
 						</li>
 						<li>
-							<a target="_blank"
+							<a
+								target="_blank"
 								rel="noopener noreferrer"
-								href={ruleTestcasesUrl} >
+								href={ruleTestcasesUrl}
+							>
 								Test case file for use in the WCAG-EM Report Tool
 							</a>
 						</li>

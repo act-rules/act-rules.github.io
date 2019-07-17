@@ -18,7 +18,7 @@ class Layout extends React.Component {
 	}
 
 	componentDidMount() {
-		const { hash } = window.location;
+		const { hash } = window.location
 		if (!hash) {
 			return
 		}
@@ -26,7 +26,7 @@ class Layout extends React.Component {
 		if (!el) {
 			return
 		}
-		el.scrollIntoView();
+		el.scrollIntoView()
 	}
 
 	handleHideShowMenu() {
@@ -118,11 +118,19 @@ class Layout extends React.Component {
 					return (
 						<section className="layout-container">
 							{/* hide menu when width <= 600px */}
-							<ReactMedia query="(max-width: 600px)"
-								onChange={matches => (matches && this.state.showMenu) && this.handleHideShowMenu()} />
+							<ReactMedia
+								query="(max-width: 600px)"
+								onChange={matches =>
+									matches && this.state.showMenu && this.handleHideShowMenu()
+								}
+							/>
 							{/* show menu when width > 600px */}
-							<ReactMedia query="(min-width: 601px)"
-								onChange={matches => (matches && !this.state.showMenu) && this.handleHideShowMenu()} />
+							<ReactMedia
+								query="(min-width: 601px)"
+								onChange={matches =>
+									matches && !this.state.showMenu && this.handleHideShowMenu()
+								}
+							/>
 							<aside className={this.state.showMenu ? 'show' : 'hide'}>
 								<button
 									className="nav-hide-show-menu"

@@ -32,4 +32,3 @@ The ACTR Community is an open community, meaning that anyone with an interest in
 - [W3C Community Page](https://www.w3.org/community/act-r/) This is the official page at the W3C. From here you can sign up to the community group. This requires a W3C account. If you work for a W3C member organisation, you will need approval from your organisation to join the group. This is also where the mailinglist archive can be found.
 
 The ACT-R Community has calls twice a month, once for a US friendly time, and once for an Asia friendly time. To receive the agenda and calendar, you must be a member of the W3C Community Group. This will automatically sign you up for the mailinglist.
-

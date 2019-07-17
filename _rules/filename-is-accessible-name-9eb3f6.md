@@ -56,7 +56,8 @@ The `img` element's accessible name includes the filename, which in combination 
 
 ```html
 <a href="https://www.w3.org/WAI/demos/bad/img/w3c.png" download
-	>Download <img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png"
+	>Download
+	<img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png"
 /></a>
 ```
 

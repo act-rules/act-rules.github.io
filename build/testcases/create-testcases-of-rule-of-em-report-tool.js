@@ -1,4 +1,6 @@
-const { www: { url } } = require('./../../package.json')
+const {
+	www: { url },
+} = require('./../../package.json')
 const scUrlsMetaData = require('./../../_data/sc-urls.json')
 const scEmReportAuditResult = require('./../../_data/sc-em-report-audit-result.json')
 const graphContext = require('./wcag-em-report-tool-mappings/@graph-context.json')
@@ -20,7 +22,7 @@ const createTestcasesOfRuleOfEmReportTool = async options => {
 	const title = `Report for ACT-R Rule - ${ruleName}`
 	const siteName = `ACT-R Rule - ${ruleName}`
 	const siteScope = `${url}/testcases/${ruleId}/`
-	
+
 	const webpages = ruleTestcases.map((testcase, index) => {
 		const { url, testcaseId } = testcase
 		return {
@@ -35,8 +37,8 @@ const createTestcasesOfRuleOfEmReportTool = async options => {
 
 	const ruleScs = ruleAccessibilityRequirements
 		? Object.keys(ruleAccessibilityRequirements).map(key => {
-			return key.split(':').pop()
-		})
+				return key.split(':').pop()
+		  })
 		: []
 
 	const matchingScTests = ruleScs

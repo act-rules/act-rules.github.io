@@ -2,7 +2,9 @@ const { copy } = require('fs-extra')
 const globby = require('globby')
 const objectHash = require('object-hash')
 const codeBlocks = require('gfm-code-blocks')
-const { www: { url } } = require('./../package.json')
+const {
+	www: { url },
+} = require('./../package.json')
 const getMarkdownData = require('./../utils/get-markdown-data')
 const createFile = require('../utils/create-file')
 const regexps = require('../utils/reg-exps')
@@ -16,7 +18,7 @@ const createTestcasesOfRuleOfEmReportTool = require('./testcases/create-testcase
  * -> create test cases files into `_data` directory
  * -> copy test assets into `_data` directory
  * -> create `testcases.json`
- * 
+ *
  * These files will be copied into `public` directory during gatsby `preBootstrap` hook/ build
  */
 const init = async () => {

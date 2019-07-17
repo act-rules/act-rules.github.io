@@ -83,7 +83,12 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 Heading marked up with `h1` element with an image that describes the topic or purpose of its section of the content.
 
 ```html
-<h1 class="target"><img scr="../test-assets/descriptive-heading-b49b2e/opening_hours_icon.png" alt="Opening hours" /></h1>
+<h1 class="target">
+	<img
+		scr="../test-assets/descriptive-heading-b49b2e/opening_hours_icon.png"
+		alt="Opening hours"
+	/>
+</h1>
 <p>We are open Monday through Friday from 10 to 16</p>
 ```
 
@@ -112,7 +117,9 @@ Heading marked up with `h1` element that is a single character that describes th
 Heading marked up with `role="heading"` that describes the topic or purpose of its section of the content. The heading is positioned off screen and is included in the accessibility tree.
 
 ```html
-<span role="heading" aria-level="1"
+<span
+	role="heading"
+	aria-level="1"
 	style="position: absolute; top: -9999px; left: -9999px;"
 	>Opening Hours</span
 >

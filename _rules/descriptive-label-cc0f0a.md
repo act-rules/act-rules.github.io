@@ -159,8 +159,8 @@ Label is included in accessibility tree, but not visible, and does not describe 
 
 ```html
 <div style="display:none">
-  <label for="bad_label">Menu:</label>
-  <input id="fname" type="text" name="bad_label"/>
+	<label for="bad_label">Menu:</label>
+	<input id="fname" type="text" name="bad_label" />
 </div>
 ```
 
@@ -170,8 +170,8 @@ Programatically associated `p` element that is neither visible nor included in t
 
 ```html
 <div style="display:none">
-  <p id="bad_label">menu</p>
-  <input aria-labelledby="bad_label" type="text" name="fname"/>
+	<p id="bad_label">menu</p>
+	<input aria-labelledby="bad_label" type="text" name="fname" />
 </div>
 ```
 
@@ -189,8 +189,7 @@ The `label` element is associated with an HTML element that does not have a form
 The element with `aria-labelledby` is not a form field.
 
 ```html
-<i id="smile">Smile</i>
-<button aria-labelledby="smile">:-)</button>
+<i id="smile">Smile</i> <button aria-labelledby="smile">:-)</button>
 ```
 
 #### Inapplicable Example 5

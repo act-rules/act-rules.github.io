@@ -93,7 +93,11 @@ _There are no major accessibility support issues known for this rule._
 `aria-owns` property with valid ID reference list value
 
 ```html
-<div role="combobox" aria-owns="my-textbox my-grid" aria-label="Search within the website"></div>
+<div
+	role="combobox"
+	aria-owns="my-textbox my-grid"
+	aria-label="Search within the website"
+></div>
 ```
 
 #### Passed Example 6
@@ -123,7 +127,9 @@ _There are no major accessibility support issues known for this rule._
 `aria-placeholder` property with valid string value
 
 ```html
-<div role="searchbox" aria-placeholder="MM-DD-YYYY" aria-label="Your birthdate">MM-DD-YYYY</div>
+<div role="searchbox" aria-placeholder="MM-DD-YYYY" aria-label="Your birthdate">
+	MM-DD-YYYY
+</div>
 ```
 
 #### Passed Example 9
@@ -157,7 +163,11 @@ _There are no major accessibility support issues known for this rule._
 `aria-required` property with invalid true/false value
 
 ```html
-<div role="textbox" aria-required="undefined" aria-label="A required textbox"></div>
+<div
+	role="textbox"
+	aria-required="undefined"
+	aria-label="A required textbox"
+></div>
 ```
 
 #### Failed Example 2
@@ -181,7 +191,11 @@ _There are no major accessibility support issues known for this rule._
 `aria-errormessage` property with invalid ID reference value, since space is not allowed in a single ID
 
 ```html
-<div role="textbox" aria-errormessage="error1 error2" aria-label="A textbox with an error"></div>
+<div
+	role="textbox"
+	aria-errormessage="error1 error2"
+	aria-label="A textbox with an error"
+></div>
 ```
 
 #### Failed Example 5
@@ -268,7 +282,11 @@ Element has ARIA role, but no ARIA states or properties
 `aria-checked` state with empty value
 
 ```html
-<div role="checkbox" aria-checked aria-label="Accept terms and conditions"></div>
+<div
+	role="checkbox"
+	aria-checked
+	aria-label="Accept terms and conditions"
+></div>
 ```
 
 #### Inapplicable Example 5

@@ -183,6 +183,10 @@ section.layout-container {
                     text-decoration: none;
                   }
                 }
+                span.count {
+                  padding: 0.25rem 0.5rem;
+                  background-color: $bg-primary;
+                }
                 a.sc-item {
                   cursor: pointer;
                   text-decoration: none;

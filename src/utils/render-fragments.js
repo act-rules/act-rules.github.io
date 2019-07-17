@@ -244,7 +244,7 @@ export function getRuleType(rule_type) {
 	return (
 		<li>
 			<span className="heading">Rule Type</span>
-			<span>{rule_type}</span>
+			<p>{rule_type}</p>
 		</li>
 	)
 }
@@ -497,7 +497,8 @@ export function getImplementationsCount(slug) {
 	return (
 		<div className="side-notes">
 			<div className="meta">
-				<span className="heading">Implementations: {metrics.length}</span>
+				<span className="heading">Implementations</span>
+				<span className="count">{metrics.length}</span>
 			</div>
 		</div>
 	)

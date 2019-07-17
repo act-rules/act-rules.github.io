@@ -47,12 +47,12 @@ export default ({ data }) => {
 					<ul className="meta">
 						{getRuleType(frontmatter.rule_type)}
 						<li>
-							<span className="heading">Rule ID:</span>
-							<span> {ruleId}</span>
+							<span className="heading">Rule ID</span>
+							<p> {ruleId}</p>
 						</li>
 						<li>
-							<span className="heading">Last modified:</span>
-							<span> {getDateTimeFromUnixTimestamp(ruleChangelog[0].date)}</span>
+							<span className="heading">Last modified</span>
+							<p> {getDateTimeFromUnixTimestamp(ruleChangelog[0].date)}</p>
 						</li>
 						<li>{getAccessibilityRequirements(accessibility_requirements)}</li>
 						<li>

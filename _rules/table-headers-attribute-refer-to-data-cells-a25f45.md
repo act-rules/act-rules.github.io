@@ -9,6 +9,7 @@ accessibility_requirements:
     forConformance: true
     failed: not satisfied
     passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
 authors:
@@ -22,7 +23,9 @@ This rule applies to `td` elements with a `headers` attribute, that are [include
 
 ## Expectation
 
-Each target element refers in its `headers` attribute to other `th` elements or cells with a [semantic role](#semantic-role) of `columnheader` or `rowheader` within the same `table` element.
+The `header` attribute of each target element is [a set of space separated IDs](https://www.w3.org/TR/html50/infrastructure.html#set-of-space-separated-tokens), each of which is an ID of an element that:
+1. has a [semantic role](#semantic-role) of `columnheader` or `rowheader`, and
+2. is a `cell` of the same [`table`](https://www.w3.org/TR/html50/tabular-data.html#concept-table) as the target element
 
 ## Assumptions
 

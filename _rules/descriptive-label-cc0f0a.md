@@ -155,7 +155,7 @@ Label is included in accessibility tree, but not visible, and does not describe 
 
 #### Inapplicable Example 1
 
-`Label` that is neither visible to users, nor included in the accessibility tree.
+`Label` that is neither visible to users, nor [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ```html
 <div style="display:none">
@@ -166,7 +166,7 @@ Label is included in accessibility tree, but not visible, and does not describe 
 
 #### Inapplicable Example 2
 
-Programatically associated `p` element that is neither visible nor included in the accessibility tree.
+Programatically associated `p` element that is neither visible nor [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ```html
 <div style="display:none">

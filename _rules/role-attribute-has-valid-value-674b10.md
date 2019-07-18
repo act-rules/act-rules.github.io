@@ -133,7 +133,7 @@ Element with null `role` attribute.
 
 #### Inapplicable Example 4
 
-Element that is not included in the accessibility tree.
+Element that is not [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ```html
 <div aria-hidden="true" role="banner">Some Content</div>

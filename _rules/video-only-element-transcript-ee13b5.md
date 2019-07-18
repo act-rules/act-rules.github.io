@@ -21,7 +21,7 @@ The rule applies to any [non-streaming](#non-streaming-media-element) `video` el
 
 ## Expectation
 
-The visual information of each test target is available through a text transcript that is available either on the page or through a link. The text transcript needs to be [visible](#visible) and [included-in-the-accessibility-tree](#included-in-the-accessibility-tree).
+The visual information of each test target is available through a text transcript that is available either on the page or through a link. The text transcript needs to be [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 **Note**: A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
 
@@ -112,7 +112,7 @@ Then he stops to scratch his bottom.</p>
 
 #### Failed Example 4
 
-A silent video element with a text transcript on the same page that is not included in the accessibility tree.
+A silent video element with a text transcript on the same page that is not [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ```html
 <video controls data-rule-target>

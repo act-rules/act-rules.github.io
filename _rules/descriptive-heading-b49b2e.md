@@ -109,7 +109,7 @@ Heading marked up with `h1` element that is a single character that describes th
 
 #### Passed Example 6
 
-Heading marked up with `role="heading"` that describes the topic or purpose of its section of the content. The heading is positioned off screen and is included in the accessibility tree.
+Heading marked up with `role="heading"` that describes the topic or purpose of its section of the content. The heading is positioned off screen and is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ```html
 <span role="heading" aria-level="1"
@@ -123,7 +123,7 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 
 #### Passed Example 7
 
-Heading marked up with `h1` element that describes the topic or purpose of its section of the content. The heading is visible, but is not included in the accessibility tree.
+Heading marked up with `h1` element that describes the topic or purpose of its section of the content. The heading is visible, but is not [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ```html
 <h1 class="target" aria-hidden="true">Opening Hours</h1>
@@ -152,7 +152,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed Example 3
 
-Heading marked up with `role="heading"` that does not describe the topic or purpose of its section of the content. The heading is positioned off screen and is included in the accessibility tree.
+Heading marked up with `role="heading"` that does not describe the topic or purpose of its section of the content. The heading is positioned off screen and is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ```html
 <span role="heading" style="position: absolute; top: -9999px; left: -9999px;"
@@ -165,7 +165,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed Example 4
 
-Heading marked up with `h1` element that does not describe the topic or purpose of its section of the content. The heading is visible, but is not included in the accessibility tree.
+Heading marked up with `h1` element that does not describe the topic or purpose of its section of the content. The heading is visible, but is not [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ```html
 <h1 class="target" aria-hidden="true">Weather</h1>
@@ -184,7 +184,7 @@ No heading.
 
 #### Inapplicable Example 2
 
-Heading that is neither visible to users, nor included in the accessibility tree.
+Heading that is neither visible to users, nor [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ```html
 <h1 style="display: none;">Opening hours</h1>

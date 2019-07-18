@@ -321,7 +321,7 @@ Multiple `iframe` elements in the document having different `aria-labelledby` de
 
 #### Inapplicable Example 5
 
-`iframe` having the same `title` within a given document tree, but one of them is not included in the accessibility tree.
+`iframe` having the same `title` within a given document tree, but one of them is not [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ```html
 <iframe
@@ -402,7 +402,7 @@ No [accessible name](#accessible-name) is provided
 
 #### Inapplicable Example 10
 
-Does not apply to `iframe` elements that are not included in the accessibility tree, via `display:none`.
+Does not apply to `iframe` elements that are not [included in the accessibility tree](#included-in-the-accessibility-tree), via `display:none`.
 
 ```html
 <iframe

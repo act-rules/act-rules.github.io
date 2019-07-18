@@ -276,7 +276,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 #### Inapplicable Example 2
 
-Not included in the accessibility tree due to `display:none`.
+Not [included in the accessibility tree](#included-in-the-accessibility-tree) due to `display:none`.
 
 ```html
 <a href="http://www.w3.org/WAI" style="display: none;"><img src="#"/></a>
@@ -284,7 +284,7 @@ Not included in the accessibility tree due to `display:none`.
 
 #### Inapplicable Example 3
 
-Not included in the accessibility tree due to `visibility: hidden`.
+Not [included in the accessibility tree](#included-in-the-accessibility-tree) due to `visibility: hidden`.
 
 ```html
 <a href="http://www.w3.org/WAI" style="visibility: hidden;">Some text</a>
@@ -292,7 +292,7 @@ Not included in the accessibility tree due to `visibility: hidden`.
 
 #### Inapplicable Example 4
 
-Not included in the accessibility tree due to `aria-hidden="true"`.
+Not [included in the accessibility tree](#included-in-the-accessibility-tree) due to `aria-hidden="true"`.
 
 ```html
 <a aria-hidden="true" href="http://www.w3.org/WAI">

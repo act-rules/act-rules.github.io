@@ -167,7 +167,7 @@ Does not apply to non `iframe` element.
 
 #### Inapplicable Example 2
 
-`iframe` is not included in the accessibility tree.
+`iframe` is not [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ```html
 <iframe style="display:none;" src="../test-assets/SC4-1-2-frame-doc.html">

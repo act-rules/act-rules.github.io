@@ -7,7 +7,7 @@ A semantic role is a semantic association that indicates an object's type. This 
 
 [Roles](https://www.w3.org/TR/wai-aria-1.1/#dfn-role) can be [implicit](https://www.w3.org/TR/wai-aria/#implicit_semantics) through the element type or explicit through the [role attribute](https://www.w3.org/TR/html/dom.html#aria-role-attribute).
 
-The role attribute takes a list of tokens. The semantic role is the first valid role in this list. If none of the tokens are valid, the implicit role will be used instead.
+The [role attribute](https://www.w3.org/TR/html/dom.html#aria-role-attribute) takes a list of tokens. The semantic role is the first valid role in this list. If none of the tokens are valid, the implicit role will be used instead.
 
 Non-abstract roles defined in the following specifications are considered valid:
 

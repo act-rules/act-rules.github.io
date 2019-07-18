@@ -41,6 +41,7 @@ Furthermore, `aria-owns` has limited support in some user agents.
 
 ## Background
 
+- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [Required Context Role](https://www.w3.org/TR/wai-aria-1.1/#scope)
 
 ## Test Cases

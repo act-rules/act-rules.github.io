@@ -21,7 +21,7 @@ authors:
 
 The rule applies to any HTML `input`, `select` and `textarea` element with an `autocomplete` attribute that is not empty (""), except if one of the following is true:
 
-- The element is not [visible on the page](#visible-on-the-page), and not [included in the accessibility tree](#included-in-the-accessibility-tree)
+- The element is not [visible](#visible), and not [included in the accessibility tree](#included-in-the-accessibility-tree)
 - The element is an `input` element with a `type` property of `hidden`, `button`, `submit` or `reset`
 - The element has a `aria-disabled="true"` attribute
 - The element is not part of [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation) and has a [semantic role](#semantic-role) that is not a [widget role](https://www.w3.org/TR/wai-aria-1.1/#widget_roles).

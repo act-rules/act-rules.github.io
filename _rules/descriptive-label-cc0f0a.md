@@ -63,8 +63,7 @@ _There are no major accessibility support issues known for this rule._
 Label that is coded with the `label` element and describes the purpose of the associated element.
 
 ```html
-<label for="fname">First name:</label>
-<input id="fname" type="text" name="fname" />
+<label for="fname">First name:</label> <input id="fname" type="text" name="fname" />
 ```
 
 #### Passed Example 2

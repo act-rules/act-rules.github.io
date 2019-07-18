@@ -87,11 +87,7 @@ class Layout extends React.Component {
 						}
 						getNonRulesNavigation: allSitePage(
 							sort: { fields: [context___title], order: ASC }
-							filter: {
-								context: {
-									markdownType: { nin: ["default", "rules", "glossary"] }
-								}
-							}
+							filter: { context: { markdownType: { nin: ["default", "rules", "glossary"] } } }
 						) {
 							group(field: context___markdownType) {
 								fieldValue
@@ -110,32 +106,21 @@ class Layout extends React.Component {
 					}
 				`}
 				render={data => {
-					const {
-						getSiteTitle,
-						getTopLevelNavigation,
-						getNonRulesNavigation,
-					} = data
+					const { getSiteTitle, getTopLevelNavigation, getNonRulesNavigation } = data
 					return (
 						<section className="layout-container">
 							{/* hide menu when width <= 600px */}
 							<ReactMedia
 								query="(max-width: 600px)"
-								onChange={matches =>
-									matches && this.state.showMenu && this.handleHideShowMenu()
-								}
+								onChange={matches => matches && this.state.showMenu && this.handleHideShowMenu()}
 							/>
 							{/* show menu when width > 600px */}
 							<ReactMedia
 								query="(min-width: 601px)"
-								onChange={matches =>
-									matches && !this.state.showMenu && this.handleHideShowMenu()
-								}
+								onChange={matches => matches && !this.state.showMenu && this.handleHideShowMenu()}
 							/>
 							<aside className={this.state.showMenu ? 'show' : 'hide'}>
-								<button
-									className="nav-hide-show-menu"
-									onClick={e => this.handleHideShowMenu()}
-								>
+								<button className="nav-hide-show-menu" onClick={e => this.handleHideShowMenu()}>
 									☰
 								</button>
 								<div className="logo">
@@ -144,9 +129,7 @@ class Layout extends React.Component {
 								<nav className="navigation">
 									<ul>
 										{/* Top level Navigation */}
-										{getTopLevelNavigation.group.map(item =>
-											this.getListItemFromEdges(item.edges)
-										)}
+										{getTopLevelNavigation.group.map(item => this.getListItemFromEdges(item.edges))}
 										<li>
 											<hr />
 										</li>

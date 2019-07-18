@@ -1,7 +1,9 @@
 const { copy } = require('fs-extra')
 const objectHash = require('object-hash')
 const codeBlocks = require('gfm-code-blocks')
-const { www: { url } } = require('./../package.json')
+const {
+	www: { url },
+} = require('./../package.json')
 const createFile = require('../utils/create-file')
 const regexps = require('../utils/reg-exps')
 const getAllMatchesForRegex = require('../utils/get-all-matches-for-regex')
@@ -32,11 +34,7 @@ const init = async () => {
 	 * -> and their relevant titles
 	 */
 	for (const { frontmatter, body } of rulesData) {
-		const {
-			id: ruleId,
-			name: ruleName,
-			accessibility_requirements: ruleAccessibilityRequirements,
-		} = frontmatter
+		const { id: ruleId, name: ruleName, accessibility_requirements: ruleAccessibilityRequirements } = frontmatter
 
 		/**
 		 * get all titles of test case examples (eg: #### Failed Example 1)

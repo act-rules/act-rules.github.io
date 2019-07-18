@@ -52,25 +52,11 @@ export default ({ data }) => {
 						</li>
 						<li>
 							<span className="heading">Last modified:</span>
-							<span>
-								{' '}
-								{getDateTimeFromUnixTimestamp(ruleChangelog[0].date)}
-							</span>
+							<span> {getDateTimeFromUnixTimestamp(ruleChangelog[0].date)}</span>
 						</li>
 						<li>{getAccessibilityRequirements(accessibility_requirements)}</li>
-						<li>
-							{getInputAspects(
-								frontmatter.input_aspects,
-								ruleFormatInputAspects
-							)}
-						</li>
-						<li>
-							{getInputRulesForRule(
-								frontmatter.input_rules,
-								allRules.edges,
-								true
-							)}
-						</li>
+						<li>{getInputAspects(frontmatter.input_aspects, ruleFormatInputAspects)}</li>
+						<li>{getInputRulesForRule(frontmatter.input_rules, allRules.edges, true)}</li>
 					</ul>
 					<hr />
 					{/* Description */}
@@ -90,11 +76,7 @@ export default ({ data }) => {
 					{getGlossaryUsed(slug, allGlossary)}
 					<hr />
 					{/* changelog */}
-					{getChangelog(
-						ruleChangelog,
-						repository.url,
-						`_rules/${relativePath}`
-					)}
+					{getChangelog(ruleChangelog, repository.url, `_rules/${relativePath}`)}
 					{/* Useful links */}
 					<a href="#useful-links" id="useful-links">
 						<h2>Useful Links</h2>
@@ -106,11 +88,7 @@ export default ({ data }) => {
 							</a>
 						</li>
 						<li>
-							<a
-								target="_blank"
-								rel="noopener noreferrer"
-								href={ruleTestcasesUrl}
-							>
+							<a target="_blank" rel="noopener noreferrer" href={ruleTestcasesUrl}>
 								Test case file for use in the WCAG-EM Report Tool
 							</a>
 						</li>
@@ -123,9 +101,7 @@ export default ({ data }) => {
 					<a id="acknowledgements" href="#acknowledgements">
 						<h2>Acknowledgements</h2>
 					</a>
-					<div className="meta">
-						{getAuthors(frontmatter.authors, contributors)}
-					</div>
+					<div className="meta">{getAuthors(frontmatter.authors, contributors)}</div>
 				</section>
 				{/* Toc */}
 				<div className="toc">
@@ -181,9 +157,7 @@ export const query = graphql`
 				changelog
 			}
 		}
-		allRules: allMarkdownRemark(
-			filter: { fields: { markdownType: { eq: "rules" } } }
-		) {
+		allRules: allMarkdownRemark(filter: { fields: { markdownType: { eq: "rules" } } }) {
 			totalCount
 			edges {
 				node {

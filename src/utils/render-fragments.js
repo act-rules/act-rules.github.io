@@ -80,12 +80,7 @@ export const getChangelog = (changelog, url, file) => {
 								<td nowrap="true">{getDateTimeFromUnixTimestamp(date)}</td>
 								<td>{msg}</td>
 								<td>
-									<a
-										target="_blank"
-										rel="noopener noreferrer"
-										href={versionUrl}
-										title="See file at given version"
-									>
+									<a target="_blank" rel="noopener noreferrer" href={versionUrl} title="See file at given version">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											x="0px"
@@ -109,12 +104,7 @@ export const getChangelog = (changelog, url, file) => {
 									</a>
 								</td>
 								<td>
-									<a
-										target="_blank"
-										rel="noopener noreferrer"
-										href={changesUrl}
-										title="See all changes in commit"
-									>
+									<a target="_blank" rel="noopener noreferrer" href={changesUrl} title="See all changes in commit">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											x="0px"
@@ -249,10 +239,7 @@ export function getRuleType(rule_type) {
 	)
 }
 
-export function getAccessibilityRequirements(
-	accessibility_requirements,
-	type = 'details'
-) {
+export function getAccessibilityRequirements(accessibility_requirements, type = 'details') {
 	if (!accessibility_requirements) {
 		return (
 			<div className="meta">
@@ -262,9 +249,7 @@ export function getAccessibilityRequirements(
 		)
 	}
 
-	const conformanceRequirements = Object.entries(
-		accessibility_requirements
-	).filter(([_, value]) => {
+	const conformanceRequirements = Object.entries(accessibility_requirements).filter(([_, value]) => {
 		if (!value) {
 			return false
 		}
@@ -316,18 +301,12 @@ export function getAccessibilityRequirements(
 					</summary>
 					<ul>
 						<li>
-							<a
-								className="sc-item"
-								href={url}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<a className="sc-item" href={url} target="_blank" rel="noopener noreferrer">
 								Learn More about {num} ({handle})
 							</a>
 						</li>
 						<li>
-							<strong>Required for conformance</strong> to WCAG {wcagType} and
-							above on level {level} and above
+							<strong>Required for conformance</strong> to WCAG {wcagType} and above on level {level} and above
 						</li>
 						{getOutcomeMapping()}
 					</ul>
@@ -353,12 +332,7 @@ export function getAccessibilityRequirements(
 					<summary>{mapping.title}</summary>
 					<ul>
 						<li>
-							<a
-								className="sc-item"
-								href={href}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<a className="sc-item" href={href} target="_blank" rel="noopener noreferrer">
 								Learn More about {mapping.title}
 							</a>
 						</li>
@@ -412,12 +386,7 @@ export function getAuthors(authors, contributors) {
 					const { url, name } = authorData
 					return (
 						<li key={name}>
-							<a
-								className="sc-item block"
-								target="_blank"
-								rel="noopener noreferrer"
-								href={url}
-							>
+							<a className="sc-item block" target="_blank" rel="noopener noreferrer" href={url}>
 								{name}
 							</a>
 						</li>
@@ -453,11 +422,7 @@ export function getInputAspects(aspects, ruleFormatInputAspects) {
 	)
 }
 
-export function getInputRulesForRule(
-	inputRules,
-	allRules,
-	stripBasePath = false
-) {
+export function getInputRulesForRule(inputRules, allRules, stripBasePath = false) {
 	if (!inputRules) {
 		return null
 	}
@@ -467,9 +432,7 @@ export function getInputRulesForRule(
 				<span className="heading">Input Rules</span>
 				<ul>
 					{inputRules.map(inputRuleId => {
-						const atomicRule = allRules.find(
-							rule => rule.node.frontmatter.id === inputRuleId
-						)
+						const atomicRule = allRules.find(rule => rule.node.frontmatter.id === inputRuleId)
 						const aHref = stripBasePath
 							? atomicRule.node.fields.slug.replace('rules/', '')
 							: atomicRule.node.fields.slug
@@ -528,20 +491,7 @@ export function getGlossaryUsageInRules(usages) {
  * @param {String} unixtimestamp UNIX timestamp
  */
 export function getDateTimeFromUnixTimestamp(unixtimestamp) {
-	const months_arr = [
-		'Jan',
-		'Feb',
-		'Mar',
-		'Apr',
-		'May',
-		'Jun',
-		'Jul',
-		'Aug',
-		'Sep',
-		'Oct',
-		'Nov',
-		'Dec',
-	]
+	const months_arr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 	const date = new Date(unixtimestamp * 1000)
 	const year = date.getFullYear()
 	const month = months_arr[date.getMonth()]

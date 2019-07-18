@@ -93,11 +93,7 @@ _There are no major accessibility support issues known for this rule._
 `aria-owns` property with valid ID reference list value
 
 ```html
-<div
-	role="combobox"
-	aria-owns="my-textbox my-grid"
-	aria-label="Search within the website"
-></div>
+<div role="combobox" aria-owns="my-textbox my-grid" aria-label="Search within the website"></div>
 ```
 
 #### Passed Example 6
@@ -113,13 +109,7 @@ _There are no major accessibility support issues known for this rule._
 `aria-valuemin`, `aria-valuemax` and `aria-valuenow` properties with valid number values
 
 ```html
-<div
-	role="spinbutton"
-	aria-valuemin="1.0"
-	aria-valuemax="2.0"
-	aria-valuenow="1.5"
-	aria-label="Select a value"
-></div>
+<div role="spinbutton" aria-valuemin="1.0" aria-valuemax="2.0" aria-valuenow="1.5" aria-label="Select a value"></div>
 ```
 
 #### Passed Example 8
@@ -163,11 +153,7 @@ _There are no major accessibility support issues known for this rule._
 `aria-required` property with invalid true/false value
 
 ```html
-<div
-	role="textbox"
-	aria-required="undefined"
-	aria-label="A required textbox"
-></div>
+<div role="textbox" aria-required="undefined" aria-label="A required textbox"></div>
 ```
 
 #### Failed Example 2
@@ -191,11 +177,7 @@ _There are no major accessibility support issues known for this rule._
 `aria-errormessage` property with invalid ID reference value, since space is not allowed in a single ID
 
 ```html
-<div
-	role="textbox"
-	aria-errormessage="error1 error2"
-	aria-label="A textbox with an error"
-></div>
+<div role="textbox" aria-errormessage="error1 error2" aria-label="A textbox with an error"></div>
 ```
 
 #### Failed Example 5
@@ -211,13 +193,7 @@ _There are no major accessibility support issues known for this rule._
 `aria-valuemin`, `aria-valuemax` and `aria-valuenow` property with invalid number values
 
 ```html
-<div
-	role="spinbutton"
-	aria-valuemin="one"
-	aria-valuemax="three"
-	aria-valuenow="two"
-	aria-label="Choose a value"
-></div>
+<div role="spinbutton" aria-valuemin="one" aria-valuemax="three" aria-valuenow="two" aria-label="Choose a value"></div>
 ```
 
 #### Failed Example 7
@@ -282,11 +258,7 @@ Element has ARIA role, but no ARIA states or properties
 `aria-checked` state with empty value
 
 ```html
-<div
-	role="checkbox"
-	aria-checked
-	aria-label="Accept terms and conditions"
-></div>
+<div role="checkbox" aria-checked aria-label="Accept terms and conditions"></div>
 ```
 
 #### Inapplicable Example 5

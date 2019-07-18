@@ -29,9 +29,7 @@ const getAllHeadingsFromMarkdownBody = body => {
  * @returns {Array<String>} al headings matching given depth
  */
 const getHeadingOfDepth = (headings, headingDepth) => {
-	return headings
-		.filter(({ depth }) => depth === headingDepth)
-		.map(({ text }) => text)
+	return headings.filter(({ depth }) => depth === headingDepth).map(({ text }) => text)
 }
 
 describeRule('headings', ruleData => {
@@ -41,13 +39,7 @@ describeRule('headings', ruleData => {
 	/**
 	 * Check for `required` `h2` headings
 	 */
-	const requiredH2 = [
-		`Applicability`,
-		`Assumptions`,
-		`Accessibility Support`,
-		`Background`,
-		`Test Cases`,
-	]
+	const requiredH2 = [`Applicability`, `Assumptions`, `Accessibility Support`, `Background`, `Test Cases`]
 	const h2Headings = getHeadingOfDepth(headings, 2)
 	test.each(requiredH2)('has required `h2` - `%s`', heading => {
 		expect(h2Headings).toContain(heading)

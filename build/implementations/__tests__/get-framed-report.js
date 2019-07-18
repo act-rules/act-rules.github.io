@@ -1,8 +1,7 @@
 const getFramedReport = require('../get-framed-report')
 
 describe(`getFramedReport`, () => {
-	it('throws when no argument is specified', async () =>
-		expect(getFramedReport(null)).rejects.toBeInstanceOf(Error))
+	it('throws when no argument is specified', async () => expect(getFramedReport(null)).rejects.toBeInstanceOf(Error))
 
 	it('returns framed report from given URL (1 report)', async () => {
 		const framedReport = await getFramedReport(
@@ -12,9 +11,7 @@ describe(`getFramedReport`, () => {
 	})
 
 	it('returns framed report from files GLOB (multiple reports)', async () => {
-		const framedReports = await getFramedReport(
-			`./node_modules/act-rules-implementation-rgaa/reports/*.json`
-		)
+		const framedReports = await getFramedReport(`./node_modules/act-rules-implementation-rgaa/reports/*.json`)
 		expect(framedReports.length).toBeGreaterThan(1)
 		framedReports.forEach(report => assertFramedReport(report))
 	})

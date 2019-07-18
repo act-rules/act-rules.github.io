@@ -12,12 +12,7 @@ const createFile = require('../../utils/create-file')
  * Create testcases json file that can be used by
  */
 const createTestcasesOfRuleOfEmReportTool = async options => {
-	const {
-		ruleId,
-		ruleName,
-		ruleTestcases,
-		ruleAccessibilityRequirements,
-	} = options
+	const { ruleId, ruleName, ruleTestcases, ruleAccessibilityRequirements } = options
 
 	const title = `Report for ACT-R Rule - ${ruleName}`
 	const siteName = `ACT-R Rule - ${ruleName}`
@@ -51,9 +46,7 @@ const createTestcasesOfRuleOfEmReportTool = async options => {
 		.map(scNum => scUrlsMetaData[scNum].test.toLowerCase())
 
 	const auditResults = scEmReportAuditResult.map(auditResult => {
-		auditResult.result.outcome = matchingScTests.includes(
-			auditResult.test.toLowerCase()
-		)
+		auditResult.result.outcome = matchingScTests.includes(auditResult.test.toLowerCase())
 			? 'earl:cantTell'
 			: 'earl:inapplicable'
 		return auditResult

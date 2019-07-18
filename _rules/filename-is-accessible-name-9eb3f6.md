@@ -56,8 +56,7 @@ The `img` element's accessible name includes the filename, which in combination 
 
 ```html
 <a href="https://www.w3.org/WAI/demos/bad/img/w3c.png" download
-	>Download
-	<img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png"
+	>Download <img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png"
 /></a>
 ```
 
@@ -76,11 +75,7 @@ The `img` element's accessible name matches the image filename. However the pres
 The `input` element with a `type` of `image` has an accessible name that matches the filename. However the presence of the file extension in the accessible name is redundant and results in the accessible name not accurately describing the image.
 
 ```html
-<input
-	type="image"
-	src="https://www.w3.org/WAI/demos/bad/before/img/top_weather.gif"
-	alt="top_weather.gif"
-/>
+<input type="image" src="https://www.w3.org/WAI/demos/bad/before/img/top_weather.gif" alt="top_weather.gif" />
 ```
 
 ### Inapplicable
@@ -106,10 +101,7 @@ The `img` element is not included in the accessibility tree.
 The `img` element's accessible name is not equivalent to the file name specified in the `src` attribute.
 
 ```html
-<img
-	src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg"
-	alt="modanna lily"
-/>
+<img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="modanna lily" />
 ```
 
 #### Inapplicable Example 4

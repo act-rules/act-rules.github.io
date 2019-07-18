@@ -170,11 +170,5 @@ Image is not a button image
 Image button is not included in the accessibility tree
 
 ```html
-<input
-	type="image"
-	name="submit"
-	src="button.gif"
-	alt="Submit"
-	aria-hidden="true"
-/>
+<input type="image" name="submit" src="button.gif" alt="Submit" aria-hidden="true" />
 ```

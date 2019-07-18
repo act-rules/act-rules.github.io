@@ -7,9 +7,7 @@ const readFile = require('../../utils/read-file')
 
 const getFramedReport = async path => {
 	if (!path) {
-		throw new Error(
-			'Path should be provided from which report has to be obtained.'
-		)
+		throw new Error('Path should be provided from which report has to be obtained.')
 	}
 
 	if (isUrl(path)) {

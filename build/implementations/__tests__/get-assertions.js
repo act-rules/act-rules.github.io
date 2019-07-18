@@ -2,8 +2,7 @@ const getFramedReport = require('../get-framed-report')
 const getAssertions = require('../get-assertions')
 
 describe(`getAssertions`, () => {
-	it('throws when no argument is specified', () =>
-		expect(() => getAssertions(null)).toThrow())
+	it('throws when no argument is specified', () => expect(() => getAssertions(null)).toThrow())
 
 	it('returns assertions from framed reports', async () => {
 		const framedReport = await getFramedReport(

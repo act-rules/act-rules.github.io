@@ -19,9 +19,9 @@ authors:
 
 ## Applicability
 
-This rule applies to any set of any two or more HTML or SVG elements that have the [semantic role](#semantic-role) of `link`, or a role that inherits from the `link` role, are [included in the accessibility tree](#included-in-the-accessibility-tree), and that have [matching](#matching-characters) [accessible names](#accessible-name) that do not only consist of [whitespace](#whitespace), and have [matching](#matching-characters) [programmatically determined link contexts](#programatically-determined-link-context).
+This rule applies to any set of any two or more HTML or SVG elements that have the [semantic role](#semantic-role) of `link`, or a role that inherits from the `link` role, are [included in the accessibility tree](#included-in-the-accessibility-tree), and that have [matching](#matching-characters) [accessible names](#accessible-name) that do not only consist of [whitespace](#whitespace), and have [matching](#matching-characters) [programmatically determined link contexts](#programmatically-determined-link-context).
 
-**Note:** The test target for this rule is the full set of link elements that share the same [matching](#matching-characters) [accessible name](#accessible-name) and [matching](#matching-characters) [programmatically determined link contexts](#programatically-determined-link-context).
+**Note:** The test target for this rule is the full set of link elements that share the same [matching](#matching-characters) [accessible name](#accessible-name) and [matching](#matching-characters) [programmatically determined link contexts](#programmatically-determined-link-context).
 
 ## Expectation
 
@@ -29,7 +29,7 @@ When followed, the links in each set of target elements resolve to the [same res
 
 ## Assumptions
 
-This rule assumes that the purpose of the links with identical [accessible names](#accessible-name) and [link contexts](#programatically-determined-link-context) would not be ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+This rule assumes that the purpose of the links with identical [accessible names](#accessible-name) and [link contexts](#programmatically-determined-link-context) would not be ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
 ). If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links out of context, e.g. on a list of links in a screen reader, which makes it more of a general user experience concern than an accessibility issue.
 
 ## Accessibility Support

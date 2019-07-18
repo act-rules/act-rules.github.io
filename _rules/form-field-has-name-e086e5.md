@@ -25,7 +25,7 @@ This rule applies to any element that is [included in the accessibility tree](#i
 
 - have a [semantic roles](#semantic-role) that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
 - does not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
-- The `option` role is not part of the list of applicable roles, because it does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an accessible name.
+- The `option` role is not part of the list of applicable roles, because it does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an [accessible name](#accessible-name).
 
 ## Expectation
 
@@ -37,14 +37,14 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-Certain assistive technologies can be set up to ignore the title attribute, which means that to some users the title attribute will not act as an accessible name.
+Certain assistive technologies can be set up to ignore the title attribute, which means that to some users the title attribute will not act as an [accessible name](#accessible-name).
 
 ## Background
 
 - https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html
 - https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html
 
-**Note**: This rule does not fail 3.3.2 as there are sufficient techniques within 3.3.2 that don't need the elements to have an accessible name. For example "G131: Providing descriptive labels" **AND** "G162: Positioning labels to maximize predictability of relationships" would be sufficient.
+**Note**: This rule does not fail 3.3.2 as there are sufficient techniques within 3.3.2 that don't need the elements to have an [accessible name](#accessible-name). For example "G131: Providing descriptive labels" **AND** "G162: Positioning labels to maximize predictability of relationships" would be sufficient.
 
 ## Test Cases
 
@@ -99,7 +99,7 @@ Explicit role.
 
 #### Passed example 6
 
-The accessible name is not only whitespace.
+The [accessible name](#accessible-name) is not only whitespace.
 
 ```html
 <label>
@@ -112,7 +112,7 @@ The accessible name is not only whitespace.
 
 #### Failed Example 1
 
-No accessible name.
+No [accessible name](#accessible-name).
 
 ```html
 <input />
@@ -120,7 +120,7 @@ No accessible name.
 
 #### Failed Example 2
 
-Non-focusable element still needs an accessible name.
+Non-focusable element still needs an [accessible name](#accessible-name).
 
 ```html
 <input tabindex="-1" />
@@ -164,7 +164,7 @@ The explicit label is not supported on `div` elements.
 
 #### Failed example 7
 
-The accessible name is only whitespace.
+The [accessible name](#accessible-name) is only whitespace.
 
 ```html
 <label> <input /></label>

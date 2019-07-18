@@ -57,7 +57,7 @@ For `area` elements that have a `href` attribute, but are not nested inside a `m
 
 #### Passed Example 1
 
-`<a>` element with accessible name through content.
+`<a>` element with [accessible name](#accessible-name) through content.
 
 ```html
 <a href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
@@ -65,7 +65,7 @@ For `area` elements that have a `href` attribute, but are not nested inside a `m
 
 #### Passed Example 2
 
-Element with explicit role of link with accessible name through content.
+Element with explicit role of link with [accessible name](#accessible-name) through content.
 
 ```html
 <div role="link">Web Accessibility Initiative (WAI)</div>
@@ -81,7 +81,7 @@ Element with explicit role of link with accessible name through content.
 
 #### Passed Example 4
 
-Accessible name for link via `aria-label`
+[accessible name](#accessible-name) for link via `aria-label`
 
 ```html
 <a href="http://www.w3.org/WAI"><img src="#" aria-label="This is a link"/></a>
@@ -113,7 +113,7 @@ Link with both `image` and `text`.
 
 #### Passed Example 8
 
-Accessible name for link via `aria-labelledby`.
+[accessible name](#accessible-name) for link via `aria-labelledby`.
 
 ```html
 <a href="http://www.w3.org/WAI"><img src="#" aria-labelledby="id1"/></a>
@@ -143,7 +143,7 @@ When `link` is off screen.
 
 #### Passed example 10
 
-`area` element with `href` attribute has accessible name.
+`area` element with `href` attribute has [accessible name](#accessible-name).
 
 ```html
 <img
@@ -161,7 +161,7 @@ When `link` is off screen.
 
 #### Passed example 11
 
-`a` element where accessible name does not only consist of whitespace.
+`a` element where [accessible name](#accessible-name) does not only consist of whitespace.
 
 ```html
 <a href="http://www.w3.org/WAI">:-)</a>
@@ -171,7 +171,7 @@ When `link` is off screen.
 
 #### Failed Example 1
 
-Image link without accessible name.
+Image link without [accessible name](#accessible-name).
 
 ```html
 <a href="http://www.w3.org/WAI"><img src="#"/></a>
@@ -230,7 +230,7 @@ Non-visible link.
 
 #### Failed example 9
 
-Link is completely empty, but still shows up in focus order, so it should have an accessible name.
+Link is completely empty, but still shows up in focus order, so it should have an [accessible name](#accessible-name).
 
 ```html
 <a href="http://www.w3.org/WAI"></a>
@@ -238,7 +238,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 #### Failed example 10
 
-`area` element with `href` attribute does not have accessible name.
+`area` element with `href` attribute does not have [accessible name](#accessible-name).
 
 ```html
 <img
@@ -256,7 +256,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 #### Failed example 11
 
-`a` element where accessible name through content only consist of whitespace.
+`a` element where [accessible name](#accessible-name) through content only consist of whitespace.
 
 ```html
 <a href="http://www.w3.org/WAI"> </a>

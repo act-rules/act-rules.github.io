@@ -50,7 +50,7 @@ There is a known combination of a popular browser and assistive technology that 
 
 #### Passed Example 1
 
-Image button element with accessible name through `alt` attribute
+Image button element with [accessible name](#accessible-name) through `alt` attribute
 
 ```html
 <input type="image" name="submit" src="button.gif" alt="Submit" />
@@ -58,7 +58,7 @@ Image button element with accessible name through `alt` attribute
 
 #### Passed Example 2
 
-Image button element with accessible name through `aria-label`
+Image button element with [accessible name](#accessible-name) through `aria-label`
 
 ```html
 <input type="image" name="submit" src="button.gif" aria-label="Submit" />
@@ -66,7 +66,7 @@ Image button element with accessible name through `aria-label`
 
 #### Passed Example 3
 
-Image button element with accessible name through `title` attribute
+Image button element with [accessible name](#accessible-name) through `title` attribute
 
 ```html
 <input type="image" name="submit" src="button.gif" title="Submit" />
@@ -74,7 +74,7 @@ Image button element with accessible name through `title` attribute
 
 #### Passed Example 4
 
-Image button element with accessible name through `aria-labelledby`
+Image button element with [accessible name](#accessible-name) through `aria-labelledby`
 
 ```html
 <input type="image" name="submit" src="button.gif" aria-labelledby="id1" />
@@ -83,7 +83,7 @@ Image button element with accessible name through `aria-labelledby`
 
 #### Passed example 5
 
-Accessible name is not only whitespace.
+[Accessible name](#accessible-name) is not only whitespace.
 
 ```html
 <input type="image" name="submit" src="button.gif" alt=":-)" />
@@ -91,7 +91,7 @@ Accessible name is not only whitespace.
 
 #### Passed example 6
 
-Image button element with accessible name through `alt` attribute
+Image button element with [accessible name](#accessible-name) through `alt` attribute
 
 ```html
 <input type="image" name="submit" src="button.gif" alt="123" />
@@ -101,7 +101,7 @@ Image button element with accessible name through `alt` attribute
 
 #### Failed Example 1
 
-Image button element with no attributes to give accessible name
+Image button element with no attributes to give [accessible name](#accessible-name)
 
 ```html
 <input type="image" name="submit" src="button.gif" />
@@ -125,7 +125,7 @@ Image button with aria-labelledby that does not reference an id that exists in t
 
 #### Failed example 4
 
-Accessible name is only whitespace.
+[Accessible name](#accessible-name) is only whitespace.
 
 ```html
 <input type="image" name="submit" src="button.gif" alt=" " />

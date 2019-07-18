@@ -53,7 +53,7 @@ There is a known combination of a popular browser and assistive technology that 
 
 #### Passed Example 1
 
-The HTML `img` element has an accessible name
+The HTML `img` element has an [accessible name](#accessible-name)
 
 ```html
 <img alt="W3C logo" />
@@ -61,7 +61,7 @@ The HTML `img` element has an accessible name
 
 #### Passed Example 2
 
-The element with role of `img` has an accessible name
+The element with role of `img` has an [accessible name](#accessible-name)
 
 ```html
 <div role="img" aria-label="W3C logo"></div>
@@ -69,7 +69,7 @@ The element with role of `img` has an accessible name
 
 #### Passed Example 3
 
-The element has an accessible name, though the name is not always accessibility supported
+The element has an [accessible name](#accessible-name), though the name is not always accessibility supported
 
 ```html
 <img title="W3C logo" />
@@ -101,7 +101,7 @@ The HTML `img` element is marked as [decorative](#decorative) through `role="non
 
 #### Passed example 6
 
-The HTML `img` element has an accessible name that does not only consist of whitespace
+The HTML `img` element has an [accessible name](#accessible-name) that does not only consist of whitespace
 
 ```html
 <img alt=":-)" />
@@ -111,7 +111,7 @@ The HTML `img` element has an accessible name that does not only consist of whit
 
 #### Failed Example 1
 
-The HTML `img` element is not marked as [decorative](#decorative) and does not have an accessible name
+The HTML `img` element is not marked as [decorative](#decorative) and does not have an [accessible name](#accessible-name)
 
 ```html
 <img />
@@ -119,7 +119,7 @@ The HTML `img` element is not marked as [decorative](#decorative) and does not h
 
 #### Failed Example 2
 
-The element with role of `img` does not have an accessible name
+The element with role of `img` does not have an [accessible name](#accessible-name)
 
 ```html
 <div role="img"></div>
@@ -127,7 +127,7 @@ The element with role of `img` does not have an accessible name
 
 #### Failed Example 3
 
-The `img` element inside a `div` positioned off screen has no accessible name and is not marked as [decorative](#decorative)
+The `img` element inside a `div` positioned off screen has no [accessible name](#accessible-name) and is not marked as [decorative](#decorative)
 
 ```html
 <div style="margin-left:-9999px;"><img /></div>
@@ -135,7 +135,7 @@ The `img` element inside a `div` positioned off screen has no accessible name an
 
 #### Failed example 4
 
-The HTML `img` element has an accessible name that only consist of whitespace
+The HTML `img` element has an [accessible name](#accessible-name) that only consist of whitespace
 
 ```html
 <img aria-label=" " />

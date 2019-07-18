@@ -26,7 +26,7 @@ The rule applies to elements that are [included in the accessibility tree](#incl
 
 Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
 
-**Note**: `input` elements of type `submit` and `reset` can get their accessible name from a [default text](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset), as well as from a `value` or other attribute.
+**Note**: `input` elements of type `submit` and `reset` can get their [accessible name](#accessible-name) from a [default text](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset), as well as from a `value` or other attribute.
 
 ## Assumptions
 
@@ -57,7 +57,7 @@ Regular button.
 
 #### Passed Example 2
 
-Value attribute as the accessible name.
+Value attribute as the [accessible name](#accessible-name).
 
 ```html
 <input type="submit" value="Submit" />
@@ -65,7 +65,7 @@ Value attribute as the accessible name.
 
 #### Passed Example 3
 
-`aria-label` for the accessible name.
+`aria-label` for the [accessible name](#accessible-name).
 
 ```html
 <button aria-label="My button"></button>
@@ -116,7 +116,7 @@ Off screen elements should be tested.
 
 #### Passed example 8
 
-Button has accessible name that is not only whitespace.
+Button has [accessible name](#accessible-name) that is not only whitespace.
 
 ```html
 <button>:-)</button>
@@ -124,7 +124,7 @@ Button has accessible name that is not only whitespace.
 
 #### Passed example 9
 
-Input button has an accessible name that comes from the default "reset" text.
+Input button has an [accessible name](#accessible-name) that comes from the default "reset" text.
 
 ```html
 <input type="reset" />
@@ -134,7 +134,7 @@ Input button has an accessible name that comes from the default "reset" text.
 
 #### Failed Example 1
 
-Value attribute does NOT give an accessible name, only for input elements.
+Value attribute does NOT give an [accessible name](#accessible-name), only for input elements.
 
 ```html
 <button type="button" value="read more"></button>
@@ -150,7 +150,7 @@ Span tag with role button with no name.
 
 #### Failed Example 3
 
-Off screen element without an accessible name.
+Off screen element without an [accessible name](#accessible-name).
 
 ```html
 <html>
@@ -169,7 +169,7 @@ Off screen element without an accessible name.
 
 #### Failed example 4
 
-Button has an accessible name that is only whitespace.
+Button has an [accessible name](#accessible-name) that is only whitespace.
 
 ```html
 <button> </button>

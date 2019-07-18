@@ -1,4 +1,4 @@
-const getFramedReport = require('../../../build/implementations/get-framed-report')
+const getFramedReport = require('../get-framed-report')
 
 describe(`getFramedReport`, () => {
   it('throws when no argument is specified', async () =>

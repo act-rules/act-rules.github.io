@@ -1,4 +1,4 @@
-const describeRule = require('../test-utils/describe-rule')
+const describeRule = require('../../test-utils/describe-rule')
 
 describeRule('filename', ruleData => {
   const { filename, frontmatter } = ruleData

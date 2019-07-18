@@ -149,7 +149,7 @@ Usage of `alt` attribute to describe content is not valid.
 
 #### Failed example 7
 
-Accessible name is not only whitespace.
+Accessible name is only whitespace.
 
 ```html
 <iframe title=" " src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>

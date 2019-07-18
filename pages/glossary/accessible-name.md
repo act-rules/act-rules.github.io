@@ -3,7 +3,7 @@ title: Accessible Name
 key: accessible-name
 ---
 
-The programatically determined name of a user interface element that is included in the accessibility tree.
+The programmatically determined name of a user interface element that is included in the accessibility tree.
 
 The accessible name is calculated using the [accessible name and description computation](https://www.w3.org/TR/accname).
 

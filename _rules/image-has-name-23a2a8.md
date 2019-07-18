@@ -36,6 +36,8 @@ _There are currently no assumptions._
 
 There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name](#accessible-name).
 
+There are several popular browsers that do not fully respect empty `alt` attribute and will add the `img` element to the accessibility tree with a role of either `img` or `graphic`.
+
 ## Background
 
 - [G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G94)

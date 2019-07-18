@@ -3,19 +3,16 @@
  * -> for each glossary item (find references in each rule)
  * -> this is saved in `_data` which is later used in `pages/glossary`
  */
-const globby = require('globby')
 const regexps = require('../utils/reg-exps')
 const createFile = require('../utils/create-file')
 const getAllMatchesForRegex = require('../utils/get-all-matches-for-regex')
-const getMarkdownData = require('../utils/get-markdown-data')
+const getRulesMarkdownData = require('../utils/get-rules-markdown-data')
 
 const init = async () => {
 	/**
 	 * Get all rules `markdown` data
 	 */
-	const rulesData = globby
-		.sync([`./_rules/*.md`])
-		.map(rulePath => getMarkdownData(rulePath))
+	const rulesData = getRulesMarkdownData()
 
 	/**
 	 * Eg:

@@ -6,7 +6,7 @@ const contributorsNames = contributors.map(contributor =>
 
 describeRule('frontmatter', ruleData => {
 	const { frontmatter } = ruleData
-	const { rule_type, authors } = frontmatter
+  const { rule_type, authors, accessibility_requirements } = frontmatter
 
 	/**
 	 * Check for `required` properties
@@ -39,10 +39,24 @@ describeRule('frontmatter', ruleData => {
 		})
 	}
 
-	/**
-	 * Check if listed `authors` have meta data as contributors in package.json
-	 */
-	test.each(authors)('has contributor data for author: `%s`', author => {
-		expect(contributorsNames).toContain(author.toLowerCase())
-	})
+  /**
+   * Check if listed `authors` have meta data as contributors in package.json
+   */
+  test.each(authors)('has contributor data for author: `%s`',
+    (author) => {
+      expect(contributorsNames).toContain(author.toLowerCase());
+    })
+
+  /**
+   * Check if `accessibility_requirements` (if any) has expected values
+   */
+  if (accessibility_requirements) {
+    const accRequirementValues = Object.values(accessibility_requirements)
+    test.each(accRequirementValues)
+      ('has expected keys for accessibility requirement: `%p`', (accReq) => {
+        const requirementKeys = Object.keys(accReq).sort()
+        expect(requirementKeys.length).toBeGreaterThanOrEqual(4);
+        expect(requirementKeys).toIncludeAllMembers(['failed', 'forConformance', 'inapplicable', 'passed']);
+      })
+  }
 })

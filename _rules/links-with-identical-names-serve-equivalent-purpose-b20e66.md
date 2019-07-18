@@ -109,7 +109,7 @@ Pages have the same advertised key content but use different layouts:
 
 #### Passed Example 8
 
-Links created via scripting with explicit role of link, but lead to the same resource:
+Links created via scripting with [explicit role](#explicit-role) of link, but lead to the same resource:
 
 ```html
 <span
@@ -173,7 +173,7 @@ Same accessible name used for links going to web pages that are similar, but hav
 
 #### Failed Example 3
 
-Links created via scripting with explicit role of link, but lead to resources that offer different content:
+Links created via scripting with [explicit role](#explicit-role) of link, but lead to resources that offer different content:
 
 ```html
 <span
@@ -256,7 +256,7 @@ Links with different accessible names:
 
 #### Inapplicable Example 3
 
-Link is not included in the accesssibility tree:
+Link is not included in the accessibility tree:
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html" aria-hidden="true" tabindex="-1"

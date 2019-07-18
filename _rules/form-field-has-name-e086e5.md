@@ -52,7 +52,7 @@ Certain assistive technologies can be set up to ignore the title attribute, whic
 
 #### Passed Example 1
 
-Implicit role with implicit label.
+[Implicit role](#implicit-role) with implicit label.
 
 ```html
 <label>
@@ -63,7 +63,7 @@ Implicit role with implicit label.
 
 #### Passed Example 2
 
-Implicit role with aria-label
+[Implicit role](#implicit-role) with aria-label
 
 ```html
 <input aria-label="last name" disabled />
@@ -71,7 +71,7 @@ Implicit role with aria-label
 
 #### Passed Example 3
 
-Implicit role with explicit label
+[Implicit role](#implicit-role) with explicit label
 
 ```html
 <label for="country">Country</label>
@@ -82,7 +82,7 @@ Implicit role with explicit label
 
 #### Passed Example 4
 
-Implicit role with `aria-labelledby`.
+[Implicit role](#implicit-role) with `aria-labelledby`.
 
 ```html
 <div id="country">Country</div>
@@ -91,7 +91,7 @@ Implicit role with `aria-labelledby`.
 
 #### Passed Example 5
 
-Explicit role.
+[Explicit role].(#explicit-role)
 
 ```html
 <div aria-label="country" role="combobox" aria-disabled="true">England</div>
@@ -190,7 +190,7 @@ Hidden to assistive technologies.
 
 #### Inapplicable Example 3
 
-Role has explicitely been set to something that isn't a form field.
+Role has [explicitly](#explicit-role) been set to something that isn't a form field.
 
 ```html
 <input role="presentation" />

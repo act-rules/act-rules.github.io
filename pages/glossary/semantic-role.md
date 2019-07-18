@@ -17,7 +17,7 @@ Non-abstract roles defined in the following specifications are considered valid:
 
 Other roles may be added as they become available. Not all roles will be supported in all assistive technologies. Testers are encouraged to adjust which roles are allowed according to the [accessibility support base line](https://www.w3.org/TR/WCAG-EM/#step1c). For the purposes of executing test cases in all rules, it should be assumed that all roles are supported by assistive technologies so that none of the roles fail due to lack of accessibility support.
 
-**Note**: For HTML elements the implicit roles are documented in [ARIA in HTML](https://www.w3.org/TR/html-aria/).
+**Note**: For HTML elements the [implicit roles](#implicit-role) are documented in [ARIA in HTML](https://www.w3.org/TR/html-aria/).
 
 #### Acccessibility Support
 

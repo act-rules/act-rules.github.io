@@ -22,11 +22,9 @@ authors:
 
 The rule applies to any `element` that is [visible](#visible) and has a CSS `transform` property with a [rotate](https://drafts.csswg.org/css-transforms/#funcdef-transform-rotate) transform-function, set from a CSS media query with an [orientation](https://drafts.csswg.org/mediaqueries-3/#orientation) media feature (`landscape` or `portrait`).
 
-## Expectation
+## Expectation 1
 
-Each target element does not restrict its view and operation to a single display orientation, unless a specific display orientation is [essential](https://www.w3.org/TR/WCAG21/#dfn-essential).
-
-**Note:** Examples where a particular display orientation may be [essential](https://www.w3.org/TR/WCAG21/#dfn-essential) are a bank check, a piano application, slides for a projector or television, or virtual reality content where binary display orientation is not applicable.
+Each target element is not restricted to a single display orientation using CSS rotate transform-function, whose value is a multiple of 90 degrees but not a multiple of 180 degrees.
 
 ## Assumptions
 
@@ -116,7 +114,6 @@ A page, where orientation is locked via `style` specified on the `head`.
   </body>
 </html>
 ```
-
 
 ### Inapplicable
 

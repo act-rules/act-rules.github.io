@@ -31,7 +31,7 @@ The rule applies to any [non-streaming](#non-streaming-media-element) `audio` el
 
 ## Expectation
 
-For each test target, the outcome of at least one of the following rules is passed:
+For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
 - [Audio elements have a transcript](https://act-rules.github.io/rules/2eb176)
 - [Audio-only as a media alternative for text](https://act-rules.github.io/rules/afb423)

@@ -28,7 +28,7 @@ The rule applies to every [non-streaming](#non-streaming-media-element) `video` 
 
 ## Expectation
 
-For each test target, the outcome of at least one of the following rules is passed:
+For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
 - [Video element audio described](https://act-rules.github.io/rules/1ea59c)
 - [Video element transcript](https://act-rules.github.io/rules/1a02b0)

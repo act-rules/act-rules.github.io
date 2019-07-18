@@ -121,7 +121,7 @@ Non-widget role that supports name from content.
 
 #### Inapplicable Example 4
 
-No rendered text in name from content.
+No [rendered text](#rendered-text) in name from content.
 
 ```html
 <div role="tooltip" aria-label="OK"></div>

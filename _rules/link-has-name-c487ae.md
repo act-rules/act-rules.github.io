@@ -220,7 +220,7 @@ Link with image that has empty `aria-labelledby`.
 
 #### Failed Example 7
 
-Non-visible link.
+[Non-visible](#visible) link.
 
 ```html
 <a href="http://www.w3.org/WAI" style="left: -9999px; position: absolute;">

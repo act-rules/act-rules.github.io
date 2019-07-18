@@ -123,7 +123,7 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 
 #### Passed Example 7
 
-Heading marked up with `h1` element that describes the topic or purpose of its [section of the content](#section-of-content). The heading is visible, but is not [included in the accessibility tree](#included-in-the-accessibility-tree).
+Heading marked up with `h1` element that describes the topic or purpose of its [section of the content](#section-of-content). The heading is [visible](#visible), but is not [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ```html
 <h1 class="target" aria-hidden="true">Opening Hours</h1>
@@ -165,7 +165,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed Example 4
 
-Heading marked up with `h1` element that does not describe the topic or purpose of its [section of the content](#section-of-content). The heading is visible, but is not [included in the accessibility tree](#included-in-the-accessibility-tree).
+Heading marked up with `h1` element that does not describe the topic or purpose of its [section of the content](#section-of-content). The heading is [visible](#visible), but is not [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ```html
 <h1 class="target" aria-hidden="true">Weather</h1>
@@ -184,7 +184,7 @@ No heading.
 
 #### Inapplicable Example 2
 
-Heading that is neither visible to users, nor [included in the accessibility tree](#included-in-the-accessibility-tree).
+Heading that is neither [visible](#visible) to users, nor [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ```html
 <h1 style="display: none;">Opening hours</h1>
@@ -193,7 +193,7 @@ Heading that is neither visible to users, nor [included in the accessibility tre
 
 #### Inapplicable Example 3
 
-Empty heading marked up with `h1` is not visible.
+Empty heading marked up with `h1` is not [visible](#visible).
 
 ```html
 <h1></h1>
@@ -201,7 +201,7 @@ Empty heading marked up with `h1` is not visible.
 
 #### Inapplicable Example 4
 
-Empty heading marked up with `role="heading"` is not visible.
+Empty heading marked up with `role="heading"` is not [visible](#visible).
 
 ```html
 <p role="heading" aria-level="1"></p>

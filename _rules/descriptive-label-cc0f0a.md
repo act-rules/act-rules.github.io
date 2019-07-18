@@ -86,7 +86,7 @@ Implicit label that is coded with the `label` element and describes the purpose 
 
 #### Passed Example 4
 
-Label is visible, but not included in accessibility tree
+Label is [visible](#visible), but not included in accessibility tree
 
 ```html
 <p id="label_fname" aria-hidden="true">First name:</p>
@@ -95,7 +95,7 @@ Label is visible, but not included in accessibility tree
 
 #### Passed Example 5
 
-Label is included in accessibility tree, but not visible
+Label is included in accessibility tree, but not [visible](#visible)
 
 ```html
 <p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">
@@ -133,7 +133,7 @@ Implicit label that is coded with the `label` element and does not describe the 
 
 #### Failed Example 4
 
-Label is visible, but not included in accessibility tree, and does not describe the purpose of the associated element.
+Label is [visible](#visible), but not included in accessibility tree, and does not describe the purpose of the associated element.
 
 ```html
 <p id="label_fname" aria-hidden="true">Menu</p>
@@ -142,7 +142,7 @@ Label is visible, but not included in accessibility tree, and does not describe 
 
 #### Failed Example 5
 
-Label is included in accessibility tree, but not visible, and does not describe the purpose of the associated element.
+Label is included in accessibility tree, but not [visible](#visible), and does not describe the purpose of the associated element.
 
 ```html
 <p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">
@@ -155,7 +155,7 @@ Label is included in accessibility tree, but not visible, and does not describe 
 
 #### Inapplicable Example 1
 
-`Label` that is neither visible to users, nor [included in the accessibility tree](#included-in-the-accessibility-tree).
+`Label` that is neither [visible](#visible) to users, nor [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ```html
 <div style="display:none">
@@ -166,7 +166,7 @@ Label is included in accessibility tree, but not visible, and does not describe 
 
 #### Inapplicable Example 2
 
-Programatically associated `p` element that is neither visible nor [included in the accessibility tree](#included-in-the-accessibility-tree).
+Programatically associated `p` element that is neither [visible](#visible) nor [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ```html
 <div style="display:none">

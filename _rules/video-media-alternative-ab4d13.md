@@ -86,7 +86,7 @@ A video element that describes some of the text on the same page. The video cont
 
 #### Fail Example 2
 
-A video element that describes some of the text on the same page. The text is not visible on the page.
+A video element that describes some of the text on the same page. The text is not [visible](#visible).
 
 ```html
 <p style="display: none;">
@@ -121,7 +121,7 @@ A video element that describes some of the text on the same page. The text on th
 
 #### Fail Example 4
 
-A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the label is not visible on the page.
+A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the label is not [visible](#visible).
 
 ```html
 <p>
@@ -161,7 +161,7 @@ A video element without audio. The text on the page labels the video as an alter
 
 #### Inapplicable Example 2
 
-A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the video is not visible on the page.
+A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the video is not [visible](#visible).
 
 ```html
 <p>

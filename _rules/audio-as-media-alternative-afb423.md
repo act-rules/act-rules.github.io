@@ -94,7 +94,7 @@ An audio element that describes some of the text on the same page. The audio con
 
 #### Failed Example 2
 
-An audio element that describes some of the text on the same page. The text is not visible on the page.
+An audio element that describes some of the text on the same page. The text is not [visible](#visible) on the page.
 
 ```html
 <p style="display: none;">
@@ -130,7 +130,7 @@ An audio element that describes some of the text on the same page. The text on t
 
 #### Failed Example 4
 
-An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the label is not visible on the page.
+An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the label is not [visible](#visible) on the page.
 
 ```html
 <p>
@@ -152,7 +152,7 @@ An audio element that describes some of the text on the same page. The text on t
 
 #### Inapplicable Example 1
 
-An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the controls are not visible on the page.
+An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the controls are not [visible](#visible) on the page.
 
 ```html
 <p>

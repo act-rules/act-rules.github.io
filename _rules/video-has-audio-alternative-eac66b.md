@@ -113,7 +113,7 @@ A video element that describes some of the text on the same page. The video cont
 
 #### Inapplicable Example 1
 
-A video element without that is not visible on the page.
+A video element without that is not [visible](#visible).
 
 ```html
 <video

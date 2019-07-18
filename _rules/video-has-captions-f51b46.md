@@ -154,7 +154,7 @@ A video element without audio.
 
 #### Inapplicable Example 2
 
-A video element without that is not visible on the page.
+A video element without that is not [visible](#visible).
 
 ```html
 <video

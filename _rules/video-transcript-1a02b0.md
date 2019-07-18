@@ -108,7 +108,7 @@ A video element with a link to an incorrect text transcript on a different page.
 
 #### Inapplicable Example 1
 
-A video element that is not visible on the page.
+A video element that is not [visible](#visible).
 
 ```html
 <video controls style="display: none;">

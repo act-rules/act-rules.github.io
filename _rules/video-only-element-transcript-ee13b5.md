@@ -98,7 +98,7 @@ A silent video element with a link to an incorrect text transcript on a differen
 
 #### Failed Example 3
 
-A silent video element with an invisible text transcript on the same page.
+A silent video element with an [non-visible](#visible) text transcript on the same page.
 
 ```html
 <video controls data-rule-target>
@@ -128,7 +128,7 @@ Then he stops to scratch his bottom.</p>
 
 #### Inapplicable Example 1
 
-A silent video element that is not visible on the page.
+A silent video element that is not [visible](#visible) on the page.
 
 ```html
 <video controls style="display: none;" data-rule-target>

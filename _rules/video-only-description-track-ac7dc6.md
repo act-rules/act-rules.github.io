@@ -83,7 +83,7 @@ A video only element without a track element.
 
 #### Inapplicable Example 2
 
-A video only element that is not visible on the page.
+A video only element that is not [visible](#visible).
 
 ```html
 <video controls style="display: none;">

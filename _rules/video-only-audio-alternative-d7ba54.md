@@ -103,7 +103,7 @@ A video element with audio.
 
 #### Inapplicable Example 2
 
-A video element without sound that is not visible on the page.
+A video element without sound that is not [visible](#visible).
 
 ```html
 <video controls style="display: none;">

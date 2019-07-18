@@ -1,5 +1,5 @@
-const getRules = require('./../../test-utils/get-rules')
-const getTestcasesGroupedByRule = require('../../../build/implementations/get-testcases-grouped-by-rule')
+const getRules = require('../../../utils/get-rules')
+const getTestcasesGroupedByRule = require('../get-testcases-grouped-by-rule')
 
 describe('getTestcasesGroupedByRule', () => {
 

@@ -46,7 +46,7 @@ There are no major accessibility support issues known for this rule.
 The `<video>` element audio output does not last longer than 3 seconds.
 
 ``` html
- <video autoplay="true" muted="true">
+ <video autoplay="true">
   <source src="../test-assets/rabbit-video/video.mp4#t=8,10" type="video/mp4" />
   <source src="../test-assets/rabbit-video/video.webm#t=8,10" type="video/webm" />
 </video>

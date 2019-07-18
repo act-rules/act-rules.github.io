@@ -116,7 +116,7 @@ Off screen elements should be tested.
 
 #### Passed example 8
 
-Button has [accessible name](#accessible-name) that is not only whitespace.
+Button has [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
 
 ```html
 <button>:-)</button>
@@ -169,7 +169,7 @@ Off screen element without an [accessible name](#accessible-name).
 
 #### Failed example 4
 
-Button has an [accessible name](#accessible-name) that is only whitespace.
+Button has an [accessible name](#accessible-name) that is only [whitespace](#whitespace).
 
 ```html
 <button> </button>

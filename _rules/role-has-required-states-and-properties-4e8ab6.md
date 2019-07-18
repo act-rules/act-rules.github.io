@@ -74,7 +74,7 @@ Implicit value for roles: ´option´ role has an implicit value (´false´) spec
 
 #### Passed Example 4
 
-Implicit value for roles: ´option´ role has an implicit value (´false´) specified for the required state ´aria-selected´, here defined with only whitespace instead of a value
+Implicit value for roles: ´option´ role has an implicit value (´false´) specified for the required state ´aria-selected´, here defined with only [whitespace](#whitespace) instead of a value
 
 ```html
 <div role="option" aria-selected=" "></div>

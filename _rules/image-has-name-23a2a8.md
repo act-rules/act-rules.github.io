@@ -101,7 +101,7 @@ The HTML `img` element is marked as [decorative](#decorative) through `role="non
 
 #### Passed example 6
 
-The HTML `img` element has an [accessible name](#accessible-name) that does not only consist of whitespace
+The HTML `img` element has an [accessible name](#accessible-name) that does not only consist of [whitespace](#whitespace)
 
 ```html
 <img alt=":-)" />
@@ -135,7 +135,7 @@ The `img` element inside a `div` positioned off screen has no [accessible name](
 
 #### Failed example 4
 
-The HTML `img` element has an [accessible name](#accessible-name) that only consist of whitespace
+The HTML `img` element has an [accessible name](#accessible-name) that only consist of [whitespace](#whitespace)
 
 ```html
 <img aria-label=" " />

@@ -85,7 +85,7 @@ Usage of `aria-labelledby` attribute to describe the `iframe` content.
 
 #### Passed example 4
 
-[Accessible name](#accessible-name) is not only whitespace.
+[Accessible name](#accessible-name) is not only [whitespace](#whitespace).
 
 ```html
 <iframe title=":-)" src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
@@ -149,7 +149,7 @@ Usage of `alt` attribute to describe content is not valid.
 
 #### Failed example 7
 
-[Accessible name](#accessible-name) is only whitespace.
+[Accessible name](#accessible-name) is only [whitespace](#whitespace).
 
 ```html
 <iframe title=" " src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>

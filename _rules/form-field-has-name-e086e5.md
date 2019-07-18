@@ -99,7 +99,7 @@ Explicit role.
 
 #### Passed example 6
 
-The [accessible name](#accessible-name) is not only whitespace.
+The [accessible name](#accessible-name) is not only [whitespace](#whitespace).
 
 ```html
 <label>
@@ -164,7 +164,7 @@ The explicit label is not supported on `div` elements.
 
 #### Failed example 7
 
-The [accessible name](#accessible-name) is only whitespace.
+The [accessible name](#accessible-name) is only [whitespace](#whitespace).
 
 ```html
 <label> <input /></label>

@@ -83,7 +83,7 @@ Image button element with [accessible name](#accessible-name) through `aria-labe
 
 #### Passed example 5
 
-[Accessible name](#accessible-name) is not only whitespace.
+[Accessible name](#accessible-name) is not only [whitespace](#whitespace).
 
 ```html
 <input type="image" name="submit" src="button.gif" alt=":-)" />
@@ -125,7 +125,7 @@ Image button with aria-labelledby that does not reference an id that exists in t
 
 #### Failed example 4
 
-[Accessible name](#accessible-name) is only whitespace.
+[Accessible name](#accessible-name) is only [whitespace](#whitespace).
 
 ```html
 <input type="image" name="submit" src="button.gif" alt=" " />

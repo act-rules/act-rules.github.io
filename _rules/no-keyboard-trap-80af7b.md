@@ -199,7 +199,7 @@ Keyboard trap group.
 
 #### Failed Example 3
 
-A focusable element inbetween to keyboard traps.
+A [focusable](#focusable) element inbetween to keyboard traps.
 
 ```html
 <button onblur="setTimeout(() => this.focus(), 10)">Button 1</button>
@@ -293,7 +293,7 @@ Keyboard trap with help text, where the method advised doesn't work.
 
 #### Inapplicable Example 1
 
-No focusable element.
+No [focusable](#focusable) element.
 
 ```html
 <h1>Page 1</h1>

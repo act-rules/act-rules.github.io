@@ -120,7 +120,7 @@ No [accessible name](#accessible-name).
 
 #### Failed Example 2
 
-Non-focusable element still needs an [accessible name](#accessible-name).
+[Non-focusable](#focusable) element still needs an [accessible name](#accessible-name).
 
 ```html
 <input tabindex="-1" />

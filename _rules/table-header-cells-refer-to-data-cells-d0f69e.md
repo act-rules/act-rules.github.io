@@ -25,6 +25,10 @@ This rule applies to `th` elements within a `table`, where the `table` is [visib
 
 Each target element is either the [row header](https://www.w3.org/TR/html-aria/#index-aria-rowheader) or the [column header](https://www.w3.org/TR/html-aria/#index-aria-columnheader) for data [cells](https://www.w3.org/TR/html50/tabular-data.html#concept-cell) within the same [table](https://www.w3.org/TR/html50/tabular-data.html#concept-table).
 
+## Assumptions
+
+_There are currently no assumptions._
+
 ## Accessibility Support
 
 _There are no major accessibility support issues known for this rule._

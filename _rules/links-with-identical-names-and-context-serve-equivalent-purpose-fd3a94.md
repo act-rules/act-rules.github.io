@@ -29,7 +29,7 @@ When followed, the links in each set of target elements resolve to the [same res
 
 ## Assumptions
 
-This rule assumes that the purpose of the links with identical accessible names and link contexts would not be ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+This rule assumes that the purpose of the links with identical [accessible names](#accessible-name) and [link contexts](#programatically-determined-link-context) would not be ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
 ). If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links out of context, e.g. on a list of links in a screen reader, which makes it more of a general user experience concern than an accessibility issue.
 
 ## Accessibility Support

@@ -11,8 +11,8 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_rules:
-  - [Auto-play audio has a control mechanism](https://act-rules.github.io/rules/95e043)
-  - [Auto-play audio is less than 3 seconds](https://act-rules.github.io/rules/aaa1bf)
+  - 95e043
+  - aaa1bf
 authors:
   - Anne Thyme Nørregaard
   - Bryn ANderson
@@ -25,8 +25,8 @@ This rule applies to any HTML `<audio>`, `<video>` or `<source>` elements, with 
 ## Expectation
 
 For each test target, the outcome of at least one of the following rules is passed:
-- Auto-play audio does not last more than 3 seconds
-- Auto-play audio has a control mechanism
+- [Auto-play audio does not last more than 3 seconds](https://act-rules.github.io/rules/aaa1bf)
+- [Audio-only as a media alternative for text](https://act-rules.github.io/rules/95e043)
  
 ## Assumptions
 
@@ -34,7 +34,7 @@ For each test target, the outcome of at least one of the following rules is pass
 
 ## Accessibility Support
 
-The native `<video>` and `<audio>` controls in several browser and assistive technology combinations are not keyboard accessible and the `<video>` or `<audio>` element itself may not be anounced. Authors are recomended to use custom controls for keyboard navigation and cross browser accessibility support in generakl.
+The native `<video>` and `<audio>` controls in several browser and assistive technology combinations are not keyboard accessible and the `<video>` or `<audio>` element itself may not be anounced. Authors are recomended to use custom controls for keyboard navigation and cross browser accessibility support in general.
 
 ## Background
 

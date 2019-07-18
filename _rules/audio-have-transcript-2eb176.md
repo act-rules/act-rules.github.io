@@ -20,7 +20,7 @@ authors:
 The rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:
 
 - playing; or,
-- has a "play button" that is [visibile](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+- has a "play button" that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 **Note:** A play button is an interactive element that when activated, plays the audio.
 

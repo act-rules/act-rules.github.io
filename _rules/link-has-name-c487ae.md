@@ -179,7 +179,7 @@ Image link without [accessible name](#accessible-name).
 
 #### Failed Example 2
 
-Image link where image is marked as decorative.
+Image link where image is marked as [decorative](#decorative).
 
 ```html
 <a href="http://www.w3.org/WAI"><img src="#" alt=""/></a>

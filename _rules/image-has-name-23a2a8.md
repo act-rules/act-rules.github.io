@@ -26,7 +26,7 @@ The rule applies to HTML `img` elements or any HTML element with the [semantic r
 
 Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace), or is marked as [decorative](#decorative).
 
-**NOTE**: An `img` element can be marked as decorative, by using either `role="presentation"`, `role="none"` or an empty alt attribute, `alt=""`.
+**NOTE**: An `img` element can be marked as [decorative](#decorative), by using either `role="presentation"`, `role="none"` or an empty alt attribute, `alt=""`.
 
 ## Assumptions
 

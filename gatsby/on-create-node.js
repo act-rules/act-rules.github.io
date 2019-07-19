@@ -10,14 +10,7 @@ const onCreateNode = async options => {
 	 */
 	if (node.internal.type === `MarkdownRemark`) {
 		const nodeData = await getNodeData(options)
-		const {
-			path,
-			fileName,
-			changelog,
-			fastmatterAttributes,
-			sourceInstanceName,
-			markdownType,
-		} = nodeData
+		const { path, fileName, changelog, fastmatterAttributes, sourceInstanceName, markdownType } = nodeData
 
 		createNodeField({
 			node,

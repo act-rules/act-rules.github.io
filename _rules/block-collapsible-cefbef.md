@@ -20,7 +20,7 @@ authors:
 
 ## Applicability
 
-This rule applies to any block of content in a [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `<html>` element.
+This rule applies to any [section of content](#section-of-content) in a [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element.
 
 ## Expectations
 

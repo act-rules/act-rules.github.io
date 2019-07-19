@@ -12,6 +12,7 @@ accessibility_requirements:
 		inapplicable: further testing needed
 input_aspects:
 	- DOM Tree
+	- CSS styling
 authors:
 	- Jean-Yves Moyen
 	- Anne Thyme Nørregard
@@ -23,7 +24,7 @@ This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document
 
 ## Expectations
 
-Each section of content in the [document](#https://www.w3.org/TR/dom/#concept-document) starts with an element with a [semantic role](#semantic-role) of `heading`.
+Each [section of content](#section-of-content) in the [document](#https://www.w3.org/TR/dom/#concept-document) either starts with or is preceded by an element with a [semantic role](#semantic-role) of `heading` which is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ## Assumptions
 

@@ -12,6 +12,7 @@ accessibility_requirements:
 		inapplicable: further testing needed
 input_aspects:
 	- DOM Tree
+	- CSS Styling
 authors:
 	- Jean-Yves Moyen
 	- Anne Thyme Nørregard

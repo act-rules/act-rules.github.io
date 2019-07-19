@@ -12,6 +12,8 @@ accessibility_requirements:
 		inapplicable: further testing needed
 input_aspects:
 	- DOM Tree
+	- CSS styling
+	- Language
 authors:
 	- Jean-Yves Moyen
 	- Anne Thyme Nørregard

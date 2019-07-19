@@ -26,7 +26,7 @@ authors:
 
 ## Applicability
 
-This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `<html>` element.
+This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element.
 
 ## Expectation
 
@@ -45,7 +45,7 @@ Or both these conditions are true:
 
 ## Assumptions
 
-This rule assumes that one of the techniques listed here is used to comply to WCAG.
+This rule assumes that one of the techniques listed here is used to comply to WCAG. Other methods could be used to pass this 
 
 ## Accessibility Support
 

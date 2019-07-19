@@ -12,6 +12,8 @@ accessibility_requirements:
 		inapplicable: further testing needed
 input_aspects:
 	- DOM Tree
+	- CSS styling
+	- Language
 authors:
 	- Jean-Yves Moyen
 	- Anne Thyme Nørregard
@@ -19,11 +21,12 @@ authors:
 
 ## Applicability
 
-This rule applies to any block of content in a [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `<html>` element.
+This rule applies to any [section of content](#section-of-content) in a [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element.
 
 ## Expectations
 
 Either the last [focusable](#focusable) element before the test target, or the first [focusable](#focusable) element inside the test target has a [semantic role](#semantic-role) of `link` and:
+- is [included in the accessibility tree](#included-in-the-accessibility-tree); and
 - is [visible](#visible) when [focused](#focused); and
 - refers to an element within the same [document](https://www.w3.org/TR/dom/#concept-document) located immediately after the test target; and
 - has an [accessible name](#accessible-name) that communicates that it skips the test target.

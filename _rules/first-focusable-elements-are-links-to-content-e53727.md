@@ -3,7 +3,7 @@ id: e53727
 name: First focusable elements are internal links
 rule_type: atomic
 description: |
-  This rule checks that the first focusable elements are links to within the same page
+  This rule checks that the first focusable elements are links referring to elements the same page
 accessibility_requirements:
   wcag-technique:G1: # Adding a link at the top of each page that goes directly to the main content area
 		forConformance: false

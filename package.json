@@ -198,7 +198,9 @@
 	"jest": {
 		"verbose": true,
 		"bail": true,
-		"setupFilesAfterEnv": ["jest-extended"],
+		"setupFilesAfterEnv": [
+			"jest-extended"
+		],
 		"testPathIgnorePatterns": [
 			"<rootDir>/test-utils/",
 			"<rootDir>/.cache/",

@@ -21,13 +21,13 @@ authors:
 
 ## Applicability
 
-This rule applies to any `frame` element that is [included in the accessibility tree](#included-in-the-accessibility-tree) and has a `title` attribute whose value is not only [withespaces](#whitespace).
+This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element and contains at least one `frameset` element.
 
 **Note**: `frame` and `frameset` are deprecated in HTML5. This rule is for testing older pages which used them in the first place. It is not a good idea to add `frame` and `frameset` to pages that do not contain any.
 
 ## Expectations
 
-The `title` attribute describes the content of the `frame`.
+The `title` attribute of each `frame` element within the test target that has one describes the content of the `frame`.
 
 ## Assumptions
 

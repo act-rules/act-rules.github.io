@@ -33,9 +33,7 @@ export default ({ data }) => {
 						const { frontmatter, id, fields } = node
 						const { name, description, input_rules } = frontmatter
 						const { slug, fastmatterAttributes } = fields
-						const { accessibility_requirements } = JSON.parse(
-							fastmatterAttributes
-						)
+						const { accessibility_requirements } = JSON.parse(fastmatterAttributes)
 						return (
 							<article key={id}>
 								<section>
@@ -44,10 +42,7 @@ export default ({ data }) => {
 										<h2>{name}</h2>
 									</a>
 									{/* rule sc's */}
-									{getAccessibilityRequirements(
-										accessibility_requirements,
-										'text'
-									)}
+									{getAccessibilityRequirements(accessibility_requirements, 'text')}
 									{/* input rules */}
 									{getInputRulesForRule(input_rules, allRules.edges, true)}
 									{/* implementation count */}
@@ -93,9 +88,7 @@ export const query = graphql`
 				}
 			}
 		}
-		allRules: allMarkdownRemark(
-			filter: { fields: { markdownType: { eq: "rules" } } }
-		) {
+		allRules: allMarkdownRemark(filter: { fields: { markdownType: { eq: "rules" } } }) {
 			totalCount
 			edges {
 				node {

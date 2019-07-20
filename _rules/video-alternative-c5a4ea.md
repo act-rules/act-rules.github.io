@@ -24,7 +24,7 @@ authors:
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming) `video` element that is [visible](#visible), where the video contains audio.
+The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible](#visible), where the video contains audio.
 
 ## Expectation
 
@@ -67,14 +67,8 @@ A video element with a voiceover that describes the visual information.
 
 ```html
 <video controls>
-	<source
-		src="../test-assets/rabbit-video/video-with-voiceover.mp4"
-		type="video/mp4"
-	/>
-	<source
-		src="../test-assets/rabbit-video/video-with-voiceover.webm"
-		type="video/webm"
-	/>
+	<source src="../test-assets/rabbit-video/video-with-voiceover.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/video-with-voiceover.webm" type="video/webm" />
 </video>
 ```
 
@@ -98,10 +92,7 @@ A video element with a track element that contains descriptions.
 <video controls>
 	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
 	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
-	<track
-		kind="descriptions"
-		src="../test-assets/rabbit-video/descriptions.vtt"
-	/>
+	<track kind="descriptions" src="../test-assets/rabbit-video/descriptions.vtt" />
 </video>
 ```
 
@@ -111,16 +102,11 @@ A video element that describes some of the text on the same page. The text on th
 
 ```html
 <p>
-	Not being able to use your computer because your mouse doesn't work, is
-	frustrating. Many people use only the keyboard to navigate websites. Either
-	through preference or circumstance. This is solved by keyboard compatibility.
-	Keyboard compatibility is described in WCAG. See the video below to watch the
-	same information again in video form.
+	Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the keyboard
+	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
+	compatibility is described in WCAG. See the video below to watch the same information again in video form.
 </p>
-<video
-	src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4"
-	controls
-></video>
+<video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls></video>
 ```
 
 ### Failed
@@ -131,14 +117,8 @@ A video element with an incorrect audio description.
 
 ```html
 <video controls>
-	<source
-		src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4"
-		type="video/mp4"
-	/>
-	<source
-		src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm"
-		type="video/webm"
-	/>
+	<source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm" />
 </video>
 ```
 
@@ -162,10 +142,7 @@ A video element with a track element that contains incorrect descriptions.
 <video controls>
 	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
 	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
-	<track
-		kind="descriptions"
-		src="../test-assets/rabbit-video/incorrect-descriptions.vtt"
-	/>
+	<track kind="descriptions" src="../test-assets/rabbit-video/incorrect-descriptions.vtt" />
 </video>
 ```
 
@@ -175,15 +152,11 @@ A video element that describes some of the text on the same page. The video cont
 
 ```html
 <p>
-	Not being able to use your computer because your mouse doesn't work, is
-	frustrating. Either through preference or circumstance. This is solved by
-	keyboard compatibility. Keyboard compatibility is described in WCAG. See the
-	video below to watch the same information again in video form.
+	Not being able to use your computer because your mouse doesn't work, is frustrating. Either through preference or
+	circumstance. This is solved by keyboard compatibility. Keyboard compatibility is described in WCAG. See the video
+	below to watch the same information again in video form.
 </p>
-<video
-	src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4"
-	controls
-></video>
+<video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls></video>
 ```
 
 ### Inapplicable

@@ -134,11 +134,7 @@ Links created via scripting with explicit role of link, but lead to the same res
 A set of two SVG `<a>` elements have the same accessible name and link to the same resource.
 
 ```html
-<svg
-	viewBox="0 0 100 100"
-	xmlns="http://www.w3.org/2000/svg"
-	xmlns:xlink="http://www.w3.org/1999/xlink"
->
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<a href="http://facebook.com" aria-label="Follow us">
 		<circle cx="50" cy="40" r="35" />
 	</a>
@@ -158,8 +154,7 @@ A set of two SVG `<a>` elements have the same accessible name and link to the sa
 Same accessible name used for links going to different resources:
 
 ```html
-<a href="http://facebook.com">Follow us</a>
-<a href="http://twitter.com">Follow us</a>
+<a href="http://facebook.com">Follow us</a> <a href="http://twitter.com">Follow us</a>
 ```
 
 #### Failed Example 2
@@ -207,11 +202,7 @@ Same accessible name used for image links going to different resources:
 A set of two SVG `<a>` elements have the same accessible name but link to different resources:
 
 ```html
-<svg
-	viewBox="0 0 100 100"
-	xmlns="http://www.w3.org/2000/svg"
-	xmlns:xlink="http://www.w3.org/1999/xlink"
->
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<a href="http://facebook.com" aria-label="Follow us">
 		<circle cx="50" cy="40" r="35" />
 	</a>
@@ -248,7 +239,9 @@ Links resolves to same resource after redirect, but the redirect is not instant:
 Links with different accessible names:
 
 ```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact main office</a>
+<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
+	>Contact main office</a
+>
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
 	>Contact admissions office</a
 >
@@ -259,7 +252,10 @@ Links with different accessible names:
 Link is not included in the accesssibility tree:
 
 ```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html" aria-hidden="true" tabindex="-1"
+<a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html"
+	aria-hidden="true"
+	tabindex="-1"
 	>Contact Us</a
 >
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/pabe2.html">Contact Us</a>
@@ -292,6 +288,5 @@ Links do not have accessible names:
 Image links do not have accessible names:
 
 ```html
-<a href="http://facebook.com"><img src="facebook.jpg"/></a>
-<a href="http://twitter.com"><img src="twitter.jpg"/></a>
+<a href="http://facebook.com"><img src="facebook.jpg"/></a> <a href="http://twitter.com"><img src="twitter.jpg"/></a>
 ```

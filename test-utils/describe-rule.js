@@ -1,4 +1,4 @@
-const getRules = require('./get-rules')
+const getRulesMarkdownData = require('../utils/get-rules-markdown-data')
 
 /**
  * describe rule helper
@@ -7,7 +7,7 @@ const getRules = require('./get-rules')
  */
 const describeRule = (groupName, runTests) => {
 
-  const rules = getRules()
+  const rules = getRulesMarkdownData()
 
   rules.forEach(ruleData => {
     const { filename } = ruleData

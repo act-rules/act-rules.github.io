@@ -1,5 +1,5 @@
 const {
-	www: { url, baseDir },
+	www: { url },
 	author,
 	description,
 } = require('./../../package.json')
@@ -18,10 +18,7 @@ const createTestcasesJson = async testcases => {
 		testcases,
 	}
 
-	await createFile(
-		`${baseDir}/testcases.json`,
-		JSON.stringify(AllTestcasesData, undefined, 2)
-	)
+	await createFile(`_data/rules-testcases/testcases.json`, JSON.stringify(AllTestcasesData, undefined, 2))
 }
 
 module.exports = createTestcasesJson

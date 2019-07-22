@@ -19,7 +19,7 @@ authors:
 
 ## Applicability
 
-The rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namespace with an explicit [semantic role](#semantic-role) of either `img`, `graphics-document`, `graphics-object`, `graphics-symbol`, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+The rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namespace with an explicit [semantic role](#semantic-role) of either `img`, `graphics-document`, `graphics-symbol`, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 **Note**: The [SVG Accessibility API Mappings](https://www.w3.org/TR/svg-aam-1.0/#include_elements) specifies that many elements in the SVG namespace are purely presentational and should not be included in the accessibility tree unless indicated otherwise through the use of text alternative content, an explicit WAI ARIA role, or a valid `tabindex` attribute.
 
@@ -68,12 +68,12 @@ The `<svg>` element has an explicit role of `img` and an accessible name from th
 
 #### Passed example 2
 
-The `<svg>` element has an explicit role of `img` and an accessible name from the `aria-label` attribute that does not contain only whitespace.
+The `<circle>` element has an explicit role of `graphics-symbol` and an accessible name from the `aria-label` attribute that does not contain only whitespace.
 
 ```html
 <p>How many circles are there?</p>
 <svg xmlns="https://www.w3.org/2000/svg" role="img" aria-label="1 circle">
-	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
+	<circle role="graphics-symbol" cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" aria-label="1 circle">
 </svg>
 ```
 
@@ -138,7 +138,7 @@ The `svg` element does not render any visible content to the screen and is not i
 
 #### Inapplicable example 2
 
-Neither the `<svg>` or `<circle>` elements have an explicit role.
+The `<svg>` or `<circle>` elements do not have an explicit role.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg">
@@ -156,3 +156,12 @@ The `svg` element has an explicit role of `img` but the `aria-hidden` attribute 
 </svg>
 ```
 
+#### Inapplicable example 4
+
+The `<circle>` elements has an explicit role that is not `img`, `graphics-document` or `graphics-symbol`.
+
+```html
+<svg xmlns="http://www.w3.org/2000/svg">
+  	<circle role="graphics-object" cx="50" cy="50" r="40" fill="yellow"></circle>
+</svg>
+```

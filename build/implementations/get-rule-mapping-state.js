@@ -15,8 +15,7 @@ const outcomeMapping = {
  */
 const getRuleMappingState = assertions => {
 	const mapping = assertions.some(
-		({ actual, expected }) =>
-			expected === 'failed' && ['failed', 'cantTell'].includes(actual)
+		({ actual, expected }) => expected === 'failed' && ['failed', 'cantTell'].includes(actual)
 	)
 
 	if (!mapping) {

@@ -26,7 +26,7 @@ The rule applies to any HTML or SVG element that is [focusable](#focusable) wher
 
 ## Expectation 1
 
-For each target element help information is [visible on the page](#visible-on-the-page) and [included in the accessibility tree](#included-in-the-accessibility-tree) or can be accessed from within the keyboard trap.
+For each target element help information is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree) or can be accessed from within the keyboard trap.
 
 **Note**: As per WCAG 2.0 Success Criterion 2.1.1 Keyboard the help information should be accessible through a keyboard interface.
 

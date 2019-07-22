@@ -13,10 +13,7 @@ export default ({ data }) => {
 		if (!data) {
 			return content
 		}
-		const baseUrl =
-			site.siteMetadata.baseHref.length <= 0
-				? window.location.origin
-				: site.siteMetadata.baseHref
+		const baseUrl = site.siteMetadata.baseHref.length <= 0 ? window.location.origin : site.siteMetadata.baseHref
 		return content.replace(/href="#(.*?)"/g, (match, key) => {
 			const glossaryKey = `#${key.toLowerCase()}`
 			if (!Object.keys(data).includes(glossaryKey)) {

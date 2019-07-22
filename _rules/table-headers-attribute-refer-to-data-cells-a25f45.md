@@ -25,7 +25,7 @@ This rule applies to `td` elements with a `headers` attribute, that are [include
 
 The `header` attribute of each target element is [a set of space separated IDs](https://www.w3.org/TR/html50/infrastructure.html#set-of-space-separated-tokens), each of which is an ID of an element that:
 1. has a [semantic role](#semantic-role) of `columnheader` or `rowheader`, and
-2. is a `cell` of the same [`table`](https://www.w3.org/TR/html50/tabular-data.html#concept-table) as the target element
+2. is a [`cell`](https://www.w3.org/TR/html52/tabular-data.html#cell) of the same [`table`](https://www.w3.org/TR/html50/tabular-data.html#concept-table) as the target element
 
 ## Assumptions
 
@@ -128,11 +128,26 @@ A `table` with multiple `columnheader(s)`, where the `headers` attribute on the 
 </table>
 ```
 
+#### Passed Example 5
+
+The `headers` attribute on the cell refers to `th` with a role of `rowheader` within the same `table`.
+
+```html
+<table>
+  <tbody>
+    <tr>
+      <th role="rowheader" id="headerAge">Age</th>
+      <td headers="headerAge">65</td>
+    </tr>
+  </tbody>
+</table>
+```
+
 ### Failed
 
 #### Failed Example 1
 
-Cells with `headers` attribute, refers to non-existing `th` within the same `table`.
+Cells with `headers` attribute, refers to non-existing element within the same `table`.
 
 ```html
 <table>
@@ -141,8 +156,8 @@ Cells with `headers` attribute, refers to non-existing `th` within the same `tab
     <th id="header2">Exams</th>
   </tr>
   <tr>
-    <td headers="header3">15%</td>
-    <td headers="header3">15%</td>
+    <td headers="NOT-EXIST">15%</td>
+    <td headers="NOT-EXIST">15%</td>
   </tr>
 </table>
 ```
@@ -162,6 +177,42 @@ One of the cells with `headers` attribute, refers to `th` that does not exist wi
   </tr>
   <tr>
     <td colspan="2" headers="header1 e1 NOT-EXIST">15%</td>
+  </tr>
+</table>
+```
+
+#### Failed Example 3
+
+The `headers` attribute on the cell refers to an element outside the same `table`.
+
+```html
+<span id="elmOutsideTable">Project Costs</span>
+
+<table>
+  <tr>
+    <th id="headerOfColumn">Projects</th>
+  </tr>
+  <tr>
+    <td headers="elmOutsideTable">15%</td>
+  </tr>
+</table>
+```
+
+#### Failed Example 4
+
+The `headers` attribute on the cell refers to an element inside the same `table`, but is not a `rowheader` or `columnheader`.
+
+```html
+<table>
+  <tr>
+     <td>
+      <span id="headerProject">Projects</span>
+    </td>
+  </tr>
+  <tr>
+    <td headers="headerProject">
+      15% 
+    </td>
   </tr>
 </table>
 ```

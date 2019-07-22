@@ -28,17 +28,9 @@ const init = async () => {
 
 	rulesData.forEach(ruleData => {
 		const { frontmatter, body } = ruleData
-		const {
-			id: ruleId,
-			name: ruleName,
-			accessibility_requirements: ruleAccessibilityRequirements,
-		} = frontmatter
+		const { id: ruleId, name: ruleName, accessibility_requirements: ruleAccessibilityRequirements } = frontmatter
 
-		const glossaryMatches = getAllMatchesForRegex(
-			regexps.glossaryReferenceInRules,
-			body,
-			false
-		)
+		const glossaryMatches = getAllMatchesForRegex(regexps.glossaryReferenceInRules, body, false)
 
 		glossaryMatches.forEach(glossaryItem => {
 			const hasGlossaryKey = regexps.glossaryKey.test(glossaryItem.block)
@@ -72,10 +64,7 @@ const init = async () => {
 	/**
 	 * Create `_data/glossary-usages.json`
 	 */
-	await createFile(
-		`./_data/glossary-usages.json`,
-		JSON.stringify(glossaryUsages, undefined, 2)
-	)
+	await createFile(`./_data/glossary-usages.json`, JSON.stringify(glossaryUsages, undefined, 2))
 }
 
 /**

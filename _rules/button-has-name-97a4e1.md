@@ -172,7 +172,7 @@ Off screen element without an accessible name.
 Button has an accessible name that is only whitespace.
 
 ```html
-<button> </button>
+<button></button>
 ```
 
 ### Inapplicable

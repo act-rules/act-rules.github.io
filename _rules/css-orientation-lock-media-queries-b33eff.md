@@ -3,7 +3,7 @@ id: b33eff
 name: Page has no orientation lock specified using CSS media queries
 rule_type: atomic
 description: |
-  This rule checks that page content is not locked to any specific display orientation using CSS media queries, and the content is operable in all display orientations.
+  This rule checks that page content is not locked to any single display orientation using CSS media queries.
 accessibility_requirements:
  wcag20:1.3.4: # Orientation
   forConformance: true
@@ -20,7 +20,7 @@ authors:
 
 ## Applicability
 
-The rule applies to any `element` that is [visible](#visible) and has a CSS `transform` property with a [rotate](https://drafts.csswg.org/css-transforms/#funcdef-transform-rotate) transform-function, set from a CSS media query with an [orientation](https://drafts.csswg.org/mediaqueries-3/#orientation) media feature (`landscape` or `portrait`).
+The rule applies to any element that is [visible](#visible) and has a CSS `transform` property with a [rotate](https://drafts.csswg.org/css-transforms/#funcdef-transform-rotate) transform-function, set from a CSS media query with an [orientation](https://drafts.csswg.org/mediaqueries-3/#orientation) media feature (`landscape` or `portrait`).
 
 ## Expectation 1
 
@@ -131,7 +131,7 @@ A page where there are no styles.
 
 #### Inapplicable Example 2
 
-A page that has no CSS media query styles.
+A page that has CSS media query styles, but media feature not targeting `orientation`.
 
 ```html
 <html lang="en">
@@ -139,6 +139,9 @@ A page that has no CSS media query styles.
     <style>
       html {
         font-size: 22px;
+      }
+      @media (min-width: 30em) { 
+        font-size: 100%;
       }
     </style>
   </head>
@@ -150,7 +153,7 @@ A page that has no CSS media query styles.
 
 #### Inapplicable Example 3
 
-A page, where CSS media query styles targeting orientation lock is applied to an element that is not visible.
+A page, where CSS media query styles targeting `orientation` is applied to an element that is not visible.
 
 ```html
 <html lang="en">

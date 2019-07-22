@@ -47,10 +47,7 @@ const init = async program => {
 		.split(' ')
 		.join('-')
 		.toLowerCase()
-	await createFile(
-		`_data/implementations/${filename}.json`,
-		JSON.stringify(report, null, 2)
-	)
+	await createFile(`_data/implementations/${filename}.json`, JSON.stringify(report, null, 2))
 }
 
 /**

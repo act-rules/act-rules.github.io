@@ -54,10 +54,7 @@ A video element with an associated track element that contains captions for all 
 
 ```html
 <video src="../test-assets/perspective-video/perspective-video.mp4" controls>
-	<track
-		src="/test-assets/perspective-video/perspective-caption.vtt"
-		kind="captions"
-	/>
+	<track src="/test-assets/perspective-video/perspective-caption.vtt" kind="captions" />
 </video>
 ```
 
@@ -67,16 +64,11 @@ A video element that describes some of the text on the same page. The text on th
 
 ```html
 <p>
-	Not being able to use your computer because your mouse doesn't work, is
-	frustrating. Many people use only the keyboard to navigate websites. Either
-	through preference or circumstance. This is solved by keyboard compatibility.
-	Keyboard compatibility is described in WCAG. See the video below to watch the
-	same information again in video form.
+	Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the keyboard
+	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
+	compatibility is described in WCAG. See the video below to watch the same information again in video form.
 </p>
-<video
-	src="../test-assets/perspective-video/perspective-video.mp4"
-	controls
-></video>
+<video src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 ### Failed
@@ -86,10 +78,7 @@ A video element that describes some of the text on the same page. The text on th
 A video element without any form of captions.
 
 ```html
-<video
-	src="../test-assets/perspective-video/perspective-video.mp4"
-	controls
-></video>
+<video src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 #### Failed Example 2
@@ -98,15 +87,11 @@ A video element that describes some of the text on the same page. The video cont
 
 ```html
 <p>
-	Not being able to use your computer because your mouse doesn't work, is
-	frustrating. Either through preference or circumstance. This is solved by
-	keyboard compatibility. Keyboard compatibility is described in WCAG. See the
-	video below to watch the same information again in video form.
+	Not being able to use your computer because your mouse doesn't work, is frustrating. Either through preference or
+	circumstance. This is solved by keyboard compatibility. Keyboard compatibility is described in WCAG. See the video
+	below to watch the same information again in video form.
 </p>
-<video
-	src="../test-assets/perspective-video/perspective-video.mp4"
-	controls
-></video>
+<video src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 ### Inapplicable
@@ -116,11 +101,7 @@ A video element that describes some of the text on the same page. The video cont
 A video element without that is not visible on the page.
 
 ```html
-<video
-	src="../test-assets/perspective-video/perspective-video.mp4"
-	controls
-	style="display: none;"
-></video>
+<video src="../test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>
 ```
 
 #### Inapplicable Example 2
@@ -128,8 +109,5 @@ A video element without that is not visible on the page.
 A video element without audio.
 
 ```html
-<video
-	src="../test-assets/perspective-video/perspective-video-silent.mp4"
-	controls
-></video>
+<video src="../test-assets/perspective-video/perspective-video-silent.mp4" controls></video>
 ```

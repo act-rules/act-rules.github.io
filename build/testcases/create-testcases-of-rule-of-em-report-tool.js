@@ -1,4 +1,6 @@
-const { www: { url } } = require('./../../package.json')
+const {
+	www: { url },
+} = require('./../../package.json')
 const scUrlsMetaData = require('./../../_data/sc-urls.json')
 const scEmReportAuditResult = require('./../../_data/sc-em-report-audit-result.json')
 const graphContext = require('./wcag-em-report-tool-mappings/@graph-context.json')
@@ -10,17 +12,12 @@ const createFile = require('../../utils/create-file')
  * Create testcases json file that can be used by
  */
 const createTestcasesOfRuleOfEmReportTool = async options => {
-	const {
-		ruleId,
-		ruleName,
-		ruleTestcases,
-		ruleAccessibilityRequirements,
-	} = options
+	const { ruleId, ruleName, ruleTestcases, ruleAccessibilityRequirements } = options
 
 	const title = `Report for ACT-R Rule - ${ruleName}`
 	const siteName = `ACT-R Rule - ${ruleName}`
 	const siteScope = `${url}/testcases/${ruleId}/`
-	
+
 	const webpages = ruleTestcases.map((testcase, index) => {
 		const { url, testcaseId } = testcase
 		return {
@@ -35,8 +32,8 @@ const createTestcasesOfRuleOfEmReportTool = async options => {
 
 	const ruleScs = ruleAccessibilityRequirements
 		? Object.keys(ruleAccessibilityRequirements).map(key => {
-			return key.split(':').pop()
-		})
+				return key.split(':').pop()
+		  })
 		: []
 
 	const matchingScTests = ruleScs
@@ -49,9 +46,7 @@ const createTestcasesOfRuleOfEmReportTool = async options => {
 		.map(scNum => scUrlsMetaData[scNum].test.toLowerCase())
 
 	const auditResults = scEmReportAuditResult.map(auditResult => {
-		auditResult.result.outcome = matchingScTests.includes(
-			auditResult.test.toLowerCase()
-		)
+		auditResult.result.outcome = matchingScTests.includes(auditResult.test.toLowerCase())
 			? 'earl:cantTell'
 			: 'earl:inapplicable'
 		return auditResult

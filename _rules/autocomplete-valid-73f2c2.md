@@ -229,11 +229,7 @@ The element is hidden through `display:none`.
 The element is positioned off screen and hidden to assistive technologies
 
 ```html
-<input
-	autocomplete="username"
-	aria-hidden="true"
-	style="position:absolute; top:-9999em"
-/>
+<input autocomplete="username" aria-hidden="true" style="position:absolute; top:-9999em" />
 ```
 
 #### Inapplicable Example 5

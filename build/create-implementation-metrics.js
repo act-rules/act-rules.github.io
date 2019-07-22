@@ -9,12 +9,10 @@ const init = async () => {
 	/**
 	 * Get all implementation reports
 	 */
-	const reports = globby
-		.sync([`./_data/implementations/*.json`])
-		.map(reportPath => {
-			const fileContent = readFile(reportPath)
-			return JSON.parse(fileContent)
-		})
+	const reports = globby.sync([`./_data/implementations/*.json`]).map(reportPath => {
+		const fileContent = readFile(reportPath)
+		return JSON.parse(fileContent)
+	})
 
 	const implementers = []
 	const implementationsGroupedByRuleId = {}
@@ -59,18 +57,12 @@ const init = async () => {
 	/**
 	 * Create `implementations.json`
 	 */
-	await createFile(
-		`_data/implementers.json`,
-		JSON.stringify(implementers, null, 2)
-	)
+	await createFile(`_data/implementers.json`, JSON.stringify(implementers, null, 2))
 
 	/**
 	 * Create metrics in `_data` for usage in `site`
 	 */
-	await createFile(
-		`_data/implementation-metrics.json`,
-		JSON.stringify(implementationsGroupedByRuleId, null, 2)
-	)
+	await createFile(`_data/implementation-metrics.json`, JSON.stringify(implementationsGroupedByRuleId, null, 2))
 }
 
 init()

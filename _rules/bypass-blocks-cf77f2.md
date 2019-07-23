@@ -26,7 +26,9 @@ authors:
 
 ## Applicability
 
-This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element.
+This rule applies to any set of one or more [documents](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element.
+
+**Note**: Some of the atomic rules apply to sets of two or more documents, while some apply to a single documents which is also a set of one document.
 
 ## Expectation
 
@@ -45,7 +47,7 @@ Or both these conditions are true:
 
 ## Assumptions
 
-This rule assumes that one of the techniques listed here is used to comply to WCAG. Other methods could be used to pass this 
+This rule assumes that one of the techniques listed here is used to comply to WCAG. Other methods could be used to pass this this SC that are unknown at the time of writing this rule.
 
 ## Accessibility Support
 

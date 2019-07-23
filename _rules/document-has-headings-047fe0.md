@@ -24,7 +24,7 @@ This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document
 
 ## Expectations
 
-Each [section of content](#section-of-content) in the [document](#https://www.w3.org/TR/dom/#concept-document) either starts with or is preceded by an element with a [semantic role](#semantic-role) of `heading` which is [included in the accessibility tree](#included-in-the-accessibility-tree).
+Each [section of content](#section-of-content) in the [document](#https://www.w3.org/TR/dom/#concept-document) either starts with or is preceded by an element with a [semantic role](#semantic-role) of `heading` which is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 **Note**: neither this rule, nor technique [H69: Providing heading elements at the beginning of each section of content](https://www.w3.org/WAI/WCAG21/Techniques/html/H69), expects the heading to accurately describe their corresponding sections.
 

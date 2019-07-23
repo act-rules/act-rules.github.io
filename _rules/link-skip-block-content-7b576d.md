@@ -33,7 +33,7 @@ For each [section of repeated content](#repeated-content) within the test target
 
 ## Assumptions
 
-_There are currently no assumptions_
+This rule assume that [sections of repeated content](#repeated-content) has already be identified within the test target, for example by comparison with other test targets within the same test subject, or any other mean.
 
 ## Accessibility Support
 

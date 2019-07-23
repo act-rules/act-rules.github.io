@@ -3,7 +3,7 @@ id: 1ec09b
 name: Video with audio has audio description
 rule_type: composite
 description: |
-  This rule checks that video elements with audio have audio description
+  This rule checks that `video` elements with audio have audio description
 accessibility_requirements:
   wcag20:1.2.5: # Audio Description (Prerecorded) (AA)
     forConformance: true

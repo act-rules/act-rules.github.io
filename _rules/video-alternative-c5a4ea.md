@@ -3,7 +3,7 @@ id: c5a4ea
 name: Video with audio has audio descriptions or transcript
 rule_type: composite
 description: |
-  This rule checks video elements with audio have an alternative for the video content as audio or as text.
+  This rule checks that video elements with audio have an alternative for the video content as audio or as text.
 accessibility_requirements:
   wcag20:1.2.3: # Audio Description or Media Alternative (Prerecorded) (A)
     forConformance: true

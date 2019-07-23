@@ -8,7 +8,7 @@ accessibility_requirements:
   wcag-technique:SCR28: # Using an expandable and collapsible menu to bypass block of content
 		forConformance: false
 		failed: not satisfied
-		passed: further testing needed
+		passed: satisfied
 		inapplicable: further testing needed
 input_aspects:
 	- DOM Tree
@@ -20,11 +20,11 @@ authors:
 
 ## Applicability
 
-This rule applies to any [section of content](#section-of-content) in a [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element.
+This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element.
 
 ## Expectations
 
-There exists some user interface control in the document that allow to toggle both [visibility](#visible) and [inclusion in the accessibility tree](#included-in-the-accessibility-tree) of the block of content.
+For each [section of content](#section-of-content) repeated among two or more test targets, there exists some user interface control in the test target that allow to toggle both [visibility](#visible) and [inclusion in the accessibility tree](#included-in-the-accessibility-tree) of this [section of content](#section-of-content).
 
 ## Assumptions
 

@@ -29,6 +29,8 @@ The rule applies to any HTML or SVG element with the [semantic role](#semantic-r
 ** have a different [foreground color](#foreground-color) or [background color]() than the link,
 ** have different values for [text style properties](#text-style-properties) than the link.
 
+**Editorial note:** Should we also look at `filter` and `opacity`, since they can also impact the color of an element?
+
 **Note:** This rule only applies to links that have a different color than the surrounding text, since the rule maps to Success Criterion 1.4.1 Use of Color. Links that do not have any distinguishing features and are also the same color as the surrounding text might pose an accessibility issue as well, but not related to this success criterion.
 
 ## Expectation 1

@@ -24,7 +24,7 @@ This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document
 
 ## Expectations
 
-For each [section of repeated content](#repeated-content) repeated in the test target, there exists some user interface control that allows to toggle both [visibility](#visible) and [inclusion in the accessibility tree](#included-in-the-accessibility-tree) of this [section of repeated content](#repeated-content).
+For each [section of repeated content](#repeated-content) in the test target, there exists some user interface control that allows to toggle both [visibility](#visible) and [inclusion in the accessibility tree](#included-in-the-accessibility-tree) of this [section of repeated content](#repeated-content).
 
 ## Assumptions
 

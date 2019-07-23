@@ -26,10 +26,10 @@ This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document
 ## Expectation 1
 
 The first [focusable](#focusable) element within the test target:
-- is [visible][visible] when [focused][#focused]; and
+- is [visible](#visible) when [focused](#focused); and
 - is has a [semantic role](#semantic-role) of link; and
 - refers to the main content of the [document](#https://www.w3.org/TR/dom/#concept-document); and
-- has an [accessible name][#accessible-name] that communicates that it links to the main content.
+- has an [accessible name](#accessible-name) that communicates that it links to the main content.
 
 ## Assumptions
 

@@ -25,10 +25,10 @@ This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document
 ## Expectation 1
 
 There is an [initial segment](#initial-segment) of the [focusable](#focusable) elements (in focus order) such that each element in that [intial segment](#initial-segment):
-- is [visible][visible] when [focused][#focused]; and
+- is [visible](#visible) when [focused](#focused); and
 - is has a [semantic role](#semantic-role) of link; and
 - refers to a [section of content](#section-of-content) within the same [document](https://www.w3.org/TR/dom/#concept-document); and
-- has an [accessible name][#accessible-name] that communicates that it links to that specific [section of content](#section-of-content).
+- has an [accessible name](#accessible-name) that communicates that it links to that specific [section of content](#section-of-content).
 
 ## Expectation 2
 

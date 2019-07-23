@@ -1,6 +1,6 @@
 --
 id: f5aec0
-name: Inline links are distinguishable
+name: Inline link is distinguishable
 rule_type: atomic
 description: |
 This rule checks that links that are embedded in a block of text and where color alone is used to identify them, have a sufficient color contrast ratio with the surrounding text, and additional cues are given when the link receives focus or hover. 
@@ -20,34 +20,37 @@ authors:
 
 ## Applicability
 
-The rule applies to any HTML or SVG element with the [semantic role][] of link that lives up to the following criteria:
-* is [focusable][]
-* contains [visible text][] that doesn't have a [distinguishing style][], a [distinguishing border][], a [distinguishing box-shadow][] or a background-image.
-* is in a [block of text][] that has [visible text][], which 
-** is NOT contained in any link, and 
-** does not exclusively consist of [separator characters][].
+The rule applies to any HTML or SVG element with the [semantic role](#semantic-role) of `link` that lives up to the following criteria:
+* is [focusable](#focusable),
+* contains text nodes that are [visible](#visible) that doesn't have a [distinguishing style](), a [distinguishing border](), a [distinguishing box-shadow]() or a `background-image`,
+* is in a [block of text]() that has [visible](#visible) text nodes, which 
+** are NOT contained in any element with the [semantic role](#semantic-role) of link,
+** do not exclusively consist of [whitespace](#whitespace), 
+** have a different [foreground color](#foreground-color) or [background color]() than the `link`.
+
+**Note:** This rule only applies to links that have a different color than the surrounding text, since the rule maps to Success Criterion 1.4.1 Use of Color. Links that do not have any distinguishing features and are also the same color as the surrounding text might pose an accessibility issue as well, but not related to this success criterion.
 
 ## Expectation 1
 
-Within the same [block of text] the [contrast ratio](https://www.w3.org/TR/WCAG20/#contrast-ratiodef) is 3:1 or greater between either 
-- the [color][] of the [visible text][] of the link and [adjacent][] [visible text], or 
-- the [background color][] of the link and the background color of any adjacent visible text.
+Within the same [block of text]() the [contrast ratio](https://www.w3.org/TR/WCAG20/#contrast-ratiodef) is 3:1 or greater between either 
+- the [foreground color](#foreground-color) of the [visible](#) text nodes of the target element and [adjacent]() [visible]() text nodes, or 
+- the [background color]() of the target element and the background color of any [adjacent]() [visible]() text nodes.
 
 ## Expectation 2
 
-When the link's [focus state is triggered][], the link has a [distinguishing style][], a [distinguishing border][], a [distinguishing box-shadow][] or a background-image.
+When the target element's [focus state is triggered](), the target element has a [distinguishing style](), a [distinguishing border](), a [distinguishing box-shadow]() or a `background-image`.
 
 ## Expectation 3
 
-When the link's [hover state is triggered][], the link has a [distinguishing style][], a [distinguishing border][], a [distinguishing box-shadow][] or a background-image.
+When the target element's [hover state is triggered](), the target element has a [distinguishing style](), a [distinguishing border](), a [distinguishing box-shadow]() or a `background-image`.
 
 ## Assumptions
 
-- This tests assumes that [distinguishing style][], [distinguishing border][] or one of the following CSS properties  is used to make the link visually evident: color, background-color or background-image. 
+- This tests assumes that [distinguishing style](), [distinguishing border]() or one of the CSS properties `color`, `background-color` or `background-image` is used to make the link visually evident. 
 - This test assumes that the 3:1 [contrast ratio](https://www.w3.org/TR/WCAG20/#contrast-ratiodef) between link text and surrounding text is sufficient to meet WCAG 2.0. This value is part of technique G183, but is not specified in the 1.4.1 success criterion.
-- The methods described in [distinguishing style][] is assumed to be sufficiently distinguishable.
-- The methods described in [distinguishing border][] is assumed to be sufficiently distinguishable.
-- The methods described in [distinguishing box-shadow][] is assumed to be sufficiently distinguishable.
+- The methods described in [distinguishing style]() is assumed to be sufficiently distinguishable.
+- The methods described in [distinguishing border]() is assumed to be sufficiently distinguishable.
+- The methods described in [distinguishing box-shadow]() is assumed to be sufficiently distinguishable.
 
 ## Accessibility Support
 
@@ -59,7 +62,7 @@ There are no major accessibility support issues known for this rule.
 - [F73: Failure of Success Criterion 1.4.1 due to creating links that are not visually evident without color vision](https://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/F73.html)
 - [C15: Using CSS to change the presentation of a user interface component when it receives focus](https://www.w3.org/TR/WCAG20-TECHS/C15.html) 
 
-## Test Cases
+## Test Cases ## NOT UPDATED
 
 @@@ **Editor's note:** Test cases: breaks, margins, content in lots of spans etc. 
 

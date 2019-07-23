@@ -1,5 +1,5 @@
 --
-title: Distinguishing Box-Shadow 
+title: Distinguishing box-Shadow 
 key: distinguishing-box-shadow
 --
 

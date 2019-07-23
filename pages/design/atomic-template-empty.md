@@ -52,18 +52,17 @@ _There are no major accessibility support issues known for this rule._
 
 ### Understanding WCAG 
 
-- [WCAG 2.0 - Understanding 4.1.2: Name, Role, Value](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
+- [WCAG 2.1 - Understanding 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 
 ### Related WCAG Techniques
 
-- [G108: Using markup features to expose the name and role](https://www.w3.org/TR/WCAG20-TECHS/G108.html)
+- [G108: Using markup features to expose the name and role](https://www.w3.org/WAI/WCAG21/Techniques/general/G108.html)
 
 ### Standards and Definitions
 
 - [Accessible Rich Internet Applications 1.1](https://www.w3.org/TR/wai-aria-1.1/)
 - [WAI-ARIA 1.1: 6. Supported States and Properties](https://www.w3.org/TR/wai-aria/#states_and_properties)
-- [WCAG 2.1 definition: user interface component
-](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)
+- [WCAG 2.1 definition: user interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)
 
 ### Further Reading
 

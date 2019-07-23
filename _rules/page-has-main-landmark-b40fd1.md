@@ -3,7 +3,7 @@ id: b40fd1
 name: HTML page has a main landmark
 rule_type: atomic
 description: |
-  This rule checks that each page has an element with a semantic role of main
+  This rule checks that each page has an element with a semantic role of `main`
 accessibility_requirements:
 input_aspects:
 	- DOM Tree

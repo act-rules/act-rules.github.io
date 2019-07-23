@@ -3,7 +3,7 @@ id: cefbef
 name: Block of content is expandable and collapsible
 rule_type: atomic
 description: |
-  This rule checks that a given block of content is expandable and collapsible
+  This rule checks that repeated blocks of content are expandable and collapsible
 accessibility_requirements:
   wcag-technique:SCR28: # Using an expandable and collapsible menu to bypass block of content
 		forConformance: false
@@ -20,15 +20,15 @@ authors:
 
 ## Applicability
 
-This rule applies to any set of two or more [documents](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element.
+This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element.
 
 ## Expectations
 
-For each [document](#https://www.w3.org/TR/dom/#concept-document) within the test target, and each [section of content](#section-of-content) repeated in all [documents](#https://www.w3.org/TR/dom/#concept-document) of the test target, there exists some user interface control in the [document](#https://www.w3.org/TR/dom/#concept-document) that allows to toggle both [visibility](#visible) and [inclusion in the accessibility tree](#included-in-the-accessibility-tree) of this [section of content](#section-of-content).
+For each [section of repeated content](#repeated-content) repeated in the test target, there exists some user interface control that allows to toggle both [visibility](#visible) and [inclusion in the accessibility tree](#included-in-the-accessibility-tree) of this [section of repeated content](#repeated-content).
 
 ## Assumptions
 
-_There are currently no assumptions_
+This rule assume that [sections of repeated content](#repeated-content) has already be identified within the test target, for example by comparison with other test targets within the same test subject, or any other mean.
 
 ## Accessibility Support
 

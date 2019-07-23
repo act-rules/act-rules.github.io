@@ -26,7 +26,7 @@ authors:
 
 ## Applicability
 
-This rule applies to any set of one or more [documents](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element.
+This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element.
 
 **Note**: Some of the atomic rules apply to sets of two or more documents, while some apply to a single documents which is also a set of one document.
 

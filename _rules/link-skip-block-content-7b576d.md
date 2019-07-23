@@ -21,11 +21,11 @@ authors:
 
 ## Applicability
 
-This rule applies to any set of two or more [documents](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element.
+This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element.
 
 ## Expectations
 
-For each [document](#https://www.w3.org/TR/dom/#concept-document) within the test target, and each [section of content](#section-of-content) repeated in all [documents](#https://www.w3.org/TR/dom/#concept-document) of the test target, either the last [focusable](#focusable) element before this [section of content](#section-of-content), or the first [focusable](#focusable) element inside it has a [semantic role](#semantic-role) of `link` and:
+For each [section of repeated content](#repeated-content) within the test target, either the last [focusable](#focusable) element before it, or the first [focusable](#focusable) element inside it has a [semantic role](#semantic-role) of `link` and:
 - is [included in the accessibility tree](#included-in-the-accessibility-tree); and
 - is [visible](#visible) when [focused](#focused); and
 - refers to an element within the same [document](#https://www.w3.org/TR/dom/#concept-document) located immediately after this [section of content](#section-of-content); and

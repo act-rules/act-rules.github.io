@@ -22,35 +22,44 @@ authors:
 
 The rule applies to any HTML or SVG element with the [semantic role](#semantic-role) of `link` that lives up to the following criteria:
 * is [focusable](#focusable),
-* contains text nodes that are [visible](#visible) that doesn't have a [distinguishing style](), a [distinguishing border](), a [distinguishing box-shadow]() or a `background-image`,
-* is in a [block of text]() that has [visible](#visible) text nodes, which 
-** are NOT contained in any element with the [semantic role](#semantic-role) of link,
+* contains [text nodes](https://www.w3.org/TR/dom/#text) that are [visible](#visible) that doesn't have a [distinguishing border](#distinguishing-border), a [distinguishing box-shadow](#distinguishing-box-shadow) or a `background-image`,
+* is in a [block of text]() that has [visible](#visible) [text nodes](https://www.w3.org/TR/dom/#text), which 
+** are NOT contained in any element with the [semantic role](#semantic-role) of `link`,
 ** do not exclusively consist of [whitespace](#whitespace), 
-** have a different [foreground color](#foreground-color) or [background color]() than the `link`.
+** have a different [foreground color](#foreground-color) or [background color]() than the link,
+** have different values for [text style properties](#text-style-properties) than the link.
 
 **Note:** This rule only applies to links that have a different color than the surrounding text, since the rule maps to Success Criterion 1.4.1 Use of Color. Links that do not have any distinguishing features and are also the same color as the surrounding text might pose an accessibility issue as well, but not related to this success criterion.
 
 ## Expectation 1
 
 Within the same [block of text]() the [contrast ratio](https://www.w3.org/TR/WCAG20/#contrast-ratiodef) is 3:1 or greater between either 
-- the [foreground color](#foreground-color) of the [visible](#) text nodes of the target element and [adjacent]() [visible]() text nodes, or 
-- the [background color]() of the target element and the background color of any [adjacent]() [visible]() text nodes.
+* the [foreground color](#foreground-color) of the [visible](#) [text nodes](https://www.w3.org/TR/dom/#text) of the target element and [adjacent]() [visible]() [text nodes](https://www.w3.org/TR/dom/#text), or 
+* the [background color]() of the target element and the background color of any [adjacent]() [visible]() [text nodes](https://www.w3.org/TR/dom/#text).
 
 ## Expectation 2
 
-When the target element's [focus state is triggered](), the target element has a [distinguishing style](), a [distinguishing border](), a [distinguishing box-shadow]() or a `background-image`.
+When the target element's [focus state is triggered](), the target element has one or more of the following:
+* a [distinguishing border](#distinguishing-border), 
+* a [distinguishing box-shadow](#distinguishing-box-shadow),
+* a `background-image`, or 
+* values for [text style properties](#text-style-properties) that are different between the target element and any [visible](#visible) [text nodes](https://www.w3.org/TR/dom/#text) in the same [block of text]() that are NOT contained in any element with the [semantic role](#semantic-role) of `link` and do not exclusively consist of [whitespace](#whitespace).
 
 ## Expectation 3
 
-When the target element's [hover state is triggered](), the target element has a [distinguishing style](), a [distinguishing border](), a [distinguishing box-shadow]() or a `background-image`.
+When the target element's [hover state is triggered](), the target element has one or more of the following:
+* a [distinguishing border](#distinguishing-border), 
+* a [distinguishing box-shadow](#distinguishing-box-shadow),
+* a `background-image`, or 
+* values for [text style properties](#text-style-properties) that are different between the target element and any [visible](#visible) [text nodes](https://www.w3.org/TR/dom/#text) in the same [block of text]() that are NOT contained in any element with the [semantic role](#semantic-role) of `link` and do not exclusively consist of [whitespace](#whitespace).
 
 ## Assumptions
 
-- This tests assumes that [distinguishing style](), [distinguishing border]() or one of the CSS properties `color`, `background-color` or `background-image` is used to make the link visually evident. 
-- This test assumes that the 3:1 [contrast ratio](https://www.w3.org/TR/WCAG20/#contrast-ratiodef) between link text and surrounding text is sufficient to meet WCAG 2.0. This value is part of technique G183, but is not specified in the 1.4.1 success criterion.
-- The methods described in [distinguishing style]() is assumed to be sufficiently distinguishable.
-- The methods described in [distinguishing border]() is assumed to be sufficiently distinguishable.
-- The methods described in [distinguishing box-shadow]() is assumed to be sufficiently distinguishable.
+* This rule assumes that [text style properties](#text-style-properties), [distinguishing border]() or one of the CSS properties `color`, `background-color` or `background-image` is used to make the link visually evident. 
+* This rule assumes that the 3:1 [contrast ratio](https://www.w3.org/TR/WCAG20/#contrast-ratiodef) between link text and surrounding text is sufficient to meet WCAG 2.0. This value is part of technique G183, but is not specified in the 1.4.1 success criterion.
+* This definition assumes that any change in [text style properties](#text-style-properties) is sufficiently distinguishable, and that fonts are loaded when they are present
+* The methods described in [distinguishing border](#distinguishing-border) is assumed to be sufficiently distinguishable.
+* The methods described in [distinguishing box-shadow](#distinguishing-box-shadow) is assumed to be sufficiently distinguishable.
 
 ## Accessibility Support
 

@@ -15,6 +15,7 @@ input_rules:
   - 306c8a
   - 5effbb
   - 7b576d
+  - 8a213c
   - b40fd1
   - cefbef
   - e38767

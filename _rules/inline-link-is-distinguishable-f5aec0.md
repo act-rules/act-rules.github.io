@@ -14,9 +14,9 @@ input_aspects:
 - Dom Tree 
 - CSS Styling
 authors:
-- Wilco Fiers
-- Jennifer Chadwick
 - Anne Thyme Nørregaard
+- Jennifer Chadwick
+- Wilco Fiers
 
 ## Applicability
 

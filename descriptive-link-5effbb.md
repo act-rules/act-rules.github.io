@@ -1,10 +1,10 @@
 ---
 id: 5effbb
-name: Link text is descriptive
+name: Link in context is descriptive
 rule_type: atomic
 
 description: | 
- This rule checks that all links describe their purpose
+ This rule checks that all links in their context describe their purpose
 
 accessibility_requirements: 
   wcag20:2.4.4: # Link Purpose (In Context) 
@@ -25,27 +25,33 @@ authors:
 
 ## Applicability
 
-The rule applies to any HTML element with the [semantic role](#semantic-role) of `link` that has an [accessible-name](#accessible-name) that is not the empty string ("").
+This rule applies to any HTML or SVG element with the [semantic role](#semantic-role) of [link](https://www.w3.org/TR/wai-aria/#link) or a role that inherits from the link role, that is [included in the accessibility tree](#included-in-the-accessibility-tree) and has an [accessible-name](#accessible-name) that does not only consist of [whitespace](#whitespace).
 
 ## Expectation
 
-Both the [text content](#text-content), if [visible](#visible), and the [accessible-name](#accessible-name) of the target element, together with its [visible](#visible) [context](#context) describe the purpose of the link.
-
-Note: Even though elements with the [semantic role](#semantic-role) of `link` [support name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent), their [text content](#text-content) and [accessible-name](#accessible-name) may be different if the content's author decides to. For this reason, this rules checks both [text content](#text-content) and [accessible-name](#accessible-name).
+The [visible](#visible) [text content](#text-content) of the target element, together with its [programmatically determined link context](#programmatically-determined-link-context) describe the purpose of the link.
 
 ## Assumptions
 
-- The rule assumes that all links are [user interface components](https://www.w3.org/TR/WCAG20/#user-interface-componentdef) as defined by WCAG 2.
+_There are currently no assumptions._
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- [2.4.4 Link Purpose (In Context)](http://www.w3.org/TR/2008/REC-WCAG20-20081211/#navigation-mechanisms-refs)
-- [G91: Providing link text that describes the purpose of a link](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G91)
+- [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
+- [G91: Providing link text that describes the purpose of a link](https://www.w3.org/WAI/WCAG21/Techniques/general/G91)
+- [H30: Providing link text that describes the purpose of a link for anchor elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H30)
+- [H24: Providing text alternatives for the area elements of image maps](https://www.w3.org/WAI/WCAG21/Techniques/html/H24)
 - [G53: Identifying the purpose of a link using link text combined with the text of the enclosing sentence](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G53)
+- [ARIA7: Using aria-labelledby for link purpose](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA7)
+- [ARIA8: Using aria-label for link purpose](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA8)
+- [H77: Identifying the purpose of a link using link text combined with its enclosing list item](https://www.w3.org/WAI/WCAG21/Techniques/html/H77)
+- [H78: Identifying the purpose of a link using link text combined with its enclosing paragraph](https://www.w3.org/WAI/WCAG21/Techniques/html/H78)
+- [H79: Identifying the purpose of a link in a data table using the link text combined with its enclosing table cell and associated table header cells](https://www.w3.org/WAI/WCAG21/Techniques/html/H79)
+- [H81: Identifying the purpose of a link in a nested list using link text combined with the parent list item under which the list is nested](https://www.w3.org/WAI/WCAG21/Techniques/html/H81)
 
 ## Test Cases
 
@@ -57,6 +63,8 @@ Link text describes the purpose of the link
 
 ```html
 <a href="#desc">See the description of this product</a> 
+
+<p id="desc">This product consists of several web pages</p>
 ```
 
 #### Passed Example 2
@@ -65,6 +73,10 @@ Accessible name describes the purpose of the link
 
 ```html
 <a href="#main" aria-label="Go to the main content of the page"></a>
+
+<main>
+ <p id="main">This is the main content</p>
+</main>
 ```
 
 #### Passed Example 3
@@ -72,7 +84,9 @@ Accessible name describes the purpose of the link
 Link text together with its context describes the purpose of the link
 
 ```html
-<a href="#desc">Click</a> to see the description of this product 
+<p><a href="#desc">Click</a> to see the description of this product</p>
+
+<p id="desc">This product consists of several web pages</p>
 ```
 
 #### Passed Example 4
@@ -80,7 +94,7 @@ Link text together with its context describes the purpose of the link
 Both link text together with its context and accessible name describe the purpose of the link
 
 ```html
-<a href="#" aria-label="Order item">Place item</a><span aria-hidden="true"> in shopping cart</span>
+<p><a href="#" aria-label="Order item">Place item</a><span aria-hidden="true"> in shopping cart</span></p>
 ```
 
 #### Passed Example 5
@@ -88,7 +102,11 @@ Both link text together with its context and accessible name describe the purpos
 Accessible name describes the purpose of the link
 
 ```html
-<div role="link" aria-label="Skip to main content"></div>
+<div role="link" aria-label="Skip to main content" onclick="document.location+='#main';return false;"></div>
+
+<main>
+ <p id="main">This is the main content</p>
+</main>
 ```
 
 #### Passed Example 6
@@ -96,7 +114,9 @@ Accessible name describes the purpose of the link
 Link text describes the purpose of the link
 
 ```html
-<span role="link">See description of the project</span>
+<span role="link" onclick="document.location+='#desc';return false;">See description of the project</span>
+
+<p id="desc">This product consists of several web pages</p>
 ```
 
 
@@ -108,6 +128,8 @@ Link text does not describe the purpose of the link
 
 ```html
 <a href="#desc">More</a>
+
+<p id="desc">This product consists of several web pages</p>
 ```
 
 #### Failed Example 2
@@ -116,6 +138,10 @@ Accessible name does not describe the purpose of the link
 
 ```html
 <a href="#main" aria-label="Go"></a>
+
+<main>
+ <p id="main">This is the main content</p>
+</main>
 ```
 
 #### Failed Example 3
@@ -123,7 +149,11 @@ Accessible name does not describe the purpose of the link
 Link text does not describe the purpose of the link
 
 ```html
-<div role="link">More</div>
+<div role="link" onclick="document.location+='#main';return false;">More</div>
+
+<main>
+ <p id="main">This is the main content</p>
+</main>
 ```
 
 #### Failed Example 4
@@ -131,8 +161,12 @@ Link text does not describe the purpose of the link
 Accessible name does not describe the purpose of the link
 
 ```html
-<div role="link" aria-labelledby="id1"></div>
+<div role="link" aria-labelledby="id1" onclick="document.location+='#main';return false;"></div>
 <div id="id1">Go</div>
+
+<main>
+ <p id="main">This is the main content</p>
+</main>
 ```
 
 
@@ -148,7 +182,7 @@ Accessible name does not describe the purpose of the link
 
 #### Inapplicable Example 2
 
-Link that is not visible and does not have an accessible name
+Link that is not included in the accessibility tree
 
 ```html
 <a href="http://www.w3.org/WAI" style="display: none;"><img src="#" /></a>
@@ -164,16 +198,8 @@ Link with empty accessible name
 
 #### Inapplicable Example 4
 
-Link with empty accessible name
+`a` element without the link role
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="#" title=""/></a>
-```
-
-#### Inapplicable Example 5
-
-Link with empty accessible name
-
-```html
-<a href="http://www.w3.org/WAI"><img src="#" aria-labelledby="id1" /></a>
+<a>placeholder</a>
 ```

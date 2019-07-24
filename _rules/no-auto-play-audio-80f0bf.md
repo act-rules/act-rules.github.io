@@ -25,8 +25,8 @@ This rule applies to any HTML `<audio>`, `<video>` or `<source>` elements, with 
 ## Expectation
 
 For each test target, the outcome of at least one of the following rules is passed:
-- [Auto-play audio does not last more than 3 seconds](https://act-rules.github.io/rules/aaa1bf)
-- [Audio-only as a media alternative for text](https://act-rules.github.io/rules/95e043)
+- [Auto-play audio does not exceed 3 seconds](https://act-rules.github.io/rules/auto-play-audio-has-control-mechanism-95e043.md)
+- [Auto-play audio has control mechanism](https://act-rules.github.io/rules/auto-play-audio-exceeds-3-seconds-aaa1bf.md)
  
 ## Assumptions
 

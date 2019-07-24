@@ -13,14 +13,19 @@ const init = async () => {
 	rulesData.forEach(ruleData => {
 		const { id: ruleId, name: ruleName, input_rules: inputRules } = ruleData.frontmatter
 
+		if (!inputRules) {
+			return
+		}
+
 		const usage = {
 			name: ruleName,
 			slug: `rules/${ruleId}`,
 		}
 
 		inputRules.forEach(key => 
-			rulesUsages[key] = rulesUsages[key].concat(usage)
+			rulesUsages[key] = rulesUsages[key] ? rulesUsages[key].concat(usage) : [usage]
 			)
+		})
 
 	/**
 	 * Create `_data/rules-usages.json`

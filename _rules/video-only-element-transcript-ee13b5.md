@@ -42,7 +42,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Pass Example 1
+#### Passed Example 1
 
 A silent video element with a text transcript on the same page.
 
@@ -56,7 +56,7 @@ He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
-#### Pass Example 2
+#### Passed Example 2
 
 A silent video element with a link to a text transcript on a different page.
 
@@ -70,7 +70,7 @@ A silent video element with a link to a text transcript on a different page.
 
 ### Failed
 
-#### Fail Example 1
+#### Failed Example 1
 
 A silent video element with an incorrect text transcript on the same page.
 
@@ -84,7 +84,7 @@ He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
-#### Fail Example 2
+#### Failed Example 2
 
 A silent video element with a link to an incorrect text transcript on a different page.
 

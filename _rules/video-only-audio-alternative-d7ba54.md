@@ -39,7 +39,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Pass Example 1
+#### Passed Example 1
 
 A video element without audio has a separate audio track that describes the visual information.
 
@@ -56,7 +56,7 @@ A video element without audio has a separate audio track that describes the visu
 
 ### Failed
 
-#### Fail Example 1
+#### Failed Example 1
 
 A video element without an audio track.
 
@@ -67,7 +67,7 @@ A video element without an audio track.
 </video>
 ```
 
-#### Fail Example 2
+#### Failed Example 2
 
 A video element without audio has a separate audio track that incorrectly describes the visual information.
 

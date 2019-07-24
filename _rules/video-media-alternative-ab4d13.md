@@ -47,7 +47,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Pass Example 1
+#### Passed Example 1
 
 A video element that describes some of the text on the same page. The text on the page labels the video as an alternative.
 
@@ -62,7 +62,7 @@ A video element that describes some of the text on the same page. The text on th
 
 ### Failed
 
-#### Fail Example 1
+#### Failed Example 1
 
 A video element that describes some of the text on the same page. The video contains more information than the text does.
 
@@ -75,7 +75,7 @@ A video element that describes some of the text on the same page. The video cont
 <video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls></video>
 ```
 
-#### Fail Example 2
+#### Failed Example 2
 
 A video element that describes some of the text on the same page. The text is not visible on the page.
 
@@ -88,7 +88,7 @@ A video element that describes some of the text on the same page. The text is no
 <video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls></video>
 ```
 
-#### Fail Example 3
+#### Failed Example 3
 
 A video element that describes some of the text on the same page. The text on the page does not label the video as an alternative.
 
@@ -101,7 +101,7 @@ A video element that describes some of the text on the same page. The text on th
 <video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls></video>
 ```
 
-#### Fail Example 4
+#### Failed Example 4
 
 A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the label is not visible on the page.
 

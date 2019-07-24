@@ -43,10 +43,10 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed example 1
 
-The `<audio>` element has a control mechanism.
+The `<audio>` element does not auto-play for more than 3 seconds.
 
 ``` html
-  <audio src="../test-assets/moon-audio/moon-speech.mp3#t=25" autoplay="true" controls></audio>
+  <audio src="../test-assets/moon-audio/moon-speech.mp3#t=25" autoplay="true"></audio>
 ```
 
 ### Passed example 2
@@ -64,7 +64,7 @@ The `<video>` element audio output does not last longer than 3 seconds.
 
 ### Passed example 1
 
-The `<audio>` element has a control mechanism.
+The `<audio>` auto-plays for more than 3 seconds.
 
 ``` html
   <audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay="true" controls></audio>
@@ -72,7 +72,7 @@ The `<audio>` element has a control mechanism.
 
 ### Failed example 2
 
-The `<video>` element audio plays for longer than 3 seconds.
+The `<video>` element audio auto-plays for more than 3 seconds.
 
 ``` html
  <video autoplay="true">

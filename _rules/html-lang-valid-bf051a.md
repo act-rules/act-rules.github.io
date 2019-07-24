@@ -23,7 +23,7 @@ The root element of the page, if it is an `html` element with a `lang` and/or `x
 
 ## Expectation
 
-The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-language-subtag) if the attribute is [non-empty](#non-empty).
+The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-language-subtag) if the attribute is not empty ("").
 
 ## Assumptions
 
@@ -152,7 +152,7 @@ The `lang` attribute value is not a valid primary language subtag.
 The rule applies to `html` element and hence usage of `lang` attribute in `svg` element is not applicable.
 
 ```svg
-<svg xmlns="http://www.w3.org/2000/svg" lang="fr">
+<svg xmlns="http://www.w3.org/2000/svg" lang="fr"></svg>
 ```
 
 #### Inapplicable Example 2
@@ -160,7 +160,7 @@ The rule applies to `html` element and hence usage of `lang` attribute in `svg` 
 The rule applies to `html` element and hence usage of `xml:lang` attribute in `svg` element is not applicable.
 
 ```svg
-<svg xmlns="http://www.w3.org/2000/svg" xml:lang="fr">
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="fr"></svg>
 ```
 
 #### Inapplicable Example 3

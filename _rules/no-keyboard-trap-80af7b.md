@@ -29,8 +29,8 @@ The rule only applies to any HTML or SVG element that is [focusable](#focusable)
 
 For each test target, the outcome of one of the following rules is "passed":
 
-- [No keyboard trap standard navigation](https://auto-wcag.github.io/auto-wcag/rules/SC2-1-2-no-keyboard-trap-standard-navigation.html)
-- [No keyboard trap non-standard navigation](https://auto-wcag.github.io/auto-wcag/rules/SC2-1-2-no-keyboard-trap-non-standard-navigation.html)
+- [No keyboard trap standard navigation](https://act-rules.github.io/rules/a1b64e)
+- [No keyboard trap non-standard navigation](https://act-rules.github.io/rules/ebe86a)
 
 ## Assumptions
 
@@ -85,10 +85,7 @@ Keyboard trap with help information in a paragraph before, and where the method 
 
 <p>Press the M-key to Exit</p>
 <a id="link1" href="#">Link 1</a>
-<button
-	id="btn1"
-	onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)"
->
+<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">
 	Button 1
 </button>
 <button
@@ -112,10 +109,7 @@ Keyboard trap with help information within the trap, and where the method advise
 </script>
 
 <a id="link1" href="#">Link 1</a>
-<button
-	id="btn1"
-	onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)"
->
+<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">
 	Button 1
 </button>
 <p>Press the M-key to Exit</p>
@@ -139,30 +133,18 @@ Keyboard trap with "help" link that once clicked exposes the instructions.
 	var trapOn = false
 
 	function showHelpText() {
-		document.getElementById('helptext').innerHTML =
-			'<p>Press the M-key to Exit</p>'
+		document.getElementById('helptext').innerHTML = '<p>Press the M-key to Exit</p>'
 	}
 </script>
 
-<div
-	onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)"
->
+<div onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)">
 	<a id="link1" href="#">Link 1</a>
-	<button
-		id="btn1"
-		onblur="(function(e){trapOn=true; document.getElementById('helpLink').focus();})(event)"
-	>
+	<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('helpLink').focus();})(event)">
 		Button 1
 	</button>
-	<a id="helpLink" href="#" onclick="showHelpText()"
-		>How to go the next element</a
-	>
+	<a id="helpLink" href="#" onclick="showHelpText()">How to go the next element</a>
 	<div id="helptext"></div>
-	<button
-		id="btn2"
-		class="target"
-		onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
-	>
+	<button id="btn2" class="target" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">
 		Button 2
 	</button>
 </div>
@@ -190,10 +172,7 @@ Keyboard trap group.
 <button class="target" onblur="setTimeout(() => this.nextSibling.focus(), 10)">
 	Button1
 </button>
-<button
-	class="target"
-	onblur="setTimeout(() => this.previousSibling.focus(), 10)"
->
+<button class="target" onblur="setTimeout(() => this.previousSibling.focus(), 10)">
 	Button2
 </button>
 ```
@@ -218,10 +197,7 @@ Keyboard trap with no instructions.
 </script>
 
 <a id="link1" href="#">Link 1</a>
-<button
-	id="btn1"
-	onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)"
->
+<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">
 	Button 1
 </button>
 <button
@@ -246,10 +222,7 @@ Keyboard trap with instructions that doesn't give advise on the method for proce
 
 <p>Go to the next element</p>
 <a id="link1" href="#">Link 1</a>
-<button
-	id="btn1"
-	onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)"
->
+<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">
 	Button 1
 </button>
 <button
@@ -273,18 +246,11 @@ Keyboard trap with help text, where the method advised doesn't work.
 </script>
 
 <a id="link1" href="#">Link 1</a>
-<button
-	id="btn1"
-	onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)"
->
+<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">
 	Button 1
 </button>
 <p>Press the M-key to Exit</p>
-<button
-	id="btn2"
-	class="target"
-	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
->
+<button id="btn2" class="target" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">
 	Button 2
 </button>
 <a id="link2" href="#">Link 2</a>
@@ -321,6 +287,5 @@ Hidden element using `display:none`.
 Hidden element using `visibility:hidden`.
 
 ```html
-<a href="#" style="visibility:hidden;">Link 1</a>
-<button class="target" style="visibility:hidden;">Button1</button>
+<a href="#" style="visibility:hidden;">Link 1</a> <button class="target" style="visibility:hidden;">Button1</button>
 ```

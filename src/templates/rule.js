@@ -12,6 +12,9 @@ import {
 	getAuthors,
 	getInputRulesForRule,
 	getInputAspects,
+	getImplementations,
+	getImplementationsLink,
+	getDateTimeFromUnixTimestamp,
 } from './../utils/render-fragments'
 import SEO from '../components/seo'
 import { contributors, repository, config } from './../../package.json'
@@ -43,20 +46,17 @@ export default ({ data }) => {
 					{/* frontmatter */}
 					<ul className="meta">
 						{getRuleType(frontmatter.rule_type)}
+						<li>
+							<span className="heading">Rule ID:</span>
+							<span> {ruleId}</span>
+						</li>
+						<li>
+							<span className="heading">Last modified:</span>
+							<span> {getDateTimeFromUnixTimestamp(ruleChangelog[0].date)}</span>
+						</li>
 						<li>{getAccessibilityRequirements(accessibility_requirements)}</li>
-						<li>
-							{getInputAspects(
-								frontmatter.input_aspects,
-								ruleFormatInputAspects
-							)}
-						</li>
-						<li>
-							{getInputRulesForRule(
-								frontmatter.input_rules,
-								allRules.edges,
-								true
-							)}
-						</li>
+						<li>{getInputAspects(frontmatter.input_aspects, ruleFormatInputAspects)}</li>
+						<li>{getInputRulesForRule(frontmatter.input_rules, allRules.edges, true)}</li>
 					</ul>
 					<hr />
 					{/* Description */}
@@ -76,19 +76,32 @@ export default ({ data }) => {
 					{getGlossaryUsed(slug, allGlossary)}
 					<hr />
 					{/* changelog */}
-					{getChangelog(
-						ruleChangelog,
-						repository.url,
-						`_rules/${relativePath}`
-					)}
+					{getChangelog(ruleChangelog, repository.url, `_rules/${relativePath}`)}
+					{/* Useful links */}
+					<a href="#useful-links" id="useful-links">
+						<h2>Useful Links</h2>
+					</a>
+					<ul>
+						<li>
+							<a target="_blank" rel="noopener noreferrer" href={issuesUrl}>
+								Github issues related to this rule
+							</a>
+						</li>
+						<li>
+							<a target="_blank" rel="noopener noreferrer" href={ruleTestcasesUrl}>
+								Test case file for use in the WCAG-EM Report Tool
+							</a>
+						</li>
+					</ul>
+					<hr />
+					{/* implementations */}
+					{getImplementations(slug)}
 					{/* acknowledgements */}
 					<hr />
 					<a id="acknowledgements" href="#acknowledgements">
 						<h2>Acknowledgements</h2>
 					</a>
-					<div className="meta">
-						{getAuthors(frontmatter.authors, contributors)}
-					</div>
+					<div className="meta">{getAuthors(frontmatter.authors, contributors)}</div>
 				</section>
 				{/* Toc */}
 				<div className="toc">
@@ -98,38 +111,20 @@ export default ({ data }) => {
 					</span>
 					<div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
 					<ul>
+						{/* glossary */}
 						{getGlossaryUsedLink(slug, allGlossary)}
+						{/* changelog */}
 						{getChangelogLink(ruleChangelog)}
+						<li>
+							<a href="#useful-links">Useful Links</a>
+						</li>
+						{/* implementations */}
+						{getImplementationsLink(slug)}
 						<li>
 							<a href="#acknowledgements">Acknowledgements</a>
 						</li>
-					</ul>
-					{/* todo:jey needs fixing up */}
-					<span role="heading" aria-level="1" className="heading">
-						Useful Links
-					</span>
-					<ul>
 						<li>
-							<a
-								className="btn-secondary"
-								aria-label="test cases of rule for use in wcag em report tool"
-								target="_blank"
-								rel="noopener noreferrer"
-								href={issuesUrl}
-							>
-								View Issues
-							</a>
-						</li>
-						<li>
-							<a
-								className="btn-secondary"
-								aria-label="test cases of rule for use in wcag em report tool"
-								target="_blank"
-								rel="noopener noreferrer"
-								href={ruleTestcasesUrl}
-							>
-								Testcases (EM Report Tool)
-							</a>
+							<a href="#acknowledgements">Acknowledgements</a>
 						</li>
 					</ul>
 				</div>
@@ -162,9 +157,7 @@ export const query = graphql`
 				changelog
 			}
 		}
-		allRules: allMarkdownRemark(
-			filter: { fields: { markdownType: { eq: "rules" } } }
-		) {
+		allRules: allMarkdownRemark(filter: { fields: { markdownType: { eq: "rules" } } }) {
 			totalCount
 			edges {
 				node {

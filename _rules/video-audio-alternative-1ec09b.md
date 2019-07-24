@@ -1,6 +1,6 @@
 ---
 id: 1ec09b
-name: video with audio has audio description
+name: Video with audio has audio description
 rule_type: composite
 description: |
   This rule checks video elements with audio have audio description
@@ -21,15 +21,15 @@ authors:
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming) `video` element that is [visible](#visible), where the video contains audio.
+The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible](#visible), where the video contains audio.
 
 ## Expectation
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [Video element audio described](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-audio-description.html)
-- [Video element description track](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-Video-description-track.html)
-- [Video as a media alternative for text](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-media-alternative.html)
+- [Video element audio described](https://act-rules.github.io/rules/1ea59c)
+- [Video element description track](https://act-rules.github.io/rules/f196ce)
+- [Video as a media alternative for text](https://act-rules.github.io/rules/ab4d13)
 
 ## Assumptions
 
@@ -37,8 +37,8 @@ This rule assumes that a mechanism is available to start the video and that the 
 
 ## Accessibility Support
 
-See [Video element description track: accessibility support](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-Video-description-track.html#accessibility-support).
-See [Video with audio has audio description: accessibility support](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-video-audio-description.html#accessibility-support).
+See [Video element audio described: accessibility support](https://act-rules.github.io/rules/1ea59c#accessibility-support).
+See [Video element description track: accessibility support](https://act-rules.github.io/rules/f196ce#accessibility-support).
 
 ## Background
 
@@ -58,14 +58,8 @@ A video element with a voiceover that describes the visual information.
 
 ```html
 <video controls>
-	<source
-		src="../test-assets/rabbit-video/video-with-voiceover.mp4"
-		type="video/mp4"
-	/>
-	<source
-		src="../test-assets/rabbit-video/video-with-voiceover.webm"
-		type="video/webm"
-	/>
+	<source src="../test-assets/rabbit-video/video-with-voiceover.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/video-with-voiceover.webm" type="video/webm" />
 </video>
 ```
 
@@ -77,10 +71,7 @@ A video element with a track element that contains descriptions.
 <video controls>
 	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
 	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
-	<track
-		kind="descriptions"
-		src="../test-assets/rabbit-video/descriptions.vtt"
-	/>
+	<track kind="descriptions" src="../test-assets/rabbit-video/descriptions.vtt" />
 </video>
 ```
 
@@ -90,16 +81,11 @@ A video element that describes some of the text on the same page. The text on th
 
 ```html
 <p>
-	Not being able to use your computer because your mouse doesn't work, is
-	frustrating. Many people use only the keyboard to navigate websites. Either
-	through preference or circumstance. This is solved by keyboard compatibility.
-	Keyboard compatibility is described in WCAG. See the video below to watch the
-	same information again in video form.
+	Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the keyboard
+	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
+	compatibility is described in WCAG. See the video below to watch the same information again in video form.
 </p>
-<video
-	src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4"
-	controls
-></video>
+<video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls></video>
 ```
 
 ### Failed
@@ -110,14 +96,8 @@ A video element with an incorrect audio description.
 
 ```html
 <video controls>
-	<source
-		src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4"
-		type="video/mp4"
-	/>
-	<source
-		src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm"
-		type="video/webm"
-	/>
+	<source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm" />
 </video>
 ```
 
@@ -129,10 +109,7 @@ A video element with a track element that contains incorrect descriptions.
 <video controls>
 	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
 	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
-	<track
-		kind="descriptions"
-		src="../test-assets/rabbit-video/incorrect-descriptions.vtt"
-	/>
+	<track kind="descriptions" src="../test-assets/rabbit-video/incorrect-descriptions.vtt" />
 </video>
 ```
 

@@ -1,6 +1,6 @@
 ---
 id: 1ea59c
-name: video element audio described
+name: Video element audio described
 rule_type: atomic
 description: |
   Non-streaming `video` elements must have all visual information also contained in the audio
@@ -17,7 +17,7 @@ authors:
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming) `video` element that is [visible](#visible) where the video contains audio.
+The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible](#visible) where the video contains audio.
 
 ## Expectation
 
@@ -48,14 +48,8 @@ A video element with a voiceover that describes the visual information.
 
 ```html
 <video controls>
-	<source
-		src="../test-assets/rabbit-video/video-with-voiceover.mp4"
-		type="video/mp4"
-	/>
-	<source
-		src="../test-assets/rabbit-video/video-with-voiceover.webm"
-		type="video/webm"
-	/>
+	<source src="../test-assets/rabbit-video/video-with-voiceover.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/video-with-voiceover.webm" type="video/webm" />
 </video>
 ```
 
@@ -106,14 +100,8 @@ A video element with an incorrect audio description.
 
 ```html
 <video controls>
-	<source
-		src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4"
-		type="video/mp4"
-	/>
-	<source
-		src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm"
-		type="video/webm"
-	/>
+	<source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm" />
 </video>
 ```
 

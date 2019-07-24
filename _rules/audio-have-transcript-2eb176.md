@@ -1,6 +1,6 @@
 ---
 id: 2eb176
-name: audio elements have a transcript
+name: Audio elements have a transcript
 rule_type: atomic
 description: |
   Non-streaming `audio` elements must have a text alternative for all included auditory information.
@@ -54,12 +54,10 @@ Audio with controls and internal transcript
 ```html
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <p>
-	The above audio contains the following speech: We choose to go to the moon in
-	this decade and do the other things, not because they are easy, but because
-	they are hard, because that goal will serve to organize and measure the best
-	of our energies and skills, because that challenge is one that we are willing
-	to accept, one we are unwilling to postpone, and one which we intend to win,
-	and the others, too.
+	The above audio contains the following speech: We choose to go to the moon in this decade and do the other things, not
+	because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our
+	energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone,
+	and one which we intend to win, and the others, too.
 </p>
 ```
 
@@ -98,12 +96,10 @@ Audio with controls and incorrect internal transcript
 ```html
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <p>
-	The above audio contains the following speech: We choose to go to the cheese
-	in this decade and do the other things, not because they are easy, but because
-	they are hard, because that goal will serve to organize and measure the best
-	of our energies and skills, because that challenge is one that we are willing
-	to accept, one we are unwilling to postpone, and one which we intend to win,
-	and the others, too.
+	The above audio contains the following speech: We choose to go to the cheese in this decade and do the other things,
+	not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of
+	our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to
+	postpone, and one which we intend to win, and the others, too.
 </p>
 ```
 
@@ -113,9 +109,7 @@ Audio with controls and incorrect external transcript
 
 ```html
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
-<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html"
-	>Transcript</a
->
+<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</a>
 ```
 
 #### Failed Example 4
@@ -124,9 +118,7 @@ Audio with autoplay and incorrect external transcript
 
 ```html (no-iframe)
 <audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
-<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html"
-	>Transcript</a
->
+<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</a>
 ```
 
 #### Failed Example 5
@@ -136,12 +128,10 @@ Audio with controls and invisible internal transcript
 ```html
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <p style="text-indent: -9999px;">
-	The above audio contains the following speech: We choose to go to the moon in
-	this decade and do the other things, not because they are easy, but because
-	they are hard, because that goal will serve to organize and measure the best
-	of our energies and skills, because that challenge is one that we are willing
-	to accept, one we are unwilling to postpone, and one which we intend to win,
-	and the others, too.
+	The above audio contains the following speech: We choose to go to the moon in this decade and do the other things, not
+	because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our
+	energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone,
+	and one which we intend to win, and the others, too.
 </p>
 ```
 
@@ -152,12 +142,10 @@ Audio with controls and internal transcript that is not exposed to the accessibi
 ```html
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <p aria-hidden="true">
-	The above audio contains the following speech: We choose to go to the moon in
-	this decade and do the other things, not because they are easy, but because
-	they are hard, because that goal will serve to organize and measure the best
-	of our energies and skills, because that challenge is one that we are willing
-	to accept, one we are unwilling to postpone, and one which we intend to win,
-	and the others, too.
+	The above audio contains the following speech: We choose to go to the moon in this decade and do the other things, not
+	because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our
+	energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone,
+	and one which we intend to win, and the others, too.
 </p>
 ```
 
@@ -176,9 +164,5 @@ Audio without controls.
 Audio with hidden controls.
 
 ```html
-<audio
-	src="../test-assets/moon-audio/moon-speech.mp3"
-	controls
-	style="display: none;"
-></audio>
+<audio src="../test-assets/moon-audio/moon-speech.mp3" controls style="display: none;"></audio>
 ```

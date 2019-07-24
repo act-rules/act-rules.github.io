@@ -1,6 +1,6 @@
 ---
 id: ee13b5
-name: video only element has transcript
+name: Video only element has transcript
 rule_type: atomic
 description: |
   Non-streaming `video` elements without audio must have all visual information available in a transcript.
@@ -17,7 +17,7 @@ authors:
 
 ## Applicability
 
-The rule applies to any [non-streaming](#non-streaming) `video` element [visible](#visible) where the video doesn't contain audio.
+The rule applies to any [non-streaming](#non-streaming-media-element) `video` element [visible](#visible) where the video doesn't contain audio.
 
 ## Expectation
 

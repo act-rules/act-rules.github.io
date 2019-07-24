@@ -1,6 +1,6 @@
 ---
 id: e7aa44
-name: audio only has a text alternative
+name: Audio only has a text alternative
 rule_type: composite
 description: |
   This rule checks if audio only elements have a text alternative available
@@ -33,8 +33,8 @@ The rule applies to any [non-streaming](#non-streaming-media-element) `audio` el
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [Audio transcript](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-1-audio-transcript.html)
-- [Media alternative audio](https://auto-wcag.github.io/auto-wcag/rules/SC1-2-1-media-alternative-audio.html)
+- [Audio elements have a transcript](https://act-rules.github.io/rules/2eb176)
+- [Audio-only as a media alternative for text](https://act-rules.github.io/rules/afb423)
 
 ## Assumptions
 
@@ -58,18 +58,12 @@ There are no major accessibility support issues known for this rule.
 Audio with controls and internal transcript
 
 ```html
-<audio
-	data-rule-target
-	src="../test-assets/moon-audio/moon-speech.mp3"
-	controls
-></audio>
+<audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <p>
-	The above audio contains the following speech: We choose to go to the moon in
-	this decade and do the other things, not because they are easy, but because
-	they are hard, because that goal will serve to organize and measure the best
-	of our energies and skills, because that challenge is one that we are willing
-	to accept, one we are unwilling to postpone, and one which we intend to win,
-	and the others, too.
+	The above audio contains the following speech: We choose to go to the moon in this decade and do the other things, not
+	because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our
+	energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone,
+	and one which we intend to win, and the others, too.
 </p>
 ```
 
@@ -79,22 +73,15 @@ An audio element that describes some of the text on the same page. The text on t
 
 ```html
 <p>
-	A part of a speech by John F. Kennedy: We choose to go to the moon in this
-	decade and do the other things, not because they are easy, but because they
-	are hard, because that goal will serve to organize and measure the best of our
-	energies and skills, because that challenge is one that we are willing to
-	accept, one we are unwilling to postpone, and one which we intend to win, and
-	the others, too.
+	A part of a speech by John F. Kennedy: We choose to go to the moon in this decade and do the other things, not because
+	they are easy, but because they are hard, because that goal will serve to organize and measure the best of our
+	energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone,
+	and one which we intend to win, and the others, too.
 </p>
 <p>
-	You can also listen to the audio file below to hear the above part of the
-	speech.
+	You can also listen to the audio file below to hear the above part of the speech.
 </p>
-<audio
-	data-rule-target
-	src="../test-assets/moon-audio/moon-speech.mp3"
-	controls
-></audio>
+<audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
 ### Failed
@@ -104,18 +91,12 @@ An audio element that describes some of the text on the same page. The text on t
 Audio with controls and incorrect internal transcript
 
 ```html
-<audio
-	data-rule-target
-	src="../test-assets/moon-audio/moon-speech.mp3"
-	controls
-></audio>
+<audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <p>
-	The above audio contains the following speech: We choose to go to the cheese
-	in this decade and do the other things, not because they are easy, but because
-	they are hard, because that goal will serve to organize and measure the best
-	of our energies and skills, because that challenge is one that we are willing
-	to accept, one we are unwilling to postpone, and one which we intend to win,
-	and the others, too.
+	The above audio contains the following speech: We choose to go to the cheese in this decade and do the other things,
+	not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of
+	our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to
+	postpone, and one which we intend to win, and the others, too.
 </p>
 ```
 
@@ -125,22 +106,15 @@ An audio element that describes some of the text on the same page. The text is n
 
 ```html
 <p style="display: none;">
-	A part of a speech by John F. Kennedy: We choose to go to the moon in this
-	decade and do the other things, not because they are easy, but because they
-	are hard, because that goal will serve to organize and measure the best of our
-	energies and skills, because that challenge is one that we are willing to
-	accept, one we are unwilling to postpone, and one which we intend to win, and
-	the others, too.
+	A part of a speech by John F. Kennedy: We choose to go to the moon in this decade and do the other things, not because
+	they are easy, but because they are hard, because that goal will serve to organize and measure the best of our
+	energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone,
+	and one which we intend to win, and the others, too.
 </p>
 <p>
-	You can also listen to the audio file below to hear the above part of the
-	speech.
+	You can also listen to the audio file below to hear the above part of the speech.
 </p>
-<audio
-	data-rule-target
-	src="../test-assets/moon-audio/moon-speech.mp3"
-	controls
-></audio>
+<audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
 ### Inapplicable
@@ -159,21 +133,13 @@ An audio element that describes some of the text on the same page. The text on t
 
 ```html
 <p>
-	A part of a speech by John F. Kennedy: We choose to go to the moon in this
-	decade and do the other things, not because they are easy, but because they
-	are hard, because that goal will serve to organize and measure the best of our
-	energies and skills, because that challenge is one that we are willing to
-	accept, one we are unwilling to postpone, and one which we intend to win, and
-	the others, too.
+	A part of a speech by John F. Kennedy: We choose to go to the moon in this decade and do the other things, not because
+	they are easy, but because they are hard, because that goal will serve to organize and measure the best of our
+	energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone,
+	and one which we intend to win, and the others, too.
 </p>
 <p>
-	You can also listen to the audio file below to hear the above part of the
-	speech.
+	You can also listen to the audio file below to hear the above part of the speech.
 </p>
-<audio
-	data-rule-target
-	src="../test-assets/moon-audio/moon-speech.mp3"
-	controls
-	style="display: none;"
-></audio>
+<audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" controls style="display: none;"></audio>
 ```

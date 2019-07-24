@@ -76,7 +76,7 @@ Value attribute as the accessible name.
 Span tag with role button and has name defined by aria-label.
 
 ```html
-<span role="button" aria-label="My button"></button>
+<span role="button" aria-label="My button"></span>
 ```
 
 #### Passed Example 5
@@ -169,7 +169,7 @@ Off screen element without an accessible name.
 
 #### Failed example 4
 
-Button has an accessible name that is not only whitespace.
+Button has an accessible name that is only whitespace.
 
 ```html
 <button></button>

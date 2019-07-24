@@ -8,7 +8,7 @@ accessibility_requirements:
   wcag20:2.4.2: # Page Titled (A)
     forConformance: true
     failed: not satisfied
-    passed: further testing needed
+    passed: satisfied
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
@@ -71,7 +71,7 @@ Two `<title>` elements where the first one describes the content of the document
 <html>
 	<head>
 		<title>Clementine harvesting season</title>
-		<title>Apple harvesting season</title>
+		<title>Second title is ignored</title>
 	</head>
 	<body>
 		<p>
@@ -109,8 +109,8 @@ Even though the descriptive `<title>` element is not placed within the `<head>` 
 	<body>
 		<h1>;)</h1>
 		<p>
-			The winking emoticon is commonly used after a light-hearted or sarcastic
-			remark. It is also a popular IM and e-mail emoticon shortcut.
+			The winking emoticon is commonly used after a light-hearted or sarcastic remark. It is also a popular IM and
+			e-mail emoticon shortcut.
 		</p>
 	</body>
 </html>
@@ -142,7 +142,7 @@ Even though a correct `<title>` element is put in the `<head>` of the document, 
 ```html
 <html>
 	<head>
-		<title>Apple harvesting season</title>
+		<title>First title is incorrect</title>
 		<title>Clementine harvesting season</title>
 	</head>
 	<body>
@@ -174,38 +174,6 @@ Even though a correct `<title>` element is put in the `<head>` of the document, 
 
 #### Inapplicable Example 1
 
-No `<title>` element present in document.
-
-```html
-<html>
-	<head> </head>
-	<body>
-		<p>
-			Clementines will be ready to harvest from late October through February.
-		</p>
-	</body>
-</html>
-```
-
-#### Inapplicable Example 2
-
-`<title>` element present in document, but is empty.
-
-```html
-<html>
-	<head>
-		<title></title>
-	</head>
-	<body>
-		<p>
-			Clementines will be ready to harvest from late October through February.
-		</p>
-	</body>
-</html>
-```
-
-#### Inapplicable Example 3
-
 This document has a `<title>` element but is inapplicable since the document element is an SVG `<svg>` element.
 
 ```svg
@@ -213,40 +181,4 @@ This document has a `<title>` element but is inapplicable since the document ele
   <title>This is a circle</title>
   <circle cx="150" cy="75" r="50" fill="green"></circle>
 </svg>
-```
-
-#### Inapplicable Example 4
-
-First `<title>` element is empty
-
-```html
-<html>
-	<head>
-		<title></title>
-		<title>Clementine harvesting season</title>
-	</head>
-	<body>
-		<p>
-			Clementines will be ready to harvest from late October through February.
-		</p>
-	</body>
-</html>
-```
-
-#### Inapplicable Example 5
-
-First `<title>` element contains only whitespace
-
-```html
-<html>
-	<head>
-		<title> </title>
-		<title>Clementine harvesting season</title>
-	</head>
-	<body>
-		<p>
-			Clementines will be ready to harvest from late October through February.
-		</p>
-	</body>
-</html>
 ```

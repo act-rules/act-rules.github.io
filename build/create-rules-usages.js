@@ -1,7 +1,7 @@
 /**
  * Create rule usages
  * -> for each (atomic) rule (find references in each (composite) rule)
- * -> this is saved in `_data` which is later used in `pages/rules`
+ * -> this is saved in `_data` which is later used in `template/rule.js`
  */
 const createFile = require('../utils/create-file')
 const getRulesMarkdownData = require('../utils/get-rules-markdown-data')
@@ -13,18 +13,16 @@ const init = async () => {
 	rulesData.forEach(ruleData => {
 		const { id: ruleId, name: ruleName, input_rules: inputRules } = ruleData.frontmatter
 
-		if (!inputRules) {
-			return
-		}
+		if (inputRules) {
+			const usage = {
+				name: ruleName,
+				slug: `rules/${ruleId}`,
+			}
 
-		const usage = {
-			name: ruleName,
-			slug: `rules/${ruleId}`,
+			inputRules.forEach(key => 
+				rulesUsages[key] = rulesUsages[key] ? rulesUsages[key].concat(usage) : [usage]
+				)
 		}
-
-		inputRules.forEach(key => 
-			rulesUsages[key] = rulesUsages[key] ? rulesUsages[key].concat(usage) : [usage]
-			)
 		})
 
 	/**

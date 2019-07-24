@@ -38,7 +38,7 @@ The native `<video>` and `<audio>` controls in several browser and assistive tec
 
 ## Background
 
-- [Success Criterion 1.4.2 Audio Control](https://www.w3.org/TR/WCAG21/#audio-control)
+- [Understanding Success Criterion 1.4.2: Audio Control](https://www.w3.org/WAI/WCAG21/Understanding/audio-control.html)
 - [Accessible Multimedia](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/Multimedia)
 
 ## Test Cases

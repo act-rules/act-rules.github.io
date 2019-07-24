@@ -9,4 +9,4 @@ Serving only an aesthetic purpose, providing no information, and having no funct
 
 #### Accessibility Support
 
-There are several popular browsers that do not fully respect empty `alt` attribute and will add the `img` element to the accessibility tree with a role of either `img` or `graphic`.
+There are several popular browsers that do not treat images with empty `alt` attribute as having a role of `presentation` but instead add the `img` element to the accessibility tree with a role of either `img` or `graphic`.

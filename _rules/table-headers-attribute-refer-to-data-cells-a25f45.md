@@ -1,9 +1,9 @@
 ---
 id: a25f45
-name: headers attribute only refers to cells in the same table element.
+name: Headers attribute of td element refers to cells in the same table element
 rule_type: atomic
 description: |
-  This rule checks that the headers attribute must only refer to cells in the same table element.
+  This rule checks that the headers attribute of `td` elements refer to cells in the same `table` element that has a semantic role of `columnheader` or `rowheader`.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true
@@ -12,6 +12,7 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
+  - CSS Styling
 authors:
   - Jey Nandakumar
   - Audrey Maniez
@@ -19,7 +20,7 @@ authors:
 
 ## Applicability
 
-This rule applies to `td` elements with a `headers` attribute, that are [included in the accessibility tree](#included-in-the-accessibility-tree).
+This rule applies to any `td` element with a `headers` attribute, that are [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ## Expectation
 
@@ -30,7 +31,8 @@ The `header` attribute of each target element is [a set of space separated IDs](
 ## Assumptions
 
 - This test assumes that the `headers` attribute is only used to identify table headers. If other information is included in the `headers` attribute, the rule may fail on issues that are not accessibility concerns. For example, if `headers` is used to include information for script, this rule may not be accurate.
-- Tables using `headers` id associations are intended as data rather than [layout table](#layout-table).
+- This test assumes that tables using `headers` id associations are intended as data rather than [layout table](#layout-table).
+- This test assumes that if the IDs of the `headers` attribute, do not live up to the expectations in this rule, the browser will try to calculate a default header from the [algorithm for assigning header cells](https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics).
 
 ## Accessibility Support
 

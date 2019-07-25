@@ -30,7 +30,7 @@ Each target element has an [accessible name](#accessible-name) that is not only 
 
 ## Assumptions
 
-- The rule assumes that all buttons are user interface components as defined by WCAG 2.
+- The rule assumes that all buttons are [user interface components as defined by WCAG 2](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components).
 
 ## Accessibility Support
 

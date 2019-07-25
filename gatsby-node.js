@@ -9,6 +9,11 @@ exports.onPreBootstrap = async () => {
 	 * `gatsby build` cleans all `html` and `css` files within the destination directory, hence the need to copy these during `bootstrap` step
 	 */
 	await copy('./_data/rules-testcases', 'public')
+
+	/**
+	 * copy `earl-context.json` so it can be available in URL - `https://act-rules.github.io/earl-context.json`
+	 */
+	await copy('./build/earl-context.json', 'public/earl-context.json')
 }
 exports.onCreateNode = onCreateNode
 exports.createPages = createPages

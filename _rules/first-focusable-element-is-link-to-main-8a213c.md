@@ -1,6 +1,6 @@
 ---
 id: 8a213c
-name: First focusable element is is link to main content
+name: First focusable element is link to main content
 rule_type: atomic
 description: |
   This rule checks that the first focusable element is a link referring to the main content of the page
@@ -27,15 +27,15 @@ This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document
 
 The first [focusable](#focusable) element within the test target:
 - is [visible](#visible) when [focused](#focused); and
-- is has a [semantic role](#semantic-role) of link; and
-- refers to the main content of the [document](#https://www.w3.org/TR/dom/#concept-document); and
+- has a [semantic role](#semantic-role) of link; and
+- when activated, moves focus to the main content of the [document](#https://www.w3.org/TR/dom/#concept-document); and
 - has an [accessible name](#accessible-name) that communicates that it links to the main content.
 
 ## Assumptions
 
 This rule assumes that any global dismissible information that only appears once per site has already been acknowledged and is not displayed any more.
 
-**Note**: the aim of such link is to be able to skip repeated content (headers, navigation bar, ...) when viewing several pages of the same site. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually be viewing and accepting cookies policy). Since that content is *not* repeated (is it only shown once for the full site), it is not a problem to have it, and it may appear on any page of the site (depending where the user first comes in).
+**Note**: The aim of such link is to be able to skip repeated content (headers, navigation bar, ...) when viewing several pages of the same site. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually be viewing and accepting cookies policy). Since that content is *not* repeated (is it only shown once for the full site), it is not a problem to have it, and it may appear on any page of the site (depending where the user first comes in).
 
 ## Accessibility Support
 

@@ -32,9 +32,11 @@ There is an [initial segment](#initial-segment) of the [focusable](#focusable) e
 
 **Note**: There is no requirement on how many [focusable](#focusable) elements are part of that [initial segment](#initial-segment), nor any requirement to provide a way to determine (programatically or not) where that [initial segment](#initial-segment) stops. Technique [G124: Adding links at the top of the page to each area of the content](https://www.w3.org/WAI/WCAG21/Techniques/general/G124), and this rule, only require that such an set exists.
 
+**Editorial note**: An attempt to clarify what this initial segment has to be is done in the second expectation: it must contain exactly one link for each section of content in the page. I am still not very happy with the formulation, nor with the order of these two expectations. Any suggestions to improve that are welcome…
+
 ## Expectation 2
 
-Each [section of content](#section-of-content) in the [document](#https://www.w3.org/TR/dom/#concept-document) is the target of one link from the set of [focusable](#focusable) elements that passes Expectation 1.
+Each [section of content](#section-of-content) in the [document](#https://www.w3.org/TR/dom/#concept-document) is the target of exactly one link from the set of [focusable](#focusable) elements that passes Expectation 1.
 
 ## Assumptions
 

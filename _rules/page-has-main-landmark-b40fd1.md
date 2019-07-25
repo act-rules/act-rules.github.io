@@ -23,9 +23,11 @@ The [document element](https://www.w3.org/TR/dom/#document-element) has at least
 
 **Note**: Authors SHOULD not use more than one element with a [semantic role](#semantic-role) of [`main`](https://www.w3.org/TR/wai-aria-1.1/#main). This is, however, a not a requirement for this rule nor for technique [ARIA11: Using ARIA landmarks to identify regions of a page](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11).
 
+**Note**: Technique [ARIA11: Using ARIA landmarks to identify regions of a page](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11) is not clear as to how many landmarks are actually needed to satisfy it, hence it is not listed as an accessibility requirement for this rule. However, having a landmark to identify the primary content of a page is enough to satisfy [Success Criterion 2.4.1 Bypass blocks](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html).
+
 ## Assumptions
 
-_There are currently no assumptions_
+This rule assumes that the `main` landmark is correctly used to identify the primary content of the page.
 
 ## Accessibility Support
 

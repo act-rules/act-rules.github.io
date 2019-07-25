@@ -42,7 +42,10 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- https://www.w3.org/TR/WCAG20-TECHS/G202.html
+- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
+- [G108: Using markup features to expose the name and role, allow user-settable properties to be directly set, and provide notification of changes](https://www.w3.org/WAI/WCAG21/Techniques/general/G108)
+- [ARIA4: Using a WAI-ARIA role to expose the role of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA4)
+- [F79: Failure of Success Criterion 4.1.2 due to the focus state of a user interface component not being programmatically determinable or no notification of change of focus state available](https://www.w3.org/WAI/WCAG21/Techniques/failures/F79)
 
 ## Test Cases
 
@@ -57,14 +60,6 @@ Focusable element `a` has implicit semantic role `link`
 ```
 
 #### Passed Example 2
-
-Focusable element `button` has implicit semantic role `button`
-
-```html
-<button>Click here</button>
-```
-
-#### Passed Example 3
 
 Element with `tabindex=0` has explicit semantic role 
 
@@ -114,4 +109,12 @@ Element `button` is `disabled` and, thus, not focusable
 
 ```html
 <button disabled>Click here</button>
+```
+
+#### Inapplicable Example 4
+
+Focusable element `a` is not included in the accessibility tree
+
+```html
+<a href="#main" aria-hidden="true">More</a>
 ```

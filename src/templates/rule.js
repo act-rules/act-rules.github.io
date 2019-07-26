@@ -30,7 +30,7 @@ export default ({ data }) => {
 	const updatedTitle = `Rule | ${frontmatter.name} | ${site.siteMetadata.title}`
 	const ruleId = frontmatter.id
 	const ruleTestcasesUrl = `/testcases/${ruleId}/rule-${ruleId}-testcases-for-em-report-tool.json`
-	const issuesUrl = `${repository.url}/issues?q=${ruleId}`
+	const issuesUrl = `${repository.url}/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+${ruleId}+`
 	const ruleFormatInputAspects = config['rule-format-metadata']['input-aspects']
 
 	return (

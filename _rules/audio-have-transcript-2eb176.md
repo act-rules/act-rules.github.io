@@ -123,7 +123,7 @@ Audio with autoplay and incorrect external transcript
 
 #### Failed Example 5
 
-Audio with controls and [non-visible][] internal transcript
+Audio with controls and [non-visible][visible] internal transcript
 
 ```html
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>

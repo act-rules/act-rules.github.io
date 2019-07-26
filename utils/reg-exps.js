@@ -3,8 +3,8 @@ const regexps = {
 	testcaseCodeSnippetTypeIsSvg: /```svg/gm,
 	/*
 	  Detecting glossary usages in rules.
-	  \[[^(]*?\] => any number of non-'(' within square brackets
-	  1. Classical usage => "the element has an [accessible name](#accessible-name)"
+		1. Classical usage => "the element has an [accessible name](#accessible-name)"
+		\[[^(]*?\] => any number of non-'(' within square brackets
 		\(#.*?\) => a '#' followed by any number of character, within parenthesis
 		2. Internal reference => '[refname]: key "title"'
 		\[.+\]:\s+[^ ]*\s+ => one or more characters within square brackets, a ':', spaces, one or more non-' ' characters, spaces

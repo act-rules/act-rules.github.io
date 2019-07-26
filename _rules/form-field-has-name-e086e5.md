@@ -91,7 +91,7 @@ Certain assistive technologies can be set up to ignore the title attribute, whic
 
 #### Passed Example 5
 
-[Explicit role].(#explicit-role)
+[Explicit role](#explicit-role).
 
 ```html
 <div aria-label="country" role="combobox" aria-disabled="true">England</div>

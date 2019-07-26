@@ -25,7 +25,7 @@ The rule applies to `iframe` elements that are [included in the accessibility tr
 
 ## Expectation
 
-Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
+Each target element has an [accessible name][] that is not only [whitespace](#whitespace).
 
 ## Assumptions
 
@@ -74,7 +74,7 @@ Usage of `aria-labelledby` attribute to describe the `iframe` content.
 
 #### Passed example 4
 
-[Accessible name](#accessible-name) is not only [whitespace](#whitespace).
+[Accessible name][] is not only [whitespace](#whitespace).
 
 ```html
 <iframe title=":-)" src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
@@ -132,7 +132,7 @@ Usage of `alt` attribute to describe content is not valid.
 
 #### Failed example 7
 
-[Accessible name](#accessible-name) is only [whitespace](#whitespace).
+[Accessible name][] is only [whitespace](#whitespace).
 
 ```html
 <iframe title=" " src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
@@ -155,3 +155,5 @@ Does not apply to non `iframe` element.
 ```html
 <iframe style="display:none;" src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
+
+[accessible name]: #accessible-name "Definition of accessible name"

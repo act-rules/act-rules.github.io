@@ -24,9 +24,9 @@ The rule applies to HTML `img` elements or any HTML element with the [semantic r
 
 ## Expectation
 
-Each target element has an [accessible name][] that is not only [whitespace](#whitespace), or is marked as [decorative](#decorative).
+Each target element has an [accessible name][] that is not only [whitespace](#whitespace), or is marked as [decorative][].
 
-**NOTE**: An `img` element can be marked as [decorative](#decorative), by using either `role="presentation"`, `role="none"` or an empty alt attribute, `alt=""`.
+**NOTE**: An `img` element can be marked as [decorative][], by using either `role="presentation"`, `role="none"` or an empty alt attribute, `alt=""`.
 
 ## Assumptions
 
@@ -77,7 +77,7 @@ The element has an [accessible name][], though the name is not always accessibil
 
 #### Passed Example 4
 
-The HTML `img` element is marked as [decorative](#decorative) through an empty `alt` attribute
+The HTML `img` element is marked as [decorative][] through an empty `alt` attribute
 
 ```html
 <img alt="" />
@@ -85,7 +85,7 @@ The HTML `img` element is marked as [decorative](#decorative) through an empty `
 
 #### Passed Example 5
 
-The HTML `img` element is marked as [decorative](#decorative) through `role="presentation"`
+The HTML `img` element is marked as [decorative][] through `role="presentation"`
 
 ```html
 <img role="presentation" />
@@ -93,7 +93,7 @@ The HTML `img` element is marked as [decorative](#decorative) through `role="pre
 
 #### Passed Example 6
 
-The HTML `img` element is marked as [decorative](#decorative) through `role="none"`
+The HTML `img` element is marked as [decorative][] through `role="none"`
 
 ```html
 <img role="none" />
@@ -111,7 +111,7 @@ The HTML `img` element has an [accessible name][] that does not only consist of 
 
 #### Failed Example 1
 
-The HTML `img` element is not marked as [decorative](#decorative) and does not have an [accessible name][]
+The HTML `img` element is not marked as [decorative][] and does not have an [accessible name][]
 
 ```html
 <img />
@@ -127,7 +127,7 @@ The element with role of `img` does not have an [accessible name][]
 
 #### Failed Example 3
 
-The `img` element inside a `div` positioned off screen has no [accessible name][] and is not marked as [decorative](#decorative)
+The `img` element inside a `div` positioned off screen has no [accessible name][] and is not marked as [decorative][]
 
 ```html
 <div style="margin-left:-9999px;"><img /></div>
@@ -178,3 +178,4 @@ The element is not a `img` element
 ```
 
 [accessible name]: #accessible-name "Definition of accessible name"
+[decorative]: #decorative "Definition of decorative"

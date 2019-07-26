@@ -7,10 +7,10 @@ const regexps = {
 		\[[^(]*?\] => any number of non-'(' within square brackets
 		\(#.*?\) => a '#' followed by any number of character, within parenthesis
 		2. Internal reference => '[refname]: key "title"'
-		\[.+\]:\s+[^ ]*\s+ => one or more characters within square brackets, a ':', spaces, one or more non-' ' characters, spaces
+		\[[^\]]+\]: +[^ ]* + => one or more non-']' within square brackets, a ': ', one or more non-' ' characters, ' '
 	*/
 	glossaryReferenceInRules: /\s\[[^(]*?\]\r?\n?\(#.*?\)/g,
-	glossaryDefinitionInRules: /\[.+\]:\s+[^ ]*\s+/g,
+	glossaryDefinitionInRules: /\[[^\]]+\]: +[^ ]* +/g,
 	/*
 		Detecting and remembering glossary keys
 		1. Classical usage => 'this is a link [link](key)'

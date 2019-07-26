@@ -3,7 +3,7 @@ id: cae760
 name: Iframe has an accessible name
 rule_type: atomic
 description: |
-  Each iframe element has an accessible name
+  This rule checks that each `iframe` element has an accessible name
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true

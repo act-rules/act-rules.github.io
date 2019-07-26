@@ -3,7 +3,7 @@ id: 97a4e1
 name: Buttons have an accessible name
 rule_type: atomic
 description: |
-  Each button element has an accessible name
+  This rule checks that each `button` element has an accessible name
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true

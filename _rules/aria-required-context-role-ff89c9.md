@@ -19,9 +19,11 @@ authors:
 
 ## Applicability
 
-The rule applies to any HTML or SVG element that is [included in the accessibility tree](#included-in-the-accessibility-tree) and has an explicit [semantic role](#semantic-role) with a [WAI-ARIA required context role](https://www.w3.org/TR/wai-aria-1.1/#scope), except if the element has an implicit semantic role that is identical to its explicit semantic role.
+The rule applies to any HTML or SVG element that is [included in the accessibility tree](#included-in-the-accessibility-tree) and has an explicit [semantic role](#semantic-role) with a [WAI-ARIA required context role](https://www.w3.org/TR/wai-aria-1.1/#scope), except if the element has an [implicit semantic role](#implicit-role) that is identical to its [explicit semantic role](#explicit-role).
 
-**Note:** An example of an element that has an implicit semantic role that is identical to its explicit semantic role is an `<li>` element that has `role="listitem"`. This rule is not applicable to elements like this.
+**Note:** An exampple of an element that has a [WAI-ARIA required context role](https://www.w3.org/TR/wai-aria-1.1/#scope) is `tab` that has `tablist` as a [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
+
+**Note:** An example of an element that has an [implicit semantic role](#implicit-role) that is identical to its [explicit semantic role](#explicit-role) is an `<li>` element that has `role="listitem"`. This rule is not applicable to elements like this.
 
 ## Expectation
 

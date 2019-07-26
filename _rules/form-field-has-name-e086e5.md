@@ -29,7 +29,7 @@ This rule applies to any element that is [included in the accessibility tree](#i
 
 ## Expectation
 
-Each target element has an [accessible name][] that is not only [whitespace](#whitespace).
+Each target element has an [accessible name][] that is not only [whitespace][].
 
 ## Assumptions
 
@@ -99,7 +99,7 @@ Explicit role.
 
 #### Passed example 6
 
-The [accessible name][] is not only [whitespace](#whitespace).
+The [accessible name][] is not only [whitespace][].
 
 ```html
 <label>
@@ -164,7 +164,7 @@ The explicit label is not supported on `div` elements.
 
 #### Failed example 7
 
-The [accessible name][] is only [whitespace](#whitespace).
+The [accessible name][] is only [whitespace][].
 
 ```html
 <label> <input /></label>
@@ -210,3 +210,4 @@ Option inherits from input, but has a required context role of listbox which inh
 
 [accessible name]: #accessible-name "Definition of accessible name"
 [semantic role]: #semantic-role "Definition of semantic role"
+[whitespace]: #whitespace "Definition of whitespace"

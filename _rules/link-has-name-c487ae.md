@@ -34,7 +34,7 @@ The rule applies to any HTML element with the [semantic role](#semantic-role) of
 
 ## Expectation
 
-Each target element has an [accessible name][] that is not only [whitespace](#whitespace).
+Each target element has an [accessible name][] that is not only [whitespace][].
 
 ## Assumptions
 
@@ -153,7 +153,7 @@ When `link` is off screen.
 
 #### Passed example 11
 
-`a` element where [accessible name][] does not only consist of [whitespace](#whitespace).
+`a` element where [accessible name][] does not only consist of [whitespace][].
 
 ```html
 <a href="http://www.w3.org/WAI">:-)</a>
@@ -242,7 +242,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 #### Failed example 11
 
-`a` element where [accessible name][] through content only consist of [whitespace](#whitespace).
+`a` element where [accessible name][] through content only consist of [whitespace][].
 
 ```html
 <a href="http://www.w3.org/WAI"> </a>
@@ -296,3 +296,4 @@ Not [included in the accessibility tree][] due to `aria-hidden="true"`.
 
 [accessible name]: #accessible-name "Definition of accessible name"
 [included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"
+[whitespace]: #whitespace "Definition of whitespace"

@@ -30,7 +30,7 @@ The rule applies to any HTML `input` element with a `type` attribute in the `Ima
 
 ## Expectation
 
-Each target element has an [accessible name][] that is not only [whitespace](#whitespace).
+Each target element has an [accessible name][] that is not only [whitespace][].
 
 ## Assumptions
 
@@ -83,7 +83,7 @@ Image button element with [accessible name][] through `aria-labelledby`
 
 #### Passed example 5
 
-[accessible name][] is not only [whitespace](#whitespace).
+[accessible name][] is not only [whitespace][].
 
 ```html
 <input type="image" name="submit" src="button.gif" alt=":-)" />
@@ -125,7 +125,7 @@ Image button with aria-labelledby that does not reference an id that exists in t
 
 #### Failed example 4
 
-[accessible name][] is only [whitespace](#whitespace).
+[accessible name][] is only [whitespace][].
 
 ```html
 <input type="image" name="submit" src="button.gif" alt=" " />
@@ -174,3 +174,4 @@ Image button is not included in the accessibility tree
 ```
 
 [accessible name]: #accessible-name "Definition of accessible name"
+[whitespace]: #whitespace "Definition of whitespace"

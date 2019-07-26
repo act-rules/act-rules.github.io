@@ -24,7 +24,7 @@ The rule applies to HTML `img` elements or any HTML element with the [semantic r
 
 ## Expectation
 
-Each target element has an [accessible name][] that is not only [whitespace](#whitespace), or is marked as [decorative][].
+Each target element has an [accessible name][] that is not only [whitespace][], or is marked as [decorative][].
 
 **NOTE**: An `img` element can be marked as [decorative][], by using either `role="presentation"`, `role="none"` or an empty alt attribute, `alt=""`.
 
@@ -101,7 +101,7 @@ The HTML `img` element is marked as [decorative][] through `role="none"`
 
 #### Passed example 6
 
-The HTML `img` element has an [accessible name][] that does not only consist of [whitespace](#whitespace)
+The HTML `img` element has an [accessible name][] that does not only consist of [whitespace][]
 
 ```html
 <img alt=":-)" />
@@ -135,7 +135,7 @@ The `img` element inside a `div` positioned off screen has no [accessible name][
 
 #### Failed example 4
 
-The HTML `img` element has an [accessible name][] that only consist of [whitespace](#whitespace)
+The HTML `img` element has an [accessible name][] that only consist of [whitespace][]
 
 ```html
 <img aria-label=" " />
@@ -181,3 +181,4 @@ The element is not a `img` element
 [decorative]: #decorative "Definition of decorative"
 [included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"
 [semantic role]: #semantic-role "Definition of semantic role"
+[whitespace]: #whitespace "Definition of whitespace"

@@ -3,7 +3,7 @@ id: 4b1c6c
 name: Iframes with identical accessible names serve equivalent purpose
 rule_type: atomic
 description: |
-  This rule checks that iframes with identical accessible names embed the same resource or equivalent resources.
+  This rule checks that `iframe` elements with identical accessible names embed the same resource or equivalent resources.
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true

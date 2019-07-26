@@ -56,7 +56,7 @@ Element with role `listitem` is contained within its required context role `list
 
 ```html
 <div role="list">
-    <div role="listitem"></div>
+    <div role="listitem">List item 1</div>
 </div>
 ```
 
@@ -66,7 +66,7 @@ Element with role `listitem` is contained within its required context role `list
 
 ```html
 <ul>
-    <div role="listitem"></div>
+    <div role="listitem">List item 1</div>
 </ul>
 ```
 
@@ -79,7 +79,7 @@ Element contained within its required context role even though it is not a direc
     <div>
          <div>
              <div>
-                <div role="listitem"></div>
+                <div role="listitem">List item 1</div>
              </div>
          </div>
     </div>
@@ -92,7 +92,7 @@ Element contained within its required context role even though it is not a direc
 
 ```html
 <div role="list" aria-owns="id1"></div>
-<div id="id1" role="listitem"></div>
+<div id="id1" role="listitem">List item 1</div>
 ```
 
 #### Passed Example 5
@@ -102,7 +102,7 @@ Element contained within its required context role even though it is not a direc
 ```html
 <div role="list" aria-owns="id1">
   <div role="tabpanel">
-    <div id="id1" role="listitem"></div>
+    <div id="id1" role="listitem">List item 1</div>
    </div>
 </div>
 ```
@@ -124,6 +124,15 @@ Since implicit ownership can cross shadow boundaries, the element with the seman
   `;
 </script>
 ```
+#### Passed Example 7
+
+Element with role `listitem` is contained within its required context role `list`, expressed as an explicit role. Even though the element with role `listitem` is empty, it is still applicable to this rule.
+
+```html
+<div role="list">
+    <div role="listitem"></div>
+</div>
+```
 
 ### Failed
 
@@ -132,7 +141,7 @@ Since implicit ownership can cross shadow boundaries, the element with the seman
 No context role.
 
 ```html
-<div role="listitem"></div>
+<div role="listitem">List item 1</div>
 ```
 
 #### Failed Example 2
@@ -141,7 +150,7 @@ Wrong context role.
 
 ```html
 <div role="tablist">
-    <div role="listitem"></div>
+    <div role="listitem">List item 1</div>
 </div>
 ```
 
@@ -151,7 +160,7 @@ Element not contained within its required context role.
 
 ```html
 <div role="list"></div>
-    <div role="listitem"></div>
+    <div role="listitem">List item 1</div>
 ```
 
 #### Failed Example 4
@@ -161,7 +170,7 @@ Element with role `listitem` has a closer ancestor, that is included in the acce
 ```html
 <div role="list">
     <div aria-label="menu">
-         <div role="listitem"></div>
+         <div role="listitem">List item 1</div>
     </div>
 </div>
 ```
@@ -176,7 +185,7 @@ Element with role `listitem` has a closer ancestor, that is included in the acce
 ```html
 <div role="list">
   <div role="tabpanel">
-    <div role="listitem"></div>
+    <div role="listitem">List item 1</div>
    </div>
 </div>
 ```
@@ -188,7 +197,7 @@ The element with the semantic role of `listitem` is [owned by](#owned-by) the fi
 ```html
 <div role="tabpanel" aria-owns="id1">
   <div role="list" aria-owns="id1">
-    <div id="id1" role="listitem"></div>
+    <div id="id1" role="listitem">List item 1</div>
    </div>
 </div>
 ```
@@ -222,7 +231,7 @@ Since explicit ownership cannot cross shadow boundaries, the element with the se
 Element does not have an explicit semantic role.
 
 ```html
-<ul></ul>
+<ul>List item 1</ul>
 ```
 
 #### Inapplicable example 2
@@ -230,7 +239,7 @@ Element does not have an explicit semantic role.
 Element is not exposed to assistive technologies.
 
 ```html
-<div role="tab" aria-hidden="true"></div>
+<div role="listitem" aria-hidden="true">List item 1</div>
 ```
 
 #### Inapplicable Example 3
@@ -238,7 +247,7 @@ Element is not exposed to assistive technologies.
 Role does not have any required context roles listed in WAI-ARIA spec.
 
 ```html
-<div role="radio"></div>
+<div role="radio">Radio button 1</div>
 ```
 
 #### Inapplicable Example 4
@@ -247,7 +256,7 @@ Element is not exposed to assistive technologies, since ancestor has `aria-hidde
 
 ```html
 <div role="list" aria-hidden="true">
-    <div role="listitem"></div>
+    <div role="listitem">List item 1</div>
 </div>
 ```
 #### Inapplicable Example 5
@@ -255,5 +264,5 @@ Element is not exposed to assistive technologies, since ancestor has `aria-hidde
 Element has an explicit semantic role, but it is identical to the implicit semantic role, making the element inapplicable.
 
 ```html
-<li role="listitem"></li>
+<li role="listitem">List item 1</li>
 ```

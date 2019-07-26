@@ -59,22 +59,6 @@ The HTML `img` element has an accessible name
 <img alt="W3C logo" />
 ```
 
-#### Passed Example 2
-
-The element with role of `img` has an accessible name
-
-```html
-<div role="img" aria-label="W3C logo"></div>
-```
-
-#### Passed Example 3
-
-The element has an accessible name, though the name is not always accessibility supported
-
-```html
-<img title="W3C logo" />
-```
-
 #### Passed Example 4
 
 The HTML `img` element is marked as [decorative](#decorative) through an empty `alt` attribute

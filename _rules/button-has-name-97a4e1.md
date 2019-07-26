@@ -55,22 +55,6 @@ Regular button.
 <button>My button</button>
 ```
 
-#### Passed Example 2
-
-Value attribute as the accessible name.
-
-```html
-<input type="submit" value="Submit" />
-```
-
-#### Passed Example 3
-
-`aria-label` for the accessible name.
-
-```html
-<button aria-label="My button"></button>
-```
-
 #### Passed Example 4
 
 Span tag with role button and has name defined by aria-label.
@@ -131,14 +115,6 @@ Input button has an accessible name that comes from the default "reset" text.
 ```
 
 ### Failed
-
-#### Failed Example 1
-
-Value attribute does NOT give an accessible name, only for input elements.
-
-```html
-<button type="button" value="read more"></button>
-```
 
 #### Failed Example 2
 

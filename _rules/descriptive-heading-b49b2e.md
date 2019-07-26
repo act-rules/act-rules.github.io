@@ -27,7 +27,7 @@ This rule applies to any element with the [semantic role](#semantic-role) of hea
 
 ## Expectation
 
-Each target element describes the topic or purpose of its [section of the content](#section-of-content).
+Each target element describes the topic or purpose of its [section of the content][].
 
 **Note**: Headings do not need to be lengthy. A word, or even a single character, may suffice.
 
@@ -53,7 +53,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-Heading marked up with `h1` element that describes the topic or purpose of its [section of the content](#section-of-content).
+Heading marked up with `h1` element that describes the topic or purpose of its [section of the content][].
 
 ```html
 <h1 class="target">Opening Hours</h1>
@@ -62,7 +62,7 @@ Heading marked up with `h1` element that describes the topic or purpose of its [
 
 #### Passed Example 2
 
-Heading marked up with `role="heading"` that describes the topic or purpose of its [section of the content](#section-of-content).
+Heading marked up with `role="heading"` that describes the topic or purpose of its [section of the content][].
 
 ```html
 <span role="heading" aria-level="1">Opening Hours</span>
@@ -71,7 +71,7 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 
 #### Passed Example 3
 
-Heading marked up with `role="heading"` that describes the topic or purpose of its [section of the content](#section-of-content), with a default aria-level assigned.
+Heading marked up with `role="heading"` that describes the topic or purpose of its [section of the content][], with a default aria-level assigned.
 
 ```html
 <span role="heading">Opening Hours</span>
@@ -80,7 +80,7 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 
 #### Passed Example 4
 
-Heading marked up with `h1` element with an image that describes the topic or purpose of its [section of the content](#section-of-content).
+Heading marked up with `h1` element with an image that describes the topic or purpose of its [section of the content][].
 
 ```html
 <h1 class="target">
@@ -91,7 +91,7 @@ Heading marked up with `h1` element with an image that describes the topic or pu
 
 #### Passed Example 5
 
-Heading marked up with `h1` element that is a single character that describes the topic or purpose of its [section of the content](#section-of-content).
+Heading marked up with `h1` element that is a single character that describes the topic or purpose of its [section of the content][].
 
 ```html
 <h1 class="target">A</h1>
@@ -109,7 +109,7 @@ Heading marked up with `h1` element that is a single character that describes th
 
 #### Passed Example 6
 
-Heading marked up with `role="heading"` that describes the topic or purpose of its [section of the content](#section-of-content). The heading is positioned off screen and is [included in the accessibility tree][].
+Heading marked up with `role="heading"` that describes the topic or purpose of its [section of the content][]. The heading is positioned off screen and is [included in the accessibility tree][].
 
 ```html
 <span role="heading" aria-level="1" style="position: absolute; top: -9999px; left: -9999px;">Opening Hours</span>
@@ -120,7 +120,7 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 
 #### Passed Example 7
 
-Heading marked up with `h1` element that describes the topic or purpose of its [section of the content](#section-of-content). The heading is [visible](#visible), but is not [included in the accessibility tree][].
+Heading marked up with `h1` element that describes the topic or purpose of its [section of the content][]. The heading is [visible](#visible), but is not [included in the accessibility tree][].
 
 ```html
 <h1 class="target" aria-hidden="true">Opening Hours</h1>
@@ -131,7 +131,7 @@ Heading marked up with `h1` element that describes the topic or purpose of its [
 
 #### Failed Example 1
 
-Heading marked up with `h1` element that does not describe the topic or purpose of its [section of the content](#section-of-content).
+Heading marked up with `h1` element that does not describe the topic or purpose of its [section of the content][].
 
 ```html
 <h1 class="target">Weather</h1>
@@ -140,7 +140,7 @@ Heading marked up with `h1` element that does not describe the topic or purpose 
 
 #### Failed Example 2
 
-Heading marked up with `role="heading"` that does not describe the topic or purpose of its [section of the content](#section-of-content).
+Heading marked up with `role="heading"` that does not describe the topic or purpose of its [section of the content][].
 
 ```html
 <span role="heading" aria-level="1">Weather</span>
@@ -149,7 +149,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed Example 3
 
-Heading marked up with `role="heading"` that does not describe the topic or purpose of its [section of the content](#section-of-content). The heading is positioned off screen and is [included in the accessibility tree][].
+Heading marked up with `role="heading"` that does not describe the topic or purpose of its [section of the content][]. The heading is positioned off screen and is [included in the accessibility tree][].
 
 ```html
 <span role="heading" style="position: absolute; top: -9999px; left: -9999px;">Weather</span>
@@ -160,7 +160,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed Example 4
 
-Heading marked up with `h1` element that does not describe the topic or purpose of its [section of the content](#section-of-content). The heading is [visible](#visible), but is not [included in the accessibility tree][].
+Heading marked up with `h1` element that does not describe the topic or purpose of its [section of the content][]. The heading is [visible](#visible), but is not [included in the accessibility tree][].
 
 ```html
 <h1 class="target" aria-hidden="true">Weather</h1>
@@ -203,3 +203,4 @@ Empty heading marked up with `role="heading"` is not [visible](#visible).
 ```
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"
+[section of the content]: #section-of-content "Definition of section of content"

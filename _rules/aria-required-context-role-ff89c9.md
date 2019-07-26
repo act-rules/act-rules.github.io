@@ -120,7 +120,6 @@ Since implicit ownership can cross shadow boundaries, the element with the seman
   const root = host.attachShadow({ mode: "open" });
 
   root.innerHTML = `
-    <slot></slot>
     <div role="listitem">List item 1</div>
   `;
 </script>

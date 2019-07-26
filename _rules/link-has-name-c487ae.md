@@ -134,9 +134,7 @@ When `link` is off screen.
 		}
 	</style>
 	<body>
-		<a class="offScreenLink" href="http://www.w3.org/WAI"
-			>Web Accessibility Initiative (WAI)</a
-		>
+		<a class="offScreenLink" href="http://www.w3.org/WAI">Web Accessibility Initiative (WAI)</a>
 	</body>
 </html>
 ```
@@ -146,13 +144,7 @@ When `link` is off screen.
 `area` element with `href` attribute has [accessible name](#accessible-name).
 
 ```html
-<img
-	src="planets.gif"
-	width="145"
-	height="126"
-	alt="Planets"
-	usemap="#planetmap"
-/>
+<img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap" />
 
 <map name="planetmap">
 	<area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun" />
@@ -241,13 +233,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 `area` element with `href` attribute does not have [accessible name](#accessible-name).
 
 ```html
-<img
-	src="planets.gif"
-	width="145"
-	height="126"
-	alt="Planets"
-	usemap="#planetmap"
-/>
+<img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap" />
 
 <map name="planetmap">
 	<area shape="rect" coords="0,0,82,126" href="sun.htm" />

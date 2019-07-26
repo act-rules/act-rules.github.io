@@ -50,10 +50,7 @@ A video element without audio has a separate audio track that describes the visu
 </video>
 
 <audio controls>
-	<source
-		src="../test-assets/rabbit-video/audio-description.mp3"
-		type="audio/mpeg"
-	/>
+	<source src="../test-assets/rabbit-video/audio-description.mp3" type="audio/mpeg" />
 </audio>
 ```
 
@@ -81,10 +78,7 @@ A video element without audio has a separate audio track that incorrectly descri
 </video>
 
 <audio controls>
-	<source
-		src="../test-assets/rabbit-video/incorrect-audio-description.mp3"
-		type="audio/mpeg"
-	/>
+	<source src="../test-assets/rabbit-video/incorrect-audio-description.mp3" type="audio/mpeg" />
 </audio>
 ```
 

@@ -22,7 +22,7 @@ authors:
 
 This rule applies to any HTML `label` element or other element referenced by `aria-labelledby` that:
 
-- is either [visible](#visible) or [included in the accessibility tree][], and
+- is either [visible][] or [included in the accessibility tree][], and
 - is programmatically associated with an HTML element that has one of the listed form field [semantic roles][]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
 
 **Note**: The list of form field roles is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
@@ -85,7 +85,7 @@ Implicit label that is coded with the `label` element and describes the purpose 
 
 #### Passed Example 4
 
-Label is [visible](#visible), but not included in accessibility tree
+Label is [visible][], but not included in accessibility tree
 
 ```html
 <p id="label_fname" aria-hidden="true">First name:</p>
@@ -94,7 +94,7 @@ Label is [visible](#visible), but not included in accessibility tree
 
 #### Passed Example 5
 
-Label is included in accessibility tree, but not [visible](#visible)
+Label is included in accessibility tree, but not [visible][]
 
 ```html
 <p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">
@@ -132,7 +132,7 @@ Implicit label that is coded with the `label` element and does not describe the 
 
 #### Failed Example 4
 
-Label is [visible](#visible), but not included in accessibility tree, and does not describe the purpose of the associated element.
+Label is [visible][], but not included in accessibility tree, and does not describe the purpose of the associated element.
 
 ```html
 <p id="label_fname" aria-hidden="true">Menu</p>
@@ -141,7 +141,7 @@ Label is [visible](#visible), but not included in accessibility tree, and does n
 
 #### Failed Example 5
 
-Label is included in accessibility tree, but not [visible](#visible), and does not describe the purpose of the associated element.
+Label is included in accessibility tree, but not [visible][], and does not describe the purpose of the associated element.
 
 ```html
 <p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">
@@ -154,7 +154,7 @@ Label is included in accessibility tree, but not [visible](#visible), and does n
 
 #### Inapplicable Example 1
 
-`Label` that is neither [visible](#visible) to users, nor [included in the accessibility tree][].
+`Label` that is neither [visible][] to users, nor [included in the accessibility tree][].
 
 ```html
 <div style="display:none">
@@ -165,7 +165,7 @@ Label is included in accessibility tree, but not [visible](#visible), and does n
 
 #### Inapplicable Example 2
 
-Programatically associated `p` element that is neither [visible](#visible) nor [included in the accessibility tree][].
+Programatically associated `p` element that is neither [visible][] nor [included in the accessibility tree][].
 
 ```html
 <div style="display:none">
@@ -201,3 +201,4 @@ No `label` element.
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"
 [semantic role]: #semantic-role "Definition of semantic role"
+[visible]: #visible "Definition of visible"

@@ -17,7 +17,7 @@ authors:
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible](#visible) where the video contains audio and a `track` element with a `kind="descriptions"` attribute.
+The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video contains audio and a `track` element with a `kind="descriptions"` attribute.
 
 ## Expectation
 
@@ -87,7 +87,7 @@ A video element without a track element.
 
 #### Inapplicable Example 2
 
-A video element that is not [visible](#visible).
+A video element that is not [visible][].
 
 ```html
 <video controls style="display: none;">
@@ -108,3 +108,5 @@ A video element without audio.
 	<track kind="descriptions" src="../test-assets/rabbit-video/descriptions.vtt" />
 </video>
 ```
+
+[visible]: #visible "Definition of visible"

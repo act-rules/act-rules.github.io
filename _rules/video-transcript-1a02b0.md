@@ -22,7 +22,7 @@ authors:
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible](#visible) where the video contains audio.
+The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video contains audio.
 
 ## Expectation
 
@@ -108,7 +108,7 @@ A video element with a link to an incorrect text transcript on a different page.
 
 #### Inapplicable Example 1
 
-A video element that is not [visible](#visible).
+A video element that is not [visible][].
 
 ```html
 <video controls style="display: none;">
@@ -129,3 +129,5 @@ A video element without audio.
 </video>
 <a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
 ```
+
+[visible]: #visible "Definition of visible"

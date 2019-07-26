@@ -53,7 +53,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-[Visible](#visible) label and [accessible name][] matches when trailing white spaces are removed.
+[Visible][] label and [accessible name][] matches when trailing white spaces are removed.
 
 ```html
 <div role="link" aria-label="next page ">next page</div>
@@ -61,7 +61,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 2
 
-Character insensitivity between [visible](#visible) label and [accessible name][].
+Character insensitivity between [visible][] label and [accessible name][].
 
 ```html
 <div role="link" aria-label="Next Page">next page</div>
@@ -69,7 +69,7 @@ Character insensitivity between [visible](#visible) label and [accessible name][
 
 #### Passed Example 3
 
-Full [visible](#visible) label is contained in the [accessible name][].
+Full [visible][] label is contained in the [accessible name][].
 
 ```html
 <button name="link" aria-label="Next Page in the list">Next Page</button>
@@ -79,7 +79,7 @@ Full [visible](#visible) label is contained in the [accessible name][].
 
 #### Failed Example 1
 
-[Visible](#visible) label doesn't match [accessible name][].
+[Visible][] label doesn't match [accessible name][].
 
 ```html
 <div role="link" aria-label="OK">Next</div>
@@ -87,7 +87,7 @@ Full [visible](#visible) label is contained in the [accessible name][].
 
 #### Failed Example 2
 
-Not all of [visible](#visible) label is included in [accessible name][].
+Not all of [visible][] label is included in [accessible name][].
 
 ```html
 <button name="link" aria-label="the full">The full label</button>
@@ -136,3 +136,4 @@ Non-text content.
 ```
 
 [accessible name]: #accessible-name "Definition of accessible name"
+[visible]: #visible "Definition of visible"

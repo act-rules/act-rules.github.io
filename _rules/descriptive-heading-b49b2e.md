@@ -21,7 +21,7 @@ authors:
 
 ## Applicability
 
-This rule applies to any element with the [semantic role][] of heading that is either [visible](#visible) or [included in the accessibility tree][].
+This rule applies to any element with the [semantic role][] of heading that is either [visible][] or [included in the accessibility tree][].
 
 **Note**: This rule only applies to elements with the [semantic role][] of heading. Thus, it is a partial check for WCAG 2.0 success criterion 2.4.6, which applies to all headings. "Heading" is used in its general sense and includes headlines and other ways to add a heading to different types of content. This includes elements that are not marked up as headings in the code, but still act visually as headings, e.g. by larger and/or bolder text.
 
@@ -120,7 +120,7 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 
 #### Passed Example 7
 
-Heading marked up with `h1` element that describes the topic or purpose of its [section of the content][]. The heading is [visible](#visible), but is not [included in the accessibility tree][].
+Heading marked up with `h1` element that describes the topic or purpose of its [section of the content][]. The heading is [visible][], but is not [included in the accessibility tree][].
 
 ```html
 <h1 class="target" aria-hidden="true">Opening Hours</h1>
@@ -160,7 +160,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed Example 4
 
-Heading marked up with `h1` element that does not describe the topic or purpose of its [section of the content][]. The heading is [visible](#visible), but is not [included in the accessibility tree][].
+Heading marked up with `h1` element that does not describe the topic or purpose of its [section of the content][]. The heading is [visible][], but is not [included in the accessibility tree][].
 
 ```html
 <h1 class="target" aria-hidden="true">Weather</h1>
@@ -179,7 +179,7 @@ No heading.
 
 #### Inapplicable Example 2
 
-Heading that is neither [visible](#visible) to users, nor [included in the accessibility tree].
+Heading that is neither [visible][] to users, nor [included in the accessibility tree][].
 
 ```html
 <h1 style="display: none;">Opening hours</h1>
@@ -188,7 +188,7 @@ Heading that is neither [visible](#visible) to users, nor [included in the acces
 
 #### Inapplicable Example 3
 
-Empty heading marked up with `h1` is not [visible](#visible).
+Empty heading marked up with `h1` is not [visible][].
 
 ```html
 <h1></h1>
@@ -196,7 +196,7 @@ Empty heading marked up with `h1` is not [visible](#visible).
 
 #### Inapplicable Example 4
 
-Empty heading marked up with `role="heading"` is not [visible](#visible).
+Empty heading marked up with `role="heading"` is not [visible][].
 
 ```html
 <p role="heading" aria-level="1"></p>
@@ -205,3 +205,4 @@ Empty heading marked up with `role="heading"` is not [visible](#visible).
 [included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"
 [section of the content]: #section-of-content "Definition of section of content"
 [semantic role]: #semantic-role "Definition of semantic role"
+[visible]: #visible "Definition of visible"

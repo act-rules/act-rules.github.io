@@ -19,13 +19,13 @@ authors:
 The rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:
 
 - playing; or,
-- has a "play button" that is [visible](#visible) and [included in the accessibility tree][].
+- has a "play button" that is [visible][] and [included in the accessibility tree][].
 
 **Note:** A play button is an interactive element that when activated, plays the audio.
 
 ## Expectation 1
 
-The auditory information of each test target is available as text (directly or via text alternatives) that is [visible](#visible) and [included in the accessibility tree][].
+The auditory information of each test target is available as text (directly or via text alternatives) that is [visible][] and [included in the accessibility tree][].
 
 ## Expectation 2
 
@@ -33,7 +33,7 @@ Each target element is labelled as an audio alternative for text on the page.
 
 ## Expectation 3
 
-The label (from expectation 2) is [visible](#visible) and [included in the accessibility tree][].
+The label (from expectation 2) is [visible][] and [included in the accessibility tree][].
 
 **Note:** The term label does not refer to the `label` element.
 
@@ -89,7 +89,7 @@ An audio element that describes some of the text on the same page. The audio con
 
 #### Failed Example 2
 
-An audio element that describes some of the text on the same page. The text is not [visible](#visible) on the page.
+An audio element that describes some of the text on the same page. The text is not [visible][] on the page.
 
 ```html
 <p style="display: none;">
@@ -120,7 +120,7 @@ An audio element that describes some of the text on the same page. The text on t
 
 #### Failed Example 4
 
-An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the label is not [visible](#visible) on the page.
+An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the label is not [visible][] on the page.
 
 ```html
 <p>
@@ -139,7 +139,7 @@ An audio element that describes some of the text on the same page. The text on t
 
 #### Inapplicable Example 1
 
-An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the controls are not [visible](#visible) on the page.
+An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the controls are not [visible][] on the page.
 
 ```html
 <p>
@@ -173,3 +173,4 @@ An audio element that describes some of the text on the same page. The text on t
 ```
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"
+[visible]: #visible "Definition of visible"

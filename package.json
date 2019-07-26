@@ -90,6 +90,7 @@
 		"act-rules-implementation-access-engine": "git+https://git@github.com/act-rules/act-rules-implementation-access-engine.git",
 		"act-rules-implementation-alfa": "git+https://git@github.com/act-rules/act-rules-implementation-alfa.git",
 		"act-rules-implementation-axe-core": "git+https://git@github.com/act-rules/act-rules-implementation-axe-core.git",
+		"act-rules-implementation-qualweb": "git+https://git@github.com/act-rules/act-rules-implementation-qualweb.git",
 		"act-rules-implementation-rgaa": "git+https://git@github.com/act-rules/act-rules-implementation-rgaa.git",
 		"act-rules-implementation-trusted-tester": "git+https://git@github.com/act-rules/act-rules-implementation-trusted-tester.git",
 		"axios": "^0.18.1",
@@ -130,6 +131,7 @@
 	"devDependencies": {
 		"husky": "^2.7.0",
 		"jest": "^24.8.0",
+		"jest-extended": "^0.11.2",
 		"lint-staged": "^8.2.1",
 		"marked": "^0.6.3",
 		"prettier": "^1.18.2"
@@ -148,7 +150,8 @@
 		"getImplementationAxeCore": "node ./build/get-implementation --org 'Deque Systems' --tool 'Axe-core' --path './node_modules/act-rules-implementation-axe-core/report.json'",
 		"getImplementationRgaa": "node ./build/get-implementation --org 'Access42' --tool 'RGAA 3.0' --path './node_modules/act-rules-implementation-rgaa/reports/*.json'",
 		"getImplementationTrustedTester": "node ./build/get-implementation --org 'Trusted Tester' --tool 'Trusted Tester' --path './node_modules/act-rules-implementation-trusted-tester/reports/*.json'",
-		"getImplementations": "npm run getImplementationAccessEngine && npm run getImplementationAlfa && npm run getImplementationAxeCore && npm run getImplementationRgaa && npm run getImplementationTrustedTester",
+		"getImplementationQualWeb": "node ./build/get-implementation --org 'LASIGE, Faculdade de Ciências da Universidade de Lisboa' --tool 'QualWeb' --path './node_modules/act-rules-implementation-qualweb/reports/*.json'",
+		"getImplementations": "npm run getImplementationAccessEngine && npm run getImplementationAlfa && npm run getImplementationAxeCore && npm run getImplementationRgaa && npm run getImplementationTrustedTester && npm run getImplementationQualWeb",
 		"createImplementationsMetrics": "node ./build/create-implementation-metrics",
 		"implementations": "npm run getImplementations && npm run createImplementationsMetrics",
 		"createTestcases": "node ./build/create-testcases",
@@ -197,6 +200,9 @@
 	"jest": {
 		"verbose": true,
 		"bail": true,
+		"setupFilesAfterEnv": [
+			"jest-extended"
+		],
 		"testPathIgnorePatterns": [
 			"<rootDir>/test-utils/",
 			"<rootDir>/.cache/",

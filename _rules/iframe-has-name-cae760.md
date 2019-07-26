@@ -3,7 +3,7 @@ id: cae760
 name: Iframe has an accessible name
 rule_type: atomic
 description: |
-  Each iframe element has an accessible name
+  This rule checks that each `iframe` element has an accessible name
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true
@@ -51,11 +51,7 @@ _There are no major accessibility support issues known for this rule._
 Usage of `title` attribute to describe the `iframe` content.
 
 ```html
-<iframe
-	title="List of Contributors"
-	src="../test-assets/SC4-1-2-frame-doc.html"
->
-</iframe>
+<iframe title="List of Contributors" src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
 #### Passed Example 2
@@ -63,10 +59,7 @@ Usage of `title` attribute to describe the `iframe` content.
 Usage of `aria-label` attribute to describe the `iframe` content.
 
 ```html
-<iframe
-	aria-label="Advertisement of tours to Great Wall of China"
-	src="../test-assets/SC4-1-2-frame-doc.html"
->
+<iframe aria-label="Advertisement of tours to Great Wall of China" src="../test-assets/SC4-1-2-frame-doc.html">
 </iframe>
 ```
 
@@ -76,11 +69,7 @@ Usage of `aria-labelledby` attribute to describe the `iframe` content.
 
 ```html
 <div id="frame-title-helper">Watch highlights of the Worldcup</div>
-<iframe
-	aria-labelledby="frame-title-helper"
-	src="../test-assets/SC4-1-2-frame-doc.html"
->
-</iframe>
+<iframe aria-labelledby="frame-title-helper" src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
 #### Passed example 4
@@ -98,8 +87,7 @@ Accessible name is not only whitespace.
 Usage of `name` attribute to describe the `iframe` content is not valid.
 
 ```html
-<iframe name="List of Contributors" src="../test-assets/SC4-1-2-frame-doc.html">
-</iframe>
+<iframe name="List of Contributors" src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
 #### Failed Example 2
@@ -131,11 +119,7 @@ Empty `aria-label` attribute to describe the `frame` content is not valid.
 Usage of non existing `aria-labelledby` reference element to describe the `iframe` content is not valid.
 
 ```html
-<iframe
-	aria-labelledby="does-not-exist"
-	src="../test-assets/SC4-1-2-frame-doc.html"
->
-</iframe>
+<iframe aria-labelledby="does-not-exist" src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
 #### Failed Example 6
@@ -143,8 +127,7 @@ Usage of non existing `aria-labelledby` reference element to describe the `ifram
 Usage of `alt` attribute to describe content is not valid.
 
 ```html
-<iframe alt="List of Contributors" src="../test-assets/SC4-1-2-frame-doc.html">
-</iframe>
+<iframe alt="List of Contributors" src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
 #### Failed example 7
@@ -170,6 +153,5 @@ Does not apply to non `iframe` element.
 `iframe` is not included in the accessibility tree.
 
 ```html
-<iframe style="display:none;" src="../test-assets/SC4-1-2-frame-doc.html">
-</iframe>
+<iframe style="display:none;" src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```

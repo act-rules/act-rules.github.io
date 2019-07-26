@@ -3,7 +3,7 @@ id: c487ae
 name: Links have an accessible name
 rule_type: atomic
 description: |
-  Each link has an accessible name
+  This rule checks that each link has an accessible name
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true

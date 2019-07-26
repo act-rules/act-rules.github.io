@@ -24,7 +24,7 @@ The rule applies to HTML `img` elements or any HTML element with the [semantic r
 
 ## Expectation
 
-Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace), or is marked as [decorative](#decorative).
+Each target element has an [accessible name][] that is not only [whitespace](#whitespace), or is marked as [decorative](#decorative).
 
 **NOTE**: An `img` element can be marked as [decorative](#decorative), by using either `role="presentation"`, `role="none"` or an empty alt attribute, `alt=""`.
 
@@ -34,7 +34,7 @@ _There are currently no assumptions._
 
 ## Accessibility Support
 
-There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name](#accessible-name).
+There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name][].
 
 ## Background
 
@@ -53,7 +53,7 @@ There is a known combination of a popular browser and assistive technology that 
 
 #### Passed Example 1
 
-The HTML `img` element has an [accessible name](#accessible-name)
+The HTML `img` element has an [accessible name][]
 
 ```html
 <img alt="W3C logo" />
@@ -61,7 +61,7 @@ The HTML `img` element has an [accessible name](#accessible-name)
 
 #### Passed Example 2
 
-The element with role of `img` has an [accessible name](#accessible-name)
+The element with role of `img` has an [accessible name][]
 
 ```html
 <div role="img" aria-label="W3C logo"></div>
@@ -69,7 +69,7 @@ The element with role of `img` has an [accessible name](#accessible-name)
 
 #### Passed Example 3
 
-The element has an [accessible name](#accessible-name), though the name is not always accessibility supported
+The element has an [accessible name][], though the name is not always accessibility supported
 
 ```html
 <img title="W3C logo" />
@@ -101,7 +101,7 @@ The HTML `img` element is marked as [decorative](#decorative) through `role="non
 
 #### Passed example 6
 
-The HTML `img` element has an [accessible name](#accessible-name) that does not only consist of [whitespace](#whitespace)
+The HTML `img` element has an [accessible name][] that does not only consist of [whitespace](#whitespace)
 
 ```html
 <img alt=":-)" />
@@ -111,7 +111,7 @@ The HTML `img` element has an [accessible name](#accessible-name) that does not 
 
 #### Failed Example 1
 
-The HTML `img` element is not marked as [decorative](#decorative) and does not have an [accessible name](#accessible-name)
+The HTML `img` element is not marked as [decorative](#decorative) and does not have an [accessible name][]
 
 ```html
 <img />
@@ -119,7 +119,7 @@ The HTML `img` element is not marked as [decorative](#decorative) and does not h
 
 #### Failed Example 2
 
-The element with role of `img` does not have an [accessible name](#accessible-name)
+The element with role of `img` does not have an [accessible name][]
 
 ```html
 <div role="img"></div>
@@ -127,7 +127,7 @@ The element with role of `img` does not have an [accessible name](#accessible-na
 
 #### Failed Example 3
 
-The `img` element inside a `div` positioned off screen has no [accessible name](#accessible-name) and is not marked as [decorative](#decorative)
+The `img` element inside a `div` positioned off screen has no [accessible name][] and is not marked as [decorative](#decorative)
 
 ```html
 <div style="margin-left:-9999px;"><img /></div>
@@ -135,7 +135,7 @@ The `img` element inside a `div` positioned off screen has no [accessible name](
 
 #### Failed example 4
 
-The HTML `img` element has an [accessible name](#accessible-name) that only consist of [whitespace](#whitespace)
+The HTML `img` element has an [accessible name][] that only consist of [whitespace](#whitespace)
 
 ```html
 <img aria-label=" " />
@@ -176,3 +176,5 @@ The element is not a `img` element
 ```html
 <div aria-label="W3C logo"></div>
 ```
+
+[accessible name]: #accessible-name "Definition of accessible name"

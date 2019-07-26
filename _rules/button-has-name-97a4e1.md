@@ -24,9 +24,9 @@ The rule applies to elements that are [included in the accessibility tree](#incl
 
 ## Expectation
 
-Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
+Each target element has an [accessible name][] that is not only [whitespace](#whitespace).
 
-**Note**: `input` elements of type `submit` and `reset` can get their [accessible name](#accessible-name) from a [default text](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset), as well as from a `value` or other attribute.
+**Note**: `input` elements of type `submit` and `reset` can get their [accessible name][] from a [default text](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset), as well as from a `value` or other attribute.
 
 ## Assumptions
 
@@ -57,7 +57,7 @@ Regular button.
 
 #### Passed Example 2
 
-Value attribute as the [accessible name](#accessible-name).
+Value attribute as the [accessible name][].
 
 ```html
 <input type="submit" value="Submit" />
@@ -65,7 +65,7 @@ Value attribute as the [accessible name](#accessible-name).
 
 #### Passed Example 3
 
-`aria-label` for the [accessible name](#accessible-name).
+`aria-label` for the [accessible name][].
 
 ```html
 <button aria-label="My button"></button>
@@ -116,7 +116,7 @@ Off screen elements should be tested.
 
 #### Passed example 8
 
-Button has [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
+Button has [accessible name][] that is not only [whitespace](#whitespace).
 
 ```html
 <button>:-)</button>
@@ -124,7 +124,7 @@ Button has [accessible name](#accessible-name) that is not only [whitespace](#wh
 
 #### Passed example 9
 
-Input button has an [accessible name](#accessible-name) that comes from the default "reset" text.
+Input button has an [accessible name][] that comes from the default "reset" text.
 
 ```html
 <input type="reset" />
@@ -134,7 +134,7 @@ Input button has an [accessible name](#accessible-name) that comes from the defa
 
 #### Failed Example 1
 
-Value attribute does NOT give an [accessible name](#accessible-name), only for input elements.
+Value attribute does NOT give an [accessible name][], only for input elements.
 
 ```html
 <button type="button" value="read more"></button>
@@ -150,7 +150,7 @@ Span tag with role button with no name.
 
 #### Failed Example 3
 
-Off screen element without an [accessible name](#accessible-name).
+Off screen element without an [accessible name][].
 
 ```html
 <html>
@@ -169,7 +169,7 @@ Off screen element without an [accessible name](#accessible-name).
 
 #### Failed example 4
 
-Button has an [accessible name](#accessible-name) that is only [whitespace](#whitespace).
+Button has an [accessible name][] that is only [whitespace](#whitespace).
 
 ```html
 <button></button>
@@ -219,3 +219,5 @@ Not [included in the accessibility tree](#included-in-the-accessibility-tree) du
 ```html
 <button aria-hidden="true"></button>
 ```
+
+[accessible name]: #accessible-name "Definition of accessible name"

@@ -31,7 +31,7 @@ This rule applies to any element that has:
 
 ## Expectation
 
-The complete [visible text content](#visible-text-content) of the target element either matches or is contained within its [accessible name](#accessible-name).
+The complete [visible text content](#visible-text-content) of the target element either matches or is contained within its [accessible name][].
 
 **Note**: Leading and trailing [whitespace](#whitespace) and difference in case sensitivity should be ignored.
 
@@ -53,7 +53,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-[Visible](#visible) label and [accessible name](#accessible-name) matches when trailing white spaces are removed.
+[Visible](#visible) label and [accessible name][] matches when trailing white spaces are removed.
 
 ```html
 <div role="link" aria-label="next page ">next page</div>
@@ -61,7 +61,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 2
 
-Character insensitivity between [visible](#visible) label and [accessible name](#accessible-name).
+Character insensitivity between [visible](#visible) label and [accessible name][].
 
 ```html
 <div role="link" aria-label="Next Page">next page</div>
@@ -69,7 +69,7 @@ Character insensitivity between [visible](#visible) label and [accessible name](
 
 #### Passed Example 3
 
-Full [visible](#visible) label is contained in the [accessible name](#accessible-name).
+Full [visible](#visible) label is contained in the [accessible name][].
 
 ```html
 <button name="link" aria-label="Next Page in the list">Next Page</button>
@@ -79,7 +79,7 @@ Full [visible](#visible) label is contained in the [accessible name](#accessible
 
 #### Failed Example 1
 
-[Visible](#visible) label doesn't match [accessible name](#accessible-name).
+[Visible](#visible) label doesn't match [accessible name][].
 
 ```html
 <div role="link" aria-label="OK">Next</div>
@@ -87,7 +87,7 @@ Full [visible](#visible) label is contained in the [accessible name](#accessible
 
 #### Failed Example 2
 
-Not all of [visible](#visible) label is included in [accessible name](#accessible-name).
+Not all of [visible](#visible) label is included in [accessible name][].
 
 ```html
 <button name="link" aria-label="the full">The full label</button>
@@ -134,3 +134,5 @@ Non-text content.
 ```html
 <button aria-label="close">X</button>
 ```
+
+[accessible name]: #accessible-name "Definition of accessible name"

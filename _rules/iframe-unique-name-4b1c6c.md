@@ -22,7 +22,7 @@ authors:
 
 This rule applies to any set of any two or more `iframe` elements in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) that are [included in the accessibility tree](#included-in-the-accessibility-tree), and that have [matching](#matching-characters) [accessible names](#accessible-name) that do not only consist of [whitespace](#whitespace).
 
-**Note:** The test target for this rule is the full set of `iframe` elements within the same [document tree](https://www.w3.org/TR/dom41/#document-trees) that share the same [matching](#matching-characters) [accessible name](#accessible-name).
+**Note:** The test target for this rule is the full set of `iframe` elements within the same [document tree](https://www.w3.org/TR/dom41/#document-trees) that share the same [matching](#matching-characters) [accessible name][].
 
 ## Expectation
 
@@ -49,7 +49,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-Multiple `iframe` within document tree have the same [accessible name](#accessible-name) (given by `title`) and embed the same resource.
+Multiple `iframe` within document tree have the same [accessible name][] (given by `title`) and embed the same resource.
 
 ```html
 <iframe title="List of Contributors" src="../test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
@@ -59,7 +59,7 @@ Multiple `iframe` within document tree have the same [accessible name](#accessib
 
 #### Passed Example 2
 
-Multiple `iframe` within document tree have the same [accessible name](#accessible-name) (given by `title` and `aria-label`) and embed the same resource.
+Multiple `iframe` within document tree have the same [accessible name][] (given by `title` and `aria-label`) and embed the same resource.
 
 ```html
 <iframe title="List of Contributors" src="../test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
@@ -69,7 +69,7 @@ Multiple `iframe` within document tree have the same [accessible name](#accessib
 
 #### Passed Example 3
 
-Multiple `iframe` within document tree have the same [accessible name](#accessible-name) (given by `aria-labelledby`) and embed the same resource.
+Multiple `iframe` within document tree have the same [accessible name][] (given by `aria-labelledby`) and embed the same resource.
 
 ```html
 <div id="desc-for-title">List of Contributors</div>
@@ -81,7 +81,7 @@ Multiple `iframe` within document tree have the same [accessible name](#accessib
 
 #### Passed Example 4
 
-Multiple `iframe` within document tree have the same [accessible name](#accessible-name) (given by `title`) and embed equivalent resources. Only the navigation options (bread crumbs and local sub menus) differ due to different placement in navigation hierarchy.
+Multiple `iframe` within document tree have the same [accessible name][] (given by `title`) and embed equivalent resources. Only the navigation options (bread crumbs and local sub menus) differ due to different placement in navigation hierarchy.
 
 ```html
 <iframe title="Contact us" src="../test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
@@ -91,7 +91,7 @@ Multiple `iframe` within document tree have the same [accessible name](#accessib
 
 #### Passed Example 5
 
-Multiple `iframe` within document tree have the same [accessible name](#accessible-name) (given by `title`) and embed equivalent ressources.
+Multiple `iframe` within document tree have the same [accessible name][] (given by `title`) and embed equivalent ressources.
 
 ```html
 <iframe title="Contact us" src="../test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
@@ -101,7 +101,7 @@ Multiple `iframe` within document tree have the same [accessible name](#accessib
 
 #### Passed Example 6
 
-Multiple `iframe` within document tree have the same [accessible name](#accessible-name) (given by `title`) and embed the same resource. `src` attributes only differ due to trailing slashes, but resolves to the same resource after redirects caused by user agent.
+Multiple `iframe` within document tree have the same [accessible name][] (given by `title`) and embed the same resource. `src` attributes only differ due to trailing slashes, but resolves to the same resource after redirects caused by user agent.
 
 ```html
 <iframe title="Contact us" src="../test-assets/iframe-unique-name-4b1c6c/sub-dir-2/"> </iframe>
@@ -111,7 +111,7 @@ Multiple `iframe` within document tree have the same [accessible name](#accessib
 
 #### Passed Example 7
 
-Multiple `iframe` within document tree have the same [accessible name](#accessible-name) (given by `title`) and embed equivalent ressources. Ressources differ by the amount of information available and/or a differently worded information.
+Multiple `iframe` within document tree have the same [accessible name][] (given by `title`) and embed equivalent ressources. Ressources differ by the amount of information available and/or a differently worded information.
 
 ```html
 <iframe title="Contact us" src="../test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
@@ -121,7 +121,7 @@ Multiple `iframe` within document tree have the same [accessible name](#accessib
 
 #### Passed Example 8
 
-Multiple `iframe` within document tree have the same [accessible name](#accessible-name) (given by `title`) and embed equivalent ressources. Each `iframe` refers to a different url that referenced different advertising content (giving by a third party) but embed ressources has equivalent purpose: showing an advertising.
+Multiple `iframe` within document tree have the same [accessible name][] (given by `title`) and embed equivalent ressources. Each `iframe` refers to a different url that referenced different advertising content (giving by a third party) but embed ressources has equivalent purpose: showing an advertising.
 
 ```html
 <iframe title="advertising" src="../test-assets/iframe-unique-name-4b1c6c/advertising-one.html"> </iframe>
@@ -133,7 +133,7 @@ Multiple `iframe` within document tree have the same [accessible name](#accessib
 
 #### Failed Example 1
 
-Multiple `iframe` elements have the same [accessible name](#accessible-name) (given by `title`) but don't embed equivalent ressources.
+Multiple `iframe` elements have the same [accessible name][] (given by `title`) but don't embed equivalent ressources.
 
 ```html
 <iframe title="List of Contributors" src="../test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
@@ -143,7 +143,7 @@ Multiple `iframe` elements have the same [accessible name](#accessible-name) (gi
 
 #### Failed Example 2
 
-Multiple `iframe` elements have the same [accessible name](#accessible-name) (given by `aria-label`) but don't embed equivalent ressources.
+Multiple `iframe` elements have the same [accessible name][] (given by `aria-label`) but don't embed equivalent ressources.
 
 ```html
 <iframe aria-label="List of Contributors" src="../test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
@@ -153,7 +153,7 @@ Multiple `iframe` elements have the same [accessible name](#accessible-name) (gi
 
 #### Failed Example 3
 
-Multiple `iframe` elements have the same [accessible name](#accessible-name) (given by `title` and `aria-label`) but don't embed equivalent ressources.
+Multiple `iframe` elements have the same [accessible name][] (given by `title` and `aria-label`) but don't embed equivalent ressources.
 
 ```html
 <iframe title="List of Contributors" src="../test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
@@ -173,7 +173,7 @@ Usage of `title` attribute to describe the `iframe` content, and there is only o
 
 #### Inapplicable Example 2
 
-Multiple `iframe` elements in the document having different `title` descriptions as [accessible name](#accessible-name).
+Multiple `iframe` elements in the document having different `title` descriptions as [accessible name][].
 
 ```html
 <iframe title="List of Contributors to Repository 1" src="../test-assets/iframe-unique-name-4b1c6c/page-one.html">
@@ -185,7 +185,7 @@ Multiple `iframe` elements in the document having different `title` descriptions
 
 #### Inapplicable Example 3
 
-Multiple `iframe` elements in the document having different `aria-label` descriptions as [accessible name](#accessible-name).
+Multiple `iframe` elements in the document having different `aria-label` descriptions as [accessible name][].
 
 ```html
 <iframe aria-label="List of Contributors to Repository 1" src="../test-assets/iframe-unique-name-4b1c6c/page-one.html">
@@ -197,7 +197,7 @@ Multiple `iframe` elements in the document having different `aria-label` descrip
 
 #### Inapplicable Example 4
 
-Multiple `iframe` elements in the document having different `aria-labelledby` descriptions as [accessible name](#accessible-name).
+Multiple `iframe` elements in the document having different `aria-labelledby` descriptions as [accessible name][].
 
 ```html
 <div id="desc-for-title">List of Contributors</div>
@@ -241,7 +241,7 @@ Multiple `iframe` elements in the document having different `aria-labelledby` de
 
 #### Inapplicable Example 7
 
-`alt` cannot be used to provide [accessible name](#accessible-name) for iframe.
+`alt` cannot be used to provide [accessible name][] for iframe.
 
 ```html
 <iframe alt="Some" src="../test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
@@ -259,7 +259,7 @@ Does not apply to `object` elements.
 
 #### Inapplicable Example 9
 
-No [accessible name](#accessible-name) is provided
+No [accessible name][] is provided
 
 ```html
 <iframe src="../test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe>
@@ -278,3 +278,5 @@ Does not apply to `iframe` elements that are not [included in the accessibility 
 <iframe style="display:none;" aria-label="Document One" src="../test-assets/iframe-unique-name-4b1c6c/page-two.html">
 </iframe>
 ```
+
+[accessible name]: #accessible-name "Definition of accessible name"

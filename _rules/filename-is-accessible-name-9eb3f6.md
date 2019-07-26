@@ -19,11 +19,11 @@ authors:
 
 ## Applicability
 
-The rule applies to any HTML `input` element with a [`type`](https://www.w3.org/TR/html/sec-forms.html#dom-htmlinputelement-type) of `image`, or any HTML element with the [semantic role](#semantic-role) of `img`, that is [included in the accessibility tree](#included-in-the-accessibility-tree), and has an [accessible name](#accessible-name) that is equivalent to the [filename](#filename) specified in the `src` attribute. Difference in letter casing, and forward and trailing [whitespace](#whitespace) should be ignored.
+The rule applies to any HTML `input` element with a [`type`](https://www.w3.org/TR/html/sec-forms.html#dom-htmlinputelement-type) of `image`, or any HTML element with the [semantic role](#semantic-role) of `img`, that is [included in the accessibility tree](#included-in-the-accessibility-tree), and has an [accessible name][] that is equivalent to the [filename](#filename) specified in the `src` attribute. Difference in letter casing, and forward and trailing [whitespace](#whitespace) should be ignored.
 
 ## Expectation
 
-Each test target has an [accessible name](#accessible-name) that serves an equivalent purpose to the [non-text content](https://www.w3.org/TR/WCAG21/#dfn-non-text-content).
+Each test target has an [accessible name][] that serves an equivalent purpose to the [non-text content](https://www.w3.org/TR/WCAG21/#dfn-non-text-content).
 
 ## Assumptions
 
@@ -44,7 +44,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The `img` element's [accessible name](#accessible-name) uses the filename which accurately describes the image.
+The `img` element's [accessible name][] uses the filename which accurately describes the image.
 
 ```html
 <img src="https://www.w3.org/WAI/demos/bad/img/w3c" alt="w3c" />
@@ -52,7 +52,7 @@ The `img` element's [accessible name](#accessible-name) uses the filename which 
 
 #### Passed Example 2
 
-The `img` element's [accessible name](#accessible-name) includes the filename, which in combination with the text content of the `a` element accurately describes the image.
+The `img` element's [accessible name][] includes the filename, which in combination with the text content of the `a` element accurately describes the image.
 
 ```html
 <a href="https://www.w3.org/WAI/demos/bad/img/w3c.png" download
@@ -64,7 +64,7 @@ The `img` element's [accessible name](#accessible-name) includes the filename, w
 
 #### Failed Example 1
 
-The `img` element's [accessible name](#accessible-name) matches the image filename. However the presence of the file extension in the [accessible name](#accessible-name) is redundant and results in the [accessible name](#accessible-name) not accurately describing the image.
+The `img` element's [accessible name][] matches the image filename. However the presence of the file extension in the [accessible name][] is redundant and results in the [accessible name][] not accurately describing the image.
 
 ```html
 <img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png" />
@@ -72,7 +72,7 @@ The `img` element's [accessible name](#accessible-name) matches the image filena
 
 #### Failed Example 2
 
-The `input` element with a `type` of `image` has an [accessible name](#accessible-name) that matches the filename. However the presence of the file extension in the [accessible name](#accessible-name) is redundant and results in the [accessible name](#accessible-name) not accurately describing the image.
+The `input` element with a `type` of `image` has an [accessible name][] that matches the filename. However the presence of the file extension in the [accessible name][] is redundant and results in the [accessible name][] not accurately describing the image.
 
 ```html
 <input type="image" src="https://www.w3.org/WAI/demos/bad/before/img/top_weather.gif" alt="top_weather.gif" />
@@ -98,7 +98,7 @@ The `img` element is not [included in the accessibility tree](#included-in-the-a
 
 #### Inapplicable Example 3
 
-The `img` element's [accessible name](#accessible-name) is not equivalent to the file name specified in the `src` attribute.
+The `img` element's [accessible name][] is not equivalent to the file name specified in the `src` attribute.
 
 ```html
 <img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="modanna lily" />
@@ -106,7 +106,7 @@ The `img` element's [accessible name](#accessible-name) is not equivalent to the
 
 #### Inapplicable Example 4
 
-The `img` element's `alt` attribute matches the filename but is overridden by the `aria-label` value which takes precedence in the [accessible name](#accessible-name) calculation.
+The `img` element's `alt` attribute matches the filename but is overridden by the `aria-label` value which takes precedence in the [accessible name][] calculation.
 
 ```html
 <img
@@ -115,3 +115,5 @@ The `img` element's `alt` attribute matches the filename but is overridden by th
 	aria-label="modanna lily"
 />
 ```
+
+[accessible name]: #accessible-name "Definition of accessible name"

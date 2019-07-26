@@ -249,7 +249,7 @@ Links with different accessible names:
 
 #### Inapplicable Example 3
 
-Link is not included in the accesssibility tree:
+Link is not included in the accessibility tree:
 
 ```html
 <a

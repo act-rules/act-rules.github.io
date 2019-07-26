@@ -21,9 +21,9 @@ authors:
 
 ## Applicability
 
-This rule applies to any element with the [semantic role](#semantic-role) of heading that is either [visible](#visible) or [included in the accessibility tree][].
+This rule applies to any element with the [semantic role][] of heading that is either [visible](#visible) or [included in the accessibility tree][].
 
-**Note**: This rule only applies to elements with the [semantic role](#semantic-role) of heading. Thus, it is a partial check for WCAG 2.0 success criterion 2.4.6, which applies to all headings. "Heading" is used in its general sense and includes headlines and other ways to add a heading to different types of content. This includes elements that are not marked up as headings in the code, but still act visually as headings, e.g. by larger and/or bolder text.
+**Note**: This rule only applies to elements with the [semantic role][] of heading. Thus, it is a partial check for WCAG 2.0 success criterion 2.4.6, which applies to all headings. "Heading" is used in its general sense and includes headlines and other ways to add a heading to different types of content. This includes elements that are not marked up as headings in the code, but still act visually as headings, e.g. by larger and/or bolder text.
 
 ## Expectation
 
@@ -204,3 +204,4 @@ Empty heading marked up with `role="heading"` is not [visible](#visible).
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"
 [section of the content]: #section-of-content "Definition of section of content"
+[semantic role]: #semantic-role "Definition of semantic role"

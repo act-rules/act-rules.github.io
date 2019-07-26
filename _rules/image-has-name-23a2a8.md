@@ -20,7 +20,7 @@ authors:
 
 ## Applicability
 
-The rule applies to HTML `img` elements or any HTML element with the [semantic role](#semantic-role) of `img` that is [included in the accessibility tree][].
+The rule applies to HTML `img` elements or any HTML element with the [semantic role][] of `img` that is [included in the accessibility tree][].
 
 ## Expectation
 
@@ -145,7 +145,7 @@ The HTML `img` element has an [accessible name][] that only consist of [whitespa
 
 #### Inapplicable Example 1
 
-The element does not have the [semantic role](#semantic-role) of `img`
+The element does not have the [semantic role][] of `img`
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" role="img" width="100" height="100">
@@ -155,7 +155,7 @@ The element does not have the [semantic role](#semantic-role) of `img`
 
 #### Inapplicable Example 2
 
-The element has a [semantic role](#semantic-role) of `img`, but is not [included in the accessibility tree][]
+The element has a [semantic role][] of `img`, but is not [included in the accessibility tree][]
 
 ```html
 <div role="img" aria-hidden="true"></div>
@@ -180,3 +180,4 @@ The element is not a `img` element
 [accessible name]: #accessible-name "Definition of accessible name"
 [decorative]: #decorative "Definition of decorative"
 [included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"
+[semantic role]: #semantic-role "Definition of semantic role"

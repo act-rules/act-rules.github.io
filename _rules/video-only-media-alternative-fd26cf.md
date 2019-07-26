@@ -20,7 +20,7 @@ The rule applies to every [non-streaming](#non-streaming-media-element) `video` 
 
 ## Expectation 1
 
-All the information contained in each target element is available as text (directly or via text alternatives) that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+All the information contained in each target element is available as text (directly or via text alternatives) that is [visible](#visible) and [included in the accessibility tree][].
 
 ## Expectation 2
 
@@ -28,7 +28,7 @@ Each target element is labelled as an video alternative for text on the page.
 
 ## Expectation 3
 
-The label (from expectation 2) is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree)
+The label (from expectation 2) is [visible](#visible) and [included in the accessibility tree][].
 
 **Note:** The term label does not refer to the `label` element.
 
@@ -149,3 +149,5 @@ A video element that describes some of the text on the same page. The text on th
 	style="display: none;"
 ></video>
 ```
+
+[included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"

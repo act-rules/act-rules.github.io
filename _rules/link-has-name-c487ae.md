@@ -30,7 +30,7 @@ authors:
 
 ## Applicability
 
-The rule applies to any HTML element with the [semantic role](#semantic-role) of `link` that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+The rule applies to any HTML element with the [semantic role](#semantic-role) of `link` that is [included in the accessibility tree][].
 
 ## Expectation
 
@@ -42,7 +42,7 @@ Each target element has an [accessible name][] that is not only [whitespace](#wh
 
 ## Accessibility Support
 
-For `area` elements that have a `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on whether the `area` is considered [included in the accessibility tree](#included-in-the-accessibility-tree) or not.
+For `area` elements that have a `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on whether the `area` is considered [included in the accessibility tree][] or not.
 
 ## Background
 
@@ -262,7 +262,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 #### Inapplicable Example 2
 
-Not [included in the accessibility tree](#included-in-the-accessibility-tree) due to `display:none`.
+Not [included in the accessibility tree][] due to `display:none`.
 
 ```html
 <a href="http://www.w3.org/WAI" style="display: none;"><img src="#"/></a>
@@ -270,7 +270,7 @@ Not [included in the accessibility tree](#included-in-the-accessibility-tree) du
 
 #### Inapplicable Example 3
 
-Not [included in the accessibility tree](#included-in-the-accessibility-tree) due to `visibility: hidden`.
+Not [included in the accessibility tree][] due to `visibility: hidden`.
 
 ```html
 <a href="http://www.w3.org/WAI" style="visibility: hidden;">Some text</a>
@@ -278,7 +278,7 @@ Not [included in the accessibility tree](#included-in-the-accessibility-tree) du
 
 #### Inapplicable Example 4
 
-Not [included in the accessibility tree](#included-in-the-accessibility-tree) due to `aria-hidden="true"`.
+Not [included in the accessibility tree][] due to `aria-hidden="true"`.
 
 ```html
 <a aria-hidden="true" href="http://www.w3.org/WAI">
@@ -295,3 +295,4 @@ Not [included in the accessibility tree](#included-in-the-accessibility-tree) du
 ```
 
 [accessible name]: #accessible-name "Definition of accessible name"
+[included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"

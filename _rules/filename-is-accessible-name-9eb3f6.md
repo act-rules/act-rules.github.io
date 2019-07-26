@@ -19,7 +19,7 @@ authors:
 
 ## Applicability
 
-The rule applies to any HTML `input` element with a [`type`](https://www.w3.org/TR/html/sec-forms.html#dom-htmlinputelement-type) of `image`, or any HTML element with the [semantic role](#semantic-role) of `img`, that is [included in the accessibility tree](#included-in-the-accessibility-tree), and has an [accessible name][] that is equivalent to the [filename](#filename) specified in the `src` attribute. Difference in letter casing, and forward and trailing [whitespace](#whitespace) should be ignored.
+The rule applies to any HTML `input` element with a [`type`](https://www.w3.org/TR/html/sec-forms.html#dom-htmlinputelement-type) of `image`, or any HTML element with the [semantic role](#semantic-role) of `img`, that is [included in the accessibility tree][], and has an [accessible name][] that is equivalent to the [filename](#filename) specified in the `src` attribute. Difference in letter casing, and forward and trailing [whitespace](#whitespace) should be ignored.
 
 ## Expectation
 
@@ -90,7 +90,7 @@ The `img` element doesn't have the semantic role of image.
 
 #### Inapplicable Example 2
 
-The `img` element is not [included in the accessibility tree](#included-in-the-accessibility-tree).
+The `img` element is not [included in the accessibility tree][].
 
 ```html
 <img style="display:none;" />
@@ -117,3 +117,4 @@ The `img` element's `alt` attribute matches the filename but is overridden by th
 ```
 
 [accessible name]: #accessible-name "Definition of accessible name"
+[included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"

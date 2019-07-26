@@ -20,13 +20,13 @@ authors:
 The rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:
 
 - playing; or,
-- has a "play button" that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+- has a "play button" that is [visible](#visible) and [included in the accessibility tree][].
 
 **Note:** A play button is an interactive element that when activated, plays the audio.
 
 ## Expectation
 
-The auditory information of each test target is available through a text transcript. That text transcript is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree), either on the page or through a link.
+The auditory information of each test target is available through a text transcript. That text transcript is [visible](#visible) and [included in the accessibility tree][], either on the page or through a link.
 
 **Note**: A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
 
@@ -166,3 +166,5 @@ Audio with hidden controls.
 ```html
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls style="display: none;"></audio>
 ```
+
+[included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"

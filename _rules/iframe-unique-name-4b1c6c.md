@@ -20,7 +20,7 @@ authors:
 
 ## Applicability
 
-This rule applies to any set of any two or more `iframe` elements in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) that are [included in the accessibility tree](#included-in-the-accessibility-tree), and that have [matching](#matching-characters) [accessible names](#accessible-name) that do not only consist of [whitespace](#whitespace).
+This rule applies to any set of any two or more `iframe` elements in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) that are [included in the accessibility tree][], and that have [matching](#matching-characters) [accessible names](#accessible-name) that do not only consist of [whitespace](#whitespace).
 
 **Note:** The test target for this rule is the full set of `iframe` elements within the same [document tree](https://www.w3.org/TR/dom41/#document-trees) that share the same [matching](#matching-characters) [accessible name][].
 
@@ -209,7 +209,7 @@ Multiple `iframe` elements in the document having different `aria-labelledby` de
 
 #### Inapplicable Example 5
 
-`iframe` having the same `title` within a given document tree, but one of them is not [included in the accessibility tree](#included-in-the-accessibility-tree).
+`iframe` having the same `title` within a given document tree, but one of them is not [included in the accessibility tree][].
 
 ```html
 <iframe aria-hidden="true" title="List of Contributors" src="../test-assets/iframe-unique-name-4b1c6c/page-one.html">
@@ -269,7 +269,7 @@ No [accessible name][] is provided
 
 #### Inapplicable Example 10
 
-Does not apply to `iframe` elements that are not [included in the accessibility tree](#included-in-the-accessibility-tree), via `display:none`.
+Does not apply to `iframe` elements that are not [included in the accessibility tree][], via `display:none`.
 
 ```html
 <iframe style="display:none;" title="Document One" src="../test-assets/iframe-unique-name-4b1c6c/page-one.html">
@@ -280,3 +280,4 @@ Does not apply to `iframe` elements that are not [included in the accessibility 
 ```
 
 [accessible name]: #accessible-name "Definition of accessible name"
+[included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"

@@ -22,7 +22,7 @@ authors:
 
 This rule applies to any HTML `label` element or other element referenced by `aria-labelledby` that:
 
-- is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree), and
+- is either [visible](#visible) or [included in the accessibility tree][], and
 - is programmatically associated with an HTML element that has one of the listed form field [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
 
 **Note**: The list of form field roles is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
@@ -154,7 +154,7 @@ Label is included in accessibility tree, but not [visible](#visible), and does n
 
 #### Inapplicable Example 1
 
-`Label` that is neither [visible](#visible) to users, nor [included in the accessibility tree](#included-in-the-accessibility-tree).
+`Label` that is neither [visible](#visible) to users, nor [included in the accessibility tree][].
 
 ```html
 <div style="display:none">
@@ -165,7 +165,7 @@ Label is included in accessibility tree, but not [visible](#visible), and does n
 
 #### Inapplicable Example 2
 
-Programatically associated `p` element that is neither [visible](#visible) nor [included in the accessibility tree](#included-in-the-accessibility-tree).
+Programatically associated `p` element that is neither [visible](#visible) nor [included in the accessibility tree][].
 
 ```html
 <div style="display:none">
@@ -198,3 +198,5 @@ No `label` element.
 ```html
 <input id="fname" type="text" name="fname" />
 ```
+
+[included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"

@@ -20,7 +20,7 @@ authors:
 
 ## Applicability
 
-The rule applies to HTML `img` elements or any HTML element with the [semantic role](#semantic-role) of `img` that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+The rule applies to HTML `img` elements or any HTML element with the [semantic role](#semantic-role) of `img` that is [included in the accessibility tree][].
 
 ## Expectation
 
@@ -155,7 +155,7 @@ The element does not have the [semantic role](#semantic-role) of `img`
 
 #### Inapplicable Example 2
 
-The element has a [semantic role](#semantic-role) of `img`, but is not [included in the accessibility tree](#included-in-the-accessibility-tree)
+The element has a [semantic role](#semantic-role) of `img`, but is not [included in the accessibility tree][]
 
 ```html
 <div role="img" aria-hidden="true"></div>
@@ -163,7 +163,7 @@ The element has a [semantic role](#semantic-role) of `img`, but is not [included
 
 #### Inapplicable Example 3
 
-HTML `img` element is not [included in the accessibility tree](#included-in-the-accessibility-tree)
+HTML `img` element is not [included in the accessibility tree][]
 
 ```html
 <img alt="W3C logo" aria-hidden="true" />
@@ -179,3 +179,4 @@ The element is not a `img` element
 
 [accessible name]: #accessible-name "Definition of accessible name"
 [decorative]: #decorative "Definition of decorative"
+[included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"

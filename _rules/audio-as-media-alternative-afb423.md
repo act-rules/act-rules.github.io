@@ -19,13 +19,13 @@ authors:
 The rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:
 
 - playing; or,
-- has a "play button" that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+- has a "play button" that is [visible](#visible) and [included in the accessibility tree][].
 
 **Note:** A play button is an interactive element that when activated, plays the audio.
 
 ## Expectation 1
 
-The auditory information of each test target is available as text (directly or via text alternatives) that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+The auditory information of each test target is available as text (directly or via text alternatives) that is [visible](#visible) and [included in the accessibility tree][].
 
 ## Expectation 2
 
@@ -33,7 +33,7 @@ Each target element is labelled as an audio alternative for text on the page.
 
 ## Expectation 3
 
-The label (from expectation 2) is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree)
+The label (from expectation 2) is [visible](#visible) and [included in the accessibility tree][].
 
 **Note:** The term label does not refer to the `label` element.
 
@@ -171,3 +171,5 @@ An audio element that describes some of the text on the same page. The text on t
 
 <audio src="../test-assets/moon-audio/moon-speech.mp3"></audio>
 ```
+
+[included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"

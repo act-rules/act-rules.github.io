@@ -44,7 +44,7 @@ There are no major accessibility support issues known for this rule.
 
 By adding `aria-hidden="true"` to an element, content authors ensure that assistive technologies will ignore the element. This can be used to hide [decorative](#decorative) parts of a web page, such as icon fonts - that are not meant to be read by assistive technologies.
 
-A [focusable](#focusable) element with `aria-hidden="true"` is ignored as part of the reading order, but still part of the focus order, making it's state of [visible](#visible) or hidden unclear.
+A [focusable][] element with `aria-hidden="true"` is ignored as part of the reading order, but still part of the focus order, making it's state of [visible](#visible) or hidden unclear.
 
 - https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html
 - https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html
@@ -57,7 +57,7 @@ A [focusable](#focusable) element with `aria-hidden="true"` is ignored as part o
 
 #### Passed Example 1
 
-Content not [focusable](#focusable) by default.
+Content not [focusable][] by default.
 
 ```html
 <p aria-hidden="true">Some text</p>
@@ -85,7 +85,7 @@ Content taken out of sequential focus order using `tabindex`.
 
 #### Passed Example 4
 
-Content made [unfocusable](#focusable) through `disabled` attribute.
+Content made [unfocusable][focusable] through `disabled` attribute.
 
 ```html
 <input disabled aria-hidden="true" />
@@ -117,7 +117,7 @@ Content taken out of sequential focus order using `tabindex`.
 
 #### Failed Example 1
 
-[Focusable](#focusable) off screen link.
+[Focusable][] off screen link.
 
 ```html
 <div aria-hidden="true">
@@ -127,7 +127,7 @@ Content taken out of sequential focus order using `tabindex`.
 
 #### Failed Example 2
 
-[Focusable](#focusable) form field, incorrectly disabled.
+[Focusable][] form field, incorrectly disabled.
 
 ```html
 <div aria-hidden="true">
@@ -149,7 +149,7 @@ Content taken out of sequential focus order using `tabindex`.
 
 #### Failed Example 4
 
-[Focusable](#focusable) content through `tabindex`.
+[Focusable][] content through `tabindex`.
 
 ```html
 <p tabindex="0" aria-hidden="true">Some text</p>
@@ -157,7 +157,7 @@ Content taken out of sequential focus order using `tabindex`.
 
 #### Failed Example 5
 
-[Focusable](#focusable) `summary` element.
+[Focusable][] `summary` element.
 
 ```html
 <details aria-hidden="true">
@@ -193,3 +193,5 @@ Incorrect value of `aria-hidden`.
 	<p>Some text</p>
 </div>
 ```
+
+[focusable]: #focusable "Definition of focusable"

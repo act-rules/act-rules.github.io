@@ -21,7 +21,7 @@ authors:
 
 ## Applicability
 
-The rule only applies to any HTML or SVG element that is [focusable](#focusable).
+The rule only applies to any HTML or SVG element that is [focusable][].
 
 **Note**: This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
 
@@ -178,7 +178,7 @@ Keyboard trap group.
 
 #### Failed Example 3
 
-A [focusable](#focusable) element inbetween to keyboard traps.
+A [focusable][] element inbetween to keyboard traps.
 
 ```html
 <button onblur="setTimeout(() => this.focus(), 10)">Button 1</button>
@@ -259,7 +259,7 @@ Keyboard trap with help text, where the method advised doesn't work.
 
 #### Inapplicable Example 1
 
-No [focusable](#focusable) element.
+No [focusable][] element.
 
 ```html
 <h1>Page 1</h1>
@@ -288,3 +288,5 @@ Hidden element using `visibility:hidden`.
 ```html
 <a href="#" style="visibility:hidden;">Link 1</a> <button class="target" style="visibility:hidden;">Button1</button>
 ```
+
+[focusable]: #focusable "Definition of focusable"

@@ -3,7 +3,7 @@ id: 2779a5
 name: HTML Page has a title
 rule_type: atomic
 description: |
-  This rule checks that the HTML page has a title
+  This rule checks that the HTML page has a title.
 accessibility_requirements:
   wcag20:2.4.2: # Page Titled (A)
     forConformance: true

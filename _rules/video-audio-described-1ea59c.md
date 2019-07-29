@@ -3,7 +3,7 @@ id: 1ea59c
 name: Video element audio described
 rule_type: atomic
 description: |
-  This rule checks that non-streaming `video` elements have all visual information also contained in the audio
+  This rule checks that non-streaming `video` elements have all visual information also contained in the audio.
 accessibility_requirements:
 input_aspects:
   - DOM Tree

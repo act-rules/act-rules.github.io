@@ -3,7 +3,7 @@ id: 6cfa84
 name: aria-hidden with focusable content
 rule_type: atomic
 description: |
-  This rule checks that elements with an `aria-hidden` attribute do not contain focusable elements
+  This rule checks that elements with an `aria-hidden` attribute do not contain focusable elements.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true

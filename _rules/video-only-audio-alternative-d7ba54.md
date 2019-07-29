@@ -3,7 +3,7 @@ id: d7ba54
 name: video only has audio alternative
 rule_type: atomic
 description: |
-  Non-streaming `video` elements without audio must have an audio alternative
+  Non-streaming `video` elements without audio must have an audio alternative.
 accessibility_requirements:
 input_aspects:
   - DOM Tree

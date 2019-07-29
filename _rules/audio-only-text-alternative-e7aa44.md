@@ -3,7 +3,7 @@ id: e7aa44
 name: Audio only has a text alternative
 rule_type: composite
 description: |
-  This rule checks if audio only elements have a text alternative available
+  This rule checks if audio only elements have a text alternative available.
 accessibility_requirements:
   wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
     forConformance: true

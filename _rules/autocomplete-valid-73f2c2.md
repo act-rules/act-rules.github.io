@@ -3,7 +3,7 @@ id: 73f2c2
 name: Autocomplete valid
 rule_type: atomic
 description: |
-  This rule checks that the HTML `autocomplete` attribute has a correct value
+  This rule checks that the HTML `autocomplete` attribute has a correct value.
 accessibility_requirements:
   wcag21:1.3.5: # Identify Input Purpose (AA)
     forConformance: true

@@ -3,7 +3,7 @@ id: c3232f
 name: Video only has an accessible alternative
 rule_type: composite
 description: |
-  This rule checks that `video` elements without audio have an alternative available
+  This rule checks that `video` elements without audio have an alternative available.
 accessibility_requirements:
   wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
     forConformance: true

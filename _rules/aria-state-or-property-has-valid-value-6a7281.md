@@ -3,7 +3,7 @@ id: 6a7281
 name: ARIA state or property has valid value
 rule_type: atomic
 description: |
-  This rule checks that each ARIA state or property has a valid value
+  This rule checks that each ARIA state or property has a valid value.
 accessibility_requirements:
   aria11:state_prop_values:
     title: ARIA 1.1, 6.3 Values for States and Properties

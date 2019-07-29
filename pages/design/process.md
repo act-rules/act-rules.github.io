@@ -12,7 +12,7 @@ title: Process [DRAFT]
 - [Done](#Done)
 - [Rejected](#Rejected)
 
-(see workflow on the board here: https://github.com/auto-wcag/auto-wcag/projects/5)
+(see workflow on the board here: https://github.com/act-rules/act-rules.github.io/projects/5)
 
 **Note:** The steps in the process, as outlined above, are agreed upon by the ACT Rules Community Group on teleconference calls. This document however, is still work in progress.
 

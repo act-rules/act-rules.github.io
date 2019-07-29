@@ -3,7 +3,7 @@ id: bc659a
 name: Meta-refresh no delay
 rule_type: atomic
 description: |
-  This rule checks that the meta element is not used for delayed redirecting or refreshing.
+  This rule checks that the `meta` element is not used for delayed redirecting or refreshing.
 accessibility_requirements:
   wcag20:2.2.1: # Timing Adjustable (A)
     forConformance: true

@@ -29,7 +29,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- [ARIA in HTML](https://www.w3.org/TR/html-aria/#index-aria-global)
+- [ARIA in HTML](https://www.w3.org/TR/html-aria/#index-aria-global) (work in progress)
 - [WAI ARIA Supported States and Properties](http://www.w3.org/TR/wai-aria/#states_and_properties)
 - [G108: Using markup features to expose the name and role](http://www.w3.org/TR/WCAG20-TECHS/G108)
 - [WCAG 2.0 - Name, Role, Value: Understanding SC 4.1.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)

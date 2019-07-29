@@ -11,13 +11,6 @@ import {
 
 export default ({ data }) => {
 	const { rules, allRules, site } = data
-	const toListRules = rules.edges.filter(({ node }) => {
-		const { fields } = node
-		const { fastmatterAttributes } = fields
-		const { accessibility_requirements } = JSON.parse(fastmatterAttributes)
-		return !!accessibility_requirements
-	})
-
 	const updatedTitle = `Rules | ${site.siteMetadata.title}`
 	const converter = new showdown.Converter()
 
@@ -29,7 +22,7 @@ export default ({ data }) => {
 				<h1>Rules</h1>
 				{/* Table of rules */}
 				<section className="rules-listing">
-					{toListRules.map(({ node }) => {
+					{rules.edges.map(({ node }) => {
 						const { frontmatter, id, fields } = node
 						const { name, description, input_rules } = frontmatter
 						const { slug, fastmatterAttributes } = fields

@@ -244,7 +244,9 @@ export function getAccessibilityRequirements(accessibility_requirements, type = 
 		return (
 			<div className="meta">
 				<span className="heading">Accessibility Requirements Mapping</span>
-				<p>This rule is not required for conformance to WCAG at any level.</p>
+				<ul>
+					<li>This rule is not required for conformance</li>
+				</ul>
 			</div>
 		)
 	}

@@ -28,6 +28,7 @@ Each target element is not restricted to a single display orientation using CSS 
 
 ## Assumptions
 
+- The rule does not consider elements for which a particular display orientation is [essential](https://www.w3.org/TR/WCAG21/#dfn-essential).
 - The rule does not consider the existence of any control on the page that can change the orientation on demand.
 
 ## Accessibility Support

@@ -8514,14 +8514,7 @@
       "ruleId": "f51b46",
       "ruleName": "Video has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.2.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
+      "ruleAccessibilityRequirements": null
     },
     {
       "testcaseId": "7f692c29771905c5fafcd5027fb9a7603fe21680",
@@ -8531,14 +8524,7 @@
       "ruleId": "f51b46",
       "ruleName": "Video has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.2.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
+      "ruleAccessibilityRequirements": null
     },
     {
       "testcaseId": "c047ab430e796e828cff3c774653b43851bf61de",
@@ -8548,14 +8534,7 @@
       "ruleId": "f51b46",
       "ruleName": "Video has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.2.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
+      "ruleAccessibilityRequirements": null
     },
     {
       "testcaseId": "bb0c4210055fbd85d287f2f0e1320306df2dd945",
@@ -8565,14 +8544,7 @@
       "ruleId": "f51b46",
       "ruleName": "Video has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.2.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
+      "ruleAccessibilityRequirements": null
     },
     {
       "testcaseId": "3afdebdcf0049d34a1a0f12334b49a0361de1e93",
@@ -8582,14 +8554,7 @@
       "ruleId": "f51b46",
       "ruleName": "Video has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.2.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
+      "ruleAccessibilityRequirements": null
     },
     {
       "testcaseId": "30f35a962e59ec953a1c7e39f017ccf1018590de",
@@ -8599,14 +8564,7 @@
       "ruleId": "f51b46",
       "ruleName": "Video has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.2.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
+      "ruleAccessibilityRequirements": null
     },
     {
       "testcaseId": "8cafa6ccfbb2cf2c67af6ee81028801d51c78e05",
@@ -8616,14 +8574,7 @@
       "ruleId": "f51b46",
       "ruleName": "Video has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.2.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
+      "ruleAccessibilityRequirements": null
     },
     {
       "testcaseId": "bca6f98517b2b8883563f5c3fdf3f1b65748e3b7",
@@ -8633,14 +8584,7 @@
       "ruleId": "f51b46",
       "ruleName": "Video has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.2.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
+      "ruleAccessibilityRequirements": null
     },
     {
       "testcaseId": "3858fe68d8296574aca8bf33fb87cb776a65f304",

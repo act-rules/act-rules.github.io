@@ -3,7 +3,7 @@ id: e086e5
 name: Form field has accessible name
 rule_type: atomic
 description: |
-  Each form field element has an accessible name
+  This rule checks that each form field element has an accessible name
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true

@@ -3,7 +3,7 @@ id: f51b46
 name: Video has captions
 rule_type: atomic
 description: |
-  Captions are available for audio information in non-streaming `video` elements.
+  This rule checks that captions are available for audio information in non-streaming `video` elements.
 accessibility_requirements:
 input_aspects:
   - DOM Tree

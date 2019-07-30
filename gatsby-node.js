@@ -13,7 +13,7 @@ exports.onPreBootstrap = async () => {
 	/**
 	 * copy `earl-context.json` so it can be available in URL - `https://act-rules.github.io/earl-context.json`
 	 */
-	await copy('./build/testcases/wcag-em-report-tool-mappings/earl-context.json', 'public/earl-context.json')
+	await copy('./build/earl-context.json', 'public/earl-context.json')
 }
 exports.onCreateNode = onCreateNode
 exports.createPages = createPages

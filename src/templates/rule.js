@@ -6,6 +6,7 @@ import {
 	getChangelog,
 	getChangelogLink,
 	getGlossaryUsed,
+	getRuleUsageInRules,
 	getGlossaryUsedLink,
 	getRuleType,
 	getAccessibilityRequirements,
@@ -55,6 +56,7 @@ export default ({ data }) => {
 							<span> {getDateTimeFromUnixTimestamp(ruleChangelog[0].date)}</span>
 						</li>
 						<li>{getAccessibilityRequirements(accessibility_requirements)}</li>
+						<li>{getRuleUsageInRules(ruleId)}</li>
 						<li>{getInputAspects(frontmatter.input_aspects, ruleFormatInputAspects)}</li>
 						<li>{getInputRulesForRule(frontmatter.input_rules, allRules.edges, true)}</li>
 					</ul>

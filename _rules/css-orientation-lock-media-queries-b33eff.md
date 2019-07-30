@@ -47,7 +47,30 @@ Each target element is not restricted to a single display orientation using CSS 
 
 #### Passed Example 1
 
-A page, where CSS media query styles negate orientation lock, and therefore does not restrict its view or operation.
+A page, where CSS media query styles does not lock orientation. The CSS rotate transform-function value is a multiple of 180 degrees.
+
+```html
+<html lang="en">
+  <head>
+    <style>
+      @media (orientation: portrait) {
+        body {
+          transform: rotate(-360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      Page Content
+    </main>
+  </body>
+</html>
+```
+
+#### Passed Example 2
+
+A page, where CSS media query styles does not lock orientation. The CSS rotate transform-function value from the stylesheet is overridden to a value of 180 degrees.
 
 ```html
 <html lang="en">
@@ -57,12 +80,12 @@ A page, where CSS media query styles negate orientation lock, and therefore does
     -->
     <link rel="stylesheet" href="../test-assets/css-orientation-lock-media-queries-b33eff/html-css-lock.css">
     <!--
-      2. The below style negates the orientation lock
+      2. Override the value from the stylesheet
     -->
     <style>
       @media (orientation: portrait) {
-        body {
-          transform: rotate(-90deg);
+        html {
+          transform: rotate(180deg);
         }
       }
     </style>

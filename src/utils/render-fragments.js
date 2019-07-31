@@ -4,6 +4,8 @@ import { Link } from 'gatsby'
 import glossaryUsages from './../../_data/glossary-usages.json'
 import implementationMetrics from './../../_data/implementation-metrics.json'
 
+import rulesUsages from './../../_data/rules-usages.json'
+
 export const getImplementations = slug => {
 	const ruleId = slug.replace('rules/', '')
 	const metrics = implementationMetrics[ruleId]
@@ -487,6 +489,30 @@ export function getGlossaryUsageInRules(usages) {
 		</div>
 	)
 }
+
+export function getRuleUsageInRules(ruleId) {
+	const usages = rulesUsages[ruleId]
+	if (!usages) {
+		return null
+	}
+	return (
+		<div className="side-notes">
+			<div className="meta">
+				<span className="heading">Used in rules</span>
+				<ul>
+					{usages.map(usage => (
+					<li key={usage.slug}>
+						<Link key={usage.slug} to={usage.slug}>
+							{usage.name}
+						</Link>
+					</li>
+				))}
+				</ul>
+			</div>
+		</div>
+	)
+}
+
 
 /**
  * Get formatted date from unix timestamp

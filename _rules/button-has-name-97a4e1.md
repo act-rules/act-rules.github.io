@@ -26,7 +26,7 @@ The rule applies to elements that are [included in the accessibility tree](#incl
 
 Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
 
-**Note**: `input` elements of type `submit` and `reset` can get their accessible name from a [default text](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset), as well as from a `value` or other attribute.
+**Note**: `input` elements of type `submit` and `reset` can get their accessible name from a [default text](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset) (work in progress), as well as from a `value` or other attribute.
 
 ## Assumptions
 

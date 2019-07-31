@@ -114,6 +114,7 @@
 		"gatsby-transformer-sharp": "^2.2.3",
 		"gfm-code-blocks": "^1.0.0",
 		"globby": "^9.2.0",
+		"html-validator": "^4.1.1",
 		"is-url": "^1.2.4",
 		"jsonld": "^1.6.2",
 		"make-dir": "^2.1.0",

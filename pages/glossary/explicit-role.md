@@ -3,9 +3,9 @@ title: Explicit Semantic Role
 key: explicit-role
 ---
 
-The explicit semantic role is the [semantic role](#semantic-role) of an element set by its [role attribute](https://www.w3.org/TR/html/dom.html#aria-role-attribute).
+The explicit semantic role is the [semantic role](#semantic-role) of an element set by its [role attribute](https://www.w3.org/TR/role-attribute/).
 
-The [role attribute](https://www.w3.org/TR/html/dom.html#aria-role-attribute) takes a list of tokens. The explicit semantic role is the first valid role in this list. If none of the tokens are valid, the [implicit semantic role](#implicit-role) will be used instead.
+The [role attribute](https://www.w3.org/TR/role-attribute/) takes a list of tokens. The explicit semantic role is the first valid role in this list. If none of the tokens are valid, the [implicit semantic role](#implicit-role) will be used instead.
 
 Non-abstract roles defined in the following specifications are considered valid:
 

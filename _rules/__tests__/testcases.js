@@ -1,11 +1,12 @@
 const codeBlocks = require('gfm-code-blocks')
 const validator = require('html-validator')
+const prettyJson = require('prettyjson')
 const describeRule = require('../../test-utils/describe-rule')
 
 describeRule('testcases', ruleData => {
   const { frontmatter, body } = ruleData
-  const { id } = frontmatter
-  
+  const { id, name } = frontmatter
+
   /**
    * get test case code snippets of the rule
    */
@@ -31,14 +32,13 @@ describeRule('testcases', ruleData => {
     const errorMessages = messages.filter(({ type }) => type === `error`)
 
     if (errorMessages.length) {
-      const output = errorMessages.map(({ message }) => {
-        return {
-          "Rule Id": id,
-          "Snippet": snippet,
-          "Message": message
-        }
-      })
-      console.table(output);
+      const output = {
+        "Rule Id": id,
+        "Rule Name": name,
+        "Snippet": snippet,
+        "Errors": errorMessages.map(({message}) => message),
+      };
+      console.log(prettyJson.render(output));
     }
     expect(errorMessages.length).toBe(0)
   })

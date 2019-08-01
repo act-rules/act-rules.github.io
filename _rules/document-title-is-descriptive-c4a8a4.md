@@ -22,7 +22,7 @@ authors:
 This rule applies to the first HTML `title` element that
 
 - is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of a [document element](https://dom.spec.whatwg.org/#document-element) that is an HTML `html` element, and
-- contains [children](https://www.w3.org/TR/dom/#concept-tree-child) that are [text nodes](https://www.w3.org/TR/dom/#text) that are not only [whitespace](#whitespace).
+- contains [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://www.w3.org/TR/dom/#text) that are not only [whitespace](#whitespace).
 
 ## Expectation
 

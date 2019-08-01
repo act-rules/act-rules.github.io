@@ -25,10 +25,10 @@ This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document
 
 ## Expectations
 
-For each [section of repeated content](#repeated-content) within the test target, either the last [focusable](#focusable) element before it, or the first [focusable](#focusable) element inside it has a [semantic role](#semantic-role) of `link` and:
+For each [section of repeated content](#repeated-content) within the test target, either the last element in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) which is both [focusable](#focusable) element and before this [section of repeated content](#repeated-content), or the first element in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) which is both [focusable](#focusable) element and inside this [section of repeated content](#repeated-content) has a [semantic role](#semantic-role) of `link` and:
 - is [included in the accessibility tree](#included-in-the-accessibility-tree); and
 - is [visible](#visible) when [focused](#focused); and
-- when activated, moves focus immediately after this [section of content](#section-of-content); and
+- when activated, moves focus to the first element in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) that is both [focusable](#focusable) and after this [section of content](#section-of-content); and
 - has an [accessible name](#accessible-name) that communicates that it skips this [section of content](#section-of-content).
 
 ## Assumptions

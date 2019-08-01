@@ -24,7 +24,7 @@ This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document
 
 ## Expectations
 
-Each [section of content](#section-of-content) in the test target either starts with or is preceded by an element with a [semantic role](#semantic-role) of `heading` which is [included in the accessibility tree](#included-in-the-accessibility-tree).
+For each [section of content](#section-of-content) in the test target, the first [text node](https://dom.spec.whatwg.org/#text) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) which is inside this [section of content](#section-of-content) is a descendant in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) of an element with a [semantic role](#semantic-role) of `heading` which is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 **Note**: Neither this rule, nor technique [H69: Providing heading elements at the beginning of each section of content](https://www.w3.org/WAI/WCAG21/Techniques/html/H69), expects the heading to accurately describe its corresponding section.
 

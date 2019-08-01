@@ -15,11 +15,11 @@ authors:
 
 ## Applicability
 
-This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element.
+This rule applies to any [document](#https://dom.spec.whatwg.org/#concept-document) where the [document element](#https://dom.spec.whatwg.org/#document-element) is an HTML `html` element.
 
 ## Expectations
 
-The [document element](https://www.w3.org/TR/dom/#document-element) has at least one [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) with a [semantic role][#semantic-role] of [`main`](https://www.w3.org/TR/wai-aria-1.1/#main).
+The [document element](https://dom.spec.whatwg.org/#document-element) has at least one [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) with a [semantic role][#semantic-role] of [`main`](https://www.w3.org/TR/wai-aria-1.1/#main).
 
 **Note**: Authors SHOULD not use more than one element with a [semantic role](#semantic-role) of [`main`](https://www.w3.org/TR/wai-aria-1.1/#main). This is, however, a not a requirement for this rule nor for technique [ARIA11: Using ARIA landmarks to identify regions of a page](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11).
 
@@ -42,6 +42,73 @@ _There are no major accessibility support issues known for this rule._
 
 ### Passed
 
+#### Passed Example 1
+
+This [document](#https://dom.spec.whatwg.org/#concept-document) has a one element with a role of `main`.
+
+```html
+<html>
+	<h1>Navigation</h1>
+	<!-- list of links to other pages of the same site -->
+	<div role="main">
+		<h1>Today's story</h1>
+		<!-- text about the story of the day -->
+	</div>
+</html>
+```
+
+#### Passed Example 2
+
+This [document](#https://dom.spec.whatwg.org/#concept-document) has several elements with a role of `main`.
+
+```html
+<html>
+	<div role="main" aria-label="Translation by C. H. Brewitt-Taylor">
+		The empire, long divided, must unite; long united, must divide. Thus it has ever been.
+	</div>
+	<div role="main" aria-label="Translation by Yu Sumei">
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+	</div>
+</html>
+```
+
+#### Passed Example 3
+
+This [document](#https://dom.spec.whatwg.org/#concept-document) has a one element with a role of `main`. The rule does not check whether the role is correctly used.
+
+```html
+<html>
+	<div role="main">
+		<h1>Navigation</h1>
+		<!-- list of links to other pages of the same site -->
+	</div>
+	<h1>Today's story</h1>
+	<!-- text about the story of the day -->
+</html>
+```
+
 ### Failed
 
+#### Failed Example 1
+
+This [document](#https://dom.spec.whatwg.org/#concept-document) has no element with a role of `main`.
+
+```html
+<html>
+	<h1>Today's story</h1>
+	<!-- text about the story of the day -->
+</html>
+```
+
 ### Inapplicable
+
+#### Inapplicable Example 1
+
+The [document element](#https://dom.spec.whatwg.org/#document-element) of this [document](#https://dom.spec.whatwg.org/#concept-document) is not an `html` element.
+
+```svg
+<svg xmlns="http://www.w3.org/2000/svg">
+  <title>This is an SVG</title>
+</svg>
+```
+

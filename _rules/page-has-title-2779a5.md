@@ -22,19 +22,19 @@ authors:
 
 ## Applicability
 
-The rule applies to any page where the [document element](https://www.w3.org/TR/dom/#document-element) is an `html` element, and where the page is not embedded in another page.
+The rule applies to any page where the [document element](https://dom.spec.whatwg.org/#document-element) is an `html` element, and where the page is not embedded in another page.
 
 **Note**: Pages may be embedded inside other pages through elements such as `iframe` and `object` elements.
 
 ## Expectation 1
 
-The [document element](https://www.w3.org/TR/dom/#document-element) has at least one [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) that is an HTML `title` element.
+The [document element](https://dom.spec.whatwg.org/#document-element) has at least one [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) that is an HTML `title` element.
 
 **Note**: The `title` element exists in other namespaces such as SVG. These are not HTML `title` elements and should be ignored for this rule.
 
 ## Expectation 2
 
-The first HTML `title` element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the [document element](https://www.w3.org/TR/dom/#document-element) has [children](https://www.w3.org/TR/dom/#concept-tree-child) that are [text nodes](https://www.w3.org/TR/dom/#text) that are not only [whitespace](#whitespace).
+The first HTML `title` element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the [document element](https://dom.spec.whatwg.org/#document-element) has [children](https://www.w3.org/TR/dom/#concept-tree-child) that are [text nodes](https://www.w3.org/TR/dom/#text) that are not only [whitespace](#whitespace).
 
 ## Assumptions
 

@@ -26,7 +26,7 @@ This rule applies to the first HTML `title` element that
 
 ## Expectation
 
-The target element describes the topic or purpose of the overall content of the [document](https://www.w3.org/TR/dom/#concept-document).
+The target element describes the topic or purpose of the overall content of the [document](https://dom.spec.whatwg.org/#concept-document).
 
 ## Assumptions
 
@@ -34,7 +34,7 @@ _There are no assumptions for this rule._
 
 ## Accessibility Support
 
-- This rule assumes that browsers only recognize the first `title` element if multiple `title` elements are present in the [document](https://www.w3.org/TR/dom/#concept-document). Testing shows that this in general is the case. Therefore the scope of this rule is limited to only checking the first `title` element in a document.
+- This rule assumes that browsers only recognize the first `title` element if multiple `title` elements are present in the [document](https://dom.spec.whatwg.org/#concept-document). Testing shows that this in general is the case. Therefore the scope of this rule is limited to only checking the first `title` element in a document.
 
 ## Background
 

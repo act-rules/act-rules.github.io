@@ -20,14 +20,14 @@ authors:
 
 ## Applicability
 
-This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element.
+This rule applies to any [document](#https://dom.spec.whatwg.org/#concept-document) where the [document element](#https://dom.spec.whatwg.org/#document-element) is an HTML `html` element.
 
 ## Expectation 1
 
 There is an [initial segment](#initial-segment) of the [focusable](#focusable) elements (in focus order) such that each element in that [initial segment](#initial-segment):
 - is [visible](#visible) when [focused](#focused); and
 - has a [semantic role](#semantic-role) of link; and
-- when activated, moves focus to a [section of content](#section-of-content) within the same [document](#https://www.w3.org/TR/dom/#concept-document); and
+- when activated, moves focus to a [section of content](#section-of-content) within the same [document](#https://dom.spec.whatwg.org/#concept-document); and
 - has an [accessible name](#accessible-name) that communicates that it links to that specific [section of content](#section-of-content).
 
 **Note**: There is no requirement on how many [focusable](#focusable) elements are part of that [initial segment](#initial-segment), nor any requirement to provide a way to determine (programatically or not) where that [initial segment](#initial-segment) stops. Technique [G124: Adding links at the top of the page to each area of the content](https://www.w3.org/WAI/WCAG21/Techniques/general/G124), and this rule, only require that such an set exists.
@@ -36,7 +36,7 @@ There is an [initial segment](#initial-segment) of the [focusable](#focusable) e
 
 ## Expectation 2
 
-Each [section of content](#section-of-content) in the [document](#https://www.w3.org/TR/dom/#concept-document) is the target of exactly one link from the set of [focusable](#focusable) elements that passes Expectation 1.
+Each [section of content](#section-of-content) in the [document](#https://dom.spec.whatwg.org/#concept-document) is the target of exactly one link from the set of [focusable](#focusable) elements that passes Expectation 1.
 
 ## Assumptions
 
@@ -56,6 +56,95 @@ _There are no major accessibility support issues known for this rule._
 
 ### Passed
 
+#### Passed Example 1
+
+```html
+<html>
+
+</html>
+```
+
+#### Passed Example 2
+
+```html
+<html>
+
+</html>
+```
+
+#### Passed Example 3
+
+```html
+<html>
+
+</html>
+```
+
 ### Failed
 
+#### Failed Example 1
+
+```html
+<html>
+
+</html>
+```
+
+#### Failed Example 2
+
+```html
+<html>
+
+</html>
+```
+
+#### Failed Example 3
+
+```html
+<html>
+
+</html>
+```
+
+#### Failed Example 4
+
+```html
+<html>
+
+</html>
+```
+
 ### Inapplicable
+
+#### Inapplicable Example 1
+
+```html
+<html>
+
+</html>
+```
+
+#### Inapplicable Example 2
+
+```html
+<html>
+
+</html>
+```
+
+#### Inapplicable Example 3
+
+```html
+<html>
+
+</html>
+```
+
+#### Inapplicable Example 4
+
+```html
+<html>
+
+</html>
+```
+

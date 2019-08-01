@@ -24,7 +24,7 @@ authors:
 
 ## Applicability
 
-This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element.
+This rule applies to any [document](#https://dom.spec.whatwg.org/#concept-document) where the [document element](#https://dom.spec.whatwg.org/#document-element) is an HTML `html` element.
 
 ## Expectation
 
@@ -62,6 +62,95 @@ Techniques and solutions that identify blocks of content are perfectly valid way
 
 ### Passed
 
+#### Passed Example 1
+
+```html
+<html>
+
+</html>
+```
+
+#### Passed Example 2
+
+```html
+<html>
+
+</html>
+```
+
+#### Passed Example 3
+
+```html
+<html>
+
+</html>
+```
+
 ### Failed
 
+#### Failed Example 1
+
+```html
+<html>
+
+</html>
+```
+
+#### Failed Example 2
+
+```html
+<html>
+
+</html>
+```
+
+#### Failed Example 3
+
+```html
+<html>
+
+</html>
+```
+
+#### Failed Example 4
+
+```html
+<html>
+
+</html>
+```
+
 ### Inapplicable
+
+#### Inapplicable Example 1
+
+```html
+<html>
+
+</html>
+```
+
+#### Inapplicable Example 2
+
+```html
+<html>
+
+</html>
+```
+
+#### Inapplicable Example 3
+
+```html
+<html>
+
+</html>
+```
+
+#### Inapplicable Example 4
+
+```html
+<html>
+
+</html>
+```
+

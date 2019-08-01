@@ -25,7 +25,7 @@ Any `id` attribute which is not the empty string (""), specified on an HTML or S
 
 ## Expectation
 
-The value of the attribute is unique across all other `id` attributes specified on HTML or SVG elements that exist within the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the element on which the applicable `id` attribute is specified.
+The value of the attribute is unique across all other `id` attributes specified on HTML or SVG elements that exist within the same [document tree](https://dom.spec.whatwg.org/#document-trees) or [shadow tree](https://dom.spec.whatwg.org/#shadow-trees) as the element on which the applicable `id` attribute is specified.
 
 ## Assumptions
 

@@ -24,7 +24,9 @@ This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document
 
 ## Expectations
 
-For each [section of repeated content](#repeated-content) in the test target, there exists some [user interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components) that allows to toggle both [visibility](#visible) and [inclusion in the accessibility tree](#included-in-the-accessibility-tree) of this [section of repeated content](#repeated-content).
+For each [section of repeated content](#repeated-content) in the test target, there exists some [user interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components) which:
+- is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree); and 
+- allows to toggle both [visibility](#visible) and [inclusion in the accessibility tree](#included-in-the-accessibility-tree) of this [section of repeated content](#repeated-content).
 
 ## Assumptions
 

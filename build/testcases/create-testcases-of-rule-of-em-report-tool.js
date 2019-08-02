@@ -55,7 +55,7 @@ const createTestcasesOfRuleOfEmReportTool = async options => {
 	const json = {
 		'@graph': [
 			{
-				"@context": graphContext,
+				'@context': graphContext,
 				...graphAdditionalMeta,
 				title,
 				evaluationScope: {

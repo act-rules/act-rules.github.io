@@ -19,11 +19,9 @@ const init = async () => {
 				slug: `rules/${ruleId}`,
 			}
 
-			inputRules.forEach(key => 
-				rulesUsages[key] = rulesUsages[key] ? rulesUsages[key].concat(usage) : [usage]
-				)
+			inputRules.forEach(key => (rulesUsages[key] = rulesUsages[key] ? rulesUsages[key].concat(usage) : [usage]))
 		}
-		})
+	})
 
 	/**
 	 * Create `_data/rules-usages.json`

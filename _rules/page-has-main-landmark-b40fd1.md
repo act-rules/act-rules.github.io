@@ -49,12 +49,15 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has a one elemen
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title>Amazing stories</title></head>
-  <h1>Navigation</h1>
-  <!-- list of links to other pages of the same site -->
+  <head><title>The Three Kingdoms (translation by Yu Sumei)</title></head>
+  <h1>Contents</h1>
+  <!-- list of links to each chapter -->
   <div role="main">
-    <h1>Today's story</h1>
-    <!-- text about the story of the day -->
+    <h1>Chapter one</h1>
+    Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+    <!-- rest of the text of Chapter one -->
+    <h1>Chapter two</h1>
+    <!-- text of the next chapter -->
   </div>
 </html>
 ```
@@ -83,13 +86,16 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has a one elemen
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title>Amazing stories</title></head>
+  <head><title>The Three Kingdoms (translation by Yu Sumei)</title></head>
   <div role="main">
-    <h1>Navigation</h1>
-    <!-- list of links to other pages of the same site -->
+    <h1>Contents</h1>
+    <!-- list of links to each chapter -->
   </div>
-  <h1>Today's story</h1>
-  <!-- text about the story of the day -->
+  <h1>Chapter one</h1>
+  Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+  <!-- rest of the text of Chapter one -->
+  <h1>Chapter two</h1>
+  <!-- text of the next chapter -->
 </html>
 ```
 
@@ -102,9 +108,12 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has no element w
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title>Amazing stories</title></head>
-  <h1>Today's story</h1>
-  <!-- text about the story of the day -->
+  <head><title>The Three Kingdoms (translation by Yu Sumei)</title></head>
+  <h1>Chapter one</h1>
+  Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+  <!-- rest of the text of Chapter one -->
+  <h1>Chapter two</h1>
+  <!-- text of the next chapter -->
 </html>
 ```
 

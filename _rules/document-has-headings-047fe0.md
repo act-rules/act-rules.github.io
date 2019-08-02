@@ -53,7 +53,7 @@ _There are no major accessibility support issues known for this rule._
 
 This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section of content](#section-of-content) for the navigation links, and one for the actual text. Each starts with a `h1` heading.
 
-**Note**: In this document, the [sections of content](#section-of-content) are defined solely by the heading at their start.
+**Note**: In this [document](#https://dom.spec.whatwg.org/#concept-document), the [sections of content](#section-of-content) are defined solely by the heading at their start.
 
 ```html
 <!DOCTYPE html>
@@ -75,9 +75,9 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section
 
 #### Passed Example 2
 
-In this [document](#https://dom.spec.whatwg.org/#concept-document), headings are not the first elements of each [section of content](#section-of-content), but they are the first with [text node](https://dom.spec.whatwg.org/#text) inside. The [text nodes](https://dom.spec.whatwg.org/#text) are not immediate children of the headings (for example because many frameworks will add a lot of extra elements around their components).
+In this [document](#https://dom.spec.whatwg.org/#concept-document), headings are not the first elements of each [section of content](#section-of-content), but they are the first with an [accessible name](#accessible-name). The [accessible name](#accessible name) of the second heading is inherited from its content (a typical situation with because many frameworks that add a lot of extra elements around their components).
 
-**Note**: In this document, the [sections of content](#section-of-content) are defined by the `section` elements.
+**Note**: In this [document](#https://dom.spec.whatwg.org/#concept-document), the [sections of content](#section-of-content) are defined by the `section` elements.
 
 ```html
 <!DOCTYPE html>
@@ -102,7 +102,7 @@ In this [document](#https://dom.spec.whatwg.org/#concept-document), headings are
 
 This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section of content](#section-of-content) for the navigation links, and one for the actual text. Each starts with a `div` with a role of `heading`.
 
-**Note**: In this document, the [sections of content](#section-of-content) are defined by the `section` elements.
+**Note**: In this [document](#https://dom.spec.whatwg.org/#concept-document), the [sections of content](#section-of-content) are defined by the `section` elements.
 
 ```html
 <!DOCTYPE html>
@@ -123,7 +123,9 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section
 
 #### Passed Example 4
 
-**Note**: In this document, the [sections of content](#section-of-content) are defined by the `section` elements.
+This [document](#https://dom.spec.whatwg.org/#concept-document) is using image as heading, the [accessible name](#accessible-name) of the image is also the [accessible name](#accessible-name) of the heading.
+
+**Note**: In this [document](#https://dom.spec.whatwg.org/#concept-document), the [sections of content](#section-of-content) are defined by the `section` elements.
 
 ```html
 <!DOCTYPE html>
@@ -146,7 +148,7 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section
 
 This rule checks neither nesting nor pertinence of headings.
 
-**Note**: In this document, the [sections of content](#section-of-content) are defined solely by the heading at their start.
+**Note**: In this [document](#https://dom.spec.whatwg.org/#concept-document), the [sections of content](#section-of-content) are defined solely by the heading at their start.
 
 ```html
 <!DOCTYPE html>

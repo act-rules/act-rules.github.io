@@ -30,7 +30,7 @@ This rule applies to any [document](#https://dom.spec.whatwg.org/#concept-docume
 
 For each test target, the outcome of at least one of the following rules is passed:
 - [Document has headings](https://act-rules.github.io/rules/047fe0); or
-- [HTML page has a main landmark](https://act-rules.github.io/rules/b40fd1); or
+- [Document has a main landmark](https://act-rules.github.io/rules/b40fd1); or
 - [Link for skipping block of content](https://act-rules.github.io/rules/7b576d); or
 - [Block of content is expandable and collapsible](https://act-rules.github.io/rules/cefbef); or
 - [First focusable element is link to main content](https://act-rules.github.io/rules/8a213c); or

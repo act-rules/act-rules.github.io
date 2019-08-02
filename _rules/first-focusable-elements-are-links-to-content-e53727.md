@@ -63,7 +63,9 @@ _There are no major accessibility support issues known for this rule._
 <!DOCTYPE html>
 <html lang="en">
   <head><title></title></html>
-
+  <body>
+  
+  </body>
 </html>
 ```
 
@@ -73,7 +75,9 @@ _There are no major accessibility support issues known for this rule._
 <!DOCTYPE html>
 <html lang="en">
   <head><title></title></html>
+  <body>
 
+  </body>
 </html>
 ```
 
@@ -83,7 +87,9 @@ _There are no major accessibility support issues known for this rule._
 <!DOCTYPE html>
 <html lang="en">
   <head><title></title></html>
-
+  <body>
+  
+  </body>
 </html>
 ```
 
@@ -95,7 +101,9 @@ _There are no major accessibility support issues known for this rule._
 <!DOCTYPE html>
 <html lang="en">
   <head><title></title></html>
-
+  <body>
+  
+  </body>
 </html>
 ```
 
@@ -105,7 +113,9 @@ _There are no major accessibility support issues known for this rule._
 <!DOCTYPE html>
 <html lang="en">
   <head><title></title></html>
-
+  <body>
+  
+  </body>
 </html>
 ```
 
@@ -115,7 +125,9 @@ _There are no major accessibility support issues known for this rule._
 <!DOCTYPE html>
 <html lang="en">
   <head><title></title></html>
-
+  <body>
+  
+  </body>
 </html>
 ```
 
@@ -125,7 +137,9 @@ _There are no major accessibility support issues known for this rule._
 <!DOCTYPE html>
 <html lang="en">
   <head><title></title></html>
-
+  <body>
+  
+  </body>
 </html>
 ```
 

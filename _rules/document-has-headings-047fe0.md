@@ -54,11 +54,13 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section
 <!DOCTYPE html>
 <html lang="en">
   <head><title>The Three Kingdoms (translation by Yu Sumei)</title></head>
-  <h1>Chapter one</h1>
-  Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
-  <!-- rest of the text of Chapter one -->
-  <h1>Chapter two</h1>
-  <!-- text of the next chapter -->
+    <body>
+    <h1>Chapter one</h1>
+    Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+    <!-- rest of the text of Chapter one -->
+    <h1>Chapter two</h1>
+    <!-- text of the next chapter -->
+  </body>
 </html>
 ```
 
@@ -68,7 +70,9 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section
 <!DOCTYPE html>
 <html lang="en">
   <head><title></title></html>
+  <body>
 
+  </body>
 </html>
 ```
 
@@ -78,7 +82,9 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section
 <!DOCTYPE html>
 <html lang="en">
   <head><title></title></html>
-
+  <body>
+  
+  </body>
 </html>
 ```
 
@@ -90,7 +96,9 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section
 <!DOCTYPE html>
 <html lang="en">
   <head><title></title></html>
-
+  <body>
+  
+  </body>
 </html>
 ```
 
@@ -100,7 +108,9 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section
 <!DOCTYPE html>
 <html lang="en">
   <head><title></title></html>
-
+  <body>
+  
+  </body>
 </html>
 ```
 
@@ -110,7 +120,9 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section
 <!DOCTYPE html>
 <html lang="en">
   <head><title></title></html>
-
+  <body>
+  
+  </body>
 </html>
 ```
 
@@ -120,7 +132,9 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section
 <!DOCTYPE html>
 <html lang="en">
   <head><title></title></html>
-
+  <body>
+  
+  </body>
 </html>
 ```
 

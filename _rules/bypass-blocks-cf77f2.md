@@ -68,7 +68,9 @@ Techniques and solutions that identify blocks of content are perfectly valid way
 <!DOCTYPE html>
 <html lang="en">
   <head><title></title></html>
-
+  <body>
+  
+  </body>
 </html>
 ```
 
@@ -78,7 +80,9 @@ Techniques and solutions that identify blocks of content are perfectly valid way
 <!DOCTYPE html>
 <html lang="en">
   <head><title></title></html>
+  <body>
 
+  </body>
 </html>
 ```
 
@@ -88,7 +92,9 @@ Techniques and solutions that identify blocks of content are perfectly valid way
 <!DOCTYPE html>
 <html lang="en">
   <head><title></title></html>
-
+  <body>
+  
+  </body>
 </html>
 ```
 
@@ -100,7 +106,9 @@ Techniques and solutions that identify blocks of content are perfectly valid way
 <!DOCTYPE html>
 <html lang="en">
   <head><title></title></html>
-
+  <body>
+  
+  </body>
 </html>
 ```
 
@@ -110,7 +118,9 @@ Techniques and solutions that identify blocks of content are perfectly valid way
 <!DOCTYPE html>
 <html lang="en">
   <head><title></title></html>
-
+  <body>
+  
+  </body>
 </html>
 ```
 
@@ -120,7 +130,9 @@ Techniques and solutions that identify blocks of content are perfectly valid way
 <!DOCTYPE html>
 <html lang="en">
   <head><title></title></html>
-
+  <body>
+  
+  </body>
 </html>
 ```
 
@@ -130,7 +142,9 @@ Techniques and solutions that identify blocks of content are perfectly valid way
 <!DOCTYPE html>
 <html lang="en">
   <head><title></title></html>
-
+  <body>
+  
+  </body>
 </html>
 ```
 

@@ -65,7 +65,9 @@ Techniques and solutions that identify blocks of content are perfectly valid way
 #### Passed Example 1
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
@@ -73,7 +75,9 @@ Techniques and solutions that identify blocks of content are perfectly valid way
 #### Passed Example 2
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
@@ -81,7 +85,9 @@ Techniques and solutions that identify blocks of content are perfectly valid way
 #### Passed Example 3
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
@@ -91,7 +97,9 @@ Techniques and solutions that identify blocks of content are perfectly valid way
 #### Failed Example 1
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
@@ -99,7 +107,9 @@ Techniques and solutions that identify blocks of content are perfectly valid way
 #### Failed Example 2
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
@@ -107,7 +117,9 @@ Techniques and solutions that identify blocks of content are perfectly valid way
 #### Failed Example 3
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
@@ -115,7 +127,9 @@ Techniques and solutions that identify blocks of content are perfectly valid way
 #### Failed Example 4
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
@@ -125,7 +139,9 @@ Techniques and solutions that identify blocks of content are perfectly valid way
 #### Inapplicable Example 1
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
@@ -133,7 +149,9 @@ Techniques and solutions that identify blocks of content are perfectly valid way
 #### Inapplicable Example 2
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
@@ -141,7 +159,9 @@ Techniques and solutions that identify blocks of content are perfectly valid way
 #### Inapplicable Example 3
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
@@ -149,8 +169,9 @@ Techniques and solutions that identify blocks of content are perfectly valid way
 #### Inapplicable Example 4
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
-

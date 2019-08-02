@@ -53,7 +53,9 @@ _There are no major accessibility support issues known for this rule._
 #### Passed Example 1
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
@@ -61,7 +63,9 @@ _There are no major accessibility support issues known for this rule._
 #### Passed Example 2
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
@@ -69,7 +73,9 @@ _There are no major accessibility support issues known for this rule._
 #### Passed Example 3
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
@@ -79,7 +85,9 @@ _There are no major accessibility support issues known for this rule._
 #### Failed Example 1
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
@@ -87,7 +95,9 @@ _There are no major accessibility support issues known for this rule._
 #### Failed Example 2
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
@@ -95,7 +105,9 @@ _There are no major accessibility support issues known for this rule._
 #### Failed Example 3
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
@@ -103,7 +115,9 @@ _There are no major accessibility support issues known for this rule._
 #### Failed Example 4
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
@@ -113,7 +127,9 @@ _There are no major accessibility support issues known for this rule._
 #### Inapplicable Example 1
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
@@ -121,7 +137,9 @@ _There are no major accessibility support issues known for this rule._
 #### Inapplicable Example 2
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
@@ -129,7 +147,9 @@ _There are no major accessibility support issues known for this rule._
 #### Inapplicable Example 3
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
@@ -137,8 +157,9 @@ _There are no major accessibility support issues known for this rule._
 #### Inapplicable Example 4
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></html>
 
 </html>
 ```
-

@@ -47,7 +47,9 @@ _There are no major accessibility support issues known for this rule._
 This [document](#https://dom.spec.whatwg.org/#concept-document) has a one element with a role of `main`.
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Amazing stories</title></head>
   <h1>Navigation</h1>
   <!-- list of links to other pages of the same site -->
   <div role="main">
@@ -98,7 +100,9 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has a one elemen
 This [document](#https://dom.spec.whatwg.org/#concept-document) has no element with a role of `main`.
 
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Amazing stories</title></head>
   <h1>Today's story</h1>
   <!-- text about the story of the day -->
 </html>

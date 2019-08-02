@@ -501,18 +501,17 @@ export function getRuleUsageInRules(ruleId) {
 				<span className="heading">Used in rules</span>
 				<ul>
 					{usages.map(usage => (
-					<li key={usage.slug}>
-						<Link key={usage.slug} to={usage.slug}>
-							{usage.name}
-						</Link>
-					</li>
-				))}
+						<li key={usage.slug}>
+							<Link key={usage.slug} to={usage.slug}>
+								{usage.name}
+							</Link>
+						</li>
+					))}
 				</ul>
 			</div>
 		</div>
 	)
 }
-
 
 /**
  * Get formatted date from unix timestamp

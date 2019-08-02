@@ -147,6 +147,7 @@
 		"clean": "gatsby clean",
 		"getImplementationAccessEngine": "node ./build/get-implementation --org 'Level Access' --tool 'Access Engine' --path './node_modules/act-rules-implementation-access-engine/report.json'",
 		"getImplementationAlfa": "node ./build/get-implementation --org 'Siteimprove' --tool 'Alfa' --path './node_modules/act-rules-implementation-alfa/report.json'",
+		"pregetImplementationAxeCore": "npm --prefix './node_modules/act-rules-implementation-axe-core/' run build -- --testsJson ${PWD}/public/testcases.json --testsDir ${PWD}/public --siteUrl $npm_package_www_url",
 		"getImplementationAxeCore": "node ./build/get-implementation --org 'Deque Systems' --tool 'Axe-core' --path './node_modules/act-rules-implementation-axe-core/report.json'",
 		"getImplementationRgaa": "node ./build/get-implementation --org 'Access42' --tool 'RGAA 3.0' --path './node_modules/act-rules-implementation-rgaa/reports/*.json'",
 		"getImplementationTrustedTester": "node ./build/get-implementation --org 'Trusted Tester' --tool 'Trusted Tester' --path './node_modules/act-rules-implementation-trusted-tester/reports/*.json'",

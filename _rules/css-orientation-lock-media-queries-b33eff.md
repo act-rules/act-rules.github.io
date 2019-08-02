@@ -85,7 +85,7 @@ A page, where CSS media query styles does not lock orientation. The CSS rotate t
     <style>
       @media (orientation: portrait) {
         html {
-          transform: rotate(180deg);
+          transform: rotate(-180deg);
         }
       }
     </style>

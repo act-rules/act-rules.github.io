@@ -219,7 +219,7 @@ The element with the semantic role of `list` owns the element with the role `tab
 
 #### Inapplicable example 1
 
-Element with explicit semantic role `list` is not exposed to assistive technologies.
+Element with explicit semantic role `list` is not included in the accessibility tree.
 
 ```html
 <ul role="list" aria-hidden="true">

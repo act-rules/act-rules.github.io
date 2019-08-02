@@ -49,16 +49,13 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has a one elemen
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title>The Three Kingdoms (translation by Yu Sumei)</title></head>
+  <head><title>The Three Kingdoms (translation by Yu Sumei), Chapter one</title></head>
   <body>
     <h1>Contents</h1>
     <!-- list of links to each chapter -->
     <div role="main">
-      <h1>Chapter one</h1>
+      <h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
       Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
-      <!-- rest of the text of Chapter one -->
-      <h1>Chapter two</h1>
-      <!-- text of the next chapter -->
     </div>
   </body>
 </html>
@@ -71,12 +68,20 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has several elem
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title>Comparing translations of the Romance of the Three Kingdoms</title></head>
+  <head><title>Comparing translations of the Romance of the Three Kingdoms, Chapter one</title></head>
   <body>
-    <div role="main" aria-label="Translation by C. H. Brewitt-Taylor">
+  <h1>Contents</h1>
+  <!-- list of links to each chapter -->
+    <div role="main" aria-label="Translation by C. H. Brewitt-Taylor (1925)">
+      <h1>Three Heroes Swear Brotherhood in the Peach Garden</h1>
+      The world under heaven, after a long period of division, tends to unite; after a long period of union, tends to divide.
+    </div>
+    <div role="main" aria-label="Translation by Moss Roberts (1976)">
+      <h1>Three Bold Spirits Plight Mutual Faith in the Peach Garden</h1>
       The empire, long divided, must unite; long united, must divide. Thus it has ever been.
     </div>
-    <div role="main" aria-label="Translation by Yu Sumei">
+    <div role="main" aria-label="Translation by Yu Sumei (2014)">
+      <h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
       Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
     </div>
   </body>
@@ -98,9 +103,6 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has a one elemen
     </div>
     <h1>Chapter one</h1>
     Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
-    <!-- rest of the text of Chapter one -->
-    <h1>Chapter two</h1>
-    <!-- text of the next chapter -->
   </body>
 </html>
 ```
@@ -114,13 +116,12 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has no element w
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title>The Three Kingdoms (translation by Yu Sumei)</title></head>
+  <head><title>The Three Kingdoms (translation by Yu Sumei), Chapter one</title></head>
     <body>
-    <h1>Chapter one</h1>
-    Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
-    <!-- rest of the text of Chapter one -->
-    <h1>Chapter two</h1>
-    <!-- text of the next chapter -->
+      <h1>Contents</h1>
+      <!-- list of links to each chapter -->
+      <h1>Chapter one</h1>
+      Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
   </body>
 </html>
 ```

@@ -5,17 +5,17 @@ rule_type: atomic
 description: |
   This rule checks that the first focusable elements are links referring to sections of content on the same page
 accessibility_requirements:
-	wcag-technique:G124: # Adding links at the top of the page to each area of the content
-		forConformance: false
-		failed: not satisfied
-		passed: satisfied
-		inapplicable: further testing needed
+  wcag-technique:G124: # Adding links at the top of the page to each area of the content
+    forConformance: false
+    failed: not satisfied
+    passed: satisfied
+    inapplicable: further testing needed
 input_aspects:
-	- DOM Tree
-	- CSS styling
+  - DOM Tree
+  - CSS styling
 authors:
-	- Jean-Yves Moyen
-	- Anne Thyme Nørregard
+  - Jean-Yves Moyen
+  - Anne Thyme Nørregard
 ---
 
 ## Applicability

@@ -6,16 +6,16 @@ description: |
   This rule checks that repeated blocks of content are expandable and collapsible
 accessibility_requirements:
   wcag-technique:SCR28: # Using an expandable and collapsible menu to bypass block of content
-		forConformance: false
-		failed: not satisfied
-		passed: satisfied
-		inapplicable: further testing needed
+    forConformance: false
+    failed: not satisfied
+    passed: satisfied
+    inapplicable: further testing needed
 input_aspects:
-	- DOM Tree
-	- CSS styling
+  - DOM Tree
+  - CSS styling
 authors:
-	- Jean-Yves Moyen
-	- Anne Thyme Nørregard
+  - Jean-Yves Moyen
+  - Anne Thyme Nørregard
 ---
 
 ## Applicability

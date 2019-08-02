@@ -6,17 +6,17 @@ description: |
   This rule checks that the first focusable element is a link referring to the main content of the page
 accessibility_requirements:
   wcag-technique:G1: # Adding a link at the top of each page that goes directly to the main content area
-		forConformance: false
-		failed: not satisfied
-		passed: satisfied
-		inapplicable: further testing needed
+    forConformance: false
+    failed: not satisfied
+    passed: satisfied
+    inapplicable: further testing needed
 input_aspects:
-	- DOM Tree
-	- CSS styling
-	- Language
+  - DOM Tree
+  - CSS styling
+  - Language
 authors:
-	- Jean-Yves Moyen
-	- Anne Thyme Nørregard
+  - Jean-Yves Moyen
+  - Anne Thyme Nørregard
 ---
 
 ## Applicability

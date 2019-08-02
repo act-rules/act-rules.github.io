@@ -6,16 +6,16 @@ description: |
   This rule checks that each section of content starts with a heading
 accessibility_requirements:
   wcag-technique:H69: # Providing heading elements at the beginning of each section of content
-		forConformance: false
-		failed: not satisfied
-		passed: satisfied
-		inapplicable: satisfied
+    forConformance: false
+    failed: not satisfied
+    passed: satisfied
+    inapplicable: satisfied
 input_aspects:
-	- DOM Tree
-	- CSS styling
+  - DOM Tree
+  - CSS styling
 authors:
-	- Jean-Yves Moyen
-	- Anne Thyme Nørregard
+  - Jean-Yves Moyen
+  - Anne Thyme Nørregard
 ---
 
 ## Applicability

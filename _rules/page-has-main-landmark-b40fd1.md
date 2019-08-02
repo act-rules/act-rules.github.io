@@ -6,11 +6,11 @@ description: |
   This rule checks that each page has an element with a semantic role of `main`
 accessibility_requirements:
 input_aspects:
-	- DOM Tree
-	- CSS styling
+  - DOM Tree
+  - CSS styling
 authors:
-	- Jean-Yves Moyen
-	- Anne Thyme Nørregard
+  - Jean-Yves Moyen
+  - Anne Thyme Nørregard
 ---
 
 ## Applicability
@@ -48,12 +48,12 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has a one elemen
 
 ```html
 <html>
-	<h1>Navigation</h1>
-	<!-- list of links to other pages of the same site -->
-	<div role="main">
-		<h1>Today's story</h1>
-		<!-- text about the story of the day -->
-	</div>
+  <h1>Navigation</h1>
+  <!-- list of links to other pages of the same site -->
+  <div role="main">
+    <h1>Today's story</h1>
+    <!-- text about the story of the day -->
+  </div>
 </html>
 ```
 
@@ -62,13 +62,15 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has a one elemen
 This [document](#https://dom.spec.whatwg.org/#concept-document) has several elements with a role of `main`.
 
 ```html
-<html>
-	<div role="main" aria-label="Translation by C. H. Brewitt-Taylor">
-		The empire, long divided, must unite; long united, must divide. Thus it has ever been.
-	</div>
-	<div role="main" aria-label="Translation by Yu Sumei">
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
-	</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Comparing translations of the Romance of the Three Kingdoms</title></head>
+  <div role="main" aria-label="Translation by C. H. Brewitt-Taylor">
+    The empire, long divided, must unite; long united, must divide. Thus it has ever been.
+  </div>
+  <div role="main" aria-label="Translation by Yu Sumei">
+    Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+  </div>
 </html>
 ```
 
@@ -77,13 +79,15 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has several elem
 This [document](#https://dom.spec.whatwg.org/#concept-document) has a one element with a role of `main`. The rule does not check whether the role is correctly used.
 
 ```html
-<html>
-	<div role="main">
-		<h1>Navigation</h1>
-		<!-- list of links to other pages of the same site -->
-	</div>
-	<h1>Today's story</h1>
-	<!-- text about the story of the day -->
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Amazing stories</title></head>
+  <div role="main">
+    <h1>Navigation</h1>
+    <!-- list of links to other pages of the same site -->
+  </div>
+  <h1>Today's story</h1>
+  <!-- text about the story of the day -->
 </html>
 ```
 
@@ -95,8 +99,8 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has no element w
 
 ```html
 <html>
-	<h1>Today's story</h1>
-	<!-- text about the story of the day -->
+  <h1>Today's story</h1>
+  <!-- text about the story of the day -->
 </html>
 ```
 

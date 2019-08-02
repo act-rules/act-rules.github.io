@@ -3,7 +3,7 @@ id: e53727
 name: First focusable elements are links to sections of content
 rule_type: atomic
 description: |
-  This rule checks that the first focusable elements are links referring to elements on the same page
+  This rule checks that the first focusable elements are links referring to sections of content on the same page
 accessibility_requirements:
 	wcag-technique:G124: # Adding links at the top of the page to each area of the content
 		forConformance: false
@@ -25,10 +25,11 @@ This rule applies to any [document](#https://dom.spec.whatwg.org/#concept-docume
 ## Expectation 1
 
 There is an [initial segment](#initial-segment) of the [focusable](#focusable) elements (in focus order) such that each element in that [initial segment](#initial-segment):
+- is [included in the accessibility tree](#included-in-the-accessibility-tree); and
 - is [visible](#visible) when [focused](#focused); and
 - has a [semantic role](#semantic-role) of link; and
 - when activated, moves focus to a [section of content](#section-of-content) within the same [document](#https://dom.spec.whatwg.org/#concept-document); and
-- has an [accessible name](#accessible-name) that communicates that it links to that specific [section of content](#section-of-content).
+- has either an [accessible name](#accessible-name) or [accessible description](#accessible-description) that communicates that it links to that specific [section of content](#section-of-content).
 
 **Note**: There is no requirement on how many [focusable](#focusable) elements are part of that [initial segment](#initial-segment), nor any requirement to provide a way to determine (programatically or not) where that [initial segment](#initial-segment) stops. Technique [G124: Adding links at the top of the page to each area of the content](https://www.w3.org/WAI/WCAG21/Techniques/general/G124), and this rule, only require that such an set exists.
 

@@ -14,7 +14,7 @@ input_rules:
   - fd26cf
   - ac7dc6
   - ee13b5
-  - eac66b
+  - d7ba54
 authors:
   - Wilco Fiers
   - Brian Bors

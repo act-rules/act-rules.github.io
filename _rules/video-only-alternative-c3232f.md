@@ -3,7 +3,7 @@ id: c3232f
 name: Video only has an accessible alternative
 rule_type: composite
 description: |
-  This rule checks if video elements without audio have an alternative available
+  This rule checks that `video` elements without audio have an alternative available
 accessibility_requirements:
   wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
     forConformance: true
@@ -14,7 +14,7 @@ input_rules:
   - fd26cf
   - ac7dc6
   - ee13b5
-  - eac66b
+  - d7ba54
 authors:
   - Wilco Fiers
   - Brian Bors
@@ -24,7 +24,7 @@ authors:
 
 ## Applicability
 
-The rule applies to any [non-streaming](#non-streaming) `video` element [visible](#visible), where the video doesn't contain audio.
+The rule applies to any [non-streaming](#non-streaming-media-element) `video` element [visible](#visible), where the video doesn't contain audio.
 
 ## Expectation
 
@@ -58,11 +58,9 @@ A video element without audio. The text on the page labels the video as an alter
 
 ```html
 <p>
-	Not being able to use your computer because your mouse doesn't work, is
-	frustrating. Many people use only the keyboard to navigate websites. Either
-	through preference or circumstance. This is solved by keyboard compatibility.
-	Keyboard compatibility is described in WCAG. See the video below to watch the
-	same information again in video form.
+	Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the keyboard
+	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
+	compatibility is described in WCAG. See the video below to watch the same information again in video form.
 </p>
 <video
 	data-rule-target
@@ -108,10 +106,7 @@ A video element without audio has a separate audio track that describes the visu
 </video>
 
 <audio controls>
-	<source
-		src="../test-assets/rabbit-video/audio-description.mp3"
-		type="audio/mpeg"
-	/>
+	<source src="../test-assets/rabbit-video/audio-description.mp3" type="audio/mpeg" />
 </audio>
 ```
 
@@ -123,10 +118,9 @@ A video element that describes some of the text on the same page. The text on th
 
 ```html
 <p>
-	Not being able to use your computer because your mouse doesn't work, is
-	frustrating. Many people use only the keyboard to navigate websites. Either
-	through preference or circumstance. This is solved by keyboard compatibility.
-	Keyboard compatibility is described in WCAG.
+	Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the keyboard
+	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
+	compatibility is described in WCAG.
 </p>
 <video
 	data-rule-target
@@ -170,10 +164,7 @@ A video element without audio has a separate audio track that incorrectly descri
 </video>
 
 <audio controls>
-	<source
-		src="../test-assets/rabbit-video/incorrect-audio-description.mp3"
-		type="audio/mpeg"
-	/>
+	<source src="../test-assets/rabbit-video/incorrect-audio-description.mp3" type="audio/mpeg" />
 </audio>
 ```
 
@@ -185,11 +176,9 @@ A video element with audio.
 
 ```html
 <p>
-	Not being able to use your computer because your mouse doesn't work, is
-	frustrating. Many people use only the keyboard to navigate websites. Either
-	through preference or circumstance. This is solved by keyboard compatibility.
-	Keyboard compatibility is described in WCAG. See the video below to watch the
-	same information again in video form.
+	Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the keyboard
+	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
+	compatibility is described in WCAG. See the video below to watch the same information again in video form.
 </p>
 <video
 	data-rule-target

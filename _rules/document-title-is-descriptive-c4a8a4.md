@@ -109,8 +109,8 @@ Even though the descriptive `<title>` element is not placed within the `<head>` 
 	<body>
 		<h1>;)</h1>
 		<p>
-			The winking emoticon is commonly used after a light-hearted or sarcastic
-			remark. It is also a popular IM and e-mail emoticon shortcut.
+			The winking emoticon is commonly used after a light-hearted or sarcastic remark. It is also a popular IM and
+			e-mail emoticon shortcut.
 		</p>
 	</body>
 </html>

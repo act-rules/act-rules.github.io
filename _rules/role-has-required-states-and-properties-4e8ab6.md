@@ -3,7 +3,7 @@ id: 4e8ab6
 name: Role has required states and properties
 rule_type: atomic
 description: |
-  Elements that have an explicit role must also specify all required states and properties
+  This rule checks that elements that have an explicit role also specify all required states and properties
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true
@@ -18,7 +18,7 @@ authors:
 
 ## Applicability
 
-Any HTML or SVG element that has an [explicit semantic role](#semantic-role), except if the element has an [implicit semantic role](#implicit-role) that is identical to the explicit semantic role.
+Any HTML or SVG element that has an [explicit semantic role](#semantic-role), except if the element has an [implicit semantic role](#semantic-role) that is identical to the explicit semantic role.
 
 ## Expectation
 

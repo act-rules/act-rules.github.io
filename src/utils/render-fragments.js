@@ -4,6 +4,8 @@ import { Link } from 'gatsby'
 import glossaryUsages from './../../_data/glossary-usages.json'
 import implementationMetrics from './../../_data/implementation-metrics.json'
 
+import rulesUsages from './../../_data/rules-usages.json'
+
 export const getImplementations = slug => {
 	const ruleId = slug.replace('rules/', '')
 	const metrics = implementationMetrics[ruleId]
@@ -80,12 +82,7 @@ export const getChangelog = (changelog, url, file) => {
 								<td nowrap="true">{getDateTimeFromUnixTimestamp(date)}</td>
 								<td>{msg}</td>
 								<td>
-									<a
-										target="_blank"
-										rel="noopener noreferrer"
-										href={versionUrl}
-										title="See file at given version"
-									>
+									<a target="_blank" rel="noopener noreferrer" href={versionUrl} title="See file at given version">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											x="0px"
@@ -109,12 +106,7 @@ export const getChangelog = (changelog, url, file) => {
 									</a>
 								</td>
 								<td>
-									<a
-										target="_blank"
-										rel="noopener noreferrer"
-										href={changesUrl}
-										title="See all changes in commit"
-									>
+									<a target="_blank" rel="noopener noreferrer" href={changesUrl} title="See all changes in commit">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											x="0px"
@@ -249,45 +241,43 @@ export function getRuleType(rule_type) {
 	)
 }
 
-export function getAccessibilityRequirements(
-	accessibility_requirements,
-	type = 'details'
-) {
+export function getAccessibilityRequirements(accessibility_requirements, type = 'details') {
 	if (!accessibility_requirements) {
 		return (
 			<div className="meta">
 				<span className="heading">Accessibility Requirements Mapping</span>
-				<p>This rule is not required for conformance to WCAG at any level.</p>
+				<ul>
+					<li>This rule is not required for conformance</li>
+				</ul>
 			</div>
 		)
 	}
 
-	const conformanceRequirements = Object.entries(accessibility_requirements)
-		.filter(([_, value]) => {
-			if (!value) {
-				return false
-			}
-			const { forConformance } = value
-			return !!forConformance
-		})
+	const conformanceRequirements = Object.entries(accessibility_requirements).filter(([_, value]) => {
+		if (!value) {
+			return false
+		}
+		const { forConformance } = value
+		return !!forConformance
+	})
 
 	const getOutcomeMapping = ({
 		failed = 'not satisfied',
 		passed = 'further testing is needed',
-		inapplicable = 'further testing is needed'
+		inapplicable = 'further testing is needed',
 	} = {}) => {
 		return (
 			<li>
 				Outcome mapping:
 				<ul>
 					<li>
-						Any <code>failed</code> outcomes: { failed }
+						Any <code>failed</code> outcomes: {failed}
 					</li>
 					<li>
-						All <code>passed</code> outcomes: { passed }
+						All <code>passed</code> outcomes: {passed}
 					</li>
 					<li>
-						An <code>inapplicable</code> outcome: { inapplicable }
+						An <code>inapplicable</code> outcome: {inapplicable}
 					</li>
 				</ul>
 			</li>
@@ -301,7 +291,9 @@ export function getAccessibilityRequirements(
 
 		if (listType === 'text') {
 			return (
-				<li key={sc}>{num} {handle} (Level: {level})</li>
+				<li key={sc}>
+					{num} {handle} (Level: {level})
+				</li>
 			)
 		}
 
@@ -313,17 +305,12 @@ export function getAccessibilityRequirements(
 					</summary>
 					<ul>
 						<li>
-							<a
-								className="sc-item"
-								href={url}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<a className="sc-item" href={url} target="_blank" rel="noopener noreferrer">
 								Learn More about {num} ({handle})
 							</a>
 						</li>
 						<li>
-							<strong>Required for conformance</strong> to WCAG {wcagType}{' '} and above on level {level} and above
+							<strong>Required for conformance</strong> to WCAG {wcagType} and above on level {level} and above
 						</li>
 						{getOutcomeMapping()}
 					</ul>
@@ -333,28 +320,23 @@ export function getAccessibilityRequirements(
 	}
 
 	const ariaListing = (key, mapping, listType) => {
-		const ref = key.split(':').slice(-1).pop();
-		
+		const ref = key
+			.split(':')
+			.slice(-1)
+			.pop()
+
 		if (listType === 'text') {
-			return (
-				<li key={ref}>{mapping.title}</li>
-			)
+			return <li key={ref}>{mapping.title}</li>
 		}
 
 		const href = `https://www.w3.org/TR/wai-aria-1.1/#${ref}`
 		return (
 			<li key={ref}>
 				<details>
-					<summary>
-						{mapping.title}
-					</summary>
+					<summary>{mapping.title}</summary>
 					<ul>
 						<li>
-							<a
-								className="sc-item"
-								href={href}
-								target="_blank"
-								rel="noopener noreferrer">
+							<a className="sc-item" href={href} target="_blank" rel="noopener noreferrer">
 								Learn More about {mapping.title}
 							</a>
 						</li>
@@ -373,20 +355,16 @@ export function getAccessibilityRequirements(
 			<span className="heading">Accessibility Requirements Mapping</span>
 			<ul>
 				{conformanceRequirements.map(([req, mapping]) => {
-					if(req.toLowerCase().includes('aria11')) {
+					if (req.toLowerCase().includes('aria11')) {
 						return ariaListing(req, mapping, type)
 					}
 
-					if(req.toLowerCase().includes('wcag')) {
+					if (req.toLowerCase().includes('wcag')) {
 						const sc = req.split(':').pop()
 						return wcagListing(sc, type)
 					}
 
-					return (
-						<>
-							Accessibility Requirements have no mapping.
-						</>
-					)
+					return <>Accessibility Requirements have no mapping.</>
 				})}
 			</ul>
 		</div>
@@ -412,12 +390,7 @@ export function getAuthors(authors, contributors) {
 					const { url, name } = authorData
 					return (
 						<li key={name}>
-							<a
-								className="sc-item block"
-								target="_blank"
-								rel="noopener noreferrer"
-								href={url}
-							>
+							<a className="sc-item block" target="_blank" rel="noopener noreferrer" href={url}>
 								{name}
 							</a>
 						</li>
@@ -453,11 +426,7 @@ export function getInputAspects(aspects, ruleFormatInputAspects) {
 	)
 }
 
-export function getInputRulesForRule(
-	inputRules,
-	allRules,
-	stripBasePath = false
-) {
+export function getInputRulesForRule(inputRules, allRules, stripBasePath = false) {
 	if (!inputRules) {
 		return null
 	}
@@ -467,9 +436,7 @@ export function getInputRulesForRule(
 				<span className="heading">Input Rules</span>
 				<ul>
 					{inputRules.map(inputRuleId => {
-						const atomicRule = allRules.find(
-							rule => rule.node.frontmatter.id === inputRuleId
-						)
+						const atomicRule = allRules.find(rule => rule.node.frontmatter.id === inputRuleId)
 						const aHref = stripBasePath
 							? atomicRule.node.fields.slug.replace('rules/', '')
 							: atomicRule.node.fields.slug
@@ -523,25 +490,35 @@ export function getGlossaryUsageInRules(usages) {
 	)
 }
 
+export function getRuleUsageInRules(ruleId) {
+	const usages = rulesUsages[ruleId]
+	if (!usages) {
+		return null
+	}
+	return (
+		<div className="side-notes">
+			<div className="meta">
+				<span className="heading">Used in rules</span>
+				<ul>
+					{usages.map(usage => (
+						<li key={usage.slug}>
+							<Link key={usage.slug} to={usage.slug}>
+								{usage.name}
+							</Link>
+						</li>
+					))}
+				</ul>
+			</div>
+		</div>
+	)
+}
+
 /**
  * Get formatted date from unix timestamp
  * @param {String} unixtimestamp UNIX timestamp
  */
 export function getDateTimeFromUnixTimestamp(unixtimestamp) {
-	const months_arr = [
-		'Jan',
-		'Feb',
-		'Mar',
-		'Apr',
-		'May',
-		'Jun',
-		'Jul',
-		'Aug',
-		'Sep',
-		'Oct',
-		'Nov',
-		'Dec',
-	]
+	const months_arr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 	const date = new Date(unixtimestamp * 1000)
 	const year = date.getFullYear()
 	const month = months_arr[date.getMonth()]

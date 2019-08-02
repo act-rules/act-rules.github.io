@@ -6,6 +6,7 @@ import {
 	getChangelog,
 	getChangelogLink,
 	getGlossaryUsed,
+	getRuleUsageInRules,
 	getGlossaryUsedLink,
 	getRuleType,
 	getAccessibilityRequirements,
@@ -30,7 +31,7 @@ export default ({ data }) => {
 	const updatedTitle = `Rule | ${frontmatter.name} | ${site.siteMetadata.title}`
 	const ruleId = frontmatter.id
 	const ruleTestcasesUrl = `/testcases/${ruleId}/rule-${ruleId}-testcases-for-em-report-tool.json`
-	const issuesUrl = `${repository.url}/issues?q=${ruleId}`
+	const issuesUrl = `${repository.url}/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+${ruleId}+`
 	const ruleFormatInputAspects = config['rule-format-metadata']['input-aspects']
 
 	return (
@@ -55,19 +56,9 @@ export default ({ data }) => {
 							<span> {getDateTimeFromUnixTimestamp(ruleChangelog[0].date)}</span>
 						</li>
 						<li>{getAccessibilityRequirements(accessibility_requirements)}</li>
-						<li>
-							{getInputAspects(
-								frontmatter.input_aspects,
-								ruleFormatInputAspects
-							)}
-						</li>
-						<li>
-							{getInputRulesForRule(
-								frontmatter.input_rules,
-								allRules.edges,
-								true
-							)}
-						</li>
+						<li>{getRuleUsageInRules(ruleId)}</li>
+						<li>{getInputAspects(frontmatter.input_aspects, ruleFormatInputAspects)}</li>
+						<li>{getInputRulesForRule(frontmatter.input_rules, allRules.edges, true)}</li>
 					</ul>
 					<hr />
 					{/* Description */}
@@ -87,29 +78,19 @@ export default ({ data }) => {
 					{getGlossaryUsed(slug, allGlossary)}
 					<hr />
 					{/* changelog */}
-					{getChangelog(
-						ruleChangelog,
-						repository.url,
-						`_rules/${relativePath}`
-					)}
+					{getChangelog(ruleChangelog, repository.url, `_rules/${relativePath}`)}
 					{/* Useful links */}
 					<a href="#useful-links" id="useful-links">
 						<h2>Useful Links</h2>
 					</a>
 					<ul>
 						<li>
-							<a
-								target="_blank"
-								rel="noopener noreferrer"
-								href={issuesUrl}
-							>
+							<a target="_blank" rel="noopener noreferrer" href={issuesUrl}>
 								Github issues related to this rule
 							</a>
 						</li>
 						<li>
-							<a target="_blank"
-								rel="noopener noreferrer"
-								href={ruleTestcasesUrl} >
+							<a target="_blank" rel="noopener noreferrer" href={ruleTestcasesUrl}>
 								Test case file for use in the WCAG-EM Report Tool
 							</a>
 						</li>
@@ -122,9 +103,7 @@ export default ({ data }) => {
 					<a id="acknowledgements" href="#acknowledgements">
 						<h2>Acknowledgements</h2>
 					</a>
-					<div className="meta">
-						{getAuthors(frontmatter.authors, contributors)}
-					</div>
+					<div className="meta">{getAuthors(frontmatter.authors, contributors)}</div>
 				</section>
 				{/* Toc */}
 				<div className="toc">
@@ -180,9 +159,7 @@ export const query = graphql`
 				changelog
 			}
 		}
-		allRules: allMarkdownRemark(
-			filter: { fields: { markdownType: { eq: "rules" } } }
-		) {
+		allRules: allMarkdownRemark(filter: { fields: { markdownType: { eq: "rules" } } }) {
 			totalCount
 			edges {
 				node {

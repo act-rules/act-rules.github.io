@@ -23,7 +23,7 @@ The rule applies to every [non-streaming](#non-streaming-media-element) `video` 
 
 For each test target, audio information that is not conveyed visually in the video, is available through [captions](https://www.w3.org/TR/WCAG21/#dfn-captions).
 
-_Note_: Captions can be either embedded in the video file itself or can be made available trough a separate track.
+**Note**: Captions can be either embedded in the video file itself or can be made available trough a separate track.
 
 ## Assumptions
 
@@ -66,7 +66,7 @@ A video element with an associated track element that contain captions for all t
 
 #### Failed Example 1
 
-A video element with any form of captions.
+A video element without any form of captions.
 
 ```html
 <video src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
@@ -124,7 +124,7 @@ A video element without audio.
 
 #### Inapplicable Example 2
 
-A video element without that is not visible on the page.
+A video element that is not visible on the page.
 
 ```html
 <video src="../test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>

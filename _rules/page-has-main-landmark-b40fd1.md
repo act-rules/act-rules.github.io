@@ -50,15 +50,17 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has a one elemen
 <!DOCTYPE html>
 <html lang="en">
   <head><title>The Three Kingdoms (translation by Yu Sumei)</title></head>
-  <h1>Contents</h1>
-  <!-- list of links to each chapter -->
-  <div role="main">
-    <h1>Chapter one</h1>
-    Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
-    <!-- rest of the text of Chapter one -->
-    <h1>Chapter two</h1>
-    <!-- text of the next chapter -->
-  </div>
+  <body>
+    <h1>Contents</h1>
+    <!-- list of links to each chapter -->
+    <div role="main">
+      <h1>Chapter one</h1>
+      Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+      <!-- rest of the text of Chapter one -->
+      <h1>Chapter two</h1>
+      <!-- text of the next chapter -->
+    </div>
+  </body>
 </html>
 ```
 
@@ -70,12 +72,14 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has several elem
 <!DOCTYPE html>
 <html lang="en">
   <head><title>Comparing translations of the Romance of the Three Kingdoms</title></head>
-  <div role="main" aria-label="Translation by C. H. Brewitt-Taylor">
-    The empire, long divided, must unite; long united, must divide. Thus it has ever been.
-  </div>
-  <div role="main" aria-label="Translation by Yu Sumei">
-    Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
-  </div>
+  <body>
+    <div role="main" aria-label="Translation by C. H. Brewitt-Taylor">
+      The empire, long divided, must unite; long united, must divide. Thus it has ever been.
+    </div>
+    <div role="main" aria-label="Translation by Yu Sumei">
+      Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+    </div>
+  </body>
 </html>
 ```
 
@@ -87,15 +91,17 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has a one elemen
 <!DOCTYPE html>
 <html lang="en">
   <head><title>The Three Kingdoms (translation by Yu Sumei)</title></head>
-  <div role="main">
-    <h1>Contents</h1>
-    <!-- list of links to each chapter -->
-  </div>
-  <h1>Chapter one</h1>
-  Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
-  <!-- rest of the text of Chapter one -->
-  <h1>Chapter two</h1>
-  <!-- text of the next chapter -->
+  <body>
+    <div role="main">
+      <h1>Contents</h1>
+      <!-- list of links to each chapter -->
+    </div>
+    <h1>Chapter one</h1>
+    Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+    <!-- rest of the text of Chapter one -->
+    <h1>Chapter two</h1>
+    <!-- text of the next chapter -->
+  </body>
 </html>
 ```
 
@@ -109,11 +115,13 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has no element w
 <!DOCTYPE html>
 <html lang="en">
   <head><title>The Three Kingdoms (translation by Yu Sumei)</title></head>
-  <h1>Chapter one</h1>
-  Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
-  <!-- rest of the text of Chapter one -->
-  <h1>Chapter two</h1>
-  <!-- text of the next chapter -->
+    <body>
+    <h1>Chapter one</h1>
+    Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+    <!-- rest of the text of Chapter one -->
+    <h1>Chapter two</h1>
+    <!-- text of the next chapter -->
+  </body>
 </html>
 ```
 

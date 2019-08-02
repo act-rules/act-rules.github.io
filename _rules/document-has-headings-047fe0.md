@@ -28,6 +28,8 @@ For each [section of content](#section-of-content) in the test target, the first
 
 **Note**: Neither this rule, nor technique [H69: Providing heading elements at the beginning of each section of content](https://www.w3.org/WAI/WCAG21/Techniques/html/H69), expects the heading to accurately describe its corresponding section.
 
+**Note**: Neither this rule, nor technique [H69: Providing heading elements at the beginning of each section of content](https://www.w3.org/WAI/WCAG21/Techniques/html/H69), expects the headings are correctly nested without skipping level. It is nonetheless recommended to nest headings hierarchically without skipping levels.
+
 ## Assumptions
 
 _There are currently no assumptions_
@@ -46,11 +48,17 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
+This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section of content](#section-of-content) for each Chapter in a book. Each of these [section of content](#section-of-content) starts with an `h1` element.
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></html>
-
+  <head><title>The Three Kingdoms (translation by Yu Sumei)</title></head>
+  <h1>Chapter one</h1>
+  Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+  <!-- rest of the text of Chapter one -->
+  <h1>Chapter two</h1>
+  <!-- text of the next chapter -->
 </html>
 ```
 

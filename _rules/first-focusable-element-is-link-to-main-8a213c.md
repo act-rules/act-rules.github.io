@@ -30,7 +30,7 @@ The first [focusable](#focusable) element within the test target:
 - is [visible](#visible) when [focused](#focused); and
 - has a [semantic role](#semantic-role) of link; and
 - when activated, moves focus to the [main content](#main-content) of the [document](#https://dom.spec.whatwg.org/#concept-document); and
-- has an [accessible name](#accessible-name) that communicates that it links to the [main content](#main-content).
+- has either an [accessible name](#accessible-name) or [accessible description](#accessible-description) that communicates that it links to the [main content](#main-content).
 
 ## Assumptions
 

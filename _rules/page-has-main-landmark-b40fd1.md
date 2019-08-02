@@ -95,13 +95,13 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has a one elemen
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title>The Three Kingdoms (translation by Yu Sumei)</title></head>
+  <head><title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title></head>
   <body>
     <div role="main">
       <h1>Contents</h1>
       <!-- list of links to each chapter -->
     </div>
-    <h1>Chapter one</h1>
+    <h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
     Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
   </body>
 </html>
@@ -120,7 +120,7 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has no element w
     <body>
       <h1>Contents</h1>
       <!-- list of links to each chapter -->
-      <h1>Chapter one</h1>
+      <h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
       Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
   </body>
 </html>

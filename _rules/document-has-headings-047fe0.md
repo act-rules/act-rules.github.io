@@ -24,7 +24,10 @@ This rule applies to any [document](#https://dom.spec.whatwg.org/#concept-docume
 
 ## Expectations
 
-For each [section of content](#section-of-content) in the test target, the first [text node](https://dom.spec.whatwg.org/#text) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) which is inside this [section of content](#section-of-content) is a descendant in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) of an element with a [semantic role](#semantic-role) of `heading` which is [included in the accessibility tree](#included-in-the-accessibility-tree).
+For each [section of content](#section-of-content) in the test target, the first node in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) which is inside this [section of content](#section-of-content) and has an [accessible name](#accessible-name):
+- is [included in the accessiblity tree](#included-in-the-accessibility-tree); and
+- has an [accessible name](#accessible-name) which does not consist only of [whitespace](#whitespace); and
+- has a [semantic role](#semantic-role) of `heading`.
 
 **Note**: Neither this rule, nor technique [H69: Providing heading elements at the beginning of each section of content](https://www.w3.org/WAI/WCAG21/Techniques/html/H69), expects the heading to accurately describe its corresponding section.
 
@@ -48,18 +51,117 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section of content](#section-of-content) for each Chapter in a book. Each of these [section of content](#section-of-content) starts with an `h1` element.
+This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section of content](#section-of-content) for the navigation links, and one for the actual text. Each starts with a `h1` heading.
+
+**Note**: In this document, the [sections of content](#section-of-content) are defined solely by the heading at their start.
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title>The Three Kingdoms (translation by Yu Sumei)</title></head>
+  <head><title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title></head>
     <body>
-    <h1>Chapter one</h1>
+    <!-- Navigational section of content starts here -->
+    <h1>Contents</h1>
+    <!-- list of links to each chapter -->
+    <!-- Navigational section of content ends here -->
+
+    <!-- Main section of content starts here -->
+    <h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
     Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
-    <!-- rest of the text of Chapter one -->
-    <h1>Chapter two</h1>
-    <!-- text of the next chapter -->
+    <!-- Main section of content ends here -->
+  </body>
+</html>
+```
+
+#### Passed Example 2
+
+In this [document](#https://dom.spec.whatwg.org/#concept-document), headings are not the first elements of each [section of content](#section-of-content), but they are the first with [text node](https://dom.spec.whatwg.org/#text) inside. The [text nodes](https://dom.spec.whatwg.org/#text) are not immediate children of the headings (for example because many frameworks will add a lot of extra elements around their components).
+
+**Note**: In this document, the [sections of content](#section-of-content) are defined by the `section` elements.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title></head>
+  <body>
+    <section>
+      <hr>
+      <h1>Contents</h1>
+      <!-- list of links to each chapter -->
+    </section>
+    <section>
+      <hr>
+      <h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden<span></h1>
+      Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+    </section>
+  </body>
+</html>
+```
+
+#### Passed Example 3
+
+This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section of content](#section-of-content) for the navigation links, and one for the actual text. Each starts with a `div` with a role of `heading`.
+
+**Note**: In this document, the [sections of content](#section-of-content) are defined by the `section` elements.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title></head>
+  <body>
+    <section>
+      <div role="heading">Contents</div>
+      <!-- list of links to each chapter -->
+    </section>
+    <section>
+      <div role="heading">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</div>
+      Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+    </section>
+  </body>
+</html>
+```
+
+#### Passed Example 4
+
+**Note**: In this document, the [sections of content](#section-of-content) are defined by the `section` elements.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title></head>
+  <body>
+  <section>
+      <h1>Contents</h1>
+      <!-- list of links to each chapter -->
+    </section>
+    <section>
+      <h1><img src="../test-assets/document-headings-047fe0/peach-garden-oath.jpg" alt="Three Heroes Swear Brotherhood at a Feast in the Peach Garden" /></h1>
+      Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+    </section>
+  </body>
+</html>
+```
+
+#### Passed Example 5
+
+This rule checks neither nesting nor pertinence of headings.
+
+**Note**: In this document, the [sections of content](#section-of-content) are defined solely by the heading at their start.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title></head>
+    <body>
+    <!-- Navigational section of content starts here -->
+    <h2>An apple a day</h2>
+    <!-- list of links to each chapter -->
+    <!-- Navigational section of content ends here -->
+
+    <!-- Main section of content starts here -->
+    <h6>Keeps the doctor away</h6>
+    Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+    <!-- Main section of content ends here -->
   </body>
 </html>
 ```
@@ -69,19 +171,7 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></html>
-  <body>
-
-  </body>
-</html>
-```
-
-#### Passed Example 3
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head><title></title></html>
+  <head><title></title></head>
   <body>
   
   </body>
@@ -95,7 +185,7 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></html>
+  <head><title></title></head>
   <body>
   
   </body>
@@ -107,7 +197,7 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></html>
+  <head><title></title></head>
   <body>
   
   </body>
@@ -119,7 +209,7 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></html>
+  <head><title></title></head>
   <body>
   
   </body>
@@ -131,7 +221,7 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></html>
+  <head><title></title></head>
   <body>
   
   </body>

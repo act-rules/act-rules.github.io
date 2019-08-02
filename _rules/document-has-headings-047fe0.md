@@ -120,40 +120,11 @@ _There are no major accessibility support issues known for this rule._
 
 #### Inapplicable Example 1
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head><title></title></html>
+The [document element](#https://dom.spec.whatwg.org/#document-element) of this [document](#https://dom.spec.whatwg.org/#concept-document) is not an `html` element.
 
-</html>
+```svg
+<svg xmlns="http://www.w3.org/2000/svg">
+  <title>This is an SVG</title>
+</svg>
 ```
 
-#### Inapplicable Example 2
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head><title></title></html>
-
-</html>
-```
-
-#### Inapplicable Example 3
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head><title></title></html>
-
-</html>
-```
-
-#### Inapplicable Example 4
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head><title></title></html>
-
-</html>
-```

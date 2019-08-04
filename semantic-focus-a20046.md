@@ -4,7 +4,7 @@ name: Sequential focus has semantic role
 rule_type: atomic
 
 description: | 
- This rule checks that every element part of the sequential focus navigation order has a semantic role.
+ This rule checks that every element that is part of the sequential focus navigation order has a semantic role.
 
 accessibility_requirements: 
   wcag20:4.1.2: # Name, Role, Value (A)

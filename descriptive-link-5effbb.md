@@ -14,22 +14,25 @@ accessibility_requirements:
     inapplicable: further testing needed
 
 input_aspects:
-- DOM Tree
-- CSS Styling
+  - DOM Tree
+  - CSS Styling
+  - Language
 
 authors:
-- Carlos Duarte
-- Marie Trudelle 
-- Ramit Garg
+  - Carlos Duarte
+  - Marie Trudelle 
+  - Ramit Garg
 ---
 
 ## Applicability
 
-This rule applies to any HTML or SVG element with the [semantic role](#semantic-role) of [link](https://www.w3.org/TR/wai-aria/#link) or a role that inherits from the link role, that is [included in the accessibility tree](#included-in-the-accessibility-tree) and has an [accessible-name](#accessible-name) that does not only consist of [whitespace](#whitespace).
+This rule applies to any HTML or SVG element with the [semantic role](#semantic-role) of [`link`](https://www.w3.org/TR/wai-aria/#link) or a role that inherits from the `link` role, that is [included in the accessibility tree](#included-in-the-accessibility-tree) and has an [accessible-name](#accessible-name) that does not only consist of [whitespace](#whitespace).
 
 ## Expectation
 
 The [visible](#visible) [text content](#text-content) of the target element, together with its [programmatically determined link context](#programmatically-determined-link-context) describe the purpose of the link.
+
+Note: There may be situations where the purpose of the link is supposed to be unknown or obscured. In those situations, the success criteria will still be met, even if the link's purpose is not described by it.
 
 ## Assumptions
 
@@ -81,10 +84,10 @@ Accessible name describes the purpose of the link
 
 #### Passed Example 3
 
-Link text together with its context describes the purpose of the link
+Link text together with its context describe the purpose of the link
 
 ```html
-<p><a href="#desc">Click</a> to see the description of this product</p>
+<p>To see the description of this product <a href="#desc">click here</a></p>
 
 <p id="desc">This product consists of several web pages</p>
 ```
@@ -114,9 +117,38 @@ Accessible name describes the purpose of the link
 Link text describes the purpose of the link
 
 ```html
-<span role="link" onclick="document.location+='#desc';return false;">See description of the project</span>
+<span role="link" onclick="document.location+='#desc';return false;">See description of the product</span>
 
 <p id="desc">This product consists of several web pages</p>
+```
+
+#### Passed Example 7
+
+The context afforded by the list and the link text describe the purpose of the links.
+
+```html
+<ul>
+  <li><a href="https://www.gutenberg.org/files/4300/4300-h/4300-h.htm">Ulysses</a></li>
+  <li><a href="https://www.gutenberg.org/ebooks/4300.epub.images?session_id=04cd710372888de8d8d322215cdfe8ce5b0f8d73">EPUB format</a></li>
+  <li><a href="https://www.gutenberg.org/files/4300/4300-0.txt">Plain text</a></li>
+</ul>
+```
+
+#### Passed Example 8
+
+The context afforded by the table header and the link text describe the purpose of the links.
+
+```html
+<table>
+  <tr>
+    <th colspan="3">Ulysses</th>
+  </tr>
+  <tr>
+    <td><a href="https://www.gutenberg.org/files/4300/4300-h/4300-h.htm">HTML</a></td>
+    <td><a href="https://www.gutenberg.org/ebooks/4300.epub.images?session_id=04cd710372888de8d8d322215cdfe8ce5b0f8d73">EPUB</a></td>
+    <td><a href="https://www.gutenberg.org/files/4300/4300-0.txt">Plain text</a></td>
+  </tr>
+</table>
 ```
 
 
@@ -124,7 +156,7 @@ Link text describes the purpose of the link
 
 #### Failed Example 1
 
-Link text does not describe the purpose of the link
+Link text, together with the absence of programatically determined link context, does not describe the purpose of the link
 
 ```html
 <a href="#desc">More</a>
@@ -134,7 +166,7 @@ Link text does not describe the purpose of the link
 
 #### Failed Example 2
 
-Accessible name does not describe the purpose of the link
+Accessible name, together with the absence of programatically determined link context, does not describe the purpose of the link
 
 ```html
 <a href="#main" aria-label="Go"></a>
@@ -146,7 +178,7 @@ Accessible name does not describe the purpose of the link
 
 #### Failed Example 3
 
-Link text does not describe the purpose of the link
+Link text, together with the absence of programatically determined link context, does not describe the purpose of the link
 
 ```html
 <div role="link" onclick="document.location+='#main';return false;">More</div>
@@ -158,7 +190,7 @@ Link text does not describe the purpose of the link
 
 #### Failed Example 4
 
-Accessible name does not describe the purpose of the link
+Accessible name, together with the absence of programatically determined link context, does not describe the purpose of the link
 
 ```html
 <div role="link" aria-labelledby="id1" onclick="document.location+='#main';return false;"></div>
@@ -174,7 +206,7 @@ Accessible name does not describe the purpose of the link
 
 #### Inapplicable Example 1
 
-`<a>` with its role changed from link to another role
+`<a>` with its role changed from `link` to another role
 
 ```html
 <a href="http://www.w3.org/WAI" role="button">Web Accessibility Initiative (WAI)</a>
@@ -190,15 +222,15 @@ Link that is not included in the accessibility tree
 
 #### Inapplicable Example 3
 
-Link with empty accessible name
+Link with accessible name that consists only of whitespace
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="#" alt="" /></a>
+<a href="http://www.w3.org/WAI"><img src="#" alt=" " /></a>
 ```
 
 #### Inapplicable Example 4
 
-`a` element without the link role
+`a` element without the `link` role
 
 ```html
 <a>placeholder</a>

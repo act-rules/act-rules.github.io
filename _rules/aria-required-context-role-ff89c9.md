@@ -19,9 +19,9 @@ authors:
 
 ## Applicability
 
-The rule applies to any HTML or SVG element that is [included in the accessibility tree](#included-in-the-accessibility-tree) and has an explicit [semantic role](#semantic-role) with a [WAI-ARIA required context role](https://www.w3.org/TR/wai-aria-1.1/#scope), except if the element has an [implicit semantic role](#implicit-role) that is identical to its [explicit semantic role](#explicit-role).
+The rule applies to any HTML or SVG element that is [included in the accessibility tree](#included-in-the-accessibility-tree) and has an [explicit semantic role](#explicit-role) with a [WAI-ARIA required context role](https://www.w3.org/TR/wai-aria-1.1/#scope), except if the element has an [implicit semantic role](#implicit-role) that is identical to its [explicit semantic role](#explicit-role).
 
-**Note:** An exampple of an element that has a [WAI-ARIA required context role](https://www.w3.org/TR/wai-aria-1.1/#scope) is `tab` that has `tablist` as a [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
+**Note:** An example of an element that has a [WAI-ARIA required context role](https://www.w3.org/TR/wai-aria-1.1/#scope) is `tab` that has `tablist` as a [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
 
 **Note:** An example of an element that has an [implicit semantic role](#implicit-role) that is identical to its [explicit semantic role](#explicit-role) is an `<li>` element that has `role="listitem"`. This rule is not applicable to elements like this.
 
@@ -33,7 +33,7 @@ The target element is [owned by](#owned-by) an element that has a [semantic role
 
 ## Assumptions
 
-This rule assumes that the explicit [semantic role](#semantic-role) on the target element is used with the intention to comply to WCAG. If the explicit semantic role on the target element is incorrectly used, and any relationships between elements are already programmatically determinable, failing this rule might not result in accessibility issues for users of assistive technologies, and it should then not be considered a failure under WCAG success criterion 1.3.1 Info and Relationships.
+This rule assumes that the [explicit semantic role](#explicit-role) on the target element is used with the intention to comply to WCAG. If the [explicit semantic role](#explicit-role) on the target element is incorrectly used, and any relationships between elements are already programmatically determinable, failing this rule might not result in accessibility issues for users of assistive technologies, and it should then not be considered a failure under WCAG success criterion 1.3.1 Info and Relationships.
 
 ## Accessibility Support
 

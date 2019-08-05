@@ -51,8 +51,8 @@ Element `ul` with role `list` owns at least one instance of required owned eleme
 
 ```html
 <ul role="list">
-	<span role="listitem"></span>
-	<span></span>
+	<span role="listitem">Item 1</span>
+	<span>Item 2</span>
 </ul>
 ```
 
@@ -62,7 +62,7 @@ Element `div` with role `tablist` owns an instance of required owned element, a 
 
 ```html
 <div role="tablist">
-	<span role="tab"> </span>
+	<span role="tab">Tab 1</span>
 </div>
 ```
 
@@ -73,7 +73,7 @@ Elements with multiple nested roles, that each own at least an instance of requi
 ```html
 <table role="grid">
 	<tr role="row">
-		<span role="cell"> </span>
+		<span role="cell">Item 1</span>
 	</tr>
 </table>
 ```
@@ -84,10 +84,9 @@ Multiple types of required owned elements are present.
 
 ```html
 <ul role="menu">
-	<li></li>
-	<!-- implicit role -->
-	<li role="menuitem"></li>
-	<li role="menuitemradio"></li>
+	<li></li> <!-- implicit role -->
+	<li role="menuitem">Item 1</li>
+	<li role="menuitemradio">Item 2</li>
 </ul>
 ```
 
@@ -141,18 +140,18 @@ Element with role `list` owns an instance of required owned element which has an
 
 ```html
 <div role="list">
-	<li></li>
+	<li>Item 1</li>
 </div>
 ```
 
 #### Passed example 8
 
-Element with role `menubar` can own multiple required owned element with role `menuitem`, `menuitemcheckbox` and `menuitmeradio`, but only one is necessary.
+Element with role `menubar` owns multiple instances of required owned elements. Role `menubar` can own elements with role `menuitem`, `menuitemcheckbox` and `menuitmeradio`.
 
 ```html
 <div role="menubar">
-	<div role="menuitem"></div>
-	<div role="menuitemcheckbox"></div>
+	<div role="menuitem">Item 1</div>
+	<div role="menuitemcheckbox">Item 2</div>
 </div>
 ```
 
@@ -164,18 +163,37 @@ Element with role `list` contains a required `listitem`, the relationship betwee
 
 ```html
 <div role="list" aria-owns="id1"></div>
-<div id="id1" role="listitem"></div>
+<div id="id1" role="listitem">Item 1</div>
+```
+
+#### Passed example 10
+
+Element with role `menu` has attribute `aria-busy` set to `true`.
+
+```html
+<ul role="menu" aria-busy="true">Loading</ul>
+```
+
+#### Passed example 11
+
+Element `ul` with implicit role of `list` owns at least one instance of required owned element, in this case a `span` with `role` of `listitem`.
+
+```html
+<ul>
+	<span role="listitem">Item 1</span>
+	<li>Item 2</li> <!-- implicit role -->
+</ul>
 ```
 
 ### Failed
 
 #### Failed example 1
 
-Element with role `list` is missing required owned element `list`.
+Element with role `list` is missing required owned element `listiem`.
 
 ```html
 <ul role="list">
-	<span> </span>
+	<span>Item 1</span>
 </ul>
 ```
 
@@ -185,7 +203,7 @@ Element with role `tablist` is missing required owned element `tab`.
 
 ```html
 <ol role="tablist">
-	<li role="listitem"></li>
+	<li role="listitem">Item 1</li>
 </ol>
 ```
 
@@ -212,7 +230,17 @@ The element with the semantic role of `list` owns the element with the role `tab
 
 ```html
 <div role="list" aria-owns="id2"></div>
-<div id="id2" role="tab"></div>
+<div id="id2" role="tab">Tab 1</div>
+```
+
+#### Failed example 5
+
+Element with implicit role of `list` is missing required owned element `listitem`.
+
+```html
+<ul>
+	<span>Item 1</span>
+</ul>
 ```
 
 ### Inapplicable
@@ -239,10 +267,8 @@ Element has empty role.
 
 #### Inapplicable example 3
 
-Element has no explicit semantic role.
+Element with role `progressbar` expects no owned elements.
 
 ```html
-<ul>
-	<li></li>
-</ul>
+<div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20 %</div>
 ```

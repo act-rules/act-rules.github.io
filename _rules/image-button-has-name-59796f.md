@@ -125,7 +125,7 @@ Image button with aria-labelledby that does not reference an id that exists in t
 
 #### Failed example 4
 
-Accessible name is not only whitespace.
+Accessible name is only whitespace.
 
 ```html
 <input type="image" name="submit" src="button.gif" alt=" " />
@@ -170,11 +170,5 @@ Image is not a button image
 Image button is not included in the accessibility tree
 
 ```html
-<input
-	type="image"
-	name="submit"
-	src="button.gif"
-	alt="Submit"
-	aria-hidden="true"
-/>
+<input type="image" name="submit" src="button.gif" alt="Submit" aria-hidden="true" />
 ```

@@ -3,7 +3,7 @@ id: 1a02b0
 name: Video element transcript
 rule_type: atomic
 description: |
-  Non-streaming `video` elements must have all audio and visual information available in a transcript.
+  This rule checks that non-streaming `video` elements have all audio and visual information available in a transcript.
 accessibility_requirements:
   wcag20:1.2.8: # Media Alternative (Prerecorded) (AAA)
     forConformance: true
@@ -22,7 +22,7 @@ authors:
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming) `video` element that is [visible](#visible) where the video contains audio.
+The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible](#visible) where the video contains audio.
 
 ## Expectation
 

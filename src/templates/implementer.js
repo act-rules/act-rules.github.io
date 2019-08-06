@@ -42,11 +42,7 @@ export default ({ data }) => {
 											return (
 												<tr key={key}>
 													<td>
-														<a
-															target="_blank"
-															rel="noopener noreferrer"
-															href={url}
-														>
+														<a target="_blank" rel="noopener noreferrer" href={url}>
 															{url}
 														</a>
 													</td>

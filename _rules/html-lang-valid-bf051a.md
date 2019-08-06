@@ -3,7 +3,7 @@ id: bf051a
 name: Validity of HTML Lang attribute
 rule_type: atomic
 description: |
-  This rule checks the lang or xml:lang attribute has a valid language subtag.
+  This rule checks that the `lang` or `xml:lang` attribute has a valid language subtag.
 accessibility_requirements:
   wcag20:3.1.1: # Language of Page (A)
     forConformance: true
@@ -23,7 +23,7 @@ The root element of the page, if it is an `html` element with a `lang` and/or `x
 
 ## Expectation
 
-The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-language-subtag) if the attribute is [non-empty](#non-empty).
+The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-language-subtag) if the attribute is not empty ("").
 
 ## Assumptions
 

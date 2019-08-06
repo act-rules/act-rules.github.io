@@ -64,7 +64,7 @@ The `<video>` element does not play for longer than 3 seconds.
 </video>
 ```
 
-### Passed example 3
+#### Passed example 3
 
 The `<video>` element autoplays, and has a control mechanism.
 

@@ -41,7 +41,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-### Passed example 1
+#### Passed example 1
 
 The `<audio>` element does not auto-play for more than 3 seconds.
 
@@ -49,7 +49,7 @@ The `<audio>` element does not auto-play for more than 3 seconds.
   <audio src="../test-assets/moon-audio/moon-speech.mp3#t=25" autoplay="true"></audio>
 ```
 
-### Passed example 2
+#### Passed example 2
 
 The `<video>` element audio output does not last longer than 3 seconds.
 
@@ -62,7 +62,7 @@ The `<video>` element audio output does not last longer than 3 seconds.
 
 ### Failed
 
-### Passed example 1
+#### Failed example 1
 
 The `<audio>` auto-plays for more than 3 seconds.
 
@@ -70,7 +70,7 @@ The `<audio>` auto-plays for more than 3 seconds.
   <audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay="true" controls></audio>
 ```
 
-### Failed example 2
+#### Failed example 2
 
 The `<video>` element audio auto-plays for more than 3 seconds.
 
@@ -83,7 +83,7 @@ The `<video>` element audio auto-plays for more than 3 seconds.
 
 ### Inapplicable
 
-### Inapplicable example 1
+#### Inapplicable example 1
 
 The `video` element is `muted`.
 
@@ -94,7 +94,7 @@ The `video` element is `muted`.
 </video>
 ```
 
-### Inapplicable example 2
+#### Inapplicable example 2
 
 The `video` element `src` file has no audio output.
 
@@ -105,7 +105,7 @@ The `video` element `src` file has no audio output.
 </video>
 ```
 
-### Inapplicable example 3
+#### Inapplicable example 3
 
 The `audio` element does not autoplay.
 

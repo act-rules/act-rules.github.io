@@ -45,7 +45,7 @@ The native `<video>` and `<audio>` controls in several browser and assistive tec
 
 ### Passed
 
-### Passed example 1
+#### Passed example 1
 
 The `<audio>` element has a control mechanism.
 
@@ -64,7 +64,7 @@ The `<video>` element has a control mechanism.
 </video>
 ```
 
-### Passed example 3
+#### Passed example 3
 
 The `<video>` element has a custom control mechanism.
 
@@ -93,7 +93,7 @@ button:hover {cursor: pointer;	cursor: pointer; background-color: grey;  color: 
 
 ### Failed
 
-### Failed example 1
+#### Failed example 1
 
 The `<audio>` does not have a control mechanism.
 
@@ -101,7 +101,7 @@ The `<audio>` does not have a control mechanism.
   <audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay="true"></audio>
 ```
 
-### Failed example 2
+#### Failed example 2
 
 The `<video>` element autoplays and does not have a control mechanism.
 
@@ -112,7 +112,7 @@ The `<video>` element autoplays and does not have a control mechanism.
 </video>
 ```
 
-### Failed example 3
+#### Failed example 3
 
 The `<video>` has a control mechanism but the mechanism is not visible.
 
@@ -139,7 +139,7 @@ button:hover {cursor: pointer;	cursor: pointer; background-color: grey;  color: 
 </body>
 ```
 
-### Failed example 4
+#### Failed example 4
 
 The `<video>` has a control mechanism but the control `<button>` elements do not have accessible names.
 
@@ -166,7 +166,7 @@ The `<video>` has a control mechanism but the control `<button>` elements do not
 </body>
 ```
 
-### Failed example 5
+#### Failed example 5
 
 The `<video>` has a control mechanism but the mechanism is not included in the accessibility tree.
 
@@ -195,7 +195,7 @@ button:hover {cursor: pointer;	cursor: pointer; background-color: grey;  color: 
 
 ### Inapplicable
 
-### Inapplicable example 1
+#### Inapplicable example 1
 
 The `<video>` element is `muted`.
 
@@ -206,7 +206,7 @@ The `<video>` element is `muted`.
 </video>
 ```
 
-### Inapplicable example 2
+#### Inapplicable example 2
 
 The `<video>` element `src` file has no audio output.
 
@@ -217,7 +217,7 @@ The `<video>` element `src` file has no audio output.
 </video>
 ```
 
-### Inapplicable example 3
+#### Inapplicable example 3
 
 The `audio` element does not autoplay.
 

@@ -31,6 +31,8 @@ The target element is [owned by](#owned-by) an element that has a [semantic role
 
 **Note:** The definition of [owned by](#owned-by) used in this rule is diverging from the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element). See more in the [owned by](#owned-by) definition.
 
+**Note:** Both [superclass roles](https://www.w3.org/TR/wai-aria-1.1/#superclassrole) and [subclass roles](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) will be listed as possible [WAI-ARIA required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope) for a role, e.g. the [`row` (role)](https://www.w3.org/TR/wai-aria-1.1/#row) lists both [`grid` (role)](https://www.w3.org/TR/wai-aria-1.1/#grid) and [`table` (role)](https://www.w3.org/TR/wai-aria-1.1/#table) as [required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope), even though `grid` is a subclass of the `table` role.
+
 ## Assumptions
 
 This rule assumes that the [explicit semantic role](#explicit-role) on the target element is used with the intention to comply to WCAG. If the [explicit semantic role](#explicit-role) on the target element is incorrectly used, and any relationships between elements are already programmatically determinable, failing this rule might not result in accessibility issues for users of assistive technologies, and it should then not be considered a failure under WCAG success criterion 1.3.1 Info and Relationships.

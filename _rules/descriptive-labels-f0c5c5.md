@@ -54,7 +54,7 @@ The [accessible name](#accessible-name), if there is any, describes the purpose 
 
 ## Assumptions
 
-This rule assumes that while having an differentiating [context](#context) that is not [programatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) might be a violation under other [WCAG](https://www.w3.org/TR/WCAG21/) success criteria (e.g. 1.3.1 Info and Relationships, if text that has not been marked up as headings is used to split a form into different sections), this is allowed under success criterion 2.4.6 Headings and Labels: Headings and labels describe topic or purpose.
+This rule assumes that while having a differentiating [context](#context) that is not [programatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) might be a violation under other [WCAG](https://www.w3.org/TR/WCAG21/) success criteria (e.g. 1.3.1 Info and Relationships, if text that has not been marked up as headings is used to split a form into different sections), this is allowed under success criterion 2.4.6 Headings and Labels: Headings and labels describe topic or purpose.
 
 ## Accessibility Support
 
@@ -247,7 +247,7 @@ The non-descriptive label coded with the `label` element is through the accessib
 
 #### Inapplicable Example 1
 
-`Label` that is neither visible to users, nor included in the accessibility tree.
+`label` that is neither visible to users, nor included in the accessibility tree.
 
 ```html
 <label for="fname" style="display:none;">First name:</label>

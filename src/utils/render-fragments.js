@@ -39,6 +39,14 @@ export const getImplementationsTabulation = (implementers, cls = 'compact', rule
 	)
 }
 
+const getCompleteImplementations = metrics => {
+	return metrics.filter(metric => {
+		const implementation = metric.implementation[0]
+		const { complete, incorrect } = implementation
+		return !!complete && !incorrect.length
+	})
+}
+
 export const getImplementationsLink = slug => {
 	const ruleId = slug.replace('rules/', '')
 	const metrics = implementationMetrics[ruleId]
@@ -47,17 +55,9 @@ export const getImplementationsLink = slug => {
 	}
 	return (
 		<li>
-			<a href="#implementation-metrics">Implementations ({metrics.length})</a>
+			<a href="#implementation-metrics">Implementations ({getCompleteImplementations(metrics).length})</a>
 		</li>
 	)
-}
-
-const getCompleteImplementations = metrics => {
-	return metrics.filter(metric => {
-		const implementation = metric.implementation[0]
-		const { complete, incorrect } = implementation
-		return !!complete && !incorrect.length
-	})
 }
 
 export const getImplementations = slug => {

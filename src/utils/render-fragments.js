@@ -6,46 +6,36 @@ import implementationMetrics from './../../_data/implementation-metrics.json'
 
 import rulesUsages from './../../_data/rules-usages.json'
 
-export const getImplementations = slug => {
-	const ruleId = slug.replace('rules/', '')
-	const metrics = implementationMetrics[ruleId]
-	if (!metrics) {
-		return null
-	}
+export const getImplementationsTabulation = (implementers, cls = 'compact', ruleId) => {
 	return (
-		<>
-			<a id="implementation-metrics" href="#implementation-metrics">
-				<h2>Implementations</h2>
-			</a>
-			<table className="compact">
-				<thead>
-					<tr>
-						<th>Tool Name</th>
-						<th>Created By</th>
-						<th>Report</th>
-					</tr>
-				</thead>
-				<tbody>
-					{metrics.map(metric => {
-						const { organisation, tool } = metric
-						const filename = tool
-							.split(' ')
-							.join('-')
-							.toLowerCase()
-						const reportUrl = `/implementation/${filename}#${ruleId}`
-						return (
-							<tr key={tool}>
-								<td>{tool}</td>
-								<td>{organisation}</td>
-								<td>
-									<a href={reportUrl}>View Report</a>
-								</td>
-							</tr>
-						)
-					})}
-				</tbody>
-			</table>
-		</>
+		<table className={cls}>
+			<thead>
+				<tr>
+					<th>Tool Name</th>
+					<th>Created By</th>
+					<th>Report</th>
+				</tr>
+			</thead>
+			<tbody>
+				{implementers.map(row => {
+					const { organisation, tool } = row
+					const filename = tool
+						.split(' ')
+						.join('-')
+						.toLowerCase()
+					const reportUrl = ruleId ? `/implementation/${filename}#${ruleId}` : `/implementation/${filename}`
+					return (
+						<tr key={tool}>
+							<td>{tool}</td>
+							<td>{organisation}</td>
+							<td>
+								<a href={reportUrl}>View Report</a>
+							</td>
+						</tr>
+					)
+				})}
+			</tbody>
+		</table>
 	)
 }
 
@@ -59,6 +49,45 @@ export const getImplementationsLink = slug => {
 		<li>
 			<a href="#implementation-metrics">Implementations ({metrics.length})</a>
 		</li>
+	)
+}
+
+const getCompleteImplementations = metrics => {
+	return metrics.filter(metric => {
+		const implementation = metric.implementation[0]
+		const { complete, incorrect } = implementation
+		return !!complete && !incorrect.length
+	})
+}
+
+export const getImplementations = slug => {
+	const ruleId = slug.replace('rules/', '')
+	const metrics = implementationMetrics[ruleId]
+	if (!metrics) {
+		return null
+	}
+	return (
+		<>
+			<a id="implementation-metrics" href="#implementation-metrics">
+				<h2>Implementations</h2>
+			</a>
+			{getImplementationsTabulation(getCompleteImplementations(metrics), 'compact', ruleId)}
+		</>
+	)
+}
+
+export const getImplementationsCount = slug => {
+	const ruleId = slug.replace('rules/', '')
+	const metrics = implementationMetrics[ruleId]
+	if (!metrics) {
+		return null
+	}
+	return (
+		<div className="side-notes">
+			<div className="meta">
+				<span className="heading">Implementations: {getCompleteImplementations(metrics).length}</span>
+			</div>
+		</div>
 	)
 }
 
@@ -450,21 +479,6 @@ export function getInputRulesForRule(inputRules, allRules, stripBasePath = false
 						)
 					})}
 				</ul>
-			</div>
-		</div>
-	)
-}
-
-export function getImplementationsCount(slug) {
-	const ruleId = slug.replace('rules/', '')
-	const metrics = implementationMetrics[ruleId]
-	if (!metrics) {
-		return null
-	}
-	return (
-		<div className="side-notes">
-			<div className="meta">
-				<span className="heading">Implementations: {metrics.length}</span>
 			</div>
 		</div>
 	)

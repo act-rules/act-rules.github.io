@@ -12,6 +12,37 @@ export default ({ data }) => {
 	const report = JSON.parse(contextData)
 	const { data: ruleImplementations } = report
 
+	const getTabulation = data => {
+		return (
+			<table className="compact">
+				<thead>
+					<tr>
+						<th>Testcase Url</th>
+						<th>Expected</th>
+						<th>Actual</th>
+					</tr>
+				</thead>
+				<tbody>
+					{data.map((assertion, index) => {
+						const { url, expected, actual } = assertion
+						const key = `${index}-${url}`
+						return (
+							<tr key={key}>
+								<td>
+									<a target="_blank" rel="noopener noreferrer" href={url}>
+										{url}
+									</a>
+								</td>
+								<td>{expected}</td>
+								<td>{actual}</td>
+							</tr>
+						)
+					})}
+				</tbody>
+			</table>
+		)
+	}
+
 	return (
 		<Layout>
 			<SEO title={updatedTitle} keywords={site.siteMetadata.keywords} />
@@ -19,41 +50,29 @@ export default ({ data }) => {
 				<h1>{pageTitle}</h1>
 				{ruleImplementations.map((ruleImplementation, index) => {
 					const { ruleId, ruleName, implementation } = ruleImplementation
-					const { assertions } = implementation[0]
+					const { complete, incorrect, assertions } = implementation[0]
 					const key = `${index}-${ruleId}`
+					const isComplete = complete && incorrect.length === 0
+
 					return (
 						<div key={key}>
 							<Link to={`/rules/${ruleId}`}>
 								<h2 id={`#${ruleId}`}>{ruleName}</h2>
 							</Link>
-							{
-								<table className="compact">
-									<thead>
-										<tr>
-											<th>Testcase Url</th>
-											<th>Expected</th>
-											<th>Actual</th>
-										</tr>
-									</thead>
-									<tbody>
-										{assertions.map((assertion, index) => {
-											const { url, expected, actual } = assertion
-											const key = `${index}-${url}`
-											return (
-												<tr key={key}>
-													<td>
-														<a target="_blank" rel="noopener noreferrer" href={url}>
-															{url}
-														</a>
-													</td>
-													<td>{expected}</td>
-													<td>{actual}</td>
-												</tr>
-											)
-										})}
-									</tbody>
-								</table>
-							}
+							{!isComplete && (
+								<div className="invalid">
+									Incomplete implementation.
+									<br />
+									Listed below are the incomplete assertions. Kindly submit an amended implementation report.
+								</div>
+							)}
+							{isComplete
+								? getTabulation(assertions)
+								: getTabulation(
+										assertions.filter(({ url }) => {
+											return incorrect.includes(url)
+										})
+								  )}
 						</div>
 					)
 				})}

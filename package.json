@@ -123,7 +123,7 @@
 		"prismjs": "^1.17.1",
 		"prop-types": "^15.7.2",
 		"react": "^16.8.6",
-		"react-dom": "^16.8.6",
+		"react-dom": "^16.9.0",
 		"react-helmet": "^5.2.1",
 		"react-media": "^1.9.2",
 		"showdown": "^1.9.0"

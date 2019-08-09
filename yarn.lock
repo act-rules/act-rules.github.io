@@ -609,7 +609,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/plugin-transform-spread@^7.0.0", "@babel/plugin-transform-spread@^7.2.0":
+"@babel/plugin-transform-spread@^7.0.0", "@babel/plugin-transform-spread@^7.2.0", "@babel/plugin-transform-spread@^7.2.2":
   version "7.2.2"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-spread/-/plugin-transform-spread-7.2.2.tgz#3103a9abe22f742b6d406ecd3cd49b774919b406"
   integrity sha512-KWfky/58vubwtS0hLqEnrWJjsMGaOeSBn90Ezn5Jeg9Z8KKHmELbP1yGylMlm5N6TPKeY9A2+UaSYLdxahg01w==
@@ -1279,11 +1279,6 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
   integrity sha512-ONhaKPIufzzrlNbqtWFFd+jlnemX6lJAgq9ZeiZtS7I1PIf/la7CW4m83rTXRnVnsMbW2k56pGYu7AUFJD9Pow==
 
-"@stefanprobst/lokijs@^1.5.6-b":
-  version "1.5.6-b"
-  resolved "https://registry.yarnpkg.com/@stefanprobst/lokijs/-/lokijs-1.5.6-b.tgz#6a36a86dbe132e702e6b15ffd3ce4139aebfe942"
-  integrity sha512-MNodHp46og+Sdde/LCxTLrxcD5Dimu21R/Fer2raXMG1XtHSV2+vZnkIV87OPAxuf2NiDj1W5hN7Q2MYUfQQ8w==
-
 "@types/babel__core@^7.1.0":
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.2.tgz#608c74f55928033fce18b99b213c16be4b3d114f"
@@ -1674,6 +1669,11 @@ acorn@^6.0.1, acorn@^6.0.7:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.2.0.tgz#67f0da2fc339d6cfb5d6fb244fd449f33cd8bbe3"
   integrity sha512-8oe72N3WPMjA+2zVG71Ia0nXZ8DpQH+QyyHO+p06jT8eg8FGG3FbcUIi8KziHlAfheJQZeoqbvq1mQSQHXKYLw==
 
+"act-rules-implementation-access-board@git+https://git@github.com/act-rules/act-rules-implementation-trusted-tester.git", "act-rules-implementation-trusted-tester@git+https://git@github.com/act-rules/act-rules-implementation-trusted-tester.git":
+  version "1.0.0"
+  uid db78eb5206f6bb95fd587628c6c77984576b22e0
+  resolved "git+https://git@github.com/act-rules/act-rules-implementation-trusted-tester.git#db78eb5206f6bb95fd587628c6c77984576b22e0"
+
 "act-rules-implementation-access-engine@git+https://git@github.com/act-rules/act-rules-implementation-access-engine.git":
   version "1.0.0"
   resolved "git+https://git@github.com/act-rules/act-rules-implementation-access-engine.git#fc89e8142ff8d2ad37ee411cbf3801b44320df43"
@@ -1686,13 +1686,14 @@ acorn@^6.0.1, acorn@^6.0.7:
   version "1.0.0"
   resolved "git+https://git@github.com/act-rules/act-rules-implementation-axe-core.git#3d61261e7998e2b753eac465cd4dfb316269f0ca"
 
+"act-rules-implementation-qualweb@git+https://git@github.com/act-rules/act-rules-implementation-qualweb.git":
+  version "1.0.0"
+  uid "6354b64ce8f5311cadf4396e6441709856198a61"
+  resolved "git+https://git@github.com/act-rules/act-rules-implementation-qualweb.git#6354b64ce8f5311cadf4396e6441709856198a61"
+
 "act-rules-implementation-rgaa@git+https://git@github.com/act-rules/act-rules-implementation-rgaa.git":
   version "1.0.0"
   resolved "git+https://git@github.com/act-rules/act-rules-implementation-rgaa.git#747d788db60d5ae5f1229a746ef8f0f5ccec6d2a"
-
-"act-rules-implementation-trusted-tester@git+https://git@github.com/act-rules/act-rules-implementation-trusted-tester.git":
-  version "1.0.0"
-  resolved "git+https://git@github.com/act-rules/act-rules-implementation-trusted-tester.git#db78eb5206f6bb95fd587628c6c77984576b22e0"
 
 address@1.0.3:
   version "1.0.3"
@@ -1953,7 +1954,7 @@ arrify@^1.0.1:
   resolved "https://registry.yarnpkg.com/arrify/-/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
   integrity sha1-iYUI2iIm84DfkEcoRWhJwVAaSw0=
 
-asap@^2.0.0, asap@~2.0.3:
+asap@~2.0.3:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
   integrity sha1-5QNHYR1+aQlDIIu9r+vLwvuGbUY=
@@ -2184,10 +2185,10 @@ babel-plugin-macros@^2.4.2:
     cosmiconfig "^5.2.0"
     resolve "^1.10.0"
 
-babel-plugin-remove-graphql-queries@^2.7.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.7.0.tgz#dd5b1201cb90f1197e4588761af602f2e180f60a"
-  integrity sha512-mV+OTw3GPGJnS2fOB8jafJQi4H273EJtd73MWTpbwm2HgDENRBbt5m2BOa66XuplaW36qsUdV8zj0f0MNlY9sA==
+babel-plugin-remove-graphql-queries@^2.7.2:
+  version "2.7.2"
+  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.7.2.tgz#101c8b26567e35c217e817e892135a9a04a5a805"
+  integrity sha512-kkIqi2+oZ7YCLbZbrhOGxPA/HuWpfvzRUxbD75SHqwxl9fZVWSLQhOUl72GEpAuEt4MeCEguKpMX100oDN3MQA==
 
 babel-plugin-syntax-dynamic-import@^6.18.0:
   version "6.18.0"
@@ -2211,6 +2212,11 @@ babel-plugin-transform-object-rest-spread@^6.26.0:
   dependencies:
     babel-plugin-syntax-object-rest-spread "^6.8.0"
     babel-runtime "^6.26.0"
+
+babel-plugin-transform-react-remove-prop-types@^0.4.24:
+  version "0.4.24"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.24.tgz#f2edaf9b4c6a5fbe5c1d678bfb531078c1555f3a"
+  integrity sha512-eqj0hVcJUR57/Ug2zE1Yswsw4LhuqqHhD+8v120T1cl3kjg76QwtyBrdIk4WVwK+lAhBJVYCd/v+4nc4y+8JsA==
 
 babel-preset-fbjs@^3.1.2:
   version "3.2.0"
@@ -2245,18 +2251,21 @@ babel-preset-fbjs@^3.1.2:
     "@babel/plugin-transform-template-literals" "^7.0.0"
     babel-plugin-syntax-trailing-function-commas "^7.0.0-beta.0"
 
-babel-preset-gatsby@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/babel-preset-gatsby/-/babel-preset-gatsby-0.2.1.tgz#c6a5da3efdcaca5be0ea551704d50246c8af049e"
-  integrity sha512-Eeyh7mjL++WYrSIYOegO94V895xb+mcGPwtSFZWNFJ74x86nizDetQelKYXDXojR2iE5vhlxBA1qmjgdEcPLTQ==
+babel-preset-gatsby@^0.2.8:
+  version "0.2.8"
+  resolved "https://registry.yarnpkg.com/babel-preset-gatsby/-/babel-preset-gatsby-0.2.8.tgz#976adb62bcf73f1a53374deb3a3a37b8880d5745"
+  integrity sha512-Cks3TRbx0CvjwW25noYZwideKp/gH8RJypuwd8gJ/Y1JDXrE7Vnjkvct6QH61XLcX7QIkRoissvOt1QqNWyaIg==
   dependencies:
     "@babel/plugin-proposal-class-properties" "^7.0.0"
     "@babel/plugin-syntax-dynamic-import" "^7.0.0"
     "@babel/plugin-transform-runtime" "^7.0.0"
+    "@babel/plugin-transform-spread" "^7.2.2"
     "@babel/preset-env" "^7.4.1"
     "@babel/preset-react" "^7.0.0"
     "@babel/runtime" "^7.4.5"
+    babel-plugin-dynamic-import-node "^1.2.0"
     babel-plugin-macros "^2.4.2"
+    babel-plugin-transform-react-remove-prop-types "^0.4.24"
 
 babel-preset-jest@^24.6.0:
   version "24.6.0"
@@ -3889,11 +3898,6 @@ debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@~4.1.0:
   dependencies:
     ms "^2.1.1"
 
-debuglog@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/debuglog/-/debuglog-1.0.1.tgz#aa24ffb9ac3df9a2351837cfb2d279360cd78492"
-  integrity sha1-qiT/uaw9+aI1GDfPstJ5NgzXhJI=
-
 decamelize@^1.1.1, decamelize@^1.1.2, decamelize@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
@@ -4148,14 +4152,6 @@ devcert-san@^0.3.3:
     mkdirp "^0.5.1"
     tmp "^0.0.31"
     tslib "^1.6.0"
-
-dezalgo@^1.0.0:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/dezalgo/-/dezalgo-1.0.3.tgz#7f742de066fc748bc8db820569dddce49bf0d456"
-  integrity sha1-f3Qt4Gb8dIvI24IFad3c5Jvw1FY=
-  dependencies:
-    asap "^2.0.0"
-    wrappy "1"
 
 diff-sequences@^24.3.0:
   version "24.3.0"
@@ -4929,7 +4925,7 @@ expand-tilde@^2.0.0, expand-tilde@^2.0.2:
   dependencies:
     homedir-polyfill "^1.0.1"
 
-expect@^24.8.0:
+expect@^24.1.0, expect@^24.8.0:
   version "24.8.0"
   resolved "https://registry.yarnpkg.com/expect/-/expect-24.8.0.tgz#471f8ec256b7b6129ca2524b2a62f030df38718d"
   integrity sha512-/zYvP8iMDrzaaxHVa724eJBCKqSHmO0FA7EDkBiRHxg6OipmMn1fN+C8T9L9K8yr7UONkOifu6+LLH+z76CnaA==
@@ -5555,10 +5551,10 @@ g-status@^2.0.2:
     matcher "^1.0.0"
     simple-git "^1.85.0"
 
-gatsby-cli@^2.7.8:
-  version "2.7.8"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.7.8.tgz#03f8131ab013db587e683c3e192a67331083a18e"
-  integrity sha512-75ZMOG9kMISMv+YV/NhwiGDoagd9r/Az2B0NVzZaRtSeqSY65stEoiI0yxZYz+nWLbzSWJqvLuA8ujWNODHz6g==
+gatsby-cli@^2.7.28:
+  version "2.7.28"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.7.28.tgz#f620b68e0c0759025e61fbc7f5125cc506f1b8d4"
+  integrity sha512-jPAh0ycXMg2l1s2DUAmZmc5O2VuKf6ZU13RPu4sSvFeZIRxNHWFeJ7gTh2ncNKMZ0faUaIqb2PjDjQNsLNq/dA==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -5576,10 +5572,10 @@ gatsby-cli@^2.7.8:
     execa "^0.8.0"
     fs-exists-cached "^1.0.0"
     fs-extra "^4.0.1"
-    gatsby-telemetry "^1.1.3"
+    gatsby-telemetry "^1.1.11"
     hosted-git-info "^2.6.0"
     is-valid-path "^0.1.1"
-    lodash "^4.17.10"
+    lodash "^4.17.14"
     meant "^1.0.1"
     node-fetch "^2.6.0"
     object.entries "^1.1.0"
@@ -5598,86 +5594,92 @@ gatsby-cli@^2.7.8:
     yargs "^12.0.5"
     yurnalist "^1.0.5"
   optionalDependencies:
-    ink "^2.0.5"
+    ink "^2.3.0"
     ink-spinner "^3.0.1"
 
-gatsby-graphiql-explorer@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/gatsby-graphiql-explorer/-/gatsby-graphiql-explorer-0.2.1.tgz#39acfadd05bac0774be63c2ac1cb628bbd2c905d"
-  integrity sha512-CAiadkcg4zSvub48OvTgd1lamnro2j4Rtgi+78nrtCcggQdjfRITaYSZo5wQ+8bYU0eN1S8d0MTNyuij403Yvw==
+gatsby-core-utils@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.0.4.tgz#098b5b2f444faadd3bc9f7e20bd0a092129882ba"
+  integrity sha512-r9HhRvnaPFliO9IzN6Yz2xTsZ8vtWKvzQHz0GwW3iFe6KkhXC+Y1p8eEaorRz6AnOE6sRbWaeqpe3AA6FbKr2g==
+
+gatsby-graphiql-explorer@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/gatsby-graphiql-explorer/-/gatsby-graphiql-explorer-0.2.3.tgz#fdfc6c1b8b5019df57aad025badb552e3141f6e4"
+  integrity sha512-SwZZ79V5TPxWP44bJTP3x4XvJH6mHDXoMTKO4RAhUygN0CtPSOfdedEWfEexDmteJyBYsu3kQzsI8h6qhbbSzg==
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-image@^2.1.2:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.2.4.tgz#d6c8b42feff1252f7d285584b7107a2aae7b394c"
-  integrity sha512-wlbqGsfIX2+ILz/fk/94fDShc5zfhTlj7vYGyTFZfKombvwPXFAJD6pey4zTBZUUBrxMt2tROMXNnmFi3wGyww==
+gatsby-image@^2.2.8:
+  version "2.2.8"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.2.8.tgz#edebdda1e4b823735693737d68855a7fb66cbde5"
+  integrity sha512-R0hc37xf03Bqi51TlRHuu6KB5sFiXzHx0tQotml8TeFXu1k5yvV13D8fHhlHCZQq5zJe4KHx0rGfAprzb4s1fA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     object-fit-images "^3.2.4"
     prop-types "^15.6.1"
 
-gatsby-link@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-2.2.0.tgz#aab319b2d4c16daafbbca5f6d1c6d481841c39be"
-  integrity sha512-wNGnvKhCcCF/BB4p287Ns6zdWW3JqAi2sNlgugY+fLYtjFwdkyS6nRxHaT70bRZ2JpnsOGv49HSxxYi8Tq0CvQ==
+gatsby-link@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-2.2.4.tgz#8846130b3829e0c9c62d11d924ba63e98e07c93d"
+  integrity sha512-W73ISnmR2bCvDf2CH+9fZd8aqEbN+sNfnWkrW5GUVHaSx1PMR1hHq4ihkRF7sDDgynnxfnZdJX+oSat44rghFA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
-gatsby-page-utils@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-page-utils/-/gatsby-page-utils-0.0.2.tgz#0eb341abcdd0a21a8e85a4fe6fb736956d95e0ad"
-  integrity sha512-8fG4KuLtck5q2HPdHmFs69a34CAO2cL1js7WCuFPma3P53lLF5Ui1v5o6cTouF3Yms3Gah8piM3zIWhG7mCHtQ==
+gatsby-page-utils@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-page-utils/-/gatsby-page-utils-0.0.5.tgz#faefc2ece9f14bfd161ddd0104d1e12b54ef7a70"
+  integrity sha512-yHL4OKgVEOWOuTUCO2ZPPmWyA1bAtSUPrf+W5w3p24pUwqMkz2Yu2hii/PhgQs+2ap6BkpSwBjBSYS2YLRmTNg==
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
     chokidar "2.1.2"
     fs-exists-cached "^1.0.0"
     glob "^7.1.1"
-    lodash "^4.17.10"
+    lodash "^4.17.14"
     micromatch "^3.1.10"
     slash "^1.0.0"
 
-gatsby-plugin-manifest@^2.1.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.1.tgz#89d23587bfddbf3ce606fc353555d372cfc7d432"
-  integrity sha512-c+EIIUHMKb15G/8cKYZOq29MgtkJ5H2WcIs4mYyfetrhIkm9lVIIqmH3AlqKSqo0z6JA08D1IAJpvQmUk0SO/Q==
+gatsby-plugin-manifest@^2.2.4:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.5.tgz#cfa3f5a5f02989e9a15a3b08b11548be45af11e8"
+  integrity sha512-7Zpf/jz2LNk7AkjdQJ5cOFcuGUvSbXYV+lfRY9rZwQCyE/fDVjjb5lbdDsCLKvFfWqJuPft3P5FPE6Az7sKpCw==
   dependencies:
     "@babel/runtime" "^7.0.0"
+    gatsby-core-utils "^1.0.4"
     semver "^5.6.0"
     sharp "^0.22.1"
 
-gatsby-plugin-offline@^2.1.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.2.1.tgz#98ab98c42f1c54b777468179633916f83281b8d4"
-  integrity sha512-vPTiHSU5/XcLXGBhbnLnaKO/NPysYbBcH535lL4wmqaK78gubth0RmpNovXZwHkf7E89wMLl8ICFFRwV+T/xjA==
+gatsby-plugin-offline@^2.2.4:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.2.5.tgz#65a2ce3ccabe8cf7e6763be07a4d51b8fdd65ca6"
+  integrity sha512-BE5F+LU1bPv25dYsHMQy6l2NaikDRP/znwFl4pQ7nvsJeqZHT7MkmYteZO8NC+MQPQKYXoEIxbhrfoRM8oBkLw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     cheerio "^1.0.0-rc.2"
     idb-keyval "^3.1.0"
-    lodash "^4.17.10"
+    lodash "^4.17.14"
     slash "^3.0.0"
     workbox-build "^3.6.3"
 
-gatsby-plugin-page-creator@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.1.2.tgz#7e81cf3cd5d051d28fd582e56254d6183479589f"
-  integrity sha512-4lBr4m/3v5qF/pzuPCxuGfoeXqIyue18hIGrPrcbDOdrIpSVSHH71RobYBGce/+jAVaKaiKHl21Z+/Z2HfToYg==
+gatsby-plugin-page-creator@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.1.5.tgz#723fc0392a67978cab649a402ad88f6f06b74e4c"
+  integrity sha512-nUcsaJAaMy9UQS66QY0Dys6Xx+2CGG2EVyvDQ4NQ713la62jicOU764Bmi5G7sE2QGgpNoBtUQCW+aE6UMGpLQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
     fs-exists-cached "^1.0.0"
-    gatsby-page-utils "^0.0.2"
+    gatsby-page-utils "^0.0.5"
     glob "^7.1.1"
-    lodash "^4.17.10"
+    lodash "^4.17.14"
     micromatch "^3.1.10"
 
-gatsby-plugin-prefetch-google-fonts@^1.4.2:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-prefetch-google-fonts/-/gatsby-plugin-prefetch-google-fonts-1.4.2.tgz#a9a4291bec9e0ddf34a0112ec969afc5b2d60902"
-  integrity sha512-aeeWsXAZtgvj3SfFa22tVFbki12W9df4xVWaQ/SEV2FKGve9sMaInWIRtUBgJZ7kPl8JBuhzcNz69XitxC0WqQ==
+gatsby-plugin-prefetch-google-fonts@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-prefetch-google-fonts/-/gatsby-plugin-prefetch-google-fonts-1.4.3.tgz#0557879c7ba0085e4d53107699a8c1073bd52d0e"
+  integrity sha512-rrNGpdLkSEQWksM1A1cJnL/wuu9GLfAl8oPQgpn3cmpKd4jnXk+nbLyQOwKQlRYSrzpju59dY8oyf4UfSFbqPg==
   dependencies:
     "@babel/runtime" "^7.2.0"
     clean-css "^4.2.1"
@@ -5688,35 +5690,37 @@ gatsby-plugin-prefetch-google-fonts@^1.4.2:
     google-fonts-plugin "2.0.2"
     object-hash "^1.3.0"
 
-gatsby-plugin-react-helmet@^3.0.12:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-3.1.0.tgz#5cc5271334fce7522207f751a24af97bd7eebaf5"
-  integrity sha512-QJefYCTvu+WRgnckNipnfvNVUR8+1TsXN+/AZPWJ9OyFUWmgYJO/PyDpIzEEYekDnDMb7gKFFj+UuJ8bSGvj2g==
+gatsby-plugin-react-helmet@^3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-3.1.3.tgz#a18033a5fec7ec39614204831a1e5094337e56e1"
+  integrity sha512-S/1B/9JxHFEyeZ/d0BFzJYX9Gd5XBNvLJ7vLd7f7ZzFiqOYpNchnliF87cX+/BuR1gj+v2ypZ7tLRA4LE4PyBw==
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-sass@^2.0.10:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-2.1.0.tgz#cfeebed96c027909fdd07209075cbbdbabdb3d22"
-  integrity sha512-9dnZ9jMsgrwGBN+zEkqLk6OLWhdakX1Yb/QjuREYee+EgJGEOAp4auRpVQKLcekqKdtCN+gES5BidmkY7J8zgg==
+gatsby-plugin-sass@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-2.1.4.tgz#93602fe2ccff6a1b86b392e36becfc783e92feb8"
+  integrity sha512-aVd5rBKUNn4AzvxbRZKMKAo0x5y532Adj5wUWGbd0wW0yyAuGa0nc/wd58Wf7kVChTI1uAaOMnbGh+mW6owmjw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     sass-loader "^7.0.1"
 
-gatsby-plugin-sharp@^2.1.3:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.2.2.tgz#cb0702611541a47282059777cd72785f254e876f"
-  integrity sha512-e7+4EWLhcucRHFjtDTJFe04IjvLyh0U6Q+CqqcYmL/veIDTVf7XvGefiKlcFxG8ys6l2d3gd3L4+nR8WzV6lCA==
+gatsby-plugin-sharp@^2.2.9:
+  version "2.2.10"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.2.10.tgz#94f3f62faa939a1337baa168b1735ce9381b4c50"
+  integrity sha512-vI50vew5oYgiWIkZ7VZJ/KhW+JM8bjEvo5CXokqDtzKkrh9eyGBMEqykDyQKPXShdnPYEgo0ZKTRIiGL/u++1A==
   dependencies:
     "@babel/runtime" "^7.0.0"
     async "^2.1.2"
     bluebird "^3.5.0"
     fs-extra "^7.0.0"
+    gatsby-core-utils "^1.0.4"
+    got "^8.3.2"
     imagemin "^6.0.0"
     imagemin-mozjpeg "^8.0.0"
     imagemin-pngquant "^6.0.0"
     imagemin-webp "^5.0.0"
-    lodash "^4.17.10"
+    lodash "^4.17.14"
     mini-svg-data-uri "^1.0.0"
     potrace "^2.1.1"
     probe-image-size "^4.0.0"
@@ -5725,53 +5729,53 @@ gatsby-plugin-sharp@^2.1.3:
     sharp "^0.22.1"
     svgo "^1.2.0"
 
-gatsby-react-router-scroll@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-2.1.1.tgz#715c15689b1715d350f80a32204a0222a2ad6d49"
-  integrity sha512-mAE4uOUiPkYit4NGUaI7lxljfDuJJyHsLo9UpsbsRMsuEqpF5kTcwTFE8hICvv+c+apjh12hJWAhGGO9K2xOug==
+gatsby-react-router-scroll@^2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-2.1.3.tgz#4f1654555da14b4860386fab711b3bac0e177ac5"
+  integrity sha512-es1J3xISzrjVhvMKhf9GxgVaBKpVne6/Nk05rvHU9ZVv2jn8GjlB/DrGf+Yw0LZU5fiEJ5ePBr+YffnrPDY29A==
   dependencies:
     "@babel/runtime" "^7.0.0"
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-remark-autolink-headers@^2.0.15:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-2.1.0.tgz#d6db90f234307f6a4711c89c609e2fd2d7ee433a"
-  integrity sha512-18pwSTZ11GoL08hll8kaMEtcd/HLL3/WlxxBjQvxmN4YznONVsjCnLGtmSWQmg16jJYYekrQH1A2cNf9qg6Ogg==
+gatsby-remark-autolink-headers@^2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-2.1.3.tgz#035f5501febf7592efa61bd38cd8210c7415af60"
+  integrity sha512-pMce69OrUnUKf/QALBw8MxMYG+aBuLR/Sh2Q3178Gb6KIk7q0TR/UAO7djqnuQqgrZKtyWe9lqxDXkciIrLD1w==
   dependencies:
     "@babel/runtime" "^7.0.0"
     github-slugger "^1.1.1"
-    lodash "^4.17.11"
+    lodash "^4.17.14"
     mdast-util-to-string "^1.0.2"
     unist-util-visit "^1.3.0"
 
-gatsby-remark-copy-linked-files@^2.0.12:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-2.1.0.tgz#fdd1f2013b613087139bca8d5b76c4130ad8ae6b"
-  integrity sha512-MJVkLwH/IhWjNdCNEgRfmwyQPOGan5pvGscbVYC3Ho1sIBMkH3ruTyjgpCJzITuQe3gUIhsCSqsr3FlLSkHzsA==
+gatsby-remark-copy-linked-files@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-2.1.4.tgz#b545897122a19ff3a719d6673035cf53b2b9414b"
+  integrity sha512-CEJYF4mj3Z4+s9yoUOyaQA/L0deydC/gu6Kay/PFwTyIDcgkWG1RFsFocEcEb6kbgimZxTElsbDk0MOulr1NIg==
   dependencies:
     "@babel/runtime" "^7.0.0"
     cheerio "^1.0.0-rc.2"
     fs-extra "^4.0.1"
     is-relative-url "^2.0.0"
-    lodash "^4.17.10"
+    lodash "^4.17.14"
     path-is-inside "^1.0.2"
     probe-image-size "^4.0.0"
     unist-util-visit "^1.3.0"
 
-gatsby-remark-prismjs@^3.2.11:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-3.3.1.tgz#012ed64d577b9c9a1dce209ddc8cceb58ed09de9"
-  integrity sha512-V0rzHqmVgzJX6WSse4d29wfSv4Y8zm1Qfl3xwbMngiSENZ8gLvCiMDKZGrV8QcwJNyUyDsBDCNakGKyCvTu5EA==
+gatsby-remark-prismjs@^3.3.4:
+  version "3.3.5"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-3.3.5.tgz#0009a6677543706461516f8ab3e5cdedb9f09bd4"
+  integrity sha512-e0HhhpyHJ+PqDt6VcqXJ5Dzf63rK9VcvbXJvTCi9Tqn6k62C5cnNMUR7J43aVdQRH9dDkDCF6rgVfl6XID6TEA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     parse-numeric-range "^0.0.2"
     unist-util-visit "^1.3.0"
 
-gatsby-source-filesystem@^2.0.38:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.1.2.tgz#b7ce69d4b819924d22f91339b419624cfb3c4f43"
-  integrity sha512-mrlQ00Es+qjb2MCIEHAkv/F3yfR5IgI8z2q54tqpxu4amlUy3SQH5ThJDGD7Ya574ub9aKdHOr8virTssmTDgA==
+gatsby-source-filesystem@^2.1.8:
+  version "2.1.9"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.1.9.tgz#92fa2e06565b43d3750da5136b492dae705c9792"
+  integrity sha512-3XTDdDAo7Hhs6Nt4ug7aTAkxCj28hB7IeylHrEh+QjDXAuoijvQSNucOKieoxkfUaAGWnSWbdJwQtPch7nKa8g==
   dependencies:
     "@babel/runtime" "^7.0.0"
     better-queue "^3.8.7"
@@ -5779,6 +5783,7 @@ gatsby-source-filesystem@^2.0.38:
     chokidar "2.1.2"
     file-type "^10.2.0"
     fs-extra "^5.0.0"
+    gatsby-core-utils "^1.0.4"
     got "^7.1.0"
     md5-file "^3.1.1"
     mime "^2.2.0"
@@ -5788,10 +5793,10 @@ gatsby-source-filesystem@^2.0.38:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-telemetry@^1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.1.3.tgz#15250fe425c24317f00968bb9346a566e61d042a"
-  integrity sha512-MUnDHrqQAWYUs8PeAHXhycL0wL50JkeE4wMkiA4Pq8eu4xMbEf9JIGT0auJZdMls+jXPeYJCjjN7T2qKZx7Kvw==
+gatsby-telemetry@^1.1.11:
+  version "1.1.11"
+  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.1.11.tgz#7c98881759fa8f61a6bf4f2ee2fb9ac74c6eb592"
+  integrity sha512-pEsDQCHSID0HWj9gzDjkA0Y07j9ItpQ9vYdHsyYeNvwan+L6dI6r2AfSM/gfGL0FHyj14JGixxNChAG1N36Utw==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -5803,7 +5808,7 @@ gatsby-telemetry@^1.1.3:
     fs-extra "^7.0.1"
     git-up "4.0.1"
     is-docker "1.1.0"
-    lodash "^4.17.10"
+    lodash "^4.17.14"
     node-fetch "2.3.0"
     resolve-cwd "^2.0.0"
     source-map "^0.5.7"
@@ -5811,17 +5816,18 @@ gatsby-telemetry@^1.1.3:
     stack-utils "1.0.2"
     uuid "3.3.2"
 
-gatsby-transformer-remark@^2.3.12:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.6.0.tgz#c7628ce3ce4de589b27fac77ef2b079de78a0adf"
-  integrity sha512-1zGK6TTWrWi1XoN97ssr3wwqKvHVovJMKErIfOGIhEkU6ycpdvBqQMSN89wvtENVxFl3nWZLUdX9+ijPnyvCHA==
+gatsby-transformer-remark@^2.6.10:
+  version "2.6.12"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.6.12.tgz#8467e0751127024204286711ae76f0dc9f574f9c"
+  integrity sha512-ywKxC4b1Oc3dXuGDTRCXC7xO0Bt+S6GXQH/eTE+HXQE098tDlPu5lSC5MUm9pQcFLVXcvg/gaTL5axeCMEEayw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
+    gatsby-core-utils "^1.0.4"
     gray-matter "^4.0.0"
     hast-util-raw "^4.0.0"
     hast-util-to-html "^4.0.0"
-    lodash "^4.17.10"
+    lodash "^4.17.14"
     mdast-util-to-hast "^3.0.0"
     mdast-util-to-string "^1.0.5"
     mdast-util-toc "^2.0.1"
@@ -5837,10 +5843,10 @@ gatsby-transformer-remark@^2.3.12:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.3.0"
 
-gatsby-transformer-sharp@^2.1.21:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.2.1.tgz#5bc9c0d22e04c842df0b098e103d9655e051806d"
-  integrity sha512-KmUqtvt3ry8bL6RMfHwMgRH4AJcDOJgGMTyLeULUScDoKTSriColPhbXMmJzM4Gsq3NUNqJkRo9qvNxBqnSWtQ==
+gatsby-transformer-sharp@^2.2.5:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.2.6.tgz#38da2c4a9e3acd7a20411cf9febf97df2db8081e"
+  integrity sha512-yRHEZrVPaP2oeccAPyzBff3xxXExsg8s7jFXsmRAbQVTYtP0PLmSJ3x59t3kbJZqbL4kTZhPrdsqg3KmGoAeTA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
@@ -5850,10 +5856,10 @@ gatsby-transformer-sharp@^2.1.21:
     semver "^5.6.0"
     sharp "^0.22.1"
 
-gatsby@^2.8.6:
-  version "2.13.4"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.13.4.tgz#a9168908895fd877aa4f283762d556c1f7dfe4d0"
-  integrity sha512-IpjfA2wqsaSuj6Mf8po4vbWRFzQ+E/eKT7s868bAx4vNvZuNsnVO1scBT1LBpFpjN0Y6ikSHVirg9ILt+Qu8Lg==
+gatsby@^2.13.51:
+  version "2.13.54"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.13.54.tgz#faa3d0435e184b4cac1a8af1f9940b7b6b7ea375"
+  integrity sha512-VUN789hwTMHi7IdpnbmBpSsKmcYc1PHrf+apyVSdKHnB4+W6ziNlFTegabTn5LYkEOvKeFMDdWGkpM5/Rh73wg==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -5866,7 +5872,6 @@ gatsby@^2.8.6:
     "@mikaelkristiansson/domready" "^1.0.9"
     "@pieh/friendly-errors-webpack-plugin" "1.7.0-chalk-2"
     "@reach/router" "^1.1.1"
-    "@stefanprobst/lokijs" "^1.5.6-b"
     address "1.0.3"
     autoprefixer "^9.6.0"
     babel-core "7.0.0-bridge.0"
@@ -5874,8 +5879,8 @@ gatsby@^2.8.6:
     babel-loader "^8.0.0"
     babel-plugin-add-module-exports "^0.2.1"
     babel-plugin-dynamic-import-node "^1.2.0"
-    babel-plugin-remove-graphql-queries "^2.7.0"
-    babel-preset-gatsby "^0.2.1"
+    babel-plugin-remove-graphql-queries "^2.7.2"
+    babel-preset-gatsby "^0.2.8"
     better-opn "0.1.4"
     better-queue "^3.8.6"
     bluebird "^3.5.0"
@@ -5912,12 +5917,13 @@ gatsby@^2.8.6:
     flat "^4.0.0"
     fs-exists-cached "1.0.0"
     fs-extra "^5.0.0"
-    gatsby-cli "^2.7.8"
-    gatsby-graphiql-explorer "^0.2.1"
-    gatsby-link "^2.2.0"
-    gatsby-plugin-page-creator "^2.1.2"
-    gatsby-react-router-scroll "^2.1.1"
-    gatsby-telemetry "^1.1.3"
+    gatsby-cli "^2.7.28"
+    gatsby-core-utils "^1.0.4"
+    gatsby-graphiql-explorer "^0.2.3"
+    gatsby-link "^2.2.4"
+    gatsby-plugin-page-creator "^2.1.5"
+    gatsby-react-router-scroll "^2.1.3"
+    gatsby-telemetry "^1.1.11"
     glob "^7.1.1"
     got "8.0.0"
     graphql "^14.1.1"
@@ -5930,7 +5936,8 @@ gatsby@^2.8.6:
     jest-worker "^23.2.0"
     json-loader "^0.5.7"
     json-stringify-safe "^5.0.1"
-    lodash "^4.17.10"
+    lodash "^4.17.14"
+    lokijs "^1.5.7"
     md5 "^2.2.1"
     md5-file "^3.1.1"
     micromatch "^3.1.10"
@@ -5953,8 +5960,7 @@ gatsby@^2.8.6:
     raw-loader "^0.5.1"
     react-dev-utils "^4.2.3"
     react-error-overlay "^3.0.0"
-    react-hot-loader "^4.8.4"
-    read-package-tree "^5.3.1"
+    react-hot-loader "^4.12.5"
     redux "^4.0.0"
     redux-thunk "^2.3.0"
     semver "^5.6.0"
@@ -6306,7 +6312,7 @@ got@^7.0.0, got@^7.1.0:
     url-parse-lax "^1.0.0"
     url-to-options "^1.0.1"
 
-got@^8.3.1:
+got@^8.3.1, got@^8.3.2:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/got/-/got-8.3.2.tgz#1d23f64390e97f776cac52e5b936e5f514d2e937"
   integrity sha512-qjUJ5U/hawxosMryILofZCkm3C84PLJS/0grRIpjAwu+Lkxxj5cxeCU25BG0/3mDSpXKTyZr8oh8wIgLaH0QCw==
@@ -6814,7 +6820,7 @@ https-browserify@^1.0.0:
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
   integrity sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
 
-husky@^2.4.0:
+husky@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/husky/-/husky-2.7.0.tgz#c0a9a6a3b51146224e11bba0b46bba546e461d05"
   integrity sha512-LIi8zzT6PyFpcYKdvWRCn/8X+6SuG2TgYYMrM6ckEYhlp44UcEduVymZGIZNLiwOUjrEud+78w/AsAiqJA/kRg==
@@ -7042,7 +7048,7 @@ ink-spinner@^3.0.1:
     cli-spinners "^1.0.0"
     prop-types "^15.5.10"
 
-ink@^2.0.5:
+ink@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/ink/-/ink-2.3.0.tgz#222136be17bb72fc742e19090483e7e0e7dc3690"
   integrity sha512-931rgXHAS3hM++8ygWPOBeHOFwTzHh3pDAVZtiBVOUH6tVvJijym43ODUy22ySo2NwYUFeR/Zj3xuWzBEKMiHw==
@@ -7848,6 +7854,20 @@ jest-environment-node@^24.8.0:
     jest-mock "^24.8.0"
     jest-util "^24.8.0"
 
+jest-extended@^0.11.2:
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/jest-extended/-/jest-extended-0.11.2.tgz#924f4a6b4c946133faf9ec8fba865de9790f4116"
+  integrity sha512-gwNMXrAPN0IY5L7VXWfSlC2aGo0KHIsGGcW+lTHYpedt5SJksEvBgMxs29iNikiNOz+cqAZY1s/+kYK0jlj4Jw==
+  dependencies:
+    expect "^24.1.0"
+    jest-get-type "^22.4.3"
+    jest-matcher-utils "^22.0.0"
+
+jest-get-type@^22.4.3:
+  version "22.4.3"
+  resolved "https://registry.yarnpkg.com/jest-get-type/-/jest-get-type-22.4.3.tgz#e3a8504d8479342dd4420236b322869f18900ce4"
+  integrity sha512-/jsz0Y+V29w1chdXVygEKSz2nBoHoYqNShPe+QgxSNjAuP1i8+k4LbQNrfoliKej0P45sivkSCh7yiD6ubHS3w==
+
 jest-get-type@^24.8.0:
   version "24.8.0"
   resolved "https://registry.yarnpkg.com/jest-get-type/-/jest-get-type-24.8.0.tgz#a7440de30b651f5a70ea3ed7ff073a32dfe646fc"
@@ -7900,6 +7920,15 @@ jest-leak-detector@^24.8.0:
   integrity sha512-cG0yRSK8A831LN8lIHxI3AblB40uhv0z+SsQdW3GoMMVcK+sJwrIIyax5tu3eHHNJ8Fu6IMDpnLda2jhn2pD/g==
   dependencies:
     pretty-format "^24.8.0"
+
+jest-matcher-utils@^22.0.0:
+  version "22.4.3"
+  resolved "https://registry.yarnpkg.com/jest-matcher-utils/-/jest-matcher-utils-22.4.3.tgz#4632fe428ebc73ebc194d3c7b65d37b161f710ff"
+  integrity sha512-lsEHVaTnKzdAPR5t4B6OcxXo9Vy4K+kRRbG5gtddY8lBEC+Mlpvm1CJcsMESRjzUhzkz568exMV1hTB76nAKbA==
+  dependencies:
+    chalk "^2.0.1"
+    jest-get-type "^22.4.3"
+    pretty-format "^22.4.3"
 
 jest-matcher-utils@^24.8.0:
   version "24.8.0"
@@ -8394,7 +8423,7 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-lint-staged@^8.2.0:
+lint-staged@^8.2.1:
   version "8.2.1"
   resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-8.2.1.tgz#752fcf222d9d28f323a3b80f1e668f3654ff221f"
   integrity sha512-n0tDGR/rTCgQNwXnUf/eWIpPNddGWxC32ANTNYsj2k02iZb7Cz5ox2tytwBu+2r0zDXMEMKw7Y9OD/qsav561A==
@@ -8621,9 +8650,9 @@ lodash.memoize@^4.1.2:
   integrity sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=
 
 lodash.mergewith@^4.6.1:
-  version "4.6.1"
-  resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.1.tgz#639057e726c3afbdb3e7d42741caa8d6e4335927"
-  integrity sha512-eWw5r+PYICtEBgrBE5hhlT6aAa75f411bgDz/ZL2KZqYV03USvucsxcHUIlGTDTECs1eunpI7HOV7U+WLDvNdQ==
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.2.tgz#617121f89ac55f59047c7aec1ccd6654c6590f55"
+  integrity sha512-GK3g5RPZWTRSeLSpgP8Xhra+pnjBC56q9FZYe1d5RN3TJ35dbkGy3YqBSMbyCrlbi+CM9Z3Jk5yTL7RCsqboyQ==
 
 lodash.sortby@^4.7.0:
   version "4.7.0"
@@ -8670,6 +8699,11 @@ lodash@^4.0.0, lodash@^4.11.1, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11,
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
 
+lodash@^4.17.14:
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+
 log-symbols@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/log-symbols/-/log-symbols-1.0.2.tgz#376ff7b58ea3086a0f09facc74617eca501e1a18"
@@ -8714,6 +8748,11 @@ loglevel@^1.6.3:
   version "1.6.3"
   resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.6.3.tgz#77f2eb64be55a404c9fd04ad16d57c1d6d6b1280"
   integrity sha512-LoEDv5pgpvWgPF4kNYuIp0qqSJVWak/dML0RY74xlzMZiT9w77teNAwKYKWBTYjlokMirg+o3jBwp+vlLrcfAA==
+
+lokijs@^1.5.7:
+  version "1.5.7"
+  resolved "https://registry.yarnpkg.com/lokijs/-/lokijs-1.5.7.tgz#3bbeb5c2dbffebd78d035bac82c7c4e6055870f0"
+  integrity sha512-2SqUV6JH4f15Z5/7LVsyadSUwHhZppxhujgy/VhVqiRYMGt5oaocb7fV/3JGjHJ6rTuEIajnpTLGRz9cJW/c3g==
 
 longest-streak@^2.0.1:
   version "2.0.3"
@@ -8844,10 +8883,10 @@ markdown-table@^1.1.0:
   resolved "https://registry.yarnpkg.com/markdown-table/-/markdown-table-1.1.3.tgz#9fcb69bcfdb8717bfd0398c6ec2d93036ef8de60"
   integrity sha512-1RUZVgQlpJSPWYbFSpmudq5nHY1doEIv89gBtF0s4gW1GF2XorxcA/70M5vq7rLv0a6mhOUccRsqkwhwLCIQ2Q==
 
-marked@^0.6.2:
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-0.6.3.tgz#79babad78af638ba4d522a9e715cdfdd2429e946"
-  integrity sha512-Fqa7eq+UaxfMriqzYLayfqAE40WN03jf+zHjT18/uXNuzjq3TY0XTbrAoPeqSJrAmPz11VuUA+kBPYOhHt9oOQ==
+marked@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.7.0.tgz#b64201f051d271b1edc10a04d1ae9b74bb8e5c0e"
+  integrity sha512-c+yYdCZJQrsRjTPhUx7VKkApw9bwDkNbHUKo1ovgcfDjb2kc8rLuRbIFyXL5WOEUwzSSKo3IXpph2K6DqB/KZg==
 
 matcher@^1.0.0:
   version "1.1.1"
@@ -9535,7 +9574,7 @@ nopt@^4.0.1:
     abbrev "1"
     osenv "^0.1.4"
 
-normalize-package-data@^2.0.0, normalize-package-data@^2.3.2, normalize-package-data@^2.3.4, normalize-package-data@^2.5.0:
+normalize-package-data@^2.3.2, normalize-package-data@^2.3.4, normalize-package-data@^2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/normalize-package-data/-/normalize-package-data-2.5.0.tgz#e66db1838b200c1dfc233225d12cb36520e234a8"
   integrity sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==
@@ -10884,6 +10923,14 @@ pretty-error@^2.1.1:
     renderkid "^2.0.1"
     utila "~0.4"
 
+pretty-format@^22.4.3:
+  version "22.4.3"
+  resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-22.4.3.tgz#f873d780839a9c02e9664c8a082e9ee79eaac16f"
+  integrity sha512-S4oT9/sT6MN7/3COoOy+ZJeA92VmOnveLHgrwBE3Z1W5N9S2A1QGNYiE1z75DAENbJrXXUb+OWXhpJcg05QKQQ==
+  dependencies:
+    ansi-regex "^3.0.0"
+    ansi-styles "^3.2.0"
+
 pretty-format@^24.8.0:
   version "24.8.0"
   resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-24.8.0.tgz#8dae7044f58db7cb8be245383b565a963e3c27f2"
@@ -10894,10 +10941,10 @@ pretty-format@^24.8.0:
     ansi-styles "^3.2.0"
     react-is "^16.8.4"
 
-prismjs@^1.16.0:
-  version "1.16.0"
-  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.16.0.tgz#406eb2c8aacb0f5f0f1167930cb83835d10a4308"
-  integrity sha512-OA4MKxjFZHSvZcisLGe14THYsug/nF6O1f0pAJc0KN0wTyAcLqmsbE+lTGKSpyh+9pEW57+k6pg2AfYR+coyHA==
+prismjs@^1.17.1:
+  version "1.17.1"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.17.1.tgz#e669fcbd4cdd873c35102881c33b14d0d68519be"
+  integrity sha512-PrEDJAFdUGbOP6xK/UsfkC5ghJsPJviKgnQOoxaDbBjwc8op68Quupwt1DeAFoG8GImPhiKXAvvsH7wDSLsu1Q==
   optionalDependencies:
     clipboard "^2.0.0"
 
@@ -11228,19 +11275,18 @@ react-helmet@^5.2.1:
     react-fast-compare "^2.0.2"
     react-side-effect "^1.1.0"
 
-react-hot-loader@^4.8.4:
-  version "4.12.3"
-  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.12.3.tgz#0972255cd110a00860902e82bb2b789a262cfe01"
-  integrity sha512-XBhxogFOxEh8L4Ykdk2mp704Xc/eoy+bwadEYMvmBhjAz3wg+DfMpINMkA+kLTRDinqwjssDfA9DhUJznRjvuA==
+react-hot-loader@^4.12.5:
+  version "4.12.10"
+  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.12.10.tgz#b3457c0f733423c4827c6d2672e50c9f8bedaf6b"
+  integrity sha512-dX+ZUigxQijWLsKPnxc0khuCt2sYiZ1W59LgSBMOLeGSG3+HkknrTlnJu6BCNdhYxbEQkGvBsr7zXlNWYUIhAQ==
   dependencies:
     fast-levenshtein "^2.0.6"
     global "^4.3.0"
     hoist-non-react-statics "^3.3.0"
     loader-utils "^1.1.0"
-    lodash "^4.17.11"
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
-    shallowequal "^1.0.2"
+    shallowequal "^1.1.0"
     source-map "^0.7.3"
 
 react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
@@ -11298,27 +11344,6 @@ read-chunk@^3.0.0:
   dependencies:
     pify "^4.0.1"
     with-open-file "^0.1.6"
-
-read-package-json@^2.0.0:
-  version "2.0.13"
-  resolved "https://registry.yarnpkg.com/read-package-json/-/read-package-json-2.0.13.tgz#2e82ebd9f613baa6d2ebe3aa72cefe3f68e41f4a"
-  integrity sha512-/1dZ7TRZvGrYqE0UAfN6qQb5GYBsNcqS1C0tNK601CFOJmtHI7NIGXwetEPU/OtoFHZL3hDxm4rolFFVE9Bnmg==
-  dependencies:
-    glob "^7.1.1"
-    json-parse-better-errors "^1.0.1"
-    normalize-package-data "^2.0.0"
-    slash "^1.0.0"
-  optionalDependencies:
-    graceful-fs "^4.1.2"
-
-read-package-tree@^5.3.1:
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/read-package-tree/-/read-package-tree-5.3.1.tgz#a32cb64c7f31eb8a6f31ef06f9cedf74068fe636"
-  integrity sha512-mLUDsD5JVtlZxjSlPPx1RETkNjjvQYuweKwNVt1Sn8kP5Jh44pvYuUHCp6xSVDZWbNxVxG5lyZJ921aJH61sTw==
-  dependencies:
-    read-package-json "^2.0.0"
-    readdir-scoped-modules "^1.0.0"
-    util-promisify "^2.1.0"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
@@ -11419,16 +11444,6 @@ readable-stream@~1.0.31:
     inherits "~2.0.1"
     isarray "0.0.1"
     string_decoder "~0.10.x"
-
-readdir-scoped-modules@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/readdir-scoped-modules/-/readdir-scoped-modules-1.1.0.tgz#8d45407b4f870a0dcaebc0e28670d18e74514309"
-  integrity sha512-asaikDeqAQg7JifRsZn1NJZXo9E+VwlyCfbkZhwyISinqk5zNS6266HS5kah6P0SaQKGF6SkNnZVHUzHFYxYDw==
-  dependencies:
-    debuglog "^1.0.1"
-    dezalgo "^1.0.0"
-    graceful-fs "^4.1.2"
-    once "^1.3.0"
 
 readdirp@^2.2.1:
   version "2.2.1"
@@ -12195,7 +12210,7 @@ shallow-compare@^1.2.2:
   resolved "https://registry.yarnpkg.com/shallow-compare/-/shallow-compare-1.2.2.tgz#fa4794627bf455a47c4f56881d8a6132d581ffdb"
   integrity sha512-LUMFi+RppPlrHzbqmFnINTrazo0lPNwhcgzuAXVVcfy/mqPDrQmHAyz5bvV0gDAuRFrk804V0HpQ6u9sZ0tBeg==
 
-shallowequal@^1.0.1, shallowequal@^1.0.2:
+shallowequal@^1.0.1, shallowequal@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/shallowequal/-/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
   integrity sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==
@@ -13760,13 +13775,6 @@ util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
-
-util-promisify@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/util-promisify/-/util-promisify-2.1.0.tgz#3c2236476c4d32c5ff3c47002add7c13b9a82a53"
-  integrity sha1-PCI2R2xNMsX/PEcAKt18E7moKlM=
-  dependencies:
-    object.getownpropertydescriptors "^2.0.3"
 
 util.promisify@^1.0.0, util.promisify@~1.0.0:
   version "1.0.0"

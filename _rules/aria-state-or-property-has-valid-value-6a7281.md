@@ -258,7 +258,7 @@ Element has ARIA role, but no ARIA states or properties
 `aria-checked` state with empty value
 
 ```html
-<div role="checkbox" aria-checked aria-label="Accept terms and conditions"></div>
+<div role="checkbox" aria-checked>Accept terms and conditions</div>
 ```
 
 #### Inapplicable Example 5

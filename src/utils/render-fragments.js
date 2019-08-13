@@ -175,7 +175,7 @@ export const getGlossaryUsed = (slug, allGlossary) => {
 	return (
 		<>
 			<a id="glossary-listing" href="#glossary-listing">
-				<h2>Referenced Glossary</h2>
+				<h2>Glossary</h2>
 			</a>
 			{glossaries.map(({ node }) => {
 				const { frontmatter, html } = node
@@ -212,7 +212,7 @@ export const getGlossaryUsedLink = (slug, allGlossary) => {
 	}
 	return (
 		<li>
-			<a href="#glossary-listing">Referenced Glossary</a>
+			<a href="#glossary-listing">Glossary</a>
 		</li>
 	)
 }

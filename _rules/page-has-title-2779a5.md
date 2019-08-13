@@ -30,6 +30,8 @@ The rule applies to any page where the [document element](https://www.w3.org/TR/
 
 The [document element](https://www.w3.org/TR/dom/#document-element) has at least one [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) that is an HTML `title` element.
 
+**Note**: It is invalid HTML to put the `title` inside the `body` of a page. This does not cause an accessibility issue, as browsers will still pick up a `title` element in the `body` if it is the only element on the page.
+
 **Note**: The `title` element exists in other namespaces such as SVG. These are not HTML `title` elements and should be ignored for this rule.
 
 ## Expectation 2

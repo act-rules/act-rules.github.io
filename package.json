@@ -94,7 +94,7 @@
 		"act-rules-implementation-rgaa": "git+https://git@github.com/act-rules/act-rules-implementation-rgaa.git",
 		"act-rules-implementation-trusted-tester": "git+https://git@github.com/act-rules/act-rules-implementation-trusted-tester.git",
 		"axios": "^0.18.1",
-		"commander": "^2.20.0",
+		"commander": "^3.0.0",
 		"fastmatter": "^2.1.1",
 		"flat": "^4.1.0",
 		"fs-extra": "^8.1.0",

@@ -19,7 +19,7 @@ authors:
 
 ## Applicability
 
-The rule applies to any HTML or SVG element that is [included in the accessibility tree](#included-in-the-accessibility-tree) and has an [explicit semantic role](#explicit-role) with a [WAI-ARIA required context role](https://www.w3.org/TR/wai-aria-1.1/#scope), except if the element has an [implicit semantic role](#implicit-role) that is identical to its [explicit semantic role](#explicit-role).
+The rule applies to any HTML or SVG element that is [included in the accessibility tree](#included-in-the-accessibility-tree) and has a [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) [explicit semantic role](#explicit-role) with a [WAI-ARIA required context role](https://www.w3.org/TR/wai-aria-1.1/#scope), except if the element has an [implicit semantic role](#implicit-role) that is identical to its [explicit semantic role](#explicit-role).
 
 **Note:** An example of an element that has a [WAI-ARIA required context role](https://www.w3.org/TR/wai-aria-1.1/#scope) is `tab` that has `tablist` as a [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
 
@@ -31,7 +31,11 @@ The target element is [owned by](#owned-by) an element that has a [semantic role
 
 **Note:** The definition of [owned by](#owned-by) used in this rule is diverging from the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element). See more in the [owned by](#owned-by) definition.
 
-**Note:** Both [superclass roles](https://www.w3.org/TR/wai-aria-1.1/#superclassrole) and [subclass roles](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) will be listed as possible [WAI-ARIA required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope) for a role, e.g. the [`row` (role)](https://www.w3.org/TR/wai-aria-1.1/#row) lists both [`grid` (role)](https://www.w3.org/TR/wai-aria-1.1/#grid) and [`table` (role)](https://www.w3.org/TR/wai-aria-1.1/#table) as [required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope), even though `grid` is a subclass of the `table` role.
+**Note:** [Subclass roles](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) of [WAI-ARIA required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope) are not automatically included as possible [required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope). E.g. [`feed` (role)](https://www.w3.org/TR/wai-aria-1.1/#feed) is not a possible [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope) for [`listitem` (role)](https://www.w3.org/TR/wai-aria-1.1/#listitem), even though [`feed` (role)](https://www.w3.org/TR/wai-aria-1.1/#feed) is a [subclass role](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) of [`list` (role)](https://www.w3.org/TR/wai-aria-1.1/#list), and [`list` (role)](https://www.w3.org/TR/wai-aria-1.1/#list) is one of the [required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope) for [`listitem` (role)](https://www.w3.org/TR/wai-aria-1.1/#listitem).
+If a [subclass role](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) is a possible [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope), the [subclass role](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) will be listed as a [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope) as well as the [superclass role](https://www.w3.org/TR/wai-aria-1.1/#superclassrole), e.g. the [`row` (role)](https://www.w3.org/TR/wai-aria-1.1/#row) lists both [`grid` (role)](https://www.w3.org/TR/wai-aria-1.1/#grid) and [`table` (role)](https://www.w3.org/TR/wai-aria-1.1/#table) as [required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope), even though [`grid` (role)](https://www.w3.org/TR/wai-aria-1.1/#grid) is a subclass of the [`table` (role)](https://www.w3.org/TR/wai-aria-1.1/#table).
+
+**Note:** For [`listitem` (role)](https://www.w3.org/TR/wai-aria-1.1/#listitem) the [`directory` (role)](https://www.w3.org/TR/wai-aria-1.1/#directory) seems to be missing as a [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope) in the [WAI-ARIA 1.1 Recommendation](https://www.w3.org/TR/wai-aria-1.1). [An issue for this has been filed](https://github.com/w3c/aria/issues/1030) with the Accessible Rich Internet Applications Working Group. 
+
 
 ## Assumptions
 

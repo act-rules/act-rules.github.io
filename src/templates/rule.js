@@ -125,9 +125,6 @@ export default ({ data }) => {
 						<li>
 							<a href="#acknowledgements">Acknowledgements</a>
 						</li>
-						<li>
-							<a href="#acknowledgements">Acknowledgements</a>
-						</li>
 					</ul>
 				</div>
 			</section>

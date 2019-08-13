@@ -113,7 +113,7 @@
 		"gatsby-transformer-remark": "^2.6.10",
 		"gatsby-transformer-sharp": "^2.2.6",
 		"gfm-code-blocks": "^1.0.0",
-		"globby": "^9.2.0",
+		"globby": "^10.0.1",
 		"is-url": "^1.2.4",
 		"jsonld": "^1.6.2",
 		"make-dir": "^3.0.0",

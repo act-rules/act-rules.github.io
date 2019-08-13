@@ -31,6 +31,7 @@ export default ({ data }) => {
 	const updatedTitle = `Rule | ${frontmatter.name} | ${site.siteMetadata.title}`
 	const ruleId = frontmatter.id
 	const ruleTestcasesUrl = `/testcases/${ruleId}/rule-${ruleId}-testcases-for-em-report-tool.json`
+	const proposeChangeUrl = `${repository.url}/edit/develop/_rules/${relativePath}`
 	const issuesUrl = `${repository.url}/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+${ruleId}+`
 	const ruleFormatInputAspects = config['rule-format-metadata']['input-aspects']
 
@@ -92,6 +93,11 @@ export default ({ data }) => {
 						<li>
 							<a target="_blank" rel="noopener noreferrer" href={ruleTestcasesUrl}>
 								Test case file for use in the WCAG-EM Report Tool
+							</a>
+						</li>
+						<li>
+							<a target="_blank" rel="noopener noreferrer" href={proposeChangeUrl}>
+								Propose a change to the rule
 							</a>
 						</li>
 					</ul>

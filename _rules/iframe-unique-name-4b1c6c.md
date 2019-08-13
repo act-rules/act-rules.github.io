@@ -20,7 +20,7 @@ authors:
 
 ## Applicability
 
-This rule applies to any set of any two or more `iframe` elements in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) that are [included in the accessibility tree](#included-in-the-accessibility-tree), and that have [matching](#matching-characters) [accessible names](#accessible-name) that do not only consist of [whitespace](#whitespace).
+This rule applies to any set of any two or more `iframe` elements whose [shadow-including root](https://dom.spec.whatwg.org/#concept-shadow-including-root) is the same [document](https://dom.spec.whatwg.org/#concept-document), that are [included in the accessibility tree](#included-in-the-accessibility-tree), and that have [matching](#matching-characters) [accessible names](#accessible-name) that do not only consist of [whitespace](#whitespace).
 
 **Note:** The test target for this rule is the full set of `iframe` elements within the same [document tree](https://www.w3.org/TR/dom41/#document-trees) that share the same [matching](#matching-characters) [accessible name](#accessible-name).
 

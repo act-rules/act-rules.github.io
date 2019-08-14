@@ -3,7 +3,8 @@ id: ffd0e9
 name: Heading does not only consist of seperators or breaks
 rule_type: atomic
 description: | 
-  This rule checks that heading elements do not have Unicode separator characters or `br` elements as their only content.
+  This rule checks that each heading does not have an accessible name that
+  is only whitespace.
 
 success_criterion: 
 - 1.3.1 # Info and Relationships (A)
@@ -23,10 +24,11 @@ This rule applies to any HTML element with the [semantic role](#semantic-role) o
 
 ## Expectation
 
-The target element either:
-- contains [text nodes](https://www.w3.org/TR/dom/#text) that do not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153), or 
-- does not contain any HTML `<br>` elements, or 
-- has an accessible name that does not only consist of [Unicode separator characters](https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153).
+The [accessible name](#accessible-name), if there is one, for each of the target elements is not only [whitespace](#whitespace).
+
+**Note:** In the [Accessible Name and Description Computation](https://www.w3.org/TR/accname-1.1/#mapping_additional_nd_te) all carriage returns, newlines, tabs, and form-feeds are replaced with a single space.
+
+**Note:** Headings might have [descendants](https://www.w3.org/TR/dom41/#concept-tree-descendant) that are [phrasing content](https://html.spec.whatwg.org/multipage/dom.html#phrasing-content) elements, that will not impact the [accessible name](#accessible-name), e.g. `span`, `b` or `em`.
 
 ## Assumptions
 
@@ -34,14 +36,12 @@ This rule assumes that having an element that unintentionally shows up programma
 
 ## Accessibility Support
 
-Handling of headings containing only spaces, space characters, carriage returns, newlines, tabs, and form-feeds varies between different assistive technologies and browsers. This means that even though the outcome of this rule is *failed*, users of certain assistive technology and browser combinations might not experience an issue.
+Handling of headings containing only whitespace characters, carriage returns, newlines, tabs, and form-feeds varies between different assistive technologies and browsers. This means that even though the outcome of this rule is *failed*, users of certain assistive technology and browser combinations might not experience an issue.
 
 ## Background
 
-- In some screen reader and browser combinations, headings containing only spaces, space characters, carriage returns, newlines, tabs, and form-feeds will show up as empty headings, confusing the user experience. For a screen reader user it will be hard to get an overview of the heading structure of the page if "empty" headings are included in the heading structure. Indeed, it can be hard to know if the heading is just white space that has accidentally been marked up as a heading, or if it is an actual heading that for some reason doesn't have an accessible name. Since this is a case where the programmatically determinable structure of the page doesn't match the visual presentation, this is a violation of success criterion [1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships).
+- In some screen reader and browser combinations, headings containing only whitespace characters, carriage returns, newlines, tabs, and form-feeds will show up as empty headings, confusing the user experience. For a screen reader user it will be hard to get an overview of the heading structure of the page if "empty" headings are included in the heading structure. Indeed, it can be hard to know if the heading is just whitespace that has accidentally been marked up as a heading, or if it is an actual heading that for some reason doesn't have an accessible name. Since this is a case where the programmatically determinable structure of the page doesn't match the visual presentation, this is a violation of success criterion [1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships).
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
-- [The br element](https://www.w3.org/TR/html/textlevel-semantics.html#the-br-element)
-- [Unicode Characters in the 'Separator, Space' Category](https://www.fileformat.info/info/unicode/category/Zs/list.htm)
 
 ## Test Cases
 
@@ -49,7 +49,7 @@ Handling of headings containing only spaces, space characters, carriage returns,
 
 #### Passed Example 1
 
-`h2` element is empty.
+`h2` element with no accessible name.
 
 ```html
 <h2></h2>
@@ -57,7 +57,7 @@ Handling of headings containing only spaces, space characters, carriage returns,
 
 #### Passed Example 2
 
-Element with the semantic role of heading is empty.
+Element with the semantic role of heading has no accessible name.
 
 ```html
 <div role="heading"></div>
@@ -65,7 +65,7 @@ Element with the semantic role of heading is empty.
 
 #### Passed Example 3
 
-`h2` element has other content than `br` or `wbr` elements or unicode characters in the seperator categories.
+`h2` element has an accessible name from content that is not only whitespace.
 
 ```html
 <h2>' </h2>
@@ -73,7 +73,7 @@ Element with the semantic role of heading is empty.
 
 #### Passed Example 4
 
-`h2` element has an `aria-label` that is relevant for the accessible name calculation.
+`h2` element has an accessible name through `aria-label` that is not only whitespace.
 
 ```html
 <h2 aria-label="Orange harvesting season"> </h2>
@@ -81,7 +81,7 @@ Element with the semantic role of heading is empty.
 
 #### Passed Example 5
 
-`h2` element has content that is relevant for the accessible name calculation.
+`h2` element has an accessible name through the `alt` attribute that is not only whitespace.
 
 ```html
 <h2><img src="#" alt="Orange harvesting season"> </h2>
@@ -89,7 +89,7 @@ Element with the semantic role of heading is empty.
 
 #### Passed Example 6
 
-`h2` element contains `<span>` as only content, and this does not affect accessible name computation.
+`h2` element contains the phrasing content element `<span>` as only content, and this does not affect the accessible name computation.
 
 ```html
 <h2><span></span></h2>
@@ -99,7 +99,7 @@ Element with the semantic role of heading is empty.
 
 #### Failed Example 1
 
-`h2` element contains `br` element as only content.
+`h2` element contains `br` element as only content. This is translated into a single space in the accessible name computation, which gives an accessible name that is only whitespace.
 
 ```html
 <h2><br /></h2>
@@ -107,7 +107,7 @@ Element with the semantic role of heading is empty.
 
 #### Failed Example 2
 
-`h2` contains `&nbsp;`(no break space character) as only content.
+`h2` contains `&nbsp;`(no break space character) as only content. This is translated into a single space in the accessible name computation, which gives an accessible name that is only whitespace.
 
 ```html
 <h2>&nbsp;</h2>
@@ -115,7 +115,7 @@ Element with the semantic role of heading is empty.
 
 #### Failed Example 3
 
-`h2` element only contains a space.
+`h2` element only contains a space as only content, which gives an accessible name that is only whitespace.
 
 ```html
 <h2> </h2>
@@ -123,7 +123,7 @@ Element with the semantic role of heading is empty.
 
 #### Failed Example 4
 
-`h2` element contains `&#32;` (space) character as only content.
+`h2` element contains `&#32;` (space) character as only content, which gives an accessible name that is only whitespace.
 
 ```html
 <h2>&#32;</h2>
@@ -131,7 +131,7 @@ Element with the semantic role of heading is empty.
 
 #### Failed Example 5
 
-`h2` element contains `&ensp;` (en-space) character as only content.
+`h2` element contains `&ensp;` (en-space) character as only content, which gives an accessible name that is only whitespace.
 
 ```html
 <h2>&ensp;</h2>
@@ -139,7 +139,7 @@ Element with the semantic role of heading is empty.
 
 #### Failed Example 6
 
-`h2` element contains `&emsp;` (em-space) character as only content.
+`h2` element contains `&emsp;` (em-space) character as only content, which gives an accessible name that is only whitespace.
 
 ```html
 <h2>&emsp;</h2>
@@ -147,7 +147,7 @@ Element with the semantic role of heading is empty.
 
 #### Failed Example 7
 
-`h2` element contains `&thinsp;` (thin space) character as only content.
+`h2` element contains `&thinsp;` (thin space) character as only content, which gives an accessible name that is only whitespace.
 
 ```html
 <h2>&thinsp;</h2>
@@ -155,7 +155,7 @@ Element with the semantic role of heading is empty.
 
 #### Failed Example 8
 
-`h2` element contains `<br />` as only content that affects the accessible name computation.
+`h2` element contains `<br />` as only content that affects the accessible name computation. This is translated into a single space in the accessible name computation, which gives an accessible name that is only whitespace.
 
 ```html
 <h2><span><br /></span></h2>
@@ -163,7 +163,7 @@ Element with the semantic role of heading is empty.
 
 #### Failed Example 9
 
-`h2` element has an image as content, but it is marked as decorative and as such not relevant for the accessible name computation.
+`h2` element has an image and a space as content, but the image is marked as decorative and as such not relevant for the accessible name computation, which gives an accessible name that is only whitespace.
 
 ```html
 <h2><img src="#" alt=""> </h2>

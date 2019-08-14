@@ -22,7 +22,7 @@ authors:
 
 The rule applies to any element that is [visible](#visible) and has a CSS `transform` property with a [rotate](https://drafts.csswg.org/css-transforms/#funcdef-transform-rotate) transform-function, set from a CSS media query with an [orientation](https://drafts.csswg.org/mediaqueries-3/#orientation) media feature (`landscape` or `portrait`).
 
-## Expectation 1
+## Expectation
 
 Each target element is not restricted to a single display orientation using CSS rotate transform-function, whose value is a multiple of 90 degrees but not a multiple of 180 degrees.
 
@@ -70,7 +70,7 @@ A page, where CSS media query styles does not lock orientation. The CSS rotate t
 
 #### Passed Example 2
 
-A page, where CSS media query styles does not lock orientation. The CSS rotate transform-function value from the stylesheet is overridden to a value of 180 degrees.
+A page, where CSS media query styles do not lock orientation. The CSS rotate transform-function value from the stylesheet is overridden to a value of 180 degrees.
 
 ```html
 <html lang="en">
@@ -120,7 +120,7 @@ A page, where orientation is locked by applying `transform` property on `portrai
 
 #### Failed Example 2
 
-A page, where orientation is locked via `style` specified on the `head`.
+A page, where orientation is locked via `style` specified in the `head`.
 
 ```html
 <html lang="en">

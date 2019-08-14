@@ -46,10 +46,10 @@ By adding `aria-hidden="true"` to an element, content authors ensure that assist
 
 A focusable element with `aria-hidden="true"` is ignored as part of the reading order, but still part of the focus order, making it's state of visible or hidden unclear.
 
-- https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html
-- https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html
-- https://www.w3.org/TR/wai-aria-1.1/#aria-hidden
-- https://www.w3.org/TR/html/editing.html#can-be-focused
+- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships)
+- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
+- [`aria-hidden` (state)](https://www.w3.org/TR/wai-aria-1.1/#aria-hidden)
+- [HTML Living Standard - Focusable areas](https://html.spec.whatwg.org/multipage/interaction.html#focusable-area)
 
 ## Test Cases
 

@@ -274,3 +274,11 @@ Element has an explicit semantic role, but it is identical to the implicit seman
 ```html
 <li role="listitem">List item 1</li>
 ```
+
+#### Inapplicable Example 6
+
+Element has a role from the [Digital Publishing WAI-ARIA Module 1.0](https://www.w3.org/TR/dpub-aria-1.0/), not the [WAI-ARIA 1.1 Recommendation](https://www.w3.org/TR/wai-aria-1.1/), and it is therefore inapplicable.
+
+```html
+<div role="doc-bibliography">Item 1<div>
+```

@@ -109,7 +109,7 @@
 		"gatsby-remark-autolink-headers": "^2.1.3",
 		"gatsby-remark-copy-linked-files": "^2.1.5",
 		"gatsby-remark-prismjs": "^3.3.5",
-		"gatsby-source-filesystem": "^2.1.8",
+		"gatsby-source-filesystem": "^2.1.9",
 		"gatsby-transformer-remark": "^2.6.14",
 		"gatsby-transformer-sharp": "^2.2.6",
 		"gfm-code-blocks": "^1.0.0",

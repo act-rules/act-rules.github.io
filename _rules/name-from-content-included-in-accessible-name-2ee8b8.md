@@ -49,7 +49,9 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- https://www.w3.org/TR/WCAG21/#label-in-name
+- [Understanding Success Criterion 2.5.3: Label in Name](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)
+- [Technique G208: Including the text of the visible label as part of the accessible name](https://www.w3.org/WAI/WCAG21/Techniques/general/G208)
+- [Technique G211: Matching the accessible name to the visible label](https://www.w3.org/WAI/WCAG21/Techniques/general/G211)
 
 ## Test cases
 

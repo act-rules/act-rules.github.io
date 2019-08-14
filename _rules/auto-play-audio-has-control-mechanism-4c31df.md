@@ -1,5 +1,5 @@
 ---
-id: 95e043
+id: 4c31df
 name: auto-play audio has a control mechanism
 rule_type: atomic
 description: |

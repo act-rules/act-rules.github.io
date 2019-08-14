@@ -29,7 +29,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- [ARIA in HTML](https://www.w3.org/TR/html-aria/#index-aria-global)
+- [ARIA in HTML](https://www.w3.org/TR/html-aria/#index-aria-global) (work in progress)
 - [WAI ARIA Supported States and Properties](http://www.w3.org/TR/wai-aria/#states_and_properties)
 - [G108: Using markup features to expose the name and role](http://www.w3.org/TR/WCAG20-TECHS/G108)
 - [WCAG 2.0 - Name, Role, Value: Understanding SC 4.1.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
@@ -71,14 +71,7 @@ A valid ARIA 1.1 attribute `aria-live` on element `div` with role `alert`
 Muliple valid ARIA 1.1 attributes `aria-*` are specified on element `input` with role `spinbutton`
 
 ```html
-<input
-	role="spinbutton"
-	aria-valuemax="100"
-	aria-valuemin="0"
-	aria-valuenow="25"
-	type="number"
-	value="25"
-/>
+<input role="spinbutton" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" type="number" value="25" />
 ```
 
 ### Failed
@@ -97,12 +90,7 @@ Muliple valid ARIA 1.1 attributes `aria-*` are specified on element `input` with
 
 ```html
 <span id="label">Birthday:</span>
-<div
-	contenteditable
-	role="searchbox"
-	aria-labelled="label"
-	aria-placeholder="MM-DD-YYYY"
->
+<div contenteditable role="searchbox" aria-labelled="label" aria-placeholder="MM-DD-YYYY">
 	01-01-2019
 </div>
 ```

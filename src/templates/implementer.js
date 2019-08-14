@@ -1,29 +1,23 @@
 import React from 'react'
+import queryString from 'query-string'
+
 import Layout from '../components/layout'
 import { graphql, Link } from 'gatsby'
 import SEO from '../components/seo'
 
-export default ({ data }) => {
-	const { site, sitePage } = data
-	const { context } = sitePage
-	const { title: pageTitle, data: contextData } = context
-
-	const updatedTitle = `${pageTitle} | ${site.siteMetadata.title}`
-	const report = JSON.parse(contextData)
-	const { data: ruleImplementations } = report
-
-	const getTabulation = data => {
-		return (
-			<table className="compact">
-				<thead>
-					<tr>
-						<th>Testcase Url</th>
-						<th>Expected</th>
-						<th>Actual</th>
-					</tr>
-				</thead>
-				<tbody>
-					{data.map((assertion, index) => {
+const getTabulation = data => {
+	return (
+		<table className="compact">
+			<thead>
+				<tr>
+					<th>Testcase Url</th>
+					<th width="100px">Expected</th>
+					<th width="100px">Actual</th>
+				</tr>
+			</thead>
+			<tbody>
+				{
+					data.map((assertion, index) => {
 						const { url, expected, actual } = assertion
 						const key = `${index}-${url}`
 						return (
@@ -37,10 +31,28 @@ export default ({ data }) => {
 								<td>{actual}</td>
 							</tr>
 						)
-					})}
-				</tbody>
-			</table>
-		)
+					})
+				}
+			</tbody>
+		</table>
+	)
+}
+
+export default (props) => {
+	const { data, location } = props
+	const { site, sitePage } = data
+	const { context } = sitePage
+	const { title: pageTitle, data: contextData } = context
+
+	const updatedTitle = `${pageTitle} | ${site.siteMetadata.title}`
+	const report = JSON.parse(contextData)
+	const { data: ruleImplementations } = report
+
+	let showIncomplete = false
+	if (location.search) {
+		const parsedSearch = queryString.parse(location.search);
+		const { incomplete = false } = parsedSearch
+		showIncomplete = incomplete === "true"
 	}
 
 	return (
@@ -59,7 +71,7 @@ export default ({ data }) => {
 							<Link to={`/rules/${ruleId}`}>
 								<h2 id={`#${ruleId}`}>{ruleName}</h2>
 							</Link>
-							{!isComplete && (
+							{(!isComplete && showIncomplete) && (
 								<div className="invalid">
 									Incomplete implementation.
 									<br />
@@ -69,10 +81,10 @@ export default ({ data }) => {
 							{isComplete
 								? getTabulation(assertions)
 								: getTabulation(
-										assertions.filter(({ url }) => {
-											return incorrect.includes(url)
-										})
-								  )}
+									assertions.filter(({ url }) => {
+										return incorrect.includes(url)
+									})
+								)}
 						</div>
 					)
 				})}

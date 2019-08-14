@@ -18,7 +18,7 @@ authors:
 
 ## Applicability
 
-Any HTML or SVG element that has an [explicit semantic role](#semantic-role), except if the element has an [implicit semantic role](#semantic-role) that is identical to the explicit semantic role.
+Any HTML or SVG element that has an [explicit semantic role](#explicit-role), except if the element has an [implicit semantic role](#implicit-role) that is identical to the [explicit semantic role](#explicit-role).
 
 ## Expectation
 
@@ -28,7 +28,7 @@ For each test target, the [WAI-ARIA required states and properties](https://www.
 
 ## Assumptions
 
-- The applicability of this rule is limited to [explicit semantic roles](#semantic-role) based on an assumption that all native HTML and SVG elements have native attributes that are mapped to all of the [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for the [implicit semantic role](#semantic-role) of the element.
+- The applicability of this rule is limited to [explicit semantic roles](#explicit-role) based on an assumption that all native HTML and SVG elements have native attributes that are mapped to all of the [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for the [implicit semantic role](#implicit-role) of the element.
 
 - The ARIA `role` is being used to comply to WCAG.
 
@@ -126,7 +126,7 @@ Element does not have a semantic role
 
 #### Inapplicable Example 2
 
-Element does not have an explicit semantic role
+Element does not have an [explicit semantic role](#explicit-role)
 
 ```html
 <nav></nav>
@@ -134,7 +134,7 @@ Element does not have an explicit semantic role
 
 #### Inapplicable Example 3
 
-Element has an implicit semantic role that is identical to the explicit semantic role
+Element has an [implicit semantic role](#implicit-role) that is identical to the [explicit semantic role](#explicit-role)
 
 ```html
 <input type="checkbox" role="checkbox" />

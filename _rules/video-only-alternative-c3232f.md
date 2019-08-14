@@ -182,7 +182,7 @@ A video element with audio.
 </p>
 <video
 	data-rule-target
-	src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4"
+	src="../test-assets/perspective-video/perspective-video.mp4"
 	controls
 ></video>
 ```

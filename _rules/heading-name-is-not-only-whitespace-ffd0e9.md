@@ -1,6 +1,6 @@
 ---
 id: ffd0e9
-name: Heading does not only consist of seperators or breaks
+name: Heading name is not only whitespace
 rule_type: atomic
 description: | 
   This rule checks that each heading does not have an accessible name that

@@ -35,10 +35,10 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html
-- https://www.w3.org/TR/WCAG20-TECHS/G93.html
-- https://www.w3.org/TR/WCAG20-TECHS/G87.html
-- https://www.w3.org/TR/WCAG20-TECHS/H95.html
+- [Understanding Success Criterion 1.2.2: Captions (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded)
+- [G93: Providing open (always visible) captions](https://www.w3.org/WAI/WCAG21/Techniques/general/G93)
+- [G87: Providing closed captions](https://www.w3.org/WAI/WCAG21/Techniques/general/G87)
+- [H95: Using the track element to provide captions](https://www.w3.org/WAI/WCAG21/Techniques/html/H95)
 
 ## Test Cases
 

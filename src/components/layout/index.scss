@@ -129,6 +129,12 @@ section.layout-container {
             display: inline-block;
           }
 
+          div.valid{
+            border: 2px solid $success;
+            color: $success;
+            padding: 1rem;
+          }
+
           div.invalid{
             border: 2px solid $error;
             color: $error;

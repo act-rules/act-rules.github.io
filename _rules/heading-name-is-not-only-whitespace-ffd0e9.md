@@ -3,8 +3,7 @@ id: ffd0e9
 name: Heading name is not only whitespace
 rule_type: atomic
 description: | 
-  This rule checks that each heading does not have an accessible name that
-  is only whitespace.
+  This rule checks that each heading does not have an accessible name that is only whitespace.
 
 success_criterion: 
 - 1.3.1 # Info and Relationships (A)

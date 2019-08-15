@@ -30,7 +30,7 @@ The rule applies to any element with an `aria-hidden="true"` attribute.
 
 ## Expectation
 
-None of the target elements are part of [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation), nor do they have [descendants](https://www.w3.org/TR/dom41/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) that are part of [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation).
+None of the target elements are part of [sequential focus navigation](https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation), nor do they have [descendants](https://www.w3.org/TR/dom41/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) that are part of [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation).
 
 ## Assumptions
 
@@ -49,7 +49,6 @@ A focusable element with `aria-hidden="true"` is ignored as part of the reading 
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [`aria-hidden` (state)](https://www.w3.org/TR/wai-aria-1.1/#aria-hidden)
-- [HTML Living Standard - Focusable areas](https://html.spec.whatwg.org/multipage/interaction.html#specially-focusable)
 
 ## Test Cases
 

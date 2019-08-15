@@ -30,11 +30,11 @@ This rule applies to any [visible](#visible) element with the [semantic role](#s
 
 **Note:**** Headings with only [whitespace](#whitespace) are not [visible](#visible).
 
-**Note**: This rule only applies to elements with the [semantic role](#semantic-role) of `heading`. Thus, it is a partial check for WCAG 2.0 success criterion 2.4.6, which applies to all headings regardless of semantic programming. In the success criteria "heading" is used in the general sense and includes elements that are not marked up as headings in the code, but still act visually as headings, e.g. by larger and/or bolder text.
-
 ## Expectation
 
 The [visible](#visible) heading of each target element describes the topic or purpose of its [visible](#visible) [section of the content](#section-of-content) in part or in its entirety, or the `heading` has no [visible](#visible) [section of the content](#section-of-content).
+
+The [visible](#visible) heading is the combined [characters](#character) formed by the [visible](#visible) [descendant text content](#) and [characters](#character) in [images of text](https://www.w3.org/TR/WCAG21/#dfn-images-of-text).
 
 **Note**: Headings do not need to be lengthy. A word, or even a single character, may suffice.
 

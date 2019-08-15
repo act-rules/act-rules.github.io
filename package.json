@@ -98,7 +98,7 @@
 		"fastmatter": "^2.1.1",
 		"flat": "^4.1.0",
 		"fs-extra": "^8.1.0",
-		"gatsby": "^2.13.62",
+		"gatsby": "^2.13.64",
 		"gatsby-image": "^2.2.8",
 		"gatsby-plugin-manifest": "^2.2.5",
 		"gatsby-plugin-offline": "^2.2.6",

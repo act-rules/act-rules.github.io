@@ -32,11 +32,11 @@ This rule applies to any HTML or SVG element that:
 
 ## Expectation
 
-The [visible](#visible) [child text content](https://dom.spec.whatwg.org/#concept-child-text-content) that are [descendants](https://www.w3.org/TR/dom41/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of the target element either:
-* is [included](#included-characters) in its entirety within the [accessible name](#accessible-name) of the element, or 
+The [visible](#visible) [descendant text content](https://dom.spec.whatwg.org/#concept-descendant-text-content) of the target element either:
+* is [included](#included-characters) in its entirety within the [accessible name](#accessible-name) of the element, after removing all [punctuation](#punctuation) from both the [visible](#visible) [descendant text content](https://dom.spec.whatwg.org/#concept-descendant-text-content) and the [accessible name](#accessible-name), or 
 * does not express anything in [human language](https://www.w3.org/TR/WCAG21/#dfn-human-language-s) and therefore does not live up to the [WCAG definition of text](https://www.w3.org/TR/WCAG21/#dfn-text).
 
-**Note:** Due to the definition of [included characters](#included-characters) the whole consecutive sequence of characters in the [visible](#visible) [child text content](https://dom.spec.whatwg.org/#concept-child-text-content) of the target element has to be included character-by-character in the [accessible name](#accessible-name) to meet the expectation of this rule.
+**Note:** Due to the definition of [included characters](#included-characters) the whole consecutive sequence of characters in the [visible](#visible) [descendant text content](https://dom.spec.whatwg.org/#concept-descendant-text-content) of the target element has to be included character-by-character (excluding [punctuation](#punctuation)) in the [accessible name](#accessible-name) to meet the expectation of this rule.
 
 ## Assumptions
 

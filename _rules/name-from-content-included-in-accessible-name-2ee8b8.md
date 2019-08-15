@@ -125,6 +125,14 @@ Visible label and accessible name matches when punctuation is removed.
 <div role="link" aria-label="Next page">Next page...</div>
 ```
 
+#### Passed Example 7
+
+Visible label and accessible name matches when parts that do not express anything in human language, "X", and punctuation is removed.
+
+```html
+<div role="link" aria-label="Close and go back">Close (X) and go back</div>
+```
+
 ### Failed
 
 #### Failed Example 1

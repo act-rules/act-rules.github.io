@@ -90,13 +90,12 @@ const createPageAddMdContext = options => {
 			 * only for markdown pages of type `rules` -> create respective `changelog` pages
 			 */
 			if (markdownType === `rules`) {
-				console.log(fileName);
 				createPage({
 					path: `${slug}/changelog`,
 					component: getTemplate('changelog'),
 					context: {
 						slug,
-						title: `Changelog for - pageTitle`,
+						title: `Changelog for Rule: ${pageTitle}`,
 						changelog,
 						fastmatterAttributes,
 						fileName

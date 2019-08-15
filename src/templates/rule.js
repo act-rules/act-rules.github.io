@@ -3,8 +3,6 @@ import Layout from '../components/layout/'
 import { graphql } from 'gatsby'
 import showdown from 'showdown'
 import {
-	getChangelog,
-	getChangelogLink,
 	getGlossaryUsed,
 	getRuleUsageInRules,
 	getGlossaryUsedLink,
@@ -32,6 +30,7 @@ export default ({ data }) => {
 	const ruleId = frontmatter.id
 	const ruleTestcasesUrl = `/testcases/${ruleId}/rule-${ruleId}-testcases-for-em-report-tool.json`
 	const proposeChangeUrl = `${repository.url}/edit/develop/_rules/${relativePath}`
+	const changelogUrl = `/rules/${ruleId}/changelog`
 	const issuesUrl = `${repository.url}/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+${ruleId}+`
 	const ruleFormatInputAspects = config['rule-format-metadata']['input-aspects']
 
@@ -94,8 +93,6 @@ export default ({ data }) => {
 					{/* glossary */}
 					{getGlossaryUsed(slug, allGlossary)}
 					<hr />
-					{/* changelog */}
-					{getChangelog(ruleChangelog, repository.url, `_rules/${relativePath}`)}
 					{/* Useful links */}
 					<a href="#useful-links" id="useful-links">
 						<h2>Useful Links</h2>
@@ -114,6 +111,11 @@ export default ({ data }) => {
 						<li>
 							<a target="_blank" rel="noopener noreferrer" href={proposeChangeUrl}>
 								Propose a change to the rule
+							</a>
+						</li>
+						<li>
+							<a rel="noopener noreferrer" href={changelogUrl}>
+								Changelog
 							</a>
 						</li>
 					</ul>
@@ -137,8 +139,6 @@ export default ({ data }) => {
 					<ul>
 						{/* glossary */}
 						{getGlossaryUsedLink(slug, allGlossary)}
-						{/* changelog */}
-						{getChangelogLink(ruleChangelog)}
 						<li>
 							<a href="#useful-links">Useful Links</a>
 						</li>

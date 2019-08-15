@@ -36,7 +36,7 @@ The [visible](#visible) [descendant text content](https://dom.spec.whatwg.org/#c
 * is [included](#included-characters) in its entirety within the [accessible name](#accessible-name) of the element, after removing all [punctuation](#punctuation) from both the [visible](#visible) [descendant text content](https://dom.spec.whatwg.org/#concept-descendant-text-content) and the [accessible name](#accessible-name), or 
 * does not express anything in [human language](https://www.w3.org/TR/WCAG21/#dfn-human-language-s) and therefore does not live up to the [WCAG definition of text](https://www.w3.org/TR/WCAG21/#dfn-text).
 
-**Note:** Due to the definition of [included characters](#included-characters) the whole consecutive sequence of characters in the [visible](#visible) [descendant text content](https://dom.spec.whatwg.org/#concept-descendant-text-content) of the target element has to be included character-by-character (excluding [punctuation](#punctuation)) in the [accessible name](#accessible-name) to meet the expectation of this rule.
+**Note:** Due to the definition of [included characters](#included-characters) the whole consecutive sequence of characters in the [visible](#visible) [descendant text content](https://dom.spec.whatwg.org/#concept-descendant-text-content) of the target element has to be included character-by-character (excluding [punctuation](#punctuation)) in the [accessible name](#accessible-name) to meet the expectation of this rule. The [accessible name](#accessible-name) is however allowed to also contain text content other than [visible](#visible) [descendant text content](https://dom.spec.whatwg.org/#concept-descendant-text-content).
 
 ## Assumptions
 
@@ -75,7 +75,7 @@ Character insensitivity between visible label and accessible name.
 
 #### Passed Example 3
 
-Full visible label is included in the accessible name.
+Full visible label is included in the accessible name, though the accessible name contains more text than the visible label.
 
 ```html
 <button name="link" aria-label="Next Page in the list">Next Page</button>
@@ -83,7 +83,7 @@ Full visible label is included in the accessible name.
 
 #### Passed Example 4
 
-Full visible label is included in the accessible name.
+Full visible label is included in the accessible name, though the accessible name contains more text than the visible label.
 
 ```html
 <head>
@@ -111,12 +111,20 @@ Text nodes in name from content are not expressing anything in human language an
 <button aria-label="close">:-)</button>
 ```
 
-#### Passed Example 6
+#### Passed Example 5
 
-Text nodes in name from content are not expressing anything in human language and do therefore not live up to the [WCAG definition of text](https://www.w3.org/TR/WCAG21/#dfn-text). In this case, "X" is used because it resembles a "close" icon, not to represent the character "X".
+Text nodes in name from content are not expressing anything in human language and do therefore not live up to the [WCAG definition of text](https://www.w3.org/TR/WCAG21/#dfn-text).
 
 ```html
-<button aria-label="close">X</button>
+<button aria-label="close">:-)</button>
+```
+
+#### Passed Example 6
+
+Visible label and accessible name matches when punctuation is removed.
+
+```html
+<div role="link" aria-label="Next page">Next page...</div>
 ```
 
 ### Failed

@@ -15,4 +15,4 @@ All characters in the [Unicode Punctuation categories](http://www.unicode.org/ve
 
 In the [Unicode Character Database](https://unicode.org/ucd/) the [table of all Unicode characters](https://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt) lists the category for each Unicode character, making it possible to locate all characters in the Unicode punctuation categories.
 
-**Note:** [This Unicode Character Categories overvies](https://www.fileformat.info/info/unicode/category/index.htm) gives a non-normative, but more userfriendly, overview of which Unicode characters are included in the different Unicode punctuation categories.
+**Note:** [This Unicode Character Categories overview](https://www.fileformat.info/info/unicode/category/index.htm) gives a non-normative, but more userfriendly overview of which Unicode characters are included in the different Unicode punctuation categories.

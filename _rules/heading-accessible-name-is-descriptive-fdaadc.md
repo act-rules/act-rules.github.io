@@ -27,7 +27,7 @@ authors:
 ## Applicability
 
 This rule applies to any element with the [semantic role](#semantic-role) of `heading` that is [included in the accessibility tree](#included-in-the-accessibility-tree), has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace), and where:
-- the [accessible name](#accessible-name) is different than the [visible](#visible) heading, OR 
+- the [accessible name](#accessible-name) does not [match](#matching-characters) the [visible](#visible) heading that is the combined [characters](#character) formed by the [visible](#visible) [descendant text content](#) and [characters](#character) in [images of text](https://www.w3.org/TR/WCAG21/#dfn-images-of-text), OR
 - its [section of the content](#section-of-content) that is [included in the accessibility tree](#included-in-the-accessibility-tree) is different from its [visible](#visible) [section of the content](#section-of-content).
 
 ## Expectation

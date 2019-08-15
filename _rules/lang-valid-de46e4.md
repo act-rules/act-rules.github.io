@@ -36,7 +36,7 @@ _There are no major accessibility support issues known for this rule._
 ## Background
 
 - [H58: Using language attributes to identify changes in the human language](https://www.w3.org/WAI/WCAG21/Techniques/html/H58)
-- [Tags for Identifying Languages](https://www.ietf.org/rfc/bcp/bcp47.txt)
+- [BCP47: Tags for Identifying Languages](https://www.ietf.org/rfc/bcp/bcp47.txt)
 - [Understanding Success Criterion 3.1.2: Language of Parts](https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts)
 
 ## Test Cases

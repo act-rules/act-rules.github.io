@@ -49,7 +49,7 @@ A focusable element with `aria-hidden="true"` is ignored as part of the reading 
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [`aria-hidden` (state)](https://www.w3.org/TR/wai-aria-1.1/#aria-hidden)
-- [HTML Living Standard - Focusable areas](https://html.spec.whatwg.org/multipage/interaction.html#focusable-area)
+- [HTML Living Standard - Focusable areas](https://html.spec.whatwg.org/multipage/interaction.html#specially-focusable)
 
 ## Test Cases
 

@@ -59,7 +59,7 @@ The intent of this rule is to ensure that the `autocomplete` attribute can be us
 
 - [Understanding Success Criterion 1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html)
 - [Definition: programmatically determined (programmatically determinable)](https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable)
-- [Autofilling form controls](https://www.w3.org/TR/html52/sec-forms.html#sec-autofill)
+- [Autofill](https://www.w3.org/TR/html52/sec-forms.html#sec-autofill)
 
 ## Test Cases
 

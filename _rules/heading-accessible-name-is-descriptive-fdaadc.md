@@ -4,7 +4,7 @@ name: Heading accessible name is descriptive
 rule_type: atomic
 
 description: |
-   This rule checks that the accessible name of a heading describe the topic or purpose of the content.
+   This rule checks that the accessible name of a heading describes the topic or purpose of the content.
    
 accessibility_requirements:
 - wcag20:2.4.6 # Headings and labels (AA)

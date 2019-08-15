@@ -23,7 +23,7 @@ This rule applies to any HTML element with the [semantic role](#semantic-role) o
 
 ## Expectation
 
-The [accessible name](#accessible-name), if there is one, for each of the target elements is not only [whitespace](#whitespace).
+The [accessible name](#accessible-name) of the test target, if there is an accessible name, is not only [whitespace](#whitespace).
 
 **Note:** In the [Accessible Name and Description Computation](https://www.w3.org/TR/accname-1.1/#mapping_additional_nd_te) all carriage returns, newlines, tabs, and form-feeds are replaced with a single space.
 

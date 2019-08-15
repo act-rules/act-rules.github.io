@@ -160,7 +160,6 @@
 		"createRulesUsages": "node ./build/create-rules-usages.js",
 		"getWcagData": "node ./build/get-wcag-data",
 		"getData": "npm run getWcagData && npm run createTestcases && npm run createGlossary && npm run createRulesUsages && npm run implementations",
-		"predevelop": "npm run getData",
 		"develop": "gatsby develop",
 		"prebuild": "npm run clean && npm run getData",
 		"build": "gatsby build",

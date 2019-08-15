@@ -159,7 +159,6 @@ export const query = graphql`
 		rule: markdownRemark(fields: { slug: { eq: $slug } }) {
 			html
 			tableOfContents
-			fileAbsolutePath
 			frontmatter {
 				id
 				name

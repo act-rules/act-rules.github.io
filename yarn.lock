@@ -1701,7 +1701,8 @@ acorn@^6.0.1, acorn@^6.0.7:
 
 "act-rules-implementation-alfa@git+https://git@github.com/act-rules/act-rules-implementation-alfa.git":
   version "1.0.0"
-  resolved "git+https://git@github.com/act-rules/act-rules-implementation-alfa.git#3944f96980ecf3d6d2987b63c00859968119548f"
+  uid "3919107e5b504539255ed403cf27143f9d1b1997"
+  resolved "git+https://git@github.com/act-rules/act-rules-implementation-alfa.git#3919107e5b504539255ed403cf27143f9d1b1997"
 
 "act-rules-implementation-axe-core@git+https://git@github.com/act-rules/act-rules-implementation-axe-core.git":
   version "1.0.0"

@@ -46,7 +46,7 @@ Handling of headings containing only whitespace characters, carriage returns, ne
 
 #### Passed Example 1
 
-`h2` element with no accessible name.
+`h2` element with no [accessible name](#accessible-name).
 
 ```html
 <h2></h2>
@@ -54,7 +54,7 @@ Handling of headings containing only whitespace characters, carriage returns, ne
 
 #### Passed Example 2
 
-Element with the semantic role of heading has no accessible name.
+Element with the semantic role of heading has no [accessible name](#accessible-name).
 
 ```html
 <div role="heading"></div>
@@ -62,7 +62,7 @@ Element with the semantic role of heading has no accessible name.
 
 #### Passed Example 3
 
-`h2` element has an accessible name from content that is not only whitespace.
+`h2` element has an [accessible name](#accessible-name) from content that is not only whitespace.
 
 ```html
 <h2>' </h2>
@@ -70,7 +70,7 @@ Element with the semantic role of heading has no accessible name.
 
 #### Passed Example 4
 
-`h2` element has an accessible name through `aria-label` that is not only whitespace.
+`h2` element has an [accessible name](#accessible-name) through `aria-label` that is not only whitespace.
 
 ```html
 <h2 aria-label="Orange harvesting season"> </h2>
@@ -78,7 +78,7 @@ Element with the semantic role of heading has no accessible name.
 
 #### Passed Example 5
 
-`h2` element has an accessible name through the `alt` attribute that is not only whitespace.
+`h2` element has an [accessible name](#accessible-name) through the `alt` attribute that is not only whitespace.
 
 ```html
 <h2><img src="#" alt="Orange harvesting season"> </h2>
@@ -96,7 +96,7 @@ Element with the semantic role of heading has no accessible name.
 
 #### Failed Example 1
 
-`h2` element contains `br` element as only content. This is translated into a single space in the accessible name computation, which gives an accessible name that is only whitespace.
+`h2` element contains `br` element as only content. This is translated into a single space in the [accessible name](#accessible-name) computation, which gives an [accessible name](#accessible-name) that is only whitespace.
 
 ```html
 <h2><br /></h2>
@@ -104,7 +104,7 @@ Element with the semantic role of heading has no accessible name.
 
 #### Failed Example 2
 
-`h2` contains `&nbsp;`(no break space character) as only content. This is translated into a single space in the accessible name computation, which gives an accessible name that is only whitespace.
+`h2` contains `&nbsp;`(no break space character) as only content. This is translated into a single space in the [accessible name](#accessible-name) computation, which gives an [accessible name](#accessible-name) that is only whitespace.
 
 ```html
 <h2>&nbsp;</h2>
@@ -112,7 +112,7 @@ Element with the semantic role of heading has no accessible name.
 
 #### Failed Example 3
 
-`h2` element only contains a space as only content, which gives an accessible name that is only whitespace.
+`h2` element only contains a space as only content, which gives an [accessible name](#accessible-name) that is only whitespace.
 
 ```html
 <h2> </h2>
@@ -120,7 +120,7 @@ Element with the semantic role of heading has no accessible name.
 
 #### Failed Example 4
 
-`h2` element contains `&#32;` (space) character as only content, which gives an accessible name that is only whitespace.
+`h2` element contains `&#32;` (space) character as only content, which gives an [accessible name](#accessible-name) that is only whitespace.
 
 ```html
 <h2>&#32;</h2>
@@ -128,7 +128,7 @@ Element with the semantic role of heading has no accessible name.
 
 #### Failed Example 5
 
-`h2` element contains `&ensp;` (en-space) character as only content, which gives an accessible name that is only whitespace.
+`h2` element contains `&ensp;` (en-space) character as only content, which gives an [accessible name](#accessible-name) that is only whitespace.
 
 ```html
 <h2>&ensp;</h2>
@@ -136,7 +136,7 @@ Element with the semantic role of heading has no accessible name.
 
 #### Failed Example 6
 
-`h2` element contains `&emsp;` (em-space) character as only content, which gives an accessible name that is only whitespace.
+`h2` element contains `&emsp;` (em-space) character as only content, which gives an [accessible name](#accessible-name) that is only whitespace.
 
 ```html
 <h2>&emsp;</h2>
@@ -144,7 +144,7 @@ Element with the semantic role of heading has no accessible name.
 
 #### Failed Example 7
 
-`h2` element contains `&thinsp;` (thin space) character as only content, which gives an accessible name that is only whitespace.
+`h2` element contains `&thinsp;` (thin space) character as only content, which gives an [accessible name](#accessible-name) that is only whitespace.
 
 ```html
 <h2>&thinsp;</h2>

@@ -27,8 +27,6 @@ The [accessible name](#accessible-name) of the test target, if there is an acces
 
 **Note:** In the [Accessible Name and Description Computation](https://www.w3.org/TR/accname-1.1/#mapping_additional_nd_te) all carriage returns, newlines, tabs, and form-feeds are replaced with a single space.
 
-**Note:** Headings might have [descendants](https://www.w3.org/TR/dom41/#concept-tree-descendant) that are [phrasing content](https://html.spec.whatwg.org/multipage/dom.html#phrasing-content) elements, that will not impact the [accessible name](#accessible-name), e.g. `span`, `b` or `em`.
-
 ## Assumptions
 
 This rule assumes that having an element that unintentionally shows up programmatically to a user of assistive technologies as a heading element, but is not shown visually as a heading on the page, is a violation of WCAG success criterion 1.3.1 Info and Relationships.

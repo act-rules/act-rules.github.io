@@ -19,7 +19,7 @@ authors:
 
 ## Applicability
 
-The rule applies to any HTML `input`, `select` and `textarea` element with an `autocomplete` attribute that is not empty (""), except if one of the following is true:
+The rule applies to any HTML `input`, `select` and `textarea` element with an `autocomplete` attribute that is not empty ("") or that is not only [whitespace](#whitespace), except if one of the following is true:
 
 - The element is not [visible](#visible), and not [included in the accessibility tree](#included-in-the-accessibility-tree)
 - The element is an `input` element with a `type` property of `hidden`, `button`, `submit` or `reset`
@@ -190,14 +190,6 @@ Autocomplete is inappropriate for the type of field.
 <input type="number" autocomplete="email" />
 ```
 
-#### Failed example 6
-
-Autocomplete is not empty, but does not have any terms specified.
-
-```html
-<input autocomplete=" " />
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -278,4 +270,12 @@ Non-widget element that does not participate in sequential focus navigation.
 
 ```html
 <input type="button" role="none" tabindex="-2" autocomplete="username" />
+```
+
+#### Inapplicable example 11
+
+Autocomplete attribute constains only whitespace.
+
+```html
+<input autocomplete=" " />
 ```

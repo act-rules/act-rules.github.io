@@ -29,7 +29,7 @@ The [accessible name](#accessible-name) of the test target, if there is an acces
 
 ## Assumptions
 
-This rule assumes that having an element that unintentionally shows up programmatically to a user of assistive technologies as a heading element, but is not shown visually as a heading on the page, is a violation of WCAG success criterion 1.3.1 Info and Relationships.
+This rule assumes that having an element that unintentionally shows up programmatically to a user of assistive technologies as a heading element, but is not shown visually as a heading on the page, is a violation of WCAG Success Criterion 1.3.1 Info and Relationships.
 
 ## Accessibility Support
 

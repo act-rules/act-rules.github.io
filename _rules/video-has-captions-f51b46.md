@@ -77,7 +77,7 @@ A video element with any form of captions.
 A video element with an associated track element that contain incorrect captions.
 
 ```html
-<video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls>
+<video src="../test-assets/perspective-video/perspective-video.mp4" controls>
 	<track src="/test-assets/perspective-video/perspective-incorrect-caption.vtt" kind="captions" />
 </video>
 ```
@@ -92,7 +92,7 @@ A video element with a text on the same page that described the audio in the vid
 	perspectives. Keyboard compatibility. Not being able to use your computer because your mouse doesn't work, is
 	frustrating. Many people use only the keyboard to navigate websites. Either through preference or circumstance.
 </p>
-<video src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4" controls></video>
+<video src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 #### Failed Example 4
@@ -106,7 +106,7 @@ A video element with an explicitly associated text on the same page that describ
 	frustrating. Many people use only the keyboard to navigate websites. Either through preference or circumstance.
 </p>
 <video
-	src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4"
+	src="../test-assets/perspective-video/perspective-video.mp4"
 	controls
 	ariadescribedby="text"
 ></video>

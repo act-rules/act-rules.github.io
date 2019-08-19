@@ -24,7 +24,7 @@ The rule applies to any element that is [visible](#visible) and has a CSS `trans
 
 ## Expectation
 
-Each target element is not restricted to a single display orientation using CSS rotate transform-function, whose value is a multiple of 90 degrees but not a multiple of 180 degrees.
+None of the target elements has a CSS [rotate](https://drafts.csswg.org/css-transforms/#funcdef-transform-rotate) transform-function, whose value is a multiple of 90 degrees but not a multiple of 180 degrees.
 
 ## Assumptions
 

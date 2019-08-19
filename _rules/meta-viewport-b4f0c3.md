@@ -25,7 +25,7 @@ The rule applies to each `<meta name="viewport">` element with a `content` attri
 
 The `content` attribute of the test target: 
 - either does not have the property `user-scalable`, or has it set to yes; and
-- either does not have the property `maximum-scale`, or has it set to a value that allows zooming upto 200%.
+- either does not have the property `maximum-scale`, or has it set to a value that allows zooming up to 200%.
 
 ## Assumptions
 

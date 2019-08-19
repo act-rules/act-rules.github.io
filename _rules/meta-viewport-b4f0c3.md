@@ -25,7 +25,7 @@ The rule applies to each `<meta name="viewport">` element with a `content` attri
 
 The `content` attribute of the test target: 
 - either does not have the property `user-scalable`, or has it set to yes; and
-- either does not have the property `maximum-scale`, or has it set to a value that allows significant zooming.
+- either does not have the property `maximum-scale`, or has it set to a value that allows zooming upto 200%.
 
 ## Assumptions
 
@@ -112,6 +112,23 @@ The `<meta name="viewport">` element with an empty `content` attribute.
 </html>
 ````
 
+#### Passed Example 5
+
+The `<meta name="viewport">` element sets the `maximum-scale=2` so the user can zoom in more than twice (200%).
+
+````html
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, maximum-scale=2.0">
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </body>
+</html>
+````
+
 ### Failed
 
 #### Failed Example 1
@@ -156,23 +173,6 @@ The `<meta name="viewport">` element sets the `maximum-scale=1.0` so the user ca
 <html>
   <head>
     <meta name="viewport" content="width=device-width, maximum-scale=1.0">
-  </head>
-  <body>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-  </body>
-</html>
-````
-
-#### Failed Example 4
-
-The `<meta name="viewport">` element sets the `maximum-scale=2` so the user can't zoom in more than twice.
-
-````html
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, maximum-scale=2.0">
   </head>
   <body>
     <p>

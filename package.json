@@ -133,7 +133,7 @@
 		"husky": "^3.0.3",
 		"jest": "^24.8.0",
 		"jest-extended": "^0.11.2",
-		"lint-staged": "^9.2.1",
+		"lint-staged": "^9.2.3",
 		"marked": "^0.7.0",
 		"prettier": "^1.18.2"
 	},

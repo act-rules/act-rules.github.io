@@ -16,10 +16,14 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects: # Remove what is not applicable
-  - DOM Tree
-  - CSS Styling
+ - DOM Tree
+ - CSS Styling
 authors:
-  - Anne Thyme Nørregaard
+ - Anne Thyme Nørregaard
+htmlHintIgnore:
+ # https://www.npmjs.com/package/htmlhint 
+ # (used with `npm test` to ensure validity of code snippets)
+ - 'alt-require'
 ---
 
 ## Applicability
@@ -53,7 +57,7 @@ There is a known combination of a popular browser and assistive technology that 
 Image button element with accessible name through `alt` attribute
 
 ```html
-<input type="image" name="submit" src="button.gif" alt="Submit" />
+<input type="image" name="submit" src="button.gif" alt="Submit" value="Submit"/>
 ```
 
 #### Passed Example 2
@@ -61,7 +65,7 @@ Image button element with accessible name through `alt` attribute
 Image button element with accessible name through `aria-label`
 
 ```html
-<input type="image" name="submit" src="button.gif" aria-label="Submit" />
+<input type="image" name="submit" src="button.gif" aria-label="Submit" value="Submit"/>
 ```
 
 #### Passed Example 3
@@ -69,7 +73,7 @@ Image button element with accessible name through `aria-label`
 Image button element with accessible name through `title` attribute
 
 ```html
-<input type="image" name="submit" src="button.gif" title="Submit" />
+<input type="image" name="submit" src="button.gif" title="Submit" value="Submit"/>
 ```
 
 #### Passed Example 4
@@ -77,7 +81,7 @@ Image button element with accessible name through `title` attribute
 Image button element with accessible name through `aria-labelledby`
 
 ```html
-<input type="image" name="submit" src="button.gif" aria-labelledby="id1" />
+<input type="image" name="submit" src="button.gif" aria-labelledby="id1" value="Submit"/>
 <div id="id1">Submit</div>
 ```
 
@@ -86,7 +90,7 @@ Image button element with accessible name through `aria-labelledby`
 Accessible name is not only whitespace.
 
 ```html
-<input type="image" name="submit" src="button.gif" alt=":-)" />
+<input type="image" name="submit" src="button.gif" alt=":-)" value="Submit"/>
 ```
 
 #### Passed example 6
@@ -94,7 +98,7 @@ Accessible name is not only whitespace.
 Image button element with accessible name through `alt` attribute
 
 ```html
-<input type="image" name="submit" src="button.gif" alt="123" />
+<input type="image" name="submit" src="button.gif" alt="123" value="Submit"/>
 ```
 
 ### Failed
@@ -104,7 +108,7 @@ Image button element with accessible name through `alt` attribute
 Image button element with no attributes to give accessible name
 
 ```html
-<input type="image" name="submit" src="button.gif" />
+<input type="image" name="submit" src="button.gif" value="Submit"/>
 ```
 
 #### Failed Example 2
@@ -112,7 +116,7 @@ Image button element with no attributes to give accessible name
 Image button element with empty `alt` attribute
 
 ```html
-<input type="image" name="submit" src="button.gif" alt="" />
+<input type="image" name="submit" src="button.gif" alt="" value="Submit"/>
 ```
 
 #### Failed Example 3
@@ -120,7 +124,7 @@ Image button element with empty `alt` attribute
 Image button with aria-labelledby that does not reference an id that exists in the same document
 
 ```html
-<input type="image" name="submit" src="button.gif" aria-labelledby="id1" />
+<input type="image" name="submit" src="button.gif" aria-labelledby="id1" value="Submit"/>
 ```
 
 #### Failed example 4
@@ -128,7 +132,7 @@ Image button with aria-labelledby that does not reference an id that exists in t
 Accessible name is only whitespace.
 
 ```html
-<input type="image" name="submit" src="button.gif" alt=" " />
+<input type="image" name="submit" src="button.gif" alt=" " value="Submit"/>
 ```
 
 ### Inapplicable
@@ -170,5 +174,5 @@ Image is not a button image
 Image button is not included in the accessibility tree
 
 ```html
-<input type="image" name="submit" src="button.gif" alt="Submit" aria-hidden="true" />
+<input type="image" name="submit" src="button.gif" alt="Submit" aria-hidden="true" value="Submit"/>
 ```

@@ -182,7 +182,7 @@ Button has an accessible name that is only whitespace.
 Image buttons are tested in a different rule.
 
 ```html
-<input type="image" value="download" />
+<input type="image" value="download" alt="Download" />
 ```
 
 #### Inapplicable Example 2

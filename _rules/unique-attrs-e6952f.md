@@ -15,6 +15,10 @@ input_aspects:
 authors:
   - Wilco Fiers
   - Emma Pratt Richens
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint 
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'attr-no-duplication'
 ---
 
 ## Applicability

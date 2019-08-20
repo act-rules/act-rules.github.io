@@ -13,6 +13,10 @@ input_aspects:
 authors:
   - Wilco Fiers
   - Brian Bors
+htmlHintIgnore:
+ # https://www.npmjs.com/package/htmlhint 
+ # (used with `npm test` to ensure validity of code snippets)
+ - 'tag-pair'
 ---
 
 ## Applicability

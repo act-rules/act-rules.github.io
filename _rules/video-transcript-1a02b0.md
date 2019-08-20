@@ -11,13 +11,17 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
-  - DOM Tree
-  - CSS Styling
-  - Audio output
-  - Visual output
+ - DOM Tree
+ - CSS Styling
+ - Audio output
+ - Visual output
 authors:
-  - Wilco Fiers
-  - Brian Bors
+ - Wilco Fiers
+ - Brian Bors
+htmlHintIgnore:
+ # https://www.npmjs.com/package/htmlhint 
+ # (used with `npm test` to ensure validity of code snippets)
+ - 'tag-pair'
 ---
 
 ## Applicability
@@ -73,7 +77,7 @@ A video element with a link to a text transcript on a different page.
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
-<a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
+<a href="../test-assets/rabbit-video/transcript.html">Transcript</a>
 ```
 
 ### Failed
@@ -101,7 +105,7 @@ A video element with a link to an incorrect text transcript on a different page.
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
-<a href="../test-assets/rabbit-video/incorrect-transcript.html">Transcript</p>
+<a href="../test-assets/rabbit-video/incorrect-transcript.html">Transcript</a>
 ```
 
 ### Inapplicable
@@ -115,7 +119,7 @@ A video element that is not visible on the page.
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
-<a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
+<a href="../test-assets/rabbit-video/transcript.html">Transcript</a>
 ```
 
 #### Inapplicable Example 2
@@ -127,5 +131,5 @@ A video element without audio.
   <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
+<a href="../test-assets/rabbit-video/transcript.html">Transcript</a>
 ```

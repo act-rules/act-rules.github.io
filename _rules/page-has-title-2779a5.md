@@ -11,13 +11,17 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
-  - DOM Tree
+ - DOM Tree
 authors:
-  - Wilco Fiers
-  - Stein Erik Skotkjerra
-  - Bryn Anderson
-  - Anne Thyme Nørregaard
-  - Jey Nandakumar
+ - Wilco Fiers
+ - Stein Erik Skotkjerra
+ - Bryn Anderson
+ - Anne Thyme Nørregaard
+ - Jey Nandakumar 
+htmlHintIgnore:
+ # https://www.npmjs.com/package/htmlhint 
+ # (used with `npm test` to ensure validity of code snippets)
+ - 'title-require'
 ---
 
 ## Applicability

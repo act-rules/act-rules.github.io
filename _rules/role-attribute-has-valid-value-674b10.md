@@ -11,10 +11,14 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
-  - DOM Tree
-  - CSS Styling
+ - DOM Tree
+ - CSS Styling
 authors:
-  - Jey Nandakumar
+ - Jey Nandakumar
+htmlHintIgnore:
+ # https://www.npmjs.com/package/htmlhint 
+ # (used with `npm test` to ensure validity of code snippets)
+ - 'src-not-empty'
 ---
 
 ## Applicability
@@ -68,7 +72,7 @@ Element with multiple valid `role` values.
 Element with at least one valid `role` value.
 
 ```html
-<img role="img xyz" src="" />
+<img role="img xyz" src="" alt=""/>
 ```
 
 ### Failed

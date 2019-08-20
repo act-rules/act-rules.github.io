@@ -150,7 +150,7 @@ HTML `button` element is not an image button
 HTML `input` element with type with a `type` attribute in the `Button` state is not an image button
 
 ```html
-<input type="button">My button</input>
+<input type="button" value="My button" />
 ```
 
 #### Inapplicable Example 3

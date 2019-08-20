@@ -20,11 +20,11 @@ authors:
 
 ## Applicability
 
-This rule applies to any `td` element with a `headers` attribute, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+This rule applies to any [`cell`](https://www.w3.org/TR/html52/tabular-data.html#cell) with a [`headers`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-headers) attribute, in a [table](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) element that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ## Expectation
 
-The `header` attribute of each target element is [a set of space separated IDs](https://www.w3.org/TR/html50/infrastructure.html#set-of-space-separated-tokens), each of which is an ID of an element in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the applicable elment, that:
+The `headers` attribute of each target element is [a set of space separated IDs](https://www.w3.org/TR/html50/infrastructure.html#set-of-space-separated-tokens), each of which is an ID of an element in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the applicable elment, that:
 
 1. has a [semantic role](#semantic-role) of `columnheader` or `rowheader`, and
 2. is a [`cell`](https://www.w3.org/TR/html52/tabular-data.html#cell) of the same [`table`](https://www.w3.org/TR/html50/tabular-data.html#concept-table) as the target element

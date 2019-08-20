@@ -109,14 +109,6 @@ Text nodes in name from content are not expressing anything in human language an
 <button aria-label="close">:-)</button>
 ```
 
-#### Passed Example 5
-
-Text nodes in name from content are not expressing anything in human language and do therefore not live up to the [WCAG definition of text](https://www.w3.org/TR/WCAG21/#dfn-text).
-
-```html
-<button aria-label="close">:-)</button>
-```
-
 #### Passed Example 6
 
 Visible label and accessible name matches when punctuation is removed.

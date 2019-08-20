@@ -1751,8 +1751,8 @@ acorn@^6.0.1, acorn@^6.0.7:
 
 "act-rules-implementation-alfa@git+https://git@github.com/act-rules/act-rules-implementation-alfa.git":
   version "1.0.0"
-  uid "3919107e5b504539255ed403cf27143f9d1b1997"
-  resolved "git+https://git@github.com/act-rules/act-rules-implementation-alfa.git#3919107e5b504539255ed403cf27143f9d1b1997"
+  uid "6cd374c37e9b5df1935632b44e602f7419c3e7ee"
+  resolved "git+https://git@github.com/act-rules/act-rules-implementation-alfa.git#6cd374c37e9b5df1935632b44e602f7419c3e7ee"
 
 "act-rules-implementation-axe-core@git+https://git@github.com/act-rules/act-rules-implementation-axe-core.git":
   version "1.0.0"
@@ -5954,10 +5954,10 @@ gatsby-plugin-react-helmet@^3.1.3:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-sass@^2.1.8:
-  version "2.1.8"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-2.1.8.tgz#6b26f716f26e58bee42fa45458eb7812f4fe25bb"
-  integrity sha512-yPjDL5iALoFOsdy/Iuxmt/vh4+XrYrVkM3leBMMnVLtR+dqHK1953LeCnrb+Ps98sdZO5oS2FKPYnaQFXqie6A==
+gatsby-plugin-sass@^2.1.9:
+  version "2.1.9"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-2.1.9.tgz#095b733ef4155962ff06ac755311e3e643830581"
+  integrity sha512-HeK43EEV85OcibjxTIVQLEW2uLIyYJ9q87mQnTRj12AwtbFuQyv2XnYezEcqDmgxC/r9R4HQzJOBnUHEp3DZfA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     sass-loader "^7.0.1"
@@ -12554,6 +12554,11 @@ semver-truncate@^1.1.2:
   integrity sha512-Ya52jSX2u7QKghxeoFGpLwCtGlt7j0oY9DYb5apt9nPlJ42ID+ulTXESnt/qAQcoSERyZ5sl3LDIOw0nAn/5DA==
 
 semver@^6.0.0, semver@^6.1.1, semver@^6.2.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
+  integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
+
+semver@^6.2.0:
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
   integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==

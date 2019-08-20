@@ -20,11 +20,21 @@ authors:
 
 ## Applicability
 
-The rule applies to any element that is [visible](#visible) and has a CSS `transform` property with a [rotate](https://drafts.csswg.org/css-transforms/#funcdef-transform-rotate) transform-function, set from a CSS media query with an [orientation](https://drafts.csswg.org/mediaqueries-3/#orientation) media feature (`landscape` or `portrait`).
+The rule applies to any element that is [visible](#visible) and has a CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property with any of the below [transform-functions](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function)
+
+- [rotate transform-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate)
+- [rotate3d transform-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d)
+- [rotateX transform-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateX)
+- [rotateY transform-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateY)
+- [rotateZ transform-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateZ)
+- [matrix transform-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix)
+- [matrix3d transform-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d)
+
+which are set as CSS [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries) with an [orientation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation) [media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) with a value of `landsapce` or `portrait`.
 
 ## Expectation
 
-None of the target elements has a CSS [rotate](https://drafts.csswg.org/css-transforms/#funcdef-transform-rotate) transform-function, whose value is a multiple of 90 degrees but not a multiple of 180 degrees.
+None of the target element has a [current transformation matrix](https://drafts.csswg.org/css-transforms/#current-transformation-matrix) whose values do not restrict the guven element to a single display orientation.
 
 ## Assumptions
 

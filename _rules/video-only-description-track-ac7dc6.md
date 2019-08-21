@@ -42,7 +42,7 @@ Currently the description track is not supported by most assistive technology. V
 
 ### Passed
 
-#### Pass Example 1
+#### Passed Example 1
 
 A video only element with a track element that contains descriptions.
 
@@ -56,7 +56,7 @@ A video only element with a track element that contains descriptions.
 
 ### Failed
 
-#### Fail Example 1
+#### Failed Example 1
 
 A video only element with a track element that contains incorrect descriptions.
 

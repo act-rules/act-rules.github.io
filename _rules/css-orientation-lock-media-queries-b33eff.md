@@ -34,7 +34,7 @@ which are set as CSS [media query](https://developer.mozilla.org/en-US/docs/Web/
 
 ## Expectation
 
-None of the target element has a [current transformation matrix](https://drafts.csswg.org/css-transforms/#current-transformation-matrix) whose values do not restrict the guven element to a single display orientation.
+None of the target element has a [current transformation matrix](https://drafts.csswg.org/css-transforms/#current-transformation-matrix) that is restricted to a single display orientation.
 
 ## Assumptions
 

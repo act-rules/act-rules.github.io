@@ -105,11 +105,7 @@ A video element with an explicitly associated text on the same page that describ
 	perspectives. Keyboard compatibility. Not being able to use your computer because your mouse doesn't work, is
 	frustrating. Many people use only the keyboard to navigate websites. Either through preference or circumstance.
 </p>
-<video
-	src="../test-assets/perspective-video/perspective-video.mp4"
-	controls
-	ariadescribedby="text"
-></video>
+<video src="../test-assets/perspective-video/perspective-video.mp4" controls ariadescribedby="text"></video>
 ```
 
 ### Inapplicable

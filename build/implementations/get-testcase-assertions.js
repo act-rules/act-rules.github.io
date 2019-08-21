@@ -9,8 +9,8 @@ const getAssertionSource = require('./get-assertion-source')
 const getTestcaseAssertions = (assertions, relativeUrl) => {
 	const testcaseAssertions = assertions.filter(assertion => {
 		const source = getAssertionSource(assertion)
-		if(!source) {
-			return false;
+		if (!source) {
+			return false
 		}
 		return source.includes(relativeUrl)
 	})

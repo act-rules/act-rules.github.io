@@ -180,11 +180,7 @@ A video element with audio.
 	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
 	compatibility is described in WCAG. See the video below to watch the same information again in video form.
 </p>
-<video
-	data-rule-target
-	src="../test-assets/perspective-video/perspective-video.mp4"
-	controls
-></video>
+<video data-rule-target src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 #### Inapplicable Example 2

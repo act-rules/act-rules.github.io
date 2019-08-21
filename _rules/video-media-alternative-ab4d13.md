@@ -142,9 +142,5 @@ A video element that describes some of the text on the same page. The text on th
 	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
 	compatibility is described in WCAG. See the video below to watch the same information again in video form.
 </p>
-<video
-	src="../test-assets/perspective-video/perspective-video.mp4"
-	controls
-	style="display: none;"
-></video>
+<video src="../test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>
 ```

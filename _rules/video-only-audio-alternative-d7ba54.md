@@ -32,8 +32,8 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- [Understanding SC 1.2.1:Audio-only and Video-only (Prerecorded)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
-- [G166:Providing audio that describes the important video content and describing it as such](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G166)
+- [Understanding Success Criterion 1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded)
+- [G166: Providing audio that describes the important video content and describing it as such](https://www.w3.org/WAI/WCAG21/Techniques/general/G166)
 
 ## Test Cases
 

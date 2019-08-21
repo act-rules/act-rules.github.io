@@ -37,9 +37,9 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- [https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=411#qr-ensure-compat-parses](https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=411#qr-ensure-compat-parses)
-- [https://www.w3.org/TR/WCAG20-TECHS/H93.html](https://www.w3.org/TR/WCAG20-TECHS/H93.html)
-- [https://www.w3.org/TR/WCAG20-TECHS/H94.html](https://www.w3.org/TR/WCAG20-TECHS/H94.html)
+- [Understanding Success Criterion 4.1.1: Parsing](https://www.w3.org/WAI/WCAG21/Understanding/parsing)
+- [H93: Ensuring that id attributes are unique on a Web page](https://www.w3.org/WAI/WCAG21/Techniques/html/H93)
+- [H94: Ensuring that elements do not contain duplicate attributes](https://www.w3.org/WAI/WCAG21/Techniques/html/H94)
 
 ## Test Cases
 

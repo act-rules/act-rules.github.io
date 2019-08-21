@@ -45,8 +45,8 @@ See [Video Only Element Has Description Track: accessibility support](https://ac
 
 ## Background
 
-- [Understanding SC 1.2.1:Audio-only and Video-only (Prerecorded)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
-- [H96:Using the track element to provide audio descriptions](https://www.w3.org/TR/WCAG20-TECHS/H96.html)
+- [Understanding Success Criterion 1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded)
+- [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/html/H96)
 
 ## Test Cases
 

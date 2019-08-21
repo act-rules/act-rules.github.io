@@ -41,8 +41,8 @@ Certain assistive technologies can be set up to ignore the title attribute, whic
 
 ## Background
 
-- https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html
-- https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html
+- [Understanding Success Criterion 3.3.2: Labels or Instructions](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions)
+- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 
 **Note**: This rule does not fail 3.3.2 as there are sufficient techniques within 3.3.2 that don't need the elements to have an accessible name. For example "G131: Providing descriptive labels" **AND** "G162: Positioning labels to maximize predictability of relationships" would be sufficient.
 
@@ -97,7 +97,7 @@ Certain assistive technologies can be set up to ignore the title attribute, whic
 <div aria-label="country" role="combobox" aria-disabled="true">England</div>
 ```
 
-#### Passed example 6
+#### Passed Example 6
 
 The accessible name is not only whitespace.
 
@@ -162,7 +162,7 @@ The explicit label is not supported on `div` elements.
 <div role="textbox" id="lastname"></div>
 ```
 
-#### Failed example 7
+#### Failed Example 7
 
 The accessible name is only whitespace.
 

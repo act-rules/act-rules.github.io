@@ -38,10 +38,9 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- [https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
-- [https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=412#qr-ensure-compat-rsv](https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=412#qr-ensure-compat-rsv)
-- [ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used](https://www.w3.org/TR/WCAG20-TECHS/ARIA14.html)
-- [https://www.w3.org/TR/WCAG20-TECHS/ARIA16.html](https://www.w3.org/TR/WCAG20-TECHS/ARIA16.html)
+- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
+- [ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA14)
+- [ARIA16: Using aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA16)
 
 ## Test Cases
 
@@ -114,7 +113,7 @@ Off screen elements should be tested.
 </html>
 ```
 
-#### Passed example 8
+#### Passed Example 8
 
 Button has accessible name that is not only whitespace.
 
@@ -122,7 +121,7 @@ Button has accessible name that is not only whitespace.
 <button>:-)</button>
 ```
 
-#### Passed example 9
+#### Passed Example 9
 
 Input button has an accessible name that comes from the default "reset" text.
 
@@ -167,7 +166,7 @@ Off screen element without an accessible name.
 </html>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 Button has an accessible name that is only whitespace.
 

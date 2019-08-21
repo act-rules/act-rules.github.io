@@ -91,7 +91,7 @@ The `lang` and `xml:lang` attribute values are not empty ("") and both have a va
 </html>
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 The `lang` and `xml:lang` attribute values are either empty ("") or have a valid primary language subtag.
 
@@ -141,7 +141,7 @@ The `lang` attribute value has a valid primary language subtag, but a syntactica
 </html>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 The `lang` attribute value is not empty ("") and is not a valid primary language subtag.
 
@@ -153,7 +153,7 @@ The `lang` attribute value is not empty ("") and is not a valid primary language
 </html>
 ```
 
-#### Failed example 5
+#### Failed Example 5
 
 The `lang` attribute value is not empty ("") and is not a valid primary language subtag.
 
@@ -165,7 +165,7 @@ The `lang` attribute value is not empty ("") and is not a valid primary language
 </html>
 ```
 
-#### Failed example 5
+#### Failed Example 6
 
 The `lang` attribute value is not empty ("") and is not a valid primary language subtag.
 

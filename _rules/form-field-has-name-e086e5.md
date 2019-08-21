@@ -97,7 +97,7 @@ Certain assistive technologies can be set up to ignore the title attribute, whic
 <div aria-label="country" role="combobox" aria-disabled="true">England</div>
 ```
 
-#### Passed example 6
+#### Passed Example 6
 
 The accessible name is not only whitespace.
 
@@ -162,7 +162,7 @@ The explicit label is not supported on `div` elements.
 <div role="textbox" id="lastname"></div>
 ```
 
-#### Failed example 7
+#### Failed Example 7
 
 The accessible name is only whitespace.
 

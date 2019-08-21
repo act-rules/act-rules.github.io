@@ -188,7 +188,7 @@ Links created via scripting with [explicit role](#explicit-role) of link, but le
 </span>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 Same accessible name used for image links going to different resources:
 
@@ -261,7 +261,7 @@ Link is not included in the accessibility tree:
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/pabe2.html">Contact Us</a>
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 Links created via scripting, but without the semantic role of link:
 

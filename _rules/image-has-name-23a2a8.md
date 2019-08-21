@@ -99,7 +99,7 @@ The HTML `img` element is marked as [decorative](#decorative) through `role="non
 <img role="none" />
 ```
 
-#### Passed example 6
+#### Passed Example 7
 
 The HTML `img` element has an accessible name that does not only consist of whitespace
 
@@ -133,7 +133,7 @@ The `img` element inside a `div` positioned off screen has no accessible name an
 <div style="margin-left:-9999px;"><img /></div>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 The HTML `img` element has an accessible name that only consist of whitespace
 

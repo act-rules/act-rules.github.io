@@ -3,7 +3,7 @@ const {
 } = require('./../../package.json')
 const scUrlsMetaData = require('./../../_data/sc-urls.json')
 const scEmReportAuditResult = require('./../../_data/sc-em-report-audit-result.json')
-const graphContext = require('./wcag-em-report-tool-mappings/@graph-context.json')
+const graphContext = require('./wcag-em-report-tool-mappings/earl-context.json')
 const graphAdditionalMeta = require('./wcag-em-report-tool-mappings/@graph-additional-meta.json')
 const graphEvaluatorMeta = require('./wcag-em-report-tool-mappings/@graph-evaluator-meta.json')
 const createFile = require('../../utils/create-file')
@@ -55,7 +55,7 @@ const createTestcasesOfRuleOfEmReportTool = async options => {
 	const json = {
 		'@graph': [
 			{
-				...graphContext,
+				'@context': graphContext,
 				...graphAdditionalMeta,
 				title,
 				evaluationScope: {

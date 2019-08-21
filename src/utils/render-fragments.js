@@ -4,6 +4,62 @@ import { Link } from 'gatsby'
 import glossaryUsages from './../../_data/glossary-usages.json'
 import implementationMetrics from './../../_data/implementation-metrics.json'
 
+import rulesUsages from './../../_data/rules-usages.json'
+
+export const getImplementationsTabulation = (implementers, cls = 'compact', ruleId) => {
+	return (
+		<table className={cls}>
+			<thead>
+				<tr>
+					<th>Tool Name</th>
+					<th>Created By</th>
+					<th>Report</th>
+				</tr>
+			</thead>
+			<tbody>
+				{implementers.map(row => {
+					const { organisation, tool } = row
+					const filename = tool
+						.split(' ')
+						.join('-')
+						.toLowerCase()
+					const reportUrl = ruleId ? `/implementation/${filename}#${ruleId}` : `/implementation/${filename}`
+					return (
+						<tr key={tool}>
+							<td>{tool}</td>
+							<td>{organisation}</td>
+							<td>
+								<a href={reportUrl}>View Report</a>
+							</td>
+						</tr>
+					)
+				})}
+			</tbody>
+		</table>
+	)
+}
+
+const getCompleteImplementations = metrics => {
+	return metrics.filter(metric => {
+		const implementation = metric.implementation[0]
+		const { complete, incorrect } = implementation
+		return !!complete && !incorrect.length
+	})
+}
+
+export const getImplementationsLink = slug => {
+	const ruleId = slug.replace('rules/', '')
+	const metrics = implementationMetrics[ruleId]
+	if (!metrics) {
+		return null
+	}
+	return (
+		<li>
+			<a href="#implementation-metrics">Implementations ({getCompleteImplementations(metrics).length})</a>
+		</li>
+	)
+}
+
 export const getImplementations = slug => {
 	const ruleId = slug.replace('rules/', '')
 	const metrics = implementationMetrics[ruleId]
@@ -15,48 +71,23 @@ export const getImplementations = slug => {
 			<a id="implementation-metrics" href="#implementation-metrics">
 				<h2>Implementations</h2>
 			</a>
-			<table className="compact">
-				<thead>
-					<tr>
-						<th>Tool Name</th>
-						<th>Created By</th>
-						<th>Report</th>
-					</tr>
-				</thead>
-				<tbody>
-					{metrics.map(metric => {
-						const { organisation, tool } = metric
-						const filename = tool
-							.split(' ')
-							.join('-')
-							.toLowerCase()
-						const reportUrl = `/implementation/${filename}#${ruleId}`
-						return (
-							<tr key={tool}>
-								<td>{tool}</td>
-								<td>{organisation}</td>
-								<td>
-									<a href={reportUrl}>View Report</a>
-								</td>
-							</tr>
-						)
-					})}
-				</tbody>
-			</table>
+			{getImplementationsTabulation(getCompleteImplementations(metrics), 'compact', ruleId)}
 		</>
 	)
 }
 
-export const getImplementationsLink = slug => {
+export const getImplementationsCount = slug => {
 	const ruleId = slug.replace('rules/', '')
 	const metrics = implementationMetrics[ruleId]
 	if (!metrics) {
 		return null
 	}
 	return (
-		<li>
-			<a href="#implementation-metrics">Implementations ({metrics.length})</a>
-		</li>
+		<div className="side-notes">
+			<div className="meta">
+				<span className="heading">Implementations: {getCompleteImplementations(metrics).length}</span>
+			</div>
+		</div>
 	)
 }
 
@@ -173,7 +204,7 @@ export const getGlossaryUsed = (slug, allGlossary) => {
 	return (
 		<>
 			<a id="glossary-listing" href="#glossary-listing">
-				<h2>Referenced Glossary</h2>
+				<h2>Glossary</h2>
 			</a>
 			{glossaries.map(({ node }) => {
 				const { frontmatter, html } = node
@@ -210,7 +241,7 @@ export const getGlossaryUsedLink = (slug, allGlossary) => {
 	}
 	return (
 		<li>
-			<a href="#glossary-listing">Referenced Glossary</a>
+			<a href="#glossary-listing">Glossary</a>
 		</li>
 	)
 }
@@ -244,7 +275,9 @@ export function getAccessibilityRequirements(accessibility_requirements, type = 
 		return (
 			<div className="meta">
 				<span className="heading">Accessibility Requirements Mapping</span>
-				<p>This rule is not required for conformance to WCAG at any level.</p>
+				<ul>
+					<li>This rule is not required for conformance</li>
+				</ul>
 			</div>
 		)
 	}
@@ -451,21 +484,6 @@ export function getInputRulesForRule(inputRules, allRules, stripBasePath = false
 	)
 }
 
-export function getImplementationsCount(slug) {
-	const ruleId = slug.replace('rules/', '')
-	const metrics = implementationMetrics[ruleId]
-	if (!metrics) {
-		return null
-	}
-	return (
-		<div className="side-notes">
-			<div className="meta">
-				<span className="heading">Implementations: {metrics.length}</span>
-			</div>
-		</div>
-	)
-}
-
 export function getGlossaryUsageInRules(usages) {
 	if (!usages) {
 		return null
@@ -482,6 +500,29 @@ export function getGlossaryUsageInRules(usages) {
 					</li>
 				))}
 			</ul>
+		</div>
+	)
+}
+
+export function getRuleUsageInRules(ruleId) {
+	const usages = rulesUsages[ruleId]
+	if (!usages) {
+		return null
+	}
+	return (
+		<div className="side-notes">
+			<div className="meta">
+				<span className="heading">Used in rules</span>
+				<ul>
+					{usages.map(usage => (
+						<li key={usage.slug}>
+							<Link key={usage.slug} to={usage.slug}>
+								{usage.name}
+							</Link>
+						</li>
+					))}
+				</ul>
+			</div>
 		</div>
 	)
 }

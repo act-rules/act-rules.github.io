@@ -3,7 +3,7 @@ id: 674b10
 name: Role attribute has valid value
 rule_type: atomic
 description: |
-  This rule checks that each role attribute has a valid value
+  This rule checks that each `role` attribute has a valid value.
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true

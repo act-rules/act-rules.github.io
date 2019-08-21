@@ -26,7 +26,7 @@ The rule applies to every [non-streaming](#non-streaming-media-element) `audio` 
 
 ## Expectation
 
-The auditory information of each test target is available through a text transcript. That text transcript is [visibile](#visible) and [included-in-the-accessibility-tree](#included-in-the-accessibility-tree), either on the page or through a link.
+The auditory information of each test target is available through a text transcript. That text transcript is [visibile](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree), either on the page or through a link.
 
 **Note**: A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
 
@@ -40,8 +40,8 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- [Understanding SC 1.2.1:Audio-only and Video-only (Prerecorded)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
-- [G158:Providing an alternative for time-based media for audio-only content](https://www.w3.org/TR/WCAG20-TECHS/G158.html)
+- [Understanding SC 1.2.1:Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded)
+- [G158:Providing an alternative for time-based media for audio-only content](https://www.w3.org/WAI/WCAG21/Techniques/general/G158)
 
 ## Test Cases
 

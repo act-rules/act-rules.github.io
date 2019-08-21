@@ -3,7 +3,7 @@ id: 4b1c6c
 name: Iframes with identical accessible names serve equivalent purpose
 rule_type: atomic
 description: |
-  This rule checks that iframes with identical accessible names embed the same resource or equivalent resources.
+  This rule checks that `iframe` elements with identical accessible names embed the same resource or equivalent resources.
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true
@@ -20,9 +20,9 @@ authors:
 
 ## Applicability
 
-This rule applies to any set of any two or more `iframe` elements in the same [document tree](https://www.w3.org/TR/dom41/#document-trees) that are [included in the accessibility tree](#included-in-the-accessibility-tree), and that have [matching](#matching-characters) [accessible names](#accessible-name) that do not only consist of [whitespace](#whitespace).
+This rule applies to any set of any two or more `iframe` elements in the same [document tree](https://dom.spec.whatwg.org/#document-trees) that are [included in the accessibility tree](#included-in-the-accessibility-tree), and that have [matching](#matching-characters) [accessible names](#accessible-name) that do not only consist of [whitespace](#whitespace).
 
-**Note:** The test target for this rule is the full set of `iframe` elements within the same [document tree](https://www.w3.org/TR/dom41/#document-trees) that share the same [matching](#matching-characters) [accessible name](#accessible-name).
+**Note:** The test target for this rule is the full set of `iframe` elements within the same [document tree](https://dom.spec.whatwg.org/#document-trees) that share the same [matching](#matching-characters) [accessible name](#accessible-name).
 
 ## Expectation
 

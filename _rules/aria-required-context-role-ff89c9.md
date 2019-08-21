@@ -107,7 +107,7 @@ Element contained within its [required context role](https://www.w3.org/TR/wai-a
 
 ```html
 <div role="list" aria-owns="id1">
-  <div role="tabpanel">
+  <div role="navigation">
     <div id="id1" role="listitem">List item 1</div>
    </div>
 </div>

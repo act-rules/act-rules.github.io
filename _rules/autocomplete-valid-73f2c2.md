@@ -190,14 +190,6 @@ Autocomplete is inappropriate for the type of field.
 <input type="number" autocomplete="email" />
 ```
 
-#### Failed Example 6
-
-Autocomplete is not empty, but does not have any terms specified.
-
-```html
-<input autocomplete=" " />
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1

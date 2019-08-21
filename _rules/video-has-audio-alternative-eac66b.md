@@ -3,7 +3,7 @@ id: eac66b
 name: Video has audio alternative
 rule_type: composite
 description: |
-  This rule checks that `video` elements have an alternative for information conveyed through audio
+  This rule checks that `video` elements have an alternative for information conveyed through audio.
 accessibility_requirements:
   wcag20:1.2.2: # Captions (Prerecorded) (A)
     forConformance: true

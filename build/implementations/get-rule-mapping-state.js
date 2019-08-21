@@ -22,10 +22,6 @@ const getRuleMappingState = assertions => {
 		return { mapping: false }
 	}
 
-	const complete = assertions.every(({ expected, actual }) => {
-		return expected !== 'failed' || actual === 'failed'
-	})
-
 	const incorrect = assertions
 		.filter(data => {
 			const { expected, actual } = data
@@ -35,7 +31,9 @@ const getRuleMappingState = assertions => {
 		})
 		.map(({ url }) => url)
 
-	// const fullAuto = undefined
+	const complete = assertions.every(({ expected, actual }) => {
+		return outcomeMapping[expected].includes(actual) && !incorrect.length
+	})
 
 	return {
 		id: assertions[0].title,

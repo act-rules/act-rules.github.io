@@ -3,7 +3,7 @@ id: e7aa44
 name: Audio only has a text alternative
 rule_type: composite
 description: |
-  This rule checks if audio only elements have a text alternative available
+  This rule checks if audio only elements have a text alternative available.
 accessibility_requirements:
   wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
     forConformance: true
@@ -53,7 +53,7 @@ There are no major accessibility support issues known for this rule.
 
 ### Passed
 
-#### Pass Example 1
+#### Passed Example 1
 
 Audio with controls and internal transcript
 
@@ -67,7 +67,7 @@ Audio with controls and internal transcript
 </p>
 ```
 
-#### Pass Example 2
+#### Passed Example 2
 
 An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative.
 
@@ -86,7 +86,7 @@ An audio element that describes some of the text on the same page. The text on t
 
 ### Failed
 
-#### Fail Example 1
+#### Failed Example 1
 
 Audio with controls and incorrect internal transcript
 
@@ -100,7 +100,7 @@ Audio with controls and incorrect internal transcript
 </p>
 ```
 
-#### Fail Example 2
+#### Failed Example 2
 
 An audio element that describes some of the text on the same page. The text is not visible on the page.
 

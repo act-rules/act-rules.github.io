@@ -56,7 +56,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 2
 
-`aria-pressed` state is supported for `role=button` that is the implicit role for `button` element.
+`aria-pressed` state is supported for `role=button` that is the [implicit role](#implicit-role) for `button` element.
 
 ```html
 <button aria-pressed="false">My button</button>

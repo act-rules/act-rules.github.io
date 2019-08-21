@@ -3,7 +3,7 @@ id: 5f99a7
 name: ARIA attribute is valid
 rule_type: atomic
 description: |
-  This rule checks that each aria- attribute specified is defined in ARIA 1.1
+  This rule checks that each `aria-` attribute specified is defined in ARIA 1.1.
 accessibility_requirements:
 input_aspects:
   - DOM Tree

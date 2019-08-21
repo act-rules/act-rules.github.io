@@ -3,7 +3,7 @@ id: 6cfa84
 name: aria-hidden with focusable content
 rule_type: atomic
 description: |
-  This rule checks that elements with an `aria-hidden` attribute do not contain focusable elements
+  This rule checks that elements with an `aria-hidden` attribute do not contain focusable elements.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true
@@ -30,7 +30,7 @@ The rule applies to any element with an `aria-hidden="true"` attribute.
 
 ## Expectation
 
-None of the target elements are part of [sequential focus navigation](https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation), nor do they have [descendants](https://www.w3.org/TR/dom41/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) that are part of [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation).
+None of the target elements are part of [sequential focus navigation](https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation), nor do they have [descendants](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) that are part of [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation).
 
 ## Assumptions
 

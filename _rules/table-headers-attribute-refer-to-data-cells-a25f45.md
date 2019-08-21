@@ -20,7 +20,7 @@ authors:
 
 ## Applicability
 
-This rule applies to any [`cell`](https://www.w3.org/TR/html52/tabular-data.html#cell) with a [`headers`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-headers) attribute, in a [table](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) element that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+This rule applies to any [`headers`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-headers) attribute specified on a [`cell`](https://www.w3.org/TR/html52/tabular-data.html#cell) in a [table](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) element that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ## Expectation
 

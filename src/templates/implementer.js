@@ -16,23 +16,21 @@ const getTabulation = data => {
 				</tr>
 			</thead>
 			<tbody>
-				{
-					data.map((assertion, index) => {
-						const { url, expected, actual } = assertion
-						const key = `${index}-${url}`
-						return (
-							<tr key={key}>
-								<td>
-									<a target="_blank" rel="noopener noreferrer" href={url}>
-										{url}
-									</a>
-								</td>
-								<td>{expected}</td>
-								<td>{actual}</td>
-							</tr>
-						)
-					})
-				}
+				{data.map((assertion, index) => {
+					const { url, expected, actual } = assertion
+					const key = `${index}-${url}`
+					return (
+						<tr key={key}>
+							<td>
+								<a target="_blank" rel="noopener noreferrer" href={url}>
+									{url}
+								</a>
+							</td>
+							<td>{expected}</td>
+							<td>{actual}</td>
+						</tr>
+					)
+				})}
 			</tbody>
 		</table>
 	)
@@ -44,14 +42,12 @@ const getImplementationMarkup = (ruleId, ruleName, tabulation, showIncomplete) =
 			<Link to={`/rules/${ruleId}`}>
 				<h2 id={`#${ruleId}`}>{ruleName}</h2>
 			</Link>
-			{
-				showIncomplete && (
-					<div className="invalid">
-						<b>INCOMPLETE IMPLEMENTATION.</b> <br />
-						Listed below are the incomplete assertions. Kindly submit an amended implementation report.
-					</div>
-				)
-			}
+			{showIncomplete && (
+				<div className="invalid">
+					<b>INCOMPLETE IMPLEMENTATION.</b> <br />
+					Listed below are the incomplete assertions. Kindly submit an amended implementation report.
+				</div>
+			)}
 			{tabulation}
 		</div>
 	)
@@ -65,24 +61,24 @@ const getRuleImplementationsWhereCompleteIs = (isComplete = false, ruleImplement
 
 const getTabulatedImplementations = (ruleImplementations, showIncomplete) => {
 	if (showIncomplete) {
-		const inCompleteImplementations = ruleImplementations.filter(impl => getRuleImplementationsWhereCompleteIs(false, impl))
+		const inCompleteImplementations = ruleImplementations.filter(impl =>
+			getRuleImplementationsWhereCompleteIs(false, impl)
+		)
 		if (!inCompleteImplementations || !inCompleteImplementations.length) {
 			return (
 				<div className="valid">
 					<b>WELL DONE.</b> <br />
 					All submitted implementation reports are complete.
-			</div>
+				</div>
 			)
 		}
 		return (
 			<div>
-				{
-					inCompleteImplementations.map(({ ruleId, ruleName, implementation }) => {
-						const { incorrect, assertions } = implementation[0]
-						const tabulatedAssertions = getTabulation(assertions.filter(({ url }) => incorrect.includes(url)))
-						return getImplementationMarkup(ruleId, ruleName, tabulatedAssertions, showIncomplete)
-					})
-				}
+				{inCompleteImplementations.map(({ ruleId, ruleName, implementation }) => {
+					const { incorrect, assertions } = implementation[0]
+					const tabulatedAssertions = getTabulation(assertions.filter(({ url }) => incorrect.includes(url)))
+					return getImplementationMarkup(ruleId, ruleName, tabulatedAssertions, showIncomplete)
+				})}
 			</div>
 		)
 	}
@@ -90,13 +86,11 @@ const getTabulatedImplementations = (ruleImplementations, showIncomplete) => {
 	const completeImplementations = ruleImplementations.filter(impl => getRuleImplementationsWhereCompleteIs(true, impl))
 	return (
 		<div>
-			{
-				completeImplementations.map(({ ruleId, ruleName, implementation }) => {
-					const { assertions } = implementation[0]
-					const tabulatedAssertions = getTabulation(assertions)
-					return getImplementationMarkup(ruleId, ruleName, tabulatedAssertions)
-				})
-			}
+			{completeImplementations.map(({ ruleId, ruleName, implementation }) => {
+				const { assertions } = implementation[0]
+				const tabulatedAssertions = getTabulation(assertions)
+				return getImplementationMarkup(ruleId, ruleName, tabulatedAssertions)
+			})}
 		</div>
 	)
 }
@@ -113,7 +107,7 @@ const getPage = (updatedTitle, keywords, pageTitle, pageContent) => {
 	)
 }
 
-export default (props) => {
+export default props => {
 	const { data, location } = props
 	const { site, sitePage } = data
 	const { context } = sitePage
@@ -123,26 +117,26 @@ export default (props) => {
 	const report = JSON.parse(contextData)
 	const { data: ruleImplementations } = report
 
-	const allIncompleteImplementations = ruleImplementations.every(impl => getRuleImplementationsWhereCompleteIs(false, impl))
+	const allIncompleteImplementations = ruleImplementations.every(impl =>
+		getRuleImplementationsWhereCompleteIs(false, impl)
+	)
 
 	let showIncomplete = false
 	if (location.search) {
-		const parsedSearch = queryString.parse(location.search);
+		const parsedSearch = queryString.parse(location.search)
 		const { incomplete = false } = parsedSearch
-		showIncomplete = incomplete === "true"
+		showIncomplete = incomplete === 'true'
 	}
 
 	if (allIncompleteImplementations && !showIncomplete) {
 		const content = (
 			<div className="invalid">
 				<b>INCOMPLETE IMPLEMENTATIONS.</b> <br />
-				All implementations provided are incomplete.
-				Kindly submit amended implementation reports.
+				All implementations provided are incomplete. Kindly submit amended implementation reports.
 			</div>
 		)
 		return getPage(updatedTitle, site.siteMetadata.keywords, pageTitle, content)
 	}
-
 
 	const pageContent = getTabulatedImplementations(ruleImplementations, showIncomplete)
 	return getPage(updatedTitle, site.siteMetadata.keywords, pageTitle, pageContent)

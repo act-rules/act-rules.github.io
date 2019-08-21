@@ -2,7 +2,14 @@ const describeRule = require('../../test-utils/describe-rule')
 const markdownLinkExtractor = require('markdown-link-extractor')
 const isUrl = require('is-url')
 
-const blacklistOfLinks = ['w3.org/TR/dom41', 'WCAG20']
+const blacklistOfLinks = [
+	'://www.w3.org/TR/WCAG20/',
+	'://www.w3.org/TR/UNDERSTANDING-WCAG20/',
+	'://www.w3.org/TR/WCAG20-TECHS/',
+	'://www.w3.org/TR/wai-aria-1.0/',
+	'://www.w3.org/TR/dom41/',
+	'://www.w3.org/TR/html/'
+]
 
 describeRule('hyperlinks', ruleData => {
 	const { body } = ruleData

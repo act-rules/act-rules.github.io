@@ -89,7 +89,7 @@ Element with multiple invalid `role` value.
 <input type="text" role="invalid role" />
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 Element with role attribute that is not empty (""), neither a valid `role` value.
 
@@ -97,7 +97,7 @@ Element with role attribute that is not empty (""), neither a valid `role` value
 <input type="text" role=" " />
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 Element with role attribute that is not empty (""), neither a valid `role` value.
 

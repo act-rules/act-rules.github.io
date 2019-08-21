@@ -45,7 +45,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- https://www.w3.org/TR/WCAG21/#label-in-name
+- [Understanding Success Criterion 2.5.3: Label in Name](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)
 
 ## Test Cases
 

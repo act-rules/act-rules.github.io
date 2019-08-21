@@ -3,7 +3,7 @@ id: 1ea59c
 name: Video element audio described
 rule_type: atomic
 description: |
-  Non-streaming `video` elements must have all visual information also contained in the audio
+  This rule checks that non-streaming `video` elements have all visual information also contained in the audio.
 accessibility_requirements:
 input_aspects:
   - DOM Tree
@@ -33,10 +33,10 @@ There are only a few implementations of video players (without third party techn
 
 ## Background
 
-- [Understanding Success Criterion 1.2.3: Audio Description or Media Alternative (Prerecorded)](http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc.html)
-- [G78:Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G78)
-- [G173:Providing a version of a movie with audio descriptions](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G173)
-- [G8:Providing a movie with extended audio descriptions](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G8)
+- [Understanding Success Criterion 1.2.3: Audio Description or Media Alternative (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-or-media-alternative-prerecorded)
+- [G78: Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/general/G78)
+- [G173: Providing a version of a movie with audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/general/G173)
+- [G8: Providing a movie with extended audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/general/G8)
 
 ## Test Cases
 
@@ -48,14 +48,8 @@ A video element with a voiceover that describes the visual information.
 
 ```html
 <video controls>
-	<source
-		src="../test-assets/rabbit-video/video-with-voiceover.mp4"
-		type="video/mp4"
-	/>
-	<source
-		src="../test-assets/rabbit-video/video-with-voiceover.webm"
-		type="video/webm"
-	/>
+	<source src="../test-assets/rabbit-video/video-with-voiceover.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/video-with-voiceover.webm" type="video/webm" />
 </video>
 ```
 
@@ -106,14 +100,8 @@ A video element with an incorrect audio description.
 
 ```html
 <video controls>
-	<source
-		src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4"
-		type="video/mp4"
-	/>
-	<source
-		src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm"
-		type="video/webm"
-	/>
+	<source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm" />
 </video>
 ```
 

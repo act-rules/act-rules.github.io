@@ -21,11 +21,11 @@ authors:
 
 Any `id` attribute which is not the empty string (""), specified on an HTML or SVG element.
 
-**Note:** Elements that are neither [included in the accessibility tree](#included-in-the-accessibility-tree) nor [visible on the page](#visible-on-the-page) are still considered for this rule.
+**Note:** Elements that are neither [included in the accessibility tree](#included-in-the-accessibility-tree) nor [visible](#visible) are still considered for this rule.
 
 ## Expectation
 
-The value of the attribute is unique across all other `id` attributes specified on HTML or SVG elements that exist within the same [document tree](https://www.w3.org/TR/dom41/#document-trees) or [shadow tree](https://www.w3.org/TR/dom41/#shadow-trees) as the element on which the applicable `id` attribute is specified.
+The value of the attribute is unique across all other `id` attributes specified on HTML or SVG elements that exist within the same [document tree](https://dom.spec.whatwg.org/#document-trees) or [shadow tree](https://dom.spec.whatwg.org/#shadow-trees) as the element on which the applicable `id` attribute is specified.
 
 ## Assumptions
 
@@ -37,9 +37,9 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- [https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=411#qr-ensure-compat-parses](https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=411#qr-ensure-compat-parses)
-- [https://www.w3.org/TR/WCAG20-TECHS/H93.html](https://www.w3.org/TR/WCAG20-TECHS/H93.html)
-- [https://www.w3.org/TR/WCAG20-TECHS/H94.html](https://www.w3.org/TR/WCAG20-TECHS/H94.html)
+- [Understanding Success Criterion 4.1.1: Parsing](https://www.w3.org/WAI/WCAG21/Understanding/parsing)
+- [H93: Ensuring that id attributes are unique on a Web page](https://www.w3.org/WAI/WCAG21/Techniques/html/H93)
+- [H94: Ensuring that elements do not contain duplicate attributes](https://www.w3.org/WAI/WCAG21/Techniques/html/H94)
 
 ## Test Cases
 

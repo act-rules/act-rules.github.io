@@ -25,6 +25,20 @@ function SEO({ description, lang, meta, keywords, title }) {
 		`
 	)
 
+	const metaKeywords = keywords.length > 0
+		? {
+			name: `keywords`,
+			content: keywords.join(`, `),
+		}
+		: []
+
+	const metaTags = [
+		{ name: `description`, content: metaDescription, },
+		{ property: `og:title`, content: title, },
+		{ property: `og:description`, content: metaDescription, },
+		{ property: `og:type`, content: `website`, },
+	].concat(metaKeywords).concat(meta)
+
 	const metaDescription = description || site.siteMetadata.description
 	return (
 		<Helmet
@@ -33,34 +47,14 @@ function SEO({ description, lang, meta, keywords, title }) {
 			}}
 			title={title}
 			titleTemplate={`%s | ${site.siteMetadata.title}`}
-			meta={[
-				{
-					name: `description`,
-					content: metaDescription,
-				},
-				{
-					property: `og:title`,
-					content: title,
-				},
-				{
-					property: `og:description`,
-					content: metaDescription,
-				},
-				{
-					property: `og:type`,
-					content: `website`,
-				},
-			]
-				.concat(
-					keywords.length > 0
-						? {
-								name: `keywords`,
-								content: keywords.join(`, `),
-						  }
-						: []
-				)
-				.concat(meta)}
-		/>
+			meta={metaTags}
+		>
+			{/* Busting cache as advised by Gatsby  */}
+			{/* See - https://github.com/gatsbyjs/gatsby/blob/master/docs/docs/caching.md */}
+			<meta http-equiv="Cache-Control" content="public, max-age=0, must-revalidate" />
+			<meta http-equiv="Pragma" content="no-cache" />
+			<meta http-equiv="Expires" content="0" />
+		</Helmet>
 	)
 }
 

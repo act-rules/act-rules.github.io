@@ -3,7 +3,7 @@ id: bc659a
 name: Meta-refresh no delay
 rule_type: atomic
 description: |
-  This rule checks that the meta element is not used for delayed redirecting or refreshing.
+  This rule checks that the `meta` element is not used for delayed redirecting or refreshing.
 accessibility_requirements:
   wcag20:2.2.1: # Timing Adjustable (A)
     forConformance: true
@@ -40,7 +40,7 @@ The `time` of the `content` attribute is 0 or greater than 72000 (20 hours).
 ## Assumptions
 
 - This test assumes no functionality was provided by the website for the user to adjust the timer.
-- This test assumes that the refresh was not [essential](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html#essentialdef), which is listed as a valid exception to SC 2.2.1.
+- This test assumes that the refresh was not [essential](https://www.w3.org/TR/WCAG21/#dfn-essential), which is listed as a valid exception to SC 2.2.1.
 
 ## Accessibility Support
 

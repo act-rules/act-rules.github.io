@@ -3,7 +3,7 @@ id: 23a2a8
 name: Image has accessible name
 rule_type: atomic
 description: |
-  Each image that is not marked as decorative, has an accessible name
+  This rule checks that each image that is not marked as decorative, has an accessible name.
 accessibility_requirements:
   wcag20:1.1.1: # Non-Text Content
     forConformance: true
@@ -38,14 +38,14 @@ There is a known combination of a popular browser and assistive technology that 
 
 ## Background
 
-- [G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G94)
-- [G95: Providing short text alternatives that provide a brief description of the non-text content](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G95)
-- [H37: Using alt attributes on img elements](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/H37)
-- [ARIA6: Using aria-label to provide labels for objects](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/ARIA6)
-- [ARIA10: Using aria-labelledby to provide a text alternative for non-text content](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/ARIA10)
-- [H67: Using null alt text and no title attribute on img elements for images that AT should ignore](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/H67)
-- [F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F38)
-- [F65: Failure of Success Criterion 1.1.1 due to omitting the alt attribute or text alternative on img elements, area elements, and input elements of type "image"](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F65)
+- [G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content](https://www.w3.org/WAI/WCAG21/Techniques/general/G94)
+- [G95: Providing short text alternatives that provide a brief description of the non-text content](https://www.w3.org/WAI/WCAG21/Techniques/general/G95)
+- [H37: Using alt attributes on img elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H37)
+- [ARIA6: Using aria-label to provide labels for objects](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA6)
+- [ARIA10: Using aria-labelledby to provide a text alternative for non-text content](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA10)
+- [H67: Using null alt text and no title attribute on img elements for images that AT should ignore](https://www.w3.org/WAI/WCAG21/Techniques/html/H67)
+- [F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them](https://www.w3.org/WAI/WCAG21/Techniques/failures/F38)
+- [F65: Failure of Success Criterion 1.1.1 due to omitting the alt attribute or text alternative on img elements, area elements, and input elements of type "image"](https://www.w3.org/WAI/WCAG21/Techniques/failures/F65)
 
 ## Test Cases
 
@@ -99,7 +99,7 @@ The HTML `img` element is marked as [decorative](#decorative) through `role="non
 <img role="none" />
 ```
 
-#### Passed example 6
+#### Passed Example 7
 
 The HTML `img` element has an accessible name that does not only consist of whitespace
 
@@ -133,7 +133,7 @@ The `img` element inside a `div` positioned off screen has no accessible name an
 <div style="margin-left:-9999px;"><img /></div>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 The HTML `img` element has an accessible name that only consist of whitespace
 
@@ -149,14 +149,7 @@ The element does not have the [semantic role](#semantic-role) of `img`
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" role="img" width="100" height="100">
-	<circle
-		cx="50"
-		cy="50"
-		r="40"
-		stroke="green"
-		stroke-width="4"
-		fill="yellow"
-	/>
+	<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
 </svg>
 ```
 

@@ -3,7 +3,7 @@ id: 4e8ab6
 name: Role has required states and properties
 rule_type: atomic
 description: |
-  Elements that have an explicit role must also specify all required states and properties
+  This rule checks that elements that have an explicit role also specify all required states and properties.
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true
@@ -18,7 +18,7 @@ authors:
 
 ## Applicability
 
-Any HTML or SVG element that has an [explicit semantic role](#semantic-role), except if the element has an [implicit semantic role](#semantic-role) that is identical to the explicit semantic role.
+Any HTML or SVG element that has an [explicit semantic role](#explicit-role), except if the element has an [implicit semantic role](#implicit-role) that is identical to the [explicit semantic role](#explicit-role).
 
 ## Expectation
 
@@ -28,7 +28,7 @@ For each test target, the [WAI-ARIA required states and properties](https://www.
 
 ## Assumptions
 
-- The applicability of this rule is limited to [explicit semantic roles](#semantic-role) based on an assumption that all native HTML and SVG elements have native attributes that are mapped to all of the [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for the [implicit semantic role](#semantic-role) of the element.
+- The applicability of this rule is limited to [explicit semantic roles](#explicit-role) based on an assumption that all native HTML and SVG elements have native attributes that are mapped to all of the [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for the [implicit semantic role](#implicit-role) of the element.
 
 - The ARIA `role` is being used to comply to WCAG.
 
@@ -40,7 +40,7 @@ This rule relies on browsers and assistive technologies to support leaving out [
 
 ## Background
 
-- [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/ARIA5)
+- [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA5)
 - [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState)
 - [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt)
 
@@ -58,7 +58,7 @@ Element has required states (no properties required for this role)
 
 #### Passed Example 2
 
-Implicit value for roles: ´option´ role has an implicit value (´false´) specified for the required state ´aria-selected´
+Implicit value for roles: `option` role has an implicit value (`false`) specified for the required state `aria-selected`
 
 ```html
 <div role="option"></div>
@@ -66,7 +66,7 @@ Implicit value for roles: ´option´ role has an implicit value (´false´) spec
 
 #### Passed Example 3
 
-Implicit value for roles: ´option´ role has an implicit value (´false´) specified for the required state ´aria-selected´, here defined without value
+Implicit value for roles: `option` role has an implicit value (`false`) specified for the required state `aria-selected`, here defined without value
 
 ```html
 <div role="option" aria-selected></div>
@@ -74,7 +74,7 @@ Implicit value for roles: ´option´ role has an implicit value (´false´) spec
 
 #### Passed Example 4
 
-Implicit value for roles: ´option´ role has an implicit value (´false´) specified for the required state ´aria-selected´, here defined with only whitespace instead of a value
+Implicit value for roles: `option` role has an implicit value (`false`) specified for the required state `aria-selected`, here defined with only whitespace instead of a value
 
 ```html
 <div role="option" aria-selected=" "></div>
@@ -100,7 +100,7 @@ Element has required properties, but with incorrect value since no element with 
 
 #### Failed Example 1
 
-Element does not list required states and properties (´aria-controls´ is required property for ´combobox´)
+Element does not list required states and properties (`aria-controls` is required property for `combobox`)
 
 ```html
 <div role="combobox"></div>
@@ -126,7 +126,7 @@ Element does not have a semantic role
 
 #### Inapplicable Example 2
 
-Element does not have an explicit semantic role
+Element does not have an [explicit semantic role](#explicit-role)
 
 ```html
 <nav></nav>
@@ -134,7 +134,7 @@ Element does not have an explicit semantic role
 
 #### Inapplicable Example 3
 
-Element has an implicit semantic role that is identical to the explicit semantic role
+Element has an [implicit semantic role](#implicit-role) that is identical to the [explicit semantic role](#explicit-role)
 
 ```html
 <input type="checkbox" role="checkbox" />
@@ -142,7 +142,7 @@ Element has an implicit semantic role that is identical to the explicit semantic
 
 #### Inapplicable Example 4
 
-Element does not list required states and properties (´aria-controls´ is required property for ´combobox´), but the element is not included in the accessibility tree
+Element does not list required states and properties (`aria-controls` is required property for `combobox`), but the element is not included in the accessibility tree
 
 ```html
 <div role="combobox" style="display:none;"></div>

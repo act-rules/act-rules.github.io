@@ -8,23 +8,14 @@ const axios = require('axios')
 const createFile = require('../utils/create-file')
 const pkg = require('./../package.json')
 const outputFileScMetaData = path.join(__dirname, '..', '_data', 'sc-urls.json')
-const outputFileScEmReportAuditResult = path.join(
-	__dirname,
-	'..',
-	'_data',
-	'sc-em-report-audit-result.json'
-)
+const outputFileScEmReportAuditResult = path.join(__dirname, '..', '_data', 'sc-em-report-audit-result.json')
 
 /**
  * Determine if a given success criteria is 2.0
  * @param {Object} sc success criterion
  */
 const isScWcag20 = sc => {
-	const is20 = !(
-		sc.versions &&
-		sc.versions.length === 1 &&
-		sc.versions.includes('2.1')
-	)
+	const is20 = !(sc.versions && sc.versions.length === 1 && sc.versions.includes('2.1'))
 	return is20
 }
 
@@ -39,15 +30,11 @@ const getMetaData = sc => {
 	const path = is20 ? sc.alt_id[0] : sc.id.split(':').reverse()[0]
 	const url = `${urlPrefix}${wcagSuffix}/#${path}`
 	const howToMeetUrl = `${
-		is20
-			? 'http://www.w3.org/WAI/WCAG20/quickref/#qr-'
-			: 'https://www.w3.org/WAI/WCAG21/quickref/#'
-		}${path}`
+		is20 ? 'http://www.w3.org/WAI/WCAG20/quickref/#qr-' : 'https://www.w3.org/WAI/WCAG21/quickref/#'
+	}${path}`
 	const understandingUrl = `${
-		is20
-			? 'http://www.w3.org/TR/UNDERSTANDING-WCAG20/'
-			: 'https://www.w3.org/WAI/WCAG21/Understanding/'
-		}/${path}.html`
+		is20 ? 'http://www.w3.org/TR/UNDERSTANDING-WCAG20/' : 'https://www.w3.org/WAI/WCAG21/Understanding/'
+	}/${path}.html`
 	/**
 	 * Construct `test` - used by `wcag em report tool`
 	 */
@@ -72,7 +59,9 @@ const getMetaData = sc => {
  * @param {String} url URL
  */
 const getWaiWcagReferenceData = async url => {
-	const { data: { principles } } = await axios.get(url)
+	const {
+		data: { principles },
+	} = await axios.get(url)
 
 	const scMetaData = {}
 	principles.forEach(p =>

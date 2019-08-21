@@ -3,7 +3,7 @@ id: 73f2c2
 name: Autocomplete valid
 rule_type: atomic
 description: |
-  This rule checks that the HTML `autocomplete` attribute has a correct value
+  This rule checks that the HTML `autocomplete` attribute has a correct value.
 accessibility_requirements:
   wcag21:1.3.5: # Identify Input Purpose (AA)
     forConformance: true
@@ -57,9 +57,9 @@ While `autocomplete` in a promising technique for supporting personalisation in 
 
 The intent of this rule is to ensure that the `autocomplete` attribute can be used to suport personalization. Many users may find it easier to fill out forms if those can be styled or layed out in a way that is familiar to them. Assistive technologies can do this when a form control is marked up in such a way that its purpose can be understood. For instance, assistive technologies could add familiar icons and colors to different fields, making it easier for the user to understand what the form does.
 
-- [https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html)
-- [https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable](https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable)
-- [https://www.w3.org/TR/html52/sec-forms.html#sec-autofill](https://www.w3.org/TR/html52/sec-forms.html#sec-autofill)
+- [Understanding Success Criterion 1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html)
+- [Definition: programmatically determined (programmatically determinable)](https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable)
+- [Autofill](https://www.w3.org/TR/html52/sec-forms.html#sec-autofill)
 
 ## Test Cases
 
@@ -124,7 +124,7 @@ Full length autocomplete terms.
 <input autocomplete="section-primary shipping work email" />
 ```
 
-#### Passed example 8
+#### Passed Example 8
 
 The `input` element does not have a semantic role that is a widget role, but still participates in sequential focus navigation, and has a single autocomplete term.
 
@@ -132,7 +132,7 @@ The `input` element does not have a semantic role that is a widget role, but sti
 <input role="none" autocomplete="username" />
 ```
 
-#### Passed example 9
+#### Passed Example 9
 
 The `input` element does not participates in sequential focus navigation, but still has a semantic role that is a widget role, and has a single autocomplete term.
 
@@ -140,7 +140,7 @@ The `input` element does not participates in sequential focus navigation, but st
 <input tabindex="-1" autocomplete="username" />
 ```
 
-#### Passed example 8
+#### Passed Example 10
 
 The `input` element does not have a semantic role that is a widget role, but still participates in sequential focus navigation since the [`tabindex` attribute](https://www.w3.org/TR/html/editing.html#the-tabindex-attribute) value is not a [valid integer](https://www.w3.org/TR/html/infrastructure.html#valid-integer), and has a single autocomplete term.
 
@@ -188,6 +188,14 @@ Autocomplete is inappropriate for the type of field.
 
 ```html
 <input type="number" autocomplete="email" />
+```
+
+#### Failed Example 6
+
+Autocomplete is not empty, but does not have any terms specified.
+
+```html
+<input autocomplete=" " />
 ```
 
 ### Inapplicable
@@ -264,7 +272,7 @@ Non-widget element that does not participate in sequential focus navigation.
 <input type="button" role="none" tabindex="-1" autocomplete="username" />
 ```
 
-#### Inapplicable example 10
+#### Inapplicable Example 10
 
 Non-widget element that does not participate in sequential focus navigation.
 

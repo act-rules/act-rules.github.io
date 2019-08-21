@@ -166,7 +166,7 @@ The `lang` attribute value is not empty ("") and is not a valid primary language
 </html>
 ```
 
-#### Failed Example 5
+#### Failed Example 6
 
 The `lang` attribute value is not empty ("") and is not a valid primary language subtag.
 

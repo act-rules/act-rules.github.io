@@ -140,7 +140,7 @@ The `input` element does not participates in sequential focus navigation, but st
 <input tabindex="-1" autocomplete="username" />
 ```
 
-#### Passed Example 8
+#### Passed Example 10
 
 The `input` element does not have a semantic role that is a widget role, but still participates in sequential focus navigation since the [`tabindex` attribute](https://www.w3.org/TR/html/editing.html#the-tabindex-attribute) value is not a [valid integer](https://www.w3.org/TR/html/infrastructure.html#valid-integer), and has a single autocomplete term.
 

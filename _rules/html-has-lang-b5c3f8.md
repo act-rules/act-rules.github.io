@@ -119,7 +119,7 @@ The `xml:lang` attribute specifies a value that is not empty (""). The rule does
 <html xml:lang="#!"></html>
 ```
 
-#### Passed Example 9
+#### Passed Example 10
 
 The `xml:lang` attribute specifies a value that is not empty (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
 

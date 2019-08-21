@@ -3,7 +3,7 @@ id: 4e8ab6
 name: Role has required states and properties
 rule_type: atomic
 description: |
-  This rule checks that elements that have an explicit role also specify all required states and properties
+  This rule checks that elements that have an explicit role also specify all required states and properties.
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true
@@ -40,7 +40,7 @@ This rule relies on browsers and assistive technologies to support leaving out [
 
 ## Background
 
-- [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/ARIA5)
+- [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA5)
 - [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState)
 - [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt)
 
@@ -58,7 +58,7 @@ Element has required states (no properties required for this role)
 
 #### Passed Example 2
 
-Implicit value for roles: ´option´ role has an implicit value (´false´) specified for the required state ´aria-selected´
+Implicit value for roles: `option` role has an implicit value (`false`) specified for the required state `aria-selected`
 
 ```html
 <div role="option"></div>
@@ -66,7 +66,7 @@ Implicit value for roles: ´option´ role has an implicit value (´false´) spec
 
 #### Passed Example 3
 
-Implicit value for roles: ´option´ role has an implicit value (´false´) specified for the required state ´aria-selected´, here defined without value
+Implicit value for roles: `option` role has an implicit value (`false`) specified for the required state `aria-selected`, here defined without value
 
 ```html
 <div role="option" aria-selected></div>
@@ -74,7 +74,7 @@ Implicit value for roles: ´option´ role has an implicit value (´false´) spec
 
 #### Passed Example 4
 
-Implicit value for roles: ´option´ role has an implicit value (´false´) specified for the required state ´aria-selected´, here defined with only whitespace instead of a value
+Implicit value for roles: `option` role has an implicit value (`false`) specified for the required state `aria-selected`, here defined with only whitespace instead of a value
 
 ```html
 <div role="option" aria-selected=" "></div>
@@ -100,7 +100,7 @@ Element has required properties, but with incorrect value since no element with 
 
 #### Failed Example 1
 
-Element does not list required states and properties (´aria-controls´ is required property for ´combobox´)
+Element does not list required states and properties (`aria-controls` is required property for `combobox`)
 
 ```html
 <div role="combobox"></div>
@@ -142,7 +142,7 @@ Element has an [implicit semantic role](#implicit-role) that is identical to the
 
 #### Inapplicable Example 4
 
-Element does not list required states and properties (´aria-controls´ is required property for ´combobox´), but the element is not included in the accessibility tree
+Element does not list required states and properties (`aria-controls` is required property for `combobox`), but the element is not included in the accessibility tree
 
 ```html
 <div role="combobox" style="display:none;"></div>

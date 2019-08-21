@@ -3,7 +3,7 @@ id: cae760
 name: Iframe has an accessible name
 rule_type: atomic
 description: |
-  This rule checks that each `iframe` element has an accessible name
+  This rule checks that each `iframe` element has an accessible name.
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true
@@ -37,7 +37,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- [H64: Using the title attribute of the frame and iframe elements](http://www.w3.org/TR/WCAG20-TECHS/H64.html)
+- [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64)
 - [Understanding Success Criterion 4.1.2](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 - [Understanding Success Criterion 2.4.1](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html)
 - [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)
@@ -72,7 +72,7 @@ Usage of `aria-labelledby` attribute to describe the `iframe` content.
 <iframe aria-labelledby="frame-title-helper" src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 Accessible name is not only whitespace.
 
@@ -130,7 +130,7 @@ Usage of `alt` attribute to describe content is not valid.
 <iframe alt="List of Contributors" src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
-#### Failed example 7
+#### Failed Example 7
 
 Accessible name is only whitespace.
 

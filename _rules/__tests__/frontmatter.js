@@ -26,7 +26,7 @@ describeRule('frontmatter', (ruleData, metaData) => {
 		const { atomicRuleIds } = metaData
 		const { input_rules } = frontmatter
 		test('if `composite` rule only refers to `atomic` rules in `input_rules`', () => {
-			expect(atomicRuleIds).toIncludeAllMembers(input_rules);
+			expect(atomicRuleIds).toIncludeAllMembers(input_rules)
 		})
 	}
 

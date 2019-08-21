@@ -162,19 +162,3 @@ The rule applies to `html` element and hence usage of `xml:lang` attribute in `s
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" xml:lang="fr"></svg>
 ```
-
-#### Inapplicable Example 3
-
-An empty value for `lang` attribute is ignored by this rule, as the applicability specifies only values that are not empty ("").
-
-```html
-<html lang=""></html>
-```
-
-#### Inapplicable Example 4
-
-An empty value for `xml:lang` attribute is ignored by this rule, as the applicability specifies only values that are not empty ("").
-
-```html
-<html xml:lang=""></html>
-```

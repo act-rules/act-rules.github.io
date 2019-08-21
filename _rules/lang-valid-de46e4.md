@@ -19,11 +19,11 @@ authors:
 
 ## Applicability
 
-This rules applies to each HTML or SVG element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) of the `body` element and has a `lang` or `xml:lang` attribute that is not empty ("").
+This rules applies to each HTML or SVG element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) of the `body` element and has a `lang` or `xml:lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
 
 ## Expectation
 
-The `lang` and `xml:lang` attributes of the test target have a [valid language subtag](#valid-language-subtag) if the attribute is not empty ("").
+The `lang` and `xml:lang` attributes of the test target have a [valid language subtag](#valid-language-subtag) if the attribute is neither empty ("") nor only [whitespace](#whitespace).
 
 ## Assumptions
 
@@ -142,18 +142,6 @@ The `lang` attribute value has a valid primary language subtag, but a syntactica
 </html>
 ```
 
-#### Failed Example 4
-
-The `lang` attribute value is not empty ("") and is not a valid primary language subtag.
-
-```html
-<html>
-	<body>
-		<article lang=" "></article>
-	</body>
-</html>
-```
-
 #### Failed Example 5
 
 The `lang` attribute value is not empty ("") and is not a valid primary language subtag.
@@ -210,6 +198,20 @@ An empty value for `xml:lang` attribute is ignored by this rule, as the applicab
 <html>
 	<body>
 		<article xml:lang=""></article>
+	</body>
+</html>
+```
+
+#### Inapplicable Example 4
+
+The `lang` attribute value consists of only [whitespace](#whitespace).
+
+```html
+<html>
+	<body>
+		<article lang=" ">
+			The quick brown fox jumped over the lazy dog
+		</article>
 	</body>
 </html>
 ```

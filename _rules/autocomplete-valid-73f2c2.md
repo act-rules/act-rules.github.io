@@ -282,7 +282,7 @@ Non-widget element that does not participate in sequential focus navigation.
 
 #### Inapplicable example 11
 
-Autocomplete attribute constains only whitespace.
+Autocomplete attribute contains only [whitespace](#whitespace).
 
 ```html
 <input autocomplete=" " />

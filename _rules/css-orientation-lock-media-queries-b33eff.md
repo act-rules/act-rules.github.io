@@ -30,11 +30,11 @@ The rule applies to any element that is [visible](#visible) and has a CSS [trans
 - [matrix transform-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix)
 - [matrix3d transform-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d)
 
-which are set as CSS [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries) with an [orientation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation) [media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) with a value of `landsapce` or `portrait`.
+that are applied conditionally on the [orientation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation) [media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) with a value of `landsapce` or `portrait`.
 
 ## Expectation
 
-None of the target element has a [current transformation matrix](https://drafts.csswg.org/css-transforms/#current-transformation-matrix) that is restricted to a single display orientation.
+The target element has a [current transformation matrix](https://drafts.csswg.org/css-transforms/#current-transformation-matrix) that does not restrict the element to only `landspace` or `portrait` orientation.
 
 ## Assumptions
 

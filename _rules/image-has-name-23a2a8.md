@@ -3,7 +3,7 @@ id: 23a2a8
 name: Image has accessible name
 rule_type: atomic
 description: |
-  This rule checks that each image that is not marked as decorative, has an accessible name
+  This rule checks that each image that is not marked as decorative, has an accessible name.
 accessibility_requirements:
   wcag20:1.1.1: # Non-Text Content
     forConformance: true

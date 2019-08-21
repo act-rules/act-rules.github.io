@@ -3,7 +3,7 @@ id: 97a4e1
 name: Buttons have an accessible name
 rule_type: atomic
 description: |
-  This rule checks that each `button` element has an accessible name
+  This rule checks that each `button` element has an accessible name.
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true
@@ -30,7 +30,7 @@ Each target element has an [accessible name](#accessible-name) that is not only 
 
 ## Assumptions
 
-- The rule assumes that all buttons are user interface components as defined by WCAG 2.
+- The rule assumes that all buttons are [user interface components as defined by WCAG 2](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components).
 
 ## Accessibility Support
 

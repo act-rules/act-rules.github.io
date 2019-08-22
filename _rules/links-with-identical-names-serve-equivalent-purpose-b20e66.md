@@ -109,7 +109,7 @@ Pages have the same advertised key content but use different layouts:
 
 #### Passed Example 8
 
-Links created via scripting with explicit role of link, but lead to the same resource:
+Links created via scripting with [explicit role](#explicit-role) of link, but lead to the same resource:
 
 ```html
 <span
@@ -168,7 +168,7 @@ Same [accessible name][] used for links going to web pages that are similar, but
 
 #### Failed Example 3
 
-Links created via scripting with explicit role of link, but lead to resources that offer different content:
+Links created via scripting with [explicit role](#explicit-role) of link, but lead to resources that offer different content:
 
 ```html
 <span
@@ -188,7 +188,7 @@ Links created via scripting with explicit role of link, but lead to resources th
 </span>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 Same [accessible name][] used for image links going to different resources:
 
@@ -249,7 +249,7 @@ Links with different [accessible names][accessible name]:
 
 #### Inapplicable Example 3
 
-Link is not included in the accesssibility tree:
+Link is not included in the accessibility tree:
 
 ```html
 <a
@@ -261,7 +261,7 @@ Link is not included in the accesssibility tree:
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/pabe2.html">Contact Us</a>
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 Links created via scripting, but without the semantic role of link:
 

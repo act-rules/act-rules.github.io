@@ -2,7 +2,7 @@ const describeRule = require('../../test-utils/describe-rule')
 const { contributors } = require('./../../package.json')
 const contributorsNames = contributors.map(contributor => contributor.name.toLowerCase())
 
-describeRule('frontmatter', ruleData => {
+describeRule('frontmatter', (ruleData, metaData) => {
 	const { frontmatter } = ruleData
 	const { rule_type, authors, accessibility_requirements } = frontmatter
 
@@ -22,7 +22,14 @@ describeRule('frontmatter', ruleData => {
 			expect(frontmatter).toHaveProperty('input_rules')
 			expect(frontmatter).not.toHaveProperty('input_aspects')
 		})
+
+		const { atomicRuleIds } = metaData
+		const { input_rules } = frontmatter
+		test('if `composite` rule only refers to `atomic` rules in `input_rules`', () => {
+			expect(atomicRuleIds).toIncludeAllMembers(input_rules)
+		})
 	}
+
 	if (rule_type.toLowerCase() === `atomic`) {
 		test('has optional property `input_aspects` when `rule_type = atomic`', () => {
 			expect(frontmatter).toHaveProperty('input_aspects')

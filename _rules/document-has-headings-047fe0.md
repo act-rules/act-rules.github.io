@@ -77,7 +77,7 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section
 
 #### Passed Example 2
 
-In this [document](#https://dom.spec.whatwg.org/#concept-document), headings are not the first elements of each [section of content](#section-of-content), but they are the first with an [accessible name](#accessible-name). The [accessible name](#accessible name) of the second heading is inherited from its content (a typical situation with because many frameworks that add a lot of extra elements around their components).
+In this [document](#https://dom.spec.whatwg.org/#concept-document), headings are not the first elements of each [section of content](#section-of-content), but they are the first with an [accessible name](#accessible-name). The [accessible name](#accessible name) of the second heading is inherited from its content (a typical situation with many frameworks that add a lot of extra elements around their components).
 
 **Note**: In this [document](#https://dom.spec.whatwg.org/#concept-document), the [sections of content](#section-of-content) are defined by the `section` elements.
 
@@ -102,6 +102,30 @@ In this [document](#https://dom.spec.whatwg.org/#concept-document), headings are
 
 #### Passed Example 3
 
+The image at the start of the second [section of content](#section-of-content) does not have an [accessible name](#accessible-name). Thus, the first node with an [accessible name](#accessible-name) is the `h1` element and the rule passes.
+
+**Note**: In this [document](#https://dom.spec.whatwg.org/#concept-document), the [sections of content](#section-of-content) are defined by the `section` elements.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title></head>
+  <body>
+  <section>
+    <h1>Contents</h1>
+    <!-- list of links to each chapter -->
+  </section>
+  <section>
+    <img src="../test-assets/document-headings-047fe0/peach-garden-oath.jpg" role="presentation" alt="" />
+    <h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+    Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+  </section>
+  </body>
+</html>
+```
+
+#### Passed Example 4
+
 This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section of content](#section-of-content) for the navigation links, and one for the actual text. Each starts with a `div` with a role of `heading`.
 
 **Note**: In this [document](#https://dom.spec.whatwg.org/#concept-document), the [sections of content](#section-of-content) are defined by the `section` elements.
@@ -123,7 +147,7 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section
 </html>
 ```
 
-#### Passed Example 4
+#### Passed Example 5
 
 This [document](#https://dom.spec.whatwg.org/#concept-document) is using image as heading, the [accessible name](#accessible-name) of the image is also the [accessible name](#accessible-name) of the heading.
 
@@ -135,18 +159,18 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) is using image a
   <head><title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title></head>
   <body>
   <section>
-      <h1>Contents</h1>
-      <!-- list of links to each chapter -->
-    </section>
-    <section>
-      <h1><img src="../test-assets/document-headings-047fe0/peach-garden-oath.jpg" alt="Three Heroes Swear Brotherhood at a Feast in the Peach Garden" /></h1>
-      Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
-    </section>
+    <h1>Contents</h1>
+    <!-- list of links to each chapter -->
+  </section>
+  <section>
+    <h1><img src="../test-assets/document-headings-047fe0/peach-garden-oath.jpg" alt="Three Heroes Swear Brotherhood at a Feast in the Peach Garden" /></h1>
+    Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+  </section>
   </body>
 </html>
 ```
 
-#### Passed Example 5
+#### Passed Example 6
 
 This rule checks neither nesting nor pertinence of headings.
 
@@ -170,67 +194,101 @@ This rule checks neither nesting nor pertinence of headings.
 </html>
 ```
 
-#### Passed Example 2
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head><title></title></head>
-  <body>
-  
-  </body>
-</html>
-```
-
 ### Failed
 
 #### Failed Example 1
 
+This [document](#https://dom.spec.whatwg.org/#concept-document) has no heading, for its navigational [section of content](#section-of-content).
+
+**Note**: In this [document](#https://dom.spec.whatwg.org/#concept-document), the [sections of content](#section-of-content) are defined by the `section` elements.
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></head>
+  <head><title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title></head>
   <body>
-  
+  <section>
+    <!-- list of links to each chapter -->
+  </section>
+  <section>
+    <h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+    Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+  </section>
   </body>
 </html>
 ```
 
 #### Failed Example 2
 
+The heading of the second [section of content](#section-of-content) is not [included in the accessibility tree](#included-in-the-accessibility-tree) because of the `aria-hidden` attribute.
+
+**Note**: In this [document](#https://dom.spec.whatwg.org/#concept-document), the [sections of content](#section-of-content) are defined by the `section` elements.
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></head>
+  <head><title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title></head>
   <body>
-  
+  <section>
+    <h1>Contents</h1>
+    <!-- list of links to each chapter -->
+  </section>
+  <section>
+    <h1 aria-hidden=true>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+    Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+  </section>
   </body>
 </html>
 ```
 
+
 #### Failed Example 3
+
+The [accessible name](#accessible-name) of the image used as heading for the second [section of content](#section-of-content), which is also the [accessible name](#accessible-name) of the heading, is only [whitespace](#whitespace).
+
+**Note**: In this [document](#https://dom.spec.whatwg.org/#concept-document), the [sections of content](#section-of-content) are defined by the `section` elements.
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></head>
+  <head><title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title></head>
   <body>
-  
+  <section>
+    <h1>Contents</h1>
+    <!-- list of links to each chapter -->
+  </section>
+  <section>
+    <h1><img src="../test-assets/document-headings-047fe0/peach-garden-oath.jpg" alt=" " /></h1>
+    Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+  </section>
   </body>
 </html>
 ```
 
 #### Failed Example 4
 
+The first [section of content](#section-of-content) starts with a node which does not have a [semantic role](#semantic-role) of `heading`.
+
+**Note**: In this [document](#https://dom.spec.whatwg.org/#concept-document), the [sections of content](#section-of-content) are defined by the `section` elements.
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></head>
+  <head><title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title></head>
   <body>
-  
+  <section>
+    <div>Table of content</div>
+    <h1>Contents</h1>
+    <!-- list of links to each chapter -->
+  </section>
+  <section>
+    <h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+    Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+  </section>
   </body>
 </html>
 ```
+
 
 ### Inapplicable
 

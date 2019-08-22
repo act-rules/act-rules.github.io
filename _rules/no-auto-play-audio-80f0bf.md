@@ -1,6 +1,6 @@
 ---
 id: 80f0bf
-name: Video or audio has no auto-play audio.
+name: Video or audio has no auto-play audio
 rule_type: composite
 description: |
     This rule checks that auto-play audio does not last for more than 3 seconds, or the audio has a control mechanism to stop or mute it.

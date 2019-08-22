@@ -3,7 +3,7 @@ id: c3232f
 name: Video only has an accessible alternative
 rule_type: composite
 description: |
-  This rule checks that `video` elements without audio have an alternative available
+  This rule checks that `video` elements without audio have an alternative available.
 accessibility_requirements:
   wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
     forConformance: true
@@ -45,14 +45,14 @@ See [Video Only Element Has Description Track: accessibility support](https://ac
 
 ## Background
 
-- [Understanding SC 1.2.1:Audio-only and Video-only (Prerecorded)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
-- [H96:Using the track element to provide audio descriptions](https://www.w3.org/TR/WCAG20-TECHS/H96.html)
+- [Understanding Success Criterion 1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded)
+- [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/html/H96)
 
 ## Test Cases
 
 ### Passed
 
-#### Pass Example 1
+#### Passed Example 1
 
 A video element without audio. The text on the page labels the video as an alternative.
 
@@ -69,7 +69,7 @@ A video element without audio. The text on the page labels the video as an alter
 ></video>
 ```
 
-#### Pass Example 2
+#### Passed Example 2
 
 A video only element with a track element that contains descriptions.
 
@@ -81,7 +81,7 @@ A video only element with a track element that contains descriptions.
 </video>
 ```
 
-#### Pass Example 3
+#### Passed Example 3
 
 A silent video element with a text transcript on the same page.
 
@@ -95,7 +95,7 @@ He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
-#### Pass Example 4
+#### Passed Example 4
 
 A video element without audio has a separate audio track that describes the visual information.
 
@@ -112,7 +112,7 @@ A video element without audio has a separate audio track that describes the visu
 
 ### Failed
 
-#### Fail Example 1
+#### Failed Example 1
 
 A video element that describes some of the text on the same page. The text on the page does not label the video as an alternative.
 
@@ -129,7 +129,7 @@ A video element that describes some of the text on the same page. The text on th
 ></video>
 ```
 
-#### Fail Example 2
+#### Failed Example 2
 
 A video only element with a track element that contains incorrect descriptions.
 
@@ -141,7 +141,7 @@ A video only element with a track element that contains incorrect descriptions.
 </video>
 ```
 
-#### Fail Example 3
+#### Failed Example 3
 
 A silent video element with a link to an incorrect text transcript on a different page.
 
@@ -153,7 +153,7 @@ A silent video element with a link to an incorrect text transcript on a differen
 <a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</p>
 ```
 
-#### Fail Example 4
+#### Failed Example 4
 
 A video element without audio has a separate audio track that incorrectly describes the visual information.
 
@@ -180,11 +180,7 @@ A video element with audio.
 	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
 	compatibility is described in WCAG. See the video below to watch the same information again in video form.
 </p>
-<video
-	data-rule-target
-	src="../test-assets/perspective-video/perspective-keyboard-compatibility-video.mp4"
-	controls
-></video>
+<video data-rule-target src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 #### Inapplicable Example 2

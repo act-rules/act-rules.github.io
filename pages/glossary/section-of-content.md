@@ -11,3 +11,5 @@ A section of the content may be defined in different ways, and combinations of t
 
 - HTML markup, using WAI-ARIA landmarks or HTML5 sectioning elements.
 - A heading that marks the beginning of the section of content.
+
+**Editorial note**: In its current state, the definition of [section of content](#section-of-content) would include, *e.g.* an advertising sidebar as a specific section of content. However, it is not clear that the lack of link/heading for it would be a breach of G124/H69 or SC 2.4.1… Idea?

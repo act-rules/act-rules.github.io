@@ -49,6 +49,8 @@ This rule assumes that any global dismissible information that only appears once
 
 _There are no major accessibility support issues known for this rule._
 
+**Editorial note**: In its current state, the definition of [section of content](#section-of-content) would include, *e.g.* an advertising sidebar as a specific section of content. However, it is not clear that the lack of link to it would be a breach of G124 or SC 2.4.1… Idea?
+
 ## Background
 
 - [G124: Adding links at the top of the page to each area of the content](https://www.w3.org/WAI/WCAG21/Techniques/general/G124)

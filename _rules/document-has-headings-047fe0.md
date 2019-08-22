@@ -25,13 +25,13 @@ This rule applies to any [document](#https://dom.spec.whatwg.org/#concept-docume
 ## Expectations
 
 For each [section of content](#section-of-content) in the test target, the first node in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) which is inside this [section of content](#section-of-content) and has an [accessible name](#accessible-name):
-- is [included in the accessiblity tree](#included-in-the-accessibility-tree); and
+- is [included in the accessibility tree](#included-in-the-accessibility-tree); and
 - has an [accessible name](#accessible-name) which does not consist only of [whitespace](#whitespace); and
 - has a [semantic role](#semantic-role) of `heading`.
 
 **Note**: Neither this rule, nor technique [H69: Providing heading elements at the beginning of each section of content](https://www.w3.org/WAI/WCAG21/Techniques/html/H69), expects the heading to accurately describe its corresponding section.
 
-**Note**: Neither this rule, nor technique [H69: Providing heading elements at the beginning of each section of content](https://www.w3.org/WAI/WCAG21/Techniques/html/H69), expects the headings are correctly nested without skipping level. It is nonetheless recommended to nest headings hierarchically without skipping levels.
+**Note**: Neither this rule, nor technique [H69: Providing heading elements at the beginning of each section of content](https://www.w3.org/WAI/WCAG21/Techniques/html/H69), expects that headings are correctly nested without skipping level. It is nonetheless recommended to nest headings hierarchically without skipping levels.
 
 ## Assumptions
 
@@ -40,6 +40,8 @@ _There are currently no assumptions_
 ## Accessibility Support
 
 _There are no major accessibility support issues known for this rule._
+ 
+**Editorial note**: In its current state, the definition of [section of content](#section-of-content) would include, *e.g.* an advertising sidebar as a specific section of content. However, it is not clear that the lack of heading on it would be a breach of H69 or SC 2.4.1… Idea?
 
 ## Background
 

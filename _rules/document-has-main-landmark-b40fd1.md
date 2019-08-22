@@ -19,7 +19,7 @@ This rule applies to any [document](#https://dom.spec.whatwg.org/#concept-docume
 
 ## Expectations
 
-The [document element](https://dom.spec.whatwg.org/#document-element) has at least one [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) with a [semantic role][#semantic-role] of [`main`](https://www.w3.org/TR/wai-aria-1.1/#main).
+The [document element](https://dom.spec.whatwg.org/#document-element) has at least one [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) with a [semantic role][#semantic-role] of [`main`](https://www.w3.org/TR/wai-aria-1.1/#main).
 
 **Note**: Authors SHOULD not use more than one element with a [semantic role](#semantic-role) of [`main`](https://www.w3.org/TR/wai-aria-1.1/#main). This is, however, a not a requirement for this rule nor for technique [ARIA11: Using ARIA landmarks to identify regions of a page](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11).
 

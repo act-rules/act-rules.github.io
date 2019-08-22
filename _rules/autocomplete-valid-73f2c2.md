@@ -272,7 +272,7 @@ Non-widget element that does not participate in sequential focus navigation.
 <input type="button" role="none" tabindex="-2" autocomplete="username" />
 ```
 
-#### Inapplicable example 11
+#### Inapplicable Example 11
 
 Autocomplete attribute contains only [whitespace](#whitespace).
 

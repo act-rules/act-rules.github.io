@@ -3,7 +3,7 @@ id: 80f0bf
 name: Video or audio has no auto-play audio.
 rule_type: composite
 description: |
-    This rule checks that auto-play audio does not last for more than 3 seconds, or the audio has a control mechanism to stop or mute the it.
+    This rule checks that auto-play audio does not last for more than 3 seconds, or the audio has a control mechanism to stop or mute it.
 accessibility_requirements:
   wcag20:1.4.2: # Audio Control (A)
     forConformance: true
@@ -47,7 +47,7 @@ The native `<video>` and `<audio>` controls in several browser and assistive tec
 
 #### Passed Example 1
 
-The `<audio>` element has a control mechanism.
+The `<audio>` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
 
 ``` html
   <audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay="true" controls></audio>
@@ -66,7 +66,7 @@ The `<video>` element does not play for longer than 3 seconds.
 
 #### Passed Example 3
 
-The `<video>` element autoplays, and has a control mechanism.
+The `<video>` element autoplays, and has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
 
 ``` html
 <head>
@@ -95,7 +95,7 @@ button:hover {cursor: pointer;	cursor: pointer; background-color: grey;  color: 
 
 #### Failed Example 1
 
-The `<audio>` element autoplays, lasts for more than 3 seconds, and does not have a control mechanism.
+The `<audio>` element autoplays, lasts for more than 3 seconds, and does not have a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
 
 ``` html
   <audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay="true"></audio>
@@ -103,7 +103,7 @@ The `<audio>` element autoplays, lasts for more than 3 seconds, and does not hav
 
 #### Failed Example 2
 
-The `<video>` element audio autoplays for longer than 3 seconds, and does not have a control mechanism.
+The `<video>` element audio autoplays for longer than 3 seconds, and does not have a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
 
 ``` html
  <video autoplay="true">

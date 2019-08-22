@@ -8557,9 +8557,9 @@
       "ruleAccessibilityRequirements": null
     },
     {
-      "testcaseId": "dadb5e42e386218f04b47873c7e4aa438d50b126",
-      "url": "https://act-rules.github.io/testcases/f51b46/dadb5e42e386218f04b47873c7e4aa438d50b126.html",
-      "relativePath": "testcases/f51b46/dadb5e42e386218f04b47873c7e4aa438d50b126.html",
+      "testcaseId": "91b74713ff2a3fd131958773a571a39688cb48a6",
+      "url": "https://act-rules.github.io/testcases/f51b46/91b74713ff2a3fd131958773a571a39688cb48a6.html",
+      "relativePath": "testcases/f51b46/91b74713ff2a3fd131958773a571a39688cb48a6.html",
       "expected": "failed",
       "ruleId": "f51b46",
       "ruleName": "Video has captions",
@@ -8647,9 +8647,9 @@
       "ruleAccessibilityRequirements": null
     },
     {
-      "testcaseId": "c16d582cb7cae9f598d3bde87039904cc0350d02",
-      "url": "https://act-rules.github.io/testcases/ab4d13/c16d582cb7cae9f598d3bde87039904cc0350d02.html",
-      "relativePath": "testcases/ab4d13/c16d582cb7cae9f598d3bde87039904cc0350d02.html",
+      "testcaseId": "674c2859f1413f8a2dcd4259c6a6208b758bd96e",
+      "url": "https://act-rules.github.io/testcases/ab4d13/674c2859f1413f8a2dcd4259c6a6208b758bd96e.html",
+      "relativePath": "testcases/ab4d13/674c2859f1413f8a2dcd4259c6a6208b758bd96e.html",
       "expected": "inapplicable",
       "ruleId": "ab4d13",
       "ruleName": "Video as a media alternative for text",
@@ -8793,9 +8793,9 @@
       }
     },
     {
-      "testcaseId": "b456752c9e1502e74b2b5343a1c2ba02de177bbb",
-      "url": "https://act-rules.github.io/testcases/c3232f/b456752c9e1502e74b2b5343a1c2ba02de177bbb.html",
-      "relativePath": "testcases/c3232f/b456752c9e1502e74b2b5343a1c2ba02de177bbb.html",
+      "testcaseId": "05df5feae896923ff7319e6843765253d33f3685",
+      "url": "https://act-rules.github.io/testcases/c3232f/05df5feae896923ff7319e6843765253d33f3685.html",
+      "relativePath": "testcases/c3232f/05df5feae896923ff7319e6843765253d33f3685.html",
       "expected": "inapplicable",
       "ruleId": "c3232f",
       "ruleName": "Video only has an accessible alternative",

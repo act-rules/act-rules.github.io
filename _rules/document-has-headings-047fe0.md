@@ -149,7 +149,7 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has one [section
 
 #### Passed Example 5
 
-This [document](#https://dom.spec.whatwg.org/#concept-document) is using image as heading, the [accessible name](#accessible-name) of the image is also the [accessible name](#accessible-name) of the heading.
+This [document](#https://dom.spec.whatwg.org/#concept-document) is using image as heading, the [accessible name](#accessible-name) of the image (given by `alt` attribute) is also the [accessible name](#accessible-name) of the heading.
 
 **Note**: In this [document](#https://dom.spec.whatwg.org/#concept-document), the [sections of content](#section-of-content) are defined by the `section` elements.
 
@@ -171,6 +171,53 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) is using image a
 ```
 
 #### Passed Example 6
+
+This [document](#https://dom.spec.whatwg.org/#concept-document) is using image as heading, the [accessible name](#accessible-name) of the image (given by `aria-label` attribute) is also the [accessible name](#accessible-name) of the heading.
+
+**Note**: In this [document](#https://dom.spec.whatwg.org/#concept-document), the [sections of content](#section-of-content) are defined by the `section` elements.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title></head>
+  <body>
+  <section>
+    <h1>Contents</h1>
+    <!-- list of links to each chapter -->
+  </section>
+  <section>
+    <h1><img src="../test-assets/document-headings-047fe0/peach-garden-oath.jpg" aria-label="Three Heroes Swear Brotherhood at a Feast in the Peach Garden" /></h1>
+    Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+  </section>
+  </body>
+</html>
+```
+
+#### Passed Example 7
+
+This [document](#https://dom.spec.whatwg.org/#concept-document) is using image as heading, the [accessible name](#accessible-name) of the image (given by `aria-labelledby` attribute) is also the [accessible name](#accessible-name) of the heading.
+
+**Note**: In this [document](#https://dom.spec.whatwg.org/#concept-document), the [sections of content](#section-of-content) are defined by the `section` elements.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title></head>
+  <body>
+  <section>
+    <h1>Contents</h1>
+    <!-- list of links to each chapter -->
+  </section>
+  <section>
+    <div style="display: hidden" id="chapter1-title">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</div>
+    <h1><img src="../test-assets/document-headings-047fe0/peach-garden-oath.jpg" aria-labelledby="chapter1-title" /></h1>
+    Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
+  </section>
+  </body>
+</html>
+```
+
+#### Passed Example 8
 
 This rule checks neither nesting nor pertinence of headings.
 
@@ -194,7 +241,7 @@ This rule checks neither nesting nor pertinence of headings.
 </html>
 ```
 
-#### Passed Example 7
+#### Passed Example 9
 
 The heading at the start of the first [section of content](#section-of-content) is not [visible](#visible) but the [document](#https://dom.spec.whatwg.org/#concept-document) still passes this rule.
 

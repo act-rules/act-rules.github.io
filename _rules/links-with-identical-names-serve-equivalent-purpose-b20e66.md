@@ -151,6 +151,112 @@ A set of two SVG `<a>` elements that have the same accessible name and link to t
 </svg>
 ```
 
+#### Passed Example 10
+
+All three links have the same [accessible name](#accessible-name). The second link ("from the light") is only part of the [light tree](https://dom.spec.whatwg.org/#concept-light-tree). When the [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) is attached to `host` and flattened, it is overwritten and therefore not part of the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress). Hence, only the first and third link are considered by this rule and they both point to the same resource.
+
+```html
+<!DOCTYPE html>
+<html>
+<head><title>Links in the shadow</title></head>
+
+<body>
+	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+
+	<div id="host">
+		<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the light.</span>
+	</div>
+
+	<script>
+	  const host = document.getElementById("host");
+	  const shadowRoot = host.attachShadow({ mode: "open"});
+
+	  shadowRoot.innerHTML = '<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> from the shadow.';
+	</script>
+</body>
+</html>
+```
+
+#### Passed Example 11
+
+The [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) contains only a default [slot](https://dom.spec.whatwg.org/#concept-slot) (whose [name](https://dom.spec.whatwg.org/#slot-name) is the empty string). This [slot](https://dom.spec.whatwg.org/#concept-slot) is filled by the third link ("from the slot") and the second one ("from the light") does not appear in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress). Therefore, the rule passes.
+
+```html
+<!DOCTYPE html>
+<html>
+<head><title>Links in the shadow</title></head>
+
+<body>
+	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+
+	<div id="host">
+		<span slot="slot"><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the light.</span>
+		<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> from the slot.</span>
+	</div>
+
+	<script>
+	  const host = document.getElementById("host");
+	  const shadowRoot = host.attachShadow({ mode: "open"});
+
+		shadowRoot.innerHTML = '<slot></slot>';
+	</script>
+</body>
+</html>
+```
+
+#### Passed Example 12
+
+The [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) contains only a named [slot](https://dom.spec.whatwg.org/#concept-slot) (whose [name](https://dom.spec.whatwg.org/#slot-name) is `"slot"`). This [slot](https://dom.spec.whatwg.org/#concept-slot) is filled by the third link ("from the slot") and the second one ("from the light") does not appear in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress). Therefore, the rule passes.
+
+```html
+<!DOCTYPE html>
+<html>
+<head><title>Links in the shadow</title></head>
+
+<body>
+	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+
+	<div id="host">
+		<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the light.</span>
+		<span slot="slot"><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> from the slot.</span>
+	</div>
+
+	<script>
+	  const host = document.getElementById("host");
+	  const shadowRoot = host.attachShadow({ mode: "open"});
+
+		shadowRoot.innerHTML = '<slot name="slot"></slot>';
+	</script>
+</body>
+</html>
+```
+
+#### Passed Example 13
+
+The [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) contains a [slot](https://dom.spec.whatwg.org/#concept-slot) whose [name](https://dom.spec.whatwg.org/#slot-name) is `"slot"`. The [light tree](https://dom.spec.whatwg.org/#concept-light-tree) does fill that [slot](https://dom.spec.whatwg.org/#concept-slot). Hence, the [flattened slottable](https://dom.spec.whatwg.org/#finding-slots-and-slotables) is not [assigned](https://dom.spec.whatwg.org/#assigning-slotables-and-slots) and the third link ("from the fallback") does not appears in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress). Only the first ("all the time") and second ("from the slot") links are in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress). Given that they have the same [accessible name](#accessible-name) and point to the same resource, the rule passes.
+
+```html
+<!DOCTYPE html>
+<html>
+<head><title>Links in the shadow</title></head>
+
+<body>
+	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+
+	<div id="host">
+		<span slot="slot"><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> from the slot.</span>
+	</div>
+
+	<script>
+	  const host = document.getElementById("host");
+	  const shadowRoot = host.attachShadow({ mode: "open"});
+
+		shadowRoot.innerHTML = '<slot name="slot"><span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the fallback.</span></slot>';
+	</script>
+</body>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -228,6 +334,109 @@ Both links resolve to same resource after redirect, but the redirect is not inst
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/redirect1.html">Contact us</a>
 ```
 
+#### Failed Example 7
+
+Both links have the same [accessible name](#accessible-name). When the [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) is attached to `host` and flattened, both links appear in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress). Since they have the same [accessible name](#accessible-name) but point to different resources, the rule fails.
+
+```html
+<!DOCTYPE html>
+<html>
+<head><title>Links in the shadow</title></head>
+
+<body>
+	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+
+	<div id="host"></div>
+
+	<script>
+	  const host = document.getElementById("host");
+	  const shadowRoot = host.attachShadow({ mode: "open"});
+
+	  shadowRoot.innerHTML = '<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the shadow.</span>';
+	</script>
+</body>
+</html>
+```
+
+#### Failed Example 8
+
+The second link is [slotted](https://dom.spec.whatwg.org/#concept-slot) and therefore appears in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress). Both links have the same [accessible name](#accessible-name) but point to different resources, hence the  rule fails.
+
+```html
+<!DOCTYPE html>
+<html>
+<head><title>Links in the shadow</title></head>
+
+<body>
+	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+
+	<div id="host">
+		<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the slot.</span>
+	</div>
+
+	<script>
+	  const host = document.getElementById("host");
+	  const shadowRoot = host.attachShadow({ mode: "open"});
+
+	  shadowRoot.innerHTML = '<slot></slot>';
+	</script>
+</body>
+</html>
+```
+
+#### Failed Example 9
+
+All of the descendants of `host` (in the [light tree](https://dom.spec.whatwg.org/#concept-light-tree)) are slotted into the default [slot](https://dom.spec.whatwg.org/#concept-slot) (whose [name](https://dom.spec.whatwg.org/#slot-name) is the empty string). Therefore, all three links appear in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) and the rule fails since the second one ("from the slot") does not point to the same resource.
+
+```html
+<!DOCTYPE html>
+<html>
+<head><title>Links in the shadow</title></head>
+
+<body>
+	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+
+	<div id="host">
+		<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the slot.</span>
+		<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> from the slot again.</span>
+	</div>
+
+	<script>
+	  const host = document.getElementById("host");
+	  const shadowRoot = host.attachShadow({ mode: "open"});
+
+		shadowRoot.innerHTML = '<slot></slot>';
+	</script>
+</body>
+</html>
+```
+
+#### Failed Example 10
+
+The [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) contains a [slot](https://dom.spec.whatwg.org/#concept-slot) whose [name](https://dom.spec.whatwg.org/#slot-name) is `"slot"`. The [light tree](https://dom.spec.whatwg.org/#concept-light-tree) does not fill that [slot](https://dom.spec.whatwg.org/#concept-slot). Hence, the [flattened slottable](https://dom.spec.whatwg.org/#finding-slots-and-slotables) is [assigned](https://dom.spec.whatwg.org/#assigning-slotables-and-slots) and the third link ("from the fallback") appears in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress), causing the rule to fail.
+
+```html
+<!DOCTYPE html>
+<html>
+<head><title>Links in the shadow</title></head>
+
+<body>
+	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+
+	<div id="host">
+		<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> from the slot.</span>
+	</div>
+
+	<script>
+	  const host = document.getElementById("host");
+	  const shadowRoot = host.attachShadow({ mode: "open"});
+
+		shadowRoot.innerHTML = '<slot name="slot"><span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the fallback.</span></slot>';
+	</script>
+</body>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -293,4 +502,54 @@ These image links do not have accessible names.
 
 ```html
 <a href="http://facebook.com"><img src="facebook.jpg"/></a> <a href="http://twitter.com"><img src="twitter.jpg"/></a>
+```
+
+#### Inapplicable Example 7
+
+Only the first link ("all the time") is present in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress). Hence, there is no set of two or more links to apply the rule.
+
+```html
+<!DOCTYPE html>
+<html>
+<head><title>Links in the shadow</title></head>
+
+<body>
+	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+
+	<div id="host">
+		<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the light.</span>
+	</div>
+
+	<script>
+	  const host = document.getElementById("host");
+	  const shadowRoot = host.attachShadow({ mode: "open"});
+	</script>
+</body>
+</html>
+```
+
+#### Inapplicable Example 8
+
+Only the first link ("all the time") is present in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress). Hence, there is no set of two or more links to apply the rule. The [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) does contain a [slot](https://dom.spec.whatwg.org/#concept-slot), but because its named, the second link ("from the light") is *not* slotted into it.
+
+```html
+<!DOCTYPE html>
+<html>
+<head><title>Links in the shadow</title></head>
+
+<body>
+	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+
+	<div id="host">
+		<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the light.</span>
+	</div>
+
+	<script>
+	  const host = document.getElementById("host");
+	  const shadowRoot = host.attachShadow({ mode: "open"});
+
+		shadowRoot.innerHTML = '<slot name="slot"></slot>';
+	</script>
+</body>
+</html>
 ```

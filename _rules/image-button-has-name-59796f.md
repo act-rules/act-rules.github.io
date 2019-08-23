@@ -3,7 +3,7 @@ id: 59796f
 name: Image button has accessible name
 rule_type: atomic
 description: |
-  This rule checks that each image button element has an accessible name
+  This rule checks that each image button element has an accessible name.
 accessibility_requirements:
   wcag20:1.1.1: # Non-Text Content (A)
     forConformance: true
@@ -81,7 +81,7 @@ Image button element with accessible name through `aria-labelledby`
 <div id="id1">Submit</div>
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 Accessible name is not only whitespace.
 
@@ -89,7 +89,7 @@ Accessible name is not only whitespace.
 <input type="image" name="submit" src="button.gif" alt=":-)" />
 ```
 
-#### Passed example 6
+#### Passed Example 6
 
 Image button element with accessible name through `alt` attribute
 
@@ -123,7 +123,7 @@ Image button with aria-labelledby that does not reference an id that exists in t
 <input type="image" name="submit" src="button.gif" aria-labelledby="id1" />
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 Accessible name is only whitespace.
 

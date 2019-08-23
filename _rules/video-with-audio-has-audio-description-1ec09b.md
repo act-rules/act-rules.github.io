@@ -3,7 +3,7 @@ id: 1ec09b
 name: Video with audio has audio description
 rule_type: composite
 description: |
-  This rule checks that `video` elements with audio have audio description
+  This rule checks that `video` elements with audio have audio description.
 accessibility_requirements:
   wcag20:1.2.5: # Audio Description (Prerecorded) (AA)
     forConformance: true
@@ -43,16 +43,16 @@ See [Video element description track: accessibility support](https://act-rules.g
 ## Background
 
 - [Understanding Success Criterion 1.2.5: Audio Description (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html)
-- [G78: Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G78)
-- [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/GL/2016/WD-WCAG20-TECHS-20160105/H96)
-- [G173: Providing a version of a movie with audio descriptions](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G173)
-- [G8: Providing a movie with extended audio descriptions](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G8)
+- [G78: Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/general/G78)
+- [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/html/H96)
+- [G173: Providing a version of a movie with audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/general/G173)
+- [G8: Providing a movie with extended audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/general/G8)
 
 ## Test Cases
 
 ### Passed
 
-#### Pass Example 1
+#### Passed Example 1
 
 A video element with a voiceover that describes the visual information.
 
@@ -63,7 +63,7 @@ A video element with a voiceover that describes the visual information.
 </video>
 ```
 
-#### Pass Example 2
+#### Passed Example 2
 
 A video element with a track element that contains descriptions.
 
@@ -75,7 +75,7 @@ A video element with a track element that contains descriptions.
 </video>
 ```
 
-#### Pass Example 3
+#### Passed Example 3
 
 A video element that describes some of the text on the same page. The text on the page labels the video as an alternative.
 
@@ -90,7 +90,7 @@ A video element that describes some of the text on the same page. The text on th
 
 ### Failed
 
-#### Fail Example 1
+#### Failed Example 1
 
 A video element with an incorrect audio description.
 
@@ -101,7 +101,7 @@ A video element with an incorrect audio description.
 </video>
 ```
 
-#### Fail Example 2
+#### Failed Example 2
 
 A video element with a track element that contains incorrect descriptions.
 
@@ -113,7 +113,7 @@ A video element with a track element that contains incorrect descriptions.
 </video>
 ```
 
-#### Fail Example 3
+#### Failed Example 3
 
 A video element with a link to a text transcript.
 

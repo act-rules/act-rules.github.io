@@ -3,7 +3,4 @@ title: Large Scale Text
 key: large-scale-text
 ---
 
-with at least 18 point or 14 point bold or font size that would yield equivalent size for Chinese, Japanese and Korean (CJK) fonts
-
-**TODO**: Deal with "bold" fonts
-**TODO**: How to handle CJK fonts?
+Text nodes with a [font size](https://www.w3.org/TR/css-fonts-3/#font-size-prop) of 18 [points](https://www.w3.org/TR/css-values/#pt), or 14 [points](https://www.w3.org/TR/css-values/#pt) and a [font weight](https://www.w3.org/TR/css-fonts-3/#font-weight-prop) is `bold`, `bolder` or a number of 700 or higher.

@@ -50,7 +50,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-A set of two HTML `<a>` elements have the same accessible name and link to the same resource.
+A set of two HTML `a` elements that have the same accessible name and link to the same resource.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
@@ -59,7 +59,7 @@ A set of two HTML `<a>` elements have the same accessible name and link to the s
 
 #### Passed Example 2
 
-Links resolves to same resource after instant redirect:
+A set of two HTML `a` elements that both resolve to same resource after instant redirect.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
@@ -68,7 +68,7 @@ Links resolves to same resource after instant redirect:
 
 #### Passed Example 3
 
-Resources are not the same, since the links resolve to different URLs, but the resources are completely identical, thus serving the same purpose:
+These two links resolve to resources that are not the same (different URLs), but the resources are completely identical, thus serving the same purpose.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
@@ -77,7 +77,7 @@ Resources are not the same, since the links resolve to different URLs, but the r
 
 #### Passed Example 4
 
-Same link text used for links going to pages where the content section is the same, but where the navigation options (bread crumbs and local sub menus) differ due to different placement in navigation hierarchy:
+These two links go to pages where the content section is the same, but where the navigation options (bread crumbs and local sub menus) differ due to different placement in navigation hierarchy.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
@@ -86,7 +86,7 @@ Same link text used for links going to pages where the content section is the sa
 
 #### Passed Example 5
 
-URLs differ due to trailing slashes, but resolves to the same resource after redirects caused by user agent:
+These two HTML `a` elements link to URLs that differ due to trailing slashes, but resolve to the same resource after redirects caused by user agent.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/">Contact us</a>
@@ -95,7 +95,7 @@ URLs differ due to trailing slashes, but resolves to the same resource after red
 
 #### Passed Example 6
 
-Pages contain different amounts of information and/or differently worded information, but fulfil the same purpose in relation to the link:
+These two links go to pages that contain different amounts of information and/or differently worded information, but fulfil the same purpose in relation to the link.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html">Call us</a>
@@ -104,7 +104,7 @@ Pages contain different amounts of information and/or differently worded informa
 
 #### Passed Example 7
 
-Pages have the same advertised key content but use different layouts:
+These two links go to pages that have the same advertised key content but use different layouts.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html">Contact us</a>
@@ -113,7 +113,7 @@ Pages have the same advertised key content but use different layouts:
 
 #### Passed Example 8
 
-Links created via scripting with [explicit role](#explicit-role) of link, but lead to the same resource:
+These two HTML `span` element have an [explicit role](#explicit-role) of link, and lead to the same resource.
 
 ```html
 <span
@@ -135,7 +135,7 @@ Links created via scripting with [explicit role](#explicit-role) of link, but le
 
 #### Passed Example 9
 
-A set of two SVG `<a>` elements have the same accessible name and link to the same resource.
+A set of two SVG `<a>` elements that have the same accessible name and link to the same resource.
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -155,7 +155,7 @@ A set of two SVG `<a>` elements have the same accessible name and link to the sa
 
 #### Failed Example 1
 
-Same accessible name used for links going to different resources:
+Both links have the same accessible name but go to different resources.
 
 ```html
 <a href="http://facebook.com">Follow us</a> <a href="http://twitter.com">Follow us</a>
@@ -163,7 +163,7 @@ Same accessible name used for links going to different resources:
 
 #### Failed Example 2
 
-Same accessible name used for links going to web pages that are similar, but have different information in their content:
+The same accessible name is used for two links going to web pages that are similar, but have different information in their content.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
@@ -172,7 +172,7 @@ Same accessible name used for links going to web pages that are similar, but hav
 
 #### Failed Example 3
 
-Links created via scripting with [explicit role](#explicit-role) of link, but lead to resources that offer different content:
+These two HTML `span` element have an [explicit role](#explicit-role) of link, but lead to resources that offer different content.
 
 ```html
 <span
@@ -194,7 +194,7 @@ Links created via scripting with [explicit role](#explicit-role) of link, but le
 
 #### Failed Example 4
 
-Same accessible name used for image links going to different resources:
+The same accessible name is used for image links going to different resources.
 
 ```html
 <a href="http://facebook.com"><img src="facebook.jpg" alt="Follow us"/></a>
@@ -203,7 +203,7 @@ Same accessible name used for image links going to different resources:
 
 #### Failed Example 5
 
-A set of two SVG `<a>` elements have the same accessible name but link to different resources:
+A set of two SVG `<a>` elements that have the same accessible name but link to different resources.
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -221,7 +221,7 @@ A set of two SVG `<a>` elements have the same accessible name but link to differ
 
 #### Failed Example 6
 
-Links resolves to same resource after redirect, but the redirect is not instant:
+Both links resolve to same resource after redirect, but the redirect is not instant.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
@@ -232,7 +232,7 @@ Links resolves to same resource after redirect, but the redirect is not instant:
 
 #### Inapplicable Example 1
 
-´a´ and ´area´ elements without ´href´ attribute:
+These `a` and `area` elements have no `href` attribute.
 
 ```html
 <a>Link text</a> <area aria-label="Link text" />
@@ -240,7 +240,7 @@ Links resolves to same resource after redirect, but the redirect is not instant:
 
 #### Inapplicable Example 2
 
-Links with different accessible names:
+These links have different accessible names.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
@@ -253,7 +253,7 @@ Links with different accessible names:
 
 #### Inapplicable Example 3
 
-Link is not included in the accessibility tree:
+The first link is not included in the accessibility tree.
 
 ```html
 <a
@@ -267,7 +267,7 @@ Link is not included in the accessibility tree:
 
 #### Inapplicable Example 4
 
-Links created via scripting, but without the semantic role of link:
+These `span` elements do not have a semantic role of link.
 
 ```html
 <span onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html'">
@@ -281,7 +281,7 @@ Links created via scripting, but without the semantic role of link:
 
 #### Inapplicable Example 5
 
-Links do not have accessible names:
+These links do not have accessible names.
 
 ```html
 <a href="http://facebook.com"></a> <a href="http://twitter.com"></a>
@@ -289,7 +289,7 @@ Links do not have accessible names:
 
 #### Inapplicable Example 6
 
-Image links do not have accessible names:
+These image links do not have accessible names.
 
 ```html
 <a href="http://facebook.com"><img src="facebook.jpg"/></a> <a href="http://twitter.com"><img src="twitter.jpg"/></a>

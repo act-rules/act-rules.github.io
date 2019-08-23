@@ -135,6 +135,20 @@ These two HTML `span` element have an [explicit role](#explicit-role) of link,
 
 #### Passed Example 9
 
+A set of one SVG `a` element and one HTML `a` element that have the same accessible name and link to the same resource.
+
+```html
+<a href="http://facebook.com">Follow us"</a>
+
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<a href="http://facebook.com" aria-label="Follow us">
+		<circle cx="50" cy="40" r="35" />
+	</a>
+</svg>
+```
+
+#### Passed Example 10
+
 A set of two SVG `<a>` elements that have the same accessible name and link to the same resource.
 
 ```html
@@ -151,7 +165,7 @@ A set of two SVG `<a>` elements that have the same accessible name and link to t
 </svg>
 ```
 
-#### Passed Example 10
+#### Passed Example 11
 
 All three links have the same [accessible name](#accessible-name). The second link ("from the light") is only part of the [light tree](https://dom.spec.whatwg.org/#concept-light-tree). When the [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) is attached to `host` and flattened, it is overwritten and therefore not part of the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress). Hence, only the first and third link are considered by this rule and they both point to the same resource.
 
@@ -177,7 +191,7 @@ All three links have the same [accessible name](#accessible-name). The second li
 </html>
 ```
 
-#### Passed Example 11
+#### Passed Example 12
 
 The [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) contains only a default [slot](https://dom.spec.whatwg.org/#concept-slot) (whose [name](https://dom.spec.whatwg.org/#slot-name) is the empty string). This [slot](https://dom.spec.whatwg.org/#concept-slot) is filled by the third link ("from the slot") and the second one ("from the light") does not appear in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress). Therefore, the rule passes.
 
@@ -204,7 +218,7 @@ The [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) contains onl
 </html>
 ```
 
-#### Passed Example 12
+#### Passed Example 13
 
 The [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) contains only a named [slot](https://dom.spec.whatwg.org/#concept-slot) (whose [name](https://dom.spec.whatwg.org/#slot-name) is `"slot"`). This [slot](https://dom.spec.whatwg.org/#concept-slot) is filled by the third link ("from the slot") and the second one ("from the light") does not appear in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress). Therefore, the rule passes.
 
@@ -231,7 +245,7 @@ The [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) contains onl
 </html>
 ```
 
-#### Passed Example 13
+#### Passed Example 14
 
 The [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) contains a [slot](https://dom.spec.whatwg.org/#concept-slot) whose [name](https://dom.spec.whatwg.org/#slot-name) is `"slot"`. The [light tree](https://dom.spec.whatwg.org/#concept-light-tree) does fill that [slot](https://dom.spec.whatwg.org/#concept-slot). Hence, the [flattened slottable](https://dom.spec.whatwg.org/#finding-slots-and-slotables) is not [assigned](https://dom.spec.whatwg.org/#assigning-slotables-and-slots) and the third link ("from the fallback") does not appears in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress). Only the first ("all the time") and second ("from the slot") links are in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress). Given that they have the same [accessible name](#accessible-name) and point to the same resource, the rule passes.
 

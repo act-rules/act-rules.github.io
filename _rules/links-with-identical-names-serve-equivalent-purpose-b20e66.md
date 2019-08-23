@@ -19,10 +19,10 @@ authors:
 
 ## Applicability
 
-This rule applies to any set of any two or more HTML or SVG elements 
-- whose [shadow-including root](https://dom.spec.whatwg.org/#concept-shadow-including-root) is the same [document](https://dom.spec.whatwg.org/#concept-document), 
-- that have the [semantic role](#semantic-role) of `link`, or a role that inherits from the `link` role, 
-- are [included in the accessibility tree](#included-in-the-accessibility-tree), and 
+This rule applies to any set of any two or more HTML or SVG elements which
+- are inside the same [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress); and 
+- are [included in the accessibility tree](#included-in-the-accessibility-tree); and 
+- have the [semantic role](#semantic-role) of `link`, or a role that inherits from the `link` role; and
 - that have [matching](#matching-characters) [accessible names](#accessible-name) that do not only consist of [whitespace](#whitespace).
 
 **Note:** The test target for this rule is the full set of link elements that share the same [matching](#matching-characters) [accessible name](#accessible-name).

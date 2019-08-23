@@ -262,7 +262,7 @@ The first link is not included in the accessibility tree.
 	tabindex="-1"
 	>Contact Us</a
 >
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/pabe2.html">Contact Us</a>
+<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html">Contact Us</a>
 ```
 
 #### Inapplicable Example 4

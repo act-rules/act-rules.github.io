@@ -135,20 +135,6 @@ These two HTML `span` element have an [explicit role](#explicit-role) of link,
 
 #### Passed Example 9
 
-A set of one SVG `a` element and one HTML `a` element that have the same accessible name and link to the same resource.
-
-```html
-<a href="http://facebook.com">Follow us"</a>
-
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<a href="http://facebook.com" aria-label="Follow us">
-		<circle cx="50" cy="40" r="35" />
-	</a>
-</svg>
-```
-
-#### Passed Example 10
-
 A set of two SVG `<a>` elements that have the same accessible name and link to the same resource.
 
 ```html
@@ -161,6 +147,20 @@ A set of two SVG `<a>` elements that have the same accessible name and link to t
 		<text x="50" y="90" text-anchor="middle">
 			Follow us
 		</text>
+	</a>
+</svg>
+```
+
+#### Passed Example 10
+
+A set of one SVG `a` element and one HTML `a` element that have the same accessible name and link to the same resource.
+
+```html
+<a href="http://facebook.com">Follow us"</a>
+
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<a href="http://facebook.com" aria-label="Follow us">
+		<circle cx="50" cy="40" r="35" />
 	</a>
 </svg>
 ```

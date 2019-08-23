@@ -374,7 +374,7 @@ Both links have the same [accessible name](#accessible-name). When the [shadow t
 
 #### Failed Example 8
 
-The second link is [slotted](https://dom.spec.whatwg.org/#concept-slot) and therefore appears in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress). Both links have the same [accessible name](#accessible-name) but point to different resources, hence the  rule fails.
+The second link is [slotted](https://dom.spec.whatwg.org/#concept-slot) and therefore appears in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress). Both links have the same [accessible name](#accessible-name) but point to different resources, hence the rule fails.
 
 ```html
 <!DOCTYPE html>

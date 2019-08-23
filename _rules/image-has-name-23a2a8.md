@@ -61,7 +61,7 @@ The HTML `img` element has an accessible name given by the `alt` attribute.
 
 #### Passed Example 2
 
-The element with role of `img` has an accessible name given by the `aria-label` attribute.
+The element with a [semantic role](#semantic-role) of `img` has an accessible name given by the `aria-label` attribute.
 
 ```html
 <div role="img" aria-label="W3C logo"></div>
@@ -69,7 +69,7 @@ The element with role of `img` has an accessible name given by the `aria-label` 
 
 #### Passed Example 3
 
-The element with role of `img` has an accessible name given by an `aria-labelledby` attribute and element.
+The element with a [semantic role](#semantic-role) of `img` has an accessible name given by an `aria-labelledby` attribute and element.
 
 ```html
 <div style="display: hidden" id="img-label">W3C logo</div>

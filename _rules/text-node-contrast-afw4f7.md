@@ -35,10 +35,7 @@ Any text node that is [visible](#visible) and a child of an HTML element, except
 
 ## Expectation
 
-For each test target, the [highest possible contrast](#highest-possible-contrast) between the [foreground colors](#foreground-colors-of-text) and [background colors](#background-colors-of-text) is at least 4.5:1 (or 3.0:1 for [larger scale text](#large-scale-text)), except if the content of the text node:
-
-- is [decorative](#decorative), or
-- doesn't express anything in [human language](https://www.w3.org/TR/WCAG21/#dfn-human-language-s)
+For each test target, the [highest possible contrast](#highest-possible-contrast) between the [foreground colors](#foreground-colors-of-text) and [background colors](#background-colors-of-text) is at least 4.5:1 (or 3.0:1 for [larger scale text](#large-scale-text)), except if the content of the text node is [decorative](#decorative), or doesn't express anything in [human language](https://www.w3.org/TR/WCAG21/#dfn-human-language-s).
 
 **Note**: Passing this rule does not mean that the text node has sufficient color contrast. White text on a black and white image passes this rule, whether or not that text is legible depends on the how much of the white words are positioned on the black parts of the image. This requires further testing.
 
@@ -50,7 +47,7 @@ Success criterion 1.4.3 also has an exception for logos and brand names. Since l
 
 ## Accessibility support
 
-_There are no major accessibility support issues known for this rule._
+Different browsers have different levels of support for CSS. This can cause contrast issues in one browser that do not appear in another. Because of that, this rule can produce different results depending on the browser that is used.
 
 ## Background
 

@@ -107,7 +107,7 @@
 		"gatsby-plugin-sass": "^2.1.9",
 		"gatsby-plugin-sharp": "^2.2.13",
 		"gatsby-remark-autolink-headers": "^2.1.8",
-		"gatsby-remark-copy-linked-files": "^2.1.6",
+		"gatsby-remark-copy-linked-files": "^2.1.12",
 		"gatsby-remark-prismjs": "^3.3.6",
 		"gatsby-source-filesystem": "^2.1.9",
 		"gatsby-transformer-remark": "^2.6.14",

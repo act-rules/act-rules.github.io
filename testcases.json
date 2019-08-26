@@ -7061,9 +7061,9 @@
       }
     },
     {
-      "testcaseId": "41d6dd943f795bde3276372c5f28c450e1004e78",
-      "url": "https://act-rules.github.io/testcases/80af7b/41d6dd943f795bde3276372c5f28c450e1004e78.html",
-      "relativePath": "testcases/80af7b/41d6dd943f795bde3276372c5f28c450e1004e78.html",
+      "testcaseId": "131e9069eb3c535e2d40602955546e822eb52201",
+      "url": "https://act-rules.github.io/testcases/80af7b/131e9069eb3c535e2d40602955546e822eb52201.html",
+      "relativePath": "testcases/80af7b/131e9069eb3c535e2d40602955546e822eb52201.html",
       "expected": "failed",
       "ruleId": "80af7b",
       "ruleName": "No keyboard trap",

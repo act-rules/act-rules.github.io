@@ -39,14 +39,14 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- [Understanding SC 1.2.1:Audio-only and Video-only (Prerecorded)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
-- [G159:Providing an alternative for time-based media for video-only content](https://www.w3.org/TR/WCAG20-TECHS/G159.html)
+- [Understanding Success Criterion 1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded)
+- [G159: Providing an alternative for time-based media for video-only content](https://www.w3.org/WAI/WCAG21/Techniques/general/G159)
 
 ## Test Cases
 
 ### Passed
 
-#### Pass Example 1
+#### Passed Example 1
 
 A silent video element with a text transcript on the same page.
 
@@ -60,7 +60,7 @@ He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
-#### Pass Example 2
+#### Passed Example 2
 
 A silent video element with a link to a text transcript on a different page.
 
@@ -74,7 +74,7 @@ A silent video element with a link to a text transcript on a different page.
 
 ### Failed
 
-#### Fail Example 1
+#### Failed Example 1
 
 A silent video element with an incorrect text transcript on the same page.
 
@@ -88,7 +88,7 @@ He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
 ```
 
-#### Fail Example 2
+#### Failed Example 2
 
 A silent video element with a link to an incorrect text transcript on a different page.
 

@@ -25,12 +25,12 @@ htmlHintIgnore:
 
 This rule applies to the first HTML `title` element that
 
-- is a [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) of a [document element](https://www.w3.org/TR/dom/#document-element) that is an HTML `html` element, and
-- contains [children](https://www.w3.org/TR/dom/#concept-tree-child) that are [text nodes](https://www.w3.org/TR/dom/#text) that are not only [whitespace](#whitespace).
+- is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of a [document element](https://dom.spec.whatwg.org/#document-element) that is an HTML `html` element, and
+- contains [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
 
 ## Expectation
 
-The target element describes the topic or purpose of the overall content of the [document](https://www.w3.org/TR/dom/#concept-document).
+The target element describes the topic or purpose of the overall content of the [document](https://dom.spec.whatwg.org/#concept-document).
 
 ## Assumptions
 
@@ -38,7 +38,7 @@ _There are no assumptions for this rule._
 
 ## Accessibility Support
 
-- This rule assumes that browsers only recognize the first `title` element if multiple `title` elements are present in the [document](https://www.w3.org/TR/dom/#concept-document). Testing shows that this in general is the case. Therefore the scope of this rule is limited to only checking the first `title` element in a document.
+- This rule assumes that browsers only recognize the first `title` element if multiple `title` elements are present in the [document](https://dom.spec.whatwg.org/#concept-document). Testing shows that this in general is the case. Therefore the scope of this rule is limited to only checking the first `title` element in a document.
 
 ## Background
 

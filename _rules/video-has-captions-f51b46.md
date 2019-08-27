@@ -23,7 +23,7 @@ The rule applies to every [non-streaming](#non-streaming-media-element) `video` 
 
 For each test target, audio information that is not conveyed visually in the video, is available through [captions](https://www.w3.org/TR/WCAG21/#dfn-captions).
 
-_Note_: Captions can be either embedded in the video file itself or can be made available trough a separate track.
+**Note**: Captions can be either embedded in the video file itself or can be made available trough a separate track.
 
 ## Assumptions
 
@@ -35,10 +35,10 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html
-- https://www.w3.org/TR/WCAG20-TECHS/G93.html
-- https://www.w3.org/TR/WCAG20-TECHS/G87.html
-- https://www.w3.org/TR/WCAG20-TECHS/H95.html
+- [Understanding Success Criterion 1.2.2: Captions (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded)
+- [G93: Providing open (always visible) captions](https://www.w3.org/WAI/WCAG21/Techniques/general/G93)
+- [G87: Providing closed captions](https://www.w3.org/WAI/WCAG21/Techniques/general/G87)
+- [H95: Using the track element to provide captions](https://www.w3.org/WAI/WCAG21/Techniques/html/H95)
 
 ## Test Cases
 
@@ -66,7 +66,7 @@ A video element with an associated track element that contain captions for all t
 
 #### Failed Example 1
 
-A video element with any form of captions.
+A video element without any form of captions.
 
 ```html
 <video src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
@@ -105,11 +105,7 @@ A video element with an explicitly associated text on the same page that describ
 	perspectives. Keyboard compatibility. Not being able to use your computer because your mouse doesn't work, is
 	frustrating. Many people use only the keyboard to navigate websites. Either through preference or circumstance.
 </p>
-<video
-	src="../test-assets/perspective-video/perspective-video.mp4"
-	controls
-	ariadescribedby="text"
-></video>
+<video src="../test-assets/perspective-video/perspective-video.mp4" controls ariadescribedby="text"></video>
 ```
 
 ### Inapplicable
@@ -124,7 +120,7 @@ A video element without audio.
 
 #### Inapplicable Example 2
 
-A video element without that is not visible on the page.
+A video element that is not visible on the page.
 
 ```html
 <video src="../test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>

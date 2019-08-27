@@ -14,12 +14,12 @@ input_aspects:
   - DOM Tree
   - CSS Styling
 authors:
-	- Anne Thyme Nørregaard
+  - Anne Thyme Nørregaard
 htmlHintIgnore:
- # https://www.npmjs.com/package/htmlhint 
- # (used with `npm test` to ensure validity of code snippets)
- - 'attr-lowercase'
- - 'alt-require'
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'attr-lowercase'
+  - 'alt-require'
 ---
 
 ## Applicability

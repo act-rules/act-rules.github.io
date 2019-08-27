@@ -163,7 +163,7 @@
 		"getData": "npm run getWcagData && npm run createTestcases && npm run createGlossary && npm run createRulesUsages && npm run implementations",
 		"predevelop": "npm run getData",
 		"develop": "gatsby develop",
-		"prebuild": "npm run clean && npm run getData && npm run format",
+		"prebuild": "npm run clean && npm run getData && npm run formatRulesDir",
 		"build": "gatsby build",
 		"formatRulesDir": "prettier --write './_rules/**/*.md'",
 		"format": "prettier --write *.{json,md,js,jsx} './{_data,_rules,build,gatsby,pages,src,test-assets}/**/*.{json,md,js,jsx}'",

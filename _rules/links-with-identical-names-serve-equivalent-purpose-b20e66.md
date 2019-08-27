@@ -374,6 +374,32 @@ Both links have the same [accessible name](#accessible-name). When the [shadow t
 
 #### Failed Example 8
 
+The `table` element [does not support `attachShadow`](https://dom.spec.whatwg.org/#dom-element-attachshadow). Therefore no [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) is created and the first two links appear in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress). Since they have the same name but different destination, the rule fails.
+
+```html
+<!DOCTYPE html>
+<html>
+<head><title>Links in the shadow</title></head>
+
+<body>
+	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+
+	<table id="host">
+		<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> from the light.</span>
+	</table>
+
+	<script>
+	  const host = document.getElementById("host");
+	  const shadowRoot = host.attachShadow({ mode: "closed"});
+
+		shadowRoot.innerHTML = '<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the shadow.</span>';
+	</script>
+</body>
+</html>
+```
+
+#### Failed Example 9
+
 The second link is [slotted](https://dom.spec.whatwg.org/#concept-slot) and therefore appears in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress). Both links have the same [accessible name](#accessible-name) but point to different resources, hence the rule fails.
 
 ```html
@@ -398,7 +424,7 @@ The second link is [slotted](https://dom.spec.whatwg.org/#concept-slot) and ther
 </html>
 ```
 
-#### Failed Example 9
+#### Failed Example 10
 
 All of the descendants of `host` (in the [light tree](https://dom.spec.whatwg.org/#concept-light-tree)) are slotted into the default [slot](https://dom.spec.whatwg.org/#concept-slot) (whose [name](https://dom.spec.whatwg.org/#slot-name) is the empty string). Therefore, all three links appear in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) and the rule fails since the second one ("from the slot") does not point to the same resource.
 
@@ -425,7 +451,7 @@ All of the descendants of `host` (in the [light tree](https://dom.spec.whatwg.or
 </html>
 ```
 
-#### Failed Example 10
+#### Failed Example 11
 
 The [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) contains a [slot](https://dom.spec.whatwg.org/#concept-slot) whose [name](https://dom.spec.whatwg.org/#slot-name) is `"slot"`. The [light tree](https://dom.spec.whatwg.org/#concept-light-tree) does not fill that [slot](https://dom.spec.whatwg.org/#concept-slot). Hence, the [flattened slottable](https://dom.spec.whatwg.org/#finding-slots-and-slotables) is [assigned](https://dom.spec.whatwg.org/#assigning-slotables-and-slots) and the third link ("from the fallback") appears in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress), causing the rule to fail.
 

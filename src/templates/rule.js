@@ -99,8 +99,8 @@ export default ({ data }) => {
 							</a>
 						</li>
 						<li>
-							<a target="_blank" rel="noopener noreferrer" href={ruleTestcasesUrl}>
-								Test case file for use in the WCAG-EM Report Tool
+							<a rel="noopener noreferrer" href={changelogUrl}>
+								Changelog
 							</a>
 						</li>
 						<li>
@@ -109,10 +109,11 @@ export default ({ data }) => {
 							</a>
 						</li>
 						<li>
-							<a rel="noopener noreferrer" href={changelogUrl}>
-								Changelog
+							<a target="_blank" rel="noopener noreferrer" href={ruleTestcasesUrl}>
+								Test case file for use in the WCAG-EM Report Tool
 							</a>
 						</li>
+					
 					</ul>
 					<hr />
 					{/* implementations */}

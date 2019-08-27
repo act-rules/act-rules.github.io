@@ -5,31 +5,6 @@ import SEO from '../components/seo'
 import { getDateTimeFromUnixTimestamp } from '../utils/render-fragments'
 import { repository } from './../../package.json'
 
-const versionSvgIcon = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      x="0px"
-      y="0px"
-      width="16px"
-      height="16px"
-      viewBox="0 0 792 792"
-    >
-      <g>
-        <g>
-          <path
-            d="M109.548,0c0,0-18.468,0-18.468,17.604V774.36c0,17.64,18.468,17.64,18.468,17.64h572.903c0,0,18.469,0,18.469-17.604V180
-            H548.461c0,0-38.125,0-38.125-36V0H109.548z M205.452,108H434.16v36H205.452V108z M205.452,216H434.16v36H205.452V216z
-            M586.619,684H205.452v-36h381.167V684z M586.619,576H205.452v-36h381.167V576z M586.619,468H205.452v-36h381.167V468z
-            M586.619,324v36H205.452v-36H586.619z"
-          />
-          <polygon points="548.496,144 685.836,144 548.496,13.212 		" />
-        </g>
-      </g>
-    </svg>
-  )
-}
-
 const changesSvgIcon = () => {
   return (
     <svg
@@ -73,25 +48,18 @@ const getChangelogTabulation = (changelog, url, file) => {
         <tr>
           <th>Date</th>
           <th>Description</th>
-          <th>See Version</th>
           <th>See Changes</th>
         </tr>
       </thead>
       <tbody>
         {changelog.map(log => {
           const { commit: hash, msg, date } = log
-          const versionUrl = `${url}/blob/${hash}/${file}`
           const changesUrl = `${url}/commit/${hash}`
           return (
             <tr key={hash}>
               <td nowrap="true">{getDateTimeFromUnixTimestamp(date)}</td>
               <td>{msg}</td>
-              <td>
-                <a target="_blank" rel="noopener noreferrer" href={versionUrl} title="See file at given version">
-                  {versionSvgIcon()}
-                </a>
-              </td>
-              <td>
+              <td align="center">
                 <a target="_blank" rel="noopener noreferrer" href={changesUrl} title="See all changes in commit">
             {changesSvgIcon()}
                 </a>

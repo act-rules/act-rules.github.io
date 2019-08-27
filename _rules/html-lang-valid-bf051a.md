@@ -19,11 +19,11 @@ authors:
 
 ## Applicability
 
-The root element of the page, if it is an `html` element with a `lang` and/or `xml:lang` attribute that is not empty ("").
+The root element of the page, if it is an `html` element with a `lang` and/or `xml:lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
 
 ## Expectation
 
-The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-language-subtag) if the attribute is not empty ("").
+The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-language-subtag) if the attribute is neither empty ("") nor only [whitespace](#whitespace).
 
 ## Assumptions
 
@@ -48,7 +48,7 @@ While HTML5 specification indicates that `xml:lang` attribute takes priority ove
 
 #### Passed Example 1
 
-The `lang` attribute specified has a non-empty value & a valid primary language subtag.
+The `lang` attribute specified is neither empty ("") nor only [whitespace](#whitespace) and a valid primary language subtag.
 
 ```html
 <html lang="fr"></html>
@@ -56,7 +56,7 @@ The `lang` attribute specified has a non-empty value & a valid primary language 
 
 #### Passed Example 2
 
-The `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
+The `xml:lang` attribute specified is neither empty ("") nor only [whitespace](#whitespace) and a valid primary language subtag.
 
 ```html
 <html xml:lang="fr"></html>
@@ -64,7 +64,7 @@ The `xml:lang` attribute specified has a non-empty value & a valid primary langu
 
 #### Passed Example 3
 
-The `lang` and `xml:lang` attribute specified has a non-empty value & a valid primary language subtag.
+The `lang` and `xml:lang` attribute specified is neither empty ("") nor only [whitespace](#whitespace) and a valid primary language subtag.
 
 ```html
 <html xml:lang="fr" lang="fr"></html>
@@ -72,7 +72,7 @@ The `lang` and `xml:lang` attribute specified has a non-empty value & a valid pr
 
 #### Passed Example 4
 
-The `lang` attribute specified has a non-empty value & a valid primary language subtag. The rule checks for the presence of either `lang` or `xml:lang`. Empty value specified for the other attribute is ignored.
+The `lang` attribute specified is neither empty ("") nor only [whitespace](#whitespace) value and a valid primary language subtag. The rule checks for the presence of either `lang` or `xml:lang`. Empty value specified for the other attribute is ignored.
 
 ```html
 <html lang="fr" xml:lang=""></html>
@@ -80,10 +80,18 @@ The `lang` attribute specified has a non-empty value & a valid primary language 
 
 #### Passed Example 5
 
-The `xml:lang` attribute specified has a non-empty value & a valid primary language subtag. The rule checks for the presence of either `lang` or `xml:lang`. Empty value specified for the other attribute is ignored.
+The `xml:lang` attribute specified is neither empty ("") nor only [whitespace](#whitespace) value and a valid primary language subtag. The rule checks for the presence of either `lang` or `xml:lang`. Empty value specified for the other attribute is ignored.
 
 ```html
 <html lang="" xml:lang="nl"></html>
+```
+
+#### Passed Example 6
+
+The `lang` attribute specified is neither empty ("") nor only [whitespace](#whitespace) value and a valid primary language subtag. The rule checks for the presence of either `lang` or `xml:lang`. Empty value specified for the other attribute is ignored.
+
+```html
+<html lang="nl" xml:lang=" "></html>
 ```
 
 ### Failed

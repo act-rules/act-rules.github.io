@@ -120,6 +120,22 @@ The `lang` and `xml:lang` attribute specified is empty ("").
 <html xml:lang="" lang=""></html>
 ```
 
+#### Failed Example 5
+
+The `lang` attribute consists of only [whitespace](#whitespace).
+
+```html	
+<html lang=" "></html>	
+```
+
+#### Failed Example 6
+
+The `xml:lang` attribute consists of only [whitespace](#whitespace).
+
+```html	
+<html xml:lang=" "></html>	
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1

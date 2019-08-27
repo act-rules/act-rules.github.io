@@ -165,6 +165,7 @@
 		"develop": "gatsby develop",
 		"prebuild": "npm run clean && npm run getData && npm run format",
 		"build": "gatsby build",
+		"formatRulesDir": "prettier --write './_rules/**/*.md'",
 		"format": "prettier --write *.{json,md,js,jsx} './{_data,_rules,build,gatsby,pages,src,test-assets}/**/*.{json,md,js,jsx}'",
 		"start": "npm run clean && npm run develop",
 		"serve": "gatsby serve",

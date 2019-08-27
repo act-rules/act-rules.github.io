@@ -593,3 +593,22 @@ Only the first link ("all the time") is present in the [flat tree](https://draft
 </body>
 </html>
 ```
+
+#### Inapplicable Example 9
+
+Both links appear in separate [documents](https://dom.spec.whatwg.org/#concept-document) and therefore in separate [flat trees](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress). Hence, there is no set of two or more links within the same [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) and the rule is inapplicable.
+
+```html
+<!DOCTYPE html>
+<html>
+<head><title>I have been framed!</title></head>
+
+<body>
+	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+
+	<iframe srcdoc='<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> from the iframe.</span>'>
+	</iframe>
+
+</body>
+</html>
+```

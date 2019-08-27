@@ -20,15 +20,15 @@ authors:
 
 ## Applicability
 
-The rule applies to any element that is [visible](#visible) and has a CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property with any of the below [transform-functions](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function)
+The rule applies to any element that is [visible](#visible) and has a CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property with any of the below [transformation functions](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function)
 
-- [rotate transform-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate)
-- [rotate3d transform-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d)
-- [rotateX transform-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateX)
-- [rotateY transform-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateY)
-- [rotateZ transform-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateZ)
-- [matrix transform-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix)
-- [matrix3d transform-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d)
+- [rotate](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate)
+- [rotate3d](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d)
+- [rotateX](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateX)
+- [rotateY](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateY)
+- [rotateZ](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateZ)
+- [matrix](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix)
+- [matrix3d](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d)
 
 that are applied conditionally on the [orientation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation) [media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) with a value of `landsapce` or `portrait`.
 

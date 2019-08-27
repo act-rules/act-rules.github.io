@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 555,
+  "count": 556,
   "testcases": [
     {
       "testcaseId": "0dbcbdb2eace03d1e3a89e12f7ec33e615ce1a20",
@@ -4753,6 +4753,23 @@
       "testcaseId": "66b7482c8922e81b5979fd5e3ab2bfe7b24adb5a",
       "url": "https://act-rules.github.io/testcases/23a2a8/66b7482c8922e81b5979fd5e3ab2bfe7b24adb5a.html",
       "relativePath": "testcases/23a2a8/66b7482c8922e81b5979fd5e3ab2bfe7b24adb5a.html",
+      "expected": "passed",
+      "ruleId": "23a2a8",
+      "ruleName": "Image has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/23a2a8",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "dd51da9c880d14f83531e0d70e833fe842820937",
+      "url": "https://act-rules.github.io/testcases/23a2a8/dd51da9c880d14f83531e0d70e833fe842820937.html",
+      "relativePath": "testcases/23a2a8/dd51da9c880d14f83531e0d70e833fe842820937.html",
       "expected": "passed",
       "ruleId": "23a2a8",
       "ruleName": "Image has accessible name",

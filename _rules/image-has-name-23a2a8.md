@@ -69,16 +69,16 @@ The element with a [semantic role](#semantic-role) of `img` has an accessible na
 
 #### Passed Example 3
 
-The element with a [semantic role](#semantic-role) of `img` has an accessible name given by an `aria-labelledby` attribute and element.
+The element with a [semantic role](#semantic-role) of `img` has an accessible name given by an `aria-labelledby` attribute and an element with matching `id`.
 
 ```html
-<div style="display: hidden" id="img-label">W3C logo</div>
+<div style="display: none" id="img-label">W3C logo</div>
 <div role="img" aria-labelledby="img-label"></div>
 ```
 
 #### Passed Example 4
 
-The HTML `img` element has an accessible name, though the name is not always accessibility supported.
+The HTML `img` element has an accessible name given by a `title` attribute, though the `title` attribute is not always accessibility supported.
 
 ```html
 <img title="W3C logo" />

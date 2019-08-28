@@ -115,6 +115,7 @@
 		"gfm-code-blocks": "^1.0.0",
 		"globby": "^10.0.1",
 		"is-url": "^1.2.4",
+		"jest-expect-message": "^1.0.2",
 		"jsonld": "^1.6.2",
 		"make-dir": "^3.0.0",
 		"markdown-link-extractor": "^1.2.1",
@@ -202,10 +203,10 @@
 		}
 	},
 	"jest": {
-		"verbose": true,
-		"bail": true,
+		"verbose": false,
 		"setupFilesAfterEnv": [
-			"jest-extended"
+			"jest-extended",
+			"jest-expect-message"
 		],
 		"testPathIgnorePatterns": [
 			"<rootDir>/test-utils/",

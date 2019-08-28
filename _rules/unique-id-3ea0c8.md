@@ -72,7 +72,7 @@ The `id` in shadow DOM is for the same element as the `id` in light DOM
 <script>
 	var myElm = document.getElementById('my-elm')
 	var shadow = myElm.attachShadow({ mode: 'open' })
-	shadow.innerHTML = '<b id="my-elm" ><slot></slot></b>'
+	shadow.innerHTML = '<b id="my-elm"><slot></slot></b>'
 </script>
 ```
 
@@ -84,8 +84,8 @@ Two of the `id` are the same, but they are in different trees (the first one in 
 <div id="my-elm"></div>
 <div id="host"></div>
 <script>
-	var myElm = document.getElementById('host')
-	var shadow = myElm.attachShadow({ mode: 'open' })
+	var host = document.getElementById('host')
+	var shadow = host.attachShadow({ mode: 'open' })
 	shadow.innerHTML = '<b id="my-elm"></b>'
 </script>
 ```

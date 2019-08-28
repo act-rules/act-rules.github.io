@@ -1,9 +1,9 @@
 ---
 id: b33eff
-name: Page has no orientation lock specified using CSS media queries
+name: Page is not restricted to either `landscape` or `portrait` orientation using CSS transform property
 rule_type: atomic
 description: |
-  This rule checks that page content is not locked to any single display orientation using CSS media queries.
+  This rule checks that page content is not restricted to either `landscape` or `portrait` orientation using CSS transform property.
 accessibility_requirements:
  wcag20:1.3.4: # Orientation
   forConformance: true
@@ -32,9 +32,11 @@ The rule applies to any element that is [visible](#visible) and has a CSS [trans
 
 that are applied conditionally on the [orientation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation) [media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) with a value of `landsapce` or `portrait`.
 
+**Note:** These specific [transformation functions](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function) are of interest to this rule as they have the potential to affect the [rotation](https://drafts.csswg.org/css-transforms-2/#Rotate3dDefined) of a given element.
+
 ## Expectation
 
-The target element has a [current transformation matrix](https://drafts.csswg.org/css-transforms/#current-transformation-matrix) that does not restrict the element to only `landspace` or `portrait` orientation.
+The target element has a [current transformation matrix](https://drafts.csswg.org/css-transforms/#current-transformation-matrix) that does not restrict the element to either `landspace` or `portrait` orientation.
 
 ## Assumptions
 
@@ -57,7 +59,7 @@ The target element has a [current transformation matrix](https://drafts.csswg.or
 
 #### Passed Example 1
 
-A page, where CSS media query styles does not lock orientation. The CSS rotate transform-function value is a multiple of 180 degrees.
+A page where CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property does not have any of the applicable [transformation functions](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function) which restricts the element to either `landspace` or `portrait` orientation.
 
 ```html
 <html lang="en">
@@ -65,7 +67,7 @@ A page, where CSS media query styles does not lock orientation. The CSS rotate t
     <style>
       @media (orientation: portrait) {
         body {
-          transform: rotate(-360deg);
+          transform: translateX(100px);
         }
       }
     </style>
@@ -80,22 +82,38 @@ A page, where CSS media query styles does not lock orientation. The CSS rotate t
 
 #### Passed Example 2
 
-A page, where CSS media query styles do not lock orientation. The CSS rotate transform-function value from the stylesheet is overridden to a value of 180 degrees.
+A page where CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property has [rotate](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate) [transform function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function) which does not restricts the element to either `portrait` or `landscape` orientation.
 
 ```html
 <html lang="en">
   <head>
-    <!--
-      1. The style from the relative stylesheet applies `transform: rotate(90deg)`
-    -->
-    <link rel="stylesheet" href="../test-assets/css-orientation-lock-media-queries-b33eff/html-css-lock.css">
-    <!--
-      2. Override the value from the stylesheet
-    -->
     <style>
       @media (orientation: portrait) {
         html {
-          transform: rotate(-180deg);
+          transform: rotate(1turn)
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      Page Content
+    </main>
+  </body>
+</html>
+```
+
+#### Passed Example 3
+
+A page where CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property has [matrix](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix) [transform function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function) which does not restricts the element to either `portrait` or `landscape` orientation.
+
+```html
+<html lang="en">
+  <head>
+    <style>
+      @media (orientation: portrait) {
+        html {
+          transform: matrix(1, -1.22465e-15, 1.22465e-15, 1, 0, 0);
         }
       }
     </style>
@@ -112,15 +130,12 @@ A page, where CSS media query styles do not lock orientation. The CSS rotate tra
 
 #### Failed Example 1
 
-A page, where orientation is locked by applying `transform` property on `portrait` media query (coming from a relative stylesheet).
+A page where CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property has [rotate](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate) [transform function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function) which restricts the element to `landscape` orientation.
 
 ```html
 <html lang="en">
   <head>
-    <!--
-      1. The style from the relative stylesheet applies `transform: rotate(90deg)`
-    -->
-    <link rel="stylesheet" href="../test-assets/css-orientation-lock-media-queries-b33eff/html-css-lock.css">
+    <link rel="stylesheet" href="../test-assets/b33eff/style.css">
   </head>
   <body>
       Page Content
@@ -130,15 +145,15 @@ A page, where orientation is locked by applying `transform` property on `portrai
 
 #### Failed Example 2
 
-A page, where orientation is locked via `style` specified in the `head`.
+A page where CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property has [matrix](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix) [transform function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function) which restricts the element to `portrait` orientation.
 
 ```html
 <html lang="en">
   <head>
     <style>
-      @media (orientation: portrait) {
+      @media (orientation: landscape) {
         body {
-          transform: rotate(-90deg);
+          transform: matrix(-1.83697e-16, -1, 1, -1.83697e-16, 0, 0);
         }
       }
     </style>
@@ -153,7 +168,7 @@ A page, where orientation is locked via `style` specified in the `head`.
 
 #### Inapplicable Example 1
 
-A page where there are no styles.
+A page where there are CSS styles.
 
 ```html
 <html lang="en">
@@ -165,7 +180,7 @@ A page where there are no styles.
 
 #### Inapplicable Example 2
 
-A page that has CSS media query styles, but media feature not targeting `orientation`.
+A page that has no CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property specified.
 
 ```html
 <html lang="en">
@@ -187,7 +202,7 @@ A page that has CSS media query styles, but media feature not targeting `orienta
 
 #### Inapplicable Example 3
 
-A page, where CSS media query styles targeting `orientation` is applied to an element that is not visible.
+A page where CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property is applied to an element that is not [visible](#visible).
 
 ```html
 <html lang="en">

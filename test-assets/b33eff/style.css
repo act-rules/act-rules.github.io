@@ -1,5 +1,5 @@
 @media (orientation: portrait) {
 	html {
-		transform: rotate(90deg);
+		transform: rotate(1.5708rad);
 	}
 }

@@ -24,7 +24,7 @@ This rule applies to the first HTML `title` element that
 - is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of a [document element](https://dom.spec.whatwg.org/#document-element) that is an HTML `html` element, and
 - contains [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
 
-**Note**: The HTML 5.2 specificaion requires that a document only has one `title` element, and that it is in the `head` of a document. It does however describe what should happen in case of multiple titles, and titles outside the `head`. Because of this, neither of these validation issues causes a conformance problem for WCAG.
+**Note**: The HTML 5.2 specification requires that a document only has one `title` element, and that it is in the `head` of a document. It does however describe what should happen in case of multiple titles, and titles outside the `head`. Because of this, neither of these validation issues causes a conformance problem for WCAG.
 
 ## Expectation
 

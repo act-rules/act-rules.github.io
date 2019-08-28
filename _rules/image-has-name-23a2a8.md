@@ -55,7 +55,7 @@ _There are currently no assumptions._
 
 #### Passed Example 1
 
-The HTML `img` element has an accessible name given by the `alt` attribute.
+The HTML `img` element has an accessible name
 
 ```html
 <img alt="W3C logo" />
@@ -63,7 +63,7 @@ The HTML `img` element has an accessible name given by the `alt` attribute.
 
 #### Passed Example 2
 
-The element with a [semantic role](#semantic-role) of `img` has an accessible name given by the `aria-label` attribute.
+The element with role of `img` has an accessible name
 
 ```html
 <div role="img" aria-label="W3C logo"></div>
@@ -71,48 +71,39 @@ The element with a [semantic role](#semantic-role) of `img` has an accessible na
 
 #### Passed Example 3
 
-The element with a [semantic role](#semantic-role) of `img` has an accessible name given by an `aria-labelledby` attribute and an element with matching `id`.
-
-```html
-<div style="display: none" id="img-label">W3C logo</div>
-<div role="img" aria-labelledby="img-label"></div>
-```
-
-#### Passed Example 4
-
-The HTML `img` element has an accessible name given by a `title` attribute, though the `title` attribute is not always accessibility supported.
+The element has an accessible name, though the name is not always accessibility supported
 
 ```html
 <img title="W3C logo" />
 ```
 
-#### Passed Example 5
+#### Passed Example 4
 
-The HTML `img` element is marked as [decorative](#decorative) through an empty `alt` attribute.
+The HTML `img` element is marked as [decorative](#decorative) through an empty `alt` attribute
 
 ```html
 <img alt="" />
 ```
 
-#### Passed Example 6
+#### Passed Example 5
 
-The HTML `img` element is marked as [decorative](#decorative) through `role="presentation"`.
+The HTML `img` element is marked as [decorative](#decorative) through `role="presentation"`
 
 ```html
 <img role="presentation" />
 ```
 
-#### Passed Example 7
+#### Passed Example 6
 
-The HTML `img` element is marked as [decorative](#decorative) through `role="none"`.
+The HTML `img` element is marked as [decorative](#decorative) through `role="none"`
 
 ```html
 <img role="none" />
 ```
 
-#### Passed Example 8
+#### Passed Example 7
 
-The HTML `img` element has an accessible name that does not only consist of whitespace.
+The HTML `img` element has an accessible name that does not only consist of whitespace
 
 ```html
 <img alt=":-)" />
@@ -122,7 +113,7 @@ The HTML `img` element has an accessible name that does not only consist of whit
 
 #### Failed Example 1
 
-The HTML `img` element is not marked as [decorative](#decorative) and does not have an accessible name.
+The HTML `img` element is not marked as [decorative](#decorative) and does not have an accessible name
 
 ```html
 <img />
@@ -130,7 +121,7 @@ The HTML `img` element is not marked as [decorative](#decorative) and does not h
 
 #### Failed Example 2
 
-The element with role of `img` does not have an accessible name.
+The element with role of `img` does not have an accessible name
 
 ```html
 <div role="img"></div>
@@ -138,7 +129,7 @@ The element with role of `img` does not have an accessible name.
 
 #### Failed Example 3
 
-The `img` element inside a `div` positioned off screen has no accessible name and is not marked as [decorative](#decorative).
+The `img` element inside a `div` positioned off screen has no accessible name and is not marked as [decorative](#decorative)
 
 ```html
 <div style="margin-left:-9999px;"><img /></div>
@@ -146,7 +137,7 @@ The `img` element inside a `div` positioned off screen has no accessible name an
 
 #### Failed Example 4
 
-The HTML `img` element has an accessible name that only consist of whitespace.
+The HTML `img` element has an accessible name that only consist of whitespace
 
 ```html
 <img aria-label=" " />
@@ -156,7 +147,7 @@ The HTML `img` element has an accessible name that only consist of whitespace.
 
 #### Inapplicable Example 1
 
-The element does not have the [semantic role](#semantic-role) of `img`.
+The element does not have the [semantic role](#semantic-role) of `img`
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" role="img" width="100" height="100">
@@ -166,7 +157,7 @@ The element does not have the [semantic role](#semantic-role) of `img`.
 
 #### Inapplicable Example 2
 
-The element has a [semantic role](#semantic-role) of `img`, but is not [included in the accessibility tree](#included-in-the-accessibility-tree).
+The element has a [semantic role](#semantic-role) of `img`, but is not [included in the accessibility tree](#included-in-the-accessibility-tree)
 
 ```html
 <div role="img" aria-hidden="true"></div>
@@ -174,7 +165,7 @@ The element has a [semantic role](#semantic-role) of `img`, but is not [included
 
 #### Inapplicable Example 3
 
-HTML `img` element is not [included in the accessibility tree](#included-in-the-accessibility-tree).
+HTML `img` element is not [included in the accessibility tree](#included-in-the-accessibility-tree)
 
 ```html
 <img alt="W3C logo" aria-hidden="true" />
@@ -182,7 +173,7 @@ HTML `img` element is not [included in the accessibility tree](#included-in-the-
 
 #### Inapplicable Example 4
 
-The element is not a `img` element.
+The element is not a `img` element
 
 ```html
 <div aria-label="W3C logo"></div>

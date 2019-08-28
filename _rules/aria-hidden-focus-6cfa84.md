@@ -30,7 +30,7 @@ The rule applies to any element with an `aria-hidden="true"` attribute.
 
 ## Expectation
 
-None of the target elements are part of [sequential focus navigation](https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation), nor do they have [descendants](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) that are part of [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation).
+None of the target elements are part of [sequential focus navigation](https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation), nor do they have [descendants](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) that are part of [sequential focus navigation](https://html.spec.whatwg.org/#sequential-focus-navigation).
 
 ## Assumptions
 

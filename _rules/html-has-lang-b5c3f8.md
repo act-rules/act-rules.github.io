@@ -1,9 +1,9 @@
 ---
 id: b5c3f8
-name: HTML has lang attribute
+name: HTML pages have lang attribute
 rule_type: atomic
 description: |
-  This rule checks that the `html` element has a non-empty `lang` or `xml:lang` attribute.
+  This rule checks that all HTML pages have a non-empty `lang` or `xml:lang` attribute.
 accessibility_requirements:
   wcag20:3.1.1: # Language of Page (A)
     forConformance: true
@@ -19,11 +19,13 @@ authors:
 
 ## Applicability
 
-The root element of the [page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element.
+The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element.
+
+**Note**: Documents embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not web pages according to the definition in WCAG.
 
 ## Expectation
 
-The test target has a `lang` or `xml:lang` attribute that is not empty ("").
+Each test target has a `lang` or `xml:lang` attribute that is not empty ("").
 
 **Note**: HTML5 recommends using `lang` instead of `xml:lang`. This is not known to impact accessibility, which is why use of both is permitted by this rule.
 

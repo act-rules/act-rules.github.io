@@ -1,9 +1,9 @@
 ---
 id: de46e4
-name: Valid body lang attribute
+name: Elements with lang attribute in body are valid 
 rule_type: atomic
 description: |
-  This rule checks that `lang` or `xml:lang` attributes on elements within the `body` of a web page have a valid language subtag.
+	This rule checks that all elements in the body of HTML pages, with a `lang` or `xml:lang` attribute, have a valid primary language subtag.
 accessibility_requirements:
   wcag20:3.1.2: # Language of Parts (AA)
     forConformance: true
@@ -23,7 +23,7 @@ This rules applies to each HTML or SVG element that is a [descendant](https://do
 
 ## Expectation
 
-The `lang` and `xml:lang` attributes of the test target have a [valid language subtag](#valid-language-subtag) if the attribute is not empty ("").
+For each test target, the `lang` and `xml:lang` attributes have a [valid language subtag](#valid-language-subtag) unless the attribute is empty ("").
 
 ## Assumptions
 

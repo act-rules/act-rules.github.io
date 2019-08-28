@@ -1,9 +1,9 @@
 ---
 id: c4a8a4
-name: Document title is descriptive
+name: HTML page titles are descriptive
 rule_type: atomic
 description: |
-  This rule checks that the document title describes the topic or purpose of the document.
+  This rule checks that first title in all HTML pages describes the topic or purpose of its page.
 accessibility_requirements:
   wcag20:2.4.2: # Page Titled (A)
     forConformance: true
@@ -21,8 +21,10 @@ authors:
 
 This rule applies to the first HTML `title` element that
 
-- is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of a [document element](https://dom.spec.whatwg.org/#document-element) that is an HTML `html` element, and
+- is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the `html` element of a [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), and
 - contains [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
+
+**Note**: The `title` elements of embedded documents, such as those in `iframe` or `object` elements, are not applicable because those are not web pages according to the definition in WCAG.
 
 ## Expectation
 

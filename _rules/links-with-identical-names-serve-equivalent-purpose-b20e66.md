@@ -37,7 +37,7 @@ This rule assumes that the purpose of the links with identical accessible names 
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+This rule assume that assistive technologies are exposing all links on the page in the same way no matter which [document tree](https://dom.spec.whatwg.org/#document-trees) there are in. If an assistive technology requires the user to "enter" an `iframe` or a [shadow tree](https://dom.spec.whatwg.org/#shadow-trees) before exposing its links, then it is possible for two links to have identical name but resolve to different resources without breaking success criterion [2.4.9 Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html) (if said links are in separate [documents](https://dom.spec.whatwg.org/#concept-document) or [shadow tree](https://dom.spec.whatwg.org/#shadow-trees))
 
 ## Background
 

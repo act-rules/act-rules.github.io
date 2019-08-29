@@ -8,3 +8,5 @@ Two [documents](https://dom.spec.whatwg.org/#concept-document) are *browsing con
 A *set of browsing context related documents* is the set of all [documents](https://dom.spec.whatwg.org/#concept-document) that are browsing context related with a [document](https://dom.spec.whatwg.org/#concept-document) whose [browsing context](https://html.spec.whatwg.org/#browsing-context) is a [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context).
 
 **Note**: By construction, a set of browsing context related is always maximal for inclusion.
+
+**Note**: Nesting of browsing context mostly happens with `iframe`. Thus a set of browsing context related documents will most of the time be a "top-level" documents and all its `iframe` (recursively).

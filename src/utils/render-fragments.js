@@ -1,7 +1,8 @@
 import React from 'react'
 import scUrls from './../../_data/sc-urls'
 import { Link } from 'gatsby'
-import glossaryUsages from './../../_data/glossary-usages.json'
+import glossariesInRules from './../../_data/glossaries-in-rules.json'
+import glossariesInGlossaries from './../../_data/glossaries-in-glossaries.json'
 import implementationMetrics from './../../_data/implementation-metrics.json'
 
 import rulesUsages from './../../_data/rules-usages.json'
@@ -93,19 +94,22 @@ export const getImplementationsCount = slug => {
 
 export const getGlossaryUsed = (slug, allGlossary) => {
 	const usedKeys = getGlossaryItemsUsedInRule(slug)
+
 	// Always show the outcome definition:
 	if (!usedKeys.includes('#outcome')) {
 		usedKeys.push('#outcome')
 	}
+
 	const glossaries = allGlossary.edges.filter(({ node }) => {
-		const {
-			frontmatter: { key },
-		} = node
+		const { frontmatter } = node
+		const { key } = frontmatter
 		return usedKeys.includes(`#${key}`)
 	})
+
 	if (!glossaries.length) {
 		return null
 	}
+
 	return (
 		<>
 			<a id="glossary-listing" href="#glossary-listing">
@@ -130,18 +134,9 @@ export const getGlossaryUsed = (slug, allGlossary) => {
 	)
 }
 
-export const getGlossaryUsedLink = (slug, allGlossary) => {
+export const getGlossaryUsedLink = (slug) => {
 	const usedKeys = getGlossaryItemsUsedInRule(slug)
 	if (!usedKeys) {
-		return null
-	}
-	const glossaries = allGlossary.edges.filter(({ node }) => {
-		const {
-			frontmatter: { key },
-		} = node
-		return usedKeys.includes(`#${key}`)
-	})
-	if (!glossaries.length) {
 		return null
 	}
 	return (
@@ -153,13 +148,29 @@ export const getGlossaryUsedLink = (slug, allGlossary) => {
 
 export const getGlossaryItemsUsedInRule = slug => {
 	const keys = []
-	Object.keys(glossaryUsages).forEach(key => {
-		glossaryUsages[key].forEach(({ slug: s }) => {
+
+	/**
+	 * Iterate through references in rules
+	 */
+	Object.keys(glossariesInRules).forEach(key => {
+		glossariesInRules[key].forEach(({ slug: s }) => {
 			if (s === slug && !keys.includes(key)) {
 				keys.push(key)
 			}
 		})
 	})
+
+	/**
+	 * Iterate through references in glossary thyself
+	 */
+	Object.keys(glossariesInGlossaries).forEach(key => {
+		glossariesInGlossaries[key].forEach(({ glossarykey }) => {
+			if (!keys.includes(glossarykey)) {
+				keys.push(key)
+			}
+		})
+	})
+
 	return keys
 }
 

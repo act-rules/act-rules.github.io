@@ -1,6 +1,6 @@
 const globby = require('globby')
 const getMarkdownData = require('../../../utils/get-markdown-data')
-const glossaryUsages = require('../../../_data/glossary-usages.json')
+const glossariesInRules = require('../../../_data/glossaries-in-rules.json')
 
 const glossaryKeys = globby
 	.sync([`./pages/glossary/*.md`])
@@ -13,11 +13,11 @@ const glossaryKeys = globby
 	})
 
 describe('all referenced glossary terms exist', () => {
-	test.each(Object.keys(glossaryUsages))('has glossary file `%s`', glossaryKey => {
+	test.each(Object.keys(glossariesInRules))('has glossary file `%s`', glossaryKey => {
 		const fileExists = glossaryKeys.includes(glossaryKey)
 		if (!fileExists) {
 			console.log(`glossary missing for ${glossaryKey}, usages below:`)
-			console.table(glossaryUsages[glossaryKey])
+			console.table(glossariesInRules[glossaryKey])
 		}
 		expect(fileExists).toBe(true)
 	})

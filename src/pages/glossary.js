@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout/'
 import SEO from '../components/seo'
 import { getGlossaryUsageInRules } from './../utils/render-fragments'
-import glossaryUsages from './../../_data/glossary-usages.json'
+import glossariesInRules from './../../_data/glossaries-in-rules.json'
 
 export default ({ data }) => {
 	const { glossaryData, site } = data
@@ -19,7 +19,7 @@ export default ({ data }) => {
 					{edges.map(({ node }) => {
 						const { frontmatter, html } = node
 						const { key } = frontmatter
-						const usedInRules = glossaryUsages[`#${key}`]
+						const usedInRules = glossariesInRules[`#${key}`]
 						return (
 							<article key={node.id}>
 								<section>

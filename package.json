@@ -188,6 +188,11 @@
 		"url": "https://act-rules.github.io"
 	},
 	"config": {
+		"markdown": {
+			"rules": ["./_rules/*.md"],
+			"pages": ["./pages/**/*.md"],
+			"glossary": ["./pages/glossary/*.md"]
+		},
 		"references": {
 			"wcag21": "https://raw.githubusercontent.com/w3c/wai-wcag-quickref/gh-pages/_data/wcag21.json"
 		},

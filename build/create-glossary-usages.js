@@ -3,33 +3,48 @@
  * -> for each glossary item (find references in each rule)
  * -> this is saved in `_data` which is later used in `pages/glossary`
  */
+const { config } = require('../package.json')
 const regexps = require('../utils/reg-exps')
 const createFile = require('../utils/create-file')
 const getAllMatchesForRegex = require('../utils/get-all-matches-for-regex')
-const getRulesMarkdownData = require('../utils/get-rules-markdown-data')
+const getMarkdownData = require('../utils/get-markdown-data')
 
-const init = async () => {
-	/**
-	 * Get all rules `markdown` data
-	 */
-	const rulesData = getRulesMarkdownData()
+/**
+ * Get usage meta data
+ * @param {Object} frontmatter markdown frontmatter
+ * @param {String} type key denoting type/ grouping of markdown data, to help parse frontmatter
+ * @returns {Object|null}
+ */
+const getUsageMetaData = (frontmatter, type) => {
+	switch (type) {
+		case 'rule':
+			const { id, name } = frontmatter
+			return {
+				name: name,
+				slug: `rules/${id}`
+			}
+		case 'glossary':
+			const { key } = frontmatter
+			return {
+				key: `#${key}`
+			}
+		default:
+			return
+	}
+}
 
-	/**
-	 * Eg:
-	 * {
-	 *  `non-empty`: [
-	 *    { name: `aria valid ...`, slug: `rules/XXXXX` },
-	 *    ....
-	 *  ]
-	 *  ....
-	 * }
-	 */
-	const glossaryUsages = {}
+/**
+ * Parse and find a given markdown content for references to glossary definitions
+ * 
+ * @param {Array<Object>} markdownData collection of parsed markdown data
+ * @param {String} type key denoting type/ grouping of markdown data, to help parse frontmatter
+ * @returns {Array<Object>}
+ */
+const getGlossaryUsagesInMarkdownData = (markdownData, type = 'rule') => {
+	const usages = {}
 
-	rulesData.forEach(ruleData => {
-		const { frontmatter, body } = ruleData
-		const { id: ruleId, name: ruleName, accessibility_requirements: ruleAccessibilityRequirements } = frontmatter
-
+	markdownData.forEach(data => {
+		const { frontmatter, body } = data
 		const glossaryMatches = getAllMatchesForRegex(regexps.glossaryReferenceInRules, body, false)
 
 		glossaryMatches.forEach(glossaryItem => {
@@ -43,33 +58,46 @@ const init = async () => {
 				return
 			}
 
-			const usage = {
-				name: ruleName,
-				slug: `rules/${ruleId}`,
-			}
-			if (!glossaryUsages[key]) {
-				glossaryUsages[key] = [usage]
+			const usage = getUsageMetaData(frontmatter, type)
+			if (!usages[key]) {
+				usages[key] = [usage]
 				return
 			}
 
-			const exists = glossaryUsages[key].some(u => u.slug === usage.slug)
+			const exists = usages[key].some(u => u.slug === usage.slug)
 			if (exists) {
 				return
 			}
 
-			glossaryUsages[key] = glossaryUsages[key].concat(usage)
+			usages[key] = usages[key].concat(usage)
 		})
 	})
 
+	return usages
+}
+
+/**
+ * Init
+ */
+const init = async () => {
 	/**
-	 * Create `_data/glossary-usages.json`
+	 * Get all rules `markdown` data, and create `_data/glossaries-in-rules.json`
 	 */
-	await createFile(`./_data/glossary-usages.json`, JSON.stringify(glossaryUsages, undefined, 2))
+	const rulesMarkdownData = getMarkdownData(config.markdown.rules)
+	const usagesInRules = getGlossaryUsagesInMarkdownData(rulesMarkdownData, 'rule')
+	await createFile(`./_data/glossaries-in-rules.json`, JSON.stringify(usagesInRules, undefined, 2))
+
+	/**
+	 * Get all glossary `markdown` data and create `_data/glossary-in-glossary.json`
+	 */
+	const glossariesMarkdownData = getMarkdownData(config.markdown.glossary)
+	const usageInGlossary = getGlossaryUsagesInMarkdownData(glossariesMarkdownData, 'glossary')
+	await createFile(`./_data/glossaries-in-glossaries.json`, JSON.stringify(usageInGlossary, undefined, 2))
 }
 
 /**
  * Invoke
  */
 init()
-	.then(() => console.info(`Completed: task: create:glossary\n`))
+	.then(() => console.info(`Completed: task: Create glossary usages\n`))
 	.catch(e => console.error(e))

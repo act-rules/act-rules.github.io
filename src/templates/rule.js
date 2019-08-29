@@ -134,7 +134,7 @@ export default ({ data }) => {
 					<div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
 					<ul>
 						{/* glossary */}
-						{getGlossaryUsedLink(slug, allGlossary)}
+						{getGlossaryUsedLink(slug)}
 						<li>
 							<a href="#useful-links">Useful Links</a>
 						</li>

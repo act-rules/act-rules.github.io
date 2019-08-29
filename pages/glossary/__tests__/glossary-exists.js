@@ -1,24 +1,21 @@
-const globby = require('globby')
 const getMarkdownData = require('../../../utils/get-markdown-data')
 const glossariesInRules = require('../../../_data/glossaries-in-rules.json')
 
-const glossaryKeys = globby
-	.sync([`./pages/glossary/*.md`])
-	.map(path => getMarkdownData(path))
-	.map(data => {
-		const {
-			frontmatter: { key },
-		} = data
-		return `#${key}`
-	})
+const glossariesMarkdownData = getMarkdownData(config.markdown.glossary)
+const glossaryKeys = glossariesMarkdownData.map(({ frontmatter }) => `#${frontmatter.key}`)
 
-describe('all referenced glossary terms exist', () => {
-	test.each(Object.keys(glossariesInRules))('has glossary file `%s`', glossaryKey => {
-		const fileExists = glossaryKeys.includes(glossaryKey)
-		if (!fileExists) {
-			console.log(`glossary missing for ${glossaryKey}, usages below:`)
-			console.table(glossariesInRules[glossaryKey])
-		}
-		expect(fileExists).toBe(true)
-	})
+describe('glossary terms used should exist', () => {
+
+	keysOfGlossariesInRules = Object.keys(glossariesInRules)
+
+	
+	test.each(keysOfGlossariesInRules)
+		('has glossary term `%s`', key => {
+			const fileExists = glossaryKeys.includes(key)
+			if (!fileExists) {
+				console.log(`glossary missing for ${key}, usages below:`)
+				console.table(glossariesInRules[key])
+			}
+			expect(fileExists).toBe(true)
+		})
 })

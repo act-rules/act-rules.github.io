@@ -12,7 +12,7 @@ An element that is normally [perceivable][] and [operable][], but has been rende
     
     will disable the element itself if it is not a [`fieldset`][fieldset] or, if it is, will disable any [descendants][descendant] of the element, excluding those that are [descendants][descendant] of the first [`legend`][legend] [child][] of the element.
     
-    **Note:** When the [`disabled`][disabled] attribute is specified on a [`fieldset`][fieldset] element, [shadow-including descendants][shadow-including descendant] are **not** disabled.
+    **Note:** When the [`disabled`][disabled] attribute is specified on a [`fieldset`][fieldset] element, [shadow-including descendants][shadow-including descendant] are **not** disabled by default. Such behavior may however be explicitly implemented by [form-associated custom elements][form-associated custom element].
 
 2. The [`aria-disabled`][aria-disabled] attribute. The presence of this attribute with a value of `true` will semantically disable an element and its [focusable][] [shadow-including descendants][shadow-including descendant].
 

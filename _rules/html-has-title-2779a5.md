@@ -1,9 +1,9 @@
 ---
 id: 2779a5
-name: HTML pages have a title
+name: HTML page has a title
 rule_type: atomic
 description: |
-  This rule checks that all HTML pages have a title.
+  This rule checks that an HTML page has a title.
 accessibility_requirements:
   wcag20:2.4.2: # Page Titled (A)
     forConformance: true

@@ -1,9 +1,9 @@
 ---
 id: c4a8a4
-name: HTML page titles are descriptive
+name: HTML page title is descriptive
 rule_type: atomic
 description: |
-  This rule checks that first title in all HTML pages describes the topic or purpose of its page.
+  This rule checks that first title in an HTML page describes the topic or purpose of that page.
 accessibility_requirements:
   wcag20:2.4.2: # Page Titled (A)
     forConformance: true

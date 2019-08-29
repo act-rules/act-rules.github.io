@@ -1,9 +1,9 @@
 ---
 id: b5c3f8
-name: HTML pages have lang attribute
+name: HTML page has lang attribute
 rule_type: atomic
 description: |
-  This rule checks that all HTML pages have a non-empty `lang` or `xml:lang` attribute.
+  This rule checks that an HTML pages has a non-empty `lang` or `xml:lang` attribute.
 accessibility_requirements:
   wcag20:3.1.1: # Language of Page (A)
     forConformance: true

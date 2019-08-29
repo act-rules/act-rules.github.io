@@ -1,0 +1,12 @@
+<svg width="206" height="149" xmlns="http://www.w3.org/2000/svg" style="vector-effect: non-scaling-stroke;" stroke="null">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <ellipse stroke="#0027ea" style="vector-effect: non-scaling-stroke;" ry="73.499999" rx="102" id="svg_7" cy="74.250001" cx="102.75" stroke-width="1.5" fill="#ffffff"/>
+  <ellipse stroke="#1a8904" ry="71" rx="99" id="svg_9" cy="74" cx="103" stroke-width="1.5" fill="#ffffff"/>
+  <text stroke="#1a8904" transform="matrix(0.8333333134651184,0,0,1,17.583335429430008,0) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" id="svg_3" y="93.75" x="13.399998" fill-opacity="null" stroke-width="0" fill="#000000">Impl. rule 1</text>
+  <text stroke="#1a8904" transform="matrix(0.8333333134651184,0,0,1,17.583335429430008,0) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" id="svg_5" y="94.75" x="121.407315" fill-opacity="null" stroke-width="0" fill="#000000">Impl. rule 2</text>
+  <line stroke="#1a8904" stroke-linecap="null" stroke-linejoin="null" id="svg_10" y2="145.969187" x2="102.5" y1="3.9375" x1="102.5" fill-opacity="null" stroke-width="1.5" fill="none"/>
+  <rect stroke="#0027ea" id="svg_11" height="18" width="77" y="31.9375" x="64.5" fill-opacity="null" stroke-width="1.5" fill="#ffffff"/>
+  <text stroke="#1a8904" transform="matrix(0.8333333134651184,0,0,1,17.583335429430008,0) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" id="svg_8" y="44.75" x="64.999999" fill-opacity="null" stroke-width="0" fill="#000000">ACT-R Rule</text>
+ </g>
+</svg>

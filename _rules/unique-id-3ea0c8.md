@@ -65,38 +65,25 @@ All `id`s are unique within the document context.
 
 #### Passed Example 3
 
-The `id` in shadow DOM is for the same element as the `id` in light DOM
+Two of the `id` are the same (`my-elt`), but they are in different trees (the first one in the [document tree](https://dom.spec.whatwg.org/#document-trees) and the second in the [shadow tree](https://dom.spec.whatwg.org/#shadow-trees)).
 
 ```html
-<div id="my-elm"></div>
+<div id="my-elt"></div>
+<div id="host"></div>
 <script>
-	var myElm = document.getElementById('my-elm')
-	var shadow = myElm.attachShadow({ mode: 'open' })
-	shadow.innerHTML = '<b id="my-elm"><slot></slot></b>'
+	var host = document.getElementById('host')
+	var shadow = host.attachShadow({ mode: 'open' })
+	shadow.innerHTML = '<b id="my-elt"></b>'
 </script>
 ```
 
 #### Passed Example 4
 
-Two of the `id` are the same, but they are in different trees (the first one in the [document tree](https://dom.spec.whatwg.org/#document-trees) and the second in the [shadow tree](https://dom.spec.whatwg.org/#shadow-trees)).
+Both `id` are the same (`my-elt`), but they are in different [document trees](https://dom.spec.whatwg.org/#document-trees) because the `iframe` is creating a new one.
 
 ```html
-<div id="my-elm"></div>
-<div id="host"></div>
-<script>
-	var host = document.getElementById('host')
-	var shadow = host.attachShadow({ mode: 'open' })
-	shadow.innerHTML = '<b id="my-elm"></b>'
-</script>
-```
-
-#### Passed Example 5
-
-Both `id` are the same, but they are in different [document trees](https://dom.spec.whatwg.org/#document-trees) because the `iframe` is creating a new one.
-
-```html
-<div id="my-elm"></div>
-<iframe srcdoc='<span id="my-elm"></span>'></iframe>
+<div id="my-elt"></div>
+<iframe srcdoc='<span id="my-elt"></span>'></iframe>
 ```
 
 ### Failed

@@ -17,13 +17,14 @@ authors:
 - Anne Thyme Nørregaard
 - Dagfinn Rømen
 - Geir Sindre Fossøy
+- Jean-Yves Moyen
 ---
 
 ## Applicability
 
 This rule applies to any element that:
-- has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`, and
-- is [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree), and 
+- has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`; and
+- is [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree); and 
 - has an [accessible name](#accessible-name) or is the [labeled control](https://www.w3.org/TR/html/sec-forms.html#labeled-control) of a [visible](#visible) `label` element.
 
 **Note**: The list of applicable [semantic roles](#semantic-roles) is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
@@ -54,7 +55,7 @@ The [accessible name](#accessible-name), if there is any, describes the purpose 
 
 ## Assumptions
 
-This rule assumes that while having a differentiating [context](#context) that is not [programatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) might be a violation under other [WCAG](https://www.w3.org/TR/WCAG21/) success criteria (e.g. 1.3.1 Info and Relationships, if text that has not been marked up as headings is used to split a form into different sections), this is allowed under success criterion 2.4.6 Headings and Labels: Headings and labels describe topic or purpose.
+This rule assumes that while having a differentiating [context](#context) that is not [programatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) might be a violation under other [WCAG](https://www.w3.org/TR/WCAG21/) success criteria (e.g. 1.3.1 Info and Relationships, if text that has not been marked up as headings is used to split a form into different sections), this is allowed under [success criterion 2.4.6 Headings and Labels](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels).
 
 ## Accessibility Support
 
@@ -151,7 +152,7 @@ Otherwise identically named form fields can be differentiated both visually and 
 <p id="billing" style="display:none">(Billing)</p>
 <label>Name<input id="billing-name" type="text" name="name" aria-describedby="billing"/></label>
 <label>Street<input id="billing-street" type="text" name="street" aria-describedby="billing" /></label>
-````
+```
 
 #### Passed Example 9
 
@@ -223,7 +224,7 @@ The `label` in itself does not describe the purpose of the form field. While the
 ```html
 <h2>Name</h2>
 <label>Fill in: <input id="name" type="text" name="name"/></label>
-````
+```
 
 #### Failed Example 8
 

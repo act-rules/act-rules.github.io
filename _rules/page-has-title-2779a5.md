@@ -32,7 +32,7 @@ The [document element](https://dom.spec.whatwg.org/#document-element) has at lea
 
 **Note**: The `title` element exists in other namespaces such as SVG. These are not HTML `title` elements and should be ignored for this rule.
 
-**Note**: The HTML 5.2 specificaion requires that a document only has one `title` element, and that it is in the `head` of a document. It does however describe what should happen in case of multiple titles, and titles outside the `head`. Because of this, neither of these validation issues causes a conformance problem for WCAG.
+**Note**: The [HTML 5.2 specificaion](https://www.w3.org/TR/html52/document-metadata.html#the-title-element) requires that a document only has one `title` element, and that it is in the `head` element of a document. However, HTMl 5.2 also describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG.
 
 ## Expectation 2
 

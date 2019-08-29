@@ -20,8 +20,8 @@ authors:
 ## Applicability
 
 This rule applies to any set of any two or more HTML or SVG elements which
-- are inside the same [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress); and 
-- are [included in the accessibility tree](#included-in-the-accessibility-tree); and 
+- are inside the [flat trees](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) of one or more [documents](https://dom.spec.whatwg.org/#concept-document) of the same [set of browsing context related documents](#browsing-context-related-documents); and
+- are [included in the accessibility tree](#included-in-the-accessibility-tree) of their respective [document](https://dom.spec.whatwg.org/#concept-document); and 
 - have the [semantic role](#semantic-role) of `link`, or a role that inherits from the `link` role; and
 - that have [matching](#matching-characters) [accessible names](#accessible-name) that do not only consist of [whitespace](#whitespace).
 
@@ -475,6 +475,21 @@ The [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) contains a [
   </script>
 </body>
 </html>
+```
+
+#### Failed Example 12
+
+The [document](https://dom.spec.whatwg.org/#concept-document) inside the `iframe` is part of the same [set of browsing context related documents](#browsing-context-related-documents) as the main [document](https://dom.spec.whatwg.org/#concept-document). Therefore, both links are considered and the rule fails.
+
+```html
+<!DOCTYPE html>
+<html>
+<head><title>I have been framed!</title></head>
+
+<body>
+  <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> from the top level.
+
+  <iframe srcdoc='<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the iframe'></iframe>
 ```
 
 ### Inapplicable

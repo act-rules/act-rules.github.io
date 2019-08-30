@@ -4,6 +4,7 @@ name: HTML page lang and xml:lang attributes match
 rule_type: atomic
 description: |
   This rule checks that all HTML pages with both a `lang` and `xml:lang` attributes on the root element, have the same primary language subtag.
+accessibility_requirements:
   wcag20:3.1.1: # Language of Page (A)
     forConformance: true
     failed: not satisfied

@@ -79,12 +79,12 @@ The headings provide a [visual context](#visual-context) that differentiates the
 
 ```html
 <h2 aria-hidden="true">Shipping address</h2>
-<label>Name<input id="shipping-name" type="text" name="name" aria-label="(Shipping) Name" /></label>
-<label>Street<input id="shipping-street" type="text" name="street" aria-label="(Shipping) Street" /></label>
+<label>Name<input id="shipping-name" type="text" name="name" /></label>
+<label>Street<input id="shipping-street" type="text" name="street" /></label>
 
 <h2 aria-hidden="true">Billing address</h2>
-<label>Name<input id="billing-name" type="text" name="name" aria-label="(Billing) Name"/></label>
-<label>Street<input id="billing-street" type="text" name="street" aria-label="(Billing) Name" /></label>
+<label>Name<input id="billing-name" type="text" name="name" /></label>
+<label>Street<input id="billing-street" type="text" name="street" /></label>
 ```
 
 #### Passed Example 4
@@ -133,6 +133,20 @@ The [visible](#visible) `label` is not descriptive.
 <input id="fname" type="text" name="fname" aria-label="First name:"/>
 ```
 
+#### Failed Example 5
+
+Since the headings are not [visible](#visible), they do not provide any [visual context](#visual-context) to help disambiguate between identical `label` elements.
+
+```html
+<h2 style="position: absolute; top: -9999px; left: -9999px;">Shipping address</h2>
+<label>Name<input id="shipping-name" type="text" name="name" /></label>
+<label>Street<input id="shipping-street" type="text" name="street" /></label>
+
+<h2 style="position: absolute; top: -9999px; left: -9999px;">Billing address</h2>
+<label>Name<input id="billing-name" type="text" name="name" /></label>
+<label>Street<input id="billing-street" type="text" name="street" /></label>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -163,7 +177,7 @@ There is no `label` element.
 
 #### Inapplicable Example 4
 
-There is no `label` element, even though a `p`element in close proximity to the form field appears as a visible label. 
+There is no `label` element, even though a `p` element in close proximity to the form field appears as a visible label. 
 
 ```html
 <p>First name:</p> <input id="fname" type="text" name="fname"/>

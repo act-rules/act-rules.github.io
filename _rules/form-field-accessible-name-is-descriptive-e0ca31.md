@@ -22,7 +22,7 @@ This rule applies to any HTML or SVG element that:
 - is [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree); and 
 - has an [accessible name](#accessible-name).
 
-**Note**: The list of applicable [semantic roles](#semantic-roles) is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
+**Note**: The list of applicable [semantic roles](#semantic-role) is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
 - inherit from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and 
 - do not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
 
@@ -42,7 +42,7 @@ The [accessible name](#accessible-name) describes the purpose of the associated 
 
 ## Assumptions
 
-This rule assumes that while having a differentiating [context](#context) that is not [programatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) might be a violation under other [WCAG](https://www.w3.org/TR/WCAG21/) success criteria (e.g. [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships)), if text that has not been marked up as headings is used to split a form into different sections), this is allowed under [success criterion 2.4.6 Headings and Labels](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels).
+This rule assumes that while having a differentiating [context](#context) that is not [programatically determinable](https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) might be a violation under other [WCAG](https://www.w3.org/TR/WCAG21/) success criteria (e.g. [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships)), if text that has not been marked up as headings is used to split a form into different sections), this is allowed under [success criterion 2.4.6 Headings and Labels](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels).
 
 ## Accessibility Support
 
@@ -118,7 +118,7 @@ The headings provide both a [programatically determined context](#programaticall
 
 #### Passed Example 7
 
-The [accessible name](#accesible-name) created through `aria-label` describes the purpose of the associated element.
+The [accessible name](#accessible-name) created through `aria-label` describes the purpose of the associated element.
 
 ```html
 <input aria-label="First name" id="fname" type="text" name="fname"/>

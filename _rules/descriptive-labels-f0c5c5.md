@@ -144,14 +144,12 @@ Otherwise identically named form fields can be differentiated both visually and 
 
 ```html
 <h2 aria-hidden="true">Shipping address</h2>
-<p id="shipping" style="display:none">(Shipping)</p>
-<label>Name<input id="shipping-name" type="text" name="name" aria-describedby="shipping" /></label>
-<label>Street<input id="shipping-street" type="text" name="street" aria-describedby="shipping" /></label>
+<label>Name<input id="shipping-name" type="text" name="name" aria-label="(Shipping) Name" /></label>
+<label>Street<input id="shipping-street" type="text" name="street" aria-label="(Shipping) Street" /></label>
 
 <h2 aria-hidden="true">Billing address</h2>
-<p id="billing" style="display:none">(Billing)</p>
-<label>Name<input id="billing-name" type="text" name="name" aria-describedby="billing"/></label>
-<label>Street<input id="billing-street" type="text" name="street" aria-describedby="billing" /></label>
+<label>Name<input id="billing-name" type="text" name="name" aria-label="(Billing) Name"/></label>
+<label>Street<input id="billing-street" type="text" name="street" aria-label="(Billing) Name" /></label>
 ```
 
 #### Passed Example 9

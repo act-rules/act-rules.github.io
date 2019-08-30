@@ -49,13 +49,13 @@ The [accessible name](#accessible-name), if there is any, describes the purpose 
 
 **Note:** In this case, [context](#context) can be created by headings, fieldsets and legends, text that is near the control, etc. For Expectation 2, elements that are [included in the accessibility tree](#included-in-the-accessibility-tree) should be considered context as well, e.g. elements connected to the form field through `aria-describedby`, or using WAI-ARIA `group` role with an [accessible name](#accessible-name).
 
-**Note:** If a [context](#context) that is necessary for differentiating form fields from each other is [visible](#visible), but not [included in the accessibility tree](#included-in-the-accessibility-tree), this might be a violation under other [WCAG](https://www.w3.org/TR/WCAG21/) success criteria (e.g. 1.3.1 Info and Relationships), but this is not considered a failing condition for this rule. For this rule, it is enough that the [context](#context) is there in some form, either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree).
+**Note:** If a [context](#context) that is necessary for differentiating form fields from each other is [visible](#visible), but not [included in the accessibility tree](#included-in-the-accessibility-tree), this might be a violation under other [WCAG](https://www.w3.org/TR/WCAG21/) success criteria (e.g. [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships)), but this is not considered a failing condition for this rule. For this rule, it is enough that the [context](#context) is there in some form, either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 **Note**: Labels do not need to be lengthy. A word, or even a single character, may suffice.
 
 ## Assumptions
 
-This rule assumes that while having a differentiating [context](#context) that is not [programatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) might be a violation under other [WCAG](https://www.w3.org/TR/WCAG21/) success criteria (e.g. 1.3.1 Info and Relationships, if text that has not been marked up as headings is used to split a form into different sections), this is allowed under [success criterion 2.4.6 Headings and Labels](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels).
+This rule assumes that while having a differentiating [context](#context) that is not [programatically determinable](#https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) might be a violation under other [WCAG](https://www.w3.org/TR/WCAG21/) success criteria (e.g. [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships)), if text that has not been marked up as headings is used to split a form into different sections), this is allowed under [success criterion 2.4.6 Headings and Labels](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels).
 
 ## Accessibility Support
 

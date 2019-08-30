@@ -146,7 +146,7 @@ The `label` element is not [visible](#visible) to users.
 
 #### Inapplicable Example 2
 
-The `label` element is associated with an HTML element that does not have a form field semantic role.
+The `label` element is associated with an HTML element that does not have a form field [semantic role](#semantic-role).
 
 ```html
 <label for="fname">First name:</label>
@@ -167,4 +167,13 @@ There is no `label` element, even though a `p`element in close proximity to the 
 
 ```html
 <p>First name:</p> <input id="fname" type="text" name="fname"/>
+```
+
+#### Inapplicable Example 5
+
+There is no `label` element, even though the `p` element both appears as a [visible](#visible) label and provides an [accessible name](#accessible-name).
+
+```html
+<p id="label_fname" aria-hidden="true">First name:</p>
+<input aria-labelledby="label_fname" type="text" name="fname"/>
 ```

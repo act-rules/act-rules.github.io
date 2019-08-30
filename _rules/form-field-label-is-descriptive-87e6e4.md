@@ -1,7 +1,7 @@
 ---
-id: f0c5c5
+id: 87e6e4
 name: Form field label is descriptive
-rule_type: atomic
+rule_type: composite
 description: |
   This rule checks that labels describe the purpose of form field elements.
 accessibility_requirements: 
@@ -10,9 +10,9 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-input_aspects:
-- DOM Tree
-- CSS Styling
+input_rules:
+- 1cd4da
+- e0ca31
 authors:
 - Anne Thyme Nørregaard
 - Dagfinn Rømen
@@ -35,23 +35,11 @@ This rule applies to any HTML or SVG element that:
 
 **Note**: "Label" in WCAG is used in its general sense and includes text or other components with a text alternative that is presented to a user to identify a component within web content. That is, "label" in WCAG is not restricted to the `label` element of HTML or SVG.
 
-## Expectation 1
+## Expectation 
 
-The [visible](#visible) `label` element, if there is any, describes the purpose of the associated form field element. The [visual context](#visual-context) of the element can be used to differentiate the purpose from other form fields on the same page.
-
-**Note:** In this case, [visual context](#visual-context) can be created by headings, fieldsets and legends, text that is near the control, etc.
-
-**Note**: Labels do not need to be lengthy. A word, or even a single character, may suffice.
-
-## Expectation 2
-
-The [accessible name](#accessible-name), if there is any, describes the purpose of the associated form field element. Both the [visual context](#visual-context) of the element, and the [programatically determined context](#programatically-determined-context) which is [included in the accessibility tree](#included-in-the-accessibility-tree) can be used to differentiate the purpose from other form fields on the same page.
-
-**Note:** In this case, [visual context](#visual-context) can be created by headings, fieldsets and legends, text that is near the control, etc.
-
-**Note:** If a [context](#context) that is necessary for differentiating form fields from each other is [visible](#visible), but not [included in the accessibility tree](#included-in-the-accessibility-tree), this might be a violation under other [WCAG](https://www.w3.org/TR/WCAG21/) success criteria (e.g. [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships)), but this is not considered a failing condition for this rule. For this rule, it is enough that the [context](#context) is there in some form, either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree).
-
-**Note**: Labels do not need to be lengthy. A word, or even a single character, may suffice.
+For each test target, the [outcome](#outcome) of none of the following rules is "failed":
+- [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da)
+- [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31)
 
 ## Assumptions
 
@@ -74,7 +62,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-Label that is coded with the `label` element and describes the purpose of the associated element.
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "passed", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed".
 
 ```html
 <label for="fname">First name:</label>
@@ -83,7 +71,7 @@ Label that is coded with the `label` element and describes the purpose of the as
 
 #### Passed Example 2
 
-Label that is coded with the `p` element and associated by the aria-labelledby attribute. The label describes the purpose of the associated element.
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed".
 
 ```html
 <p id="label_fname">First name:</p>
@@ -92,7 +80,7 @@ Label that is coded with the `p` element and associated by the aria-labelledby a
 
 #### Passed Example 3
 
-Implicit label that is coded with the `label` element and describes the purpose of the associated element.
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "passed", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed".
 
 ```html
 <label>First name:<input id="fname" type="text" name="fname"/></label>
@@ -100,7 +88,7 @@ Implicit label that is coded with the `label` element and describes the purpose 
 
 #### Passed Example 4
 
-Label is visible, but not included in accessibility tree.
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed".
 
 ```html
 <p id="label_fname" aria-hidden="true">First name:</p>
@@ -109,7 +97,7 @@ Label is visible, but not included in accessibility tree.
 
 #### Passed Example 5
 
-Label is included in accessibility tree, but not visible.
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed".
 
 ```html
 <p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">First name:</p>
@@ -118,7 +106,7 @@ Label is included in accessibility tree, but not visible.
 
 #### Passed Example 6
 
-Headings provide a [programatically determined context](#programatically-determined-context) that differentiates the purpose of the otherwise identically named form fields.
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "passed" (for all test targets), the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed" (for all test targets).
 
 ```html
 <h2>Shipping address</h2>
@@ -128,19 +116,28 @@ Headings provide a [programatically determined context](#programatically-determi
 <h2>Billing address</h2>
 <label>Name<input id="billing-name" type="text" name="name"/></label>
 <label>Street<input id="billing-street" type="text" name="street"/></label>
-````
+```
 
 #### Passed Example 7
 
-Accessible name created through `aria-label` describes the purpose of the associated element.
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed".
 
 ```html
 <input aria-label="First name" id="fname" type="text" name="fname"/>
 ```
 
+#### Inapplicable Example 5
+
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "passed", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "inapplicable".
+
+```html
+<label for="fname">First name:</label>
+<input id="fname" type="text" name="fname" aria-label=""/>
+```
+
 #### Passed Example 8
 
-Otherwise identically named form fields can be differentiated both visually and in a way that is included in the accessibility tree, though different methods are used for each purpose.
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "passed" (for all test targets), the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed" (for all test targets).
 
 ```html
 <h2 aria-hidden="true">Shipping address</h2>
@@ -154,7 +151,7 @@ Otherwise identically named form fields can be differentiated both visually and 
 
 #### Passed Example 9
 
-`p` element that is neither visible nor included in the accessibility tree, but still provides an accessible name to the input field through `aria-labelledby`.
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed".
 
 ```html
 <p id="label_fname" style="display:none;">First name:</p>
@@ -165,7 +162,7 @@ Otherwise identically named form fields can be differentiated both visually and 
 
 #### Failed Example 1
 
-Label that is coded with the `label` element and does not describe the purpose of the associated element.
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "failed", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "failed".
 
 ```html
 <label for="fname">Menu</label>
@@ -174,7 +171,7 @@ Label that is coded with the `label` element and does not describe the purpose o
 
 #### Failed Example 2
 
-Label that is coded with the `p` element and associated by the `aria-labelledby` attribute. The label does not describe the purpose of the associated element.
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "failed".
 
 ```html
 <p id="label_fname">Menu</p>
@@ -183,7 +180,7 @@ Label that is coded with the `p` element and associated by the `aria-labelledby`
 
 #### Failed Example 3
 
-Implicit label that is coded with the `label` element and does not describe the purpose of the associated element.
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "failed", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "failed".
 
 ```html
 <label>Menu<input id="fname" type="text" name="fname"/></label>
@@ -191,7 +188,7 @@ Implicit label that is coded with the `label` element and does not describe the 
 
 #### Failed Example 4
 
-Label is visible, but not included in accessibility tree, and does not describe the purpose of the associated element.
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "failed".
 
 ```html
 <p id="label_fname" aria-hidden="true">Menu</p>
@@ -200,7 +197,7 @@ Label is visible, but not included in accessibility tree, and does not describe 
 
 #### Failed Example 5
 
-Label is included in accessibility tree, but not visible, and does not describe the purpose of the associated element.
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "failed".
 
 ```html
 <p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">Menu</p>
@@ -209,7 +206,7 @@ Label is included in accessibility tree, but not visible, and does not describe 
 
 #### Failed Example 6
 
-Accessible name created through `aria-label` does not describe the purpose of the associated element.
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "failed".
 
 ```html
 <input aria-label="Menu" id="fname" type="text" name="fname"/>
@@ -217,7 +214,7 @@ Accessible name created through `aria-label` does not describe the purpose of th
 
 #### Failed Example 7
 
-The `label` in itself does not describe the purpose of the form field. While the [context](#context) can be relied upon to differentiate form fields from each other, it cannot be relied upon for describing the entire purpose of the form field.
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "failed", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "failed".
 
 ```html
 <h2>Name</h2>
@@ -226,7 +223,7 @@ The `label` in itself does not describe the purpose of the form field. While the
 
 #### Failed Example 8
 
-While Expectation 1 is met, Expectation 2 fails because the descriptive label coded with the `label` element through the accessible name calculation is overwritten by an `aria-label` that is not descriptive.
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "passed", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "failed".
 
 ```html
 <label for="fname">First name:</label>
@@ -235,18 +232,32 @@ While Expectation 1 is met, Expectation 2 fails because the descriptive label co
 
 #### Failed Example 9
 
-The non-descriptive label coded with the `label` element is through the accessible name calculation overwritten by an `aria-label` that is descriptive. However, the visible label is still not descriptive.
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "failed", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed".
 
 ```html
 <label for="fname">Fill in:</label>
 <input id="fname" type="text" name="fname" aria-label="First name:"/>
 ```
 
+#### Failed Example 10
+
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "failed", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed".
+
+```html
+<h2 style="position: absolute; top: -9999px; left: -9999px;">Shipping address</h2>
+<label>Name<input id="shipping-name" type="text" name="name" /></label>
+<label>Street<input id="shipping-street" type="text" name="street" /></label>
+
+<h2 style="position: absolute; top: -9999px; left: -9999px;">Billing address</h2>
+<label>Name<input id="billing-name" type="text" name="name" /></label>
+<label>Street<input id="billing-street" type="text" name="street" /></label>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-`label` that is neither visible to users, nor included in the accessibility tree.
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "inapplicable".
 
 ```html
 <label for="fname" style="display:none;">First name:</label>
@@ -255,7 +266,7 @@ The non-descriptive label coded with the `label` element is through the accessib
 
 #### Inapplicable Example 2
 
-The `label` element is associated with an HTML element that does not have a form field semantic role.
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "inapplicable".
 
 ```html
 <label for="fname">First name:</label>
@@ -264,7 +275,7 @@ The `label` element is associated with an HTML element that does not have a form
 
 #### Inapplicable Example 3
 
-No `label` element or accessible name.
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "inapplicable".
 
 ```html
 <input id="fname" type="text" name="fname"/>
@@ -272,7 +283,7 @@ No `label` element or accessible name.
 
 #### Inapplicable Example 4
 
-No `label` element or accessible name, even though a `p`element in close proximity to the form field appears as a visible label. 
+The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "inapplicable".
 
 ```html
 <p>First name:</p> <input id="fname" type="text" name="fname"/>

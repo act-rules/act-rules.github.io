@@ -96,6 +96,15 @@ The [visible](#visible) `label` element describes the form field.
 <input id="fname" type="text" name="fname" aria-label="Fill in:"/>
 ```
 
+#### Passed Example 5
+
+The [visible](#visible) `label` element describes the form field.
+
+```html
+<label for="fname">First name:</label>
+<input id="fname" type="text" name="fname" aria-label=""/>
+```
+
 ### Failed
 
 #### Failed Example 1

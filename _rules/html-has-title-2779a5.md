@@ -1,6 +1,6 @@
 ---
 id: 2779a5
-name: HTML page has a title
+name: HTML page has title
 rule_type: atomic
 description: |
   This rule checks that an HTML page has a title.

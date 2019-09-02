@@ -6,17 +6,17 @@ description: |
   Non-streaming `video` elements without audio must have all visual information available in a transcript.
 accessibility_requirements:
 input_aspects:
- - DOM Tree
- - CSS Styling
- - Audio output
- - Visual output
+  - DOM Tree
+  - CSS Styling
+  - Audio output
+  - Visual output
 authors:
- - Wilco Fiers
- - Brian Bors 
+  - Wilco Fiers
+  - Brian Bors
 htmlHintIgnore:
- # https://www.npmjs.com/package/htmlhint 
- # (used with `npm test` to ensure validity of code snippets)
- - 'tag-pair'
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'tag-pair'
 ---
 
 ## Applicability

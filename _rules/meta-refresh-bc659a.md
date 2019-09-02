@@ -26,9 +26,9 @@ authors:
   - Anne Thyme Nørregaard
   - Wilco Fiers
 htmlHintIgnore:
- # https://www.npmjs.com/package/htmlhint 
- # (used with `npm test` to ensure validity of code snippets)
- - 'title-require'
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'title-require'
 ---
 
 ## Applicability

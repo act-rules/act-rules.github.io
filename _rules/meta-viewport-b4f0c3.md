@@ -23,11 +23,14 @@ The rule applies to each [`<meta>`](https://www.w3.org/TR/html52/document-metada
 
 ## Expectation
 
-The [`content`](https://www.w3.org/TR/html52/document-metadata.html#dom-htmlmetaelement-content) attribute of the test target: 
-- either does not have the value `user-scalable`, or has it's subvalue set to `yes`; and
-- either does not have the value `maximum-scale`, or has it set to a subvalue that allows zooming up to 200%.
+The [`content`](https://www.w3.org/TR/html52/document-metadata.html#dom-htmlmetaelement-content) attribute, whose value is mapped to a list of value/subvalue pairs in a user-agent specific manner, does not:
 
-**Note:** Values and subvalues for the content of <meta name="viewport"> are specified in a detailed tabulation [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#Attributes).
+- specify the value `user-scalable` with a subvalue of `yes`; nor
+- specify the value `maximum-scale` with a subvalue of less than 2
+
+**Note:** 
+1) For Safari on the iPhone, the content attribute is mapped to property/value pairs according to the following algorithm: https://drafts.csswg.org/css-device-adapt/#parsing-algorithm
+2) Values and subvalues for the content attribute of `<meta name="viewport">` are specified in a detailed tabulation [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#Attributes).
 
 ## Assumptions
 

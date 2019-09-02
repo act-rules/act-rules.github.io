@@ -32,7 +32,7 @@ This rule applies to any HTML or SVG element with the [semantic role](#semantic-
 
 The [visible](#visible) [text content](#text-content) of the target element, together with its [programmatically determined link context](#programmatically-determined-link-context) describe the purpose of the link.
 
-Note: There may be situations where the purpose of the link is supposed to be unknown or obscured. In those situations, the success criteria will still be met, even if the link's purpose is not described by it.
+**Note:** There may be situations where the purpose of the link is supposed to be unknown or obscured. In those situations, the success criteria will still be met, even if the link's purpose is not described by it.
 
 ## Assumptions
 
@@ -97,7 +97,7 @@ Link text together with its context describe the purpose of the link
 Both link text together with its context and accessible name describe the purpose of the link
 
 ```html
-<p><a href="#" aria-label="Order item">Place item</a><span aria-hidden="true"> in shopping cart</span></p>
+<p><a href="#" aria-label="Place item in cart">Place item</a><span aria-hidden="true"> in shopping cart</span></p>
 ```
 
 #### Passed Example 5

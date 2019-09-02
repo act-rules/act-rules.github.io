@@ -84,7 +84,8 @@ Multiple types of required owned elements are present.
 
 ```html
 <ul role="menu">
-	<li></li> <!-- implicit role -->
+	<li></li>
+	<!-- implicit role -->
 	<li role="menuitem">Item 1</li>
 	<li role="menuitemradio">Item 2</li>
 </ul>
@@ -171,7 +172,9 @@ Element with role `list` contains a required `listitem`, the relationship betwee
 Element with role `menu` has attribute `aria-busy` set to `true`.
 
 ```html
-<ul role="menu" aria-busy="true">Loading</ul>
+<ul role="menu" aria-busy="true">
+	Loading
+</ul>
 ```
 
 #### Passed example 11
@@ -181,7 +184,8 @@ Element `ul` with implicit role of `list` owns at least one instance of required
 ```html
 <ul>
 	<span role="listitem">Item 1</span>
-	<li>Item 2</li> <!-- implicit role -->
+	<li>Item 2</li>
+	<!-- implicit role -->
 </ul>
 ```
 
@@ -224,7 +228,7 @@ Element with role `grid` owns required owned element `rowgroup`, which is missin
 
 #### Failed example 4
 
-The element with the semantic role of `list` owns the element with the role `tab` through the `aria-owns` property.
+The element with the semantic role of `list` owns the element with the role `tab` through the `aria-owns` property, but does not own the required elements with semantic roles `group` or `listitem`.
 
 **Note:** This test case follows the definition of [owned by](#owned-by). If implemented differently, this definition could cause differences in outcome of this test case.
 

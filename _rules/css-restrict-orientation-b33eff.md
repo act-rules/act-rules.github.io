@@ -44,6 +44,7 @@ In `landscape` orientation, the target element is neither rotated clockwise nor 
 
 ## Assumptions
 
+- The rule does not consider elements for which a particular display orientation is [essential](https://www.w3.org/TR/WCAG21/#dfn-essential).
 - The rule does not consider the existence of any control on the page that can change the orientation on demand.
 
 ## Accessibility Support
@@ -132,7 +133,7 @@ A page where CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/tr
 
 #### Passed Example 4
 
-A page where CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property has [rotate](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate) [transform function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function) conditionally applied on the [orientation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation) [media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) which matches the default [essential](https://www.w3.org/WAI/WCAG21/Understanding/orientation.html#dfn-essential) orientation.
+A page where CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property has [rotate](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate) [transform function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function) conditionally applied on the [orientation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation) [media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) which matches the default CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) applied on the target element.
 
 ```html
 <html lang="en">

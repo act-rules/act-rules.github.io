@@ -34,13 +34,9 @@ that are applied conditionally on the [orientation](https://developer.mozilla.or
 
 **Note:** These specific [transformation functions](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function) are of interest to this rule as they have the potential to affect the [rotation](https://drafts.csswg.org/css-transforms-2/#Rotate3dDefined) of a given element.
 
-## Expectation 1
+## Expectation 
 
-In `portrait` orientation, the target element is neither rotated clockwise nor counter clockwise around the Z-axis at an angle corresponding to 90 degrees relative to the position of the element in `landscape` orientation.
-
-## Expectation 2
-
-In `landscape` orientation, the target element is neither rotated clockwise nor counter clockwise around the Z-axis at an angle corresponding to 90 degrees relative to the position of the element in `portrait` orientation.
+The target element is neither rotated clockwise nor counter clockwise around the Z-axis at an angle corresponding to 90 degrees relative from the position of the element in `landscape` orientation to the position of the element in `portrait` orientation.
 
 ## Assumptions
 

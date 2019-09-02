@@ -61,19 +61,19 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-<!-- Add an introduction if you want to add further information not available on another page -->
+<!-- Add an introduction, if you want to add further information not available on the pages you are linking to in this section. -->
 
-### Understanding WCAG 
+### Understanding WCAG
 
 <!-- Add links to understanding documents for all success criteria the rule maps to, either directly or through a composite rule. Remove if not applicable -->
 
-- [WCAG 2.0 - Understanding 4.1.2: Name, Role, Value](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
+- [WCAG 2.1 - Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 
 ### Related WCAG Techniques
 
 <!-- Add links to related techniques. Remove if not applicable -->
 
-- [G108: Using markup features to expose the name and role](https://www.w3.org/TR/WCAG20-TECHS/G108.html)
+- [G108: Using markup features to expose the name and role, allow user-settable properties to be directly set, and provide notification of changes](https://www.w3.org/WAI/WCAG21/Techniques/general/G108)
 
 ### Standards and Definitions
 
@@ -88,7 +88,7 @@ Add links to related specifications or definitions within those specifications. 
 - [Accessible Rich Internet Applications 1.1](https://www.w3.org/TR/wai-aria-1.1/)
 - [WAI-ARIA 1.1: 6. Supported States and Properties](https://www.w3.org/TR/wai-aria/#states_and_properties)
 - [WCAG 2.1 definition: user interface component
-](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)
+  ](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)
 
 ### Further Reading
 
@@ -205,19 +205,19 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-<!-- Add an introduction if you want to add further information not available on another page -->
+<!-- Add an introduction, if you want to add further information not available on the pages you are linking to in this section. -->
 
-### Understanding WCAG 
+### Understanding WCAG
 
 <!-- Add links to understanding documents for all success criteria the rule maps to, either directly or through a composite rule. Remove if not applicable -->
 
-- [WCAG 2.0 - Understanding 4.1.2: Name, Role, Value](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
+- [WCAG 2.1 - Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 
 ### Related WCAG Techniques
 
 <!-- Add links to related techniques. Remove if not applicable -->
 
-- [G108: Using markup features to expose the name and role](https://www.w3.org/TR/WCAG20-TECHS/G108.html)
+- [G108: Using markup features to expose the name and role, allow user-settable properties to be directly set, and provide notification of changes](https://www.w3.org/WAI/WCAG21/Techniques/general/G108)
 
 ### Standards and Definitions
 
@@ -232,7 +232,7 @@ Add links to related specifications or definitions within those specifications. 
 - [Accessible Rich Internet Applications 1.1](https://www.w3.org/TR/wai-aria-1.1/)
 - [WAI-ARIA 1.1: 6. Supported States and Properties](https://www.w3.org/TR/wai-aria/#states_and_properties)
 - [WCAG 2.1 definition: user interface component
-](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)
+  ](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)
 
 ### Further Reading
 

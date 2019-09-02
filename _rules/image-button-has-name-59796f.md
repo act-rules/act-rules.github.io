@@ -20,6 +20,10 @@ input_aspects: # Remove what is not applicable
   - CSS Styling
 authors:
   - Anne Thyme Nørregaard
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'alt-require'
 ---
 
 ## Applicability
@@ -146,7 +150,7 @@ HTML `button` element is not an image button
 HTML `input` element with type with a `type` attribute in the `Button` state is not an image button
 
 ```html
-<input type="button">My button</input>
+<input type="button" value="My button" />
 ```
 
 #### Inapplicable Example 3

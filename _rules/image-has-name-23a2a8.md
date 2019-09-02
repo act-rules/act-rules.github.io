@@ -16,6 +16,10 @@ input_aspects:
 authors:
   - Anne Thyme Nørregaard
   - Stein Erik Skotkjerra
+htmlHintIgnore:
+ # https://www.npmjs.com/package/htmlhint 
+ # (used with `npm test` to ensure validity of code snippets)
+ - 'alt-require'
 ---
 
 ## Applicability

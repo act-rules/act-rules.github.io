@@ -13,8 +13,12 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
 authors:
-  - Anne Thyme Nørregaard
-  - Corbb O'Connor
+ - Anne Thyme Nørregaard
+ - Corbb O'Connor
+htmlHintIgnore:
+ # https://www.npmjs.com/package/htmlhint 
+ # (used with `npm test` to ensure validity of code snippets)
+ - 'title-require'
 ---
 
 ## Applicability

@@ -11,15 +11,19 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_rules:
-  - fd26cf
-  - ac7dc6
-  - ee13b5
-  - d7ba54
+ - fd26cf
+ - ac7dc6
+ - ee13b5
+ - d7ba54
 authors:
-  - Wilco Fiers
-  - Brian Bors
-  - John Hicks
-  - Rafal Charlampowicz
+ - Wilco Fiers
+ - Brian Bors
+ - John Hicks
+ - Rafal Charlampowicz
+htmlHintIgnore:
+ # https://www.npmjs.com/package/htmlhint 
+ # (used with `npm test` to ensure validity of code snippets)
+ - 'tag-pair'
 ---
 
 ## Applicability
@@ -150,7 +154,7 @@ A silent video element with a link to an incorrect text transcript on a differen
   <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</p>
+<a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</a>
 ```
 
 #### Failed Example 4

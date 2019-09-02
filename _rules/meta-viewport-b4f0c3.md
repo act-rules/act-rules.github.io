@@ -28,9 +28,7 @@ The [`content`](https://www.w3.org/TR/html52/document-metadata.html#dom-htmlmeta
 - specify the property `user-scalable` with a value of `yes`; nor
 - specify the property `maximum-scale` with a value of less than 2
 
-**Note:** 
-1) For Safari on the iPhone, the content attribute is mapped to property/value pairs according to the following algorithm: https://drafts.csswg.org/css-device-adapt/#parsing-algorithm
-2) Properties and the values for the content attribute of `<meta name="viewport">` are specified in a detailed tabulation [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#Attributes).
+**Note:** For Safari on the iPhone, the content attribute is mapped to property/value pairs according to the following algorithm: https://drafts.csswg.org/css-device-adapt/#parsing-algorithm
 
 ## Assumptions
 

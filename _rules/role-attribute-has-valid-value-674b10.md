@@ -68,7 +68,7 @@ Element with multiple valid `role` values.
 Element with at least one valid `role` value.
 
 ```html
-<img role="img xyz" src="" />
+<img role="img xyz" src="https://developer.mozilla.org/static/img/favicon144.png" alt="MDN logo" />
 ```
 
 ### Failed

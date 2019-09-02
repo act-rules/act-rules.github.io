@@ -85,7 +85,7 @@ The `input` element with a `type` of `image` has an accessible name that matches
 The `img` element doesn't have the semantic role of image.
 
 ```html
-<img role="presentation" />
+<img role="presentation" alt="" />
 ```
 
 #### Inapplicable Example 2
@@ -93,7 +93,7 @@ The `img` element doesn't have the semantic role of image.
 The `img` element is not included in the accessibility tree.
 
 ```html
-<img style="display:none;" />
+<img style="display:none;" alt="" />
 ```
 
 #### Inapplicable Example 3

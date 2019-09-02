@@ -587,7 +587,7 @@ The [document](https://dom.spec.whatwg.org/#concept-document) inside the `iframe
 		from the top level.
 
 		<iframe
-			srcdoc='<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the iframe'
+			srcdoc="<a href='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html'>Contact us</a> from the iframe"
 		></iframe>
 	</body>
 </html>

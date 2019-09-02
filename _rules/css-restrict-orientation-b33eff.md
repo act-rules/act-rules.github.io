@@ -36,7 +36,7 @@ that are applied conditionally on the [orientation](https://developer.mozilla.or
 
 ## Expectation 
 
-The target element is neither rotated clockwise nor counter clockwise around the Z-axis at an angle corresponding to 90 degrees relative from the position of the element in `landscape` orientation to the position of the element in `portrait` orientation.
+The target element is neither rotated clockwise nor counter clockwise around the Z-axis at an angle corresponding to 90 degrees relative from the position of the element in `landscape` orientation to the position of the element in `portrait` orientation, and vice versa.
 
 ## Assumptions
 

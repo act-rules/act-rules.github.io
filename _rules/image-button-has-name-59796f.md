@@ -3,7 +3,7 @@ id: 59796f
 name: Image button has accessible name
 rule_type: atomic
 description: |
-  This rule checks that each image button element has an accessible name
+  This rule checks that each image button element has an accessible name.
 accessibility_requirements:
   wcag20:1.1.1: # Non-Text Content (A)
     forConformance: true
@@ -20,13 +20,17 @@ input_aspects: # Remove what is not applicable
   - CSS Styling
 authors:
   - Anne Thyme Nørregaard
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'alt-require'
 ---
 
 ## Applicability
 
 The rule applies to any HTML `input` element with a `type` attribute in the `Image Button` state, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
-**Note:** The specification of the [`type`](https://www.w3.org/TR/html/sec-forms.html#element-attrdef-input-type) attribute describes in detail how to map the value of the attribute to its corresponding state.
+**Note:** The specification of the [`type`](https://html.spec.whatwg.org/#states-of-the-type-attribute) attribute describes in detail how to map the value of the attribute to its corresponding state.
 
 ## Expectation
 
@@ -81,7 +85,7 @@ Image button element with accessible name through `aria-labelledby`
 <div id="id1">Submit</div>
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 Accessible name is not only whitespace.
 
@@ -89,7 +93,7 @@ Accessible name is not only whitespace.
 <input type="image" name="submit" src="button.gif" alt=":-)" />
 ```
 
-#### Passed example 6
+#### Passed Example 6
 
 Image button element with accessible name through `alt` attribute
 
@@ -123,7 +127,7 @@ Image button with aria-labelledby that does not reference an id that exists in t
 <input type="image" name="submit" src="button.gif" aria-labelledby="id1" />
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 Accessible name is only whitespace.
 
@@ -146,7 +150,7 @@ HTML `button` element is not an image button
 HTML `input` element with type with a `type` attribute in the `Button` state is not an image button
 
 ```html
-<input type="button">My button</input>
+<input type="button" value="My button" />
 ```
 
 #### Inapplicable Example 3

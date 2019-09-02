@@ -18,6 +18,10 @@ input_aspects:
 authors:
   - Wilco Fiers
   - Brian Bors
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'tag-pair'
 ---
 
 ## Applicability
@@ -40,11 +44,11 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- [Understanding 1.2.3: Audio Description or Media Alternative (Prerecorded)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc.html)
-- [Understanding 1.2.8: Media Alternative (Prerecorded)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-text-doc.html)
-- [G78: Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G78)
-- [G173: Providing a version of a movie with audio descriptions](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G173)
-- [G203: Using a static text alternative to describe a talking head video](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G203)
+- [Understanding Success Criterion 1.2.3: Audio Description or Media Alternative (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-or-media-alternative-prerecorded)
+- [Understanding Success Criterion 1.2.8: Media Alternative (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/media-alternative-prerecorded)
+- [G78: Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/general/G78)
+- [G173: Providing a version of a movie with audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/general/G173)
+- [G203: Using a static text alternative to describe a talking head video](https://www.w3.org/WAI/WCAG21/Techniques/general/G203)
 
 ## Test Cases
 
@@ -73,7 +77,7 @@ A video element with a link to a text transcript on a different page.
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
-<a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
+<a href="../test-assets/rabbit-video/transcript.html">Transcript</a>
 ```
 
 ### Failed
@@ -101,7 +105,7 @@ A video element with a link to an incorrect text transcript on a different page.
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
-<a href="../test-assets/rabbit-video/incorrect-transcript.html">Transcript</p>
+<a href="../test-assets/rabbit-video/incorrect-transcript.html">Transcript</a>
 ```
 
 ### Inapplicable
@@ -115,7 +119,7 @@ A video element that is not visible on the page.
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
-<a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
+<a href="../test-assets/rabbit-video/transcript.html">Transcript</a>
 ```
 
 #### Inapplicable Example 2
@@ -127,5 +131,5 @@ A video element without audio.
   <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
+<a href="../test-assets/rabbit-video/transcript.html">Transcript</a>
 ```

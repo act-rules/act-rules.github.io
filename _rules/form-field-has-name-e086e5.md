@@ -3,7 +3,7 @@ id: e086e5
 name: Form field has accessible name
 rule_type: atomic
 description: |
-  This rule checks that each form field element has an accessible name
+  This rule checks that each form field element has an accessible name.
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true
@@ -25,7 +25,8 @@ This rule applies to any element that is [included in the accessibility tree](#i
 
 - have a [semantic roles](#semantic-role) that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
 - does not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
-- The `option` role is not part of the list of applicable roles, because it does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an accessible name.
+
+**Note:** The `option` role is not part of the list of applicable roles, because it has a required context role that inherits from the `select` role. Furthermore, `option` does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an accessible name.
 
 ## Expectation
 
@@ -41,8 +42,8 @@ Certain assistive technologies can be set up to ignore the title attribute, whic
 
 ## Background
 
-- https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html
-- https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html
+- [Understanding Success Criterion 3.3.2: Labels or Instructions](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions)
+- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 
 **Note**: This rule does not fail 3.3.2 as there are sufficient techniques within 3.3.2 that don't need the elements to have an accessible name. For example "G131: Providing descriptive labels" **AND** "G162: Positioning labels to maximize predictability of relationships" would be sufficient.
 
@@ -52,7 +53,7 @@ Certain assistive technologies can be set up to ignore the title attribute, whic
 
 #### Passed Example 1
 
-Implicit role with implicit label.
+[Implicit role](#implicit-role) with implicit label.
 
 ```html
 <label>
@@ -63,7 +64,7 @@ Implicit role with implicit label.
 
 #### Passed Example 2
 
-Implicit role with aria-label
+[Implicit role](#implicit-role) with aria-label
 
 ```html
 <input aria-label="last name" disabled />
@@ -71,7 +72,7 @@ Implicit role with aria-label
 
 #### Passed Example 3
 
-Implicit role with explicit label
+[Implicit role](#implicit-role) with explicit label
 
 ```html
 <label for="country">Country</label>
@@ -82,7 +83,7 @@ Implicit role with explicit label
 
 #### Passed Example 4
 
-Implicit role with `aria-labelledby`.
+[Implicit role](#implicit-role) with `aria-labelledby`.
 
 ```html
 <div id="country">Country</div>
@@ -91,13 +92,13 @@ Implicit role with `aria-labelledby`.
 
 #### Passed Example 5
 
-Explicit role.
+[Explicit role](#explicit-role).
 
 ```html
 <div aria-label="country" role="combobox" aria-disabled="true">England</div>
 ```
 
-#### Passed example 6
+#### Passed Example 6
 
 The accessible name is not only whitespace.
 
@@ -162,7 +163,7 @@ The explicit label is not supported on `div` elements.
 <div role="textbox" id="lastname"></div>
 ```
 
-#### Failed example 7
+#### Failed Example 7
 
 The accessible name is only whitespace.
 
@@ -190,7 +191,7 @@ Hidden to assistive technologies.
 
 #### Inapplicable Example 3
 
-Role has explicitely been set to something that isn't a form field.
+Role has [explicitly](#explicit-role) been set to something that isn't a form field.
 
 ```html
 <input role="presentation" />

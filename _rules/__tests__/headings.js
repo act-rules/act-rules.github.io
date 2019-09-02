@@ -22,12 +22,12 @@ const getAllHeadingsFromMarkdownBody = body => {
 	}, [])
 }
 
-const extractNumberFromGivenString = (str) => {
+const extractNumberFromGivenString = str => {
 	return str.match(/\d+/)[0]
 }
 
-const arrayHasDuplicates = (array) => {
-	return (new Set(array)).size !== array.length;
+const arrayHasDuplicates = array => {
+	return new Set(array).size !== array.length
 }
 
 /**
@@ -65,7 +65,7 @@ describeRule('headings', ruleData => {
 	/**
 	 * Check all `h4` headings
 	 */
-	
+
 	/**
 	 * Test if headings have expected string
 	 */

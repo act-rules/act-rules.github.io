@@ -33,23 +33,12 @@ const extractNumberFromGivenString = (str) => {
 }
 
 /**
- * Check if a given array has duplicates
- * @param {Array<Object>} array arr
- * @returns {Boolean}
- */
-const arrayHasDuplicates = (array) => {
-	return (new Set(array)).size !== array.length;
-}
-
-/**
- * Check if a given array of numbers is in ascending order
+ * Check if a given array of numbers is in ascending order & starts with 1
  * @param {Array<Number>} arr array of numbers to verify if they are ascending
  * @returns {Boolean}
  */
-const isAscending = arr => {
-	return arr.slice(1)
-		.map((e, i) => e > arr[i])
-		.every(x => x);
+const isAscendingFromOne = arr => {
+	return arr.every((item, index) => item === index + 1)
 }
 
 /**
@@ -112,24 +101,13 @@ describeRule('headings', ruleData => {
 	const h4FailedHeadingsIndices = h4FailedHeadings.map(extractNumberFromGivenString)
 	const h4InapplicableHeadingsIndices = h4InapplicableHeadings.map(extractNumberFromGivenString)
 
-	test('"Passed" headings have no duplicates', () => {
-		expect(arrayHasDuplicates(h4PassedHeadingsIndices)).toBe(false)
-	})
 	test('"Passed" headings are in ascending order', () => {
-		expect(isAscending(h4PassedHeadingsIndices)).toBe(true)
-	})
-
-	test('"Failed" headings have no duplicates', () => {
-		expect(arrayHasDuplicates(h4FailedHeadingsIndices)).toBe(false)
+		expect(isAscendingFromOne(h4PassedHeadingsIndices)).toBe(true)
 	})
 	test('"Failed" headings are in ascending order', () => {
-		expect(isAscending(h4PassedHeadingsIndices)).toBe(true)
-	})
-
-	test('"Inapplicable" headings have no duplicates', () => {
-		expect(arrayHasDuplicates(h4InapplicableHeadingsIndices)).toBe(false)
+		expect(isAscendingFromOne(h4FailedHeadingsIndices)).toBe(true)
 	})
 	test('"Inapplicable" headings are in ascending order', () => {
-		expect(isAscending(h4PassedHeadingsIndices)).toBe(true)
+		expect(isAscendingFromOne(h4InapplicableHeadingsIndices)).toBe(true)
 	})
 })

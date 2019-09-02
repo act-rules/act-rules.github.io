@@ -220,7 +220,7 @@ Non-visible link.
 </a>
 ```
 
-#### Failed Example 9
+#### Failed Example 8
 
 Link is completely empty, but still shows up in focus order, so it should have an accessible name.
 
@@ -228,7 +228,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 <a href="http://www.w3.org/WAI"></a>
 ```
 
-#### Failed Example 10
+#### Failed Example 9
 
 `area` element with `href` attribute does not have accessible name.
 
@@ -240,7 +240,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 </map>
 ```
 
-#### Failed Example 11
+#### Failed Example 10
 
 `a` element where accessible name through content only consist of whitespace.
 

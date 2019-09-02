@@ -15,6 +15,11 @@ input_aspects:
   - CSS Styling
 authors:
   - Anne Thyme Nørregaard
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'attr-lowercase'
+  - 'alt-require'
 ---
 
 ## Applicability
@@ -291,4 +296,4 @@ Image links do not have [accessible names][accessible name]:
 <a href="http://facebook.com"><img src="facebook.jpg"/></a> <a href="http://twitter.com"><img src="twitter.jpg"/></a>
 ```
 
-[accessible name]: #accessible-name "Definition of accessible name"
+[accessible name]: #accessible-name 'Definition of accessible name'

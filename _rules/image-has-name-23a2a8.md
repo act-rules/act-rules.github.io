@@ -16,6 +16,10 @@ input_aspects:
 authors:
   - Anne Thyme Nørregaard
   - Stein Erik Skotkjerra
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'alt-require'
 ---
 
 ## Applicability
@@ -34,7 +38,8 @@ _There are currently no assumptions._
 
 ## Accessibility Support
 
-There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name][].
+- There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name][].
+- There are several popular browsers that do not treat images with empty `alt` attribute as having a role of `presentation` but instead add the `img` element to the accessibility tree with a role of either `img` or `graphic`.
 
 ## Background
 
@@ -177,8 +182,8 @@ The element is not a `img` element
 <div aria-label="W3C logo"></div>
 ```
 
-[accessible name]: #accessible-name "Definition of accessible name"
-[decorative]: #decorative "Definition of decorative"
-[included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"
-[semantic role]: #semantic-role "Definition of semantic role"
-[whitespace]: #whitespace "Definition of whitespace"
+[accessible name]: #accessible-name 'Definition of accessible name'
+[decorative]: #decorative 'Definition of decorative'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[semantic role]: #semantic-role 'Definition of semantic role'
+[whitespace]: #whitespace 'Definition of whitespace'

@@ -181,7 +181,7 @@ Button has an [accessible name][] that is only [whitespace][].
 Image buttons are tested in a different rule.
 
 ```html
-<input type="image" value="download" />
+<input type="image" value="download" alt="Download" />
 ```
 
 #### Inapplicable Example 2
@@ -219,6 +219,6 @@ Not [included in the accessibility tree][] due to `aria-hidden`.
 <button aria-hidden="true"></button>
 ```
 
-[accessible name]: #accessible-name "Definition of accessible name"
-[included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"
-[whitespace]: #whitespace "Definition of whitespace"
+[accessible name]: #accessible-name 'Definition of accessible name'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[whitespace]: #whitespace 'Definition of whitespace'

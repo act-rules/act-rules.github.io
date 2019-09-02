@@ -26,6 +26,10 @@ input_aspects:
 authors:
   - Wilco Fiers
   - Anne Thyme Nørregaard
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'alt-require'
 ---
 
 ## Applicability
@@ -294,6 +298,6 @@ Not [included in the accessibility tree][] due to `aria-hidden="true"`.
 <area shape="rect" coords="0,0,82,126" />
 ```
 
-[accessible name]: #accessible-name "Definition of accessible name"
-[included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"
-[whitespace]: #whitespace "Definition of whitespace"
+[accessible name]: #accessible-name 'Definition of accessible name'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[whitespace]: #whitespace 'Definition of whitespace'

@@ -68,7 +68,7 @@ Element with multiple valid `role` values.
 Element with at least one valid `role` value.
 
 ```html
-<img role="img xyz" src="" />
+<img role="img xyz" src="https://developer.mozilla.org/static/img/favicon144.png" alt="MDN logo" />
 ```
 
 ### Failed
@@ -139,4 +139,4 @@ Element that is not [included in the accessibility tree][].
 <div aria-hidden="true" role="banner">Some Content</div>
 ```
 
-[included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

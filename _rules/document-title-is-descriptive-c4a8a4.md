@@ -15,6 +15,10 @@ input_aspects:
 authors:
   - Anne Thyme Nørregaard
   - Corbb O'Connor
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'title-require'
 ---
 
 ## Applicability
@@ -83,7 +87,7 @@ Two `<title>` elements where the first one describes the content of the document
 
 #### Passed Example 3
 
-Even though the descriptive `<title>` element is not placed within the `<head>` element that is the context the element can be used in [according to the HTML specification](https://www.w3.org/TR/html/document-metadata.html#the-title-element), the rule still passes, since the browser fixes it, and it doesn't cause any known accessibility issues.
+Even though the descriptive `<title>` element is not placed within the `<head>` element that is the context the element can be used in [according to the HTML specification](https://html.spec.whatwg.org/#the-title-element), the rule still passes, since the browser fixes it, and it doesn't cause any known accessibility issues.
 
 ```html
 <html>

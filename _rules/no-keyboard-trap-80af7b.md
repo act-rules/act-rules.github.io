@@ -28,6 +28,7 @@ The rule only applies to any HTML or SVG element that is [focusable][].
 ## Expectation
 
 For each test target, the [outcome](#outcome) of one of the following rules is "passed":
+
 - [No keyboard trap standard navigation](https://act-rules.github.io/rules/a1b64e)
 - [No keyboard trap non-standard navigation](https://act-rules.github.io/rules/ebe86a)
 
@@ -168,11 +169,14 @@ Keyboard trap one element.
 Keyboard trap group.
 
 ```html
-<button class="target" onblur="setTimeout(() => this.nextSibling.focus(), 10)">
+<button class="target" onblur="setTimeout(() => this.nextElementSibling.focus(), 10)">
 	Button1
 </button>
-<button class="target" onblur="setTimeout(() => this.previousSibling.focus(), 10)">
+<button class="target" onblur="setTimeout(() => this.previousElementSibling.focus(), 10)">
 	Button2
+</button>
+<button>
+	Button3
 </button>
 ```
 
@@ -289,4 +293,4 @@ Hidden element using `visibility:hidden`.
 <a href="#" style="visibility:hidden;">Link 1</a> <button class="target" style="visibility:hidden;">Button1</button>
 ```
 
-[focusable]: #focusable "Definition of focusable"
+[focusable]: #focusable 'Definition of focusable'

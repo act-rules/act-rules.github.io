@@ -20,6 +20,10 @@ authors:
   - Brian Bors
   - John Hicks
   - Rafal Charlampowicz
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'tag-pair'
 ---
 
 ## Applicability
@@ -150,7 +154,7 @@ A silent video element with a link to an incorrect text transcript on a differen
   <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</p>
+<a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</a>
 ```
 
 #### Failed Example 4
@@ -195,4 +199,4 @@ A video only element that is not [visible][].
 </video>
 ```
 
-[visible]: #visible "Definition of visible"
+[visible]: #visible 'Definition of visible'

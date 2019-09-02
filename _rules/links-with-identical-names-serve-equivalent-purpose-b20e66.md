@@ -15,6 +15,7 @@ input_aspects:
   - CSS Styling
 authors:
   - Anne Thyme Nørregaard
+  - Jean-Yves Moyen
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -25,8 +26,9 @@ htmlHintIgnore:
 ## Applicability
 
 This rule applies to any set of any two or more HTML or SVG elements which
+
 - are inside the [flat trees](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) of one or more [documents](https://dom.spec.whatwg.org/#concept-document) of the same [set of browsing context related documents](#browsing-context-related-documents); and
-- are [included in the accessibility tree](#included-in-the-accessibility-tree) of their respective [document](https://dom.spec.whatwg.org/#concept-document); and 
+- are [included in the accessibility tree](#included-in-the-accessibility-tree) of their respective [document](https://dom.spec.whatwg.org/#concept-document); and
 - have the [semantic role](#semantic-role) of `link`, or a role that inherits from the `link` role; and
 - that have [matching](#matching-characters) [accessible names](#accessible-name) that do not only consist of [whitespace](#whitespace).
 
@@ -122,19 +124,19 @@ These two HTML `span` element have an [explicit role](#explicit-role) of link,
 
 ```html
 <span
-  role="link"
-  tabindex="0"
-  onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html'"
+	role="link"
+	tabindex="0"
+	onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html'"
 >
-  Link text
+	Link text
 </span>
 
 <span
-  role="link"
-  tabindex="0"
-  onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html'"
+	role="link"
+	tabindex="0"
+	onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html'"
 >
-  Link text
+	Link text
 </span>
 ```
 
@@ -144,15 +146,15 @@ A set of two SVG `<a>` elements that have the same accessible name and link to t
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <a href="http://facebook.com" aria-label="Follow us">
-    <circle cx="50" cy="40" r="35" />
-  </a>
+	<a href="http://facebook.com" aria-label="Follow us">
+		<circle cx="50" cy="40" r="35" />
+	</a>
 
-  <a href="http://facebook.com">
-    <text x="50" y="90" text-anchor="middle">
-      Follow us
-    </text>
-  </a>
+	<a href="http://facebook.com">
+		<text x="50" y="90" text-anchor="middle">
+			Follow us
+		</text>
+	</a>
 </svg>
 ```
 
@@ -164,9 +166,9 @@ A set of one SVG `a` element and one HTML `a` element that have the same [access
 <a href="http://facebook.com">Follow us"</a>
 
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <a href="http://facebook.com" aria-label="Follow us">
-    <circle cx="50" cy="40" r="35" />
-  </a>
+	<a href="http://facebook.com" aria-label="Follow us">
+		<circle cx="50" cy="40" r="35" />
+	</a>
 </svg>
 ```
 
@@ -177,22 +179,31 @@ All three links have the same [accessible name](#accessible-name). The second li
 ```html
 <!DOCTYPE html>
 <html>
-<head><title>Links in the shadow</title></head>
+	<head>
+		<title>Links in the shadow</title>
+	</head>
 
-<body>
-  <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+	<body>
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+		all the time.
 
-  <div id="host">
-    <span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the light.</span>
-  </div>
+		<div id="host">
+			<span
+				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
+					>Contact us</a
+				>
+				from the light.</span
+			>
+		</div>
 
-  <script>
-    const host = document.getElementById("host");
-    const shadowRoot = host.attachShadow({ mode: "open"});
+		<script>
+			const host = document.getElementById('host')
+			const shadowRoot = host.attachShadow({ mode: 'open' })
 
-    shadowRoot.innerHTML = '<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> from the shadow.';
-  </script>
-</body>
+			shadowRoot.innerHTML =
+				'<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> from the shadow.'
+		</script>
+	</body>
 </html>
 ```
 
@@ -203,23 +214,36 @@ The [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) contains onl
 ```html
 <!DOCTYPE html>
 <html>
-<head><title>Links in the shadow</title></head>
+	<head>
+		<title>Links in the shadow</title>
+	</head>
 
-<body>
-  <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+	<body>
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+		all the time.
 
-  <div id="host">
-    <span slot="slot"><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the light.</span>
-    <span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> from the slot.</span>
-  </div>
+		<div id="host">
+			<span slot="slot"
+				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
+					>Contact us</a
+				>
+				from the light.</span
+			>
+			<span
+				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
+					>Contact us</a
+				>
+				from the slot.</span
+			>
+		</div>
 
-  <script>
-    const host = document.getElementById("host");
-    const shadowRoot = host.attachShadow({ mode: "open"});
+		<script>
+			const host = document.getElementById('host')
+			const shadowRoot = host.attachShadow({ mode: 'open' })
 
-    shadowRoot.innerHTML = '<slot></slot>';
-  </script>
-</body>
+			shadowRoot.innerHTML = '<slot></slot>'
+		</script>
+	</body>
 </html>
 ```
 
@@ -230,23 +254,36 @@ The [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) contains onl
 ```html
 <!DOCTYPE html>
 <html>
-<head><title>Links in the shadow</title></head>
+	<head>
+		<title>Links in the shadow</title>
+	</head>
 
-<body>
-  <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+	<body>
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+		all the time.
 
-  <div id="host">
-    <span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the light.</span>
-    <span slot="slot"><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> from the slot.</span>
-  </div>
+		<div id="host">
+			<span
+				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
+					>Contact us</a
+				>
+				from the light.</span
+			>
+			<span slot="slot"
+				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
+					>Contact us</a
+				>
+				from the slot.</span
+			>
+		</div>
 
-  <script>
-    const host = document.getElementById("host");
-    const shadowRoot = host.attachShadow({ mode: "open"});
+		<script>
+			const host = document.getElementById('host')
+			const shadowRoot = host.attachShadow({ mode: 'open' })
 
-    shadowRoot.innerHTML = '<slot name="slot"></slot>';
-  </script>
-</body>
+			shadowRoot.innerHTML = '<slot name="slot"></slot>'
+		</script>
+	</body>
 </html>
 ```
 
@@ -257,22 +294,31 @@ The [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) contains a [
 ```html
 <!DOCTYPE html>
 <html>
-<head><title>Links in the shadow</title></head>
+	<head>
+		<title>Links in the shadow</title>
+	</head>
 
-<body>
-  <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+	<body>
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+		all the time.
 
-  <div id="host">
-    <span slot="slot"><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> from the slot.</span>
-  </div>
+		<div id="host">
+			<span slot="slot"
+				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
+					>Contact us</a
+				>
+				from the slot.</span
+			>
+		</div>
 
-  <script>
-    const host = document.getElementById("host");
-    const shadowRoot = host.attachShadow({ mode: "open"});
+		<script>
+			const host = document.getElementById('host')
+			const shadowRoot = host.attachShadow({ mode: 'open' })
 
-    shadowRoot.innerHTML = '<slot name="slot"><span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the fallback.</span></slot>';
-  </script>
-</body>
+			shadowRoot.innerHTML =
+				'<slot name="slot"><span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the fallback.</span></slot>'
+		</script>
+	</body>
 </html>
 ```
 
@@ -297,23 +343,23 @@ The same accessible name is used for two links going to web pages that are simil
 
 #### Failed Example 3
 
-These two HTML `span` element have an [explicit role](#explicit-role) of link, but lead to resources that offer different content.
+These two HTML `span` elements have an [explicit role](#explicit-role) of link, but lead to resources that offer different content.
 
 ```html
 <span
-  role="link"
-  tabindex="0"
-  onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html'"
+	role="link"
+	tabindex="0"
+	onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html'"
 >
-  Link text
+	Link text
 </span>
 
 <span
-  role="link"
-  tabindex="0"
-  onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html'"
+	role="link"
+	tabindex="0"
+	onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html'"
 >
-  Link text
+	Link text
 </span>
 ```
 
@@ -328,19 +374,19 @@ The same accessible name is used for image links going to different resources.
 
 #### Failed Example 5
 
-A set of two SVG `<a>` elements that have the same accessible name but link to different resources.
+A set of two SVG `a` elements that have the same accessible name but link to different resources.
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <a href="http://facebook.com" aria-label="Follow us">
-    <circle cx="50" cy="40" r="35" />
-  </a>
+	<a href="http://facebook.com" aria-label="Follow us">
+		<circle cx="50" cy="40" r="35" />
+	</a>
 
-  <a href="http://twitter.com">
-    <text x="50" y="90" text-anchor="middle">
-      Follow us
-    </text>
-  </a>
+	<a href="http://twitter.com">
+		<text x="50" y="90" text-anchor="middle">
+			Follow us
+		</text>
+	</a>
 </svg>
 ```
 
@@ -360,20 +406,24 @@ Both links have the same [accessible name](#accessible-name). When the [shadow t
 ```html
 <!DOCTYPE html>
 <html>
-<head><title>Links in the shadow</title></head>
+	<head>
+		<title>Links in the shadow</title>
+	</head>
 
-<body>
-  <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+	<body>
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+		all the time.
 
-  <div id="host"></div>
+		<div id="host"></div>
 
-  <script>
-    const host = document.getElementById("host");
-    const shadowRoot = host.attachShadow({ mode: "open"});
+		<script>
+			const host = document.getElementById('host')
+			const shadowRoot = host.attachShadow({ mode: 'open' })
 
-    shadowRoot.innerHTML = '<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the shadow.</span>';
-  </script>
-</body>
+			shadowRoot.innerHTML =
+				'<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the shadow.</span>'
+		</script>
+	</body>
 </html>
 ```
 
@@ -384,22 +434,31 @@ The `table` element [does not support `attachShadow`](https://dom.spec.whatwg.or
 ```html
 <!DOCTYPE html>
 <html>
-<head><title>Links in the shadow</title></head>
+	<head>
+		<title>Links in the shadow</title>
+	</head>
 
-<body>
-	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+	<body>
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+		all the time.
 
-	<table id="host">
-		<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> from the light.</span>
-	</table>
+		<table id="host">
+			<span
+				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
+					>Contact us</a
+				>
+				from the light.</span
+			>
+		</table>
 
-	<script>
-	  const host = document.getElementById("host");
-	  const shadowRoot = host.attachShadow({ mode: "closed"});
+		<script>
+			const host = document.getElementById('host')
+			const shadowRoot = host.attachShadow({ mode: 'closed' })
 
-		shadowRoot.innerHTML = '<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the shadow.</span>';
-	</script>
-</body>
+			shadowRoot.innerHTML =
+				'<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the shadow.</span>'
+		</script>
+	</body>
 </html>
 ```
 
@@ -410,22 +469,30 @@ The second link is [slotted](https://dom.spec.whatwg.org/#concept-slot) and ther
 ```html
 <!DOCTYPE html>
 <html>
-<head><title>Links in the shadow</title></head>
+	<head>
+		<title>Links in the shadow</title>
+	</head>
 
-<body>
-  <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+	<body>
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+		all the time.
 
-  <div id="host">
-    <span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the slot.</span>
-  </div>
+		<div id="host">
+			<span
+				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
+					>Contact us</a
+				>
+				from the slot.</span
+			>
+		</div>
 
-  <script>
-    const host = document.getElementById("host");
-    const shadowRoot = host.attachShadow({ mode: "open"});
+		<script>
+			const host = document.getElementById('host')
+			const shadowRoot = host.attachShadow({ mode: 'open' })
 
-    shadowRoot.innerHTML = '<slot></slot>';
-  </script>
-</body>
+			shadowRoot.innerHTML = '<slot></slot>'
+		</script>
+	</body>
 </html>
 ```
 
@@ -436,23 +503,36 @@ All of the descendants of `host` (in the [light tree](https://dom.spec.whatwg.or
 ```html
 <!DOCTYPE html>
 <html>
-<head><title>Links in the shadow</title></head>
+	<head>
+		<title>Links in the shadow</title>
+	</head>
 
-<body>
-  <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+	<body>
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+		all the time.
 
-  <div id="host">
-    <span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the slot.</span>
-    <span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> from the slot again.</span>
-  </div>
+		<div id="host">
+			<span
+				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
+					>Contact us</a
+				>
+				from the slot.</span
+			>
+			<span
+				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
+					>Contact us</a
+				>
+				from the slot again.</span
+			>
+		</div>
 
-  <script>
-    const host = document.getElementById("host");
-    const shadowRoot = host.attachShadow({ mode: "open"});
+		<script>
+			const host = document.getElementById('host')
+			const shadowRoot = host.attachShadow({ mode: 'open' })
 
-    shadowRoot.innerHTML = '<slot></slot>';
-  </script>
-</body>
+			shadowRoot.innerHTML = '<slot></slot>'
+		</script>
+	</body>
 </html>
 ```
 
@@ -463,22 +543,31 @@ The [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) contains a [
 ```html
 <!DOCTYPE html>
 <html>
-<head><title>Links in the shadow</title></head>
+	<head>
+		<title>Links in the shadow</title>
+	</head>
 
-<body>
-  <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+	<body>
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+		all the time.
 
-  <div id="host">
-    <span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> from the slot.</span>
-  </div>
+		<div id="host">
+			<span
+				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
+					>Contact us</a
+				>
+				from the slot.</span
+			>
+		</div>
 
-  <script>
-    const host = document.getElementById("host");
-    const shadowRoot = host.attachShadow({ mode: "open"});
+		<script>
+			const host = document.getElementById('host')
+			const shadowRoot = host.attachShadow({ mode: 'open' })
 
-    shadowRoot.innerHTML = '<slot name="slot"><span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the fallback.</span></slot>';
-  </script>
-</body>
+			shadowRoot.innerHTML =
+				'<slot name="slot"><span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the fallback.</span></slot>'
+		</script>
+	</body>
 </html>
 ```
 
@@ -489,12 +578,19 @@ The [document](https://dom.spec.whatwg.org/#concept-document) inside the `iframe
 ```html
 <!DOCTYPE html>
 <html>
-<head><title>I have been framed!</title></head>
+	<head>
+		<title>I have been framed!</title>
+	</head>
 
-<body>
-  <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> from the top level.
+	<body>
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+		from the top level.
 
-  <iframe srcdoc='<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the iframe'></iframe>
+		<iframe
+			srcdoc='<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the iframe'
+		></iframe>
+	</body>
+</html>
 ```
 
 ### Inapplicable
@@ -513,10 +609,10 @@ These links have different accessible names.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
-  >Contact main office</a
+	>Contact main office</a
 >
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
-  >Contact admissions office</a
+	>Contact admissions office</a
 >
 ```
 
@@ -526,10 +622,10 @@ The first link is not included in the accessibility tree.
 
 ```html
 <a
-  href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html"
-  aria-hidden="true"
-  tabindex="-1"
-  >Contact Us</a
+	href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html"
+	aria-hidden="true"
+	tabindex="-1"
+	>Contact Us</a
 >
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html">Contact Us</a>
 ```
@@ -540,11 +636,11 @@ These `span` elements do not have a semantic role of link.
 
 ```html
 <span onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html'">
-  Contact Us
+	Contact Us
 </span>
 
 <span onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html'">
-  Contact Us
+	Contact Us
 </span>
 ```
 
@@ -571,45 +667,61 @@ Only the first link ("all the time") is present in the [flat tree](https://draft
 ```html
 <!DOCTYPE html>
 <html>
-<head><title>Links in the shadow</title></head>
+	<head>
+		<title>Links in the shadow</title>
+	</head>
 
-<body>
-  <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+	<body>
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+		all the time.
 
-  <div id="host">
-    <span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the light.</span>
-  </div>
+		<div id="host">
+			<span
+				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
+					>Contact us</a
+				>
+				from the light.</span
+			>
+		</div>
 
-  <script>
-    const host = document.getElementById("host");
-    const shadowRoot = host.attachShadow({ mode: "open"});
-  </script>
-</body>
+		<script>
+			const host = document.getElementById('host')
+			const shadowRoot = host.attachShadow({ mode: 'open' })
+		</script>
+	</body>
 </html>
 ```
 
 #### Inapplicable Example 8
 
-Only the first link ("all the time") is present in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress). Hence, there is no set of two or more links to apply the rule. The [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) does contain a [slot](https://dom.spec.whatwg.org/#concept-slot), but because its named, the second link ("from the light") is *not* slotted into it.
+Only the first link ("all the time") is present in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress). Hence, there is no set of two or more links to apply the rule. The [shadow tree](https://dom.spec.whatwg.org/#concept-shadow-tree) does contain a [slot](https://dom.spec.whatwg.org/#concept-slot), but because its named, the second link ("from the light") is _not_ slotted into it.
 
 ```html
 <!DOCTYPE html>
 <html>
-<head><title>Links in the shadow</title></head>
+	<head>
+		<title>Links in the shadow</title>
+	</head>
 
-<body>
-  <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> all the time.
+	<body>
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+		all the time.
 
-  <div id="host">
-    <span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the light.</span>
-  </div>
+		<div id="host">
+			<span
+				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
+					>Contact us</a
+				>
+				from the light.</span
+			>
+		</div>
 
-  <script>
-    const host = document.getElementById("host");
-    const shadowRoot = host.attachShadow({ mode: "open"});
+		<script>
+			const host = document.getElementById('host')
+			const shadowRoot = host.attachShadow({ mode: 'open' })
 
-    shadowRoot.innerHTML = '<slot name="slot"></slot>';
-  </script>
-</body>
+			shadowRoot.innerHTML = '<slot name="slot"></slot>'
+		</script>
+	</body>
 </html>
 ```

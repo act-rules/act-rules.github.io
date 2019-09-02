@@ -194,7 +194,7 @@ The `title` only contains a separator character.
 
 #### Inapplicable Example 1
 
-This rule is not applicable to `svg` elements.
+This rule is not applicable to `SVG` elements.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">

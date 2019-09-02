@@ -91,7 +91,7 @@ Multiple `iframe` within document tree have the same accessible name (given by `
 
 #### Passed Example 5
 
-Multiple `iframe` within document tree have the same accessible name (given by `title`) and embed equivalent ressources.
+Multiple `iframe` within document tree have the same accessible name (given by `title`) and embed equivalent resources.
 
 ```html
 <iframe title="Contact us" src="../test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
@@ -111,7 +111,7 @@ Multiple `iframe` within document tree have the same accessible name (given by `
 
 #### Passed Example 7
 
-Multiple `iframe` within document tree have the same accessible name (given by `title`) and embed equivalent ressources. Ressources differ by the amount of information available and/or a differently worded information.
+Multiple `iframe` within document tree have the same accessible name (given by `title`) and embed equivalent resources. Resources differ by the amount of information available and/or a differently worded information.
 
 ```html
 <iframe title="Contact us" src="../test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
@@ -121,7 +121,7 @@ Multiple `iframe` within document tree have the same accessible name (given by `
 
 #### Passed Example 8
 
-Multiple `iframe` within document tree have the same accessible name (given by `title`) and embed equivalent ressources. Each `iframe` refers to a different url that referenced different advertising content (giving by a third party) but embed ressources has equivalent purpose: showing an advertising.
+Multiple `iframe` within document tree have the same accessible name (given by `title`) and embed equivalent resources. Each `iframe` refers to a different url that referenced different advertising content (giving by a third party) but embed resources has equivalent purpose: showing an advertising.
 
 ```html
 <iframe title="advertising" src="../test-assets/iframe-unique-name-4b1c6c/advertising-one.html"> </iframe>
@@ -133,7 +133,7 @@ Multiple `iframe` within document tree have the same accessible name (given by `
 
 #### Failed Example 1
 
-Multiple `iframe` elements have the same accessible name (given by `title`) but don't embed equivalent ressources.
+Multiple `iframe` elements have the same accessible name (given by `title`) but don't embed equivalent resources.
 
 ```html
 <iframe title="List of Contributors" src="../test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
@@ -143,7 +143,7 @@ Multiple `iframe` elements have the same accessible name (given by `title`) but 
 
 #### Failed Example 2
 
-Multiple `iframe` elements have the same accessible name (given by `aria-label`) but don't embed equivalent ressources.
+Multiple `iframe` elements have the same accessible name (given by `aria-label`) but don't embed equivalent resources.
 
 ```html
 <iframe aria-label="List of Contributors" src="../test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
@@ -153,7 +153,7 @@ Multiple `iframe` elements have the same accessible name (given by `aria-label`)
 
 #### Failed Example 3
 
-Multiple `iframe` elements have the same accessible name (given by `title` and `aria-label`) but don't embed equivalent ressources.
+Multiple `iframe` elements have the same accessible name (given by `title` and `aria-label`) but don't embed equivalent resources.
 
 ```html
 <iframe title="List of Contributors" src="../test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>

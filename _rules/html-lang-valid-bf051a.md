@@ -148,7 +148,7 @@ The `lang` attribute value is not a valid primary language subtag.
 
 #### Inapplicable Example 1
 
-The rule applies to `html` element and hence usage of `lang` attribute in `svg` element is not applicable.
+The rule applies to `html` element and hence usage of `lang` attribute in `SVG` element is not applicable.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" lang="fr"></svg>
@@ -156,7 +156,7 @@ The rule applies to `html` element and hence usage of `lang` attribute in `svg` 
 
 #### Inapplicable Example 2
 
-The rule applies to `html` element and hence usage of `xml:lang` attribute in `svg` element is not applicable.
+The rule applies to `html` element and hence usage of `xml:lang` attribute in `SVG` element is not applicable.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" xml:lang="fr"></svg>

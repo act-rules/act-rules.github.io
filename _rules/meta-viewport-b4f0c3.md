@@ -19,13 +19,15 @@ authors:
 
 ## Applicability
 
-The rule applies to each `<meta name="viewport">` element with a `content` attribute.
+The rule applies to each [`<meta>`](https://www.w3.org/TR/html52/document-metadata.html#the-meta-element) element with a [`name`](https://www.w3.org/TR/html52/document-metadata.html#element-attrdef-meta-name) attribute whose value is set to [`viewport`](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag#Enter_viewport_meta_tag) and has a [`content`](https://www.w3.org/TR/html52/document-metadata.html#dom-htmlmetaelement-content) attribute.
 
 ## Expectation
 
-The `content` attribute of the test target: 
-- either does not have the property `user-scalable`, or has it set to yes; and
-- either does not have the property `maximum-scale`, or has it set to a value that allows zooming up to 200%.
+The [`content`](https://www.w3.org/TR/html52/document-metadata.html#dom-htmlmetaelement-content) attribute of the test target: 
+- either does not have the value `user-scalable`, or has it's subvalue set to `yes`; and
+- either does not have the value `maximum-scale`, or has it set to a subvalue that allows zooming up to 200%.
+
+**Note:** Values and subvalues for the content of <meta name="viewport"> are specified in a detailed tabulation [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#Attributes).
 
 ## Assumptions
 
@@ -39,6 +41,7 @@ The `content` attribute of the test target:
 
 - [Understanding Success Criterion 1.4.4: Resize text](https://www.w3.org/WAI/WCAG21/Understanding/resize-text)
 - [The `meta` element](https://www.w3.org/TR/html52/document-metadata.html#the-meta-element)
+- [<meta>: The Document-level Metadata element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta)
 
 ## Test Cases
 
@@ -46,7 +49,7 @@ The `content` attribute of the test target:
 
 #### Passed Example 1
 
-The `<meta name="viewport">` element does not define the `maximum-scale` and `user-scalable` properties.
+The `<meta name="viewport">` element does not define the `maximum-scale` and `user-scalable` values.
 
 ````html
 <html>

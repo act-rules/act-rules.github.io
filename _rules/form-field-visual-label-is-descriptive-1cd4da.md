@@ -58,7 +58,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-Label that is coded with a [visible](#visible) `label` element and describes the purpose of the associated element.
+The [visible](#visible) `label` element describes the purpose of the associated element.
 
 ```html
 <label for="fname">First name:</label>
@@ -67,7 +67,7 @@ Label that is coded with a [visible](#visible) `label` element and describes the
 
 #### Passed Example 2
 
-Implicit label that is coded with the `label` element and describes the purpose of the associated element.
+The implicit label, that is coded with the `label` element, describes the purpose of the associated element.
 
 ```html
 <label>First name:<input id="fname" type="text" name="fname"/></label>
@@ -173,7 +173,7 @@ The `label` element is associated with an HTML element that does not have a form
 
 ```html
 <label for="fname">First name:</label>
-<p id="fname"/>
+<p id="fname"></p>
 ```
 
 #### Inapplicable Example 3

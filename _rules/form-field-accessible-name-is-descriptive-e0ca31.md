@@ -140,7 +140,7 @@ Even though the [accessible names](#accessible-name) (given by implicit `label` 
 
 #### Passed Example 9
 
-Even though the [accessible names](#accessible-name) (given by implicit `label` elements) of several fields are the same, the headings provide a [programatically determined context](#programatically-determined-context) to differentiate them. Since the headings are not [visible](#visible) (because of their position), they do not provide any [Visual context](#visual-context). [programatically determined context](#programatically-determined-context) alone is sufficient to pass this rule.
+Even though the [accessible names](#accessible-name) (given by implicit `label` elements) of several fields are the same, the headings provide a [programatically determined context](#programatically-determined-context) to differentiate them. Since the headings are not [visible](#visible) (because of their position), they do not provide any [Visual context](#visual-context). [Programatically determined context](#programatically-determined-context) alone is sufficient to pass this rule.
 
 ```html
 <h2 style="position: absolute; top: -9999px; left: -9999px;">Shipping address</h2>
@@ -246,11 +246,11 @@ The `label` is [hidden](https://www.w3.org/TR/accname-1.1/#dfn-hidden) to all us
 
 #### Inapplicable Example 2
 
-The `label` element is associated with an HTML element that does not have a form field [semantic role](#semantic-role).
+There is no element with a form field [semantic role](#semantic-role).
 
 ```html
 <label for="fname">First name:</label>
-<p id="fname"/>
+<p id="fname"></p>
 ```
 
 #### Inapplicable Example 3

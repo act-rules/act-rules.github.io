@@ -72,7 +72,7 @@ Usage of `aria-labelledby` attribute to describe the `iframe` content.
 <iframe aria-labelledby="frame-title-helper" src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 Accessible name is not only whitespace.
 
@@ -130,7 +130,7 @@ Usage of `alt` attribute to describe content is not valid.
 <iframe alt="List of Contributors" src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
-#### Failed example 7
+#### Failed Example 7
 
 Accessible name is only whitespace.
 

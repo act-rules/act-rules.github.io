@@ -20,6 +20,10 @@ authors:
   - Brian Bors
   - John Hicks
   - Rafal Charlampowicz
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'tag-pair'
 ---
 
 ## Applicability
@@ -150,7 +154,7 @@ A silent video element with a link to an incorrect text transcript on a differen
   <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</p>
+<a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</a>
 ```
 
 #### Failed Example 4
@@ -180,11 +184,7 @@ A video element with audio.
 	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
 	compatibility is described in WCAG. See the video below to watch the same information again in video form.
 </p>
-<video
-	data-rule-target
-	src="../test-assets/perspective-video/perspective-video.mp4"
-	controls
-></video>
+<video data-rule-target src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 #### Inapplicable Example 2

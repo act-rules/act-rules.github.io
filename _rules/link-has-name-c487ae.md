@@ -26,6 +26,10 @@ input_aspects:
 authors:
   - Wilco Fiers
   - Anne Thyme Nørregaard
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'alt-require'
 ---
 
 ## Applicability
@@ -139,7 +143,7 @@ When `link` is off screen.
 </html>
 ```
 
-#### Passed example 10
+#### Passed Example 10
 
 `area` element with `href` attribute has accessible name.
 
@@ -151,7 +155,7 @@ When `link` is off screen.
 </map>
 ```
 
-#### Passed example 11
+#### Passed Example 11
 
 `a` element where accessible name does not only consist of whitespace.
 
@@ -220,7 +224,7 @@ Non-visible link.
 </a>
 ```
 
-#### Failed example 9
+#### Failed Example 9
 
 Link is completely empty, but still shows up in focus order, so it should have an accessible name.
 
@@ -228,7 +232,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 <a href="http://www.w3.org/WAI"></a>
 ```
 
-#### Failed example 10
+#### Failed Example 10
 
 `area` element with `href` attribute does not have accessible name.
 
@@ -240,7 +244,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 </map>
 ```
 
-#### Failed example 11
+#### Failed Example 11
 
 `a` element where accessible name through content only consist of whitespace.
 
@@ -286,7 +290,7 @@ Not included in the accessibility tree due to `aria-hidden="true"`.
 </a>
 ```
 
-#### Inapplicable example 5
+#### Inapplicable Example 5
 
 `area` element without `href` attribute does not have role of `link`.
 

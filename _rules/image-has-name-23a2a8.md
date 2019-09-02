@@ -16,6 +16,10 @@ input_aspects:
 authors:
   - Anne Thyme Nørregaard
   - Stein Erik Skotkjerra
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'alt-require'
 ---
 
 ## Applicability
@@ -34,7 +38,9 @@ _There are currently no assumptions._
 
 ## Accessibility Support
 
-There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name](#accessible-name).
+- There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name](#accessible-name).
+
+- There are several popular browsers that do not treat images with empty `alt` attribute as having a role of `presentation` but instead add the `img` element to the accessibility tree with a role of either `img` or `graphic`.
 
 ## Background
 
@@ -99,7 +105,7 @@ The HTML `img` element is marked as [decorative](#decorative) through `role="non
 <img role="none" />
 ```
 
-#### Passed example 6
+#### Passed Example 7
 
 The HTML `img` element has an accessible name that does not only consist of whitespace
 
@@ -133,7 +139,7 @@ The `img` element inside a `div` positioned off screen has no accessible name an
 <div style="margin-left:-9999px;"><img /></div>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 The HTML `img` element has an accessible name that only consist of whitespace
 

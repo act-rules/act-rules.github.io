@@ -24,7 +24,7 @@ The rule applies to any HTML `input`, `select` and `textarea` element with an `a
 - The element is not [visible](#visible), and not [included in the accessibility tree](#included-in-the-accessibility-tree)
 - The element is an `input` element with a `type` property of `hidden`, `button`, `submit` or `reset`
 - The element has a `aria-disabled="true"` attribute
-- The element is not part of [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation) and has a [semantic role](#semantic-role) that is not a [widget role](https://www.w3.org/TR/wai-aria-1.1/#widget_roles).
+- The element is not part of [sequential focus navigation](https://html.spec.whatwg.org/#sequential-focus-navigation) and has a [semantic role](#semantic-role) that is not a [widget role](https://www.w3.org/TR/wai-aria-1.1/#widget_roles).
 
 ## Expectation 1
 
@@ -124,7 +124,7 @@ Full length autocomplete terms.
 <input autocomplete="section-primary shipping work email" />
 ```
 
-#### Passed example 8
+#### Passed Example 8
 
 The `input` element does not have a semantic role that is a widget role, but still participates in sequential focus navigation, and has a single autocomplete term.
 
@@ -132,7 +132,7 @@ The `input` element does not have a semantic role that is a widget role, but sti
 <input role="none" autocomplete="username" />
 ```
 
-#### Passed example 9
+#### Passed Example 9
 
 The `input` element does not participates in sequential focus navigation, but still has a semantic role that is a widget role, and has a single autocomplete term.
 
@@ -140,9 +140,9 @@ The `input` element does not participates in sequential focus navigation, but st
 <input tabindex="-1" autocomplete="username" />
 ```
 
-#### Passed example 8
+#### Passed Example 10
 
-The `input` element does not have a semantic role that is a widget role, but still participates in sequential focus navigation since the [`tabindex` attribute](https://www.w3.org/TR/html/editing.html#the-tabindex-attribute) value is not a [valid integer](https://www.w3.org/TR/html/infrastructure.html#valid-integer), and has a single autocomplete term.
+The `input` element does not have a semantic role that is a widget role, but still participates in sequential focus navigation since the [`tabindex` attribute](https://html.spec.whatwg.org/#the-tabindex-attribute) value is not a [valid integer](https://html.spec.whatwg.org/#valid-integer), and has a single autocomplete term.
 
 ```html
 <input role="none" tabindex="-1.5" autocomplete="username" />
@@ -190,7 +190,7 @@ Autocomplete is inappropriate for the type of field.
 <input type="number" autocomplete="email" />
 ```
 
-#### Failed example 6
+#### Failed Example 6
 
 Autocomplete is not empty, but does not have any terms specified.
 
@@ -272,7 +272,7 @@ Non-widget element that does not participate in sequential focus navigation.
 <input type="button" role="none" tabindex="-1" autocomplete="username" />
 ```
 
-#### Inapplicable example 10
+#### Inapplicable Example 10
 
 Non-widget element that does not participate in sequential focus navigation.
 

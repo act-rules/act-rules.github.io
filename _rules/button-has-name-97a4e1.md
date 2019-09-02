@@ -113,7 +113,7 @@ Off screen elements should be tested.
 </html>
 ```
 
-#### Passed example 8
+#### Passed Example 8
 
 Button has accessible name that is not only whitespace.
 
@@ -121,7 +121,7 @@ Button has accessible name that is not only whitespace.
 <button>:-)</button>
 ```
 
-#### Passed example 9
+#### Passed Example 9
 
 Input button has an accessible name that comes from the default "reset" text.
 
@@ -166,7 +166,7 @@ Off screen element without an accessible name.
 </html>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 Button has an accessible name that is only whitespace.
 
@@ -181,7 +181,7 @@ Button has an accessible name that is only whitespace.
 Image buttons are tested in a different rule.
 
 ```html
-<input type="image" value="download" />
+<input type="image" value="download" alt="Download" />
 ```
 
 #### Inapplicable Example 2

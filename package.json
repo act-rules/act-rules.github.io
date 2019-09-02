@@ -111,7 +111,7 @@
 		"gatsby-remark-prismjs": "^3.3.6",
 		"gatsby-source-filesystem": "^2.1.9",
 		"gatsby-transformer-remark": "^2.6.14",
-		"gatsby-transformer-sharp": "^2.2.6",
+		"gatsby-transformer-sharp": "^2.2.13",
 		"gfm-code-blocks": "^1.0.0",
 		"globby": "^10.0.1",
 		"htmlhint": "^0.11.0",

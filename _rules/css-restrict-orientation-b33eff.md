@@ -30,13 +30,13 @@ The rule applies to any element that is [visible](#visible) and has a CSS [trans
 - [matrix](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix)
 - [matrix3d](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d)
 
-that are applied conditionally on the [orientation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation) [media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) with a value of `landsapce` or `portrait`.
+that are applied conditionally on the [orientation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation) [media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) with a value of `landscape` or `portrait`.
 
 **Note:** These specific [transformation functions](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function) are of interest to this rule as they have the potential to affect the [rotation](https://drafts.csswg.org/css-transforms-2/#Rotate3dDefined) of a given element.
 
 ## Expectation
 
-The target element has a [current transformation matrix](https://drafts.csswg.org/css-transforms/#current-transformation-matrix) that does not restrict the element to either `landspace` or `portrait` orientation.
+The target element is neither rotated clockwise nor counter clockwise around the Z-axis at an angle corresponding to 90 degrees relative to the position of the element prior to transformation.
 
 ## Assumptions
 
@@ -52,6 +52,7 @@ The target element has a [current transformation matrix](https://drafts.csswg.or
 - [Understanding Success Criterion 1.3.4: Orientation](https://www.w3.org/WAI/WCAG21/Understanding/orientation.html)
 - [Managing screen orientation](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 - [MDN Orientation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation)
+- [The Transform Rendering Model](https://drafts.csswg.org/css-transforms/#transform-rendering)
 
 ## Test Cases
 

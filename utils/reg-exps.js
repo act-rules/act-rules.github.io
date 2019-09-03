@@ -19,7 +19,7 @@ const regexps = {
 		/.*:\s+(#.*)\s+/ => drop everything before the ':', remember the space separated first word after it if it starts with # (otherwise, it's a link to an external page).
 	*/
 	glossaryKey: /\(([^)]+)\)/,
-	glossaryKeyInDefinition: /.*:\s+(.*)\s+/,
+	glossaryKeyInDefinition: /.*:\s+(#.*)\s+/,
 }
 
 module.exports = regexps

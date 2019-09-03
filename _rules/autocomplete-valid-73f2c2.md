@@ -19,7 +19,7 @@ authors:
 
 ## Applicability
 
-The rule applies to any HTML `input`, `select` and `textarea` element with an `autocomplete` attribute that is neither empty ("") nor only [whitespace](#whitespace), except if one of the following is true:
+The rule applies to any HTML `input`, `select` and `textarea` element with an `autocomplete` attribute that is a set of one or more [space separated tokens](https://www.w3.org/TR/html52/infrastructure.html#set-of-space-separated-tokens), except if one of the following is true:
 
 - The element is not [visible](#visible), and not [included in the accessibility tree](#included-in-the-accessibility-tree)
 - The element is an `input` element with a `type` property of `hidden`, `button`, `submit` or `reset`

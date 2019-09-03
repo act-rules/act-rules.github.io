@@ -88,6 +88,7 @@ button:hover {cursor: pointer;	cursor: pointer; background-color: grey;  color: 
 			<button type="button" id="mute">Mute</button>
 		</div>
 	</div>
+	<script src="no-autoplay.js"></script>
 </body>
 ```
 
@@ -136,6 +137,7 @@ button:hover {cursor: pointer;	cursor: pointer; background-color: grey;  color: 
 			<button type="button" id="mute">Mute</button>
 		</div>
 	</div>
+	<script src="no-autoplay.js"></script>
 </body>
 ```
 
@@ -163,6 +165,7 @@ The `<video>` has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to 
 		<button type="button" id="mute"></button>
 		</div>
 	</div>
+	<script src="no-autoplay.js"></script>
 </body>
 ```
 
@@ -190,6 +193,7 @@ button:hover {cursor: pointer;	cursor: pointer; background-color: grey;  color: 
 			<button type="button" id="mute">Mute</button>
 		</div>
 	</div>
+	<script src="no-autoplay.js"></script>
 </body>
 ```
 

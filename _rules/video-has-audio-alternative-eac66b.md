@@ -20,11 +20,11 @@ authors:
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible](#visible), where the video contains audio.
+The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][], where the video contains audio.
 
 ## Expectation
 
-For each test target, the outcome of at least one of the following rules is passed:
+For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
 - [Video as a media alternative for text](https://act-rules.github.io/rules/ab4d13)
 - [Video has captions](https://act-rules.github.io/rules/f51b46)
@@ -98,7 +98,7 @@ A video element that describes some of the text on the same page. The video cont
 
 #### Inapplicable Example 1
 
-A video element without that is not visible on the page.
+A video element without that is not [visible][].
 
 ```html
 <video src="../test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>
@@ -111,3 +111,5 @@ A video element without audio.
 ```html
 <video src="../test-assets/perspective-video/perspective-video-silent.mp4" controls></video>
 ```
+
+[visible]: #visible "Definition of visible"

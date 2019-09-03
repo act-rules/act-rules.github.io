@@ -28,11 +28,11 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to any [non-streaming](#non-streaming-media-element) `video` element [visible](#visible), where the video doesn't contain audio.
+The rule applies to any [non-streaming](#non-streaming-media-element) `video` element [visible][], where the video doesn't contain audio.
 
 ## Expectation
 
-For each test target, the outcome of at least one of the following rules is passed:
+For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
 - [Video-Only As A Media Alternative For Text](https://act-rules.github.io/rules/fd26cf)
 - [Video Only Element Has Description Track](https://act-rules.github.io/rules/ac7dc6)
@@ -189,7 +189,7 @@ A video element with audio.
 
 #### Inapplicable Example 2
 
-A video only element that is not visible on the page.
+A video only element that is not [visible][].
 
 ```html
 <video controls style="display: none;">
@@ -198,3 +198,5 @@ A video only element that is not visible on the page.
 	<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
 </video>
 ```
+
+[visible]: #visible 'Definition of visible'

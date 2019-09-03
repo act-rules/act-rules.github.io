@@ -88,6 +88,7 @@ button:hover {cursor: pointer;	cursor: pointer; background-color: grey;  color: 
 			<button type="button" id="mute">Mute</button>
 		</div>
 	</div>
+	<script src="no-autoplay.js"></script>
 </body>
 ```
 

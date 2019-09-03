@@ -33,16 +33,16 @@ This rule applies to any HTML or SVG element that:
 - inherit from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
 - do not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
 
-**Note:** The `option` role is not part of the list of applicable roles, because it has a required context role that inherits from the `select` role. Furthermore, `option` does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an accessible name.
+**Note:** The `option` role is not part of the list of applicable roles, because it has a required context role that inherits from the `select` role. Furthermore, `option` does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an [accessible name](#accessible-name).
 
 **Note**: "Label" in WCAG is used in its general sense and includes text or other components with a text alternative that is presented to a user to identify a component within web content. That is, "label" in WCAG is not restricted to the `label` element of HTML or SVG.
 
 ## Expectation
 
-For each test target, the [outcome](#outcome) of none of the following rules is "failed":
+For each test target, the [outcome][] of none of the following rules is "failed":
 
-- [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da)
-- [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31)
+- [Form field visual label is descriptive][]
+- [Form field accessible name is descriptive][]
 
 ## Assumptions
 
@@ -65,7 +65,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "passed", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed".
+The [outcome][] of [Form field visual label is descriptive][] is "passed", the [outcome][] of [Form field accessible name is descriptive][] is "passed".
 
 ```html
 <label for="fname">First name:</label> <input id="fname" type="text" name="fname" />
@@ -73,7 +73,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Passed Example 2
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed".
+The [outcome][] of [Form field visual label is descriptive][] is "inapplicable", the [outcome][] of [Form field accessible name is descriptive][] is "passed".
 
 ```html
 <p id="label_fname">First name:</p>
@@ -82,7 +82,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Passed Example 3
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "passed", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed".
+The [outcome][] of [Form field visual label is descriptive][] is "passed", the [outcome][] of [Form field accessible name is descriptive][] is "passed".
 
 ```html
 <label>First name:<input id="fname" type="text" name="fname"/></label>
@@ -90,7 +90,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Passed Example 4
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed".
+The [outcome][] of [Form field visual label is descriptive][] is "inapplicable", the [outcome][] of [Form field accessible name is descriptive][] is "passed".
 
 ```html
 <p id="label_fname" aria-hidden="true">First name:</p>
@@ -99,7 +99,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Passed Example 5
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed".
+The [outcome][] of [Form field visual label is descriptive][] is "inapplicable", the [outcome][] of [Form field accessible name is descriptive][] is "passed".
 
 ```html
 <p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">First name:</p>
@@ -108,7 +108,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Passed Example 6
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "passed" (for all test targets), the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed" (for all test targets).
+The [outcome][] of [Form field visual label is descriptive][] is "passed" (for all test targets), the [outcome][] of [Form field accessible name is descriptive][] is "passed" (for all test targets).
 
 ```html
 <h2>Shipping address</h2>
@@ -122,7 +122,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Passed Example 7
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed".
+The [outcome][] of [Form field visual label is descriptive][] is "inapplicable", the [outcome][] of [Form field accessible name is descriptive][] is "passed".
 
 ```html
 <input aria-label="First name" id="fname" type="text" name="fname" />
@@ -130,7 +130,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Inapplicable Example 5
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "passed", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "inapplicable".
+The [outcome][] of [Form field visual label is descriptive][] is "passed", the [outcome][] of [Form field accessible name is descriptive][] is "inapplicable".
 
 ```html
 <label for="fname">First name:</label> <input id="fname" type="text" name="fname" aria-label="" />
@@ -138,7 +138,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Passed Example 8
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "passed" (for all test targets), the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed" (for all test targets).
+The [outcome][] of [Form field visual label is descriptive][] is "passed" (for all test targets), the [outcome][] of [Form field accessible name is descriptive][] is "passed" (for all test targets).
 
 ```html
 <h2 aria-hidden="true">Shipping address</h2>
@@ -152,7 +152,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Passed Example 9
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed".
+The [outcome][] of [Form field visual label is descriptive][] is "inapplicable", the [outcome][] of [Form field accessible name is descriptive][] is "passed".
 
 ```html
 <p id="label_fname" style="display:none;">First name:</p>
@@ -163,7 +163,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Failed Example 1
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "failed", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "failed".
+The [outcome][] of [Form field visual label is descriptive][] is "failed", the [outcome][] of [Form field accessible name is descriptive][] is "failed".
 
 ```html
 <label for="fname">Menu</label> <input id="fname" type="text" name="fname" />
@@ -171,7 +171,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Failed Example 2
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "failed".
+The [outcome][] of [Form field visual label is descriptive][] is "inapplicable", the [outcome][] of [Form field accessible name is descriptive][] is "failed".
 
 ```html
 <p id="label_fname">Menu</p>
@@ -180,7 +180,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Failed Example 3
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "failed", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "failed".
+The [outcome][] of [Form field visual label is descriptive][] is "failed", the [outcome][] of [Form field accessible name is descriptive][] is "failed".
 
 ```html
 <label>Menu<input id="fname" type="text" name="fname"/></label>
@@ -188,7 +188,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Failed Example 4
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "failed".
+The [outcome][] of [Form field visual label is descriptive][] is "inapplicable", the [outcome][] of [Form field accessible name is descriptive][] is "failed".
 
 ```html
 <p id="label_fname" aria-hidden="true">Menu</p>
@@ -197,7 +197,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Failed Example 5
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "failed".
+The [outcome][] of [Form field visual label is descriptive][] is "inapplicable", the [outcome][] of [Form field accessible name is descriptive][] is "failed".
 
 ```html
 <p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">Menu</p>
@@ -206,7 +206,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Failed Example 6
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "failed".
+The [outcome][] of [Form field visual label is descriptive][] is "inapplicable", the [outcome][] of [Form field accessible name is descriptive][] is "failed".
 
 ```html
 <input aria-label="Menu" id="fname" type="text" name="fname" />
@@ -214,7 +214,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Failed Example 7
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "failed", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "failed".
+The [outcome][] of [Form field visual label is descriptive][] is "failed", the [outcome][] of [Form field accessible name is descriptive][] is "failed".
 
 ```html
 <h2>Name</h2>
@@ -223,7 +223,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Failed Example 8
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "passed", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "failed".
+The [outcome][] of [Form field visual label is descriptive][] is "passed", the [outcome][] of [Form field accessible name is descriptive][] is "failed".
 
 ```html
 <label for="fname">First name:</label> <input id="fname" type="text" name="fname" aria-label="Fill in:" />
@@ -231,7 +231,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Failed Example 9
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "failed", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed".
+The [outcome][] of [Form field visual label is descriptive][] is "failed", the [outcome][] of [Form field accessible name is descriptive][] is "passed".
 
 ```html
 <label for="fname">Fill in:</label> <input id="fname" type="text" name="fname" aria-label="First name:" />
@@ -239,7 +239,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Failed Example 10
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "failed", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "passed".
+The [outcome][] of [Form field visual label is descriptive][] is "failed", the [outcome][] of [Form field accessible name is descriptive][] is "passed".
 
 ```html
 <h2 style="position: absolute; top: -9999px; left: -9999px;">Shipping address</h2>
@@ -255,7 +255,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Inapplicable Example 1
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "inapplicable".
+The [outcome][] of [Form field visual label is descriptive][] is "inapplicable", the [outcome][] of [Form field accessible name is descriptive][] is "inapplicable".
 
 ```html
 <label for="fname" style="display:none;">First name:</label> <input id="fname" type="text" name="fname" />
@@ -263,7 +263,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Inapplicable Example 2
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "inapplicable".
+The [outcome][] of [Form field visual label is descriptive][] is "inapplicable", the [outcome][] of [Form field accessible name is descriptive][] is "inapplicable".
 
 ```html
 <label for="fname">First name:</label>
@@ -272,7 +272,7 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Inapplicable Example 3
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "inapplicable".
+The [outcome][] of [Form field visual label is descriptive][] is "inapplicable", the [outcome][] of [Form field accessible name is descriptive][] is "inapplicable".
 
 ```html
 <input id="fname" type="text" name="fname" />
@@ -280,9 +280,13 @@ The outcome of [Form field visual label is descriptive](https://act-rules.github
 
 #### Inapplicable Example 4
 
-The outcome of [Form field visual label is descriptive](https://act-rules.github.io/rules/1cd4da) is "inapplicable", the outcome of [Form field accessible name is descriptive](https://act-rules.github.io/rules/e0ca31) is "inapplicable".
+The [outcome][] of [Form field visual label is descriptive][] is "inapplicable", the [outcome][] of [Form field accessible name is descriptive][] is "inapplicable".
 
 ```html
 <p>First name:</p>
 <input id="fname" type="text" name="fname" />
 ```
+
+[form field accessible name is descriptive]: https://act-rules.github.io/rules/e0ca31 'Atomic rule Forme field accessible name is descriptive'
+[form field visual label is descriptive]: https://act-rules.github.io/rules/1cd4da 'Atomic rule Form field visual label is descriptive'
+[outcome]: #outcome 'Definition of outcome'

@@ -109,4 +109,4 @@ A video element without audio.
 </video>
 ```
 
-[visible]: #visible "Definition of visible"
+[visible]: #visible 'Definition of visible'

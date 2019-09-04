@@ -105,4 +105,4 @@ A video element with audio.
 </video>
 ```
 
-[visible]: #visible "Definition of visible"
+[visible]: #visible 'Definition of visible'

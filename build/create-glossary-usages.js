@@ -64,7 +64,7 @@ const init = async () => {
 		// Finding internal ref glossary usage: "[refname]: key"
 		const glossaryInlinedMatches = getAllMatchesForRegex(regexps.glossaryDefinitionInRules, body, false)
 
-		glossaryInlinedMatches.forEach(glossaryDef =>{
+		glossaryInlinedMatches.forEach(glossaryDef => {
 			const hasGlossaryKey = regexps.glossaryKeyInDefinition.test(glossaryDef.block)
 			if (!hasGlossaryKey) {
 				return

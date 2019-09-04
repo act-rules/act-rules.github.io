@@ -172,5 +172,5 @@ An audio element that describes some of the text on the same page. The text on t
 <audio src="../test-assets/moon-audio/moon-speech.mp3"></audio>
 ```
 
-[included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"
-[visible]: #visible "Definition of visible"
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[visible]: #visible 'Definition of visible'

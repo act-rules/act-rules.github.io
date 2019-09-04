@@ -150,5 +150,5 @@ A video element that describes some of the text on the same page. The text on th
 ></video>
 ```
 
-[included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"
-[visible]: #visible "Definition of visible"
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[visible]: #visible 'Definition of visible'

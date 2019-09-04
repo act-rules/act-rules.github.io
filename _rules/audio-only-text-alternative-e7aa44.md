@@ -144,4 +144,4 @@ An audio element that describes some of the text on the same page. The text on t
 <audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" controls style="display: none;"></audio>
 ```
 
-[visible]: #visible "Definition of visible"
+[visible]: #visible 'Definition of visible'

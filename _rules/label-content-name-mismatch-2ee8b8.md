@@ -135,5 +135,5 @@ Non-text content.
 <button aria-label="close">X</button>
 ```
 
-[accessible name]: #accessible-name "Definition of accessible name"
-[visible]: #visible "Definition of visible"
+[accessible name]: #accessible-name 'Definition of accessible name'
+[visible]: #visible 'Definition of visible'

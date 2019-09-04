@@ -106,4 +106,4 @@ A video element without sound that is not [visible][].
 </video>
 ```
 
-[visible]: #visible "Definition of visible"
+[visible]: #visible 'Definition of visible'

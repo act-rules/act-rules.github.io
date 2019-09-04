@@ -1,9 +1,9 @@
 ---
 id: 2779a5
-name: HTML Page has a title
+name: HTML page has title
 rule_type: atomic
 description: |
-  This rule checks that the HTML page has a title.
+  This rule checks that an HTML page has a title.
 accessibility_requirements:
   wcag20:2.4.2: # Page Titled (A)
     forConformance: true
@@ -18,17 +18,23 @@ authors:
   - Bryn Anderson
   - Anne Thyme Nørregaard
   - Jey Nandakumar
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'title-require'
 ---
 
 ## Applicability
 
-The rule applies to any page where the [document element](https://dom.spec.whatwg.org/#document-element) is an `html` element, and where the page is not embedded in another page.
+The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element.
 
-**Note**: Pages may be embedded inside other pages through elements such as `iframe` and `object` elements.
+**Note**: Documents embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not web pages according to the definition in WCAG.
 
 ## Expectation 1
 
-The [document element](https://dom.spec.whatwg.org/#document-element) has at least one [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) that is an HTML `title` element.
+Each target element has at least one [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) that is an HTML `title` element.
+
+**Note:** According to the [HTML specification for the `title` element](https://html.spec.whatwg.org/multipage/semantics.html#the-title-element), `title` elements can only be [descendants](https://dom.spec.whatwg.org/#concept-tree-descendant) of the `head` element, and there can only be one `title` element. However, browsers will pick up the first `title` element that is a [descendant]() of the [document element](https://www.w3.org/TR/dom/#document-element) and use that as the [document title](https://html.spec.whatwg.org/multipage/semantics.html#the-title-element), also if the `title` is not a [descendant]() of the `head` element, or if there are multiple `title` elements. So even though it is invalid HTML, having `title` elements in the `body` or other places, or having multiple `title` elements don't cause any accessibility issues and is therefore not included as failures for this rule.
 
 **Note**: The `title` element exists in other namespaces such as SVG. These are not HTML `title` elements and should be ignored for this rule.
 
@@ -36,7 +42,7 @@ The [document element](https://dom.spec.whatwg.org/#document-element) has at lea
 
 ## Expectation 2
 
-The first HTML `title` element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the [document element](https://dom.spec.whatwg.org/#document-element) has [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
+For each target element, the first HTML `title` element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the [document element](https://dom.spec.whatwg.org/#document-element) has [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
 
 ## Assumptions
 

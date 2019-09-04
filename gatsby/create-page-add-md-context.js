@@ -18,8 +18,8 @@ const createPageAddMdContext = options => {
 						rawMarkdownBody
 						fields {
 							fileName {
-                relativePath
-              }
+								relativePath
+							}
 							slug
 							sourceInstanceName
 							markdownType
@@ -49,24 +49,11 @@ const createPageAddMdContext = options => {
 		 */
 		rulesMarkdownPage.forEach(({ node }) => {
 			const { frontmatter, fields } = node
-			const {
-				slug,
-				markdownType,
-				fastmatterAttributes,
-				changelog,
-				fileName,
-				sourceInstanceName
-			} = fields
+			const { slug, markdownType, fastmatterAttributes, changelog, fileName, sourceInstanceName } = fields
 
-			const {
-				name: frontmatterName,
-				title: frontmatterTitle,
-				rule_type: frontmatterRuleType
-			} = frontmatter
+			const { name: frontmatterName, title: frontmatterTitle, rule_type: frontmatterRuleType } = frontmatter
 
-			const pageTitle = frontmatterName
-				? frontmatterName
-				: frontmatterTitle
+			const pageTitle = frontmatterName ? frontmatterName : frontmatterTitle
 
 			/**
 			 * Create all markdown pages
@@ -98,8 +85,8 @@ const createPageAddMdContext = options => {
 						title: `Changelog for Rule: ${pageTitle}`,
 						changelog,
 						fastmatterAttributes,
-						fileName
-					}
+						fileName,
+					},
 				})
 			}
 		})

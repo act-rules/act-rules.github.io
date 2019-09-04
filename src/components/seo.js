@@ -27,20 +27,23 @@ function SEO({ description, lang, meta, keywords, title }) {
 
 	const metaDescription = description || site.siteMetadata.description
 
-	const metaKeywords = keywords.length > 0
-		? {
-			name: `keywords`,
-			content: keywords.join(`, `),
-		}
-		: []
+	const metaKeywords =
+		keywords.length > 0
+			? {
+					name: `keywords`,
+					content: keywords.join(`, `),
+			  }
+			: []
 
 	const metaTags = [
-		{ name: `description`, content: metaDescription, },
-		{ property: `og:title`, content: title, },
-		{ property: `og:description`, content: metaDescription, },
-		{ property: `og:type`, content: `website`, },
-	].concat(metaKeywords).concat(meta)
-	
+		{ name: `description`, content: metaDescription },
+		{ property: `og:title`, content: title },
+		{ property: `og:description`, content: metaDescription },
+		{ property: `og:type`, content: `website` },
+	]
+		.concat(metaKeywords)
+		.concat(meta)
+
 	return (
 		<Helmet
 			htmlAttributes={{

@@ -19,13 +19,13 @@ authors:
 
 ## Applicability
 
-The rule applies to `iframe` elements that are [included in the accessibility tree](#included-in-the-accessibility-tree).
+The rule applies to `iframe` elements that are [included in the accessibility tree][].
 
 **Note:** `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
 
 ## Expectation
 
-Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
+Each target element has an [accessible name][] that is not only [whitespace][].
 
 ## Assumptions
 
@@ -74,7 +74,7 @@ Usage of `aria-labelledby` attribute to describe the `iframe` content.
 
 #### Passed Example 4
 
-Accessible name is not only whitespace.
+[Accessible name][] is not only [whitespace][].
 
 ```html
 <iframe title=":-)" src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
@@ -132,7 +132,7 @@ Usage of `alt` attribute to describe content is not valid.
 
 #### Failed Example 7
 
-Accessible name is only whitespace.
+[Accessible name][] is only [whitespace][].
 
 ```html
 <iframe title=" " src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
@@ -150,8 +150,12 @@ Does not apply to non `iframe` element.
 
 #### Inapplicable Example 2
 
-`iframe` is not included in the accessibility tree.
+`iframe` is not [included in the accessibility tree][].
 
 ```html
 <iframe style="display:none;" src="../test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
+
+[accessible name]: #accessible-name "Definition of accessible name"
+[included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"
+[whitespace]: #whitespace "Definition of whitespace"

@@ -16,15 +16,15 @@ authors:
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible](#visible), where the video contains audio.
+The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][], where the video contains audio.
 
 ## Expectation 1
 
-All the information contained in each test target is available as text that is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+All the information contained in each test target is available as text that is [visible][] and [included in the accessibility tree][].
 
 ## Expectation 2
 
-Each test target is labelled as a video alternative for text on the page. This label is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+Each test target is labelled as a video alternative for text on the page. This label is [visible][] and [included in the accessibility tree][].
 
 **Note:** The term label does not refer to the `label` element.
 
@@ -77,7 +77,7 @@ A video element that describes some of the text on the same page. The video cont
 
 #### Failed Example 2
 
-A video element that describes some of the text on the same page. The text is not visible on the page.
+A video element that describes some of the text on the same page. The text is not [visible][].
 
 ```html
 <p style="display: none;">
@@ -103,7 +103,7 @@ A video element that describes some of the text on the same page. The text on th
 
 #### Failed Example 4
 
-A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the label is not visible on the page.
+A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the label is not [visible][].
 
 ```html
 <p>
@@ -134,7 +134,7 @@ A video element without audio. The text on the page labels the video as an alter
 
 #### Inapplicable Example 2
 
-A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the video is not visible on the page.
+A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the video is not [visible][].
 
 ```html
 <p>
@@ -144,3 +144,6 @@ A video element that describes some of the text on the same page. The text on th
 </p>
 <video src="../test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>
 ```
+
+[included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"
+[visible]: #visible "Definition of visible"

@@ -26,15 +26,19 @@ input_aspects:
 authors:
   - Wilco Fiers
   - Anne Thyme Nørregaard
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'alt-require'
 ---
 
 ## Applicability
 
-The rule applies to any HTML element with the [semantic role](#semantic-role) of `link` that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+The rule applies to any HTML element with the [semantic role](#semantic-role) of `link` that is [included in the accessibility tree][].
 
 ## Expectation
 
-Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
+Each target element has an [accessible name][] that is not only [whitespace][].
 
 ## Assumptions
 
@@ -42,7 +46,7 @@ Each target element has an [accessible name](#accessible-name) that is not only 
 
 ## Accessibility Support
 
-For `area` elements that have a `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on whether the `area` is considered [included in the accessibility tree](#included-in-the-accessibility-tree) or not.
+For `area` elements that have a `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on whether the `area` is considered [included in the accessibility tree][] or not.
 
 ## Background
 
@@ -57,7 +61,7 @@ For `area` elements that have a `href` attribute, but are not nested inside a `m
 
 #### Passed Example 1
 
-`<a>` element with accessible name through content.
+`<a>` element with [accessible name][] through content.
 
 ```html
 <a href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
@@ -65,7 +69,7 @@ For `area` elements that have a `href` attribute, but are not nested inside a `m
 
 #### Passed Example 2
 
-Element with [explicit role](#explicit-role) of link with accessible name through content.
+Element with [explicit role](#explicit-role) of link with [accessible name][] through content.
 
 ```html
 <div role="link">Web Accessibility Initiative (WAI)</div>
@@ -81,7 +85,7 @@ Element with [explicit role](#explicit-role) of link with accessible name throug
 
 #### Passed Example 4
 
-Accessible name for link via `aria-label`
+[accessible name][] for link via `aria-label`
 
 ```html
 <a href="http://www.w3.org/WAI"><img src="#" aria-label="This is a link"/></a>
@@ -113,7 +117,7 @@ Link with both `image` and `text`.
 
 #### Passed Example 8
 
-Accessible name for link via `aria-labelledby`.
+[accessible name][] for link via `aria-labelledby`.
 
 ```html
 <a href="http://www.w3.org/WAI"><img src="#" aria-labelledby="id1"/></a>
@@ -141,7 +145,7 @@ When `link` is off screen.
 
 #### Passed Example 10
 
-`area` element with `href` attribute has accessible name.
+`area` element with `href` attribute has [accessible name][].
 
 ```html
 <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap" />
@@ -153,7 +157,7 @@ When `link` is off screen.
 
 #### Passed Example 11
 
-`a` element where accessible name does not only consist of whitespace.
+`a` element where [accessible name][] does not only consist of [whitespace][].
 
 ```html
 <a href="http://www.w3.org/WAI">:-)</a>
@@ -163,7 +167,7 @@ When `link` is off screen.
 
 #### Failed Example 1
 
-Image link without accessible name.
+Image link without [accessible name][].
 
 ```html
 <a href="http://www.w3.org/WAI"><img src="#"/></a>
@@ -171,7 +175,7 @@ Image link without accessible name.
 
 #### Failed Example 2
 
-Image link where image is marked as decorative.
+Image link where image is marked as [decorative](#decorative).
 
 ```html
 <a href="http://www.w3.org/WAI"><img src="#" alt=""/></a>
@@ -212,7 +216,7 @@ Link with image that has empty `aria-labelledby`.
 
 #### Failed Example 7
 
-Non-visible link.
+[Non-visible](#visible) link.
 
 ```html
 <a href="http://www.w3.org/WAI" style="left: -9999px; position: absolute;">
@@ -222,7 +226,7 @@ Non-visible link.
 
 #### Failed Example 9
 
-Link is completely empty, but still shows up in focus order, so it should have an accessible name.
+Link is completely empty, but still shows up in focus order, so it should have an [accessible name][].
 
 ```html
 <a href="http://www.w3.org/WAI"></a>
@@ -230,7 +234,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 #### Failed Example 10
 
-`area` element with `href` attribute does not have accessible name.
+`area` element with `href` attribute does not have [accessible name][].
 
 ```html
 <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap" />
@@ -242,7 +246,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 #### Failed Example 11
 
-`a` element where accessible name through content only consist of whitespace.
+`a` element where [accessible name][] through content only consist of [whitespace][].
 
 ```html
 <a href="http://www.w3.org/WAI"> </a>
@@ -262,7 +266,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 #### Inapplicable Example 2
 
-Not included in the accessibility tree due to `display:none`.
+Not [included in the accessibility tree][] due to `display:none`.
 
 ```html
 <a href="http://www.w3.org/WAI" style="display: none;"><img src="#"/></a>
@@ -270,7 +274,7 @@ Not included in the accessibility tree due to `display:none`.
 
 #### Inapplicable Example 3
 
-Not included in the accessibility tree due to `visibility: hidden`.
+Not [included in the accessibility tree][] due to `visibility: hidden`.
 
 ```html
 <a href="http://www.w3.org/WAI" style="visibility: hidden;">Some text</a>
@@ -278,7 +282,7 @@ Not included in the accessibility tree due to `visibility: hidden`.
 
 #### Inapplicable Example 4
 
-Not included in the accessibility tree due to `aria-hidden="true"`.
+Not [included in the accessibility tree][] due to `aria-hidden="true"`.
 
 ```html
 <a aria-hidden="true" href="http://www.w3.org/WAI">
@@ -293,3 +297,7 @@ Not included in the accessibility tree due to `aria-hidden="true"`.
 ```html
 <area shape="rect" coords="0,0,82,126" />
 ```
+
+[accessible name]: #accessible-name 'Definition of accessible name'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[whitespace]: #whitespace 'Definition of whitespace'

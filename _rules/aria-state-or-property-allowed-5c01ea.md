@@ -19,7 +19,7 @@ authors:
 
 ## Applicability
 
-Any [WAI-ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) that is specified on an HTML or SVG element that is [included-in-the-accessibility-tree](#included-in-the-accessibility-tree).
+Any [WAI-ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) that is specified on an HTML or SVG element that is [included in the accessibility tree][].
 
 ## Expectation
 
@@ -140,8 +140,10 @@ No [WAI-ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_d
 
 #### Inapplicable Example 2
 
-`aria-sort` property is neither inherited, supported, nor required for role `button`, but the element is not included in the accessibility tree.
+`aria-sort` property is neither inherited, supported, nor required for role `button`, but the element is not [included in the accessibility tree][].
 
 ```html
 <div role="button" aria-sort="" style="display:none;"></div>
 ```
+
+[included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"

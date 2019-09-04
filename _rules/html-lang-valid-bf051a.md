@@ -25,7 +25,7 @@ The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s)
 
 ## Expectation
 
-For each test target, the `lang` and `xml:lang` attributes have a [valid language subtag](#valid-language-subtag) if the attribute is not empty ("").
+For each test target, the `lang` and `xml:lang` attributes have a [valid language subtag](#valid-language-subtag) unless the attribute is empty ("").
 
 ## Assumptions
 

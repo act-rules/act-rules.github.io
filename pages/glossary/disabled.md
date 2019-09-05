@@ -3,7 +3,7 @@ title: Disabled
 key: disabled
 ---
 
-An element that is normally [perceivable][] and [operable][], but has been rendered [inoperable][operable] either temporarily or permanently, is considered disabled. While there exists several techniques through which elements can be disabled, the most typical are:
+An element that is normally [perceivable][] and [operable][], but has been rendered [inoperable][operable] either temporarily or permanently using one of the following techniques, is considered disabled:
 
 1. The [`disabled`][disabled] attribute. The presence of this attribute, regardless of its value, either
 
@@ -14,7 +14,9 @@ An element that is normally [perceivable][] and [operable][], but has been rende
     
     **Note:** When the [`disabled`][disabled] attribute is specified on a [`fieldset`][fieldset] element, [shadow-including descendants][shadow-including descendant] are **not** disabled by default. Such behavior may however be explicitly implemented by [form-associated custom elements][form-associated custom element].
 
-2. The [`aria-disabled`][aria-disabled] attribute. The presence of this attribute with a value of `true` will semantically disable an element and its [focusable][] [shadow-including descendants][shadow-including descendant].
+2. The [`aria-disabled`][aria-disabled] attribute. The presence of this attribute with a value that is an [ASCII case-insensitive][] match for `true` will semantically disable an element and its [focusable][] [shadow-including descendants][shadow-including descendant]. 
+
+    **Note:** When authors disable elements using the [`aria-disabled`][aria-disabled] attribute, it is assumed that appropriate measures have been taken to also functionally disable the element. This can be done by disabling pointer events using the [`pointer-events`][pointer-events] property and by disabling keyboard interactions using the [`tabindex`][tabindex] attribute.
 
 [operable]: https://www.w3.org/TR/wai-aria/#dfn-operable
 [perceivable]: https://www.w3.org/TR/wai-aria/#dfn-perceivable
@@ -31,3 +33,6 @@ An element that is normally [perceivable][] and [operable][], but has been rende
 [child]: https://dom.spec.whatwg.org/#concept-tree-child
 [shadow-including descendant]: https://dom.spec.whatwg.org/#concept-shadow-including-descendant
 [focusable]: https://html.spec.whatwg.org/multipage/interaction.html#focusable-area
+[ascii case-insensitive]: https://infra.spec.whatwg.org/#ascii-case-insensitive
+[pointer-events]: https://www.w3.org/TR/SVG2/interact.html#PointerEventsProperty
+[tabindex]: https://html.spec.whatwg.org/multipage/interaction.html#the-tabindex-attribute

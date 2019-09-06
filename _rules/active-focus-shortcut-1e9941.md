@@ -1,5 +1,5 @@
 ---
-id: aa8b52
+id: 1e9941
 name: Keyboard shortcut is only active when component has focus
 rule_type: atomic
 

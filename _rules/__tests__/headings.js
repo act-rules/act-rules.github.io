@@ -27,7 +27,7 @@ const getAllHeadingsFromMarkdownBody = body => {
  * @param {String} str given string
  * @returns {Number}
  */
-const extractNumberFromGivenString = (str) => {
+const extractNumberFromGivenString = str => {
 	const match = str.match(/\d+/)[0]
 	return parseInt(match)
 }

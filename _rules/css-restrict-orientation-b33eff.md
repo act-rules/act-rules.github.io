@@ -20,19 +20,19 @@ authors:
 
 ## Applicability
 
-The rule applies to any element that is [visible](#visible) and has a CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property with any of the below [transformation functions](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function)
+The rule applies to any element that is [visible](#visible) and has a CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property with any of the below [transformation functions](https://www.w3.org/TR/css-transforms/#transform-functions)
 
-- [rotate](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate)
-- [rotate3d](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d)
-- [rotateX](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateX)
-- [rotateY](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateY)
-- [rotateZ](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateZ)
-- [matrix](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix)
-- [matrix3d](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d)
+- [rotate](https://www.w3.org/TR/css-transforms/#funcdef-transform-rotate)
+- [rotate3d](https://drafts.csswg.org/css-transforms-2/#funcdef-rotate3d)
+- [rotateX](https://drafts.csswg.org/css-transforms-2/#funcdef-rotatex)
+- [rotateY](https://drafts.csswg.org/css-transforms-2/#funcdef-rotatey)
+- [rotateZ](https://drafts.csswg.org/css-transforms-2/#funcdef-rotatez)
+- [matrix](https://www.w3.org/TR/css-transforms/#funcdef-transform-matrix)
+- [matrix3d](https://drafts.csswg.org/css-transforms-2/#funcdef-matrix3d)
 
-that are applied conditionally on the [orientation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation) [media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) with a value of `landscape` or `portrait`.
+that are applied conditionally on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1) with a value of `landscape` or `portrait`.
 
-**Note:** These specific [transformation functions](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function) are of interest to this rule as they have the potential to affect the [rotation](https://drafts.csswg.org/css-transforms-2/#Rotate3dDefined) of a given element.
+**Note:** These specific [transformation functions](https://www.w3.org/TR/css-transforms/#transform-functions) are of interest to this rule as they have the potential to affect the [rotation](https://drafts.csswg.org/css-transforms-2/#Rotate3dDefined) of a given element.
 
 ## Expectation 
 
@@ -50,8 +50,11 @@ The target element is neither rotated clockwise nor counter clockwise around the
 ## Background
 
 - [Understanding Success Criterion 1.3.4: Orientation](https://www.w3.org/WAI/WCAG21/Understanding/orientation.html)
+- [CSS Transforms Module Level 1](https://www.w3.org/TR/css-transforms/#funcdef-transform-matrix)
+- [CSS Transforms Module Level 2](https://drafts.csswg.org/css-transforms-2)
+- [CSS3 Media Queries](https://www.w3.org/TR/css3-mediaqueries/)
 - [Managing screen orientation](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
-- [MDN Orientation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation)
+- [MDN Orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation)
 - [The Transform Rendering Model](https://drafts.csswg.org/css-transforms/#transform-rendering)
 
 ## Test Cases
@@ -60,7 +63,7 @@ The target element is neither rotated clockwise nor counter clockwise around the
 
 #### Passed Example 1
 
-A page where CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property is conditionally applied on the [orientation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation) [media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features), but does not have any of the applicable [transformation functions](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function) which restricts the element to either `landspace` or `portrait` orientation.
+A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property is conditionally applied on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1), but does not have any of the applicable [transformation functions](https://www.w3.org/TR/css-transforms/#transform-functions) which restricts the element to either `landspace` or `portrait` orientation.
 
 ```html
 <html lang="en">
@@ -83,7 +86,7 @@ A page where CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/tr
 
 #### Passed Example 2
 
-A page where CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property has [rotate](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate) [transform function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function) conditionally applied on the [orientation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation) [media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) which does not restricts the element to either `portrait` or `landscape` orientation.
+A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property has [rotate](https://www.w3.org/TR/css-transforms/#funcdef-transform-rotate) [transform function](https://www.w3.org/TR/css-transforms/#transform-functions) conditionally applied on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1) which does not restricts the element to either `portrait` or `landscape` orientation.
 
 ```html
 <html lang="en">
@@ -106,7 +109,7 @@ A page where CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/tr
 
 #### Passed Example 3
 
-A page where CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property has [matrix](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix) [transform function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function) conditionally applied on the [orientation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation) [media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) which does not restricts the element to either `portrait` or `landscape` orientation.
+A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property has [matrix](https://www.w3.org/TR/css-transforms/#funcdef-transform-matrix) [transform function](https://www.w3.org/TR/css-transforms/#transform-functions) conditionally applied on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1) which does not restricts the element to either `portrait` or `landscape` orientation.
 
 ```html
 <html lang="en">
@@ -129,7 +132,7 @@ A page where CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/tr
 
 #### Passed Example 4
 
-A page where CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property has [rotate](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate) [transform function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function) conditionally applied on the [orientation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation) [media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) which matches the default CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) applied on the target element.
+A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property has [rotate](https://www.w3.org/TR/css-transforms/#funcdef-transform-rotate) [transform function](https://www.w3.org/TR/css-transforms/#transform-functions) conditionally applied on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1) which matches the default CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) applied on the target element.
 
 ```html
 <html lang="en">
@@ -158,7 +161,7 @@ A page where CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/tr
 
 #### Failed Example 1
 
-A page where CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property has [rotate](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate) [transform function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function) conditionally applied on the [orientation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation) [media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) which restricts the element to `landscape` orientation.
+A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property has [rotate](https://www.w3.org/TR/css-transforms/#funcdef-transform-rotate) [transform function](https://www.w3.org/TR/css-transforms/#transform-functions) conditionally applied on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1) which restricts the element to `landscape` orientation.
 
 ```html
 <html lang="en">
@@ -173,7 +176,7 @@ A page where CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/tr
 
 #### Failed Example 2
 
-A page where CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property has [matrix](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix) [transform function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function) conditionally applied on the [orientation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation) [media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) which restricts the element to `portrait` orientation.
+A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property has [matrix](https://www.w3.org/TR/css-transforms/#funcdef-transform-matrix) [transform function](https://www.w3.org/TR/css-transforms/#transform-functions) conditionally applied on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1) which restricts the element to `portrait` orientation.
 
 ```html
 <html lang="en">
@@ -208,7 +211,7 @@ A page where there are CSS styles.
 
 #### Inapplicable Example 2
 
-A page that has no CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property specified.
+A page that has no CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property specified.
 
 ```html
 <html lang="en">
@@ -230,7 +233,7 @@ A page that has no CSS [transform](https://developer.mozilla.org/en-US/docs/Web/
 
 #### Inapplicable Example 3
 
-A page where CSS [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property is applied to an element that is not [visible](#visible).
+A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property is applied to an element that is not [visible](#visible).
 
 ```html
 <html lang="en">

@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - HTML Page has a title",
+      "title": "Report for ACT-R Rule - HTML page has title",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - HTML Page has a title",
+          "siteName": "ACT-R Rule - HTML page has title",
           "siteScope": "https://act-rules.github.io/testcases/2779a5/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

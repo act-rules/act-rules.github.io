@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - HTML lang and xml:lang match",
+      "title": "Report for ACT-R Rule - HTML page lang and xml:lang attributes match",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - HTML lang and xml:lang match",
+          "siteName": "ACT-R Rule - HTML page lang and xml:lang attributes match",
           "siteScope": "https://act-rules.github.io/testcases/5b7ae0/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

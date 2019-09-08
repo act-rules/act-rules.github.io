@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Document title is descriptive",
+      "title": "Report for ACT-R Rule - HTML page title is descriptive",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Document title is descriptive",
+          "siteName": "ACT-R Rule - HTML page title is descriptive",
           "siteScope": "https://act-rules.github.io/testcases/c4a8a4/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

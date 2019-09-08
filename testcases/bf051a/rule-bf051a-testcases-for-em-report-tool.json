@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Validity of HTML Lang attribute",
+      "title": "Report for ACT-R Rule - HTML page language is valid",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Validity of HTML Lang attribute",
+          "siteName": "ACT-R Rule - HTML page language is valid",
           "siteScope": "https://act-rules.github.io/testcases/bf051a/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

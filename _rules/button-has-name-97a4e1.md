@@ -3,7 +3,7 @@ id: 97a4e1
 name: Buttons have an accessible name
 rule_type: atomic
 description: |
-  This rule checks that each `button` element has an accessible name
+  This rule checks that each `button` element has an accessible name.
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true
@@ -20,17 +20,17 @@ authors:
 
 ## Applicability
 
-The rule applies to elements that are [included in the accessibility tree](#included-in-the-accessibility-tree) with the [semantic role](#semantic-role) of `button`, except for `input` elements of `type="image"`.
+The rule applies to elements that are [included in the accessibility tree][] with the [semantic role](#semantic-role) of `button`, except for `input` elements of `type="image"`.
 
 ## Expectation
 
-Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
+Each target element has an [accessible name][] that is not only [whitespace][].
 
-**Note**: `input` elements of type `submit` and `reset` can get their accessible name from a [default text](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset) (work in progress), as well as from a `value` or other attribute.
+**Note**: `input` elements of type `submit` and `reset` can get their [accessible name][] from a [default text](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset) (work in progress), as well as from a `value` or other attribute.
 
 ## Assumptions
 
-- The rule assumes that all buttons are user interface components as defined by WCAG 2.
+- The rule assumes that all buttons are [user interface components as defined by WCAG 2](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components).
 
 ## Accessibility Support
 
@@ -38,10 +38,9 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- [https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
-- [https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=412#qr-ensure-compat-rsv](https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=412#qr-ensure-compat-rsv)
-- [ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used](https://www.w3.org/TR/WCAG20-TECHS/ARIA14.html)
-- [https://www.w3.org/TR/WCAG20-TECHS/ARIA16.html](https://www.w3.org/TR/WCAG20-TECHS/ARIA16.html)
+- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
+- [ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA14)
+- [ARIA16: Using aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA16)
 
 ## Test Cases
 
@@ -57,7 +56,7 @@ Regular button.
 
 #### Passed Example 2
 
-Value attribute as the accessible name.
+Value attribute as the [accessible name][].
 
 ```html
 <input type="submit" value="Submit" />
@@ -65,7 +64,7 @@ Value attribute as the accessible name.
 
 #### Passed Example 3
 
-`aria-label` for the accessible name.
+`aria-label` for the [accessible name][].
 
 ```html
 <button aria-label="My button"></button>
@@ -114,17 +113,17 @@ Off screen elements should be tested.
 </html>
 ```
 
-#### Passed example 8
+#### Passed Example 8
 
-Button has accessible name that is not only whitespace.
+Button has [accessible name][] that is not only [whitespace][].
 
 ```html
 <button>:-)</button>
 ```
 
-#### Passed example 9
+#### Passed Example 9
 
-Input button has an accessible name that comes from the default "reset" text.
+Input button has an [accessible name][] that comes from the default "reset" text.
 
 ```html
 <input type="reset" />
@@ -134,7 +133,7 @@ Input button has an accessible name that comes from the default "reset" text.
 
 #### Failed Example 1
 
-Value attribute does NOT give an accessible name, only for input elements.
+Value attribute does NOT give an [accessible name][], only for input elements.
 
 ```html
 <button type="button" value="read more"></button>
@@ -150,7 +149,7 @@ Span tag with role button with no name.
 
 #### Failed Example 3
 
-Off screen element without an accessible name.
+Off screen element without an [accessible name][].
 
 ```html
 <html>
@@ -167,9 +166,9 @@ Off screen element without an accessible name.
 </html>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
-Button has an accessible name that is only whitespace.
+Button has an [accessible name][] that is only [whitespace][].
 
 ```html
 <button></button>
@@ -182,12 +181,12 @@ Button has an accessible name that is only whitespace.
 Image buttons are tested in a different rule.
 
 ```html
-<input type="image" value="download" />
+<input type="image" value="download" alt="Download" />
 ```
 
 #### Inapplicable Example 2
 
-Not visible in page and not included in the accessibility tree.
+Not [visible](#visible) in page and not [included in the accessibility tree][].
 
 ```html
 <html>
@@ -214,8 +213,12 @@ Inapplicable: role overridden to link for button element.
 
 #### Inapplicable Example 4
 
-Not included in the accessibility tree due to `aria-hidden`.
+Not [included in the accessibility tree][] due to `aria-hidden`.
 
 ```html
 <button aria-hidden="true"></button>
 ```
+
+[accessible name]: #accessible-name 'Definition of accessible name'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[whitespace]: #whitespace 'Definition of whitespace'

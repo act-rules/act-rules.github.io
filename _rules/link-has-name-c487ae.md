@@ -3,7 +3,7 @@ id: c487ae
 name: Links have an accessible name
 rule_type: atomic
 description: |
-  This rule checks that each link has an accessible name
+  This rule checks that each link has an accessible name.
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true
@@ -26,30 +26,34 @@ input_aspects:
 authors:
   - Wilco Fiers
   - Anne Thyme Nørregaard
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'alt-require'
 ---
 
 ## Applicability
 
-The rule applies to any HTML element with the [semantic role](#semantic-role) of `link` that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+The rule applies to any HTML element with the [semantic role](#semantic-role) of `link` that is [included in the accessibility tree][].
 
 ## Expectation
 
-Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
+Each target element has an [accessible name][] that is not only [whitespace][].
 
 ## Assumptions
 
-- The rule assumes that all links are [user interface components](https://www.w3.org/TR/WCAG20/#user-interface-componentdef) as defined by WCAG 2. When the link role is used incorrectly, this assumption may not be true.
+- The rule assumes that all links are [user interface components](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components) as defined by WCAG 2. When the link role is used incorrectly, this assumption may not be true.
 
 ## Accessibility Support
 
-For `area` elements that have a `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on whether the `area` is considered [included in the accessibility tree](#included-in-the-accessibility-tree) or not.
+For `area` elements that have a `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on whether the `area` is considered [included in the accessibility tree][] or not.
 
 ## Background
 
-- [https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=244#navigation-mechanisms-refs](https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=244#navigation-mechanisms-refs)
-- [ARIA7: Using aria-labelledby for link purpose](https://www.w3.org/TR/WCAG20-TECHS/ARIA7.html)
-- [ARIA8: Using aria-label for link purpose](https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html)
-- [F89: Failure of Success Criteria 2.4.4, 2.4.9 and 4.1.2 due to using null alt on an image where the image is the only content in a link](http://www.w3.org/TR/WCAG20-TECHS/F89.html)
+- [Understanding Success Criterion 2.4.4: Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context)
+- [ARIA7: Using aria-labelledby for link purpose](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA7)
+- [ARIA8: Using aria-label for link purpose](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA8)
+- [F89: Failure of Success Criteria 2.4.4, 2.4.9 and 4.1.2 due to not providing an accessible name for an image which is the only content in a link](https://www.w3.org/WAI/WCAG21/Techniques/failures/F89)
 
 ## Test Cases
 
@@ -57,7 +61,7 @@ For `area` elements that have a `href` attribute, but are not nested inside a `m
 
 #### Passed Example 1
 
-`<a>` element with accessible name through content.
+`<a>` element with [accessible name][] through content.
 
 ```html
 <a href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
@@ -65,7 +69,7 @@ For `area` elements that have a `href` attribute, but are not nested inside a `m
 
 #### Passed Example 2
 
-Element with [explicit role](#explicit-role) of link with accessible name through content.
+Element with [explicit role](#explicit-role) of link with [accessible name][] through content.
 
 ```html
 <div role="link">Web Accessibility Initiative (WAI)</div>
@@ -81,7 +85,7 @@ Element with [explicit role](#explicit-role) of link with accessible name throug
 
 #### Passed Example 4
 
-Accessible name for link via `aria-label`
+[accessible name][] for link via `aria-label`
 
 ```html
 <a href="http://www.w3.org/WAI"><img src="#" aria-label="This is a link"/></a>
@@ -113,7 +117,7 @@ Link with both `image` and `text`.
 
 #### Passed Example 8
 
-Accessible name for link via `aria-labelledby`.
+[accessible name][] for link via `aria-labelledby`.
 
 ```html
 <a href="http://www.w3.org/WAI"><img src="#" aria-labelledby="id1"/></a>
@@ -139,9 +143,9 @@ When `link` is off screen.
 </html>
 ```
 
-#### Passed example 10
+#### Passed Example 10
 
-`area` element with `href` attribute has accessible name.
+`area` element with `href` attribute has [accessible name][].
 
 ```html
 <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap" />
@@ -151,9 +155,9 @@ When `link` is off screen.
 </map>
 ```
 
-#### Passed example 11
+#### Passed Example 11
 
-`a` element where accessible name does not only consist of whitespace.
+`a` element where [accessible name][] does not only consist of [whitespace][].
 
 ```html
 <a href="http://www.w3.org/WAI">:-)</a>
@@ -163,7 +167,7 @@ When `link` is off screen.
 
 #### Failed Example 1
 
-Image link without accessible name.
+Image link without [accessible name][].
 
 ```html
 <a href="http://www.w3.org/WAI"><img src="#"/></a>
@@ -171,7 +175,7 @@ Image link without accessible name.
 
 #### Failed Example 2
 
-Image link where image is marked as decorative.
+Image link where image is marked as [decorative](#decorative).
 
 ```html
 <a href="http://www.w3.org/WAI"><img src="#" alt=""/></a>
@@ -212,7 +216,7 @@ Link with image that has empty `aria-labelledby`.
 
 #### Failed Example 7
 
-Non-visible link.
+[Non-visible](#visible) link.
 
 ```html
 <a href="http://www.w3.org/WAI" style="left: -9999px; position: absolute;">
@@ -220,17 +224,17 @@ Non-visible link.
 </a>
 ```
 
-#### Failed example 9
+#### Failed Example 8
 
-Link is completely empty, but still shows up in focus order, so it should have an accessible name.
+Link is completely empty, but still shows up in focus order, so it should have an [accessible name][].
 
 ```html
 <a href="http://www.w3.org/WAI"></a>
 ```
 
-#### Failed example 10
+#### Failed Example 9
 
-`area` element with `href` attribute does not have accessible name.
+`area` element with `href` attribute does not have [accessible name][].
 
 ```html
 <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap" />
@@ -240,9 +244,9 @@ Link is completely empty, but still shows up in focus order, so it should have a
 </map>
 ```
 
-#### Failed example 11
+#### Failed Example 10
 
-`a` element where accessible name through content only consist of whitespace.
+`a` element where [accessible name][] through content only consist of [whitespace][].
 
 ```html
 <a href="http://www.w3.org/WAI"> </a>
@@ -262,7 +266,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 #### Inapplicable Example 2
 
-Not included in the accessibility tree due to `display:none`.
+Not [included in the accessibility tree][] due to `display:none`.
 
 ```html
 <a href="http://www.w3.org/WAI" style="display: none;"><img src="#"/></a>
@@ -270,7 +274,7 @@ Not included in the accessibility tree due to `display:none`.
 
 #### Inapplicable Example 3
 
-Not included in the accessibility tree due to `visibility: hidden`.
+Not [included in the accessibility tree][] due to `visibility: hidden`.
 
 ```html
 <a href="http://www.w3.org/WAI" style="visibility: hidden;">Some text</a>
@@ -278,7 +282,7 @@ Not included in the accessibility tree due to `visibility: hidden`.
 
 #### Inapplicable Example 4
 
-Not included in the accessibility tree due to `aria-hidden="true"`.
+Not [included in the accessibility tree][] due to `aria-hidden="true"`.
 
 ```html
 <a aria-hidden="true" href="http://www.w3.org/WAI">
@@ -286,10 +290,14 @@ Not included in the accessibility tree due to `aria-hidden="true"`.
 </a>
 ```
 
-#### Inapplicable example 5
+#### Inapplicable Example 5
 
 `area` element without `href` attribute does not have role of `link`.
 
 ```html
 <area shape="rect" coords="0,0,82,126" />
 ```
+
+[accessible name]: #accessible-name 'Definition of accessible name'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[whitespace]: #whitespace 'Definition of whitespace'

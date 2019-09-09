@@ -5,17 +5,17 @@ rule_type: atomic
 description: |
   This rule checks that page content is not restricted to either `landscape` or `portrait` orientation using CSS transform property.
 accessibility_requirements:
- wcag20:1.3.4: # Orientation
-  forConformance: true
-  failed: not satisfied
-  passed: further testing needed
-  inapplicable: further testing needed
+  wcag20:1.3.4: # Orientation
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
-- DOM Tree
-- CSS Styling
+  - DOM Tree
+  - CSS Styling
 authors:
-- Jey Nandakumar
-- Audrey Maniez
+  - Jey Nandakumar
+  - Audrey Maniez
 ---
 
 ## Applicability
@@ -34,7 +34,7 @@ that are applied conditionally on the [orientation](https://www.w3.org/TR/css3-m
 
 **Note:** These specific [transformation functions](https://www.w3.org/TR/css-transforms/#transform-functions) are of interest to this rule as they have the potential to affect the [rotation](https://drafts.csswg.org/css-transforms-2/#Rotate3dDefined) of a given element.
 
-## Expectation 
+## Expectation
 
 The target element is neither rotated clockwise nor counter clockwise around the Z-axis at an angle corresponding to 90 degrees relative from the position of the element in `landscape` orientation to the position of the element in `portrait` orientation, and vice versa.
 
@@ -45,7 +45,7 @@ The target element is neither rotated clockwise nor counter clockwise around the
 
 ## Accessibility Support
 
-*There are no major accessibility support issues known for this rule.*
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 
@@ -54,7 +54,7 @@ The target element is neither rotated clockwise nor counter clockwise around the
 - [CSS Transforms Module Level 2](https://drafts.csswg.org/css-transforms-2)
 - [CSS3 Media Queries](https://www.w3.org/TR/css3-mediaqueries/)
 - [Managing screen orientation](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
-- [MDN Orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation)
+- [Orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation)
 - [The Transform Rendering Model](https://drafts.csswg.org/css-transforms/#transform-rendering)
 
 ## Test Cases
@@ -67,20 +67,20 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 
 ```html
 <html lang="en">
-  <head>
-    <style>
-      @media (orientation: portrait) {
-        body {
-          transform: translateX(100px);
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      Page Content
-    </main>
-  </body>
+	<head>
+		<style>
+			@media (orientation: portrait) {
+				body {
+					transform: translateX(100px);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			Page Content
+		</main>
+	</body>
 </html>
 ```
 
@@ -90,20 +90,20 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 
 ```html
 <html lang="en">
-  <head>
-    <style>
-      @media (orientation: portrait) {
-        html {
-          transform: rotate(1turn)
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      Page Content
-    </main>
-  </body>
+	<head>
+		<style>
+			@media (orientation: portrait) {
+				html {
+					transform: rotate(1turn);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			Page Content
+		</main>
+	</body>
 </html>
 ```
 
@@ -113,20 +113,20 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 
 ```html
 <html lang="en">
-  <head>
-    <style>
-      @media (orientation: portrait) {
-        html {
-          transform: matrix(1, -1.22465e-15, 1.22465e-15, 1, 0, 0);
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      Page Content
-    </main>
-  </body>
+	<head>
+		<style>
+			@media (orientation: portrait) {
+				html {
+					transform: matrix(1, -1.22465e-15, 1.22465e-15, 1, 0, 0);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			Page Content
+		</main>
+	</body>
 </html>
 ```
 
@@ -136,26 +136,25 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 
 ```html
 <html lang="en">
-  <head>
-    <style>
-      body {
-        transform: rotate(90deg);
-      }
-      @media (orientation: portrait) {
-        body {
-          transform: rotate(90deg);
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      Page Content
-    </main>
-  </body>
+	<head>
+		<style>
+			body {
+				transform: rotate(90deg);
+			}
+			@media (orientation: portrait) {
+				body {
+					transform: rotate(90deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			Page Content
+		</main>
+	</body>
 </html>
 ```
-
 
 ### Failed
 
@@ -165,12 +164,12 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 
 ```html
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="../test-assets/b33eff/style.css">
-  </head>
-  <body>
-      Page Content
-  </body>
+	<head>
+		<link rel="stylesheet" href="../test-assets/b33eff/style.css" />
+	</head>
+	<body>
+		Page Content
+	</body>
 </html>
 ```
 
@@ -180,18 +179,18 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 
 ```html
 <html lang="en">
-  <head>
-    <style>
-      @media (orientation: landscape) {
-        body {
-          transform: matrix(-1.83697e-16, -1, 1, -1.83697e-16, 0, 0);
-        }
-      }
-    </style>
-  </head>
-  <body>
-      Page Content
-  </body>
+	<head>
+		<style>
+			@media (orientation: landscape) {
+				body {
+					transform: matrix(-1.83697e-16, -1, 1, -1.83697e-16, 0, 0);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		Page Content
+	</body>
 </html>
 ```
 
@@ -203,9 +202,9 @@ A page where there are CSS styles.
 
 ```html
 <html lang="en">
-  <body>
-    I am a page with no styles
-  </body>
+	<body>
+		I am a page with no styles
+	</body>
 </html>
 ```
 
@@ -215,19 +214,19 @@ A page that has no CSS [transform](https://www.w3.org/TR/css-transforms/#propdef
 
 ```html
 <html lang="en">
-  <head>
-    <style>
-      html {
-        font-size: 22px;
-      }
-      @media (min-width: 30em) { 
-        font-size: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    Page Content
-  </body>
+	<head>
+		<style>
+			html {
+				font-size: 22px;
+			}
+			@media (min-width: 30em) {
+				font-size: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		Page Content
+	</body>
 </html>
 ```
 
@@ -237,19 +236,19 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 
 ```html
 <html lang="en">
-  <head>
-    <style>
-      @media (orientation: lanscape) {
-        body {
-          transform: rotate(270deg);
-        }
-      }
-    </style>
-  </head>
-  <body style="display:none;">
-    <main>
-      Page Content
-    </main>
-  </body>
+	<head>
+		<style>
+			@media (orientation: lanscape) {
+				body {
+					transform: rotate(270deg);
+				}
+			}
+		</style>
+	</head>
+	<body style="display:none;">
+		<main>
+			Page Content
+		</main>
+	</body>
 </html>
 ```

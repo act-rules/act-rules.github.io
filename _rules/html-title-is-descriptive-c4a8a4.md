@@ -30,6 +30,8 @@ This rule applies to the first HTML `title` element that
 
 **Note**: The `title` elements of embedded documents, such as those in `iframe` or `object` elements, are not applicable because those are not web pages according to the definition in WCAG.
 
+**Note**: The [HTML 5.2 specification](https://www.w3.org/TR/html52/document-metadata.html#the-title-element) requires that a document only has one `title` element, and that it is a child of the `head` element of a document. However, HTMl 5.2 also describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG.
+
 ## Expectation
 
 The target element describes the topic or purpose of the overall content of the [document](https://dom.spec.whatwg.org/#concept-document).

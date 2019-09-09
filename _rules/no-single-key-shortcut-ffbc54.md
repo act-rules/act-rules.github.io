@@ -30,8 +30,9 @@ The rule applies to any [HTML document](https://dom.spec.whatwg.org/#concept-doc
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [Rule name](relative_link_to_rule.html)
-- ...
+- [Keyboard shortcut can be turned off](https://act-rules.github.io/rules/670a30)
+- [Keyboard shortcut can be remapped](https://act-rules.github.io/rules/aa8b52) 
+- [Keyboard shortcut is only active when component has focus](https://act-rules.github.io/rules/1e9941)
 
 ## Assumptions
 

@@ -45,7 +45,7 @@ Success criterion 1.4.3 has exceptions for "incidental" text, which includes ina
 
 Success criterion 1.4.3 also has an exception for logos and brand names. Since logos and brand names are usually displayed through images to ensure correct rendering, this rule does not take logos or brand names into consideration. If a logo or brand name is included using text nodes, this rule may not produce the rule may produce incorrect results.
 
-## Accessibility support
+## Accessibility Support
 
 Different browsers have different levels of support for CSS. This can cause contrast issues in one browser that do not appear in another. Because of that, this rule can produce different results depending on the browser that is used.
 
@@ -143,7 +143,7 @@ Text node that does not express anything in human language
 </p>
 ```
 
-### Failed Examples
+### Failed
 
 #### Failed Example 1
 
@@ -248,15 +248,15 @@ Text node is contained in a native button
 <button>My button!</button>
 ```
 
-#### Inapplicable Example 5
+#### Inapplicable Example 6
 
-Text node is contained in a native button
+Text node is contained in a ARIA button
 
 ```html
 <div role="button">My button!</div>
 ```
 
-#### Inapplicable Example 6
+#### Inapplicable Example 7
 
 Text node is in a label of a disabled native widget
 
@@ -267,7 +267,7 @@ Text node is in a label of a disabled native widget
 </label>
 ```
 
-#### Inapplicable Example 7
+#### Inapplicable Example 8
 
 Text node is in a label of a disabled ARIA widget
 
@@ -285,7 +285,7 @@ Text node is in a label of a disabled ARIA widget
 </div>
 ```
 
-#### Inapplicable Example 8
+#### Inapplicable Example 9
 
 Text node is in a disabled fieldset
 
@@ -298,7 +298,7 @@ Text node is in a disabled fieldset
 </fieldset>
 ```
 
-#### Inapplicable Example 9
+#### Inapplicable Example 10
 
 Text node is in a disabled ARIA group
 

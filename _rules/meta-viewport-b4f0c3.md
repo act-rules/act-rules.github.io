@@ -25,7 +25,7 @@ The rule applies to each [`<meta>`](https://www.w3.org/TR/html52/document-metada
 
 The [`content`](https://www.w3.org/TR/html52/document-metadata.html#dom-htmlmetaelement-content) attribute, whose value is mapped to a list of property/value pairs in a user-agent specific manner, does not:
 
-- specify the property `user-scalable` with a value of `yes`; nor
+- specify the property `user-scalable` with a value of `no`; nor
 - specify the property `maximum-scale` with a value of less than 2
 
 **Note:** For Safari on the iPhone, the content attribute is mapped to property/value pairs according to the following algorithm: https://drafts.csswg.org/css-device-adapt/#parsing-algorithm

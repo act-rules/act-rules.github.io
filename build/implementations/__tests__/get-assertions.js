@@ -6,7 +6,7 @@ describe(`getAssertions`, () => {
 
 	it('returns assertions from framed reports', async () => {
 		const framedReport = await getFramedReport(
-			`https://raw.githubusercontent.com/w3c/earl/master/earl-reports/alfa-report.json`
+			`https://raw.githubusercontent.com/act-rules/act-rules-implementation-alfa/master/report.json`
 		)
 		const assertions = getAssertions(framedReport)
 		expect(assertions.length).toBeGreaterThan(0)

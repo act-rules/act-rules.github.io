@@ -20,15 +20,19 @@ authors:
   - Brian Bors
   - John Hicks
   - Rafal Charlampowicz
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'tag-pair'
 ---
 
 ## Applicability
 
-The rule applies to any [non-streaming](#non-streaming-media-element) `video` element [visible](#visible), where the video doesn't contain audio.
+The rule applies to any [non-streaming](#non-streaming-media-element) `video` element [visible][], where the video doesn't contain audio.
 
 ## Expectation
 
-For each test target, the outcome of at least one of the following rules is passed:
+For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
 - [Video-Only As A Media Alternative For Text](https://act-rules.github.io/rules/fd26cf)
 - [Video Only Element Has Description Track](https://act-rules.github.io/rules/ac7dc6)
@@ -150,7 +154,7 @@ A silent video element with a link to an incorrect text transcript on a differen
   <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</p>
+<a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</a>
 ```
 
 #### Failed Example 4
@@ -180,16 +184,12 @@ A video element with audio.
 	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
 	compatibility is described in WCAG. See the video below to watch the same information again in video form.
 </p>
-<video
-	data-rule-target
-	src="../test-assets/perspective-video/perspective-video.mp4"
-	controls
-></video>
+<video data-rule-target src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 #### Inapplicable Example 2
 
-A video only element that is not visible on the page.
+A video only element that is not [visible][].
 
 ```html
 <video controls style="display: none;">
@@ -198,3 +198,5 @@ A video only element that is not visible on the page.
 	<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
 </video>
 ```
+
+[visible]: #visible 'Definition of visible'

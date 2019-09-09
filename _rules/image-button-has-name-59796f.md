@@ -20,17 +20,21 @@ input_aspects: # Remove what is not applicable
   - CSS Styling
 authors:
   - Anne Thyme Nørregaard
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'alt-require'
 ---
 
 ## Applicability
 
 The rule applies to any HTML `input` element with a `type` attribute in the `Image Button` state, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
-**Note:** The specification of the [`type`](https://www.w3.org/TR/html/sec-forms.html#element-attrdef-input-type) attribute describes in detail how to map the value of the attribute to its corresponding state.
+**Note:** The specification of the [`type`](https://html.spec.whatwg.org/#states-of-the-type-attribute) attribute describes in detail how to map the value of the attribute to its corresponding state.
 
 ## Expectation
 
-Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
+Each target element has an [accessible name][] that is not only [whitespace][].
 
 ## Assumptions
 
@@ -38,7 +42,7 @@ Each target element has an [accessible name](#accessible-name) that is not only 
 
 ## Accessibility Support
 
-There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name](#accessible-name).
+There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name][].
 
 ## Background
 
@@ -50,7 +54,7 @@ There is a known combination of a popular browser and assistive technology that 
 
 #### Passed Example 1
 
-Image button element with accessible name through `alt` attribute
+Image button element with [accessible name][] through `alt` attribute
 
 ```html
 <input type="image" name="submit" src="button.gif" alt="Submit" />
@@ -58,7 +62,7 @@ Image button element with accessible name through `alt` attribute
 
 #### Passed Example 2
 
-Image button element with accessible name through `aria-label`
+Image button element with [accessible name][] through `aria-label`
 
 ```html
 <input type="image" name="submit" src="button.gif" aria-label="Submit" />
@@ -66,7 +70,7 @@ Image button element with accessible name through `aria-label`
 
 #### Passed Example 3
 
-Image button element with accessible name through `title` attribute
+Image button element with [accessible name][] through `title` attribute
 
 ```html
 <input type="image" name="submit" src="button.gif" title="Submit" />
@@ -74,7 +78,7 @@ Image button element with accessible name through `title` attribute
 
 #### Passed Example 4
 
-Image button element with accessible name through `aria-labelledby`
+Image button element with [accessible name][] through `aria-labelledby`
 
 ```html
 <input type="image" name="submit" src="button.gif" aria-labelledby="id1" />
@@ -83,7 +87,7 @@ Image button element with accessible name through `aria-labelledby`
 
 #### Passed Example 5
 
-Accessible name is not only whitespace.
+[accessible name][] is not only [whitespace][].
 
 ```html
 <input type="image" name="submit" src="button.gif" alt=":-)" />
@@ -91,7 +95,7 @@ Accessible name is not only whitespace.
 
 #### Passed Example 6
 
-Image button element with accessible name through `alt` attribute
+Image button element with [accessible name][] through `alt` attribute
 
 ```html
 <input type="image" name="submit" src="button.gif" alt="123" />
@@ -101,7 +105,7 @@ Image button element with accessible name through `alt` attribute
 
 #### Failed Example 1
 
-Image button element with no attributes to give accessible name
+Image button element with no attributes to give [accessible name][]
 
 ```html
 <input type="image" name="submit" src="button.gif" />
@@ -125,7 +129,7 @@ Image button with aria-labelledby that does not reference an id that exists in t
 
 #### Failed Example 4
 
-Accessible name is only whitespace.
+[accessible name][] is only [whitespace][].
 
 ```html
 <input type="image" name="submit" src="button.gif" alt=" " />
@@ -146,7 +150,7 @@ HTML `button` element is not an image button
 HTML `input` element with type with a `type` attribute in the `Button` state is not an image button
 
 ```html
-<input type="button">My button</input>
+<input type="button" value="My button" />
 ```
 
 #### Inapplicable Example 3
@@ -172,3 +176,6 @@ Image button is not included in the accessibility tree
 ```html
 <input type="image" name="submit" src="button.gif" alt="Submit" aria-hidden="true" />
 ```
+
+[accessible name]: #accessible-name 'Definition of accessible name'
+[whitespace]: #whitespace 'Definition of whitespace'

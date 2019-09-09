@@ -148,5 +148,5 @@ Element does not list required states and properties (`aria-controls` is require
 <div role="combobox" style="display:none;"></div>
 ```
 
-[explicit semantic role]: #explicit-role "Definition of explicit semantic role"
-[implicit semantic role]: #implicit-role "Definition of implicit semantic role"
+[explicit semantic role]: #explicit-role 'Definition of explicit semantic role'
+[implicit semantic role]: #implicit-role 'Definition of implicit semantic role'

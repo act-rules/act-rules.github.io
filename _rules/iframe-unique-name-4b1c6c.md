@@ -279,5 +279,5 @@ Does not apply to `iframe` elements that are not [included in the accessibility 
 </iframe>
 ```
 
-[accessible name]: #accessible-name "Definition of accessible name"
-[included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"
+[accessible name]: #accessible-name 'Definition of accessible name'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

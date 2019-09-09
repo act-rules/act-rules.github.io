@@ -126,4 +126,4 @@ A video element that is not [visible][].
 <video src="../test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>
 ```
 
-[visible]: #visible "Definition of visible"
+[visible]: #visible 'Definition of visible'

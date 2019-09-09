@@ -167,5 +167,5 @@ Audio with hidden controls.
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls style="display: none;"></audio>
 ```
 
-[included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"
-[visible]: #visible "Definition of visible"
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[visible]: #visible 'Definition of visible'

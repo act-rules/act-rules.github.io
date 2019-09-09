@@ -1,10 +1,10 @@
 ---
 id: afw4f7
-name: Text nodes have minimal contrast
+name: Text node has minimal contrast
 rule_type: atomic
 
 description: |
-  This rule checks that text nodes have minimal color contrast with its background
+  This rule checks that every text node has minimal color contrast with its background
 
 accessibility_requirements:
   wcag20:1.4.3: # Contrast (Minimum)
@@ -16,6 +16,7 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
+  - Language
 
 authors:
   - Brian Bors
@@ -25,25 +26,25 @@ authors:
 
 ## Applicability
 
-Any text node that is [visible](#visible) and a child of an HTML element, except the text node is a descendent of an element that:
+Any [text node](https://dom.spec.whatwg.org/#text) that is [visible](#visible) and a [child](https://dom.spec.whatwg.org/#concept-tree-child) (in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree)) of an HTML element, except if the [text node](https://dom.spec.whatwg.org/#text) is a [descendent](https://dom.spec.whatwg.org/#concept-shadow-including-descendant) of an element that:
 
 - Has a [semantic role](#semantic-role) that inherits from [widget](https://www.w3.org/TR/wai-aria-1.1/#widget)
-- Is used in the accessible name of a widget that is [disabled](#disabled) (i.e. It is part of the label)
-- Has a [semantic role](#semantic-role) of [group](https://www.w3.org/TR/wai-aria-1.1/#group) with that is [disabled](#disabled)
+- Is used in the [accessible name](#accessible-name) of a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget) that is [disabled](#disabled) (i.e. It is part of the label)
+- Has a [semantic role](#semantic-role) of [group](https://www.w3.org/TR/wai-aria-1.1/#group) that is [disabled](#disabled)
 
 **Note**: When the text color is the same as the background color, the element is not visible, and so is not applicable.
 
 ## Expectation
 
-For each test target, the [highest possible contrast](#highest-possible-contrast) between the [foreground colors](#foreground-colors-of-text) and [background colors](#background-colors-of-text) is at least 4.5:1 (or 3.0:1 for [larger scale text](#large-scale-text)), except if the content of the text node is [decorative](#decorative), or doesn't express anything in [human language](https://www.w3.org/TR/WCAG21/#dfn-human-language-s).
+For each test target, the [highest possible contrast](#highest-possible-contrast) between the [foreground colors](#foreground-colors-of-text) and [background colors](#background-colors-of-text) is at least 4.5:1 or 3.0:1 for [larger scale text](#large-scale-text), except if the [text node](https://dom.spec.whatwg.org/#text) is [decorative](#decorative), or doesn't express anything in [human language](https://www.w3.org/TR/WCAG21/#dfn-human-language-s).
 
-**Note**: Passing this rule does not mean that the text node has sufficient color contrast. White text on a black and white image passes this rule, whether or not that text is legible depends on the how much of the white words are positioned on the black parts of the image. This requires further testing.
+**Note**: Passing this rule does not mean that the [text node](https://dom.spec.whatwg.org/#text) has sufficient color contrast. White text on a black and white image passes this rule, whether or not that text is legible depends on the how much of the white words are positioned on the black parts of the image. This requires further testing.
 
 ## Assumptions
 
-Success criterion 1.4.3 has exceptions for "incidental" text, which includes inactive user interface components and decorative texts. The rule assumes that text nodes should be ignored are hidden from assistive technologies. If this isn't the case, the rule may produce incorrect results.
+Success criterion 1.4.3 has exceptions for "incidental" text, which includes inactive user interface components and decorative texts. The rule assumes that [text nodes](https://dom.spec.whatwg.org/#text) should be ignored are hidden from assistive technologies. If this isn't the case, the rule may produce incorrect results.
 
-Success criterion 1.4.3 also has an exception for logos and brand names. Since logos and brand names are usually displayed through images to ensure correct rendering, this rule does not take logos or brand names into consideration. If a logo or brand name is included using text nodes, this rule may not produce the rule may produce incorrect results.
+Success criterion 1.4.3 also has an exception for logos and brand names. Since logos and brand names are usually displayed through images to ensure correct rendering, this rule does not take logos or brand names into consideration. If a logo or brand name is included using [text nodes](https://dom.spec.whatwg.org/#text), this rule may not produce the rule may produce incorrect results.
 
 ## Accessibility Support
 
@@ -62,31 +63,31 @@ Different browsers have different levels of support for CSS. This can cause cont
 
 #### Passed Example 1
 
-Black text on a white background
+Black [text node](https://dom.spec.whatwg.org/#text) on a white background.
 
 ```html
-<p style="color: #333; background: #fff;">
+<p style="color: #333; background: #FFF;">
 	Some text in English
 </p>
 ```
 
 #### Passed Example 2
 
-Black text on a partially white gradient background
+Black [text node](https://dom.spec.whatwg.org/#text) on a partially white gradient background.
 
 ```html
-<p style="color: #333; background: linear-gradient(to right, #fff, #00F);">
+<p style="color: #333; background: linear-gradient(to right, #FFF, #00F);">
 	Some text in English
 </p>
 ```
 
 #### Passed Example 3
 
-White text on a partially black background image
+Light [text node](https://dom.spec.whatwg.org/#text) on a partially black background image.
 
 ```html
 <p
-	style="color: #ccc; height:50px; padding-top:25px; background: black no-repeat -20px -20px url('../test-assets/black-hole.jpeg');"
+	style="color: #CCC; height:50px; padding-top:25px; background: #000 no-repeat -20px -20px url('../test-assets/black-hole.jpeg');"
 >
 	Black hole sun
 </p>
@@ -94,60 +95,72 @@ White text on a partially black background image
 
 #### Passed Example 4
 
-Text that passes because of a text shadow
+[text node](https://dom.spec.whatwg.org/#text) that passes because of a text shadow.
 
 ```html
-<p style="color: black; background: #737373; text-shadow: white 0 0 3px">
+<p style="color: #000; background: #737373; text-shadow: white 0 0 3px">
 	Some text in English
 </p>
 ```
 
 #### Passed Example 5
 
-18 point text with a 3:1 contrast
+18 point text with a 3:1 contrast.
 
 ```html
-<p style="color: black; font-size:18pt; background: #666;">
+<p style="color: #000; font-size:18pt; background: #666;">
 	Some text in English
 </p>
 ```
 
 #### Passed Example 6
 
-14 point bold text with a 3:1 contrast
+14 point bold text with a 3:1 contrast.
 
 ```html
-<p style="color: black; font-size:14pt; font-weight:700; background: #666;">
+<p style="color: #000; font-size:14pt; font-weight:700; background: #666;">
 	Some text in English
 </p>
 ```
 
 #### Passed Example 7
 
-Decorative text with insufficient contrast
+Decorative text with insufficient contrast.
 
 ```html
 <p>Helvetica is a widely used sans-serif typeface developed in 1957 by Max Miedinger and Eduard Hoffmann.</p>
-<p style="font-family: helvetica; background: #eee; color: #777;" aria-hidden="true">
+<p style="font-family: helvetica; background: #EEE; color: #777;" aria-hidden="true">
 	The quick brown fox jumps over the lazy dog.
 </p>
 ```
 
 #### Passed Example 8
 
-Text node that does not express anything in human language
+Text that does not express anything in human language.
 
 ```html
-<p style="color: black; background: #666;">
+<p style="color: #000; background: #666;">
 	----=====++++++++___________***********%%%%%%%%%%%±±±±@@@@@@@@
 </p>
+```
+
+#### Passed Example 9
+
+Text that is in a shadow DOM tree with sufficient contrast.
+
+```html
+<p style="color: #333; background: #fff;" id="p"></p>
+<script>
+  const shadowRoot = document.getElementById('p').attachShadow({ mode: 'open' })
+  shadowRoot.textContent = 'Some text in English'
+</script>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-Text with insufficient contrast on a plain background
+Text with insufficient contrast on a plain background.
 
 ```html
 <p style="color: #AAA; background: white;">
@@ -157,17 +170,17 @@ Text with insufficient contrast on a plain background
 
 #### Failed Example 2
 
-Text with insufficient contrast on a gradient background
+Text with insufficient contrast on a gradient background.
 
 ```html
-<p style="color: #AAA; background: linear-gradient(to right, white, blue);">
+<p style="color: #AAA; background: linear-gradient(to right, #FFF, #00F);">
 	Some text in English
 </p>
 ```
 
 #### Failed Example 3
 
-Text with insufficient contrast on a background image
+Text with insufficient contrast on a background image.
 
 ```html
 <p
@@ -179,7 +192,7 @@ Text with insufficient contrast on a background image
 
 #### Failed Example 4
 
-Text that fails because of alpha transparancy
+Text that fails because of alpha transparancy.
 
 ```html
 <p style="color: rgba(0,0,0,.3); background: #FFF">
@@ -189,21 +202,33 @@ Text that fails because of alpha transparancy
 
 #### Failed Example 5
 
-Text that fails because of CSS transparent
+Text that fails because of CSS transparent.
 
 ```html
 <div style="background: #FFF">
-	<p style="color: black; opacity: .3">
+	<p style="color: #000; opacity: .3">
 		Some text in English
 	</p>
 </div>
+```
+
+#### Passed Example 6
+
+Text that is in a shadow DOM tree with insufficient contrast.
+
+```html
+<p style="color: #aaa; background: #fff;" id="p"></p>
+<script>
+  const shadowRoot = document.getElementById('p').attachShadow({ mode: 'open' })
+  shadowRoot.textContent = 'Some text in English'
+</script>
 ```
 
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-Invisible text nodes
+Invisible text.
 
 ```html
 <p style="display: none">Some invisible text in English</p>
@@ -211,7 +236,7 @@ Invisible text nodes
 
 #### Inapplicable Example 2
 
-Text with the same foreground and background colors
+Text with the same foreground and background colors.
 
 ```html
 <p style="color: white; background: white;">Some white on white text in English</p>
@@ -219,7 +244,7 @@ Text with the same foreground and background colors
 
 #### Inapplicable Example 3
 
-Text not a child of an HTML element
+Text not a child of an HTML element.
 
 ```html
 <svg>
@@ -229,12 +254,12 @@ Text not a child of an HTML element
 
 #### Inapplicable Example 4
 
-Not a text node but an image
+Not a [text node](https://dom.spec.whatwg.org/#text) but an image.
 
 ```html
 <p>
 	<img
-		scr="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwiV_vr3ytLjAhUE_aQKHV50CQ4QjRx6BAgBEAU&url=http%3A%2F%2Fwww.picpedia.org%2Fhighway-signs%2Fe%2Fexample.html&psig=AOvVaw37VJ_gcc-PJGGwZc_TqYyw&ust=1564230493939039"
+		scr="../test-assets/example.png"
 		alt="example"
 	/>
 </p>
@@ -242,7 +267,7 @@ Not a text node but an image
 
 #### Inapplicable Example 5
 
-Text node is contained in a native button
+Text is contained in a native button.
 
 ```html
 <button>My button!</button>
@@ -250,7 +275,7 @@ Text node is contained in a native button
 
 #### Inapplicable Example 6
 
-Text node is contained in a ARIA button
+Text is contained in a ARIA button.
 
 ```html
 <div role="button">My button!</div>
@@ -258,7 +283,7 @@ Text node is contained in a ARIA button
 
 #### Inapplicable Example 7
 
-Text node is in a label of a disabled native widget
+Text is in a label of a disabled native widget.
 
 ```html
 <label style="color:#888; background: white;">
@@ -269,7 +294,7 @@ Text node is in a label of a disabled native widget
 
 #### Inapplicable Example 8
 
-Text node is in a label of a disabled ARIA widget
+Text is in a label of a disabled ARIA widget.
 
 ```html
 <label id="my_pets_name" style="color:#888; background: white;">
@@ -287,7 +312,7 @@ Text node is in a label of a disabled ARIA widget
 
 #### Inapplicable Example 9
 
-Text node is in a disabled fieldset
+Text is in a disabled fieldset.
 
 ```html
 <fieldset disabled style="color:#888; background: white;">
@@ -300,7 +325,7 @@ Text node is in a disabled fieldset
 
 #### Inapplicable Example 10
 
-Text node is in a disabled ARIA group
+Text is in a disabled ARIA group.
 
 ```html
 <div role="group" aria-disabled="true" style="color:#888; background: white;">

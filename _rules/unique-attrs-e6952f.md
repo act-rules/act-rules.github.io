@@ -15,6 +15,10 @@ input_aspects:
 authors:
   - Wilco Fiers
   - Emma Pratt Richens
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'attr-no-duplication'
 ---
 
 ## Applicability
@@ -37,7 +41,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- - [H94: Ensuring that elements do not contain duplicate attributes](https://www.w3.org/TR/WCAG20-TECHS/H94.html)
+- [H94: Ensuring that elements do not contain duplicate attributes](https://www.w3.org/WAI/WCAG21/Techniques/html/H94)
 
 ## Test Cases
 

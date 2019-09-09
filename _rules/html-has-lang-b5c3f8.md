@@ -1,9 +1,9 @@
 ---
 id: b5c3f8
-name: HTML has lang attribute
+name: HTML page has lang attribute
 rule_type: atomic
 description: |
-  This rule checks that the `html` element has a non-empty `lang` or `xml:lang` attribute.
+  This rule checks that an HTML page has a non-empty `lang` or `xml:lang` attribute.
 accessibility_requirements:
   wcag20:3.1.1: # Language of Page (A)
     forConformance: true
@@ -19,11 +19,13 @@ authors:
 
 ## Applicability
 
-The root element of the [page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element.
+The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element.
+
+**Note**: Documents embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not web pages according to the definition in WCAG.
 
 ## Expectation
 
-The test target has a `lang` or `xml:lang` attribute that is not empty ("").
+Each test target has a `lang` or `xml:lang` attribute that is not empty ("").
 
 **Note**: HTML5 recommends using `lang` instead of `xml:lang`. This is not known to impact accessibility, which is why use of both is permitted by this rule.
 
@@ -37,11 +39,10 @@ There are known combinations of a popular operating system with browsers and ass
 
 ## Background
 
-- [https://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H57](https://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H57)
-- [https://www.ietf.org/rfc/bcp/bcp47.txt](https://www.ietf.org/rfc/bcp/bcp47.txt)
-- [https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang)
-- [https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/xml:lang](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/xml:lang)
-- [https://www.w3.org/TR/WCAG20-TECHS/H57.html](https://www.w3.org/TR/WCAG20-TECHS/H57.html)
+- [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG21/Techniques/html/H57)
+- [BCP 47: Tags for Identifying Languages](https://www.ietf.org/rfc/bcp/bcp47.txt)
+- [MDN: `lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang)
+- [MDN: `xml:lang` attribute](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/xml:lang)
 
 ## Test Cases
 
@@ -103,7 +104,7 @@ The `xml:lang` attribute specifies a value that is not empty (""). The rule does
 <html xml:lang="xyz"></html>
 ```
 
-#### Passed example 8
+#### Passed Example 8
 
 The `xml:lang` attribute specifies a value that is not empty (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
 
@@ -111,7 +112,7 @@ The `xml:lang` attribute specifies a value that is not empty (""). The rule does
 <html xml:lang="123"></html>
 ```
 
-#### Passed example 9
+#### Passed Example 9
 
 The `xml:lang` attribute specifies a value that is not empty (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
 
@@ -119,7 +120,7 @@ The `xml:lang` attribute specifies a value that is not empty (""). The rule does
 <html xml:lang="#!"></html>
 ```
 
-#### Passed example 9
+#### Passed Example 10
 
 The `xml:lang` attribute specifies a value that is not empty (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
 

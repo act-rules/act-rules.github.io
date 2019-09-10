@@ -1583,23 +1583,6 @@
       }
     },
     {
-      "testcaseId": "151c29fabfa2e44b127a32088b3fcb8695652936",
-      "url": "https://act-rules.github.io/testcases/73f2c2/151c29fabfa2e44b127a32088b3fcb8695652936.html",
-      "relativePath": "testcases/73f2c2/151c29fabfa2e44b127a32088b3fcb8695652936.html",
-      "expected": "failed",
-      "ruleId": "73f2c2",
-      "ruleName": "Autocomplete valid",
-      "rulePage": "https://act-rules.github.io/rules/73f2c2",
-      "ruleAccessibilityRequirements": {
-        "wcag21:1.3.5": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
       "testcaseId": "a69117acb0cdbbeadafdee7677feeb4499889cd6",
       "url": "https://act-rules.github.io/testcases/73f2c2/a69117acb0cdbbeadafdee7677feeb4499889cd6.html",
       "relativePath": "testcases/73f2c2/a69117acb0cdbbeadafdee7677feeb4499889cd6.html",
@@ -1756,6 +1739,23 @@
       "testcaseId": "14d6eeffc9cd28e3eed213a61d272e081fc5328f",
       "url": "https://act-rules.github.io/testcases/73f2c2/14d6eeffc9cd28e3eed213a61d272e081fc5328f.html",
       "relativePath": "testcases/73f2c2/14d6eeffc9cd28e3eed213a61d272e081fc5328f.html",
+      "expected": "inapplicable",
+      "ruleId": "73f2c2",
+      "ruleName": "Autocomplete valid",
+      "rulePage": "https://act-rules.github.io/rules/73f2c2",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.3.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "151c29fabfa2e44b127a32088b3fcb8695652936",
+      "url": "https://act-rules.github.io/testcases/73f2c2/151c29fabfa2e44b127a32088b3fcb8695652936.html",
+      "relativePath": "testcases/73f2c2/151c29fabfa2e44b127a32088b3fcb8695652936.html",
       "expected": "inapplicable",
       "ruleId": "73f2c2",
       "ruleName": "Autocomplete valid",

@@ -27,9 +27,9 @@ htmlHintIgnore:
 
 This rule applies to any set of any two or more HTML or SVG elements which
 
+- have the [semantic role][] of `link`, or a role that inherits from the `link` role; and
 - are inside the [flat trees][flat tree] (work in progress) of one or more [documents][document] of the same [set of browsing context related documents][]; and
 - are [included in the accessibility tree][] of their respective [document][]; and
-- have the [semantic role][] of `link`, or a role that inherits from the `link` role; and
 - that have [matching][] [accessible names][accessible name] that do not only consist of [whitespace](#whitespace).
 
 **Note:** The test target for this rule is the full set of link elements that share the same [matching][] [accessible name][].

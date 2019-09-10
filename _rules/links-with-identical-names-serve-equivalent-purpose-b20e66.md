@@ -620,6 +620,6 @@ all the time.
 [node]: https://dom.spec.whatwg.org/#concept-node 'Definition of node'
 [same resource]: #same-resource 'Definition of same resource'
 [semantic role]: #semantic-role 'Definition of semantic role'
-[set of browsing context related nodes]: #browsing-context-related-documents 'Definition of set of browsing context related documents'
+[set of browsing context related nodes]: #browsing-context-related-nodes 'Definition of set of browsing context related documents'
 [shadow tree]: https://dom.spec.whatwg.org/#shadow-tree 'Definition of shadow tree'
 [slot]: https://dom.spec.whatwg.org/#concept-slot 'Definition of slot'

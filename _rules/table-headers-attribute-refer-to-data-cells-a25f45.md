@@ -20,7 +20,7 @@ authors:
 
 ## Applicability
 
-This rule applies to any `headers` attribute specified on a [`cell`](https://www.w3.org/TR/html52/tabular-data.html#cell) in a `table` element that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+This rule applies to any `headers` attribute specified on a [`cell`](https://www.w3.org/TR/html52/tabular-data.html#cell) in a `table` element that is is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ## Expectation
 
@@ -32,7 +32,7 @@ The `headers` attribute of each target element is [a set of space separated IDs]
 ## Assumptions
 
 - This test assumes that the `headers` attribute is only used to identify table headers. If other information is included in the `headers` attribute, the rule may fail on issues that are not accessibility concerns. For example, if `headers` is used to include information for script, this rule may not be accurate.
-- This test assumes that if the IDs of the `headers` attribute, do not live up to the expectation in this rule, the browser will try to calculate a default header from the [algorithm for assigning header cells](https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics).
+- This test assumes that the `headers` attribute is required to express the relationship between data and header cells in the `table`. If the browser [computes an adequate fallback header](https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics), this rule may produce incorrect results.
 
 ## Accessibility Support
 

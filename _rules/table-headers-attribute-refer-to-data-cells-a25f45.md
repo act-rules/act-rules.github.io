@@ -32,7 +32,7 @@ The `headers` attribute of each target element is [a set of space separated IDs]
 ## Assumptions
 
 - This test assumes that the `headers` attribute is only used to identify table headers. If other information is included in the `headers` attribute, the rule may fail on issues that are not accessibility concerns. For example, if `headers` is used to include information for script, this rule may not be accurate.
-- This test assumes that if the IDs of the `headers` attribute, do not live up to the expectations in this rule, the browser will try to calculate a default header from the [algorithm for assigning header cells](https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics).
+- This test assumes that if the IDs of the `headers` attribute, do not live up to the expectation in this rule, the browser will try to calculate a default header from the [algorithm for assigning header cells](https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics).
 
 ## Accessibility Support
 
@@ -145,6 +145,22 @@ The `headers` attribute on the cell refers to `th` with a role of `rowheader` wi
 </table>
 ```
 
+#### Passed Example 6
+
+The `headers` attribute on the `th` cell refers to other `th` cells within the same `table`.
+
+```html
+<table>
+	<tr>
+		<th id="name" colspan="2">Name</th>
+	</tr>
+	<tr>
+		<th headers="name">Firsname</th>
+		<th headers="name">Lastname</th>
+	</tr>
+</table>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -245,7 +261,7 @@ A table used for presentation only, that has a `role="presentation"`.
 ```html
 <table role="presentation">
 	<tr>
-		<th id="header1">Project Status</th>
+		<td id="header1">Project Status</td>
 	</tr>
 	<tr>
 		<td>15%</td>
@@ -277,11 +293,10 @@ A table that is not included in the accessibility tree.
 ```html
 <table aria-hidden="true">
 	<tr>
-		<th colspan="2">My document title</th>
+		<th id="header1" colspan="2">My document title</th>
 	</tr>
 	<tr>
-		<td><p>The excerpt</p></td>
-		<td><p>The content</p></td>
+		<td headers="header1"><p>The excerpt</p></td>
 	</tr>
 </table>
 ```

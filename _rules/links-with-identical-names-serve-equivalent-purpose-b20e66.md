@@ -177,34 +177,25 @@ A set of one SVG `a` element and one HTML `a` element that have the same [access
 All three links have the same [accessible name][]. The second link ("from the light") is only part of the [light tree][]. When the [shadow tree][] is attached to `host` and flattened, this link is overwritten and therefore not part of the [flat tree][] (work in progress). Hence, only the first and third link are considered by this rule and they both point to the [same resource][].
 
 ```html
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Links in the shadow</title>
-	</head>
+<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+all the time.
 
-	<body>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-		all the time.
+<div id="host">
+	<span
+		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
+			>Contact us</a
+		>
+		from the light.</span
+	>
+</div>
 
-		<div id="host">
-			<span
-				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
-					>Contact us</a
-				>
-				from the light.</span
-			>
-		</div>
+<script>
+	const host = document.getElementById('host')
+	const shadowRoot = host.attachShadow({ mode: 'open' })
 
-		<script>
-			const host = document.getElementById('host')
-			const shadowRoot = host.attachShadow({ mode: 'open' })
-
-			shadowRoot.innerHTML =
-				'<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> from the shadow.'
-		</script>
-	</body>
-</html>
+	shadowRoot.innerHTML =
+		'<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> from the shadow.'
+</script>
 ```
 
 #### Passed Example 12
@@ -212,39 +203,28 @@ All three links have the same [accessible name][]. The second link ("from the li
 The [shadow tree][] contains only a default [slot][] (whose [name][] is the empty string). This [slot][] is filled by the third link ("from the slot") and the second one ("from the light") does not appear in the [flat tree][] (work in progress). Therefore, the rule passes.
 
 ```html
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Links in the shadow</title>
-	</head>
+<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+all the time.
 
-	<body>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-		all the time.
+<div id="host">
+	<span slot="slot"
+		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
+			>Contact us</a
+		>
+		from the light.</span
+	>
+	<span
+		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+		from the slot.</span
+	>
+</div>
 
-		<div id="host">
-			<span slot="slot"
-				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
-					>Contact us</a
-				>
-				from the light.</span
-			>
-			<span
-				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
-					>Contact us</a
-				>
-				from the slot.</span
-			>
-		</div>
+<script>
+	const host = document.getElementById('host')
+	const shadowRoot = host.attachShadow({ mode: 'open' })
 
-		<script>
-			const host = document.getElementById('host')
-			const shadowRoot = host.attachShadow({ mode: 'open' })
-
-			shadowRoot.innerHTML = '<slot></slot>'
-		</script>
-	</body>
-</html>
+	shadowRoot.innerHTML = '<slot></slot>'
+</script>
 ```
 
 #### Passed Example 13
@@ -252,39 +232,28 @@ The [shadow tree][] contains only a default [slot][] (whose [name][] is the empt
 The [shadow tree][] contains only a named [slot][] (whose [name][] is `"slot"`). This [slot][] is filled by the third link ("from the slot") and the second one ("from the light") does not appear in the [flat tree][] (work in progress). Therefore, the rule passes.
 
 ```html
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Links in the shadow</title>
-	</head>
+<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+all the time.
 
-	<body>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-		all the time.
+<div id="host">
+	<span
+		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
+			>Contact us</a
+		>
+		from the light.</span
+	>
+	<span slot="slot"
+		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+		from the slot.</span
+	>
+</div>
 
-		<div id="host">
-			<span
-				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
-					>Contact us</a
-				>
-				from the light.</span
-			>
-			<span slot="slot"
-				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
-					>Contact us</a
-				>
-				from the slot.</span
-			>
-		</div>
+<script>
+	const host = document.getElementById('host')
+	const shadowRoot = host.attachShadow({ mode: 'open' })
 
-		<script>
-			const host = document.getElementById('host')
-			const shadowRoot = host.attachShadow({ mode: 'open' })
-
-			shadowRoot.innerHTML = '<slot name="slot"></slot>'
-		</script>
-	</body>
-</html>
+	shadowRoot.innerHTML = '<slot name="slot"></slot>'
+</script>
 ```
 
 #### Passed Example 14
@@ -292,34 +261,23 @@ The [shadow tree][] contains only a named [slot][] (whose [name][] is `"slot"`).
 The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light tree][] does fill that [slot][]. Hence, the [flattened slottable][] is not [assigned][] and the third link ("from the fallback") does not appears in the [flat tree][] (work in progress). Only the first ("all the time") and second ("from the slot") links are in the [flat tree][] (work in progress). Given that they have the same [accessible name][] and point to the [same resource][], the rule passes.
 
 ```html
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Links in the shadow</title>
-	</head>
+<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+all the time.
 
-	<body>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-		all the time.
+<div id="host">
+	<span slot="slot"
+		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+		from the slot.</span
+	>
+</div>
 
-		<div id="host">
-			<span slot="slot"
-				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
-					>Contact us</a
-				>
-				from the slot.</span
-			>
-		</div>
+<script>
+	const host = document.getElementById('host')
+	const shadowRoot = host.attachShadow({ mode: 'open' })
 
-		<script>
-			const host = document.getElementById('host')
-			const shadowRoot = host.attachShadow({ mode: 'open' })
-
-			shadowRoot.innerHTML =
-				'<slot name="slot"><span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the fallback.</span></slot>'
-		</script>
-	</body>
-</html>
+	shadowRoot.innerHTML =
+		'<slot name="slot"><span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the fallback.</span></slot>'
+</script>
 ```
 
 ### Failed
@@ -404,27 +362,18 @@ Both links resolve to [same resource][] after redirect, but the redirect is not 
 Both links have the same [accessible name][]. When the [shadow tree][] is attached to `host` and flattened, both links appear in the [flat tree][] (work in progress). Since they have the same [accessible name][] but point to different resources, the rule fails.
 
 ```html
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Links in the shadow</title>
-	</head>
+<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+all the time.
 
-	<body>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-		all the time.
+<div id="host"></div>
 
-		<div id="host"></div>
+<script>
+	const host = document.getElementById('host')
+	const shadowRoot = host.attachShadow({ mode: 'open' })
 
-		<script>
-			const host = document.getElementById('host')
-			const shadowRoot = host.attachShadow({ mode: 'open' })
-
-			shadowRoot.innerHTML =
-				'<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the shadow.</span>'
-		</script>
-	</body>
-</html>
+	shadowRoot.innerHTML =
+		'<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the shadow.</span>'
+</script>
 ```
 
 #### Failed Example 8
@@ -432,34 +381,23 @@ Both links have the same [accessible name][]. When the [shadow tree][] is attach
 The `table` element [does not support `attachShadow`](https://dom.spec.whatwg.org/#dom-element-attachshadow). Therefore no [shadow tree][] is created and the first two links appear in the [flat tree][] (work in progress). Since they have the same name but different destination, the rule fails.
 
 ```html
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Links in the shadow</title>
-	</head>
+<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+all the time.
 
-	<body>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-		all the time.
+<table id="host">
+	<span
+		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+		from the light.</span
+	>
+</table>
 
-		<table id="host">
-			<span
-				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
-					>Contact us</a
-				>
-				from the light.</span
-			>
-		</table>
+<script>
+	const host = document.getElementById('host')
+	const shadowRoot = host.attachShadow({ mode: 'closed' })
 
-		<script>
-			const host = document.getElementById('host')
-			const shadowRoot = host.attachShadow({ mode: 'closed' })
-
-			shadowRoot.innerHTML =
-				'<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the shadow.</span>'
-		</script>
-	</body>
-</html>
+	shadowRoot.innerHTML =
+		'<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the shadow.</span>'
+</script>
 ```
 
 #### Failed Example 9
@@ -467,33 +405,24 @@ The `table` element [does not support `attachShadow`](https://dom.spec.whatwg.or
 The second link is [slotted][slot] and therefore appears in the [flat tree][] (work in progress). Both links have the same [accessible name][] but point to different resources, hence the rule fails.
 
 ```html
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Links in the shadow</title>
-	</head>
+<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+all the time.
 
-	<body>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-		all the time.
+<div id="host">
+	<span
+		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
+			>Contact us</a
+		>
+		from the slot.</span
+	>
+</div>
 
-		<div id="host">
-			<span
-				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
-					>Contact us</a
-				>
-				from the slot.</span
-			>
-		</div>
+<script>
+	const host = document.getElementById('host')
+	const shadowRoot = host.attachShadow({ mode: 'open' })
 
-		<script>
-			const host = document.getElementById('host')
-			const shadowRoot = host.attachShadow({ mode: 'open' })
-
-			shadowRoot.innerHTML = '<slot></slot>'
-		</script>
-	</body>
-</html>
+	shadowRoot.innerHTML = '<slot></slot>'
+</script>
 ```
 
 #### Failed Example 10
@@ -501,39 +430,28 @@ The second link is [slotted][slot] and therefore appears in the [flat tree][] (w
 All of the descendants of `host` (in the [light tree][]) are slotted into the default [slot][] (whose [name][] is the empty string). Therefore, all three links appear in the [flat tree][] (work in progress) and the rule fails since the second one ("from the slot") does not point to the [same resource][].
 
 ```html
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Links in the shadow</title>
-	</head>
+<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+all the time.
 
-	<body>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-		all the time.
+<div id="host">
+	<span
+		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
+			>Contact us</a
+		>
+		from the slot.</span
+	>
+	<span
+		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+		from the slot again.</span
+	>
+</div>
 
-		<div id="host">
-			<span
-				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
-					>Contact us</a
-				>
-				from the slot.</span
-			>
-			<span
-				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
-					>Contact us</a
-				>
-				from the slot again.</span
-			>
-		</div>
+<script>
+	const host = document.getElementById('host')
+	const shadowRoot = host.attachShadow({ mode: 'open' })
 
-		<script>
-			const host = document.getElementById('host')
-			const shadowRoot = host.attachShadow({ mode: 'open' })
-
-			shadowRoot.innerHTML = '<slot></slot>'
-		</script>
-	</body>
-</html>
+	shadowRoot.innerHTML = '<slot></slot>'
+</script>
 ```
 
 #### Failed Example 11
@@ -541,34 +459,23 @@ All of the descendants of `host` (in the [light tree][]) are slotted into the de
 The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light tree][] does not fill that [slot][]. Hence, the [flattened slottable][] is [assigned][] and the third link ("from the fallback") appears in the [flat tree][] (work in progress), causing the rule to fail.
 
 ```html
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Links in the shadow</title>
-	</head>
+<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+all the time.
 
-	<body>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-		all the time.
+<div id="host">
+	<span
+		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+		from the slot.</span
+	>
+</div>
 
-		<div id="host">
-			<span
-				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
-					>Contact us</a
-				>
-				from the slot.</span
-			>
-		</div>
+<script>
+	const host = document.getElementById('host')
+	const shadowRoot = host.attachShadow({ mode: 'open' })
 
-		<script>
-			const host = document.getElementById('host')
-			const shadowRoot = host.attachShadow({ mode: 'open' })
-
-			shadowRoot.innerHTML =
-				'<slot name="slot"><span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the fallback.</span></slot>'
-		</script>
-	</body>
-</html>
+	shadowRoot.innerHTML =
+		'<slot name="slot"><span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the fallback.</span></slot>'
+</script>
 ```
 
 #### Failed Example 12
@@ -576,21 +483,12 @@ The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light t
 The [document][] inside the `iframe` is part of the same [set of browsing context related documents][] as the main [document][]. Therefore, both links are considered and the rule fails.
 
 ```html
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>I have been framed!</title>
-	</head>
+<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+from the top level.
 
-	<body>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-		from the top level.
-
-		<iframe
-			srcdoc="<a href='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html'>Contact us</a> from the iframe"
-		></iframe>
-	</body>
-</html>
+<iframe
+	srcdoc="<a href='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html'>Contact us</a> from the iframe"
+></iframe>
 ```
 
 ### Inapplicable
@@ -665,31 +563,22 @@ These image links do not have [accessible names][accessible name].
 Only the first link ("all the time") is present in the [flat tree][] (work in progress). Hence, there is no set of two or more links to apply the rule.
 
 ```html
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Links in the shadow</title>
-	</head>
+<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+all the time.
 
-	<body>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-		all the time.
+<div id="host">
+	<span
+		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
+			>Contact us</a
+		>
+		from the light.</span
+	>
+</div>
 
-		<div id="host">
-			<span
-				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
-					>Contact us</a
-				>
-				from the light.</span
-			>
-		</div>
-
-		<script>
-			const host = document.getElementById('host')
-			const shadowRoot = host.attachShadow({ mode: 'open' })
-		</script>
-	</body>
-</html>
+<script>
+	const host = document.getElementById('host')
+	const shadowRoot = host.attachShadow({ mode: 'open' })
+</script>
 ```
 
 #### Inapplicable Example 8
@@ -697,33 +586,24 @@ Only the first link ("all the time") is present in the [flat tree][] (work in pr
 Only the first link ("all the time") is present in the [flat tree][] (work in progress). Hence, there is no set of two or more links to apply the rule. The [shadow tree][] does contain a [slot][], but because its [named][name], the second link ("from the light") is _not_ [slotted][slot] into it.
 
 ```html
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Links in the shadow</title>
-	</head>
+<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+all the time.
 
-	<body>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-		all the time.
+<div id="host">
+	<span
+		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
+			>Contact us</a
+		>
+		from the light.</span
+	>
+</div>
 
-		<div id="host">
-			<span
-				><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
-					>Contact us</a
-				>
-				from the light.</span
-			>
-		</div>
+<script>
+	const host = document.getElementById('host')
+	const shadowRoot = host.attachShadow({ mode: 'open' })
 
-		<script>
-			const host = document.getElementById('host')
-			const shadowRoot = host.attachShadow({ mode: 'open' })
-
-			shadowRoot.innerHTML = '<slot name="slot"></slot>'
-		</script>
-	</body>
-</html>
+	shadowRoot.innerHTML = '<slot name="slot"></slot>'
+</script>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

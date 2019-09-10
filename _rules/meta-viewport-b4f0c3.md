@@ -15,6 +15,10 @@ input_aspects:
 authors:
   - Jey Nandakumar
   - Audrey Maniez
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'title-require'
 ---
 
 ## Applicability

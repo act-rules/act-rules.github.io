@@ -1,9 +1,9 @@
 ---
 id: c4a8a4
-name: Document title is descriptive
+name: HTML page title is descriptive
 rule_type: atomic
 description: |
-  This rule checks that the document title describes the topic or purpose of the document.
+  This rule checks that the first title in an HTML page describes the topic or purpose of that page.
 accessibility_requirements:
   wcag20:2.4.2: # Page Titled (A)
     forConformance: true
@@ -15,18 +15,26 @@ input_aspects:
 authors:
   - Anne Thyme Nørregaard
   - Corbb O'Connor
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'title-require'
 ---
 
 ## Applicability
 
 This rule applies to the first HTML `title` element that
 
-- is a [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) of a [document element](https://www.w3.org/TR/dom/#document-element) that is an HTML `html` element, and
-- contains [children](https://www.w3.org/TR/dom/#concept-tree-child) that are [text nodes](https://www.w3.org/TR/dom/#text) that are not only [whitespace](#whitespace).
+- is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the `html` element of a [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), and
+- contains [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
+
+**Note**: The `title` elements of embedded documents, such as those in `iframe` or `object` elements, are not applicable because those are not web pages according to the definition in WCAG.
+
+**Note**: The [HTML 5.2 specification](https://www.w3.org/TR/html52/document-metadata.html#the-title-element) requires that a document only has one `title` element, and that it is a child of the `head` element of a document. However, HTMl 5.2 also describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG.
 
 ## Expectation
 
-The target element describes the topic or purpose of the overall content of the [document](https://www.w3.org/TR/dom/#concept-document).
+The target element describes the topic or purpose of the overall content of the [document](https://dom.spec.whatwg.org/#concept-document).
 
 ## Assumptions
 
@@ -34,7 +42,7 @@ _There are no assumptions for this rule._
 
 ## Accessibility Support
 
-- This rule assumes that browsers only recognize the first `title` element if multiple `title` elements are present in the [document](https://www.w3.org/TR/dom/#concept-document). Testing shows that this in general is the case. Therefore the scope of this rule is limited to only checking the first `title` element in a document.
+- This rule assumes that browsers only recognize the first `title` element if multiple `title` elements are present in the [document](https://dom.spec.whatwg.org/#concept-document). Testing shows that this in general is the case. Therefore the scope of this rule is limited to only checking the first `title` element in a document.
 
 ## Background
 
@@ -83,7 +91,7 @@ Two `<title>` elements where the first one describes the content of the document
 
 #### Passed Example 3
 
-Even though the descriptive `<title>` element is not placed within the `<head>` element that is the context the element can be used in [according to the HTML specification](https://www.w3.org/TR/html/document-metadata.html#the-title-element), the rule still passes, since the browser fixes it, and it doesn't cause any known accessibility issues.
+Even though the descriptive `<title>` element is not placed within the `<head>` element that is the context the element can be used in [according to the HTML specification](https://html.spec.whatwg.org/#the-title-element), the rule still passes, since the browser fixes it, and it doesn't cause any known accessibility issues.
 
 ```html
 <html>

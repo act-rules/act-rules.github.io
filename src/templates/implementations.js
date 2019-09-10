@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import implementers from './../../_data/implementers'
+import { getImplementationsTabulation } from './../utils/render-fragments'
 
 export default ({ data }) => {
 	const { markdownRemark, site } = data
@@ -15,41 +16,10 @@ export default ({ data }) => {
 			<SEO title={updatedTitle} keywords={site.siteMetadata.keywords} />
 			<section className="page-container">
 				<h1>{frontmatter.title}</h1>
-
 				<section>
 					<h2>Implementation Overview</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Tool Name</th>
-								<th>Created By</th>
-								<th>Report</th>
-							</tr>
-						</thead>
-						<tbody>
-							{implementers.map(row => {
-								const { organisation, tool } = row
-								const filename = tool
-									.split(' ')
-									.join('-')
-									.toLowerCase()
-								const reportUrl = `/implementation/${filename}`
-								return (
-									<tr key={tool}>
-										<td>{tool}</td>
-										{/* TODO: */}
-										{/* <td>{row.vendorToolVersion}</td> */}
-										<td>{organisation}</td>
-										<td>
-											<a href={reportUrl}>View Report</a>
-										</td>
-									</tr>
-								)
-							})}
-						</tbody>
-					</table>
+					{getImplementationsTabulation(implementers)}
 				</section>
-
 				<div dangerouslySetInnerHTML={{ __html: html }} />
 			</section>
 		</Layout>

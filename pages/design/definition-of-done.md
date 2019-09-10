@@ -15,14 +15,14 @@ The Definition of "Done" is a living document, and might change as the rule writ
 ## The Definition of "Done"
 
 - The relation between the rule and its accessibility requirements is as described in the [ACT Rules Format](https://www.w3.org/TR/act-rules-format/) under [Accessibility Requirements](https://www.w3.org/TR/act-rules-format/#structure-accessibility-requirements).
-  - Remember to also check that the rule is in line with supporting documentation, e.g. [Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/) and [Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG-TECHS/)
+  - Remember to also check that the rule is in line with supporting documentation, e.g. [Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/) and [Techniques for WCAG 2.1](https://www.w3.org/WAI/WCAG21/Techniques/)
 - Applicability (for [atomic](https://www.w3.org/TR/act-rules-format/#test-applicability) / [composed rules](https://www.w3.org/TR/act-rules-format/#aggregation-applicability)) and Expectations (for [atomic](https://www.w3.org/TR/act-rules-format/#test-expectations) / [composed rules](https://www.w3.org/TR/act-rules-format/#aggregation-expectations)) live up to the requirements for these sections in the [ACT Rules Format](https://www.w3.org/TR/act-rules-format/)
 - Requirements for use of atomic and composed rules are followed, see [Rule Types](https://www.w3.org/TR/act-rules-format/#rule-types) in the [ACT Rules Format](https://www.w3.org/TR/act-rules-format/)
 - The rule follows the WCAG-ACT-RULES-CG [rule template](/design/rule-template.html), especially in relation to headings, styling, test case descriptions, etc.
 - The rule is using WCAG-ACT-RULES-CG [Glossary terms]({{ site.url }}/pages/glossary) whenever possible. Be particularly aware of the following much-used algorithms:
   - For the Applicability, consider if the definitions [included in the accessibility tree](#included-in-the-accessibility-tree) and [visible on the page](#visible-on-the-page) should be used to narrow down the scope of the rule.
   - For the Applicability and Expectations, consider if the definition for [semantic role](#semantic-role) (including specifics of explicit and implicit semantic role) could be used to describe the targets of the rule.
-- The rule links to any relevant documentation, e.g. [Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/) and [Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG-TECHS/), specifications used, etc.
+- The rule links to any relevant documentation, e.g. [Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/) and [Techniques for WCAG 2.1](https://www.w3.org/WAI/WCAG21/Techniques/), specifications used, etc.
 - The name of the rule is written in plain language, with capitalized initial letter
 - The file name of the rule follows the WCAG-ACT-RULES-CG naming convention
 - The rule has been spellchecked

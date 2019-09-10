@@ -17,7 +17,7 @@ authors:
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible](#visible) where the video contains [audio](#audio-output).
+The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video contains [audio](#audio-output).
 
 ## Expectation
 
@@ -105,11 +105,7 @@ A video element with an explicitly associated text on the same page that describ
 	perspectives. Keyboard compatibility. Not being able to use your computer because your mouse doesn't work, is
 	frustrating. Many people use only the keyboard to navigate websites. Either through preference or circumstance.
 </p>
-<video
-	src="../test-assets/perspective-video/perspective-video.mp4"
-	controls
-	ariadescribedby="text"
-></video>
+<video src="../test-assets/perspective-video/perspective-video.mp4" controls ariadescribedby="text"></video>
 ```
 
 ### Inapplicable
@@ -124,8 +120,10 @@ A video element without audio.
 
 #### Inapplicable Example 2
 
-A video element that is not visible on the page.
+A video element that is not [visible][].
 
 ```html
 <video src="../test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>
 ```
+
+[visible]: #visible 'Definition of visible'

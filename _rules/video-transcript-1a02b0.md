@@ -18,11 +18,15 @@ input_aspects:
 authors:
   - Wilco Fiers
   - Brian Bors
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'tag-pair'
 ---
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible](#visible) where the video contains audio.
+The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video contains audio.
 
 ## Expectation
 
@@ -73,7 +77,7 @@ A video element with a link to a text transcript on a different page.
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
-<a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
+<a href="../test-assets/rabbit-video/transcript.html">Transcript</a>
 ```
 
 ### Failed
@@ -101,21 +105,21 @@ A video element with a link to an incorrect text transcript on a different page.
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
-<a href="../test-assets/rabbit-video/incorrect-transcript.html">Transcript</p>
+<a href="../test-assets/rabbit-video/incorrect-transcript.html">Transcript</a>
 ```
 
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-A video element that is not visible on the page.
+A video element that is not [visible][].
 
 ```html
 <video controls style="display: none;">
   <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
-<a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
+<a href="../test-assets/rabbit-video/transcript.html">Transcript</a>
 ```
 
 #### Inapplicable Example 2
@@ -127,5 +131,7 @@ A video element without audio.
   <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
+<a href="../test-assets/rabbit-video/transcript.html">Transcript</a>
 ```
+
+[visible]: #visible 'Definition of visible'

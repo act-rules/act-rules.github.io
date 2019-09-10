@@ -15,7 +15,11 @@ input_aspects:
   - CSS Styling
 authors:
   - Jey Nandakumar
-  - Audrey Maniez
+	- Audrey Maniez
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'title-require'
 ---
 
 ## Applicability

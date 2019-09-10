@@ -3,7 +3,7 @@ id: b4f0c3
 name: meta viewport does not prevent zoom
 rule_type: atomic
 description: |
-  This rule checks that the `meta` element is not used to block the user agent ability to zoom. 
+  This rule checks that the `meta` element is not used to block the user agent ability to zoom.
 accessibility_requirements:
   wcag21:1.4.4: # Resize text (AA)
     forConformance: true
@@ -19,7 +19,7 @@ authors:
 
 ## Applicability
 
-The rule applies to each [`<meta>`](https://www.w3.org/TR/html52/document-metadata.html#the-meta-element) element with a [`name`](https://www.w3.org/TR/html52/document-metadata.html#element-attrdef-meta-name) attribute whose value is set to [`viewport`](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag#Enter_viewport_meta_tag) and has a [`content`](https://www.w3.org/TR/html52/document-metadata.html#dom-htmlmetaelement-content) attribute.
+The rule applies to each [`<meta>`](https://www.w3.org/TR/html52/document-metadata.html#the-meta-element) element with a [`name`](https://www.w3.org/TR/html52/document-metadata.html#element-attrdef-meta-name) attribute whose value is set to [`viewport`](https://www.w3.org/TR/css-device-adapt-1/#viewport-meta) and has a [`content`](https://www.w3.org/TR/html52/document-metadata.html#dom-htmlmetaelement-content) attribute.
 
 ## Expectation
 
@@ -28,7 +28,7 @@ The [`content`](https://www.w3.org/TR/html52/document-metadata.html#dom-htmlmeta
 - specify the property `user-scalable` with a value of `no`; nor
 - specify the property `maximum-scale` with a value of less than 2
 
-**Note:** For Safari on the iPhone, the content attribute is mapped to property/value pairs according to the following algorithm: https://drafts.csswg.org/css-device-adapt/#parsing-algorithm
+**Note:** For a known popular browser, the content attribute is mapped to property/value pairs according to the following algorithm: https://www.w3.org/TR/css-device-adapt-1/#parsing-algorithm
 
 ## Assumptions
 
@@ -41,8 +41,7 @@ The [`content`](https://www.w3.org/TR/html52/document-metadata.html#dom-htmlmeta
 ## Background
 
 - [Understanding Success Criterion 1.4.4: Resize text](https://www.w3.org/WAI/WCAG21/Understanding/resize-text)
-- [The `meta` element](https://www.w3.org/TR/html52/document-metadata.html#the-meta-element)
-- [<meta>: The Document-level Metadata element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta)
+- [The `<meta>` element](https://www.w3.org/TR/html52/document-metadata.html#the-meta-element)
 
 ## Test Cases
 
@@ -52,86 +51,101 @@ The [`content`](https://www.w3.org/TR/html52/document-metadata.html#dom-htmlmeta
 
 The `<meta name="viewport">` element does not define the `maximum-scale` and `user-scalable` values.
 
-````html
+```html
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width">
-  </head>
-  <body>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-  </body>
+	<head>
+		<meta name="viewport" content="width=device-width" />
+	</head>
+	<body>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</body>
 </html>
-````
+```
 
 #### Passed Example 2
 
 The `<meta name="viewport">` element defines the `user-scalable=yes` so the user can still zoom in.
 
-````html
+```html
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, user-scalable=yes">
-  </head>
-  <body>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-  </body>
+	<head>
+		<meta name="viewport" content="width=device-width, user-scalable=yes" />
+	</head>
+	<body>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</body>
 </html>
-````
+```
 
 #### Passed Example 3
 
 The `<meta name="viewport">` element defines the `maximum-scale=6.0` which allows the user to zoom.
 
-````html
+```html
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, maximum-scalable=6.0">
-  </head>
-  <body>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-  </body>
+	<head>
+		<meta name="viewport" content="width=device-width, maximum-scalable=6.0" />
+	</head>
+	<body>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</body>
 </html>
-````
+```
 
 #### Passed Example 4
 
-The `<meta name="viewport">` element with an empty `content` attribute.
+The `<meta name="viewport">` element has an empty `content` attribute.
 
-````html
+```html
 <html>
-  <head>
-    <meta name="viewport" content="">
-  </head>
-  <body>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-  </body>
+	<head>
+		<meta name="viewport" content="" />
+	</head>
+	<body>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</body>
 </html>
-````
+```
 
 #### Passed Example 5
 
 The `<meta name="viewport">` element sets the `maximum-scale=2` so the user can zoom in more than twice (200%).
 
-````html
+```html
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, maximum-scale=2.0">
-  </head>
-  <body>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-  </body>
+	<head>
+		<meta name="viewport" content="width=device-width, maximum-scale=2.0" />
+	</head>
+	<body>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</body>
 </html>
-````
+```
 
 ### Failed
 
@@ -139,52 +153,61 @@ The `<meta name="viewport">` element sets the `maximum-scale=2` so the user can 
 
 The `<meta name="viewport">` element defines the `user-scalable=no` so the user can't zoom in.
 
-````html
+```html
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-  </head>
-  <body>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-  </body>
+	<head>
+		<meta name="viewport" content="width=device-width, user-scalable=no" />
+	</head>
+	<body>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</body>
 </html>
-````
+```
 
 #### Failed Example 2
 
 The `<meta name="viewport">` element defines the `user-scalable=yes`, but prevents `maximum-scale` to `1.5`.
 
-````html
+```html
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=0.8, maximum-scale=1.5">
-  </head>
-  <body>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-  </body>
+	<head>
+		<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=0.8, maximum-scale=1.5" />
+	</head>
+	<body>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</body>
 </html>
-````
+```
 
 #### Failed Example 3
 
 The `<meta name="viewport">` element sets the `maximum-scale=1.0` so the user can't zoom in.
 
-````html
+```html
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, maximum-scale=1.0">
-  </head>
-  <body>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-  </body>
+	<head>
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+	</head>
+	<body>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</body>
 </html>
-````
+```
 
 ### Inapplicable
 
@@ -192,32 +215,38 @@ The `<meta name="viewport">` element sets the `maximum-scale=1.0` so the user ca
 
 The `<meta name="viewport">` element is not present within the page.
 
-````html
+```html
 <html>
-  <head>
-    <meta http-equiv="refresh" content="10; URL='https://github.com'">
-  </head>
-  <body>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-  </body>
+	<head>
+		<meta http-equiv="refresh" content="10; URL='https://github.com'" />
+	</head>
+	<body>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</body>
 </html>
-````
+```
 
 #### Inapplicable Example 2
 
 The `<meta name="viewport">` element does not have `content` attribute.
 
-````html
+```html
 <html>
-  <head>
-    <meta name="viewport">
-  </head>
-  <body>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-  </body>
+	<head>
+		<meta name="viewport" />
+	</head>
+	<body>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</body>
 </html>
-````
+```

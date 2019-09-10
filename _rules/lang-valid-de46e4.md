@@ -141,7 +141,7 @@ The `lang` attribute value has a valid primary language subtag, but a syntactica
 </html>
 ```
 
-#### Failed Example 5
+#### Failed Example 4
 
 The `lang` attribute value is not empty ("") and is not a valid primary language subtag.
 
@@ -153,7 +153,7 @@ The `lang` attribute value is not empty ("") and is not a valid primary language
 </html>
 ```
 
-#### Failed Example 6
+#### Failed Example 5
 
 The `lang` attribute value is not empty ("") and is not a valid primary language subtag.
 

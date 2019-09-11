@@ -20,7 +20,7 @@ authors:
 
 ## Applicability
 
-This rule applies to any HTML [`audio`](https://html.spec.whatwg.org/multipage/media.html#the-audio-element), [`video`](https://html.spec.whatwg.org/multipage/media.html#the-video-element) or [`source`](https://html.spec.whatwg.org/multipage/embedded-content.html#the-source-element) elements, with a [`src`](https://html.spec.whatwg.org/multipage/media.html#attr-media-src) attribute referencing content with a duration of more than 3 seconds, that has an [`autoplay`](https://html.spec.whatwg.org/multipage/media.html#attr-media-autoplay) attribute equal to `true`, and that has both [`paused`](https://html.spec.whatwg.org/multipage/media.html#dom-media-paused) and [`muted`](https://html.spec.whatwg.org/multipage/media.html#attr-media-muted) attributes equal to `false`.
+This rule applies to any HTML [`audio`](https://html.spec.whatwg.org/multipage/media.html#the-audio-element) or [`video`](https://html.spec.whatwg.org/multipage/media.html#the-video-element) elements that have an [`autoplay`](https://html.spec.whatwg.org/multipage/media.html#attr-media-autoplay) attribute equal to true, both [`paused`](https://html.spec.whatwg.org/multipage/media.html#dom-media-paused) and [`muted`](https://html.spec.whatwg.org/multipage/media.html#attr-media-muted) attributes equal to false, and a `src` attribute or a child `source` element with a `src` attribute with a duration of more than 3 seconds.
 
 ## Expectation
 

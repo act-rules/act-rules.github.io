@@ -280,7 +280,7 @@ all the time.
 </script>
 ```
 
-#### Failed Example 15
+#### Passed Example 15
 
 The [browsing context][] of the `iframe` has the [browsing context][] of the main [document][] as an [ancestor browsing context](https://html.spec.whatwg.org/#ancestor-browsing-context). Hence, its [nodes][node] are part of the same [set of browsing context related nodes][] as the [nodes][node] of the main [document][]. Therefore, both links are considered and, since they refer to the same document, the rule passes.
 

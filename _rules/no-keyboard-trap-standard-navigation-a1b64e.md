@@ -104,7 +104,7 @@ Keyboard trap group.
 
 #### Failed Example 3
 
-A [focusable][] element inbetween to keyboard traps.
+A [focusable][] element between keyboard traps.
 
 ```html
 <button onblur="setTimeout(() => this.focus(), 10)">Button 1</button>

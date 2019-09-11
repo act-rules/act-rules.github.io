@@ -44,7 +44,7 @@ This rule assumes that the purpose of the links with identical [accessible names
 
 ## Accessibility Support
 
-This rule assume that assistive technologies are exposing all links on the page in the same way no matter which [document tree](https://dom.spec.whatwg.org/#document-trees) there are in. If an assistive technology requires the user to "enter" an `iframe` or a [shadow tree][] before exposing its links, then it is possible for two links to have identical name but resolve to different resources without breaking success criterion [2.4.9 Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html) (if said links are in separate [documents][document] or [shadow trees][shadow tree])
+This rule assume that assistive technologies are exposing all links on the page in the same way no matter which [document tree](https://dom.spec.whatwg.org/#document-trees) they are in. If an assistive technology requires the user to "enter" an `iframe` or a [shadow tree][] before exposing its links, then it is possible for two links to have identical name but resolve to different resources without breaking success criterion [2.4.9 Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html) (if said links are in separate [documents][document] or [shadow trees][shadow tree])
 
 ## Background
 
@@ -278,6 +278,19 @@ all the time.
 	shadowRoot.innerHTML =
 		'<slot name="slot"><span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the fallback.</span></slot>'
 </script>
+```
+
+#### Failed Example 15
+
+The [browsing context][] of the `iframe` has the [browsing context][] of the main [document][] as an [ancestor browsing context](https://html.spec.whatwg.org/#ancestor-browsing-context). Hence, its [nodes][node] are part of the same [set of browsing context related nodes][] as the [nodes][node] of the main [document][]. Therefore, both links are considered and, since they refer to the same document, the rule passes.
+
+```html
+<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+from the top level.
+
+<iframe
+	srcdoc="<a href='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html'>Contact us</a> from the iframe"
+></iframe>
 ```
 
 ### Failed

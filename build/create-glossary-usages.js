@@ -30,6 +30,7 @@ const init = async () => {
 		const { frontmatter, body } = ruleData
 		const { id: ruleId, name: ruleName, accessibility_requirements: ruleAccessibilityRequirements } = frontmatter
 
+		// Finding classical glossary usages: "this is a [link](key)"
 		const glossaryMatches = getAllMatchesForRegex(regexps.glossaryReferenceInRules, body, false)
 
 		glossaryMatches.forEach(glossaryItem => {
@@ -39,6 +40,37 @@ const init = async () => {
 			}
 
 			const key = glossaryItem.block.match(regexps.glossaryKey)[1]
+			if (!key) {
+				return
+			}
+
+			const usage = {
+				name: ruleName,
+				slug: `rules/${ruleId}`,
+			}
+			if (!glossaryUsages[key]) {
+				glossaryUsages[key] = [usage]
+				return
+			}
+
+			const exists = glossaryUsages[key].some(u => u.slug === usage.slug)
+			if (exists) {
+				return
+			}
+
+			glossaryUsages[key] = glossaryUsages[key].concat(usage)
+		})
+
+		// Finding internal ref glossary usage: "[refname]: key"
+		const glossaryInlinedMatches = getAllMatchesForRegex(regexps.glossaryDefinitionInRules, body, false)
+
+		glossaryInlinedMatches.forEach(glossaryDef => {
+			const hasGlossaryKey = regexps.glossaryKeyInDefinition.test(glossaryDef.block)
+			if (!hasGlossaryKey) {
+				return
+			}
+
+			const key = glossaryDef.block.match(regexps.glossaryKeyInDefinition)[1]
 			if (!key) {
 				return
 			}

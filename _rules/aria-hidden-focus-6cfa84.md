@@ -30,7 +30,7 @@ The rule applies to any element with an `aria-hidden="true"` attribute.
 
 ## Expectation
 
-None of the target elements are part of [sequential focus navigation](https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation), nor do they have [descendants](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) that are part of [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation).
+None of the target elements are part of [sequential focus navigation](https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation), nor do they have [descendants](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) that are part of [sequential focus navigation](https://html.spec.whatwg.org/#sequential-focus-navigation).
 
 ## Assumptions
 
@@ -42,9 +42,9 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-By adding `aria-hidden="true"` to an element, content authors ensure that assistive technologies will ignore the element. This can be used to hide decorative parts of a web page, such as icon fonts - that are not meant to be read by assistive technologies.
+By adding `aria-hidden="true"` to an element, content authors ensure that assistive technologies will ignore the element. This can be used to hide [decorative](#decorative) parts of a web page, such as icon fonts - that are not meant to be read by assistive technologies.
 
-A focusable element with `aria-hidden="true"` is ignored as part of the reading order, but still part of the focus order, making it's state of visible or hidden unclear.
+A [focusable][] element with `aria-hidden="true"` is ignored as part of the reading order, but still part of the focus order, making it's state of [visible](#visible) or hidden unclear.
 
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
@@ -56,7 +56,7 @@ A focusable element with `aria-hidden="true"` is ignored as part of the reading 
 
 #### Passed Example 1
 
-Content not focusable by default.
+Content not [focusable][] by default.
 
 ```html
 <p aria-hidden="true">Some text</p>
@@ -84,7 +84,7 @@ Content taken out of sequential focus order using `tabindex`.
 
 #### Passed Example 4
 
-Content made unfocusable through `disabled` attribute.
+Content made [unfocusable][focusable] through `disabled` attribute.
 
 ```html
 <input disabled aria-hidden="true" />
@@ -116,7 +116,7 @@ Content taken out of sequential focus order using `tabindex`.
 
 #### Failed Example 1
 
-Focusable off screen link.
+[Focusable][] off screen link.
 
 ```html
 <div aria-hidden="true">
@@ -126,7 +126,7 @@ Focusable off screen link.
 
 #### Failed Example 2
 
-Focusable form field, incorrectly disabled.
+[Focusable][] form field, incorrectly disabled.
 
 ```html
 <div aria-hidden="true">
@@ -148,7 +148,7 @@ Focusable form field, incorrectly disabled.
 
 #### Failed Example 4
 
-Focusable content through `tabindex`.
+[Focusable][] content through `tabindex`.
 
 ```html
 <p tabindex="0" aria-hidden="true">Some text</p>
@@ -156,7 +156,7 @@ Focusable content through `tabindex`.
 
 #### Failed Example 5
 
-Focusable `summary` element.
+[Focusable][] `summary` element.
 
 ```html
 <details aria-hidden="true">
@@ -192,3 +192,5 @@ Incorrect value of `aria-hidden`.
 	<p>Some text</p>
 </div>
 ```
+
+[focusable]: #focusable 'Definition of focusable'

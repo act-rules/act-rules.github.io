@@ -15,8 +15,8 @@ const badLinksAndRecommendations = {
 	'://www.w3.org/TR/WCAG20-TECHS/': 'Use WCAG 2.1 reference - https://www.w3.org/WAI/WCAG21/Techniques/',
 	'://www.w3.org/TR/wai-aria-1.0/': 'Use ARIA 1.1 reference - https://www.w3.org/TR/wai-aria-1.1/',
 	'://www.w3.org/TR/dom41/': 'Use http://dom.spec.whatwg.org',
-	'://www.w3.org/TR/html/': 'Use http://html.spec.whatwg.org'
-};
+	'://www.w3.org/TR/html/': 'Use http://html.spec.whatwg.org',
+}
 
 /**
  * Find first matching bad link for a given link
@@ -24,8 +24,7 @@ const badLinksAndRecommendations = {
  * @returns {String}
  */
 const getBadLink = link => {
-	return Object.keys(badLinksAndRecommendations)
-		.find(badLink => link.includes(badLink))
+	return Object.keys(badLinksAndRecommendations).find(badLink => link.includes(badLink))
 }
 
 /**

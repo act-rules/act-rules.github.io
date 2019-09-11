@@ -261,7 +261,7 @@ Element has ARIA role, but no ARIA states or properties
 <div role="checkbox" aria-checked aria-label="Accept terms and conditions"></div>
 ```
 
-#### Inapplicable Example 5
+#### Inapplicable Example 4
 
 `aria-hidden` state on an element that is not an HTML or SVG element
 

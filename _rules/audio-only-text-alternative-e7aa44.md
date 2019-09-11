@@ -25,13 +25,13 @@ authors:
 The rule applies to any [non-streaming](#non-streaming-media-element) `audio` element that is:
 
 - playing; or,
-- has a "play button" that is [visibile](#visible) and [included-in-the-accessibility-tree](#included-in-the-accessibility-tree).
+- has a "play button" that is [visible][] and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 **Note:** A play button is an interactive element that when activated, plays the audio.
 
 ## Expectation
 
-For each test target, the outcome of at least one of the following rules is passed:
+For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
 - [Audio elements have a transcript](https://act-rules.github.io/rules/2eb176)
 - [Audio-only as a media alternative for text](https://act-rules.github.io/rules/afb423)
@@ -102,7 +102,7 @@ Audio with controls and incorrect internal transcript
 
 #### Failed Example 2
 
-An audio element that describes some of the text on the same page. The text is not visible on the page.
+An audio element that describes some of the text on the same page. The text is not [visible][] on the page.
 
 ```html
 <p style="display: none;">
@@ -129,7 +129,7 @@ Audio without controls.
 
 #### Inapplicable Example 2
 
-An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the controls are not visible on the page.
+An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the controls are not [visible][] on the page.
 
 ```html
 <p>
@@ -143,3 +143,5 @@ An audio element that describes some of the text on the same page. The text on t
 </p>
 <audio data-rule-target src="../test-assets/moon-audio/moon-speech.mp3" controls style="display: none;"></audio>
 ```
+
+[visible]: #visible 'Definition of visible'

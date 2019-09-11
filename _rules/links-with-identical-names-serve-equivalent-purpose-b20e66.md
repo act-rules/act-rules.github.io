@@ -24,9 +24,9 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to any set of any two or more HTML or SVG elements that have the [semantic role](#semantic-role) of `link`, or a role that inherits from the `link` role, are [included in the accessibility tree](#included-in-the-accessibility-tree), and that have [matching](#matching-characters) [accessible names](#accessible-name) that do not only consist of [whitespace](#whitespace).
+This rule applies to any set of any two or more HTML or SVG elements that have the [semantic role](#semantic-role) of `link`, or a role that inherits from the `link` role, are [included in the accessibility tree](#included-in-the-accessibility-tree), and that have [matching](#matching-characters) [accessible names][accessible name] that do not only consist of [whitespace](#whitespace).
 
-**Note:** The test target for this rule is the full set of link elements that share the same [matching](#matching-characters) [accessible name](#accessible-name).
+**Note:** The test target for this rule is the full set of link elements that share the same [matching](#matching-characters) [accessible name][].
 
 ## Expectation
 
@@ -34,7 +34,7 @@ When followed, the links in each set of target elements resolve to the [same res
 
 ## Assumptions
 
-This rule assumes that the purpose of the links with identical accessible names would not be ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.9 Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html). If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links out of context, e.g. on a list of links in a screen reader, which makes it more of a general user experience concern than an accessibility issue.
+This rule assumes that the purpose of the links with identical [accessible names][accessible name] would not be ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.9 Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html). If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links out of context, e.g. on a list of links in a screen reader, which makes it more of a general user experience concern than an accessibility issue.
 
 ## Accessibility Support
 
@@ -51,7 +51,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-A set of two HTML `<a>` elements have the same accessible name and link to the same resource.
+A set of two HTML `<a>` elements have the same [accessible name][] and link to the same resource.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
@@ -136,7 +136,7 @@ Links created via scripting with [explicit role](#explicit-role) of link, but le
 
 #### Passed Example 9
 
-A set of two SVG `<a>` elements have the same accessible name and link to the same resource.
+A set of two SVG `<a>` elements have the same [accessible name][] and link to the same resource.
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -156,7 +156,7 @@ A set of two SVG `<a>` elements have the same accessible name and link to the sa
 
 #### Failed Example 1
 
-Same accessible name used for links going to different resources:
+Same [accessible name][] used for links going to different resources:
 
 ```html
 <a href="http://facebook.com">Follow us</a> <a href="http://twitter.com">Follow us</a>
@@ -164,7 +164,7 @@ Same accessible name used for links going to different resources:
 
 #### Failed Example 2
 
-Same accessible name used for links going to web pages that are similar, but have different information in their content:
+Same [accessible name][] used for links going to web pages that are similar, but have different information in their content:
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
@@ -195,7 +195,7 @@ Links created via scripting with [explicit role](#explicit-role) of link, but le
 
 #### Failed Example 4
 
-Same accessible name used for image links going to different resources:
+Same [accessible name][] used for image links going to different resources:
 
 ```html
 <a href="http://facebook.com"><img src="facebook.jpg" alt="Follow us"/></a>
@@ -204,7 +204,7 @@ Same accessible name used for image links going to different resources:
 
 #### Failed Example 5
 
-A set of two SVG `<a>` elements have the same accessible name but link to different resources:
+A set of two SVG `<a>` elements have the same [accessible name][] but link to different resources:
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -241,7 +241,7 @@ Links resolves to same resource after redirect, but the redirect is not instant:
 
 #### Inapplicable Example 2
 
-Links with different accessible names:
+Links with different [accessible names][accessible name]:
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
@@ -282,7 +282,7 @@ Links created via scripting, but without the semantic role of link:
 
 #### Inapplicable Example 5
 
-Links do not have accessible names:
+Links do not have [accessible names][accessible name]:
 
 ```html
 <a href="http://facebook.com"></a> <a href="http://twitter.com"></a>
@@ -290,8 +290,10 @@ Links do not have accessible names:
 
 #### Inapplicable Example 6
 
-Image links do not have accessible names:
+Image links do not have [accessible names][accessible name]:
 
 ```html
 <a href="http://facebook.com"><img src="facebook.jpg"/></a> <a href="http://twitter.com"><img src="twitter.jpg"/></a>
 ```
+
+[accessible name]: #accessible-name 'Definition of accessible name'

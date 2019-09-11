@@ -1,9 +1,9 @@
 ---
 id: bf051a
-name: Validity of HTML Lang attribute
+name: HTML page language is valid
 rule_type: atomic
 description: |
-  This rule checks that the `lang` or `xml:lang` attribute has a valid language subtag.
+  This rule checks that the `lang` and `xml:lang` attributes of the root element of an HTML page have a valid primary language subtag.
 accessibility_requirements:
   wcag20:3.1.1: # Language of Page (A)
     forConformance: true
@@ -19,11 +19,13 @@ authors:
 
 ## Applicability
 
-The root element of the page, if it is an `html` element with a `lang` and/or `xml:lang` attribute that is not empty ("").
+The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element with a `lang` and/or `xml:lang` attribute that is not empty ("").
+
+**Note**: Documents embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not web pages according to the definition in WCAG.
 
 ## Expectation
 
-The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-language-subtag) if the attribute is not empty ("").
+For each test target, the `lang` and `xml:lang` attributes have a [valid language subtag](#valid-language-subtag) unless the attribute is empty ("").
 
 ## Assumptions
 

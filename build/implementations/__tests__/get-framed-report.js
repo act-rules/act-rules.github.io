@@ -5,7 +5,7 @@ describe(`getFramedReport`, () => {
 
 	it('returns framed report from given URL (1 report)', async () => {
 		const framedReport = await getFramedReport(
-			`https://raw.githubusercontent.com/w3c/earl/master/earl-reports/alfa-report.json`
+			`https://raw.githubusercontent.com/act-rules/act-rules-implementation-alfa/master/report.json`
 		)
 		assertFramedReport(framedReport)
 	})

@@ -19,9 +19,9 @@ authors:
 
 ## Applicability
 
-Any `role` attribute that is not empty (""), and that is specified on an HTML or SVG element that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+Any `role` attribute that is not empty (""), and that is specified on an HTML or SVG element that is [included in the accessibility tree][].
 
-**Note:** Having a whitespace separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role](#semantic-role) of the element, and so forth.
+**Note:** Having a [whitespace](#whitespace) separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role](#semantic-role) of the element, and so forth.
 
 ## Expectation
 
@@ -133,8 +133,10 @@ Element with null `role` attribute.
 
 #### Inapplicable Example 4
 
-Element that is not included in the accessibility tree.
+Element that is not [included in the accessibility tree][].
 
 ```html
 <div aria-hidden="true" role="banner">Some Content</div>
 ```
+
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

@@ -24,11 +24,11 @@ authors:
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible](#visible), where the video contains audio.
+The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][], where the video contains audio.
 
 ## Expectation
 
-For each test target, the outcome of at least one of the following rules is passed:
+For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
 - [Video element audio described](https://act-rules.github.io/rules/1ea59c)
 - [Video element transcript](https://act-rules.github.io/rules/1a02b0)
@@ -169,7 +169,7 @@ A video element without audio.
 
 #### Inapplicable Example 2
 
-A video element that is not visible on the page.
+A video element that is not [visible][].
 
 ```html
 <video controls style="display: none;">
@@ -177,3 +177,5 @@ A video element that is not visible on the page.
 	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```
+
+[visible]: #visible 'Definition of visible'

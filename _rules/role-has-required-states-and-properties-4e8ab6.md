@@ -18,7 +18,7 @@ authors:
 
 ## Applicability
 
-Any HTML or SVG element that has an [explicit semantic role](#explicit-role), except if the element has an [implicit semantic role](#implicit-role) that is identical to the [explicit semantic role](#explicit-role).
+Any HTML or SVG element that has an [explicit semantic role][], except if the element has an [implicit semantic role][] that is identical to the [explicit semantic role][].
 
 ## Expectation
 
@@ -28,7 +28,7 @@ For each test target, the [WAI-ARIA required states and properties](https://www.
 
 ## Assumptions
 
-- The applicability of this rule is limited to [explicit semantic roles](#explicit-role) based on an assumption that all native HTML and SVG elements have native attributes that are mapped to all of the [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for the [implicit semantic role](#implicit-role) of the element.
+- The applicability of this rule is limited to [explicit semantic roles][] based on an assumption that all native HTML and SVG elements have native attributes that are mapped to all of the [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for the [implicit semantic role][] of the element.
 
 - The ARIA `role` is being used to comply to WCAG.
 
@@ -74,7 +74,7 @@ Implicit value for roles: `option` role has an implicit value (`false`) specifie
 
 #### Passed Example 4
 
-Implicit value for roles: `option` role has an implicit value (`false`) specified for the required state `aria-selected`, here defined with only whitespace instead of a value
+Implicit value for roles: `option` role has an implicit value (`false`) specified for the required state `aria-selected`, here defined with only [whitespace](#whitespace) instead of a value
 
 ```html
 <div role="option" aria-selected=" "></div>
@@ -147,3 +147,6 @@ Element does not list required states and properties (`aria-controls` is require
 ```html
 <div role="combobox" style="display:none;"></div>
 ```
+
+[explicit semantic role]: #explicit-role 'Definition of explicit semantic role'
+[implicit semantic role]: #implicit-role 'Definition of implicit semantic role'

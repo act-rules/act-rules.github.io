@@ -68,7 +68,7 @@ A video element without audio. The text on the page labels the video as an alter
 </p>
 <video
 	data-rule-target
-	src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4"
+	src="/test-assets/perspective-video/perspective-video-with-captions-silent.mp4"
 	controls
 ></video>
 ```
@@ -79,8 +79,8 @@ A video only element with a track element that contains descriptions.
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 	<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
 </video>
 ```
@@ -91,8 +91,8 @@ A silent video element with a text transcript on the same page.
 
 ```html
 <video controls data-rule-target>
-  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
+  <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
+  <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <p>The above video shows a giant fat rabbit climbing out of a hole in the ground.
 He stretches, yaws, and then starts walking.
@@ -105,12 +105,12 @@ A video element without audio has a separate audio track that describes the visu
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 </video>
 
 <audio controls>
-	<source src="../test-assets/rabbit-video/audio-description.mp3" type="audio/mpeg" />
+	<source src="/test-assets/rabbit-video/audio-description.mp3" type="audio/mpeg" />
 </audio>
 ```
 
@@ -128,7 +128,7 @@ A video element that describes some of the text on the same page. The text on th
 </p>
 <video
 	data-rule-target
-	src="../test-assets/perspective-video/perspective-video-with-captions-silent.mp4"
+	src="/test-assets/perspective-video/perspective-video-with-captions-silent.mp4"
 	controls
 ></video>
 ```
@@ -139,8 +139,8 @@ A video only element with a track element that contains incorrect descriptions.
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 	<track kind="descriptions" src="rabbit-video-incorrect-descriptions.vtt" />
 </video>
 ```
@@ -151,8 +151,8 @@ A silent video element with a link to an incorrect text transcript on a differen
 
 ```html
 <video controls data-rule-target>
-  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
+  <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
+  <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</a>
 ```
@@ -163,12 +163,12 @@ A video element without audio has a separate audio track that incorrectly descri
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 </video>
 
 <audio controls>
-	<source src="../test-assets/rabbit-video/incorrect-audio-description.mp3" type="audio/mpeg" />
+	<source src="/test-assets/rabbit-video/incorrect-audio-description.mp3" type="audio/mpeg" />
 </audio>
 ```
 
@@ -184,7 +184,7 @@ A video element with audio.
 	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
 	compatibility is described in WCAG. See the video below to watch the same information again in video form.
 </p>
-<video data-rule-target src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
+<video data-rule-target src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 #### Inapplicable Example 2
@@ -193,8 +193,8 @@ A video only element that is not [visible][].
 
 ```html
 <video controls style="display: none;">
-	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 	<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
 </video>
 ```

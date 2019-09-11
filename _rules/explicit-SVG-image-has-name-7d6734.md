@@ -19,7 +19,7 @@ authors:
 
 ## Applicability
 
-The rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namespace with an explicit [semantic role](#semantic-role) of either `img`, `graphics-document`, `graphics-symbol`, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+The rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namespace with an [explicit semantic role](#explicit-semantic-role) of either `img`, `graphics-document`, `graphics-symbol`, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 **Note**: The [SVG Accessibility API Mappings](https://www.w3.org/TR/svg-aam-1.0/#include_elements) specifies that many elements in the SVG namespace are purely presentational and should not be included in the accessibility tree unless indicated otherwise through the use of text alternative content, an explicit WAI ARIA role, or a valid `tabindex` attribute.
 
@@ -35,7 +35,7 @@ This rule assumes that the presence of one of the roles outlined in the applicab
 
 The [HTML Accessibility API Mappings](https://www.w3.org/TR/html-aam-1.0/#html-element-role-mappings) specify that the `<svg>` element has an implicit role of `graphics-document`. However browser support for the `graphics-document` role and the [SVG Accessibility API Mappings (work in progress)](https://www.w3.org/TR/svg-aam-1.0) is inconsistent.
 
-This rule is limited to the implicit use of roles, as a clear indication that content should convey meaning, until the [SVG Accessibility API Mappings (work in progress)](https://www.w3.org/TR/svg-aam-1.0) is more stable and borwser support is more consistent.
+This rule is limited to the explicit use of roles, as a clear indication that content should convey meaning, until the [SVG Accessibility API Mappings (work in progress)](https://www.w3.org/TR/svg-aam-1.0) is more stable and browser support is more consistent.
 
 Browser and assistive technology support for SVG `<title>` and `<desc>` elements is currently inconsistent. Using WAI ARIA in combination with the `img` role for non-decorative `<svg>` elements significantly improves accessibility browser support.
 
@@ -92,7 +92,7 @@ The `<svg>` element has an explicit role of `img` but has no accessible name.
 
 #### Failed example 2
 
-The `<svg>` has an explicit role of `img`but has only whitespace in the `<title>` element for the accessible name.
+The `<svg>` element has an explicit role of `img`but has only whitespace in the `<title>` element for the accessible name.
 
 ```html
 <p>How many circles are there?</p>
@@ -116,7 +116,7 @@ The `<svg>` element is included in the accessibility tree with an explicit role 
 
 #### Failed example 4
 
-The `<circle>` elements have an explicit role of `graphics-symbol` but do not have accessible names.
+The `<circle>` element has an explicit role of `graphics-symbol` but does not have an accessible name.
 
 ```html
 <p>How many circles are there?</p>
@@ -129,7 +129,7 @@ The `<circle>` elements have an explicit role of `graphics-symbol` but do not ha
 
 #### Inapplicable example 1
 
-The `svg` element does not render any visible content to the screen and is not included in the accessibility tree. 
+The `<svg>` element does not render any visible content to the screen and is not included in the accessibility tree. 
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
@@ -138,7 +138,7 @@ The `svg` element does not render any visible content to the screen and is not i
 
 #### Inapplicable example 2
 
-The `<svg>` or `<circle>` elements do not have an explicit role.
+Both the `<svg>` and `<circle>` elements do not have an explicit role.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg">
@@ -148,7 +148,7 @@ The `<svg>` or `<circle>` elements do not have an explicit role.
 
 #### Inapplicable example 3
 
-The `svg` element has an explicit role of `img` but the `aria-hidden` attribute removes the element and its descendants from the accessibility tree.
+The `<svg>` element has an explicit role of `img` but the `aria-hidden` attribute removes the element and its descendants from the accessibility tree.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
@@ -158,7 +158,7 @@ The `svg` element has an explicit role of `img` but the `aria-hidden` attribute 
 
 #### Inapplicable example 4
 
-The `<circle>` elements has an explicit role that is not `img`, `graphics-document` or `graphics-symbol`.
+The `<circle>` element has an explicit role that is not `img`, `graphics-document` or `graphics-symbol`.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg">

@@ -155,12 +155,12 @@ The `lang` attribute value is not empty ("") and is not a valid primary language
 
 #### Failed Example 5
 
-The `lang` attribute value is not empty ("") and is not a valid primary language subtag.
+The `xml:lang` attribute value is not empty ("") and is not a valid primary language subtag.
 
 ```html
 <html>
 	<body>
-		<article lang="123"></article>
+		<article xml:lang="123"></article>
 	</body>
 </html>
 ```
@@ -179,7 +179,7 @@ The rule applies to elements with the `body` of a webpage. `html` elements are i
 
 #### Inapplicable Example 2
 
-An empty value for `lang` attribute is ignored by this rule, as the applicability specifies only values that are not empty ("").
+An empty value for `lang` attribute is ignored as the rule only applies to `lang` or `xml:lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
 
 ```html
 <html>
@@ -191,7 +191,7 @@ An empty value for `lang` attribute is ignored by this rule, as the applicabilit
 
 #### Inapplicable Example 3
 
-An empty value for `xml:lang` attribute is ignored by this rule, as the applicability specifies only values that are not empty ("").
+An empty value for `xml:lang` attribute is ignored as the rule only applies to `lang` or `xml:lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
 
 ```html
 <html>

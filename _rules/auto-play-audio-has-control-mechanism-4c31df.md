@@ -13,6 +13,10 @@ input_aspects:
 authors:
   - Anne Thyme Nørregaard
   - Bryn Anderson
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'title-require'
 ---
 
 ## Applicability
@@ -29,7 +33,7 @@ The [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or
 
 ## Assumptions
 
-*There are currently no assumptions*
+_There are currently no assumptions_
 
 ## Accessibility Support
 
@@ -49,18 +53,18 @@ The native `<video>` and `<audio>` controls in several browser and assistive tec
 
 The `<audio>` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
 
-``` html
-  <audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay="true" controls></audio>
+```html
+<audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay="true" controls></audio>
 ```
 
 #### Passed Example 2
 
 The `<video>` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
 
-``` html
- <video autoplay="true" controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+```html
+<video autoplay="true" controls>
+	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```
 
@@ -68,19 +72,26 @@ The `<video>` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechan
 
 The `<video>` element has a custom [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
 
-``` html
+```html
 <head>
-<style>
-button {color: #000;}
-button:hover {cursor: pointer;	cursor: pointer; background-color: grey;  color: white;}
-</style>
+	<style>
+		button {
+			color: #000;
+		}
+		button:hover {
+			cursor: pointer;
+			cursor: pointer;
+			background-color: grey;
+			color: white;
+		}
+	</style>
 </head>
 <body>
 	<div id="video-container">
 		<!-- Video -->
 		<video id="video" autoplay="true">
-		 <source src="https://act-rules.github.io/test-assets/rabbit-video/video.mp4" type="video/mp4">
-	   	 <source src="https://act-rules.github.io/test-assets/rabbit-video/video.webm" type="video/webm" />
+			<source src="https://act-rules.github.io/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+			<source src="https://act-rules.github.io/test-assets/rabbit-video/video.webm" type="video/webm" />
 		</video>
 		<!-- Video Controls -->
 		<div id="video-controls">
@@ -88,7 +99,7 @@ button:hover {cursor: pointer;	cursor: pointer; background-color: grey;  color: 
 			<button type="button" id="mute">Mute</button>
 		</div>
 	</div>
-	<script src="no-autoplay.js"></script>
+	<script src="../test-assets/80f0bf/no-autoplay.js"></script>
 </body>
 ```
 
@@ -98,18 +109,18 @@ button:hover {cursor: pointer;	cursor: pointer; background-color: grey;  color: 
 
 The `<audio>` does not have a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
 
-``` html
-  <audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay="true"></audio>
+```html
+<audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay="true"></audio>
 ```
 
 #### Failed Example 2
 
 The `<video>` element autoplays and does not have a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
 
-``` html
- <video autoplay="true">
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+```html
+<video autoplay="true">
+	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```
 
@@ -117,19 +128,27 @@ The `<video>` element autoplays and does not have a [mechanism](https://www.w3.o
 
 The `<video>` has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off, but the mechanism is not visible.
 
-``` html
+```html
 <head>
-<style>
-button {color: #000; display: none;}
-button:hover {cursor: pointer;	cursor: pointer; background-color: grey;  color: white;}
-</style>
+	<style>
+		button {
+			color: #000;
+			display: none;
+		}
+		button:hover {
+			cursor: pointer;
+			cursor: pointer;
+			background-color: grey;
+			color: white;
+		}
+	</style>
 </head>
 <body>
 	<div id="video-container">
 		<!-- Video -->
 		<video id="video" autoplay="true">
-		 <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4">
-	   	 <source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+			<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
+			<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
 		</video>
 		<!-- Video Controls -->
 		<div id="video-controls">
@@ -137,7 +156,7 @@ button:hover {cursor: pointer;	cursor: pointer; background-color: grey;  color: 
 			<button type="button" id="mute">Mute</button>
 		</div>
 	</div>
-	<script src="no-autoplay.js"></script>
+	<script src="../test-assets/80f0bf/no-autoplay.js"></script>
 </body>
 ```
 
@@ -145,27 +164,34 @@ button:hover {cursor: pointer;	cursor: pointer; background-color: grey;  color: 
 
 The `<video>` has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off, but the control `<button>` elements do not have accessible names.
 
-``` html
+```html
 <head>
-<style>
- button {color: #000;}
- button:hover {cursor: pointer;	cursor: pointer; background-color: grey;  color: white;}
-</style>
+	<style>
+		button {
+			color: #000;
+		}
+		button:hover {
+			cursor: pointer;
+			cursor: pointer;
+			background-color: grey;
+			color: white;
+		}
+	</style>
 </head>
 <body>
 	<div id="video-container">
 		<!-- Video -->
 		<video id="video" autoplay="true">
-		  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4">
-	   	  <source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+			<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
+			<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
 		</video>
 		<!-- Video Controls -->
 		<div id="video-controls">
-      		<button type="button" id="play-pause" class="play"></button>
-		<button type="button" id="mute"></button>
+			<button type="button" id="play-pause" class="play"></button>
+			<button type="button" id="mute"></button>
 		</div>
 	</div>
-	<script src="no-autoplay.js"></script>
+	<script src="../test-assets/80f0bf/no-autoplay.js"></script>
 </body>
 ```
 
@@ -173,19 +199,26 @@ The `<video>` has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to 
 
 The `<video>` has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off, but the mechanism is not included in the accessibility tree.
 
-``` html
+```html
 <head>
-<style>
-button {color: #000;}
-button:hover {cursor: pointer;	cursor: pointer; background-color: grey;  color: white;}
-</style>
+	<style>
+		button {
+			color: #000;
+		}
+		button:hover {
+			cursor: pointer;
+			cursor: pointer;
+			background-color: grey;
+			color: white;
+		}
+	</style>
 </head>
 <body>
 	<div id="video-container">
 		<!-- Video -->
 		<video id="video" autoplay="true">
-		 <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4">
-	   	 <source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+			<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
+			<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
 		</video>
 		<!-- Video Controls -->
 		<div id="video-controls" aria-hidden="true">
@@ -193,7 +226,7 @@ button:hover {cursor: pointer;	cursor: pointer; background-color: grey;  color: 
 			<button type="button" id="mute">Mute</button>
 		</div>
 	</div>
-	<script src="no-autoplay.js"></script>
+	<script src="../test-assets/80f0bf/no-autoplay.js"></script>
 </body>
 ```
 
@@ -203,10 +236,10 @@ button:hover {cursor: pointer;	cursor: pointer; background-color: grey;  color: 
 
 The `<video>` element is `muted`.
 
-``` html
- <video autoplay="true" muted="true">
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+```html
+<video autoplay="true" muted="true">
+	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```
 
@@ -214,10 +247,10 @@ The `<video>` element is `muted`.
 
 The `<video>` element `src` file has no audio output.
 
-``` html
- <video autoplay="true">
-  <source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4" />
-  <source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm" />
+```html
+<video autoplay="true">
+	<source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4" />
+	<source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm" />
 </video>
 ```
 
@@ -225,6 +258,6 @@ The `<video>` element `src` file has no audio output.
 
 The `audio` element does not autoplay.
 
-``` html
-  <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+```html
+<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```

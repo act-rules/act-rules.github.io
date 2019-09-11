@@ -164,7 +164,7 @@ The `lang` and `xml:lang` attribute specified is empty ("").
 
 #### Inapplicable Example 1
 
-The rule does not apply to `SVG` element.
+The rule does not apply to `svg` element.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" lang="en"></svg>

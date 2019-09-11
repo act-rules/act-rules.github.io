@@ -33,7 +33,7 @@ _There are currently no assumptions_
 
 There are known combinations of a popular operating system with browsers and assistive technologies that do not support the `lang` and `xml:lang` attributes.
 
-While HTML5 specification indicates that `xml:lang` attribute takes priority over `lang` attribute, certain assistive technologies prioritise `lang` over `xml:lang` instead.
+While HTML5 specification indicates that `xml:lang` attribute takes priority over `lang` attribute, certain assistive technologies prioritize `lang` over `xml:lang` instead.
 
 ## Background
 
@@ -148,7 +148,7 @@ The `lang` attribute value is not a valid primary language subtag.
 
 #### Inapplicable Example 1
 
-The rule applies to `html` element and hence usage of `lang` attribute in `SVG` element is not applicable.
+The rule applies to `html` element and hence usage of `lang` attribute in `svg` element is not applicable.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" lang="fr"></svg>
@@ -156,7 +156,7 @@ The rule applies to `html` element and hence usage of `lang` attribute in `SVG` 
 
 #### Inapplicable Example 2
 
-The rule applies to `html` element and hence usage of `xml:lang` attribute in `SVG` element is not applicable.
+The rule applies to `html` element and hence usage of `xml:lang` attribute in `svg` element is not applicable.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" xml:lang="fr"></svg>

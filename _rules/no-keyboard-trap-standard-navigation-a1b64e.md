@@ -28,7 +28,7 @@ The rule applies to any HTML or SVG element that is [focusable](#focusable).
 
 For each target element focus can cycle to the browser UI by using [standard keyboard navigation](#standard-keyboard-navigation).
 
-**Note**: Cycling back to the browser UI can be done both by moving forward through the tab order and by moving backwards. It is not possible to fulfil this expectation by using browser specific shortcuts to return to the browser UI.
+**Note**: Cycling back to the browser UI can be done both by moving forward through the tab order and by moving backwards. It is not possible to fulfill this expectation by using browser specific shortcuts to return to the browser UI.
 
 ## Assumptions
 

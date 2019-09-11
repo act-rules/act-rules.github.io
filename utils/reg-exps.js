@@ -16,10 +16,10 @@ const regexps = {
 		1. Classical usage => 'this is a link [link](key)'
 		\(([^)]+)\) => one or more non-'(' within parenthesis and remember the content of the parenthesis as first group.
 		2. Internal reference => '[refname]: key "title"'
-		/.*:\s+(#.*)\s+/ => drop everything before the ':', remember the space separated first word after it if it starts with # (otherwise, it's a link to an external page).
+		/.*:\s+(.*)\s+/ => drop everything before the ':', remember the space separated first word after it.
 	*/
 	glossaryKey: /\(([^)]+)\)/,
-	glossaryKeyInDefinition: /.*:\s+(#.*)\s+/,
+	glossaryKeyInDefinition: /.*:\s+(.*)\s+/,
 }
 
 module.exports = regexps

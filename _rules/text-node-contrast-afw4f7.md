@@ -212,7 +212,7 @@ Text that fails because of CSS transparent.
 </div>
 ```
 
-#### Passed Example 6
+#### Failed Example 6
 
 Text that is in a shadow DOM tree with insufficient contrast.
 

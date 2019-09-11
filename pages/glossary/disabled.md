@@ -18,21 +18,21 @@ An element that is normally [perceivable][] and [operable][], but has been rende
 
     **Note:** When the [`aria-disabled`][aria-disabled] attribute is specified on an element, it is assumed that appropriate measures have been taken to also functionally disable the element. This can be done by disabling pointer events using the [`pointer-events`][pointer-events] property and by disabling keyboard interactions using the [`tabindex`][tabindex] attribute.
 
+[aria-disabled]: https://www.w3.org/TR/wai-aria/#aria-disabled
+[ascii case-insensitive]: https://infra.spec.whatwg.org/#ascii-case-insensitive
+[button]: https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element
+[child]: https://dom.spec.whatwg.org/#concept-tree-child
+[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
+[disabled]: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-disabled
+[fieldset]: https://html.spec.whatwg.org/multipage/form-elements.html#the-fieldset-element
+[focusable]: https://html.spec.whatwg.org/multipage/interaction.html#focusable-area
+[form-associated custom element]: https://html.spec.whatwg.org/multipage/custom-elements.html#form-associated-custom-element
+[input]: https://html.spec.whatwg.org/multipage/input.html#the-input-element
+[legend]: https://html.spec.whatwg.org/multipage/form-elements.html#the-legend-element
 [operable]: https://www.w3.org/TR/wai-aria/#dfn-operable
 [perceivable]: https://www.w3.org/TR/wai-aria/#dfn-perceivable
-[aria-disabled]: https://www.w3.org/TR/wai-aria/#aria-disabled
-[disabled]: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-disabled
-[form-associated custom element]: https://html.spec.whatwg.org/multipage/custom-elements.html#form-associated-custom-element
-[button]: https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element
-[input]: https://html.spec.whatwg.org/multipage/input.html#the-input-element
-[select]: https://html.spec.whatwg.org/multipage/form-elements.html#the-select-element
-[textarea]: https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element
-[fieldset]: https://html.spec.whatwg.org/multipage/form-elements.html#the-fieldset-element
-[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
-[legend]: https://html.spec.whatwg.org/multipage/form-elements.html#the-legend-element
-[child]: https://dom.spec.whatwg.org/#concept-tree-child
-[shadow-including descendant]: https://dom.spec.whatwg.org/#concept-shadow-including-descendant
-[focusable]: https://html.spec.whatwg.org/multipage/interaction.html#focusable-area
-[ascii case-insensitive]: https://infra.spec.whatwg.org/#ascii-case-insensitive
 [pointer-events]: https://www.w3.org/TR/SVG2/interact.html#PointerEventsProperty
+[select]: https://html.spec.whatwg.org/multipage/form-elements.html#the-select-element
+[shadow-including descendant]: https://dom.spec.whatwg.org/#concept-shadow-including-descendant
 [tabindex]: https://html.spec.whatwg.org/multipage/interaction.html#the-tabindex-attribute
+[textarea]: https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element

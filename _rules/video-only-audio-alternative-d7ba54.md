@@ -16,7 +16,7 @@ authors:
 
 ## Applicability
 
-The rule applies to any [non-streaming](#non-streaming-media-element) `video` element [visible](#visible) where the video doesn't contains audio.
+The rule applies to any [non-streaming](#non-streaming-media-element) `video` element [visible][] where the video doesn't contains audio.
 
 ## Expectation
 
@@ -97,7 +97,7 @@ A video element with audio.
 
 #### Inapplicable Example 2
 
-A video element without sound that is not visible on the page.
+A video element without sound that is not [visible][].
 
 ```html
 <video controls style="display: none;">
@@ -105,3 +105,5 @@ A video element without sound that is not visible on the page.
 	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
 </video>
 ```
+
+[visible]: #visible 'Definition of visible'

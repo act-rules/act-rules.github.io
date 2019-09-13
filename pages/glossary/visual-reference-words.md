@@ -22,6 +22,7 @@ Visual location
 - Up
 
 Shape
+- Box
 - Circle
 - Circular
 - Cresent

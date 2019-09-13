@@ -2,68 +2,64 @@
 title: Visual Reference Words
 key: visual-reference-words
 ---
-Any word in a text note that is included in the translated version of the following lists where the language of the translation is the programmatically determinable language of the text note.
 
-Some words can be translated in multible ways. In such cases each translation must be included.
+Any word in a textnode that is included in the translated version of the following lists, where the language of the translation is the programmatically determinable language of the textnode. Some words can be translated in multible ways. In such cases each translation must be included. Some words can be spelled in multible ways. In such cases each spelling must be included.
 
 Visual location
-- Right
-- Left
 - Above
 - Below
-- Down
-- Up
-- Top
-- Bottom
 - Beneath
-- Above
-- Under
-- Underneath
 - Beside
+- Bottom
+- Down
+- Left
 - Near
 - Nearby
+- Right
+- Top
+- Under
+- Underneath
+- Up
 
 Shape
-- Triangle
-- Triangular
-- Round
-- Oval
-- Disc
 - Circle
 - Circular
-- Square
-- Squared
-- Rectangle
-- Rectangular
-- Polygon
-- Polygonal
+- Cresent
+- Cross
+- Diamond
+- Disc
+- Heart
 - Hexagon
 - Hexagonal
+- Kite
+- Oval
+- Parallelogram
 - Pentagon
 - Pentagonal
+- Polygon
+- Polygonal
+- Rectangle
+- Rectangular
+- Round
+- Square
+- Squared
+- Star
 - Trapezoid
 - Trapezoidal
-- Kite
-- Diamond
-- Heart
-- Star
-- Cross
-- Cresent
-- Parallelogram
+- Triangle
+- Triangular
 
 Size
 - Big
-- Small
 - large
 - Little
+- Narrow
+- Small
 - Tiny
 - Wide
-- Narrow
 
 Orientation
-- Sideways
 - Angeled
-- Slanted
 - Askew
 - Atilt
 - Crooked
@@ -71,6 +67,8 @@ Orientation
 - Lopsided
 - off-kilter
 - Pitched
+- Sideways
 - Skewed
+- Slanted
 - Slanting
 - Tipped

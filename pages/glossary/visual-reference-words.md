@@ -2,8 +2,9 @@
 title: Visual Reference Words
 key: visual-reference-words
 ---
+Any word in a text note that is included in the translated version of the following lists where the language of the translation is the programmatically determinable language of the text note.
 
-Any word, or is a translation thereof, that is mentioned in this list that is part of the language that it is programmatically determined to be:
+Some words can be translated in multible ways. In such cases each translation must be included.
 
 Visual location
 - Right
@@ -59,8 +60,6 @@ Size
 - Wide
 - Narrow
 
-[CSS named Colours](https://www.w3.org/TR/css-color-4/#named-colors)
-
 Orientation
 - Sideways
 - Angeled
@@ -75,11 +74,3 @@ Orientation
 - Skewed
 - Slanting
 - Tipped
-
-Words we wanted to include but are not:
-- animation (push the animated button)
-- Underlined
-- cheerful (impressions)
-- gloomy
-
-**Note:** Some words can be translated in multible ways. In such cases each translation must be considered.

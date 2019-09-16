@@ -52,21 +52,21 @@ _There are no major accessibility support issues known for this rule._
 
 ### Understanding WCAG 
 
-- [WCAG 2.1 - Understanding 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
+- (Example of a WCAG SC. REMOVE THIS LINK.) [WCAG 2.1 - Understanding 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 
 ### Related WCAG Techniques
 
-- [G108: Using markup features to expose the name and role](https://www.w3.org/WAI/WCAG21/Techniques/general/G108.html)
+- (Example of a WCAG Technique. REMOVE THIS LINK.) [G108: Using markup features to expose the name and role](https://www.w3.org/WAI/WCAG21/Techniques/general/G108.html)
 
 ### Standards and Definitions
 
-- [Accessible Rich Internet Applications 1.1](https://www.w3.org/TR/wai-aria-1.1/)
-- [WAI-ARIA 1.1: 6. Supported States and Properties](https://www.w3.org/TR/wai-aria/#states_and_properties)
-- [WCAG 2.1 definition: user interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)
+- (Example of a w3 standard. REMOVE THIS LINK.) [Accessible Rich Internet Applications 1.1](https://www.w3.org/TR/wai-aria-1.1/)
+- (Example of a w3 standard direct heading link. REMOVE THIS LINK.) [WAI-ARIA 1.1: 6. Supported States and Properties](https://www.w3.org/TR/wai-aria/#states_and_properties)
+- (Example of a WCAG definition. REMOVE THIS LINK.) [WCAG 2.1 definition: user interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)
 
 ### Further Reading
 
-- [Semantics and ARIA](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/)
+- (Example of an article. REMOVE THIS LINK.) [Semantics and ARIA](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/)
 
 ## Test Cases
 

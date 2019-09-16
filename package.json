@@ -105,7 +105,7 @@
 		"gatsby-plugin-prefetch-google-fonts": "^1.4.3",
 		"gatsby-plugin-react-helmet": "^3.1.6",
 		"gatsby-plugin-sass": "^2.1.14",
-		"gatsby-plugin-sharp": "^2.2.20",
+		"gatsby-plugin-sharp": "^2.2.22",
 		"gatsby-remark-autolink-headers": "^2.1.9",
 		"gatsby-remark-copy-linked-files": "^2.1.17",
 		"gatsby-remark-prismjs": "^3.3.13",

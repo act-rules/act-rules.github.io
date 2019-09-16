@@ -67,17 +67,17 @@ _There are no major accessibility support issues known for this rule._
 
 <!-- Add links to understanding documents for all success criteria the rule maps to, either directly or through a composite rule. Remove if not applicable -->
 
-- [WCAG 2.1 - Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
+- <!-- Example of a WCAG SC. REMOVE THIS LINK.--> [WCAG 2.1 - Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 
 ### Related WCAG Techniques
 
 <!-- Add links to related techniques. Remove if not applicable -->
 
-- [G108: Using markup features to expose the name and role, allow user-settable properties to be directly set, and provide notification of changes](https://www.w3.org/WAI/WCAG21/Techniques/general/G108)
+- <!-- Example of a WCAG Technique. REMOVE THIS LINK. --> [G108: Using markup features to expose the name and role, allow user-settable properties to be directly set, and provide notification of changes](https://www.w3.org/WAI/WCAG21/Techniques/general/G108)
 
 ### Standards and Definitions
 
-<!--
+<!-- 
 Add links to related specifications or definitions within those specifications. Remove if not applicable
 
 - When linking to the entire specification, use the full name and number in the link text
@@ -85,16 +85,15 @@ Add links to related specifications or definitions within those specifications. 
 - When linking to a definition, use the abbreviated name and version number of the specification, followed by "definition:" and the definition term
 -->
 
-- [Accessible Rich Internet Applications 1.1](https://www.w3.org/TR/wai-aria-1.1/)
-- [WAI-ARIA 1.1: 6. Supported States and Properties](https://www.w3.org/TR/wai-aria/#states_and_properties)
-- [WCAG 2.1 definition: user interface component
-  ](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)
+- <!-- Example of a w3 standard. REMOVE THIS LINK. --> [Accessible Rich Internet Applications 1.1](https://www.w3.org/TR/wai-aria-1.1/)
+- <!-- Example of a w3 standard direct heading link. REMOVE THIS LINK. --> [WAI-ARIA 1.1: 6. Supported States and Properties](https://www.w3.org/TR/wai-aria/#states_and_properties)
+- <!-- Example of a WCAG definition. REMOVE THIS LINK. --> [WCAG 2.1 definition: user interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)
 
 ### Further Reading
 
 <!-- Add links to related articles, blog posts, tools, other test suites, etc. Use the title of the article as a link text. Remove if not applicable -->
 
-- [Semantics and ARIA](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/)
+- <!-- Example of an article. REMOVE THIS LINK. -->[Semantics and ARIA](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/)
 
 ## Test Cases
 

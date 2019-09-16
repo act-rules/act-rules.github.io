@@ -34,8 +34,6 @@ The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s)
 
 Each target element has at least one [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) that is an HTML `title` element.
 
-**Note:** According to the [HTML specification for the `title` element](https://html.spec.whatwg.org/multipage/semantics.html#the-title-element), `title` elements can only be [descendants](https://dom.spec.whatwg.org/#concept-tree-descendant) of the `head` element, and there can only be one `title` element. However, browsers will pick up the first `title` element that is a [descendant]() of the [document element](https://www.w3.org/TR/dom/#document-element) and use that as the [document title](https://html.spec.whatwg.org/multipage/semantics.html#the-title-element), also if the `title` is not a [descendant]() of the `head` element, or if there are multiple `title` elements. So even though it is invalid HTML, having `title` elements in the `body` or other places, or having multiple `title` elements don't cause any accessibility issues and is therefore not included as failures for this rule.
-
 **Note**: The `title` element exists in other namespaces such as SVG. These are not HTML `title` elements and should be ignored for this rule.
 
 **Note**: The [HTML 5.2 specification](https://www.w3.org/TR/html52/document-metadata.html#the-title-element) requires that a document only has one `title` element, and that it is a child of the `head` element of a document. However, HTML 5.2 also describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG.

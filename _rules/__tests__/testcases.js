@@ -13,10 +13,10 @@ const htmlHintRules = {
 	'spec-char-escape': true,
 	'id-unique': true,
 	'src-not-empty': true,
-	'title-require': true,
 	'alt-require': true,
 	'attr-unsafe-chars': true,
 	// 'OFF'
+	'title-require': false,
 	'doctype-first': false,
 	'doctype-html5': false,
 	'attr-value-not-empty': false,

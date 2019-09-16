@@ -18,10 +18,6 @@ authors:
   - Bryn Anderson
   - Anne Thyme Nørregaard
   - Jey Nandakumar
-htmlHintIgnore:
-  # https://www.npmjs.com/package/htmlhint
-  # (used with `npm test` to ensure validity of code snippets)
-  - 'title-require'
 ---
 
 ## Applicability

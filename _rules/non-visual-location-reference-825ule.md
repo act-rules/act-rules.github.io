@@ -66,24 +66,6 @@ _There are no major accessibility support issues known for this rule._
 
 ## Test Cases
 
-TODO
-
-== Passed ==
-Visual reference word is included in the alt text of the image
-Describes something on a different page
-Describes something in a frame
-
-== Failed ==
-Menu on the right (if there is no role or landmark)
-Menu on the right (if there are 2 menu roles)
-Box but also howdy, but howdy is in a different paragraph
-Describes something on a different page
-Describes something in a frame
-
-== Inapplicable ==
-Text does not include a visual reference word
-Text includes a visual reference word that is hidden
-
 ### Passed
 
 #### Passed Example 1
@@ -268,43 +250,192 @@ The image is indicated by the word narrow but the alt text of the image also inc
 ```html
 <body>
 	<p>The wide image is awesome. But the narrow image isn't.</p>
-	<img scr="awesome_wide.jpg" alt="Wide photo of an awesome landscape.">
-	<img scr="Non_awesome_narrow.jpg" alt="Narrow photo of a dull landscape.">
+	<img scr="/test-assets/images/awesome_wide.jfif" alt="Wide photo of an awesome landscape.">
+	<img scr="/test-assets/images/Non_awesome_narrow.jpg" alt="Narrow photo of a dull landscape.">
 	</div>
 </body>
 ```
 
+#### Passed Example 8
+
+This document is using the word "triangle" but in this case the triangle menu is on a different page and has a heading "triangle menu".
+
+```html
+<body>
+	<p>On the <a href="/test-assets/SC1.3.3-triangle-menu-with-heading.html">information page</a> you can find more examples within the triangle menu</p>
+</body>
+```
+
+#### Passed Example 9
+
+This document is using the word "star" but in this case the star is in an iframe and has a heading "examples".
+
+```html
+<body>
+<p>More examples can be found when you look underneath the star or underneath the heading examples</p>
+<iframe src="/test-assets/SC1.3.3-star-with-heading.html"></iframe>
+</body>
+```
 
 ### Failed
 
 #### Failed Example 1
 
-The content in the column on the right is indicated with the word "right" (which is a location indicator based on visual perception) and there is no other indication of where to find the content.
+The content in the column on the right is a menu. The user is told to find the menu on the right (which is a visual indicator word) but the menu is not identified with the help of the "menu" heading, nor landmark, nor role.
 
 ```html
 <head>
-<style>
-.col-container {
-  display: table;
-}
-.col {
-  display: table-cell;
-  padding: 16px;
-}
-button {
-  background: red;
-}
-</style>
+	<style>
+	.col-container {
+		display: table;
+		width: 100%;
+	}
+	.col {
+		display: table-cell;
+		padding: 16px;
+	}
+	button {
+		background: #FAA;
+	}
+	</style>
 </head>
 <body>
-<div class="col-container">
-  <div class="col">
-    <p>Click the "howdy" button on the left, for a surprise</p>
-  </div>
-  <div class="col">
-    <button onclick="alert('Surprise'!)">Howdy</button>
-  </div>
-</div>
+	<div class="col-container">
+		<div class="col">
+			<p>Find the menu on the right, to navigate</p>
+		</div>
+		<div class="col">
+			<ul>
+				<li>
+					<a href="https://www.w3.org/Consortium/contact">Contact</a>
+				</li>
+				<li>
+					<a href="https://www.w3.org/Help/">Help and FAQ</a>
+				</li>
+				<li>
+					<a href=https://www.w3.org/Consortium/sponsor/">Donate</a>
+				</li>
+				<li>
+					<a href="https://www.w3.org/Consortium/siteindex">Sitemap</a>
+				</li>
+			</ul>
+					
+		</div>
+	</div>
+</body>
+```
+
+#### Failed Example 2
+
+The content in the column on the right is part of the navigation. The user is told to find the navigation on the right (which is a visual indicator word) and the navigation has a navigation element, but there are 2 navigation elements on the page so the user doesn't know which one to use.
+
+```html
+<head>
+	<style>
+	.col-container {
+		display: table;
+		width: 100%;
+	}
+	.col {
+		display: table-cell;
+		padding: 16px;
+	}
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li>
+				<a href="https://www.w3.org/">W3C homepage</a>
+			</li>
+			<li>
+				<a href="https://www.w3.org/standards/">Standards</a>
+			</li>
+			<li>
+				<a href="https://www.w3.org/participate/">Participate</a>
+			</li>
+			<li>
+				<a href="https://www.w3.org/Consortium/membership">Membership</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="col-container">
+		<div class="col">
+			<p>Find the navigation on the right, for the non-essential links</p>
+		</div>
+		<nav>
+			<div class="col">
+				<ul>
+					<li>
+						<a href="https://www.w3.org/Consortium/contact">Contact</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/Help/">Help and FAQ</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/Consortium/sponsor/">Donate</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/Consortium/siteindex">Sitemap</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</body>
+```
+
+#### Failed Example 3
+
+The content in the column on the right is indicated with the word "box" (which is a shape indicator based on visual perception) and is also indicated by referencing the word "howdy", but the word "howdy" is in a different paragraph than the word "box".
+
+```html
+<head>
+	<style>
+	.col-container {
+		display: table;
+		width: 100%;
+	}
+	.col {
+		display: table-cell;
+		padding: 16px;
+	}
+	button {
+		background: #FAA;
+	}
+	</style>
+</head>
+<body>
+	<div class="col-container">
+		<div class="col">
+			<p>Click the box on the right, for a surprise</p>
+			<p>If you can't find the box here is a hint: it says "Howdy"!</p>
+		</div>
+		<div class="col">
+			<button onclick="alert('Surprise!')">Howdy</button>
+		</div>
+	</div>
+</body>
+```
+
+#### Failed Example 4
+
+This document is using the word "triangle" but in this case the triangle menu is on a different page.
+
+```html
+<body>
+	<p>On the <a href="/test-assets/SC1.3.3-triangle-menu-without-heading.html">information page</a> you can find more examples within the triangle menu</p>
+</body>
+```
+
+#### Failed Example 5
+
+This document is using the word "star" but in this case the star is in an iframe.
+
+```html
+<body>
+<p>More examples can be found when you look underneath the star or underneath the heading examples</p>
+<iframe src="/test-assets/SC1.3.3-star-without-heading.html"></iframe>
 </body>
 ```
 
@@ -312,61 +443,64 @@ button {
 
 #### Inapplicable Example 1
 
-The content in the column on the right is not indicated with a location indicator based on visual perception.
+The content in the column on the right is indicated with the word "button" which is not a visual reference word.
 
 ```html
 <head>
-<style>
-.col-container {
-  display: table;
-}
-.col {
-  display: table-cell;
-  padding: 16px;
-}
-</style>
+	<style>
+	.col-container {
+		display: table;
+		width: 100%;
+	}
+	.col {
+		display: table-cell;
+		padding: 16px;
+	}
+	button {
+		background: #FAA;
+	}
+	</style>
 </head>
 <body>
-
-<div class="col-container">
-  <div class="col">
-    <p>Read the content below about the fuzzyness of cats.</p>
-  </div>
-
-  <div class="col">
-    <p>Cats are usually fuzzy.</p>
-  </div>
-</div>
-
+	<div class="col-container">
+		<div class="col">
+			<p>Click the button on the right, for a surprise</p>
+		</div>
+		<div class="col">
+			<button onclick="alert('Surprise!')">Howdy</button>
+		</div>
+	</div>
 </body>
 ```
 
-#### Inapplicable Example 2
-The content in the column on the right is indicated with the word "right" (which is a location indicator based on visual perception) and there is no other indication of where to find the content. However the indicator is both visually hidden and not included in the accessibility tree.
+#### inapplicable Example 2
+
+The content in the column on the right is indicated with the word "box", but this indication is hidden with display:none.
 
 ```html
 <head>
-<style>
-.col-container {
-  display: table;
-}
-.col {
-  display: table-cell;
-  padding: 16px;
-}
-</style>
+	<style>
+	.col-container {
+		display: table;
+		width: 100%;
+	}
+	.col {
+		display: table-cell;
+		padding: 16px;
+	}
+	button {
+		background: #FAA;
+	}
+	</style>
 </head>
 <body>
-
-<div class="col-container">
-  <div class="col">
-    <p style="display:none;">Read the content in the right column about the fuzzyness of cats.</p>
-  </div>
-
-  <div class="col">
-    <p>Cats are usually fuzzy.</p>
-  </div>
-</div>
-
+	<div class="col-container">
+		<div class="col">
+			<p style="display:none">Click the box on the right, for a surprise</p>
+		</div>
+		<div class="col">
+			<button onclick="alert('Surprise!')">Howdy</button>
+		</div>
+	</div>
 </body>
 ```

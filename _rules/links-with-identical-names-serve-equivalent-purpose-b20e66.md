@@ -200,64 +200,6 @@ all the time.
 
 #### Passed Example 12
 
-The [shadow tree][] contains only a default [slot][] (whose [name][] is the empty string). This [slot][] is filled by the third link ("from the slot") and the second one ("from the light") does not appear in the [flat tree][] (work in progress). Therefore, the rule passes.
-
-```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-all the time.
-
-<div id="host">
-	<span slot="slot"
-		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
-			>Contact us</a
-		>
-		from the light.</span
-	>
-	<span
-		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-		from the slot.</span
-	>
-</div>
-
-<script>
-	const host = document.getElementById('host')
-	const shadowRoot = host.attachShadow({ mode: 'open' })
-
-	shadowRoot.innerHTML = '<slot></slot>'
-</script>
-```
-
-#### Passed Example 13
-
-The [shadow tree][] contains only a named [slot][] (whose [name][] is `"slot"`). This [slot][] is filled by the third link ("from the slot") and the second one ("from the light") does not appear in the [flat tree][] (work in progress). Therefore, the rule passes.
-
-```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-all the time.
-
-<div id="host">
-	<span
-		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
-			>Contact us</a
-		>
-		from the light.</span
-	>
-	<span slot="slot"
-		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-		from the slot.</span
-	>
-</div>
-
-<script>
-	const host = document.getElementById('host')
-	const shadowRoot = host.attachShadow({ mode: 'open' })
-
-	shadowRoot.innerHTML = '<slot name="slot"></slot>'
-</script>
-```
-
-#### Passed Example 14
-
 The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light tree][] does fill that [slot][]. Hence, the [flattened slottable][] is not [assigned][] and the third link ("from the fallback") does not appears in the [flat tree][] (work in progress). Only the first ("all the time") and second ("from the slot") links are in the [flat tree][] (work in progress). Given that they have the same [accessible name][] and point to the [same resource][], the rule passes.
 
 ```html
@@ -280,7 +222,7 @@ all the time.
 </script>
 ```
 
-#### Passed Example 15
+#### Passed Example 13
 
 The [browsing context][] of the `iframe` has the [browsing context][] of the main [document][] as an [ancestor browsing context](https://html.spec.whatwg.org/#ancestor-browsing-context). Hence, its [nodes][node] are part of the same [set of browsing context related nodes][] as the [nodes][node] of the main [document][]. Therefore, both links are considered and, since they refer to the same document, the rule passes.
 
@@ -372,25 +314,6 @@ Both links resolve to [same resource][] after redirect, but the redirect is not 
 
 #### Failed Example 7
 
-Both links have the same [accessible name][]. When the [shadow tree][] is attached to `host` and flattened, both links appear in the [flat tree][] (work in progress). Since they have the same [accessible name][] but point to different resources, the rule fails.
-
-```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-all the time.
-
-<div id="host"></div>
-
-<script>
-	const host = document.getElementById('host')
-	const shadowRoot = host.attachShadow({ mode: 'open' })
-
-	shadowRoot.innerHTML =
-		'<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the shadow.</span>'
-</script>
-```
-
-#### Failed Example 8
-
 The `table` element [does not support `attachShadow`](https://dom.spec.whatwg.org/#dom-element-attachshadow). Therefore no [shadow tree][] is created and the first two links appear in the [flat tree][] (work in progress). Since they have the same name but different destination, the rule fails.
 
 ```html
@@ -413,61 +336,7 @@ all the time.
 </script>
 ```
 
-#### Failed Example 9
-
-The second link is [slotted][slot] and therefore appears in the [flat tree][] (work in progress). Both links have the same [accessible name][] but point to different resources, hence the rule fails.
-
-```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-all the time.
-
-<div id="host">
-	<span
-		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
-			>Contact us</a
-		>
-		from the slot.</span
-	>
-</div>
-
-<script>
-	const host = document.getElementById('host')
-	const shadowRoot = host.attachShadow({ mode: 'open' })
-
-	shadowRoot.innerHTML = '<slot></slot>'
-</script>
-```
-
-#### Failed Example 10
-
-All of the descendants of `host` (in the [light tree][]) are slotted into the default [slot][] (whose [name][] is the empty string). Therefore, all three links appear in the [flat tree][] (work in progress) and the rule fails since the second one ("from the slot") does not point to the [same resource][].
-
-```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-all the time.
-
-<div id="host">
-	<span
-		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
-			>Contact us</a
-		>
-		from the slot.</span
-	>
-	<span
-		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-		from the slot again.</span
-	>
-</div>
-
-<script>
-	const host = document.getElementById('host')
-	const shadowRoot = host.attachShadow({ mode: 'open' })
-
-	shadowRoot.innerHTML = '<slot></slot>'
-</script>
-```
-
-#### Failed Example 11
+#### Failed Example 8
 
 The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light tree][] does not fill that [slot][]. Hence, the [flattened slottable][] is [assigned][] and the third link ("from the fallback") appears in the [flat tree][] (work in progress), causing the rule to fail.
 
@@ -491,7 +360,7 @@ all the time.
 </script>
 ```
 
-#### Failed Example 12
+#### Failed Example 9
 
 The [browsing context][] of the `iframe` has the [browsing context][] of the main [document][] as an [ancestor browsing context](https://html.spec.whatwg.org/#ancestor-browsing-context). Hence, its [nodes][node] are part of the same [set of browsing context related nodes][] as the [nodes][node] of the main [document][]. Therefore, both links are considered and the rule fails.
 
@@ -572,29 +441,6 @@ These image links do not have [accessible names][accessible name].
 ```
 
 #### Inapplicable Example 7
-
-Only the first link ("all the time") is present in the [flat tree][] (work in progress). Hence, there is no set of two or more links to apply the rule.
-
-```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-all the time.
-
-<div id="host">
-	<span
-		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
-			>Contact us</a
-		>
-		from the light.</span
-	>
-</div>
-
-<script>
-	const host = document.getElementById('host')
-	const shadowRoot = host.attachShadow({ mode: 'open' })
-</script>
-```
-
-#### Inapplicable Example 8
 
 Only the first link ("all the time") is present in the [flat tree][] (work in progress). Hence, there is no set of two or more links to apply the rule. The [shadow tree][] does contain a [slot][], but because its [named][name], the second link ("from the light") is _not_ [slotted][slot] into it.
 

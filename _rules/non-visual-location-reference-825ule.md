@@ -473,7 +473,7 @@ The content in the column on the right is indicated with the word "button" which
 </body>
 ```
 
-#### inapplicable Example 2
+#### Inapplicable Example 2
 
 The content in the column on the right is indicated with the word "box", but this indication is hidden with display:none.
 

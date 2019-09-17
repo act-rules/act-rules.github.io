@@ -49,7 +49,7 @@ There are no major accessibility support issues known for this rule.
 A video element that has captions for all the audio baked into it.
 
 ```html
-<video src="../test-assets/perspective-video/perspective-video-with-captions.mp4" controls></video>
+<video src="/test-assets/perspective-video/perspective-video-with-captions.mp4" controls></video>
 ```
 
 #### Passed Example 2
@@ -57,7 +57,7 @@ A video element that has captions for all the audio baked into it.
 A video element with an associated track element that contain captions for all the audio.
 
 ```html
-<video src="../test-assets/perspective-video/perspective-video.mp4" controls>
+<video src="/test-assets/perspective-video/perspective-video.mp4" controls>
 	<track src="/test-assets/perspective-video/perspective-caption.vtt" kind="captions" />
 </video>
 ```
@@ -69,7 +69,7 @@ A video element with an associated track element that contain captions for all t
 A video element without any form of captions.
 
 ```html
-<video src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
+<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 #### Failed Example 2
@@ -77,7 +77,7 @@ A video element without any form of captions.
 A video element with an associated track element that contain incorrect captions.
 
 ```html
-<video src="../test-assets/perspective-video/perspective-video.mp4" controls>
+<video src="/test-assets/perspective-video/perspective-video.mp4" controls>
 	<track src="/test-assets/perspective-video/perspective-incorrect-caption.vtt" kind="captions" />
 </video>
 ```
@@ -92,7 +92,7 @@ A video element with a text on the same page that described the audio in the vid
 	perspectives. Keyboard compatibility. Not being able to use your computer because your mouse doesn't work, is
 	frustrating. Many people use only the keyboard to navigate websites. Either through preference or circumstance.
 </p>
-<video src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
+<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 #### Failed Example 4
@@ -105,7 +105,7 @@ A video element with an explicitly associated text on the same page that describ
 	perspectives. Keyboard compatibility. Not being able to use your computer because your mouse doesn't work, is
 	frustrating. Many people use only the keyboard to navigate websites. Either through preference or circumstance.
 </p>
-<video src="../test-assets/perspective-video/perspective-video.mp4" controls ariadescribedby="text"></video>
+<video src="/test-assets/perspective-video/perspective-video.mp4" controls ariadescribedby="text"></video>
 ```
 
 ### Inapplicable
@@ -115,7 +115,7 @@ A video element with an explicitly associated text on the same page that describ
 A video element without audio.
 
 ```html
-<video src="../test-assets/perspective-video/perspective-video-silent.mp4" controls></video>
+<video src="/test-assets/perspective-video/perspective-video-silent.mp4" controls></video>
 ```
 
 #### Inapplicable Example 2
@@ -123,7 +123,7 @@ A video element without audio.
 A video element that is not [visible][].
 
 ```html
-<video src="../test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>
+<video src="/test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>
 ```
 
 [visible]: #visible 'Definition of visible'

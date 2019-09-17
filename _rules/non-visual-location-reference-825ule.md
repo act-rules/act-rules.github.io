@@ -166,7 +166,7 @@ The content in the column on the right is a menu. The user is told to find the m
 					<a href="https://www.w3.org/Help/">Help and FAQ</a>
 				</li>
 				<li>
-					<a href=https://www.w3.org/Consortium/sponsor/">Donate</a>
+					<a href="https://www.w3.org/Consortium/sponsor/">Donate</a>
 				</li>
 				<li>
 					<a href="https://www.w3.org/Consortium/siteindex">Sitemap</a>
@@ -313,7 +313,7 @@ The content in the column on the right is a menu. The user is told to find the m
 					<a href="https://www.w3.org/Help/">Help and FAQ</a>
 				</li>
 				<li>
-					<a href=https://www.w3.org/Consortium/sponsor/">Donate</a>
+					<a href="https://www.w3.org/Consortium/sponsor/">Donate</a>
 				</li>
 				<li>
 					<a href="https://www.w3.org/Consortium/siteindex">Sitemap</a>

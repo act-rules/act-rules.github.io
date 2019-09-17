@@ -54,19 +54,21 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- TODO We will add links as soon as the new template merges
+### Understanding WCAG
+
+- [WCAG 2.1 - Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
+- [WCAG 2.1 - Understanding Success Criterion 1.3.3: Sensory Characteristics](https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html)
+
+### Related WCAG Techniques
+
+- [G96: Providing textual identification of items that otherwise rely only on sensory information to be understood](https://www.w3.org/WAI/WCAG21/Techniques/general/G96)
+- [F14: due to identifying content only by its shape or location](https://www.w3.org/WAI/WCAG21/Techniques/failures/F14)
 
 ## Test Cases
 
 TODO
 
 == Passed ==
-Box but also howdy
-Right but also below
-Menu on the right (and there is only 1 menu)
-Square but not describing anything
-Tilted that desribes web content but is not part of an instruction
-Visual reference word is included in the text of the button
 Visual reference word is included in the alt text of the image
 Describes something on a different page
 Describes something in a frame
@@ -146,6 +148,132 @@ The content in the column on the right is indicated with the word "right" (which
 
 </body>
 ```
+
+#### Passed Example 3
+
+The content in the column on the right is a menu. The user is told to find the menu on the right (which is a visual indicator word) but the menu is also identified with the help of the "menu" heading above the content.
+
+```html
+<head>
+	<style>
+	.col-container {
+		display: table;
+		width: 100%;
+	}
+	.col {
+		display: table-cell;
+		padding: 16px;
+	}
+	button {
+		background: #FAA;
+	}
+	</style>
+</head>
+<body>
+	<div class="col-container">
+		<div class="col">
+			<p>Find the menu on the right, to navigate</p>
+		</div>
+		<div class="col">
+			<h1>Menu</h1>
+			<ul>
+				<li>
+					<a href="https://www.w3.org/Consortium/contact">Contact</a>
+				</li>
+				<li>
+					<a href="https://www.w3.org/Help/">Help and FAQ</a>
+				</li>
+				<li>
+					<a href=https://www.w3.org/Consortium/sponsor/">Donate</a>
+				</li>
+				<li>
+					<a href="https://www.w3.org/Consortium/siteindex">Sitemap</a>
+				</li>
+			</ul>
+					
+		</div>
+	</div>
+</body>
+```
+
+
+#### Passed Example 4
+
+This document is using the word "square" but in this case it is no instruction.
+
+```html
+<body>
+	<p>In mathemathics a square is the result of multiplying a number by itself.</p>
+</body>
+```
+
+#### Passed Example 5
+
+The following text is tilted.
+
+```html
+<head>
+	<style> 
+		div.tilt {
+			height: 750px;
+			width: 150px;
+			-ms-transform: rotate(20deg); /* IE 9 */
+			-webkit-transform: rotate(20deg); /* Safari 3-8 */
+			transform: rotate(20deg);
+			}
+	</style>
+</head>
+<body>
+	<div class="tilt">This text is tilted.</div>
+</body>
+```
+
+#### Passed Example 6
+
+The button is indicated by the word "round". But the word is also included in the text of the element.
+
+```html
+<head>
+	<style>
+	.col-container {
+		display: table;
+		width: 100%;
+	}
+	.col {
+		display: table-cell;
+		padding: 16px;
+	}
+	button {
+		background: #FAA;
+		border-radius: 50%;
+	}
+	</style>
+</head>
+<body>
+	<div class="col-container">
+		<div class="col">
+			<p>Click the round button, for a surprise</p>
+		</div>
+		<div class="col">
+			<button onclick="alert('Surprise!')">Round button</button>
+		</div>
+	</div>
+</body>
+```
+
+#### Passed Example 7
+
+The image is indicated by the word narrow but the alt text of the image also includes the word narrow.
+
+```html
+<body>
+	<p>The wide image is awesome. But the narrow image isn't.</p>
+	<img scr="awesome_wide.jpg" alt="Wide photo of an awesome landscape.">
+	<img scr="Non_awesome_narrow.jpg" alt="Narrow photo of a dull landscape.">
+	</div>
+</body>
+```
+
 
 ### Failed
 

@@ -45,7 +45,7 @@ _There are no major accessibility support issues known for this rule._
 ### Passed
 
 #### Passed Example 1
-
+The link to skip repeated content is visible, is included in the accessibility tree, and links to a valid HTML element.
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -61,7 +61,7 @@ _There are no major accessibility support issues known for this rule._
 ```
 
 #### Passed Example 2
-
+The link to skip repeated content can be toggled to visible through keyboard focus.
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -88,7 +88,7 @@ _There are no major accessibility support issues known for this rule._
 ```
 
 #### Passed Example 3
-
+The link to skip repeated has an `aria-label` to provide an accessible name.
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -106,13 +106,13 @@ _There are no major accessibility support issues known for this rule._
 ### Failed
 
 #### Failed Example 1
-
+The link to skip repeated content is not the first focusable element within the `body`.
 ```html
 <!DOCTYPE html>
 <html lang="en">
   <head><title></title></head>
   <body>
-    <a href="/nowhere">Link to nowhere</a>
+    <a href="#nowhere">Link to nowhere</a>
     <nav>
       <a href="#main-content">Skip to main content</a>
     </nav>
@@ -123,7 +123,7 @@ _There are no major accessibility support issues known for this rule._
 ```
 
 #### Failed Example 2
-
+The link to skip repeated content does not have an accessible name.
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -139,7 +139,7 @@ _There are no major accessibility support issues known for this rule._
 ```
 
 #### Failed Example 3
-
+The link to skip repeated content does not reference a valid `id`.
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -155,7 +155,7 @@ _There are no major accessibility support issues known for this rule._
 ```
 
 #### Failed Example 4
-
+The link to skip repeated content is not visible, and is not included in the accessibility tree.
 ```html
 <!DOCTYPE html>
 <html lang="en">

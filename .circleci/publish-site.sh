@@ -2,6 +2,10 @@
 git config user.name "$USER_NAME"
 git config user.email "$USER_EMAIL"
 
+# when site is built, we format using prettier which might create changes
+# these changes have to be reset before changing branches
+git reset --hard
+
 # checkout & pull master branch
 git checkout master
 git pull origin master

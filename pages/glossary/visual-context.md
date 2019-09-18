@@ -5,7 +5,7 @@ key: visual-context
 
 The visual context of some piece of information (_e.g._ an element) is everything that is visually or logically located near it. Only [visible](#visible) information may be part of the visual context.
 
-It may include, but is not limited to, headings, text in the same sentence or paragraph, …
+It may include, but is not limited to, headings, text in the same sentence or paragraph.
 
 **Note**: As a rule of thumb, visual context should be close enough to be displayed on the device at the same time as the piece of information it clarifies. Because device sizes vary wildly and content can further be zoomed and moved around, this is however not a strong requirement.
 

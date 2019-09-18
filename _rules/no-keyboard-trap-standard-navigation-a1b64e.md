@@ -20,7 +20,7 @@ authors:
 
 ## Applicability
 
-The rule applies to any HTML or SVG element that is [focusable](#focusable).
+The rule applies to any HTML or SVG element that is [focusable][].
 
 **Note**: This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
 
@@ -62,7 +62,7 @@ No trap for keyboard navigation.
 Using `tabindex="1"`.
 
 ```html
-<div tabindex="“1”">Text</div>
+<div tabindex="1">Text</div>
 ```
 
 #### Passed Example 3
@@ -91,20 +91,20 @@ Keyboard trap one element.
 Keyboard trap group.
 
 ```html
-<button class="target" onblur="setTimeout(() => this.nextSibling.focus(), 10)">
+<button class="target" onblur="setTimeout(() => this.nextElementSibling.focus(), 10)">
 	Button1
 </button>
-<button
-	class="target"
-	onblur="setTimeout(() => this.previousSibling.focus(), 10)"
->
+<button class="target" onblur="setTimeout(() => this.previousElementSibling.focus(), 10)">
 	Button2
+</button>
+<button>
+	Button3
 </button>
 ```
 
 #### Failed Example 3
 
-A focusable element inbetween to keyboard traps.
+A [focusable][] element inbetween to keyboard traps.
 
 ```html
 <button onblur="setTimeout(() => this.focus(), 10)">Button 1</button>
@@ -116,7 +116,7 @@ A focusable element inbetween to keyboard traps.
 
 #### Inapplicable Example 1
 
-No focusable element.
+No [focusable][] element.
 
 ```html
 <h1>Page 1</h1>
@@ -135,7 +135,7 @@ Disabled element.
 Hidden element using `display:none`.
 
 ```html
-<button type="button" style="“display:none;”">Click Me!</button>
+<button type="button" style="display:none;">Click Me!</button>
 ```
 
 #### Inapplicable Example 4
@@ -143,6 +143,7 @@ Hidden element using `display:none`.
 Hidden element using `visibility:hidden`.
 
 ```html
-<a href="#" style="visibility:hidden;">Link 1</a>
-<button class="target" style="visibility:hidden;">Button1</button>
+<a href="#" style="visibility:hidden;">Link 1</a> <button class="target" style="visibility:hidden;">Button1</button>
 ```
+
+[focusable]: #focusable 'Definition of focusable'

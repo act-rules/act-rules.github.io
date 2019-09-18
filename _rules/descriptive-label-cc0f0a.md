@@ -22,14 +22,14 @@ authors:
 
 This rule applies to any HTML `label` element or other element referenced by `aria-labelledby` that:
 
-- is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree), and
-- is programmatically associated with an HTML element that has one of the listed form field [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
+- is either [visible][] or [included in the accessibility tree][], and
+- is programmatically associated with an HTML element that has one of the listed form field [semantic roles][]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
 
 **Note**: The list of form field roles is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
 
-- have a [semantic role](#semantic-role) that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
+- have a [semantic role][] that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
 - does not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
-- The `option` role is not part of the list of applicable roles, because it does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an accessible name.
+- The `option` role is not part of the list of applicable roles, because it does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an [accessible name](#accessible-name).
 
 **Note**: This rule is a partial check for WCAG 2.1 success criterion 2.4.6, which applies to all labels. "Label" is used in its general sense and includes text or other components with a text alternative that is presented to a user to identify a component within Web content.
 
@@ -63,8 +63,7 @@ _There are no major accessibility support issues known for this rule._
 Label that is coded with the `label` element and describes the purpose of the associated element.
 
 ```html
-<label for="fname">First name:</label>
-<input id="fname" type="text" name="fname" />
+<label for="fname">First name:</label> <input id="fname" type="text" name="fname" />
 ```
 
 #### Passed Example 2
@@ -86,7 +85,7 @@ Implicit label that is coded with the `label` element and describes the purpose 
 
 #### Passed Example 4
 
-Label is visible, but not included in accessibility tree
+Label is [visible][], but not included in accessibility tree
 
 ```html
 <p id="label_fname" aria-hidden="true">First name:</p>
@@ -95,7 +94,7 @@ Label is visible, but not included in accessibility tree
 
 #### Passed Example 5
 
-Label is included in accessibility tree, but not visible
+Label is included in accessibility tree, but not [visible][]
 
 ```html
 <p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">
@@ -133,7 +132,7 @@ Implicit label that is coded with the `label` element and does not describe the 
 
 #### Failed Example 4
 
-Label is visible, but not included in accessibility tree, and does not describe the purpose of the associated element.
+Label is [visible][], but not included in accessibility tree, and does not describe the purpose of the associated element.
 
 ```html
 <p id="label_fname" aria-hidden="true">Menu</p>
@@ -142,7 +141,7 @@ Label is visible, but not included in accessibility tree, and does not describe 
 
 #### Failed Example 5
 
-Label is included in accessibility tree, but not visible, and does not describe the purpose of the associated element.
+Label is included in accessibility tree, but not [visible][], and does not describe the purpose of the associated element.
 
 ```html
 <p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">
@@ -155,20 +154,24 @@ Label is included in accessibility tree, but not visible, and does not describe 
 
 #### Inapplicable Example 1
 
-`Label` that is neither visible to users, nor included in the accessibility tree.
+`Label` that is neither [visible][] to users, nor [included in the accessibility tree][].
 
 ```html
-<label for="fname" style:"display:none;">First name:</label>
-<input id="fname" type="text" name="fname"/>
+<div style="display:none">
+	<label for="bad_label">Menu:</label>
+	<input id="fname" type="text" name="bad_label" />
+</div>
 ```
 
 #### Inapplicable Example 2
 
-Programatically associated `p` element that is neither visible nor included in the accessibility tree.
+Programatically associated `p` element that is neither [visible][] nor [included in the accessibility tree][].
 
 ```html
-<p id="label_fname" style:"display:none;">First name:</p>
-<input aria-labelledby="label_fname" type="text" name="fname"/>
+<div style="display:none">
+	<p id="bad_label">menu</p>
+	<input aria-labelledby="bad_label" type="text" name="fname" />
+</div>
 ```
 
 #### Inapplicable Example 3
@@ -176,14 +179,26 @@ Programatically associated `p` element that is neither visible nor included in t
 The `label` element is associated with an HTML element that does not have a form field semantic role.
 
 ```html
-<label for="fname" style:"display:none;">First name:</label>
-<p id="fname"/>
+<label for="fname">First name</label>
+<p id="fname">bob</p>
 ```
 
 #### Inapplicable Example 4
+
+The element with `aria-labelledby` is not a form field.
+
+```html
+<i id="smile">Smile</i> <button aria-labelledby="smile">:-)</button>
+```
+
+#### Inapplicable Example 5
 
 No `label` element.
 
 ```html
 <input id="fname" type="text" name="fname" />
 ```
+
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[semantic role]: #semantic-role 'Definition of semantic role'
+[visible]: #visible 'Definition of visible'

@@ -24,7 +24,7 @@ Anyone developing their own accessibility testing tool or methodology is free to
 
 Contributing is open to anyone. We welcome any pull requests for changes. We ask that you make changes to pull requests **only for drafts**. Before contributing new rules, we recommend you checked their validity with several experienced accessibility auditors first. This helps you identify potential stumbling blocks early in their design.
 
-Auto-WCAG has conference calls every 4 weeks. If you are interested in becoming an active contributor or reviewer, we ask that you join the Auto-WCAG community group through the W3C Website. This requires setting up a W3C account, may require approval by the organization you work for if they are a W3C member.
+ACT-R has conference calls every 4 weeks. If you are interested in becoming an active contributor or reviewer, we ask that you join the ACT-R community group through the W3C Website. This requires setting up a W3C account, may require approval by the organization you work for if they are a W3C member.
 
 **[Join the ACT-Rules community group now!](https://www.w3.org/community/wp-login.php?redirect_to=%2Fcommunity%2Fact-r%2Fjoin)** or visit [w3.org/community/act-r/][act-r] for more information.
 

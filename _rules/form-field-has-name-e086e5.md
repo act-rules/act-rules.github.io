@@ -3,7 +3,7 @@ id: e086e5
 name: Form field has accessible name
 rule_type: atomic
 description: |
-  Each form field element has an accessible name
+  This rule checks that each form field element has an accessible name.
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true
@@ -19,17 +19,18 @@ authors:
 
 ## Applicability
 
-This rule applies to any element that is [included in the accessibility tree](#included-in-the-accessibility-tree), and that has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider, spinbutton`, `switch`, `textbox`.
+This rule applies to any element that is [included in the accessibility tree](#included-in-the-accessibility-tree), and that has one of the following [semantic roles][]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider, spinbutton`, `switch`, `textbox`.
 
 **Note**: The list of roles is derived by taking all the [ARIA](https://www.w3.org/TR/wai-aria-1.1/) 1.1 roles that:
 
-- have a [semantic roles](#semantic-role) that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
+- have a [semantic roles][] that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
 - does not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
-- The `option` role is not part of the list of applicable roles, because it does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an accessible name.
+
+**Note**: The `option` role is not part of the list of applicable roles, because it does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an [accessible name][].
 
 ## Expectation
 
-Each target element has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace).
+Each target element has an [accessible name][] that is not only [whitespace][].
 
 ## Assumptions
 
@@ -37,14 +38,14 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-Certain assistive technologies can be set up to ignore the title attribute, which means that to some users the title attribute will not act as an accessible name.
+Certain assistive technologies can be set up to ignore the title attribute, which means that to some users the title attribute will not act as an [accessible name][].
 
 ## Background
 
-- https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html
-- https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html
+- [Understanding Success Criterion 3.3.2: Labels or Instructions](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions)
+- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 
-**Note**: This rule does not fail 3.3.2 as there are sufficient techniques within 3.3.2 that don't need the elements to have an accessible name. For example "G131: Providing descriptive labels" **AND** "G162: Positioning labels to maximize predictability of relationships" would be sufficient.
+**Note**: This rule does not fail 3.3.2 as there are sufficient techniques within 3.3.2 that don't need the elements to have an [accessible name][]. For example "G131: Providing descriptive labels" **AND** "G162: Positioning labels to maximize predictability of relationships" would be sufficient.
 
 ## Test Cases
 
@@ -52,7 +53,7 @@ Certain assistive technologies can be set up to ignore the title attribute, whic
 
 #### Passed Example 1
 
-Implicit role with implicit label.
+[Implicit role](#implicit-role) with implicit label.
 
 ```html
 <label>
@@ -63,7 +64,7 @@ Implicit role with implicit label.
 
 #### Passed Example 2
 
-Implicit role with aria-label
+[Implicit role](#implicit-role) with aria-label
 
 ```html
 <input aria-label="last name" disabled />
@@ -71,7 +72,7 @@ Implicit role with aria-label
 
 #### Passed Example 3
 
-Implicit role with explicit label
+[Implicit role](#implicit-role) with explicit label
 
 ```html
 <label for="country">Country</label>
@@ -82,7 +83,7 @@ Implicit role with explicit label
 
 #### Passed Example 4
 
-Implicit role with `aria-labelledby`.
+[Implicit role](#implicit-role) with `aria-labelledby`.
 
 ```html
 <div id="country">Country</div>
@@ -91,15 +92,15 @@ Implicit role with `aria-labelledby`.
 
 #### Passed Example 5
 
-Explicit role.
+[Explicit role](#explicit-role).
 
 ```html
 <div aria-label="country" role="combobox" aria-disabled="true">England</div>
 ```
 
-#### Passed example 6
+#### Passed Example 6
 
-The accessible name is not only whitespace.
+The [accessible name][] is not only [whitespace][].
 
 ```html
 <label>
@@ -112,7 +113,7 @@ The accessible name is not only whitespace.
 
 #### Failed Example 1
 
-No accessible name.
+No [accessible name][].
 
 ```html
 <input />
@@ -120,7 +121,7 @@ No accessible name.
 
 #### Failed Example 2
 
-Non-focusable element still needs an accessible name.
+[Non-focusable](#focusable) element still needs an [accessible name][].
 
 ```html
 <input tabindex="-1" />
@@ -162,9 +163,9 @@ The explicit label is not supported on `div` elements.
 <div role="textbox" id="lastname"></div>
 ```
 
-#### Failed example 7
+#### Failed Example 7
 
-The accessible name is not only whitespace.
+The [accessible name][] is only [whitespace][].
 
 ```html
 <label> <input /></label>
@@ -190,7 +191,7 @@ Hidden to assistive technologies.
 
 #### Inapplicable Example 3
 
-Role has explicitely been set to something that isn't a form field.
+Role has [explicitly](#explicit-role) been set to something that isn't a form field.
 
 ```html
 <input role="presentation" />
@@ -207,3 +208,7 @@ Option inherits from input, but has a required context role of listbox which inh
 	<option value="opel">Opel</option>
 </select>
 ```
+
+[accessible name]: #accessible-name 'Definition of accessible name'
+[semantic role]: #semantic-role 'Definition of semantic role'
+[whitespace]: #whitespace 'Definition of whitespace'

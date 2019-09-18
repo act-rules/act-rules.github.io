@@ -3,7 +3,7 @@ id: bc659a
 name: Meta-refresh no delay
 rule_type: atomic
 description: |
-  This rule checks that the meta element is not used for delayed redirecting or refreshing.
+  This rule checks that the `meta` element is not used for delayed redirecting or refreshing.
 accessibility_requirements:
   wcag20:2.2.1: # Timing Adjustable (A)
     forConformance: true
@@ -25,22 +25,26 @@ input_aspects:
 authors:
   - Anne Thyme Nørregaard
   - Wilco Fiers
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'title-require'
 ---
 
 ## Applicability
 
-The rule applies to the first [valid](https://www.w3.org/TR/html/document-metadata.html#statedef-http-equiv-refresh) `<meta http-equiv="refresh">` element with a `content` attribute in a document.
+The rule applies to the first [valid](https://html.spec.whatwg.org/#attr-meta-http-equiv-refresh) `<meta http-equiv="refresh">` element with a `content` attribute in a document.
 
 ## Expectation
 
 The `time` of the `content` attribute is 0 or greater than 72000 (20 hours).
 
-**Note**: See [Refresh state (`http-equiv="refresh"`)](https://www.w3.org/TR/html/document-metadata.html#statedef-http-equiv-refresh) for a precise description on how to determine the `time`.
+**Note**: See [Refresh state (`http-equiv="refresh"`)](https://html.spec.whatwg.org/#attr-meta-http-equiv-refresh) for a precise description on how to determine the `time`.
 
 ## Assumptions
 
 - This test assumes no functionality was provided by the website for the user to adjust the timer.
-- This test assumes that the refresh was not [essential](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html#essentialdef), which is listed as a valid exception to SC 2.2.1.
+- This test assumes that the refresh was not [essential](https://www.w3.org/TR/WCAG21/#dfn-essential), which is listed as a valid exception to SC 2.2.1.
 
 ## Accessibility Support
 

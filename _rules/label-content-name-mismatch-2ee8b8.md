@@ -1,9 +1,9 @@
 ---
 id: 2ee8b8
-name: label and name from content mismatch
+name: Label and name from content mismatch
 rule_type: atomic
 description: |
-  Interactive elements labelled through their content must have their visible label as part of their accessible name
+  This rule checks that interactive elements labelled through their content have their visible label as part of their accessible name.
 accessibility_requirements:
   wcag20:2.5.3: # Label in Name
     forConformance: true
@@ -31,9 +31,9 @@ This rule applies to any element that has:
 
 ## Expectation
 
-The complete [visible text content](#visible-text-content) of the target element either matches or is contained within its [accessible name](#accessible-name).
+The complete [visible text content](#visible-text-content) of the target element either matches or is contained within its [accessible name][].
 
-**Note**: Leading and trailing whitespace and difference in case sensitivity should be ignored.
+**Note**: Leading and trailing [whitespace](#whitespace) and difference in case sensitivity should be ignored.
 
 ## Assumptions
 
@@ -45,7 +45,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- https://www.w3.org/TR/WCAG21/#label-in-name
+- [Understanding Success Criterion 2.5.3: Label in Name](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)
 
 ## Test Cases
 
@@ -53,7 +53,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-Visible label and accessible name matches when trailing white spaces are removed.
+[Visible][] label and [accessible name][] matches when trailing white spaces are removed.
 
 ```html
 <div role="link" aria-label="next page ">next page</div>
@@ -61,7 +61,7 @@ Visible label and accessible name matches when trailing white spaces are removed
 
 #### Passed Example 2
 
-Character insensitivity between visible label and accessible name.
+Character insensitivity between [visible][] label and [accessible name][].
 
 ```html
 <div role="link" aria-label="Next Page">next page</div>
@@ -69,7 +69,7 @@ Character insensitivity between visible label and accessible name.
 
 #### Passed Example 3
 
-Full visible label is contained in the accessible name.
+Full [visible][] label is contained in the [accessible name][].
 
 ```html
 <button name="link" aria-label="Next Page in the list">Next Page</button>
@@ -79,7 +79,7 @@ Full visible label is contained in the accessible name.
 
 #### Failed Example 1
 
-Visible label doesn't match accessible name.
+[Visible][] label doesn't match [accessible name][].
 
 ```html
 <div role="link" aria-label="OK">Next</div>
@@ -87,7 +87,7 @@ Visible label doesn't match accessible name.
 
 #### Failed Example 2
 
-Not all of visible label is included in accessible name.
+Not all of [visible][] label is included in [accessible name][].
 
 ```html
 <button name="link" aria-label="the full">The full label</button>
@@ -121,7 +121,7 @@ Non-widget role that supports name from content.
 
 #### Inapplicable Example 4
 
-No rendered text in name from content.
+No [rendered text](#rendered-text) in name from content.
 
 ```html
 <div role="tooltip" aria-label="OK"></div>
@@ -134,3 +134,6 @@ Non-text content.
 ```html
 <button aria-label="close">X</button>
 ```
+
+[accessible name]: #accessible-name 'Definition of accessible name'
+[visible]: #visible 'Definition of visible'

@@ -1,9 +1,9 @@
 ---
 id: bf051a
-name: Validity of HTML Lang attribute
+name: HTML page language is valid
 rule_type: atomic
 description: |
-  This rule checks the lang or xml:lang attribute has a valid language subtag.
+  This rule checks that the `lang` and `xml:lang` attributes of the root element of an HTML page have a valid primary language subtag.
 accessibility_requirements:
   wcag20:3.1.1: # Language of Page (A)
     forConformance: true
@@ -19,11 +19,13 @@ authors:
 
 ## Applicability
 
-The root element of the page, if it is an `html` element with a `lang` and/or `xml:lang` attribute that is not empty ("").
+The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element with a `lang` and/or `xml:lang` attribute that is not empty ("").
+
+**Note**: Documents embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not web pages according to the definition in WCAG.
 
 ## Expectation
 
-The `lang` and `xml:lang` attributes have a [valid language subtag](#valid-language-subtag) if the attribute is [non-empty](#non-empty).
+For each test target, the `lang` and `xml:lang` attributes have a [valid language subtag](#valid-language-subtag) unless the attribute is empty ("").
 
 ## Assumptions
 
@@ -37,11 +39,10 @@ While HTML5 specification indicates that `xml:lang` attribute takes priority ove
 
 ## Background
 
-- [https://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H57](https://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H57)
-- [https://www.ietf.org/rfc/bcp/bcp47.txt](https://www.ietf.org/rfc/bcp/bcp47.txt)
-- [https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang)
-- [https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/xml:lang](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/xml:lang)
-- [https://www.w3.org/TR/WCAG20-TECHS/H57.html](https://www.w3.org/TR/WCAG20-TECHS/H57.html)
+- [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG21/Techniques/html/H57)
+- [BCP 47: Tags for Identifying Languages](https://www.ietf.org/rfc/bcp/bcp47.txt)
+- [MDN: `lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang)
+- [MDN: `xml:lang` attribute](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/xml:lang)
 
 ## Test Cases
 
@@ -152,7 +153,7 @@ The `lang` attribute value is not a valid primary language subtag.
 The rule applies to `html` element and hence usage of `lang` attribute in `svg` element is not applicable.
 
 ```svg
-<svg xmlns="http://www.w3.org/2000/svg" lang="fr">
+<svg xmlns="http://www.w3.org/2000/svg" lang="fr"></svg>
 ```
 
 #### Inapplicable Example 2
@@ -160,7 +161,7 @@ The rule applies to `html` element and hence usage of `lang` attribute in `svg` 
 The rule applies to `html` element and hence usage of `xml:lang` attribute in `svg` element is not applicable.
 
 ```svg
-<svg xmlns="http://www.w3.org/2000/svg" xml:lang="fr">
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="fr"></svg>
 ```
 
 #### Inapplicable Example 3

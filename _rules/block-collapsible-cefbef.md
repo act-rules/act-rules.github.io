@@ -106,6 +106,19 @@ The link to skip repeated has an `aria-label` to provide an accessible name.
 ### Failed
 
 #### Failed Example 1
+The is no link to skip repeated content.
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head><title></title></head>
+  <body>
+    <!-- Repeated Content -->
+    <div id="main-content">Main Content</div>
+  </body>
+</html>
+```
+
+#### Failed Example 2
 The link to skip repeated content is not the first focusable element within the `body`.
 ```html
 <!DOCTYPE html>
@@ -122,7 +135,7 @@ The link to skip repeated content is not the first focusable element within the 
 </html>
 ```
 
-#### Failed Example 2
+#### Failed Example 3
 The link to skip repeated content does not have an accessible name.
 ```html
 <!DOCTYPE html>
@@ -138,7 +151,7 @@ The link to skip repeated content does not have an accessible name.
 </html>
 ```
 
-#### Failed Example 3
+#### Failed Example 4
 The link to skip repeated content does not reference a valid `id`.
 ```html
 <!DOCTYPE html>
@@ -154,7 +167,7 @@ The link to skip repeated content does not reference a valid `id`.
 </html>
 ```
 
-#### Failed Example 4
+#### Failed Example 5
 The link to skip repeated content is not visible, and is not included in the accessibility tree.
 ```html
 <!DOCTYPE html>

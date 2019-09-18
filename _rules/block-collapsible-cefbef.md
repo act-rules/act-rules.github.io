@@ -51,7 +51,11 @@ _There are no major accessibility support issues known for this rule._
 <html lang="en">
   <head><title></title></head>
   <body>
-  
+    <nav>
+      <a href="#main-content">Skip to main content</a>
+    </nav>
+    <!-- Repeated content  -->
+    <main id="main-content">Main Content</main>
   </body>
 </html>
 ```
@@ -61,9 +65,24 @@ _There are no major accessibility support issues known for this rule._
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></head>
+  <head><title></title>
+    <style>
+      #skipNav{
+        height:100px;
+        position:absolute;
+        top:-100px;
+      }
+      #skipNav:focus{
+        top:0px;
+      }
+    </style>
+  </head>
   <body>
-  
+  <nav id="skipNav">
+    <a href="#main-content">Skip to main content</a>
+  </nav>
+  <!-- Repeated content -->
+  <main id="main-content">Main Content</main>
   </body>
 </html>
 ```
@@ -75,11 +94,15 @@ _There are no major accessibility support issues known for this rule._
 <html lang="en">
   <head><title></title></head>
   <body>
-  
+  <div>
+    <a href="#main-content" aria-label="Skip to main content"></a>
+  </div>
+  <!-- Repeated content -->
+  <div id="main-content">Main Content</div>
   </body>
 </html>
 ```
-
+<!-- role for navigation element -->
 ### Failed
 
 #### Failed Example 1
@@ -89,7 +112,12 @@ _There are no major accessibility support issues known for this rule._
 <html lang="en">
   <head><title></title></head>
   <body>
-  
+    <a href="/nowhere">Link to nowhere</a>
+    <nav>
+      <a href="#main-content">Skip to main content</a>
+    </nav>
+    <!-- Repeated Content -->
+    <div id="main-content">Main Content</div>
   </body>
 </html>
 ```
@@ -101,7 +129,11 @@ _There are no major accessibility support issues known for this rule._
 <html lang="en">
   <head><title></title></head>
   <body>
-  
+    <nav>
+      <a href="#main-content"></a>
+    </nav>
+    <!-- Repeated Content -->
+    <main id="main-content">Main Content</main>
   </body>
 </html>
 ```
@@ -113,7 +145,11 @@ _There are no major accessibility support issues known for this rule._
 <html lang="en">
   <head><title></title></head>
   <body>
-  
+    <nav>
+      <a href="#nowhere">Skip to main content</a>
+    </nav>
+    <!-- Repeated Content -->
+    <main id="somewhere"></main>
   </body>
 </html>
 ```
@@ -125,7 +161,11 @@ _There are no major accessibility support issues known for this rule._
 <html lang="en">
   <head><title></title></head>
   <body>
-  
+    <nav>
+      <a href="#main-content" style="display:none;">Skip to main content</a>
+    </nav>
+    <!-- Repeated Content -->
+    <main id="main-content">Main Content</main>
   </body>
 </html>
 ```

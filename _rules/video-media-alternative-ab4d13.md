@@ -57,7 +57,7 @@ A video element that describes some of the text on the same page. The text on th
 	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
 	compatibility is described in WCAG. See the video below to watch the same information again in video form.
 </p>
-<video src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
+<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 ### Failed
@@ -72,7 +72,7 @@ A video element that describes some of the text on the same page. The video cont
 	circumstance. This is solved by keyboard compatibility. Keyboard compatibility is described in WCAG. See the video
 	below to watch the same information again in video form.
 </p>
-<video src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
+<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 #### Failed Example 2
@@ -85,7 +85,7 @@ A video element that describes some of the text on the same page. The text is no
 	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
 	compatibility is described in WCAG. See the video below to watch the same information again in video form.
 </p>
-<video src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
+<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 #### Failed Example 3
@@ -98,7 +98,7 @@ A video element that describes some of the text on the same page. The text on th
 	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
 	compatibility is described in WCAG.
 </p>
-<video src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
+<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 #### Failed Example 4
@@ -114,7 +114,7 @@ A video element that describes some of the text on the same page. The text on th
 <p style="display: none;">
 	See the video below to watch the same information again in video form.
 </p>
-<video src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
+<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 ### Inapplicable
@@ -129,7 +129,7 @@ A video element without audio. The text on the page labels the video as an alter
 	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
 	compatibility is described in WCAG. See the video below to watch the same information again in video form.
 </p>
-<video src="../test-assets/perspective-video/perspective-video-silent.mp4" controls></video>
+<video src="/test-assets/perspective-video/perspective-video-silent.mp4" controls></video>
 ```
 
 #### Inapplicable Example 2
@@ -142,7 +142,7 @@ A video element that describes some of the text on the same page. The text on th
 	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
 	compatibility is described in WCAG. See the video below to watch the same information again in video form.
 </p>
-<video src="../test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>
+<video src="/test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>
 ```
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

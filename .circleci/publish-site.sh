@@ -21,6 +21,6 @@ rm -R public/
 # commit and push
 git add -fA
 git commit --allow-empty -m "update site [ci skip]"
-git push origin master
+git push origin master --no-verify
 
 echo "Site deployed successfully"

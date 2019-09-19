@@ -200,7 +200,7 @@ all the time.
 
 #### Passed Example 12
 
-The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light tree][] does fill that [slot][]. Hence, the [flattened slottable][] is not [assigned][] and the third link ("from the fallback") does not appears in the [flat tree][] (work in progress). Only the first ("all the time") and second ("from the slot") links are in the [flat tree][] (work in progress). Given that they have the same [accessible name][] and point to the [same resource][], the rule passes.
+The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light tree][] does fill that [slot][]. Hence, the [flattened slottable][] is not [assigned][] and the third link ("from the fallback") does not appear in the [flat tree][] (work in progress). Only the first ("all the time") and second ("from the slot") links are in the [flat tree][] (work in progress). Given that they have the same [accessible name][] and point to the [same resource][], the rule passes.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
@@ -314,7 +314,7 @@ Both links resolve to [same resource][] after redirect, but the redirect is not 
 
 #### Failed Example 7
 
-The `table` element [does not support `attachShadow`](https://dom.spec.whatwg.org/#dom-element-attachshadow). Therefore no [shadow tree][] is created and the first two links appear in the [flat tree][] (work in progress). Since they have the same name but different destination, the rule fails.
+The `table` element [does not support `attachShadow`](https://dom.spec.whatwg.org/#dom-element-attachshadow). Therefore no [shadow tree][] is created and the first two links appear in the [flat tree][] (work in progress). Since they have the same name but different destinations, the rule fails.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>

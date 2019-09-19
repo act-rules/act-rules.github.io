@@ -272,8 +272,7 @@ No [accessible name][] is provided
 Does not apply to `iframe` elements that are not [included in the accessibility tree][], via `display:none`.
 
 ```html
-<iframe style="display:none;" title="Document One" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html">
-</iframe>
+<iframe style="display:none;" title="Document One" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
 
 <iframe style="display:none;" aria-label="Document One" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html">
 </iframe>

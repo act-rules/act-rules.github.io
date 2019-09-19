@@ -1,0 +1,1060 @@
+{
+  "1.1.1": {
+    "num": "1.1.1",
+    "url": "https://www.w3.org/TR/WCAG20/#text-equiv-all",
+    "scId": "WCAG2:non-text-content",
+    "scAltId": [
+      "text-equiv-all"
+    ],
+    "test": "WCAG2:text-equiv-all",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-text-equiv-all",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//text-equiv-all.html",
+    "handle": "Non-text Content",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "1.2.1": {
+    "num": "1.2.1",
+    "url": "https://www.w3.org/TR/WCAG20/#media-equiv-av-only-alt",
+    "scId": "WCAG2:audio-only-and-video-only-prerecorded",
+    "scAltId": [
+      "media-equiv-av-only-alt"
+    ],
+    "test": "WCAG2:media-equiv-av-only-alt",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-media-equiv-av-only-alt",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//media-equiv-av-only-alt.html",
+    "handle": "Audio-only and Video-only (Prerecorded)",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "1.2.2": {
+    "num": "1.2.2",
+    "url": "https://www.w3.org/TR/WCAG20/#media-equiv-captions",
+    "scId": "WCAG2:captions-prerecorded",
+    "scAltId": [
+      "media-equiv-captions"
+    ],
+    "test": "WCAG2:media-equiv-captions",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-media-equiv-captions",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//media-equiv-captions.html",
+    "handle": "Captions (Prerecorded)",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "1.2.3": {
+    "num": "1.2.3",
+    "url": "https://www.w3.org/TR/WCAG20/#media-equiv-audio-desc",
+    "scId": "WCAG2:audio-description-or-media-alternative-prerecorded",
+    "scAltId": [
+      "media-equiv-audio-desc"
+    ],
+    "test": "WCAG2:media-equiv-audio-desc",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-media-equiv-audio-desc",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//media-equiv-audio-desc.html",
+    "handle": "Audio Description or Media Alternative (Prerecorded)",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "1.2.4": {
+    "num": "1.2.4",
+    "url": "https://www.w3.org/TR/WCAG20/#media-equiv-real-time-captions",
+    "scId": "WCAG2:captions-live",
+    "scAltId": [
+      "media-equiv-real-time-captions"
+    ],
+    "test": "WCAG2:media-equiv-real-time-captions",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-media-equiv-real-time-captions",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//media-equiv-real-time-captions.html",
+    "handle": "Captions (Live)",
+    "level": "AA",
+    "wcagType": "2.0"
+  },
+  "1.2.5": {
+    "num": "1.2.5",
+    "url": "https://www.w3.org/TR/WCAG20/#media-equiv-audio-desc-only",
+    "scId": "WCAG2:audio-description-prerecorded",
+    "scAltId": [
+      "media-equiv-audio-desc-only"
+    ],
+    "test": "WCAG2:media-equiv-audio-desc-only",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-media-equiv-audio-desc-only",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//media-equiv-audio-desc-only.html",
+    "handle": "Audio Description (Prerecorded)",
+    "level": "AA",
+    "wcagType": "2.0"
+  },
+  "1.2.6": {
+    "num": "1.2.6",
+    "url": "https://www.w3.org/TR/WCAG20/#media-equiv-sign",
+    "scId": "WCAG2:sign-language-prerecorded",
+    "scAltId": [
+      "media-equiv-sign"
+    ],
+    "test": "WCAG2:media-equiv-sign",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-media-equiv-sign",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//media-equiv-sign.html",
+    "handle": "Sign Language (Prerecorded)",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "1.2.7": {
+    "num": "1.2.7",
+    "url": "https://www.w3.org/TR/WCAG20/#media-equiv-extended-ad",
+    "scId": "WCAG2:extended-audio-description-prerecorded",
+    "scAltId": [
+      "media-equiv-extended-ad"
+    ],
+    "test": "WCAG2:media-equiv-extended-ad",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-media-equiv-extended-ad",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//media-equiv-extended-ad.html",
+    "handle": "Extended Audio Description (Prerecorded)",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "1.2.8": {
+    "num": "1.2.8",
+    "url": "https://www.w3.org/TR/WCAG20/#media-equiv-text-doc",
+    "scId": "WCAG2:media-alternative-prerecorded",
+    "scAltId": [
+      "media-equiv-text-doc"
+    ],
+    "test": "WCAG2:media-equiv-text-doc",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-media-equiv-text-doc",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//media-equiv-text-doc.html",
+    "handle": "Media Alternative (Prerecorded)",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "1.2.9": {
+    "num": "1.2.9",
+    "url": "https://www.w3.org/TR/WCAG20/#media-equiv-live-audio-only",
+    "scId": "WCAG2:audio-only-live",
+    "scAltId": [
+      "media-equiv-live-audio-only"
+    ],
+    "test": "WCAG2:media-equiv-live-audio-only",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-media-equiv-live-audio-only",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//media-equiv-live-audio-only.html",
+    "handle": "Audio-only (Live)",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "1.3.1": {
+    "num": "1.3.1",
+    "url": "https://www.w3.org/TR/WCAG20/#content-structure-separation-programmatic",
+    "scId": "WCAG2:info-and-relationships",
+    "scAltId": [
+      "content-structure-separation-programmatic"
+    ],
+    "test": "WCAG2:content-structure-separation-programmatic",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-content-structure-separation-programmatic",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//content-structure-separation-programmatic.html",
+    "handle": "Info and Relationships",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "1.3.2": {
+    "num": "1.3.2",
+    "url": "https://www.w3.org/TR/WCAG20/#content-structure-separation-sequence",
+    "scId": "WCAG2:meaningful-sequence",
+    "scAltId": [
+      "content-structure-separation-sequence"
+    ],
+    "test": "WCAG2:content-structure-separation-sequence",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-content-structure-separation-sequence",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//content-structure-separation-sequence.html",
+    "handle": "Meaningful Sequence",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "1.3.3": {
+    "num": "1.3.3",
+    "url": "https://www.w3.org/TR/WCAG20/#content-structure-separation-understanding",
+    "scId": "WCAG2:sensory-characteristics",
+    "scAltId": [
+      "content-structure-separation-understanding"
+    ],
+    "test": "WCAG2:content-structure-separation-understanding",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-content-structure-separation-understanding",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//content-structure-separation-understanding.html",
+    "handle": "Sensory Characteristics",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "1.3.4": {
+    "num": "1.3.4",
+    "url": "https://www.w3.org/TR/WCAG21/#orientation",
+    "scId": "WCAG2:orientation",
+    "scAltId": [],
+    "test": "WCAG2:WCAG2:orientation",
+    "howToMeetUrl": "https://www.w3.org/WAI/WCAG21/quickref/#orientation",
+    "understandingUrl": "https://www.w3.org/WAI/WCAG21/Understanding//orientation.html",
+    "handle": "Orientation",
+    "level": "AA",
+    "wcagType": "2.1"
+  },
+  "1.3.5": {
+    "num": "1.3.5",
+    "url": "https://www.w3.org/TR/WCAG21/#identify-input-purpose",
+    "scId": "WCAG2:identify-input-purpose",
+    "scAltId": [],
+    "test": "WCAG2:WCAG2:identify-input-purpose",
+    "howToMeetUrl": "https://www.w3.org/WAI/WCAG21/quickref/#identify-input-purpose",
+    "understandingUrl": "https://www.w3.org/WAI/WCAG21/Understanding//identify-input-purpose.html",
+    "handle": "Identify Input Purpose",
+    "level": "AA",
+    "wcagType": "2.1"
+  },
+  "1.3.6": {
+    "num": "1.3.6",
+    "url": "https://www.w3.org/TR/WCAG21/#identify-purpose",
+    "scId": "WCAG2:identify-purpose",
+    "scAltId": [],
+    "test": "WCAG2:WCAG2:identify-purpose",
+    "howToMeetUrl": "https://www.w3.org/WAI/WCAG21/quickref/#identify-purpose",
+    "understandingUrl": "https://www.w3.org/WAI/WCAG21/Understanding//identify-purpose.html",
+    "handle": "Identify Purpose",
+    "level": "AAA",
+    "wcagType": "2.1"
+  },
+  "1.4.1": {
+    "num": "1.4.1",
+    "url": "https://www.w3.org/TR/WCAG20/#visual-audio-contrast-without-color",
+    "scId": "WCAG2:use-of-color",
+    "scAltId": [
+      "visual-audio-contrast-without-color"
+    ],
+    "test": "WCAG2:visual-audio-contrast-without-color",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-without-color",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//visual-audio-contrast-without-color.html",
+    "handle": "Use of Color",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "1.4.2": {
+    "num": "1.4.2",
+    "url": "https://www.w3.org/TR/WCAG20/#visual-audio-contrast-dis-audio",
+    "scId": "WCAG2:audio-control",
+    "scAltId": [
+      "visual-audio-contrast-dis-audio"
+    ],
+    "test": "WCAG2:visual-audio-contrast-dis-audio",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-dis-audio",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//visual-audio-contrast-dis-audio.html",
+    "handle": "Audio Control",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "1.4.3": {
+    "num": "1.4.3",
+    "url": "https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast",
+    "scId": "WCAG2:contrast-minimum",
+    "scAltId": [
+      "visual-audio-contrast-contrast"
+    ],
+    "test": "WCAG2:visual-audio-contrast-contrast",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//visual-audio-contrast-contrast.html",
+    "handle": "Contrast (Minimum)",
+    "level": "AA",
+    "wcagType": "2.0"
+  },
+  "1.4.4": {
+    "num": "1.4.4",
+    "url": "https://www.w3.org/TR/WCAG20/#visual-audio-contrast-scale",
+    "scId": "WCAG2:resize-text",
+    "scAltId": [
+      "visual-audio-contrast-scale"
+    ],
+    "test": "WCAG2:visual-audio-contrast-scale",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-scale",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//visual-audio-contrast-scale.html",
+    "handle": "Resize text",
+    "level": "AA",
+    "wcagType": "2.0"
+  },
+  "1.4.5": {
+    "num": "1.4.5",
+    "url": "https://www.w3.org/TR/WCAG20/#visual-audio-contrast-text-presentation",
+    "scId": "WCAG2:images-of-text",
+    "scAltId": [
+      "visual-audio-contrast-text-presentation"
+    ],
+    "test": "WCAG2:visual-audio-contrast-text-presentation",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-text-presentation",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//visual-audio-contrast-text-presentation.html",
+    "handle": "Images of Text",
+    "level": "AA",
+    "wcagType": "2.0"
+  },
+  "1.4.6": {
+    "num": "1.4.6",
+    "url": "https://www.w3.org/TR/WCAG20/#visual-audio-contrast7",
+    "scId": "WCAG2:contrast-enhanced",
+    "scAltId": [
+      "visual-audio-contrast7"
+    ],
+    "test": "WCAG2:visual-audio-contrast7",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//visual-audio-contrast7.html",
+    "handle": "Contrast (Enhanced)",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "1.4.7": {
+    "num": "1.4.7",
+    "url": "https://www.w3.org/TR/WCAG20/#visual-audio-contrast-noaudio",
+    "scId": "WCAG2:low-or-no-background-audio",
+    "scAltId": [
+      "visual-audio-contrast-noaudio"
+    ],
+    "test": "WCAG2:visual-audio-contrast-noaudio",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-noaudio",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//visual-audio-contrast-noaudio.html",
+    "handle": "Low or No Background Audio",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "1.4.8": {
+    "num": "1.4.8",
+    "url": "https://www.w3.org/TR/WCAG20/#visual-audio-contrast-visual-presentation",
+    "scId": "WCAG2:visual-presentation",
+    "scAltId": [
+      "visual-audio-contrast-visual-presentation"
+    ],
+    "test": "WCAG2:visual-audio-contrast-visual-presentation",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-visual-presentation",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//visual-audio-contrast-visual-presentation.html",
+    "handle": "Visual Presentation",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "1.4.9": {
+    "num": "1.4.9",
+    "url": "https://www.w3.org/TR/WCAG20/#visual-audio-contrast-text-images",
+    "scId": "WCAG2:images-of-text-no-exception",
+    "scAltId": [
+      "visual-audio-contrast-text-images"
+    ],
+    "test": "WCAG2:visual-audio-contrast-text-images",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-text-images",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//visual-audio-contrast-text-images.html",
+    "handle": "Images of Text (No Exception)",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "1.4.10": {
+    "num": "1.4.10",
+    "url": "https://www.w3.org/TR/WCAG21/#reflow",
+    "scId": "WCAG2:reflow",
+    "scAltId": [],
+    "test": "WCAG2:WCAG2:reflow",
+    "howToMeetUrl": "https://www.w3.org/WAI/WCAG21/quickref/#reflow",
+    "understandingUrl": "https://www.w3.org/WAI/WCAG21/Understanding//reflow.html",
+    "handle": "Reflow",
+    "level": "AA",
+    "wcagType": "2.1"
+  },
+  "1.4.11": {
+    "num": "1.4.11",
+    "url": "https://www.w3.org/TR/WCAG21/#non-text-contrast",
+    "scId": "WCAG2:non-text-contrast",
+    "scAltId": [],
+    "test": "WCAG2:WCAG2:non-text-contrast",
+    "howToMeetUrl": "https://www.w3.org/WAI/WCAG21/quickref/#non-text-contrast",
+    "understandingUrl": "https://www.w3.org/WAI/WCAG21/Understanding//non-text-contrast.html",
+    "handle": "Non-text Contrast",
+    "level": "AA",
+    "wcagType": "2.1"
+  },
+  "1.4.12": {
+    "num": "1.4.12",
+    "url": "https://www.w3.org/TR/WCAG21/#text-spacing",
+    "scId": "WCAG2:text-spacing",
+    "scAltId": [],
+    "test": "WCAG2:WCAG2:text-spacing",
+    "howToMeetUrl": "https://www.w3.org/WAI/WCAG21/quickref/#text-spacing",
+    "understandingUrl": "https://www.w3.org/WAI/WCAG21/Understanding//text-spacing.html",
+    "handle": "Text Spacing",
+    "level": "AA",
+    "wcagType": "2.1"
+  },
+  "1.4.13": {
+    "num": "1.4.13",
+    "url": "https://www.w3.org/TR/WCAG21/#content-on-hover-or-focus",
+    "scId": "WCAG2:content-on-hover-or-focus",
+    "scAltId": [],
+    "test": "WCAG2:WCAG2:content-on-hover-or-focus",
+    "howToMeetUrl": "https://www.w3.org/WAI/WCAG21/quickref/#content-on-hover-or-focus",
+    "understandingUrl": "https://www.w3.org/WAI/WCAG21/Understanding//content-on-hover-or-focus.html",
+    "handle": "Content on Hover or Focus",
+    "level": "AA",
+    "wcagType": "2.1"
+  },
+  "2.1.1": {
+    "num": "2.1.1",
+    "url": "https://www.w3.org/TR/WCAG20/#keyboard-operation-keyboard-operable",
+    "scId": "WCAG2:keyboard",
+    "scAltId": [
+      "keyboard-operation-keyboard-operable"
+    ],
+    "test": "WCAG2:keyboard-operation-keyboard-operable",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-keyboard-operation-keyboard-operable",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//keyboard-operation-keyboard-operable.html",
+    "handle": "Keyboard",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "2.1.2": {
+    "num": "2.1.2",
+    "url": "https://www.w3.org/TR/WCAG20/#keyboard-operation-trapping",
+    "scId": "WCAG2:no-keyboard-trap",
+    "scAltId": [
+      "keyboard-operation-trapping"
+    ],
+    "test": "WCAG2:keyboard-operation-trapping",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-keyboard-operation-trapping",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//keyboard-operation-trapping.html",
+    "handle": "No Keyboard Trap",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "2.1.3": {
+    "num": "2.1.3",
+    "url": "https://www.w3.org/TR/WCAG20/#keyboard-operation-all-funcs",
+    "scId": "WCAG2:keyboard-no-exception",
+    "scAltId": [
+      "keyboard-operation-all-funcs"
+    ],
+    "test": "WCAG2:keyboard-operation-all-funcs",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-keyboard-operation-all-funcs",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//keyboard-operation-all-funcs.html",
+    "handle": "Keyboard (No Exception)",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "2.1.4": {
+    "num": "2.1.4",
+    "url": "https://www.w3.org/TR/WCAG21/#character-key-shortcuts",
+    "scId": "WCAG2:character-key-shortcuts",
+    "scAltId": [],
+    "test": "WCAG2:WCAG2:character-key-shortcuts",
+    "howToMeetUrl": "https://www.w3.org/WAI/WCAG21/quickref/#character-key-shortcuts",
+    "understandingUrl": "https://www.w3.org/WAI/WCAG21/Understanding//character-key-shortcuts.html",
+    "handle": "Character Key Shortcuts",
+    "level": "A",
+    "wcagType": "2.1"
+  },
+  "2.2.1": {
+    "num": "2.2.1",
+    "url": "https://www.w3.org/TR/WCAG20/#time-limits-required-behaviors",
+    "scId": "WCAG2:timing-adjustable",
+    "scAltId": [
+      "time-limits-required-behaviors"
+    ],
+    "test": "WCAG2:time-limits-required-behaviors",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-time-limits-required-behaviors",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//time-limits-required-behaviors.html",
+    "handle": "Timing Adjustable",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "2.2.2": {
+    "num": "2.2.2",
+    "url": "https://www.w3.org/TR/WCAG20/#time-limits-pause",
+    "scId": "WCAG2:pause-stop-hide",
+    "scAltId": [
+      "time-limits-pause"
+    ],
+    "test": "WCAG2:time-limits-pause",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-time-limits-pause",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//time-limits-pause.html",
+    "handle": "Pause, Stop, Hide",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "2.2.3": {
+    "num": "2.2.3",
+    "url": "https://www.w3.org/TR/WCAG20/#time-limits-no-exceptions",
+    "scId": "WCAG2:no-timing",
+    "scAltId": [
+      "time-limits-no-exceptions"
+    ],
+    "test": "WCAG2:time-limits-no-exceptions",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-time-limits-no-exceptions",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//time-limits-no-exceptions.html",
+    "handle": "No Timing",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "2.2.4": {
+    "num": "2.2.4",
+    "url": "https://www.w3.org/TR/WCAG20/#time-limits-postponed",
+    "scId": "WCAG2:interruptions",
+    "scAltId": [
+      "time-limits-postponed"
+    ],
+    "test": "WCAG2:time-limits-postponed",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-time-limits-postponed",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//time-limits-postponed.html",
+    "handle": "Interruptions",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "2.2.5": {
+    "num": "2.2.5",
+    "url": "https://www.w3.org/TR/WCAG20/#time-limits-server-timeout",
+    "scId": "WCAG2:re-authenticating",
+    "scAltId": [
+      "time-limits-server-timeout"
+    ],
+    "test": "WCAG2:time-limits-server-timeout",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-time-limits-server-timeout",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//time-limits-server-timeout.html",
+    "handle": "Re-authenticating",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "2.2.6": {
+    "num": "2.2.6",
+    "url": "https://www.w3.org/TR/WCAG21/#timeouts",
+    "scId": "WCAG2:timeouts",
+    "scAltId": [],
+    "test": "WCAG2:WCAG2:timeouts",
+    "howToMeetUrl": "https://www.w3.org/WAI/WCAG21/quickref/#timeouts",
+    "understandingUrl": "https://www.w3.org/WAI/WCAG21/Understanding//timeouts.html",
+    "handle": "Timeouts",
+    "level": "AAA",
+    "wcagType": "2.1"
+  },
+  "2.3.1": {
+    "num": "2.3.1",
+    "url": "https://www.w3.org/TR/WCAG20/#seizure-does-not-violate",
+    "scId": "WCAG2:three-flashes-or-below-threshold",
+    "scAltId": [
+      "seizure-does-not-violate"
+    ],
+    "test": "WCAG2:seizure-does-not-violate",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-seizure-does-not-violate",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//seizure-does-not-violate.html",
+    "handle": "Three Flashes or Below Threshold",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "2.3.2": {
+    "num": "2.3.2",
+    "url": "https://www.w3.org/TR/WCAG20/#seizure-three-times",
+    "scId": "WCAG2:three-flashes",
+    "scAltId": [
+      "seizure-three-times"
+    ],
+    "test": "WCAG2:seizure-three-times",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-seizure-three-times",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//seizure-three-times.html",
+    "handle": "Three Flashes",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "2.3.3": {
+    "num": "2.3.3",
+    "url": "https://www.w3.org/TR/WCAG21/#animation-from-interactions",
+    "scId": "WCAG2:animation-from-interactions",
+    "scAltId": [],
+    "test": "WCAG2:WCAG2:animation-from-interactions",
+    "howToMeetUrl": "https://www.w3.org/WAI/WCAG21/quickref/#animation-from-interactions",
+    "understandingUrl": "https://www.w3.org/WAI/WCAG21/Understanding//animation-from-interactions.html",
+    "handle": "Animation from Interactions",
+    "level": "AAA",
+    "wcagType": "2.1"
+  },
+  "2.4.1": {
+    "num": "2.4.1",
+    "url": "https://www.w3.org/TR/WCAG20/#navigation-mechanisms-skip",
+    "scId": "WCAG2:bypass-blocks",
+    "scAltId": [
+      "navigation-mechanisms-skip"
+    ],
+    "test": "WCAG2:navigation-mechanisms-skip",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-skip",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//navigation-mechanisms-skip.html",
+    "handle": "Bypass Blocks",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "2.4.2": {
+    "num": "2.4.2",
+    "url": "https://www.w3.org/TR/WCAG20/#navigation-mechanisms-title",
+    "scId": "WCAG2:page-titled",
+    "scAltId": [
+      "navigation-mechanisms-title"
+    ],
+    "test": "WCAG2:navigation-mechanisms-title",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-title",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//navigation-mechanisms-title.html",
+    "handle": "Page Titled",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "2.4.3": {
+    "num": "2.4.3",
+    "url": "https://www.w3.org/TR/WCAG20/#navigation-mechanisms-focus-order",
+    "scId": "WCAG2:focus-order",
+    "scAltId": [
+      "navigation-mechanisms-focus-order"
+    ],
+    "test": "WCAG2:navigation-mechanisms-focus-order",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-focus-order",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//navigation-mechanisms-focus-order.html",
+    "handle": "Focus Order",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "2.4.4": {
+    "num": "2.4.4",
+    "url": "https://www.w3.org/TR/WCAG20/#navigation-mechanisms-refs",
+    "scId": "WCAG2:link-purpose-in-context",
+    "scAltId": [
+      "navigation-mechanisms-refs"
+    ],
+    "test": "WCAG2:navigation-mechanisms-refs",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-refs",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//navigation-mechanisms-refs.html",
+    "handle": "Link Purpose (In Context)",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "2.4.5": {
+    "num": "2.4.5",
+    "url": "https://www.w3.org/TR/WCAG20/#navigation-mechanisms-mult-loc",
+    "scId": "WCAG2:multiple-ways",
+    "scAltId": [
+      "navigation-mechanisms-mult-loc"
+    ],
+    "test": "WCAG2:navigation-mechanisms-mult-loc",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-mult-loc",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//navigation-mechanisms-mult-loc.html",
+    "handle": "Multiple Ways",
+    "level": "AA",
+    "wcagType": "2.0"
+  },
+  "2.4.6": {
+    "num": "2.4.6",
+    "url": "https://www.w3.org/TR/WCAG20/#navigation-mechanisms-descriptive",
+    "scId": "WCAG2:headings-and-labels",
+    "scAltId": [
+      "navigation-mechanisms-descriptive"
+    ],
+    "test": "WCAG2:navigation-mechanisms-descriptive",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-descriptive",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//navigation-mechanisms-descriptive.html",
+    "handle": "Headings and Labels",
+    "level": "AA",
+    "wcagType": "2.0"
+  },
+  "2.4.7": {
+    "num": "2.4.7",
+    "url": "https://www.w3.org/TR/WCAG20/#navigation-mechanisms-focus-visible",
+    "scId": "WCAG2:focus-visible",
+    "scAltId": [
+      "navigation-mechanisms-focus-visible"
+    ],
+    "test": "WCAG2:navigation-mechanisms-focus-visible",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-focus-visible",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//navigation-mechanisms-focus-visible.html",
+    "handle": "Focus Visible",
+    "level": "AA",
+    "wcagType": "2.0"
+  },
+  "2.4.8": {
+    "num": "2.4.8",
+    "url": "https://www.w3.org/TR/WCAG20/#navigation-mechanisms-location",
+    "scId": "WCAG2:location",
+    "scAltId": [
+      "navigation-mechanisms-location"
+    ],
+    "test": "WCAG2:navigation-mechanisms-location",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-location",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//navigation-mechanisms-location.html",
+    "handle": "Location",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "2.4.9": {
+    "num": "2.4.9",
+    "url": "https://www.w3.org/TR/WCAG20/#navigation-mechanisms-link",
+    "scId": "WCAG2:link-purpose-link-only",
+    "scAltId": [
+      "navigation-mechanisms-link"
+    ],
+    "test": "WCAG2:navigation-mechanisms-link",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-link",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//navigation-mechanisms-link.html",
+    "handle": "Link Purpose (Link Only)",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "2.4.10": {
+    "num": "2.4.10",
+    "url": "https://www.w3.org/TR/WCAG20/#navigation-mechanisms-headings",
+    "scId": "WCAG2:section-headings",
+    "scAltId": [
+      "navigation-mechanisms-headings"
+    ],
+    "test": "WCAG2:navigation-mechanisms-headings",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-headings",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//navigation-mechanisms-headings.html",
+    "handle": "Section Headings",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "2.5.1": {
+    "num": "2.5.1",
+    "url": "https://www.w3.org/TR/WCAG21/#pointer-gestures",
+    "scId": "WCAG2:pointer-gestures",
+    "scAltId": [],
+    "test": "WCAG2:WCAG2:pointer-gestures",
+    "howToMeetUrl": "https://www.w3.org/WAI/WCAG21/quickref/#pointer-gestures",
+    "understandingUrl": "https://www.w3.org/WAI/WCAG21/Understanding//pointer-gestures.html",
+    "handle": "Pointer Gestures",
+    "level": "A",
+    "wcagType": "2.1"
+  },
+  "2.5.2": {
+    "num": "2.5.2",
+    "url": "https://www.w3.org/TR/WCAG21/#pointer-cancellation",
+    "scId": "WCAG2:pointer-cancellation",
+    "scAltId": [],
+    "test": "WCAG2:WCAG2:pointer-cancellation",
+    "howToMeetUrl": "https://www.w3.org/WAI/WCAG21/quickref/#pointer-cancellation",
+    "understandingUrl": "https://www.w3.org/WAI/WCAG21/Understanding//pointer-cancellation.html",
+    "handle": "Pointer Cancellation",
+    "level": "A",
+    "wcagType": "2.1"
+  },
+  "2.5.3": {
+    "num": "2.5.3",
+    "url": "https://www.w3.org/TR/WCAG21/#label-in-name",
+    "scId": "WCAG2:label-in-name",
+    "scAltId": [],
+    "test": "WCAG2:WCAG2:label-in-name",
+    "howToMeetUrl": "https://www.w3.org/WAI/WCAG21/quickref/#label-in-name",
+    "understandingUrl": "https://www.w3.org/WAI/WCAG21/Understanding//label-in-name.html",
+    "handle": "Label in Name",
+    "level": "A",
+    "wcagType": "2.1"
+  },
+  "2.5.4": {
+    "num": "2.5.4",
+    "url": "https://www.w3.org/TR/WCAG21/#motion-actuation",
+    "scId": "WCAG2:motion-actuation",
+    "scAltId": [],
+    "test": "WCAG2:WCAG2:motion-actuation",
+    "howToMeetUrl": "https://www.w3.org/WAI/WCAG21/quickref/#motion-actuation",
+    "understandingUrl": "https://www.w3.org/WAI/WCAG21/Understanding//motion-actuation.html",
+    "handle": "Motion Actuation",
+    "level": "A",
+    "wcagType": "2.1"
+  },
+  "2.5.5": {
+    "num": "2.5.5",
+    "url": "https://www.w3.org/TR/WCAG21/#target-size",
+    "scId": "WCAG2:target-size",
+    "scAltId": [],
+    "test": "WCAG2:WCAG2:target-size",
+    "howToMeetUrl": "https://www.w3.org/WAI/WCAG21/quickref/#target-size",
+    "understandingUrl": "https://www.w3.org/WAI/WCAG21/Understanding//target-size.html",
+    "handle": "Target Size",
+    "level": "AAA",
+    "wcagType": "2.1"
+  },
+  "2.5.6": {
+    "num": "2.5.6",
+    "url": "https://www.w3.org/TR/WCAG21/#concurrent-input-mechanisms",
+    "scId": "WCAG2:concurrent-input-mechanisms",
+    "scAltId": [],
+    "test": "WCAG2:WCAG2:concurrent-input-mechanisms",
+    "howToMeetUrl": "https://www.w3.org/WAI/WCAG21/quickref/#concurrent-input-mechanisms",
+    "understandingUrl": "https://www.w3.org/WAI/WCAG21/Understanding//concurrent-input-mechanisms.html",
+    "handle": "Concurrent Input Mechanisms",
+    "level": "AAA",
+    "wcagType": "2.1"
+  },
+  "3.1.1": {
+    "num": "3.1.1",
+    "url": "https://www.w3.org/TR/WCAG20/#meaning-doc-lang-id",
+    "scId": "WCAG2:language-of-page",
+    "scAltId": [
+      "meaning-doc-lang-id"
+    ],
+    "test": "WCAG2:meaning-doc-lang-id",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-meaning-doc-lang-id",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//meaning-doc-lang-id.html",
+    "handle": "Language of Page",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "3.1.2": {
+    "num": "3.1.2",
+    "url": "https://www.w3.org/TR/WCAG20/#meaning-other-lang-id",
+    "scId": "WCAG2:language-of-parts",
+    "scAltId": [
+      "meaning-other-lang-id"
+    ],
+    "test": "WCAG2:meaning-other-lang-id",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-meaning-other-lang-id",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//meaning-other-lang-id.html",
+    "handle": "Language of Parts",
+    "level": "AA",
+    "wcagType": "2.0"
+  },
+  "3.1.3": {
+    "num": "3.1.3",
+    "url": "https://www.w3.org/TR/WCAG20/#meaning-idioms",
+    "scId": "WCAG2:unusual-words",
+    "scAltId": [
+      "meaning-idioms"
+    ],
+    "test": "WCAG2:meaning-idioms",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-meaning-idioms",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//meaning-idioms.html",
+    "handle": "Unusual Words",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "3.1.4": {
+    "num": "3.1.4",
+    "url": "https://www.w3.org/TR/WCAG20/#meaning-located",
+    "scId": "WCAG2:abbreviations",
+    "scAltId": [
+      "meaning-located"
+    ],
+    "test": "WCAG2:meaning-located",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-meaning-located",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//meaning-located.html",
+    "handle": "Abbreviations",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "3.1.5": {
+    "num": "3.1.5",
+    "url": "https://www.w3.org/TR/WCAG20/#meaning-supplements",
+    "scId": "WCAG2:reading-level",
+    "scAltId": [
+      "meaning-supplements"
+    ],
+    "test": "WCAG2:meaning-supplements",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-meaning-supplements",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//meaning-supplements.html",
+    "handle": "Reading Level",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "3.1.6": {
+    "num": "3.1.6",
+    "url": "https://www.w3.org/TR/WCAG20/#meaning-pronunciation",
+    "scId": "WCAG2:pronunciation",
+    "scAltId": [
+      "meaning-pronunciation"
+    ],
+    "test": "WCAG2:meaning-pronunciation",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-meaning-pronunciation",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//meaning-pronunciation.html",
+    "handle": "Pronunciation",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "3.2.1": {
+    "num": "3.2.1",
+    "url": "https://www.w3.org/TR/WCAG20/#consistent-behavior-receive-focus",
+    "scId": "WCAG2:on-focus",
+    "scAltId": [
+      "consistent-behavior-receive-focus"
+    ],
+    "test": "WCAG2:consistent-behavior-receive-focus",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-consistent-behavior-receive-focus",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//consistent-behavior-receive-focus.html",
+    "handle": "On Focus",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "3.2.2": {
+    "num": "3.2.2",
+    "url": "https://www.w3.org/TR/WCAG20/#consistent-behavior-unpredictable-change",
+    "scId": "WCAG2:on-input",
+    "scAltId": [
+      "consistent-behavior-unpredictable-change"
+    ],
+    "test": "WCAG2:consistent-behavior-unpredictable-change",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-consistent-behavior-unpredictable-change",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//consistent-behavior-unpredictable-change.html",
+    "handle": "On Input",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "3.2.3": {
+    "num": "3.2.3",
+    "url": "https://www.w3.org/TR/WCAG20/#consistent-behavior-consistent-locations",
+    "scId": "WCAG2:consistent-navigation",
+    "scAltId": [
+      "consistent-behavior-consistent-locations"
+    ],
+    "test": "WCAG2:consistent-behavior-consistent-locations",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-consistent-behavior-consistent-locations",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//consistent-behavior-consistent-locations.html",
+    "handle": "Consistent Navigation",
+    "level": "AA",
+    "wcagType": "2.0"
+  },
+  "3.2.4": {
+    "num": "3.2.4",
+    "url": "https://www.w3.org/TR/WCAG20/#consistent-behavior-consistent-functionality",
+    "scId": "WCAG2:consistent-identification",
+    "scAltId": [
+      "consistent-behavior-consistent-functionality"
+    ],
+    "test": "WCAG2:consistent-behavior-consistent-functionality",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-consistent-behavior-consistent-functionality",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//consistent-behavior-consistent-functionality.html",
+    "handle": "Consistent Identification",
+    "level": "AA",
+    "wcagType": "2.0"
+  },
+  "3.2.5": {
+    "num": "3.2.5",
+    "url": "https://www.w3.org/TR/WCAG20/#consistent-behavior-no-extreme-changes-context",
+    "scId": "WCAG2:change-on-request",
+    "scAltId": [
+      "consistent-behavior-no-extreme-changes-context"
+    ],
+    "test": "WCAG2:consistent-behavior-no-extreme-changes-context",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-consistent-behavior-no-extreme-changes-context",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//consistent-behavior-no-extreme-changes-context.html",
+    "handle": "Change on Request",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "3.3.1": {
+    "num": "3.3.1",
+    "url": "https://www.w3.org/TR/WCAG20/#minimize-error-identified",
+    "scId": "WCAG2:error-identification",
+    "scAltId": [
+      "minimize-error-identified"
+    ],
+    "test": "WCAG2:minimize-error-identified",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-minimize-error-identified",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//minimize-error-identified.html",
+    "handle": "Error Identification",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "3.3.2": {
+    "num": "3.3.2",
+    "url": "https://www.w3.org/TR/WCAG20/#minimize-error-cues",
+    "scId": "WCAG2:labels-or-instructions",
+    "scAltId": [
+      "minimize-error-cues"
+    ],
+    "test": "WCAG2:minimize-error-cues",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-minimize-error-cues",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//minimize-error-cues.html",
+    "handle": "Labels or Instructions",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "3.3.3": {
+    "num": "3.3.3",
+    "url": "https://www.w3.org/TR/WCAG20/#minimize-error-suggestions",
+    "scId": "WCAG2:error-suggestion",
+    "scAltId": [
+      "minimize-error-suggestions"
+    ],
+    "test": "WCAG2:minimize-error-suggestions",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-minimize-error-suggestions",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//minimize-error-suggestions.html",
+    "handle": "Error Suggestion",
+    "level": "AA",
+    "wcagType": "2.0"
+  },
+  "3.3.4": {
+    "num": "3.3.4",
+    "url": "https://www.w3.org/TR/WCAG20/#minimize-error-reversible",
+    "scId": "WCAG2:error-prevention-legal-financial-data",
+    "scAltId": [
+      "minimize-error-reversible"
+    ],
+    "test": "WCAG2:minimize-error-reversible",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-minimize-error-reversible",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//minimize-error-reversible.html",
+    "handle": "Error Prevention (Legal, Financial, Data)",
+    "level": "AA",
+    "wcagType": "2.0"
+  },
+  "3.3.5": {
+    "num": "3.3.5",
+    "url": "https://www.w3.org/TR/WCAG20/#minimize-error-context-help",
+    "scId": "WCAG2:help",
+    "scAltId": [
+      "minimize-error-context-help"
+    ],
+    "test": "WCAG2:minimize-error-context-help",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-minimize-error-context-help",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//minimize-error-context-help.html",
+    "handle": "Help",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "3.3.6": {
+    "num": "3.3.6",
+    "url": "https://www.w3.org/TR/WCAG20/#minimize-error-reversible-all",
+    "scId": "WCAG2:error-prevention-all",
+    "scAltId": [
+      "minimize-error-reversible-all"
+    ],
+    "test": "WCAG2:minimize-error-reversible-all",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-minimize-error-reversible-all",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//minimize-error-reversible-all.html",
+    "handle": "Error Prevention (All)",
+    "level": "AAA",
+    "wcagType": "2.0"
+  },
+  "4.1.1": {
+    "num": "4.1.1",
+    "url": "https://www.w3.org/TR/WCAG20/#ensure-compat-parses",
+    "scId": "WCAG2:parsing",
+    "scAltId": [
+      "ensure-compat-parses"
+    ],
+    "test": "WCAG2:ensure-compat-parses",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-ensure-compat-parses",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//ensure-compat-parses.html",
+    "handle": "Parsing",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "4.1.2": {
+    "num": "4.1.2",
+    "url": "https://www.w3.org/TR/WCAG20/#ensure-compat-rsv",
+    "scId": "WCAG2:name-role-value",
+    "scAltId": [
+      "ensure-compat-rsv"
+    ],
+    "test": "WCAG2:ensure-compat-rsv",
+    "howToMeetUrl": "http://www.w3.org/WAI/WCAG20/quickref/#qr-ensure-compat-rsv",
+    "understandingUrl": "http://www.w3.org/TR/UNDERSTANDING-WCAG20//ensure-compat-rsv.html",
+    "handle": "Name, Role, Value",
+    "level": "A",
+    "wcagType": "2.0"
+  },
+  "4.1.3": {
+    "num": "4.1.3",
+    "url": "https://www.w3.org/TR/WCAG21/#status-messages",
+    "scId": "WCAG2:status-messages",
+    "scAltId": [],
+    "test": "WCAG2:WCAG2:status-messages",
+    "howToMeetUrl": "https://www.w3.org/WAI/WCAG21/quickref/#status-messages",
+    "understandingUrl": "https://www.w3.org/WAI/WCAG21/Understanding//status-messages.html",
+    "handle": "Status Messages",
+    "level": "AA",
+    "wcagType": "2.1"
+  }
+}

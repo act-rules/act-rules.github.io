@@ -1,0 +1,96 @@
+{
+  "2eb176": [
+    {
+      "name": "Audio only has a text alternative",
+      "slug": "rules/e7aa44"
+    }
+  ],
+  "afb423": [
+    {
+      "name": "Audio only has a text alternative",
+      "slug": "rules/e7aa44"
+    }
+  ],
+  "a1b64e": [
+    {
+      "name": "No keyboard trap",
+      "slug": "rules/80af7b"
+    }
+  ],
+  "ebe86a": [
+    {
+      "name": "No keyboard trap",
+      "slug": "rules/80af7b"
+    }
+  ],
+  "ab4d13": [
+    {
+      "name": "Video has audio alternative",
+      "slug": "rules/eac66b"
+    },
+    {
+      "name": "Video with audio has audio description",
+      "slug": "rules/1ec09b"
+    },
+    {
+      "name": "Video with audio has audio descriptions or transcript",
+      "slug": "rules/c5a4ea"
+    }
+  ],
+  "f51b46": [
+    {
+      "name": "Video has audio alternative",
+      "slug": "rules/eac66b"
+    }
+  ],
+  "fd26cf": [
+    {
+      "name": "Video only has an accessible alternative",
+      "slug": "rules/c3232f"
+    }
+  ],
+  "ac7dc6": [
+    {
+      "name": "Video only has an accessible alternative",
+      "slug": "rules/c3232f"
+    }
+  ],
+  "ee13b5": [
+    {
+      "name": "Video only has an accessible alternative",
+      "slug": "rules/c3232f"
+    }
+  ],
+  "d7ba54": [
+    {
+      "name": "Video only has an accessible alternative",
+      "slug": "rules/c3232f"
+    }
+  ],
+  "1ea59c": [
+    {
+      "name": "Video with audio has audio description",
+      "slug": "rules/1ec09b"
+    },
+    {
+      "name": "Video with audio has audio descriptions or transcript",
+      "slug": "rules/c5a4ea"
+    }
+  ],
+  "f196ce": [
+    {
+      "name": "Video with audio has audio description",
+      "slug": "rules/1ec09b"
+    },
+    {
+      "name": "Video with audio has audio descriptions or transcript",
+      "slug": "rules/c5a4ea"
+    }
+  ],
+  "1a02b0": [
+    {
+      "name": "Video with audio has audio descriptions or transcript",
+      "slug": "rules/c5a4ea"
+    }
+  ]
+}

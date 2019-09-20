@@ -15,9 +15,10 @@ input_aspects:
   - CSS Styling
 authors:
   - Anne Thyme Nørregaard
+  - Jean-Yves Moyen
+previous_authors:
   - Dagfinn Rømen
   - Geir Sindre Fossøy
-  - Jean-Yves Moyen
 ---
 
 ## Applicability
@@ -35,17 +36,11 @@ This rule applies to any HTML or SVG element that:
 
 **Note:** The `option` role is not part of the list of applicable roles, because it has a required context role that inherits from the `select` role. Furthermore, `option` does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an [accessible name][].
 
-**Note**: "Label" in WCAG is used in its general sense and includes text or other components with a text alternative that is presented to a user to identify a component within web content. That is, "label" in WCAG is not restricted to the `label` element of HTML or SVG.
-
 ## Expectation
 
-The [accessible name][] describes the purpose of the associated form field element. Both the [visual context][] of the element, and the [programmatically determined context][] which is [included in the accessibility tree][] can be used to differentiate the purpose from other form fields on the same page.
+The [accessible name][] of each test target describes the purpose of that test target. Both the [visual context][] of the element, and the [programmatically determined context][] [included in the accessibility tree][] can be used to differentiate the purpose from other form fields on the same page.
 
 **Note:** In this case, [visual context][] can be created by headings, fieldsets and legends, text that is near the control, etc.
-
-**Note:** If a [context][] that is necessary for differentiating form fields from each other is [visible][], but not [included in the accessibility tree][], this might be a violation under other [WCAG](https://www.w3.org/TR/WCAG21/) success criteria (e.g. [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships)), but this is not considered a failing condition for this rule. For this rule, it is enough that the [context][] is there in some form, either [visible][] or [included in the accessibility tree][].
-
-**Note**: Labels do not need to be lengthy. A word, or even a single character, may suffice.
 
 ## Assumptions
 
@@ -92,7 +87,7 @@ The form field has a descriptive [accessible name][] given by the implicit `labe
 
 #### Passed Example 4
 
-Even through the `p` element itself is not [included in the accessibility tree][], it still provides a descriptive [accessible name][] for the form field.
+Even though the `p` element itself is not [included in the accessibility tree][], it still provides a descriptive [accessible name][] for the form field.
 
 ```html
 <p id="label_fname" aria-hidden="true">First name:</p>
@@ -240,7 +235,7 @@ The [accessible name][] is provided by the `aria-label` attribute (which takes p
 
 #### Inapplicable Example 1
 
-The `label` is [hidden](https://www.w3.org/TR/accname-1.1/#dfn-hidden) to all users and since it is not reference by an `aria-labelledby` or `aria-describedby` attribute, it does not provide an [accessible name][]. Thus, the form field has no [accessible name][] and the rule is inapplicable.
+The `label` is [hidden](https://www.w3.org/TR/accname-1.1/#dfn-hidden) to all users and since it is not referenced by an `aria-labelledby` or `aria-describedby` attribute, it does not provide an [accessible name][]. Thus, the form field has no [accessible name][] and the rule is inapplicable.
 
 ```html
 <label for="fname" style="display:none;">First name:</label> <input id="fname" type="text" name="fname" />

@@ -15,9 +15,10 @@ input_aspects:
   - CSS Styling
 authors:
   - Anne Thyme Nørregaard
+  - Jean-Yves Moyen
+previous_authors:
   - Dagfinn Rømen
   - Geir Sindre Fossøy
-  - Jean-Yves Moyen
 ---
 
 ## Applicability

@@ -4,7 +4,7 @@ Closes issue(s):
 
 - (ADD ISSUE NUMBER HERE)
 
-Need for Final Call
+Need for Final Call:
 << choose one of the following and remove the rest >>
 << check https://act-rules.github.io/pages/design/process/#final-call-aka-call-for-consensus-cfc >>
 This can be merged with 1 approval << choose reason: editorial changes to website/test code, adding new contributor, other (explain). >>

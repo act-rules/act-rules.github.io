@@ -66,7 +66,7 @@ The `xml:lang` attribute specified has a non-empty value.
 
 #### Passed Example 3
 
-The `lang` and `xml:lang` attribute specified has a non-empty value.
+The `lang` and `xml:lang` attributes specified have a non-empty value.
 
 ```html
 <html xml:lang="en" lang="en"></html>
@@ -156,7 +156,7 @@ The `lang` attribute specified is empty ("").
 
 #### Failed Example 4
 
-The `lang` and `xml:lang` attribute specified is empty ("").
+The `lang` and `xml:lang` attributes specified are empty ("").
 
 ```html
 <html xml:lang="" lang=""></html>

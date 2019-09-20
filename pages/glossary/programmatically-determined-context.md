@@ -1,3 +1,8 @@
+---
+title: Programmatically determined context
+key: programmatically-determined-context
+---
+
 Editorial note:
 This is a placeholder file (to get passing test). The definition is onboarded as part of PR #555:
 https://github.com/act-rules/act-rules.github.io/blob/link-is-descriptive/pages/glossary/programmatically-determined-context.md

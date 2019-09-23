@@ -1,0 +1,11 @@
+<svg width="206" height="149" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <ellipse stroke="#1a8904" ry="73.499999" rx="102" id="svg_7" cy="74.250001" cx="102.75" stroke-width="1.5" fill="#ffffff"/>
+  <ellipse stroke="#0027ea" ry="39.500001" rx="39.500001" id="svg_1" cy="91.250001" cx="61.249999" stroke-width="1.5" fill="#fff"/>
+  <text stroke="#0027ea" transform="matrix(0.8333333134651184,0,0,1,17.583335429430008,0) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" id="svg_3" y="94.75" x="12.199998" fill-opacity="null" stroke-width="0" fill="#000000">ACT-R rule 1</text>
+  <ellipse stroke="#0027ea" ry="39.500001" rx="39.500001" id="svg_4" cy="91.250001" cx="143.256095" stroke-width="1.5" fill="#fff"/>
+  <text style="cursor: move;" stroke="#0027ea" transform="matrix(0.8333333134651184,0,0,1,17.583335429430008,0) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" id="svg_5" y="94.75" x="110.607315" fill-opacity="null" stroke-width="0" fill="#000000">ACT-R rule 2</text>
+  <text stroke="#0027ea" transform="matrix(0.8333333134651184,0,0,1,17.583335429430008,0) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" id="svg_8" y="34.75" x="42.199998" fill-opacity="null" stroke-width="0" fill="#000000">Implementation rule</text>
+ </g>
+</svg>

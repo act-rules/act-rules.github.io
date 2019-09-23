@@ -1,0 +1,19 @@
+
+<script>
+	var trapOn = false
+</script>
+
+<a id="link1" href="#">Link 1</a>
+<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">
+	Button 1
+</button>
+<p>Press the M-key to Exit</p>
+<button
+	id="btn2"
+	class="target"
+	onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)"
+	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
+>
+	Button 2
+</button>
+<a id="link2" href="#">Link 2</a>

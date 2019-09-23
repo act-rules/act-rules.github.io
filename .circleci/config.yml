@@ -43,9 +43,10 @@ jobs:
     steps:
       - checkout
       - <<: *restore_dependency_cache
+      - run: npm run build
       - run:
           name: Deploy to master branch from develop branch
-          command: bash .circleci/publish-site.sh
+          command: bash publish.sh
             
 workflows:
   version: 2

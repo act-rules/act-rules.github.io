@@ -12,7 +12,7 @@ git checkout master
 git pull origin master
 
 # remove all files except the generated public directory and required git folders
-find . -maxdepth 1 ! -name 'public' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
+find . -maxdepth 1 ! -name 'public' ! -name '.circleci' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
 
 # move generated public in the root folder and remove the empty generated public folder
 mv public/* .

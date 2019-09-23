@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # set up git config
 git config user.name "$USER_NAME"
 git config user.email "$USER_EMAIL"
@@ -12,7 +14,9 @@ git checkout master
 git pull origin master
 
 # remove all files except the generated public directory and required git folders
-find . -maxdepth 1 ! -name 'public' ! -name '.circleci' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
+shopt -s extglob
+rm -rv !('public'|'.circleci'|'.git'|'.gitignore')
+shopt -u extglob
 
 # move generated public in the root folder and remove the empty generated public folder
 mv public/* .

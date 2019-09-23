@@ -15,7 +15,7 @@ git pull origin master
 
 # remove all files except the generated public directory and required git folders
 shopt -s extglob
-rm -rv !('public'|'.circleci'|'.git'|'.gitignore')
+rm -rv !('public'|'.circleci'|'.git'|'.gitignore'|'node_modules')
 shopt -u extglob
 
 # move generated public in the root folder and remove the empty generated public folder
@@ -23,7 +23,7 @@ mv public/* .
 rm -R public/
 
 # commit and push
-git add -fA
+git add -A
 git commit --allow-empty -m "update site [ci skip]"
 git push origin master --no-verify
 

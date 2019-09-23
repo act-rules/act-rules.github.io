@@ -39,7 +39,7 @@ This rule is limited to the explicit use of roles, as a clear indication that co
 
 Browser and assistive technology support for SVG `<title>` and `<desc>` elements is currently inconsistent. Using WAI ARIA in combination with the `img` role for non-decorative `<svg>` elements significantly improves accessibility browser support.
 
-Until browser support for the [SVG Accessibility API Mappings (work in progress)](https://www.w3.org/TR/svg-aam-1.0) is more consistent it is recomended to explpicitly remove decorative <svg> elements from the accessibility tree.
+Until browser support for the [SVG Accessibility API Mappings (work in progress)](https://www.w3.org/TR/svg-aam-1.0) is more consistent it is recomended to explicitly remove decorative <svg> elements from the accessibility tree.
 
 ## Background
 
@@ -77,6 +77,18 @@ The `<circle>` element has an explicit role of `graphics-symbol` and an accessib
 </svg>
 ```
 
+#### Passed example 3
+
+The `<svg>` element has an explicit role of `grpahics-document` and an accessible name from the `<title>` elememt that does not contain only whitespace.
+
+```html
+<p>How many circles are there?</p>
+<svg xmlns="http://www.w3.org/2000/svg" role="grpahics-document" width="100" height="100">
+  <title>1 circle</title>
+	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
+</svg>
+```
+
 ### Failed
 
 #### Failed example 1
@@ -92,7 +104,7 @@ The `<svg>` element has an explicit role of `img` but has no accessible name.
 
 #### Failed example 2
 
-The `<svg>` element has an explicit role of `img`but has only whitespace in the `<title>` element for the accessible name.
+The `<svg>` element has an explicit role of `img` but has only whitespace in the `<title>` element for the accessible name.
 
 ```html
 <p>How many circles are there?</p>

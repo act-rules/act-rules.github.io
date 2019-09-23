@@ -14,9 +14,7 @@ git checkout master
 git pull origin master
 
 # remove all files except the generated public directory and required git folders
-shopt -s extglob
-rm -rv !('public'|'.circleci'|'.git'|'.gitignore'|'node_modules')
-shopt -u extglob
+find . -maxdepth 1 ! -name 'public' ! -name 'node_modules' ! -name '.circleci' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;	
 
 # move generated public in the root folder and remove the empty generated public folder
 mv public/* .

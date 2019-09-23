@@ -122,7 +122,7 @@
 		"gatsby-remark-copy-linked-files": "^2.1.17",
 		"gatsby-remark-prismjs": "^3.3.13",
 		"gatsby-source-filesystem": "^2.1.21",
-		"gatsby-transformer-remark": "^2.6.21",
+		"gatsby-transformer-remark": "^2.6.24",
 		"gatsby-transformer-sharp": "^2.2.16",
 		"gfm-code-blocks": "^1.0.0",
 		"globby": "^10.0.1",

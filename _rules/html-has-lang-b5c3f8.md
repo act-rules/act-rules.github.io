@@ -25,7 +25,7 @@ The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s)
 
 ## Expectation
 
-Each test target has a `lang` or `xml:lang` attribute that is not empty ("").
+Each test target has a `lang` or `xml:lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
 
 **Note**: HTML5 recommends using `lang` instead of `xml:lang`. This is not known to impact accessibility, which is why use of both is permitted by this rule.
 
@@ -88,46 +88,6 @@ The `xml:lang` attribute specified has a non-empty value. The rule expects a non
 <html xml:lang="en" lang=""></html>
 ```
 
-#### Passed Example 6
-
-The `lang` attribute specified has a non-empty value. The rule does not verify the validity of the value specified and checks only for presence of a value.
-
-```html
-<html lang="xyz"></html>
-```
-
-#### Passed Example 7
-
-The `xml:lang` attribute specifies a value that is not empty (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
-
-```html
-<html xml:lang="xyz"></html>
-```
-
-#### Passed Example 8
-
-The `xml:lang` attribute specifies a value that is not empty (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
-
-```html
-<html xml:lang="123"></html>
-```
-
-#### Passed Example 9
-
-The `xml:lang` attribute specifies a value that is not empty (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
-
-```html
-<html xml:lang="#!"></html>
-```
-
-#### Passed Example 10
-
-The `xml:lang` attribute specifies a value that is not empty (""). The rule does not verify the validity of the value specified and checks only for presence of a value.
-
-```html
-<html xml:lang=" "></html>
-```
-
 ### Failed
 
 #### Failed Example 1
@@ -160,6 +120,22 @@ The `lang` and `xml:lang` attributes specified are empty ("").
 
 ```html
 <html xml:lang="" lang=""></html>
+```
+
+#### Failed Example 5
+
+The `lang` attribute consists of only [whitespace](#whitespace).
+
+```html
+<html lang=" "></html>
+```
+
+#### Failed Example 6
+
+The `xml:lang` attribute consists of only [whitespace](#whitespace).
+
+```html
+<html xml:lang=" "></html>
 ```
 
 ### Inapplicable

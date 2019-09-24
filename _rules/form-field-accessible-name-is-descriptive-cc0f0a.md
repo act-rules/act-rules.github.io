@@ -40,7 +40,7 @@ This rule applies to any HTML or SVG element that:
 
 The [accessible name][] of each test target describes the purpose of that test target. Both the [visual context][] of the element, and the [programmatically determined context][] [included in the accessibility tree][] can be used to differentiate the purpose from other form fields on the same page.
 
-**Note:** In this case, [visual context][] can be created by headings, fieldsets and legends, text that is near the control, etc.
+**Note:** In this case, [visual context][] can be created by headings, field sets and legends, text that is near the control, etc.
 
 ## Assumptions
 

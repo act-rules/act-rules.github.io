@@ -72,6 +72,7 @@
 # Attributes
 - href
 - src
+- aria-describedby
 - aria-labelled
 - aria-labelledby 
 - autofill-field

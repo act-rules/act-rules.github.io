@@ -68,7 +68,7 @@ This black [text node](https://dom.spec.whatwg.org/#text) is on a white backgrou
 
 ```html
 <p style="color: #333; background: #FFF;">
-	Some text in English
+	Some text in a human language
 </p>
 ```
 
@@ -78,7 +78,7 @@ This black [text node](https://dom.spec.whatwg.org/#text) is on a partially whit
 
 ```html
 <p style="color: #333; background: linear-gradient(to right, #FFF, #00F);">
-	Some text in English
+	Some text in a human language
 </p>
 ```
 
@@ -100,7 +100,7 @@ This [text node](https://dom.spec.whatwg.org/#text) passes because of a text sha
 
 ```html
 <p style="color: #000; background: #737373; text-shadow: white 0 0 3px">
-	Some text in English
+	Some text in a human language
 </p>
 ```
 
@@ -110,7 +110,7 @@ This text only has a 3:1 contrast but it is a large (18 point) text so it still 
 
 ```html
 <p style="color: #000; font-size:18pt; background: #666;">
-	Some text in English
+	Some text in a human language
 </p>
 ```
 
@@ -155,6 +155,16 @@ This text is in a shadow DOM tree and has sufficient contrast.
 	const shadowRoot = document.getElementById('p').attachShadow({ mode: 'open' })
 	shadowRoot.textContent = 'Some text in English'
 </script>
+```
+
+#### Passed Example 10
+
+This black [text node](https://dom.spec.whatwg.org/#text) is in Japanese, showing that this rule applies to any human language. (The prase means "Even monkeys fall from trees.").
+
+```html
+<p style="color: #333; background: #FFF;">
+	猿も木から落ちる。
+</p>
 ```
 
 ### Failed

@@ -27,23 +27,18 @@ authors:
 
 The rule applies to each HTML or SVG element:
 
-- the has one of the following [semantic roles][semantic role]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`;
+- the has one of the following [semantic roles][#semantic-role]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`;
 - that may or may not belong to a [form element](https://www.w3.org/TR/html52/sec-forms.html#the-form-element);
-- for which [input errors](https://www.w3.org/TR/WCAG21/#dfn-input-error) are automatically detected.
+- for which [input errors](https://www.w3.org/TR/WCAG21/#dfn-input-error) are [automatically detected][#automatic-error-detection].
 
-**Note**: The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
+**Note**: The list of applicable [semantic roles][#semantic-role] is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
 
 - inherit from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
 - do not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
 
-**Note**: Automatic detection of input errors can be the result of:
-
-- scripts executed in the client or the server
-- programatically specified information that allows user agents to detect information that has not been provided or that must conform to a specific format
-
 ## Expectation 
 
-After [user completion](#completed-input-field) of the target element or triggering the submission of the form, if the target element belongs to one, each target element for which an input error has been automatically detected causes an element with `role="alertdialog"` to appear that
+After [user completion](#completed-input-field) of the target element or triggering the submission of the form, if the target element belongs to one, each target element for which an [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error) has been [automatically detected][#automatic-error-detection] causes an element with `role="alertdialog"` to appear that
 - contains at least one [focusable](#focusable) element; and
 - the focus moves to the [focusable](#focusable) element; and
 - it is not possible to move the focus away from elements contained in the element with `role="alertdialog"` until this is dismissed; and

@@ -1,10 +1,10 @@
 const retext = require('retext')
+const removeMd = require('remove-markdown')
 const spell = require('retext-spell')
 const dictionary = require('dictionary-en-us')
 const yaml = require('js-yaml')
 const fs = require('fs')
 const gfmCodeBlocks = require('gfm-code-blocks')
-const markdownLinkExtractor = require('markdown-link-extractor')
 const reporter = require('vfile-reporter')
 
 const describeRule = require('../test-utils/describe-rule')
@@ -19,21 +19,18 @@ const spellOptions = {
  * Helper function to curate a given text of code blocks and hyperlink url
  * @param {String} body body of markdown
  * @param {Object} options options
+ * @property {Boolean} options.stripCodeBlocks boolean denoting if code blocks should be removed from content
  * @returns {String}
  */
-const getCuratedMarkdownBody = (body, options) => {
-	const { stripCodeBlocks = false, stripHyperlinks = false } = options
+const getCuratedMarkdownBody = (body, options = {}) => {
+	const { stripCodeBlocks = true } = options
+
 	if (stripCodeBlocks) {
 		const codeBlocks = gfmCodeBlocks(body)
 		body = codeBlocks.reduce((out, { block }) => out.replace(block, ''), body)
 	}
 
-	if (stripHyperlinks) {
-		const hyperlinks = markdownLinkExtractor(body)
-		body = hyperlinks.reduce((out, hyperlink) => out.replace(hyperlink, ''), body)
-	}
-
-	return body
+	return removeMd(body)
 }
 
 /**
@@ -64,8 +61,8 @@ const checkSpelling = text => {
  * @param {data} data parsed markdown content
  */
 const validateMarkdownBody = ({ body }) => {
-	const curatedBody = getCuratedMarkdownBody(body, { stripCodeBlocks: true, stripHyperlinks: true })
-	test(`has no spelling mistakes in file`, async () => {
+	test(`has no spelling mistakes`, async () => {
+		const curatedBody = getCuratedMarkdownBody(body)
 		const { passed, report } = await checkSpelling(curatedBody)
 		expect(passed, 'Error processing spell check').toBe(true)
 		expect(report.messages, reporter(report)).toBeArrayOfSize(0)

@@ -19,7 +19,7 @@ authors:
 
 ## Applicability
 
-The rule applies to each `meta` element with a `name` attribute whose value is equal to [`viewport`](https://www.w3.org/TR/css-device-adapt-1/#viewport-meta) and has a `content` attribute.
+The rule applies to each `meta` element with a `name` attribute whose value is a [case-insensitive](https://infra.spec.whatwg.org/#ascii-case-insensitive) match for [`viewport`](https://www.w3.org/TR/css-device-adapt-1/#viewport-meta) and has a `content` attribute.
 
 ## Expectation
 

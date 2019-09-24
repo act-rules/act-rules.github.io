@@ -274,7 +274,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 		<title>Page with some content</title>
 		<style>
 			body {
-				transform: rotateZ(0, 0, 1, 270deg);
+				transform: rotate(90deg);
 			}
 		</style>
 	</head>

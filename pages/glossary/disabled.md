@@ -5,10 +5,13 @@ key: disabled
 
 An element that is normally [perceivable][] and [operable][], but has been rendered [inoperable][operable] either temporarily or permanently using one of the following techniques, is considered disabled:
 
-1. The [`disabled`][disabled] attribute. The presence of this attribute, regardless of its value, either
-
-    - on a [`button`][button], [`input`][input], [`select`][select], [`textarea`][textarea], or [form-associated custom element][]; or
-    - on a [`fieldset`][fieldset] element
+1. The [`disabled`][disabled] attribute. The presence of this attribute, regardless of its value, on a 
+    - [`button`][button], 
+    - [`input`][input], 
+    - [`select`][select], 
+    - [`textarea`][textarea], 
+    - [form-associated custom element][],
+    - or [`fieldset`][fieldset] element
     
     will disable the element itself if it is not a [`fieldset`][fieldset] or, if it is, will disable any [descendants][descendant] of the element, excluding those that are [descendants][descendant] of the first [`legend`][legend] [child][] of the element.
     

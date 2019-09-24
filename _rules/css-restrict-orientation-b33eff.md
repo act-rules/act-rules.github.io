@@ -24,8 +24,6 @@ The rule applies to any HTML element that is [visible](#visible) and has a CSS [
 
 - [rotate](https://www.w3.org/TR/css-transforms/#funcdef-transform-rotate)
 - [rotate3d](https://drafts.csswg.org/css-transforms-2/#funcdef-rotate3d)
-- [rotateX](https://drafts.csswg.org/css-transforms-2/#funcdef-rotatex)
-- [rotateY](https://drafts.csswg.org/css-transforms-2/#funcdef-rotatey)
 - [rotateZ](https://drafts.csswg.org/css-transforms-2/#funcdef-rotatez)
 - [matrix](https://www.w3.org/TR/css-transforms/#funcdef-transform-matrix)
 - [matrix3d](https://drafts.csswg.org/css-transforms-2/#funcdef-matrix3d)
@@ -87,7 +85,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 
 #### Passed Example 2
 
-A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property has [rotate](https://www.w3.org/TR/css-transforms/#funcdef-transform-rotate) [transform function](https://www.w3.org/TR/css-transforms/#transform-functions) conditionally applied on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1) which does not restricts the element to either `portrait` or `landscape` orientation.
+A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property has [rotateZ](https://drafts.csswg.org/css-transforms-2/#funcdef-rotatez) [transform function](https://www.w3.org/TR/css-transforms/#transform-functions) conditionally applied on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1) which does not restricts the element to either `portrait` or `landscape` orientation.
 
 ```html
 <html lang="en">
@@ -96,7 +94,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 		<style>
 			@media (orientation: portrait) {
 				html {
-					transform: rotate(1turn);
+					transform: rotateZ(1turn);
 				}
 			}
 		</style>
@@ -180,7 +178,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 
 #### Failed Example 2
 
-A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property has [matrix](https://www.w3.org/TR/css-transforms/#funcdef-transform-matrix) [transform function](https://www.w3.org/TR/css-transforms/#transform-functions) conditionally applied on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1) which restricts the element to `portrait` orientation.
+A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property has [matrix3d](https://drafts.csswg.org/css-transforms-2/#funcdef-matrix3d) [transform function](https://www.w3.org/TR/css-transforms/#transform-functions) conditionally applied on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1) which restricts the element to `portrait` orientation.
 
 ```html
 <html lang="en">
@@ -189,7 +187,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 		<style>
 			@media (orientation: landscape) {
 				body {
-					transform: matrix(-1.83697e-16, -1, 1, -1.83697e-16, 0, 0);
+					transform: matrix3d(0, -1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 				}
 			}
 		</style>
@@ -251,7 +249,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 		<style>
 			@media (orientation: lanscape) {
 				body {
-					transform: rotate(270deg);
+					transform: rotateZ(0, 0, 1, 270deg);
 				}
 			}
 		</style>

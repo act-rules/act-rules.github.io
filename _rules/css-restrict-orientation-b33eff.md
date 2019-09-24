@@ -204,7 +204,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 
 #### Inapplicable Example 1
 
-A page where there are CSS styles.
+A page where there are no CSS styles.
 
 ```html
 <html lang="en">
@@ -253,6 +253,28 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 				body {
 					transform: rotateZ(0, 0, 1, 270deg);
 				}
+			}
+		</style>
+	</head>
+	<body style="display:none;">
+		<main>
+			Page Content
+		</main>
+	</body>
+</html>
+```
+
+#### Inapplicable Example 4
+
+A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property is not applied conditionally on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1).
+
+```html
+<html lang="en">
+	<head>
+		<title>Page with some content</title>
+		<style>
+			body {
+				transform: rotateZ(0, 0, 1, 270deg);
 			}
 		</style>
 	</head>

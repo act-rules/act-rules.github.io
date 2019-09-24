@@ -19,9 +19,7 @@ authors:
 
 ## Applicability
 
-The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element with a `lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
-
-**Note**: Documents embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not web pages according to the definition in WCAG.
+This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element with a `lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
 
 ## Expectation
 

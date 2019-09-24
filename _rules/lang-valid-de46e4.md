@@ -19,7 +19,7 @@ authors:
 
 ## Applicability
 
-This rules applies to each HTML element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) of the `body` element and has a `lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
+This rules applies to any HTML element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) of a `body` element and has a `lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
 
 ## Expectation
 

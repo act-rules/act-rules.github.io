@@ -4,9 +4,9 @@ name: Required form fields not completed
 rule_type: atomic
 
 description: |
-  This rule checks that text error messages identify required form fields that were not completed
+  This rule checks that text error messages identify required form fields that were not completed.
 
-accessibility_requirements: # Remove whatever is not applicable
+accessibility_requirements: 
   wcag-technique:G83: # Providing text descriptions to identify required fields that were not completed
     forConformance: false
     failed: not satisfied
@@ -25,7 +25,10 @@ authors:
 
 ## Applicability
 
-The rule applies to each [form element](https://www.w3.org/TR/html52/sec-forms.html#the-form-element) that includes at least one [required](#required-input-field) HTML or SVG element that has one of the following [semantic roles][semantic role]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
+The rule applies to each [form element](https://www.w3.org/TR/html52/sec-forms.html#the-form-element) that includes at least one [required](#required-input-field) HTML or SVG element:
+
+- that has one of the following [semantic roles][semantic role]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
+- for which [input errors](https://www.w3.org/TR/WCAG21/#dfn-input-error) are [automatically detected](#automatic-error-detection).
 
 **Note**: The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
 
@@ -44,10 +47,6 @@ Note: A text message may identify an [input element](https://www.w3.org/TR/html5
 ## Expectation 2
 
 The content of the text message is [visible](#visible), [included in the accessibility tree](included-in-the-accessibility-tree) and indicates that the [input element](https://www.w3.org/TR/html52/sec-forms.html#the-input-element) is [required](#required-input-field).
-
-## Expectation 3
-
-All [completed fields](#completed-input-fields) of the target element retain their values.
 
 ## Assumptions
 
@@ -95,7 +94,7 @@ The error message identifies any required `input` element that has not been fill
     function processForm() {
         document.getElementById('error').innerText = "";
         if (document.getElementById('name').value.length === 0) {
-            document.getElementById('error').innerText += "You must fill the name field."
+            document.getElementById('error').innerText += "You must fill the name field. "
         }
         var color = document.forms[0].color.value;
         if (color.length === 0) {
@@ -105,6 +104,7 @@ The error message identifies any required `input` element that has not been fill
 </script>
 
 <form>
+    <h2 id="error"></h2>
     <label for="name">Name (required)</label>
     <input type="text" id="name">
     <br>
@@ -115,7 +115,6 @@ The error message identifies any required `input` element that has not been fill
     <label><input type="radio" name="color" value="yellow">Yellow</label>
     <br>
     <input type="button" value="Submit" onclick="processForm()">
-    <div id="error"></div>
 </form>
 ```
 
@@ -129,7 +128,7 @@ No error message is provided.
 <form>
     <label for="text_field">Name (required)</label>
     <input type="text" id="text_field" required>
-    <input type="button" value="Submit" onclick="processForm()">
+    <input type="button" value="Submit">
     <div id="error"></div>
 </form>
 ```
@@ -153,6 +152,7 @@ The error message does not identify which form fields need to be filled.
 </script>
 
 <form>
+    <h2 id="error"></h2>
     <label for="name">Name (required)</label>
     <input type="text" id="name" required>
     <br>
@@ -163,7 +163,6 @@ The error message does not identify which form fields need to be filled.
     <label><input type="radio" name="color" value="yellow">Yellow</label>
     <br>
     <input type="button" value="Submit" onclick="processForm()">
-    <div id="error"></div>
 </form>
 ```
 
@@ -209,41 +208,6 @@ The error message is not included in the accessibility tree.
 </form>
 ```
 
-#### Failed Example 5
-
-Completed input fields do not retain their values.
-
-```html
-<script>
-    function processForm() {
-        document.getElementById('error').innerText = "";
-        if (document.getElementById('name').value.length === 0) {
-            document.getElementById('error').innerText += "You must fill the name field.";
-            document.forms[0].reset();
-        }
-        var color = document.forms[0].color.value;
-        if (color.length === 0) {
-            document.getElementById('error').innerText += "You must pick a color."
-            document.forms[0].reset();
-        }
-    }
-</script>
-
-<form>
-    <label for="name">Name (required)</label>
-    <input type="text" id="name">
-    <br>
-    <label for="address">Address</label>
-    <input type="text" id="address">
-    <p>Pick a color (required)</p>
-    <label><input type="radio" name="color" value="blue">Blue</label>
-    <label><input type="radio" name="color" value="yellow">Yellow</label>
-    <br>
-    <input type="button" value="Submit" onclick="processForm()">
-    <div id="error"></div>
-</form>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -253,6 +217,7 @@ The `input` element is not required.
 ```html
 <form>
     <input type="text">
+    <input type="button" value="Submit">
 </form>
 ```
 

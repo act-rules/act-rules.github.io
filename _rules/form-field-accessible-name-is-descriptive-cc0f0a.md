@@ -1,6 +1,6 @@
 ---
-id: e0ca31
-name: Form field accessible name is descriptive
+id: cc0f0a
+name: Form field label is descriptive
 rule_type: atomic
 description: |
   This rule checks that accessible names describe the purpose of form field elements.

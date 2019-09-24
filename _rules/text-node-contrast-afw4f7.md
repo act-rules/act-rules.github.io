@@ -42,13 +42,13 @@ For each test target, the [highest possible contrast](#highest-possible-contrast
 
 ## Assumptions
 
-Success criterion 1.4.3 has exceptions for "incidental" text, which includes inactive user interface components and decorative texts. The rule assumes that [text nodes](https://dom.spec.whatwg.org/#text) should be ignored are hidden from assistive technologies. If this isn't the case, the rule may produce incorrect results.
+Success criterion 1.4.3 has exceptions for "incidental" text, which includes inactive user interface components and decorative texts. The rule assumes that [text nodes](https://dom.spec.whatwg.org/#text) that should be ignored are hidden from assistive technologies. If this isn't the case, the rule may produce incorrect results.
 
-Success criterion 1.4.3 also has an exception for logos and brand names. Since logos and brand names are usually displayed through images to ensure correct rendering, this rule does not take logos or brand names into consideration. If a logo or brand name is included using [text nodes](https://dom.spec.whatwg.org/#text), this rule may not produce the rule may produce incorrect results.
+Success criterion 1.4.3 also has an exception for logos and brand names. Since logos and brand names are usually displayed through images to ensure correct rendering, this rule does not take logos or brand names into consideration. If a logo or brand name is included using [text nodes](https://dom.spec.whatwg.org/#text), this rule may produce incorrect results.
 
 ## Accessibility Support
 
-Different browsers have different levels of support for CSS. This can cause contrast issues in one browser that do not appear in another. Because of that, this rule can produce different results depending on the browser that is used.
+Different browsers have different levels of support for CSS. This can cause contrast issues in one browser that do not appear in another. Because of that, this rule can produce different results depending on the browser that is used. For example, a text that is positioned using CSS transform may be on a different background in a browser that does not support CSS transform.
 
 ## Background
 
@@ -56,6 +56,7 @@ Different browsers have different levels of support for CSS. This can cause cont
 - [G18: Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text](https://www.w3.org/WAI/WCAG21/Techniques/general/G18)
 - [G145: Ensuring that a contrast ratio of at least 3:1 exists between text (and images of text) and background behind the text](https://www.w3.org/WAI/WCAG21/Techniques/general/G145)
 - [F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text)](https://www.w3.org/WAI/WCAG21/Techniques/failures/F83)
+- [CSS Scoping Module Level 1 (Editor's Draft)](https://drafts.csswg.org/css-scoping/)
 
 ## Test Cases
 
@@ -87,7 +88,7 @@ Light [text node](https://dom.spec.whatwg.org/#text) on a partially black backgr
 
 ```html
 <p
-	style="color: #CCC; height:50px; padding-top:25px; background: #000 no-repeat -20px -20px url('../test-assets/black-hole.jpeg');"
+	style="color: #CCC; height:50px; padding-top:25px; background: #000 no-repeat -20px -20px url('../test-assets/contrast/black-hole.jpeg');"
 >
 	Black hole sun
 </p>
@@ -151,8 +152,8 @@ Text that is in a shadow DOM tree with sufficient contrast.
 ```html
 <p style="color: #333; background: #fff;" id="p"></p>
 <script>
-  const shadowRoot = document.getElementById('p').attachShadow({ mode: 'open' })
-  shadowRoot.textContent = 'Some text in English'
+	const shadowRoot = document.getElementById('p').attachShadow({ mode: 'open' })
+	shadowRoot.textContent = 'Some text in English'
 </script>
 ```
 
@@ -184,7 +185,7 @@ Text with insufficient contrast on a background image.
 
 ```html
 <p
-	style="color: #555; height:50px; padding-top:25px; background: black no-repeat -20px -20px url('../test-assets/black-hole.jpeg');"
+	style="color: #555; height:50px; padding-top:25px; background: black no-repeat -20px -20px url('../test-assets/contrast/black-hole.jpeg');"
 >
 	Black hole sun
 </p>
@@ -219,8 +220,8 @@ Text that is in a shadow DOM tree with insufficient contrast.
 ```html
 <p style="color: #aaa; background: #fff;" id="p"></p>
 <script>
-  const shadowRoot = document.getElementById('p').attachShadow({ mode: 'open' })
-  shadowRoot.textContent = 'Some text in English'
+	const shadowRoot = document.getElementById('p').attachShadow({ mode: 'open' })
+	shadowRoot.textContent = 'Some text in English'
 </script>
 ```
 
@@ -258,10 +259,7 @@ Not a [text node](https://dom.spec.whatwg.org/#text) but an image.
 
 ```html
 <p>
-	<img
-		scr="../test-assets/example.png"
-		alt="example"
-	/>
+	<img scr="../test-assets/contrast/example.png" alt="example" />
 </p>
 ```
 

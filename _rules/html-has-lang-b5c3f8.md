@@ -25,7 +25,7 @@ The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s)
 
 ## Expectation
 
-Each test target has a `lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
+Each test target has a `lang` attribute that is neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 ## Assumptions
 
@@ -73,7 +73,7 @@ The `lang` attribute specified is empty ("").
 
 #### Failed Example 3
 
-The `lang` attribute consists of only [whitespace](#whitespace).
+The `lang` attribute consists of only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 ```html
 <html lang=" "></html>

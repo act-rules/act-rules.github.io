@@ -101,6 +101,9 @@
 - lang 
 - xml:lang
 - http-equiv
+- user-scalable
+- user-scalable=yes
+- user-scalable=no
 
 # ARIA Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#aria)
 - ARIA1 
@@ -156,3 +159,4 @@
 - programmatically
 - Programmatically
 - personalization
+- Autofill

@@ -148,6 +148,7 @@
 		"react-dom": "^16.9.0",
 		"react-helmet": "^5.2.1",
 		"react-media": "^1.10.0",
+		"remove-markdown": "^0.3.0",
 		"showdown": "^1.9.0"
 	},
 	"devDependencies": {

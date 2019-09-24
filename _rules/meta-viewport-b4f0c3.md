@@ -5,7 +5,7 @@ rule_type: atomic
 description: |
   This rule checks that the `meta` element is not used to block the user agent ability to zoom.
 accessibility_requirements:
-  wcag21:1.4.4: # Resize text (AA)
+  wcag20:1.4.4: # Resize text (AA)
     forConformance: true
     failed: not satisfied
     passed: further testing needed

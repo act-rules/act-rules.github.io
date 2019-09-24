@@ -52,6 +52,10 @@ The content of the message is [visible](#visible), [included in the accessibilit
 
 **Note**: Information to identify an input error must include the element or elements in which the error occurred and to assist the user in understanding what was the cause of the error.
 
+**Note**: If the input error was caused by the user entering a value that falls outside the list of possible values, the message must indicate the possible values.
+
+**Note**: If the input error was caused by the user entering a value that does not follow the required format, the message must indicate the correct format for the input value.
+
 ## Assumptions
 
 _There are currently no assumptions_

@@ -54,7 +54,7 @@ For each test target, the outcome of all of the following rules is passed:
 
 #### Passed Example 1
 
-[HTML document](https://dom.spec.whatwg.org/#concept-document) does not have [functionality](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-functionality) that can be operated by device motion or user motion
+[HTML document](https://dom.spec.whatwg.org/#concept-document) does not have [functionality](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-functionality) that can be operated by device motion or user motion.
 
 ```html
 <div>document content</div>
@@ -62,7 +62,7 @@ For each test target, the outcome of all of the following rules is passed:
 
 #### Passed Example 2
 
-[HTML document](https://dom.spec.whatwg.org/#concept-document) has [functionality](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-functionality) that can be operated by device motion or user motion and can also be operated by [user interface components](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-user-interface-component) and can be disabled
+[HTML document](https://dom.spec.whatwg.org/#concept-document) has [functionality](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-functionality) that can be operated by device motion or user motion and can also be operated by [user interface components](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-user-interface-component) and can be disabled.
 
 ```html
 <html>
@@ -137,7 +137,7 @@ For each test target, the outcome of all of the following rules is passed:
 
 #### Failed Example 1
 
-[HTML document](https://dom.spec.whatwg.org/#concept-document) has [functionality](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-functionality) that can be operated by device motion or user motion and can also be operated by [user interface components](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-user-interface-component) but cannot be disabled
+[HTML document](https://dom.spec.whatwg.org/#concept-document) has [functionality](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-functionality) that can be operated by device motion or user motion and can also be operated by [user interface components](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-user-interface-component) but cannot be disabled.
 
 ```html
 <html>
@@ -202,7 +202,7 @@ For each test target, the outcome of all of the following rules is passed:
 
 #### Failed Example 2
 
-[HTML document](https://dom.spec.whatwg.org/#concept-document) has [functionality](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-functionality) that can be operated by device motion or user motion, can be disabled, but cannot be operated by [user interface components](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-user-interface-component)
+[HTML document](https://dom.spec.whatwg.org/#concept-document) has [functionality](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-functionality) that can be operated by device motion or user motion, can be disabled, but cannot be operated by [user interface components](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-user-interface-component).
 
 ```html
 <html>
@@ -262,7 +262,7 @@ For each test target, the outcome of all of the following rules is passed:
 
 #### Failed Example 3
 
-[HTML document](https://dom.spec.whatwg.org/#concept-document) has [functionality](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-functionality) that can be operated by device motion or user motion but cannot be operated by [user interface components](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-user-interface-component) and disabled
+[HTML document](https://dom.spec.whatwg.org/#concept-document) has [functionality](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-functionality) that can be operated by device motion or user motion but cannot be operated by [user interface components](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-user-interface-component) and disabled.
 
 ```html
 <html>
@@ -317,7 +317,7 @@ For each test target, the outcome of all of the following rules is passed:
 
 #### Inapplicable Example 1
 
-The document is not an [HTML document](https://dom.spec.whatwg.org/#concept-document)
+The document is not an [HTML document](https://dom.spec.whatwg.org/#concept-document).
 
 ```html
 <svg height="100" width="100">

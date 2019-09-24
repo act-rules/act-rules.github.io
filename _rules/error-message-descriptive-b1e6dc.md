@@ -3,9 +3,9 @@ id: b1e6dc
 name: Error message is descriptive
 rule_type: composite
 description: |
-  This rule checks that when an input error is automatically detected the error is identified and described to the user in text
+  This rule checks that when an input error is automatically detected the error is identified and described to the user in text.
 
-accessibility_requirements: # Remove whatever is not applicable
+accessibility_requirements: 
   wcag20:3.1.1: # Error Identification (A)
     forConformance: true
     failed: not satisfied
@@ -26,16 +26,16 @@ authors:
 
 ## Applicability
 
-This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element that has at least one HTML or SVG element that has one of the following [semantic roles][semantic role]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
+This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element that has at least one HTML or SVG element that has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox` and for which [input errors](https://www.w3.org/TR/WCAG21/#dfn-input-error) are [automatically detected](#automatic-error-detection)
 
-**Note**: The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
+**Note**: The list of applicable [semantic roles](#semantic-role) is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
 
 - inherit from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
 - do not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
 
 ## Expectation (1)
 
-For each HTML or SVG element that has one of the following [semantic roles][semantic role]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox` in the test target, the outcome of at least one of the following rules is passed:
+For each HTML or SVG element that has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox` in the test target, the outcome of at least one of the following rules is passed:
 
 - [Required form fields not completed](https://act-rules.github.io/rules/334972)
 - [Invalid form field value](https://act-rules.github.io/rules/36b590)

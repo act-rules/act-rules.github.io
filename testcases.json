@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 552,
+  "count": 573,
   "testcases": [
     {
       "testcaseId": "0dbcbdb2eace03d1e3a89e12f7ec33e615ce1a20",
@@ -2051,6 +2051,176 @@
       "rulePage": "https://act-rules.github.io/rules/97a4e1",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "c3deb42f8c65d190d89da433d2e5816057a2e5dc",
+      "url": "https://act-rules.github.io/testcases/b33eff/c3deb42f8c65d190d89da433d2e5816057a2e5dc.html",
+      "relativePath": "testcases/b33eff/c3deb42f8c65d190d89da433d2e5816057a2e5dc.html",
+      "expected": "passed",
+      "ruleId": "b33eff",
+      "ruleName": "Orientation of the page is not restricted using CSS transform property",
+      "rulePage": "https://act-rules.github.io/rules/b33eff",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.3.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "cd018789b49540702f2d4a43e7c4fdba43868d73",
+      "url": "https://act-rules.github.io/testcases/b33eff/cd018789b49540702f2d4a43e7c4fdba43868d73.html",
+      "relativePath": "testcases/b33eff/cd018789b49540702f2d4a43e7c4fdba43868d73.html",
+      "expected": "passed",
+      "ruleId": "b33eff",
+      "ruleName": "Orientation of the page is not restricted using CSS transform property",
+      "rulePage": "https://act-rules.github.io/rules/b33eff",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.3.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "2a565685e5eff487582e927c88b57dbab76cb8fc",
+      "url": "https://act-rules.github.io/testcases/b33eff/2a565685e5eff487582e927c88b57dbab76cb8fc.html",
+      "relativePath": "testcases/b33eff/2a565685e5eff487582e927c88b57dbab76cb8fc.html",
+      "expected": "passed",
+      "ruleId": "b33eff",
+      "ruleName": "Orientation of the page is not restricted using CSS transform property",
+      "rulePage": "https://act-rules.github.io/rules/b33eff",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.3.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "2caf0636361e576d50b3b20aef24c11329465ec7",
+      "url": "https://act-rules.github.io/testcases/b33eff/2caf0636361e576d50b3b20aef24c11329465ec7.html",
+      "relativePath": "testcases/b33eff/2caf0636361e576d50b3b20aef24c11329465ec7.html",
+      "expected": "passed",
+      "ruleId": "b33eff",
+      "ruleName": "Orientation of the page is not restricted using CSS transform property",
+      "rulePage": "https://act-rules.github.io/rules/b33eff",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.3.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "53e4a8847c1be808b34c1a723d24f4ab28d17485",
+      "url": "https://act-rules.github.io/testcases/b33eff/53e4a8847c1be808b34c1a723d24f4ab28d17485.html",
+      "relativePath": "testcases/b33eff/53e4a8847c1be808b34c1a723d24f4ab28d17485.html",
+      "expected": "failed",
+      "ruleId": "b33eff",
+      "ruleName": "Orientation of the page is not restricted using CSS transform property",
+      "rulePage": "https://act-rules.github.io/rules/b33eff",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.3.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "70d571c05bb64f851b46e4b6fd9b82e174860f66",
+      "url": "https://act-rules.github.io/testcases/b33eff/70d571c05bb64f851b46e4b6fd9b82e174860f66.html",
+      "relativePath": "testcases/b33eff/70d571c05bb64f851b46e4b6fd9b82e174860f66.html",
+      "expected": "failed",
+      "ruleId": "b33eff",
+      "ruleName": "Orientation of the page is not restricted using CSS transform property",
+      "rulePage": "https://act-rules.github.io/rules/b33eff",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.3.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "7e666e7c0116bc2ad66e691a66e159fa0873a778",
+      "url": "https://act-rules.github.io/testcases/b33eff/7e666e7c0116bc2ad66e691a66e159fa0873a778.html",
+      "relativePath": "testcases/b33eff/7e666e7c0116bc2ad66e691a66e159fa0873a778.html",
+      "expected": "inapplicable",
+      "ruleId": "b33eff",
+      "ruleName": "Orientation of the page is not restricted using CSS transform property",
+      "rulePage": "https://act-rules.github.io/rules/b33eff",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.3.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "d288295be774625969b1efa1086ab590c0066667",
+      "url": "https://act-rules.github.io/testcases/b33eff/d288295be774625969b1efa1086ab590c0066667.html",
+      "relativePath": "testcases/b33eff/d288295be774625969b1efa1086ab590c0066667.html",
+      "expected": "inapplicable",
+      "ruleId": "b33eff",
+      "ruleName": "Orientation of the page is not restricted using CSS transform property",
+      "rulePage": "https://act-rules.github.io/rules/b33eff",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.3.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "6c82b06a37af7bdc4937f2b3b7225b13bf10ba79",
+      "url": "https://act-rules.github.io/testcases/b33eff/6c82b06a37af7bdc4937f2b3b7225b13bf10ba79.html",
+      "relativePath": "testcases/b33eff/6c82b06a37af7bdc4937f2b3b7225b13bf10ba79.html",
+      "expected": "inapplicable",
+      "ruleId": "b33eff",
+      "ruleName": "Orientation of the page is not restricted using CSS transform property",
+      "rulePage": "https://act-rules.github.io/rules/b33eff",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.3.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "99fccda1d8c85bbfc30f8706b644c8d36cdbdfda",
+      "url": "https://act-rules.github.io/testcases/b33eff/99fccda1d8c85bbfc30f8706b644c8d36cdbdfda.html",
+      "relativePath": "testcases/b33eff/99fccda1d8c85bbfc30f8706b644c8d36cdbdfda.html",
+      "expected": "inapplicable",
+      "ruleId": "b33eff",
+      "ruleName": "Orientation of the page is not restricted using CSS transform property",
+      "rulePage": "https://act-rules.github.io/rules/b33eff",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.3.4": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -5149,7 +5319,7 @@
       "ruleName": "Label and name from content mismatch",
       "rulePage": "https://act-rules.github.io/rules/2ee8b8",
       "ruleAccessibilityRequirements": {
-        "wcag20:2.5.3": {
+        "wcag21:2.5.3": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -5166,7 +5336,7 @@
       "ruleName": "Label and name from content mismatch",
       "rulePage": "https://act-rules.github.io/rules/2ee8b8",
       "ruleAccessibilityRequirements": {
-        "wcag20:2.5.3": {
+        "wcag21:2.5.3": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -5183,7 +5353,7 @@
       "ruleName": "Label and name from content mismatch",
       "rulePage": "https://act-rules.github.io/rules/2ee8b8",
       "ruleAccessibilityRequirements": {
-        "wcag20:2.5.3": {
+        "wcag21:2.5.3": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -5200,7 +5370,7 @@
       "ruleName": "Label and name from content mismatch",
       "rulePage": "https://act-rules.github.io/rules/2ee8b8",
       "ruleAccessibilityRequirements": {
-        "wcag20:2.5.3": {
+        "wcag21:2.5.3": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -5217,7 +5387,7 @@
       "ruleName": "Label and name from content mismatch",
       "rulePage": "https://act-rules.github.io/rules/2ee8b8",
       "ruleAccessibilityRequirements": {
-        "wcag20:2.5.3": {
+        "wcag21:2.5.3": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -5234,7 +5404,7 @@
       "ruleName": "Label and name from content mismatch",
       "rulePage": "https://act-rules.github.io/rules/2ee8b8",
       "ruleAccessibilityRequirements": {
-        "wcag20:2.5.3": {
+        "wcag21:2.5.3": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -5251,7 +5421,7 @@
       "ruleName": "Label and name from content mismatch",
       "rulePage": "https://act-rules.github.io/rules/2ee8b8",
       "ruleAccessibilityRequirements": {
-        "wcag20:2.5.3": {
+        "wcag21:2.5.3": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -5268,7 +5438,7 @@
       "ruleName": "Label and name from content mismatch",
       "rulePage": "https://act-rules.github.io/rules/2ee8b8",
       "ruleAccessibilityRequirements": {
-        "wcag20:2.5.3": {
+        "wcag21:2.5.3": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -5285,7 +5455,7 @@
       "ruleName": "Label and name from content mismatch",
       "rulePage": "https://act-rules.github.io/rules/2ee8b8",
       "ruleAccessibilityRequirements": {
-        "wcag20:2.5.3": {
+        "wcag21:2.5.3": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -5302,7 +5472,7 @@
       "ruleName": "Label and name from content mismatch",
       "rulePage": "https://act-rules.github.io/rules/2ee8b8",
       "ruleAccessibilityRequirements": {
-        "wcag20:2.5.3": {
+        "wcag21:2.5.3": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -7087,6 +7257,193 @@
           "inapplicable": "further testing needed"
         },
         "wcag20:3.2.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "7586e3500c241da9a4d27d5495ef8d5c58d7dce5",
+      "url": "https://act-rules.github.io/testcases/b4f0c3/7586e3500c241da9a4d27d5495ef8d5c58d7dce5.html",
+      "relativePath": "testcases/b4f0c3/7586e3500c241da9a4d27d5495ef8d5c58d7dce5.html",
+      "expected": "passed",
+      "ruleId": "b4f0c3",
+      "ruleName": "meta viewport does not prevent zoom",
+      "rulePage": "https://act-rules.github.io/rules/b4f0c3",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "04e2ffae5716c8c5cb215ccf924ae70e444409ef",
+      "url": "https://act-rules.github.io/testcases/b4f0c3/04e2ffae5716c8c5cb215ccf924ae70e444409ef.html",
+      "relativePath": "testcases/b4f0c3/04e2ffae5716c8c5cb215ccf924ae70e444409ef.html",
+      "expected": "passed",
+      "ruleId": "b4f0c3",
+      "ruleName": "meta viewport does not prevent zoom",
+      "rulePage": "https://act-rules.github.io/rules/b4f0c3",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "c1364984e3d76d59d940e989901a2bf7619ad491",
+      "url": "https://act-rules.github.io/testcases/b4f0c3/c1364984e3d76d59d940e989901a2bf7619ad491.html",
+      "relativePath": "testcases/b4f0c3/c1364984e3d76d59d940e989901a2bf7619ad491.html",
+      "expected": "passed",
+      "ruleId": "b4f0c3",
+      "ruleName": "meta viewport does not prevent zoom",
+      "rulePage": "https://act-rules.github.io/rules/b4f0c3",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "45284eee86781e6bdcecc8211674449d81631e8d",
+      "url": "https://act-rules.github.io/testcases/b4f0c3/45284eee86781e6bdcecc8211674449d81631e8d.html",
+      "relativePath": "testcases/b4f0c3/45284eee86781e6bdcecc8211674449d81631e8d.html",
+      "expected": "passed",
+      "ruleId": "b4f0c3",
+      "ruleName": "meta viewport does not prevent zoom",
+      "rulePage": "https://act-rules.github.io/rules/b4f0c3",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "900e431123d594638cfffacd3930e63a17645a09",
+      "url": "https://act-rules.github.io/testcases/b4f0c3/900e431123d594638cfffacd3930e63a17645a09.html",
+      "relativePath": "testcases/b4f0c3/900e431123d594638cfffacd3930e63a17645a09.html",
+      "expected": "failed",
+      "ruleId": "b4f0c3",
+      "ruleName": "meta viewport does not prevent zoom",
+      "rulePage": "https://act-rules.github.io/rules/b4f0c3",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "38aa06d7736bdb3f82aa9ae75d05e5b4b747f440",
+      "url": "https://act-rules.github.io/testcases/b4f0c3/38aa06d7736bdb3f82aa9ae75d05e5b4b747f440.html",
+      "relativePath": "testcases/b4f0c3/38aa06d7736bdb3f82aa9ae75d05e5b4b747f440.html",
+      "expected": "failed",
+      "ruleId": "b4f0c3",
+      "ruleName": "meta viewport does not prevent zoom",
+      "rulePage": "https://act-rules.github.io/rules/b4f0c3",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "97368ebf283cb7c4b933a3989e983ef862bb0d65",
+      "url": "https://act-rules.github.io/testcases/b4f0c3/97368ebf283cb7c4b933a3989e983ef862bb0d65.html",
+      "relativePath": "testcases/b4f0c3/97368ebf283cb7c4b933a3989e983ef862bb0d65.html",
+      "expected": "failed",
+      "ruleId": "b4f0c3",
+      "ruleName": "meta viewport does not prevent zoom",
+      "rulePage": "https://act-rules.github.io/rules/b4f0c3",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "d6d0c983905d0c8b59ed4ecb6cb07d801532d530",
+      "url": "https://act-rules.github.io/testcases/b4f0c3/d6d0c983905d0c8b59ed4ecb6cb07d801532d530.html",
+      "relativePath": "testcases/b4f0c3/d6d0c983905d0c8b59ed4ecb6cb07d801532d530.html",
+      "expected": "failed",
+      "ruleId": "b4f0c3",
+      "ruleName": "meta viewport does not prevent zoom",
+      "rulePage": "https://act-rules.github.io/rules/b4f0c3",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "92d0a60559f3e41f7072dcc88330a5cd8c693a0d",
+      "url": "https://act-rules.github.io/testcases/b4f0c3/92d0a60559f3e41f7072dcc88330a5cd8c693a0d.html",
+      "relativePath": "testcases/b4f0c3/92d0a60559f3e41f7072dcc88330a5cd8c693a0d.html",
+      "expected": "failed",
+      "ruleId": "b4f0c3",
+      "ruleName": "meta viewport does not prevent zoom",
+      "rulePage": "https://act-rules.github.io/rules/b4f0c3",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "b790de4e60b09fb9e7a3c03a00a82499e7474d0d",
+      "url": "https://act-rules.github.io/testcases/b4f0c3/b790de4e60b09fb9e7a3c03a00a82499e7474d0d.html",
+      "relativePath": "testcases/b4f0c3/b790de4e60b09fb9e7a3c03a00a82499e7474d0d.html",
+      "expected": "inapplicable",
+      "ruleId": "b4f0c3",
+      "ruleName": "meta viewport does not prevent zoom",
+      "rulePage": "https://act-rules.github.io/rules/b4f0c3",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "ebca0ed6d2a77a86c34b646e4ee08834b1aa67cc",
+      "url": "https://act-rules.github.io/testcases/b4f0c3/ebca0ed6d2a77a86c34b646e4ee08834b1aa67cc.html",
+      "relativePath": "testcases/b4f0c3/ebca0ed6d2a77a86c34b646e4ee08834b1aa67cc.html",
+      "expected": "inapplicable",
+      "ruleId": "b4f0c3",
+      "ruleName": "meta viewport does not prevent zoom",
+      "rulePage": "https://act-rules.github.io/rules/b4f0c3",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",

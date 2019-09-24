@@ -57,7 +57,7 @@ The `lang` attribute specified has a non-empty value.
 
 #### Failed Example 1
 
-There were no `lang` attribute specified.
+There was no `lang` attribute specified.
 
 ```html
 <html></html>

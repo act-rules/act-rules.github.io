@@ -84,7 +84,7 @@ Heading marked up with `h1` element with an image that describes the topic or pu
 
 ```html
 <h1 class="target">
-	<img scr="../test-assets/descriptive-heading-b49b2e/opening_hours_icon.png" alt="Opening hours" />
+	<img scr="/test-assets/descriptive-heading-b49b2e/opening_hours_icon.png" alt="Opening hours" />
 </h1>
 <p>We are open Monday through Friday from 10 to 16</p>
 ```

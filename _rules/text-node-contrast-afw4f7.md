@@ -38,7 +38,7 @@ Any [text node](https://dom.spec.whatwg.org/#text) that is [visible](#visible) a
 
 For each test target, the [highest possible contrast](#highest-possible-contrast) between the [foreground colors](#foreground-colors-of-text) and [background colors](#background-colors-of-text) is at least 4.5:1 or 3.0:1 for [larger scale text](#large-scale-text), except if the [text node](https://dom.spec.whatwg.org/#text) is [decorative](#decorative), or doesn't express anything in [human language](https://www.w3.org/TR/WCAG21/#dfn-human-language-s).
 
-**Note**: Passing this rule does not mean that the [text node](https://dom.spec.whatwg.org/#text) has sufficient color contrast. White text on a black and white image passes this rule, whether or not that text is legible depends on the how much of the white words are positioned on the black parts of the image. This requires further testing.
+**Note**: Passing this rule does not mean that the [text node](https://dom.spec.whatwg.org/#text) has sufficient color contrast. For example: White text on a black and white image passes this rule as long as it touches at least 1 black pixel. Whether or not that text is legible depends on the how much of the white words are positioned on the black parts of the image. This requires further testing.
 
 ## Assumptions
 
@@ -64,7 +64,7 @@ Different browsers have different levels of support for CSS. This can cause cont
 
 #### Passed Example 1
 
-Black [text node](https://dom.spec.whatwg.org/#text) on a white background.
+This black [text node](https://dom.spec.whatwg.org/#text) is on a white background.
 
 ```html
 <p style="color: #333; background: #FFF;">
@@ -74,7 +74,7 @@ Black [text node](https://dom.spec.whatwg.org/#text) on a white background.
 
 #### Passed Example 2
 
-Black [text node](https://dom.spec.whatwg.org/#text) on a partially white gradient background.
+This black [text node](https://dom.spec.whatwg.org/#text) is on a partially white gradient background.
 
 ```html
 <p style="color: #333; background: linear-gradient(to right, #FFF, #00F);">
@@ -84,7 +84,7 @@ Black [text node](https://dom.spec.whatwg.org/#text) on a partially white gradie
 
 #### Passed Example 3
 
-Light [text node](https://dom.spec.whatwg.org/#text) on a partially black background image.
+This light [text node](https://dom.spec.whatwg.org/#text) is on a partially black background image.
 
 ```html
 <p
@@ -96,7 +96,7 @@ Light [text node](https://dom.spec.whatwg.org/#text) on a partially black backgr
 
 #### Passed Example 4
 
-[text node](https://dom.spec.whatwg.org/#text) that passes because of a text shadow.
+This [text node](https://dom.spec.whatwg.org/#text) passes because of a text shadow.
 
 ```html
 <p style="color: #000; background: #737373; text-shadow: white 0 0 3px">
@@ -106,7 +106,7 @@ Light [text node](https://dom.spec.whatwg.org/#text) on a partially black backgr
 
 #### Passed Example 5
 
-18 point text with a 3:1 contrast.
+This text only has a 3:1 contrast but it is a large (18 point) text so it still passes.
 
 ```html
 <p style="color: #000; font-size:18pt; background: #666;">
@@ -116,7 +116,7 @@ Light [text node](https://dom.spec.whatwg.org/#text) on a partially black backgr
 
 #### Passed Example 6
 
-14 point bold text with a 3:1 contrast.
+This text only has a 3:1 contrast but it is a large (14 points and bold) text so it still passes.
 
 ```html
 <p style="color: #000; font-size:14pt; font-weight:700; background: #666;">
@@ -126,7 +126,7 @@ Light [text node](https://dom.spec.whatwg.org/#text) on a partially black backgr
 
 #### Passed Example 7
 
-Decorative text with insufficient contrast.
+This text has an insufficient contrast but it is decorative so it still passes.
 
 ```html
 <p>Helvetica is a widely used sans-serif typeface developed in 1957 by Max Miedinger and Eduard Hoffmann.</p>
@@ -137,7 +137,7 @@ Decorative text with insufficient contrast.
 
 #### Passed Example 8
 
-Text that does not express anything in human language.
+This text has an insufficient contrast but it does not express anything in human language so it still passes.
 
 ```html
 <p style="color: #000; background: #666;">
@@ -147,7 +147,7 @@ Text that does not express anything in human language.
 
 #### Passed Example 9
 
-Text that is in a shadow DOM tree with sufficient contrast.
+This text is in a shadow DOM tree and has sufficient contrast.
 
 ```html
 <p style="color: #333; background: #fff;" id="p"></p>
@@ -161,7 +161,7 @@ Text that is in a shadow DOM tree with sufficient contrast.
 
 #### Failed Example 1
 
-Text with insufficient contrast on a plain background.
+This text has an insufficient contrast with the plain background.
 
 ```html
 <p style="color: #AAA; background: white;">
@@ -171,7 +171,7 @@ Text with insufficient contrast on a plain background.
 
 #### Failed Example 2
 
-Text with insufficient contrast on a gradient background.
+This text has an insufficient contrast with the gradient background.
 
 ```html
 <p style="color: #AAA; background: linear-gradient(to right, #FFF, #00F);">
@@ -181,7 +181,7 @@ Text with insufficient contrast on a gradient background.
 
 #### Failed Example 3
 
-Text with insufficient contrast on a background image.
+This text has an insufficient contrast with the background image.
 
 ```html
 <p
@@ -193,7 +193,7 @@ Text with insufficient contrast on a background image.
 
 #### Failed Example 4
 
-Text that fails because of alpha transparancy.
+This text fails because of alpha transparancy.
 
 ```html
 <p style="color: rgba(0,0,0,.3); background: #FFF">
@@ -203,7 +203,7 @@ Text that fails because of alpha transparancy.
 
 #### Failed Example 5
 
-Text that fails because of CSS transparent.
+This text fails because of CSS transparent.
 
 ```html
 <div style="background: #FFF">
@@ -215,7 +215,7 @@ Text that fails because of CSS transparent.
 
 #### Failed Example 6
 
-Text that is in a shadow DOM tree with insufficient contrast.
+This text is in a shadow DOM tree and has insufficient contrast.
 
 ```html
 <p style="color: #aaa; background: #fff;" id="p"></p>
@@ -229,7 +229,7 @@ Text that is in a shadow DOM tree with insufficient contrast.
 
 #### Inapplicable Example 1
 
-Invisible text.
+This is invisible text.
 
 ```html
 <p style="display: none">Some invisible text in English</p>
@@ -237,7 +237,7 @@ Invisible text.
 
 #### Inapplicable Example 2
 
-Text with the same foreground and background colors.
+This text has the same foreground and background colors.
 
 ```html
 <p style="color: white; background: white;">Some white on white text in English</p>
@@ -245,7 +245,7 @@ Text with the same foreground and background colors.
 
 #### Inapplicable Example 3
 
-Text not a child of an HTML element.
+This text is no not the child of an HTML element.
 
 ```html
 <svg>
@@ -255,7 +255,7 @@ Text not a child of an HTML element.
 
 #### Inapplicable Example 4
 
-Not a [text node](https://dom.spec.whatwg.org/#text) but an image.
+This is not a [text node](https://dom.spec.whatwg.org/#text) but an image.
 
 ```html
 <p>
@@ -265,7 +265,7 @@ Not a [text node](https://dom.spec.whatwg.org/#text) but an image.
 
 #### Inapplicable Example 5
 
-Text is contained in a native button.
+This text is contained in a native button.
 
 ```html
 <button>My button!</button>
@@ -273,7 +273,7 @@ Text is contained in a native button.
 
 #### Inapplicable Example 6
 
-Text is contained in a ARIA button.
+This text is contained in a ARIA button.
 
 ```html
 <div role="button">My button!</div>
@@ -281,7 +281,7 @@ Text is contained in a ARIA button.
 
 #### Inapplicable Example 7
 
-Text is in a label of a disabled native widget.
+This text is in a label of a disabled native widget.
 
 ```html
 <label style="color:#888; background: white;">
@@ -292,7 +292,7 @@ Text is in a label of a disabled native widget.
 
 #### Inapplicable Example 8
 
-Text is in a label of a disabled ARIA widget.
+This text is in a label of a disabled ARIA widget.
 
 ```html
 <label id="my_pets_name" style="color:#888; background: white;">
@@ -310,7 +310,7 @@ Text is in a label of a disabled ARIA widget.
 
 #### Inapplicable Example 9
 
-Text is in a disabled fieldset.
+This text is in a disabled fieldset.
 
 ```html
 <fieldset disabled style="color:#888; background: white;">
@@ -323,7 +323,7 @@ Text is in a disabled fieldset.
 
 #### Inapplicable Example 10
 
-Text is in a disabled ARIA group.
+This text is in a disabled ARIA group.
 
 ```html
 <div role="group" aria-disabled="true" style="color:#888; background: white;">

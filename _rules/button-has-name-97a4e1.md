@@ -38,7 +38,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- [HTML Accessibility API Mappings 1.0](https://www.w3.org/TR/html-aam/) (work in progress)
+- [HTML Accessibility API Mappings 1.0, working draft](https://www.w3.org/TR/html-aam/)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA14)
 - [ARIA16: Using aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA16)

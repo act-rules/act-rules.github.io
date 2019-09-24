@@ -26,7 +26,7 @@ The rule applies to elements that are [included in the accessibility tree][] wit
 
 Each target element has an [accessible name][] that is not only [whitespace][].
 
-**Note**: `input` elements of type `submit` and `reset` can get their [accessible name][] from a [default text](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset) (work in progress), as well as from a `value` or other attribute.
+**Note**: `input` elements of type `submit` and `reset` can get their [accessible name][] from a [default text](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset), as well as from a `value` or other attribute.
 
 ## Assumptions
 
@@ -38,6 +38,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
+- [HTML Accessibility API Mappings 1.0](https://www.w3.org/TR/html-aam/) (work in progress)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA14)
 - [ARIA16: Using aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA16)

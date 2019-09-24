@@ -19,7 +19,7 @@ authors:
 
 ## Applicability
 
-This rules applies to each HTML or SVG element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) of the `body` element and has a `lang` or `xml:lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
+This rules applies to each HTML or SVG element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of the `body` element and has a `lang` or `xml:lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
 
 ## Expectation
 
@@ -35,6 +35,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
+- [CSS Scoping Module Level 1](https://drafts.csswg.org/css-scoping/) (work in progress)
 - [H58: Using language attributes to identify changes in the human language](https://www.w3.org/WAI/WCAG21/Techniques/html/H58)
 - [BCP 47: Tags for Identifying Languages](https://www.ietf.org/rfc/bcp/bcp47.txt)
 - [Understanding Success Criterion 3.1.2: Language of Parts](https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts)

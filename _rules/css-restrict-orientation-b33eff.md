@@ -38,8 +38,10 @@ The target element is neither rotated clockwise nor counter clockwise around the
 
 ## Assumptions
 
-- The rule does not consider elements for which a particular display orientation is [essential](https://www.w3.org/TR/WCAG21/#dfn-essential).
-- The rule does not consider the existence of any control on the page that can change the orientation on demand.
+This rule does not consider and may produce incorrect results for:
+
+- Elements for which a particular display orientation is [essential](https://www.w3.org/TR/WCAG21/#dfn-essential).
+- The existence of any control on the page that can change the orientation on demand.
 
 ## Accessibility Support
 

@@ -48,7 +48,7 @@ The [visible][] `label` element describes the purpose of the associated form fie
 
 ## Assumptions
 
-This rule assumes that while having a differentiating [context][] that is not [programmatically determinable](https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) might be a violation under other [WCAG](https://www.w3.org/TR/WCAG21/) success criteria (e.g. [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships)), if text that has not been marked up as headings is used to split a form into different sections), this is allowed under [success criterion 2.4.6 Headings and Labels](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels).
+Having a differentiating [context][] that is not [programmatically determinable](https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable) might be a violation under other [WCAG](https://www.w3.org/TR/WCAG21/) success criteria. For example, using text that has not been marked up as headings in order to split a form into different sections is a violation of [success criterion 1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships). This rule assumes, however, that this is allowed under [success criterion 2.4.6 Headings and Labels](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels).
 
 ## Accessibility Support
 

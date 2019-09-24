@@ -4,7 +4,7 @@ name: aria-alertdialog identifies input error
 rule_type: atomic
 
 description: |
-  This rule checks that `aria-alertdialog` is used to identify input errors
+  This rule checks that `aria-alertdialog` is used to identify input errors.
 
 accessibility_requirements: # Remove whatever is not applicable
   wcag-technique:ARIA18: # Using aria-alertdialog to Identify Errors
@@ -25,29 +25,33 @@ authors:
 
 ## Applicability
 
-The rule applies to each HTML or SVG element that has one of the following [semantic roles][semantic role]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`, that may or may not belong to a [form element](https://www.w3.org/TR/html52/sec-forms.html#the-form-element)
+The rule applies to each HTML or SVG element:
+
+- the has one of the following [semantic roles][semantic role]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`;
+- that may or may not belong to a [form element](https://www.w3.org/TR/html52/sec-forms.html#the-form-element);
+- for which [input errors](https://www.w3.org/TR/WCAG21/#dfn-input-error) are automatically detected.
 
 **Note**: The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
 
 - inherit from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
 - do not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
 
+**Note**: Automatic detection of input errors can be the result of:
+
+- scripts executed in the client or the server
+- programatically specified information that allows user agents to detect information that has not been provided or that must conform to a specific format
+
 ## Expectation 
 
-After [user completion](#completed-input-field) of the target element or triggering the submission of the form, if the target element belongs to one, each target element that does not meet the instructions provided for it causes an element with `role="alertdialog"` to appear that
+After [user completion](#completed-input-field) of the target element or triggering the submission of the form, if the target element belongs to one, each target element for which an input error has been automatically detected causes an element with `role="alertdialog"` to appear that
 - contains at least one [focusable](#focusable) element; and
 - the focus moves to the [focusable](#focusable) element; and
 - it is not possible to move the focus away from elements contained in the element with `role="alertdialog"` until this is dismissed; and
 - after the element with `role="alertdialog"` is dismissed the focus returns to the position where it was before the element with `role="alertdialog"` was displayed; and
 - the element with `role="alertdialog"` has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace); and
-- the content of the element with `role="alertdialog"` identifies the [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error).
+- the text content of the element with `role="alertdialog"` identifies the [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error).
 
-Note: Instructions for an [input element](https://www.w3.org/TR/html52/sec-forms.html#the-input-element) include information that is required by the Web page, the data format and possible values. The instructions can be presented to the user in several ways, including:
-
-- Text content placed visually in the vicinity of the [input element](https://www.w3.org/TR/html52/sec-forms.html#the-input-element)
-- The accessible description of the [input element](https://www.w3.org/TR/html52/sec-forms.html#the-input-element)
-- A tooltip displayed when the [input element](https://www.w3.org/TR/html52/sec-forms.html#the-input-element) is [focused](#focusable)
-- Text content accessible through an help button or similar
+**Note**: Information to identify an input error must include the element or elements in which the error occurred and to assist the user in understanding what was the cause of the error.
 
 ## Assumptions
 
@@ -294,7 +298,7 @@ alertdialog without focusable elements.
                     content += 'Years on job is larger than age. Please verify age and years on job values.'
                     errors = true;
                 }
-                content += '</div><div id="firstButton">Click here to return to page and correct error</div>';
+                content += '</div><div id="firstButton">Click here or press Escape to return to page and correct error</div>';
                 if (errors) {
                     $('main').attr('aria-hidden', 'true');
                     var lastFocus = document.activeElement;
@@ -309,6 +313,16 @@ alertdialog without focusable elements.
                         $(dialog).remove();
                         lastFocus.focus();
                     });
+  
+                    $('body').on('keyup', function (e) {
+                        if (e.key === "Escape") {
+                            $('main').attr('aria-hidden', 'false');
+                            $(modalOverlay).remove();
+                            $(dialog).remove();
+                            lastFocus.focus();
+                        }
+                    });
+
                 }
                 return false;
 
@@ -867,4 +881,17 @@ No input element.
 
 ```html
 <div></div>
+```
+
+#### Inapplicable Example 2
+
+Form that does not include automatic detection of input errors.
+
+```html
+<form>
+  <label for="text_field">Name (required)</label>
+  <input type="text" id="text_field" />
+  <input type="button" value="Submit" />
+  <div id="error"></div>
+</form>
 ```

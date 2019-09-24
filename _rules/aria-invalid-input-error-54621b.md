@@ -27,18 +27,18 @@ authors:
 
 The rule applies to each HTML or SVG element:
 
-- the has one of the following [semantic roles][#semantic-role]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`;
+- the has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`;
 - that may or may not belong to a [form element](https://www.w3.org/TR/html52/sec-forms.html#the-form-element);
-- for which [input errors](https://www.w3.org/TR/WCAG21/#dfn-input-error) are [automatically detected][#automatic-error-detection].
+- for which [input errors](https://www.w3.org/TR/WCAG21/#dfn-input-error) are [automatically detected](#automatic-error-detection).
 
-**Note**: The list of applicable [semantic roles][#semantic-role] is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
+**Note**: The list of applicable [semantic roles](#semantic-role) is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
 
 - inherit from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
 - do not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
 
 ## Expectation 1
 
-After [user completion](#completed-input-field) of the target element or triggering the submission of the form, if the target element belongs to one, each target element that does not meet the instructions provided for it has the `aria-invalid` attribute set to `true`.
+After [user completion](#completed-input-field) of the target element or triggering the submission of the form, if the target element belongs to one, each target element for which an [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error) has been  [automatically detected](#automatic-error-detection) has the `aria-invalid` attribute set to `true`.
 
 **Note**: Instructions for an [input element](https://www.w3.org/TR/html52/sec-forms.html#the-input-element) include information that is required by the Web page, the data format and possible values. The instructions can be presented to the user in several ways, including:
 
@@ -226,6 +226,97 @@ _There are no major accessibility support issues known for this rule._
     </form>
 </body>
 
+</html>
+```
+
+#### Passed Example 3
+
+`aria-invalid` attribute set on target elements on form submission. Labels help the user understand different error causes.
+
+```html
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+      $(document).ready(function(e) {
+        $("#signup").submit(function() {
+          $("#errText").html("");
+          $("input").removeAttr("aria-invalid");
+          $("label").removeAttr("class");
+          $("label[for='email']")[0].innerText = "Email (required)";
+          var eFlag = 0;
+          if ($("#name").val() === "") {
+            $("#name").attr("aria-invalid", "true");
+            $("label[for='name']").addClass("failed");
+            eFlag++;
+          }
+          if ($("#age").val() === "") {
+            $("#age").attr("aria-invalid", "true");
+            $("label[for='age']").addClass("failed");
+            eFlag++;
+          } else {
+            var age = Number($("#age").val());
+            if (age < 30 || age > 40) {
+              $("#age").attr("aria-invalid", "true");
+              $("label[for='age']").addClass("failed");
+            }
+          }
+          if ($("#email").val() === "") {
+            $("#email").attr("aria-invalid", "true");
+            $("label[for='email']").addClass("failed");
+            eFlag++;
+          } else {
+            var email = $("#email").val();
+            if (!email.includes("@")) {
+              $("#email").attr("aria-invalid", "true");
+              $("label[for='email']").addClass("failed");
+              console.log($("label[for='email']"));
+              $("label[for='email']")[0].innerText = "Email must contain an @";
+            }
+          }
+          if (eFlag > 0) {
+            $("#errText")
+              .html(
+                "Please complete all required fields (" + eFlag + ") and retry"
+              )
+              .focus();
+          }
+          return false;
+        });
+      });
+    </script>
+    <style type="text/css">
+      label.failed {
+        border: red thin solid;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2 tabindex="-1" id="errText" aria-live="assertive"></h2>
+    <form name="signup" id="signup" method="post" action="#">
+      <p>
+        Application form (candidates must be been 30 and 40 years old)
+      </p>
+      <p>
+        <label for="name">Name (required)</label><br />
+        <input type="text" name="name" id="name" />
+      </p>
+      <p>
+        <label for="age">Age (required, between 30 and 40 years old)</label
+        ><br />
+        <input type="number" name="age" id="age" />
+      </p>
+      <p>
+        <label for="email">Email (required)</label><br />
+        <input type="text" name="email" id="email" />
+      </p>
+      <p>
+        <input type="submit" name="button" id="button" value="Submit" />
+      </p>
+    </form>
+  </body>
 </html>
 ```
 

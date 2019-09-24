@@ -67,7 +67,7 @@ An audio element that describes some of the text on the same page. The text on t
 <p>
 	You can also listen to the audio file below to hear the above part of the speech.
 </p>
-<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
 ### Failed
@@ -84,7 +84,7 @@ An audio element that describes some of the text on the same page. The audio con
 <p>
 	You can also listen to the audio file below to hear the above part of the speech.
 </p>
-<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
 #### Failed Example 2
@@ -101,7 +101,7 @@ An audio element that describes some of the text on the same page. The text is n
 <p>
 	You can also listen to the audio file below to hear the above part of the speech.
 </p>
-<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
 #### Failed Example 3
@@ -115,7 +115,7 @@ An audio element that describes some of the text on the same page. The text on t
 	energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone,
 	and one which we intend to win, and the others, too.
 </p>
-<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
 #### Failed Example 4
@@ -132,7 +132,7 @@ An audio element that describes some of the text on the same page. The text on t
 <p style="display: none;">
 	You can also listen to the audio file below to hear the above part of the speech.
 </p>
-<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
 ### Inapplicable
@@ -151,7 +151,7 @@ An audio element that describes some of the text on the same page. The text on t
 <p>
 	You can also listen to the audio file below to hear the above part of the speech.
 </p>
-<audio src="../test-assets/moon-audio/moon-speech.mp3" controls style="display: none;"></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls style="display: none;"></audio>
 ```
 
 #### Inapplicable Example 2
@@ -169,7 +169,7 @@ An audio element that describes some of the text on the same page. The text on t
 	You can also listen to the audio file below to hear the above part of the speech.
 </p>
 
-<audio src="../test-assets/moon-audio/moon-speech.mp3"></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3"></audio>
 ```
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

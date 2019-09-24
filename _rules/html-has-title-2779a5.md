@@ -77,7 +77,7 @@ This page gives a `title` to an iframe.
 ```html
 <html>
 	<title>This page gives a title to an iframe</title>
-	<iframe src="../test-assets/sc2-4-2-title-page-without-title.html"></iframe>
+	<iframe src="/test-assets/sc2-4-2-title-page-without-title.html"></iframe>
 </html>
 ```
 
@@ -161,7 +161,7 @@ The page has no `title`.
 
 ```html
 <html>
-	<iframe src="../test-assets/sc2-4-2-title-page-with-title.html"></iframe>
+	<iframe src="/test-assets/sc2-4-2-title-page-with-title.html"></iframe>
 </html>
 ```
 

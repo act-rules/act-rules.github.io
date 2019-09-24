@@ -57,6 +57,10 @@
 			"url": "https://github.com/jkodu"
 		},
 		{
+			"name": "João Vicente",
+			"url": "https://github.com/joao-vicente"
+		},
+		{
 			"name": "John Hicks",
 			"url": "https://github.com/john-urbilog"
 		},
@@ -65,8 +69,16 @@
 			"url": "https: //github.com/MaliinO"
 		},
 		{
+			"name": "Marie Trudelle",
+			"url": "https://github.com/marietrudelle"
+		},
+		{
 			"name": "Rafal Charlampowicz",
 			"url": "https://github.com/Rafalchar"
+		},
+		{
+			"name": "Ramit Garg",
+			"url": "https://github.com/ramitgarg"
 		},
 		{
 			"name": "Rob Fentress",
@@ -98,20 +110,20 @@
 		"fastmatter": "^2.1.1",
 		"flat": "^4.1.0",
 		"fs-extra": "^8.1.0",
-		"gatsby": "^2.15.11",
-		"gatsby-image": "^2.2.17",
+		"gatsby": "^2.15.15",
+		"gatsby-image": "^2.2.20",
 		"gatsby-plugin-manifest": "^2.2.15",
-		"gatsby-plugin-offline": "^3.0.4",
+		"gatsby-plugin-offline": "^3.0.8",
 		"gatsby-plugin-prefetch-google-fonts": "^1.4.3",
-		"gatsby-plugin-react-helmet": "^3.1.6",
-		"gatsby-plugin-sass": "^2.1.13",
-		"gatsby-plugin-sharp": "^2.2.20",
-		"gatsby-remark-autolink-headers": "^2.1.9",
+		"gatsby-plugin-react-helmet": "^3.1.7",
+		"gatsby-plugin-sass": "^2.1.15",
+		"gatsby-plugin-sharp": "^2.2.22",
+		"gatsby-remark-autolink-headers": "^2.1.11",
 		"gatsby-remark-copy-linked-files": "^2.1.17",
-		"gatsby-remark-prismjs": "^3.3.12",
+		"gatsby-remark-prismjs": "^3.3.14",
 		"gatsby-source-filesystem": "^2.1.21",
 		"gatsby-transformer-remark": "^2.6.21",
-		"gatsby-transformer-sharp": "^2.2.13",
+		"gatsby-transformer-sharp": "^2.2.16",
 		"gfm-code-blocks": "^1.0.0",
 		"globby": "^10.0.1",
 		"htmlhint": "^0.11.0",
@@ -165,7 +177,7 @@
 		"getWcagData": "node ./build/get-wcag-data",
 		"getData": "npm run getWcagData && npm run createTestcases && npm run createGlossary && npm run createRulesUsages && npm run implementations",
 		"develop": "gatsby develop",
-		"prebuild": "npm run clean && npm run getData && npm run formatRulesDir",
+		"prebuild": "npm run clean && npm run formatRulesDir && npm run getData",
 		"build": "gatsby build",
 		"formatRulesDir": "prettier --write './_rules/**/*.md'",
 		"format": "prettier --write *.{json,md,js,jsx} './{_data,_rules,build,gatsby,pages,src,test-assets}/**/*.{json,md,js,jsx}'",

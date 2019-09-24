@@ -16,15 +16,11 @@ input_aspects:
 authors:
   - Jey Nandakumar
   - Audrey Maniez
-htmlHintIgnore:
-  # https://www.npmjs.com/package/htmlhint
-  # (used with `npm test` to ensure validity of code snippets)
-  - 'title-require'
 ---
 
 ## Applicability
 
-The rule applies to any element that is [visible](#visible) and has a CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property with any of the below [transformation functions](https://www.w3.org/TR/css-transforms/#transform-functions)
+The rule applies to any HTML element that is [visible](#visible) and has a CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property with any of the below [transformation functions](https://www.w3.org/TR/css-transforms/#transform-functions)
 
 - [rotate](https://www.w3.org/TR/css-transforms/#funcdef-transform-rotate)
 - [rotate3d](https://drafts.csswg.org/css-transforms-2/#funcdef-rotate3d)
@@ -72,6 +68,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 ```html
 <html lang="en">
 	<head>
+		<title>Page with some content</title>
 		<style>
 			@media (orientation: portrait) {
 				body {
@@ -95,6 +92,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 ```html
 <html lang="en">
 	<head>
+		<title>Page with some content</title>
 		<style>
 			@media (orientation: portrait) {
 				html {
@@ -118,6 +116,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 ```html
 <html lang="en">
 	<head>
+		<title>Page with some content</title>
 		<style>
 			@media (orientation: portrait) {
 				html {
@@ -141,6 +140,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 ```html
 <html lang="en">
 	<head>
+		<title>Page with some content</title>
 		<style>
 			body {
 				transform: rotate(90deg);
@@ -169,6 +169,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 ```html
 <html lang="en">
 	<head>
+		<title>Page with some content</title>
 		<link rel="stylesheet" href="../test-assets/b33eff/style.css" />
 	</head>
 	<body>
@@ -184,6 +185,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 ```html
 <html lang="en">
 	<head>
+		<title>Page with some content</title>
 		<style>
 			@media (orientation: landscape) {
 				body {
@@ -206,6 +208,9 @@ A page where there are CSS styles.
 
 ```html
 <html lang="en">
+	<head>
+		<title>Page with some content</title>
+	</head>
 	<body>
 		I am a page with no styles
 	</body>
@@ -219,6 +224,7 @@ A page that has no CSS [transform](https://www.w3.org/TR/css-transforms/#propdef
 ```html
 <html lang="en">
 	<head>
+		<title>Page with some content</title>
 		<style>
 			html {
 				font-size: 22px;
@@ -241,6 +247,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 ```html
 <html lang="en">
 	<head>
+		<title>Page with some content</title>
 		<style>
 			@media (orientation: lanscape) {
 				body {

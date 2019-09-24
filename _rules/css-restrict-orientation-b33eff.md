@@ -278,7 +278,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 			}
 		</style>
 	</head>
-	<body style="display:none;">
+	<body>
 		<main>
 			Page Content
 		</main>

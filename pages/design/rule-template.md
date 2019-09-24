@@ -53,11 +53,11 @@ Each target element ...
 
 ## Assumptions
 
-_There are currently no assumptions_
+_No assumptions_
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+_No accessibility support issues known_
 
 ## Background
 

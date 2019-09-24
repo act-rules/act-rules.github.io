@@ -41,7 +41,7 @@ The HTML element with either `role=alert` or `aria-live=assertive` attributes di
 
 ## Expectation 2
 
-The content of the message is [visible](#visible) and [included in the accessibility tree](included-in-the-accessibility-tree) and identifies the [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error).
+The content of the message is [included in the accessibility tree](#included-in-the-accessibility-tree) and identifies the [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error).
 
 **Note**: Information to identify an input error must include the element or elements in which the error occurred and to assist the user in understanding what was the cause of the error.
 
@@ -180,53 +180,6 @@ Document does not present a message on [input error](https://www.w3.org/TR/WCAG2
 
 #### Failed Example 2
 
-The message is not visible.
-
-```html
-<html>
-<head>
-<meta charset="UTF-8">
-<script src="http://code.jquery.com/jquery.js"></script>
-<script>
-$(document).ready(function(e) {
-    $('#name').focusout(function () {
-		$('#errors').html('');
-        if ($('#name').val() === '') {
-            $('#errors').append('<p>Please enter your name.</p>');
-        }
-    });
-
-    $('#email').focusout(function () {
-		$('#errors').html('');
-        if ($('#email').val() === '') {
-            $('#errors').append('<p>Please enter your email address.</p>');
-        }
-    });
-});
-</script>
-</head>
-
-<body>
-<form name="signup" id="signup" method="post" action="">
-  <p id="errors" aria-live="assertive" aria-atomic="true" style="position: absolute; top: -9999px; left: -9999px;"></p>
-  <p>
-    <label for="name">Name (required)</label><br>
-    <input type="text" name="name" id="name">
-  </p>
-  <p>
-    <label for="email">Email (required)</label><br>
-    <input type="text" name="email" id="email">
-  </p>
-  <p>
-    <input type="submit" name="button" id="button" value="Submit">
-  </p>
-</form>
-</body>
-</html>
-```
-
-#### Failed Example 3
-
 The message is not included in the accessibility tree.
 
 ```html
@@ -272,7 +225,7 @@ $(document).ready(function(e) {
 </html>
 ```
 
-#### Failed Example 4
+#### Failed Example 3
 
 The message does not identify the [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error).
 

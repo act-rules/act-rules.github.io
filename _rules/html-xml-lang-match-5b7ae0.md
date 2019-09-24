@@ -30,6 +30,7 @@ For each test target, the value of the primary language subtag (characters befor
 ## Assumptions
 
 - Although there is no known way that an inappropriate secondary subtag in the `lang` or `xml:lang` attribute (such as `en-XYZ`) can lead to accessibility issues, it is conceivable that with specific assistive technologies on some languages, there can be exceptions. In that case `lang` and `xml:lang` should have matching secondary subtags.
+- The presence of a `lang` attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
 
 ## Accessibility Support
 

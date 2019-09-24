@@ -1,33 +1,28 @@
 ---
 id: 825ule
-name: Non-visual location reference alternative
+name: Non-visual reference alternative
 rule_type: atomic
-
 description: |
-  This rule checks that when there is a references to a visual location of content, there are also non-visual indicators of the location.
-
+  This rule checks that when there is a visual reference of content, there are also non-visual indicators of the location.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-
   wcag20:1.3.3: # Sensory Characteristics (A)
     forConformance: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-
   wcag-technique:G96: # Providing textual identification of items that otherwise rely only on sensory information to be understood.
     forConformance: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-
 input_aspects:
-  -  (DOM Tree, CSS Styling, Accessibility Tree, etc.,)
-
+  -  DOM Tree
+  -  Language
 authors:
   -  Brian Bors
   -  Daniël strik
@@ -36,17 +31,17 @@ authors:
 
 ## Applicability
 
-Any text node that includes one of the [visual reference words](), that is [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree)
+Any text node that includes one of the [visual reference words](#visual-reference-words), that is [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree)
 
 ## Expectation
 
-Each target that describes any [web content](https://www.w3.org/TR/WCAG21/#dfn-content) through the use of the [visual reference words](), is included in a [section of the content](#section-of-content) that also describes that [web content](https://www.w3.org/TR/WCAG21/#dfn-content) by a non-visual property, except if the target is not part of an instruction about [web content](https://www.w3.org/TR/WCAG21/#dfn-content) or the visual reference word is included in the described content.
+Each target that describes any [web content](https://www.w3.org/TR/WCAG21/#dfn-content) through the use of the [visual reference words](#visual-reference-words), is included in a [section of the content](#section-of-content) that also describes that [web content](https://www.w3.org/TR/WCAG21/#dfn-content) by a non-visual property, except if the target is not part of an instruction about [web content](https://www.w3.org/TR/WCAG21/#dfn-content) or the visual reference word is included in the described content.
 
 ## Assumptions
 
-The rule assumes that instructions take up the entirity of a single section of the content. If an instruction takes up multiple sections of the content, having a sensory characteristics in one section, and a non-sensory characteristic in another is assumed to be too disconnected to satisfy the success criterion. 
+The rule assumes that instructions are fully included within a single section of content. If an instruction takes up multiple sections of the content, having a sensory characteristics in one section, and a non-sensory characteristic in another is assumed to be too disconnected to satisfy the success criterion. 
 
-The rule assumes that visual reference words are forms of information conveyed trough presentation, because of this, failing this rule fails both [Info and Relationships] and [Sensory Characteristics]. Presentation is not limited to CSS and includes images such as the image of a circle with text.
+The rule assumes that visual reference words are forms of information conveyed trough presentation, because of this, failing this rule fails both [Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships) and [Sensory Characteristics](https://www.w3.org/TR/WCAG21/#sensory-characteristics). Presentation is not limited to CSS and includes images such as the image of a circle with text.
 
 ## Accessibility Support
 
@@ -62,7 +57,8 @@ _There are no major accessibility support issues known for this rule._
 ### Related WCAG Techniques
 
 - [G96: Providing textual identification of items that otherwise rely only on sensory information to be understood](https://www.w3.org/WAI/WCAG21/Techniques/general/G96)
-- [F14: due to identifying content only by its shape or location](https://www.w3.org/WAI/WCAG21/Techniques/failures/F14)
+- [F14: Failure of Success Criterion 1.3.3 due to identifying content only by its shape or location](https://www.w3.org/WAI/WCAG21/Techniques/failures/F14)
+- [F26: Failure of Success Criterion 1.3.3 due to using a graphical symbol alone to convey information](https://www.w3.org/WAI/WCAG21/Techniques/failures/F26)
 
 ## Test Cases
 
@@ -70,7 +66,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The content in the column on the right is indicated with the word "box" (which is a shape indicator based on visual perception) but also indicated by referencing the word "howdy".
+The content in the second column is indicated with the word "box" (which is a shape indicator based on visual perception) but also indicated by referencing the word "howdy".
 
 ```html
 <head>
@@ -82,9 +78,6 @@ The content in the column on the right is indicated with the word "box" (which i
 	.col {
 		display: table-cell;
 		padding: 16px;
-	}
-	button {
-		background: #FAA;
 	}
 	</style>
 </head>
@@ -102,38 +95,7 @@ The content in the column on the right is indicated with the word "box" (which i
 
 #### Passed Example 2
 
-The content in the column on the right is indicated with the word "right" (which is a location indicator based on visual perception) but also indicated by referencing that the content can be found below this content in the DOM order.
-
-```html
-<head>
-<style>
-.col-container {
-  display: table;
-}
-.col {
-  display: table-cell;
-  padding: 16px;
-}
-</style>
-</head>
-<body>
-
-<div class="col-container">
-  <div class="col">
-    <p>Read the content in the right column (or below this paragraph) about the fuzzyness of cats</p>
-  </div>
-
-  <div class="col">
-    <p>Cats are usually fuzzy.</p>
-  </div>
-</div>
-
-</body>
-```
-
-#### Passed Example 3
-
-The content in the column on the right is a menu. The user is told to find the menu on the right (which is a visual indicator word) but the menu is also identified with the help of the "menu" heading above the content.
+The content in the second column is indicated with the word "right" (which is a location indicator based on visual perception) but also indicated by referencing that the content can be found below this content in the DOM order.
 
 ```html
 <head>
@@ -146,8 +108,37 @@ The content in the column on the right is a menu. The user is told to find the m
 		display: table-cell;
 		padding: 16px;
 	}
-	button {
-		background: #FAA;
+	</style>
+</head>
+<body>
+
+<div class="col-container">
+  <div class="col">
+    <p>Interact with the content on the right (below this paragraph), for a surprise</p>
+  </div>
+
+  <div class="col">
+    <button onclick="alert('Surprise!')">Howdy</button>
+  </div>
+</div>
+
+</body>
+```
+
+#### Passed Example 3
+
+The content in the second column is a menu. The user is told to find the menu on the right (which is a visual indicator word) but the menu is also identified with the help of the "menu" heading above the content.
+
+```html
+<head>
+	<style>
+	.col-container {
+		display: table;
+		width: 100%;
+	}
+	.col {
+		display: table-cell;
+		padding: 16px;
 	}
 	</style>
 </head>
@@ -225,10 +216,6 @@ The button is indicated by the word "round". But the word is also included in th
 		display: table-cell;
 		padding: 16px;
 	}
-	button {
-		background: #FAA;
-		border-radius: 50%;
-	}
 	</style>
 </head>
 <body>
@@ -281,7 +268,7 @@ This document is using the word "star" but in this case the star is in an iframe
 
 #### Failed Example 1
 
-The content in the column on the right is a menu. The user is told to find the menu on the right (which is a visual indicator word) but the menu is not identified with the help of the "menu" heading, nor landmark, nor role.
+The content in the second column is a menu. The user is told to find the menu on the right (which is a visual indicator word) but the menu is not identified with the help of the "menu" heading, nor landmark, nor role.
 
 ```html
 <head>
@@ -293,9 +280,6 @@ The content in the column on the right is a menu. The user is told to find the m
 	.col {
 		display: table-cell;
 		padding: 16px;
-	}
-	button {
-		background: #FAA;
 	}
 	</style>
 </head>
@@ -327,7 +311,7 @@ The content in the column on the right is a menu. The user is told to find the m
 
 #### Failed Example 2
 
-The content in the column on the right is part of the navigation. The user is told to find the navigation on the right (which is a visual indicator word) and the navigation has a navigation element, but there are 2 navigation elements on the page so the user doesn't know which one to use.
+The content in the second column is part of the navigation. The user is told to find the navigation on the right (which is a visual indicator word) and the navigation has a navigation element, but there are 2 navigation elements on the page so the user doesn't know which one to use.
 
 ```html
 <head>
@@ -387,7 +371,7 @@ The content in the column on the right is part of the navigation. The user is to
 
 #### Failed Example 3
 
-The content in the column on the right is indicated with the word "box" (which is a shape indicator based on visual perception) and is also indicated by referencing the word "howdy", but the word "howdy" is in a different paragraph than the word "box".
+The content in the second column is indicated with the word "box" (which is a shape indicator based on visual perception) and is also indicated by referencing the word "howdy", but the word "howdy" is in a different paragraph than the word "box".
 
 ```html
 <head>
@@ -399,9 +383,6 @@ The content in the column on the right is indicated with the word "box" (which i
 	.col {
 		display: table-cell;
 		padding: 16px;
-	}
-	button {
-		background: #FAA;
 	}
 	</style>
 </head>
@@ -443,7 +424,7 @@ This document is using the word "star" but in this case the star is in an iframe
 
 #### Inapplicable Example 1
 
-The content in the column on the right is indicated with the word "button" which is not a visual reference word.
+The content in the second column is indicated with the word "button" which is not a visual reference word.
 
 ```html
 <head>
@@ -455,9 +436,6 @@ The content in the column on the right is indicated with the word "button" which
 	.col {
 		display: table-cell;
 		padding: 16px;
-	}
-	button {
-		background: #FAA;
 	}
 	</style>
 </head>
@@ -475,7 +453,7 @@ The content in the column on the right is indicated with the word "button" which
 
 #### Inapplicable Example 2
 
-The content in the column on the right is indicated with the word "box", but this indication is hidden with display:none.
+The content in the second column is indicated with the word "box", but this indication is hidden with display:none.
 
 ```html
 <head>
@@ -487,9 +465,6 @@ The content in the column on the right is indicated with the word "box", but thi
 	.col {
 		display: table-cell;
 		padding: 16px;
-	}
-	button {
-		background: #FAA;
 	}
 	</style>
 </head>

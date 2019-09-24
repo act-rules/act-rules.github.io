@@ -15,10 +15,6 @@ input_aspects:
 authors:
   - Jey Nandakumar
   - Audrey Maniez
-htmlHintIgnore:
-  # https://www.npmjs.com/package/htmlhint
-  # (used with `npm test` to ensure validity of code snippets)
-  - 'title-require'
 ---
 
 ## Applicability
@@ -44,6 +40,8 @@ _There are no major accessibility support issues known for this rule._
 
 - [Understanding Success Criterion 1.4.4: Resize text](https://www.w3.org/WAI/WCAG21/Understanding/resize-text)
 - [The `meta` element](https://www.w3.org/TR/html52/document-metadata.html#the-meta-element)
+- [The initial-scale, minimum-scale, and maximum-scale properties](https://www.w3.org/TR/css-device-adapt-1/#min-scale-max-scale)
+- [The user-scalable property](https://www.w3.org/TR/css-device-adapt-1/#user-scalable)
 
 ## Test Cases
 
@@ -56,14 +54,12 @@ The `meta name="viewport"` element does not define the `maximum-scale` and `user
 ```html
 <html>
 	<head>
+		<title>Simple page showing random text</title>
 		<meta name="viewport" content="width=device-width" />
 	</head>
 	<body>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum
 		</p>
 	</body>
 </html>
@@ -76,14 +72,12 @@ The `meta name="viewport"` element defines the `user-scalable=yes` so the user c
 ```html
 <html>
 	<head>
-		<meta name="viewport" content="width=device-width, user-scalable=yes" />
+		<title>Simple page showing random text</title>
+		<meta name="viewport" content="user-scalable=yes" />
 	</head>
 	<body>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum
 		</p>
 	</body>
 </html>
@@ -96,14 +90,12 @@ The `meta name="viewport"` element defines the `maximum-scale=6.0` which allows 
 ```html
 <html>
 	<head>
-		<meta name="viewport" content="width=device-width, maximum-scale=6.0" />
+		<title>Simple page showing random text</title>
+		<meta name="viewport" content="maximum-scale=6.0" />
 	</head>
 	<body>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum
 		</p>
 	</body>
 </html>
@@ -116,34 +108,12 @@ The `meta name="viewport"` element has an empty `content` attribute.
 ```html
 <html>
 	<head>
+		<title>Simple page showing random text</title>
 		<meta name="viewport" content="" />
 	</head>
 	<body>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
-	</body>
-</html>
-```
-
-#### Passed Example 5
-
-The `meta name="viewport"` element sets the `maximum-scale=2` so the user can zoom in more than twice (200%).
-
-```html
-<html>
-	<head>
-		<meta name="viewport" content="width=device-width, maximum-scale=2.0" />
-	</head>
-	<body>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum
 		</p>
 	</body>
 </html>
@@ -158,14 +128,12 @@ The `meta name="viewport"` element defines the `user-scalable=no` so the user ca
 ```html
 <html>
 	<head>
-		<meta name="viewport" content="width=device-width, user-scalable=no" />
+		<title>Simple page showing random text</title>
+		<meta name="viewport" content="user-scalable=no" />
 	</head>
 	<body>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum
 		</p>
 	</body>
 </html>
@@ -178,14 +146,12 @@ The `meta name="viewport"` element defines the `user-scalable=yes`, but prevents
 ```html
 <html>
 	<head>
-		<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=0.8, maximum-scale=1.5" />
+		<title>Simple page showing random text</title>
+		<meta name="viewport" content="user-scalable=yes, initial-scale=0.8, maximum-scale=1.5" />
 	</head>
 	<body>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum
 		</p>
 	</body>
 </html>
@@ -198,14 +164,48 @@ The `meta name="viewport"` element sets the `maximum-scale=1.0` so the user can'
 ```html
 <html>
 	<head>
-		<meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+		<title>Simple page showing random text</title>
+		<meta name="viewport" content=" maximum-scale=1.0" />
 	</head>
 	<body>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum
+		</p>
+	</body>
+</html>
+```
+
+#### Failed Example 4
+
+The `meta name="viewport"` element sets the `maximum-scale=yes` which translates to 1.0, so the user can't zoom in.
+
+```html
+<html>
+	<head>
+		<title>Simple page showing random text</title>
+		<meta name="viewport" content=" maximum-scale=yes" />
+	</head>
+	<body>
+		<p>
+			Lorem ipsum
+		</p>
+	</body>
+</html>
+```
+
+#### Failed Example 5
+
+The `meta name="viewport"` element sets the `maximum-scale=-1` which is dropped because it is a negative value.
+
+```html
+<html>
+	<head>
+		<title>Simple page showing random text</title>
+		<meta name="viewport" content=" maximum-scale=-1" />
+	</head>
+	<body>
+		<p>
+			Lorem ipsum
 		</p>
 	</body>
 </html>
@@ -220,14 +220,12 @@ The `meta name="viewport"` element is not present within the page.
 ```html
 <html>
 	<head>
+		<title>Simple page showing random text</title>
 		<meta http-equiv="refresh" content="10; URL='https://github.com'" />
 	</head>
 	<body>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum
 		</p>
 	</body>
 </html>
@@ -240,14 +238,12 @@ The `meta name="viewport"` element does not have `content` attribute.
 ```html
 <html>
 	<head>
+		<title>Simple page showing random text</title>
 		<meta name="viewport" />
 	</head>
 	<body>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-			magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum
 		</p>
 	</body>
 </html>

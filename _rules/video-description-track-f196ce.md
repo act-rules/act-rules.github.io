@@ -1,6 +1,6 @@
 ---
 id: f196ce
-name: Video element description track
+name: `video` element visual content has description track
 rule_type: atomic
 description: |
   This rule checks that description tracks that come with non-streaming `video` elements are descriptive.

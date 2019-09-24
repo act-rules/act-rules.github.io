@@ -1,6 +1,6 @@
 ---
 id: 1a02b0
-name: Video element transcript
+name: `video` element visual content has transcript
 rule_type: atomic
 description: |
   This rule checks that non-streaming `video` elements have all audio and visual information available in a transcript.

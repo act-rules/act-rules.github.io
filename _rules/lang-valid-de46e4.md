@@ -19,7 +19,7 @@ authors:
 
 ## Applicability
 
-This rules applies to any HTML element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) of a `body` element and has a `lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
+This rules applies to any HTML element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) of a `body` element and has a `lang` attribute that is neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 ## Expectation
 
@@ -120,7 +120,7 @@ The rule applies to elements with the `body` of a webpage. `html` elements are i
 
 #### Inapplicable Example 2
 
-An empty value for `lang` attribute is ignored as the rule only applies to `lang` or `xml:lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
+An empty value for `lang` attribute is ignored as the rule only applies to `lang` or `xml:lang` attribute that is neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 ```html
 <html>
@@ -132,7 +132,7 @@ An empty value for `lang` attribute is ignored as the rule only applies to `lang
 
 #### Inapplicable Example 3
 
-The `lang` attribute value consists of only [whitespace](#whitespace).
+The `lang` attribute value consists of only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 ```html
 <html>

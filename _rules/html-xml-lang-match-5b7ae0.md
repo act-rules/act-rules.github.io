@@ -27,11 +27,9 @@ The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s)
 
 For each test target, the value of the primary language subtag (characters before the first dash) for the `lang` and `xml:lang` attributes are the same.
 
-**Note**: HTML 5 specification requires the `lang` and `xml:lang` attributes to match exactly. This is not known to impact accessibility, which is why it is permitted in this rule.
-
 ## Assumptions
 
-- Although there is no known way that an inappropriate secondary subtag in the `lang` or `xml:lang` attribute (such as "en-XYZ") can lead to accessibility issues, it is conceivable that with specific assistive technologies on some languages, there can be exceptions. In that case `lang` and `xml:lang` should have matching secondary subtags.
+- Although there is no known way that an inappropriate secondary subtag in the `lang` or `xml:lang` attribute (such as `en-XYZ`) can lead to accessibility issues, it is conceivable that with specific assistive technologies on some languages, there can be exceptions. In that case `lang` and `xml:lang` should have matching secondary subtags.
 
 ## Accessibility Support
 

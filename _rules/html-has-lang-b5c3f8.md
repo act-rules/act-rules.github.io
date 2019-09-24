@@ -3,7 +3,7 @@ id: b5c3f8
 name: HTML page has lang attribute
 rule_type: atomic
 description: |
-  This rule checks that an HTML page has a non-empty `lang` or `xml:lang` attribute.
+  This rule checks that an HTML page has a non-empty `lang` attribute.
 accessibility_requirements:
   wcag20:3.1.1: # Language of Page (A)
     forConformance: true
@@ -25,24 +25,21 @@ The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s)
 
 ## Expectation
 
-Each test target has a `lang` or `xml:lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
-
-**Note**: HTML5 recommends using `lang` instead of `xml:lang`. This is not known to impact accessibility, which is why use of both is permitted by this rule.
+Each test target has a `lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
 
 ## Assumptions
 
-_There are currently no assumptions_
+This rule assumes that [documents](https://dom.spec.whatwg.org/#concept-document) are served with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`. If a document is served using a different content type, this can affect the interpretion of the `lang` attribute.
 
 ## Accessibility Support
 
-There are known combinations of a popular operating system with browsers and assistive technologies that do not support the `lang` and `xml:lang` attributes.
+There are known combinations of a popular operating system with browsers and assistive technologies that do not support the `lang` attribute.
 
 ## Background
 
 - [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG21/Techniques/html/H57)
 - [BCP 47: Tags for Identifying Languages](https://www.ietf.org/rfc/bcp/bcp47.txt)
 - [MDN: `lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang)
-- [MDN: `xml:lang` attribute](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/xml:lang)
 
 ## Test Cases
 
@@ -56,43 +53,11 @@ The `lang` attribute specified has a non-empty value.
 <html lang="en"></html>
 ```
 
-#### Passed Example 2
-
-The `xml:lang` attribute specified has a non-empty value.
-
-```html
-<html xml:lang="en"></html>
-```
-
-#### Passed Example 3
-
-The `lang` and `xml:lang` attributes specified have a non-empty value.
-
-```html
-<html xml:lang="en" lang="en"></html>
-```
-
-#### Passed Example 4
-
-The `lang` attribute specified has a non-empty value. The rule expects a non-empty value on either the `lang` or `xml:lang` attributes.
-
-```html
-<html xml:lang="" lang="en"></html>
-```
-
-#### Passed Example 5
-
-The `xml:lang` attribute specified has a non-empty value. The rule expects a non-empty value on either the `lang` or `xml:lang` attributes.
-
-```html
-<html xml:lang="en" lang=""></html>
-```
-
 ### Failed
 
 #### Failed Example 1
 
-There were no `lang` or `xml:lang` attribute specified.
+There were no `lang` attribute specified.
 
 ```html
 <html></html>
@@ -100,42 +65,18 @@ There were no `lang` or `xml:lang` attribute specified.
 
 #### Failed Example 2
 
-The `xml:lang` attribute specified is empty ("").
-
-```html
-<html xml:lang=""></html>
-```
-
-#### Failed Example 3
-
 The `lang` attribute specified is empty ("").
 
 ```html
 <html lang=""></html>
 ```
 
-#### Failed Example 4
-
-The `lang` and `xml:lang` attributes specified are empty ("").
-
-```html
-<html xml:lang="" lang=""></html>
-```
-
-#### Failed Example 5
+#### Failed Example 3
 
 The `lang` attribute consists of only [whitespace](#whitespace).
 
 ```html
 <html lang=" "></html>
-```
-
-#### Failed Example 6
-
-The `xml:lang` attribute consists of only [whitespace](#whitespace).
-
-```html
-<html xml:lang=" "></html>
 ```
 
 ### Inapplicable

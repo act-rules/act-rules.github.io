@@ -23,7 +23,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to each `meta <element>` with a `name` attribute whose value is set to [`viewport`](https://www.w3.org/TR/css-device-adapt-1/#viewport-meta) and has a `content` attribute.
+The rule applies to each `meta` element with a `name` attribute whose value is set to [`viewport`](https://www.w3.org/TR/css-device-adapt-1/#viewport-meta) and has a `content` attribute.
 
 ## Expectation
 
@@ -43,7 +43,7 @@ _There are no major accessibility support issues known for this rule._
 ## Background
 
 - [Understanding Success Criterion 1.4.4: Resize text](https://www.w3.org/WAI/WCAG21/Understanding/resize-text)
-- [The `meta <element>`](https://www.w3.org/TR/html52/document-metadata.html#the-meta-element)
+- [The `meta` element](https://www.w3.org/TR/html52/document-metadata.html#the-meta-element)
 
 ## Test Cases
 
@@ -51,7 +51,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The `meta name="viewport" <element>` does not define the `maximum-scale` and `user-scalable` values.
+The `meta name="viewport"` element does not define the `maximum-scale` and `user-scalable` values.
 
 ```html
 <html>
@@ -71,7 +71,7 @@ The `meta name="viewport" <element>` does not define the `maximum-scale` and `us
 
 #### Passed Example 2
 
-The `meta name="viewport" <element>` defines the `user-scalable=yes` so the user can still zoom in.
+The `meta name="viewport"` element defines the `user-scalable=yes` so the user can still zoom in.
 
 ```html
 <html>
@@ -91,7 +91,7 @@ The `meta name="viewport" <element>` defines the `user-scalable=yes` so the user
 
 #### Passed Example 3
 
-The `meta name="viewport" <element>` defines the `maximum-scale=6.0` which allows the user to zoom.
+The `meta name="viewport"` element defines the `maximum-scale=6.0` which allows the user to zoom.
 
 ```html
 <html>
@@ -111,7 +111,7 @@ The `meta name="viewport" <element>` defines the `maximum-scale=6.0` which allow
 
 #### Passed Example 4
 
-The `meta name="viewport" <element>` element has an empty `content` attribute.
+The `meta name="viewport"` element has an empty `content` attribute.
 
 ```html
 <html>
@@ -131,7 +131,7 @@ The `meta name="viewport" <element>` element has an empty `content` attribute.
 
 #### Passed Example 5
 
-The `meta name="viewport" <element>` sets the `maximum-scale=2` so the user can zoom in more than twice (200%).
+The `meta name="viewport"` element sets the `maximum-scale=2` so the user can zoom in more than twice (200%).
 
 ```html
 <html>
@@ -153,7 +153,7 @@ The `meta name="viewport" <element>` sets the `maximum-scale=2` so the user can 
 
 #### Failed Example 1
 
-The `meta name="viewport" <element>` defines the `user-scalable=no` so the user can't zoom in.
+The `meta name="viewport"` element defines the `user-scalable=no` so the user can't zoom in.
 
 ```html
 <html>
@@ -173,7 +173,7 @@ The `meta name="viewport" <element>` defines the `user-scalable=no` so the user 
 
 #### Failed Example 2
 
-The `meta name="viewport" <element>` defines the `user-scalable=yes`, but prevents `maximum-scale` to `1.5`.
+The `meta name="viewport"` element defines the `user-scalable=yes`, but prevents `maximum-scale` to `1.5`.
 
 ```html
 <html>
@@ -193,7 +193,7 @@ The `meta name="viewport" <element>` defines the `user-scalable=yes`, but preven
 
 #### Failed Example 3
 
-The `meta name="viewport" <element>` sets the `maximum-scale=1.0` so the user can't zoom in.
+The `meta name="viewport"` element sets the `maximum-scale=1.0` so the user can't zoom in.
 
 ```html
 <html>
@@ -215,7 +215,7 @@ The `meta name="viewport" <element>` sets the `maximum-scale=1.0` so the user ca
 
 #### Inapplicable Example 1
 
-The `meta name="viewport" <element>` is not present within the page.
+The `meta name="viewport"` element is not present within the page.
 
 ```html
 <html>
@@ -235,7 +235,7 @@ The `meta name="viewport" <element>` is not present within the page.
 
 #### Inapplicable Example 2
 
-The `meta name="viewport" <element>` does not have `content` attribute.
+The `meta name="viewport"` element does not have `content` attribute.
 
 ```html
 <html>

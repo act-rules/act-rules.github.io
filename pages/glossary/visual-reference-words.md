@@ -3,7 +3,7 @@ title: Visual Reference Words
 key: visual-reference-words
 ---
 
-Any word in a textnode that is included in the translated version of the following lists, where the language of the translation is the programmatically determinable language of the textnode. Some words can be translated in multible ways. In such cases each translation must be included. Some words can be spelled in multible ways. In such cases each spelling must be included.
+Any word in a text node that is included in the translated version of the following lists, where the language of the translation is the programmatically determinable language of the text node. Some words can be translated in multiple ways. In such cases each translation must be included. Some words can be spelled in multiple ways. In such cases each spelling must be included.
 
 Visual location
 - Above
@@ -11,10 +11,12 @@ Visual location
 - Beneath
 - Beside
 - Bottom
+- Diagonal
 - Down
 - Left
 - Near
 - Nearby
+- Parallel
 - Right
 - Top
 - Under
@@ -29,6 +31,7 @@ Shape
 - Cross
 - Diamond
 - Disc
+- Ellipse
 - Heart
 - Hexagon
 - Hexagonal
@@ -49,6 +52,7 @@ Shape
 - Trapezoidal
 - Triangle
 - Triangular
+- Wave
 
 Size
 - Big
@@ -60,7 +64,8 @@ Size
 - Wide
 
 Orientation
-- Angeled
+- Angled
+- Angled
 - Askew
 - Atilt
 - Crooked
@@ -72,4 +77,5 @@ Orientation
 - Skewed
 - Slanted
 - Slanting
+- Tilted
 - Tipped

@@ -27,7 +27,7 @@ For each test target, the `lang` attribute has a [valid language subtag](#valid-
 
 ## Assumptions
 
-This rule assumes that [documents](https://dom.spec.whatwg.org/#concept-document) are served with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`. If a document is served using a different content type, this can affect the interpretion of the `lang` attribute.
+[Documents](https://dom.spec.whatwg.org/#concept-document) are served with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`. If a document is served using a different content type, this can affect the interpretation of the `lang` attribute.
 
 This rule assumes that the presence of a `lang` attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
 

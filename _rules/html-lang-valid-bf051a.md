@@ -19,11 +19,11 @@ authors:
 
 ## Applicability
 
-This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element with a `lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
+This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element with a `lang` attribute that is neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 ## Expectation
 
-For each test target, the `lang` attribute has a [valid language subtag](#valid-language-subtag) if the attribute is neither empty ("") nor only [whitespace](#whitespace).
+For each test target, the `lang` attribute has a [valid language subtag](#valid-language-subtag).
 
 ## Assumptions
 
@@ -46,7 +46,7 @@ There are known combinations of a popular operating system with browsers and ass
 
 #### Passed Example 1
 
-The `lang` attribute specified is neither empty ("") nor only [whitespace](#whitespace) and a valid primary language subtag.
+The `lang` attribute specified is neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace) and a valid primary language subtag.
 
 ```html
 <html lang="fr"></html>

@@ -2,6 +2,7 @@
 
 # Project specific words
 - WAI 
+- W3C
 
 # Generic HTML tag(s)
 - html
@@ -104,6 +105,9 @@
 - user-scalable
 - user-scalable=yes
 - user-scalable=no
+- rotate3d
+- rotateZ
+- matrix3d
 
 # ARIA Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#aria)
 - ARIA1 

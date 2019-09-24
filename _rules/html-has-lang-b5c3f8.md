@@ -85,7 +85,7 @@ The `lang` attribute consists of only [ASCII whitespace](https://infra.spec.what
 The rule does not apply to `svg` element.
 
 ```svg
-<svg xmlns="http://www.w3.org/2000/svg" lang="en"></svg>
+<svg xmlns="http://www.w3.org/2000/svg"></svg>
 ```
 
 #### Inapplicable Example 2
@@ -93,5 +93,5 @@ The rule does not apply to `svg` element.
 The rule does not apply to `math` element.
 
 ```svg
-<math lang="en"></math>
+<math></math>
 ```

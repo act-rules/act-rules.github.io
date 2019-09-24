@@ -182,7 +182,7 @@ Even though a correct `<title>` element is put in the `<head>` of the document, 
 
 #### Inapplicable Example 1
 
-This document has a `<title>` element but is inapplicable since the document element is an SVG `svg` element
+This document has a `<title>` element but is inapplicable since the document element is an SVG `svg` element.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">

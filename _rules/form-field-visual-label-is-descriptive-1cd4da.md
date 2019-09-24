@@ -42,7 +42,7 @@ This rule applies to any HTML or SVG element that:
 
 The [visible][] `label` element describes the purpose of the associated form field element. The [visual context][] of the element can be used to differentiate the purpose from other form fields on the same page.
 
-**Note:** In this case, [visual context][] can be created by headings, fieldsets and legends, text that is near the control, etc.
+**Note:** In this case, [visual context][] can be created by headings, field sets and legends, text that is near the control, etc.
 
 **Note**: Labels do not need to be lengthy. A word, or even a single character, may suffice.
 

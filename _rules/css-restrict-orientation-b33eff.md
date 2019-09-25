@@ -63,30 +63,6 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property is conditionally applied on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1), but does not have any of the applicable [transformation functions](https://www.w3.org/TR/css-transforms/#transform-functions) which restricts the element to either `landscape` or `portrait` orientation.
-
-```html
-<html lang="en">
-	<head>
-		<title>Page with some content</title>
-		<style>
-			@media (orientation: portrait) {
-				body {
-					transform: translateX(100px);
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<main>
-			Page Content
-		</main>
-	</body>
-</html>
-```
-
-#### Passed Example 2
-
 A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property has [rotateZ](https://drafts.csswg.org/css-transforms-2/#funcdef-rotatez) [transform function](https://www.w3.org/TR/css-transforms/#transform-functions) conditionally applied on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1) which does not restrict the element to either `portrait` or `landscape` orientation.
 
 ```html
@@ -109,7 +85,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 </html>
 ```
 
-#### Passed Example 3
+#### Passed Example 2
 
 A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property has [matrix](https://www.w3.org/TR/css-transforms/#funcdef-transform-matrix) [transform function](https://www.w3.org/TR/css-transforms/#transform-functions) conditionally applied on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1) which does not restrict the element to either `portrait` or `landscape` orientation.
 
@@ -133,7 +109,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 </html>
 ```
 
-#### Passed Example 4
+#### Passed Example 3
 
 A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property has [rotate](https://www.w3.org/TR/css-transforms/#funcdef-transform-rotate) [transform function](https://www.w3.org/TR/css-transforms/#transform-functions) conditionally applied on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1) which matches the default CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) applied on the target element.
 
@@ -170,7 +146,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 <html lang="en">
 	<head>
 		<title>Page with some content</title>
-		<link rel="stylesheet" href="../test-assets/b33eff/style.css" />
+		<link rel="stylesheet" href="/test-assets/b33eff/style.css" />
 	</head>
 	<body>
 		Page Content
@@ -285,3 +261,28 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 	</body>
 </html>
 ```
+
+#### Inapplicable Example 5
+
+A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property is conditionally applied on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1), but does not have any of the applicable [transformation functions](https://www.w3.org/TR/css-transforms/#transform-functions) which restricts the element to either `landscape` or `portrait` orientation.
+
+```html
+<html lang="en">
+	<head>
+		<title>Page with some content</title>
+		<style>
+			@media (orientation: portrait) {
+				body {
+					transform: translateX(100px);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			Page Content
+		</main>
+	</body>
+</html>
+```
+

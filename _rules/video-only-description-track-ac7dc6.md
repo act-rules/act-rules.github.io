@@ -1,6 +1,6 @@
 ---
 id: ac7dc6
-name: Video only element has description track
+name: '`video` element visual-only content has description track'
 rule_type: atomic
 description: |
   This rule checks that description tracks that come with non-streaming `video` elements, without audio, are descriptive.
@@ -31,7 +31,7 @@ This rule assumes that a mechanism is available to start the video and that the 
 
 ## Accessibility Support
 
-Currently the description track is not supported by most assistive technology. Video players may be able to work around the lack of support for the discription track by using aria-live but few do this today.
+Currently the description track is not supported by most assistive technology. Video players may be able to work around the lack of support for the description track by using aria-live but few do this today.
 
 ## Background
 

@@ -1,6 +1,6 @@
 ---
 id: afb423
-name: Audio-only as a media alternative for text
+name: '`audio` element content is media alternative for text'
 rule_type: atomic
 description: |
   This rule checks `audio` is a media alternative for text on the page.
@@ -29,7 +29,7 @@ The auditory information of each test target is available as text (directly or v
 
 ## Expectation 2
 
-Each target element is labelled as an audio alternative for text on the page.
+Each target element is labeled as an audio alternative for text on the page.
 
 ## Expectation 3
 

@@ -1,6 +1,6 @@
 ---
 id: cc0f0a
-name: Form control `label` is descriptive
+name: Form control label is descriptive
 rule_type: atomic
 description: |
   This rule checks that labels describe the purpose of form field elements.

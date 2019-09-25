@@ -3,19 +3,16 @@
  * -> for each glossary item (find references in each rule)
  * -> this is saved in `_data` which is later used in `pages/glossary`
  */
-const globby = require('globby')
 const regexps = require('../utils/reg-exps')
 const createFile = require('../utils/create-file')
 const getAllMatchesForRegex = require('../utils/get-all-matches-for-regex')
-const getMarkdownData = require('../utils/get-markdown-data')
+const getRulesMarkdownData = require('../utils/get-rules-markdown-data')
 
 const init = async () => {
 	/**
 	 * Get all rules `markdown` data
 	 */
-	const rulesData = globby
-		.sync([`./_rules/*.md`])
-		.map(rulePath => getMarkdownData(rulePath))
+	const rulesData = getRulesMarkdownData()
 
 	/**
 	 * Eg:
@@ -31,17 +28,10 @@ const init = async () => {
 
 	rulesData.forEach(ruleData => {
 		const { frontmatter, body } = ruleData
-		const {
-			id: ruleId,
-			name: ruleName,
-			accessibility_requirements: ruleAccessibilityRequirements,
-		} = frontmatter
+		const { id: ruleId, name: ruleName, accessibility_requirements: ruleAccessibilityRequirements } = frontmatter
 
-		const glossaryMatches = getAllMatchesForRegex(
-			regexps.glossaryReferenceInRules,
-			body,
-			false
-		)
+		// Finding classical glossary usages: "this is a [link](key)"
+		const glossaryMatches = getAllMatchesForRegex(regexps.glossaryReferenceInRules, body, false)
 
 		glossaryMatches.forEach(glossaryItem => {
 			const hasGlossaryKey = regexps.glossaryKey.test(glossaryItem.block)
@@ -70,15 +60,43 @@ const init = async () => {
 
 			glossaryUsages[key] = glossaryUsages[key].concat(usage)
 		})
+
+		// Finding internal ref glossary usage: "[refname]: key"
+		const glossaryInlinedMatches = getAllMatchesForRegex(regexps.glossaryDefinitionInRules, body, false)
+
+		glossaryInlinedMatches.forEach(glossaryDef => {
+			const hasGlossaryKey = regexps.glossaryKeyInDefinition.test(glossaryDef.block)
+			if (!hasGlossaryKey) {
+				return
+			}
+
+			const key = glossaryDef.block.match(regexps.glossaryKeyInDefinition)[1]
+			if (!key) {
+				return
+			}
+
+			const usage = {
+				name: ruleName,
+				slug: `rules/${ruleId}`,
+			}
+			if (!glossaryUsages[key]) {
+				glossaryUsages[key] = [usage]
+				return
+			}
+
+			const exists = glossaryUsages[key].some(u => u.slug === usage.slug)
+			if (exists) {
+				return
+			}
+
+			glossaryUsages[key] = glossaryUsages[key].concat(usage)
+		})
 	})
 
 	/**
 	 * Create `_data/glossary-usages.json`
 	 */
-	await createFile(
-		`./_data/glossary-usages.json`,
-		JSON.stringify(glossaryUsages, undefined, 2)
-	)
+	await createFile(`./_data/glossary-usages.json`, JSON.stringify(glossaryUsages, undefined, 2))
 }
 
 /**

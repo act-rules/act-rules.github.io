@@ -3,7 +3,7 @@ id: 674b10
 name: Role attribute has valid value
 rule_type: atomic
 description: |
-  This rule checks that each role attribute has a valid value
+  This rule checks that each `role` attribute has a valid value.
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true
@@ -19,9 +19,9 @@ authors:
 
 ## Applicability
 
-Any `role` attribute that is not empty (""), and that is specified on an HTML or SVG element that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+Any `role` attribute that is not empty (""), and that is specified on an HTML or SVG element that is [included in the accessibility tree][].
 
-**Note:** Having a whitespace separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role](#semantic-role) of the element, and so forth.
+**Note:** Having a [whitespace](#whitespace) separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role](#semantic-role) of the element, and so forth.
 
 ## Expectation
 
@@ -68,7 +68,7 @@ Element with multiple valid `role` values.
 Element with at least one valid `role` value.
 
 ```html
-<img role="img xyz" src="" />
+<img role="img xyz" src="https://developer.mozilla.org/static/img/favicon144.png" alt="MDN logo" />
 ```
 
 ### Failed
@@ -89,7 +89,7 @@ Element with multiple invalid `role` value.
 <input type="text" role="invalid role" />
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 Element with role attribute that is not empty (""), neither a valid `role` value.
 
@@ -97,7 +97,7 @@ Element with role attribute that is not empty (""), neither a valid `role` value
 <input type="text" role=" " />
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 Element with role attribute that is not empty (""), neither a valid `role` value.
 
@@ -133,8 +133,10 @@ Element with null `role` attribute.
 
 #### Inapplicable Example 4
 
-Element that is not included in the accessibility tree.
+Element that is not [included in the accessibility tree][].
 
 ```html
 <div aria-hidden="true" role="banner">Some Content</div>
 ```
+
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

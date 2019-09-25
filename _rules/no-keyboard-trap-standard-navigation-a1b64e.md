@@ -20,7 +20,7 @@ authors:
 
 ## Applicability
 
-The rule applies to any HTML or SVG element that is [focusable](#focusable).
+The rule applies to any HTML or SVG element that is [focusable][].
 
 **Note**: This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
 
@@ -28,7 +28,7 @@ The rule applies to any HTML or SVG element that is [focusable](#focusable).
 
 For each target element focus can cycle to the browser UI by using [standard keyboard navigation](#standard-keyboard-navigation).
 
-**Note**: Cycling back to the browser UI can be done both by moving forward through the tab order and by moving backwards. It is not possible to fulfil this expectation by using browser specific shortcuts to return to the browser UI.
+**Note**: Cycling back to the browser UI can be done both by moving forward through the tab order and by moving backwards. It is not possible to fulfill this expectation by using browser specific shortcuts to return to the browser UI.
 
 ## Assumptions
 
@@ -91,16 +91,10 @@ Keyboard trap one element.
 Keyboard trap group.
 
 ```html
-<button
-	class="target"
-	onblur="setTimeout(() => this.nextElementSibling.focus(), 10)"
->
+<button class="target" onblur="setTimeout(() => this.nextElementSibling.focus(), 10)">
 	Button1
 </button>
-<button
-	class="target"
-	onblur="setTimeout(() => this.previousElementSibling.focus(), 10)"
->
+<button class="target" onblur="setTimeout(() => this.previousElementSibling.focus(), 10)">
 	Button2
 </button>
 <button>
@@ -110,7 +104,7 @@ Keyboard trap group.
 
 #### Failed Example 3
 
-A focusable element inbetween to keyboard traps.
+A [focusable][] element between keyboard traps.
 
 ```html
 <button onblur="setTimeout(() => this.focus(), 10)">Button 1</button>
@@ -122,7 +116,7 @@ A focusable element inbetween to keyboard traps.
 
 #### Inapplicable Example 1
 
-No focusable element.
+No [focusable][] element.
 
 ```html
 <h1>Page 1</h1>
@@ -149,6 +143,7 @@ Hidden element using `display:none`.
 Hidden element using `visibility:hidden`.
 
 ```html
-<a href="#" style="visibility:hidden;">Link 1</a>
-<button class="target" style="visibility:hidden;">Button1</button>
+<a href="#" style="visibility:hidden;">Link 1</a> <button class="target" style="visibility:hidden;">Button1</button>
 ```
+
+[focusable]: #focusable 'Definition of focusable'

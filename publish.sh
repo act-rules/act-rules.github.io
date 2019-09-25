@@ -7,6 +7,7 @@ git config user.email "$USER_EMAIL"
 # when site is built, we format using prettier the rules directory, which might create changes
 # these changes have to be reset before changing branches
 # the changes are only for files within `_rules` directory, so resetting just those changes
+git checkout -- package-lock.json
 git checkout -- _rules
 
 # checkout & pull master branch

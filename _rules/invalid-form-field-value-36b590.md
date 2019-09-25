@@ -50,7 +50,7 @@ After [user completion](#completed-input-field) of the target element or trigger
 
 The content of the message is [visible](#visible), [included in the accessibility tree](#included-in-the-accessibility-tree), and identifies the [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error).
 
-**Note**: Information to identify an input error must include the element or elements in which the error occurred and to assist the user in understanding what was the cause of the error.
+**Note**: Information to identify an input error must include information about the element or elements in which the error occurred, and assist the user in understanding what was the cause of the error.
 
 **Note**: If the input error was caused by the user entering a value that falls outside the list of possible values, the message must indicate the possible values.
 

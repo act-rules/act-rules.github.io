@@ -40,13 +40,6 @@ The rule applies to each HTML or SVG element:
 
 After [user completion](#completed-input-field) of the target element or triggering the submission of the form, if the target element belongs to one, each target element for which an [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error) has been  [automatically detected](#automatic-error-detection) has the `aria-invalid` attribute set to `true`.
 
-**Note**: Instructions for an [input element](https://www.w3.org/TR/html52/sec-forms.html#the-input-element) include information that is required by the Web page, the data format and possible values. The instructions can be presented to the user in several ways, including:
-
-- Text content placed visually in the vicinity of the [input element](https://www.w3.org/TR/html52/sec-forms.html#the-input-element)
-- The accessible description of the [input element](https://www.w3.org/TR/html52/sec-forms.html#the-input-element)
-- A tooltip displayed when the [input element](https://www.w3.org/TR/html52/sec-forms.html#the-input-element) is [focused](#focusable)
-- Text content accessible through an help button or similar
-
 **Note**: Even though the ARIA 21 technique checks for what happens to form fields for which there are not input errors, that is not relevant for this SC and, consequently, this rule does not check for it.
 
 ## Expectation 2

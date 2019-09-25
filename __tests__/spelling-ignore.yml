@@ -9,6 +9,7 @@
 - iframe
 - img
 - frameset
+- fieldset 
 - h1 
 - h1-h6
 - svg
@@ -127,10 +128,12 @@
 - F40 
 - F41 
 - F65 
+- F83 
 - F89
 
 # General Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#general)
 - G8 
+- G18 
 - G21 
 - G78 
 - G87 
@@ -140,6 +143,7 @@
 - G108 
 - G130 
 - G131 
+- G145 
 - G158 
 - G159 
 - G162 

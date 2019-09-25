@@ -159,7 +159,7 @@ This text is in a shadow DOM tree and has sufficient contrast.
 
 #### Passed Example 10
 
-This black [text node](https://dom.spec.whatwg.org/#text) is in Japanese, showing that this rule applies to any human language. (The prase means "Even monkeys fall from trees.").
+This black [text node](https://dom.spec.whatwg.org/#text) is in Japanese, showing that this rule applies to any human language. (The phrase means "Even monkeys fall from trees.").
 
 ```html
 <p style="color: #333; background: #FFF;">
@@ -203,7 +203,7 @@ This text has an insufficient contrast with the background image.
 
 #### Failed Example 4
 
-This text fails because of alpha transparancy.
+This text fails because of alpha transparency.
 
 ```html
 <p style="color: rgba(0,0,0,.3); background: #FFF">

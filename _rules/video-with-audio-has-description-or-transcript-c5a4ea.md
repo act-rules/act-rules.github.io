@@ -62,8 +62,8 @@ A video element with a voiceover that describes the visual information.
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/video-with-voiceover.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video-with-voiceover.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/video-with-voiceover.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video-with-voiceover.webm" type="video/webm" />
 </video>
 ```
 
@@ -73,10 +73,10 @@ A video element with a link to a text transcript.
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
-<a href="../test-assets/rabbit-video/transcript.html">Transcript</a>
+<a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
 ```
 
 #### Passed Example 3
@@ -85,9 +85,9 @@ A video element with a track element that contains descriptions.
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
-	<track kind="descriptions" src="../test-assets/rabbit-video/descriptions.vtt" />
+	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+	<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
 </video>
 ```
 
@@ -101,7 +101,7 @@ A video element that describes some of the text on the same page. The text on th
 	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
 	compatibility is described in WCAG. See the video below to watch the same information again in video form.
 </p>
-<video src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
+<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 ### Failed
@@ -112,8 +112,8 @@ A video element with an incorrect audio description.
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm" />
 </video>
 ```
 
@@ -123,10 +123,10 @@ A video element with a link to an incorrect text transcript on a different page.
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
-<a href="../test-assets/rabbit-video/incorrect-transcript.html">Transcript</a>
+<a href="/test-assets/rabbit-video/incorrect-transcript.html">Transcript</a>
 ```
 
 #### Failed Example 3
@@ -135,9 +135,9 @@ A video element with a track element that contains incorrect descriptions.
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
-	<track kind="descriptions" src="../test-assets/rabbit-video/incorrect-descriptions.vtt" />
+	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+	<track kind="descriptions" src="/test-assets/rabbit-video/incorrect-descriptions.vtt" />
 </video>
 ```
 
@@ -151,7 +151,7 @@ A video element that describes some of the text on the same page. The video cont
 	circumstance. This is solved by keyboard compatibility. Keyboard compatibility is described in WCAG. See the video
 	below to watch the same information again in video form.
 </p>
-<video src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
+<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 ### Inapplicable
@@ -162,8 +162,8 @@ A video element without audio.
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 </video>
 ```
 
@@ -173,8 +173,8 @@ A video element that is not [visible][].
 
 ```html
 <video controls style="display: none;">
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```
 

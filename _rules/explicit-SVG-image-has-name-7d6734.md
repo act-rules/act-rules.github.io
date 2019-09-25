@@ -79,11 +79,11 @@ The `<circle>` element has an explicit role of `graphics-symbol` and an accessib
 
 #### Passed example 3
 
-The `<svg>` element has an explicit role of `grpahics-document` and an accessible name from the `<title>` elememt that does not contain only whitespace.
+The `<svg>` element has an explicit role of `graphics-document` and an accessible name from the `<title>` elememt that does not contain only whitespace.
 
 ```html
 <p>How many circles are there?</p>
-<svg xmlns="http://www.w3.org/2000/svg" role="grpahics-document" width="100" height="100">
+<svg xmlns="http://www.w3.org/2000/svg" role="graphics-document" width="100" height="100">
   <title>1 circle</title>
 	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>

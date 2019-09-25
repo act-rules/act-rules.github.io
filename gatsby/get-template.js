@@ -5,6 +5,7 @@ const getTemplate = (type, slug) => {
 		glossary: './src/templates/glossary.js',
 		rules: './src/templates/rule.js',
 		implementer: './src/templates/implementer.js',
+		changelog: './src/templates/changelog.js',
 	}
 
 	if (Object.keys(map).includes(type)) {

@@ -46,7 +46,7 @@ There are known combinations of a popular operating system with browsers and ass
 
 #### Passed Example 1
 
-The `lang` attribute specified is neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace) and a valid primary language subtag.
+The `lang` attribute specified is neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace) and has a valid primary language subtag.
 
 ```html
 <html lang="fr"></html>

@@ -22,7 +22,7 @@ This rule applies to any `audio` or `video` element that has:
 * both `paused` and `muted` attributes equal to false, and 
 * either a `src` attribute or a child `source` element that references content with a duration of more than 3 seconds that contains audio.
 
-## Note##:
+**Note**:
 
 The default value of both `paused` and `muted` attributes is `false`.
 

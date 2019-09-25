@@ -6,7 +6,7 @@ description: |
   This rule checks that when an input error is automatically detected the error is identified and described to the user in text.
 
 accessibility_requirements:
-  wcag20:3.1.1: # Error Identification (A)
+  wcag20:3.3.1: # Error Identification (A)
     forConformance: true
     failed: not satisfied
     passed: satisfied

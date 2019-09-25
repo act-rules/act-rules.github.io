@@ -38,7 +38,7 @@ The rule applies to each HTML or SVG element:
 
 ## Expectation 1
 
-After [user completion](#completed-input-field) of the target element or triggering the submission of the form, if the target element belongs to one, each target element for which an [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error) has been  [automatically detected](#automatic-error-detection) has the `aria-invalid` attribute set to `true`.
+After [user completion](#completed-input-field) of the target element or triggering the submission of the form, if the target element belongs to one, each target element for which an [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error) has been [automatically detected](#automatic-error-detection) has the `aria-invalid` attribute set to `true`.
 
 **Note**: Even though the ARIA 21 technique checks for what happens to form fields for which there are not input errors, that is not relevant for this SC and, consequently, this rule does not check for it.
 
@@ -68,68 +68,67 @@ _There are no major accessibility support issues known for this rule._
 
 ```html
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script>
+			$(document).ready(function(e) {
+				$('#signup').submit(function() {
+					$('#errText').html('')
+					$('input').removeAttr('aria-invalid')
+					$('label').removeAttr('class')
+					var eFlag = 0
+					if ($('#first').val() === '') {
+						$('#first').attr('aria-invalid', 'true')
+						$("label[for='first']").addClass('failed')
+						eFlag++
+					}
+					if ($('#last').val() === '') {
+						$('#last').attr('aria-invalid', 'true')
+						$("label[for='last']").addClass('failed')
+						eFlag++
+					}
+					if ($('#email').val() === '') {
+						$('#email').attr('aria-invalid', 'true')
+						$("label[for='email']").addClass('failed')
+						eFlag++
+					}
+					if (eFlag > 0) {
+						$('#errText')
+							.html('Please complete all required fields (' + eFlag + ') and retry')
+							.focus()
+					}
+					return false
+				})
+			})
+		</script>
+		<style type="text/css">
+			label.failed {
+				border: red thin solid;
+			}
+		</style>
+	</head>
 
-<head>
-    <meta charset="utf-8">
-    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-    <script>
-        $(document).ready(function (e) {
-            $('#signup').submit(function () {
-                $('#errText').html('');
-                $('input').removeAttr("aria-invalid");
-                $('label').removeAttr("class");
-                var eFlag = 0;
-                if ($('#first').val() === '') {
-                    $('#first').attr("aria-invalid", "true");
-                    $("label[for='first']").addClass('failed');
-                    eFlag++;
-                }
-                if ($('#last').val() === '') {
-                    $('#last').attr("aria-invalid", "true");
-                    $("label[for='last']").addClass('failed');
-                    eFlag++;
-                }
-                if ($('#email').val() === '') {
-                    $('#email').attr("aria-invalid", "true");
-                    $("label[for='email']").addClass('failed');
-                    eFlag++;
-                }
-                if (eFlag > 0) {
-                    $('#errText').html("Please complete all required fields (" + eFlag + ") and retry").focus();
-                }
-                return false;
-            });
-        });
-    </script>
-    <style type="text/css">
-        label.failed {
-            border: red thin solid;
-        }
-    </style>
-
-</head>
-
-<body>
-    <h2 tabindex="-1" id="errText" aria-live="assertive"></h2>
-    <form name="signup" id="signup" method="post" action="#">
-        <p>
-            <label for="first">First Name (required)</label><br>
-            <input type="text" name="first" id="first">
-        </p>
-        <p>
-            <label for="last">Last Name (required)</label><br>
-            <input type="text" name="last" id="last">
-        </p>
-        <p>
-            <label for="email">Email (required)</label><br>
-            <input type="text" name="email" id="email">
-        </p>
-        <p>
-            <input type="submit" name="button" id="button" value="Submit">
-        </p>
-    </form>
-</body>
-
+	<body>
+		<h2 tabindex="-1" id="errText" aria-live="assertive"></h2>
+		<form name="signup" id="signup" method="post" action="#">
+			<p>
+				<label for="first">First Name (required)</label><br />
+				<input type="text" name="first" id="first" />
+			</p>
+			<p>
+				<label for="last">Last Name (required)</label><br />
+				<input type="text" name="last" id="last" />
+			</p>
+			<p>
+				<label for="email">Email (required)</label><br />
+				<input type="text" name="email" id="email" />
+			</p>
+			<p>
+				<input type="submit" name="button" id="button" value="Submit" />
+			</p>
+		</form>
+	</body>
 </html>
 ```
 
@@ -139,86 +138,82 @@ _There are no major accessibility support issues known for this rule._
 
 ```html
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script>
+			$(document).ready(function(e) {
+				function updateMessage() {
+					$('#errText').html('')
+					var count = $('label[class="failed"]').length
 
-<head>
-    <meta charset="utf-8">
-    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-    <script>
-        $(document).ready(function (e) {
-            function updateMessage() {
-                $('#errText').html('');
-                var count = $('label[class="failed"]').length;
+					if (count > 0) {
+						$('#errText').html('Please complete all required fields (' + count + ') and retry')
+					}
+				}
+				$('#signup').submit(function() {
+					updateMessage()
+					return false
+				})
 
-                if (count > 0) {
-                    $('#errText').html("Please complete all required fields (" + count + ") and retry");
-                }
-            }
-            $('#signup').submit(function () {
-                updateMessage();
-                return false;
-            });
+				$('#first').focusout(function() {
+					$('#first').removeAttr('aria-invalid')
+					$('label[for="first"]').removeAttr('class')
+					if ($('#first').val() === '') {
+						$('#first').attr('aria-invalid', 'true')
+						$("label[for='first']").addClass('failed')
+					}
+					updateMessage()
+				})
 
-            $('#first').focusout(function () {
-                $('#first').removeAttr("aria-invalid");
-                $('label[for="first"]').removeAttr("class");
-                if ($('#first').val() === '') {
-                    $('#first').attr("aria-invalid", "true");
-                    $("label[for='first']").addClass('failed');
-                }
-                updateMessage();
-            });
+				$('#last').focusout(function() {
+					$('#last').removeAttr('aria-invalid')
+					$('label[for="last"]').removeAttr('class')
+					if ($('#last').val() === '') {
+						$('#last').attr('aria-invalid', 'true')
+						$("label[for='last']").addClass('failed')
+					}
+					updateMessage()
+				})
 
-            $('#last').focusout(function () {
-                $('#last').removeAttr("aria-invalid");
-                $('label[for="last"]').removeAttr("class");
-                if ($('#last').val() === '') {
-                    $('#last').attr("aria-invalid", "true");
-                    $("label[for='last']").addClass('failed');
-                }
-                updateMessage();
-            });
+				$('#email').focusout(function() {
+					$('#email').removeAttr('aria-invalid')
+					$('label[for="email"]').removeAttr('class')
+					if ($('#email').val() === '') {
+						$('#email').attr('aria-invalid', 'true')
+						$("label[for='email']").addClass('failed')
+					}
+					updateMessage()
+				})
+			})
+		</script>
+		<style type="text/css">
+			label.failed {
+				border: red thin solid;
+			}
+		</style>
+	</head>
 
-            $('#email').focusout(function () {
-                $('#email').removeAttr("aria-invalid");
-                $('label[for="email"]').removeAttr("class");
-                if ($('#email').val() === '') {
-                    $('#email').attr("aria-invalid", "true");
-                    $("label[for='email']").addClass('failed');
-                }
-                updateMessage();
-            });
-
-        });
-    </script>
-    <style type="text/css">
-        label.failed {
-            border: red thin solid;
-        }
-    </style>
-
-</head>
-
-<body>
-    <h2 tabindex="-1" id="errText" aria-live="assertive"></h2>
-    <form name="signup" id="signup" method="post" action="#">
-        <p>
-            <label for="first">First Name (required)</label><br>
-            <input type="text" name="first" id="first">
-        </p>
-        <p>
-            <label for="last">Last Name (required)</label><br>
-            <input type="text" name="last" id="last">
-        </p>
-        <p>
-            <label for="email">Email (required)</label><br>
-            <input type="text" name="email" id="email">
-        </p>
-        <p>
-            <input type="submit" name="button" id="button" value="Submit">
-        </p>
-    </form>
-</body>
-
+	<body>
+		<h2 tabindex="-1" id="errText" aria-live="assertive"></h2>
+		<form name="signup" id="signup" method="post" action="#">
+			<p>
+				<label for="first">First Name (required)</label><br />
+				<input type="text" name="first" id="first" />
+			</p>
+			<p>
+				<label for="last">Last Name (required)</label><br />
+				<input type="text" name="last" id="last" />
+			</p>
+			<p>
+				<label for="email">Email (required)</label><br />
+				<input type="text" name="email" id="email" />
+			</p>
+			<p>
+				<input type="submit" name="button" id="button" value="Submit" />
+			</p>
+		</form>
+	</body>
 </html>
 ```
 
@@ -228,88 +223,85 @@ _There are no major accessibility support issues known for this rule._
 
 ```html
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-    <script>
-      $(document).ready(function(e) {
-        $("#signup").submit(function() {
-          $("#errText").html("");
-          $("input").removeAttr("aria-invalid");
-          $("label").removeAttr("class");
-          $("label[for='email']")[0].innerText = "Email (required)";
-          var eFlag = 0;
-          if ($("#name").val() === "") {
-            $("#name").attr("aria-invalid", "true");
-            $("label[for='name']").addClass("failed");
-            eFlag++;
-          }
-          if ($("#age").val() === "") {
-            $("#age").attr("aria-invalid", "true");
-            $("label[for='age']").addClass("failed");
-            eFlag++;
-          } else {
-            var age = Number($("#age").val());
-            if (age < 30 || age > 40) {
-              $("#age").attr("aria-invalid", "true");
-              $("label[for='age']").addClass("failed");
-            }
-          }
-          if ($("#email").val() === "") {
-            $("#email").attr("aria-invalid", "true");
-            $("label[for='email']").addClass("failed");
-            eFlag++;
-          } else {
-            var email = $("#email").val();
-            if (!email.includes("@")) {
-              $("#email").attr("aria-invalid", "true");
-              $("label[for='email']").addClass("failed");
-              console.log($("label[for='email']"));
-              $("label[for='email']")[0].innerText = "Email must contain an @";
-            }
-          }
-          if (eFlag > 0) {
-            $("#errText")
-              .html(
-                "Please complete all required fields (" + eFlag + ") and retry"
-              )
-              .focus();
-          }
-          return false;
-        });
-      });
-    </script>
-    <style type="text/css">
-      label.failed {
-        border: red thin solid;
-      }
-    </style>
-  </head>
+	<head>
+		<meta charset="utf-8" />
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script>
+			$(document).ready(function(e) {
+				$('#signup').submit(function() {
+					$('#errText').html('')
+					$('input').removeAttr('aria-invalid')
+					$('label').removeAttr('class')
+					$("label[for='email']")[0].innerText = 'Email (required)'
+					var eFlag = 0
+					if ($('#name').val() === '') {
+						$('#name').attr('aria-invalid', 'true')
+						$("label[for='name']").addClass('failed')
+						eFlag++
+					}
+					if ($('#age').val() === '') {
+						$('#age').attr('aria-invalid', 'true')
+						$("label[for='age']").addClass('failed')
+						eFlag++
+					} else {
+						var age = Number($('#age').val())
+						if (age < 30 || age > 40) {
+							$('#age').attr('aria-invalid', 'true')
+							$("label[for='age']").addClass('failed')
+						}
+					}
+					if ($('#email').val() === '') {
+						$('#email').attr('aria-invalid', 'true')
+						$("label[for='email']").addClass('failed')
+						eFlag++
+					} else {
+						var email = $('#email').val()
+						if (!email.includes('@')) {
+							$('#email').attr('aria-invalid', 'true')
+							$("label[for='email']").addClass('failed')
+							console.log($("label[for='email']"))
+							$("label[for='email']")[0].innerText = 'Email must contain an @'
+						}
+					}
+					if (eFlag > 0) {
+						$('#errText')
+							.html('Please complete all required fields (' + eFlag + ') and retry')
+							.focus()
+					}
+					return false
+				})
+			})
+		</script>
+		<style type="text/css">
+			label.failed {
+				border: red thin solid;
+			}
+		</style>
+	</head>
 
-  <body>
-    <h2 tabindex="-1" id="errText" aria-live="assertive"></h2>
-    <form name="signup" id="signup" method="post" action="#">
-      <p>
-        Application form (candidates must be been 30 and 40 years old)
-      </p>
-      <p>
-        <label for="name">Name (required)</label><br />
-        <input type="text" name="name" id="name" />
-      </p>
-      <p>
-        <label for="age">Age (required, between 30 and 40 years old)</label
-        ><br />
-        <input type="number" name="age" id="age" />
-      </p>
-      <p>
-        <label for="email">Email (required)</label><br />
-        <input type="text" name="email" id="email" />
-      </p>
-      <p>
-        <input type="submit" name="button" id="button" value="Submit" />
-      </p>
-    </form>
-  </body>
+	<body>
+		<h2 tabindex="-1" id="errText" aria-live="assertive"></h2>
+		<form name="signup" id="signup" method="post" action="#">
+			<p>
+				Application form (candidates must be been 30 and 40 years old)
+			</p>
+			<p>
+				<label for="name">Name (required)</label><br />
+				<input type="text" name="name" id="name" />
+			</p>
+			<p>
+				<label for="age">Age (required, between 30 and 40 years old)</label><br />
+				<input type="number" name="age" id="age" />
+			</p>
+			<p>
+				<label for="email">Email (required)</label><br />
+				<input type="text" name="email" id="email" />
+			</p>
+			<p>
+				<input type="submit" name="button" id="button" value="Submit" />
+			</p>
+		</form>
+	</body>
 </html>
 ```
 
@@ -319,68 +311,66 @@ _There are no major accessibility support issues known for this rule._
 
 `aria-invalid` attribute not set on target element that has an [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error).
 
-
 ```html
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script>
+			$(document).ready(function(e) {
+				$('#signup').submit(function() {
+					$('#errText').html('')
+					$('input').removeAttr('aria-invalid')
+					$('label').removeAttr('class')
+					var eFlag = 0
+					if ($('#first').val() === '') {
+						$("label[for='first']").addClass('failed')
+						eFlag++
+					}
+					if ($('#last').val() === '') {
+						$("label[for='last']").addClass('failed')
+						eFlag++
+					}
+					if ($('#email').val() === '') {
+						$("label[for='email']").addClass('failed')
+						eFlag++
+					}
+					if (eFlag > 0) {
+						$('#errText')
+							.html('Please complete all required fields (' + eFlag + ') and retry')
+							.focus()
+					}
+					return false
+				})
+			})
+		</script>
+		<style type="text/css">
+			label.failed {
+				border: red thin solid;
+			}
+		</style>
+	</head>
 
-<head>
-    <meta charset="utf-8">
-    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-    <script>
-        $(document).ready(function (e) {
-            $('#signup').submit(function () {
-                $('#errText').html('');
-                $('input').removeAttr("aria-invalid");
-                $('label').removeAttr("class");
-                var eFlag = 0;
-                if ($('#first').val() === '') {
-                    $("label[for='first']").addClass('failed');
-                    eFlag++;
-                }
-                if ($('#last').val() === '') {
-                    $("label[for='last']").addClass('failed');
-                    eFlag++;
-                }
-                if ($('#email').val() === '') {
-                    $("label[for='email']").addClass('failed');
-                    eFlag++;
-                }
-                if (eFlag > 0) {
-                    $('#errText').html("Please complete all required fields (" + eFlag + ") and retry").focus();
-                }
-                return false;
-            });
-        });
-    </script>
-    <style type="text/css">
-        label.failed {
-            border: red thin solid;
-        }
-    </style>
-
-</head>
-
-<body>
-    <h2 tabindex="-1" id="errText" aria-live="assertive"></h2>
-    <form name="signup" id="signup" method="post" action="#">
-        <p>
-            <label for="first">First Name (required)</label><br>
-            <input type="text" name="first" id="first">
-        </p>
-        <p>
-            <label for="last">Last Name (required)</label><br>
-            <input type="text" name="last" id="last">
-        </p>
-        <p>
-            <label for="email">Email (required)</label><br>
-            <input type="text" name="email" id="email">
-        </p>
-        <p>
-            <input type="submit" name="button" id="button" value="Submit">
-        </p>
-    </form>
-</body>
-
+	<body>
+		<h2 tabindex="-1" id="errText" aria-live="assertive"></h2>
+		<form name="signup" id="signup" method="post" action="#">
+			<p>
+				<label for="first">First Name (required)</label><br />
+				<input type="text" name="first" id="first" />
+			</p>
+			<p>
+				<label for="last">Last Name (required)</label><br />
+				<input type="text" name="last" id="last" />
+			</p>
+			<p>
+				<label for="email">Email (required)</label><br />
+				<input type="text" name="email" id="email" />
+			</p>
+			<p>
+				<input type="submit" name="button" id="button" value="Submit" />
+			</p>
+		</form>
+	</body>
 </html>
 ```
 
@@ -390,68 +380,67 @@ _There are no major accessibility support issues known for this rule._
 
 ```html
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script>
+			$(document).ready(function(e) {
+				$('#signup').submit(function() {
+					$('#errText').html('')
+					$('input').removeAttr('aria-invalid')
+					$('label').removeAttr('class')
+					var eFlag = 0
+					if ($('#first').val() === '') {
+						$('#first').attr('aria-invalid', 'true')
+						$("label[for='first']").addClass('failed')
+						eFlag++
+					}
+					if ($('#last').val() === '') {
+						$('#last').attr('aria-invalid', 'true')
+						$("label[for='last']").addClass('failed')
+						eFlag++
+					}
+					if ($('#email').val() === '') {
+						$('#email').attr('aria-invalid', 'true')
+						$("label[for='email']").addClass('failed')
+						eFlag++
+					}
+					if (eFlag > 0) {
+						$('#errText')
+							.html('Please complete all required fields (' + eFlag + ') and retry')
+							.focus()
+					}
+					return false
+				})
+			})
+		</script>
+		<style type="text/css">
+			label.failed {
+				border: red thin solid;
+			}
+		</style>
+	</head>
 
-<head>
-    <meta charset="utf-8">
-    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-    <script>
-        $(document).ready(function (e) {
-            $('#signup').submit(function () {
-                $('#errText').html('');
-                $('input').removeAttr("aria-invalid");
-                $('label').removeAttr("class");
-                var eFlag = 0;
-                if ($('#first').val() === '') {
-                    $('#first').attr("aria-invalid", "true");
-                    $("label[for='first']").addClass('failed');
-                    eFlag++;
-                }
-                if ($('#last').val() === '') {
-                    $('#last').attr("aria-invalid", "true");
-                    $("label[for='last']").addClass('failed');
-                    eFlag++;
-                }
-                if ($('#email').val() === '') {
-                    $('#email').attr("aria-invalid", "true");
-                    $("label[for='email']").addClass('failed');
-                    eFlag++;
-                }
-                if (eFlag > 0) {
-                    $('#errText').html("Please complete all required fields (" + eFlag + ") and retry").focus();
-                }
-                return false;
-            });
-        });
-    </script>
-    <style type="text/css">
-        label.failed {
-            border: red thin solid;
-        }
-    </style>
-
-</head>
-
-<body>
-    <h2 tabindex="-1" id="errText" aria-live="assertive"></h2>
-    <form name="signup" id="signup" method="post" action="#">
-        <p>
-            <label for="first">First Name</label><br>
-            <input type="text" name="first" id="first">
-        </p>
-        <p>
-            <label for="last">Last Name</label><br>
-            <input type="text" name="last" id="last">
-        </p>
-        <p>
-            <label for="email">Email</label><br>
-            <input type="text" name="email" id="email">
-        </p>
-        <p>
-            <input type="submit" name="button" id="button" value="Submit">
-        </p>
-    </form>
-</body>
-
+	<body>
+		<h2 tabindex="-1" id="errText" aria-live="assertive"></h2>
+		<form name="signup" id="signup" method="post" action="#">
+			<p>
+				<label for="first">First Name</label><br />
+				<input type="text" name="first" id="first" />
+			</p>
+			<p>
+				<label for="last">Last Name</label><br />
+				<input type="text" name="last" id="last" />
+			</p>
+			<p>
+				<label for="email">Email</label><br />
+				<input type="text" name="email" id="email" />
+			</p>
+			<p>
+				<input type="submit" name="button" id="button" value="Submit" />
+			</p>
+		</form>
+	</body>
 </html>
 ```
 
@@ -471,9 +460,9 @@ Form that does not include automatic detection of input errors.
 
 ```html
 <form>
-  <label for="text_field">Name (required)</label>
-  <input type="text" id="text_field" />
-  <input type="button" value="Submit" />
-  <div id="error"></div>
+	<label for="text_field">Name (required)</label>
+	<input type="text" id="text_field" />
+	<input type="button" value="Submit" />
+	<div id="error"></div>
 </form>
 ```

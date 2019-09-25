@@ -6,7 +6,7 @@ rule_type: atomic
 description: |
   This rule checks that text error messages identify required form fields that were not completed.
 
-accessibility_requirements: 
+accessibility_requirements:
   wcag-technique:G83: # Providing text descriptions to identify required fields that were not completed
     forConformance: false
     failed: not satisfied
@@ -37,7 +37,7 @@ The rule applies to each [form element](https://www.w3.org/TR/html52/sec-forms.h
 
 ## Expectation 1
 
-After triggering the submission of the target element, each [required](#required-input-field) [input element](https://www.w3.org/TR/html52/sec-forms.html#the-input-element) that was not [completed](#completed-input-field) is identified by a text message. 
+After triggering the submission of the target element, each [required](#required-input-field) [input element](https://www.w3.org/TR/html52/sec-forms.html#the-input-element) that was not [completed](#completed-input-field) is identified by a text message.
 
 Note: A text message may identify an [input element](https://www.w3.org/TR/html52/sec-forms.html#the-input-element) in several ways, including:
 
@@ -66,22 +66,22 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The error message that shows near the `input` element when it is not filled indicates the field must be filled. 
+The error message that shows near the `input` element when it is not filled indicates the field must be filled.
 
 ```html
 <script>
-    function processForm() {
-        if (document.getElementById('text_field').value.length === 0) {
-            document.getElementById('error').innerText = "You must fill the name field"
-        }
-    }
+	function processForm() {
+		if (document.getElementById('text_field').value.length === 0) {
+			document.getElementById('error').innerText = 'You must fill the name field'
+		}
+	}
 </script>
 
 <form>
-    <label for="text_field">Name (required)</label>
-    <input type="text" id="text_field" required>
-    <input type="button" value="Submit" onclick="processForm()">
-    <div id="error"></div>
+	<label for="text_field">Name (required)</label>
+	<input type="text" id="text_field" required />
+	<input type="button" value="Submit" onclick="processForm()" />
+	<div id="error"></div>
 </form>
 ```
 
@@ -91,30 +91,30 @@ The error message identifies any required `input` element that has not been fill
 
 ```html
 <script>
-    function processForm() {
-        document.getElementById('error').innerText = "";
-        if (document.getElementById('name').value.length === 0) {
-            document.getElementById('error').innerText += "You must fill the name field. "
-        }
-        var color = document.forms[0].color.value;
-        if (color.length === 0) {
-            document.getElementById('error').innerText += "You must pick a color."
-        }
-    }
+	function processForm() {
+		document.getElementById('error').innerText = ''
+		if (document.getElementById('name').value.length === 0) {
+			document.getElementById('error').innerText += 'You must fill the name field. '
+		}
+		var color = document.forms[0].color.value
+		if (color.length === 0) {
+			document.getElementById('error').innerText += 'You must pick a color.'
+		}
+	}
 </script>
 
 <form>
-    <h2 id="error"></h2>
-    <label for="name">Name (required)</label>
-    <input type="text" id="name">
-    <br>
-    <label for="address">Address</label>
-    <input type="text" id="address">
-    <p>Pick a color (required)</p>
-    <label><input type="radio" name="color" value="blue">Blue</label>
-    <label><input type="radio" name="color" value="yellow">Yellow</label>
-    <br>
-    <input type="button" value="Submit" onclick="processForm()">
+	<h2 id="error"></h2>
+	<label for="name">Name (required)</label>
+	<input type="text" id="name" />
+	<br />
+	<label for="address">Address</label>
+	<input type="text" id="address" />
+	<p>Pick a color (required)</p>
+	<label><input type="radio" name="color" value="blue" />Blue</label>
+	<label><input type="radio" name="color" value="yellow" />Yellow</label>
+	<br />
+	<input type="button" value="Submit" onclick="processForm()" />
 </form>
 ```
 
@@ -126,10 +126,10 @@ No error message is provided.
 
 ```html
 <form>
-    <label for="text_field">Name (required)</label>
-    <input type="text" id="text_field" required>
-    <input type="button" value="Submit">
-    <div id="error"></div>
+	<label for="text_field">Name (required)</label>
+	<input type="text" id="text_field" required />
+	<input type="button" value="Submit" />
+	<div id="error"></div>
 </form>
 ```
 
@@ -139,30 +139,30 @@ The error message does not identify which form fields need to be filled.
 
 ```html
 <script>
-    function processForm() {
-        document.getElementById('error').innerText = ""
-        if (document.getElementById('name').value.length === 0) {
-            document.getElementById('error').innerText = "You must fill all required fields."
-        }
-        var color = document.forms[0].color.value;
-        if (color.length === 0) {
-            document.getElementById('error').innerText = "You must fill all required fields."
-        }
-    }
+	function processForm() {
+		document.getElementById('error').innerText = ''
+		if (document.getElementById('name').value.length === 0) {
+			document.getElementById('error').innerText = 'You must fill all required fields.'
+		}
+		var color = document.forms[0].color.value
+		if (color.length === 0) {
+			document.getElementById('error').innerText = 'You must fill all required fields.'
+		}
+	}
 </script>
 
 <form>
-    <h2 id="error"></h2>
-    <label for="name">Name (required)</label>
-    <input type="text" id="name" required>
-    <br>
-    <label for="address">Address</label>
-    <input type="text" id="address">
-    <p>Pick a color (required)</p>
-    <label><input type="radio" name="color" value="blue" required>Blue</label>
-    <label><input type="radio" name="color" value="yellow">Yellow</label>
-    <br>
-    <input type="button" value="Submit" onclick="processForm()">
+	<h2 id="error"></h2>
+	<label for="name">Name (required)</label>
+	<input type="text" id="name" required />
+	<br />
+	<label for="address">Address</label>
+	<input type="text" id="address" />
+	<p>Pick a color (required)</p>
+	<label><input type="radio" name="color" value="blue" required />Blue</label>
+	<label><input type="radio" name="color" value="yellow" />Yellow</label>
+	<br />
+	<input type="button" value="Submit" onclick="processForm()" />
 </form>
 ```
 
@@ -172,18 +172,18 @@ The error message is not visible.
 
 ```html
 <script>
-    function processForm() {
-        if (document.getElementById('text_field').value.length === 0) {
-            document.getElementById('error').innerText = "You must fill the name field"
-        }
-    }
+	function processForm() {
+		if (document.getElementById('text_field').value.length === 0) {
+			document.getElementById('error').innerText = 'You must fill the name field'
+		}
+	}
 </script>
 
 <form>
-    <label for="text_field">Name (required)</label>
-    <input type="text" id="text_field" required>
-    <input type="button" value="Submit" onclick="processForm()">
-    <div id="error" style="position: absolute; top: -9999px; left: -9999px;"></div>
+	<label for="text_field">Name (required)</label>
+	<input type="text" id="text_field" required />
+	<input type="button" value="Submit" onclick="processForm()" />
+	<div id="error" style="position: absolute; top: -9999px; left: -9999px;"></div>
 </form>
 ```
 
@@ -193,18 +193,18 @@ The error message is not included in the accessibility tree.
 
 ```html
 <script>
-    function processForm() {
-        if (document.getElementById('text_field').value.length === 0) {
-            document.getElementById('error').innerText = "You must fill the name field"
-        }
-    }
+	function processForm() {
+		if (document.getElementById('text_field').value.length === 0) {
+			document.getElementById('error').innerText = 'You must fill the name field'
+		}
+	}
 </script>
 
 <form>
-    <label for="text_field">Name (required)</label>
-    <input type="text" id="text_field" required>
-    <input type="button" value="Submit" onclick="processForm()">
-    <div id="error" aria-hidden="true"></div>
+	<label for="text_field">Name (required)</label>
+	<input type="text" id="text_field" required />
+	<input type="button" value="Submit" onclick="processForm()" />
+	<div id="error" aria-hidden="true"></div>
 </form>
 ```
 
@@ -216,8 +216,8 @@ The `input` element is not required.
 
 ```html
 <form>
-    <input type="text">
-    <input type="button" value="Submit">
+	<input type="text" />
+	<input type="button" value="Submit" />
 </form>
 ```
 
@@ -226,5 +226,5 @@ The `input` element is not required.
 The `input` element is not inside a `form` element
 
 ```html
-<input type="text">
+<input type="text" />
 ```

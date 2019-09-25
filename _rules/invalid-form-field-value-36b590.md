@@ -6,7 +6,7 @@ rule_type: atomic
 description: |
   This rule checks that text descriptions are provided when the user completes a form field with information that is not an allowed value or using a not allowed format.
 
-accessibility_requirements: 
+accessibility_requirements:
   wcag-technique:G84: # Providing a text description when the user provides information that is not in the list of allowed values
     forConformance: false
     failed: not satisfied
@@ -79,23 +79,23 @@ The error message provided in the vicinity of the `input` element identifies the
 
 ```html
 <script>
-    function processForm() {
-        document.getElementById('error').innerText = "";
-        var age = document.getElementById('age').value;
-        console.log(isNaN(age));
-        if (!age || isNaN(age)) {
-            document.getElementById('error').innerText = "Age must be a number";
-        } else if (age < 1) {
-            document.getElementById('error').innerText = "Age must be positive";
-        }
-    }
+	function processForm() {
+		document.getElementById('error').innerText = ''
+		var age = document.getElementById('age').value
+		console.log(isNaN(age))
+		if (!age || isNaN(age)) {
+			document.getElementById('error').innerText = 'Age must be a number'
+		} else if (age < 1) {
+			document.getElementById('error').innerText = 'Age must be positive'
+		}
+	}
 </script>
 
 <form>
-    <label for="age">Age (years)</label>
-    <input type="number" id="age" required>
-    <span id="error"></span><br>
-    <input type="button" value="Submit" onclick="processForm()">
+	<label for="age">Age (years)</label>
+	<input type="number" id="age" required />
+	<span id="error"></span><br />
+	<input type="button" value="Submit" onclick="processForm()" />
 </form>
 ```
 
@@ -105,15 +105,13 @@ The error message provided in the vicinity of the `input` element identifies the
 
 No error message is provided.
 
-
 ```html
 <form>
-    <label for="age">Age (years)</label>
-    <input type="number" id="age" required>
-    <span id="error"></span><br>
-    <input type="button" value="Submit">
+	<label for="age">Age (years)</label>
+	<input type="number" id="age" required />
+	<span id="error"></span><br />
+	<input type="button" value="Submit" />
 </form>
-
 ```
 
 #### Failed Example 2
@@ -122,21 +120,21 @@ The error message does not identify the [input error](https://www.w3.org/TR/WCAG
 
 ```html
 <script>
-    function processForm() {
-        document.getElementById('error').innerText = "";
-        var age = document.getElementById('age').value;
-        console.log(isNaN(age));
-        if (!age || isNaN(age) || age < 1) {
-            document.getElementById('error').innerText = "Please fill the field correctly.";
-        }
-    }
+	function processForm() {
+		document.getElementById('error').innerText = ''
+		var age = document.getElementById('age').value
+		console.log(isNaN(age))
+		if (!age || isNaN(age) || age < 1) {
+			document.getElementById('error').innerText = 'Please fill the field correctly.'
+		}
+	}
 </script>
 
 <form>
-    <label for="age">Age (years)</label>
-    <input type="number" id="age" required>
-    <span id="error"></span><br>
-    <input type="button" value="Submit" onclick="processForm()">
+	<label for="age">Age (years)</label>
+	<input type="number" id="age" required />
+	<span id="error"></span><br />
+	<input type="button" value="Submit" onclick="processForm()" />
 </form>
 ```
 
@@ -146,23 +144,23 @@ The error message is not visible.
 
 ```html
 <script>
-    function processForm() {
-        document.getElementById('error').innerText = "";
-        var age = document.getElementById('age').value;
-        console.log(isNaN(age));
-        if (!age || isNaN(age)) {
-            document.getElementById('error').innerText = "Age must be a number";
-        } else if (age < 1) {
-            document.getElementById('error').innerText = "Age must be positive";
-        }
-    }
+	function processForm() {
+		document.getElementById('error').innerText = ''
+		var age = document.getElementById('age').value
+		console.log(isNaN(age))
+		if (!age || isNaN(age)) {
+			document.getElementById('error').innerText = 'Age must be a number'
+		} else if (age < 1) {
+			document.getElementById('error').innerText = 'Age must be positive'
+		}
+	}
 </script>
 
 <form>
-    <label for="age">Age (years)</label>
-    <input type="number" id="age" required>
-    <span id="error" style="position: absolute; top: -9999px; left: -9999px;"></span><br>
-    <input type="button" value="Submit" onclick="processForm()">
+	<label for="age">Age (years)</label>
+	<input type="number" id="age" required />
+	<span id="error" style="position: absolute; top: -9999px; left: -9999px;"></span><br />
+	<input type="button" value="Submit" onclick="processForm()" />
 </form>
 ```
 
@@ -172,23 +170,23 @@ The error message is not included in the accessibility tree.
 
 ```html
 <script>
-    function processForm() {
-        document.getElementById('error').innerText = "";
-        var age = document.getElementById('age').value;
-        console.log(isNaN(age));
-        if (!age || isNaN(age)) {
-            document.getElementById('error').innerText = "Age must be a number";
-        } else if (age < 1) {
-            document.getElementById('error').innerText = "Age must be positive";
-        }
-    }
+	function processForm() {
+		document.getElementById('error').innerText = ''
+		var age = document.getElementById('age').value
+		console.log(isNaN(age))
+		if (!age || isNaN(age)) {
+			document.getElementById('error').innerText = 'Age must be a number'
+		} else if (age < 1) {
+			document.getElementById('error').innerText = 'Age must be positive'
+		}
+	}
 </script>
 
 <form>
-    <label for="age">Age (years)</label>
-    <input type="number" id="age" required>
-    <span id="error" aria-hidden="true"></span><br>
-    <input type="button" value="Submit" onclick="processForm()">
+	<label for="age">Age (years)</label>
+	<input type="number" id="age" required />
+	<span id="error" aria-hidden="true"></span><br />
+	<input type="button" value="Submit" onclick="processForm()" />
 </form>
 ```
 
@@ -199,7 +197,7 @@ The error message is not included in the accessibility tree.
 The `input` element is not inside a `form` element
 
 ```html
-<input type="text">
+<input type="text" />
 ```
 
 #### Inapplicable Example 2
@@ -208,9 +206,9 @@ Form that does not include automatic detection of input errors.
 
 ```html
 <form>
-  <label for="text_field">Name (required)</label>
-  <input type="text" id="text_field" />
-  <input type="button" value="Submit" />
-  <div id="error"></div>
+	<label for="text_field">Name (required)</label>
+	<input type="text" id="text_field" />
+	<input type="button" value="Submit" />
+	<div id="error"></div>
 </form>
 ```

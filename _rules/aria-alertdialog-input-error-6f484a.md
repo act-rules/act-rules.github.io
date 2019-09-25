@@ -36,9 +36,10 @@ The rule applies to each HTML or SVG element:
 - inherit from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
 - do not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
 
-## Expectation 
+## Expectation
 
 After [user completion](#completed-input-field) of the target element or triggering the submission of the form, if the target element belongs to one, each target element for which an [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error) has been [automatically detected](#automatic-error-detection) causes an element with `role="alertdialog"` to appear, where the following is true:
+
 - it contains at least one [focusable](#focusable) element; and
 - the focus moves to the [focusable](#focusable) element; and
 - it is not possible to move the focus away from elements contained in the element with `role="alertdialog"` until this is dismissed; and
@@ -70,99 +71,103 @@ alertdialog triggered on form submission presents message identifying the input 
 
 ```html
 <html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Using aria-alertdialog to Identify Errors</title>
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script>
+			$(document).ready(function(e) {
+				$('#trigger-alertdialog').click(function() {
+					var errors = false
+					var content = '<div id="firstElement" tabindex="0"></div><h1 id="alertHeading">Error</h1><div id="alertText">'
+					if ($('#birth').val().length === 0) {
+						content += 'Please fill age.<br>'
+						errors = true
+					}
+					if ($('#hire').val().length === 0) {
+						content += 'Please fill years on job.<br>'
+						errors = true
+					}
+					if (!errors && Number($('#hire').val()) > Number($('#birth').val())) {
+						content += 'Years on job is larger than age. Please verify age and years on job values.'
+						errors = true
+					}
+					content +=
+						'</div><button id="firstButton">Return to page and correct error</button><div id="lastElement" tabindex="0"></div>'
+					if (errors) {
+						$('main').attr('aria-hidden', 'true')
+						var lastFocus = document.activeElement
+						var modalOverlay = $('<div>').attr({ id: 'modalOverlay', tabindex: '0' })
+						$(modalOverlay).appendTo('body')
+						var dialog = $('<div>').attr({
+							role: 'alertdialog',
+							'aria-labelledby': 'alertHeading',
+							'aria-describedby': 'alertText',
+							tabindex: '0',
+						})
+						$(dialog)
+							.html(content)
+							.appendTo('body')
+						$('#firstButton').focus()
 
-<head>
-    <meta charset="UTF-8">
-    <title>Using aria-alertdialog to Identify Errors</title>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script>
-        $(document).ready(function (e) {
-            $('#trigger-alertdialog').click(function () {
-                var errors = false;
-                var content = '<div id="firstElement" tabindex="0"></div><h1 id="alertHeading">Error</h1><div id="alertText">';
-                if ($('#birth').val().length === 0) {
-                    content += 'Please fill age.<br>';
-                    errors = true;
-                }
-                if ($('#hire').val().length === 0) {
-                    content += 'Please fill years on job.<br>';
-                    errors = true;
-                }
-                if (!errors && Number($('#hire').val()) > Number($('#birth').val())) {
-                    content += 'Years on job is larger than age. Please verify age and years on job values.'
-                    errors = true;
-                }
-                content += '</div><button id="firstButton">Return to page and correct error</button><div id="lastElement" tabindex="0"></div>';
-                if (errors) {
-                    $('main').attr('aria-hidden', 'true');
-                    var lastFocus = document.activeElement;
-                    var modalOverlay = $('<div>').attr({ id: "modalOverlay", tabindex: "0" });
-                    $(modalOverlay).appendTo('body');
-                    var dialog = $('<div>').attr({ role: "alertdialog", "aria-labelledby": "alertHeading", "aria-describedby": "alertText", tabindex: "0" });
-                    $(dialog).html(content).appendTo('body');
-                    $('#firstButton').focus();
+						$('#lastElement').focusin(function(e) {
+							$('#firstButton').focus()
+						})
+						$('#firstElement').focusin(function(e) {
+							$('#firstButton').focus()
+						})
 
-                    $('#lastElement').focusin(function (e) {
-                        $('#firstButton').focus();
-                    });
-                    $('#firstElement').focusin(function (e) {
-                        $('#firstButton').focus();
-                    });
+						$('[role=alertdialog] button').click(function(e) {
+							$('main').attr('aria-hidden', 'false')
+							$(modalOverlay).remove()
+							$(dialog).remove()
+							lastFocus.focus()
+						})
+					}
+					return false
+				})
+			})
+		</script>
+		<style type="text/css">
+			#modalOverlay {
+				width: 100%;
+				height: 100%;
+				z-index: 2;
+				background-color: #000;
+				opacity: 0.5;
+				position: fixed;
+				top: 0;
+				left: 0;
+				margin: 0;
+				padding: 0;
+			}
 
-                    $('[role=alertdialog] button').click(function (e) {
-                        $('main').attr('aria-hidden', 'false');
-                        $(modalOverlay).remove();
-                        $(dialog).remove();
-                        lastFocus.focus();
-                    });
-                }
-                return false;
+			[role='alertdialog'] {
+				width: 50%;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 5px;
+				border: thin #000 solid;
+				background-color: #fff;
+				z-index: 3;
+				position: fixed;
+				top: 25%;
+				left: 25%;
+			}
+		</style>
+	</head>
 
-            });
-
-        });
-    </script>
-    <style type="text/css">
-        #modalOverlay {
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-            background-color: #000;
-            opacity: 0.5;
-            position: fixed;
-            top: 0;
-            left: 0;
-            margin: 0;
-            padding: 0;
-        }
-
-        [role=alertdialog] {
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 5px;
-            border: thin #000 solid;
-            background-color: #fff;
-            z-index: 3;
-            position: fixed;
-            top: 25%;
-            left: 25%;
-        }
-    </style>
-</head>
-
-<body>
-    <main>
-        <form>
-            <label for="birth">Age (years)</label>
-            <input type="number" id="birth"><br>
-            <label for="hire">Years on job</label>
-            <input type="number" id="hire"><br>
-            <button id="trigger-alertdialog">Submit</button>
-        </form>
-    </main>
-</body>
-
+	<body>
+		<main>
+			<form>
+				<label for="birth">Age (years)</label>
+				<input type="number" id="birth" /><br />
+				<label for="hire">Years on job</label>
+				<input type="number" id="hire" /><br />
+				<button id="trigger-alertdialog">Submit</button>
+			</form>
+		</main>
+	</body>
 </html>
 ```
 
@@ -172,94 +177,99 @@ alertdialog triggered on user completion presents message identifying the input 
 
 ```html
 <html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Using aria-alertdialog to Identify Errors</title>
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script>
+			$(document).ready(function(e) {
+				function showDialog(message) {
+					var content = '<div id="firstElement" tabindex="0"></div><h1 id="alertHeading">Error</h1><div id="alertText">'
+					content += message
+					content +=
+						'</div><button id="firstButton">Return to page and correct error</button><div id="lastElement" tabindex="0"></div>'
+					$('main').attr('aria-hidden', 'true')
+					var lastFocus = document.activeElement
+					var modalOverlay = $('<div>').attr({ id: 'modalOverlay', tabindex: '0' })
+					$(modalOverlay).appendTo('body')
+					var dialog = $('<div>').attr({
+						role: 'alertdialog',
+						'aria-labelledby': 'alertHeading',
+						'aria-describedby': 'alertText',
+						tabindex: '0',
+					})
+					$(dialog)
+						.html(content)
+						.appendTo('body')
+					$('#firstButton').focus()
 
-<head>
-    <meta charset="UTF-8">
-    <title>Using aria-alertdialog to Identify Errors</title>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script>
-        $(document).ready(function (e) {
-            function showDialog(message) {
-                var content = '<div id="firstElement" tabindex="0"></div><h1 id="alertHeading">Error</h1><div id="alertText">';
-                content += message;
-                content += '</div><button id="firstButton">Return to page and correct error</button><div id="lastElement" tabindex="0"></div>';
-                $('main').attr('aria-hidden', 'true');
-                var lastFocus = document.activeElement;
-                var modalOverlay = $('<div>').attr({ id: "modalOverlay", tabindex: "0" });
-                $(modalOverlay).appendTo('body');
-                var dialog = $('<div>').attr({ role: "alertdialog", "aria-labelledby": "alertHeading", "aria-describedby": "alertText", tabindex: "0" });
-                $(dialog).html(content).appendTo('body');
-                $('#firstButton').focus();
+					$('#lastElement').focusin(function(e) {
+						$('#firstButton').focus()
+					})
+					$('#firstElement').focusin(function(e) {
+						$('#firstButton').focus()
+					})
 
-                $('#lastElement').focusin(function (e) {
-                    $('#firstButton').focus();
-                });
-                $('#firstElement').focusin(function (e) {
-                    $('#firstButton').focus();
-                });
+					$('[role=alertdialog] button').click(function(e) {
+						$('main').attr('aria-hidden', 'false')
+						$(modalOverlay).remove()
+						$(dialog).remove()
+						lastFocus.focus()
+					})
+					return false
+				}
+				$('#birth').focusout(function() {
+					if ($('#birth').val().length === 0) {
+						showDialog('Please fill age.<br>')
+					}
+				})
+				$('#hire').focusout(function() {
+					if ($('#hire').val().length === 0) {
+						showDialog('Please fill years on job.<br>')
+					}
+				})
+			})
+		</script>
+		<style type="text/css">
+			#modalOverlay {
+				width: 100%;
+				height: 100%;
+				z-index: 2;
+				background-color: #000;
+				opacity: 0.5;
+				position: fixed;
+				top: 0;
+				left: 0;
+				margin: 0;
+				padding: 0;
+			}
 
-                $('[role=alertdialog] button').click(function (e) {
-                    $('main').attr('aria-hidden', 'false');
-                    $(modalOverlay).remove();
-                    $(dialog).remove();
-                    lastFocus.focus();
-                });
-                return false;
+			[role='alertdialog'] {
+				width: 50%;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 5px;
+				border: thin #000 solid;
+				background-color: #fff;
+				z-index: 3;
+				position: fixed;
+				top: 25%;
+				left: 25%;
+			}
+		</style>
+	</head>
 
-            }
-            $('#birth').focusout(function () {
-                if ($('#birth').val().length === 0) {
-                    showDialog('Please fill age.<br>');
-                }
-            });
-            $('#hire').focusout(function () {
-                if ($('#hire').val().length === 0) {
-                    showDialog('Please fill years on job.<br>');
-                }
-            });
-        });
-    </script>
-    <style type="text/css">
-        #modalOverlay {
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-            background-color: #000;
-            opacity: 0.5;
-            position: fixed;
-            top: 0;
-            left: 0;
-            margin: 0;
-            padding: 0;
-        }
-
-        [role=alertdialog] {
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 5px;
-            border: thin #000 solid;
-            background-color: #fff;
-            z-index: 3;
-            position: fixed;
-            top: 25%;
-            left: 25%;
-        }
-    </style>
-</head>
-
-<body>
-    <main>
-        <form>
-            <label for="birth">Age (years)</label>
-            <input type="number" id="birth"><br>
-            <label for="hire">Years on job</label>
-            <input type="number" id="hire"><br>
-            <button id="trigger-alertdialog">Submit</button>
-        </form>
-    </main>
-</body>
-
+	<body>
+		<main>
+			<form>
+				<label for="birth">Age (years)</label>
+				<input type="number" id="birth" /><br />
+				<label for="hire">Years on job</label>
+				<input type="number" id="hire" /><br />
+				<button id="trigger-alertdialog">Submit</button>
+			</form>
+		</main>
+	</body>
 </html>
 ```
 
@@ -271,101 +281,103 @@ alertdialog without focusable elements.
 
 ```html
 <html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Using aria-alertdialog to Identify Errors</title>
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script>
+			$(document).ready(function(e) {
+				$('#trigger-alertdialog').click(function() {
+					var errors = false
+					var content = '</div><h1 id="alertHeading">Error</h1><div id="alertText">'
+					if ($('#birth').val().length === 0) {
+						content += 'Please fill age.<br>'
+						errors = true
+					}
+					if ($('#hire').val().length === 0) {
+						content += 'Please fill years on job.<br>'
+						errors = true
+					}
+					if (!errors && Number($('#hire').val()) > Number($('#birth').val())) {
+						content += 'Years on job is larger than age. Please verify age and years on job values.'
+						errors = true
+					}
+					content += '</div><div id="firstButton">Click here or press Escape to return to page and correct error</div>'
+					if (errors) {
+						$('main').attr('aria-hidden', 'true')
+						var lastFocus = document.activeElement
+						var modalOverlay = $('<div>').attr({ id: 'modalOverlay', tabindex: '0' })
+						$(modalOverlay).appendTo('body')
+						var dialog = $('<div>').attr({
+							role: 'alertdialog',
+							'aria-labelledby': 'alertHeading',
+							'aria-describedby': 'alertText',
+							tabindex: '0',
+						})
+						$(dialog)
+							.html(content)
+							.appendTo('body')
 
-<head>
-    <meta charset="UTF-8">
-    <title>Using aria-alertdialog to Identify Errors</title>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script>
-        $(document).ready(function (e) {
-            $('#trigger-alertdialog').click(function () {
-                var errors = false;
-                var content = '</div><h1 id="alertHeading">Error</h1><div id="alertText">';
-                if ($('#birth').val().length === 0) {
-                    content += 'Please fill age.<br>';
-                    errors = true;
-                }
-                if ($('#hire').val().length === 0) {
-                    content += 'Please fill years on job.<br>';
-                    errors = true;
-                }
-                if (!errors && Number($('#hire').val()) > Number($('#birth').val())) {
-                    content += 'Years on job is larger than age. Please verify age and years on job values.'
-                    errors = true;
-                }
-                content += '</div><div id="firstButton">Click here or press Escape to return to page and correct error</div>';
-                if (errors) {
-                    $('main').attr('aria-hidden', 'true');
-                    var lastFocus = document.activeElement;
-                    var modalOverlay = $('<div>').attr({ id: "modalOverlay", tabindex: "0" });
-                    $(modalOverlay).appendTo('body');
-                    var dialog = $('<div>').attr({ role: "alertdialog", "aria-labelledby": "alertHeading", "aria-describedby": "alertText", tabindex: "0" });
-                    $(dialog).html(content).appendTo('body');
+						$('[role=alertdialog] #firstbutton').click(function(e) {
+							$('main').attr('aria-hidden', 'false')
+							$(modalOverlay).remove()
+							$(dialog).remove()
+							lastFocus.focus()
+						})
 
-                    $('[role=alertdialog] #firstbutton').click(function (e) {
-                        $('main').attr('aria-hidden', 'false');
-                        $(modalOverlay).remove();
-                        $(dialog).remove();
-                        lastFocus.focus();
-                    });
-  
-                    $('body').on('keyup', function (e) {
-                        if (e.key === "Escape") {
-                            $('main').attr('aria-hidden', 'false');
-                            $(modalOverlay).remove();
-                            $(dialog).remove();
-                            lastFocus.focus();
-                        }
-                    });
+						$('body').on('keyup', function(e) {
+							if (e.key === 'Escape') {
+								$('main').attr('aria-hidden', 'false')
+								$(modalOverlay).remove()
+								$(dialog).remove()
+								lastFocus.focus()
+							}
+						})
+					}
+					return false
+				})
+			})
+		</script>
+		<style type="text/css">
+			#modalOverlay {
+				width: 100%;
+				height: 100%;
+				z-index: 2;
+				background-color: #000;
+				opacity: 0.5;
+				position: fixed;
+				top: 0;
+				left: 0;
+				margin: 0;
+				padding: 0;
+			}
 
-                }
-                return false;
+			[role='alertdialog'] {
+				width: 50%;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 5px;
+				border: thin #000 solid;
+				background-color: #fff;
+				z-index: 3;
+				position: fixed;
+				top: 25%;
+				left: 25%;
+			}
+		</style>
+	</head>
 
-            });
-
-        });
-    </script>
-    <style type="text/css">
-        #modalOverlay {
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-            background-color: #000;
-            opacity: 0.5;
-            position: fixed;
-            top: 0;
-            left: 0;
-            margin: 0;
-            padding: 0;
-        }
-
-        [role=alertdialog] {
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 5px;
-            border: thin #000 solid;
-            background-color: #fff;
-            z-index: 3;
-            position: fixed;
-            top: 25%;
-            left: 25%;
-        }
-    </style>
-</head>
-
-<body>
-    <main>
-        <form>
-            <label for="birth">Age (years)</label>
-            <input type="number" id="birth"><br>
-            <label for="hire">Years on job</label>
-            <input type="number" id="hire"><br>
-            <button id="trigger-alertdialog">Submit</button>
-        </form>
-    </main>
-</body>
-
+	<body>
+		<main>
+			<form>
+				<label for="birth">Age (years)</label>
+				<input type="number" id="birth" /><br />
+				<label for="hire">Years on job</label>
+				<input type="number" id="hire" /><br />
+				<button id="trigger-alertdialog">Submit</button>
+			</form>
+		</main>
+	</body>
 </html>
 ```
 
@@ -375,98 +387,102 @@ alertdialog opens without moving the focus to one of its focusable elements.
 
 ```html
 <html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Using aria-alertdialog to Identify Errors</title>
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script>
+			$(document).ready(function(e) {
+				$('#trigger-alertdialog').click(function() {
+					var errors = false
+					var content = '<div id="firstElement" tabindex="0"></div><h1 id="alertHeading">Error</h1><div id="alertText">'
+					if ($('#birth').val().length === 0) {
+						content += 'Please fill age.<br>'
+						errors = true
+					}
+					if ($('#hire').val().length === 0) {
+						content += 'Please fill years on job.<br>'
+						errors = true
+					}
+					if (!errors && Number($('#hire').val()) > Number($('#birth').val())) {
+						content += 'Years on job is larger than age. Please verify age and years on job values.'
+						errors = true
+					}
+					content +=
+						'</div><button id="firstButton">Return to page and correct error</button><div id="lastElement" tabindex="0"></div>'
+					if (errors) {
+						$('main').attr('aria-hidden', 'true')
+						var lastFocus = document.activeElement
+						var modalOverlay = $('<div>').attr({ id: 'modalOverlay', tabindex: '0' })
+						$(modalOverlay).appendTo('body')
+						var dialog = $('<div>').attr({
+							role: 'alertdialog',
+							'aria-labelledby': 'alertHeading',
+							'aria-describedby': 'alertText',
+							tabindex: '0',
+						})
+						$(dialog)
+							.html(content)
+							.appendTo('body')
 
-<head>
-    <meta charset="UTF-8">
-    <title>Using aria-alertdialog to Identify Errors</title>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script>
-        $(document).ready(function (e) {
-            $('#trigger-alertdialog').click(function () {
-                var errors = false;
-                var content = '<div id="firstElement" tabindex="0"></div><h1 id="alertHeading">Error</h1><div id="alertText">';
-                if ($('#birth').val().length === 0) {
-                    content += 'Please fill age.<br>';
-                    errors = true;
-                }
-                if ($('#hire').val().length === 0) {
-                    content += 'Please fill years on job.<br>';
-                    errors = true;
-                }
-                if (!errors && Number($('#hire').val()) > Number($('#birth').val())) {
-                    content += 'Years on job is larger than age. Please verify age and years on job values.'
-                    errors = true;
-                }
-                content += '</div><button id="firstButton">Return to page and correct error</button><div id="lastElement" tabindex="0"></div>';
-                if (errors) {
-                    $('main').attr('aria-hidden', 'true');
-                    var lastFocus = document.activeElement;
-                    var modalOverlay = $('<div>').attr({ id: "modalOverlay", tabindex: "0" });
-                    $(modalOverlay).appendTo('body');
-                    var dialog = $('<div>').attr({ role: "alertdialog", "aria-labelledby": "alertHeading", "aria-describedby": "alertText", tabindex: "0" });
-                    $(dialog).html(content).appendTo('body');
+						$('#lastElement').focusin(function(e) {
+							$('#firstButton').focus()
+						})
+						$('#firstElement').focusin(function(e) {
+							$('#firstButton').focus()
+						})
 
-                    $('#lastElement').focusin(function (e) {
-                        $('#firstButton').focus();
-                    });
-                    $('#firstElement').focusin(function (e) {
-                        $('#firstButton').focus();
-                    });
+						$('[role=alertdialog] button').click(function(e) {
+							$('main').attr('aria-hidden', 'false')
+							$(modalOverlay).remove()
+							$(dialog).remove()
+							lastFocus.focus()
+						})
+					}
+					return false
+				})
+			})
+		</script>
+		<style type="text/css">
+			#modalOverlay {
+				width: 100%;
+				height: 100%;
+				z-index: 2;
+				background-color: #000;
+				opacity: 0.5;
+				position: fixed;
+				top: 0;
+				left: 0;
+				margin: 0;
+				padding: 0;
+			}
 
-                    $('[role=alertdialog] button').click(function (e) {
-                        $('main').attr('aria-hidden', 'false');
-                        $(modalOverlay).remove();
-                        $(dialog).remove();
-                        lastFocus.focus();
-                    });
-                }
-                return false;
+			[role='alertdialog'] {
+				width: 50%;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 5px;
+				border: thin #000 solid;
+				background-color: #fff;
+				z-index: 3;
+				position: fixed;
+				top: 25%;
+				left: 25%;
+			}
+		</style>
+	</head>
 
-            });
-
-        });
-    </script>
-    <style type="text/css">
-        #modalOverlay {
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-            background-color: #000;
-            opacity: 0.5;
-            position: fixed;
-            top: 0;
-            left: 0;
-            margin: 0;
-            padding: 0;
-        }
-
-        [role=alertdialog] {
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 5px;
-            border: thin #000 solid;
-            background-color: #fff;
-            z-index: 3;
-            position: fixed;
-            top: 25%;
-            left: 25%;
-        }
-    </style>
-</head>
-
-<body>
-    <main>
-        <form>
-            <label for="birth">Age (years)</label>
-            <input type="number" id="birth"><br>
-            <label for="hire">Years on job</label>
-            <input type="number" id="hire"><br>
-            <button id="trigger-alertdialog">Submit</button>
-        </form>
-    </main>
-</body>
-
+	<body>
+		<main>
+			<form>
+				<label for="birth">Age (years)</label>
+				<input type="number" id="birth" /><br />
+				<label for="hire">Years on job</label>
+				<input type="number" id="hire" /><br />
+				<button id="trigger-alertdialog">Submit</button>
+			</form>
+		</main>
+	</body>
 </html>
 ```
 
@@ -476,92 +492,96 @@ alertdialog that lets the focus move away from it.
 
 ```html
 <html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Using aria-alertdialog to Identify Errors</title>
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script>
+			$(document).ready(function(e) {
+				$('#trigger-alertdialog').click(function() {
+					var errors = false
+					var content = '<div id="firstElement" tabindex="0"></div><h1 id="alertHeading">Error</h1><div id="alertText">'
+					if ($('#birth').val().length === 0) {
+						content += 'Please fill age.<br>'
+						errors = true
+					}
+					if ($('#hire').val().length === 0) {
+						content += 'Please fill years on job.<br>'
+						errors = true
+					}
+					if (!errors && Number($('#hire').val()) > Number($('#birth').val())) {
+						content += 'Years on job is larger than age. Please verify age and years on job values.'
+						errors = true
+					}
+					content +=
+						'</div><button id="firstButton">Return to page and correct error</button><div id="lastElement" tabindex="0"></div>'
+					if (errors) {
+						$('main').attr('aria-hidden', 'true')
+						var lastFocus = document.activeElement
+						var modalOverlay = $('<div>').attr({ id: 'modalOverlay', tabindex: '0' })
+						$(modalOverlay).appendTo('body')
+						var dialog = $('<div>').attr({
+							role: 'alertdialog',
+							'aria-labelledby': 'alertHeading',
+							'aria-describedby': 'alertText',
+							tabindex: '0',
+						})
+						$(dialog)
+							.html(content)
+							.appendTo('body')
+						$('#firstButton').focus()
 
-<head>
-    <meta charset="UTF-8">
-    <title>Using aria-alertdialog to Identify Errors</title>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script>
-        $(document).ready(function (e) {
-            $('#trigger-alertdialog').click(function () {
-                var errors = false;
-                var content = '<div id="firstElement" tabindex="0"></div><h1 id="alertHeading">Error</h1><div id="alertText">';
-                if ($('#birth').val().length === 0) {
-                    content += 'Please fill age.<br>';
-                    errors = true;
-                }
-                if ($('#hire').val().length === 0) {
-                    content += 'Please fill years on job.<br>';
-                    errors = true;
-                }
-                if (!errors && Number($('#hire').val()) > Number($('#birth').val())) {
-                    content += 'Years on job is larger than age. Please verify age and years on job values.'
-                    errors = true;
-                }
-                content += '</div><button id="firstButton">Return to page and correct error</button><div id="lastElement" tabindex="0"></div>';
-                if (errors) {
-                    $('main').attr('aria-hidden', 'true');
-                    var lastFocus = document.activeElement;
-                    var modalOverlay = $('<div>').attr({ id: "modalOverlay", tabindex: "0" });
-                    $(modalOverlay).appendTo('body');
-                    var dialog = $('<div>').attr({ role: "alertdialog", "aria-labelledby": "alertHeading", "aria-describedby": "alertText", tabindex: "0" });
-                    $(dialog).html(content).appendTo('body');
-                    $('#firstButton').focus();
+						$('[role=alertdialog] button').click(function(e) {
+							$('main').attr('aria-hidden', 'false')
+							$(modalOverlay).remove()
+							$(dialog).remove()
+							lastFocus.focus()
+						})
+					}
+					return false
+				})
+			})
+		</script>
+		<style type="text/css">
+			#modalOverlay {
+				width: 100%;
+				height: 100%;
+				z-index: 2;
+				background-color: #000;
+				opacity: 0.5;
+				position: fixed;
+				top: 0;
+				left: 0;
+				margin: 0;
+				padding: 0;
+			}
 
-                    $('[role=alertdialog] button').click(function (e) {
-                        $('main').attr('aria-hidden', 'false');
-                        $(modalOverlay).remove();
-                        $(dialog).remove();
-                        lastFocus.focus();
-                    });
-                }
-                return false;
+			[role='alertdialog'] {
+				width: 50%;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 5px;
+				border: thin #000 solid;
+				background-color: #fff;
+				z-index: 3;
+				position: fixed;
+				top: 25%;
+				left: 25%;
+			}
+		</style>
+	</head>
 
-            });
-
-        });
-    </script>
-    <style type="text/css">
-        #modalOverlay {
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-            background-color: #000;
-            opacity: 0.5;
-            position: fixed;
-            top: 0;
-            left: 0;
-            margin: 0;
-            padding: 0;
-        }
-
-        [role=alertdialog] {
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 5px;
-            border: thin #000 solid;
-            background-color: #fff;
-            z-index: 3;
-            position: fixed;
-            top: 25%;
-            left: 25%;
-        }
-    </style>
-</head>
-
-<body>
-    <main>
-        <form>
-            <label for="birth">Age (years)</label>
-            <input type="number" id="birth"><br>
-            <label for="hire">Years on job</label>
-            <input type="number" id="hire"><br>
-            <button id="trigger-alertdialog">Submit</button>
-        </form>
-    </main>
-</body>
-
+	<body>
+		<main>
+			<form>
+				<label for="birth">Age (years)</label>
+				<input type="number" id="birth" /><br />
+				<label for="hire">Years on job</label>
+				<input type="number" id="hire" /><br />
+				<button id="trigger-alertdialog">Submit</button>
+			</form>
+		</main>
+	</body>
 </html>
 ```
 
@@ -571,98 +591,102 @@ After closing the alertdialog the focus does not return to the element that had 
 
 ```html
 <html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Using aria-alertdialog to Identify Errors</title>
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script>
+			$(document).ready(function(e) {
+				$('#trigger-alertdialog').click(function() {
+					var errors = false
+					var content = '<div id="firstElement" tabindex="0"></div><h1 id="alertHeading">Error</h1><div id="alertText">'
+					if ($('#birth').val().length === 0) {
+						content += 'Please fill age.<br>'
+						errors = true
+					}
+					if ($('#hire').val().length === 0) {
+						content += 'Please fill years on job.<br>'
+						errors = true
+					}
+					if (!errors && Number($('#hire').val()) > Number($('#birth').val())) {
+						content += 'Years on job is larger than age. Please verify age and years on job values.'
+						errors = true
+					}
+					content +=
+						'</div><button id="firstButton">Return to page and correct error</button><div id="lastElement" tabindex="0"></div>'
+					if (errors) {
+						$('main').attr('aria-hidden', 'true')
+						var modalOverlay = $('<div>').attr({ id: 'modalOverlay', tabindex: '0' })
+						$(modalOverlay).appendTo('body')
+						var dialog = $('<div>').attr({
+							role: 'alertdialog',
+							'aria-labelledby': 'alertHeading',
+							'aria-describedby': 'alertText',
+							tabindex: '0',
+						})
+						$(dialog)
+							.html(content)
+							.appendTo('body')
+						$('#firstButton').focus()
 
-<head>
-    <meta charset="UTF-8">
-    <title>Using aria-alertdialog to Identify Errors</title>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script>
-        $(document).ready(function (e) {
-            $('#trigger-alertdialog').click(function () {
-                var errors = false;
-                var content = '<div id="firstElement" tabindex="0"></div><h1 id="alertHeading">Error</h1><div id="alertText">';
-                if ($('#birth').val().length === 0) {
-                    content += 'Please fill age.<br>';
-                    errors = true;
-                }
-                if ($('#hire').val().length === 0) {
-                    content += 'Please fill years on job.<br>';
-                    errors = true;
-                }
-                if (!errors && Number($('#hire').val()) > Number($('#birth').val())) {
-                    content += 'Years on job is larger than age. Please verify age and years on job values.'
-                    errors = true;
-                }
-                content += '</div><button id="firstButton">Return to page and correct error</button><div id="lastElement" tabindex="0"></div>';
-                if (errors) {
-                    $('main').attr('aria-hidden', 'true');
-                    var modalOverlay = $('<div>').attr({ id: "modalOverlay", tabindex: "0" });
-                    $(modalOverlay).appendTo('body');
-                    var dialog = $('<div>').attr({ role: "alertdialog", "aria-labelledby": "alertHeading", "aria-describedby": "alertText", tabindex: "0" });
-                    $(dialog).html(content).appendTo('body');
-                    $('#firstButton').focus();
+						$('#lastElement').focusin(function(e) {
+							$('#firstButton').focus()
+						})
+						$('#firstElement').focusin(function(e) {
+							$('#firstButton').focus()
+						})
 
-                    $('#lastElement').focusin(function (e) {
-                        $('#firstButton').focus();
-                    });
-                    $('#firstElement').focusin(function (e) {
-                        $('#firstButton').focus();
-                    });
+						$('[role=alertdialog] button').click(function(e) {
+							$('main').attr('aria-hidden', 'false')
+							$(modalOverlay).remove()
+							$(dialog).remove()
+							$('#birth').focus()
+						})
+					}
+					return false
+				})
+			})
+		</script>
+		<style type="text/css">
+			#modalOverlay {
+				width: 100%;
+				height: 100%;
+				z-index: 2;
+				background-color: #000;
+				opacity: 0.5;
+				position: fixed;
+				top: 0;
+				left: 0;
+				margin: 0;
+				padding: 0;
+			}
 
-                    $('[role=alertdialog] button').click(function (e) {
-                        $('main').attr('aria-hidden', 'false');
-                        $(modalOverlay).remove();
-                        $(dialog).remove();
-                        $('#birth').focus();
-                    });
-                }
-                return false;
+			[role='alertdialog'] {
+				width: 50%;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 5px;
+				border: thin #000 solid;
+				background-color: #fff;
+				z-index: 3;
+				position: fixed;
+				top: 25%;
+				left: 25%;
+			}
+		</style>
+	</head>
 
-            });
-
-        });
-    </script>
-    <style type="text/css">
-        #modalOverlay {
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-            background-color: #000;
-            opacity: 0.5;
-            position: fixed;
-            top: 0;
-            left: 0;
-            margin: 0;
-            padding: 0;
-        }
-
-        [role=alertdialog] {
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 5px;
-            border: thin #000 solid;
-            background-color: #fff;
-            z-index: 3;
-            position: fixed;
-            top: 25%;
-            left: 25%;
-        }
-    </style>
-</head>
-
-<body>
-    <main>
-        <form>
-            <label for="birth">Age (years)</label>
-            <input type="number" id="birth"><br>
-            <label for="hire">Years on job</label>
-            <input type="number" id="hire"><br>
-            <button id="trigger-alertdialog">Submit</button>
-        </form>
-    </main>
-</body>
-
+	<body>
+		<main>
+			<form>
+				<label for="birth">Age (years)</label>
+				<input type="number" id="birth" /><br />
+				<label for="hire">Years on job</label>
+				<input type="number" id="hire" /><br />
+				<button id="trigger-alertdialog">Submit</button>
+			</form>
+		</main>
+	</body>
 </html>
 ```
 
@@ -672,99 +696,98 @@ The element with `role="alertdialog"` does not have an accessible name.
 
 ```html
 <html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Using aria-alertdialog to Identify Errors</title>
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script>
+			$(document).ready(function(e) {
+				$('#trigger-alertdialog').click(function() {
+					var errors = false
+					var content = '<div id="firstElement" tabindex="0"></div><h1 id="alertHeading">Error</h1><div id="alertText">'
+					if ($('#birth').val().length === 0) {
+						content += 'Please fill age.<br>'
+						errors = true
+					}
+					if ($('#hire').val().length === 0) {
+						content += 'Please fill years on job.<br>'
+						errors = true
+					}
+					if (!errors && Number($('#hire').val()) > Number($('#birth').val())) {
+						content += 'Years on job is larger than age. Please verify age and years on job values.'
+						errors = true
+					}
+					content +=
+						'</div><button id="firstButton">Return to page and correct error</button><div id="lastElement" tabindex="0"></div>'
+					if (errors) {
+						$('main').attr('aria-hidden', 'true')
+						var lastFocus = document.activeElement
+						var modalOverlay = $('<div>').attr({ id: 'modalOverlay', tabindex: '0' })
+						$(modalOverlay).appendTo('body')
+						var dialog = $('<div>').attr({ role: 'alertdialog', 'aria-describedby': 'alertText', tabindex: '0' })
+						$(dialog)
+							.html(content)
+							.appendTo('body')
+						$('#firstButton').focus()
 
-<head>
-    <meta charset="UTF-8">
-    <title>Using aria-alertdialog to Identify Errors</title>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script>
-        $(document).ready(function (e) {
-            $('#trigger-alertdialog').click(function () {
-                var errors = false;
-                var content = '<div id="firstElement" tabindex="0"></div><h1 id="alertHeading">Error</h1><div id="alertText">';
-                if ($('#birth').val().length === 0) {
-                    content += 'Please fill age.<br>';
-                    errors = true;
-                }
-                if ($('#hire').val().length === 0) {
-                    content += 'Please fill years on job.<br>';
-                    errors = true;
-                }
-                if (!errors && Number($('#hire').val()) > Number($('#birth').val())) {
-                    content += 'Years on job is larger than age. Please verify age and years on job values.'
-                    errors = true;
-                }
-                content += '</div><button id="firstButton">Return to page and correct error</button><div id="lastElement" tabindex="0"></div>';
-                if (errors) {
-                    $('main').attr('aria-hidden', 'true');
-                    var lastFocus = document.activeElement;
-                    var modalOverlay = $('<div>').attr({ id: "modalOverlay", tabindex: "0" });
-                    $(modalOverlay).appendTo('body');
-                    var dialog = $('<div>').attr({ role: "alertdialog", "aria-describedby": "alertText", tabindex: "0" });
-                    $(dialog).html(content).appendTo('body');
-                    $('#firstButton').focus();
+						$('#lastElement').focusin(function(e) {
+							$('#firstButton').focus()
+						})
+						$('#firstElement').focusin(function(e) {
+							$('#firstButton').focus()
+						})
 
-                    $('#lastElement').focusin(function (e) {
-                        $('#firstButton').focus();
-                    });
-                    $('#firstElement').focusin(function (e) {
-                        $('#firstButton').focus();
-                    });
+						$('[role=alertdialog] button').click(function(e) {
+							$('main').attr('aria-hidden', 'false')
+							$(modalOverlay).remove()
+							$(dialog).remove()
+							lastFocus.focus()
+						})
+					}
+					return false
+				})
+			})
+		</script>
+		<style type="text/css">
+			#modalOverlay {
+				width: 100%;
+				height: 100%;
+				z-index: 2;
+				background-color: #000;
+				opacity: 0.5;
+				position: fixed;
+				top: 0;
+				left: 0;
+				margin: 0;
+				padding: 0;
+			}
 
-                    $('[role=alertdialog] button').click(function (e) {
-                        $('main').attr('aria-hidden', 'false');
-                        $(modalOverlay).remove();
-                        $(dialog).remove();
-                        lastFocus.focus();
-                    });
-                }
-                return false;
+			[role='alertdialog'] {
+				width: 50%;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 5px;
+				border: thin #000 solid;
+				background-color: #fff;
+				z-index: 3;
+				position: fixed;
+				top: 25%;
+				left: 25%;
+			}
+		</style>
+	</head>
 
-            });
-
-        });
-    </script>
-    <style type="text/css">
-        #modalOverlay {
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-            background-color: #000;
-            opacity: 0.5;
-            position: fixed;
-            top: 0;
-            left: 0;
-            margin: 0;
-            padding: 0;
-        }
-
-        [role=alertdialog] {
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 5px;
-            border: thin #000 solid;
-            background-color: #fff;
-            z-index: 3;
-            position: fixed;
-            top: 25%;
-            left: 25%;
-        }
-    </style>
-</head>
-
-<body>
-    <main>
-        <form>
-            <label for="birth">Age (years)</label>
-            <input type="number" id="birth"><br>
-            <label for="hire">Years on job</label>
-            <input type="number" id="hire"><br>
-            <button id="trigger-alertdialog">Submit</button>
-        </form>
-    </main>
-</body>
-
+	<body>
+		<main>
+			<form>
+				<label for="birth">Age (years)</label>
+				<input type="number" id="birth" /><br />
+				<label for="hire">Years on job</label>
+				<input type="number" id="hire" /><br />
+				<button id="trigger-alertdialog">Submit</button>
+			</form>
+		</main>
+	</body>
 </html>
 ```
 
@@ -774,97 +797,101 @@ The content of the alertdialog does not identify the error.
 
 ```html
 <html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Using aria-alertdialog to Identify Errors</title>
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script>
+			$(document).ready(function(e) {
+				$('#trigger-alertdialog').click(function() {
+					var errors = false
+					var content = '<div id="firstElement" tabindex="0"></div><h1 id="alertHeading">Error</h1><div id="alertText">'
+					if ($('#birth').val().length === 0) {
+						errors = true
+					}
+					if ($('#hire').val().length === 0) {
+						errors = true
+					}
+					if (!errors && Number($('#hire').val()) > Number($('#birth').val())) {
+						errors = true
+					}
+					if (errors) {
+						content += 'Please fix the errors.<br>'
+						content +=
+							'</div><button id="firstButton">Return to page and correct error</button><div id="lastElement" tabindex="0"></div>'
+						$('main').attr('aria-hidden', 'true')
+						var lastFocus = document.activeElement
+						var modalOverlay = $('<div>').attr({ id: 'modalOverlay', tabindex: '0' })
+						$(modalOverlay).appendTo('body')
+						var dialog = $('<div>').attr({
+							role: 'alertdialog',
+							'aria-labelledby': 'alertHeading',
+							'aria-describedby': 'alertText',
+							tabindex: '0',
+						})
+						$(dialog)
+							.html(content)
+							.appendTo('body')
+						$('#firstButton').focus()
 
-<head>
-    <meta charset="UTF-8">
-    <title>Using aria-alertdialog to Identify Errors</title>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script>
-        $(document).ready(function (e) {
-            $('#trigger-alertdialog').click(function () {
-                var errors = false;
-                var content = '<div id="firstElement" tabindex="0"></div><h1 id="alertHeading">Error</h1><div id="alertText">';
-                if ($('#birth').val().length === 0) {
-                    errors = true;
-                }
-                if ($('#hire').val().length === 0) {
-                    errors = true;
-                }
-                if (!errors && Number($('#hire').val()) > Number($('#birth').val())) {
-                    errors = true;
-                }
-                if (errors) {
-                    content += 'Please fix the errors.<br>';
-                    content += '</div><button id="firstButton">Return to page and correct error</button><div id="lastElement" tabindex="0"></div>';
-                    $('main').attr('aria-hidden', 'true');
-                    var lastFocus = document.activeElement;
-                    var modalOverlay = $('<div>').attr({ id: "modalOverlay", tabindex: "0" });
-                    $(modalOverlay).appendTo('body');
-                    var dialog = $('<div>').attr({ role: "alertdialog", "aria-labelledby": "alertHeading", "aria-describedby": "alertText", tabindex: "0" });
-                    $(dialog).html(content).appendTo('body');
-                    $('#firstButton').focus();
+						$('#lastElement').focusin(function(e) {
+							$('#firstButton').focus()
+						})
+						$('#firstElement').focusin(function(e) {
+							$('#firstButton').focus()
+						})
 
-                    $('#lastElement').focusin(function (e) {
-                        $('#firstButton').focus();
-                    });
-                    $('#firstElement').focusin(function (e) {
-                        $('#firstButton').focus();
-                    });
+						$('[role=alertdialog] button').click(function(e) {
+							$('main').attr('aria-hidden', 'false')
+							$(modalOverlay).remove()
+							$(dialog).remove()
+							lastFocus.focus()
+						})
+					}
+					return false
+				})
+			})
+		</script>
+		<style type="text/css">
+			#modalOverlay {
+				width: 100%;
+				height: 100%;
+				z-index: 2;
+				background-color: #000;
+				opacity: 0.5;
+				position: fixed;
+				top: 0;
+				left: 0;
+				margin: 0;
+				padding: 0;
+			}
 
-                    $('[role=alertdialog] button').click(function (e) {
-                        $('main').attr('aria-hidden', 'false');
-                        $(modalOverlay).remove();
-                        $(dialog).remove();
-                        lastFocus.focus();
-                    });
-                }
-                return false;
+			[role='alertdialog'] {
+				width: 50%;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 5px;
+				border: thin #000 solid;
+				background-color: #fff;
+				z-index: 3;
+				position: fixed;
+				top: 25%;
+				left: 25%;
+			}
+		</style>
+	</head>
 
-            });
-
-        });
-    </script>
-    <style type="text/css">
-        #modalOverlay {
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-            background-color: #000;
-            opacity: 0.5;
-            position: fixed;
-            top: 0;
-            left: 0;
-            margin: 0;
-            padding: 0;
-        }
-
-        [role=alertdialog] {
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 5px;
-            border: thin #000 solid;
-            background-color: #fff;
-            z-index: 3;
-            position: fixed;
-            top: 25%;
-            left: 25%;
-        }
-    </style>
-</head>
-
-<body>
-    <main>
-        <form>
-            <label for="birth">Age (years)</label>
-            <input type="number" id="birth"><br>
-            <label for="hire">Years on job</label>
-            <input type="number" id="hire"><br>
-            <button id="trigger-alertdialog">Submit</button>
-        </form>
-    </main>
-</body>
-
+	<body>
+		<main>
+			<form>
+				<label for="birth">Age (years)</label>
+				<input type="number" id="birth" /><br />
+				<label for="hire">Years on job</label>
+				<input type="number" id="hire" /><br />
+				<button id="trigger-alertdialog">Submit</button>
+			</form>
+		</main>
+	</body>
 </html>
 ```
 
@@ -884,9 +911,9 @@ Form that does not include automatic detection of input errors.
 
 ```html
 <form>
-  <label for="text_field">Name (required)</label>
-  <input type="text" id="text_field" />
-  <input type="button" value="Submit" />
-  <div id="error"></div>
+	<label for="text_field">Name (required)</label>
+	<input type="text" id="text_field" />
+	<input type="button" value="Submit" />
+	<div id="error"></div>
 </form>
 ```

@@ -6,7 +6,7 @@ rule_type: atomic
 description: |
   This rule checks that a container with `role=alert` or a live region are used to identify input errors.
 
-accessibility_requirements: 
+accessibility_requirements:
   wcag-technique:ARIA19: # Using ARIA role=alert or Live Regions to Identify Errors
     forConformance: false
     failed: not satisfied
@@ -67,44 +67,44 @@ Element with `role="alert"` displays a message on [input error](https://www.w3.o
 
 ```html
 <html>
-<head>
-<meta charset="UTF-8">
-<script src="http://code.jquery.com/jquery.js"></script>
-<script>
-$(document).ready(function(e) {
-    $('#name').focusout(function () {
-		$('#errors').html('');
-        if ($('#name').val() === '') {
-            $('#errors').append('<p>Please enter your name.</p>');
-        }
-    });
+	<head>
+		<meta charset="UTF-8" />
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script>
+			$(document).ready(function(e) {
+				$('#name').focusout(function() {
+					$('#errors').html('')
+					if ($('#name').val() === '') {
+						$('#errors').append('<p>Please enter your name.</p>')
+					}
+				})
 
-    $('#email').focusout(function () {
-		$('#errors').html('');
-        if ($('#email').val() === '') {
-            $('#errors').append('<p>Please enter your email address.</p>');
-        }
-    });
-});
-</script>
-</head>
+				$('#email').focusout(function() {
+					$('#errors').html('')
+					if ($('#email').val() === '') {
+						$('#errors').append('<p>Please enter your email address.</p>')
+					}
+				})
+			})
+		</script>
+	</head>
 
-<body>
-<form name="signup" id="signup" method="post" action="">
-  <p id="errors" role="alert" aria-atomic="true"></p>
-  <p>
-    <label for="name">Name (required)</label><br>
-    <input type="text" name="name" id="name">
-  </p>
-  <p>
-    <label for="email">Email (required)</label><br>
-    <input type="text" name="email" id="email">
-  </p>
-  <p>
-    <input type="submit" name="button" id="button" value="Submit">
-  </p>
-</form>
-</body>
+	<body>
+		<form name="signup" id="signup" method="post" action="">
+			<p id="errors" role="alert" aria-atomic="true"></p>
+			<p>
+				<label for="name">Name (required)</label><br />
+				<input type="text" name="name" id="name" />
+			</p>
+			<p>
+				<label for="email">Email (required)</label><br />
+				<input type="text" name="email" id="email" />
+			</p>
+			<p>
+				<input type="submit" name="button" id="button" value="Submit" />
+			</p>
+		</form>
+	</body>
 </html>
 ```
 
@@ -114,44 +114,44 @@ Element with `aria-live="assertive"` displays a message on [input error](https:/
 
 ```html
 <html>
-<head>
-<meta charset="UTF-8">
-<script src="http://code.jquery.com/jquery.js"></script>
-<script>
-$(document).ready(function(e) {
-    $('#name').focusout(function () {
-		$('#errors').html('');
-        if ($('#name').val() === '') {
-            $('#errors').append('<p>Please enter your name.</p>');
-        }
-    });
+	<head>
+		<meta charset="UTF-8" />
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script>
+			$(document).ready(function(e) {
+				$('#name').focusout(function() {
+					$('#errors').html('')
+					if ($('#name').val() === '') {
+						$('#errors').append('<p>Please enter your name.</p>')
+					}
+				})
 
-    $('#email').focusout(function () {
-		$('#errors').html('');
-        if ($('#email').val() === '') {
-            $('#errors').append('<p>Please enter your email address.</p>');
-        }
-    });
-});
-</script>
-</head>
+				$('#email').focusout(function() {
+					$('#errors').html('')
+					if ($('#email').val() === '') {
+						$('#errors').append('<p>Please enter your email address.</p>')
+					}
+				})
+			})
+		</script>
+	</head>
 
-<body>
-<form name="signup" id="signup" method="post" action="">
-  <p id="errors" aria-live="assertive" aria-atomic="true"></p>
-  <p>
-    <label for="name">Name (required)</label><br>
-    <input type="text" name="name" id="name">
-  </p>
-  <p>
-    <label for="email">Email (required)</label><br>
-    <input type="text" name="email" id="email">
-  </p>
-  <p>
-    <input type="submit" name="button" id="button" value="Submit">
-  </p>
-</form>
-</body>
+	<body>
+		<form name="signup" id="signup" method="post" action="">
+			<p id="errors" aria-live="assertive" aria-atomic="true"></p>
+			<p>
+				<label for="name">Name (required)</label><br />
+				<input type="text" name="name" id="name" />
+			</p>
+			<p>
+				<label for="email">Email (required)</label><br />
+				<input type="text" name="email" id="email" />
+			</p>
+			<p>
+				<input type="submit" name="button" id="button" value="Submit" />
+			</p>
+		</form>
+	</body>
 </html>
 ```
 
@@ -163,18 +163,18 @@ Document does not present a message on [input error](https://www.w3.org/TR/WCAG2
 
 ```html
 <form name="signup" id="signup" method="post" action="">
-  <p id="errors" aria-live="assertive" aria-atomic="true"></p>
-  <p>
-    <label for="name">Name (required)</label><br>
-    <input type="text" name="name" id="name" required>
-  </p>
-  <p>
-    <label for="email">Email (required)</label><br>
-    <input type="text" name="email" id="email" required>
-  </p>
-  <p>
-    <input type="button" name="button" id="button" value="Submit">
-  </p>
+	<p id="errors" aria-live="assertive" aria-atomic="true"></p>
+	<p>
+		<label for="name">Name (required)</label><br />
+		<input type="text" name="name" id="name" required />
+	</p>
+	<p>
+		<label for="email">Email (required)</label><br />
+		<input type="text" name="email" id="email" required />
+	</p>
+	<p>
+		<input type="button" name="button" id="button" value="Submit" />
+	</p>
 </form>
 ```
 
@@ -184,44 +184,44 @@ The message is not included in the accessibility tree.
 
 ```html
 <html>
-<head>
-<meta charset="UTF-8">
-<script src="http://code.jquery.com/jquery.js"></script>
-<script>
-$(document).ready(function(e) {
-    $('#name').focusout(function () {
-		$('#errors').html('');
-        if ($('#name').val() === '') {
-            $('#errors').append('<p>Please enter your name.</p>');
-        }
-    });
+	<head>
+		<meta charset="UTF-8" />
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script>
+			$(document).ready(function(e) {
+				$('#name').focusout(function() {
+					$('#errors').html('')
+					if ($('#name').val() === '') {
+						$('#errors').append('<p>Please enter your name.</p>')
+					}
+				})
 
-    $('#email').focusout(function () {
-		$('#errors').html('');
-        if ($('#email').val() === '') {
-            $('#errors').append('<p>Please enter your email address.</p>');
-        }
-    });
-});
-</script>
-</head>
+				$('#email').focusout(function() {
+					$('#errors').html('')
+					if ($('#email').val() === '') {
+						$('#errors').append('<p>Please enter your email address.</p>')
+					}
+				})
+			})
+		</script>
+	</head>
 
-<body>
-<form name="signup" id="signup" method="post" action="">
-  <p id="errors" aria-live="assertive" aria-atomic="true" aria-hidden="true"></p>
-  <p>
-    <label for="name">Name (required)</label><br>
-    <input type="text" name="name" id="name">
-  </p>
-  <p>
-    <label for="email">Email (required)</label><br>
-    <input type="text" name="email" id="email">
-  </p>
-  <p>
-    <input type="submit" name="button" id="button" value="Submit">
-  </p>
-</form>
-</body>
+	<body>
+		<form name="signup" id="signup" method="post" action="">
+			<p id="errors" aria-live="assertive" aria-atomic="true" aria-hidden="true"></p>
+			<p>
+				<label for="name">Name (required)</label><br />
+				<input type="text" name="name" id="name" />
+			</p>
+			<p>
+				<label for="email">Email (required)</label><br />
+				<input type="text" name="email" id="email" />
+			</p>
+			<p>
+				<input type="submit" name="button" id="button" value="Submit" />
+			</p>
+		</form>
+	</body>
 </html>
 ```
 
@@ -231,44 +231,44 @@ The message does not identify the [input error](https://www.w3.org/TR/WCAG21/#df
 
 ```html
 <html>
-<head>
-<meta charset="UTF-8">
-<script src="http://code.jquery.com/jquery.js"></script>
-<script>
-$(document).ready(function(e) {
-    $('#name').focusout(function () {
-		$('#errors').html('');
-        if ($('#name').val() === '') {
-            $('#errors').append('<p>Please fix the error.</p>');
-        }
-    });
+	<head>
+		<meta charset="UTF-8" />
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script>
+			$(document).ready(function(e) {
+				$('#name').focusout(function() {
+					$('#errors').html('')
+					if ($('#name').val() === '') {
+						$('#errors').append('<p>Please fix the error.</p>')
+					}
+				})
 
-    $('#email').focusout(function () {
-		$('#errors').html('');
-        if ($('#email').val() === '') {
-            $('#errors').append('<p>Please fix the error.</p>');
-        }
-    });
-});
-</script>
-</head>
+				$('#email').focusout(function() {
+					$('#errors').html('')
+					if ($('#email').val() === '') {
+						$('#errors').append('<p>Please fix the error.</p>')
+					}
+				})
+			})
+		</script>
+	</head>
 
-<body>
-<form name="signup" id="signup" method="post" action="">
-  <p id="errors" aria-live="assertive" aria-atomic="true"></p>
-  <p>
-    <label for="name">Name (required)</label><br>
-    <input type="text" name="name" id="name">
-  </p>
-  <p>
-    <label for="email">Email (required)</label><br>
-    <input type="text" name="email" id="email">
-  </p>
-  <p>
-    <input type="submit" name="button" id="button" value="Submit">
-  </p>
-</form>
-</body>
+	<body>
+		<form name="signup" id="signup" method="post" action="">
+			<p id="errors" aria-live="assertive" aria-atomic="true"></p>
+			<p>
+				<label for="name">Name (required)</label><br />
+				<input type="text" name="name" id="name" />
+			</p>
+			<p>
+				<label for="email">Email (required)</label><br />
+				<input type="text" name="email" id="email" />
+			</p>
+			<p>
+				<input type="submit" name="button" id="button" value="Submit" />
+			</p>
+		</form>
+	</body>
 </html>
 ```
 
@@ -284,12 +284,12 @@ No input element.
 
 #### Inapplicable Example 2
 
- [Document](https://www.w3.org/TR/dom/#concept-document) where the [document element](https://www.w3.org/TR/dom/#document-element) is not an HTML `html` element.
+[Document](https://www.w3.org/TR/dom/#concept-document) where the [document element](https://www.w3.org/TR/dom/#document-element) is not an HTML `html` element.
 
 ```html
 <svg height="100" width="100">
-    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
-    Sorry, your browser does not support inline SVG.
+	<circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+	Sorry, your browser does not support inline SVG.
 </svg>
 ```
 
@@ -299,43 +299,43 @@ Document does not have an element with `role="alert"` or a live region.
 
 ```html
 <html>
-<head>
-<meta charset="UTF-8">
-<script src="http://code.jquery.com/jquery.js"></script>
-<script>
-$(document).ready(function(e) {
-    $('#name').focusout(function () {
-		$('#errors').html('');
-        if ($('#name').val() === '') {
-            $('#errors').append('<p>Please enter your name.</p>');
-        }
-    });
+	<head>
+		<meta charset="UTF-8" />
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script>
+			$(document).ready(function(e) {
+				$('#name').focusout(function() {
+					$('#errors').html('')
+					if ($('#name').val() === '') {
+						$('#errors').append('<p>Please enter your name.</p>')
+					}
+				})
 
-    $('#email').focusout(function () {
-		$('#errors').html('');
-        if ($('#email').val() === '') {
-            $('#errors').append('<p>Please enter your email address.</p>');
-        }
-    });
-});
-</script>
-</head>
+				$('#email').focusout(function() {
+					$('#errors').html('')
+					if ($('#email').val() === '') {
+						$('#errors').append('<p>Please enter your email address.</p>')
+					}
+				})
+			})
+		</script>
+	</head>
 
-<body>
-<form name="signup" id="signup" method="post" action="">
-  <p id="errors" aria-atomic="true"></p>
-  <p>
-    <label for="name">Name (required)</label><br>
-    <input type="text" name="name" id="name">
-  </p>
-  <p>
-    <label for="email">Email (required)</label><br>
-    <input type="text" name="email" id="email">
-  </p>
-  <p>
-    <input type="submit" name="button" id="button" value="Submit">
-  </p>
-</form>
-</body>
+	<body>
+		<form name="signup" id="signup" method="post" action="">
+			<p id="errors" aria-atomic="true"></p>
+			<p>
+				<label for="name">Name (required)</label><br />
+				<input type="text" name="name" id="name" />
+			</p>
+			<p>
+				<label for="email">Email (required)</label><br />
+				<input type="text" name="email" id="email" />
+			</p>
+			<p>
+				<input type="submit" name="button" id="button" value="Submit" />
+			</p>
+		</form>
+	</body>
 </html>
 ```

@@ -96,7 +96,7 @@ URLs differ due to trailing slashes, but resolves to the same resource after red
 
 #### Passed Example 6
 
-Pages contain different amounts of information and/or differently worded information, but fulfil the same purpose in relation to the link:
+Pages contain different amounts of information and/or differently worded information, but fulfill the same purpose in relation to the link:
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html">Call us</a>

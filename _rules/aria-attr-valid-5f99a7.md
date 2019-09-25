@@ -68,7 +68,7 @@ A valid ARIA 1.1 attribute `aria-live` on element `div` with role `alert`
 
 #### Passed Example 4
 
-Muliple valid ARIA 1.1 attributes `aria-*` are specified on element `input` with role `spinbutton`
+Multiple valid ARIA 1.1 attributes `aria-*` are specified on element `input` with role `spinbutton`
 
 ```html
 <input role="spinbutton" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" type="number" value="25" />

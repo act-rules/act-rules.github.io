@@ -3,9 +3,9 @@ id: 2ee8b8
 name: Label and name from content mismatch
 rule_type: atomic
 description: |
-  This rule checks that interactive elements labelled through their content have their visible label as part of their accessible name.
+  This rule checks that interactive elements labeled through their content have their visible label as part of their accessible name.
 accessibility_requirements:
-  wcag20:2.5.3: # Label in Name
+  wcag21:2.5.3: # Label in Name
     forConformance: true
     failed: not satisfied
     passed: further testing needed

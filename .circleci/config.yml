@@ -32,15 +32,21 @@ jobs:
       - checkout
       - <<: *restore_dependency_cache
       - run: npm test
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+      - <<: *restore_dependency_cache
+      - run: npm run build
   deploy:
     <<: *defaults
     steps:
       - checkout
       - <<: *restore_dependency_cache
       - run: npm run build
-      - deploy:
+      - run:
           name: Deploy to master branch from develop branch
-          command: bash .circleci/publish-site.sh
+          command: bash publish.sh
             
 workflows:
   version: 2
@@ -50,10 +56,14 @@ workflows:
       - test:
           requires:
             - dependencies
+      - build:
+          requires:
+            - dependencies
       - deploy:
           requires:
             - dependencies
             - test
+            - build
           filters:
             branches:
               only: develop

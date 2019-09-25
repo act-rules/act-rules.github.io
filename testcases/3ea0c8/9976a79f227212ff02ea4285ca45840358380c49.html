@@ -1,0 +1,8 @@
+
+<div id="my-elt"></div>
+<div id="host"></div>
+<script>
+	var host = document.getElementById('host')
+	var shadow = host.attachShadow({ mode: 'open' })
+	shadow.innerHTML = '<b id="my-elt"></b>'
+</script>

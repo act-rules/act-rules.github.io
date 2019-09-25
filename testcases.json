@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 573,
+  "count": 574,
   "testcases": [
     {
       "testcaseId": "29097dbe000aa32fd9a66fce65a9a7f4b413e7ff",
@@ -4864,9 +4864,26 @@
       }
     },
     {
-      "testcaseId": "9a11d581d79358cc96921ebd6cc7108fe5eb8a57",
-      "url": "https://act-rules.github.io/testcases/3ea0c8/9a11d581d79358cc96921ebd6cc7108fe5eb8a57.html",
-      "relativePath": "testcases/3ea0c8/9a11d581d79358cc96921ebd6cc7108fe5eb8a57.html",
+      "testcaseId": "9976a79f227212ff02ea4285ca45840358380c49",
+      "url": "https://act-rules.github.io/testcases/3ea0c8/9976a79f227212ff02ea4285ca45840358380c49.html",
+      "relativePath": "testcases/3ea0c8/9976a79f227212ff02ea4285ca45840358380c49.html",
+      "expected": "passed",
+      "ruleId": "3ea0c8",
+      "ruleName": "`id` attribute value is unique",
+      "rulePage": "https://act-rules.github.io/rules/3ea0c8",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "e796a3abd41c4ec8d7d4e507914324c3f27d0e1e",
+      "url": "https://act-rules.github.io/testcases/3ea0c8/e796a3abd41c4ec8d7d4e507914324c3f27d0e1e.html",
+      "relativePath": "testcases/3ea0c8/e796a3abd41c4ec8d7d4e507914324c3f27d0e1e.html",
       "expected": "passed",
       "ruleId": "3ea0c8",
       "ruleName": "`id` attribute value is unique",

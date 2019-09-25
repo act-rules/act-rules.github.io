@@ -26,7 +26,7 @@ authors:
 
 ## Applicability
 
-Any [text node](https://dom.spec.whatwg.org/#text) that is [visible](#visible) and a [child](https://dom.spec.whatwg.org/#concept-tree-child) (in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree)) of an HTML element, except if the [text node](https://dom.spec.whatwg.org/#text) is a [descendent](https://dom.spec.whatwg.org/#concept-shadow-including-descendant) of an element that:
+Any [text node](https://dom.spec.whatwg.org/#text) that is [visible](#visible) and a [child](https://dom.spec.whatwg.org/#concept-tree-child) (in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree)) of an HTML element, except if the [text node](https://dom.spec.whatwg.org/#text) is a [descendant](https://dom.spec.whatwg.org/#concept-shadow-including-descendant) of an element that:
 
 - Has a [semantic role](#semantic-role) that inherits from [widget](https://www.w3.org/TR/wai-aria-1.1/#widget)
 - Is used in the [accessible name](#accessible-name) of a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget) that is [disabled](#disabled) (i.e. It is part of the label)

@@ -72,15 +72,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 #### Failed Example 2
 
-`html` element with non-matching primary language subtags for `lang` and `xml:lang`.
-
-```html
-<html lang="yue" xml:lang="cmn"></html>
-```
-
-#### Failed Example 3
-
-`html` element with non-matching primary and extended language subtags for `lang` and `xml:lang`.
+`html` element with non-matching extended language subtags for `lang` and `xml:lang`. While the primary language subtag is Chinese for both the `lang` and `xml:lang` attribute, the extended language subtag is Cantonese for the `lang` attribute and Mandarin for the `xml:lang` attribute.
 
 ```html
 <html lang="zh-yue" xml:lang="zh-cmn"></html>

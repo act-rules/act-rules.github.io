@@ -44,6 +44,7 @@
 - whitespace 
 - namespaces 
 - webpage
+- slottable
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete 
@@ -56,6 +57,10 @@
 - www.w3.org 
 - eval 
 - html52
+- dom.spec.whatwg.org
+- drafts.csswg.org
+- assigning-slotables-and-slots
+- finding-slots-and-slotables
 
 # Other tool names
 - axe-core

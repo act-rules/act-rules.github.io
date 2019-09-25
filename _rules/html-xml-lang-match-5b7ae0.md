@@ -23,11 +23,10 @@ This rule applies to any [document element](https://dom.spec.whatwg.org/#documen
 
 ## Expectation
 
-For each test target, the value of the primary language subtag (characters before the first dash) for the `lang` and `xml:lang` attributes are the same.
+For each test target, the values of the [primary language subtags](https://tools.ietf.org/html/bcp47#section-2.2.1) and the [extended language subtags](https://tools.ietf.org/html/bcp47#section-2.2.2), if any exist, for the `lang` and `xml:lang` attributes are the same.
 
 ## Assumptions
 
-- Although there is no known way that an inappropriate secondary subtag in the `lang` or `xml:lang` attribute (such as `en-XYZ`) can lead to accessibility issues, it is conceivable that with specific assistive technologies on some languages, there can be exceptions. In that case `lang` and `xml:lang` should have matching secondary subtags.
 - The presence of a `lang` attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
 
 ## Accessibility Support
@@ -47,7 +46,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 #### Passed Example 1
 
-`html` element with matching value for `lang` and `xml:lang`.
+`html` element with matching primary language subtags for `lang` and `xml:lang`.
 
 ```html
 <html lang="en" xml:lang="en"></html>
@@ -55,44 +54,36 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 #### Passed Example 2
 
-`html` element with varied case but matching value for `lang` and `xml:lang`.
+`html` element with matching primary and extended language subtags for `lang` and `xml:lang`.
 
 ```html
-<html lang="en" xml:lang="En"></html>
-```
-
-#### Passed Example 3
-
-`html` element with varied values but matching primary sub-tag value for `lang` and `xml:lang`.
-
-```html
-<html lang="en" xml:lang="en-GB"></html>
-```
-
-#### Passed Example 4
-
-`html` element with varied values but matching primary sub-tag value for `lang` and `xml:lang`.
-
-```html
-<html lang="en-GB" xml:lang="en"></html>
-```
-
-#### Passed Example 5
-
-`html` element with varied values but matching primary sub-tag value for `lang` and `xml:lang`, albeit the value `XYZ` is not valid.
-
-```html
-<html lang="en-XYZ" xml:lang="en"></html>
+<html lang="en-GB" xml:lang="en-GB"></html>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-`html` element with non-matching value for `lang` and `xml:lang`.
+`html` element with non-matching primary language subtags for `lang` and `xml:lang`.
 
 ```html
 <html lang="fr" xml:lang="en"></html>
+```
+
+#### Failed Example 2
+
+`html` element with non-matching primary language subtags for `lang` and `xml:lang`.
+
+```html
+<html lang="yue" xml:lang="cmn"></html>
+```
+
+#### Failed Example 3
+
+`html` element with non-matching primary and extended language subtags for `lang` and `xml:lang`.
+
+```html
+<html lang="zh-yue" xml:lang="zh-cmn"></html>
 ```
 
 ### Inapplicable

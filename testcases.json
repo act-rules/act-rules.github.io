@@ -2059,23 +2059,6 @@
       }
     },
     {
-      "testcaseId": "c3deb42f8c65d190d89da433d2e5816057a2e5dc",
-      "url": "https://act-rules.github.io/testcases/b33eff/c3deb42f8c65d190d89da433d2e5816057a2e5dc.html",
-      "relativePath": "testcases/b33eff/c3deb42f8c65d190d89da433d2e5816057a2e5dc.html",
-      "expected": "passed",
-      "ruleId": "b33eff",
-      "ruleName": "Orientation of the page is not restricted using CSS transform property",
-      "rulePage": "https://act-rules.github.io/rules/b33eff",
-      "ruleAccessibilityRequirements": {
-        "wcag21:1.3.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
       "testcaseId": "cd018789b49540702f2d4a43e7c4fdba43868d73",
       "url": "https://act-rules.github.io/testcases/b33eff/cd018789b49540702f2d4a43e7c4fdba43868d73.html",
       "relativePath": "testcases/b33eff/cd018789b49540702f2d4a43e7c4fdba43868d73.html",
@@ -2127,9 +2110,9 @@
       }
     },
     {
-      "testcaseId": "53e4a8847c1be808b34c1a723d24f4ab28d17485",
-      "url": "https://act-rules.github.io/testcases/b33eff/53e4a8847c1be808b34c1a723d24f4ab28d17485.html",
-      "relativePath": "testcases/b33eff/53e4a8847c1be808b34c1a723d24f4ab28d17485.html",
+      "testcaseId": "0ac7841fba568c64ef44aaf0817f51508603cf4a",
+      "url": "https://act-rules.github.io/testcases/b33eff/0ac7841fba568c64ef44aaf0817f51508603cf4a.html",
+      "relativePath": "testcases/b33eff/0ac7841fba568c64ef44aaf0817f51508603cf4a.html",
       "expected": "failed",
       "ruleId": "b33eff",
       "ruleName": "Orientation of the page is not restricted using CSS transform property",
@@ -2215,6 +2198,23 @@
       "testcaseId": "99fccda1d8c85bbfc30f8706b644c8d36cdbdfda",
       "url": "https://act-rules.github.io/testcases/b33eff/99fccda1d8c85bbfc30f8706b644c8d36cdbdfda.html",
       "relativePath": "testcases/b33eff/99fccda1d8c85bbfc30f8706b644c8d36cdbdfda.html",
+      "expected": "inapplicable",
+      "ruleId": "b33eff",
+      "ruleName": "Orientation of the page is not restricted using CSS transform property",
+      "rulePage": "https://act-rules.github.io/rules/b33eff",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.3.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "c3deb42f8c65d190d89da433d2e5816057a2e5dc",
+      "url": "https://act-rules.github.io/testcases/b33eff/c3deb42f8c65d190d89da433d2e5816057a2e5dc.html",
+      "relativePath": "testcases/b33eff/c3deb42f8c65d190d89da433d2e5816057a2e5dc.html",
       "expected": "inapplicable",
       "ruleId": "b33eff",
       "ruleName": "Orientation of the page is not restricted using CSS transform property",

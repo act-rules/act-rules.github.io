@@ -92,7 +92,7 @@ The `lang` attribute value is not a valid primary language subtag.
 
 #### Inapplicable Example 1
 
-The rule does not apply to `svg` element.
+The rule does not apply to `svg` elements.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" lang="fr"></svg>

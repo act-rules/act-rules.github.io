@@ -1,6 +1,6 @@
 ---
 id: 9eb3f6
-name: Image filename is valid accessible name
+name: Image filename is accessible name for image
 rule_type: atomic
 description: |
   This rule checks that image elements that use their source filename as their accessible name do so without loss of information to the user.

@@ -48,6 +48,7 @@ This rule assume that assistive technologies are exposing all links on the page 
 
 ## Background
 
+- [CSS Scoping Module Level 1 (editor's draft)](https://drafts.csswg.org/css-scoping/)
 - [Understanding Success Criterion 2.4.9: Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html)
 - [URL parsing](https://www.w3.org/TR/html52/infrastructure.html#parsing-urls)
 
@@ -174,7 +175,7 @@ A set of one SVG `a` element and one HTML `a` element that have the same [access
 
 #### Passed Example 11
 
-All three links have the same [accessible name][]. The second link ("from the light") is only part of the [light tree][]. When the [shadow tree][] is attached to `host` and flattened, this link is overwritten and therefore not part of the [flat tree][] (work in progress). Hence, only the first and third link are considered by this rule and they both point to the [same resource][].
+All three links have the same [accessible name][]. The second link ("from the light") is only part of the [light tree][]. When the [shadow tree][] is attached to `host` and flattened, this link is overwritten and therefore not part of the [flat tree][]. Hence, only the first and third link are considered by this rule and they both point to the [same resource][].
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
@@ -200,7 +201,7 @@ all the time.
 
 #### Passed Example 12
 
-The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light tree][] does fill that [slot][]. Hence, the [flattened slottable][] is not [assigned][] and the third link ("from the fallback") does not appear in the [flat tree][] (work in progress). Only the first ("all the time") and second ("from the slot") links are in the [flat tree][] (work in progress). Given that they have the same [accessible name][] and point to the [same resource][], the rule passes.
+The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light tree][] does fill that [slot][]. Hence, the [flattened slottable][] is not [assigned][] and the third link ("from the fallback") does not appear in the [flat tree][]. Only the first ("all the time") and second ("from the slot") links are in the [flat tree][]. Given that they have the same [accessible name][] and point to the [same resource][], the rule passes.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
@@ -314,7 +315,7 @@ Both links resolve to [same resource][] after redirect, but the redirect is not 
 
 #### Failed Example 7
 
-The `table` element [does not support `attachShadow`](https://dom.spec.whatwg.org/#dom-element-attachshadow). Therefore no [shadow tree][] is created and the first two links appear in the [flat tree][] (work in progress). Since they have the same name but different destinations, the rule fails.
+The `table` element [does not support `attachShadow`](https://dom.spec.whatwg.org/#dom-element-attachshadow). Therefore no [shadow tree][] is created and the first two links appear in the [flat tree][]. Since they have the same name but different destinations, the rule fails.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
@@ -338,7 +339,7 @@ all the time.
 
 #### Failed Example 8
 
-The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light tree][] does not fill that [slot][]. Hence, the [flattened slottable][] is [assigned][] and the third link ("from the fallback") appears in the [flat tree][] (work in progress), causing the rule to fail.
+The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light tree][] does not fill that [slot][]. Hence, the [flattened slottable][] is [assigned][] and the third link ("from the fallback") appears in the [flat tree][], causing the rule to fail.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
@@ -442,7 +443,7 @@ These image links do not have [accessible names][accessible name].
 
 #### Inapplicable Example 7
 
-Only the first link ("all the time") is present in the [flat tree][] (work in progress). Hence, there is no set of two or more links to apply the rule. The [shadow tree][] does contain a [slot][], but because its [named][name], the second link ("from the light") is _not_ [slotted][slot] into it.
+Only the first link ("all the time") is present in the [flat tree][]. Hence, there is no set of two or more links to apply the rule. The [shadow tree][] does contain a [slot][], but because its [named][name], the second link ("from the light") is _not_ [slotted][slot] into it.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>

@@ -87,7 +87,7 @@ The error message that shows near the `input` element when it is not filled indi
 
 #### Passed Example 2
 
-The error message identifies any required `input` element that has not been filled. The error message refers to the `input` elements by their labels. Completed fields retain their values.
+The error message identifies any required `input` element that has not been filled. The error message refers to the `input` elements by their labels.
 
 ```html
 <script>

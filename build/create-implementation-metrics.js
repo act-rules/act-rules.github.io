@@ -29,16 +29,7 @@ const init = async () => {
 		 * Iterate each implementation & group by rule id
 		 */
 		data.forEach(({ ruleId, implementation }) => {
-			if (!implementation) {
-				return
-			}
-
-			/**
-			 * Note:
-			 * only build `metrics` for implementations that are `complete`
-			 */
-			const { complete = false } = implementation
-			if (complete) {
+			if (!implementation || !implementation.length) {
 				return
 			}
 

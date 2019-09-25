@@ -1,6 +1,6 @@
 ---
 id: f196ce
-name: Video element description track
+name: '`video` element visual content has description track'
 rule_type: atomic
 description: |
   This rule checks that description tracks that come with non-streaming `video` elements are descriptive.
@@ -17,7 +17,7 @@ authors:
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible](#visible) where the video contains audio and a `track` element with a `kind="descriptions"` attribute.
+The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video contains audio and a `track` element with a `kind="descriptions"` attribute.
 
 ## Expectation
 
@@ -31,16 +31,16 @@ This rule assumes that a mechanism is available to start the video and that the 
 
 ## Accessibility Support
 
-Currently the description track is not supported by most assistive technology. Accessibility support for the description track attribute is relativly low to non-existent. Video players may be able to work around the lack of support for the description track by using aria-live but few do this today.
+Currently the description track is not supported by most assistive technology. Accessibility support for the description track attribute is relatively low to non-existent. Video players may be able to work around the lack of support for the description track by using aria-live but few do this today.
 
-This means that the rule can only provide a pass for these succes criteria if assistive technology support the description track or if the video player that is used has implemented such a work around.
+This means that the rule can only provide a pass for these success criteria if assistive technology support the description track or if the video player that is used has implemented such a work around.
 
 ## Background
 
-- [Understanding Success Criterion 1.2.3: Audio Description or Media Alternative (Prerecorded)](http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc.html)
-- [Understanding Success Criterion 1.2.5: Audio Description (Prerecorded)](http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc-only.html)
-- [G78:Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G78)
-- [H96:Using the track element to provide audio descriptions](https://www.w3.org/WAI/GL/2016/WD-WCAG20-TECHS-20160105/H96)
+- [Understanding Success Criterion 1.2.3: Audio Description or Media Alternative (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-or-media-alternative-prerecorded)
+- [Understanding Success Criterion 1.2.5: Audio Description (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded)
+- [G78: Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/general/G78)
+- [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/html/H96)
 
 ## Test Cases
 
@@ -52,9 +52,9 @@ A video element with a track element that contains descriptions.
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
-	<track kind="descriptions" src="../test-assets/rabbit-video/descriptions.vtt" />
+	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+	<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
 </video>
 ```
 
@@ -66,9 +66,9 @@ A video element with a track element that contains incorrect descriptions.
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
-	<track kind="descriptions" src="../test-assets/rabbit-video/incorrect-descriptions.vtt" />
+	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+	<track kind="descriptions" src="/test-assets/rabbit-video/incorrect-descriptions.vtt" />
 </video>
 ```
 
@@ -80,20 +80,20 @@ A video element without a track element.
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```
 
 #### Inapplicable Example 2
 
-A video element that is not visible on the page.
+A video element that is not [visible][].
 
 ```html
 <video controls style="display: none;">
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
-	<track kind="descriptions" src="../test-assets/rabbit-video/descriptions.vtt" />
+	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+	<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
 </video>
 ```
 
@@ -103,8 +103,10 @@ A video element without audio.
 
 ```html
 <video controls>
-	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
-	<track kind="descriptions" src="../test-assets/rabbit-video/descriptions.vtt" />
+	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
+	<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
 </video>
 ```
+
+[visible]: #visible 'Definition of visible'

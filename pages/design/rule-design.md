@@ -51,7 +51,7 @@ Many accessibility evaluations (especially automated tools) make assumptions abo
 
 While most assumptions relate to the rule itself, there are some assumptions that apply at other stages of the evaluation:
 
-- It is assumed that the tested web page is the one that has to conform to WCAG 2.0 and that there is no [conforming alternative version](http://www.w3.org/TR/WCAG20/#conforming-alternate-versiondef).
+- It is assumed that the tested web page is the one that has to conform to WCAG 2.0 and that there is no [conforming alternative version](https://www.w3.org/TR/WCAG21/#dfn-conforming-alternate-version).
 
 - It is assumed that the following technologies are accessibility supported: HTML, CSS, WAI-ARIA, ... (See also WCAG-ACT-RULES-CG's [explanation on Accessibility Support](accessibility-support.html)).
 

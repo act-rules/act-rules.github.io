@@ -25,7 +25,7 @@ input_aspects:
   -  Language
 authors:
   -  Brian Bors
-  -  Daniël strik
+  -  Daniël Strik
   -  Wilco Fiers
 ---
 

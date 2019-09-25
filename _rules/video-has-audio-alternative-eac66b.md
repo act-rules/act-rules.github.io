@@ -20,11 +20,11 @@ authors:
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible](#visible), where the video contains audio.
+The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][], where the video contains audio.
 
 ## Expectation
 
-For each test target, the outcome of at least one of the following rules is passed:
+For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
 - [Video as a media alternative for text](https://act-rules.github.io/rules/ab4d13)
 - [Video has captions](https://act-rules.github.io/rules/f51b46)
@@ -53,7 +53,7 @@ There are no major accessibility support issues known for this rule.
 A video element with an associated track element that contains captions for all the audio.
 
 ```html
-<video src="../test-assets/perspective-video/perspective-video.mp4" controls>
+<video src="/test-assets/perspective-video/perspective-video.mp4" controls>
 	<track src="/test-assets/perspective-video/perspective-caption.vtt" kind="captions" />
 </video>
 ```
@@ -68,7 +68,7 @@ A video element that describes some of the text on the same page. The text on th
 	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
 	compatibility is described in WCAG. See the video below to watch the same information again in video form.
 </p>
-<video src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
+<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 ### Failed
@@ -78,7 +78,7 @@ A video element that describes some of the text on the same page. The text on th
 A video element without any form of captions.
 
 ```html
-<video src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
+<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 #### Failed Example 2
@@ -91,17 +91,17 @@ A video element that describes some of the text on the same page. The video cont
 	circumstance. This is solved by keyboard compatibility. Keyboard compatibility is described in WCAG. See the video
 	below to watch the same information again in video form.
 </p>
-<video src="../test-assets/perspective-video/perspective-video.mp4" controls></video>
+<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-A video element without that is not visible on the page.
+A video element without that is not [visible][].
 
 ```html
-<video src="../test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>
+<video src="/test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>
 ```
 
 #### Inapplicable Example 2
@@ -109,5 +109,7 @@ A video element without that is not visible on the page.
 A video element without audio.
 
 ```html
-<video src="../test-assets/perspective-video/perspective-video-silent.mp4" controls></video>
+<video src="/test-assets/perspective-video/perspective-video-silent.mp4" controls></video>
 ```
+
+[visible]: #visible 'Definition of visible'

@@ -38,7 +38,7 @@ For value type `URI`, this rule does not require that the destination URI exists
 
 ## Assumptions
 
-This rule catches values that are undefined in WAI-ARIA, and where the resulting behaviour in user agents are also undefined in WAI-ARIA. This might lead to accessibility issues, if the intention was to use behaviour defined in WAI-ARIA. When values are used that do not have a defined behaviour in WAI-ARIA, the HTML/SVG specification decides what default values should be used, since it is defined here what should happen when an invalid value is used for an attribute. If the default value for invalid attribute values happens to match the author's intention for the value, there will not be an accessibility issue.
+This rule catches values that are undefined in WAI-ARIA, and where the resulting behavior in user agents are also undefined in WAI-ARIA. This might lead to accessibility issues, if the intention was to use behavior defined in WAI-ARIA. When values are used that do not have a defined behavior in WAI-ARIA, the HTML/SVG specification decides what default values should be used, since it is defined here what should happen when an invalid value is used for an attribute. If the default value for invalid attribute values happens to match the author's intention for the value, there will not be an accessibility issue.
 
 ## Accessibility Support
 
@@ -258,10 +258,10 @@ Element has ARIA role, but no ARIA states or properties
 `aria-checked` state with empty value
 
 ```html
-<div role="checkbox" aria-checked aria-label="Accept terms and conditions"></div>
+<div role="checkbox" aria-checked>Accept terms and conditions</div>
 ```
 
-#### Inapplicable Example 5
+#### Inapplicable Example 4
 
 `aria-hidden` state on an element that is not an HTML or SVG element
 

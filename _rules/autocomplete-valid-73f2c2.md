@@ -19,12 +19,12 @@ authors:
 
 ## Applicability
 
-The rule applies to any HTML `input`, `select` and `textarea` element with an `autocomplete` attribute that is not empty (""), except if one of the following is true:
+The rule applies to any HTML `input`, `select` and `textarea` element with an `autocomplete` attribute that is a set of one or more [space separated tokens](https://www.w3.org/TR/html52/infrastructure.html#set-of-space-separated-tokens), except if one of the following is true:
 
 - The element is not [visible](#visible), and not [included in the accessibility tree](#included-in-the-accessibility-tree)
 - The element is an `input` element with a `type` property of `hidden`, `button`, `submit` or `reset`
 - The element has a `aria-disabled="true"` attribute
-- The element is not part of [sequential focus navigation](https://www.w3.org/TR/html/editing.html#sec-sequential-focus-navigation) and has a [semantic role](#semantic-role) that is not a [widget role](https://www.w3.org/TR/wai-aria-1.1/#widget_roles).
+- The element is not part of [sequential focus navigation](https://html.spec.whatwg.org/#sequential-focus-navigation) and has a [semantic role](#semantic-role) that is not a [widget role](https://www.w3.org/TR/wai-aria-1.1/#widget_roles).
 
 ## Expectation 1
 
@@ -51,11 +51,11 @@ For this rule, it is assumed that the `autocomplete` attribute is not used on fo
 
 ## Accessibility Support
 
-While `autocomplete` in a promising technique for supporting personalisation in HTML, support for this is fairly limited.
+While `autocomplete` in a promising technique for supporting personalization in HTML, support for this is fairly limited.
 
 ## Background
 
-The intent of this rule is to ensure that the `autocomplete` attribute can be used to suport personalization. Many users may find it easier to fill out forms if those can be styled or layed out in a way that is familiar to them. Assistive technologies can do this when a form control is marked up in such a way that its purpose can be understood. For instance, assistive technologies could add familiar icons and colors to different fields, making it easier for the user to understand what the form does.
+The intent of this rule is to ensure that the `autocomplete` attribute can be used to support personalization. Many users may find it easier to fill out forms if those can be styled or laid out in a way that is familiar to them. Assistive technologies can do this when a form control is marked up in such a way that its purpose can be understood. For instance, assistive technologies could add familiar icons and colors to different fields, making it easier for the user to understand what the form does.
 
 - [Understanding Success Criterion 1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html)
 - [Definition: programmatically determined (programmatically determinable)](https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable)
@@ -142,7 +142,7 @@ The `input` element does not participates in sequential focus navigation, but st
 
 #### Passed Example 10
 
-The `input` element does not have a semantic role that is a widget role, but still participates in sequential focus navigation since the [`tabindex` attribute](https://www.w3.org/TR/html/editing.html#the-tabindex-attribute) value is not a [valid integer](https://www.w3.org/TR/html/infrastructure.html#valid-integer), and has a single autocomplete term.
+The `input` element does not have a semantic role that is a widget role, but still participates in sequential focus navigation since the [`tabindex` attribute](https://html.spec.whatwg.org/#the-tabindex-attribute) value is not a [valid integer](https://html.spec.whatwg.org/#valid-integer), and has a single autocomplete term.
 
 ```html
 <input role="none" tabindex="-1.5" autocomplete="username" />
@@ -188,14 +188,6 @@ Autocomplete is inappropriate for the type of field.
 
 ```html
 <input type="number" autocomplete="email" />
-```
-
-#### Failed Example 6
-
-Autocomplete is not empty, but does not have any terms specified.
-
-```html
-<input autocomplete=" " />
 ```
 
 ### Inapplicable
@@ -278,4 +270,12 @@ Non-widget element that does not participate in sequential focus navigation.
 
 ```html
 <input type="button" role="none" tabindex="-2" autocomplete="username" />
+```
+
+#### Inapplicable Example 11
+
+Autocomplete attribute contains no tokens.
+
+```html
+<input autocomplete=" " />
 ```

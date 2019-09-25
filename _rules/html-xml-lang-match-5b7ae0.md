@@ -1,9 +1,9 @@
 ---
 id: 5b7ae0
-name: HTML lang and xml:lang match
+name: HTML page lang and xml:lang attributes match
 rule_type: atomic
 description: |
-  The rule checks that for the `html` element, there is no mismatch between the primary language in non-empty `lang` and `xml:lang` attributes, if both are used.
+  This rule checks that all HTML pages with both a `lang` and `xml:lang` attributes on the root element, have the same primary language subtag.
 accessibility_requirements:
   wcag20:3.1.1: # Language of Page (A)
     forConformance: true
@@ -19,11 +19,13 @@ authors:
 
 ## Applicability
 
-The root element of the page, if it is an `html` element with both `lang` and `xml:lang` attributes that has a [valid language subtag](#valid-language-subtag).
+The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element with both `lang` and `xml:lang` attributes that have [valid language subtags](#valid-language-subtag).
+
+**Note**: Documents embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not web pages according to the definition in WCAG.
 
 ## Expectation
 
-The value of the primary language subtag (characters before the first dash) for the `lang` and `xml:lang` attributes are the same.
+For each test target, the value of the primary language subtag (characters before the first dash) for the `lang` and `xml:lang` attributes are the same.
 
 **Note**: HTML 5 specification requires the `lang` and `xml:lang` attributes to match exactly. This is not known to impact accessibility, which is why it is permitted in this rule.
 

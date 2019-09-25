@@ -86,14 +86,6 @@ The `lang` attribute value is not a valid primary language subtag.
 <html lang="#!"></html>
 ```
 
-#### Failed Example 5
-
-The `lang` attribute value is not a valid primary language subtag.
-
-```html
-<html lang=" "></html>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1

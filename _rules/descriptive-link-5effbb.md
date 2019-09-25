@@ -2,22 +2,18 @@
 id: 5effbb
 name: Link in context is descriptive
 rule_type: atomic
-
 description: | 
- This rule checks that all links in their context describe their purpose
-
+ This rule checks that all links in their context describe their purpose.
 accessibility_requirements: 
   wcag20:2.4.4: # Link Purpose (In Context) 
     forConformance: true
     failed: not satisfied
     passed: satisfied
     inapplicable: further testing needed
-
 input_aspects:
   - DOM Tree
   - CSS Styling
   - Language
-
 authors:
   - Carlos Duarte
   - Marie Trudelle 
@@ -30,7 +26,7 @@ This rule applies to any HTML or SVG element with the [semantic role](#semantic-
 
 ## Expectation
 
-The [visible](#visible) [text content](#text-content) of the target element, together with its [programmatically determined link context](#programmatically-determined-link-context) describe the purpose of the link.
+The [visible](#visible) [text content](#text-content) of the target element, together with its [programmatically determined link context](#programmatically-determined-context) describe the purpose of the link.
 
 ## Assumptions
 
@@ -63,9 +59,9 @@ _There are no major accessibility support issues known for this rule._
 The link text describes the purpose of the link.
 
 ```html
-<a href="#desc">See the description of this product</a> 
+<a href="#desc">See the description of this product.</a> 
 
-<p id="desc">This product consists of several web pages</p>
+<p id="desc">This product consists of several web pages.</p>
 ```
 
 #### Passed Example 2
@@ -73,10 +69,10 @@ The link text describes the purpose of the link.
 The accessible name describes the purpose of the link.
 
 ```html
-<a href="#main" aria-label="Go to the main content of the page"></a>
+<a href="#main" aria-label="Go to the main content of the page">Go</a>
 
 <main>
- <p id="main">This is the main content</p>
+ <p id="main">This is the main content.</p>
 </main>
 ```
 
@@ -85,9 +81,9 @@ The accessible name describes the purpose of the link.
 The link text together with its context describe the purpose of the link.
 
 ```html
-<p>To see the description of this product <a href="#desc">click here</a></p>
+<p>To see the description of this product <a href="#desc">click here</a>.</p>
 
-<p id="desc">This product consists of several web pages</p>
+<p id="desc">This product consists of several web pages.</p>
 ```
 
 #### Passed Example 4
@@ -95,7 +91,7 @@ The link text together with its context describe the purpose of the link.
 Both the link text together with its context and the accessible name describe the purpose of the link.
 
 ```html
-<p><a href="#" aria-label="Place item in cart">Place item</a><span aria-hidden="true"> in shopping cart</span></p>
+<p><a href="#" aria-label="Place item in cart">Place item</a><span aria-hidden="true"> in shopping cart.</span></p>
 ```
 
 #### Passed Example 5
@@ -103,10 +99,10 @@ Both the link text together with its context and the accessible name describe th
 The accessible name describes the purpose of the link.
 
 ```html
-<div role="link" aria-label="Skip to main content" onclick="document.location+='#main';return false;"></div>
+<div role="link" tabindex="0" aria-label="Skip to main content" onclick="document.location+='#main';return false;">Skip</div>
 
 <main>
- <p id="main">This is the main content</p>
+ <p id="main">This is the main content.</p>
 </main>
 ```
 
@@ -115,9 +111,9 @@ The accessible name describes the purpose of the link.
 The link text describes the purpose of the link.
 
 ```html
-<span role="link" onclick="document.location+='#desc';return false;">See description of the product</span>
+<span role="link" tabindex="0" onclick="document.location+='#desc';return false;">See description of the product.</span>
 
-<p id="desc">This product consists of several web pages</p>
+<p id="desc">This product consists of several web pages.</p>
 ```
 
 #### Passed Example 7
@@ -127,7 +123,7 @@ The context provided by the list and the link text describe the purpose of the l
 ```html
 <ul>
   <li><a href="https://www.gutenberg.org/files/4300/4300-h/4300-h.htm">Ulysses</a></li>
-  <li><a href="https://www.gutenberg.org/ebooks/4300.epub.images?session_id=04cd710372888de8d8d322215cdfe8ce5b0f8d73">EPUB format</a></li>
+  <li><a href="https://www.gutenberg.org/ebooks/4300.epub.images?session_id=04cd710372888de8d8d322215cdfe8ce5b0f8d73">EPUB</a></li>
   <li><a href="https://www.gutenberg.org/files/4300/4300-0.txt">Plain text</a></li>
 </ul>
 ```
@@ -154,7 +150,7 @@ The context provided by the table header and the link text describe the purpose 
 The accessible name describes the purpose of the link.
 
 ```html
-<p id="instructions">Click on the arrow to go to the main content</p>
+<p id="instructions">Click on the arrow to go to the main content.</p>
 <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0">
   <a href="#main" aria-labelledby="instructions">
     <path
@@ -167,7 +163,7 @@ The accessible name describes the purpose of the link.
 </svg>
 
 <main>
-  <p id="main">This is the main content</p>
+  <p id="main">This is the main content.</p>
 </main>
 ```
 
@@ -175,54 +171,54 @@ The accessible name describes the purpose of the link.
 
 #### Failed Example 1
 
-The link text, together with the absence of programatically determined link context, does not describe the purpose of the link.
+The link text, together with the absence of programmatically determined link context, does not describe the purpose of the link.
 
 ```html
 <a href="#desc">More</a>
 
-<p id="desc">This product consists of several web pages</p>
+<p id="desc">This product consists of several web pages.</p>
 ```
 
 #### Failed Example 2
 
-The accessible name, together with the absence of programatically determined link context, does not describe the purpose of the link.
+The accessible name without any further programmatically determined link context, does not describe the purpose of the link.
 
 ```html
 <a href="#main" aria-label="Go"></a>
 
 <main>
- <p id="main">This is the main content</p>
+ <p id="main">This is the main content.</p>
 </main>
 ```
 
 #### Failed Example 3
 
-The link text, together with the absence of programatically determined link context, does not describe the purpose of the link.
+The link text, together with the absence of programmatically determined link context, does not describe the purpose of the link.
 
 ```html
-<div role="link" onclick="document.location+='#main';return false;">More</div>
+<div role="link" tabindex="0" onclick="document.location+='#main';return false;">More</div>
 
 <main>
- <p id="main">This is the main content</p>
+ <p id="main">This is the main content.</p>
 </main>
 ```
 
 #### Failed Example 4
 
-The accessible name, together with the absence of programatically determined link context, does not describe the purpose of the link.
+The accessible name without any further programmatically determined link context, does not describe the purpose of the link.
 
 ```html
-<div role="link" aria-labelledby="id1" onclick="document.location+='#main';return false;"></div>
+<div role="link" tabindex="0" aria-labelledby="id1" onclick="document.location+='#main';return false;"></div>
 <div id="id1">Go</div>
 
 <main>
- <p id="main">This is the main content</p>
+ <p id="main">This is the main content.</p>
 </main>
 ```
 
 #### Failed Example 5
 
-The accessible name, together with the absence of programatically determined link context, does not describe the purpose of the link.
+The accessible name without any further programmatically determined link context, does not describe the purpose of the link.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0">
@@ -234,7 +230,7 @@ The accessible name, together with the absence of programatically determined lin
 </svg>
 
 <main>
-  <p id="main">This is the main content</p>
+  <p id="main">This is the main content.</p>
 </main>
 ```
 
@@ -254,7 +250,7 @@ An `a` element with its role changed from `link` to another role.
 The link is not included in the accessibility tree.
 
 ```html
-<a href="http://www.w3.org/WAI" style="display: none;"><img src="#" /></a>
+<a href="http://www.w3.org/WAI" style="display: none;"><img src="#" />Go</a>
 ```
 
 #### Inapplicable Example 3
@@ -262,7 +258,7 @@ The link is not included in the accessibility tree.
 Link with accessible name that consists only of whitespace.
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="#" alt=" " /></a>
+<a href="http://www.w3.org/WAI"><img src="#" alt=" " />Go</a>
 ```
 
 #### Inapplicable Example 4

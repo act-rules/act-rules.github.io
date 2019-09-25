@@ -1,6 +1,6 @@
 ---
 id: c3232f
-name: `video` element visual-only content has accessible alternative
+name: '`video` element visual-only content has accessible alternative'
 rule_type: composite
 description: |
   This rule checks that `video` elements without audio have an alternative available.

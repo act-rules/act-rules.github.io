@@ -1,6 +1,6 @@
 ---
 id: 1ea59c
-name: `video` element visual content has audio description
+name: '`video` element visual content has audio description'
 rule_type: atomic
 description: |
   This rule checks that non-streaming `video` elements have all visual information also contained in the audio.

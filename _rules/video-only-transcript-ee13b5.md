@@ -1,6 +1,6 @@
 ---
 id: ee13b5
-name: `video` element visual-only content has transcript
+name: '`video` element visual-only content has transcript'
 rule_type: atomic
 description: |
   Non-streaming `video` elements without audio must have all visual information available in a transcript.

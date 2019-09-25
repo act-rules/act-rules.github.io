@@ -1,6 +1,6 @@
 ---
 id: 3ea0c8
-name: `id` attribute value is unique
+name: '`id` attribute value is unique'
 rule_type: atomic
 description: |
   This rule checks that all `id` attribute values on a single page are unique.

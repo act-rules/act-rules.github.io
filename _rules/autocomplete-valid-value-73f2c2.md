@@ -1,6 +1,6 @@
 ---
 id: 73f2c2
-name: `autocomplete` attribute has valid value
+name: '`autocomplete` attribute has valid value'
 rule_type: atomic
 description: |
   This rule checks that the HTML `autocomplete` attribute has a correct value.

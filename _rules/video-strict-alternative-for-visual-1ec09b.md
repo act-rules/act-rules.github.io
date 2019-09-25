@@ -1,6 +1,6 @@
 ---
 id: 1ec09b
-name: `video` element visual content has strict accessible alternative
+name: '`video` element visual content has strict accessible alternative'
 rule_type: composite
 description: |
   This rule checks that `video` elements with audio have audio description.

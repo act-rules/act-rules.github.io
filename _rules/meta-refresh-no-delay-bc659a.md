@@ -1,6 +1,6 @@
 ---
 id: bc659a
-name: `meta` element has no refresh delay
+name: '`meta` element has no refresh delay'
 rule_type: atomic
 description: |
   This rule checks that the `meta` element is not used for delayed redirecting or refreshing.

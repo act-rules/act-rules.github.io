@@ -1,6 +1,6 @@
 ---
 id: fd26cf
-name: `video` element visual-only content is media alternative for text
+name: '`video` element visual-only content is media alternative for text'
 rule_type: atomic
 description: |
   This rule checks non-streaming silent `video` is a media alternative for text on the page.

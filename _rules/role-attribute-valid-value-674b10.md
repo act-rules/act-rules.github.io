@@ -1,6 +1,6 @@
 ---
 id: 674b10
-name: `role` attribute has valid value
+name: '`role` attribute has valid value'
 rule_type: atomic
 description: |
   This rule checks that each `role` attribute has a valid value.

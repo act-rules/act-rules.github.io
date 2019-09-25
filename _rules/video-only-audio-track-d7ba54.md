@@ -1,6 +1,6 @@
 ---
 id: d7ba54
-name: `video` element visual-only content has audio track alternative
+name: '`video` element visual-only content has audio track alternative'
 rule_type: atomic
 description: |
   Non-streaming `video` elements without audio must have an audio alternative.

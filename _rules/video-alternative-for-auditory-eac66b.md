@@ -1,6 +1,6 @@
 ---
 id: eac66b
-name: `video` element auditory content has accessible alternative
+name: '`video` element auditory content has accessible alternative'
 rule_type: composite
 description: |
   This rule checks that `video` elements have an alternative for information conveyed through audio.

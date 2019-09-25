@@ -1,6 +1,6 @@
 ---
 id: c5a4ea
-name: `video` element visual content has accessible alternative
+name: '`video` element visual content has accessible alternative'
 rule_type: composite
 description: |
   This rule checks that `video` elements with audio have an alternative for the video content as audio or as text.

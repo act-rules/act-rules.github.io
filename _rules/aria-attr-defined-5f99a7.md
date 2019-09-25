@@ -1,6 +1,6 @@
 ---
 id: 5f99a7
-name: `aria-*` attribute is defined in WAI-ARIA
+name: '`aria-*` attribute is defined in WAI-ARIA'
 rule_type: atomic
 description: |
   This rule checks that each `aria-` attribute specified is defined in ARIA 1.1.

@@ -1,6 +1,6 @@
 ---
 id: 4b1c6c
-name: `iframe` elements with identical accessible names have equivalent purpose
+name: '`iframe` elements with identical accessible names have equivalent purpose'
 rule_type: atomic
 description: |
   This rule checks that `iframe` elements with identical accessible names embed the same resource or equivalent resources.

@@ -1,6 +1,6 @@
 ---
 id: cae760
-name: `iframe` element has accessible name
+name: '`iframe` element has accessible name'
 rule_type: atomic
 description: |
   This rule checks that each `iframe` element has an accessible name.

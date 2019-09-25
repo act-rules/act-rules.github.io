@@ -1010,9 +1010,9 @@
       }
     },
     {
-      "testcaseId": "64d445158585196ed6368b7165b8d36919fe0349",
-      "url": "https://act-rules.github.io/testcases/6a7281/64d445158585196ed6368b7165b8d36919fe0349.html",
-      "relativePath": "testcases/6a7281/64d445158585196ed6368b7165b8d36919fe0349.html",
+      "testcaseId": "ae78affd9ba70da8f5c3ab5f3851167939e689a7",
+      "url": "https://act-rules.github.io/testcases/6a7281/ae78affd9ba70da8f5c3ab5f3851167939e689a7.html",
+      "relativePath": "testcases/6a7281/ae78affd9ba70da8f5c3ab5f3851167939e689a7.html",
       "expected": "inapplicable",
       "ruleId": "6a7281",
       "ruleName": "ARIA state or property has valid value",

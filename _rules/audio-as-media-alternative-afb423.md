@@ -1,6 +1,6 @@
 ---
 id: afb423
-name: Audio-only as a media alternative for text
+name: '`audio` element content is media alternative for text'
 rule_type: atomic
 description: |
   This rule checks `audio` is a media alternative for text on the page.

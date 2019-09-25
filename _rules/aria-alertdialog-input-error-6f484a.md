@@ -38,15 +38,15 @@ The rule applies to each HTML or SVG element:
 
 ## Expectation 
 
-After [user completion](#completed-input-field) of the target element or triggering the submission of the form, if the target element belongs to one, each target element for which an [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error) has been [automatically detected](#automatic-error-detection) causes an element with `role="alertdialog"` to appear that
-- contains at least one [focusable](#focusable) element; and
+After [user completion](#completed-input-field) of the target element or triggering the submission of the form, if the target element belongs to one, each target element for which an [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error) has been [automatically detected](#automatic-error-detection) causes an element with `role="alertdialog"` to appear, where the following is true:
+- it contains at least one [focusable](#focusable) element; and
 - the focus moves to the [focusable](#focusable) element; and
 - it is not possible to move the focus away from elements contained in the element with `role="alertdialog"` until this is dismissed; and
 - after the element with `role="alertdialog"` is dismissed the focus returns to the position where it was before the element with `role="alertdialog"` was displayed; and
 - the element with `role="alertdialog"` has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace); and
 - the text content of the element with `role="alertdialog"` identifies the [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error).
 
-**Note**: Information to identify an input error must include the element or elements in which the error occurred and to assist the user in understanding what was the cause of the error.
+**Note**: Information to identify an input error must include information about the element or elements in which the error occurred, and assist the user in understanding what was the cause of the error.
 
 ## Assumptions
 

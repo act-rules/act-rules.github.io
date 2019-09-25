@@ -1,6 +1,6 @@
 ---
 id: 4e8ab6
-name: Element with role has required states and properties
+name: ‘Element with `role` attribute has required states and properties’
 rule_type: atomic
 description: |
   This rule checks that elements that have an explicit role also specify all required states and properties.

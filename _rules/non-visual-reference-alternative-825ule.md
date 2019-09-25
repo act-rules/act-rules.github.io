@@ -43,6 +43,8 @@ The rule assumes that instructions are fully included within a single section of
 
 The rule assumes that visual reference words are forms of information conveyed trough presentation, because of this, failing this rule fails both [Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships) and [Sensory Characteristics](https://www.w3.org/TR/WCAG21/#sensory-characteristics). Presentation is not limited to CSS and includes images such as the image of a circle with text.
 
+The rule assumes that non-visual users will interpret some visual refence words as meaning "ahead" or "backwards" in the reading order. For example in most contexts "see the content below" will mean ahead in the reading order which is not a visual reference and should pass this test.
+
 ## Accessibility Support
 
 _There are no major accessibility support issues known for this rule._

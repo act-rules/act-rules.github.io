@@ -22,11 +22,13 @@ authors:
 
 ## Applicability
 
-This rule applies to any HTML or SVG element with the [semantic role](#semantic-role) of [`link`](https://www.w3.org/TR/wai-aria/#link) or a role that inherits from the `link` role, that is [included in the accessibility tree](#included-in-the-accessibility-tree) and has an [accessible-name](#accessible-name) that does not only consist of [whitespace](#whitespace).
+This rule applies to any HTML or SVG element with the [semantic role](#semantic-role) of [`link`](https://www.w3.org/TR/wai-aria/#link) or a role that inherits from the `link` role, that is [included in the accessibility tree](#included-in-the-accessibility-tree) and has an [accessible name](#accessible-name) that does not only consist of [whitespace](#whitespace).
 
 ## Expectation
 
 The [visible](#visible) [text content](#text-content) of the target element, together with its [programmatically determined link context](#programmatically-determined-context) describe the purpose of the link.
+
+**Note**: Examples of sufficient description would be the name of the linked document or web application. However, this is not an absolute requirement, as other things may also describe the purpose of the link.
 
 ## Assumptions
 
@@ -184,7 +186,7 @@ The link text, together with the absence of programmatically determined link con
 The accessible name without any further programmatically determined link context, does not describe the purpose of the link.
 
 ```html
-<a href="#main" aria-label="Go"></a>
+<a href="#main" aria-label="Go">Go</a>
 
 <main>
  <p id="main">This is the main content.</p>
@@ -208,7 +210,7 @@ The link text, together with the absence of programmatically determined link con
 The accessible name without any further programmatically determined link context, does not describe the purpose of the link.
 
 ```html
-<div role="link" tabindex="0" aria-labelledby="id1" onclick="document.location+='#main';return false;"></div>
+<div role="link" tabindex="0" aria-labelledby="id1" onclick="document.location+='#main';return false;">Go</div>
 <div id="id1">Go</div>
 
 <main>

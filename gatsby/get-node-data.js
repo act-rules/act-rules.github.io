@@ -33,10 +33,16 @@ const getNodeData = async options => {
 					date: '%ct',
 				},
 			})
+
+			/**
+			 * Ignore `chore` log items
+			 */
+			const logs = gitLog.filter(({ msg }) => !/^chore/i.test(msg))
+
 			return {
 				...defaults,
 				path,
-				changelog: JSON.stringify(gitLog),
+				changelog: JSON.stringify(logs),
 			}
 		default:
 			return {

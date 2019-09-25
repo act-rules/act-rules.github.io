@@ -70,3 +70,6 @@ yarn-error.log
 
 # Data
 _data/
+
+# Ignore yarn lock
+yarn.lock

@@ -42,7 +42,7 @@ This rule applies to any HTML or SVG element that:
 
 The [visible][] `label` element describes the purpose of the associated form field element. The [visual context][] of the element can be used to differentiate the purpose from other form fields on the same page.
 
-**Note:** In this case, [visual context][] can be created by headings, field sets and legends, text that is near the control, etc.
+**Note:** In this case, [visual context][] can be created by headings, fieldsets and legends, text that is near the control, etc.
 
 **Note**: Labels do not need to be lengthy. A word, or even a single character, may suffice.
 
@@ -74,7 +74,7 @@ The [visible][] `label` element describes the purpose of the associated element.
 
 #### Passed Example 2
 
-The implicit label, that is coded with the `label` element, describes the purpose of the associated element.
+The implicit label, that is given by the visible `label` element, describes the purpose of the associated element.
 
 ```html
 <label>First name:<input id="fname" type="text" name="fname"/></label>
@@ -82,7 +82,7 @@ The implicit label, that is coded with the `label` element, describes the purpos
 
 #### Passed Example 3
 
-The headings provide a [visual context][] that differentiates the purpose of the otherwise identically named form fields, [visual context][] does not need to be [included in the accessibility tree][].
+The headings provide a [visual context][] that differentiates the purpose of the otherwise identically named form fields. [Visual context][visual context] does not need to be [included in the accessibility tree][].
 
 ```html
 <h2 aria-hidden="true">Shipping address</h2>
@@ -92,22 +92,6 @@ The headings provide a [visual context][] that differentiates the purpose of the
 <h2 aria-hidden="true">Billing address</h2>
 <label>Name<input id="billing-name" type="text" name="name"/></label>
 <label>Street<input id="billing-street" type="text" name="street"/></label>
-```
-
-#### Passed Example 4
-
-The [visible][] `label` element describes the form field.
-
-```html
-<label for="fname">First name:</label> <input id="fname" type="text" name="fname" aria-label="Fill in:" />
-```
-
-#### Passed Example 5
-
-The [visible][] `label` element describes the form field.
-
-```html
-<label for="fname">First name:</label> <input id="fname" type="text" name="fname" aria-label="" />
 ```
 
 ### Failed
@@ -163,27 +147,27 @@ Since the headings are not [visible][], they do not provide any [visual context]
 
 #### Inapplicable Example 1
 
+There is no `label` element.
+
+```html
+<input aria-label="First name" id="fname" type="text" name="fname" />
+```
+
+#### Inapplicable Example 2
+
 The `label` element is not [visible][] to users.
 
 ```html
 <label for="fname" style="display:none;">First name:</label> <input id="fname" type="text" name="fname" />
 ```
 
-#### Inapplicable Example 2
+#### Inapplicable Example 3
 
 The `label` element is associated with an HTML element that does not have a form field [semantic role][].
 
 ```html
 <label for="fname">First name:</label>
 <p id="fname"></p>
-```
-
-#### Inapplicable Example 3
-
-There is no `label` element.
-
-```html
-<input id="fname" type="text" name="fname" />
 ```
 
 #### Inapplicable Example 4

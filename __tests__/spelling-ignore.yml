@@ -8,6 +8,7 @@
 - html
 - iframe
 - img
+- fieldsets
 - frameset
 - h1 
 - h1-h6
@@ -74,7 +75,7 @@
 - href
 - src
 - aria-describedby
-- aria-labelled
+- aria-label
 - aria-labelledby 
 - autofill-field
 - combobox 

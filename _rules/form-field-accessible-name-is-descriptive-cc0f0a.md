@@ -1,6 +1,6 @@
 ---
 id: cc0f0a
-name: Form field label is descriptive
+name: Form accessible name is descriptive
 rule_type: atomic
 description: |
   This rule checks that accessible names describe the purpose of form field elements.
@@ -38,9 +38,9 @@ This rule applies to any HTML or SVG element that:
 
 ## Expectation
 
-The [accessible name][] of each test target describes the purpose of that test target. Both the [visual context][] of the element, and the [programmatically determined context][] [included in the accessibility tree][] can be used to differentiate the purpose from other form fields on the same page.
+Each test target has an [accessible name][] that describes its purpose. Both the [visual context][] of the test target, and its [programmatically determined context][] [included in the accessibility tree][] can be used to differentiate the purpose from other form fields on the same page.
 
-**Note:** In this case, [visual context][] can be created by headings, field sets and legends, text that is near the control, etc.
+**Note:** In this case, [visual context][] can be created by headings, fieldsets and legends, text that is near the control, etc.
 
 ## Assumptions
 
@@ -70,7 +70,7 @@ The form field has a descriptive [accessible name][] given by the `label` elemen
 
 #### Passed Example 2
 
-The form field has a descriptive [accessible name][] given by the `aria-labelled` attribute.
+The form field has a descriptive [accessible name][] given by the `aria-labelledby` attribute.
 
 ```html
 <p id="label_fname">First name:</p>
@@ -87,7 +87,7 @@ The form field has a descriptive [accessible name][] given by the implicit `labe
 
 #### Passed Example 4
 
-Even though the `p` element itself is not [included in the accessibility tree][], it still provides a descriptive [accessible name][] for the form field.
+The form field has a descriptive [accessible name][] given by the `aria-labelledby` attribute, even if the `p` element referenced is not [included in the accessibility tree][].
 
 ```html
 <p id="label_fname" aria-hidden="true">First name:</p>
@@ -96,7 +96,7 @@ Even though the `p` element itself is not [included in the accessibility tree][]
 
 #### Passed Example 5
 
-The [accessible name][] (given by the `p` element) is [included in accessibility tree][] (via the `aria-labelledby` attribute), even though it's not [visible][].
+The form field has a descriptive [accessible name][] given by the `aria-labelledby` attribute, even if the `p` element referenced is not [visible][].
 
 ```html
 <p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">First name:</p>
@@ -127,7 +127,7 @@ The [accessible name][] created through `aria-label` describes the purpose of th
 
 #### Passed Example 8
 
-Even though the [accessible names][accessible name] (given by the implicit `label` elements) of several fields are the same, the headings provide a [visual context][] to differentiate them. Since the headings are not [included in the accessibility tree][] (because of the `aria-hidden` attribute), they do not provide any [programmatically determined context][]. [visual context][] alone is sufficient to pass this rule.
+Even though the [accessible names][accessible name] (given by the implicit `label` elements) of several fields are the same, the headings provide a [visual context][] to differentiate them. Since the headings are not [included in the accessibility tree][] (because of the `aria-hidden` attribute), they do not provide any [programmatically determined context][]. [Visual context][visual context] alone is sufficient to pass this rule.
 
 ```html
 <h2 aria-hidden="true">Shipping address</h2>
@@ -141,16 +141,16 @@ Even though the [accessible names][accessible name] (given by the implicit `labe
 
 #### Passed Example 9
 
-Even though the [accessible names][accessible name] (given by the implicit `label` elements) of several fields are the same, the headings provide a [programmatically determined context][] to differentiate them. Since the headings are not [visible][] (because of their position), they do not provide any [visual context][]. [programmatically determined context][] alone is sufficient to pass this rule.
+Even though the [accessible names][accessible name] (given by the `aria-label` attributes) of several fields are the same, the headings provide a [programmatically determined context][] to differentiate them. Since the headings are not [visible][] (because of their position), they do not provide any [visual context][]. [Programmatically determined context][programmatically determined context] alone is sufficient to pass this rule.
 
 ```html
 <h2 style="position: absolute; top: -9999px; left: -9999px;">Shipping address</h2>
-<label>Name<input id="shipping-name" type="text" name="name"/></label>
-<label>Street<input id="shipping-street" type="text" name="street"/></label>
+<input aria-label="Name" id="shipping-name" type="text" name="name" />
+<input aria-label="Street" id="shipping-street" type="text" name="street" />
 
 <h2 style="position: absolute; top: -9999px; left: -9999px;">Billing address</h2>
-<label>Name<input id="billing-name" type="text" name="name"/></label>
-<label>Street<input id="billing-street" type="text" name="street"/></label>
+<input aria-label="Name" id="billing-name" type="text" name="name" />
+<input aria-label="Street" id="billing-street" type="text" name="street" />
 ```
 
 #### Passed Example 10
@@ -160,14 +160,6 @@ The `p` element is neither [visible][] nor [included in the accessibility tree][
 ```html
 <p id="label_fname" style="display:none;">First name:</p>
 <input aria-labelledby="label_fname" type="text" name="fname" />
-```
-
-#### Passed Example 11
-
-The [accessible name][] is provided by the `aria-label` attribute (which takes precedence over the `label` element). It does describe the form field.
-
-```html
-<label for="fname">Fill in:</label> <input id="fname" type="text" name="fname" aria-label="First name:" />
 ```
 
 ### Failed
@@ -243,7 +235,7 @@ The `label` is [hidden](https://www.w3.org/TR/accname-1.1/#dfn-hidden) to all us
 
 #### Inapplicable Example 2
 
-There is no element with a form field [semantic roles][].
+There is no element with any of the required [semantic roles][semantic role].
 
 ```html
 <label for="fname">First name:</label>

@@ -28,7 +28,7 @@ htmlHintIgnore:
 This rule applies to any set of any two or more HTML or SVG elements which
 
 - have the [semantic role][] of `link`, or a role that inherits from the `link` role; and
-- are in the same [set of browsing context related nodes][]; and
+- are in [documents][document] of the same [web page][]; and
 - are [included in an accessibility tree][included in the accessibility tree]; and
 - that have [matching][] [accessible names][accessible name] that do not only consist of [whitespace](#whitespace).
 
@@ -225,7 +225,7 @@ all the time.
 
 #### Passed Example 13
 
-The [browsing context][] of the `iframe` has the [browsing context][] of the main [document][] as an [ancestor browsing context](https://html.spec.whatwg.org/#ancestor-browsing-context). Hence, its [nodes][node] are part of the same [set of browsing context related nodes][] as the [nodes][node] of the main [document][]. Therefore, both links are considered and, since they refer to the same document, the rule passes.
+The [browsing context][] of the `iframe` has the [browsing context][] of the main [document][] as an [ancestor browsing context](https://html.spec.whatwg.org/#ancestor-browsing-context). Hence, They share the same [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context) (namely, the [browsing context][] of the main [document][]) and are part of the same [web page][]. Therefore, both links are considered and, since they refer to the same document, the rule passes.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
@@ -339,7 +339,7 @@ all the time.
 
 #### Failed Example 8
 
-The [browsing context][] of the `iframe` has the [browsing context][] of the main [document][] as an [ancestor browsing context](https://html.spec.whatwg.org/#ancestor-browsing-context). Hence, its [nodes][node] are part of the same [set of browsing context related nodes][] as the [nodes][node] of the main [document][]. Therefore, both links are considered and the rule fails.
+The [browsing context][] of the `iframe` has the [browsing context][] of the main [document][] as an [ancestor browsing context](https://html.spec.whatwg.org/#ancestor-browsing-context). Hence, They share the same [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context) (namely, the [browsing context][] of the main [document][]) and are part of the same [web page][]. Therefore, both links are considered and the rule fails.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
@@ -456,6 +456,6 @@ all the time.
 [node]: https://dom.spec.whatwg.org/#concept-node 'Definition of node'
 [same resource]: #same-resource 'Definition of same resource'
 [semantic role]: #semantic-role 'Definition of semantic role'
-[set of browsing context related nodes]: #browsing-context-related-nodes 'Definition of set of browsing context related documents'
 [shadow tree]: https://dom.spec.whatwg.org/#shadow-tree 'Definition of shadow tree'
 [slot]: https://dom.spec.whatwg.org/#concept-slot 'Definition of slot'
+[web page]: #web-page 'Definition of web page'

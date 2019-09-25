@@ -29,7 +29,7 @@ This rule applies to any set of any two or more HTML or SVG elements which
 
 - have the [semantic role][] of `link`, or a role that inherits from the `link` role; and
 - are in the same [set of browsing context related nodes][]; and
-- are [included in the accessibility tree][] of their respective [document][]; and
+- are [included in an accessibility tree][included in the accessibility tree]; and
 - that have [matching][] [accessible names][accessible name] that do not only consist of [whitespace](#whitespace).
 
 **Note:** The test target for this rule is the full set of link elements that share the same [matching][] [accessible name][].
@@ -315,30 +315,6 @@ Both links resolve to [same resource][] after redirect, but the redirect is not 
 
 #### Failed Example 7
 
-The `table` element [does not support `attachShadow`](https://dom.spec.whatwg.org/#dom-element-attachshadow). Therefore no [shadow tree][] is created and the first two links appear in the [flat tree][]. Since they have the same name but different destinations, the rule fails.
-
-```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-all the time.
-
-<table id="host">
-	<span
-		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-		from the light.</span
-	>
-</table>
-
-<script>
-	const host = document.getElementById('host')
-	const shadowRoot = host.attachShadow({ mode: 'closed' })
-
-	shadowRoot.innerHTML =
-		'<span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the shadow.</span>'
-</script>
-```
-
-#### Failed Example 8
-
 The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light tree][] does not fill that [slot][]. Hence, the [flattened slottable][] is [assigned][] and the third link ("from the fallback") appears in the [flat tree][], causing the rule to fail.
 
 ```html
@@ -361,7 +337,7 @@ all the time.
 </script>
 ```
 
-#### Failed Example 9
+#### Failed Example 8
 
 The [browsing context][] of the `iframe` has the [browsing context][] of the main [document][] as an [ancestor browsing context](https://html.spec.whatwg.org/#ancestor-browsing-context). Hence, its [nodes][node] are part of the same [set of browsing context related nodes][] as the [nodes][node] of the main [document][]. Therefore, both links are considered and the rule fails.
 

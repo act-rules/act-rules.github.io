@@ -113,7 +113,6 @@ export default ({ data }) => {
 								Test case file for use in the WCAG-EM Report Tool
 							</a>
 						</li>
-					
 					</ul>
 					<hr />
 					{/* implementations */}

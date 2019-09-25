@@ -1,0 +1,167 @@
+# List of spelling to be ignored by spellcheck tests in `__tests__/spelling.js`
+
+# Project specific words
+- WAI 
+- W3C
+
+# Generic HTML tag(s)
+- html
+- iframe
+- img
+- frameset
+- h1 
+- h1-h6
+- svg
+
+# Domain-specific words, Definitions & other allowed terms
+- URI 
+- UA/AT 
+- WCAG
+- WCAG2 
+- CSS3 
+- UA 
+- UI
+- APIs
+- MDN
+- BCP
+- HTML5
+- HTML
+- JSON
+- JSON-LD
+- DOM
+- SVG
+- PDFs
+- url
+- iframes
+- voiceover
+- subtag
+- subtags
+- testrunner
+- color
+- focusable 
+- unfocusable 
+- tabindex 
+- whitespace 
+- namespaces 
+- webpage
+
+# spell checker checks against strict casing & hence some repeated words here
+- Autocomplete 
+- Focusable
+
+# Parts of url
+- http 
+- https 
+- github.com  
+- www.w3.org 
+- eval 
+- html52
+
+# Other tool names
+- axe-core
+- alfa
+- RGAA
+- wcag-em-report-tool
+- ozplayer 
+
+# Test case anamolies
+- level2-frame1
+- level1-frame2
+- level1-frame1
+- XYZ
+
+# Attributes
+- href
+- src
+- aria-labelled
+- aria-labelledby 
+- autofill-field
+- combobox 
+- spinbutton
+- gridcell 
+- menuitem 
+- menuitemcheckbox 
+- menuitemradio 
+- searchbox 
+- treeitem 
+- listbox 
+- textbox 
+- autocomplete 
+- textarea
+- autoplay 
+- tristate
+- scrollbar
+- viewport
+- figcaption
+- aria-errormessage 
+- aria-rowindex 
+- aria-valuemin 
+- aria-valuemax 
+- aria-valuenow 
+- aria-dropeffect
+- lang 
+- xml:lang
+- http-equiv
+- user-scalable
+- user-scalable=yes
+- user-scalable=no
+- rotate3d
+- rotateZ
+- matrix3d
+
+# ARIA Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#aria)
+- ARIA1 
+- ARIA5 
+- ARIA6 
+- ARIA7 
+- ARIA8
+- ARIA10 
+- ARIA12
+- ARIA14 
+- ARIA16
+
+# Common Failures (https://www.w3.org/WAI/WCAG21/Techniques/#failures)
+- F10 
+- F30 
+- F38 
+- F40 
+- F41 
+- F65 
+- F89
+
+# General Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#general)
+- G8 
+- G21 
+- G78 
+- G87 
+- G88 
+- G93 
+- G95 
+- G108 
+- G130 
+- G131 
+- G158 
+- G159 
+- G162 
+- G166 
+- G173 
+- G203
+
+# HTMl Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#html)
+- H25 
+- H36 
+- H37 
+- H42 
+- H44
+- H58
+- H67 
+- H93 
+- H94 
+- H95 
+- H96
+
+# Unsure why the dictionary does not have these words
+- programmatically
+- Programmatically
+- personalization
+- Autofill

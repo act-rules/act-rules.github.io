@@ -3,7 +3,7 @@ id: de46e4
 name: lang attribute in body is valid
 rule_type: atomic
 description: |
-  This rule checks that the `lang` attribute of an element in the page body have a valid primary language subtag.
+  This rule checks that the `lang` attribute of an element in the page body has a valid primary language subtag.
 accessibility_requirements:
   wcag20:3.1.2: # Language of Parts (AA)
     forConformance: true

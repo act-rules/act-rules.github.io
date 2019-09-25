@@ -3,7 +3,7 @@ id: bf051a
 name: HTML page language is valid
 rule_type: atomic
 description: |
-  This rule checks that the `lang` attribute of the root element of an HTML page have a valid primary language subtag.
+  This rule checks that the `lang` attribute of the root element of an HTML page has a valid primary language subtag.
 accessibility_requirements:
   wcag20:3.1.1: # Language of Page (A)
     forConformance: true

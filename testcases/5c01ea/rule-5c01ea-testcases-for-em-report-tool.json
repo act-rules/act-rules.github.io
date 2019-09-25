@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - ARIA state or property allowed",
+      "title": "Report for ACT-R Rule - ARIA state or property is permitted",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - ARIA state or property allowed",
+          "siteName": "ACT-R Rule - ARIA state or property is permitted",
           "siteScope": "https://act-rules.github.io/testcases/5c01ea/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

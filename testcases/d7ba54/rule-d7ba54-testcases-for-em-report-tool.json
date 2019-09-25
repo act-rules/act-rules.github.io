@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - video only has audio alternative",
+      "title": "Report for ACT-R Rule - `video` element visual-only content has audio track alternative",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - video only has audio alternative",
+          "siteName": "ACT-R Rule - `video` element visual-only content has audio track alternative",
           "siteScope": "https://act-rules.github.io/testcases/d7ba54/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

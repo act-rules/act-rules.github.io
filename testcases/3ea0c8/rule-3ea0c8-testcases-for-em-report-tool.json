@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Id attribute is unique",
+      "title": "Report for ACT-R Rule - `id` attribute value is unique",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Id attribute is unique",
+          "siteName": "ACT-R Rule - `id` attribute value is unique",
           "siteScope": "https://act-rules.github.io/testcases/3ea0c8/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

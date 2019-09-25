@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Form field has accessible name",
+      "title": "Report for ACT-R Rule - Form control has accessible name",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Form field has accessible name",
+          "siteName": "ACT-R Rule - Form control has accessible name",
           "siteScope": "https://act-rules.github.io/testcases/e086e5/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Meta-refresh no delay",
+      "title": "Report for ACT-R Rule - `meta` element has no refresh delay",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Meta-refresh no delay",
+          "siteName": "ACT-R Rule - `meta` element has no refresh delay",
           "siteScope": "https://act-rules.github.io/testcases/bc659a/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

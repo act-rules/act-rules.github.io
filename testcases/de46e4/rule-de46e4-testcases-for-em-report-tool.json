@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - lang attribute in body is valid",
+      "title": "Report for ACT-R Rule - Element within `body` has valid `lang` attribute",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - lang attribute in body is valid",
+          "siteName": "ACT-R Rule - Element within `body` has valid `lang` attribute",
           "siteScope": "https://act-rules.github.io/testcases/de46e4/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

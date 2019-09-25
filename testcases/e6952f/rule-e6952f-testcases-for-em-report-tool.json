@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Attributes are not duplicated",
+      "title": "Report for ACT-R Rule - Attribute is not duplicated",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Attributes are not duplicated",
+          "siteName": "ACT-R Rule - Attribute is not duplicated",
           "siteScope": "https://act-rules.github.io/testcases/e6952f/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

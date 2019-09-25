@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Video only has an accessible alternative",
+      "title": "Report for ACT-R Rule - `video` element visual-only content has accessible alternative",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Video only has an accessible alternative",
+          "siteName": "ACT-R Rule - `video` element visual-only content has accessible alternative",
           "siteScope": "https://act-rules.github.io/testcases/c3232f/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

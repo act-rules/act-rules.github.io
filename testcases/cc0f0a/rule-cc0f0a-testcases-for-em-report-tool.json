@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Form field label is descriptive",
+      "title": "Report for ACT-R Rule - Form control label is descriptive",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Form field label is descriptive",
+          "siteName": "ACT-R Rule - Form control label is descriptive",
           "siteScope": "https://act-rules.github.io/testcases/cc0f0a/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

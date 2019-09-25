@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Video only element has transcript",
+      "title": "Report for ACT-R Rule - `video` element visual-only content has transcript",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Video only element has transcript",
+          "siteName": "ACT-R Rule - `video` element visual-only content has transcript",
           "siteScope": "https://act-rules.github.io/testcases/ee13b5/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

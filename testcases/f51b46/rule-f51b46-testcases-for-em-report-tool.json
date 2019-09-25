@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Video has captions",
+      "title": "Report for ACT-R Rule - `video` element auditory content has captions",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Video has captions",
+          "siteName": "ACT-R Rule - `video` element auditory content has captions",
           "siteScope": "https://act-rules.github.io/testcases/f51b46/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

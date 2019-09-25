@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - ARIA attribute is valid",
+      "title": "Report for ACT-R Rule - `aria-*` attribute is defined in WAI-ARIA",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - ARIA attribute is valid",
+          "siteName": "ACT-R Rule - `aria-*` attribute is defined in WAI-ARIA",
           "siteScope": "https://act-rules.github.io/testcases/5f99a7/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"
@@ -1139,9 +1139,9 @@
               "WebPage"
             ],
             "id": "_:struct_0",
-            "description": "https://act-rules.github.io/testcases/5f99a7/0dbcbdb2eace03d1e3a89e12f7ec33e615ce1a20.html",
-            "source": "https://act-rules.github.io/testcases/5f99a7/0dbcbdb2eace03d1e3a89e12f7ec33e615ce1a20.html",
-            "title": "0dbcbdb2eace03d1e3a89e12f7ec33e615ce1a20",
+            "description": "https://act-rules.github.io/testcases/5f99a7/29097dbe000aa32fd9a66fce65a9a7f4b413e7ff.html",
+            "source": "https://act-rules.github.io/testcases/5f99a7/29097dbe000aa32fd9a66fce65a9a7f4b413e7ff.html",
+            "title": "29097dbe000aa32fd9a66fce65a9a7f4b413e7ff",
             "tested": false
           },
           {

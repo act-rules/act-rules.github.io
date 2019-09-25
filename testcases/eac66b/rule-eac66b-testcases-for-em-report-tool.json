@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Video has audio alternative",
+      "title": "Report for ACT-R Rule - `video` element auditory content has accessible alternative",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Video has audio alternative",
+          "siteName": "ACT-R Rule - `video` element auditory content has accessible alternative",
           "siteScope": "https://act-rules.github.io/testcases/eac66b/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

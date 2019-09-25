@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Audio elements have a transcript",
+      "title": "Report for ACT-R Rule - `audio` element content has transcript",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Audio elements have a transcript",
+          "siteName": "ACT-R Rule - `audio` element content has transcript",
           "siteScope": "https://act-rules.github.io/testcases/2eb176/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

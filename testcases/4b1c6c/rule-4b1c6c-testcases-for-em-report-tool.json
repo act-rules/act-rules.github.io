@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Iframes with identical accessible names serve equivalent purpose",
+      "title": "Report for ACT-R Rule - `iframe` elements with identical accessible names have equivalent purpose",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Iframes with identical accessible names serve equivalent purpose",
+          "siteName": "ACT-R Rule - `iframe` elements with identical accessible names have equivalent purpose",
           "siteScope": "https://act-rules.github.io/testcases/4b1c6c/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

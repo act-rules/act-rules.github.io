@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - No keyboard trap",
+      "title": "Report for ACT-R Rule - Focusable element has no keyboard trap",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - No keyboard trap",
+          "siteName": "ACT-R Rule - Focusable element has no keyboard trap",
           "siteScope": "https://act-rules.github.io/testcases/80af7b/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

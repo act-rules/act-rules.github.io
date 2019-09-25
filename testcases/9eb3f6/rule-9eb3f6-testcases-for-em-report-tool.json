@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Filename is valid accessible name",
+      "title": "Report for ACT-R Rule - Image filename is accessible name for image",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Filename is valid accessible name",
+          "siteName": "ACT-R Rule - Image filename is accessible name for image",
           "siteScope": "https://act-rules.github.io/testcases/9eb3f6/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

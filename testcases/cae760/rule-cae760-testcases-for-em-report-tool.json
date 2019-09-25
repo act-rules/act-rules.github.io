@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Iframe has an accessible name",
+      "title": "Report for ACT-R Rule - `iframe` element has accessible name",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Iframe has an accessible name",
+          "siteName": "ACT-R Rule - `iframe` element has accessible name",
           "siteScope": "https://act-rules.github.io/testcases/cae760/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

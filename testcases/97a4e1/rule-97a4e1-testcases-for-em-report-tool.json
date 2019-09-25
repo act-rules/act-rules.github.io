@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Buttons have an accessible name",
+      "title": "Report for ACT-R Rule - Button has accessible name",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Buttons have an accessible name",
+          "siteName": "ACT-R Rule - Button has accessible name",
           "siteScope": "https://act-rules.github.io/testcases/97a4e1/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

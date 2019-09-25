@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Autocomplete valid",
+      "title": "Report for ACT-R Rule - `autocomplete` attribute has valid value",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Autocomplete valid",
+          "siteName": "ACT-R Rule - `autocomplete` attribute has valid value",
           "siteScope": "https://act-rules.github.io/testcases/73f2c2/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

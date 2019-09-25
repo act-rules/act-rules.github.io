@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Video only element has description track",
+      "title": "Report for ACT-R Rule - `video` element visual-only content has description track",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Video only element has description track",
+          "siteName": "ACT-R Rule - `video` element visual-only content has description track",
           "siteScope": "https://act-rules.github.io/testcases/ac7dc6/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

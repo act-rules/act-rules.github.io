@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Role has required states and properties",
+      "title": "Report for ACT-R Rule - Element with `role` attribute has required states and properties",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Role has required states and properties",
+          "siteName": "ACT-R Rule - Element with `role` attribute has required states and properties",
           "siteScope": "https://act-rules.github.io/testcases/4e8ab6/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

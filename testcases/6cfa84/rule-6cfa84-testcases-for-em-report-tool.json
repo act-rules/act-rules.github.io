@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - aria-hidden with focusable content",
+      "title": "Report for ACT-R Rule - Element with `aria-hidden` has no focusable content",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - aria-hidden with focusable content",
+          "siteName": "ACT-R Rule - Element with `aria-hidden` has no focusable content",
           "siteScope": "https://act-rules.github.io/testcases/6cfa84/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

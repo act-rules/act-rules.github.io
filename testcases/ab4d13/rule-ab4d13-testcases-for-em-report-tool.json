@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Video as a media alternative for text",
+      "title": "Report for ACT-R Rule - `video` element content is media alternative for text",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Video as a media alternative for text",
+          "siteName": "ACT-R Rule - `video` element content is media alternative for text",
           "siteScope": "https://act-rules.github.io/testcases/ab4d13/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

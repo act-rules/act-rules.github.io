@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Links have an accessible name",
+      "title": "Report for ACT-R Rule - Link has accessible name",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Links have an accessible name",
+          "siteName": "ACT-R Rule - Link has accessible name",
           "siteScope": "https://act-rules.github.io/testcases/c487ae/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

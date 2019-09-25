@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Role attribute has valid value",
+      "title": "Report for ACT-R Rule - `role` attribute has valid value",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Role attribute has valid value",
+          "siteName": "ACT-R Rule - `role` attribute has valid value",
           "siteScope": "https://act-rules.github.io/testcases/674b10/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

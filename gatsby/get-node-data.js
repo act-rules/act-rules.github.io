@@ -1,19 +1,19 @@
 const fs = require('fs')
 const fastmatter = require('fastmatter')
 const { createFilePath } = require('gatsby-source-filesystem')
+const getGitLog = require('./../utils/get-git-log')
 
 /**
  * Get node data, to enhance metadata of pages
  *
  * @param {Object} options options passed by gatsby node callback
  */
-const getNodeData = options => {
+const getNodeData = async options => {
 	const { node, getNode } = options
 	const fileNode = getNode(node.parent)
 	const { sourceInstanceName, relativePath, absolutePath } = fileNode
 	const fileContents = fs.readFileSync(absolutePath, { encoding: 'utf-8' })
 	const { attributes } = fastmatter(fileContents)
-
 	const defaults = {
 		sourceInstanceName: sourceInstanceName,
 		markdownType: getMarkdownType(relativePath, sourceInstanceName),
@@ -24,9 +24,25 @@ const getNodeData = options => {
 	switch (sourceInstanceName) {
 		case 'rules':
 			const { id } = attributes
+			const path = `${sourceInstanceName}/${id}`
+			const gitLog = await getGitLog({
+				file: `./_rules/${relativePath}`,
+				schema: {
+					commit: '%H',
+					msg: '%s',
+					date: '%ct',
+				},
+			})
+
+			/**
+			 * Ignore `chore` log items
+			 */
+			const logs = gitLog.filter(({ msg }) => !/^chore/i.test(msg))
+
 			return {
 				...defaults,
-				path: `${sourceInstanceName}/${id}`,
+				path,
+				changelog: JSON.stringify(logs),
 			}
 		default:
 			return {

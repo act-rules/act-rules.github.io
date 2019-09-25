@@ -12,7 +12,7 @@ Standard keyboard navigation entails using one or more of the following:
 - Enter key
 - Space key
 
-Expected behaviour of standard keyboard navigation keys:
+Expected behavior of standard keyboard navigation keys:
 
 - Tab key: Skipping forward between focusable elements
 - Shift+Tab: Skipping backwards between focusable elements

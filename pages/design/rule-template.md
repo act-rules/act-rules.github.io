@@ -4,13 +4,13 @@ title: Rule Template
 
 The rule template contains a plain language description of the rule, some background information, and a list of all assumptions. The test procedure is defined by the selector, a number of steps and a description of the possible outcomes.
 
-Use the [empty atomic rule template](atomic-template-empty.html) to create new rule. When creating a new rule, first read [rule design](rule-design.html).
+Use the [empty atomic rule template](https://raw.githubusercontent.com/act-rules/act-rules.github.io/develop/pages/design/atomic-template-empty.md) to create new rule. When creating a new rule, first read [rule design](/pages/design/rule-design/).
 
 ## Atomic Rule Template
 
 ````md
 ---
-id: 
+id:
 name:
 rule_type: atomic
 
@@ -35,7 +35,7 @@ accessibility_requirements:
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
-    
+
 input_aspects:
   -  # (e.g. HTTP Messages, DOM Tree, CSS Styling, Accessibility Tree, Language, etc.,)
 
@@ -117,13 +117,13 @@ Description...
 
 Composite rules are rules that take results from different rules and through some logic come to a single result. For example: SC 1.2.3 allows video to pass with either a transcript, an audio description, or if it is a media alternative. Each of these would be atomic rules, that are used in a composite rule. The composite rule than describes that at least one of these must pass for the composite rule to pass.
 
-For more about composite rules, see the [ACT Rules Format](https://www.w3.org/TR/act-rules-format/#composed-rules). To create a composite rule, use the [empty composite rule template](./composite-template-empty.html).
+For more about composite rules, see the [ACT Rules Format](https://www.w3.org/TR/act-rules-format/#composed-rules). To create a composite rule, use the [empty composite rule template](https://raw.githubusercontent.com/act-rules/act-rules.github.io/develop/pages/design/composite-template-empty.md).
 
 ### Composite Rule Template
 
 ````md
 ---
-id: 
+id:
 name:
 rule_type: composite
 

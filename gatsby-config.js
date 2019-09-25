@@ -42,9 +42,8 @@ module.exports = {
 				plugins: [
 					// md -> plugin(code snippets) (spits out a new html snippet) (each snippet gets generated as html) -> html
 					`gatsby-remark-autolink-headers`,
-					{
-						resolve: `gatsby-remark-prismjs`,
-					},
+					`gatsby-remark-copy-linked-files`,
+					`gatsby-remark-prismjs`,
 				],
 			},
 		},

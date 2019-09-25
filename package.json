@@ -29,12 +29,20 @@
 			"url": "https://github.com/carlosapaduarte"
 		},
 		{
+			"name": "Christina Adams",
+			"url": "https://github.com/offsetChris"
+		},
+		{
 			"name": "Corbb O'Connor",
 			"url": "https://github.com/corbb"
 		},
 		{
 			"name": "Dagfinn Rømen",
 			"url": "https://github.com/DagfinnRomen"
+		},
+		{
+			"name": "Daniël Strik",
+			"url": "https://github.com/danistr"
 		},
 		{
 			"name": "Emma Pratt Richens",
@@ -49,8 +57,16 @@
 			"url": "https://github.com/geirsf"
 		},
 		{
+			"name": "Jean-Yves Moyen",
+			"url": "https://github.com/Jym77"
+		},
+		{
 			"name": "Jey Nandakumar",
 			"url": "https://github.com/jkodu"
+		},
+		{
+			"name": "João Vicente",
+			"url": "https://github.com/joao-vicente"
 		},
 		{
 			"name": "John Hicks",
@@ -61,8 +77,20 @@
 			"url": "https: //github.com/MaliinO"
 		},
 		{
+			"name": "Marie Trudelle",
+			"url": "https://github.com/marietrudelle"
+		},
+		{
+			"name": "Kasper Isager",
+			"url": "https: //github.com/kasperisager"
+		},
+		{
 			"name": "Rafal Charlampowicz",
 			"url": "https://github.com/Rafalchar"
+		},
+		{
+			"name": "Ramit Garg",
+			"url": "https://github.com/ramitgarg"
 		},
 		{
 			"name": "Rob Fentress",
@@ -78,44 +106,67 @@
 		},
 		{
 			"name": "Wilco Fiers",
-			"url": "https://github.com/wilcofiers}"
+			"url": "https://github.com/wilcofiers"
 		}
 	],
 	"dependencies": {
-		"axios": "^0.18.0",
+		"act-rules-implementation-access-board": "git+https://git@github.com/act-rules/act-rules-implementation-trusted-tester.git",
+		"act-rules-implementation-access-engine": "git+https://git@github.com/act-rules/act-rules-implementation-access-engine.git",
+		"act-rules-implementation-alfa": "git+https://git@github.com/act-rules/act-rules-implementation-alfa.git",
+		"act-rules-implementation-axe-core": "git+https://git@github.com/act-rules/act-rules-implementation-axe-core.git",
+		"act-rules-implementation-qualweb": "git+https://git@github.com/act-rules/act-rules-implementation-qualweb.git",
+		"act-rules-implementation-rgaa": "git+https://git@github.com/act-rules/act-rules-implementation-rgaa.git",
+		"act-rules-implementation-trusted-tester": "git+https://git@github.com/act-rules/act-rules-implementation-trusted-tester.git",
+		"axios": "^0.19.0",
+		"commander": "^3.0.1",
 		"fastmatter": "^2.1.1",
-		"gatsby": "^2.4.2",
-		"gatsby-image": "^2.0.41",
-		"gatsby-plugin-manifest": "^2.1.1",
-		"gatsby-plugin-offline": "^2.1.0",
-		"gatsby-plugin-prefetch-google-fonts": "^1.4.2",
-		"gatsby-plugin-react-helmet": "^3.0.12",
-		"gatsby-plugin-sass": "^2.0.10",
-		"gatsby-plugin-sharp": "^2.0.36",
-		"gatsby-remark-autolink-headers": "^2.0.15",
-		"gatsby-remark-prismjs": "^3.2.9",
-		"gatsby-source-filesystem": "^2.0.33",
-		"gatsby-transformer-remark": "^2.3.12",
-		"gatsby-transformer-sharp": "^2.1.19",
+		"flat": "^4.1.0",
+		"fs-extra": "^8.1.0",
+		"gatsby": "^2.15.21",
+		"gatsby-plugin-manifest": "^2.2.18",
+		"gatsby-plugin-prefetch-google-fonts": "^1.4.3",
+		"gatsby-plugin-react-helmet": "^3.1.8",
+		"gatsby-plugin-sass": "^2.1.15",
+		"gatsby-plugin-sharp": "^2.2.25",
+		"gatsby-remark-autolink-headers": "^2.1.11",
+		"gatsby-remark-copy-linked-files": "^2.1.20",
+		"gatsby-remark-prismjs": "^3.3.14",
+		"gatsby-source-filesystem": "^2.1.26",
+		"gatsby-transformer-remark": "^2.6.24",
+		"gatsby-transformer-sharp": "^2.2.16",
 		"gfm-code-blocks": "^1.0.0",
-		"jsonld": "^1.6.0",
-		"make-dir": "^2.1.0",
-		"ncp": "^2.0.0",
+		"globby": "^10.0.1",
+		"htmlhint": "^0.11.0",
+		"is-url": "^1.2.4",
+		"jest-expect-message": "^1.0.2",
+		"jsonld": "^1.8.0",
+		"make-dir": "^3.0.0",
+		"markdown-link-extractor": "^1.2.1",
 		"node-sass": "^4.12.0",
 		"normalize.css": "^8.0.1",
 		"object-hash": "^1.3.1",
-		"prismjs": "^1.16.0",
+		"prismjs": "^1.17.1",
 		"prop-types": "^15.7.2",
-		"react": "^16.8.6",
-		"react-dom": "^16.8.6",
+		"query-string": "^6.8.3",
+		"react": "^16.9.0",
+		"react-dom": "^16.9.0",
 		"react-helmet": "^5.2.1",
+		"react-media": "^1.10.0",
+		"remove-markdown": "^0.3.0",
 		"showdown": "^1.9.0"
 	},
 	"devDependencies": {
-		"globby": "^9.2.0",
-		"jest": "^24.8.0",
-		"marked": "^0.6.2",
-		"prettier": "^1.17.0"
+		"dictionary-en-us": "^2.1.1",
+		"husky": "^3.0.5",
+		"jest": "^24.9.0",
+		"jest-extended": "^0.11.2",
+		"js-yaml": "^3.13.1",
+		"lint-staged": "^9.3.0",
+		"marked": "^0.7.0",
+		"prettier": "^1.18.2",
+		"retext": "^7.0.0",
+		"retext-spell": "^3.0.0",
+		"vfile-reporter": "^6.0.0"
 	},
 	"keywords": [
 		"WCAG",
@@ -125,18 +176,31 @@
 	],
 	"license": "MIT",
 	"scripts": {
-		"clean": "rm -rf .cache public",
-		"prebuild": "npm run get-data",
+		"clean": "gatsby clean",
+		"getImplementationAccessEngine": "node ./build/get-implementation --org 'Level Access' --tool 'Access Engine' --path './node_modules/act-rules-implementation-access-engine/report.json'",
+		"getImplementationAlfa": "node ./build/get-implementation --org 'Siteimprove' --tool 'Alfa' --path './node_modules/act-rules-implementation-alfa/report.json'",
+		"pregetImplementationAxeCore": "npm --prefix './node_modules/act-rules-implementation-axe-core/' run build -- --testsJson ${PWD}/_data/rules-testcases/testcases.json --testsDir ${PWD}/_data/rules-testcases --siteUrl $npm_package_www_url",
+		"getImplementationAxeCore": "node ./build/get-implementation --org 'Deque Systems' --tool 'Axe-core' --path './node_modules/act-rules-implementation-axe-core/report.json'",
+		"getImplementationRgaa": "node ./build/get-implementation --org 'Access42' --tool 'RGAA 3.0' --path './node_modules/act-rules-implementation-rgaa/reports/*.json'",
+		"getImplementationTrustedTester": "node ./build/get-implementation --org 'Trusted Tester' --tool 'Trusted Tester' --path './node_modules/act-rules-implementation-trusted-tester/reports/*.json'",
+		"getImplementationQualWeb": "node ./build/get-implementation --org 'LASIGE, Faculdade de Ciências da Universidade de Lisboa' --tool 'QualWeb' --path './node_modules/act-rules-implementation-qualweb/reports/*.json'",
+		"getImplementations": "npm run getImplementationAccessEngine && npm run getImplementationAlfa && npm run getImplementationAxeCore && npm run getImplementationRgaa && npm run getImplementationTrustedTester && npm run getImplementationQualWeb",
+		"createImplementationsMetrics": "node ./build/create-implementation-metrics",
+		"implementations": "npm run getImplementations && npm run createImplementationsMetrics",
+		"createTestcases": "node ./build/create-testcases",
+		"createGlossary": "node ./build/create-glossary-usages",
+		"createRulesUsages": "node ./build/create-rules-usages.js",
+		"getWcagData": "node ./build/get-wcag-data",
+		"getData": "npm run getWcagData && npm run createTestcases && npm run createGlossary && npm run createRulesUsages && npm run implementations",
+		"develop": "gatsby develop",
+		"prebuild": "npm run clean && npm run formatRulesDir && npm run getData",
 		"build": "gatsby build",
-		"develop": "npm run get-data && gatsby develop",
+		"formatRulesDir": "prettier --write './_rules/**/*.md'",
 		"format": "prettier --write *.{json,md,js,jsx} './{_data,_rules,build,gatsby,pages,src,test-assets}/**/*.{json,md,js,jsx}'",
 		"start": "npm run clean && npm run develop",
 		"serve": "gatsby serve",
-		"test": "npm run test:rules",
-		"test:rules": "jest",
-		"get-implementations": "node ./build/get-implementations",
-		"get-wcag-sc-metadata": "node ./build/get-wcag-sc-metadata",
-		"get-data": "npm run get-wcag-sc-metadata && npm run get-implementations"
+		"pretest": "npm run getData",
+		"test": "jest --coverage"
 	},
 	"homepage": "https://github.com/act-rules/act-rules.github.io",
 	"repository": {
@@ -150,25 +214,44 @@
 		"url": "https://github.com/act-rules/act-rules.github.io/pulls"
 	},
 	"www": {
-		"url": "https://act-rules.github.io",
-		"baseDir": "./public"
+		"url": "https://act-rules.github.io"
 	},
 	"config": {
 		"references": {
 			"wcag21": "https://raw.githubusercontent.com/w3c/wai-wcag-quickref/gh-pages/_data/wcag21.json"
 		},
-		"implementations": {
-			"alfa": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/alfa-report.json",
-			"axe": "https://raw.githubusercontent.com/w3c/earl/master/earl-reports/axe-report.json"
+		"rule-format-metadata": {
+			"input-aspects": {
+				"default": "https://www.w3.org/TR/act-rules-aspects/#intro",
+				"HTTP Messages": "https://www.w3.org/TR/act-rules-aspects/#input-aspects-http",
+				"DOM Tree": "https://www.w3.org/TR/act-rules-aspects/#input-aspects-dom",
+				"CSS Styling": "https://www.w3.org/TR/act-rules-aspects/#input-aspects-css",
+				"Accessibility Tree": "https://www.w3.org/TR/act-rules-aspects/#input-aspects-accessibility",
+				"Language": "https://www.w3.org/TR/act-rules-aspects/#input-aspects-text"
+			}
 		}
 	},
 	"jest": {
-		"verbose": true,
-		"bail": true,
+		"verbose": false,
+		"setupFilesAfterEnv": [
+			"jest-extended",
+			"jest-expect-message"
+		],
 		"testPathIgnorePatterns": [
-			"<rootDir>/test/utils/",
+			"<rootDir>/test-utils/",
 			"<rootDir>/.cache/",
 			"<rootDir>/.public/"
 		]
+	},
+	"lint-staged": {
+		"*.{md,json,js,html}": [
+			"prettier --write",
+			"git add"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
 	}
 }

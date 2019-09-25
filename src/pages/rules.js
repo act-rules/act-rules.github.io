@@ -6,17 +6,11 @@ import showdown from 'showdown'
 import {
 	getAccessibilityRequirements,
 	getInputRulesForRule,
+	getImplementationsCount,
 } from './../utils/render-fragments'
 
 export default ({ data }) => {
 	const { rules, allRules, site } = data
-	const toListRules = rules.edges.filter(({ node }) => {
-		const { fields } = node
-		const { fastmatterAttributes } = fields
-		const { accessibility_requirements } = JSON.parse(fastmatterAttributes)
-		return !!accessibility_requirements
-	})
-
 	const updatedTitle = `Rules | ${site.siteMetadata.title}`
 	const converter = new showdown.Converter()
 
@@ -28,13 +22,11 @@ export default ({ data }) => {
 				<h1>Rules</h1>
 				{/* Table of rules */}
 				<section className="rules-listing">
-					{toListRules.map(({ node }) => {
+					{rules.edges.map(({ node }) => {
 						const { frontmatter, id, fields } = node
 						const { name, description, input_rules } = frontmatter
 						const { slug, fastmatterAttributes } = fields
-						const { accessibility_requirements } = JSON.parse(
-							fastmatterAttributes
-						)
+						const { accessibility_requirements } = JSON.parse(fastmatterAttributes)
 						return (
 							<article key={id}>
 								<section>
@@ -43,7 +35,11 @@ export default ({ data }) => {
 										<h2>{name}</h2>
 									</a>
 									{/* rule sc's */}
-									{getAccessibilityRequirements(accessibility_requirements)}
+									{getAccessibilityRequirements(accessibility_requirements, 'text')}
+									{/* input rules */}
+									{getInputRulesForRule(input_rules, allRules.edges, true)}
+									{/* implementation count */}
+									{getImplementationsCount(slug)}
 									{/* rule description */}
 									<div
 										dangerouslySetInnerHTML={{
@@ -51,8 +47,6 @@ export default ({ data }) => {
 										}}
 									/>
 								</section>
-								{/* atomic rules */}
-								{getInputRulesForRule(input_rules, allRules.edges, true)}
 							</article>
 						)
 					})}
@@ -87,9 +81,7 @@ export const query = graphql`
 				}
 			}
 		}
-		allRules: allMarkdownRemark(
-			filter: { fields: { markdownType: { eq: "rules" } } }
-		) {
+		allRules: allMarkdownRemark(filter: { fields: { markdownType: { eq: "rules" } } }) {
 			totalCount
 			edges {
 				node {

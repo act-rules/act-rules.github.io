@@ -3,8 +3,8 @@
  * -> get all data necessary from `on-create-node` callback
  * -> extend `context` object on `markdown` pages
  */
-const path = require('path')
-const getComponent = require('./get-component')
+
+const getTemplate = require('./get-template')
 
 const createPageAddMdContext = options => {
 	const { graphql, actions } = options
@@ -17,10 +17,14 @@ const createPageAddMdContext = options => {
 					node {
 						rawMarkdownBody
 						fields {
+							fileName {
+								relativePath
+							}
 							slug
 							sourceInstanceName
 							markdownType
 							fastmatterAttributes
+							changelog
 						}
 						frontmatter {
 							name
@@ -37,35 +41,54 @@ const createPageAddMdContext = options => {
 		}
 
 		const { allMarkdownRemark } = data
-		const { edges } = allMarkdownRemark
+		const { edges: rulesMarkdownPage } = allMarkdownRemark
 
 		/**
-		 * iterate each markdown file
+		 * iterate each rules markdown file
 		 * - and create more context
 		 */
-		edges.forEach(({ node }) => {
-			const slug = node.fields.slug
-			const markdownType = node.fields.markdownType
-			const fastmatterAttributes = node.fields.fastmatterAttributes
-			const fileName = node.fields.fileName
-			const sourceInstanceName = node.fields.sourceInstanceName
-			const frontmatterName = node.frontmatter.name
-			const frontmatterTitle = node.frontmatter.title
-			const frontmatterRuleType = node.frontmatter.rule_type
+		rulesMarkdownPage.forEach(({ node }) => {
+			const { frontmatter, fields } = node
+			const { slug, markdownType, fastmatterAttributes, changelog, fileName, sourceInstanceName } = fields
 
+			const { name: frontmatterName, title: frontmatterTitle, rule_type: frontmatterRuleType } = frontmatter
+
+			const pageTitle = frontmatterName ? frontmatterName : frontmatterTitle
+
+			/**
+			 * Create all markdown pages
+			 */
 			createPage({
 				path: slug,
-				component: path.resolve(getComponent(markdownType, slug)),
+				component: getTemplate(markdownType, slug),
 				context: {
 					slug,
 					fileName,
 					sourceInstanceName,
 					markdownType,
 					fastmatterAttributes,
-					title: frontmatterName ? frontmatterName : frontmatterTitle,
+					changelog,
+					title: pageTitle,
 					ruleType: frontmatterRuleType,
 				},
 			})
+
+			/**
+			 * only for markdown pages of type `rules` -> create respective `changelog` pages
+			 */
+			if (markdownType === `rules`) {
+				createPage({
+					path: `${slug}/changelog`,
+					component: getTemplate('changelog'),
+					context: {
+						slug,
+						title: `Changelog for Rule: ${pageTitle}`,
+						changelog,
+						fastmatterAttributes,
+						fileName,
+					},
+				})
+			}
 		})
 	})
 }

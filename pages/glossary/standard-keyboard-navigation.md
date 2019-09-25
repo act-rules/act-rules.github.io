@@ -4,6 +4,7 @@ key: standard-keyboard-navigation
 ---
 
 Standard keyboard navigation entails using one or more of the following:
+
 - Tab key
 - Shift+Tab
 - Arrow keys
@@ -11,7 +12,8 @@ Standard keyboard navigation entails using one or more of the following:
 - Enter key
 - Space key
 
-Expected behaviour of standard keyboard navigation keys: 
+Expected behavior of standard keyboard navigation keys:
+
 - Tab key: Skipping forward between focusable elements
 - Shift+Tab: Skipping backwards between focusable elements
 - Arrow keys: Navigate input elements, e.g. up/down drop down, between radio buttons etc.

@@ -26,10 +26,7 @@ Each target attribute is defined in [WAI ARIA 1.1](https://www.w3.org/TR/wai-ari
 
 ## Assumptions
 
-The rule assumes that an ARIA `attribute`  is necessary to render accessible the element or its content. This rule checks only for the validity of the attribute in question, but does not check its syntactic validity of the tag where used, nor whether or not it is really necessary. For example an aria-label in an input which already has a label tag correctly associated is nevertheless valid. The rule assumes that the use of the aria attribute is based on WCAG compliance.
-
-[comment : should we not actually be checking this ?]
-
+The rule assumes that an ARIA `attribute`  is necessary to render accessible the element or its content. This rule checks only for the validity of the attribute in question, but does not check its syntactic validity of the tag where used, nor whether or not it is really necessary. For example a misspelled aria-label in an input which already has a label tag element correctly associated, will fail this rule, but can still be fully accessible because of it's label.
 
 ## Accessibility Support
 

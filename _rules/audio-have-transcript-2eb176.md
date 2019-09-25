@@ -20,13 +20,13 @@ authors:
 The rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:
 
 - playing; or,
-- has a "play button" that is [visibile](#visible) and [included-in-the-accessibility-tree](#included-in-the-accessibility-tree).
+- has a "play button" that is [visible][] and [included in the accessibility tree][].
 
 **Note:** A play button is an interactive element that when activated, plays the audio.
 
 ## Expectation
 
-The auditory information of each test target is available through a text transcript. That text transcript is [visibile](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree), either on the page or through a link.
+The auditory information of each test target is available through a text transcript. That text transcript is [visible][] and [included in the accessibility tree][], either on the page or through a link.
 
 **Note**: A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
 
@@ -40,8 +40,8 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- [Understanding SC 1.2.1:Audio-only and Video-only (Prerecorded)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
-- [G158:Providing an alternative for time-based media for audio-only content](https://www.w3.org/TR/WCAG20-TECHS/G158.html)
+- [Understanding SC 1.2.1:Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded)
+- [G158: Providing an alternative for time-based media for audio-only content](https://www.w3.org/WAI/WCAG21/Techniques/general/G158)
 
 ## Test Cases
 
@@ -52,7 +52,7 @@ There are no major accessibility support issues known for this rule.
 Audio with controls and internal transcript
 
 ```html
-<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <p>
 	The above audio contains the following speech: We choose to go to the moon in this decade and do the other things, not
 	because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our
@@ -66,7 +66,7 @@ Audio with controls and internal transcript
 Audio with controls and external transcript
 
 ```html
-<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</a>
 ```
 
@@ -75,7 +75,7 @@ Audio with controls and external transcript
 Audio with autoplay and external transcript
 
 ```html (no-iframe)
-<audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
 <a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</a>
 ```
 
@@ -86,7 +86,7 @@ Audio with autoplay and external transcript
 Audio with controls and no transcript
 
 ```html
-<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
 #### Failed Example 2
@@ -94,7 +94,7 @@ Audio with controls and no transcript
 Audio with controls and incorrect internal transcript
 
 ```html
-<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <p>
 	The above audio contains the following speech: We choose to go to the cheese in this decade and do the other things,
 	not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of
@@ -108,7 +108,7 @@ Audio with controls and incorrect internal transcript
 Audio with controls and incorrect external transcript
 
 ```html
-<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</a>
 ```
 
@@ -117,16 +117,16 @@ Audio with controls and incorrect external transcript
 Audio with autoplay and incorrect external transcript
 
 ```html (no-iframe)
-<audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
 <a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</a>
 ```
 
 #### Failed Example 5
 
-Audio with controls and invisible internal transcript
+Audio with controls and [non-visible][visible] internal transcript
 
 ```html
-<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <p style="text-indent: -9999px;">
 	The above audio contains the following speech: We choose to go to the moon in this decade and do the other things, not
 	because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our
@@ -140,7 +140,7 @@ Audio with controls and invisible internal transcript
 Audio with controls and internal transcript that is not exposed to the accessibility tree
 
 ```html
-<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <p aria-hidden="true">
 	The above audio contains the following speech: We choose to go to the moon in this decade and do the other things, not
 	because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our
@@ -156,7 +156,7 @@ Audio with controls and internal transcript that is not exposed to the accessibi
 Audio without controls.
 
 ```html
-<audio src="../test-assets/moon-audio/moon-speech.mp3"></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3"></audio>
 ```
 
 #### Inapplicable Example 2
@@ -164,5 +164,8 @@ Audio without controls.
 Audio with hidden controls.
 
 ```html
-<audio src="../test-assets/moon-audio/moon-speech.mp3" controls style="display: none;"></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls style="display: none;"></audio>
 ```
+
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[visible]: #visible 'Definition of visible'

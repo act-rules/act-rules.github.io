@@ -1,9 +1,9 @@
 ---
 id: 2779a5
-name: HTML Page has a title
+name: HTML page has title
 rule_type: atomic
 description: |
-  This rule checks that the HTML page has a title
+  This rule checks that an HTML page has a title.
 accessibility_requirements:
   wcag20:2.4.2: # Page Titled (A)
     forConformance: true
@@ -18,23 +18,29 @@ authors:
   - Bryn Anderson
   - Anne Thyme Nørregaard
   - Jey Nandakumar
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'title-require'
 ---
 
 ## Applicability
 
-The rule applies to any page where the [document element](https://www.w3.org/TR/dom/#document-element) is an `html` element, and where the page is not embedded in another page.
+The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element.
 
-**Note**: Pages may be embedded inside other pages through elements such as `iframe` and `object` elements.
+**Note**: Documents embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not web pages according to the definition in WCAG.
 
 ## Expectation 1
 
-The [document element](https://www.w3.org/TR/dom/#document-element) has at least one [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) that is an HTML `title` element.
+Each target element has at least one [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) that is an HTML `title` element.
 
 **Note**: The `title` element exists in other namespaces such as SVG. These are not HTML `title` elements and should be ignored for this rule.
 
+**Note**: The [HTML 5.2 specification](https://www.w3.org/TR/html52/document-metadata.html#the-title-element) requires that a document only has one `title` element, and that it is a child of the `head` element of a document. However, HTML 5.2 also describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG.
+
 ## Expectation 2
 
-The first HTML `title` element that is a [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) of the [document element](https://www.w3.org/TR/dom/#document-element) has [children](https://www.w3.org/TR/dom/#concept-tree-child) that are [text nodes](https://www.w3.org/TR/dom/#text) that are not only [whitespace](#whitespace).
+For each target element, the first HTML `title` element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the [document element](https://dom.spec.whatwg.org/#document-element) has [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
 
 ## Assumptions
 
@@ -46,10 +52,9 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- [https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
-- [https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=242#qr-navigation-mechanisms-title](https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=242#qr-navigation-mechanisms-title)
-- [https://www.w3.org/TR/WCAG20-TECHS/G88.html](https://www.w3.org/TR/WCAG20-TECHS/G88.html)
-- [https://www.w3.org/TR/WCAG20-TECHS/H25.html](https://www.w3.org/TR/WCAG20-TECHS/H25.html)
+- [Understanding Success Criterion 2.4.2: Page Titled](https://www.w3.org/WAI/WCAG21/Understanding/page-titled)
+- [G88: Providing descriptive titles for Web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G88)
+- [H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG21/Techniques/html/H25)
 
 ## Test Cases
 
@@ -72,7 +77,7 @@ This page gives a `title` to an iframe.
 ```html
 <html>
 	<title>This page gives a title to an iframe</title>
-	<iframe src="../test-assets/sc2-4-2-title-page-without-title.html"></iframe>
+	<iframe src="/test-assets/sc2-4-2-title-page-without-title.html"></iframe>
 </html>
 ```
 
@@ -156,7 +161,7 @@ The page has no `title`.
 
 ```html
 <html>
-	<iframe src="../test-assets/sc2-4-2-title-page-with-title.html"></iframe>
+	<iframe src="/test-assets/sc2-4-2-title-page-with-title.html"></iframe>
 </html>
 ```
 

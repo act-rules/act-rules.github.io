@@ -3,7 +3,7 @@ id: 5f99a7
 name: ARIA attribute is valid
 rule_type: atomic
 description: |
-  This rule checks that each aria- attribute specified is defined in ARIA 1.1
+  This rule checks that each `aria-` attribute specified is defined in ARIA 1.1.
 accessibility_requirements:
 input_aspects:
   - DOM Tree
@@ -31,8 +31,8 @@ There are no major accessibility support issues known for this rule.
 
 - [ARIA in HTML](https://www.w3.org/TR/html-aria/#index-aria-global) (work in progress)
 - [WAI ARIA Supported States and Properties](http://www.w3.org/TR/wai-aria/#states_and_properties)
-- [G108: Using markup features to expose the name and role](http://www.w3.org/TR/WCAG20-TECHS/G108)
-- [WCAG 2.0 - Name, Role, Value: Understanding SC 4.1.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
+- [G108: Using markup features to expose the name and role](https://www.w3.org/WAI/WCAG21/Techniques/general/G108)
+- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [Semantics and ARIA](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/)
 - [WAI ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/)
 
@@ -68,7 +68,7 @@ A valid ARIA 1.1 attribute `aria-live` on element `div` with role `alert`
 
 #### Passed Example 4
 
-Muliple valid ARIA 1.1 attributes `aria-*` are specified on element `input` with role `spinbutton`
+Multiple valid ARIA 1.1 attributes `aria-*` are specified on element `input` with role `spinbutton`
 
 ```html
 <input role="spinbutton" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" type="number" value="25" />

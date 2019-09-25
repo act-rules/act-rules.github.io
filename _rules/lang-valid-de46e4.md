@@ -1,9 +1,9 @@
 ---
 id: de46e4
-name: Valid body lang attribute
+name: lang attribute in body is valid
 rule_type: atomic
 description: |
-  This rule checks that `lang` or `xml:lang` attributes on elements within the `body` of a web page have a valid language subtag.
+  This rule checks that the `lang` and `xml:lang` attributes of an element in the page body have a valid primary language subtag.
 accessibility_requirements:
   wcag20:3.1.2: # Language of Parts (AA)
     forConformance: true
@@ -19,11 +19,11 @@ authors:
 
 ## Applicability
 
-This rules applies to each HTML or SVG element that is a [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of the `body` element and has a `lang` or `xml:lang` attribute that is not empty ("").
+This rules applies to each HTML or SVG element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) of the `body` element and has a `lang` or `xml:lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
 
 ## Expectation
 
-The `lang` and `xml:lang` attributes of the test target have a [valid language subtag](#valid-language-subtag) if the attribute is not empty ("").
+For each test target, the `lang` and `xml:lang` have a [valid language subtag](#valid-language-subtag) if the attribute is neither empty ("") nor only [whitespace](#whitespace).
 
 ## Assumptions
 
@@ -35,10 +35,9 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- [https://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H58](https://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140408/H58)
-- [https://www.ietf.org/rfc/bcp/bcp47.txt](https://www.ietf.org/rfc/bcp/bcp47.txt)
-- [http://wiki.egovmon.no/wiki/SC3.1.2#Element_descendent-or-self::body.5B.40lang.5D_or_descendent-or-self::body.5B.40xml:lang.5D](http://wiki.egovmon.no/wiki/SC3.1.2#Element_descendent-or-self::body.5B.40lang.)
-- [https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=312#qr-meaning-other-lang-id](https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=312#qr-meaning-other-lang-id)
+- [H58: Using language attributes to identify changes in the human language](https://www.w3.org/WAI/WCAG21/Techniques/html/H58)
+- [BCP 47: Tags for Identifying Languages](https://www.ietf.org/rfc/bcp/bcp47.txt)
+- [Understanding Success Criterion 3.1.2: Language of Parts](https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts)
 
 ## Test Cases
 
@@ -92,7 +91,7 @@ The `lang` and `xml:lang` attribute values are not empty ("") and both have a va
 </html>
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 The `lang` and `xml:lang` attribute values are either empty ("") or have a valid primary language subtag.
 
@@ -142,19 +141,7 @@ The `lang` attribute value has a valid primary language subtag, but a syntactica
 </html>
 ```
 
-#### Failed example 4
-
-The `lang` attribute value is not empty ("") and is not a valid primary language subtag.
-
-```html
-<html>
-	<body>
-		<article lang=" "></article>
-	</body>
-</html>
-```
-
-#### Failed example 5
+#### Failed Example 4
 
 The `lang` attribute value is not empty ("") and is not a valid primary language subtag.
 
@@ -166,14 +153,14 @@ The `lang` attribute value is not empty ("") and is not a valid primary language
 </html>
 ```
 
-#### Failed example 5
+#### Failed Example 5
 
-The `lang` attribute value is not empty ("") and is not a valid primary language subtag.
+The `xml:lang` attribute value is not empty ("") and is not a valid primary language subtag.
 
 ```html
 <html>
 	<body>
-		<article lang="123"></article>
+		<article xml:lang="123"></article>
 	</body>
 </html>
 ```
@@ -192,7 +179,7 @@ The rule applies to elements with the `body` of a webpage. `html` elements are i
 
 #### Inapplicable Example 2
 
-An empty value for `lang` attribute is ignored by this rule, as the applicability specifies only values that are not empty ("").
+An empty value for `lang` attribute is ignored as the rule only applies to `lang` or `xml:lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
 
 ```html
 <html>
@@ -204,12 +191,26 @@ An empty value for `lang` attribute is ignored by this rule, as the applicabilit
 
 #### Inapplicable Example 3
 
-An empty value for `xml:lang` attribute is ignored by this rule, as the applicability specifies only values that are not empty ("").
+An empty value for `xml:lang` attribute is ignored as the rule only applies to `lang` or `xml:lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
 
 ```html
 <html>
 	<body>
 		<article xml:lang=""></article>
+	</body>
+</html>
+```
+
+#### Inapplicable Example 4
+
+The `lang` attribute value consists of only [whitespace](#whitespace).
+
+```html
+<html>
+	<body>
+		<article lang=" ">
+			The quick brown fox jumped over the lazy dog
+		</article>
 	</body>
 </html>
 ```

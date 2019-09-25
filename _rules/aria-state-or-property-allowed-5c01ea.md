@@ -19,7 +19,7 @@ authors:
 
 ## Applicability
 
-Any [WAI-ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) that is specified on an HTML or SVG element that is [included-in-the-accessibility-tree](#included-in-the-accessibility-tree).
+Any [WAI-ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) that is specified on an HTML or SVG element that is [included in the accessibility tree][].
 
 ## Expectation
 
@@ -38,8 +38,7 @@ _There are no major accessibility support issues known for this rule._
 ## Background
 
 - [Understanding Success Criterion 4.1.1: Parsing](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html)
-- [Understanding Success Criterion 4.1.2: Name, Role, Value
-  ](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
+- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 - [WAI-ARIA 1.1, Supported States and Properties](https://www.w3.org/TR/wai-aria-1.1/#states_and_properties)
 - [WAI-ARIA 1.1, Global States and Properties](https://www.w3.org/TR/wai-aria-1.1/#global_states)
 
@@ -57,7 +56,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 2
 
-`aria-pressed` state is supported for `role=button` that is the implicit role for `button` element.
+`aria-pressed` state is supported for `role=button` that is the [implicit role](#implicit-role) for `button` element.
 
 ```html
 <button aria-pressed="false">My button</button>
@@ -141,8 +140,10 @@ No [WAI-ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_d
 
 #### Inapplicable Example 2
 
-`aria-sort` property is neither inherited, supported, nor required for role `button`, but the element is not included in the accessibility tree.
+`aria-sort` property is neither inherited, supported, nor required for role `button`, but the element is not [included in the accessibility tree][].
 
 ```html
 <div role="button" aria-sort="" style="display:none;"></div>
 ```
+
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

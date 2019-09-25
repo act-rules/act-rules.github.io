@@ -21,7 +21,14 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to any HTML [`audio`](https://html.spec.whatwg.org/multipage/media.html#the-audio-element) or [`video`](https://html.spec.whatwg.org/multipage/media.html#the-video-element) elements that have an [`autoplay`](https://html.spec.whatwg.org/multipage/media.html#attr-media-autoplay) attribute equal to true, both [`paused`](https://html.spec.whatwg.org/multipage/media.html#dom-media-paused) and [`muted`](https://html.spec.whatwg.org/multipage/media.html#attr-media-muted) attributes equal to false, and a `src` attribute or a child `source` element with a `src` attribute with a duration of more than 3 seconds.
+This rule applies to any `audio` or `video` element that has:
+* an `autoplay` attribute that is equal to true, and
+* both `paused` and `muted` attributes equal to false, and 
+* either a `src` attribute or a child `source` element that references content with a duration of more than 3 seconds that contains audio.
+
+**Note**:
+
+The default value of both `paused` and `muted` attributes is `false`.
 
 ## Expectation 1
 

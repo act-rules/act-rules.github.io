@@ -33,7 +33,7 @@ This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document
 - inherit from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
 - do not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
 
-## Expectation (1)
+## Expectation
 
 For each HTML or SVG element that has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox` in the test target, the outcome of at least one of the following rules is passed:
 

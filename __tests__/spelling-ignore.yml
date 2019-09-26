@@ -131,10 +131,12 @@
 
 # General Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#general)
 - G8 
-- G21 
+- G21
+- G53 
 - G78 
 - G87 
 - G88 
+- G91
 - G93 
 - G95 
 - G108 
@@ -148,13 +150,19 @@
 - G203
 
 # HTMl Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#html)
-- H25 
+- H24
+- H25
+- H30 
 - H36 
 - H37 
 - H42 
 - H44
 - H58
-- H67 
+- H67
+- H77
+- H78
+- H79
+- H81
 - H93 
 - H94 
 - H95 

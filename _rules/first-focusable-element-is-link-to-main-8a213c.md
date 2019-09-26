@@ -17,6 +17,7 @@ input_aspects:
 authors:
   - Jean-Yves Moyen
   - Anne Thyme Nørregard
+  - Christina Adams
 ---
 
 ## Applicability
@@ -214,6 +215,26 @@ The link to skip repeated content is not visible, and is not included in the acc
 	<body>
 		<nav>
 			<a href="#main-content" style="display:none;">Skip to main content</a>
+		</nav>
+		<!-- Repeated content -->
+		<main id="main-content">Main Content</main>
+	</body>
+</html>
+```
+
+#### Failed Example 6
+
+The link to skip repeated content does not have a semantic role of link.
+
+```html
+<!DOCTYPE html>
+<html lang="eng">
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<nav>
+			<span>Skip to main content</span>
 		</nav>
 		<!-- Repeated content -->
 		<main id="main-content">Main Content</main>

@@ -17,6 +17,7 @@ input_aspects:
 authors:
   - Jean-Yves Moyen
   - Anne Thyme Nørregard
+  - Christina Adams
 ---
 
 ## Applicability
@@ -26,6 +27,7 @@ This rule applies to any [document](#https://dom.spec.whatwg.org/#concept-docume
 ## Expectations
 
 For each [section of repeated content](#repeated-content) within the test target, either the last element in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) which is both [focusable](#focusable) element and before this [section of repeated content](#repeated-content), or the first element in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) which is both [focusable](#focusable) element and inside this [section of repeated content](#repeated-content) has a [semantic role](#semantic-role) of `link` and:
+
 - is [included in the accessibility tree](#included-in-the-accessibility-tree); and
 - is [visible](#visible) when [focused](#focused); and
 - when activated, moves focus to the first element in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) that is both [focusable](#focusable) and after this [section of content](#section-of-content); and
@@ -49,25 +51,72 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
+Multiple sections of repeated content each have a first link element that when activated moves focus to the following block of content.
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></head>
-  <body>
-  
-  </body>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<main>
+			<section id="section1" aria-label="Section 1 of page">
+				<nav aria-label="Section 1 navigation">
+					<a href="#section1Content">Skip section 1 navigation</a>
+					<ul>
+						<!-- Repeated section navigation -->
+					</ul>
+				</nav>
+				<div id="#section1Content">
+					<!-- Section content -->
+				</div>
+			</section>
+			<section aria-label="Section 2 of page">
+				<nav aria-label="Section 2 navigation">
+					<a href="#section2Content">Skip section 2 navigation</a>
+					<ul>
+						<!-- Repeated section navigation -->
+					</ul>
+				</nav>
+				<div id="section2Content">
+					<!-- Section content -->
+				</div>
+			</section>
+		</main>
+	</body>
 </html>
 ```
 
 #### Passed Example 2
 
+A link exist at the beginning of a repeated navigation sections and when activated moves focus to the next block of content.
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></head>
-  <body>
-  
-  </body>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<nav>
+			<div id="mainNav">
+				<a href="#subNav">Skip main navigation links</a>
+				<ul>
+					<!-- Repeated main navigation links -->
+				</ul>
+			</div>
+			<div id="subNav">
+				<a href="#featuredAd">Skip sub navigation links</a>
+				<ul>
+					<!-- Repeated sub navigation links -->
+				</ul>
+			</div>
+			<div id="featuredAd">
+				<!-- Ad content -->
+			</div>
+		</nav>
+	</body>
 </html>
 ```
 
@@ -76,10 +125,10 @@ _There are no major accessibility support issues known for this rule._
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></head>
-  <body>
-  
-  </body>
+	<head>
+		<title></title>
+	</head>
+	<body></body>
 </html>
 ```
 
@@ -90,10 +139,10 @@ _There are no major accessibility support issues known for this rule._
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></head>
-  <body>
-  
-  </body>
+	<head>
+		<title></title>
+	</head>
+	<body></body>
 </html>
 ```
 
@@ -102,10 +151,10 @@ _There are no major accessibility support issues known for this rule._
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></head>
-  <body>
-  
-  </body>
+	<head>
+		<title></title>
+	</head>
+	<body></body>
 </html>
 ```
 
@@ -114,10 +163,10 @@ _There are no major accessibility support issues known for this rule._
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></head>
-  <body>
-  
-  </body>
+	<head>
+		<title></title>
+	</head>
+	<body></body>
 </html>
 ```
 
@@ -126,10 +175,10 @@ _There are no major accessibility support issues known for this rule._
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></head>
-  <body>
-  
-  </body>
+	<head>
+		<title></title>
+	</head>
+	<body></body>
 </html>
 ```
 
@@ -144,4 +193,3 @@ The [document element](#https://dom.spec.whatwg.org/#document-element) of this [
   <title>This is an SVG</title>
 </svg>
 ```
-

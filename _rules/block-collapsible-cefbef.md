@@ -25,7 +25,8 @@ This rule applies to any [document](#https://dom.spec.whatwg.org/#concept-docume
 ## Expectations
 
 For each [section of repeated content](#repeated-content) in the test target, there exists some [user interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components) which:
-- is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree); and 
+
+- is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree); and
 - allows to toggle both [visibility](#visible) and [inclusion in the accessibility tree](#included-in-the-accessibility-tree) of this [section of repeated content](#repeated-content).
 
 ## Assumptions
@@ -45,141 +46,100 @@ _There are no major accessibility support issues known for this rule._
 ### Passed
 
 #### Passed Example 1
-The link to skip repeated content is visible, is included in the accessibility tree, and links to a valid HTML element.
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></head>
-  <body>
-    <nav>
-      <a href="#main-content">Skip to main content</a>
-    </nav>
-    <!-- Repeated content  -->
-    <main id="main-content">Main Content</main>
-  </body>
+	<head>
+		<title></title>
+	</head>
+	<body></body>
 </html>
 ```
 
 #### Passed Example 2
-The link to skip repeated content can be toggled to visible through keyboard focus.
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title>
-    <style>
-      #skipNav{
-        height:100px;
-        position:absolute;
-        top:-100px;
-      }
-      #skipNav:focus{
-        top:0px;
-      }
-    </style>
-  </head>
-  <body>
-  <nav id="skipNav">
-    <a href="#main-content">Skip to main content</a>
-  </nav>
-  <!-- Repeated content -->
-  <main id="main-content">Main Content</main>
-  </body>
+	<head>
+		<title></title>
+	</head>
+	<body></body>
 </html>
 ```
 
 #### Passed Example 3
-The link to skip repeated has an `aria-label` to provide an accessible name.
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></head>
-  <body>
-  <div>
-    <a href="#main-content" aria-label="Skip to main content"></a>
-  </div>
-  <!-- Repeated content -->
-  <div id="main-content">Main Content</div>
-  </body>
+	<head>
+		<title></title>
+	</head>
+	<body></body>
 </html>
 ```
-<!-- role for navigation element -->
+
 ### Failed
 
 #### Failed Example 1
-The is no link to skip repeated content.
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></head>
-  <body>
-    <!-- Repeated Content -->
-    <div id="main-content">Main Content</div>
-  </body>
+	<head>
+		<title></title>
+	</head>
+	<body></body>
 </html>
 ```
 
 #### Failed Example 2
-The link to skip repeated content is not the first focusable element within the `body`.
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></head>
-  <body>
-    <a href="#nowhere">Link to nowhere</a>
-    <nav>
-      <a href="#main-content">Skip to main content</a>
-    </nav>
-    <!-- Repeated Content -->
-    <div id="main-content">Main Content</div>
-  </body>
+	<head>
+		<title></title>
+	</head>
+	<body></body>
 </html>
 ```
 
 #### Failed Example 3
-The link to skip repeated content does not have an accessible name.
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></head>
-  <body>
-    <nav>
-      <a href="#main-content"></a>
-    </nav>
-    <!-- Repeated Content -->
-    <main id="main-content">Main Content</main>
-  </body>
+	<head>
+		<title></title>
+	</head>
+	<body></body>
 </html>
 ```
 
 #### Failed Example 4
-The link to skip repeated content does not reference a valid `id`.
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></head>
-  <body>
-    <nav>
-      <a href="#nowhere">Skip to main content</a>
-    </nav>
-    <!-- Repeated Content -->
-    <main id="somewhere"></main>
-  </body>
+	<head>
+		<title></title>
+	</head>
+	<body></body>
 </html>
 ```
 
 #### Failed Example 5
-The link to skip repeated content is not visible, and is not included in the accessibility tree.
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head><title></title></head>
-  <body>
-    <nav>
-      <a href="#main-content" style="display:none;">Skip to main content</a>
-    </nav>
-    <!-- Repeated Content -->
-    <main id="main-content">Main Content</main>
-  </body>
+	<head>
+		<title></title>
+	</head>
+	<body></body>
 </html>
 ```
 
@@ -194,4 +154,3 @@ The [document element](#https://dom.spec.whatwg.org/#document-element) of this [
   <title>This is an SVG</title>
 </svg>
 ```
-

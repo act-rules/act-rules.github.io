@@ -2,10 +2,10 @@
 id: 5effbb
 name: Link in context is descriptive
 rule_type: atomic
-description: | 
- This rule checks that all links in their context describe their purpose.
-accessibility_requirements: 
-  wcag20:2.4.4: # Link Purpose (In Context) 
+description: |
+  This rule checks that all links in their context describe their purpose.
+accessibility_requirements:
+  wcag20:2.4.4: # Link Purpose (In Context)
     forConformance: true
     failed: not satisfied
     passed: satisfied
@@ -16,8 +16,12 @@ input_aspects:
   - Language
 authors:
   - Carlos Duarte
-  - Marie Trudelle 
+  - Marie Trudelle
   - Ramit Garg
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'alt-require'
 ---
 
 ## Applicability
@@ -32,7 +36,7 @@ The [visible](#visible) [text content](#text-content) of the target element, tog
 
 ## Assumptions
 
-This rule assumes that the purpose of the link is not ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html). If the link is ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the link out of context which makes it more of a general user experience concern than an accessibility issue.  
+This rule assumes that the purpose of the link is not ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html). If the link is ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the link out of context which makes it more of a general user experience concern than an accessibility issue.
 
 ## Accessibility Support
 
@@ -61,7 +65,7 @@ _There are no major accessibility support issues known for this rule._
 The link text describes the purpose of the link.
 
 ```html
-<a href="#desc">See the description of this product.</a> 
+<a href="#desc">See the description of this product.</a>
 
 <p id="desc">This product consists of several web pages.</p>
 ```
@@ -74,7 +78,7 @@ The accessible name describes the purpose of the link.
 <a href="#main" aria-label="Go to the main content of the page">Go</a>
 
 <main>
- <p id="main">This is the main content.</p>
+	<p id="main">This is the main content.</p>
 </main>
 ```
 
@@ -101,10 +105,12 @@ Both the link text together with its context and the accessible name describe th
 The accessible name describes the purpose of the link.
 
 ```html
-<div role="link" tabindex="0" aria-label="Skip to main content" onclick="document.location+='#main';return false;">Skip</div>
+<div role="link" tabindex="0" aria-label="Skip to main content" onclick="document.location+='#main';return false;">
+	Skip
+</div>
 
 <main>
- <p id="main">This is the main content.</p>
+	<p id="main">This is the main content.</p>
 </main>
 ```
 
@@ -124,9 +130,13 @@ The context provided by the list and the link text describe the purpose of the l
 
 ```html
 <ul>
-  <li><a href="https://www.gutenberg.org/files/4300/4300-h/4300-h.htm">Ulysses</a></li>
-  <li><a href="https://www.gutenberg.org/ebooks/4300.epub.images?session_id=04cd710372888de8d8d322215cdfe8ce5b0f8d73">EPUB</a></li>
-  <li><a href="https://www.gutenberg.org/files/4300/4300-0.txt">Plain text</a></li>
+	<li><a href="https://www.gutenberg.org/files/4300/4300-h/4300-h.htm">Ulysses</a></li>
+	<li>
+		<a href="https://www.gutenberg.org/ebooks/4300.epub.images?session_id=04cd710372888de8d8d322215cdfe8ce5b0f8d73"
+			>EPUB</a
+		>
+	</li>
+	<li><a href="https://www.gutenberg.org/files/4300/4300-0.txt">Plain text</a></li>
 </ul>
 ```
 
@@ -136,14 +146,18 @@ The context provided by the table header and the link text describe the purpose 
 
 ```html
 <table>
-  <tr>
-    <th colspan="3">Ulysses</th>
-  </tr>
-  <tr>
-    <td><a href="https://www.gutenberg.org/files/4300/4300-h/4300-h.htm">HTML</a></td>
-    <td><a href="https://www.gutenberg.org/ebooks/4300.epub.images?session_id=04cd710372888de8d8d322215cdfe8ce5b0f8d73">EPUB</a></td>
-    <td><a href="https://www.gutenberg.org/files/4300/4300-0.txt">Plain text</a></td>
-  </tr>
+	<tr>
+		<th colspan="3">Ulysses</th>
+	</tr>
+	<tr>
+		<td><a href="https://www.gutenberg.org/files/4300/4300-h/4300-h.htm">HTML</a></td>
+		<td>
+			<a href="https://www.gutenberg.org/ebooks/4300.epub.images?session_id=04cd710372888de8d8d322215cdfe8ce5b0f8d73"
+				>EPUB</a
+			>
+		</td>
+		<td><a href="https://www.gutenberg.org/files/4300/4300-0.txt">Plain text</a></td>
+	</tr>
 </table>
 ```
 
@@ -154,18 +168,18 @@ The accessible name describes the purpose of the link.
 ```html
 <p id="instructions">Click on the arrow to go to the main content.</p>
 <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0">
-  <a href="#main" aria-labelledby="instructions">
-    <path
-      style="fill:#1E201D;"
-      d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111
+	<a href="#main" aria-labelledby="instructions">
+		<path
+			style="fill:#1E201D;"
+			d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111
 			C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587
 			c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"
-    />
-  </a>
+		/>
+	</a>
 </svg>
 
 <main>
-  <p id="main">This is the main content.</p>
+	<p id="main">This is the main content.</p>
 </main>
 ```
 
@@ -189,7 +203,7 @@ The accessible name without any further programmatically determined link context
 <a href="#main" aria-label="Go">Go</a>
 
 <main>
- <p id="main">This is the main content.</p>
+	<p id="main">This is the main content.</p>
 </main>
 ```
 
@@ -201,7 +215,7 @@ The link text, together with the absence of programmatically determined link con
 <div role="link" tabindex="0" onclick="document.location+='#main';return false;">More</div>
 
 <main>
- <p id="main">This is the main content.</p>
+	<p id="main">This is the main content.</p>
 </main>
 ```
 
@@ -214,7 +228,7 @@ The accessible name without any further programmatically determined link context
 <div id="id1">Go</div>
 
 <main>
- <p id="main">This is the main content.</p>
+	<p id="main">This is the main content.</p>
 </main>
 ```
 
@@ -224,20 +238,19 @@ The accessible name without any further programmatically determined link context
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0">
-  <a href="#main" aria-label="Go">
-    <text x="20" y="20">
-      Go
-    </text>
-  </a>
+	<a href="#main" aria-label="Go">
+		<text x="20" y="20">
+			Go
+		</text>
+	</a>
 </svg>
 
 <main>
-  <p id="main">This is the main content.</p>
+	<p id="main">This is the main content.</p>
 </main>
 ```
 
-
-### Inapplicable 
+### Inapplicable
 
 #### Inapplicable Example 1
 

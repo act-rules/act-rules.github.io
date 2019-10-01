@@ -19,7 +19,11 @@ authors:
 
 ## Applicability
 
-This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element with both `lang` and `xml:lang` attributes that have [valid language subtags](#valid-language-subtag).
+This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element that:
+
+- has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html` and whose [browsing context](https://html.spec.whatwg.org/#browsing-context) is a [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context); and
+- has a `lang` attribute that has a [valid language subtag](#valid-language-subtag); and
+- has an `xml:lang` attribute.
 
 ## Expectation
 

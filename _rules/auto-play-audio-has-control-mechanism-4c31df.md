@@ -36,7 +36,7 @@ For each test target a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) 
 
 ## Expectation 2
 
-The [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off is [visible](#visible), has an [accessible name](#accessible-name), and is [included in the accessibility tree](#included-in-the-accessibility-tree).
+The [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off is [visible](#visible), has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace) , and is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ## Assumptions
 
@@ -44,7 +44,7 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-The native `<video>` and `<audio>` controls in several browser and assistive technology combinations are not keyboard accessible and the `<video>` or `<audio>` element itself may not be anounced. Authors are recomended to use custom controls for keyboard navigation and cross browser accessibility support in general.
+The native `<video>` and `<audio>` controls in several browser and assistive technology combinations are not keyboard accessible and the `<video>` or `<audio>` element itself may not be announced. Authors are recomended to use custom controls for keyboard navigation and cross browser accessibility support in general.
 
 ## Background
 

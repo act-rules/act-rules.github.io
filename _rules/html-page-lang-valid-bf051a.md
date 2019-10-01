@@ -21,8 +21,11 @@ authors:
 
 This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element that:
 
-- has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html` and whose [browsing context](https://html.spec.whatwg.org/#browsing-context) is a [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context); and
-- has a `lang` attribute that is neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace)
+- is in a [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context); and
+- has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`; and
+- has a `lang` attribute that is neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
+
+**Node:** `html` elements within `iframe` and `object` elements are not applicable as `iframe` and `object` elements create [nested browsing contexts](https://html.spec.whatwg.org/#nested-browsing-context).
 
 ## Expectation
 

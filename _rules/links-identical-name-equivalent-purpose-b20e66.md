@@ -362,15 +362,15 @@ These `a` and `area` elements have no `href` attribute.
 
 #### Inapplicable Example 2
 
-These links have different [accessible names][accessible name]. The rule is only concerned about links with identical [accessible names][accessible name].
-
-**Note**: It is a best practice for [Success Criterion 2.4.9: Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html) that identical links have identical [accessible names][accessible name]. This is however not a requirement.
+These links have different [accessible names][accessible name].
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
 	>Contact main office</a
 >
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
+	>Contact admissions office</a
+>
 ```
 
 #### Inapplicable Example 3

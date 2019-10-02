@@ -122,6 +122,7 @@
 
 # Common Failures (https://www.w3.org/WAI/WCAG21/Techniques/#failures)
 - F10 
+- F16 
 - F30 
 - F38 
 - F40 
@@ -145,6 +146,7 @@
 - G162 
 - G166 
 - G173 
+- G186 
 - G203
 
 # HTMl Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#html)

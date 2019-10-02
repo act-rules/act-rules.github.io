@@ -44,11 +44,11 @@ For each test target, the outcome of (at least one of | all of | any of etc.) th
 
 ## Assumptions
 
-_No assumptions_
+_No assumptions._
 
 ## Accessibility Support
 
-_No accessibility support issues known._
+_No accessibility support issues known.._
 
 ## Background
 

@@ -53,11 +53,11 @@ Each target element ...
 
 ## Assumptions
 
-_No assumptions_
+_No assumptions._
 
 ## Accessibility Support
 
-_No accessibility support issues known_
+_No accessibility support issues known._
 
 ## Background
 
@@ -169,11 +169,11 @@ For each test target, the outcome of (at least one of / all of / any of etc.) th
 
 ## Assumptions
 
-_No assumptions_
+_No assumptions._
 
 ## Accessibility Support
 
-_No accessibility support issues known_
+_No accessibility support issues known._
 
 ## Background
 

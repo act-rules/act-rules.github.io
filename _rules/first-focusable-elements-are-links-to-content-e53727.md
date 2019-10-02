@@ -248,6 +248,22 @@ Links in the [initial segment](#initial-segment) list do not have an [accessible
 <main id="main">Main content</main>
 ```
 
+#### Failed Example 8
+
+Multiple links in the [initial segment](#initial-segment) list move the focus to the same [section of content](#section-of-content).
+
+```html
+<ul>
+	<li><a href="#navigation">Skip to navigation</a></li>
+	<li><a href="#search">Skip to search</a></li>
+	<li><a href="#main">Skip to main content</a></li>
+	<li><a href="#main">Skip to main content again with this link</a></li>
+</ul>
+<nav id="navigation">Navigation section</nav>
+<form id="search" role="search">Search section</form>
+<main id="main">Main content</main>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1

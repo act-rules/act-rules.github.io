@@ -132,5 +132,5 @@ This rule does not apply to elements without an `xml:lang` attribute.
 This rule does not apply to `math` elements.
 
 ```html
-<math xml:lang="en"></html>
+<math xml:lang="en"></math>
 ```

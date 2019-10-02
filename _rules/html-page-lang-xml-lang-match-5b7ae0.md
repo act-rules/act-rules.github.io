@@ -34,7 +34,7 @@ For each test target, the values of the [primary language subtags](https://tools
 
 ## Assumptions
 
-- The presence of a `lang` attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
+This rule assumes that the presence of a `lang` attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
 
 ## Accessibility Support
 

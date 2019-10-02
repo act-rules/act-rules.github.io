@@ -31,7 +31,7 @@ For each test target, the `lang` attribute has a [valid language subtag](#valid-
 
 ## Assumptions
 
-- The presence of a `lang` attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
+This rule assumes that the presence of a `lang` attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
 
 ## Accessibility Support
 
@@ -114,7 +114,7 @@ The `lang` attribute value is not empty ("") and is not a valid primary language
 
 #### Inapplicable Example 1
 
-The rule applies to elements with the `body` of a webpage. `html` elements are ignored by the rule.
+The rule applies to elements within the `body` of a webpage. `html` elements are ignored by the rule.
 
 ```html
 <html lang="en">
@@ -124,7 +124,7 @@ The rule applies to elements with the `body` of a webpage. `html` elements are i
 
 #### Inapplicable Example 2
 
-An empty value for `lang` attribute is ignored as the rule only applies to `lang` or `xml:lang` attribute that is neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
+An empty value for the `lang` attribute is ignored as the rule only applies to `lang` attributes that are neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 ```html
 <html>

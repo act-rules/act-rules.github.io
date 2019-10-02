@@ -110,3 +110,27 @@ Only `non-empty` values are considered.
 ```html
 <html lang="" xml:lang=""></html>
 ```
+
+#### Inapplicable Example 4
+
+This rule does not apply to elements whose `lang` attribute consists only of whitespace.
+
+```html
+<html lang=" " xml:lang=""></html>
+```
+
+#### Inapplicable Example 5
+
+This rule does not apply to elements without an `xml:lang` attribute.
+
+```html
+<html lang="en"></html>
+```
+
+#### Inapplicable Example 6
+
+This rule does not apply to `math` elements.
+
+```html
+<math xml:lang="en"></html>
+```

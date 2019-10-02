@@ -2,6 +2,7 @@
 
 # Project specific words
 - WAI 
+- W3C
 
 # Generic HTML tag(s)
 - html
@@ -101,6 +102,12 @@
 - lang 
 - xml:lang
 - http-equiv
+- user-scalable
+- user-scalable=yes
+- user-scalable=no
+- rotate3d
+- rotateZ
+- matrix3d
 
 # ARIA Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#aria)
 - ARIA1 
@@ -145,7 +152,8 @@
 - H36 
 - H37 
 - H42 
-- H44 
+- H44
+- H58
 - H67 
 - H93 
 - H94 
@@ -156,3 +164,4 @@
 - programmatically
 - Programmatically
 - personalization
+- Autofill

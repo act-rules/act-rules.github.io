@@ -48,7 +48,7 @@ _No assumptions._
 
 ## Accessibility Support
 
-_No accessibility support issues known.._
+_No accessibility support issues known._
 
 ## Background
 

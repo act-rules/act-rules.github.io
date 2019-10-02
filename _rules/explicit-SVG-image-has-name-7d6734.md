@@ -1,6 +1,6 @@
 ---
 id: 7d6734
-name: Explicit SVG image has accessible name
+name: `svg` element with explicit role has accessible name
 rule_type: atomic
 description: |
    This rule checks that each SVG image element that is explicitly included in the accessibility tree has an accessible name.
@@ -72,14 +72,14 @@ The `<circle>` element has an explicit role of `graphics-symbol` and an accessib
 
 ```html
 <p>How many circles are there?</p>
-<svg xmlns="https://www.w3.org/2000/svg" role="img" aria-label="1 circle">
+<svg xmlns="https://www.w3.org/2000/svg" role="img">
 	<circle role="graphics-symbol" cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" aria-label="1 circle">
 </svg>
 ```
 
 #### Passed example 3
 
-The `<svg>` element has an explicit role of `graphics-document` and an accessible name from the `<title>` elememt that does not contain only whitespace.
+The `<svg>` element has an explicit role of `graphics-document` and an accessible name from the `<title>` element that does not contain only whitespace.
 
 ```html
 <p>How many circles are there?</p>
@@ -116,7 +116,7 @@ The `<svg>` element has an explicit role of `img` but has only whitespace in the
 
 #### Failed example 3
 
-The `<svg>` element is included in the accessibility tree with an explicit role of `img` but has no content in the `<title>` element for an accessible name.
+The `<svg>` element has an explicit role of and is included in the accessibility tree with an explicit role of `img` but has no content in the `<title>` element for an accessible name.
  
 ```html
 <p>How many circles are there?</p>

@@ -54,161 +54,143 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The link to skip repeated content is [visible](#visible), is [included in the accessibility tree](#included-in-the-accessibility-tree), and when activated moves the focus to the main content identified here by the `main` element.
+The link to skip [repeated content](#repeated-content) is [visible](#visible), is [included in the accessibility tree](#included-in-the-accessibility-tree), and when activated moves the focus to the main content identified here by the `main` element.
 
 ```html
-<body>
-	<nav>
-		<a href="#main-content">Skip to main content</a>
-	</nav>
-	<div id="repeated-content">
-		<!-- Repeated Content -->
-	</div>
-	<main id="main-content">Main Content</main>
-</body>
+<nav>
+	<a href="#main-content">Skip to main content</a>
+</nav>
+<div id="repeated-content">
+	<!-- Repeated Content -->
+</div>
+<main id="main-content">Main Content</main>
 ```
 
 #### Passed Example 2
 
-The link to skip repeated content can be toggled to [visible](#visible) through keyboard focus. When activated the focus is moved to the main content identified here by the `main` element.
+The link to skip [repeated content](#repeated-content) can be toggled to [visible](#visible) through keyboard focus. When activated the focus is moved to the [main content](#main-content) identified here by the `main` element.
 
 ```html
-<body>
-	<style>
-		#skipNav a {
-			height: 100px;
-			position: absolute;
-			top: -100px;
-		}
-		#skipNav a:focus {
-			top: 0px;
-		}
-	</style>
-	<nav id="skipNav">
-		<a href="#main-content">Skip to main content</a>
-	</nav>
-	<div id="repeated-content">
-		<!-- Repeated content -->
-	</div>
-	<main id="main-content">Main Content</main>
-</body>
+<style>
+	#skipNav a {
+		height: 100px;
+		position: absolute;
+		top: -100px;
+	}
+	#skipNav a:focus {
+		top: 0px;
+	}
+</style>
+<nav id="skipNav">
+	<a href="#main-content">Skip to main content</a>
+</nav>
+<div id="repeated-content">
+	<!-- Repeated content -->
+</div>
+<main id="main-content">Main Content</main>
 ```
 
 #### Passed Example 3
 
-The link to skip repeated content has an `aria-label` to provide an [accessible name](#accessible-name). When activated focus is moved to the main content identified here by the `main` element.
+The link to skip [repeated content](#repeated-content) has an `aria-label` to provide an [accessible name](#accessible-name). When activated focus is moved to the [main content](#main-content) identified here by the `main` element.
 
 ```html
-<body>
-	<nav>
-		<a href="#main-content" aria-label="Skip to main content"></a>
-	</nav>
-	<div id="repeated-content">
-		<!-- Repeated content -->
-	</div>
-	<main id="main-content">Main Content</main>
-</body>
+<nav>
+	<a href="#main-content" aria-label="Skip to main content"></a>
+</nav>
+<div id="repeated-content">
+	<!-- Repeated content -->
+</div>
+<main id="main-content">Main Content</main>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-There is no link to skip repeated content.
+There is no link to skip [repeated content](#repeated-content).
 
 ```html
-<body>
-	<div id="repeated-content">
-		<!-- Repeated content -->
-	</div>
-	<main id="main-content">Main Content</main>
-</body>
+<div id="repeated-content">
+	<!-- Repeated content -->
+</div>
+<main id="main-content">Main Content</main>
 ```
 
 #### Failed Example 2
 
-The link to skip repeated content is not the first focusable element within the `body`.
+The link to skip [repeated content](#repeated-content) is not the first [focusable](#focusable) element within the `body`.
 
 ```html
-<body>
-	<a href="https://www.w3.org/">Check out the W3C</a>
-	<nav>
-		<a href="#main-content">Skip to main content</a>
-	</nav>
-	<div id="repeated-content">
-		<!-- Repeated content -->
-	</div>
-	<main id="main-content">Main Content</main>
-</body>
+<a href="https://www.w3.org/">Check out the W3C</a>
+<nav>
+	<a href="#main-content">Skip to main content</a>
+</nav>
+<div id="repeated-content">
+	<!-- Repeated content -->
+</div>
+<main id="main-content">Main Content</main>
 ```
 
 #### Failed Example 3
 
-The link to skip repeated content does not have an [accessible name](#accessible-name).
+The link to skip [repeated content](#repeated-content) does not have an [accessible name](#accessible-name).
 
 ```html
-<body>
-	<nav>
-		<a href="#main-content"></a>
-	</nav>
-	<div id="repeated-content">
-		<!-- Repeated content -->
-	</div>
-	<main id="main-content">Main Content</main>
-</body>
+<nav>
+	<a href="#main-content"></a>
+</nav>
+<div id="repeated-content">
+	<!-- Repeated content -->
+</div>
+<main id="main-content">Main Content</main>
 ```
 
 #### Failed Example 4
 
-The link to skip repeated content does not reference a valid `id` and when activated will not move focus to the main content identified here by the `main` element.
+The link to skip [repeated content](#repeated-content) does not reference a valid `id` attribute and when activated will not move focus to the [main content](#main-content) identified here by the `main` element.
 
 ```html
-<body>
-	<nav>
-		<a href="#invalidId">Skip to main content</a>
-	</nav>
-	<div id="repeated-content">
-		<!-- Repeated content -->
-	</div>
-	<main id="main-content">Main Content</main>
-</body>
+<nav>
+	<a href="#invalidId">Skip to main content</a>
+</nav>
+<div id="repeated-content">
+	<!-- Repeated content -->
+</div>
+<main id="main-content">Main Content</main>
 ```
 
 #### Failed Example 5
 
-The link to skip repeated content is not [visible](#visible), and is not included in the [accessibility tree](#accessibility-tree).
+The link to skip [repeated content](#main-content) is not [visible](#visible), and is not included in the [accessibility tree](#accessibility-tree).
 
 ```html
-<body>
-	<nav>
-		<a href="#main-content" style="display:none;">Skip to main content</a>
-	</nav>
-	<div id="repeated-content">
-		<!-- Repeated content -->
-	</div>
-	<main id="main-content">Main Content</main>
-</body>
+<nav>
+	<a href="#main-content" style="display:none;">Skip to main content</a>
+</nav>
+<div id="repeated-content">
+	<!-- Repeated content -->
+</div>
+<main id="main-content">Main Content</main>
 ```
 
 #### Failed Example 6
 
-The element with a click event to skip repeated content does not have a [semantic role](#semantic-role) of link.
+The element with a click event to skip [repeated content](#repeated-content) does not have a [semantic role](#semantic-role) of link.
 
 ```html
-<body>
-	<nav>
-		<span onClick="focusMainContent()">Skip to main content</span>
-	</nav>
-	<div id="repeated-content">
-		<!-- Repeated content -->
-	</div>
-	<main id="main-content">Main Content</main>
-	<script>
-		function focusMainContent() {
-			document.getElementById('main-content').focus()
-		}
-	</script>
-</body>
+<nav>
+	<span onClick="focusMainContent()">Skip to main content</span>
+</nav>
+<div id="repeated-content">
+	<!-- Repeated content -->
+</div>
+<main id="main-content">Main Content</main>
+<script>
+	function focusMainContent() {
+		document.getElementById('main-content').focus()
+	}
+</script>
 ```
 
 ### Inapplicable

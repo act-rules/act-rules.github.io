@@ -20,7 +20,6 @@ section.layout-container {
     padding-left: 1rem;
     position: relative;
     transition: all 0.25s;
-    z-index: 2;
    
     button.nav-hide-show-menu {
       position: fixed;
@@ -111,12 +110,11 @@ section.layout-container {
     @include flex-column();
     width: 100%;
     >section {
-      @include flex-column();
+      @include flex-row();
       @include flex-scroll-container();
       color: $black;
       line-height: 1.5;
       
-
       .page-container {
         @include page-container-default-styles;
 
@@ -289,103 +287,91 @@ section.layout-container {
       // Style for a rule page
       .page-rule {
         @include page-container-default-styles;
-        padding-right: 300px;
+        margin: 0;
+        padding-bottom: 3rem;
+        padding-top: 3rem;
+        overflow-y: auto;
 
-        section {
-          flex: 1;
-          position: relative;
-          width: 100%;
-          padding-bottom: 6rem;
-
-
-
-          ul.meta,
-          div.meta {
-            @include reset-list();
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            h3.heading, 
-            span.heading {
-              padding: 0.25rem 0.5rem;
-              background-color: $sep;
-              border: 1px solid $transparent;
-              text-transform: capitalize;
-              display: inline-block;
-              font-weight: bold;
-              margin-top: 1em;
-              font-size: 90%;
-              color: $fg-primary;
-              cursor: auto;
-              &:hover {
-                text-decoration: none;
-              }
-            }
-            p{
-              margin: 0;
-              display: block;
-              padding: 0.25rem 0.5rem;
-              text-transform: capitalize;
-            }
-            a.sc-item {
-              cursor: pointer;
+        ul.meta,
+        div.meta {
+          @include reset-list();
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          h3.heading, 
+          span.heading {
+            padding: 0.25rem 0.5rem;
+            background-color: $sep;
+            border: 1px solid $transparent;
+            text-transform: capitalize;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 1em;
+            font-size: 90%;
+            color: $fg-primary;
+            cursor: auto;
+            &:hover {
               text-decoration: none;
-              text-transform: capitalize;
-              &:hover {
-                color: $accent;
-              }
-              &.block {
-                display:block;
-              }
+            }
+          }
+          p{
+            margin: 0;
+            display: block;
+            padding: 0.25rem 0.5rem;
+            text-transform: capitalize;
+          }
+          a.sc-item {
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: capitalize;
+            &:hover {
+              color: $accent;
+            }
+            &.block {
+              display:block;
             }
           }
         }
+      }
+      .toc {
+        border-left: 1px solid $sep;
+        min-width: 225px;
+        max-width: 300px;
+        overflow: auto;
+        font-size: 85%;
+        padding-bottom: 3rem;
+        
+        span.heading {
+          padding: 0.25rem 0.5rem;
+          @include header-style($fg-primary);
+          text-transform: capitalize;
+          background-color: $sep;
+          margin: 1rem 0.5rem 0.5rem 0;
+          display: inline-block;
+          &:first-child {
+            margin-top: 6rem;
+          }
+        }
 
-        div.toc {
-          flex: inherit;
-          position: fixed;
-          right: 0;
-          top: 0;
-          bottom: 55px;
-          border-left: 1px solid $sep;
-          min-width: 225px;
-          max-width: 300px;
-          overflow: auto;
-          font-size: 85%;
-          padding-bottom: 3rem;
-          
-          span.heading {
-            padding: 0.25rem 0.5rem;
-            @include header-style($fg-primary);
-            text-transform: capitalize;
-            background-color: $sep;
-            margin: 1rem 0.5rem 0.5rem 0;
-            display: inline-block;
-            &:first-child {
-              margin-top: 6rem;
+        ul{
+          @include reset-list;
+          margin: 0.5rem 0;
+          li {
+            span, a {
+              display: inline-block;
+            }
+            a{
+              cursor: pointer;
+              text-decoration: none;
+              padding: 0rem 1rem;
+              display: block;
+              &:hover {
+                color: $accent;
+              }
             }
           }
-
-          ul{
-            @include reset-list;
-            margin: 0.5rem 0;
-            li {
-              span, a {
-                display: inline-block;
-              }
-              a{
-                cursor: pointer;
-                text-decoration: none;
-                padding: 0rem 1rem;
-                display: block;
-                &:hover {
-                  color: $accent;
-                }
-              }
-            }
-            ul {
-              margin-left: 1rem;
-            }
+          ul {
+            margin-left: 1rem;
           }
         }
       }
@@ -393,6 +379,7 @@ section.layout-container {
 
     >footer {
       @include flex-row();
+      flex-shrink:0;
     }
   } 
 }
@@ -410,9 +397,9 @@ and (max-width : 600px) {
       }
       .page-rule {
         padding-right: 3rem !important;
-        div.toc {
-          display: none;
-        }
+      }
+      .toc {
+        display: none;
       }
       .app-footer {
         display: none;
@@ -450,9 +437,9 @@ and (max-width : 1024px) {
       }
       .page-rule {
         padding-right: 4rem !important;
-        div.toc {
-          display: none;
-        }
+      }
+      .toc {
+        display: none;
       }
     }
   }

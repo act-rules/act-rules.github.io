@@ -18,6 +18,7 @@
 - UA/AT 
 - WCAG
 - WCAG2 
+- WCAG21
 - CSS3 
 - UA 
 - UI
@@ -56,6 +57,16 @@
 - www.w3.org 
 - eval 
 - html52
+- html53
+- whatwg
+- infra
+- spec
+- dom
+- csswg
+- css-scoping
+- dfn-essential
+- dfn-mechanism
+- ascii-whitespace
 
 # Other tool names
 - axe-core

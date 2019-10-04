@@ -77,7 +77,7 @@ This black [text node](https://dom.spec.whatwg.org/#text) is on a white backgrou
 This black [text node](https://dom.spec.whatwg.org/#text) is on a partially white gradient background.
 
 ```html
-<p style="color: #333; background: linear-gradient(to right, #FFF, #00F);">
+<p style="color: #333; background: linear-gradient(to right, #FFF, #00F); width: 300px;">
 	Some text in a human language
 </p>
 ```
@@ -96,7 +96,7 @@ This light [text node](https://dom.spec.whatwg.org/#text) is on a partially blac
 
 #### Passed Example 4
 
-This [text node](https://dom.spec.whatwg.org/#text) passes because of a text shadow.
+This [text node](https://dom.spec.whatwg.org/#text) passes because of the text shadow gives the text sufficient contrast.
 
 ```html
 <p style="color: #000; background: #737373; text-shadow: white 0 0 3px">
@@ -147,7 +147,7 @@ This text has an insufficient contrast but it does not express anything in human
 
 #### Passed Example 9
 
-This text is in a shadow DOM tree and has sufficient contrast.
+Even though the text is in a shadow DOM tree, the [text node](https://dom.spec.whatwg.org/#text) is a child of an HTML in the flat tree and has sufficient contrast
 
 ```html
 <p style="color: #333; background: #fff;" id="p"></p>
@@ -157,21 +157,11 @@ This text is in a shadow DOM tree and has sufficient contrast.
 </script>
 ```
 
-#### Passed Example 10
-
-This black [text node](https://dom.spec.whatwg.org/#text) is in Japanese, showing that this rule applies to any human language. (The phrase means "Even monkeys fall from trees.").
-
-```html
-<p style="color: #333; background: #FFF;">
-	猿も木から落ちる。
-</p>
-```
-
 ### Failed
 
 #### Failed Example 1
 
-This text has an insufficient contrast with the plain background.
+This text has an insufficient contrast with the white background.
 
 ```html
 <p style="color: #AAA; background: white;">
@@ -181,10 +171,10 @@ This text has an insufficient contrast with the plain background.
 
 #### Failed Example 2
 
-This text has an insufficient contrast with the gradient background.
+This text has an insufficient contrast with the lightest point on the gradient background behind the text.
 
 ```html
-<p style="color: #AAA; background: linear-gradient(to right, #FFF, #00F);">
+<p style="color: #AAA; background: linear-gradient(to right, #FFF, #00F); width: 300px">
 	Some text in English
 </p>
 ```
@@ -203,7 +193,7 @@ This text has an insufficient contrast with the background image.
 
 #### Failed Example 4
 
-This text fails because of alpha transparency.
+This text fails because of alpha transparency significantly lowers the contrast of the otherwise black text.
 
 ```html
 <p style="color: rgba(0,0,0,.3); background: #FFF">
@@ -213,7 +203,7 @@ This text fails because of alpha transparency.
 
 #### Failed Example 5
 
-This text fails because of CSS transparent.
+This text fails because of the CSS opacity property significantly lowers the contrast of the otherwise black text.
 
 ```html
 <div style="background: #FFF">
@@ -225,7 +215,7 @@ This text fails because of CSS transparent.
 
 #### Failed Example 6
 
-This text is in a shadow DOM tree and has insufficient contrast.
+Even though the text is in a shadow DOM tree, the [text node](https://dom.spec.whatwg.org/#text) is a child of an HTML in the flat tree and has insufficient contrast
 
 ```html
 <p style="color: #aaa; background: #fff;" id="p"></p>
@@ -247,15 +237,23 @@ This is invisible text.
 
 #### Inapplicable Example 2
 
+The text is inapplicable because it is positioned off screen.
+
+```html
+<p style="position:absolute; top: -999em">Some invisible text in English</p>
+```
+
+#### Inapplicable Example 3
+
 This text has the same foreground and background colors.
 
 ```html
 <p style="color: white; background: white;">Some white on white text in English</p>
 ```
 
-#### Inapplicable Example 3
+#### Inapplicable Example 4
 
-This text is no not the child of an HTML element.
+This text is not the child of an HTML element.
 
 ```html
 <svg>
@@ -263,7 +261,7 @@ This text is no not the child of an HTML element.
 </svg>
 ```
 
-#### Inapplicable Example 4
+#### Inapplicable Example 5
 
 This is not a [text node](https://dom.spec.whatwg.org/#text) but an image.
 
@@ -273,7 +271,7 @@ This is not a [text node](https://dom.spec.whatwg.org/#text) but an image.
 </p>
 ```
 
-#### Inapplicable Example 5
+#### Inapplicable Example 6
 
 This text is contained in a native button.
 
@@ -281,15 +279,15 @@ This text is contained in a native button.
 <button>My button!</button>
 ```
 
-#### Inapplicable Example 6
+#### Inapplicable Example 7
 
-This text is contained in a ARIA button.
+This text is contained in an ARIA button.
 
 ```html
 <div role="button">My button!</div>
 ```
 
-#### Inapplicable Example 7
+#### Inapplicable Example 8
 
 This text is in a label of a disabled native widget.
 
@@ -300,7 +298,7 @@ This text is in a label of a disabled native widget.
 </label>
 ```
 
-#### Inapplicable Example 8
+#### Inapplicable Example 9
 
 This text is in a label of a disabled ARIA widget.
 
@@ -318,7 +316,7 @@ This text is in a label of a disabled ARIA widget.
 </div>
 ```
 
-#### Inapplicable Example 9
+#### Inapplicable Example 10
 
 This text is in a disabled fieldset.
 
@@ -331,7 +329,7 @@ This text is in a disabled fieldset.
 </fieldset>
 ```
 
-#### Inapplicable Example 10
+#### Inapplicable Example 11
 
 This text is in a disabled ARIA group.
 

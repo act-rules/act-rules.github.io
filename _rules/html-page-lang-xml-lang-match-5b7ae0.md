@@ -30,7 +30,9 @@ This rule applies to any [document element](https://dom.spec.whatwg.org/#documen
 
 ## Expectation
 
-For each test target, the values of the [primary language subtags](https://tools.ietf.org/html/bcp47#section-2.2.1) and the [extended language subtags](https://tools.ietf.org/html/bcp47#section-2.2.2), if any exist, for the `lang` and `xml:lang` attributes are the same.
+For each test target, the values of the [primary language subtags](https://tools.ietf.org/html/bcp47#section-2.2.1), if any exist, for the `lang` and `xml:lang` attributes are the same.
+
+**Note:** Having matching [primary language subtags](https://tools.ietf.org/html/bcp47#section-2.2.1) of the `lang` and `xml:lang` attribute, but non-matching [language tags](https://tools.ietf.org/html/bcp47#section-2) overall, will not cause accessibility issues unless there's a sufficiently large difference between the two [language tags](https://tools.ietf.org/html/bcp47#section-2). One notable case is the [language tags](https://tools.ietf.org/html/bcp47#section-2) for Cantonese (`zh-que`) and Mandarin (`zh-cmn`) where the [primary language subtags](https://tools.ietf.org/html/bcp47#section-2.2.1) match, but the [extended language subtags](https://tools.ietf.org/html/bcp47#section-2.2.2) don't. Such a case would not fail this rule, but could lead to accessibility issues in practice.
 
 ## Assumptions
 
@@ -67,6 +69,14 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 <html lang="en-GB" xml:lang="en-GB"></html>
 ```
 
+#### Passed Example 3
+
+`html` element with matching primary language subtags, but non-matching extended language subtags, for `lang` and `xml:lang`.
+
+```html
+<html lang="en-GB" xml:lang="en-US"></html>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -75,14 +85,6 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 ```html
 <html lang="fr" xml:lang="en"></html>
-```
-
-#### Failed Example 2
-
-`html` element with non-matching extended language subtags for `lang` and `xml:lang`. While the primary language subtag is Chinese for both the `lang` and `xml:lang` attribute, the extended language subtag is Cantonese for the `lang` attribute and Mandarin for the `xml:lang` attribute.
-
-```html
-<html lang="zh-yue" xml:lang="zh-cmn"></html>
 ```
 
 ### Inapplicable

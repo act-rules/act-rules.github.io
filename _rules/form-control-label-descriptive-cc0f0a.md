@@ -26,8 +26,8 @@ previous_authors:
 This rule applies to any HTML or SVG element that:
 
 - has one of the following [semantic roles][semantic role]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`; and
-- is [visible][] or [included in the accessibility tree][]; and
-- has an [accessible name][].
+- is [visible][]; and
+- [included in the accessibility tree][]
 
 **Note**: The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
 
@@ -38,9 +38,15 @@ This rule applies to any HTML or SVG element that:
 
 ## Expectation
 
-Each test target has an [accessible name][] that describes its purpose. Both the [visual context][] of the test target, and its [programmatically determined context][] [included in the accessibility tree][] can be used to differentiate the purpose from other form fields on the same page.
+If the test target has a [label][], this [label][] describes the purpose of the test target. The [context][] of the [label][] can be used to differentiate the purpose from other test targets in the same test subject.
 
-**Note:** In this case, [visual context][] can be created by headings, fieldsets and legends, text that is near the control, etc.
+**Note**: [Labels][label] are not restricted to the `label` element of HTML and can be any element.
+
+**Note**: [Labels][label] have to be presented to all users. Therefore, [accessible names][accessible name] or elements that are not [included in the accessiblity tree][] do not qualify as [labels][].
+
+**Note**: If the [label][] is not programmatically associated with the form field element, this is likely a violation of [Success Criterion 1.3.1: Info and Relationships][sc131] but neither of this rule nor of [Success Criterion 2.4.6: Heading and Labels][sc246].
+
+**Note**: It is possible for a test target to have an [accessible name][] without having an accurate [label][]. In that case, it would pass [Success Criterion 4.1.2: Name, Role and Value][sc412] but still fail this rule and [Success Criterion 2.4.6: Heading and Labels][sc246].
 
 ## Assumptions
 
@@ -270,7 +276,11 @@ The form field has no [accessible name][] since the empty `aria-label` attribute
 [accessible name]: #accessible-name 'Definition of accessible name'
 [context]: #context 'Definition of context'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[label]: https://www.w3.org/TR/WCAG21/#dfn-labels 'Definition of label'
 [programmatically determined context]: #programmatically-determined-context 'Definition of programmatically determined context'
 [semantic role]: #semantic-role 'Definition of semantic role'
+[sc131]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships 'Understanding SC 1.3.1: Info and Relationships'
+[sc246]: https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html 'Understanding SC 2.4.6: Heading and Labels'
+[sc412]: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value 'Understanding SC 4.1.2: Name, Role and Value'
 [visible]: #visible 'Definition of visible'
 [visual context]: #visual-context 'Definition of visual context'

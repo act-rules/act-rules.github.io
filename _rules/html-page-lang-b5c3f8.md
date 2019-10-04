@@ -36,7 +36,7 @@ This rule assumes that the presence of a `lang` attribute is being used to compl
 
 ## Accessibility Support
 
-There are known combinations of a popular operating system with browsers and assistive technologies that do not support the `lang` attribute.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 

@@ -49,6 +49,7 @@
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete 
 - Focusable
+- ascii
 
 # Parts of url
 - http 

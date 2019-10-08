@@ -1,4 +1,4 @@
-name: Run test(s)
+name: Verify test(s)
 
 # Run on PR's targetting `develop` branch
 on:
@@ -7,7 +7,7 @@ on:
     - develop
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1

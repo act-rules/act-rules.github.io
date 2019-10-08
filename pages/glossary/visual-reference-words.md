@@ -5,6 +5,8 @@ key: visual-reference-words
 
 Any word in a text node that is included in the translated version of the following lists, where the language of the translation is the programmatically determinable language of the text node. Some words can be translated in multiple ways. In such cases each translation must be included. Some words can be spelled in multiple ways (For example: sometimes the word is capatalized and sometimes it isn't). In such cases each spelling must be included.
 
+**Note:** This list is not exhaustive. As soon as more visual reference words are found they can be added to this list.
+
 Visual location
 - Above
 - Below

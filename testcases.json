@@ -1,5 +1,5 @@
 {
-  "name": "[object Object] test cases",
+  "name": "ACT-Rules Community test cases",
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
@@ -5493,9 +5493,9 @@
       }
     },
     {
-      "testcaseId": "1e673e6c6255b5fdb0c4b2e2a5505ade6970e28d",
-      "url": "https://act-rules.github.io/testcases/4b1c6c/1e673e6c6255b5fdb0c4b2e2a5505ade6970e28d.html",
-      "relativePath": "testcases/4b1c6c/1e673e6c6255b5fdb0c4b2e2a5505ade6970e28d.html",
+      "testcaseId": "b20b4c1fbf9161bf474d6425bf9296940db4310e",
+      "url": "https://act-rules.github.io/testcases/4b1c6c/b20b4c1fbf9161bf474d6425bf9296940db4310e.html",
+      "relativePath": "testcases/4b1c6c/b20b4c1fbf9161bf474d6425bf9296940db4310e.html",
       "expected": "inapplicable",
       "ruleId": "4b1c6c",
       "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",

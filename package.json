@@ -181,7 +181,7 @@
 		"getImplementationAlfa": "node ./build/get-implementation --org 'Siteimprove' --tool 'Alfa' --path './node_modules/act-rules-implementation-alfa/report.json'",
 		"pregetImplementationAxeCore": "npm --prefix './node_modules/act-rules-implementation-axe-core/' run build -- --testsJson ${PWD}/_data/rules-testcases/testcases.json --testsDir ${PWD}/_data/rules-testcases --siteUrl $npm_package_www_url",
 		"getImplementationAxeCore": "node ./build/get-implementation --org 'Deque Systems' --tool 'Axe-core' --path './node_modules/act-rules-implementation-axe-core/report.json'",
-		"getImplementationRgaa": "node ./build/get-implementation --org 'Access42' --tool 'RGAA 3.0' --path './node_modules/act-rules-implementation-rgaa/reports/*.json'",
+		"getImplementationRgaa": "node ./build/get-implementation --org 'Access42' --tool 'RGAA 4.0' --path './node_modules/act-rules-implementation-rgaa/reports/*.json'",
 		"getImplementationTrustedTester": "node ./build/get-implementation --org 'Trusted Tester' --tool 'Trusted Tester' --path './node_modules/act-rules-implementation-trusted-tester/reports/*.json'",
 		"getImplementationQualWeb": "node ./build/get-implementation --org 'LASIGE, Faculdade de Ciências da Universidade de Lisboa' --tool 'QualWeb' --path './node_modules/act-rules-implementation-qualweb/reports/*.json'",
 		"getImplementations": "npm run getImplementationAccessEngine && npm run getImplementationAlfa && npm run getImplementationAxeCore && npm run getImplementationRgaa && npm run getImplementationTrustedTester && npm run getImplementationQualWeb",

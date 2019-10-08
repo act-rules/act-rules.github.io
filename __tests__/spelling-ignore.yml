@@ -43,6 +43,7 @@
 - whitespace 
 - namespaces 
 - webpage
+- wai-aria-specifications
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete 
@@ -57,6 +58,7 @@
 - html52
 - whatwg
 - dom
+- wai-aria
 
 # Other tool names
 - axe-core

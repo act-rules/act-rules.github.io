@@ -37,6 +37,9 @@ Any text node that includes one of the [visual reference words](#visual-referenc
 
 Each target that describes any [web content](https://www.w3.org/TR/WCAG21/#dfn-content) through the use of the [visual reference words](#visual-reference-words), is included in a [section of the content](#section-of-content) that also describes that [web content](https://www.w3.org/TR/WCAG21/#dfn-content) by a non-visual property, except if the target is not part of an instruction about [web content](https://www.w3.org/TR/WCAG21/#dfn-content) or the visual reference word is included in the described content.
 
+**Note**: The expectation doesn't mention the fact that the non-visual property description should be visible and included in the accessibility tree. This rule can be passed with alternatives that are not visible and included in the accessibility tree, but those sorts of content would fail other SC.
+**Note**: The discribed web content does not have to be positioned on the same web page.
+
 ## Assumptions
 
 The rule assumes that instructions are fully included within a single section of content. If an instruction takes up multiple sections of the content, having a sensory characteristics in one section, and a non-sensory characteristic in another is assumed to be too disconnected to satisfy the success criterion. 
@@ -97,34 +100,18 @@ The content in the second column is indicated with the word "box" (which is a sh
 
 #### Passed Example 2
 
-The content in the second column is indicated with the word "right" (which is a location indicator based on visual perception) but also indicated by referencing that the content can be found below this content in the DOM order.
+The button in the second column is indicated with the word "box" (which is a location indicator based on visual perception) but also indicated by referencing that the content can be found below this content in the DOM order. Note that "below" is also a visual reference word but in this case it can also be accuratly interpretated as "next in the DOM order" which does not rely on visual attributes alone.
 
 ```html
-<head>
-	<style>
-	.col-container {
-		display: table;
-		width: 100%;
-	}
-	.col {
-		display: table-cell;
-		padding: 16px;
-	}
-	</style>
-</head>
-<body>
-
 <div class="col-container">
   <div class="col">
-    <p>Interact with the content on the right (below this paragraph), for a surprise</p>
+    <p>Interact with the box below this paragraph, for a surprise</p>
   </div>
 
   <div class="col">
     <button onclick="alert('Surprise!')">Howdy</button>
   </div>
 </div>
-
-</body>
 ```
 
 #### Passed Example 3
@@ -158,12 +145,6 @@ The content in the second column is a menu. The user is told to find the menu on
 				<li>
 					<a href="https://www.w3.org/Help/">Help and FAQ</a>
 				</li>
-				<li>
-					<a href="https://www.w3.org/Consortium/sponsor/">Donate</a>
-				</li>
-				<li>
-					<a href="https://www.w3.org/Consortium/siteindex">Sitemap</a>
-				</li>
 			</ul>
 					
 		</div>
@@ -177,14 +158,12 @@ The content in the second column is a menu. The user is told to find the menu on
 This document is using the word "square" but in this case it is no instruction.
 
 ```html
-<body>
 	<p>In mathemathics a square is the result of multiplying a number by itself.</p>
-</body>
 ```
 
 #### Passed Example 5
 
-The following text is tilted.
+The following text is tilted and describes web content. But the block of content also includes this word "this" which makes it apparent that the describtion is about the same block of content.
 
 ```html
 <head>
@@ -237,12 +216,10 @@ The button is indicated by the word "round". But the word is also included in th
 The image is indicated by the word narrow but the alt text of the image also includes the word narrow.
 
 ```html
-<body>
 	<p>The wide image is awesome. But the narrow image isn't.</p>
 	<img scr="/test-assets/images/awesome_wide.jfif" alt="Wide photo of an awesome landscape.">
 	<img scr="/test-assets/images/Non_awesome_narrow.jpg" alt="Narrow photo of a dull landscape.">
 	</div>
-</body>
 ```
 
 #### Passed Example 8
@@ -250,20 +227,41 @@ The image is indicated by the word narrow but the alt text of the image also inc
 This document is using the word "triangle" but in this case the triangle menu is on a different page and has a heading "triangle menu".
 
 ```html
-<body>
 	<p>On the <a href="/test-assets/SC1.3.3-triangle-menu-with-heading.html">information page</a> you can find more examples within the triangle menu</p>
-</body>
 ```
 
 #### Passed Example 9
 
-This document is using the word "star" but in this case the star is in an iframe and has a heading "examples".
+This document is using the word "star" but in this case the star is in an 'iframe' and has a heading "examples".
 
 ```html
 <body>
 <p>More examples can be found when you look underneath the star or underneath the heading examples</p>
 <iframe src="/test-assets/SC1.3.3-star-with-heading.html"></iframe>
 </body>
+```
+
+#### Passed Example 10
+
+This document is using the word "circle" but in this case it is no instruction. Also note that the text is not visible, but still applicable.
+
+```html
+	<p style="position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;">A circle is nice.</p>
+```
+
+#### Passed Example 11
+
+This document is using the word "circle" but in this case it is no instruction. Also note that the text is not included in the accessibility tree, but still applicable.
+
+```html
+	<p aria-hidden="true">A circle is nice.</p>
 ```
 
 ### Failed
@@ -298,12 +296,6 @@ The content in the second column is a menu. The user is told to find the menu on
 				<li>
 					<a href="https://www.w3.org/Help/">Help and FAQ</a>
 				</li>
-				<li>
-					<a href="https://www.w3.org/Consortium/sponsor/">Donate</a>
-				</li>
-				<li>
-					<a href="https://www.w3.org/Consortium/siteindex">Sitemap</a>
-				</li>
 			</ul>
 					
 		</div>
@@ -337,12 +329,6 @@ The content in the second column is part of the navigation. The user is told to 
 			<li>
 				<a href="https://www.w3.org/standards/">Standards</a>
 			</li>
-			<li>
-				<a href="https://www.w3.org/participate/">Participate</a>
-			</li>
-			<li>
-				<a href="https://www.w3.org/Consortium/membership">Membership</a>
-			</li>
 		</ul>
 	</nav>
 	<div class="col-container">
@@ -357,12 +343,6 @@ The content in the second column is part of the navigation. The user is told to 
 					</li>
 					<li>
 						<a href="https://www.w3.org/Help/">Help and FAQ</a>
-					</li>
-					<li>
-						<a href="https://www.w3.org/Consortium/sponsor/">Donate</a>
-					</li>
-					<li>
-						<a href="https://www.w3.org/Consortium/siteindex">Sitemap</a>
 					</li>
 				</ul>
 			</div>

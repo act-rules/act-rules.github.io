@@ -1,5 +1,5 @@
 ---
-id: 825ule
+id: 9bd38c
 name: Non-visual reference alternative
 rule_type: atomic
 description: |
@@ -42,9 +42,9 @@ Each target that describes any [web content](https://www.w3.org/TR/WCAG21/#dfn-c
 
 ## Assumptions
 
-The rule assumes that instructions are fully included within a single section of content. If an instruction takes up multiple sections of the content, having a sensory characteristics in one section, and a non-sensory characteristic in another is assumed to be too disconnected to satisfy the success criterion. 
+The rule assumes that instructions are fully included within a single section of content. If an instruction takes up multiple sections of the content, having a sensory characteristic in one section, and a non-sensory characteristic in another is assumed to be too disconnected to satisfy the success criterion. 
 
-The rule assumes that visual reference words are forms of information conveyed trough presentation, because of this, failing this rule fails both [Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships) and [Sensory Characteristics](https://www.w3.org/TR/WCAG21/#sensory-characteristics). Presentation is not limited to CSS and includes images such as the image of a circle with text.
+The rule assumes that visual reference words are forms of information conveyed through presentation, because of this, failing this rule fails both [Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships) and [Sensory Characteristics](https://www.w3.org/TR/WCAG21/#sensory-characteristics). Presentation is not limited to CSS and includes images such as the image of a circle with text.
 
 The rule assumes that non-visual users will interpret some visual refence words as meaning "ahead" or "backwards" in the reading order. For example in most contexts "see the content below" will mean ahead in the reading order which is not a visual reference and should pass this test.
 
@@ -71,7 +71,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The content in the second column is indicated with the word "box" (which is a shape indicator based on visual perception) but also indicated by referencing the word "howdy".
+The content in the second column is indicated with the word "right" (which is an indicator based on visual perception) but also indicated by referencing the word "howdy".
 
 ```html
 <head>
@@ -89,7 +89,7 @@ The content in the second column is indicated with the word "box" (which is a sh
 <body>
 	<div class="col-container">
 		<div class="col">
-			<p>Click the "howdy" box on the right, for a surprise</p>
+			<p>Click "howdy" on the right, for a surprise</p>
 		</div>
 		<div class="col">
 			<button onclick="alert('Surprise!')">Howdy</button>
@@ -116,7 +116,7 @@ The button in the second column is indicated with the word "box" (which is a loc
 
 #### Passed Example 3
 
-The content in the second column is a menu. The user is told to find the menu on the right (which is a visual indicator word) but the menu is also identified with the help of the "menu" heading above the content.
+The visual reference made by the word "right" is complemented by the non-visual reference made by the word "menu" to the content identified by the "Menu" heading.
 
 ```html
 <head>
@@ -213,7 +213,7 @@ The button is indicated by the word "round". But the word is also included in th
 
 #### Passed Example 7
 
-The image is indicated by the word narrow but the alt text of the image also includes the word narrow.
+The images are indicated by the words wide and narrow but the accessible names of the images also include the words wide and narrow.
 
 ```html
 	<p>The wide image is awesome. But the narrow image isn't.</p>
@@ -268,7 +268,7 @@ This document is using the word "circle" but in this case it is no instruction. 
 
 #### Failed Example 1
 
-The content in the second column is a menu. The user is told to find the menu on the right (which is a visual indicator word) but the menu is not identified in any way.
+The user is told to find the menu on the right (which is a visual indicator word) but the menu is not identified in any way.
 
 ```html
 <head>
@@ -305,7 +305,7 @@ The content in the second column is a menu. The user is told to find the menu on
 
 #### Failed Example 2
 
-The content in the second column is part of the navigation. The user is told to find the navigation on the right (which is a visual indicator word) and the navigation has a navigation element, but there are 2 navigation elements on the page so the user doesn't know which one to use.
+The user is told to find the navigation on the right (which is a visual indicator word) and the navigation has a navigation element, but there are 2 navigation elements on the page so the user doesn't know which one to use.
 
 ```html
 <head>
@@ -377,7 +377,7 @@ This document is using the word "star" and there is no other indication. The con
 
 ```html
 <body>
-<p>More examples can be found when you look underneath the star or underneath the heading examples</p>
+<p>More examples can be found when you look underneath the star</p>
 <iframe src="/test-assets/SC1.3.3-star-without-heading.html"></iframe>
 </body>
 ```

@@ -236,7 +236,7 @@ This document is using the word "star" but in this case the star is in an 'ifram
 
 ```html
 <body>
-<p>More examples can be found when you look underneath the star or underneath the heading examples</p>
+<p>More examples can be found when you look underneath the star or you can search for the "Examples" heading</p>
 <iframe src="/test-assets/SC1.3.3-star-with-heading.html"></iframe>
 </body>
 ```
@@ -268,7 +268,7 @@ This document is using the word "circle" but in this case it is no instruction. 
 
 #### Failed Example 1
 
-The content in the second column is a menu. The user is told to find the menu on the right (which is a visual indicator word) but the menu is not identified with the help of the "menu" heading, nor landmark, nor role.
+The content in the second column is a menu. The user is told to find the menu on the right (which is a visual indicator word) but the menu is not identified in any way.
 
 ```html
 <head>
@@ -353,37 +353,17 @@ The content in the second column is part of the navigation. The user is told to 
 
 #### Failed Example 3
 
-The content in the second column is indicated with the word "box" (which is a shape indicator based on visual perception) and is also indicated by referencing the word "howdy", but the word "howdy" is in a different paragraph than the word "box".
+The button is indicated with the word "box" (which is a shape indicator based on visual perception) and is also indicated by referencing the word "howdy", but the word "howdy" is in a different paragraph than the word "box".
 
 ```html
-<head>
-	<style>
-	.col-container {
-		display: table;
-		width: 100%;
-	}
-	.col {
-		display: table-cell;
-		padding: 16px;
-	}
-	</style>
-</head>
-<body>
-	<div class="col-container">
-		<div class="col">
-			<p>Click the box on the right, for a surprise</p>
-			<p>If you can't find the box here is a hint: it says "Howdy"!</p>
-		</div>
-		<div class="col">
-			<button onclick="alert('Surprise!')">Howdy</button>
-		</div>
-	</div>
-</body>
+<p>Click the box, for a surprise!</p>
+<p>If you can't find the box here is a hint: it says "Howdy"!</p>
+<button onclick="alert('Surprise!')">Howdy</button>
 ```
 
 #### Failed Example 4
 
-This document is using the word "triangle" but in this case the triangle menu is on a different page.
+This document is using the word "triangle" and the triangle menu is on a different page. No other indication is present.
 
 ```html
 <body>
@@ -393,7 +373,7 @@ This document is using the word "triangle" but in this case the triangle menu is
 
 #### Failed Example 5
 
-This document is using the word "star" but in this case the star is in an iframe.
+This document is using the word "star" and there is no other indication. The content described is in an iframe.
 
 ```html
 <body>
@@ -406,58 +386,18 @@ This document is using the word "star" but in this case the star is in an iframe
 
 #### Inapplicable Example 1
 
-The content in the second column is indicated with the word "button" which is not a visual reference word.
+The content is indicated with the word "button" which is not a visual reference word.
 
 ```html
-<head>
-	<style>
-	.col-container {
-		display: table;
-		width: 100%;
-	}
-	.col {
-		display: table-cell;
-		padding: 16px;
-	}
-	</style>
-</head>
-<body>
-	<div class="col-container">
-		<div class="col">
-			<p>Click the button on the right, for a surprise</p>
-		</div>
-		<div class="col">
-			<button onclick="alert('Surprise!')">Howdy</button>
-		</div>
-	</div>
-</body>
+<p>Click the button, for a surprise</p>
+<button onclick="alert('Surprise!')">Howdy</button>
 ```
 
 #### Inapplicable Example 2
 
-The content in the second column is indicated with the word "box", but this indication is hidden with display:none.
+The content in the second column is indicated with the word "box", but this indication is hidden with 'display:none'.
 
 ```html
-<head>
-	<style>
-	.col-container {
-		display: table;
-		width: 100%;
-	}
-	.col {
-		display: table-cell;
-		padding: 16px;
-	}
-	</style>
-</head>
-<body>
-	<div class="col-container">
-		<div class="col">
-			<p style="display:none">Click the box on the right, for a surprise</p>
-		</div>
-		<div class="col">
-			<button onclick="alert('Surprise!')">Howdy</button>
-		</div>
-	</div>
-</body>
+<p style="display:none">Click the box, for a surprise</p>
+<button onclick="alert('Surprise!')">Howdy</button>
 ```

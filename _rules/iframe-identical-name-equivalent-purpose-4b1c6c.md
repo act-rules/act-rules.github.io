@@ -209,7 +209,7 @@ Each of the two `iframe` elements within the [document tree][] has a different [
 
 #### Inapplicable Example 5
 
-Both `iframe` elements have the same [accessible name][] (given by the `title` attribute) within a the same [document tree][], but one of them is not [included in the accessibility tree][]. Therefore, there is no set of two or more `iframe` elements with the same [accessible name][] and [included in the accessibility tree][] and the rule is inapplicable.
+Both `iframe` elements have the same [accessible name][] (given by the `title` attribute) within the same [document tree][], but one of them is not [included in the accessibility tree][]. Therefore, there is no set of two or more `iframe` elements that are [included in the accessibility tree][] and have the same [accessible name][], and the rule is inapplicable.
 
 ```html
 <iframe aria-hidden="true" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html">
@@ -241,7 +241,7 @@ Two of the `iframe` elements, with `id` attribute `level1-frame1` and `level2-fr
 
 #### Inapplicable Example 7
 
-The `alt` attribute does not provide an [accessible name][] for `iframe` elements. Therefore, these `iframe` elements do not have an [accessible name][] and the rule is inApplicable.
+The `alt` attribute does not provide an [accessible name][] for `iframe` elements. Therefore, these `iframe` elements do not have an [accessible name][] and the rule is inapplicable.
 
 ```html
 <iframe alt="Some" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
@@ -261,7 +261,7 @@ The rule does not apply to `object` elements.
 
 #### Inapplicable Example 9
 
-The `iframe` element do not have [accessible names][accessible name].
+These `iframe` elements do not have [accessible names][accessible name].
 
 ```html
 <iframe src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe>

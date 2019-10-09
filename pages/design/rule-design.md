@@ -22,7 +22,9 @@ The WCAG-ACT-RULES-CG rule design builds on WCAG 2.x and its supporting document
 
 ## Rule Properties
 
-The rule file should have a unique hyphenated filename, created from condensing the name and the unique identifier, _e.g. "aria-attr-defined-5f99a7"_.
+A rule file should have a unique hyphenated filename, created from condensing the name and the unique identifier of the rule, _e.g. "aria-attr-defined-5f99a7"_. A rule file should also have a number of metadata properties at the top of the file.
+
+For more details, see [ACT Rules Format: Structure](https://www.w3.org/TR/act-rules-format/#act-rule-structure)
 
 ### Rule identifier
 

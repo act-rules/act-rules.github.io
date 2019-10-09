@@ -64,6 +64,7 @@ The [HTML document][] has [functionality][] that can be operated by device motio
 ```html
 <html>
   <head>
+    <title>Passed Example 1</title>
     <script>
       function activateSlider() {
         //slider behavior
@@ -125,7 +126,7 @@ The [HTML document][] has [functionality][] that can be operated by device motio
       <button id="increase" type="button" name="increase">Increase Value</button>
       <p aria-live="polite">Slider Value: <span id="demo"></span></p>
     </div>
-    <p><input type="checkbox" id="disable"><label for="disable">Disable Motion Actuation</label>
+    <p><input type="checkbox" id="disable"><label for="disable">Disable Motion Actuation</label></p>
   </body>
 </html>
 ```
@@ -137,6 +138,7 @@ The [HTML document][] has [functionality][] that can be operated by user motion 
 ```html
 <html>
   <head>
+    <title>Passed Example 2</title>
     <style>
       div {
         margin: 0em;
@@ -243,6 +245,7 @@ The [HTML document][] has [functionality][] that can be operated by device motio
 ```html
 <html>
   <head>
+    <title>Failed Example 1</title>
     <script>
       function activateSlider() {
         //slider behavior
@@ -308,6 +311,7 @@ The [HTML document][] has [functionality][] that can be operated by device motio
 ```html
 <html>
   <head>
+    <title>Failed Example 2</title>
     <script>
       function activateSlider() {
         //slider behavior
@@ -356,7 +360,7 @@ The [HTML document][] has [functionality][] that can be operated by device motio
       <input type="range" min="1" max="100" value="50" class="slider" id="motionSlider" disabled>
       <p aria-live="polite">Slider Value: <span id="demo"></span></p>
     </div>
-    <p><input type="checkbox" id="disable"><label for="disable">Disable Motion Actuation</label>
+    <p><input type="checkbox" id="disable"><label for="disable">Disable Motion Actuation</label></p>
   </body>
 </html>
 ```
@@ -368,6 +372,7 @@ The [HTML document][] has [functionality][] that can be operated by device motio
 ```html
 <html>
   <head>
+    <title>Failed Example 3</title>
     <script>
       function activateSlider() {
         //slider behavior
@@ -421,6 +426,7 @@ The [HTML document][] has [functionality][] that can be operated by user motion 
 ```html
 <html>
   <head>
+    <title>Failed Example 4</title>
     <style>
       div {
         margin: 0em;
@@ -518,6 +524,7 @@ The [HTML document][] has [functionality][] that can be operated by user motion,
 ```html
 <html>
   <head>
+    <title>Failed Example 5</title>
     <style>
       div {
         margin: 0em;
@@ -615,6 +622,7 @@ The [HTML document][] has [functionality][] that can be operated by user motion 
 ```html
 <html>
   <head>
+    <title>Failed Example 6</title>
     <style>
       div {
         margin: 0em;

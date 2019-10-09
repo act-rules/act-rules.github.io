@@ -81,7 +81,7 @@ For more details, see [ACT Rules Format: Input](https://www.w3.org/TR/act-rules-
 
 ### Authors
 
-Names of the Authors. These must be an exact match of names in `contributors` property in `package.json`.
+Names of the Authors. These must be an exact match of names in `contributors` property in `package.json`. Note: If an author does not exist in `package.json`, they should be added to that file as part of the relevant PR.
 
 ## Applicability
 

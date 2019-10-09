@@ -18,9 +18,6 @@ authors:
   - Carlos Duarte
   - Marie Trudelle
   - Ramit Garg
-htmlHintIgnore:
-  # https://www.npmjs.com/package/htmlhint
-  # (used with `npm test` to ensure validity of code snippets)
 ---
 
 ## Applicability

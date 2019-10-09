@@ -1,9 +1,9 @@
 ---
 id: 7d6734
-name: `svg` element with explicit role has accessible name
+name: '`svg` element with explicit role has accessible name'
 rule_type: atomic
 description: |
-   This rule checks that each SVG image element that is explicitly included in the accessibility tree has an accessible name.
+  This rule checks that each SVG image element that is explicitly included in the accessibility tree has an accessible name.
 accessibility_requirements:
   wcag20:1.1.1: # Non-Text Content (A)
     forConformance: true
@@ -39,7 +39,7 @@ This rule is limited to the explicit use of roles, as a clear indication that co
 
 Browser and assistive technology support for SVG `<title>` and `<desc>` elements is currently inconsistent. Using WAI ARIA in combination with the `img` role for non-decorative `<svg>` elements significantly improves accessibility browser support.
 
-Until browser support for the [SVG Accessibility API Mappings (work in progress)](https://www.w3.org/TR/svg-aam-1.0) is more consistent it is recomended to explicitly remove decorative <svg> elements from the accessibility tree.
+Until browser support for the [SVG Accessibility API Mappings (work in progress)](https://www.w3.org/TR/svg-aam-1.0) is more consistent it is recommended to explicitly remove decorative <svg> elements from the accessibility tree.
 
 ## Background
 
@@ -54,44 +54,53 @@ Until browser support for the [SVG Accessibility API Mappings (work in progress)
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
-The `<svg>` element has an explicit role of `img` and an accessible name from the `<title>` elememt that does not contain only whitespace.
+The `<svg>` element has an explicit role of `img` and an accessible name from the `<title>` element that does not contain only whitespace.
 
 ```html
 <p>How many circles are there?</p>
 <svg xmlns="http://www.w3.org/2000/svg" role="img" width="100" height="100">
-  <title>1 circle</title>
+	<title>1 circle</title>
 	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 The `<circle>` element has an explicit role of `graphics-symbol` and an accessible name from the `aria-label` attribute that does not contain only whitespace.
 
 ```html
 <p>How many circles are there?</p>
 <svg xmlns="https://www.w3.org/2000/svg" role="img">
-	<circle role="graphics-symbol" cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" aria-label="1 circle">
+	<circle
+		role="graphics-symbol"
+		cx="50"
+		cy="50"
+		r="40"
+		stroke="green"
+		stroke-width="4"
+		fill="yellow"
+		aria-label="1 circle"
+	></circle>
 </svg>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
 The `<svg>` element has an explicit role of `graphics-document` and an accessible name from the `<title>` element that does not contain only whitespace.
 
 ```html
 <p>How many circles are there?</p>
 <svg xmlns="http://www.w3.org/2000/svg" role="graphics-document" width="100" height="100">
-  <title>1 circle</title>
+	<title>1 circle</title>
 	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 The `<svg>` element has an explicit role of `img` but has no accessible name.
 
@@ -102,31 +111,31 @@ The `<svg>` element has an explicit role of `img` but has no accessible name.
 </svg>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 The `<svg>` element has an explicit role of `img` but has only whitespace in the `<title>` element for the accessible name.
 
 ```html
 <p>How many circles are there?</p>
 <svg xmlns="http://www.w3.org/2000/svg" role="img">
-	<title> </title>
-  	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
+	<title></title>
+	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
 The `<svg>` element has an explicit role of and is included in the accessibility tree with an explicit role of `img` but has no content in the `<title>` element for an accessible name.
- 
+
 ```html
 <p>How many circles are there?</p>
 <svg xmlns="http://www.w3.org/2000/svg" role="img">
 	<title></title>
-  	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
+	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 The `<circle>` element has an explicit role of `graphics-symbol` but does not have an accessible name.
 
@@ -139,26 +148,25 @@ The `<circle>` element has an explicit role of `graphics-symbol` but does not ha
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
-The `<svg>` element does not render any visible content to the screen and is not included in the accessibility tree. 
+The `<svg>` element does not render any visible content to the screen and is not included in the accessibility tree.
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"></svg>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 Both the `<svg>` and `<circle>` elements do not have an explicit role.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg">
-  	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
+	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```
 
-#### Inapplicable example 3
+#### Inapplicable Example 3
 
 The `<svg>` element has an explicit role of `img` but the `aria-hidden` attribute removes the element and its descendants from the accessibility tree.
 
@@ -168,12 +176,12 @@ The `<svg>` element has an explicit role of `img` but the `aria-hidden` attribut
 </svg>
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 The `<circle>` element has an explicit role that is not `img`, `graphics-document` or `graphics-symbol`.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg">
-  	<circle role="graphics-object" cx="50" cy="50" r="40" fill="yellow"></circle>
+	<circle role="graphics-object" cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```

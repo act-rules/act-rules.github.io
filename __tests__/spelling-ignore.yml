@@ -32,7 +32,6 @@
 - SVG
 - PDFs
 - url
-- iframes
 - voiceover
 - subtag
 - subtags
@@ -56,6 +55,8 @@
 - www.w3.org 
 - eval 
 - html52
+- whatwg
+- dom
 
 # Other tool names
 - axe-core

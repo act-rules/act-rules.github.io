@@ -1,4 +1,4 @@
-name: Verify test(s)
+name: test
 
 # Run on PR's targetting `develop` branch
 on:

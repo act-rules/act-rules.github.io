@@ -24,7 +24,7 @@ The WCAG-ACT-RULES-CG rule design builds on WCAG 2.x and its supporting document
 
 A rule file should have a unique hyphenated filename, created from condensing the name and the unique identifier of the rule, _e.g. "aria-attr-defined-5f99a7"_. A rule file should also have a number of metadata properties at the top of the file.
 
-For more details, see [ACT Rules Format: Structure](https://www.w3.org/TR/act-rules-format/#act-rule-structure)
+For more details, see [ACT Rules Format: Structure](https://www.w3.org/TR/act-rules-format/#act-rule-structure).
 
 ### Rule identifier
 
@@ -52,6 +52,8 @@ The agreed conventions for naming of rules are as follows:
 
 The rule type is either atomic or composite.
 
+For more details, see [ACT Rules Format: Rule Types](https://www.w3.org/TR/act-rules-format/#rule-types).
+
 ### Description
 
 A brief description of what the rule does. This should be declarative rather than negative. It should begin with "This rule checks that..." or similar. It should use plain language, and be a well-formed grammatically correct sentence that finishes with a full stop/period. 
@@ -62,7 +64,7 @@ A brief description of what the rule does. This should be declarative rather tha
 
 A list of all accessibility requirements that are not satisfied if one or more outcomes of a rule fails. This could be one or more WCAG success criteria, or a WAI-ARIA rule, for example.
 
-For more details, see [ACT Rules Format: Accessibility Requirements Mapping](https://www.w3.org/TR/act-rules-format/#accessibility-requirements-mapping)
+For more details, see [ACT Rules Format: Accessibility Requirements Mapping](https://www.w3.org/TR/act-rules-format/#accessibility-requirements-mapping).
 
 ### Input aspects or rules
 
@@ -75,7 +77,7 @@ What of a test subject must be available in order to properly run the test. For 
 
 Other aspects may be necessary for testing. These can be added as long as they are sufficiently defined.
 
-For more details, see [ACT Rules Format: Input](https://www.w3.org/TR/act-rules-format/#input)
+For more details, see [ACT Rules Format: Input](https://www.w3.org/TR/act-rules-format/#input).
 
 ### Authors
 
@@ -89,7 +91,7 @@ Finding objective definitions to use in rules can be difficult, if not outright 
 
 > _For example:_ A rule testing button accessible names could apply to elements other than the `button` element and this could be stated as _"The rule applies to elements that are included in the accessibility tree with the semantic role of button, except for `input` elements of `type="image"`."_.
 
-For more details, see [ACT Rules Format: Applicability](https://www.w3.org/TR/act-rules-format/#applicability)
+For more details, see [ACT Rules Format: Applicability](https://www.w3.org/TR/act-rules-format/#applicability).
 
 ## Expectations
 
@@ -99,7 +101,7 @@ Each expectation exposes a reason why an element may not meet a particular confo
 
 > _For example:_ A rule testing link names may have as its first expectation _"The target element has an accessible name."_, and as a second expectation _"Expectation 1 is true for the target element, and the accessible name describes the function of the target element"_.
 
-For more details, see [ACT Rules Format: Expectations](https://www.w3.org/TR/act-rules-format/#expectations)
+For more details, see [ACT Rules Format: Expectations](https://www.w3.org/TR/act-rules-format/#expectations).
 
 ## Assumptions
 
@@ -113,19 +115,19 @@ While most assumptions relate to the rule itself, there are some assumptions tha
 
 - It is assumed that the following technologies are accessibility supported: HTML, CSS, WAI-ARIA, ... (See also WCAG-ACT-RULES-CG's [explanation on Accessibility Support](accessibility-support.html)).
 
-For more details, see [ACT Rules Format: Assumptions](https://www.w3.org/TR/act-rules-format/#assumptions)
+For more details, see [ACT Rules Format: Assumptions](https://www.w3.org/TR/act-rules-format/#assumptions).
 
 ## Accessibility Support
 
 Sometimes a feature relevant to a rule is not fully supported by assistive technology and user agents. Include information on any known support issues for a feature relevant to the rule.
 
-For more details, see [ACT Rules Format: Accessibility Support](https://www.w3.org/TR/act-rules-format/#accessibility-support)
+For more details, see [ACT Rules Format: Accessibility Support](https://www.w3.org/TR/act-rules-format/#accessibility-support).
 
 ## Background
 
 While optional, this provides background information relevant to the development of the rule. Any document cited in the rule should be included here, along with any applicable success criterion, understanding or technique documents, other specifications, and any other relevant reading. 
 
-For more details, see [ACT Rules Format: Background](https://www.w3.org/TR/act-rules-format/#background)
+For more details, see [ACT Rules Format: Background](https://www.w3.org/TR/act-rules-format/#background).
 
 ## Test cases
 
@@ -135,4 +137,4 @@ Each test case should be simply and uniquely named, _e.g. "Passed Example 1"_. E
 
 > _For example:_ "This page has two `title` elements."
 
-For more details, see [ACT Rules Format: Test Cases](https://www.w3.org/TR/act-rules-format/#test-cases)
+For more details, see [ACT Rules Format: Test Cases](https://www.w3.org/TR/act-rules-format/#test-cases).

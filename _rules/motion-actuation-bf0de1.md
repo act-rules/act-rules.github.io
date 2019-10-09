@@ -4,7 +4,7 @@ name: Motion actuation can be disabled and be operated by user interface compone
 rule_type: atomic
 
 description: |
-  This rule checks that functionality that can be operated by device motion or user motion can also be operated by user interface components and responding to the motion can be disabled to prevent accidental actuation
+  This rule checks that functionality that can be operated by device motion or user motion can also be operated by user interface components and responding to the motion can be disabled to prevent accidental actuation.
 
 accessibility_requirements: # Remove whatever is not applicable
   wcag21:2.5.4: # Motion Actuation (A)

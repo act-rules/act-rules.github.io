@@ -118,14 +118,14 @@ The `<svg>` element has an explicit role of `img` but has only whitespace in the
 ```html
 <p>How many circles are there?</p>
 <svg xmlns="http://www.w3.org/2000/svg" role="img">
-	<title></title>
+	<title> </title>
 	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```
 
 #### Failed Example 3
 
-The `<svg>` element has an explicit role of and is included in the accessibility tree with an explicit role of `img` but has no content in the `<title>` element for an accessible name.
+The `<svg>` element has an explicit role of `img`, is included in the accessibility tree, but the `<title>` element is empty.
 
 ```html
 <p>How many circles are there?</p>

@@ -33,7 +33,6 @@
 - SVG
 - PDFs
 - url
-- iframes
 - voiceover
 - subtag
 - subtags
@@ -45,6 +44,8 @@
 - whitespace 
 - namespaces 
 - webpage
+- autoplay
+- autoplays
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete 
@@ -57,6 +58,8 @@
 - www.w3.org 
 - eval 
 - html52
+- whatwg
+- dom
 
 # Other tool names
 - axe-core
@@ -123,7 +126,8 @@
 - ARIA16
 
 # Common Failures (https://www.w3.org/WAI/WCAG21/Techniques/#failures)
-- F10 
+- F10
+- F23
 - F30 
 - F38 
 - F40 
@@ -146,6 +150,8 @@
 - G159 
 - G162 
 - G166 
+- G170
+- G171
 - G173 
 - G203
 

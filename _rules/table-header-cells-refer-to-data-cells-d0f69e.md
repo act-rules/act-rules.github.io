@@ -50,7 +50,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-Each `th` element has corresponding cells within the same `table`.
+Each column header element has corresponding cells, within the same table element.
 
 ```html
 <table>
@@ -65,7 +65,32 @@ Each `th` element has corresponding cells within the same `table`.
 
 #### Passed Example 2
 
-Each `th` element has corresponding cells within the same `table`. Here the cells span multiple columns.
+Each column header element has corresponding cells, within the same element having a [semantic role](#semantic-role) of `table`.
+
+```html
+<div role="table">
+	<div role="rowgroup">
+		<div role="row">
+			<span role="columnheader">Month</span>
+			<span role="columnheader">Top Temperature</span>
+		</div>
+	</div>
+	<div role="rowgroup">
+		<div role="row">
+			<span role="cell">July</span>
+			<span role="cell">40 C</span>
+		</div>
+		<div role="row">
+			<span role="cell">August</span>
+			<span role="cell">45 C</span>
+		</div>
+	</div>
+</div>
+```
+
+#### Passed Example 3
+
+Each column header element has corresponding cells within the same table element. In this example the column headers have cells that span multiple columns.
 
 ```html
 <table>
@@ -83,81 +108,28 @@ Each `th` element has corresponding cells within the same `table`. Here the cell
 </table>
 ```
 
-#### Passed Example 3
-
-The `th` element has corresponding cells within the same `table`, by usage of `headers` attribute.
-
-```html
-<table>
-	<tr>
-		<td headers="header1">
-			Projects
-		</td>
-		<th id="header1">
-			Projects
-		</th>
-	</tr>
-</table>
-```
-
 #### Passed Example 4
 
-The `th` element has corresponding cells within the same `table`, by usage of `aria-labelledby` attribute.
+Each row and column header element has corresponding cells, within the same element having a [semantic role](#semantic-role) of `grid`.
 
 ```html
-<table>
-	<tr>
-		<th id="hd2">Time</th>
-		<td aria-labelledby="hd2">05:44</td>
-	</tr>
-</table>
-```
-
-#### Passed example 5
-
-Each `th` element has corresponding cells within the same `table`, by usage of `scope` attribute.
-
-```html
-<table>
-	<caption>
-		Hogwarts Houses stars
-	</caption>
-	<tr>
-		<th scope="col">Name</th>
-		<th scope="col">House</th>
-	</tr>
-	<tr>
-		<th scope="row">Harry Potter</th>
-		<td>Gryffindor</td>
-	</tr>
-	<tr>
-		<th scope="row">Cedric Diggory</th>
-		<td>Hufflepuff</td>
-	</tr>
-</table>
-```
-
-#### Passed example 6
-
-Each `th` element has corresponding cells within the same `table`.
-
-```html
-<table>
-	<caption>
-		Hogwarts Houses stars
-	</caption>
-	<tr>
-		<th>Name</th>
-		<th>House</th>
-	</tr>
-	<tr>
-		<th>Cho Chang</th>
-		<td>Ravenclaw</td>
-	</tr>
-	<tr>
-		<th>Severus Snape</th>
-		<td>Slytherin</td>
-	</tr>
+<table role="grid">
+	<thead role="rowgroup">
+		<tr role="row">
+			<td></td>
+			<th role="columnheader">Breakfast</th>
+			<th role="columnheader">Lunch</th>
+			<th role="columnheader">Dinner</th>
+		</tr>
+	</thead>
+	<tbody role="rowgroup">
+		<tr role="row">
+			<th scope="row" role="rowheader">Day 1</th>
+			<td>8:00</td>
+			<td>13:00</td>
+			<td>18:00</td>
+		</tr>
+	</tbody>
 </table>
 ```
 
@@ -165,16 +137,21 @@ Each `th` element has corresponding cells within the same `table`.
 
 #### Failed Example 1
 
-`th` elements within the `table` do not have corresponding cells.
+Not all column headers have corresponding cells within the same table element.
 
 ```html
 <table>
-	<tr>
-		<th>Header 1</th>
-	</tr>
-	<tr>
-		<th>Header 2</th>
-	</tr>
+	<thead>
+		<tr>
+			<th>Column 1</th>
+			<th>Column 2</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>15%</td>
+		</tr>
+	</tbody>
 </table>
 ```
 
@@ -182,41 +159,7 @@ Each `th` element has corresponding cells within the same `table`.
 
 #### Inapplicable Example 1
 
-The rule only applies to `table > th` element. The `table` has no `th` elements.
-
-```html
-<table>
-	<tr>
-		<td>John</td>
-		<td>Doe</td>
-	</tr>
-	<tr>
-		<td>Jane</td>
-		<td>Doe</td>
-	</tr>
-</table>
-```
-
-#### Inapplicable Example 2
-
-The rule only applies to the `table` element, not to other elements with a role of `table`.
-
-```html
-<div role="table">
-	<div role="row">
-		<div role="columnheader">Projects</div>
-		<div role="columnheader">Exams</div>
-	</div>
-	<div role="row">
-		<div role="cell">15%</div>
-		<div role="cell">15%</div>
-	</div>
-</div>
-```
-
-#### Inapplicable Example 3
-
-The rule only applies to `table` element that is [included in the accessibility tree](#included-in-the-accessibility-tree). In this case the `table` is marked as `role=presentation`.
+The rule does not apply to table element that is not [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ```html
 <table role="presentation">
@@ -229,9 +172,9 @@ The rule only applies to `table` element that is [included in the accessibility 
 </table>
 ```
 
-#### Inapplicable Example 4
+#### Inapplicable Example 2
 
-The rule only applies to `table` element that is both [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+The rule does not apply to table element that is not [visible](#visible).
 
 ```html
 <table style="display:none;">

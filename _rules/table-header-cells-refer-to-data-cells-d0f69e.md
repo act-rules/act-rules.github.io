@@ -28,7 +28,7 @@ The rule applies to any HTML element that is a [descendant](https://dom.spec.wha
 
 ## Expectation
 
-Each target element is either the row or column header for cells that is a [desecendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the same element as the target element.
+Each target element is either the row or column header for cells that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the same element as the target element.
 
 ## Assumptions
 

@@ -11,19 +11,24 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
-- DOM Tree
+  - DOM Tree
 authors:
-- Jey Nandakumar
-- Audrey Maniez
+  - Jey Nandakumar
+  - Audrey Maniez
 ---
 
 ## Applicability
 
-This rule applies to `th` elements within a `table`, where the `table` is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+The rule applies to any HTML element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of an element having a [semantic role](#semantic-role) of either [table](https://www.w3.org/TR/wai-aria-1.1/#table) or [grid](https://www.w3.org/TR/wai-aria-1.1/#grid), and is [visible](#visible) as well as [included in the accessibility tree](#included-in-the-accessibility-tree), where the element has any of the below [semantic roles](#semantic-role):
+
+- [cell](https://www.w3.org/TR/wai-aria-1.1/#cell)
+- [gridcell](https://www.w3.org/TR/wai-aria-1.1/#gridcell)
+- [rowheader](https://www.w3.org/TR/html-aria/#index-aria-rowheader)
+- [columnheader](https://www.w3.org/TR/html-aria/#index-aria-columnheader)
 
 ## Expectation
 
-Each target element is either the [row header](https://www.w3.org/TR/html-aria/#index-aria-rowheader) or the [column header](https://www.w3.org/TR/html-aria/#index-aria-columnheader) for data [cells](https://www.w3.org/TR/html50/tabular-data.html#concept-cell) within the same [table](https://www.w3.org/TR/html50/tabular-data.html#concept-table).
+Each target element is either the row or column header for cells that is a [desecendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the same element as the target element.
 
 ## Assumptions
 
@@ -64,17 +69,17 @@ Each `th` element has corresponding cells within the same `table`. Here the cell
 
 ```html
 <table>
-  <thead>	
-    <tr>
-      <th>Projects</th>
-      <th>Exams</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td colspan="2">15%</td>
-    </tr>
-  </tbody>
+	<thead>
+		<tr>
+			<th>Projects</th>
+			<th>Exams</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td colspan="2">15%</td>
+		</tr>
+	</tbody>
 </table>
 ```
 
@@ -84,14 +89,14 @@ The `th` element has corresponding cells within the same `table`, by usage of `h
 
 ```html
 <table>
-  <tr> 
-    <td headers="header1">
-      Projects
-    </td>
-    <th id="header1">
-      Projects
-    </th> 
-  </tr>
+	<tr>
+		<td headers="header1">
+			Projects
+		</td>
+		<th id="header1">
+			Projects
+		</th>
+	</tr>
 </table>
 ```
 
@@ -102,8 +107,8 @@ The `th` element has corresponding cells within the same `table`, by usage of `a
 ```html
 <table>
 	<tr>
-    <th id="hd2">Time</th>
-    <td aria-labelledby="hd2">05:44</td>
+		<th id="hd2">Time</th>
+		<td aria-labelledby="hd2">05:44</td>
 	</tr>
 </table>
 ```
@@ -114,19 +119,21 @@ Each `th` element has corresponding cells within the same `table`, by usage of `
 
 ```html
 <table>
-  <caption>Hogwarts Houses stars</caption>
-  <tr>
-      <th scope="col">Name</th>
-      <th scope="col">House</th>
-  </tr>
-  <tr>
-      <th scope="row">Harry Potter</th>
-      <td>Gryffindor</td>
-  </tr>
-  <tr>
-      <th scope="row">Cedric Diggory</th>
-      <td>Hufflepuff</td>
-  </tr>
+	<caption>
+		Hogwarts Houses stars
+	</caption>
+	<tr>
+		<th scope="col">Name</th>
+		<th scope="col">House</th>
+	</tr>
+	<tr>
+		<th scope="row">Harry Potter</th>
+		<td>Gryffindor</td>
+	</tr>
+	<tr>
+		<th scope="row">Cedric Diggory</th>
+		<td>Hufflepuff</td>
+	</tr>
 </table>
 ```
 
@@ -136,18 +143,20 @@ Each `th` element has corresponding cells within the same `table`.
 
 ```html
 <table>
-	<caption>Hogwarts Houses stars</caption>
+	<caption>
+		Hogwarts Houses stars
+	</caption>
 	<tr>
-			<th>Name</th>
-			<th>House</th>
+		<th>Name</th>
+		<th>House</th>
 	</tr>
 	<tr>
-			<th>Cho Chang</th>
-			<td>Ravenclaw</td>
+		<th>Cho Chang</th>
+		<td>Ravenclaw</td>
 	</tr>
 	<tr>
-			<th>Severus Snape</th>
-			<td>Slytherin</td>
+		<th>Severus Snape</th>
+		<td>Slytherin</td>
 	</tr>
 </table>
 ```
@@ -177,14 +186,14 @@ The rule only applies to `table > th` element. The `table` has no `th` elements.
 
 ```html
 <table>
-  <tr>
-    <td>John</td>
-    <td>Doe</td>
-  </tr>
-  <tr>
-    <td>Jane</td>
-    <td>Doe</td>
-  </tr>
+	<tr>
+		<td>John</td>
+		<td>Doe</td>
+	</tr>
+	<tr>
+		<td>Jane</td>
+		<td>Doe</td>
+	</tr>
 </table>
 ```
 
@@ -194,14 +203,14 @@ The rule only applies to the `table` element, not to other elements with a role 
 
 ```html
 <div role="table">
- <div role="row">
-  <div role="columnheader">Projects</div>
-  <div role="columnheader">Exams</div>
- </div>
- <div role="row">
-  <div role="cell">15%</div>
-  <div role="cell">15%</div>
- </div>
+	<div role="row">
+		<div role="columnheader">Projects</div>
+		<div role="columnheader">Exams</div>
+	</div>
+	<div role="row">
+		<div role="cell">15%</div>
+		<div role="cell">15%</div>
+	</div>
 </div>
 ```
 
@@ -211,12 +220,12 @@ The rule only applies to `table` element that is [included in the accessibility 
 
 ```html
 <table role="presentation">
-  <tr> 
-    <th>Time</th> 
-  </tr>
-  <tr> 
-    <td>12:00</td> 
-  </tr>
+	<tr>
+		<th>Time</th>
+	</tr>
+	<tr>
+		<td>12:00</td>
+	</tr>
 </table>
 ```
 
@@ -226,11 +235,11 @@ The rule only applies to `table` element that is both [visible](#visible) and [i
 
 ```html
 <table style="display:none;">
-  <tr>  
-    <th>Time</th> 
-  </tr>
-  <tr> 
-    <td>24:00</td> 
-  </tr>
+	<tr>
+		<th>Time</th>
+	</tr>
+	<tr>
+		<td>24:00</td>
+	</tr>
 </table>
 ```

@@ -161,7 +161,7 @@ Even through the `span` element is not [included in the accessibility tree][], i
 <input aria-labelledby="label_fname" type="text" name="first_name" />
 ```
 
-#### Failed Example 5
+#### Failed Example 5
 
 The `span` element is presented to all users and thus qualifies as a [label][]. It is not descriptive. The [accessible name][], provided by the `aria-label` attribute, is descriptive but it is only presented to users of assistive technologies. Thus is does not qualify as a [label][].
 

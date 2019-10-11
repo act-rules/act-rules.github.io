@@ -50,6 +50,8 @@ The [label][] describes the purpose of the test target. The [context][] of the [
 
 **Note**: While the [label][] has to be presented to all users, this is not necessarily the case for the [context][], if any. However, if [context][] is needed by some users to differentiate the purpose from one test target to another, it is likely that similar [context][] will be needed for all users.
 
+**Note**: Having a [label][] which is not included in the [accessible name][] is a violation of [Succes Criterion 2.5.3: Label in Name][sc253] but neither of this rule nor of [Success Criterion 2.4.6: Heading and Labels][sc246].
+
 ## Assumptions
 
 Having a differentiating [context][] that is not [programmatically determinable][] might be a violation under other [WCAG 2.1][wcag21] success criteria. For example, using text that has not been marked up as headings in order to split a form into different sections is a violation of [Success Criterion 1.3.1: Info and Relationships][sc131]. This rule assumes, however, that this is allowed under [success criterion 2.4.6: Headings and Labels][sc246].
@@ -113,6 +115,14 @@ For users of assistive technologies, the `aria-label` attribute take precedence 
 ```
 
 #### Passed Example 6
+
+The `span` element acts as a [label][] and is descriptive. The [accessible name][], given by the `aria-label` attribute, is not descriptive but since it is only presented to users of assistive technologies, it is not a [label][].
+
+```html
+<span>First name:</span><input aria-label="City:" type="text" name="first_name" />
+```
+
+#### Passed Example 7
 
 The [labels][label], provided by the `label` elements, are not descriptive enough (because they are repeated over several fields). However, the headings provide both a [programmatically determined context][] and a [visual context][] that differentiates the purpose of the otherwise identically named form fields.
 
@@ -274,9 +284,10 @@ The `span` element is not presented to users of assistive technologies. Therefor
 [label]: https://www.w3.org/TR/WCAG21/#dfn-labels 'Definition of label'
 [programmatically determinable]: https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable 'Definition of programmatically determinable'
 [programmatically determined context]: #programmatically-determined-context 'Definition of programmatically determined context'
-[sc131]: https://www.w3.org/WAI/WCAG21/#info-and-relationships 'Understanding SC 1.3.1: Info and Relationships'
-[sc246]: https://www.w3.org/WAI/WCAG21/#headings-and-labels.html 'Understanding SC 2.4.6: Heading and Labels'
-[sc412]: https://www.w3.org/WAI/WCAG21/#name-role-value 'Understanding SC 4.1.2: Name, Role and Value'
+[sc131]: https://www.w3.org/WAI/WCAG21/#info-and-relationships 'Success Criterion 1.3.1: Info and Relationships'
+[sc246]: https://www.w3.org/WAI/WCAG21/#headings-and-labels.html 'Success Criterion 2.4.6: Heading and Labels'
+[sc253]: https://www.w3.org/WAI/WCAG21/label-in-name 'Success Criterion 2.5.3: Label in Name'
+[sc412]: https://www.w3.org/WAI/WCAG21/#name-role-value 'Success Criterion 4.1.2: Name, Role and Value'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [usc131]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships 'Understanding SC 1.3.1: Info and Relationships'
 [usc246]: https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html 'Understanding SC 2.4.6: Heading and Labels'

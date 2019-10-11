@@ -106,7 +106,7 @@ Even through the `span` element is not [included in the accessibility tree][], i
 
 #### Passed Example 5
 
-For users of assistive technologies, the `aria-label` attribute take precedence over the `label` element to provide an [accessible name][]. While they are not strictly equal, the `label` element and the `aria-label` attribute are consistent and thus form a [la bel][]. This [label][] is descriptive.
+For users of assistive technologies, the `aria-label` attribute take precedence over the `label` element to provide an [accessible name][]. While they are not strictly equal, the `label` element and the `aria-label` attribute are consistent and thus form a [label][]. This [label][] is descriptive.
 
 ```html
 <label>Enter your first name:<input type="text" aria-label="First name" name="first_name"/></label>

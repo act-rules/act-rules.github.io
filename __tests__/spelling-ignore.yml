@@ -82,7 +82,7 @@
 - href
 - src
 - aria-describedby
-- aria-label
+- aria-labelled
 - aria-labelledby 
 - autofill-field
 - combobox 

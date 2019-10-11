@@ -3,7 +3,7 @@ id: cc0f0a
 name: Form control label is descriptive
 rule_type: atomic
 description: |
-  This rule checks that accessible names describe the purpose of form field elements.
+  This rule checks that labels describe the purpose of form field elements.
 accessibility_requirements:
   wcag21:2.4.6: # Headings and labels (AA)
     forConformance: true

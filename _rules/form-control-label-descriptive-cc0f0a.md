@@ -38,7 +38,7 @@ This rule applies to any HTML or SVG element that:
 
 **Note**: [Labels][label] are not restricted to the `label` element of HTML and can be any element.
 
-**Note**: [Labels][label] have to be presented to all users. Therefore, [accessible names][accessible name] or elements that are not [included in the accessiblity tree][] do not qualify as [labels][] (unless coupled with similar content provided for other users).
+**Note**: [Labels][label] have to be presented to all users. Therefore, [accessible names][accessible name] or elements that are not [included in the accessibility tree][] do not qualify as [labels][] (unless coupled with similar content provided for other users).
 
 ## Expectation
 
@@ -89,7 +89,7 @@ The explicit `label` element acts as a [label][] and it is descriptive.
 
 #### Passed Example 3
 
-The `span` element acts as a [label][] and it is descriptive. Even if it is not associated to the form field in a [programatically determinable][] way, it is still presented to all users and thus qualifies as a [label][].
+The `span` element acts as a [label][] and it is descriptive. Even if it is not associated to the form field in a [programmatically determinable][] way, it is still presented to all users and thus qualifies as a [label][].
 
 ```html
 <span>First name:</span> <input type="text" name="first_name" />
@@ -97,7 +97,7 @@ The `span` element acts as a [label][] and it is descriptive. Even if it is not 
 
 #### Passed Example 4
 
-Even through the `span` element is not [included in the accessibility tree][], it is associated to the form field in a [programatically determinable][] way and gives it an [accessible name][]. Therefore, it is presented to all users and qualifies as a [label][].
+Even through the `span` element is not [included in the accessibility tree][], it is associated to the form field in a [programmatically determinable][] way and gives it an [accessible name][]. Therefore, it is presented to all users and qualifies as a [label][].
 
 ```html
 <span id="label_fname" aria-hidden="true">First name:</span>
@@ -146,7 +146,7 @@ The explicit `label` element acts as a [label][] and it is not descriptive.
 
 #### Failed Example 3
 
-The `span` element acts as a [label][] and it is not descriptive. Even if it is not associated to the form field in a [programatically determinable][] way, it is still presented to all users and thus qualifies as a [label][].
+The `span` element acts as a [label][] and it is not descriptive. Even if it is not associated to the form field in a [programmatically determinable][] way, it is still presented to all users and thus qualifies as a [label][].
 
 ```html
 <span>City:</span> <input type="text" name="first_name" />
@@ -154,7 +154,7 @@ The `span` element acts as a [label][] and it is not descriptive. Even if it is 
 
 #### Failed Example 4
 
-Even through the `span` element is not [included in the accessibility tree][], it is associated to the form field in a [programatically determinable][] way and gives it an [accessible name][]. Therefore, it is presented to all users and qualifies as a [label][]. It is not descriptive.
+Even through the `span` element is not [included in the accessibility tree][], it is associated to the form field in a [programmatically determinable][] way and gives it an [accessible name][]. Therefore, it is presented to all users and qualifies as a [label][]. It is not descriptive.
 
 ```html
 <span id="label_fname" aria-hidden="true">City:</span>
@@ -185,7 +185,7 @@ The [labels][label], provided by the `label` elements, are not descriptive enoug
 
 #### Failed Example 7
 
-The [labels][label], provided by the `label` elements, are not descriptive enough. The headings provide a [programatically determined context][] but they are not [visible][]. Therefore, users without assistive technologies have only access to the [label][] with no differentiating [context][].
+The [labels][label], provided by the `label` elements, are not descriptive enough. The headings provide a [programmatically determined context][] but they are not [visible][]. Therefore, users without assistive technologies have only access to the [label][] with no differentiating [context][].
 
 ```html
 <h2 style="position: absolute; top: -9999px; left: -9999px;">Shipping address</h2>
@@ -272,7 +272,7 @@ The `span` element is not presented to users of assistive technologies. Therefor
 [context]: #context 'Definition of context'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [label]: https://www.w3.org/TR/WCAG21/#dfn-labels 'Definition of label'
-[programmatically determinable]: https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable 'Definition of programatically determinable'
+[programmatically determinable]: https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable 'Definition of programmatically determinable'
 [programmatically determined context]: #programmatically-determined-context 'Definition of programmatically determined context'
 [sc131]: https://www.w3.org/WAI/WCAG21/#info-and-relationships 'Understanding SC 1.3.1: Info and Relationships'
 [sc246]: https://www.w3.org/WAI/WCAG21/#headings-and-labels.html 'Understanding SC 2.4.6: Heading and Labels'

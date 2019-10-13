@@ -22,7 +22,10 @@ authors:
 
 ## Applicability
 
-The rule applies to any [text node][] that is [visible][] and a [child][] in the [flat tree][] of an HTML element, whose content changes through an action that was not initiated by the user, anytime after the [readiness][document readiness] of the document the [text node][] belongs to is equal to "complete".
+The rule applies to any [visible][] [text node][] in the [flat tree][] of an [HTML document][] if:
+
+- the content of the [text node][] changes through an action that was not initiated by the user; and
+- the change happens anytime after the [readiness][document readiness] of the [HTML document][] the [text node][] belongs to is equal to "complete".
 
 ## Expectation 1
 
@@ -36,7 +39,7 @@ The [mechanism][] to pause or stop the auto-updating of the content of the [text
 
 ## Assumptions
 
-This rule assumes that the auto-updating of the content is not [essential][], which is listed as valid exception to SC 2.2.2.
+This rule assumes that the auto-updating of the content is not [essential][], which is listed as valid exception to [SC 2.2.2][]. When the auto-updating of content is [essential][] this rule may produce incorrect results.
 
 ## Accessibility Support
 
@@ -44,9 +47,9 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- [Understanding Success Criterion 2.2.2: Pause, Stop, Hide](https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html)
-- [G186: Using a control in the Web page that stops moving, blinking, or auto-updating content](https://www.w3.org/WAI/WCAG21/Techniques/general/G186)
-- [F16: Failure of Success Criterion 2.2.2 due to including scrolling content where movement is not essential to the activity without also including a mechanism to pause and restart the content](https://www.w3.org/WAI/WCAG21/Techniques/failures/F16)
+- [Understanding Success Criterion 2.2.2: Pause, Stop, Hide][SC 2.2.2]
+- [G186: Using a control in the Web page that stops moving, blinking, or auto-updating content][G186]
+- [F16: Failure of Success Criterion 2.2.2 due to including scrolling content where movement is not essential to the activity without also including a mechanism to pause and restart the content][F16]
 
 ## Test Cases
 
@@ -330,7 +333,11 @@ The text node automatically updates every 3 seconds but only as a result of an a
 [document readiness]: https://www.w3.org/TR/html53/dom.html#current-document-readiness
 [essential]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html#dfn-essential
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree
+[F16]: https://www.w3.org/WAI/WCAG21/Techniques/failures/F16
+[G186]: https://www.w3.org/WAI/WCAG21/Techniques/general/G186
+[HTML document]: https://dom.spec.whatwg.org/#html-document
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [mechanism]: https://www.w3.org/TR/WCAG21/#dfn-mechanism
+[SC 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
 [text node]: https://dom.spec.whatwg.org/#text
 [visible]: #visible 'Definition of visible'

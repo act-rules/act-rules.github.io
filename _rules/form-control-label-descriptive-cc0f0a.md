@@ -232,9 +232,8 @@ The form field is not [visible][].
 
 ```html
 <label
-	>First name:
-	<input style="position: absolute; top: -9999px; left: -9999px;" type="text" name="first_name" />
-</label>
+	>First name: <input style="position: absolute; top: -9999px; left: -9999px;" type="text" name="first_name"
+/></label>
 ```
 
 #### Inapplicable Example 4

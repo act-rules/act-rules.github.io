@@ -38,7 +38,7 @@ This rule applies to any HTML or SVG element that:
 
 **Note**: [Labels][label] are not restricted to the `label` element of HTML and can be any element.
 
-**Note**: [Labels][label] have to be presented to all users. Therefore, [accessible names][accessible name] or elements that are not [included in the accessibility tree][] do not qualify as [labels][] (unless coupled with similar content provided for other users).
+**Note**: [Labels][label] have to be presented to all users. Therefore, [accessible names][accessible name] or elements that are not [included in the accessibility tree][] do not qualify as [labels][label] (unless coupled with similar content provided for other users).
 
 ## Expectation
 
@@ -232,8 +232,9 @@ The form field is not [visible][].
 
 ```html
 <label
-	>First name:<input style="position: absolute; top: -9999px; left: -9999px;" type="text" name="first_name"
-/></label>
+	>First name:
+	<input style="position: absolute; top: -9999px; left: -9999px;" type="text" name="first_name" />
+</label>
 ```
 
 #### Inapplicable Example 4

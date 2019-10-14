@@ -50,7 +50,7 @@ The [label][] describes the purpose of the test target. The [context][] of the [
 
 **Note**: While the [label][] has to be presented to all users, this is not necessarily the case for the [context][], if any. However, if [context][] is needed by some users to differentiate the purpose from one test target to another, it is likely that similar [context][] will be needed for all users.
 
-**Note**: Having a [label][] which is not included in the [accessible name][] is a violation of [Succes Criterion 2.5.3: Label in Name][sc253] but neither of this rule nor of [Success Criterion 2.4.6: Heading and Labels][sc246].
+**Note**: Having a [label][] which is not included in the [accessible name][] is a violation of [Success Criterion 2.5.3: Label in Name][sc253] but neither of this rule nor of [Success Criterion 2.4.6: Heading and Labels][sc246].
 
 ## Assumptions
 

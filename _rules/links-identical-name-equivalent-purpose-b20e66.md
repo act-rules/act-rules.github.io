@@ -241,15 +241,13 @@ Links resolves to same resource after redirect, but the redirect is not instant:
 
 #### Inapplicable Example 2
 
-Links with different [accessible names][accessible name]:
+These links have different [accessible names][accessible name]. The rule only applies to identical [accessible names][accessible name], not to identical link destinations.
+
+**Note**: It is a best practice for [Success Criterion 2.4.9: Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html) that identical links have identical [accessible names][accessible name]. This is however not a requirement.
 
 ```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
-	>Contact main office</a
->
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
-	>Contact admissions office</a
->
+<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Reach out</a>
+<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
 ```
 
 #### Inapplicable Example 3

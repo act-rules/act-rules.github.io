@@ -10,16 +10,16 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-input_aspects:
-  - DOM Tree
-authors:
-  - Jey Nandakumar
-  - Audrey Maniez
+
+input_aspects: + DOM Tree
+
+authors: + Jey Nandakumar
+  + Audrey Maniez
 ---
 
 ## Applicability
 
-The rule applies to any HTML element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of an element having a [semantic role](#semantic-role) of either [table](https://www.w3.org/TR/wai-aria-1.1/#table) or [grid](https://www.w3.org/TR/wai-aria-1.1/#grid), and is [visible](#visible) as well as [included in the accessibility tree](#included-in-the-accessibility-tree), where the element has any of the below [semantic roles](#semantic-role):
+The rule applies to any HTML element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of an element having a [semantic role](#semantic-role) of either [table](https://www.w3.org/TR/wai-aria-1.1/#table) or [grid](https://www.w3.org/TR/wai-aria-1.1/#grid), and is [visible](#visible) as well as [included in the accessibility tree](#included-in-the-accessibility-tree), where the element has any of the following [semantic roles](#semantic-role):
 
 - [cell](https://www.w3.org/TR/wai-aria-1.1/#cell)
 - [gridcell](https://www.w3.org/TR/wai-aria-1.1/#gridcell)
@@ -28,7 +28,7 @@ The rule applies to any HTML element that is a [descendant](https://dom.spec.wha
 
 ## Expectation
 
-Each target element is either the row or column header for cells that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the same element as the target element.
+The target element is either the row or column header for cells that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the same [table](https://www.w3.org/TR/wai-aria-1.1/#table) or [grid](https://www.w3.org/TR/wai-aria-1.1/#grid) element, as the target element.
 
 ## Assumptions
 
@@ -50,7 +50,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-Each column header element has corresponding cells, within the same table element.
+The column header element has corresponding cell, within the same `table` element.
 
 ```html
 <table>
@@ -65,7 +65,7 @@ Each column header element has corresponding cells, within the same table elemen
 
 #### Passed Example 2
 
-Each column header element has corresponding cells, within the same element having a [semantic role](#semantic-role) of `table`.
+Each column header element has corresponding cells, within the same `table` element.
 
 ```html
 <div role="table">
@@ -110,7 +110,7 @@ Each column header element has corresponding cells within the same table element
 
 #### Passed Example 4
 
-Each row and column header element has corresponding cells, within the same element having a [semantic role](#semantic-role) of `grid`.
+Each row and column header element has corresponding cells, within the same element having a [semantic role](#semantic-role) of `grid` .
 
 ```html
 <table role="grid">
@@ -137,7 +137,7 @@ Each row and column header element has corresponding cells, within the same elem
 
 #### Failed Example 1
 
-Not all column headers have corresponding cells within the same table element.
+One of the column headers ("Column 2"), does not have corresponding cell within the same `table` element.
 
 ```html
 <table>
@@ -174,15 +174,27 @@ The rule does not apply to table element that is not [included in the accessibil
 
 #### Inapplicable Example 2
 
-The rule does not apply to table element that is not [visible](#visible).
+The rule does not apply to table element that is not [visible](#visible) in page.
 
 ```html
-<table style="display:none;">
-	<tr>
-		<th>Time</th>
-	</tr>
-	<tr>
-		<td>24:00</td>
-	</tr>
-</table>
+<html>
+	<style>
+		.notInPage {
+			position: absolute;
+			left: -9999px;
+			top: -9999px;
+		}
+	</style>
+
+	<body>
+		<table class="notInPage">
+			<tr>
+				<th>Time</th>
+			</tr>
+			<tr>
+				<td>24:00</td>
+			</tr>
+		</table>
+	</body>
+</html>
 ```

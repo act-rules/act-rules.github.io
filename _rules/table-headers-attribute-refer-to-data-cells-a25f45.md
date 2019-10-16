@@ -3,7 +3,7 @@ id: a25f45
 name: Headers attribute specified on a cell refers to cells in the same table element
 rule_type: atomic
 description: |
-  This rule checks that the headers attribute of `td` elements refer to cells in the same `table` element that have a semantic role of `columnheader` or `rowheader`.
+  This rule checks that the headers attribute on a cell refer to other cells in the same `table` element with a semantic role of `columnheader` or `rowheader`.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true
@@ -26,8 +26,8 @@ This rule applies to any `headers` attribute specified on a [`cell`](https://www
 
 The `headers` attribute of each target element is [a set of space separated IDs](https://www.w3.org/TR/html50/infrastructure.html#set-of-space-separated-tokens), each of which is an ID of an element in the same [document tree](https://dom.spec.whatwg.org/#document-trees) or [shadow tree](https://dom.spec.whatwg.org/#shadow-trees) as the applicable element, that:
 
-1. has a [semantic role](#semantic-role) of `columnheader` or `rowheader`, and
-2. is a [`cell`](https://www.w3.org/TR/html52/tabular-data.html#cell) of the same [`table`](https://www.w3.org/TR/html50/tabular-data.html#concept-table) as the target element
+1. has a [semantic role](#semantic-role) of [columnheader](https://www.w3.org/TR/html-aria/#index-aria-columnheader) or [rowheader](https://www.w3.org/TR/html-aria/#index-aria-rowheader), and
+2. is a [`cell`](https://www.w3.org/TR/html52/tabular-data.html#cell) of the same [`table`](https://www.w3.org/TR/html50/tabular-data.html#concept-table) as the target element.
 
 ## Assumptions
 
@@ -147,7 +147,7 @@ The `headers` attribute on the cell refers to `th` with a role of `rowheader` wi
 
 #### Passed Example 6
 
-The `headers` attribute on the `th` cell refers to other `th` cells within the same `table`.
+The `headers` attribute on the `th` cell refers to other `th` cells within the same `table`. Here the column header has a spans two columns.
 
 ```html
 <table>
@@ -165,17 +165,17 @@ The `headers` attribute on the `th` cell refers to other `th` cells within the s
 
 #### Failed Example 1
 
-Cells with `headers` attribute, refers to non-existing element within the same `table`.
+The `headers` attribute on the cell refers to an element outside the same `table`.
 
 ```html
+<span id="elmOutsideTable">Project Costs</span>
+
 <table>
 	<tr>
-		<th id="header1">Projects</th>
-		<th id="header2">Exams</th>
+		<th id="headerOfColumn">Projects</th>
 	</tr>
 	<tr>
-		<td headers="NOT-EXIST">15%</td>
-		<td headers="NOT-EXIST">15%</td>
+		<td headers="elmOutsideTable">15%</td>
 	</tr>
 </table>
 ```
@@ -201,17 +201,17 @@ One of the cells with `headers` attribute, refers to `th` that does not exist wi
 
 #### Failed Example 3
 
-The `headers` attribute on the cell refers to an element outside the same `table`.
+Cells with `headers` attribute, refers to multiple non-existing elements within the same `table`.
 
 ```html
-<span id="elmOutsideTable">Project Costs</span>
-
 <table>
 	<tr>
-		<th id="headerOfColumn">Projects</th>
+		<th id="header1">Projects</th>
+		<th id="header2">Exams</th>
 	</tr>
 	<tr>
-		<td headers="elmOutsideTable">15%</td>
+		<td headers="NOT-EXIST-1">15%</td>
+		<td headers="NOT-EXIST-2">15%</td>
 	</tr>
 </table>
 ```
@@ -271,7 +271,7 @@ A table used for presentation only, that has a `role="presentation"`.
 
 #### Inapplicable Example 3
 
-The rule applies only to `table > td` element.
+The rule applies only to `table` element.
 
 ```html
 <div role="table">

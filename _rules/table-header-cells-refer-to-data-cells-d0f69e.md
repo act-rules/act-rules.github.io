@@ -10,11 +10,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-
-input_aspects: + DOM Tree
-
-authors: + Jey Nandakumar
-  + Audrey Maniez
+input_aspects:
+  - DOM Tree
+authors:
+  - Jey Nandakumar
+  - Audrey Maniez
 ---
 
 ## Applicability

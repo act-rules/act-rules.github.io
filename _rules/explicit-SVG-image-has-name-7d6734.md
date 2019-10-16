@@ -125,7 +125,7 @@ The `svg` element has an explicit role of `img` but has only whitespace in the `
 
 #### Failed Example 3
 
-The `svg` element has an explicit role of `img`, is included in the accessibility tree, but the `title` element is empty.
+The `svg` element has an explicit role of `img`, is included in the accessibility tree, but it has no accessible name because the `title` element is empty.
 
 ```html
 <p>How many circles are there?</p>
@@ -150,14 +150,6 @@ The `circle` element has an explicit role of `graphics-symbol` but does not have
 
 #### Inapplicable Example 1
 
-The `svg` element does not render any visible content to the screen and is not included in the accessibility tree.
-
-```html
-<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"></svg>
-```
-
-#### Inapplicable Example 2
-
 Both the `svg` and `circle` elements do not have an explicit role.
 
 ```html
@@ -166,7 +158,7 @@ Both the `svg` and `circle` elements do not have an explicit role.
 </svg>
 ```
 
-#### Inapplicable Example 3
+#### Inapplicable Example 2
 
 The `svg` element has an explicit role of `img` but the `aria-hidden` attribute removes the element and its descendants from the accessibility tree.
 
@@ -176,9 +168,9 @@ The `svg` element has an explicit role of `img` but the `aria-hidden` attribute 
 </svg>
 ```
 
-#### Inapplicable Example 4
+#### Inapplicable Example 3
 
-The `circle` element has an explicit role that is not `img`, `graphics-document` or `graphics-symbol`.
+The `circle` element has an explicit role that is neither `img`, `graphics-document` or `graphics-symbol`.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg">

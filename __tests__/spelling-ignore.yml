@@ -12,6 +12,8 @@
 - h1 
 - h1-h6
 - svg
+- th
+- td
 
 # Domain-specific words, Definitions & other allowed terms
 - URI 
@@ -45,6 +47,9 @@
 - webpage
 - autoplay
 - autoplays
+- columnheader
+- rowheader
+- colspan
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete 
@@ -132,6 +137,7 @@
 - F41 
 - F65 
 - F89
+- F90
 
 # General Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#general)
 - G8 
@@ -158,6 +164,7 @@
 - H36 
 - H37 
 - H42 
+- H43
 - H44
 - H58
 - H67 

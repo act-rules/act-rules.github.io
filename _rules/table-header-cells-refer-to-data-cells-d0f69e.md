@@ -187,7 +187,6 @@ The rule does not apply to table element that is not [visible](#visible) in page
 			top: -9999px;
 		}
 	</style>
-
 	<body>
 		<table class="notInPage">
 			<tr>

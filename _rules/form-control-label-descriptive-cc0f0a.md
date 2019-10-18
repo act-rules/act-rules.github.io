@@ -5,7 +5,7 @@ rule_type: atomic
 description: |
   This rule checks that labels describe the purpose of form field elements.
 accessibility_requirements:
-  wcag21:2.4.6: # Headings and labels (AA)
+  wcag20:2.4.6: # Headings and labels (AA)
     forConformance: true
     failed: not satisfied
     passed: further testing needed

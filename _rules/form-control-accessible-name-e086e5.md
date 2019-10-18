@@ -19,9 +19,9 @@ authors:
 
 ## Applicability
 
-This rule applies to any element that is [included in the accessibility tree](#included-in-the-accessibility-tree), and that has one of the following [semantic roles][]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider, spinbutton`, `switch`, `textbox`.
+This rule applies to any element that is [included in the accessibility tree](#included-in-the-accessibility-tree), and that has one of the following [semantic roles][]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch`, `textbox`.
 
-**Note**: The list of roles is derived by taking all the [ARIA](https://www.w3.org/TR/wai-aria-1.1/) 1.1 roles that:
+**Note**: The list of roles is derived by taking all the roles from [WAI-ARIA Specifications](#wai-aria-specifications) that:
 
 - have a [semantic roles][] that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
 - does not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.

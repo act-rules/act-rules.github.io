@@ -25,9 +25,7 @@ Any `role` attribute that is not empty (""), and that is specified on an HTML or
 
 ## Expectation
 
-Each test target has a valid value that corresponds to a non-abstract [WAI-ARIA](https://www.w3.org/TR/wai-aria) role.
-
-**Note:** Which specific roles to consider may depend on the type of content under test, such as web pages or digital publications, and are not limited to those defined by [WAI-ARIA](https://www.w3.org/TR/wai-aria) alone. Roles defined in separate WAI-ARIA modules, such as the [Digital Publishing Module](https://www.w3.org/TR/dpub-aria/) or the [Graphics Module](https://www.w3.org/TR/graphics-aria/), may also be considered for this rule.
+Each test target has a valid value that corresponds to a non-abstract role from [WAI-ARIA Specifications](#wai-aria-specifications).
 
 ## Assumptions
 

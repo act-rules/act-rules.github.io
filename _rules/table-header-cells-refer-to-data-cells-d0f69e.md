@@ -28,7 +28,9 @@ The rule applies to any HTML element that is a [descendant](https://dom.spec.wha
 
 ## Expectation
 
-The target element is either the row or column header for cells that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the same [table](https://www.w3.org/TR/wai-aria-1.1/#table) or [grid](https://www.w3.org/TR/wai-aria-1.1/#grid) element, as the target element.
+The target element is either the row or column header for cells that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of the same [table](https://www.w3.org/TR/wai-aria-1.1/#table) or [grid](https://www.w3.org/TR/wai-aria-1.1/#grid) element, as that of the target element.
+
+**Note:** Assigning headers cells to data cell is performed as per algorithm - [Forming relationships between data cells and header cells](https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics).
 
 ## Assumptions
 
@@ -110,7 +112,7 @@ Each column header element has corresponding cells within the same table element
 
 #### Passed Example 4
 
-Each row and column header element has corresponding cells, within the same element having a [semantic role](#semantic-role) of `grid` .
+Each row and column header element has corresponding cells, within the same element having a [semantic role](#semantic-role) of `grid`.
 
 ```html
 <table role="grid">

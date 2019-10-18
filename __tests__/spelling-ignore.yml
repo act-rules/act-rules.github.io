@@ -113,6 +113,8 @@
 - rotate3d
 - rotateZ
 - matrix3d
+- rowheader
+- columnheader
 
 # ARIA Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#aria)
 - ARIA1 
@@ -160,6 +162,7 @@
 - H36 
 - H37 
 - H42 
+- H43
 - H44
 - H58
 - H67 

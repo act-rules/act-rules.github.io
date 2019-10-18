@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 600,
+  "count": 607,
   "testcases": [
     {
       "testcaseId": "29097dbe000aa32fd9a66fce65a9a7f4b413e7ff",
@@ -8746,6 +8746,125 @@
       "rulePage": "https://act-rules.github.io/rules/4e8ab6",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "4ffccb5ca50b61ccfd9988569928182bbb4c0b7b",
+      "url": "https://act-rules.github.io/testcases/d0f69e/4ffccb5ca50b61ccfd9988569928182bbb4c0b7b.html",
+      "relativePath": "testcases/d0f69e/4ffccb5ca50b61ccfd9988569928182bbb4c0b7b.html",
+      "expected": "passed",
+      "ruleId": "d0f69e",
+      "ruleName": "All table header cells have corresponding data cells",
+      "rulePage": "https://act-rules.github.io/rules/d0f69e",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "0727ebd59201bf9e521f8047dcc7344ffb330359",
+      "url": "https://act-rules.github.io/testcases/d0f69e/0727ebd59201bf9e521f8047dcc7344ffb330359.html",
+      "relativePath": "testcases/d0f69e/0727ebd59201bf9e521f8047dcc7344ffb330359.html",
+      "expected": "passed",
+      "ruleId": "d0f69e",
+      "ruleName": "All table header cells have corresponding data cells",
+      "rulePage": "https://act-rules.github.io/rules/d0f69e",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "cd681c885ba5ed4295a98398d9af1c1e36d2683b",
+      "url": "https://act-rules.github.io/testcases/d0f69e/cd681c885ba5ed4295a98398d9af1c1e36d2683b.html",
+      "relativePath": "testcases/d0f69e/cd681c885ba5ed4295a98398d9af1c1e36d2683b.html",
+      "expected": "passed",
+      "ruleId": "d0f69e",
+      "ruleName": "All table header cells have corresponding data cells",
+      "rulePage": "https://act-rules.github.io/rules/d0f69e",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "6906467ce72f412f4e1b05b1e9a8f77cd2a52be1",
+      "url": "https://act-rules.github.io/testcases/d0f69e/6906467ce72f412f4e1b05b1e9a8f77cd2a52be1.html",
+      "relativePath": "testcases/d0f69e/6906467ce72f412f4e1b05b1e9a8f77cd2a52be1.html",
+      "expected": "passed",
+      "ruleId": "d0f69e",
+      "ruleName": "All table header cells have corresponding data cells",
+      "rulePage": "https://act-rules.github.io/rules/d0f69e",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "568d8c32c559ae3dcf919b2e3a666b2d2e902396",
+      "url": "https://act-rules.github.io/testcases/d0f69e/568d8c32c559ae3dcf919b2e3a666b2d2e902396.html",
+      "relativePath": "testcases/d0f69e/568d8c32c559ae3dcf919b2e3a666b2d2e902396.html",
+      "expected": "failed",
+      "ruleId": "d0f69e",
+      "ruleName": "All table header cells have corresponding data cells",
+      "rulePage": "https://act-rules.github.io/rules/d0f69e",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "132cef1328e0fc68e467e6c19f24bf78acd78b55",
+      "url": "https://act-rules.github.io/testcases/d0f69e/132cef1328e0fc68e467e6c19f24bf78acd78b55.html",
+      "relativePath": "testcases/d0f69e/132cef1328e0fc68e467e6c19f24bf78acd78b55.html",
+      "expected": "inapplicable",
+      "ruleId": "d0f69e",
+      "ruleName": "All table header cells have corresponding data cells",
+      "rulePage": "https://act-rules.github.io/rules/d0f69e",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "d78db0435bbf6ac31c20f5423cb8b49270dc22af",
+      "url": "https://act-rules.github.io/testcases/d0f69e/d78db0435bbf6ac31c20f5423cb8b49270dc22af.html",
+      "relativePath": "testcases/d0f69e/d78db0435bbf6ac31c20f5423cb8b49270dc22af.html",
+      "expected": "inapplicable",
+      "ruleId": "d0f69e",
+      "ruleName": "All table header cells have corresponding data cells",
+      "rulePage": "https://act-rules.github.io/rules/d0f69e",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",

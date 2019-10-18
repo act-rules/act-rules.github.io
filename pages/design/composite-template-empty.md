@@ -1,39 +1,54 @@
 ---
+id:
 name:
 rule_type: composite
 description: |
   This rule checks ...
 
-success_criterion:
-  - x.x.x # (Name of Success Criterion)
+accessibility_requirements: # Remove whatever is not applicable
+  wcag20:x.x.x: # <Name of Success Criterion> (A | AA | AAA)
+    forConformance: true | false
+    failed: not satisfied
+    passed: satisfied | further testing needed
+    inapplicable: satisfied | further testing needed
 
-atomic_rules:
-  -
+  aria11:x.x.x: # <Heading in WAI-ARIA>
+    forConformance: true | false
+    failed: not satisfied
+    passed: satisfied | further testing needed
+    inapplicable: satisfied | further testing needed
+
+  wcag-technique:x.x.x: # <Technique title>
+    forConformance: true | false
+    failed: not satisfied
+    passed: satisfied | further testing needed
+    inapplicable: satisfied | further testing needed
+
+input_rules:
+  -  # Include the ID of the rule
 
 authors:
   -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
 ---
 
-## Aggregation Definition
-
-### Applicability
+## Applicability
 
 The rule applies to any (??) element ...
 
-### Expectation
+## Expectation (1)
 
-For each test target, the outcome of (at least one of / all of / any of etc.) the following rules is (passed / failed / etc.):
+For each test target, the outcome of (at least one of | all of | any of etc.) the following rules is (passed / failed / etc.):
 
-- (list atomic rules that are used in this composite rule)
--
+- [Rule name](relative_link_to_rule.html)
+- ...
 
 ## Assumptions
 
-_There are currently no assumptions._
+_No assumptions._
 
-## Accessibility support
+## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+_No accessibility support issues known._
 
 ## Background
 
@@ -43,7 +58,7 @@ _There are no major accessibility support issues known for this rule._
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 Description...
 
@@ -51,13 +66,13 @@ Description...
 <!-- code -->
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 ...
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 Description...
 
@@ -65,13 +80,13 @@ Description...
 <!-- code -->
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 ...
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
 Description...
 
@@ -79,6 +94,6 @@ Description...
 <!-- code -->
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 ...

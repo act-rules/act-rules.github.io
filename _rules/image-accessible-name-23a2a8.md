@@ -149,7 +149,7 @@ The `img` element inside a `div` positioned off screen has an empty [accessible 
 
 #### Failed Example 4
 
-The HTML `img` element has an emtpy [accessible name][].
+The HTML `img` element has an empty [accessible name][].
 
 ```html
 <img alt=" " />

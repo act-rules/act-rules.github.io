@@ -8,11 +8,12 @@ The programmatically determined context of a piece of information (_e.g._ an ele
 It includes:
 
 - the element's [accessible name][];
-- elements that are referred by the `aria-describedby` attribute; 
+- elements that are referred by the `aria-describedby` attribute;
 - the `title` attribute;
 - ancestor `label` elements;
 - `label` elements referring the current element with a `for` attribute;
 - table headers associated with the cell containing the information;
+- the header that precedes the element;
 - sibling [phrasing content][] nodes in the same [paragraph][] of the element;
 - sibling [phrasing content][] nodes in the same table cell of the element;
 - sibling [phrasing content][] nodes in the same list item of the element.

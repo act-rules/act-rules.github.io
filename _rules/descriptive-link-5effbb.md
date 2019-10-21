@@ -257,7 +257,7 @@ The link text does not describe the purpose of the link. The other information a
 The link text does not describe the purpose of the link. The other information available on the page is not [programmatically determined link context][] because it is outside the list where the links are.
 
 ```html
-<h3>Ulysses</h3>
+<p style="font-weight: bold">Ulysses</p>
 <ul>
 	<li><a href="https://www.gutenberg.org/files/4300/4300-h/4300-h.htm"> HTML </a></li>
 	<li>

@@ -29,7 +29,7 @@ The rule applies to any [visible][] [text node][] in the [flat tree][] of an [HT
 
 ## Expectation 1
 
-For each test target a [mechanism][] is provided to pause or stop the updating of the content of the [text node][].
+For the test target a [mechanism][] is provided to pause or stop the updating of the content of the [text node][].
 
 **Note**: If there is more than one [text node][] with auto-updating content, a single [mechanism][] may be used to pause or stop updating all [text nodes][text node].
 
@@ -88,9 +88,9 @@ The text node automatically updates every 3 seconds after the page completes loa
 The text node automatically updates every 3 seconds after the page completes loading. A mechanism is available to pause and resume the automatic updates.
 
 ```html
-<body onload="start()">
+<body onload="toggle()">
 	<p>Random number: <span id="target">1</span></p>
-	<input type="button" id="control" onclick="pause()" value="Pause updates" />
+	<input type="button" id="control" onclick="toggle()" value="Pause updates" />
 
 	<script type="text/javascript">
 		function change() {
@@ -101,110 +101,21 @@ The text node automatically updates every 3 seconds after the page completes loa
 
 		var updates
 		var updating = false
-		function start() {
-			var control = document.getElementById('control')
-			control.value = 'Pause updates'
-			updating = true
-			updates = setInterval(change, 3000)
-		}
 
-		function pause() {
+		function toggle() {
+			var control = document.getElementById('control')
 			if (updating) {
-				var control = document.getElementById('control')
 				control.value = 'Resume updates'
 				updating = false
 				clearInterval(updates)
 			} else {
-				start()
+				control.value = 'Pause updates'
+				updating = true
+				updates = setInterval(change, 3000)
 			}
 		}
 	</script>
 </body>
-```
-
-#### Passed Example 3
-
-The text node (part of a progress bar) automatically updates every second after the page completes loading. Since the auto-updating can be considered essential because it takes place during a loading phase when there can be no interaction, a mechanism to stop the auto-updating is not required and the example passes.
-
-```html
-<html>
-	<head>
-		<title>Example page for rule efbfc7</title>
-		<style>
-			.progress-wrap,
-			.progress-bar {
-				height: 20px;
-				max-width: 300px;
-				position: relative;
-			}
-			.progress-wrap {
-				background: #eee;
-			}
-			.progress-bar {
-				background: #cce0ff;
-				width: 0;
-				transition: width 1s;
-			}
-			.progress-text {
-				position: absolute;
-				top: 0;
-				width: 100%;
-				text-align: center;
-			}
-			.choices {
-				margin: 3em;
-			}
-		</style>
-	</head>
-	<body onload="start()">
-		<p>
-			Wait for the bar to reach 100% then make your choice
-		</p>
-		<div class="progress-wrap">
-			<div class="progress-bar" id="pb-demo"></div>
-			<div class="progress-text" id="pb-text">0%</div>
-		</div>
-		<div class="choices">
-			<button type="button" id="packa" disabled>Pack A:</button>
-			<button type="button" id="packb" disabled>Pack B:</button>
-		</div>
-
-		<script type="text/javascript">
-			var n, updates
-
-			function updatePB() {
-				var bar = document.getElementById('pb-demo')
-				var text = document.getElementById('pb-text')
-				bar.style.width = n + '%'
-				text.innerHTML = n + '%'
-			}
-
-			function updateNum() {
-				if (n < 100) {
-					n = n + 5
-					updatePB(n)
-					if (n % 10 === 0) {
-						var buttonA = document.getElementById('packa')
-						var buttonB = document.getElementById('packb')
-						buttonA.innerHTML = 'Pack A: &euro;' + Math.floor(Math.random() * 1000)
-						buttonB.innerHTML = 'Pack B: &euro;' + Math.floor(Math.random() * 1000)
-					}
-				} else {
-					clearInterval(updates)
-					var buttonA = document.getElementById('packa')
-					var buttonB = document.getElementById('packb')
-					buttonA.disabled = false
-					buttonB.disabled = false
-				}
-			}
-
-			function start() {
-				n = 0
-				updates = setInterval(updateNum, 1000)
-			}
-		</script>
-	</body>
-</html>
 ```
 
 ### Failed
@@ -349,6 +260,102 @@ The text node automatically updates every 3 seconds after the page completes loa
 </body>
 ```
 
+#### Failed Example 6
+
+The text node (part of a progress bar) automatically updates every second after the page completes loading. There is no mechanism for the user to pause the auto-updates, other than waiting for them to end.
+
+```html
+<html>
+	<head>
+		<title>Example page for rule efbfc7</title>
+		<style>
+			.progress-wrap,
+			.progress-bar {
+				height: 20px;
+				max-width: 300px;
+				position: relative;
+			}
+
+			.progress-wrap {
+				background: #eee;
+			}
+
+			.progress-bar {
+				background: #cce0ff;
+				width: 0;
+				transition: width 1s;
+			}
+
+			.progress-text {
+				position: absolute;
+				top: 0;
+				width: 100%;
+				text-align: center;
+			}
+
+			.choices {
+				margin: 3em;
+			}
+		</style>
+	</head>
+
+	<body onload="start()">
+		<p>
+			You can pick a price you like, or wait for the final.
+		</p>
+		<div class="progress-wrap">
+			<div class="progress-bar" id="pb-demo"></div>
+			<div class="progress-text" id="pb-text">0%</div>
+		</div>
+		<div class="choices">
+			<button type="button" id="packa" onclick="select()">Pack A:</button>
+		</div>
+		<div>
+			<p id="outcome"></p>
+		</div>
+
+		<script type="text/javascript">
+			var n, updates, price
+
+			function updatePB() {
+				var bar = document.getElementById('pb-demo')
+				var text = document.getElementById('pb-text')
+				bar.style.width = n + '%'
+				text.innerHTML = n + '%'
+			}
+
+			function updateNum() {
+				var button = document.getElementById('packa')
+				if (n < 100) {
+					n = n + 10
+					updatePB(n)
+					price = Math.floor(Math.random() * 1000)
+					button.innerHTML = 'Price: &euro;' + price
+				} else {
+					clearInterval(updates)
+					var outcome = document.getElementById('outcome')
+					if (!outcome.innerHTML) {
+						outcome.innerHTML = 'Your price is ' + price
+					}
+				}
+			}
+
+			function select() {
+				var outcome = document.getElementById('outcome')
+				if (price) {
+					outcome.innerHTML = 'Your price is ' + price
+				}
+			}
+
+			function start() {
+				n = 0
+				updates = setInterval(updateNum, 1000)
+			}
+		</script>
+	</body>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -380,7 +387,7 @@ The text node automatically updates every 3 seconds but only as a result of an a
 ```html
 <body>
 	<p>Random number: <span id="target">1</span></p>
-	<input type="button" id="control" onclick="pause()" value="Start updates" />
+	<input type="button" id="control" onclick="start()" value="Start updates" />
 
 	<script type="text/javascript">
 		function change() {
@@ -389,24 +396,8 @@ The text node automatically updates every 3 seconds but only as a result of an a
 			target.innerText = number
 		}
 
-		var updates
-		var updating = false
 		function start() {
-			var control = document.getElementById('control')
-			control.value = 'Pause updates'
-			updating = true
-			updates = setInterval(change, 3000)
-		}
-
-		function pause() {
-			if (updating) {
-				var control = document.getElementById('control')
-				control.value = 'Resume updates'
-				updating = false
-				clearInterval(updates)
-			} else {
-				start()
-			}
+			setInterval(change, 3000)
 		}
 	</script>
 </body>

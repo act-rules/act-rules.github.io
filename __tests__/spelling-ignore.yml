@@ -44,6 +44,7 @@
 - namespace
 - namespaces 
 - webpage
+- wai-aria-specifications
 - autoplay
 - autoplays
 - presentational
@@ -61,6 +62,7 @@
 - html52
 - whatwg
 - dom
+- wai-aria
 
 # Other tool names
 - axe-core

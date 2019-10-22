@@ -30,13 +30,13 @@ This rule applies to any set of any two or more HTML or SVG elements which
 - have the [semantic role][] of `link`, or a role that inherits from the `link` role; and
 - are in [documents][document] of the same [web page][]; and
 - are [included in an accessibility tree][included in the accessibility tree]; and
-- that have [matching][] [accessible names][accessible name] that do not only consist of [whitespace](#whitespace).
+- that have [matching][] [accessible names][accessible name] that are not empty (`""`).
 
 **Note:** The test target for this rule is the full set of link elements that share the same [matching][] [accessible name][].
 
 ## Expectation
 
-When followed, the links in each set of target elements resolve to the [same resource][] or to [equivalent resources](#equivalent-resource). Resolving the links includes potential redirects, if the redirects happen instantly.
+When followed, the links in the set of target elements resolve to the [same resource][] or to [equivalent resources](#equivalent-resource). Resolving the links includes potential redirects, if the redirects happen instantly.
 
 ## Assumptions
 
@@ -401,7 +401,7 @@ These `span` elements do not have a [semantic role][] of link.
 
 #### Inapplicable Example 5
 
-These links do not have [accessible names][accessible name].
+These links have empty [accessible names][accessible name].
 
 ```html
 <a href="http://facebook.com"></a> <a href="http://twitter.com"></a>
@@ -409,7 +409,7 @@ These links do not have [accessible names][accessible name].
 
 #### Inapplicable Example 6
 
-These image links do not have [accessible names][accessible name].
+These image links have empty [accessible names][accessible name].
 
 ```html
 <a href="http://facebook.com"><img src="facebook.jpg"/></a> <a href="http://twitter.com"><img src="twitter.jpg"/></a>

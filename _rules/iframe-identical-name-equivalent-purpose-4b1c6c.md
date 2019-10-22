@@ -37,7 +37,7 @@ The `iframe` elements in the set of target elements embed the the [same resource
 
 ## Assumptions
 
-_There are currently no assumptions_
+- This rule assumes that, within the context of the test subject, the description provided by the [accessible name][] of an `iframe` can only accurately describe one resource (notably, homonyms alone are not used as `iframe` names). Thus, if two or more `iframe` elements have the same [accessible name][] but embed different resources, at least one of them does not describe its purpose.
 
 ## Accessibility Support
 

@@ -45,6 +45,7 @@ This rule assume that assistive technologies are exposing all `iframe` elements 
 
 ## Background
 
+- [CSS Scoping Module Level 1 (editor's draft)](https://drafts.csswg.org/css-scoping/)
 - [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value][usc412]
 
@@ -134,6 +135,59 @@ Two `iframe` elements within the same [document tree][] have the same [accessibl
 <iframe title="advertising" src="/test-assets/iframe-unique-name-4b1c6c/advertising-two.html"> </iframe>
 ```
 
+#### Passed Example 9
+
+All three `iframe` elements have the same [accessible name][]. The second `iframe` (with `id` `"light"` ) is only part of the [light tree][]. When the [shadow tree][] is attached to `host` and flattened, this `iframe` is overwritten and therefore not part of the [flat tree][]. Hence, only the first and third `iframe` are considered by this rule and they both point to the [same resource][].
+
+```html
+<iframe id="always" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+
+<div id="host">
+	<iframe id="light" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe>
+</div>
+
+<script>
+	const host = document.getElementById('host')
+	const shadowRoot = host.attachShadow({ mode: 'open' })
+	shadowRoot.innerHTML =
+		'<iframe id="shadow" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>'
+</script>
+```
+
+#### Passed Example 10
+
+The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light tree][] does fill that [slot][]. Hence, the [flattened slotable][] is not [assigned][] and the third `iframe` (with `id` `"fallback"`) does not appear in the [flat tree][]. Only the first (`"always"`) and second (`"slot"`) `iframe` are in the [flat tree][]. Given that they have the same [accessible name][] and point to the [same resource][], the rule passes.
+
+```html
+<iframe id="always" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+
+<div id="host">
+	<iframe slot="slot" id="slot" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html">
+	</iframe>
+</div>
+
+<script>
+	const host = document.getElementById('host')
+	const shadowRoot = host.attachShadow({ mode: 'open' })
+	shadowRoot.innerHTML =
+		'<slot name="slot"><iframe id="fallback" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe></slot>'
+</script>
+```
+
+#### Passed Example 11
+
+The [browsing context][] of the `iframe` with `id` `"container"` has the [browsing context][] of the main [document][] as an [ancestor browsing context][]. Hence, they share the same [top-level browsing context][] (namely, the [browsing context][] of the main [document][]) and are part of the same [web page][]. Therefore, both `iframe` with `id` `"top-level"` and `"nested"` are considered and, since they embed the same document, the rule passes.
+
+```html
+<iframe id="top-level" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html">
+</iframe>
+
+<iframe
+	id="container"
+	srcdoc="<iframe id='nested' title='List of Contributors' src='/test-assets/iframe-unique-name-4b1c6c/page-one.html'> </iframe>"
+></iframe>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -164,6 +218,39 @@ Two `iframe` elements within the same [document tree][] have the same [accessibl
 <iframe title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
 
 <iframe aria-label="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe>
+```
+
+#### Failed Example 4
+
+The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light tree][] does not fill that [slot][]. Hence, the [flattened slotable][] is [assigned][] and the third `iframe` (with `id` `"fallback"`) appears in the [flat tree][], causing the rule to fail.
+
+```html
+<iframe id="always" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+
+<div id="host">
+	<iframe id="slot" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+</div>
+
+<script>
+	const host = document.getElementById('host')
+	const shadowRoot = host.attachShadow({ mode: 'open' })
+	shadowRoot.innerHTML =
+		'<slot name="slot"><iframe id="fallback" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe></slot>'
+</script>
+```
+
+#### Failed Example 5
+
+The [browsing context][] of the `iframe` with `id` `"container"` has the [browsing context][] of the main [document][] as an [ancestor browsing context][]. Hence, they share the same [top-level browsing context][] (namely, the [browsing context][] of the main [document][]) and are part of the same [web page][]. Therefore, both `iframe` with `id` `"top-level"` and `"nested"` are considered and the rule fails.
+
+```html
+<iframe id="top-level" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html">
+</iframe>
+
+<iframe
+	id="container"
+	srcdoc="<iframe id='nested' title='List of Contributors' src='/test-assets/iframe-unique-name-4b1c6c/page-two.html'> </iframe>"
+></iframe>
 ```
 
 ### Inapplicable
@@ -225,27 +312,6 @@ Both `iframe` elements have the same [accessible name][] (given by the `title` a
 
 #### Inapplicable Example 6
 
-Two of the `iframe` elements, with `id` attribute `level1-frame1` and `level2-frame1` have the same [accessible name][] (given by the `title` attribute). However, they are not part of the same [document tree][] because `level2-frame1` is itself embedded in another `iframe` element. Therefore, there is no set of two or more `iframe` elements with the same [accessible name][] within the same [document tree][] and the rule is inapplicable.
-
-```html
-<iframe id="level1-frame1" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html">
-</iframe>
-<iframe
-	id="level1-frame2"
-	title="List of Contributors 2"
-	src="/test-assets/iframe-unique-name-4b1c6c/page-with-iframe.html"
->
-	<!--
-  Content of document includes an iframe:
-  
-  <iframe id="level2-frame1" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html">
-  </iframe>
-  -->
-</iframe>
-```
-
-#### Inapplicable Example 7
-
 The `alt` attribute does not provide an [accessible name][] for `iframe` elements. Therefore, these `iframe` elements do not have an [accessible name][] and the rule is inapplicable.
 
 ```html
@@ -254,7 +320,7 @@ The `alt` attribute does not provide an [accessible name][] for `iframe` element
 <iframe alt="Some" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
 ```
 
-#### Inapplicable Example 8
+#### Inapplicable Example 7
 
 The rule does not apply to `object` elements.
 
@@ -264,7 +330,7 @@ The rule does not apply to `object` elements.
 <object aria-label="List of Contributors Clone" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </object>
 ```
 
-#### Inapplicable Example 9
+#### Inapplicable Example 8
 
 These `iframe` elements do not have [accessible names][accessible name].
 
@@ -274,7 +340,7 @@ These `iframe` elements do not have [accessible names][accessible name].
 <iframe src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
 ```
 
-#### Inapplicable Example 10
+#### Inapplicable Example 9
 
 These `iframe` elements are not [included in the accessibility tree][], because of the `display:none` styling.
 
@@ -285,10 +351,30 @@ These `iframe` elements are not [included in the accessibility tree][], because 
 </iframe>
 ```
 
+#### Inapplicable Example 10
+
+Only the first `iframe` (with `id` `"always"`) is present in the [flat tree][]. Hence, there is no set of two or more `iframe` elements to apply the rule. The [shadow tree][] does contain a [slot][], but because its [named][name], the second `iframe` (with `id` `"light"`) is _not_ [slotted][slot] into it.
+
+```html
+<iframe id="always" title="List of contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+
+<div id="host">
+	<iframe id="light" title="List of contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe>
+</div>
+
+<script>
+	const host = document.getElementById('host')
+	const shadowRoot = host.attachShadow({ mode: 'open' })
+	shadowRoot.innerHTML = '<slot name="slot"></slot>'
+</script>
+```
+
 [accessible name]: #accessible-name 'Definition of accessible name'
+[ancestor browsing context]: https://html.spec.whatwg.org/#ancestor-browsing-context 'Definition of ancestor browsing context'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [document tree]: https://dom.spec.whatwg.org/#document-trees 'Definition of document tree'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [sc412]: https://www.w3.org/TR/WCAG21/#name-role-value 'Success Criterion 4.1.2: Name, Role, Value'
+[top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'Definition of top level browsing context'
 [usc412]: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html 'Understanding Success Criterion 4.1.2: Name, Role, Value'
 [web page]: #web-page 'Definition of web page'

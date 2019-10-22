@@ -17,7 +17,7 @@ Any attribute that starts with `aria-`.
 
 ## Expectation
 
-Each target attribute is defined in [WAI ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/).
+Each target attribute is defined in [WAI-ARIA Specifications](#wai-aria-specifications).
 
 ## Assumptions
 
@@ -34,7 +34,6 @@ There are no major accessibility support issues known for this rule.
 - [G108: Using markup features to expose the name and role](https://www.w3.org/WAI/WCAG21/Techniques/general/G108)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [Semantics and ARIA](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/)
-- [WAI ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/)
 
 ## Test Cases
 

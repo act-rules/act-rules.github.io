@@ -1,7 +1,10 @@
-name: Verify test(s)
+name: test
 
 # Run on PR's targetting `develop` branch
 on:
+  push:
+    branches:
+    - develop
   pull_request:
     branches:
     - develop

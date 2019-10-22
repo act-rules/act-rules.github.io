@@ -43,6 +43,9 @@
 - whitespace 
 - namespaces 
 - webpage
+- wai-aria-specifications
+- autoplay
+- autoplays
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete 
@@ -57,6 +60,7 @@
 - html52
 - whatwg
 - dom
+- wai-aria
 
 # Other tool names
 - axe-core
@@ -122,7 +126,8 @@
 - ARIA16
 
 # Common Failures (https://www.w3.org/WAI/WCAG21/Techniques/#failures)
-- F10 
+- F10
+- F23
 - F30 
 - F38 
 - F40 
@@ -145,6 +150,8 @@
 - G159 
 - G162 
 - G166 
+- G170
+- G171
 - G173 
 - G203
 

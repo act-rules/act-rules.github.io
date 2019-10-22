@@ -104,7 +104,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 ```svg
 <html>
 	<body>
-		<svg lang="en"></article>
+		<svg lang="en"></svg>
 	</body>
 </html>
 ```

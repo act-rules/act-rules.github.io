@@ -16,17 +16,22 @@ input_aspects:
 authors:
   - Jey Nandakumar
   - Audrey Maniez
+  - Jean-Yves Moyen
 ---
 
 ## Applicability
 
-This rule applies to any set of any two or more `iframe` elements in the same [document tree][] that are [included in the accessibility tree][], and that have [matching](#matching-characters) [accessible names][accessible name] that do not only consist of [whitespace](#whitespace).
+This rule applies to any set of any two or more `iframe` elements which:
 
-**Note:** The test target for this rule is the full set of `iframe` elements within the same [document tree][] that share the same [matching](#matching-characters) [accessible name][].
+- are in [documents][document] of the same [web page][]; and
+- are [included in an accessibility tree][included in the accessibility tree]; and
+- that have [matching][] [accessible names][accessible name] that are not empty (`""`).
+
+**Note:** The test target for this rule is the full set of `iframe` elements that share the same [matching](#matching-characters) [accessible name][].
 
 ## Expectation
 
-The `iframe` elements in each set of target elements embed the the [same resource](#same-resource) or [equivalent resources](#equivalent-resource).
+The `iframe` elements in the set of target elements embed the the [same resource](#same-resource) or [equivalent resources](#equivalent-resource).
 
 **Note:** Resolving the embedded resource includes any redirects that are instant.
 
@@ -36,12 +41,12 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+This rule assume that assistive technologies are exposing all `iframe` elements on the page in the same way no matter which [document tree](https://dom.spec.whatwg.org/#document-trees) they are in. If an assistive technology requires the user to "enter" an `iframe` or a [shadow tree][] before exposing its content (notably nested `iframe`), then it is possible for two `iframe` to have identical name but embed different resources without breaking [Success Criterion 4.1.2: Name, Role, Value][sc412] (if said `iframe` are in separate [documents][document] or [shadow trees][shadow tree])
 
 ## Background
 
 - [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64)
-- [WCAG 2.0: Name, Role, Value: Understanding SC 4.1.2](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
+- [Understanding Success Criterion 4.1.2: Name, Role, Value][usc412]
 
 ## Test Cases
 
@@ -281,5 +286,9 @@ These `iframe` elements are not [included in the accessibility tree][], because 
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
+[document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [document tree]: https://dom.spec.whatwg.org/#document-trees 'Definition of document tree'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[sc412]: https://www.w3.org/TR/WCAG21/#name-role-value 'Success Criterion 4.1.2: Name, Role, Value'
+[usc412]: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html 'Understanding Success Criterion 4.1.2: Name, Role, Value'
+[web page]: #web-page 'Definition of web page'

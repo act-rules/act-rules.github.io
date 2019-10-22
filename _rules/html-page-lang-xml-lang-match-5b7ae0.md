@@ -99,13 +99,25 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 #### Inapplicable Example 2
 
+`svg` element is not applicable for this rule.
+
+```svg
+<html>
+	<body>
+		<svg lang="en"></article>
+	</body>
+</html>
+```
+
+#### Inapplicable Example 3
+
 `xml:lang` is empty, the rule mandates `non-empty` values.
 
 ```html
 <html lang="fr" xml:lang=""></html>
 ```
 
-#### Inapplicable Example 3
+#### Inapplicable Example 4
 
 Only `non-empty` values are considered.
 
@@ -113,7 +125,7 @@ Only `non-empty` values are considered.
 <html lang="" xml:lang=""></html>
 ```
 
-#### Inapplicable Example 4
+#### Inapplicable Example 5
 
 This rule does not apply to elements whose `lang` attribute consists only of whitespace.
 
@@ -121,7 +133,7 @@ This rule does not apply to elements whose `lang` attribute consists only of whi
 <html lang=" " xml:lang=""></html>
 ```
 
-#### Inapplicable Example 5
+#### Inapplicable Example 6
 
 This rule does not apply to elements without an `xml:lang` attribute.
 
@@ -129,7 +141,7 @@ This rule does not apply to elements without an `xml:lang` attribute.
 <html lang="en"></html>
 ```
 
-#### Inapplicable Example 6
+#### Inapplicable Example 7
 
 This rule does not apply to `math` elements.
 

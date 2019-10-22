@@ -82,6 +82,14 @@ The `lang` attribute consists of only [ASCII whitespace](https://infra.spec.what
 <html lang=" "></html>
 ```
 
+#### Failed Example 4
+
+There is no `lang` attribute specified, only an `xml:lang` attribute.
+
+```html
+<html xml:lang="en"></html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1

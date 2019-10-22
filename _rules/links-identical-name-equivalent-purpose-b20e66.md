@@ -201,7 +201,7 @@ all the time.
 
 #### Passed Example 12
 
-The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light tree][] does fill that [slot][]. Hence, the [flattened slottable][] is not [assigned][] and the third link ("from the fallback") does not appear in the [flat tree][]. Only the first ("all the time") and second ("from the slot") links are in the [flat tree][]. Given that they have the same [accessible name][] and point to the [same resource][], the rule passes.
+The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light tree][] does fill that [slot][]. Hence, the [flattened slotable][] is not [assigned][] and the third link ("from the fallback") does not appear in the [flat tree][]. Only the first ("all the time") and second ("from the slot") links are in the [flat tree][]. Given that they have the same [accessible name][] and point to the [same resource][], the rule passes.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
@@ -315,7 +315,7 @@ Both links resolve to [same resource][] after redirect, but the redirect is not 
 
 #### Failed Example 7
 
-The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light tree][] does not fill that [slot][]. Hence, the [flattened slottable][] is [assigned][] and the third link ("from the fallback") appears in the [flat tree][], causing the rule to fail.
+The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light tree][] does not fill that [slot][]. Hence, the [flattened slotable][] is [assigned][] and the third link ("from the fallback") appears in the [flat tree][], causing the rule to fail.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
@@ -362,15 +362,13 @@ These `a` and `area` elements have no `href` attribute.
 
 #### Inapplicable Example 2
 
-These links have different [accessible names][accessible name].
+These links have different [accessible names][accessible name]. The rule only applies to identical [accessible names][accessible name], not to identical link destinations.
+
+**Note**: It is a best practice for [Success Criterion 2.4.9: Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html) that identical links have identical [accessible names][accessible name]. This is however not a requirement.
 
 ```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
-	>Contact main office</a
->
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
-	>Contact admissions office</a
->
+<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Reach out</a>
+<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
 ```
 
 #### Inapplicable Example 3
@@ -448,7 +446,7 @@ all the time.
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [explicit role]: #explicit-role 'Definition of explicit role'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
-[flattened slottable]: https://dom.spec.whatwg.org/#finding-slots-and-slotables 'Definition of flattened slottable'
+[flattened slotable]: https://dom.spec.whatwg.org/#finding-slots-and-slotables 'Definition of flattened slotable'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [light tree]: https://dom.spec.whatwg.org/#concept-light-tree 'Definition of light tree'
 [matching]: #matching-characters 'Definition of matching characters'

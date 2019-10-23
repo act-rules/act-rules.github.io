@@ -123,16 +123,6 @@ The first `title` element has content.
 </html>
 ```
 
-#### Passed Example 6
-
-The `title` only contains characters that are not letters or numbers.
-
-```html
-<html>
-	<title>#$@&%*!</title>
-</html>
-```
-
 ### Failed
 
 #### Failed Example 1

@@ -38,8 +38,8 @@ The default value of both `paused` and `muted` attributes is `false`.
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [Auto-play audio does not exceed 3 seconds](https://act-rules.github.io/_rules/auto-play-audio-has-control-mechanism-4c31df.md)
-- [Auto-play audio has control mechanism](https://act-rules.github.io/_rules/auto-play-audio-exceeds-3-seconds-aaa1bf.md)
+- [Auto-play audio does not exceed 3 seconds](https://act-rules.github.io/rules/4c31df)
+- [Auto-play audio has control mechanism](https://act-rules.github.io/rules/aaa1bf)
 
 ## Assumptions
 

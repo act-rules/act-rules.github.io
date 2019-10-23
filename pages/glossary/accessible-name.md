@@ -8,3 +8,43 @@ The programmatically determined name of a user interface element that is [includ
 The accessible name is calculated using the [accessible name and description computation](https://www.w3.org/TR/accname).
 
 For native markup languages, such as HTML and SVG, additional information on how to calculate the accessible name can be found in [HTML Accessibility API Mappings 1.0, Accessible Name and Description Computation (working draft)](https://www.w3.org/TR/html-aam/#accessible-name-and-description-computation) and [SVG Accessibility API Mappings, Name and Description (working draft)](https://www.w3.org/TR/svg-aam/#mapping_additional).
+
+#### Examples
+
+This element has an accessible name of "ACT rules" given from its content. Note that not all [semantic role][#semantic-role] allow [name from content](https://www.w3.org/TR/wai-aria/#namefromcontent).
+
+```html
+<a href="https://act-rules.github.io/">ACT rules</a>
+```
+
+This element has an empty accessible name (`""`) because `span` does not allow [name from content](https://www.w3.org/TR/wai-aria/#namefromcontent).
+
+```html
+<span>ACT rules</span>
+```
+
+This element has an accessible name of "ACT rules" given from its `aria-label` attribute.
+
+```html
+<span aria-label="ACT rules"></span>
+```
+
+The `span` element with an `id` of `"target"` has an accessible name of "ACT rules" given by the `aria-labelledby` attribute and both associated elements. The fact that the element with an `id` of `"label-1"` is hidden to all users does not prevent it from giving an accessible name to other elements.
+
+```html
+<span id="label-1" style="display: none">ACT</span>
+<span id="label-2" style="display: none">rules</span>
+<span id="target" aria-labelledby="label-1 label-2"></span>
+```
+
+The `span` element has an accessible name of "ACT rules:" given by the enclosing `label` element (implicit `label`)
+
+```html
+<label>ACT rules:<span></span></label>
+```
+
+The `span` element has an accessible name of "ACT rules:" given by the associated `label` element (explicit `label`)
+
+```html
+<label for="act-rules">ACT rules:</label><span id="act-rules"></span>
+```

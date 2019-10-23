@@ -45,6 +45,7 @@
 - whitespace 
 - namespaces 
 - webpage
+- wai-aria-specifications
 - autoplay
 - autoplays
 
@@ -61,9 +62,10 @@
 - html52
 - whatwg
 - dom
-- wai-aria-1.1
 - dfn-labels
 - dfn-programmatically-determinable
+- wai-aria
+- wai-aria-1.1
 
 # Other tool names
 - axe-core

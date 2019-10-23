@@ -29,7 +29,7 @@ This rule applies to any HTML or SVG element that:
 - is [included in the accessibility tree][]; and
 - has a [label][].
 
-**Note**: The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.1][aria11] roles that:
+**Note**: The list of applicable [semantic roles][semantic role] is derived by taking all the roles from [WAI-ARIA Specifications](#wai-aria-specifications) that:
 
 - inherit from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
 - do not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.

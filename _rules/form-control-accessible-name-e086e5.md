@@ -210,5 +210,5 @@ Option inherits from input, but has a required context role of listbox which inh
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
-[semantic role]: #semantic-role 'Definition of semantic role'
+[semantic roles]: #semantic-role 'Definition of semantic role'
 [whitespace]: #whitespace 'Definition of whitespace'

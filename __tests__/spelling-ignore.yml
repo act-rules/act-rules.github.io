@@ -45,6 +45,7 @@
 - whitespace 
 - namespaces 
 - webpage
+- wai-aria-specifications
 - autoplay
 - autoplays
 - columnheader
@@ -64,6 +65,7 @@
 - html52
 - whatwg
 - dom
+- wai-aria
 
 # Other tool names
 - axe-core

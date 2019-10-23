@@ -16,14 +16,24 @@ input_aspects:
 authors:
   - Dagfinn Rømen
   - Geir Sindre Fossøy
+  - Wilco Fiers
 ---
 
 ## Applicability
 
-This rule applies to any HTML `label` element or other element referenced by `aria-labelledby` that:
+This rule applies to any HTML `label` element or other element referenced by `aria-labelledby` that, is [visible][] and is programmatically associated with an HTML element that has one of the following [semantic roles][]:
 
-- is either [visible][] or [included in the accessibility tree][], and
-- is programmatically associated with an HTML element that has one of the listed form field [semantic roles][]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
+- `checkbox`
+- `combobox` (`select` elements)
+- `listbox`
+- `menuitemcheckbox`
+- `menuitemradio`
+- `radio`
+- `searchbox`
+- `slider`
+- `spinbutton`
+- `switch`
+- `textbox`
 
 **Note**: The list of form field roles is derived by taking all the roles from [WAI-ARIA Specifications](#wai-aria-specifications) that:
 
@@ -92,17 +102,6 @@ Label is [visible][], but not included in accessibility tree
 <input aria-labelledby="label_fname" type="text" name="fname" />
 ```
 
-#### Passed Example 5
-
-Label is included in accessibility tree, but not [visible][]
-
-```html
-<p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">
-	First name:
-</p>
-<input aria-labelledby="label_fname" type="text" name="fname" />
-```
-
 ### Failed
 
 #### Failed Example 1
@@ -139,22 +138,11 @@ Label is [visible][], but not included in accessibility tree, and does not descr
 <input aria-labelledby="label_fname" type="text" name="fname" />
 ```
 
-#### Failed Example 5
-
-Label is included in accessibility tree, but not [visible][], and does not describe the purpose of the associated element.
-
-```html
-<p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">
-	Menu
-</p>
-<input aria-labelledby="label_fname" type="text" name="fname" />
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-`Label` that is neither [visible][] to users, nor [included in the accessibility tree][].
+`Label` that is neither [visible][] to users.
 
 ```html
 <div style="display:none">
@@ -165,7 +153,7 @@ Label is included in accessibility tree, but not [visible][], and does not descr
 
 #### Inapplicable Example 2
 
-Programmatically associated `p` element that is neither [visible][] nor [included in the accessibility tree][].
+Programmatically associated `p` element that is neither [visible][].
 
 ```html
 <div style="display:none">
@@ -191,14 +179,5 @@ The element with `aria-labelledby` is not a form field.
 <i id="smile">Smile</i> <button aria-labelledby="smile">:-)</button>
 ```
 
-#### Inapplicable Example 5
-
-No `label` element.
-
-```html
-<input id="fname" type="text" name="fname" />
-```
-
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'

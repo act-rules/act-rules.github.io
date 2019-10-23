@@ -3,7 +3,7 @@ id: b5c3f8
 name: HTML page has `lang` attribute
 rule_type: atomic
 description: |
-  This rule checks that an HTML page has a non-empty `lang` or `xml:lang` attribute.
+  This rule checks that an HTML page has a non-empty `lang` attribute.
 accessibility_requirements:
   wcag20:3.1.1: # Language of Page (A)
     forConformance: true
@@ -19,30 +19,30 @@ authors:
 
 ## Applicability
 
-The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element.
+This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element that:
 
-**Note**: Documents embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not web pages according to the definition in WCAG.
+- is in a [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context); and
+- has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`.
+
+**Note:** `html` elements within `iframe` and `object` elements are not applicable as `iframe` and `object` elements create [nested browsing contexts](https://html.spec.whatwg.org/#nested-browsing-context). However, as these elements are meant to provide a layer of isolation, the declared language of their [parent browsing context](https://html.spec.whatwg.org/#parent-browsing-context) will likely not be inherited, making it possible for empty `lang` attributes in [nested browsing contexts](https://html.spec.whatwg.org/#nested-browsing-context) to also cause accessibility issues.
 
 ## Expectation
 
-Each test target has a `lang` or `xml:lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
-
-**Note**: HTML5 recommends using `lang` instead of `xml:lang`. This is not known to impact accessibility, which is why use of both is permitted by this rule.
+Each test target has a `lang` attribute that is neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 ## Assumptions
 
-_There are currently no assumptions_
+This rule assumes that the presence of a `lang` attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
 
 ## Accessibility Support
 
-There are known combinations of a popular operating system with browsers and assistive technologies that do not support the `lang` and `xml:lang` attributes.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 
 - [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG21/Techniques/html/H57)
 - [BCP 47: Tags for Identifying Languages](https://www.ietf.org/rfc/bcp/bcp47.txt)
 - [MDN: `lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang)
-- [MDN: `xml:lang` attribute](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/xml:lang)
 
 ## Test Cases
 
@@ -56,43 +56,11 @@ The `lang` attribute specified has a non-empty value.
 <html lang="en"></html>
 ```
 
-#### Passed Example 2
-
-The `xml:lang` attribute specified has a non-empty value.
-
-```html
-<html xml:lang="en"></html>
-```
-
-#### Passed Example 3
-
-The `lang` and `xml:lang` attributes specified have a non-empty value.
-
-```html
-<html xml:lang="en" lang="en"></html>
-```
-
-#### Passed Example 4
-
-The `lang` attribute specified has a non-empty value. The rule expects a non-empty value on either the `lang` or `xml:lang` attributes.
-
-```html
-<html xml:lang="" lang="en"></html>
-```
-
-#### Passed Example 5
-
-The `xml:lang` attribute specified has a non-empty value. The rule expects a non-empty value on either the `lang` or `xml:lang` attributes.
-
-```html
-<html xml:lang="en" lang=""></html>
-```
-
 ### Failed
 
 #### Failed Example 1
 
-There were no `lang` or `xml:lang` attribute specified.
+There is no `lang` attribute specified.
 
 ```html
 <html></html>
@@ -100,42 +68,26 @@ There were no `lang` or `xml:lang` attribute specified.
 
 #### Failed Example 2
 
-The `xml:lang` attribute specified is empty ("").
-
-```html
-<html xml:lang=""></html>
-```
-
-#### Failed Example 3
-
 The `lang` attribute specified is empty ("").
 
 ```html
 <html lang=""></html>
 ```
 
-#### Failed Example 4
+#### Failed Example 3
 
-The `lang` and `xml:lang` attributes specified are empty ("").
-
-```html
-<html xml:lang="" lang=""></html>
-```
-
-#### Failed Example 5
-
-The `lang` attribute consists of only [whitespace](#whitespace).
+The `lang` attribute consists of only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 ```html
 <html lang=" "></html>
 ```
 
-#### Failed Example 6
+#### Failed Example 4
 
-The `xml:lang` attribute consists of only [whitespace](#whitespace).
+There is no `lang` attribute specified, only an `xml:lang` attribute.
 
 ```html
-<html xml:lang=" "></html>
+<html xml:lang="en"></html>
 ```
 
 ### Inapplicable
@@ -145,5 +97,13 @@ The `xml:lang` attribute consists of only [whitespace](#whitespace).
 The rule does not apply to `svg` element.
 
 ```svg
-<svg xmlns="http://www.w3.org/2000/svg" lang="en"></svg>
+<svg xmlns="http://www.w3.org/2000/svg"></svg>
+```
+
+#### Inapplicable Example 2
+
+The rule does not apply to `math` element.
+
+```svg
+<math></math>
 ```

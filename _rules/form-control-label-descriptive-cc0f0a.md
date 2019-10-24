@@ -64,7 +64,7 @@ _There are no major accessibility support issues known for this rule._
 Label that is coded with the `label` element and describes the purpose of the associated element.
 
 ```html
-<section lang="en">` <label for="fname">First name:</label> <input id="fname" type="text" name="fname" /></section>
+<section lang="en"><label for="fname">First name:</label> <input id="fname" type="text" name="fname" /></section>
 ```
 
 #### Passed Example 2
@@ -73,7 +73,6 @@ Label that is coded with the `p` element and associated by the aria-labelledby a
 
 ```html
 <section lang="en">
-	`
 	<p id="label_fname">First name:</p>
 	<input aria-labelledby="label_fname" type="text" name="fname" />
 </section>
@@ -85,7 +84,6 @@ Implicit label that is coded with the `label` element and describes the purpose 
 
 ```html
 <section lang="en">
-	`
 	<label>First name:<input id="fname" type="text" name="fname"/></label>
 </section>
 ```
@@ -96,7 +94,6 @@ Label is [visible][], but not included in accessibility tree
 
 ```html
 <section lang="en">
-	`
 	<p id="label_fname" aria-hidden="true">First name:</p>
 	<input aria-labelledby="label_fname" type="text" name="fname" />
 </section>
@@ -108,7 +105,6 @@ Label is included in accessibility tree, but not [visible][]
 
 ```html
 <section lang="en">
-	`
 	<p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">
 		First name:
 	</p>
@@ -123,7 +119,7 @@ Label is included in accessibility tree, but not [visible][]
 Label that is coded with the `label` element and does not describe the purpose of the associated element.
 
 ```html
-<section lang="en">` <label for="fname">Menu</label> <input id="fname" type="text" name="fname" /></section>
+<section lang="en"><label for="fname">Menu</label> <input id="fname" type="text" name="fname" /></section>
 ```
 
 #### Failed Example 2
@@ -132,7 +128,6 @@ Label that is coded with the `p` element and associated by the aria-labelledby a
 
 ```html
 <section lang="en">
-	`
 	<p id="label_fname">Menu</p>
 	<input aria-labelledby="label_fname" type="text" name="fname" />
 </section>
@@ -144,7 +139,6 @@ Implicit label that is coded with the `label` element and does not describe the 
 
 ```html
 <section lang="en">
-	`
 	<label>Menu<input id="fname" type="text" name="fname"/></label>
 </section>
 ```
@@ -155,7 +149,6 @@ Label is [visible][], but not included in accessibility tree, and does not descr
 
 ```html
 <section lang="en">
-	`
 	<p id="label_fname" aria-hidden="true">Menu</p>
 	<input aria-labelledby="label_fname" type="text" name="fname" />
 </section>
@@ -167,7 +160,6 @@ Label is included in accessibility tree, but not [visible][], and does not descr
 
 ```html
 <section lang="en">
-	`
 	<p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">
 		Menu
 	</p>
@@ -183,7 +175,6 @@ Label is included in accessibility tree, but not [visible][], and does not descr
 
 ```html
 <section lang="en">
-	`
 	<div style="display:none">
 		<label for="bad_label">Menu:</label>
 		<input id="fname" type="text" name="bad_label" />
@@ -197,7 +188,6 @@ Programmatically associated `p` element that is neither [visible][] nor [include
 
 ```html
 <section lang="en">
-	`
 	<div style="display:none">
 		<p id="bad_label">menu</p>
 		<input aria-labelledby="bad_label" type="text" name="fname" />
@@ -211,7 +201,6 @@ The `label` element is associated with an HTML element that does not have a form
 
 ```html
 <section lang="en">
-	`
 	<label for="fname">First name</label>
 	<p id="fname">bob</p>
 </section>
@@ -222,7 +211,7 @@ The `label` element is associated with an HTML element that does not have a form
 The element with `aria-labelledby` is not a form field.
 
 ```html
-<section lang="en">` <i id="smile">Smile</i> <button aria-labelledby="smile">:-)</button></section>
+<section lang="en"><i id="smile">Smile</i> <button aria-labelledby="smile">:-)</button></section>
 ```
 
 #### Inapplicable Example 5
@@ -231,7 +220,6 @@ No `label` element.
 
 ```html
 <section lang="en">
-	`
 	<input id="fname" type="text" name="fname" />
 </section>
 ```

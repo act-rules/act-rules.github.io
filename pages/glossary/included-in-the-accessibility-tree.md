@@ -42,7 +42,7 @@ Although the `span` element with an `id` of "label" is not itself included in th
 <span aria-labelledby="label">Accessibility Conformance Testing rules</span>
 ```
 
-Although this `input` element is not included in the accessibility tree, it is still [focusable](#focusable), hence users of assistive technologies can still interact with it by sequential keyboard navigation. This may result in confusing situations for such users!
+Although this `input` element is not included in the accessibility tree, it is still [focusable](#focusable), hence users of assistive technologies can still interact with it by sequential keyboard navigation. This may result in confusing situations for such users (and is in direct violation of [the fourth rule of ARIA (working draft)](https://www.w3.org/TR/using-aria/#fourth)).
 
 ```html
 <input type="text" aria-hidden="true" name="fname" />

@@ -17,7 +17,7 @@ input_aspects:
 authors:
   - Dagfinn Rømen
   - Geir Sindre Fossøy
-  - Carlos Duarte
+	- Carlos Duarte
 ---
 
 ## Applicability

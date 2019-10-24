@@ -17,7 +17,6 @@ input_aspects:
 authors:
   - Jey Nandakumar
 	- Audrey Maniez
-	- Jean-Yves Moyen
 ---
 
 ## Applicability

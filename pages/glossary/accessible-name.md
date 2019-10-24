@@ -15,17 +15,17 @@ The `span` element with an `id` of `"target"` has an accessible name of "ACT rul
 
 ```html
 <span id="label-1" style="display: none">ACT</span>
-<span id="label-2" style="display: none">rules</span>
+<span id="label-2">rules</span>
 <span id="target" aria-labelledby="label-1 label-2"></span>
 ```
 
-This element has an accessible name of "ACT rules" given by its `aria-label` attribute.
+This `span` element has an accessible name of "ACT rules" given by its `aria-label` attribute.
 
 ```html
 <span aria-label="ACT rules"></span>
 ```
 
-The `img` element has an accessible name of "ACT rules" given by its `alt` attribute.
+This `img` element has an accessible name of "ACT rules" given by its `alt` attribute.
 
 ```html
 <img src="#" alt="ACT rules" />
@@ -43,13 +43,13 @@ The `span` element has an accessible name of "ACT rules:" given by the associate
 <label for="act-rules">ACT rules:</label><span id="act-rules"></span>
 ```
 
-This element has an accessible name of "ACT rules" given from its content. Note that not all [semantic role][#semantic-role] allow [name from content](https://www.w3.org/TR/wai-aria/#namefromcontent).
+This `a` element has an accessible name of "ACT rules" given from its content. Note that not all [semantic roles][#semantic-role] allow [name from content](https://www.w3.org/TR/wai-aria/#namefromcontent).
 
 ```html
 <a href="https://act-rules.github.io/">ACT rules</a>
 ```
 
-This element has an empty accessible name (`""`) because `span` does not allow [name from content](https://www.w3.org/TR/wai-aria/#namefromcontent).
+This `span` element has an empty accessible name (`""`) because `span` does not allow [name from content](https://www.w3.org/TR/wai-aria/#namefromcontent).
 
 ```html
 <span>ACT rules</span>

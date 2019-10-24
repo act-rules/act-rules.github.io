@@ -11,38 +11,38 @@ The general rules for when elements are included in the accessibility tree are d
 
 #### Examples
 
-This `span` is included in the accessibility tree (by default, elements are included in the accessibility tree).
+This `span` element is included in the accessibility tree (by default, elements are included in the accessibility tree).
 
 ```html
 <span>ACT rules</span>
 ```
 
-This `span` is not included in the accessibility tree because it is hidden to everybody by the CSS property.
+This `span` element is not included in the accessibility tree because it is hidden to everybody by the CSS property.
 
 ```html
 <span style="display:none">ACT rules</span>
 ```
 
-This `span` is not included in the accessibility tree because it is explicitly removed by the `aria-hidden` attribute.
+This `span` element is not included in the accessibility tree because it is explicitly removed by the `aria-hidden` attribute.
 
 ```html
 <span aria-hidden="true">ACT rules</span>
 ```
 
-This `span` is positioned off screen, hence is not [visible](#visible), but is nonetheless included in the accessibility tree.
+This `span` element is positioned off screen, hence is not [visible](#visible), but is nonetheless included in the accessibility tree.
 
 ```html
 <span style="position: absolute; top:-9999em">ACT rules</span>
 ```
 
-Although the `span` with an `id` of "label" is not itself included in the accessibility tree, it still provides an [accessible name](#accessible-name) to the other `span`, via the `aria-labelledby` attribute. Thus, it is still indirectly exposed to users of assistive technologies.
+Although the `span` element with an `id` of "label" is not itself included in the accessibility tree, it still provides an [accessible name](#accessible-name) to the other `span`, via the `aria-labelledby` attribute. Thus, it is still indirectly exposed to users of assistive technologies.
 
 ```html
 <span id="label" style="display:none">ACT rules</span>
 <span aria-labelledby="label">Accessibility Conformance Testing rules</span>
 ```
 
-Although this `input` is not included in the accessibility tree, it is still [focusable](#focusable), hence users of assistive technologies can still interact with it by sequential keyboard navigation. This may result in confusing situations for such users!
+Although this `input` element is not included in the accessibility tree, it is still [focusable](#focusable), hence users of assistive technologies can still interact with it by sequential keyboard navigation. This may result in confusing situations for such users!
 
 ```html
 <input type="text" aria-hidden="true" name="fname" />

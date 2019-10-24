@@ -11,19 +11,25 @@ Content is considered visible if making it fully transparent would result in a d
 
 #### Examples
 
-This element is not visible because of the CSS `visibility` property.
+This `span` element is visible (by default, elements are visible).
+
+```html
+<span>Now you can see me!</span>
+```
+
+This `span` element is not visible because of the CSS `visibility` property.
 
 ```html
 <span style="visibility: hidden">I'm the invisible man!</span>
 ```
 
-This element is not visible because of the CSS `display` property.
+This `span` element is not visible because of the CSS `display` property.
 
 ```html
 <span style="display: none">I'm the invisible man!</span>
 ```
 
-This element is not visible because it is positioned off-screen
+This `span` element is not visible because it is positioned off-screen
 
 ```html
 <span style="position: absolute; top: -9999px; left: -9999px;">I'm the invisible man!</span>
@@ -38,14 +44,8 @@ This `span` element is not visible because it contains only whitespace and line 
 </span>
 ```
 
-This element is not visible because it has the exact same color as its background.
+This `span` element is not visible because it has the exact same color as its background.
 
 ```html
 <span style="color: #00F; background: #00F;">I'm the invisible man!</span>
-```
-
-This element is visible.
-
-```html
-<span>Now you can see me!</span>
 ```

@@ -13,10 +13,11 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-authors:
-  - Anne Thyme Nørregaard
-  - Bryn Anderson
-  - Jey Nandakumar
+acknowledgements:
+  authors:
+    - Anne Thyme Nørregaard
+    - Bryn Anderson
+    - Jey Nandakumar
 ---
 
 ## Applicability

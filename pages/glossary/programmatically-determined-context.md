@@ -13,7 +13,7 @@ It includes:
 - ancestor `label` elements;
 - `label` elements referring the current element with a `for` attribute;
 - table headers associated with the cell containing the information;
-- the header that precedes the element;
+- the header that precedes the element, and all its ancestor heading elements;
 - sibling [phrasing content][] nodes in the same [paragraph][] of the element;
 - sibling [phrasing content][] nodes in the same table cell of the element;
 - sibling [phrasing content][] nodes in the same list item of the element.

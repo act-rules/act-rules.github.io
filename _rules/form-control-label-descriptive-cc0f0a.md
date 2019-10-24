@@ -13,6 +13,7 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
+  - Language
 authors:
   - Dagfinn Rømen
   - Geir Sindre Fossøy
@@ -41,7 +42,7 @@ Each target element describes the purpose of the associated form field element.
 
 ## Assumptions
 
-_There are currently no assumptions._
+This rule assumes that if `lang` attributes are used, their value accurately describes the part of the content they are applied to.
 
 ## Accessibility Support
 
@@ -63,7 +64,7 @@ _There are no major accessibility support issues known for this rule._
 Label that is coded with the `label` element and describes the purpose of the associated element.
 
 ```html
-<label for="fname">First name:</label> <input id="fname" type="text" name="fname" />
+<section lang="en">` <label for="fname">First name:</label> <input id="fname" type="text" name="fname" /></section>
 ```
 
 #### Passed Example 2
@@ -71,8 +72,11 @@ Label that is coded with the `label` element and describes the purpose of the as
 Label that is coded with the `p` element and associated by the aria-labelledby attribute. The label describes the purpose of the associated element.
 
 ```html
-<p id="label_fname">First name:</p>
-<input aria-labelledby="label_fname" type="text" name="fname" />
+<section lang="en">
+	`
+	<p id="label_fname">First name:</p>
+	<input aria-labelledby="label_fname" type="text" name="fname" />
+</section>
 ```
 
 #### Passed Example 3
@@ -80,7 +84,10 @@ Label that is coded with the `p` element and associated by the aria-labelledby a
 Implicit label that is coded with the `label` element and describes the purpose of the associated element.
 
 ```html
-<label>First name:<input id="fname" type="text" name="fname"/></label>
+<section lang="en">
+	`
+	<label>First name:<input id="fname" type="text" name="fname"/></label>
+</section>
 ```
 
 #### Passed Example 4
@@ -88,8 +95,11 @@ Implicit label that is coded with the `label` element and describes the purpose 
 Label is [visible][], but not included in accessibility tree
 
 ```html
-<p id="label_fname" aria-hidden="true">First name:</p>
-<input aria-labelledby="label_fname" type="text" name="fname" />
+<section lang="en">
+	`
+	<p id="label_fname" aria-hidden="true">First name:</p>
+	<input aria-labelledby="label_fname" type="text" name="fname" />
+</section>
 ```
 
 #### Passed Example 5
@@ -97,10 +107,13 @@ Label is [visible][], but not included in accessibility tree
 Label is included in accessibility tree, but not [visible][]
 
 ```html
-<p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">
-	First name:
-</p>
-<input aria-labelledby="label_fname" type="text" name="fname" />
+<section lang="en">
+	`
+	<p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">
+		First name:
+	</p>
+	<input aria-labelledby="label_fname" type="text" name="fname" />
+</section>
 ```
 
 ### Failed
@@ -110,7 +123,7 @@ Label is included in accessibility tree, but not [visible][]
 Label that is coded with the `label` element and does not describe the purpose of the associated element.
 
 ```html
-<label for="fname">Menu</label> <input id="fname" type="text" name="fname" />
+<section lang="en">` <label for="fname">Menu</label> <input id="fname" type="text" name="fname" /></section>
 ```
 
 #### Failed Example 2
@@ -118,8 +131,11 @@ Label that is coded with the `label` element and does not describe the purpose o
 Label that is coded with the `p` element and associated by the aria-labelledby attribute. The label does not describe the purpose of the associated element.
 
 ```html
-<p id="label_fname">Menu</p>
-<input aria-labelledby="label_fname" type="text" name="fname" />
+<section lang="en">
+	`
+	<p id="label_fname">Menu</p>
+	<input aria-labelledby="label_fname" type="text" name="fname" />
+</section>
 ```
 
 #### Failed Example 3
@@ -127,7 +143,10 @@ Label that is coded with the `p` element and associated by the aria-labelledby a
 Implicit label that is coded with the `label` element and does not describe the purpose of the associated element.
 
 ```html
-<label>Menu<input id="fname" type="text" name="fname"/></label>
+<section lang="en">
+	`
+	<label>Menu<input id="fname" type="text" name="fname"/></label>
+</section>
 ```
 
 #### Failed Example 4
@@ -135,8 +154,11 @@ Implicit label that is coded with the `label` element and does not describe the 
 Label is [visible][], but not included in accessibility tree, and does not describe the purpose of the associated element.
 
 ```html
-<p id="label_fname" aria-hidden="true">Menu</p>
-<input aria-labelledby="label_fname" type="text" name="fname" />
+<section lang="en">
+	`
+	<p id="label_fname" aria-hidden="true">Menu</p>
+	<input aria-labelledby="label_fname" type="text" name="fname" />
+</section>
 ```
 
 #### Failed Example 5
@@ -144,10 +166,13 @@ Label is [visible][], but not included in accessibility tree, and does not descr
 Label is included in accessibility tree, but not [visible][], and does not describe the purpose of the associated element.
 
 ```html
-<p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">
-	Menu
-</p>
-<input aria-labelledby="label_fname" type="text" name="fname" />
+<section lang="en">
+	`
+	<p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">
+		Menu
+	</p>
+	<input aria-labelledby="label_fname" type="text" name="fname" />
+</section>
 ```
 
 ### Inapplicable
@@ -157,10 +182,13 @@ Label is included in accessibility tree, but not [visible][], and does not descr
 `Label` that is neither [visible][] to users, nor [included in the accessibility tree][].
 
 ```html
-<div style="display:none">
-	<label for="bad_label">Menu:</label>
-	<input id="fname" type="text" name="bad_label" />
-</div>
+<section lang="en">
+	`
+	<div style="display:none">
+		<label for="bad_label">Menu:</label>
+		<input id="fname" type="text" name="bad_label" />
+	</div>
+</section>
 ```
 
 #### Inapplicable Example 2
@@ -168,10 +196,13 @@ Label is included in accessibility tree, but not [visible][], and does not descr
 Programmatically associated `p` element that is neither [visible][] nor [included in the accessibility tree][].
 
 ```html
-<div style="display:none">
-	<p id="bad_label">menu</p>
-	<input aria-labelledby="bad_label" type="text" name="fname" />
-</div>
+<section lang="en">
+	`
+	<div style="display:none">
+		<p id="bad_label">menu</p>
+		<input aria-labelledby="bad_label" type="text" name="fname" />
+	</div>
+</section>
 ```
 
 #### Inapplicable Example 3
@@ -179,8 +210,11 @@ Programmatically associated `p` element that is neither [visible][] nor [include
 The `label` element is associated with an HTML element that does not have a form field semantic role.
 
 ```html
-<label for="fname">First name</label>
-<p id="fname">bob</p>
+<section lang="en">
+	`
+	<label for="fname">First name</label>
+	<p id="fname">bob</p>
+</section>
 ```
 
 #### Inapplicable Example 4
@@ -188,7 +222,7 @@ The `label` element is associated with an HTML element that does not have a form
 The element with `aria-labelledby` is not a form field.
 
 ```html
-<i id="smile">Smile</i> <button aria-labelledby="smile">:-)</button>
+<section lang="en">` <i id="smile">Smile</i> <button aria-labelledby="smile">:-)</button></section>
 ```
 
 #### Inapplicable Example 5
@@ -196,7 +230,10 @@ The element with `aria-labelledby` is not a form field.
 No `label` element.
 
 ```html
-<input id="fname" type="text" name="fname" />
+<section lang="en">
+	`
+	<input id="fname" type="text" name="fname" />
+</section>
 ```
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

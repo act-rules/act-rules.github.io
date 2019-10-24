@@ -34,7 +34,7 @@ Each target element describes the topic or purpose of its [section of the conten
 
 ## Assumptions
 
-This rule assume that if `lang` attributes are used, their value accurately describes the part of the content they are applied to.
+This rule assumes that if `lang` attributes are used, their value accurately describes the part of the content they are applied to.
 
 ## Accessibility Support
 

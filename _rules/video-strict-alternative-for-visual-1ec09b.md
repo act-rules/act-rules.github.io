@@ -33,7 +33,8 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 
 ## Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- This rule assumes that if `lang` attributes are used, their value accurately describes the part of the content they are applied to.
 
 ## Accessibility Support
 
@@ -57,10 +58,12 @@ See [Video element description track: accessibility support](https://act-rules.g
 A video element with a voiceover that describes the visual information.
 
 ```html
-<video controls>
-	<source src="/test-assets/rabbit-video/video-with-voiceover.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/video-with-voiceover.webm" type="video/webm" />
-</video>
+<section lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/video-with-voiceover.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/video-with-voiceover.webm" type="video/webm" />
+	</video>
+</section>
 ```
 
 #### Passed Example 2
@@ -68,11 +71,13 @@ A video element with a voiceover that describes the visual information.
 A video element with a track element that contains descriptions.
 
 ```html
-<video controls>
-	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
-	<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
-</video>
+<section lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+		<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
+	</video>
+</section>
 ```
 
 #### Passed Example 3
@@ -80,12 +85,14 @@ A video element with a track element that contains descriptions.
 A video element that describes some of the text on the same page. The text on the page labels the video as an alternative.
 
 ```html
-<p>
-	Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the keyboard
-	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
-	compatibility is described in WCAG. See the video below to watch the same information again in video form.
-</p>
-<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+<section lang="en">
+	<p>
+		Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the
+		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
+		Keyboard compatibility is described in WCAG. See the video below to watch the same information again in video form.
+	</p>
+	<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+</section>
 ```
 
 ### Failed
@@ -95,10 +102,12 @@ A video element that describes some of the text on the same page. The text on th
 A video element with an incorrect audio description.
 
 ```html
-<video controls>
-	<source src="/test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm" />
-</video>
+<section lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm" />
+	</video>
+</section>
 ```
 
 #### Failed Example 2
@@ -106,11 +115,13 @@ A video element with an incorrect audio description.
 A video element with a track element that contains incorrect descriptions.
 
 ```html
-<video controls>
-	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
-	<track kind="descriptions" src="/test-assets/rabbit-video/incorrect-descriptions.vtt" />
-</video>
+<section lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+		<track kind="descriptions" src="/test-assets/rabbit-video/incorrect-descriptions.vtt" />
+	</video>
+</section>
 ```
 
 #### Failed Example 3
@@ -118,11 +129,13 @@ A video element with a track element that contains incorrect descriptions.
 A video element with a link to a text transcript.
 
 ```html
-<video controls>
-	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
-</video>
-<a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
+<section lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+	</video>
+	<a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
+</section>
 ```
 
 ### Inapplicable
@@ -132,10 +145,12 @@ A video element with a link to a text transcript.
 A video element without audio.
 
 ```html
-<video controls>
-	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-</video>
+<section lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
+	</video>
+</section>
 ```
 
 #### Inapplicable Example 2
@@ -143,10 +158,12 @@ A video element without audio.
 A video element that is not [visible][].
 
 ```html
-<video controls style="display: none;">
-	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
-</video>
+<section lang="en">
+	<video controls style="display: none;">
+		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+	</video>
+</section>
 ```
 
 [visible]: #visible 'Definition of visible'

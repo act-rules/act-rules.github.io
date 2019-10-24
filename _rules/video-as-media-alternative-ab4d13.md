@@ -8,7 +8,8 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-  - Audio output
+	- Audio output
+	- Language
 authors:
   - Wilco Fiers
   - Brian Bors
@@ -30,7 +31,8 @@ Each test target is labeled as a video alternative for text on the page. This la
 
 ## Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- This rule assumes that if `lang` attributes are used, their value accurately describes the part of the content they are applied to.
 
 ## Accessibility Support
 
@@ -52,12 +54,14 @@ There are no major accessibility support issues known for this rule.
 A video element that describes some of the text on the same page. The text on the page labels the video as an alternative.
 
 ```html
-<p>
-	Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the keyboard
-	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
-	compatibility is described in WCAG. See the video below to watch the same information again in video form.
-</p>
-<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+<section lang="en">
+	<p>
+		Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the
+		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
+		Keyboard compatibility is described in WCAG. See the video below to watch the same information again in video form.
+	</p>
+	<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+</section>
 ```
 
 ### Failed
@@ -67,12 +71,14 @@ A video element that describes some of the text on the same page. The text on th
 A video element that describes some of the text on the same page. The video contains more information than the text does.
 
 ```html
-<p>
-	Not being able to use your computer because your mouse doesn't work, is frustrating. Either through preference or
-	circumstance. This is solved by keyboard compatibility. Keyboard compatibility is described in WCAG. See the video
-	below to watch the same information again in video form.
-</p>
-<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+<section lang="en">
+	<p>
+		Not being able to use your computer because your mouse doesn't work, is frustrating. Either through preference or
+		circumstance. This is solved by keyboard compatibility. Keyboard compatibility is described in WCAG. See the video
+		below to watch the same information again in video form.
+	</p>
+	<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+</section>
 ```
 
 #### Failed Example 2
@@ -80,12 +86,14 @@ A video element that describes some of the text on the same page. The video cont
 A video element that describes some of the text on the same page. The text is not [visible][].
 
 ```html
-<p style="display: none;">
-	Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the keyboard
-	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
-	compatibility is described in WCAG. See the video below to watch the same information again in video form.
-</p>
-<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+<section lang="en">
+	<p style="display: none;">
+		Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the
+		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
+		Keyboard compatibility is described in WCAG. See the video below to watch the same information again in video form.
+	</p>
+	<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+</section>
 ```
 
 #### Failed Example 3
@@ -93,12 +101,14 @@ A video element that describes some of the text on the same page. The text is no
 A video element that describes some of the text on the same page. The text on the page does not label the video as an alternative.
 
 ```html
-<p>
-	Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the keyboard
-	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
-	compatibility is described in WCAG.
-</p>
-<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+<section lang="en">
+	<p>
+		Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the
+		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
+		Keyboard compatibility is described in WCAG.
+	</p>
+	<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+</section>
 ```
 
 #### Failed Example 4
@@ -106,15 +116,17 @@ A video element that describes some of the text on the same page. The text on th
 A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the label is not [visible][].
 
 ```html
-<p>
-	Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the keyboard
-	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
-	compatibility is described in WCAG.
-</p>
-<p style="display: none;">
-	See the video below to watch the same information again in video form.
-</p>
-<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+<section lang="en">
+	<p>
+		Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the
+		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
+		Keyboard compatibility is described in WCAG.
+	</p>
+	<p style="display: none;">
+		See the video below to watch the same information again in video form.
+	</p>
+	<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+</section>
 ```
 
 ### Inapplicable
@@ -124,12 +136,14 @@ A video element that describes some of the text on the same page. The text on th
 A video element without audio. The text on the page labels the video as an alternative.
 
 ```html
-<p>
-	Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the keyboard
-	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
-	compatibility is described in WCAG. See the video below to watch the same information again in video form.
-</p>
-<video src="/test-assets/perspective-video/perspective-video-silent.mp4" controls></video>
+<section lang="en">
+	<p>
+		Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the
+		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
+		Keyboard compatibility is described in WCAG. See the video below to watch the same information again in video form.
+	</p>
+	<video src="/test-assets/perspective-video/perspective-video-silent.mp4" controls></video>
+</section>
 ```
 
 #### Inapplicable Example 2
@@ -137,12 +151,14 @@ A video element without audio. The text on the page labels the video as an alter
 A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the video is not [visible][].
 
 ```html
-<p>
-	Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the keyboard
-	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
-	compatibility is described in WCAG. See the video below to watch the same information again in video form.
-</p>
-<video src="/test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>
+<section lang="en">
+	<p>
+		Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the
+		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
+		Keyboard compatibility is described in WCAG. See the video below to watch the same information again in video form.
+	</p>
+	<video src="/test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>
+</section>
 ```
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

@@ -99,7 +99,7 @@ The `span` element acts as a [label][] and it is descriptive. Even if it is not 
 
 #### Passed Example 4
 
-Even through the `span` element is not [included in the accessibility tree][], it is associated to the form field in a [programmatically determinable][] way and gives it an [accessible name][]. Therefore, it is presented to all users and qualifies as a [label][].
+Even though the `span` element is not [included in the accessibility tree][], it is associated to the form field in a [programmatically determinable][] way and gives it an [accessible name][]. Therefore, it is presented to all users and qualifies as a [label][].
 
 ```html
 <span id="label_fname" aria-hidden="true">First name:</span>
@@ -164,7 +164,7 @@ The `span` element acts as a [label][] and it is not descriptive. Even if it is 
 
 #### Failed Example 4
 
-Even through the `span` element is not [included in the accessibility tree][], it is associated to the form field in a [programmatically determinable][] way and gives it an [accessible name][]. Therefore, it is presented to all users and qualifies as a [label][]. It is not descriptive.
+Even though the `span` element is not [included in the accessibility tree][], it is associated to the form field in a [programmatically determinable][] way and gives it an [accessible name][]. Therefore, it is presented to all users and qualifies as a [label][]. It is not descriptive.
 
 ```html
 <span id="label_fname" aria-hidden="true">City:</span>
@@ -246,7 +246,7 @@ The form field is not [included in the accessibility tree][].
 
 #### Inapplicable Example 5
 
-The `span` element is not [visible][]. Therefore, it is not presented to all users and does not qualify as a [label][]. The form field has no [label][], even though at has an [accessible name][].
+The `span` element is not [visible][]. Therefore, it is not presented to all users and does not qualify as a [label][]. The form field has no [label][], even though it has an [accessible name][].
 
 ```html
 <span id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">First name:</span>

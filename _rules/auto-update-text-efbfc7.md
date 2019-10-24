@@ -35,11 +35,13 @@ For the test target a [mechanism][] is provided to pause or stop the updating of
 
 ## Expectation 2
 
-The [mechanism][] to pause or stop the auto-updating of the content of the [text node][] is [visible][], has an [accessible name][] that is not empty ("") nor only [ASCII whitespace][] , and is [included in the accessibility tree][].
+The [mechanism][] to pause or stop the auto-updating of the content of the [text node][] is [visible][], has an [accessible name][] that is not empty (""), and is [included in the accessibility tree][].
+
+**Note**: This rule does not require the [mechanism][] to have a [label][] that is descriptive. Depending on how the [mechanism][] is implemented, a non-descriptive label would be a violation of another success criterion, like [Success Criterion 3.3.2: Labels or Instructions][sc 3.3.2]
 
 ## Assumptions
 
-This rule assumes that the auto-updating of the content is not [essential][], which is listed as valid exception to [SC 2.2.2][]. When the auto-updating of content is [essential][] this rule may produce incorrect results.
+This rule assumes that the auto-updating of the content is not [essential][], which is listed as valid exception to [Success Criterion 2.2.2: Pause, Stop, Hide][sc 2.2.2]. When the auto-updating of content is [essential][] this rule may produce incorrect results.
 
 ## Accessibility Support
 
@@ -177,9 +179,7 @@ The text node automatically updates every 3 seconds after the page completes loa
 ```html
 <body onload="start()">
 	<p>Random number: <span id="target">1</span></p>
-	<div onclick="stop()" aria-hidden="true">
-		<span style="background-color:#333; color:white; padding:5px">Stop updates</span>
-	</div>
+	<span onclick="stop()" aria-hidden="true">Stop updates</span>
 
 	<script type="text/javascript">
 		function change() {
@@ -207,9 +207,7 @@ The text node automatically updates every 3 seconds after the page completes loa
 ```html
 <body onload="start()">
 	<p>Random number: <span id="target">1</span></p>
-	<div onclick="stop()" aria-label="">
-		<span style="background-color:#333; color:white; padding:5px">Stop updates</span>
-	</div>
+	<span onclick="stop()" aria-label="">Stop updates</span>
 
 	<script type="text/javascript">
 		function change() {
@@ -317,11 +315,11 @@ The text node (part of a progress bar) automatically updates every second after 
 		<script type="text/javascript">
 			var n, updates, price
 
-			function updatePB() {
+			function updatePB(value) {
 				var bar = document.getElementById('pb-demo')
 				var text = document.getElementById('pb-text')
-				bar.style.width = n + '%'
-				text.innerHTML = n + '%'
+				bar.style.width = value + '%'
+				text.innerHTML = value + '%'
 			}
 
 			function updateNum() {
@@ -413,7 +411,9 @@ The text node automatically updates every 3 seconds but only as a result of an a
 [g186]: https://www.w3.org/WAI/WCAG21/Techniques/general/G186
 [html document]: https://dom.spec.whatwg.org/#html-document
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[label]: https://www.w3.org/TR/WCAG21/#dfn-labels
 [mechanism]: https://www.w3.org/TR/WCAG21/#dfn-mechanism
 [sc 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
+[sc 3.3.2]: https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html
 [text node]: https://dom.spec.whatwg.org/#text
 [visible]: #visible 'Definition of visible'

@@ -11,7 +11,8 @@ accessibility_requirements:
     passed: satisfied
     inapplicable: further testing needed
 input_aspects:
-  - DOM Tree
+	- DOM Tree
+	- Language
 authors:
   - Anne Thyme Nørregaard
   - Corbb O'Connor
@@ -38,7 +39,7 @@ The target element describes the topic or purpose of the overall content of the 
 
 ## Assumptions
 
-_There are no assumptions for this rule._
+This rule assumes that if `lang` attributes are used, their value accurately describes the part of the content they are applied to.
 
 ## Accessibility Support
 
@@ -59,16 +60,18 @@ _There are no assumptions for this rule._
 The `<title>` element describes the content of the document.
 
 ```html
-<html>
-	<head>
-		<title>Clementine harvesting season</title>
-	</head>
-	<body>
-		<p>
-			Clementines will be ready to harvest from late October through February.
-		</p>
-	</body>
-</html>
+<section lang="en">
+	<html>
+		<head>
+			<title>Clementine harvesting season</title>
+		</head>
+		<body>
+			<p>
+				Clementines will be ready to harvest from late October through February.
+			</p>
+		</body>
+	</html>
+</section>
 ```
 
 #### Passed Example 2
@@ -76,17 +79,19 @@ The `<title>` element describes the content of the document.
 Two `<title>` elements where the first one describes the content of the document.
 
 ```html
-<html>
-	<head>
-		<title>Clementine harvesting season</title>
-		<title>Second title is ignored</title>
-	</head>
-	<body>
-		<p>
-			Clementines will be ready to harvest from late October through February.
-		</p>
-	</body>
-</html>
+<section lang="en">
+	<html>
+		<head>
+			<title>Clementine harvesting season</title>
+			<title>Second title is ignored</title>
+		</head>
+		<body>
+			<p>
+				Clementines will be ready to harvest from late October through February.
+			</p>
+		</body>
+	</html>
+</section>
 ```
 
 #### Passed Example 3
@@ -94,15 +99,17 @@ Two `<title>` elements where the first one describes the content of the document
 Even though the descriptive `<title>` element is not placed within the `<head>` element that is the context the element can be used in [according to the HTML specification](https://html.spec.whatwg.org/#the-title-element), the rule still passes, since the browser fixes it, and it doesn't cause any known accessibility issues.
 
 ```html
-<html>
-	<head> </head>
-	<body>
-		<title>Clementine harvesting season</title>
-		<p>
-			Clementines will be ready to harvest from late October through February.
-		</p>
-	</body>
-</html>
+<section lang="en">
+	<html>
+		<head> </head>
+		<body>
+			<title>Clementine harvesting season</title>
+			<p>
+				Clementines will be ready to harvest from late October through February.
+			</p>
+		</body>
+	</html>
+</section>
 ```
 
 #### Passed Example 4
@@ -110,18 +117,20 @@ Even though the descriptive `<title>` element is not placed within the `<head>` 
 `<title>` element with content present in document, and the title is descriptive of the content, even though it does not contain letters or numbers.
 
 ```html
-<html>
-	<head>
-		<title>;)</title>
-	</head>
-	<body>
-		<h1>;)</h1>
-		<p>
-			The winking emoticon is commonly used after a light-hearted or sarcastic remark. It is also a popular IM and
-			e-mail emoticon shortcut.
-		</p>
-	</body>
-</html>
+<section lang="en">
+	<html>
+		<head>
+			<title>;)</title>
+		</head>
+		<body>
+			<h1>;)</h1>
+			<p>
+				The winking emoticon is commonly used after a light-hearted or sarcastic remark. It is also a popular IM and
+				e-mail emoticon shortcut.
+			</p>
+		</body>
+	</html>
+</section>
 ```
 
 ### Failed
@@ -131,16 +140,18 @@ Even though the descriptive `<title>` element is not placed within the `<head>` 
 `<title>` is not descriptive of the content of the document.
 
 ```html
-<html>
-	<head>
-		<title>Apple harvesting season</title>
-	</head>
-	<body>
-		<p>
-			Clementines will be ready to harvest from late October through February.
-		</p>
-	</body>
-</html>
+<section lang="en">
+	<html>
+		<head>
+			<title>Apple harvesting season</title>
+		</head>
+		<body>
+			<p>
+				Clementines will be ready to harvest from late October through February.
+			</p>
+		</body>
+	</html>
+</section>
 ```
 
 #### Failed Example 2
@@ -148,17 +159,19 @@ Even though the descriptive `<title>` element is not placed within the `<head>` 
 Even though a correct `<title>` element is put in the `<head>` of the document, this rule only looks at the first `<title>` element.
 
 ```html
-<html>
-	<head>
-		<title>First title is incorrect</title>
-		<title>Clementine harvesting season</title>
-	</head>
-	<body>
-		<p>
-			Clementines will be ready to harvest from late October through February.
-		</p>
-	</body>
-</html>
+<section lang="en">
+	<html>
+		<head>
+			<title>First title is incorrect</title>
+			<title>Clementine harvesting season</title>
+		</head>
+		<body>
+			<p>
+				Clementines will be ready to harvest from late October through February.
+			</p>
+		</body>
+	</html>
+</section>
 ```
 
 #### Failed Example 3
@@ -166,16 +179,18 @@ Even though a correct `<title>` element is put in the `<head>` of the document, 
 `<title>` element with content present in document, but it is not descriptive of the content.
 
 ```html
-<html>
-	<head>
-		<title>;)</title>
-	</head>
-	<body>
-		<p>
-			Clementines will be ready to harvest from late October through February.
-		</p>
-	</body>
-</html>
+<section lang="en">
+	<html>
+		<head>
+			<title>;)</title>
+		</head>
+		<body>
+			<p>
+				Clementines will be ready to harvest from late October through February.
+			</p>
+		</body>
+	</html>
+</section>
 ```
 
 ### Inapplicable
@@ -189,4 +204,5 @@ This document has a `<title>` element but is inapplicable since the document ele
   <title>This is a circle</title>
   <circle cx="150" cy="75" r="50" fill="green"></circle>
 </svg>
+</section>
 ```

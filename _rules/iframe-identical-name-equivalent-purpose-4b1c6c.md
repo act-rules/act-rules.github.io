@@ -12,10 +12,12 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-  - CSS Styling
+	- CSS Styling
+	- Language
 authors:
   - Jey Nandakumar
-  - Audrey Maniez
+	- Audrey Maniez
+	- Jean-Yves Moyen
 ---
 
 ## Applicability
@@ -33,6 +35,7 @@ The `iframe` elements in each set of target elements embed the the [same resourc
 ## Assumptions
 
 - This rule assumes that, within the context of the test subject, the description provided by the [accessible name][] of an `iframe` can only accurately describe one resource (notably, homonyms alone are not used as `iframe` names). Thus, if two or more `iframe` elements have the same [accessible name][] but embed different resources, at least one of them does not describe its purpose.
+- This rule assume that if `lang` attributes are used, their value accurately describes the part of the content they are applied to.
 
 ## Accessibility Support
 
@@ -52,9 +55,11 @@ _There are no major accessibility support issues known for this rule._
 Two `iframe` elements within the same [document tree][] have the same [accessible name][] (given by the `title` attribute) and embed the same resource.
 
 ```html
-<iframe title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+<section lang="en">
+	<iframe title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
 
-<iframe title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+	<iframe title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+</section>
 ```
 
 #### Passed Example 2
@@ -62,9 +67,11 @@ Two `iframe` elements within the same [document tree][] have the same [accessibl
 Two `iframe` elements within the same [document tree][] have the same [accessible name][] (given by the `title` and `aria-label` attributes) and embed the same resource.
 
 ```html
-<iframe title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+<section lang="en">
+	<iframe title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
 
-<iframe aria-label="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+	<iframe aria-label="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+</section>
 ```
 
 #### Passed Example 3
@@ -72,11 +79,13 @@ Two `iframe` elements within the same [document tree][] have the same [accessibl
 Two `iframe` elements within the same [document tree][] have the same [accessible name][] (given by the `aria-labelledby` attribute and corresponding elements) and embed the same resource.
 
 ```html
-<div id="desc-for-title">List of Contributors</div>
-<iframe aria-labelledby="desc-for-title" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+<section lang="en">
+	<div id="desc-for-title">List of Contributors</div>
+	<iframe aria-labelledby="desc-for-title" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
 
-<div id="desc-for-title1">List of Contributors</div>
-<iframe aria-labelledby="desc-for-title1" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+	<div id="desc-for-title1">List of Contributors</div>
+	<iframe aria-labelledby="desc-for-title1" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+</section>
 ```
 
 #### Passed Example 4
@@ -84,9 +93,11 @@ Two `iframe` elements within the same [document tree][] have the same [accessibl
 Two `iframe` elements within the same [document tree][] have the same [accessible name][] (given by the `title` attribute) and embed equivalent resources. Only the navigation options (bread crumbs and local sub menus) differ due to different placement in navigation hierarchy.
 
 ```html
-<iframe title="Contact us" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+<section lang="en">
+	<iframe title="Contact us" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
 
-<iframe title="Contact us" src="/test-assets/iframe-unique-name-4b1c6c/sub-dir/page-one.html"> </iframe>
+	<iframe title="Contact us" src="/test-assets/iframe-unique-name-4b1c6c/sub-dir/page-one.html"> </iframe>
+</section>
 ```
 
 #### Passed Example 5
@@ -94,9 +105,11 @@ Two `iframe` elements within the same [document tree][] have the same [accessibl
 Two `iframe` elements within the same [document tree][] have the same [accessible name][] (given by the `title` attribute) and embed equivalent resources.
 
 ```html
-<iframe title="Contact us" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+<section lang="en">
+	<iframe title="Contact us" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
 
-<iframe title="Contact us" src="/test-assets/iframe-unique-name-4b1c6c/page-one-copy.html"> </iframe>
+	<iframe title="Contact us" src="/test-assets/iframe-unique-name-4b1c6c/page-one-copy.html"> </iframe>
+</section>
 ```
 
 #### Passed Example 6
@@ -104,9 +117,11 @@ Two `iframe` elements within the same [document tree][] have the same [accessibl
 Two `iframe` elements within the same [document tree][] have the same [accessible name][] (given by the `title` attribute) and embed the same resource. `src` attributes only differ due to trailing slashes, but resolves to the same resource after redirects caused by user agent.
 
 ```html
-<iframe title="Contact us" src="/test-assets/iframe-unique-name-4b1c6c/sub-dir-2/"> </iframe>
+<section lang="en">
+	<iframe title="Contact us" src="/test-assets/iframe-unique-name-4b1c6c/sub-dir-2/"> </iframe>
 
-<iframe title="Contact us" src="/test-assets/iframe-unique-name-4b1c6c/sub-dir-2"> </iframe>
+	<iframe title="Contact us" src="/test-assets/iframe-unique-name-4b1c6c/sub-dir-2"> </iframe>
+</section>
 ```
 
 #### Passed Example 7
@@ -114,9 +129,11 @@ Two `iframe` elements within the same [document tree][] have the same [accessibl
 Two `iframe` elements within the same [document tree][] have the same [accessible name][] (given by the `title` attribute) and embed equivalent resources. Resources differ by the amount of information available and/or a differently worded information.
 
 ```html
-<iframe title="Contact us" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+<section lang="en">
+	<iframe title="Contact us" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
 
-<iframe title="Contact us" src="/test-assets/iframe-unique-name-4b1c6c/page-three-same-as-page-one.html"> </iframe>
+	<iframe title="Contact us" src="/test-assets/iframe-unique-name-4b1c6c/page-three-same-as-page-one.html"> </iframe>
+</section>
 ```
 
 #### Passed Example 8
@@ -124,9 +141,11 @@ Two `iframe` elements within the same [document tree][] have the same [accessibl
 Two `iframe` elements within the same [document tree][] have the same [accessible name][] (given by the `title` attribute) and embed equivalent resources. Each `iframe` refers to a different url that referenced different advertising content (giving by a third party) but embed resources has equivalent purpose: showing an advertising.
 
 ```html
-<iframe title="advertising" src="/test-assets/iframe-unique-name-4b1c6c/advertising-one.html"> </iframe>
+<section lang="en">
+	<iframe title="advertising" src="/test-assets/iframe-unique-name-4b1c6c/advertising-one.html"> </iframe>
 
-<iframe title="advertising" src="/test-assets/iframe-unique-name-4b1c6c/advertising-two.html"> </iframe>
+	<iframe title="advertising" src="/test-assets/iframe-unique-name-4b1c6c/advertising-two.html"> </iframe>
+</section>
 ```
 
 ### Failed
@@ -136,9 +155,11 @@ Two `iframe` elements within the same [document tree][] have the same [accessibl
 Two `iframe` elements within the same [document tree][] have the same [accessible name][] (given by the `title` attribute) but don't embed equivalent resources.
 
 ```html
-<iframe title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+<section lang="en">
+	<iframe title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
 
-<iframe title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe>
+	<iframe title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe>
+</section>
 ```
 
 #### Failed Example 2
@@ -146,9 +167,11 @@ Two `iframe` elements within the same [document tree][] have the same [accessibl
 Two `iframe` elements within the same [document tree][] have the same [accessible name][] (given by the `aria-label` attribute) but don't embed equivalent resources.
 
 ```html
-<iframe aria-label="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+<section lang="en">
+	<iframe aria-label="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
 
-<iframe aria-label="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe>
+	<iframe aria-label="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe>
+</section>
 ```
 
 #### Failed Example 3
@@ -156,9 +179,11 @@ Two `iframe` elements within the same [document tree][] have the same [accessibl
 Two `iframe` elements within the same [document tree][] have the same [accessible name][] (given by the `title` and `aria-label` attributes) but don't embed equivalent resources.
 
 ```html
-<iframe title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+<section lang="en">
+	<iframe title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
 
-<iframe aria-label="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe>
+	<iframe aria-label="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe>
+</section>
 ```
 
 ### Inapplicable
@@ -168,7 +193,9 @@ Two `iframe` elements within the same [document tree][] have the same [accessibl
 There is only one `iframe` element within the [document tree][]. Therefore, there is no set of two or more `iframe` elements with the same [accessible name][] and the rule is inapplicable.
 
 ```html
-<iframe title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+<section lang="en">
+	<iframe title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+</section>
 ```
 
 #### Inapplicable Example 2
@@ -176,11 +203,13 @@ There is only one `iframe` element within the [document tree][]. Therefore, ther
 Each of the two `iframe` elements within the [document tree][] has a different [accessible name][] (given by the `title` attribute). Therefore, there is no set of two or more `iframe` elements with the same [accessible name][] and the rule is inapplicable.
 
 ```html
-<iframe title="List of Contributors to Repository 1" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html">
-</iframe>
+<section lang="en">
+	<iframe title="List of Contributors to Repository 1" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html">
+	</iframe>
 
-<iframe title="List of Contributors to Repository 2" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html">
-</iframe>
+	<iframe title="List of Contributors to Repository 2" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html">
+	</iframe>
+</section>
 ```
 
 #### Inapplicable Example 3
@@ -188,11 +217,13 @@ Each of the two `iframe` elements within the [document tree][] has a different [
 Each of the two `iframe` elements within the [document tree][] has a different [accessible name][] (given by the `aria-label` attribute). Therefore, there is no set of two or more `iframe` elements with the same [accessible name][] and the rule is inapplicable.
 
 ```html
-<iframe aria-label="List of Contributors to Repository 1" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html">
-</iframe>
+<section lang="en">
+	<iframe aria-label="List of Contributors to Repository 1" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html">
+	</iframe>
 
-<iframe aria-label="List of Contributors to Repository 2" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html">
-</iframe>
+	<iframe aria-label="List of Contributors to Repository 2" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html">
+	</iframe>
+</section>
 ```
 
 #### Inapplicable Example 4
@@ -200,11 +231,13 @@ Each of the two `iframe` elements within the [document tree][] has a different [
 Each of the two `iframe` elements within the [document tree][] has a different [accessible name][] (given by the `aria-labelledby` attribute and matching elements). Therefore, there is no set of two or more `iframe` elements with the same [accessible name][] and the rule is inapplicable.
 
 ```html
-<div id="desc-for-title">List of Contributors</div>
-<iframe aria-labelledby="desc-for-title" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+<section lang="en">
+	<div id="desc-for-title">List of Contributors</div>
+	<iframe aria-labelledby="desc-for-title" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
 
-<div id="desc-for-title1">List of Reviewers</div>
-<iframe aria-labelledby="desc-for-title1" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe>
+	<div id="desc-for-title1">List of Reviewers</div>
+	<iframe aria-labelledby="desc-for-title1" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe>
+</section>
 ```
 
 #### Inapplicable Example 5
@@ -212,10 +245,12 @@ Each of the two `iframe` elements within the [document tree][] has a different [
 Both `iframe` elements have the same [accessible name][] (given by the `title` attribute) within the same [document tree][], but one of them is not [included in the accessibility tree][]. Therefore, there is no set of two or more `iframe` elements that are [included in the accessibility tree][] and have the same [accessible name][], and the rule is inapplicable.
 
 ```html
-<iframe aria-hidden="true" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html">
-</iframe>
+<section lang="en">
+	<iframe aria-hidden="true" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html">
+	</iframe>
 
-<iframe title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe>
+	<iframe title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe>
+</section>
 ```
 
 #### Inapplicable Example 6
@@ -223,20 +258,22 @@ Both `iframe` elements have the same [accessible name][] (given by the `title` a
 Two of the `iframe` elements, with `id` attribute `level1-frame1` and `level2-frame1` have the same [accessible name][] (given by the `title` attribute). However, they are not part of the same [document tree][] because `level2-frame1` is itself embedded in another `iframe` element. Therefore, there is no set of two or more `iframe` elements with the same [accessible name][] within the same [document tree][] and the rule is inapplicable.
 
 ```html
-<iframe id="level1-frame1" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html">
-</iframe>
-<iframe
-	id="level1-frame2"
-	title="List of Contributors 2"
-	src="/test-assets/iframe-unique-name-4b1c6c/page-with-iframe.html"
->
-	<!--
+<section lang="en">
+	<iframe id="level1-frame1" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html">
+	</iframe>
+	<iframe
+		id="level1-frame2"
+		title="List of Contributors 2"
+		src="/test-assets/iframe-unique-name-4b1c6c/page-with-iframe.html"
+	>
+		<!--
   Content of document includes an iframe:
   
   <iframe id="level2-frame1" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html">
   </iframe>
   -->
-</iframe>
+	</iframe>
+</section>
 ```
 
 #### Inapplicable Example 7
@@ -244,9 +281,11 @@ Two of the `iframe` elements, with `id` attribute `level1-frame1` and `level2-fr
 The `alt` attribute does not provide an [accessible name][] for `iframe` elements. Therefore, these `iframe` elements do not have an [accessible name][] and the rule is inapplicable.
 
 ```html
-<iframe alt="Some" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+<section lang="en">
+	<iframe alt="Some" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
 
-<iframe alt="Some" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+	<iframe alt="Some" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+</section>
 ```
 
 #### Inapplicable Example 8
@@ -254,9 +293,11 @@ The `alt` attribute does not provide an [accessible name][] for `iframe` element
 The rule does not apply to `object` elements.
 
 ```html
-<object title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </object>
+<section lang="en">
+	<object title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </object>
 
-<object aria-label="List of Contributors Clone" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </object>
+	<object aria-label="List of Contributors Clone" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </object>
+</section>
 ```
 
 #### Inapplicable Example 9
@@ -264,9 +305,11 @@ The rule does not apply to `object` elements.
 These `iframe` elements do not have [accessible names][accessible name].
 
 ```html
-<iframe src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe>
+<section lang="en">
+	<iframe src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe>
 
-<iframe src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+	<iframe src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+</section>
 ```
 
 #### Inapplicable Example 10
@@ -274,10 +317,13 @@ These `iframe` elements do not have [accessible names][accessible name].
 These `iframe` elements are not [included in the accessibility tree][], because of the `display:none` styling.
 
 ```html
-<iframe style="display:none;" title="Document One" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+<section lang="en">
+	<iframe style="display:none;" title="Document One" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html">
+	</iframe>
 
-<iframe style="display:none;" aria-label="Document One" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html">
-</iframe>
+	<iframe style="display:none;" aria-label="Document One" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html">
+	</iframe>
+</section>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

@@ -23,7 +23,7 @@ authors:
 
 This rule applies to any set of any two or more `iframe` elements which:
 
-- are in [documents][document] of the same [web page][]; and
+- are in [documents][document] of the same [web page (HTML)][]; and
 - are [included in an accessibility tree][included in the accessibility tree]; and
 - that have [matching][] [accessible names][accessible name] that are not empty (`""`).
 
@@ -31,7 +31,7 @@ This rule applies to any set of any two or more `iframe` elements which:
 
 ## Expectation
 
-The `iframe` elements in the set of target elements embed the the [same resource](#same-resource) or [equivalent resources](#equivalent-resource).
+All `iframe` elements in the set of target elements embed the the [same resource](#same-resource) or [equivalent resources](#equivalent-resource).
 
 **Note:** Resolving the embedded resource includes any redirects that are instant.
 
@@ -41,7 +41,7 @@ The `iframe` elements in the set of target elements embed the the [same resource
 
 ## Accessibility Support
 
-This rule assume that assistive technologies are exposing all `iframe` elements on the page in the same way no matter which [document tree](https://dom.spec.whatwg.org/#document-trees) they are in. If an assistive technology requires the user to "enter" an `iframe` or a [shadow tree][] before exposing its content (notably nested `iframe`), then it is possible for two `iframe` to have identical name but embed different resources without breaking [Success Criterion 4.1.2: Name, Role, Value][sc412] (if said `iframe` are in separate [documents][document] or [shadow trees][shadow tree])
+This rule assumes that assistive technologies are exposing all `iframe` elements on the page in the same way no matter which [document tree](https://dom.spec.whatwg.org/#document-trees) they are in. If an assistive technology requires the user to "enter" an `iframe` or a [shadow tree][] before exposing its content (notably nested `iframe`), then it is possible for two `iframe` to have identical name but embed different resources without breaking [Success Criterion 4.1.2: Name, Role, Value][sc412] (if said `iframe` are in separate [documents][document] or [shadow trees][shadow tree])
 
 ## Background
 
@@ -176,7 +176,7 @@ The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light t
 
 #### Passed Example 11
 
-The [browsing context][] of the `iframe` with `id` `"container"` has the [browsing context][] of the main [document][] as an [ancestor browsing context][]. Hence, they share the same [top-level browsing context][] (namely, the [browsing context][] of the main [document][]) and are part of the same [web page][]. Therefore, both `iframe` with `id` `"top-level"` and `"nested"` are considered and, since they embed the same document, the rule passes.
+The [browsing context][] of the `iframe` with `id` `"container"` has the [browsing context][] of the main [document][] as an [ancestor browsing context][]. Hence, they share the same [top-level browsing context][] (namely, the [browsing context][] of the main [document][]) and are part of the same [web page (HTML)][]. Therefore, both `iframe` with `id` `"top-level"` and `"nested"` are considered and, since they embed the same document, the rule passes.
 
 ```html
 <iframe id="top-level" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html">
@@ -241,7 +241,7 @@ The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light t
 
 #### Failed Example 5
 
-The [browsing context][] of the `iframe` with `id` `"container"` has the [browsing context][] of the main [document][] as an [ancestor browsing context][]. Hence, they share the same [top-level browsing context][] (namely, the [browsing context][] of the main [document][]) and are part of the same [web page][]. Therefore, both `iframe` with `id` `"top-level"` and `"nested"` are considered and the rule fails.
+The [browsing context][] of the `iframe` with `id` `"container"` has the [browsing context][] of the main [document][] as an [ancestor browsing context][]. Hence, they share the same [top-level browsing context][] (namely, the [browsing context][] of the main [document][]) and are part of the same [web page (HTML)][]. Therefore, both `iframe` with `id` `"top-level"` and `"nested"` are considered and the rule fails.
 
 ```html
 <iframe id="top-level" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html">
@@ -377,4 +377,4 @@ Only the first `iframe` (with `id` `"always"`) is present in the [flat tree][]. 
 [sc412]: https://www.w3.org/TR/WCAG21/#name-role-value 'Success Criterion 4.1.2: Name, Role, Value'
 [top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'Definition of top level browsing context'
 [usc412]: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html 'Understanding Success Criterion 4.1.2: Name, Role, Value'
-[web page]: #web-page 'Definition of web page'
+[web page (html)]: #web-page-html 'Definition of web page (HTML)'

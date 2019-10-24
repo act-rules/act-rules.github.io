@@ -8,8 +8,8 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-	- Audio output
-	- Language
+  - Audio output
+  - Language
 authors:
   - Wilco Fiers
   - Brian Bors

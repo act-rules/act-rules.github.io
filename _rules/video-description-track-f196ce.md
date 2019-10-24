@@ -9,8 +9,8 @@ input_aspects:
   - DOM Tree
   - CSS Styling
   - Audio output
-	- Visual output
-	- Language
+  - Visual output
+  - Language
 authors:
   - Wilco Fiers
   - Brian Bors

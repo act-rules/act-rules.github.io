@@ -11,8 +11,8 @@ accessibility_requirements:
     passed: satisfied
     inapplicable: further testing needed
 input_aspects:
-	- DOM Tree
-	- Language
+  - DOM Tree
+  - Language
 authors:
   - Anne Thyme Nørregaard
   - Corbb O'Connor

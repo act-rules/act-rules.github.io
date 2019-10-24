@@ -12,8 +12,8 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-	- CSS Styling
-	- Language
+  - CSS Styling
+  - Language
 authors:
   - Anne Thyme Nørregaard
 htmlHintIgnore:

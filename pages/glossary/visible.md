@@ -20,19 +20,19 @@ This `span` element is visible (by default, elements are visible).
 This `span` element is not visible because of the CSS `visibility` property.
 
 ```html
-<span style="visibility: hidden">I'm the invisible man!</span>
+<span style="visibility: hidden">I'm the invisible man</span>
 ```
 
 This `span` element is not visible because of the CSS `display` property.
 
 ```html
-<span style="display: none">I'm the invisible man!</span>
+<span style="display: none">I'm the invisible man</span>
 ```
 
 This `span` element is not visible because it is positioned off-screen
 
 ```html
-<span style="position: absolute; top: -9999px; left: -9999px;">I'm the invisible man!</span>
+<span style="position: absolute; top: -9999px; left: -9999px;">Incredible how you can</span>
 ```
 
 This `span` element is not visible because it contains only whitespace and line breaks.
@@ -47,5 +47,5 @@ This `span` element is not visible because it contains only whitespace and line 
 This `span` element is not visible because it has the exact same color as its background.
 
 ```html
-<span style="color: #00F; background: #00F;">I'm the invisible man!</span>
+<span style="color: #00F; background: #00F;">See right through me</span>
 ```

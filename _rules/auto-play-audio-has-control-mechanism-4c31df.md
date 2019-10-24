@@ -1,9 +1,9 @@
 ---
 id: 4c31df
-name: auto-play audio has a control mechanism
+name: '`autoplay` audio has a control mechanism'
 rule_type: atomic
 description: |
-  auto-play audio or video must have a control mechanism.
+  '`autoplay` audio or video must have a control mechanism.'
 accessibility_requirements:
 input_aspects:
   - DOM Tree

@@ -29,7 +29,7 @@ This `span` is not included in the accessibility tree because it is explicitly r
 <span aria-hidden="true">ACT rules</span>
 ```
 
-This `span` is positioned off screen, hence is not [visible](#visible), but is nonetheless encluded in the accessibility tree.
+This `span` is positioned off screen, hence is not [visible](#visible), but is nonetheless included in the accessibility tree.
 
 ```html
 <span style="position: absolute; top:-9999em">ACT rules</span>
@@ -42,16 +42,8 @@ Although the `span` with an `id` of "label" is not itself included in the access
 <span aria-labelledby="label">Accessibility Conformance Testing rules</span>
 ```
 
-Although this `input` is not included in the accessibility tree, it is still [focusable](#focusable), hence users of assistive technologies can still interact with it by sequential keyboard navigation. This may result in confusing situation for such users!
+Although this `input` is not included in the accessibility tree, it is still [focusable](#focusable), hence users of assistive technologies can still interact with it by sequential keyboard navigation. This may result in confusing situations for such users!
 
 ```html
 <input type="text" aria-hidden="true" name="fname" />
-```
-
-```html
-<span>ACT rules</span>
-```
-
-```html
-<span>ACT rules</span>
 ```

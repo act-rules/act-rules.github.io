@@ -28,7 +28,7 @@ The rule applies to any HTML element that is a [descendant](https://dom.spec.wha
 
 ## Expectation
 
-The target element is either the row or column header for cells that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of the same [table](https://www.w3.org/TR/wai-aria-1.1/#table) or [grid](https://www.w3.org/TR/wai-aria-1.1/#grid) element, as that of the target element.
+The target element is either the row or column header for an element with a [semantic role](#semantic-role) of [cell](https://www.w3.org/TR/wai-aria-1.1/#cell) or [gridcell](https://www.w3.org/TR/wai-aria-1.1/#gridcell), that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of the same [table](https://www.w3.org/TR/wai-aria-1.1/#table) or [grid](https://www.w3.org/TR/wai-aria-1.1/#grid) element, as that of the target element.
 
 **Note:** Assigning headers cells to data cell is performed as per algorithm - [Forming relationships between data cells and header cells](https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics).
 
@@ -135,6 +135,25 @@ Each row and column header element has corresponding cells, within the same elem
 </table>
 ```
 
+#### Passed Example 5
+
+Each column header has corresponding cells. Usage of `headers` attribute does not change relationship between column headers and cells.
+
+```html
+<table>
+	<tr>
+		<th id="col1"></th>
+		<th id="col2"></th>
+	</tr>
+	<tr>
+		<td></td>
+	</tr>
+	<tr>
+		<td headers="col2"></td>
+	</tr>
+</table>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -154,6 +173,23 @@ One of the column headers ("Column 2"), does not have corresponding cell within 
 			<td>15%</td>
 		</tr>
 	</tbody>
+</table>
+```
+
+#### Failed Example 2
+
+The column header `col2`, does not have corresponding cell within the same `table` element. Usage of `headers` attribute removes cell association to the column.
+
+```html
+<table>
+	<tr>
+		<th id="col1"></th>
+		<th id="col2"></th>
+	</tr>
+	<tr>
+		<td></td>
+		<td headers="col1"></td>
+	</tr>
 </table>
 ```
 

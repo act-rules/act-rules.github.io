@@ -142,7 +142,7 @@ Label is [visible][], but not included in accessibility tree, and does not descr
 
 #### Inapplicable Example 1
 
-`Label` that is neither [visible][] to users.
+`Label` that is not [visible][] to users.
 
 ```html
 <div style="display:none">
@@ -153,7 +153,7 @@ Label is [visible][], but not included in accessibility tree, and does not descr
 
 #### Inapplicable Example 2
 
-Programmatically associated `p` element that is neither [visible][].
+Programmatically associated `p` element that is not [visible][].
 
 ```html
 <div style="display:none">

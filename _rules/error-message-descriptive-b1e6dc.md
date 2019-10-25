@@ -26,7 +26,7 @@ authors:
 
 ## Applicability
 
-This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element that has at least one HTML or SVG element that has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox` and for which [input errors](https://www.w3.org/TR/WCAG21/#dfn-input-error) are [automatically detected](#automatic-error-detection)
+This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document) where the [document element](#https://www.w3.org/TR/dom/#document-element) is an HTML `html` element that has at least one HTML or SVG element that has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox`, `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox` and for which [input errors](https://www.w3.org/TR/WCAG21/#dfn-input-error) are [automatically detected](#automatic-error-detection)
 
 **Note**: The list of applicable [semantic roles](#semantic-role) is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
 
@@ -35,7 +35,7 @@ This rule applies to any [document](#https://www.w3.org/TR/dom/#concept-document
 
 ## Expectation
 
-For each HTML or SVG element that has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox` in the test target, the outcome of at least one of the following rules is passed:
+For each HTML or SVG element that has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox`, `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox` in the test target, the outcome of at least one of the following rules is passed:
 
 - [Required form fields not completed](https://act-rules.github.io/rules/334972)
 - [Invalid form field value](https://act-rules.github.io/rules/36b590)

@@ -1,6 +1,6 @@
 ---
 id: 6f484a
-name: aria-alertdialog identifies input error
+name: `aria-alertdialog` identifies input error
 rule_type: atomic
 
 description: |
@@ -27,8 +27,7 @@ authors:
 
 The rule applies to each HTML or SVG element:
 
-- the has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`;
-- that may or may not belong to a [form element](https://www.w3.org/TR/html52/sec-forms.html#the-form-element);
+- that has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox`, `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`;
 - for which [input errors](https://www.w3.org/TR/WCAG21/#dfn-input-error) are [automatically detected](#automatic-error-detection).
 
 **Note**: The list of applicable [semantic roles](#semantic-role) is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
@@ -38,13 +37,13 @@ The rule applies to each HTML or SVG element:
 
 ## Expectation
 
-After [user completion](#completed-input-field) of the target element or triggering the submission of the form, if the target element belongs to one, each target element for which an [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error) has been [automatically detected](#automatic-error-detection) causes an element with `role="alertdialog"` to appear, where the following is true:
+After [user completion](#completed-input-field) of the target element or triggering the submission of the form if the target element belongs to one, each target element for which an [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error) has been [automatically detected](#automatic-error-detection) causes an element with `role="alertdialog"` to become [visible](#visible), where the following is true:
 
-- it contains at least one [focusable](#focusable) element; and
+- it has at least one [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) that is a [focusable](#focusable) element; and
 - the focus moves to the [focusable](#focusable) element; and
-- it is not possible to move the focus away from elements contained in the element with `role="alertdialog"` until this is dismissed; and
-- after the element with `role="alertdialog"` is dismissed the focus returns to the position where it was before the element with `role="alertdialog"` was displayed; and
-- the element with `role="alertdialog"` has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace); and
+- it is not possible to move the focus away from elements that are [descendents](https://dom.spec.whatwg.org/#concept-tree-descendant) of the element with `role="alertdialog"` until it no longer is [visible](#visible); and
+- after the element with `role="alertdialog"` is no longer [visible](#visible) the focus returns to the position where it was before the element with `role="alertdialog"` became [visible](#visible); and
+- the element with `role="alertdialog"` has an [accessible name](#accessible-name) that is not empty (`""`); and
 - the text content of the element with `role="alertdialog"` identifies the [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error).
 
 **Note**: Information to identify an input error must include information about the element or elements in which the error occurred, and assist the user in understanding what was the cause of the error.

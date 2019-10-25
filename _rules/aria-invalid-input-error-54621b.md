@@ -1,10 +1,10 @@
 ---
 id: 54621b
-name: aria-invalid identifies input error
+name: `aria-invalid` identifies input error
 rule_type: atomic
 
 description: |
-  This rule checks that the `aria-invalid` attributed is used to identify input errors
+  This rule checks that the `aria-invalid` attribute is used to identify input errors
 
 accessibility_requirements: # Remove whatever is not applicable
   wcag-technique:ARIA21: # Using Aria-Invalid to Indicate An Error Field
@@ -27,8 +27,7 @@ authors:
 
 The rule applies to each HTML or SVG element:
 
-- the has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`;
-- that may or may not belong to a [form element](https://www.w3.org/TR/html52/sec-forms.html#the-form-element);
+- that has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox`, `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`;
 - for which [input errors](https://www.w3.org/TR/WCAG21/#dfn-input-error) are [automatically detected](#automatic-error-detection).
 
 **Note**: The list of applicable [semantic roles](#semantic-role) is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
@@ -38,7 +37,7 @@ The rule applies to each HTML or SVG element:
 
 ## Expectation 1
 
-After [user completion](#completed-input-field) of the target element or triggering the submission of the form, if the target element belongs to one, each target element for which an [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error) has been [automatically detected](#automatic-error-detection) has the `aria-invalid` attribute set to `true`.
+After [user completion](#completed-input-field) of the target element or triggering the submission of the form if the target element belongs to one, each target element for which an [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error) has been [automatically detected](#automatic-error-detection) has the `aria-invalid` attribute set to `true`.
 
 **Note**: Even though the ARIA 21 technique checks for what happens to form fields for which there are not input errors, that is not relevant for this SC and, consequently, this rule does not check for it.
 

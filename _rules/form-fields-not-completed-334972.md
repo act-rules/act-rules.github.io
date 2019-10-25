@@ -27,7 +27,7 @@ authors:
 
 The rule applies to each [form element](https://www.w3.org/TR/html52/sec-forms.html#the-form-element) that includes at least one [required](#required-input-field) HTML or SVG element:
 
-- that has one of the following [semantic roles][semantic role]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
+- that has one of the following [semantic roles][semantic role]: `checkbox`, `combobox`, `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
 - for which [input errors](https://www.w3.org/TR/WCAG21/#dfn-input-error) are [automatically detected](#automatic-error-detection).
 
 **Note**: The list of applicable [semantic roles](#semantic-role) is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
@@ -39,7 +39,7 @@ The rule applies to each [form element](https://www.w3.org/TR/html52/sec-forms.h
 
 After triggering the submission of the target element, each [required](#required-input-field) [input element](https://www.w3.org/TR/html52/sec-forms.html#the-input-element) that was not [completed](#completed-input-field) is identified by a text message.
 
-Note: A text message may identify an [input element](https://www.w3.org/TR/html52/sec-forms.html#the-input-element) in several ways, including:
+**Note**: A text message may identify an [input element](https://www.w3.org/TR/html52/sec-forms.html#the-input-element) in several ways, including:
 
 - By referring to its label or accessible name
 - By being visually placed in the vicinity of the element

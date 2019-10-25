@@ -7231,9 +7231,9 @@
       }
     },
     {
-      "testcaseId": "5e36cafed7c45898b0c576eca03b195d05518964",
-      "url": "https://act-rules.github.io/testcases/b20e66/5e36cafed7c45898b0c576eca03b195d05518964.html",
-      "relativePath": "testcases/b20e66/5e36cafed7c45898b0c576eca03b195d05518964.html",
+      "testcaseId": "406c58de59fc7884d3c6399a8b851f8abe0c57c5",
+      "url": "https://act-rules.github.io/testcases/b20e66/406c58de59fc7884d3c6399a8b851f8abe0c57c5.html",
+      "relativePath": "testcases/b20e66/406c58de59fc7884d3c6399a8b851f8abe0c57c5.html",
       "expected": "inapplicable",
       "ruleId": "b20e66",
       "ruleName": "Links with identical accessible names have equivalent purpose",

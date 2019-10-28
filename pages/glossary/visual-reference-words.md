@@ -103,3 +103,55 @@ Orientation
 - Tilt
 - Tilted
 - Tipped
+
+Colour
+- Any 1 word colour named in the X11 standard, emmiting duplicates: 
+  - Blue	
+  - White	
+  - Aqua	
+  - Aquamarine	
+  - Azure	
+  - Beige	
+  - Bisque	
+  - Black	
+  - Almond
+  - Violet	
+  - Brown	
+  - Burlywood
+  - Chartreuse	
+  - Chocolate	
+  - Coral
+  - Cornsilk	
+  - Crimson	
+  - Cyan
+  - Goldenrod	
+  - Gray	
+  - Green	
+  - Khaki	
+  - Magenta
+  - Orange	
+  - Orchid	
+  - Red	
+  - Salmon	
+  - Yurquoise	
+  - Pink	
+  - Firebrick
+  - Fuchsia	
+  - Gold
+  - Yellow	
+  - Honeydew
+  - Indigo	
+  - Ivory	
+  - Lavender	
+  - Chiffon	
+  - Lemon
+  - Lime	
+  - Linen	
+  - Maroon		
+  - Purple	
+  - Mint	
+  - Cream
+  - Rose	
+  - Moccasin	
+  - Lace	
+  - Olive	

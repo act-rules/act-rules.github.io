@@ -229,6 +229,8 @@ The [HTML document][] has [functionality][] that can be operated by user motion 
 </html>
 ```
 
+### Failed
+
 #### Failed Example 1
 
 The [HTML document][] has [functionality][] that can be operated by [device motion][] and [can't be disabled][].

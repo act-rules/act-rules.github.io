@@ -46,7 +46,7 @@ The rule assumes that instructions are fully included within a single section of
 
 The rule assumes that visual reference words are forms of information conveyed through presentation, because of this, failing this rule fails both [Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships) and [Sensory Characteristics](https://www.w3.org/TR/WCAG21/#sensory-characteristics). Presentation is not limited to CSS and includes images such as the image of a circle with text.
 
-The rule assumes that non-visual users will interpret some visual refence words as meaning "ahead" or "backwards" in the reading order. For example in most contexts "see the content below" will mean ahead in the reading order which is not a visual reference and should pass this test.
+The rule assumes that non-visual users will interpret some visual reference words as meaning "ahead" or "backwards" in the reading order. For example in most contexts "see the content below" will mean ahead in the reading order which is not a visual reference and should pass this test.
 
 ## Accessibility Support
 
@@ -75,6 +75,7 @@ The content in the second column is indicated with the word "right" (which is an
 
 ```html
 <head>
+	<title>Passed example 1 9bd38c</title>
 	<style>
 	.col-container {
 		display: table;
@@ -100,7 +101,7 @@ The content in the second column is indicated with the word "right" (which is an
 
 #### Passed Example 2
 
-The button in the second column is indicated with the word "box" (which is a location indicator based on visual perception) but also indicated by referencing that the content can be found below this content in the DOM order. Note that "below" is also a visual reference word but in this case it can also be accuratly interpretated as "next in the DOM order" which does not rely on visual attributes alone.
+The button in the second column is indicated with the word "box" (which is a location indicator based on visual perception) but also indicated by referencing that the content can be found below this content in the DOM order. Note that "below" is also a visual reference word but in this case it can also be accurately interpreted as "next in the DOM order" which does not rely on visual attributes alone.
 
 ```html
 <div class="col-container">
@@ -120,6 +121,7 @@ The visual reference made by the word "right" is complemented by the non-visual 
 
 ```html
 <head>
+	<title>Passed example 3 9bd38c</title>
 	<style>
 	.col-container {
 		display: table;
@@ -163,10 +165,11 @@ This document is using the word "square" but in this case it is not an instructi
 
 #### Passed Example 5
 
-The following text is tilted and describes web content. But the block of content also includes this word "this" which makes it apparent that the describtion is about the same block of content.
+The following text is tilted and describes web content. But the block of content also includes this word "this" which makes it apparent that the description is about the same block of content.
 
 ```html
 <head>
+	<title>Passed example 5 9bd38c</title>
 	<style> 
 		div.tilt {
 			height: 750px;
@@ -188,6 +191,7 @@ The button is indicated by the word "round". But the word is also included in th
 
 ```html
 <head>
+	<title>Passed example 6 9bd38c</title>
 	<style>
 	.col-container {
 		display: table;
@@ -219,7 +223,6 @@ The images are indicated by the visual indicator words "narrow" and "wide". Thes
 	<p>The wide image is awesome. But the narrow image isn't.</p>
 	<img scr="/test-assets/images/awesome_wide.jfif" alt="Wide photo of an awesome landscape.">
 	<img scr="/test-assets/images/Non_awesome_narrow.jpg" alt="Narrow photo of a dull landscape.">
-	</div>
 ```
 
 #### Passed Example 8
@@ -235,10 +238,8 @@ This document is using the word "triangle" but in this case the triangle menu is
 This document is using the word "star" but in this case the star is in an 'iframe' and has a heading "examples".
 
 ```html
-<body>
 <p>More examples can be found when you look underneath the star or you can search for the "Examples" heading</p>
 <iframe src="/test-assets/SC1.3.3-star-with-heading.html"></iframe>
-</body>
 ```
 
 #### Passed Example 10
@@ -272,6 +273,7 @@ The user is told to find the menu on the right (which is a visual indicator word
 
 ```html
 <head>
+	<title>Failed example 1 9bd38c</title>
 	<style>
 	.col-container {
 		display: table;
@@ -309,6 +311,7 @@ The user is told to find the navigation on the right (which is a visual indicato
 
 ```html
 <head>
+	<title>Failed example 2 9bd38c</title>
 	<style>
 	.col-container {
 		display: table;

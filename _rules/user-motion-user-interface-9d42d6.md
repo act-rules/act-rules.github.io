@@ -1,0 +1,488 @@
+---
+id: 9d42d6
+name: User motion can be operated by user interface
+rule_type: atomic
+
+description: |
+  This rule checks that functionality that can be operated by user motion can also be operated by user interface components.
+
+accessibility_requirements:
+  wcag21:2.5.4: # Motion Actuation (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+
+input_aspects:
+  - DOM Tree
+  - CSS Styling
+  - Accessibility tree
+
+authors:
+  - João Vicente
+  - Carlos Duarte
+---
+
+## Applicability
+
+The rule applies to any [HTML document][] that has [functionality][] that can be operated by user motion.
+
+## Expectation
+
+For the test target, user motion can also be operated by [user interface components][] and they should be visible and included in the accessibility tree.
+
+## Assumptions
+
+- This test assumes that the motion to operate [functionality][] is not used through an [accessibility supported][] interface
+- This test assumes that motion is not [essential][] for the [functionality][]
+
+## Accessibility Support
+
+- Device [orientation events][] may include sensitive data. Implementations must fire events only on [secure browsing contexts][]
+
+## Background
+
+- [Understanding Success Criterion 2.5.4: Motion Actuation](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html)
+- [G213: Provide conventional controls and an application setting for motion activated input](https://www.w3.org/WAI/WCAG21/Techniques/general/G213.html)
+- [DeviceOrientation Event Specification](https://www.w3.org/TR/orientation-event/)
+
+## Test Cases
+
+### Passed
+
+#### Passed Example 1
+
+The [HTML document][] has [functionality][] that can be operated by user motion and can also be operated by [user interface components][] and they are visible and included in the accessibility tree.
+
+```html
+<html>
+  <head>
+    <title>Passed Example 1</title>
+    <style>
+      div:first-child {
+        font-size: 1.5em;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+        height: 50vh;
+        width: 100vw;
+      }
+      #target {
+        background: white;
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+      let eventCache = new Array();
+      let prevDiff = -1;
+
+      function init() {
+        const target = document.getElementById('target');
+        target.onpointerdown = pointerdown_handler;
+        target.onpointermove = pointermove_handler;
+
+        target.onpointerup = pointerup_handler;
+        target.onpointercancel = pointerup_handler;
+        target.onpointerout = pointerup_handler;
+        target.onpointerleave = pointerup_handler;
+      }
+
+      function pointerdown_handler(event) {
+        eventCache.push(event);
+      }
+
+      function pointermove_handler(event) {
+        event.target.style.border = 'dashed';
+        for (let i = 0; i < eventCache.length; i++) {
+          if (event.pointerId === eventCache[i].pointerId) {
+            eventCache[i] = event;
+            break;
+          }
+        }
+
+        if (eventCache.length === 2) {
+          if (prevDiff > 0) {
+            const curDiff = Math.abs(eventCache[0].clientX - eventCache[1].clientX);
+
+            if (curDiff > prevDiff) {
+              event.target.style.background = 'pink';
+            } else if (curDiff < prevDiff) {
+              event.target.style.background = 'lightblue';
+            }
+          }
+
+          prevDiff = curDiff;
+        }
+      }
+
+      function pointerup_handler(event) {
+        remove_event(event);
+        event.target.style.background = 'white';
+        event.target.style.border = '1px solid black';
+
+        if (eventCache.length < 2) {
+          prevDiff = -1;
+        }
+      }
+
+      function remove_event(event) {
+        for (let i = 0; i < eventCache.length; i++) {
+          if (eventCache[i].pointerId === event.pointerId) {
+            eventCache.splice(i, 1);
+            break;
+          }
+        }
+      }
+
+      function changeBackgroundColor(color) {
+        const target = document.getElementById('target');
+        target.style.background = color;
+      }
+    </script>
+  </head>
+  <body onload='init();' style='touch-action:none'>
+    <div id='target'>Touch and Hold with 2 pointers, then pinch in or out horizontally.<br/>
+        The background color will change to pink if the pinch is opening (Zoom In) 
+        or changes to lightblue if the pinch is closing (Zoom out).
+    </div>
+    <div>
+      <button onclick="changeBackgroundColor('lightblue');">Change background color to lightblue</button>
+      <button onclick="changeBackgroundColor('pink');">Change background color to pink</button>
+      <button onclick="changeBackgroundColor('white');">Reset color</button>
+    </div>  
+  </body>
+</html>
+```
+
+### Failed
+
+#### Failed Example 1
+
+The [HTML document][] has [functionality][] that can be operated by user motion but cannot be operated by [user interface components][].
+
+```html
+<html>
+  <head>
+    <title>Failed Example 1</title>
+    <style>
+      div {
+        font-size: 1.5em;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+        height: 50vh;
+        width: 100vw;
+      }
+      #target {
+        background: white;
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+      let eventCache = new Array();
+      let prevDiff = -1;
+
+      function init() {
+        const target = document.getElementById('target');
+        target.onpointerdown = pointerdown_handler;
+        target.onpointermove = pointermove_handler;
+
+        target.onpointerup = pointerup_handler;
+        target.onpointercancel = pointerup_handler;
+        target.onpointerout = pointerup_handler;
+        target.onpointerleave = pointerup_handler;
+      }
+
+      function pointerdown_handler(event) {
+        eventCache.push(event);
+      }
+
+      function pointermove_handler(event) {
+        event.target.style.border = 'dashed';
+        for (let i = 0; i < eventCache.length; i++) {
+          if (event.pointerId === eventCache[i].pointerId) {
+            eventCache[i] = event;
+            break;
+          }
+        }
+
+        if (eventCache.length === 2) {
+          if (prevDiff > 0) {
+            const curDiff = Math.abs(eventCache[0].clientX - eventCache[1].clientX);
+
+            if (curDiff > prevDiff) {
+              event.target.style.background = 'pink';
+            } else if (curDiff < prevDiff) {
+              event.target.style.background = 'lightblue';
+            }
+          }
+
+          prevDiff = curDiff;
+        }
+      }
+
+      function pointerup_handler(event) {
+        remove_event(event);
+        event.target.style.background = 'white';
+        event.target.style.border = '1px solid black';
+
+        if (eventCache.length < 2) {
+          prevDiff = -1;
+        }
+      }
+
+      function remove_event(event) {
+        for (let i = 0; i < eventCache.length; i++) {
+          if (eventCache[i].pointerId === event.pointerId) {
+            eventCache.splice(i, 1);
+            break;
+          }
+        }
+      }
+    </script>
+  </head>
+  <body onload='init();' style='touch-action:none'>
+    <div id='target'>Touch and Hold with 2 pointers, then pinch in or out horizontally.<br/>
+        The background color will change to pink if the pinch is opening (Zoom In) 
+        or changes to lightblue if the pinch is closing (Zoom out).</div>
+  </body>
+</html>
+```
+
+#### Failed Example 2
+
+The [HTML document][] has [functionality][] that can be operated by user motion and can also be operated by [user interface components][] and they are visible but are not included in the accessibility tree.
+
+```html
+<html>
+  <head>
+    <title>Failed Example 2</title>
+    <style>
+      div:first-child {
+        font-size: 1.5em;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+        height: 50vh;
+        width: 100vw;
+      }
+      #target {
+        background: white;
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+      let eventCache = new Array();
+      let prevDiff = -1;
+
+      function init() {
+        const target = document.getElementById('target');
+        target.onpointerdown = pointerdown_handler;
+        target.onpointermove = pointermove_handler;
+
+        target.onpointerup = pointerup_handler;
+        target.onpointercancel = pointerup_handler;
+        target.onpointerout = pointerup_handler;
+        target.onpointerleave = pointerup_handler;
+      }
+
+      function pointerdown_handler(event) {
+        eventCache.push(event);
+      }
+
+      function pointermove_handler(event) {
+        event.target.style.border = 'dashed';
+        for (let i = 0; i < eventCache.length; i++) {
+          if (event.pointerId === eventCache[i].pointerId) {
+            eventCache[i] = event;
+            break;
+          }
+        }
+
+        if (eventCache.length === 2) {
+          if (prevDiff > 0) {
+            const curDiff = Math.abs(eventCache[0].clientX - eventCache[1].clientX);
+
+            if (curDiff > prevDiff) {
+              event.target.style.background = 'pink';
+            } else if (curDiff < prevDiff) {
+              event.target.style.background = 'lightblue';
+            }
+          }
+
+          prevDiff = curDiff;
+        }
+      }
+
+      function pointerup_handler(event) {
+        remove_event(event);
+        event.target.style.background = 'white';
+        event.target.style.border = '1px solid black';
+
+        if (eventCache.length < 2) {
+          prevDiff = -1;
+        }
+      }
+
+      function remove_event(event) {
+        for (let i = 0; i < eventCache.length; i++) {
+          if (eventCache[i].pointerId === event.pointerId) {
+            eventCache.splice(i, 1);
+            break;
+          }
+        }
+      }
+
+      function changeBackgroundColor(color) {
+        const target = document.getElementById('target');
+        target.style.background = color;
+      }
+    </script>
+  </head>
+  <body onload='init();' style='touch-action:none'>
+    <div id='target'>Touch and Hold with 2 pointers, then pinch in or out horizontally.<br/>
+        The background color will change to pink if the pinch is opening (Zoom In) 
+        or changes to lightblue if the pinch is closing (Zoom out).
+    </div>
+    <div aria-hidden="true">
+      <button onclick="changeBackgroundColor('lightblue');">Change background color to lightblue</button>
+      <button onclick="changeBackgroundColor('pink');">Change background color to pink</button>
+      <button onclick="changeBackgroundColor('white');">Reset color</button>
+    </div>  
+  </body>
+</html>
+```
+
+#### Failed Example 3
+
+The [HTML document][] has [functionality][] that can be operated by user motion and can also be operated by [user interface components][] and they are included in the accessibility tree but are not visible.
+
+```html
+<html>
+  <head>
+    <title>Failed Example 3</title>
+    <style>
+      div:first-child {
+        font-size: 1.5em;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+        height: 50vh;
+        width: 100vw;
+      }
+      #target {
+        background: white;
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+      let eventCache = new Array();
+      let prevDiff = -1;
+
+      function init() {
+        const target = document.getElementById('target');
+        target.onpointerdown = pointerdown_handler;
+        target.onpointermove = pointermove_handler;
+
+        target.onpointerup = pointerup_handler;
+        target.onpointercancel = pointerup_handler;
+        target.onpointerout = pointerup_handler;
+        target.onpointerleave = pointerup_handler;
+      }
+
+      function pointerdown_handler(event) {
+        eventCache.push(event);
+      }
+
+      function pointermove_handler(event) {
+        event.target.style.border = 'dashed';
+        for (let i = 0; i < eventCache.length; i++) {
+          if (event.pointerId === eventCache[i].pointerId) {
+            eventCache[i] = event;
+            break;
+          }
+        }
+
+        if (eventCache.length === 2) {
+          if (prevDiff > 0) {
+            const curDiff = Math.abs(eventCache[0].clientX - eventCache[1].clientX);
+
+            if (curDiff > prevDiff) {
+              event.target.style.background = 'pink';
+            } else if (curDiff < prevDiff) {
+              event.target.style.background = 'lightblue';
+            }
+          }
+
+          prevDiff = curDiff;
+        }
+      }
+
+      function pointerup_handler(event) {
+        remove_event(event);
+        event.target.style.background = 'white';
+        event.target.style.border = '1px solid black';
+
+        if (eventCache.length < 2) {
+          prevDiff = -1;
+        }
+      }
+
+      function remove_event(event) {
+        for (let i = 0; i < eventCache.length; i++) {
+          if (eventCache[i].pointerId === event.pointerId) {
+            eventCache.splice(i, 1);
+            break;
+          }
+        }
+      }
+
+      function changeBackgroundColor(color) {
+        const target = document.getElementById('target');
+        target.style.background = color;
+      }
+    </script>
+  </head>
+  <body onload='init();' style='touch-action:none'>
+    <div id='target'>Touch and Hold with 2 pointers, then pinch in or out horizontally.<br/>
+        The background color will change to pink if the pinch is opening (Zoom In) 
+        or changes to lightblue if the pinch is closing (Zoom out).
+    </div>
+    <div style="position: absolute; margin-left: -9999px;">
+      <button onclick="changeBackgroundColor('lightblue');">Change background color to lightblue</button>
+      <button onclick="changeBackgroundColor('pink');">Change background color to pink</button>
+      <button onclick="changeBackgroundColor('white');">Reset color</button>
+    </div>  
+  </body>
+</html>
+```
+
+### Inapplicable
+
+#### Inapplicable Example 1
+
+The [HTML document][] does not have [functionality][] that can be operated by user motion.
+
+```html
+<html>
+  <div>document content</div>
+</html>
+```
+
+#### Inapplicable Example 2
+
+The document is not an [HTML document][].
+
+```html
+<svg height="100" width="100">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+  Sorry, your browser does not support inline SVG.  
+</svg>
+```
+
+[orientation events]: https://www.w3.org/TR/orientation-event/
+[HTML document]: https://dom.spec.whatwg.org/#concept-document
+[essential]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-essential
+[functionality]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-functionality
+[secure browsing contexts]: https://www.w3.org/TR/secure-contexts/
+[user interface components]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-user-interface-component

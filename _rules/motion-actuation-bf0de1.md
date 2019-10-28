@@ -1,7 +1,7 @@
 ---
 id: bf0de1
 name: Motion actuation can be disabled and be operated by user interface components
-rule_type: atomic
+rule_type: composite
 
 description: |
   This rule checks that functionality that can be operated by device motion or user motion can also be operated by user interface components and responding to the motion can be disabled to prevent accidental actuation.
@@ -13,10 +13,11 @@ accessibility_requirements: # Remove whatever is not applicable
     passed: satisfied
     inapplicable: further testing needed
 
-input_aspects:
-  - DOM Tree
-  - CSS Styling
-  - Accessibility tree
+input_rules:
+ - c249d5
+ - 7677a9
+ - ed12b1
+ - 9d42d6
 
 authors:
   - João Vicente
@@ -25,20 +26,19 @@ authors:
 
 ## Applicability
 
-The rule applies to any [HTML document][] that has [functionality][] that can be operated by device motion or user motion.
+The rule applies to any [HTML document][] that has [functionality][] that can be operated by [device motion][] or user motion.
 
 ## Expectation (1)
 
-For each test target, device motion or user motion [can be disabled][].
-
-**Note:** the control for disabling should be visible and included in the accessibility tree.
+For the test target, [device motion][] and user motion [can be disabled][] and the control for disabling them must be a [user interface component][] and it should be visible and included in the accessibility tree.
 
 ## Expectation (2)
 
-For each test target, device motion or user motion can also be operated by [user interface components][].
+For the test target, [device motion][] and user motion can also be operated by [user interface components][] and they should be visible and included in the accessibility tree.
 
 ## Assumptions
 
+- This test assumes that the motion to operate [functionality][] is not used through an [accessibility supported][] interface
 - This test assumes that motion is not [essential][] for the [functionality][]
 
 ## Accessibility Support
@@ -50,8 +50,6 @@ For each test target, device motion or user motion can also be operated by [user
 - [Understanding Success Criterion 2.5.4: Motion Actuation](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html)
 - [G213: Provide conventional controls and an application setting for motion activated input](https://www.w3.org/WAI/WCAG21/Techniques/general/G213.html)
 - [DeviceOrientation Event Specification](https://www.w3.org/TR/orientation-event/)
-- [Detecting device orientation](https://www.w3.org/TR/orientation-event/#deviceorientation)
-- [DeviceMotionEvent](https://www.w3.org/TR/orientation-event/#devicemotion)
 
 ## Test Cases
 
@@ -59,7 +57,7 @@ For each test target, device motion or user motion can also be operated by [user
 
 #### Passed Example 1
 
-The [HTML document][] has [functionality][] that can be operated by device motion and can also be operated by [user interface components][] and [can be disabled][].
+The [HTML document][] has [functionality][] that can be operated by [device motion][] and [can be disabled][] and can also be operated by [user interface components][] and both the control for disabling, and the [user interface components][] are visible and included in the accessibility tree.
 
 ```html
 <html>
@@ -67,82 +65,74 @@ The [HTML document][] has [functionality][] that can be operated by device motio
     <title>Passed Example 1</title>
     <script>
       function activateSlider() {
-        //slider behavior
-        var slider = document.getElementById("motionSlider");
-        var output = document.getElementById("demo");
-        output.innerHTML = slider.value;
-        slider.oninput = function () {
-          output.innerHTML = this.value;
-        }
+        const slider = document.getElementById('motionSlider');
+        const output = document.getElementById('output');
 
-        document.getElementById('increase').addEventListener('click', function() {
+        function increaseSlider() {
           slider.value++;
           output.innerHTML = slider.value;
-        });
-
-        document.getElementById('decrease').addEventListener('click', function() {
-          slider.value--;
-          output.innerHTML = slider.value;
-        });
-
-        //slider motion detection
-        function handleOrientation(event) {
-
-          var z = document.getElementById("disable");
-          if (z.checked == false) {
-            var x = event.gamma;
-          } else {
-            x = 0;
-          }
-
-          if (x > 20) {
-            slider.value++;
-            output.innerHTML = slider.value;
-          } else if (x < -20) {
-            slider.value--;
-            output.innerHTML = slider.value;
-          }
         }
 
+        function decreaseSlider() {
+          slider.value--;
+          output.innerHTML = slider.value;
+        }
+
+        function handleOrientation(event) {
+          const disableMotion = document.getElementById('disableMotion');
+          const gamma = !disableMotion.checked ? event.gamma : 0;
+
+          if (gamma > 20) {
+            slider.value++;
+          } else if (gamma < -20) {
+            slider.value--;
+          }
+          output.innerHTML = slider.value;
+        }
+
+        document.getElementById('decreaseSlider').addEventListener('click', decreaseSlider);
+        document.getElementById('increaseSlider').addEventListener('click', increaseSlider);
         window.addEventListener('deviceorientation', handleOrientation);
       }
     </script>
   </head>
 
   <body onload="activateSlider();">
-
-    <pre class="output"></pre>
-
     <h1>Slider Motion Sensor Example </h1>
 
-    <p>Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the right
-      and left to adjust the slider value. The decrease and increase buttons also adjust the value. The check box disables
-      the motion sensing adjustment.</p>
+    <p>Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the right and left to adjust the slider value. The decrease and increase buttons also adjust the value. The check box disables the motion sensing adjustment.</p>
     <p>Note: This example may not work across all browsers.</p>
 
-    <div class="slidecontainer">
-      <button id="decrease" type="button" name="decrease">Decrease Value</button>
-      <input type="range" min="1" max="100" value="50" class="slider" id="motionSlider">
-      <button id="increase" type="button" name="increase">Increase Value</button>
-      <p aria-live="polite">Slider Value: <span id="demo"></span></p>
+    <div>
+      <button id="decreaseSlider" type="button">Decrease Value</button>
+      <input type="range" min="1" max="100" value="50" id="motionSlider" disabled>
+      <button id="increaseSlider" type="button">Increase Value</button>
+      <p aria-live="polite">Slider Value: <span id="output">50</span></p>
     </div>
-    <p><input type="checkbox" id="disable"><label for="disable">Disable Motion Actuation</label></p>
+    <div>
+      <input type="checkbox" id="disableMotion">
+      <label for="disableMotion">Disable Motion Actuation</label>
+    </div>
   </body>
 </html>
 ```
 
 #### Passed Example 2
 
-The [HTML document][] has [functionality][] that can be operated by user motion and can also be operated by [user interface components][] and [can be disabled][].
+The [HTML document][] has [functionality][] that can be operated by user motion and [can be disabled][] and can also be operated by [user interface components][] and both the control for disabling, and the [user interface components][] are visible and included in the accessibility tree.
 
 ```html
 <html>
   <head>
     <title>Passed Example 2</title>
     <style>
-      div {
-        margin: 0em;
-        padding: 2em;
+      div:first-child {
+        font-size: 1.5em;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+        height: 50vh;
+        width: 100vw;
       }
       #target {
         background: white;
@@ -150,47 +140,47 @@ The [HTML document][] has [functionality][] that can be operated by user motion 
       }
     </style>
     <script>
-      var evCache = new Array();
-      var prevDiff = -1;
+      let eventCache = new Array();
+      let prevDiff = -1;
 
       function init() {
-        var el=document.getElementById("target");
-        el.onpointerdown = pointerdown_handler;
-        el.onpointermove = pointermove_handler;
+        const target = document.getElementById('target');
+        target.onpointerdown = pointerdown_handler;
+        target.onpointermove = pointermove_handler;
 
-        el.onpointerup = pointerup_handler;
-        el.onpointercancel = pointerup_handler;
-        el.onpointerout = pointerup_handler;
-        el.onpointerleave = pointerup_handler;
+        target.onpointerup = pointerup_handler;
+        target.onpointercancel = pointerup_handler;
+        target.onpointerout = pointerup_handler;
+        target.onpointerleave = pointerup_handler;
       }
 
-      function pointerdown_handler(ev) {
-        evCache.push(ev);
+      function pointerdown_handler(event) {
+        eventCache.push(event);
       }
 
-      function pointermove_handler(ev) {
-        ev.target.style.border = "dashed";
-        for (var i = 0; i < evCache.length; i++) {
-          if (ev.pointerId == evCache[i].pointerId) {
-            evCache[i] = ev;
+      function pointermove_handler(event) {
+        event.target.style.border = 'dashed';
+        for (let i = 0; i < eventCache.length; i++) {
+          if (event.pointerId === eventCache[i].pointerId) {
+            eventCache[i] = event;
             break;
           }
         }
 
-        if (evCache.length == 2) {
-          var curDiff = Math.abs(evCache[0].clientX - evCache[1].clientX);
+        if (eventCache.length === 2) {
+          const curDiff = Math.abs(eventCache[0].clientX - eventCache[1].clientX);
 
           if (prevDiff > 0) {
             if (curDiff > prevDiff) {
-              var disable = document.getElementById("disable");
-              if (disable.checked == false) {
-                ev.target.style.background = "pink";
+              const disable = document.getElementById('disable');
+              if (!disable.checked) {
+                event.target.style.background = 'pink';
               }
             }
             if (curDiff < prevDiff) {
-              var disable = document.getElementById("disable");
-              if (disable.checked == false) {
-                ev.target.style.background = "lightblue";
+              const disable = document.getElementById('disable');
+              if (!disable.checked) {
+                event.target.style.background = 'lightblue';
               }
             }
           }
@@ -199,48 +189,49 @@ The [HTML document][] has [functionality][] that can be operated by user motion 
         }
       }
 
-      function pointerup_handler(ev) {
-        remove_event(ev);
-        ev.target.style.background = "white";
-        ev.target.style.border = "1px solid black";
+      function pointerup_handler(event) {
+        remove_event(event);
+        event.target.style.background = 'white';
+        event.target.style.border = '1px solid black';
 
-        if (evCache.length < 2) {
+        if (eventCache.length < 2) {
           prevDiff = -1;
         }
       }
 
-      function remove_event(ev) {
-        for (var i = 0; i < evCache.length; i++) {
-          if (evCache[i].pointerId == ev.pointerId) {
-            evCache.splice(i, 1);
+      function remove_event(event) {
+        for (let i = 0; i < eventCache.length; i++) {
+          if (eventCache[i].pointerId === event.pointerId) {
+            eventCache.splice(i, 1);
             break;
           }
         }
       }
 
       function changeBackgroundColor(color) {
-        var el=document.getElementById("target");
-        el.style.background = color;
+        const target = document.getElementById('target');
+        target.style.background = color;
       }
     </script>
   </head>
-  <body onload="init();" style="touch-action:none">
-    <div id="target">Touch and Hold with 2 pointers, then pinch in or out.<br/>
+  <body onload='init();' style='touch-action:none'>
+    <div id='target'>Touch and Hold with 2 pointers, then pinch in or out horizontally.<br/>
         The background color will change to pink if the pinch is opening (Zoom In) 
         or changes to lightblue if the pinch is closing (Zoom out).</div>
-    <button onclick="changeBackgroundColor('lightblue');">Change background color to lightblue</button>
-    <button onclick="changeBackgroundColor('pink');">Change background color to pink</button>
-    <button onclick="changeBackgroundColor('white');">reset color</button>
-    <input type="checkbox" id="disable"><label for="disable">Disable Motion Actuation</label>
+    <div>
+      <button onclick="changeBackgroundColor('lightblue');">Change background color to lightblue</button>
+      <button onclick="changeBackgroundColor('pink');">Change background color to pink</button>
+      <button onclick="changeBackgroundColor('white');">Reset color</button>
+      <label for='disable'>Disable pinching color change</label>
+      <input type='checkbox' id='disable'>
+    </div>
   </body>
 </html>
 ```
 
-### Failed
-
 #### Failed Example 1
 
-The [HTML document][] has [functionality][] that can be operated by device motion and can also be operated by [user interface components][] but cannot be disabled.
+The [HTML document][] has [functionality][] that can be operated by [device motion][] and [can't be disabled][].
 
 ```html
 <html>
@@ -248,57 +239,32 @@ The [HTML document][] has [functionality][] that can be operated by device motio
     <title>Failed Example 1</title>
     <script>
       function activateSlider() {
-        //slider behavior
-        var slider = document.getElementById("motionSlider");
-        var output = document.getElementById("demo");
-        output.innerHTML = slider.value;
-        slider.oninput = function () {
-          output.innerHTML = this.value;
-        }
+        const slider = document.getElementById('motionSlider');
+        const output = document.getElementById('output');
 
-        document.getElementById('increase').addEventListener('click', function() {
-          slider.value++;
-          output.innerHTML = slider.value;
-        });
-
-        document.getElementById('decrease').addEventListener('click', function() {
-          slider.value--;
-          output.innerHTML = slider.value;
-        });
-
-        //slider motion detection
         function handleOrientation(event) {
-
-          var x = event.gamma;
-
-          if (x > 20) {
+          if (event.gamma > 20) {
             slider.value++;
-            output.innerHTML = slider.value;
-          } else if (x < -20) {
+          } else if (event.gamma < -20) {
             slider.value--;
-            output.innerHTML = slider.value;
           }
+          output.innerHTML = slider.value;
         }
 
         window.addEventListener('deviceorientation', handleOrientation);
       }
     </script>
   </head>
+
   <body onload="activateSlider();">
-
-    <pre class="output"></pre>
-
     <h1>Slider Motion Sensor Example </h1>
 
-    <p>Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the right
-      and left to adjust the slider value. The decrease and increase buttons also adjust the value.</p>
+    <p>Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the right and left to adjust the slider value.</p>
     <p>Note: This example may not work across all browsers.</p>
 
-    <div class="slidecontainer">
-      <button id="decrease" type="button" name="decrease">Decrease Value</button>
-      <input type="range" min="1" max="100" value="50" class="slider" id="motionSlider">
-      <button id="increase" type="button" name="increase">Increase Value</button>
-      <p aria-live="polite">Slider Value: <span id="demo"></span></p>
+    <div>
+      <input type="range" min="1" max="100" value="50" id="motionSlider" disabled>
+      <p aria-live="polite">Slider Value: <span id="output">50</span></p>
     </div>
   </body>
 </html>
@@ -306,7 +272,7 @@ The [HTML document][] has [functionality][] that can be operated by device motio
 
 #### Failed Example 2
 
-The [HTML document][] has [functionality][] that can be operated by device motion, [can be disabled][], but cannot be operated by [user interface components][].
+The [HTML document][] has [functionality][] that can be operated by [device motion][] and [can be disabled][], and the control for disabling is visible but is not included in the accessibility tree.
 
 ```html
 <html>
@@ -314,31 +280,20 @@ The [HTML document][] has [functionality][] that can be operated by device motio
     <title>Failed Example 2</title>
     <script>
       function activateSlider() {
-        //slider behavior
-        var slider = document.getElementById("motionSlider");
-        var output = document.getElementById("demo");
-        output.innerHTML = slider.value;
-        slider.oninput = function () {
-          output.innerHTML = this.value;
-        }
+        const slider = document.getElementById('motionSlider');
+        const output = document.getElementById('output');
 
-        //slider motion detection
         function handleOrientation(event) {
+          const disableMotion = document.getElementById('disableMotion');
+          const gamma = !disableMotion.checked ? event.gamma : 0;
 
-          var z = document.getElementById("disable");
-          if (z.checked == false) {
-            var x = event.gamma;
-          } else {
-            x = 0;
-          }
-
-          if (x > 20) {
+          if (gamma > 20) {
             slider.value++;
-            output.innerHTML = slider.value;
-          } else if (x < -20) {
+          } else if (gamma < -20) {
             slider.value--;
             output.innerHTML = slider.value;
           }
+          output.innerHTML = slider.value;
         }
 
         window.addEventListener('deviceorientation', handleOrientation);
@@ -347,27 +302,26 @@ The [HTML document][] has [functionality][] that can be operated by device motio
   </head>
 
   <body onload="activateSlider();">
-
-    <pre class="output"></pre>
-
     <h1>Slider Motion Sensor Example </h1>
 
-    <p>Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the right
-      and left to adjust the slider value. The check box disables the motion sensing adjustment.</p>
+    <p>Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the right and left to adjust the slider value. The check box disables the motion sensing adjustment.</p>
     <p>Note: This example may not work across all browsers.</p>
 
-    <div class="slidecontainer">
-      <input type="range" min="1" max="100" value="50" class="slider" id="motionSlider" disabled>
-      <p aria-live="polite">Slider Value: <span id="demo"></span></p>
+    <div>
+      <input type="range" min="1" max="100" value="50" id="motionSlider" disabled>
+      <p aria-live="polite">Slider Value: <span id="output">50</span></p>
     </div>
-    <p><input type="checkbox" id="disable"><label for="disable">Disable Motion Actuation</label></p>
+    <div aria-hidden="true">
+      <input type="checkbox" id="disableMotion">
+      <label for="disableMotion">Disable pinching color change</label>
+    </div>
   </body>
 </html>
 ```
 
 #### Failed Example 3
 
-The [HTML document][] has [functionality][] that can be operated by device motion but cannot be operated by [user interface components][] and cannot be disabled.
+The [HTML document][] has [functionality][] that can be operated by [device motion][] and [can be disabled][], and the control for disabling is included in the accessibility tree but is not visible.
 
 ```html
 <html>
@@ -375,45 +329,40 @@ The [HTML document][] has [functionality][] that can be operated by device motio
     <title>Failed Example 3</title>
     <script>
       function activateSlider() {
-        //slider behavior
-        var slider = document.getElementById("motionSlider");
-        var output = document.getElementById("demo");
-        output.innerHTML = slider.value;
-        slider.oninput = function () {
-          output.innerHTML = this.value;
-        }
+        const slider = document.getElementById('motionSlider');
+        const output = document.getElementById('output');
 
-        //slider motion detection
         function handleOrientation(event) {
+          const disableMotion = document.getElementById('disableMotion');
+          const gamma = !disableMotion.checked ? event.gamma : 0;
 
-          var x = event.gamma;
-
-          if (x > 20) {
+          if (gamma > 20) {
             slider.value++;
-            output.innerHTML = slider.value;
-          } else if (x < -20) {
+          } else if (gamma < -20) {
             slider.value--;
             output.innerHTML = slider.value;
           }
+          output.innerHTML = slider.value;
         }
 
         window.addEventListener('deviceorientation', handleOrientation);
       }
     </script>
   </head>
+
   <body onload="activateSlider();">
-
-    <pre class="output"></pre>
-
     <h1>Slider Motion Sensor Example </h1>
 
-    <p>Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the right
-      and left to adjust the slider value.</p>
+    <p>Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the right and left to adjust the slider value. The check box disables the motion sensing adjustment.</p>
     <p>Note: This example may not work across all browsers.</p>
 
-    <div class="slidecontainer">
-      <input type="range" min="1" max="100" value="50" class="slider" id="motionSlider" disabled>
-      <p aria-live="polite">Slider Value: <span id="demo"></span></p>
+    <div>
+      <input type="range" min="1" max="100" value="50" id="motionSlider" disabled>
+      <p aria-live="polite">Slider Value: <span id="output">50</span></p>
+    </div>
+    <div style="position: absolute;margin-left: -9999px;">
+      <input type="checkbox" id="disableMotion">
+      <label for="disableMotion">Disable pinching color change</label>
     </div>
   </body>
 </html>
@@ -421,7 +370,7 @@ The [HTML document][] has [functionality][] that can be operated by device motio
 
 #### Failed Example 4
 
-The [HTML document][] has [functionality][] that can be operated by user motion and can also be operated by [user interface components][] but cannot be disabled.
+The [HTML document][] has [functionality][] that can be operated by user motion and [can't be disabled][].
 
 ```html
 <html>
@@ -429,8 +378,12 @@ The [HTML document][] has [functionality][] that can be operated by user motion 
     <title>Failed Example 4</title>
     <style>
       div {
-        margin: 0em;
-        padding: 2em;
+        font-size: 1.5em;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+        height: 50vh;
+        width: 100vw;
       }
       #target {
         background: white;
@@ -438,42 +391,41 @@ The [HTML document][] has [functionality][] that can be operated by user motion 
       }
     </style>
     <script>
-      var evCache = new Array();
-      var prevDiff = -1;
+      let eventCache = new Array();
+      let prevDiff = -1;
 
       function init() {
-        var el=document.getElementById("target");
-        el.onpointerdown = pointerdown_handler;
-        el.onpointermove = pointermove_handler;
+        const target = document.getElementById('target');
+        target.onpointerdown = pointerdown_handler;
+        target.onpointermove = pointermove_handler;
 
-        el.onpointerup = pointerup_handler;
-        el.onpointercancel = pointerup_handler;
-        el.onpointerout = pointerup_handler;
-        el.onpointerleave = pointerup_handler;
+        target.onpointerup = pointerup_handler;
+        target.onpointercancel = pointerup_handler;
+        target.onpointerout = pointerup_handler;
+        target.onpointerleave = pointerup_handler;
       }
 
-      function pointerdown_handler(ev) {
-        evCache.push(ev);
+      function pointerdown_handler(event) {
+        eventCache.push(event);
       }
 
-      function pointermove_handler(ev) {
-        ev.target.style.border = "dashed";
-        for (var i = 0; i < evCache.length; i++) {
-          if (ev.pointerId == evCache[i].pointerId) {
-            evCache[i] = ev;
+      function pointermove_handler(event) {
+        event.target.style.border = 'dashed';
+        for (let i = 0; i < eventCache.length; i++) {
+          if (event.pointerId === eventCache[i].pointerId) {
+            eventCache[i] = event;
             break;
           }
         }
 
-        if (evCache.length == 2) {
-          var curDiff = Math.abs(evCache[0].clientX - evCache[1].clientX);
-
+        if (eventCache.length === 2) {
           if (prevDiff > 0) {
+            const curDiff = Math.abs(eventCache[0].clientX - eventCache[1].clientX);
+
             if (curDiff > prevDiff) {
-              ev.target.style.background = "pink";
-            }
-            if (curDiff < prevDiff) {
-              ev.target.style.background = "lightblue";
+              event.target.style.background = 'pink';
+            } else if (curDiff < prevDiff) {
+              event.target.style.background = 'lightblue';
             }
           }
 
@@ -481,54 +433,50 @@ The [HTML document][] has [functionality][] that can be operated by user motion 
         }
       }
 
-      function pointerup_handler(ev) {
-        remove_event(ev);
-        ev.target.style.background = "white";
-        ev.target.style.border = "1px solid black";
+      function pointerup_handler(event) {
+        remove_event(event);
+        event.target.style.background = 'white';
+        event.target.style.border = '1px solid black';
 
-        if (evCache.length < 2) {
+        if (eventCache.length < 2) {
           prevDiff = -1;
         }
       }
 
-      function remove_event(ev) {
-        for (var i = 0; i < evCache.length; i++) {
-          if (evCache[i].pointerId == ev.pointerId) {
-            evCache.splice(i, 1);
+      function remove_event(event) {
+        for (let i = 0; i < eventCache.length; i++) {
+          if (eventCache[i].pointerId === event.pointerId) {
+            eventCache.splice(i, 1);
             break;
           }
         }
       }
-
-      function changeBackgroundColor(color) {
-        var el=document.getElementById("target");
-        el.style.background = color;
-      }
     </script>
   </head>
-  <body onload="init();" style="touch-action:none">
-    <div id="target">Touch and Hold with 2 pointers, then pinch in or out.<br/>
+  <body onload='init();' style='touch-action:none'>
+    <div id='target'>Touch and Hold with 2 pointers, then pinch in or out horizontally.<br/>
         The background color will change to pink if the pinch is opening (Zoom In) 
         or changes to lightblue if the pinch is closing (Zoom out).</div>
-    <button onclick="changeBackgroundColor('lightblue');">Change background color to lightblue</button>
-    <button onclick="changeBackgroundColor('pink');">Change background color to pink</button>
-    <button onclick="changeBackgroundColor('white');">reset color</button>
   </body>
 </html>
 ```
 
 #### Failed Example 5
 
-The [HTML document][] has [functionality][] that can be operated by user motion, [can be disabled][], but cannot be operated by [user interface components][].
+The [HTML document][] has [functionality][] that can be operated by user motion and [can be disabled][], and the control for disabling is visible but is not included in the accessibility tree.
 
 ```html
 <html>
   <head>
     <title>Failed Example 5</title>
     <style>
-      div {
-        margin: 0em;
-        padding: 2em;
+      div:first-child {
+        font-size: 1.5em;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+        height: 50vh;
+        width: 100vw;
       }
       #target {
         background: white;
@@ -536,48 +484,42 @@ The [HTML document][] has [functionality][] that can be operated by user motion,
       }
     </style>
     <script>
-      var evCache = new Array();
-      var prevDiff = -1;
+      let eventCache = new Array();
+      let prevDiff = -1;
 
       function init() {
-        var el=document.getElementById("target");
-        el.onpointerdown = pointerdown_handler;
-        el.onpointermove = pointermove_handler;
+        const target = document.getElementById('target');
+        target.onpointerdown = pointerdown_handler;
+        target.onpointermove = pointermove_handler;
 
-        el.onpointerup = pointerup_handler;
-        el.onpointercancel = pointerup_handler;
-        el.onpointerout = pointerup_handler;
-        el.onpointerleave = pointerup_handler;
+        target.onpointerup = pointerup_handler;
+        target.onpointercancel = pointerup_handler;
+        target.onpointerout = pointerup_handler;
+        target.onpointerleave = pointerup_handler;
       }
 
-      function pointerdown_handler(ev) {
-        evCache.push(ev);
+      function pointerdown_handler(event) {
+        eventCache.push(event);
       }
 
-      function pointermove_handler(ev) {
-        ev.target.style.border = "dashed";
-        for (var i = 0; i < evCache.length; i++) {
-          if (ev.pointerId == evCache[i].pointerId) {
-            evCache[i] = ev;
+      function pointermove_handler(event) {
+        event.target.style.border = 'dashed';
+        for (let i = 0; i < eventCache.length; i++) {
+          if (event.pointerId === eventCache[i].pointerId) {
+            eventCache[i] = event;
             break;
           }
         }
 
-        if (evCache.length == 2) {
-          var curDiff = Math.abs(evCache[0].clientX - evCache[1].clientX);
-
+        if (eventCache.length === 2) {
           if (prevDiff > 0) {
-            if (curDiff > prevDiff) {
-              var disable = document.getElementById("disable");
-              if (disable.checked == false) {
-                ev.target.style.background = "pink";
-              }
-            }
-            if (curDiff < prevDiff) {
-              var disable = document.getElementById("disable");
-              if (disable.checked == false) {
-                ev.target.style.background = "lightblue";
-              }
+            const curDiff = Math.abs(eventCache[0].clientX - eventCache[1].clientX);
+            const disable = document.getElementById('disable');
+
+            if (curDiff > prevDiff && !disable.checked) {
+              event.target.style.background = 'pink';
+            } else if (curDiff < prevDiff && !disable.checked) {
+              event.target.style.background = 'lightblue';
             }
           }
 
@@ -585,48 +527,55 @@ The [HTML document][] has [functionality][] that can be operated by user motion,
         }
       }
 
-      function pointerup_handler(ev) {
-        remove_event(ev);
-        ev.target.style.background = "white";
-        ev.target.style.border = "1px solid black";
+      function pointerup_handler(event) {
+        remove_event(event);
+        event.target.style.background = 'white';
+        event.target.style.border = '1px solid black';
 
-        if (evCache.length < 2) {
+        if (eventCache.length < 2) {
           prevDiff = -1;
         }
       }
 
-      function remove_event(ev) {
-        for (var i = 0; i < evCache.length; i++) {
-          if (evCache[i].pointerId == ev.pointerId) {
-            evCache.splice(i, 1);
+      function remove_event(event) {
+        for (let i = 0; i < eventCache.length; i++) {
+          if (eventCache[i].pointerId === event.pointerId) {
+            eventCache.splice(i, 1);
             break;
           }
         }
       }
     </script>
   </head>
-  <body onload="init();" style="touch-action:none">
-    <div id="target">Touch and Hold with 2 pointers, then pinch in or out.<br/>
+  <body onload='init();' style='touch-action:none'>
+    <div id='target'>Touch and Hold with 2 pointers, then pinch in or out horizontally.<br/>
         The background color will change to pink if the pinch is opening (Zoom In) 
-        or changes to lightblue if the pinch is closing (Zoom out).</div>
-
-    <input type="checkbox" id="disable"><label for="disable">Disable Motion Actuation</label>
+        or changes to lightblue if the pinch is closing (Zoom out).
+    </div>
+    <div aria-hidden="true">
+      <label for='disable'>Disable pinching color change</label>
+      <input type='checkbox' id='disable'>
+    </div>  
   </body>
 </html>
 ```
 
 #### Failed Example 6
 
-The [HTML document][] has [functionality][] that can be operated by user motion but cannot be operated by [user interface components][] and cannot be disabled.
+The [HTML document][] has [functionality][] that can be operated by user motion and [can be disabled][], and the control for disabling is included in the accessibility tree but is not visible.
 
 ```html
 <html>
   <head>
-    <title>Failed Example 6</title>
+    <title>Passed Example 6</title>
     <style>
-      div {
-        margin: 0em;
-        padding: 2em;
+      div:first-child {
+        font-size: 1.5em;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+        height: 50vh;
+        width: 100vw;
       }
       #target {
         background: white;
@@ -634,42 +583,42 @@ The [HTML document][] has [functionality][] that can be operated by user motion 
       }
     </style>
     <script>
-      var evCache = new Array();
-      var prevDiff = -1;
+      let eventCache = new Array();
+      let prevDiff = -1;
 
       function init() {
-        var el=document.getElementById("target");
-        el.onpointerdown = pointerdown_handler;
-        el.onpointermove = pointermove_handler;
+        const target = document.getElementById('target');
+        target.onpointerdown = pointerdown_handler;
+        target.onpointermove = pointermove_handler;
 
-        el.onpointerup = pointerup_handler;
-        el.onpointercancel = pointerup_handler;
-        el.onpointerout = pointerup_handler;
-        el.onpointerleave = pointerup_handler;
+        target.onpointerup = pointerup_handler;
+        target.onpointercancel = pointerup_handler;
+        target.onpointerout = pointerup_handler;
+        target.onpointerleave = pointerup_handler;
       }
 
-      function pointerdown_handler(ev) {
-        evCache.push(ev);
+      function pointerdown_handler(event) {
+        eventCache.push(event);
       }
 
-      function pointermove_handler(ev) {
-        ev.target.style.border = "dashed";
-        for (var i = 0; i < evCache.length; i++) {
-          if (ev.pointerId == evCache[i].pointerId) {
-            evCache[i] = ev;
+      function pointermove_handler(event) {
+        event.target.style.border = 'dashed';
+        for (let i = 0; i < eventCache.length; i++) {
+          if (event.pointerId === eventCache[i].pointerId) {
+            eventCache[i] = event;
             break;
           }
         }
 
-        if (evCache.length == 2) {
-          var curDiff = Math.abs(evCache[0].clientX - evCache[1].clientX);
-
+        if (eventCache.length === 2) {
           if (prevDiff > 0) {
-            if (curDiff > prevDiff) {
-              ev.target.style.background = "pink";
-            }
-            if (curDiff < prevDiff) {
-              ev.target.style.background = "lightblue";
+            const curDiff = Math.abs(eventCache[0].clientX - eventCache[1].clientX);
+            const disable = document.getElementById('disable');
+
+            if (curDiff > prevDiff && !disable.checked) {
+              event.target.style.background = 'pink';
+            } else if (curDiff < prevDiff && !disable.checked) {
+              event.target.style.background = 'lightblue';
             }
           }
 
@@ -677,30 +626,490 @@ The [HTML document][] has [functionality][] that can be operated by user motion 
         }
       }
 
-      function pointerup_handler(ev) {
-        remove_event(ev);
-        ev.target.style.background = "white";
-        ev.target.style.border = "1px solid black";
+      function pointerup_handler(event) {
+        remove_event(event);
+        event.target.style.background = 'white';
+        event.target.style.border = '1px solid black';
 
-        if (evCache.length < 2) {
+        if (eventCache.length < 2) {
           prevDiff = -1;
         }
       }
 
-      function remove_event(ev) {
-        for (var i = 0; i < evCache.length; i++) {
-          if (evCache[i].pointerId == ev.pointerId) {
-            evCache.splice(i, 1);
+      function remove_event(event) {
+        for (let i = 0; i < eventCache.length; i++) {
+          if (eventCache[i].pointerId === event.pointerId) {
+            eventCache.splice(i, 1);
             break;
           }
         }
       }
     </script>
   </head>
-  <body onload="init();" style="touch-action:none">
-    <div id="target">Touch and Hold with 2 pointers, then pinch in or out.<br/>
+  <body onload='init();' style='touch-action:none'>
+    <div id='target'>Touch and Hold with 2 pointers, then pinch in or out horizontally.<br/>
+        The background color will change to pink if the pinch is opening (Zoom In) 
+        or changes to lightblue if the pinch is closing (Zoom out).
+    </div>
+    <div style="position: absolute;margin-left: -9999px;">
+      <label for='disable'>Disable pinching color change</label>
+      <input type='checkbox' id='disable'>
+    </div>  
+  </body>
+</html>
+```
+
+#### Failed Example 7
+
+The [HTML document][] has [functionality][] that can be operated by [device motion][] but cannot be operated by [user interface components][].
+
+```html
+<html>
+  <head>
+    <title>Failed Example 7</title>
+    <script>
+      function activateSlider() {
+        const slider = document.getElementById('motionSlider');
+        const output = document.getElementById('output');
+
+        function handleOrientation(event) {
+          if (event.gamma > 20) {
+            slider.value++;
+          } else if (event.gamma < -20) {
+            slider.value--;
+          }
+          output.innerHTML = slider.value;
+        }
+
+        window.addEventListener('deviceorientation', handleOrientation);
+      }
+    </script>
+  </head>
+
+  <body onload="activateSlider();">
+    <h1>Slider Motion Sensor Example </h1>
+
+    <p>Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the 
+    right and left to adjust the slider value.</p>
+    <p>Note: This example may not work across all browsers.</p>
+
+    <div>
+      <input type="range" min="1" max="100" value="50" id="motionSlider" disabled>
+      <p aria-live="polite">Slider Value: <span id="output">50</span></p>
+    </div>
+  </body>
+</html>
+```
+
+#### Failed Example 8
+
+The [HTML document][] has [functionality][] that can be operated by [device motion][] and can also be operated by [user interface components][] and they are visible but are not included in the accessibility tree.
+
+```html
+<html>
+  <head>
+    <title>Failed Example 8</title>
+    <script>
+      function activateSlider() {
+        const slider = document.getElementById('motionSlider');
+        const output = document.getElementById('output');
+
+        function increaseSlider() {
+          slider.value++;
+          output.innerHTML = slider.value;
+        }
+
+        function decreaseSlider() {
+          slider.value--;
+          output.innerHTML = slider.value;
+        }
+
+        function handleOrientation(event) {
+          if (event.gamma > 20) {
+            slider.value++;
+          } else if (event.gamma < -20) {
+            slider.value--;
+          }
+          output.innerHTML = slider.value;
+        }
+
+        document.getElementById('decreaseSlider').addEventListener('click', decreaseSlider);
+        document.getElementById('increaseSlider').addEventListener('click', increaseSlider);
+        window.addEventListener('deviceorientation', handleOrientation);
+      }
+    </script>
+  </head>
+
+  <body onload="activateSlider();">
+    <h1>Slider Motion Sensor Example </h1>
+
+    <p>Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the 
+    right and left to adjust the slider value. The decrease and increase buttons also adjust the value.</p>
+    <p>Note: This example may not work across all browsers.</p>
+
+    <div>
+      <button id="decrease" type="button" name="decrease" aria-hidden="true">Decrease Value</button>
+      <input type="range" min="1" max="100" value="50" id="motionSlider" disabled>
+      <button id="increase" type="button" name="increase" aria-hidden="true">Increase Value</button>
+      <p aria-live="polite">Slider Value: <span id="output">50</span></p>
+    </div>
+  </body>
+</html>
+```
+
+#### Failed Example 9
+
+The [HTML document][] has [functionality][] that can be operated by [device motion][] and can also be operated by [user interface components][] and they are included in the accessibility tree but are not visible.
+
+```html
+<html>
+  <head>
+    <title>Failed Example 9</title>
+    <script>
+      function activateSlider() {
+        const slider = document.getElementById('motionSlider');
+        const output = document.getElementById('output');
+
+        function increaseSlider() {
+          slider.value++;
+          output.innerHTML = slider.value;
+        }
+
+        function decreaseSlider() {
+          slider.value--;
+          output.innerHTML = slider.value;
+        }
+
+        function handleOrientation(event) {
+          if (event.gamma > 20) {
+            slider.value++;
+          } else if (event.gamma < -20) {
+            slider.value--;
+          }
+          output.innerHTML = slider.value;
+        }
+
+        document.getElementById('decreaseSlider').addEventListener('click', decreaseSlider);
+        document.getElementById('increaseSlider').addEventListener('click', increaseSlider);
+        window.addEventListener('deviceorientation', handleOrientation);
+      }
+    </script>
+  </head>
+
+  <body onload="activateSlider();">
+    <h1>Slider Motion Sensor Example </h1>
+
+    <p>Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the 
+    right and left to adjust the slider value. The decrease and increase buttons also adjust the value.</p>
+    <p>Note: This example may not work across all browsers.</p>
+
+    <div>
+      <button id="decrease" type="button" name="decrease" style="position: absolute; margin-left: -9999px;">Decrease Value</button>
+      <input type="range" min="1" max="100" value="50" id="motionSlider" disabled>
+      <button id="increase" type="button" name="increase" style="position: absolute; margin-left: -9999px;">Increase Value</button>
+      <p aria-live="polite">Slider Value: <span id="output">50</span></p>
+    </div>
+  </body>
+</html>
+```
+
+#### Failed Example 10
+
+The [HTML document][] has [functionality][] that can be operated by user motion but cannot be operated by [user interface components][].
+
+```html
+<html>
+  <head>
+    <title>Failed Example 10</title>
+    <style>
+      div {
+        font-size: 1.5em;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+        height: 50vh;
+        width: 100vw;
+      }
+      #target {
+        background: white;
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+      let eventCache = new Array();
+      let prevDiff = -1;
+
+      function init() {
+        const target = document.getElementById('target');
+        target.onpointerdown = pointerdown_handler;
+        target.onpointermove = pointermove_handler;
+
+        target.onpointerup = pointerup_handler;
+        target.onpointercancel = pointerup_handler;
+        target.onpointerout = pointerup_handler;
+        target.onpointerleave = pointerup_handler;
+      }
+
+      function pointerdown_handler(event) {
+        eventCache.push(event);
+      }
+
+      function pointermove_handler(event) {
+        event.target.style.border = 'dashed';
+        for (let i = 0; i < eventCache.length; i++) {
+          if (event.pointerId === eventCache[i].pointerId) {
+            eventCache[i] = event;
+            break;
+          }
+        }
+
+        if (eventCache.length === 2) {
+          if (prevDiff > 0) {
+            const curDiff = Math.abs(eventCache[0].clientX - eventCache[1].clientX);
+
+            if (curDiff > prevDiff) {
+              event.target.style.background = 'pink';
+            } else if (curDiff < prevDiff) {
+              event.target.style.background = 'lightblue';
+            }
+          }
+
+          prevDiff = curDiff;
+        }
+      }
+
+      function pointerup_handler(event) {
+        remove_event(event);
+        event.target.style.background = 'white';
+        event.target.style.border = '1px solid black';
+
+        if (eventCache.length < 2) {
+          prevDiff = -1;
+        }
+      }
+
+      function remove_event(event) {
+        for (let i = 0; i < eventCache.length; i++) {
+          if (eventCache[i].pointerId === event.pointerId) {
+            eventCache.splice(i, 1);
+            break;
+          }
+        }
+      }
+    </script>
+  </head>
+  <body onload='init();' style='touch-action:none'>
+    <div id='target'>Touch and Hold with 2 pointers, then pinch in or out horizontally.<br/>
         The background color will change to pink if the pinch is opening (Zoom In) 
         or changes to lightblue if the pinch is closing (Zoom out).</div>
+  </body>
+</html>
+```
+
+#### Failed Example 11
+
+The [HTML document][] has [functionality][] that can be operated by user motion and can also be operated by [user interface components][] and they are visible but are not included in the accessibility tree.
+
+```html
+<html>
+  <head>
+    <title>Failed Example 11</title>
+    <style>
+      div:first-child {
+        font-size: 1.5em;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+        height: 50vh;
+        width: 100vw;
+      }
+      #target {
+        background: white;
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+      let eventCache = new Array();
+      let prevDiff = -1;
+
+      function init() {
+        const target = document.getElementById('target');
+        target.onpointerdown = pointerdown_handler;
+        target.onpointermove = pointermove_handler;
+
+        target.onpointerup = pointerup_handler;
+        target.onpointercancel = pointerup_handler;
+        target.onpointerout = pointerup_handler;
+        target.onpointerleave = pointerup_handler;
+      }
+
+      function pointerdown_handler(event) {
+        eventCache.push(event);
+      }
+
+      function pointermove_handler(event) {
+        event.target.style.border = 'dashed';
+        for (let i = 0; i < eventCache.length; i++) {
+          if (event.pointerId === eventCache[i].pointerId) {
+            eventCache[i] = event;
+            break;
+          }
+        }
+
+        if (eventCache.length === 2) {
+          if (prevDiff > 0) {
+            const curDiff = Math.abs(eventCache[0].clientX - eventCache[1].clientX);
+
+            if (curDiff > prevDiff) {
+              event.target.style.background = 'pink';
+            } else if (curDiff < prevDiff) {
+              event.target.style.background = 'lightblue';
+            }
+          }
+
+          prevDiff = curDiff;
+        }
+      }
+
+      function pointerup_handler(event) {
+        remove_event(event);
+        event.target.style.background = 'white';
+        event.target.style.border = '1px solid black';
+
+        if (eventCache.length < 2) {
+          prevDiff = -1;
+        }
+      }
+
+      function remove_event(event) {
+        for (let i = 0; i < eventCache.length; i++) {
+          if (eventCache[i].pointerId === event.pointerId) {
+            eventCache.splice(i, 1);
+            break;
+          }
+        }
+      }
+
+      function changeBackgroundColor(color) {
+        const target = document.getElementById('target');
+        target.style.background = color;
+      }
+    </script>
+  </head>
+  <body onload='init();' style='touch-action:none'>
+    <div id='target'>Touch and Hold with 2 pointers, then pinch in or out horizontally.<br/>
+        The background color will change to pink if the pinch is opening (Zoom In) 
+        or changes to lightblue if the pinch is closing (Zoom out).
+    </div>
+    <div aria-hidden="true">
+      <button onclick="changeBackgroundColor('lightblue');">Change background color to lightblue</button>
+      <button onclick="changeBackgroundColor('pink');">Change background color to pink</button>
+      <button onclick="changeBackgroundColor('white');">Reset color</button>
+    </div>  
+  </body>
+</html>
+```
+
+#### Failed Example 12
+
+The [HTML document][] has [functionality][] that can be operated by user motion and can also be operated by [user interface components][] and they are included in the accessibility tree but are not visible.
+
+```html
+<html>
+  <head>
+    <title>Failed Example 12</title>
+    <style>
+      div:first-child {
+        font-size: 1.5em;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+        height: 50vh;
+        width: 100vw;
+      }
+      #target {
+        background: white;
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+      let eventCache = new Array();
+      let prevDiff = -1;
+
+      function init() {
+        const target = document.getElementById('target');
+        target.onpointerdown = pointerdown_handler;
+        target.onpointermove = pointermove_handler;
+
+        target.onpointerup = pointerup_handler;
+        target.onpointercancel = pointerup_handler;
+        target.onpointerout = pointerup_handler;
+        target.onpointerleave = pointerup_handler;
+      }
+
+      function pointerdown_handler(event) {
+        eventCache.push(event);
+      }
+
+      function pointermove_handler(event) {
+        event.target.style.border = 'dashed';
+        for (let i = 0; i < eventCache.length; i++) {
+          if (event.pointerId === eventCache[i].pointerId) {
+            eventCache[i] = event;
+            break;
+          }
+        }
+
+        if (eventCache.length === 2) {
+          if (prevDiff > 0) {
+            const curDiff = Math.abs(eventCache[0].clientX - eventCache[1].clientX);
+
+            if (curDiff > prevDiff) {
+              event.target.style.background = 'pink';
+            } else if (curDiff < prevDiff) {
+              event.target.style.background = 'lightblue';
+            }
+          }
+
+          prevDiff = curDiff;
+        }
+      }
+
+      function pointerup_handler(event) {
+        remove_event(event);
+        event.target.style.background = 'white';
+        event.target.style.border = '1px solid black';
+
+        if (eventCache.length < 2) {
+          prevDiff = -1;
+        }
+      }
+
+      function remove_event(event) {
+        for (let i = 0; i < eventCache.length; i++) {
+          if (eventCache[i].pointerId === event.pointerId) {
+            eventCache.splice(i, 1);
+            break;
+          }
+        }
+      }
+
+      function changeBackgroundColor(color) {
+        const target = document.getElementById('target');
+        target.style.background = color;
+      }
+    </script>
+  </head>
+  <body onload='init();' style='touch-action:none'>
+    <div id='target'>Touch and Hold with 2 pointers, then pinch in or out horizontally.<br/>
+        The background color will change to pink if the pinch is opening (Zoom In) 
+        or changes to lightblue if the pinch is closing (Zoom out).
+    </div>
+    <div style="position: absolute; margin-left: -9999px;">
+      <button onclick="changeBackgroundColor('lightblue');">Change background color to lightblue</button>
+      <button onclick="changeBackgroundColor('pink');">Change background color to pink</button>
+      <button onclick="changeBackgroundColor('white');">Reset color</button>
+    </div>  
   </body>
 </html>
 ```
@@ -709,7 +1118,7 @@ The [HTML document][] has [functionality][] that can be operated by user motion 
 
 #### Inapplicable Example 1
 
-The [HTML document][] does not have [functionality][] that can be operated by device motion or user motion.
+The [HTML document][] does not have [functionality][] that can be operated by [device motion][] or user motion.
 
 ```html
 <html>
@@ -735,3 +1144,6 @@ The document is not an [HTML document][].
 [secure browsing contexts]: https://www.w3.org/TR/secure-contexts/
 [can be disabled]: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#concept-fe-disabled
 [user interface components]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-user-interface-component
+[user interface component]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-user-interface-component
+[accessibility supported]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation#dfn-accessibility-supported
+[device motion]: https://www.w3.org/TR/orientation-event/#devicemotion

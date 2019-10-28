@@ -37,8 +37,8 @@ Any text node that includes one of the [visual reference words](#visual-referenc
 
 Each target that describes any [web content](https://www.w3.org/TR/WCAG21/#dfn-content) through the use of the [visual reference words](#visual-reference-words), is included in a [section of the content](#section-of-content) that also describes that [web content](https://www.w3.org/TR/WCAG21/#dfn-content) by a non-visual property, except if the target is not part of an instruction about [web content](https://www.w3.org/TR/WCAG21/#dfn-content) or the visual reference word is included in the described content.
 
-**Note**: The expectation doesn't mention the fact that the non-visual property description should be visible and included in the accessibility tree. This rule can be passed with alternatives that are not visible and included in the accessibility tree, but those sorts of content would fail other SC.
-**Note**: The discribed web content does not have to be positioned on the same web page.
+**Note**: The expectation doesn't mention the fact that the non-visual property description should be visible and included in the accessibility tree. This rule can be passed with alternatives that are not visible or alternatives that are not included in the accessibility tree. Those sorts of content would fail other SC.
+**Note**: The described web content does not have to be positioned on the same web page.
 
 ## Assumptions
 
@@ -155,7 +155,7 @@ The visual reference made by the word "right" is complemented by the non-visual 
 
 #### Passed Example 4
 
-This document is using the word "square" but in this case it is no instruction.
+This document is using the word "square" but in this case it is not an instruction about web content. In fact it is not even a reference of a shape in this case.
 
 ```html
 	<p>In mathemathics a square is the result of multiplying a number by itself.</p>
@@ -213,7 +213,7 @@ The button is indicated by the word "round". But the word is also included in th
 
 #### Passed Example 7
 
-The images are indicated by the words wide and narrow but the accessible names of the images also include the words wide and narrow.
+The images are indicated by the visual indicator words "narrow" and "wide". These words are also included in the accessible names of the images. Even through that indication is not visible, it is included in the accessibility tree which is sufficient to pass this rule.
 
 ```html
 	<p>The wide image is awesome. But the narrow image isn't.</p>

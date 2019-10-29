@@ -10,8 +10,9 @@ input_aspects:
   - CSS Styling
   - Audio output
   - Visual output
-authors:
-  - Brian Bors
+acknowledgements:
+  authors:
+    - Brian Bors
 ---
 
 ## Applicability

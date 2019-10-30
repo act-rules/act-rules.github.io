@@ -12,9 +12,11 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree # The tree that HTML is parsed into.
-authors:
-  - Annika Nietzio
-  - Jey Nandakumar
+acknowledgements:
+  authors:
+    - Jey Nandakumar
+  previous_authors:
+    - Annika Nietzio
 ---
 
 ## Applicability

@@ -13,8 +13,9 @@ accessibility_requirements:
     inapplicable: satisfied
 input_aspects:
   - DOM Tree
-authors:
-  - Anne Thyme Nørregaard
+acknowledgements:
+  authors:
+    - Anne Thyme Nørregaard
 ---
 
 ## Applicability

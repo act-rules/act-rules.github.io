@@ -28,7 +28,7 @@ authors:
 This rule applies to any [document](https://www.w3.org/TR/dom/#concept-document) where the [document element](https://www.w3.org/TR/dom/#document-element) is an HTML `html` element that:
 
 - has at least one HTML or SVG element that has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox`, `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox` and for which [input errors](https://www.w3.org/TR/WCAG21/#dfn-input-error) are [automatically detected](#automatic-error-detection)
-- has at least one [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) that is an HTML element with either `role=alert` or `aria-live=assertive` attributes that is present in the [document](https://www.w3.org/TR/dom/#concept-document) at the time it [completes loading](https://www.w3.org/TR/html52/dom.html#dom-documentreadystate-complete).
+- has at least one [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) that is an HTML element with either `role=alert` or `aria-live=assertive` attributes that is present in the [document](https://www.w3.org/TR/dom/#concept-document) after the [readiness](https://www.w3.org/TR/html53/dom.html#current-document-readiness) of the [document](https://www.w3.org/TR/dom/#concept-document) is equal to "complete".
 
 **Note**: The list of applicable [semantic roles](#semantic-role) is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
 

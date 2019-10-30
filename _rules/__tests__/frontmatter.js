@@ -1,17 +1,16 @@
 const describeRule = require('../../test-utils/describe-rule')
-// const scUrls = require('./../../_data/sc-urls.json')
 const { contributors } = require('./../../package.json')
 
 const contributorsNames = contributors.map(contributor => contributor.name.toLowerCase())
 
 describeRule('frontmatter', (ruleData, metaData) => {
 	const { frontmatter } = ruleData
-	const { rule_type, authors, accessibility_requirements } = frontmatter
+	const { rule_type, acknowledgements, accessibility_requirements } = frontmatter
 
 	/**
 	 * Check for `required` properties
 	 */
-	const requiredProps = ['id', 'name', 'rule_type', 'description', 'accessibility_requirements', 'authors']
+	const requiredProps = ['id', 'name', 'rule_type', 'description', 'accessibility_requirements', 'acknowledgements']
 	test.each(requiredProps)('has required property `%s`', requiredProp => {
 		expect(frontmatter).toHaveProperty(requiredProp)
 	})
@@ -42,7 +41,10 @@ describeRule('frontmatter', (ruleData, metaData) => {
 	/**
 	 * Check if listed `authors` have meta data as contributors in package.json
 	 */
-	test.each(authors)('has contributor data for author: `%s`', author => {
+
+	const { authors, previous_authors = [] } = acknowledgements
+	const allAuthors = [...authors, ...previous_authors]
+	test.each(allAuthors)('has contributor data for author: `%s`', author => {
 		expect(contributorsNames).toContain(author.toLowerCase())
 	})
 

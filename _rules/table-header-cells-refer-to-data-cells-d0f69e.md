@@ -39,7 +39,7 @@ _There are currently no assumptions._
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+- `headers` attribute may not be consistently announced by assistive technologies.
 
 ## Background
 

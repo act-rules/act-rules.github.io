@@ -56,7 +56,7 @@ Until browser support for the [SVG Accessibility API Mappings](https://www.w3.or
 
 #### Passed Example 1
 
-The `svg` element has an explicit role of `img` and an accessible name from the `title` element that does not contain only whitespace.
+The `svg` element has an explicit role of `img` and an accessible name from the `title` element that is not empty.
 
 ```html
 <p>How many circles are there?</p>
@@ -68,7 +68,7 @@ The `svg` element has an explicit role of `img` and an accessible name from the 
 
 #### Passed Example 2
 
-The `circle` element has an explicit role of `graphics-symbol` and an accessible name from the `aria-label` attribute that does not contain only whitespace.
+The `circle` element has an explicit role of `graphics-symbol` and an accessible name from the `aria-label` attribute that is not empty.
 
 ```html
 <p>How many circles are there?</p>
@@ -88,7 +88,7 @@ The `circle` element has an explicit role of `graphics-symbol` and an accessible
 
 #### Passed Example 3
 
-The `svg` element has an explicit role of `graphics-document` and an accessible name from the `title` element that does not contain only whitespace.
+The `svg` element has an explicit role of `graphics-document` and an accessible name from the `title` element that is not empty.
 
 ```html
 <p>How many circles are there?</p>

@@ -24,8 +24,9 @@ authors:
 
 The rule applies to any [visible][] [text node][] in the [flat tree][] of an [HTML document][] if:
 
-- the content of the [text node][] changes through an action that was not initiated by the user; and
-- the change happens anytime after the [readiness][document readiness] of the [HTML document][] the [text node][] belongs to is equal to "complete".
+- the content of the [text node][] changes through an action that was not initiated by the user;
+- the change happens anytime after the [readiness][document readiness] of the [HTML document][] the [text node][] belongs to is equal to "complete"; and
+- it is not the only [content][] in the [HTML document][].
 
 ## Expectation 1
 
@@ -66,6 +67,11 @@ The text node automatically updates every 3 seconds after the page completes loa
 	<p>Random number: <span id="target">1</span></p>
 	<input type="button" onclick="stop()" value="Stop updates" />
 
+	<p>
+		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
+		implement accessibility.
+	</p>
+
 	<script type="text/javascript">
 		function change() {
 			var target = document.getElementById('target')
@@ -93,6 +99,11 @@ The text node automatically updates every 3 seconds after the page completes loa
 <body onload="toggle()">
 	<p>Random number: <span id="target">1</span></p>
 	<input type="button" id="control" onclick="toggle()" value="Pause updates" />
+
+	<p>
+		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
+		implement accessibility.
+	</p>
 
 	<script type="text/javascript">
 		function change() {
@@ -130,6 +141,11 @@ The text node automatically updates every 3 seconds after the page completes loa
 <body onload="start()">
 	<p>Random number: <span id="target">1</span></p>
 
+	<p>
+		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
+		implement accessibility.
+	</p>
+
 	<script type="text/javascript">
 		function change() {
 			var target = document.getElementById('target')
@@ -152,6 +168,11 @@ The text node automatically updates every 3 seconds after the page completes loa
 <body onload="start()">
 	<p>Random number: <span id="target">1</span></p>
 	<input type="button" onclick="stop()" value="Stop updates" style="position: absolute; top: -9999px; left: -9999px;" />
+
+	<p>
+		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
+		implement accessibility.
+	</p>
 
 	<script type="text/javascript">
 		function change() {
@@ -181,6 +202,11 @@ The text node automatically updates every 3 seconds after the page completes loa
 	<p>Random number: <span id="target">1</span></p>
 	<span onclick="stop()" aria-hidden="true">Stop updates</span>
 
+	<p>
+		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
+		implement accessibility.
+	</p>
+
 	<script type="text/javascript">
 		function change() {
 			var target = document.getElementById('target')
@@ -208,6 +234,11 @@ The text node automatically updates every 3 seconds after the page completes loa
 <body onload="start()">
 	<p>Random number: <span id="target">1</span></p>
 	<span onclick="stop()" aria-label="">Stop updates</span>
+
+	<p>
+		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
+		implement accessibility.
+	</p>
 
 	<script type="text/javascript">
 		function change() {
@@ -238,6 +269,11 @@ The text node automatically updates every 3 seconds after the page completes loa
 	<div onclick="stop()" aria-label="   ">
 		<span style="background-color:#333; color:white; padding:5px">Stop updates</span>
 	</div>
+
+	<p>
+		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
+		implement accessibility.
+	</p>
 
 	<script type="text/javascript">
 		function change() {
@@ -299,7 +335,12 @@ The text node (part of a progress bar) automatically updates every second after 
 
 	<body onload="start()">
 		<p>
-			You can pick a price you like, or wait for the final.
+			The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
+			implement accessibility.
+		</p>
+
+		<p>
+			You can pick a price you like, or wait for the final price.
 		</p>
 		<div class="progress-wrap">
 			<div class="progress-bar" id="pb-demo"></div>
@@ -364,6 +405,11 @@ The text node automatically updates every 3 seconds after the page completes loa
 <body onload="start()">
 	<p style="display: none">Random number: <span id="target">1</span></p>
 
+	<p>
+		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
+		implement accessibility.
+	</p>
+
 	<script type="text/javascript">
 		function change() {
 			var target = document.getElementById('target')
@@ -387,6 +433,11 @@ The text node automatically updates every 3 seconds but only as a result of an a
 	<p>Random number: <span id="target">1</span></p>
 	<input type="button" id="control" onclick="start()" value="Start updates" />
 
+	<p>
+		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
+		implement accessibility.
+	</p>
+
 	<script type="text/javascript">
 		function change() {
 			var target = document.getElementById('target')
@@ -401,9 +452,38 @@ The text node automatically updates every 3 seconds but only as a result of an a
 </body>
 ```
 
+#### Inapplicable Example 3
+
+The automatically updating content is the only content in the document.
+
+```html
+<body onload="start()">
+	<p>Random number: <span id="target">1</span></p>
+	<input type="button" onclick="stop()" value="Stop updates" />
+
+	<script type="text/javascript">
+		function change() {
+			var target = document.getElementById('target')
+			var number = Math.floor(Math.random() * 1000)
+			target.innerText = number
+		}
+
+		var updates
+		function start() {
+			updates = setInterval(change, 3000)
+		}
+
+		function stop() {
+			clearInterval(updates)
+		}
+	</script>
+</body>
+```
+
 [accessible name]: #accessible-name 'Definition of accessible name'
 [ascii whitespace]: https://infra.spec.whatwg.org/#ascii-whitespace
 [child]: https://dom.spec.whatwg.org/#concept-tree-child
+[content]: https://www.w3.org/TR/WCAG21/#dfn-content
 [document readiness]: https://www.w3.org/TR/html53/dom.html#current-document-readiness
 [essential]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html#dfn-essential
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree

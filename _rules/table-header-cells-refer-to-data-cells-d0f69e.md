@@ -12,9 +12,10 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-authors:
-  - Jey Nandakumar
-  - Audrey Maniez
+acknowledgements:
+  authors:
+    - Jey Nandakumar
+    - Audrey Maniez
 ---
 
 ## Applicability
@@ -23,8 +24,8 @@ The rule applies to any HTML element that is a [descendant](https://dom.spec.wha
 
 - [cell](https://www.w3.org/TR/wai-aria-1.1/#cell)
 - [gridcell](https://www.w3.org/TR/wai-aria-1.1/#gridcell)
-- [rowheader](https://www.w3.org/TR/html-aria/#index-aria-rowheader)
-- [columnheader](https://www.w3.org/TR/html-aria/#index-aria-columnheader)
+- [rowheader](https://www.w3.org/TR/wai-aria-1.1/#rowheader)
+- [columnheader](https://www.w3.org/TR/wai-aria-1.1/#columnheader)
 
 ## Expectation
 
@@ -178,13 +179,13 @@ One of the column headers ("Column 2"), does not have corresponding cell within 
 
 #### Failed Example 2
 
-The column header `col2`, does not have corresponding cell within the same `table` element. Usage of `headers` attribute removes cell association to the column.
+The second column header, does not have corresponding cell within the same `table` element. Usage of `headers` attribute removes cell association to the column.
 
 ```html
 <table>
 	<tr>
 		<th id="col1"></th>
-		<th id="col2"></th>
+		<th id="Column2"></th>
 	</tr>
 	<tr>
 		<td></td>

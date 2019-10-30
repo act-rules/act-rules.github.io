@@ -26,11 +26,15 @@ This rule applies to any HTML or SVG element which
 
 - has the [semantic role][] of ['link'][link] or a [semantic role][] that inherits from the ['link'][link] role; and
 - is [included in the accessibility tree][]; and
-- has an [accessible name][] that does not only consist of [whitespace][].
+- has a non-empty ("") [accessible name][].
 
-## Expectation
+## Expectation 1
 
-The [visible text content][] of the target element, together with its [programmatically determined link context][] describe the purpose of the link.
+The [visible text content][] of each target element together with its [programmatically determined link context][] describe the purpose of the link.
+
+## Expectation 2
+
+The [accessible name][] of each target element together with its [programmatically determined link context][] describe the purpose of the link.
 
 ## Assumptions
 
@@ -71,10 +75,10 @@ The link text describes the purpose of the link.
 
 #### Passed Example 2
 
-The [programmatically determined link context][], available through the [accessible name][], describes the purpose of the link.
+The [accessible name][] describes the purpose of the link.
 
 ```html
-<a href="#main" aria-label="Go to the main content of the page">Go</a>
+<a href="#main"><img src="/test-assets/5effbb/main.png" alt="Go to the main content" /></a>
 
 <main>
 	<p id="main">This is the main content.</p>
@@ -83,7 +87,7 @@ The [programmatically determined link context][], available through the [accessi
 
 #### Passed Example 3
 
-The link text together with its [programmatically determined link context][], available from the text in the same sentence, describe the purpose of the link.
+The link text together with its [programmatically determined link context][] available from the text in the same sentence, describe the purpose of the link.
 
 ```html
 <p>To see the description of this product <a href="#desc">click here</a>.</p>
@@ -93,11 +97,11 @@ The link text together with its [programmatically determined link context][], av
 
 #### Passed Example 4
 
-The link text together with its [programmatically determined link context][], available from the text in the same sentence or the [accessible name][], describe the purpose of the link.
+The link text together with its [programmatically determined link context][] available from the text in the same sentence, describe the purpose of the link. The [accessible name][] also describes the purpose of the link.
 
 ```html
 <p>
-	<span aria-hidden="true">
+	<span>
 		Find out what city was
 		<a href="#answer" aria-label="Follow the link to discover what city was the European Capital of Culture in 1990">
 			Capital of Culture in 1990
@@ -111,20 +115,6 @@ The link text together with its [programmatically determined link context][], av
 
 #### Passed Example 5
 
-The [programmatically determined link context][], available through the [accessible name][], describes the purpose of the link.
-
-```html
-<div role="link" tabindex="0" aria-label="Skip to main content" onclick="document.location+='#main';return false;">
-	Skip
-</div>
-
-<main>
-	<p id="main">This is the main content.</p>
-</main>
-```
-
-#### Passed Example 6
-
 The link text describes the purpose of the link.
 
 ```html
@@ -133,7 +123,7 @@ The link text describes the purpose of the link.
 <p id="desc">This product consists of several web pages.</p>
 ```
 
-#### Passed Example 7
+#### Passed Example 6
 
 The [programmatically determined link context][] provided by the list and the link text describe the purpose of the links.
 
@@ -154,7 +144,7 @@ The [programmatically determined link context][] provided by the list and the li
 </ul>
 ```
 
-#### Passed Example 8
+#### Passed Example 7
 
 The context provided by the table header and the link text describe the purpose of the links.
 
@@ -175,9 +165,9 @@ The context provided by the table header and the link text describe the purpose 
 </table>
 ```
 
-#### Passed Example 9
+#### Passed Example 8
 
-The [programmatically determined link context][], available through the [accessible name][], describes the purpose of the link.
+The [accessible name][] describes the purpose of the link.
 
 ```html
 <p id="instructions">Click on the arrow to go to the main content.</p>

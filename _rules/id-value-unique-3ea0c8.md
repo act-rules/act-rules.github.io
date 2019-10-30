@@ -12,9 +12,10 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-authors:
-  - Bryn Anderson
-  - Anne Thyme Nørregaard
+acknowledgements:
+  authors:
+    - Bryn Anderson
+    - Anne Thyme Nørregaard
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)

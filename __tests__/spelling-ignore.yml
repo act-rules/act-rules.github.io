@@ -123,6 +123,8 @@
 
 # Common Failures (https://www.w3.org/WAI/WCAG21/Techniques/#failures)
 - F10 
+- F14 
+- F26 
 - F30 
 - F38 
 - F40 

@@ -10,6 +10,7 @@
 		"foaf": "http://xmlns.com/foaf/0.1/",
 		"WebPage": "sch:WebPage",
 		"url": "dct:source",
+		"source": "dct:source",
 		"assertions": {
 			"@reverse": "subject"
 		},

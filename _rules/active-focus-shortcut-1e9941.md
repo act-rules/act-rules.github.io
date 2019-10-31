@@ -2,39 +2,34 @@
 id: 1e9941
 name: Keyboard shortcut is only active when component has focus
 rule_type: atomic
-
 description: |
-  This rule checks that if keyboard shortcuts using only letter, number, sign or punctuation keys for a user interface component are implemented are only active when that component has focus
-
+  This rule checks that if keyboard shortcuts are implemented using only printable characters for a user interface component, then they are only available when that component has focus.
 accessibility_requirements: # Remove whatever is not applicable
   wcag21:2.1.4: # Character Key Shortcuts (A)
     forConformance: true
     failed: not satisfied
     passed: satisfied
     inapplicable: further testing needed
-
 input_aspects:
   - DOM Tree
   - CSS Styling
-
-authors:
-  - João Vicente
-  - Carlos Duarte
+acknowledgements:
+  authors:
+    - João Vicente
+    - Carlos Duarte
 ---
 
 ## Applicability
 
-The rule applies to any [HTML document](https://dom.spec.whatwg.org/#concept-document).
+The rule applies to any [HTML document][] with [keyboard shortcuts][].
 
 ## Expectation
 
-For each target element if [keyboard shortcuts](https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-keyboard-shortcut) using only letter, number, sign or punctuation keys for a [user interface component](https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-user-interface-component) are implemented by the target's content are only active when that component has focus
-
-**Note:** [keyboard shortcuts](https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-keyboard-shortcut) implemented by other means (e.g. browser extensions) are not considered
+For each [user interface component][] that is a [descendent][] of the root node of the test target, if [keyboard shortcuts][] are implemented using only [printable characters][], then they are only available when that component has focus.
 
 ## Assumptions
 
-_There are currently no assumptions_
+This rule assumes as applicable [keyboard shortcuts][] those implemented by the test target [content][]. Any other means (e.g. browser extensions, user agents, external browser applications) are not considered.
 
 ## Accessibility Support
 
@@ -52,31 +47,53 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-[HTML document](https://dom.spec.whatwg.org/#concept-document) does not use keyboard shortcuts
-
-```html
-<div>document content</div>
-```
-
-#### Passed Example 2
-
-[HTML document](https://dom.spec.whatwg.org/#concept-document) with [keyboard shortcut](https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-keyboard-shortcut) but not using only letter, number, sign or punctuation keys
+The [HTML document][] has a [keyboard shortcut][] that uses one [printable][printable characters] and one [non-printable characters][].
 
 ```html
 <html>
   <head>
+    <title>Passed Example 1</title>
+    <script>
+      function shortcut(event) {
+        if (event.key === 'i' && event.ctrlKey) {
+          const text = document.getElementById('text');
+          text.className = text.className === 'italic' ? '' : 'italic';
+        }
+      }
+      document.body.addEventListener('keydown', shortcut);
+    </script>
+    <style>
+      .italic {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Press <strong>ctrl+i</strong> to toggle italic format</div>
+    <div id="text">Some text inside the document content</div>
+  </body>
+</html>
+```
+
+#### Passed Example 2
+
+The [HTML document][] has an element with the attribute `accesskey`. Accesskeys use [non-printable characters][].
+
+```html
+<html>
+  <head>
+    <title>Passed Example 2</title>
     <script>
       function shortcut() {
-        document.body.addEventListener('keydown', function(key) {
-          if (key.key === 'i' && key.ctrlKey) {
-            var text = document.getElementById('text');
-            if (text.className === 'italic') {
-              text.className = '';
-            } else {
-              text.className = 'italic';
-            }
-          }
+        const button = document.getElementById('italic');
+
+        button.addEventListener('click', function() {
+          const text = document.getElementById('text');
+          text.className = text.className === 'italic' ? '' : 'italic';
         });
+
+        button.textContent +=
+          button.accessKeyLabel ? ' (' + button.accessKeyLabel + ')' : ' (accesskey +' + button.accessKey + ')';
       }
     </script>
     <style>
@@ -86,7 +103,7 @@ _There are no major accessibility support issues known for this rule._
     </style>
   </head>
   <body onload="shortcut();">
-    <div>press <strong>ctrl+i</strong> to format the text to italic</div>
+    <button id="italic" type="button" accessKey="i">Toggle italic format</button>
     <div id="text">Some text inside the document content</div>
   </body>
 </html>
@@ -94,83 +111,28 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 3
 
-[HTML document](https://dom.spec.whatwg.org/#concept-document) with [keyboard shortcut](https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-keyboard-shortcut) using only letter keys for a [user interface component](https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-user-interface-component) is only available when the component has focus
-
-```html
-<label for="topping">Choose your favorite ice cream topping:</label>
-<select id="topping">
-  <option>Chocolate</option>
-  <option>Strawberry</option>
-  <option>Vanilla</option>
-</select>
-```
-
-#### Passed Example 4
-
-[HTML document](https://dom.spec.whatwg.org/#concept-document) with an element with the attribute accesskey
+The [HTML document][] has a single [printable character][printable characters] [keyboard shortcut][] for a [user interface component][], which is only available when that component has focus.
 
 ```html
 <html>
   <head>
+    <title>Passed Example 3</title>
     <script>
-      function load() {
-        var button = document.getElementById('italic');
-        button.addEventListener('click', function() {
-          var text = document.getElementById('text');
-          if (text.className === 'italic') {
-            text.className = '';
-          } else {
-            text.className = 'italic';
-          }
-        });
+      function shortcut(event) {
+        const text = document.getElementById('text');
 
-        if (button.accessKeyLabel) {
-          button.textContent += ' (' + button.accessKeyLabel + ')';
-        } else {
-          button.textContent += ' (accesskey +' + button.accessKey + ')';
+        if (event.key === '+' && document.activeElement === text) {
+          document.getElementById('list').innerHTML += '<li>' + text + '</li>';
+          document.getElementById('text').value = '';
+          event.preventDefault();
         }
       }
-    </script>
-    <style>
-      .italic {
-        font-style: italic;
-      }
-    </style>
-  </head>
-  <body onload="load();">
-    <button id="italic" type="button" accessKey="i">italic</button>
-    <div id="text">Some text inside the document content</div>
-  </body>
-</html>
-```
-
-#### Passed Example 5
-
-[HTML document](https://dom.spec.whatwg.org/#concept-document) with [keyboard shortcut](https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-keyboard-shortcut) using only a sign key for a [user interface component](https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-user-interface-component) is only available when the component has focus
-
-```html
-<html>
-  <head>
-    <script>
-      function italic() {
-        document.body.addEventListener('keydown', function(key) {
-          if (key.key === '+' && document.getElementById('text') === document.activeElement) {
-            var text = document.getElementById('text');
-            addToList(text.value);
-            key.preventDefault();
-          }
-        });
-      }
-
-      function addToList(text) {
-        document.getElementById('list').innerHTML += '<li>' + text + '</li>';
-        document.getElementById('text').value = '';
-      }
+      document.body.addEventListener('keydown', shortcut);
     </script>
   </head>
-  <body onload="italic();">
+  <body>
     <label for="text">Add to list (press + to add):</label>
-    <input type="text" id="text"></input>
+    <input type="text" id="text">
     <br>
     <div>
       To do list
@@ -184,74 +146,33 @@ _There are no major accessibility support issues known for this rule._
 
 #### Failed Example 1
 
-[HTML document](https://dom.spec.whatwg.org/#concept-document) with [keyboard shortcut](https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-keyboard-shortcut) using only a sign key for a [user interface component](https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-user-interface-component) is available even when the component does not have focus
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][printable characters] for a [user interface component][], and it's available even when the component does not have focus.
 
 ```html
 <html>
   <head>
+    <title>Failed Example 1</title>
     <script>
-      function italic() {
-        document.body.addEventListener('keydown', function(key) {
-          if (key.key === '+') {
-            var text = document.getElementById('text');
-            addToList(text.value);
-            key.preventDefault();
-          }
-        });
-      }
+      function shortcut(event) {
+        if (event.key === '+') {
+          event.preventDefault();
 
-      function addToList(text) {
-        document.getElementById('list').innerHTML += '<li>' + text + '</li>';
-        document.getElementById('text').value = '';
+          const text = document.getElementById('text');
+          document.getElementById('list').innerHTML += '<li>' + text.value + '</li>';
+          document.getElementById('text').value = '';
+        }
       }
+      document.body.addEventListener('keydown', shortcut);
     </script>
   </head>
-  <body onload="italic();">
+  <body>
     <label for="text">Add to list (press + to add):</label>
     <input type="text" id="text"></input>
     <br>
     <div>
       To do list
     </div>
-    <ul id="list">
-
-    </ul>
-  </body>
-</html>
-```
-
-#### Failed Example 2
-
-[HTML document](https://dom.spec.whatwg.org/#concept-document) with [keyboard shortcut](https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-keyboard-shortcut) using only a sign key for a [user interface component](https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-user-interface-component) is available even when the component does not have focus
-
-```html
-<html>
-  <head>
-    <script>
-      function changeTopping() {
-        document.body.addEventListener('keydown', function(key) {
-          switch(key.key) {
-            case 'c':
-              document.getElementById('topping').value = 'chocolate';
-              break;
-            case 's':
-            document.getElementById('topping').value = 'strawberry';
-              break;
-            case 'v':
-            document.getElementById('topping').value = 'vanilla';
-              break;
-          }
-        });
-      }
-    </script>
-  </head>
-  <body onload="changeTopping();">
-    <label for="topping">Choose your favorite ice cream topping:</label>
-    <select id="topping">
-      <option value="chocolate">Chocolate</option>
-      <option value="strawberry">Strawberry</option>
-      <option value="vanilla">Vanilla</option>
-    </select>
+    <ul id="list"></ul>
   </body>
 </html>
 ```
@@ -260,7 +181,17 @@ _There are no major accessibility support issues known for this rule._
 
 #### Inapplicable Example 1
 
-The document is not an [HTML document](https://dom.spec.whatwg.org/#concept-document)
+The [HTML document][] does not use [keyboard shortcuts][].
+
+```html
+<html>
+  <div>Document content</div>
+</html>
+```
+
+#### Inapplicable Example 2
+
+The document is not an [HTML document][].
 
 ```html
 <svg height="100" width="100">
@@ -268,3 +199,12 @@ The document is not an [HTML document](https://dom.spec.whatwg.org/#concept-docu
   Sorry, your browser does not support inline SVG.  
 </svg>
 ```
+
+[HTML document]: https://dom.spec.whatwg.org/#concept-document
+[keyboard shortcuts]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-keyboard-shortcut
+[keyboard shortcut]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-keyboard-shortcut
+[user interface component]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-user-interface-component
+[descendent]: https://dom.spec.whatwg.org/#concept-tree-descendant
+[content]: https://www.w3.org/TR/WCAG21/#dfn-content
+[printable characters]: #printable-characters 'Printable characters'
+[non-printable characters]: #non-printable-characters 'Non-printable characters'

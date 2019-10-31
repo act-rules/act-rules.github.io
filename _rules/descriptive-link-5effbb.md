@@ -14,10 +14,11 @@ input_aspects:
   - DOM Tree
   - CSS Styling
   - Language
-authors:
-  - Carlos Duarte
-  - Marie Trudelle
-  - Ramit Garg
+acknowledgements:
+  authors:
+    - Carlos Duarte
+    - Marie Trudelle
+    - Ramit Garg
 ---
 
 ## Applicability

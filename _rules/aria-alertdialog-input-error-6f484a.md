@@ -2,25 +2,22 @@
 id: 6f484a
 name: `aria-alertdialog` identifies input error
 rule_type: atomic
-
 description: |
   This rule checks that `aria-alertdialog` is used to identify input errors.
-
 accessibility_requirements: # Remove whatever is not applicable
   wcag-technique:ARIA18: # Using aria-alertdialog to Identify Errors
     forConformance: false
     failed: not satisfied
     passed: satisfied
     inapplicable: further testing needed
-
 input_aspects:
   - DOM Tree
   - CSS Styling
   - Language
-
-authors:
-  - Carlos Duarte
-  - João Vicente
+acknowledgements:
+  authors:
+    - Carlos Duarte
+    - João Vicente
 ---
 
 ## Applicability

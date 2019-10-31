@@ -4,24 +4,22 @@ name: Error message is descriptive
 rule_type: composite
 description: |
   This rule checks that when an input error is automatically detected the error is identified and described to the user in text.
-
 accessibility_requirements:
   wcag20:3.3.1: # Error Identification (A)
     forConformance: true
     failed: not satisfied
     passed: satisfied
     inapplicable: further testing needed
-
 input_rules:
   - 334972
   - 36b590
   - 6f484a
   - 2045c3
   - 54621b
-
-authors:
-  - Carlos Duarte
-  - João Vicente
+acknowledgements:
+  authors:
+    - Carlos Duarte
+    - João Vicente
 ---
 
 ## Applicability

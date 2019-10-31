@@ -2,31 +2,27 @@
 id: 36b590
 name: Invalid form field value
 rule_type: atomic
-
 description: |
   This rule checks that text descriptions are provided when the user completes a form field with information that is not an allowed value or using a not allowed format.
-
 accessibility_requirements:
   wcag-technique:G84: # Providing a text description when the user provides information that is not in the list of allowed values
     forConformance: false
     failed: not satisfied
     passed: satisfied
     inapplicable: further testing needed
-
   wcag-technique:G85: # Providing a text description when user input falls outside the required format or values
     forConformance: false
     failed: not satisfied
     passed: satisfied
     inapplicable: further testing needed
-
 input_aspects:
   - DOM Tree
   - CSS Styling
   - Language
-
-authors:
-  - Carlos Duarte
-  - João Vicente
+acknowledgements:
+  authors:
+    - Carlos Duarte
+    - João Vicente
 ---
 
 ## Applicability

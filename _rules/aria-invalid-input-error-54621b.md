@@ -2,25 +2,22 @@
 id: 54621b
 name: `aria-invalid` identifies input error
 rule_type: atomic
-
 description: |
   This rule checks that the `aria-invalid` attribute is used to identify input errors
-
 accessibility_requirements: # Remove whatever is not applicable
   wcag-technique:ARIA21: # Using Aria-Invalid to Indicate An Error Field
     forConformance: false
     failed: not satisfied
     passed: satisfied
     inapplicable: further testing needed
-
 input_aspects:
   - DOM Tree
   - CSS Styling
   - Language
-
-authors:
-  - Carlos Duarte
-  - João Vicente
+acknowledgements:
+  authors:
+    - Carlos Duarte
+    - João Vicente
 ---
 
 ## Applicability

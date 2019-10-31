@@ -2,25 +2,22 @@
 id: 334972
 name: Required form fields not completed
 rule_type: atomic
-
 description: |
   This rule checks that text error messages identify required form fields that were not completed.
-
 accessibility_requirements:
   wcag-technique:G83: # Providing text descriptions to identify required fields that were not completed
     forConformance: false
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-
 input_aspects:
   - DOM Tree # (e.g. HTTP Messages, DOM Tree, CSS Styling, Accessibility Tree, Language, etc.,)
   - CSS Styling
   - Language
-
-authors:
-  - Carlos Duarte
-  - João Vicente
+acknowledgements:
+  authors:
+    - Carlos Duarte
+    - João Vicente
 ---
 
 ## Applicability

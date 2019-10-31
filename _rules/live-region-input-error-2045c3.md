@@ -2,25 +2,22 @@
 id: 2045c3
 name: alert role or live region identify input error
 rule_type: atomic
-
 description: |
   This rule checks that a container with `role=alert` or a live region are used to identify input errors.
-
 accessibility_requirements:
   wcag-technique:ARIA19: # Using ARIA role=alert or Live Regions to Identify Errors
     forConformance: false
     failed: not satisfied
     passed: satisfied
     inapplicable: further testing needed
-
 input_aspects:
   - DOM Tree
   - CSS Styling
   - Language
-
-authors:
-  - Carlos Duarte
-  - João Vicente
+acknowledgements:
+  authors:
+    - Carlos Duarte
+    - João Vicente
 ---
 
 ## Applicability

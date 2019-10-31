@@ -23,10 +23,11 @@ accessibility_requirements:
 input_aspects:
   -  DOM Tree
   -  Language
-authors:
-  -  Brian Bors
-  -  Daniël Strik
-  -  Wilco Fiers
+acknowledgements:
+  authors:
+    -  Brian Bors
+    -  Daniël Strik
+    -  Wilco Fiers
 ---
 
 ## Applicability

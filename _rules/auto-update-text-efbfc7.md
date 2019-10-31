@@ -2,22 +2,19 @@
 id: efbfc7
 name: Auto-updating text content can be paused or stopped
 rule_type: atomic
-
 description: |
   This rule checks that there are mechanisms to pause or stop the auto-updating of text content
-
 accessibility_requirements: # Remove whatever is not applicable
   wcag20:2.2.2: # Pause, Stop, Hide (A)
     forConformance: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-
 input_aspects:
   - DOM Tree
-
-authors:
-  - Carlos Duarte
+acknowledgements:
+  authors:
+    - Carlos Duarte
 ---
 
 ## Applicability

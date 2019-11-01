@@ -182,11 +182,11 @@ There is no element with an [explicit semantic role](#explicit-role).
 
 ```html
 <ul>
-    <li>List item 1</ul>
+	<li>List item 1</li>
 </ul>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 The `listitem` is not [included in the accessibility tree](#included-in-the-accessibility-tree).
 

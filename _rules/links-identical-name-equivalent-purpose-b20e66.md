@@ -13,8 +13,9 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-authors:
-  - Anne Thyme Nørregaard
+acknowledgements:
+  authors:
+    - Anne Thyme Nørregaard
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -34,7 +35,8 @@ When followed, the links in each set of target elements resolve to the [same res
 
 ## Assumptions
 
-This rule assumes that the purpose of the links with identical [accessible names][accessible name] would not be ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.9 Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html). If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links out of context, e.g. on a list of links in a screen reader, which makes it more of a general user experience concern than an accessibility issue.
+- This rule assumes that the purpose of the links with identical [accessible names][accessible name] would not be ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.9 Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html). If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links out of context, e.g. on a list of links in a screen reader, which makes it more of a general user experience concern than an accessibility issue.
+- This rule assumes that, within the context of the test subject, the description provided by the [accessible name][] of a link can only accurately describe one resource (notably, homonyms alone are not used as link names). Thus, if two or more links have the same [accessible name][] but resolve to different resources, at least one of them does not describe its purpose.
 
 ## Accessibility Support
 
@@ -261,7 +263,7 @@ Link is not included in the accessibility tree:
 	tabindex="-1"
 	>Contact Us</a
 >
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/pabe2.html">Contact Us</a>
+<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html">Contact Us</a>
 ```
 
 #### Inapplicable Example 4

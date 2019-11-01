@@ -12,26 +12,33 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree # The tree that HTML is parsed into.
-authors:
-  - Annika Nietzio
-  - Jey Nandakumar
+acknowledgements:
+  authors:
+    - Jey Nandakumar
+  previous_authors:
+    - Annika Nietzio
 ---
 
 ## Applicability
 
-The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element with both `lang` and `xml:lang` attributes that have [valid language subtags](#valid-language-subtag).
+This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element that:
 
-**Note**: Documents embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not web pages according to the definition in WCAG.
+- is in a [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context); and
+- has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`; and
+- has a `lang` attribute that has a [valid language subtag](#valid-language-subtag); and
+- has an `xml:lang` attribute.
+
+**Note:** `html` elements within `iframe` and `object` elements are not applicable as `iframe` and `object` elements create [nested browsing contexts](https://html.spec.whatwg.org/#nested-browsing-context). However, as these elements are meant to provide a layer of isolation, the declared language of their [parent browsing context](https://html.spec.whatwg.org/#parent-browsing-context) will likely not be inherited, making it possible for non-matching `lang` and `xml:lang` attributes in [nested browsing contexts](https://html.spec.whatwg.org/#nested-browsing-context) to also cause accessibility issues.
 
 ## Expectation
 
-For each test target, the value of the primary language subtag (characters before the first dash) for the `lang` and `xml:lang` attributes are the same.
+For each test target, the values of the [primary language subtags](https://tools.ietf.org/html/bcp47#section-2.2.1), if any exist, for the `lang` and `xml:lang` attributes are the same.
 
-**Note**: HTML 5 specification requires the `lang` and `xml:lang` attributes to match exactly. This is not known to impact accessibility, which is why it is permitted in this rule.
+**Note:** Having matching [primary language subtags](https://tools.ietf.org/html/bcp47#section-2.2.1) of the `lang` and `xml:lang` attribute, but non-matching [language tags](https://tools.ietf.org/html/bcp47#section-2) overall, will not cause accessibility issues unless there's a sufficiently large difference between the two [language tags](https://tools.ietf.org/html/bcp47#section-2). One notable case is the [language tags](https://tools.ietf.org/html/bcp47#section-2) for Cantonese (`zh-yue`) and Mandarin (`zh-cmn`) where the [primary language subtags](https://tools.ietf.org/html/bcp47#section-2.2.1) match, but the [extended language subtags](https://tools.ietf.org/html/bcp47#section-2.2.2) don't. Such a case would not fail this rule, but could lead to accessibility issues in practice.
 
 ## Assumptions
 
-- Although there is no known way that an inappropriate secondary subtag in the `lang` or `xml:lang` attribute (such as "en-XYZ") can lead to accessibility issues, it is conceivable that with specific assistive technologies on some languages, there can be exceptions. In that case `lang` and `xml:lang` should have matching secondary subtags.
+This rule assumes that the presence of a `lang` attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
 
 ## Accessibility Support
 
@@ -50,7 +57,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 #### Passed Example 1
 
-`html` element with matching value for `lang` and `xml:lang`.
+`html` element with matching primary language subtags for `lang` and `xml:lang`.
 
 ```html
 <html lang="en" xml:lang="en"></html>
@@ -58,41 +65,25 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 #### Passed Example 2
 
-`html` element with varied case but matching value for `lang` and `xml:lang`.
+`html` element with matching primary and extended language subtags for `lang` and `xml:lang`.
 
 ```html
-<html lang="en" xml:lang="En"></html>
+<html lang="en-GB" xml:lang="en-GB"></html>
 ```
 
 #### Passed Example 3
 
-`html` element with varied values but matching primary sub-tag value for `lang` and `xml:lang`.
+`html` element with matching primary language subtags, but non-matching extended language subtags, for `lang` and `xml:lang`.
 
 ```html
-<html lang="en" xml:lang="en-GB"></html>
-```
-
-#### Passed Example 4
-
-`html` element with varied values but matching primary sub-tag value for `lang` and `xml:lang`.
-
-```html
-<html lang="en-GB" xml:lang="en"></html>
-```
-
-#### Passed Example 5
-
-`html` element with varied values but matching primary sub-tag value for `lang` and `xml:lang`, albeit the value `XYZ` is not valid.
-
-```html
-<html lang="en-XYZ" xml:lang="en"></html>
+<html lang="en-GB" xml:lang="en-US"></html>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-`html` element with non-matching value for `lang` and `xml:lang`.
+`html` element with non-matching primary language subtags for `lang` and `xml:lang`.
 
 ```html
 <html lang="fr" xml:lang="en"></html>
@@ -110,16 +101,52 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 #### Inapplicable Example 2
 
+`svg` element is not applicable for this rule.
+
+```svg
+<html>
+	<body>
+		<svg lang="en"></svg>
+	</body>
+</html>
+```
+
+#### Inapplicable Example 3
+
 `xml:lang` is empty, the rule mandates `non-empty` values.
 
 ```html
 <html lang="fr" xml:lang=""></html>
 ```
 
-#### Inapplicable Example 3
+#### Inapplicable Example 4
 
 Only `non-empty` values are considered.
 
 ```html
 <html lang="" xml:lang=""></html>
+```
+
+#### Inapplicable Example 5
+
+This rule does not apply to elements whose `lang` attribute consists only of whitespace.
+
+```html
+<html lang=" " xml:lang=""></html>
+```
+
+#### Inapplicable Example 6
+
+This rule does not apply to elements without an `xml:lang` attribute.
+
+```html
+<html lang="en"></html>
+```
+
+#### Inapplicable Example 7
+
+This rule does not apply to `math` elements.
+
+```html
+<math xml:lang="en"></math>
 ```

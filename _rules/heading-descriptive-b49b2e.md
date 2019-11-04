@@ -13,10 +13,11 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-authors:
-  - Dagfinn Rømen
-  - Geir Sindre Fossøy
-  - Carlos Duarte
+acknowledgements:
+  authors:
+    - Dagfinn Rømen
+    - Geir Sindre Fossøy
+    - Carlos Duarte
 ---
 
 ## Applicability

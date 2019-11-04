@@ -13,8 +13,9 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-authors:
-  - Anne Thyme Nørregaard
+acknowledgements:
+  authors:
+    - Anne Thyme Nørregaard
   - Jean-Yves Moyen
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint

@@ -18,8 +18,9 @@ accessibility_requirements:
 input_aspects: # Remove what is not applicable
   - DOM Tree
   - CSS Styling
-authors:
-  - Anne Thyme Nørregaard
+acknowledgements:
+  authors:
+    - Anne Thyme Nørregaard
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)

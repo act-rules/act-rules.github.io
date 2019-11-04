@@ -8,14 +8,15 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-authors:
-  - Dagfinn Rømen
-  - Geir Sindre Fossøy
-  - Malin Øvrebø
-  - Shadi Abou-Zahra
-  - Carlos Duarte
-  - Anne Thyme Nørregaard
-  - Stein Erik Skotkjerra
+acknowledgements:
+  authors:
+    - Dagfinn Rømen
+    - Geir Sindre Fossøy
+    - Malin Øvrebø
+    - Shadi Abou-Zahra
+    - Carlos Duarte
+    - Anne Thyme Nørregaard
+    - Stein Erik Skotkjerra
 ---
 
 ## Applicability

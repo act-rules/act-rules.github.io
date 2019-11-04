@@ -7,8 +7,9 @@ description: |
 accessibility_requirements:
 input_aspects:
   - DOM Tree
-authors:
-  - Jey Nandakumar
+acknowledgements:
+  authors:
+    - Jey Nandakumar
 ---
 
 ## Applicability

@@ -23,9 +23,10 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-authors:
-  - Wilco Fiers
-  - Anne Thyme Nørregaard
+acknowledgements:
+  authors:
+    - Wilco Fiers
+    - Anne Thyme Nørregaard
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)

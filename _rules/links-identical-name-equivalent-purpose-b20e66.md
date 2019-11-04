@@ -16,7 +16,7 @@ input_aspects:
 acknowledgements:
   authors:
     - Anne Thyme Nørregaard
-  - Jean-Yves Moyen
+    - Jean-Yves Moyen
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -29,7 +29,7 @@ htmlHintIgnore:
 This rule applies to any set of any two or more HTML or SVG elements which
 
 - have the [semantic role][] of `link`, or a role that inherits from the `link` role; and
-- are in [documents][document] of the same [web page (HTML)][]; and
+- are in the same [web page (HTML)][]; and
 - are [included in an accessibility tree][included in the accessibility tree]; and
 - that have [matching][] [accessible names][accessible name] that are not empty (`""`).
 
@@ -37,7 +37,7 @@ This rule applies to any set of any two or more HTML or SVG elements which
 
 ## Expectation
 
-When followed, the links in the set of target elements resolve to the [same resource][] or to [equivalent resources](#equivalent-resource). Resolving the links includes potential redirects, if the redirects happen instantly.
+When followed, the links in each set of target elements resolve to the [same resource][] or to [equivalent resources](#equivalent-resource). Resolving the links includes potential redirects, if the redirects happen instantly.
 
 ## Assumptions
 

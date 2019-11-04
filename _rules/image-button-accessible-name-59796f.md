@@ -35,7 +35,7 @@ The rule applies to any HTML `input` element with a `type` attribute in the `Ima
 
 ## Expectation
 
-Each target element has an [accessible name][] that is not only [whitespace][].
+Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Assumptions
 
@@ -88,7 +88,7 @@ Image button element with [accessible name][] through `aria-labelledby`
 
 #### Passed Example 5
 
-[accessible name][] is not only [whitespace][].
+[accessible name][] is not empty.
 
 ```html
 <input type="image" name="submit" src="button.gif" alt=":-)" />
@@ -106,7 +106,7 @@ Image button element with [accessible name][] through `alt` attribute
 
 #### Failed Example 1
 
-Image button element with no attributes to give [accessible name][]
+Image button element with empty [accessible name][].
 
 ```html
 <input type="image" name="submit" src="button.gif" />
@@ -114,7 +114,7 @@ Image button element with no attributes to give [accessible name][]
 
 #### Failed Example 2
 
-Image button element with empty `alt` attribute
+Image button element with empty [accessible name][].
 
 ```html
 <input type="image" name="submit" src="button.gif" alt="" />
@@ -122,7 +122,7 @@ Image button element with empty `alt` attribute
 
 #### Failed Example 3
 
-Image button with aria-labelledby that does not reference an id that exists in the same document
+Image button with empty [accessible name][] because the `aria-labelledby` attribute does not reference an id that exists in the same document.
 
 ```html
 <input type="image" name="submit" src="button.gif" aria-labelledby="id1" />
@@ -130,7 +130,7 @@ Image button with aria-labelledby that does not reference an id that exists in t
 
 #### Failed Example 4
 
-[accessible name][] is only [whitespace][].
+[accessible name][] is empty.
 
 ```html
 <input type="image" name="submit" src="button.gif" alt=" " />

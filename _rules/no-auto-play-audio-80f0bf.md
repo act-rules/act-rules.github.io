@@ -13,9 +13,10 @@ accessibility_requirements:
 input_rules:
   - 4c31df
   - aaa1bf
-authors:
-  - Anne Thyme Nørregaard
-  - Bryn ANderson
+acknowledgements:
+  authors:
+    - Anne Thyme Nørregaard
+    - Bryn Anderson
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)

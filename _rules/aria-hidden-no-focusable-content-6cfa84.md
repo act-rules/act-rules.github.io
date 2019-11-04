@@ -18,8 +18,9 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-authors:
-  - Wilco Fiers
+acknowledgements:
+  authors:
+    - Wilco Fiers
 ---
 
 ## Applicability

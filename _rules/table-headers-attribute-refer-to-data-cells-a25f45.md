@@ -24,7 +24,7 @@ This rule applies to any `headers` attribute specified on a [`cell`](https://www
 
 ## Expectation
 
-The `headers` attribute of each target element is [a set of space separated IDs](https://www.w3.org/TR/html50/infrastructure.html#set-of-space-separated-tokens), each of which is an ID of an element in the same [document tree](https://dom.spec.whatwg.org/#document-trees) or [shadow tree](https://dom.spec.whatwg.org/#shadow-trees) as the applicable element, that:
+The `headers` attribute of each target element is [a set of space separated IDs](https://www.w3.org/TR/html50/infrastructure.html#set-of-space-separated-tokens), each of which is the ID of an element in the same [document tree](https://dom.spec.whatwg.org/#document-trees) or [shadow tree](https://dom.spec.whatwg.org/#shadow-trees) as the applicable element, that:
 
 1. has a [semantic role](#semantic-role) of [columnheader](https://www.w3.org/TR/html-aria/#index-aria-columnheader) or [rowheader](https://www.w3.org/TR/html-aria/#index-aria-rowheader), and
 2. is a [`cell`](https://www.w3.org/TR/html52/tabular-data.html#cell) of the same [`table`](https://www.w3.org/TR/html50/tabular-data.html#concept-table) as the target element.
@@ -50,7 +50,7 @@ The `headers` attribute of each target element is [a set of space separated IDs]
 
 #### Passed Example 1
 
-The `headers` attribute on the cell refers to `th` within the same `table`.
+The `headers` attribute on the cell refers to a `th` element within the same `table`.
 
 ```html
 <table>
@@ -69,7 +69,7 @@ The `headers` attribute on the cell refers to `th` within the same `table`.
 
 #### Passed Example 2
 
-The `headers` attribute on the cell refers to `th` within the same `table`. Multiple headers are referenced for a cell with `colspan` of `2`.
+The `headers` attribute on the cell refers to a `th` element within the same `table`. Multiple headers are referenced for a cell with `colspan` of `2`.
 
 ```html
 <table>
@@ -89,7 +89,7 @@ The `headers` attribute on the cell refers to `th` within the same `table`. Mult
 
 #### Passed Example 3
 
-The `headers` attribute on the cell refers to `td` with a role of `columnheader` within the same `table`.
+The `headers` attribute on the second cell refers to a `td` element with a role of `columnheader` within the same `table`.
 
 ```html
 <table>
@@ -108,7 +108,7 @@ The `headers` attribute on the cell refers to `td` with a role of `columnheader`
 
 #### Passed Example 4
 
-A `table` with multiple `columnheader(s)`, where the `headers` attribute on the cell lists the `id(s)` of `th` within the same `table`.
+This `table` has multiple `columnheader(s)`. The `headers` attribute on the cells lists the `id(s)` of `th` elements within the same `table`.
 
 ```html
 <table>
@@ -132,7 +132,7 @@ A `table` with multiple `columnheader(s)`, where the `headers` attribute on the 
 
 #### Passed Example 5
 
-The `headers` attribute on the cell refers to `th` with a role of `rowheader` within the same `table`.
+The `headers` attribute on the cell refers to a `th` element with a role of `rowheader` within the same `table`.
 
 ```html
 <table>
@@ -147,7 +147,7 @@ The `headers` attribute on the cell refers to `th` with a role of `rowheader` wi
 
 #### Passed Example 6
 
-The `headers` attribute on the `th` cell refers to other `th` cells within the same `table`. Here the column header has a spans two columns.
+The `headers` attribute on the last two `th` elements refers to another `th` element within the same `table`. Here the column header has a span of two columns.
 
 ```html
 <table>
@@ -182,7 +182,7 @@ The `headers` attribute on the cell refers to an element outside the same `table
 
 #### Failed Example 2
 
-One of the cells with `headers` attribute, refers to `th` that does not exist within the same `table`.
+The `td` element has a `headers` attribute referring to an ID that does not exist within the same `table` (or within the [document](https://dom.spec.whatwg.org/#concept-document)). Even if some of the ID referred to exist, a single non-existing one is enough to fail the rule.
 
 ```html
 <table>
@@ -201,7 +201,7 @@ One of the cells with `headers` attribute, refers to `th` that does not exist wi
 
 #### Failed Example 3
 
-Cells with `headers` attribute, refers to multiple non-existing elements within the same `table`.
+Both `td` elements have `headers` attribute which refers to ID that do not exist within the same `table`.
 
 ```html
 <table>
@@ -218,7 +218,7 @@ Cells with `headers` attribute, refers to multiple non-existing elements within 
 
 #### Failed Example 4
 
-The `headers` attribute on the cell refers to an element inside the same `table`, but is not a `rowheader` or `columnheader`.
+The `headers` attribute on the cell refers to an element inside the same `table` which does not have a role of `rowheader` or `columnheader`.
 
 ```html
 <table>
@@ -239,7 +239,7 @@ The `headers` attribute on the cell refers to an element inside the same `table`
 
 #### Inapplicable Example 1
 
-There's no usage of the `headers` attribute.
+There is no `headers` attribute.
 
 ```html
 <table>
@@ -256,7 +256,7 @@ There's no usage of the `headers` attribute.
 
 #### Inapplicable Example 2
 
-A table used for presentation only, that has a `role="presentation"`.
+The `table` has a `role="presentation"` and thus is not [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ```html
 <table role="presentation">
@@ -271,7 +271,7 @@ A table used for presentation only, that has a `role="presentation"`.
 
 #### Inapplicable Example 3
 
-The rule applies only to `table` element.
+The rule applies only to `headers` attribute within a `table` element.
 
 ```html
 <div role="table">
@@ -288,7 +288,7 @@ The rule applies only to `table` element.
 
 #### Inapplicable Example 4
 
-A table that is not included in the accessibility tree.
+The `table` is not [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ```html
 <table aria-hidden="true">

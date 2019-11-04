@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 581,
+  "count": 580,
   "testcases": [
     {
       "testcaseId": "29097dbe000aa32fd9a66fce65a9a7f4b413e7ff",
@@ -4714,24 +4714,6 @@
       "testcaseTitle": "Passed Example 5",
       "url": "https://act-rules.github.io/testcases/2779a5/7c4ace0d67554bfb9917bce8965917de6c8a29f3.html",
       "relativePath": "testcases/2779a5/7c4ace0d67554bfb9917bce8965917de6c8a29f3.html",
-      "expected": "passed",
-      "ruleId": "2779a5",
-      "ruleName": "HTML page has title",
-      "rulePage": "https://act-rules.github.io/rules/2779a5",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "a49a08353a9370e068946b4089b5cdb51ff09a11",
-      "testcaseTitle": "Passed Example 6",
-      "url": "https://act-rules.github.io/testcases/2779a5/a49a08353a9370e068946b4089b5cdb51ff09a11.html",
-      "relativePath": "testcases/2779a5/a49a08353a9370e068946b4089b5cdb51ff09a11.html",
       "expected": "passed",
       "ruleId": "2779a5",
       "ruleName": "HTML page has title",

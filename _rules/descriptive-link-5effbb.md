@@ -3,7 +3,7 @@ id: 5effbb
 name: Link in context is descriptive
 rule_type: atomic
 description: |
-  This rule checks that all links in their context describe their purpose.
+  This rule checks that the accessible name of a link together with its context describe its purpose.
 accessibility_requirements:
   wcag20:2.4.4: # Link Purpose (In Context)
     forConformance: true

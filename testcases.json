@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 583,
+  "count": 581,
   "testcases": [
     {
       "testcaseId": "29097dbe000aa32fd9a66fce65a9a7f4b413e7ff",
@@ -7672,42 +7672,6 @@
       "testcaseTitle": "Inapplicable Example 4",
       "url": "https://act-rules.github.io/testcases/b20e66/7f72b0d0296a28a282502899f325830ca8487833.html",
       "relativePath": "testcases/b20e66/7f72b0d0296a28a282502899f325830ca8487833.html",
-      "expected": "inapplicable",
-      "ruleId": "b20e66",
-      "ruleName": "Links with identical accessible names have equivalent purpose",
-      "rulePage": "https://act-rules.github.io/rules/b20e66",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "bcf462011b40e3472e9c5c1804a407c5895331dd",
-      "testcaseTitle": "Inapplicable Example 5",
-      "url": "https://act-rules.github.io/testcases/b20e66/bcf462011b40e3472e9c5c1804a407c5895331dd.html",
-      "relativePath": "testcases/b20e66/bcf462011b40e3472e9c5c1804a407c5895331dd.html",
-      "expected": "inapplicable",
-      "ruleId": "b20e66",
-      "ruleName": "Links with identical accessible names have equivalent purpose",
-      "rulePage": "https://act-rules.github.io/rules/b20e66",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "dd2c660e8b2c4d5af852805708703691e1887b30",
-      "testcaseTitle": "Inapplicable Example 6",
-      "url": "https://act-rules.github.io/testcases/b20e66/dd2c660e8b2c4d5af852805708703691e1887b30.html",
-      "relativePath": "testcases/b20e66/dd2c660e8b2c4d5af852805708703691e1887b30.html",
       "expected": "inapplicable",
       "ruleId": "b20e66",
       "ruleName": "Links with identical accessible names have equivalent purpose",

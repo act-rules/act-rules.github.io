@@ -2,25 +2,22 @@
 id: ed12b1
 name: User motion can be disabled
 rule_type: atomic
-
 description: |
   This rule checks that functionality that can be operated by user motion, responding to the motion can be disabled to prevent accidental actuation.
-
 accessibility_requirements:
   wcag21:2.5.4: # Motion Actuation (A)
     forConformance: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-
 input_aspects:
   - DOM Tree
   - CSS Styling
   - Accessibility tree
-
-authors:
-  - João Vicente
-  - Carlos Duarte
+acknowledgements:
+  authors:
+    - João Vicente
+    - Carlos Duarte
 ---
 
 ## Applicability
@@ -29,7 +26,7 @@ The rule applies to any [HTML document][] that has [functionality][] that can be
 
 ## Expectation
 
-For the test target, user motion [can be disabled][] and the control for disabling it must be a [user interface component][] and it should be visible and included in the accessibility tree.
+For the test target, user motion [can be disabled][] and the control for disabling it must be a [user interface component][] and it should be [visible][] and [included in the accessibility tree][] with an [accessible name][] that is not empty ("").
 
 ## Assumptions
 
@@ -52,7 +49,7 @@ For the test target, user motion [can be disabled][] and the control for disabli
 
 #### Passed Example 1
 
-The [HTML document][] has [functionality][] that can be operated by user motion and [can be disabled][], and the control for disabling is visible and is included in the accessibility tree.
+The [HTML document][] has [functionality][] that can be operated by user motion and [can be disabled][], and the control for disabling is [visible][] and is [included in the accessibility tree][] with an [accessible name][] that is not empty ("").
 
 ```html
 <html>
@@ -246,7 +243,7 @@ The [HTML document][] has [functionality][] that can be operated by user motion 
 
 #### Failed Example 2
 
-The [HTML document][] has [functionality][] that can be operated by user motion and [can be disabled][], and the control for disabling is visible but is not included in the accessibility tree.
+The [HTML document][] has [functionality][] that can be operated by user motion and [can be disabled][], and the control for disabling is [visible][] but is not [included in the accessibility tree][].
 
 ```html
 <html>
@@ -345,12 +342,12 @@ The [HTML document][] has [functionality][] that can be operated by user motion 
 
 #### Failed Example 3
 
-The [HTML document][] has [functionality][] that can be operated by user motion and [can be disabled][], and the control for disabling is included in the accessibility tree but is not visible.
+The [HTML document][] has [functionality][] that can be operated by user motion and [can be disabled][], and the control for disabling is [included in the accessibility tree][] but is not [visible][].
 
 ```html
 <html>
   <head>
-    <title>Passed Example 1</title>
+    <title>Failed Example 3</title>
     <style>
       div:first-child {
         font-size: 1.5em;
@@ -442,6 +439,105 @@ The [HTML document][] has [functionality][] that can be operated by user motion 
 </html>
 ```
 
+#### Failed Example 4
+
+The [HTML document][] has [functionality][] that can be operated by user motion and [can be disabled][], and the control for disabling is [visible][] and [included in the accessibility tree][] but with an [accessible name][] that is empty ("").
+
+```html
+<html>
+  <head>
+    <title>Failed Example 4</title>
+    <style>
+      div:first-child {
+        font-size: 1.5em;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+        height: 50vh;
+        width: 100vw;
+      }
+      #target {
+        background: white;
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+      let eventCache = new Array();
+      let prevDiff = -1;
+
+      function init() {
+        const target = document.getElementById('target');
+        target.onpointerdown = pointerdown_handler;
+        target.onpointermove = pointermove_handler;
+
+        target.onpointerup = pointerup_handler;
+        target.onpointercancel = pointerup_handler;
+        target.onpointerout = pointerup_handler;
+        target.onpointerleave = pointerup_handler;
+      }
+
+      function pointerdown_handler(event) {
+        eventCache.push(event);
+      }
+
+      function pointermove_handler(event) {
+        event.target.style.border = 'dashed';
+        for (let i = 0; i < eventCache.length; i++) {
+          if (event.pointerId === eventCache[i].pointerId) {
+            eventCache[i] = event;
+            break;
+          }
+        }
+
+        if (eventCache.length === 2) {
+          if (prevDiff > 0) {
+            const curDiff = Math.abs(eventCache[0].clientX - eventCache[1].clientX);
+            const disable = document.getElementById('disable');
+
+            if (curDiff > prevDiff && !disable.checked) {
+              event.target.style.background = 'pink';
+            } else if (curDiff < prevDiff && !disable.checked) {
+              event.target.style.background = 'lightblue';
+            }
+          }
+
+          prevDiff = curDiff;
+        }
+      }
+
+      function pointerup_handler(event) {
+        remove_event(event);
+        event.target.style.background = 'white';
+        event.target.style.border = '1px solid black';
+
+        if (eventCache.length < 2) {
+          prevDiff = -1;
+        }
+      }
+
+      function remove_event(event) {
+        for (let i = 0; i < eventCache.length; i++) {
+          if (eventCache[i].pointerId === event.pointerId) {
+            eventCache.splice(i, 1);
+            break;
+          }
+        }
+      }
+    </script>
+  </head>
+  <body onload='init();' style='touch-action:none'>
+    <div id='target'>Touch and Hold with 2 pointers, then pinch in or out horizontally.<br/>
+        The background color will change to pink if the pinch is opening (Zoom In) 
+        or changes to lightblue if the pinch is closing (Zoom out).
+    </div>
+    <div>
+      <label for='disable'></label>
+      <input type='checkbox' id='disable'>
+    </div>  
+  </body>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -473,3 +569,6 @@ The document is not an [HTML document][].
 [can be disabled]: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#concept-fe-disabled
 [can't be disabled]: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#concept-fe-disabled
 [accessibility supported]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation#dfn-accessibility-supported
+[visible]: #visible 'Definition of visible'
+[accessible name]: #accessible-name 'Definition of accessible name'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

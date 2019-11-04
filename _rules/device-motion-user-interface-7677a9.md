@@ -2,25 +2,22 @@
 id: 7677a9
 name: Device motion can be operated by user interface
 rule_type: atomic
-
 description: |
   This rule checks that functionality that can be operated by device motion can also be operated by user interface components.
-
 accessibility_requirements:
   wcag21:2.5.4: # Motion Actuation (A)
     forConformance: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-
 input_aspects:
   - DOM Tree
   - CSS Styling
   - Accessibility tree
-
-authors:
-  - João Vicente
-  - Carlos Duarte
+acknowledgements:
+  authors:
+    - João Vicente
+    - Carlos Duarte
 ---
 
 ## Applicability
@@ -29,7 +26,7 @@ The rule applies to any [HTML document][] that has [functionality][] that can be
 
 ## Expectation
 
-For the test target, [device motion][] can also be operated by [user interface components][] and they should be visible and included in the accessibility tree.
+For the test target, [device motion][] can also be operated by [user interface components][] and they should be [visible][] and [included in the accessibility tree][] with an [accessible name][] that is not empty ("").
 
 ## Assumptions
 
@@ -52,7 +49,7 @@ For the test target, [device motion][] can also be operated by [user interface c
 
 #### Passed Example 1
 
-The [HTML document][] has [functionality][] that can be operated by [device motion][] and can also be operated by [user interface components][] and they are visible and included in the accessibility tree.
+The [HTML document][] has [functionality][] that can be operated by [device motion][] and can also be operated by [user interface components][] and they are [visible][] and [included in the accessibility tree][] with an [accessible name][] that is not empty ("").
 
 ```html
 <html>
@@ -154,7 +151,7 @@ The [HTML document][] has [functionality][] that can be operated by [device moti
 
 #### Failed Example 2
 
-The [HTML document][] has [functionality][] that can be operated by [device motion][] and can also be operated by [user interface components][] and they are visible but are not included in the accessibility tree.
+The [HTML document][] has [functionality][] that can be operated by [device motion][] and can also be operated by [user interface components][] and they are [visible][] but are not [included in the accessibility tree][].
 
 ```html
 <html>
@@ -213,7 +210,7 @@ The [HTML document][] has [functionality][] that can be operated by [device moti
 
 #### Failed Example 3
 
-The [HTML document][] has [functionality][] that can be operated by [device motion][] and can also be operated by [user interface components][] and they are included in the accessibility tree but are not visible.
+The [HTML document][] has [functionality][] that can be operated by [device motion][] and can also be operated by [user interface components][] and they are [included in the accessibility tree][] but are not [visible][].
 
 ```html
 <html>
@@ -267,6 +264,62 @@ The [HTML document][] has [functionality][] that can be operated by [device moti
 </html>
 ```
 
+#### Failed Example 4
+
+The [HTML document][] has [functionality][] that can be operated by [device motion][] and can also be operated by [user interface components][] and they are [visible][] and [included in the accessibility tree][] but with an [accessible name][] that is empty ("").
+
+```html
+<html>
+  <head>
+    <title>Failed Example 4</title>
+    <script>
+      function activateSlider() {
+        const slider = document.getElementById('motionSlider');
+        const output = document.getElementById('output');
+
+        function increaseSlider() {
+          slider.value++;
+          output.innerHTML = slider.value;
+        }
+
+        function decreaseSlider() {
+          slider.value--;
+          output.innerHTML = slider.value;
+        }
+
+        function handleOrientation(event) {
+          if (event.gamma > 20) {
+            slider.value++;
+          } else if (event.gamma < -20) {
+            slider.value--;
+          }
+          output.innerHTML = slider.value;
+        }
+
+        document.getElementById('decreaseSlider').addEventListener('click', decreaseSlider);
+        document.getElementById('increaseSlider').addEventListener('click', increaseSlider);
+        window.addEventListener('deviceorientation', handleOrientation);
+      }
+    </script>
+  </head>
+
+  <body onload="activateSlider();">
+    <h1>Slider Motion Sensor Example </h1>
+
+    <p>Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the 
+    right and left to adjust the slider value. The decrease and increase buttons also adjust the value.</p>
+    <p>Note: This example may not work across all browsers.</p>
+
+    <div>
+      <button id="decreaseSlider" type="button"></button>
+      <input type="range" min="1" max="100" value="50" id="motionSlider" disabled>
+      <button id="increaseSlider" type="button"></button>
+      <p aria-live="polite">Slider Value: <span id="output">50</span></p>
+    </div>
+  </body>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -297,3 +350,6 @@ The document is not an [HTML document][].
 [secure browsing contexts]: https://www.w3.org/TR/secure-contexts/
 [user interface components]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-user-interface-component
 [device motion]: https://www.w3.org/TR/orientation-event/#devicemotion
+[visible]: #visible 'Definition of visible'
+[accessible name]: #accessible-name 'Definition of accessible name'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

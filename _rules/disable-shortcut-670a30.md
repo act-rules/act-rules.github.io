@@ -21,17 +21,17 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any [HTML document][] with [keyboard shortcuts][].
+The rule applies to any [HTML document][] with [keyboard shortcuts][keyboard shortcuts].
 
 ## Expectation
 
-For the test target if [keyboard shortcuts][] are implemented using only [printable characters][], a [mechanism][] to disable the shortcut exists.
+For the test target if [keyboard shortcuts][keyboard shortcuts] are implemented using only [printable characters][], a [mechanism][] to disable the shortcut exists.
 
 If the [mechanism][] to disable the shortcut is a [user interface component][], then it must be [visible][] and [included in the accessibility tree][] with an [accessible name][] that is not empty ("").
 
 ## Assumptions
 
-This rule assumes as applicable [keyboard shortcuts][] those implemented by the test target [content][]. Any other means (e.g. browser extensions, user agents, external browser applications) are not considered.
+This rule assumes as applicable [keyboard shortcuts][keyboard shortcuts] those implemented by the test target [content][]. Any other means (e.g. browser extensions, browser settings, user agents, external browser applications) are not considered.
 
 ## Accessibility Support
 
@@ -49,20 +49,21 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The [HTML document][] has a [keyboard shortcut][] that uses one [printable][printable characters] and one [non-printable characters][].
+The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] that uses one [printable][printable characters] and one [non-printable characters][].
 
 ```html
 <html>
   <head>
     <title>Passed Example 1</title>
     <script>
-      function shortcut(event) {
-        if (event.key === 'i' && event.ctrlKey) {
-          cont text = document.getElementById('text');
-          text.className = text.className === 'italic' ? '' : 'italic';
-        }
+      function shortcut() {
+        document.body.addEventListener('keydown', function(event) {
+          if (event.key === 'i' && event.ctrlKey) {
+            const text = document.getElementById('text');
+            text.className = text.className === 'italic' ? '' : 'italic';
+          }
+        });
       }
-      document.body.addEventListener('keydown', shortcut);
     </script>
     <style>
       .italic {
@@ -70,7 +71,7 @@ The [HTML document][] has a [keyboard shortcut][] that uses one [printable][prin
       }
     </style>
   </head>
-  <body>
+  <body onload="shortcut();">
     <div>Press <strong>ctrl+i</strong> to toggle italic format</div>
     <div id="text">Some text inside the document content</div>
   </body>
@@ -79,7 +80,7 @@ The [HTML document][] has a [keyboard shortcut][] that uses one [printable][prin
 
 #### Passed Example 2
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][printable characters], and it can be disabled.
+The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a [printable character][printable characters], and it can be disabled.
 
 ```html
 <html>
@@ -87,12 +88,13 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Passed Example 2</title>
     <script>
       function shortcut(event) {
-        if (event.key === 'i' && !document.getElementById('turn_off').checked) {
-          const text = document.getElementById('text');
-          text.className = text.className === 'italic' ? '' : 'italic';
-        }
+        document.body.addEventListener('keydown', function(event) {
+          if (event.key === 'i' && !document.getElementById('turn_off').checked) {
+            const text = document.getElementById('text');
+            text.className = text.className === 'italic' ? '' : 'italic';
+          }
+        });
       }
-      document.body.addEventListener('keydown', shortcut);
     </script>
     <style>
       .italic {
@@ -100,7 +102,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
       }
     </style>
   </head>
-  <body>
+  <body onload="shortcut();">
     <div>Press <strong>i</strong> to toggle italic format</div>
     <label>
       <input id="turn_off" type="checkbox">
@@ -149,20 +151,21 @@ The [HTML document][] has an element with the attribute `accesskey`. Accesskeys 
 
 #### Failed Example 1
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][printable characters], and it cannot be disabled.
+The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a [printable character][printable characters], and it cannot be disabled.
 
 ```html
 <html>
   <head>
     <title>Failed Example 1</title>
     <script>
-      function shortcut(event) {
-        if (event.key === 'i') {
-          const text = document.getElementById('text');
-          text.className = text.className === 'italic' ? '' : 'italic';
-        }
+      function shortcut() {
+        document.body.addEventListener('keydown', function(event) {
+          if (event.key === 'i') {
+            const text = document.getElementById('text');
+            text.className = text.className === 'italic' ? '' : 'italic';
+          }
+        });
       }
-      document.body.addEventListener('keydown', shortcut);
     </script>
     <style>
       .italic {
@@ -170,7 +173,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
       }
     </style>
   </head>
-  <body>
+  <body onload="shortcut();">
     <div>Press <strong>i</strong> to toggle italic format</div>
     <div id="text">Some text inside the document content</div>
   </body>
@@ -179,20 +182,21 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 2
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][printable characters], and it can be disabled, but the disable [mechanism][] is not [visible][].
+The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a [printable character][printable characters], and it can be disabled, but the disable [mechanism][] is not [visible][].
 
 ```html
 <html>
   <head>
     <title>Failed Example 2</title>
     <script>
-      function shortcut(event) {
-        if (event.key === 'i' && !document.getElementById('turn_off').checked) {
-          const text = document.getElementById('text');
-          text.className = text.className === 'italic' ? '' : 'italic';
-        }
+      function shortcut() {
+        document.body.addEventListener('keydown', function(event) {
+          if (event.key === 'i' && !document.getElementById('turn_off').checked) {
+            const text = document.getElementById('text');
+            text.className = text.className === 'italic' ? '' : 'italic';
+          }
+        });
       }
-      document.body.addEventListener('keydown', shortcut);
     </script>
     <style>
       .italic {
@@ -200,7 +204,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
       }
     </style>
   </head>
-  <body>
+  <body onload="shortcut();">
     <div>Press <strong>i</strong> to toggle italic format</div>
     <div style="position: absolute; margin-left: -9999px;">
       <label>
@@ -215,20 +219,21 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 3
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][printable characters], and it can be disabled, but the disable [mechanism][] is not is not [included in the accessibility tree][].
+The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a [printable character][printable characters], and it can be disabled, but the disable [mechanism][] is not is not [included in the accessibility tree][].
 
 ```html
 <html>
   <head>
     <title>Failed Example 3</title>
     <script>
-      function shortcut(event) {
-        if (event.key === 'i' && !document.getElementById('turn_off').checked) {
-          const text = document.getElementById('text');
-          text.className = text.className === 'italic' ? '' : 'italic';
-        }
+      function shortcut() {
+        document.body.addEventListener('keydown', function(event) {
+          if (event.key === 'i' && !document.getElementById('turn_off').checked) {
+            const text = document.getElementById('text');
+            text.className = text.className === 'italic' ? '' : 'italic';
+          }
+        });
       }
-      document.body.addEventListener('keydown', shortcut);
     </script>
     <style>
       .italic {
@@ -236,7 +241,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
       }
     </style>
   </head>
-  <body>
+  <body onload="shortcut();">
     <div>Press <strong>i</strong> to toggle italic format</div>
     <div aria-hidden="true">
       <label>
@@ -251,20 +256,21 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 4
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][printable characters], and it can be disabled, but the disable [mechanism][] has an empty ("") [accessible name][].
+The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a [printable character][printable characters], and it can be disabled, but the disable [mechanism][] has an empty ("") [accessible name][].
 
 ```html
 <html>
   <head>
     <title>Failed Example 4</title>
     <script>
-      function shortcut(event) {
-        if (event.key === 'i' && !document.getElementById('turn_off').checked) {
-          const text = document.getElementById('text');
-          text.className = text.className === 'italic' ? '' : 'italic';
-        }
+      function shortcut() {
+        document.body.addEventListener('keydown', function(event) {
+          if (event.key === 'i' && !document.getElementById('turn_off').checked) {
+            const text = document.getElementById('text');
+            text.className = text.className === 'italic' ? '' : 'italic';
+          }
+        });
       }
-      document.body.addEventListener('keydown', shortcut);
     </script>
     <style>
       .italic {
@@ -272,7 +278,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
       }
     </style>
   </head>
-  <body>
+  <body onload="shortcut();">
     <div>Press <strong>i</strong> to toggle italic format</div>
     <span>Turn off shortcut</span>
     <div>
@@ -285,161 +291,11 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 </html>
 ```
 
-#### Failed Example 5
-
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][printable characters], and it cannot be remapped.
-
-```html
-<html>
-  <head>
-    <title>Failed Example 5</title>
-    <script>
-      function shortcut(event) {
-        if (event.key === 'i') {
-          const text = document.getElementById('text');
-          text.className = text.className === 'italic' ? '' : 'italic';
-        }
-      }
-      document.body.addEventListener('keydown', shortcut);
-    </script>
-    <style>
-      .italic {
-        font-style: italic;
-      }
-    </style>
-  </head>
-  <body>
-    <div>Press <strong>i</strong> to toggle italic format</div>
-    <div id="text">Some text inside the document content</div>
-  </body>
-</html>
-```
-
-#### Failed Example 6
-
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][printable characters], and it can be remapped to use a shortcut with a [non-printable character][non-printable characters], but the remap [mechanism][] is not [visible][].
-
-```html
-<html>
-  <head>
-    <title>Failed Example 6</title>
-    <script>
-      function shortcut(event) {
-        if ((document.getElementById('remap').checked && event.key === 'i' && event.ctrlKey) ||
-            (!document.getElementById('remap').checked && event.key === 'i' && !event.ctrlKey)) {
-
-          const text = document.getElementById('text');
-          text.className = text.className === 'italic' ? '' : 'italic';
-        }
-      }
-      document.body.addEventListener('keydown', shortcut);
-    </script>
-    <style>
-      .italic {
-        font-style: italic;
-      }
-    </style>
-  </head>
-  <body>
-    <div>Press <strong>i</strong> to toggle italic format</div>
-    <div>
-      <div>Remap shortcut</div>
-      <div style="position: absolute; margin-left: -9999px;">
-        <label>
-          <input id="remap" type="checkbox">
-          Use <strong>ctrl</strong> key
-        </label>
-      </div>
-    </div>
-    <div id="text">Some text inside the document content</div>
-  </body>
-</html>
-```
-
-#### Failed Example 7
-
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][printable characters], and it can be remapped to use a shortcut with a [non-printable character][non-printable characters], but the remap [mechanism][] is not [included in the accessibility tree][].
-
-```html
-<html>
-  <head>
-    <title>Failed Example 7</title>
-    <script>
-      function shortcut(event) {
-        if ((document.getElementById('remap').checked && event.key === 'i' && event.ctrlKey) ||
-            (!document.getElementById('remap').checked && event.key === 'i' && !event.ctrlKey)) {
-
-          const text = document.getElementById('text');
-          text.className = text.className === 'italic' ? '' : 'italic';
-        }
-      }
-      document.body.addEventListener('keydown', shortcut);
-    </script>
-    <style>
-      .italic {
-        font-style: italic;
-      }
-    </style>
-  </head>
-  <body>
-    <div>Press <strong>i</strong> to toggle italic format</div>
-    <div>
-      <div>Remap shortcut</div>
-      <div aria-hidden="true">
-        <label>
-          <input id="remap" type="checkbox">
-          Use <strong>ctrl</strong> key
-        </label>
-      </div>
-    </div>
-    <div id="text">Some text inside the document content</div>
-  </body>
-</html>
-```
-
-#### Failed Example 8
-
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][printable characters], and it can be remapped to use a shortcut with a [non-printable character][non-printable characters], but the remap [mechanism][] has an empty ("") [accessible name][].
-
-```html
-<html>
-  <head>
-    <title>Failed Example 8</title>
-    <script>
-      function shortcut(event) {
-        if ((document.getElementById('remap').checked && event.key === 'i' && event.ctrlKey) ||
-            (!document.getElementById('remap').checked && event.key === 'i' && !event.ctrlKey)) {
-
-          const text = document.getElementById('text');
-          text.className = text.className === 'italic' ? '' : 'italic';
-        }
-      }
-      document.body.addEventListener('keydown', shortcut);
-    </script>
-    <style>
-      .italic {
-        font-style: italic;
-      }
-    </style>
-  </head>
-  <body>
-    <div>Press <strong>i</strong> to toggle italic format</div>
-    <div>
-      <div>Use <strong>ctrl</strong> key</div>
-      <input id="remap" type="checkbox">
-    </div>
-    <div id="text">Some text inside the document content</div>
-  </body>
-</html>
-```
-
-
-
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-The [HTML document][] does not use [keyboard shortcuts][].
+The [HTML document][] does not use [keyboard shortcuts][keyboard shortcuts].
 
 ```html
 <html>
@@ -460,7 +316,6 @@ The document is not an [HTML document][].
 
 [HTML document]: https://dom.spec.whatwg.org/#concept-document
 [keyboard shortcuts]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-keyboard-shortcut
-[keyboard shortcut]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-keyboard-shortcut
 [mechanism]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-mechanism
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
 [user interface component]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-user-interface-component

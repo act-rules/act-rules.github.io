@@ -21,7 +21,7 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any [HTML document][] with [keyboard shortcuts][].
+The rule applies to any [HTML document][] with [keyboard shortcuts][keyboard shortcuts].
 
 ## Expectation
 
@@ -29,7 +29,7 @@ For each [user interface component][] that is a [descendent][] of the root node 
 
 ## Assumptions
 
-This rule assumes as applicable [keyboard shortcuts][] those implemented by the test target [content][]. Any other means (e.g. browser extensions, user agents, external browser applications) are not considered.
+This rule assumes as applicable [keyboard shortcuts][keyboard shortcuts] those implemented by the test target [content][]. Any other means (e.g. browser extensions, browser settings, user agents, external browser applications) are not considered.
 
 ## Accessibility Support
 
@@ -47,20 +47,21 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The [HTML document][] has a [keyboard shortcut][] that uses one [printable][printable characters] and one [non-printable characters][].
+The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] that uses one [printable][printable characters] and one [non-printable characters][].
 
 ```html
 <html>
   <head>
     <title>Passed Example 1</title>
     <script>
-      function shortcut(event) {
-        if (event.key === 'i' && event.ctrlKey) {
-          const text = document.getElementById('text');
-          text.className = text.className === 'italic' ? '' : 'italic';
-        }
+      function shortcut() {
+        document.body.addEventListener('keydown', function(event) {
+          if (event.key === 'i' && event.ctrlKey) {
+            const text = document.getElementById('text');
+            text.className = text.className === 'italic' ? '' : 'italic';
+          }
+        });
       }
-      document.body.addEventListener('keydown', shortcut);
     </script>
     <style>
       .italic {
@@ -68,7 +69,7 @@ The [HTML document][] has a [keyboard shortcut][] that uses one [printable][prin
       }
     </style>
   </head>
-  <body>
+  <body onload="shortcut();">
     <div>Press <strong>ctrl+i</strong> to toggle italic format</div>
     <div id="text">Some text inside the document content</div>
   </body>
@@ -111,26 +112,27 @@ The [HTML document][] has an element with the attribute `accesskey`. Accesskeys 
 
 #### Passed Example 3
 
-The [HTML document][] has a single [printable character][printable characters] [keyboard shortcut][] for a [user interface component][], which is only available when that component has focus.
+The [HTML document][] has a single [printable character][printable characters] [keyboard shortcut][keyboard shortcuts] for a [user interface component][], which is only available when that component has focus.
 
 ```html
 <html>
   <head>
     <title>Passed Example 3</title>
     <script>
-      function shortcut(event) {
-        const text = document.getElementById('text');
+      function shortcut() {
+        document.body.addEventListener('keydown', function(event) {
+          const text = document.getElementById('text');
 
-        if (event.key === '+' && document.activeElement === text) {
-          document.getElementById('list').innerHTML += '<li>' + text + '</li>';
-          document.getElementById('text').value = '';
-          event.preventDefault();
-        }
+          if (event.key === '+' && document.activeElement === text) {
+            document.getElementById('list').innerHTML += '<li>' + text + '</li>';
+            text.value = '';
+            event.preventDefault();
+          }
+        });
       }
-      document.body.addEventListener('keydown', shortcut);
     </script>
   </head>
-  <body>
+  <body onload="shortcut();">
     <label for="text">Add to list (press + to add):</label>
     <input type="text" id="text">
     <br>
@@ -146,28 +148,29 @@ The [HTML document][] has a single [printable character][printable characters] [
 
 #### Failed Example 1
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][printable characters] for a [user interface component][], and it's available even when the component does not have focus.
+The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a [printable character][printable characters] for a [user interface component][], and it's available even when the component does not have focus.
 
 ```html
 <html>
   <head>
     <title>Failed Example 1</title>
     <script>
-      function shortcut(event) {
-        if (event.key === '+') {
-          event.preventDefault();
+      function shortcut() {
+        document.body.addEventListener('keydown', function(event) {
+          if (event.key === '+') {
+            event.preventDefault();
 
-          const text = document.getElementById('text');
-          document.getElementById('list').innerHTML += '<li>' + text.value + '</li>';
-          document.getElementById('text').value = '';
-        }
+            const text = document.getElementById('text');
+            document.getElementById('list').innerHTML += '<li>' + text.value + '</li>';
+            text.value = '';
+          }
+        });
       }
-      document.body.addEventListener('keydown', shortcut);
     </script>
   </head>
-  <body>
+  <body onload="shortcut();">
     <label for="text">Add to list (press + to add):</label>
-    <input type="text" id="text"></input>
+    <input type="text" id="text">
     <br>
     <div>
       To do list
@@ -181,7 +184,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Inapplicable Example 1
 
-The [HTML document][] does not use [keyboard shortcuts][].
+The [HTML document][] does not use [keyboard shortcuts][keyboard shortcuts].
 
 ```html
 <html>
@@ -202,7 +205,6 @@ The document is not an [HTML document][].
 
 [HTML document]: https://dom.spec.whatwg.org/#concept-document
 [keyboard shortcuts]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-keyboard-shortcut
-[keyboard shortcut]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-keyboard-shortcut
 [user interface component]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-user-interface-component
 [descendent]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content

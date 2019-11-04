@@ -21,17 +21,17 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any [HTML document][] with [keyboard shortcuts][].
+The rule applies to any [HTML document][] with [keyboard shortcuts][keyboard shortcuts].
 
 ## Expectation
 
-For the test target if [keyboard shortcuts][] are implemented using only [printable characters][], a [mechanism][] to remap the shortcut to use one or more [non-printable characters][] exists.
+For the test target if [keyboard shortcuts][keyboard shortcuts] are implemented using only [printable characters][], a [mechanism][] to remap the shortcut to use one or more [non-printable characters][] exists.
 
 If the [mechanism][] to remap the shortcut is a [user interface component][], then it must be [visible][] and [included in the accessibility tree][] with an [accessible name][] that is not empty ("").
 
 ## Assumptions
 
-This rule assumes as applicable [keyboard shortcuts][] those implemented by the test target [content][]. Any other means (e.g. browser extensions, user agents, external browser applications) are not considered.
+This rule assumes as applicable [keyboard shortcuts][keyboard shortcuts] those implemented by the test target [content][]. Any other means (e.g. browser extensions, browser settings, user agents, external browser applications) are not considered.
 
 ## Accessibility Support
 
@@ -49,7 +49,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The [HTML document][] has a [keyboard shortcut][] that uses one [printable][printable characters] and one [non-printable characters][].
+The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] that uses one [printable][printable characters] and one [non-printable characters][].
 
 ```html
 <html>
@@ -79,7 +79,7 @@ The [HTML document][] has a [keyboard shortcut][] that uses one [printable][prin
 
 #### Passed Example 2
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][printable characters], and it can be remapped to use a shortcut with a [non-printable character][non-printable characters].
+The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a [printable character][printable characters], and it can be remapped to use a shortcut with a [non-printable character][non-printable characters].
 
 ```html
 <html>
@@ -156,7 +156,7 @@ The [HTML document][] has an element with the attribute `accesskey`. Accesskeys 
 
 #### Failed Example 1
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][printable characters], and it cannot be remapped.
+The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a [printable character][printable characters], and it cannot be remapped.
 
 ```html
 <html>
@@ -186,7 +186,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 2
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][printable characters], and it can be remapped to use a shortcut with a [non-printable character][non-printable characters], but the remap [mechanism][] is not [visible][].
+The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a [printable character][printable characters], and it can be remapped to use a shortcut with a [non-printable character][non-printable characters], but the remap [mechanism][] is not [visible][].
 
 ```html
 <html>
@@ -227,7 +227,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 3
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][printable characters], and it can be remapped to use a shortcut with a [non-printable character][non-printable characters], but the remap [mechanism][] is not [included in the accessibility tree][].
+The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a [printable character][printable characters], and it can be remapped to use a shortcut with a [non-printable character][non-printable characters], but the remap [mechanism][] is not [included in the accessibility tree][].
 
 ```html
 <html>
@@ -268,7 +268,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 4
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][printable characters], and it can be remapped to use a shortcut with a [non-printable character][non-printable characters], but the remap [mechanism][] has an empty ("") [accessible name][].
+The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a [printable character][printable characters], and it can be remapped to use a shortcut with a [non-printable character][non-printable characters], but the remap [mechanism][] has an empty ("") [accessible name][].
 
 ```html
 <html>
@@ -306,7 +306,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Inapplicable Example 1
 
-The [HTML document][] does not use [keyboard shortcuts][].
+The [HTML document][] does not use [keyboard shortcuts][keyboard shortcuts].
 
 ```html
 <html>
@@ -327,7 +327,6 @@ The document is not an [HTML document][].
 
 [HTML document]: https://dom.spec.whatwg.org/#concept-document
 [keyboard shortcuts]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-keyboard-shortcut
-[keyboard shortcut]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-keyboard-shortcut
 [mechanism]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-mechanism
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
 [user interface component]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-user-interface-component

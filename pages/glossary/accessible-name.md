@@ -23,18 +23,25 @@ For native markup languages, such as HTML and SVG, additional information on how
 
 **Note**: The examples presented here are non-normative and not testable. They serve to illustrate some common pitfalls about the definition and help implementers of ACT rules understand it.
 
-The `span` element with an `id` of `"target"` has an accessible name of "ACT rules" given by the `aria-labelledby` attribute and both associated elements. The fact that the element with an `id` of `"label-1"` is hidden to all users does not prevent it from giving an accessible name to other elements.
+The `input` elements have an accessible name of, respectively, "Billing Name" and "Billing Address". These accessible names are given by the `aria-labelledby` attributes and associated elements.
 
 ```html
-<span id="label-1" style="display: none">ACT</span>
-<span id="label-2">rules</span>
-<span id="target" aria-labelledby="label-1 label-2"></span>
+<div id="myBillingId">Billing</div>
+
+<div>
+	<div id="myNameId">Name</div>
+	<input type="text" aria-labelledby="myBillingId myNameId" />
+</div>
+<div>
+	<div id="myAddressId">Address</div>
+	<input type="text" aria-labelledby="myBillingId myAddressId" />
+</div>
 ```
 
-This `span` element has an accessible name of "ACT rules" given by its `aria-label` attribute.
+This `button` element has an accessible name of "Share ACT rules" given by its `aria-label` attribute.
 
 ```html
-<span aria-label="ACT rules"></span>
+<button aria-label="Share ACT rules">Share</button>
 ```
 
 This `img` element has an accessible name of "ACT rules" given by its `alt` attribute.

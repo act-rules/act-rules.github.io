@@ -5,10 +5,10 @@ key: programmatically-determined-link-context
 
 In HTML, information that is programmatically determinable from a link includes [text nodes][] that are [included in the accessibility tree][] with a non-empty ("") [accessible name][] and are
 
-- sibling nodes in the same paragraph (HTML `p` element) as the link;
-- sibling nodes in the same list (HTML element with the semantic role of `listitem`) as the link;
-- sibling nodes in the same table cell (HTML element with the semantic role of `cell` or `gridcell`) as the link;
-- nodes in a table header cell (HTML element with the semantic role of `columnheader` or `rowheader`) that is [associated][] with the table cell (HTML element with the semantic role of `cell` or `gridcell`) of which the link is a descendent;
+- in the same paragraph (HTML `p` element) as the link;
+- in the same list (HTML element with the semantic role of `listitem`) as the link;
+- in the same table cell (HTML element with the semantic role of `cell` or `gridcell`) as the link;
+- in a table header cell (HTML element with the semantic role of `columnheader` or `rowheader`) that is [associated][] with the table cell (HTML element with the semantic role of `cell` or `gridcell`) of which the link is a descendent;
 - nodes of elements referenced by an `aria-describedby` attribute of the link element.
 
 This definition is based on the [WCAG definition of programmatically determined link context](https://www.w3.org/TR/WCAG21/#dfn-programmatically-determined-link-context).

@@ -11,6 +11,8 @@ The general rules for when elements are included in the accessibility tree are d
 
 #### Examples
 
+**Note**: The examples presented here are non-normative and not testable. They serve to illustrate some common pitfalls about the definition and help implementers of ACT rules understand it.
+
 This `span` element is included in the accessibility tree (by default, elements are included in the accessibility tree).
 
 ```html

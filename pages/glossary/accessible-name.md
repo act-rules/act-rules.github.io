@@ -24,6 +24,8 @@ For native markup languages, such as HTML and SVG, additional information on how
 
 #### Examples
 
+**Note**: The examples presented here are non-normative and not testable. They serve to illustrate some common pitfalls about the definition and help implementers of ACT rules understand it.
+
 The `span` element with an `id` of `"target"` has an accessible name of "ACT rules" given by the `aria-labelledby` attribute and both associated elements. The fact that the element with an `id` of `"label-1"` is hidden to all users does not prevent it from giving an accessible name to other elements.
 
 ```html

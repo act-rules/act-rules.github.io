@@ -11,6 +11,8 @@ Content is considered visible if making it fully transparent would result in a d
 
 #### Examples
 
+**Note**: The examples presented here are non-normative and not testable. They serve to illustrate some common pitfalls about the definition and help implementers of ACT rules understand it.
+
 This `span` element is visible (by default, elements are visible).
 
 ```html

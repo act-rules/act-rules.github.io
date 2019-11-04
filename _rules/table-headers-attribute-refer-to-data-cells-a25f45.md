@@ -20,7 +20,7 @@ authors:
 
 ## Applicability
 
-This rule applies to any `headers` attribute specified on a [`cell`](https://www.w3.org/TR/html52/tabular-data.html#cell) in a `table` element that is is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+This rule applies to any `headers` attribute specified on a [`cell`](https://www.w3.org/TR/html52/tabular-data.html#cell) within a `table` element that is is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ## Expectation
 
@@ -271,6 +271,21 @@ The `table` has a `role="presentation"` and thus is not [included in the accessi
 
 #### Inapplicable Example 3
 
+The `table` is [included in the accessibility tree](#included-in-the-accessibility-tree), but not [visible](#visible).
+
+```html
+<table role="presentation">
+	<tr>
+		<td id="header1">Project Status</td>
+	</tr>
+	<tr>
+		<td>15%</td>
+	</tr>
+</table>
+```
+
+#### Inapplicable Example 4
+
 The rule applies only to `headers` attribute within a `table` element.
 
 ```html
@@ -286,7 +301,7 @@ The rule applies only to `headers` attribute within a `table` element.
 </div>
 ```
 
-#### Inapplicable Example 4
+#### Inapplicable Example 5
 
 The `table` is not [included in the accessibility tree](#included-in-the-accessibility-tree).
 

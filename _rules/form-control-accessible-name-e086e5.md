@@ -12,16 +12,17 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-authors:
-  - Anne Thyme Nørregaard
-  - Bryn Anderson
+acknowledgements:
+  authors:
+    - Anne Thyme Nørregaard
+    - Bryn Anderson
 ---
 
 ## Applicability
 
 This rule applies to any element that is [included in the accessibility tree](#included-in-the-accessibility-tree), and that has one of the following [semantic roles][]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch`, `textbox`.
 
-**Note**: The list of roles is derived by taking all the [ARIA](https://www.w3.org/TR/wai-aria-1.1/) 1.1 roles that:
+**Note**: The list of roles is derived by taking all the roles from [WAI-ARIA Specifications](#wai-aria-specifications) that:
 
 - have a [semantic roles][] that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
 - does not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
@@ -30,7 +31,7 @@ This rule applies to any element that is [included in the accessibility tree](#i
 
 ## Expectation
 
-Each target element has an [accessible name][] that is not only [whitespace][].
+Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Assumptions
 
@@ -165,7 +166,7 @@ The explicit label is not supported on `div` elements.
 
 #### Failed Example 7
 
-The [accessible name][] is only [whitespace][].
+The [accessible name][] is empty.
 
 ```html
 <label> <input /></label>

@@ -13,9 +13,10 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-authors:
-  - Dagfinn Rømen
-  - Geir Sindre Fossøy
+acknowledgements:
+  authors:
+    - Dagfinn Rømen
+    - Geir Sindre Fossøy
 ---
 
 ## Applicability
@@ -25,7 +26,7 @@ This rule applies to any HTML `label` element or other element referenced by `ar
 - is either [visible][] or [included in the accessibility tree][], and
 - is programmatically associated with an HTML element that has one of the listed form field [semantic roles][]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
 
-**Note**: The list of form field roles is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
+**Note**: The list of form field roles is derived by taking all the roles from [WAI-ARIA Specifications](#wai-aria-specifications) that:
 
 - have a [semantic role][] that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
 - does not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.

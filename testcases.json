@@ -5952,10 +5952,10 @@
       }
     },
     {
-      "testcaseId": "24bcdf687a023b56ac1bc8e2043f9e90bf6f9494",
+      "testcaseId": "73f1cad142fa806afc01e529f85aeba986d9c2cf",
       "testcaseTitle": "Failed Example 4",
-      "url": "https://act-rules.github.io/testcases/23a2a8/24bcdf687a023b56ac1bc8e2043f9e90bf6f9494.html",
-      "relativePath": "testcases/23a2a8/24bcdf687a023b56ac1bc8e2043f9e90bf6f9494.html",
+      "url": "https://act-rules.github.io/testcases/23a2a8/73f1cad142fa806afc01e529f85aeba986d9c2cf.html",
+      "relativePath": "testcases/23a2a8/73f1cad142fa806afc01e529f85aeba986d9c2cf.html",
       "expected": "failed",
       "ruleId": "23a2a8",
       "ruleName": "Image has accessible name",

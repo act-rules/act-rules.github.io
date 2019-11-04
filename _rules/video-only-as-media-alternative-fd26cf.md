@@ -9,9 +9,10 @@ input_aspects:
   - DOM Tree
   - CSS Styling
   - Audio output
-authors:
-  - Wilco Fiers
-  - Brian Bors
+acknowledgements:
+  authors:
+    - Wilco Fiers
+    - Brian Bors
 ---
 
 ## Applicability

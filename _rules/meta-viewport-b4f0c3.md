@@ -12,9 +12,10 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-authors:
-  - Jey Nandakumar
-  - Audrey Maniez
+acknowledgements:
+  authors:
+    - Jey Nandakumar
+    - Audrey Maniez
 ---
 
 ## Applicability

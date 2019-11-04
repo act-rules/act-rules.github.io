@@ -13,10 +13,11 @@ accessibility_requirements:
 input_rules:
   - a1b64e
   - ebe86a
-authors:
-  - Geir Sindre Fossøy
-  - Dagfinn Rømen
-  - Anne Thyme Nørregaard
+acknowledgements:
+  authors:
+    - Geir Sindre Fossøy
+    - Dagfinn Rømen
+    - Anne Thyme Nørregaard
 ---
 
 ## Applicability

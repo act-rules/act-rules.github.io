@@ -1,9 +1,9 @@
 ---
 id: 80f0bf
-name: 'Video or audio has no `autoplay` audio'
+name: 'Video or audio has no autoplay audio'
 rule_type: composite
 description: |
-  'This rule checks that `autoplay` audio does not last for more than 3 seconds, or the audio has a control mechanism to stop or mute it.'
+  'This rule checks that autoplay audio does not last for more than 3 seconds, or the audio has a control mechanism to stop or mute it.'
 accessibility_requirements:
   wcag20:1.4.2: # Audio Control (A)
     forConformance: true
@@ -27,7 +27,7 @@ htmlHintIgnore:
 
 This rule applies to any `audio` or `video` element that has:
 
-- an `autoplay` attribute that is equal to true, and
+- an autoplay attribute that is equal to true, and
 - both `paused` and `muted` attributes equal to false, and
 - either a `src` attribute or a child `source` element that references content with a duration of more than 3 seconds that contains audio.
 
@@ -39,8 +39,8 @@ The default value of both `paused` and `muted` attributes is `false`.
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [`autoplay` audio does not exceed 3 seconds](https://act-rules.github.io/rules/4c31df)
-- [`autoplay` audio has control mechanism](https://act-rules.github.io/rules/aaa1bf)
+- [autoplay audio does not exceed 3 seconds](https://act-rules.github.io/rules/4c31df)
+- [autoplay audio has control mechanism](https://act-rules.github.io/rules/aaa1bf)
 
 ## Assumptions
 
@@ -160,7 +160,7 @@ The `<video>` element has no audio output.
 
 #### Inapplicable Example 3
 
-The `<audio>` element does not `autoplay`.
+The `<audio>` element does not autoplay.
 
 ```html
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>

@@ -1,9 +1,9 @@
 ---
 id: aaa1bf
-name: '`autoplay` audio does not exceed 3 seconds'
+name: autoplay audio does not exceed 3 seconds
 rule_type: atomic
 description: |
-  '`autoplay` audio content does not output audio for more than 3 seconds'
+  autoplay audio content does not output audio for more than 3 seconds
 accessibility_requirements:
 input_aspects:
   - DOM Tree
@@ -20,7 +20,7 @@ acknowledgements:
 
 This rule applies to any `audio` or `video` element that has:
 
-- an `autoplay` attribute that is equal to true, and
+- an autoplay attribute that is equal to true, and
 - both `paused` and `muted` attributes equal to false, and
 - either a `src` attribute or a child `source` element that references content with a duration of more than 3 seconds that contains audio.
 
@@ -56,7 +56,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-The `<audio>` element does not `autoplay` for more than 3 seconds.
+The `<audio>` element does not autoplay for more than 3 seconds.
 
 ```html
 <audio src="../test-assets/moon-audio/moon-speech.mp3#t=25" autoplay="true"></audio>
@@ -85,7 +85,7 @@ The `<audio>` `autoplay's` for more than 3 seconds.
 
 #### Failed Example 2
 
-The `<video>` element audio `autoplay` for more than 3 seconds.
+The `<video>` element audio autoplay for more than 3 seconds.
 
 ```html
 <video autoplay="true">

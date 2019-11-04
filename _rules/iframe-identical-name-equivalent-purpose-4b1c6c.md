@@ -24,7 +24,7 @@ acknowledgements:
 
 This rule applies to any set of any two or more `iframe` elements which:
 
-- are in [documents][document] of the same [web page (HTML)][]; and
+- are in the same [web page (HTML)][]; and
 - are [included in an accessibility tree][included in the accessibility tree]; and
 - that have [matching][] [accessible names][accessible name] that are not empty (`""`).
 

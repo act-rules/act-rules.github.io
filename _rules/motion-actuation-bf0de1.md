@@ -1,6 +1,6 @@
 ---
 id: bf0de1
-name: Motion actuation can be disabled and be operated by user interface components
+name: No functions are exclusively operated through motion actuation
 rule_type: composite
 description: |
   This rule checks that functionality that can be operated by device motion or user motion can also be operated by user interface components and responding to the motion can be disabled to prevent accidental actuation.

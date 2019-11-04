@@ -1,7 +1,7 @@
 # List of spelling to be ignored by spellcheck tests in `__tests__/spelling.js`
 
 # Project specific words
-- WAI 
+- WAI
 - W3C
 
 # Generic HTML tag(s)
@@ -9,18 +9,18 @@
 - iframe
 - img
 - frameset
-- h1 
+- h1
 - h1-h6
 - svg
 
 # Domain-specific words, Definitions & other allowed terms
-- URI 
-- UA/AT 
+- URI
+- UA/AT
 - WCAG
-- WCAG2 
+- WCAG2
 - WCAG21
-- CSS3 
-- UA 
+- CSS3
+- UA
 - UI
 - APIs
 - MDN
@@ -38,11 +38,11 @@
 - subtags
 - testrunner
 - color
-- focusable 
-- unfocusable 
-- tabindex 
-- whitespace 
-- namespaces 
+- focusable
+- unfocusable
+- tabindex
+- whitespace
+- namespaces
 - webpage
 - wai-aria-specifications
 - autoplay
@@ -50,15 +50,15 @@
 - slotable
 
 # spell checker checks against strict casing & hence some repeated words here
-- Autocomplete 
+- Autocomplete
 - Focusable
 
 # Parts of url
-- http 
-- https 
-- github.com  
-- www.w3.org 
-- eval 
+- http
+- https
+- github.com
+- www.w3.org
+- eval
 - html52
 - whatwg
 - dom
@@ -69,7 +69,7 @@
 - alfa
 - RGAA
 - wcag-em-report-tool
-- ozplayer 
+- ozplayer
 
 # Test case anamolies
 - level2-frame1
@@ -81,32 +81,32 @@
 - href
 - src
 - aria-labelled
-- aria-labelledby 
+- aria-labelledby
 - autofill-field
-- combobox 
+- combobox
 - spinbutton
-- gridcell 
-- menuitem 
-- menuitemcheckbox 
-- menuitemradio 
-- searchbox 
-- treeitem 
-- listbox 
-- textbox 
-- autocomplete 
+- gridcell
+- menuitem
+- menuitemcheckbox
+- menuitemradio
+- searchbox
+- treeitem
+- listbox
+- textbox
+- autocomplete
 - textarea
-- autoplay 
+- autoplay
 - tristate
 - scrollbar
 - viewport
 - figcaption
-- aria-errormessage 
-- aria-rowindex 
-- aria-valuemin 
-- aria-valuemax 
-- aria-valuenow 
+- aria-errormessage
+- aria-rowindex
+- aria-valuemin
+- aria-valuemax
+- aria-valuenow
 - aria-dropeffect
-- lang 
+- lang
 - xml:lang
 - http-equiv
 - user-scalable
@@ -117,58 +117,58 @@
 - matrix3d
 
 # ARIA Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#aria)
-- ARIA1 
-- ARIA5 
-- ARIA6 
-- ARIA7 
+- ARIA1
+- ARIA5
+- ARIA6
+- ARIA7
 - ARIA8
-- ARIA10 
+- ARIA10
 - ARIA12
-- ARIA14 
+- ARIA14
 - ARIA16
 
 # Common Failures (https://www.w3.org/WAI/WCAG21/Techniques/#failures)
 - F10
 - F23
-- F30 
-- F38 
-- F40 
-- F41 
-- F65 
+- F30
+- F38
+- F40
+- F41
+- F65
 - F89
 
 # General Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#general)
-- G8 
-- G21 
-- G78 
-- G87 
-- G88 
-- G93 
-- G95 
-- G108 
-- G130 
-- G131 
-- G158 
-- G159 
-- G162 
-- G166 
+- G8
+- G21
+- G78
+- G87
+- G88
+- G93
+- G95
+- G108
+- G130
+- G131
+- G158
+- G159
+- G162
+- G166
 - G170
 - G171
-- G173 
+- G173
 - G203
 
 # HTMl Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#html)
-- H25 
-- H36 
-- H37 
-- H42 
+- H25
+- H36
+- H37
+- H42
 - H44
 - H58
 - H64
-- H67 
-- H93 
-- H94 
-- H95 
+- H67
+- H93
+- H94
+- H95
 - H96
 
 # Unsure why the dictionary does not have these words

@@ -14,9 +14,10 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-authors:
-  - Wilco Fiers
-  - Anne Thyme Nørregaard
+acknowledgements:
+  authors:
+    - Wilco Fiers
+    - Anne Thyme Nørregaard
 ---
 
 ## Applicability

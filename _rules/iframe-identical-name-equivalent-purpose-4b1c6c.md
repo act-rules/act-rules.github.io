@@ -13,10 +13,11 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-authors:
-  - Jey Nandakumar
-  - Audrey Maniez
-  - Jean-Yves Moyen
+acknowledgements:
+  authors:
+    - Jey Nandakumar
+    - Audrey Maniez
+    - Jean-Yves Moyen
 ---
 
 ## Applicability

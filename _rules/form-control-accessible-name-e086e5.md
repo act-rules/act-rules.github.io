@@ -12,9 +12,10 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-authors:
-  - Anne Thyme Nørregaard
-  - Bryn Anderson
+acknowledgements:
+  authors:
+    - Anne Thyme Nørregaard
+    - Bryn Anderson
 ---
 
 ## Applicability

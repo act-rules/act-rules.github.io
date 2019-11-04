@@ -10,9 +10,10 @@ input_aspects:
   - CSS Styling
   - Audio output
   - Visual output
-authors:
-  - Anne Thyme Nørregaard
-  - Bryn Anderson
+acknowledgements:
+  authors:
+    - Anne Thyme Nørregaard
+    - Bryn Anderson
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)

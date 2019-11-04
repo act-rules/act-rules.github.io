@@ -37,7 +37,7 @@ This `span` element is positioned off screen, hence is not [visible](#visible), 
 <span style="position: absolute; top:-9999em">ACT rules</span>
 ```
 
-Although the `span` element with an `id` of "label" is not itself included in the accessibility tree, it still provides an [accessible name](#accessible-name) to the other `span`, via the `aria-labelledby` attribute. Thus, it is still indirectly exposed to users of assistive technologies.
+Although the `span` element with an `id` of "label" is not itself included in the accessibility tree, it still provides an [accessible name](#accessible-name) to the other `span`, via the `aria-labelledby` attribute. Thus, it is still indirectly exposed to users of assistive technologies. Removing an element from the accessibility tree is not enough to remove all accessibility concerns from it since it can still be indirectly exposed.
 
 ```html
 <span id="label" style="display:none">ACT rules</span>

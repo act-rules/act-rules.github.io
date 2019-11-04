@@ -29,11 +29,7 @@ This rule applies to any HTML or SVG element which
 - is [included in the accessibility tree][]; and
 - has a non-empty ("") [accessible name][].
 
-## Expectation 1
-
-The [visible text content][] of each target element together with its [programmatically determined link context][] describe the purpose of the link.
-
-## Expectation 2
+## Expectation
 
 The [accessible name][] of each target element together with its [programmatically determined link context][] describe the purpose of the link.
 
@@ -66,7 +62,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The link text describes the purpose of the link.
+The [accessible name][] (from the link's text) describes the purpose of the link.
 
 ```html
 <a href="#desc">See the description of this product.</a>
@@ -79,7 +75,7 @@ The link text describes the purpose of the link.
 The [accessible name][] describes the purpose of the link.
 
 ```html
-<a href="#main"><img src="/test-assets/5effbb/main.png" alt="Go to the main content" /></a>
+<a href="#main"><img src="/test-assets/5effbb/main.png" alt="Go to the main content"/></a>
 
 <main>
 	<p id="main">This is the main content.</p>
@@ -88,7 +84,7 @@ The [accessible name][] describes the purpose of the link.
 
 #### Passed Example 3
 
-The link text together with its [programmatically determined link context][] available from the text in the same sentence, describe the purpose of the link.
+The [accessible name][] (from the link's text) together with its [programmatically determined link context][] available from the text in the same sentence, describe the purpose of the link.
 
 ```html
 <p>To see the description of this product <a href="#desc">click here</a>.</p>
@@ -98,35 +94,17 @@ The link text together with its [programmatically determined link context][] ava
 
 #### Passed Example 4
 
-The link text together with its [programmatically determined link context][] available from the text in the same sentence, describe the purpose of the link. The [accessible name][] also describes the purpose of the link.
+The [accessible name][] (from the link's text) describes the purpose of the link.
 
 ```html
-<p>
-	<span>
-		Find out what city was
-		<a href="#answer" aria-label="Follow the link to discover what city was the European Capital of Culture in 1990">
-			Capital of Culture in 1990
-		</a>
-		.
-	</span>
-</p>
-
-<p id="answer">Glasgow was the European Capital of Culture in 1990.</p>
-```
-
-#### Passed Example 5
-
-The link text describes the purpose of the link.
-
-```html
-<span role="link" tabindex="0" onclick="document.location+='#desc';return false;">See description of the product.</span>
+<span role="link" tabindex="0" onclick="document.location+='#desc'">See description of the product.</span>
 
 <p id="desc">This product consists of several web pages.</p>
 ```
 
-#### Passed Example 6
+#### Passed Example 5
 
-The [programmatically determined link context][] provided by the list and the link text describe the purpose of the links.
+The [programmatically determined link context][] provided by the list and the [accessible name][] (from the link's text) describe the purpose of the links.
 
 ```html
 <ul>
@@ -145,9 +123,9 @@ The [programmatically determined link context][] provided by the list and the li
 </ul>
 ```
 
-#### Passed Example 7
+#### Passed Example 6
 
-The context provided by the table header and the link text describe the purpose of the links.
+The context provided by the table header and the [accessible name][] (from the link's text) describe the purpose of the links.
 
 ```html
 <table>
@@ -166,7 +144,7 @@ The context provided by the table header and the link text describe the purpose 
 </table>
 ```
 
-#### Passed Example 8
+#### Passed Example 7
 
 The [accessible name][] describes the purpose of the link.
 
@@ -192,7 +170,7 @@ The [accessible name][] describes the purpose of the link.
 
 #### Failed Example 1
 
-The link text, together with the absence of [programmatically determined link context][], does not describe the purpose of the link.
+The [accessible name][] (from the link's text), together with the absence of [programmatically determined link context][], does not describe the purpose of the link.
 
 ```html
 <a href="#desc">More</a>
@@ -202,10 +180,10 @@ The link text, together with the absence of [programmatically determined link co
 
 #### Failed Example 2
 
-The link text, together with the absence of [programmatically determined link context][], does not describe the purpose of the link.
+The [accessible name][] (from the link's text), together with the absence of [programmatically determined link context][], does not describe the purpose of the link.
 
 ```html
-<div role="link" tabindex="0" onclick="document.location+='#main';return false;">More</div>
+<div role="link" tabindex="0" onclick="document.location+='#main'">More</div>
 
 <main>
 	<p id="main">This is the main content.</p>
@@ -214,7 +192,7 @@ The link text, together with the absence of [programmatically determined link co
 
 #### Failed Example 3
 
-The link text, together with the absence of [programmatically determined link context][], does not describe the purpose of the link.
+The [accessible name][] (from the link's text), together with the absence of [programmatically determined link context][], does not describe the purpose of the link.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0">
@@ -232,7 +210,7 @@ The link text, together with the absence of [programmatically determined link co
 
 #### Failed Example 4
 
-The link text does not describe the purpose of the link. The other information available on the page is not [programmatically determined link context][] because it is on a different paragraph.
+The [accessible name][] (from the link's text) does not describe the purpose of the link. The other information available on the page is not [programmatically determined link context][] because it is on a different paragraph.
 
 ```html
 <p>
@@ -245,7 +223,7 @@ The link text does not describe the purpose of the link. The other information a
 
 #### Failed Example 5
 
-The link text does not describe the purpose of the link. The other information available on the page is not [programmatically determined link context][] because it is outside the list where the links are.
+The [accessible name][] (from the link's text) does not describe the purpose of the link. The other information available on the page is not [programmatically determined link context][] because it is outside the list where the links are.
 
 ```html
 <p style="font-weight: bold">Ulysses</p>
@@ -262,7 +240,7 @@ The link text does not describe the purpose of the link. The other information a
 
 #### Failed Example 6
 
-The link text does not describe the purpose of the link. The other information available on the page is not [programmatically determined link context][] because it not available on the same cell of the link or in a header cell for that cell.
+The [accessible name][] (from the link's text) does not describe the purpose of the link. The other information available on the page is not [programmatically determined link context][] because it not available on the same cell of the link or in a header cell for that cell.
 
 ```html
 <table>

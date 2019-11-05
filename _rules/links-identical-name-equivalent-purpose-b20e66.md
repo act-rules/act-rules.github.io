@@ -280,20 +280,4 @@ Links created via scripting, but without the semantic role of link:
 </span>
 ```
 
-#### Inapplicable Example 5
-
-Links do not have [accessible names][accessible name]:
-
-```html
-<a href="http://facebook.com"></a> <a href="http://twitter.com"></a>
-```
-
-#### Inapplicable Example 6
-
-Image links do not have [accessible names][accessible name]:
-
-```html
-<a href="http://facebook.com"><img src="facebook.jpg"/></a> <a href="http://twitter.com"><img src="twitter.jpg"/></a>
-```
-
 [accessible name]: #accessible-name 'Definition of accessible name'

@@ -73,7 +73,7 @@ This page has a `title` with content.
 
 #### Passed Example 2
 
-This page gives a `title` to an iframe.
+This page `title` element is for the entire page, including content in the `iframe` without its own `title`.
 
 ```html
 <html>
@@ -121,16 +121,6 @@ The first `title` element has content.
 	<body>
 		<title></title>
 	</body>
-</html>
-```
-
-#### Passed Example 6
-
-The `title` only contains characters that are not letters or numbers.
-
-```html
-<html>
-	<title>#$@&%*!</title>
 </html>
 ```
 

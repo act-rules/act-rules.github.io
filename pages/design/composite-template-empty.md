@@ -27,7 +27,10 @@ accessibility_requirements: # Remove whatever is not applicable
 input_rules:
   -  # Include the ID of the rule
 
-authors:
+acknowledgements:
+  authors:
+  -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
+  previous_authors:
   -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
 ---
 

@@ -28,7 +28,10 @@ accessibility_requirements: # Remove whatever is not applicable
 input_aspects:
   -  # (e.g. HTTP Messages, DOM Tree, CSS Styling, Accessibility Tree, Language, etc.,)
 
-authors:
+acknowledgements:
+  authors:
+  -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
+  previous_authors:
   -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
 ---
 

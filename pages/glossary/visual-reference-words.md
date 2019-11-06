@@ -76,7 +76,7 @@ Shape
 - Wave
 - Waves
 
-Size
+Size:
 - Big
 - Large
 - Little

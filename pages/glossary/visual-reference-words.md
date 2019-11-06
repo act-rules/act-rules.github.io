@@ -25,7 +25,7 @@ Visual location:
 - Underneath
 - Up
 
-Shape
+Shape:
 - Box
 - Boxes
 - Circle

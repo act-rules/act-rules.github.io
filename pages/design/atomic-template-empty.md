@@ -30,7 +30,7 @@ input_aspects:
 
 acknowledgements:
   authors:
-  -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
+    -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
   previous_authors:
   -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
 ---

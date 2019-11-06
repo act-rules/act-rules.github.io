@@ -23,9 +23,10 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-authors:
-  - Wilco Fiers
-  - Anne Thyme Nørregaard
+acknowledgements:
+  authors:
+    - Wilco Fiers
+    - Anne Thyme Nørregaard
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -38,7 +39,7 @@ The rule applies to any HTML element with the [semantic role](#semantic-role) of
 
 ## Expectation
 
-Each target element has an [accessible name][] that is not only [whitespace][].
+Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Assumptions
 
@@ -157,7 +158,7 @@ When `link` is off screen.
 
 #### Passed Example 11
 
-`a` element where [accessible name][] does not only consist of [whitespace][].
+`a` element where [accessible name][] is not empty.
 
 ```html
 <a href="http://www.w3.org/WAI">:-)</a>
@@ -167,7 +168,7 @@ When `link` is off screen.
 
 #### Failed Example 1
 
-Image link without [accessible name][].
+Image link with empty [accessible name][].
 
 ```html
 <a href="http://www.w3.org/WAI"><img src="#"/></a>
@@ -226,7 +227,7 @@ Link with image that has empty `aria-labelledby`.
 
 #### Failed Example 8
 
-Link is completely empty, but still shows up in focus order, so it should have an [accessible name][].
+Link is completely empty, but still shows up in focus order, so it should have an non-empty [accessible name][].
 
 ```html
 <a href="http://www.w3.org/WAI"></a>
@@ -234,7 +235,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 #### Failed Example 9
 
-`area` element with `href` attribute does not have [accessible name][].
+`area` element with `href` attribute has an empty [accessible name][].
 
 ```html
 <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap" />
@@ -246,7 +247,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 #### Failed Example 10
 
-`a` element where [accessible name][] through content only consist of [whitespace][].
+`a` element where [accessible name][] through content is empty.
 
 ```html
 <a href="http://www.w3.org/WAI"> </a>

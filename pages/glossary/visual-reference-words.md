@@ -7,7 +7,7 @@ Any word in a text node that is included in the translated version of the follow
 
 **Note:** This list is not exhaustive. As soon as more visual reference words are found they can be added to this list.
 
-Visual location
+Visual location:
 - Above
 - Below
 - Beneath

@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 580,
+  "count": 590,
   "testcases": [
     {
       "testcaseId": "29097dbe000aa32fd9a66fce65a9a7f4b413e7ff",
@@ -2877,6 +2877,186 @@
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "250a3c54ea66317737082f19f8dbe2eff1e0f49f",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/7d6734/250a3c54ea66317737082f19f8dbe2eff1e0f49f.html",
+      "relativePath": "testcases/7d6734/250a3c54ea66317737082f19f8dbe2eff1e0f49f.html",
+      "expected": "passed",
+      "ruleId": "7d6734",
+      "ruleName": "`svg` element with explicit role has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/7d6734",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "0a0c7686a8ec95cd31184d4606cf39b7641b63fe",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/7d6734/0a0c7686a8ec95cd31184d4606cf39b7641b63fe.html",
+      "relativePath": "testcases/7d6734/0a0c7686a8ec95cd31184d4606cf39b7641b63fe.html",
+      "expected": "passed",
+      "ruleId": "7d6734",
+      "ruleName": "`svg` element with explicit role has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/7d6734",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "03b9ca87e10a386975ba47bff61f5076fc312058",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/7d6734/03b9ca87e10a386975ba47bff61f5076fc312058.html",
+      "relativePath": "testcases/7d6734/03b9ca87e10a386975ba47bff61f5076fc312058.html",
+      "expected": "passed",
+      "ruleId": "7d6734",
+      "ruleName": "`svg` element with explicit role has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/7d6734",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "db397586c9e58081785cf7ea18d8eea750a4747d",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/7d6734/db397586c9e58081785cf7ea18d8eea750a4747d.html",
+      "relativePath": "testcases/7d6734/db397586c9e58081785cf7ea18d8eea750a4747d.html",
+      "expected": "failed",
+      "ruleId": "7d6734",
+      "ruleName": "`svg` element with explicit role has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/7d6734",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a7b780739af72e5aa1c97951be84c5c52f0320d9",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/7d6734/a7b780739af72e5aa1c97951be84c5c52f0320d9.html",
+      "relativePath": "testcases/7d6734/a7b780739af72e5aa1c97951be84c5c52f0320d9.html",
+      "expected": "failed",
+      "ruleId": "7d6734",
+      "ruleName": "`svg` element with explicit role has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/7d6734",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a7b780739af72e5aa1c97951be84c5c52f0320d9",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/7d6734/a7b780739af72e5aa1c97951be84c5c52f0320d9.html",
+      "relativePath": "testcases/7d6734/a7b780739af72e5aa1c97951be84c5c52f0320d9.html",
+      "expected": "failed",
+      "ruleId": "7d6734",
+      "ruleName": "`svg` element with explicit role has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/7d6734",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "24d654154996cdc9201d28d81f9865bf35c458d0",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/7d6734/24d654154996cdc9201d28d81f9865bf35c458d0.html",
+      "relativePath": "testcases/7d6734/24d654154996cdc9201d28d81f9865bf35c458d0.html",
+      "expected": "failed",
+      "ruleId": "7d6734",
+      "ruleName": "`svg` element with explicit role has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/7d6734",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "e7f698ff106ff44888d83d42686a3cc12c8cdbd7",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/7d6734/e7f698ff106ff44888d83d42686a3cc12c8cdbd7.html",
+      "relativePath": "testcases/7d6734/e7f698ff106ff44888d83d42686a3cc12c8cdbd7.html",
+      "expected": "inapplicable",
+      "ruleId": "7d6734",
+      "ruleName": "`svg` element with explicit role has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/7d6734",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "13c9fe0fc4936fd5342d7adec94cd685e8eaf3de",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/7d6734/13c9fe0fc4936fd5342d7adec94cd685e8eaf3de.html",
+      "relativePath": "testcases/7d6734/13c9fe0fc4936fd5342d7adec94cd685e8eaf3de.html",
+      "expected": "inapplicable",
+      "ruleId": "7d6734",
+      "ruleName": "`svg` element with explicit role has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/7d6734",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "ef3a6d566f0fafff0cb1cff95321164352125a7f",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/7d6734/ef3a6d566f0fafff0cb1cff95321164352125a7f.html",
+      "relativePath": "testcases/7d6734/ef3a6d566f0fafff0cb1cff95321164352125a7f.html",
+      "expected": "inapplicable",
+      "ruleId": "7d6734",
+      "ruleName": "`svg` element with explicit role has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/7d6734",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",

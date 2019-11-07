@@ -12,10 +12,11 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-  - CSS Styling
-authors:
-  - Jey Nandakumar
-  - Audrey Maniez
+    - CSS Styling
+acknowledgements:
+  authors:
+    - Jey Nandakumar
+    - Audrey Maniez
 ---
 
 ## Applicability

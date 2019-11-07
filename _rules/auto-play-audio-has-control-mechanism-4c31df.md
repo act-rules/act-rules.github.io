@@ -3,7 +3,7 @@ id: 4c31df
 name: audio or video that plays automatically has a control mechanism
 rule_type: atomic
 description: |
-  audio or video that plays automatically must have a control mechanism.'
+  audio or video that plays automatically must have a control mechanism.
 accessibility_requirements:
 input_aspects:
   - DOM Tree

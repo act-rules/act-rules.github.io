@@ -3,7 +3,7 @@ id: aaa1bf
 name: audio or video that plays automatically does not exceed 3 seconds
 rule_type: atomic
 description: |
-  content that plays automatically does not output audio for more than 3 seconds
+  content that plays automatically does not output audio for more than 3 seconds.
 accessibility_requirements:
 input_aspects:
   - DOM Tree

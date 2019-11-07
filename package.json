@@ -142,12 +142,11 @@
 	"license": "MIT",
 	"scripts": {
 		"formatRulesDir": "prettier --write './_rules/**/*.md'",
-		"format": "prettier --write *.{json,md,js,jsx} './{_rules,pages,test-assets}/**/*.{json,md,js,jsx}'",
+		"format": "prettier --write *.{json,md,js,html,css,yml} './{__tests__,_rules,.github,pages,test-assets,test-utils,utils}/**/*.{json,md,js,html,css,yml}'",
 		"test": "jest --coverage"
 	},
 	"homepage": "https://github.com/act-rules/act-rules.github.io",
 	"repository": {
-		"type": "git",
 		"url": "https://github.com/act-rules/act-rules.github.io"
 	},
 	"bugs": {
@@ -184,7 +183,7 @@
 		]
 	},
 	"lint-staged": {
-		"*.{md,json,js,html}": [
+		"*.{json,md,js,html,css,yml}": [
 			"prettier --write",
 			"git add"
 		]

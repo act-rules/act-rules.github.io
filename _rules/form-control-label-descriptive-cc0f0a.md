@@ -13,21 +13,30 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-authors:
-  - Jean-Yves Moyen
-previous_authors:
-  - Dagfinn Rømen
-  - Geir Sindre Fossøy
+acknowledgements:
+  authors:
+    - Jean-Yves Moyen
+    - Wilco Fiers
+  previous_authors:
+    - Dagfinn Rømen
+    - Geir Sindre Fossøy
 ---
 
 ## Applicability
 
-This rule applies to any HTML or SVG element that:
+This rule applies to any HTML `label` element or other element referenced by `aria-labelledby` that, is [visible][] and is programmatically associated with an HTML element that has one of the following [semantic roles][]:
 
-- has one of the following [semantic roles][semantic role]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`; and
-- is [visible][]; and
-- is [included in the accessibility tree][]; and
-- has a [label][].
+- `checkbox`
+- `combobox` (`select` elements)
+- `listbox`
+- `menuitemcheckbox`
+- `menuitemradio`
+- `radio`
+- `searchbox`
+- `slider`
+- `spinbutton`
+- `switch`
+- `textbox`
 
 **Note**: The list of applicable [semantic roles][semantic role] is derived by taking all the roles from [WAI-ARIA Specifications](#wai-aria-specifications) that:
 
@@ -54,7 +63,8 @@ The [label][] describes the purpose of the test target. The [context][] of the [
 
 ## Assumptions
 
-Having a differentiating [context][] that is not [programmatically determinable][] might be a violation under other [WCAG 2.1][wcag21] success criteria. For example, using text that has not been marked up as headings in order to split a form into different sections is a violation of [Success Criterion 1.3.1: Info and Relationships][sc131]. This rule assumes, however, that this is allowed under [success criterion 2.4.6: Headings and Labels][sc246].
+- Having a differentiating [context][] that is not [programmatically determinable][] might be a violation under other [WCAG 2.1][wcag21] success criteria. For example, using text that has not been marked up as headings in order to split a form into different sections is a violation of [Success Criterion 1.3.1: Info and Relationships][sc131]. This rule assumes, however, that this is allowed under [success criterion 2.4.6: Headings and Labels][sc246].
+- This rule assumes that the [label](https://www.w3.org/TR/WCAG21/#dfn-labels) is intended for sighted users, and that hiding a visible label from assistive technologies, is a failure of [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value), but not of [Success Criterion 2.4.6 Headings and Labels](https://www.w3.org/TR/WCAG21/#headings-and-labels).
 
 ## Accessibility Support
 
@@ -108,22 +118,6 @@ Even though the `span` element is not [included in the accessibility tree][], it
 
 #### Passed Example 5
 
-For users of assistive technologies, the `aria-label` attribute take precedence over the `label` element to provide an [accessible name][]. While they are not strictly equal, the `label` element and the `aria-label` attribute are consistent and thus form a [label][]. This [label][] is descriptive.
-
-```html
-<label>Enter your first name:<input type="text" aria-label="First name" name="first_name"/></label>
-```
-
-#### Passed Example 6
-
-The `span` element acts as a [label][] and is descriptive. The [accessible name][], given by the `aria-label` attribute, is not descriptive but since it is only presented to users of assistive technologies, it is not a [label][].
-
-```html
-<span>First name:</span><input aria-label="City:" type="text" name="first_name" />
-```
-
-#### Passed Example 7
-
 The [labels][label], provided by the `label` elements, are not descriptive enough (because they are repeated over several fields). However, the headings provide both a [programmatically determined context][] and a [visual context][] that differentiates the purpose of the otherwise identically named form fields.
 
 ```html
@@ -172,28 +166,6 @@ Even though the `span` element is not [included in the accessibility tree][], it
 ```
 
 #### Failed Example 5
-
-The `span` element is presented to all users and thus qualifies as a [label][]. It is not descriptive. The [accessible name][], provided by the `aria-label` attribute, is descriptive but it is only presented to users of assistive technologies. Thus is does not qualify as a [label][].
-
-```html
-<span>City:</span><input type="text" aria-label="First name" name="first name" />
-```
-
-#### Failed Example 6
-
-The [labels][label], provided by the `label` elements, are not descriptive enough. The headings provide a [visual context][] but they are not [included in the accessibility tree][]. Therefore, users of assistive technologies have only access to the [label][] with no differentiating [context][].
-
-```html
-<h2 aria-hidden="true">Shipping address</h2>
-<label>Name<input id="shipping-name" type="text" name="name"/></label>
-<label>Street<input id="shipping-street" type="text" name="street"/></label>
-
-<h2 aria-hidden="true">Billing address</h2>
-<label>Name<input id="billing-name" type="text" name="name"/></label>
-<label>Street<input id="billing-street" type="text" name="street"/></label>
-```
-
-#### Failed Example 7
 
 The [labels][label], provided by the `label` elements, are not descriptive enough. The headings provide a [programmatically determined context][] but they are not [visible][]. Therefore, users without assistive technologies have only access to the [label][] with no differentiating [context][].
 
@@ -246,22 +218,7 @@ The form field is not [included in the accessibility tree][].
 
 #### Inapplicable Example 5
 
-The `span` element is not [visible][]. Therefore, it is not presented to all users and does not qualify as a [label][]. The form field has no [label][], even though it has an [accessible name][].
-
-```html
-<span id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">First name:</span>
-<input aria-labelledby="label_fname" type="text" name="first_name" />
-```
-
-#### Inapplicable Example 6
-
-The `aria-label` attribute is only presented to users of assistive technologies and therefore does not qualifies as a [label][].
-
-```html
-<input aria-label="First name" id="fname" type="text" name="first_name" />
-```
-
-#### Inapplicable Example 7
+=> Fail
 
 The [accessible name][] is provided by the `aria-label` attribute (which takes precedence over the `label` element). Therefore user of assistive technologies are not presented with the same information as other users, and nothing qualifies as a [label][].
 
@@ -269,7 +226,7 @@ The [accessible name][] is provided by the `aria-label` attribute (which takes p
 <label>City:<input type="text" name="first_name" aria-label="First name"/></label>
 ```
 
-#### Inapplicable Example 8
+#### Inapplicable Example 6
 
 The `span` element is not presented to users of assistive technologies. Therefore, it does not qualifies as a [label][].
 

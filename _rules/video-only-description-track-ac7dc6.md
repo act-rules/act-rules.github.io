@@ -50,13 +50,13 @@ Currently the description track is not supported by most assistive technology. V
 A video only element with a track element that contains descriptions.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<video controls>
 		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 		<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
 	</video>
-</section>
+</html>
 ```
 
 ### Failed
@@ -66,13 +66,13 @@ A video only element with a track element that contains descriptions.
 A video only element with a track element that contains incorrect descriptions.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<video controls>
 		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 		<track kind="descriptions" src="rabbit-video-incorrect-descriptions.vtt" />
 	</video>
-</section>
+</html>
 ```
 
 ### Inapplicable
@@ -82,12 +82,12 @@ A video only element with a track element that contains incorrect descriptions.
 A video only element without a track element.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<video controls>
 		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 	</video>
-</section>
+</html>
 ```
 
 #### Inapplicable Example 2
@@ -95,13 +95,13 @@ A video only element without a track element.
 A video only element that is not [visible][].
 
 ```html
-<section lang="en">
+<html lang="en">
 	<video controls style="display: none;">
 		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 		<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
 	</video>
-</section>
+</html>
 ```
 
 #### Inapplicable Example 3
@@ -109,13 +109,13 @@ A video only element that is not [visible][].
 A video element with audio.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<video controls>
 		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 		<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
 	</video>
-</section>
+</html>
 ```
 
 [visible]: #visible 'Definition of visible'

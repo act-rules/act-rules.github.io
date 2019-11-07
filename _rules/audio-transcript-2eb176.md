@@ -53,7 +53,7 @@ There are no major accessibility support issues known for this rule.
 Audio with controls and internal transcript
 
 ```html
-<section lang="en">
+<html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 	<p>
 		The above audio contains the following speech: We choose to go to the moon in this decade and do the other things,
@@ -61,7 +61,7 @@ Audio with controls and internal transcript
 		of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to
 		postpone, and one which we intend to win, and the others, too.
 	</p>
-</section>
+</html>
 ```
 
 #### Passed Example 2
@@ -69,10 +69,10 @@ Audio with controls and internal transcript
 Audio with controls and external transcript
 
 ```html
-<section lang="en">
+<html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 	<a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</a>
-</section>
+</html>
 ```
 
 #### Passed Example 3
@@ -80,11 +80,11 @@ Audio with controls and external transcript
 Audio with autoplay and external transcript
 
 ```html
-<section lang="en">
+<html lang="en">
 	(no-iframe)
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
 	<a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</a>
-</section>
+</html>
 ```
 
 ### Failed
@@ -94,9 +94,9 @@ Audio with autoplay and external transcript
 Audio with controls and no transcript
 
 ```html
-<section lang="en">
+<html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-</section>
+</html>
 ```
 
 #### Failed Example 2
@@ -104,7 +104,7 @@ Audio with controls and no transcript
 Audio with controls and incorrect internal transcript
 
 ```html
-<section lang="en">
+<html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 	<p>
 		The above audio contains the following speech: We choose to go to the cheese in this decade and do the other things,
@@ -112,7 +112,7 @@ Audio with controls and incorrect internal transcript
 		of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to
 		postpone, and one which we intend to win, and the others, too.
 	</p>
-</section>
+</html>
 ```
 
 #### Failed Example 3
@@ -120,10 +120,10 @@ Audio with controls and incorrect internal transcript
 Audio with controls and incorrect external transcript
 
 ```html
-<section lang="en">
+<html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 	<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</a>
-</section>
+</html>
 ```
 
 #### Failed Example 4
@@ -131,11 +131,11 @@ Audio with controls and incorrect external transcript
 Audio with autoplay and incorrect external transcript
 
 ```html
-<section lang="en">
+<html lang="en">
 	(no-iframe)
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
 	<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</a>
-</section>
+</html>
 ```
 
 #### Failed Example 5
@@ -143,7 +143,7 @@ Audio with autoplay and incorrect external transcript
 Audio with controls and [non-visible][visible] internal transcript
 
 ```html
-<section lang="en">
+<html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 	<p style="text-indent: -9999px;">
 		The above audio contains the following speech: We choose to go to the moon in this decade and do the other things,
@@ -151,7 +151,7 @@ Audio with controls and [non-visible][visible] internal transcript
 		of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to
 		postpone, and one which we intend to win, and the others, too.
 	</p>
-</section>
+</html>
 ```
 
 #### Failed Example 6
@@ -159,7 +159,7 @@ Audio with controls and [non-visible][visible] internal transcript
 Audio with controls and internal transcript that is not exposed to the accessibility tree
 
 ```html
-<section lang="en">
+<html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 	<p aria-hidden="true">
 		The above audio contains the following speech: We choose to go to the moon in this decade and do the other things,
@@ -167,7 +167,7 @@ Audio with controls and internal transcript that is not exposed to the accessibi
 		of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to
 		postpone, and one which we intend to win, and the others, too.
 	</p>
-</section>
+</html>
 ```
 
 ### Inapplicable
@@ -177,9 +177,9 @@ Audio with controls and internal transcript that is not exposed to the accessibi
 Audio without controls.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3"></audio>
-</section>
+</html>
 ```
 
 #### Inapplicable Example 2
@@ -187,9 +187,9 @@ Audio without controls.
 Audio with hidden controls.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls style="display: none;"></audio>
-</section>
+</html>
 ```
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

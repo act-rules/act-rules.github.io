@@ -60,7 +60,7 @@ There are no major accessibility support issues known for this rule.
 An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<p>
 		A part of a speech by John F. Kennedy: We choose to go to the moon in this decade and do the other things, not
 		because they are easy, but because they are hard, because that goal will serve to organize and measure the best of
@@ -71,7 +71,7 @@ An audio element that describes some of the text on the same page. The text on t
 		You can also listen to the audio file below to hear the above part of the speech.
 	</p>
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-</section>
+</html>
 ```
 
 ### Failed
@@ -81,7 +81,7 @@ An audio element that describes some of the text on the same page. The text on t
 An audio element that describes some of the text on the same page. The audio contains more information than the text does.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<p>
 		A part of a speech by John F. Kennedy: We choose to go to the moon in this decade and do the other things, not
 		because they are easy, but because they are hard.
@@ -90,7 +90,7 @@ An audio element that describes some of the text on the same page. The audio con
 		You can also listen to the audio file below to hear the above part of the speech.
 	</p>
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-</section>
+</html>
 ```
 
 #### Failed Example 2
@@ -98,7 +98,7 @@ An audio element that describes some of the text on the same page. The audio con
 An audio element that describes some of the text on the same page. The text is not [visible][] on the page.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<p style="display: none;">
 		A part of a speech by John F. Kennedy: We choose to go to the moon in this decade and do the other things, not
 		because they are easy, but because they are hard, because that goal will serve to organize and measure the best of
@@ -109,7 +109,7 @@ An audio element that describes some of the text on the same page. The text is n
 		You can also listen to the audio file below to hear the above part of the speech.
 	</p>
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-</section>
+</html>
 ```
 
 #### Failed Example 3
@@ -117,7 +117,7 @@ An audio element that describes some of the text on the same page. The text is n
 An audio element that describes some of the text on the same page. The text on the page does not label the audio as an alternative.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<p>
 		A part of a speech by John F. Kennedy: We choose to go to the moon in this decade and do the other things, not
 		because they are easy, but because they are hard, because that goal will serve to organize and measure the best of
@@ -125,7 +125,7 @@ An audio element that describes some of the text on the same page. The text on t
 		postpone, and one which we intend to win, and the others, too.
 	</p>
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-</section>
+</html>
 ```
 
 #### Failed Example 4
@@ -133,7 +133,7 @@ An audio element that describes some of the text on the same page. The text on t
 An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the label is not [visible][] on the page.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<p>
 		A part of a speech by John F. Kennedy: We choose to go to the moon in this decade and do the other things, not
 		because they are easy, but because they are hard, because that goal will serve to organize and measure the best of
@@ -144,7 +144,7 @@ An audio element that describes some of the text on the same page. The text on t
 		You can also listen to the audio file below to hear the above part of the speech.
 	</p>
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-</section>
+</html>
 ```
 
 ### Inapplicable
@@ -154,7 +154,7 @@ An audio element that describes some of the text on the same page. The text on t
 An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the controls are not [visible][] on the page.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<p>
 		A part of a speech by John F. Kennedy: We choose to go to the moon in this decade and do the other things, not
 		because they are easy, but because they are hard, because that goal will serve to organize and measure the best of
@@ -165,7 +165,7 @@ An audio element that describes some of the text on the same page. The text on t
 		You can also listen to the audio file below to hear the above part of the speech.
 	</p>
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls style="display: none;"></audio>
-</section>
+</html>
 ```
 
 #### Inapplicable Example 2
@@ -173,7 +173,7 @@ An audio element that describes some of the text on the same page. The text on t
 An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but there are no controls.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<p>
 		A part of a speech by John F. Kennedy: We choose to go to the moon in this decade and do the other things, not
 		because they are easy, but because they are hard, because that goal will serve to organize and measure the best of
@@ -185,7 +185,7 @@ An audio element that describes some of the text on the same page. The text on t
 	</p>
 
 	<audio src="/test-assets/moon-audio/moon-speech.mp3"></audio>
-</section>
+</html>
 ```
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

@@ -47,7 +47,7 @@ There are no major accessibility support issues known for this rule.
 A video element without audio has a separate audio track that describes the visual information.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<video controls>
 		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
@@ -56,7 +56,7 @@ A video element without audio has a separate audio track that describes the visu
 	<audio controls>
 		<source src="/test-assets/rabbit-video/audio-description.mp3" type="audio/mpeg" />
 	</audio>
-</section>
+</html>
 ```
 
 ### Failed
@@ -66,12 +66,12 @@ A video element without audio has a separate audio track that describes the visu
 A video element without an audio track.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<video controls>
 		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 	</video>
-</section>
+</html>
 ```
 
 #### Failed Example 2
@@ -79,7 +79,7 @@ A video element without an audio track.
 A video element without audio has a separate audio track that incorrectly describes the visual information.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<video controls>
 		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
@@ -88,7 +88,7 @@ A video element without audio has a separate audio track that incorrectly descri
 	<audio controls>
 		<source src="/test-assets/rabbit-video/incorrect-audio-description.mp3" type="audio/mpeg" />
 	</audio>
-</section>
+</html>
 ```
 
 ### Inapplicable
@@ -98,12 +98,12 @@ A video element without audio has a separate audio track that incorrectly descri
 A video element with audio.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<video controls>
 		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 	</video>
-</section>
+</html>
 ```
 
 #### Inapplicable Example 2
@@ -111,12 +111,12 @@ A video element with audio.
 A video element without sound that is not [visible][].
 
 ```html
-<section lang="en">
+<html lang="en">
 	<video controls style="display: none;">
 		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 	</video>
-</section>
+</html>
 ```
 
 [visible]: #visible 'Definition of visible'

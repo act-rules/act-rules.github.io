@@ -58,10 +58,10 @@ There are no major accessibility support issues known for this rule.
 A set of two HTML `<a>` elements have the same [accessible name][] and link to the same resource.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
 	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
-</section>
+</html>
 ```
 
 #### Passed Example 2
@@ -69,10 +69,10 @@ A set of two HTML `<a>` elements have the same [accessible name][] and link to t
 Links resolves to same resource after instant redirect:
 
 ```html
-<section lang="en">
+<html lang="en">
 	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
 	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/redirect.html">Contact us</a>
-</section>
+</html>
 ```
 
 #### Passed Example 3
@@ -80,10 +80,10 @@ Links resolves to same resource after instant redirect:
 Resources are not the same, since the links resolve to different URLs, but the resources are completely identical, thus serving the same purpose:
 
 ```html
-<section lang="en">
+<html lang="en">
 	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
 	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index-copy.html">Contact us</a>
-</section>
+</html>
 ```
 
 #### Passed Example 4
@@ -91,10 +91,10 @@ Resources are not the same, since the links resolve to different URLs, but the r
 Same link text used for links going to pages where the content section is the same, but where the navigation options (bread crumbs and local sub menus) differ due to different placement in navigation hierarchy:
 
 ```html
-<section lang="en">
+<html lang="en">
 	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
 	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/careers/contact.html">Contact us</a>
-</section>
+</html>
 ```
 
 #### Passed Example 5
@@ -102,10 +102,10 @@ Same link text used for links going to pages where the content section is the sa
 URLs differ due to trailing slashes, but resolves to the same resource after redirects caused by user agent:
 
 ```html
-<section lang="en">
+<html lang="en">
 	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/">Contact us</a>
 	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66">Contact us</a>
-</section>
+</html>
 ```
 
 #### Passed Example 6
@@ -113,10 +113,10 @@ URLs differ due to trailing slashes, but resolves to the same resource after red
 Pages contain different amounts of information and/or differently worded information, but fulfill the same purpose in relation to the link:
 
 ```html
-<section lang="en">
+<html lang="en">
 	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html">Call us</a>
 	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html">Call us</a>
-</section>
+</html>
 ```
 
 #### Passed Example 7
@@ -124,10 +124,10 @@ Pages contain different amounts of information and/or differently worded informa
 Pages have the same advertised key content but use different layouts:
 
 ```html
-<section lang="en">
+<html lang="en">
 	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html">Contact us</a>
 	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page3.html">Contact us</a>
-</section>
+</html>
 ```
 
 #### Passed Example 8
@@ -135,7 +135,7 @@ Pages have the same advertised key content but use different layouts:
 Links created via scripting with [explicit role](#explicit-role) of link, but lead to the same resource:
 
 ```html
-<section lang="en">
+<html lang="en">
 	<span
 		role="link"
 		tabindex="0"
@@ -151,7 +151,7 @@ Links created via scripting with [explicit role](#explicit-role) of link, but le
 	>
 		Link text
 	</span>
-</section>
+</html>
 ```
 
 #### Passed Example 9
@@ -159,7 +159,7 @@ Links created via scripting with [explicit role](#explicit-role) of link, but le
 A set of two SVG `<a>` elements have the same [accessible name][] and link to the same resource.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 		<a href="http://facebook.com" aria-label="Follow us">
 			<circle cx="50" cy="40" r="35" />
@@ -171,7 +171,7 @@ A set of two SVG `<a>` elements have the same [accessible name][] and link to th
 			</text>
 		</a>
 	</svg>
-</section>
+</html>
 ```
 
 ### Failed
@@ -181,7 +181,10 @@ A set of two SVG `<a>` elements have the same [accessible name][] and link to th
 Same [accessible name][] used for links going to different resources:
 
 ```html
-<section lang="en"><a href="http://facebook.com">Follow us</a> <a href="http://twitter.com">Follow us</a></section>
+<html lang="en">
+	<a href="http://facebook.com">Follow us</a>
+	<a href="http://twitter.com">Follow us</a>
+</html>
 ```
 
 #### Failed Example 2
@@ -189,12 +192,12 @@ Same [accessible name][] used for links going to different resources:
 Same [accessible name][] used for links going to web pages that are similar, but have different information in their content:
 
 ```html
-<section lang="en">
+<html lang="en">
 	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
 	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
 		>Contact us</a
 	>
-</section>
+</html>
 ```
 
 #### Failed Example 3
@@ -202,7 +205,7 @@ Same [accessible name][] used for links going to web pages that are similar, but
 Links created via scripting with [explicit role](#explicit-role) of link, but lead to resources that offer different content:
 
 ```html
-<section lang="en">
+<html lang="en">
 	<span
 		role="link"
 		tabindex="0"
@@ -218,7 +221,7 @@ Links created via scripting with [explicit role](#explicit-role) of link, but le
 	>
 		Link text
 	</span>
-</section>
+</html>
 ```
 
 #### Failed Example 4
@@ -226,10 +229,10 @@ Links created via scripting with [explicit role](#explicit-role) of link, but le
 Same [accessible name][] used for image links going to different resources:
 
 ```html
-<section lang="en">
+<html lang="en">
 	<a href="http://facebook.com"><img src="facebook.jpg" alt="Follow us"/></a>
 	<a href="http://twitter.com"><img src="twitter.jpg" alt="Follow us"/></a>
-</section>
+</html>
 ```
 
 #### Failed Example 5
@@ -237,7 +240,7 @@ Same [accessible name][] used for image links going to different resources:
 A set of two SVG `<a>` elements have the same [accessible name][] but link to different resources:
 
 ```html
-<section lang="en">
+<html lang="en">
 	<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 		<a href="http://facebook.com" aria-label="Follow us">
 			<circle cx="50" cy="40" r="35" />
@@ -249,7 +252,7 @@ A set of two SVG `<a>` elements have the same [accessible name][] but link to di
 			</text>
 		</a>
 	</svg>
-</section>
+</html>
 ```
 
 #### Failed Example 6
@@ -257,10 +260,10 @@ A set of two SVG `<a>` elements have the same [accessible name][] but link to di
 Links resolves to same resource after redirect, but the redirect is not instant:
 
 ```html
-<section lang="en">
+<html lang="en">
 	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
 	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/redirect1.html">Contact us</a>
-</section>
+</html>
 ```
 
 ### Inapplicable
@@ -270,7 +273,10 @@ Links resolves to same resource after redirect, but the redirect is not instant:
 ´a´ and ´area´ elements without ´href´ attribute:
 
 ```html
-<section lang="en"><a>Link text</a> <area aria-label="Link text" /></section>
+<html lang="en">
+	<a>Link text</a>
+	<area aria-label="Link text" />
+</html>
 ```
 
 #### Inapplicable Example 2
@@ -280,10 +286,10 @@ These links have different [accessible names][accessible name]. The rule only ap
 **Note**: It is a best practice for [Success Criterion 2.4.9: Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html) that identical links have identical [accessible names][accessible name]. This is however not a requirement.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Reach out</a>
 	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-</section>
+</html>
 ```
 
 #### Inapplicable Example 3
@@ -291,7 +297,7 @@ These links have different [accessible names][accessible name]. The rule only ap
 Link is not included in the accessibility tree:
 
 ```html
-<section lang="en">
+<html lang="en">
 	<a
 		href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html"
 		aria-hidden="true"
@@ -299,7 +305,7 @@ Link is not included in the accessibility tree:
 		>Contact Us</a
 	>
 	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html">Contact Us</a>
-</section>
+</html>
 ```
 
 #### Inapplicable Example 4
@@ -307,7 +313,7 @@ Link is not included in the accessibility tree:
 Links created via scripting, but without the semantic role of link:
 
 ```html
-<section lang="en">
+<html lang="en">
 	<span onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html'">
 		Contact Us
 	</span>
@@ -315,7 +321,7 @@ Links created via scripting, but without the semantic role of link:
 	<span onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html'">
 		Contact Us
 	</span>
-</section>
+</html>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

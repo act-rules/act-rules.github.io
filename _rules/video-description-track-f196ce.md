@@ -54,13 +54,13 @@ This means that the rule can only provide a pass for these success criteria if a
 A video element with a track element that contains descriptions.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<video controls>
 		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 		<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
 	</video>
-</section>
+</html>
 ```
 
 ### Failed
@@ -70,13 +70,13 @@ A video element with a track element that contains descriptions.
 A video element with a track element that contains incorrect descriptions.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<video controls>
 		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 		<track kind="descriptions" src="/test-assets/rabbit-video/incorrect-descriptions.vtt" />
 	</video>
-</section>
+</html>
 ```
 
 ### Inapplicable
@@ -86,12 +86,12 @@ A video element with a track element that contains incorrect descriptions.
 A video element without a track element.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<video controls>
 		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 	</video>
-</section>
+</html>
 ```
 
 #### Inapplicable Example 2
@@ -99,13 +99,13 @@ A video element without a track element.
 A video element that is not [visible][].
 
 ```html
-<section lang="en">
+<html lang="en">
 	<video controls style="display: none;">
 		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 		<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
 	</video>
-</section>
+</html>
 ```
 
 #### Inapplicable Example 3
@@ -113,13 +113,13 @@ A video element that is not [visible][].
 A video element without audio.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<video controls>
 		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 		<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
 	</video>
-</section>
+</html>
 ```
 
 [visible]: #visible 'Definition of visible'

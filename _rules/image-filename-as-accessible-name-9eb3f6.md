@@ -49,9 +49,9 @@ _There are no major accessibility support issues known for this rule._
 The `img` element's [accessible name][] uses the filename which accurately describes the image.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<img src="https://www.w3.org/WAI/demos/bad/img/w3c" alt="w3c" />
-</section>
+</html>
 ```
 
 #### Passed Example 2
@@ -59,11 +59,11 @@ The `img` element's [accessible name][] uses the filename which accurately descr
 The `img` element's [accessible name][] includes the filename, which in combination with the text content of the `a` element accurately describes the image.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<a href="https://www.w3.org/WAI/demos/bad/img/w3c.png" download
 		>Download <img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png"
 	/></a>
-</section>
+</html>
 ```
 
 ### Failed
@@ -73,9 +73,9 @@ The `img` element's [accessible name][] includes the filename, which in combinat
 The `img` element's [accessible name][] matches the image filename. However the presence of the file extension in the [accessible name][] is redundant and results in the [accessible name][] not accurately describing the image.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png" />
-</section>
+</html>
 ```
 
 #### Failed Example 2
@@ -83,9 +83,9 @@ The `img` element's [accessible name][] matches the image filename. However the 
 The `input` element with a `type` of `image` has an [accessible name][] that matches the filename. However the presence of the file extension in the [accessible name][] is redundant and results in the [accessible name][] not accurately describing the image.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<input type="image" src="https://www.w3.org/WAI/demos/bad/before/img/top_weather.gif" alt="top_weather.gif" />
-</section>
+</html>
 ```
 
 ### Inapplicable
@@ -95,9 +95,9 @@ The `input` element with a `type` of `image` has an [accessible name][] that mat
 The `img` element doesn't have the semantic role of image.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<img role="presentation" alt="" />
-</section>
+</html>
 ```
 
 #### Inapplicable Example 2
@@ -105,9 +105,9 @@ The `img` element doesn't have the semantic role of image.
 The `img` element is not [included in the accessibility tree][].
 
 ```html
-<section lang="en">
+<html lang="en">
 	<img style="display:none;" alt="" />
-</section>
+</html>
 ```
 
 #### Inapplicable Example 3
@@ -115,9 +115,9 @@ The `img` element is not [included in the accessibility tree][].
 The `img` element's [accessible name][] is not equivalent to the file name specified in the `src` attribute.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="modanna lily" />
-</section>
+</html>
 ```
 
 #### Inapplicable Example 4
@@ -125,13 +125,13 @@ The `img` element's [accessible name][] is not equivalent to the file name speci
 The `img` element's `alt` attribute matches the filename but is overridden by the `aria-label` value which takes precedence in the [accessible name][] calculation.
 
 ```html
-<section lang="en">
+<html lang="en">
 	<img
 		src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg"
 		alt="teaser_right2.jpg"
 		aria-label="modanna lily"
 	/>
-</section>
+</html>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

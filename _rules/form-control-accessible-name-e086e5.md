@@ -31,7 +31,7 @@ This rule applies to any element that is [included in the accessibility tree](#i
 
 ## Expectation
 
-Each target element has an [accessible name][] that is not only [whitespace][].
+Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Assumptions
 
@@ -166,7 +166,7 @@ The explicit label is not supported on `div` elements.
 
 #### Failed Example 7
 
-The [accessible name][] is only [whitespace][].
+The [accessible name][] is empty.
 
 ```html
 <label> <input /></label>

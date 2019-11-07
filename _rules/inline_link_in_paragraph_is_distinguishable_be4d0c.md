@@ -68,7 +68,7 @@ This is a link that is a descendant of a paragraph element and it uses the defau
 <p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
-#### TODO Passed Example 2
+#### Passed Example 2
 
 This is a link that is a descendant of a paragraph element and the underline is removed but an icon is added to denote it as a link.
 
@@ -82,7 +82,10 @@ This is a link that is a descendant of a paragraph element and the underline is 
 		</style>
 	</head>
 	<body>
-		<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
+		<p>
+			Read about WAI on the
+			<a class="test" href="http://w3.org/WAI">WAI webpage <img src="/test-assets/be4d0c/icon.png"/></a>.
+		</p>
 	</body>
 </html>
 ```
@@ -147,7 +150,7 @@ This is a link that is a descendant of a paragraph element and the underline is 
 		</style>
 	</head>
 	<body>
-		<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
+		<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
 	</body>
 </html>
 ```

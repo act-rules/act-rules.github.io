@@ -14,17 +14,28 @@ input_aspects:
   - DOM Tree
   - CSS Styling
   - Language
-authors:
-  - Dagfinn Rømen
-  - Geir Sindre Fossøy
+acknowledgements:
+  authors:
+    - Dagfinn Rømen
+    - Geir Sindre Fossøy
+    - Wilco Fiers
 ---
 
 ## Applicability
 
-This rule applies to any HTML `label` element or other element referenced by `aria-labelledby` that:
+This rule applies to any HTML `label` element or other element referenced by `aria-labelledby` that, is [visible][] and is programmatically associated with an HTML element that has one of the following [semantic roles][]:
 
-- is either [visible][] or [included in the accessibility tree][], and
-- is programmatically associated with an HTML element that has one of the listed form field [semantic roles][]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
+- `checkbox`
+- `combobox` (`select` elements)
+- `listbox`
+- `menuitemcheckbox`
+- `menuitemradio`
+- `radio`
+- `searchbox`
+- `slider`
+- `spinbutton`
+- `switch`
+- `textbox`
 
 **Note**: The list of form field roles is derived by taking all the roles from [WAI-ARIA Specifications](#wai-aria-specifications) that:
 
@@ -42,7 +53,8 @@ Each target element describes the purpose of the associated form field element.
 
 ## Assumptions
 
-This rule assumes that if `lang` attributes are used, their value accurately describes the part of the content they are applied to.
+- This rule assumes that the [label](https://www.w3.org/TR/WCAG21/#dfn-labels) is intended for sighted users, and that hiding a visible label from assistive technologies, is a failure of [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value), but not of [Success Criterion 2.4.6 Headings and Labels](https://www.w3.org/TR/WCAG21/#headings-and-labels).
+- This rule assumes that if `lang` attributes are used, their value accurately describes the part of the content they are applied to.
 
 ## Accessibility Support
 
@@ -99,19 +111,6 @@ Label is [visible][], but not included in accessibility tree
 </section>
 ```
 
-#### Passed Example 5
-
-Label is included in accessibility tree, but not [visible][]
-
-```html
-<section lang="en">
-	<p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">
-		First name:
-	</p>
-	<input aria-labelledby="label_fname" type="text" name="fname" />
-</section>
-```
-
 ### Failed
 
 #### Failed Example 1
@@ -154,24 +153,11 @@ Label is [visible][], but not included in accessibility tree, and does not descr
 </section>
 ```
 
-#### Failed Example 5
-
-Label is included in accessibility tree, but not [visible][], and does not describe the purpose of the associated element.
-
-```html
-<section lang="en">
-	<p id="label_fname" style="position: absolute; top: -9999px; left: -9999px;">
-		Menu
-	</p>
-	<input aria-labelledby="label_fname" type="text" name="fname" />
-</section>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-`Label` that is neither [visible][] to users, nor [included in the accessibility tree][].
+`Label` that is not [visible][] to users.
 
 ```html
 <section lang="en">
@@ -184,7 +170,7 @@ Label is included in accessibility tree, but not [visible][], and does not descr
 
 #### Inapplicable Example 2
 
-Programmatically associated `p` element that is neither [visible][] nor [included in the accessibility tree][].
+Programmatically associated `p` element that is not [visible][].
 
 ```html
 <section lang="en">
@@ -214,16 +200,5 @@ The element with `aria-labelledby` is not a form field.
 <section lang="en"><i id="smile">Smile</i> <button aria-labelledby="smile">:-)</button></section>
 ```
 
-#### Inapplicable Example 5
-
-No `label` element.
-
-```html
-<section lang="en">
-	<input id="fname" type="text" name="fname" />
-</section>
-```
-
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'

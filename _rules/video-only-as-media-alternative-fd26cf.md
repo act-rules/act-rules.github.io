@@ -10,9 +10,10 @@ input_aspects:
   - CSS Styling
   - Audio output
   - Language
-authors:
-  - Wilco Fiers
-  - Brian Bors
+acknowledgements:
+  authors:
+    - Wilco Fiers
+    - Brian Bors
 ---
 
 ## Applicability

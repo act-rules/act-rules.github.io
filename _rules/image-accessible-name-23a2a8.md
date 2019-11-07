@@ -13,9 +13,10 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-authors:
-  - Anne Thyme Nørregaard
-  - Stein Erik Skotkjerra
+acknowledgements:
+  authors:
+    - Anne Thyme Nørregaard
+    - Stein Erik Skotkjerra
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -28,9 +29,9 @@ The rule applies to HTML `img` elements or any HTML element with the [semantic r
 
 ## Expectation
 
-Each target element has an [accessible name][] that is not only [whitespace][], or is marked as [decorative][].
+Each target element has an [accessible name][] that is not empty (`""`), or is marked as [decorative][].
 
-**NOTE**: An `img` element can be marked as [decorative][], by using either `role="presentation"`, `role="none"` or an empty alt attribute, `alt=""`.
+**NOTE**: An `img` element can be marked as [decorative][], by using either `role="presentation"`, `role="none"` or an empty `alt` attribute, (`alt=""` or `alt` with no value).
 
 ## Assumptions
 
@@ -115,7 +116,7 @@ The HTML `img` element is marked as [decorative][] through `role="none"`.
 
 #### Passed Example 8
 
-The HTML `img` element has an [accessible name][] that does not only consist of [whitespace][].
+The HTML `img` element has an [accessible name][] that is not empty.
 
 ```html
 <img alt=":-)" />
@@ -125,7 +126,7 @@ The HTML `img` element has an [accessible name][] that does not only consist of 
 
 #### Failed Example 1
 
-The HTML `img` element is not marked as [decorative][] and does not have an [accessible name][].
+The HTML `img` element is not marked as [decorative][] and has an empty [accessible name][].
 
 ```html
 <img />
@@ -133,7 +134,7 @@ The HTML `img` element is not marked as [decorative][] and does not have an [acc
 
 #### Failed Example 2
 
-The element with role of `img` does not have an [accessible name][].
+The element with role of `img` has an empty [accessible name][].
 
 ```html
 <div role="img"></div>
@@ -141,7 +142,7 @@ The element with role of `img` does not have an [accessible name][].
 
 #### Failed Example 3
 
-The `img` element inside a `div` positioned off screen has no [accessible name][] and is not marked as [decorative][].
+The `img` element inside a `div` positioned off screen has an empty [accessible name][] and is not marked as [decorative][].
 
 ```html
 <div style="margin-left:-9999px;"><img /></div>
@@ -149,10 +150,10 @@ The `img` element inside a `div` positioned off screen has no [accessible name][
 
 #### Failed Example 4
 
-The HTML `img` element has an [accessible name][] that only consist of [whitespace][].
+The HTML `img` element has an empty [accessible name][].
 
 ```html
-<img aria-label=" " />
+<img alt=" " />
 ```
 
 ### Inapplicable

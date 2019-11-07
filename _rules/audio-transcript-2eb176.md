@@ -5,15 +5,15 @@ rule_type: atomic
 description: |
   Non-streaming `audio` elements must have a text alternative for all included auditory information.
 accessibility_requirements:
-
 input_aspects:
   - DOM Tree
   - CSS Styling
   - Audio output
   - Language
-authors:
-  - Wilco Fiers
-  - Brian Bors
+acknowledgements:
+  authors:
+    - Wilco Fiers
+    - Brian Bors
 ---
 
 ## Applicability

@@ -11,9 +11,10 @@ input_aspects:
   - Audio output
   - Visual output
   - Language
-authors:
-  - Wilco Fiers
-  - Brian Bors
+acknowledgements:
+  authors:
+    - Wilco Fiers
+    - Brian Bors
 ---
 
 ## Applicability

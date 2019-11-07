@@ -14,9 +14,10 @@ input_aspects:
   - DOM Tree
   - CSS Styling
   - Language
-authors:
-  - Jey Nandakumar
-  - Audrey Maniez
+acknowledgements:
+  authors:
+    - Jey Nandakumar
+    - Audrey Maniez
 ---
 
 ## Applicability

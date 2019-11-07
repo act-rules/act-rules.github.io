@@ -14,8 +14,9 @@ input_aspects:
   - DOM Tree
   - CSS Styling
   - Language
-authors:
-  - Anne Thyme Nørregaard
+acknowledgements:
+  authors:
+    - Anne Thyme Nørregaard
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -297,7 +298,7 @@ Link is not included in the accessibility tree:
 		tabindex="-1"
 		>Contact Us</a
 	>
-	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/pabe2.html">Contact Us</a>
+	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html">Contact Us</a>
 </section>
 ```
 
@@ -314,24 +315,6 @@ Links created via scripting, but without the semantic role of link:
 	<span onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html'">
 		Contact Us
 	</span>
-</section>
-```
-
-#### Inapplicable Example 5
-
-Links do not have [accessible names][accessible name]:
-
-```html
-<section lang="en"><a href="http://facebook.com"></a> <a href="http://twitter.com"></a></section>
-```
-
-#### Inapplicable Example 6
-
-Image links do not have [accessible names][accessible name]:
-
-```html
-<section lang="en">
-	<a href="http://facebook.com"><img src="facebook.jpg"/></a> <a href="http://twitter.com"><img src="twitter.jpg"/></a>
 </section>
 ```
 

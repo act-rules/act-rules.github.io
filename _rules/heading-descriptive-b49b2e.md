@@ -14,10 +14,11 @@ input_aspects:
   - DOM Tree
   - CSS Styling
   - Language
-authors:
-  - Dagfinn Rømen
-  - Geir Sindre Fossøy
-  - Carlos Duarte
+acknowledgements:
+  authors:
+    - Dagfinn Rømen
+    - Geir Sindre Fossøy
+    - Carlos Duarte
 ---
 
 ## Applicability

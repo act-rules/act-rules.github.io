@@ -11,8 +11,9 @@ input_aspects:
   - Audio output
   - Visual output
   - Language
-authors:
-  - Brian Bors
+acknowledgements:
+  authors:
+    - Brian Bors
 ---
 
 ## Applicability

@@ -51,7 +51,7 @@ This rule applies to any HTML `label` element or other element referenced by `ar
 
 ## Expectation
 
-The [label][] describes the purpose of the test target. The [context][] of the [label][] can be used to differentiate the purpose from other test targets in the same test subject.
+The [label][] describes the purpose of the test target within its [context][].
 
 **Note**: If the [label][] is not associated in a [programmatically determinable][] way with the form field element, this is likely a violation of [Success Criterion 1.3.1: Info and Relationships][sc131] but neither of this rule nor of [Success Criterion 2.4.6: Heading and Labels][sc246].
 
@@ -59,7 +59,7 @@ The [label][] describes the purpose of the test target. The [context][] of the [
 
 **Note**: While the [label][] has to be presented to all users, this is not necessarily the case for the [context][], if any. However, if [context][] is needed by some users to differentiate the purpose from one test target to another, it is likely that similar [context][] will be needed for all users.
 
-**Note**: Having a [label][] which is not included in the [accessible name][] is a violation of [Success Criterion 2.5.3: Label in Name][sc253] but neither of this rule nor of [Success Criterion 2.4.6: Heading and Labels][sc246].
+**Note**: Having a [label][] which is not included in the [accessible name][] is a violation of [Success Criterion 2.5.3: Label in Name][sc253] but not of this rule nor of [Success Criterion 2.4.6: Heading and Labels][sc246].
 
 ## Assumptions
 

@@ -5,7 +5,7 @@ key: context
 
 The context of a piece of information is any other information that helps a user understand it by clarifying its meaning.
 
-Both the [visual context](#visual-context) and the [programmatically determined context](#programmatically-determined-context) contribute to the context.
+The context is composed of the [visual context](#visual-context) and the [programmatically determined context](#programmatically-determined-context).
 
 **Note**: To be considered as context, content must be available similarly to all users with similar abilities. Thus, usually, content from another [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) is not part of the context as there is no guarantee that all users have access to it (the global topic of a website may nonetheless be considered context even if it's not repeated on every single page of the site).
 

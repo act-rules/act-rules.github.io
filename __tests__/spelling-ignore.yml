@@ -42,6 +42,7 @@
 - unfocusable
 - tabindex
 - whitespace
+- namespace
 - namespaces
 - webpage
 - wai-aria-specifications
@@ -49,6 +50,7 @@
 - autoplays
 - slotable
 - slotables
+- presentational
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete
@@ -121,6 +123,7 @@
 
 # ARIA Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#aria)
 - ARIA1
+- ARIA4
 - ARIA5
 - ARIA6
 - ARIA7

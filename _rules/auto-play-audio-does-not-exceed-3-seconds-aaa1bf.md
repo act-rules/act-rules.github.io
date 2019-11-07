@@ -77,7 +77,7 @@ The `<video>` element audio output does not last longer than 3 seconds.
 
 #### Failed Example 1
 
-The `<audio>` `autoplay's` for more than 3 seconds.
+The `audio` element plays automatically for more than 3 seconds.
 
 ```html
 <audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay="true" controls></audio>

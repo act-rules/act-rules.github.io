@@ -18,6 +18,10 @@ acknowledgements:
     - Anne Thyme Nørregaard
     - Bryn Anderson
     - Jey Nandakumar
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'title-require'
 ---
 
 ## Applicability
@@ -25,7 +29,7 @@ acknowledgements:
 This rule applies to any HTML or SVG element that:
 
 - has a [semantic role](#semantic-role) that is a [widget role](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent), and
-- has [descendants](https://www.w3.org/TR/dom41/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) that are [text nodes](https://www.w3.org/TR/dom/#text) which are both [visible](#visible) as well as [included in the accessibility tree](#included-in-the-accessibility-tree), and
+- has [descendants](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) that are [text nodes](https://www.w3.org/TR/dom/#text) which are both [visible](#visible) as well as [included in the accessibility tree](#included-in-the-accessibility-tree), and
 - has an [accessible name](#accessible-name), even if the name is empty ("").
 
 **Note**: [widget roles](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [support name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent) are: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `switch`, `tab`, `treeitem`.
@@ -59,7 +63,7 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-[Visible][] [label][] and [accessible name][] matches when trailing white spaces are removed.
+[Visible][] [label][] and [accessible name][] match when trailing white spaces are removed.
 
 ```html
 <div role="link" aria-label="next page ">next page</div>
@@ -67,7 +71,7 @@ _No accessibility support issues known._
 
 #### Passed Example 2
 
-Character insensitivity between [visible][] [label][] and [accessible name][].
+[Visible][] [label][] and [accessible name][] match when ignoring case sensitivity.
 
 ```html
 <div role="link" aria-label="Next Page">next page</div>
@@ -106,7 +110,7 @@ Full [visible][] [label][] is contained in the [accessible name][], though the n
 
 #### Passed Example 5
 
-Text nodes in name from content are not expressing anything in human language and do therefore not live up to the [WCAG definition of text](https://www.w3.org/TR/WCAG21/#dfn-text).
+[Descendant text content](https://dom.spec.whatwg.org/#concept-descendant-text-content) does not express anything in [human language](https://www.w3.org/TR/WCAG21/#dfn-human-language-s) and do therefore not live up to the [WCAG definition of text](https://www.w3.org/TR/WCAG21/#dfn-text).
 
 ```html
 <button aria-label="close">:-)</button>
@@ -114,7 +118,7 @@ Text nodes in name from content are not expressing anything in human language an
 
 #### Passed Example 6
 
-[Visible][] [label][] and [accessible name][] matches when punctuation is removed.
+[Visible][] [label][] and [accessible name][] match when punctuation is removed.
 
 ```html
 <div role="link" aria-label="Next page">Next page...</div>
@@ -122,7 +126,7 @@ Text nodes in name from content are not expressing anything in human language an
 
 #### Passed Example 7
 
-[Visible][label][] and [accessible name][] matches when parts that do not express anything in human language, "X", and punctuation is removed.
+[Visible][] [label][] and [accessible name][] match when parts that do not express anything in human language, "X", and punctuation are removed.
 
 ```html
 <div role="link" aria-label="Close and go back">Close (X) and go back</div>
@@ -207,7 +211,7 @@ Non-widget role that supports name from content.
 
 #### Inapplicable Example 4
 
-No [rendered text](#rendered-text) in name from content.
+Element has no [descendants](https://dom.spec.whatwg.org/#concept-tree-descendant).
 
 ```html
 <div role="tooltip" aria-label="OK"></div>

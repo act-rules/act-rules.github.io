@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 590,
+  "count": 587,
   "testcases": [
     {
       "testcaseId": "29097dbe000aa32fd9a66fce65a9a7f4b413e7ff",
@@ -3918,24 +3918,6 @@
       }
     },
     {
-      "testcaseId": "d3d69cae8f46a82b10ad203101542c8e4abfc314",
-      "testcaseTitle": "Passed Example 5",
-      "url": "https://act-rules.github.io/testcases/cc0f0a/d3d69cae8f46a82b10ad203101542c8e4abfc314.html",
-      "relativePath": "testcases/cc0f0a/d3d69cae8f46a82b10ad203101542c8e4abfc314.html",
-      "expected": "passed",
-      "ruleId": "cc0f0a",
-      "ruleName": "Form control label is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/cc0f0a",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.6": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
       "testcaseId": "ef16d89f0d356c491365ec962ce250aedf1c029f",
       "testcaseTitle": "Failed Example 1",
       "url": "https://act-rules.github.io/testcases/cc0f0a/ef16d89f0d356c491365ec962ce250aedf1c029f.html",
@@ -4008,24 +3990,6 @@
       }
     },
     {
-      "testcaseId": "567e247cf9558d078511d17155e6d8e9fbddb8eb",
-      "testcaseTitle": "Failed Example 5",
-      "url": "https://act-rules.github.io/testcases/cc0f0a/567e247cf9558d078511d17155e6d8e9fbddb8eb.html",
-      "relativePath": "testcases/cc0f0a/567e247cf9558d078511d17155e6d8e9fbddb8eb.html",
-      "expected": "failed",
-      "ruleId": "cc0f0a",
-      "ruleName": "Form control label is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/cc0f0a",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.6": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
       "testcaseId": "c29e711c0a515944a14e8074a37d1b08b462c298",
       "testcaseTitle": "Inapplicable Example 1",
       "url": "https://act-rules.github.io/testcases/cc0f0a/c29e711c0a515944a14e8074a37d1b08b462c298.html",
@@ -4084,24 +4048,6 @@
       "testcaseTitle": "Inapplicable Example 4",
       "url": "https://act-rules.github.io/testcases/cc0f0a/850969eec810c7f7e51c6f0cf317e1cfa4984e6a.html",
       "relativePath": "testcases/cc0f0a/850969eec810c7f7e51c6f0cf317e1cfa4984e6a.html",
-      "expected": "inapplicable",
-      "ruleId": "cc0f0a",
-      "ruleName": "Form control label is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/cc0f0a",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.6": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "b03cf088345e7a0d93bd6be1155a7d61a2e22af3",
-      "testcaseTitle": "Inapplicable Example 5",
-      "url": "https://act-rules.github.io/testcases/cc0f0a/b03cf088345e7a0d93bd6be1155a7d61a2e22af3.html",
-      "relativePath": "testcases/cc0f0a/b03cf088345e7a0d93bd6be1155a7d61a2e22af3.html",
       "expected": "inapplicable",
       "ruleId": "cc0f0a",
       "ruleName": "Form control label is descriptive",

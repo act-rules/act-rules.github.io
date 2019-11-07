@@ -39,7 +39,7 @@ Each target element has either:
 - An icon immediately before, after or in the link denoting it as a link
 - Text immediately before, after or in the link denoting it as a link
 - a [distinguishing style][] compared to the other text not based on colour alone
-- a different colour compared to the rest of the text in the paragraph that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG20/#contrast-ratiodef) difference with the rest of the text and a [distinguishing style][] both when the target element's [focus state is triggered][] and the target element's [hover state is triggered][]
+- a different colour compared to the rest of the text in the paragraph that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG20/#contrast-ratiodef) difference with the rest of the text and a [distinguishing style][] both when the target element [gains focus][gain focus] and the target element is [hovered][]
 
 ## Assumptions
 
@@ -224,8 +224,8 @@ This paragraph has no visible descendant text nodes apart from those in the link
 ```
 
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
-[focus state is triggered]: #focus-state-is-triggered 'Definition of focus state is triggered'
-[hover state is triggered]: #hover-state-is-triggered 'Definition of hover state is triggered'
+[gain focus]: https://html.spec.whatwg.org/multipage/interaction.html#gains-focus
+[hovered]: #hovered 'Definition of hovered'
 [link]: https://www.w3.org/TR/wai-aria/#link
 [semantic role]: #semantic-role 'Definition of semantic role'
 [text node]: https://dom.spec.whatwg.org/#text

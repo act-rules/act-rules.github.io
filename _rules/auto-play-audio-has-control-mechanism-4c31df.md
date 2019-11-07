@@ -1,9 +1,9 @@
 ---
 id: 4c31df
-name: autoplay audio has a control mechanism'
+name: audio or video that plays automatically has a control mechanism
 rule_type: atomic
 description: |
-  autoplay audio or video must have a control mechanism.'
+  audio or video that plays automatically must have a control mechanism.'
 accessibility_requirements:
 input_aspects:
   - DOM Tree
@@ -24,7 +24,7 @@ htmlHintIgnore:
 
 This rule applies to any `audio` or `video` element that has:
 
-- an autoplay attribute that is equal to true, and
+- an `autoplay` attribute that is equal to true, and
 - both `paused` and `muted` attributes equal to false, and
 - either a `src` attribute or a child `source` element that references content with a duration of more than 3 seconds that contains audio.
 

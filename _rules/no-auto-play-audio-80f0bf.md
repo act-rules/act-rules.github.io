@@ -1,9 +1,9 @@
 ---
 id: 80f0bf
-name: 'Video or audio has no autoplay audio'
+name: audio or video has no audio that plays automatically
 rule_type: composite
 description: |
-  'This rule checks that autoplay audio does not last for more than 3 seconds, or the audio has a control mechanism to stop or mute it.'
+  This rule checks that automatically playing audio does not last for more than 3 seconds, or the audio has a control mechanism to stop or mute it.
 accessibility_requirements:
   wcag20:1.4.2: # Audio Control (A)
     forConformance: true
@@ -27,7 +27,7 @@ htmlHintIgnore:
 
 This rule applies to any `audio` or `video` element that has:
 
-- an autoplay attribute that is equal to true, and
+- an `autoplay` attribute that is equal to true, and
 - both `paused` and `muted` attributes equal to false, and
 - either a `src` attribute or a child `source` element that references content with a duration of more than 3 seconds that contains audio.
 
@@ -160,7 +160,7 @@ The `<video>` element has no audio output.
 
 #### Inapplicable Example 3
 
-The `<audio>` element does not autoplay.
+The `audio` element does not play automatically.
 
 ```html
 <audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>

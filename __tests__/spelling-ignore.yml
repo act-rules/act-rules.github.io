@@ -37,15 +37,17 @@
 - subtags
 - testrunner
 - color
-- focusable
-- unfocusable
-- tabindex
-- whitespace
-- namespaces
+- focusable 
+- unfocusable 
+- tabindex 
+- whitespace 
+- namespace
+- namespaces 
 - webpage
 - wai-aria-specifications
 - autoplay
 - autoplays
+- presentational
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete
@@ -115,10 +117,11 @@
 - matrix3d
 
 # ARIA Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#aria)
-- ARIA1
-- ARIA5
-- ARIA6
-- ARIA7
+- ARIA1 
+- ARIA4
+- ARIA5 
+- ARIA6 
+- ARIA7 
 - ARIA8
 - ARIA10
 - ARIA12

@@ -15,9 +15,10 @@ input_rules:
   - 1a02b0
   - f196ce
   - ab4d13
-authors:
-  - Wilco Fiers
-  - Brian Bors
+acknowledgements:
+  authors:
+    - Wilco Fiers
+    - Brian Bors
 ---
 
 ## Test Procedure

@@ -1,9 +1,9 @@
 ---
 id: aaa1bf
-name: auto-play audio does not exceed 3 seconds
+name: audio or video that plays automatically does not exceed 3 seconds
 rule_type: atomic
 description: |
-  auto-play audio content does not output audio for more than 3 seconds
+  content that plays automatically does not output audio for more than 3 seconds.
 accessibility_requirements:
   wcag-technique:G60: # Playing a sound that turns off automatically within three seconds
   forConformance: true
@@ -62,7 +62,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-The `<audio>` element does not auto-play for more than 3 seconds.
+The `<audio>` element does not play automatically for more than 3 seconds.
 
 ```html
 <audio src="../test-assets/moon-audio/moon-speech.mp3#t=25" autoplay="true"></audio>
@@ -83,7 +83,7 @@ The `<video>` element audio output does not last longer than 3 seconds.
 
 #### Failed Example 1
 
-The `<audio>` auto-plays for more than 3 seconds.
+The `audio` element plays automatically for more than 3 seconds.
 
 ```html
 <audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay="true" controls></audio>
@@ -91,7 +91,7 @@ The `<audio>` auto-plays for more than 3 seconds.
 
 #### Failed Example 2
 
-The `<video>` element audio auto-plays for more than 3 seconds.
+The `video` element automatically plays some audio for more than 3 seconds.
 
 ```html
 <video autoplay="true">

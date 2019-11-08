@@ -1,9 +1,9 @@
 ---
 id: efbfc7
-name: Auto-updating text content can be paused or stopped
+name: Text content that updates automatically can be paused, stopped or hidden
 rule_type: atomic
 description: |
-  This rule checks that there are mechanisms to pause or stop the auto-updating of text content
+  This rule checks that there are mechanisms to pause, stop or hide the auto-updating of text content
 accessibility_requirements: # Remove whatever is not applicable
   wcag20:2.2.2: # Pause, Stop, Hide (A)
     forConformance: true
@@ -12,6 +12,7 @@ accessibility_requirements: # Remove whatever is not applicable
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
+  - CSS Styling
 acknowledgements:
   authors:
     - Carlos Duarte
@@ -19,23 +20,17 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any [visible][] [text node][] in the [flat tree][] of an [HTML document][] if:
+The rule applies to any [visible][] [text node][] of an [HTML document][] if:
 
-- the content of the [text node][] changes through an action that was not initiated by the user;
-- the change happens anytime after the [readiness][document readiness] of the [HTML document][] the [text node][] belongs to is equal to "complete"; and
+- the content of the [text node][] either changes, is replaced or removed without any user intervention;
+- the change, replacing or removal happens anytime after the [readiness][document readiness] of the [HTML document][] the [text node][] belongs to is equal to "complete"; and
 - it is not the only [content][] in the [HTML document][].
 
-## Expectation 1
+## Expectation
 
-For the test target a [mechanism][] is provided to pause or stop the updating of the content of the [text node][].
+For the test target a [mechanism][] is provided to pause, stop or hide the updating of the content of the [text node][].
 
-**Note**: If there is more than one [text node][] with auto-updating content, a single [mechanism][] may be used to pause or stop updating all [text nodes][text node].
-
-## Expectation 2
-
-The [mechanism][] to pause or stop the auto-updating of the content of the [text node][] is [visible][], has an [accessible name][] that is not empty (""), and is [included in the accessibility tree][].
-
-**Note**: This rule does not require the [mechanism][] to have a [label][] that is descriptive. Depending on how the [mechanism][] is implemented, a non-descriptive label would be a violation of another success criterion, like [Success Criterion 3.3.2: Labels or Instructions][sc 3.3.2]
+**Note**: If there is more than one [text node][] with auto-updating content, a single [mechanism][] may be used to pause, stop or hide updating all [text nodes][text node].
 
 ## Assumptions
 
@@ -128,6 +123,39 @@ The text node automatically updates every 3 seconds after the page completes loa
 </body>
 ```
 
+#### Passed Example 3
+
+The text node automatically updates every 3 seconds after the page completes loading. A mechanism is available to hide the automatically updating content.
+
+```html
+<body onload="start()">
+	<p>Random number: <span id="target">1</span></p>
+	<input type="button" onclick="hide()" value="Hide updates" />
+
+	<p>
+		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
+		implement accessibility.
+	</p>
+
+	<script type="text/javascript">
+		function change() {
+			var target = document.getElementById('target')
+			var number = Math.floor(Math.random() * 1000)
+			target.innerText = number
+		}
+
+		function start() {
+			setInterval(change, 3000)
+		}
+
+		function hide() {
+			var target = document.getElementById('target')
+			target.style.visibility = 'hidden'
+		}
+	</script>
+</body>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -158,140 +186,6 @@ The text node automatically updates every 3 seconds after the page completes loa
 ```
 
 #### Failed Example 2
-
-The text node automatically updates every 3 seconds after the page completes loading. The mechanism to stop the automatic updates is not visible.
-
-```html
-<body onload="start()">
-	<p>Random number: <span id="target">1</span></p>
-	<input type="button" onclick="stop()" value="Stop updates" style="position: absolute; top: -9999px; left: -9999px;" />
-
-	<p>
-		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
-		implement accessibility.
-	</p>
-
-	<script type="text/javascript">
-		function change() {
-			var target = document.getElementById('target')
-			var number = Math.floor(Math.random() * 1000)
-			target.innerText = number
-		}
-
-		var updates
-		function start() {
-			updates = setInterval(change, 3000)
-		}
-
-		function stop() {
-			clearInterval(updates)
-		}
-	</script>
-</body>
-```
-
-#### Failed Example 3
-
-The text node automatically updates every 3 seconds after the page completes loading. The mechanism to stop the automatic updates is not included in the accessibility tree.
-
-```html
-<body onload="start()">
-	<p>Random number: <span id="target">1</span></p>
-	<span onclick="stop()" aria-hidden="true">Stop updates</span>
-
-	<p>
-		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
-		implement accessibility.
-	</p>
-
-	<script type="text/javascript">
-		function change() {
-			var target = document.getElementById('target')
-			var number = Math.floor(Math.random() * 1000)
-			target.innerText = number
-		}
-
-		var updates
-		function start() {
-			updates = setInterval(change, 3000)
-		}
-
-		function stop() {
-			clearInterval(updates)
-		}
-	</script>
-</body>
-```
-
-#### Failed Example 4
-
-The text node automatically updates every 3 seconds after the page completes loading. The mechanism to stop the automatic updates has an empty accessible name.
-
-```html
-<body onload="start()">
-	<p>Random number: <span id="target">1</span></p>
-	<span onclick="stop()" aria-label="">Stop updates</span>
-
-	<p>
-		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
-		implement accessibility.
-	</p>
-
-	<script type="text/javascript">
-		function change() {
-			var target = document.getElementById('target')
-			var number = Math.floor(Math.random() * 1000)
-			target.innerText = number
-		}
-
-		var updates
-		function start() {
-			updates = setInterval(change, 3000)
-		}
-
-		function stop() {
-			clearInterval(updates)
-		}
-	</script>
-</body>
-```
-
-#### Failed Example 5
-
-The text node automatically updates every 3 seconds after the page completes loading. The mechanism to stop the automatic updates has an accessible name that is only whitespace.
-
-```html
-<body onload="start()">
-	<p>Random number: <span id="target">1</span></p>
-	<div onclick="stop()" aria-label="   ">
-		<span style="background-color:#333; color:white; padding:5px">Stop updates</span>
-	</div>
-
-	<p>
-		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
-		implement accessibility.
-	</p>
-
-	<script type="text/javascript">
-		function change() {
-			var target = document.getElementById('target')
-			var number = Math.floor(Math.random() * 1000)
-			target.innerText = number
-		}
-
-		var updates
-		function start() {
-			updates = setInterval(change, 3000)
-		}
-
-		function stop() {
-			clearInterval(updates)
-		}
-	</script>
-</body>
-```
-
-#### Failed Example 6
 
 The text node (part of a progress bar) automatically updates every second after the page completes loading. There is no mechanism for the user to pause the auto-updates, other than waiting for them to end.
 
@@ -483,14 +377,11 @@ The automatically updating content is the only content in the document.
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
 [document readiness]: https://www.w3.org/TR/html53/dom.html#current-document-readiness
 [essential]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html#dfn-essential
-[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree
 [f16]: https://www.w3.org/WAI/WCAG21/Techniques/failures/F16
 [g186]: https://www.w3.org/WAI/WCAG21/Techniques/general/G186
 [html document]: https://dom.spec.whatwg.org/#html-document
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[label]: https://www.w3.org/TR/WCAG21/#dfn-labels
 [mechanism]: https://www.w3.org/TR/WCAG21/#dfn-mechanism
 [sc 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
-[sc 3.3.2]: https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html
 [text node]: https://dom.spec.whatwg.org/#text
 [visible]: #visible 'Definition of visible'

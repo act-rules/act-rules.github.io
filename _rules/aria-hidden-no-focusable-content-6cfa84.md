@@ -15,7 +15,7 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  using-aria: fourth_rule_of_aria_use
+  using-aria:fourth_rule_of_aria_use:
     title: Fourth rule of ARIA use
     forConformance: true
     failed: not satisfied

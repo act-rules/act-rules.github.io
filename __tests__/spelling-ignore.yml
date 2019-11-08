@@ -37,12 +37,12 @@
 - subtags
 - testrunner
 - color
-- focusable 
-- unfocusable 
-- tabindex 
-- whitespace 
+- focusable
+- unfocusable
+- tabindex
+- whitespace
 - namespace
-- namespaces 
+- namespaces
 - webpage
 - wai-aria-specifications
 - autoplay
@@ -117,11 +117,11 @@
 - matrix3d
 
 # ARIA Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#aria)
-- ARIA1 
+- ARIA1
 - ARIA4
-- ARIA5 
-- ARIA6 
-- ARIA7 
+- ARIA5
+- ARIA6
+- ARIA7
 - ARIA8
 - ARIA10
 - ARIA12
@@ -141,6 +141,7 @@
 # General Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#general)
 - G8
 - G21
+- G60
 - G78
 - G87
 - G88

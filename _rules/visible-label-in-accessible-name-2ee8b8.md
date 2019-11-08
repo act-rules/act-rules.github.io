@@ -13,10 +13,11 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-authors:
-  - Anne Thyme Nørregaard
-  - Bryn Anderson
-  - Jey Nandakumar
+acknowledgements:
+  authors:
+    - Anne Thyme Nørregaard
+    - Bryn Anderson
+    - Jey Nandakumar
 ---
 
 ## Applicability
@@ -91,6 +92,14 @@ Not all of [visible][] label is included in [accessible name][].
 
 ```html
 <button name="link" aria-label="the full">The full label</button>
+```
+
+#### Failed Example 3
+
+Mathematical symbols cannot be substituted for text as [explicitly mentioned in WCAG](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name#mathematical-expressions-and-formulae).
+
+```html
+<a href="/" aria-label="Proof of two multiplied by two is four">Proof of 2&times;2=4</a>
 ```
 
 ### Inapplicable

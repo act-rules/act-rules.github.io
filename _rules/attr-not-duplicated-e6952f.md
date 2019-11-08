@@ -10,6 +10,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:H94: # Ensuring that elements do not contain duplicate attributes
+    forConformance: true
+    failed: not satisfied
+    passed: satisfied
+    inapplicable: satisfied
 input_aspects:
   - Source code
 acknowledgements:

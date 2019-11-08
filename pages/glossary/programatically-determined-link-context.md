@@ -3,17 +3,20 @@ title: Programmatically Determined Link Context
 key: programmatically-determined-link-context
 --
 
-In HTML, information that is programmatically determinable from a link includes [text nodes][] that are [included in the accessibility tree][] with a non-empty ("") [accessible name][] and are
+In HTML, information that is programmatically determinable from a link includes HTML elements that are [visible][] and [included in the accessibility tree][] with a non-empty ("") [accessible name][] and
 
-- in the same paragraph (HTML `p` element) as the link;
-- in the same list (HTML element with the semantic role of `listitem`) as the link;
-- in the same table cell (HTML element with the semantic role of `cell` or `gridcell`) as the link;
-- in a table header cell (HTML element with the semantic role of `columnheader` or `rowheader`) that is [associated][] with the table cell (HTML element with the semantic role of `cell` or `gridcell`) of which the link is a descendent;
-- nodes of elements referenced by an `aria-describedby` attribute of the link element.
+- have as ancestor in the [flat tree][], the nearest [ancestor][] `p` element of the link;
+- have as ancestor in the [flat tree][], the nearest [ancestor][] element with the semantic role of `listitem` of the link ;
+- have as ancestor in the [flat tree][], the nearest [ancestor][] element with the semantic role of `cell` or `gridcell` of the link;
+- are [descendant][] nodes in the [flat tree][] of an element with the semantic role of `columnheader` or `rowheader` that is [associated][] with the element with the semantic role of `cell` or `gridcell` of which the link is a [descendant][];
+- are [descendant][] nodes of elements referenced by an `aria-describedby` attribute of the link element.
 
 This definition is based on the [WCAG definition of programmatically determined link context](https://www.w3.org/TR/WCAG21/#dfn-programmatically-determined-link-context).
 
 [accessible name]: #accessible-name 'Definition of accessible name'
+[ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor
 [associated]: https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics
+[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[text nodes]: https://www.w3.org/TR/dom/#text
+[visible]: #visible 'Definition of visible'

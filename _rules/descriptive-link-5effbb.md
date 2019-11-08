@@ -289,5 +289,4 @@ An `a` element without the [semantic role][] `link`.
 [link]: https://www.w3.org/TR/wai-aria/#link
 [programmatically determined link context]: #programmatically-determined-link-context 'Definition of programmatically determined link context'
 [semantic role]: #semantic-role 'Definition of semantic role'
-[visible text content]: #visible-text-content 'Definition of visible text content'
 [whitespace]: #whitespace 'Definition of whitespace'

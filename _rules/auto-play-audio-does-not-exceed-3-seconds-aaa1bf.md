@@ -5,6 +5,11 @@ rule_type: atomic
 description: |
   auto-play audio content does not output audio for more than 3 seconds
 accessibility_requirements:
+  wcag-technique:G60: # Playing a sound that turns off automatically within three seconds
+  forConformance: true
+failed: not satisfied
+passed: satisfied
+inapplicable: satisfied
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -48,6 +53,7 @@ There are no major accessibility support issues known for this rule.
 
 - [Understanding Success Criterion 1.4.2: Audio Control](https://www.w3.org/WAI/WCAG21/Understanding/audio-control.html)
 - [F23: Failure of 1.4.2 due to playing a sound longer than 3 seconds where there is no mechanism to turn it off](https://www.w3.org/WAI/WCAG21/Techniques/failures/F23)
+- [G60: Playing a sound that turns off automatically within three seconds](https://www.w3.org/WAI/WCAG21/Techniques/general/G60)
 - [G171: Playing sounds only on user request](https://www.w3.org/WAI/WCAG21/Techniques/general/G171)
 
 ## Test Cases

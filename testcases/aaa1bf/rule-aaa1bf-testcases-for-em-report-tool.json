@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - auto-play audio does not exceed 3 seconds",
+      "title": "Report for ACT-R Rule - audio or video that plays automatically does not exceed 3 seconds",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - auto-play audio does not exceed 3 seconds",
+          "siteName": "ACT-R Rule - audio or video that plays automatically does not exceed 3 seconds",
           "siteScope": "https://act-rules.github.io/testcases/aaa1bf/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

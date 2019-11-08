@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Video or audio has no auto-play audio",
+      "title": "Report for ACT-R Rule - audio or video has no audio that plays automatically",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Video or audio has no auto-play audio",
+          "siteName": "ACT-R Rule - audio or video has no audio that plays automatically",
           "siteScope": "https://act-rules.github.io/testcases/80f0bf/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

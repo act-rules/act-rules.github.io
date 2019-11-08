@@ -1595,7 +1595,7 @@
       "relativePath": "testcases/aaa1bf/945ad4e661ad9dd20cd451048d15322fc9f9c534.html",
       "expected": "passed",
       "ruleId": "aaa1bf",
-      "ruleName": "auto-play audio does not exceed 3 seconds",
+      "ruleName": "audio or video that plays automatically does not exceed 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
       "ruleAccessibilityRequirements": null
     },
@@ -1606,7 +1606,7 @@
       "relativePath": "testcases/aaa1bf/3babec3037bcc1cd9e5bf8e6de85c59438d54206.html",
       "expected": "passed",
       "ruleId": "aaa1bf",
-      "ruleName": "auto-play audio does not exceed 3 seconds",
+      "ruleName": "audio or video that plays automatically does not exceed 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
       "ruleAccessibilityRequirements": null
     },
@@ -1617,7 +1617,7 @@
       "relativePath": "testcases/aaa1bf/390a1ceda9611dfb392cb59f9968d02e0212556f.html",
       "expected": "failed",
       "ruleId": "aaa1bf",
-      "ruleName": "auto-play audio does not exceed 3 seconds",
+      "ruleName": "audio or video that plays automatically does not exceed 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
       "ruleAccessibilityRequirements": null
     },
@@ -1628,7 +1628,7 @@
       "relativePath": "testcases/aaa1bf/35ef10a2f125300f9efa2860c130362bdedc1642.html",
       "expected": "failed",
       "ruleId": "aaa1bf",
-      "ruleName": "auto-play audio does not exceed 3 seconds",
+      "ruleName": "audio or video that plays automatically does not exceed 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
       "ruleAccessibilityRequirements": null
     },
@@ -1639,7 +1639,7 @@
       "relativePath": "testcases/aaa1bf/d26423080b852e0c9fd2d1d56a75af41c5151269.html",
       "expected": "inapplicable",
       "ruleId": "aaa1bf",
-      "ruleName": "auto-play audio does not exceed 3 seconds",
+      "ruleName": "audio or video that plays automatically does not exceed 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
       "ruleAccessibilityRequirements": null
     },
@@ -1650,7 +1650,7 @@
       "relativePath": "testcases/aaa1bf/2ca3b2aa5ba3c3d2b6964d9b8e0623f4493a58d6.html",
       "expected": "inapplicable",
       "ruleId": "aaa1bf",
-      "ruleName": "auto-play audio does not exceed 3 seconds",
+      "ruleName": "audio or video that plays automatically does not exceed 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
       "ruleAccessibilityRequirements": null
     },
@@ -1661,7 +1661,7 @@
       "relativePath": "testcases/aaa1bf/22db72e6a902e9eef487cbf4d926527b574fd205.html",
       "expected": "inapplicable",
       "ruleId": "aaa1bf",
-      "ruleName": "auto-play audio does not exceed 3 seconds",
+      "ruleName": "audio or video that plays automatically does not exceed 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
       "ruleAccessibilityRequirements": null
     },
@@ -1672,7 +1672,7 @@
       "relativePath": "testcases/4c31df/08e96dfea0f3953da4ebd9e6b11d550f488281e0.html",
       "expected": "passed",
       "ruleId": "4c31df",
-      "ruleName": "auto-play audio has a control mechanism",
+      "ruleName": "audio or video that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": null
     },
@@ -1683,7 +1683,7 @@
       "relativePath": "testcases/4c31df/2d633c8cb3fe6b34648d1b8924c18a7620cb05e8.html",
       "expected": "passed",
       "ruleId": "4c31df",
-      "ruleName": "auto-play audio has a control mechanism",
+      "ruleName": "audio or video that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": null
     },
@@ -1694,7 +1694,7 @@
       "relativePath": "testcases/4c31df/3fa6b43ddd6ce27cb54c34326d5dd1a8a6b14bc5.html",
       "expected": "passed",
       "ruleId": "4c31df",
-      "ruleName": "auto-play audio has a control mechanism",
+      "ruleName": "audio or video that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": null
     },
@@ -1705,7 +1705,7 @@
       "relativePath": "testcases/4c31df/ceb7422fcb489531ed58fcd922f285550b59c18f.html",
       "expected": "failed",
       "ruleId": "4c31df",
-      "ruleName": "auto-play audio has a control mechanism",
+      "ruleName": "audio or video that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": null
     },
@@ -1716,7 +1716,7 @@
       "relativePath": "testcases/4c31df/d3554bbdd0e1f940f1ceb6628c7277c2c70711f7.html",
       "expected": "failed",
       "ruleId": "4c31df",
-      "ruleName": "auto-play audio has a control mechanism",
+      "ruleName": "audio or video that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": null
     },
@@ -1727,7 +1727,7 @@
       "relativePath": "testcases/4c31df/ff4bb63cc172b3a4e38b8217c58a71febc7b2e03.html",
       "expected": "failed",
       "ruleId": "4c31df",
-      "ruleName": "auto-play audio has a control mechanism",
+      "ruleName": "audio or video that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": null
     },
@@ -1738,7 +1738,7 @@
       "relativePath": "testcases/4c31df/73af94d13d50409cd781b90808da04d74ff87d71.html",
       "expected": "failed",
       "ruleId": "4c31df",
-      "ruleName": "auto-play audio has a control mechanism",
+      "ruleName": "audio or video that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": null
     },
@@ -1749,7 +1749,7 @@
       "relativePath": "testcases/4c31df/56eefe7e1be69d7c0b94f3ea99ec8050f1cdd49a.html",
       "expected": "failed",
       "ruleId": "4c31df",
-      "ruleName": "auto-play audio has a control mechanism",
+      "ruleName": "audio or video that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": null
     },
@@ -1760,7 +1760,7 @@
       "relativePath": "testcases/4c31df/00fc0708bf89f2c345ec2678f3436406cdc2d5c2.html",
       "expected": "inapplicable",
       "ruleId": "4c31df",
-      "ruleName": "auto-play audio has a control mechanism",
+      "ruleName": "audio or video that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": null
     },
@@ -1771,7 +1771,7 @@
       "relativePath": "testcases/4c31df/392d3bf3fe8da8559ade5c1093130b88c17b929c.html",
       "expected": "inapplicable",
       "ruleId": "4c31df",
-      "ruleName": "auto-play audio has a control mechanism",
+      "ruleName": "audio or video that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": null
     },
@@ -1782,7 +1782,7 @@
       "relativePath": "testcases/4c31df/c6c1ec743dbb5d9a162115021a288d2839751969.html",
       "expected": "inapplicable",
       "ruleId": "4c31df",
-      "ruleName": "auto-play audio has a control mechanism",
+      "ruleName": "audio or video that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": null
     },
@@ -8448,7 +8448,7 @@
       "relativePath": "testcases/80f0bf/b7f8257fb0b18954f156c2aa6dfc9869560fdea3.html",
       "expected": "passed",
       "ruleId": "80f0bf",
-      "ruleName": "Video or audio has no auto-play audio",
+      "ruleName": "audio or video has no audio that plays automatically",
       "rulePage": "https://act-rules.github.io/rules/80f0bf",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.2": {
@@ -8466,7 +8466,7 @@
       "relativePath": "testcases/80f0bf/852935758dddfd5e1f38bca3ee345e14af5f2f26.html",
       "expected": "passed",
       "ruleId": "80f0bf",
-      "ruleName": "Video or audio has no auto-play audio",
+      "ruleName": "audio or video has no audio that plays automatically",
       "rulePage": "https://act-rules.github.io/rules/80f0bf",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.2": {
@@ -8484,7 +8484,7 @@
       "relativePath": "testcases/80f0bf/5a6f2c5f9a85ad8a3fd9c989befdd30d751e7809.html",
       "expected": "passed",
       "ruleId": "80f0bf",
-      "ruleName": "Video or audio has no auto-play audio",
+      "ruleName": "audio or video has no audio that plays automatically",
       "rulePage": "https://act-rules.github.io/rules/80f0bf",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.2": {
@@ -8502,7 +8502,7 @@
       "relativePath": "testcases/80f0bf/b0f66449dde3d7e342c47ea8c3c16afb3f449964.html",
       "expected": "failed",
       "ruleId": "80f0bf",
-      "ruleName": "Video or audio has no auto-play audio",
+      "ruleName": "audio or video has no audio that plays automatically",
       "rulePage": "https://act-rules.github.io/rules/80f0bf",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.2": {
@@ -8520,7 +8520,7 @@
       "relativePath": "testcases/80f0bf/1c5f4220b80ca0ca49264ebad85b8a1c5db53ba4.html",
       "expected": "failed",
       "ruleId": "80f0bf",
-      "ruleName": "Video or audio has no auto-play audio",
+      "ruleName": "audio or video has no audio that plays automatically",
       "rulePage": "https://act-rules.github.io/rules/80f0bf",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.2": {
@@ -8538,7 +8538,7 @@
       "relativePath": "testcases/80f0bf/1f0249e71adb0dc508efc64e4510e57712c11692.html",
       "expected": "inapplicable",
       "ruleId": "80f0bf",
-      "ruleName": "Video or audio has no auto-play audio",
+      "ruleName": "audio or video has no audio that plays automatically",
       "rulePage": "https://act-rules.github.io/rules/80f0bf",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.2": {
@@ -8556,7 +8556,7 @@
       "relativePath": "testcases/80f0bf/bc0492b23e371f6cc3bc02092e96583500029887.html",
       "expected": "inapplicable",
       "ruleId": "80f0bf",
-      "ruleName": "Video or audio has no auto-play audio",
+      "ruleName": "audio or video has no audio that plays automatically",
       "rulePage": "https://act-rules.github.io/rules/80f0bf",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.2": {
@@ -8574,7 +8574,7 @@
       "relativePath": "testcases/80f0bf/a39c53a9ff5a70862a83416f65f35af571cc2c2c.html",
       "expected": "inapplicable",
       "ruleId": "80f0bf",
-      "ruleName": "Video or audio has no auto-play audio",
+      "ruleName": "audio or video has no audio that plays automatically",
       "rulePage": "https://act-rules.github.io/rules/80f0bf",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.2": {

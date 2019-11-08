@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - auto-play audio has a control mechanism",
+      "title": "Report for ACT-R Rule - audio or video that plays automatically has a control mechanism",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - auto-play audio has a control mechanism",
+          "siteName": "ACT-R Rule - audio or video that plays automatically has a control mechanism",
           "siteScope": "https://act-rules.github.io/testcases/4c31df/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

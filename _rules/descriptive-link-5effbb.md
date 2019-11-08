@@ -8,7 +8,7 @@ accessibility_requirements:
   wcag20:2.4.4: # Link Purpose (In Context)
     forConformance: true
     failed: not satisfied
-    passed: further testing needed
+    passed: satisfied
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
@@ -37,6 +37,7 @@ The [accessible name][] of each target element together with its [programmatical
 
 - This rule assumes that the purpose of the link is not ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html). If the link is ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the link out of context which makes it more of a general user experience concern than an accessibility issue.
 - This rule assumes that all elements with the [semantic role][] of ['link'][link] are used as links.
+- This rule assumes that all links have the the [semantic role][] of ['link'][link].
 
 ## Accessibility Support
 

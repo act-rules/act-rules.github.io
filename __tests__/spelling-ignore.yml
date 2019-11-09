@@ -49,6 +49,7 @@
 - autoplay
 - autoplays
 - presentational
+- sc
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete
@@ -71,6 +72,7 @@
 - css-scoping
 - dfn-essential
 - dfn-mechanism
+- dfn-content
 - ascii-whitespace
 - wai-aria
 

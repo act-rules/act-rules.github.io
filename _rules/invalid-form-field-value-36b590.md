@@ -5,6 +5,11 @@ rule_type: atomic
 description: |
   This rule checks that text descriptions are provided when the user completes a form field with information that is not an allowed value or using a not allowed format.
 accessibility_requirements:
+  wcag20:3.3.1: # Error Identification (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
   wcag-technique:G84: # Providing a text description when the user provides information that is not in the list of allowed values
     forConformance: false
     failed: not satisfied
@@ -27,29 +32,19 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to each HTML or SVG element:
+The rule applies to each HTML [input element][] with the [type attribute][] in one of the following [states][]: "Text", "Telephone", "URL", "E-mail", "Password", "Date", "Month", "Week", "Time", "Local Date and Time", and "Number";
 
-- that has one of the following [semantic roles](#semantic-role): `checkbox`, `combobox`, `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`;
-- for which [input errors](https://www.w3.org/TR/WCAG21/#dfn-input-error) are [automatically detected](#automatic-error-detection).
-
-**Note**: The list of applicable [semantic roles](#semantic-role) is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
-
-- inherit from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
-- do not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
+**Note**: The list of applicable [states][] includes those where the [input element][] can be rendered by the user agent as a text control.
 
 ## Expectation 1
 
-After [user completion](#completed-input-field) of the target element or triggering the submission of the form if the target element belongs to one, a message is presented to the user for each [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error) that has been [automatically detected](#automatic-error-detection).
+For each test target the user [interacted with][], either after the interaction or after triggering the submission of a form if the target element belongs to one, a message is presented to the user for each [automatically detected error][].
 
 ## Expectation 2
 
-The content of the message is [visible](#visible), [included in the accessibility tree](#included-in-the-accessibility-tree), and identifies the [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error).
+The content of the message is [visible][], [included in the accessibility tree][], and identifies the [automatically detected error][].
 
 **Note**: Information to identify an input error must include information about the element or elements in which the error occurred, and assist the user in understanding what was the cause of the error.
-
-**Note**: If the input error was caused by the user entering a value that falls outside the list of possible values, the message must indicate the possible values.
-
-**Note**: If the input error was caused by the user entering a value that does not follow the required format, the message must indicate the correct format for the input value.
 
 ## Assumptions
 
@@ -57,10 +52,11 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+The support for the different [states][] of the [type attribute][] is not consistent across different user agents.
 
 ## Background
 
+- [Understanding Success Criterion 3.3.1: Error Identification](https://www.w3.org/WAI/WCAG21/Understanding/error-identification)
 - [G84: Providing a text description when the user provides information that is not in the list of allowed values](https://www.w3.org/WAI/WCAG21/Techniques/general/G84)
 - [G85: Providing a text description when user input falls outside the required format or values](https://www.w3.org/WAI/WCAG21/Techniques/general/G85)
 
@@ -70,7 +66,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The error message provided in the vicinity of the `input` element identifies the [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error). Instructions are provided in the vicinity of the `input` element.
+The error message provided in the vicinity of the `input` element identifies the [automatically detected error][]. Instructions are provided in the vicinity of the `input` element.
 
 ```html
 <script>
@@ -81,14 +77,14 @@ The error message provided in the vicinity of the `input` element identifies the
 		if (!age || isNaN(age)) {
 			document.getElementById('error').innerText = 'Age must be a number'
 		} else if (age < 1) {
-			document.getElementById('error').innerText = 'Age must be positive'
+			document.getElementById('error').innerText = 'Age must be at least 1'
 		}
 	}
 </script>
 
 <form>
 	<label for="age">Age (years)</label>
-	<input type="number" id="age" required />
+	<input type="number" id="age" />
 	<span id="error"></span><br />
 	<input type="button" value="Submit" onclick="processForm()" />
 </form>
@@ -103,22 +99,20 @@ No error message is provided.
 ```html
 <form>
 	<label for="age">Age (years)</label>
-	<input type="number" id="age" required />
-	<span id="error"></span><br />
+	<input type="number" id="age" />
 	<input type="button" value="Submit" />
 </form>
 ```
 
 #### Failed Example 2
 
-The error message does not identify the [input error](https://www.w3.org/TR/WCAG21/#dfn-input-error).
+The error message does not identify the [automatically detected error][].
 
 ```html
 <script>
 	function processForm() {
 		document.getElementById('error').innerText = ''
 		var age = document.getElementById('age').value
-		console.log(isNaN(age))
 		if (!age || isNaN(age) || age < 1) {
 			document.getElementById('error').innerText = 'Please fill the field correctly.'
 		}
@@ -127,7 +121,7 @@ The error message does not identify the [input error](https://www.w3.org/TR/WCAG
 
 <form>
 	<label for="age">Age (years)</label>
-	<input type="number" id="age" required />
+	<input type="number" id="age" />
 	<span id="error"></span><br />
 	<input type="button" value="Submit" onclick="processForm()" />
 </form>
@@ -146,14 +140,14 @@ The error message is not visible.
 		if (!age || isNaN(age)) {
 			document.getElementById('error').innerText = 'Age must be a number'
 		} else if (age < 1) {
-			document.getElementById('error').innerText = 'Age must be positive'
+			document.getElementById('error').innerText = 'Age must be at least 1'
 		}
 	}
 </script>
 
 <form>
 	<label for="age">Age (years)</label>
-	<input type="number" id="age" required />
+	<input type="number" id="age" />
 	<span id="error" style="position: absolute; top: -9999px; left: -9999px;"></span><br />
 	<input type="button" value="Submit" onclick="processForm()" />
 </form>
@@ -172,14 +166,14 @@ The error message is not included in the accessibility tree.
 		if (!age || isNaN(age)) {
 			document.getElementById('error').innerText = 'Age must be a number'
 		} else if (age < 1) {
-			document.getElementById('error').innerText = 'Age must be positive'
+			document.getElementById('error').innerText = 'Age must be at least 1'
 		}
 	}
 </script>
 
 <form>
 	<label for="age">Age (years)</label>
-	<input type="number" id="age" required />
+	<input type="number" id="age" />
 	<span id="error" aria-hidden="true"></span><br />
 	<input type="button" value="Submit" onclick="processForm()" />
 </form>
@@ -189,21 +183,21 @@ The error message is not included in the accessibility tree.
 
 #### Inapplicable Example 1
 
-The `input` element is not inside a `form` element
-
-```html
-<input type="text" />
-```
-
-#### Inapplicable Example 2
-
-Form that does not include automatic detection of input errors.
+No input elements with the required [type attribute][].
 
 ```html
 <form>
-	<label for="text_field">Name (required)</label>
-	<input type="text" id="text_field" />
+	<p>Pick a color</p>
+	<label><input type="radio" name="color" value="blue" />Blue</label>
+	<label><input type="radio" name="color" value="yellow" />Yellow</label>
 	<input type="button" value="Submit" />
-	<div id="error"></div>
 </form>
 ```
+
+[automatically detected error]: #automatic-error-detection 'Definition of automatic error detection'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[input element]: https://html.spec.whatwg.org/multipage/input.html#the-input-element
+[interacted with]: #interacted-with 'Definition of interacted with'
+[states]: https://html.spec.whatwg.org/#states-of-the-type-attribute
+[type attribute]: https://html.spec.whatwg.org/multipage/input.html#attr-input-type
+[visible]: #visible 'Definition of visible'

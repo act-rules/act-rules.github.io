@@ -5,6 +5,11 @@ rule_type: atomic
 description: |
   This rule checks that text error messages identify required form fields that were not completed.
 accessibility_requirements:
+  wcag20:3.3.1: # Error Identification (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
   wcag-technique:G83: # Providing text descriptions to identify required fields that were not completed
     forConformance: false
     failed: not satisfied
@@ -22,28 +27,28 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to each [form element](https://www.w3.org/TR/html52/sec-forms.html#the-form-element) that includes at least one [required](#required-input-field) HTML or SVG element:
+The rule applies to each [required][] HTML element that:
 
-- that has one of the following [semantic roles][semantic role]: `checkbox`, `combobox`, `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
-- for which [input errors](https://www.w3.org/TR/WCAG21/#dfn-input-error) are [automatically detected](#automatic-error-detection).
+- is a [descendant][] of a [form element][]; and
+- has one of the following [semantic roles][semantic role]: `checkbox`, `combobox`, `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`.
 
-**Note**: The list of applicable [semantic roles](#semantic-role) is derived by taking all the [ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/) roles that:
+**Note**: The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.1][] roles that:
 
-- inherit from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
-- do not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
+- inherit from the [abstract][] `input` or `select` role, and
+- do not have a [required context][] role that itself inherits from one of those roles.
 
 ## Expectation 1
 
-After triggering the submission of the target element, each [required](#required-input-field) [input element](https://www.w3.org/TR/html52/sec-forms.html#the-input-element) that was not [completed](#completed-input-field) is identified by a text message.
+After triggering the submission of the [form element][] that is an [ancestor][] of the target element, each target element that was not [interacted with][] is identified by a text message.
 
-**Note**: A text message may identify an [input element](https://www.w3.org/TR/html52/sec-forms.html#the-input-element) in several ways, including:
+**Note**: A text message may identify an element in several ways, including:
 
 - By referring to its label or accessible name
 - By being visually placed in the vicinity of the element
 
 ## Expectation 2
 
-The content of the text message is [visible](#visible), [included in the accessibility tree](included-in-the-accessibility-tree) and indicates that the [input element](https://www.w3.org/TR/html52/sec-forms.html#the-input-element) is [required](#required-input-field).
+The content of the text message is [visible][], [included in the accessibility tree][] and indicates that the target element is [required][].
 
 ## Assumptions
 
@@ -55,6 +60,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
+- [Understanding Success Criterion 3.3.1: Error Identification](https://www.w3.org/WAI/WCAG21/Understanding/error-identification)
 - [G83: Providing text descriptions to identify required fields that were not completed](https://www.w3.org/WAI/WCAG21/Techniques/general/G83)
 
 ## Test Cases
@@ -103,12 +109,12 @@ The error message identifies any required `input` element that has not been fill
 <form>
 	<h2 id="error"></h2>
 	<label for="name">Name (required)</label>
-	<input type="text" id="name" />
+	<input type="text" id="name" required />
 	<br />
 	<label for="address">Address</label>
 	<input type="text" id="address" />
 	<p>Pick a color (required)</p>
-	<label><input type="radio" name="color" value="blue" />Blue</label>
+	<label><input type="radio" name="color" value="blue" required />Blue</label>
 	<label><input type="radio" name="color" value="yellow" />Yellow</label>
 	<br />
 	<input type="button" value="Submit" onclick="processForm()" />
@@ -126,7 +132,6 @@ No error message is provided.
 	<label for="text_field">Name (required)</label>
 	<input type="text" id="text_field" required />
 	<input type="button" value="Submit" />
-	<div id="error"></div>
 </form>
 ```
 
@@ -220,8 +225,19 @@ The `input` element is not required.
 
 #### Inapplicable Example 2
 
-The `input` element is not inside a `form` element
+The `input` element is not inside a `form` element.
 
 ```html
-<input type="text" />
+<input type="text" required />
 ```
+
+[abstract]: https://www.w3.org/TR/wai-aria/#abstract_roles
+[aria 1.1]: https://www.w3.org/TR/wai-aria-1.1/
+[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
+[form element]: https://www.w3.org/TR/html52/sec-forms.html#the-form-element
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[interacted with]: #interacted-with 'Definition of interacted with'
+[required]: #required-field 'Definition of required field'
+[required context]: https://www.w3.org/TR/wai-aria/#scope
+[semantic role]: #semantic-role 'Definition of semantic role'
+[visible]: #visible 'Definition of visible'

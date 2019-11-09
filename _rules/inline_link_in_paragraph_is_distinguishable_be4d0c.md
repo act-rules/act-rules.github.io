@@ -39,7 +39,7 @@ Each target element has either:
 - An icon immediately before, after or in the link denoting it as a link
 - Text immediately before, after or in the link denoting it as a link
 - a [distinguishing style][] compared to the other text not based on color alone
-- a different color compared to the rest of the text in the paragraph that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG20/#contrast-ratiodef) difference with the rest of the text and a [distinguishing style][] both when the target element [gains focus][gain focus] and the target element is [hovered][]
+- a different color compared to the rest of the text in the paragraph that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) difference with the rest of the text and a [distinguishing style][] both when the target element [gains focus][gain focus] and the target element is [hovered][]
 
 ## Assumptions
 
@@ -85,7 +85,7 @@ This is a link that is a descendant of a paragraph element and the underline is 
 	<body>
 		<p>
 			Read about WAI on the
-			<a class="test" href="http://w3.org/WAI">WAI webpage <img src="/test-assets/be4d0c/icon.png"/ alt=""></a>.
+			<a class="test" href="http://w3.org/WAI">WAI webpage <img src="/test-assets/be4d0c/icon.png" alt=""/></a>.
 		</p>
 	</body>
 </html>

@@ -17,7 +17,7 @@ input_aspects:
   - DOM Tree
   - CSS Styling
 
-acknowledgments:
+acknowledgements:
   authors:
     - Brian Bors
     - Carlos Duarte
@@ -38,12 +38,12 @@ Each target element has either:
 
 - An icon immediately before, after or in the link denoting it as a link
 - Text immediately before, after or in the link denoting it as a link
-- a [distinguishing style][] compared to the other text not based on colour alone
-- a different colour compared to the rest of the text in the paragraph that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG20/#contrast-ratiodef) difference with the rest of the text and a [distinguishing style][] both when the target element [gains focus][gain focus] and the target element is [hovered][]
+- a [distinguishing style][] compared to the other text not based on color alone
+- a different color compared to the rest of the text in the paragraph that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG20/#contrast-ratiodef) difference with the rest of the text and a [distinguishing style][] both when the target element [gains focus][gain focus] and the target element is [hovered][]
 
 ## Assumptions
 
-This rule assumes that the link is distinguishable from the rest of the text with colour, which means it fails SC 1.4.1 when there is not another way to distinguish it.
+This rule assumes that the link is distinguishable from the rest of the text with color, which means it fails SC 1.4.1 when there is not another way to distinguish it.
 
 ## Accessibility Support
 
@@ -51,10 +51,10 @@ _No accessibility support issues known._
 
 ## Background
 
-- [Understanding Success Criterion 1.4.1: Use of Color](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
-- [G183: Using a contrast ratio of 3:1 with surrounding text and providing additional visual cues on focus for links or controls where color alone is used to identify them](http://www.w3.org/TR/WCAG20-TECHS/G183.html)
-- [F73: Failure of Success Criterion 1.4.1 due to creating links that are not visually evident without color vision](https://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140311/F73.html)
-- [C15: Using CSS to change the presentation of a user interface component when it receives focus](https://www.w3.org/TR/WCAG20-TECHS/C15.html)
+- [Understanding Success Criterion 1.4.1: Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)
+- [G183: Using a contrast ratio of 3:1 with surrounding text and providing additional visual cues on focus for links or controls where color alone is used to identify them](https://www.w3.org/WAI/WCAG21/Techniques/general/G183)
+- [F73: Failure of Success Criterion 1.4.1 due to creating links that are not visually evident without color vision](https://www.w3.org/WAI/WCAG21/Techniques/failures/F73)
+- [C15: Using CSS to change the presentation of a user interface component when it receives focus](https://www.w3.org/WAI/WCAG21/Techniques/css/C15)
 
 ## Test Cases
 
@@ -75,6 +75,7 @@ This is a link that is a descendant of a paragraph element and the underline is 
 ```html
 <html>
 	<head>
+		<title>Passed example 2 for rule be4d0c</title>
 		<style>
 			a.test {
 				text-decoration: none;
@@ -84,7 +85,7 @@ This is a link that is a descendant of a paragraph element and the underline is 
 	<body>
 		<p>
 			Read about WAI on the
-			<a class="test" href="http://w3.org/WAI">WAI webpage <img src="/test-assets/be4d0c/icon.png"/></a>.
+			<a class="test" href="http://w3.org/WAI">WAI webpage <img src="/test-assets/be4d0c/icon.png"/ alt=""></a>.
 		</p>
 	</body>
 </html>
@@ -97,6 +98,7 @@ This is a link that is a descendant of a paragraph element and the underline is 
 ```html
 <html>
 	<head>
+		<title>Passed example 3 for rule be4d0c</title>
 		<style>
 			a.test {
 				text-decoration: none;
@@ -111,11 +113,12 @@ This is a link that is a descendant of a paragraph element and the underline is 
 
 #### Passed Example 4
 
-This is a link that is a descendant of a paragraph element and the underline is removed but the link has a distinguishing box-shadow whish is a distinguishing style.
+This is a link that is a descendant of a paragraph element and the underline is removed but the link has a distinguishing box-shadow which is a distinguishing style.
 
 ```html
 <html>
 	<head>
+		<title>Passed example 4 for rule be4d0c</title>
 		<style>
 			a.test {
 				text-decoration: none;
@@ -136,6 +139,7 @@ This is a link that is a descendant of a paragraph element and the underline is 
 ```html
 <html>
 	<head>
+		<title>Passed example 5 for rule be4d0c</title>
 		<style>
 			a {
 				text-decoration: none;
@@ -164,6 +168,7 @@ This is a link that is a descendant of a paragraph element and the underline is 
 ```html
 <html>
 	<head>
+		<title>Failed example 1 for rule be4d0c</title>
 		<style>
 			a.test {
 				text-decoration: none;

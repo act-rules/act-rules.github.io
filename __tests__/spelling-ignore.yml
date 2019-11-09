@@ -63,6 +63,7 @@
 - whatwg
 - dom
 - wai-aria
+- multipage
 
 # Other tool names
 - axe-core
@@ -136,6 +137,7 @@
 - F40
 - F41
 - F65
+- F73
 - F89
 
 # General Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#general)
@@ -156,6 +158,7 @@
 - G170
 - G171
 - G173
+- G183
 - G203
 
 # HTMl Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#html)
@@ -170,6 +173,9 @@
 - H94
 - H95
 - H96
+
+# CSS Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#css)
+- C15
 
 # Unsure why the dictionary does not have these words
 - programmatically

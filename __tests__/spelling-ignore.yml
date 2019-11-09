@@ -63,6 +63,9 @@
 - whatwg
 - dom
 - wai-aria
+- multipage
+- attr-input-type
+- wai-aria-1.1
 
 # Other tool names
 - axe-core
@@ -142,6 +145,9 @@
 - G8
 - G21
 - G78
+- G83
+- G84
+- G85
 - G87
 - G88
 - G93

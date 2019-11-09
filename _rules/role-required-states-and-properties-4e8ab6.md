@@ -12,8 +12,9 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-authors:
-  - Anne Thyme Nørregaard
+acknowledgements:
+  authors:
+    - Anne Thyme Nørregaard
 ---
 
 ## Applicability
@@ -28,13 +29,13 @@ For each test target, the [WAI-ARIA required states and properties](https://www.
 
 ## Assumptions
 
-- The applicability of this rule is limited to [explicit semantic roles][explicit semantic role] based on an assumption that all native HTML and SVG elements have native attributes that are mapped to all of the [required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for the [implicit semantic role][] of the element.
+- The applicability of this rule is limited to [explicit semantic roles][explicit semantic role] based on an assumption that all native HTML and SVG elements have native attributes that are mapped to all of the [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for the [implicit semantic role][] of the element.
 
 - The ARIA `role` is being used to comply to WCAG.
 
 ## Accessibility Support
 
-This rule relies on browsers and assistive technologies to support leaving out [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) when a [WAI-ARIA implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole) is specified in [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1).
+This rule relies on browsers and assistive technologies to support leaving out [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) when a [WAI-ARIA implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole) is specified in [WAI-ARIA Specifications](#wai-aria-specifications).
 
 **Note:** The required states and properties with implicit values can be found in the Core Accessibility API Mappings 1.1 [Overview of default values for missing required attributes](https://www.w3.org/TR/core-aam-1.1/#authorErrorDefaultValuesTable).
 

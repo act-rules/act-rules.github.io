@@ -1,6 +1,6 @@
 ---
 id: 334972
-name: Required form fields not completed
+name: Error message identifies required fields left unfilled
 rule_type: atomic
 description: |
   This rule checks that text error messages identify required form fields that were not completed.

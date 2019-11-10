@@ -1,6 +1,6 @@
 ---
 id: 36b590
-name: Invalid form field value
+name: Error message describes invalid form field value
 rule_type: atomic
 description: |
   This rule checks that text descriptions are provided when the user completes a form field with information that is not an allowed value or using a not allowed format.

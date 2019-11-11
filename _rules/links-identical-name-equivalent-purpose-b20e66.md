@@ -203,30 +203,6 @@ all the time.
 
 #### Passed Example 12
 
-The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light tree][] does fill that [slot][]. Hence, the [flattened slotable][] is not [assigned][] and the third link ("from the fallback") does not appear in the [flat tree][]. Only the first ("all the time") and second ("from the slot") links are in the [flat tree][]. Given that they have the same [accessible name][] and point to the [same resource][], the rule passes.
-
-```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-all the time.
-
-<div id="host">
-	<span slot="slot"
-		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-		from the slot.</span
-	>
-</div>
-
-<script>
-	const host = document.getElementById('host')
-	const shadowRoot = host.attachShadow({ mode: 'open' })
-
-	shadowRoot.innerHTML =
-		'<slot name="slot"><span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the fallback.</span></slot>'
-</script>
-```
-
-#### Passed Example 13
-
 The [browsing context][] of the `iframe` has the [browsing context][] of the main [document][] as an [ancestor browsing context](https://html.spec.whatwg.org/#ancestor-browsing-context). Hence, they share the same [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context) (namely, the [browsing context][] of the main [document][]) and are part of the same [web page (HTML)][]. Therefore, both links are considered and, since they refer to the same document, the rule passes.
 
 ```html
@@ -315,43 +291,6 @@ Both links resolve to [same resource][] after redirect, but the redirect is not 
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/redirect1.html">Contact us</a>
 ```
 
-#### Failed Example 7
-
-The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light tree][] does not fill that [slot][]. Hence, the [flattened slotable][] is [assigned][] and the third link ("from the fallback") appears in the [flat tree][], causing the rule to fail.
-
-```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-all the time.
-
-<div id="host">
-	<span
-		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-		from the slot.</span
-	>
-</div>
-
-<script>
-	const host = document.getElementById('host')
-	const shadowRoot = host.attachShadow({ mode: 'open' })
-
-	shadowRoot.innerHTML =
-		'<slot name="slot"><span><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact us</a> from the fallback.</span></slot>'
-</script>
-```
-
-#### Failed Example 8
-
-The [browsing context][] of the `iframe` has the [browsing context][] of the main [document][] as an [ancestor browsing context](https://html.spec.whatwg.org/#ancestor-browsing-context). Hence, they share the same [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context) (namely, the [browsing context][] of the main [document][]) and are part of the same [web page (HTML)][]. Therefore, both links are considered and the rule fails.
-
-```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-from the top level.
-
-<iframe
-	srcdoc="<a href='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html'>Contact us</a> from the iframe"
-></iframe>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -417,46 +356,16 @@ These image links have empty [accessible names][accessible name].
 <a href="http://facebook.com"><img src="facebook.jpg"/></a> <a href="http://twitter.com"><img src="twitter.jpg"/></a>
 ```
 
-#### Inapplicable Example 7
-
-Only the first link ("all the time") is present in the [flat tree][]. Hence, there is no set of two or more links to apply the rule. The [shadow tree][] does contain a [slot][], but because its [named][name], the second link ("from the light") is _not_ [slotted][slot] into it.
-
-```html
-<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-all the time.
-
-<div id="host">
-	<span
-		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
-			>Contact us</a
-		>
-		from the light.</span
-	>
-</div>
-
-<script>
-	const host = document.getElementById('host')
-	const shadowRoot = host.attachShadow({ mode: 'open' })
-
-	shadowRoot.innerHTML = '<slot name="slot"></slot>'
-</script>
-```
-
 [accessible name]: #accessible-name 'Definition of accessible name'
-[assigned]: https://dom.spec.whatwg.org/#assigning-slotables-and-slots 'Algorithm for assigning slots'
 [browsing context]: https://html.spec.whatwg.org/#browsing-context 'Definition of browsing context'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [explicit role]: #explicit-role 'Definition of explicit role'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
-[flattened slotable]: https://dom.spec.whatwg.org/#finding-slots-and-slotables 'Definition of flattened slotable'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [light tree]: https://dom.spec.whatwg.org/#concept-light-tree 'Definition of light tree'
 [matching]: #matching-characters 'Definition of matching characters'
-[name]: https://dom.spec.whatwg.org/#slot-name 'Definition of slot name'
-[node]: https://dom.spec.whatwg.org/#concept-node 'Definition of node'
 [same resource]: #same-resource 'Definition of same resource'
 [sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9: Link Purpose (link only)'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [shadow tree]: https://dom.spec.whatwg.org/#shadow-tree 'Definition of shadow tree'
-[slot]: https://dom.spec.whatwg.org/#concept-slot 'Definition of slot'
 [web page (html)]: #web-page-html 'Definition of web page (HTML)'

@@ -157,26 +157,6 @@ All three `iframe` elements have the same [accessible name][]. The second `ifram
 
 #### Passed Example 10
 
-The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light tree][] does fill that [slot][]. Hence, the [flattened slotable][] is not [assigned][] and the third `iframe` (with `id` `"fallback"`) does not appear in the [flat tree][]. Only the first (`"always"`) and second (`"slot"`) `iframe` are in the [flat tree][]. Given that they have the same [accessible name][] and point to the [same resource][], the rule passes.
-
-```html
-<iframe id="always" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
-
-<div id="host">
-	<iframe slot="slot" id="slot" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html">
-	</iframe>
-</div>
-
-<script>
-	const host = document.getElementById('host')
-	const shadowRoot = host.attachShadow({ mode: 'open' })
-	shadowRoot.innerHTML =
-		'<slot name="slot"><iframe id="fallback" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe></slot>'
-</script>
-```
-
-#### Passed Example 11
-
 The [browsing context][] of the `iframe` with `id` `"container"` has the [browsing context][] of the main [document][] as an [ancestor browsing context][]. Hence, they share the same [top-level browsing context][] (namely, the [browsing context][] of the main [document][]) and are part of the same [web page (HTML)][]. Therefore, both `iframe` with `id` `"top-level"` and `"nested"` are considered and, since they embed the same document, the rule passes.
 
 ```html
@@ -222,25 +202,6 @@ Two `iframe` elements within the same [document tree][] have the same [accessibl
 ```
 
 #### Failed Example 4
-
-The [shadow tree][] contains a [slot][] whose [name][] is `"slot"`. The [light tree][] does not fill that [slot][]. Hence, the [flattened slotable][] is [assigned][] and the third `iframe` (with `id` `"fallback"`) appears in the [flat tree][], causing the rule to fail.
-
-```html
-<iframe id="always" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
-
-<div id="host">
-	<iframe id="slot" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
-</div>
-
-<script>
-	const host = document.getElementById('host')
-	const shadowRoot = host.attachShadow({ mode: 'open' })
-	shadowRoot.innerHTML =
-		'<slot name="slot"><iframe id="fallback" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe></slot>'
-</script>
-```
-
-#### Failed Example 5
 
 The [browsing context][] of the `iframe` with `id` `"container"` has the [browsing context][] of the main [document][] as an [ancestor browsing context][]. Hence, they share the same [top-level browsing context][] (namely, the [browsing context][] of the main [document][]) and are part of the same [web page (HTML)][]. Therefore, both `iframe` with `id` `"top-level"` and `"nested"` are considered and the rule fails.
 
@@ -350,24 +311,6 @@ These `iframe` elements are not [included in the accessibility tree][], because 
 
 <iframe style="display:none;" aria-label="Document One" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html">
 </iframe>
-```
-
-#### Inapplicable Example 10
-
-Only the first `iframe` (with `id` `"always"`) is present in the [flat tree][]. Hence, there is no set of two or more `iframe` elements to apply the rule. The [shadow tree][] does contain a [slot][], but because its [named][name], the second `iframe` (with `id` `"light"`) is _not_ [slotted][slot] into it.
-
-```html
-<iframe id="always" title="List of contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
-
-<div id="host">
-	<iframe id="light" title="List of contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe>
-</div>
-
-<script>
-	const host = document.getElementById('host')
-	const shadowRoot = host.attachShadow({ mode: 'open' })
-	shadowRoot.innerHTML = '<slot name="slot"></slot>'
-</script>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

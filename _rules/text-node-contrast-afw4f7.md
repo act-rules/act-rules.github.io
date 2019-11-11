@@ -4,7 +4,7 @@ name: Text node has minimal contrast
 rule_type: atomic
 
 description: |
-  This rule checks that every text node has minimal color contrast with its background
+  This rule checks that the highest possible contrast of every text node with its background meets the minimal contrast requirement
 
 accessibility_requirements:
   wcag20:1.4.3: # Contrast (Minimum)
@@ -96,7 +96,7 @@ This light [text node](https://dom.spec.whatwg.org/#text) is on a partially blac
 
 #### Passed Example 4
 
-This [text node](https://dom.spec.whatwg.org/#text) passes because of the text shadow gives the text sufficient contrast.
+This [text node](https://dom.spec.whatwg.org/#text) passes because the text shadow gives the text sufficient contrast.
 
 ```html
 <p style="color: #000; background: #737373; text-shadow: white 0 0 3px">
@@ -171,7 +171,7 @@ This text has an insufficient contrast with the white background.
 
 #### Failed Example 2
 
-This text has an insufficient contrast with the lightest point on the gradient background behind the text.
+This text has an insufficient contrast with the darkest point on the gradient background behind the text.
 
 ```html
 <p style="color: #AAA; background: linear-gradient(to right, #FFF, #00F); width: 300px">
@@ -193,7 +193,7 @@ This text has an insufficient contrast with the background image.
 
 #### Failed Example 4
 
-This text fails because of alpha transparency significantly lowers the contrast of the otherwise black text.
+This text fails because the alpha transparency significantly lowers the contrast of the otherwise black text.
 
 ```html
 <p style="color: rgba(0,0,0,.3); background: #FFF">
@@ -203,7 +203,7 @@ This text fails because of alpha transparency significantly lowers the contrast 
 
 #### Failed Example 5
 
-This text fails because of the CSS opacity property significantly lowers the contrast of the otherwise black text.
+This text fails because the CSS opacity property significantly lowers the contrast of the otherwise black text.
 
 ```html
 <div style="background: #FFF">

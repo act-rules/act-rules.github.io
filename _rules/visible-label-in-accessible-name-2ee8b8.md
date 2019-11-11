@@ -45,7 +45,7 @@ After removing all [punctuation](#punctuation) from both the [visible](#visible)
 ## Assumptions
 
 - This rule assumes that the [visible](#visible) [text nodes](https://www.w3.org/TR/dom/#text) follow the same order as the text in the code, e.g. CSS has not been used to re-arrange pieces of text so that they are presented in a different order.
-- This rule assumes that the whole set of [visible](#visible) [text nodes](https://www.w3.org/TR/dom/#text) of the element are styled, including placement, in such a way that a sighted user will perceive them all as part of the label of the element. An example where this would not be the case, is where styling is used to split up the visible text nodes in e.g. two parts and place one part further away, or give it a different styling that makes it appear as not connected to the element it labels.
+- This rule assumes that the whole set of [visible](#visible) [text nodes](https://www.w3.org/TR/dom/#text) of the element are styled, including placement, in such a way that a sighted user will perceive them all as part of the label of the element. An example where this would not be the case, is where styling is used to split up the visible text nodes in e.g. two parts and place one part further away, or give it a different styling that makes it appear as not connected to the element it [labels](https://www.w3.org/TR/WCAG21/#dfn-labels).
 
 ## Accessibility Support
 
@@ -63,15 +63,15 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-The [visible][] [descendant text content][] and [accessible name][] match when trailing white spaces are removed.
+The [visible][] [descendant text content][] and [accessible name][] [match][] when trailing white spaces are removed.
 
 ```html
-<div role="link" aria-label="next page ">next page</div>
+<a aria-label="next page ">next page</a>
 ```
 
 #### Passed Example 2
 
-[Visible][] [label][] and [accessible name][] match when ignoring case sensitivity.
+[Visible][] [label][] and [accessible name][] [match][] when ignoring case sensitivity.
 
 ```html
 <div role="link" aria-label="Next Page">next page</div>
@@ -95,10 +95,7 @@ The full [visible][] [descendant text content][] is contained in the [accessible
 		.sr-only {
 			position: absolute;
 			left: -10000px;
-			top: auto;
-			width: 1px;
-			height: 1px;
-			overflow: hidden;
+			top: -9999px;
 		}
 	</style>
 </head>
@@ -118,7 +115,7 @@ The [descendant text content](https://dom.spec.whatwg.org/#concept-descendant-te
 
 #### Passed Example 6
 
-[Visible][] [label][] and [accessible name][] match when punctuation is removed.
+[Visible][] [label][] and [accessible name][] [match][] when punctuation is removed.
 
 ```html
 <div role="link" aria-label="Next page">Next page...</div>
@@ -126,7 +123,7 @@ The [descendant text content](https://dom.spec.whatwg.org/#concept-descendant-te
 
 #### Passed Example 7
 
-The [visible][] [descendant text content][] and [accessible name][] match when parts that do not express anything in human language, ("X"), and punctuation are removed.
+The [visible][] [descendant text content][] and [accessible name][] [match][] when parts that do not express anything in human language, ("X"), and punctuation are removed.
 
 ```html
 <div role="link" aria-label="Close and go back">Close (X) and go back</div>
@@ -136,7 +133,7 @@ The [visible][] [descendant text content][] and [accessible name][] match when p
 
 #### Failed Example 1
 
-The [visible][] [descendant text content][] doesn't match the [accessible name][].
+The [visible][] [descendant text content][] doesn't [match][] the [accessible name][].
 
 ```html
 <div role="link" aria-label="OK">Next</div>
@@ -168,10 +165,7 @@ The full [visible][] [descendant text content][] is split out across the [access
 		.sr-only {
 			position: absolute;
 			left: -10000px;
-			top: auto;
-			width: 1px;
-			height: 1px;
-			overflow: hidden;
+			top: -9999px;
 		}
 	</style>
 </head>
@@ -228,3 +222,4 @@ Non-text content.
 [accessible name]: #accessible-name 'Definition of accessible name'
 [visible]: #visible 'Definition of visible'
 [label]: https://www.w3.org/TR/WCAG21/#dfn-labels 'Definition of label'
+[match]: #matching-characters 'Definition of matching characters'

@@ -38,16 +38,17 @@ Any text node that includes one of the [visual reference words](#visual-referenc
 
 Each target that describes any [web content](https://www.w3.org/TR/WCAG21/#dfn-content) through the use of the [visual reference words](#visual-reference-words), is included in a [section of the content](#section-of-content) that also describes that [web content](https://www.w3.org/TR/WCAG21/#dfn-content) by a non-visual property, except if the target is not part of an instruction about [web content](https://www.w3.org/TR/WCAG21/#dfn-content) or the visual reference word is included in the described content.
 
-**Note**: The expectation doesn't mention the fact that the non-visual property description should be visible and included in the accessibility tree. This rule can be passed with alternatives that are not visible or alternatives that are not included in the accessibility tree. Those sorts of content would fail other SC.
+**Note**: The expectation doesn't mention the fact that the non-visual property description should be visible and included in the accessibility tree. This rule can be passed with alternatives that are not visible or alternatives that are not included in the accessibility tree. Those sorts of content would fail other Succes Criteria.
+
 **Note**: The described web content does not have to be positioned on the same web page.
 
 ## Assumptions
 
-The rule assumes that instructions are fully included within a single section of content. If an instruction takes up multiple sections of the content, having a sensory characteristic in one section, and a non-sensory characteristic in another is assumed to be too disconnected to satisfy the success criterion. 
+- This rule assumes that instructions are fully included within a single section of content. If an instruction takes up multiple sections of the content, having a sensory characteristic in one section, and a non-sensory characteristic in another is assumed to be too disconnected to satisfy the Success Criterion. 
 
-The rule assumes that visual reference words are forms of information conveyed through presentation, because of this, failing this rule fails both [Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships) and [Sensory Characteristics](https://www.w3.org/TR/WCAG21/#sensory-characteristics). Presentation is not limited to CSS and includes images such as the image of a circle with text.
+- This rule assumes that [visual reference words](#visual-reference-words) are forms of information conveyed through presentation, because of this, failing this rule fails both [Succes Criterion 1.3.1: Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships) and [Success Criterion 1.3.3: Sensory Characteristics](https://www.w3.org/TR/WCAG21/#sensory-characteristics). Presentation is not limited to CSS and includes images such as the image of a circle with text.
 
-The rule assumes that non-visual users will interpret some visual reference words as meaning "ahead" or "backwards" in the reading order. For example in most contexts "see the content below" will mean ahead in the reading order which is not a visual reference and should pass this test.
+- This rule assumes that non-visual users will interpret some visual reference words as meaning "ahead" or "backwards" in the reading order. For example in most contexts "see the content below" will mean ahead in the reading order which is not a visual reference and should pass this test.
 
 ## Accessibility Support
 
@@ -270,7 +271,7 @@ This document is using the word "circle" but in this case it is no instruction. 
 
 #### Failed Example 1
 
-The user is told to find the menu on the right (which is a visual indicator word) but the menu is not identified in any way.
+The user is told to find the menu on the right (which is a visual indicator word) but the menu is not identified in any other way.
 
 ```html
 <head>
@@ -308,7 +309,7 @@ The user is told to find the menu on the right (which is a visual indicator word
 
 #### Failed Example 2
 
-The user is told to find the navigation on the right (which is a visual indicator word) and the navigation has a navigation element, but there are 2 navigation elements on the page so the user doesn't know which one to use.
+The user is told to find the navigation on the right (which is a visual indicator word) and the navigation is correctly identified by a `nav` element, but there are 2 `nav` elements on the page so the user doesn't know which one to use.
 
 ```html
 <head>

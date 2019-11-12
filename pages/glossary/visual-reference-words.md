@@ -85,7 +85,7 @@ Size:
 - Tiny
 - Wide
 
-Orientation
+Orientation:
 - Angled
 - Askew
 - Atilt
@@ -105,7 +105,7 @@ Orientation
 - Tipped
 
 Colour
-- Any 1 word colour named in the X11 standard, emmiting duplicates: 
+- Any single word colour name in the X11 standard, omitting duplicates: 
   - Blue	
   - White	
   - Aqua	
@@ -133,7 +133,7 @@ Colour
   - Orchid	
   - Red	
   - Salmon	
-  - Yurquoise	
+  - Turquoise	
   - Pink	
   - Firebrick
   - Fuchsia	

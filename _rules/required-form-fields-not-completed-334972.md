@@ -37,18 +37,9 @@ The rule applies to each [required][] HTML element that:
 - inherit from the [abstract][] `input` or `select` role, and
 - do not have a [required context][] role that itself inherits from one of those roles.
 
-## Expectation 1
+## Expectation
 
-After triggering the submission of the [form element][] that is an [ancestor][] of the target element, each target element that was not [interacted with][] is identified by a text message.
-
-**Note**: A text message may identify an element in several ways, including:
-
-- By referring to its label or accessible name
-- By being visually placed in the vicinity of the element
-
-## Expectation 2
-
-The content of the text message is [visible][], [included in the accessibility tree][] and indicates that the target element is [required][].
+For each test target, if an [error is automatically detected][automatically detected error], a message that identifies the test target, and describes the error is [visible][] and [included in the accessibility tree][].
 
 ## Assumptions
 
@@ -236,7 +227,6 @@ The `input` element is not inside a `form` element.
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [form element]: https://www.w3.org/TR/html52/sec-forms.html#the-form-element
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[interacted with]: #interacted-with 'Definition of interacted with'
 [required]: #required-field 'Definition of required field'
 [required context]: https://www.w3.org/TR/wai-aria/#scope
 [semantic role]: #semantic-role 'Definition of semantic role'

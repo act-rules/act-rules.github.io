@@ -3,7 +3,7 @@ id: 36b590
 name: Error message describes invalid form field value
 rule_type: atomic
 description: |
-  This rule checks that text descriptions are provided when the user completes a form field with information that is not an allowed value or using a not allowed format.
+  This rule checks that text descriptions are provided when the user completes a form field with invalid values or using an invalid format.
 accessibility_requirements:
   wcag20:3.3.1: # Error Identification (A)
     forConformance: true
@@ -36,15 +36,9 @@ The rule applies to each HTML [input element][] with the [type attribute][] in o
 
 **Note**: The list of applicable [states][] includes those where the [input element][] can be rendered by the user agent as a text control.
 
-## Expectation 1
+## Expectation
 
-For each test target the user [interacted with][], either after the interaction or after triggering the submission of a form if the target element belongs to one, a message is presented to the user for each [automatically detected error][].
-
-## Expectation 2
-
-The content of the message is [visible][], [included in the accessibility tree][], and identifies the [automatically detected error][].
-
-**Note**: Information to identify an input error must include information about the element or elements in which the error occurred, and assist the user in understanding what was the cause of the error.
+For each test target, if an [error is automatically detected][automatically detected error], a message that identifies the test target, and describes the error is [visible][] and [included in the accessibility tree][].
 
 ## Assumptions
 
@@ -197,7 +191,6 @@ No input elements with the required [type attribute][].
 [automatically detected error]: #automatic-error-detection 'Definition of automatic error detection'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [input element]: https://html.spec.whatwg.org/multipage/input.html#the-input-element
-[interacted with]: #interacted-with 'Definition of interacted with'
 [states]: https://html.spec.whatwg.org/#states-of-the-type-attribute
 [type attribute]: https://html.spec.whatwg.org/multipage/input.html#attr-input-type
 [visible]: #visible 'Definition of visible'

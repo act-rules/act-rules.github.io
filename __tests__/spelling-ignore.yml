@@ -106,6 +106,7 @@
 - aria-valuemax
 - aria-valuenow
 - aria-dropeffect
+- aria-describedby
 - lang
 - xml:lang
 - http-equiv

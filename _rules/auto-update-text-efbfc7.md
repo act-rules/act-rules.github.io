@@ -386,5 +386,5 @@ The automatically updating text content is the only content in the document.
 [sc 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
 [text content]: #text-content 'Definition of text content'
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
-[user intervention]: #user-intervention 'Defintion of user intervention'
+[user intervention]: #user-intervention 'Definition of user intervention'
 [visible]: #visible 'Definition of visible'

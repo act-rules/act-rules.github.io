@@ -272,10 +272,10 @@ The `table` has a `role="presentation"` and thus is not [included in the accessi
 
 #### Inapplicable Example 3
 
-The `table` is [included in the accessibility tree](#included-in-the-accessibility-tree), but not [visible](#visible).
+The `table` is not [visible](#visible).
 
 ```html
-<table role="presentation">
+<table style="display: none;">
 	<tr>
 		<td id="header1">Project Status</td>
 	</tr>

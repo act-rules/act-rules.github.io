@@ -20,17 +20,18 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any [visible][] [text node][] of an [HTML document][] if:
+The rule applies to any [visible][] [text content][] in an [HTML document][] if:
 
-- the content of the [text node][] either changes, is replaced or removed without any user intervention;
-- the change, replacing or removal happens anytime after the [readiness][document readiness] of the [HTML document][] the [text node][] belongs to is equal to "complete"; and
+- the [text content][] is removed or replaced by new content that does not contain the previous content; and
+- the removal or replacing is not the result of a [user intervention][]; and
+- the removal or replacing happens anytime after the [readiness][document readiness] of the [HTML document][] the [text node][] belongs to is equal to "complete"; and
 - it is not the only [content][] in the [HTML document][].
 
 ## Expectation
 
-For the test target a [mechanism][] is provided to pause, stop or hide the updating of the content of the [text node][].
+For the test target a [user interface component][] is provided to pause, stop or hide the updating of the [text content][].
 
-**Note**: If there is more than one [text node][] with auto-updating content, a single [mechanism][] may be used to pause, stop or hide updating all [text nodes][text node].
+**Note**: If there is more than one auto-updating [text content][], a single [user interface component][] may be used to pause, stop or hide updating all [text content][].
 
 ## Assumptions
 
@@ -52,7 +53,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The text node automatically updates every 3 seconds after the page completes loading. A mechanism is available to stop the automatic updates.
+The text content automatically updates every 3 seconds after the page completes loading. A button is available to stop the automatic updates.
 
 ```html
 <body onload="start()">
@@ -85,7 +86,7 @@ The text node automatically updates every 3 seconds after the page completes loa
 
 #### Passed Example 2
 
-The text node automatically updates every 3 seconds after the page completes loading. A mechanism is available to pause and resume the automatic updates.
+The text content automatically updates every 3 seconds after the page completes loading. A button is available to pause and resume the automatic updates.
 
 ```html
 <body onload="toggle()">
@@ -125,7 +126,7 @@ The text node automatically updates every 3 seconds after the page completes loa
 
 #### Passed Example 3
 
-The text node automatically updates every 3 seconds after the page completes loading. A mechanism is available to hide the automatically updating content.
+The text content automatically updates every 3 seconds after the page completes loading. A button is available to hide the automatically updating content.
 
 ```html
 <body onload="start()">
@@ -160,7 +161,7 @@ The text node automatically updates every 3 seconds after the page completes loa
 
 #### Failed Example 1
 
-The text node automatically updates every 3 seconds after the page completes loading. There is no mechanism to stop or pause the automatic updates.
+The text content automatically updates every 3 seconds after the page completes loading. There is no component to stop or pause the automatic updates.
 
 ```html
 <body onload="start()">
@@ -187,7 +188,7 @@ The text node automatically updates every 3 seconds after the page completes loa
 
 #### Failed Example 2
 
-The text node (part of a progress bar) automatically updates every second after the page completes loading. There is no mechanism for the user to pause the auto-updates, other than waiting for them to end.
+The text content (part of a progress bar) automatically updates every second after the page completes loading. There is no component for the user to pause the auto-updates, other than waiting for them to end.
 
 ```html
 <html>
@@ -290,7 +291,7 @@ The text node (part of a progress bar) automatically updates every second after 
 
 #### Inapplicable Example 1
 
-The text node automatically updates every 3 seconds after the page completes loading but it is not visible.
+The text content automatically updates every 3 seconds after the page completes loading but it is not visible.
 
 ```html
 <body onload="start()">
@@ -317,7 +318,7 @@ The text node automatically updates every 3 seconds after the page completes loa
 
 #### Inapplicable Example 2
 
-The text node automatically updates every 3 seconds but only as a result of an action from the user.
+The text content automatically updates every 3 seconds but only as a result of a user intervention.
 
 ```html
 <body>
@@ -345,7 +346,7 @@ The text node automatically updates every 3 seconds but only as a result of an a
 
 #### Inapplicable Example 3
 
-The automatically updating content is the only content in the document.
+The automatically updating text content is the only content in the document.
 
 ```html
 <body onload="start()">
@@ -383,5 +384,7 @@ The automatically updating content is the only content in the document.
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [mechanism]: https://www.w3.org/TR/WCAG21/#dfn-mechanism
 [sc 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
-[text node]: https://dom.spec.whatwg.org/#text
+[text content]: #text-content 'Definition of text content'
+[user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
+[user intervention]: #user-intervention 'Defintion of user intervention'
 [visible]: #visible 'Definition of visible'

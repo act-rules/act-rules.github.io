@@ -8,7 +8,7 @@ accessibility_requirements:
   wcag20:2.4.4: # Link Purpose (In Context)
     forConformance: true
     failed: not satisfied
-    passed: satisfied
+    passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
@@ -105,20 +105,23 @@ The [accessible name][] (from the link's text) describes the purpose of the link
 
 #### Passed Example 5
 
-The [programmatically determined link context][] provided by the list and the [accessible name][] (from the link's text) describe the purpose of the links.
+The [programmatically determined link context][] provided by the `aria-describedby` attribute and the [accessible name][] (from the link's text) describe the purpose of the links.
 
 ```html
 <ul>
 	<li>
-		Ulysses
+		<span id="title1">Ulysses</span>
 		<ul>
-			<li><a href="https://www.gutenberg.org/files/4300/4300-h/4300-h.htm"> HTML </a></li>
+			<li><a href="https://www.gutenberg.org/files/4300/4300-h/4300-h.htm" aria-describedby="title1"> HTML </a></li>
 			<li>
-				<a href="https://www.gutenberg.org/ebooks/4300.epub.images?session_id=04cd710372888de8d8d322215cdfe8ce5b0f8d73">
+				<a
+					href="https://www.gutenberg.org/ebooks/4300.epub.images?session_id=04cd710372888de8d8d322215cdfe8ce5b0f8d73"
+					aria-describedby="title1"
+				>
 					EPUB
 				</a>
 			</li>
-			<li><a href="https://www.gutenberg.org/files/4300/4300-0.txt"> Plain text </a></li>
+			<li><a href="https://www.gutenberg.org/files/4300/4300-0.txt" aria-describedby="title1"> Plain text </a></li>
 		</ul>
 	</li>
 </ul>

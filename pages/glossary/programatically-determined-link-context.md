@@ -5,13 +5,15 @@ key: programmatically-determined-link-context
 
 In HTML, information that is programmatically determinable from a link includes HTML elements that are [visible][] and [included in the accessibility tree][] with a non-empty ("") [accessible name][] and
 
-- have as ancestor in the [flat tree][], the nearest [ancestor][] `p` element of the link;
-- have as ancestor in the [flat tree][], the nearest [ancestor][] element with the semantic role of `listitem` of the link ;
-- have as ancestor in the [flat tree][], the nearest [ancestor][] element with the semantic role of `cell` or `gridcell` of the link;
+- have as ancestor in the [flat tree][] a `p` element that is [ancestor][] of the link;
+- have as ancestor in the [flat tree][] an element with the semantic role of `listitem` that is [ancestor][] of the link ;
+- have as ancestor in the [flat tree][] an element with the semantic role of `cell` or `gridcell` that is [ancestor][] of the link;
 - are [descendant][] nodes in the [flat tree][] of an element with the semantic role of `columnheader` or `rowheader` that is [associated][] with the element with the semantic role of `cell` or `gridcell` of which the link is a [descendant][];
 - are [descendant][] nodes of elements referenced by an `aria-describedby` attribute of the link element.
 
 This definition is based on the [WCAG definition of programmatically determined link context](https://www.w3.org/TR/WCAG21/#dfn-programmatically-determined-link-context).
+
+This definition assumes that the HTML document with the link is a document using HTML according to the specification.
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor

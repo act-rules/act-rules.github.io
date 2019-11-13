@@ -27,7 +27,7 @@ The rule applies to any HTML or SVG element that is [included in the accessibili
 
 **Note:** An example of an element that has a [WAI-ARIA required context role](https://www.w3.org/TR/wai-aria-1.1/#scope) is `tab` that has `tablist` as a [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
 
-**Note:** An example of an element that has an [implicit semantic role](#implicit-role) that is identical to its [explicit semantic role](#explicit-role) is an `li` element that has `role="listitem"`. These elements are not applicable
+**Note:** An example of an element that has an [implicit semantic role](#implicit-role) that is identical to its [explicit semantic role](#explicit-role) is an `li` element that has `role="listitem"`. These elements are not applicable.
 
 **Note:** The applicability of this rule is limited to only the [WAI-ARIA 1.1 Recommendation](https://www.w3.org/TR/wai-aria-1.1/) roles, since there are unresolved issues with how [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0](https://www.w3.org/TR/dpub-aria-1.0/) uses role inheritance to define the [required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope), which makes it deviate from the model defined in [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria-1.1/). The [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0/) does not include any [required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope).
 
@@ -45,7 +45,7 @@ If the [explicit semantic role](#explicit-role) on the target element is incorre
 
 ## Accessibility Support
 
-- User agents do not all have the same accessibility tree. Particularly the method of deriving which element owns which other elements varies between browsers. This can lead to different results from this rule, depending on which accessibility tree is used as input.
+- User agents do not all have the same accessibility tree. Particularly the method of deriving which element owns which other elements varies between browsers. This can lead to different results for this rule, depending on which accessibility tree is used as input.
 - `aria-owns` has limited support in some user agents.
 
 ## Background
@@ -94,25 +94,25 @@ Element contained within its [required context role](https://www.w3.org/TR/wai-a
 `aria-owns` used to give the target element the right [context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
 
 ```html
-<div role="list" aria-owns="id1"></div>
-<div id="id1" role="listitem">List item 1</div>
+<div role="list" aria-owns="item"></div>
+<div id="item" role="listitem">List item 1</div>
 ```
 
 #### Passed Example 5
 
-`aria-owns` trumps ownership by closest ancestor, giving the element with [explicit semantic role](#explicit-role) of `listitem` the correct [context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
+The `aria-owns` attribute override normal DOM tree relationship. Thus, the innermost `div` element (`item`) is not owned by the intermediate one (with a `role="navigation"`) and has the correct [context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
 
 ```html
-<div role="list" aria-owns="id1">
+<div role="list" aria-owns="item">
 	<div role="navigation">
-		<div id="id1" role="listitem">List item 1</div>
+		<div id="item" role="listitem">List item 1</div>
 	</div>
 </div>
 ```
 
 #### Passed Example 6
 
-Since implicit ownership can cross shadow boundaries, the element with the [explicit semantic role](#explicit-role) of `listitem` is contained within its [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope) `list`.
+Since implicit ownership can cross shadow boundaries, the element with the [explicit semantic role](#explicit-role) of `listitem` is contained within its [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope) of `list`.
 
 ```html
 <div id="host" role="list"></div>
@@ -196,7 +196,7 @@ The `listitem` is not [included in the accessibility tree](#included-in-the-acce
 
 #### Inapplicable Example 3
 
-The `header` does not have a [required context roles](https://www.w3.org/TR/wai-aria-1.1/#scope) listed in WAI-ARIA 1.1.
+The `header` role does not have a [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
 
 ```html
 <div role="header" aria-level="1">Hello!</div>

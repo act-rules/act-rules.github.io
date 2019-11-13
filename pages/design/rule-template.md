@@ -13,32 +13,26 @@ Use the [empty atomic rule template](https://raw.githubusercontent.com/act-rules
 id:
 name:
 rule_type: atomic
-
 description: |
   This rule checks ...
-
 accessibility_requirements:
   wcag20:x.x.x: # (Name of Success Criterion)
     forConformance: true | false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
-
   aria11:x.x.x: # <Heading in WAI-ARIA>
     forConformance: true | false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
-
   wcag-technique:x.x.x: # <Technique title>
     forConformance: true | false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
-
 input_aspects:
   -  # (e.g. HTTP Messages, DOM Tree, CSS Styling, Accessibility Tree, Language, etc.,)
-
 acknowledgements:
   authors:
     -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
@@ -129,34 +123,31 @@ For more about composite rules, see the [ACT Rules Format](https://www.w3.org/TR
 id:
 name:
 rule_type: composite
-
 description: |
   This rule checks ...
-
 accessibility_requirements:
   wcag20:x.x.x: # (Name of Success Criterion)
     forConformance: true | false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
-
   aria11:x.x.x: # <Heading in WAI-ARIA>
     forConformance: true | false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
-
   wcag-technique:x.x.x: # <Technique title>
     forConformance: true | false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
-
 input_rules:
   -
-
-authors:
-  -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
+acknowledgements:
+  authors:
+    -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
+  previous_authors:
+    -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
 ---
 
 ## Applicability

@@ -4,29 +4,24 @@ name:
 rule_type: composite
 description: |
   This rule checks ...
-
 accessibility_requirements: # Remove whatever is not applicable
   wcag20:x.x.x: # <Name of Success Criterion> (A | AA | AAA)
     forConformance: true | false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
-
   aria11:x.x.x: # <Heading in WAI-ARIA>
     forConformance: true | false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
-
   wcag-technique:x.x.x: # <Technique title>
     forConformance: true | false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
-
 input_rules:
   -  # Include the ID of the rule
-
 acknowledgements:
   authors:
     -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)

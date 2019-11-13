@@ -30,7 +30,7 @@ For the test target, [device motion][] [can be disabled][] and the control for d
 
 ## Assumptions
 
-- This test assumes that the motion to operate [functionality][] is not used through an [accessibility supported][] interface
+- This test assumes that the motion to operate [functionality][] is not used through an [accessibility supported][] interface.
 - This test assumes that motion is not [essential][] for the [functionality][]
 
 ## Accessibility Support

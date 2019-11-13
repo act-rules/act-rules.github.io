@@ -81,7 +81,7 @@ The [HTML document][] has [functionality][] that can be operated by [device moti
   <body onload="activateSlider();">
     <h1>Slider Motion Sensor Example </h1>
 
-    <p>Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the right and left to adjust the slider value. The check box disables the motion sensing adjustment.</p>
+    <p>Open this slider on a device with a motion sensor, such as a smartphone or tablet. Tilt the device to the right and left to adjust the slider value. The check box disables the motion sensing adjustment.</p>
     <p>Note: This example may not work across all browsers.</p>
 
     <div>

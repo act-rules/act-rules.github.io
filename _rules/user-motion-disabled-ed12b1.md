@@ -26,16 +26,16 @@ The rule applies to any [HTML document][] that has [functionality][] that can be
 
 ## Expectation
 
-For the test target, user motion [can be disabled][] and the control for disabling it must be a [user interface component][] and it should be [visible][] and [included in the accessibility tree][] with an [accessible name][] that is not empty ("").
+For the test target, user motion [can be disabled][] and the control for disabling it must be a [user interface component][] and it must be [visible][] and [included in the accessibility tree][] with an [accessible name][] that is not empty ("").
 
 ## Assumptions
 
-- This test assumes that the motion to operate [functionality][] is not used through an [accessibility supported][] interface
-- This test assumes that motion is not [essential][] for the [functionality][]
+- This test assumes that the motion to operate [functionality][] is not used through an [accessibility supported][] interface.
+- This test assumes that motion is not [essential][] for the [functionality][].
 
 ## Accessibility Support
 
-- Device [orientation events][] may include sensitive data. Implementations must fire events only on [secure browsing contexts][]
+- Device [orientation events][] may include sensitive data. Implementations must fire events only on [secure browsing contexts][].
 
 ## Background
 

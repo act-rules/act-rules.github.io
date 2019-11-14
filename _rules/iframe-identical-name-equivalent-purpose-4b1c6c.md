@@ -315,6 +315,7 @@ These `iframe` elements are not [included in the accessibility tree][], because 
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [ancestor browsing context]: https://html.spec.whatwg.org/#ancestor-browsing-context 'Definition of ancestor browsing context'
+[browsing context]: https://html.spec.whatwg.org/#browsing-context 'Definition of browsing context'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [document tree]: https://dom.spec.whatwg.org/#document-trees 'Definition of document tree'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

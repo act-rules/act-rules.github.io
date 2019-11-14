@@ -21,7 +21,7 @@ accessibility_requirements: # Remove whatever is not applicable
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
-   using-aria:anchor-name: # <Heading in Using ARIA>
+  using-aria:anchor-name: # <Heading in Using ARIA>
     title: Title to display
     forConformance: true | false
     failed: not satisfied

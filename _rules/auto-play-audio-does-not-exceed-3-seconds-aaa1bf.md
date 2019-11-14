@@ -8,8 +8,8 @@ accessibility_requirements:
   wcag-technique:G60: # Playing a sound that turns off automatically within three seconds
     forConformance: true
     failed: not satisfied
-    passed: satisfied
-    inapplicable: satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling

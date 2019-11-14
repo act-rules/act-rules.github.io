@@ -10,12 +10,19 @@ accessibility_requirements: # Remove whatever is not applicable
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
-  aria11:x.x.x: # <Heading in WAI-ARIA>
+  aria11:anchor-name: # <Heading in WAI-ARIA>
+    title: Title to display
     forConformance: true | false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
-  wcag-technique:x.x.x: # <Technique title>
+  wcag-technique:Xxx: # <Technique title>
+    forConformance: true | false
+    failed: not satisfied
+    passed: satisfied | further testing needed
+    inapplicable: satisfied | further testing needed
+   using-aria:anchor-name: # <Heading in Using ARIA>
+    title: Title to display
     forConformance: true | false
     failed: not satisfied
     passed: satisfied | further testing needed

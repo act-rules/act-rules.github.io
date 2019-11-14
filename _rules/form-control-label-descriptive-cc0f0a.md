@@ -24,7 +24,7 @@ acknowledgements:
 
 ## Applicability
 
-This rule applies to any HTML `label` element or other element referenced by `aria-labelledby` that, is [visible][] and is programmatically associated with an HTML element that has one of the following [semantic roles][]:
+This rule applies to any HTML `label` element or other element referenced by `aria-labelledby` that is [visible][], and is programmatically associated with an HTML element which is [visible][] and has one of the following [semantic roles][semantic role]:
 
 - `checkbox`
 - `combobox` (`select` elements)
@@ -45,26 +45,19 @@ This rule applies to any HTML `label` element or other element referenced by `ar
 
 **Note:** The `option` role is not part of the list of applicable roles, because it has a required context role that inherits from the `select` role. Furthermore, `option` does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means that [WCAG 2.1][wcag21] does not require it to have an [accessible name][].
 
-**Note**: [Labels][label] are not restricted to the `label` element of HTML and can be any element.
-
-**Note**: [Labels][label] have to be presented to all users. Therefore, [accessible names][accessible name] or elements that are not [included in the accessibility tree][] do not qualify as [labels][label] (unless coupled with similar content provided for other users).
+**Note**: [Labels][label] in WCAG are not restricted to the `label` element of HTML and can be any element. This rule is only concerned about actual `label` elements, and elements that are programatically marked as [labels][label] via the `aria-labelledby` attribute.
 
 ## Expectation
 
-The [label][] describes the purpose of the test target within its [context][].
+Each test target, within its [visual context][], describes the purpose of the associated element.
 
-**Note**: If the [label][] is not associated in a [programmatically determinable][] way with the form field element, this is likely a violation of [Success Criterion 1.3.1: Info and Relationships][sc131] but neither of this rule nor of [Success Criterion 2.4.6: Heading and Labels][sc246].
-
-**Note**: It is possible for a test target to have an [accessible name][] without having an accurate [label][]. In that case, it would pass [Success Criterion 4.1.2: Name, Role and Value][sc412] but still fail this rule and [Success Criterion 2.4.6: Heading and Labels][sc246].
-
-**Note**: While the [label][] has to be presented to all users, this is not necessarily the case for the [context][], if any. However, if [context][] is needed by some users to differentiate the purpose from one test target to another, it is likely that similar [context][] will be needed for all users.
+**Note**: It is possible for an element to have an [accessible name][] but still having a non-descriptive `label` (and even a non-descriptive [label][]). In that case, it would pass [Success Criterion 4.1.2: Name, Role and Value][sc412] but still fail this rule and [Success Criterion 2.4.6: Heading and Labels][sc246].
 
 **Note**: Having a [label][] which is not included in the [accessible name][] is a violation of [Success Criterion 2.5.3: Label in Name][sc253] but not of this rule nor of [Success Criterion 2.4.6: Heading and Labels][sc246].
 
 ## Assumptions
 
-- Having a differentiating [context][] that is not [programmatically determinable][] might be a violation under other [WCAG 2.1][wcag21] success criteria. For example, using text that has not been marked up as headings in order to split a form into different sections is a violation of [Success Criterion 1.3.1: Info and Relationships][sc131]. This rule assumes, however, that this is allowed under [success criterion 2.4.6: Headings and Labels][sc246].
-- This rule assumes that the [label](https://www.w3.org/TR/WCAG21/#dfn-labels) is intended for sighted users, and that hiding a visible label from assistive technologies, is a failure of [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value), but not of [Success Criterion 2.4.6 Headings and Labels](https://www.w3.org/TR/WCAG21/#headings-and-labels).
+This rule assumes that [labels][label] are intended for sighted users, and that hiding a [visible][] [label][] from assistive technologies, is a failure of [sc412][], but not of [sc246][].
 
 ## Accessibility Support
 
@@ -73,7 +66,6 @@ _There are no major accessibility support issues known for this rule._
 ## Background
 
 - [ARIA 1.1][aria11]
-- [Understanding Success Criterion 1.3.1: Info and Relationships][usc131]
 - [Understanding Success Criterion 2.4.6: Headings and Labels][usc246]
 - [Understanding Success Criterion 4.1.2: Name, Role and Value][usc412]
 - [G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG21/Techniques/general/G131)
@@ -85,7 +77,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The implicit `label` element acts as a [label][] and it is descriptive.
+The implicit `label` element describes the `input` element.
 
 ```html
 <label>First name:<input id="fname" type="text" name="first_name"/></label>
@@ -93,32 +85,24 @@ The implicit `label` element acts as a [label][] and it is descriptive.
 
 #### Passed Example 2
 
-The explicit `label` element acts as a [label][] and it is descriptive.
+The explicit `label` element describes the `input` element. The `label` element does not need to be [included in the accessibility tree][] for this rule to apply.
 
 ```html
-<label for="fname">First name:</label> <input id="fname" type="text" name="first_name" />
+<label for="fname" aria-hidden="true">First name:</label> <input id="fname" type="text" name="first_name" />
 ```
 
 #### Passed Example 3
 
-The `span` element acts as a [label][] and it is descriptive. Even if it is not associated to the form field in a [programmatically determinable][] way, it is still presented to all users and thus qualifies as a [label][].
-
-```html
-<span>First name:</span> <input type="text" name="first_name" />
-```
-
-#### Passed Example 4
-
-Even though the `span` element is not [included in the accessibility tree][], it is associated to the form field in a [programmatically determinable][] way and gives it an [accessible name][]. Therefore, it is presented to all users and qualifies as a [label][].
+The `span` element is marked as a [label][] for the `input` element through the `aria-labelledby` attribute. It describes the `input` element.
 
 ```html
 <span id="label_fname" aria-hidden="true">First name:</span>
 <input aria-labelledby="label_fname" type="text" name="first_name" />
 ```
 
-#### Passed Example 5
+#### Passed Example 4
 
-The [labels][label], provided by the `label` elements, are not descriptive enough (because they are repeated over several fields). However, the headings provide both a [programmatically determined context][] and a [visual context][] that differentiates the purpose of the otherwise identically named form fields.
+The `label` elements, are not descriptive enough (because they are repeated over several fields). However, the headings provide a [visual context][] that differentiates the purpose of the otherwise identically named form fields. Within their [visual context][], the `label` elements are descriptive of their respective `input` elements.
 
 ```html
 <h2>Shipping address</h2>
@@ -134,40 +118,31 @@ The [labels][label], provided by the `label` elements, are not descriptive enoug
 
 #### Failed Example 1
 
-The implicit `label` element acts as a [label][] and it is not descriptive.
+The implicit `label` element does not describe its associated `input` element.
 
 ```html
-<label>City:<input id="fname" type="text" name="first_name"/></label>
+<label>Bad label<input id="fname" type="text" name="first_name"/></label>
 ```
 
 #### Failed Example 2
 
-The explicit `label` element acts as a [label][] and it is not descriptive.
+The explicit `label` element does not describe its associated `input` element.
 
 ```html
-<label for="fname">City:</label> <input id="fname" type="text" name="first_name" />
+<label for="fname">Bad label</label> <input id="fname" type="text" name="first_name" />
 ```
 
 #### Failed Example 3
 
-The `span` element acts as a [label][] and it is not descriptive. Even if it is not associated to the form field in a [programmatically determinable][] way, it is still presented to all users and thus qualifies as a [label][].
+The `span` element is marked as a [label][] for the `input` element through the `aria-labelledby` attribute. It does not describe the `input` element.
 
 ```html
-<span>City:</span> <input type="text" name="first_name" />
+<span id="label_fname">Bad label</span> <input aria-labelledby="label_fname" type="text" name="first_name" />
 ```
 
 #### Failed Example 4
 
-Even though the `span` element is not [included in the accessibility tree][], it is associated to the form field in a [programmatically determinable][] way and gives it an [accessible name][]. Therefore, it is presented to all users and qualifies as a [label][]. It is not descriptive.
-
-```html
-<span id="label_fname" aria-hidden="true">City:</span>
-<input aria-labelledby="label_fname" type="text" name="first_name" />
-```
-
-#### Failed Example 5
-
-The [labels][label], provided by the `label` elements, are not descriptive enough. The headings provide a [programmatically determined context][] but they are not [visible][]. Therefore, users without assistive technologies have only access to the [label][] with no differentiating [context][].
+The `label` elements, are not descriptive enough. The headings are not [visible][]. Therefore, they do not provide [visual context][].
 
 ```html
 <h2 style="position: absolute; top: -9999px; left: -9999px;">Shipping address</h2>
@@ -183,7 +158,7 @@ The [labels][label], provided by the `label` elements, are not descriptive enoug
 
 #### Inapplicable Example 1
 
-There is no element with any of the required [semantic roles][semantic role].
+The `label` element is not associated with an element having any of the required [semantic roles][semantic role].
 
 ```html
 <label for="fname">First name:</label>
@@ -192,7 +167,7 @@ There is no element with any of the required [semantic roles][semantic role].
 
 #### Inapplicable Example 2
 
-The `label` element is [hidden](https://www.w3.org/TR/accname-1.1/#dfn-hidden) to all users and thus does not qualifies as a [label][].
+The `label` element is not [visible][].
 
 ```html
 <label for="fname" style="display:none;">First name:</label> <input id="fname" type="text" name="first_name" />
@@ -210,43 +185,20 @@ The form field is not [visible][].
 
 #### Inapplicable Example 4
 
-The form field is not [included in the accessibility tree][].
+The `span` element is not referenced by an `aria-labelledby` attribute.
 
 ```html
-<span>First name:</span><input aria-hidden="true" type="text" name="first_name" />
-```
-
-#### Inapplicable Example 5
-
-=> Fail
-
-The [accessible name][] is provided by the `aria-label` attribute (which takes precedence over the `label` element). Therefore user of assistive technologies are not presented with the same information as other users, and nothing qualifies as a [label][].
-
-```html
-<label>City:<input type="text" name="first_name" aria-label="First name"/></label>
-```
-
-#### Inapplicable Example 6
-
-The `span` element is not presented to users of assistive technologies. Therefore, it does not qualifies as a [label][].
-
-```html
-<span aria-hidden="true">First name:</span><input type="text" name="first name" />
+<span>First name:</span><input type="text" name="first name" />
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [aria11]: https://www.w3.org/TR/wai-aria-1.1/ 'Accessible Rich Internet Applications 1.1'
-[context]: #context 'Definition of context'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [label]: https://www.w3.org/TR/WCAG21/#dfn-labels 'Definition of label'
-[programmatically determinable]: https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable 'Definition of programmatically determinable'
-[programmatically determined context]: #programmatically-determined-context 'Definition of programmatically determined context'
-[sc131]: https://www.w3.org/WAI/WCAG21/#info-and-relationships 'Success Criterion 1.3.1: Info and Relationships'
 [sc246]: https://www.w3.org/WAI/WCAG21/#headings-and-labels.html 'Success Criterion 2.4.6: Heading and Labels'
 [sc253]: https://www.w3.org/WAI/WCAG21/label-in-name 'Success Criterion 2.5.3: Label in Name'
 [sc412]: https://www.w3.org/WAI/WCAG21/#name-role-value 'Success Criterion 4.1.2: Name, Role and Value'
 [semantic role]: #semantic-role 'Definition of semantic role'
-[usc131]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships 'Understanding SC 1.3.1: Info and Relationships'
 [usc246]: https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html 'Understanding SC 2.4.6: Heading and Labels'
 [usc412]: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value 'Understanding SC 4.1.2: Name, Role and Value'
 [visible]: #visible 'Definition of visible'

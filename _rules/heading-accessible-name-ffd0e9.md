@@ -1,20 +1,21 @@
 ---
 id: ffd0e9
-name: Heading name is not only whitespace
+name: Heading has accessible name
 rule_type: atomic
-description: | 
-  This rule checks that each heading does not have an accessible name that is only whitespace.
-
-success_criterion: 
-- 1.3.1 # Info and Relationships (A)
-
-test_aspects:
-- DOM Tree
-- CSS Styling
-
-authors:
-- Anne Thyme Nørregaard
-- Kasper Isager
+description: |
+  This rule checks that each heading has an accessible name.
+accessibility_requirements:
+  wcag20:1.3.1: # Info and Relationships (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
+  - DOM Tree
+  - CSS Styling
+acknoledgements:
+  authors:
+    - Jean-Yves Moyen
 ---
 
 ## Applicability
@@ -33,7 +34,7 @@ This rule assumes that having an element that unintentionally shows up programma
 
 ## Accessibility Support
 
-Handling of headings containing only whitespace characters, carriage returns, newlines, tabs, and form-feeds varies between different assistive technologies and browsers. This means that even though the outcome of this rule is *failed*, users of certain assistive technology and browser combinations might not experience an issue.
+Handling of headings containing only whitespace characters, carriage returns, newlines, tabs, and form-feeds varies between different assistive technologies and browsers. This means that even though the outcome of this rule is _failed_, users of certain assistive technology and browser combinations might not experience an issue.
 
 ## Background
 
@@ -65,7 +66,7 @@ Element with the semantic role of heading has no [accessible name](#accessible-n
 `h2` element has an [accessible name](#accessible-name) from content that is not only whitespace.
 
 ```html
-<h2>' </h2>
+<h2>'</h2>
 ```
 
 #### Passed Example 4
@@ -73,7 +74,7 @@ Element with the semantic role of heading has no [accessible name](#accessible-n
 `h2` element has an [accessible name](#accessible-name) through `aria-label` that is not only whitespace.
 
 ```html
-<h2 aria-label="Orange harvesting season"> </h2>
+<h2 aria-label="Orange harvesting season"></h2>
 ```
 
 #### Passed Example 5
@@ -81,7 +82,7 @@ Element with the semantic role of heading has no [accessible name](#accessible-n
 `h2` element has an [accessible name](#accessible-name) through the `alt` attribute that is not only whitespace.
 
 ```html
-<h2><img src="#" alt="Orange harvesting season"> </h2>
+<h2><img src="#" alt="Orange harvesting season" /></h2>
 ```
 
 #### Passed Example 6
@@ -115,7 +116,7 @@ Element with the semantic role of heading has no [accessible name](#accessible-n
 `h2` element only contains a space as only content, which gives an [accessible name](#accessible-name) that is only whitespace.
 
 ```html
-<h2> </h2>
+<h2></h2>
 ```
 
 #### Failed Example 4
@@ -155,7 +156,9 @@ Element with the semantic role of heading has no [accessible name](#accessible-n
 `h2` element contains `<br />` as only content that affects the accessible name computation. This is translated into a single space in the accessible name computation, which gives an accessible name that is only whitespace.
 
 ```html
-<h2><span><br /></span></h2>
+<h2>
+	<span><br /></span>
+</h2>
 ```
 
 #### Failed Example 9
@@ -163,7 +166,7 @@ Element with the semantic role of heading has no [accessible name](#accessible-n
 `h2` element has an image and a space as content, but the image is marked as decorative and as such not relevant for the accessible name computation, which gives an accessible name that is only whitespace.
 
 ```html
-<h2><img src="#" alt=""> </h2>
+<h2><img src="#" alt="" /></h2>
 ```
 
 ### Inapplicable

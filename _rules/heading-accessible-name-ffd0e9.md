@@ -13,33 +13,30 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-acknoledgements:
+acknowledgements:
   authors:
     - Jean-Yves Moyen
 ---
 
 ## Applicability
 
-This rule applies to any HTML element with the [semantic role](#semantic-role) of `heading` that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+This rule applies to any HTML element with the [semantic role][] of `heading` that is [included in the accessibility tree][].
 
 ## Expectation
 
-The [accessible name](#accessible-name) of the test target, if there is an accessible name, is not only [whitespace](#whitespace).
-
-**Note:** In the [Accessible Name and Description Computation](https://www.w3.org/TR/accname-1.1/#mapping_additional_nd_te) all carriage returns, newlines, tabs, and form-feeds are replaced with a single space.
+Each test target has a non-empty (`""`) [accessible name][].
 
 ## Assumptions
 
-This rule assumes that having an element that unintentionally shows up programmatically to a user of assistive technologies as a heading element, but is not shown visually as a heading on the page, is a violation of WCAG Success Criterion 1.3.1 Info and Relationships.
+_There are currently no assumptions._
 
 ## Accessibility Support
 
-Handling of headings containing only whitespace characters, carriage returns, newlines, tabs, and form-feeds varies between different assistive technologies and browsers. This means that even though the outcome of this rule is _failed_, users of certain assistive technology and browser combinations might not experience an issue.
+Some assistive technologies may hide headings with empty [accessible name][] from the users. This depends both on the user agent and how the [accessible name][] was computed (the [accessible name and description computation][] is not clear concerning which characters should be trimmed) and of the assistive technology itself. Hence, there are cases where the outcome of this rule is _failed_, but users of certain assistive technology and browser combinations will not experience an issue.
 
 ## Background
 
-- In some screen reader and browser combinations, headings containing only whitespace characters, carriage returns, newlines, tabs, and form-feeds will show up as empty headings, confusing the user experience. For a screen reader user it will be hard to get an overview of the heading structure of the page if "empty" headings are included in the heading structure. Indeed, it can be hard to know if the heading is just whitespace that has accidentally been marked up as a heading, or if it is an actual heading that for some reason doesn't have an accessible name. Since this is a case where the programmatically determinable structure of the page doesn't match the visual presentation, this is a violation of success criterion [1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships).
-- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
+- [Understanding Success Criterion 1.3.1: Info and Relationships][usc131]
 
 ## Test Cases
 
@@ -47,133 +44,86 @@ Handling of headings containing only whitespace characters, carriage returns, ne
 
 #### Passed Example 1
 
-`h2` element with no [accessible name](#accessible-name).
+This `h1` element has a non-empty [accessible name][].
 
 ```html
-<h2></h2>
+<h1 aria-level="1">ACT rules</h1>
 ```
 
 #### Passed Example 2
 
-Element with the semantic role of heading has no [accessible name](#accessible-name).
+This `div` element has a [semantic role][] of heading and a non-empty [accessible name][].
 
 ```html
-<div role="heading"></div>
+<div role="heading" aria-level="1">ACT rules</div>
 ```
 
 #### Passed Example 3
 
-`h2` element has an [accessible name](#accessible-name) from content that is not only whitespace.
+This `h1` element has an non-empty [accessible name][] given by the `aria-labelledby` attribute.
 
 ```html
-<h2>'</h2>
+<span id="h-name">ACT rules</span>
+<h1 aria-level="1" aria-labelledby="h-name"></h1>
 ```
 
 #### Passed Example 4
 
-`h2` element has an [accessible name](#accessible-name) through `aria-label` that is not only whitespace.
+This `h1` element has an non-empty [accessible name][] given by the `alt` attribute of its content.
 
 ```html
-<h2 aria-label="Orange harvesting season"></h2>
+<h1 aria-level="1"><img src="#" alt="ACT rules" /></h1>
 ```
 
 #### Passed Example 5
 
-`h2` element has an [accessible name](#accessible-name) through the `alt` attribute that is not only whitespace.
+Even though this `h1` element is not [visible][], it is still [included in the accessibility tree][]. It has a non-empty [accessible name][]
 
 ```html
-<h2><img src="#" alt="Orange harvesting season" /></h2>
-```
-
-#### Passed Example 6
-
-`h2` element contains the phrasing content element `<span>` as only content, and this does not affect the accessible name computation.
-
-```html
-<h2><span></span></h2>
+<h1 aria-level="1" style="position: absolute; top: -9999px">ACT rules</h1>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-`h2` element contains `br` element as only content. This is translated into a single space in the [accessible name](#accessible-name) computation, which gives an [accessible name](#accessible-name) that is only whitespace.
+This `h1` element has an empty [accessible name][].
 
 ```html
-<h2><br /></h2>
+<h1 aria-level="1"></h1>
 ```
 
 #### Failed Example 2
 
-`h2` contains `&nbsp;`(no break space character) as only content. This is translated into a single space in the [accessible name](#accessible-name) computation, which gives an [accessible name](#accessible-name) that is only whitespace.
+This `div` element with a [semantic role][] of `heading` has an empty [accessible name][].
 
 ```html
-<h2>&nbsp;</h2>
+<div aria-level="1"></div>
 ```
 
 #### Failed Example 3
 
-`h2` element only contains a space as only content, which gives an [accessible name](#accessible-name) that is only whitespace.
+Because the `img` element is marked as [decorative][] through its [semantic role][] of `presentation, it does not provides an [accessible name][] to the`h1`element. Hence the`h1` element has an empty [accessible name][].
 
 ```html
-<h2></h2>
+<h1 aria-level="1"><img src="#" alt="ACT rules" role="presentation" /></h1>
 ```
 
 #### Failed Example 4
 
-`h2` element contains `&#32;` (space) character as only content, which gives an [accessible name](#accessible-name) that is only whitespace.
+The nested `span` element does not affect [accessible name computation][accessible name and description computation]. Thus, the `h1` element has an empty [accessible name][].
 
 ```html
-<h2>&#32;</h2>
-```
-
-#### Failed Example 5
-
-`h2` element contains `&ensp;` (en-space) character as only content, which gives an [accessible name](#accessible-name) that is only whitespace.
-
-```html
-<h2>&ensp;</h2>
-```
-
-#### Failed Example 6
-
-`h2` element contains `&emsp;` (em-space) character as only content, which gives an [accessible name](#accessible-name) that is only whitespace.
-
-```html
-<h2>&emsp;</h2>
-```
-
-#### Failed Example 7
-
-`h2` element contains `&thinsp;` (thin space) character as only content, which gives an [accessible name](#accessible-name) that is only whitespace.
-
-```html
-<h2>&thinsp;</h2>
-```
-
-#### Failed Example 8
-
-`h2` element contains `<br />` as only content that affects the accessible name computation. This is translated into a single space in the accessible name computation, which gives an accessible name that is only whitespace.
-
-```html
-<h2>
-	<span><br /></span>
-</h2>
-```
-
-#### Failed Example 9
-
-`h2` element has an image and a space as content, but the image is marked as decorative and as such not relevant for the accessible name computation, which gives an accessible name that is only whitespace.
-
-```html
-<h2><img src="#" alt="" /></h2>
+<h1 aria-level="1">
+	<span> </span>
+</h1>
 ```
 
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-Element does not have the semantic role of heading.
+No element has a [semantic role][] of `heading`.
 
 ```html
 <div></div>
@@ -181,8 +131,16 @@ Element does not have the semantic role of heading.
 
 #### Inapplicable Example 2
 
-`h2` element is not included in the accessibility tree.
+This `h1` element is not [included in the accessibility tree][].
 
 ```html
-<h2 aria-hidden="true"></h2>
+<h1 aria-hidden="true"></h1>
 ```
+
+[accessible name]: #accessible-name 'Definition of accessible name'
+[accessible name and description computation]: https://www.w3.org/TR/accname
+[decorative]: #decorative 'Definition of decorative'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[usc131]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'
+[semantic role]: #semantic-role 'Definition of semantic role'
+[visible]: #visible 'Definition of visible'

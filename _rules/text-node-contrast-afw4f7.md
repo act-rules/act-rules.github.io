@@ -26,11 +26,11 @@ authors:
 
 ## Applicability
 
-Any [text node](https://dom.spec.whatwg.org/#text) that is [visible](#visible) and a [child](https://dom.spec.whatwg.org/#concept-tree-child) (in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree)) of an HTML element, except if the [text node](https://dom.spec.whatwg.org/#text) is a [descendant](https://dom.spec.whatwg.org/#concept-shadow-including-descendant) of an element that:
+Any [visible](#visible) character in a [text node](https://dom.spec.whatwg.org/#text) that is a [child](https://dom.spec.whatwg.org/#concept-tree-child) (in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree)) of an HTML element, except if the [text node](https://dom.spec.whatwg.org/#text) is a [descendant](https://dom.spec.whatwg.org/#concept-shadow-including-descendant) of an element that:
 
 - Has a [semantic role](#semantic-role) that inherits from [widget](https://www.w3.org/TR/wai-aria-1.1/#widget)
-- Is used in the [accessible name](#accessible-name) of a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget) that is [disabled](#disabled) (i.e. It is part of the label)
-- Has a [semantic role](#semantic-role) of [group](https://www.w3.org/TR/wai-aria-1.1/#group) that is [disabled](#disabled)
+- Is used in the [accessible name](#accessible-name) of a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget) that is [disabled]() (i.e. It is part of the label)
+- Has a [semantic role](#semantic-role) of [group](https://www.w3.org/TR/wai-aria-1.1/#group) that is [disabled]()
 
 **Note**: When the text color is the same as the background color, the element is not visible, and so is not applicable.
 
@@ -42,7 +42,7 @@ For each test target, the [highest possible contrast](#highest-possible-contrast
 
 ## Assumptions
 
-- [Success criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/TR/WCAG21/#contrast-minimum) has exceptions for "incidental" text, which includes inactive user interface components and decorative texts. The rule assumes that [text nodes](https://dom.spec.whatwg.org/#text) that should be ignored are [disabled](#disabled) or hidden from assistive technologies. If this isn't the case, the rule may produce incorrect results.
+- [Success criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/TR/WCAG21/#contrast-minimum) has exceptions for "incidental" text, which includes inactive user interface components and decorative texts. The rule assumes that [text nodes](https://dom.spec.whatwg.org/#text) that should be ignored are [disabled]() or hidden from assistive technologies. If this isn't the case, the rule may produce incorrect results.
 
 - [Success criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/TR/WCAG21/#contrast-minimum) also has an exception for logos and brand names. Since logos and brand names are usually displayed through images to ensure correct rendering, this rule does not take logos or brand names into consideration. If a logo or brand name is included using [text nodes](https://dom.spec.whatwg.org/#text), this rule may produce incorrect results.
 
@@ -64,7 +64,7 @@ Different browsers have different levels of support for CSS. This can cause cont
 
 #### Passed Example 1
 
-This dark grey [text node](https://dom.spec.whatwg.org/#text) is on a white background.
+This dark grey text is on a white background.
 
 ```html
 <p style="color: #333; background: #FFF;">
@@ -74,7 +74,7 @@ This dark grey [text node](https://dom.spec.whatwg.org/#text) is on a white back
 
 #### Passed Example 2
 
-This dark grey [text node](https://dom.spec.whatwg.org/#text) is on a partially white gradient background.
+This dark grey text is on a partially white gradient background.
 
 ```html
 <p style="color: #333; background: linear-gradient(to right, #FFF, #00F); width: 300px;">
@@ -84,7 +84,7 @@ This dark grey [text node](https://dom.spec.whatwg.org/#text) is on a partially 
 
 #### Passed Example 3
 
-This light grey [text node](https://dom.spec.whatwg.org/#text) is on a partially black background image.
+This light grey text is on a partially black background image.
 
 ```html
 <p
@@ -96,7 +96,7 @@ This light grey [text node](https://dom.spec.whatwg.org/#text) is on a partially
 
 #### Passed Example 4
 
-This [text node](https://dom.spec.whatwg.org/#text) passes because the text shadow gives the text sufficient contrast.
+This text passes because the text shadow gives the text sufficient contrast.
 
 ```html
 <p style="color: #000; background: #737373; text-shadow: white 0 0 3px">
@@ -147,7 +147,7 @@ This text has an insufficient contrast but it does not express anything in human
 
 #### Passed Example 9
 
-Even though the text is in a shadow DOM tree, the [text node](https://dom.spec.whatwg.org/#text) is a child of an HTML in the flat tree and has sufficient contrast
+Even though the text is in a shadow DOM tree, the text is part of a child [text node](https://dom.spec.whatwg.org/#text) of an HTML in the flat tree and has sufficient contrast
 
 ```html
 <p style="color: #333; background: #fff;" id="p"></p>
@@ -215,7 +215,7 @@ This text fails because the CSS opacity property significantly lowers the contra
 
 #### Failed Example 6
 
-Even though the text is in a shadow DOM tree, the [text node](https://dom.spec.whatwg.org/#text) is a child of an HTML in the flat tree and has insufficient contrast
+Even though the text is in a shadow DOM tree, the text is part of a child [text node](https://dom.spec.whatwg.org/#text) of an HTML in the flat tree and has insufficient contrast
 
 ```html
 <p style="color: #aaa; background: #fff;" id="p"></p>
@@ -223,6 +223,24 @@ Even though the text is in a shadow DOM tree, the [text node](https://dom.spec.w
 	const shadowRoot = document.getElementById('p').attachShadow({ mode: 'open' })
 	shadowRoot.textContent = 'Some text in English'
 </script>
+```
+
+#### Failed Example 7
+
+The text is placed over a black and white background, The grey text fails because of its opacity, where the text on the black background becomes too dark, and the text on the white background becomes too light.
+
+```html
+<style>
+	#backgroundSplit {
+		color: rgba(90, 90, 90, 0.8);
+		background-position: top 0 left 0;
+		background-image: linear-gradient(90deg, transparent, transparent 3.3em, black 3.3em, black 6em);
+		padding: 0 1em;
+	}
+</style>
+<span id="backgroundSplit">
+	Hello world
+</span>
 ```
 
 ### Inapplicable
@@ -289,7 +307,7 @@ This text is contained in an ARIA button.
 
 #### Inapplicable Example 8
 
-This text is in a label of a [disabled](#disabled) native widget.
+This text is in a label of a [disabled]() native widget.
 
 ```html
 <label style="color:#888; background: white;">
@@ -300,7 +318,7 @@ This text is in a label of a [disabled](#disabled) native widget.
 
 #### Inapplicable Example 9
 
-This text is in a label of a [disabled](#disabled) ARIA widget.
+This text is in a label of a [disabled]() ARIA widget.
 
 ```html
 <label id="my_pets_name" style="color:#888; background: white;">
@@ -318,7 +336,7 @@ This text is in a label of a [disabled](#disabled) ARIA widget.
 
 #### Inapplicable Example 10
 
-This text is in a [disabled](#disabled) fieldset.
+This text is in a [disabled]() fieldset.
 
 ```html
 <fieldset disabled style="color:#888; background: white;">
@@ -331,7 +349,7 @@ This text is in a [disabled](#disabled) fieldset.
 
 #### Inapplicable Example 11
 
-This text is in a [disabled](#disabled) ARIA group.
+This text is in a [disabled]() ARIA group.
 
 ```html
 <div role="group" aria-disabled="true" style="color:#888; background: white;">
@@ -341,3 +359,5 @@ This text is in a [disabled](#disabled) ARIA group.
 	</label>
 </div>
 ```
+
+[disabled]: #disabled-element

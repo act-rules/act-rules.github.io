@@ -66,3 +66,6 @@ yarn-error.log
 
 # Ignore yarn lock
 yarn.lock
+
+# Ignore JetBrains IDE file
+.idea

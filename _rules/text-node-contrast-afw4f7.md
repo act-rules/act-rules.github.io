@@ -1,6 +1,6 @@
 ---
 id: afw4f7
-name: Text node has minimal contrast
+name: Text node has minimum contrast
 rule_type: atomic
 
 description: |
@@ -42,9 +42,9 @@ For each test target, the [highest possible contrast](#highest-possible-contrast
 
 ## Assumptions
 
-Success criterion 1.4.3 has exceptions for "incidental" text, which includes inactive user interface components and decorative texts. The rule assumes that [text nodes](https://dom.spec.whatwg.org/#text) that should be ignored are hidden from assistive technologies. If this isn't the case, the rule may produce incorrect results.
+- [Success criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/TR/WCAG21/#contrast-minimum) has exceptions for "incidental" text, which includes inactive user interface components and decorative texts. The rule assumes that [text nodes](https://dom.spec.whatwg.org/#text) that should be ignored are [disabled](#disabled) or hidden from assistive technologies. If this isn't the case, the rule may produce incorrect results.
 
-Success criterion 1.4.3 also has an exception for logos and brand names. Since logos and brand names are usually displayed through images to ensure correct rendering, this rule does not take logos or brand names into consideration. If a logo or brand name is included using [text nodes](https://dom.spec.whatwg.org/#text), this rule may produce incorrect results.
+- [Success criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/TR/WCAG21/#contrast-minimum) also has an exception for logos and brand names. Since logos and brand names are usually displayed through images to ensure correct rendering, this rule does not take logos or brand names into consideration. If a logo or brand name is included using [text nodes](https://dom.spec.whatwg.org/#text), this rule may produce incorrect results.
 
 ## Accessibility Support
 
@@ -64,7 +64,7 @@ Different browsers have different levels of support for CSS. This can cause cont
 
 #### Passed Example 1
 
-This black [text node](https://dom.spec.whatwg.org/#text) is on a white background.
+This dark grey [text node](https://dom.spec.whatwg.org/#text) is on a white background.
 
 ```html
 <p style="color: #333; background: #FFF;">
@@ -74,7 +74,7 @@ This black [text node](https://dom.spec.whatwg.org/#text) is on a white backgrou
 
 #### Passed Example 2
 
-This black [text node](https://dom.spec.whatwg.org/#text) is on a partially white gradient background.
+This dark grey [text node](https://dom.spec.whatwg.org/#text) is on a partially white gradient background.
 
 ```html
 <p style="color: #333; background: linear-gradient(to right, #FFF, #00F); width: 300px;">
@@ -84,7 +84,7 @@ This black [text node](https://dom.spec.whatwg.org/#text) is on a partially whit
 
 #### Passed Example 3
 
-This light [text node](https://dom.spec.whatwg.org/#text) is on a partially black background image.
+This light grey [text node](https://dom.spec.whatwg.org/#text) is on a partially black background image.
 
 ```html
 <p
@@ -237,7 +237,7 @@ This is invisible text.
 
 #### Inapplicable Example 2
 
-The text is inapplicable because it is positioned off screen.
+The text is inapplicable because it is positioned off screen, hence not [visible](#visible).
 
 ```html
 <p style="position:absolute; top: -999em">Some invisible text in English</p>
@@ -245,7 +245,7 @@ The text is inapplicable because it is positioned off screen.
 
 #### Inapplicable Example 3
 
-This text has the same foreground and background colors.
+This text has the same foreground and background colors, hence it is not [visible](#visible).
 
 ```html
 <p style="color: white; background: white;">Some white on white text in English</p>
@@ -289,7 +289,7 @@ This text is contained in an ARIA button.
 
 #### Inapplicable Example 8
 
-This text is in a label of a disabled native widget.
+This text is in a label of a [disabled](#disabled) native widget.
 
 ```html
 <label style="color:#888; background: white;">
@@ -300,7 +300,7 @@ This text is in a label of a disabled native widget.
 
 #### Inapplicable Example 9
 
-This text is in a label of a disabled ARIA widget.
+This text is in a label of a [disabled](#disabled) ARIA widget.
 
 ```html
 <label id="my_pets_name" style="color:#888; background: white;">
@@ -318,7 +318,7 @@ This text is in a label of a disabled ARIA widget.
 
 #### Inapplicable Example 10
 
-This text is in a disabled fieldset.
+This text is in a [disabled](#disabled) fieldset.
 
 ```html
 <fieldset disabled style="color:#888; background: white;">
@@ -331,7 +331,7 @@ This text is in a disabled fieldset.
 
 #### Inapplicable Example 11
 
-This text is in a disabled ARIA group.
+This text is in a [disabled](#disabled) ARIA group.
 
 ```html
 <div role="group" aria-disabled="true" style="color:#888; background: white;">

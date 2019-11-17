@@ -1,6 +1,6 @@
 ---
-title: User intervention
-key: user-intervention
+title: User interaction
+key: user-interaction
 ---
 
 An action where a user operates a [user interface component][] of an [HTML document][].

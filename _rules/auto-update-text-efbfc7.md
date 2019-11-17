@@ -318,7 +318,7 @@ The text content automatically updates every 3 seconds after the page completes 
 
 #### Inapplicable Example 2
 
-The text content automatically updates every 3 seconds but only as a result of a user intervention.
+The text content automatically updates every 3 seconds but only as a result of a user interaction.
 
 ```html
 <body>
@@ -382,9 +382,8 @@ The automatically updating text content is the only content in the document.
 [g186]: https://www.w3.org/WAI/WCAG21/Techniques/general/G186
 [html document]: https://dom.spec.whatwg.org/#html-document
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[mechanism]: https://www.w3.org/TR/WCAG21/#dfn-mechanism
 [sc 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
 [text content]: #text-content 'Definition of text content'
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
-[user intervention]: #user-intervention 'Definition of user intervention'
+[user interaction]: #user-interaction 'Definition of user interaction'
 [visible]: #visible 'Definition of visible'

@@ -23,7 +23,7 @@ acknowledgements:
 The rule applies to any [visible][] [text content][] in an [HTML document][] if:
 
 - the [text content][] is removed or replaced by new content that does not contain the previous content; and
-- the removal or replacing is not the result of a [user intervention][]; and
+- the removal or replacing is not caused by a [user interaction][]; and
 - the removal or replacing happens anytime after the [readiness][document readiness] of the [HTML document][] the [text node][] belongs to is equal to "complete"; and
 - it is not the only [content][] in the [HTML document][].
 

@@ -47,7 +47,7 @@ Some assistive technologies may hide headings with empty [accessible name][] fro
 This `h1` element has a non-empty [accessible name][].
 
 ```html
-<h1 aria-level="1">ACT rules</h1>
+<h1>ACT rules</h1>
 ```
 
 #### Passed Example 2
@@ -64,7 +64,7 @@ This `h1` element has an non-empty [accessible name][] given by the `aria-labell
 
 ```html
 <span id="h-name">ACT rules</span>
-<h1 aria-level="1" aria-labelledby="h-name"></h1>
+<h1 aria-labelledby="h-name"></h1>
 ```
 
 #### Passed Example 4
@@ -72,7 +72,7 @@ This `h1` element has an non-empty [accessible name][] given by the `aria-labell
 This `h1` element has an non-empty [accessible name][] given by the `alt` attribute of its content.
 
 ```html
-<h1 aria-level="1"><img src="#" alt="ACT rules" /></h1>
+<h1><img src="#" alt="ACT rules" /></h1>
 ```
 
 #### Passed Example 5
@@ -80,7 +80,7 @@ This `h1` element has an non-empty [accessible name][] given by the `alt` attrib
 Even though this `h1` element is not [visible][], it is still [included in the accessibility tree][]. It has a non-empty [accessible name][]
 
 ```html
-<h1 aria-level="1" style="position: absolute; top: -9999px">ACT rules</h1>
+<h1 style="position: absolute; top: -9999px">ACT rules</h1>
 ```
 
 ### Failed
@@ -90,7 +90,7 @@ Even though this `h1` element is not [visible][], it is still [included in the a
 This `h1` element has an empty [accessible name][].
 
 ```html
-<h1 aria-level="1"></h1>
+<h1></h1>
 ```
 
 #### Failed Example 2
@@ -98,7 +98,7 @@ This `h1` element has an empty [accessible name][].
 This `div` element with a [semantic role][] of `heading` has an empty [accessible name][].
 
 ```html
-<div aria-level="1"></div>
+<div role="heading" aria-level="1"></div>
 ```
 
 #### Failed Example 3
@@ -106,7 +106,7 @@ This `div` element with a [semantic role][] of `heading` has an empty [accessibl
 Because the `img` element is marked as [decorative][] through its [semantic role][] of `presentation`, it does not provides an [accessible name][] to the `h1` element. Hence the `h1` element has an empty [accessible name][].
 
 ```html
-<h1 aria-level="1"><img src="#" alt="ACT rules" role="presentation" /></h1>
+<h1><img src="#" alt="ACT rules" role="presentation" /></h1>
 ```
 
 #### Failed Example 4
@@ -114,7 +114,7 @@ Because the `img` element is marked as [decorative][] through its [semantic role
 The nested `span` element does not affect [accessible name computation][accessible name and description computation]. Thus, the `h1` element has an empty [accessible name][].
 
 ```html
-<h1 aria-level="1">
+<h1>
 	<span> </span>
 </h1>
 ```

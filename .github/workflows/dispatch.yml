@@ -1,0 +1,17 @@
+name: dispatch
+
+# Run on push/commit targetting `develop` branch
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v1
+      - shell: bash
+        name: send 'repository_dispatch' trigger to ACT W repository
+        run: |
+          curl -XPOST -u "${{ secrets.USER_NAME }}:${{ secrets.USER_PAT }}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/act-rules/act-rules-web/dispatches --data '{ "event_type": "build_application" }'

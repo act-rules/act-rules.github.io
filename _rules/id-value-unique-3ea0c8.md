@@ -12,9 +12,10 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-authors:
-  - Bryn Anderson
-  - Anne Thyme Nørregaard
+acknowledgements:
+  authors:
+    - Bryn Anderson
+    - Anne Thyme Nørregaard
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -51,7 +52,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-Only one `id` within the document context
+There is only one `id` within the document context.
 
 ```html
 <div id="my-div">This is my first element</div>
@@ -59,7 +60,7 @@ Only one `id` within the document context
 
 #### Passed Example 2
 
-All `id`s are unique within the document context
+All `id`s are unique within the document context.
 
 ```html
 <div id="my-div1">This is my first element</div>
@@ -69,22 +70,32 @@ All `id`s are unique within the document context
 
 #### Passed Example 3
 
-`id` in shadow DOM is for the same element as `id` in light DOM
+Two of the `id` are the same (`my-elt`), but they are in different trees (the first one in the [document tree](https://dom.spec.whatwg.org/#document-trees) and the second in the [shadow tree](https://dom.spec.whatwg.org/#shadow-trees)).
 
 ```html
-<div id="my-elm"></div>
+<div id="my-elt"></div>
+<div id="host"></div>
 <script>
-	var myElm = document.getElementById('my-elm')
-	var shadow = myElm.attachShadow({ mode: 'open' })
-	shadow.innerHTML = '<b id="my-elm" ><slot></slot></b>'
+	var host = document.getElementById('host')
+	var shadow = host.attachShadow({ mode: 'open' })
+	shadow.innerHTML = '<b id="my-elt"></b>'
 </script>
+```
+
+#### Passed Example 4
+
+Both `id` are the same (`my-elt`), but they are in different [document trees](https://dom.spec.whatwg.org/#document-trees) because the `iframe` is creating a new one.
+
+```html
+<div id="my-elt"></div>
+<iframe srcdoc="<span id='my-elt'></span>"></iframe>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-Several elements have identical `id`
+Several elements have identical `id`.
 
 ```html
 <div id="my-div">This is my first element</div>
@@ -93,7 +104,7 @@ Several elements have identical `id`
 
 #### Failed Example 2
 
-Elements of different types have identical `id`
+Elements of different types have identical `id`.
 
 ```html
 <div id="my-div">This is my first element</div>
@@ -102,7 +113,7 @@ Elements of different types have identical `id`
 
 #### Failed Example 3
 
-Having `display: none` on an element still makes it applicable to this rule
+Having `display: none` on an element still makes it applicable to this rule.
 
 ```html
 <div id="my-div" style="display:none">This is my first element</div>
@@ -113,7 +124,7 @@ Having `display: none` on an element still makes it applicable to this rule
 
 #### Inapplicable Example 1
 
-No `id` on element
+No `id` on element.
 
 ```html
 <div>This is my first element</div>
@@ -121,7 +132,7 @@ No `id` on element
 
 #### Inapplicable Example 2
 
-XML `id` not applicable to this rule
+XML `id` not applicable to this rule.
 
 ```html
 <div xml:id="my-div">This is my first element</div>

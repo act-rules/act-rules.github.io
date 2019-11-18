@@ -10,6 +10,12 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+accessibility_requirements:
+  wcag20:2.4.6: # Headings and Labels (AA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -37,6 +43,7 @@ Some assistive technologies may hide headings with empty [accessible name][] fro
 ## Background
 
 - [Understanding Success Criterion 1.3.1: Info and Relationships][usc131]
+- [Understanding Success Criterion 2.4.6: Headings and Labels][usc246]
 
 ## Test Cases
 
@@ -142,5 +149,6 @@ This `h1` element is not [included in the accessibility tree][].
 [decorative]: #decorative 'Definition of decorative'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [usc131]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'
+[usc246]: https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html 'Understanding Success Criterion 2.4.6: Headings and Labels'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'

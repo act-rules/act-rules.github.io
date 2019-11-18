@@ -57,13 +57,15 @@ _There are no major accessibility support issues known for this rule._
 The link to skip [repeated content](#repeated-content) is [visible][], is [included in the accessibility tree][], and when activated moves the focus to the [main content][] identified here by the `main` element.
 
 ```html
-<nav>
-	<a href="#main-content">Skip to main content</a>
-</nav>
-<div id="repeated-content">
-	<!-- Repeated Content -->
-</div>
-<main id="main-content">Main Content</main>
+<html>
+	<nav>
+		<a href="#main-content">Skip to main content</a>
+	</nav>
+	<div id="repeated-content">
+		<!-- Repeated Content -->
+	</div>
+	<main id="main-content">Main Content</main>
+</html>
 ```
 
 #### Passed Example 2
@@ -71,23 +73,29 @@ The link to skip [repeated content](#repeated-content) is [visible][], is [inclu
 The link to skip [repeated content](#repeated-content) can be toggled to [visible][] through keyboard focus. When activated the focus is moved to the [main content][] identified here by the `main` element.
 
 ```html
-<style>
-	#skipNav a {
-		height: 100px;
-		position: absolute;
-		top: -100px;
-	}
-	#skipNav a:focus {
-		top: 0px;
-	}
-</style>
-<nav id="skipNav">
-	<a href="#main-content">Skip to main content</a>
-</nav>
-<div id="repeated-content">
-	<!-- Repeated content -->
-</div>
-<main id="main-content">Main Content</main>
+<html>
+	<head>
+		<style>
+			#skipNav a {
+				height: 100px;
+				position: absolute;
+				top: -100px;
+			}
+			#skipNav a:focus {
+				top: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<nav id="skipNav">
+			<a href="#main-content">Skip to main content</a>
+		</nav>
+		<div id="repeated-content">
+			<!-- Repeated content -->
+		</div>
+		<main id="main-content">Main Content</main>
+	</body>
+</html>
 ```
 
 #### Passed Example 3
@@ -95,13 +103,15 @@ The link to skip [repeated content](#repeated-content) can be toggled to [visibl
 The link to skip [repeated content](#repeated-content) has an `aria-label` attribute to provide an [accessible name][]. When activated focus is moved to the [main content][] identified here by the `main` element.
 
 ```html
-<nav>
-	<a href="#main-content" aria-label="Skip to main content"></a>
-</nav>
-<div id="repeated-content">
-	<!-- Repeated content -->
-</div>
-<main id="main-content">Main Content</main>
+<html>
+	<nav>
+		<a href="#main-content" aria-label="Skip to main content"></a>
+	</nav>
+	<div id="repeated-content">
+		<!-- Repeated content -->
+	</div>
+	<main id="main-content">Main Content</main>
+</html>
 ```
 
 ### Failed
@@ -111,10 +121,12 @@ The link to skip [repeated content](#repeated-content) has an `aria-label` attri
 There is no link to skip [repeated content](#repeated-content).
 
 ```html
-<div id="repeated-content">
-	<!-- Repeated content -->
-</div>
-<main id="main-content">Main Content</main>
+<html>
+	<div id="repeated-content">
+		<!-- Repeated content -->
+	</div>
+	<main id="main-content">Main Content</main>
+</html>
 ```
 
 #### Failed Example 2
@@ -122,14 +134,16 @@ There is no link to skip [repeated content](#repeated-content).
 The link to skip [repeated content](#repeated-content) is not the first [focusable][] element within the `body`.
 
 ```html
-<a href="https://www.w3.org/">Check out the W3C</a>
-<nav>
-	<a href="#main-content">Skip to main content</a>
-</nav>
-<div id="repeated-content">
-	<!-- Repeated content -->
-</div>
-<main id="main-content">Main Content</main>
+<html>
+	<a href="https://www.w3.org/">Check out the W3C</a>
+	<nav>
+		<a href="#main-content">Skip to main content</a>
+	</nav>
+	<div id="repeated-content">
+		<!-- Repeated content -->
+	</div>
+	<main id="main-content">Main Content</main>
+</html>
 ```
 
 #### Failed Example 3
@@ -137,13 +151,15 @@ The link to skip [repeated content](#repeated-content) is not the first [focusab
 The link to skip [repeated content](#repeated-content) does not have an [accessible name][].
 
 ```html
-<nav>
-	<a href="#main-content"></a>
-</nav>
-<div id="repeated-content">
-	<!-- Repeated content -->
-</div>
-<main id="main-content">Main Content</main>
+<html>
+	<nav>
+		<a href="#main-content"></a>
+	</nav>
+	<div id="repeated-content">
+		<!-- Repeated content -->
+	</div>
+	<main id="main-content">Main Content</main>
+</html>
 ```
 
 #### Failed Example 4
@@ -151,13 +167,15 @@ The link to skip [repeated content](#repeated-content) does not have an [accessi
 The link to skip [repeated content](#repeated-content) does not reference a valid `id` attribute and when activated will not move focus to the [main content][] identified here by the `main` element.
 
 ```html
-<nav>
-	<a href="#invalidId">Skip to main content</a>
-</nav>
-<div id="repeated-content">
-	<!-- Repeated content -->
-</div>
-<main id="main-content">Main Content</main>
+<html>
+	<nav>
+		<a href="#invalidId">Skip to main content</a>
+	</nav>
+	<div id="repeated-content">
+		<!-- Repeated content -->
+	</div>
+	<main id="main-content">Main Content</main>
+</html>
 ```
 
 #### Failed Example 5
@@ -165,13 +183,15 @@ The link to skip [repeated content](#repeated-content) does not reference a vali
 The link to skip [repeated content](#repeated-content) is not [visible][], and is not included in the [accessibility tree][].
 
 ```html
-<nav>
-	<a href="#main-content" style="display:none;">Skip to main content</a>
-</nav>
-<div id="repeated-content">
-	<!-- Repeated content -->
-</div>
-<main id="main-content">Main Content</main>
+<html>
+	<nav>
+		<a href="#main-content" style="display:none;">Skip to main content</a>
+	</nav>
+	<div id="repeated-content">
+		<!-- Repeated content -->
+	</div>
+	<main id="main-content">Main Content</main>
+</html>
 ```
 
 #### Failed Example 6
@@ -179,18 +199,20 @@ The link to skip [repeated content](#repeated-content) is not [visible][], and i
 The element with a click event to skip [repeated content](#repeated-content) does not have a [semantic role][] of link.
 
 ```html
-<nav>
-	<span onclick="focusMainContent()">Skip to main content</span>
-</nav>
-<div id="repeated-content">
-	<!-- Repeated content -->
-</div>
-<main id="main-content">Main Content</main>
-<script>
-	function focusMainContent() {
-		document.getElementById('main-content').focus()
-	}
-</script>
+<html>
+	<nav>
+		<span onclick="focusMainContent()">Skip to main content</span>
+	</nav>
+	<div id="repeated-content">
+		<!-- Repeated content -->
+	</div>
+	<main id="main-content">Main Content</main>
+	<script>
+		function focusMainContent() {
+			document.getElementById('main-content').focus()
+		}
+	</script>
+</html>
 ```
 
 ### Inapplicable

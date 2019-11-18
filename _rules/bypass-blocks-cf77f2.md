@@ -1,6 +1,6 @@
 ---
 id: cf77f2
-name: Bypass Blocks
+name: Bypass Blocks of Content
 rule_type: composite
 description: |
   This rule checks that each page has a mechanism to bypass blocks of content.
@@ -67,7 +67,6 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 #### Passed Example 1
 
 ```html
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title></title>
@@ -79,7 +78,6 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 #### Passed Example 2
 
 ```html
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title></title>
@@ -91,7 +89,6 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 #### Passed Example 3
 
 ```html
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title></title>
@@ -105,7 +102,6 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 #### Failed Example 1
 
 ```html
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title></title>
@@ -117,7 +113,6 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 #### Failed Example 2
 
 ```html
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title></title>
@@ -129,7 +124,6 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 #### Failed Example 3
 
 ```html
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title></title>
@@ -141,7 +135,6 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 #### Failed Example 4
 
 ```html
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title></title>

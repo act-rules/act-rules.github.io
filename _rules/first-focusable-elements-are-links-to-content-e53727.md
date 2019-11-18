@@ -13,6 +13,7 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS styling
+  - Language
 acknowledgements:
   authors:
     - Jean-Yves Moyen

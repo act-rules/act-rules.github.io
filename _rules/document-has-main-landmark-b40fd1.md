@@ -53,6 +53,7 @@ This [document][] has a one element with a [semantic role][] of [`main`][main].
 <html>
 	<h1>Contents</h1>
 	<!-- list of links to each chapter -->
+
 	<main>
 		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
@@ -73,15 +74,18 @@ This [document][] has several elements with a role of [`main`][main].
 	<body>
 		<h1>Contents</h1>
 		<!-- list of links to each chapter -->
+
 		<div role="main" aria-label="Translation by C. H. Brewitt-Taylor (1925)">
 			<h1>Three Heroes Swear Brotherhood in the Peach Garden</h1>
 			The world under heaven, after a long period of division, tends to unite; after a long period of union, tends to
 			divide.
 		</div>
+
 		<div role="main" aria-label="Translation by Moss Roberts (1976)">
 			<h1>Three Bold Spirits Plight Mutual Faith in the Peach Garden</h1>
 			The empire, long divided, must unite; long united, must divide. Thus it has ever been.
 		</div>
+
 		<div role="main" aria-label="Translation by Yu Sumei (2014)">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
@@ -101,6 +105,7 @@ This [document][] has no element with a role of [`main`][main].
 <html>
 	<h1>Contents</h1>
 	<!-- list of links to each chapter -->
+
 	<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 	Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 	time.

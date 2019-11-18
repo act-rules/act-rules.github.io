@@ -6,7 +6,7 @@ description: |
   This rule checks that the first focusable elements are links referring to sections of content on the same page
 accessibility_requirements:
   wcag-technique:G124: # Adding links at the top of the page to each area of the content
-    forConformance: false
+    forConformance: true
     failed: not satisfied
     passed: satisfied
     inapplicable: further testing needed
@@ -21,37 +21,37 @@ acknowledgements:
 
 ## Applicability
 
-This rule applies to any [document](#https://dom.spec.whatwg.org/#concept-document) where the [document element](#https://dom.spec.whatwg.org/#document-element) is an HTML `html` element.
+This rule applies to any [document][] where the [document element][] is an HTML `html` element.
 
 ## Expectation 1
 
-There is an [initial segment](#initial-segment) of the [focusable](#focusable) elements (in focus order) such that each element in that [initial segment](#initial-segment):
+Within the test target, there is an [initial segment][] of the [focusable][] elements (in focus order) such that each element in that [initial segment][]:
 
-- is [included in the accessibility tree](#included-in-the-accessibility-tree); and
-- is [visible](#visible) when [focused](#focused); and
-- has a [semantic role](#semantic-role) of link; and
-- when activated, moves focus to a [section of content](#section-of-content) within the same [document](#https://dom.spec.whatwg.org/#concept-document); and
-- has either an [accessible name](#accessible-name) or [accessible description](#accessible-description) that communicates that it links to that specific [section of content](#section-of-content).
+- is [included in the accessibility tree][]; and
+- is [visible][] when [focused][]; and
+- has a [semantic role][] of link; and
+- when activated, moves focus to a [section of content][] within the same [document][]; and
+- has either an [accessible name][] or [accessible description][] that communicates that it links to that specific [section of content][].
 
-**Note**: There is no requirement on how many [focusable](#focusable) elements are part of that [initial segment](#initial-segment), nor any requirement to provide a way to determine (programatically or not) where that [initial segment](#initial-segment) stops. Technique [G124: Adding links at the top of the page to each area of the content](https://www.w3.org/WAI/WCAG21/Techniques/general/G124), and this rule, only require that such an set exists.
+**Note**: There is no requirement on how many [focusable][] elements are part of that [initial segment][], nor any requirement to provide a way to determine (programatically or not) where that [initial segment][] stops. Technique [G124: Adding links at the top of the page to each area of the content](https://www.w3.org/WAI/WCAG21/Techniques/general/G124), and this rule, only require that such an set exists.
 
-**Editorial note**: An attempt to clarify what this initial segment has to be is done in the second expectation: it must contain exactly one link for each section of content in the page. I am still not very happy with the formulation, nor with the order of these two expectations. Any suggestions to improve that are welcome…
+**Note for reviewers**: An attempt to clarify what this initial segment has to be is done in the second expectation: it must contain exactly one link for each section of content in the page. I am still not very happy with the formulation, nor with the order of these two expectations. Any suggestions to improve that are welcome…
 
 ## Expectation 2
 
-Each [section of content](#section-of-content) in the [document](#https://dom.spec.whatwg.org/#concept-document) is the target of exactly one link from the set of [focusable](#focusable) elements that passes Expectation 1.
+Each [section of content][] in the [document][] is the target of exactly one link from the set of [focusable][] elements that passes Expectation 1.
 
 ## Assumptions
 
 This rule assumes that any global dismissible information that only appears once per site has already been acknowledged and is not displayed any more.
 
-**Note**: The aim of such links is to be able to skip repeated content (headers, navigation bar, ...) when viewing several pages of the same site. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually be viewing and accepting cookies policy). Since that content is _not_ repeated (is it only shown once for the full site), it is not a problem to have it, and it may appear on any page of the site (depending where the user first comes in).
+**Note**: The aim of such links is to be able to skip repeated content (headers, navigation bar, ...) when viewing several pages of the same site. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually by viewing and accepting cookies policy). Since that content is _not_ repeated (is it only shown once for the full site), it is not a problem to have it, and it may appear on any page of the site (depending where the user first comes in).
 
 ## Accessibility Support
 
 _There are no major accessibility support issues known for this rule._
 
-**Editorial note**: In its current state, the definition of [section of content](#section-of-content) would include, _e.g._ an advertising sidebar as a specific section of content. However, it is not clear that the lack of link to it would be a breach of G124 or SC 2.4.1… Idea?
+**Note to reviewers**: In its current state, the definition of [section of content][] would include, e.g. an advertising sidebar as a specific section of content. However, it is not clear that the lack of link to it would be a breach of G124 or SC 2.4.1… Idea?
 
 ## Background
 
@@ -63,7 +63,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-Links in the [initial segment](#initial-segment) list have a [semantic role](#semantic-role) of link, are [visible](#visible) and when activated moves the focus to the associated [section of content](#section-of-content).
+Links in the [initial segment][] list have a [semantic role][] of link, are [visible][] and when activated moves the focus to the associated [section of content][].
 
 ```html
 <ul>
@@ -78,7 +78,7 @@ Links in the [initial segment](#initial-segment) list have a [semantic role](#se
 
 #### Passed Example 2
 
-Links in the [initial segment](#initial-segment) list are [visible](#visible) when [focused](#focused).
+Links in the [initial segment][] list are [visible][] when [focused][].
 
 ```html
 <style>
@@ -102,7 +102,7 @@ Links in the [initial segment](#initial-segment) list are [visible](#visible) wh
 
 #### Passed Example 3
 
-Links in the [initial segment](#initial-segment) list move the focus to heading elements when activated.
+Links in the [initial segment][] list move the focus to heading elements when activated.
 
 ```html
 <ul>
@@ -115,7 +115,7 @@ Links in the [initial segment](#initial-segment) list move the focus to heading 
 
 #### Passed Example 4
 
-Links in the [initial segment](#initial-segment) list use `aria-label` to provide an [accessible name](#accessible-name).
+Links in the [initial segment][] list use `aria-label` to provide an [accessible name][].
 
 ```html
 <ul>
@@ -132,7 +132,7 @@ Links in the [initial segment](#initial-segment) list use `aria-label` to provid
 
 #### Failed Example 1
 
-The first [focusable](#focusable) elements in the [initial segment](#initial-segment) of the document do not have a [semantic role](#semantic-role) of link.
+The first [focusable][] elements in the [initial segment][] of the document do not have a [semantic role][] of link.
 
 ```html
 <ul>
@@ -153,7 +153,7 @@ The first [focusable](#focusable) elements in the [initial segment](#initial-seg
 
 #### Failed Example 2
 
-Each [focusable](#focusable) element in the [initial segment](#initial-segment) of the document does not have a [semantic role](#semantic-role) of link.
+Each [focusable][] element in the [initial segment][] of the document does not have a [semantic role][] of link.
 
 ```html
 <ul>
@@ -174,7 +174,7 @@ Each [focusable](#focusable) element in the [initial segment](#initial-segment) 
 
 #### Failed Example 3
 
-Links in the [initial segment](#initial-segment) list when activated do not move the focus to a [section of content](#section-of-content) due to invalid `href` attributes.
+Links in the [initial segment][] list when activated do not move the focus to a [section of content][] due to the invalid `href` attributes.
 
 ```html
 <ul>
@@ -189,7 +189,7 @@ Links in the [initial segment](#initial-segment) list when activated do not move
 
 #### Failed Example 4
 
-Links in the [initial segment](#initial-segment) list do not move focus to a [section of content](#section-of-content) when activated due to invalid `id` attributes.
+Links in the [initial segment][] list do not move focus to a [section of content][] when activated due to invalid `id` attributes.
 
 ```html
 <ul>
@@ -204,7 +204,7 @@ Links in the [initial segment](#initial-segment) list do not move focus to a [se
 
 #### Failed Example 5
 
-Links in the [initial segment](#initial-segment) list are not the first [focusable](#focusable) elements in the document.
+Links in the [initial segment][] list are not the first [focusable][] elements in the document.
 
 ```html
 <a href="https://www.w3.org/">Go to the W3C</a>
@@ -220,7 +220,7 @@ Links in the [initial segment](#initial-segment) list are not the first [focusab
 
 #### Failed Example 6
 
-Links in the [initial segment](#initial-segment) list are not [visible](#visible) when [focused](#focused).
+Links in the [initial segment][] list are not [visible][] when [focused][].
 
 ```html
 <ul style="display:none;" id="skiplinks">
@@ -235,7 +235,7 @@ Links in the [initial segment](#initial-segment) list are not [visible](#visible
 
 #### Failed Example 7
 
-Links in the [initial segment](#initial-segment) list do not have an [accessible name](#accessible-name).
+Links in the [initial segment][] list do not have an [accessible name][].
 
 ```html
 <ul>
@@ -250,7 +250,7 @@ Links in the [initial segment](#initial-segment) list do not have an [accessible
 
 #### Failed Example 8
 
-Multiple links in the [initial segment](#initial-segment) list move the focus to the same [section of content](#section-of-content).
+Multiple links in the [initial segment][] list move the focus to the same [section of content][].
 
 ```html
 <ul>
@@ -268,10 +268,23 @@ Multiple links in the [initial segment](#initial-segment) list move the focus to
 
 #### Inapplicable Example 1
 
-The [document element](#https://dom.spec.whatwg.org/#document-element) of this [document](#https://dom.spec.whatwg.org/#concept-document) is not an `html` element.
+The [document element][] of this [document][] is not an `html` element.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">
   <title>This is an SVG</title>
 </svg>
 ```
+
+[accessible description]: #accessible-description 'Definition of accessible description'
+[accessible name]: #accessible-name 'Definition of accessible name'
+[document]: #https://dom.spec.whatwg.org/#concept-document 'Definition of document'
+[document element]: #https://dom.spec.whatwg.org/#document-element 'Definition of document element'
+[focusable]: #focusable 'Definition of focusable'
+[focused]: #focused 'Definition of focused'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[initial segment]: #initial-segment 'Definition of initial segment'
+[main content]: #main-content 'Definition of main content'
+[section of content]: #section-of-content 'Definition of section of content'
+[semantic role]: #semantic-role 'Definition of semantic role'
+[visible]: #visible 'Definition of visible'

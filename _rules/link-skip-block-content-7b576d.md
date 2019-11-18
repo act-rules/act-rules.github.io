@@ -57,35 +57,30 @@ Multiple [sections of repeated content][section of repeated content][] each have
 
 ```html
 <html lang="en">
-	<head>
-		<title></title>
-	</head>
-	<body>
-		<main>
-			<section id="section1" aria-label="Section 1 of page">
-				<nav aria-label="Section 1 navigation">
-					<a href="#section1Content">Skip section 1 navigation</a>
-					<ul>
-						<!-- Repeated section navigation -->
-					</ul>
-				</nav>
-				<div id="#section1Content">
-					<!-- Section content -->
-				</div>
-			</section>
-			<section aria-label="Section 2 of page">
-				<nav aria-label="Section 2 navigation">
-					<a href="#section2Content">Skip section 2 navigation</a>
-					<ul>
-						<!-- Repeated section navigation -->
-					</ul>
-				</nav>
-				<div id="section2Content">
-					<!-- Section content -->
-				</div>
-			</section>
-		</main>
-	</body>
+	<main>
+		<section id="section1" aria-label="Section 1 of page">
+			<nav aria-label="Section 1 navigation">
+				<a href="#section1Content">Skip section 1 navigation</a>
+				<ul>
+					<!-- Repeated section navigation -->
+				</ul>
+			</nav>
+			<div id="#section1Content">
+				<!-- Section content -->
+			</div>
+		</section>
+		<section aria-label="Section 2 of page">
+			<nav aria-label="Section 2 navigation">
+				<a href="#section2Content">Skip section 2 navigation</a>
+				<ul>
+					<!-- Repeated section navigation -->
+				</ul>
+			</nav>
+			<div id="section2Content">
+				<!-- Section content -->
+			</div>
+		</section>
+	</main>
 </html>
 ```
 
@@ -95,35 +90,29 @@ A link exist at the beginning of a [section of repeated content][] and when acti
 
 ```html
 <html lang="en">
-	<head>
-		<title></title>
-	</head>
-	<body>
-		<nav>
-			<div id="mainNav">
-				<a href="#subNav">Skip main navigation links</a>
-				<ul>
-					<!-- Repeated main navigation links -->
-				</ul>
-			</div>
-			<div id="subNav">
-				<a href="#featuredAd">Skip sub navigation links</a>
-				<ul>
-					<!-- Repeated sub navigation links -->
-				</ul>
-			</div>
-			<div id="featuredAd">
-				<!-- Ad content -->
-			</div>
-		</nav>
-	</body>
+	<nav>
+		<div id="mainNav">
+			<a href="#subNav">Skip main navigation links</a>
+			<ul>
+				<!-- Repeated main navigation links -->
+			</ul>
+		</div>
+		<div id="subNav">
+			<a href="#featuredAd">Skip sub navigation links</a>
+			<ul>
+				<!-- Repeated sub navigation links -->
+			</ul>
+		</div>
+		<div id="featuredAd">
+			<!-- Ad content -->
+		</div>
+	</nav>
 </html>
 ```
 
 #### Passed Example 3
 
 ```html
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title></title>

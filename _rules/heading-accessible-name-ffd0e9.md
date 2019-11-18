@@ -10,7 +10,6 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-accessibility_requirements:
   wcag20:2.4.6: # Headings and Labels (AA)
     forConformance: true
     failed: not satisfied

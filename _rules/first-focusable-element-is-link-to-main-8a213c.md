@@ -6,7 +6,7 @@ description: |
   This rule checks that the first focusable element is a link referring to the main content of the page
 accessibility_requirements:
   wcag-technique:G1: # Adding a link at the top of each page that goes directly to the main content area
-    forConformance: false
+    forConformance: true
     failed: not satisfied
     passed: satisfied
     inapplicable: further testing needed
@@ -22,23 +22,23 @@ acknowledgements:
 
 ## Applicability
 
-This rule applies to any [document](#https://dom.spec.whatwg.org/#concept-document) where the [document element](#https://dom.spec.whatwg.org/#document-element) is an HTML `html` element.
+This rule applies to any [document][] where the [document element][] is an `html` element.
 
 ## Expectation 1
 
-The first [focusable](#focusable) element within the test target:
+The first [focusable][] element within the test target:
 
-- is [included in the accessibility tree](#included-in-the-accessibility-tree); and
-- is [visible](#visible) when [focused](#focused); and
-- has a [semantic role](#semantic-role) of link; and
-- when activated, moves focus to the [main content](#main-content) of the [document](#https://dom.spec.whatwg.org/#concept-document); and
-- has either an [accessible name](#accessible-name) or [accessible description](#accessible-description) that communicates that it links to the [main content](#main-content).
+- is [included in the accessibility tree][]; and
+- is [visible][] when [focused][]; and
+- has a [semantic role][] of link; and
+- when activated, moves focus to the [main content][] of the [document][]; and
+- has either an [accessible name][] or [accessible description][] that communicates that it links to the [main content][].
 
 ## Assumptions
 
 This rule assumes that any global dismissible information that only appears once per site has already been acknowledged and is not displayed any more.
 
-**Note**: The aim of such link is to be able to skip repeated content (headers, navigation bar, ...) when viewing several pages of the same site. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually be viewing and accepting cookies policy). Since that content is _not_ repeated (is it only shown once for the full site), it is not a problem to have it, and it may appear on any page of the site (depending where the user first comes in).
+**Note**: The aim of such link is to be able to skip repeated content (headers, navigation bar, ...) when viewing several pages of the same site. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually by viewing and accepting cookies policy). Since that content is _not_ repeated (is it only shown once for the full site), it is not a problem to have it, and it may appear on any page of the site (depending where the user first comes in).
 
 ## Accessibility Support
 
@@ -54,7 +54,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The link to skip [repeated content](#repeated-content) is [visible](#visible), is [included in the accessibility tree](#included-in-the-accessibility-tree), and when activated moves the focus to the main content identified here by the `main` element.
+The link to skip [repeated content](#repeated-content) is [visible][], is [included in the accessibility tree][], and when activated moves the focus to the [main content][] identified here by the `main` element.
 
 ```html
 <nav>
@@ -68,7 +68,7 @@ The link to skip [repeated content](#repeated-content) is [visible](#visible), i
 
 #### Passed Example 2
 
-The link to skip [repeated content](#repeated-content) can be toggled to [visible](#visible) through keyboard focus. When activated the focus is moved to the [main content](#main-content) identified here by the `main` element.
+The link to skip [repeated content](#repeated-content) can be toggled to [visible][] through keyboard focus. When activated the focus is moved to the [main content][] identified here by the `main` element.
 
 ```html
 <style>
@@ -92,7 +92,7 @@ The link to skip [repeated content](#repeated-content) can be toggled to [visibl
 
 #### Passed Example 3
 
-The link to skip [repeated content](#repeated-content) has an `aria-label` to provide an [accessible name](#accessible-name). When activated focus is moved to the [main content](#main-content) identified here by the `main` element.
+The link to skip [repeated content](#repeated-content) has an `aria-label` attribute to provide an [accessible name][]. When activated focus is moved to the [main content][] identified here by the `main` element.
 
 ```html
 <nav>
@@ -119,7 +119,7 @@ There is no link to skip [repeated content](#repeated-content).
 
 #### Failed Example 2
 
-The link to skip [repeated content](#repeated-content) is not the first [focusable](#focusable) element within the `body`.
+The link to skip [repeated content](#repeated-content) is not the first [focusable][] element within the `body`.
 
 ```html
 <a href="https://www.w3.org/">Check out the W3C</a>
@@ -134,7 +134,7 @@ The link to skip [repeated content](#repeated-content) is not the first [focusab
 
 #### Failed Example 3
 
-The link to skip [repeated content](#repeated-content) does not have an [accessible name](#accessible-name).
+The link to skip [repeated content](#repeated-content) does not have an [accessible name][].
 
 ```html
 <nav>
@@ -148,7 +148,7 @@ The link to skip [repeated content](#repeated-content) does not have an [accessi
 
 #### Failed Example 4
 
-The link to skip [repeated content](#repeated-content) does not reference a valid `id` attribute and when activated will not move focus to the [main content](#main-content) identified here by the `main` element.
+The link to skip [repeated content](#repeated-content) does not reference a valid `id` attribute and when activated will not move focus to the [main content][] identified here by the `main` element.
 
 ```html
 <nav>
@@ -162,7 +162,7 @@ The link to skip [repeated content](#repeated-content) does not reference a vali
 
 #### Failed Example 5
 
-The link to skip [repeated content](#main-content) is not [visible](#visible), and is not included in the [accessibility tree](#accessibility-tree).
+The link to skip [repeated content](#repeated-content) is not [visible][], and is not included in the [accessibility tree][].
 
 ```html
 <nav>
@@ -176,7 +176,7 @@ The link to skip [repeated content](#main-content) is not [visible](#visible), a
 
 #### Failed Example 6
 
-The element with a click event to skip [repeated content](#repeated-content) does not have a [semantic role](#semantic-role) of link.
+The element with a click event to skip [repeated content](#repeated-content) does not have a [semantic role][] of link.
 
 ```html
 <nav>
@@ -197,10 +197,21 @@ The element with a click event to skip [repeated content](#repeated-content) doe
 
 #### Inapplicable Example 1
 
-The [document element](#https://dom.spec.whatwg.org/#document-element) of this [document](#https://dom.spec.whatwg.org/#concept-document) is not an `html` element.
+The [document element][] of this [document][] is not an `html` element.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">
   <title>This is an SVG</title>
 </svg>
 ```
+
+[accessible description]: #accessible-description 'Definition of accessible description'
+[accessible name]: #accessible-name 'Definition of accessible name'
+[document]: #https://dom.spec.whatwg.org/#concept-document 'Definition of document'
+[document element]: #https://dom.spec.whatwg.org/#document-element 'Definition of document element'
+[focusable]: #focusable 'Definition of focusable'
+[focused]: #focused 'Definition of focused'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[main content]: #main-content 'Definition of main content'
+[semantic role]: #semantic-role 'Definition of semantic role'
+[visible]: #visible 'Definition of visible'

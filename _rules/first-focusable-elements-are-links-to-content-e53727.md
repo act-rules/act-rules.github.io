@@ -67,14 +67,16 @@ _There are no major accessibility support issues known for this rule._
 Links in the [initial segment][] list have a [semantic role][] of link, are [visible][] and when activated moves the focus to the associated [section of content][].
 
 ```html
-<ul>
-	<li><a href="#navigation">Skip to navigation</a></li>
-	<li><a href="#search">Skip to search</a></li>
-	<li><a href="#main">Skip to main content</a></li>
-</ul>
-<nav id="navigation">Navigation section</nav>
-<form id="search" role="search">Search section</form>
-<main id="main">Main content</main>
+<html>
+	<ul>
+		<li><a href="#navigation">Skip to navigation</a></li>
+		<li><a href="#search">Skip to search</a></li>
+		<li><a href="#main">Skip to main content</a></li>
+	</ul>
+	<nav id="navigation">Navigation section</nav>
+	<form id="search" role="search">Search section</form>
+	<main id="main">Main content</main>
+</html>
 ```
 
 #### Passed Example 2
@@ -82,23 +84,29 @@ Links in the [initial segment][] list have a [semantic role][] of link, are [vis
 Links in the [initial segment][] list are [visible][] when [focused][].
 
 ```html
-<style>
-	#skiplinks a {
-		position: absolute;
-		top: -100px;
-	}
-	#skiplinks a:focus {
-		top: 0px;
-	}
-</style>
-<ul>
-	<li><a href="#navigation">Skip to navigation</a></li>
-	<li><a href="#search">Skip to search</a></li>
-	<li><a href="#main">Skip to main content</a></li>
-</ul>
-<nav id="navigation">Navigation section</nav>
-<form id="search" role="search">Search section</form>
-<main id="main">Main content</main>
+<html>
+	<head>
+		<style>
+			#skiplinks a {
+				position: absolute;
+				top: -100px;
+			}
+			#skiplinks a:focus {
+				top: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#navigation">Skip to navigation</a></li>
+			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#main">Skip to main content</a></li>
+		</ul>
+		<nav id="navigation">Navigation section</nav>
+		<form id="search" role="search">Search section</form>
+		<main id="main">Main content</main>
+	</body>
+</html>
 ```
 
 #### Passed Example 3
@@ -106,12 +114,14 @@ Links in the [initial segment][] list are [visible][] when [focused][].
 Links in the [initial segment][] list move the focus to heading elements when activated.
 
 ```html
-<ul>
-	<li><a href="#firstheading">First heading</a></li>
-	<li><a href="#secondheading">Second heading</a></li>
-</ul>
-<h2 id="firstheading">First heading section</h2>
-<h2 id="secondheading">Second heading section</h2>
+<html>
+	<ul>
+		<li><a href="#firstheading">First heading</a></li>
+		<li><a href="#secondheading">Second heading</a></li>
+	</ul>
+	<h2 id="firstheading">First heading section</h2>
+	<h2 id="secondheading">Second heading section</h2>
+</html>
 ```
 
 #### Passed Example 4
@@ -119,14 +129,16 @@ Links in the [initial segment][] list move the focus to heading elements when ac
 Links in the [initial segment][] list use `aria-label` to provide an [accessible name][].
 
 ```html
-<ul>
-	<li><a href="#navigation" aria-label="Skip to navigation"></a></li>
-	<li><a href="#search" aria-label="Skip to search"></a></li>
-	<li><a href="#main" aria-label="Skip to main content"></a></li>
-</ul>
-<nav id="navigation">Navigation section</nav>
-<form id="search" role="search">Search section</form>
-<main id="main">Main content</main>
+<html>
+	<ul>
+		<li><a href="#navigation" aria-label="Skip to navigation"></a></li>
+		<li><a href="#search" aria-label="Skip to search"></a></li>
+		<li><a href="#main" aria-label="Skip to main content"></a></li>
+	</ul>
+	<nav id="navigation">Navigation section</nav>
+	<form id="search" role="search">Search section</form>
+	<main id="main">Main content</main>
+</html>
 ```
 
 ### Failed
@@ -136,20 +148,22 @@ Links in the [initial segment][] list use `aria-label` to provide an [accessible
 The first [focusable][] elements in the [initial segment][] of the document do not have a [semantic role][] of link.
 
 ```html
-<ul>
-	<li onclick="focusContentSection('navigation')" tabindex="0">Skip to navigation</li>
-	<li onclick="focusContentSection('search')" tabindex="0">Skip to search</li>
-	<li onclick="focusContentSection('main')" tabindex="0">Skip to main</li>
-</ul>
-<nav id="navigation">Navigation section</nav>
-<form id="search" role="search">Search section</form>
-<main id="main">Main content</main>
-<script>
-	function focusContentSection(elem) {
-		var elemId = document.getElementById(elem)
-		elemId.focus()
-	}
-</script>
+<html>
+	<ul>
+		<li onclick="focusContentSection('navigation')" tabindex="0">Skip to navigation</li>
+		<li onclick="focusContentSection('search')" tabindex="0">Skip to search</li>
+		<li onclick="focusContentSection('main')" tabindex="0">Skip to main</li>
+	</ul>
+	<nav id="navigation">Navigation section</nav>
+	<form id="search" role="search">Search section</form>
+	<main id="main">Main content</main>
+	<script>
+		function focusContentSection(elem) {
+			var elemId = document.getElementById(elem)
+			elemId.focus()
+		}
+	</script>
+</html>
 ```
 
 #### Failed Example 2
@@ -157,20 +171,22 @@ The first [focusable][] elements in the [initial segment][] of the document do n
 Each [focusable][] element in the [initial segment][] of the document does not have a [semantic role][] of link.
 
 ```html
-<ul>
-	<li><a href="#navigation">Skip to navigation</a></li>
-	<li><a href="#search">Skip to search</a></li>
-	<li onclick="focusContentSection('main')" tabindex="0">Skip to main</li>
-</ul>
-<nav id="navigation">Navigation section</nav>
-<form id="search" role="search">Search section</form>
-<main id="main">Main content</main>
-<script>
-	function focusContentSection(elem) {
-		var elemId = document.getElementById(elem)
-		elemId.focus()
-	}
-</script>
+<html>
+	<ul>
+		<li><a href="#navigation">Skip to navigation</a></li>
+		<li><a href="#search">Skip to search</a></li>
+		<li onclick="focusContentSection('main')" tabindex="0">Skip to main</li>
+	</ul>
+	<nav id="navigation">Navigation section</nav>
+	<form id="search" role="search">Search section</form>
+	<main id="main">Main content</main>
+	<script>
+		function focusContentSection(elem) {
+			var elemId = document.getElementById(elem)
+			elemId.focus()
+		}
+	</script>
+</html>
 ```
 
 #### Failed Example 3
@@ -178,14 +194,16 @@ Each [focusable][] element in the [initial segment][] of the document does not h
 Links in the [initial segment][] list when activated do not move the focus to a [section of content][] due to the invalid `href` attributes.
 
 ```html
-<ul>
-	<li><a href="#">Skip to navigation</a></li>
-	<li><a href="https://www.w3.org/">Skip to search</a></li>
-	<li><a href="javascript:void(0);">Skip to main content</a></li>
-</ul>
-<nav id="navigation">Navigation section</nav>
-<form id="search" role="search">Search section</form>
-<main id="main">Main content</main>
+<html>
+	<ul>
+		<li><a href="#">Skip to navigation</a></li>
+		<li><a href="https://www.w3.org/">Skip to search</a></li>
+		<li><a href="javascript:void(0);">Skip to main content</a></li>
+	</ul>
+	<nav id="navigation">Navigation section</nav>
+	<form id="search" role="search">Search section</form>
+	<main id="main">Main content</main>
+</html>
 ```
 
 #### Failed Example 4
@@ -193,14 +211,16 @@ Links in the [initial segment][] list when activated do not move the focus to a 
 Links in the [initial segment][] list do not move focus to a [section of content][] when activated due to invalid `id` attributes.
 
 ```html
-<ul>
-	<li><a href="#navigation" aria-label="Skip to navigation"></a></li>
-	<li><a href="#search" aria-label="Skip to search"></a></li>
-	<li><a href="#main" aria-label="Skip to main content"></a></li>
-</ul>
-<nav>Navigation section</nav>
-<form role="search">Search section</form>
-<main>Main content</main>
+<html>
+	<ul>
+		<li><a href="#navigation" aria-label="Skip to navigation"></a></li>
+		<li><a href="#search" aria-label="Skip to search"></a></li>
+		<li><a href="#main" aria-label="Skip to main content"></a></li>
+	</ul>
+	<nav>Navigation section</nav>
+	<form role="search">Search section</form>
+	<main>Main content</main>
+</html>
 ```
 
 #### Failed Example 5
@@ -208,15 +228,17 @@ Links in the [initial segment][] list do not move focus to a [section of content
 Links in the [initial segment][] list are not the first [focusable][] elements in the document.
 
 ```html
-<a href="https://www.w3.org/">Go to the W3C</a>
-<ul>
-	<li><a href="#navigation">Skip to navigation</a></li>
-	<li><a href="#search">Skip to search</a></li>
-	<li><a href="#main">Skip to main content</a></li>
-</ul>
-<nav id="navigation">Navigation section</nav>
-<form id="search" role="search">Search section</form>
-<main id="main">Main content</main>
+<html>
+	<a href="https://www.w3.org/">Go to the W3C</a>
+	<ul>
+		<li><a href="#navigation">Skip to navigation</a></li>
+		<li><a href="#search">Skip to search</a></li>
+		<li><a href="#main">Skip to main content</a></li>
+	</ul>
+	<nav id="navigation">Navigation section</nav>
+	<form id="search" role="search">Search section</form>
+	<main id="main">Main content</main>
+</html>
 ```
 
 #### Failed Example 6
@@ -224,14 +246,16 @@ Links in the [initial segment][] list are not the first [focusable][] elements i
 Links in the [initial segment][] list are not [visible][] when [focused][].
 
 ```html
-<ul style="display:none;" id="skiplinks">
-	<li><a href="#navigation">Skip to navigation</a></li>
-	<li><a href="#search">Skip to search</a></li>
-	<li><a href="#main">Skip to main content</a></li>
-</ul>
-<nav id="navigation">Navigation section</nav>
-<form id="search" role="search">Search section</form>
-<main id="main">Main content</main>
+<html>
+	<ul style="display:none;" id="skiplinks">
+		<li><a href="#navigation">Skip to navigation</a></li>
+		<li><a href="#search">Skip to search</a></li>
+		<li><a href="#main">Skip to main content</a></li>
+	</ul>
+	<nav id="navigation">Navigation section</nav>
+	<form id="search" role="search">Search section</form>
+	<main id="main">Main content</main>
+</html>
 ```
 
 #### Failed Example 7
@@ -239,14 +263,16 @@ Links in the [initial segment][] list are not [visible][] when [focused][].
 Links in the [initial segment][] list do not have an [accessible name][].
 
 ```html
-<ul>
-	<li><a href="#navigation"></a></li>
-	<li><a href="#search"></a></li>
-	<li><a href="#main"></a></li>
-</ul>
-<nav id="navigation">Navigation section</nav>
-<form id="search" role="search">Search section</form>
-<main id="main">Main content</main>
+<html>
+	<ul>
+		<li><a href="#navigation"></a></li>
+		<li><a href="#search"></a></li>
+		<li><a href="#main"></a></li>
+	</ul>
+	<nav id="navigation">Navigation section</nav>
+	<form id="search" role="search">Search section</form>
+	<main id="main">Main content</main>
+</html>
 ```
 
 #### Failed Example 8
@@ -254,15 +280,17 @@ Links in the [initial segment][] list do not have an [accessible name][].
 Multiple links in the [initial segment][] list move the focus to the same [section of content][].
 
 ```html
-<ul>
-	<li><a href="#navigation">Skip to navigation</a></li>
-	<li><a href="#search">Skip to search</a></li>
-	<li><a href="#main">Skip to main content</a></li>
-	<li><a href="#main">Skip to main content again with this link</a></li>
-</ul>
-<nav id="navigation">Navigation section</nav>
-<form id="search" role="search">Search section</form>
-<main id="main">Main content</main>
+<html>
+	<ul>
+		<li><a href="#navigation">Skip to navigation</a></li>
+		<li><a href="#search">Skip to search</a></li>
+		<li><a href="#main">Skip to main content</a></li>
+		<li><a href="#main">Skip to main content again with this link</a></li>
+	</ul>
+	<nav id="navigation">Navigation section</nav>
+	<form id="search" role="search">Search section</form>
+	<main id="main">Main content</main>
+</html>
 ```
 
 ### Inapplicable

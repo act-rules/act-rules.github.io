@@ -299,8 +299,8 @@ The [document element][] of this [document][] is not an `html` element.
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
-[document]: #https://dom.spec.whatwg.org/#concept-document 'Definition of document'
-[document element]: #https://dom.spec.whatwg.org/#document-element 'Definition of document element'
+[document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
+[document element]: https://dom.spec.whatwg.org/#document-element 'Definition of document element'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark 'The landmark role in WAI ARIA'

@@ -156,8 +156,8 @@ The [document element][] of this [document][] is not an `html` element.
 </svg>
 ```
 
-[document]: #https://dom.spec.whatwg.org/#concept-document 'Definition of document'
-[document element]: #https://dom.spec.whatwg.org/#document-element 'Definition of document element'
+[document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
+[document element]: https://dom.spec.whatwg.org/#document-element 'Definition of document element'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [section of repeated content]: #repeated-content 'Definition of section of repeated content'
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components 'Definition of user interface component'

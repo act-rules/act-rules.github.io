@@ -195,13 +195,13 @@ The [document element][] of this [document][] is not an `html` element.
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
-[document]: #https://dom.spec.whatwg.org/#concept-document 'Definition of document'
-[document element]: #https://dom.spec.whatwg.org/#document-element 'Definition of document element'
+[document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
+[document element]: https://dom.spec.whatwg.org/#document-element 'Definition of document element'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [focusable]: #focusable 'Definition of focusable'
 [focused]: #focused 'Definition of focused'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [section of content]: #section-of-content 'Definition of section of content'
-[section of repeated content]: #repeated-content 'Definiton of section of repeated content'
+[section of repeated content]: #repeated-content 'Definition of section of repeated content'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'

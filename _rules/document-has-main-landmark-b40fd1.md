@@ -128,9 +128,9 @@ The [document element][] of this [document][] is not an `html` element.
 </svg>
 ```
 
-[descendant]: https://www.w3.org/TR/dom41/#concept-tree-descendant 'Definition of descendant'
-[document]: #https://dom.spec.whatwg.org/#concept-document 'Definition of document'
-[document element]: #https://dom.spec.whatwg.org/#document-element 'Definition of document element'
+[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant 'Definition of descendant'
+[document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
+[document element]: https://dom.spec.whatwg.org/#document-element 'Definition of document element'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [main]: https://www.w3.org/TR/wai-aria-1.1/#main 'The `main` role'
 [section of content]: #section-of-content 'Definition of section of content'

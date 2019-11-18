@@ -156,6 +156,6 @@ The [document element][] of this [document][] is not an `html` element.
 ```
 
 [block of content is expandable and collapsible]: https://act-rules.github.io/rules/cefbef
-[document]: #https://dom.spec.whatwg.org/#concept-document 'Definition of document'
-[document element]: #https://dom.spec.whatwg.org/#document-element 'Definition of document element'
+[document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
+[document element]: https://dom.spec.whatwg.org/#document-element 'Definition of document element'
 [sc241]: https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html 'Success Criterion 2.4.1: Bypass blocks'

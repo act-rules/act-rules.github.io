@@ -18,6 +18,7 @@
 - UA/AT
 - WCAG
 - WCAG2
+- WCAG21
 - CSS3
 - UA
 - UI
@@ -37,17 +38,18 @@
 - subtags
 - testrunner
 - color
-- focusable 
-- unfocusable 
-- tabindex 
-- whitespace 
+- focusable
+- unfocusable
+- tabindex
+- whitespace
 - namespace
-- namespaces 
+- namespaces
 - webpage
 - wai-aria-specifications
 - autoplay
 - autoplays
 - presentational
+- nav
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete
@@ -63,6 +65,10 @@
 - whatwg
 - dom
 - wai-aria
+- wai-aria-1.1
+- csswg
+- css-scoping
+- dfn
 
 # Other tool names
 - axe-core
@@ -117,13 +123,14 @@
 - matrix3d
 
 # ARIA Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#aria)
-- ARIA1 
+- ARIA1
 - ARIA4
-- ARIA5 
-- ARIA6 
-- ARIA7 
+- ARIA5
+- ARIA6
+- ARIA7
 - ARIA8
 - ARIA10
+- ARIA11
 - ARIA12
 - ARIA14
 - ARIA16
@@ -139,6 +146,7 @@
 - F89
 
 # General Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#general)
+- G1
 - G8
 - G21
 - G78
@@ -147,6 +155,8 @@
 - G93
 - G95
 - G108
+- G123
+- G124
 - G130
 - G131
 - G158
@@ -165,7 +175,10 @@
 - H42
 - H44
 - H58
+- H64
 - H67
+- H69
+- H70
 - H93
 - H94
 - H95
@@ -176,3 +189,4 @@
 - Programmatically
 - personalization
 - Autofill
+- dismissible

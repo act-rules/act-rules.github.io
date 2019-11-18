@@ -207,8 +207,8 @@ The [document element][] of this [document][] is not an `html` element.
 
 [accessible description]: #accessible-description 'Definition of accessible description'
 [accessible name]: #accessible-name 'Definition of accessible name'
-[document]: #https://dom.spec.whatwg.org/#concept-document 'Definition of document'
-[document element]: #https://dom.spec.whatwg.org/#document-element 'Definition of document element'
+[document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
+[document element]: https://dom.spec.whatwg.org/#document-element 'Definition of document element'
 [focusable]: #focusable 'Definition of focusable'
 [focused]: #focused 'Definition of focused'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

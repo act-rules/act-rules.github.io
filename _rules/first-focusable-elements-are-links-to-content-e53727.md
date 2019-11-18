@@ -136,9 +136,9 @@ The first [focusable][] elements in the [initial segment][] of the document do n
 
 ```html
 <ul>
-	<li onClick="focusContentSection('navigation')" tabindex="0">Skip to navigation</li>
-	<li onClick="focusContentSection('search')" tabindex="0">Skip to search</li>
-	<li onClick="focusContentSection('main')" tabindex="0">Skip to main</li>
+	<li onclick="focusContentSection('navigation')" tabindex="0">Skip to navigation</li>
+	<li onclick="focusContentSection('search')" tabindex="0">Skip to search</li>
+	<li onclick="focusContentSection('main')" tabindex="0">Skip to main</li>
 </ul>
 <nav id="navigation">Navigation section</nav>
 <form id="search" role="search">Search section</form>
@@ -159,7 +159,7 @@ Each [focusable][] element in the [initial segment][] of the document does not h
 <ul>
 	<li><a href="#navigation">Skip to navigation</a></li>
 	<li><a href="#search">Skip to search</a></li>
-	<li onClick="focusContentSection('main')" tabindex="0">Skip to main</li>
+	<li onclick="focusContentSection('main')" tabindex="0">Skip to main</li>
 </ul>
 <nav id="navigation">Navigation section</nav>
 <form id="search" role="search">Search section</form>

@@ -180,7 +180,7 @@ The element with a click event to skip [repeated content](#repeated-content) doe
 
 ```html
 <nav>
-	<span onClick="focusMainContent()">Skip to main content</span>
+	<span onclick="focusMainContent()">Skip to main content</span>
 </nav>
 <div id="repeated-content">
 	<!-- Repeated content -->

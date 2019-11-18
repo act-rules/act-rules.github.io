@@ -1,5 +1,5 @@
 ---
-id: cefbef
+id: 3e12e1
 name: Block of content is expandable and collapsible
 rule_type: atomic
 description: |

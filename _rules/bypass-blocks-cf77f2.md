@@ -15,7 +15,7 @@ input_rules:
   - 7b576d
   - 8a213c
   - b40fd1
-  - cefbef
+  - 3e12e1
   - e53727
 acknowledgements:
   authors:
@@ -42,7 +42,7 @@ For each test target, the outcome of at least one of the following rules is pass
 This rule assumes that one of the techniques listed here is used to comply to WCAG. Other methods could be used to pass this this Success Criterion, notably:
 
 - server side scripting can provide a functionality similar to [Block of content is expandable and collapsible][] by serving a modified version of the page;
-- `frameset` and `frame` elements can be used to organise content as per [H70: Using frame elements to group blocks of repeated material](https://www.w3.org/WAI/WCAG21/Techniques/html/H70) and [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64) but are ignored here given that they are deprecated in HTML5.
+- `frameset` and `frame` elements can be used to organize content as per [H70: Using frame elements to group blocks of repeated material](https://www.w3.org/WAI/WCAG21/Techniques/html/H70) and [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64) but are ignored here given that they are deprecated in HTML5.
 
 ## Accessibility Support
 
@@ -155,7 +155,7 @@ The [document element][] of this [document][] is not an `html` element.
 </svg>
 ```
 
-[block of content is expandable and collapsible]: https://act-rules.github.io/rules/cefbef
+[block of content is expandable and collapsible]: https://act-rules.github.io/rules/3e12e1
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [document element]: https://dom.spec.whatwg.org/#document-element 'Definition of document element'
 [sc241]: https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html 'Success Criterion 2.4.1: Bypass blocks'

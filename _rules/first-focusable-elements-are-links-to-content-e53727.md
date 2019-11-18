@@ -13,10 +13,10 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS styling
-authors:
-  - Jean-Yves Moyen
-  - Anne Thyme Nørregard
-  - Christina Adams
+acknowledgements:
+  authors:
+    - Jean-Yves Moyen
+    - Christina Adams
 ---
 
 ## Applicability

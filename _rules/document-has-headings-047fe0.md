@@ -83,22 +83,22 @@ This [document][] has one [section of content][] for the navigation links, and o
 
 In this [document][], headings are not the first elements of each [section of content][], but they are the first with a non-empty [accessible name][]. The [accessible name][] of the second heading is inherited from its content.
 
-**Note**: In this [document][], the [sections of content][] are defined by the `section` elements.
+**Note**: In this [document][], the [sections of content][] are defined by the [landmarks][] (`nav` and `main` elements).
 
 ```html
 <html lang="en">
   <head><title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title></head>
   <body>
-    <section>
+    <nav>
       <hr>
       <h1>Contents</h1>
       <!-- list of links to each chapter -->
-    </section>
-    <section>
+    </nav>
+    <main>
       <hr>
       <h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden<span></h1>
       Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of time.
-    </section>
+    </main>
   </body>
 </html>
 ```
@@ -107,7 +107,7 @@ In this [document][], headings are not the first elements of each [section of co
 
 The image at the start of the second [section of content][] does not have an [accessible name][]. Thus, the first node with an [accessible name][] is the `h1` element and the rule passes.
 
-**Note**: In this [document][], the [sections of content][] are defined by the `section` elements.
+**Note**: In this [document][], the [sections of content][] are defined by the [landmarks][] (`nav` and `main` elements).
 
 ```html
 <html lang="en">
@@ -115,16 +115,16 @@ The image at the start of the second [section of content][] does not have an [ac
 		<title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title>
 	</head>
 	<body>
-		<section>
+		<nav>
 			<h1>Contents</h1>
 			<!-- list of links to each chapter -->
-		</section>
-		<section>
+		</nav>
+		<main>
 			<img src="../test-assets/document-headings-047fe0/peach-garden-oath.jpg" role="presentation" alt="" />
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 			time.
-		</section>
+		</main>
 	</body>
 </html>
 ```
@@ -133,7 +133,7 @@ The image at the start of the second [section of content][] does not have an [ac
 
 This [document][] has one [section of content][] for the navigation links, and one for the actual text. Each starts with a `div` with a role of `heading`.
 
-**Note**: In this [document][], the [sections of content][] are defined by the `section` elements.
+**Note**: In this [document][], the [sections of content][] are defined by the [landmarks][] (`nav` and `main` elements).
 
 ```html
 <html lang="en">
@@ -141,15 +141,15 @@ This [document][] has one [section of content][] for the navigation links, and o
 		<title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title>
 	</head>
 	<body>
-		<section>
+		<nav>
 			<div role="heading">Contents</div>
 			<!-- list of links to each chapter -->
-		</section>
-		<section>
+		</nav>
+		<main>
 			<div role="heading">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</div>
 			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 			time.
-		</section>
+		</main>
 	</body>
 </html>
 ```
@@ -158,7 +158,7 @@ This [document][] has one [section of content][] for the navigation links, and o
 
 This [document][] is using image as heading, the [accessible name][] of the image (given by the `alt` attribute) is also the [accessible name][] of the heading.
 
-**Note**: In this [document][], the [sections of content][] are defined by the `section` elements.
+**Note**: In this [document][], the [sections of content][] are defined by the [landmarks][] (`nav` and `main` elements).
 
 ```html
 <html lang="en">
@@ -166,11 +166,11 @@ This [document][] is using image as heading, the [accessible name][] of the imag
 		<title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title>
 	</head>
 	<body>
-		<section>
+		<nav>
 			<h1>Contents</h1>
 			<!-- list of links to each chapter -->
-		</section>
-		<section>
+		</nav>
+		<main>
 			<h1>
 				<img
 					src="../test-assets/document-headings-047fe0/peach-garden-oath.jpg"
@@ -179,7 +179,7 @@ This [document][] is using image as heading, the [accessible name][] of the imag
 			</h1>
 			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 			time.
-		</section>
+		</main>
 	</body>
 </html>
 ```
@@ -190,7 +190,7 @@ This [document][] is using image as heading, the [accessible name][] of the imag
 
 This [document][] has no heading, for its navigational [section of content][].
 
-**Note**: In this [document][], the [sections of content][] are defined by the `section` elements.
+**Note**: In this [document][], the [sections of content][] are defined by the [landmarks][] (`nav` and `main` elements).
 
 ```html
 <html lang="en">
@@ -198,14 +198,14 @@ This [document][] has no heading, for its navigational [section of content][].
 		<title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title>
 	</head>
 	<body>
-		<section>
+		<nav>
 			<!-- list of links to each chapter -->
-		</section>
-		<section>
+		</nav>
+		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 			time.
-		</section>
+		</main>
 	</body>
 </html>
 ```
@@ -214,7 +214,7 @@ This [document][] has no heading, for its navigational [section of content][].
 
 The heading of the second [section of content][] is not [included in the accessibility tree][] because of the `aria-hidden` attribute.
 
-**Note**: In this [document][], the [sections of content][] are defined by the `section` elements.
+**Note**: In this [document][], the [sections of content][] are defined by the [landmarks][] (`nav` and `main` elements).
 
 ```html
 <html lang="en">
@@ -222,15 +222,15 @@ The heading of the second [section of content][] is not [included in the accessi
 		<title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title>
 	</head>
 	<body>
-		<section>
+		<nav>
 			<h1>Contents</h1>
 			<!-- list of links to each chapter -->
-		</section>
-		<section>
+		</nav>
+		<main>
 			<h1 aria-hidden="true">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 			time.
-		</section>
+		</main>
 	</body>
 </html>
 ```
@@ -239,7 +239,7 @@ The heading of the second [section of content][] is not [included in the accessi
 
 The [accessible name][] of the image used as heading for the second [section of content][], which is also the [accessible name][#accessible-name] of the heading, is only empty.
 
-**Note**: In this [document][], the [sections of content][] are defined by the `section` elements.
+**Note**: In this [document][], the [sections of content][] are defined by the [landmarks][] (`nav` and `main` elements).
 
 ```html
 <html lang="en">
@@ -247,15 +247,15 @@ The [accessible name][] of the image used as heading for the second [section of 
 		<title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title>
 	</head>
 	<body>
-		<section>
+		<nav>
 			<h1>Contents</h1>
 			<!-- list of links to each chapter -->
-		</section>
-		<section>
+		</nav>
+		<main>
 			<h1><img src="../test-assets/document-headings-047fe0/peach-garden-oath.jpg" alt=" " /></h1>
 			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 			time.
-		</section>
+		</main>
 	</body>
 </html>
 ```
@@ -264,7 +264,7 @@ The [accessible name][] of the image used as heading for the second [section of 
 
 The first [section of content][] starts with a node which does not have a [semantic role][] of `heading`.
 
-**Note**: In this [document][], the [sections of content][] are defined by the `section` elements.
+**Note**: In this [document][], the [sections of content][] are defined by the [landmarks][] (`nav` and `main` elements).
 
 ```html
 <html lang="en">
@@ -272,16 +272,16 @@ The first [section of content][] starts with a node which does not have a [seman
 		<title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title>
 	</head>
 	<body>
-		<section>
+		<nav>
 			<div>Table of content</div>
 			<h1>Contents</h1>
 			<!-- list of links to each chapter -->
-		</section>
-		<section>
+		</nav>
+		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 			time.
-		</section>
+		</main>
 	</body>
 </html>
 ```
@@ -303,6 +303,7 @@ The [document element][] of this [document][] is not an `html` element.
 [document element]: #https://dom.spec.whatwg.org/#document-element 'Definition of document element'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark 'The landmark role in WAI ARIA'
 [section of content]: #section-of-content 'Definition of section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [tech h69]: https://www.w3.org/WAI/WCAG21/Techniques/html/H69 'Technique H69: Providing heading elements at the beginning of each section of content'

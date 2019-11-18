@@ -24,7 +24,7 @@ acknowledgements:
 
 ## Applicability
 
-This rule applies to any [document][] where the [document element][] is an HTML `html` element.
+This rule applies to any [document][] where the [document element][] is an `html` element.
 
 ## Expectation
 

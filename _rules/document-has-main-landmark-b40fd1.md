@@ -15,15 +15,15 @@ acknowledgements:
 
 ## Applicability
 
-This rule applies to any [document](#https://dom.spec.whatwg.org/#concept-document) where the [document element](#https://dom.spec.whatwg.org/#document-element) is an HTML `html` element.
+This rule applies to any [document][] where the [document element][] is an `html` element.
 
 ## Expectations
 
-The [document element](https://dom.spec.whatwg.org/#document-element) has at least one [descendant](https://www.w3.org/TR/dom41/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) (work in progress) with a [semantic role][#semantic-role] of [`main`](https://www.w3.org/TR/wai-aria-1.1/#main).
+The [document element][] has at least one [descendant][] in the [flat tree][] with a [semantic role][] of [`main`][main]].
 
-**Note**: Authors SHOULD not use more than one element with a [semantic role](#semantic-role) of [`main`](https://www.w3.org/TR/wai-aria-1.1/#main). This is, however, a not a requirement for this rule nor for technique [ARIA11: Using ARIA landmarks to identify regions of a page](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11).
+**Note**: Authors SHOULD not use more than one element with a [semantic role][] of [`main`][main]. This is, however, a not a requirement for this rule and can be valid in certain cases.
 
-**Note**: Technique [ARIA11: Using ARIA landmarks to identify regions of a page](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11) is not clear as to how many landmarks are actually needed to satisfy it, hence it is not listed as an accessibility requirement for this rule. However, having a landmark to identify the primary content of a page is enough to satisfy [Success Criterion 2.4.1 Bypass blocks](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html).
+**Note**: Technique [ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11] does not require the use of landmarks, nor the use of a [`main`][main] one. It only requires that if landmarks are used they identify the correct [section of content][]. Hence it is not listed as an accessibility requirement for this rule. However, having a landmark to identify the primary content of a page is enough to satisfy [Success Criterion 2.4.1 Bypass blocks](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html).
 
 ## Assumptions
 
@@ -35,8 +35,9 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- [ARIA11: Using ARIA landmarks to identify regions of a page](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11)
+- [ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11]
 - [ARIA Landmarks Example](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html)
+- [CSS scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
 
 ## Test Cases
 
@@ -44,10 +45,9 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This [document](#https://dom.spec.whatwg.org/#concept-document) has a one element with a role of `main`.
+This [document][] has a one element with a [semantic role][] of [`main`][main].
 
 ```html
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>The Three Kingdoms (translation by Yu Sumei), Chapter one</title>
@@ -55,21 +55,20 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has a one elemen
 	<body>
 		<h1>Contents</h1>
 		<!-- list of links to each chapter -->
-		<div role="main">
+		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 			time.
-		</div>
+		</main>
 	</body>
 </html>
 ```
 
 #### Passed Example 2
 
-This [document](#https://dom.spec.whatwg.org/#concept-document) has several elements with a role of `main`.
+This [document][] has several elements with a role of [`main`][main].
 
 ```html
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>Comparing translations of the Romance of the Three Kingdoms, Chapter one</title>
@@ -95,33 +94,11 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has several elem
 </html>
 ```
 
-#### Passed Example 3
-
-This [document](#https://dom.spec.whatwg.org/#concept-document) has a one element with a role of `main`. The rule does not check whether the role is correctly used.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>The Three Kingdoms (translation by Yu Sumei) (Chapter one)</title>
-	</head>
-	<body>
-		<div role="main">
-			<h1>Contents</h1>
-			<!-- list of links to each chapter -->
-		</div>
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</body>
-</html>
-```
-
 ### Failed
 
 #### Failed Example 1
 
-This [document](#https://dom.spec.whatwg.org/#concept-document) has no element with a role of `main`.
+This [document][] has no element with a role of [`main`][main].
 
 ```html
 <!DOCTYPE html>
@@ -143,10 +120,19 @@ This [document](#https://dom.spec.whatwg.org/#concept-document) has no element w
 
 #### Inapplicable Example 1
 
-The [document element](#https://dom.spec.whatwg.org/#document-element) of this [document](#https://dom.spec.whatwg.org/#concept-document) is not an `html` element.
+The [document element][] of this [document][] is not an `html` element.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">
   <title>This is an SVG</title>
 </svg>
 ```
+
+[descendant]: https://www.w3.org/TR/dom41/#concept-tree-descendant 'Definition of descendant'
+[document]: #https://dom.spec.whatwg.org/#concept-document 'Definition of document'
+[document element]: #https://dom.spec.whatwg.org/#document-element 'Definition of document element'
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
+[main]: https://www.w3.org/TR/wai-aria-1.1/#main 'The `main` role'
+[section of content]: #section-of-content 'Definition of section of content'
+[semantic role]: #semantic-role 'Definition of semantic role'
+[tech aria11]: https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11

@@ -41,6 +41,8 @@ _There are no major accessibility support issues known for this rule._
 
 ## Test Cases
 
+**Note**: The text of most examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
+
 ### Passed
 
 #### Passed Example 1
@@ -48,19 +50,14 @@ _There are no major accessibility support issues known for this rule._
 This [document][] has a one element with a [semantic role][] of [`main`][main].
 
 ```html
-<html lang="en">
-	<head>
-		<title>The Three Kingdoms (translation by Yu Sumei), Chapter one</title>
-	</head>
-	<body>
-		<h1>Contents</h1>
-		<!-- list of links to each chapter -->
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
-		</main>
-	</body>
+<html>
+	<h1>Contents</h1>
+	<!-- list of links to each chapter -->
+	<main>
+		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
@@ -69,7 +66,7 @@ This [document][] has a one element with a [semantic role][] of [`main`][main].
 This [document][] has several elements with a role of [`main`][main].
 
 ```html
-<html lang="en">
+<html>
 	<head>
 		<title>Comparing translations of the Romance of the Three Kingdoms, Chapter one</title>
 	</head>
@@ -101,18 +98,12 @@ This [document][] has several elements with a role of [`main`][main].
 This [document][] has no element with a role of [`main`][main].
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>The Three Kingdoms (translation by Yu Sumei), Chapter one</title>
-	</head>
-	<body>
-		<h1>Contents</h1>
-		<!-- list of links to each chapter -->
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</body>
+<html>
+	<h1>Contents</h1>
+	<!-- list of links to each chapter -->
+	<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+	Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+	time.
 </html>
 ```
 

@@ -56,31 +56,16 @@ _There are no major accessibility support issues known for this rule._
 The text content automatically updates every 3 seconds after the page completes loading. A button is available to stop the automatic updates.
 
 ```html
-<body onload="start()">
+<body onload="startUpdates()">
 	<p>Random number: <span id="target">1</span></p>
-	<input type="button" onclick="stop()" value="Stop updates" />
+	<input type="button" onclick="stopUpdates()" value="Stop updates" />
 
 	<p>
 		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
 		implement accessibility.
 	</p>
 
-	<script type="text/javascript">
-		function change() {
-			var target = document.getElementById('target')
-			var number = Math.floor(Math.random() * 1000)
-			target.innerText = number
-		}
-
-		var updates
-		function start() {
-			updates = setInterval(change, 3000)
-		}
-
-		function stop() {
-			clearInterval(updates)
-		}
-	</script>
+	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>
 ```
 
@@ -89,7 +74,7 @@ The text content automatically updates every 3 seconds after the page completes 
 The text content automatically updates every 3 seconds after the page completes loading. A button is available to pause and resume the automatic updates.
 
 ```html
-<body onload="toggle()">
+<body onload="startUpdates()">
 	<p>Random number: <span id="target">1</span></p>
 	<input type="button" id="control" onclick="toggle()" value="Pause updates" />
 
@@ -98,29 +83,7 @@ The text content automatically updates every 3 seconds after the page completes 
 		implement accessibility.
 	</p>
 
-	<script type="text/javascript">
-		function change() {
-			var target = document.getElementById('target')
-			var number = Math.floor(Math.random() * 1000)
-			target.innerText = number
-		}
-
-		var updates
-		var updating = false
-
-		function toggle() {
-			var control = document.getElementById('control')
-			if (updating) {
-				control.value = 'Resume updates'
-				updating = false
-				clearInterval(updates)
-			} else {
-				control.value = 'Pause updates'
-				updating = true
-				updates = setInterval(change, 3000)
-			}
-		}
-	</script>
+	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>
 ```
 
@@ -129,7 +92,7 @@ The text content automatically updates every 3 seconds after the page completes 
 The text content automatically updates every 3 seconds after the page completes loading. A button is available to hide the automatically updating content.
 
 ```html
-<body onload="start()">
+<body onload="startUpdates()">
 	<p>Random number: <span id="target">1</span></p>
 	<input type="button" onclick="hide()" value="Hide updates" />
 
@@ -138,22 +101,7 @@ The text content automatically updates every 3 seconds after the page completes 
 		implement accessibility.
 	</p>
 
-	<script type="text/javascript">
-		function change() {
-			var target = document.getElementById('target')
-			var number = Math.floor(Math.random() * 1000)
-			target.innerText = number
-		}
-
-		function start() {
-			setInterval(change, 3000)
-		}
-
-		function hide() {
-			var target = document.getElementById('target')
-			target.style.visibility = 'hidden'
-		}
-	</script>
+	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>
 ```
 
@@ -164,7 +112,7 @@ The text content automatically updates every 3 seconds after the page completes 
 The text content automatically updates every 3 seconds after the page completes loading. There is no component to stop or pause the automatic updates.
 
 ```html
-<body onload="start()">
+<body onload="startUpdates()">
 	<p>Random number: <span id="target">1</span></p>
 
 	<p>
@@ -172,119 +120,8 @@ The text content automatically updates every 3 seconds after the page completes 
 		implement accessibility.
 	</p>
 
-	<script type="text/javascript">
-		function change() {
-			var target = document.getElementById('target')
-			var number = Math.floor(Math.random() * 1000)
-			target.innerText = number
-		}
-
-		function start() {
-			updates = setInterval(change, 3000)
-		}
-	</script>
+	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>
-```
-
-#### Failed Example 2
-
-The text content (part of a progress bar) automatically updates every second after the page completes loading. There is no component for the user to pause the auto-updates, other than waiting for them to end.
-
-```html
-<html>
-	<head>
-		<title>Example page for rule efbfc7</title>
-		<style>
-			.progress-wrap,
-			.progress-bar {
-				height: 20px;
-				max-width: 300px;
-				position: relative;
-			}
-
-			.progress-wrap {
-				background: #eee;
-			}
-
-			.progress-bar {
-				background: #cce0ff;
-				width: 0;
-				transition: width 1s;
-			}
-
-			.progress-text {
-				position: absolute;
-				top: 0;
-				width: 100%;
-				text-align: center;
-			}
-
-			.choices {
-				margin: 3em;
-			}
-		</style>
-	</head>
-
-	<body onload="start()">
-		<p>
-			The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
-			implement accessibility.
-		</p>
-
-		<p>
-			You can pick a price you like, or wait for the final price.
-		</p>
-		<div class="progress-wrap">
-			<div class="progress-bar" id="pb-demo"></div>
-			<div class="progress-text" id="pb-text">0%</div>
-		</div>
-		<div class="choices">
-			<button type="button" id="packa" onclick="select()">Pack A:</button>
-		</div>
-		<div>
-			<p id="outcome"></p>
-		</div>
-
-		<script type="text/javascript">
-			var n, updates, price
-
-			function updatePB(value) {
-				var bar = document.getElementById('pb-demo')
-				var text = document.getElementById('pb-text')
-				bar.style.width = value + '%'
-				text.innerHTML = value + '%'
-			}
-
-			function updateNum() {
-				var button = document.getElementById('packa')
-				if (n < 100) {
-					n = n + 10
-					updatePB(n)
-					price = Math.floor(Math.random() * 1000)
-					button.innerHTML = 'Price: &euro;' + price
-				} else {
-					clearInterval(updates)
-					var outcome = document.getElementById('outcome')
-					if (!outcome.innerHTML) {
-						outcome.innerHTML = 'Your price is ' + price
-					}
-				}
-			}
-
-			function select() {
-				var outcome = document.getElementById('outcome')
-				if (price) {
-					outcome.innerHTML = 'Your price is ' + price
-				}
-			}
-
-			function start() {
-				n = 0
-				updates = setInterval(updateNum, 1000)
-			}
-		</script>
-	</body>
-</html>
 ```
 
 ### Inapplicable
@@ -294,7 +131,7 @@ The text content (part of a progress bar) automatically updates every second aft
 The text content automatically updates every 3 seconds after the page completes loading but it is not visible.
 
 ```html
-<body onload="start()">
+<body onload="startUpdates()">
 	<p style="display: none">Random number: <span id="target">1</span></p>
 
 	<p>
@@ -302,17 +139,7 @@ The text content automatically updates every 3 seconds after the page completes 
 		implement accessibility.
 	</p>
 
-	<script type="text/javascript">
-		function change() {
-			var target = document.getElementById('target')
-			var number = Math.floor(Math.random() * 1000)
-			target.innerText = number
-		}
-
-		function start() {
-			updates = setInterval(change, 3000)
-		}
-	</script>
+	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>
 ```
 
@@ -323,24 +150,14 @@ The text content automatically updates every 3 seconds but only as a result of a
 ```html
 <body>
 	<p>Random number: <span id="target">1</span></p>
-	<input type="button" id="control" onclick="start()" value="Start updates" />
+	<input type="button" id="control" onclick="startUpdates()" value="Start updates" />
 
 	<p>
 		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
 		implement accessibility.
 	</p>
 
-	<script type="text/javascript">
-		function change() {
-			var target = document.getElementById('target')
-			var number = Math.floor(Math.random() * 1000)
-			target.innerText = number
-		}
-
-		function start() {
-			setInterval(change, 3000)
-		}
-	</script>
+	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>
 ```
 
@@ -349,26 +166,11 @@ The text content automatically updates every 3 seconds but only as a result of a
 The automatically updating text content is the only content in the document.
 
 ```html
-<body onload="start()">
+<body onload="startUpdates()">
 	<p>Random number: <span id="target">1</span></p>
-	<input type="button" onclick="stop()" value="Stop updates" />
+	<input type="button" onclick="stopUpdates()" value="Stop updates" />
 
-	<script type="text/javascript">
-		function change() {
-			var target = document.getElementById('target')
-			var number = Math.floor(Math.random() * 1000)
-			target.innerText = number
-		}
-
-		var updates
-		function start() {
-			updates = setInterval(change, 3000)
-		}
-
-		function stop() {
-			clearInterval(updates)
-		}
-	</script>
+	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>
 ```
 

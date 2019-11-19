@@ -313,7 +313,6 @@ The [document element][] of this [document][] is not an `html` element.
 [focused]: https://html.spec.whatwg.org/#focused 'Definition of focused'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [initial segment]: #initial-segment 'Definition of initial segment'
-[main content]: #main-content 'Definition of main content'
 [section of content]: #section-of-content 'Definition of section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'

@@ -31,8 +31,8 @@ The first [focusable][] element within the test target:
 - is [included in the accessibility tree][]; and
 - is [visible][] when [focused][]; and
 - has a [semantic role][] of link; and
-- when activated, moves focus to the [main content][] of the [document][]; and
-- has either an [accessible name][] or [accessible description][] that communicates that it links to the [main content][].
+- when activated, moves focus to the main [section of content][] of the [document][]; and
+- has either an [accessible name][] or [accessible description][] that communicates that it links to the main [section of content][].
 
 ## Assumptions
 
@@ -54,7 +54,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The link to skip [repeated content](#repeated-content) is [visible][], is [included in the accessibility tree][], and when activated moves the focus to the [main content][] identified here by the `main` element.
+The link to skip [repeated content](#repeated-content) is [visible][], is [included in the accessibility tree][], and when activated moves the focus to the main [section of content][] identified here by the `main` element.
 
 ```html
 <html>
@@ -70,7 +70,7 @@ The link to skip [repeated content](#repeated-content) is [visible][], is [inclu
 
 #### Passed Example 2
 
-The link to skip [repeated content](#repeated-content) can be toggled to [visible][] through keyboard focus. When activated the focus is moved to the [main content][] identified here by the `main` element.
+The link to skip [repeated content](#repeated-content) can be toggled to [visible][] through keyboard focus. When activated the focus is moved to the main [section of content][] identified here by the `main` element.
 
 ```html
 <html>
@@ -100,7 +100,7 @@ The link to skip [repeated content](#repeated-content) can be toggled to [visibl
 
 #### Passed Example 3
 
-The link to skip [repeated content](#repeated-content) has an `aria-label` attribute to provide an [accessible name][]. When activated focus is moved to the [main content][] identified here by the `main` element.
+The link to skip [repeated content](#repeated-content) has an `aria-label` attribute to provide an [accessible name][]. When activated focus is moved to the main [section of content][] identified here by the `main` element.
 
 ```html
 <html>
@@ -164,7 +164,7 @@ The link to skip [repeated content](#repeated-content) does not have an [accessi
 
 #### Failed Example 4
 
-The link to skip [repeated content](#repeated-content) does not reference a valid `id` attribute and when activated will not move focus to the [main content][] identified here by the `main` element.
+The link to skip [repeated content](#repeated-content) does not reference a valid `id` attribute and when activated will not move focus to the main [section of content][] identified here by the `main` element.
 
 ```html
 <html>
@@ -234,6 +234,6 @@ The [document element][] of this [document][] is not an `html` element.
 [focusable]: #focusable 'Definition of focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'Definition of focused'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[main content]: #main-content 'Definition of main content'
+[section of content]: #section-of-content 'Definition of section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'

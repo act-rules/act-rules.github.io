@@ -18,6 +18,7 @@
 - UA/AT
 - WCAG
 - WCAG2
+- WCAG21
 - CSS3
 - UA
 - UI
@@ -37,12 +38,12 @@
 - subtags
 - testrunner
 - color
-- focusable 
-- unfocusable 
-- tabindex 
-- whitespace 
+- focusable
+- unfocusable
+- tabindex
+- whitespace
 - namespace
-- namespaces 
+- namespaces
 - webpage
 - wai-aria-specifications
 - autoplay
@@ -60,6 +61,8 @@
 - www.w3.org
 - eval
 - html52
+- css-scoping
+- csswg
 - whatwg
 - dom
 - wai-aria
@@ -117,11 +120,11 @@
 - matrix3d
 
 # ARIA Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#aria)
-- ARIA1 
+- ARIA1
 - ARIA4
-- ARIA5 
-- ARIA6 
-- ARIA7 
+- ARIA5
+- ARIA6
+- ARIA7
 - ARIA8
 - ARIA10
 - ARIA12

@@ -20,7 +20,9 @@ input_aspects:
 acknowledgements:
   authors:
     - Brian Bors
-    - Carlos Duarte
+	- Carlos Duarte
+  previous authors:
+    - Wilco Fiers
 ---
 
 ## Applicability
@@ -28,7 +30,7 @@ acknowledgements:
 This rule applies to any HTML element which:
 
 - has the [semantic role][] of ['link'][link] or a [semantic role][] that inherits from the ['link'][link] role; and
-- is a [descendant][] of a `p` element; and
+- is a [descendant][] of a `p` HTML element; and
 - has [descendant][] [text nodes][text node] that are [visible][]; and
 - the `p` element has other [descendant][] [visible][] [text nodes][text node].
 
@@ -36,14 +38,15 @@ This rule applies to any HTML element which:
 
 Each target element has either:
 
-- An icon immediately before, after or in the link denoting it as a link
-- Text immediately before, after or in the link denoting it as a link
-- a [distinguishing style][] compared to the other text not based on color alone
-- a different color compared to the rest of the text in the paragraph that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) difference with the rest of the text and a [distinguishing style][] both when the target element [gains focus][gain focus] and the target element is [hovered][]
+- content (such as an image or text) inside, or immediately before or after the test target, that identifies it as a link; or
+- a [distinguishing style][] not based on color alone, compared to the other descendent visible text nodes of the same `p` HTML element; or
+- a different color, compared to the color of the other descendent visible text nodes of the same `p` HTML element (if all have the same color), that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) and a [distinguishing style][] both when the target element [gains focus][focused] and the target element is [hovered][].
 
 ## Assumptions
 
-This rule assumes that the link is distinguishable from the rest of the text with color, which means it fails SC 1.4.1 when there is not another way to distinguish it.
+- This rule assumes that the link is distinguishable from the rest of the text with color, which means it fails SC 1.4.1 when there is not another way to distinguish it.
+- This test assumes that the 3:1 contrast difference between text is minimal to what would be sufficient to meet WCAG 2.0. This value is part of [technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183), but is not specified in the [1.4.1 success criterion](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
+- This test assumes that any change in font is sufficiently distinguishable, and that fonts are loaded when they are present.
 
 ## Accessibility Support
 
@@ -145,10 +148,7 @@ This is a link that is a descendant of a paragraph element and the underline is 
 				text-decoration: none;
 				color: #d14826;
 			}
-			a:hover {
-				text-decoration: underline;
-			}
-			a:focus {
+			a:hover, a:focus {
 				text-decoration: underline;
 			}
 		</style>
@@ -185,7 +185,7 @@ This is a link that is a descendant of a paragraph element and the underline is 
 
 #### Inapplicable Example 1
 
-This is no semantic role of link within this example.
+There is no semantic role of link within this example.
 
 ```html
 <p>Read about WAI on the <u>underlined text</u>.</p>
@@ -232,7 +232,7 @@ This paragraph has no visible descendant text nodes apart from those in the link
 ```
 
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
-[gain focus]: https://html.spec.whatwg.org/multipage/interaction.html#gains-focus
+[focused]: #focused 'Definition of focused'
 [hovered]: #hovered 'Definition of hovered'
 [link]: https://www.w3.org/TR/wai-aria/#link
 [semantic role]: #semantic-role 'Definition of semantic role'

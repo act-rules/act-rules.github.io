@@ -20,7 +20,7 @@ acknowledgements:
 
 ## Applicability
 
-This rule applies to any [document][] where the [document element][] is an `html` element.
+This rule applies to any [HTML web page][].
 
 ## Expectations
 
@@ -256,3 +256,4 @@ The [document element][] of this [document][] is not an `html` element.
 [semantic role]: #semantic-role 'Definition of semantic role'
 [tech h69]: https://www.w3.org/WAI/WCAG21/Techniques/html/H69 'Technique H69: Providing heading elements at the beginning of each section of content'
 [visible]: #visible 'Definition of visible'
+[html web page]: #web-page-html 'Definition of web page (HTML)'

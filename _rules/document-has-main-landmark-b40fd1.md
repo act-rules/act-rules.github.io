@@ -15,11 +15,11 @@ acknowledgements:
 
 ## Applicability
 
-This rule applies to any [document][] where the [document element][] is an `html` element.
+This rule applies to any [HTML web page][].
 
 ## Expectations
 
-The [document element][] has at least one [descendant][] in the [flat tree][] with a [semantic role][] of [`main`][main]].
+There is at least on element with a [semantic role][] of [`main`][main] within the test target.
 
 **Note**: Authors SHOULD not use more than one element with a [semantic role][] of [`main`][main]. This is, however, a not a requirement for this rule and can be valid in certain cases.
 
@@ -132,3 +132,4 @@ The [document element][] of this [document][] is not an `html` element.
 [section of content]: #section-of-content 'Definition of section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [tech aria11]: https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11
+[html web page]: #web-page-html 'Definition of web page (HTML)'

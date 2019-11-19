@@ -22,7 +22,7 @@ acknowledgements:
 
 ## Applicability
 
-This rule applies to any [document][] where the [document element][] is an HTML `html` element.
+This rule applies to any [HTML web page][].
 
 ## Expectation 1
 
@@ -316,3 +316,4 @@ The [document element][] of this [document][] is not an `html` element.
 [section of content]: #section-of-content 'Definition of section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'
+[html web page]: #web-page-html 'Definition of web page (HTML)'

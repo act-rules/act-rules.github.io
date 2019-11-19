@@ -24,7 +24,7 @@ acknowledgements:
 
 ## Applicability
 
-This rule applies to any [document][] where the [document element][] is an `html` element.
+This rule applies to any [HTML web page][].
 
 ## Expectation
 
@@ -159,3 +159,4 @@ The [document element][] of this [document][] is not an `html` element.
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [document element]: https://dom.spec.whatwg.org/#document-element 'Definition of document element'
 [sc241]: https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html 'Success Criterion 2.4.1: Bypass blocks'
+[html web page]: #web-page-html 'Definition of web page (HTML)'

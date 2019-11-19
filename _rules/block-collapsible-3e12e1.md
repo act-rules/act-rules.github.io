@@ -20,7 +20,7 @@ acknowledgements:
 
 ## Applicability
 
-This rule applies to any [document][] where the [document element][] is an `html` element.
+This rule applies to any [HTML web page][].
 
 ## Expectations
 
@@ -162,3 +162,4 @@ The [document element][] of this [document][] is not an `html` element.
 [section of repeated content]: #repeated-content 'Definition of section of repeated content'
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components 'Definition of user interface component'
 [visible]: #visible 'Definition of visible'
+[html web page]: #web-page-html 'Definition of web page (HTML)'

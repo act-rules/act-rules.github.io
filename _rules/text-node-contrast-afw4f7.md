@@ -29,7 +29,7 @@ authors:
 Any [visible](#visible) character in a [text node](https://dom.spec.whatwg.org/#text) that is a [child](https://dom.spec.whatwg.org/#concept-tree-child) (in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree)) of an HTML element, except if the [text node](https://dom.spec.whatwg.org/#text) is a [descendant](https://dom.spec.whatwg.org/#concept-shadow-including-descendant) of an element that:
 
 - Has a [semantic role](#semantic-role) that inherits from [widget](https://www.w3.org/TR/wai-aria-1.1/#widget)
-- Is used in the [accessible name](#accessible-name) of a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget) that is [disabled]() (i.e. It is part of the label)
+- Is used in the [accessible name](#accessible-name) of a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget) that is [disabled]()
 - Has a [semantic role](#semantic-role) of [group](https://www.w3.org/TR/wai-aria-1.1/#group) that is [disabled]()
 
 **Note**: When the text color is the same as the background color, the element is not visible, and so is not applicable.
@@ -126,7 +126,9 @@ This text only has a 3:1 contrast but it is a large (14 points and bold) text so
 
 #### Passed Example 7
 
-This text has an insufficient contrast but it is decorative so it still passes.
+The purpose of the helvetica letters is to show what the font looks like. The actual words are irrelevant and could be replaced with any other sentence that includes all letters of the alphabat. Because of that, the rule is passed, despite the text not meeting the 4.5:1 color contrast requirement.
+
+**Note**: Because this is non-text content, [success criterion 1.4.11 Non-text Contrast] requires font example to have a color contrast of 3:1.
 
 ```html
 <p>Helvetica is a widely used sans-serif typeface developed in 1957 by Max Miedinger and Eduard Hoffmann.</p>

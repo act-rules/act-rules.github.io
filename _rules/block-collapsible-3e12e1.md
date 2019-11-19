@@ -30,6 +30,8 @@ For each [section of repeated content][] in the test target, there exists some [
 - is [included in the accessibility tree][]; and
 - allows to toggle both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of this [section of repeated content][].
 
+**Note**: the same [user interface component][] may be used for several or even all the [sections of repeated content][section of repeated content].
+
 ## Assumptions
 
 This rule assumes that [sections of repeated content][section of repeated content] have already been identified within the test target, for example by comparison with other test targets within the same website, or any other means.
@@ -159,7 +161,7 @@ The [document element][] of this [document][] is not an `html` element.
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [document element]: https://dom.spec.whatwg.org/#document-element 'Definition of document element'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[section of repeated content]: #repeated-content 'Definition of section of repeated content'
+[section of repeated content]: #section-of-repeated-content 'Definition of section of repeated content'
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components 'Definition of user interface component'
 [visible]: #visible 'Definition of visible'
 [html web page]: #web-page-html 'Definition of web page (HTML)'

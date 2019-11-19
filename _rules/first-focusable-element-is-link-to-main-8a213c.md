@@ -38,7 +38,7 @@ The first [focusable][] element within the test target:
 
 This rule assumes that any global dismissible information that only appears once per site has already been acknowledged and is not displayed any more.
 
-**Note**: The aim of such link is to be able to skip repeated content (headers, navigation bar, ...) when viewing several pages of the same site. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually by viewing and accepting cookies policy). Since that content is _not_ repeated (is it only shown once for the full site), it is not a problem to have it, and it may appear on any page of the site (depending where the user first comes in).
+**Note**: The aim of such link is to be able to skip [sections of repeated content][section of repeated content] (headers, navigation bar, ...) when viewing several pages of the same site. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually by viewing and accepting cookies policy). Since that content is _not_ repeated (is it only shown once for the full site), it is not a problem to have it, and it may appear on any page of the site (depending where the user first comes in).
 
 ## Accessibility Support
 
@@ -235,6 +235,7 @@ The [document element][] of this [document][] is not an `html` element.
 [focused]: https://html.spec.whatwg.org/#focused 'Definition of focused'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [section of content]: #section-of-content 'Definition of section of content'
+[section of repeated content]: #section-of-repeated-content 'Definition of section of repeated content'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'
 [html web page]: #web-page-html 'Definition of web page (HTML)'

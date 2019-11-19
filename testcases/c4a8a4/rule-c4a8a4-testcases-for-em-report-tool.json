@@ -1172,17 +1172,6 @@
               "WebPage"
             ],
             "id": "_:struct_3",
-            "description": "https://act-rules.github.io/testcases/c4a8a4/2d8761b5165a28b4b9d0f50d7731a02b3c41040f.html",
-            "source": "https://act-rules.github.io/testcases/c4a8a4/2d8761b5165a28b4b9d0f50d7731a02b3c41040f.html",
-            "title": "2d8761b5165a28b4b9d0f50d7731a02b3c41040f",
-            "tested": false
-          },
-          {
-            "type": [
-              "TestSubject",
-              "WebPage"
-            ],
-            "id": "_:struct_4",
             "description": "https://act-rules.github.io/testcases/c4a8a4/96c04cd150536de91138a329fd0f3c2d320bf1a0.html",
             "source": "https://act-rules.github.io/testcases/c4a8a4/96c04cd150536de91138a329fd0f3c2d320bf1a0.html",
             "title": "96c04cd150536de91138a329fd0f3c2d320bf1a0",
@@ -1193,7 +1182,7 @@
               "TestSubject",
               "WebPage"
             ],
-            "id": "_:struct_5",
+            "id": "_:struct_4",
             "description": "https://act-rules.github.io/testcases/c4a8a4/de6acada96b1cfb140e851646a7383154a748fd7.html",
             "source": "https://act-rules.github.io/testcases/c4a8a4/de6acada96b1cfb140e851646a7383154a748fd7.html",
             "title": "de6acada96b1cfb140e851646a7383154a748fd7",
@@ -1204,7 +1193,7 @@
               "TestSubject",
               "WebPage"
             ],
-            "id": "_:struct_6",
+            "id": "_:struct_5",
             "description": "https://act-rules.github.io/testcases/c4a8a4/5d55c3142f9a6961b32e560a99eb99ea9eaa9073.html",
             "source": "https://act-rules.github.io/testcases/c4a8a4/5d55c3142f9a6961b32e560a99eb99ea9eaa9073.html",
             "title": "5d55c3142f9a6961b32e560a99eb99ea9eaa9073",
@@ -1215,7 +1204,7 @@
               "TestSubject",
               "WebPage"
             ],
-            "id": "_:struct_7",
+            "id": "_:struct_6",
             "description": "https://act-rules.github.io/testcases/c4a8a4/aa75f943fdbf4055f9ae736cd2551b346d459147.svg",
             "source": "https://act-rules.github.io/testcases/c4a8a4/aa75f943fdbf4055f9ae736cd2551b346d459147.svg",
             "title": "aa75f943fdbf4055f9ae736cd2551b346d459147",

@@ -17,7 +17,7 @@ function stopUpdates() {
     clearInterval(updates)
 }
 
-function toggle() {
+function toggleUpdates() {
     var control = document.getElementById('control')
     if (updating) {
         control.value = 'Resume updates'

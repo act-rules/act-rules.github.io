@@ -106,25 +106,6 @@ Even though the descriptive `<title>` element is not placed within the `<head>` 
 </html>
 ```
 
-#### Passed Example 4
-
-`<title>` element with content present in document, and the title is descriptive of the content, even though it does not contain letters or numbers.
-
-```html
-<html>
-	<head>
-		<title>;)</title>
-	</head>
-	<body>
-		<h1>;)</h1>
-		<p>
-			The winking emoticon is commonly used after a light-hearted or sarcastic remark. It is also a popular IM and
-			e-mail emoticon shortcut.
-		</p>
-	</body>
-</html>
-```
-
 ### Failed
 
 #### Failed Example 1

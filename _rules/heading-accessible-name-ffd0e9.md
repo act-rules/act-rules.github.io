@@ -83,7 +83,7 @@ This `h1` element has an non-empty [accessible name][] given by the `alt` attrib
 
 #### Passed Example 5
 
-Even though this `h1` element is not [visible][], it is still [included in the accessibility tree][]. It has a non-empty [accessible name][]
+Even though this `h1` element is not [visible][], it is still [included in the accessibility tree][]. It has a non-empty [accessible name][].
 
 ```html
 <h1 style="position: absolute; top: -9999px">ACT rules</h1>

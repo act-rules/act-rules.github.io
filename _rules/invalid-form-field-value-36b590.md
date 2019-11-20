@@ -10,16 +10,6 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag-technique:G84: # Providing a text description when the user provides information that is not in the list of allowed values
-    forConformance: false
-    failed: not satisfied
-    passed: satisfied
-    inapplicable: further testing needed
-  wcag-technique:G85: # Providing a text description when user input falls outside the required format or values
-    forConformance: false
-    failed: not satisfied
-    passed: satisfied
-    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -32,9 +22,7 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to each HTML [input element][] with the [type attribute][] in one of the following [states][]: "Text", "Telephone", "URL", "E-mail", "Password", "Date", "Month", "Week", "Time", "Local Date and Time", and "Number";
-
-**Note**: The list of applicable [states][] includes those where the [input element][] can be rendered by the user agent as a text control.
+The rule applies to each HTML element with a [semantic role][] that inherits from the [abstract][] `input` or `select` roles.
 
 ## Expectation
 
@@ -46,7 +34,7 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-The support for the different [states][] of the [type attribute][] is not consistent across different user agents.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 
@@ -177,7 +165,7 @@ The error message is not included in the accessibility tree.
 
 #### Inapplicable Example 1
 
-No input elements with the required [type attribute][].
+No input elements with the required [semantic roles][semantic role].
 
 ```html
 <form>
@@ -188,9 +176,8 @@ No input elements with the required [type attribute][].
 </form>
 ```
 
+[abstract]: https://www.w3.org/TR/wai-aria/#abstract_roles
 [automatically detected error]: #automatic-error-detection 'Definition of automatic error detection'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[input element]: https://html.spec.whatwg.org/multipage/input.html#the-input-element
-[states]: https://html.spec.whatwg.org/#states-of-the-type-attribute
-[type attribute]: https://html.spec.whatwg.org/multipage/input.html#attr-input-type
+[semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'

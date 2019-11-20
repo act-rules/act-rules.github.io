@@ -6,9 +6,7 @@ key: required-field
 Any HTML element:
 
 - with one of the following [semantic roles][semantic role]: `checkbox`, `combobox`, `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` and `textbox`;
-- that prevents the successful submission or processing of the input when empty.
-
-If the element is part of a form, having the [`required`](https://html.spec.whatwg.org/#the-required-attribute) attribute, on elements that allow it, makes it a required control for form submission.
+- that results in an [error being automatically detected][automatically detected error] when left empty.
 
 **Note**: The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.1][] roles that:
 
@@ -17,5 +15,6 @@ If the element is part of a form, having the [`required`](https://html.spec.what
 
 [abstract]: https://www.w3.org/TR/wai-aria/#abstract_roles
 [aria 1.1]: https://www.w3.org/TR/wai-aria-1.1/
+[automatically detected error]: #automatic-error-detection 'Definition of automatic error detection'
 [required context]: https://www.w3.org/TR/wai-aria/#scope
 [semantic role]: #semantic-role 'Definition of semantic role'

@@ -109,7 +109,7 @@ This `div` element with a [semantic role][] of `heading` has an empty [accessibl
 
 #### Failed Example 3
 
-Because the `img` element is marked as [decorative][] through its [semantic role][] of `presentation`, it does not provides an [accessible name][] to the `h1` element. Hence the `h1` element has an empty [accessible name][].
+Because the `img` element is marked as [decorative][] through its [semantic role][] of `presentation`, it does not provide an [accessible name][] to the `h1` element. Hence the `h1` element has an empty [accessible name][].
 
 ```html
 <h1><img src="#" alt="ACT rules" role="presentation" /></h1>

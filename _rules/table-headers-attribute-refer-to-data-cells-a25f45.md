@@ -32,8 +32,8 @@ Each target attribute is [a set of space separated IDs](https://www.w3.org/TR/ht
 
 ## Assumptions
 
-- This test assumes that the `headers` attribute is only used to identify table headers. If other information is included in the `headers` attribute, the rule may fail on issues that are not accessibility concerns. For example, if `headers` is used to include information for script, this rule may not be accurate.
-- This test assumes that the `headers` attribute is required to express the relationship between data and header cells in the `table`. If the browser [computes an adequate fallback header](https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics), this rule may produce incorrect results.
+- This rule assumes that the `headers` attribute is only used to identify table headers. If other information is included in the `headers` attribute, the rule may fail on issues that are not accessibility concerns. For example, if `headers` is used to include information for scripts, this rule may not be accurate.
+- This rule assumes that the `headers` attribute is required to express the relationship between data and header cells in the `table`. If the browser [computes an adequate fallback header](https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics), this rule may produce incorrect results.
 
 ## Accessibility Support
 
@@ -109,7 +109,7 @@ The `headers` attribute on the second cell refers to a `td` element with a role 
 
 #### Passed Example 4
 
-This `table` has multiple `columnheader(s)`. The `headers` attribute on the cells lists the `id(s)` of `th` elements within the same `table`.
+This `table` has multiple elements with a role of `columnheader`. The `headers` attribute on the cells lists IDs of `th` elements within the same `table`.
 
 ```html
 <table>

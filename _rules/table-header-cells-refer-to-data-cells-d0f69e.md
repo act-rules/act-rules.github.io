@@ -1,9 +1,9 @@
 ---
 id: d0f69e
-name: All table header cells have corresponding data cells
+name: All table header cells have assigned data cells
 rule_type: atomic
 description: |
-  This rule checks that each table header has corresponding data cells in a table element.
+  This rule checks that each table header has assigned data cells in a table element.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true
@@ -20,18 +20,14 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any HTML element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of an element having a [semantic role](#semantic-role) of either [table](https://www.w3.org/TR/wai-aria-1.1/#table) or [grid](https://www.w3.org/TR/wai-aria-1.1/#grid), and is [visible](#visible) as well as [included in the accessibility tree](#included-in-the-accessibility-tree), where the element has any of the following [semantic roles](#semantic-role):
+The rule applies to any HTML element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of an element having a [semantic role](#semantic-role) of either [table](https://www.w3.org/TR/wai-aria-1.1/#table) or [grid](https://www.w3.org/TR/wai-aria-1.1/#grid), that is [visible](#visible) as well as [included in the accessibility tree](#included-in-the-accessibility-tree), where the element has any of the following [semantic roles](#semantic-role):
 
-- [cell](https://www.w3.org/TR/wai-aria-1.1/#cell)
-- [gridcell](https://www.w3.org/TR/wai-aria-1.1/#gridcell)
 - [rowheader](https://www.w3.org/TR/wai-aria-1.1/#rowheader)
 - [columnheader](https://www.w3.org/TR/wai-aria-1.1/#columnheader)
 
 ## Expectation
 
-The target element is either the row or column header for an element with a [semantic role](#semantic-role) of [cell](https://www.w3.org/TR/wai-aria-1.1/#cell) or [gridcell](https://www.w3.org/TR/wai-aria-1.1/#gridcell), that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of the same [table](https://www.w3.org/TR/wai-aria-1.1/#table) or [grid](https://www.w3.org/TR/wai-aria-1.1/#grid) element, as that of the target element.
-
-**Note:** Assigning headers cells to data cell is performed as per algorithm - [Forming relationships between data cells and header cells](https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics).
+Each target element is [assigned](https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics) to at least one element with a [semantic role](#semantic-role) of [cell](https://www.w3.org/TR/wai-aria-1.1/#cell) or [gridcell](https://www.w3.org/TR/wai-aria-1.1/#gridcell), that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of the same [table](https://www.w3.org/TR/wai-aria-1.1/#table) or [grid](https://www.w3.org/TR/wai-aria-1.1/#grid) element, as that of the target element.
 
 ## Assumptions
 
@@ -53,7 +49,7 @@ _There are currently no assumptions._
 
 #### Passed Example 1
 
-The column header element has corresponding cell, within the same `table` element.
+The column header element has an assigned cell, within the same `table` element.
 
 ```html
 <table>
@@ -68,7 +64,7 @@ The column header element has corresponding cell, within the same `table` elemen
 
 #### Passed Example 2
 
-Each column header element has corresponding cells, within the same `table` element.
+Each column header element has assigned cells, within the same `table` element.
 
 ```html
 <div role="table">
@@ -93,7 +89,7 @@ Each column header element has corresponding cells, within the same `table` elem
 
 #### Passed Example 3
 
-Each column header element has corresponding cells within the same table element. In this example the column headers have cells that span multiple columns.
+Each column header element has assigned cells within the same table element. In this example the column headers have cells that span multiple columns.
 
 ```html
 <table>
@@ -113,7 +109,7 @@ Each column header element has corresponding cells within the same table element
 
 #### Passed Example 4
 
-Each row and column header element has corresponding cells, within the same element having a [semantic role](#semantic-role) of `grid`.
+Each row and column header element has assigned cells, within the same element having a [semantic role](#semantic-role) of `grid`.
 
 ```html
 <table role="grid">
@@ -138,7 +134,7 @@ Each row and column header element has corresponding cells, within the same elem
 
 #### Passed Example 5
 
-Each column header has corresponding cells. Usage of `headers` attribute does not change relationship between column headers and cells.
+Each column header is assigned to a cell. Usage of `headers` attribute changes the relationship between column headers and cells.
 
 ```html
 <table>
@@ -159,7 +155,7 @@ Each column header has corresponding cells. Usage of `headers` attribute does no
 
 #### Failed Example 1
 
-One of the column headers ("Column 2"), does not have corresponding cell within the same `table` element.
+One of the column headers ("Column 2"), does not have an assigned cell within the same `table` element.
 
 ```html
 <table>
@@ -179,7 +175,7 @@ One of the column headers ("Column 2"), does not have corresponding cell within 
 
 #### Failed Example 2
 
-The second column header, does not have corresponding cell within the same `table` element. Usage of `headers` attribute removes cell association to the column.
+The second column header, does not have an assigned cell within the same `table` element. Usage of `headers` attribute removes cell association to the column.
 
 ```html
 <table>

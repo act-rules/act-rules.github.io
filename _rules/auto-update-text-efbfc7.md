@@ -76,7 +76,7 @@ The text content automatically updates every 3 seconds after the page completes 
 ```html
 <body onload="startUpdates()">
 	<p>Random number: <span id="target">1</span></p>
-	<input type="button" id="control" onclick="toggle()" value="Pause updates" />
+	<input type="button" id="control" onclick="toggleUpdates()" value="Pause updates" />
 
 	<p>
 		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and

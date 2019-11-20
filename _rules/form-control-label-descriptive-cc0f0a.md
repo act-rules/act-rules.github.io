@@ -49,7 +49,7 @@ This rule applies to any HTML `label` element or other element referenced by `ar
 
 ## Expectation
 
-Each test target, within its [visual context][], describes the purpose of the associated element.
+Each test target, together with its [visual context][], describes the purpose of the associated element.
 
 **Note**: It is possible for an element to have an [accessible name][] but still having a non-descriptive `label` (and even a non-descriptive [label][]). In that case, it would pass [Success Criterion 4.1.2: Name, Role and Value][sc412] but still fail this rule and [Success Criterion 2.4.6: Heading and Labels][sc246].
 

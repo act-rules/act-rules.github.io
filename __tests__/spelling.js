@@ -8,6 +8,7 @@ const gfmCodeBlocks = require('gfm-code-blocks')
 const reporter = require('vfile-reporter')
 
 const describeRule = require('../test-utils/describe-rule')
+const describePage = require('../test-utils/describe-page')
 
 const ignore = yaml.safeLoad(fs.readFileSync('./__tests__/spelling-ignore.yml', 'utf8'))
 const spellOptions = {
@@ -74,4 +75,5 @@ const validateMarkdownBody = ({ body }) => {
  */
 describe('Validate body for spelling mistakes', () => {
 	describeRule('spellcheck rules', ruleData => validateMarkdownBody(ruleData))
+	describePage('spellcheck pages', pageData => validateMarkdownBody(pageData))
 })

@@ -167,8 +167,7 @@ The automatically updating text content is the only content in the document.
 
 ```html
 <body onload="startUpdates()">
-	<p>Random number: <span id="target">1</span></p>
-	<input type="button" onclick="stopUpdates()" value="Stop updates" />
+	<span id="target">1</span>
 
 	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>

@@ -50,7 +50,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-Regular button.
+The [accessible name][] of `button` elements comes from it's content.
 
 ```html
 <button>My button</button>
@@ -58,7 +58,7 @@ Regular button.
 
 #### Passed Example 2
 
-Value attribute as the [accessible name][].
+The [accessible name][] of the `input` button comes from it's `value` attribute.
 
 ```html
 <input type="submit" value="Submit" />
@@ -66,7 +66,7 @@ Value attribute as the [accessible name][].
 
 #### Passed Example 3
 
-`aria-label` for the [accessible name][].
+When there is no text content, a `button` can be given an [accessible name][] with the `aria-label` attribute.
 
 ```html
 <button aria-label="My button"></button>
@@ -74,7 +74,7 @@ Value attribute as the [accessible name][].
 
 #### Passed Example 4
 
-Span tag with role button and has name defined by aria-label.
+Elements with `role="button"` require an [accessible name][]. In this example the [accessible name][] comes from the `aria-label` attribute.
 
 ```html
 <span role="button" aria-label="My button"></span>
@@ -82,7 +82,7 @@ Span tag with role button and has name defined by aria-label.
 
 #### Passed Example 5
 
-Summary element has a default semantic role of button.
+The `summary` element has an implicit semantic role of `button`. In this example it is given an [accessible name][] through it's content.
 
 ```html
 <summary>Press Here</summary>
@@ -90,7 +90,7 @@ Summary element has a default semantic role of button.
 
 #### Passed Example 6
 
-Disabled elements are also applicable.
+Buttons that are disabled still require an [accessible name][]. In this example it is provided through the content of the `button` element.
 
 ```html
 <button disabled>Delete</button>
@@ -98,7 +98,7 @@ Disabled elements are also applicable.
 
 #### Passed Example 7
 
-Off screen elements should be tested.
+Off screen buttons still require an [accessible name][]. In this example it is provided through the content of the `button` element.
 
 ```html
 <html>
@@ -117,15 +117,7 @@ Off screen elements should be tested.
 
 #### Passed Example 8
 
-Button has [accessible name][] that is not only [whitespace][].
-
-```html
-<button>:-)</button>
-```
-
-#### Passed Example 9
-
-Input button has an [accessible name][] that comes from the default "reset" text.
+Some buttons have a default value. In this example the `input` element has "reset" as the [accessible name][], or translated of "reset" provided by the browser.
 
 ```html
 <input type="reset" />
@@ -135,23 +127,31 @@ Input button has an [accessible name][] that comes from the default "reset" text
 
 #### Failed Example 1
 
-Value attribute does NOT give an [accessible name][], only for input elements.
+The `button` element has an empty [accessible name][], because it has no content, nor any attribute that would give it an accessible name.
+
+```html
+<button></button>
+```
+
+#### Failed Example 2
+
+The `value` attribute can not be used to provide an [accessible name][] for `button` elements. Only on `input` buttons will the value be used as the [accessible name][].
 
 ```html
 <button type="button" value="read more"></button>
 ```
 
-#### Failed Example 2
+#### Failed Example 3
 
-Span tag with role button with no name.
+Elements with an explicit semantic role of `button` require an [accessible name][], either provided through it's content, or through an `aria-label` or `aria-labelledby` attribute.
 
 ```html
 <span role="button"></span>
 ```
 
-#### Failed Example 3
+#### Failed Example 4
 
-Off screen element without an [accessible name][].
+Off screen buttons still require an [accessible name][].
 
 ```html
 <html>
@@ -168,19 +168,11 @@ Off screen element without an [accessible name][].
 </html>
 ```
 
-#### Failed Example 4
-
-Button has an [accessible name][] that is only [whitespace][].
-
-```html
-<button></button>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-Image buttons are tested in a different rule.
+Image buttons are tested in a separate rule, because also have to be tested for [success criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG21/#non-text-content).
 
 ```html
 <input type="image" value="download" alt="Download" />
@@ -188,37 +180,18 @@ Image buttons are tested in a different rule.
 
 #### Inapplicable Example 2
 
-Not [visible](#visible) in page and not [included in the accessibility tree][].
+Buttons that are not [included in the accessibility tree][] are ignored by assistive technologies. These are not required to have an accessible name. If at some future state of the page the element is made visible, an [accessible name][] will be necessary.
 
 ```html
-<html>
-	<style>
-		.notInPage {
-			position: absolute;
-			left: -9999px;
-			top: -9999px;
-		}
-	</style>
-	<body>
-		<button class="notInPage" aria-hidden="true">Confirm</button>
-	</body>
-</html>
+<button style="display: none;"></button>
 ```
 
 #### Inapplicable Example 3
 
-Inapplicable: role overridden to link for button element.
+A `button` element (or `input` button) can have it's role changed through the `role` attribute. Such elements are not applicable for this rule. In most scenarios this will still require an [accessible name][], but different rules, and different success criteria may be applicable.
 
 ```html
 <button role="link">take me somewhere</button>
-```
-
-#### Inapplicable Example 4
-
-Not [included in the accessibility tree][] due to `aria-hidden`.
-
-```html
-<button aria-hidden="true"></button>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

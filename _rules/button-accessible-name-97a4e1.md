@@ -25,7 +25,7 @@ The rule applies to elements that are [included in the accessibility tree][] wit
 
 ## Expectation
 
-Each target element has an [accessible name][] that is not only [whitespace][].
+Each target element has an [accessible name][] that is not not empty (`""`).
 
 **Note**: `input` elements of type `submit` and `reset` can get their [accessible name][] from a [default text](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset), as well as from a `value` or other attribute.
 
@@ -117,7 +117,7 @@ Off screen elements should be tested.
 
 #### Passed Example 8
 
-Button has [accessible name][] that is not only [whitespace][].
+Button has [accessible name][] that is not empty (`""`).
 
 ```html
 <button>:-)</button>
@@ -170,7 +170,7 @@ Off screen element without an [accessible name][].
 
 #### Failed Example 4
 
-Button has an [accessible name][] that is only [whitespace][].
+Button has an [accessible name][] that is empty (`""`).
 
 ```html
 <button></button>
@@ -223,4 +223,3 @@ Not [included in the accessibility tree][] due to `aria-hidden`.
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[whitespace]: #whitespace 'Definition of whitespace'

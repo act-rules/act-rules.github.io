@@ -14,7 +14,7 @@ const ignoreWords = yaml.safeLoad(fs.readFileSync('./__tests__/spelling-ignore.y
 const ignoreTechniques = [`ARIA`, `C`, `F`, `G`, `H`].reduce((out, techniquePrefix) => {
 	let i = 1
 	while (i < 500) {
-		// Arbitarily chosen number
+		// Arbitrarily chosen number
 		const technique = `${techniquePrefix}${i}`
 		out.push(technique)
 		i++

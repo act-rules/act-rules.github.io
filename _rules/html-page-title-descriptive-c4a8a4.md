@@ -143,23 +143,6 @@ Even though a correct `<title>` element is put in the `<head>` of the document, 
 </html>
 ```
 
-#### Failed Example 3
-
-`<title>` element with content present in document, but it is not descriptive of the content.
-
-```html
-<html>
-	<head>
-		<title>;)</title>
-	</head>
-	<body>
-		<p>
-			Clementines will be ready to harvest from late October through February.
-		</p>
-	</body>
-</html>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1

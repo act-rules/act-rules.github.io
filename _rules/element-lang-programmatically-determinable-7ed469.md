@@ -23,13 +23,13 @@ acknowledgements:
 
 This rules applies to any HTML element that:
 
-* contains a [text node](https://dom.spec.whatwg.org/#text)
-* is a descendant in the flat tree of a `body` element
-* is included in the accessibility tree
+* contains a [text node](https://dom.spec.whatwg.org/#text) as a [child](https://dom.spec.whatwg.org/#concept-tree-child) element
+* is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of a `body` element
+* is [included in the accessibility tree][]
 
 ## Expectation (1)
 
-For each test target, the test target itself or any of its ancestor elements (up to and including the root element of the document) has a `lang` attribute with a valid language subtag.
+For each test target, the test target itself or any of its [ancestor](https://dom.spec.whatwg.org/#concept-tree-ancestor) elements (up to and including the root element of the document) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) has a `lang` attribute with a valid language subtag.
 
 ## Assumptions
 
@@ -41,7 +41,10 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-In practice, this rule will be satisfied if the separate success criterion 3.1.1 Language of Page (Level: A) is satisfied. This rule ensures that if 3.1.1 is *not* satisfied, content is checked for alternative ways in which language of page content itself can still have a programmatically determinable human language.
+In practice, this rule will be satisfied if the separate success criterion [3.1.1 Language of Page (Level: A)](https://www.w3.org/TR/WCAG21/#language-of-page) is satisfied. This rule ensures that if 3.1.1 is *not* satisfied, content is checked for alternative ways in which language of page content itself can still have a programmatically determinable human language.
+
+- [CSS Scoping Module Level 1 (editor's draft)](https://drafts.csswg.org/css-scoping/)
+- [Understanding Success Criterion 3.1.2: Language of Parts](https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html)
 
 ## Test Cases
 
@@ -49,7 +52,7 @@ In practice, this rule will be satisfied if the separate success criterion 3.1.1
 
 #### Passed Example 1
 
-Language of the `p` element is inherited by the `lang` attribute on the `html` root element.
+The language of the `p` element is inherited by the `lang` attribute on the `html` root element.
 
 ```html
 <html lang="en">
@@ -61,7 +64,7 @@ Language of the `p` element is inherited by the `lang` attribute on the `html` r
 
 #### Passed Example 2
 
-Language of the `p` element is inherited by the `lang` attribute on the `div` parent element. Note that this example fails 3.1.1 Language of Page (Level: A) as the `html` root element lacks a `lang` or `xml:lang` attribute.
+The language of the `p` element is inherited by the `lang` attribute on the `div` parent element. Note that this example fails 3.1.1 Language of Page (Level: A) as the `html` root element lacks a `lang` attribute.
 
 ```html
 <html>
@@ -75,7 +78,7 @@ Language of the `p` element is inherited by the `lang` attribute on the `div` pa
 
 #### Passed Example 3
 
-Language of the `p` element is inherited by the `lang` attribute on the `div` ancestor element. Note that this example fails 3.1.1 Language of Page (Level: A) as the `html` root element lacks a `lang` or `xml:lang` attribute.
+The language of the `p` element is inherited by the `lang` attribute on the `div` ancestor element. Note that this example fails 3.1.1 Language of Page (Level: A) as the `html` root element lacks a `lang` attribute.
 
 ```html
 <html>
@@ -93,7 +96,7 @@ Language of the `p` element is inherited by the `lang` attribute on the `div` an
 
 #### Failed Example 1
 
-Language of the `p` element cannot be programmatically determined as the element itself and none of its ancestors, including the `html` root element, has a defined `lang` or `xml:lang` attribute. Note that this example also fails 3.1.1 Language of Page (Level: A) as the `html` root element lacks a `lang` or `xml:lang` attribute.
+The language of the `p` element cannot be programmatically determined as the element itself and none of its ancestors, including the `html` root element, has a defined `lang` attribute.
 
 ```html
 <html>
@@ -103,11 +106,46 @@ Language of the `p` element cannot be programmatically determined as the element
 </html>
 ```
 
+#### Failed Example 2
+
+The language of the `p` element with `id` attribute `ko` cannot be programmatically determined as the element itself and none of its ancestors, including the `html` root element, has a defined `lang` attribute.
+
+```html
+<html>
+	<body>
+		<div lang="en">
+			<div>
+				<p id="ok">Content</p>
+			</div>
+		</div>
+		<div>
+			<p id="ko">Content</p>
+		</div>
+	</body>
+</html>
+```
+
+#### Failed Example 3
+
+The language of the `p` element is inherited by the `lang` attribute on the `div` ancestor element, but the value of this `lang` attribute is not a valid language subtag.
+
+```html
+<html>
+	<body>
+		<div lang="foo">
+			<div>
+				<p>Content</p>
+			</div>
+		</div>
+	</body>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-While the language of the `p` element cannot be programmatically determined, as the element itself and none of its ancestors has a defined `lang` or `xml:lang` attribute, the `p` element contains no actual text content. Note that this example also fails 3.1.1 Language of Page (Level: A) as the `html` root element lacks a `lang` or `xml:lang` attribute.
+While the language of the `p` element cannot be programmatically determined, as the element itself and none of its ancestors has a defined `lang` attribute, the `p` element contains no actual text content.
 
 ```html
 <html>
@@ -119,7 +157,7 @@ While the language of the `p` element cannot be programmatically determined, as 
 
 #### Inapplicable Example 2
 
-While the language of the `p` element cannot be programmatically determined, as the element itself and none of its ancestors has a defined `lang` or `xml:lang` attribute, the `p` element is not part of the accessibilty tree. Note that this example also fails 3.1.1 Language of Page (Level: A) as the `html` root element lacks a `lang` or `xml:lang` attribute.
+While the language of the `p` element cannot be programmatically determined, as the element itself and none of its ancestors has a defined `lang` attribute, the `p` element is not part of the accessibilty tree.
 
 ```html
 <html>
@@ -131,12 +169,12 @@ While the language of the `p` element cannot be programmatically determined, as 
 
 #### Inapplicable Example 2
 
-While the language of the `p` element cannot be programmatically determined, as the element itself and none of its ancestors has a defined `lang` or `xml:lang` attribute, the `p` element is not part of the accessibilty tree. Note that this example also fails 3.1.1 Language of Page (Level: A) as the `html` root element lacks a `lang` or `xml:lang` attribute.
+The `body` element has no descendants.
 
 ```html
 <html>
-	<body>
-		<p style="display:none">Content</p>
-	</body>
+	<body></body>
 </html>
 ```
+
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

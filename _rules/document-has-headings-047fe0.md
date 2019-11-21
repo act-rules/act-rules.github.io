@@ -53,7 +53,7 @@ _There are no major accessibility support issues known for this rule._
 
 **Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
 
-**Note**: Unless specified otherwise, the [sections of content][] of each document are defined by the [landmarks][] (`nav` and `main` elements).
+**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`nav` and `main` elements).
 
 ### Passed
 
@@ -61,7 +61,7 @@ _There are no major accessibility support issues known for this rule._
 
 This [document][] has one [section of content][] for the navigation links, and one for the actual text. Each starts with a `h1` heading.
 
-**Note**: In this [document][], the [sections of content][] are identified by the level 1 heading at their start.
+**Note**: In this [document][], the [sections of content][section of content] are identified by the level 1 heading at their start.
 
 ```html
 <html>
@@ -124,11 +124,11 @@ This [document][] has one [section of content][] for the navigation links, and o
 ```html
 <html>
 	<nav>
-		<div role="heading">Contents</div>
+		<div role="heading" aria-level="1">Contents</div>
 		<!-- list of links to each chapter -->
 	</nav>
 	<main>
-		<div role="heading">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</div>
+		<div role="heading" aria-level="1">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</div>
 		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 		time.
 	</main>
@@ -162,15 +162,16 @@ This [document][] is using image as heading, the [accessible name][] of the imag
 
 #### Failed Example 1
 
-This [document][] has no heading, for its navigational [section of content][].
+For the second [section of content][], the first node with a non-empty [accessible name][] does not have a [semantic role][] of `heading`, even though it is styled to appear as one.
 
 ```html
 <html>
 	<nav>
+	<h1>Contents</h1>h1></h1>
 		<!-- list of links to each chapter -->
 	</nav>
 	<main>
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<strong style="font-size: 18pt">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</strong>
 		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 		time.
 	</main>
@@ -197,7 +198,7 @@ The heading of the second [section of content][] is not [included in the accessi
 
 #### Failed Example 3
 
-The [accessible name][] of the image used as heading for the second [section of content][], which is also the [accessible name][#accessible-name] of the heading, is only empty.
+The [accessible name][] of the image used as heading for the second [section of content][], which is also the [accessible name][] of the heading, is empty. Hence, the first node with a non-empty [accessible name][] is the text below, which does not have a [semantic role][] of `heading`.
 
 ```html
 <html>
@@ -215,19 +216,16 @@ The [accessible name][] of the image used as heading for the second [section of 
 
 #### Failed Example 4
 
-The first [section of content][] starts with a node which does not have a [semantic role][] of `heading`.
-
-**Note**: In this [document][], the [sections of content][] are defined by the [landmarks][] (`nav` and `main` elements).
+The `h1` element that starts the second [section of content][] is not [visible][] because it is off screen.
 
 ```html
 <html>
 	<nav>
-		<div>Table of content</div>
 		<h1>Contents</h1>
 		<!-- list of links to each chapter -->
 	</nav>
 	<main>
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<h1 style="position: absolute; top:-999px">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 		time.
 	</main>

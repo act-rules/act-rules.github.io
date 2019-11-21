@@ -26,7 +26,7 @@ This rule applies to any [HTML web page][].
 
 ## Expectations
 
-For each [section of repeated content][] within the test target, either the last element in the [flat tree][] which is both a [focusable][] element and before this [section of repeated content][], or the first element in the [flat tree][] which is both a [focusable][] element and inside this [section of repeated content][]:
+For each [section of repeated content][] within the test target, either the last [focusable][] element which is before any [focusable][] element inside this [section of repeated content][], or the first [focusable][] element which is inside this [section of repeated content][]:
 
 - has a [semantic role][] of `link`; and
 - is [included in the accessibility tree][]; and
@@ -53,7 +53,7 @@ _There are no major accessibility support issues known for this rule._
 
 **Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
 
-**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`nav` and `main` elements), and the navigational [section of content][] (`nav` element` is a [section of repeated content][].
+**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`aside` and `main` elements), and the complementary [section of content][] (`aside` element`) is a [section of repeated content][] which does not include any [focusable][] not shown explicitly.
 
 ### Passed
 
@@ -63,11 +63,12 @@ The navigational [section of repeated content][] starts with a `link` that jumps
 
 ```html
 <html lang="en">
-	<nav>
-		<a href="#main">Skip table of content</a>
-		<h1>Contents</h1>
-		<!-- list of links to each chapter, repeated on each web page -->
-	</nav>
+	<aside>
+		<a href="#main">Skip additional information</a>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
 		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
@@ -82,11 +83,12 @@ The link to skip the navigational [section of repeated content][] is located jus
 
 ```html
 <html lang="en">
-	<a href="#main">Skip table of content</a>
-	<nav>
-		<h1>Contents</h1>
-		<!-- list of links to each chapter, repeated on each web page -->
-	</nav>
+	<a href="#main">Skip additional information</a>
+	<aside>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
 		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
@@ -115,11 +117,12 @@ The link to skip the [section of repeated content][] is not normally [visible][]
 		</style>
 	</head>
 	<body>
-		<nav>
-			<a class="skip-link" href="#main">Skip table of content</a>
-			<h1>Contents</h1>
-			<!-- list of links to each chapter, repeated on each web page -->
-		</nav>
+		<aside>
+			<a href="#main" class="skip-link">Skip additional information</a>
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- does not include any focusable element -->
+		</aside>
 		<main id="main">
 			<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
 			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
@@ -135,11 +138,12 @@ The `div` element just before the [section of repeated content][] has a [semanti
 
 ```html
 <html lang="en">
-	<div role="link" onclick="location.href='#main';" tabindex="1">Skip table of content</div>
-	<nav>
-		<h1>Contents</h1>
-		<!-- list of links to each chapter, repeated on each web page -->
-	</nav>
+	<div role="link" onclick="location.href='#main';" tabindex="1" id="skip-link">Skip additional information</div>
+	<aside>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
 		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
@@ -162,37 +166,130 @@ The `div` element just before the [section of repeated content][] has a [semanti
 
 #### Failed Example 1
 
+There is no link to skip the sidebar [section of repeated content][].
+
 ```html
-<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title></title>
-	</head>
-	<body></body>
+	<aside>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
 #### Failed Example 2
 
+The element to skip the navigational [section of repeated content][] does not have a role of `link`.
+
 ```html
-<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title></title>
-	</head>
-	<body></body>
+	<div onclick="location.href='#main';" tabindex="1" id="skip-link">Skip additional information</div>
+	<aside>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+	<script>
+		var link = document.getElementById('skip-link')
+
+		link.addEventListener('keyup', function(event) {
+			if (event.key === 'Enter') {
+				event.preventDefault()
+				link.click()
+			}
+		})
+	</script>
 </html>
 ```
 
 #### Failed Example 3
 
+focus order
+
 ```html
-<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title></title>
-	</head>
-	<body></body>
+	<aside>
+		<a href="#main">Skip additional information</a>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Failed Example 3
+
+The link to skip the navigational [section of repeated content][] is not [included in the accessibility tree][].
+
+```html
+<html lang="en">
+	<aside>
+		<a href="#main" aria-hidden="true">Skip additional information</a>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Failed Example 4
+
+The link to skip the [section of repeated content][] is not [visible][] even when [focused][].
+
+```html
+<html lang="en">
+	<aside>
+		<a href="#main" style="position: absolute; top: -999px">Skip additional information</a>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Failed Example 5
+
+The element with a [semantic role][] of `link` which skips the navigational [section of repeated content][] cannot be activated by keyboard only.
+
+```html
+<html lang="en">
+	<div role="link" onclick="location.href='#main';" tabindex="1">Skip additional information</div>
+	<aside>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 

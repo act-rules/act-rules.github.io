@@ -200,7 +200,7 @@ The `td` element has a `headers` attribute referring to an ID that does not exis
 </table>
 ```
 
-#### Failed Example 4
+#### Failed Example 3
 
 The `headers` attribute on the cell refers to an element inside the same `table` which does not have a role of `rowheader` or `columnheader`.
 

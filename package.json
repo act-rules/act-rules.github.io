@@ -130,7 +130,13 @@
 		"marked": "^0.7.0",
 		"prettier": "^1.19.1",
 		"retext": "^7.0.1",
+		"retext-english": "^3.0.4",
+		"retext-indefinite-article": "^1.1.7",
+		"retext-repeated-words": "^2.0.0",
 		"retext-spell": "^3.0.0",
+		"retext-stringify": "^2.0.4",
+		"retext-syntax-urls": "^1.0.2",
+		"retext-redundant-acronyms": "^2.0.0",
 		"vfile-reporter": "^6.0.0"
 	},
 	"keywords": [

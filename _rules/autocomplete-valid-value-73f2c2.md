@@ -24,7 +24,7 @@ The rule applies to any HTML `input`, `select` and `textarea` element with an `a
 
 - The element is not [visible](#visible), and not [included in the accessibility tree](#included-in-the-accessibility-tree)
 - The element is an `input` element with a `type` property of `hidden`, `button`, `submit` or `reset`
-- The element has a `aria-disabled="true"` attribute
+- The element has an `aria-disabled="true"` attribute
 - The element is not part of [sequential focus navigation](https://html.spec.whatwg.org/#sequential-focus-navigation) and has a [semantic role](#semantic-role) that is not a [widget role](https://www.w3.org/TR/wai-aria-1.1/#widget_roles).
 
 ## Expectation 1
@@ -48,7 +48,7 @@ The [correct autocomplete field](#correct-autocomplete-field) is an [appropriate
 
 ## Assumptions
 
-For this rule, it is assumed that the `autocomplete` attribute is not used on form fields that do not correspond to a autocomplete field described in the HTML 5.2 specification. If the `autocomplete` field is used to describe "custom" taxonomy, rather than that described in the specification, this rule may produce incorrect results.
+For this rule, it is assumed that the `autocomplete` attribute is not used on form fields that do not correspond to an autocomplete field described in the HTML 5.2 specification. If the `autocomplete` field is used to describe "custom" taxonomy, rather than that described in the specification, this rule may produce incorrect results.
 
 ## Accessibility Support
 

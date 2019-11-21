@@ -137,7 +137,7 @@ This rule does not apply to elements whose `lang` attribute consists only of whi
 
 #### Inapplicable Example 6
 
-This rule does not apply to elements without an `xml:lang` attribute.
+This rule does not apply to elements without a `xml:lang` attribute.
 
 ```html
 <html lang="en"></html>

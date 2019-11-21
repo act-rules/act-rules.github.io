@@ -53,7 +53,7 @@ The `img` element's [accessible name][] uses the filename which accurately descr
 
 #### Passed Example 2
 
-The `img` element's [accessible name][] includes the filename, which in combination with the text content of the `a` element accurately describes the image.
+The `img` element's [accessible name][] includes the filename, which in combination with the text content of the `<a>` element accurately describes the image.
 
 ```html
 <a href="https://www.w3.org/WAI/demos/bad/img/w3c.png" download

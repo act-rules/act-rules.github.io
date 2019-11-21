@@ -158,7 +158,7 @@ When `link` is off screen.
 
 #### Passed Example 11
 
-`a` element where [accessible name][] is not empty.
+`<a>` element where [accessible name][] is not empty.
 
 ```html
 <a href="http://www.w3.org/WAI">:-)</a>
@@ -227,7 +227,7 @@ Link with image that has empty `aria-labelledby`.
 
 #### Failed Example 8
 
-Link is completely empty, but still shows up in focus order, so it should have an non-empty [accessible name][].
+Link is completely empty, but still shows up in focus order, so it should have a non-empty [accessible name][].
 
 ```html
 <a href="http://www.w3.org/WAI"></a>
@@ -247,7 +247,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 #### Failed Example 10
 
-`a` element where [accessible name][] through content is empty.
+`<a>` element where [accessible name][] through content is empty.
 
 ```html
 <a href="http://www.w3.org/WAI"> </a>

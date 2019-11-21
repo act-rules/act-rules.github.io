@@ -60,7 +60,7 @@ This rule assumes that assistive technologies are exposing all links on the page
 
 #### Passed Example 1
 
-A set of two HTML `a` elements have the same [accessible name][] and link to the [same resource][].
+A set of two HTML `<a>` elements have the same [accessible name][] and link to the [same resource][].
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
@@ -69,7 +69,7 @@ A set of two HTML `a` elements have the same [accessible name][] and link to the
 
 #### Passed Example 2
 
-A set of two HTML `a` elements that both resolve to [same resource][] after instant redirect.
+A set of two HTML `<a>` elements that both resolve to [same resource][] after instant redirect.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
@@ -96,7 +96,7 @@ These two links go to pages where the content section is the same, but where the
 
 #### Passed Example 5
 
-These two HTML `a` elements link to URLs that differ due to trailing slashes, but resolve to the [same resource][] after redirects caused by user agent.
+These two HTML `<a>` elements link to URLs that differ due to trailing slashes, but resolve to the [same resource][] after redirects caused by user agent.
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/">Contact us</a>
@@ -145,7 +145,7 @@ These two HTML `span` element have an [explicit role][] of link, and lead to t
 
 #### Passed Example 9
 
-A set of two SVG `a` elements have the same [accessible name][] and link to the [same resource][].
+A set of two SVG `<a>` elements have the same [accessible name][] and link to the [same resource][].
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -163,7 +163,7 @@ A set of two SVG `a` elements have the same [accessible name][] and link to the 
 
 #### Passed Example 10
 
-A set of one SVG `a` element and one HTML `a` element that have the same [accessible name][] and link to the [same resource][].
+A set of one SVG `<a>` element and one HTML `<a>` element that have the same [accessible name][] and link to the [same resource][].
 
 ```html
 <a href="http://facebook.com">Follow us"</a>
@@ -266,7 +266,7 @@ The same [accessible name][] is used for image links going to different resource
 
 #### Failed Example 5
 
-A set of two SVG `a` elements that have the same [accessible name][] but link to different resources.
+A set of two SVG `<a>` elements that have the same [accessible name][] but link to different resources.
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

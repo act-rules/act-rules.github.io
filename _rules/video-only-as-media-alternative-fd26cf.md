@@ -25,7 +25,7 @@ All the information contained in each target element is available as text (direc
 
 ## Expectation 2
 
-Each target element is labeled as an video alternative for text on the page.
+Each target element is labeled as a video alternative for text on the page.
 
 ## Expectation 3
 

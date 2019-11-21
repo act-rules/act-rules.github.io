@@ -143,7 +143,7 @@ Value attribute does NOT give an [accessible name][], only for input elements.
 
 #### Failed Example 2
 
-Span tag with role button with no name.
+Span tag with role button with an empty [accessible name][].
 
 ```html
 <span role="button"></span>
@@ -151,7 +151,7 @@ Span tag with role button with no name.
 
 #### Failed Example 3
 
-Off screen element without an [accessible name][].
+Off screen element has an empty [accessible name][].
 
 ```html
 <html>

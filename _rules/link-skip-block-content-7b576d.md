@@ -31,12 +31,14 @@ For each [section of repeated content][] within the test target, either the last
 - has a [semantic role][] of `link`; and
 - is [included in the accessibility tree][]; and
 - is [visible][] when [focused][]; and
-- when activated, moves focus to the first element in the [flat tree][] that is both [focusable][] and after this [section of content][]; and
+- can be activated by use of keyboard only; and
+- when activated, moves keyboard focus to the first element in the [flat tree][] after this [section of content][]; and
 - has an [accessible name][] that communicates that it skips this [section of content][].
 
 ## Assumptions
 
-This rule assumes that [sections of repeated content][section of repeated content] have already been identified within the test target, for example by comparison with other test targets within the same website, or any other means.
+- This rule assumes that [sections of repeated content][section of repeated content] have already been identified within the test target, for example by comparison with other test targets within the same website, or any other means.
+- This rule assumes that that [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123] requires the that the link can be activated by use of keyboard only.
 
 ## Accessibility Support
 
@@ -44,80 +46,115 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- [G123: Adding a link at the beginning of a block of repeated content to go to the end of the block](https://www.w3.org/WAI/WCAG21/Techniques/general/G123)
+- [G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123]
 - [CSS Scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
 
 ## Test Cases
+
+**Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
+
+**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`nav` and `main` elements), and the navigational [section of content][] (`nav` element` is a [section of repeated content][].
 
 ### Passed
 
 #### Passed Example 1
 
-Multiple [sections of repeated content][section of repeated content][] each have a first link element that when activated moves focus to the following [section of content][].
+The navigational [section of repeated content][] starts with a `link` that jumps to after it. Note that even if the target of the link is not itself a [focusable][] element, keyboard focus is still moving there and sequential focus navigation will continue from that point after activating the link.
 
 ```html
 <html lang="en">
-	<main>
-		<section id="section1" aria-label="Section 1 of page">
-			<nav aria-label="Section 1 navigation">
-				<a href="#section1Content">Skip section 1 navigation</a>
-				<ul>
-					<!-- Repeated section navigation -->
-				</ul>
-			</nav>
-			<div id="#section1Content">
-				<!-- Section content -->
-			</div>
-		</section>
-		<section aria-label="Section 2 of page">
-			<nav aria-label="Section 2 navigation">
-				<a href="#section2Content">Skip section 2 navigation</a>
-				<ul>
-					<!-- Repeated section navigation -->
-				</ul>
-			</nav>
-			<div id="section2Content">
-				<!-- Section content -->
-			</div>
-		</section>
+	<nav>
+		<a href="#main">Skip table of content</a>
+		<h1>Contents</h1>
+		<!-- list of links to each chapter, repeated on each web page -->
+	</nav>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
 	</main>
 </html>
 ```
 
 #### Passed Example 2
 
-A link exist at the beginning of a [section of repeated content][] and when activated moves focus to the next [section of content][].
+The link to skip the navigational [section of repeated content][] is located just before it.
 
 ```html
 <html lang="en">
+	<a href="#main">Skip table of content</a>
 	<nav>
-		<div id="mainNav">
-			<a href="#subNav">Skip main navigation links</a>
-			<ul>
-				<!-- Repeated main navigation links -->
-			</ul>
-		</div>
-		<div id="subNav">
-			<a href="#featuredAd">Skip sub navigation links</a>
-			<ul>
-				<!-- Repeated sub navigation links -->
-			</ul>
-		</div>
-		<div id="featuredAd">
-			<!-- Ad content -->
-		</div>
+		<h1>Contents</h1>
+		<!-- list of links to each chapter, repeated on each web page -->
 	</nav>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
 #### Passed Example 3
 
+The link to skip the [section of repeated content][] is not normally [visible][] but becomes so when [focused][].
+
 ```html
 <html lang="en">
 	<head>
-		<title></title>
+		<style>
+			.skip-link {
+				position: absolute;
+				top: -999px;
+			}
+
+			.skip-link:focus {
+				position: relative;
+				top: 0;
+			}
+		</style>
 	</head>
-	<body></body>
+	<body>
+		<nav>
+			<a class="skip-link" href="#main">Skip table of content</a>
+			<h1>Contents</h1>
+			<!-- list of links to each chapter, repeated on each web page -->
+		</nav>
+		<main id="main">
+			<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
+</html>
+```
+
+#### Passed Example 4
+
+The `div` element just before the [section of repeated content][] has a [semantic role][] of `link`, can be [focused][] and activated by keyboard only, and skip the [section of repeated content][].
+
+```html
+<html lang="en">
+	<div role="link" onclick="location.href='#main';" tabindex="1">Skip table of content</div>
+	<nav>
+		<h1>Contents</h1>
+		<!-- list of links to each chapter, repeated on each web page -->
+	</nav>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+	<script>
+		var link = document.getElementById('skip-link')
+
+		link.addEventListener('keyup', function(event) {
+			if (event.key === 'Enter') {
+				event.preventDefault()
+				link.click()
+			}
+		})
+	</script>
 </html>
 ```
 
@@ -190,6 +227,7 @@ The [document element][] of this [document][] is not an `html` element.
 [focusable]: #focusable 'Definition of focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'Definition of focused'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[tech g123]: (https://www.w3.org/WAI/WCAG21/Techniques/general/G123) 'Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block'
 [section of content]: #section-of-content 'Definition of section of content'
 [section of repeated content]: #section-of-repeated-content 'Definition of section of repeated content'
 [semantic role]: #semantic-role 'Definition of semantic role'

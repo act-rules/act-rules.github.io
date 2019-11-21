@@ -46,7 +46,7 @@ This rule assumes that one of the techniques listed here is used to comply to WC
 
 ## Accessibility Support
 
-Techniques and solutions that identify blocks of content are sufficient ways of passing [Success Criterion 2.4.1: Bypass blocks][sc241]. They are, however, directed toward screen reader users, and keyboard users will not benefit for these. Techniques and solutions based on links will benefit all users and are therefore recommended.
+Techniques and solutions that identify blocks of content are sufficient ways of passing [Success Criterion 2.4.1: Bypass blocks][sc241]. They are, however, directed users of assistive technologies. Techniques and solutions based on links will benefit all users (for example, keyboard users with no other assistive technology) and are therefore recommended.
 
 ## Background
 

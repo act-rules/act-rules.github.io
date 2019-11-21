@@ -200,23 +200,6 @@ The `td` element has a `headers` attribute referring to an ID that does not exis
 </table>
 ```
 
-#### Failed Example 3
-
-Both `td` elements have `headers` attribute which refers to ID that do not exist within the same `table`.
-
-```html
-<table>
-	<tr>
-		<th id="header1">Projects</th>
-		<th id="header2">Exams</th>
-	</tr>
-	<tr>
-		<td headers="NOT-EXIST-1">15%</td>
-		<td headers="NOT-EXIST-2">15%</td>
-	</tr>
-</table>
-```
-
 #### Failed Example 4
 
 The `headers` attribute on the cell refers to an element inside the same `table` which does not have a role of `rowheader` or `columnheader`.
@@ -272,17 +255,26 @@ The `table` has a `role="presentation"` and thus is not [included in the accessi
 
 #### Inapplicable Example 3
 
-The `table` is not [visible](#visible).
+The `table` is not [visible](#visible) in page.
 
 ```html
-<table style="display: none;">
-	<tr>
-		<td id="header1">Project Status</td>
-	</tr>
-	<tr>
-		<td>15%</td>
-	</tr>
-</table>
+<html>
+	<style>
+		.notInPage {
+			position: absolute;
+			left: -9999px;
+			top: -9999px;
+		}
+	</style>
+	<table class="notInPage">
+		<tr>
+			<td id="header1">Project Status</td>
+		</tr>
+		<tr>
+			<td>15%</td>
+		</tr>
+	</table>
+</html>
 ```
 
 #### Inapplicable Example 4
@@ -300,19 +292,4 @@ The rule applies only to `headers` attribute within a `table` element.
 		<div role="cell" headers="header1">15%</div>
 	</div>
 </div>
-```
-
-#### Inapplicable Example 5
-
-The `table` is not [included in the accessibility tree](#included-in-the-accessibility-tree).
-
-```html
-<table aria-hidden="true">
-	<tr>
-		<th id="header1" colspan="2">My document title</th>
-	</tr>
-	<tr>
-		<td headers="header1"><p>The excerpt</p></td>
-	</tr>
-</table>
 ```

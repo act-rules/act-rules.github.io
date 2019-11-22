@@ -22,19 +22,19 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any [HTML document][] with [keyboard shortcuts][keyboard shortcuts].
+The rule applies to any [HTML document][] with at least one [keyboard shortcut][] that requires pressing only [printable character][] keys.
 
 ## Expectation
 
 For the test target, the outcome of at least one of the following rules is passed:
 
-- [Keyboard shortcut can be disabled](https://act-rules.github.io/rules/670a30)
-- [Keyboard shortcut can be remapped](https://act-rules.github.io/rules/aa8b52) 
-- [Keyboard shortcut is only active when component has focus](https://act-rules.github.io/rules/1e9941)
+- [Printable keys only shortcut can be disabled](https://act-rules.github.io/rules/670a30)
+- [Printable keys only shortcut can be remapped](https://act-rules.github.io/rules/aa8b52) 
+- [Printable key shortcut is only active when component has focus](https://act-rules.github.io/rules/1e9941)
 
 ## Assumptions
 
-This rule assumes as applicable [keyboard shortcuts][keyboard shortcuts] those implemented by the test target [content][]. Any other means (e.g. browser extensions, browser settings, user agents, external browser applications) are not considered.
+This rule assumes as applicable [keyboard shortcuts][keyboard shortcut] those implemented by the test target [content][]. Any other means (e.g. browser extensions, browser settings, user agents, external browser applications) are not considered.
 
 ## Accessibility Support
 
@@ -580,12 +580,12 @@ The document is not an [HTML document][].
 ```
 
 [HTML document]: https://dom.spec.whatwg.org/#concept-document
-[keyboard shortcuts]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-keyboard-shortcut
+[keyboard shortcut]: https://www.w3.org/TR/WCAG21/#dfn-keyboard-shortcuts
 [mechanism]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-mechanism
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
-[user interface component]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-user-interface-component
-[printable characters]: #printable-characters 'Printable characters'
-[non-printable characters]: #non-printable-characters 'Non-printable characters'
+[user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
+[printable character]: #printable-characters 'Definition of printable characters'
+[non-printable characters]: #non-printable-characters 'Definition of non-printable characters'
 [visible]: #visible 'Definition of visible'
 [accessible name]: #accessible-name 'Definition of accessible name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

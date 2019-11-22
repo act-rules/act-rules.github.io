@@ -55,7 +55,7 @@ There is a known combination of a popular browser and assistive technology that 
 
 #### Passed Example 1
 
-The image button has an with [accessible name][] through the `alt` attribute.
+The image button has an [accessible name][] through the `alt` attribute.
 
 ```html
 <input type="image" src="/test-assets/shared/search-icon.png" alt="Search" />
@@ -63,7 +63,7 @@ The image button has an with [accessible name][] through the `alt` attribute.
 
 #### Passed Example 2
 
-The image button has an with [accessible name][] through the `aria-label` attribute.
+The image button has an [accessible name][] through the `aria-label` attribute.
 
 ```html
 <input type="image" src="/test-assets/shared/search-icon.png" aria-label="Search" />
@@ -71,7 +71,7 @@ The image button has an with [accessible name][] through the `aria-label` attrib
 
 #### Passed Example 3
 
-The image button has an with [accessible name][] through the `title` attribute.
+The image button has an [accessible name][] through the `title` attribute.
 
 ```html
 <input type="image" src="/test-assets/shared/search-icon.png" title="Search" />
@@ -79,7 +79,7 @@ The image button has an with [accessible name][] through the `title` attribute.
 
 #### Passed Example 4
 
-The image button has an with [accessible name][] through the `aria-labelledby` attribute.
+The image button has an [accessible name][] through the `aria-labelledby` attribute.
 
 ```html
 <input type="image" src="/test-assets/shared/search-icon.png" aria-labelledby="id1" />

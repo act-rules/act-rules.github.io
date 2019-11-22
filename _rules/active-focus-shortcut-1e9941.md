@@ -29,7 +29,7 @@ For each [user interface component][] that is a [descendent][] of the root node 
 
 ## Assumptions
 
-This rule assumes as applicable [keyboard shortcuts][keyboard shortcuts] those implemented by the test target [content][]. Any other means (e.g. browser extensions, browser settings, user agents, external browser applications) are not considered.
+This rule assumes as applicable [keyboard shortcuts][keyboard shortcut] those implemented by the test target [content][]. Any other means (e.g. browser extensions, browser settings, user agents, external browser applications) are not considered.
 
 ## Accessibility Support
 

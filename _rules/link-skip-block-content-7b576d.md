@@ -35,6 +35,8 @@ For each [section of repeated content][] within the test target, either the last
 - when activated, moves keyboard focus to the first element in the [flat tree][] after this [section of content][]; and
 - has an [accessible name][] that communicates that it skips this [section of content][].
 
+**Note**: "last" and "first" [focusable][] elements are to be taken in focus order, not in tree order.
+
 ## Assumptions
 
 - This rule assumes that [sections of repeated content][section of repeated content] have already been identified within the test target, for example by comparison with other test targets within the same website, or any other means.
@@ -53,13 +55,13 @@ _There are no major accessibility support issues known for this rule._
 
 **Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
 
-**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`aside` and `main` elements), and the complementary [section of content][] (`aside` element`) is a [section of repeated content][] which does not include any [focusable][] not shown explicitly.
+**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`aside` and `main` elements), and the complementary [section of content][] (`aside` element`) is a [section of repeated content][] which does not include any [focusable][] element not shown explicitly.
 
 ### Passed
 
 #### Passed Example 1
 
-The navigational [section of repeated content][] starts with a `link` that jumps to after it. Note that even if the target of the link is not itself a [focusable][] element, keyboard focus is still moving there and sequential focus navigation will continue from that point after activating the link.
+The complementary [section of repeated content][] starts with a `link` that jumps to after it. Note that even if the target of the link is not itself a [focusable][] element, keyboard focus is still moving there and sequential focus navigation will continue from that point after activating the link.
 
 ```html
 <html lang="en">
@@ -79,13 +81,13 @@ The navigational [section of repeated content][] starts with a `link` that jumps
 
 #### Passed Example 2
 
-The link to skip the navigational [section of repeated content][] is located just before it.
+The link to skip the complementary [section of repeated content][] is the first [focusable][] element inside it (in focus order), even if it is not the first element in tree order.
 
 ```html
 <html lang="en">
-	<a href="#main">Skip additional information</a>
 	<aside>
 		<h1>About the book</h1>
+		<a href="#main">Skip additional information</a>
 		<!-- short description of the book and biography of the authors, repeated on each page -->
 		<!-- does not include any focusable element -->
 	</aside>
@@ -99,7 +101,28 @@ The link to skip the navigational [section of repeated content][] is located jus
 
 #### Passed Example 3
 
-The link to skip the [section of repeated content][] is not normally [visible][] but becomes so when [focused][].
+The link to skip the complementary [section of repeated content][] is located before it and is the last [focusable][] element before it.
+
+```html
+<html lang="en">
+	<a href="#main">Skip additional information</a>
+	<div>Chapter 1</div>
+	<aside>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Passed Example 4
+
+The link to skip the complementary [section of repeated content][] is not normally [visible][] but becomes so when [focused][].
 
 ```html
 <html lang="en">
@@ -132,9 +155,9 @@ The link to skip the [section of repeated content][] is not normally [visible][]
 </html>
 ```
 
-#### Passed Example 4
+#### Passed Example 5
 
-The `div` element just before the [section of repeated content][] has a [semantic role][] of `link`, can be [focused][] and activated by keyboard only, and skip the [section of repeated content][].
+The `div` element just before the complementary [section of repeated content][] has a [semantic role][] of `link`, can be [focused][] and activated by keyboard only, and skips the [section of repeated content][].
 
 ```html
 <html lang="en">
@@ -162,11 +185,52 @@ The `div` element just before the [section of repeated content][] has a [semanti
 </html>
 ```
 
+#### Passed Example 6
+
+The link to skip the complementary [section of repeated content][] is the first [focusable][] element inside it (in focus order).
+
+```html
+<html lang="en">
+	<aside>
+		<h1 tabindex="2">About the book</h1>
+		<a href="#main" tabindex="1">Skip additional information</a>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Passed Example 7
+
+The link to skip the complementary [section of repeated content][] is located before it and is the last [focusable][] element before it.
+
+```html
+<html lang="en">
+	<a href="#main" tabindex="2">Skip additional information</a>
+	<div tabindex="1">Chapter 1</div>
+	<aside>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1
 
-There is no link to skip the sidebar [section of repeated content][].
+There is no link to skip the complementary [section of repeated content][].
 
 ```html
 <html lang="en">
@@ -185,7 +249,48 @@ There is no link to skip the sidebar [section of repeated content][].
 
 #### Failed Example 2
 
-The element to skip the navigational [section of repeated content][] does not have a role of `link`.
+The link to skip the complementary [section of repeated content][] is not the last [focusable][] element before it, in focus order.
+
+```html
+<html lang="en">
+	<a href="#main" tabindex="1">Skip additional information</a>
+	<div tabindex="2">Chapter 1</div>
+	<aside>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Failed Example 3
+
+The link to skip the complementary [section of repeated content][] is not the first [focusable][] element inside it (in focus order).
+
+```html
+<html lang="en">
+	<aside>
+		<h1 tabindex="1">About the book</h1>
+		<a href="#main" tabindex="2">Skip additional information</a>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Failed Example 4
+
+The element to skip the complementary [section of repeated content][] does not have a role of `link`.
 
 ```html
 <html lang="en">
@@ -213,29 +318,9 @@ The element to skip the navigational [section of repeated content][] does not ha
 </html>
 ```
 
-#### Failed Example 3
+#### Failed Example 5
 
-focus order
-
-```html
-<html lang="en">
-	<aside>
-		<a href="#main">Skip additional information</a>
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the authors, repeated on each page -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
-</html>
-```
-
-#### Failed Example 3
-
-The link to skip the navigational [section of repeated content][] is not [included in the accessibility tree][].
+The link to skip the complementary [section of repeated content][] is not [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -253,9 +338,9 @@ The link to skip the navigational [section of repeated content][] is not [includ
 </html>
 ```
 
-#### Failed Example 4
+#### Failed Example 6
 
-The link to skip the [section of repeated content][] is not [visible][] even when [focused][].
+The link to skip the complementary [section of repeated content][] is not [visible][] even when [focused][].
 
 ```html
 <html lang="en">
@@ -273,9 +358,9 @@ The link to skip the [section of repeated content][] is not [visible][] even whe
 </html>
 ```
 
-#### Failed Example 5
+#### Failed Example 7
 
-The element with a [semantic role][] of `link` which skips the navigational [section of repeated content][] cannot be activated by keyboard only.
+The element with a [semantic role][] of `link` which skips the complementary [section of repeated content][] cannot be activated by keyboard only.
 
 ```html
 <html lang="en">
@@ -293,15 +378,49 @@ The element with a [semantic role][] of `link` which skips the navigational [sec
 </html>
 ```
 
-#### Failed Example 4
+#### Failed Example 8
+
+The link at the start of the complementary [section of repeated content][] skips more than just this [section of repeated content][] (it also skips the navigational [section of repeated content][]
+
+**Note**: In this example, [sections of content][section of content] are identified by the [landmarks][landmark]. Both the complementary (`aside` element) and navigational (`nav` element) ones are [sections of repeated content][section of repeated content].
 
 ```html
-<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title></title>
-	</head>
-	<body></body>
+	<aside>
+		<a href="#main">Skip additional information</a>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<nav>
+		<h1>Contents</h1>
+		<!-- List of links to each chapter -->
+	</nav>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Failed Example 9
+
+The link to skip the complementary [section of repeated content][] has non-descriptive name.
+
+```html
+<html lang="en">
+	<aside>
+		<a href="#main">Read text</a>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
@@ -324,6 +443,7 @@ The [document element][] of this [document][] is not an `html` element.
 [focusable]: #focusable 'Definition of focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'Definition of focused'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark 'The landmark role in WAI ARIA'
 [tech g123]: (https://www.w3.org/WAI/WCAG21/Techniques/general/G123) 'Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block'
 [section of content]: #section-of-content 'Definition of section of content'
 [section of repeated content]: #section-of-repeated-content 'Definition of section of repeated content'

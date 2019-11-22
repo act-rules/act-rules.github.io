@@ -25,7 +25,7 @@ The rule applies to elements that are [included in the accessibility tree][] wit
 
 ## Expectation
 
-Each target element has an [accessible name][] that is not not empty (`""`).
+Each target element has an [accessible name][] that is not empty (`""`).
 
 **Note**: `input` elements of type `submit` and `reset` can get their [accessible name][] from a [default text](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset), as well as from a `value` or other attribute.
 

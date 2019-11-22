@@ -53,7 +53,7 @@ _There are no major accessibility support issues known for this rule._
 
 **Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014). The image is public domain, excerpt from a Ming Dynasty edition of the Romance of the Three Kingdoms, the original is kept in the library holdings of Peking University.
 
-**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`nav` and `main` elements).
+**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`nav` and `main` elements), and the navigational [section of content][] (`nav` element) is a [section of repeated content][].
 
 ### Passed
 

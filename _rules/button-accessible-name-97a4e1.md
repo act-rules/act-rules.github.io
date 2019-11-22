@@ -50,7 +50,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-The [accessible name][] of `button` elements comes from it's content.
+The [accessible name][] of `button` elements comes from their content.
 
 ```html
 <button>My button</button>
@@ -58,7 +58,7 @@ The [accessible name][] of `button` elements comes from it's content.
 
 #### Passed Example 2
 
-The [accessible name][] of the `input` button comes from it's `value` attribute.
+The [accessible name][] of the `input` button comes from its `value` attribute.
 
 ```html
 <input type="submit" value="Submit" />
@@ -82,7 +82,7 @@ Elements with `role="button"` require an [accessible name][]. In this example th
 
 #### Passed Example 5
 
-The `summary` element has an [implicit semantic role][#implicit-semantic-role] of `button`. In this example it is given an [accessible name][] through it's content.
+The `summary` element has an [implicit semantic role](#implicit-semantic-role) of `button`. In this example it is given an [accessible name][] through its content.
 
 ```html
 <summary>Press Here</summary>
@@ -143,7 +143,7 @@ The `value` attribute can not be used to provide an [accessible name][] for `but
 
 #### Failed Example 3
 
-Elements with an explicit semantic role of `button` require an [accessible name][], either provided through it's content, or through an `aria-label` or `aria-labelledby` attribute.
+Elements with an explicit semantic role of `button` require an [accessible name][], either provided through its content, or through an `aria-label` or `aria-labelledby` attribute.
 
 ```html
 <span role="button"></span>
@@ -188,7 +188,7 @@ Buttons that are not [included in the accessibility tree][] are ignored by assis
 
 #### Inapplicable Example 3
 
-A `button` element (or `input` button) can have it's role changed through the `role` attribute. Such elements are not applicable for this rule. In most scenarios this will still require an [accessible name][], but different rules, and different success criteria may be applicable.
+A `button` element (or `input` button) can have its role changed through the `role` attribute. Such elements are not applicable for this rule. In most scenarios this will still require an [accessible name][], but different rules, and different success criteria may be applicable.
 
 ```html
 <button role="link">take me somewhere</button>

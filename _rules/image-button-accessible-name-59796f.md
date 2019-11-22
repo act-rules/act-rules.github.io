@@ -29,7 +29,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to any HTML `input` element with a `type` attribute in the `Image Button` state, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+The rule applies to any HTML `input` element with a `type` attribute in the `Image Button` state, that is [included in the accessibility tree][].
 
 **Note:** The specification of the [`type`](https://html.spec.whatwg.org/#states-of-the-type-attribute) attribute describes in detail how to map the value of the attribute to its corresponding state.
 
@@ -154,5 +154,6 @@ The image button is ignored by assistive technologies because it is not [include
 <input type="image" src="/test-assets/shared/search-icon.png" style="display: none;" />
 ```
 
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [accessible name]: #accessible-name 'Definition of accessible name'
 [whitespace]: #whitespace 'Definition of whitespace'

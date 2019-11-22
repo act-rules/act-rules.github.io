@@ -1,6 +1,6 @@
 ---
 id: 1e9941
-name: Keyboard shortcut is only active when component has focus
+name: Printable keyboard shortcut is only active when component has focus
 rule_type: atomic
 description: |
   This rule checks that if keyboard shortcuts are implemented using only printable characters for a user interface component, then they are only available when that component has focus.
@@ -21,11 +21,11 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any [HTML document][] with [keyboard shortcuts][keyboard shortcuts].
+The rule applies to any [HTML document][] with at least one [keyboard shortcut][] that requires pressing only [printable character][] keys.
 
 ## Expectation
 
-For each [user interface component][] that is a [descendent][] of the root node of the test target, if [keyboard shortcuts][] are implemented using only [printable characters][], then they are only available when that component has focus.
+For each [user interface component][] that is a [descendent][] of the root node of the test target, a [printable character][] [shortcut][keyboard shortcuts] is only available when that component has [focus][].
 
 ## Assumptions
 
@@ -39,7 +39,6 @@ _There are no major accessibility support issues known for this rule._
 
 - [Understanding Success Criterion 2.1.4: Character Key Shortcuts](https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html)
 - [G127 Providing a mechanism to allow users to remap or turn off character key shortcuts](https://www.w3.org/WAI/WCAG21/Techniques/general/G217)
-- [F99 Failure of Success Criterion 2.1.4 due to implementing character key shortcuts that cannot be turned off or remapped](https://www.w3.org/WAI/WCAG21/Techniques/failures/F99)
 
 ## Test Cases
 
@@ -47,32 +46,35 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] that uses one [printable][printable characters] and one [non-printable characters][].
+The [HTML document][] has a [keyboard shortcut][] that uses one [printable][printable character] and one [non-printable characters][].
 
 ```html
 <html>
-  <head>
-    <title>Passed Example 1</title>
-    <script>
-      function shortcut() {
-        document.body.addEventListener('keydown', function(event) {
-          if (event.key === 'i' && event.ctrlKey) {
-            const text = document.getElementById('text');
-            text.className = text.className === 'italic' ? '' : 'italic';
-          }
-        });
-      }
-    </script>
-    <style>
-      .italic {
-        font-style: italic;
-      }
-    </style>
-  </head>
-  <body onload="shortcut();">
-    <div>Press <strong>ctrl+i</strong> to toggle italic format</div>
-    <div id="text">Some text inside the document content</div>
-  </body>
+<head>
+	<title>Passed Example 1 for rule 1e9941</title>
+	<script>
+		function shortcut() {
+			document.body.addEventListener('keydown', function (event) {
+				if (event.key === 'i' && event.ctrlKey) {
+					italic();
+				}
+			});
+		}
+		function italic() {
+			const text = document.getElementById('text');
+			text.className = text.className === 'italic' ? '' : 'italic';
+		}
+	</script>
+	<style>
+		.italic {
+			font-style: italic;
+		}
+	</style>
+</head>
+<body onload="shortcut();">
+	<button onclick="italic()">Italic (ctrl+i)</button>
+	<div id="text">Some text inside the document content</div>
+</body>
 </html>
 ```
 
@@ -83,7 +85,7 @@ The [HTML document][] has an element with the attribute `accesskey`. Accesskeys 
 ```html
 <html>
   <head>
-    <title>Passed Example 2</title>
+    <title>Passed Example 2 for rule 1e9941</title>
     <script>
       function shortcut() {
         const button = document.getElementById('italic');
@@ -112,19 +114,19 @@ The [HTML document][] has an element with the attribute `accesskey`. Accesskeys 
 
 #### Passed Example 3
 
-The [HTML document][] has a single [printable character][printable characters] [keyboard shortcut][keyboard shortcuts] for a [user interface component][], which is only available when that component has focus.
+The [HTML document][] has a single [printable character][] [keyboard shortcut][] for a [user interface component][], which is only available when that component has focus.
 
 ```html
 <html>
   <head>
-    <title>Passed Example 3</title>
+    <title>Passed Example 3 for rule 1e9941</title>
     <script>
       function shortcut() {
         document.body.addEventListener('keydown', function(event) {
           const text = document.getElementById('text');
 
           if (event.key === '+' && document.activeElement === text) {
-            document.getElementById('list').innerHTML += '<li>' + text + '</li>';
+            document.getElementById('list').innerHTML += '<li>' + text.value + '</li>';
             text.value = '';
             event.preventDefault();
           }
@@ -148,12 +150,12 @@ The [HTML document][] has a single [printable character][printable characters] [
 
 #### Failed Example 1
 
-The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a [printable character][printable characters] for a [user interface component][], and it's available even when the component does not have focus.
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] for a [user interface component][] which is available even when the component does not have focus.
 
 ```html
 <html>
   <head>
-    <title>Failed Example 1</title>
+    <title>Failed Example 1 for rule 1e9941</title>
     <script>
       function shortcut() {
         document.body.addEventListener('keydown', function(event) {
@@ -184,7 +186,7 @@ The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a
 
 #### Inapplicable Example 1
 
-The [HTML document][] does not use [keyboard shortcuts][keyboard shortcuts].
+The [HTML document][] does not use [keyboard shortcuts][keyboard shortcut].
 
 ```html
 <html>
@@ -203,10 +205,11 @@ The document is not an [HTML document][].
 </svg>
 ```
 
-[HTML document]: https://dom.spec.whatwg.org/#concept-document
-[keyboard shortcuts]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-keyboard-shortcut
-[user interface component]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-user-interface-component
+[html document]: https://dom.spec.whatwg.org/#concept-document
+[keyboard shortcut]: https://www.w3.org/TR/WCAG21/#dfn-keyboard-shortcuts
+[user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
 [descendent]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
-[printable characters]: #printable-characters 'Printable characters'
-[non-printable characters]: #non-printable-characters 'Non-printable characters'
+[printable character]: #printable-characters 'Definition of printable characters'
+[non-printable characters]: #non-printable-characters 'Definition of non-printable characters'
+[focus]: https://html.spec.whatwg.org/#focusable-area

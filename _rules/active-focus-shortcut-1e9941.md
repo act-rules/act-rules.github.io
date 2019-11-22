@@ -1,6 +1,6 @@
 ---
 id: 1e9941
-name: Printable keyboard shortcut is only active when component has focus
+name: Printable key shortcut is only active when component has focus
 rule_type: atomic
 description: |
   This rule checks that if keyboard shortcuts are implemented using only printable characters for a user interface component, then they are only available when that component has focus.
@@ -25,7 +25,7 @@ The rule applies to any [HTML document][] with at least one [keyboard shortcut][
 
 ## Expectation
 
-For each [user interface component][] that is a [descendent][] of the root node of the test target, a [printable character][] [shortcut][keyboard shortcuts] is only available when that component has [focus][].
+For each [user interface component][] that is a [descendent][] of the root node of the test target, a [printable character][] [shortcut][keyboard shortcut] is only available when that component has [focus][].
 
 ## Assumptions
 

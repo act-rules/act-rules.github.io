@@ -266,7 +266,7 @@ Element has ARIA role, but no ARIA states or properties
 
 `aria-hidden` state on an element that is not an HTML or SVG element
 
-```html
+```xml
 <math aria-hidden="true"></math>
 ```
 

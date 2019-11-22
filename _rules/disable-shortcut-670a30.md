@@ -1,9 +1,9 @@
 ---
 id: 670a30
-name: Keyboard shortcut can be disabled
+name: Printable keys only shortcut can be disabled
 rule_type: atomic
 description: |
-  This rule checks that if keyboard shortcuts are implemented using only printing characters, a mechanism to disable the shortcut exists.
+  This rule checks that if keyboard shortcuts are implemented using only printable characters, a mechanism to disable the shortcut exists.
 accessibility_requirements: # Remove whatever is not applicable
   wcag21:2.1.4: # Character Key Shortcuts (A)
     forConformance: true
@@ -21,17 +21,17 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any [HTML document][] with [keyboard shortcuts][keyboard shortcuts].
+The rule applies to any [HTML document][] with at least one [keyboard shortcut][] that requires pressing only [printable character][] keys.
 
 ## Expectation
 
-For the test target if [keyboard shortcuts][keyboard shortcuts] are implemented using only [printable characters][], a [mechanism][] to disable the shortcut exists.
+For the test target if any [keyboard shortcut][] requires pressing only [printable character][] keys, a [mechanism][] to disable the shortcut exists.
 
-If the [mechanism][] to disable the shortcut is a [user interface component][], then it must be [visible][] and [included in the accessibility tree][] with an [accessible name][] that is not empty ("").
+If the [mechanism][] to disable the shortcut is a [user interface component][], then it must be [visible][] and [included in the accessibility tree][] with an [accessible name][] that is not empty (`""`).
 
 ## Assumptions
 
-This rule assumes as applicable [keyboard shortcuts][keyboard shortcuts] those implemented by the test target [content][]. Any other means (e.g. browser extensions, browser settings, user agents, external browser applications) are not considered.
+This rule assumes as applicable [keyboard shortcuts][keyboard shortcut] those implemented by the test target [content][]. Any other means (e.g. browser extensions, browser settings, user agents, external browser applications) are not considered.
 
 ## Accessibility Support
 
@@ -49,12 +49,12 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] that uses one [printable][printable characters] and one [non-printable characters][].
+The [HTML document][] has a [keyboard shortcut][] that uses one [printable][printable character] and one [non-printable characters][].
 
 ```html
 <html>
   <head>
-    <title>Passed Example 1</title>
+    <title>Passed Example 1 for rule 670a30</title>
     <script>
       function shortcut() {
         document.body.addEventListener('keydown', function(event) {
@@ -80,12 +80,12 @@ The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] that uses on
 
 #### Passed Example 2
 
-The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a [printable character][printable characters], and it can be disabled.
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][], and it can be disabled.
 
 ```html
 <html>
   <head>
-    <title>Passed Example 2</title>
+    <title>Passed Example 2 for rule 670a30</title>
     <script>
       function shortcut(event) {
         document.body.addEventListener('keydown', function(event) {
@@ -120,7 +120,7 @@ The [HTML document][] has an element with the attribute `accesskey`. Accesskeys 
 ```html
 <html>
   <head>
-    <title>Passed Example 3</title>
+    <title>Passed Example 3 for rule 670a30</title>
     <script>
       function shortcut() {
         const button = document.getElementById('italic');
@@ -151,12 +151,12 @@ The [HTML document][] has an element with the attribute `accesskey`. Accesskeys 
 
 #### Failed Example 1
 
-The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a [printable character][printable characters], and it cannot be disabled.
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][], and it cannot be disabled.
 
 ```html
 <html>
   <head>
-    <title>Failed Example 1</title>
+    <title>Failed Example 1 for rule 670a30</title>
     <script>
       function shortcut() {
         document.body.addEventListener('keydown', function(event) {
@@ -182,12 +182,12 @@ The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a
 
 #### Failed Example 2
 
-The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a [printable character][printable characters], and it can be disabled, but the disable [mechanism][] is not [visible][].
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disable [mechanism][] is not [visible][].
 
 ```html
 <html>
   <head>
-    <title>Failed Example 2</title>
+    <title>Failed Example 2 for rule 670a30</title>
     <script>
       function shortcut() {
         document.body.addEventListener('keydown', function(event) {
@@ -219,12 +219,12 @@ The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a
 
 #### Failed Example 3
 
-The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a [printable character][printable characters], and it can be disabled, but the disable [mechanism][] is not is not [included in the accessibility tree][].
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disable [mechanism][] is not is not [included in the accessibility tree][].
 
 ```html
 <html>
   <head>
-    <title>Failed Example 3</title>
+    <title>Failed Example 3 for rule 670a30</title>
     <script>
       function shortcut() {
         document.body.addEventListener('keydown', function(event) {
@@ -256,12 +256,12 @@ The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a
 
 #### Failed Example 4
 
-The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a [printable character][printable characters], and it can be disabled, but the disable [mechanism][] has an empty ("") [accessible name][].
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disable [mechanism][] has an empty (`""`) [accessible name][].
 
 ```html
 <html>
   <head>
-    <title>Failed Example 4</title>
+    <title>Failed Example 4 for rule 670a30</title>
     <script>
       function shortcut() {
         document.body.addEventListener('keydown', function(event) {
@@ -295,7 +295,7 @@ The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a
 
 #### Inapplicable Example 1
 
-The [HTML document][] does not use [keyboard shortcuts][keyboard shortcuts].
+The [HTML document][] does not use [keyboard shortcuts][keyboard shortcut].
 
 ```html
 <html>
@@ -315,11 +315,12 @@ The document is not an [HTML document][].
 ```
 
 [HTML document]: https://dom.spec.whatwg.org/#concept-document
-[keyboard shortcuts]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-keyboard-shortcut
+[keyboard shortcut]: https://www.w3.org/TR/WCAG21/#dfn-keyboard-shortcuts
 [mechanism]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-mechanism
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
-[user interface component]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-user-interface-component
-[printable characters]: #printable-characters 'Printable characters'
+[user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
+[printable character]: #printable-characters 'Definition of printable characters'
 [visible]: #visible 'Definition of visible'
 [accessible name]: #accessible-name 'Definition of accessible name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[non-printable characters]: #non-printable-characters 'Definition of non-printable characters'

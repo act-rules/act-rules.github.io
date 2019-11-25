@@ -18,6 +18,7 @@
 - UA/AT
 - WCAG
 - WCAG2
+- WCAG21
 - CSS3
 - UA
 - UI
@@ -60,6 +61,8 @@
 - www.w3.org
 - eval
 - html52
+- css-scoping
+- csswg
 - whatwg
 - dom
 - wai-aria

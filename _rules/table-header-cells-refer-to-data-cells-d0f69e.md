@@ -113,7 +113,7 @@ Each row and column header element has assigned cells, within the same element h
 
 ```html
 <table role="grid">
-	<thead role="rowgroup">
+	<thead>
 		<tr role="row">
 			<td></td>
 			<th role="columnheader">Breakfast</th>
@@ -121,7 +121,7 @@ Each row and column header element has assigned cells, within the same element h
 			<th role="columnheader">Dinner</th>
 		</tr>
 	</thead>
-	<tbody role="rowgroup">
+	<tbody>
 		<tr role="row">
 			<th scope="row" role="rowheader">Day 1</th>
 			<td>8:00</td>
@@ -231,4 +231,16 @@ The rule does not apply to table element that is not [visible](#visible) in page
 		</table>
 	</body>
 </html>
+```
+
+#### Inapplicable Example 3
+
+The rule does not apply to table element that has no [descendants](https://dom.spec.whatwg.org/#concept-tree-descendant) with [semantic roles](#semantic-role) of either [rowheader](https://www.w3.org/TR/wai-aria-1.1/#rowheader) or [columnheader](https://www.w3.org/TR/wai-aria-1.1/#columnheader).
+
+```html
+<table role="presentation">
+	<tr>
+		<td>12:00</td>
+	</tr>
+</table>
 ```

@@ -17,13 +17,13 @@ accessibility_requirements: # Remove whatever is not applicable
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
   wcag-technique:Xxx: # <Technique title>
-    forConformance: true | false
+    forConformance: false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
   using-aria:anchor-name: # <Heading in Using ARIA>
     title: Title to display
-    forConformance: true | false
+    forConformance: false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed

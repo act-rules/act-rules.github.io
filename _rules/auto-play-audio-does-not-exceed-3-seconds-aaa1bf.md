@@ -6,7 +6,7 @@ description: |
   content that plays automatically does not output audio for more than 3 seconds.
 accessibility_requirements:
   wcag-technique:G60: # Playing a sound that turns off automatically within three seconds
-    forConformance: true
+    forConformance: false
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed

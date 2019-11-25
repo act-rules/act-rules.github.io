@@ -11,7 +11,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag-technique:G158: # Providing an alternative for time-based media for audio-only content
-    forConformance: true
+    forConformance: false
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed

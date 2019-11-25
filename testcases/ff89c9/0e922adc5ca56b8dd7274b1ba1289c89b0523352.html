@@ -1,0 +1,10 @@
+
+<div role="list" aria-owns="item"></div>
+
+<div id="host"></div>
+
+<script>
+	const host = document.querySelector('#host')
+	const root = host.attachShadow({ mode: 'open' })
+	root.innerHTML = '<div id="item" role="listitem">List item 1</div>'
+</script>

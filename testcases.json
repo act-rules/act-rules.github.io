@@ -1354,10 +1354,10 @@
       }
     },
     {
-      "testcaseId": "0a41dce9a5dc6ed0c90f8828f6d42804081b166d",
+      "testcaseId": "2640a160d0e1dbd3c8f392bfe8afffe086e97454",
       "testcaseTitle": "Inapplicable Example 4",
-      "url": "https://act-rules.github.io/testcases/6a7281/0a41dce9a5dc6ed0c90f8828f6d42804081b166d.html",
-      "relativePath": "testcases/6a7281/0a41dce9a5dc6ed0c90f8828f6d42804081b166d.html",
+      "url": "https://act-rules.github.io/testcases/6a7281/2640a160d0e1dbd3c8f392bfe8afffe086e97454.html",
+      "relativePath": "testcases/6a7281/2640a160d0e1dbd3c8f392bfe8afffe086e97454.html",
       "expected": "inapplicable",
       "ruleId": "6a7281",
       "ruleName": "ARIA state or property has valid value",
@@ -4710,10 +4710,10 @@
       }
     },
     {
-      "testcaseId": "e5f528b52f76060cd1034f03fdbf5066afbe5142",
+      "testcaseId": "0fbe81bfcf142fc25b0987239247f584ba9e38d7",
       "testcaseTitle": "Inapplicable Example 2",
-      "url": "https://act-rules.github.io/testcases/b5c3f8/e5f528b52f76060cd1034f03fdbf5066afbe5142.html",
-      "relativePath": "testcases/b5c3f8/e5f528b52f76060cd1034f03fdbf5066afbe5142.html",
+      "url": "https://act-rules.github.io/testcases/b5c3f8/0fbe81bfcf142fc25b0987239247f584ba9e38d7.html",
+      "relativePath": "testcases/b5c3f8/0fbe81bfcf142fc25b0987239247f584ba9e38d7.html",
       "expected": "inapplicable",
       "ruleId": "b5c3f8",
       "ruleName": "HTML page has `lang` attribute",
@@ -5016,10 +5016,10 @@
       }
     },
     {
-      "testcaseId": "a03dda1ce940510dbf8fdebd4a1d883bc4195dc9",
+      "testcaseId": "88e77bee0e7f0000f0b5de85fbd8f8a738071744",
       "testcaseTitle": "Inapplicable Example 7",
-      "url": "https://act-rules.github.io/testcases/5b7ae0/a03dda1ce940510dbf8fdebd4a1d883bc4195dc9.html",
-      "relativePath": "testcases/5b7ae0/a03dda1ce940510dbf8fdebd4a1d883bc4195dc9.html",
+      "url": "https://act-rules.github.io/testcases/5b7ae0/88e77bee0e7f0000f0b5de85fbd8f8a738071744.html",
+      "relativePath": "testcases/5b7ae0/88e77bee0e7f0000f0b5de85fbd8f8a738071744.html",
       "expected": "inapplicable",
       "ruleId": "5b7ae0",
       "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",

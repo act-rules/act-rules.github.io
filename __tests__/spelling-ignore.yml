@@ -8,6 +8,12 @@
 - html
 - iframe
 - img
+- ul
+- ol
+- dl
+- li
+- dd
+- dt
 - frameset
 - h1
 - h1-h6
@@ -32,6 +38,7 @@
 - DOM
 - SVG
 - PDFs
+- DPUB
 - url
 - voiceover
 - subtag
@@ -95,6 +102,10 @@
 - searchbox
 - treeitem
 - listbox
+- listitem
+- tablist
+- tabpanel
+- doc-biblioentry
 - textbox
 - autocomplete
 - textarea

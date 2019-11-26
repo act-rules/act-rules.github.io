@@ -5,9 +5,7 @@
 const { exec } = require('child_process')
 
 const command = (params, file) =>
-	`git log --pretty=format:"${params.join(command.format.param)}${
-		command.format.line
-	}" --follow -- ${file}`
+	`git log --pretty=format:"${params.join(command.format.param)}${command.format.line}" --follow -- ${file}`
 
 const hash = 451436388.16325235 //Math.random()*10e8;
 command.format = {

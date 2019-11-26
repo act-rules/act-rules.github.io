@@ -12,10 +12,11 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-  - CSS Styling
-authors:
-  - Jey Nandakumar
-  - Audrey Maniez
+    - CSS Styling
+acknowledgements:
+  authors:
+    - Jey Nandakumar
+    - Audrey Maniez
 ---
 
 ## Applicability
@@ -285,4 +286,3 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 	</body>
 </html>
 ```
-

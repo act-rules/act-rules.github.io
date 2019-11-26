@@ -12,12 +12,13 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-authors:
-  - Wilco Fiers
-  - Stein Erik Skotkjerra
-  - Bryn Anderson
-  - Anne Thyme Nørregaard
-  - Jey Nandakumar
+acknowledgements:
+  authors:
+    - Wilco Fiers
+    - Stein Erik Skotkjerra
+    - Bryn Anderson
+    - Anne Thyme Nørregaard
+    - Jey Nandakumar
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -72,7 +73,7 @@ This page has a `title` with content.
 
 #### Passed Example 2
 
-This page gives a `title` to an iframe.
+This page `title` element is for the entire page, including content in the `iframe` without its own `title`.
 
 ```html
 <html>
@@ -120,16 +121,6 @@ The first `title` element has content.
 	<body>
 		<title></title>
 	</body>
-</html>
-```
-
-#### Passed Example 6
-
-The `title` only contains characters that are not letters or numbers.
-
-```html
-<html>
-	<title>#$@&%*!</title>
 </html>
 ```
 

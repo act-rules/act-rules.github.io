@@ -13,8 +13,9 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-authors:
-  - Bryn Anderson
+acknowledgements:
+  authors:
+    - Bryn Anderson
 ---
 
 ## Applicability

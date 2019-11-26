@@ -34,9 +34,17 @@ The rule applies to each [required][] HTML element that has one of the following
 - inherit from the [abstract][] `input` or `select` role, and
 - do not have a [required context][] role that itself inherits from one of those roles.
 
-## Expectation
+## Expectation 1
 
-For each test target, if an [error is automatically detected][automatically detected error], a message that identifies the test target, and describes the error is [visible][] and [included in the accessibility tree][].
+For each test target where the user input caused the appearance of an [error message][], the error message is [visible][] and [included in the accessibility tree][].
+
+## Expectation 2
+
+Each [error message][] from Expectation 1 includes the identification the test target.
+
+## Expectation 3
+
+Each [error message][] from Expectation 1 describes the error.
 
 ## Assumptions
 
@@ -222,7 +230,7 @@ The `input` element is not inside a `form` element.
 [abstract]: https://www.w3.org/TR/wai-aria/#abstract_roles
 [aria 1.1]: https://www.w3.org/TR/wai-aria-1.1/
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
-[form element]: https://www.w3.org/TR/html52/sec-forms.html#the-form-element
+[error message]: #error-message 'Definition of error message'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [required]: #required-field 'Definition of required field'
 [required context]: https://www.w3.org/TR/wai-aria/#scope

@@ -24,9 +24,17 @@ acknowledgements:
 
 The rule applies to each HTML element with a [semantic role][] that inherits from the [abstract][] `input` or `select` roles.
 
-## Expectation
+## Expectation 1
 
-For each test target, if an [error is automatically detected][automatically detected error], a message that identifies the test target, and describes the error is [visible][] and [included in the accessibility tree][].
+For each test target where the user input caused the appearance of an [error message][], the error message is [visible][] and [included in the accessibility tree][].
+
+## Expectation 2
+
+Each [error message][] from Expectation 1 includes the identification the test target.
+
+## Expectation 3
+
+Each [error message][] from Expectation 1 describes the error.
 
 ## Assumptions
 
@@ -48,7 +56,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The error message provided in the vicinity of the `input` element identifies the [automatically detected error][]. Instructions are provided in the vicinity of the `input` element.
+The error message provided in the vicinity of the `input` element identifies the input field (via its label) and describes the error.
 
 ```html
 <script>
@@ -88,7 +96,7 @@ No error message is provided.
 
 #### Failed Example 2
 
-The error message does not identify the [automatically detected error][].
+The error message does not identify the input field.
 
 ```html
 <script>
@@ -110,6 +118,29 @@ The error message does not identify the [automatically detected error][].
 ```
 
 #### Failed Example 3
+
+The error message does not describe the error.
+
+```html
+<script>
+	function processForm() {
+		document.getElementById('error').innerText = ''
+		var age = document.getElementById('age').value
+		if (!age || isNaN(age) || age < 1) {
+			document.getElementById('error').innerText = 'Please enter a correct age.'
+		}
+	}
+</script>
+
+<form>
+	<label for="age">Age (years)</label>
+	<input type="number" id="age" />
+	<span id="error"></span><br />
+	<input type="button" value="Submit" onclick="processForm()" />
+</form>
+```
+
+#### Failed Example 4
 
 The error message is not visible.
 
@@ -135,7 +166,7 @@ The error message is not visible.
 </form>
 ```
 
-#### Failed Example 4
+#### Failed Example 5
 
 The error message is not included in the accessibility tree.
 
@@ -177,7 +208,7 @@ No input elements with the required [semantic roles][semantic role].
 ```
 
 [abstract]: https://www.w3.org/TR/wai-aria/#abstract_roles
-[automatically detected error]: #automatic-error-detection 'Definition of automatic error detection'
+[error message]: #error-message 'Definition of error message'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'

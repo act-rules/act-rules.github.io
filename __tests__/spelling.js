@@ -9,10 +9,21 @@ const reporter = require('vfile-reporter')
 
 const describeRule = require('../test-utils/describe-rule')
 
-const ignore = yaml.safeLoad(fs.readFileSync('./__tests__/spelling-ignore.yml', 'utf8'))
+const ignoreWords = yaml.safeLoad(fs.readFileSync('./__tests__/spelling-ignore.yml', 'utf8'))
+// https://www.w3.org/WAI/WCAG21/Techniques
+const ignoreTechniques = [`ARIA`, `C`, `F`, `G`, `H`].reduce((out, techniquePrefix) => {
+	let i = 1
+	while (i < 500) {
+		// Arbitrarily chosen number
+		const technique = `${techniquePrefix}${i}`
+		out.push(technique)
+		i++
+	}
+	return out
+}, [])
 const spellOptions = {
 	dictionary,
-	ignore,
+	ignore: [...ignoreWords, ...ignoreTechniques],
 }
 
 /**

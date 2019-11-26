@@ -10,8 +10,9 @@ const reporter = require('vfile-reporter')
 const describeRule = require('../test-utils/describe-rule')
 
 const ignoreWords = yaml.safeLoad(fs.readFileSync('./__tests__/spelling-ignore.yml', 'utf8'))
+// Ignoring WCAG techniques short name (eg "G31") and SC abbreviations for links (eg "sc241")
 // https://www.w3.org/WAI/WCAG21/Techniques
-const ignoreTechniques = [`ARIA`, `C`, `F`, `G`, `H`].reduce((out, techniquePrefix) => {
+const ignoreTechniques = ['ARIA', 'C', 'F', 'G', 'H', 'sc'].reduce((out, techniquePrefix) => {
 	let i = 1
 	while (i < 500) {
 		// Arbitrarily chosen number

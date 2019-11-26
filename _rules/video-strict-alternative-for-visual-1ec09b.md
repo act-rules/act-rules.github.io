@@ -14,9 +14,10 @@ input_rules:
   - 1ea59c
   - ab4d13
   - f196ce
-authors:
-  - Wilco Fiers
-  - Brian Bors
+acknowledgements:
+  authors:
+    - Wilco Fiers
+    - Brian Bors
 ---
 
 ## Applicability

@@ -12,9 +12,10 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - Source code
-authors:
-  - Wilco Fiers
-  - Emma Pratt Richens
+acknowledgements:
+  authors:
+    - Wilco Fiers
+    - Emma Pratt Richens
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)

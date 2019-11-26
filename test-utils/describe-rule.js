@@ -6,14 +6,14 @@ const getRulesMarkdownData = require('../utils/get-rules-markdown-data')
  * @param {String} ruleType type of rule
  */
 const getRuleIdsOfRuleType = (rules, ruleType) => {
-  return rules.reduce((out, ruleData) => {
-    const { frontmatter } = ruleData
-    const { rule_type, id } = frontmatter
-    if (rule_type === ruleType) {
-      out.push(id)
-    }
-    return out
-  }, [])
+	return rules.reduce((out, ruleData) => {
+		const { frontmatter } = ruleData
+		const { rule_type, id } = frontmatter
+		if (rule_type === ruleType) {
+			out.push(id)
+		}
+		return out
+	}, [])
 }
 
 /**
@@ -22,24 +22,24 @@ const getRuleIdsOfRuleType = (rules, ruleType) => {
  * @param {Function} runTests function callback of `describe` block, which executes per rule
  */
 const describeRule = (groupName, runTests) => {
-  const rules = getRulesMarkdownData()
+	const rules = getRulesMarkdownData()
 
-  /**
-   * Create arbitrary meta data that can be used in various tests
-   */
-  const atomicRuleIds = getRuleIdsOfRuleType(rules, 'atomic')
-  const metaData = {
-    atomicRuleIds,
-  }
+	/**
+	 * Create arbitrary meta data that can be used in various tests
+	 */
+	const atomicRuleIds = getRuleIdsOfRuleType(rules, 'atomic')
+	const metaData = {
+		atomicRuleIds,
+	}
 
-  rules.forEach(ruleData => {
-    const { filename } = ruleData
-    describe(filename, () => {
-      describe(groupName, () => {
-        runTests(ruleData, metaData)
-      })
-    })
-  })
+	rules.forEach(ruleData => {
+		const { filename } = ruleData
+		describe(filename, () => {
+			describe(groupName, () => {
+				runTests(ruleData, metaData)
+			})
+		})
+	})
 }
 
 module.exports = describeRule

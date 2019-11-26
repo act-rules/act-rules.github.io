@@ -3,7 +3,7 @@ id: de46e4
 name: Element within `body` has valid `lang` attribute
 rule_type: atomic
 description: |
-  This rule checks that the `lang` and `xml:lang` attributes of an element in the page body have a valid primary language subtag.
+  This rule checks that the `lang` attribute of an element in the page body has a valid primary language subtag.
 accessibility_requirements:
   wcag20:3.1.2: # Language of Parts (AA)
     forConformance: true
@@ -12,22 +12,27 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-authors:
-  - Bryn Anderson
-  - Jey Nandakumar
+acknowledgements:
+  authors:
+    - Bryn Anderson
+    - Jey Nandakumar
 ---
 
 ## Applicability
 
-This rule applies to each HTML or SVG element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of the `body` element and has a `lang` or `xml:lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
+This rules applies to any HTML element that:
+
+- has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`; and
+- is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of a `body` element; and
+- has a `lang` attribute that is neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 ## Expectation
 
-For each test target, the `lang` and `xml:lang` have a [valid language subtag](#valid-language-subtag) if the attribute is neither empty ("") nor only [whitespace](#whitespace).
+For each test target, the `lang` attribute has a [valid language subtag](#valid-language-subtag).
 
 ## Assumptions
 
-This rule assumes that the presence of a lang or xml:lang attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
+This rule assumes that the presence of a `lang` attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
 
 ## Accessibility Support
 
@@ -58,48 +63,12 @@ The `lang` attribute has a value that is not empty ("") and has a valid primary 
 
 #### Passed Example 2
 
-The `xml:lang` attribute has a value that is not empty ("") and has a valid primary language subtag.
-
-```html
-<html>
-	<body>
-		<p xml:lang="DE"></p>
-	</body>
-</html>
-```
-
-#### Passed Example 3
-
 The `lang` attribute has a value that is not empty ("") and has a valid primary language subtag. The region section in the value is ignored by the rule.
 
 ```html
 <html>
 	<body>
 		<blockquote lang="fr-CH"></blockquote>
-	</body>
-</html>
-```
-
-#### Passed Example 4
-
-The `lang` and `xml:lang` attribute values are not empty ("") and both have a valid primary language subtag.
-
-```html
-<html>
-	<body>
-		<p lang="en" xml:lang="en-GB">Good Morning.</p>
-	</body>
-</html>
-```
-
-#### Passed Example 5
-
-The `lang` and `xml:lang` attribute values are either empty ("") or have a valid primary language subtag.
-
-```html
-<html>
-	<body>
-		<p lang="en" xml:lang="">Good Morning.</p>
 	</body>
 </html>
 ```
@@ -120,18 +89,6 @@ The `lang` attribute value is not a valid primary language subtag.
 
 #### Failed Example 2
 
-The `xml:lang` attribute value is not a valid primary language subtag.
-
-```html
-<html>
-	<body>
-		<p xml:lang="english"></p>
-	</body>
-</html>
-```
-
-#### Failed Example 3
-
 The `lang` attribute value has a valid primary language subtag, but a syntactically invalid region subtag.
 
 ```html
@@ -142,7 +99,7 @@ The `lang` attribute value has a valid primary language subtag, but a syntactica
 </html>
 ```
 
-#### Failed Example 4
+#### Failed Example 3
 
 The `lang` attribute value is not empty ("") and is not a valid primary language subtag.
 
@@ -154,23 +111,11 @@ The `lang` attribute value is not empty ("") and is not a valid primary language
 </html>
 ```
 
-#### Failed Example 5
-
-The `xml:lang` attribute value is not empty ("") and is not a valid primary language subtag.
-
-```html
-<html>
-	<body>
-		<article xml:lang="123"></article>
-	</body>
-</html>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-The rule applies to elements with the `body` of a webpage. `html` elements are ignored by the rule.
+The rule applies to elements within the `body` of a webpage. `html` elements are ignored by the rule.
 
 ```html
 <html lang="en">
@@ -180,7 +125,7 @@ The rule applies to elements with the `body` of a webpage. `html` elements are i
 
 #### Inapplicable Example 2
 
-An empty value for `lang` attribute is ignored as the rule only applies to `lang` or `xml:lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
+An empty value for the `lang` attribute is ignored as the rule only applies to `lang` attributes that are neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 ```html
 <html>
@@ -192,19 +137,7 @@ An empty value for `lang` attribute is ignored as the rule only applies to `lang
 
 #### Inapplicable Example 3
 
-An empty value for `xml:lang` attribute is ignored as the rule only applies to `lang` or `xml:lang` attribute that is neither empty ("") nor only [whitespace](#whitespace).
-
-```html
-<html>
-	<body>
-		<article xml:lang=""></article>
-	</body>
-</html>
-```
-
-#### Inapplicable Example 4
-
-The `lang` attribute value consists of only [whitespace](#whitespace).
+The `lang` attribute value consists of only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 ```html
 <html>

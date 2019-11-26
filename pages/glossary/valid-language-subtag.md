@@ -3,7 +3,7 @@ title: Valid Language Subtag
 key: valid-language-subtag
 ---
 
-A text string following the syntax as defined in [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt), with a primary language from the [language subtag registry](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
+A text string following the syntax as defined in [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt), with a [primary language subtag](https://tools.ietf.org/html/bcp47#section-2.2.1) from the [language subtag registry](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
 
 Further reading:
 

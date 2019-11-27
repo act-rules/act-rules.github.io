@@ -18,10 +18,11 @@ input_aspects:
   - CSS Styling
   - Language
 
-authors:
-  - Brian Bors
-  - Kasper Isager
-  - Wilco Fiers
+acknowledgements:
+  authors:
+    - Brian Bors
+    - Kasper Isager
+    - Wilco Fiers
 ---
 
 ## Applicability

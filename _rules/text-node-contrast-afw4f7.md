@@ -32,13 +32,13 @@ Any [visible](#visible) character in a [text node](https://dom.spec.whatwg.org/#
 - Is used in the [accessible name](#accessible-name) of a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget) that is [disabled]()
 - Has a [semantic role](#semantic-role) of [group](https://www.w3.org/TR/wai-aria-1.1/#group) that is [disabled]()
 
-**Note**: When the text color is the same as the background color, the element is not visible, and so is not applicable.
+**Note**: When the text color is the same as the background color, the [text node](https://dom.spec.whatwg.org/#text) is not [visible](#visible), and so it does not need to be tested for contrast.
 
 ## Expectation
 
 For each test target, the [highest possible contrast](#highest-possible-contrast) between the [foreground colors](#foreground-colors-of-text) and [background colors](#background-colors-of-text) is at least 4.5:1 or 3.0:1 for [larger scale text](#large-scale-text), except if the [text node](https://dom.spec.whatwg.org/#text) is [decorative](#decorative), or doesn't express anything in [human language](https://www.w3.org/TR/WCAG21/#dfn-human-language-s).
 
-**Note**: Passing this rule does not mean that the [text node](https://dom.spec.whatwg.org/#text) has sufficient color contrast. For example: White text on a black and white image passes this rule as long as it touches at least 1 black pixel. Whether or not that text is legible depends on the how much of the white words are positioned on the black parts of the image. This requires further testing.
+**Note**: Passing this rule does not mean that the text has sufficient color contrast. If all background pixels have a low contrast with all foreground pixels, the success criterion is guaranteed to not be satisfied. When some pixels have sufficient contrast, and others do not, ledgability should be considered. There is no clear method for determining ledgability, which is why this is out of scope for this rule.
 
 ## Assumptions
 

@@ -105,6 +105,6 @@ The rule does not apply to `svg` element.
 
 The rule does not apply to `math` element.
 
-```svg
+```xml
 <math></math>
 ```

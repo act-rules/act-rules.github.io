@@ -62,7 +62,7 @@ For `area` elements that have a `href` attribute, but are not nested inside a `m
 
 #### Passed Example 1
 
-`<a>` element with [accessible name][] through content.
+`a` element with [accessible name][] through content.
 
 ```html
 <a href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
@@ -158,7 +158,7 @@ When `link` is off screen.
 
 #### Passed Example 11
 
-`<a>` element where [accessible name][] is not empty.
+`a` element where [accessible name][] is not empty.
 
 ```html
 <a href="http://www.w3.org/WAI">:-)</a>

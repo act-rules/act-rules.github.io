@@ -1,7 +1,6 @@
 const retext = require('retext')
 const removeMd = require('remove-markdown')
 const spell = require('retext-spell')
-const indefiniteArticle = require('retext-indefinite-article')
 const redundantAcronyms = require('retext-redundant-acronyms')
 const repeated = require('retext-repeated-words')
 const urls = require('retext-syntax-urls')
@@ -66,7 +65,6 @@ const checkSpelling = text => {
 	return new Promise((resolve, reject) => {
 		retext()
 			.use(english)
-			.use(indefiniteArticle)
 			.use(redundantAcronyms)
 			.use(repeated)
 			.use(urls)

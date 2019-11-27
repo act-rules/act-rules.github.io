@@ -247,7 +247,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 #### Failed Example 10
 
-`<a>` element where [accessible name][] through content is empty.
+`a` element where [accessible name][] through content is empty.
 
 ```html
 <a href="http://www.w3.org/WAI"> </a>
@@ -257,7 +257,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 #### Inapplicable Example 1
 
-`<a>` element that has had its role changed.
+`a` element that has had its role changed.
 
 ```html
 <a href="http://www.w3.org/WAI" role="button">

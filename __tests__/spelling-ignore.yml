@@ -62,16 +62,6 @@
 - Focusable
 
 # Parts of url
-- http
-- https
-- github.com
-- www.w3.org
-- eval
-- html52
-- css-scoping
-- csswg
-- whatwg
-- dom
 - wai-aria
 
 # Other tool names

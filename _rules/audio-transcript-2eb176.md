@@ -109,7 +109,7 @@ Audio with controls and incorrect external transcript
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</a>
+<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.txt">Transcript</a>
 ```
 
 #### Failed Example 4
@@ -118,7 +118,7 @@ Audio with autoplay and incorrect external transcript
 
 ```html (no-iframe)
 <audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
-<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</a>
+<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.txt">Transcript</a>
 ```
 
 #### Failed Example 5

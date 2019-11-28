@@ -27,7 +27,7 @@ This rule applies to any set of any two or more `iframe` elements in the same [d
 
 ## Expectation
 
-The `iframe` elements in each set of target elements embed the the [same resource](#same-resource) or [equivalent resources](#equivalent-resource).
+The `iframe` elements in each set of target elements embed the [same resource](#same-resource) or [equivalent resources](#equivalent-resource).
 
 **Note:** Resolving the embedded resource includes any redirects that are instant.
 

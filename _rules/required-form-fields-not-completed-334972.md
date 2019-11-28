@@ -40,7 +40,7 @@ For each test target where the user input caused the appearance of an [error mes
 
 ## Expectation 2
 
-Each [error message][] from Expectation 1 includes the identification the test target.
+Each [error message][] from Expectation 1 allows the identification of the test target.
 
 ## Expectation 3
 

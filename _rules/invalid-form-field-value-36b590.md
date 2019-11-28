@@ -30,7 +30,7 @@ For each test target where the user input caused the appearance of an [error mes
 
 ## Expectation 2
 
-Each [error message][] from Expectation 1 includes the identification the test target.
+Each [error message][] from Expectation 1 allows the identification of the test target.
 
 ## Expectation 3
 
@@ -100,21 +100,27 @@ The error message does not identify the input field.
 
 ```html
 <script>
-	function processForm() {
-		document.getElementById('error').innerText = ''
-		var age = document.getElementById('age').value
-		if (!age || isNaN(age) || age < 1) {
+ 	function processForm() {
+ 		document.getElementById('error').innerText = ''
+ 		var age = document.getElementById('age').value
+ 		if (!age || isNaN(age) || age < 1) {
+ 			document.getElementById('error').innerText = 'Please fill the field correctly.'
+ 		}
+		var name = document.getElementById('name').value;
+		if (!name) {
 			document.getElementById('error').innerText = 'Please fill the field correctly.'
 		}
-	}
-</script>
+ 	}
+ </script>
 
-<form>
+ <form>
+	<div id="error"></div>
 	<label for="age">Age (years)</label>
-	<input type="number" id="age" />
-	<span id="error"></span><br />
-	<input type="button" value="Submit" onclick="processForm()" />
-</form>
+ 	<input type="number" id="age" />
+	<label for="name">Name</label>
+ 	<input type="text" id="name" />
+ 	<input type="button" value="Submit" onclick="processForm()" />
+ </form>
 ```
 
 #### Failed Example 3

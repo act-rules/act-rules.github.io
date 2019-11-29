@@ -64,26 +64,6 @@
 - ascii
 
 # Parts of url
-- http
-- https
-- github.com
-- www.w3.org
-- eval
-- html52
-- html53
-- css-scoping
-- csswg
-- whatwg
-- infra
-- spec
-- dom
-- csswg
-- css-scoping
-- dfn-essential
-- dfn-mechanism
-- dfn-content
-- dfn-user-interface-components
-- ascii-whitespace
 - wai-aria
 
 # Other tool names

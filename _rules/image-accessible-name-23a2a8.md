@@ -186,7 +186,7 @@ HTML `img` element is not [included in the accessibility tree][].
 
 #### Inapplicable Example 4
 
-The element is not a `img` element.
+The element is not an `img` element.
 
 ```html
 <div aria-label="W3C logo"></div>

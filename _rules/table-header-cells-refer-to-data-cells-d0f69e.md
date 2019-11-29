@@ -20,10 +20,11 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any HTML element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of an element having a [semantic role](#semantic-role) of either [table](https://www.w3.org/TR/wai-aria-1.1/#table) or [grid](https://www.w3.org/TR/wai-aria-1.1/#grid), that is [visible](#visible) as well as [included in the accessibility tree](#included-in-the-accessibility-tree), where the element has any of the following [semantic roles](#semantic-role):
+The rule applies to any HTML element that has the [semantic role](#semantic-role) of [rowheader](https://www.w3.org/TR/wai-aria-1.1/#rowheader) or [columnheader](https://www.w3.org/TR/wai-aria-1.1/#columnheader) and is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of an element that:
 
-- [rowheader](https://www.w3.org/TR/wai-aria-1.1/#rowheader)
-- [columnheader](https://www.w3.org/TR/wai-aria-1.1/#columnheader)
+- has a [semantic role](#semantic-role) of either [table](https://www.w3.org/TR/wai-aria-1.1/#table) or [grid](https://www.w3.org/TR/wai-aria-1.1/#grid); and
+- is [visible](#visible); and
+- is [included in the accessibility tree](#included-in-the-accessibility-tree)
 
 ## Expectation
 
@@ -49,7 +50,7 @@ _There are currently no assumptions._
 
 #### Passed Example 1
 
-The column header element has an assigned cell, within the same `table` element.
+The column header element has an [assigned](https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics) cell, within the same `table` element.
 
 ```html
 <table>
@@ -139,8 +140,8 @@ Each column header is assigned to a cell. Usage of `headers` attribute changes t
 ```html
 <table>
 	<tr>
-		<th id="col1"></th>
-		<th id="col2"></th>
+		<th id="col1">Column 1</th>
+		<th id="col2">Column 2</th>
 	</tr>
 	<tr>
 		<td></td>

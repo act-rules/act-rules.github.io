@@ -21,7 +21,7 @@ For native markup languages, such as HTML and SVG, additional information on how
 
 #### Examples
 
-**Note**: The examples presented here are non-normative and not testable. They serve to illustrate some common pitfalls about the definition and help implementers of ACT rules understand it.
+**Note**: The examples presented here are non-normative and not testable. They serve to illustrate some common pitfalls about the definition and to help implementer's of ACT rules understand it.
 
 The `input` elements have an accessible name of, respectively, "Billing Name" and "Billing Address". These accessible names are given by the `aria-labelledby` attributes and associated elements.
 

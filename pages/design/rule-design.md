@@ -20,13 +20,9 @@ The WCAG-ACT-RULES-CG rule design builds on WCAG 2.x and its supporting document
 
 ### Rule name and identifier
 
-The rule must have a unique name, preferably a two or three word topic, as well as an identifier. This uses the following format: **SC#-#-#-identifier**
+The rule must have a unique name.
 
-- **SC#-#-#**: This is an identifier for the criterion to which the test case applies. #-#-# stands for the number of that criterion, such as SC4-1-2.
-
-- **+SC#-#-#**: This can be used if the test case applies to multiple success criteria, such as SC1-1-1+SC4-1-2-identifier. The numbers are in the same order as they are used in WCAG.
-
-- **identifier**: This must be a lower case identifier of the test, preferably no more then 3 words. It can only contain alphanumeric values or a dash (-).
+> Note: TODO (document how to name a rule file)
 
 ### Test aspects
 

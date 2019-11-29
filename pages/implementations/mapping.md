@@ -4,7 +4,7 @@ title: Mapping To Rule
 
 ## Implementation Scoping
 
-An implementation does not need to be a one-to-one mapping to ACT-R rules. A single implementation can test multiple ACT-R. In manual test procedures, it is common to test multiple things at once. For instance, a test procedure looking at the language of a page will simultaniously test whether or not the `<html>` element has a `lang` attribute, if the value of the `lang` attribute is valid, and if the value matches the language of the page. This is 3 separate rules, covered in a single test procedure of an implementation.
+An implementation does not need to be a one-to-one mapping to ACT-R rules. A single implementation can test multiple ACT-R. In manual test procedures, it is common to test multiple things at once. For instance, a test procedure looking at the language of a page will simultaneously test whether or not the `<html>` element has a `lang` attribute, if the value of the `lang` attribute is valid, and if the value matches the language of the page. This is 3 separate rules, covered in a single test procedure of an implementation.
 
 <figure role="figure" aria-label="Single implementation, mapping to two ACT-R Rules">
   <figcaption>Single implementation, mapping to two ACT-R Rules</figcaption>

@@ -8,7 +8,7 @@ If you have a manual test methodology, where you fill results into some report t
 
 1. Go to the [rules](/rules) page, then open the rule you wish to test
 
-2. In the page navigation under Useful likes, you will find a link to **Testcases (EM Report Tool)**. Click this link and save the file to your machine.
+2. In the page navigation under Useful likes, you will find a link to **Test cases (EM Report Tool)**. Click this link and save the file to your machine.
 
 ## Step 2: WCAG-EM Report Tool, Setup
 
@@ -20,7 +20,7 @@ If you have a manual test methodology, where you fill results into some report t
 
 4. Under "Sample to evaluate" click the checkbox to select all files
 
-## Step 3: Run The Testcases
+## Step 3: Run The Test cases
 
 1. Under each success criterion set to "Cannot tell" click "Show web pages to enter
    individual results
@@ -34,13 +34,13 @@ If you have a manual test methodology, where you fill results into some report t
 
 ## Step 4: Upload the Implementation Report
 
-### For New Implementors
+### For New Implementer's
 
 1. [Join the ACT-R Community group](https://w3.org/community/act-r/). This ensures the community license agreement is signed.
 
 2. [Open an issue](https://github.com/act-rules/act-rules.github.io/issues/new), proposing the new implementation. Please include the name of the implementation, and attach the implementation report.
 
-### For Existing Implementors
+### For Existing Implementer's
 
 1. Go to the "reports" directory in the repository of your implementation (Example: [RGAA Reports](https://github.com/act-rules/act-rules-implementation-rgaa/tree/master/reports))
 

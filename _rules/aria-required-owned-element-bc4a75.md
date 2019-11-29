@@ -3,7 +3,7 @@ id: bc4a75
 name: ARIA required owned elements
 rule_type: atomic
 description: |
-  This rule checks that each role has at least one of its required owned elements.
+  This rule checks that an element with an explicit semantic role has at least one of its required owned elements.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true
@@ -11,35 +11,62 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility tree
   - DOM Tree
-  - CSS Styling
-authors:
-  - Audrey Maniez
-  - Jey Nandakumar
+acknowledgements:
+  authors:
+    - Wilco Fiers
+  previous_authros:
+		- Audrey Maniez
+		- Jey Nandakumar
 ---
 
 ## Applicability
 
-The rule applies to any HTML or SVG element that is [included in the accessibility tree](#included-in-the-accessibility-tree) and has a [semantic role](#semantic-role) that has [WAI-ARIA required owned elements](https://www.w3.org/TR/wai-aria/#mustContain).
+The rule applies to any HTML or SVG element that is [included in the accessibility tree][] and has a [WAI-ARIA 1.1][] [explicit semantic role][] with [required owned elements][], except if
 
-## Expectation
+- the element has an [implicit semantic role][] that is identical to its [explicit semantic role][].
+- the element has a [semantic role][] of `combobox`
 
-The target element either [owns](#owned-by) at least one instance of one of its [WAI-ARIA required owned element](https://www.w3.org/TR/wai-aria-1.1/#mustContain) or has `aria-busy` attribute set to `true`.
+**Note:** An example of an element that has a [required owned element][] is `tablist` that has `tab` as a [required owned element][].
+
+**Note:** An example of an element that has an [implicit semantic role](#implicit-role) that is identical to its [explicit semantic role](#explicit-role) is a `ul` element that has `role="list"`. These elements are not applicable.
+
+**Note:** The applicability of this rule is limited to only the [WAI-ARIA 1.1][] roles, since there are unresolved issues with how [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][] uses role inheritance to define the [required context roles][], which makes it deviate from the model defined in [WAI-ARIA 1.1][]. The [WAI-ARIA Graphics Module][] does not include any [required context roles][].
+
+**Note:** The combobox role is excluded from this rule, because the design pattern for it as described in ARIA 1.1 has proven problematic. The combobox will be significantly different for ARIA 1.2, and does not have [required owned elements][].
+
+## Expectation 1
+
+Each test target [owns](#owned-by) at least one element that has a [semantic role](#semantic-role) from the [required owned element][] list for the target element's [semantic role](), except if the test target has the `aria-busy` state set to `true`, or has an [ancestor][] in the [accessibility tree][] with this state.
+
+**Note:** The definition of [owned by](#owned-by) used in this rule is different than the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element). See more in the [owned by](#owned-by) definition.
+
+**Note:** [Subclass roles](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) of [required owned elements][] are not automatically included as possible [required owned elements][]. For example, the [`treeitem`](https://www.w3.org/TR/wai-aria-1.1/#treeitem) role is not a [required owned elements][] for [`list`](https://www.w3.org/TR/wai-aria-1.1/#list), even though [`treeitem`](https://www.w3.org/TR/wai-aria-1.1/#treeitem) is a [subclass role](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) of [`listitem`](https://www.w3.org/TR/wai-aria-1.1/#list).
+
+## Expectation 2
+
+Each [owned][] element of test targets for which expectation 1 is true, if it is a `group` or `rowgroup`, must own at least one element with a [semantic role][] listed with the (row)group for the [required owned elements][] list of the test target's [semantic role][]
 
 ## Assumptions
 
-Attributes that start with `aria-*` are used to set either [state](https://www.w3.org/WAI/PF/aria-1.1/terms#def_state) or [property](https://www.w3.org/WAI/PF/aria-1.1/terms#def_property) that should be picked up by assistive technologies. If any `aria-*` attributes are not used for that purpose, the results of this rule may be incorrect.
+If the [explicit semantic role](#explicit-role) on the target element is incorrectly used, and any relationships between elements are already programmatically determinable, failing this rule may not result in accessibility issues for users of assistive technologies, and it should then not be considered a failure under [WCAG success criterion 1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships).
 
 ## Accessibility Support
 
 This rule relies on assistive technologies to recognize owned elements, as defined by [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria). This includes when they are nested descendants that are not immediate children. However, some assistive technologies do not recognize owned elements that are not immediate children, unless workarounds are used.
 
+<!-- new -->
+
+- User agents do not all have the same accessibility tree. Particularly the method of deriving which element owns which other elements varies between browsers. This can lead to different results for this rule, depending on which accessibility tree is used as input.
+- `aria-owns` has limited support in some user agents.
+- Assistve technologies are not consistent in how they handle situations where a required owned element has a missing or incorrect role. This can lead to situations where inaccurate owned elements behave as expected in one assistive technology, but not in another.
+
 ## Background
 
+- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [Required Owned Element](https://www.w3.org/TR/wai-aria-1.1/#mustContain)
 - [Owned Element](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element)
-- [HTML in ARIA](https://www.w3.org/TR/html-aria/)
-- [Implicit WAI-ARIA Semantics](https://www.w3.org/TR/wai-aria-1.1/#implicit_semantics)
 
 ## Test Cases
 

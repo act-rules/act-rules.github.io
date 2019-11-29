@@ -85,7 +85,7 @@ The `lang` attribute consists of only [ASCII whitespace](https://infra.spec.what
 
 #### Failed Example 4
 
-There is no `lang` attribute specified, only an `xml:lang` attribute.
+There is no `lang` attribute specified, only a `xml:lang` attribute.
 
 ```html
 <html xml:lang="en"></html>
@@ -105,6 +105,6 @@ The rule does not apply to `svg` element.
 
 The rule does not apply to `math` element.
 
-```svg
+```xml
 <math></math>
 ```

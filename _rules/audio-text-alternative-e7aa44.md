@@ -13,11 +13,12 @@ accessibility_requirements:
 input_rules:
   - 2eb176
   - afb423
-authors:
-  - Wilco Fiers
-  - Brian Bors
-  - John Hicks
-  - Rafal Charlampowicz
+acknowledgements:
+  authors:
+    - Wilco Fiers
+    - Brian Bors
+    - John Hicks
+    - Rafal Charlampowicz
 ---
 
 ## Applicability

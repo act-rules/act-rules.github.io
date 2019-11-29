@@ -10,9 +10,10 @@ input_aspects:
   - CSS Styling
   - Audio output
   - Visual output
-authors:
-  - Wilco Fiers
-  - Brian Bors
+acknowledgements:
+  authors:
+    - Wilco Fiers
+    - Brian Bors
 ---
 
 ## Applicability
@@ -50,7 +51,7 @@ A video only element with a track element that contains descriptions.
 <video controls>
 	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-	<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
+	<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
 </video>
 ```
 
@@ -64,7 +65,7 @@ A video only element with a track element that contains incorrect descriptions.
 <video controls>
 	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-	<track kind="descriptions" src="rabbit-video-incorrect-descriptions.vtt" />
+	<track kind="descriptions" src="/test-assets/rabbit-video/incorrect-descriptions.vtt" />
 </video>
 ```
 
@@ -89,7 +90,7 @@ A video only element that is not [visible][].
 <video controls style="display: none;">
 	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-	<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
+	<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
 </video>
 ```
 
@@ -101,7 +102,7 @@ A video element with audio.
 <video controls>
 	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
-	<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
+	<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
 </video>
 ```
 

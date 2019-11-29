@@ -18,8 +18,9 @@ accessibility_requirements:
 input_aspects: # Remove what is not applicable
   - DOM Tree
   - CSS Styling
-authors:
-  - Anne Thyme Nørregaard
+acknowledgements:
+  authors:
+    - Anne Thyme Nørregaard
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -34,7 +35,7 @@ The rule applies to any HTML `input` element with a `type` attribute in the `Ima
 
 ## Expectation
 
-Each target element has an [accessible name][] that is not only [whitespace][].
+Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Assumptions
 
@@ -46,6 +47,8 @@ There is a known combination of a popular browser and assistive technology that 
 
 ## Background
 
+- [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
+- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 - [WCAG Technique H36: Using alt attributes on images used as submit buttons](https://www.w3.org/WAI/WCAG21/Techniques/html/H36)
 
 ## Test Cases
@@ -87,7 +90,7 @@ Image button element with [accessible name][] through `aria-labelledby`
 
 #### Passed Example 5
 
-[accessible name][] is not only [whitespace][].
+[accessible name][] is not empty.
 
 ```html
 <input type="image" name="submit" src="button.gif" alt=":-)" />
@@ -105,7 +108,7 @@ Image button element with [accessible name][] through `alt` attribute
 
 #### Failed Example 1
 
-Image button element with no attributes to give [accessible name][]
+Image button element with empty [accessible name][].
 
 ```html
 <input type="image" name="submit" src="button.gif" />
@@ -113,7 +116,7 @@ Image button element with no attributes to give [accessible name][]
 
 #### Failed Example 2
 
-Image button element with empty `alt` attribute
+Image button element with empty [accessible name][].
 
 ```html
 <input type="image" name="submit" src="button.gif" alt="" />
@@ -121,7 +124,7 @@ Image button element with empty `alt` attribute
 
 #### Failed Example 3
 
-Image button with aria-labelledby that does not reference an id that exists in the same document
+Image button with empty [accessible name][] because the `aria-labelledby` attribute does not reference an id that exists in the same document.
 
 ```html
 <input type="image" name="submit" src="button.gif" aria-labelledby="id1" />
@@ -129,7 +132,7 @@ Image button with aria-labelledby that does not reference an id that exists in t
 
 #### Failed Example 4
 
-[accessible name][] is only [whitespace][].
+[accessible name][] is empty.
 
 ```html
 <input type="image" name="submit" src="button.gif" alt=" " />

@@ -13,9 +13,10 @@ accessibility_requirements:
 input_rules:
   - ab4d13
   - f51b46
-authors:
-  - Wilco Fiers
-  - Brian Bors
+acknowledgements:
+  authors:
+    - Wilco Fiers
+    - Brian Bors
 ---
 
 ## Applicability

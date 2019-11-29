@@ -10,9 +10,10 @@ input_aspects:
   - CSS Styling
   - Audio output
   - Visual output
-authors:
-  - Wilco Fiers
-  - Brian Bors
+acknowledgements:
+  authors:
+    - Wilco Fiers
+    - Brian Bors
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -69,7 +70,7 @@ A silent video element with a link to a text transcript on a different page.
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<a href="/test-assets/rabbit-video-transcript.html">Transcript</a>
+<a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
 ```
 
 ### Failed
@@ -97,12 +98,12 @@ A silent video element with a link to an incorrect text transcript on a differen
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</a>
+<a href="/test-assets/rabbit-video/incorrect-transcript.html">Transcript</a>
 ```
 
 #### Failed Example 3
 
-A silent video element with an [non-visible][visible] text transcript on the same page.
+A silent video element with a [non-visible][visible] text transcript on the same page.
 
 ```html
 <video controls data-rule-target>
@@ -139,7 +140,7 @@ A silent video element that is not [visible][] on the page.
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<a href="/test-assets/rabbit-video-transcript.html">Transcript</a>
+<a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
 ```
 
 #### Inapplicable Example 2
@@ -151,7 +152,7 @@ A video element with audio.
   <source src="/test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
-<a href="/test-assets/rabbit-video-transcript.html">Transcript</a>
+<a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
 ```
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

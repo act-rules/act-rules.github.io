@@ -13,9 +13,10 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-authors:
-  - Jey Nandakumar
-  - Audrey Maniez
+acknowledgements:
+  authors:
+    - Jey Nandakumar
+    - Audrey Maniez
 ---
 
 ## Applicability
@@ -26,13 +27,13 @@ This rule applies to any set of any two or more `iframe` elements in the same [d
 
 ## Expectation
 
-The `iframe` elements in each set of target elements embed the the [same resource](#same-resource) or [equivalent resources](#equivalent-resource).
+The `iframe` elements in each set of target elements embed the [same resource](#same-resource) or [equivalent resources](#equivalent-resource).
 
 **Note:** Resolving the embedded resource includes any redirects that are instant.
 
 ## Assumptions
 
-_There are currently no assumptions_
+- This rule assumes that, within the context of the test subject, the description provided by the [accessible name][] of an `iframe` can only accurately describe one resource (notably, homonyms alone are not used as `iframe` names). Thus, if two or more `iframe` elements have the same [accessible name][] but embed different resources, at least one of them does not describe its purpose.
 
 ## Accessibility Support
 

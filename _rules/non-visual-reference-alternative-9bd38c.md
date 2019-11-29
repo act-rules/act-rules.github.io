@@ -36,15 +36,16 @@ Any text node that includes one of the [visual reference words](#visual-referenc
 
 ## Expectation
 
-Each target that describes any [web content](https://www.w3.org/TR/WCAG21/#dfn-content) through the use of the [visual reference words](#visual-reference-words), is included in a [section of the content](#section-of-content) that also describes that [web content](https://www.w3.org/TR/WCAG21/#dfn-content) by a non-visual property, except if the target is not part of an instruction about [web content](https://www.w3.org/TR/WCAG21/#dfn-content) or the visual reference word is included in the described content.
+Each test target that describes any [web content](https://www.w3.org/TR/WCAG21/#dfn-content) through the use of the [visual reference words](#visual-reference-words), is on the same [web page] (#https://www.w3.org/TR/WCAG21/#dfn-web-page-s) with an instruction that also describes that [web content](https://www.w3.org/TR/WCAG21/#dfn-content) by a non-visual characteristic, except if: 
 
-**Note**: The expectation doesn't mention the fact that the non-visual property description should be visible and included in the accessibility tree. This rule can be passed with alternatives that are not visible or alternatives that are not included in the accessibility tree. Those sorts of content would fail other Succes Criteria.
+- The target is not part of an instruction about [web content](https://www.w3.org/TR/WCAG21/#dfn-content); or 
+- The visual reference word is [visible] in the described content.
+
+**Note**: The expectation doesn't mention the fact that the non-visual characteristic description should be included in the accessibility tree. This rule can be passed with alternatives that are not included in the accessibility tree. Those sorts of solutions would fail other Succes Criteria.
 
 **Note**: The described web content does not have to be positioned on the same web page.
 
 ## Assumptions
-
-- This rule assumes that instructions are fully included within a single section of content. If an instruction takes up multiple sections of the content, having a sensory characteristic in one section, and a non-sensory characteristic in another is assumed to be too disconnected to satisfy the Success Criterion. 
 
 - This rule assumes that [visual reference words](#visual-reference-words) are forms of information conveyed through presentation, because of this, failing this rule fails both [Succes Criterion 1.3.1: Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships) and [Success Criterion 1.3.3: Sensory Characteristics](https://www.w3.org/TR/WCAG21/#sensory-characteristics). Presentation is not limited to CSS and includes images such as the image of a circle with text.
 

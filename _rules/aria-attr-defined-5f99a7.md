@@ -86,11 +86,11 @@ Multiple valid ARIA 1.1 attributes `aria-*` are specified on element `input` wit
 
 #### Failed Example 2
 
-`aria-labelled` is not a defined attribute in ARIA 1.1.
+`aria-labelledby` is not a defined attribute in ARIA 1.1.
 
 ```html
 <span id="label">Birthday:</span>
-<div contenteditable role="searchbox" aria-labelled="label" aria-placeholder="MM-DD-YYYY">
+<div contenteditable role="searchbox" aria-labelledby="label" aria-placeholder="MM-DD-YYYY">
 	01-01-2019
 </div>
 ```

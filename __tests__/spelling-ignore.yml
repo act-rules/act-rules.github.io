@@ -4,20 +4,8 @@
 - WAI
 - W3C
 
-# Generic HTML tag(s)
-- html
-- iframe
-- img
-- ul
-- ol
-- dl
-- li
-- dd
-- dt
-- frameset
-- h1
-- h1-h6
-- svg
+# Tag(s)
+- svg # `aria-query` dom tags does not list `svg`
 
 # Domain-specific words, Definitions & other allowed terms
 - URI
@@ -46,6 +34,7 @@
 - testrunner
 - color
 - focusable
+- Focusable
 - unfocusable
 - tabindex
 - whitespace
@@ -56,10 +45,6 @@
 - autoplay
 - autoplays
 - presentational
-
-# spell checker checks against strict casing & hence some repeated words here
-- Autocomplete
-- Focusable
 
 # Parts of url
 - wai-aria
@@ -77,39 +62,14 @@
 - level1-frame1
 - XYZ
 
-# Attributes
+# Attributes (repeated words with casing as retext-spell has no config to ignore casing)
 - href
 - src
-- aria-labelled
-- aria-labelledby
 - autofill-field
-- combobox
-- spinbutton
-- gridcell
-- menuitem
-- menuitemcheckbox
-- menuitemradio
-- searchbox
-- treeitem
-- listbox
-- listitem
-- tablist
-- tabpanel
-- doc-biblioentry
-- textbox
 - autocomplete
-- textarea
-- autoplay
+- Autocomplete
 - tristate
-- scrollbar
 - viewport
-- figcaption
-- aria-errormessage
-- aria-rowindex
-- aria-valuemin
-- aria-valuemax
-- aria-valuenow
-- aria-dropeffect
 - lang
 - xml:lang
 - http-equiv

@@ -3,6 +3,12 @@
 # Project specific words
 - WAI
 - W3C
+- ACTR
+
+# Parts of url
+- http
+- https
+- wai-aria
 
 # Tag(s)
 - svg # `aria-query` dom tags does not list `svg`
@@ -26,7 +32,10 @@
 - DOM
 - SVG
 - PDFs
+- DOCX
 - DPUB
+- DNS
+- Esc # esc key on a keyboard
 - url
 - voiceover
 - subtag
@@ -45,16 +54,21 @@
 - autoplay
 - autoplays
 - presentational
+- EARL10-Schema
+- labelable
+- merchantability
 
-# Parts of url
-- wai-aria
+# Notes and acronyms
+- TODO
+- TBD
 
-# Other tool names
+# Tool and library names
 - axe-core
 - alfa
 - RGAA
 - wcag-em-report-tool
 - ozplayer
+- GitHub
 
 # Test case anamolies
 - level2-frame1
@@ -86,3 +100,19 @@
 - Programmatically
 - personalization
 - Autofill
+
+# Parts of Unicode
+- 000A
+- 000B
+- 000C
+- 000D
+
+# JSON attributes/ metadata
+- testcases
+- ruleId
+- ruleName
+- rulePage
+- ruleAccessibilityRequirements
+- cantTell
+- TestSubject
+- earl:cantTell

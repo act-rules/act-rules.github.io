@@ -63,22 +63,7 @@
 - Focusable
 
 # Parts of url
-- http
-- https
-- github
-- www.w3.org
-- eval
-- html52
-- css-scoping
-- csswg
-- whatwg
-- dom
 - wai-aria
-- wai-aria-1.1
-- csswg
-- css-scoping
-- dfn
-- act-rules
 
 # Other tool names
 - axe-core

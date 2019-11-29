@@ -41,7 +41,7 @@ Each test target that describes any [web content](https://www.w3.org/TR/WCAG21/#
 - The target is not part of an instruction about [web content](https://www.w3.org/TR/WCAG21/#dfn-content); or 
 - The visual reference word is [visible] in the described content.
 
-**Note**: The expectation doesn't mention the fact that the non-visual characteristic description should be included in the accessibility tree. This rule can be passed with alternatives that are not included in the accessibility tree. Those sorts of solutions would fail other Succes Criteria.
+**Note**: The expectation doesn't mention the fact that the non-visual characteristic description should be included in the accessibility tree. This rule can be passed with alternatives that are not included in the accessibility tree. Those sorts of solutions would only fail Succes Criteria 1.3.1 instead of both 1.3.3 and 1.3.1.
 
 **Note**: The described web content does not have to be positioned on the same web page.
 

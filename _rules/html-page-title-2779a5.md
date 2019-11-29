@@ -29,7 +29,7 @@ htmlHintIgnore:
 
 The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element.
 
-**Note**: Documents embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not web pages according to the definition in WCAG.
+**Note**: Documents embedded into other documents, such as through `iframe` or `object` elements are not applicable and do not require page titles, because they are not web pages according to the definition in WCAG.
 
 ## Expectation 1
 

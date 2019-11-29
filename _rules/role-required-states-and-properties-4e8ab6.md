@@ -91,7 +91,7 @@ Element has required properties, and required state `aria-expanded` has an impli
 
 #### Passed Example 6
 
-Element has required properties, but with incorrect value since no element with with the given id(s) exists in the document
+Element has required properties, but with incorrect value since no element with the given id(s) exists in the document
 
 ```html
 <div role="combobox" aria-controls="foo"></div>

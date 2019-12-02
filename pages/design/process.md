@@ -135,7 +135,7 @@ Rules that have been fixed up by the author and are ready for review again, aimi
 
 ## Final Call (aka Call for Consensus (CFC))
 
-Final gate-keeping mechanism where the whole community gets to object to a rule, if they don't agree to it, and implementer's get a shot at trying it out in practice and giving feedback based on real-life experience with the rule.
+Final gate-keeping mechanism where the whole community gets to object to a rule, if they don't agree to it, and implementers get a shot at trying it out in practice and giving feedback based on real-life experience with the rule.
 
 We encourage initial implementations BEFORE publishing the rule, so that all the feedback from the implementation can get included in the original pull request, instead of being raised as new issues for already published rules - making even published rules quite unstable.
 

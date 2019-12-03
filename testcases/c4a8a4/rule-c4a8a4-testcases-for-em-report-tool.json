@@ -1194,17 +1194,6 @@
               "WebPage"
             ],
             "id": "_:struct_5",
-            "description": "https://act-rules.github.io/testcases/c4a8a4/5d55c3142f9a6961b32e560a99eb99ea9eaa9073.html",
-            "source": "https://act-rules.github.io/testcases/c4a8a4/5d55c3142f9a6961b32e560a99eb99ea9eaa9073.html",
-            "title": "5d55c3142f9a6961b32e560a99eb99ea9eaa9073",
-            "tested": false
-          },
-          {
-            "type": [
-              "TestSubject",
-              "WebPage"
-            ],
-            "id": "_:struct_6",
             "description": "https://act-rules.github.io/testcases/c4a8a4/aa75f943fdbf4055f9ae736cd2551b346d459147.svg",
             "source": "https://act-rules.github.io/testcases/c4a8a4/aa75f943fdbf4055f9ae736cd2551b346d459147.svg",
             "title": "aa75f943fdbf4055f9ae736cd2551b346d459147",

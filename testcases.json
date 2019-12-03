@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 606,
+  "count": 605,
   "testcases": [
     {
       "testcaseId": "29097dbe000aa32fd9a66fce65a9a7f4b413e7ff",
@@ -5308,24 +5308,6 @@
       "testcaseTitle": "Failed Example 2",
       "url": "https://act-rules.github.io/testcases/c4a8a4/de6acada96b1cfb140e851646a7383154a748fd7.html",
       "relativePath": "testcases/c4a8a4/de6acada96b1cfb140e851646a7383154a748fd7.html",
-      "expected": "failed",
-      "ruleId": "c4a8a4",
-      "ruleName": "HTML page title is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/c4a8a4",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "5d55c3142f9a6961b32e560a99eb99ea9eaa9073",
-      "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/c4a8a4/5d55c3142f9a6961b32e560a99eb99ea9eaa9073.html",
-      "relativePath": "testcases/c4a8a4/5d55c3142f9a6961b32e560a99eb99ea9eaa9073.html",
       "expected": "failed",
       "ruleId": "c4a8a4",
       "ruleName": "HTML page title is descriptive",

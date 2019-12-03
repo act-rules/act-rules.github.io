@@ -26,7 +26,7 @@ The correctness of an implementation is based on the results from running the [t
 | -------------- | -------------------------------------- |
 | Passed         | `passed`, `cantTell` or `inapplicable` |
 | Failed         | `failed` or `cantTell`                 |
-| Inapplicable   | `inapplicable`, `cantTell`, `passed`   |
+| Inapplicable   | `inapplicable`, `cantTell` or `passed` |
 
 An implementation that returns one of the allowed outcomes for all test cases in an ACT-R rule is a _correct implementation_. An implementation that has all passed and inapplicable test cases correct, but only has some of the failed test cases correct is called a _partial implementation_. If a tool or methodology has partial implementations for an ACT-R rule that together get all failed test cases correct, this _set of implementations_ is considered a _correct implementation_.
 

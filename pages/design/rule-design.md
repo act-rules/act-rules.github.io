@@ -22,8 +22,6 @@ The WCAG-ACT-RULES-CG rule design builds on WCAG 2.x and its supporting document
 
 The rule must have a unique name.
 
-> Note: TODO (document how to name a rule file)
-
 ### Test aspects
 
 A test aspect is a part of a test subject that must be available in order to properly run the test. The ACT Rules Format defines the following:

@@ -34,13 +34,13 @@ If you have a manual test methodology, where you fill results into some report t
 
 ## Step 4: Upload the Implementation Report
 
-### For New Implementer's
+### For New Implementers
 
 1. [Join the ACT-R Community group](https://w3.org/community/act-r/). This ensures the community license agreement is signed.
 
 2. [Open an issue](https://github.com/act-rules/act-rules.github.io/issues/new), proposing the new implementation. Please include the name of the implementation, and attach the implementation report.
 
-### For Existing Implementer's
+### For Existing Implementers
 
 1. Go to the "reports" directory in the repository of your implementation (Example: [RGAA Reports](https://github.com/act-rules/act-rules-implementation-rgaa/tree/master/reports))
 

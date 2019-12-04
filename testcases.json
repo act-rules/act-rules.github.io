@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 607,
+  "count": 604,
   "testcases": [
     {
       "testcaseId": "29097dbe000aa32fd9a66fce65a9a7f4b413e7ff",
@@ -6681,10 +6681,10 @@
       }
     },
     {
-      "testcaseId": "2400cdac870a6244889b8fccea54425320e8749f",
+      "testcaseId": "a5ecc8ebe1003bb80b0d648ac61feb83fe9d8334",
       "testcaseTitle": "Passed Example 1",
-      "url": "https://act-rules.github.io/testcases/59796f/2400cdac870a6244889b8fccea54425320e8749f.html",
-      "relativePath": "testcases/59796f/2400cdac870a6244889b8fccea54425320e8749f.html",
+      "url": "https://act-rules.github.io/testcases/59796f/a5ecc8ebe1003bb80b0d648ac61feb83fe9d8334.html",
+      "relativePath": "testcases/59796f/a5ecc8ebe1003bb80b0d648ac61feb83fe9d8334.html",
       "expected": "passed",
       "ruleId": "59796f",
       "ruleName": "Image button has accessible name",
@@ -6705,10 +6705,10 @@
       }
     },
     {
-      "testcaseId": "10f5d07893139a4850d92800c6fec26424253310",
+      "testcaseId": "6858ebd1d9960e4268a24ffd476c648c0691d228",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/59796f/10f5d07893139a4850d92800c6fec26424253310.html",
-      "relativePath": "testcases/59796f/10f5d07893139a4850d92800c6fec26424253310.html",
+      "url": "https://act-rules.github.io/testcases/59796f/6858ebd1d9960e4268a24ffd476c648c0691d228.html",
+      "relativePath": "testcases/59796f/6858ebd1d9960e4268a24ffd476c648c0691d228.html",
       "expected": "passed",
       "ruleId": "59796f",
       "ruleName": "Image button has accessible name",
@@ -6729,10 +6729,10 @@
       }
     },
     {
-      "testcaseId": "48e5a8f7cb212b2f7605487e139f262545caca89",
+      "testcaseId": "b6e6c4f1c079a2e0e1737dbd34fe742232827fd2",
       "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/59796f/48e5a8f7cb212b2f7605487e139f262545caca89.html",
-      "relativePath": "testcases/59796f/48e5a8f7cb212b2f7605487e139f262545caca89.html",
+      "url": "https://act-rules.github.io/testcases/59796f/b6e6c4f1c079a2e0e1737dbd34fe742232827fd2.html",
+      "relativePath": "testcases/59796f/b6e6c4f1c079a2e0e1737dbd34fe742232827fd2.html",
       "expected": "passed",
       "ruleId": "59796f",
       "ruleName": "Image button has accessible name",
@@ -6753,10 +6753,10 @@
       }
     },
     {
-      "testcaseId": "006dd89a7eeebee98ec012a2666a03844e64b01a",
+      "testcaseId": "5f353f62012eb5b48df9baf06d826accd421be50",
       "testcaseTitle": "Passed Example 4",
-      "url": "https://act-rules.github.io/testcases/59796f/006dd89a7eeebee98ec012a2666a03844e64b01a.html",
-      "relativePath": "testcases/59796f/006dd89a7eeebee98ec012a2666a03844e64b01a.html",
+      "url": "https://act-rules.github.io/testcases/59796f/5f353f62012eb5b48df9baf06d826accd421be50.html",
+      "relativePath": "testcases/59796f/5f353f62012eb5b48df9baf06d826accd421be50.html",
       "expected": "passed",
       "ruleId": "59796f",
       "ruleName": "Image button has accessible name",
@@ -6777,58 +6777,10 @@
       }
     },
     {
-      "testcaseId": "4d797a9fddf365ae209130e381de006becda625e",
-      "testcaseTitle": "Passed Example 5",
-      "url": "https://act-rules.github.io/testcases/59796f/4d797a9fddf365ae209130e381de006becda625e.html",
-      "relativePath": "testcases/59796f/4d797a9fddf365ae209130e381de006becda625e.html",
-      "expected": "passed",
-      "ruleId": "59796f",
-      "ruleName": "Image button has accessible name",
-      "rulePage": "https://act-rules.github.io/rules/59796f",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.1.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "d3344a3aaf532b7ec1347568509f96cadd8d873d",
-      "testcaseTitle": "Passed Example 6",
-      "url": "https://act-rules.github.io/testcases/59796f/d3344a3aaf532b7ec1347568509f96cadd8d873d.html",
-      "relativePath": "testcases/59796f/d3344a3aaf532b7ec1347568509f96cadd8d873d.html",
-      "expected": "passed",
-      "ruleId": "59796f",
-      "ruleName": "Image button has accessible name",
-      "rulePage": "https://act-rules.github.io/rules/59796f",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.1.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "b4cf33cf32e6fbe05149de31fe2ab3480f7f2319",
+      "testcaseId": "dd9680eb8f35511fd20ebd7bf5dbbc63674117e0",
       "testcaseTitle": "Failed Example 1",
-      "url": "https://act-rules.github.io/testcases/59796f/b4cf33cf32e6fbe05149de31fe2ab3480f7f2319.html",
-      "relativePath": "testcases/59796f/b4cf33cf32e6fbe05149de31fe2ab3480f7f2319.html",
+      "url": "https://act-rules.github.io/testcases/59796f/dd9680eb8f35511fd20ebd7bf5dbbc63674117e0.html",
+      "relativePath": "testcases/59796f/dd9680eb8f35511fd20ebd7bf5dbbc63674117e0.html",
       "expected": "failed",
       "ruleId": "59796f",
       "ruleName": "Image button has accessible name",
@@ -6849,10 +6801,10 @@
       }
     },
     {
-      "testcaseId": "366185c2831d044c6a9036b1cf76eb13c81d2816",
+      "testcaseId": "1993194f3174fb79143e6590cae6d069f7109233",
       "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/59796f/366185c2831d044c6a9036b1cf76eb13c81d2816.html",
-      "relativePath": "testcases/59796f/366185c2831d044c6a9036b1cf76eb13c81d2816.html",
+      "url": "https://act-rules.github.io/testcases/59796f/1993194f3174fb79143e6590cae6d069f7109233.html",
+      "relativePath": "testcases/59796f/1993194f3174fb79143e6590cae6d069f7109233.html",
       "expected": "failed",
       "ruleId": "59796f",
       "ruleName": "Image button has accessible name",
@@ -6873,34 +6825,10 @@
       }
     },
     {
-      "testcaseId": "ba6e135ea5b6b57b49e024d3bbb5fcfa57a54fc5",
+      "testcaseId": "0669a7d1e51e0ef99aa73e06dc1014e82b764b06",
       "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/59796f/ba6e135ea5b6b57b49e024d3bbb5fcfa57a54fc5.html",
-      "relativePath": "testcases/59796f/ba6e135ea5b6b57b49e024d3bbb5fcfa57a54fc5.html",
-      "expected": "failed",
-      "ruleId": "59796f",
-      "ruleName": "Image button has accessible name",
-      "rulePage": "https://act-rules.github.io/rules/59796f",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.1.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "d40c0add6e960291598091cc969d69efc29038a1",
-      "testcaseTitle": "Failed Example 4",
-      "url": "https://act-rules.github.io/testcases/59796f/d40c0add6e960291598091cc969d69efc29038a1.html",
-      "relativePath": "testcases/59796f/d40c0add6e960291598091cc969d69efc29038a1.html",
+      "url": "https://act-rules.github.io/testcases/59796f/0669a7d1e51e0ef99aa73e06dc1014e82b764b06.html",
+      "relativePath": "testcases/59796f/0669a7d1e51e0ef99aa73e06dc1014e82b764b06.html",
       "expected": "failed",
       "ruleId": "59796f",
       "ruleName": "Image button has accessible name",
@@ -6969,10 +6897,10 @@
       }
     },
     {
-      "testcaseId": "d9637a5b12d6333e136309db4dbbdde3cbdb8071",
+      "testcaseId": "822fc606dde2b22ac2a0de67e4b6bb00f5ca51bd",
       "testcaseTitle": "Inapplicable Example 3",
-      "url": "https://act-rules.github.io/testcases/59796f/d9637a5b12d6333e136309db4dbbdde3cbdb8071.html",
-      "relativePath": "testcases/59796f/d9637a5b12d6333e136309db4dbbdde3cbdb8071.html",
+      "url": "https://act-rules.github.io/testcases/59796f/822fc606dde2b22ac2a0de67e4b6bb00f5ca51bd.html",
+      "relativePath": "testcases/59796f/822fc606dde2b22ac2a0de67e4b6bb00f5ca51bd.html",
       "expected": "inapplicable",
       "ruleId": "59796f",
       "ruleName": "Image button has accessible name",
@@ -6993,10 +6921,10 @@
       }
     },
     {
-      "testcaseId": "c0efc676b15593b863c81607ae43ad9175969736",
+      "testcaseId": "a4a7679118e5a374e6749bc98f932d6d2af93d1f",
       "testcaseTitle": "Inapplicable Example 4",
-      "url": "https://act-rules.github.io/testcases/59796f/c0efc676b15593b863c81607ae43ad9175969736.html",
-      "relativePath": "testcases/59796f/c0efc676b15593b863c81607ae43ad9175969736.html",
+      "url": "https://act-rules.github.io/testcases/59796f/a4a7679118e5a374e6749bc98f932d6d2af93d1f.html",
+      "relativePath": "testcases/59796f/a4a7679118e5a374e6749bc98f932d6d2af93d1f.html",
       "expected": "inapplicable",
       "ruleId": "59796f",
       "ruleName": "Image button has accessible name",
@@ -7017,10 +6945,10 @@
       }
     },
     {
-      "testcaseId": "79adbfb491069d70cc39446655c1815c7b765d6a",
+      "testcaseId": "c52915afbeb6f249cdfb1f36068ab9a412b382d5",
       "testcaseTitle": "Inapplicable Example 5",
-      "url": "https://act-rules.github.io/testcases/59796f/79adbfb491069d70cc39446655c1815c7b765d6a.html",
-      "relativePath": "testcases/59796f/79adbfb491069d70cc39446655c1815c7b765d6a.html",
+      "url": "https://act-rules.github.io/testcases/59796f/c52915afbeb6f249cdfb1f36068ab9a412b382d5.html",
+      "relativePath": "testcases/59796f/c52915afbeb6f249cdfb1f36068ab9a412b382d5.html",
       "expected": "inapplicable",
       "ruleId": "59796f",
       "ruleName": "Image button has accessible name",

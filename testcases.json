@@ -103,6 +103,13 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "using-aria:fourth": {
+          "title": "Fourth rule of ARIA use",
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -124,6 +131,13 @@
         },
         "wcag20:4.1.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "using-aria:fourth": {
+          "title": "Fourth rule of ARIA use",
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -151,6 +165,13 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "using-aria:fourth": {
+          "title": "Fourth rule of ARIA use",
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -172,6 +193,13 @@
         },
         "wcag20:4.1.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "using-aria:fourth": {
+          "title": "Fourth rule of ARIA use",
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -199,6 +227,13 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "using-aria:fourth": {
+          "title": "Fourth rule of ARIA use",
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -220,6 +255,13 @@
         },
         "wcag20:4.1.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "using-aria:fourth": {
+          "title": "Fourth rule of ARIA use",
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -247,6 +289,13 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "using-aria:fourth": {
+          "title": "Fourth rule of ARIA use",
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -268,6 +317,13 @@
         },
         "wcag20:4.1.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "using-aria:fourth": {
+          "title": "Fourth rule of ARIA use",
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -295,6 +351,13 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "using-aria:fourth": {
+          "title": "Fourth rule of ARIA use",
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -316,6 +379,13 @@
         },
         "wcag20:4.1.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "using-aria:fourth": {
+          "title": "Fourth rule of ARIA use",
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -343,6 +413,13 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "using-aria:fourth": {
+          "title": "Fourth rule of ARIA use",
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -364,6 +441,13 @@
         },
         "wcag20:4.1.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "using-aria:fourth": {
+          "title": "Fourth rule of ARIA use",
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -391,6 +475,13 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "using-aria:fourth": {
+          "title": "Fourth rule of ARIA use",
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -412,6 +503,13 @@
         },
         "wcag20:4.1.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "using-aria:fourth": {
+          "title": "Fourth rule of ARIA use",
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -1387,6 +1485,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       }
     },
@@ -1405,6 +1509,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       }
     },
@@ -1423,6 +1533,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       }
     },
@@ -1441,6 +1557,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       }
     },
@@ -1459,6 +1581,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       }
     },
@@ -1477,6 +1605,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       }
     },
@@ -1495,6 +1629,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       }
     },
@@ -1513,6 +1653,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       }
     },
@@ -1531,6 +1677,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       }
     },
@@ -1549,6 +1701,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
         }
       }
     },
@@ -1644,6 +1802,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G158": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -1659,6 +1823,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G158": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -1680,6 +1850,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G158": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -1695,6 +1871,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G158": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -1716,6 +1898,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G158": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -1731,6 +1919,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G158": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -1867,7 +2061,14 @@
       "ruleId": "aaa1bf",
       "ruleName": "audio or video that plays automatically does not exceed 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "3babec3037bcc1cd9e5bf8e6de85c59438d54206",
@@ -1878,7 +2079,14 @@
       "ruleId": "aaa1bf",
       "ruleName": "audio or video that plays automatically does not exceed 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "390a1ceda9611dfb392cb59f9968d02e0212556f",
@@ -1889,7 +2097,14 @@
       "ruleId": "aaa1bf",
       "ruleName": "audio or video that plays automatically does not exceed 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "35ef10a2f125300f9efa2860c130362bdedc1642",
@@ -1900,7 +2115,14 @@
       "ruleId": "aaa1bf",
       "ruleName": "audio or video that plays automatically does not exceed 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "d26423080b852e0c9fd2d1d56a75af41c5151269",
@@ -1911,7 +2133,14 @@
       "ruleId": "aaa1bf",
       "ruleName": "audio or video that plays automatically does not exceed 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "2ca3b2aa5ba3c3d2b6964d9b8e0623f4493a58d6",
@@ -1922,7 +2151,14 @@
       "ruleId": "aaa1bf",
       "ruleName": "audio or video that plays automatically does not exceed 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "22db72e6a902e9eef487cbf4d926527b574fd205",
@@ -1933,7 +2169,14 @@
       "ruleId": "aaa1bf",
       "ruleName": "audio or video that plays automatically does not exceed 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "08e96dfea0f3953da4ebd9e6b11d550f488281e0",

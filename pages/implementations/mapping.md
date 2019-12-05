@@ -22,11 +22,11 @@ An tool or methodology can also have multiple implementations that when combined
 
 The correctness of an implementation is based on the results from running the [test cases](../testcases/) in a tool or test procedure. The three types of test cases have a range of outcomes that are allowed:
 
-| Test Case Type | Allowed outcomes                                   |
-| -------------- | -------------------------------------------------- |
-| Passed         | `passed`, `cantTell` or `inapplicable`             |
-| Failed         | `failed` or `cantTell`                             |
-| Inapplicable   | `inapplicable`, `cantTell`, `passed` or `untested` |
+| Test Case Type | Allowed outcomes                       |
+| -------------- | -------------------------------------- |
+| Passed         | `passed`, `cantTell` or `inapplicable` |
+| Failed         | `failed` or `cantTell`                 |
+| Inapplicable   | `inapplicable`, `cantTell` or `passed` |
 
 An implementation that returns one of the allowed outcomes for all test cases in an ACT-R rule is a _correct implementation_. An implementation that has all passed and inapplicable test cases correct, but only has some of the failed test cases correct is called a _partial implementation_. If a tool or methodology has partial implementations for an ACT-R rule that together get all failed test cases correct, this _set of implementations_ is considered a _correct implementation_.
 

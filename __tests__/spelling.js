@@ -115,7 +115,7 @@ function getSpellIgnored() {
 	- Adding the IDs "sc" and "usc" which can be use for footnote reference style for
 	  SC and Understanding SC document, eg "[sc131]: (link to SC 1.3.1)", "[usc131]: (link to Understanding 1.3.1)"
  */
-	const techniquesPrefixes = [`ARIA`, `C`, `F`, `G`, `H`]
+	const techniquesPrefixes = ['ARIA', 'C', 'F', 'G', 'H', 'SCR']
 	let ignorePrefixes = [...techniquesPrefixes, ...techniquesPrefixes.map(t => t.toLowerCase()), 'sc', 'usc']
 	const ignoreExtra = ignorePrefixes.flatMap(prefix => {
 		let ignored = []

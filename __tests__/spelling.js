@@ -15,20 +15,30 @@ const reporter = require('vfile-reporter')
 const describeRule = require('../test-utils/describe-rule')
 
 const ignoreWords = yaml.safeLoad(fs.readFileSync('./__tests__/spelling-ignore.yml', 'utf8'))
-// https://www.w3.org/WAI/WCAG21/Techniques
-const ignoreTechniques = [`ARIA`, `C`, `F`, `G`, `H`].reduce((out, techniquePrefix) => {
-	let i = 1
-	while (i < 500) {
-		// Arbitrarily chosen number
-		const technique = `${techniquePrefix}${i}`
-		out.push(technique)
-		i++
-	}
-	return out
-}, [])
+/*
+	Building spelling exception in the shape FOOxxx where xxx is a number.
+	Mostly used for WCAG techniques that have an ID in this shape.
+
+	- WCAG techniques are used all over the place and have an uppercase ID.
+	- Same names with lowercase ID is useful for footnote reference style, eg "[tech g12]: …"
+	- Adding the IDs "sc" and "usc" which can be use for footnote reference style for
+	  SC and Understanding SC document, eg "[sc131]: (link to SC 1.3.1)", "[usc131]: (link to Understanding 1.3.1)"
+ */
+const techniquesPrefixes = [`ARIA`, `C`, `F`, `G`, `H`]
+const ignoreExtra = [...techniquesPrefixes, ...techniquesPrefixes.map(t => t.toLowerCase()), 'sc', 'usc'].reduce(
+	(out, prefix) => {
+		for (let i = 1; i < 500; i++) {
+			// Arbitrarily chosen number
+			const ignoreID = `${prefix}${i}`
+			out.push(ignoreID)
+		}
+		return out
+	},
+	[]
+)
 const spellOptions = {
 	dictionary,
-	ignore: [...ignoreWords, ...ignoreTechniques],
+	ignore: [...ignoreWords, ...ignoreExtra],
 }
 
 /**

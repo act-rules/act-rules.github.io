@@ -14,6 +14,7 @@ const reporter = require('vfile-reporter')
 const ariaQuery = require('aria-query')
 
 const describeRule = require('../test-utils/describe-rule')
+const describePage = require('../test-utils/describe-page')
 
 const spellOptions = {
 	dictionary,
@@ -25,10 +26,17 @@ const spellOptions = {
  */
 describe('Validate body for spelling mistakes', () => {
 	/**
-	 * Rule pages
+	 * Rule markdown files under `_rules`
 	 */
 	describeRule('spellcheck rules', ruleData => {
 		const text = getCuratedMarkdownBody(ruleData.body)
+		validateText(text)
+	})
+	/**
+	 * Other markdown files under `pages` directory, eg: `glossary`, `design` etc.,
+	 */
+	describePage('spellcheck pages', pageData => {
+		const text = getCuratedMarkdownBody(pageData.body)
 		validateText(text)
 	})
 })

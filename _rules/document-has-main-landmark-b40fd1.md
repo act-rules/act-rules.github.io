@@ -22,7 +22,7 @@ This rule applies to any [HTML web page][].
 Within the test target, there is at least on element which:
 
 - has [semantic role][] of [`main`][main]; and
-- is [included in the accessiblity tree][].
+- is [included in the accessibility tree][].
 
 **Note**: Authors SHOULD not use more than one element with a [semantic role][] of [`main`][main]. This is, however, a not a requirement for this rule and can be valid in certain cases.
 

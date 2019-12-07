@@ -2,6 +2,15 @@
 title: Reporting Format
 ---
 
+## Contribute An Implementation
+
+If you developed an accessibility tool or a testing methodology, and would like to have your implementation included in the ACT-R website, there are two ways you can do so.
+
+1. If you have a tool that can return a data format, you will need to run your tests against the [ACT-R test cases](../testcases/) and [submit a report](../reporting/).
+2. If you use manual test methodology, where you fill results into some report template or tool, you can [Use the WCAG-EM Report Tool](../wcag-em-tool/) instead to produce implementation reports.
+
+## Understanding the Reporting format
+
 To display a accessibility test tool or methodology on the ACT-R Community website, ACT-R use the [Evaluation And Reporting Language](https://www.w3.org/TR/EARL10-Schema/) expressed using [JSON-LD](https://json-ld.org). Tool developers that have an EARL reporter should be able to provide their existing reports. If you don't already have an EARL reporter, we provided a basic data structure that you can use.
 
 ### Context And Graph
@@ -72,11 +81,3 @@ The following properties are required for each Assertion:
 ```
 
 **Advanced**: All required properties map to [EARL](http://www.w3.org/ns/earl#), except for `title` and `source` which are properties of [Dublin Core](http://purl.org/dc/terms/). Property names can be anything, as long as they can be expanded to the correct URL.
-
-## Contribute An Implementation
-
-If you developed an accessibility tool or a testing methodology, and would like to have your implementation included in the ACT-R website, there are two ways you can do so.
-
-1. If you have a tool that can return a data format, you will need to run your tests against the [ACT-R test cases](../testcases/) and [submit a report](../reporting/).
-
-2. If you use manual test methodology, where you fill results into some report template or tool, you can [Use the WCAG-EM Report Tool](../wcag-em-tool/) instead to produce implementation reports.

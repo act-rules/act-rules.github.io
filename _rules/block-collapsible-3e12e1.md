@@ -60,6 +60,7 @@ The [visibility][visible] of the navigational [section of repeated content][] ca
 
 ```html
 <html>
+	<script src="../test-assets/block-collapsible-3e12e1/toggle-visibility.js" />
 	<a href="#" onclick="toggleVisibility('navigation')">Toggle table of content</a>
 	<nav id="navigation">
 		<h1>Contents</h1>
@@ -70,30 +71,6 @@ The [visibility][visible] of the navigational [section of repeated content][] ca
 		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 		time.
 	</main>
-</html>
-```
-
-#### Passed Example 2
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title></title>
-	</head>
-	<body></body>
-</html>
-```
-
-#### Passed Example 3
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title></title>
-	</head>
-	<body></body>
 </html>
 ```
 
@@ -171,6 +148,7 @@ The [document element][] of this [document][] is not an `html` element.
 </svg>
 ```
 
+[accessible name]: #accessible-name 'Definition of accessible name'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [document element]: https://dom.spec.whatwg.org/#document-element 'Definition of document element'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

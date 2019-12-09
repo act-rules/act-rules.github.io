@@ -36,7 +36,7 @@ The rule applies to each [required][] HTML element that has one of the following
 
 ## Expectation 1
 
-For each test target where the user input caused the appearance of an [error message][], the error message is [visible][] and [included in the accessibility tree][].
+For each test target where the lack of user input caused the appearance of an [error message][], the error message is [visible][] and [included in the accessibility tree][].
 
 ## Expectation 2
 

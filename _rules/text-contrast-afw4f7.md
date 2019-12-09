@@ -1,10 +1,10 @@
 ---
 id: afw4f7
-name: Text node has minimum contrast
+name: Text has minimum contrast
 rule_type: atomic
 
 description: |
-  This rule checks that the highest possible contrast of every text node with its background meets the minimal contrast requirement
+  This rule checks that the highest possible contrast of every text character with its background meets the minimal contrast requirement
 
 accessibility_requirements:
   wcag20:1.4.3: # Contrast (Minimum)
@@ -78,7 +78,7 @@ This dark grey text is on a white background.
 This dark grey text is on a partially white gradient background.
 
 ```html
-<p style="color: #333; background: linear-gradient(to right, #FFF, #00F); width: 300px;">
+<p style="color: #333; background: linear-gradient(to right, #FFF, #00F); width: 500px;">
 	Some text in a human language
 </p>
 ```
@@ -89,7 +89,7 @@ This light grey text is on a partially black background image.
 
 ```html
 <p
-	style="color: #CCC; height:50px; padding-top:25px; background: #000 no-repeat -20px -20px url('../test-assets/contrast/black-hole.jpeg');"
+	style="color: #CCC; height:50px; padding-top:15px; background: #000 no-repeat -20px -20px url('../test-assets/contrast/black-hole.jpeg');"
 >
 	Black hole sun
 </p>
@@ -129,7 +129,7 @@ This text only has a 3:1 contrast but it is a large (14 points and bold) text so
 
 The purpose of the Helvetica letters is to show what the font looks like. The actual words are irrelevant and could be replaced with any other sentence that includes all letters of the alphabet. Because of that, the rule passes, despite the text not meeting the 4.5:1 color contrast requirement.
 
-**Note**: Because this is non-text content, [success criterion 1.4.11 Non-text Contrast] requires font example to have a color contrast of 3:1.
+**Note**: Because this is non-text content, [success criterion 1.4.11 Non-text Contrast](https://www.w3.org/TR/WCAG21/#non-text-contrast) requires font example to have a color contrast of 3:1.
 
 ```html
 <p>Helvetica is a widely used sans-serif typeface developed in 1957 by Max Miedinger and Eduard Hoffmann.</p>

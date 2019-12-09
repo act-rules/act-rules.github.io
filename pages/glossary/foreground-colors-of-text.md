@@ -1,5 +1,5 @@
 ---
-title: Foreground Colors Of Text Nodes
+title: Foreground Colors Of Text
 key: foreground-colors-of-text
 ---
 

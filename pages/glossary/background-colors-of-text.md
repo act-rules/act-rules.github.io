@@ -1,5 +1,5 @@
 ---
-title: Background Colors Of Text Nodes
+title: Background Colors Of Text
 key: background-colors-of-text
 ---
 

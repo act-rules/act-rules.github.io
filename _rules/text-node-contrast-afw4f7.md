@@ -39,7 +39,7 @@ Any [visible](#visible) character in a [text node](https://dom.spec.whatwg.org/#
 
 For each test target, the [highest possible contrast](#highest-possible-contrast) between the [foreground colors](#foreground-colors-of-text) and [background colors](#background-colors-of-text) is at least 4.5:1 or 3.0:1 for [larger scale text](#large-scale-text), except if the [text node](https://dom.spec.whatwg.org/#text) is [decorative](#decorative), or doesn't express anything in [human language](https://www.w3.org/TR/WCAG21/#dfn-human-language-s).
 
-**Note**: Passing this rule does not mean that the text has sufficient color contrast. If all background pixels have a low contrast with all foreground pixels, the success criterion is guaranteed to not be satisfied. When some pixels have sufficient contrast, and others do not, ledgability should be considered. There is no clear method for determining ledgability, which is why this is out of scope for this rule.
+**Note**: Passing this rule does not mean that the text has sufficient color contrast. If all background pixels have a low contrast with all foreground pixels, the success criterion is guaranteed to not be satisfied. When some pixels have sufficient contrast, and others do not, legibility should be considered. There is no clear method for determining legibility, which is why this is out of scope for this rule.
 
 ## Assumptions
 
@@ -127,7 +127,7 @@ This text only has a 3:1 contrast but it is a large (14 points and bold) text so
 
 #### Passed Example 7
 
-The purpose of the helvetica letters is to show what the font looks like. The actual words are irrelevant and could be replaced with any other sentence that includes all letters of the alphabat. Because of that, the rule is passed, despite the text not meeting the 4.5:1 color contrast requirement.
+The purpose of the Helvetica letters is to show what the font looks like. The actual words are irrelevant and could be replaced with any other sentence that includes all letters of the alphabet. Because of that, the rule passes, despite the text not meeting the 4.5:1 color contrast requirement.
 
 **Note**: Because this is non-text content, [success criterion 1.4.11 Non-text Contrast] requires font example to have a color contrast of 3:1.
 
@@ -150,7 +150,7 @@ This text has an insufficient contrast but it does not express anything in human
 
 #### Passed Example 9
 
-Even though the text is in a shadow DOM tree, the text is part of a child [text node](https://dom.spec.whatwg.org/#text) of an HTML in the flat tree and has sufficient contrast
+Even though the text is in a shadow DOM tree, the text is part of a child [text node](https://dom.spec.whatwg.org/#text) of an HTML element in the flat tree and has sufficient contrast
 
 ```html
 <p style="color: #333; background: #fff;" id="p"></p>
@@ -164,7 +164,7 @@ Even though the text is in a shadow DOM tree, the text is part of a child [text 
 
 #### Failed Example 1
 
-This text has an insufficient contrast with the white background.
+This text has insufficient contrast with the white background.
 
 ```html
 <p style="color: #AAA; background: white;">
@@ -174,7 +174,7 @@ This text has an insufficient contrast with the white background.
 
 #### Failed Example 2
 
-This text has an insufficient contrast with the darkest point on the gradient background behind the text.
+This text has insufficient contrast with the darkest point on the gradient background behind the text.
 
 ```html
 <p style="color: #AAA; background: linear-gradient(to right, #FFF, #00F); width: 300px">
@@ -184,7 +184,7 @@ This text has an insufficient contrast with the darkest point on the gradient ba
 
 #### Failed Example 3
 
-This text has an insufficient contrast with the background image.
+This text has insufficient contrast with the background image.
 
 ```html
 <p
@@ -218,7 +218,7 @@ This text fails because the CSS opacity property significantly lowers the contra
 
 #### Failed Example 6
 
-Even though the text is in a shadow DOM tree, the text is part of a child [text node](https://dom.spec.whatwg.org/#text) of an HTML in the flat tree and has insufficient contrast
+Even though the text is in a shadow DOM tree, the text is part of a child [text node](https://dom.spec.whatwg.org/#text) of an HTML element in the flat tree and has insufficient contrast
 
 ```html
 <p style="color: #aaa; background: #fff;" id="p"></p>
@@ -230,7 +230,7 @@ Even though the text is in a shadow DOM tree, the text is part of a child [text 
 
 #### Failed Example 7
 
-The text is placed over a black and white background, The grey text fails because of its opacity, where the text on the black background becomes too dark, and the text on the white background becomes too light.
+The text is placed over a black and white background. The grey text fails because of its opacity, where the text on the black background becomes too dark, and the text on the white background becomes too light.
 
 ```html
 <style>

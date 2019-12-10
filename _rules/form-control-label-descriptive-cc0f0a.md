@@ -57,7 +57,7 @@ Each test target, together with its [visual context][], describes the purpose of
 
 ## Assumptions
 
-This rule assumes that [labels][label] are intended for sighted users, and that hiding a [visible][] [label][] from assistive technologies, is a failure of [sc412][], but not of [sc246][].
+This rule assumes that [labels][label] are intended for sighted users, and that hiding a [visible][] [label][] from assistive technologies, is a failure of [Success Criterion 4.1.2: Name, Role and Value][sc412], but not of [Success Criterion 2.4.6: Heading and Labels][sc246].
 
 ## Accessibility Support
 
@@ -80,24 +80,33 @@ _There are no major accessibility support issues known for this rule._
 The implicit `label` element describes the `input` element.
 
 ```html
-<label>First name:<input id="fname" type="text" name="first_name"/></label>
+<label>First name:<input id="fname" type="text" name="fname"/></label>
 ```
 
 #### Passed Example 2
 
-The explicit `label` element describes the `input` element. The `label` element does not need to be [included in the accessibility tree][] for this rule to apply.
+The explicit `label` element describes the `input` element.
 
 ```html
-<label for="fname" aria-hidden="true">First name:</label> <input id="fname" type="text" name="first_name" />
+<label for="fname">First name:</label> <input id="fname" type="text" name="fname" />
 ```
 
 #### Passed Example 3
 
-The `span` element is marked as a [label][] for the `input` element through the `aria-labelledby` attribute. It describes the `input` element.
+The `p` element is marked as a [label][] for the `input` element through the `aria-labelledby` attribute. It describes the `input` element.
 
 ```html
-<span id="label_fname" aria-hidden="true">First name:</span>
-<input aria-labelledby="label_fname" type="text" name="first_name" />
+<p id="label_fname">First name:</p>
+<input aria-labelledby="label_fname" type="text" name="fname" />
+```
+
+#### Passed Example 3
+
+The `p` element is marked as a [label][] for the `input` element through the `aria-labelledby` attribute. It describes the `input` element. The [label][] does not need to be [included in the accessibility tree][] for this rule to apply.
+
+```html
+<p id="label_fname" aria-hidden="true">First name:</p>
+<input aria-labelledby="label_fname" type="text" name="fname" />
 ```
 
 #### Passed Example 4
@@ -121,7 +130,7 @@ The `label` elements, are not descriptive enough (because they are repeated over
 The implicit `label` element does not describe its associated `input` element.
 
 ```html
-<label>Bad label<input id="fname" type="text" name="first_name"/></label>
+<label>Menu<input id="fname" type="text" name="fname"/></label>
 ```
 
 #### Failed Example 2
@@ -129,7 +138,7 @@ The implicit `label` element does not describe its associated `input` element.
 The explicit `label` element does not describe its associated `input` element.
 
 ```html
-<label for="fname">Bad label</label> <input id="fname" type="text" name="first_name" />
+<label for="fname">Menu</label> <input id="fname" type="text" name="fname" />
 ```
 
 #### Failed Example 3
@@ -137,7 +146,8 @@ The explicit `label` element does not describe its associated `input` element.
 The `span` element is marked as a [label][] for the `input` element through the `aria-labelledby` attribute. It does not describe the `input` element.
 
 ```html
-<span id="label_fname">Bad label</span> <input aria-labelledby="label_fname" type="text" name="first_name" />
+<p id="label_fname">Menu</p>
+<input aria-labelledby="label_fname" type="text" name="fname" />
 ```
 
 #### Failed Example 4
@@ -170,7 +180,7 @@ The `label` element is not associated with an element having any of the required
 The `label` element is not [visible][].
 
 ```html
-<label for="fname" style="display:none;">First name:</label> <input id="fname" type="text" name="first_name" />
+<label for="fname" style="display:none;">First name:</label> <input id="fname" type="text" name="fname" />
 ```
 
 #### Inapplicable Example 3
@@ -178,9 +188,7 @@ The `label` element is not [visible][].
 The form field is not [visible][].
 
 ```html
-<label
-	>First name: <input style="position: absolute; top: -9999px; left: -9999px;" type="text" name="first_name"
-/></label>
+<label>First name: <input style="position: absolute; top: -9999px; left: -9999px;" type="text" name="fname"/></label>
 ```
 
 #### Inapplicable Example 4
@@ -188,7 +196,7 @@ The form field is not [visible][].
 The `span` element is not referenced by an `aria-labelledby` attribute.
 
 ```html
-<span>First name:</span><input type="text" name="first name" />
+<span>First name:</span><input type="text" name="fname" />
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

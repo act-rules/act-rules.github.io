@@ -32,9 +32,9 @@ This rule applies to any [document element](https://dom.spec.whatwg.org/#documen
 
 ## Expectation
 
-For each test target, the values of the [primary language subtags][primary language subtag], if any exist, for the `lang` and `xml:lang` attributes are the same.
+For each test target, the values of the [primary language subtags][], if any exist, for the `lang` and `xml:lang` attributes are the same.
 
-**Note:** Having matching [primary language subtags][primary language subtag] of the `lang` and `xml:lang` attribute, but non-matching [language tags](https://tools.ietf.org/html/bcp47#section-2) overall, will not cause accessibility issues unless there's a sufficiently large difference between the two [language tags](https://tools.ietf.org/html/bcp47#section-2). One notable case is the [language tags](https://tools.ietf.org/html/bcp47#section-2) for Cantonese (`zh-yue`) and Mandarin (`zh-cmn`) where the [primary language subtags](https://tools.ietf.org/html/bcp47#section-2.2.1) match, but the [extended language subtags](https://tools.ietf.org/html/bcp47#section-2.2.2) don't. Such a case would not fail this rule, but could lead to accessibility issues in practice.
+**Note:** Having matching [primary language subtags][] of the `lang` and `xml:lang` attribute, but non-matching [language tags](https://tools.ietf.org/html/bcp47#section-2) overall, will not cause accessibility issues unless there's a sufficiently large difference between the two [language tags](https://tools.ietf.org/html/bcp47#section-2). One notable case is the [language tags](https://tools.ietf.org/html/bcp47#section-2) for Cantonese (`zh-yue`) and Mandarin (`zh-cmn`) where the [primary language subtags][] match, but the [extended language subtags][] don't. Such a case would not fail this rule, but could lead to accessibility issues in practice.
 
 ## Assumptions
 
@@ -57,7 +57,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 #### Passed Example 1
 
-This `html` element has identical [primary language subtags][primary language subtag] for its `lang` and `xml:lang` attributes.
+This `html` element has identical [primary language subtags][] for its `lang` and `xml:lang` attributes.
 
 ```html
 <html lang="en" xml:lang="en"></html>
@@ -65,7 +65,7 @@ This `html` element has identical [primary language subtags][primary language su
 
 #### Passed Example 2
 
-This `html` element has identical [primary language subtags][primary language subtag] for its `lang` and `xml:lang` attributes. The [extended language subtags][extended language subtag] also match.
+This `html` element has identical [primary language subtags][] for its `lang` and `xml:lang` attributes. The [extended language subtags][] also match.
 
 ```html
 <html lang="en-GB" xml:lang="en-GB"></html>
@@ -73,7 +73,7 @@ This `html` element has identical [primary language subtags][primary language su
 
 #### Passed Example 3
 
-This `html` element has identical [primary language subtags][primary language subtag] for its `lang` and `xml:lang` attributes. The [extended language subtags][extended language subtag] do not match.
+This `html` element has identical [primary language subtags][] for its `lang` and `xml:lang` attributes. The [extended language subtags][] do not match.
 
 ```html
 <html lang="en-GB" xml:lang="en-US"></html>
@@ -83,7 +83,7 @@ This `html` element has identical [primary language subtags][primary language su
 
 #### Failed Example 1
 
-This `html` element has different [primary language subtags][primary language subtag] for its `lang` and `xml:lang` attributes.
+This `html` element has different [primary language subtags][] for its `lang` and `xml:lang` attributes.
 
 ```html
 <html lang="fr" xml:lang="en"></html>
@@ -177,7 +177,7 @@ This rule does not apply to `html` elements with an empty (`""`) `xml:lang` attr
 ```
 
 [content type]: https://dom.spec.whatwg.org/#concept-document-content-type 'Definition of content type'
-[extended language subtag]: https://tools.ietf.org/html/bcp47#section-2.2.2 'Definition of extended language subtag'
-[primary language subtag]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
+[extended language subtags]: https://tools.ietf.org/html/bcp47#section-2.2.2 'Definition of extended language subtag'
+[primary language subtags]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
 [top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'Definition of top-level browsing context'
 [valid language subtag]: #valid-language-subtag 'Definition of valid language subtag'

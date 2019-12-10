@@ -11,25 +11,14 @@ const yaml = require('js-yaml')
 const fs = require('fs')
 const gfmCodeBlocks = require('gfm-code-blocks')
 const reporter = require('vfile-reporter')
+const ariaQuery = require('aria-query')
 
 const describeRule = require('../test-utils/describe-rule')
+const describePage = require('../test-utils/describe-page')
 
-const ignoreWords = yaml.safeLoad(fs.readFileSync('./__tests__/spelling-ignore.yml', 'utf8'))
-// Ignoring WCAG techniques short name (eg "G31") and SC abbreviations for links (eg "sc241")
-// https://www.w3.org/WAI/WCAG21/Techniques
-const ignoreTechniques = ['ARIA', 'C', 'F', 'G', 'H', 'sc'].reduce((out, techniquePrefix) => {
-	let i = 1
-	while (i < 500) {
-		// Arbitrarily chosen number
-		const technique = `${techniquePrefix}${i}`
-		out.push(technique)
-		i++
-	}
-	return out
-}, [])
 const spellOptions = {
 	dictionary,
-	ignore: [...ignoreWords, ...ignoreTechniques],
+	ignore: getSpellIgnored(),
 }
 
 /**
@@ -37,10 +26,17 @@ const spellOptions = {
  */
 describe('Validate body for spelling mistakes', () => {
 	/**
-	 * Rule pages
+	 * Rule markdown files under `_rules`
 	 */
 	describeRule('spellcheck rules', ruleData => {
 		const text = getCuratedMarkdownBody(ruleData.body)
+		validateText(text)
+	})
+	/**
+	 * Other markdown files under `pages` directory, eg: `glossary`, `design` etc.,
+	 */
+	describePage('spellcheck pages', pageData => {
+		const text = getCuratedMarkdownBody(pageData.body)
 		validateText(text)
 	})
 })
@@ -101,4 +97,31 @@ function getCuratedMarkdownBody(body, options = {}) {
 	}
 
 	return removeMd(body)
+}
+
+/**
+ * Get a list of words for which spelling check should be ignored
+ * @returns {String[]}
+ */
+function getSpellIgnored() {
+	const ignoreConfigured = yaml.safeLoad(fs.readFileSync('./__tests__/spelling-ignore.yml', 'utf8'))
+
+	// Ignoring WCAG techniques short name (eg "G31") and SC abbreviations for links (eg "sc241")
+	// https://www.w3.org/WAI/WCAG21/Techniques
+	const ignoreTechniques = ['ARIA', 'C', 'F', 'G', 'H', 'sc'].reduce((out, techniquePrefix) => {
+		let i = 1
+		while (i < 500) {
+			// Arbitrarily chosen number
+			const technique = `${techniquePrefix}${i}`
+			out.push(technique)
+			i++
+		}
+		return out
+	}, [])
+
+	const ignoreAria = ariaQuery.aria.keys()
+	const ignoreDom = ariaQuery.dom.keys()
+	const ignoreRoles = ariaQuery.roles.keys()
+
+	return [...ignoreConfigured, ...ignoreTechniques, ...ignoreAria, ...ignoreDom, ...ignoreRoles]
 }

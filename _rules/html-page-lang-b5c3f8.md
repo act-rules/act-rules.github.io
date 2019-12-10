@@ -29,7 +29,7 @@ This rule applies to any [document element](https://dom.spec.whatwg.org/#documen
 
 ## Expectation
 
-Each test target has a `lang` attribute that is neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
+Each test target has a `lang` attribute that is neither empty (`""`) nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 ## Assumptions
 
@@ -51,7 +51,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The `lang` attribute specified has a non-empty value.
+This `html` element has a `lang` attribute with a non-empty (`""`) value.
 
 ```html
 <html lang="en"></html>
@@ -61,7 +61,7 @@ The `lang` attribute specified has a non-empty value.
 
 #### Failed Example 1
 
-There is no `lang` attribute specified.
+This `html` element does not have a `lang` attribute.
 
 ```html
 <html></html>
@@ -69,7 +69,7 @@ There is no `lang` attribute specified.
 
 #### Failed Example 2
 
-The `lang` attribute specified is empty ("").
+This `html` element has a `lang` attribute with an empty (`""`) value.
 
 ```html
 <html lang=""></html>
@@ -77,7 +77,7 @@ The `lang` attribute specified is empty ("").
 
 #### Failed Example 3
 
-The `lang` attribute consists of only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
+This `html` element has a `lang` attribute whose value is only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 ```html
 <html lang=" "></html>
@@ -85,7 +85,7 @@ The `lang` attribute consists of only [ASCII whitespace](https://infra.spec.what
 
 #### Failed Example 4
 
-There is no `lang` attribute specified, only a `xml:lang` attribute.
+This `html` element has no `lang` attribute, only a `xml:lang` attribute.
 
 ```html
 <html xml:lang="en"></html>

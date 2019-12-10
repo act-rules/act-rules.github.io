@@ -20,6 +20,8 @@ acknowledgements:
 
 ## Applicability
 
+eiaqesraenr
+
 This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element that:
 
 - is in a [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context); and

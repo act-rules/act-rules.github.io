@@ -23,18 +23,18 @@ acknowledgements:
 
 This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element that:
 
-- is in a [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context); and
-- has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`; and
-- has a `lang` attribute that has a [valid language subtag](#valid-language-subtag); and
+- is in a [top-level browsing context][]; and
+- has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type][] of `text/html`; and
+- has a `lang` attribute that has a [valid language subtag][]; and
 - has a non-empty `xml:lang` attribute.
 
 **Note:** `html` elements within `iframe` and `object` elements are not applicable as `iframe` and `object` elements create [nested browsing contexts](https://html.spec.whatwg.org/#nested-browsing-context). However, as these elements are meant to provide a layer of isolation, the declared language of their [parent browsing context](https://html.spec.whatwg.org/#parent-browsing-context) will likely not be inherited, making it possible for non-matching `lang` and `xml:lang` attributes in [nested browsing contexts](https://html.spec.whatwg.org/#nested-browsing-context) to also cause accessibility issues.
 
 ## Expectation
 
-For each test target, the values of the [primary language subtags](https://tools.ietf.org/html/bcp47#section-2.2.1), if any exist, for the `lang` and `xml:lang` attributes are the same.
+For each test target, the values of the [primary language subtags][primary language subtag], if any exist, for the `lang` and `xml:lang` attributes are the same.
 
-**Note:** Having matching [primary language subtags](https://tools.ietf.org/html/bcp47#section-2.2.1) of the `lang` and `xml:lang` attribute, but non-matching [language tags](https://tools.ietf.org/html/bcp47#section-2) overall, will not cause accessibility issues unless there's a sufficiently large difference between the two [language tags](https://tools.ietf.org/html/bcp47#section-2). One notable case is the [language tags](https://tools.ietf.org/html/bcp47#section-2) for Cantonese (`zh-yue`) and Mandarin (`zh-cmn`) where the [primary language subtags](https://tools.ietf.org/html/bcp47#section-2.2.1) match, but the [extended language subtags](https://tools.ietf.org/html/bcp47#section-2.2.2) don't. Such a case would not fail this rule, but could lead to accessibility issues in practice.
+**Note:** Having matching [primary language subtags][primary language subtag] of the `lang` and `xml:lang` attribute, but non-matching [language tags](https://tools.ietf.org/html/bcp47#section-2) overall, will not cause accessibility issues unless there's a sufficiently large difference between the two [language tags](https://tools.ietf.org/html/bcp47#section-2). One notable case is the [language tags](https://tools.ietf.org/html/bcp47#section-2) for Cantonese (`zh-yue`) and Mandarin (`zh-cmn`) where the [primary language subtags](https://tools.ietf.org/html/bcp47#section-2.2.1) match, but the [extended language subtags](https://tools.ietf.org/html/bcp47#section-2.2.2) don't. Such a case would not fail this rule, but could lead to accessibility issues in practice.
 
 ## Assumptions
 
@@ -57,7 +57,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 #### Passed Example 1
 
-`html` element with matching primary language subtags for `lang` and `xml:lang`.
+This `html` element has identical [primary language subtags][primary language subtag] for its `lang` and `xml:lang` attributes.
 
 ```html
 <html lang="en" xml:lang="en"></html>
@@ -65,7 +65,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 #### Passed Example 2
 
-`html` element with matching primary and extended language subtags for `lang` and `xml:lang`.
+This `html` element has identical [primary language subtags][primary language subtag] for its `lang` and `xml:lang` attributes. The [extended language subtags][extended language subtag] also match.
 
 ```html
 <html lang="en-GB" xml:lang="en-GB"></html>
@@ -73,7 +73,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 #### Passed Example 3
 
-`html` element with matching primary language subtags, but non-matching extended language subtags, for `lang` and `xml:lang`.
+This `html` element has identical [primary language subtags][primary language subtag] for its `lang` and `xml:lang` attributes. The [extended language subtags][extended language subtag] do not match.
 
 ```html
 <html lang="en-GB" xml:lang="en-US"></html>
@@ -83,7 +83,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 #### Failed Example 1
 
-`html` element with non-matching primary language subtags for `lang` and `xml:lang`.
+This `html` element has different [primary language subtags][primary language subtag] for its `lang` and `xml:lang` attributes.
 
 ```html
 <html lang="fr" xml:lang="en"></html>
@@ -93,7 +93,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 #### Inapplicable Example 1
 
-`svg` element is not applicable for this rule.
+The rule does not apply to `svg` elements.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" lang="en" xml:lang="en"></svg>
@@ -101,7 +101,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 #### Inapplicable Example 2
 
-`svg` element is not applicable for this rule.
+The rule does not apply to `svg` elements, even inside an `html` element.
 
 ```svg
 <html>
@@ -113,40 +113,71 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 #### Inapplicable Example 3
 
-`xml:lang` is empty, the rule mandates `non-empty` values.
-
-```html
-<html lang="fr" xml:lang=""></html>
-```
-
-#### Inapplicable Example 4
-
-Only `non-empty` values are considered.
-
-```html
-<html lang="" xml:lang=""></html>
-```
-
-#### Inapplicable Example 5
-
-This rule does not apply to elements whose `lang` attribute consists only of whitespace.
-
-```html
-<html lang=" " xml:lang=""></html>
-```
-
-#### Inapplicable Example 6
-
-This rule does not apply to elements without a `xml:lang` attribute.
-
-```html
-<html lang="en"></html>
-```
-
-#### Inapplicable Example 7
-
 This rule does not apply to `math` elements.
 
 ```xml
 <math xml:lang="en"></math>
 ```
+
+#### Inapplicable Example 4
+
+This rule only applies to `html` in [top-level browsing context][]
+
+```html
+<iframe srcdoc="<html lang='en' xml:lang='en'></html>" />
+```
+
+#### Inapplicable Example 5
+
+This rule only applies to documents with a [content type][] of `text/html`
+
+```xhtml
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html lang="en" xml:lang="en"></html>
+```
+
+#### Inapplicable Example 6
+
+This rule does not apply to `html` elements whose `lang` attribute is not a [valid language subtag][] (such as the empty string).
+
+```html
+<html lang="" xml:lang="en"></html>
+```
+
+#### Inapplicable Example 7
+
+This rule does not apply to `html` elements whose `lang` attribute is not a [valid language subtag][] (such as only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace)).
+
+```html
+<html lang=" " xml:lang="en"></html>
+```
+
+#### Inapplicable Example 8
+
+This rule does not apply to `html` elements whose `lang` attribute is not a [valid language subtag][].
+
+```html
+<html lang="xyz" xml:lang="en"></html>
+```
+
+#### Inapplicable Example 9
+
+This rule does not apply to `html` elements without an `xml:lang` attribute.
+
+```html
+<html lang="en"></html>
+```
+
+#### Inapplicable Example 10
+
+This rule does not apply to `html` elements with an empty (`""`) `xml:lang` attribute.
+
+```html
+<html lang="fr" xml:lang=""></html>
+```
+
+[content type]: https://dom.spec.whatwg.org/#concept-document-content-type 'Definition of content type'
+[extended language subtag]: https://tools.ietf.org/html/bcp47#section-2.2.2 'Definition of extended language subtag'
+[primary language subtag]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
+[top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'Definition of top-level browsing context'
+[valid language subtag]: #valid-language-subtag 'Definition of valid language subtag'

@@ -33,7 +33,7 @@ The rule applies to every [non-streaming](#non-streaming-media-element) `video` 
 
 A text transcript containing all the visual and auditory information of the test target is available, either on the page or available through a link.
 
-**Note**: A "text transcript" in the context of this rule is defined in WCAG 2 as a [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
+**Note**: A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
 
 ## Assumptions
 

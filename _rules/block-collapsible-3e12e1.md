@@ -235,7 +235,6 @@ The [user interface component][] only toggles the [visibility][visible] of the n
 The [user interface component][] only toggles the [inclusion in the accessibility tree][included in the accessibility tree] of the navigational [section of repeated content][], not its [visibility][visible].
 
 ```html
-<!DOCTYPE html>
 <html lang="en">
 	<script src="../test-assets/block-collapsible-3e12e1/toggle-display.js" />
 	<a href="#" onclick="toggleAriaHidden('navigation')">Toggle table of content</a>

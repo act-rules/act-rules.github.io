@@ -6,7 +6,7 @@ description: |
   This rule checks that the first focusable elements are links referring to sections of content on the same page
 accessibility_requirements:
   wcag-technique:G124: # Adding links at the top of the page to each area of the content
-    forConformance: true
+    forConformance: false
     failed: not satisfied
     passed: satisfied
     inapplicable: further testing needed

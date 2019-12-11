@@ -6,7 +6,7 @@ description: |
   This rule checks that blocks of content can be skipped by a link at their beginning
 accessibility_requirements:
   wcag-technique:G123: # Adding a link at the beginning of a block of repeated content to go to the end of the block
-    forConformance: true
+    forConformance: false
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed

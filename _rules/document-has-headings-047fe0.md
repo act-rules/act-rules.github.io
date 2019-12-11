@@ -6,7 +6,7 @@ description: |
   This rule checks that each section of content starts with a heading
 accessibility_requirements:
   wcag-technique:H69: # Providing heading elements at the beginning of each section of content
-    forConformance: true
+    forConformance: false
     failed: not satisfied
     passed: satisfied
     inapplicable: satisfied

@@ -6,7 +6,7 @@ description: |
   This rule checks that repeated blocks of content are expandable and collapsible
 accessibility_requirements:
   wcag-technique:SCR28: # Using an expandable and collapsible menu to bypass block of content
-    forConformance: true
+    forConformance: false
     failed: not satisfied
     passed: satisfied
     inapplicable: further testing needed

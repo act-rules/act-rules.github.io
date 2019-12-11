@@ -30,13 +30,14 @@ The first [focusable][] element within the test target:
 
 - is [included in the accessibility tree][]; and
 - is [visible][] when [focused][]; and
-- has a [semantic role][] of link; and
+- has a [semantic role][] of `link`; and
 - when activated, moves focus to the main [section of content][] of the [document][]; and
-- has either an [accessible name][] or [accessible description][] that communicates that it links to the main [section of content][].
+- has an [accessible name][] that communicates that it links to the main [section of content][].
 
 ## Assumptions
 
-This rule assumes that any global dismissible information that only appears once per site has already been acknowledged and is not displayed any more.
+- This rule assumes that description of the link is provided through its [accessible name][].
+- This rule assumes that any global dismissible information that only appears once per site has already been acknowledged and is not displayed any more.
 
 **Note**: The aim of such link is to be able to skip [sections of repeated content][section of repeated content] (headers, navigation bar, ...) when viewing several pages of the same site. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually by viewing and accepting cookies policy). Since that content is _not_ repeated (is it only shown once for the full site), it is not a problem to have it, and it may appear on any page of the site (depending where the user first comes in).
 
@@ -50,67 +51,101 @@ _There are no major accessibility support issues known for this rule._
 
 ## Test Cases
 
+**Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
+
+**Note**: Unless specified otherwise, the main [sections of content][section of content] of each document is defined by the `main` element, and the complementary [section of content][] (`aside` element`) is a [section of repeated content][] which does not include any [focusable][] element not shown explicitly.
+
 ### Passed
 
 #### Passed Example 1
 
-The link to skip [repeated content](#repeated-content) is [visible][], is [included in the accessibility tree][], and when activated moves the focus to the main [section of content][] identified here by the `main` element.
+The link to skip the complementary [section of repeated content][] is [visible][], is [included in the accessibility tree][], and when activated moves the focus to the main [section of content][]. Its [accessible name][] (coming from content) communicates that it skips to the main content.
 
 ```html
 <html>
 	<nav>
-		<a href="#main-content">Skip to main content</a>
+		<a href="#main">Skip to text</a>
 	</nav>
-	<div id="repeated-content">
-		<!-- Repeated Content -->
-	</div>
-	<main id="main-content">Main Content</main>
+	<aside>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
 #### Passed Example 2
 
-The link to skip [repeated content](#repeated-content) can be toggled to [visible][] through keyboard focus. When activated the focus is moved to the main [section of content][] identified here by the `main` element.
+The link to skip the complementary [section of repeated content][] is [included in the accessibility tree][], and is [visible][] when [focused][].
 
 ```html
 <html>
 	<head>
-		<style>
-			#skipNav a {
-				height: 100px;
-				position: absolute;
-				top: -100px;
-			}
-			#skipNav a:focus {
-				top: 0px;
-			}
-		</style>
+        <link rel="stylesheet" href="../test-assets/first-focusable-8a213c-e53727/styles.css" />
 	</head>
 	<body>
-		<nav id="skipNav">
-			<a href="#main-content">Skip to main content</a>
-		</nav>
-		<div id="repeated-content">
-			<!-- Repeated content -->
-		</div>
-		<main id="main-content">Main Content</main>
-	</body>
+		<nav class="visible-on-focus">
+		<a href="#main">Skip to text</a>
+	</nav>
+	<aside>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
 #### Passed Example 3
 
-The link to skip [repeated content](#repeated-content) has an `aria-label` attribute to provide an [accessible name][]. When activated focus is moved to the main [section of content][] identified here by the `main` element.
+The link to skip the complementary [section of repeated content][] has an [accessible name][] that communicates that it links to the main [section of content][].
 
 ```html
 <html>
 	<nav>
-		<a href="#main-content" aria-label="Skip to main content"></a>
+		<a href="#main" aria-label="Skip to text">📖</a>
 	</nav>
-	<div id="repeated-content">
-		<!-- Repeated content -->
-	</div>
-	<main id="main-content">Main Content</main>
+	<aside>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Passed Example 4
+
+Even though it is located after it, the link to skip the complementary [section of repeated content][] is still the first [focusable][] element within the page.
+
+```html
+<html>
+	<aside>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<nav>
+		<a href="#main">Skip to text</a>
+	</nav>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
@@ -118,100 +153,153 @@ The link to skip [repeated content](#repeated-content) has an `aria-label` attri
 
 #### Failed Example 1
 
-There is no link to skip [repeated content](#repeated-content).
+There is no link to skip the complementary [section of repeated content][].
 
 ```html
 <html>
-	<div id="repeated-content">
-		<!-- Repeated content -->
-	</div>
-	<main id="main-content">Main Content</main>
+	<aside>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
 #### Failed Example 2
 
-The link to skip [repeated content](#repeated-content) is not the first [focusable][] element within the `body`.
+The link to skip the complementary [section of repeated content][] is not the first [focusable][] element within the page.
 
 ```html
 <html>
 	<a href="https://www.w3.org/">Check out the W3C</a>
 	<nav>
-		<a href="#main-content">Skip to main content</a>
+		<a href="#main">Skip to text</a>
 	</nav>
-	<div id="repeated-content">
-		<!-- Repeated content -->
-	</div>
-	<main id="main-content">Main Content</main>
+	<aside>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
 #### Failed Example 3
 
-The link to skip [repeated content](#repeated-content) does not have an [accessible name][].
+The link to skip the complementary [section of repeated content][] is not included in the [accessibility tree][].
 
 ```html
 <html>
 	<nav>
-		<a href="#main-content"></a>
+		<a href="#main" aria-hidden="true">Skip to text</a>
 	</nav>
-	<div id="repeated-content">
-		<!-- Repeated content -->
-	</div>
-	<main id="main-content">Main Content</main>
+	<aside>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
 #### Failed Example 4
 
-The link to skip [repeated content](#repeated-content) does not reference a valid `id` attribute and when activated will not move focus to the main [section of content][] identified here by the `main` element.
+The link to skip the complementary [section of repeated content][] is not [visible][], even when focused.
 
 ```html
 <html>
 	<nav>
-		<a href="#invalidId">Skip to main content</a>
+		<a href="#main" style="position: absolute; top: -999px">Skip to text</a>
 	</nav>
-	<div id="repeated-content">
-		<!-- Repeated content -->
-	</div>
-	<main id="main-content">Main Content</main>
+	<aside>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
 #### Failed Example 5
 
-The link to skip [repeated content](#repeated-content) is not [visible][], and is not included in the [accessibility tree][].
+The element with a click event to skip the complementary [section of repeated content][] does not have a [semantic role][] of `link`.
 
 ```html
 <html>
 	<nav>
-		<a href="#main-content" style="display:none;">Skip to main content</a>
+		<span onclick="document.getElementById('main').focus()">Skip to text</span>
 	</nav>
-	<div id="repeated-content">
-		<!-- Repeated content -->
-	</div>
-	<main id="main-content">Main Content</main>
+	<aside>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
 #### Failed Example 6
 
-The element with a click event to skip [repeated content](#repeated-content) does not have a [semantic role][] of link.
+The link to skip the complementary [section of repeated content][] does not reference a valid `id` attribute and thus when activated will not move focus to the main [section of content][].
 
 ```html
 <html>
 	<nav>
-		<span onclick="focusMainContent()">Skip to main content</span>
+		<a href="#InvalidId">Skip to text</a>
 	</nav>
-	<div id="repeated-content">
-		<!-- Repeated content -->
-	</div>
-	<main id="main-content">Main Content</main>
-	<script>
-		function focusMainContent() {
-			document.getElementById('main-content').focus()
-		}
-	</script>
+	<aside>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Failed Example 7
+
+The link to skip the complementary [section of repeated content][] does not have an [accessible name][] that communicates its intend.
+
+```html
+<html>
+	<nav>
+		<a href="#main">Click me if you dare!</a>
+	</nav>
+	<aside>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
@@ -227,7 +315,6 @@ This [document][] is not an [HTML web page][].
 </svg>
 ```
 
-[accessible description]: #accessible-description 'Definition of accessible description'
 [accessible name]: #accessible-name 'Definition of accessible name'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [document element]: https://dom.spec.whatwg.org/#document-element 'Definition of document element'

@@ -443,7 +443,7 @@ The [document element][] of this [document][] is not an `html` element.
 [focusable]: #focusable 'Definition of focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'Definition of focused'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark 'The landmark role in WAI ARIA'
+[landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark 'List of landmark roles'
 [tech g123]: (https://www.w3.org/WAI/WCAG21/Techniques/general/G123) 'Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block'
 [section of content]: #section-of-content 'Definition of section of content'
 [section of repeated content]: #section-of-repeated-content 'Definition of section of repeated content'

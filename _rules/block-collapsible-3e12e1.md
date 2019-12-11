@@ -50,7 +50,7 @@ _There are no major accessibility support issues known for this rule._
 
 **Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
 
-**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`nav` and `main` elements), and the navigational [section of content][] (`nav` element) is a [section of repeated content][].
+**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`main` and `nav` elements), and the navigational [section of content][] (`nav` element) is a [section of repeated content][].
 
 ### Passed
 
@@ -73,6 +73,8 @@ The [visibility][visible] of the navigational [section of repeated content][] ca
 	</main>
 </html>
 ```
+
+#### Passed Example 2
 
 ### Failed
 
@@ -152,7 +154,7 @@ The [document element][] of this [document][] is not an `html` element.
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [document element]: https://dom.spec.whatwg.org/#document-element 'Definition of document element'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark 'The landmark role in WAI ARIA'
+[landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark 'List of landmark roles'
 [tech scr28]: https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR28 'Technique SCR28: Using an expandable and collapsible menu to bypass block of content'
 [section of content]: #section-of-content 'Definition of section of content'
 [section of repeated content]: #section-of-repeated-content 'Definition of section of repeated content'

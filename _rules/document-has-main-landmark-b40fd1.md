@@ -21,17 +21,17 @@ This rule applies to any [HTML web page][].
 
 Within the test target, there is at least on element which:
 
-- has [semantic role][] of [`main`][main]; and
+- has [semantic role][] of `main`; and
 - is [included in the accessibility tree][].
 
-**Note**: Authors SHOULD not use more than one element with a [semantic role][] of [`main`][main]. This is, however, a not a requirement for this rule and can be valid in certain cases.
+**Note**: Authors SHOULD not use more than one element with a [semantic role][] of `main`. This is, however, a not a requirement for this rule and can be valid in certain cases.
 
-**Note**: Technique [ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11] does not require the use of landmarks, nor the use of a [`main`][main] one. It only requires that if landmarks are used they identify the correct [section of content][]. Hence it is not listed as an accessibility requirement for this rule. However, having a landmark to identify the primary content of a page is enough to satisfy [Success Criterion 2.4.1 Bypass blocks](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html).
+**Note**: Technique [ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11] does not require the use of landmarks, nor the use of a `main` one. It only requires that if landmarks are used they identify the correct [section of content][]. Hence it is not listed as an accessibility requirement for this rule. However, having a landmark to identify the primary content of a page is enough to satisfy [Success Criterion 2.4.1 Bypass blocks](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html).
 
 ## Assumptions
 
 - This rule assumes that the `main` landmark is correctly used to identify the primary content of the page.
-- This rule assume that landmarks are intended to users of Assistive Technologies and are not necessarily rendered in a visible way. Therefore, it does not require the [`main`][main] landmark to be [visible][].
+- This rule assume that landmarks are intended to users of Assistive Technologies and are not necessarily rendered in a visible way. Therefore, it does not require the `main` landmark to be [visible][].
 
 ## Accessibility Support
 
@@ -42,6 +42,7 @@ _There are no major accessibility support issues known for this rule._
 - [ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11]
 - [ARIA Landmarks Example](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html)
 - [CSS scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
+- [The `main` role](https://www.w3.org/TR/wai-aria-1.1/#main)
 
 ## Test Cases
 
@@ -51,7 +52,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This [document][] has a one element with a [semantic role][] of [`main`][main].
+This [document][] has a one element with a [semantic role][] of `main`.
 
 ```html
 <html>
@@ -68,7 +69,7 @@ This [document][] has a one element with a [semantic role][] of [`main`][main].
 
 #### Passed Example 2
 
-This [document][] has several elements with a role of [`main`][main], one of them is [included in the accessibility tree][].
+This [document][] has several elements with a role of `main`, one of them is [included in the accessibility tree][].
 
 ```html
 <html>
@@ -103,7 +104,7 @@ This [document][] has several elements with a role of [`main`][main], one of the
 
 #### Failed Example 1
 
-This [document][] has no element with a role of [`main`][main].
+This [document][] has no element with a role of `main`.
 
 ```html
 <html>
@@ -118,7 +119,7 @@ This [document][] has no element with a role of [`main`][main].
 
 #### Failed Example 2
 
-The [`main`][main] landmark is not [included in the accessibility tree][].
+The `main` landmark is not [included in the accessibility tree][].
 
 ```html
 <html>
@@ -150,7 +151,6 @@ The [document element][] of this [document][] is not an `html` element.
 [document element]: https://dom.spec.whatwg.org/#document-element 'Definition of document element'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
-[main]: https://www.w3.org/TR/wai-aria-1.1/#main 'The `main` role'
 [section of content]: #section-of-content 'Definition of section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [tech aria11]: https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11

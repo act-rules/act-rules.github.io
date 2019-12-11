@@ -69,80 +69,104 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-Links in the [initial segment][] list have a [semantic role][] of link, are [visible][] and when activated moves the focus to the associated [section of content][].
+The [initial segment][] composed of the first three [focusable][] elements in this [document][] matches both expectations.
 
 ```html
 <html>
 	<ul>
-		<li><a href="#navigation">Skip to navigation</a></li>
 		<li><a href="#search">Skip to search</a></li>
+		<li><a href="#about">Skip to additional information</a></li>
 		<li><a href="#main">Skip to main content</a></li>
 	</ul>
-	<nav id="navigation">Navigation section</nav>
-	<form id="search" role="search">Search section</form>
-	<main id="main">Main content</main>
+	<form id="search" role="search">Search in text</form>
+	<aside id="about">
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
 #### Passed Example 2
 
-Links in the [initial segment][] list are [visible][] when [focused][].
+The links in the [initial segment][] (composed of the first three focusable elements) are [visible][] when [focused][].
 
 ```html
 <html>
 	<head>
-		<style>
-			#skiplinks a {
-				position: absolute;
-				top: -100px;
-			}
-			#skiplinks a:focus {
-				top: 0px;
-			}
-		</style>
+		<link rel="stylesheet" href="../test-assets/first-focusable-8a213c-e53727/styles.css" />
 	</head>
 	<body>
-		<ul>
-			<li><a href="#navigation">Skip to navigation</a></li>
-			<li><a href="#search">Skip to search</a></li>
-			<li><a href="#main">Skip to main content</a></li>
-		</ul>
-		<nav id="navigation">Navigation section</nav>
-		<form id="search" role="search">Search section</form>
-		<main id="main">Main content</main>
+		<a class="visible-on-focus" href="#search">Skip to search</a>
+		<a class="visible-on-focus" href="#about">Skip to additional information</a>
+		<a class="visible-on-focus" href="#main">Skip to text</a>
+		<form id="search" role="search">Search in text</form>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
 	</body>
 </html>
 ```
 
 #### Passed Example 3
 
-Links in the [initial segment][] list move the focus to heading elements when activated.
+The links in the [initial segment][] (composed of the first three focusable elements) use `aria-label` to provide an [accessible name][].
 
 ```html
 <html>
 	<ul>
-		<li><a href="#firstheading">First heading</a></li>
-		<li><a href="#secondheading">Second heading</a></li>
+		<li><a href="#search" aria-label="Skip to search">🔍</a></li>
+		<li><a href="#about" aria-label="Skip to additional information">➕</a></li>
+		<li><a href="#main" aria-label="Skip to text">📖</a></li>
 	</ul>
-	<h2 id="firstheading">First heading section</h2>
-	<h2 id="secondheading">Second heading section</h2>
+	<form id="search" role="search">Search in text</form>
+	<aside id="about">
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
 #### Passed Example 4
 
-Links in the [initial segment][] list use `aria-label` to provide an [accessible name][].
+Even though they are after the form [section of repeated content][], the three links are still the first [focusable][] elements and thus are an [initial segment][] of [focusable][] elements passing the expectation.
 
 ```html
 <html>
+	<form id="search" role="search">Search in text</form>
 	<ul>
-		<li><a href="#navigation" aria-label="Skip to navigation"></a></li>
-		<li><a href="#search" aria-label="Skip to search"></a></li>
-		<li><a href="#main" aria-label="Skip to main content"></a></li>
+		<li><a href="#search">Skip to search</a></li>
+		<li><a href="#about">Skip to additional information</a></li>
+		<li><a href="#main">Skip to main content</a></li>
 	</ul>
-	<nav id="navigation">Navigation section</nav>
-	<form id="search" role="search">Search section</form>
-	<main id="main">Main content</main>
+	<aside id="about">
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the authors, repeated on each page -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 

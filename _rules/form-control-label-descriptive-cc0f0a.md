@@ -24,40 +24,43 @@ acknowledgements:
 
 ## Applicability
 
-This rule applies to any HTML `label` element or other element referenced by `aria-labelledby` that is [visible][], and is programmatically associated with an HTML element which is [visible][] and has one of the following [semantic roles][semantic role]:
+This rule applies to any [programmatic label][] of an element which has one of the following [semantic roles][semantic role]:
 
-- `checkbox`
-- `combobox` (`select` elements)
-- `listbox`
-- `menuitemcheckbox`
-- `menuitemradio`
-- `radio`
-- `searchbox`
-- `slider`
-- `spinbutton`
-- `switch`
-- `textbox`
+- [`checkbox`][checkbox]
+- [`combobox`][combobox]
+- [`listbox`][listbox]
+- [`menuitemcheckbox`][menuitemcheckbox]
+- [`menuitemradio`][menuitemradio]
+- [`radio`][radio]
+- [`searchbox`][searchbox]
+- [`slider`][slider]
+- [`spinbutton`][spinbutton]
+- [`switch`][switch]
+- [`textbox`][textbox]
 
-**Note**: The list of applicable [semantic roles][semantic role] is derived by taking all the roles from [WAI-ARIA Specifications](#wai-aria-specifications) that:
+and where both the element and the [programmatic label][] are [visible][].
 
-- inherit from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
+**Note**: The list of applicable [semantic roles][semantic role] is derived by taking all the roles from [WAI-ARIA Specifications][] that:
+
+- inherit from the [abstract][] [`input`][input] or [`select`][select] role; and
 - do not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
 
-**Note:** The `option` role is not part of the list of applicable roles, because it has a required context role that inherits from the `select` role. Furthermore, `option` does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means that [WCAG 2.1][wcag21] does not require it to have an [accessible name][].
+**Note:** The [`option`][option] role is not part of the list of applicable roles, because it has a required context role that inherits from the [`select`][select] role. Furthermore, [`option`][option] does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means that [WCAG 2.1][wcag21] does not require it to have an [accessible name][].
 
-**Note**: [Labels][label] in WCAG are not restricted to the `label` element of HTML and can be any element. This rule is only concerned about actual `label` elements, and elements that are programmatically marked as [labels][label] via the `aria-labelledby` attribute.
+**Note**: [Labels][label] in WCAG are not restricted to the [`label`][label element] element of HTML and can be any element. This rule is only concerned about actual [`label`][label element] elements, and elements that are programmatically marked as [labels][label] via the [`aria-labelledby`][aria-labelledby] attribute.
 
 ## Expectation
 
 Each test target, together with its [visual context][], describes the purpose of the associated element.
 
-**Note**: It is possible for an element to have an [accessible name][] but still having a non-descriptive `label` (and even a non-descriptive [label][]). In that case, it would pass [Success Criterion 4.1.2: Name, Role and Value][sc412] but still fail this rule and [Success Criterion 2.4.6: Heading and Labels][sc246].
+**Note**: It is possible for an element to have an [accessible name][] but still having a non-descriptive [`label`][label element] element (and even a non-descriptive [label][]). In that case, it would pass [Success Criterion 4.1.2: Name, Role and Value][sc412] but still fail this rule and [Success Criterion 2.4.6: Heading and Labels][sc246].
 
 **Note**: Having a [label][] which is not included in the [accessible name][] is a violation of [Success Criterion 2.5.3: Label in Name][sc253] but not of this rule nor of [Success Criterion 2.4.6: Heading and Labels][sc246].
 
 ## Assumptions
 
-This rule assumes that [labels][label] are intended for sighted users, and that hiding a [visible][] [label][] from assistive technologies, is a failure of [Success Criterion 4.1.2: Name, Role and Value][sc412], but not of [Success Criterion 2.4.6: Heading and Labels][sc246].
+- This rule assumes that [labels][label] are intended for sighted users, and that hiding a [visible][] [label][] from assistive technologies, is a failure of [Success Criterion 4.1.2: Name, Role and Value][sc412], but not of [Success Criterion 2.4.6: Heading and Labels][sc246].
+- This rule assumes that the [programmatic labels][programmatic label] of an element are also part of its [visual context][].
 
 ## Accessibility Support
 
@@ -65,7 +68,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- [ARIA 1.1][aria11]
+- [Accessible Rich Internet Applications (WAI-ARIA) 1.1][aria11]
 - [Understanding Success Criterion 2.4.6: Headings and Labels][usc246]
 - [Understanding Success Criterion 4.1.2: Name, Role and Value][usc412]
 - [G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG21/Techniques/general/G131)
@@ -77,7 +80,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The implicit `label` element describes the `input` element.
+The [`label`][label element] element is a [programmatic label][] of the [`input`][input] element and describes it.
 
 ```html
 <label>First name:<input id="fname" type="text" name="fname"/></label>
@@ -85,7 +88,7 @@ The implicit `label` element describes the `input` element.
 
 #### Passed Example 2
 
-The explicit `label` element describes the `input` element.
+The [`label`][label element] element is a [programmatic label][] of the [`input`][input] element and describes it.
 
 ```html
 <label for="fname">First name:</label> <input id="fname" type="text" name="fname" />
@@ -93,7 +96,7 @@ The explicit `label` element describes the `input` element.
 
 #### Passed Example 3
 
-The `p` element is marked as a [label][] for the `input` element through the `aria-labelledby` attribute. It describes the `input` element.
+The [`p`][p element] element is a [programmatic label][] of the [`input`][input] element and describes it.
 
 ```html
 <p id="label_fname">First name:</p>
@@ -102,7 +105,7 @@ The `p` element is marked as a [label][] for the `input` element through the `ar
 
 #### Passed Example 3
 
-The `p` element is marked as a [label][] for the `input` element through the `aria-labelledby` attribute. It describes the `input` element. The [label][] does not need to be [included in the accessibility tree][] for this rule to apply.
+The [`p`][p element] element is a [programmatic label][] of the [`input`][input] element and describes it. The [programmatic label][] does not need to be [included in the accessibility tree][] for this rule to apply.
 
 ```html
 <p id="label_fname" aria-hidden="true">First name:</p>
@@ -111,7 +114,7 @@ The `p` element is marked as a [label][] for the `input` element through the `ar
 
 #### Passed Example 4
 
-The `label` elements, are not descriptive enough (because they are repeated over several fields). However, the headings provide a [visual context][] that differentiates the purpose of the otherwise identically named form fields. Within their [visual context][], the `label` elements are descriptive of their respective `input` elements.
+The [`label`][label element] elements are [programmatic labels][programmatic label] of their respective [`input`][input] elements. The [`label`][label element] elements, are not descriptive enough (because they are repeated over several fields). However, the headings provide a [visual context][] that differentiates the purpose of the otherwise identically named form fields. Within their [visual context][], the [`label`][label element] elements are descriptive of their respective [`input`][label element] elements.
 
 ```html
 <h2>Shipping address</h2>
@@ -123,11 +126,21 @@ The `label` elements, are not descriptive enough (because they are repeated over
 <label>Street<input id="billing-street" type="text" name="street"/></label>
 ```
 
+#### Passed Example 5
+
+Both the [`div`][div] and the [`span`][span] elements are [programmatic labels][programmatic label] of the [`input`][] element. Each of them, within the [visual context][] formed by the other one, is descriptive.
+
+```html
+<div id="shipping">Shipping address</div>
+<span id="name">Name</span>
+<input id="shipping-name" type="text" name="name" aria-labelledby="shipping name" />
+```
+
 ### Failed
 
 #### Failed Example 1
 
-The implicit `label` element does not describe its associated `input` element.
+The [`label`][label element] element is a [programmatic label][] of the [`input`][input] element but does not describe it.
 
 ```html
 <label>Menu<input id="fname" type="text" name="fname"/></label>
@@ -135,7 +148,7 @@ The implicit `label` element does not describe its associated `input` element.
 
 #### Failed Example 2
 
-The explicit `label` element does not describe its associated `input` element.
+The [`label`][label element] element is a [programmatic label][] of the [`input`][input] element but does not describe it.
 
 ```html
 <label for="fname">Menu</label> <input id="fname" type="text" name="fname" />
@@ -143,7 +156,7 @@ The explicit `label` element does not describe its associated `input` element.
 
 #### Failed Example 3
 
-The `span` element is marked as a [label][] for the `input` element through the `aria-labelledby` attribute. It does not describe the `input` element.
+The [`span`][span] element is a [programmatic label][] of the [`input`][input] element but does not describe it.
 
 ```html
 <p id="label_fname">Menu</p>
@@ -152,7 +165,7 @@ The `span` element is marked as a [label][] for the `input` element through the 
 
 #### Failed Example 4
 
-The `label` elements, are not descriptive enough. The headings are not [visible][]. Therefore, they do not provide [visual context][].
+The [`label`][label element] elements are [programmatic labels][programmatic label] of their respective [`input`][input] elements. The [`label`][label element] elements, are not descriptive enough (because they are repeated over several fields). The headings are not [visible][]. Therefore, they do not provide [visual context][].
 
 ```html
 <h2 style="position: absolute; top: -9999px; left: -9999px;">Shipping address</h2>
@@ -164,11 +177,21 @@ The `label` elements, are not descriptive enough. The headings are not [visible]
 <input aria-label="Street" id="billing-street" type="text" name="street" />
 ```
 
+#### Failed Example 5
+
+Both the [`div`][div] and the [`span`][span] elements are [programmatic labels][programmatic label] of the [`input`][] element, but only the [`div`][div] is [visible][]. It has no [visual context][], and is not descriptive.
+
+```html
+<div id="shipping">Shipping address</div>
+<span id="name" style="display: none">Name</span>
+<input id="shipping-name" type="text" name="name" aria-labelledby="shipping name" />
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-The `label` element is not associated with an element having any of the required [semantic roles][semantic role].
+The [`label`][label element] element is not a [programmatic label][] of any element.
 
 ```html
 <label for="fname">First name:</label>
@@ -177,7 +200,7 @@ The `label` element is not associated with an element having any of the required
 
 #### Inapplicable Example 2
 
-The `label` element is not [visible][].
+The [`label`][label element] element is not [visible][].
 
 ```html
 <label for="fname" style="display:none;">First name:</label> <input id="fname" type="text" name="fname" />
@@ -185,7 +208,7 @@ The `label` element is not [visible][].
 
 #### Inapplicable Example 3
 
-The form field is not [visible][].
+The [`label`][label element] is a [visible][] [programmatic label][] of the [`input`][input] element. However, the [`input`][input] is not [visible][], hence this rule does not apply.
 
 ```html
 <label>First name: <input style="position: absolute; top: -9999px; left: -9999px;" type="text" name="fname"/></label>
@@ -193,22 +216,44 @@ The form field is not [visible][].
 
 #### Inapplicable Example 4
 
-The `span` element is not referenced by an `aria-labelledby` attribute.
+The [`span`][span] element is not a [programmatic label][] of any element.
 
 ```html
 <span>First name:</span><input type="text" name="fname" />
 ```
 
+[abstract]: https://www.w3.org/TR/wai-aria/#abstract_roles 'List of abstract roles'
 [accessible name]: #accessible-name 'Definition of accessible name'
 [aria11]: https://www.w3.org/TR/wai-aria-1.1/ 'Accessible Rich Internet Applications 1.1'
+[aria-labelledby]: https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby 'The `aria-labelledby attribute and property'
+[checkbox]: https://www.w3.org/TR/wai-aria-1.1/#checkbox 'The `checkbox` role'
+[combobox]: https://www.w3.org/TR/wai-aria-1.1/#combobox 'The `combobox` role'
+[div]: https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element 'The `div` element'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[input]: https://www.w3.org/TR/wai-aria-1.1/#input 'The `input` role'
 [label]: https://www.w3.org/TR/WCAG21/#dfn-labels 'Definition of label'
+[label element]: https://html.spec.whatwg.org/multipage/forms.html#the-label-element 'The `label` element'
+[listbox]: https://www.w3.org/TR/wai-aria-1.1/#listbox 'The `listbox` role'
+[menuitemcheckbox]: https://www.w3.org/TR/wai-aria-1.1/#menuitemcheckbox 'The `menuitemcheckbox` role'
+[menuitemradio]: https://www.w3.org/TR/wai-aria-1.1/#menuitemradio 'The `menuitemradio` role'
+[option]: https://www.w3.org/TR/wai-aria-1.1/#option 'The `option` role'
+[p element]: https://html.spec.whatwg.org/multipage/grouping-content.html#the-p-element 'The `p` element'
+[programmatic label]: #programmatic-label 'Definition of programmatic label'
+[radio]: https://www.w3.org/TR/wai-aria-1.1/#radio 'The `radio` role'
 [sc246]: https://www.w3.org/WAI/WCAG21/#headings-and-labels.html 'Success Criterion 2.4.6: Heading and Labels'
 [sc253]: https://www.w3.org/WAI/WCAG21/label-in-name 'Success Criterion 2.5.3: Label in Name'
 [sc412]: https://www.w3.org/WAI/WCAG21/#name-role-value 'Success Criterion 4.1.2: Name, Role and Value'
+[searchbox]: https://www.w3.org/TR/wai-aria-1.1/#searchbox 'The `searchbox` role'
+[select]: https://www.w3.org/TR/wai-aria-1.1/#select 'The `select` role'
 [semantic role]: #semantic-role 'Definition of semantic role'
+[slider]: https://www.w3.org/TR/wai-aria-1.1/#slider 'The `slider` role'
+[span]: https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-span-element 'The `span` element'
+[spinbutton]: https://www.w3.org/TR/wai-aria-1.1/#spinbutton 'The `spinbutton` role'
+[switch]: https://www.w3.org/TR/wai-aria-1.1/#switch 'The `switch` role'
+[textbox]: https://www.w3.org/TR/wai-aria-1.1/#textbox 'The `textbox` role'
 [usc246]: https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html 'Understanding SC 2.4.6: Heading and Labels'
 [usc412]: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value 'Understanding SC 4.1.2: Name, Role and Value'
 [visible]: #visible 'Definition of visible'
 [visual context]: #visual-context 'Definition of visual context'
+[wai-aria specifications]: #wai-aria-specifications 'Definition of WAI-ARIA specifications'
 [wcag21]: https://www.w3.org/TR/WCAG21/ 'Web Content Accessibility Guidelines 2.1'

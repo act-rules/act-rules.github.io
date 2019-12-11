@@ -50,18 +50,18 @@ _There are no major accessibility support issues known for this rule._
 
 **Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
 
-**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`main` and `nav` elements), and the navigational [section of content][] (`nav` element) is a [section of repeated content][].
+**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`aside`, `main` and `nav` elements); both the complementary and navigational [sections of content][section of content] (`aside` and `nav` element) are [sections of repeated content][section of repeated content].
 
 ### Passed
 
 #### Passed Example 1
 
-The [visibility][visible] of the navigational [section of repeated content][] can be toggled on and off by the link at the start of the document.
+The [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of the navigational [section of repeated content][] can be toggled on and off by the link at the start of the document.
 
 ```html
 <html>
-	<script src="../test-assets/block-collapsible-3e12e1/toggle-visibility.js" />
-	<a href="#" onclick="toggleVisibility('navigation')">Toggle table of content</a>
+	<script src="../test-assets/block-collapsible-3e12e1/toggle-display.js" />
+	<a href="#" onclick="toggleHidden('navigation')">Toggle table of content</a>
 	<nav id="navigation">
 		<h1>Contents</h1>
 		<!-- list of links to each chapter -->
@@ -76,65 +76,178 @@ The [visibility][visible] of the navigational [section of repeated content][] ca
 
 #### Passed Example 2
 
+The [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of both the complementary and the navigational [sections of repeated content][section of repeated content] can be toggled on and off by the button at the start of the document.
+
+```html
+<html>
+	<script src="../test-assets/block-collapsible-3e12e1/toggle-display.js" />
+	<button onclick="toggleHidden(['navigation', 'biography'])">Toggle repeated content</button>
+	<nav id="navigation">
+		<h1>Contents</h1>
+		<!-- list of links to each chapter -->
+	</nav>
+	<aside id="biography">
+		<h1>About the authors</h1>
+		<!-- short biography of the author and translator -->
+	</aside>
+	<main>
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Passed Example 3
+
+The [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of both the complementary and the navigational [sections of repeated content][section of repeated content] can be toggled on and off, each of them by a different [user interface component][].
+
+```html
+<html>
+	<script src="../test-assets/block-collapsible-3e12e1/toggle-display.js" />
+	<a href="#" onclick="toggleHidden('navigation')">Toggle table of content</a>
+	<button onclick="toggleHidden('biography')">Toggle extra content</button>
+	<nav id="navigation">
+		<h1>Contents</h1>
+		<!-- list of links to each chapter -->
+	</nav>
+	<aside id="biography">
+		<h1>About the authors</h1>
+		<!-- short biography of the author and translator -->
+	</aside>
+	<main>
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Passed Example 4
+
+The [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of the navigational [section of repeated content][] can be toggled on and off by the link at the start of the document.
+
+```html
+<html>
+	<head>
+		<link rel="stylesheet" href="../test-assets/block-collapsible-3e12e1/styles.css" />
+		<script src="../test-assets/block-collapsible-3e12e1/toggle-display.js" />
+	</head>
+	<a href="#" onclick="toggleVisibility('navigation'); toggleAriaHidden('navigation')">Toggle table of content</a>
+	<nav id="navigation">
+		<h1>Contents</h1>
+		<!-- list of links to each chapter -->
+	</nav>
+	<main>
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1
 
+There is no [user interface component][] to toggle the navigational [section of repeated content].
+
 ```html
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title></title>
-	</head>
-	<body></body>
+<html>
+	<nav id="navigation">
+		<h1>Contents</h1>
+		<!-- list of links to each chapter -->
+	</nav>
+	<main>
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
 #### Failed Example 2
 
+The [user interface component][] to toggle the navigational [section of repeated content][] is not [visible][].
+
 ```html
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title></title>
-	</head>
-	<body></body>
+<html>
+	<script src="../test-assets/block-collapsible-3e12e1/toggle-display.js" />
+	<a href="#" style="position: absolute; top: -999px" onclick="toggleHidden('navigation')">Toggle table of content</a>
+	<nav id="navigation">
+		<h1>Contents</h1>
+		<!-- list of links to each chapter -->
+	</nav>
+	<main>
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
 #### Failed Example 3
 
+The [user interface component][] to toggle the navigational [section of repeated content][] is not [included in the accessibility tree][].
+
 ```html
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title></title>
-	</head>
-	<body></body>
+<html>
+	<script src="../test-assets/block-collapsible-3e12e1/toggle-display.js" />
+	<a href="#" aria-hidden="true" onclick="toggleHidden('navigation')">Toggle table of content</a>
+	<nav id="navigation">
+		<h1>Contents</h1>
+		<!-- list of links to each chapter -->
+	</nav>
+	<main>
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
 #### Failed Example 4
 
+The [user interface component][] only toggles the [visibility][visible] of the navigational [section of repeated content][], not its [inclusion in the accessibility tree][included in the accessibility tree].
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title></title>
+		<link rel="stylesheet" href="../test-assets/block-collapsible-3e12e1/styles.css" />
+		<script src="../test-assets/block-collapsible-3e12e1/toggle-display.js" />
 	</head>
-	<body></body>
+	<a href="#" onclick="toggleVisibility('navigation')">Toggle table of content</a>
+	<nav id="navigation">
+		<h1>Contents</h1>
+		<!-- list of links to each chapter -->
+	</nav>
+	<main>
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
 #### Failed Example 5
 
+The [user interface component][] only toggles the [inclusion in the accessibility tree][included in the accessibility tree] of the navigational [section of repeated content][], not its [visibility][visible].
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title></title>
-	</head>
-	<body></body>
+	<script src="../test-assets/block-collapsible-3e12e1/toggle-display.js" />
+	<a href="#" onclick="toggleAriaHidden('navigation')">Toggle table of content</a>
+	<nav id="navigation">
+		<h1>Contents</h1>
+		<!-- list of links to each chapter -->
+	</nav>
+	<main>
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 

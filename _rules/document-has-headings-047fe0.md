@@ -236,7 +236,7 @@ The `h1` element that starts the second [section of content][] is not [visible][
 
 #### Inapplicable Example 1
 
-The [document element][] of this [document][] is not an `html` element.
+This [document][] is not an [HTML web page][].
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">

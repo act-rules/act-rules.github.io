@@ -297,7 +297,7 @@ Multiple links in the [initial segment][] list move the focus to the same [secti
 
 #### Inapplicable Example 1
 
-The [document element][] of this [document][] is not an `html` element.
+This [document][] is not an [HTML web page][].
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">

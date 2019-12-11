@@ -249,7 +249,7 @@ This [document][] is not an [HTML web page][].
 [document element]: https://dom.spec.whatwg.org/#document-element 'Definition of document element'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark 'List of landmark roles'
+[landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of landmark roles'
 [section of content]: #section-of-content 'Definition of section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [tech h69]: https://www.w3.org/WAI/WCAG21/Techniques/html/H69 'Technique H69: Providing heading elements at the beginning of each section of content'

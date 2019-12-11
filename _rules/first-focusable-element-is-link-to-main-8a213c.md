@@ -53,7 +53,7 @@ _There are no major accessibility support issues known for this rule._
 
 **Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
 
-**Note**: Unless specified otherwise, the main [sections of content][section of content] of each document is defined by the `main` element, and the complementary [section of content][] (`aside` element`) is a [section of repeated content][] which does not include any [focusable][] element not shown explicitly.
+**Note**: Unless specified otherwise, the main [section of content][] of each document is defined by the `main` element, and the complementary [section of content][] (`aside` element) is a [section of repeated content][] which does not include any [focusable][] element not shown explicitly.
 
 ### Passed
 

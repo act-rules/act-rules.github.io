@@ -1,0 +1,8 @@
+.visible-on-focus {
+	position: absolute;
+	top: -100px;
+}
+.visible-on-focus:focus {
+	position: relative;
+	top: 0px;
+}

@@ -30,12 +30,12 @@ This rule applies to any [HTML web page][].
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [Document has headings](https://act-rules.github.io/rules/047fe0); or
-- [Document has a main landmark](https://act-rules.github.io/rules/b40fd1); or
-- [Link for skipping block of content](https://act-rules.github.io/rules/7b576d); or
+- [Document has headings][]; or
+- [Document has a main landmark][]; or
+- [Link for skipping block of content][]; or
 - [Block of content is expandable and collapsible][]; or
-- [First focusable element is link to main content](https://act-rules.github.io/rules/8a213c); or
-- [First focusable elements are links to sections of content](https://act-rules.github.io/rules/e53727).
+- [First focusable element is link to main content][]; or
+- [First focusable elements are links to sections of content][].
 
 ## Assumptions
 
@@ -155,8 +155,13 @@ The [document element][] of this [document][] is not an `html` element.
 </svg>
 ```
 
-[block of content is expandable and collapsible]: https://act-rules.github.io/rules/3e12e1
+[block of content is expandable and collapsible]: https://act-rules.github.io/rules/3e12e1 'Rule Block of content is expandable and collapsible'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [document element]: https://dom.spec.whatwg.org/#document-element 'Definition of document element'
+[document has a main landmark]: https://act-rules.github.io/rules/b40fd1 'Rule Document has a main landmark'
+[document has headings]: https://act-rules.github.io/rules/047fe0 'Rule Document has headings'
+[first focusable elements are links to sections of content]: https://act-rules.github.io/rules/e53727 'Rule First focusable elements are links to sections of content'
+[first focusable element is link to main content]: https://act-rules.github.io/rules/8a213c 'Rule First focusable element is link to main content'
+[link for skipping block of content]: https://act-rules.github.io/rules/7b576d 'Rule Link for skipping block of content'
 [sc241]: https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html 'Success Criterion 2.4.1: Bypass blocks'
 [html web page]: #web-page-html 'Definition of web page (HTML)'

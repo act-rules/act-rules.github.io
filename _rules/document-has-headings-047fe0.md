@@ -89,21 +89,22 @@ In this [document][], headings are not the first elements of each [section of co
 
 ```html
 <html>
-<head>
+	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-	<nav>
-		<hr />
-		<h1>Contents</h1>
-		<!-- list of links to each chapter -->
-	</nav>
-	<main>
-		<hr />
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+		<nav>
+			<hr />
+			<h1>Contents</h1>
+			<!-- list of links to each chapter -->
+		</nav>
+		<main>
+			<hr />
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 

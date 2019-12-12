@@ -75,22 +75,27 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 
 ```html
 <html>
-	<ul>
-		<li><a href="#search">Skip to search</a></li>
-		<li><a href="#about">Skip to additional information</a></li>
-		<li><a href="#main">Skip to text</a></li>
-	</ul>
-	<form id="search" role="search">Search in text</form>
-	<aside id="about">
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#about">Skip to additional information</a></li>
+			<li><a href="#main">Skip to text</a></li>
+		</ul>
+		<form id="search" role="search">Search in text</form>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -102,6 +107,7 @@ The links in the [initial segment][] (composed of the first three focusable elem
 <html>
 	<head>
 		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
+		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
 		<a class="visible-on-focus" href="#search">Skip to search</a>
@@ -128,22 +134,27 @@ The links in the [initial segment][] (composed of the first three focusable elem
 
 ```html
 <html>
-	<ul>
-		<li><a href="#search" aria-label="Skip to search">🔍</a></li>
-		<li><a href="#about" aria-label="Skip to additional information">➕</a></li>
-		<li><a href="#main" aria-label="Skip to text">📖</a></li>
-	</ul>
-	<form id="search" role="search">Search in text</form>
-	<aside id="about">
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#search" aria-label="Skip to search">🔍</a></li>
+			<li><a href="#about" aria-label="Skip to additional information">➕</a></li>
+			<li><a href="#main" aria-label="Skip to text">📖</a></li>
+		</ul>
+		<form id="search" role="search">Search in text</form>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -153,22 +164,27 @@ Even though they are after the form [section of repeated content][], the three l
 
 ```html
 <html>
-	<form id="search" role="search">Search in text</form>
-	<ul>
-		<li><a href="#search">Skip to search</a></li>
-		<li><a href="#about">Skip to additional information</a></li>
-		<li><a href="#main">Skip to text</a></li>
-	</ul>
-	<aside id="about">
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<form id="search" role="search">Search in text</form>
+		<ul>
+			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#about">Skip to additional information</a></li>
+			<li><a href="#main">Skip to text</a></li>
+		</ul>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -178,23 +194,28 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 
 ```html
 <html>
-	<ul>
-		<li><a href="#search">Skip to search</a></li>
-		<li><a href="#about">Skip to additional information</a></li>
-		<li><a href="#main">Skip to text</a></li>
-		<li><a href="https://www.w3.org/">Check out the W3C</a></li>
-	</ul>
-	<form id="search" role="search">Search in text</form>
-	<aside id="about">
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#about">Skip to additional information</a></li>
+			<li><a href="#main">Skip to text</a></li>
+			<li><a href="https://www.w3.org/">Check out the W3C</a></li>
+		</ul>
+		<form id="search" role="search">Search in text</form>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -204,23 +225,28 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 
 ```html
 <html>
-	<ul>
-		<li><a href="#search">Skip to search</a></li>
-		<li><a href="#about">Skip to additional information</a></li>
-		<li><a href="#main">Skip to text</a></li>
-		<li><a href="#main">Skip to text</a></li>
-	</ul>
-	<form id="search" role="search">Search in text</form>
-	<aside id="about">
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#about">Skip to additional information</a></li>
+			<li><a href="#main">Skip to text</a></li>
+			<li><a href="#main">Skip to text</a></li>
+		</ul>
+		<form id="search" role="search">Search in text</form>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -230,23 +256,28 @@ The first three [focusable][] elements are the links to the various [sections of
 
 ```html
 <html>
-	<ul>
-		<li><a href="https://www.w3.org/" tabindex="4">Check out the W3C</a></li>
-		<li><a href="#search" tabindex="1">Skip to search</a></li>
-		<li><a href="#about" tabindex="2">Skip to additional information</a></li>
-		<li><a href="#main" tabindex="3">Skip to text</a></li>
-	</ul>
-	<form id="search" role="search">Search in text</form>
-	<aside id="about">
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<ul>
+			<li><a href="https://www.w3.org/" tabindex="4">Check out the W3C</a></li>
+			<li><a href="#search" tabindex="1">Skip to search</a></li>
+			<li><a href="#about" tabindex="2">Skip to additional information</a></li>
+			<li><a href="#main" tabindex="3">Skip to text</a></li>
+		</ul>
+		<form id="search" role="search">Search in text</form>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -256,19 +287,24 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 
 ```html
 <html>
-	<form id="search" role="search"><a href="#search">Skip to search</a>Search in text</form>
-	<aside id="about">
-		<h1>About the book</h1>
-		<a href="#about">Skip to additional information</a>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		<a href="#main">Skip to text</a>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<form id="search" role="search"><a href="#search">Skip to search</a>Search in text</form>
+		<aside id="about">
+			<h1>About the book</h1>
+			<a href="#about">Skip to additional information</a>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<a href="#main">Skip to text</a>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -280,17 +316,22 @@ This [HTML web page][] has no link to skip to the various [sections of content][
 
 ```html
 <html>
-	<form id="search" role="search">Search in text</form>
-	<aside id="about">
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<form id="search" role="search">Search in text</form>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -300,21 +341,26 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 
 ```html
 <html>
-	<ul>
-		<li><a href="#about">Skip to additional information</a></li>
-		<li><a href="#main" aria-label="">Skip to text</a></li>
-	</ul>
-	<form id="search" role="search">Search in text</form>
-	<aside id="about">
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#about">Skip to additional information</a></li>
+			<li><a href="#main" aria-label="">Skip to text</a></li>
+		</ul>
+		<form id="search" role="search">Search in text</form>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -324,23 +370,28 @@ The second, third and fourth links form a set that fulfills Expectation 2 and mo
 
 ```html
 <html>
-	<ul>
-		<li><a href="https://www.w3.org/">Check out the W3C</a></li>
-		<li><a href="#search">Skip to search</a></li>
-		<li><a href="#about">Skip to additional information</a></li>
-		<li><a href="#main" aria-label="">Skip to text</a></li>
-	</ul>
-	<form id="search" role="search">Search in text</form>
-	<aside id="about">
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<ul>
+			<li><a href="https://www.w3.org/">Check out the W3C</a></li>
+			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#about">Skip to additional information</a></li>
+			<li><a href="#main" aria-label="">Skip to text</a></li>
+		</ul>
+		<form id="search" role="search">Search in text</form>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -350,22 +401,27 @@ The first three [focusable][] elements in this [document][] form an [initial seg
 
 ```html
 <html>
-	<ul>
-		<li><a href="#search" aria-hidden="true">Skip to search</a></li>
-		<li><a href="#about" aria-hidden="true">Skip to additional information</a></li>
-		<li><a href="#main" aria-hidden="true">Skip to text</a></li>
-	</ul>
-	<form id="search" role="search">Search in text</form>
-	<aside id="about">
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#search" aria-hidden="true">Skip to search</a></li>
+			<li><a href="#about" aria-hidden="true">Skip to additional information</a></li>
+			<li><a href="#main" aria-hidden="true">Skip to text</a></li>
+		</ul>
+		<form id="search" role="search">Search in text</form>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -375,22 +431,27 @@ The first [focusable][] element form an [initial segment][] that fulfills Expect
 
 ```html
 <html>
-	<ul>
-		<li><a href="#search">Skip to search</a></li>
-		<li><a href="#about" aria-hidden="true">Skip to additional information</a></li>
-		<li><a href="#main">Skip to text</a></li>
-	</ul>
-	<form id="search" role="search">Search in text</form>
-	<aside id="about">
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#about" aria-hidden="true">Skip to additional information</a></li>
+			<li><a href="#main">Skip to text</a></li>
+		</ul>
+		<form id="search" role="search">Search in text</form>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -400,22 +461,27 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 
 ```html
 <html>
-	<ul>
-		<li><a href="#search">Skip to search</a></li>
-		<li><a href="#about">Skip to additional information</a></li>
-		<li><a href="#main" style="display: none">Skip to text</a></li>
-	</ul>
-	<form id="search" role="search">Search in text</form>
-	<aside id="about">
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#about">Skip to additional information</a></li>
+			<li><a href="#main" style="display: none">Skip to text</a></li>
+		</ul>
+		<form id="search" role="search">Search in text</form>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -425,22 +491,27 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 
 ```html
 <html>
-	<ul>
-		<li><a href="#search">Skip to search</a></li>
-		<li><a href="#about">Skip to additional information</a></li>
-		<li onclick="document.getElementById('main').focus()" tabindex="0">Skip to text</li>
-	</ul>
-	<form id="search" role="search">Search in text</form>
-	<aside id="about">
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#about">Skip to additional information</a></li>
+			<li onclick="document.getElementById('main').focus()" tabindex="0">Skip to text</li>
+		</ul>
+		<form id="search" role="search">Search in text</form>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -450,22 +521,27 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 
 ```html
 <html>
-	<ul>
-		<li><a href="#search">Skip to search</a></li>
-		<li><a href="#about">Skip to additional information</a></li>
-		<li><a href="https://www.w3.org/">Check out the W3C</a></li>
-	</ul>
-	<form id="search" role="search">Search in text</form>
-	<aside id="about">
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#about">Skip to additional information</a></li>
+			<li><a href="https://www.w3.org/">Check out the W3C</a></li>
+		</ul>
+		<form id="search" role="search">Search in text</form>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -475,22 +551,27 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 
 ```html
 <html>
-	<ul>
-		<li><a href="#search">Skip to search</a></li>
-		<li><a href="#about">Skip to additional information</a></li>
-		<li><a href="#main">And now for something completely different!</a></li>
-	</ul>
-	<form id="search" role="search">Search in text</form>
-	<aside id="about">
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#about">Skip to additional information</a></li>
+			<li><a href="#main">And now for something completely different!</a></li>
+		</ul>
+		<form id="search" role="search">Search in text</form>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -500,22 +581,27 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 
 ```html
 <html>
-	<ul>
-		<li><a href="#search">Skip to search</a></li>
-		<li><a href="#about">Skip to additional information</a></li>
-		<li><a href="#main" aria-label="">Skip to text</a></li>
-	</ul>
-	<form id="search" role="search">Search in text</form>
-	<aside id="about">
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#about">Skip to additional information</a></li>
+			<li><a href="#main" aria-label="">Skip to text</a></li>
+		</ul>
+		<form id="search" role="search">Search in text</form>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -525,23 +611,28 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 
 ```html
 <html>
-	<ul>
-		<li><a href="#search">Skip to search</a></li>
-		<li><a href="#about">Skip to additional information</a></li>
-		<li><a href="#about">Skip to additional information</a></li>
-		<li><a href="#main">Skip to text</a></li>
-	</ul>
-	<form id="search" role="search">Search in text</form>
-	<aside id="about">
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#about">Skip to additional information</a></li>
+			<li><a href="#about">Skip to additional information</a></li>
+			<li><a href="#main">Skip to text</a></li>
+		</ul>
+		<form id="search" role="search">Search in text</form>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -551,23 +642,28 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 
 ```html
 <html>
-	<ul>
-		<li><a href="#search" tabindex="1">Skip to search</a></li>
-		<li><a href="#about" tabindex="2">Skip to additional information</a></li>
-		<li><a href="#main" tabindex="4">Skip to text</a></li>
-		<li><a href="https://www.w3.org/" tabindex="3">Check out the W3C</a></li>
-	</ul>
-	<form id="search" role="search">Search in text</form>
-	<aside id="about">
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#search" tabindex="1">Skip to search</a></li>
+			<li><a href="#about" tabindex="2">Skip to additional information</a></li>
+			<li><a href="#main" tabindex="4">Skip to text</a></li>
+			<li><a href="https://www.w3.org/" tabindex="3">Check out the W3C</a></li>
+		</ul>
+		<form id="search" role="search">Search in text</form>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 

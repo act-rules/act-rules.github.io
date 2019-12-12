@@ -72,7 +72,7 @@ The link to skip the complementary [section of repeated content][] is [visible][
 		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
-		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 		time.
 	</main>
@@ -98,7 +98,7 @@ The link to skip the complementary [section of repeated content][] is [included 
 		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
-		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 		time.
 	</main>
@@ -120,7 +120,7 @@ The link to skip the complementary [section of repeated content][] has an [acces
 		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
-		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 		time.
 	</main>
@@ -142,7 +142,7 @@ Even though it is located after it, the link to skip the complementary [section 
 		<a href="#main">Skip to text</a>
 	</nav>
 	<main id="main">
-		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 		time.
 	</main>
@@ -163,7 +163,7 @@ There is no link to skip the complementary [section of repeated content][].
 		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
-		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 		time.
 	</main>
@@ -186,7 +186,7 @@ The link to skip the complementary [section of repeated content][] is not the fi
 		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
-		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 		time.
 	</main>
@@ -208,7 +208,7 @@ The link to skip the complementary [section of repeated content][] is not includ
 		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
-		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 		time.
 	</main>
@@ -230,7 +230,7 @@ The link to skip the complementary [section of repeated content][] is not [visib
 		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
-		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 		time.
 	</main>
@@ -252,7 +252,7 @@ The element with a click event to skip the complementary [section of repeated co
 		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
-		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 		time.
 	</main>
@@ -274,7 +274,7 @@ The link to skip the complementary [section of repeated content][] does not refe
 		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
-		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 		time.
 	</main>
@@ -296,7 +296,7 @@ The link to skip the complementary [section of repeated content][] does not have
 		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
-		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 		time.
 	</main>

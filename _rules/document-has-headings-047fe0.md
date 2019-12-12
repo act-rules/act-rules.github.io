@@ -89,6 +89,10 @@ In this [document][], headings are not the first elements of each [section of co
 
 ```html
 <html>
+<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
 	<nav>
 		<hr />
 		<h1>Contents</h1>

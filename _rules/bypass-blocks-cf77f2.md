@@ -66,88 +66,25 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 
 #### Passed Example 1
 
-```html
-<html lang="en">
-	<head>
-		<title></title>
-	</head>
-	<body></body>
-</html>
-```
-
 #### Passed Example 2
 
-```html
-<html lang="en">
-	<head>
-		<title></title>
-	</head>
-	<body></body>
-</html>
-```
-
 #### Passed Example 3
-
-```html
-<html lang="en">
-	<head>
-		<title></title>
-	</head>
-	<body></body>
-</html>
-```
 
 ### Failed
 
 #### Failed Example 1
 
-```html
-<html lang="en">
-	<head>
-		<title></title>
-	</head>
-	<body></body>
-</html>
-```
-
 #### Failed Example 2
-
-```html
-<html lang="en">
-	<head>
-		<title></title>
-	</head>
-	<body></body>
-</html>
-```
 
 #### Failed Example 3
 
-```html
-<html lang="en">
-	<head>
-		<title></title>
-	</head>
-	<body></body>
-</html>
-```
-
 #### Failed Example 4
-
-```html
-<html lang="en">
-	<head>
-		<title></title>
-	</head>
-	<body></body>
-</html>
-```
 
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-The [document element][] of this [document][] is not an `html` element.
+This [document][] is not an [HTML web page][].
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">

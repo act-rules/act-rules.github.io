@@ -121,15 +121,13 @@ function getSpellIgnored() {
 	  SC and Understanding SC document, eg "[sc131]: (link to SC 1.3.1)", "[usc131]: (link to Understanding 1.3.1)"
  */
 	const techniquesPrefixes = ['ARIA', 'C', 'F', 'G', 'H', 'SCR']
-	let ignorePrefixes = [...techniquesPrefixes, ...techniquesPrefixes.map(t => t.toLowerCase()), 'sc', 'usc']
-	const ignoreExtra = ignorePrefixes.flatMap(prefix => {
-		let ignored = []
+	const ignorePrefixes = [...techniquesPrefixes, ...techniquesPrefixes.map(t => t.toLowerCase()), 'sc', 'usc']
+	let ignoreExtra = []
+	ignorePrefixes.forEach(prefix => {
 		for (let i = 1; i < 500; i++) {
-			// 500 is an arbitrarily chosen number, good for current purpose and not harmful
-			const ignoreID = `${prefix}${i}`
-			ignored.push(ignoreID)
+			// 500 is arbitrarily, good for current purpose, and not harmful
+			ignoreExtra.push(`${prefix}${i}`)
 		}
-		return ignored
 	})
 
 	const ignoreAria = ariaQuery.aria.keys()

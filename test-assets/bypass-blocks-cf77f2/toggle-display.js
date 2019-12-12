@@ -4,7 +4,7 @@ function toggleHidden(ids) {
 	}
 	for (var i = 0; i < ids.length; i++) {
 		var element = document.getElementById(ids[i])
-		element.style.display = element.style.display !== 'none' ? 'none' : ''
+		element.style.display = element.style.display === 'none' ? '' : 'none'
 	}
 }
 
@@ -15,5 +15,5 @@ function toggleVisibility(id) {
 
 function toggleAriaHidden(id) {
 	var element = document.getElementById(id)
-	element.setAttribute('aria-hidden', element.getAttribute('aria-hidden') !== 'true' ? 'true' : 'false')
+	element.setAttribute('aria-hidden', (element.getAttribute('aria-hidden') !== 'true').toString())
 }

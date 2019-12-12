@@ -68,7 +68,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 		<a href="#" onclick="toggleHidden('navigation')">Toggle table of content</a>
 		<nav id="navigation">
 			<h1>Contents</h1>
-			<!-- list of links to each chapter -->
+			<!-- list of links to each chapter, repeated on each page -->
 		</nav>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -93,7 +93,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 		<button onclick="toggleHidden(['navigation', 'biography'])">Toggle repeated content</button>
 		<nav id="navigation">
 			<h1>Contents</h1>
-			<!-- list of links to each chapter -->
+			<!-- list of links to each chapter, repeated on each page -->
 		</nav>
 		<aside id="biography">
 			<h1>About the authors</h1>
@@ -123,7 +123,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 		<button onclick="toggleHidden('biography')">Toggle extra content</button>
 		<nav id="navigation">
 			<h1>Contents</h1>
-			<!-- list of links to each chapter -->
+			<!-- list of links to each chapter, repeated on each page -->
 		</nav>
 		<aside id="biography">
 			<h1>About the authors</h1>
@@ -153,7 +153,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 		<a href="#" onclick="toggleVisibility('navigation'); toggleAriaHidden('navigation')">Toggle table of content</a>
 		<nav id="navigation">
 			<h1>Contents</h1>
-			<!-- list of links to each chapter -->
+			<!-- list of links to each chapter, repeated on each page -->
 		</nav>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -178,7 +178,7 @@ There is no [user interface component][] to toggle the navigational [section of 
 	<body>
 		<nav id="navigation">
 			<h1>Contents</h1>
-			<!-- list of links to each chapter -->
+			<!-- list of links to each chapter, repeated on each page -->
 		</nav>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -203,7 +203,7 @@ The [user interface component][] to toggle the navigational [section of repeated
 		<a href="#" style="position: absolute; top: -999px" onclick="toggleHidden('navigation')">Toggle table of content</a>
 		<nav id="navigation">
 			<h1>Contents</h1>
-			<!-- list of links to each chapter -->
+			<!-- list of links to each chapter, repeated on each page -->
 		</nav>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -228,7 +228,7 @@ The [user interface component][] to toggle the navigational [section of repeated
 		<a href="#" aria-hidden="true" onclick="toggleHidden('navigation')">Toggle table of content</a>
 		<nav id="navigation">
 			<h1>Contents</h1>
-			<!-- list of links to each chapter -->
+			<!-- list of links to each chapter, repeated on each page -->
 		</nav>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -254,7 +254,7 @@ The [user interface component][] only toggles the [visibility][visible] of the n
 		<a href="#" onclick="toggleVisibility('navigation')">Toggle table of content</a>
 		<nav id="navigation">
 			<h1>Contents</h1>
-			<!-- list of links to each chapter -->
+			<!-- list of links to each chapter, repeated on each page -->
 		</nav>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -279,7 +279,7 @@ The [user interface component][] only toggles the [inclusion in the accessibilit
 		<a href="#" onclick="toggleAriaHidden('navigation')">Toggle table of content</a>
 		<nav id="navigation">
 			<h1>Contents</h1>
-			<!-- list of links to each chapter -->
+			<!-- list of links to each chapter, repeated on each page -->
 		</nav>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>

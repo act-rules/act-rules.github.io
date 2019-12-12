@@ -3,7 +3,7 @@ id: cf77f2
 name: Bypass Blocks of Content
 rule_type: composite
 description: |
-  This rule checks that each page has a mechanism to bypass blocks of content.
+  This rule checks that each page has a mechanism to bypass repeated blocks of content.
 accessibility_requirements:
   wcag20:2.4.1: # Bypass Blocks (A)
     forConformance: true
@@ -46,11 +46,11 @@ This rule assumes that one of the techniques listed here is used to comply to WC
 
 ## Accessibility Support
 
-Techniques and solutions that identify blocks of content are sufficient ways of passing [Success Criterion 2.4.1: Bypass blocks][sc241]. They are, however, directed users of assistive technologies. Techniques and solutions based on links will benefit all users (for example, keyboard users with no other assistive technology) and are therefore recommended.
+Techniques and solutions that identify blocks of content are sufficient ways of passing [Success Criterion 2.4.1: Bypass blocks][sc241]. They are, however, directed toward users of assistive technologies. Techniques and solutions based on links will benefit all users (for example, keyboard users with no other assistive technology) and are therefore recommended.
 
 ## Background
 
-- [Understanding Success Criterion 2.4.1: Bypass Blocks](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html)
+- [Understanding Success Criterion 2.4.1: Bypass Blocks][usc241]
 - Creating links to skip blocks of content:
   - [G1: Adding a link at the top of each page that goes directly to the main content area](https://www.w3.org/WAI/WCAG21/Techniques/general/G1)
   - [G123: Adding a link at the beginning of a block of repeated content to go to the end of the block](https://www.w3.org/WAI/WCAG21/Techniques/general/G123)
@@ -64,13 +64,15 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 
 **Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
 
-**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark]; the banner, complementary and navigational [sections of content][section of content] (`header`, `aside` and `nav` elements) are a [section of repeated content][]; and the banner and complementary [sections of content][section of content] do not include any [focusable][] element not shown explicitly.
+**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark]; the banner, complementary and navigational [sections of content][section of content] (`header`, `aside` and `nav` elements) are [sections of repeated content][section of repeated content]; and the banner and complementary [sections of content][section of content] do not include any [focusable][] element not shown explicitly.
 
 ### Passed
 
 #### Passed Example 1
 
 This [HTML web page][] is passing rule [document has headings][].
+
+**Note**: In this [document][], the [sections of content][section of content] are identified by the level 1 heading at their start.
 
 ```html
 <html>
@@ -150,7 +152,7 @@ This [HTML web page][] is passing rule [block of content is expandable and colla
 		<a href="#" onclick="toggleHidden('navigation')">Toggle table of content</a>
 		<nav id="navigation">
 			<h1>Contents</h1>
-			<!-- list of links to each chapter -->
+			<!-- list of links to each chapter, repeated on each page -->
 		</nav>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -267,7 +269,8 @@ This [document][] is not an [HTML web page][].
 [first focusable element is link to main content]: https://act-rules.github.io/rules/8a213c 'Rule First focusable element is link to main content'
 [focusable]: #focusable 'Definition of focusable'
 [link for skipping block of content]: https://act-rules.github.io/rules/7b576d 'Rule Link for skipping block of content'
-[sc241]: https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html 'Success Criterion 2.4.1: Bypass blocks'
+[usc241]: https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html 'Understanding Success Criterion 2.4.1: Bypass blocks'
+[sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1: Bypass blocks'
 [section of content]: #section-of-content 'Definition of section of content'
 [section of repeated content]: #section-of-repeated-content 'Definition of section of repeated content'
 [html web page]: #web-page-html 'Definition of web page (HTML)'

@@ -65,7 +65,7 @@ _There are no major accessibility support issues known for this rule._
 
 **Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
 
-**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`aside`, `form` and `main` elements), and the complementary [section of content][] (`aside` element) does not include any [focusable][] element not shown explicitly.
+**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`aside`, `header` and `main` elements), and neither the banner nor the complementary [sections of content][section of content] (`header` and `aside` elements) include any [focusable][] element not shown explicitly.
 
 ### Passed
 
@@ -80,11 +80,13 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 	</head>
 	<body>
 		<ul>
-			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#header">Skip to header</a></li>
 			<li><a href="#about">Skip to additional information</a></li>
 			<li><a href="#main">Skip to text</a></li>
 		</ul>
-		<form id="search" role="search">Search in text</form>
+		<header id="header">
+			<!-- Name and logo of the website -->
+		</header>
 		<aside id="about">
 			<h1>About the book</h1>
 			<!-- short description of the book and biography of the author and translator -->
@@ -110,10 +112,12 @@ The links in the [initial segment][] (composed of the first three focusable elem
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<a class="visible-on-focus" href="#search">Skip to search</a>
+		<a class="visible-on-focus" href="#header">Skip to header</a>
 		<a class="visible-on-focus" href="#about">Skip to additional information</a>
 		<a class="visible-on-focus" href="#main">Skip to text</a>
-		<form id="search" role="search">Search in text</form>
+		<header id="header">
+			<!-- Name and logo of the website -->
+		</header>
 		<aside id="about">
 			<h1>About the book</h1>
 			<!-- short description of the book and biography of the author and translator -->
@@ -139,11 +143,13 @@ The links in the [initial segment][] (composed of the first three focusable elem
 	</head>
 	<body>
 		<ul>
-			<li><a href="#search" aria-label="Skip to search">🔍</a></li>
+			<li><a href="#header" aria-label="Skip to header">⬒</a></li>
 			<li><a href="#about" aria-label="Skip to additional information">➕</a></li>
 			<li><a href="#main" aria-label="Skip to text">📖</a></li>
 		</ul>
-		<form id="search" role="search">Search in text</form>
+		<header id="header">
+			<!-- Name and logo of the website -->
+		</header>
 		<aside id="about">
 			<h1>About the book</h1>
 			<!-- short description of the book and biography of the author and translator -->
@@ -168,9 +174,11 @@ Even though they are after the form [section of repeated content][], the three l
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<form id="search" role="search">Search in text</form>
+		<header id="header">
+			<!-- Name and logo of the website -->
+		</header>
 		<ul>
-			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#header">Skip to header</a></li>
 			<li><a href="#about">Skip to additional information</a></li>
 			<li><a href="#main">Skip to text</a></li>
 		</ul>
@@ -199,12 +207,14 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 	</head>
 	<body>
 		<ul>
-			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#header">Skip to header</a></li>
 			<li><a href="#about">Skip to additional information</a></li>
 			<li><a href="#main">Skip to text</a></li>
 			<li><a href="https://www.w3.org/">Check out the W3C</a></li>
 		</ul>
-		<form id="search" role="search">Search in text</form>
+		<header id="header">
+			<!-- Name and logo of the website -->
+		</header>
 		<aside id="about">
 			<h1>About the book</h1>
 			<!-- short description of the book and biography of the author and translator -->
@@ -230,12 +240,14 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 	</head>
 	<body>
 		<ul>
-			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#header">Skip to header</a></li>
 			<li><a href="#about">Skip to additional information</a></li>
 			<li><a href="#main">Skip to text</a></li>
 			<li><a href="#main">Skip to text</a></li>
 		</ul>
-		<form id="search" role="search">Search in text</form>
+		<header id="header">
+			<!-- Name and logo of the website -->
+		</header>
 		<aside id="about">
 			<h1>About the book</h1>
 			<!-- short description of the book and biography of the author and translator -->
@@ -262,11 +274,13 @@ The first three [focusable][] elements are the links to the various [sections of
 	<body>
 		<ul>
 			<li><a href="https://www.w3.org/" tabindex="4">Check out the W3C</a></li>
-			<li><a href="#search" tabindex="1">Skip to search</a></li>
+			<li><a href="#header" tabindex="1">Skip to header</a></li>
 			<li><a href="#about" tabindex="2">Skip to additional information</a></li>
 			<li><a href="#main" tabindex="3">Skip to text</a></li>
 		</ul>
-		<form id="search" role="search">Search in text</form>
+		<header id="header">
+			<!-- Name and logo of the website -->
+		</header>
 		<aside id="about">
 			<h1>About the book</h1>
 			<!-- short description of the book and biography of the author and translator -->
@@ -291,7 +305,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<form id="search" role="search"><a href="#search">Skip to search</a>Search in text</form>
+		<form id="search" role="search"><a href="#header">Skip to header</a>Search in text</form>
 		<aside id="about">
 			<h1>About the book</h1>
 			<a href="#about">Skip to additional information</a>
@@ -320,7 +334,9 @@ This [HTML web page][] has no link to skip to the various [sections of content][
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<form id="search" role="search">Search in text</form>
+		<header id="header">
+			<!-- Name and logo of the website -->
+		</header>
 		<aside id="about">
 			<h1>About the book</h1>
 			<!-- short description of the book and biography of the author and translator -->
@@ -349,7 +365,9 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 			<li><a href="#about">Skip to additional information</a></li>
 			<li><a href="#main" aria-label="">Skip to text</a></li>
 		</ul>
-		<form id="search" role="search">Search in text</form>
+		<header id="header">
+			<!-- Name and logo of the website -->
+		</header>
 		<aside id="about">
 			<h1>About the book</h1>
 			<!-- short description of the book and biography of the author and translator -->
@@ -376,11 +394,13 @@ The second, third and fourth links form a set that fulfills Expectation 2 and mo
 	<body>
 		<ul>
 			<li><a href="https://www.w3.org/">Check out the W3C</a></li>
-			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#header">Skip to header</a></li>
 			<li><a href="#about">Skip to additional information</a></li>
 			<li><a href="#main" aria-label="">Skip to text</a></li>
 		</ul>
-		<form id="search" role="search">Search in text</form>
+		<header id="header">
+			<!-- Name and logo of the website -->
+		</header>
 		<aside id="about">
 			<h1>About the book</h1>
 			<!-- short description of the book and biography of the author and translator -->
@@ -406,11 +426,13 @@ The first three [focusable][] elements in this [document][] form an [initial seg
 	</head>
 	<body>
 		<ul>
-			<li><a href="#search" aria-hidden="true">Skip to search</a></li>
+			<li><a href="#header" aria-hidden="true">Skip to header</a></li>
 			<li><a href="#about" aria-hidden="true">Skip to additional information</a></li>
 			<li><a href="#main" aria-hidden="true">Skip to text</a></li>
 		</ul>
-		<form id="search" role="search">Search in text</form>
+		<header id="header">
+			<!-- Name and logo of the website -->
+		</header>
 		<aside id="about">
 			<h1>About the book</h1>
 			<!-- short description of the book and biography of the author and translator -->
@@ -436,11 +458,13 @@ The first [focusable][] element form an [initial segment][] that fulfills Expect
 	</head>
 	<body>
 		<ul>
-			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#header">Skip to header</a></li>
 			<li><a href="#about" aria-hidden="true">Skip to additional information</a></li>
 			<li><a href="#main">Skip to text</a></li>
 		</ul>
-		<form id="search" role="search">Search in text</form>
+		<header id="header">
+			<!-- Name and logo of the website -->
+		</header>
 		<aside id="about">
 			<h1>About the book</h1>
 			<!-- short description of the book and biography of the author and translator -->
@@ -466,11 +490,13 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 	</head>
 	<body>
 		<ul>
-			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#header">Skip to header</a></li>
 			<li><a href="#about">Skip to additional information</a></li>
 			<li><a href="#main" style="display: none">Skip to text</a></li>
 		</ul>
-		<form id="search" role="search">Search in text</form>
+		<header id="header">
+			<!-- Name and logo of the website -->
+		</header>
 		<aside id="about">
 			<h1>About the book</h1>
 			<!-- short description of the book and biography of the author and translator -->
@@ -496,11 +522,13 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 	</head>
 	<body>
 		<ul>
-			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#header">Skip to header</a></li>
 			<li><a href="#about">Skip to additional information</a></li>
 			<li onclick="document.getElementById('main').focus()" tabindex="0">Skip to text</li>
 		</ul>
-		<form id="search" role="search">Search in text</form>
+		<header id="header">
+			<!-- Name and logo of the website -->
+		</header>
 		<aside id="about">
 			<h1>About the book</h1>
 			<!-- short description of the book and biography of the author and translator -->
@@ -526,11 +554,13 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 	</head>
 	<body>
 		<ul>
-			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#header">Skip to header</a></li>
 			<li><a href="#about">Skip to additional information</a></li>
 			<li><a href="https://www.w3.org/">Check out the W3C</a></li>
 		</ul>
-		<form id="search" role="search">Search in text</form>
+		<header id="header">
+			<!-- Name and logo of the website -->
+		</header>
 		<aside id="about">
 			<h1>About the book</h1>
 			<!-- short description of the book and biography of the author and translator -->
@@ -556,11 +586,13 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 	</head>
 	<body>
 		<ul>
-			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#header">Skip to header</a></li>
 			<li><a href="#about">Skip to additional information</a></li>
 			<li><a href="#main">And now for something completely different!</a></li>
 		</ul>
-		<form id="search" role="search">Search in text</form>
+		<header id="header">
+			<!-- Name and logo of the website -->
+		</header>
 		<aside id="about">
 			<h1>About the book</h1>
 			<!-- short description of the book and biography of the author and translator -->
@@ -586,11 +618,13 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 	</head>
 	<body>
 		<ul>
-			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#header">Skip to header</a></li>
 			<li><a href="#about">Skip to additional information</a></li>
 			<li><a href="#main" aria-label="">Skip to text</a></li>
 		</ul>
-		<form id="search" role="search">Search in text</form>
+		<header id="header">
+			<!-- Name and logo of the website -->
+		</header>
 		<aside id="about">
 			<h1>About the book</h1>
 			<!-- short description of the book and biography of the author and translator -->
@@ -616,12 +650,14 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 	</head>
 	<body>
 		<ul>
-			<li><a href="#search">Skip to search</a></li>
+			<li><a href="#header">Skip to header</a></li>
 			<li><a href="#about">Skip to additional information</a></li>
 			<li><a href="#about">Skip to additional information</a></li>
 			<li><a href="#main">Skip to text</a></li>
 		</ul>
-		<form id="search" role="search">Search in text</form>
+		<header id="header">
+			<!-- Name and logo of the website -->
+		</header>
 		<aside id="about">
 			<h1>About the book</h1>
 			<!-- short description of the book and biography of the author and translator -->
@@ -647,12 +683,14 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 	</head>
 	<body>
 		<ul>
-			<li><a href="#search" tabindex="1">Skip to search</a></li>
+			<li><a href="#header" tabindex="1">Skip to header</a></li>
 			<li><a href="#about" tabindex="2">Skip to additional information</a></li>
 			<li><a href="#main" tabindex="4">Skip to text</a></li>
 			<li><a href="https://www.w3.org/" tabindex="3">Check out the W3C</a></li>
 		</ul>
-		<form id="search" role="search">Search in text</form>
+		<header id="header">
+			<!-- Name and logo of the website -->
+		</header>
 		<aside id="about">
 			<h1>About the book</h1>
 			<!-- short description of the book and biography of the author and translator -->

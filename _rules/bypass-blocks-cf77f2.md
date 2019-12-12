@@ -237,12 +237,13 @@ This [HTML web page][] does not pass any of the input rules.
 	<body>
 		<header id="header">
 			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
 		</header>
 		<aside id="about">
 			<!-- short description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</div>
 		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 		time.
 	</body>

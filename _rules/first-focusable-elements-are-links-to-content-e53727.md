@@ -250,6 +250,28 @@ The first three [focusable][] elements are the links to the various [sections of
 </html>
 ```
 
+#### Passed Example 8
+
+The [initial segment][] composed of the first three [focusable][] elements in this [document][] fulfills both expectations. Even though the links are spread around the page, they are still an [initial segment][] of the [focusable][] elements.
+
+```html
+<html>
+	<form id="search" role="search"><a href="#search">Skip to search</a>Search in text</form>
+	<aside id="about">
+		<h1>About the book</h1>
+		<a href="#about">Skip to additional information</a>
+		<!-- short description of the book and biography of the author and translator -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		<a href="#main">Skip to text</a>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1 (no link)

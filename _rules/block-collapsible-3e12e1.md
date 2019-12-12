@@ -50,7 +50,7 @@ _There are no major accessibility support issues known for this rule._
 
 **Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
 
-**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`aside`, `main` and `nav` elements); both the complementary and navigational [sections of content][section of content] (`aside` and `nav` element) are [sections of repeated content][section of repeated content].
+**Note**: Unless specified otherwise, the [sections of content][] of each document are defined by the [landmarks][landmark] (`aside`, `main` and `nav` elements); both the complementary and navigational [sections of content][] (`aside` and `nav` element) are [sections of repeated content][section of repeated content].
 
 ### Passed
 
@@ -308,7 +308,7 @@ This [document][] is not an [HTML web page][].
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of landmark roles'
 [tech scr28]: https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR28 'Technique SCR28: Using an expandable and collapsible menu to bypass block of content'
-[section of content]: #section-of-content 'Definition of section of content'
+[sections of content]: #section-of-content 'Definition of section of content'
 [section of repeated content]: #section-of-repeated-content 'Definition of section of repeated content'
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components 'Definition of user interface component'
 [visible]: #visible 'Definition of visible'

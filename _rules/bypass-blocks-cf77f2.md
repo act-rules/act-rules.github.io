@@ -64,7 +64,7 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 
 **Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
 
-**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark]; the banner, complementary and navigational [sections of content][section of content] (`header`, `aside` and `nav` elements) are [sections of repeated content][section of repeated content]; and the banner and complementary [sections of content][section of content] do not include any [focusable][] element not shown explicitly.
+**Note**: Unless specified otherwise, the [sections of content][] of each document are defined by the [landmarks][landmark]; the banner, complementary and navigational [sections of content][] (`header`, `aside` and `nav` elements) are [sections of repeated content][]; and the banner and complementary [sections of content][] do not include any [focusable][] element not shown explicitly.
 
 ### Passed
 
@@ -72,7 +72,7 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 
 This [HTML web page][] is passing rule [document has headings][].
 
-**Note**: In this [document][], the [sections of content][section of content] are identified by the level 1 heading at their start.
+**Note**: In this [document][], the [sections of content][] are identified by the level 1 heading at their start.
 
 ```html
 <html>
@@ -207,6 +207,7 @@ This [HTML web page][] is passing rule [first focusable elements are links to se
 		</ul>
 		<header id="header">
 			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
@@ -271,6 +272,6 @@ This [document][] is not an [HTML web page][].
 [link for skipping block of content]: https://act-rules.github.io/rules/7b576d 'Rule Link for skipping block of content'
 [usc241]: https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html 'Understanding Success Criterion 2.4.1: Bypass blocks'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1: Bypass blocks'
-[section of content]: #section-of-content 'Definition of section of content'
-[section of repeated content]: #section-of-repeated-content 'Definition of section of repeated content'
+[sections of content]: #section-of-content 'Definition of section of content'
+[sections of repeated content]: #section-of-repeated-content 'Definition of section of repeated content'
 [html web page]: #web-page-html 'Definition of web page (HTML)'

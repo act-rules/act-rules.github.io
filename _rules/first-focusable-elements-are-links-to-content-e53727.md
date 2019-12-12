@@ -86,6 +86,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 		</ul>
 		<header id="header">
 			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
@@ -117,6 +118,7 @@ The links in the [initial segment][] (composed of the first three focusable elem
 		<a class="visible-on-focus" href="#main">Skip to text</a>
 		<header id="header">
 			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
@@ -149,6 +151,7 @@ The links in the [initial segment][] (composed of the first three focusable elem
 		</ul>
 		<header id="header">
 			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
@@ -176,6 +179,7 @@ Even though they are after the form [section of repeated content][], the three l
 	<body>
 		<header id="header">
 			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
 		</header>
 		<ul>
 			<li><a href="#header">Skip to header</a></li>
@@ -214,6 +218,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 		</ul>
 		<header id="header">
 			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
@@ -247,6 +252,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 		</ul>
 		<header id="header">
 			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
@@ -280,6 +286,7 @@ The first three [focusable][] elements are the links to the various [sections of
 		</ul>
 		<header id="header">
 			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
@@ -336,6 +343,7 @@ This [HTML web page][] has no link to skip to the various [sections of content][
 	<body>
 		<header id="header">
 			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
@@ -367,6 +375,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 		</ul>
 		<header id="header">
 			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
@@ -400,6 +409,7 @@ The second, third and fourth links form a set that fulfills Expectation 2 and mo
 		</ul>
 		<header id="header">
 			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
@@ -432,6 +442,7 @@ The first three [focusable][] elements in this [document][] form an [initial seg
 		</ul>
 		<header id="header">
 			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
@@ -464,6 +475,7 @@ The first [focusable][] element form an [initial segment][] that fulfills Expect
 		</ul>
 		<header id="header">
 			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
@@ -496,6 +508,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 		</ul>
 		<header id="header">
 			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
@@ -528,6 +541,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 		</ul>
 		<header id="header">
 			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
@@ -560,6 +574,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 		</ul>
 		<header id="header">
 			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
@@ -592,6 +607,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 		</ul>
 		<header id="header">
 			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
@@ -624,6 +640,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 		</ul>
 		<header id="header">
 			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
@@ -657,6 +674,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 		</ul>
 		<header id="header">
 			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
@@ -690,6 +708,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 		</ul>
 		<header id="header">
 			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>

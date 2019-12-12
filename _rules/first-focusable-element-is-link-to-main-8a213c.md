@@ -149,6 +149,29 @@ Even though it is located after it, the link to skip the complementary [section 
 </html>
 ```
 
+#### Passed Example 5
+
+The first [focusable][] element within this page is the link to the main [section of content][]. The link to W3C is located before in tree order but after in focus order due to the `tabindex` attributes.
+
+```html
+<html>
+	<nav>
+		<a href="https://www.w3.org/" tabindex="2">Check out the W3C</a>
+		<a href="#main" tabindex="1">Skip to text</a>
+	</nav>
+	<aside>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the author and translator -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -289,6 +312,29 @@ The link to skip the complementary [section of repeated content][] does not have
 <html>
 	<nav>
 		<a href="#main">Click me if you dare!</a>
+	</nav>
+	<aside>
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the author and translator -->
+		<!-- does not include any focusable element -->
+	</aside>
+	<main id="main">
+		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Failed Example 8
+
+The first [focusable][] element within this page is the link to W3C. The link to the main [section of content][] is located before in tree order but after in focus order due to the `tabindex` attributes.
+
+```html
+<html>
+	<nav>
+		<a href="#main" tabindex="2">Skip to text</a>
+		<a href="https://www.w3.org/" tabindex="1">Check out the W3C</a>
 	</nav>
 	<aside>
 		<h1>About the book</h1>

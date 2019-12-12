@@ -65,20 +65,21 @@ This [document][] has one [section of content][] for the navigation links, and o
 
 ```html
 <html>
-    <head>
-        <title>The Three Kingdoms, Chapter 1</title>
-</head>
-<body>
-	<!-- Navigational section of content starts here -->
-	<h1>Contents</h1>
-	<!-- list of links to each chapter -->
-	<!-- Navigational section of content ends here -->
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<!-- Navigational section of content starts here -->
+		<h1>Contents</h1>
+		<!-- list of links to each chapter -->
+		<!-- Navigational section of content ends here -->
 
-	<!-- Main section of content starts here -->
-	<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-	Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-	time.
-	<!-- Main section of content ends here -->
+		<!-- Main section of content starts here -->
+		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+		<!-- Main section of content ends here -->
+	</body>
 </html>
 ```
 

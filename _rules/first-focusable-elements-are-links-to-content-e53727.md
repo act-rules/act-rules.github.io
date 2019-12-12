@@ -40,7 +40,9 @@ Within the test target, there is an [initial segment][] of the [focusable][] ele
 
 ## Expectation 2
 
-Each [section of content][] in the [document][] is the target of exactly one link from the set of [focusable][] elements that passes Expectation 1.
+Each [section of content][] in the [document][] is the target of exactly one link from the [initial segment][] of [focusable][] elements found by Expectation 1.
+
+**Note**: While Expectation 1 can always be passed by an empty [initial segment][] (i.e. a set of zero [focusable][] elements), Expectation 2 forces that [initial segment][] to have one or more elements (unless the page itself is empty and has zero [section of content][]…)
 
 ## Assumptions
 
@@ -63,26 +65,25 @@ _There are no major accessibility support issues known for this rule._
 
 **Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
 
-**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`aside`, `form` and `main` elements), and the complementary and form [sections of content][section of content] (`aside` and `form` elements) are [sections of repeated content][section of repeated content] which do not include any [focusable][] element not shown explicitly.
+**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`aside`, `form` and `main` elements).
 
 ### Passed
 
 #### Passed Example 1
 
-The [initial segment][] composed of the first three [focusable][] elements in this [document][] matches both expectations.
+The [initial segment][] composed of the first three [focusable][] elements in this [document][] fulfills both expectations.
 
 ```html
 <html>
 	<ul>
 		<li><a href="#search">Skip to search</a></li>
 		<li><a href="#about">Skip to additional information</a></li>
-		<li><a href="#main">Skip to main content</a></li>
+		<li><a href="#main">Skip to text</a></li>
 	</ul>
 	<form id="search" role="search">Search in text</form>
 	<aside id="about">
 		<h1>About the book</h1>
-		<!-- short description of the book and biography of the authors, repeated on each page -->
-		<!-- does not include any focusable element -->
+		<!-- short description of the book and biography of the author and translator -->
 	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -108,8 +109,7 @@ The links in the [initial segment][] (composed of the first three focusable elem
 		<form id="search" role="search">Search in text</form>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the authors, repeated on each page -->
-			<!-- does not include any focusable element -->
+			<!-- short description of the book and biography of the author and translator -->
 		</aside>
 		<main id="main">
 			<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -122,7 +122,7 @@ The links in the [initial segment][] (composed of the first three focusable elem
 
 #### Passed Example 3
 
-The links in the [initial segment][] (composed of the first three focusable elements) use `aria-label` to provide an [accessible name][].
+The links in the [initial segment][] (composed of the first three focusable elements) have an [accessible name][] provided by their `aria-label` attribute.
 
 ```html
 <html>
@@ -134,8 +134,7 @@ The links in the [initial segment][] (composed of the first three focusable elem
 	<form id="search" role="search">Search in text</form>
 	<aside id="about">
 		<h1>About the book</h1>
-		<!-- short description of the book and biography of the authors, repeated on each page -->
-		<!-- does not include any focusable element -->
+		<!-- short description of the book and biography of the author and translator -->
 	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -147,7 +146,7 @@ The links in the [initial segment][] (composed of the first three focusable elem
 
 #### Passed Example 4
 
-Even though they are after the form [section of repeated content][], the three links are still the first [focusable][] elements and thus are an [initial segment][] of [focusable][] elements passing the expectation.
+Even though they are after the form [section of repeated content][], the three links are still the first [focusable][] elements and thus are an [initial segment][] of [focusable][] elements fulfilling the expectations.
 
 ```html
 <html>
@@ -155,12 +154,86 @@ Even though they are after the form [section of repeated content][], the three l
 	<ul>
 		<li><a href="#search">Skip to search</a></li>
 		<li><a href="#about">Skip to additional information</a></li>
-		<li><a href="#main">Skip to main content</a></li>
+		<li><a href="#main">Skip to text</a></li>
 	</ul>
 	<aside id="about">
 		<h1>About the book</h1>
-		<!-- short description of the book and biography of the authors, repeated on each page -->
-		<!-- does not include any focusable element -->
+		<!-- short description of the book and biography of the author and translator -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Passed Example 5
+
+The [initial segment][] composed of the first three [focusable][] elements in this [document][] fulfills both expectations. The fourth [focusable][] element can be left out of the [initial segment][] even though it is styled in a similar fashion.
+
+```html
+<html>
+	<ul>
+		<li><a href="#search">Skip to search</a></li>
+		<li><a href="#about">Skip to additional information</a></li>
+		<li><a href="#main">Skip to text</a></li>
+		<li><a href="https://www.w3.org/">Check out the W3C</a></li>
+	</ul>
+	<form id="search" role="search">Search in text</form>
+	<aside id="about">
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the author and translator -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Passed Example 6
+
+The [initial segment][] composed of the first three [focusable][] elements in this [document][] fulfills both expectations. The fourth [focusable][] element can be left out of the [initial segment][] even though it moves focus to a [section of content][] inside the page.
+
+```html
+<html>
+	<ul>
+		<li><a href="#search">Skip to search</a></li>
+		<li><a href="#about">Skip to additional information</a></li>
+		<li><a href="#main">Skip to text</a></li>
+		<li><a href="#main">Skip to text</a></li>
+	</ul>
+	<form id="search" role="search">Search in text</form>
+	<aside id="about">
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the author and translator -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Passed Example 7
+
+The first three [focusable][] elements are the links to the various [sections of content][section of content]. Even through the link to W3C is before them in tree order, it is the fourth [focusable][] element due to the `tabindex` attributes. Therefore, the first three [focusable][] elements form an [initial segment][] that fulfills both Expectations.
+
+```html
+<html>
+	<ul>
+		<li><a href="https://www.w3.org/" tabindex="4">Check out the W3C</a></li>
+		<li><a href="#search" tabindex="1">Skip to search</a></li>
+		<li><a href="#about" tabindex="2">Skip to additional information</a></li>
+		<li><a href="#main" tabindex="3">Skip to text</a></li>
+	</ul>
+	<form id="search" role="search">Search in text</form>
+	<aside id="about">
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the author and translator -->
 	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -172,153 +245,288 @@ Even though they are after the form [section of repeated content][], the three l
 
 ### Failed
 
-#### Failed Example 1
+#### Failed Example 1 (no link)
 
-The first [focusable][] elements in the [initial segment][] of the document do not have a [semantic role][] of link.
+This [HTML web page][] has no link to skip to the various [sections of content][section of content].
 
 ```html
 <html>
-	<ul>
-		<li onclick="focusContentSection('navigation')" tabindex="0">Skip to navigation</li>
-		<li onclick="focusContentSection('search')" tabindex="0">Skip to search</li>
-		<li onclick="focusContentSection('main')" tabindex="0">Skip to main</li>
-	</ul>
-	<nav id="navigation">Navigation section</nav>
-	<form id="search" role="search">Search section</form>
-	<main id="main">Main content</main>
-	<script>
-		function focusContentSection(elem) {
-			var elemId = document.getElementById(elem)
-			elemId.focus()
-		}
-	</script>
+	<form id="search" role="search">Search in text</form>
+	<aside id="about">
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the author and translator -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
-#### Failed Example 2
+#### Failed Example (not covering everything)
 
-Each [focusable][] element in the [initial segment][] of the document does not have a [semantic role][] of link.
+The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the form [section of content][]. Even though it is the first [section of content][] on this page, it still requires a link.
 
 ```html
 <html>
 	<ul>
-		<li><a href="#navigation">Skip to navigation</a></li>
+		<li><a href="#about">Skip to additional information</a></li>
+		<li><a href="#main" aria-label="">Skip to text</a></li>
+	</ul>
+	<form id="search" role="search">Search in text</form>
+	<aside id="about">
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the author and translator -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Failed Example (not an IS)
+
+The second, third and fourth links form a set that fulfills Expectation 2 and most of Expectation 1. However, the presence of the first link means that this set is not an [initial segment][]. There is no [initial segment][] fulfilling both expectations.
+
+```html
+<html>
+	<ul>
+		<li><a href="https://www.w3.org/">Check out the W3C</a></li>
 		<li><a href="#search">Skip to search</a></li>
-		<li onclick="focusContentSection('main')" tabindex="0">Skip to main</li>
+		<li><a href="#about">Skip to additional information</a></li>
+		<li><a href="#main" aria-label="">Skip to text</a></li>
 	</ul>
-	<nav id="navigation">Navigation section</nav>
-	<form id="search" role="search">Search section</form>
-	<main id="main">Main content</main>
-	<script>
-		function focusContentSection(elem) {
-			var elemId = document.getElementById(elem)
-			elemId.focus()
-		}
-	</script>
+	<form id="search" role="search">Search in text</form>
+	<aside id="about">
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the author and translator -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
-#### Failed Example 3
+#### Failed Example 1 (not in AT)
 
-Links in the [initial segment][] list when activated do not move the focus to a [section of content][] due to the invalid `href` attributes.
+The first three [focusable][] elements in this [document][] form an [initial segment][] that fulfills most conditions but none of these elements are [included in the accessibility tree][].
 
 ```html
 <html>
 	<ul>
-		<li><a href="#">Skip to navigation</a></li>
-		<li><a href="https://www.w3.org/">Skip to search</a></li>
-		<li><a href="javascript:void(0);">Skip to main content</a></li>
+		<li><a href="#search" aria-hidden="true">Skip to search</a></li>
+		<li><a href="#about" aria-hidden="true">Skip to additional information</a></li>
+		<li><a href="#main" aria-hidden="true">Skip to text</a></li>
 	</ul>
-	<nav id="navigation">Navigation section</nav>
-	<form id="search" role="search">Search section</form>
-	<main id="main">Main content</main>
+	<form id="search" role="search">Search in text</form>
+	<aside id="about">
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the author and translator -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
-#### Failed Example 4
+#### Failed Example 1 (not in AT)
 
-Links in the [initial segment][] list do not move focus to a [section of content][] when activated due to invalid `id` attributes.
+The first [focusable][] element form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the complementary and main [sections of content][section of content]. The first three [focusable][] elements form an [initial segment][] that fulfills Expectation 2 but not Expectation 1 because the second [focusable][] element is not [included in the accessibility tree][]. Thus, no [initial segment][] fulfills both Expectations.
 
 ```html
 <html>
 	<ul>
-		<li><a href="#navigation" aria-label="Skip to navigation"></a></li>
-		<li><a href="#search" aria-label="Skip to search"></a></li>
-		<li><a href="#main" aria-label="Skip to main content"></a></li>
-	</ul>
-	<nav>Navigation section</nav>
-	<form role="search">Search section</form>
-	<main>Main content</main>
-</html>
-```
-
-#### Failed Example 5
-
-Links in the [initial segment][] list are not the first [focusable][] elements in the document.
-
-```html
-<html>
-	<a href="https://www.w3.org/">Go to the W3C</a>
-	<ul>
-		<li><a href="#navigation">Skip to navigation</a></li>
 		<li><a href="#search">Skip to search</a></li>
-		<li><a href="#main">Skip to main content</a></li>
+		<li><a href="#about" aria-hidden="true">Skip to additional information</a></li>
+		<li><a href="#main">Skip to text</a></li>
 	</ul>
-	<nav id="navigation">Navigation section</nav>
-	<form id="search" role="search">Search section</form>
-	<main id="main">Main content</main>
+	<form id="search" role="search">Search in text</form>
+	<aside id="about">
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the author and translator -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
-#### Failed Example 6
+#### Failed Example 6 (not visible when focused)
 
-Links in the [initial segment][] list are not [visible][] when [focused][].
-
-```html
-<html>
-	<ul style="display:none;" id="skiplinks">
-		<li><a href="#navigation">Skip to navigation</a></li>
-		<li><a href="#search">Skip to search</a></li>
-		<li><a href="#main">Skip to main content</a></li>
-	</ul>
-	<nav id="navigation">Navigation section</nav>
-	<form id="search" role="search">Search section</form>
-	<main id="main">Main content</main>
-</html>
-```
-
-#### Failed Example 7
-
-Links in the [initial segment][] list do not have an [accessible name][].
+The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element does not fulfill Expectation 1 because it is not [visible][], even when [focused][]. Thus, no [initial segment][] fulfills both Expectations.
 
 ```html
 <html>
 	<ul>
-		<li><a href="#navigation"></a></li>
-		<li><a href="#search"></a></li>
-		<li><a href="#main"></a></li>
+		<li><a href="#search">Skip to search</a></li>
+		<li><a href="#about">Skip to additional information</a></li>
+		<li><a href="#main" style="display: none">Skip to text</a></li>
 	</ul>
-	<nav id="navigation">Navigation section</nav>
-	<form id="search" role="search">Search section</form>
-	<main id="main">Main content</main>
+	<form id="search" role="search">Search in text</form>
+	<aside id="about">
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the author and translator -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 
-#### Failed Example 8
+#### Failed Example 1 (not a link)
 
-Multiple links in the [initial segment][] list move the focus to the same [section of content][].
+The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element does not fulfill Expectation 1 because it does not have a [semantic role][] of `link`. Thus, no [initial segment][] fulfills both Expectations.
 
 ```html
 <html>
 	<ul>
-		<li><a href="#navigation">Skip to navigation</a></li>
 		<li><a href="#search">Skip to search</a></li>
-		<li><a href="#main">Skip to main content</a></li>
-		<li><a href="#main">Skip to main content again with this link</a></li>
+		<li><a href="#about">Skip to additional information</a></li>
+		<li onclick="document.getElementById('main').focus()" tabindex="0">Skip to text</li>
 	</ul>
-	<nav id="navigation">Navigation section</nav>
-	<form id="search" role="search">Search section</form>
-	<main id="main">Main content</main>
+	<form id="search" role="search">Search in text</form>
+	<aside id="about">
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the author and translator -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Failed Example 1 (jump somewhere else/nowhere)
+
+The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element does not fulfill Expectation 1 because it does not moves focus to a [section of content][]. Thus, no [initial segment][] fulfills both Expectations.
+
+```html
+<html>
+	<ul>
+		<li><a href="#search">Skip to search</a></li>
+		<li><a href="#about">Skip to additional information</a></li>
+		<li><a href="https://www.w3.org/">Check out the W3C</a></li>
+	</ul>
+	<form id="search" role="search">Search in text</form>
+	<aside id="about">
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the author and translator -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Failed Example (bad name)
+
+The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element does not fulfill Expectation 1 because its [accessible name][] does not communicate the intend. Thus, no [initial segment][] fulfills both Expectations.
+
+```html
+<html>
+	<ul>
+		<li><a href="#search">Skip to search</a></li>
+		<li><a href="#about">Skip to additional information</a></li>
+		<li><a href="#main">And now for something completely different!</a></li>
+	</ul>
+	<form id="search" role="search">Search in text</form>
+	<aside id="about">
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the author and translator -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Failed Example (bad name)
+
+The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element does not fulfill Expectation 1 because its [accessible name][] is empty and thus does not communicate the intend. Thus, no [initial segment][] fulfills both Expectations.
+
+```html
+<html>
+	<ul>
+		<li><a href="#search">Skip to search</a></li>
+		<li><a href="#about">Skip to additional information</a></li>
+		<li><a href="#main" aria-label="">Skip to text</a></li>
+	</ul>
+	<form id="search" role="search">Search in text</form>
+	<aside id="about">
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the author and translator -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Failed Example 8 (covering some section twice)
+
+The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The first three or four [focusable][] elements form an [initial segment][] that does not fulfill Expectation because there are two links to the complementary [section of content][]. Thus, there is no [initial segment][] of [focusable][] element fulfilling both Expectations.
+
+```html
+<html>
+	<ul>
+		<li><a href="#search">Skip to search</a></li>
+		<li><a href="#about">Skip to additional information</a></li>
+		<li><a href="#about">Skip to additional information</a></li>
+		<li><a href="#main">Skip to text</a></li>
+	</ul>
+	<form id="search" role="search">Search in text</form>
+	<aside id="about">
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the author and translator -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
+</html>
+```
+
+#### Passed Example 7
+
+The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element is the link to W3C (even though it is located after the link to the main [section of content][] in tree order, it is before it in focus order due to the `tabindex` attribute). It does not fulfill Expectation 1 because it does not moves focus to a [section of content][]. Thus, no [initial segment][] fulfills both Expectations.
+
+```html
+<html>
+	<ul>
+		<li><a href="#search" tabindex="1">Skip to search</a></li>
+		<li><a href="#about" tabindex="2">Skip to additional information</a></li>
+		<li><a href="#main" tabindex="4">Skip to text</a></li>
+		<li><a href="https://www.w3.org/" tabindex="3">Check out the W3C</a></li>
+	</ul>
+	<form id="search" role="search">Search in text</form>
+	<aside id="about">
+		<h1>About the book</h1>
+		<!-- short description of the book and biography of the author and translator -->
+	</aside>
+	<main id="main">
+		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</main>
 </html>
 ```
 

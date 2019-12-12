@@ -65,7 +65,7 @@ _There are no major accessibility support issues known for this rule._
 
 **Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
 
-**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`aside`, `form` and `main` elements).
+**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`aside`, `form` and `main` elements), and the complementary [section of content][] (`aside` element) does not include any [focusable][] element not shown explicitly.
 
 ### Passed
 
@@ -84,6 +84,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 	<aside id="about">
 		<h1>About the book</h1>
 		<!-- short description of the book and biography of the author and translator -->
+		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -110,6 +111,7 @@ The links in the [initial segment][] (composed of the first three focusable elem
 		<aside id="about">
 			<h1>About the book</h1>
 			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
 			<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -135,6 +137,7 @@ The links in the [initial segment][] (composed of the first three focusable elem
 	<aside id="about">
 		<h1>About the book</h1>
 		<!-- short description of the book and biography of the author and translator -->
+		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -159,6 +162,7 @@ Even though they are after the form [section of repeated content][], the three l
 	<aside id="about">
 		<h1>About the book</h1>
 		<!-- short description of the book and biography of the author and translator -->
+		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -184,6 +188,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 	<aside id="about">
 		<h1>About the book</h1>
 		<!-- short description of the book and biography of the author and translator -->
+		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -209,6 +214,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 	<aside id="about">
 		<h1>About the book</h1>
 		<!-- short description of the book and biography of the author and translator -->
+		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -234,6 +240,7 @@ The first three [focusable][] elements are the links to the various [sections of
 	<aside id="about">
 		<h1>About the book</h1>
 		<!-- short description of the book and biography of the author and translator -->
+		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -255,6 +262,7 @@ This [HTML web page][] has no link to skip to the various [sections of content][
 	<aside id="about">
 		<h1>About the book</h1>
 		<!-- short description of the book and biography of the author and translator -->
+		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -278,6 +286,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 	<aside id="about">
 		<h1>About the book</h1>
 		<!-- short description of the book and biography of the author and translator -->
+		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -303,6 +312,7 @@ The second, third and fourth links form a set that fulfills Expectation 2 and mo
 	<aside id="about">
 		<h1>About the book</h1>
 		<!-- short description of the book and biography of the author and translator -->
+		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -327,6 +337,7 @@ The first three [focusable][] elements in this [document][] form an [initial seg
 	<aside id="about">
 		<h1>About the book</h1>
 		<!-- short description of the book and biography of the author and translator -->
+		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -351,6 +362,7 @@ The first [focusable][] element form an [initial segment][] that fulfills Expect
 	<aside id="about">
 		<h1>About the book</h1>
 		<!-- short description of the book and biography of the author and translator -->
+		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -375,6 +387,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 	<aside id="about">
 		<h1>About the book</h1>
 		<!-- short description of the book and biography of the author and translator -->
+		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -399,6 +412,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 	<aside id="about">
 		<h1>About the book</h1>
 		<!-- short description of the book and biography of the author and translator -->
+		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -423,6 +437,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 	<aside id="about">
 		<h1>About the book</h1>
 		<!-- short description of the book and biography of the author and translator -->
+		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -447,6 +462,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 	<aside id="about">
 		<h1>About the book</h1>
 		<!-- short description of the book and biography of the author and translator -->
+		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -471,6 +487,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 	<aside id="about">
 		<h1>About the book</h1>
 		<!-- short description of the book and biography of the author and translator -->
+		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -496,6 +513,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 	<aside id="about">
 		<h1>About the book</h1>
 		<!-- short description of the book and biography of the author and translator -->
+		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -521,6 +539,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 	<aside id="about">
 		<h1>About the book</h1>
 		<!-- short description of the book and biography of the author and translator -->
+		<!-- does not include any focusable element -->
 	</aside>
 	<main id="main">
 		<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>

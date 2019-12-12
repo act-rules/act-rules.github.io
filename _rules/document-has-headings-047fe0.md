@@ -114,16 +114,21 @@ The image at the start of the second [section of content][] does not have an [ac
 
 ```html
 <html>
-	<nav>
-		<h1>Contents</h1>
-		<!-- list of links to each chapter -->
-	</nav>
-	<main>
-		<img src="../test-assets/document-headings-047fe0/peach-garden-oath.jpg" role="presentation" alt="" />
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<h1>Contents</h1>
+			<!-- list of links to each chapter -->
+		</nav>
+		<main>
+			<img src="../test-assets/document-headings-047fe0/peach-garden-oath.jpg" role="presentation" alt="" />
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -133,15 +138,20 @@ This [document][] has one [section of content][] for the navigation links, and o
 
 ```html
 <html>
-	<nav>
-		<div role="heading" aria-level="1">Contents</div>
-		<!-- list of links to each chapter -->
-	</nav>
-	<main>
-		<div role="heading" aria-level="1">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</div>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<div role="heading" aria-level="1">Contents</div>
+			<!-- list of links to each chapter -->
+		</nav>
+		<main>
+			<div role="heading" aria-level="1">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</div>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -151,20 +161,25 @@ This [document][] is using image as heading, the [accessible name][] of the imag
 
 ```html
 <html>
-	<nav>
-		<h1>Contents</h1>
-		<!-- list of links to each chapter -->
-	</nav>
-	<main>
-		<h1>
-			<img
-				src="../test-assets/document-headings-047fe0/peach-garden-oath.jpg"
-				alt="Three Heroes Swear Brotherhood at a Feast in the Peach Garden"
-			/>
-		</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<h1>Contents</h1>
+			<!-- list of links to each chapter -->
+		</nav>
+		<main>
+			<h1>
+				<img
+					src="../test-assets/document-headings-047fe0/peach-garden-oath.jpg"
+					alt="Three Heroes Swear Brotherhood at a Feast in the Peach Garden"
+				/>
+			</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -176,15 +191,20 @@ For the second [section of content][], the first node with a non-empty [accessib
 
 ```html
 <html>
-	<nav>
-		<h1>Contents</h1>
-		<!-- list of links to each chapter -->
-	</nav>
-	<main>
-		<strong style="font-size: 18pt">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</strong>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<h1>Contents</h1>
+			<!-- list of links to each chapter -->
+		</nav>
+		<main>
+			<strong style="font-size: 18pt">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</strong>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -194,15 +214,20 @@ The heading of the second [section of content][] is not [included in the accessi
 
 ```html
 <html>
-	<nav>
-		<h1>Contents</h1>
-		<!-- list of links to each chapter -->
-	</nav>
-	<main>
-		<h1 aria-hidden="true">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<h1>Contents</h1>
+			<!-- list of links to each chapter -->
+		</nav>
+		<main>
+			<h1 aria-hidden="true">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -212,15 +237,20 @@ The [accessible name][] of the image used as heading for the second [section of 
 
 ```html
 <html>
-	<nav>
-		<h1>Contents</h1>
-		<!-- list of links to each chapter -->
-	</nav>
-	<main>
-		<h1><img src="../test-assets/document-headings-047fe0/peach-garden-oath.jpg" alt=" " /></h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<h1>Contents</h1>
+			<!-- list of links to each chapter -->
+		</nav>
+		<main>
+			<h1><img src="../test-assets/document-headings-047fe0/peach-garden-oath.jpg" alt=" " /></h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -230,15 +260,20 @@ The `h1` element that starts the second [section of content][] is not [visible][
 
 ```html
 <html>
-	<nav>
-		<h1>Contents</h1>
-		<!-- list of links to each chapter -->
-	</nav>
-	<main>
-		<h1 style="position: absolute; top:-999px">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<h1>Contents</h1>
+			<!-- list of links to each chapter -->
+		</nav>
+		<main>
+			<h1 style="position: absolute; top:-999px">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 

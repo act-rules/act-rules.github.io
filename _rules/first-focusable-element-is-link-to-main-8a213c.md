@@ -63,19 +63,24 @@ The link to skip the complementary [section of repeated content][] is [visible][
 
 ```html
 <html>
-	<nav>
-		<a href="#main">Skip to text</a>
-	</nav>
-	<aside>
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<a href="#main">Skip to text</a>
+		</nav>
+		<aside>
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -86,22 +91,24 @@ The link to skip the complementary [section of repeated content][] is [included 
 ```html
 <html>
 	<head>
-        <link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
+		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
+		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
 		<nav class="visible-on-focus">
-		<a href="#main">Skip to text</a>
-	</nav>
-	<aside>
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+			<a href="#main">Skip to text</a>
+		</nav>
+		<aside>
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -111,19 +118,24 @@ The link to skip the complementary [section of repeated content][] has an [acces
 
 ```html
 <html>
-	<nav>
-		<a href="#main" aria-label="Skip to text">📖</a>
-	</nav>
-	<aside>
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<a href="#main" aria-label="Skip to text">📖</a>
+		</nav>
+		<aside>
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -133,19 +145,24 @@ Even though it is located after it, the link to skip the complementary [section 
 
 ```html
 <html>
-	<aside>
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<nav>
-		<a href="#main">Skip to text</a>
-	</nav>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<aside>
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<nav>
+			<a href="#main">Skip to text</a>
+		</nav>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -155,20 +172,25 @@ The first [focusable][] element within this page is the link to the main [sectio
 
 ```html
 <html>
-	<nav>
-		<a href="https://www.w3.org/" tabindex="2">Check out the W3C</a>
-		<a href="#main" tabindex="1">Skip to text</a>
-	</nav>
-	<aside>
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<a href="https://www.w3.org/" tabindex="2">Check out the W3C</a>
+			<a href="#main" tabindex="1">Skip to text</a>
+		</nav>
+		<aside>
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -180,16 +202,21 @@ There is no link to skip the complementary [section of repeated content][].
 
 ```html
 <html>
-	<aside>
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<aside>
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -199,20 +226,25 @@ The link to skip the complementary [section of repeated content][] is not the fi
 
 ```html
 <html>
-	<a href="https://www.w3.org/">Check out the W3C</a>
-	<nav>
-		<a href="#main">Skip to text</a>
-	</nav>
-	<aside>
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<a href="https://www.w3.org/">Check out the W3C</a>
+		<nav>
+			<a href="#main">Skip to text</a>
+		</nav>
+		<aside>
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -222,19 +254,24 @@ The link to skip the complementary [section of repeated content][] is not includ
 
 ```html
 <html>
-	<nav>
-		<a href="#main" aria-hidden="true">Skip to text</a>
-	</nav>
-	<aside>
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<a href="#main" aria-hidden="true">Skip to text</a>
+		</nav>
+		<aside>
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -244,19 +281,24 @@ The link to skip the complementary [section of repeated content][] is not [visib
 
 ```html
 <html>
-	<nav>
-		<a href="#main" style="position: absolute; top: -999px">Skip to text</a>
-	</nav>
-	<aside>
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<a href="#main" style="position: absolute; top: -999px">Skip to text</a>
+		</nav>
+		<aside>
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -266,19 +308,24 @@ The element with a click event to skip the complementary [section of repeated co
 
 ```html
 <html>
-	<nav>
-		<span onclick="document.getElementById('main').focus()">Skip to text</span>
-	</nav>
-	<aside>
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<span onclick="document.getElementById('main').focus()">Skip to text</span>
+		</nav>
+		<aside>
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -288,19 +335,24 @@ The link to skip the complementary [section of repeated content][] does not refe
 
 ```html
 <html>
-	<nav>
-		<a href="#InvalidId">Skip to text</a>
-	</nav>
-	<aside>
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<a href="#InvalidId">Skip to text</a>
+		</nav>
+		<aside>
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -310,19 +362,24 @@ The link to skip the complementary [section of repeated content][] does not have
 
 ```html
 <html>
-	<nav>
-		<a href="#main">Click me if you dare!</a>
-	</nav>
-	<aside>
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<a href="#main">Click me if you dare!</a>
+		</nav>
+		<aside>
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -332,20 +389,25 @@ The first [focusable][] element within this page is the link to W3C. The link to
 
 ```html
 <html>
-	<nav>
-		<a href="#main" tabindex="2">Skip to text</a>
-		<a href="https://www.w3.org/" tabindex="1">Check out the W3C</a>
-	</nav>
-	<aside>
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the author and translator -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<a href="#main" tabindex="2">Skip to text</a>
+			<a href="https://www.w3.org/" tabindex="1">Check out the W3C</a>
+		</nav>
+		<aside>
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 

@@ -60,17 +60,22 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 
 ```html
 <html>
-	<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
-	<a href="#" onclick="toggleHidden('navigation')">Toggle table of content</a>
-	<nav id="navigation">
-		<h1>Contents</h1>
-		<!-- list of links to each chapter -->
-	</nav>
-	<main>
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<a href="#" onclick="toggleHidden('navigation')">Toggle table of content</a>
+		<nav id="navigation">
+			<h1>Contents</h1>
+			<!-- list of links to each chapter -->
+		</nav>
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -80,21 +85,26 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 
 ```html
 <html>
-	<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
-	<button onclick="toggleHidden(['navigation', 'biography'])">Toggle repeated content</button>
-	<nav id="navigation">
-		<h1>Contents</h1>
-		<!-- list of links to each chapter -->
-	</nav>
-	<aside id="biography">
-		<h1>About the authors</h1>
-		<!-- short biography of the author and translator -->
-	</aside>
-	<main>
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<button onclick="toggleHidden(['navigation', 'biography'])">Toggle repeated content</button>
+		<nav id="navigation">
+			<h1>Contents</h1>
+			<!-- list of links to each chapter -->
+		</nav>
+		<aside id="biography">
+			<h1>About the authors</h1>
+			<!-- short biography of the author and translator -->
+		</aside>
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -104,22 +114,27 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 
 ```html
 <html>
-	<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
-	<a href="#" onclick="toggleHidden('navigation')">Toggle table of content</a>
-	<button onclick="toggleHidden('biography')">Toggle extra content</button>
-	<nav id="navigation">
-		<h1>Contents</h1>
-		<!-- list of links to each chapter -->
-	</nav>
-	<aside id="biography">
-		<h1>About the authors</h1>
-		<!-- short biography of the author and translator -->
-	</aside>
-	<main>
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<a href="#" onclick="toggleHidden('navigation')">Toggle table of content</a>
+		<button onclick="toggleHidden('biography')">Toggle extra content</button>
+		<nav id="navigation">
+			<h1>Contents</h1>
+			<!-- list of links to each chapter -->
+		</nav>
+		<aside id="biography">
+			<h1>About the authors</h1>
+			<!-- short biography of the author and translator -->
+		</aside>
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -132,17 +147,20 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 	<head>
 		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
 		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
+		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
-	<a href="#" onclick="toggleVisibility('navigation'); toggleAriaHidden('navigation')">Toggle table of content</a>
-	<nav id="navigation">
-		<h1>Contents</h1>
-		<!-- list of links to each chapter -->
-	</nav>
-	<main>
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<body>
+		<a href="#" onclick="toggleVisibility('navigation'); toggleAriaHidden('navigation')">Toggle table of content</a>
+		<nav id="navigation">
+			<h1>Contents</h1>
+			<!-- list of links to each chapter -->
+		</nav>
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -154,15 +172,20 @@ There is no [user interface component][] to toggle the navigational [section of 
 
 ```html
 <html>
-	<nav id="navigation">
-		<h1>Contents</h1>
-		<!-- list of links to each chapter -->
-	</nav>
-	<main>
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav id="navigation">
+			<h1>Contents</h1>
+			<!-- list of links to each chapter -->
+		</nav>
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -172,17 +195,22 @@ The [user interface component][] to toggle the navigational [section of repeated
 
 ```html
 <html>
-	<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
-	<a href="#" style="position: absolute; top: -999px" onclick="toggleHidden('navigation')">Toggle table of content</a>
-	<nav id="navigation">
-		<h1>Contents</h1>
-		<!-- list of links to each chapter -->
-	</nav>
-	<main>
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<a href="#" style="position: absolute; top: -999px" onclick="toggleHidden('navigation')">Toggle table of content</a>
+		<nav id="navigation">
+			<h1>Contents</h1>
+			<!-- list of links to each chapter -->
+		</nav>
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -192,17 +220,22 @@ The [user interface component][] to toggle the navigational [section of repeated
 
 ```html
 <html>
-	<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
-	<a href="#" aria-hidden="true" onclick="toggleHidden('navigation')">Toggle table of content</a>
-	<nav id="navigation">
-		<h1>Contents</h1>
-		<!-- list of links to each chapter -->
-	</nav>
-	<main>
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<head>
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<a href="#" aria-hidden="true" onclick="toggleHidden('navigation')">Toggle table of content</a>
+		<nav id="navigation">
+			<h1>Contents</h1>
+			<!-- list of links to each chapter -->
+		</nav>
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -211,22 +244,24 @@ The [user interface component][] to toggle the navigational [section of repeated
 The [user interface component][] only toggles the [visibility][visible] of the navigational [section of repeated content][], not its [inclusion in the accessibility tree][included in the accessibility tree].
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
 		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
 		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
+		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
-	<a href="#" onclick="toggleVisibility('navigation')">Toggle table of content</a>
-	<nav id="navigation">
-		<h1>Contents</h1>
-		<!-- list of links to each chapter -->
-	</nav>
-	<main>
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+	<body>
+		<a href="#" onclick="toggleVisibility('navigation')">Toggle table of content</a>
+		<nav id="navigation">
+			<h1>Contents</h1>
+			<!-- list of links to each chapter -->
+		</nav>
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -235,18 +270,23 @@ The [user interface component][] only toggles the [visibility][visible] of the n
 The [user interface component][] only toggles the [inclusion in the accessibility tree][included in the accessibility tree] of the navigational [section of repeated content][], not its [visibility][visible].
 
 ```html
-<html lang="en">
-	<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
-	<a href="#" onclick="toggleAriaHidden('navigation')">Toggle table of content</a>
-	<nav id="navigation">
-		<h1>Contents</h1>
-		<!-- list of links to each chapter -->
-	</nav>
-	<main>
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
+<html>
+	<head>
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<a href="#" onclick="toggleAriaHidden('navigation')">Toggle table of content</a>
+		<nav id="navigation">
+			<h1>Contents</h1>
+			<!-- list of links to each chapter -->
+		</nav>
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 

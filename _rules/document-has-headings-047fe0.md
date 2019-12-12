@@ -65,6 +65,10 @@ This [document][] has one [section of content][] for the navigation links, and o
 
 ```html
 <html>
+    <head>
+        <title>The Three Kingdoms, Chapter 1</title>
+</head>
+<body>
 	<!-- Navigational section of content starts here -->
 	<h1>Contents</h1>
 	<!-- list of links to each chapter -->

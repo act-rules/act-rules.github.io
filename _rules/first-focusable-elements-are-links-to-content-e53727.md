@@ -369,7 +369,7 @@ The first three [focusable][] elements in this [document][] form an [initial seg
 </html>
 ```
 
-#### Failed Example 4
+#### Failed Example 5
 
 The first [focusable][] element form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the complementary and main [sections of content][section of content]. The first three [focusable][] elements form an [initial segment][] that fulfills Expectation 2 but not Expectation 1 because the second [focusable][] element is not [included in the accessibility tree][]. Thus, no [initial segment][] fulfills both Expectations.
 
@@ -394,7 +394,7 @@ The first [focusable][] element form an [initial segment][] that fulfills Expect
 </html>
 ```
 
-#### Failed Example 5
+#### Failed Example 6
 
 The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element does not fulfill Expectation 1 because it is not [visible][], even when [focused][]. Thus, no [initial segment][] fulfills both Expectations.
 
@@ -419,7 +419,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 </html>
 ```
 
-#### Failed Example 6
+#### Failed Example 7
 
 The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element does not fulfill Expectation 1 because it does not have a [semantic role][] of `link`. Thus, no [initial segment][] fulfills both Expectations.
 
@@ -444,7 +444,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 </html>
 ```
 
-#### Failed Example 7
+#### Failed Example 8
 
 The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element does not fulfill Expectation 1 because it does not moves focus to a [section of content][]. Thus, no [initial segment][] fulfills both Expectations.
 
@@ -469,7 +469,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 </html>
 ```
 
-#### Failed Example 8
+#### Failed Example 9
 
 The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element does not fulfill Expectation 1 because its [accessible name][] does not communicate the intend. Thus, no [initial segment][] fulfills both Expectations.
 
@@ -494,7 +494,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 </html>
 ```
 
-#### Failed Example 9
+#### Failed Example 10
 
 The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element does not fulfill Expectation 1 because its [accessible name][] is empty and thus does not communicate the intend. Thus, no [initial segment][] fulfills both Expectations.
 
@@ -519,7 +519,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 </html>
 ```
 
-#### Failed Example 10
+#### Failed Example 11
 
 The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The first three or four [focusable][] elements form an [initial segment][] that does not fulfill Expectation because there are two links to the complementary [section of content][]. Thus, there is no [initial segment][] of [focusable][] element fulfilling both Expectations.
 
@@ -545,7 +545,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 </html>
 ```
 
-#### Failed Example 11
+#### Failed Example 12
 
 The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element is the link to W3C (even though it is located after the link to the main [section of content][] in tree order, it is before it in focus order due to the `tabindex` attribute). It does not fulfill Expectation 1 because it does not moves focus to a [section of content][]. Thus, no [initial segment][] fulfills both Expectations.
 

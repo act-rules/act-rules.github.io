@@ -127,21 +127,13 @@ The link to skip the complementary [section of repeated content][] is not normal
 ```html
 <html lang="en">
 	<head>
-		<style>
-			.skip-link {
-				position: absolute;
-				top: -999px;
-			}
-
-			.skip-link:focus {
-				position: relative;
-				top: 0;
-			}
-		</style>
+		<head>
+			<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
+		</head>
 	</head>
 	<body>
 		<aside>
-			<a href="#main" class="skip-link">Skip additional information</a>
+			<a href="#main" class="visible-on-focus">Skip additional information</a>
 			<h1>About the book</h1>
 			<!-- short description of the book and biography of the authors, repeated on each page -->
 			<!-- does not include any focusable element -->
@@ -161,27 +153,22 @@ The `div` element just before the complementary [section of repeated content][] 
 
 ```html
 <html lang="en">
-	<div role="link" onclick="location.href='#main';" tabindex="1" id="skip-link">Skip additional information</div>
-	<aside>
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the authors, repeated on each page -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
-	<script>
-		var link = document.getElementById('skip-link')
-
-		link.addEventListener('keyup', function(event) {
-			if (event.key === 'Enter') {
-				event.preventDefault()
-				link.click()
-			}
-		})
-	</script>
+	<head>
+		<script src="../test-assets/bypass-blocks-cf77f2/click-on-enter.js" />
+	</head>
+	<body onload="ClickOnEnter('skip-link')">
+		<div role="link" onclick="location.href='#main';" tabindex="1" id="skip-link">Skip additional information</div>
+		<aside>
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 
@@ -294,27 +281,22 @@ The element to skip the complementary [section of repeated content][] does not h
 
 ```html
 <html lang="en">
-	<div onclick="location.href='#main';" tabindex="1" id="skip-link">Skip additional information</div>
-	<aside>
-		<h1>About the book</h1>
-		<!-- short description of the book and biography of the authors, repeated on each page -->
-		<!-- does not include any focusable element -->
-	</aside>
-	<main id="main">
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
-	</main>
-	<script>
-		var link = document.getElementById('skip-link')
-
-		link.addEventListener('keyup', function(event) {
-			if (event.key === 'Enter') {
-				event.preventDefault()
-				link.click()
-			}
-		})
-	</script>
+	<head>
+		<script src="../test-assets/bypass-blocks-cf77f2/click-on-enter.js" />
+	</head>
+	<body onload="ClickOnEnter('skip-link')">
+		<div onclick="location.href='#main';" tabindex="1" id="skip-link">Skip additional information</div>
+		<aside>
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
 </html>
 ```
 

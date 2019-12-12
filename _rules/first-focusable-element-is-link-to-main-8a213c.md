@@ -86,7 +86,7 @@ The link to skip the complementary [section of repeated content][] is [included 
 ```html
 <html>
 	<head>
-        <link rel="stylesheet" href="../test-assets/first-focusable-8a213c-e53727/styles.css" />
+        <link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
 	</head>
 	<body>
 		<nav class="visible-on-focus">

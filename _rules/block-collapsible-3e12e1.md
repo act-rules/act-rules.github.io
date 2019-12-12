@@ -60,7 +60,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 
 ```html
 <html>
-	<script src="../test-assets/block-collapsible-3e12e1/toggle-display.js" />
+	<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
 	<a href="#" onclick="toggleHidden('navigation')">Toggle table of content</a>
 	<nav id="navigation">
 		<h1>Contents</h1>
@@ -80,7 +80,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 
 ```html
 <html>
-	<script src="../test-assets/block-collapsible-3e12e1/toggle-display.js" />
+	<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
 	<button onclick="toggleHidden(['navigation', 'biography'])">Toggle repeated content</button>
 	<nav id="navigation">
 		<h1>Contents</h1>
@@ -104,7 +104,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 
 ```html
 <html>
-	<script src="../test-assets/block-collapsible-3e12e1/toggle-display.js" />
+	<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
 	<a href="#" onclick="toggleHidden('navigation')">Toggle table of content</a>
 	<button onclick="toggleHidden('biography')">Toggle extra content</button>
 	<nav id="navigation">
@@ -130,8 +130,8 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 ```html
 <html>
 	<head>
-		<link rel="stylesheet" href="../test-assets/block-collapsible-3e12e1/styles.css" />
-		<script src="../test-assets/block-collapsible-3e12e1/toggle-display.js" />
+		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
 	</head>
 	<a href="#" onclick="toggleVisibility('navigation'); toggleAriaHidden('navigation')">Toggle table of content</a>
 	<nav id="navigation">
@@ -172,7 +172,7 @@ The [user interface component][] to toggle the navigational [section of repeated
 
 ```html
 <html>
-	<script src="../test-assets/block-collapsible-3e12e1/toggle-display.js" />
+	<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
 	<a href="#" style="position: absolute; top: -999px" onclick="toggleHidden('navigation')">Toggle table of content</a>
 	<nav id="navigation">
 		<h1>Contents</h1>
@@ -192,7 +192,7 @@ The [user interface component][] to toggle the navigational [section of repeated
 
 ```html
 <html>
-	<script src="../test-assets/block-collapsible-3e12e1/toggle-display.js" />
+	<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
 	<a href="#" aria-hidden="true" onclick="toggleHidden('navigation')">Toggle table of content</a>
 	<nav id="navigation">
 		<h1>Contents</h1>
@@ -214,8 +214,8 @@ The [user interface component][] only toggles the [visibility][visible] of the n
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<link rel="stylesheet" href="../test-assets/block-collapsible-3e12e1/styles.css" />
-		<script src="../test-assets/block-collapsible-3e12e1/toggle-display.js" />
+		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
 	</head>
 	<a href="#" onclick="toggleVisibility('navigation')">Toggle table of content</a>
 	<nav id="navigation">
@@ -236,7 +236,7 @@ The [user interface component][] only toggles the [inclusion in the accessibilit
 
 ```html
 <html lang="en">
-	<script src="../test-assets/block-collapsible-3e12e1/toggle-display.js" />
+	<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
 	<a href="#" onclick="toggleAriaHidden('navigation')">Toggle table of content</a>
 	<nav id="navigation">
 		<h1>Contents</h1>

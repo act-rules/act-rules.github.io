@@ -101,7 +101,7 @@ The links in the [initial segment][] (composed of the first three focusable elem
 ```html
 <html>
 	<head>
-		<link rel="stylesheet" href="../test-assets/first-focusable-8a213c-e53727/styles.css" />
+		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
 	</head>
 	<body>
 		<a class="visible-on-focus" href="#search">Skip to search</a>

@@ -167,7 +167,7 @@ For the second [section of content][], the first node with a non-empty [accessib
 ```html
 <html>
 	<nav>
-	<h1>Contents</h1>h1></h1>
+		<h1>Contents</h1>
 		<!-- list of links to each chapter -->
 	</nav>
 	<main>

@@ -100,7 +100,7 @@ In this [document][], headings are not the first elements of each [section of co
 		</nav>
 		<main>
 			<hr />
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
 			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 			time.
 		</main>
@@ -110,7 +110,7 @@ In this [document][], headings are not the first elements of each [section of co
 
 #### Passed Example 3
 
-The image at the start of the second [section of content][] does not have an [accessible name][]. Thus, the first node with an [accessible name][] is the `h1` element and the rule passes.
+The image at the start of the second [section of content][] has an empty [accessible name][]. Thus, the first node with a non-empty [accessible name][] is the `h1` element and the rule passes.
 
 ```html
 <html>
@@ -123,7 +123,7 @@ The image at the start of the second [section of content][] does not have an [ac
 			<!-- list of links to each chapter -->
 		</nav>
 		<main>
-			<img src="../test-assets/document-headings-047fe0/peach-garden-oath.jpg" role="presentation" alt="" />
+			<img src="../test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg" role="presentation" alt="" />
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 			time.
@@ -134,7 +134,7 @@ The image at the start of the second [section of content][] does not have an [ac
 
 #### Passed Example 4
 
-This [document][] has one [section of content][] for the navigation links, and one for the actual text. Each starts with a `div` with a role of `heading`.
+Each [section of content][] of this [document][] starts with a `div` element with a role of `heading`.
 
 ```html
 <html>
@@ -172,7 +172,7 @@ This [document][] is using image as heading, the [accessible name][] of the imag
 		<main>
 			<h1>
 				<img
-					src="../test-assets/document-headings-047fe0/peach-garden-oath.jpg"
+					src="../test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg"
 					alt="Three Heroes Swear Brotherhood at a Feast in the Peach Garden"
 				/>
 			</h1>
@@ -187,7 +187,7 @@ This [document][] is using image as heading, the [accessible name][] of the imag
 
 #### Failed Example 1
 
-For the second [section of content][], the first node with a non-empty [accessible name][] does not have a [semantic role][] of `heading`, even though it is styled to appear as one.
+For the main [section of content][], the first node with a non-empty [accessible name][] does not have a [semantic role][] of `heading`, even though it is styled to appear as one.
 
 ```html
 <html>
@@ -210,7 +210,7 @@ For the second [section of content][], the first node with a non-empty [accessib
 
 #### Failed Example 2
 
-The heading of the second [section of content][] is not [included in the accessibility tree][] because of the `aria-hidden` attribute.
+The heading of the main [section of content][] is not [included in the accessibility tree][] because of the `aria-hidden` attribute.
 
 ```html
 <html>
@@ -233,7 +233,7 @@ The heading of the second [section of content][] is not [included in the accessi
 
 #### Failed Example 3
 
-The [accessible name][] of the image used as heading for the second [section of content][], which is also the [accessible name][] of the heading, is empty. Hence, the first node with a non-empty [accessible name][] is the text below, which does not have a [semantic role][] of `heading`.
+The `h1` element at the start of the main [section of content][] has an empty [accessible name][] (because of the `aria-label` attribute). Therefore, the first node with a non-empty [accessible name][] is the `img` element which does not have a [semantic role][] of `heading`.
 
 ```html
 <html>
@@ -246,7 +246,11 @@ The [accessible name][] of the image used as heading for the second [section of 
 			<!-- list of links to each chapter -->
 		</nav>
 		<main>
-			<h1><img src="../test-assets/document-headings-047fe0/peach-garden-oath.jpg" alt=" " /></h1>
+			<h1 aria-label="">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<img
+				src="../test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg"
+				alt="Three Heroes Swear Brotherhood at a Feast in the Peach Garden"
+			/>
 			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 			time.
 		</main>
@@ -256,7 +260,7 @@ The [accessible name][] of the image used as heading for the second [section of 
 
 #### Failed Example 4
 
-The `h1` element that starts the second [section of content][] is not [visible][] because it is off screen.
+The `h1` element that starts the main [section of content][] is not [visible][] because it is off screen.
 
 ```html
 <html>

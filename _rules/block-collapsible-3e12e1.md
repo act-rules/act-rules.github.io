@@ -61,7 +61,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 ```html
 <html>
 	<head>
-		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
@@ -86,7 +86,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 ```html
 <html>
 	<head>
-		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
@@ -115,7 +115,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 ```html
 <html>
 	<head>
-		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
@@ -146,7 +146,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 <html>
 	<head>
 		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
-		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
@@ -196,7 +196,7 @@ The [user interface component][] to toggle the navigational [section of repeated
 ```html
 <html>
 	<head>
-		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
@@ -221,7 +221,7 @@ The [user interface component][] to toggle the navigational [section of repeated
 ```html
 <html>
 	<head>
-		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
@@ -247,7 +247,7 @@ The [user interface component][] only toggles the [visibility][visible] of the n
 <html>
 	<head>
 		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
-		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
@@ -272,7 +272,7 @@ The [user interface component][] only toggles the [inclusion in the accessibilit
 ```html
 <html>
 	<head>
-		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js" />
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>

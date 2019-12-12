@@ -168,7 +168,7 @@ The `div` element just before the complementary [section of repeated content][] 
 ```html
 <html lang="en">
 	<head>
-		<script src="../test-assets/bypass-blocks-cf77f2/click-on-enter.js" />
+		<script src="../test-assets/bypass-blocks-cf77f2/click-on-enter.js"></script>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body onload="ClickOnEnter('skip-link')">
@@ -322,7 +322,7 @@ The element to skip the complementary [section of repeated content][] does not h
 ```html
 <html lang="en">
 	<head>
-		<script src="../test-assets/bypass-blocks-cf77f2/click-on-enter.js" />
+		<script src="../test-assets/bypass-blocks-cf77f2/click-on-enter.js"></script>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body onload="ClickOnEnter('skip-link')">

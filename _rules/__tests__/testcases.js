@@ -53,6 +53,6 @@ describeRule('testcases', ruleData => {
 			console.table(errors)
 		}
 
-		expect(errors.length).toEqual(0)
+		expect(errors).toEqual([])
 	})
 })

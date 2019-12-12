@@ -62,23 +62,189 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 
 ## Test Cases
 
+**Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
+
+**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark]; the banner, complementary and navigational [sections of content][section of content] (`header`, `aside` and `nav` elements) are a [section of repeated content][]; and the banner and complementary [sections of content][section of content] do not include any [focusable][] element not shown explicitly.
+
 ### Passed
 
 #### Passed Example 1
 
+This [HTML web page][] is passing rule [document has headings][].
+
+```html
+<html>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<!-- Navigational section of content starts here -->
+		<h1>Contents</h1>
+		<!-- list of links to each chapter -->
+		<!-- Navigational section of content ends here -->
+
+		<!-- Main section of content starts here -->
+		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+		<!-- Main section of content ends here -->
+	</body>
+</html>
+```
+
 #### Passed Example 2
 
+This [HTML web page][] is passing rule [document has a main landmark][].
+
+```html
+<html>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
+</html>
+```
+
 #### Passed Example 3
+
+This [HTML web page][] is passing rule [link for skipping block of content][].
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<aside>
+			<a href="#main">Skip additional information</a>
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
+</html>
+```
+
+#### Passed Example 4
+
+This [HTML web page][] is passing rule [block of content is expandable and collapsible][].
+
+```html
+<html>
+	<head>
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<a href="#" onclick="toggleHidden('navigation')">Toggle table of content</a>
+		<nav id="navigation">
+			<h1>Contents</h1>
+			<!-- list of links to each chapter -->
+		</nav>
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
+</html>
+```
+
+#### Passed Example 5
+
+This [HTML web page][] is passing rule [first focusable element is link to main content][].
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<a href="#main">Skip to text</a>
+		</nav>
+		<aside>
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
+</html>
+```
+
+#### Passed Example 6
+
+This [HTML web page][] is passing rule [first focusable elements are links to sections of content][].
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#header">Skip to header</a></li>
+			<li><a href="#about">Skip to additional information</a></li>
+			<li><a href="#main">Skip to text</a></li>
+		</ul>
+		<header id="header">
+			<!-- Name and logo of the website -->
+		</header>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
+</html>
+```
 
 ### Failed
 
 #### Failed Example 1
 
-#### Failed Example 2
+This [HTML web page][] does not pass any of the input rules.
 
-#### Failed Example 3
-
-#### Failed Example 4
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<header id="header">
+			<!-- Name and logo of the website -->
+		</header>
+		<aside id="about">
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+		time.
+	</body>
+</html>
+```
 
 ### Inapplicable
 
@@ -99,6 +265,9 @@ This [document][] is not an [HTML web page][].
 [document has headings]: https://act-rules.github.io/rules/047fe0 'Rule Document has headings'
 [first focusable elements are links to sections of content]: https://act-rules.github.io/rules/e53727 'Rule First focusable elements are links to sections of content'
 [first focusable element is link to main content]: https://act-rules.github.io/rules/8a213c 'Rule First focusable element is link to main content'
+[focusable]: #focusable 'Definition of focusable'
 [link for skipping block of content]: https://act-rules.github.io/rules/7b576d 'Rule Link for skipping block of content'
 [sc241]: https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html 'Success Criterion 2.4.1: Bypass blocks'
+[section of content]: #section-of-content 'Definition of section of content'
+[section of repeated content]: #section-of-repeated-content 'Definition of section of repeated content'
 [html web page]: #web-page-html 'Definition of web page (HTML)'

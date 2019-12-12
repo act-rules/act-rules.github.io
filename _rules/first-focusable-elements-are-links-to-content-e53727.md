@@ -74,7 +74,7 @@ _There are no major accessibility support issues known for this rule._
 The [initial segment][] composed of the first three [focusable][] elements in this [document][] fulfills both expectations.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -104,7 +104,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 The links in the [initial segment][] (composed of the first three focusable elements) are [visible][] when [focused][].
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
 		<title>The Three Kingdoms, Chapter 1</title>
@@ -133,7 +133,7 @@ The links in the [initial segment][] (composed of the first three focusable elem
 The links in the [initial segment][] (composed of the first three focusable elements) have an [accessible name][] provided by their `aria-label` attribute.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -163,7 +163,7 @@ The links in the [initial segment][] (composed of the first three focusable elem
 Even though they are after the form [section of repeated content][], the three links are still the first [focusable][] elements and thus are an [initial segment][] of [focusable][] elements fulfilling the expectations.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -193,7 +193,7 @@ Even though they are after the form [section of repeated content][], the three l
 The [initial segment][] composed of the first three [focusable][] elements in this [document][] fulfills both expectations. The fourth [focusable][] element can be left out of the [initial segment][] even though it is styled in a similar fashion.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -224,7 +224,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 The [initial segment][] composed of the first three [focusable][] elements in this [document][] fulfills both expectations. The fourth [focusable][] element can be left out of the [initial segment][] even though it moves focus to a [section of content][] inside the page.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -255,7 +255,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 The first three [focusable][] elements are the links to the various [sections of content][section of content]. Even through the link to W3C is before them in tree order, it is the fourth [focusable][] element due to the `tabindex` attributes. Therefore, the first three [focusable][] elements form an [initial segment][] that fulfills both Expectations.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -286,7 +286,7 @@ The first three [focusable][] elements are the links to the various [sections of
 The [initial segment][] composed of the first three [focusable][] elements in this [document][] fulfills both expectations. Even though the links are spread around the page, they are still an [initial segment][] of the [focusable][] elements.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -315,7 +315,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 This [HTML web page][] has no link to skip to the various [sections of content][section of content].
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -340,7 +340,7 @@ This [HTML web page][] has no link to skip to the various [sections of content][
 The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the form [section of content][]. Even though it is the first [section of content][] on this page, it still requires a link.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -369,7 +369,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 The second, third and fourth links form a set that fulfills Expectation 2 and most of Expectation 1. However, the presence of the first link means that this set is not an [initial segment][]. There is no [initial segment][] fulfilling both expectations.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -400,7 +400,7 @@ The second, third and fourth links form a set that fulfills Expectation 2 and mo
 The first three [focusable][] elements in this [document][] form an [initial segment][] that fulfills most conditions but none of these elements are [included in the accessibility tree][].
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -430,7 +430,7 @@ The first three [focusable][] elements in this [document][] form an [initial seg
 The first [focusable][] element form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the complementary and main [sections of content][section of content]. The first three [focusable][] elements form an [initial segment][] that fulfills Expectation 2 but not Expectation 1 because the second [focusable][] element is not [included in the accessibility tree][]. Thus, no [initial segment][] fulfills both Expectations.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -460,7 +460,7 @@ The first [focusable][] element form an [initial segment][] that fulfills Expect
 The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element does not fulfill Expectation 1 because it is not [visible][], even when [focused][]. Thus, no [initial segment][] fulfills both Expectations.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -490,7 +490,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element does not fulfill Expectation 1 because it does not have a [semantic role][] of `link`. Thus, no [initial segment][] fulfills both Expectations.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -520,7 +520,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element does not fulfill Expectation 1 because it does not moves focus to a [section of content][]. Thus, no [initial segment][] fulfills both Expectations.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -550,7 +550,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element does not fulfill Expectation 1 because its [accessible name][] does not communicate the intend. Thus, no [initial segment][] fulfills both Expectations.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -580,7 +580,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element does not fulfill Expectation 1 because its [accessible name][] is empty and thus does not communicate the intend. Thus, no [initial segment][] fulfills both Expectations.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -610,7 +610,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The first three or four [focusable][] elements form an [initial segment][] that does not fulfill Expectation because there are two links to the complementary [section of content][]. Thus, there is no [initial segment][] of [focusable][] element fulfilling both Expectations.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -641,7 +641,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element is the link to W3C (even though it is located after the link to the main [section of content][] in tree order, it is before it in focus order due to the `tabindex` attribute). It does not fulfill Expectation 1 because it does not moves focus to a [section of content][]. Thus, no [initial segment][] fulfills both Expectations.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>

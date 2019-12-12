@@ -62,7 +62,7 @@ _There are no major accessibility support issues known for this rule._
 The link to skip the complementary [section of repeated content][] is [visible][], is [included in the accessibility tree][], and when activated moves the focus to the main [section of content][]. Its [accessible name][] (coming from content) communicates that it skips to the main content.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -89,7 +89,7 @@ The link to skip the complementary [section of repeated content][] is [visible][
 The link to skip the complementary [section of repeated content][] is [included in the accessibility tree][], and is [visible][] when [focused][].
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
 		<title>The Three Kingdoms, Chapter 1</title>
@@ -117,7 +117,7 @@ The link to skip the complementary [section of repeated content][] is [included 
 The link to skip the complementary [section of repeated content][] has an [accessible name][] that communicates that it links to the main [section of content][].
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -144,7 +144,7 @@ The link to skip the complementary [section of repeated content][] has an [acces
 Even though it is located after it, the link to skip the complementary [section of repeated content][] is still the first [focusable][] element within the page.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -171,7 +171,7 @@ Even though it is located after it, the link to skip the complementary [section 
 The first [focusable][] element within this page is the link to the main [section of content][]. The link to W3C is located before in tree order but after in focus order due to the `tabindex` attributes.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -201,7 +201,7 @@ The first [focusable][] element within this page is the link to the main [sectio
 There is no link to skip the complementary [section of repeated content][].
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -225,7 +225,7 @@ There is no link to skip the complementary [section of repeated content][].
 The link to skip the complementary [section of repeated content][] is not the first [focusable][] element within the page.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -253,7 +253,7 @@ The link to skip the complementary [section of repeated content][] is not the fi
 The link to skip the complementary [section of repeated content][] is not included in the [accessibility tree][].
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -280,7 +280,7 @@ The link to skip the complementary [section of repeated content][] is not includ
 The link to skip the complementary [section of repeated content][] is not [visible][], even when focused.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -307,7 +307,7 @@ The link to skip the complementary [section of repeated content][] is not [visib
 The element with a click event to skip the complementary [section of repeated content][] does not have a [semantic role][] of `link`.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -334,7 +334,7 @@ The element with a click event to skip the complementary [section of repeated co
 The link to skip the complementary [section of repeated content][] does not reference a valid `id` attribute and thus when activated will not move focus to the main [section of content][].
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -361,7 +361,7 @@ The link to skip the complementary [section of repeated content][] does not refe
 The link to skip the complementary [section of repeated content][] does not have an [accessible name][] that communicates its intend.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
@@ -388,7 +388,7 @@ The link to skip the complementary [section of repeated content][] does not have
 The first [focusable][] element within this page is the link to W3C. The link to the main [section of content][] is located before in tree order but after in focus order due to the `tabindex` attributes.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>

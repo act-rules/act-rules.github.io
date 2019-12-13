@@ -12,6 +12,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:1.4.6: # Contrast (Enhanced)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 
 input_aspects:
   - DOM Tree
@@ -27,17 +32,17 @@ acknowledgements:
 
 ## Applicability
 
-Any [visible](#visible) character in a [text node](https://dom.spec.whatwg.org/#text) that is a [child](https://dom.spec.whatwg.org/#concept-tree-child) (in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree)) of an HTML element, except if the [text node](https://dom.spec.whatwg.org/#text) is a [descendant](https://dom.spec.whatwg.org/#concept-shadow-including-descendant) of an element that:
+Any [visible](#visible) character in a [text node][] that is a [child](https://dom.spec.whatwg.org/#concept-tree-child) (in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree)) of an HTML element, except if the [text node][] is a [descendant](https://dom.spec.whatwg.org/#concept-shadow-including-descendant) of an element that:
 
-- Has a [semantic role](#semantic-role) that inherits from [widget](https://www.w3.org/TR/wai-aria-1.1/#widget)
-- Is used in the [accessible name](#accessible-name) of a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget) that is [disabled]()
-- Has a [semantic role](#semantic-role) of [group](https://www.w3.org/TR/wai-aria-1.1/#group) that is [disabled]()
+- Has a [semantic role](#semantic-role) that inherits from [widget](https://www.w3.org/TR/wai-aria-1.1/#widget); or
+- Is used in the [accessible name](#accessible-name) of a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget) that is [disabled](); or
+- Has a [semantic role](#semantic-role) of [group](https://www.w3.org/TR/wai-aria-1.1/#group) and is [disabled]().
 
 **Note**: When the text color is the same as the background color, the [text node](https://dom.spec.whatwg.org/#text) is not [visible](#visible), and so it does not need to be tested for contrast.
 
 ## Expectation
 
-For each test target, the [highest possible contrast](#highest-possible-contrast) between the [foreground colors](#foreground-colors-of-text) and [background colors](#background-colors-of-text) is at least 4.5:1 or 3.0:1 for [larger scale text](#large-scale-text), except if the [text node](https://dom.spec.whatwg.org/#text) is [decorative](#decorative), or doesn't express anything in [human language](https://www.w3.org/TR/WCAG21/#dfn-human-language-s).
+For each test target, the [highest possible contrast](#highest-possible-contrast) between the [foreground colors](#foreground-colors-of-text) and [background colors](#background-colors-of-text) is at least 4.5:1 or 3.0:1 for [larger scale text](#large-scale-text), except if the test target is part of a [text node][] that is [decorative](#decorative), or does not express anything in [human language](https://www.w3.org/TR/WCAG21/#dfn-human-language-s).
 
 **Note**: Passing this rule does not mean that the text has sufficient color contrast. If all background pixels have a low contrast with all foreground pixels, the success criterion is guaranteed to not be satisfied. When some pixels have sufficient contrast, and others do not, legibility should be considered. There is no clear method for determining legibility, which is why this is out of scope for this rule.
 
@@ -54,6 +59,7 @@ Different browsers have different levels of support for CSS. This can cause cont
 ## Background
 
 - [Understanding Success Criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
+- [Understanding Success Criterion 1.4.6: Contrast (Enhanced)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html)
 - [G18: Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text](https://www.w3.org/WAI/WCAG21/Techniques/general/G18)
 - [G145: Ensuring that a contrast ratio of at least 3:1 exists between text (and images of text) and background behind the text](https://www.w3.org/WAI/WCAG21/Techniques/general/G145)
 - [F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text)](https://www.w3.org/WAI/WCAG21/Techniques/failures/F83)
@@ -364,3 +370,4 @@ This text is in a [disabled]() ARIA group.
 ```
 
 [disabled]: #disabled-element
+[text node]: https://dom.spec.whatwg.org/#text

@@ -38,7 +38,7 @@ Any [visible](#visible) character in a [text node][] that is a [child](https://d
 - Is used in the [accessible name](#accessible-name) of a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget) that is [disabled](); or
 - Has a [semantic role](#semantic-role) of [group](https://www.w3.org/TR/wai-aria-1.1/#group) and is [disabled]().
 
-**Note**: When the text color is the same as the background color, the [text node](https://dom.spec.whatwg.org/#text) is not [visible](#visible), and so it does not need to be tested for contrast.
+**Note**: When the [foreground color](#foreground-colors-of-text) is the same as the [background color](#background-colors-of-text), the character is not [visible](#visible), and so it does not need to be tested for contrast.
 
 ## Expectation
 
@@ -123,7 +123,7 @@ This text only has a 3:1 contrast but it is a large (18 point) text so it still 
 
 #### Passed Example 6
 
-This text only has a 3:1 contrast but it is a large (14 points and bold) text so it still passes.
+This text only has a 3:1 contrast but it is a large (14 points and a font weight of 700 or more) text so it still passes.
 
 ```html
 <p style="color: #000; font-size:14pt; font-weight:700; background: #666;">
@@ -133,7 +133,7 @@ This text only has a 3:1 contrast but it is a large (14 points and bold) text so
 
 #### Passed Example 7
 
-The purpose of the Helvetica letters is to show what the font looks like. The actual words are irrelevant and could be replaced with any other sentence that includes all letters of the alphabet. Because of that, the rule passes, despite the text not meeting the 4.5:1 color contrast requirement.
+The purpose of the Helvetica letters is to show what the font looks like. The actual words are irrelevant and could be replaced with any other sentence that includes all letters of the alphabet. Because of that, this is considered as non-text content (the meaning does not matter) and the rule passes, despite the text not meeting the 4.5:1 color contrast requirement.
 
 **Note**: Because this is non-text content, [success criterion 1.4.11 Non-text Contrast](https://www.w3.org/TR/WCAG21/#non-text-contrast) requires font example to have a color contrast of 3:1.
 

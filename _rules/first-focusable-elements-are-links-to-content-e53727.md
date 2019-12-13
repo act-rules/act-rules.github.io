@@ -31,6 +31,7 @@ Within the test target, there is an [initial segment][] of the [focusable][] ele
 - is [included in the accessibility tree][]; and
 - is [visible][] when [focused][]; and
 - has a [semantic role][] of link; and
+- can be activated by use of keyboard only; and
 - when activated, moves focus to a [section of content][] within the same [document][]; and
 - has an [accessible name][] that communicates that it links to that specific [section of content][].
 
@@ -47,6 +48,7 @@ Each [section of content][] in the [document][] is the target of exactly one lin
 ## Assumptions
 
 - This rule assumes that description of the link is provided through its [accessible name][].
+- This rule assumes that that [Technique G124: Adding links at the top of the page to each area of the content][tech g124] requires the that the link can be activated by use of keyboard only (in order to be useful for keyboard users).
 - This rule assumes that any global dismissible information that only appears once per site has already been acknowledged and is not displayed any more.
 
 **Note**: The aim of such links is to be able to skip [sections of repeated content][section of repeated content] (headers, navigation bar, ...) when viewing several pages of the same site. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually by viewing and accepting cookies policy). Since that content is _not_ repeated (is it only shown once for the full site), it is not a problem to have it, and it may appear on any page of the site (depending where the user first comes in).
@@ -59,7 +61,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- [G124: Adding links at the top of the page to each area of the content](https://www.w3.org/WAI/WCAG21/Techniques/general/G124)
+- [G124: Adding links at the top of the page to each area of the content][tech g124]
 
 ## Test Cases
 
@@ -136,6 +138,40 @@ The links in the [initial segment][] (composed of the first three focusable elem
 
 #### Passed Example 3
 
+The first three [focusable][] elements have a [semantic role][] of `link` and can be activated by keyboard only.
+
+```html
+<html lang="en">
+	<head>
+		<script src="../test-assets/bypass-blocks-cf77f2/click-on-enter.js"></script>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body onload="ClickOnEnter(['link-head', 'link-about', 'link-main'])">
+		<ul>
+			<li role="link" onclick="location.href='#header';" tabindex="0" id="link-head">Skip to header</li>
+			<li role="link" onclick="location.href='#about';" tabindex="0" id="link-about">Skip to additional information</li>
+			<li role="link" onclick="location.href='#main';" tabindex="0" id="link-main">Skip to text</li>
+		</ul>
+		<header id="header">
+			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
+		</header>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
+</html>
+```
+
+#### Passed Example 4
+
 The links in the [initial segment][] (composed of the first three focusable elements) have an [accessible name][] provided by their `aria-label` attribute.
 
 ```html
@@ -167,7 +203,7 @@ The links in the [initial segment][] (composed of the first three focusable elem
 </html>
 ```
 
-#### Passed Example 4
+#### Passed Example 5
 
 Even though they are after the form [section of repeated content][], the three links are still the first [focusable][] elements and thus are an [initial segment][] of [focusable][] elements fulfilling the expectations.
 
@@ -200,7 +236,7 @@ Even though they are after the form [section of repeated content][], the three l
 </html>
 ```
 
-#### Passed Example 5
+#### Passed Example 6
 
 The [initial segment][] composed of the first three [focusable][] elements in this [document][] fulfills both expectations. The fourth [focusable][] element can be left out of the [initial segment][] even though it is styled in a similar fashion.
 
@@ -234,7 +270,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 </html>
 ```
 
-#### Passed Example 6
+#### Passed Example 7
 
 The [initial segment][] composed of the first three [focusable][] elements in this [document][] fulfills both expectations. The fourth [focusable][] element can be left out of the [initial segment][] even though it moves focus to a [section of content][] inside the page.
 
@@ -268,7 +304,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 </html>
 ```
 
-#### Passed Example 7
+#### Passed Example 8
 
 The first three [focusable][] elements are the links to the various [sections of content][section of content]. Even through the link to W3C is before them in tree order, it is the fourth [focusable][] element due to the `tabindex` attributes. Therefore, the first three [focusable][] elements form an [initial segment][] that fulfills both Expectations.
 
@@ -302,7 +338,7 @@ The first three [focusable][] elements are the links to the various [sections of
 </html>
 ```
 
-#### Passed Example 8
+#### Passed Example 9
 
 The [initial segment][] composed of the first three [focusable][] elements in this [document][] fulfills both expectations. Even though the links are spread around the page, they are still an [initial segment][] of the [focusable][] elements.
 
@@ -361,7 +397,7 @@ This [HTML web page][] has no link to skip to the various [sections of content][
 
 #### Failed Example 2
 
-The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the form [section of content][]. Even though it is the first [section of content][] on this page, it still requires a link.
+The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the banner [section of content][]. Even though it is the first [section of content][] on this page, it still requires a link.
 
 ```html
 <html lang="en">
@@ -531,13 +567,14 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 ```html
 <html lang="en">
 	<head>
+		<script src="../test-assets/bypass-blocks-cf77f2/click-on-enter.js"></script>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
-	<body>
+	<body onload="ClickOnEnter(link-main')">
 		<ul>
 			<li><a href="#header">Skip to header</a></li>
 			<li><a href="#about">Skip to additional information</a></li>
-			<li onclick="document.getElementById('main').focus()" tabindex="0">Skip to text</li>
+			<li id="link-main" onclick="document.getElementById('main').focus()" tabindex="0">Skip to text</li>
 		</ul>
 		<header id="header">
 			<!-- Name and logo of the website -->
@@ -558,6 +595,40 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 ```
 
 #### Failed Example 8
+
+The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element does not fulfill Expectation 1 because it cannot be activated by keyboard. Thus, no [initial segment][] fulfills both Expectations.
+
+```html
+<html lang="en">
+	<head>
+		<script src="../test-assets/bypass-blocks-cf77f2/click-on-enter.js"></script>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body onload="ClickOnEnter(['link-head', 'link-about'])">
+		<ul>
+			<li role="link" onclick="location.href='#header';" tabindex="0" id="link-head">Skip to header</li>
+			<li role="link" onclick="location.href='#about';" tabindex="0" id="link-about">Skip to additional information</li>
+			<li role="link" onclick="location.href='#main';" tabindex="0" id="link-main">Skip to text</li>
+		</ul>
+		<header id="header">
+			<!-- Name and logo of the website -->
+			<!-- does not include any focusable element -->
+		</header>
+		<aside id="about">
+			<h1>About the book</h1>
+			<!-- short description of the book and biography of the author and translator -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</main>
+	</body>
+</html>
+```
+
+#### Failed Example 9
 
 The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element does not fulfill Expectation 1 because it does not moves focus to a [section of content][]. Thus, no [initial segment][] fulfills both Expectations.
 
@@ -590,7 +661,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 </html>
 ```
 
-#### Failed Example 9
+#### Failed Example 10
 
 The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element does not fulfill Expectation 1 because its [accessible name][] does not communicate the intend. Thus, no [initial segment][] fulfills both Expectations.
 
@@ -623,7 +694,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 </html>
 ```
 
-#### Failed Example 10
+#### Failed Example 11
 
 The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element does not fulfill Expectation 1 because its [accessible name][] is empty and thus does not communicate the intend. Thus, no [initial segment][] fulfills both Expectations.
 
@@ -656,7 +727,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 </html>
 ```
 
-#### Failed Example 11
+#### Failed Example 12
 
 The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The first three or four [focusable][] elements form an [initial segment][] that does not fulfill Expectation because there are two links to the complementary [section of content][]. Thus, there is no [initial segment][] of [focusable][] element fulfilling both Expectations.
 
@@ -690,7 +761,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 </html>
 ```
 
-#### Failed Example 12
+#### Failed Example 13
 
 The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element is the link to W3C (even though it is located after the link to the main [section of content][] in tree order, it is before it in focus order due to the `tabindex` attribute). It does not fulfill Expectation 1 because it does not moves focus to a [section of content][]. Thus, no [initial segment][] fulfills both Expectations.
 
@@ -741,11 +812,12 @@ This [document][] is not an [HTML web page][].
 [document element]: https://dom.spec.whatwg.org/#document-element 'Definition of document element'
 [focusable]: #focusable 'Definition of focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'Definition of focused'
+[html web page]: #web-page-html 'Definition of web page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [initial segment]: #initial-segment 'Definition of initial segment'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of landmark roles'
+[tech g124]: https://www.w3.org/WAI/WCAG21/Techniques/general/G124 'Technique G124: Adding links at the top of the page to each area of the content'
 [section of content]: #section-of-content 'Definition of section of content'
 [section of repeated content]: #section-of-repeated-content 'Definition of section of repeated content'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'
-[html web page]: #web-page-html 'Definition of web page (HTML)'

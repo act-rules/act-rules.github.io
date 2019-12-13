@@ -1,10 +1,16 @@
-function ClickOnEnter(id) {
-	var link = document.getElementById(id)
+function ClickOnEnter(ids) {
+	if (typeof ids === 'string') {
+		ids = [ids]
+	}
 
-	link.addEventListener('keyup', function(event) {
-		if (event.key === 'Enter') {
-			event.preventDefault()
-			link.click()
-		}
+	ids.forEach(id => {
+		var link = document.getElementById(id)
+
+		link.addEventListener('keyup', function(event) {
+			if (event.key === 'Enter') {
+				event.preventDefault()
+				link.click()
+			}
+		})
 	})
 }

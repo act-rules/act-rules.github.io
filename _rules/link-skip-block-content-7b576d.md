@@ -40,7 +40,7 @@ For each [section of repeated content][] within the test target, either the last
 ## Assumptions
 
 - This rule assumes that [sections of repeated content][section of repeated content] have already been identified within the test target, for example by comparison with other test targets within the same website, or any other means.
-- This rule assumes that that [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123] requires the that the link can be activated by use of keyboard only.
+- This rule assumes that that [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123] requires the that the link can be activated by use of keyboard only (in order to be useful for keyboard users).
 
 ## Accessibility Support
 

@@ -53,7 +53,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The `lang` attribute specified is neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace) and has a valid primary language subtag.
+This `html` element has a `lang` attribute whose value is a [valid][valid language subtag] [primary language subtag][].
 
 ```html
 <html lang="fr"></html>
@@ -63,7 +63,7 @@ The `lang` attribute specified is neither empty ("") nor only [ASCII whitespace]
 
 #### Failed Example 1
 
-The `lang` attribute value is not a valid primary language subtag.
+This `html` element has a `lang` attribute whose value is not a [valid language subtag][].
 
 ```html
 <html lang="xyz"></html>
@@ -71,7 +71,7 @@ The `lang` attribute value is not a valid primary language subtag.
 
 #### Failed Example 2
 
-The `lang` attribute value has a valid primary language subtag, but a syntactically invalid region subtag.
+This `html` element has a `lang` attribute whose value is not a [valid language subtag][]. Even though the [primary language subtag][] is valid, the [region subtag] is not
 
 ```html
 <html lang="en-US-GB"></html>
@@ -79,7 +79,7 @@ The `lang` attribute value has a valid primary language subtag, but a syntactica
 
 #### Failed Example 3
 
-The `lang` attribute value is not a valid primary language subtag.
+This `html` element has a `lang` attribute whose value is not a [valid language subtag][].
 
 ```html
 <html lang="123"></html>
@@ -87,7 +87,7 @@ The `lang` attribute value is not a valid primary language subtag.
 
 #### Failed Example 4
 
-The `lang` attribute value is not a valid primary language subtag.
+This `html` element has a `lang` attribute whose value is not a [valid language subtag][]
 
 ```html
 <html lang="#!"></html>
@@ -97,8 +97,12 @@ The `lang` attribute value is not a valid primary language subtag.
 
 #### Inapplicable Example 1
 
-The rule does not apply to `svg` elements.
+This rule does not apply to `svg` elements.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" lang="fr"></svg>
 ```
+
+[primary language subtag]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
+[region subtag]: https://tools.ietf.org/html/bcp47#section-2.2.4 'Definition of region subtag'
+[valid language subtag]: #valid-language-subtag 'Definition of valid language subtag'

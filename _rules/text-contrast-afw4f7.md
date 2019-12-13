@@ -71,7 +71,7 @@ Different browsers have different levels of support for CSS. This can cause cont
 
 #### Passed Example 1
 
-This dark grey text is on a white background.
+This dark grey text has a contrast ratio of 12.6:1 on the white background.
 
 ```html
 <p style="color: #333; background: #FFF;">
@@ -81,7 +81,7 @@ This dark grey text is on a white background.
 
 #### Passed Example 2
 
-This dark grey text is on a partially white gradient background.
+This dark grey text has a contrast ratio between 12.6:1 and 5:1 on the white to blue gradient background.
 
 ```html
 <p style="color: #333; background: linear-gradient(to right, #FFF, #00F); width: 500px;">
@@ -91,7 +91,7 @@ This dark grey text is on a partially white gradient background.
 
 #### Passed Example 3
 
-This light grey text is on a partially black background image.
+This light grey text has a contrast ratio between 13:1 and 5:1 on the background image.
 
 ```html
 <p
@@ -103,7 +103,7 @@ This light grey text is on a partially black background image.
 
 #### Passed Example 4
 
-This text passes because the text shadow gives the text sufficient contrast.
+This dark grey text has a contrast ratio between 6.1:1 and 9:1 on white background with grey text shadow on it.
 
 ```html
 <p style="color: #000; background: #737373; text-shadow: white 0 0 3px">
@@ -113,7 +113,7 @@ This text passes because the text shadow gives the text sufficient contrast.
 
 #### Passed Example 5
 
-This text only has a 3:1 contrast but it is a large (18 point) text so it still passes.
+This 18pt large black text has a contrast ratio of 3.6:1 on the grey background.
 
 ```html
 <p style="color: #000; font-size:18pt; background: #666;">
@@ -123,7 +123,7 @@ This text only has a 3:1 contrast but it is a large (18 point) text so it still 
 
 #### Passed Example 6
 
-This text only has a 3:1 contrast but it is a large (14 points and a font weight of 700 or more) text so it still passes.
+This 14pt bold black text has a contrast ratio of 3.6:1 on the grey background.
 
 ```html
 <p style="color: #000; font-size:14pt; font-weight:700; background: #666;">
@@ -133,7 +133,7 @@ This text only has a 3:1 contrast but it is a large (14 points and a font weight
 
 #### Passed Example 7
 
-The purpose of the Helvetica letters is to show what the font looks like. The actual words are irrelevant and could be replaced with any other sentence that includes all letters of the alphabet. Because of that, this is considered as non-text content (the meaning does not matter) and the rule passes, despite the text not meeting the 4.5:1 color contrast requirement.
+This Helvetica text is decorative, because the text does not convey information or provides functionality. It's purpose is to show the aesthetic of the Helvetica font.
 
 **Note**: Because this is non-text content, [success criterion 1.4.11 Non-text Contrast](https://www.w3.org/TR/WCAG21/#non-text-contrast) requires font example to have a color contrast of 3:1.
 
@@ -146,7 +146,7 @@ The purpose of the Helvetica letters is to show what the font looks like. The ac
 
 #### Passed Example 8
 
-This text has an insufficient contrast but it does not express anything in human language so it still passes.
+This text does not convey anything in human language.
 
 ```html
 <p style="color: #000; background: #666;">
@@ -156,7 +156,7 @@ This text has an insufficient contrast but it does not express anything in human
 
 #### Passed Example 9
 
-Even though the text is in a shadow DOM tree, the text is part of a child [text node](https://dom.spec.whatwg.org/#text) of an HTML element in the flat tree and has sufficient contrast
+This dark grey text has a contrast ratio of 12.6:1 on the white background in a shadow DOM tree.
 
 ```html
 <p style="color: #333; background: #fff;" id="p"></p>
@@ -170,7 +170,7 @@ Even though the text is in a shadow DOM tree, the text is part of a child [text 
 
 #### Failed Example 1
 
-This text has insufficient contrast with the white background.
+This light grey text has a contrast ratio of 2.3:1 on the white background.
 
 ```html
 <p style="color: #AAA; background: white;">
@@ -180,7 +180,7 @@ This text has insufficient contrast with the white background.
 
 #### Failed Example 2
 
-This text has insufficient contrast with the darkest point on the gradient background behind the text.
+This light grey text has a contrast ratio between 1.2:1 and 2.3:1 on the white to blue gradient background.
 
 ```html
 <p style="color: #AAA; background: linear-gradient(to right, #FFF, #00F); width: 300px">
@@ -190,11 +190,11 @@ This text has insufficient contrast with the darkest point on the gradient backg
 
 #### Failed Example 3
 
-This text has insufficient contrast with the background image.
+This light grey text has a contrast ratio between 2.7:1 and 3:1 on the background image.
 
 ```html
 <p
-	style="color: #555; height:50px; padding-top:25px; background: black no-repeat -20px -20px url('../test-assets/contrast/black-hole.jpeg');"
+	style="color: #555; height:50px; padding-top:20px; background: black no-repeat -20px -20px url('../test-assets/contrast/black-hole.jpeg');"
 >
 	Black hole sun
 </p>
@@ -202,7 +202,7 @@ This text has insufficient contrast with the background image.
 
 #### Failed Example 4
 
-This text fails because the alpha transparency significantly lowers the contrast of the otherwise black text.
+This black text with 30% alpha channel has a contrast ratio of 2.1:1 on the white background.
 
 ```html
 <p style="color: rgba(0,0,0,.3); background: #FFF">
@@ -212,7 +212,7 @@ This text fails because the alpha transparency significantly lowers the contrast
 
 #### Failed Example 5
 
-This text fails because the CSS opacity property significantly lowers the contrast of the otherwise black text.
+This black text with 30% opacity has a contrast ratio of 2.1:1 on the white background.
 
 ```html
 <div style="background: #FFF">
@@ -224,7 +224,7 @@ This text fails because the CSS opacity property significantly lowers the contra
 
 #### Failed Example 6
 
-Even though the text is in a shadow DOM tree, the text is part of a child [text node](https://dom.spec.whatwg.org/#text) of an HTML element in the flat tree and has insufficient contrast
+This light grey text has a contrast ratio of 2.3:1 on the white background in a shadow DOM tree.
 
 ```html
 <p style="color: #aaa; background: #fff;" id="p"></p>
@@ -236,7 +236,7 @@ Even though the text is in a shadow DOM tree, the text is part of a child [text 
 
 #### Failed Example 7
 
-The text is placed over a black and white background. The grey text fails because of its opacity, where the text on the black background becomes too dark, and the text on the white background becomes too light.
+This semi-transparent grey text has a contrast ratio between 2.3:1 and 4,2:1 on the black and white background. The light grey text is compared to the white section of the background and the dark grey text is compared to the black section of the background.
 
 ```html
 <style>
@@ -256,7 +256,7 @@ The text is placed over a black and white background. The grey text fails becaus
 
 #### Inapplicable Example 1
 
-This is invisible text.
+This text is not [visible][] because of `display: none`.
 
 ```html
 <p style="display: none">Some invisible text in English</p>
@@ -264,7 +264,7 @@ This is invisible text.
 
 #### Inapplicable Example 2
 
-The text is inapplicable because it is positioned off screen, hence not [visible](#visible).
+This text is not [visible][] because it is positioned off screen.
 
 ```html
 <p style="position:absolute; top: -999em">Some invisible text in English</p>
@@ -272,7 +272,7 @@ The text is inapplicable because it is positioned off screen, hence not [visible
 
 #### Inapplicable Example 3
 
-This text has the same foreground and background colors, hence it is not [visible](#visible).
+This text is not [visible][] because the foreground color is the same as the background color.
 
 ```html
 <p style="color: white; background: white;">Some white on white text in English</p>
@@ -290,7 +290,7 @@ This text is not the child of an HTML element.
 
 #### Inapplicable Example 5
 
-This is not a [text node](https://dom.spec.whatwg.org/#text) but an image.
+This text not part of a [text node][].
 
 ```html
 <p>
@@ -300,7 +300,7 @@ This is not a [text node](https://dom.spec.whatwg.org/#text) but an image.
 
 #### Inapplicable Example 6
 
-This text is contained in a native button.
+This text is part of a widget because it is a child of a `button` element.
 
 ```html
 <button>My button!</button>
@@ -308,7 +308,7 @@ This text is contained in a native button.
 
 #### Inapplicable Example 7
 
-This text is contained in an ARIA button.
+This text is part of a widget because it is a child of an element with the `role` attribute set to `button`.
 
 ```html
 <div role="button">My button!</div>
@@ -316,18 +316,18 @@ This text is contained in an ARIA button.
 
 #### Inapplicable Example 8
 
-This text is in a label of a [disabled]() native widget.
+This text is part of a label of a [disabled]() widget, because it is in a `label` element that is the label for an `input` element with `type="text"`.
 
 ```html
 <label style="color:#888; background: white;">
 	My name
-	<input disabled />
+	<input type="text" disabled />
 </label>
 ```
 
 #### Inapplicable Example 9
 
-This text is in a label of a [disabled]() ARIA widget.
+This text is part of a label of a [disabled]() widget, because it is in an element that is referenced by `aria-labelledby` from an element with `role="textbox"`.
 
 ```html
 <label id="my_pets_name" style="color:#888; background: white;">
@@ -345,7 +345,7 @@ This text is in a label of a [disabled]() ARIA widget.
 
 #### Inapplicable Example 10
 
-This text is in a [disabled]() fieldset.
+This text is part of a label of a [disabled]() widget, because it is in a `label` element that is the label for an `input` element in a `fieldset` element with the `disabled` attribute.
 
 ```html
 <fieldset disabled style="color:#888; background: white;">
@@ -358,7 +358,7 @@ This text is in a [disabled]() fieldset.
 
 #### Inapplicable Example 11
 
-This text is in a [disabled]() ARIA group.
+This text is part of a label of a [disabled]() widget, because it is in a `label` element that is the label for an `input` element in an element with `role="group"` with the `aria-disabled="true"` attribute.
 
 ```html
 <div role="group" aria-disabled="true" style="color:#888; background: white;">

@@ -1,0 +1,19 @@
+<!DOCTYPE html> <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+all the time.
+
+<div id="host">
+	<span
+		><a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
+			>Contact us</a
+		>
+		from the light.</span
+	>
+</div>
+
+<script>
+	const host = document.getElementById('host')
+	const shadowRoot = host.attachShadow({ mode: 'open' })
+
+	shadowRoot.innerHTML =
+		'<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a> from the shadow.'
+</script>

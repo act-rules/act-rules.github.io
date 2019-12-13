@@ -1,0 +1,12 @@
+<!DOCTYPE html> <iframe id="always" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>
+
+<div id="host">
+	<iframe id="light" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-two.html"> </iframe>
+</div>
+
+<script>
+	const host = document.getElementById('host')
+	const shadowRoot = host.attachShadow({ mode: 'open' })
+	shadowRoot.innerHTML =
+		'<iframe id="shadow" title="List of Contributors" src="/test-assets/iframe-unique-name-4b1c6c/page-one.html"> </iframe>'
+</script>

@@ -1,0 +1,1 @@
+var foo = '<img src="image.jpg" alt="" alt="image" />'

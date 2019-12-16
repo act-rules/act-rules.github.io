@@ -181,4 +181,5 @@ The element with `aria-labelledby` is not a form field.
 ```
 
 [semantic role]: #semantic-role 'Definition of semantic role'
+[semantic roles]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'

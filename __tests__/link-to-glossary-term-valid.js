@@ -38,7 +38,7 @@ function validateGlossaryReferences({ markdownAST }, { glossaryKeys = [] }) {
 	const pageLinks = getMarkdownAstNodesOfType(markdownAST, 'link').map(({ url }) => url)
 	/**
 	 * get all definition links
-	 * -> eg: [Alpha]: https:// 'Link to something' or [Beta]: #some-glossary 'Def to some glossary'
+	 * -> eg: [alpha]: https:// 'Link to something' or [beta]: #some-glossary 'Def to some glossary'
 	 */
 	const definitionLinks = getMarkdownAstNodesOfType(markdownAST, 'definition').map(({ url }) => url)
 

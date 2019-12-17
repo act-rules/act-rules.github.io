@@ -38,7 +38,7 @@ function validateIfLinksAreOutdated(markdownAST) {
 	const pageLinks = getMarkdownAstNodesOfType(markdownAST, 'link').map(({ url }) => url)
 	/**
 	 * get all definition links
-	 * -> eg: [Alpha]: https:// 'Link to something'
+	 * -> eg: [alpha]: https:// 'Link to something'
 	 */
 	const definitionLinks = getMarkdownAstNodesOfType(markdownAST, 'definition').map(({ url }) => url)
 
@@ -47,7 +47,7 @@ function validateIfLinksAreOutdated(markdownAST) {
 	 * -> this test does not cover glossary/ definition referencing links (see test - 'link-to-glossary-term-valid.js')
 	 */
 	const links = uniqueArray([...pageLinks, ...definitionLinks].filter(isUrl))
-	if (!links || !links.length) {
+	if (links.length === 0) {
 		return
 	}
 

@@ -2,12 +2,12 @@
  * Note:
  *
  * In markdownAST,
- * a link reference is something like [alpha][Bravo], and
- * a definition is something like [Alpha]: https://example.com
+ * a link reference is something like [Alpha][Bravo] or [Alpha][], and
+ * a definition is something like [alpha]: https://example.com
  *
  * See: https://github.com/syntax-tree/mdast#nodes
  *
- * This test chceks that there is a definition in the markdown file for every given link reference
+ * This test checks that there is a definition in the markdown file for every given link reference
  * The test does not verify the integrity of the referred definition, but purely for an existence of a definition
  */
 const describeRule = require('../test-utils/describe-rule')

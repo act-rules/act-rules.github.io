@@ -156,7 +156,7 @@ The `headers` attribute on the last two `th` elements refers to another `th` ele
 		<th id="name" colspan="2">Name</th>
 	</tr>
 	<tr>
-		<th headers="name">Firsname</th>
+		<th headers="name">Firstname</th>
 		<th headers="name">Lastname</th>
 	</tr>
 </table>
@@ -240,7 +240,7 @@ There is no `headers` attribute.
 
 #### Inapplicable Example 2
 
-The `table` has a `role="presentation"` and thus is not [included in the accessibility tree](#included-in-the-accessibility-tree).
+The `table` has a `role="presentation"` and thus is [decorative](#decorative).
 
 ```html
 <table role="presentation">
@@ -248,7 +248,7 @@ The `table` has a `role="presentation"` and thus is not [included in the accessi
 		<td id="header1">Project Status</td>
 	</tr>
 	<tr>
-		<td>15%</td>
+		<td headers="header1">15%</td>
 	</tr>
 </table>
 ```
@@ -271,7 +271,7 @@ The `table` is not [visible](#visible) in page.
 			<td id="header1">Project Status</td>
 		</tr>
 		<tr>
-			<td>15%</td>
+			<td headers="header1">15%</td>
 		</tr>
 	</table>
 </html>
@@ -292,4 +292,19 @@ The rule applies only to `headers` attribute within a `table` element.
 		<div role="cell" headers="header1">15%</div>
 	</div>
 </div>
+```
+
+#### Inapplicable Example 5
+
+The `table` is not [included in the accessibility tree][].
+
+```html
+<table style="display:none;">
+	<tr>
+		<td id="header1">Project Status</td>
+	</tr>
+	<tr>
+		<td headers="header1">15%</td>
+	</tr>
+</table>
 ```

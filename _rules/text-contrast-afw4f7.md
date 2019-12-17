@@ -159,10 +159,10 @@ This text does not convey anything in human language.
 This dark grey text has a contrast ratio of 12.6:1 on the white background in a shadow DOM tree.
 
 ```html
-<p style="color: #333; background: #fff;" id="p"></p>
+<p style="color: #CCC; background: #fff;" id="p"></p>
 <script>
 	const shadowRoot = document.getElementById('p').attachShadow({ mode: 'open' })
-	shadowRoot.textContent = 'Some text in English'
+	shadowRoot.textContent = '<span style="color: #333;">Some text in English</span>'
 </script>
 ```
 

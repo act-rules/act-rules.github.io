@@ -20,15 +20,17 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any HTML element that has the [semantic role](#semantic-role) of [rowheader](https://www.w3.org/TR/wai-aria-1.1/#rowheader) or [columnheader](https://www.w3.org/TR/wai-aria-1.1/#columnheader) and is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of an element that:
+The rule applies to any HTML element that has the [semantic role][] of [rowheader][] or [columnheader][] and is a [descendant][] in the [flat tree][] of an element that:
 
-- has a [semantic role](#semantic-role) of either [table](https://www.w3.org/TR/wai-aria-1.1/#table) or [grid](https://www.w3.org/TR/wai-aria-1.1/#grid); and
-- is [visible](#visible); and
-- is [included in the accessibility tree](#included-in-the-accessibility-tree)
+- has a [semantic role][] of either [table][] or [grid][]; and
+- is [visible][]; and
+- is [included in the accessibility tree][]
 
 ## Expectation
 
-Each target element is [assigned](https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics) to at least one element with a [semantic role](#semantic-role) of [cell](https://www.w3.org/TR/wai-aria-1.1/#cell) or [gridcell](https://www.w3.org/TR/wai-aria-1.1/#gridcell), that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of the same [table](https://www.w3.org/TR/wai-aria-1.1/#table) or [grid](https://www.w3.org/TR/wai-aria-1.1/#grid) element, as that of the target element.
+Each target element is [assigned][] to at least one element with a [semantic role][] of [cell][] or [gridcell][].
+
+**Note:** The assigned cell is a [descendant][] in the [flat tree][] of the same [table][] or [grid][] element.
 
 ## Assumptions
 
@@ -42,7 +44,7 @@ _There are currently no assumptions._
 
 - [Understanding Success Criterion 1.3.1: Information and relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H43)
-- [Forming relationships between data cells and header cells](https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics)
+- [Forming relationships between data cells and header cells][assigned]
 
 ## Test Cases
 
@@ -50,7 +52,7 @@ _There are currently no assumptions._
 
 #### Passed Example 1
 
-The column header element has an [assigned](https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics) cell, within the same `table` element.
+The column header element has an [assigned][] cell, within the same `table` element.
 
 ```html
 <table>
@@ -110,7 +112,7 @@ Each column header element has assigned cells within the same table element. In 
 
 #### Passed Example 4
 
-Each row and column header element has assigned cells, within the same element having a [semantic role](#semantic-role) of `grid`.
+Each row and column header element has assigned cells, within the same element having a [semantic role][] of `grid`.
 
 ```html
 <table role="grid">
@@ -195,7 +197,7 @@ The second column header, does not have an assigned cell within the same `table`
 
 #### Inapplicable Example 1
 
-The rule does not apply to table element that is not [included in the accessibility tree](#included-in-the-accessibility-tree).
+The rule does not apply to table element that is not [included in the accessibility tree][].
 
 ```html
 <table role="presentation">
@@ -210,7 +212,7 @@ The rule does not apply to table element that is not [included in the accessibil
 
 #### Inapplicable Example 2
 
-The rule does not apply to table element that is not [visible](#visible) in page.
+The rule does not apply to table element that is not [visible][] in page.
 
 ```html
 <html>
@@ -236,7 +238,7 @@ The rule does not apply to table element that is not [visible](#visible) in page
 
 #### Inapplicable Example 3
 
-The rule does not apply to table element that has no [descendants](https://dom.spec.whatwg.org/#concept-tree-descendant) with [semantic roles](#semantic-role) of either [rowheader](https://www.w3.org/TR/wai-aria-1.1/#rowheader) or [columnheader](https://www.w3.org/TR/wai-aria-1.1/#columnheader).
+The rule does not apply to table element that has no [descendants][descendant] with [semantic roles][semantic role] of either [rowheader][] or [columnheader][].
 
 ```html
 <table role="presentation">
@@ -245,3 +247,16 @@ The rule does not apply to table element that has no [descendants](https://dom.s
 	</tr>
 </table>
 ```
+
+[semantic role]: #semantic-role 'Definition of semantic role'
+[visible]: #visible 'Definition of visible'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[assigned]: https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics 'Forming relationships between data cells and header cells'
+[cell]: https://www.w3.org/TR/wai-aria-1.1/#cell 'ARIA cell role'
+[gricell]: https://www.w3.org/TR/wai-aria-1.1/#gridcell 'ARIA gridcell role'
+[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant 'Definition of descendant'
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
+[table]: https://www.w3.org/TR/wai-aria-1.1/#table 'ARIA table role'
+[grid]: https://www.w3.org/TR/wai-aria-1.1/#grid 'ARIA grid role'
+[columnheader]: https://www.w3.org/TR/wai-aria-1.1/#columnheader 'ARIA columnheader role'
+[rowheader]: https://www.w3.org/TR/wai-aria-1.1/#rowheader 'ARIA rowheader role'

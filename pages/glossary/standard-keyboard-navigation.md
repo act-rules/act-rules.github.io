@@ -3,7 +3,6 @@ title: Standard keyboard navigation
 key: standard-keyboard-navigation
 unambiguous: true
 objective: true
-(note add links)
 ---
 
 Standard keyboard navigation entails using one or more of the following:

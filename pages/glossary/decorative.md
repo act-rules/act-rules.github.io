@@ -1,7 +1,7 @@
 ---
 title: Decorative
 key: decorative
-unambiguous: false (note on image rule)
+unambiguous: false
 objective: false
 ---
 

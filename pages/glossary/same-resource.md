@@ -1,6 +1,8 @@
 ---
 title: Same resource
 key: same-resource
+unambiguous: true
+objective: false
 ---
 
 Two or more resources can be the same resource even though the URLs for them are different. This can be due to URL parsing, server settings, redirects and DNS aliasing.

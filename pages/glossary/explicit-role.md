@@ -1,6 +1,8 @@
 ---
 title: Explicit Semantic Role
 key: explicit-role
+unambiguous: true
+objective: true
 ---
 
 The explicit semantic role is the [semantic role](#semantic-role) of an element set by its [role attribute](https://www.w3.org/TR/role-attribute/).

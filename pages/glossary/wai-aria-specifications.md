@@ -1,6 +1,8 @@
 ---
 title: WAI-ARIA specifications
 key: wai-aria-specifications
+unambiguous: true
+objective: true
 ---
 
 The WAI ARIA Specifications group both the WAI ARIA W3C Recommendation and ARIA modules, namely:

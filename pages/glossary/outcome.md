@@ -1,6 +1,8 @@
 ---
 title: Outcome
 key: outcome
+unambiguous: true
+objective: true
 ---
 
 A conclusion that comes from evaluating an ACT Rule on a [test subject](https://www.w3.org/TR/act-rules-format/#test-subject) or one of its constituent [test target](https://www.w3.org/TR/act-rules-format/#test-target). An outcome can be one of the three following types:

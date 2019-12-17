@@ -1,6 +1,8 @@
 ---
 title: Visible
 key: visible
+unambiguous: true
+objective: true
 ---
 
 Content perceivable through sight.

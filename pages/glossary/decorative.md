@@ -1,6 +1,8 @@
 ---
 title: Decorative
 key: decorative
+unambiguous: false (note on image rule)
+objective: false
 ---
 
 Serving only an aesthetic purpose, providing no information, and having no functionality.

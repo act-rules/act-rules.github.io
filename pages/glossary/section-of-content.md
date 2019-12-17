@@ -1,6 +1,8 @@
 ---
 title: Section of content
 key: section-of-content
+unambiguous: true
+objective: false
 ---
 
 A distinct part or subdivision of a document.

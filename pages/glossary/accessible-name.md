@@ -1,6 +1,8 @@
 ---
 title: Accessible Name
 key: accessible-name
+unambiguous: true
+objective: true
 ---
 
 The programmatically determined name of a user interface element that is [included in the accessibility tree](#included-in-the-accessibility-tree).

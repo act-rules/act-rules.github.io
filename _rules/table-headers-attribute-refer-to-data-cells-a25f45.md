@@ -37,7 +37,7 @@ Each target attribute is [a set of space separated IDs](https://www.w3.org/TR/ht
 
 ## Accessibility Support
 
-- `headers` attribute may not be consistently announced by assistive technologies.
+The `headers` attribute is not supported by some popular assistive technologies as a way to assign headers in a table. Passing this rule can still cause issues for users of those assistive technologies.
 
 ## Background
 

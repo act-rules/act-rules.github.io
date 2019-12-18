@@ -20,7 +20,7 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any HTML element that has the [semantic role][] of [rowheader][] or [columnheader][], that is [visible][], [included in the accessibility tree][], whose closest ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][]; which: 1. has [descendants][], that are non empty (""), 2. is [visible][], 3. as well as [included in the accessibility tree][].
+The rule applies to any HTML element that has the [semantic role][] of [rowheader][] or [columnheader][], that is [visible][], [included in the accessibility tree][], whose closest ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][]; which: 1. has [descendants][descendant], that are non empty (""), 2. is [visible][], 3. as well as [included in the accessibility tree][].
 
 ## Expectation
 
@@ -288,7 +288,7 @@ The rule does not apply to table element that has [descendants][descendant] that
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [assigned]: https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics 'Forming relationships between data cells and header cells'
 [cell]: https://www.w3.org/TR/wai-aria-1.1/#cell 'ARIA cell role'
-[gricell]: https://www.w3.org/TR/wai-aria-1.1/#gridcell 'ARIA gridcell role'
+[gridcell]: https://www.w3.org/TR/wai-aria-1.1/#gridcell 'ARIA gridcell role'
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant 'Definition of descendant'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [table]: https://www.w3.org/TR/wai-aria-1.1/#table 'ARIA table role'

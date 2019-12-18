@@ -280,7 +280,7 @@ The link to skip the complementary [section of repeated content][] is not the fi
 
 #### Failed Example 3
 
-The link to skip the complementary [section of repeated content][] is not included in the [accessibility tree][].
+The link to skip the complementary [section of repeated content][] is not [included in the accessibility tree][].
 
 ```html
 <html lang="en">

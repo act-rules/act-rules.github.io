@@ -1,5 +1,5 @@
 ---
-title: Process [DRAFT]
+title: Process
 ---
 
 ## Overview of process/workflow in ACT Rules Community Group:

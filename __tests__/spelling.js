@@ -114,7 +114,6 @@ function getSpellIgnored() {
 	/*
 	Building spelling exception in the shape FOOxxx where xxx is a number.
 	Mostly used for WCAG techniques that have an ID in this shape.
-
 	- WCAG techniques are used all over the place and have an uppercase ID.
 	- Same names with lowercase ID is useful for footnote reference style, eg "[tech g12]: …"
 	- Adding the IDs "sc" and "usc" which can be use for footnote reference style for
@@ -125,7 +124,7 @@ function getSpellIgnored() {
 	let ignoreExtra = []
 	ignorePrefixes.forEach(prefix => {
 		for (let i = 1; i < 500; i++) {
-			// 500 is arbitrarily, good for current purpose, and not harmful
+			// 500 is arbitrarily, good for purpose, and not harmful
 			ignoreExtra.push(`${prefix}${i}`)
 		}
 	})

@@ -20,25 +20,21 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any HTML element that has the [semantic role][] of [rowheader][] or [columnheader][] and is a [descendant][] in the [flat tree][] of an element that:
-
-- has a [semantic role][] of either [table][] or [grid][]; and
-- is [visible][]; and
-- is [included in the accessibility tree][]
+The rule applies to any HTML element that has the [semantic role][] of [rowheader][] or [columnheader][], that is [visible][], [included in the accessibility tree][], whose closest ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][]; which: 1. has [descendants][], that are non empty (""), 2. is [visible][], 3. as well as [included in the accessibility tree][].
 
 ## Expectation
 
 Each target element is [assigned][] to at least one element with a [semantic role][] of [cell][] or [gridcell][].
-
 **Note:** The assigned cell is a [descendant][] in the [flat tree][] of the same [table][] or [grid][] element.
 
 ## Assumptions
 
-_There are currently no assumptions._
+This rule assumes that table header cells have a relationship conveyed through presentation with other cells within the same table.
+**Note:** This assumption helps exclude edge cases like: - a table definition where there is only one header cell, or - a table definition where there are multiple headers and no other cells
 
 ## Accessibility Support
 
-- `headers` attribute may not be consistently announced by assistive technologies.
+Table markup and header cell association is not well supported by some popular assistive technologies. Passing this rule can still cause issues for users of those assistive technologies.
 
 ## Background
 
@@ -158,7 +154,7 @@ Each column header is assigned to a cell. Usage of `headers` attribute changes t
 
 #### Failed Example 1
 
-One of the column headers ("Column 2"), does not have an assigned cell within the same `table` element.
+The column header ("Column 2"), does not have an assigned cell within the same `table` element.
 
 ```html
 <table>
@@ -178,7 +174,7 @@ One of the column headers ("Column 2"), does not have an assigned cell within th
 
 #### Failed Example 2
 
-The second column header, does not have an assigned cell within the same `table` element. Usage of `headers` attribute removes cell association to the column.
+The column header ('Column2') does not have an assigned cell within the same `table` element. In this case the usage of `headers` attribute removes cell association to the column.
 
 ```html
 <table>
@@ -191,6 +187,26 @@ The second column header, does not have an assigned cell within the same `table`
 		<td headers="col1"></td>
 	</tr>
 </table>
+```
+
+#### Failed Example 3
+
+The column header ('Column B') does not have an assigned cell within the same `table` element.
+
+```html
+<div role="grid">
+	<div role="row">
+		<div role="columnheader">Col A</div>
+		<div role="columnheader">Col B</div>
+	</div>
+	<div role="row">
+		<div role="gridcell">1A</div>
+		<div role="gridcell">1B</div>
+	</div>
+	<div role="row">
+		<div role="gridcell">2A</div>
+	</div>
+</div>
 ```
 
 ### Inapplicable
@@ -215,25 +231,21 @@ The rule does not apply to table element that is not [included in the accessibil
 The rule does not apply to table element that is not [visible][] in page.
 
 ```html
-<html>
-	<style>
-		.notInPage {
-			position: absolute;
-			left: -9999px;
-			top: -9999px;
-		}
-	</style>
-	<body>
-		<table class="notInPage">
-			<tr>
-				<th>Time</th>
-			</tr>
-			<tr>
-				<td>24:00</td>
-			</tr>
-		</table>
-	</body>
-</html>
+<style>
+	.notInPage {
+		position: absolute;
+		left: -9999px;
+		top: -9999px;
+	}
+</style>
+<table class="notInPage">
+	<tr>
+		<th>Time</th>
+	</tr>
+	<tr>
+		<td>24:00</td>
+	</tr>
+</table>
 ```
 
 #### Inapplicable Example 3
@@ -241,9 +253,32 @@ The rule does not apply to table element that is not [visible][] in page.
 The rule does not apply to table element that has no [descendants][descendant] with [semantic roles][semantic role] of either [rowheader][] or [columnheader][].
 
 ```html
-<table role="presentation">
+<table>
 	<tr>
 		<td>12:00</td>
+	</tr>
+</table>
+```
+
+#### Inapplicable Example 4
+
+The rule does not apply to table element that has no [descendants][descendant].
+
+```html
+<table></table>
+```
+
+#### Inapplicable Example 5
+
+The rule does not apply to table element that has [descendants][descendant] that are empty ("").
+
+```html
+<table>
+	<tr>
+		<th></th>
+	</tr>
+	<tr>
+		<td></td>
 	</tr>
 </table>
 ```

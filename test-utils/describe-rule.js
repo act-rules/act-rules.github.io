@@ -10,9 +10,9 @@ const describeRule = (groupName, runTests) => {
 	/**
 	 * Create arbitrary meta data that can be used in various tests
 	 */
-	const atomicRuleIds = getRuleIdsOfRuleType(rulesData, 'atomic')
 	const metaData = {
-		atomicRuleIds,
+		atomicRuleIds: getRuleIdsOfRuleType(rulesData, 'atomic'),
+		glossaryKeys: getMarkdownData(`./pages/glossary`).map(({ frontmatter }) => frontmatter.key),
 	}
 
 	rulesData.forEach(ruleData => {

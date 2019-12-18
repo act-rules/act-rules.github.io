@@ -72,6 +72,7 @@ _There are no major accessibility support issues known for this rule._
 - [Understanding Success Criterion 2.4.6: Headings and Labels][usc246]
 - [Understanding Success Criterion 4.1.2: Name, Role and Value][usc412]
 - [G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG21/Techniques/general/G131)
+- [H44: Using label elements to associate text labels with form controls](https://www.w3.org/WAI/WCAG21/Techniques/html/H44)
 - [ARIA16: Using aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA16)
 
 ## Test Cases

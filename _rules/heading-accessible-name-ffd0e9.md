@@ -96,6 +96,30 @@ Even though this `h1` element is not [visible][], it is still [included in the a
 
 #### Failed Example 1
 
+This `h1` element has an empty [accessible name][] given by its `aria-label` attribute.
+
+```html
+<h1 aria-label="">ACT rules</h1>
+```
+
+#### Failed Example 2
+
+This `h1` element has an empty [accessible name][] because the `img` element is marked as [decorative][] through its [semantic role][] of `presentation`, and thus does not provide an [accessible name][] to the `h1` element.
+
+```html
+<h1><img src="#" alt="ACT rules" role="presentation" /></h1>
+```
+
+#### Failed Example 3
+
+This `h1` element has an empty [accessible name][] because the spaces and line break are trimmed by [accessible name computation][accessible name and description computation].
+
+```html
+<h1><br /></h1>
+```
+
+#### Failed Example 4
+
 This `h1` element has an empty [accessible name][]. It is nonetheless rendered by breaking the flow content, resulting in confusing situation for sighted users.
 
 ```html
@@ -104,28 +128,12 @@ This `h1` element has an empty [accessible name][]. It is nonetheless rendered b
 <span>World!</span>
 ```
 
-#### Failed Example 2
+#### Failed Example 5
 
 This `div` element with a [semantic role][] of `heading` has an empty [accessible name][] (and content). It is nonetheless rendered due to its styling, resulting in confusing situation for sighted users.
 
 ```html
 <div role="heading" aria-level="1" style="border-style: solid"></div>
-```
-
-#### Failed Example 3
-
-This `h1` element has an empty [accessible name][] because the `img` element is marked as [decorative][] through its [semantic role][] of `presentation`, and thus does not provide an [accessible name][] to the `h1` element.
-
-```html
-<h1><img src="#" alt="ACT rules" role="presentation" /></h1>
-```
-
-#### Failed Example 4
-
-This `h1` element has an empty [accessible name][] because the spaces and line break are trimmed by [accessible name computation][accessible name and description computation].
-
-```html
-<h1><br /></h1>
 ```
 
 ### Inapplicable

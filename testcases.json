@@ -1663,10 +1663,10 @@
       }
     },
     {
-      "testcaseId": "3577219d8e68a03788581b87222c67860be6c1a3",
+      "testcaseId": "bf1af088ce6938b5cf96fd481b2c15d7e040bb8b",
       "testcaseTitle": "Inapplicable Example 1",
-      "url": "https://act-rules.github.io/testcases/e6952f/3577219d8e68a03788581b87222c67860be6c1a3.xml",
-      "relativePath": "testcases/e6952f/3577219d8e68a03788581b87222c67860be6c1a3.xml",
+      "url": "https://act-rules.github.io/testcases/e6952f/bf1af088ce6938b5cf96fd481b2c15d7e040bb8b.xml",
+      "relativePath": "testcases/e6952f/bf1af088ce6938b5cf96fd481b2c15d7e040bb8b.xml",
       "expected": "inapplicable",
       "ruleId": "e6952f",
       "ruleName": "Attribute is not duplicated",

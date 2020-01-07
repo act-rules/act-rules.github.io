@@ -49,7 +49,7 @@ Each test target that describes any [web content](https://www.w3.org/TR/WCAG21/#
 
 - This rule assumes that [visual reference words](#visual-reference-words) are forms of information conveyed through presentation, because of this, failing this rule fails both [Succes Criterion 1.3.1: Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships) and [Success Criterion 1.3.3: Sensory Characteristics](https://www.w3.org/TR/WCAG21/#sensory-characteristics). Presentation is not limited to CSS and includes images such as the image of a circle with text.
 
-- This rule assumes that non-visual users will interpret some visual reference words as meaning "ahead" or "backwards" in the reading order. For example in most contexts "see the content below" will mean ahead in the reading order which is not a visual reference and should pass this test.
+- This rule assumes that non-visual users will interpret some visual reference words as meaning "ahead" or "backwards" in the reading order. For example in most contexts "see the content below" will mean ahead in the DOM tree reading order which is not a visual reference and should pass this test. Note however that the DOM tree reading order can be different from the visual order of things, which could result in "see the content below" only refering to the visual order of things in which case it is not a correct reference.
 
 ## Accessibility Support
 
@@ -104,7 +104,7 @@ The content in the second column is indicated with the word "right" (which is an
 
 #### Passed Example 2
 
-The button in the second column is indicated with the word "box" (which is a location indicator based on visual perception) but also indicated by referencing that the content can be found below this content in the DOM order. Note that "below" is also a visual reference word but in this case it can also be accurately interpreted as "next in the DOM order" which does not rely on visual attributes alone.
+The button in the second column is indicated with the word "box" (which is a location indicator based on visual perception) but also indicated by referencing that the content can be found below this content in the DOM order. Note that "below" is also a visual reference word but in this case it can also be accurately interpreted as "further in the DOM tree order" which does not rely on visual attributes alone.
 
 ```html
 <div class="col-container">

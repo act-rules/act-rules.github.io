@@ -133,7 +133,11 @@ Code is XML, and not HTML or SVG.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<earl:TestResult rdf:about="#result"></earl>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:earl="http://www.w3.org/ns/earl#">
+  <earl:TestResult rdf:about="#result"></earl:TestResult>
+</rdf:RDF>
 ```
 
 #### Inapplicable Example 2

@@ -168,7 +168,7 @@ This document is using the word "square" but in this case it is not an instructi
 
 #### Passed Example 5
 
-The following text is tilted and describes web content. But the block of content also includes this word "this" which makes it apparent that the description is about the same block of content.
+The following text is tilted and describes web content. But the [section of content](#section-of-content) also includes this word "this" which makes it apparent that the description is about the same content.
 
 ```html
 <head>

@@ -160,10 +160,10 @@ The visual reference made by the word "right" is complemented by the non-visual 
 
 #### Passed Example 4
 
-This document is using the word "square" but in this case it is not an instruction about web content. In fact it is not even a reference of a shape in this case.
+This document is using the word "square" but in this case it is not an instruction about web content.
 
 ```html
-	<p>In mathemathics a square is the result of multiplying a number by itself.</p>
+	<p>A square is a regular quadrilateral with four equal sides and four right angles.</p>
 ```
 
 #### Passed Example 5

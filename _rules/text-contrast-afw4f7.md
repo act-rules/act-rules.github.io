@@ -133,7 +133,7 @@ This 14pt bold black text has a contrast ratio of 3.6:1 on the grey background.
 
 #### Passed Example 7
 
-The first `p` element is has a contrast ratio of 21:1 (default black on white). The second `p` element contains Helvetica text which is decorative, because it does not convey information or provides functionality; it's purpose is to show the aesthetic of the Helvetica font.
+The first `p` element is has a contrast ratio of 21:1 (default black on white). The second `p` element contains Helvetica text which is decorative, because it does not convey information or provides functionality; its purpose is to show the aesthetic of the Helvetica font.
 
 **Note**: Because this is non-text content, [success criterion 1.4.11 Non-text Contrast](https://www.w3.org/TR/WCAG21/#non-text-contrast) requires font example to have a color contrast of 3:1.
 

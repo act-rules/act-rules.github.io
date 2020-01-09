@@ -52,6 +52,8 @@ For each test target, the [highest possible contrast](#highest-possible-contrast
 
 - [Success criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/TR/WCAG21/#contrast-minimum) also has an exception for logos and brand names. Since logos and brand names are usually displayed through images to ensure correct rendering, this rule does not take logos or brand names into consideration. If a logo or brand name is included using [text nodes](https://dom.spec.whatwg.org/#text), this rule may produce incorrect results.
 
+- Text that has the same foreground and background color (a contrast ratio of 1:1) is assumed to be [purely decorative](). The text is assumed to not convey information that is meant for users. Hiding text in this way is sometimes used for search engine optimisation. Text with a contrast of 1:1 does not fail this rule, but may not satisfy [Success criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/TR/WCAG21/#contrast-minimum) if it is not decorative.
+
 ## Accessibility Support
 
 Different browsers have different levels of support for CSS. This can cause contrast issues in one browser that do not appear in another. Because of that, this rule can produce different results depending on the browser that is used. For example, a text that is positioned using CSS transform may be on a different background in a browser that does not support CSS transform.

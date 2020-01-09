@@ -5,6 +5,11 @@ rule_type: atomic
 description: |
   content that plays automatically does not output audio for more than 3 seconds.
 accessibility_requirements:
+  wcag-technique:G60: # Playing a sound that turns off automatically within three seconds
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -48,6 +53,7 @@ There are no major accessibility support issues known for this rule.
 
 - [Understanding Success Criterion 1.4.2: Audio Control](https://www.w3.org/WAI/WCAG21/Understanding/audio-control.html)
 - [F23: Failure of 1.4.2 due to playing a sound longer than 3 seconds where there is no mechanism to turn it off](https://www.w3.org/WAI/WCAG21/Techniques/failures/F23)
+- [G60: Playing a sound that turns off automatically within three seconds](https://www.w3.org/WAI/WCAG21/Techniques/general/G60)
 - [G171: Playing sounds only on user request](https://www.w3.org/WAI/WCAG21/Techniques/general/G171)
 
 ## Test Cases
@@ -59,7 +65,7 @@ There are no major accessibility support issues known for this rule.
 The `<audio>` element does not play automatically for more than 3 seconds.
 
 ```html
-<audio src="../test-assets/moon-audio/moon-speech.mp3#t=25" autoplay="true"></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3#t=25" autoplay="true"></audio>
 ```
 
 #### Passed Example 2
@@ -68,8 +74,8 @@ The `<video>` element audio output does not last longer than 3 seconds.
 
 ```html
 <video autoplay="true">
-	<source src="../test-assets/rabbit-video/video.mp4#t=8,10" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm#t=8,10" type="video/webm" />
+	<source src="/test-assets/rabbit-video/video.mp4#t=8,10" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm#t=8,10" type="video/webm" />
 </video>
 ```
 
@@ -80,7 +86,7 @@ The `<video>` element audio output does not last longer than 3 seconds.
 The `audio` element plays automatically for more than 3 seconds.
 
 ```html
-<audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay="true" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay="true" controls></audio>
 ```
 
 #### Failed Example 2
@@ -89,8 +95,8 @@ The `video` element automatically plays some audio for more than 3 seconds.
 
 ```html
 <video autoplay="true">
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```
 
@@ -102,8 +108,8 @@ The `video` element is `muted`.
 
 ```html
 <video autoplay="true" muted="true">
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```
 
@@ -113,8 +119,8 @@ The `video` element `src` file has no audio output.
 
 ```html
 <video autoplay="true">
-	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 </video>
 ```
 
@@ -123,5 +129,5 @@ The `video` element `src` file has no audio output.
 The `audio` element does not autoplay.
 
 ```html
-<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```

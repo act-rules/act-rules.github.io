@@ -1,5 +1,5 @@
 ---
-title: Process [DRAFT]
+title: Process
 ---
 
 ## Overview of process/workflow in ACT Rules Community Group:
@@ -28,7 +28,7 @@ The purpose of this stage is to avoid that people spend a huge amount of time on
 
 ### Passes this stage and moves on to "To Do" when:
 
-- Currently no explicit criteria for passing this stage, but 3 intial approvals from different organisations is recommended. This should give an indication on whether the rule can get 3 final approving reviews and get through Final Call later.
+- Currently no explicit criteria for passing this stage, but 3 initial approvals from different organizations is recommended. This should give an indication on whether the rule can get 3 final approving reviews and get through Final Call later.
 
 ### Fails this stage and becomes "Rejected" when:
 
@@ -110,7 +110,7 @@ Rules that have been fixed up by the author and are ready for review again, aimi
 
 ### Passes this stage when:
 
-- 3 approvals from different organisations have been given.
+- 3 approvals from different organizations have been given.
 
 ### Fails this stage and moves back a stage to "In Progress / Changes requested" when:
 
@@ -120,7 +120,7 @@ Rules that have been fixed up by the author and are ready for review again, aimi
 
 #### Rule author's job for this stage:
 
-- Assign reviewers to the rule in Github.
+- Assign reviewers to the rule in GitHub.
 - IMPORTANT: Dismiss any outdated reviews and re-assign the person as a reviewer (this helps reviewers see, that the rule is ready for review again).
 - If reviews are missing, take it up on CG mailing list or teleconference calls.
 
@@ -135,13 +135,13 @@ Rules that have been fixed up by the author and are ready for review again, aimi
 
 ## Final Call (aka Call for Consensus (CFC))
 
-Final gatekeeping mechanism where the whole community gets to object to a rule, if they don't agree to it, and implementors get a shot at trying it out in practice and giving feedback based on real-life experience with the rule.
+Final gate-keeping mechanism where the whole community gets to object to a rule, if they don't agree to it, and implementers get a shot at trying it out in practice and giving feedback based on real-life experience with the rule.
 
 We encourage initial implementations BEFORE publishing the rule, so that all the feedback from the implementation can get included in the original pull request, instead of being raised as new issues for already published rules - making even published rules quite unstable.
 
 ### Enters this stage when:
 
-- Rule has 3 approvals from other organisations.
+- Rule has 3 approvals from other organizations.
 - Rule author considers the rule to be in its final form.
 - Rule is either a new rule or an already published rule where substantial changes have been made.
 
@@ -186,7 +186,7 @@ If this happens, a new final call should be launched after the first one. It is 
 - Thorough reviews, take time to dive into the rule.
 - When commenting, please note whether you consider the suggested changes to be substantial or not (whether the change falls into the category of changes that do require a final call, or the ones the do not require a final call).
 - For tool vendors and testing methodology owners: Implement rule in tools and methodologies
-  - At this stage, the rule should be quite stable, minimising the risk of doing a too-early implementation, that has to be re-done from scratch later due to changes in the rule.
+  - At this stage, the rule should be quite stable, minimizing the risk of doing a too-early implementation, that has to be re-done from scratch later due to changes in the rule.
   - Implementations are important at this stage, since we often find things that needs to be changed in rules as soon as we start implementing them, e.g. issues with test cases, ambiguities in applicability or expectations, missing definitions etc.
 - Be aware that this is last chance to object to the rule, on everything from spelling and grammar to accessibility requirements mapping and use of definitions.
 - Keep up to date on Final Calls using this list: https://github.com/act-rules/act-rules.github.io/labels/Final%20call
@@ -197,7 +197,7 @@ Published rules
 
 ### Enters this stage when:
 
-- A rule has received 3 approvals from 3 different organisations and successfully survived its 2 week Final Call (if applicable), and has been merged and is now shown on rules overview on the website: https://act-rules.github.io/rules/ (might take a few minutes to update after merge).
+- A rule has received 3 approvals from 3 different organizations and successfully survived its 2 week Final Call (if applicable), and has been merged and is now shown on rules overview on the website: https://act-rules.github.io/rules/ (might take a few minutes to update after merge).
 
 ### Rejected
 

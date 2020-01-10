@@ -88,7 +88,7 @@ The [accessible name][] describes the purpose of the link.
 The [accessible name][] (from the link's text), together with its [programmatically determined link context][] (available from the text in the closest `p` ancestor), describes the purpose of the link.
 
 ```html
-<p>To see the description of this product <a href="#desc">click here</a>.</p>
+<p>See the description of <a href="#desc">this product</a>.</p>
 
 <p id="desc">This product consists of several web pages.</p>
 ```

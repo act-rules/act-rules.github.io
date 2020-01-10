@@ -111,7 +111,7 @@ This is a link that is a descendant of a paragraph element. The underline is rem
 
 #### Passed Example 3
 
-This is a link that is a descendant of a paragraph element and the underline is removed but a text is added to denote it as a link.
+This is a link that is a descendant of a paragraph element. The underline is removed, but a text is added to distinguish it as a link.
 
 ```html
 <html>

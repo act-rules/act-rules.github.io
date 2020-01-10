@@ -132,7 +132,7 @@ This is a link that is a descendant of a paragraph element. The underline is rem
 
 #### Passed Example 4
 
-This is a link that is a descendant of a paragraph element and the underline is removed but the link has a distinguishing box-shadow.
+This is a link that is a descendant of a paragraph element. The underline is removed, but the link has a distinguishing box-shadow.
 
 ```html
 <html>

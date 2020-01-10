@@ -32,7 +32,7 @@ This rule applies to any set of any two or more `iframe` elements which:
 
 ## Expectation
 
-The `iframe` elements in each set of target elements embed the [same resource](#same-resource) or [equivalent resources](#equivalent-resource).
+The `iframe` elements in each set of target elements embed the [same resource][] or [equivalent resources](#equivalent-resource).
 
 **Note:** Resolving the embedded resource includes any redirects that are instant.
 
@@ -323,3 +323,8 @@ These `iframe` elements are not [included in the accessibility tree][], because 
 [top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'Definition of top level browsing context'
 [usc412]: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html 'Understanding Success Criterion 4.1.2: Name, Role, Value'
 [web page (html)]: #web-page-html 'Definition of web page (HTML)'
+[same resource]: #same-resource 'Definition of same resource'
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
+[light tree]: https://dom.spec.whatwg.org/#concept-light-tree 'Definition of light tree'
+[shadow tree]: https://dom.spec.whatwg.org/#shadow-tree 'Definition of shadow tree'
+[matching]: #matching-characters 'Definition of matching characters'

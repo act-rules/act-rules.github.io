@@ -64,7 +64,7 @@ There are no major accessibility support issues known for this rule.
 Audio with controls and internal transcript
 
 ```html
-<audio data-rule-target src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <p>
 	The above audio contains the following speech: We choose to go to the moon in this decade and do the other things, not
 	because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our
@@ -87,7 +87,7 @@ An audio element that describes some of the text on the same page. The text on t
 <p>
 	You can also listen to the audio file below to hear the above part of the speech.
 </p>
-<audio data-rule-target src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
 ### Failed
@@ -97,7 +97,7 @@ An audio element that describes some of the text on the same page. The text on t
 Audio with controls and incorrect internal transcript
 
 ```html
-<audio data-rule-target src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 <p>
 	The above audio contains the following speech: We choose to go to the cheese in this decade and do the other things,
 	not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of
@@ -120,7 +120,7 @@ An audio element that describes some of the text on the same page. The text is n
 <p>
 	You can also listen to the audio file below to hear the above part of the speech.
 </p>
-<audio data-rule-target src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
 
 ### Inapplicable
@@ -147,7 +147,7 @@ An audio element that describes some of the text on the same page. The text on t
 <p>
 	You can also listen to the audio file below to hear the above part of the speech.
 </p>
-<audio data-rule-target src="/test-assets/moon-audio/moon-speech.mp3" controls style="display: none;"></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls style="display: none;"></audio>
 ```
 
 [visible]: #visible 'Definition of visible'

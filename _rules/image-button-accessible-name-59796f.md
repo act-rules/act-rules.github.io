@@ -60,7 +60,7 @@ There is a known combination of a popular browser and assistive technology that 
 The image button has an [accessible name][] through the `alt` attribute.
 
 ```html
-<input type="image" src="/test-assets/shared/search-icon.png" alt="Search" />
+<input type="image" src="/test-assets/shared/search-icon.svg" alt="Search" />
 ```
 
 #### Passed Example 2
@@ -68,7 +68,7 @@ The image button has an [accessible name][] through the `alt` attribute.
 The image button has an [accessible name][] through the `aria-label` attribute.
 
 ```html
-<input type="image" src="/test-assets/shared/search-icon.png" aria-label="Search" />
+<input type="image" src="/test-assets/shared/search-icon.svg" aria-label="Search" />
 ```
 
 #### Passed Example 3
@@ -76,7 +76,7 @@ The image button has an [accessible name][] through the `aria-label` attribute.
 The image button has an [accessible name][] through the `title` attribute.
 
 ```html
-<input type="image" src="/test-assets/shared/search-icon.png" title="Search" />
+<input type="image" src="/test-assets/shared/search-icon.svg" title="Search" />
 ```
 
 #### Passed Example 4
@@ -84,7 +84,7 @@ The image button has an [accessible name][] through the `title` attribute.
 The image button has an [accessible name][] through the `aria-labelledby` attribute.
 
 ```html
-<input type="image" src="/test-assets/shared/search-icon.png" aria-labelledby="id1" />
+<input type="image" src="/test-assets/shared/search-icon.svg" aria-labelledby="id1" />
 <div id="id1">Search</div>
 ```
 
@@ -95,7 +95,7 @@ The image button has an [accessible name][] through the `aria-labelledby` attrib
 The image button element has an empty [accessible name][]. The `name` attribute can not be used to provide an [accessible name][].
 
 ```html
-<input type="image" name="search" src="/test-assets/shared/search-icon.png" />
+<input type="image" name="search" src="/test-assets/shared/search-icon.svg" />
 ```
 
 #### Failed Example 2
@@ -103,7 +103,7 @@ The image button element has an empty [accessible name][]. The `name` attribute 
 The image button has an empty `alt` attribute, and no other attributes that can give it an [accessible name][].
 
 ```html
-<input type="image" src="/test-assets/shared/search-icon.png" alt="" />
+<input type="image" src="/test-assets/shared/search-icon.svg" alt="" />
 ```
 
 #### Failed Example 3
@@ -111,7 +111,7 @@ The image button has an empty `alt` attribute, and no other attributes that can 
 The image button has an `aria-labelledby` attribute, but the referenced element does not exist. This gives the button an empty [accessible name][].
 
 ```html
-<input type="image" src="/test-assets/shared/search-icon.png" aria-labelledby="non-existing" />
+<input type="image" src="/test-assets/shared/search-icon.svg" aria-labelledby="non-existing" />
 ```
 
 ### Inapplicable
@@ -137,7 +137,7 @@ The `input` element with type with a `type` attribute in the `Button` state is n
 The `button` element is tested separately from the `img` element. [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value) is applied to the button, whereas the image is tested under [Success Criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG21/#non-text-content)
 
 ```html
-<button><img src="/test-assets/shared/search-icon.png" alt="Search" /></button>
+<button><img src="/test-assets/shared/search-icon.svg" alt="Search" /></button>
 ```
 
 #### Inapplicable Example 4
@@ -153,7 +153,7 @@ The `img` element is not a user interface component, and so is not tested for [S
 The image button is ignored by assistive technologies because it is not [included in the accessibility tree][]. These are not required to have an accessible name. If at some future state of the page the element gets [included in the accessibility tree][], an [accessible name][] will be necessary.
 
 ```html
-<input type="image" src="/test-assets/shared/search-icon.png" style="display: none;" />
+<input type="image" src="/test-assets/shared/search-icon.svg" style="display: none;" />
 ```
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

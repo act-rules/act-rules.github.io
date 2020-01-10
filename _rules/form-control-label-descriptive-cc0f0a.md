@@ -22,7 +22,7 @@ acknowledgements:
 
 ## Applicability
 
-This rule applies to any HTML `label` element or other element referenced by `aria-labelledby` that, is [visible][] and is programmatically associated with an HTML element that has one of the following [semantic roles][]:
+This rule applies to any HTML `label` element or other element referenced by `aria-labelledby` that, is [visible][] and is programmatically associated with an HTML element that has one of the following [semantic roles][semantic role]:
 
 - `checkbox`
 - `combobox` (`select` elements)

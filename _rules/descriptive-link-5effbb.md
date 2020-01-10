@@ -211,7 +211,7 @@ The [accessible name][] (from the link's text), together with the absence of [pr
 
 #### Failed Example 4
 
-The [accessible name][] (from the link's text) does not describe the purpose of the link. The other information available on the page is not [programmatically determined link context][] because it is on a different paragraph.
+The [accessible name][] (from the link's text) does not describe the purpose of the link. The other information available on the page is not [programmatically determined link context][] because it is in a different `p` element.
 
 ```html
 <p>

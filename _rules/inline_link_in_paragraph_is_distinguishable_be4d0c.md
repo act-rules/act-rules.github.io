@@ -87,7 +87,7 @@ This is a link that is a descendant of a paragraph element and it uses the defau
 
 #### Passed Example 2
 
-This is a link that is a descendant of a paragraph element and the underline is removed but an icon is added to denote it as a link.
+This is a link that is a descendant of a paragraph element. The underline is removed, but an icon is added to distinguish it as a link.
 
 ```html
 <html>

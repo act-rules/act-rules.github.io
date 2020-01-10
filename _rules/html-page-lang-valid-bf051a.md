@@ -71,7 +71,7 @@ This `html` element has a `lang` attribute whose value is not a [valid language 
 
 #### Failed Example 2
 
-This `html` element has a `lang` attribute whose value is not a [valid language subtag][]. Even though the [primary language subtag][] is valid, the [region subtag] is not
+This `html` element has a `lang` attribute whose value is not a [valid language subtag][]. Even though the [primary language subtag][] is valid, the [region subtag] is not.
 
 ```html
 <html lang="en-US-GB"></html>

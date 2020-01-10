@@ -126,7 +126,7 @@ The [programmatically determined link context][] (provided by the ancestor with 
 
 #### Passed Example 6
 
-The context provided by the table header and the [accessible name][] (from the link's text) describe the purpose of the links.
+The [programmatically determined context][] (provided by the table header [assigned](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells) to the cell containing the link) and the [accessible name][] (from the link's text) describe the purpose of the links.
 
 ```html
 <table>

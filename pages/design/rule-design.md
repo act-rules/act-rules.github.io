@@ -64,6 +64,8 @@ A brief description of what the rule does. This should be declarative rather tha
 
 A list of all accessibility requirements that are not satisfied if one or more outcomes of a rule fails. This could be one or more WCAG success criteria, or a WAI-ARIA rule, for example.
 
+**Note**: When linking to WCAG or other sources that may have several versions, use the version number where the relevant requirement was first introduced.
+
 For more details, see [ACT Rules Format: Accessibility Requirements Mapping](https://www.w3.org/TR/act-rules-format/#accessibility-requirements-mapping).
 
 ### Input aspects or rules

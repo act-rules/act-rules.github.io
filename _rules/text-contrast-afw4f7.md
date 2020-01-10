@@ -32,13 +32,13 @@ acknowledgements:
 
 ## Applicability
 
-Any [visible](#visible) character in a [text node][] that is a [child](https://dom.spec.whatwg.org/#concept-tree-child) (in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree)) of an HTML element, except if the [text node][] is a [descendant](https://dom.spec.whatwg.org/#concept-shadow-including-descendant) of an element that:
+Any [visible][] character in a [text node][] that is a [child](https://dom.spec.whatwg.org/#concept-tree-child) (in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree)) of an HTML element, except if the [text node][] is a [descendant](https://dom.spec.whatwg.org/#concept-shadow-including-descendant) of an element that:
 
 - has a [semantic role](#semantic-role) that inherits from [widget](https://www.w3.org/TR/wai-aria-1.1/#widget); or
 - is used in the [accessible name](#accessible-name) of a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget) that is [disabled][]; or
 - has a [semantic role](#semantic-role) of [group](https://www.w3.org/TR/wai-aria-1.1/#group) and is [disabled][].
 
-**Note**: When the [foreground color](#foreground-colors-of-text) is the same as the [background color](#background-colors-of-text), the character is not [visible](#visible), and so it does not need to be tested for contrast.
+**Note**: When the [foreground color](#foreground-colors-of-text) is the same as the [background color](#background-colors-of-text), the character is not [visible][], and so it does not need to be tested for contrast.
 
 ## Expectation
 
@@ -52,7 +52,7 @@ For each test target, the [highest possible contrast](#highest-possible-contrast
 
 - [Success criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/TR/WCAG21/#contrast-minimum) also has an exception for logos and brand names. Since logos and brand names are usually displayed through images to ensure correct rendering, this rule does not take logos or brand names into consideration. If a logo or brand name is included using [text nodes](https://dom.spec.whatwg.org/#text), this rule may produce incorrect results.
 
-- Text that has the same foreground and background color (a contrast ratio of 1:1) is assumed to be [purely decorative](). The text is assumed to not convey information that is meant for users. Hiding text in this way is sometimes used for search engine optimisation. Text with a contrast of 1:1 does not fail this rule, but may not satisfy [Success criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/TR/WCAG21/#contrast-minimum) if it is not decorative.
+- Text that has the same foreground and background color (a contrast ratio of 1:1) is not considered to be "visual presentation of text", making it inapplicable to the success criterion. Text hidden in this way can still cause accessibility issues under other success criteria, depending on the content.
 
 ## Accessibility Support
 
@@ -73,7 +73,7 @@ Different browsers have different levels of support for CSS. This can cause cont
 
 #### Passed Example 1
 
-This dark grey text has a contrast ratio of 12.6:1 on the white background.
+This dark gray text has a contrast ratio of 12.6:1 on the white background.
 
 ```html
 <p style="color: #333; background: #FFF;">
@@ -83,7 +83,7 @@ This dark grey text has a contrast ratio of 12.6:1 on the white background.
 
 #### Passed Example 2
 
-This dark grey text has a contrast ratio between 12.6:1 and 5:1 on the white to blue gradient background.
+This dark gray text has a contrast ratio between 12.6:1 and 5:1 on the white to blue gradient background.
 
 ```html
 <p style="color: #333; background: linear-gradient(to right, #FFF, #00F); width: 500px;">
@@ -93,7 +93,7 @@ This dark grey text has a contrast ratio between 12.6:1 and 5:1 on the white to 
 
 #### Passed Example 3
 
-This light grey text has a contrast ratio between 13:1 and 5:1 on the background image.
+This light gray text has a contrast ratio between 13:1 and 5:1 on the background image.
 
 ```html
 <p
@@ -105,7 +105,7 @@ This light grey text has a contrast ratio between 13:1 and 5:1 on the background
 
 #### Passed Example 4
 
-This black text has a contrast ratio between 6.1:1 and 9:1 on grey background with white text shadow on it.
+This black text has a contrast ratio between 6.1:1 and 9:1 on gray background with white text shadow on it.
 
 ```html
 <p style="color: #000; background: #737373; text-shadow: white 0 0 3px">
@@ -115,7 +115,7 @@ This black text has a contrast ratio between 6.1:1 and 9:1 on grey background wi
 
 #### Passed Example 5
 
-This 18pt large black text has a contrast ratio of 3.6:1 on the grey background.
+This 18pt large black text has a contrast ratio of 3.6:1 on the gray background.
 
 ```html
 <p style="color: #000; font-size:18pt; background: #666;">
@@ -125,7 +125,7 @@ This 18pt large black text has a contrast ratio of 3.6:1 on the grey background.
 
 #### Passed Example 6
 
-This 14pt bold black text has a contrast ratio of 3.6:1 on the grey background.
+This 14pt bold black text has a contrast ratio of 3.6:1 on the gray background.
 
 ```html
 <p style="color: #000; font-size:14pt; font-weight:700; background: #666;">
@@ -158,7 +158,7 @@ This text does not convey anything in human language.
 
 #### Passed Example 9
 
-This dark grey text has a contrast ratio of 12.6:1 on the white background in a shadow DOM tree.
+This dark gray text has a contrast ratio of 12.6:1 on the white background in a shadow DOM tree.
 
 ```html
 <p style="color: #CCC; background: #fff;" id="p"></p>
@@ -172,7 +172,7 @@ This dark grey text has a contrast ratio of 12.6:1 on the white background in a 
 
 #### Failed Example 1
 
-This light grey text has a contrast ratio of 2.3:1 on the white background.
+This light gray text has a contrast ratio of 2.3:1 on the white background.
 
 ```html
 <p style="color: #AAA; background: white;">
@@ -182,7 +182,7 @@ This light grey text has a contrast ratio of 2.3:1 on the white background.
 
 #### Failed Example 2
 
-This light grey text has a contrast ratio between 1.2:1 and 2.3:1 on the white to blue gradient background.
+This light gray text has a contrast ratio between 1.2:1 and 2.3:1 on the white to blue gradient background.
 
 ```html
 <p style="color: #AAA; background: linear-gradient(to right, #FFF, #00F); width: 300px">
@@ -192,7 +192,7 @@ This light grey text has a contrast ratio between 1.2:1 and 2.3:1 on the white t
 
 #### Failed Example 3
 
-This light grey text has a contrast ratio between 2.7:1 and 3:1 on the background image.
+This light gray text has a contrast ratio between 2.7:1 and 3:1 on the background image.
 
 ```html
 <p
@@ -226,7 +226,7 @@ This black text with 30% opacity has a contrast ratio of 2.1:1 on the white back
 
 #### Failed Example 6
 
-This light grey text has a contrast ratio of 2.3:1 on the white background in a shadow DOM tree.
+This light gray text has a contrast ratio of 2.3:1 on the white background in a shadow DOM tree.
 
 ```html
 <p style="color: #aaa; background: #fff;" id="p"></p>
@@ -238,7 +238,7 @@ This light grey text has a contrast ratio of 2.3:1 on the white background in a 
 
 #### Failed Example 7
 
-This semi-transparent grey text has a contrast ratio between 2.3:1 and 4.2:1 on the black and white background. The light grey text is compared to the white section of the background and the dark grey text is compared to the black section of the background.
+This semi-transparent gray text has a contrast ratio between 2.3:1 and 4.2:1 on the black and white background. The light gray text is compared to the white section of the background and the dark gray text is compared to the black section of the background.
 
 ```html
 <style>
@@ -277,7 +277,7 @@ This text is not [visible][] because it is positioned off screen.
 This text is not [visible][] because the foreground color is the same as the background color.
 
 ```html
-<p style="color: white; background: white;">Some white on white text in English</p>
+<p style="color: white; background: white;" aria-hidden="true">Page last updated on 2020/01/10</p>
 ```
 
 #### Inapplicable Example 4
@@ -372,4 +372,5 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 ```
 
 [disabled]: #disabled-element 'Definition of disabled'
+[visible]: #visible 'Definition of visible'
 [text node]: https://dom.spec.whatwg.org/#text 'Definition of text node'

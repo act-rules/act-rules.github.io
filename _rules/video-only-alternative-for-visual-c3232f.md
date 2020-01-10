@@ -86,7 +86,7 @@ A video only element with a track element that contains descriptions.
 	<video controls>
 		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-		<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
+		<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
 	</video>
 </html>
 ```
@@ -154,7 +154,7 @@ A video only element with a track element that contains incorrect descriptions.
 	<video controls>
 		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-		<track kind="descriptions" src="rabbit-video-incorrect-descriptions.vtt" />
+		<track kind="descriptions" src="/test-assets/rabbit-video/incorrect-descriptions.vtt" />
 	</video>
 </html>
 ```
@@ -169,7 +169,7 @@ A silent video element with a link to an incorrect text transcript on a differen
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</a>
+<a href="/test-assets/rabbit-video/incorrect-transcript.html">Transcript</a>
 </html>
 ```
 
@@ -216,7 +216,7 @@ A video only element that is not [visible][].
 	<video controls style="display: none;">
 		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-		<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
+		<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
 	</video>
 </html>
 ```

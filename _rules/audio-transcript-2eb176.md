@@ -71,7 +71,7 @@ Audio with controls and external transcript
 ```html
 <html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-	<a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</a>
+	<a href="/test-assets/moon-audio/moon-speech-transcript.txt">Transcript</a>
 </html>
 ```
 
@@ -83,7 +83,7 @@ Audio with autoplay and external transcript
 <html lang="en">
 	(no-iframe)
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
-	<a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</a>
+	<a href="/test-assets/moon-audio/moon-speech-transcript.txt">Transcript</a>
 </html>
 ```
 
@@ -122,7 +122,7 @@ Audio with controls and incorrect external transcript
 ```html
 <html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-	<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</a>
+	<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.txt">Transcript</a>
 </html>
 ```
 
@@ -132,9 +132,8 @@ Audio with autoplay and incorrect external transcript
 
 ```html
 <html lang="en">
-	(no-iframe)
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
-	<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</a>
+	<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.txt">Transcript</a>
 </html>
 ```
 

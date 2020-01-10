@@ -30,7 +30,7 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Assumptions
 
-- The rule assumes that the target `iframe` is used as an [user interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components).
+- The rule assumes that the target `iframe` is used as a [user interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components).
 
 ## Accessibility Support
 

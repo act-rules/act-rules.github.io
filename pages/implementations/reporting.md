@@ -14,4 +14,4 @@ To submit an implementation report, you must run your test tool or test methodol
 
 ## Third Party Submissions
 
-Submitting an implementation requires permission from the owner of the test tool / methodology that is proposed. If you wish to submit an implementation on behalf of an implementor, we will require written permission from the owner of the implementation sent to the ACT-R public mailing list.
+Submitting an implementation requires permission from the owner of the test tool / methodology that is proposed. If you wish to submit an implementation on behalf of an implementer, we will require written permission from the owner of the implementation sent to the ACT-R public mailing list.

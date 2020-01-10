@@ -3,21 +3,15 @@
 # Project specific words
 - WAI
 - W3C
+- ACTR
 
-# Generic HTML tag(s)
-- html
-- iframe
-- img
-- ul
-- ol
-- dl
-- li
-- dd
-- dt
-- frameset
-- h1
-- h1-h6
-- svg
+# Parts of url
+- http
+- https
+- wai-aria
+
+# Tag(s)
+- svg # `aria-query` dom tags does not list `svg`
 
 # Domain-specific words, Definitions & other allowed terms
 - URI
@@ -38,7 +32,10 @@
 - DOM
 - SVG
 - PDFs
+- DOCX
 - DPUB
+- DNS
+- Esc # esc key on a keyboard
 - url
 - voiceover
 - subtag
@@ -46,6 +43,7 @@
 - testrunner
 - color
 - focusable
+- Focusable
 - unfocusable
 - tabindex
 - whitespace
@@ -56,10 +54,13 @@
 - autoplay
 - autoplays
 - presentational
+- EARL10-Schema
+- labelable
+- merchantability
 
-# spell checker checks against strict casing & hence some repeated words here
-- Autocomplete
-- Focusable
+# Notes and acronyms
+- TODO
+- TBD
 
 # Parts of url
 - http
@@ -75,12 +76,13 @@
 - wai-aria
 - multipage
 
-# Other tool names
+# Tool and library names
 - axe-core
 - alfa
 - RGAA
 - wcag-em-report-tool
 - ozplayer
+- GitHub
 
 # Test case anamolies
 - level2-frame1
@@ -88,39 +90,15 @@
 - level1-frame1
 - XYZ
 
-# Attributes
+# Attributes (repeated words with casing as retext-spell has no config to ignore casing)
 - href
 - src
-- aria-labelled
-- aria-labelledby
+- aria-labelled # used to demonstrate wrong attribute
 - autofill-field
-- combobox
-- spinbutton
-- gridcell
-- menuitem
-- menuitemcheckbox
-- menuitemradio
-- searchbox
-- treeitem
-- listbox
-- listitem
-- tablist
-- tabpanel
-- doc-biblioentry
-- textbox
 - autocomplete
-- textarea
-- autoplay
+- Autocomplete
 - tristate
-- scrollbar
 - viewport
-- figcaption
-- aria-errormessage
-- aria-rowindex
-- aria-valuemin
-- aria-valuemax
-- aria-valuenow
-- aria-dropeffect
 - lang
 - xml:lang
 - http-equiv
@@ -136,3 +114,21 @@
 - Programmatically
 - personalization
 - Autofill
+- implementers
+- Implementers
+
+# Parts of Unicode
+- 000A
+- 000B
+- 000C
+- 000D
+
+# JSON attributes/ metadata
+- testcases
+- ruleId
+- ruleName
+- rulePage
+- ruleAccessibilityRequirements
+- cantTell
+- TestSubject
+- earl:cantTell

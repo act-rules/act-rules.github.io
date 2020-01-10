@@ -53,7 +53,7 @@ and where both the element and the [programmatic label][] are [visible][].
 
 Each test target, together with its [visual context][], describes the purpose of the associated element.
 
-**Note**: It is possible for an element to have an [accessible name][] but still having a non-descriptive `label` element (and even a non-descriptive [label][]). In that case, it would pass [Success Criterion 4.1.2: Name, Role and Value][sc412] but still fail this rule and [Success Criterion 2.4.6: Heading and Labels][sc246].
+**Note**: It is possible for an element to have an [accessible name][] but still have a non-descriptive `label` element (and even a non-descriptive [label][]). In that case, it would pass [Success Criterion 4.1.2: Name, Role and Value][sc412] but still fail this rule and [Success Criterion 2.4.6: Heading and Labels][sc246].
 
 **Note**: Having a [label][] which is not included in the [accessible name][] is a violation of [Success Criterion 2.5.3: Label in Name][sc253] but not of this rule nor of [Success Criterion 2.4.6: Heading and Labels][sc246].
 

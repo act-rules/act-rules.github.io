@@ -81,7 +81,6 @@ Audio with autoplay and external transcript
 
 ```html
 <html lang="en">
-	(no-iframe)
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
 	<a href="/test-assets/moon-audio/moon-speech-transcript.txt">Transcript</a>
 </html>

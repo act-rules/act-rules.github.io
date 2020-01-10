@@ -41,7 +41,7 @@ Each target element has either:
 - content (such as an image or text) inside, or immediately before or after the test target, that identifies it as a link; or
 - a [distinguishing style][] not based on color alone, compared to the _ancestor_ element and to any of its [descendant][] HTML elements that have [visible][] [text nodes][text node]; or
 - a `box-shadow` style property with a [color value](https://drafts.csswg.org/css-backgrounds/#shadow-color) different from `transparent` or the `background-color` of the target element; or
-- a `border` style property with a color value different from `transparent` or the `background-color` of the target element; or
+- a `border` style property with a [color value](https://drafts.csswg.org/css-backgrounds/#border-color) different from `transparent` or the `background-color` of the target element; or
 - a different color, compared to the color of the other descendant visible text nodes of the same _ancestor_ element (if all have the same color), that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) and a [distinguishing style][] both when the target element [gains focus][focused] and the target element is [hovered][]; or
 - a different background color, compared to the background color of the other descendant visible text nodes of the same _ancestor_ element (if all have the same background color), that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) and a [distinguishing style][] both when the target element [gains focus][focused] and the target element is [hovered][].
 

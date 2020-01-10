@@ -33,7 +33,7 @@ Each test target is labeled as a video alternative for text on the page. This la
 ## Assumptions
 
 - This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
-- This rule assumes that if `lang` attributes are used, their value accurately describes the part of the content they are applied to.
+- This rule assumes that the language of the page can be correctly determined, either programmatically or by analysing the content.
 
 ## Accessibility Support
 

@@ -54,7 +54,7 @@ Each target element describes the purpose of the associated form field element.
 ## Assumptions
 
 - This rule assumes that the [label](https://www.w3.org/TR/WCAG21/#dfn-labels) is intended for sighted users, and that hiding a visible label from assistive technologies, is a failure of [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value), but not of [Success Criterion 2.4.6 Headings and Labels](https://www.w3.org/TR/WCAG21/#headings-and-labels).
-- This rule assumes that if `lang` attributes are used, their value accurately describes the part of the content they are applied to.
+- This rule assumes that the language of the page can be correctly determined, either programmatically or by analysing the content.
 
 ## Accessibility Support
 

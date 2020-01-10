@@ -41,7 +41,7 @@ The label (from expectation 2) is [visible][] and [included in the accessibility
 
 ## Assumptions
 
-This rule assumes that if `lang` attributes are used, their value accurately describes the part of the content they are applied to.
+This rule assumes that the language of the page can be correctly determined, either programmatically or by analysing the content.
 
 ## Accessibility Support
 

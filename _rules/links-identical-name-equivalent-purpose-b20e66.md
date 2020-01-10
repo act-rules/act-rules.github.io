@@ -44,7 +44,7 @@ When followed, the links in each set of target elements resolve to the [same res
 
 - This rule assumes that the purpose of the links with identical [accessible names][accessible name] would not be ambiguous to users in general when seen in context on the web page, which is the exception mentioned in [Success Criterion 2.4.9 Link Purpose (Link Only)][sc249]. If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links out of context, e.g. on a list of links in a screen reader, which makes it more of a general user experience concern than an accessibility issue.
 - This rule assumes that, within the context of the test subject, the description provided by the [accessible name][] of a link can only accurately describe one resource (notably, homonyms alone are not used as link names). Thus, if two or more links have the same [accessible name][] but resolve to different resources, at least one of them does not describe its purpose.
-- This rule assumes that if `lang` attributes are used, their value accurately describes the part of the content they are applied to.
+- This rule assumes that the language of the page can be correctly determined, either programmatically or by analysing the content.
 
 ## Accessibility Support
 

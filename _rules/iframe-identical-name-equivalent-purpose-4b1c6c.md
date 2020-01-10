@@ -40,7 +40,7 @@ The `iframe` elements in each set of target elements embed the [same resource][]
 ## Assumptions
 
 - This rule assumes that, within the context of the test subject, the description provided by the [accessible name][] of an `iframe` can only accurately describe one resource (notably, homonyms alone are not used as `iframe` names). Thus, if two or more `iframe` elements have the same [accessible name][] but embed different resources, at least one of them does not describe its purpose.
-- This rule assumes that if `lang` attributes are used, their value accurately describes the part of the content they are applied to.
+- This rule assumes that the language of the page can be correctly determined, either programmatically or by analysing the content.
 
 ## Accessibility Support
 

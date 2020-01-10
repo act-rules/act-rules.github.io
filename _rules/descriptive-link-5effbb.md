@@ -85,7 +85,7 @@ The [accessible name][] describes the purpose of the link.
 
 #### Passed Example 3
 
-The [accessible name][] (from the link's text) together with its [programmatically determined link context][] available from the text in the same sentence, describe the purpose of the link.
+The [accessible name][] (from the link's text), together with its [programmatically determined link context][] (available from the text in the closest `p` ancestor), describes the purpose of the link.
 
 ```html
 <p>To see the description of this product <a href="#desc">click here</a>.</p>

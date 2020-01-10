@@ -40,7 +40,7 @@ The target element describes the topic or purpose of the overall content of the 
 
 ## Assumptions
 
-This rule assumes that the language of the page can be correctly determined, either programmatically or by analysing the content.
+This rule assumes that the language of the page can be correctly determined, either programmatically or by analyzing the content.
 
 ## Accessibility Support
 

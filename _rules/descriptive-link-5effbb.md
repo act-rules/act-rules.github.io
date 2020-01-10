@@ -177,19 +177,18 @@ The [programmatically determined context][] (provided by the cell containing the
 
 ```html
 <table>
-  <tr>
-    <td>
-      Download Ulysses in
-      <a href="https://www.gutenberg.org/files/4300/4300-h/4300-h.htm">HTML</a>
-    </td>
-    <td>
-      Download Ulysses in
-      <a
-        href="https://www.gutenberg.org/ebooks/4300.epub.images?session_id=04cd710372888de8d8d322215cdfe8ce5b0f8d73"
-        >EPUB</a
-      >
-    </td>
-  </tr>
+	<tr>
+		<td>
+			Download Ulysses in
+			<a href="https://www.gutenberg.org/files/4300/4300-h/4300-h.htm">HTML</a>
+		</td>
+		<td>
+			Download Ulysses in
+			<a href="https://www.gutenberg.org/ebooks/4300.epub.images?session_id=04cd710372888de8d8d322215cdfe8ce5b0f8d73"
+				>EPUB</a
+			>
+		</td>
+	</tr>
 </table>
 ```
 
@@ -202,7 +201,7 @@ The [programmatically determined context][] (provided by the element referenced 
 <ul>
 	<li><a href="https://act-rules.github.io/rules/97a4e1#applicability" aria-describedby="rule">Applicability</a></li>
 	<li><a href="https://act-rules.github.io/rules/97a4e1#expectation" aria-describedby="rule">Expectation</a></li>
-</ul> 
+</ul>
 ```
 
 ### Failed

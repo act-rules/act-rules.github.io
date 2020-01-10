@@ -10,6 +10,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:2.4.9: # Link Purpose (Link Only)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -37,7 +42,6 @@ The [accessible name][] of each target element together with its [programmatical
 
 - This rule assumes that the purpose of the link is not ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html). If the link is ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the link out of context which makes it more of a general user experience concern than an accessibility issue.
 - This rule assumes that all elements with the [semantic role][] of ['link'][link] are used as links.
-- This rule assumes that all links have the [semantic role][] of ['link'][link].
 
 ## Accessibility Support
 
@@ -165,6 +169,40 @@ The [accessible name][] describes the purpose of the link.
 <main>
 	<p id="main">This is the main content.</p>
 </main>
+```
+
+#### Passed Example 8
+
+The [programmatically determined context][] (provided by the cell containing the link) and the [accessible name][] (from the link's text) describe the purpose of the links.
+
+```html
+<table>
+  <tr>
+    <td>
+      Download Ulysses in
+      <a href="https://www.gutenberg.org/files/4300/4300-h/4300-h.htm">HTML</a>
+    </td>
+    <td>
+      Download Ulysses in
+      <a
+        href="https://www.gutenberg.org/ebooks/4300.epub.images?session_id=04cd710372888de8d8d322215cdfe8ce5b0f8d73"
+        >EPUB</a
+      >
+    </td>
+  </tr>
+</table>
+```
+
+#### Passed Example 9
+
+The [programmatically determined context][] (provided by the element referenced by the `aria-describedby` attribute) and the [accessible name][] (from the link's text) describe the purpose of the links.
+
+```html
+<h2 id="rule">Button has accessible name</h2>
+<ul>
+	<li><a href="https://act-rules.github.io/rules/97a4e1#applicability" aria-describedby="rule">Applicability</a></li>
+	<li><a href="https://act-rules.github.io/rules/97a4e1#expectation" aria-describedby="rule">Expectation</a></li>
+</ul> 
 ```
 
 ### Failed

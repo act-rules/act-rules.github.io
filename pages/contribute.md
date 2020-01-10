@@ -4,7 +4,7 @@ title: How to Contribute
 
 ACT-Rules Community is a [W3C](https://www.w3.org/) [Community Group](https://www.w3.org/community/) open to anyone interested in accessibility testing, manually or automated.
 
-We welcome contributions from everyone, and there are many ways to contribute, from Github issues and pull requests, to contribution to our monthly teleconferences.
+We welcome contributions from everyone, and there are many ways to contribute, from GitHub issues and pull requests, to contribution to our monthly teleconferences.
 
 You don't have to be a member of the Community Group to contribute.
 
@@ -17,12 +17,12 @@ If you want to get even more out of your involvement in our rule creation projec
 ## Overview of how you can contribute
 
 - [Give feedback on rules](#give-feedback-on-rules)
-  - [Feedback for ideas and early drafts (Issues on Github)](#feedback-for-ideas-and-early-drafts-issues-on-github)
-  - [Feedback and reviews for draft rules (Pull Requests on Github)](#feedback-and-reviews-for-draft-rules-pull-requests-on-github)
+  - [Feedback for ideas and early drafts (Issues on GitHub)](#feedback-for-ideas-and-early-drafts-issues-on-github)
+  - [Feedback and reviews for draft rules (Pull Requests on GitHub)](#feedback-and-reviews-for-draft-rules-pull-requests-on-github)
   - [Feedback/corrections for published rules](#feedbackcorrections-for-published-rules)
 - [Suggest new rules](#suggest-new-rules)
-  - [Submit an idea for discussion (Issue on Github)](#submit-an-idea-for-discussion-issue-on-github)
-  - [Submit a draft for a rule (Pull Request on Github)](#submit-a-draft-for-a-rule-pull-request-on-github)
+  - [Submit an idea for discussion (Issue on GitHub)](#submit-an-idea-for-discussion-issue-on-github)
+  - [Submit a draft for a rule (Pull Request on GitHub)](#submit-a-draft-for-a-rule-pull-request-on-github)
 - [Join the Community Group](#join-the-community-group)
   - [Mailing list keeps you up to date](#mailing-list-keeps-you-up-to-date)
   - [Participate in our monthly calls](#participate-in-our-monthly-calls)
@@ -30,13 +30,13 @@ If you want to get even more out of your involvement in our rule creation projec
 
 ## Give feedback on rules
 
-Feedback on rules is encouraged on our open [Github repository](https://github.com/act-rules/act-rules.github.io), so you don't even have to be a member of the Community Group to contribute in this way.
+Feedback on rules is encouraged on our open [GitHub repository](https://github.com/act-rules/act-rules.github.io), so you don't even have to be a member of the Community Group to contribute in this way.
 
 If you "watch" the repository, you will get notifications when changes are happening.
 
-### Feedback for ideas and early drafts (Issues on Github)
+### Feedback for ideas and early drafts (Issues on GitHub)
 
-Rules and Definitions (shared terms across rules) that are Github Issues can be everything from just a title to a quite finished rule. The issues will be prefixed with either "Rule:" (or possibly "New Rule:") or "Algorithm".
+Rules and Definitions (shared terms across rules) that are GitHub Issues can be everything from just a title to a quite finished rule. The issues will be prefixed with either "Rule:" (or possibly "New Rule:") or "Algorithm".
 
 The top comment on an issue should hold the updated rule or algorithm, and underneath there will be a thread of comments and a history of actions related to the issue.
 
@@ -49,7 +49,7 @@ Start giving feedback on issues:
 - Use the [Definition of "Done"](../design/definition-of-done) to guide your review
 - Learn more about [commenting on issues](#) (TBD)
 
-### Feedback and reviews for draft rules (Pull Requests on Github)
+### Feedback and reviews for draft rules (Pull Requests on GitHub)
 
 Pull requests are rule drafts that are ready for peer reviews. You can sign up as a reviewer and follow the rule through iterations. A rule needs three approvals, and if a rule has the label "Reviewer wanted", we need more people to sign up for reviewing it. But even if three people are already signed up, we can always use more eyes on it.
 
@@ -73,30 +73,30 @@ Feedback and corrections for existing rules can target both on the sections of t
 
 You have several options for correcting existing rules:
 
-- **Open a discussion in an Issue:** If you want to open a discussion, you can [open a new issue on Github](https://github.com/act-rules/act-rules.github.io/issues) repository to discuss the issue with the existing rule. Learn more about [creating issues](#) (TBD).
-- **Make the change yourself in a pull request:** If you know exactly what you want changed, you can do the change yourself as a [pull request on Github](https://github.com/act-rules/act-rules.github.io/pulls) and submit it for review. Learn more about [creating pull requests](#) (TBD).
+- **Open a discussion in an Issue:** If you want to open a discussion, you can [open a new issue on GitHub](https://github.com/act-rules/act-rules.github.io/issues) repository to discuss the issue with the existing rule. Learn more about [creating issues](#) (TBD).
+- **Make the change yourself in a pull request:** If you know exactly what you want changed, you can do the change yourself as a [pull request on GitHub](https://github.com/act-rules/act-rules.github.io/pulls) and submit it for review. Learn more about [creating pull requests](#) (TBD).
 
 ## Suggest new rules
 
-Anyone can suggest new rules on our open [Github repository](https://github.com/act-rules/act-rules.github.io), so you don't even have to be a member of the Community Group to contribute in this way.
+Anyone can suggest new rules on our open [GitHub repository](https://github.com/act-rules/act-rules.github.io), so you don't even have to be a member of the Community Group to contribute in this way.
 
-Whether you have a single great idea for an accessibility rule or you work for an organisation that wants to contribute a whole repository of rules, we welcome the contribution.
+Whether you have a single great idea for an accessibility rule or you work for an organization that wants to contribute a whole repository of rules, we welcome the contribution.
 
 When you submit a rule, we expect you to be responsible for the rule the whole way through the review process, including adjusting the rule as you receive feedback from others. It will take some time and effort, but the learning experience in it is great.
 
 If you are not ready to carry a rule all the way through the process, you can partner up with someone else who wants to do it.
 
-Partnering up with someone outside of your own organisation for rule writing will sharpen the rule, which is why we often do that in our work.
+Partnering up with someone outside of your own organization for rule writing will sharpen the rule, which is why we often do that in our work.
 
 Depending on how polished your rule proposal is, you can either add your idea as an issue or a pull request.
 
-### Submit an idea for discussion (Issue on Github)
+### Submit an idea for discussion (Issue on GitHub)
 
-For rule contributors with less Github experience, it is often easiest to start the rule design in a [Github issue](https://github.com/act-rules/act-rules.github.io/issues). This allows for easy editing and discussions with others, while the rule is taking shape.
+For rule contributors with less GitHub experience, it is often easiest to start the rule design in a [GitHub issue](https://github.com/act-rules/act-rules.github.io/issues). This allows for easy editing and discussions with others, while the rule is taking shape.
 
-[Learn more about how we work in Github issues](#) (TBD).
+[Learn more about how we work in GitHub issues](#) (TBD).
 
-### Submit a draft for a rule (Pull Request on Github)
+### Submit a draft for a rule (Pull Request on GitHub)
 
 If you have a ready rule draft, you can submit it as a [pull request](https://github.com/act-rules/act-rules.github.io/pulls) to go into the [review process](#) (TBD).
 

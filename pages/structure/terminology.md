@@ -19,4 +19,4 @@ A test is the application of a rule.
 
 ## Requirement
 
-A requirement is a statement of necessity in a given domain (e.g. accessbility). It can be broken down into a set of conditions.
+A requirement is a statement of necessity in a given domain (e.g. accessibility). It can be broken down into a set of conditions.

@@ -23,17 +23,17 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any HTML or SVG element that is [included in the accessibility tree][] and has a [WAI-ARIA 1.1][] [explicit semantic role][] with [required owned elements][], except if
+The rule applies to any HTML or SVG element that is [included in the accessibility tree and has a [WAI-ARIA 1.1][] [explicit semantic role][] with [required owned elements][], except if
 
 - the element has an [implicit semantic role][] that is identical to its [explicit semantic role][]; or
 - the element has a [semantic role][] of `combobox`; or
-- the element has the `aria-busy` state set to `true`, or has an [ancestor][] in the [accessibility tree][] with this state.
+- the element has the `aria-busy` state set to `true`, or has an [ancestor][] in the accessibility tree with this state.
 
 **Note:** An example of an element that has a [required owned element][] is `tablist` which has `tab` as a [required owned element][].
 
 **Note:** An example of an element that has an [implicit semantic role][] that is identical to its [explicit semantic role][] is a `ul` element that has `role="list"`. These elements are not applicable.
 
-**Note:** The applicability of this rule is limited to only the [WAI-ARIA 1.1][] roles, since there are unresolved issues with how [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][] uses role inheritance to define the [required owned element][], which makes it deviate from the model defined in [WAI-ARIA 1.1][]. The [WAI-ARIA Graphics Module][] does not include any [required owned element][].
+**Note:** The applicability of this rule is limited to only the [WAI-ARIA 1.1][] roles, since there are unresolved issues with how [Digital Publishing WAI-ARIA Module][] (DPUB ARIA 1.1) uses role inheritance to define the [required owned element][], which makes it deviate from the model defined in [WAI-ARIA 1.1][]. The [WAI-ARIA Graphics Module][] does not include any [required owned element][].
 
 **Note:** The combobox role is excluded from this rule, because the design pattern for it as described in ARIA 1.1 has proven problematic. The combobox will be significantly different for ARIA 1.2, where it does not have [required owned elements][].
 
@@ -53,7 +53,7 @@ If the [explicit semantic role][] on the target element is incorrectly used, and
 
 ## Accessibility Support
 
-- User agents do not all have the same [accessibility tree][]. Particularly the method of deriving which element owns which other elements varies between browsers. This can lead to different results for this rule, depending on which [accessibility tree][] is used as input.
+- User agents do not all have the same accessibility tree. Particularly the method of deriving which element owns which other elements varies between browsers. This can lead to different results for this rule, depending on which accessibility tree is used as input.
 - `aria-owns` has limited support in some user agents.
 - Assistive technologies are not consistent in how they handle situations where a [required owned element][] has a missing or incorrect role. This can lead to situations where inaccurate owned elements behave as expected in one assistive technology, but not in another.
 
@@ -67,7 +67,7 @@ If the [explicit semantic role][] on the target element is incorrectly used, and
 
 ### Passed
 
-#### Passed example 1
+#### Passed Example 1
 
 This element with the `list` role only owns elements with the `listitem` role. The `listitem` role is one of the [required owned elements][] for `list`.
 
@@ -78,7 +78,7 @@ This element with the `list` role only owns elements with the `listitem` role. T
 </div>
 ```
 
-#### Passed example 2
+#### Passed Example 2
 
 This element with the `tablist` role only owns elements with the `tab` role. The `tab` role is one of the [required owned elements][] for `tablist`.
 
@@ -89,9 +89,9 @@ This element with the `tablist` role only owns elements with the `tab` role. The
 </div>
 ```
 
-#### Passed example 3
+#### Passed Example 3
 
-This element with the `grid` role only owns elements with the `row` role, and the element with the `row`role only owns elements with the `cell` role. The `row` role is one of the [required owned elements][] for `grid`, and `cell` is one of the [required owned elements][] for `row`.
+This element with the `grid` role only owns elements with the `row` role, and the element with the `row` role only owns elements with the `cell` role. The `row` role is one of the [required owned elements][] for `grid`, and `cell` is one of the [required owned elements][] for `row`.
 
 ```html
 <table role="grid">
@@ -101,7 +101,7 @@ This element with the `grid` role only owns elements with the `row` role, and th
 </table>
 ```
 
-#### Passed example 4
+#### Passed Example 4
 
 This element with the `menu` role only owns elements with the `menuitem`, `menuitemradio` and `menuitemcheckbox` role. These roles are one of the [required owned elements][] for `menu`. The element with the `none` role is not [owned by][] the `menu` because it is not [included in the accessibility tree][].
 
@@ -114,7 +114,7 @@ This element with the `menu` role only owns elements with the `menuitem`, `menui
 </ul>
 ```
 
-#### Passed example 5
+#### Passed Example 5
 
 This element with the `list` role only owns elements with an implicit `listitem` role. The `listitem` role is one of the [required owned elements][] for `list`.
 
@@ -124,7 +124,7 @@ This element with the `list` role only owns elements with an implicit `listitem`
 </div>
 ```
 
-#### Passed example 6
+#### Passed Example 6
 
 This element with the `list` role only owns elements with the `listitem` role through the `aria-owns` attribute. The `listitem` role is one of the [required owned elements][] for `list`.
 
@@ -135,7 +135,7 @@ This element with the `list` role only owns elements with the `listitem` role th
 <div id="id1" role="listitem">Item 1</div>
 ```
 
-#### Passed example 7
+#### Passed Example 7
 
 This element with the `list` role only owns elements with the `listitem` role, or elements with the `group` role, in which each element has the `listitem` role. The `listitem` role on its own, as well as in a `group` are in the [required owned elements][] for `list`.
 
@@ -151,7 +151,7 @@ This element with the `list` role only owns elements with the `listitem` role, o
 
 ### Failed
 
-#### Failed example 1
+#### Failed Example 1
 
 This element with the `list` role owns elements without the `listitem` role. The `listitem` role is one of the [required owned elements][] for `list`.
 
@@ -161,7 +161,7 @@ This element with the `list` role owns elements without the `listitem` role. The
 </div>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 This element with the `tablist` role owns an element with the `listitem` role. The `listitem` role is not one of the [required owned elements][] for `tablist`.
 
@@ -171,9 +171,9 @@ This element with the `tablist` role owns an element with the `listitem` role. T
 </ol>
 ```
 
-#### Failed example 3
+#### Failed Example 3
 
-This element with the `grid` role only owns elements with the `row` role, but the element with the `row`role does not own elements with the `cell` role. The `cell` is one of the [required owned elements][] for `row`.
+This element with the `grid` role only owns elements with the `row` role, but the element with the `row` role does not own elements with the `cell` role. The `cell` is one of the [required owned elements][] for `row`.
 
 ```html
 <div role="grid">
@@ -183,7 +183,7 @@ This element with the `grid` role only owns elements with the `row` role, but th
 </div>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 This element with the `list` role owns an element with the `tab` role through the `aria-owns` attribute. The `tab` role is not one of the [required owned elements][] for `list`.
 
@@ -194,7 +194,7 @@ This element with the `list` role owns an element with the `tab` role through th
 <div id="id2" role="tab">Tab 1</div>
 ```
 
-#### Failed example 5
+#### Failed Example 5
 
 This element with the `list` role owns an element with the `group` role, but the group owns elements with the `tab` role. The `group` is not a [required owned elements][] for `list`, if it owns elements with a [semantic role][] other then `listitem`.
 
@@ -209,15 +209,15 @@ This element with the `list` role owns an element with the `group` role, but the
 
 ### Inapplicable
 
-#### Inapplicable example 1
+#### Inapplicable Example 1
 
-This element with the `list` role is not included in the [accessibility tree][] because the `aria-hidden` attribute is set to `true`.
+This element with the `list` role is not included in the accessibility tree because the `aria-hidden` attribute is set to `true`.
 
 ```html
 <div role="list" aria-hidden="true"></div>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 2
 
 This `ul` element does not have an [explicit semantic role][].
 
@@ -227,7 +227,7 @@ This `ul` element does not have an [explicit semantic role][].
 </ul>
 ```
 
-#### Inapplicable example 2
+#### Inapplicable Example 3
 
 This `ul` element has the same [explicit semantic role][] as its [implicit semantic role][].
 
@@ -237,7 +237,7 @@ This `ul` element has the same [explicit semantic role][] as its [implicit seman
 </ul>
 ```
 
-#### Inapplicable example 4
+#### Inapplicable Example 4
 
 This element with the `progressbar` role does not need [required owned elements][].
 
@@ -245,7 +245,7 @@ This element with the `progressbar` role does not need [required owned elements]
 <div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20 %</div>
 ```
 
-#### Inapplicable example 5
+#### Inapplicable Example 5
 
 This element with the `menu` role has attribute an `aria-busy` attribute set to `true`.
 
@@ -259,12 +259,11 @@ This element with the `menu` role has attribute an `aria-busy` attribute set to 
 [required owned elements]: https://www.w3.org/TR/wai-aria-1.1/#mustContain 'Define Required owned element'
 [owns]: #owned-by
 [owned by]: #owned-by
-[accessibility tree]: #accessibility-tree
 [explicit semantic role]: #explicit-role
 [implicit semantic role]: #implicit-role
 [semantic role]: #semantic-role
 [included in the accessibility tree]: #included-in-the-accessibility-tree
 [wai-aria 1.1]: https://www.w3.org/TR/wai-aria-1.1/
-[digital publishing wai-aria module (dpub aria) 1.0]: https://www.w3.org/TR/dpub-aria-1.0/
+[digital publishing wai-aria module]: https://www.w3.org/TR/dpub-aria-1.0/
 [wai-aria graphics module]: https://www.w3.org/TR/graphics-aria-1.0/
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'Definition Ancestors, as on 2020-01-10'

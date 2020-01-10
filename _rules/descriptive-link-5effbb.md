@@ -195,7 +195,7 @@ The [programmatically determined link context][] (provided by the cell containin
 
 #### Passed Example 9
 
-The [programmatically determined context][] (provided by the element referenced by the `aria-describedby` attribute) and the [accessible name][] (from the link's text) describe the purpose of the links.
+The [programmatically determined link context][] (provided by the element referenced by the `aria-describedby` attribute) and the [accessible name][] (from the link's text) describe the purpose of the links.
 
 ```html
 <h2 id="rule">Button has accessible name</h2>

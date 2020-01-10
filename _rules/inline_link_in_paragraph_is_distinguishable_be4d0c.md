@@ -30,9 +30,9 @@ acknowledgements:
 This rule applies to any HTML element which:
 
 - has the [semantic role][] of ['link'][link] or a [semantic role][] that inherits from the ['link'][link] role; and
-- is a [descendant][] of a `p`, `li` or `td` HTML elements (henceforth referred to as the _ancestor_ element); and
-- has [descendant][] [text nodes][text node] that are [visible][]; and
-- the _ancestor_ element has other [descendant][] [visible][] [text nodes][text node].
+- is a [descendant][] of a `p`, `li` or `td` HTML elements (henceforth referred to as the _ancestor_ element) in the [flat tree][]; and
+- has [descendant][] [text nodes][text node] in the [flat tree][] that are [visible][]; and
+- the _ancestor_ element has other [descendant][] [visible][] [text nodes][text node] in the [flat tree][].
 
 ## Expectation
 
@@ -276,6 +276,7 @@ This paragraph has no visible descendant text nodes apart from those in the link
 ```
 
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [focused]: #focused 'Definition of focused'
 [hovered]: #hovered 'Definition of hovered'
 [link]: https://www.w3.org/TR/wai-aria/#link

@@ -131,7 +131,7 @@ The [programmatically determined link context][] (provided by the ancestor with 
 
 #### Passed Example 6
 
-The [programmatically determined context][] (provided by the table header [assigned](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells) to the cell containing the link) and the [accessible name][] (from the link's text) describe the purpose of the links.
+The [programmatically determined link context][] (provided by the table header [assigned](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells) to the cell containing the link) and the [accessible name][] (from the link's text) describe the purpose of the links.
 
 ```html
 <table>
@@ -174,7 +174,7 @@ The [accessible name][] describes the purpose of the link.
 
 #### Passed Example 8
 
-The [programmatically determined context][] (provided by the cell containing the link) and the [accessible name][] (from the link's text) describe the purpose of the links.
+The [programmatically determined link context][] (provided by the cell containing the link) and the [accessible name][] (from the link's text) describe the purpose of the links.
 
 ```html
 <table>

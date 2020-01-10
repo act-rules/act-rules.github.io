@@ -133,7 +133,7 @@ For more details, see [ACT Rules Format: Background](https://www.w3.org/TR/act-r
 
 ## Test cases
 
-The test cases are snippets of code that help with understanding and can be used for validating implementations of the rule. There must be at least one example for **pass**, **fail** and **unapplicable** outcomes. 
+The test cases are snippets of code that help with understanding and can be used for validating implementations of the rule. There must be at least one example for **pass**, **fail** and **inapplicable** outcomes. A passing or inapplicable example should pass other applicable rules. A failing example should only fail in the one aspect being demonstrated.
 
 Each test case should be simply and uniquely named, _e.g. "Passed Example 1"_. Each example must also include a brief declarative description that uses plain language, and is a well-formed grammatically correct sentence that finishes with a full stop/period. Words from code should use back ticks and be identified as elements or attributes.
 

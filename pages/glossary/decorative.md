@@ -1,7 +1,7 @@
 ---
 title: Decorative
 key: decorative
-unambiguous: false
+unambiguous: true
 objective: false
 ---
 

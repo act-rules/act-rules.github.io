@@ -229,11 +229,6 @@ Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.
 This link has no descendant text nodes.
 
 ```html
-<style>
-	* {
-		text-decoration: none;
-	}
-</style>
 <p>
 	Read about WAI on the
 	<a href="http://w3.org/WAI">
@@ -261,11 +256,6 @@ This link has no descendant text nodes.
 This link has no visible descendant text nodes.
 
 ```html
-<style>
-	* {
-		text-decoration: none;
-	}
-</style>
 <p>Read about WAI on the <a href="http://w3.org/WAI" style="visibility:hidden">WAI webpage</a>.</p>
 ```
 
@@ -274,11 +264,6 @@ This link has no visible descendant text nodes.
 This paragraph has no descendant text nodes apart from those in the link.
 
 ```html
-<style>
-	* {
-		text-decoration: none;
-	}
-</style>
 <p><a href="http://w3.org/WAI">WAI webpage</a></p>
 ```
 
@@ -287,11 +272,6 @@ This paragraph has no descendant text nodes apart from those in the link.
 This paragraph has no visible descendant text nodes apart from those in the link.
 
 ```html
-<style>
-	* {
-		text-decoration: none;
-	}
-</style>
 <p><span style="visibility:hidden">Invisible text</span><a href="http://w3.org/WAI">WAI webpage</a></p>
 ```
 

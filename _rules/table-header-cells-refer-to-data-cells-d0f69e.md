@@ -20,14 +20,15 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any HTML element that 
+The rule applies to any HTML element that
+
 - has the [semantic role][] of [rowheader][] or [columnheader][] and;
 - is [visible][] and;
 - is [included in the accessibility tree][] and;
-- whose closest ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][]; 
-1. has [descendants][descendant], that are non empty ("") and; 
-2. is [visible][] and; 
-3. is [included in the accessibility tree][].
+- whose closest ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][];
+  1. has [descendants][descendant], that are non empty ("") and;
+  2. is [visible][] and;
+  3. is [included in the accessibility tree][].
 
 ## Expectation
 
@@ -238,26 +239,30 @@ The only element with a header [role][semantic role] is part of a table which is
 The only element with header [role][semantic role] is part of a table which is not [visible][].
 
 ```html
-<style>
-	.notInPage {
-		position: absolute;
-		left: -9999px;
-		top: -9999px;
-	}
-</style>
-<table class="notInPage">
-	<tr>
-		<th>Time</th>
-	</tr>
-	<tr>
-		<td>24:00</td>
-	</tr>
-</table>
+<html>
+	<style>
+		.notInPage {
+			position: absolute;
+			left: -9999px;
+			top: -9999px;
+		}
+	</style>
+	<body>
+		<table class="notInPage">
+			<tr>
+				<th>Time</th>
+			</tr>
+			<tr>
+				<td>24:00</td>
+			</tr>
+		</table>
+	</body>
+</html>
 ```
 
 #### Inapplicable Example 3
 
-There is no element with a [semantic role][] of header.
+There is no element with a [semantic role][] of header within the table.
 
 ```html
 <table>
@@ -269,7 +274,7 @@ There is no element with a [semantic role][] of header.
 
 #### Inapplicable Example 4
 
-There is no element with a [semantic role][] of header.
+There are no [descendants][descendant] within the table.
 
 ```html
 <table></table>
@@ -277,12 +282,27 @@ There is no element with a [semantic role][] of header.
 
 #### Inapplicable Example 5
 
-The only element with a [role][]semantic role] of header is not [visible][].
+The only element with a [role][semantic role] of header is not [visible][].
 
 ```html
 <table>
 	<tr>
-		<th></th>
+		<th style="display: none;"></th>
+	</tr>
+	<tr>
+		<td></td>
+	</tr>
+</table>
+```
+
+#### Inapplicable Example 6
+
+There are no elements with a [role][semantic role] of header within the table.
+
+```html
+<table>
+	<tr>
+		<th role="cell"></th>
 	</tr>
 	<tr>
 		<td></td>

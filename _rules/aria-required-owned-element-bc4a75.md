@@ -29,9 +29,9 @@ The rule applies to any HTML or SVG element that is [included in the accessibili
 - the element has a [semantic role][] of `combobox`; or
 - the element has the `aria-busy` state set to `true`, or has an [ancestor][] in the accessibility tree with this state.
 
-**Note:** An example of an element that has a [required owned element][] is `tablist` which has `tab` as a [required owned element][].
+**Note:** An example of an element that has a [required owned element][] is [`tablist`](https://www.w3.org/TR/wai-aria-1.1/#tablist) which has `tab` as a [required owned element][].
 
-**Note:** An example of an element that has an [implicit semantic role][] that is identical to its [explicit semantic role][] is a `ul` element that has `role="list"`. These elements are not applicable.
+**Note:** An example of an element that has an [implicit semantic role][] that is identical to its [explicit semantic role][] is a `ul` element that has `role="list"`. These elements are tested separately, because some of these native HTML elements have additional requirements that apply to them. For example, there is no native HTML element to "group" `li` elements in a `ul` element.
 
 **Note:** The applicability of this rule is limited to only the [WAI-ARIA 1.1][] roles, since there are unresolved issues with how [Digital Publishing WAI-ARIA Module][] (DPUB ARIA 1.1) uses role inheritance to define the [required owned element][], which makes it deviate from the model defined in [WAI-ARIA 1.1][]. The [WAI-ARIA Graphics Module][] does not include any [required owned element][].
 
@@ -41,7 +41,7 @@ The rule applies to any HTML or SVG element that is [included in the accessibili
 
 Each test target only [owns][] elements with a [semantic role][] from the [required owned element][] list for the test target's [semantic role]().
 
-**Note:** If the [required owned element][] list has two roles in one item separated by a "→", elements with the first of these roles, is only a [required owned element][] if all its owned elements have the second of these roles as their [semantic role][]. For example a `list` has `group → listitem`, so an element with the [semantic role][] of `group` only counts as a [required owned element][] for `list`, if all elements [owned by][] the `group` have the [semantic role][] of `listitem`.
+**Note:** Some [required owned elements][] are only valid if they themselves [own][owns] (or "contain") elements with a given [semantic role][]. This is denoted by an arrow (meaning "containing") in the role description. For example, the role `list` has `group → listitem` as one of its [required owned elements][], meaning that elements with a role of `list` may only [own][owns] elements with a role of `group` who themselves only [own][] elements with a role of `listitem`.
 
 **Note:** The definition of [owned by][] used in this rule is different than the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element). See more in the [owned by][] definition.
 
@@ -83,10 +83,10 @@ This element with the `list` role only owns elements with the `listitem` role. T
 This element with the `tablist` role only owns elements with the `tab` role. The `tab` role is one of the [required owned elements][] for `tablist`.
 
 ```html
-<div role="tablist">
-	<span role="tab">Tab 1</span>
-	<span role="tab">Tab 2</span>
-</div>
+<ul role="tablist">
+	<li role="tab">Tab 1</li>
+	<li role="tab">Tab 2</li>
+</ul>
 ```
 
 #### Passed Example 3
@@ -106,25 +106,15 @@ This element with the `grid` role only owns elements with the `row` role, and th
 This element with the `menu` role only owns elements with the `menuitem`, `menuitemradio` and `menuitemcheckbox` role. These roles are all [required owned elements][] for `menu`. The element with the `none` role is not [owned by][] the `menu` because it is not [included in the accessibility tree][].
 
 ```html
-<ul role="menu">
+<div role="menu">
 	<li role="none"></li>
 	<li role="menuitem">Item 1</li>
-	<li role="menuitemradio">Item 2</li>
+	<div role="menuitemradio">Item 2</div>
 	<div role="menuitemcheckbox">Item 3</div>
-</ul>
-```
-
-#### Passed Example 5
-
-This element with the `list` role only owns elements with an implicit `listitem` role. The `listitem` role is one of the [required owned elements][] for `list`.
-
-```html
-<div role="list">
-	<li>Item 1</li>
 </div>
 ```
 
-#### Passed Example 6
+#### Passed Example 5
 
 This element with the `list` role only owns elements with the `listitem` role through the `aria-owns` attribute. The `listitem` role is one of the [required owned elements][] for `list`.
 
@@ -135,7 +125,7 @@ This element with the `list` role only owns elements with the `listitem` role th
 <div id="id1" role="listitem">Item 1</div>
 ```
 
-#### Passed Example 7
+#### Passed Example 6
 
 This element with the `list` role only owns elements with the `listitem` role, or elements with the `group` role, in which each element has the `listitem` role. Both the `listitem` role on its own, and the `group` role (when containing elements with the `listitem` role) are [required owned elements][] for `list`.
 
@@ -173,6 +163,17 @@ This element with the `tablist` role owns an element with the `listitem` role. T
 
 #### Failed Example 3
 
+This element with the `list` role owns an element with the `listitem` role, and one with the `link` role. The `link` role is not one of the [required owned elements][] for `list`.
+
+```html
+<div role="list">
+  <li>Item 1</li>
+  <span role="link">Item 2</span>
+</div>
+```
+
+#### Failed Example 4
+
 This element with the `grid` role only owns elements with the `row` role, but the element with the `row` role does not own elements with the `cell` role. The `cell` is one of the [required owned elements][] for `row`.
 
 ```html
@@ -183,7 +184,7 @@ This element with the `grid` role only owns elements with the `row` role, but th
 </div>
 ```
 
-#### Failed Example 4
+#### Failed Example 5
 
 This element with the `list` role owns an element with the `tab` role through the `aria-owns` attribute. The `tab` role is not one of the [required owned elements][] for `list`.
 
@@ -194,7 +195,7 @@ This element with the `list` role owns an element with the `tab` role through th
 <div id="id2" role="tab">Tab 1</div>
 ```
 
-#### Failed Example 5
+#### Failed Example 6
 
 This element with the `list` role owns an element with the `group` role, but the group owns elements with the `tab` role. The `group` is not a [required owned elements][] for `list`, if it owns elements with a [semantic role][] other then `listitem`.
 
@@ -253,6 +254,15 @@ This element with the `menu` role has attribute an `aria-busy` attribute set to 
 <ul role="menu" aria-busy="true">
 	Loading
 </ul>
+```
+
+#### Inapplicable Example 6
+
+This element with the `combobox` role is accessible without owned elements.
+
+```html
+<label for="combo">My Combobox</label>
+<input role="combobox" aria-expanded="false" id="combo" />
 ```
 
 [required owned element]: https://www.w3.org/TR/wai-aria-1.1/#mustContain 'Define Required owned element'

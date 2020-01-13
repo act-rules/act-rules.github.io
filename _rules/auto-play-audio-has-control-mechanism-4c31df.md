@@ -1,18 +1,19 @@
 ---
 id: 4c31df
-name: auto-play audio has a control mechanism
+name: audio or video that plays automatically has a control mechanism
 rule_type: atomic
 description: |
-  auto-play audio or video must have a control mechanism.
+  audio or video that plays automatically must have a control mechanism.
 accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
   - Audio output
   - Visual output
-authors:
-  - Anne Thyme Nørregaard
-  - Bryn Anderson
+acknowledgements:
+  authors:
+    - Anne Thyme Nørregaard
+    - Bryn Anderson
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -62,7 +63,7 @@ The native `<video>` and `<audio>` controls in several browser and assistive tec
 The `<audio>` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
 
 ```html
-<audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay="true" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay="true" controls></audio>
 ```
 
 #### Passed Example 2
@@ -71,8 +72,8 @@ The `<video>` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechan
 
 ```html
 <video autoplay="true" controls>
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```
 
@@ -98,8 +99,8 @@ The `<video>` element has a custom [mechanism](https://www.w3.org/TR/WCAG21/#dfn
 	<div id="video-container">
 		<!-- Video -->
 		<video id="video" autoplay="true">
-			<source src="https://act-rules.github.io/test-assets/rabbit-video/video.mp4" type="video/mp4" />
-			<source src="https://act-rules.github.io/test-assets/rabbit-video/video.webm" type="video/webm" />
+			<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+			<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 		</video>
 		<!-- Video Controls -->
 		<div id="video-controls">
@@ -107,7 +108,7 @@ The `<video>` element has a custom [mechanism](https://www.w3.org/TR/WCAG21/#dfn
 			<button type="button" id="mute">Mute</button>
 		</div>
 	</div>
-	<script src="../test-assets/80f0bf/no-autoplay.js"></script>
+	<script src="/test-assets/80f0bf/no-autoplay.js"></script>
 </body>
 ```
 
@@ -118,7 +119,7 @@ The `<video>` element has a custom [mechanism](https://www.w3.org/TR/WCAG21/#dfn
 The `<audio>` does not have a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
 
 ```html
-<audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay="true"></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay="true"></audio>
 ```
 
 #### Failed Example 2
@@ -127,8 +128,8 @@ The `<video>` element autoplays and does not have a [mechanism](https://www.w3.o
 
 ```html
 <video autoplay="true">
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```
 
@@ -155,8 +156,8 @@ The `<video>` has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to 
 	<div id="video-container">
 		<!-- Video -->
 		<video id="video" autoplay="true">
-			<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-			<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+			<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+			<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 		</video>
 		<!-- Video Controls -->
 		<div id="video-controls">
@@ -164,7 +165,7 @@ The `<video>` has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to 
 			<button type="button" id="mute">Mute</button>
 		</div>
 	</div>
-	<script src="../test-assets/80f0bf/no-autoplay.js"></script>
+	<script src="/test-assets/80f0bf/no-autoplay.js"></script>
 </body>
 ```
 
@@ -190,8 +191,8 @@ The `<video>` has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to 
 	<div id="video-container">
 		<!-- Video -->
 		<video id="video" autoplay="true">
-			<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-			<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+			<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+			<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 		</video>
 		<!-- Video Controls -->
 		<div id="video-controls">
@@ -199,7 +200,7 @@ The `<video>` has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to 
 			<button type="button" id="mute"></button>
 		</div>
 	</div>
-	<script src="../test-assets/80f0bf/no-autoplay.js"></script>
+	<script src="/test-assets/80f0bf/no-autoplay.js"></script>
 </body>
 ```
 
@@ -225,8 +226,8 @@ The `<video>` has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to 
 	<div id="video-container">
 		<!-- Video -->
 		<video id="video" autoplay="true">
-			<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-			<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+			<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+			<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 		</video>
 		<!-- Video Controls -->
 		<div id="video-controls" aria-hidden="true">
@@ -234,7 +235,7 @@ The `<video>` has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to 
 			<button type="button" id="mute">Mute</button>
 		</div>
 	</div>
-	<script src="../test-assets/80f0bf/no-autoplay.js"></script>
+	<script src="/test-assets/80f0bf/no-autoplay.js"></script>
 </body>
 ```
 
@@ -246,8 +247,8 @@ The `<video>` element is `muted`.
 
 ```html
 <video autoplay="true" muted="true">
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```
 
@@ -257,8 +258,8 @@ The `<video>` element `src` file has no audio output.
 
 ```html
 <video autoplay="true">
-	<source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm" />
 </video>
 ```
 
@@ -267,5 +268,5 @@ The `<video>` element `src` file has no audio output.
 The `audio` element does not autoplay.
 
 ```html
-<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```

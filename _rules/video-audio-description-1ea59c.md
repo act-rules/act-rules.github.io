@@ -10,9 +10,10 @@ input_aspects:
   - CSS Styling
   - Audio output
   - Visual output
-authors:
-  - Wilco Fiers
-  - Brian Bors
+acknowledgements:
+  authors:
+    - Wilco Fiers
+    - Brian Bors
 ---
 
 ## Applicability
@@ -65,7 +66,7 @@ A video element with an audio description.
 <figure id="ozplayer-1-container" class="ozplayer-container">
 	<div data-controls="stack" class="ozplayer" id="ozplayer-1">
 		<video controls="controls" preload="none">
-			<source src="/test-assets/rabbit-video.mp4" type="video/mp4" />
+			<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 		</video>
 		<audio data-default="default" preload="none">
 			<source src="/test-assets/rabbit-video/audio-description.mp3" type="audio/mp3" />

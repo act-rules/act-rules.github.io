@@ -1,25 +1,26 @@
 # List of spelling to be ignored by spellcheck tests in `__tests__/spelling.js`
 
 # Project specific words
-- WAI 
+- WAI
 - W3C
+- ACTR
 
-# Generic HTML tag(s)
-- html
-- iframe
-- img
-- frameset
-- h1 
-- h1-h6
-- svg
+# Parts of url
+- http
+- https
+- wai-aria
+
+# Tag(s)
+- svg # `aria-query` dom tags does not list `svg`
 
 # Domain-specific words, Definitions & other allowed terms
-- URI 
-- UA/AT 
+- URI
+- UA/AT
 - WCAG
-- WCAG2 
-- CSS3 
-- UA 
+- WCAG2
+- WCAG21
+- CSS3
+- UA
 - UI
 - APIs
 - MDN
@@ -31,41 +32,43 @@
 - DOM
 - SVG
 - PDFs
+- DOCX
+- DPUB
+- DNS
+- Esc # esc key on a keyboard
 - url
 - voiceover
 - subtag
 - subtags
 - testrunner
 - color
-- focusable 
-- unfocusable 
-- tabindex 
-- whitespace 
-- namespaces 
+- focusable
+- Focusable
+- unfocusable
+- tabindex
+- whitespace
+- namespace
+- namespaces
 - webpage
+- wai-aria-specifications
 - autoplay
 - autoplays
+- presentational
+- EARL10-Schema
+- labelable
+- merchantability
 
-# spell checker checks against strict casing & hence some repeated words here
-- Autocomplete 
-- Focusable
+# Notes and acronyms
+- TODO
+- TBD
 
-# Parts of url
-- http 
-- https 
-- github.com  
-- www.w3.org 
-- eval 
-- html52
-- whatwg
-- dom
-
-# Other tool names
+# Tool and library names
 - axe-core
 - alfa
 - RGAA
 - wcag-em-report-tool
-- ozplayer 
+- ozplayer
+- GitHub
 
 # Test case anamolies
 - level2-frame1
@@ -73,36 +76,16 @@
 - level1-frame1
 - XYZ
 
-# Attributes
+# Attributes (repeated words with casing as retext-spell has no config to ignore casing)
 - href
 - src
-- aria-labelled
-- aria-labelledby 
+- aria-labelled # used to demonstrate wrong attribute
 - autofill-field
-- combobox 
-- spinbutton
-- gridcell 
-- menuitem 
-- menuitemcheckbox 
-- menuitemradio 
-- searchbox 
-- treeitem 
-- listbox 
-- textbox 
-- autocomplete 
-- textarea
-- autoplay 
+- autocomplete
+- Autocomplete
 - tristate
-- scrollbar
 - viewport
-- figcaption
-- aria-errormessage 
-- aria-rowindex 
-- aria-valuemin 
-- aria-valuemax 
-- aria-valuenow 
-- aria-dropeffect
-- lang 
+- lang
 - xml:lang
 - http-equiv
 - user-scalable
@@ -112,62 +95,26 @@
 - rotateZ
 - matrix3d
 
-# ARIA Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#aria)
-- ARIA1 
-- ARIA5 
-- ARIA6 
-- ARIA7 
-- ARIA8
-- ARIA10 
-- ARIA12
-- ARIA14 
-- ARIA16
-
-# Common Failures (https://www.w3.org/WAI/WCAG21/Techniques/#failures)
-- F10
-- F23
-- F30 
-- F38 
-- F40 
-- F41 
-- F65 
-- F89
-
-# General Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#general)
-- G8 
-- G21 
-- G78 
-- G87 
-- G88 
-- G93 
-- G95 
-- G108 
-- G130 
-- G131 
-- G158 
-- G159 
-- G162 
-- G166 
-- G170
-- G171
-- G173 
-- G203
-
-# HTMl Techniques (https://www.w3.org/WAI/WCAG21/Techniques/#html)
-- H25 
-- H36 
-- H37 
-- H42 
-- H44
-- H58
-- H67 
-- H93 
-- H94 
-- H95 
-- H96
-
 # Unsure why the dictionary does not have these words
 - programmatically
 - Programmatically
 - personalization
 - Autofill
+- implementers
+- Implementers
+
+# Parts of Unicode
+- 000A
+- 000B
+- 000C
+- 000D
+
+# JSON attributes/ metadata
+- testcases
+- ruleId
+- ruleName
+- rulePage
+- ruleAccessibilityRequirements
+- cantTell
+- TestSubject
+- earl:cantTell

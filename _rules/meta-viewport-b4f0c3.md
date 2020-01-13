@@ -3,7 +3,7 @@ id: b4f0c3
 name: meta viewport does not prevent zoom
 rule_type: atomic
 description: |
-  This rule checks that the `meta` element is not used to block the user agent ability to zoom.
+  This rule checks that the `meta` element retains the user agent ability to zoom.
 accessibility_requirements:
   wcag20:1.4.4: # Resize text (AA)
     forConformance: true
@@ -12,9 +12,10 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-authors:
-  - Jey Nandakumar
-  - Audrey Maniez
+acknowledgements:
+  authors:
+    - Jey Nandakumar
+    - Audrey Maniez
 ---
 
 ## Applicability

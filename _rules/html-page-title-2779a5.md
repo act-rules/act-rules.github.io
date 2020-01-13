@@ -12,12 +12,13 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-authors:
-  - Wilco Fiers
-  - Stein Erik Skotkjerra
-  - Bryn Anderson
-  - Anne Thyme Nørregaard
-  - Jey Nandakumar
+acknowledgements:
+  authors:
+    - Wilco Fiers
+    - Stein Erik Skotkjerra
+    - Bryn Anderson
+    - Anne Thyme Nørregaard
+    - Jey Nandakumar
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -28,7 +29,7 @@ htmlHintIgnore:
 
 The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element.
 
-**Note**: Documents embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not web pages according to the definition in WCAG.
+**Note**: Documents embedded into other documents, such as through `iframe` or `object` elements are not applicable and do not require page titles, because they are not web pages according to the definition in WCAG.
 
 ## Expectation 1
 
@@ -55,6 +56,7 @@ _There are no major accessibility support issues known for this rule._
 - [Understanding Success Criterion 2.4.2: Page Titled](https://www.w3.org/WAI/WCAG21/Understanding/page-titled)
 - [G88: Providing descriptive titles for Web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G88)
 - [H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG21/Techniques/html/H25)
+- [HTML 5.2: the `title` element](https://www.w3.org/TR/html52/document-metadata.html#the-title-element)
 
 ## Test Cases
 
@@ -72,7 +74,7 @@ This page has a `title` with content.
 
 #### Passed Example 2
 
-This page gives a `title` to an iframe.
+This page `title` element is for the entire page, including content in the `iframe` without its own `title`.
 
 ```html
 <html>
@@ -120,16 +122,6 @@ The first `title` element has content.
 	<body>
 		<title></title>
 	</body>
-</html>
-```
-
-#### Passed Example 6
-
-The `title` only contains characters that are not letters or numbers.
-
-```html
-<html>
-	<title>#$@&%*!</title>
 </html>
 ```
 

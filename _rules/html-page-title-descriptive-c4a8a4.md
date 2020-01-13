@@ -12,9 +12,10 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-authors:
-  - Anne Thyme Nørregaard
-  - Corbb O'Connor
+acknowledgements:
+  authors:
+    - Anne Thyme Nørregaard
+    - Corbb O'Connor
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -105,25 +106,6 @@ Even though the descriptive `<title>` element is not placed within the `<head>` 
 </html>
 ```
 
-#### Passed Example 4
-
-`<title>` element with content present in document, and the title is descriptive of the content, even though it does not contain letters or numbers.
-
-```html
-<html>
-	<head>
-		<title>;)</title>
-	</head>
-	<body>
-		<h1>;)</h1>
-		<p>
-			The winking emoticon is commonly used after a light-hearted or sarcastic remark. It is also a popular IM and
-			e-mail emoticon shortcut.
-		</p>
-	</body>
-</html>
-```
-
 ### Failed
 
 #### Failed Example 1
@@ -152,23 +134,6 @@ Even though a correct `<title>` element is put in the `<head>` of the document, 
 	<head>
 		<title>First title is incorrect</title>
 		<title>Clementine harvesting season</title>
-	</head>
-	<body>
-		<p>
-			Clementines will be ready to harvest from late October through February.
-		</p>
-	</body>
-</html>
-```
-
-#### Failed Example 3
-
-`<title>` element with content present in document, but it is not descriptive of the content.
-
-```html
-<html>
-	<head>
-		<title>;)</title>
 	</head>
 	<body>
 		<p>

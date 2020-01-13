@@ -87,7 +87,7 @@ This `html` element has a `lang` attribute whose value is not a [valid language 
 
 #### Failed Example 4
 
-This `html` element has a `lang` attribute whose value is not a [valid language subtag][]
+This `html` element has a `lang` attribute whose value is not a [valid language subtag][].
 
 ```html
 <html lang="#!"></html>

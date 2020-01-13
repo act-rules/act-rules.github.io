@@ -65,18 +65,18 @@ This `html` element has identical [primary language subtags][] for its `lang` an
 
 #### Passed Example 2
 
-This `html` element has identical [primary language subtags][] for its `lang` and `xml:lang` attributes. The [extended language subtags][] also match.
+This `html` element has identical [primary language subtags][] for its `lang` and `xml:lang` attributes. The [extended language subtags][] do not match, but this is not required by this rule.
 
 ```html
-<html lang="en-GB" xml:lang="en-GB"></html>
+<html lang="en-GB" xml:lang="en-US"></html>
 ```
 
 #### Passed Example 3
 
-This `html` element has identical [primary language subtags][] for its `lang` and `xml:lang` attributes. The [extended language subtags][] do not match.
+This `html` element has identical [primary language subtags][] for its `lang` and `xml:lang` attributes. In this case, the [extended language subtags][] also match.
 
 ```html
-<html lang="en-GB" xml:lang="en-US"></html>
+<html lang="en-GB" xml:lang="en-GB"></html>
 ```
 
 ### Failed

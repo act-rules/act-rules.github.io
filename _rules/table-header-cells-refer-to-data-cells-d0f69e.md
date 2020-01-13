@@ -20,7 +20,14 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any HTML element that has the [semantic role][] of [rowheader][] or [columnheader][], that is [visible][], [included in the accessibility tree][], whose closest ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][]; which: 1. has [descendants][descendant], that are non empty (""), 2. is [visible][], 3. as well as [included in the accessibility tree][].
+The rule applies to any HTML element that 
+- has the [semantic role][] of [rowheader][] or [columnheader][] and;
+- is [visible][] and;
+- is [included in the accessibility tree][] and;
+- whose closest ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][]; 
+1. has [descendants][descendant], that are non empty ("") and; 
+2. is [visible][] and; 
+3. is [included in the accessibility tree][].
 
 ## Expectation
 
@@ -213,7 +220,7 @@ The column header ('Column B') does not have an assigned cell within the same `t
 
 #### Inapplicable Example 1
 
-The rule does not apply to table element that is not [included in the accessibility tree][].
+The only element with a header [role][semantic role] is part of a table which is not [included in the accessibility tree][].
 
 ```html
 <table role="presentation">
@@ -228,7 +235,7 @@ The rule does not apply to table element that is not [included in the accessibil
 
 #### Inapplicable Example 2
 
-The rule does not apply to table element that is not [visible][] in page.
+The only element with header [role][semantic role] is part of a table which is not [visible][].
 
 ```html
 <style>
@@ -250,7 +257,7 @@ The rule does not apply to table element that is not [visible][] in page.
 
 #### Inapplicable Example 3
 
-The rule does not apply to table element that has no [descendants][descendant] with [semantic roles][semantic role] of either [rowheader][] or [columnheader][].
+There is no element with a [semantic role][] of header.
 
 ```html
 <table>
@@ -262,7 +269,7 @@ The rule does not apply to table element that has no [descendants][descendant] w
 
 #### Inapplicable Example 4
 
-The rule does not apply to table element that has no [descendants][descendant].
+There is no element with a [semantic role][] of header.
 
 ```html
 <table></table>
@@ -270,7 +277,7 @@ The rule does not apply to table element that has no [descendants][descendant].
 
 #### Inapplicable Example 5
 
-The rule does not apply to table element that has [descendants][descendant] that are empty ("").
+The only element with a [role][]semantic role] of header is not [visible][].
 
 ```html
 <table>

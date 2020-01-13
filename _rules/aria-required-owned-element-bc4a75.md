@@ -103,7 +103,7 @@ This element with the `grid` role only owns elements with the `row` role, and th
 
 #### Passed Example 4
 
-This element with the `menu` role only owns elements with the `menuitem`, `menuitemradio` and `menuitemcheckbox` role. These roles are one of the [required owned elements][] for `menu`. The element with the `none` role is not [owned by][] the `menu` because it is not [included in the accessibility tree][].
+This element with the `menu` role only owns elements with the `menuitem`, `menuitemradio` and `menuitemcheckbox` role. These roles are all [required owned elements][] for `menu`. The element with the `none` role is not [owned by][] the `menu` because it is not [included in the accessibility tree][].
 
 ```html
 <ul role="menu">
@@ -137,7 +137,7 @@ This element with the `list` role only owns elements with the `listitem` role th
 
 #### Passed Example 7
 
-This element with the `list` role only owns elements with the `listitem` role, or elements with the `group` role, in which each element has the `listitem` role. The `listitem` role on its own, as well as in a `group` are in the [required owned elements][] for `list`.
+This element with the `list` role only owns elements with the `listitem` role, or elements with the `group` role, in which each element has the `listitem` role. Both the `listitem` role on its own, and the `group` role (when containing elements with the `listitem` role) are [required owned elements][] for `list`.
 
 ```html
 <div role="list">
@@ -153,7 +153,7 @@ This element with the `list` role only owns elements with the `listitem` role, o
 
 #### Failed Example 1
 
-This element with the `list` role owns elements without the `listitem` role. The `listitem` role is one of the [required owned elements][] for `list`.
+This element with the `list` role does not owns an element without any of its [required owned elements][] (`listitem` or `group` containing `listitem`).
 
 ```html
 <div role="list">

@@ -93,7 +93,7 @@ This `html` element has different [primary language subtags][] for its `lang` an
 
 #### Inapplicable Example 1
 
-This rule does not apply to `svg` elements
+This rule does not apply to `svg` elements.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" lang="en" xml:lang="en"></svg>

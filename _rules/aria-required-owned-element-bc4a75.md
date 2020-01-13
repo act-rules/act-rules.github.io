@@ -23,7 +23,7 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any HTML or SVG element that is [included in the accessibility tree and has a [WAI-ARIA 1.1][] [explicit semantic role][] with [required owned elements][], except if
+The rule applies to any HTML or SVG element that is [included in the accessibility tree][] and has a [WAI-ARIA 1.1][] [explicit semantic role][] with [required owned elements][], except if
 
 - the element has an [implicit semantic role][] that is identical to its [explicit semantic role][]; or
 - the element has a [semantic role][] of `combobox`; or

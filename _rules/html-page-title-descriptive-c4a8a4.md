@@ -29,7 +29,7 @@ This rule applies to the first HTML `title` element that
 - is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the `html` element of a [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), and
 - contains [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
 
-**Note**: The `title` elements of embedded documents, such as those in `iframe` or `object` elements, are not applicable because those are not web pages according to the definition in WCAG.
+**Note**: The `title` elements of embedded documents, such as those in `iframe`, `object`, or `svg` elements, are not applicable because those are not web pages according to the definition in WCAG.
 
 **Note**: The [HTML 5.2 specification](https://www.w3.org/TR/html52/document-metadata.html#the-title-element) requires that a document only has one `title` element, and that it is a child of the `head` element of a document. However, HTML 5.2 also describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG.
 
@@ -57,7 +57,7 @@ _There are no assumptions for this rule._
 
 #### Passed Example 1
 
-The `<title>` element describes the content of the document.
+This `<title>` element describes the content of the document.
 
 ```html
 <html>
@@ -74,7 +74,7 @@ The `<title>` element describes the content of the document.
 
 #### Passed Example 2
 
-Two `<title>` elements where the first one describes the content of the document.
+This `<title>` element, the first of two, describes the content of the document.
 
 ```html
 <html>
@@ -92,7 +92,7 @@ Two `<title>` elements where the first one describes the content of the document
 
 #### Passed Example 3
 
-Even though the descriptive `<title>` element is not placed within the `<head>` element that is the context the element can be used in [according to the HTML specification](https://html.spec.whatwg.org/#the-title-element), the rule still passes, since the browser fixes it, and it doesn't cause any known accessibility issues.
+This `<title>` element, which is within the `body`, describes the content of the document. Even though it is not placed within the `<head>` element, as expected [according to the HTML specification](https://html.spec.whatwg.org/#the-title-element), the rule still passes because the browser fixes it and it doesn't cause any known accessibility issues.
 
 ```html
 <html>
@@ -110,7 +110,7 @@ Even though the descriptive `<title>` element is not placed within the `<head>` 
 
 #### Failed Example 1
 
-`<title>` is not descriptive of the content of the document.
+This `<title>` element does not describe the content of the document.
 
 ```html
 <html>
@@ -127,7 +127,7 @@ Even though the descriptive `<title>` element is not placed within the `<head>` 
 
 #### Failed Example 2
 
-Even though a correct `<title>` element is put in the `<head>` of the document, this rule only looks at the first `<title>` element.
+This `<title>` element, the first of two, does not describe the content of the document. Most browsers, and this rule, only look at the first `<title>` element.
 
 ```html
 <html>
@@ -147,11 +147,11 @@ Even though a correct `<title>` element is put in the `<head>` of the document, 
 
 #### Inapplicable Example 1
 
-This document has a `<title>` element but is inapplicable since the document element is an SVG `svg` element.
+This `title` element is a child of an `svg` element.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">
-  <title>This is a circle</title>
+  <title>This is a red circle</title>
   <circle cx="150" cy="75" r="50" fill="green"></circle>
 </svg>
 ```

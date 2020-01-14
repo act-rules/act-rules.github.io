@@ -46,6 +46,8 @@ For each test target, the [highest possible contrast](#highest-possible-contrast
 
 **Note**: Passing this rule does not mean that the text has sufficient color contrast. If all background pixels have a low contrast with all foreground pixels, the success criterion is guaranteed to not be satisfied. When some pixels have sufficient contrast, and others do not, legibility should be considered. There is no clear method for determining legibility, which is why this is out of scope for this rule.
 
+**Note**: When the text color or background color is not specified in the web page, colors from other [origins](https://www.w3.org/TR/css3-cascade/#cascading-origins) will be used. Testers must ensure colors are not effected by styles from a [user origin](https://www.w3.org/TR/css3-cascade/#cascade-origin-user). Contrast issues cause by specifying the text color but not the background or vise versa, must be tested separately from this rule.
+
 ## Assumptions
 
 - [Success criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/TR/WCAG21/#contrast-minimum) has exceptions for "incidental" text, which includes inactive user interface components and decorative texts. The rule assumes that [text nodes](https://dom.spec.whatwg.org/#text) that should be ignored are [disabled]() or hidden from assistive technologies. If this isn't the case, the rule may produce incorrect results.
@@ -140,7 +142,9 @@ The first `p` element is has a contrast ratio of 21:1 (default black on white). 
 **Note**: Because this is non-text content, [success criterion 1.4.11 Non-text Contrast](https://www.w3.org/TR/WCAG21/#non-text-contrast) requires font example to have a color contrast of 3:1.
 
 ```html
-<p>Helvetica is a widely used sans-serif typeface developed in 1957 by Max Miedinger and Eduard Hoffmann.</p>
+<p style="color: #333; background: #FFF;">
+	Helvetica is a widely used sans-serif typeface developed in 1957 by Max Miedinger and Eduard Hoffmann.
+</p>
 <p style="font-family: helvetica; background: #EEE; color: #777;" aria-hidden="true">
 	The quick brown fox jumps over the lazy dog.
 </p>
@@ -157,6 +161,14 @@ This text does not convey anything in human language.
 ```
 
 #### Passed Example 9
+
+This text has the default browser text color on the default browser background color. By default this is black text on a white background, which has a contrast ratio of 21:1.
+
+```html
+<p>Some text in a human language</p>
+```
+
+#### Passed Example 10
 
 This dark gray text has a contrast ratio of 12.6:1 on the white background in a shadow DOM tree.
 

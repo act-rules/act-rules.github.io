@@ -277,7 +277,7 @@ This text is not [visible][] because it is positioned off screen.
 This text is not [visible][] because the foreground color is the same as the background color.
 
 ```html
-<p style="color: white; background: white;" aria-hidden="true">Page last updated on 2020/01/10</p>
+<p style="color: white; background: white;" aria-hidden="true">Hidden text - U U D D L R L R B A S</p>
 ```
 
 #### Inapplicable Example 4

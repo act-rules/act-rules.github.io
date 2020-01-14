@@ -41,7 +41,7 @@ The rule applies to any HTML or SVG element that is [included in the accessibili
 
 Each test target only [owns][] elements with a [semantic role][] from the [required owned element][] list for the test target's [semantic role]().
 
-**Note:** Some [required owned elements][] are only valid if they themselves [own][owns] (or "contain") elements with a given [semantic role][]. This is denoted by an arrow (meaning "containing") in the role description. For example, the role `list` has `group → listitem` as one of its [required owned elements][], meaning that elements with a role of `list` may only [own][owns] elements with a role of `group` who themselves only [own][] elements with a role of `listitem`.
+**Note:** Some [required owned elements][] are only valid if they themselves [own][owns] (or "contain") elements with a given [semantic role][]. This is denoted by an arrow (meaning "containing") in the role description. For example, the role `list` has `group → listitem` as one of its [required owned elements][], meaning that elements with a role of `list` may only [own][owns] elements with a role of `group` who themselves only [own][owns] elements with a role of `listitem`.
 
 **Note:** The definition of [owned by][] used in this rule is different than the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element). See more in the [owned by][] definition.
 

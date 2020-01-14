@@ -40,7 +40,7 @@ For each test target where the lack of user input caused the appearance of an [e
 
 ## Expectation 2
 
-Each [error message][] from Expectation 1 allows the identification of the test target.
+Each [error message][] from Expectation 1 identifies the test target as the cause of the error.
 
 ## Expectation 3
 

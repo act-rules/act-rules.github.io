@@ -89,7 +89,7 @@ Names of the Authors. These must be an exact match of names in `contributors` pr
 
 Applicability describes which (elements of) web pages should be tested using the rule. These elements are known as test targets. Applicability must be written in plain language, as well-formed grammatically correct sentences, so that it can be used by QA testers. Applicability must rely on well defined properties of the technologies that are tested. For instance, a rule may be applicable to all `video` elements, but it can not be applicable to all `object` elements used to show video, unless the term "video" is further defined.
 
-Finding objective definitions to use in rules can be difficult, if not outright impossible in some cases. The intent here is to ensure repeatability of the rule. Not everything in WCAG testing is entirely repeatable, but when it comes to rule applicability, this is a hard requirement.
+Use objective, unambiguous definitions within applicability. Finding objective definitions to use in rules can be difficult, if not outright impossible in some cases. The intent here is to ensure repeatability of the rule. Not everything in WCAG testing is entirely repeatable, but when it comes to rule applicability, this is a hard requirement.
 
 > _For example:_ A rule testing button accessible names could apply to elements other than the `button` element and this could be stated as _"The rule applies to elements that are included in the accessibility tree with the semantic role of button, except for `input` elements of `type="image"`."_.
 
@@ -99,7 +99,7 @@ For more details, see [ACT Rules Format: Applicability](https://www.w3.org/TR/ac
 
 The applicability help the testers (or test tools) identify what has to be checked. Following that, the expectations are statements that must be true for the applicable elements to pass the rule. Expectations must be written in plain language, as well-formed grammatically correct sentences, so that it can be used by QA testers. If any of the expectations is false, than the target element failed the rule.
 
-Each expectation exposes a reason why an element may not meet a particular conformance requirement. The expectations can be "linked", in that one has to be met before a second can be tested.
+Use unambiguous definitions within expectations, even where subjective human judgement may be required to determine conformance. Each expectation exposes a reason why an element may not meet a particular conformance requirement. The expectations can be "linked", in that one has to be met before a second can be tested.
 
 > _For example:_ A rule testing link names may have as its first expectation _"The target element has an accessible name."_, and as a second expectation _"Expectation 1 is true for the target element, and the accessible name describes the function of the target element"_.
 

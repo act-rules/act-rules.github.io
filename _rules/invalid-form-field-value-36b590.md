@@ -26,7 +26,7 @@ The rule applies to each HTML element with a [semantic role][] that inherits fro
 
 ## Expectation 1
 
-For each test target where the user input caused the appearance of an [error message][], the error message is [visible][] and [included in the accessibility tree][].
+For each test target where the user input resulted in the appearance of an [error message][], the error message is [visible][] and [included in the accessibility tree][].
 
 ## Expectation 2
 
@@ -100,27 +100,27 @@ The error message does not identify the input field.
 
 ```html
 <script>
- 	function processForm() {
- 		document.getElementById('error').innerText = ''
- 		var age = document.getElementById('age').value
- 		if (!age || isNaN(age) || age < 1) {
- 			document.getElementById('error').innerText = 'Please fill the field correctly.'
- 		}
-		var name = document.getElementById('name').value;
+	function processForm() {
+		document.getElementById('error').innerText = ''
+		var age = document.getElementById('age').value
+		if (!age || isNaN(age) || age < 1) {
+			document.getElementById('error').innerText = 'Please fill the field correctly.'
+		}
+		var name = document.getElementById('name').value
 		if (!name) {
 			document.getElementById('error').innerText = 'Please fill the field correctly.'
 		}
- 	}
- </script>
+	}
+</script>
 
- <form>
+<form>
 	<div id="error"></div>
 	<label for="age">Age (years)</label>
- 	<input type="number" id="age" />
+	<input type="number" id="age" />
 	<label for="name">Name</label>
- 	<input type="text" id="name" />
- 	<input type="button" value="Submit" onclick="processForm()" />
- </form>
+	<input type="text" id="name" />
+	<input type="button" value="Submit" onclick="processForm()" />
+</form>
 ```
 
 #### Failed Example 3

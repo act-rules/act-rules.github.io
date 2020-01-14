@@ -38,7 +38,7 @@ Any [visible][] character in a [text node][] that is a [child](https://dom.spec.
 - is used in the [accessible name](#accessible-name) of a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget) that is [disabled][]; or
 - has a [semantic role](#semantic-role) of [group](https://www.w3.org/TR/wai-aria-1.1/#group) and is [disabled][].
 
-**Note**: When the [foreground color](#foreground-colors-of-text) is the same as the [background color](#background-colors-of-text), the character is not [visible][], and so it does not need to be tested for contrast.
+**Note**: When the [foreground color](#foreground-colors-of-text) is the same as the [background color](#background-colors-of-text), this rule deems the character not [visible][], so it does not need to be tested for contrast.
 
 ## Expectation
 

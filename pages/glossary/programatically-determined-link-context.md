@@ -3,7 +3,7 @@ title: Programmatically Determined Link Context
 key: programmatically-determined-link-context
 --
 
-The programmatically determined link context is a list of elements. All elements in the list must be [included in the accessibility tree][], and have one of the following relationships to the link:
+The programmatically determined link context is the set of all elements that are [included in the accessibility tree][], and have one of the following relationships to the link:
 
 - an [ancestor][] of the link in the [flat tree][] with a semantic role of `listitem`; or
 - the closest [ancestor][] of the link in the [flat tree][] that is a `p` element; or

@@ -26,7 +26,7 @@ This rule applies to any [document element](https://dom.spec.whatwg.org/#documen
 - is in a [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context); and
 - has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`; and
 - has a `lang` attribute that has a [valid language subtag](#valid-language-subtag); and
-- has an `xml:lang` attribute.
+- has a non-empty `xml:lang` attribute.
 
 **Note:** `html` elements within `iframe` and `object` elements are not applicable as `iframe` and `object` elements create [nested browsing contexts](https://html.spec.whatwg.org/#nested-browsing-context). However, as these elements are meant to provide a layer of isolation, the declared language of their [parent browsing context](https://html.spec.whatwg.org/#parent-browsing-context) will likely not be inherited, making it possible for non-matching `lang` and `xml:lang` attributes in [nested browsing contexts](https://html.spec.whatwg.org/#nested-browsing-context) to also cause accessibility issues.
 
@@ -137,7 +137,7 @@ This rule does not apply to elements whose `lang` attribute consists only of whi
 
 #### Inapplicable Example 6
 
-This rule does not apply to elements without an `xml:lang` attribute.
+This rule does not apply to elements without a `xml:lang` attribute.
 
 ```html
 <html lang="en"></html>
@@ -147,6 +147,6 @@ This rule does not apply to elements without an `xml:lang` attribute.
 
 This rule does not apply to `math` elements.
 
-```html
+```xml
 <math xml:lang="en"></math>
 ```

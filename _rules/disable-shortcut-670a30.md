@@ -25,9 +25,9 @@ The rule applies to any [HTML document][] with at least one [keyboard shortcut][
 
 ## Expectation
 
-For the test target if any [keyboard shortcut][] requires pressing only [printable character][] keys, a [mechanism][] to disable the shortcut exists.
+For each [user interface component][] that is a [descendent][] of the root node of the test target, if a [printable character][] [shortcut][keyboard shortcut] exists to trigger the action of that [user interface component][], it can be disabled.
 
-If the [mechanism][] to disable the shortcut is a [user interface component][], then it must be [visible][] and [included in the accessibility tree][] with an [accessible name][] that is not empty (`""`).
+If a [user interface component][] is used to disable the [shortcut][keyboard shortcut], then it must be [visible][] and [included in the accessibility tree][] with an [accessible name][] that is not empty (`""`).
 
 ## Assumptions
 
@@ -49,43 +49,12 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The [HTML document][] has a [keyboard shortcut][] that uses one [printable][printable character] and one [non-printable characters][].
-
-```html
-<html>
-  <head>
-    <title>Passed Example 1 for rule 670a30</title>
-    <script>
-      function shortcut() {
-        document.body.addEventListener('keydown', function(event) {
-          if (event.key === 'i' && event.ctrlKey) {
-            const text = document.getElementById('text');
-            text.className = text.className === 'italic' ? '' : 'italic';
-          }
-        });
-      }
-    </script>
-    <style>
-      .italic {
-        font-style: italic;
-      }
-    </style>
-  </head>
-  <body onload="shortcut();">
-    <div>Press <strong>ctrl+i</strong> to toggle italic format</div>
-    <div id="text">Some text inside the document content</div>
-  </body>
-</html>
-```
-
-#### Passed Example 2
-
 The [HTML document][] has a [keyboard shortcut][] using only a [printable character][], and it can be disabled.
 
 ```html
 <html>
   <head>
-    <title>Passed Example 2 for rule 670a30</title>
+    <title>Passed Example 1 for rule 670a30</title>
     <script>
       function shortcut(event) {
         document.body.addEventListener('keydown', function(event) {
@@ -108,40 +77,6 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
       <input id="turn_off" type="checkbox">
       Turn off shortcut
     </label>
-    <div id="text">Some text inside the document content</div>
-  </body>
-</html>
-```
-
-#### Passed Example 3
-
-The [HTML document][] has an element with the attribute `accesskey`. Accesskeys use [non-printable characters][].
-
-```html
-<html>
-  <head>
-    <title>Passed Example 3 for rule 670a30</title>
-    <script>
-      function shortcut() {
-        const button = document.getElementById('italic');
-
-        button.addEventListener('click', function() {
-          const text = document.getElementById('text');
-          text.className = text.className === 'italic' ? '' : 'italic';
-        });
-
-        button.textContent +=
-          button.accessKeyLabel ? ' (' + button.accessKeyLabel + ')' : ' (accesskey +' + button.accessKey + ')';
-      }
-    </script>
-    <style>
-      .italic {
-        font-style: italic;
-      }
-    </style>
-  </head>
-  <body onload="shortcut();">
-    <button id="italic" type="button" accessKey="i">Toggle italic format</button>
     <div id="text">Some text inside the document content</div>
   </body>
 </html>
@@ -182,7 +117,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 2
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disable [mechanism][] is not [visible][].
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [user interface component][] is not [visible][].
 
 ```html
 <html>
@@ -219,7 +154,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 3
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disable [mechanism][] is not is not [included in the accessibility tree][].
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [user interface component][] is not [included in the accessibility tree][].
 
 ```html
 <html>
@@ -256,7 +191,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 4
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disable [mechanism][] has an empty (`""`) [accessible name][].
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [user interface component][] has an empty (`""`) [accessible name][].
 
 ```html
 <html>
@@ -312,6 +247,82 @@ The document is not an [HTML document][].
   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
   Sorry, your browser does not support inline SVG.  
 </svg>
+```
+
+#### Inapplicable Example 3
+
+The [HTML document][] has a [keyboard shortcut][] that requires pressing one [non-printable character][non-printable characters].
+
+```html
+<html>
+  <head>
+    <title>Inapplicable Example 3 for rule 670a30</title>
+    <script>
+      function shortcut(params) {
+        document.body.addEventListener("keydown", function(event) {
+          const target = document.getElementById("target");
+
+          if (
+            event.key === params.shortcutKey &&
+            (!!!params.ctrlKey || event.ctrlKey) &&
+            (!!!params.focusOnly || document.activeElement === target)
+          ) {
+            document.getElementById("list").innerHTML +=
+              "<li>" + target.value + "</li>";
+            target.value = "";
+            event.preventDefault();
+          }
+        });
+      }
+    </script>
+  </head>
+
+  <body onload="shortcut({focusOnly: true, shortcutKey: '+' , ctrlKey: true})">
+    <label for="text">Add to list (press ctrl and + to add):</label>
+    <input type="text" id="target" />
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
+  </body>
+</html>
+```
+
+#### Inapplicable Example 4
+
+The [HTML document][] has an element with the attribute `accesskey`. Accesskeys use [non-printable characters][].
+
+```html
+<html>
+  <head>
+    <title>Inapplicable Example 4 for rule 670a30</title>
+    <script>
+      function shortcut(params) {
+        const button = document.querySelector("button");
+
+        button.addEventListener("click", function() {
+          document.getElementById("list").innerHTML +=
+            "<li>Item</li>";
+          event.preventDefault();
+        });
+
+        button.textContent = button.accessKeyLabel
+          ? "Add item to list (" + button.accessKeyLabel + ")"
+          : "Add item to list (accesskey +" + button.accessKey + ")";
+      }
+    </script>
+  </head>
+
+  <body onload="shortcut()">
+    <button type="button" accesskey="+"></button>
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
+  </body>
+</html>
 ```
 
 [HTML document]: https://dom.spec.whatwg.org/#concept-document

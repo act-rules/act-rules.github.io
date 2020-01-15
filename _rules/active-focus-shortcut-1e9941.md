@@ -46,98 +46,36 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The [HTML document][] has a [keyboard shortcut][] that uses one [printable][printable character] and one [non-printable characters][].
-
-```html
-<html>
-<head>
-	<title>Passed Example 1 for rule 1e9941</title>
-	<script>
-		function shortcut() {
-			document.body.addEventListener('keydown', function (event) {
-				if (event.key === 'i' && event.ctrlKey) {
-					italic();
-				}
-			});
-		}
-		function italic() {
-			const text = document.getElementById('text');
-			text.className = text.className === 'italic' ? '' : 'italic';
-		}
-	</script>
-	<style>
-		.italic {
-			font-style: italic;
-		}
-	</style>
-</head>
-<body onload="shortcut();">
-	<button onclick="italic()">Italic (ctrl+i)</button>
-	<div id="text">Some text inside the document content</div>
-</body>
-</html>
-```
-
-#### Passed Example 2
-
-The [HTML document][] has an element with the attribute `accesskey`. Accesskeys use [non-printable characters][].
-
-```html
-<html>
-  <head>
-    <title>Passed Example 2 for rule 1e9941</title>
-    <script>
-      function shortcut() {
-        const button = document.getElementById('italic');
-
-        button.addEventListener('click', function() {
-          const text = document.getElementById('text');
-          text.className = text.className === 'italic' ? '' : 'italic';
-        });
-
-        button.textContent +=
-          button.accessKeyLabel ? ' (' + button.accessKeyLabel + ')' : ' (accesskey +' + button.accessKey + ')';
-      }
-    </script>
-    <style>
-      .italic {
-        font-style: italic;
-      }
-    </style>
-  </head>
-  <body onload="shortcut();">
-    <button id="italic" type="button" accessKey="i">Toggle italic format</button>
-    <div id="text">Some text inside the document content</div>
-  </body>
-</html>
-```
-
-#### Passed Example 3
-
 The [HTML document][] has a single [printable character][] [keyboard shortcut][] for a [user interface component][], which is only available when that component has focus.
 
 ```html
 <html>
   <head>
-    <title>Passed Example 3 for rule 1e9941</title>
+    <title>Passed Example 1 for rule 1e9941</title>
     <script>
-      function shortcut() {
-        document.body.addEventListener('keydown', function(event) {
-          const text = document.getElementById('text');
+      function shortcut(params) {
+        document.body.addEventListener("keydown", function(event) {
+          const target = document.getElementById("target");
 
-          if (event.key === '+' && document.activeElement === text) {
-            document.getElementById('list').innerHTML += '<li>' + text.value + '</li>';
-            text.value = '';
+          if (
+            event.key === params.shortcutKey &&
+            (!!!params.ctrlKey || event.ctrlKey) &&
+            (!!!params.focusOnly || document.activeElement === target)
+          ) {
+            document.getElementById("list").innerHTML +=
+              "<li>" + target.value + "</li>";
+            target.value = "";
             event.preventDefault();
           }
         });
       }
     </script>
   </head>
-  <body onload="shortcut();">
+
+  <body onload="shortcut({focusOnly: true, shortcutKey: '+' , ctrlKey: false})">
     <label for="text">Add to list (press + to add):</label>
-    <input type="text" id="text">
-    <br>
+    <input type="text" id="target" />
+    <br />
     <div>
       To do list
     </div>
@@ -157,23 +95,31 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
   <head>
     <title>Failed Example 1 for rule 1e9941</title>
     <script>
-      function shortcut() {
-        document.body.addEventListener('keydown', function(event) {
-          if (event.key === '+') {
-            event.preventDefault();
+      function shortcut(params) {
+        document.body.addEventListener("keydown", function(event) {
+          const target = document.getElementById("target");
 
-            const text = document.getElementById('text');
-            document.getElementById('list').innerHTML += '<li>' + text.value + '</li>';
-            text.value = '';
+          if (
+            event.key === params.shortcutKey &&
+            (!!!params.ctrlKey || event.ctrlKey) &&
+            (!!!params.focusOnly || document.activeElement === target)
+          ) {
+            document.getElementById("list").innerHTML +=
+              "<li>" + target.value + "</li>";
+            target.value = "";
+            event.preventDefault();
           }
         });
       }
     </script>
   </head>
-  <body onload="shortcut();">
+
+  <body
+    onload="shortcut({focusOnly: false, shortcutKey: '+' , ctrlKey: false})"
+  >
     <label for="text">Add to list (press + to add):</label>
-    <input type="text" id="text">
-    <br>
+    <input type="text" id="target" />
+    <br />
     <div>
       To do list
     </div>
@@ -203,6 +149,82 @@ The document is not an [HTML document][].
   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
   Sorry, your browser does not support inline SVG.  
 </svg>
+```
+
+#### Inapplicable Example 3
+
+The [HTML document][] has a [keyboard shortcut][] that requires pressing one [non-printable character][non-printable characters].
+
+```html
+<html>
+  <head>
+    <title>Inapplicable Example 3 for rule 1e9941</title>
+    <script>
+      function shortcut(params) {
+        document.body.addEventListener("keydown", function(event) {
+          const target = document.getElementById("target");
+
+          if (
+            event.key === params.shortcutKey &&
+            (!!!params.ctrlKey || event.ctrlKey) &&
+            (!!!params.focusOnly || document.activeElement === target)
+          ) {
+            document.getElementById("list").innerHTML +=
+              "<li>" + target.value + "</li>";
+            target.value = "";
+            event.preventDefault();
+          }
+        });
+      }
+    </script>
+  </head>
+
+  <body onload="shortcut({focusOnly: true, shortcutKey: '+' , ctrlKey: true})">
+    <label for="text">Add to list (press ctrl and + to add):</label>
+    <input type="text" id="target" />
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
+  </body>
+</html>
+```
+
+#### Inapplicable Example 4
+
+The [HTML document][] has an element with the attribute `accesskey`. Accesskeys use [non-printable characters][].
+
+```html
+<html>
+  <head>
+    <title>Inapplicable Example 4 for rule 1e9941</title>
+    <script>
+      function shortcut(params) {
+        const button = document.querySelector("button");
+
+        button.addEventListener("click", function() {
+          document.getElementById("list").innerHTML +=
+            "<li>Item</li>";
+          event.preventDefault();
+        });
+
+        button.textContent = button.accessKeyLabel
+          ? "Add item to list (" + button.accessKeyLabel + ")"
+          : "Add item to list (accesskey +" + button.accessKey + ")";
+      }
+    </script>
+  </head>
+
+  <body onload="shortcut()">
+    <button type="button" accesskey="+"></button>
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
+  </body>
+</html>
 ```
 
 [html document]: https://dom.spec.whatwg.org/#concept-document

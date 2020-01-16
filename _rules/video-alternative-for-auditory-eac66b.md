@@ -33,7 +33,7 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 ## Assumptions
 
 - This rule assumes that the video element is used to play a video (for example, not only used to display an image), and that there is a mechanism to start the video.
-- This rule assumes that the language of the page can be correctly determined, either programmatically or by analyzing the content.
+- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 

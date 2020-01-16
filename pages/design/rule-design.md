@@ -137,6 +137,6 @@ The test cases are snippets of code that help with understanding and can be used
 
 Each test case should be simply and uniquely named, _e.g. "Passed Example 1"_. Each example must also include a brief declarative description that uses plain language, and is a well-formed grammatically correct sentence that finishes with a full stop/period. Words from code should use back ticks and be identified as elements or attributes.
 
-> _For example:_ "This page has two `title` elements."
+> _For example:_ "This page has a `title` element with content."
 
 For more details, see [ACT Rules Format: Test Cases](https://www.w3.org/TR/act-rules-format/#test-cases).

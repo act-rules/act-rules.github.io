@@ -73,7 +73,7 @@ This `html` element has identical [primary language subtags][] for its `lang` an
 
 #### Passed Example 3
 
-This `html` element has identical [primary language subtags][] for its `lang` and `xml:lang` attributes. The [extended language subtags][] do not match.
+This `html` element has identical [primary language subtags][] for its `lang` and `xml:lang` attributes. The [extended language subtags][] do not match, but this is not required by this rule.
 
 ```html
 <html lang="en-GB" xml:lang="en-US"></html>
@@ -93,7 +93,7 @@ This `html` element has different [primary language subtags][] for its `lang` an
 
 #### Inapplicable Example 1
 
-The rule does not apply to `svg` elements.
+This rule does not apply to `svg` elements.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" lang="en" xml:lang="en"></svg>
@@ -101,7 +101,7 @@ The rule does not apply to `svg` elements.
 
 #### Inapplicable Example 2
 
-The rule does not apply to `svg` elements, even inside an `html` element.
+This rule does not apply to `svg` elements, even inside an `html` element.
 
 ```svg
 <html>

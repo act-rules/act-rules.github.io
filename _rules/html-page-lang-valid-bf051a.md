@@ -97,7 +97,7 @@ This `html` element has a `lang` attribute whose value is not a [valid language 
 
 #### Inapplicable Example 1
 
-The rule does not apply to `svg` elements.
+This rule does not apply to `svg` elements.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" lang="fr"></svg>

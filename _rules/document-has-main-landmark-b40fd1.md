@@ -35,7 +35,7 @@ Within the test target, there is at least on element which:
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+Having a `main` landmark is sufficient to pass [Success Criterion 2.4.1: Bypass blocks][sc241] by identifying the main content of a page. However, this will only benefit users who can actually navigate using landmark roles (such a functionality is usually provided by assistive technologies, but could also be provided by browsers or browsers plugins). Users without any possibility for landmark navigation will be left without way of bypassing blocks of repeated content and will still experience accessibility issues. Therefore, it is recommended to provide other ways of bypassing blocks.
 
 ## Background
 

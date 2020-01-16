@@ -46,7 +46,7 @@ This rule assumes that one of the techniques listed here is used to comply to WC
 
 ## Accessibility Support
 
-Techniques and solutions that identify blocks of content are sufficient ways of passing [Success Criterion 2.4.1: Bypass blocks][sc241]. They are, however, directed toward users of assistive technologies. Techniques and solutions based on links will benefit all users (for example, keyboard users with no other assistive technology) and are therefore recommended.
+Techniques and solutions that identify blocks of content are sufficient ways of passing [Success Criterion 2.4.1: Bypass blocks][sc241]. They are, however, only beneficial for users who have ways of navigating with this information. For example, adding headings to a document will only help users who can "jump" from heading to heading (such a possibility can be provided by browsers, browsers plugins, screen readers, or other assistive technologies). Techniques and solutions based on links will benefit all users (for example, keyboard users with no other assistive technology) and are therefore recommended.
 
 ## Background
 

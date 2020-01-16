@@ -5097,10 +5097,10 @@
       }
     },
     {
-      "testcaseId": "cde90a850f13c443f9551e962583df6fd829a5ad",
+      "testcaseId": "bd91d04e04dcdbb60ab1f0c88177dcb229fc1102",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/5b7ae0/cde90a850f13c443f9551e962583df6fd829a5ad.html",
-      "relativePath": "testcases/5b7ae0/cde90a850f13c443f9551e962583df6fd829a5ad.html",
+      "url": "https://act-rules.github.io/testcases/5b7ae0/bd91d04e04dcdbb60ab1f0c88177dcb229fc1102.html",
+      "relativePath": "testcases/5b7ae0/bd91d04e04dcdbb60ab1f0c88177dcb229fc1102.html",
       "expected": "passed",
       "ruleId": "5b7ae0",
       "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
@@ -5115,10 +5115,10 @@
       }
     },
     {
-      "testcaseId": "bd91d04e04dcdbb60ab1f0c88177dcb229fc1102",
+      "testcaseId": "cde90a850f13c443f9551e962583df6fd829a5ad",
       "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/5b7ae0/bd91d04e04dcdbb60ab1f0c88177dcb229fc1102.html",
-      "relativePath": "testcases/5b7ae0/bd91d04e04dcdbb60ab1f0c88177dcb229fc1102.html",
+      "url": "https://act-rules.github.io/testcases/5b7ae0/cde90a850f13c443f9551e962583df6fd829a5ad.html",
+      "relativePath": "testcases/5b7ae0/cde90a850f13c443f9551e962583df6fd829a5ad.html",
       "expected": "passed",
       "ruleId": "5b7ae0",
       "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",

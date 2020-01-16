@@ -258,7 +258,7 @@ This element with the `menu` role has attribute an `aria-busy` attribute set to 
 
 #### Inapplicable Example 6
 
-This element with the `combobox` role is accessible without owned elements.
+This element with the `combobox` role conforms to [WAI-ARIA 1.1][] without owned elements.
 
 ```html
 <label for="combo">My Combobox</label>

@@ -89,6 +89,14 @@ This `html` element has different [primary language subtags][] for its `lang` an
 <html lang="fr" xml:lang="en"></html>
 ```
 
+#### Failed Example 2
+
+This `html` element has different [primary language subtags][] for its `lang` and `xml:lang` attributes. The [extended language subtags][] do match, but this rules only focus on the [primary language subtags][].
+
+```html
+<html lang="fr-CA" xml:lang="en-CA"></html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1

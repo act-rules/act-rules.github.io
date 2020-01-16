@@ -146,29 +146,13 @@ This rule only applies to documents with a [content type][] of `text/html`
 
 #### Inapplicable Example 6
 
-This rule does not apply to `html` elements whose `lang` attribute is not a [valid language subtag][] (such as the empty string).
-
-```html
-<html lang="" xml:lang="en"></html>
-```
-
-#### Inapplicable Example 7
-
-This rule does not apply to `html` elements whose `lang` attribute is not a [valid language subtag][] (such as only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace)).
-
-```html
-<html lang=" " xml:lang="en"></html>
-```
-
-#### Inapplicable Example 8
-
 This rule does not apply to `html` elements whose `lang` attribute is not a [valid language subtag][].
 
 ```html
-<html lang="xyz" xml:lang="en"></html>
+<html lang="enn" xml:lang="en"></html>
 ```
 
-#### Inapplicable Example 9
+#### Inapplicable Example 7
 
 This rule does not apply to `html` elements without an `xml:lang` attribute.
 
@@ -176,7 +160,7 @@ This rule does not apply to `html` elements without an `xml:lang` attribute.
 <html lang="en"></html>
 ```
 
-#### Inapplicable Example 10
+#### Inapplicable Example 8
 
 This rule does not apply to `html` elements with an empty (`""`) `xml:lang` attribute.
 

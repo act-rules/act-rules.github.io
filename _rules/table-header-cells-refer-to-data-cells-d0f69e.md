@@ -41,7 +41,8 @@ Each target element is [assigned][] to at least one element with a [semantic rol
 This rule assumes that table header cells have a relationship conveyed through presentation with other cells within the same table.
 
 **Note:** This assumption helps exclude edge cases like:
-- a table definition where there is only one header cell, or 
+
+- a table definition where there is only one header cell, or
 - a table definition where there are multiple headers and no other cells
 
 ## Accessibility Support
@@ -60,7 +61,7 @@ Table markup and header cell association is not well supported by some popular a
 
 #### Passed Example 1
 
-The column header element has an [assigned][] cell, within the same `table` element.
+The column header element has an [assigned][] cell.
 
 ```html
 <table>
@@ -75,7 +76,7 @@ The column header element has an [assigned][] cell, within the same `table` elem
 
 #### Passed Example 2
 
-Each column header element has assigned cells, within the same `table` element.
+Each column header element has assigned cells.
 
 ```html
 <div role="table">
@@ -191,8 +192,8 @@ The column header ('Column2') does not have an assigned cell within the same `ta
 ```html
 <table>
 	<tr>
-		<th id="col1"></th>
-		<th id="Column2"></th>
+		<th id="col1">Column 1</th>
+		<th id="Column2">Column 2</th>
 	</tr>
 	<tr>
 		<td></td>
@@ -203,7 +204,7 @@ The column header ('Column2') does not have an assigned cell within the same `ta
 
 #### Failed Example 3
 
-The column header ('Column B') does not have an assigned cell within the same `table` element.
+The column header ('Col B') does not have an assigned cell within the same `table` element.
 
 ```html
 <div role="grid">
@@ -225,13 +226,10 @@ The column header ('Column B') does not have an assigned cell within the same `t
 
 #### Inapplicable Example 1
 
-The only element with a header [role][semantic role] is part of a table which is not [included in the accessibility tree][].
+There is no element with a [semantic role][] of header within the table.
 
 ```html
-<table role="presentation">
-	<tr>
-		<th>Time</th>
-	</tr>
+<table>
 	<tr>
 		<td>12:00</td>
 	</tr>
@@ -239,6 +237,86 @@ The only element with a header [role][semantic role] is part of a table which is
 ```
 
 #### Inapplicable Example 2
+
+There are no element with a [semantic role][] of header.
+
+```html
+<table></table>
+```
+
+#### Inapplicable Example 3
+
+There are no elements with a [role][semantic role] of header within the table.
+
+```html
+<table>
+	<tr>
+		<th role="cell">Column A</th>
+	</tr>
+	<tr>
+		<td>Cell A</td>
+	</tr>
+</table>
+```
+
+#### Inapplicable Example 4
+
+The only element with a [role][semantic role] of header is not [visible][].
+
+```html
+<table>
+	<tr>
+		<th style="display: none;">Column A</th>
+	</tr>
+	<tr>
+		<td>Cell A</td>
+	</tr>
+</table>
+```
+
+#### Inapplicable Example 5
+
+The only element with a [role][semantic role] of header is not [included in the accessibility tree][].
+
+```html
+<table>
+	<tr>
+		<th aria-hidden="true">Column A</th>
+	</tr>
+	<tr>
+		<td>Cell A</td>
+	</tr>
+</table>
+```
+
+#### Inapplicable Example 6
+
+The only element with a [role][semantic role] of header does not have a closest ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][]
+
+```html
+<div>
+	<tr>
+		<th>Column A</th>
+	</tr>
+</div>
+```
+
+#### Inapplicable Example 7
+
+The only element with header [role][semantic role] is part of a table which has [descendants][descendant] that are empty ("").
+
+```html
+<table>
+	<tr>
+		<th></th>
+	</tr>
+	<tr>
+		<td></td>
+	</tr>
+</table>
+```
+
+#### Inapplicable Example 8
 
 The only element with header [role][semantic role] is part of a table which is not [visible][].
 
@@ -264,52 +342,17 @@ The only element with header [role][semantic role] is part of a table which is n
 </html>
 ```
 
-#### Inapplicable Example 3
+#### Inapplicable Example 9
 
-There is no element with a [semantic role][] of header within the table.
+The only element with a header [role][semantic role] is part of a table which is not [included in the accessibility tree][].
 
 ```html
-<table>
+<table role="presentation">
+	<tr>
+		<th>Time</th>
+	</tr>
 	<tr>
 		<td>12:00</td>
-	</tr>
-</table>
-```
-
-#### Inapplicable Example 4
-
-There are no element with a [semantic role][] of header.
-
-```html
-<table></table>
-```
-
-#### Inapplicable Example 5
-
-The only element with a [role][semantic role] of header is not [visible][].
-
-```html
-<table>
-	<tr>
-		<th style="display: none;"></th>
-	</tr>
-	<tr>
-		<td></td>
-	</tr>
-</table>
-```
-
-#### Inapplicable Example 6
-
-There are no elements with a [role][semantic role] of header within the table.
-
-```html
-<table>
-	<tr>
-		<th role="cell"></th>
-	</tr>
-	<tr>
-		<td></td>
 	</tr>
 </table>
 ```

@@ -79,16 +79,7 @@ The content in the second column is indicated with the word "right" (which is an
 ```html
 <head>
 	<title>Passed example 1 9bd38c</title>
-	<style>
-	.col-container {
-		display: table;
-		width: 100%;
-	}
-	.col {
-		display: table-cell;
-		padding: 16px;
-	}
-	</style>
+	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css">
 </head>
 <body>
 	<div class="col-container">
@@ -125,16 +116,7 @@ The visual reference made by the word "right" is complemented by the non-visual 
 ```html
 <head>
 	<title>Passed example 3 9bd38c</title>
-	<style>
-	.col-container {
-		display: table;
-		width: 100%;
-	}
-	.col {
-		display: table-cell;
-		padding: 16px;
-	}
-	</style>
+	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css">
 </head>
 <body>
 	<div class="col-container">
@@ -195,16 +177,7 @@ The button is indicated by the word "round". But the word is also included in th
 ```html
 <head>
 	<title>Passed example 6 9bd38c</title>
-	<style>
-	.col-container {
-		display: table;
-		width: 100%;
-	}
-	.col {
-		display: table-cell;
-		padding: 16px;
-	}
-	</style>
+	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css">
 </head>
 <body>
 	<div class="col-container">
@@ -277,16 +250,7 @@ The user is told to find the menu on the right (which is a visual indicator word
 ```html
 <head>
 	<title>Failed example 1 9bd38c</title>
-	<style>
-	.col-container {
-		display: table;
-		width: 100%;
-	}
-	.col {
-		display: table-cell;
-		padding: 16px;
-	}
-	</style>
+	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css">
 </head>
 <body>
 	<div class="col-container">
@@ -315,16 +279,7 @@ The user is told to find the navigation on the right (which is a visual indicato
 ```html
 <head>
 	<title>Failed example 2 9bd38c</title>
-	<style>
-	.col-container {
-		display: table;
-		width: 100%;
-	}
-	.col {
-		display: table-cell;
-		padding: 16px;
-	}
-	</style>
+	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css">
 </head>
 <body>
 	<nav>

@@ -25,20 +25,24 @@ The rule applies to any HTML element that
 - has the [semantic role][] of [rowheader][] or [columnheader][] and;
 - is [visible][] and;
 - is [included in the accessibility tree][] and;
-- whose closest ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][];
-  1. has [descendants][descendant], that are non empty ("") and;
+- whose closest ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][]:
+  1. has [descendants][descendant] that are non empty ("") and;
   2. is [visible][] and;
   3. is [included in the accessibility tree][].
 
 ## Expectation
 
 Each target element is [assigned][] to at least one element with a [semantic role][] of [cell][] or [gridcell][].
+
 **Note:** The assigned cell is a [descendant][] in the [flat tree][] of the same [table][] or [grid][] element.
 
 ## Assumptions
 
 This rule assumes that table header cells have a relationship conveyed through presentation with other cells within the same table.
-**Note:** This assumption helps exclude edge cases like: - a table definition where there is only one header cell, or - a table definition where there are multiple headers and no other cells
+
+**Note:** This assumption helps exclude edge cases like:
+- a table definition where there is only one header cell, or 
+- a table definition where there are multiple headers and no other cells
 
 ## Accessibility Support
 
@@ -274,7 +278,7 @@ There is no element with a [semantic role][] of header within the table.
 
 #### Inapplicable Example 4
 
-There are no [descendants][descendant] within the table.
+There are no element with a [semantic role][] of header.
 
 ```html
 <table></table>

@@ -34,7 +34,11 @@ For each test target, the `lang` attribute has a [valid language subtag](#valid-
 
 ## Assumptions
 
-This rule assumes that the presence of a `lang` attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
+- This rule assumes that the presence of a `lang` attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
+
+- This rule assumes that user agents and assistive technologies can programmatically determine [valid language subtags](#valid-language-subtag) even if these do not conform to the [BCP 47][] syntax.
+
+- This rule assumes that [grandfathered tags][] are not used as these will not be recognized as [valid language subtags](#valid-language-subtag).
 
 ## Accessibility Support
 
@@ -59,6 +63,14 @@ This `html` element has a `lang` attribute whose value is a [valid][valid langua
 <html lang="fr"></html>
 ```
 
+#### Passed Example 2
+
+This `html` element has a `lang` attribute value is a [valid language subtag][] even though the [region subtag][] is not.
+
+```html
+<html lang="en-US-GB"></html>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -71,21 +83,13 @@ This `html` element has a `lang` attribute whose value is not a [valid language 
 
 #### Failed Example 2
 
-This `html` element has a `lang` attribute whose value is not a [valid language subtag][]. Even though the [primary language subtag][] is valid, the [region subtag] is not.
-
-```html
-<html lang="en-US-GB"></html>
-```
-
-#### Failed Example 3
-
 This `html` element has a `lang` attribute whose value is not a [valid language subtag][].
 
 ```html
 <html lang="123"></html>
 ```
 
-#### Failed Example 4
+#### Failed Example 3
 
 This `html` element has a `lang` attribute whose value is not a [valid language subtag][].
 

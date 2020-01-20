@@ -110,3 +110,5 @@ This rule does not apply to `svg` elements.
 [primary language subtag]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
 [region subtag]: https://tools.ietf.org/html/bcp47#section-2.2.4 'Definition of region subtag'
 [valid language subtag]: #valid-language-subtag 'Definition of valid language subtag'
+[grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
+[bcp 47]: https://tools.ietf.org/html/bcp47#section-2.1

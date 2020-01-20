@@ -158,3 +158,5 @@ This rule does not apply to `math` elements.
 [extended language subtags]: https://tools.ietf.org/html/bcp47#section-2.2.2 'Definition of extended language subtag'
 [primary language subtags]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
 [valid language subtag]: #valid-language-subtag 'Definition of valid language subtag'
+[grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
+[bcp 47]: https://tools.ietf.org/html/bcp47#section-2.1

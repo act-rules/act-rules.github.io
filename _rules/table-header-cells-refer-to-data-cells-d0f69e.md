@@ -25,6 +25,7 @@ The rule applies to any HTML element that
 - has the [semantic role][] of [rowheader][] or [columnheader][] and;
 - is [visible][] and;
 - is [included in the accessibility tree][] and;
+- has at least one ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][]; and
 - whose closest ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][]:
   1. has [descendants][descendant] that are non empty ("") and;
   2. is [visible][] and;

@@ -35,7 +35,7 @@ If an `iframe` is not perceived by the user as a single control, it does not qua
 
 ## Accessibility Support
 
-Some browsers include `iframe` elements in the [sequential focus navigation][]. This ensures that `iframe` elements can always be scrolled using the keyboard. When an `iframe` is removed from the accessibility tree, this rule is still applicable for those browsers, unless the `tabindex` attribute is set to `-1`.
+Some browsers include `iframe` elements in the [sequential focus navigation][]. This ensures that `iframe` elements can always be scrolled using the keyboard. When an `iframe` is removed from the accessibility tree, this rule is still applicable for those browsers, unless the `iframe` is explicitly removed from [sequential focus navigation][] (by having the `tabindex` attribute set to a negative value).
 
 ## Background
 
@@ -151,7 +151,7 @@ Does not apply to non `iframe` element.
 
 #### Inapplicable Example 2
 
-This `iframe` is not part of [sequential focus navigation][], nor [included in the accessibility tree][] because of `display: none;`.
+This `iframe` is neither part of [sequential focus navigation][], nor [included in the accessibility tree][] because of `display: none;`.
 
 ```html
 <iframe style="display:none;" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>

@@ -41,6 +41,8 @@ The rule applies to any HTML element with the [semantic role](#semantic-role) of
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
+**Note**: Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
+
 ## Assumptions
 
 - The rule assumes that all links are [user interface components](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components) as defined by WCAG 2. When the link role is used incorrectly, this assumption may not be true.

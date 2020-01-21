@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 616,
+  "count": 615,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -3096,24 +3096,6 @@
       "testcaseTitle": "Passed Example 2",
       "url": "https://act-rules.github.io/testcases/b33eff/9aec958042a6a5f50d8ab1e0ea02a82144db776d.html",
       "relativePath": "testcases/b33eff/9aec958042a6a5f50d8ab1e0ea02a82144db776d.html",
-      "expected": "passed",
-      "ruleId": "b33eff",
-      "ruleName": "Orientation of the page is not restricted using CSS transform property",
-      "rulePage": "https://act-rules.github.io/rules/b33eff",
-      "ruleAccessibilityRequirements": {
-        "wcag21:1.3.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "627dbd259a9fbd656dbf58523b7bddf3cbb6e224",
-      "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/b33eff/627dbd259a9fbd656dbf58523b7bddf3cbb6e224.html",
-      "relativePath": "testcases/b33eff/627dbd259a9fbd656dbf58523b7bddf3cbb6e224.html",
       "expected": "passed",
       "ruleId": "b33eff",
       "ruleName": "Orientation of the page is not restricted using CSS transform property",

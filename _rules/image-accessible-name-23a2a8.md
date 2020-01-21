@@ -191,7 +191,7 @@ The element is not an `img` element.
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
-[marked as decorative]: #markd-as-decorative 'Definition of marked as decorative'
+[marked as decorative]: #marked-as-decorative 'Definition of marked as decorative'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [whitespace]: #whitespace 'Definition of whitespace'

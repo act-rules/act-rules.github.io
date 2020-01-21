@@ -35,7 +35,7 @@ For each test target, the [`content`](https://www.w3.org/TR/html52/document-meta
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+Support for `meta name="viewport"` in older mobile browsers is not consistent.
 
 ## Background
 

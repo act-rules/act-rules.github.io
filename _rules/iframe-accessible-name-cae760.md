@@ -28,6 +28,8 @@ The rule applies to `iframe` elements that are [included in the accessibility tr
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
+**Note**: Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
+
 ## Assumptions
 
 - The rule assumes that the target `iframe` is used as a [user interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components).

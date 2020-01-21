@@ -8,6 +8,8 @@ All ACT rules include a number of test cases, which are designed for easy consum
   See the Test Cases JSON
  </a>
 
+> Note: Based on the file extension specfied for a test case within the examples code snippet (eg: html, svg, xhtml), respective DOCTYPE, if applicable is dynamically prepended to the generated HTML test case file.
+
 ## Test Case Format
 
 In the `testcases.json` file, test cases are included on the `testcases` array, each with the following properties:

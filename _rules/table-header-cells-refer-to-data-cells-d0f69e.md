@@ -27,9 +27,8 @@ The rule applies to any HTML element that
 - is [included in the accessibility tree][] and;
 - has at least one ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][]; and
 - whose closest ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][]:
-  1. has [descendants][descendant] that are non empty ("") and;
-  2. is [visible][] and;
-  3. is [included in the accessibility tree][].
+  1. is [visible][] and;
+  2. is [included in the accessibility tree][].
 
 ## Expectation
 
@@ -304,21 +303,6 @@ The only element with a [role][semantic role] of header does not have a closest 
 
 #### Inapplicable Example 7
 
-The only element with header [role][semantic role] is part of a table which has [descendants][descendant] that are empty ("").
-
-```html
-<table>
-	<tr>
-		<th></th>
-	</tr>
-	<tr>
-		<td></td>
-	</tr>
-</table>
-```
-
-#### Inapplicable Example 8
-
 The only element with header [role][semantic role] is part of a table which is not [visible][].
 
 ```html
@@ -343,7 +327,7 @@ The only element with header [role][semantic role] is part of a table which is n
 </html>
 ```
 
-#### Inapplicable Example 9
+#### Inapplicable Example 8
 
 The only element with a header [role][semantic role] is part of a table which is not [included in the accessibility tree][].
 

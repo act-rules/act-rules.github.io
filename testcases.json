@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 615,
+  "count": 613,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -2894,26 +2894,8 @@
       }
     },
     {
-      "testcaseId": "7be4201c82953f752f1fbdaacad05b69388ece74",
-      "testcaseTitle": "Passed Example 8",
-      "url": "https://act-rules.github.io/testcases/97a4e1/7be4201c82953f752f1fbdaacad05b69388ece74.html",
-      "relativePath": "testcases/97a4e1/7be4201c82953f752f1fbdaacad05b69388ece74.html",
-      "expected": "passed",
-      "ruleId": "97a4e1",
-      "ruleName": "Button has accessible name",
-      "rulePage": "https://act-rules.github.io/rules/97a4e1",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
       "testcaseId": "e324dcb57f827bee2cba21d3569f7c26ce95c092",
-      "testcaseTitle": "Passed Example 9",
+      "testcaseTitle": "Passed Example 8",
       "url": "https://act-rules.github.io/testcases/97a4e1/e324dcb57f827bee2cba21d3569f7c26ce95c092.html",
       "relativePath": "testcases/97a4e1/e324dcb57f827bee2cba21d3569f7c26ce95c092.html",
       "expected": "passed",
@@ -2930,8 +2912,26 @@
       }
     },
     {
-      "testcaseId": "2cdab52387d512235f9436b643790d557af98994",
+      "testcaseId": "b88ccd4e62da6d3999cadbb5ee82cbc45d74aea9",
       "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/97a4e1/b88ccd4e62da6d3999cadbb5ee82cbc45d74aea9.html",
+      "relativePath": "testcases/97a4e1/b88ccd4e62da6d3999cadbb5ee82cbc45d74aea9.html",
+      "expected": "failed",
+      "ruleId": "97a4e1",
+      "ruleName": "Button has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/97a4e1",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "2cdab52387d512235f9436b643790d557af98994",
+      "testcaseTitle": "Failed Example 2",
       "url": "https://act-rules.github.io/testcases/97a4e1/2cdab52387d512235f9436b643790d557af98994.html",
       "relativePath": "testcases/97a4e1/2cdab52387d512235f9436b643790d557af98994.html",
       "expected": "failed",
@@ -2949,7 +2949,7 @@
     },
     {
       "testcaseId": "99ac6ead86e4807f2e84d715619295a7b4600187",
-      "testcaseTitle": "Failed Example 2",
+      "testcaseTitle": "Failed Example 3",
       "url": "https://act-rules.github.io/testcases/97a4e1/99ac6ead86e4807f2e84d715619295a7b4600187.html",
       "relativePath": "testcases/97a4e1/99ac6ead86e4807f2e84d715619295a7b4600187.html",
       "expected": "failed",
@@ -2967,27 +2967,9 @@
     },
     {
       "testcaseId": "769ced9081ad29edae23727078f6fde475906222",
-      "testcaseTitle": "Failed Example 3",
+      "testcaseTitle": "Failed Example 4",
       "url": "https://act-rules.github.io/testcases/97a4e1/769ced9081ad29edae23727078f6fde475906222.html",
       "relativePath": "testcases/97a4e1/769ced9081ad29edae23727078f6fde475906222.html",
-      "expected": "failed",
-      "ruleId": "97a4e1",
-      "ruleName": "Button has accessible name",
-      "rulePage": "https://act-rules.github.io/rules/97a4e1",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "b88ccd4e62da6d3999cadbb5ee82cbc45d74aea9",
-      "testcaseTitle": "Failed Example 4",
-      "url": "https://act-rules.github.io/testcases/97a4e1/b88ccd4e62da6d3999cadbb5ee82cbc45d74aea9.html",
-      "relativePath": "testcases/97a4e1/b88ccd4e62da6d3999cadbb5ee82cbc45d74aea9.html",
       "expected": "failed",
       "ruleId": "97a4e1",
       "ruleName": "Button has accessible name",
@@ -3020,10 +3002,10 @@
       }
     },
     {
-      "testcaseId": "aca1d102fdb3d63886f168d9de6ca0de3acd282b",
+      "testcaseId": "45f7495ab9a98fdba22655c1c5c3f61adce0a3b7",
       "testcaseTitle": "Inapplicable Example 2",
-      "url": "https://act-rules.github.io/testcases/97a4e1/aca1d102fdb3d63886f168d9de6ca0de3acd282b.html",
-      "relativePath": "testcases/97a4e1/aca1d102fdb3d63886f168d9de6ca0de3acd282b.html",
+      "url": "https://act-rules.github.io/testcases/97a4e1/45f7495ab9a98fdba22655c1c5c3f61adce0a3b7.html",
+      "relativePath": "testcases/97a4e1/45f7495ab9a98fdba22655c1c5c3f61adce0a3b7.html",
       "expected": "inapplicable",
       "ruleId": "97a4e1",
       "ruleName": "Button has accessible name",
@@ -3042,24 +3024,6 @@
       "testcaseTitle": "Inapplicable Example 3",
       "url": "https://act-rules.github.io/testcases/97a4e1/abfff53dac0f85dab8d6f30a1f4d89d25efa0219.html",
       "relativePath": "testcases/97a4e1/abfff53dac0f85dab8d6f30a1f4d89d25efa0219.html",
-      "expected": "inapplicable",
-      "ruleId": "97a4e1",
-      "ruleName": "Button has accessible name",
-      "rulePage": "https://act-rules.github.io/rules/97a4e1",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "cf8f3026d4b867b954b47eae3f3ba83abdfaa2cf",
-      "testcaseTitle": "Inapplicable Example 4",
-      "url": "https://act-rules.github.io/testcases/97a4e1/cf8f3026d4b867b954b47eae3f3ba83abdfaa2cf.html",
-      "relativePath": "testcases/97a4e1/cf8f3026d4b867b954b47eae3f3ba83abdfaa2cf.html",
       "expected": "inapplicable",
       "ruleId": "97a4e1",
       "ruleName": "Button has accessible name",

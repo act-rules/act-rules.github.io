@@ -71,7 +71,7 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-This is a link that is a descendant of a paragraph element and it uses the default styling of links which makes it underlined in most browsers which is a distinguishing style.
+This is a link that is a descendant of a paragraph element. It uses the default styling of links which underlines them in most browsers, making it a distinguishing style.
 
 ```html
 <style>

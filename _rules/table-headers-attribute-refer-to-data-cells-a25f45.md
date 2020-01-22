@@ -3,7 +3,7 @@ id: a25f45
 name: Headers attribute specified on a cell refers to cells in the same table element
 rule_type: atomic
 description: |
-  This rule checks that the headers attribute on a cell refer to other cells in the same `table` element with a semantic role of `columnheader` or `rowheader`.
+  This rule checks that the headers attribute on a cell refer to other cells in the same `table` element.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true
@@ -21,19 +21,18 @@ acknowledgements:
 
 ## Applicability
 
-This rule applies to any `headers` attribute specified on a [`cell`](https://www.w3.org/TR/html52/tabular-data.html#cell) within a `table` element, where the `table` element is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree).
+This rule applies to any `headers` attribute specified on a [`cell`][] within a [`table`][] element, where the [`table`][] element is [visible][] and [included in the accessibility tree][].
 
 ## Expectation
 
-Each target attribute is [a set of space separated IDs](https://www.w3.org/TR/html50/infrastructure.html#set-of-space-separated-tokens), each of which is the ID of an element, that:
+Each target attribute is [a set of space separated IDs][], each of which is the ID of an element, that:
 
-1. has a [semantic role](#semantic-role) of [columnheader](https://www.w3.org/TR/html-aria/#index-aria-columnheader) or [rowheader](https://www.w3.org/TR/html-aria/#index-aria-rowheader), and
-2. is a [`cell`](https://www.w3.org/TR/html52/tabular-data.html#cell) of the same [`table`](https://www.w3.org/TR/html50/tabular-data.html#concept-table) as the target element.
+1. is a [`cell`][] of the same [`table`][] as the target element.
 
 ## Assumptions
 
 - This rule assumes that the `headers` attribute is only used to identify table headers. If other information is included in the `headers` attribute, the rule may fail on issues that are not accessibility concerns. For example, if `headers` is used to include information for scripts, this rule may not be accurate.
-- This rule assumes that the `headers` attribute is required to express the relationship between data and header cells in the `table`. If the browser [computes an adequate fallback header](https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics), this rule may produce incorrect results.
+- This rule assumes that the `headers` attribute is required to express the relationship between data and header cells in the `table`. If the browser [computes an adequate fallback header][], this rule may produce incorrect results.
 
 ## Accessibility Support
 
@@ -162,6 +161,40 @@ The `headers` attribute on the last two `th` elements refers to another `th` ele
 </table>
 ```
 
+#### Passed Example 7
+
+The `headers` attribute on the cells refers to `th` elements which are row scoped & within the same `table`.
+
+```html
+<table>
+	<tr>
+		<th id="projects1" scope="row">Projects</th>
+		<th id="progress1" scope="row">Progress</th>
+	</tr>
+	<tr>
+		<td headers="projects1">My Project</td>
+		<td headers="progress1">15%</td>
+	</tr>
+</table>
+```
+
+#### Passed Example 8
+
+The `headers` attribute on the cell refers to `th` element which is not the same column as the cell.
+
+```html
+<table>
+	<tr>
+		<td></td>
+		<th id="projects2">Projects</th>
+	</tr>
+	<tr>
+		<td headers="projects2">15%</td>
+		<td></td>
+	</tr>
+</table>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -170,7 +203,6 @@ The `headers` attribute on the cell refers to an element outside the same `table
 
 ```html
 <span id="elmOutsideTable">Project Costs</span>
-
 <table>
 	<tr>
 		<th id="headerOfColumn">Projects</th>
@@ -240,7 +272,7 @@ There is no `headers` attribute.
 
 #### Inapplicable Example 2
 
-The `table` has a `role="presentation"` and thus is [decorative](#decorative).
+The `table` has a `role="presentation"` and thus is [decorative][].
 
 ```html
 <table role="presentation">
@@ -255,7 +287,7 @@ The `table` has a `role="presentation"` and thus is [decorative](#decorative).
 
 #### Inapplicable Example 3
 
-The `table` is not [visible](#visible) in page.
+The `table` is not [visible][] in page.
 
 ```html
 <html>
@@ -308,3 +340,12 @@ The `table` is not [included in the accessibility tree][].
 	</tr>
 </table>
 ```
+
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[visible]: #visible 'Definition of visible'
+[decorative]: #decorative 'Definition of decorative'
+[`cell`]: https://www.w3.org/TR/html52/tabular-data.html#cell 'Definition of cell'
+[semantic role]: #semantic-role 'Definition of semantic role'
+[a set of space separated ids]: https://www.w3.org/TR/html50/infrastructure.html#set-of-space-separated-tokens 'Space separated tokens'
+[`table`]: https://www.w3.org/TR/html50/tabular-data.html#concept-table 'Definition of table'
+[computes an adequate fallback header]: https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics 'Forming relationships between data cells and header cells'

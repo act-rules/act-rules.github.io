@@ -90,23 +90,16 @@ This is a link that is a descendant of a paragraph element. It uses the default 
 This is a link that is a descendant of a paragraph element. The underline is removed, but an icon is added to distinguish it as a link.
 
 ```html
-<html>
-	<head>
-		<title>Passed example 2 for rule be4d0c</title>
-		<style>
-			*,
-			a.test {
-				text-decoration: none;
-			}
-		</style>
-	</head>
-	<body>
-		<p>
-			Read about WAI on the
-			<a class="test" href="http://w3.org/WAI">WAI webpage <img src="/test-assets/be4d0c/icon.png" alt=""/></a>.
-		</p>
-	</body>
-</html>
+<style>
+	*,
+	a.test {
+		text-decoration: none;
+	}
+</style>
+<p>
+	Read about WAI on the
+	<a class="test" href="http://w3.org/WAI">WAI webpage <img src="/test-assets/be4d0c/icon.png" alt=""/></a>.
+</p>
 ```
 
 #### Passed Example 3
@@ -114,20 +107,13 @@ This is a link that is a descendant of a paragraph element. The underline is rem
 This is a link that is a descendant of a paragraph element. The underline is removed, but a text is added to distinguish it as a link.
 
 ```html
-<html>
-	<head>
-		<title>Passed example 3 for rule be4d0c</title>
-		<style>
-			*,
-			a.test {
-				text-decoration: none;
-			}
-		</style>
-	</head>
-	<body>
-		<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage by following this link</a>.</p>
-	</body>
-</html>
+<style>
+	*,
+	a.test {
+		text-decoration: none;
+	}
+</style>
+<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage by following this link</a>.</p>
 ```
 
 #### Passed Example 4
@@ -135,23 +121,16 @@ This is a link that is a descendant of a paragraph element. The underline is rem
 This is a link that is a descendant of a paragraph element. The underline is removed, but the link has a distinguishing box-shadow.
 
 ```html
-<html>
-	<head>
-		<title>Passed example 4 for rule be4d0c</title>
-		<style>
-			* {
-				text-decoration: none;
-			}
-			a.test {
-				text-decoration: none;
-				box-shadow: 4px 4px;
-			}
-		</style>
-	</head>
-	<body>
-		<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
-	</body>
-</html>
+<style>
+	* {
+		text-decoration: none;
+	}
+	a.test {
+		text-decoration: none;
+		box-shadow: 4px 4px;
+	}
+</style>
+<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
 #### Passed Example 5
@@ -159,28 +138,21 @@ This is a link that is a descendant of a paragraph element. The underline is rem
 This is a link that is a descendant of a paragraph element. The underline is removed, but the link has a text contrast of more than 3:1 compared to the other text in the paragraph. When the link receives focus an underline appears. When the link received hover an underline appears.
 
 ```html
-<html>
-	<head>
-		<title>Passed example 5 for rule be4d0c</title>
-		<style>
-			p {
-				text-decoration: none;
-				color: #000;
-			}
-			a {
-				text-decoration: none;
-				color: #d14826;
-			}
-			a:hover,
-			a:focus {
-				text-decoration: underline;
-			}
-		</style>
-	</head>
-	<body>
-		<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
-	</body>
-</html>
+<style>
+	p {
+		text-decoration: none;
+		color: #000;
+	}
+	a {
+		text-decoration: none;
+		color: #d14826;
+	}
+	a:hover,
+	a:focus {
+		text-decoration: underline;
+	}
+</style>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
 ### Failed
@@ -190,20 +162,13 @@ This is a link that is a descendant of a paragraph element. The underline is rem
 This is a link that is a descendant of a paragraph element. The underline is removed and the link has no visual cues of being recognized as a link.
 
 ```html
-<html>
-	<head>
-		<title>Failed example 1 for rule be4d0c</title>
-		<style>
-			*,
-			a.test {
-				text-decoration: none;
-			}
-		</style>
-	</head>
-	<body>
-		<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
-	</body>
-</html>
+<style>
+	*,
+	a.test {
+		text-decoration: none;
+	}
+</style>
+<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
 ### Inapplicable

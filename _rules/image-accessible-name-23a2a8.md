@@ -31,7 +31,9 @@ The rule applies to HTML `img` elements or any HTML element with the [semantic r
 
 Each target element has an [accessible name][] that is not empty (`""`), or is marked as [decorative][].
 
-**NOTE**: An `img` element can be marked as [decorative][], by using either `role="presentation"`, `role="none"` or an empty `alt` attribute, (`alt=""` or `alt` with no value).
+**Note**: An `img` element can be marked as [decorative][], by using either `role="presentation"`, `role="none"` or an empty `alt` attribute, (`alt=""` or `alt` with no value).
+
+**Note**: Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
 
 ## Assumptions
 

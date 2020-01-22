@@ -5,7 +5,7 @@ key: marked-as-decorative
 
 An element is _marked as decorative_ if it has a [semantic role][] of `none` or `presentation`.
 
-The most common ways of marking an element as decorative are to explicitly set `role="none"`; or `role="presentation"`, or; for images, `alt=""`.
+The most common ways of marking an element as decorative are to explicitly set `role="none"`, or `role="presentation"`, or, for images, `alt=""`.
 
 **Note**: an element should only be marked as decorative if it is [pure decoration](https://www.w3.org/TR/WCAG21/#dfn-pure-decoration) and removing it does not cause a loss of information to the user.
 

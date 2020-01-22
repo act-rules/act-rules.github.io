@@ -1,18 +1,22 @@
 ---
-
 id: a1b64e
 name: Focusable element has no keyboard trap via standard navigation
 rule_type: atomic
 description: |
-This rule checks if it is possible to use standard keyboard navigation to navigate through all content on a web page without becoming trapped in any element.
+  This rule checks if it is possible to use standard keyboard navigation to navigate through all content on a web page without becoming trapped in any element.
 accessibility_requirements:
 input_aspects:
-
-- DOM Tree
-- CSS Styling
-  acknowledgements:
-  authors: - Dagfinn Rømen - Geir Sindre Fossøy - Malin Øvrebø - Shadi Abou-Zahra - Carlos Duarte - Anne Thyme Nørregaard - Stein Erik Skotkjerra
-
+  - DOM Tree
+  - CSS Styling
+acknowledgements:
+  authors:
+    - Dagfinn Rømen
+    - Geir Sindre Fossøy
+    - Malin Øvrebø
+    - Shadi Abou-Zahra
+    - Carlos Duarte
+    - Anne Thyme Nørregaard
+    - Stein Erik Skotkjerra
 ---
 
 ## Applicability

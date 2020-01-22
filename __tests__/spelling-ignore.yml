@@ -12,6 +12,8 @@
 
 # Tag(s)
 - svg # `aria-query` dom tags does not list `svg`
+- xhtml
+- DOCTYPE
 
 # Domain-specific words, Definitions & other allowed terms
 - URI

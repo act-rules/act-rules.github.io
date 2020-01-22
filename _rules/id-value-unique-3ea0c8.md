@@ -10,6 +10,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:H93: # Ensuring that id attributes are unique on a Web page
+    forConformance: false
+    failed: not satisfied
+    passed: satisfied
+    inapplicable: satisfied
 input_aspects:
   - DOM Tree
 acknowledgements:

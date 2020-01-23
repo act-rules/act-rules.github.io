@@ -139,10 +139,10 @@ Each test case should be simply and uniquely named, _e.g. "Passed Example 1"_. E
 
 The description should:
 - use declarative plain language in the format: _This [test target] [meets / does not meet condition] [because optional reasons]._; 
-- fully qualify the relevant test target, such as a particular element, or element with id, or first such element, or absent element, …; 
+- fully qualify the relevant test target, such as a particular element, or element with id, or first such element, or absent element; 
 - state that the example _has_ or _does not have_ or _contains_ the necessary condition to be met, and optionally any clarifying reasons; 
 - use sentences that are well-formed, grammatically correct and finish with a full stop/period; and
-- use back ticks around any words from code and be identify them as elements or attributes.
+- use back ticks around any words from code and identify them as elements or attributes.
 
 > _For example:_ "This page has a `title` element with content."
 

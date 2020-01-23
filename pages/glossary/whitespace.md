@@ -3,7 +3,7 @@ title: Whitespace
 key: whitespace
 ---
 
-Characters that have the Unicode "White_Space" property in the [Unicode properties list](https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt).
+_Whitespace_ are characters that have the Unicode "White_Space" property in the [Unicode properties list](https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt).
 
 This includes:
 

@@ -151,7 +151,7 @@ This `title` element is a child of an `svg` element.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">
-  <title>This is a red circle</title>
+  <title>This is a circle</title>
   <circle cx="150" cy="75" r="50" fill="green"></circle>
 </svg>
 ```

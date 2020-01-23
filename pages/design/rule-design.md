@@ -135,7 +135,14 @@ For more details, see [ACT Rules Format: Background](https://www.w3.org/TR/act-r
 
 The test cases are snippets of code that help with understanding and can be used for validating implementations of the rule. There must be at least one example for **pass**, **fail** and **inapplicable** outcomes. A passing or inapplicable example should pass other applicable rules. A failing example should only fail in the one aspect being demonstrated.
 
-Each test case should be simply and uniquely named, _e.g. "Passed Example 1"_. Each example must also include a brief declarative description that uses plain language, and is a well-formed grammatically correct sentence that finishes with a full stop/period. Words from code should use back ticks and be identified as elements or attributes.
+Each test case should be simply and uniquely named, _e.g. "Passed Example 1"_. Each must also include a brief description that explains why the example has the outcome it claims to have. 
+
+The description should:
+- use declarative plain language in the format: _This [test target] [meets / does not meet condition] [because optional reasons]._; 
+- fully qualify the relevant test target, such as a particular element, or element with id, or first such element, or absent element, …; 
+- state that the example _has_ or _does not have_ or _contains_ the necessary condition to be met, and optionally any clarifying reasons; 
+- use sentences that are well-formed, grammatically correct and finish with a full stop/period; and
+- use back ticks around any words from code and be identify them as elements or attributes.
 
 > _For example:_ "This page has a `title` element with content."
 

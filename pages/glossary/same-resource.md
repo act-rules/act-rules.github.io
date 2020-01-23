@@ -3,7 +3,7 @@ title: Same resource
 key: same-resource
 ---
 
-Two or more resources can be the same resource even though the URLs for them are different. This can be due to URL parsing, server settings, redirects and DNS aliasing.
+Two or more resources can be the _same resource_ even though the URLs for them are different. This can be due to URL parsing, server settings, redirects and DNS aliasing.
 
 If the [parsed URLs](https://www.w3.org/TR/html52/infrastructure.html#parsing-urls) for two resources are identical, the resources are the same resource.
 

@@ -35,10 +35,10 @@ The rule applies to any [non-streaming](#non-streaming-media-element) `video` el
 
 For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
-- [Video-Only As A Media Alternative For Text](https://act-rules.github.io/rules/fd26cf)
-- [Video Only Element Has Description Track](https://act-rules.github.io/rules/ac7dc6)
-- [Video Only Element Has Transcript](https://act-rules.github.io/rules/ee13b5)
-- [Video Has Audio Alternative](https://act-rules.github.io/rules/eac66b)
+- [`Video` Element Visual-Only Content Is Media Alternative For Text](https://act-rules.github.io/rules/fd26cf)
+- [`Video` Element Visual-Only Content Has Description Track](https://act-rules.github.io/rules/ac7dc6)
+- [`Video` Element Visual-Only Content Has Transcript](https://act-rules.github.io/rules/ee13b5)
+- [`Video` Element Visual-Only Content Has Audio Track Alternative](https://act-rules.github.io/rules/d7ba54)
 
 ## Assumptions
 

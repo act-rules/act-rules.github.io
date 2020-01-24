@@ -36,7 +36,7 @@ Any text node that includes one of the [visual reference words](#visual-referenc
 
 ## Expectation
 
-Each test target that describes any [web content](https://www.w3.org/TR/WCAG21/#dfn-content) through the use of the [visual reference words](#visual-reference-words), is on the same [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) with an instruction that also describes that [web content](https://www.w3.org/TR/WCAG21/#dfn-content) by a non-visual characteristic, except if:
+Each test target that describes any [web content](https://www.w3.org/TR/WCAG21/#dfn-content) through the use of the [visual reference words](#visual-reference-words), is on the same [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) with a [textual](https://www.w3.org/TR/WCAG21/#dfn-text) instruction that also describes that [web content](https://www.w3.org/TR/WCAG21/#dfn-content) by a non-visual characteristic, except if:
 
 - The target is not part of an instruction about [web content](https://www.w3.org/TR/WCAG21/#dfn-content); or
 - The visual reference word is [visible](#visible) in the described content.
@@ -74,7 +74,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The content in the second column is indicated with the word "right" (which is an indicator based on visual perception) but also indicated by referencing the word "howdy".
+The content in the second column is indicated with the word "right" (a visual reference word) but also indicated by referencing the word "howdy".
 
 ```html
 <head>
@@ -95,7 +95,7 @@ The content in the second column is indicated with the word "right" (which is an
 
 #### Passed Example 2
 
-The button in the second column is indicated with the word "box" (which is a location indicator based on visual perception) but also indicated by referencing that the content can be found below this content in the DOM order. Note that "below" is also a visual reference word but in this case it can also be accurately interpreted as "further in the DOM tree order" which does not rely on visual attributes alone.
+The button in the second column is indicated with the word "box" (a visual reference word) but also indicated by referencing that the content can be found below this content in the DOM order. Note that "below" is also a visual reference word but in this case it can also be accurately interpreted as "further in the DOM tree order" which does not rely on visual attributes alone.
 
 ```html
 <div class="col-container">
@@ -140,7 +140,7 @@ The visual reference made by the word "right" is complemented by the non-visual 
 
 #### Passed Example 4
 
-This document is using the word "square" but in this case it is not an instruction about web content.
+This document is using the word "square" but in this case it is not describing web content.
 
 ```html
 <p>A square is a regular quadrilateral with four equal sides and four right angles.</p>
@@ -201,7 +201,7 @@ The images are indicated by the visual indicator words "narrow" and "wide". Thes
 
 #### Passed Example 8
 
-This document is using the word "triangle" but in this case the triangle menu is on a different page and has a heading "triangle menu".
+This document is using "triangle" which is included in the heading of the menu; the fact that the described content is one another page does not restrict this rule.
 
 ```html
 <p>
@@ -212,7 +212,7 @@ This document is using the word "triangle" but in this case the triangle menu is
 
 #### Passed Example 9
 
-This document is using the word "star" but in this case the star is in an 'iframe' and has a heading "examples".
+This document is using "star" but there is also a heading "examples" that can be referenced; the fact that the described content is in an iframe does not restrict this rule.
 
 ```html
 <p>More examples can be found when you look underneath the star or you can search for the "Examples" heading</p>
@@ -221,36 +221,87 @@ This document is using the word "star" but in this case the star is in an 'ifram
 
 #### Passed Example 10
 
-This document is using the word "circle" but in this case it is no instruction. Also note that the text is not visible, but still applicable.
+This document is using the word "circle" but in this case it is no instruction so it passes.
 
 ```html
-<p
-	style="position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;"
->
-	A circle is nice.
+<p>
+	This circle is nice.
+	<span style="height: 25px;
+		     width: 25px;
+		     background-color: #bbb;
+		     border-radius: 50%;
+		     display: inline-block;">
+	</span>
 </p>
 ```
 
 #### Passed Example 11
 
-This document is using the word "circle" but in this case it is no instruction. Also note that the text is not included in the accessibility tree, but still applicable.
+This document is using the word "circle" but in this case it is no instruction so it passes. Note that this example is not inapplicable despite the fact that the text is not visible.
 
 ```html
-<p aria-hidden="true">A circle is nice.</p>
+<p style="position:absolute; top:-9999em">
+	This circle is nice.
+	<span style="height: 25px;
+		     width: 25px;
+		     background-color: #bbb;
+		     border-radius: 50%;
+		     display: inline-block;">
+	</span>
+</p>
+```
+
+#### Passed Example 12
+
+This document is using the word "circle" but in this case it is no instruction so it passes. Note that this example is not inapplicable despite the fact that the text is not in the accessibility tree.
+
+```html
+<p aria-hidden="true">
+	This circle is nice.
+	<span style="height: 25px;
+		     width: 25px;
+		     background-color: #bbb;
+		     border-radius: 50%;
+		     display: inline-block;">
+	</span>
+</p>
+```
+
+#### Passed Example 13
+
+The user is told to find the navigation on the right (a visual reference word) and the navigation is correctly identified by a `nav` element.
+
+```html
+<head>
+	<title>Failed example 13 9bd38c</title>
+	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css" />
+</head>
+<body>
+	<div class="col-container">
+		<div class="col">
+			<p>Find the navigation on the right, for the non-essential links</p>
+		</div>
+		<nav>
+			<div class="col">
+				<ul>
+					<li>
+						<a href="https://www.w3.org/Consortium/contact">Contact</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/Help/">Help and FAQ</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</body>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-The user is told to find the menu on the right (which is a visual indicator word) but the menu is not identified in any other way.
+The user is told to find the menu on the right (a visual reference word) but the menu is not identified in any other way.
 
 ```html
 <head>
@@ -278,7 +329,7 @@ The user is told to find the menu on the right (which is a visual indicator word
 
 #### Failed Example 2
 
-The user is told to find the navigation on the right (which is a visual indicator word) and the navigation is correctly identified by a `nav` element, but there are 2 `nav` elements on the page so the user doesn't know which one to use.
+The user is told to find the navigation on the right (a visual reference word) and the navigation is correctly identified by a `nav` element, but there are 2 `nav` elements on the page so the user doesn't know which one to use.
 
 ```html
 <head>
@@ -318,17 +369,7 @@ The user is told to find the navigation on the right (which is a visual indicato
 
 #### Failed Example 3
 
-The button is indicated with the word "box" (which is a shape indicator based on visual perception) and is also indicated by referencing the word "howdy", but the word "howdy" is in a different paragraph than the word "box".
-
-```html
-<p>Click the box, for a surprise!</p>
-<p>If you can't find the box here is a hint: it says "Howdy"!</p>
-<button onclick="alert('Surprise!')">Howdy</button>
-```
-
-#### Failed Example 4
-
-This document is using the word "triangle" and the triangle menu is on a different page. No other indication is present.
+This document is using the word "triangle" and no other indication is present so the rule fails. The fact that the triangle menu is on a different page does not restrict the rule. 
 
 ```html
 <body>
@@ -339,7 +380,7 @@ This document is using the word "triangle" and the triangle menu is on a differe
 </body>
 ```
 
-#### Failed Example 5
+#### Failed Example 4
 
 This document is using the word "star" and there is no other indication. The content described is in an iframe.
 
@@ -354,7 +395,7 @@ This document is using the word "star" and there is no other indication. The con
 
 #### Inapplicable Example 1
 
-The content is indicated with the word "button" which is not a visual reference word.
+There is no visual reference word on the page.
 
 ```html
 <p>Click the button, for a surprise</p>
@@ -363,7 +404,7 @@ The content is indicated with the word "button" which is not a visual reference 
 
 #### Inapplicable Example 2
 
-The content in the second column is indicated with the word "box", but this indication is hidden with 'display:none'.
+The content is indicated with the word "box" (a visual reference word), but this indication is hidden and not included in the accessibility three because it has 'display:none'.
 
 ```html
 <p style="display:none">Click the box, for a surprise</p>

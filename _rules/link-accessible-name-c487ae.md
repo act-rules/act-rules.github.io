@@ -41,6 +41,8 @@ The rule applies to any HTML element with the [semantic role](#semantic-role) of
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
+**Note**: Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
+
 ## Assumptions
 
 - The rule assumes that all links are [user interface components](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components) as defined by WCAG 2. When the link role is used incorrectly, this assumption may not be true.
@@ -62,7 +64,7 @@ For `area` elements that have a `href` attribute, but are not nested inside a `m
 
 #### Passed Example 1
 
-`<a>` element with [accessible name][] through content.
+`a` element with [accessible name][] through content.
 
 ```html
 <a href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
@@ -227,7 +229,7 @@ Link with image that has empty `aria-labelledby`.
 
 #### Failed Example 8
 
-Link is completely empty, but still shows up in focus order, so it should have an non-empty [accessible name][].
+Link is completely empty, but still shows up in focus order, so it should have a non-empty [accessible name][].
 
 ```html
 <a href="http://www.w3.org/WAI"></a>
@@ -257,7 +259,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 #### Inapplicable Example 1
 
-`<a>` element that has had its role changed.
+`a` element that has had its role changed.
 
 ```html
 <a href="http://www.w3.org/WAI" role="button">

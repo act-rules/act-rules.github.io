@@ -3,7 +3,7 @@ title: Section of content
 key: section-of-content
 ---
 
-A distinct part or subdivision of a document.
+A _section of content_ is a distinct part or subdivision of a document.
 
 A section of content may consist of one or more paragraphs and include graphics, tables, lists and sub-sections that together serve a purpose.
 

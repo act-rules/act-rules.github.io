@@ -67,16 +67,16 @@ Audio with controls and external transcript
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-<a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</a>
+<a href="/test-assets/moon-audio/moon-speech-transcript.txt">Transcript</a>
 ```
 
 #### Passed Example 3
 
 Audio with autoplay and external transcript
 
-```html (no-iframe)
+```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
-<a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</a>
+<a href="/test-assets/moon-audio/moon-speech-transcript.txt">Transcript</a>
 ```
 
 ### Failed
@@ -109,16 +109,16 @@ Audio with controls and incorrect external transcript
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</a>
+<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.txt">Transcript</a>
 ```
 
 #### Failed Example 4
 
 Audio with autoplay and incorrect external transcript
 
-```html (no-iframe)
+```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
-<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</a>
+<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.txt">Transcript</a>
 ```
 
 #### Failed Example 5

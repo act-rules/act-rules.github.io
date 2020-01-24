@@ -3,7 +3,7 @@ title: Accessible Name
 key: accessible-name
 ---
 
-The programmatically determined name of a user interface element that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+The _accessible name_ is the programmatically determined name of a user interface element that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 The accessible name is calculated using the [accessible name and description computation](https://www.w3.org/TR/accname).
 
@@ -21,7 +21,7 @@ For native markup languages, such as HTML and SVG, additional information on how
 
 #### Examples
 
-**Note**: The examples presented here are non-normative and not testable. They serve to illustrate some common pitfalls about the definition and help implementers of ACT rules understand it.
+**Note**: The examples presented here are non-normative and not testable. They serve to illustrate some common pitfalls about the definition and to help implementers of ACT rules understand it.
 
 The `input` elements have an accessible name of, respectively, "Billing Name" and "Billing Address". These accessible names are given by the `aria-labelledby` attributes and associated elements.
 

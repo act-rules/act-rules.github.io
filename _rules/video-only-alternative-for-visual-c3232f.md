@@ -35,10 +35,10 @@ The rule applies to any [non-streaming](#non-streaming-media-element) `video` el
 
 For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
-- [Video-Only As A Media Alternative For Text](https://act-rules.github.io/rules/fd26cf)
-- [Video Only Element Has Description Track](https://act-rules.github.io/rules/ac7dc6)
-- [Video Only Element Has Transcript](https://act-rules.github.io/rules/ee13b5)
-- [Video Has Audio Alternative](https://act-rules.github.io/rules/eac66b)
+- [`Video` Element Visual-Only Content Is Media Alternative For Text](https://act-rules.github.io/rules/fd26cf)
+- [`Video` Element Visual-Only Content Has Description Track](https://act-rules.github.io/rules/ac7dc6)
+- [`Video` Element Visual-Only Content Has Transcript](https://act-rules.github.io/rules/ee13b5)
+- [`Video` Element Visual-Only Content Has Audio Track Alternative](https://act-rules.github.io/rules/d7ba54)
 
 ## Assumptions
 
@@ -82,7 +82,7 @@ A video only element with a track element that contains descriptions.
 <video controls>
 	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-	<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
+	<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
 </video>
 ```
 
@@ -142,7 +142,7 @@ A video only element with a track element that contains incorrect descriptions.
 <video controls>
 	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-	<track kind="descriptions" src="rabbit-video-incorrect-descriptions.vtt" />
+	<track kind="descriptions" src="/test-assets/rabbit-video/incorrect-descriptions.vtt" />
 </video>
 ```
 
@@ -155,7 +155,7 @@ A silent video element with a link to an incorrect text transcript on a differen
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<a href="/test-assets/rabbit-video-incorrect-transcript.html">Transcript</a>
+<a href="/test-assets/rabbit-video/incorrect-transcript.html">Transcript</a>
 ```
 
 #### Failed Example 4
@@ -185,7 +185,7 @@ A video element with audio.
 	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
 	compatibility is described in WCAG. See the video below to watch the same information again in video form.
 </p>
-<video data-rule-target src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
 #### Inapplicable Example 2
@@ -196,7 +196,7 @@ A video only element that is not [visible][].
 <video controls style="display: none;">
 	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-	<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
+	<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
 </video>
 ```
 

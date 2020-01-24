@@ -57,7 +57,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 #### Passed Example 1
 
-`html` element with matching primary language subtags for `lang` and `xml:lang`.
+This `html` element has identical [primary language subtags][] for its `lang` and `xml:lang` attributes.
 
 ```html
 <html lang="en" xml:lang="en"></html>
@@ -65,25 +65,25 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 #### Passed Example 2
 
-`html` element with matching primary and extended language subtags for `lang` and `xml:lang`.
+This `html` element has identical [primary language subtags][] for its `lang` and `xml:lang` attributes. The [extended language subtags][] do not match, but this is not required by this rule.
 
 ```html
-<html lang="en-GB" xml:lang="en-GB"></html>
+<html lang="en-GB" xml:lang="en-US"></html>
 ```
 
 #### Passed Example 3
 
-`html` element with matching primary language subtags, but non-matching extended language subtags, for `lang` and `xml:lang`.
+This `html` element has identical [primary language subtags][] for its `lang` and `xml:lang` attributes. In this case, the [extended language subtags][] also match.
 
 ```html
-<html lang="en-GB" xml:lang="en-US"></html>
+<html lang="en-GB" xml:lang="en-GB"></html>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-`html` element with non-matching primary language subtags for `lang` and `xml:lang`.
+This `html` element has different [primary language subtags][] for its `lang` and `xml:lang` attributes.
 
 ```html
 <html lang="fr" xml:lang="en"></html>
@@ -93,7 +93,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 #### Inapplicable Example 1
 
-`svg` element is not applicable for this rule.
+This rule does not apply to `svg` elements.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" lang="en" xml:lang="en"></svg>
@@ -101,7 +101,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 #### Inapplicable Example 2
 
-`svg` element is not applicable for this rule.
+This rule does not apply to `svg` elements, even inside an `html` element.
 
 ```svg
 <html>
@@ -113,7 +113,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 #### Inapplicable Example 3
 
-`xml:lang` is empty, the rule mandates `non-empty` values.
+This rule does not apply to `html` elements with an empty (`""`) `xml:lang` attribute.
 
 ```html
 <html lang="fr" xml:lang=""></html>
@@ -121,7 +121,7 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 
 #### Inapplicable Example 4
 
-Only `non-empty` values are considered.
+This rule does not apply to `html` elements whose `lang` attribute is not a [valid language subtag][], such as the empty string.
 
 ```html
 <html lang="" xml:lang=""></html>
@@ -129,7 +129,7 @@ Only `non-empty` values are considered.
 
 #### Inapplicable Example 5
 
-This rule does not apply to elements whose `lang` attribute consists only of whitespace.
+This rule does not apply to `html` elements whose `lang` attribute is not a [valid language subtag][], such as only ASCII whitespace.
 
 ```html
 <html lang=" " xml:lang=""></html>
@@ -137,7 +137,7 @@ This rule does not apply to elements whose `lang` attribute consists only of whi
 
 #### Inapplicable Example 6
 
-This rule does not apply to elements without an `xml:lang` attribute.
+This rule does not apply to elements without a `xml:lang` attribute.
 
 ```html
 <html lang="en"></html>
@@ -147,6 +147,10 @@ This rule does not apply to elements without an `xml:lang` attribute.
 
 This rule does not apply to `math` elements.
 
-```html
+```xml
 <math xml:lang="en"></math>
 ```
+
+[extended language subtags]: https://tools.ietf.org/html/bcp47#section-2.2.2 'Definition of extended language subtag'
+[primary language subtags]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
+[valid language subtag]: #valid-language-subtag 'Definition of valid language subtag'

@@ -12,6 +12,8 @@
 
 # Tag(s)
 - svg # `aria-query` dom tags does not list `svg`
+- iFrame # used to demonstrate bad spelling
+- feImage
 
 # Domain-specific words, Definitions & other allowed terms
 - URI
@@ -102,6 +104,8 @@
 - Autofill
 - implementers
 - Implementers
+- backtick
+- camelCase
 
 # Parts of Unicode
 - 000A

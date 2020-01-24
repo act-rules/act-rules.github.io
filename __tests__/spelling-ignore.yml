@@ -12,6 +12,8 @@
 
 # Tag(s)
 - svg # `aria-query` dom tags does not list `svg`
+- xhtml
+- DOCTYPE
 - iFrame # used to demonstrate bad spelling
 - feImage
 
@@ -49,6 +51,7 @@
 - unfocusable
 - tabindex
 - whitespace
+- Whitespace
 - namespace
 - namespaces
 - webpage

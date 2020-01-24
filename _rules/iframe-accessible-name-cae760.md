@@ -28,6 +28,8 @@ The rule applies to `iframe` elements that are [included in the accessibility tr
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
+**Note**: Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
+
 ## Assumptions
 
 - The rule assumes that the target `iframe` is used as a [user interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components).
@@ -40,7 +42,6 @@ _There are no major accessibility support issues known for this rule._
 
 - [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64)
 - [Understanding Success Criterion 4.1.2](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
-- [Understanding Success Criterion 2.4.1](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html)
 - [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)
 
 ## Test Cases

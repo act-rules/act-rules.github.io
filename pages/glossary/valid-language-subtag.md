@@ -5,7 +5,7 @@ unambiguous: true
 objective: true
 ---
 
-A text string following the syntax as defined in [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt), with a [primary language subtag](https://tools.ietf.org/html/bcp47#section-2.2.1) from the [language subtag registry](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
+A _valid language subtag_ is a text string following the syntax as defined in [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt), with a [primary language subtag](https://tools.ietf.org/html/bcp47#section-2.2.1) from the [language subtag registry](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
 
 Further reading:
 

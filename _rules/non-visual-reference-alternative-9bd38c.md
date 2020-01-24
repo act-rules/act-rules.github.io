@@ -21,13 +21,13 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
-  -  DOM Tree
-  -  Language
+  - DOM Tree
+  - Language
 acknowledgements:
   authors:
-    -  Brian Bors
-    -  Daniël Strik
-    -  Wilco Fiers
+    - Brian Bors
+    - Daniël Strik
+    - Wilco Fiers
 ---
 
 ## Applicability
@@ -36,20 +36,20 @@ Any text node that includes one of the [visual reference words](#visual-referenc
 
 ## Expectation
 
-Each test target that describes any [web content](https://www.w3.org/TR/WCAG21/#dfn-content) through the use of the [visual reference words](#visual-reference-words), is on the same [web page] (#https://www.w3.org/TR/WCAG21/#dfn-web-page-s) with an instruction that also describes that [web content](https://www.w3.org/TR/WCAG21/#dfn-content) by a non-visual characteristic, except if: 
+Each test target that describes any [web content](https://www.w3.org/TR/WCAG21/#dfn-content) through the use of the [visual reference words](#visual-reference-words), is on the same [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) with an instruction that also describes that [web content](https://www.w3.org/TR/WCAG21/#dfn-content) by a non-visual characteristic, except if:
 
-- The target is not part of an instruction about [web content](https://www.w3.org/TR/WCAG21/#dfn-content); or 
-- The visual reference word is [visible] in the described content.
+- The target is not part of an instruction about [web content](https://www.w3.org/TR/WCAG21/#dfn-content); or
+- The visual reference word is [visible](#visible) in the described content.
 
-**Note**: The expectation doesn't mention the fact that the non-visual characteristic description should be included in the accessibility tree. This rule can be passed with alternatives that are not included in the accessibility tree. Those sorts of solutions would only fail Succes Criteria 1.3.1 instead of both 1.3.3 and 1.3.1.
+**Note**: The expectation doesn't mention the fact that the non-visual characteristic description should be included in the accessibility tree. This rule can be passed with alternatives that are not included in the accessibility tree. Those sorts of solutions would only fail Success Criteria 1.3.1 instead of both 1.3.3 and 1.3.1.
 
 **Note**: The described web content does not have to be positioned on the same web page.
 
 ## Assumptions
 
-- This rule assumes that [visual reference words](#visual-reference-words) are forms of information conveyed through presentation, because of this, failing this rule fails both [Succes Criterion 1.3.1: Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships) and [Success Criterion 1.3.3: Sensory Characteristics](https://www.w3.org/TR/WCAG21/#sensory-characteristics). Presentation is not limited to CSS and includes images such as the image of a circle with text.
+- This rule assumes that [visual reference words](#visual-reference-words) are forms of information conveyed through presentation, because of this, failing this rule fails both [Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships) and [Success Criterion 1.3.3: Sensory Characteristics](https://www.w3.org/TR/WCAG21/#sensory-characteristics). Presentation is not limited to CSS and includes images such as the image of a circle with text.
 
-- This rule assumes that non-visual users will interpret some visual reference words as meaning "ahead" or "backwards" in the reading order. For example in most contexts "see the content below" will mean ahead in the DOM tree reading order which is not a visual reference and should pass this test. Note however that the DOM tree reading order can be different from the visual order of things, which could result in "see the content below" only refering to the visual order of things in which case it is not a correct reference.
+- This rule assumes that non-visual users will interpret some visual reference words as meaning "ahead" or "backwards" in the reading order. For example in most contexts "see the content below" will mean ahead in the DOM tree reading order which is not a visual reference and should pass this test. Note however that the DOM tree reading order can be different from the visual order of things, which could result in "see the content below" only referring to the visual order of things in which case it is not a correct reference.
 
 ## Accessibility Support
 
@@ -79,7 +79,7 @@ The content in the second column is indicated with the word "right" (which is an
 ```html
 <head>
 	<title>Passed example 1 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css">
+	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css" />
 </head>
 <body>
 	<div class="col-container">
@@ -99,13 +99,13 @@ The button in the second column is indicated with the word "box" (which is a loc
 
 ```html
 <div class="col-container">
-  <div class="col">
-    <p>Interact with the box below this paragraph, for a surprise</p>
-  </div>
+	<div class="col">
+		<p>Interact with the box below this paragraph, for a surprise</p>
+	</div>
 
-  <div class="col">
-    <button onclick="alert('Surprise!')">Howdy</button>
-  </div>
+	<div class="col">
+		<button onclick="alert('Surprise!')">Howdy</button>
+	</div>
 </div>
 ```
 
@@ -116,7 +116,7 @@ The visual reference made by the word "right" is complemented by the non-visual 
 ```html
 <head>
 	<title>Passed example 3 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css">
+	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css" />
 </head>
 <body>
 	<div class="col-container">
@@ -133,19 +133,17 @@ The visual reference made by the word "right" is complemented by the non-visual 
 					<a href="https://www.w3.org/Help/">Help and FAQ</a>
 				</li>
 			</ul>
-					
 		</div>
 	</div>
 </body>
 ```
-
 
 #### Passed Example 4
 
 This document is using the word "square" but in this case it is not an instruction about web content.
 
 ```html
-	<p>A square is a regular quadrilateral with four equal sides and four right angles.</p>
+<p>A square is a regular quadrilateral with four equal sides and four right angles.</p>
 ```
 
 #### Passed Example 5
@@ -155,14 +153,14 @@ The following text is tilted and describes web content. But the [section of cont
 ```html
 <head>
 	<title>Passed example 5 9bd38c</title>
-	<style> 
+	<style>
 		div.tilt {
 			height: 750px;
 			width: 150px;
 			-ms-transform: rotate(20deg); /* IE 9 */
 			-webkit-transform: rotate(20deg); /* Safari 3-8 */
 			transform: rotate(20deg);
-			}
+		}
 	</style>
 </head>
 <body>
@@ -177,7 +175,7 @@ The button is indicated by the word "round". But the word is also included in th
 ```html
 <head>
 	<title>Passed example 6 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css">
+	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css" />
 </head>
 <body>
 	<div class="col-container">
@@ -196,9 +194,9 @@ The button is indicated by the word "round". But the word is also included in th
 The images are indicated by the visual indicator words "narrow" and "wide". These words are also included in the accessible names of the images. Even through that indication is not visible, it is included in the accessibility tree which is sufficient to pass this rule.
 
 ```html
-	<p>The wide image is awesome. But the narrow image isn't.</p>
-	<img scr="/test-assets/images/awesome_wide.jfif" alt="Wide photo of an awesome landscape.">
-	<img scr="/test-assets/images/Non_awesome_narrow.jpg" alt="Narrow photo of a dull landscape.">
+<p>The wide image is awesome. But the narrow image isn't.</p>
+<img scr="/test-assets/images/awesome_wide.jfif" alt="Wide photo of an awesome landscape." />
+<img scr="/test-assets/images/Non_awesome_narrow.jpg" alt="Narrow photo of a dull landscape." />
 ```
 
 #### Passed Example 8
@@ -206,7 +204,10 @@ The images are indicated by the visual indicator words "narrow" and "wide". Thes
 This document is using the word "triangle" but in this case the triangle menu is on a different page and has a heading "triangle menu".
 
 ```html
-	<p>On the <a href="/test-assets/SC1.3.3-triangle-menu-with-heading.html">information page</a> you can find more examples within the triangle menu</p>
+<p>
+	On the <a href="/test-assets/SC1.3.3-triangle-menu-with-heading.html">information page</a> you can find more examples
+	within the triangle menu
+</p>
 ```
 
 #### Passed Example 9
@@ -223,14 +224,18 @@ This document is using the word "star" but in this case the star is in an 'ifram
 This document is using the word "circle" but in this case it is no instruction. Also note that the text is not visible, but still applicable.
 
 ```html
-	<p style="position: absolute;
+<p
+	style="position: absolute;
   width: 1px;
   height: 1px;
   padding: 0;
   margin: -1px;
   overflow: hidden;
   clip: rect(0,0,0,0);
-  border: 0;">A circle is nice.</p>
+  border: 0;"
+>
+	A circle is nice.
+</p>
 ```
 
 #### Passed Example 11
@@ -238,7 +243,7 @@ This document is using the word "circle" but in this case it is no instruction. 
 This document is using the word "circle" but in this case it is no instruction. Also note that the text is not included in the accessibility tree, but still applicable.
 
 ```html
-	<p aria-hidden="true">A circle is nice.</p>
+<p aria-hidden="true">A circle is nice.</p>
 ```
 
 ### Failed
@@ -250,7 +255,7 @@ The user is told to find the menu on the right (which is a visual indicator word
 ```html
 <head>
 	<title>Failed example 1 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css">
+	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css" />
 </head>
 <body>
 	<div class="col-container">
@@ -266,7 +271,6 @@ The user is told to find the menu on the right (which is a visual indicator word
 					<a href="https://www.w3.org/Help/">Help and FAQ</a>
 				</li>
 			</ul>
-					
 		</div>
 	</div>
 </body>
@@ -279,7 +283,7 @@ The user is told to find the navigation on the right (which is a visual indicato
 ```html
 <head>
 	<title>Failed example 2 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css">
+	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css" />
 </head>
 <body>
 	<nav>
@@ -328,7 +332,10 @@ This document is using the word "triangle" and the triangle menu is on a differe
 
 ```html
 <body>
-	<p>On the <a href="/test-assets/SC1.3.3-triangle-menu-without-heading.html">information page</a> you can find more examples within the triangle menu</p>
+	<p>
+		On the <a href="/test-assets/SC1.3.3-triangle-menu-without-heading.html">information page</a> you can find more
+		examples within the triangle menu
+	</p>
 </body>
 ```
 
@@ -338,8 +345,8 @@ This document is using the word "star" and there is no other indication. The con
 
 ```html
 <body>
-<p>More examples can be found when you look underneath the star</p>
-<iframe src="/test-assets/SC1.3.3-star-without-heading.html"></iframe>
+	<p>More examples can be found when you look underneath the star</p>
+	<iframe src="/test-assets/SC1.3.3-star-without-heading.html"></iframe>
 </body>
 ```
 

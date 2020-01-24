@@ -8,6 +8,7 @@ Any word in a text node that is included in the translated version of the follow
 **Note:** This list is not exhaustive. As soon as more visual reference words are found they can be added to this list.
 
 Visual location:
+
 - Above
 - Below
 - Beneath
@@ -26,6 +27,7 @@ Visual location:
 - Up
 
 Shape:
+
 - Box
 - Circle
 - Circular
@@ -57,6 +59,7 @@ Shape:
 - Wave
 
 Size:
+
 - Big
 - Large
 - Little
@@ -66,6 +69,7 @@ Size:
 - Wide
 
 Orientation:
+
 - Angled
 - Askew
 - Atilt
@@ -84,8 +88,9 @@ Orientation:
 - Tilted
 - Tipped
 
-Colour
-- Any single word colour name in the X11 standard, omitting duplicates: 
+Color
+
+- Any single word color name in the X11 standard, omitting duplicates:
   - Almond
   - Aqua
   - Aquamarine

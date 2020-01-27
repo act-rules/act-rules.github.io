@@ -166,7 +166,7 @@ A set of two SVG `a` elements have the same [accessible name][] and link to the 
 A set of one SVG `a` element and one HTML `a` element that have the same [accessible name][] and link to the [same resource][].
 
 ```html
-<a href="http://facebook.com">Follow us"</a>
+<a href="http://facebook.com">Follow us</a>
 
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<a href="http://facebook.com" aria-label="Follow us">

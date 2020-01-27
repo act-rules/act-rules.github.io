@@ -35,7 +35,7 @@ For each test target, the [`content`](https://www.w3.org/TR/html52/document-meta
 
 ## Accessibility Support
 
-Support for `meta name="viewport"` in older mobile browsers is not consistent.
+Desktop browsers ignore the viewport `meta` element, and most modern mobile browsers either ignore it by default, or have an accessibility option which will allow zooming. This rule is not relevant for desktop browsers, nor for most modern mobile browsers. Only users with older mobile browsers can experience issues tested by this rule.
 
 ## Background
 

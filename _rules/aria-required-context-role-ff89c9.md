@@ -17,7 +17,7 @@ acknowledgements:
   authors:
     - Wilco Fiers
     - Brian Bors
-  previous_authros:
+  previous_authors:
     - Anne Thyme Nørregaard
 ---
 

@@ -40,7 +40,7 @@ Older browsers do not support more than one token in the value for a role attrib
 
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 - [WAI-ARIA 1.1 Categorization of Roles](https://www.w3.org/TR/wai-aria-1.1/#roles_categorization)
-- [MDN: Using ARIA: Roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#Roles)
+- [WAI-ARIA Roles](https://www.w3.org/TR/wai-aria-1.1/#usage_intro)
 
 ## Test Cases
 
@@ -67,7 +67,7 @@ Element with multiple valid `role` values.
 Element with at least one valid `role` value.
 
 ```html
-<img role="img xyz" src="https://developer.mozilla.org/static/img/favicon144.png" alt="MDN logo" />
+<img role="img xyz" src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
 ```
 
 ### Failed

@@ -58,24 +58,7 @@ The [HTML document][] has a single [printable character][] [keyboard shortcut][]
 <html>
   <head>
     <title>Passed Example 1</title>
-    <script>
-      function shortcut(params) {
-        document.body.addEventListener("keydown", function(event) {
-          const target = document.getElementById("target");
-
-          if (
-            event.key === params.shortcutKey &&
-            (!!!params.ctrlKey || event.ctrlKey) &&
-            (!!!params.focusOnly || document.activeElement === target)
-          ) {
-            document.getElementById("list").innerHTML +=
-              "<li>" + target.value + "</li>";
-            target.value = "";
-            event.preventDefault();
-          }
-        });
-      }
-    </script>
+    <script src="/test-assets/ffbc54/script.js"></script>
   </head>
 
   <body onload="shortcut({focusOnly: true, shortcutKey: '+' , ctrlKey: false})">
@@ -98,29 +81,20 @@ The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a
 <html>
   <head>
     <title>Passed Example 2</title>
-    <script>
-      function shortcut() {
-        document.body.addEventListener('keydown', function(event) {
-          if (event.key === 'i' && !document.getElementById('turn_off').checked) {
-            const text = document.getElementById('text');
-            text.className = text.className === 'italic' ? '' : 'italic';
-          }
-        });
-      }
-    </script>
-    <style>
-      .italic {
-        font-style: italic;
-      }
-    </style>
+    <script src="/test-assets/ffbc54/script.js"></script>
   </head>
-  <body onload="shortcut();">
-    <div>Press <strong>i</strong> to toggle italic format</div>
+  <body onload="shortcut({focusOnly: false, shortcutKey: '+' , ctrlKey: false})">
+    <label for="text">Add to list (press + to add):</label>
+    <input type="text" id="target" />
     <label>
-      <input id="turn_off" type="checkbox">
+      <input type="checkbox" onclick="globalParams.disabled = this.checked">
       Turn off shortcut
     </label>
-    <div id="text">Some text inside the document content</div>
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
   </body>
 </html>
 ```
@@ -133,36 +107,25 @@ The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a
 <html>
   <head>
     <title>Passed Example 3</title>
-    <script>
-      function shortcut() {
-        document.body.addEventListener('keydown', function(event) {
-          if ((document.getElementById('remap').checked && event.key === 'i' && event.ctrlKey) ||
-              (!document.getElementById('remap').checked && event.key === 'i' && !event.ctrlKey)) {
-
-            const text = document.getElementById('text');
-            text.className = text.className === 'italic' ? '' : 'italic';
-          }
-        });
-      }
-    </script>
-    <style>
-      .italic {
-        font-style: italic;
-      }
-    </style>
+    <script src="/test-assets/ffbc54/script.js"></script>
   </head>
-  <body onload="shortcut();">
-    <div>Press <strong>i</strong> to toggle italic format</div>
+  <body onload="shortcut({focusOnly: false, shortcutKey: '+' , ctrlKey: false})">
+    <label for="text">Add to list (press + to add):</label>
+    <input type="text" id="target" />
     <div>
       <div>Remap shortcut</div>
       <div>
         <label>
-          <input id="remap" type="checkbox">
+          <input id="remap" type="checkbox" onclick="globalParams.ctrlKey = this.checked" />
           Use <strong>ctrl</strong> key
         </label>
       </div>
     </div>
-    <div id="text">Some text inside the document content</div>
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
   </body>
 </html>
 ```
@@ -177,25 +140,16 @@ The [HTML document][] has a [keyboard shortcut][keyboard shortcuts] using only a
 <html>
   <head>
     <title>Failed Example 1</title>
-    <script>
-      function shortcut() {
-        document.body.addEventListener('keydown', function(event) {
-          if (event.key === 'i') {
-            const text = document.getElementById('text');
-            text.className = text.className === 'italic' ? '' : 'italic';
-          }
-        });
-      }
-    </script>
-    <style>
-      .italic {
-        font-style: italic;
-      }
-    </style>
+    <script src="/test-assets/ffbc54/script.js"></script>
   </head>
-  <body onload="shortcut();">
-    <div>Press <strong>i</strong> to toggle italic format</div>
-    <div id="text">Some text inside the document content</div>
+  <body onload="shortcut({focusOnly: false, shortcutKey: '+' , ctrlKey: false})">
+    <label for="text">Add to list (press + to add):</label>
+    <input type="text" id="target" />
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
   </body>
 </html>
 ```
@@ -208,31 +162,22 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 <html>
   <head>
     <title>Failed Example 2</title>
-    <script>
-      function shortcut() {
-        document.body.addEventListener('keydown', function(event) {
-          if (event.key === 'i' && !document.getElementById('turn_off').checked) {
-            const text = document.getElementById('text');
-            text.className = text.className === 'italic' ? '' : 'italic';
-          }
-        });
-      }
-    </script>
-    <style>
-      .italic {
-        font-style: italic;
-      }
-    </style>
+    <script src="/test-assets/ffbc54/script.js"></script>
   </head>
-  <body onload="shortcut();">
-    <div>Press <strong>i</strong> to toggle italic format</div>
+  <body onload="shortcut({focusOnly: false, shortcutKey: '+' , ctrlKey: false})">
+    <label for="text">Add to list (press + to add):</label>
+    <input type="text" id="target" />
     <div style="position: absolute; margin-left: -9999px;">
       <label>
-        <input id="turn_off" type="checkbox">
+        <input type="checkbox" onclick="globalParams.disabled = this.checked">
         Turn off shortcut
       </label>
     </div>
-    <div id="text">Some text inside the document content</div>
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
   </body>
 </html>
 ```
@@ -245,31 +190,22 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 <html>
   <head>
     <title>Failed Example 3</title>
-    <script>
-      function shortcut() {
-        document.body.addEventListener('keydown', function(event) {
-          if (event.key === 'i' && !document.getElementById('turn_off').checked) {
-            const text = document.getElementById('text');
-            text.className = text.className === 'italic' ? '' : 'italic';
-          }
-        });
-      }
-    </script>
-    <style>
-      .italic {
-        font-style: italic;
-      }
-    </style>
+    <script src="/test-assets/ffbc54/script.js"></script>
   </head>
-  <body onload="shortcut();">
-    <div>Press <strong>i</strong> to toggle italic format</div>
+  <body onload="shortcut({focusOnly: false, shortcutKey: '+' , ctrlKey: false})">
+    <label for="text">Add to list (press + to add):</label>
+    <input type="text" id="target" />
     <div aria-hidden="true">
       <label>
-        <input id="turn_off" type="checkbox">
+        <input type="checkbox" onclick="globalParams.disabled = this.checked">
         Turn off shortcut
       </label>
     </div>
-    <div id="text">Some text inside the document content</div>
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
   </body>
 </html>
 ```
@@ -281,32 +217,22 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 ```html
 <html>
   <head>
-    <title>Failed Example 4 </title>
-    <script>
-      function shortcut() {
-        document.body.addEventListener('keydown', function(event) {
-          if (event.key === 'i' && !document.getElementById('turn_off').checked) {
-            const text = document.getElementById('text');
-            text.className = text.className === 'italic' ? '' : 'italic';
-          }
-        });
-      }
-    </script>
-    <style>
-      .italic {
-        font-style: italic;
-      }
-    </style>
+    <title>Failed Example 4</title>
+    <script src="/test-assets/ffbc54/script.js"></script>
   </head>
-  <body onload="shortcut();">
-    <div>Press <strong>i</strong> to toggle italic format</div>
-    <span>Turn off shortcut</span>
+  <body onload="shortcut({focusOnly: false, shortcutKey: '+' , ctrlKey: false})">
+    <label for="text">Add to list (press + to add):</label>
+    <input type="text" id="target" />
     <div>
       <label>
-        <input id="turn_off" type="checkbox">
+        <input type="checkbox" onclick="globalParams.disabled = this.checked">
       </label>
     </div>
-    <div id="text">Some text inside the document content</div>
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
   </body>
 </html>
 ```
@@ -319,26 +245,16 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 <html>
   <head>
     <title>Failed Example 5</title>
-    <script>
-      function shortcut() {
-        document.body.addEventListener("keydown", function(event) {
-          if (event.key === "i") {
-            const text = document.getElementById("text");
-            text.className = text.className === "italic" ? "" : "italic";
-          }
-        });
-      }
-    </script>
-    <style>
-      .italic {
-        font-style: italic;
-      }
-    </style>
+    <script src="/test-assets/ffbc54/script.js"></script>
   </head>
-
-  <body onload="shortcut();">
-    <div>Press <strong>i</strong> to toggle italic format</div>
-    <div id="text">Some text inside the document content</div>
+  <body onload="shortcut({focusOnly: false, shortcutKey: '+' , ctrlKey: false})">
+    <label for="text">Add to list (press + to add):</label>
+    <input type="text" id="target" />
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
   </body>
 </html>
 ```
@@ -351,41 +267,25 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 <html>
   <head>
     <title>Failed Example 6</title>
-    <script>
-      function shortcut() {
-        document.body.addEventListener("keydown", function(event) {
-          if (
-            (document.getElementById("remap").checked &&
-              event.key === "i" &&
-              event.ctrlKey) ||
-            (!document.getElementById("remap").checked &&
-              event.key === "i" &&
-              !event.ctrlKey)
-          ) {
-            const text = document.getElementById("text");
-            text.className = text.className === "italic" ? "" : "italic";
-          }
-        });
-      }
-    </script>
-    <style>
-      .italic {
-        font-style: italic;
-      }
-    </style>
+    <script src="/test-assets/ffbc54/script.js"></script>
   </head>
-  <body onload="shortcut()">
-    <div>Press <strong>i</strong> to toggle italic format</div>
+  <body onload="shortcut({focusOnly: false, shortcutKey: '+' , ctrlKey: false})">
+    <label for="text">Add to list (press + to add):</label>
+    <input type="text" id="target" />
     <div>
       <div>Remap shortcut</div>
       <div style="position: absolute; margin-left: -9999px;">
         <label>
-          <input id="remap" type="checkbox" />
+          <input id="remap" type="checkbox" onclick="globalParams.ctrlKey = this.checked" />
           Use <strong>ctrl</strong> key
         </label>
       </div>
     </div>
-    <div id="text">Some text inside the document content</div>
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
   </body>
 </html>
 ```
@@ -398,41 +298,25 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 <html>
   <head>
     <title>Failed Example 7</title>
-    <script>
-      function shortcut() {
-        document.body.addEventListener("keydown", function(event) {
-          if (
-            (document.getElementById("remap").checked &&
-              event.key === "i" &&
-              event.ctrlKey) ||
-            (!document.getElementById("remap").checked &&
-              event.key === "i" &&
-              !event.ctrlKey)
-          ) {
-            const text = document.getElementById("text");
-            text.className = text.className === "italic" ? "" : "italic";
-          }
-        });
-      }
-    </script>
-    <style>
-      .italic {
-        font-style: italic;
-      }
-    </style>
+    <script src="/test-assets/ffbc54/script.js"></script>
   </head>
-  <body onload="shortcut()">
-    <div>Press <strong>i</strong> to toggle italic format</div>
+  <body onload="shortcut({focusOnly: false, shortcutKey: '+' , ctrlKey: false})">
+    <label for="text">Add to list (press + to add):</label>
+    <input type="text" id="target" />
     <div>
       <div>Remap shortcut</div>
       <div aria-hidden="true">
         <label>
-          <input id="remap" type="checkbox" />
+          <input id="remap" type="checkbox" onclick="globalParams.ctrlKey = this.checked" />
           Use <strong>ctrl</strong> key
         </label>
       </div>
     </div>
-    <div id="text">Some text inside the document content</div>
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
   </body>
 </html>
 ```
@@ -445,40 +329,20 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 <html>
   <head>
     <title>Failed Example 8</title>
-    <script>
-      function shortcut() {
-        document.body.addEventListener("keydown", function(event) {
-          if (
-            (document.getElementById("remap").checked &&
-              event.key === "i" &&
-              event.ctrlKey) ||
-            (!document.getElementById("remap").checked &&
-              event.key === "i" &&
-              !event.ctrlKey)
-          ) {
-            const text = document.getElementById("text");
-            text.className = text.className === "italic" ? "" : "italic";
-          }
-        });
-      }
-    </script>
-    <style>
-      .italic {
-        font-style: italic;
-      }
-    </style>
+    <script src="/test-assets/ffbc54/script.js"></script>
   </head>
-
-  <body onload="shortcut()">
-    <div>Press <strong>i</strong> to toggle italic format</div>
+  <body onload="shortcut({focusOnly: false, shortcutKey: '+' , ctrlKey: false})">
+    <label for="text">Add to list (press + to add):</label>
+    <input type="text" id="target" />
     <div>
       <div>Remap shortcut</div>
-      <div>
-        <div>Use <strong>ctrl</strong> key</div>
-        <input id="remap" type="checkbox" />
-      </div>
+      <input id="remap" type="checkbox" onclick="globalParams.ctrlKey = this.checked" />
     </div>
-    <div id="text">Some text inside the document content</div>
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
   </body>
 </html>
 ```
@@ -491,24 +355,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 <html>
   <head>
     <title>Failed Example 9</title>
-    <script>
-      function shortcut(params) {
-        document.body.addEventListener("keydown", function(event) {
-          const target = document.getElementById("target");
-
-          if (
-            event.key === params.shortcutKey &&
-            (!!!params.ctrlKey || event.ctrlKey) &&
-            (!!!params.focusOnly || document.activeElement === target)
-          ) {
-            document.getElementById("list").innerHTML +=
-              "<li>" + target.value + "</li>";
-            target.value = "";
-            event.preventDefault();
-          }
-        });
-      }
-    </script>
+    <script src="/test-assets/ffbc54/script.js"></script>
   </head>
 
   <body
@@ -555,25 +402,8 @@ The [HTML document][] has a [keyboard shortcut][] that requires pressing one [no
 ```html
 <html>
   <head>
-    <title>Inapplicable Example 3 for rule ffbc54</title>
-    <script>
-      function shortcut(params) {
-        document.body.addEventListener("keydown", function(event) {
-          const target = document.getElementById("target");
-
-          if (
-            event.key === params.shortcutKey &&
-            (!!!params.ctrlKey || event.ctrlKey) &&
-            (!!!params.focusOnly || document.activeElement === target)
-          ) {
-            document.getElementById("list").innerHTML +=
-              "<li>" + target.value + "</li>";
-            target.value = "";
-            event.preventDefault();
-          }
-        });
-      }
-    </script>
+    <title>Inapplicable Example 3</title>
+    <script src="/test-assets/ffbc54/script.js"></script>
   </head>
 
   <body onload="shortcut({focusOnly: true, shortcutKey: '+' , ctrlKey: true})">
@@ -595,7 +425,7 @@ The [HTML document][] has an element with the attribute `accesskey`. Accesskeys 
 ```html
 <html>
   <head>
-    <title>Inapplicable Example 4 for rule ffbc54</title>
+    <title>Inapplicable Example 4</title>
     <script>
       function shortcut(params) {
         const button = document.querySelector("button");
@@ -626,7 +456,6 @@ The [HTML document][] has an element with the attribute `accesskey`. Accesskeys 
 
 [HTML document]: https://dom.spec.whatwg.org/#concept-document
 [keyboard shortcut]: https://www.w3.org/TR/WCAG21/#dfn-keyboard-shortcuts
-[mechanism]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-mechanism
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
 [printable character]: #printable-characters 'Definition of printable characters'

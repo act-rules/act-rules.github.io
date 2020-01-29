@@ -52,24 +52,7 @@ The [HTML document][] has a single [printable character][] [keyboard shortcut][]
 <html>
   <head>
     <title>Passed Example 1 for rule 1e9941</title>
-    <script>
-      function shortcut(params) {
-        document.body.addEventListener("keydown", function(event) {
-          const target = document.getElementById("target");
-
-          if (
-            event.key === params.shortcutKey &&
-            (!!!params.ctrlKey || event.ctrlKey) &&
-            (!!!params.focusOnly || document.activeElement === target)
-          ) {
-            document.getElementById("list").innerHTML +=
-              "<li>" + target.value + "</li>";
-            target.value = "";
-            event.preventDefault();
-          }
-        });
-      }
-    </script>
+    <script src="/test-assets/ffbc54/script.js"></script>
   </head>
 
   <body onload="shortcut({focusOnly: true, shortcutKey: '+' , ctrlKey: false})">
@@ -94,24 +77,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 <html>
   <head>
     <title>Failed Example 1 for rule 1e9941</title>
-    <script>
-      function shortcut(params) {
-        document.body.addEventListener("keydown", function(event) {
-          const target = document.getElementById("target");
-
-          if (
-            event.key === params.shortcutKey &&
-            (!!!params.ctrlKey || event.ctrlKey) &&
-            (!!!params.focusOnly || document.activeElement === target)
-          ) {
-            document.getElementById("list").innerHTML +=
-              "<li>" + target.value + "</li>";
-            target.value = "";
-            event.preventDefault();
-          }
-        });
-      }
-    </script>
+    <script src="/test-assets/ffbc54/script.js"></script>
   </head>
 
   <body
@@ -159,24 +125,7 @@ The [HTML document][] has a [keyboard shortcut][] that requires pressing one [no
 <html>
   <head>
     <title>Inapplicable Example 3 for rule 1e9941</title>
-    <script>
-      function shortcut(params) {
-        document.body.addEventListener("keydown", function(event) {
-          const target = document.getElementById("target");
-
-          if (
-            event.key === params.shortcutKey &&
-            (!!!params.ctrlKey || event.ctrlKey) &&
-            (!!!params.focusOnly || document.activeElement === target)
-          ) {
-            document.getElementById("list").innerHTML +=
-              "<li>" + target.value + "</li>";
-            target.value = "";
-            event.preventDefault();
-          }
-        });
-      }
-    </script>
+    <script src="/test-assets/ffbc54/script.js"></script>
   </head>
 
   <body onload="shortcut({focusOnly: true, shortcutKey: '+' , ctrlKey: true})">

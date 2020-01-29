@@ -26,9 +26,7 @@ The rule applies to any HTML element that
 - is [visible][] and;
 - is [included in the accessibility tree][] and;
 - has at least one ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][]; and
-- whose closest ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][]:
-  1. is [visible][] and;
-  2. is [included in the accessibility tree][].
+- whose closest ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][] is [included in the accessibility tree][].
 
 ## Expectation
 
@@ -214,7 +212,6 @@ The column header ('Col B') does not have an assigned cell within the same `tabl
 	</div>
 	<div role="row">
 		<div role="gridcell">1A</div>
-		<div role="gridcell">1B</div>
 	</div>
 	<div role="row">
 		<div role="gridcell">2A</div>
@@ -261,7 +258,7 @@ There are no elements with a [role][semantic role] of header within the table.
 
 #### Inapplicable Example 4
 
-The only element with a [role][semantic role] of header is not [visible][].
+The only element with a [role][semantic role] of header is neither [visible][] nor [included in the accessibility tree][].
 
 ```html
 <table>
@@ -302,32 +299,6 @@ The only element with a [role][semantic role] of header does not have a closest 
 ```
 
 #### Inapplicable Example 7
-
-The only element with header [role][semantic role] is part of a table which is not [visible][].
-
-```html
-<html>
-	<style>
-		.notInPage {
-			position: absolute;
-			left: -9999px;
-			top: -9999px;
-		}
-	</style>
-	<body>
-		<table class="notInPage">
-			<tr>
-				<th>Time</th>
-			</tr>
-			<tr>
-				<td>24:00</td>
-			</tr>
-		</table>
-	</body>
-</html>
-```
-
-#### Inapplicable Example 8
 
 The only element with a header [role][semantic role] is part of a table which is not [included in the accessibility tree][].
 

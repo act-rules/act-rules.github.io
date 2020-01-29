@@ -1,6 +1,8 @@
 ---
 title: Section of content
 key: section-of-content
+unambiguous: false
+objective: false
 ---
 
 A _section of content_ is a distinct part or subdivision of a document.

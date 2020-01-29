@@ -226,7 +226,7 @@ The column header ('Col B') does not have an assigned cell within the same `tabl
 
 #### Inapplicable Example 1
 
-There is no element with a [semantic role][] of header within the table.
+There are no elements with a [semantic role][] of header within the table.
 
 ```html
 <table>
@@ -238,7 +238,7 @@ There is no element with a [semantic role][] of header within the table.
 
 #### Inapplicable Example 2
 
-There are no element with a [semantic role][] of header.
+There are no elements with a [semantic role][] of header.
 
 ```html
 <table></table>

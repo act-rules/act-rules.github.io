@@ -96,10 +96,11 @@ Even though this `h1` element is not [visible][], it is still [included in the a
 
 #### Failed Example 1
 
-This `h1` element has an empty [accessible name][] given by its `aria-label` attribute.
+This `h1` element has an empty [accessible name][] given by its `aria-labelledby` attribute.
 
 ```html
-<h1 aria-label="">ACT rules</h1>
+<span id="label"></span>
+<h1 aria-labelledby="label">ACT rules</h1>
 ```
 
 #### Failed Example 2

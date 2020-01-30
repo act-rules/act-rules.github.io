@@ -96,15 +96,16 @@ Even though this `h1` element is not [visible][], it is still [included in the a
 
 #### Failed Example 1
 
-This `h1` element has an empty [accessible name][] given by its `aria-label` attribute.
+This `h1` element has an empty [accessible name][] given by its `aria-labelledby` attribute.
 
 ```html
-<h1 aria-label="">ACT rules</h1>
+<span id="label"></span>
+<h1 aria-labelledby="label">ACT rules</h1>
 ```
 
 #### Failed Example 2
 
-This `h1` element has an empty [accessible name][] because the `img` element is marked as [decorative][] through its [semantic role][] of `presentation`, and thus does not provide an [accessible name][] to the `h1` element.
+This `h1` element has an empty [accessible name][] because the `img` element is [marked as decorative][] through its [semantic role][] of `presentation`, and thus does not provide an [accessible name][] to the `h1` element.
 
 ```html
 <h1><img src="#" alt="ACT rules" role="presentation" /></h1>
@@ -156,7 +157,7 @@ This `h1` element is not [included in the accessibility tree][].
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [accessible name and description computation]: https://www.w3.org/TR/accname
-[decorative]: #decorative 'Definition of decorative'
+[marked as decorative]: #marked-as-decorative 'Definition of marked as decorative'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [tech h42]: https://www.w3.org/WAI/WCAG21/Techniques/html/H42 'Technique H42: Using h1-h6 to identify headings'
 [usc131]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'

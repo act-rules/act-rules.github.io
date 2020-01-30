@@ -35,8 +35,8 @@ The rule only applies to any HTML or SVG element that is [focusable][].
 
 For each test target, the [outcome](#outcome) of one of the following rules is "passed":
 
-- [No keyboard trap standard navigation](https://act-rules.github.io/rules/a1b64e)
-- [No keyboard trap non-standard navigation](https://act-rules.github.io/rules/ebe86a)
+- [Focusable Element Has No Keyboard Trap Via Standard Navigation](https://act-rules.github.io/rules/a1b64e)
+- [Focusable Element Has No Keyboard Trap Via Non-Standard Navigation](https://act-rules.github.io/rules/ebe86a)
 
 ## Assumptions
 

@@ -22,16 +22,16 @@ acknowledgements:
 
 The rule applies to any [visible][] [HTML element][] in an [HTML document][] if:
 
-- the `innerText` property of the [element][html element] is updated with a determinable frequency;
-- the [element][html element] does not have [children][child] whose `innerText` property is also updated;
-- the updating starts when the [readiness][document readiness] of the [HTML document][] the [element][html element] belongs to is equal to "complete";
+- the `innerText` property of the [element][html element] changes without the user [activating][activate] or [focusing][focus] any [element][html element] in the same [HTML document][];
+- the [element][html element] does not have [children][child] whose `innerText` property is also changed;
+- the change happens after the [readiness][document readiness] of the [HTML document][] the [element][html element] belongs to is equal to "complete";
 - it is not the only [content][] in the [HTML document][].
 
 ## Expectation
 
-For the test target a [user interface component][] is provided to pause, stop or hide the updating of the [text content][].
+For the test target a [user interface component][] is provided to pause, stop or hide the change of the [text content][].
 
-**Note**: If there is more than one test target, a single [user interface component][] may be used to pause, stop or hide updating all test targets.
+**Note**: If there is more than one test target, a single [user interface component][] may be used to pause, stop or hide changing all test targets.
 
 ## Assumptions
 
@@ -53,7 +53,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The text content automatically updates with a one second frequency after the page completes loading. A button is available to stop the automatic updates.
+The text content automatically updates after the page completes loading. A button is available to stop the automatic updates.
 
 ```html
 <body onload="startUpdates()">
@@ -71,7 +71,7 @@ The text content automatically updates with a one second frequency after the pag
 
 #### Passed Example 2
 
-The text content automatically updates with a one second frequency after the page completes loading. A button is available to pause and resume the automatic updates.
+The text content automatically updates after the page completes loading. A button is available to pause and resume the automatic updates.
 
 ```html
 <body onload="startUpdates()">
@@ -89,7 +89,7 @@ The text content automatically updates with a one second frequency after the pag
 
 #### Passed Example 3
 
-The text content automatically updates with a one second frequency after the page completes loading. A button is available to hide the automatically updating content.
+The text content automatically updates after the page completes loading. A button is available to hide the automatically updating content.
 
 ```html
 <body onload="startUpdates()">
@@ -109,7 +109,7 @@ The text content automatically updates with a one second frequency after the pag
 
 #### Failed Example 1
 
-The text content automatically updates with a one second frequency after the page completes loading. There is no component to stop or pause the automatic updates.
+The text content automatically updates after the page completes loading. There is no component to stop or pause the automatic updates or to hide the updating content.
 
 ```html
 <body onload="startUpdates()">
@@ -128,7 +128,7 @@ The text content automatically updates with a one second frequency after the pag
 
 #### Inapplicable Example 1
 
-The text content automatically updates with a one second frequency after the page completes loading but it is not visible.
+The text content automatically updates after the page completes loading but it is not visible.
 
 ```html
 <body onload="startUpdates()">
@@ -145,7 +145,7 @@ The text content automatically updates with a one second frequency after the pag
 
 #### Inapplicable Example 2
 
-The text content automatically updates with a one second frequency but not as a result of the page loading.
+The text content automatically updates but only as a result of the user activating an element on the page.
 
 ```html
 <body>
@@ -173,10 +173,12 @@ The automatically updating text content is the only content in the document.
 </body>
 ```
 
+[activate]: https://html.spec.whatwg.org/#activation
 [child]: https://dom.spec.whatwg.org/#concept-tree-child
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
 [document readiness]: https://www.w3.org/TR/html53/dom.html#current-document-readiness
 [essential]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html#dfn-essential
+[focus]: https://html.spec.whatwg.org/#focus
 [f16]: https://www.w3.org/WAI/WCAG21/Techniques/failures/F16
 [g186]: https://www.w3.org/WAI/WCAG21/Techniques/general/G186
 [html document]: https://dom.spec.whatwg.org/#html-document

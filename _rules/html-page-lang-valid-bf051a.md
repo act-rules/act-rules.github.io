@@ -65,7 +65,7 @@ This `html` element has a `lang` attribute whose value is a [valid][valid langua
 
 #### Passed Example 2
 
-This `html` element has a `lang` attribute value is a [valid language subtag][] even though the [region subtag][] is not.
+This `html` element has a `lang` attribute value that is a [valid language subtag][] even though the [region subtag][] is not.
 
 ```html
 <html lang="en-US-GB"></html>

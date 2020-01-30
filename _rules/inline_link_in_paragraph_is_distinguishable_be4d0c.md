@@ -38,7 +38,7 @@ This rule applies to any HTML element which:
 
 Each target element has either:
 
-- content (such as an image or text) inside, or immediately before or after the test target, that identifies it as a link; or
+- content (such as an image or text) visually located inside, or immediately before or after the test target, that identifies it as a link; or
 - a [distinguishing style][] not based on color alone, compared to the _ancestor_ element and to any of its [descendant][] HTML elements that have [visible][] [text nodes][text node]; or
 - a `box-shadow` style property with a computed [color value](https://drafts.csswg.org/css-backgrounds/#shadow-color) different from the `background-color` of the target element; or
 - at least one of the `border-top-color`, `border-right-color`, `border-bottom-color` and `border-left-color` style properties with a computed [color value](https://drafts.csswg.org/css-backgrounds/#border-color) different from the `background-color` of the target element; or

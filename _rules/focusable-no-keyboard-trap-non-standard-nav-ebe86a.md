@@ -23,13 +23,13 @@ acknowledgements:
 
 The rule applies to any HTML or SVG element that is [focusable](#focusable) where focus cannot cycle to the browser UI by using [standard keyboard navigation](#standard-keyboard-navigation).
 
-**Note**: This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
+**Note:** This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
 
 ## Expectation 1
 
 For each target element help information is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree) or can be accessed from within the keyboard trap.
 
-**Note**: As per WCAG 2.0 Success Criterion 2.1.1 Keyboard the help information should be accessible through a keyboard interface.
+**Note:** As per WCAG 2.0 Success Criterion 2.1.1 Keyboard the help information should be accessible through a keyboard interface.
 
 ## Expectation 2
 
@@ -39,7 +39,7 @@ The help information explains how to cycle to the browser UI, or on how to get t
 
 For each target element focus can cycle to the browser UI by using the method advised in the help information.
 
-**Note**: Cycling back to the browser UI can be done both by moving forward through the tab order and by moving backwards. It is not possible to fulfill this expectation by using browser specific shortcuts to return to the browser UI.
+**Note:** Cycling back to the browser UI can be done both by moving forward through the tab order and by moving backwards. It is not possible to fulfill this expectation by using browser specific shortcuts to return to the browser UI.
 
 ## Assumptions
 

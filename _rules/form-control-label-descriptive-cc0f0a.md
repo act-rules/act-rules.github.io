@@ -36,19 +36,19 @@ This rule applies to any HTML `label` element or other element referenced by `ar
 - `switch`
 - `textbox`
 
-**Note**: The list of form field roles is derived by taking all the roles from [WAI-ARIA Specifications](#wai-aria-specifications) that:
+**Note:** The list of form field roles is derived by taking all the roles from [WAI-ARIA Specifications](#wai-aria-specifications) that:
 
 - have a [semantic role][] that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
 - does not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
 - The `option` role is not part of the list of applicable roles, because it does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an [accessible name](#accessible-name).
 
-**Note**: This rule is a partial check for WCAG 2.1 success criterion 2.4.6, which applies to all labels. "Label" is used in its general sense and includes text or other components with a text alternative that is presented to a user to identify a component within Web content.
+**Note:** This rule is a partial check for WCAG 2.1 success criterion 2.4.6, which applies to all labels. "Label" is used in its general sense and includes text or other components with a text alternative that is presented to a user to identify a component within Web content.
 
 ## Expectation
 
 Each target element describes the purpose of the associated form field element.
 
-**Note**: Labels do not need to be lengthy. A word, or even a single character, may suffice.
+**Note:** Labels do not need to be lengthy. A word, or even a single character, may suffice.
 
 ## Assumptions
 

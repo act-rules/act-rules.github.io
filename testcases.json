@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 656,
+  "count": 674,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -777,6 +777,330 @@
       "ruleId": "ff89c9",
       "ruleName": "ARIA required context role",
       "rulePage": "https://act-rules.github.io/rules/ff89c9",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "2ee41d28e834ecedcd8ad33a7298707e5439df7a",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/bc4a75/2ee41d28e834ecedcd8ad33a7298707e5439df7a.html",
+      "relativePath": "testcases/bc4a75/2ee41d28e834ecedcd8ad33a7298707e5439df7a.html",
+      "expected": "passed",
+      "ruleId": "bc4a75",
+      "ruleName": "ARIA required owned elements",
+      "rulePage": "https://act-rules.github.io/rules/bc4a75",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "f856c5c937245a233973c5d5aea15995355226d9",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/bc4a75/f856c5c937245a233973c5d5aea15995355226d9.html",
+      "relativePath": "testcases/bc4a75/f856c5c937245a233973c5d5aea15995355226d9.html",
+      "expected": "passed",
+      "ruleId": "bc4a75",
+      "ruleName": "ARIA required owned elements",
+      "rulePage": "https://act-rules.github.io/rules/bc4a75",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "c26f9f87576ea7fbeb2db67a559e78501d1d232a",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/bc4a75/c26f9f87576ea7fbeb2db67a559e78501d1d232a.html",
+      "relativePath": "testcases/bc4a75/c26f9f87576ea7fbeb2db67a559e78501d1d232a.html",
+      "expected": "passed",
+      "ruleId": "bc4a75",
+      "ruleName": "ARIA required owned elements",
+      "rulePage": "https://act-rules.github.io/rules/bc4a75",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "80742d95918966bec09da9c44a2650c7cb35f7ba",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/bc4a75/80742d95918966bec09da9c44a2650c7cb35f7ba.html",
+      "relativePath": "testcases/bc4a75/80742d95918966bec09da9c44a2650c7cb35f7ba.html",
+      "expected": "passed",
+      "ruleId": "bc4a75",
+      "ruleName": "ARIA required owned elements",
+      "rulePage": "https://act-rules.github.io/rules/bc4a75",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "b84f050f7e6ab246348eb5ccbc1a714921c4a4e8",
+      "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/bc4a75/b84f050f7e6ab246348eb5ccbc1a714921c4a4e8.html",
+      "relativePath": "testcases/bc4a75/b84f050f7e6ab246348eb5ccbc1a714921c4a4e8.html",
+      "expected": "passed",
+      "ruleId": "bc4a75",
+      "ruleName": "ARIA required owned elements",
+      "rulePage": "https://act-rules.github.io/rules/bc4a75",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "d226543d65b0d49a03e7ea45f2de82bf0cbc1726",
+      "testcaseTitle": "Passed Example 6",
+      "url": "https://act-rules.github.io/testcases/bc4a75/d226543d65b0d49a03e7ea45f2de82bf0cbc1726.html",
+      "relativePath": "testcases/bc4a75/d226543d65b0d49a03e7ea45f2de82bf0cbc1726.html",
+      "expected": "passed",
+      "ruleId": "bc4a75",
+      "ruleName": "ARIA required owned elements",
+      "rulePage": "https://act-rules.github.io/rules/bc4a75",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "668eca5516086c86c0c2b7118c545642d826e0de",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/bc4a75/668eca5516086c86c0c2b7118c545642d826e0de.html",
+      "relativePath": "testcases/bc4a75/668eca5516086c86c0c2b7118c545642d826e0de.html",
+      "expected": "failed",
+      "ruleId": "bc4a75",
+      "ruleName": "ARIA required owned elements",
+      "rulePage": "https://act-rules.github.io/rules/bc4a75",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "d58cf0d46a8c7cd4d7e63966cb4aa6d909ea47a1",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/bc4a75/d58cf0d46a8c7cd4d7e63966cb4aa6d909ea47a1.html",
+      "relativePath": "testcases/bc4a75/d58cf0d46a8c7cd4d7e63966cb4aa6d909ea47a1.html",
+      "expected": "failed",
+      "ruleId": "bc4a75",
+      "ruleName": "ARIA required owned elements",
+      "rulePage": "https://act-rules.github.io/rules/bc4a75",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "18b5ebff3cc85d3497d22088d1179390759f3aaa",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/bc4a75/18b5ebff3cc85d3497d22088d1179390759f3aaa.html",
+      "relativePath": "testcases/bc4a75/18b5ebff3cc85d3497d22088d1179390759f3aaa.html",
+      "expected": "failed",
+      "ruleId": "bc4a75",
+      "ruleName": "ARIA required owned elements",
+      "rulePage": "https://act-rules.github.io/rules/bc4a75",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "81837188c0aa959e1a6de0f883c2ede340f3f5f5",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/bc4a75/81837188c0aa959e1a6de0f883c2ede340f3f5f5.html",
+      "relativePath": "testcases/bc4a75/81837188c0aa959e1a6de0f883c2ede340f3f5f5.html",
+      "expected": "failed",
+      "ruleId": "bc4a75",
+      "ruleName": "ARIA required owned elements",
+      "rulePage": "https://act-rules.github.io/rules/bc4a75",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "ef27395e1e55b507c690d3c15584f3e24b0758b3",
+      "testcaseTitle": "Failed Example 5",
+      "url": "https://act-rules.github.io/testcases/bc4a75/ef27395e1e55b507c690d3c15584f3e24b0758b3.html",
+      "relativePath": "testcases/bc4a75/ef27395e1e55b507c690d3c15584f3e24b0758b3.html",
+      "expected": "failed",
+      "ruleId": "bc4a75",
+      "ruleName": "ARIA required owned elements",
+      "rulePage": "https://act-rules.github.io/rules/bc4a75",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "8ddfd4feb48c2f7630e6ff2758de03bd661797b5",
+      "testcaseTitle": "Failed Example 6",
+      "url": "https://act-rules.github.io/testcases/bc4a75/8ddfd4feb48c2f7630e6ff2758de03bd661797b5.html",
+      "relativePath": "testcases/bc4a75/8ddfd4feb48c2f7630e6ff2758de03bd661797b5.html",
+      "expected": "failed",
+      "ruleId": "bc4a75",
+      "ruleName": "ARIA required owned elements",
+      "rulePage": "https://act-rules.github.io/rules/bc4a75",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "08cc7a024982a7fc21ad20c1fe9c945a1e7c30d9",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/bc4a75/08cc7a024982a7fc21ad20c1fe9c945a1e7c30d9.html",
+      "relativePath": "testcases/bc4a75/08cc7a024982a7fc21ad20c1fe9c945a1e7c30d9.html",
+      "expected": "inapplicable",
+      "ruleId": "bc4a75",
+      "ruleName": "ARIA required owned elements",
+      "rulePage": "https://act-rules.github.io/rules/bc4a75",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "e21d0d46c0b0ff778e6600b9417a9f061c40a34d",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/bc4a75/e21d0d46c0b0ff778e6600b9417a9f061c40a34d.html",
+      "relativePath": "testcases/bc4a75/e21d0d46c0b0ff778e6600b9417a9f061c40a34d.html",
+      "expected": "inapplicable",
+      "ruleId": "bc4a75",
+      "ruleName": "ARIA required owned elements",
+      "rulePage": "https://act-rules.github.io/rules/bc4a75",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "3a89f00d60ba9fd365fe10e119cb602f6137db16",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/bc4a75/3a89f00d60ba9fd365fe10e119cb602f6137db16.html",
+      "relativePath": "testcases/bc4a75/3a89f00d60ba9fd365fe10e119cb602f6137db16.html",
+      "expected": "inapplicable",
+      "ruleId": "bc4a75",
+      "ruleName": "ARIA required owned elements",
+      "rulePage": "https://act-rules.github.io/rules/bc4a75",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "14a9c0527cac9b6abdd9172f01158f57925c9b39",
+      "testcaseTitle": "Inapplicable Example 4",
+      "url": "https://act-rules.github.io/testcases/bc4a75/14a9c0527cac9b6abdd9172f01158f57925c9b39.html",
+      "relativePath": "testcases/bc4a75/14a9c0527cac9b6abdd9172f01158f57925c9b39.html",
+      "expected": "inapplicable",
+      "ruleId": "bc4a75",
+      "ruleName": "ARIA required owned elements",
+      "rulePage": "https://act-rules.github.io/rules/bc4a75",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "b53db66e471e734e9f494c6028fa6c8312b4e9e9",
+      "testcaseTitle": "Inapplicable Example 5",
+      "url": "https://act-rules.github.io/testcases/bc4a75/b53db66e471e734e9f494c6028fa6c8312b4e9e9.html",
+      "relativePath": "testcases/bc4a75/b53db66e471e734e9f494c6028fa6c8312b4e9e9.html",
+      "expected": "inapplicable",
+      "ruleId": "bc4a75",
+      "ruleName": "ARIA required owned elements",
+      "rulePage": "https://act-rules.github.io/rules/bc4a75",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "53e6031392d279eddb2b8f7e2db60a76f82bfa30",
+      "testcaseTitle": "Inapplicable Example 6",
+      "url": "https://act-rules.github.io/testcases/bc4a75/53e6031392d279eddb2b8f7e2db60a76f82bfa30.html",
+      "relativePath": "testcases/bc4a75/53e6031392d279eddb2b8f7e2db60a76f82bfa30.html",
+      "expected": "inapplicable",
+      "ruleId": "bc4a75",
+      "ruleName": "ARIA required owned elements",
+      "rulePage": "https://act-rules.github.io/rules/bc4a75",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
           "forConformance": true,

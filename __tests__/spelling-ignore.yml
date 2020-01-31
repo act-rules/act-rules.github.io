@@ -12,6 +12,8 @@
 
 # Tag(s)
 - svg # `aria-query` dom tags does not list `svg`
+- xhtml
+- DOCTYPE
 
 # Domain-specific words, Definitions & other allowed terms
 - URI
@@ -48,6 +50,7 @@
 - unfocusable
 - tabindex
 - whitespace
+- Whitespace
 - namespace
 - namespaces
 - webpage
@@ -59,6 +62,9 @@
 - labelable
 - merchantability
 - de-hello
+- 14pt
+- 18pt
+- Helvetica
 
 # Notes and acronyms
 - TODO

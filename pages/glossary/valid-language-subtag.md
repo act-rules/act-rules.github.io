@@ -1,6 +1,8 @@
 ---
 title: Valid Language Subtag
 key: valid-language-subtag
+unambiguous: true
+objective: true
 ---
 
 A language tag consists of a [primary language subtag][] from the [language subtag registry][], optionally followed by a hyphen (`-`) and any sequence of characters.

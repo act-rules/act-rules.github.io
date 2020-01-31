@@ -1,10 +1,10 @@
 ---
 id: be4d0c
-name: Inline link is distinguishable
+name: Inline link in paragraph is distinguishable
 rule_type: atomic
 
 description: |
-  This rule checks that links that are embedded in a paragraph, list or cell have a way to distinguish them as links compared to the rest of the text
+  This rule checks that links that are embedded in a paragraph, list or cell have a way to distinguish them from the surrounding text
 
 accessibility_requirements: # Remove whatever is not applicable
   wcag20:1.4.1: # Use of Color (A)
@@ -36,14 +36,14 @@ This rule applies to any HTML element which:
 
 ## Expectation
 
-Each target element has either:
+Each target element has one of the following:
 
-- content (such as an image or text) visually located inside, or immediately before or after the test target, that identifies it as a link; or
-- a [distinguishing style][] not based on color alone, compared to the _ancestor_ element and to any of its [descendant][] HTML elements that have [visible][] [text nodes][text node]; or
+- content (such as an image or text) visually located inside, or immediately before or after the test target, that indicates the test target is a link; or
+- a [distinguishing style][] not based on color alone, from the _ancestor_ element and any of its [descendant][] HTML elements that have [visible][] [text nodes][text node]; or
 - a `box-shadow` style property with a computed [color value](https://drafts.csswg.org/css-backgrounds/#shadow-color) different from the `background-color` of the target element; or
 - at least one of the `border-top-color`, `border-right-color`, `border-bottom-color` and `border-left-color` style properties with a computed [color value](https://drafts.csswg.org/css-backgrounds/#border-color) different from the `background-color` of the target element; or
-- a different [foreground color][], compared to the [foreground color][] of the other descendant visible text nodes of the same _ancestor_ element (if all have the same [foreground color][]), that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) and a [distinguishing style][] both when the target element [gains focus][focused] and the target element is [hovered][]; or
-- a different [background color][], compared to the [background color][] of the other descendant visible text nodes of the same _ancestor_ element (if all have the same [background color][]), that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) and a [distinguishing style][] both when the target element [gains focus][focused] and the target element is [hovered][].
+- a [foreground color][] different from the [foreground color][] of the other descendant visible text nodes of the same _ancestor_ element (if all have the same [foreground color][]), that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) and a [distinguishing style][] both when the target element [gains focus][focused] and the target element is [hovered][]; or
+- a [background color][] different from the [background color][] of the other descendant visible text nodes of the same _ancestor_ element (if all have the same [background color][]), that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) and a [distinguishing style][] both when the target element [gains focus][focused] and the target element is [hovered][].
 
 ## Assumptions
 

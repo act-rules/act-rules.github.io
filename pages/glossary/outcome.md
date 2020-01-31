@@ -1,9 +1,11 @@
 ---
 title: Outcome
 key: outcome
+unambiguous: true
+objective: true
 ---
 
-A conclusion that comes from evaluating an ACT Rule on a [test subject](https://www.w3.org/TR/act-rules-format/#test-subject) or one of its constituent [test target](https://www.w3.org/TR/act-rules-format/#test-target). An outcome can be one of the three following types:
+An _outcome_ is a conclusion that comes from evaluating an ACT Rule on a [test subject](https://www.w3.org/TR/act-rules-format/#test-subject) or one of its constituent [test target](https://www.w3.org/TR/act-rules-format/#test-target). An outcome can be one of the three following types:
 
 - **Inapplicable:** No part of the test subject matches the applicability
 - **Passed:** A [test target](https://www.w3.org/TR/act-rules-format/#test-target) meets all expectations

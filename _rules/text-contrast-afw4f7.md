@@ -42,7 +42,7 @@ Any [visible][] character in a [text node][] that is a [child](https://dom.spec.
 
 ## Expectation
 
-For each test target, the [highest possible contrast](#highest-possible-contrast) between the [foreground colors](#foreground-colors-of-text) and [background colors](#background-colors-of-text) is at least 4.5:1 or 3.0:1 for [larger scale text](#large-scale-text), except if the test target is part of a [text node][] that is [decorative](#marked-as-decorative), or does not express anything in [human language](https://www.w3.org/TR/WCAG21/#dfn-human-language-s).
+For each test target, the [highest possible contrast](#highest-possible-contrast) between the [foreground colors](#foreground-colors-of-text) and [background colors](#background-colors-of-text) is at least 4.5:1 or 3.0:1 for [larger scale text](#large-scale-text), except if the test target is part of a [text node][] that is [purely decorative][], or does not express anything in [human language](https://www.w3.org/TR/WCAG21/#dfn-human-language-s).
 
 **Note**: Passing this rule does not mean that the text has sufficient color contrast. If all background pixels have a low contrast with all foreground pixels, the success criterion is guaranteed to not be satisfied. When some pixels have sufficient contrast, and others do not, legibility should be considered. There is no clear method for determining legibility, which is why this is out of scope for this rule.
 
@@ -386,3 +386,4 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 [disabled]: #disabled-element 'Definition of disabled'
 [visible]: #visible 'Definition of visible'
 [text node]: https://dom.spec.whatwg.org/#text 'Definition of text node'
+[purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'Definition of purely decorative'

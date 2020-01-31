@@ -1,6 +1,8 @@
 ---
 title: Web page (HTML)
 key: web-page-html
+unambiguous: true
+objective: true
 ---
 
 An _HTML [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s)_ is the set of all [fully active](https://html.spec.whatwg.org/#fully-active) [documents](https://dom.spec.whatwg.org/#concept-document) which share the same [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context).

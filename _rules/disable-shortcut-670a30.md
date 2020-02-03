@@ -21,13 +21,17 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any [HTML document][] with at least one [keyboard shortcut][] that requires pressing only [printable character][] keys.
+The rule applies to any [HTML document][] with at least one [keyboard shortcut][] that requires pressing only [printable character][] keys to trigger an action on a [user interface component][].
 
-## Expectation
+## Expectation 1
 
-For each [user interface component][] that is a [descendent][] of the root node of the test target, if a [printable character][] [shortcut][keyboard shortcut] exists to trigger the action of that [user interface component][], it can be disabled.
+For each [user interface component][] that is a [descendant][] of the root node of the test target, the [printable character][] [shortcut][keyboard shortcut] that triggers the action of that [user interface component][] can be disabled by another [user interface component][].
 
-The [user interface component][] used to disable the [shortcut][keyboard shortcut] must be [visible][] and [included in the accessibility tree][] with an [accessible name][] that is not empty (`""`).
+*Note:* If multiple single [printable character][] [shortcuts][keyboard shortcut] exist, they all can be disabled ny a single [user interface component][].
+
+## Expectation 2
+
+The [user interface component][] used to disable the [shortcut][keyboard shortcut] is [visible][] and [included in the accessibility tree][] with an [accessible name][] that is not empty (`""`).
 
 ## Assumptions
 
@@ -49,20 +53,46 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][], and it can be disabled.
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that can be disabled by a [user interface component][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][].
 
 ```html
 <html>
   <head>
     <title>Passed Example 1 for rule 670a30</title>
-    <script src="/test-assets/ffbc54/script.js"></script>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="shortcut({focusOnly: false, shortcutKey: '+' , ctrlKey: false})">
+  <body onload="shortcut({reference: 'singleShortcut'})">
     <label for="text">Add to list (press + to add):</label>
     <input type="text" id="target" />
     <label>
-      <input type="checkbox" onclick="globalParams.disabled = this.checked">
-      Turn off shortcut
+      <input type="checkbox" onclick="changeSetting('singleShortcut', 'disabled', this.checked)">
+      Turn off single character keyboard shortcut
+    </label>
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
+  </body>
+</html>
+```
+
+#### Passed Example 2
+
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that can be disabled by a [user interface component][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][], and another [keyboard shortcut][] that requires pressing one [non-printable character][non-printable characters].
+
+```html
+<html>
+  <head>
+    <title>Passed Example 2 for rule 670a30</title>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
+  </head>
+  <body onload="shortcut({reference: 'singleShortcut'}, {shortcutKey: '«' , ctrlKey: true})">
+    <label for="text">Add to list (press + or ctrl+« to add):</label>
+    <input type="text" id="target" />
+    <label>
+      <input type="checkbox" onclick="changeSetting('singleShortcut', 'disabled', this.checked)">
+      Turn off single character keyboard shortcut
     </label>
     <br />
     <div>
@@ -77,15 +107,15 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 1
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][], and it cannot be disabled.
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that cannot be disabled.
 
 ```html
 <html>
   <head>
     <title>Failed Example 1 for rule 670a30</title>
-    <script src="/test-assets/ffbc54/script.js"></script>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="shortcut({focusOnly: false, shortcutKey: '+' , ctrlKey: false})">
+  <body onload="shortcut()">
     <label for="text">Add to list (press + to add):</label>
     <input type="text" id="target" />
     <br />
@@ -99,23 +129,21 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 2
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [user interface component][] is not [visible][].
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that cannot be disabled, and another [keyboard shortcut][] using only a [printable character][] that can be disabled by a [user interface component][].
 
 ```html
 <html>
   <head>
     <title>Failed Example 2 for rule 670a30</title>
-    <script src="/test-assets/ffbc54/script.js"></script>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="shortcut({focusOnly: false, shortcutKey: '+' , ctrlKey: false})">
-    <label for="text">Add to list (press + to add):</label>
+  <body onload="shortcut({}, {reference: 'singleShortcut', shortcutKey: '«'})">
+    <label for="text">Add to list (press + or « to add):</label>
     <input type="text" id="target" />
-    <div style="position: absolute; margin-left: -9999px;">
-      <label>
-        <input type="checkbox" onclick="globalParams.disabled = this.checked">
-        Turn off shortcut
-      </label>
-    </div>
+    <label>
+      <input type="checkbox" onclick="changeSetting('singleShortcut', 'disabled', this.checked)">
+      Turn off « single character keyboard shortcut
+    </label>
     <br />
     <div>
       To do list
@@ -127,21 +155,21 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 3
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [user interface component][] is not [included in the accessibility tree][].
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [user interface component][] is not [visible][].
 
 ```html
 <html>
   <head>
     <title>Failed Example 3 for rule 670a30</title>
-    <script src="/test-assets/ffbc54/script.js"></script>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="shortcut({focusOnly: false, shortcutKey: '+' , ctrlKey: false})">
+  <body onload="shortcut({reference: 'singleShortcut'})">
     <label for="text">Add to list (press + to add):</label>
     <input type="text" id="target" />
-    <div aria-hidden="true">
+    <div style="position: absolute; margin-left: -9999px;">
       <label>
-        <input type="checkbox" onclick="globalParams.disabled = this.checked">
-        Turn off shortcut
+        <input type="checkbox" onclick="changeSetting('singleShortcut', 'disabled', this.checked)">
+        Turn off single character keyboard shortcut
       </label>
     </div>
     <br />
@@ -155,20 +183,48 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 4
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [user interface component][] has an empty (`""`) [accessible name][].
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [user interface component][] is not [included in the accessibility tree][].
 
 ```html
 <html>
   <head>
     <title>Failed Example 4 for rule 670a30</title>
-    <script src="/test-assets/ffbc54/script.js"></script>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="shortcut({focusOnly: false, shortcutKey: '+' , ctrlKey: false})">
+  <body onload="shortcut({reference: 'singleShortcut'})">
+    <label for="text">Add to list (press + to add):</label>
+    <input type="text" id="target" />
+    <div aria-hidden="true">
+      <label>
+        <input type="checkbox" onclick="changeSetting('singleShortcut', 'disabled', this.checked)">
+        Turn off single character keyboard shortcut
+      </label>
+    </div>
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
+  </body>
+</html>
+```
+
+#### Failed Example 5
+
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [user interface component][] has an empty (`""`) [accessible name][].
+
+```html
+<html>
+  <head>
+    <title>Failed Example 5 for rule 670a30</title>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
+  </head>
+  <body onload="shortcut({reference: 'singleShortcut'})">
     <label for="text">Add to list (press + to add):</label>
     <input type="text" id="target" />
     <div>
       <label>
-        <input type="checkbox" onclick="globalParams.disabled = this.checked">
+        <input type="checkbox" onclick="changeSetting('singleShortcut', 'disabled', this.checked)">
       </label>
     </div>
     <br />
@@ -211,10 +267,10 @@ The [HTML document][] has a [keyboard shortcut][] that requires pressing one [no
 <html>
   <head>
     <title>Inapplicable Example 3 for rule 670a30</title>
-    <script src="/test-assets/ffbc54/script.js"></script>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
-  <body onload="shortcut({focusOnly: true, shortcutKey: '+' , ctrlKey: true})">
+  <body onload="shortcut({ctrlKey: true})">
     <label for="text">Add to list (press ctrl and + to add):</label>
     <input type="text" id="target" />
     <br />
@@ -262,9 +318,36 @@ The [HTML document][] has an element with the attribute `accesskey`. Accesskeys 
 </html>
 ```
 
+#### Inapplicable Example 5
+
+The [HTML document][] has a [keyboard shortcut][] that requires pressing a single [printable character][] and doesn't trigger an action on a [user interface component][].
+
+```html
+<html>
+  <head>
+    <title>Inapplicable Example 5 for rule 670a30</title>
+  </head>
+  <script>
+    function goToShortcut() {
+      document.body.addEventListener("keydown", function(event) {
+        if (event.key === "+") {
+          document.getElementById('text').scrollIntoView();
+        }
+      });
+    }
+  </script>
+  <body onload="goToShortcut();">
+    <p>Press "+" key to go to the text at the bottom of the page.</p>
+    <div style="height: 2000px"></div>
+    <p id="text">Some text at the bottom of the page.</p>
+  </body>
+</html>
+```
+
 [HTML document]: https://dom.spec.whatwg.org/#concept-document
 [keyboard shortcut]: https://www.w3.org/TR/WCAG21/#dfn-keyboard-shortcuts
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
+[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
 [printable character]: #printable-characters 'Definition of printable characters'
 [visible]: #visible 'Definition of visible'

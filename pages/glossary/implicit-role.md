@@ -1,6 +1,8 @@
 ---
 title: Implicit Semantic Role
 key: implicit-role
+unambiguous: true
+objective: true
 ---
 
 The _Implicit Semantic Role_ is the [semantic role](#semantic-role) of each element that is used when no valid [explicit semantic role](#explicit-role) is specified. Elements with no [role attribute](https://html.spec.whatwg.org/#attr-aria-role), or with a [role attribute](https://www.w3.org/TR/role-attribute/) containing no valid token, are mapped to their implicit role.

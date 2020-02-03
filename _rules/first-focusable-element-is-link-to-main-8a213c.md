@@ -41,7 +41,7 @@ The first [focusable][] element within the test target:
 - This rule assumes that that [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] requires the that the link can be activated by use of keyboard only (in order to be useful for keyboard users).
 - This rule assumes that any global dismissible information that only appears once per site has already been acknowledged and is not displayed any more.
 
-**Note**: The aim of such link is to be able to skip [sections of repeated content][section of repeated content] (headers, navigation bar, ...) when viewing several pages of the same site. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually by viewing and accepting cookies policy). Since that content is _not_ repeated (is it only shown once for the full site), it is not a problem to have it, and it may appear on any page of the site (depending where the user first comes in).
+**Note:** The aim of such link is to be able to skip [sections of repeated content][section of repeated content] (headers, navigation bar, ...) when viewing several pages of the same site. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually by viewing and accepting cookies policy). Since that content is _not_ repeated (is it only shown once for the full site), it is not a problem to have it, and it may appear on any page of the site (depending where the user first comes in).
 
 ## Accessibility Support
 
@@ -53,9 +53,9 @@ _There are no major accessibility support issues known for this rule._
 
 ## Test Cases
 
-**Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
+**Note:** The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
 
-**Note**: Unless specified otherwise, the main [section of content][] of each document is defined by the `main` element, and the complementary [section of content][] (`aside` element) does not include any [focusable][] element not shown explicitly.
+**Note:** Unless specified otherwise, the main [section of content][] of each document is defined by the `main` element, and the complementary [section of content][] (`aside` element) does not include any [focusable][] element not shown explicitly.
 
 ### Passed
 

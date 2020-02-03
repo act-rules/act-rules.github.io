@@ -62,9 +62,9 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 
 ## Test Cases
 
-**Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
+**Note:** The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
 
-**Note**: Unless specified otherwise, the [sections of content][] of each document are defined by the [landmarks][landmark]; the banner, complementary and navigational [sections of content][] (`header`, `aside` and `nav` elements) are [sections of repeated content][]; and the banner and complementary [sections of content][] do not include any [focusable][] element not shown explicitly.
+**Note:** Unless specified otherwise, the [sections of content][] of each document are defined by the [landmarks][landmark]; the banner, complementary and navigational [sections of content][] (`header`, `aside` and `nav` elements) are [sections of repeated content][]; and the banner and complementary [sections of content][] do not include any [focusable][] element not shown explicitly.
 
 ### Passed
 
@@ -72,7 +72,7 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 
 This [HTML web page][] is passing rule [document has headings][].
 
-**Note**: In this [document][], the [sections of content][] are identified by the level 1 heading at their start.
+**Note:** In this [document][], the [sections of content][] are identified by the level 1 heading at their start.
 
 ```html
 <html>

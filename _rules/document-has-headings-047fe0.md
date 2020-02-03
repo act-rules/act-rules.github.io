@@ -34,7 +34,7 @@ For each [section of content][] in the test target, the first node in the [flat 
 
 **Note** Neither this rule, nor technique [H69: Providing heading elements at the beginning of each section of content][tech h69], expects the heading to accurately describe its corresponding section. However, having non descriptive headings fails [Success Criterion 2.4.6: Headings and Labels](https://www.w3.org/TR/WCAG21/#headings-and-labels)
 
-**Note**: Neither this rule, nor technique [H69: Providing heading elements at the beginning of each section of content][tech h69], expects that headings are correctly nested without skipping level. It is nonetheless recommended to nest headings hierarchically without skipping levels.
+**Note:** Neither this rule, nor technique [H69: Providing heading elements at the beginning of each section of content][tech h69], expects that headings are correctly nested without skipping level. It is nonetheless recommended to nest headings hierarchically without skipping levels.
 
 ## Assumptions
 
@@ -54,9 +54,9 @@ Having headings is sufficient to pass [Success Criterion 2.4.1: Bypass blocks][s
 
 ## Test Cases
 
-**Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014). The image is public domain, excerpt from a Ming Dynasty edition of the Romance of the Three Kingdoms, the original is kept in the library holdings of Peking University.
+**Note:** The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014). The image is public domain, excerpt from a Ming Dynasty edition of the Romance of the Three Kingdoms, the original is kept in the library holdings of Peking University.
 
-**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`main` and `nav` elements).
+**Note:** Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`main` and `nav` elements).
 
 ### Passed
 
@@ -64,7 +64,7 @@ Having headings is sufficient to pass [Success Criterion 2.4.1: Bypass blocks][s
 
 This [document][] has one [section of content][] for the navigation links, and one for the actual text. Each starts with a `h1` heading.
 
-**Note**: In this [document][], the [sections of content][section of content] are identified by the level 1 heading at their start.
+**Note:** In this [document][], the [sections of content][section of content] are identified by the level 1 heading at their start.
 
 ```html
 <html>

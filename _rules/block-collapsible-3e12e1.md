@@ -30,9 +30,9 @@ For each [section of repeated content][] in the test target, there exists some [
 - is [included in the accessibility tree][]; and
 - allows to toggle both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of this [section of repeated content][].
 
-**Note**: the same [user interface component][] may be used for several or even all the [sections of repeated content][section of repeated content].
+**Note:** the same [user interface component][] may be used for several or even all the [sections of repeated content][section of repeated content].
 
-**Note**: [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does not require the [accessible name][] of the [user interface component][] to be descriptive. However, having a non-descriptive [accessible name][] is likely a failure of [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value).
+**Note:** [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does not require the [accessible name][] of the [user interface component][] to be descriptive. However, having a non-descriptive [accessible name][] is likely a failure of [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value).
 
 ## Assumptions
 
@@ -48,9 +48,9 @@ _There are no major accessibility support issues known for this rule._
 
 ## Test Cases
 
-**Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
+**Note:** The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
 
-**Note**: Unless specified otherwise, the [sections of content][] of each document are defined by the [landmarks][landmark] (`aside`, `main` and `nav` elements); both the complementary and navigational [sections of content][] (`aside` and `nav` elements) are [sections of repeated content][section of repeated content].
+**Note:** Unless specified otherwise, the [sections of content][] of each document are defined by the [landmarks][landmark] (`aside`, `main` and `nav` elements); both the complementary and navigational [sections of content][] (`aside` and `nav` elements) are [sections of repeated content][section of repeated content].
 
 ### Passed
 

@@ -35,7 +35,7 @@ Within the test target, there is an [initial segment][] of the [focusable][] ele
 - when activated, moves focus to a [section of content][] within the same [document][]; and
 - has an [accessible name][] that communicates that it links to that specific [section of content][].
 
-**Note**: There is no requirement on how many [focusable][] elements are part of that [initial segment][], nor any requirement to provide a way to determine (programmatically or not) where that [initial segment][] stops. Technique [G124: Adding links at the top of the page to each area of the content](https://www.w3.org/WAI/WCAG21/Techniques/general/G124), and this rule, only require that such a set exists.
+**Note:** There is no requirement on how many [focusable][] elements are part of that [initial segment][], nor any requirement to provide a way to determine (programmatically or not) where that [initial segment][] stops. Technique [G124: Adding links at the top of the page to each area of the content](https://www.w3.org/WAI/WCAG21/Techniques/general/G124), and this rule, only require that such a set exists.
 
 **Note for reviewers**: An attempt to clarify what this initial segment has to be is done in the second expectation: it must contain exactly one link for each section of content in the page. I am still not very happy with the formulation, nor with the order of these two expectations. Any suggestions to improve that are welcome…
 
@@ -43,7 +43,7 @@ Within the test target, there is an [initial segment][] of the [focusable][] ele
 
 Each [section of content][] in the [document][] is the target of exactly one link from the [initial segment][] of [focusable][] elements found by Expectation 1.
 
-**Note**: While Expectation 1 can always be passed by an empty [initial segment][] (i.e. a set of zero [focusable][] elements), Expectation 2 forces that [initial segment][] to have one or more elements (unless the page itself is empty and has zero [section of content][]…)
+**Note:** While Expectation 1 can always be passed by an empty [initial segment][] (i.e. a set of zero [focusable][] elements), Expectation 2 forces that [initial segment][] to have one or more elements (unless the page itself is empty and has zero [section of content][]…)
 
 ## Assumptions
 
@@ -51,7 +51,7 @@ Each [section of content][] in the [document][] is the target of exactly one lin
 - This rule assumes that that [Technique G124: Adding links at the top of the page to each area of the content][tech g124] requires the that the link can be activated by use of keyboard only (in order to be useful for keyboard users).
 - This rule assumes that any global dismissible information that only appears once per site has already been acknowledged and is not displayed any more.
 
-**Note**: The aim of such links is to be able to skip [sections of repeated content][section of repeated content] (headers, navigation bar, ...) when viewing several pages of the same site. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually by viewing and accepting cookies policy). Since that content is _not_ repeated (is it only shown once for the full site), it is not a problem to have it, and it may appear on any page of the site (depending where the user first comes in).
+**Note:** The aim of such links is to be able to skip [sections of repeated content][section of repeated content] (headers, navigation bar, ...) when viewing several pages of the same site. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually by viewing and accepting cookies policy). Since that content is _not_ repeated (is it only shown once for the full site), it is not a problem to have it, and it may appear on any page of the site (depending where the user first comes in).
 
 ## Accessibility Support
 
@@ -65,9 +65,9 @@ _There are no major accessibility support issues known for this rule._
 
 ## Test Cases
 
-**Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
+**Note:** The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
 
-**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`aside`, `header` and `main` elements), and neither the banner nor the complementary [sections of content][section of content] (`header` and `aside` elements) include any [focusable][] element not shown explicitly.
+**Note:** Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`aside`, `header` and `main` elements), and neither the banner nor the complementary [sections of content][section of content] (`header` and `aside` elements) include any [focusable][] element not shown explicitly.
 
 ### Passed
 

@@ -35,7 +35,7 @@ For each [section of repeated content][] within the test target, either the last
 - when activated, moves keyboard focus to the first element in the [flat tree][] after this [section of content][]; and
 - has an [accessible name][] that communicates that it skips this [section of content][].
 
-**Note**: "last" and "first" [focusable][] elements are to be taken in focus order, not in tree order.
+**Note:** "last" and "first" [focusable][] elements are to be taken in focus order, not in tree order.
 
 ## Assumptions
 
@@ -53,9 +53,9 @@ _There are no major accessibility support issues known for this rule._
 
 ## Test Cases
 
-**Note**: The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
+**Note:** The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
 
-**Note**: Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`aside` and `main` elements), and the complementary [section of content][] (`aside` element) is a [section of repeated content][] which does not include any [focusable][] element not shown explicitly.
+**Note:** Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`aside` and `main` elements), and the complementary [section of content][] (`aside` element) is a [section of repeated content][] which does not include any [focusable][] element not shown explicitly.
 
 ### Passed
 
@@ -420,7 +420,7 @@ The element with a [semantic role][] of `link` which skips the complementary [se
 
 The link at the start of the complementary [section of repeated content][] skips more than just this [section of repeated content][] (it also skips the navigational [section of repeated content][]
 
-**Note**: In this example, [sections of content][section of content] are identified by the [landmarks][landmark]. Both the complementary (`aside` element) and navigational (`nav` element) ones are [sections of repeated content][section of repeated content].
+**Note:** In this example, [sections of content][section of content] are identified by the [landmarks][landmark]. Both the complementary (`aside` element) and navigational (`nav` element) ones are [sections of repeated content][section of repeated content].
 
 ```html
 <html lang="en">

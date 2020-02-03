@@ -30,7 +30,7 @@ This rule applies to any [HTML web page][].
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [Document has headings][]; or
+- [Document has headings for each section of content][]; or
 - [Document has a main landmark][]; or
 - [Link for skipping block of content][]; or
 - [Block of content is expandable and collapsible][]; or
@@ -266,7 +266,7 @@ This [document][] is not an [HTML web page][].
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [document element]: https://dom.spec.whatwg.org/#document-element 'Definition of document element'
 [document has a main landmark]: https://act-rules.github.io/rules/b40fd1 'Rule Document has a main landmark'
-[document has headings]: https://act-rules.github.io/rules/047fe0 'Rule Document has headings'
+[document has headings for each section of content]: https://act-rules.github.io/rules/047fe0 'Rule Document has headings for each section of content'
 [first focusable elements are links to sections of content]: https://act-rules.github.io/rules/e53727 'Rule First focusable elements are links to sections of content'
 [first focusable element is link to main content]: https://act-rules.github.io/rules/8a213c 'Rule First focusable element is link to main content'
 [focusable]: #focusable 'Definition of focusable'

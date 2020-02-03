@@ -1,6 +1,6 @@
 ---
 id: 047fe0
-name: Document has headings
+name: Document has headings for each section of content
 rule_type: atomic
 description: |
   This rule checks that each section of content starts with a heading

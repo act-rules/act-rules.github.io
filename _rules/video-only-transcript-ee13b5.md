@@ -28,7 +28,7 @@ The rule applies to any [non-streaming](#non-streaming-media-element) `video` el
 
 The visual information of each test target is available through a text transcript that is available either on the page or through a link. The text transcript needs to be [visible][] and [included in the accessibility tree][].
 
-**Note**: A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
+**Note:** A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
 
 ## Assumptions
 

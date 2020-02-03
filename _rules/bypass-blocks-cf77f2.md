@@ -70,7 +70,7 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 
 #### Passed Example 1
 
-This [HTML web page][] is passing rule [document has headings][].
+This [HTML web page][] is passing rule [document has headings for each section of content][].
 
 **Note:** In this [document][], the [sections of content][] are identified by the level 1 heading at their start.
 

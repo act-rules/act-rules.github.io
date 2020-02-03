@@ -27,8 +27,8 @@ The rule applies to every [non-streaming](#non-streaming-media-element) `video` 
 
 For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
-- [Video as a media alternative for text](https://act-rules.github.io/rules/ab4d13)
-- [Video has captions](https://act-rules.github.io/rules/f51b46)
+- [`Video` Element Content Is Media Alternative For Text](https://act-rules.github.io/rules/ab4d13)
+- [`Video` Element Auditory Content Has Captions](https://act-rules.github.io/rules/f51b46)
 
 ## Assumptions
 

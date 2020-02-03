@@ -39,8 +39,8 @@ The rule applies to any [non-streaming](#non-streaming-media-element) `audio` el
 
 For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
-- [Audio elements have a transcript](https://act-rules.github.io/rules/2eb176)
-- [Audio-only as a media alternative for text](https://act-rules.github.io/rules/afb423)
+- [`Audio` Element Content Has Transcript](https://act-rules.github.io/rules/2eb176)
+- [`Audio` Element Content Is Media Alternative For Text](https://act-rules.github.io/rules/afb423)
 
 ## Assumptions
 

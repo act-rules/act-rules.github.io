@@ -18,6 +18,8 @@ acknowledgements:
     - Jean-Yves Moyen
 ---
 
+**Note to reviewers:** I am not sure whether this rule maps to [2.4.10: Section Headings](https://www.w3.org/WAI/WCAG21/Understanding/section-headings.html). Because the SC says that "'Heading' is used in its general sense and includes titles and other ways to add a heading to different types of content." So I am not sure that not having element with a role of `heading` at the start of a section of content is enough to fail the SC. What is your opinion?
+
 ## Applicability
 
 This rule applies to any [HTML web page][].
@@ -30,7 +32,7 @@ For each [section of content][] in the test target, the first node in the [flat 
 - is [visible][]; and
 - is [included in the accessibility tree][].
 
-**Note**: Neither this rule, nor technique [H69: Providing heading elements at the beginning of each section of content][tech h69], expects the heading to accurately describe its corresponding section. However, having non descriptive headings fails [Success Criterion 2.4.6: Headings and Labels](https://www.w3.org/TR/WCAG21/#headings-and-labels)
+**Note** Neither this rule, nor technique [H69: Providing heading elements at the beginning of each section of content][tech h69], expects the heading to accurately describe its corresponding section. However, having non descriptive headings fails [Success Criterion 2.4.6: Headings and Labels](https://www.w3.org/TR/WCAG21/#headings-and-labels)
 
 **Note**: Neither this rule, nor technique [H69: Providing heading elements at the beginning of each section of content][tech h69], expects that headings are correctly nested without skipping level. It is nonetheless recommended to nest headings hierarchically without skipping levels.
 

@@ -40,7 +40,7 @@ The autocomplete term(s) follow the [HTML 5.2 specification](https://www.w3.org/
 3. Has either "home", "work", "mobile", "fax" or "pager" _(optional, only for "email", "impp", "tel" or "tel-\*")_
 4. Has a [correct autocomplete field](#correct-autocomplete-field) _(required)_
 
-**Note**: Autocomplete terms are case insensitive. When multiple terms are used, they must be used in the correct order.
+**Note:** Autocomplete terms are case insensitive. When multiple terms are used, they must be used in the correct order.
 
 ## Expectation 3
 

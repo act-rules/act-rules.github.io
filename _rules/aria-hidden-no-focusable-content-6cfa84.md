@@ -33,7 +33,7 @@ acknowledgements:
 
 The rule applies to any element with an `aria-hidden="true"` attribute.
 
-**Note**: Using `aria-hidden="false"` on a descendant of an element with `aria-hidden="true"` **does not** expose that element. `aria-hidden="true"` hides itself and all its content from assistive technologies.
+**Note:** Using `aria-hidden="false"` on a descendant of an element with `aria-hidden="true"` **does not** expose that element. `aria-hidden="true"` hides itself and all its content from assistive technologies.
 
 ## Expectation
 

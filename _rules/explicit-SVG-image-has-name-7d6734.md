@@ -22,13 +22,13 @@ acknowledgements:
 
 The rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namespace with an [explicit semantic role](#explicit-role) of either `img`, `graphics-document`, `graphics-symbol`, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
-**Note**: The [SVG Accessibility API Mappings](https://www.w3.org/TR/svg-aam-1.0/#include_elements) specifies that many elements in the SVG namespace are purely presentational and should not be included in the accessibility tree unless indicated otherwise through the use of text alternative content, an explicit WAI ARIA role, or a valid `tabindex` attribute.
+**Note:** The [SVG Accessibility API Mappings](https://www.w3.org/TR/svg-aam-1.0/#include_elements) specifies that many elements in the SVG namespace are purely presentational and should not be included in the accessibility tree unless indicated otherwise through the use of text alternative content, an explicit WAI ARIA role, or a valid `tabindex` attribute.
 
 ## Expectation
 
 Each target element has an [accessible name][] that is not empty.
 
-**Note**: Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
+**Note:** Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
 
 ## Assumptions
 

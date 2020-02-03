@@ -49,6 +49,7 @@
 - unfocusable
 - tabindex
 - whitespace
+- Whitespace
 - namespace
 - namespaces
 - webpage
@@ -59,6 +60,9 @@
 - EARL10-Schema
 - labelable
 - merchantability
+- 14pt
+- 18pt
+- Helvetica
 
 # Notes and acronyms
 - TODO
@@ -99,6 +103,8 @@
 - rotate3d
 - rotateZ
 - matrix3d
+- rowheader
+- columnheader
 
 # Unsure why the dictionary does not have these words
 - Autofill

@@ -104,7 +104,7 @@ The `id` `my-div` is not unique among all `id` attributes in the document.
 
 #### Failed Example 2
 
-The `id` `my-div` is not unique among all `id` in the document.
+The `id` `my-div` is not unique among all `id` attributes in the document.
 
 ```html
 <div id="my-div">This is my first element</div>

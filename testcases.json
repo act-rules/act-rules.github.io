@@ -8613,10 +8613,10 @@
       }
     },
     {
-      "testcaseId": "e973d474341eecd965d8860e2e125a38c1cf5991",
+      "testcaseId": "c983d84d427d521586e5cb1876646beabc41800e",
       "testcaseTitle": "Passed Example 10",
-      "url": "https://act-rules.github.io/testcases/b20e66/e973d474341eecd965d8860e2e125a38c1cf5991.html",
-      "relativePath": "testcases/b20e66/e973d474341eecd965d8860e2e125a38c1cf5991.html",
+      "url": "https://act-rules.github.io/testcases/b20e66/c983d84d427d521586e5cb1876646beabc41800e.html",
+      "relativePath": "testcases/b20e66/c983d84d427d521586e5cb1876646beabc41800e.html",
       "expected": "passed",
       "ruleId": "b20e66",
       "ruleName": "Links with identical accessible names have equivalent purpose",

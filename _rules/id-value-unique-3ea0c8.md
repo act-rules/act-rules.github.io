@@ -88,7 +88,7 @@ Both `id` are the same (`my-elt`), but they are in different [document trees](ht
 
 ```html
 <div id="my-elt"></div>
-<iframe srcdoc="<span id='my-elt'></span>"></iframe>
+<iframe title="Empty frame" srcdoc="<span id='my-elt'></span>"></iframe>
 ```
 
 ### Failed

@@ -26,7 +26,7 @@ htmlHintIgnore:
 
 Any `id` attribute which is not the empty string (""), specified on an HTML or SVG element.
 
-**Note:** Elements that are neither [included in the accessibility tree](#included-in-the-accessibility-tree) nor [visible](#visible) are still considered for this rule.
+**Note:** Elements that are neither [included in the accessibility tree][] nor [visible][] are still considered for this rule.
 
 ## Expectation
 
@@ -95,7 +95,7 @@ Both `id` are the same (`my-elt`), but they are in different [document trees](ht
 
 #### Failed Example 1
 
-Several elements have identical `id`.
+The `id` `my-div` is not unique among all `id` in the document.
 
 ```html
 <div id="my-div">This is my first element</div>
@@ -104,7 +104,7 @@ Several elements have identical `id`.
 
 #### Failed Example 2
 
-Elements of different types have identical `id`.
+The `id` `my-div` is not unique among all `id` in the document.
 
 ```html
 <div id="my-div">This is my first element</div>
@@ -113,7 +113,7 @@ Elements of different types have identical `id`.
 
 #### Failed Example 3
 
-Having `display: none` on an element still makes it applicable to this rule.
+The `id` `my-div` is not unique among all `id` in the document. This rule still considers element that are neither [included in the accessibility tree][] nor [visible][].
 
 ```html
 <div id="my-div" style="display:none">This is my first element</div>
@@ -124,7 +124,7 @@ Having `display: none` on an element still makes it applicable to this rule.
 
 #### Inapplicable Example 1
 
-No `id` on element.
+There is no `id` attribute in this document.
 
 ```html
 <div>This is my first element</div>
@@ -132,8 +132,11 @@ No `id` on element.
 
 #### Inapplicable Example 2
 
-XML `id` not applicable to this rule.
+The `xml:id` attribute is not considered by this rule.
 
 ```html
 <div xml:id="my-div">This is my first element</div>
 ```
+
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[visible]: #visible 'Definition of visible'

@@ -42,7 +42,8 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 
 ## Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
@@ -62,16 +63,18 @@ See [Video Only Element Has Description Track: accessibility support](https://ac
 A video element without audio. The text on the page labels the video as an alternative.
 
 ```html
-<p>
-	Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the keyboard
-	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
-	compatibility is described in WCAG. See the video below to watch the same information again in video form.
-</p>
-<video
-	data-rule-target
-	src="/test-assets/perspective-video/perspective-video-with-captions-silent.mp4"
-	controls
-></video>
+<html lang="en">
+	<p>
+		Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the
+		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
+		Keyboard compatibility is described in WCAG. See the video below to watch the same information again in video form.
+	</p>
+	<video
+		data-rule-target
+		src="/test-assets/perspective-video/perspective-video-with-captions-silent.mp4"
+		controls
+	></video>
+</html>
 ```
 
 #### Passed Example 2
@@ -79,11 +82,13 @@ A video element without audio. The text on the page labels the video as an alter
 A video only element with a track element that contains descriptions.
 
 ```html
-<video controls>
-	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-	<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
-</video>
+<html lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
+		<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
+	</video>
+</html>
 ```
 
 #### Passed Example 3
@@ -91,6 +96,7 @@ A video only element with a track element that contains descriptions.
 A silent video element with a text transcript on the same page.
 
 ```html
+<html lang="en">
 <video controls data-rule-target>
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
@@ -98,6 +104,7 @@ A silent video element with a text transcript on the same page.
 <p>The above video shows a giant fat rabbit climbing out of a hole in the ground.
 He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
+</html>
 ```
 
 #### Passed Example 4
@@ -105,14 +112,16 @@ Then he stops to scratch his bottom.</p>
 A video element without audio has a separate audio track that describes the visual information.
 
 ```html
-<video controls>
-	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-</video>
+<html lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
+	</video>
 
-<audio controls>
-	<source src="/test-assets/rabbit-video/audio-description.mp3" type="audio/mpeg" />
-</audio>
+	<audio controls>
+		<source src="/test-assets/rabbit-video/audio-description.mp3" type="audio/mpeg" />
+	</audio>
+</html>
 ```
 
 ### Failed
@@ -122,16 +131,18 @@ A video element without audio has a separate audio track that describes the visu
 A video element that describes some of the text on the same page. The text on the page does not label the video as an alternative.
 
 ```html
-<p>
-	Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the keyboard
-	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
-	compatibility is described in WCAG.
-</p>
-<video
-	data-rule-target
-	src="/test-assets/perspective-video/perspective-video-with-captions-silent.mp4"
-	controls
-></video>
+<html lang="en">
+	<p>
+		Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the
+		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
+		Keyboard compatibility is described in WCAG.
+	</p>
+	<video
+		data-rule-target
+		src="/test-assets/perspective-video/perspective-video-with-captions-silent.mp4"
+		controls
+	></video>
+</html>
 ```
 
 #### Failed Example 2
@@ -139,11 +150,13 @@ A video element that describes some of the text on the same page. The text on th
 A video only element with a track element that contains incorrect descriptions.
 
 ```html
-<video controls>
-	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-	<track kind="descriptions" src="/test-assets/rabbit-video/incorrect-descriptions.vtt" />
-</video>
+<html lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
+		<track kind="descriptions" src="/test-assets/rabbit-video/incorrect-descriptions.vtt" />
+	</video>
+</html>
 ```
 
 #### Failed Example 3
@@ -151,11 +164,13 @@ A video only element with a track element that contains incorrect descriptions.
 A silent video element with a link to an incorrect text transcript on a different page.
 
 ```html
+<html lang="en">
 <video controls data-rule-target>
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <a href="/test-assets/rabbit-video/incorrect-transcript.html">Transcript</a>
+</html>
 ```
 
 #### Failed Example 4
@@ -163,14 +178,16 @@ A silent video element with a link to an incorrect text transcript on a differen
 A video element without audio has a separate audio track that incorrectly describes the visual information.
 
 ```html
-<video controls>
-	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-</video>
+<html lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
+	</video>
 
-<audio controls>
-	<source src="/test-assets/rabbit-video/incorrect-audio-description.mp3" type="audio/mpeg" />
-</audio>
+	<audio controls>
+		<source src="/test-assets/rabbit-video/incorrect-audio-description.mp3" type="audio/mpeg" />
+	</audio>
+</html>
 ```
 
 ### Inapplicable
@@ -180,12 +197,14 @@ A video element without audio has a separate audio track that incorrectly descri
 A video element with audio.
 
 ```html
-<p>
-	Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the keyboard
-	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
-	compatibility is described in WCAG. See the video below to watch the same information again in video form.
-</p>
-<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+<html lang="en">
+	<p>
+		Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the
+		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
+		Keyboard compatibility is described in WCAG. See the video below to watch the same information again in video form.
+	</p>
+	<video data-rule-target src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+</html>
 ```
 
 #### Inapplicable Example 2
@@ -193,11 +212,13 @@ A video element with audio.
 A video only element that is not [visible][].
 
 ```html
-<video controls style="display: none;">
-	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-	<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
-</video>
+<html lang="en">
+	<video controls style="display: none;">
+		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
+		<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
+	</video>
+</html>
 ```
 
 [visible]: #visible 'Definition of visible'

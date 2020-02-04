@@ -95,7 +95,7 @@ Both `id` are the same (`my-elt`), but they are in different [document trees](ht
 
 #### Failed Example 1
 
-The `id` `my-div` is not unique among all `id` in the document.
+The `id` `my-div` is not unique among all `id` attributes in the document.
 
 ```html
 <div id="my-div">This is my first element</div>

@@ -29,9 +29,9 @@ The rule applies to HTML `img` elements or any HTML element with the [semantic r
 
 ## Expectation
 
-Each target element has an [accessible name][] that is not empty (`""`), or is marked as [decorative][].
+Each target element has an [accessible name][] that is not empty (`""`), or is [marked as decorative][].
 
-**NOTE**: An `img` element can be marked as [decorative][], by using either `role="presentation"`, `role="none"` or an empty `alt` attribute, (`alt=""` or `alt` with no value).
+**Note:** Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
 
 ## Assumptions
 
@@ -92,7 +92,7 @@ The HTML `img` element has an [accessible name][] given by a `title` attribute, 
 
 #### Passed Example 5
 
-The HTML `img` element is marked as [decorative][] through an empty `alt` attribute.
+The HTML `img` element is [marked as decorative][] through an empty `alt` attribute.
 
 ```html
 <img alt="" />
@@ -100,7 +100,7 @@ The HTML `img` element is marked as [decorative][] through an empty `alt` attrib
 
 #### Passed Example 6
 
-The HTML `img` element is marked as [decorative][] through `role="presentation"`.
+The HTML `img` element is [marked as decorative][] through `role="presentation"`.
 
 ```html
 <img role="presentation" />
@@ -108,7 +108,7 @@ The HTML `img` element is marked as [decorative][] through `role="presentation"`
 
 #### Passed Example 7
 
-The HTML `img` element is marked as [decorative][] through `role="none"`.
+The HTML `img` element is [marked as decorative][] through `role="none"`.
 
 ```html
 <img role="none" />
@@ -126,7 +126,7 @@ The HTML `img` element has an [accessible name][] that is not empty.
 
 #### Failed Example 1
 
-The HTML `img` element is not marked as [decorative][] and has an empty [accessible name][].
+The HTML `img` element is not [marked as decorative][] and has an empty [accessible name][].
 
 ```html
 <img />
@@ -142,7 +142,7 @@ The element with role of `img` has an empty [accessible name][].
 
 #### Failed Example 3
 
-The `img` element inside a `div` positioned off screen has an empty [accessible name][] and is not marked as [decorative][].
+The `img` element inside a `div` positioned off screen has an empty [accessible name][] and is not [marked as decorative][].
 
 ```html
 <div style="margin-left:-9999px;"><img /></div>
@@ -193,7 +193,7 @@ The element is not an `img` element.
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
-[decorative]: #decorative 'Definition of decorative'
+[marked as decorative]: #marked-as-decorative 'Definition of marked as decorative'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [whitespace]: #whitespace 'Definition of whitespace'

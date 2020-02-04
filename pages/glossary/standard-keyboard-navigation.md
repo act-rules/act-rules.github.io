@@ -1,9 +1,11 @@
 ---
 title: Standard keyboard navigation
 key: standard-keyboard-navigation
+unambiguous: true
+objective: true
 ---
 
-Standard keyboard navigation entails using one or more of the following:
+_Standard keyboard navigation_ entails using one or more of the following:
 
 - Tab key
 - Shift+Tab

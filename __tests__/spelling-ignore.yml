@@ -94,6 +94,8 @@
 - rotate3d
 - rotateZ
 - matrix3d
+- accesskey
+- Accesskeys
 
 # Unsure why the dictionary does not have these words
 - programmatically
@@ -102,6 +104,7 @@
 - Autofill
 - implementers
 - Implementers
+- Punctuations
 
 # Parts of Unicode
 - 000A

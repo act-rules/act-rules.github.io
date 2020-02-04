@@ -1,6 +1,6 @@
 ---
 title: Printable characters
-key: printable-character
+key: printable-characters
 ---
 
 A printable character is a character that occupies a printing position on a display.

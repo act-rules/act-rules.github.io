@@ -61,8 +61,8 @@ The [HTML document][] has a single [printable character][] [keyboard shortcut][]
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
-  <body onload="shortcut({focusOnly: true})">
-    <label for="text">Add to list (press + to add):</label>
+  <body onload="registerShortcut({focusOnly: true}); activateShortcuts();">
+    <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <br />
     <div>
@@ -83,12 +83,12 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Passed Example 2</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="shortcut({reference: 'singleShortcut'})">
-    <label for="text">Add to list (press + to add):</label>
+  <body onload="registerShortcut({id: 'singleShortcut'}); activateShortcuts();">
+    <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <label>
-      <input type="checkbox" onclick="changeSetting('singleShortcut', 'disabled', this.checked)">
-      Turn off single character keyboard shortcut
+      <input type="checkbox" onclick="toggleDisabled('singleShortcut', !this.checked)" checked>
+      Toggle single character keyboard shortcut
     </label>
     <br />
     <div>
@@ -106,18 +106,18 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 ```html
 <html>
   <head>
-    <title>Passed Example 1 for rule aa8b52</title>
+    <title>Passed Example 3</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="shortcut({reference: 'singleShortcut'})">
-    <label for="text">Add to list (press + to add):</label>
+  <body onload="registerShortcut({id: 'singleShortcut'}); activateShortcuts();">
+    <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <div>
       <div>Remap shortcut</div>
       <div>
         <label>
-          <input id="remap" type="checkbox" onclick="changeSetting('singleShortcut', 'ctrlKey', this.checked)" />
-          Use <strong>ctrl</strong> key together with the <strong>+</strong> key
+          <input id="remap" type="checkbox" onclick="toggleModifier('singleShortcut', this.checked)">
+          Use "ctrl" key together with the "+" key
         </label>
       </div>
     </div>
@@ -141,8 +141,8 @@ The [HTML document][] has a single [printable character][] [keyboard shortcut][]
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
-  <body onload="shortcut({focusOnly: true}, {shortcutKey: '«' , ctrlKey: true})">
-    <label for="text">Add to list (press + or ctrl+« to add):</label>
+  <body onload="registerShortcut({focusOnly: true}); registerShortcut({shortcutKey: 'a' , ctrlKey: true}); activateShortcuts();">
+    <label for="target">Add to list (press "+" or "ctrl+a" to add):</label>
     <input type="text" id="target" />
     <br />
     <div>
@@ -163,12 +163,12 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Passed Example 5</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="shortcut({reference: 'singleShortcut'}, {shortcutKey: '«' , ctrlKey: true})">
-    <label for="text">Add to list (press + or ctrl+« to add):</label>
+  <body onload="registerShortcut({id: 'singleShortcut'}); registerShortcut({shortcutKey: 'a' , ctrlKey: true}); activateShortcuts();">
+    <label for="target">Add to list (press "+ or "ctrl+a" to add):</label>
     <input type="text" id="target" />
     <label>
-      <input type="checkbox" onclick="changeSetting('singleShortcut', 'disabled', this.checked)">
-      Turn off single character keyboard shortcut
+      <input type="checkbox" onclick="toggleDisabled('singleShortcut', !this.checked)" checked>
+      Toggle single character keyboard shortcut
     </label>
     <br />
     <div>
@@ -189,15 +189,169 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Passed Example 6</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="shortcut({reference: 'singleShortcut'}, {shortcutKey: '«' , ctrlKey: true})">
-    <label for="text">Add to list (press + or ctrl+« to add):</label>
+  <body onload="registerShortcut({id: 'singleShortcut'}); registerShortcut({shortcutKey: 'a' , ctrlKey: true}); activateShortcuts();">
+    <label for="target">Add to list (press "+" or "ctrl+a" to add):</label>
     <input type="text" id="target" />
     <div>
       <div>Remap shortcut</div>
       <div>
         <label>
-          <input id="remap" type="checkbox" onclick="changeSetting('singleShortcut', 'ctrlKey', this.checked)" />
-          Use <strong>ctrl</strong> key together with the <strong>+</strong> key
+          <input id="remap" type="checkbox" onclick="toggleModifier('singleShortcut', this.checked)" />
+          Use "ctrl" key together with the "+" key
+        </label>
+      </div>
+    </div>
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
+  </body>
+</html>
+```
+
+#### Passed Example 7
+
+The [HTML document][] has a single [printable character][] [keyboard shortcut][] for a [user interface component][], which is only available when that component has focus, and another [keyboard shortcut][] that requires pressing one [non-printable character][non-printable characters].
+
+```html
+<html>
+  <head>
+    <title>Passed Example 7</title>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
+    <script>
+      function addToTList() {
+        const target = document.getElementById("target2");
+        document.getElementById("list").innerHTML += "<li>" + target.value + "</li>";
+        target.value = "";
+      }
+    </script>
+  </head>
+
+  <body onload="registerShortcut({focusOnly: true}); activateShortcuts();">
+    <label for="target">Add to list (press "+" to add):</label>
+    <input type="text" id="target">
+    <label for="target2">Add to list:</label>
+    <input type="text" id="target2">
+    <button onclick="addToList()">Add</button>
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
+  </body>
+</html>
+```
+
+#### Passed Example 8
+
+The [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][] and each one of them can be disabled by a [user interface component][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][].
+
+```html
+<html>
+  <head>
+    <title>Passed Example 8</title>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
+  </head>
+  <body onload="registerShortcut({id: 'firstShortcut'}); registerShortcut({id: 'secondShortcut', shortcutKey: 'a'}); activateShortcuts();">
+    <label for="target">Add to list (press "+" or "a" to add):</label>
+    <input type="text" id="target" />
+    <label>
+      <input type="checkbox" onclick="toggleDisabled('firstShortcut', !this.checked)" checked>
+      Toggle "+" single character keyboard shortcut
+    </label>
+    <label>
+      <input type="checkbox" onclick="toggleDisabled('secondShortcut', !this.checked)" checked>
+      Toggle "a" single character keyboard shortcut
+    </label>
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
+  </body>
+</html>
+```
+
+#### Passed Example 9
+
+The [HTML document][] has two [keyboard shortcut][] using only a [printable character][], and each one of them can be remapped to use a shortcut with a [non-printable character][non-printable characters].
+
+```html
+<html>
+  <head>
+    <title>Passed Example 9</title>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
+  </head>
+  <body onload="registerShortcut({id: 'firstShortcut'}); registerShortcut({id: 'secondShortcut', shortcutKey: 'a'}); activateShortcuts();">
+    <label for="target">Add to list (press "+" or "a" to add):</label>
+    <input type="text" id="target" />
+    <div>
+      <div>Remap shortcut</div>
+      <div>
+        <label>
+          <input id="remap" type="checkbox" onclick="toggleModifier('firstShortcut', this.checked)">
+          Use "ctrl" key together with the "+" key
+        </label>
+        <label>
+          <input id="remap" type="checkbox" onclick="toggleModifier('secondShortcut', this.checked)">
+          Use "ctrl" key together with the "a" key
+        </label>
+      </div>
+    </div>
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
+  </body>
+</html>
+```
+
+#### Passed Example 10
+
+The [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][] that can be disabled by a [user interface component][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][].
+
+```html
+<html>
+  <head>
+    <title>Passed Example 10</title>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
+  </head>
+  <body onload="registerShortcut({id: 'firstShortcut'}); registerShortcut({id: 'secondShortcut', shortcutKey: 'a'}); activateShortcuts();">
+    <label for="target">Add to list (press "+" or "a" to add):</label>
+    <input type="text" id="target" />
+    <label>
+      <input type="checkbox" onclick="toggleDisabled('firstShortcut', !this.checked); toggleDisabled('secondShortcut', !this.checked)" checked>
+      Toggle single character keyboard shortcuts
+    </label>
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
+  </body>
+</html>
+```
+
+#### Passed Example 11
+
+The [HTML document][] has two [keyboard shortcut][] using only a [printable character][] that can be remapped to use a shortcut with a [non-printable character][non-printable characters].
+
+```html
+<html>
+  <head>
+    <title>Passed Example 11</title>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
+  </head>
+  <body onload="registerShortcut({id: 'firstShortcut'}); registerShortcut({id: 'secondShortcut', shortcutKey: 'a'}); activateShortcuts();">
+    <label for="target">Add to list (press "+" or "a" to add):</label>
+    <input type="text" id="target" />
+    <div>
+      <div>Remap shortcut</div>
+      <div>
+        <label>
+          <input id="remap" type="checkbox" onclick="toggleModifier('firstShortcut', this.checked); toggleModifier('secondShortcut', this.checked);">
+          Use "ctrl" key together with the "+" or "a" key
         </label>
       </div>
     </div>
@@ -222,8 +376,8 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Failed Example 1</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="shortcut()">
-    <label for="text">Add to list (press + to add):</label>
+  <body onload="registerShortcut(); activateShortcuts();">
+    <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <br />
     <div>
@@ -244,12 +398,12 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Failed Example 2</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="shortcut({}, {reference: 'singleShortcut', shortcutKey: '«'})">
-    <label for="text">Add to list (press + or « to add):</label>
+  <body onload="registerShortcut(); registerShortcut({id: 'singleShortcut', shortcutKey: 'a'}); activateShortcuts();">
+    <label for="target">Add to list (press "+" or "a" to add):</label>
     <input type="text" id="target" />
     <label>
-      <input type="checkbox" onclick="changeSetting('singleShortcut', 'disabled', this.checked)">
-      Turn off « single character keyboard shortcut
+      <input type="checkbox" onclick="toggleDisabled('singleShortcut', !this.checked)" checked>
+      Toggle "a" single character keyboard shortcut
     </label>
     <br />
     <div>
@@ -270,13 +424,13 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Failed Example 3</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="shortcut({reference: 'singleShortcut'})">
-    <label for="text">Add to list (press + to add):</label>
+  <body onload="registerShortcut({id: 'singleShortcut'}); activateShortcuts();">
+    <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <div style="position: absolute; margin-left: -9999px;">
       <label>
-        <input type="checkbox" onclick="changeSetting('singleShortcut', 'disabled', this.checked)">
-        Turn off single character keyboard shortcut
+        <input type="checkbox" onclick="toggleDisabled('singleShortcut', !this.checked)" checked>
+        Toggle single character keyboard shortcut
       </label>
     </div>
     <br />
@@ -298,13 +452,13 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Failed Example 4</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="shortcut({reference: 'singleShortcut'})">
-    <label for="text">Add to list (press + to add):</label>
+  <body onload="registerShortcut({id: 'singleShortcut'}); activateShortcuts();">
+    <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <div aria-hidden="true">
       <label>
-        <input type="checkbox" onclick="changeSetting('singleShortcut', 'disabled', this.checked)">
-        Turn off single character keyboard shortcut
+        <input type="checkbox" onclick="toggleDisabled('singleShortcut', !this.checked)" checked>
+        Toggle single character keyboard shortcut
       </label>
     </div>
     <br />
@@ -326,12 +480,12 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Failed Example 5</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="shortcut({reference: 'singleShortcut'})">
-    <label for="text">Add to list (press + to add):</label>
+  <body onload="registerShortcut({id: 'singleShortcut'}); activateShortcuts();">
+    <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <div>
       <label>
-        <input type="checkbox" onclick="changeSetting('singleShortcut', 'disabled', this.checked)">
+        <input type="checkbox" onclick="toggleDisabled('singleShortcut', !this.checked)" checked>
       </label>
     </div>
     <br />
@@ -353,8 +507,8 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Failed Example 6</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="shortcut()">
-    <label for="text">Add to list (press + to add):</label>
+  <body onload="registerShortcut(); activateShortcuts();">
+    <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <br />
     <div>
@@ -375,15 +529,15 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Failed Example 7</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="shortcut({}, {reference: 'singleShortcut', shortcutKey: '«'})">
-    <label for="text">Add to list (press + or « to add):</label>
+  <body onload="registerShortcut(); registerShortcut({id: 'singleShortcut', shortcutKey: 'a'}); activateShortcuts();">
+    <label for="target">Add to list (press "+" or "a" to add):</label>
     <input type="text" id="target" />
     <div>
       <div>Remap shortcut</div>
       <div>
         <label>
-          <input id="remap" type="checkbox" onclick="changeSetting('singleShortcut', 'ctrlKey', this.checked)" />
-          Use <strong>ctrl</strong> key together with the <strong>«</strong> key
+          <input id="remap" type="checkbox" onclick="toggleModifier('singleShortcut', this.checked)">
+          Use "ctrl" key together with the "a" key
         </label>
       </div>
     </div>
@@ -406,15 +560,15 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Failed Example 8</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="shortcut({reference: 'singleShortcut'})">
-    <label for="text">Add to list (press + to add):</label>
+  <body onload="registerShortcut({id: 'singleShortcut'}); activateShortcuts();">
+    <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <div>
       <div>Remap shortcut</div>
       <div style="position: absolute; margin-left: -9999px;">
         <label>
-          <input id="remap" type="checkbox" onclick="changeSetting('singleShortcut', 'ctrlKey', this.checked)" />
-          Use <strong>ctrl</strong> key together with the <strong>+</strong> key
+          <input id="remap" type="checkbox" onclick="toggleModifier('singleShortcut', this.checked)">
+          Use "ctrl" key together with the "+" key
         </label>
       </div>
     </div>
@@ -437,15 +591,15 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Failed Example 9</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="shortcut({reference: 'singleShortcut'})">
-    <label for="text">Add to list (press + to add):</label>
+  <body onload="registerShortcut({id: 'singleShortcut'}); activateShortcuts();">
+    <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <div>
       <div>Remap shortcut</div>
       <div aria-hidden="true">
         <label>
-          <input id="remap" type="checkbox" onclick="changeSetting('singleShortcut', 'ctrlKey', this.checked)" />
-          Use <strong>ctrl</strong> key together with the <strong>+</strong> key
+          <input id="remap" type="checkbox" onclick="toggleModifier('singleShortcut', this.checked)">
+          Use "ctrl" key together with the "+" key
         </label>
       </div>
     </div>
@@ -468,12 +622,12 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Failed Example 10</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="shortcut({reference: 'singleShortcut'})">
-    <label for="text">Add to list (press + to add):</label>
+  <body onload="registerShortcut({id: 'singleShortcut'}); activateShortcuts();">
+    <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <div>
       <div>Remap shortcut</div>
-      <input id="remap" type="checkbox" onclick="changeSetting('singleShortcut', 'ctrlKey', this.checked)" />
+      <input id="remap" type="checkbox" onclick="toggleModifier('singleShortcut', this.checked)">
     </div>
     <br />
     <div>
@@ -495,8 +649,8 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
-  <body onload="shortcut()">
-    <label for="text">Add to list (press + to add):</label>
+  <body onload="registerShortcut(); activateShortcuts();">
+    <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <br />
     <div>
@@ -518,8 +672,8 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
-  <body onload="shortcut({}, {focusOnly: true, shortcutKey: '«'})">
-    <label for="text">Add to list (press + or « to add):</label>
+  <body onload="registerShortcut(); registerShortcut({focusOnly: true, shortcutKey: 'a'}); activateShortcuts();">
+    <label for="target">Add to list (press "+" or "a" to add):</label>
     <input type="text" id="target" />
     <br />
     <div>
@@ -534,7 +688,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Inapplicable Example 1
 
-The [HTML document][] does not use [keyboard shortcuts][keyboard shortcuts].
+The [HTML document][] does not use [keyboard shortcuts][keyboard shortcut].
 
 ```html
 <html>
@@ -564,8 +718,8 @@ The [HTML document][] has a [keyboard shortcut][] that requires pressing one [no
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
-  <body onload="shortcut({focusOnly: true, shortcutKey: '+' , ctrlKey: true})">
-    <label for="text">Add to list (press ctrl and + to add):</label>
+  <body onload="registerShortcut({ctrlKey: true}); activateShortcuts();">
+    <label for="target">Add to list (press "ctrl" and "+" to add):</label>
     <input type="text" id="target" />
     <br />
     <div>
@@ -585,7 +739,7 @@ The [HTML document][] has an element with the attribute `accesskey`. Accesskeys 
   <head>
     <title>Inapplicable Example 4</title>
     <script>
-      function shortcut(params) {
+      function shortcut() {
         const button = document.querySelector("button");
 
         button.addEventListener("click", function() {

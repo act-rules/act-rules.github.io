@@ -6,12 +6,11 @@ const defaultParams = {
   disabled: false
 };
 
-let allSettings = new Array();
+const shortcutDefinitions = new Array();
 
-function shortcut(...params) {
-  allSettings = [...allSettings, ...params.map(p => { return { ...defaultParams, ...p } })];
+function activateShortcuts() {
   document.body.addEventListener("keydown", function(event) {
-    for (const settings of allSettings || []) {
+    for (const settings of shortcutDefinitions || []) {
       if (!settings.disabled) {
         const target = document.getElementById(settings.target);
 
@@ -29,6 +28,18 @@ function shortcut(...params) {
   });
 }
 
-function changeSetting(reference, setting, value) {
-  allSettings.find(set => set.reference === reference)[setting] = value;
+function registerShortcut(params = {}) {
+  shortcutDefinitions.push({...defaultParams, ...params})
+}
+
+function changeShortcutParameter(id, param, value) {
+  shortcutDefinitions.find(shortcut => shortcut.id === id)[param] = value;
+}
+
+function toggleDisabled(id, value) {
+  changeShortcutParameter(id, "disabled", value)
+}
+
+function toggleModifier(id, value) {
+  changeShortcutParameter(id, "ctrlKey", value)
 }

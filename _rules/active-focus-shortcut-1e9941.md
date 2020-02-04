@@ -25,7 +25,7 @@ The rule applies to any [HTML document][] with at least one [keyboard shortcut][
 
 ## Expectation
 
-For each [user interface component][] that is a [descendant][] of the root node of the test target, the [printable character][] [shortcut][keyboard shortcut] that triggers the action of that [user interface component][] can only be triggered when that component has [focus][].
+For each [user interface component][] that is a [descendant][] of the root node of the test target, each [printable character][] [shortcut][keyboard shortcut] that triggers the action of that [user interface component][] can only be triggered when that component has [focus][].
 
 ## Assumptions
 
@@ -54,8 +54,8 @@ The [HTML document][] has a single [printable character][] [keyboard shortcut][]
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
-  <body onload="shortcut({focusOnly: true})">
-    <label for="text">Add to list (press + to add):</label>
+  <body onload="registerShortcut({focusOnly: true}); activateShortcuts();">
+    <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <br />
     <div>
@@ -77,10 +77,42 @@ The [HTML document][] has a single [printable character][] [keyboard shortcut][]
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
-  <body onload="shortcut({focusOnly: true}, {shortcutKey: '«' , ctrlKey: true})">
-    <label for="text">Add to list (press + or ctrl+« to add):</label>
+  <body onload="registerShortcut({focusOnly: true}); registerShortcut({shortcutKey: 'a' , ctrlKey: true}); activateShortcuts();">
+    <label for="target">Add to list (press "+" or "ctrl+a" to add):</label>
     <input type="text" id="target" />
     <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
+  </body>
+</html>
+```
+
+#### Passed Example 3
+
+The [HTML document][] has a single [printable character][] [keyboard shortcut][] for a [user interface component][], which is only available when that component has focus, and another [keyboard shortcut][] that requires pressing one [non-printable character][non-printable characters].
+
+```html
+<html>
+  <head>
+    <title>Passed Example 3 for rule 1e9941</title>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
+    <script>
+      function addToTList() {
+        const target = document.getElementById("target2");
+        document.getElementById("list").innerHTML += "<li>" + target.value + "</li>";
+        target.value = "";
+      }
+    </script>
+  </head>
+
+  <body onload="registerShortcut({focusOnly: true}); activateShortcuts();">
+    <label for="target">Add to list (press "+" to add):</label>
+    <input type="text" id="target">
+    <label for="target2">Add to list:</label>
+    <input type="text" id="target2">
+    <button onclick="addToList()">Add</button>
     <div>
       To do list
     </div>
@@ -102,8 +134,8 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
-  <body onload="shortcut()">
-    <label for="text">Add to list (press + to add):</label>
+  <body onload="registerShortcut(); activateShortcuts();">
+    <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <br />
     <div>
@@ -125,8 +157,8 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
-  <body onload="shortcut({}, {focusOnly: true, shortcutKey: '«'})">
-    <label for="text">Add to list (press + or « to add):</label>
+  <body onload="registerShortcut(); registerShortcut({focusOnly: true, shortcutKey: 'a'}); activateShortcuts();">
+    <label for="target">Add to list (press "+" or "a" to add):</label>
     <input type="text" id="target" />
     <br />
     <div>
@@ -171,8 +203,8 @@ The [HTML document][] has a [keyboard shortcut][] that requires pressing one [no
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
-  <body onload="shortcut({ctrlKey: true})">
-    <label for="text">Add to list (press ctrl and + to add):</label>
+  <body onload="registerShortcut({ctrlKey: true}); activateShortcuts();">
+    <label for="target">Add to list (press "ctrl" and "+" to add):</label>
     <input type="text" id="target" />
     <br />
     <div>
@@ -192,7 +224,7 @@ The [HTML document][] has an element with the attribute `accesskey`. Accesskeys 
   <head>
     <title>Inapplicable Example 4 for rule 1e9941</title>
     <script>
-      function shortcut(params) {
+      function shortcut() {
         const button = document.querySelector("button");
 
         button.addEventListener("click", function() {

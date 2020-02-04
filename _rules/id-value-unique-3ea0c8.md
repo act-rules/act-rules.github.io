@@ -60,7 +60,7 @@ There is only one `id` within the document context.
 
 #### Passed Example 2
 
-All `id`s are unique within the document context.
+All `id` are unique within the document context.
 
 ```html
 <div id="my-div1">This is my first element</div>
@@ -70,7 +70,7 @@ All `id`s are unique within the document context.
 
 #### Passed Example 3
 
-Two of the `id`s are the same (`my-elt`), but they are in different trees (the first one in the [document tree](https://dom.spec.whatwg.org/#document-trees) and the second in the [shadow tree](https://dom.spec.whatwg.org/#shadow-trees)).
+Two of the `id` are the same (`my-elt`), but they are in different trees (the first one in the [document tree](https://dom.spec.whatwg.org/#document-trees) and the second in the [shadow tree](https://dom.spec.whatwg.org/#shadow-trees)).
 
 ```html
 <div id="my-elt"></div>
@@ -84,7 +84,7 @@ Two of the `id`s are the same (`my-elt`), but they are in different trees (the f
 
 #### Passed Example 4
 
-Both `id`s are the same (`my-elt`), but they are in different [document trees](https://dom.spec.whatwg.org/#document-trees) because the `iframe` is creating a new one.
+Both `id` are the same (`my-elt`), but they are in different [document trees](https://dom.spec.whatwg.org/#document-trees) because the `iframe` is creating a new one.
 
 ```html
 <div id="my-elt"></div>
@@ -95,7 +95,7 @@ Both `id`s are the same (`my-elt`), but they are in different [document trees](h
 
 #### Failed Example 1
 
-The `id` `my-div` is not unique among all `id`s in the document.
+The `id` `my-div` is not unique among all `id` in the document.
 
 ```html
 <div id="my-div">This is my first element</div>
@@ -104,7 +104,7 @@ The `id` `my-div` is not unique among all `id`s in the document.
 
 #### Failed Example 2
 
-The `id` `my-div` is not unique among all `id`s in the document.
+The `id` `my-div` is not unique among all `id` in the document.
 
 ```html
 <div id="my-div">This is my first element</div>
@@ -113,7 +113,7 @@ The `id` `my-div` is not unique among all `id`s in the document.
 
 #### Failed Example 3
 
-The `id` `my-div` is not unique among all `id`s in the document. This rule still considers element that are neither [included in the accessibility tree][] nor [visible][].
+The `id` `my-div` is not unique among all `id` in the document. This rule still considers element that are neither [included in the accessibility tree][] nor [visible][].
 
 ```html
 <div id="my-div" style="display:none">This is my first element</div>

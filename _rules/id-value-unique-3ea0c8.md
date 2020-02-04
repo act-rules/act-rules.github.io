@@ -113,7 +113,7 @@ The `id` `my-div` is not unique among all `id` attributes in the document.
 
 #### Failed Example 3
 
-The `id` `my-div` is not unique among all `id` in the document. This rule still considers element that are neither [included in the accessibility tree][] nor [visible][].
+The `id` `my-div` is not unique among all `id` attributes in the document. This rule still considers element that are neither [included in the accessibility tree][] nor [visible][].
 
 ```html
 <div id="my-div" style="display:none">This is my first element</div>

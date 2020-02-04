@@ -18,7 +18,7 @@ This will require a 2 weeks Final Call << new rule, or substantial changes affec
 
 ### **When creating PR:**
 
-- [ ] Make sure you requesting to **pull a branch** (right side) to the `develop` branch (left side).
+- [ ] Make sure you're requesting to **pull a branch** (right side) to the `develop` branch (left side).
 
 ### **After creating PR:**
 

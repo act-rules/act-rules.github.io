@@ -66,7 +66,7 @@ This `html` element has a `lang` attribute whose value is a [valid][valid langua
 This `html` element has a `lang` attribute whose value is not a [valid language subtag][].
 
 ```html
-<html lang="enn-US"></html>
+<html lang="em-US"></html>
 ```
 
 #### Failed Example 2
@@ -75,14 +75,6 @@ This `html` element has a `lang` attribute whose value is not a [valid language 
 
 ```html
 <html lang="#1"></html>
-```
-
-#### Failed Example 3
-
-This `html` element has a `lang` attribute whose value is not a [valid language subtag][].
-
-```html
-<html lang="#!"></html>
 ```
 
 ### Inapplicable

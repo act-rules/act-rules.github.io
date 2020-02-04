@@ -148,7 +148,7 @@ This rule only applies to documents with a [content type][] of `text/html`
 This rule does not apply to `html` elements whose `lang` attribute is not a [valid language subtag][].
 
 ```html
-<html lang="enn" xml:lang="en"></html>
+<html lang="em" xml:lang="en"></html>
 ```
 
 #### Inapplicable Example 7

@@ -33,7 +33,7 @@ Each test target has a `lang` attribute that is neither empty (`""`) nor only [A
 
 ## Assumptions
 
-This rule assumes that the presence of a `lang` attribute is being used to comply to [WCAG][]. This rule doesn't test if the attribute is needed to comply to [WCAG][].
+This rule assumes that the presence of a `lang` attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
 
 ## Accessibility Support
 
@@ -108,5 +108,3 @@ This rule does not apply to `math` element.
 ```xml
 <math></math>
 ```
-
-[wcag]: https://www.w3.org/TR/WCAG21/ 'Web Content Accessibility Guidelines'

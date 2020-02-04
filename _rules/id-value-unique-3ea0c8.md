@@ -60,7 +60,7 @@ There is only one `id` within the document context.
 
 #### Passed Example 2
 
-All `id` are unique within the document context.
+All `id` attributes are unique within the document context.
 
 ```html
 <div id="my-div1">This is my first element</div>

@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 674,
+  "count": 675,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -6483,10 +6483,10 @@
       }
     },
     {
-      "testcaseId": "3d89449e6dbbf63843471ad4d196dded6ebf17a1",
+      "testcaseId": "9ac428cbd668e462cac1b12b027747d8d54cd1c1",
       "testcaseTitle": "Failed Example 7",
-      "url": "https://act-rules.github.io/testcases/cae760/3d89449e6dbbf63843471ad4d196dded6ebf17a1.html",
-      "relativePath": "testcases/cae760/3d89449e6dbbf63843471ad4d196dded6ebf17a1.html",
+      "url": "https://act-rules.github.io/testcases/cae760/9ac428cbd668e462cac1b12b027747d8d54cd1c1.html",
+      "relativePath": "testcases/cae760/9ac428cbd668e462cac1b12b027747d8d54cd1c1.html",
       "expected": "failed",
       "ruleId": "cae760",
       "ruleName": "`iframe` element has accessible name",
@@ -6523,6 +6523,24 @@
       "testcaseTitle": "Inapplicable Example 2",
       "url": "https://act-rules.github.io/testcases/cae760/6dcd216f284bb3c980b6027851c8fd4da974c95e.html",
       "relativePath": "testcases/cae760/6dcd216f284bb3c980b6027851c8fd4da974c95e.html",
+      "expected": "inapplicable",
+      "ruleId": "cae760",
+      "ruleName": "`iframe` element has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/cae760",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "b70efcaf2f5e6a539e78a2cdc4b2e3a8b8adf827",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/cae760/b70efcaf2f5e6a539e78a2cdc4b2e3a8b8adf827.html",
+      "relativePath": "testcases/cae760/b70efcaf2f5e6a539e78a2cdc4b2e3a8b8adf827.html",
       "expected": "inapplicable",
       "ruleId": "cae760",
       "ruleName": "`iframe` element has accessible name",

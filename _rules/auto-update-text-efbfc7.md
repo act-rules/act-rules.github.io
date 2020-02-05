@@ -145,7 +145,7 @@ The text content automatically updates after the page completes loading but it i
 
 #### Inapplicable Example 2
 
-The text content automatically updates but only as a result of the user activating an element on the page.
+The text content automatically updates but only as a result of the user [activating][activate] an element on the page.
 
 ```html
 <body>

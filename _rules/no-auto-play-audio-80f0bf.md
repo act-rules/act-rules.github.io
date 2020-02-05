@@ -31,7 +31,7 @@ This rule applies to any `audio` or `video` element that has:
 - both `paused` and `muted` attributes equal to false, and
 - either a `src` attribute or a child `source` element that references content with a duration of more than 3 seconds that contains audio.
 
-**Note**:
+**Note:**
 
 The default value of both `paused` and `muted` attributes is `false`.
 
@@ -39,8 +39,8 @@ The default value of both `paused` and `muted` attributes is `false`.
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [audio or video that plays automatically has a control mechanism](https://act-rules.github.io/rules/4c31df)
-- [audio or video that plays automatically does not exceed 3 seconds](https://act-rules.github.io/rules/aaa1bf)
+- [Audio Or Video That Plays Automatically Has A Control Mechanism](https://act-rules.github.io/rules/4c31df)
+- [Audio Or Video That Plays Automatically Does Not Exceed 3 Seconds](https://act-rules.github.io/rules/aaa1bf)
 
 ## Assumptions
 
@@ -64,7 +64,7 @@ The native `<video>` and `<audio>` controls in several browser and assistive tec
 The `<audio>` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
 
 ```html
-<audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay="true" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay="true" controls></audio>
 ```
 
 #### Passed Example 2
@@ -73,8 +73,8 @@ The `<video>` element does not play for longer than 3 seconds.
 
 ```html
 <video autoplay="true">
-	<source src="../test-assets/rabbit-video/video.mp4#t=8,10" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm#t=8,10" type="video/webm" />
+	<source src="/test-assets/rabbit-video/video.mp4#t=8,10" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm#t=8,10" type="video/webm" />
 </video>
 ```
 
@@ -100,8 +100,8 @@ The `<video>` element autoplays, and has a [mechanism](https://www.w3.org/TR/WCA
 	<div id="video-container">
 		<!-- Video -->
 		<video id="video" autoplay="true">
-			<source src="https://act-rules.github.io/test-assets/rabbit-video/video.mp4" type="video/mp4" />
-			<source src="https://act-rules.github.io/test-assets/rabbit-video/video.webm" type="video/webm" />
+			<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+			<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 		</video>
 		<!-- Video Controls -->
 		<div id="video-controls">
@@ -109,7 +109,7 @@ The `<video>` element autoplays, and has a [mechanism](https://www.w3.org/TR/WCA
 			<button type="button" id="mute">Mute</button>
 		</div>
 	</div>
-	<script src="../test-assets/80f0bf/no-autoplay.js"></script>
+	<script src="/test-assets/80f0bf/no-autoplay.js"></script>
 </body>
 ```
 
@@ -120,7 +120,7 @@ The `<video>` element autoplays, and has a [mechanism](https://www.w3.org/TR/WCA
 The `<audio>` element autoplays, lasts for more than 3 seconds, and does not have a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
 
 ```html
-<audio src="../test-assets/moon-audio/moon-speech.mp3" autoplay="true"></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay="true"></audio>
 ```
 
 #### Failed Example 2
@@ -129,8 +129,8 @@ The `<video>` element audio autoplays for longer than 3 seconds, and does not ha
 
 ```html
 <video autoplay="true">
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```
 
@@ -142,8 +142,8 @@ The `<video>` element audio autoplays for longer than 3 seconds, but is `muted`.
 
 ```html
 <video autoplay="true" muted="true">
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```
 
@@ -153,8 +153,8 @@ The `<video>` element has no audio output.
 
 ```html
 <video autoplay="true">
-	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 </video>
 ```
 
@@ -163,5 +163,5 @@ The `<video>` element has no audio output.
 The `audio` element does not play automatically.
 
 ```html
-<audio src="../test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```

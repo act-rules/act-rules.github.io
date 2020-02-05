@@ -12,6 +12,7 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
+  - Language
 acknowledgements:
   authors:
     - Anne Thyme Nørregaard
@@ -29,9 +30,9 @@ This rule applies to the first HTML `title` element that
 - is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the `html` element of a [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), and
 - contains [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
 
-**Note**: The `title` elements of embedded documents, such as those in `iframe` or `object` elements, are not applicable because those are not web pages according to the definition in WCAG.
+**Note:** The `title` elements of embedded documents, such as those in `iframe` or `object` elements, are not applicable because those are not web pages according to the definition in WCAG.
 
-**Note**: The [HTML 5.2 specification](https://www.w3.org/TR/html52/document-metadata.html#the-title-element) requires that a document only has one `title` element, and that it is a child of the `head` element of a document. However, HTML 5.2 also describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG.
+**Note:** The [HTML 5.2 specification](https://www.w3.org/TR/html52/document-metadata.html#the-title-element) requires that a document only has one `title` element, and that it is a child of the `head` element of a document. However, HTML 5.2 also describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG.
 
 ## Expectation
 
@@ -39,7 +40,7 @@ The target element describes the topic or purpose of the overall content of the 
 
 ## Assumptions
 
-_There are no assumptions for this rule._
+This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
@@ -60,7 +61,7 @@ _There are no assumptions for this rule._
 The `<title>` element describes the content of the document.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>Clementine harvesting season</title>
 	</head>
@@ -77,7 +78,7 @@ The `<title>` element describes the content of the document.
 Two `<title>` elements where the first one describes the content of the document.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>Clementine harvesting season</title>
 		<title>Second title is ignored</title>
@@ -95,7 +96,7 @@ Two `<title>` elements where the first one describes the content of the document
 Even though the descriptive `<title>` element is not placed within the `<head>` element that is the context the element can be used in [according to the HTML specification](https://html.spec.whatwg.org/#the-title-element), the rule still passes, since the browser fixes it, and it doesn't cause any known accessibility issues.
 
 ```html
-<html>
+<html lang="en">
 	<head> </head>
 	<body>
 		<title>Clementine harvesting season</title>
@@ -113,7 +114,7 @@ Even though the descriptive `<title>` element is not placed within the `<head>` 
 `<title>` is not descriptive of the content of the document.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>Apple harvesting season</title>
 	</head>
@@ -130,27 +131,10 @@ Even though the descriptive `<title>` element is not placed within the `<head>` 
 Even though a correct `<title>` element is put in the `<head>` of the document, this rule only looks at the first `<title>` element.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>First title is incorrect</title>
 		<title>Clementine harvesting season</title>
-	</head>
-	<body>
-		<p>
-			Clementines will be ready to harvest from late October through February.
-		</p>
-	</body>
-</html>
-```
-
-#### Failed Example 3
-
-`<title>` element with content present in document, but it is not descriptive of the content.
-
-```html
-<html>
-	<head>
-		<title>;)</title>
 	</head>
 	<body>
 		<p>

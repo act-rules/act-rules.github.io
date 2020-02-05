@@ -121,10 +121,12 @@
 		"htmlhint": "^0.11.0",
 		"is-url": "^1.2.4",
 		"jest-expect-message": "^1.0.2",
-		"markdown-link-extractor": "^1.2.2",
-		"remove-markdown": "^0.3.0"
+		"remark": "^11.0.2",
+		"remove-markdown": "^0.3.0",
+		"unist-util-visit": "^2.0.1"
 	},
 	"devDependencies": {
+		"aria-query": "^4.0.0",
 		"dictionary-en-us": "^2.1.1",
 		"husky": "^3.0.9",
 		"jest": "^24.9.0",
@@ -135,11 +137,11 @@
 		"prettier": "^1.19.1",
 		"retext": "^7.0.1",
 		"retext-english": "^3.0.4",
+		"retext-redundant-acronyms": "^2.0.0",
 		"retext-repeated-words": "^2.0.0",
 		"retext-spell": "^3.0.0",
 		"retext-stringify": "^2.0.4",
 		"retext-syntax-urls": "^1.0.2",
-		"retext-redundant-acronyms": "^2.0.0",
 		"vfile-reporter": "^6.0.0"
 	},
 	"keywords": [

@@ -21,13 +21,17 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to elements that are [included in the accessibility tree][] with the [semantic role](#semantic-role) of `button`, except for `input` elements of `type="image"`.
+The rule applies to elements that are [included in the accessibility tree][] and have a [semantic role](#semantic-role) of `button`, except for `input` elements whose `type` attribute is in the [`Image Button` state](<https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image)>).
+
+**Note:** `input` elements have a `type` attribute in the `Image button` state if it is set to any case-insensitive match of `image` (most of the time, using `<input type="image">`).
 
 ## Expectation
 
-Each target element has an [accessible name][] that is not only [whitespace][].
+Each target element has an [accessible name][] that is not empty (`""`).
 
-**Note**: `input` elements of type `submit` and `reset` can get their [accessible name][] from a [default text](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset), as well as from a `value` or other attribute.
+**Note:** `input` elements of type `submit` and `reset` can get their [accessible name][] from a [default text](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset), as well as from a `value` or other attribute.
+
+**Note:** Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
 
 ## Assumptions
 
@@ -50,7 +54,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-Regular button.
+This `button` element has an [accessible name][] because of its text content.
 
 ```html
 <button>My button</button>
@@ -58,7 +62,7 @@ Regular button.
 
 #### Passed Example 2
 
-Value attribute as the [accessible name][].
+This `input` element has an [accessible name][] because of its `value` attribute.
 
 ```html
 <input type="submit" value="Submit" />
@@ -66,7 +70,7 @@ Value attribute as the [accessible name][].
 
 #### Passed Example 3
 
-`aria-label` for the [accessible name][].
+This `button` element has an [accessible name][] because of its `aria-label` attribute.
 
 ```html
 <button aria-label="My button"></button>
@@ -74,7 +78,7 @@ Value attribute as the [accessible name][].
 
 #### Passed Example 4
 
-Span tag with role button and has name defined by aria-label.
+This element with a `button` role has an [accessible name][] because of its `aria-label` attribute.
 
 ```html
 <span role="button" aria-label="My button"></span>
@@ -82,7 +86,7 @@ Span tag with role button and has name defined by aria-label.
 
 #### Passed Example 5
 
-Summary element has a default semantic role of button.
+This `summary` element with an [implicit role](#implicit-role) of `button` has an [accessible name][] because of its text content.
 
 ```html
 <summary>Press Here</summary>
@@ -90,7 +94,7 @@ Summary element has a default semantic role of button.
 
 #### Passed Example 6
 
-Disabled elements are also applicable.
+This `button` element with the `disabled` attribute has an [accessible name][] because of its text content.
 
 ```html
 <button disabled>Delete</button>
@@ -98,7 +102,7 @@ Disabled elements are also applicable.
 
 #### Passed Example 7
 
-Off screen elements should be tested.
+This off screen `button` element has an [accessible name][] because of its text content.
 
 ```html
 <html>
@@ -117,15 +121,7 @@ Off screen elements should be tested.
 
 #### Passed Example 8
 
-Button has [accessible name][] that is not only [whitespace][].
-
-```html
-<button>:-)</button>
-```
-
-#### Passed Example 9
-
-Input button has an [accessible name][] that comes from the default "reset" text.
+This `input` element has an [accessible name][] because of the default accessible name for an `input` element with a `type` attribute set to `reset`.
 
 ```html
 <input type="reset" />
@@ -135,23 +131,31 @@ Input button has an [accessible name][] that comes from the default "reset" text
 
 #### Failed Example 1
 
-Value attribute does NOT give an [accessible name][], only for input elements.
+This `button` element has no [accessible name][] because it has no content or attribute that can provide it.
+
+```html
+<button></button>
+```
+
+#### Failed Example 2
+
+This `button` element has no [accessible name][]. The `value` attribute does not provide an [accessible name][] for `button` elements, only for `input` elements.
 
 ```html
 <button type="button" value="read more"></button>
 ```
 
-#### Failed Example 2
+#### Failed Example 3
 
-Span tag with role button with no name.
+This element with the `button` role has no [accessible name][] because it has no content or attribute that can provide it.
 
 ```html
 <span role="button"></span>
 ```
 
-#### Failed Example 3
+#### Failed Example 4
 
-Off screen element without an [accessible name][].
+This off screen `button` element has no [accessible name][] because it has no content or attribute that can provide it.
 
 ```html
 <html>
@@ -168,19 +172,11 @@ Off screen element without an [accessible name][].
 </html>
 ```
 
-#### Failed Example 4
-
-Button has an [accessible name][] that is only [whitespace][].
-
-```html
-<button></button>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-Image buttons are tested in a different rule.
+This `input` element has a `type` attribute set to `image`. These images are tested in a separate rule which also tests [success criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG21/#non-text-content).
 
 ```html
 <input type="image" value="download" alt="Download" />
@@ -188,39 +184,19 @@ Image buttons are tested in a different rule.
 
 #### Inapplicable Example 2
 
-Not [visible](#visible) in page and not [included in the accessibility tree][].
+This `button` element does not need an [accessible name][] because it is not included in the accessibility tree.
 
 ```html
-<html>
-	<style>
-		.notInPage {
-			position: absolute;
-			left: -9999px;
-			top: -9999px;
-		}
-	</style>
-	<body>
-		<button class="notInPage" aria-hidden="true">Confirm</button>
-	</body>
-</html>
+<button style="display: none;"></button>
 ```
 
 #### Inapplicable Example 3
 
-Inapplicable: role overridden to link for button element.
+This `button` element has a `link` role. Links are tested in a separate rule which also tests [success criterion 2.4.4 Link Purpose (In Context)](https://www.w3.org/TR/WCAG21/#link-purpose-in-context).
 
 ```html
 <button role="link">take me somewhere</button>
 ```
 
-#### Inapplicable Example 4
-
-Not [included in the accessibility tree][] due to `aria-hidden`.
-
-```html
-<button aria-hidden="true"></button>
-```
-
 [accessible name]: #accessible-name 'Definition of accessible name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[whitespace]: #whitespace 'Definition of whitespace'

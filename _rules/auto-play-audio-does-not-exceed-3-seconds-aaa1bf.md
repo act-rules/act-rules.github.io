@@ -29,7 +29,7 @@ This rule applies to any `audio` or `video` element that has:
 - both `paused` and `muted` attributes equal to false, and
 - either a `src` attribute or a child `source` element that references content with a duration of more than 3 seconds that contains audio.
 
-**Note**:
+**Note:**
 
 The default value of both `paused` and `muted` attributes is `false`.
 
@@ -37,7 +37,7 @@ The default value of both `paused` and `muted` attributes is `false`.
 
 For each test target the total audio output does not last more than 3 seconds.
 
-**Note**:
+**Note:**
 
 This rule does not cover single audio instances that play repeatedly for more than three seconds, or multiple audio instances for more than three seconds. The [WCAG Understanding documentation for 1.4.2 Audio Controls](https://www.w3.org/WAI/WCAG21/Understanding/audio-control.html) is ambiguous about how to handle these scenarios.
 

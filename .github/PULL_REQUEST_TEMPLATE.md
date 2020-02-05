@@ -2,7 +2,7 @@
 
 Closes issue(s):
 
-- (ADD ISSUE NUMBER HERE)
+- closes #XXX (ADD ISSUE NUMBER HERE)
 
 Need for Final Call:
 << choose one of the following and remove the rest >>
@@ -18,14 +18,14 @@ This will require a 2 weeks Final Call << new rule, or substantial changes affec
 
 ### **When creating PR:**
 
-- Make sure you requesting to **pull a branch** (right side) to the `develop` branch (left side).
+- [ ] Make sure you're requesting to **pull a branch** (right side) to the `develop` branch (left side).
 
 ### **After creating PR:**
 
-- Add yourself (and co-authors) as "Assignees" for PR.
-- Add label to indicate if it's a `Rule`, `Definition` or `Chore`.
-- Close the issue that the PR resolves (and make sure the issue is referenced in the top of this comment)
-- Optionally request feedback from anyone in particular by assigning them as "Reviewers".
+- [ ] Add yourself (and co-authors) as "Assignees" for PR.
+- [ ] Add label to indicate if it's a `Rule`, `Definition` or `Chore`.
+- [ ] Close the issue that the PR resolves (and make sure the issue is referenced in the top of this comment)
+- [ ] Optionally request feedback from anyone in particular by assigning them as "Reviewers".
 
 ## How to Review And Approve
 

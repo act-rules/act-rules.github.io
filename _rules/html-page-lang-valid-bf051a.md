@@ -34,7 +34,7 @@ For each test target, the `lang` attribute has a [valid language subtag](#valid-
 
 ## Assumptions
 
-This rule assumes that the presence of a `lang` attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG. WCAG only requires that the language of the page can be "programmatically determined", but this could be achieved by using other means than a `lang` attribute (e.g., HTTP headers, `meta` element, …). Thus, an invalid `lang` attribute could be overridden by some other programmatic technique and not cause any accessibility issue or WCAG failure; but this rule would nonetheless fail.
+The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are generally not supported by assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page).
 
 ## Accessibility Support
 

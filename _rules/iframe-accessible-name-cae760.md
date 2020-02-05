@@ -32,11 +32,11 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Assumptions
 
-- The rule assumes that the target `iframe` is used as a [user interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components).
+- The rule assumes that all `iframe` elements are [user interface components](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components) as defined by WCAG 2.
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+Certain assistive technologies can be set up to ignore the title attribute, which means that to some users the title attribute will not act as an [accessible name][].
 
 ## Background
 
@@ -133,7 +133,7 @@ Usage of `alt` attribute to describe content is not valid.
 
 #### Failed Example 7
 
-[Accessible name][] is empty.
+[Accessible name][] consists only [whitespace][].
 
 ```html
 <iframe title=" " src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
@@ -157,6 +157,15 @@ Does not apply to non `iframe` element.
 <iframe style="display:none;" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
+#### Inapplicable Example 3
+
+The `iframe` element is [marked as decorative][] through `role="presentation"`.
+
+```html
+<iframe role="presentation" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
+```
+
 [accessible name]: #accessible-name 'Definition of accessible name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [whitespace]: #whitespace 'Definition of whitespace'
+[marked as decorative]: #marked-as-decorative 'Definition of marked as decorative'

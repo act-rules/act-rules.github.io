@@ -133,7 +133,7 @@ Usage of `alt` attribute to describe content is not valid.
 
 #### Failed Example 7
 
-[Accessible name][] consists only [whitespace][].
+The [accessible name][] of this `iframe` element consists only of [whitespace][].
 
 ```html
 <iframe title=" " src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
@@ -159,7 +159,7 @@ Does not apply to non `iframe` element.
 
 #### Inapplicable Example 3
 
-The `iframe` element is [marked as decorative][] through `role="presentation"`.
+This `iframe` element is [marked as decorative][] through `role="presentation"`.
 
 ```html
 <iframe role="presentation" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>

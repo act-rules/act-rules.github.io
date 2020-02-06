@@ -9,7 +9,7 @@ A _programmatic section of content_ is either an [explicit section of content][]
 
 Programmatic sections of content may contain nested programmatic subsections of content.
 
-Programmatic sections of content may have zero or one heading [associated][] to them.
+Programmatic sections of content may have zero or one heading [associated][] with them.
 
 **Note:** This definition roughly follows the [algorithm for creating an outline][outline algorithm], but using different elements for defining sections. The main focus is here on the [semantic role][] rather than the element itself, and all [landmark roles][landmark] are considered.
 

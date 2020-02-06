@@ -12,7 +12,7 @@ Each element with a [semantic role][] of [`heading`][heading] is _associated_ wi
 
 **Note:** This association follows roughly the [algorithm for creating an outline][outline algorithm] and the similar association done in it.
 
-**Note:** Each heading is always associated with exactly one [programmatic section of content][]. On the other hand, each [programmatic section of content][] can be associated to zero or one heading (never more).
+**Note:** Each heading is always associated with exactly one [programmatic section of content][]. On the other hand, each [programmatic section of content][] can have zero or one heading associated with it (never more).
 
 #### Assumption
 

@@ -9,9 +9,9 @@ An _explicit section of content_ is a subtree rooted at an element with a [seman
 
 Explicit sections of content may contain nested [programmatic subsections of content][programmatic section of content].
 
-Explicit sections of content may have a heading [associated][] to them.
+Explicit sections of content may have zero or one heading [associated][] with them.
 
-**Note:** The `article` role (inheriting from `document`) is included in this definition because the `article` element is consider [sectioning content][] when building HTML outlines.
+**Note:** The `article` role (inheriting from `document`) is included in this definition because the `article` element is [sectioning content][] used by the [algorithm for creating an outline][outline algorithm].
 
 **Note:** The roles considered here are close but different from the [implicit roles][] of [sectioning content][] and [sectioning root][] elements.
 
@@ -27,6 +27,7 @@ This definition assumes that the [semantic roles][semantic role] are used accord
 [document]: https://www.w3.org/TR/wai-aria-1.1/#document 'The document role'
 [implicit roles]: #implicit-role 'Definition of implicit role'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark 'The landmark role'
+[outline algorithm]: https://html.spec.whatwg.org/multipage/sections.html#outlines 'Definition of outline'
 [programmatic section of content]: #programmatic-section-of-content 'Definition of programmatic section of content'
 [sectioning content]: https://html.spec.whatwg.org/multipage/dom.html#sectioning-content 'Definition of sectioning content'
 [sectioning root]: https://html.spec.whatwg.org/multipage/sections.html#sectioning-root 'Definition of sectioning root'

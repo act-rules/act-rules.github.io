@@ -46,7 +46,7 @@ The rule applies to any HTML element with the [semantic role](#semantic-role) of
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
-**Note**: Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
+**Note:** Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
 
 ## Assumptions
 

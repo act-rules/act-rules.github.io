@@ -23,6 +23,7 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
+  - Language
 acknowledgements:
   authors:
     - Bryn Anderson
@@ -38,7 +39,7 @@ Each test target has an [accessible name][] that serves an equivalent purpose to
 
 ## Assumptions
 
-_There are currently no assumptions_
+This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
@@ -58,7 +59,9 @@ _There are no major accessibility support issues known for this rule._
 The `img` element's [accessible name][] uses the filename which accurately describes the image.
 
 ```html
-<img src="https://www.w3.org/WAI/demos/bad/img/w3c" alt="w3c" />
+<html lang="en">
+	<img src="https://www.w3.org/WAI/demos/bad/img/w3c" alt="w3c" />
+</html>
 ```
 
 #### Passed Example 2
@@ -66,9 +69,11 @@ The `img` element's [accessible name][] uses the filename which accurately descr
 The `img` element's [accessible name][] includes the filename, which in combination with the text content of the `a` element accurately describes the image.
 
 ```html
-<a href="https://www.w3.org/WAI/demos/bad/img/w3c.png" download
-	>Download <img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png"
-/></a>
+<html lang="en">
+	<a href="https://www.w3.org/WAI/demos/bad/img/w3c.png" download
+		>Download <img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png"
+	/></a>
+</html>
 ```
 
 ### Failed
@@ -78,7 +83,9 @@ The `img` element's [accessible name][] includes the filename, which in combinat
 The `img` element's [accessible name][] matches the image filename. However the presence of the file extension in the [accessible name][] is redundant and results in the [accessible name][] not accurately describing the image.
 
 ```html
-<img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png" />
+<html lang="en">
+	<img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png" />
+</html>
 ```
 
 #### Failed Example 2
@@ -86,7 +93,9 @@ The `img` element's [accessible name][] matches the image filename. However the 
 The `input` element with a `type` of `image` has an [accessible name][] that matches the filename. However the presence of the file extension in the [accessible name][] is redundant and results in the [accessible name][] not accurately describing the image.
 
 ```html
-<input type="image" src="https://www.w3.org/WAI/demos/bad/before/img/top_weather.gif" alt="top_weather.gif" />
+<html lang="en">
+	<input type="image" src="https://www.w3.org/WAI/demos/bad/before/img/top_weather.gif" alt="top_weather.gif" />
+</html>
 ```
 
 ### Inapplicable
@@ -96,7 +105,9 @@ The `input` element with a `type` of `image` has an [accessible name][] that mat
 The `img` element doesn't have the semantic role of image.
 
 ```html
-<img role="presentation" alt="" />
+<html lang="en">
+	<img role="presentation" alt="" />
+</html>
 ```
 
 #### Inapplicable Example 2
@@ -104,7 +115,9 @@ The `img` element doesn't have the semantic role of image.
 The `img` element is not [included in the accessibility tree][].
 
 ```html
-<img style="display:none;" alt="" />
+<html lang="en">
+	<img style="display:none;" alt="" />
+</html>
 ```
 
 #### Inapplicable Example 3
@@ -112,7 +125,9 @@ The `img` element is not [included in the accessibility tree][].
 The `img` element's [accessible name][] is not equivalent to the file name specified in the `src` attribute.
 
 ```html
-<img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="modanna lily" />
+<html lang="en">
+	<img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="modanna lily" />
+</html>
 ```
 
 #### Inapplicable Example 4
@@ -120,11 +135,13 @@ The `img` element's [accessible name][] is not equivalent to the file name speci
 The `img` element's `alt` attribute matches the filename but is overridden by the `aria-label` value which takes precedence in the [accessible name][] calculation.
 
 ```html
-<img
-	src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg"
-	alt="teaser_right2.jpg"
-	aria-label="modanna lily"
-/>
+<html lang="en">
+	<img
+		src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg"
+		alt="teaser_right2.jpg"
+		aria-label="modanna lily"
+	/>
+</html>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

@@ -7,6 +7,8 @@ objective: true
 
 A _programmatic section of content_ is either an [explicit section of content][] or an [implicit section of content][].
 
+If a programmatic section of content contains a [host][], with a [shadow root][] associated to it, or a [browsing context container][]; then the content of the corresponding shadow tree or browsing context is also part of this programmatic section of content.
+
 Programmatic sections of content may contain nested programmatic subsections of content.
 
 Programmatic sections of content may have zero or one heading [associated][] with them.
@@ -21,9 +23,12 @@ Programmatic sections of content may have zero or one heading [associated][] wit
 - This definition assumes that the `hgroup` element is not used.
 
 [associated]: #heading-section-association 'Definition of association between headings and sections'
+[browsing context container]: https://html.spec.whatwg.org/multipage/browsers.html#browsing-context-container 'Definition of browsing context container'
 [explicit section of content]: #explicit-section-of-content 'Definition of explicit section of content'
+[host]: https://dom.spec.whatwg.org/#concept-documentfragment-host 'Definition of host'
 [implicit section of content]: #implicit-section-of-content 'Definition of implicit section of content'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark 'The landmark role'
 [outline algorithm]: https://html.spec.whatwg.org/multipage/sections.html#outlines 'Definition of outline'
 [sections of content]: #section-of-content 'Definition of section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'
+[shadow root]: https://dom.spec.whatwg.org/#concept-shadow-root 'Definition of shadow root'

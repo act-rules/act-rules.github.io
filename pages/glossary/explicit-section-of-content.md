@@ -9,6 +9,8 @@ An _explicit section of content_ is a subtree rooted at an element with a [seman
 
 Explicit sections of content may contain nested [programmatic subsections of content][programmatic section of content].
 
+Explicit sections of content may have a heading [associated][] to them.
+
 **Note:** The `article` role (inheriting from `document`) is included in this definition because the `article` element is consider [sectioning content][] when building HTML outlines.
 
 **Note:** The roles considered here are close but different from the [implicit roles][] of [sectioning content][] and [sectioning root][] elements.
@@ -19,8 +21,9 @@ Explicit sections of content may contain nested [programmatic subsections of con
 
 #### Assumption
 
-role is used correctly.
+This definition assumes that the [semantic roles][semantic role] are used according to their semantics.
 
+[associated]: #heading-section-association 'Definition of association between headings and sections'
 [document]: https://www.w3.org/TR/wai-aria-1.1/#document 'The document role'
 [implicit roles]: #implicit-role 'Definition of implicit role'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark 'The landmark role'

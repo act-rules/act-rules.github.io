@@ -9,16 +9,23 @@ An _implicit section of content_ is all the nodes, in tree order, between an ele
 
 Explicit sections of content may contain nested [programmatic subsections of content][programmatic section of content].
 
-**Note:** level example
-first heading excluded.
+The heading defining an implicit section of content is always [associated][] to it.
+
+**Note:** Heading level indicates nesting of subsections, the lower the level, the higher the rank of its section. Thus, a level 3 heading (for example, a `h3` element) defines an implicit section of content that stop at the next heading of level 1, 2, or 3; but includes subsections defined by headings of level 4, 5, and 6.
+
+**Note:** The first heading inside an [explicit section of content][] is [associated][] to it. It does not create a new [programmatic section of content][] but gives a heading to the existing one. This association follows the [outline algorithm][].
 
 #### Assumption
 
-role is used correctly.
-no hgroup
+- This definition assumes that the [semantic roles][semantic role] (including the level of headings) are used according to their semantics.
+- This definition assumes that the `hgroup` element is not used.
+
+**Note:** The `hgroup` element, used to group headings, has no default role mapping ([HTML Accessibility API Mapping (work in progress)](https://www.w3.org/TR/html-aam-1.0/#details-id-48)). Furthermore, it was [deprecated in HTML 5.2](https://www.w3.org/TR/html52/dom.html#heading-content) (and [alternate way of marking up subheadings and alternate titles](https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements) are provided) but [still exists in the WHATWG living standard](https://html.spec.whatwg.org/multipage/dom.html#heading-content). It is generally not well supported by Assistive Technologies. Its key purpose is to affect the [outline algorithm][] which is itself poorly supported by browsers. For all these reasons, it is left out of this definition.
 
 [aria-level]: https://www.w3.org/TR/wai-aria-1.1/#aria-level 'The aria-level property'
+[associated]: #heading-section-association 'Definition of association between headings and sections'
 [explicit section of content]: #explicit-section-of-content 'Definition of explicit section of content'
 [heading]: https://www.w3.org/TR/wai-aria-1.1/#heading 'The heading role'
+[outline algorithm]: https://html.spec.whatwg.org/multipage/sections.html#outlines 'Definition of outline'
 [programmatic section of content]: #programmatic-section-of-content 'Definition of programmatic section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'

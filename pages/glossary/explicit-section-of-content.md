@@ -15,6 +15,12 @@ Explicit sections of content may contain nested [programmatic subsections of con
 
 **Note:** When one of these elements is the single child of a similar element, they form a single [programmatic section of content][], rather than one each, because they have the exact same content.
 
+**Note:** a subtree rooted at a node is this node and all its descendants.
+
+#### Assumption
+
+role is used correctly.
+
 [document]: https://www.w3.org/TR/wai-aria-1.1/#document 'The document role'
 [implicit roles]: #implicit-role 'Definition of implicit role'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark 'The landmark role'

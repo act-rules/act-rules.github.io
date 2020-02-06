@@ -1,6 +1,8 @@
 ---
 title: Marked as Decorative
 key: marked-as-decorative
+unambiguous: true
+objective: true
 ---
 
 An element is _marked as decorative_ if it has a [semantic role][] of `none` or `presentation`.

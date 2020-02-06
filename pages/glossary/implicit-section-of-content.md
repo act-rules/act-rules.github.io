@@ -7,13 +7,13 @@ objective: true
 
 An _implicit section of content_ is all the nodes, in tree order, between an element with a [semantic role][] of [`heading`][heading] and the next element (in tree order) which has both a [semantic role][] of [`heading`][heading] and an [`aria-level`][aria-level] property lower of equal, except for the first element with a [semantic role][] of [`heading`][heading] inside an [explicit section of content][].
 
-Explicit sections of content may contain nested [programmatic subsections of content][programmatic section of content].
+Implicit sections of content may contain nested [programmatic subsections of content][programmatic section of content].
 
 The heading defining an implicit section of content is always [associated][] with it.
 
 **Note:** Heading level indicates nesting of subsections, the lower the level, the higher the rank of its section. Thus, a level 3 heading (for example, a `h3` element) defines an implicit section of content that stop at the next heading of level 1, 2, or 3; but includes subsections defined by headings of level 4, 5, and 6.
 
-**Note:** The first heading inside an [explicit section of content][] is [associated][] with it. It does not create a new [programmatic section of content][] but gives a heading to the existing one. This association follows the [algorithm for creating an outline][outline algorithm].
+**Note:** The first heading inside an [explicit section of content][] is [associated][] with it. It does not create a new [programmatic section of content][] but gives a heading to the existing one. This association follows roughly the [algorithm for creating an outline][outline algorithm].
 
 #### Assumption
 

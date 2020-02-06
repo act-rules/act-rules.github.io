@@ -29,7 +29,7 @@ This rule applies to any element with the [semantic role][] of heading that is e
 
 ## Expectation
 
-Each target element describes the topic or purpose of the [programmatic section of the content][] it is [associated][] with.
+Each target element describes the topic or purpose of the [programmatic section of content][] it is [associated][] with.
 
 **Note:** Headings do not need to be lengthy. A word, or even a single character, may suffice.
 
@@ -57,7 +57,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-Heading marked up with `h1` element that describes the topic or purpose of its [programmatic section of the content][].
+Heading marked up with `h1` element that describes the topic or purpose of its [programmatic section of content][].
 
 ```html
 <html lang="en">
@@ -68,7 +68,7 @@ Heading marked up with `h1` element that describes the topic or purpose of its [
 
 #### Passed Example 2
 
-Heading marked up with `role="heading"` that describes the topic or purpose of its [programmatic section of the content][].
+Heading marked up with `role="heading"` that describes the topic or purpose of its [programmatic section of content][].
 
 ```html
 <html lang="en">
@@ -79,7 +79,7 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 
 #### Passed Example 3
 
-Heading marked up with `role="heading"` that describes the topic or purpose of its [programmatic section of the content][], with a default aria-level assigned.
+Heading marked up with `role="heading"` that describes the topic or purpose of its [programmatic section of content][], with a default aria-level assigned.
 
 ```html
 <html lang="en">
@@ -90,7 +90,7 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 
 #### Passed Example 4
 
-Heading marked up with `h1` element with an image that describes the topic or purpose of its [programmatic section of the content][].
+Heading marked up with `h1` element with an image that describes the topic or purpose of its [programmatic section of content][].
 
 ```html
 <html lang="en">
@@ -103,7 +103,7 @@ Heading marked up with `h1` element with an image that describes the topic or pu
 
 #### Passed Example 5
 
-Heading marked up with `h1` element that is a single character that describes the topic or purpose of its [programmatic section of the content][].
+Heading marked up with `h1` element that is a single character that describes the topic or purpose of its [programmatic section of content][].
 
 ```html
 <html lang="en">
@@ -123,7 +123,7 @@ Heading marked up with `h1` element that is a single character that describes th
 
 #### Passed Example 6
 
-Heading marked up with `role="heading"` that describes the topic or purpose of its [programmatic section of the content][]. The heading is positioned off screen and is [included in the accessibility tree][].
+Heading marked up with `role="heading"` that describes the topic or purpose of its [programmatic section of content][]. The heading is positioned off screen and is [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -136,7 +136,7 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 
 #### Passed Example 7
 
-Heading marked up with `h1` element that describes the topic or purpose of its [programmatic section of the content][]. The heading is [visible][], but is not [included in the accessibility tree][].
+Heading marked up with `h1` element that describes the topic or purpose of its [programmatic section of content][]. The heading is [visible][], but is not [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -149,7 +149,7 @@ Heading marked up with `h1` element that describes the topic or purpose of its [
 
 #### Failed Example 1
 
-Heading marked up with `h1` element that does not describe the topic or purpose of its [programmatic section of the content][].
+Heading marked up with `h1` element that does not describe the topic or purpose of its [programmatic section of content][].
 
 ```html
 <html lang="en">
@@ -160,7 +160,7 @@ Heading marked up with `h1` element that does not describe the topic or purpose 
 
 #### Failed Example 2
 
-Heading marked up with `role="heading"` that does not describe the topic or purpose of its [programmatic section of the content][].
+Heading marked up with `role="heading"` that does not describe the topic or purpose of its [programmatic section of content][].
 
 ```html
 <html lang="en">
@@ -171,7 +171,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed Example 3
 
-Heading marked up with `role="heading"` that does not describe the topic or purpose of its [programmatic section of the content][]. The heading is positioned off screen and is [included in the accessibility tree][].
+Heading marked up with `role="heading"` that does not describe the topic or purpose of its [programmatic section of content][]. The heading is positioned off screen and is [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -184,7 +184,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed Example 4
 
-Heading marked up with `h1` element that does not describe the topic or purpose of its [programmatic section of the content][]. The heading is [visible][], but is not [included in the accessibility tree][].
+Heading marked up with `h1` element that does not describe the topic or purpose of its [programmatic section of content][]. The heading is [visible][], but is not [included in the accessibility tree][].
 
 ```html
 <html lang="en">

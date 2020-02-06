@@ -1,6 +1,6 @@
 ---
-title: Explicit section of content
-key: explicit-section-of-content
+title: Implicit section of content
+key: implicit-section-of-content
 unambiguous: true
 objective: true
 ---

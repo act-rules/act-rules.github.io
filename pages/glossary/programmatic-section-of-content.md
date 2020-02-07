@@ -11,7 +11,7 @@ Programmatic sections of content may contain nested programmatic subsections of 
 
 Programmatic sections of content may have zero or one heading [associated][] with them.
 
-**Note:** This definition roughly follows the [algorithm for creating an outline][outline algorithm], but using different elements for defining sections. The main focus is here on the [semantic role][] rather than the element itself, and all [landmark roles][landmark] are considered.
+**Note:** This definition roughly follows the [algorithm for creating an outline][outline algorithm], but using different elements for defining sections. The main focus is here on the [semantic role][] rather than the element itself, and all [landmark roles][landmark] are considered. Additionally, programmatic sections of content include content from [shadow trees][] and [nested browsing contexts][] which is ignored by the [algorithm for creating an outline][outline algorithm].
 
 **Note:** When elements and roles are used according to their semantics, programmatic sections of content and [sections of content][] should match perfectly.
 
@@ -78,7 +78,7 @@ This document is using `section` elements to define its sections of content. The
 </main>
 ```
 
-This document uses both headings and `section` elements to define its sections of content. Thus it has both [explicit sections of content][] and [implicit sections of content][]. Note that the `section` element with `id="1-2-1"` could **not** contain a `h1`or `h2` element without breaking the semantic of the `aria-level` property with respect to the level implied by nesting. Note that the [explicit section of content][] defined by the element with `id="1-3"` has no heading [associated][] with it because the first heading inside it also inside a nested subsection of content.
+This document uses both headings and `section` elements to define its sections of content. Thus it has both [explicit sections of content][] and [implicit sections of content][]. Note that the `section` element with `id="1-2-1"` could **not** contain a `h1` or `h2` element without breaking the semantic of the `aria-level` property with respect to the level implied by nesting. Note that the [explicit section of content][] defined by the element with `id="1-3"` has no heading [associated][] with it because the first heading inside it also inside a nested subsection of content.
 
 ```html
 <h1>Heading of Section 1</h1>
@@ -114,6 +114,8 @@ Content of Section 1.
 [implicit section of content]: #implicit-section-of-content 'Definition of implicit section of content'
 [implicit sections of content]: #implicit-section-of-content 'Definition of implicit section of content'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark 'The landmark role'
+[nested browsing contexts]: https://html.spec.whatwg.org/multipage/browsers.html#nested-browsing-context 'Definition of nested browsing context'
 [outline algorithm]: https://html.spec.whatwg.org/multipage/sections.html#outlines 'Definition of outline'
 [sections of content]: #section-of-content 'Definition of section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'
+[shadow trees]: https://dom.spec.whatwg.org/#shadow-trees 'Definition of shadow trees'

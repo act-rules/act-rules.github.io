@@ -5,7 +5,7 @@ unambiguous: true
 objective: true
 ---
 
-Each element with a [semantic role][] of [`heading`][heading] is _associated_ with exactly one [programmatic section of content][] in the following ways:
+Each element with a [semantic role][] of [`heading`][heading] is _associated_ with exactly one [programmatic section of content][] in one of the following ways:
 
 - The first element with a [semantic role][] of [`heading`][heading] inside an [explicit section of content][] is associated with this [explicit section of content][].
 - Any other element with a [semantic role][] of [`heading`][heading] is associated with the [implicit section of content][] it creates.

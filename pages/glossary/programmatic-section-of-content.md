@@ -22,7 +22,6 @@ Programmatic sections of content may have zero or one heading [associated][] wit
 
 [associated]: #heading-section-association 'Definition of association between headings and sections'
 [explicit section of content]: #explicit-section-of-content 'Definition of explicit section of content'
-[host]: https://dom.spec.whatwg.org/#concept-documentfragment-host 'Definition of host'
 [implicit section of content]: #implicit-section-of-content 'Definition of implicit section of content'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark 'The landmark role'
 [outline algorithm]: https://html.spec.whatwg.org/multipage/sections.html#outlines 'Definition of outline'

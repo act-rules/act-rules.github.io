@@ -167,17 +167,8 @@ This `iframe` is not part of [sequential focus navigation][] because it has `tab
 <iframe tabindex="-1" role="presentation" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
-#### Inapplicable Example 4
-
-This `iframe` element is [marked as decorative][] through `role="presentation"`.
-
-```html
-<iframe role="presentation" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
-```
-
 [accessible name]: #accessible-name 'Definition of accessible name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [whitespace]: #whitespace 'Definition of whitespace'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
-[marked as decorative]: #marked-as-decorative 'Definition of marked as decorative'

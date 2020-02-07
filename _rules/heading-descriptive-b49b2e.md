@@ -37,6 +37,7 @@ Each target element describes the topic or purpose of the [programmatic section 
 
 - This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 - This rule assumes that the [semantic roles][semantic role] (including the level of headings) are used according to their semantics.
+- This rule assumes that [nested browsing contexts][nested browsing context] included in an implicit section of content do not contain any element with a role of `heading` and an `aria-level` lower or equal to the one of the `heading` defining this implicit section of content.
 - This rule assumes that the `hgroup` element is not used.
 
 ## Accessibility Support
@@ -238,6 +239,7 @@ Empty heading marked up with `role="heading"` is not [visible][].
 
 [associated]: #heading-section-association 'Definition of association between headings and sections'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[nested browsing context]: https://html.spec.whatwg.org/multipage/browsers.html#nested-browsing-context 'Definition of nested browsing context'
 [programmatic section of content]: #programmatic-section-of-content 'Definition of programmatic section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'

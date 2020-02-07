@@ -7,6 +7,8 @@ objective: true
 
 An _explicit section of content_ is a subtree of the [flat tree][], rooted at an element with a [semantic role][] that inherits either from the [`landmark`][landmark] or [`document`][document] roles, except if it is the only child of an element with a [semantic role][] that inherits either from the [`landmark`][landmark] or [`document`][document] roles.
 
+If a descendant of the root of an explicit section of content is a [browsing context container][], then the full content of the associated [nested browsing context][] is also included in this explicit section of content.
+
 Explicit sections of content may contain nested [programmatic subsections of content][programmatic section of content].
 
 Explicit sections of content may have zero or one heading [associated][] with them.
@@ -24,10 +26,12 @@ Explicit sections of content may have zero or one heading [associated][] with th
 This definition assumes that the [semantic roles][semantic role] are used according to their semantics.
 
 [associated]: #heading-section-association 'Definition of association between headings and sections'
+[browsing context container]: https://html.spec.whatwg.org/multipage/browsers.html#browsing-context-container 'Definition of browsing context container'
 [document]: https://www.w3.org/TR/wai-aria-1.1/#document 'The document role'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [implicit roles]: #implicit-role 'Definition of implicit role'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark 'The landmark role'
+[nested browsing context]: https://html.spec.whatwg.org/multipage/browsers.html#nested-browsing-context 'Definition of nested browsing context'
 [outline algorithm]: https://html.spec.whatwg.org/multipage/sections.html#outlines 'Definition of outline'
 [programmatic section of content]: #programmatic-section-of-content 'Definition of programmatic section of content'
 [sectioning content]: https://html.spec.whatwg.org/multipage/dom.html#sectioning-content 'Definition of sectioning content'

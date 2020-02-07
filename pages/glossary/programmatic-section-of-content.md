@@ -21,7 +21,6 @@ Programmatic sections of content may have zero or one heading [associated][] wit
 - This definition assumes that the `hgroup` element is not used.
 
 [associated]: #heading-section-association 'Definition of association between headings and sections'
-[browsing context container]: https://html.spec.whatwg.org/multipage/browsers.html#browsing-context-container 'Definition of browsing context container'
 [explicit section of content]: #explicit-section-of-content 'Definition of explicit section of content'
 [host]: https://dom.spec.whatwg.org/#concept-documentfragment-host 'Definition of host'
 [implicit section of content]: #implicit-section-of-content 'Definition of implicit section of content'
@@ -29,4 +28,3 @@ Programmatic sections of content may have zero or one heading [associated][] wit
 [outline algorithm]: https://html.spec.whatwg.org/multipage/sections.html#outlines 'Definition of outline'
 [sections of content]: #section-of-content 'Definition of section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'
-[shadow root]: https://dom.spec.whatwg.org/#concept-shadow-root 'Definition of shadow root'

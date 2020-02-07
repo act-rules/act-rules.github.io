@@ -5,7 +5,7 @@ unambiguous: true
 objective: true
 ---
 
-An _implicit section of content_ is all the nodes, in tree order, between an initial element with a [semantic role][] of [`heading`][heading] and the next element (in tree order) which has both a [semantic role][] of [`heading`][heading] and an [`aria-level`][aria-level] property lower or equal to that of the initial [`heading`][heading] element, except for the first element with a [semantic role][] of [`heading`][heading] inside an [explicit section of content][].
+An _implicit section of content_ is all the nodes of the [flat tree][], in tree order, between an initial element with a [semantic role][] of [`heading`][heading] and the next element (in tree order) which has both a [semantic role][] of [`heading`][heading] and an [`aria-level`][aria-level] property lower or equal to that of the initial [`heading`][heading] element, except for the first element with a [semantic role][] of [`heading`][heading] inside an [explicit section of content][].
 
 Implicit sections of content may contain nested [programmatic subsections of content][programmatic section of content].
 
@@ -25,6 +25,7 @@ The heading defining an implicit section of content is always [associated][] wit
 [aria-level]: https://www.w3.org/TR/wai-aria-1.1/#aria-level 'The aria-level property'
 [associated]: #heading-section-association 'Definition of association between headings and sections'
 [explicit section of content]: #explicit-section-of-content 'Definition of explicit section of content'
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [heading]: https://www.w3.org/TR/wai-aria-1.1/#heading 'The heading role'
 [outline algorithm]: https://html.spec.whatwg.org/multipage/sections.html#outlines 'Definition of outline'
 [programmatic section of content]: #programmatic-section-of-content 'Definition of programmatic section of content'

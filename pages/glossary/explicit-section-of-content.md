@@ -5,7 +5,7 @@ unambiguous: true
 objective: true
 ---
 
-An _explicit section of content_ is a subtree rooted at an element with a [semantic role][] that inherits either from the [`landmark`][landmark] or [`document`][document] roles, except if it is the only child of an element with a [semantic role][] that inherits either from the [`landmark`][landmark] or [`document`][document] roles.
+An _explicit section of content_ is a subtree of the [flat tree][], rooted at an element with a [semantic role][] that inherits either from the [`landmark`][landmark] or [`document`][document] roles, except if it is the only child of an element with a [semantic role][] that inherits either from the [`landmark`][landmark] or [`document`][document] roles.
 
 Explicit sections of content may contain nested [programmatic subsections of content][programmatic section of content].
 
@@ -25,6 +25,7 @@ This definition assumes that the [semantic roles][semantic role] are used accord
 
 [associated]: #heading-section-association 'Definition of association between headings and sections'
 [document]: https://www.w3.org/TR/wai-aria-1.1/#document 'The document role'
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [implicit roles]: #implicit-role 'Definition of implicit role'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark 'The landmark role'
 [outline algorithm]: https://html.spec.whatwg.org/multipage/sections.html#outlines 'Definition of outline'

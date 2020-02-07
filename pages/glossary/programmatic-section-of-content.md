@@ -7,8 +7,6 @@ objective: true
 
 A _programmatic section of content_ is either an [explicit section of content][] or an [implicit section of content][].
 
-If a programmatic section of content contains a [host][], with a [shadow root][] associated to it, or a [browsing context container][]; then the content of the corresponding shadow tree or browsing context is also part of this programmatic section of content.
-
 Programmatic sections of content may contain nested programmatic subsections of content.
 
 Programmatic sections of content may have zero or one heading [associated][] with them.

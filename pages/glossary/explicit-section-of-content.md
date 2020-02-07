@@ -15,7 +15,7 @@ Explicit sections of content may have zero or one heading [associated][] with th
 
 **Note:** The `article` role (inheriting from `document`) is included in this definition because the `article` element is [sectioning content][] used by the [algorithm for creating an outline][outline algorithm].
 
-**Note:** The roles considered here are close but different from the [implicit roles][] of [sectioning content][] and [sectioning root][] elements.
+**Note:** The roles considered here are close but different from the [implicit roles][] of [sectioning content][] and [sectioning root][] elements. Notably, the `body` element itself does not define an explicit section of content.
 
 **Note:** When one of these elements is the single child of a similar element, they form a single [programmatic section of content][], rather than one each, because they have the exact same content.
 

@@ -5,7 +5,7 @@ unambiguous: true
 objective: true
 ---
 
-An _implicit section of content_ is all the nodes, in tree order, between an element with a [semantic role][] of [`heading`][heading] and the next element (in tree order) which has both a [semantic role][] of [`heading`][heading] and an [`aria-level`][aria-level] property lower or equal to that of the previous [`heading`][heading] element, except for the first element with a [semantic role][] of [`heading`][heading] inside an [explicit section of content][].
+An _implicit section of content_ is all the nodes, in tree order, between an initial element with a [semantic role][] of [`heading`][heading] and the next element (in tree order) which has both a [semantic role][] of [`heading`][heading] and an [`aria-level`][aria-level] property lower or equal to that of the initial [`heading`][heading] element, except for the first element with a [semantic role][] of [`heading`][heading] inside an [explicit section of content][].
 
 Implicit sections of content may contain nested [programmatic subsections of content][programmatic section of content].
 

@@ -18,7 +18,7 @@ Each element with a [semantic role][] of [`heading`][heading] is _associated_ wi
 
 - This definition assumes that the [semantic roles][semantic role] (including the level of headings) are used according to their semantics.
 
-**Note:** Elements with a role of `heading` (and, this, [implicit sections of content][implicit section of content]) have an `aria-level` property while [explicit sections of content][explicit section of content] don't. However, the nesting of elements defining [explicit sections of content][explicit section of content] does imply a similar structure and hierarchy. If the `aria-level` of a heading associated to an [explicit section of content][] does not match its implied level in this nesting structure, this is considered as not using the level of heading according to their semantics and thus fails this assumption, causing the definition to produce incoherent results.
+**Note:** Elements with a role of `heading` (and, thus, [implicit sections of content][implicit section of content]) have an `aria-level` property while [explicit sections of content][explicit section of content] don't. However, the nesting of elements defining [explicit sections of content][explicit section of content] does imply a similar structure and hierarchy. If the `aria-level` of a heading associated to an [explicit section of content][] does not match its implied level in this nesting structure, this is considered as not using the level of heading according to their semantics and thus fails this assumption, causing the definition to produce incoherent results.
 
 - This definition assumes that the `hgroup` element is not used.
 

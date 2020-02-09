@@ -1,10 +1,10 @@
 ---
-id: be4d0c
-name: Inline link in paragraph is distinguishable
-rule_type: composite
+id: 36f116
+name: Inline link in paragraph has distinguishable border
+rule_type: atomic
 
 description: |
-  This rule checks that links that are embedded in a paragraph, list or cell have a way to distinguish them from the surrounding text
+  This rule checks that links that are embedded in a paragraph, list or cell have a border that distinguishes them from the surrounding text
 
 accessibility_requirements: # Remove whatever is not applicable
   wcag20:1.4.1: # Use of Color (A)
@@ -36,13 +36,7 @@ This rule applies to any HTML element which:
 
 ## Expectation
 
-For each test target, the [outcome][] of one of the following rules is "passed":
-
-- [Inline link in paragraph has distinguishable content](https://act-rules.github.io/rules/e7cc2b)
-- [Inline link in paragraph has distinguishable style not based on color alone](https://act-rules.github.io/rules/88407d)
-- [Inline link in paragraph has distinguishable border](https://act-rules.github.io/rules/36f116)
-- [Inline link in paragraph has distinguishable box-shadow](https://act-rules.github.io/rules/66e9f0)
-- [Inline link in paragraph has distinguishable style on hover and focus](https://act-rules.github.io/rules/548868)
+Each target element has at least one of the `border-top-color`, `border-right-color`, `border-bottom-color` and `border-left-color` style properties with [width](https://drafts.csswg.org/css-backgrounds/#border-width) bigger than 0px and with a computed [color value](https://drafts.csswg.org/css-backgrounds/#border-color) different from the `background-color` of the target element.
 
 ## Assumptions
 
@@ -50,7 +44,6 @@ For each test target, the [outcome][] of one of the following rules is "passed":
 - This rule assumes that the 3:1 contrast difference between text is minimal to what would be sufficient to meet WCAG 2.0. This value is part of [technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183), but is not specified in the [1.4.1 success criterion](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
 - This rule assumes that any change in font is sufficiently distinguishable, and that fonts are loaded when they are present.
 - This rule assumes that if multiple colors are used in the visible text nodes of the _ancestor_ element then color can not be a distinguishing factor.
-- This rule assumes that if `box-shadow` is used in the different visible text nodes of the _ancestor_ element then `box-shadow` can not be a distinguishing factor.
 - This rule assumes that if `border` is used in the different visible text nodes of the _ancestor_ element then `border` can not be a distinguishing factor.
 
 ## Accessibility Support
@@ -70,70 +63,6 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-This is a link that is a descendant of a paragraph element. It uses the default styling of links which underlines them in most browsers, making it a distinguishing style.
-
-```html
-<style>
-	* {
-		text-decoration: none;
-	}
-	a {
-		text-decoration: underline;
-	}
-</style>
-<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
-```
-
-#### Passed Example 2
-
-This is a link that is a descendant of a paragraph element. The underline is removed, but an icon is added to distinguish it as a link.
-
-```html
-<style>
-	*,
-	a.test {
-		text-decoration: none;
-	}
-</style>
-<p>
-	Read about WAI on the
-	<a class="test" href="http://w3.org/WAI">WAI webpage <img src="/test-assets/be4d0c/icon.png" alt=""/></a>.
-</p>
-```
-
-#### Passed Example 3
-
-This is a link that is a descendant of a paragraph element. The underline is removed, but a text is added to distinguish it as a link.
-
-```html
-<style>
-	*,
-	a.test {
-		text-decoration: none;
-	}
-</style>
-<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage by following this link</a>.</p>
-```
-
-#### Passed Example 4
-
-This is a link that is a descendant of a paragraph element. The underline is removed, but the link has a distinguishing box-shadow.
-
-```html
-<style>
-	* {
-		text-decoration: none;
-	}
-	a.test {
-		text-decoration: none;
-		box-shadow: 4px 4px;
-	}
-</style>
-<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
-```
-
-#### Passed Example 5
-
 This is a link that is a descendant of a paragraph element. The underline is removed, but the link has a distinguishing border.
 
 ```html
@@ -150,71 +79,6 @@ This is a link that is a descendant of a paragraph element. The underline is rem
 	}
 </style>
 <p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
-```
-
-#### Passed Example 6
-
-This is a link that is a descendant of a paragraph element. The underline is removed, but the link has a text contrast of more than 3:1 compared to the other text in the paragraph. When the link receives focus an underline appears. When the link receives hover an underline appears.
-
-```html
-<style>
-	p {
-		text-decoration: none;
-		color: #000;
-	}
-	a {
-		text-decoration: none;
-		color: #d14826;
-	}
-	a:hover,
-	a:focus {
-		text-decoration: underline;
-	}
-</style>
-<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
-```
-
-### Passed Example 7
-
-This is a link that is a descendant of a paragraph element. The underline is removed, but the link's text has a background color contrast of more than 3:1 compared to the other text in the paragraph. When the link receives focus an underline appears. When the link receives hover an underline appears.
-
-```html
-<style>
-	p {
-		text-decoration: none;
-	}
-	a {
-		text-decoration: none;
-		color: #000;
-		background-color: #cf5e42;
-	}
-	a:hover,
-	a:focus {
-		text-decoration: underline;
-	}
-</style>
-<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
-```
-
-#### Passed Example 8
-
-An element with a [semantic role][] that inherits from link is a descendant of a paragraph element. It uses the default styling of links which underlines them in most browsers, making it a distinguishing style.
-
-```html
-<style>
-	* {
-		text-decoration: none;
-	}
-	a {
-		text-decoration: underline;
-	}
-</style>
-<p>This is indicated in the cost of a <a href="#bcc0f155" role="doc-glossref">credit default swap</a>.</p>
-<h1>Glossary</h1>
-<p id="bcc0f155">
-	A credit default swap (CDS) is a financial derivative or contract that allows an investor to "swap" or offset his or
-	her credit risk with that of another investor.
-</p>
 ```
 
 ### Failed
@@ -331,7 +195,6 @@ This paragraph has no visible descendant text nodes apart from those in the link
 [hovered]: #hovered 'Definition of hovered'
 [link]: https://www.w3.org/TR/wai-aria/#link
 [listitem]: https://www.w3.org/TR/wai-aria/#listitem
-[outcome]: #outcome 'Definition of outcome'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [text node]: https://dom.spec.whatwg.org/#text
 [visible]: #visible 'Definition of visible'

@@ -155,6 +155,27 @@ This is a link that is a descendant of a paragraph element. The underline is rem
 <p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
+#### Passed Example 6
+
+An element with a [semantic role][] that inherits from link is a descendant of a paragraph element. It uses the default styling of links which underlines them in most browsers, making it a distinguishing style.
+
+```html
+<style>
+	* {
+		text-decoration: none;
+	}
+	a {
+		text-decoration: underline;
+	}
+</style>
+<p>This is indicated in the cost of a <a href="#bcc0f155" role="doc-glossref">credit default swap</a>.</p>
+<h1>Glossary</h1>
+<p id="bcc0f155">
+	A credit default swap (CDS) is a financial derivative or contract that allows an investor to "swap" or offset his or
+	her credit risk with that of another investor.
+</p>
+```
+
 ### Failed
 
 #### Failed Example 1

@@ -1,6 +1,8 @@
 --
 title: Distinguishing Borders
 key: distinguishing-borders
+unambiguous: true
+objective: true
 --
 
 Look at the computed values of the following style properties:

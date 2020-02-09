@@ -30,7 +30,7 @@ acknowledgements:
 This rule applies to any HTML element which:
 
 - has the [semantic role][] of ['link'][link] or a [semantic role][] that inherits from the ['link'][link] role; and
-- is a [descendant][] of a `p`, `li` or `td` HTML elements (henceforth referred to as the _ancestor_ element) in the [flat tree][]; and
+- is a [descendant][] in the [flat tree][] of a `p`, `li` or `td` HTML elements or elements with a [semantic role][] of ['listitem'][listitem] or ['cell'][cell] (with the closest [ancestor][] in the [flat tree][] being henceforth referred to as the _ancestor_ element); and
 - has [descendant][] [text nodes][text node] in the [flat tree][] that are [visible][]; and
 - the _ancestor_ element has other [descendant][] [visible][] [text nodes][text node] in the [flat tree][].
 
@@ -39,9 +39,9 @@ This rule applies to any HTML element which:
 Each target element has one of the following:
 
 - content (such as an image or text) visually located inside, or immediately before or after the test target, that indicates the test target is a link; or
-- a [distinguishing style][] not based on color alone, from the _ancestor_ element and any of its [descendant][] HTML elements that have [visible][] [text nodes][text node]; or
+- a [distinguishing style][] not based on color alone, from the _ancestor_ element and any of its [descendant][] HTML elements that have [visible][] [text nodes][text node] and do not have a [semantic role][] of ['link'][link] or inheriting from ['link'][link]; or
 - a `box-shadow` style property with a computed [color value](https://drafts.csswg.org/css-backgrounds/#shadow-color) different from the `background-color` of the target element; or
-- at least one of the `border-top-color`, `border-right-color`, `border-bottom-color` and `border-left-color` style properties with a computed [color value](https://drafts.csswg.org/css-backgrounds/#border-color) different from the `background-color` of the target element; or
+- at least one of the `border-top-color`, `border-right-color`, `border-bottom-color` and `border-left-color` style properties with [width](https://drafts.csswg.org/css-backgrounds/#border-width) bigger than 0px and with a computed [color value](https://drafts.csswg.org/css-backgrounds/#border-color) different from the `background-color` of the target element; or
 - a [foreground color][] different from the [foreground color][] of the other descendant visible text nodes of the same _ancestor_ element (if all have the same [foreground color][]), that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) and a [distinguishing style][] both when the target element [gains focus][focused] and the target element is [hovered][]; or
 - a [background color][] different from the [background color][] of the other descendant visible text nodes of the same _ancestor_ element (if all have the same [background color][]), that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) and a [distinguishing style][] both when the target element [gains focus][focused] and the target element is [hovered][].
 
@@ -240,13 +240,16 @@ This paragraph has no visible descendant text nodes apart from those in the link
 <p><span style="visibility:hidden">Invisible text</span><a href="http://w3.org/WAI">WAI webpage</a></p>
 ```
 
+[ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor
 [background color]: #background-colors-of-text 'Definition of background color'
+[cell]: https://www.w3.org/TR/wai-aria/#cell
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [focused]: #focused 'Definition of focused'
 [foreground color]: #foreground-colors-of-text 'Definition of foreground color'
 [hovered]: #hovered 'Definition of hovered'
 [link]: https://www.w3.org/TR/wai-aria/#link
+[listitem]: https://www.w3.org/TR/wai-aria/#listitem
 [semantic role]: #semantic-role 'Definition of semantic role'
 [text node]: https://dom.spec.whatwg.org/#text
 [visible]: #visible 'Definition of visible'

@@ -210,7 +210,7 @@ An element with a [semantic role][] that inherits from link is a descendant of a
 	}
 </style>
 <p>This is indicated in the cost of a <a href="#bcc0f155" role="doc-glossref">credit default swap</a>.</p>
-<h1>Glossary</h1>
+<h5>Glossary</h5>
 <p id="bcc0f155">
 	A credit default swap (CDS) is a financial derivative or contract that allows an investor to "swap" or offset his or
 	her credit risk with that of another investor.
@@ -233,7 +233,7 @@ This is a link that is a descendant of a paragraph element. The underline is rem
 <p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 This is a link that is a descendant of a paragraph element. The link has a distinguishing border but the border's width is zero.
 

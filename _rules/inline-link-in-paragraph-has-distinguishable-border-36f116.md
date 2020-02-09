@@ -97,7 +97,7 @@ This is a link that is a descendant of a paragraph element. The underline is rem
 <p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
-#### Failed example 2
+#### Failed Example 2
 
 This is a link that is a descendant of a paragraph element. The link has a distinguishing border but the border's width is zero.
 

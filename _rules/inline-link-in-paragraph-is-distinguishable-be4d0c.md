@@ -210,7 +210,7 @@ An element with a [semantic role][] that inherits from link is a descendant of a
 	}
 </style>
 <p>This is indicated in the cost of a <a href="#bcc0f155" role="doc-glossref">credit default swap</a>.</p>
-<h5>Glossary</h5>
+<h4>Glossary</h4>
 <p id="bcc0f155">
 	A credit default swap (CDS) is a financial derivative or contract that allows an investor to "swap" or offset his or
 	her credit risk with that of another investor.

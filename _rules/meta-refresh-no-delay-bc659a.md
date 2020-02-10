@@ -20,6 +20,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:H76: # Using meta refresh to create an instant client-side redirect
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
 acknowledgements:
@@ -40,7 +45,7 @@ The rule applies to the first [valid](https://html.spec.whatwg.org/#attr-meta-ht
 
 The `time` of the `content` attribute is 0 or greater than 72000 (20 hours).
 
-**Note**: See [Refresh state (`http-equiv="refresh"`)](https://html.spec.whatwg.org/#attr-meta-http-equiv-refresh) for a precise description on how to determine the `time`.
+**Note:** See [Refresh state (`http-equiv="refresh"`)](https://html.spec.whatwg.org/#attr-meta-http-equiv-refresh) for a precise description on how to determine the `time`.
 
 ## Assumptions
 

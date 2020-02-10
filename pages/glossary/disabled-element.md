@@ -1,6 +1,8 @@
 ---
 title: Disabled Element
 key: disabled-element
+unambiguous: true
+objective: true
 ---
 
 An element is considered disabled when it has been rendered [inoperable][] using one of the following properties:

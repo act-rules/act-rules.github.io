@@ -10,8 +10,19 @@ accessibility_requirements:
     failed: not satisfied
     passed: satisfied
     inapplicable: further testing needed
+  wcag-technique:G88: # Providing descriptive titles for Web pages
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:H25: # Providing a title using the title element
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
+  - Language
 acknowledgements:
   authors:
     - Anne Thyme Nørregaard
@@ -39,7 +50,7 @@ The target element describes the topic or purpose of the overall content of the 
 
 ## Assumptions
 
-_There are no assumptions for this rule._
+This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
@@ -60,7 +71,7 @@ _There are no assumptions for this rule._
 The `<title>` element describes the content of the document.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>Clementine harvesting season</title>
 	</head>
@@ -77,7 +88,7 @@ The `<title>` element describes the content of the document.
 Two `<title>` elements where the first one describes the content of the document.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>Clementine harvesting season</title>
 		<title>Second title is ignored</title>
@@ -95,7 +106,7 @@ Two `<title>` elements where the first one describes the content of the document
 Even though the descriptive `<title>` element is not placed within the `<head>` element that is the context the element can be used in [according to the HTML specification](https://html.spec.whatwg.org/#the-title-element), the rule still passes, since the browser fixes it, and it doesn't cause any known accessibility issues.
 
 ```html
-<html>
+<html lang="en">
 	<head> </head>
 	<body>
 		<title>Clementine harvesting season</title>
@@ -113,7 +124,7 @@ Even though the descriptive `<title>` element is not placed within the `<head>` 
 `<title>` is not descriptive of the content of the document.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>Apple harvesting season</title>
 	</head>
@@ -130,7 +141,7 @@ Even though the descriptive `<title>` element is not placed within the `<head>` 
 Even though a correct `<title>` element is put in the `<head>` of the document, this rule only looks at the first `<title>` element.
 
 ```html
-<html>
+<html lang="en">
 	<head>
 		<title>First title is incorrect</title>
 		<title>Clementine harvesting season</title>

@@ -167,8 +167,8 @@ This element with the `list` role owns an element with the `listitem` role, and 
 
 ```html
 <div role="list">
-  <li>Item 1</li>
-  <span role="link">Item 2</span>
+	<li>Item 1</li>
+	<span role="link">Item 2</span>
 </div>
 ```
 
@@ -261,8 +261,7 @@ This element with the `menu` role has attribute an `aria-busy` attribute set to 
 This element with the `combobox` role conforms to [WAI-ARIA 1.1][] without owned elements.
 
 ```html
-<label for="combo">My Combobox</label>
-<input role="combobox" aria-expanded="false" id="combo" />
+<label for="combo">My Combobox</label> <input role="combobox" aria-expanded="false" id="combo" />
 ```
 
 [required owned element]: https://www.w3.org/TR/wai-aria-1.1/#mustContain 'Define Required owned element'

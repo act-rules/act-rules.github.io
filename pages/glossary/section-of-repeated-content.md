@@ -1,6 +1,8 @@
 ---
 title: Section of repeated
 key: section-of-repeated-content
+unambiguous: true
+objective: false
 ---
 
 A [section of content][] of an [HTML web page][html web page] is a _section of repeated content_ if there exists [sections of content][section of content] serving the same purpose or containing the same key content in other [HTML web pages][html web page] in the same [set of web pages](https://www.w3.org/TR/WCAG21/#dfn-set-of-web-pages).

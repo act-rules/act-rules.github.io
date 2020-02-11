@@ -10,6 +10,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:H93: # Ensuring that id attributes are unique on a Web page
+    forConformance: false
+    failed: not satisfied
+    passed: satisfied
+    inapplicable: satisfied
 input_aspects:
   - DOM Tree
 acknowledgements:
@@ -32,6 +37,8 @@ Any `id` attribute which is not the empty string (""), specified on an HTML or S
 
 The value of the attribute is unique across all other `id` attributes specified on HTML or SVG elements that exist within the same [document tree](https://dom.spec.whatwg.org/#document-trees) or [shadow tree](https://dom.spec.whatwg.org/#shadow-trees) as the element on which the applicable `id` attribute is specified.
 
+**Note:** Passing this rule is not enough to pass [Success Criterion 4.1.1: Parsing](https://www.w3.org/TR/WCAG21/#parsing), given that, for example, start and end tags can be incomplete without failing this rule.
+
 ## Assumptions
 
 _There are currently no assumptions._
@@ -44,7 +51,6 @@ _There are no major accessibility support issues known for this rule._
 
 - [Understanding Success Criterion 4.1.1: Parsing](https://www.w3.org/WAI/WCAG21/Understanding/parsing)
 - [H93: Ensuring that id attributes are unique on a Web page](https://www.w3.org/WAI/WCAG21/Techniques/html/H93)
-- [H94: Ensuring that elements do not contain duplicate attributes](https://www.w3.org/WAI/WCAG21/Techniques/html/H94)
 
 ## Test Cases
 

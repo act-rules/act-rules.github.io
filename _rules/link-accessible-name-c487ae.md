@@ -20,6 +20,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:G91: # Providing link text that describes the purpose of a link
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -41,7 +46,7 @@ The rule applies to any HTML element with the [semantic role](#semantic-role) of
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
-**Note**: Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
+**Note:** Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
 
 ## Assumptions
 
@@ -178,7 +183,7 @@ Image link with empty [accessible name][].
 
 #### Failed Example 2
 
-Image link where image is marked as [decorative](#decorative).
+Image link where image is [marked as decorative](#marked-as-decorative).
 
 ```html
 <a href="http://www.w3.org/WAI"><img src="#" alt=""/></a>

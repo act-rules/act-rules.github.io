@@ -63,6 +63,9 @@
 - EARL10-Schema
 - labelable
 - merchantability
+- 14pt
+- 18pt
+- Helvetica
 
 # Notes and acronyms
 - TODO
@@ -93,6 +96,7 @@
 - viewport
 - lang
 - xml:lang
+- xml:id
 - http-equiv
 - user-scalable
 - user-scalable=yes
@@ -100,6 +104,8 @@
 - rotate3d
 - rotateZ
 - matrix3d
+- rowheader
+- columnheader
 
 # Unsure why the dictionary does not have these words
 - programmatically

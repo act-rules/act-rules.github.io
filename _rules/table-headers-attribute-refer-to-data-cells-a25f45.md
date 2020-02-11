@@ -343,7 +343,7 @@ The `table` is not [included in the accessibility tree][].
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [visible]: #visible 'Definition of visible'
-[decorative]: #decorative 'Definition of decorative'
+[decorative]: #marked-as-decorative 'Definition of marked as decorative'
 [`cell`]: https://www.w3.org/TR/html52/tabular-data.html#cell 'Definition of cell'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [a set of space separated ids]: https://www.w3.org/TR/html50/infrastructure.html#set-of-space-separated-tokens 'Space separated tokens'

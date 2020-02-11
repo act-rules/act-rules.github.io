@@ -16,29 +16,39 @@ input_aspects:
   - Language
 acknowledgements:
   authors:
-    - Carlos Duarte
-    - João Vicente
+	- Carlos Duarte
+	- João Vicente
+	- Wilco Fiers
 ---
 
 ## Applicability
 
-The rule applies to each HTML element with a [semantic role][] that inherits from the [abstract][] `input` or `select` roles.
+The rule applies to each HTML element that has one of the following [semantic roles][semantic role]: `checkbox`, `combobox`, `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` or `textbox`.
+
+**Note**: The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.1][] roles that:
+
+- inherit from the [abstract][] `input` or `select` role, and
+- do not have a [required context][] role that itself inherits from one of those roles.
 
 ## Expectation 1
 
-For each test target where the user input resulted in the appearance of an [error message][], the error message is [visible][] and [included in the accessibility tree][].
+For each test target with a [form field error indicator][], at least one of the [form field error indicators][form field error indicator] allows the identification of the related test target, through [text][], or [non-text content][], or through [presentation][].
+
+**Note**: This rule does not test [error indicators][form field error indicator] shown on a different page than the one of the test target.
+
+**Note**: A single [form field error indicator][] can be related to multiple test targets.
 
 ## Expectation 2
 
-Each [error message][] from Expectation 1 allows the identification of the test target.
+For each test target with a [form field error indicator][], at least one of the [form field error indicators][form field error indicator] describes the cause of the error, or how to resolve it, in [text][] that is [visible][].
 
 ## Expectation 3
 
-Each [error message][] from Expectation 1 describes the error.
+For each test target with a [form field error indicator][], at least one of the [form field error indicators][form field error indicator] describes the cause of the error, or how to resolve it, in [text][] that is [included in the accessibility tree][] or included in the [accessible name][] or [accessible description][] of the test target.
 
 ## Assumptions
 
-_There are currently no assumptions_
+This rule assumes that the apparent cause of a [form field error indicator][] is the actual cause for the [form field error indicator][] being shown. If the actual cause is different, then this rule may generate incorrect results.
 
 ## Accessibility Support
 
@@ -56,7 +66,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The error message provided in the vicinity of the `input` element identifies the input field (via its label) and describes the error.
+The `input` element has a [form field error indicator][] that identifies it (by referencing its label) and describes the cause of the error.
 
 ```html
 <script>
@@ -80,11 +90,44 @@ The error message provided in the vicinity of the `input` element identifies the
 </form>
 ```
 
+#### Passed Example 2
+
+The multiple `input` elements share a [form field error indicator][] that identifies the elements unfilled (by referencing their labels) and describes the cause of the error.
+
+```html
+<script>
+	function processForm() {
+		document.getElementById('error').innerText = ''
+		if (document.getElementById('name').value.length === 0) {
+			document.getElementById('error').innerText += 'You must fill the name field. '
+		}
+		var color = document.forms[0].color.value
+		if (color.length === 0) {
+			document.getElementById('error').innerText += 'You must pick a color.'
+		}
+	}
+</script>
+
+<form>
+	<h2 id="error"></h2>
+	<label for="name">Name (required)</label>
+	<input type="text" id="name" required />
+	<br />
+	<label for="address">Address</label>
+	<input type="text" id="address" />
+	<p>Pick a color (required)</p>
+	<label><input type="radio" name="color" value="blue" required />Blue</label>
+	<label><input type="radio" name="color" value="yellow" />Yellow</label>
+	<br />
+	<input type="button" value="Submit" onclick="processForm()" />
+</form>
+```
+
 ### Failed
 
 #### Failed Example 1
 
-No error message is provided.
+The `input` element does not have a [form field error indicator][].
 
 ```html
 <form>
@@ -96,7 +139,7 @@ No error message is provided.
 
 #### Failed Example 2
 
-The error message does not identify the input field.
+The multiple `input` elements share a [form field error indicator][] but its message does not identify the elements that caused the error nor describes the cause of the error.
 
 ```html
 <script>
@@ -125,7 +168,7 @@ The error message does not identify the input field.
 
 #### Failed Example 3
 
-The error message does not describe the error.
+The `input` elements has a [form field error indicator][] but its message does not describe the cause of the error.
 
 ```html
 <script>
@@ -148,7 +191,7 @@ The error message does not describe the error.
 
 #### Failed Example 4
 
-The error message is not visible.
+The `input` element has a [form field error indicator][] that identifies it (by referencing its label) and describes the cause of the error but the message is not [visible][].
 
 ```html
 <script>
@@ -174,7 +217,7 @@ The error message is not visible.
 
 #### Failed Example 5
 
-The error message is not included in the accessibility tree.
+The `input` element has a [form field error indicator][] that identifies it (by referencing its label) and describes the cause of the error but the message is not [included in the accessibility tree][].
 
 ```html
 <script>
@@ -202,19 +245,22 @@ The error message is not included in the accessibility tree.
 
 #### Inapplicable Example 1
 
-No input elements with the required [semantic roles][semantic role].
+No elements with the required [semantic roles][semantic role].
 
 ```html
-<form>
-	<p>Pick a color</p>
-	<label><input type="radio" name="color" value="blue" />Blue</label>
-	<label><input type="radio" name="color" value="yellow" />Yellow</label>
-	<input type="button" value="Submit" />
-</form>
+<p>This is a paragraph.</p>
 ```
 
 [abstract]: https://www.w3.org/TR/wai-aria/#abstract_roles
+[accessible description]: https://www.w3.org/TR/accname/#dfn-accessible-description
+[accessible name]: #accessible-name 'Definition of accessible name'
+[aria 1.1]: https://www.w3.org/TR/wai-aria-1.1/
 [error message]: #error-message 'Definition of error message'
+[form field error indicator]: #form-field-error-indicator
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[not-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content
+[presentation]: https://www.w3.org/TR/WCAG21/#dfn-presentation
+[required context]: https://www.w3.org/TR/wai-aria/#scope
 [semantic role]: #semantic-role 'Definition of semantic role'
+[text]: https://www.w3.org/TR/WCAG21/#dfn-text
 [visible]: #visible 'Definition of visible'

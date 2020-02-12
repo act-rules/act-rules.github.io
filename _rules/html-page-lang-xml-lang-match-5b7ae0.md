@@ -128,14 +128,6 @@ This rule does not apply to `math` elements.
 
 #### Inapplicable Example 4
 
-This rule only applies to `html` in [top-level browsing context][]
-
-```html
-<iframe srcdoc="<html lang='en' xml:lang='en'></html>" />
-```
-
-#### Inapplicable Example 5
-
 This rule only applies to documents with a [content type][] of `text/html`
 
 ```xhtml
@@ -143,7 +135,7 @@ This rule only applies to documents with a [content type][] of `text/html`
 <html lang="en" xml:lang="en"></html>
 ```
 
-#### Inapplicable Example 6
+#### Inapplicable Example 5
 
 This rule does not apply to `html` elements whose `lang` attribute is not a [valid language subtag][].
 
@@ -151,12 +143,22 @@ This rule does not apply to `html` elements whose `lang` attribute is not a [val
 <html lang="em" xml:lang="en"></html>
 ```
 
-#### Inapplicable Example 7
+#### Inapplicable Example 6
 
 This rule does not apply to `html` elements without an `xml:lang` attribute.
 
 ```html
 <html lang="en"></html>
+```
+
+#### Inapplicable Example 7
+
+This rule applies neither to `html` elements without an `xml:lang` attribute, nor to `html` in [nested browsing context][]
+
+```html
+<html lang="en">
+	<iframe srcdoc="<html lang='en' xml:lang='en'></html>" />
+</html>
 ```
 
 #### Inapplicable Example 8
@@ -169,6 +171,7 @@ This rule does not apply to `html` elements with an empty (`""`) `xml:lang` attr
 
 [content type]: https://dom.spec.whatwg.org/#concept-document-content-type 'Definition of content type'
 [extended language subtags]: https://tools.ietf.org/html/bcp47#section-2.2.2 'Definition of extended language subtag'
+[nested browsing context]: https://html.spec.whatwg.org/#nested-browsing-context 'Definition of nested browsing context'
 [primary language subtags]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
 [top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'Definition of top-level browsing context'
 [valid language subtag]: #valid-language-subtag 'Definition of valid language subtag'

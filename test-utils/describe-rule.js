@@ -1,3 +1,4 @@
+const { contributors } = require('../package.json')
 const getMarkdownData = require('../utils/get-markdown-data')
 const rulesData = getMarkdownData(`./_rules`)
 
@@ -11,6 +12,7 @@ const describeRule = (groupName, runTests) => {
 	 * Create arbitrary meta data that can be used in various tests
 	 */
 	const metaData = {
+		contributors: contributors.map(contributor => contributor.name.toLowerCase()),
 		atomicRuleIds: getRuleIdsOfRuleType(rulesData, 'atomic'),
 		glossaryKeys: getMarkdownData(`./pages/glossary`).map(({ frontmatter }) => frontmatter.key),
 	}

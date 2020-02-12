@@ -39,7 +39,7 @@ _There are currently no assumptions._
 
 Some assistive technologies may hide headings with empty [accessible name][] from the users. This depends both on the user agent and how the [accessible name][] was computed (the [accessible name and description computation][] is not clear concerning which characters should be trimmed) and of the assistive technology itself. Hence, there are cases where the outcome of this rule is _failed_, but users of certain assistive technology and browser combinations will not experience an issue.
 
-**Note**: Completely empty headings (`<h1></h1>`) seem to be consistently ignored by assistive technologies. However, they fail [Technique H42: Using h1-h6 to identify headings][tech h42] (by using heading markup for content which is not heading). Moreover, they may be rendered on screen (by breaking flow content, or because of custom styling), thus causing concerns for sighted users. Therefore, this rule also fails on these.
+**Note:** Completely empty headings (`<h1></h1>`) seem to be consistently ignored by assistive technologies. However, they fail [Technique H42: Using h1-h6 to identify headings][tech h42] (by using heading markup for content which is not heading). Moreover, they may be rendered on screen (by breaking flow content, or because of custom styling), thus causing concerns for sighted users. Therefore, this rule also fails on these.
 
 ## Background
 
@@ -96,15 +96,16 @@ Even though this `h1` element is not [visible][], it is still [included in the a
 
 #### Failed Example 1
 
-This `h1` element has an empty [accessible name][] given by its `aria-label` attribute.
+This `h1` element has an empty [accessible name][] given by its `aria-labelledby` attribute.
 
 ```html
-<h1 aria-label="">ACT rules</h1>
+<span id="label"></span>
+<h1 aria-labelledby="label">ACT rules</h1>
 ```
 
 #### Failed Example 2
 
-This `h1` element has an empty [accessible name][] because the `img` element is marked as [decorative][] through its [semantic role][] of `presentation`, and thus does not provide an [accessible name][] to the `h1` element.
+This `h1` element has an empty [accessible name][] because the `img` element is [marked as decorative][] through its [semantic role][] of `presentation`, and thus does not provide an [accessible name][] to the `h1` element.
 
 ```html
 <h1><img src="#" alt="ACT rules" role="presentation" /></h1>
@@ -156,7 +157,7 @@ This `h1` element is not [included in the accessibility tree][].
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [accessible name and description computation]: https://www.w3.org/TR/accname
-[decorative]: #decorative 'Definition of decorative'
+[marked as decorative]: #marked-as-decorative 'Definition of marked as decorative'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [tech h42]: https://www.w3.org/WAI/WCAG21/Techniques/html/H42 'Technique H42: Using h1-h6 to identify headings'
 [usc131]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'

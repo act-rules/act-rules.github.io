@@ -10,6 +10,7 @@ input_aspects:
   - CSS Styling
   - Audio output
   - Visual output
+  - Language
 acknowledgements:
   authors:
     - Brian Bors
@@ -25,7 +26,8 @@ The visual information of each test target is available through an audio track.
 
 ## Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
@@ -45,14 +47,16 @@ There are no major accessibility support issues known for this rule.
 A video element without audio has a separate audio track that describes the visual information.
 
 ```html
-<video controls>
-	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-</video>
+<html lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
+	</video>
 
-<audio controls>
-	<source src="/test-assets/rabbit-video/audio-description.mp3" type="audio/mpeg" />
-</audio>
+	<audio controls>
+		<source src="/test-assets/rabbit-video/audio-description.mp3" type="audio/mpeg" />
+	</audio>
+</html>
 ```
 
 ### Failed
@@ -62,10 +66,12 @@ A video element without audio has a separate audio track that describes the visu
 A video element without an audio track.
 
 ```html
-<video controls>
-	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-</video>
+<html lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
+	</video>
+</html>
 ```
 
 #### Failed Example 2
@@ -73,14 +79,16 @@ A video element without an audio track.
 A video element without audio has a separate audio track that incorrectly describes the visual information.
 
 ```html
-<video controls>
-	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-</video>
+<html lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
+	</video>
 
-<audio controls>
-	<source src="/test-assets/rabbit-video/incorrect-audio-description.mp3" type="audio/mpeg" />
-</audio>
+	<audio controls>
+		<source src="/test-assets/rabbit-video/incorrect-audio-description.mp3" type="audio/mpeg" />
+	</audio>
+</html>
 ```
 
 ### Inapplicable
@@ -90,10 +98,12 @@ A video element without audio has a separate audio track that incorrectly descri
 A video element with audio.
 
 ```html
-<video controls>
-	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
-</video>
+<html lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+	</video>
+</html>
 ```
 
 #### Inapplicable Example 2
@@ -101,10 +111,12 @@ A video element with audio.
 A video element without sound that is not [visible][].
 
 ```html
-<video controls style="display: none;">
-	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-</video>
+<html lang="en">
+	<video controls style="display: none;">
+		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
+	</video>
+</html>
 ```
 
 [visible]: #visible 'Definition of visible'

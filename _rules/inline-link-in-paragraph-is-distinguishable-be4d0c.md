@@ -134,7 +134,7 @@ This is a link that is a descendant of a paragraph element. The underline is rem
 
 #### Passed Example 5
 
-This is a link that is a descendant of a paragraph element. The underline is removed, but the link has a distinguishing border.
+This is a link that is a descendant of a paragraph element. The link has a distinguishing bottom border in addition to being distinguishable by color.
 
 ```html
 <style>
@@ -142,9 +142,10 @@ This is a link that is a descendant of a paragraph element. The underline is rem
 		color: black;
 	}
 	a.test {
+		color: blue;
 		text-decoration: none;
 		border-style: solid;
-		border-color: blue;
+		border-color: red;
 		border-width: 0px;
 		border-bottom-width: 1px;
 	}

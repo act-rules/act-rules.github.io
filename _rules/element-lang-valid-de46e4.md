@@ -41,7 +41,7 @@ The `lang` attribute is assumed to be used to indicate the language of a section
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are differences in how assistive technologies handle unknown and invalid language subtags. Some will default to the language of the page, whereas others will default to the closest ancestor with a valid lang attribute.
 
 ## Background
 

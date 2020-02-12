@@ -93,6 +93,7 @@
 - viewport
 - lang
 - xml:lang
+- xml:id
 - http-equiv
 - user-scalable
 - user-scalable=yes

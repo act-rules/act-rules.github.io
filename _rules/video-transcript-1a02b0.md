@@ -15,6 +15,7 @@ input_aspects:
   - CSS Styling
   - Audio output
   - Visual output
+  - Language
 acknowledgements:
   authors:
     - Wilco Fiers
@@ -37,7 +38,8 @@ A text transcript containing all the visual and auditory information of the test
 
 ## Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
@@ -60,6 +62,7 @@ There are no major accessibility support issues known for this rule.
 A video element with a text transcript on the same page.
 
 ```html
+<html lang="en">`
 <video controls>
   <source src="/test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/video.webm" type="video/webm"></source>
@@ -67,6 +70,7 @@ A video element with a text transcript on the same page.
 <p>The above video shows a giant fat rabbit climbing out of a hole in the ground.
 He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
+</html>
 ```
 
 #### Passed Example 2
@@ -74,11 +78,13 @@ Then he stops to scratch his bottom.</p>
 A video element with a link to a text transcript on a different page.
 
 ```html
+<html lang="en">`
 <video controls>
   <source src="/test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
 <a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
+</html>
 ```
 
 ### Failed
@@ -88,6 +94,7 @@ A video element with a link to a text transcript on a different page.
 A video element with an incorrect text transcript on the same page.
 
 ```html
+<html lang="en">`
 <video controls>
   <source src="/test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/video.webm" type="video/webm"></source>
@@ -95,6 +102,7 @@ A video element with an incorrect text transcript on the same page.
 <p>The above video shows a giant fat dog climbing out of a hole in the ground.
 He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
+</html>
 ```
 
 #### Failed Example 2
@@ -102,11 +110,13 @@ Then he stops to scratch his bottom.</p>
 A video element with a link to an incorrect text transcript on a different page.
 
 ```html
+<html lang="en">`
 <video controls>
   <source src="/test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
 <a href="/test-assets/rabbit-video/incorrect-transcript.html">Transcript</a>
+</html>
 ```
 
 ### Inapplicable
@@ -116,11 +126,13 @@ A video element with a link to an incorrect text transcript on a different page.
 A video element that is not [visible][].
 
 ```html
+<html lang="en">`
 <video controls style="display: none;">
   <source src="/test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
 <a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
+</html>
 ```
 
 #### Inapplicable Example 2
@@ -128,11 +140,13 @@ A video element that is not [visible][].
 A video element without audio.
 
 ```html
+<html lang="en">`
 <video controls>
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
+</html>
 ```
 
 [visible]: #visible 'Definition of visible'

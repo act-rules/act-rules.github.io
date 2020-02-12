@@ -65,7 +65,7 @@ There are no major accessibility support issues known for this rule.
 The `<audio>` element does not play automatically for more than 3 seconds.
 
 ```html
-<audio src="/test-assets/moon-audio/moon-speech.mp3#t=25" autoplay="true"></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3#t=25" autoplay></audio>
 ```
 
 #### Passed Example 2
@@ -73,7 +73,7 @@ The `<audio>` element does not play automatically for more than 3 seconds.
 The `<video>` element audio output does not last longer than 3 seconds.
 
 ```html
-<video autoplay="true">
+<video autoplay>
 	<source src="/test-assets/rabbit-video/video.mp4#t=8,10" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/video.webm#t=8,10" type="video/webm" />
 </video>
@@ -86,7 +86,7 @@ The `<video>` element audio output does not last longer than 3 seconds.
 The `audio` element plays automatically for more than 3 seconds.
 
 ```html
-<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay="true" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay controls></audio>
 ```
 
 #### Failed Example 2
@@ -94,7 +94,7 @@ The `audio` element plays automatically for more than 3 seconds.
 The `video` element automatically plays some audio for more than 3 seconds.
 
 ```html
-<video autoplay="true">
+<video autoplay>
 	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
@@ -107,7 +107,7 @@ The `video` element automatically plays some audio for more than 3 seconds.
 The `video` element is `muted`.
 
 ```html
-<video autoplay="true" muted="true">
+<video autoplay muted>
 	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
@@ -118,7 +118,7 @@ The `video` element is `muted`.
 The `video` element `src` file has no audio output.
 
 ```html
-<video autoplay="true">
+<video autoplay>
 	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 </video>

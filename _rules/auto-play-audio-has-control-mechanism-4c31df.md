@@ -5,6 +5,11 @@ rule_type: atomic
 description: |
   audio or video that plays automatically must have a control mechanism.
 accessibility_requirements:
+  wcag-technique:G170: # Providing a control near the beginning of the Web page that turns off sounds that play automatically
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -28,7 +33,7 @@ This rule applies to any `audio` or `video` element that has:
 - both `paused` and `muted` attributes equal to false, and
 - either a `src` attribute or a child `source` element that references content with a duration of more than 3 seconds that contains audio.
 
-**Note**:
+**Note:**
 
 The default value of both `paused` and `muted` attributes is `false`.
 

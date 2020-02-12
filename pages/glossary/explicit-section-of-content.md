@@ -5,7 +5,9 @@ unambiguous: true
 objective: true
 ---
 
-An _explicit section of content_ is a subtree of the [flat tree][], rooted at an element with a [semantic role][] that inherits either from the [`landmark`][landmark] or [`document`][document] roles, except if it is the only child of an element with a [semantic role][] that inherits either from the [`landmark`][landmark] or [`document`][document] roles.
+An _explicit section of content_ is a subtree of the [flat tree][], rooted at an element with a [semantic role][] which is one of the sectioning roles (defined just after), except if it is the only child of an element whose [semantic role][] is one of the sectioning roles.
+
+The sectioning roles considered here are: the [`document`][document] role; any role that inherits from [`document`][document]; any role that inherits from [`landmark`][landmark].
 
 If a descendant of the root of an explicit section of content is a [browsing context container][], then the full content of the associated [nested browsing context][] is also included in this explicit section of content.
 

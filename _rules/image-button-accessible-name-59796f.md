@@ -15,6 +15,16 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:G94: # Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:G95: # Providing short text alternatives that provide a brief description of the non-text content
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects: # Remove what is not applicable
   - DOM Tree
   - CSS Styling
@@ -29,13 +39,15 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to any HTML `input` element with a `type` attribute in the `Image Button` state, that is [included in the accessibility tree][].
+The rule applies to any HTML `input` element with a `type` attribute in the [`Image Button` state](<https://html.spec.whatwg.org/#image-button-state-(type=image)>), that is [included in the accessibility tree][].
 
 **Note:** The specification of the [`type`](https://html.spec.whatwg.org/#states-of-the-type-attribute) attribute describes in detail how to map the value of the attribute to its corresponding state.
 
 ## Expectation
 
 Each target element has an [accessible name][] that is not empty (`""`).
+
+**Note:** Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
 
 ## Assumptions
 

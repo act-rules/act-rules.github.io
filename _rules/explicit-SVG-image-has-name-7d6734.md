@@ -22,11 +22,13 @@ acknowledgements:
 
 The rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namespace with an [explicit semantic role](#explicit-role) of either `img`, `graphics-document`, `graphics-symbol`, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
-**Note**: The [SVG Accessibility API Mappings](https://www.w3.org/TR/svg-aam-1.0/#include_elements) specifies that many elements in the SVG namespace are purely presentational and should not be included in the accessibility tree unless indicated otherwise through the use of text alternative content, an explicit WAI ARIA role, or a valid `tabindex` attribute.
+**Note:** The [SVG Accessibility API Mappings](https://www.w3.org/TR/svg-aam-1.0/#include_elements) specifies that many elements in the SVG namespace are purely presentational and should not be included in the accessibility tree unless indicated otherwise through the use of text alternative content, an explicit WAI ARIA role, or a valid `tabindex` attribute.
 
 ## Expectation
 
-Each target element has an [accessible name](#accessible-name) that is not empty.
+Each target element has an [accessible name][] that is not empty.
+
+**Note:** Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
 
 ## Assumptions
 
@@ -57,7 +59,7 @@ Until browser support for the [SVG Accessibility API Mappings](https://www.w3.or
 
 #### Passed Example 1
 
-The `svg` element has an explicit role of `img` and an accessible name from the `title` element that is not empty.
+The `svg` element has an explicit role of `img` and an [accessible name][] from the `title` element that is not empty.
 
 ```html
 <p>How many circles are there?</p>
@@ -69,7 +71,7 @@ The `svg` element has an explicit role of `img` and an accessible name from the 
 
 #### Passed Example 2
 
-The `circle` element has an explicit role of `graphics-symbol` and an accessible name from the `aria-label` attribute that is not empty.
+The `circle` element has an explicit role of `graphics-symbol` and an [accessible name][] from the `aria-label` attribute that is not empty.
 
 ```html
 <p>How many circles are there?</p>
@@ -89,7 +91,7 @@ The `circle` element has an explicit role of `graphics-symbol` and an accessible
 
 #### Passed Example 3
 
-The `svg` element has an explicit role of `graphics-document` and an accessible name from the `title` element that is not empty.
+The `svg` element has an explicit role of `graphics-document` and an [accessible name][] from the `title` element that is not empty.
 
 ```html
 <p>How many circles are there?</p>
@@ -103,7 +105,7 @@ The `svg` element has an explicit role of `graphics-document` and an accessible 
 
 #### Failed Example 1
 
-The `svg` element has an explicit role of `img` but has no accessible name.
+The `svg` element has an explicit role of `img` but has no [accessible name][].
 
 ```html
 <p>How many circles are there?</p>
@@ -114,7 +116,7 @@ The `svg` element has an explicit role of `img` but has no accessible name.
 
 #### Failed Example 2
 
-The `svg` element has an explicit role of `img` but has only whitespace in the `title` element for the accessible name.
+The `svg` element has an explicit role of `img` but has only whitespace in the `title` element for the [accessible name][].
 
 ```html
 <p>How many circles are there?</p>
@@ -126,7 +128,7 @@ The `svg` element has an explicit role of `img` but has only whitespace in the `
 
 #### Failed Example 3
 
-The `svg` element has an explicit role of `img`, is included in the accessibility tree, but it has no accessible name because the `title` element is empty.
+The `svg` element has an explicit role of `img`, is included in the accessibility tree, but it has no [accessible name][] because the `title` element is empty.
 
 ```html
 <p>How many circles are there?</p>
@@ -138,7 +140,7 @@ The `svg` element has an explicit role of `img`, is included in the accessibilit
 
 #### Failed Example 4
 
-The `circle` element has an explicit role of `graphics-symbol` but does not have an accessible name.
+The `circle` element has an explicit role of `graphics-symbol` but does not have an [accessible name][].
 
 ```html
 <p>How many circles are there?</p>
@@ -178,3 +180,5 @@ The `circle` element has an explicit role that is neither `img`, `graphics-docum
 	<circle role="graphics-object" cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
 ```
+
+[accessible name]: #accessible-name 'Definition of accessible name'

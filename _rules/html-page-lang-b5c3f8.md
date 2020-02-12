@@ -10,6 +10,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:H57: # Using the language attribute on the HTML element
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
 acknowledgements:
@@ -43,7 +48,7 @@ _There are no major accessibility support issues known for this rule._
 
 - [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG21/Techniques/html/H57)
 - [BCP 47: Tags for Identifying Languages](https://www.ietf.org/rfc/bcp/bcp47.txt)
-- [MDN: `lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang)
+- [The `lang` and `xml:lang` attributes](https://html.spec.whatwg.org/multipage/dom.html#the-lang-and-xml:lang-attributes)
 
 ## Test Cases
 
@@ -51,7 +56,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The `lang` attribute specified has a non-empty value.
+This `html` element has a `lang` attribute with a non-empty (`""`) value.
 
 ```html
 <html lang="en"></html>
@@ -61,7 +66,7 @@ The `lang` attribute specified has a non-empty value.
 
 #### Failed Example 1
 
-There is no `lang` attribute specified.
+This `html` element does not have a `lang` attribute.
 
 ```html
 <html></html>
@@ -69,7 +74,7 @@ There is no `lang` attribute specified.
 
 #### Failed Example 2
 
-The `lang` attribute specified is empty ("").
+This `html` element has a `lang` attribute with an empty (`""`) value.
 
 ```html
 <html lang=""></html>
@@ -77,7 +82,7 @@ The `lang` attribute specified is empty ("").
 
 #### Failed Example 3
 
-The `lang` attribute consists of only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
+This `html` element has a `lang` attribute whose value is only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 ```html
 <html lang=" "></html>
@@ -85,7 +90,7 @@ The `lang` attribute consists of only [ASCII whitespace](https://infra.spec.what
 
 #### Failed Example 4
 
-There is no `lang` attribute specified, only a `xml:lang` attribute.
+This `html` element has no `lang` attribute, only a `xml:lang` attribute.
 
 ```html
 <html xml:lang="en"></html>
@@ -95,7 +100,7 @@ There is no `lang` attribute specified, only a `xml:lang` attribute.
 
 #### Inapplicable Example 1
 
-The rule does not apply to `svg` element.
+This rule does not apply to `svg` element.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg"></svg>
@@ -103,7 +108,7 @@ The rule does not apply to `svg` element.
 
 #### Inapplicable Example 2
 
-The rule does not apply to `math` element.
+This rule does not apply to `math` element.
 
 ```xml
 <math></math>

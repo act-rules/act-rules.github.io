@@ -15,6 +15,16 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:G94: # Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:G95: # Providing short text alternatives that provide a brief description of the non-text content
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects: # Remove what is not applicable
   - DOM Tree
   - CSS Styling
@@ -37,7 +47,7 @@ The rule applies to any HTML `input` element with a `type` attribute in the [`Im
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
-**Note**: Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
+**Note:** Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
 
 ## Assumptions
 

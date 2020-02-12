@@ -38,15 +38,15 @@ Any [visible][] character in a [text node][] that is a [child](https://dom.spec.
 - is used in the [accessible name](#accessible-name) of a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget) that is [disabled][]; or
 - has a [semantic role](#semantic-role) of [group](https://www.w3.org/TR/wai-aria-1.1/#group) and is [disabled][].
 
-**Note**: When the [foreground color](#foreground-colors-of-text) is the same as the [background color](#background-colors-of-text), this rule deems the character not [visible][], so it does not need to be tested for contrast.
+**Note:** When the [foreground color](#foreground-colors-of-text) is the same as the [background color](#background-colors-of-text), this rule deems the character not [visible][], so it does not need to be tested for contrast.
 
 ## Expectation
 
 For each test target, the [highest possible contrast](#highest-possible-contrast) between the [foreground colors](#foreground-colors-of-text) and [background colors](#background-colors-of-text) is at least 4.5:1 or 3.0:1 for [larger scale text](#large-scale-text), except if the test target is part of a [text node][] that is [purely decorative][], or does not express anything in [human language](https://www.w3.org/TR/WCAG21/#dfn-human-language-s).
 
-**Note**: Passing this rule does not mean that the text has sufficient color contrast. If all background pixels have a low contrast with all foreground pixels, the success criterion is guaranteed to not be satisfied. When some pixels have sufficient contrast, and others do not, legibility should be considered. There is no clear method for determining legibility, which is why this is out of scope for this rule.
+**Note:** Passing this rule does not mean that the text has sufficient color contrast. If all background pixels have a low contrast with all foreground pixels, the success criterion is guaranteed to not be satisfied. When some pixels have sufficient contrast, and others do not, legibility should be considered. There is no clear method for determining legibility, which is why this is out of scope for this rule.
 
-**Note**: When the text color or background color is not specified in the web page, colors from other [origins](https://www.w3.org/TR/css3-cascade/#cascading-origins) will be used. Testers must ensure colors are not effected by styles from a [user origin](https://www.w3.org/TR/css3-cascade/#cascade-origin-user). Contrast issues cause by specifying the text color but not the background or vise versa, must be tested separately from this rule.
+**Note:** When the text color or background color is not specified in the web page, colors from other [origins](https://www.w3.org/TR/css3-cascade/#cascading-origins) will be used. Testers must ensure colors are not effected by styles from a [user origin](https://www.w3.org/TR/css3-cascade/#cascade-origin-user). Contrast issues cause by specifying the text color but not the background or vise versa, must be tested separately from this rule.
 
 ## Assumptions
 
@@ -139,7 +139,7 @@ This 14pt bold black text has a contrast ratio of 3.6:1 on the gray background.
 
 The first `p` element is has a contrast ratio of 21:1 (default black on white). The second `p` element contains Helvetica text which is decorative, because it does not convey information or provides functionality; its purpose is to show the aesthetic of the Helvetica font.
 
-**Note**: Because this is non-text content, [success criterion 1.4.11 Non-text Contrast](https://www.w3.org/TR/WCAG21/#non-text-contrast) requires font example to have a color contrast of 3:1.
+**Note:** Because this is non-text content, [success criterion 1.4.11 Non-text Contrast](https://www.w3.org/TR/WCAG21/#non-text-contrast) requires font example to have a color contrast of 3:1.
 
 ```html
 <p style="color: #333; background: #FFF;">

@@ -32,7 +32,8 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 
 ## Assumptions
 
-This rule assumes that the video element is used to play a video (for example, not only used to display an image), and that there is a mechanism to start the video.
+- This rule assumes that the video element is used to play a video (for example, not only used to display an image), and that there is a mechanism to start the video.
+- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
@@ -54,9 +55,11 @@ There are no major accessibility support issues known for this rule.
 A video element with an associated track element that contains captions for all the audio.
 
 ```html
-<video src="/test-assets/perspective-video/perspective-video.mp4" controls>
-	<track src="/test-assets/perspective-video/perspective-caption.vtt" kind="captions" />
-</video>
+<html lang="en">
+	<video src="/test-assets/perspective-video/perspective-video.mp4" controls>
+		<track src="/test-assets/perspective-video/perspective-caption.vtt" kind="captions" />
+	</video>
+</html>
 ```
 
 #### Passed Example 2
@@ -64,12 +67,14 @@ A video element with an associated track element that contains captions for all 
 A video element that describes some of the text on the same page. The text on the page labels the video as an alternative.
 
 ```html
-<p>
-	Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the keyboard
-	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
-	compatibility is described in WCAG. See the video below to watch the same information again in video form.
-</p>
-<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+<html lang="en">
+	<p>
+		Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the
+		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
+		Keyboard compatibility is described in WCAG. See the video below to watch the same information again in video form.
+	</p>
+	<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+</html>
 ```
 
 ### Failed
@@ -79,7 +84,9 @@ A video element that describes some of the text on the same page. The text on th
 A video element without any form of captions.
 
 ```html
-<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+<html lang="en">
+	<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+</html>
 ```
 
 #### Failed Example 2
@@ -87,12 +94,14 @@ A video element without any form of captions.
 A video element that describes some of the text on the same page. The video contains more information than the text does.
 
 ```html
-<p>
-	Not being able to use your computer because your mouse doesn't work, is frustrating. Either through preference or
-	circumstance. This is solved by keyboard compatibility. Keyboard compatibility is described in WCAG. See the video
-	below to watch the same information again in video form.
-</p>
-<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+<html lang="en">
+	<p>
+		Not being able to use your computer because your mouse doesn't work, is frustrating. Either through preference or
+		circumstance. This is solved by keyboard compatibility. Keyboard compatibility is described in WCAG. See the video
+		below to watch the same information again in video form.
+	</p>
+	<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+</html>
 ```
 
 ### Inapplicable
@@ -102,7 +111,9 @@ A video element that describes some of the text on the same page. The video cont
 A video element without that is not [visible][].
 
 ```html
-<video src="/test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>
+<html lang="en">
+	<video src="/test-assets/perspective-video/perspective-video.mp4" controls style="display: none;"></video>
+</html>
 ```
 
 #### Inapplicable Example 2
@@ -110,7 +121,9 @@ A video element without that is not [visible][].
 A video element without audio.
 
 ```html
-<video src="/test-assets/perspective-video/perspective-video-silent.mp4" controls></video>
+<html lang="en">
+	<video src="/test-assets/perspective-video/perspective-video-silent.mp4" controls></video>
+</html>
 ```
 
 [visible]: #visible 'Definition of visible'

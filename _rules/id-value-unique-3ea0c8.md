@@ -10,6 +10,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:H93: # Ensuring that id attributes are unique on a Web page
+    forConformance: false
+    failed: not satisfied
+    passed: satisfied
+    inapplicable: satisfied
 input_aspects:
   - DOM Tree
 acknowledgements:
@@ -89,7 +94,7 @@ Both `id` attributes are the same (`my-elt`), but they are in different [documen
 
 ```html
 <div id="my-elt"></div>
-<iframe srcdoc="<span id='my-elt'></span>"></iframe>
+<iframe title="Empty frame" srcdoc="<span id='my-elt'></span>"></iframe>
 ```
 
 ### Failed

@@ -13,7 +13,7 @@ Content is considered _visible_ if making it fully transparent would result in a
 
 #### Examples
 
-**Note**: The examples presented here are non-normative and not testable. They serve to illustrate some common pitfalls about the definition and to help the implementers of ACT rules understand it.
+**Note:** The examples presented here are non-normative and not testable. They serve to illustrate some common pitfalls about the definition and to help the implementers of ACT rules understand it.
 
 This `span` element is visible (by default, elements are visible).
 

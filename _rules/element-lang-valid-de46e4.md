@@ -37,7 +37,7 @@ For each test target, the `lang` attribute has a [valid language subtag](#valid-
 
 ## Assumptions
 
-The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.2: Language of Parts](https://www.w3.org/TR/WCAG21/#language-of-parts).
+The `lang` attribute is assumed to be used to indicate the language of a section of the content. If the `lang` attribute is used for something else (for example to indicate a `code` element contains CSS), the content may still conform to WCAG despite failing this rule.
 
 ## Accessibility Support
 

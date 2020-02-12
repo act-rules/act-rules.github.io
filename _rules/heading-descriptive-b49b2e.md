@@ -47,7 +47,7 @@ _There are no major accessibility support issues known for this rule._
 - [G130: Providing descriptive headings](https://www.w3.org/WAI/WCAG21/Techniques/general/G130)
 - [H42: Using h1-h6 to identify headings](https://www.w3.org/WAI/WCAG21/Techniques/html/H42)
 - [ARIA12: Using role=heading to identify headings](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA12)
-- [HTML Standard - Heading content](https://html.spec.whatwg.org/#heading-content)
+- [HTML Specification - Heading content](https://html.spec.whatwg.org/#heading-content)
 
 ## Test Cases
 

@@ -40,7 +40,7 @@ Desktop browsers ignore the viewport `meta` element, and most modern mobile brow
 ## Background
 
 - [Understanding Success Criterion 1.4.4: Resize text](https://www.w3.org/WAI/WCAG21/Understanding/resize-text)
-- [The `meta` element](https://html.spec.whatwg.org/#the-meta-element)
+- [HTML Specification - The `meta` element](https://html.spec.whatwg.org/#the-meta-element)
 - [The initial-scale, minimum-scale, and maximum-scale properties](https://www.w3.org/TR/css-device-adapt-1/#min-scale-max-scale)
 - [The user-scalable property](https://www.w3.org/TR/css-device-adapt-1/#user-scalable)
 

@@ -91,7 +91,9 @@ _There are no major accessibility support issues known for this rule._
 The `label` element is a [programmatic label][] of the `input` element and describes it.
 
 ```html
-<label>First name:<input id="fname" type="text" name="fname"/></label>
+<html lang="en">
+	<label>First name:<input id="fname" type="text" name="fname"/></label>
+</html>
 ```
 
 #### Passed Example 2
@@ -132,13 +134,15 @@ The `p` element is a [programmatic label][] of the `input` element and describes
 The `label` elements are [programmatic labels][programmatic label] of their respective `input` elements. The `label` elements, are not descriptive enough (because they are repeated over several fields). However, the headings provide a [visual context][] that differentiates the purpose of the otherwise identically named form fields. Within their [visual context][], the `label` elements are descriptive of their respective `input` elements.
 
 ```html
-<h2>Shipping address</h2>
-<label>Name<input id="shipping-name" type="text" name="name"/></label>
-<label>Street<input id="shipping-street" type="text" name="street"/></label>
+<html lang="en">
+	<h2>Shipping address</h2>
+	<label>Name<input id="shipping-name" type="text" name="name"/></label>
+	<label>Street<input id="shipping-street" type="text" name="street"/></label>
 
-<h2>Billing address</h2>
-<label>Name<input id="billing-name" type="text" name="name"/></label>
-<label>Street<input id="billing-street" type="text" name="street"/></label>
+	<h2>Billing address</h2>
+	<label>Name<input id="billing-name" type="text" name="name"/></label>
+	<label>Street<input id="billing-street" type="text" name="street"/></label>
+</html>
 ```
 
 #### Passed Example 6
@@ -146,9 +150,11 @@ The `label` elements are [programmatic labels][programmatic label] of their resp
 Both the `div` and the `span` elements are [programmatic labels][programmatic label] of the `input` element. Each of them, within the [visual context][] formed by the other one, is descriptive.
 
 ```html
-<div id="shipping">Shipping address</div>
-<span id="name">Name</span>
-<input id="shipping-name" type="text" name="name" aria-labelledby="shipping name" />
+<html lang="en">
+	<div id="shipping">Shipping address</div>
+	<span id="name">Name</span>
+	<input id="shipping-name" type="text" name="name" aria-labelledby="shipping name" />
+</html>
 ```
 
 ### Failed
@@ -158,7 +164,9 @@ Both the `div` and the `span` elements are [programmatic labels][programmatic la
 The `label` element is a [programmatic label][] of the `input` element but does not describe it.
 
 ```html
-<label>Menu<input id="fname" type="text" name="fname"/></label>
+<html lang="en">
+	<label>Menu<input id="fname" type="text" name="fname"/></label>
+</html>
 ```
 
 #### Failed Example 2
@@ -166,7 +174,10 @@ The `label` element is a [programmatic label][] of the `input` element but does 
 The `label` element is a [programmatic label][] of the `input` element but does not describe it.
 
 ```html
-<label for="fname">Menu</label> <input id="fname" type="text" name="fname" />
+<html lang="en">
+	<label for="fname">Menu</label>
+	<input id="fname" type="text" name="fname" />
+</html>
 ```
 
 #### Failed Example 3
@@ -185,13 +196,15 @@ The `span` element is a [programmatic label][] of the `input` element but does n
 The `label` elements are [programmatic labels][programmatic label] of their respective `input` elements. The `label` elements, are not descriptive enough (because they are repeated over several fields). The headings are not [visible][]. Therefore, they do not provide [visual context][].
 
 ```html
-<h2 style="position: absolute; top: -9999px; left: -9999px;">Shipping address</h2>
-<input aria-label="Name" id="shipping-name" type="text" name="name" />
-<input aria-label="Street" id="shipping-street" type="text" name="street" />
+<html lang="en">
+	<h2 style="position: absolute; top: -9999px; left: -9999px;">Shipping address</h2>
+	<input aria-label="Name" id="shipping-name" type="text" name="name" />
+	<input aria-label="Street" id="shipping-street" type="text" name="street" />
 
-<h2 style="position: absolute; top: -9999px; left: -9999px;">Billing address</h2>
-<input aria-label="Name" id="billing-name" type="text" name="name" />
-<input aria-label="Street" id="billing-street" type="text" name="street" />
+	<h2 style="position: absolute; top: -9999px; left: -9999px;">Billing address</h2>
+	<input aria-label="Name" id="billing-name" type="text" name="name" />
+	<input aria-label="Street" id="billing-street" type="text" name="street" />
+</html>
 ```
 
 #### Failed Example 5
@@ -199,9 +212,11 @@ The `label` elements are [programmatic labels][programmatic label] of their resp
 Both the `div` and the `span` elements are [programmatic labels][programmatic label] of the `input` element, but only the `div` is [visible][]. It has no [visual context][], and is not descriptive.
 
 ```html
-<div id="shipping">Shipping address</div>
-<span id="name" style="display: none">Name</span>
-<input id="shipping-name" type="text" name="name" aria-labelledby="shipping name" />
+<html lang="en">
+	<div id="shipping">Shipping address</div>
+	<span id="name" style="display: none">Name</span>
+	<input id="shipping-name" type="text" name="name" aria-labelledby="shipping name" />
+</html>
 ```
 
 ### Inapplicable
@@ -211,8 +226,10 @@ Both the `div` and the `span` elements are [programmatic labels][programmatic la
 The `label` element is not a [programmatic label][] of any element.
 
 ```html
-<label for="fname">First name:</label>
-<p id="fname"></p>
+<html lang="en">
+	<label for="fname">First name:</label>
+	<p id="fname"></p>
+</html>
 ```
 
 #### Inapplicable Example 2
@@ -220,7 +237,10 @@ The `label` element is not a [programmatic label][] of any element.
 The `label` element is not [visible][].
 
 ```html
-<label for="fname" style="display:none;">First name:</label> <input id="fname" type="text" name="fname" />
+<html lang="en">
+	<label for="fname" style="display:none;">First name:</label>
+	<input id="fname" type="text" name="fname" />
+</html>
 ```
 
 #### Inapplicable Example 3
@@ -228,7 +248,9 @@ The `label` element is not [visible][].
 The `label` is a [visible][] [programmatic label][] of the `input` element. However, the `input` is not [visible][], hence this rule does not apply.
 
 ```html
-<label>First name: <input style="position: absolute; top: -9999px; left: -9999px;" type="text" name="fname"/></label>
+<html lang="en">
+	<label>First name: <input style="position: absolute; top: -9999px; left: -9999px;" type="text" name="fname"/></label>
+</html>
 ```
 
 #### Inapplicable Example 4
@@ -236,7 +258,10 @@ The `label` is a [visible][] [programmatic label][] of the `input` element. Howe
 The `span` element is not a [programmatic label][] of any element.
 
 ```html
-<span>First name:</span><input type="text" name="fname" />
+<html lang="en">
+	<span>First name:</span
+	><input type="text" name="fname" />
+</html>
 ```
 
 [abstract]: https://www.w3.org/TR/wai-aria/#abstract_roles 'List of abstract roles'

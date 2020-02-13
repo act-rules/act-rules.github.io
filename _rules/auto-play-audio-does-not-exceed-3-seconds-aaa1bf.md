@@ -104,7 +104,7 @@ The `video` element automatically plays some audio for more than 3 seconds.
 
 #### Inapplicable Example 1
 
-The `video` element is `muted`.
+The `<video>` element audio autoplays for longer than 3 seconds, but is `muted`.
 
 ```html
 <video autoplay muted>

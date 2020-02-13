@@ -248,7 +248,7 @@ The `<video>` has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to 
 
 #### Inapplicable Example 1
 
-The `<video>` element is `muted`.
+The `<video>` element audio autoplays for longer than 3 seconds, but is `muted`.
 
 ```html
 <video autoplay muted>

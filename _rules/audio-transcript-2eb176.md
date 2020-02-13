@@ -9,6 +9,7 @@ input_aspects:
   - DOM Tree
   - CSS Styling
   - Audio output
+  - Language
 acknowledgements:
   authors:
     - Wilco Fiers
@@ -32,7 +33,7 @@ The auditory information of each test target is available through a text transcr
 
 ## Assumptions
 
-_There are currently no assumptions_
+This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
@@ -52,13 +53,15 @@ There are no major accessibility support issues known for this rule.
 Audio with controls and internal transcript
 
 ```html
-<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-<p>
-	The above audio contains the following speech: We choose to go to the moon in this decade and do the other things, not
-	because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our
-	energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone,
-	and one which we intend to win, and the others, too.
-</p>
+<html lang="en">
+	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
+	<p>
+		The above audio contains the following speech: We choose to go to the moon in this decade and do the other things,
+		not because they are easy, but because they are hard, because that goal will serve to organize and measure the best
+		of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to
+		postpone, and one which we intend to win, and the others, too.
+	</p>
+</html>
 ```
 
 #### Passed Example 2
@@ -66,8 +69,10 @@ Audio with controls and internal transcript
 Audio with controls and external transcript
 
 ```html
-<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-<a href="/test-assets/moon-audio/moon-speech-transcript.txt">Transcript</a>
+<html lang="en">
+	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
+	<a href="/test-assets/moon-audio/moon-speech-transcript.txt">Transcript</a>
+</html>
 ```
 
 #### Passed Example 3
@@ -75,8 +80,10 @@ Audio with controls and external transcript
 Audio with autoplay and external transcript
 
 ```html
-<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
-<a href="/test-assets/moon-audio/moon-speech-transcript.txt">Transcript</a>
+<html lang="en">
+	<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
+	<a href="/test-assets/moon-audio/moon-speech-transcript.txt">Transcript</a>
+</html>
 ```
 
 ### Failed
@@ -86,7 +93,9 @@ Audio with autoplay and external transcript
 Audio with controls and no transcript
 
 ```html
-<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
+<html lang="en">
+	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
+</html>
 ```
 
 #### Failed Example 2
@@ -94,13 +103,15 @@ Audio with controls and no transcript
 Audio with controls and incorrect internal transcript
 
 ```html
-<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-<p>
-	The above audio contains the following speech: We choose to go to the cheese in this decade and do the other things,
-	not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of
-	our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to
-	postpone, and one which we intend to win, and the others, too.
-</p>
+<html lang="en">
+	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
+	<p>
+		The above audio contains the following speech: We choose to go to the cheese in this decade and do the other things,
+		not because they are easy, but because they are hard, because that goal will serve to organize and measure the best
+		of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to
+		postpone, and one which we intend to win, and the others, too.
+	</p>
+</html>
 ```
 
 #### Failed Example 3
@@ -108,8 +119,10 @@ Audio with controls and incorrect internal transcript
 Audio with controls and incorrect external transcript
 
 ```html
-<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.txt">Transcript</a>
+<html lang="en">
+	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
+	<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.txt">Transcript</a>
+</html>
 ```
 
 #### Failed Example 4
@@ -117,8 +130,10 @@ Audio with controls and incorrect external transcript
 Audio with autoplay and incorrect external transcript
 
 ```html
-<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
-<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.txt">Transcript</a>
+<html lang="en">
+	<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
+	<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.txt">Transcript</a>
+</html>
 ```
 
 #### Failed Example 5
@@ -126,13 +141,15 @@ Audio with autoplay and incorrect external transcript
 Audio with controls and [non-visible][visible] internal transcript
 
 ```html
-<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-<p style="text-indent: -9999px;">
-	The above audio contains the following speech: We choose to go to the moon in this decade and do the other things, not
-	because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our
-	energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone,
-	and one which we intend to win, and the others, too.
-</p>
+<html lang="en">
+	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
+	<p style="text-indent: -9999px;">
+		The above audio contains the following speech: We choose to go to the moon in this decade and do the other things,
+		not because they are easy, but because they are hard, because that goal will serve to organize and measure the best
+		of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to
+		postpone, and one which we intend to win, and the others, too.
+	</p>
+</html>
 ```
 
 #### Failed Example 6
@@ -140,13 +157,15 @@ Audio with controls and [non-visible][visible] internal transcript
 Audio with controls and internal transcript that is not exposed to the accessibility tree
 
 ```html
-<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-<p aria-hidden="true">
-	The above audio contains the following speech: We choose to go to the moon in this decade and do the other things, not
-	because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our
-	energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone,
-	and one which we intend to win, and the others, too.
-</p>
+<html lang="en">
+	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
+	<p aria-hidden="true">
+		The above audio contains the following speech: We choose to go to the moon in this decade and do the other things,
+		not because they are easy, but because they are hard, because that goal will serve to organize and measure the best
+		of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to
+		postpone, and one which we intend to win, and the others, too.
+	</p>
+</html>
 ```
 
 ### Inapplicable
@@ -156,7 +175,9 @@ Audio with controls and internal transcript that is not exposed to the accessibi
 Audio without controls.
 
 ```html
-<audio src="/test-assets/moon-audio/moon-speech.mp3"></audio>
+<html lang="en">
+	<audio src="/test-assets/moon-audio/moon-speech.mp3"></audio>
+</html>
 ```
 
 #### Inapplicable Example 2
@@ -164,7 +185,9 @@ Audio without controls.
 Audio with hidden controls.
 
 ```html
-<audio src="/test-assets/moon-audio/moon-speech.mp3" controls style="display: none;"></audio>
+<html lang="en">
+	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls style="display: none;"></audio>
+</html>
 ```
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

@@ -10,6 +10,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:H58: # Using language attributes to identify changes in the human language
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
 acknowledgements:
@@ -32,11 +37,11 @@ For each test target, the `lang` attribute has a [valid language subtag](#valid-
 
 ## Assumptions
 
-This rule assumes that the presence of a `lang` attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
+The `lang` attribute is assumed to be used to indicate the language of a section of the content. If the `lang` attribute is used for something else (for example to indicate a `code` element contains CSS), the content may still conform to WCAG despite failing this rule.
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are differences in how assistive technologies handle unknown and invalid language subtags. Some will default to the language of the page, whereas others will default to the closest ancestor with a valid lang attribute.
 
 ## Background
 

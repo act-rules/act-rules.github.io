@@ -10,9 +10,15 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:G131: # Providing descriptive labels
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
+  - Language
 acknowledgements:
   authors:
     - Jean-Yves Moyen
@@ -61,6 +67,7 @@ Each test target, together with its [visual context][], describes the purpose of
 
 - This rule assumes that [labels][label] are intended for sighted users, and that hiding a [visible][] [label][] from assistive technologies, is a failure of [Success Criterion 4.1.2: Name, Role and Value][sc412], but not of [Success Criterion 2.4.6: Heading and Labels][sc246].
 - This rule assumes that the [programmatic labels][programmatic label] of an element are also part of its [visual context][].
+- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
@@ -92,7 +99,10 @@ The `label` element is a [programmatic label][] of the `input` element and descr
 The `label` element is a [programmatic label][] of the `input` element and describes it.
 
 ```html
-<label for="fname">First name:</label> <input id="fname" type="text" name="fname" />
+<html lang="en">
+	<label for="fname">First name:</label>
+	<input id="fname" type="text" name="fname" />
+</html>
 ```
 
 #### Passed Example 3
@@ -100,8 +110,10 @@ The `label` element is a [programmatic label][] of the `input` element and descr
 The `p` element is a [programmatic label][] of the `input` element and describes it.
 
 ```html
-<p id="label_fname">First name:</p>
-<input aria-labelledby="label_fname" type="text" name="fname" />
+<html lang="en">
+	<p id="label_fname">First name:</p>
+	<input aria-labelledby="label_fname" type="text" name="fname" />
+</html>
 ```
 
 #### Passed Example 4
@@ -109,8 +121,10 @@ The `p` element is a [programmatic label][] of the `input` element and describes
 The `p` element is a [programmatic label][] of the `input` element and describes it. The [programmatic label][] does not need to be [included in the accessibility tree][] for this rule to apply.
 
 ```html
-<p id="label_fname" aria-hidden="true">First name:</p>
-<input aria-labelledby="label_fname" type="text" name="fname" />
+<html lang="en">
+	<p id="label_fname" aria-hidden="true">First name:</p>
+	<input aria-labelledby="label_fname" type="text" name="fname" />
+</html>
 ```
 
 #### Passed Example 5
@@ -160,8 +174,10 @@ The `label` element is a [programmatic label][] of the `input` element but does 
 The `span` element is a [programmatic label][] of the `input` element but does not describe it.
 
 ```html
-<p id="label_fname">Menu</p>
-<input aria-labelledby="label_fname" type="text" name="fname" />
+<html lang="en">
+	<p id="label_fname">Menu</p>
+	<input aria-labelledby="label_fname" type="text" name="fname" />
+</html>
 ```
 
 #### Failed Example 4

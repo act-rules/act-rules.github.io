@@ -25,8 +25,8 @@ acknowledgements:
 
 This rule applies to any `audio` or `video` element that has:
 
-- an `autoplay` attribute that is equal to true, and
-- both `paused` and `muted` attributes equal to false, and
+- an `autoplay` attribute whose value is true, and
+- both `paused` and `muted` attributes whose values are both false, and
 - either a `src` attribute or a child `source` element that references content with a duration of more than 3 seconds that contains audio.
 
 **Note:**

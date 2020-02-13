@@ -1,7 +1,7 @@
 ---
-title: Visual context
+title: Visual Context
 key: visual-context
-unambiguous: true
+unambiguous: true
 objective: false
 ---
 

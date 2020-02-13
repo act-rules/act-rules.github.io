@@ -1,5 +1,5 @@
 ---
-name: programmatic label
+title: Programmatic Label
 key: programmatic-label
 unambiguous: true
 objective: true

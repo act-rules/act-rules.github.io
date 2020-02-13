@@ -259,8 +259,8 @@ The `span` element is not a [programmatic label][] of any element.
 
 ```html
 <html lang="en">
-	<span>First name:</span
-	><input type="text" name="fname" />
+	<span>First name:</span>
+	<input type="text" name="fname" />
 </html>
 ```
 

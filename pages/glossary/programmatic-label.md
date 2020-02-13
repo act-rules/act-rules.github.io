@@ -1,6 +1,8 @@
 ---
 name: programmatic label
 key: programmatic-label
+unambiguous: true
+objective: true
 ---
 
 Element L is a _programmatic label_ of target element T if either:
@@ -10,7 +12,7 @@ Element L is a _programmatic label_ of target element T if either:
 
 **Note**: a given element may have more than one programmatic label.
 
-#### Examples
+#### Examples of programmatic labels
 
 The `input` element is a [labeled control][] of the `label` element (implicit label). Therefore the `label` element is a programmatic label of the `input` element.
 

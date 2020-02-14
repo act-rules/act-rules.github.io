@@ -34,6 +34,10 @@ For the test target a [user interface component][] is provided to pause, stop, h
 
 **Note**: If there is more than one test target, a single [user interface component][] may be used to pause, stop, hide or alter the frequency for all test targets.
 
+## Expectation 2
+
+The [user interface component][] provided to pause, stop, hide or alter the frequency of changes is [visible][], has an [accessible name][] that is not only [whitespace][], and is [included in the accessibility tree][].
+
 ## Assumptions
 
 - This rule assumes that the auto-updating of the content is not [essential][], which is listed as valid exception to [Success Criterion 2.2.2: Pause, Stop, Hide][sc 2.2.2]. When the auto-updating of content is [essential][] this rule may produce incorrect results.
@@ -41,7 +45,7 @@ For the test target a [user interface component][] is provided to pause, stop, h
 
 ## Accessibility Support
 
-[Activation triggering](https://html.spec.whatwg.org/#activation-triggering-input-event) is not consistently supported across browsers. The same event may or may not change the value of the [last activation timestamp][] depending on the browser. 
+[Activation triggering](https://html.spec.whatwg.org/#activation-triggering-input-event) is not consistently supported across browsers. The same event may or may not change the value of the [last activation timestamp][] depending on the browser.
 
 ## Background
 
@@ -55,7 +59,7 @@ For the test target a [user interface component][] is provided to pause, stop, h
 
 #### Passed Example 1
 
-The text content automatically updates after the page completes loading. A button is available to stop the automatic updates.
+The text content of the `span` element automatically updates after the page completes loading. A button is available to stop the automatic updates. The rule is not applicable to the first `p` element because it has a child (the `span` element) whose content updates.
 
 ```html
 <body onload="startUpdates()">
@@ -73,7 +77,7 @@ The text content automatically updates after the page completes loading. A butto
 
 #### Passed Example 2
 
-The text content automatically updates after the page completes loading. A button is available to pause and resume the automatic updates.
+The text content of the `span` element automatically updates after the page completes loading. A button is available to pause and resume the automatic updates. The rule is not applicable to the first `p` element because it has a child (the `span` element) whose content updates.
 
 ```html
 <body onload="startUpdates()">
@@ -91,7 +95,7 @@ The text content automatically updates after the page completes loading. A butto
 
 #### Passed Example 3
 
-The text content automatically updates after the page completes loading. A button is available to hide the automatically updating content.
+The text content of the `span` element automatically updates after the page completes loading. A button is available to hide the automatically updating content. The rule is not applicable to the first `p` element because it has a child (the `span` element) whose content updates.
 
 ```html
 <body onload="startUpdates()">
@@ -107,11 +111,31 @@ The text content automatically updates after the page completes loading. A butto
 </body>
 ```
 
+#### Passed Example 4
+
+The text content of the `span` element automatically updates after the page completes loading. A [user interface component][] is available to change the update frequency. The rule is not applicable to the first `p` element because it has a child (the `span` element) whose content updates.
+
+```html
+<body onload="startUpdates()">
+	<p>Random number: <span id="target">1</span></p>
+	<label for="interval">Content update frequency (seconds):</label>
+	<input type="text" id="interval" />
+	<input type="button" onclick="changeFrequency(document.getElementById('interval').value)" value="Change frequency" />
+
+	<p>
+		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
+		implement accessibility.
+	</p>
+
+	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
+</body>
+```
+
 ### Failed
 
 #### Failed Example 1
 
-The text content automatically updates after the page completes loading. There is no component to stop or pause the automatic updates or to hide the updating content.
+The text content of the `span` element automatically updates after the page completes loading. There is no component to stop, pause, hide or alter the frequency of the automatic updates.
 
 ```html
 <body onload="startUpdates()">
@@ -126,15 +150,14 @@ The text content automatically updates after the page completes loading. There i
 </body>
 ```
 
-### Inapplicable
+#### Failed Example 2
 
-#### Inapplicable Example 1
-
-The text content automatically updates after the page completes loading but it is not visible.
+The text content of the `span` element automatically updates after the page completes loading. A button is available to stop the automatic updates, but the button is not visible.
 
 ```html
 <body onload="startUpdates()">
-	<p style="display: none">Random number: <span id="target">1</span></p>
+	<p>Random number: <span id="target">1</span></p>
+	<input type="button" onclick="stopUpdates()" value="Stop updates" style="display:none" />
 
 	<p>
 		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
@@ -145,9 +168,68 @@ The text content automatically updates after the page completes loading but it i
 </body>
 ```
 
+#### Failed Example 3
+
+The text content of the `span` element automatically updates after the page completes loading. A button is available to stop the automatic updates, but the button does not have an accessible name.
+
+```html
+<body onload="startUpdates()">
+	<p>Random number: <span id="target">1</span></p>
+	<input type="button" onclick="stopUpdates()" />
+
+	<p>
+		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
+		implement accessibility.
+	</p>
+
+	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
+</body>
+```
+
+#### Failed Example 4
+
+The text content of the `span` element automatically updates after the page completes loading. A button is available to stop the automatic updates, but the button is not included in the accessibility tree.
+
+```html
+<body onload="startUpdates()">
+	<p>Random number: <span id="target">1</span></p>
+	<input type="button" onclick="stopUpdates()" aria-hidden="true" />
+
+	<p>
+		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
+		implement accessibility.
+	</p>
+
+	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
+</body>
+```
+
+### Inapplicable
+
+#### Inapplicable Example 1
+
+The text content automatically updates but the change happens before the [readiness][document readiness] is equal to "complete".
+
+```html
+<body>
+  <p>Random number: <span id="target">1</span></p>
+
+  <p>
+    The W3C Web Accessibility Initiative (WAI) develops standards and support
+    materials to help you understand and implement accessibility.
+  </p>
+
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("target").innerText = "Changed content";
+    });
+  </script>
+</body>
+```
+
 #### Inapplicable Example 2
 
-The text content automatically updates but only as a result of the user [activating][activate] an element on the page.
+The text content automatically updates but only as a result of the user activating a button on the page, making the [last activation timestamp][] different from "positive infinity".
 
 ```html
 <body>
@@ -175,19 +257,20 @@ The automatically updating text content is the only content in the document.
 </body>
 ```
 
-[activate]: https://html.spec.whatwg.org/#activation
+[accessible name]: #accessible-name 'Definition of accessible name'
 [child]: https://dom.spec.whatwg.org/#concept-tree-child
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
 [document readiness]: https://www.w3.org/TR/html53/dom.html#current-document-readiness
 [essential]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html#dfn-essential
-[focus]: https://html.spec.whatwg.org/#focus
 [f16]: https://www.w3.org/WAI/WCAG21/Techniques/failures/F16
 [g186]: https://www.w3.org/WAI/WCAG21/Techniques/general/G186
 [html document]: https://dom.spec.whatwg.org/#html-document
 [html element]: https://html.spec.whatwg.org/multipage/dom.html#htmlelement
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [last activation timestamp]: https://html.spec.whatwg.org/#last-activation-timestamp
 [sc 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
 [text content]: #text-content 'Definition of text content'
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
 [visible]: #visible 'Definition of visible'
+[whitespace]: #whitespace 'Definition of whitespace'
 [window]: https://html.spec.whatwg.org/#window

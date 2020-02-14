@@ -7,14 +7,19 @@ function change() {
 var updates
 var updating = false
 
-function startUpdates() {
+function startUpdates(interval = 1000) {
     updating = true
-    updates = setInterval(change, 1000)
+    updates = setInterval(change, interval)
 }
 
 function stopUpdates() {
     updating = false
     clearInterval(updates)
+}
+
+function changeFrequency(interval = 1) {
+    clearInterval(updates)
+    updates = startUpdates(interval*1000)
 }
 
 function toggleUpdates() {

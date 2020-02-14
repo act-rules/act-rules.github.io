@@ -31,7 +31,7 @@ This rule applies to any `audio` or `video` element that has:
 - both `paused` and `muted` attributes equal to false, and
 - either a `src` attribute or a child `source` element that references content with a duration of more than 3 seconds that contains audio.
 
-**Note**:
+**Note:**
 
 The default value of both `paused` and `muted` attributes is `false`.
 
@@ -39,8 +39,8 @@ The default value of both `paused` and `muted` attributes is `false`.
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [audio or video that plays automatically has a control mechanism](https://act-rules.github.io/rules/4c31df)
-- [audio or video that plays automatically does not exceed 3 seconds](https://act-rules.github.io/rules/aaa1bf)
+- [Audio Or Video That Plays Automatically Has A Control Mechanism](https://act-rules.github.io/rules/4c31df)
+- [Audio Or Video That Plays Automatically Does Not Exceed 3 Seconds](https://act-rules.github.io/rules/aaa1bf)
 
 ## Assumptions
 

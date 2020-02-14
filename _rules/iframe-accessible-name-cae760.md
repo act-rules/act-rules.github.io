@@ -16,11 +16,12 @@ input_aspects:
 acknowledgements:
   authors:
     - Jey Nandakumar
+    - Wilco Fiers
 ---
 
 ## Applicability
 
-The rule applies to `iframe` elements that are [included in the accessibility tree][].
+The rule applies to `iframe` elements that are [included in the accessibility tree][] or that are part of [sequential focus navigation][].
 
 **Note:** `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
 
@@ -28,20 +29,21 @@ The rule applies to `iframe` elements that are [included in the accessibility tr
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
+**Note:** Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
+
 ## Assumptions
 
-- The rule assumes that the target `iframe` is used as a [user interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components).
+If an `iframe` is not perceived by the user as a single control, it does not qualify as a [user interface component][] under WCAG 2. In such a scenario, failing this rule would not fail [success criterion 4.1.2](https://www.w3.org/TR/WCAG21/#name-role-value). Unless the `iframe` is both removed from the accessibility tree and removed from [sequential focus navigation][], they usually are considered to be [user interface components][user interface component].
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+Some browsers include `iframe` elements in the [sequential focus navigation][]. This ensures that `iframe` elements can always be scrolled using the keyboard. When an `iframe` is removed from the accessibility tree, this rule is still applicable for those browsers, unless the `iframe` is explicitly removed from [sequential focus navigation][] (by having the `tabindex` attribute set to a negative value).
 
 ## Background
 
 - [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64)
 - [Understanding Success Criterion 4.1.2](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
-- [Understanding Success Criterion 2.4.1](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html)
-- [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)
+- [User interface component][]
 
 ## Test Cases
 
@@ -132,10 +134,10 @@ Usage of `alt` attribute to describe content is not valid.
 
 #### Failed Example 7
 
-[Accessible name][] is empty.
+This `iframe` that is part of [sequential focus navigation][] has an empty [Accessible name][].
 
 ```html
-<iframe title=" " src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
+<iframe title=" " src="/test-assets/SC4-1-2-frame-doc.html" role="none" tabindex="0"> </iframe>
 ```
 
 ### Inapplicable
@@ -150,12 +152,22 @@ Does not apply to non `iframe` element.
 
 #### Inapplicable Example 2
 
-`iframe` is not [included in the accessibility tree][].
+This `iframe` is neither part of [sequential focus navigation][], nor [included in the accessibility tree][] because of `display: none;`.
 
 ```html
 <iframe style="display:none;" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
+#### Inapplicable Example 3
+
+This `iframe` is not part of [sequential focus navigation][] because it has `tabindex="-1"` and not [included in the accessibility tree][] because of `role="presentation"`
+
+```html
+<iframe tabindex="-1" role="presentation" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
+```
+
 [accessible name]: #accessible-name 'Definition of accessible name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [whitespace]: #whitespace 'Definition of whitespace'
+[sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation
+[user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components

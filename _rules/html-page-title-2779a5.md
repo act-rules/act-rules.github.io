@@ -10,6 +10,16 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:G88: # Providing descriptive titles for Web pages
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:H25: # Providing a title using the title element
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
 acknowledgements:
@@ -29,15 +39,15 @@ htmlHintIgnore:
 
 The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element.
 
-**Note**: Documents embedded into other documents, such as through `iframe` or `object` elements are not applicable and do not require page titles, because they are not web pages according to the definition in WCAG.
+**Note:** Documents embedded into other documents, such as through `iframe` or `object` elements are not applicable and do not require page titles, because they are not web pages according to the definition in WCAG.
 
 ## Expectation 1
 
 Each target element has at least one [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) that is an HTML `title` element.
 
-**Note**: The `title` element exists in other namespaces such as SVG. These are not HTML `title` elements and should be ignored for this rule.
+**Note:** The `title` element exists in other namespaces such as SVG. These are not HTML `title` elements and should be ignored for this rule.
 
-**Note**: The [HTML 5.2 specification](https://www.w3.org/TR/html52/document-metadata.html#the-title-element) requires that a document only has one `title` element, and that it is a child of the `head` element of a document. However, HTML 5.2 also describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG.
+**Note:** The [HTML 5.2 specification](https://www.w3.org/TR/html52/document-metadata.html#the-title-element) requires that a document only has one `title` element, and that it is a child of the `head` element of a document. However, HTML 5.2 also describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG.
 
 ## Expectation 2
 

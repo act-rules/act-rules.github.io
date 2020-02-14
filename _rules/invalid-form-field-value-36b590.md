@@ -71,24 +71,11 @@ _There are no major accessibility support issues known for this rule._
 The `input` element has a [form field error indicator][] that identifies it (by referencing its label) and describes the cause of the error.
 
 ```html
-<script>
-	function processForm() {
-		document.getElementById('error').innerText = ''
-		var age = document.getElementById('age').value
-		console.log(isNaN(age))
-		if (!age || isNaN(age)) {
-			document.getElementById('error').innerText = 'Age must be a number'
-		} else if (age < 1) {
-			document.getElementById('error').innerText = 'Age must be at least 1'
-		}
-	}
-</script>
-
 <form>
 	<label for="age">Age (years)</label>
-	<input type="number" id="age" />
-	<span id="error"></span><br />
-	<input type="button" value="Submit" onclick="processForm()" />
+	<input type="number" id="age" value="0"/>
+	<span id="error">Age must be at least 1</span><br />
+	<input type="button" value="Submit" />
 </form>
 ```
 
@@ -97,21 +84,8 @@ The `input` element has a [form field error indicator][] that identifies it (by 
 The multiple `input` elements share a [form field error indicator][] that identifies the elements unfilled (by referencing their labels) and describes the cause of the error.
 
 ```html
-<script>
-	function processForm() {
-		document.getElementById('error').innerText = ''
-		if (document.getElementById('name').value.length === 0) {
-			document.getElementById('error').innerText += 'You must fill the name field. '
-		}
-		var color = document.forms[0].color.value
-		if (color.length === 0) {
-			document.getElementById('error').innerText += 'You must pick a color.'
-		}
-	}
-</script>
-
 <form>
-	<h2 id="error"></h2>
+	<h2 id="error">You must fill the name field. You must pick a color.</h2>
 	<label for="name">Name (required)</label>
 	<input type="text" id="name" required />
 	<br />
@@ -121,13 +95,11 @@ The multiple `input` elements share a [form field error indicator][] that identi
 	<label><input type="radio" name="color" value="blue" required />Blue</label>
 	<label><input type="radio" name="color" value="yellow" />Yellow</label>
 	<br />
-	<input type="button" value="Submit" onclick="processForm()" />
+	<input type="button" value="Submit" />
 </form>
 ```
 
-### Failed
-
-#### Failed Example 1
+#### Passed Example 3
 
 The `input` element does not have a [form field error indicator][].
 
@@ -139,81 +111,46 @@ The `input` element does not have a [form field error indicator][].
 </form>
 ```
 
-#### Failed Example 2
+### Failed
+
+#### Failed Example 1
 
 The multiple `input` elements share a [form field error indicator][] but its message does not identify the elements that caused the error nor describes the cause of the error.
 
 ```html
-<script>
-	function processForm() {
-		document.getElementById('error').innerText = ''
-		var age = document.getElementById('age').value
-		if (!age || isNaN(age) || age < 1) {
-			document.getElementById('error').innerText = 'Please fill the field correctly.'
-		}
-		var name = document.getElementById('name').value
-		if (!name) {
-			document.getElementById('error').innerText = 'Please fill the field correctly.'
-		}
-	}
-</script>
-
 <form>
-	<div id="error"></div>
+	<div id="error">Please fill the field correctly.</div>
 	<label for="age">Age (years)</label>
 	<input type="number" id="age" />
 	<label for="name">Name</label>
 	<input type="text" id="name" />
-	<input type="button" value="Submit" onclick="processForm()" />
+	<input type="button" value="Submit" />
+</form>
+```
+
+#### Failed Example 2
+
+The `input` elements has a [form field error indicator][] but its message does not describe the cause of the error.
+
+```html
+<form>
+	<label for="age">Age (years)</label>
+	<input type="number" id="age" />
+	<span id="error">Please enter a correct age.</span><br />
+	<input type="button" value="Submit" />
 </form>
 ```
 
 #### Failed Example 3
 
-The `input` elements has a [form field error indicator][] but its message does not describe the cause of the error.
-
-```html
-<script>
-	function processForm() {
-		document.getElementById('error').innerText = ''
-		var age = document.getElementById('age').value
-		if (!age || isNaN(age) || age < 1) {
-			document.getElementById('error').innerText = 'Please enter a correct age.'
-		}
-	}
-</script>
-
-<form>
-	<label for="age">Age (years)</label>
-	<input type="number" id="age" />
-	<span id="error"></span><br />
-	<input type="button" value="Submit" onclick="processForm()" />
-</form>
-```
-
-#### Failed Example 4
-
 The `input` element has a [form field error indicator][] that identifies it (by referencing its label) and describes the cause of the error but the message is not [visible][].
 
 ```html
-<script>
-	function processForm() {
-		document.getElementById('error').innerText = ''
-		var age = document.getElementById('age').value
-		console.log(isNaN(age))
-		if (!age || isNaN(age)) {
-			document.getElementById('error').innerText = 'Age must be a number'
-		} else if (age < 1) {
-			document.getElementById('error').innerText = 'Age must be at least 1'
-		}
-	}
-</script>
-
 <form>
 	<label for="age">Age (years)</label>
-	<input type="number" id="age" />
-	<span id="error" style="position: absolute; top: -9999px; left: -9999px;"></span><br />
-	<input type="button" value="Submit" onclick="processForm()" />
+	<input type="number" id="age" value="0" />
+	<span id="error" style="display: none;">Age must be at least 1</span><br />
+	<input type="button" value="Submit" aria-describedby="error" />
 </form>
 ```
 
@@ -222,24 +159,11 @@ The `input` element has a [form field error indicator][] that identifies it (by 
 The `input` element has a [form field error indicator][] that identifies it (by referencing its label) and describes the cause of the error but the message is not [included in the accessibility tree][].
 
 ```html
-<script>
-	function processForm() {
-		document.getElementById('error').innerText = ''
-		var age = document.getElementById('age').value
-		console.log(isNaN(age))
-		if (!age || isNaN(age)) {
-			document.getElementById('error').innerText = 'Age must be a number'
-		} else if (age < 1) {
-			document.getElementById('error').innerText = 'Age must be at least 1'
-		}
-	}
-</script>
-
 <form>
 	<label for="age">Age (years)</label>
-	<input type="number" id="age" />
-	<span id="error" aria-hidden="true"></span><br />
-	<input type="button" value="Submit" onclick="processForm()" />
+	<input type="number" id="age" value="0" />
+	<span id="error" aria-hidden="true">Age must be at least 1</span><br />
+	<input type="button" value="Submit" />
 </form>
 ```
 

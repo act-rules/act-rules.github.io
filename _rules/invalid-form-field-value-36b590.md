@@ -16,9 +16,9 @@ input_aspects:
   - Language
 acknowledgements:
   authors:
-	- Carlos Duarte
-	- João Vicente
-	- Wilco Fiers
+    - Carlos Duarte
+    - João Vicente
+    - Wilco Fiers
 ---
 
 ## Applicability
@@ -36,7 +36,9 @@ For each test target with a [form field error indicator][], at least one of the 
 
 **Note**: This rule does not test [error indicators][form field error indicator] shown on a different page than the one of the test target.
 
-**Note**: A single [form field error indicator][] can be related to multiple test targets.
+**Note**: A single [form field error indicator][] can be related to multiple test targets. For example, an error message at the top of a form can list all the form fields that are required and are empty. 
+
+**Note**: A single test target can be related to multiple [form field error indicators][form field error indicator]. For example, a text field can have a red border around it, an error icon adjacent to it, an error message below it, and another error message at the top of the form. All of these are error indicators for the same form field.
 
 ## Expectation 2
 

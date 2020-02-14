@@ -22,16 +22,17 @@ acknowledgements:
 
 The rule applies to any [visible][] [HTML element][] in an [HTML document][] if:
 
-- the `innerText` property of the [element][html element] changes without the user [activating][activate] or [focusing][focus] any [element][html element] in the same [HTML document][];
+- the `innerText` property of the [element][html element] changes;
 - the [element][html element] does not have [children][child] whose `innerText` property is also changed;
 - the change happens after the [readiness][document readiness] of the [HTML document][] the [element][html element] belongs to is equal to "complete";
+- the change happens when the [last activation timestamp][] of the [window][] the [HTML document][] is associated with has the value "positive infinity";
 - it is not the only [content][] in the [HTML document][].
 
-## Expectation
+## Expectation 1
 
-For the test target a [user interface component][] is provided to pause, stop or hide the change of the [text content][].
+For the test target a [user interface component][] is provided to pause, stop, hide or alter the frequency of the changes of the [text content][].
 
-**Note**: If there is more than one test target, a single [user interface component][] may be used to pause, stop or hide changing all test targets.
+**Note**: If there is more than one test target, a single [user interface component][] may be used to pause, stop, hide or alter the frequency for all test targets.
 
 ## Assumptions
 
@@ -40,7 +41,7 @@ For the test target a [user interface component][] is provided to pause, stop or
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+[Activation triggering](https://html.spec.whatwg.org/#activation-triggering-input-event) is not consistently supported across browsers. The same event may or may not change the value of the [last activation timestamp][] depending on the browser. 
 
 ## Background
 
@@ -184,7 +185,9 @@ The automatically updating text content is the only content in the document.
 [g186]: https://www.w3.org/WAI/WCAG21/Techniques/general/G186
 [html document]: https://dom.spec.whatwg.org/#html-document
 [html element]: https://html.spec.whatwg.org/multipage/dom.html#htmlelement
+[last activation timestamp]: https://html.spec.whatwg.org/#last-activation-timestamp
 [sc 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
 [text content]: #text-content 'Definition of text content'
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
 [visible]: #visible 'Definition of visible'
+[window]: https://html.spec.whatwg.org/#window

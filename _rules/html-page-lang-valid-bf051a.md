@@ -10,6 +10,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:H57: # Using the language attribute on the HTML element
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
 acknowledgements:
@@ -26,7 +31,7 @@ This rule applies to any [document element](https://dom.spec.whatwg.org/#documen
 - is in a [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context); and
 - has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`.
 
-**Note:** `html` elements within `iframe` and `object` elements are not applicable as `iframe` and `object` elements create [nested browsing contexts](https://html.spec.whatwg.org/#nested-browsing-context). However, as these elements are meant to provide a layer of isolation, the language of the [parent browsing context](https://html.spec.whatwg.org/#parent-browsing-context) may not be inherited. This should be tested separately.
+**Note:** `html` elements within `iframe` and `object` elements are not applicable as `iframe` and `object` elements create [nested browsing contexts](https://html.spec.whatwg.org/#nested-browsing-context). These elements can embed any third party content, making testing difficult. As these elements are meant to provide a layer of isolation, the language of the [parent browsing context](https://html.spec.whatwg.org/#parent-browsing-context) may not be inherited. Thus, embedded documents with an invalid `lang` attribute can cause accessibility issues. This should be tested separately.
 
 ## Expectation
 
@@ -34,7 +39,7 @@ For each test target, the `lang` attribute has a [valid language subtag](#valid-
 
 ## Assumptions
 
-This rule assumes that the presence of a `lang` attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
+The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page).
 
 ## Accessibility Support
 

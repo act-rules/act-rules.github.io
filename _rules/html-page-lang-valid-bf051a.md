@@ -31,7 +31,7 @@ This rule applies to any [document element](https://dom.spec.whatwg.org/#documen
 - is in a [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context); and
 - has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`.
 
-**Note:** `html` elements within `iframe` and `object` elements are not applicable as `iframe` and `object` elements create [nested browsing contexts](https://html.spec.whatwg.org/#nested-browsing-context). However, as these elements are meant to provide a layer of isolation, the language of the [parent browsing context](https://html.spec.whatwg.org/#parent-browsing-context) may not be inherited. This should be tested separately.
+**Note:** `html` elements within `iframe` and `object` elements are not applicable as `iframe` and `object` elements create [nested browsing contexts](https://html.spec.whatwg.org/#nested-browsing-context). These elements can embed any third party content, making testing difficult. As these elements are meant to provide a layer of isolation, the language of the [parent browsing context](https://html.spec.whatwg.org/#parent-browsing-context) may not be inherited. Thus, embedded documents with an invalid `lang` attribute can cause accessibility issues. This should be tested separately.
 
 ## Expectation
 

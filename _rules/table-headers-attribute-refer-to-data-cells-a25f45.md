@@ -25,9 +25,7 @@ This rule applies to any `headers` attribute specified on a [`cell`][] within a 
 
 ## Expectation
 
-Each target attribute is [a set of space separated IDs][], each of which is the ID of an element, that:
-
-1. is a [`cell`][] of the same [`table`][] as the target element.
+Each target attribute is [a set of space separated IDs][], each of which is the ID of an element, that is a [`cell`][] of the same [`table`][] as the target element.
 
 ## Assumptions
 
@@ -36,7 +34,7 @@ Each target attribute is [a set of space separated IDs][], each of which is the 
 
 ## Accessibility Support
 
-The `headers` attribute is not supported by some popular assistive technologies as a way to assign headers in a table. Passing this rule can still cause issues for users of those assistive technologies.
+There are no major accessibility support issues known for this rule.
 
 ## Background
 
@@ -199,35 +197,32 @@ The `headers` attribute on the cell refers to `th` element which is not the same
 
 #### Failed Example 1
 
-The `headers` attribute on the cell refers to an element outside the same `table`.
+The `td` element has a `headers` attribute referring to an ID that does not exist within the same `table`. Here the referenced ID is mistyped.
 
 ```html
-<span id="elmOutsideTable">Project Costs</span>
 <table>
 	<tr>
 		<th id="headerOfColumn">Projects</th>
 	</tr>
 	<tr>
-		<td headers="elmOutsideTable">15%</td>
+		<td headers="headOfColumn">15%</td>
 	</tr>
 </table>
 ```
 
 #### Failed Example 2
 
-The `td` element has a `headers` attribute referring to an ID that does not exist within the same `table` (or within the [document](https://dom.spec.whatwg.org/#concept-document)). Even if some of the ID referred to exist, a single non-existing one is enough to fail the rule.
+The `td` element has a `headers` attribute referring to it's own ID.
 
 ```html
 <table>
 	<tr>
-		<th colspan="2" id="header1">Projects</th>
+		<th>Event Type</th>
 	</tr>
 	<tr>
-		<th id="e1" headers="header1">1</th>
-		<th id="e2" headers="header1">2</th>
-	</tr>
-	<tr>
-		<td colspan="2" headers="header1 e1 NOT-EXIST">15%</td>
+		<td id="headerBday" headers="headerBday">
+			Birthday
+		</td>
 	</tr>
 </table>
 ```
@@ -344,8 +339,8 @@ The `table` is not [included in the accessibility tree][].
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [visible]: #visible 'Definition of visible'
 [decorative]: #marked-as-decorative 'Definition of marked as decorative'
-[`cell`]: https://www.w3.org/TR/html52/tabular-data.html#cell 'Definition of cell'
+[`cell`]: https://html.spec.whatwg.org/#concept-cell 'Definition of cell'
 [semantic role]: #semantic-role 'Definition of semantic role'
-[a set of space separated ids]: https://www.w3.org/TR/html50/infrastructure.html#set-of-space-separated-tokens 'Space separated tokens'
-[`table`]: https://www.w3.org/TR/html50/tabular-data.html#concept-table 'Definition of table'
+[a set of space separated ids]: https://html.spec.whatwg.org/#set-of-space-separated-tokens 'Space separated tokens'
+[`table`]: https://html.spec.whatwg.org/#concept-table 'Definition of table'
 [computes an adequate fallback header]: https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics 'Forming relationships between data cells and header cells'

@@ -1,6 +1,6 @@
 ---
 id: a73be2
-name: List elements follow context model
+name: List elements follow content model
 rule_type: atomic
 description: |
   This rule checks that list elements follow content model
@@ -43,9 +43,7 @@ _There are no major accessibility support issues known for this rule._
 - [HTML Specification - Flow content](https://html.spec.whatwg.org/#flow-content)
 - [HTML Specification - Palpable content](https://html.spec.whatwg.org/#palpable-content)
 
-
 ## Test Cases
-
 
 [semantic role]: #semantic-role 'Definition of semantic role'
 [implicit semantic role]: #implicit-role 'Definition of implicit semantic role'

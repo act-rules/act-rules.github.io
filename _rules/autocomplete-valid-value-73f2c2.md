@@ -20,7 +20,7 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any HTML `input`, `select` and `textarea` element with an `autocomplete` attribute that is a set of one or more [space separated tokens](https://www.w3.org/TR/html52/infrastructure.html#set-of-space-separated-tokens), except if one of the following is true:
+The rule applies to any HTML `input`, `select` and `textarea` element with an `autocomplete` attribute that is a set of one or more [space separated tokens](https://html.spec.whatwg.org/#set-of-space-separated-tokens), except if one of the following is true:
 
 - The element is not [visible](#visible), and not [included in the accessibility tree](#included-in-the-accessibility-tree)
 - The element is an `input` element with a `type` property of `hidden`, `button`, `submit` or `reset`
@@ -33,7 +33,7 @@ The `autocomplete` attribute is a single term, or a space separated list of term
 
 ## Expectation 2
 
-The autocomplete term(s) follow the [HTML 5.2 specification](https://www.w3.org/TR/html52/sec-forms.html#autofill-detail-tokens), which requires that it/they match the following in the correct order:
+The autocomplete term(s) follow the [HTML specification - Autofill detail tokens](https://html.spec.whatwg.org/#autofill-detail-tokens), which requires that it/they match the following in the correct order:
 
 1. Has a value that starts with "section-" _(optional)_
 2. Has either "shipping" or "billing" _(optional)_
@@ -60,7 +60,7 @@ The intent of this rule is to ensure that the `autocomplete` attribute can be us
 
 - [Understanding Success Criterion 1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html)
 - [Definition: programmatically determined (programmatically determinable)](https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable)
-- [Autofill](https://www.w3.org/TR/html52/sec-forms.html#sec-autofill)
+- [Autofill](https://html.spec.whatwg.org/#autofill)
 
 ## Test Cases
 

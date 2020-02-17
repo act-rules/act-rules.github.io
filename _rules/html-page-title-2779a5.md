@@ -47,7 +47,7 @@ Each target element has at least one [descendant](https://dom.spec.whatwg.org/#c
 
 **Note:** The `title` element exists in other namespaces such as SVG. These are not HTML `title` elements and should be ignored for this rule.
 
-**Note:** The [HTML 5.2 specification](https://www.w3.org/TR/html52/document-metadata.html#the-title-element) requires that a document only has one `title` element, and that it is a child of the `head` element of a document. However, HTML 5.2 also describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG.
+**Note:** The [HTML specification - The `title` element](https://html.spec.whatwg.org/#the-title-element) requires that a document only has one `title` element, and that it is a child of the `head` element of a document. However, HTML 5.2 also describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG.
 
 ## Expectation 2
 
@@ -66,7 +66,7 @@ _There are no major accessibility support issues known for this rule._
 - [Understanding Success Criterion 2.4.2: Page Titled](https://www.w3.org/WAI/WCAG21/Understanding/page-titled)
 - [G88: Providing descriptive titles for Web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G88)
 - [H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG21/Techniques/html/H25)
-- [HTML 5.2: the `title` element](https://www.w3.org/TR/html52/document-metadata.html#the-title-element)
+- [HTML Specification - The `title` element](https://html.spec.whatwg.org/#the-title-element)
 
 ## Test Cases
 

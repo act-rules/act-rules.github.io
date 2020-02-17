@@ -1,6 +1,6 @@
 ---
 id: ac7dc6
-name: Video only element has description track
+name: '`video` element visual-only content has description track'
 rule_type: atomic
 description: |
   This rule checks that description tracks that come with non-streaming `video` elements, without audio, are descriptive.
@@ -10,14 +10,16 @@ input_aspects:
   - CSS Styling
   - Audio output
   - Visual output
-authors:
-  - Wilco Fiers
-  - Brian Bors
+  - Language
+acknowledgements:
+  authors:
+    - Wilco Fiers
+    - Brian Bors
 ---
 
 ## Applicability
 
-The rule applies to any [non-streaming](#non-streaming-media-element) `video` element [visible](#visible) where the video doesn't contain audio and does contain a `track` element with a `kind="descriptions"` attribute.
+The rule applies to any [non-streaming](#non-streaming-media-element) `video` element [visible][] where the video doesn't contain audio and does contain a `track` element with a `kind="descriptions"` attribute.
 
 ## Expectation
 
@@ -27,11 +29,12 @@ _Note_: Multiple description `track` elements may be useful for different langua
 
 ## Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
-Currently the description track is not supported by most assistive technology. Video players may be able to work around the lack of support for the discription track by using aria-live but few do this today.
+Currently the description track is not supported by most assistive technology. Video players may be able to work around the lack of support for the description track by using aria-live but few do this today.
 
 ## Background
 
@@ -47,11 +50,13 @@ Currently the description track is not supported by most assistive technology. V
 A video only element with a track element that contains descriptions.
 
 ```html
-<video controls>
-	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
-	<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
-</video>
+<html lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
+		<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
+	</video>
+</html>
 ```
 
 ### Failed
@@ -61,11 +66,13 @@ A video only element with a track element that contains descriptions.
 A video only element with a track element that contains incorrect descriptions.
 
 ```html
-<video controls>
-	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
-	<track kind="descriptions" src="rabbit-video-incorrect-descriptions.vtt" />
-</video>
+<html lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
+		<track kind="descriptions" src="/test-assets/rabbit-video/incorrect-descriptions.vtt" />
+	</video>
+</html>
 ```
 
 ### Inapplicable
@@ -75,22 +82,26 @@ A video only element with a track element that contains incorrect descriptions.
 A video only element without a track element.
 
 ```html
-<video controls>
-	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
-</video>
+<html lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
+	</video>
+</html>
 ```
 
 #### Inapplicable Example 2
 
-A video only element that is not visible on the page.
+A video only element that is not [visible][].
 
 ```html
-<video controls style="display: none;">
-	<source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/silent.webm" type="video/webm" />
-	<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
-</video>
+<html lang="en">
+	<video controls style="display: none;">
+		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
+		<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
+	</video>
+</html>
 ```
 
 #### Inapplicable Example 3
@@ -98,9 +109,13 @@ A video only element that is not visible on the page.
 A video element with audio.
 
 ```html
-<video controls>
-	<source src="../test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="../test-assets/rabbit-video/video.webm" type="video/webm" />
-	<track kind="descriptions" src="rabbit-video-descriptions.vtt" />
-</video>
+<html lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+		<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
+	</video>
+</html>
 ```
+
+[visible]: #visible 'Definition of visible'

@@ -1,6 +1,6 @@
 ---
 id: 1a02b0
-name: Video element transcript
+name: '`video` element visual content has transcript'
 rule_type: atomic
 description: |
   This rule checks that non-streaming `video` elements have all audio and visual information available in a transcript.
@@ -15,24 +15,31 @@ input_aspects:
   - CSS Styling
   - Audio output
   - Visual output
-authors:
-  - Wilco Fiers
-  - Brian Bors
+  - Language
+acknowledgements:
+  authors:
+    - Wilco Fiers
+    - Brian Bors
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'tag-pair'
 ---
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible](#visible) where the video contains audio.
+The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video contains audio.
 
 ## Expectation
 
 A text transcript containing all the visual and auditory information of the test target is available, either on the page or available through a link.
 
-**Note**: A "text transcript" in the context of this rule is defined in WCAG 2 as a [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
+**Note:** A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
 
 ## Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
@@ -55,13 +62,15 @@ There are no major accessibility support issues known for this rule.
 A video element with a text transcript on the same page.
 
 ```html
+<html lang="en">`
 <video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+  <source src="/test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
+  <source src="/test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
 <p>The above video shows a giant fat rabbit climbing out of a hole in the ground.
 He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
+</html>
 ```
 
 #### Passed Example 2
@@ -69,11 +78,13 @@ Then he stops to scratch his bottom.</p>
 A video element with a link to a text transcript on a different page.
 
 ```html
+<html lang="en">`
 <video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+  <source src="/test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
+  <source src="/test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
-<a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
+<a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
+</html>
 ```
 
 ### Failed
@@ -83,13 +94,15 @@ A video element with a link to a text transcript on a different page.
 A video element with an incorrect text transcript on the same page.
 
 ```html
+<html lang="en">`
 <video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+  <source src="/test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
+  <source src="/test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
 <p>The above video shows a giant fat dog climbing out of a hole in the ground.
 He stretches, yaws, and then starts walking.
 Then he stops to scratch his bottom.</p>
+</html>
 ```
 
 #### Failed Example 2
@@ -97,25 +110,29 @@ Then he stops to scratch his bottom.</p>
 A video element with a link to an incorrect text transcript on a different page.
 
 ```html
+<html lang="en">`
 <video controls>
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+  <source src="/test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
+  <source src="/test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
-<a href="../test-assets/rabbit-video/incorrect-transcript.html">Transcript</p>
+<a href="/test-assets/rabbit-video/incorrect-transcript.html">Transcript</a>
+</html>
 ```
 
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-A video element that is not visible on the page.
+A video element that is not [visible][].
 
 ```html
+<html lang="en">`
 <video controls style="display: none;">
-  <source src="../test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/video.webm" type="video/webm"></source>
+  <source src="/test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
+  <source src="/test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
-<a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
+<a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
+</html>
 ```
 
 #### Inapplicable Example 2
@@ -123,9 +140,13 @@ A video element that is not visible on the page.
 A video element without audio.
 
 ```html
+<html lang="en">`
 <video controls>
-  <source src="../test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
-  <source src="../test-assets/rabbit-video/silent.webm" type="video/webm"></source>
+  <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
+  <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<a href="../test-assets/rabbit-video/transcript.html">Transcript</p>
+<a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
+</html>
 ```
+
+[visible]: #visible 'Definition of visible'

@@ -20,13 +20,7 @@ The WCAG-ACT-RULES-CG rule design builds on WCAG 2.x and its supporting document
 
 ### Rule name and identifier
 
-The rule must have a unique name, preferably a two or three word topic, as well as an identifier. This uses the following format: **SC#-#-#-identifier**
-
-- **SC#-#-#**: This is an identifier for the criterion to which the test case applies. #-#-# stands for the number of that criterion, such as SC4-1-2.
-
-- **+SC#-#-#**: This can be used if the test case applies to multiple success criteria, such as SC1-1-1+SC4-1-2-identifier. The numbers are in the same order as they are used in WCAG.
-
-- **identifier**: This must be a lower case identifier of the test, preferably no more then 3 words. It can only contain alphanumeric values or a dash (-).
+The rule must have a unique name.
 
 ### Test aspects
 
@@ -51,7 +45,7 @@ Many accessibility evaluations (especially automated tools) make assumptions abo
 
 While most assumptions relate to the rule itself, there are some assumptions that apply at other stages of the evaluation:
 
-- It is assumed that the tested web page is the one that has to conform to WCAG 2.0 and that there is no [conforming alternative version](http://www.w3.org/TR/WCAG20/#conforming-alternate-versiondef).
+- It is assumed that the tested web page is the one that has to conform to WCAG 2.0 and that there is no [conforming alternative version](https://www.w3.org/TR/WCAG21/#dfn-conforming-alternate-version).
 
 - It is assumed that the following technologies are accessibility supported: HTML, CSS, WAI-ARIA, ... (See also WCAG-ACT-RULES-CG's [explanation on Accessibility Support](accessibility-support.html)).
 

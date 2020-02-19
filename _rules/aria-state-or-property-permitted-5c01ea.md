@@ -58,7 +58,7 @@ The `aria-pressed` [state][] is [supported][] for the [semantic role][] `button`
 
 #### Passed Example 2
 
-The `aria-pressed` [state][] is [supported][] for the [semantic role][] `button` which is the [implicit role][] for `button` elements.
+The `aria-pressed` [state][] is [supported][] for the [semantic role][] `button`, which is the [implicit role][] for `button` elements.
 
 ```html
 <button aria-pressed="false">My button</button>

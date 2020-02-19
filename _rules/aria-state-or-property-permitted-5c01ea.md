@@ -108,7 +108,7 @@ The `aria-sort` [property][] is neither [inherited][], [supported][], nor [requi
 
 #### Failed Example 2
 
-The `aria-sort` [property][] is neither [inherited][], [supported][], nor [required][] for the [semantic role][] `button` which is the [implicit role][] for the `button` element.
+The `aria-sort` [property][] is neither [inherited][], [supported][], nor [required][] for the [semantic role][] `button`, which is the [implicit role][] for the `button` element.
 
 ```html
 <button aria-sort="">Sort by year</button>

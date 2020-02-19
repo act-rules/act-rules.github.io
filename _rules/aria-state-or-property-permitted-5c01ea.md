@@ -50,7 +50,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The `aria-pressed` [state][] is [supported][] for the [semantic role][] `button` which is the [explicit role][] of this `div` element.
+The `aria-pressed` [state][] is [supported][] for the [semantic role][] `button`, which is the [explicit role][] of this `div` element.
 
 ```html
 <div role="button" aria-pressed="false">My button</div>

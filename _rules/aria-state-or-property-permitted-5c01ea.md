@@ -126,7 +126,7 @@ This `div` element has no [WAI-ARIA state or property][].
 
 #### Inapplicable Example 2
 
-This `div` element is not [included in the accessibility tree][], hence its [WAI-ARIA state or property][] are not checked.
+This `div` element is not [included in the accessibility tree][], hence its [WAI-ARIA state or property][] is not checked.
 
 ```html
 <div role="button" aria-sort="" style="display:none;"></div>

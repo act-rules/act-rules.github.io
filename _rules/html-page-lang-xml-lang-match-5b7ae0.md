@@ -124,29 +124,13 @@ This rule does not apply to `html` elements with an empty (`""`) `xml:lang` attr
 
 #### Inapplicable Example 4
 
-This rule does not apply to `html` elements whose `lang` attribute is not a [valid language subtag][], such as the empty string.
-
-```html
-<html lang="" xml:lang=""></html>
-```
-
-#### Inapplicable Example 5
-
-This rule does not apply to `html` elements whose `lang` attribute is not a [valid language subtag][], such as only ASCII whitespace.
-
-```html
-<html lang=" " xml:lang=""></html>
-```
-
-#### Inapplicable Example 6
-
 This rule does not apply to elements without a `xml:lang` attribute.
 
 ```html
 <html lang="en"></html>
 ```
 
-#### Inapplicable Example 7
+#### Inapplicable Example 5
 
 This rule does not apply to `math` elements.
 

@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 696,
+  "count": 697,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -6416,10 +6416,10 @@
       }
     },
     {
-      "testcaseId": "c3cd42d8981bc35c85ebbf951d59d01023e32736",
+      "testcaseId": "a0e1c0cf69971fb9faf31a5a1180cf9124aa8db9",
       "testcaseTitle": "Failed Example 1",
-      "url": "https://act-rules.github.io/testcases/bf051a/c3cd42d8981bc35c85ebbf951d59d01023e32736.html",
-      "relativePath": "testcases/bf051a/c3cd42d8981bc35c85ebbf951d59d01023e32736.html",
+      "url": "https://act-rules.github.io/testcases/bf051a/a0e1c0cf69971fb9faf31a5a1180cf9124aa8db9.html",
+      "relativePath": "testcases/bf051a/a0e1c0cf69971fb9faf31a5a1180cf9124aa8db9.html",
       "expected": "failed",
       "ruleId": "bf051a",
       "ruleName": "HTML page language is valid",
@@ -6440,34 +6440,10 @@
       }
     },
     {
-      "testcaseId": "bfe0917b285b0c3b00e45fca809e075a753d7839",
+      "testcaseId": "e806126ba40cc2ee3da9d01afb217bded3b816bc",
       "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/bf051a/bfe0917b285b0c3b00e45fca809e075a753d7839.html",
-      "relativePath": "testcases/bf051a/bfe0917b285b0c3b00e45fca809e075a753d7839.html",
-      "expected": "failed",
-      "ruleId": "bf051a",
-      "ruleName": "HTML page language is valid",
-      "rulePage": "https://act-rules.github.io/rules/bf051a",
-      "ruleAccessibilityRequirements": {
-        "wcag20:3.1.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H57": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "f3825f1bfe1b8948477c142f289f3c03565ee3d4",
-      "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/bf051a/f3825f1bfe1b8948477c142f289f3c03565ee3d4.html",
-      "relativePath": "testcases/bf051a/f3825f1bfe1b8948477c142f289f3c03565ee3d4.html",
+      "url": "https://act-rules.github.io/testcases/bf051a/e806126ba40cc2ee3da9d01afb217bded3b816bc.html",
+      "relativePath": "testcases/bf051a/e806126ba40cc2ee3da9d01afb217bded3b816bc.html",
       "expected": "failed",
       "ruleId": "bf051a",
       "ruleName": "HTML page language is valid",
@@ -6530,10 +6506,10 @@
       }
     },
     {
-      "testcaseId": "bd91d04e04dcdbb60ab1f0c88177dcb229fc1102",
+      "testcaseId": "cde90a850f13c443f9551e962583df6fd829a5ad",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/5b7ae0/bd91d04e04dcdbb60ab1f0c88177dcb229fc1102.html",
-      "relativePath": "testcases/5b7ae0/bd91d04e04dcdbb60ab1f0c88177dcb229fc1102.html",
+      "url": "https://act-rules.github.io/testcases/5b7ae0/cde90a850f13c443f9551e962583df6fd829a5ad.html",
+      "relativePath": "testcases/5b7ae0/cde90a850f13c443f9551e962583df6fd829a5ad.html",
       "expected": "passed",
       "ruleId": "5b7ae0",
       "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
@@ -6548,10 +6524,10 @@
       }
     },
     {
-      "testcaseId": "cde90a850f13c443f9551e962583df6fd829a5ad",
+      "testcaseId": "bd91d04e04dcdbb60ab1f0c88177dcb229fc1102",
       "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/5b7ae0/cde90a850f13c443f9551e962583df6fd829a5ad.html",
-      "relativePath": "testcases/5b7ae0/cde90a850f13c443f9551e962583df6fd829a5ad.html",
+      "url": "https://act-rules.github.io/testcases/5b7ae0/bd91d04e04dcdbb60ab1f0c88177dcb229fc1102.html",
+      "relativePath": "testcases/5b7ae0/bd91d04e04dcdbb60ab1f0c88177dcb229fc1102.html",
       "expected": "passed",
       "ruleId": "5b7ae0",
       "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
@@ -6570,6 +6546,24 @@
       "testcaseTitle": "Failed Example 1",
       "url": "https://act-rules.github.io/testcases/5b7ae0/6da071ec0a0d593e34312963e5bf39d15dbfcff6.html",
       "relativePath": "testcases/5b7ae0/6da071ec0a0d593e34312963e5bf39d15dbfcff6.html",
+      "expected": "failed",
+      "ruleId": "5b7ae0",
+      "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
+      "rulePage": "https://act-rules.github.io/rules/5b7ae0",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "d0c97864c4b9c98a3b0bd4c45d7c5866625c572a",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/5b7ae0/d0c97864c4b9c98a3b0bd4c45d7c5866625c572a.html",
+      "relativePath": "testcases/5b7ae0/d0c97864c4b9c98a3b0bd4c45d7c5866625c572a.html",
       "expected": "failed",
       "ruleId": "5b7ae0",
       "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
@@ -6620,10 +6614,10 @@
       }
     },
     {
-      "testcaseId": "665108f327fc16f723810acad88adbac600e8cf5",
+      "testcaseId": "02d1b673b395a741734d8516491be54f74d8a783",
       "testcaseTitle": "Inapplicable Example 3",
-      "url": "https://act-rules.github.io/testcases/5b7ae0/665108f327fc16f723810acad88adbac600e8cf5.html",
-      "relativePath": "testcases/5b7ae0/665108f327fc16f723810acad88adbac600e8cf5.html",
+      "url": "https://act-rules.github.io/testcases/5b7ae0/02d1b673b395a741734d8516491be54f74d8a783.xml",
+      "relativePath": "testcases/5b7ae0/02d1b673b395a741734d8516491be54f74d8a783.xml",
       "expected": "inapplicable",
       "ruleId": "5b7ae0",
       "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
@@ -6638,10 +6632,10 @@
       }
     },
     {
-      "testcaseId": "1a037dc5d07913a0442421089f4844ee44fcc07c",
+      "testcaseId": "24fd835bb3314fafe0c822f640869bb93dae23d3",
       "testcaseTitle": "Inapplicable Example 4",
-      "url": "https://act-rules.github.io/testcases/5b7ae0/1a037dc5d07913a0442421089f4844ee44fcc07c.html",
-      "relativePath": "testcases/5b7ae0/1a037dc5d07913a0442421089f4844ee44fcc07c.html",
+      "url": "https://act-rules.github.io/testcases/5b7ae0/24fd835bb3314fafe0c822f640869bb93dae23d3.xhtml",
+      "relativePath": "testcases/5b7ae0/24fd835bb3314fafe0c822f640869bb93dae23d3.xhtml",
       "expected": "inapplicable",
       "ruleId": "5b7ae0",
       "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
@@ -6656,10 +6650,10 @@
       }
     },
     {
-      "testcaseId": "a0988c3ca48c9dd72da4c882e1a5d5d5d6d6b90d",
+      "testcaseId": "a6dcaf4d1cea0415f98791051548131d3eee2f89",
       "testcaseTitle": "Inapplicable Example 5",
-      "url": "https://act-rules.github.io/testcases/5b7ae0/a0988c3ca48c9dd72da4c882e1a5d5d5d6d6b90d.html",
-      "relativePath": "testcases/5b7ae0/a0988c3ca48c9dd72da4c882e1a5d5d5d6d6b90d.html",
+      "url": "https://act-rules.github.io/testcases/5b7ae0/a6dcaf4d1cea0415f98791051548131d3eee2f89.html",
+      "relativePath": "testcases/5b7ae0/a6dcaf4d1cea0415f98791051548131d3eee2f89.html",
       "expected": "inapplicable",
       "ruleId": "5b7ae0",
       "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
@@ -6692,10 +6686,28 @@
       }
     },
     {
-      "testcaseId": "02d1b673b395a741734d8516491be54f74d8a783",
+      "testcaseId": "c4886c9dee8d8967df6a8f8a73eec3fb769910cb",
       "testcaseTitle": "Inapplicable Example 7",
-      "url": "https://act-rules.github.io/testcases/5b7ae0/02d1b673b395a741734d8516491be54f74d8a783.xml",
-      "relativePath": "testcases/5b7ae0/02d1b673b395a741734d8516491be54f74d8a783.xml",
+      "url": "https://act-rules.github.io/testcases/5b7ae0/c4886c9dee8d8967df6a8f8a73eec3fb769910cb.html",
+      "relativePath": "testcases/5b7ae0/c4886c9dee8d8967df6a8f8a73eec3fb769910cb.html",
+      "expected": "inapplicable",
+      "ruleId": "5b7ae0",
+      "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
+      "rulePage": "https://act-rules.github.io/rules/5b7ae0",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "665108f327fc16f723810acad88adbac600e8cf5",
+      "testcaseTitle": "Inapplicable Example 8",
+      "url": "https://act-rules.github.io/testcases/5b7ae0/665108f327fc16f723810acad88adbac600e8cf5.html",
+      "relativePath": "testcases/5b7ae0/665108f327fc16f723810acad88adbac600e8cf5.html",
       "expected": "inapplicable",
       "ruleId": "5b7ae0",
       "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",

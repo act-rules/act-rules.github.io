@@ -37,6 +37,8 @@
 - DOCX
 - DPUB
 - DNS
+- BCP
+- bcp
 - Esc # esc key on a keyboard
 - url
 - voiceover
@@ -60,6 +62,7 @@
 - EARL10-Schema
 - labelable
 - merchantability
+- de-hello
 - 14pt
 - 18pt
 - Helvetica

@@ -35,7 +35,7 @@ This rule applies to any [document element](https://dom.spec.whatwg.org/#documen
 
 ## Expectation
 
-For each test target, the `lang` attribute has a [valid language subtag](#valid-language-subtag).
+For each test target, the `lang` attribute has a [valid language subtag][].
 
 ## Assumptions
 
@@ -83,7 +83,7 @@ This `html` element has a `lang` attribute value that is a [valid language subta
 This `html` element has a `lang` attribute whose value is not a [valid language subtag][].
 
 ```html
-<html lang="xyz"></html>
+<html lang="em-US"></html>
 ```
 
 #### Failed Example 2
@@ -91,15 +91,7 @@ This `html` element has a `lang` attribute whose value is not a [valid language 
 This `html` element has a `lang` attribute whose value is not a [valid language subtag][].
 
 ```html
-<html lang="123"></html>
-```
-
-#### Failed Example 3
-
-This `html` element has a `lang` attribute whose value is not a [valid language subtag][].
-
-```html
-<html lang="#!"></html>
+<html lang="#1"></html>
 ```
 
 ### Inapplicable

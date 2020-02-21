@@ -74,7 +74,7 @@ The `aria-busy` [state][] is a [global][] [state][] that is [supported][] by all
 
 #### Passed Example 4
 
-The `aria-label` [state][] is [global][] (and thus [inherited][] for all [semantic role][]).
+The `aria-label` [state][] is [global][] and thus [inherited][] for all [semantic role][].
 
 ```html
 <div role="button" aria-label="OK"></div>
@@ -110,6 +110,16 @@ WAI-ARIA states and properties with empty value, specified as an empty string, a
 
 ```html
 <div role="combobox" aria-controls="">My combobox</div>
+```
+
+#### Passed Example 9
+
+The `aria-label` [state][] is [global][] and thus [inherited][] for all [semantic role][], including the ones from the [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0).
+
+```html
+<svg xmlns="http://www.w3.org/2000/svg" role="graphics-object" width="100" height="100" aria-label="yellow circle">
+	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
+</svg>
 ```
 
 ### Failed

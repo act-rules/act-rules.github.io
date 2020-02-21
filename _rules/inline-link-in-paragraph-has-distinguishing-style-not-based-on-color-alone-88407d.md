@@ -78,7 +78,7 @@ This is a link that is a descendant of a paragraph element. It uses the default 
 
 #### Passed Example 2
 
-An element with a [semantic role][] that inherits from link is a descendant of a paragraph element. It uses the default styling of links which underlines them in most browsers, making it a distinguishing style.
+The element with a [semantic role][] that inherits from link is a descendant of a paragraph element. It uses the default styling of links which underlines them in most browsers, making it a distinguishing style.
 
 ```html
 <style>

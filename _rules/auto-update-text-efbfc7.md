@@ -30,7 +30,7 @@ The rule applies to any [visible][] [HTML element][] in an [HTML document][] if:
 
 ## Expectation 1
 
-For the test target a [user interface component][] is provided to pause, stop, hide or alter the frequency of the changes of the [text content][].
+For the test target a [user interface component][] is provided to pause, stop, hide or alter the frequency of the changes of the [visible text content][].
 
 **Note**: If there is more than one test target, a single [user interface component][] may be used to pause, stop, hide or alter the frequency for all test targets.
 
@@ -269,7 +269,7 @@ The automatically updating text content is the only content in the document.
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [last activation timestamp]: https://html.spec.whatwg.org/#last-activation-timestamp
 [sc 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
-[text content]: #text-content 'Definition of text content'
+[visible text content]: #visible-text-content 'Definition of visible text content'
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
 [visible]: #visible 'Definition of visible'
 [whitespace]: #whitespace 'Definition of whitespace'

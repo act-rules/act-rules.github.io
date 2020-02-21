@@ -114,7 +114,7 @@ WAI-ARIA states and properties with empty value, specified as an empty string, a
 
 #### Passed Example 9
 
-The `aria-label` [state][] is [global][] and thus [inherited][] for all [semantic role][], including the ones from the [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0).
+The `aria-label` [state][] is [global][] and thus [inherited][] for all [semantic role][], including the ones from the [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0). This rule is also applicable to SVG elements.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" role="graphics-object" width="100" height="100" aria-label="yellow circle">

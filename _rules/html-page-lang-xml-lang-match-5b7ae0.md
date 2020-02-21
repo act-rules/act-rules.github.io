@@ -38,7 +38,11 @@ For each test target, the values of the [primary language subtags][], if any exi
 
 ## Assumptions
 
-The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page).
+- The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page).
+
+- This rule assumes that user agents and assistive technologies can programmatically determine [valid language subtags](#valid-language-subtag) even if these do not conform to the [BCP 47][] syntax.
+
+- This rule assumes that [grandfathered tags][] are not used as these will not be recognized as [valid language subtags](#valid-language-subtag).
 
 ## Accessibility Support
 
@@ -175,3 +179,5 @@ This rule does not apply to `html` elements with an empty (`""`) `xml:lang` attr
 [primary language subtags]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
 [top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'Definition of top-level browsing context'
 [valid language subtag]: #valid-language-subtag 'Definition of valid language subtag'
+[grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
+[bcp 47]: https://tools.ietf.org/html/bcp47#section-2.1

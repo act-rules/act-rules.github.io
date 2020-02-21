@@ -7,7 +7,7 @@ objective: false
 
 Two or more resources can be the _same resource_ even though the URLs for them are different. This can be due to URL parsing, server settings, redirects and DNS aliasing.
 
-If the [parsed URLs](https://www.w3.org/TR/html52/infrastructure.html#parsing-urls) for two resources are identical, the resources are the same resource.
+If the [parsed URLs](https://html.spec.whatwg.org/#resolving-urls) for two resources are identical, the resources are the same resource.
 
 Depending on the server, URLs can either be case-sensitive or case-insensitive, meaning that `<a href="page1.html">` and `<a href="Page1.html">` lead to either the same or two different pages.
 

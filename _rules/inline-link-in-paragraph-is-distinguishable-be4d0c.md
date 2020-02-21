@@ -86,7 +86,7 @@ This is a link that is a descendant of a paragraph element. It uses the default 
 
 #### Passed Example 2
 
-This is a link that is a descendant of a paragraph element. The underline is removed, but an icon is added to distinguish it as a link.
+This is a link that is a descendant of a paragraph element. An icon is added to distinguish it as a link.
 
 ```html
 <style>

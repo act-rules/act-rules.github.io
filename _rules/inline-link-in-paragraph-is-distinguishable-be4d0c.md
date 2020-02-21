@@ -155,7 +155,7 @@ This is a link that is a descendant of a paragraph element. The link has a disti
 
 #### Passed Example 6
 
-This is a link that is a descendant of a paragraph element. The underline is removed, but the link has a text contrast of more than 3:1 compared to the other text in the paragraph. When the link receives focus an underline appears. When the link receives hover an underline appears.
+This is a link that is a descendant of a paragraph element. The link has a text contrast of more than 3:1 compared to the other text in the paragraph. When the link receives focus, an underline appears. When the link receives hover, an underline appears.
 
 ```html
 <style>

@@ -50,18 +50,18 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The `aria-pressed` [state][] is [supported][] for the [semantic role][] `button`, which is the [explicit role][] of this `div` element.
-
-```html
-<div role="button" aria-pressed="false">My button</div>
-```
-
-#### Passed Example 2
-
 The `aria-pressed` [state][] is [supported][] for the [semantic role][] `button`, which is the [implicit role][] for `button` elements.
 
 ```html
 <button aria-pressed="false">My button</button>
+```
+
+#### Passed Example 2
+
+The `aria-pressed` [state][] is [supported][] for the [semantic role][] `button`, which is the [explicit role][] of this `div` element.
+
+```html
+<div role="button" aria-pressed="false">My button</div>
 ```
 
 #### Passed Example 3
@@ -74,7 +74,7 @@ The `aria-busy` [state][] is a [global][] [state][] that is [supported][] by all
 
 #### Passed Example 4
 
-The `aria-label` [state][] is [inherited][] for the [semantic role][] `button`.
+The `aria-label` [state][] is [global][] (and thus [inherited][] for all [semantic role][]).
 
 ```html
 <div role="button" aria-label="OK"></div>
@@ -115,14 +115,6 @@ WAI-ARIA states and properties with empty value, specified as an empty string, a
 ### Failed
 
 #### Failed Example 1
-
-The `aria-sort` [property][] is neither [inherited][], [supported][], nor [required][] for the [semantic role][] `button`.
-
-```html
-<div role="button" aria-sort="">Sort by year</div>
-```
-
-#### Failed Example 2
 
 The `aria-sort` [property][] is neither [inherited][], [supported][], nor [required][] for the [semantic role][] `button`, which is the [implicit role][] for the `button` element.
 

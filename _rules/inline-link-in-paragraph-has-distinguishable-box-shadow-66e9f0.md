@@ -63,7 +63,7 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-This is a link that is a descendant of a paragraph element. The underline is removed, but the link has a distinguishing box-shadow.
+This is a link that is a descendant of a paragraph element. The link has a distinguishing box-shadow.
 
 ```html
 <style>

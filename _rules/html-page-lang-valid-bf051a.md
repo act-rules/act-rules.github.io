@@ -31,7 +31,7 @@ This rule applies to any [document element](https://dom.spec.whatwg.org/#documen
 - is in a [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context); and
 - has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`.
 
-**Note:** `html` elements within `iframe` and `object` elements are not applicable as `iframe` and `object` elements create [nested browsing contexts](https://html.spec.whatwg.org/#nested-browsing-context). However, as these elements are meant to provide a layer of isolation, the language of the [parent browsing context](https://html.spec.whatwg.org/#parent-browsing-context) may not be inherited. This should be tested separately.
+**Note:** `html` elements within `iframe` and `object` elements are not applicable as `iframe` and `object` elements create [nested browsing contexts](https://html.spec.whatwg.org/#nested-browsing-context). These elements can embed any third party content, making testing difficult. As these elements are meant to provide a layer of isolation, the language of the [parent browsing context](https://html.spec.whatwg.org/#parent-browsing-context) may not be inherited. Thus, embedded documents with an invalid `lang` attribute can cause accessibility issues. This should be tested separately.
 
 ## Expectation
 
@@ -39,7 +39,11 @@ For each test target, the `lang` attribute has a [valid language subtag](#valid-
 
 ## Assumptions
 
-The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page).
+- The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page).
+
+- This rule assumes that user agents and assistive technologies can programmatically determine [valid language subtags](#valid-language-subtag) even if these do not conform to the [BCP 47][] syntax.
+
+- This rule assumes that [grandfathered tags][] are not used as these will not be recognized as [valid language subtags](#valid-language-subtag).
 
 ## Accessibility Support
 
@@ -64,6 +68,14 @@ This `html` element has a `lang` attribute whose value is a [valid][valid langua
 <html lang="fr"></html>
 ```
 
+#### Passed Example 2
+
+This `html` element has a `lang` attribute value that is a [valid language subtag][] even though the [region subtag][] is not.
+
+```html
+<html lang="en-US-GB"></html>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -76,21 +88,13 @@ This `html` element has a `lang` attribute whose value is not a [valid language 
 
 #### Failed Example 2
 
-This `html` element has a `lang` attribute whose value is not a [valid language subtag][]. Even though the [primary language subtag][] is valid, the [region subtag] is not.
-
-```html
-<html lang="en-US-GB"></html>
-```
-
-#### Failed Example 3
-
 This `html` element has a `lang` attribute whose value is not a [valid language subtag][].
 
 ```html
 <html lang="123"></html>
 ```
 
-#### Failed Example 4
+#### Failed Example 3
 
 This `html` element has a `lang` attribute whose value is not a [valid language subtag][].
 
@@ -111,3 +115,5 @@ This rule does not apply to `svg` elements.
 [primary language subtag]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
 [region subtag]: https://tools.ietf.org/html/bcp47#section-2.2.4 'Definition of region subtag'
 [valid language subtag]: #valid-language-subtag 'Definition of valid language subtag'
+[grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
+[bcp 47]: https://tools.ietf.org/html/bcp47#section-2.1

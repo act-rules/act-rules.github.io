@@ -271,7 +271,7 @@ These two HTML `span` elements have an [explicit role][] of link, but lead to 
 </html>
 ```
 
-#### Failed example 4
+#### Failed Example 4
 
 The same [accessible name][] is used for image links in the same [context][programmatically determined link context] going to different resources.
 
@@ -382,7 +382,7 @@ The first link is not [included in the accessibility tree][].
 </html>
 ```
 
-#### Inapplicable example 5
+#### Inapplicable Example 5
 
 These `span` elements do not have a [semantic role][] of link.
 

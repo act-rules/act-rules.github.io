@@ -103,7 +103,7 @@ This is a link that is a descendant of a paragraph element. An icon is added to 
 
 #### Passed Example 3
 
-This is a link that is a descendant of a paragraph element. The underline is removed, but a text is added to distinguish it as a link.
+This is a link that is a descendant of a paragraph element. A text is added to distinguish it as a link.
 
 ```html
 <style>

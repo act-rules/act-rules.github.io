@@ -26,6 +26,8 @@ input_aspects: # Remove what is not applicable
 acknowledgements:
   authors:
     - Emma Pratt Richens
+    - Anne Thyme Nørregaard
+    - Stein Erik Skotkjerra
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)

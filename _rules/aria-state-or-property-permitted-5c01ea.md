@@ -98,7 +98,7 @@ The `aria-controls` [property][] is [supported][] for the [semantic role][] `com
 
 #### Passed Example 7
 
-The `aria-controls` [property][] is [supported][] for the [semantic role][] `combobox`. [WAI-ARIA states and properties][] with empty value are still applicable to this rule.
+The `aria-controls` [property][] is [supported][] for the [semantic role][] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value are still applicable to this rule.
 
 ```html
 <div role="combobox" aria-controls>My combobox</div>
@@ -106,7 +106,7 @@ The `aria-controls` [property][] is [supported][] for the [semantic role][] `com
 
 #### Passed Example 8
 
-The `aria-controls` [property][] is [supported][] for the [semantic role][] `combobox`. [WAI-ARIA states and properties][] with empty value (specified as an empty string) are still applicable to this rule.
+The `aria-controls` [property][] is [supported][] for the [semantic role][] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value (specified as an empty string) are still applicable to this rule.
 
 ```html
 <div role="combobox" aria-controls="">My combobox</div>

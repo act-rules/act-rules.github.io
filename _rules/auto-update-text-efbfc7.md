@@ -94,7 +94,7 @@ The text content of the `span` element automatically updates after the page comp
 ```html
 <body onload="startUpdates()">
 	<p>Random number: <span id="target">1</span></p>
-	<input type="button" onclick="hide()" value="Hide updates" />
+	<input type="button" onclick="hide()" value="Hide updating content" />
 
 	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>

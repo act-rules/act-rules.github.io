@@ -5,7 +5,7 @@ unambiguous: true
 objective: true
 --
 
-Look at the computed values of the following style properties:
+Look at the [computed](https://drafts.csswg.org/css-cascade/#computed-value) values of the following style properties:
 
 - `border`, and the related longhand properties `border-bottom`, `border-left`, `border-right,` `border-top`, and
 - `outline`.

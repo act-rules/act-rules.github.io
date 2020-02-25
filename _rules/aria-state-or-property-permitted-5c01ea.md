@@ -12,6 +12,7 @@ accessibility_requirements:
     passed: satisfied
     inapplicable: satisfied
 input_aspects:
+  - Accessibility Tree
   - DOM Tree
 acknowledgements:
   authors:
@@ -34,7 +35,7 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][].
 
 ## Background
 
@@ -111,6 +112,26 @@ WAI-ARIA states and properties with empty value, specified as an empty string, a
 <div role="combobox" aria-controls="">My combobox</div>
 ```
 
+#### Passed Example 9
+
+This `li` element has an [explicit role][] of `none`. However, the [global][] [property][] `aria-label` is specified. Thus it has a [semantic role][] of `listitem` due to [Presentational Roles Conflict Resolution][]. The `aria-setsize` [property][] is [supported][] for the `listitem` role.
+
+```html
+<ul>
+	<li role="none" aria-label="ACT rules" aria-setsize="1">ACT rules</li>
+</ul>
+```
+
+#### Passed Example 10
+
+This `li` element has an [explicit role][] of `none`. However, it is [focusable][] due to the `tabindex` attribute (even if it is excluded from sequential focus order). Thus it has a [semantic role][] of `listitem` due to [Presentational Roles Conflict Resolution][]. The `aria-setsize` [property][] is [supported][] for the `listitem` role.
+
+```html
+<ul>
+	<li role="none" tabindex="-1" aria-setsize="1">ACT rules</li>
+</ul>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -127,6 +148,16 @@ WAI-ARIA states and properties with empty value, specified as an empty string, a
 
 ```html
 <button aria-sort="">Sort by year</button>
+```
+
+#### Failed Example 3
+
+This `li` element has an [explicit role][], and a [semantic role][], of `none`. The `aria-setsize` [property][] in neither [inherited][], [supported][] nor [required][] for this role.
+
+```html
+<ul>
+	<li role="none" aria-setsize="1">ACT rules</li>
+</ul>
 ```
 
 ### Inapplicable
@@ -147,4 +178,13 @@ No [WAI-ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_d
 <div role="button" aria-sort="" style="display:none;"></div>
 ```
 
+[explicit role]: #explicit-role 'Definition of Explicit Role'
+[focusable]: #focusable 'Definition of focusable'
+[global]: https://www.w3.org/TR/wai-aria-1.1/#global_states 'Definition of Global ARIA States and Properties'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[inherited]: https://www.w3.org/TR/wai-aria/#inheritedattributes 'Definition of Inherited ARIA States and Properties'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[property]: https://www.w3.org/TR/wai-aria/#dfn-property 'Definition of ARIA Property'
+[required]: https://www.w3.org/TR/wai-aria/#requiredState 'Definition of Required ARIA States and Properties'
+[semantic role]: #semantic-role 'Definition of Semantic Role'
+[supported]: https://www.w3.org/TR/wai-aria/#supportedState 'Definition of Supported ARIA States and Properties'

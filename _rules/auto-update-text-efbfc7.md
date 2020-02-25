@@ -22,21 +22,25 @@ acknowledgements:
 
 The rule applies to any [visible][] [HTML element][] in an [HTML document][] if:
 
-- the `innerText` property of the [element][html element] changes;
-- the [element][html element] does not have [children][child] whose `innerText` property is also changed;
-- the change happens after the [readiness][document readiness] of the [HTML document][] the [element][html element] belongs to is equal to "complete";
-- the change happens when the [last activation timestamp][] of the [window][] the [HTML document][] is associated with has the value "positive infinity";
-- it is not the only [content][] in the [HTML document][].
+- **(not alone)** it is not the only [content][] in the [HTML document][]; and
+- **(changed)** the `innerText` property of the [element][html element] changes; and
+- **(no child changed)** the [element][html element] does not have [children][child] whose `innerText` property also changes; and
+- the [document][html document] the [element][html element] belongs to:
+  - **(ready)** has [readiness][document readiness] equal to "complete" before the change happens; and
+  - **(inactive)** is associated with a [window][] that has the [last activation timestamp][] equal to "positive infinity".
 
 ## Expectation 1
 
-For the test target a [user interface component][] is provided to pause, stop, hide or alter the frequency of the changes of the [visible text content][].
+For the test target there exists a [user interface component][] that might be used to:
+
+- pause, stop or hide the change of the [visible text content][]; or
+- alter the frequency of the changes of the [visible text content][].
 
 **Note**: If there is more than one test target, a single [user interface component][] may be used to pause, stop, hide or alter the frequency for all test targets.
 
 ## Expectation 2
 
-The [user interface component][] provided to pause, stop, hide or alter the frequency of changes is [visible][], has an [accessible name][] that is not only [whitespace][], and is [included in the accessibility tree][].
+The existing [user interface component][] is [visible][], has an [accessible name][] that is not only [whitespace][], and is [included in the accessibility tree][].
 
 ## Assumptions
 
@@ -66,11 +70,6 @@ The text content of the `span` element automatically updates after the page comp
 	<p>Random number: <span id="target">1</span></p>
 	<input type="button" onclick="stopUpdates()" value="Stop updates" />
 
-	<p>
-		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
-		implement accessibility.
-	</p>
-
 	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>
 ```
@@ -84,11 +83,6 @@ The text content of the `span` element automatically updates after the page comp
 	<p>Random number: <span id="target">1</span></p>
 	<input type="button" id="control" onclick="toggleUpdates()" value="Pause updates" />
 
-	<p>
-		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
-		implement accessibility.
-	</p>
-
 	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>
 ```
@@ -101,11 +95,6 @@ The text content of the `span` element automatically updates after the page comp
 <body onload="startUpdates()">
 	<p>Random number: <span id="target">1</span></p>
 	<input type="button" onclick="hide()" value="Hide updates" />
-
-	<p>
-		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
-		implement accessibility.
-	</p>
 
 	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>
@@ -122,11 +111,6 @@ The text content of the `span` element automatically updates after the page comp
 	<input type="text" id="interval" />
 	<input type="button" onclick="changeFrequency(document.getElementById('interval').value)" value="Change frequency" />
 
-	<p>
-		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
-		implement accessibility.
-	</p>
-
 	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>
 ```
@@ -141,11 +125,6 @@ The text content of the `span` element automatically updates after the page comp
 <body onload="startUpdates()">
 	<p>Random number: <span id="target">1</span></p>
 
-	<p>
-		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
-		implement accessibility.
-	</p>
-
 	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>
 ```
@@ -158,11 +137,6 @@ The text content of the `span` element automatically updates after the page comp
 <body onload="startUpdates()">
 	<p>Random number: <span id="target">1</span></p>
 	<input type="button" onclick="stopUpdates()" value="Stop updates" style="display:none" />
-
-	<p>
-		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
-		implement accessibility.
-	</p>
 
 	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>
@@ -177,11 +151,6 @@ The text content of the `span` element automatically updates after the page comp
 	<p>Random number: <span id="target">1</span></p>
 	<input type="button" onclick="stopUpdates()" />
 
-	<p>
-		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
-		implement accessibility.
-	</p>
-
 	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>
 ```
@@ -195,11 +164,6 @@ The text content of the `span` element automatically updates after the page comp
 	<p>Random number: <span id="target">1</span></p>
 	<input type="button" onclick="stopUpdates()" aria-hidden="true" />
 
-	<p>
-		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
-		implement accessibility.
-	</p>
-
 	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>
 ```
@@ -212,18 +176,13 @@ The text content automatically updates but the change happens before the [readin
 
 ```html
 <body>
-  <p>Random number: <span id="target">1</span></p>
+	<p>Random number: <span id="target">1</span></p>
 
-  <p>
-    The W3C Web Accessibility Initiative (WAI) develops standards and support
-    materials to help you understand and implement accessibility.
-  </p>
-
-  <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("target").innerText = "Changed content";
-    });
-  </script>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', () => {
+			document.getElementById('target').innerText = 'Changed content'
+		})
+	</script>
 </body>
 ```
 
@@ -235,11 +194,6 @@ The text content automatically updates but only as a result of the user activati
 <body>
 	<p>Random number: <span id="target">1</span></p>
 	<input type="button" id="control" onclick="startUpdates()" value="Start updates" />
-
-	<p>
-		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
-		implement accessibility.
-	</p>
 
 	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>
@@ -254,6 +208,43 @@ The automatically updating text content is the only content in the document.
 	<span id="target">1</span>
 
 	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
+</body>
+```
+
+#### Inapplicable Example 4
+
+The document does not have text content that updates automatically.
+
+```html
+<body>
+	<p>
+		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
+		implement accessibility.
+	</p>
+</body>
+```
+
+#### Inapplicable Example 5
+
+The color of the element is updated, but not its `innerText` property.
+
+```html
+<body onload="startColorUpdates()">
+	<p>Number: <span id="target">1</span></p>
+
+	<script>
+		const myColors = ['red', 'green', 'blue', 'black']
+
+		function startColorUpdates() {
+			setInterval(change, 1000)
+		}
+
+		function change() {
+			let randomColor = myColors[Math.floor(Math.random() * myColors.length)]
+			var target = document.getElementById('target')
+			target.style.color = randomColor
+		}
+	</script>
 </body>
 ```
 

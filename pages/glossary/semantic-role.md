@@ -11,7 +11,7 @@ Valid semantic roles are defined by standards. For web content and applications 
 
 The _semantic role_ of an element which is [included in the accessibility tree][] is the role this element has in the accessibility tree. Elements which are not [included in the accessibility tree][] have no semantic role.
 
-**Note:** In most cases, the semantic role of an element is its [explicit semantic role][] if it has any, otherwise, its [implicit semantic role][]. However, elements with an [explicit role][] of `none` or `presentation` may still be [included in the accessibility tree][] with their [implicit role][] if a [global ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#global_states) is specified, or if they are focusable or interactive ([Presentational Roles Conflict Resolution][])
+**Note:** In most cases, the semantic role of an element is its [explicit semantic role][] if it has any, otherwise, its [implicit semantic role][]. However, elements with an [explicit semantic role][] of `none` or `presentation` may still be [included in the accessibility tree][] with their [implicit semantic role][] if a [global ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#global_states) is specified, or if they are focusable or interactive ([Presentational Roles Conflict Resolution][])
 
 #### Accessibility Support
 

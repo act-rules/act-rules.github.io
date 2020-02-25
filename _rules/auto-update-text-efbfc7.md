@@ -100,7 +100,7 @@ The text content of the `span` element automatically updates after the page comp
 ```html
 <body onload="startUpdates()">
 	<p>Random number: <span id="target">1</span></p>
-	<input type="button" onclick="hide()" value="Hide updates" />
+	<input type="button" onclick="hide()" value="Hide updating content" />
 
 	<p>
 		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and

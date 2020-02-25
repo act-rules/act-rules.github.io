@@ -323,7 +323,7 @@ Both links resolve to [same resource][] after redirect, but the redirect is not 
 
 #### Inapplicable Example 1
 
-These `a` and `area` elements have no `href` attribute.
+These `a` and `area` elements do not have a role of `link`.
 
 ```html
 <html lang="en">

@@ -31,16 +31,16 @@ The rule applies to any [visible][] [HTML element][] in an [HTML document][] if:
 
 ## Expectation 1
 
-For the test target there exists a [user interface component][] that might be used to:
+For the test target there exists a [mechanism][] that might be used to:
 
 - pause, stop or hide the change of the [visible text content][]; or
 - alter the frequency of the changes of the [visible text content][].
 
-**Note**: If there is more than one test target, a single [user interface component][] may be used to pause, stop, hide or alter the frequency for all test targets.
+**Note**: If there is more than one test target, a single [mechanism][] may be used to pause, stop, hide or alter the frequency for all test targets.
 
 ## Expectation 2
 
-The existing [user interface component][] is [visible][], has an [accessible name][] that is not only [whitespace][], and is [included in the accessibility tree][].
+The existing [mechanism][] is [visible][], has an [accessible name][] that is not only [whitespace][], and is [included in the accessibility tree][].
 
 ## Assumptions
 
@@ -102,7 +102,7 @@ The text content of the `span` element automatically updates after the page comp
 
 #### Passed Example 4
 
-The text content of the `span` element automatically updates after the page completes loading. A [user interface component][] is available to change the update frequency. The rule is not applicable to the first `p` element because it has a child (the `span` element) whose content updates.
+The text content of the `span` element automatically updates after the page completes loading. A [mechanism][] is available to change the update frequency. The rule is not applicable to the first `p` element because it has a child (the `span` element) whose content updates.
 
 ```html
 <body onload="startUpdates()">
@@ -119,7 +119,7 @@ The text content of the `span` element automatically updates after the page comp
 
 #### Failed Example 1
 
-The text content of the `span` element automatically updates after the page completes loading. There is no component to stop, pause, hide or alter the frequency of the automatic updates.
+The text content of the `span` element automatically updates after the page completes loading. There is no [mechanism][] to stop, pause, hide or alter the frequency of the automatic updates.
 
 ```html
 <body onload="startUpdates()">
@@ -259,9 +259,9 @@ The color of the element is updated, but not its `innerText` property.
 [html element]: https://html.spec.whatwg.org/multipage/dom.html#htmlelement
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [last activation timestamp]: https://html.spec.whatwg.org/#last-activation-timestamp
+[mechanism]: https://www.w3.org/TR/WCAG21/#dfn-mechanism
 [sc 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
 [visible text content]: #visible-text-content 'Definition of visible text content'
-[user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
 [visible]: #visible 'Definition of visible'
 [whitespace]: #whitespace 'Definition of whitespace'
 [window]: https://html.spec.whatwg.org/#window

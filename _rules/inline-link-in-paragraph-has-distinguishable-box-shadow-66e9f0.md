@@ -36,7 +36,7 @@ This rule applies to any HTML element which:
 
 ## Expectation
 
-Each target element has a `box-shadow` style property with a computed [color value](https://drafts.csswg.org/css-backgrounds/#shadow-color) different from the `background-color` of the target element.
+Each target element has a `box-shadow` style property with a [computed](https://drafts.csswg.org/css-cascade/#computed-value) [color value](https://drafts.csswg.org/css-backgrounds/#shadow-color) different from the `background-color` of the target element.
 
 ## Assumptions
 

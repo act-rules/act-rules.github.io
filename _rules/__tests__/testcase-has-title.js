@@ -1,7 +1,7 @@
 const describeRule = require('../../test-utils/describe-rule')
 const getMarkdownAstNodesOfType = require('../../utils/get-markdown-ast-nodes-of-type')
 
-describeRule('testcase has title', ({ filename, markdownAST }) => {
+describeRule('testcase has heading', ({ filename, markdownAST }) => {
 	/**
 	 * get all titles of test case examples (eg: #### Failed Example 1)
 	 */

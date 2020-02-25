@@ -36,7 +36,7 @@ This rule applies to any HTML element which:
 
 ## Expectation
 
-Each target element has at least one of the `border-top-color`, `border-right-color`, `border-bottom-color` and `border-left-color` style properties with [width](https://drafts.csswg.org/css-backgrounds/#border-width) bigger than 0px and with a computed [color value](https://drafts.csswg.org/css-backgrounds/#border-color) different from the `background-color` of the target element.
+Each target element has at least one of the `border-top-color`, `border-right-color`, `border-bottom-color` and `border-left-color` style properties with [width](https://drafts.csswg.org/css-backgrounds/#border-width) bigger than 0px and with a [computed](https://drafts.csswg.org/css-cascade/#computed-value) [color value](https://drafts.csswg.org/css-backgrounds/#border-color) different from the `background-color` of the target element.
 
 ## Assumptions
 

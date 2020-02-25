@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 697,
+  "count": 713,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -12190,6 +12190,294 @@
       "ruleId": "d0f69e",
       "ruleName": "All table header cells have assigned data cells",
       "rulePage": "https://act-rules.github.io/rules/d0f69e",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a1a08dad5ad75bcd651d4a3b7b996fe72f115a1d",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/a25f45/a1a08dad5ad75bcd651d4a3b7b996fe72f115a1d.html",
+      "relativePath": "testcases/a25f45/a1a08dad5ad75bcd651d4a3b7b996fe72f115a1d.html",
+      "expected": "passed",
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "rulePage": "https://act-rules.github.io/rules/a25f45",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "b50314a077856c381dc97b7ab137c47feeec3317",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/a25f45/b50314a077856c381dc97b7ab137c47feeec3317.html",
+      "relativePath": "testcases/a25f45/b50314a077856c381dc97b7ab137c47feeec3317.html",
+      "expected": "passed",
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "rulePage": "https://act-rules.github.io/rules/a25f45",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "9cdd965f187709288c389a2f3063f64689ea25a8",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/a25f45/9cdd965f187709288c389a2f3063f64689ea25a8.html",
+      "relativePath": "testcases/a25f45/9cdd965f187709288c389a2f3063f64689ea25a8.html",
+      "expected": "passed",
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "rulePage": "https://act-rules.github.io/rules/a25f45",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "4c7ecdda09a93d361c292de91d2f89f751dabde2",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/a25f45/4c7ecdda09a93d361c292de91d2f89f751dabde2.html",
+      "relativePath": "testcases/a25f45/4c7ecdda09a93d361c292de91d2f89f751dabde2.html",
+      "expected": "passed",
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "rulePage": "https://act-rules.github.io/rules/a25f45",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "dec322a713059aa4e1ad4f8c03bf2e3f43f9b474",
+      "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/a25f45/dec322a713059aa4e1ad4f8c03bf2e3f43f9b474.html",
+      "relativePath": "testcases/a25f45/dec322a713059aa4e1ad4f8c03bf2e3f43f9b474.html",
+      "expected": "passed",
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "rulePage": "https://act-rules.github.io/rules/a25f45",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "9950efbcae11c6a74d285355e65f3010de06b0f1",
+      "testcaseTitle": "Passed Example 6",
+      "url": "https://act-rules.github.io/testcases/a25f45/9950efbcae11c6a74d285355e65f3010de06b0f1.html",
+      "relativePath": "testcases/a25f45/9950efbcae11c6a74d285355e65f3010de06b0f1.html",
+      "expected": "passed",
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "rulePage": "https://act-rules.github.io/rules/a25f45",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "b4a1ee541c688a4274f8f44cf59fb61504e50126",
+      "testcaseTitle": "Passed Example 7",
+      "url": "https://act-rules.github.io/testcases/a25f45/b4a1ee541c688a4274f8f44cf59fb61504e50126.html",
+      "relativePath": "testcases/a25f45/b4a1ee541c688a4274f8f44cf59fb61504e50126.html",
+      "expected": "passed",
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "rulePage": "https://act-rules.github.io/rules/a25f45",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "7b0aec741508524b48e73fd0ec10435409994e9c",
+      "testcaseTitle": "Passed Example 8",
+      "url": "https://act-rules.github.io/testcases/a25f45/7b0aec741508524b48e73fd0ec10435409994e9c.html",
+      "relativePath": "testcases/a25f45/7b0aec741508524b48e73fd0ec10435409994e9c.html",
+      "expected": "passed",
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "rulePage": "https://act-rules.github.io/rules/a25f45",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "8a42cd31f491f68b18e499b70d181e30e24485a3",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/a25f45/8a42cd31f491f68b18e499b70d181e30e24485a3.html",
+      "relativePath": "testcases/a25f45/8a42cd31f491f68b18e499b70d181e30e24485a3.html",
+      "expected": "failed",
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "rulePage": "https://act-rules.github.io/rules/a25f45",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a376cd9a2dab75096ea41cf3178cfce91e803cea",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/a25f45/a376cd9a2dab75096ea41cf3178cfce91e803cea.html",
+      "relativePath": "testcases/a25f45/a376cd9a2dab75096ea41cf3178cfce91e803cea.html",
+      "expected": "failed",
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "rulePage": "https://act-rules.github.io/rules/a25f45",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "15630361d51726629bdf84d3ec140a6cc154d06a",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/a25f45/15630361d51726629bdf84d3ec140a6cc154d06a.html",
+      "relativePath": "testcases/a25f45/15630361d51726629bdf84d3ec140a6cc154d06a.html",
+      "expected": "failed",
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "rulePage": "https://act-rules.github.io/rules/a25f45",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "98f8a6a4387e780e8fbcd8201244750091df857a",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/a25f45/98f8a6a4387e780e8fbcd8201244750091df857a.html",
+      "relativePath": "testcases/a25f45/98f8a6a4387e780e8fbcd8201244750091df857a.html",
+      "expected": "inapplicable",
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "rulePage": "https://act-rules.github.io/rules/a25f45",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "3aba7777d893a814310a22dfc1399fd8d932e405",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/a25f45/3aba7777d893a814310a22dfc1399fd8d932e405.html",
+      "relativePath": "testcases/a25f45/3aba7777d893a814310a22dfc1399fd8d932e405.html",
+      "expected": "inapplicable",
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "rulePage": "https://act-rules.github.io/rules/a25f45",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a94873974601333ff15523c51145f056d8e3af87",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/a25f45/a94873974601333ff15523c51145f056d8e3af87.html",
+      "relativePath": "testcases/a25f45/a94873974601333ff15523c51145f056d8e3af87.html",
+      "expected": "inapplicable",
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "rulePage": "https://act-rules.github.io/rules/a25f45",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "cf152e4f1f83863272aeb9809601677935a57e6b",
+      "testcaseTitle": "Inapplicable Example 4",
+      "url": "https://act-rules.github.io/testcases/a25f45/cf152e4f1f83863272aeb9809601677935a57e6b.html",
+      "relativePath": "testcases/a25f45/cf152e4f1f83863272aeb9809601677935a57e6b.html",
+      "expected": "inapplicable",
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "rulePage": "https://act-rules.github.io/rules/a25f45",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "00c2be516f12a2d3f5d17fc5e00ecdd96d5dffbc",
+      "testcaseTitle": "Inapplicable Example 5",
+      "url": "https://act-rules.github.io/testcases/a25f45/00c2be516f12a2d3f5d17fc5e00ecdd96d5dffbc.html",
+      "relativePath": "testcases/a25f45/00c2be516f12a2d3f5d17fc5e00ecdd96d5dffbc.html",
+      "expected": "inapplicable",
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
           "forConformance": true,

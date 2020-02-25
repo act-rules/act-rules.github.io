@@ -27,7 +27,7 @@ This rule applies to any set of any two or more HTML or SVG elements which
 - have the [semantic role][] of `link`, or a role that inherits from the `link` role; and
 - are in the same [web page (HTML)][]; and
 - are [included in an accessibility tree][included in the accessibility tree]; and
-- that have [matching][] [accessible names][accessible name] that are not empty (`""`); and
+- have [matching][] [accessible names][accessible name] that are not empty (`""`); and
 - have the same [programmatically determined link context][].
 
 **Note:** The test target for this rule is the full set of link elements that share the same [matching][] [accessible name][] and [programmatically determined link context][].

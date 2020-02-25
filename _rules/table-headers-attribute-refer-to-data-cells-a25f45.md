@@ -197,7 +197,7 @@ The `headers` attribute on the cell refers to `th` element which is not the same
 
 #### Failed Example 1
 
-The `td` element has a `headers` attribute referring to an ID that does not exist within the same `table`. Here the referenced ID is mistyped.
+The `td` element has a `headers` attribute referring to an ID that does not exist within the same `table`. Here the referenced ID is incorrect.
 
 ```html
 <table>

@@ -63,8 +63,10 @@ A set of two HTML `a` elements have the same [accessible name][] and [context][p
 ```html
 <html lang="en">
 	<p>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
+		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html"
+			>Contact us</a
+		>) and get in touch (
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>)
 	</p>
 </html>
 ```
@@ -76,8 +78,11 @@ A set of two HTML `a` elements the same [accessible name][] and [context][progra
 ```html
 <html lang="en">
 	<p>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/redirect.html">Contact us</a>
+		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html"
+			>Contact us</a
+		>) and get in touch (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/redirect.html"
+			>Contact us</a
+		>)
 	</p>
 </html>
 ```
@@ -89,8 +94,12 @@ These two links resolve to resources that are not the same (different URLs), but
 ```html
 <html lang="en">
 	<p>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index-copy.html">Contact us</a>
+		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html"
+			>Contact us</a
+		>) and get in touch (<a
+			href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index-copy.html"
+			>Contact us</a
+		>)
 	</p>
 </html>
 ```
@@ -102,10 +111,11 @@ These two links go to pages where the content section is the same, but where the
 ```html
 <html lang="en">
 	<p>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/careers/contact.html"
+		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
 			>Contact us</a
-		>
+		>) and get in touch (
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/careers/contact.html">Contact us</a
+		>)
 	</p>
 </html>
 ```
@@ -117,8 +127,8 @@ These two HTML `a` elements link to URLs that differ due to trailing slashes, bu
 ```html
 <html lang="en">
 	<p>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/">Contact us</a>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66">Contact us</a>
+		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/">Contact us</a>) and
+		get in touch (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66">Contact us</a>)
 	</p>
 </html>
 ```
@@ -130,8 +140,10 @@ These two links go to pages that contain different amounts of information and/or
 ```html
 <html lang="en">
 	<p>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html">Call us</a>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html">Call us</a>
+		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html">Call us</a
+		>) and get in touch (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html"
+			>Call us</a
+		>)
 	</p>
 </html>
 ```
@@ -143,8 +155,11 @@ These two links go to pages that have the same advertised key content but use di
 ```html
 <html lang="en">
 	<p>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html">Contact us</a>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page3.html">Contact us</a>
+		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html"
+			>Contact us</a
+		>) and get in touch (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page3.html"
+			>Contact us</a
+		>)
 	</p>
 </html>
 ```
@@ -161,7 +176,7 @@ These two HTML `span` element have an [explicit role][] of link, and lead to t
 			tabindex="0"
 			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html'"
 		>
-			Link text
+			My university
 		</span>
 
 		<span
@@ -169,7 +184,7 @@ These two HTML `span` element have an [explicit role][] of link, and lead to t
 			tabindex="0"
 			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html'"
 		>
-			Link text
+			My university
 		</span>
 	</p>
 </html>
@@ -224,6 +239,7 @@ Both links have the same [accessible name][] and [context][programmatically dete
 ```html
 <html lang="en">
 	<p>
+		We are on social media:
 		<a href="http://facebook.com">Follow us</a>
 		<a href="http://twitter.com">Follow us</a>
 	</p>
@@ -237,10 +253,12 @@ The same [accessible name][] is used for two links in the same [context][program
 ```html
 <html lang="en">
 	<p>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
+		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
+			>Contact us</a
+		>) and get in touch (
 		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
 			>Contact us</a
-		>
+		>)
 	</p>
 </html>
 ```
@@ -257,7 +275,7 @@ These two HTML `span` elements have an [explicit role][] of link, but lead to 
 			tabindex="0"
 			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html'"
 		>
-			Link text
+			My university
 		</span>
 
 		<span
@@ -265,7 +283,7 @@ These two HTML `span` elements have an [explicit role][] of link, but lead to 
 			tabindex="0"
 			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html'"
 		>
-			Link text
+			My university
 		</span>
 	</p>
 </html>
@@ -278,6 +296,7 @@ The same [accessible name][] is used for image links in the same [context][progr
 ```html
 <html lang="en">
 	<p>
+		We are on social media:
 		<a href="http://facebook.com"><img src="facebook.jpg" alt="Follow us"/></a>
 		<a href="http://twitter.com"><img src="twitter.jpg" alt="Follow us"/></a>
 	</p>
@@ -313,8 +332,12 @@ Both links resolve to [same resource][] after redirect, but the redirect is not 
 ```html
 <html lang="en">
 	<p>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/redirect1.html">Contact us</a>
+		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html"
+			>Contact us</a
+		>) and get in touch (<a
+			href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/redirect1.html"
+			>Contact us</a
+		>)
 	</p>
 </html>
 ```
@@ -355,9 +378,11 @@ These links have the same [accessible name][] and link to the [same resource][] 
 <html lang="en">
 	<ul>
 		<li>
+			To learn more about us:
 			<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
 		</li>
 		<li>
+			To get in touch with us:
 			<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>
 		</li>
 	</ul>
@@ -371,13 +396,14 @@ The first link is not [included in the accessibility tree][].
 ```html
 <html lang="en">
 	<p>
-		<a
+		Learn more (<a
 			href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html"
 			aria-hidden="true"
 			tabindex="-1"
 			>Contact Us</a
-		>
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html">Contact Us</a>
+		>) and get in touch (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html"
+			>Contact Us</a
+		>)
 	</p>
 </html>
 ```
@@ -389,13 +415,15 @@ These `span` elements do not have a [semantic role][] of link.
 ```html
 <html lang="en">
 	<p>
-		<span onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html'">
-			Contact Us
-		</span>
-
-		<span onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html'">
-			Contact Us
-		</span>
+		Learn more (<span
+			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html'"
+		>
+			Contact Us </span
+		>) and get in touch (<span
+			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html'"
+		>
+			Contact Us </span
+		>)
 	</p>
 </html>
 ```

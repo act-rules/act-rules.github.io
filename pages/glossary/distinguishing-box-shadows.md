@@ -5,7 +5,7 @@ unambiguous: true
 objective: true
 --
 
-Look at the computed values of the `box-shadow` style property.
+Look at the [computed](https://drafts.csswg.org/css-cascade/#computed-value) values of the `box-shadow` style property.
 
 Two elements have a distinguishing box-shadow if all of the following are true:
 

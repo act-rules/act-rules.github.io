@@ -143,7 +143,7 @@ This `div` element with a [semantic role][] of `heading` has an empty [accessibl
 
 #### Failed Example 6
 
-This `h1` element has an [explicit role][] of `none`. However, the [global][] [property][] `aria-labelleby` is specified. Thus it has a [semantic role][] of `heading` due to [Presentational Roles Conflict Resolution][]. It has an empty [accessible name][] given by its `aria-labelledby` attribute.
+This `h1` element has an [explicit role][] of `none`. However, the [global][] [property][] `aria-labelledby` is specified. Thus it has a [semantic role][] of `heading` due to [Presentational Roles Conflict Resolution][]. It has an empty [accessible name][] given by its `aria-labelledby` attribute.
 
 ```html
 <span id="label"></span>

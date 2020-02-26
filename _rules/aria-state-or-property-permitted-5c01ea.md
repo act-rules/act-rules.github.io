@@ -35,7 +35,8 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][].
+- There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][].
+- Some browsers expose elements which are [focusable][] but have an `aria-hidden="true"` attribute, while some hide them.
 
 ## Background
 
@@ -172,7 +173,7 @@ No [WAI-ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_d
 
 #### Inapplicable Example 2
 
-`aria-sort` property is neither inherited, supported, nor required for role `button`, but the element is not [included in the accessibility tree][].
+`aria-sort` property is neither inherited, supported, nor required for role `button`, but the element is not [included in the accessibility tree][] because it is not rendered.
 
 ```html
 <div role="button" aria-sort="" style="display:none;"></div>

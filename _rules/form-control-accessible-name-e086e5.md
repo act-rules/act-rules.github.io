@@ -203,7 +203,7 @@ Role has [explicitly](#explicit-role) been set to something that isn't a form fi
 <input role="presentation" />
 ```
 
-#### Inapplicable Example 4
+#### Inapplicable Example 3
 
 Option inherits from input, but has a required context role of listbox which inherits from select. We should therefore not consider option as applicable.
 

@@ -228,7 +228,7 @@ The `input` element has a `type` attribute that is in the `button` state.
 <input type="button" autocomplete="username" />
 ```
 
-#### Inapplicable Example 6
+#### Inapplicable Example 5
 
 The `input` element has a `type` attribute that is in the `hidden` state.
 
@@ -236,7 +236,7 @@ The `input` element has a `type` attribute that is in the `hidden` state.
 <input type="hidden" autocomplete="username" />
 ```
 
-#### Inapplicable Example 7
+#### Inapplicable Example 6
 
 The `input` element has an HTML `disabled` attribute.
 
@@ -244,7 +244,7 @@ The `input` element has an HTML `disabled` attribute.
 <input autocomplete="username" disabled />
 ```
 
-#### Inapplicable Example 8
+#### Inapplicable Example 7
 
 The `input` element has an `aria-disabled` attribute with value `true`.
 
@@ -252,7 +252,7 @@ The `input` element has an `aria-disabled` attribute with value `true`.
 <input autocomplete="username" aria-disabled="true" />
 ```
 
-#### Inapplicable Example 9
+#### Inapplicable Example 8
 
 Non-widget element that does not participate in sequential focus navigation.
 
@@ -260,7 +260,7 @@ Non-widget element that does not participate in sequential focus navigation.
 <input type="button" role="none" disabled autocomplete="username" />
 ```
 
-#### Inapplicable Example 10
+#### Inapplicable Example 9
 
 Autocomplete attribute contains no tokens.
 

@@ -382,7 +382,7 @@ These `span` elements do not have a [semantic role][] of link.
 </html>
 ```
 
-#### Inapplicable Example 5
+#### Inapplicable Example 4
 
 These links have empty [accessible names][accessible name].
 
@@ -390,7 +390,7 @@ These links have empty [accessible names][accessible name].
 <a href="http://facebook.com"></a> <a href="http://twitter.com"></a>
 ```
 
-#### Inapplicable Example 6
+#### Inapplicable Example 5
 
 These image links have empty [accessible names][accessible name].
 

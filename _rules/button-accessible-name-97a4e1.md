@@ -11,6 +11,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
   - DOM Tree
   - CSS Styling
 acknowledgements:
@@ -39,7 +40,8 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+- There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][].
+- Some browsers expose elements which are [focusable][] but have an `aria-hidden="true"` attribute, while some hide them.
 
 ## Background
 
@@ -172,6 +174,14 @@ This off screen `button` element has no [accessible name][] because it has no co
 </html>
 ```
 
+#### Failed Example 5
+
+This `button` element has an [explicit role][] of `none`. However, it is [focusable][] (by default). Thus it has a [semantic role][] of `button` due to [Presentational Roles Conflict Resolution][]. It has an empty [accessible name][].
+
+```html
+<button role="none"></button>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -198,5 +208,17 @@ This `button` element has a `link` role. Links are tested in a separate rule whi
 <button role="link">take me somewhere</button>
 ```
 
+#### Inapplicable Example 4
+
+This `button` element has an [explicit role][] of `none`; it is not [focusable][] because it is `disabled`. Thus it has a [semantic role][] of `none`.
+
+```html
+<button role="none" disabled></button>
+```
+
 [accessible name]: #accessible-name 'Definition of accessible name'
+[explicit role]: #explicit-role 'Definition of explicit role'
+[focusable]: #focusable 'Definition of focusable'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[semantic role]: #semantic-role 'Definition of Semantic Role'

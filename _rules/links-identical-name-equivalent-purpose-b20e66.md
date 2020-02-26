@@ -48,7 +48,9 @@ When followed, the links in each set of target elements resolve to the [same res
 
 ## Accessibility Support
 
-This rule assumes that assistive technologies are exposing all links on the page in the same way no matter which [document tree](https://dom.spec.whatwg.org/#document-trees) they are in. If an assistive technology requires the user to "enter" an `iframe` or a [shadow tree][] before exposing its links, then it is possible for two links to have identical name but resolve to different resources without failing [Success Criterion 2.4.9 Link Purpose (Link Only)][sc249] (if said links are in separate [documents][document] or [shadow trees][shadow tree])
+- This rule assumes that assistive technologies are exposing all links on the page in the same way no matter which [document tree](https://dom.spec.whatwg.org/#document-trees) they are in. If an assistive technology requires the user to "enter" an `iframe` or a [shadow tree][] before exposing its links, then it is possible for two links to have identical name but resolve to different resources without failing [Success Criterion 2.4.9 Link Purpose (Link Only)][sc249] (if said links are in separate [documents][document] or [shadow trees][shadow tree]).
+- There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][].
+- Some browsers expose elements which are [focusable][] but have an `aria-hidden="true"` attribute, while some hide them.
 
 ## Background
 
@@ -326,6 +328,17 @@ Both links resolve to [same resource][] after redirect, but the redirect is not 
 </html>
 ```
 
+#### Failed Example 7
+
+The first `a` element has an [explicit role][] of `none`. However, it is [focusable][] (by default). Thus it has a [semantic role][] of `link` due to [Presentational Roles Conflict Resolution][]. Both links have the same [accessible name][] but go to different resources.
+
+```html
+<html lang="en">
+	<a href="http://facebook.com" role="none">Follow us</a>
+	<a href="http://twitter.com">Follow us</a>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -353,22 +366,6 @@ These links have different [accessible names][accessible name]. The rule only ap
 ```
 
 #### Inapplicable Example 3
-
-The first link is not [included in the accessibility tree][].
-
-```html
-<html lang="en">
-	<a
-		href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html"
-		aria-hidden="true"
-		tabindex="-1"
-		>Contact Us</a
-	>
-	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html">Contact Us</a>
-</html>
-```
-
-#### Inapplicable Example 4
 
 These `span` elements do not have a [semantic role][] of link.
 

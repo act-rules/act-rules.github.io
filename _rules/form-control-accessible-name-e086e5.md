@@ -41,7 +41,9 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-Certain assistive technologies can be set up to ignore the title attribute, which means that to some users the title attribute will not act as an [accessible name][].
+- Certain assistive technologies can be set up to ignore the title attribute, which means that to some users the title attribute will not act as an [accessible name][].
+- There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][].
+- Some browsers expose elements which are [focusable][] but have an `aria-hidden="true"` attribute, while some hide them.
 
 ## Background
 
@@ -174,6 +176,14 @@ The [accessible name][] is empty.
 <label> <input /></label>
 ```
 
+#### Failed Example 8
+
+This `input` element has an [explicit role][] of `none`. However, it is [focusable][] (by default). Thus it has a [semantic role][] of `textbox` due to [Presentational Roles Conflict Resolution][]. It has an empty [accessible name][].
+
+```html
+<input role="none" />
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -185,14 +195,6 @@ Hidden to everyone.
 ```
 
 #### Inapplicable Example 2
-
-Hidden to assistive technologies.
-
-```html
-<input aria-hidden="true" aria-label="firstname" />
-```
-
-#### Inapplicable Example 3
 
 Role has [explicitly](#explicit-role) been set to something that isn't a form field.
 
@@ -213,5 +215,9 @@ Option inherits from input, but has a required context role of listbox which inh
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
+[explicit role]: #explicit-role 'Definition of Explicit Role'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[semantic role]: #semantic-role 'Definition of Semantic Role'
 [semantic roles]: #semantic-role 'Definition of semantic role'
 [whitespace]: #whitespace 'Definition of whitespace'

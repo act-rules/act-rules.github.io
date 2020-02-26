@@ -36,17 +36,22 @@ For each test target with a [form field error indicator][], at least one of the 
 
 **Note**: This rule does not test [error indicators][form field error indicator] shown on a different page than the one of the test target.
 
-**Note**: A single [form field error indicator][] can be related to multiple test targets. For example, an error message at the top of a form can list all the form fields that are required and are empty. 
+**Note**: A single [form field error indicator][] can be related to multiple test targets. For example, an error message at the top of a form can list all the form fields that are required and are empty.
 
 **Note**: A single test target can be related to multiple [form field error indicators][form field error indicator]. For example, a text field can have a red border around it, an error icon adjacent to it, an error message below it, and another error message at the top of the form. All of these are error indicators for the same form field.
 
 ## Expectation 2
 
-For each test target with a [form field error indicator][], at least one of the [form field error indicators][form field error indicator] describes the cause of the error, or how to resolve it, in [text][] that is [visible][].
+For each test target with a [form field error indicator][], at least one of the [form field error indicators][form field error indicator] describes, in [text][] that is [visible][], the cause of the error or how to resolve it.
 
 ## Expectation 3
 
-For each test target with a [form field error indicator][], at least one of the [form field error indicators][form field error indicator] describes the cause of the error, or how to resolve it, in [text][] that is [included in the accessibility tree][] or included in the [accessible name][] or [accessible description][] of the test target.
+For each test target with a [form field error indicator][], at least one of the [form field error indicators][form field error indicator] describes:
+
+- the cause of the error, or
+- how to resolve it,
+
+in [text][] that is [included in the accessibility tree][] or included in the [accessible name][] or [accessible description][] of the test target.
 
 ## Assumptions
 
@@ -68,24 +73,24 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The `input` element has a [form field error indicator][] that identifies it (by referencing its label) and describes the cause of the error.
+The `input` element has a [form field error indicator][] that identifies it (by referencing its label), describes the cause of the error and how to resolve it.
 
 ```html
 <form>
 	<label for="age">Age (years)</label>
-	<input type="number" id="age" value="0"/>
-	<span id="error">Age must be at least 1</span><br />
+	<input type="number" id="age" value="0" />
+	<span id="error">Invalid value for age. Age must be at least 1.</span><br />
 	<input type="button" value="Submit" />
 </form>
 ```
 
 #### Passed Example 2
 
-The multiple `input` elements share a [form field error indicator][] that identifies the elements unfilled (by referencing their labels) and describes the cause of the error.
+The multiple `input` elements share a [form field error indicator][] that identifies the elements unfilled (by referencing their labels), describes the cause of the error and how to resolve it.
 
 ```html
 <form>
-	<h2 id="error">You must fill the name field. You must pick a color.</h2>
+	<h2 id="error">Name and color cannot be left unfilled. Please complete all required fields.</h2>
 	<label for="name">Name (required)</label>
 	<input type="text" id="name" required />
 	<br />
@@ -149,12 +154,12 @@ The `input` element has a [form field error indicator][] that identifies it (by 
 <form>
 	<label for="age">Age (years)</label>
 	<input type="number" id="age" value="0" />
-	<span id="error" style="display: none;">Age must be at least 1</span><br />
+	<span id="error" style="display: none;">Invalid value for age. Age must be at least 1.</span><br />
 	<input type="button" value="Submit" aria-describedby="error" />
 </form>
 ```
 
-#### Failed Example 5
+#### Failed Example 4
 
 The `input` element has a [form field error indicator][] that identifies it (by referencing its label) and describes the cause of the error but the message is not [included in the accessibility tree][].
 
@@ -162,7 +167,32 @@ The `input` element has a [form field error indicator][] that identifies it (by 
 <form>
 	<label for="age">Age (years)</label>
 	<input type="number" id="age" value="0" />
-	<span id="error" aria-hidden="true">Age must be at least 1</span><br />
+	<span id="error" aria-hidden="true">Invalid value for age. Age must be at least 1.</span><br />
+	<input type="button" value="Submit" />
+</form>
+```
+
+#### Failed Example 5
+
+The multiple `input` elements share a [form field error indicator][]. The message describes the cause of the error but does not allow to identify the elements that caused the error because the same label is used in different `fieldset`s.
+
+```html
+<form>
+	<fieldset>
+		<legend>Shipping</legend>
+		<label for="shippingName">Name</label>
+		<input type="text" id="shippingName" required />
+		<label for="shippingAddress">Address</label>
+		<input type="text" id="shippingAddress" required />
+	</fieldset>
+	<fieldset>
+		<legend>Billing</legend>
+		<label for="billingName">Name</label>
+		<input type="text" id="billingName" />
+		<label for="billingAddress">Address</label>
+		<input type="text" id="billingAddress" />
+	</fieldset>
+	<span id="error">All required fields must be filled.<br />Please fill Name.<br />Please fill Address</span><br />
 	<input type="button" value="Submit" />
 </form>
 ```

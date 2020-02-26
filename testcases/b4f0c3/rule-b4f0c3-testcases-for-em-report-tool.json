@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - meta viewport does not prevent zoom",
+      "title": "Report for ACT-R Rule - `meta` `viewport` does not prevent zoom",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - meta viewport does not prevent zoom",
+          "siteName": "ACT-R Rule - `meta` `viewport` does not prevent zoom",
           "siteScope": "https://act-rules.github.io/testcases/b4f0c3/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

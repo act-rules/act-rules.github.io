@@ -1,6 +1,6 @@
 ---
 id: b4f0c3
-name: meta viewport does not prevent zoom
+name: '`meta` `viewport` does not prevent zoom'
 rule_type: atomic
 description: |
   This rule checks that the `meta` element retains the user agent ability to zoom.
@@ -24,7 +24,7 @@ The rule applies to each `meta` element with a `name` attribute whose value is a
 
 ## Expectation
 
-For each test target, the [`content`](https://www.w3.org/TR/html52/document-metadata.html#dom-htmlmetaelement-content) attribute, whose value is mapped to a list of property/value pairs in a user-agent specific manner, does not:
+For each test target, the [`content`](https://html.spec.whatwg.org/#dom-meta-content) attribute, whose value is mapped to a list of property/value pairs in a user-agent specific manner, does not:
 
 - specify the property `user-scalable` with a value of `no`; nor
 - specify the property `maximum-scale` with a value of less than 2
@@ -40,7 +40,7 @@ Desktop browsers ignore the viewport `meta` element, and most modern mobile brow
 ## Background
 
 - [Understanding Success Criterion 1.4.4: Resize text](https://www.w3.org/WAI/WCAG21/Understanding/resize-text)
-- [The `meta` element](https://www.w3.org/TR/html52/document-metadata.html#the-meta-element)
+- [HTML Specification - The `meta` element](https://html.spec.whatwg.org/#the-meta-element)
 - [The initial-scale, minimum-scale, and maximum-scale properties](https://www.w3.org/TR/css-device-adapt-1/#min-scale-max-scale)
 - [The user-scalable property](https://www.w3.org/TR/css-device-adapt-1/#user-scalable)
 

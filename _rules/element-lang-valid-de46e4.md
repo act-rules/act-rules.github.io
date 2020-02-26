@@ -37,11 +37,15 @@ For each test target, the `lang` attribute has a [valid language subtag](#valid-
 
 ## Assumptions
 
-This rule assumes that the presence of a `lang` attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
+- The `lang` attribute is assumed to be used to indicate the language of a section of the content. If the `lang` attribute is used for something else (for example to indicate a `code` element contains CSS), the content may still conform to WCAG despite failing this rule.
+
+- This rule assumes that user agents and assistive technologies can programmatically determine [valid language subtags](#valid-language-subtag) even if these do not conform to the [BCP 47][] syntax.
+
+- This rule assumes that [grandfathered tags][] are not used as these will not be recognized as [valid language subtags](#valid-language-subtag).
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are differences in how assistive technologies handle unknown and invalid language subtags. Some will default to the language of the page, whereas others will default to the closest ancestor with a valid lang attribute.
 
 ## Background
 
@@ -78,6 +82,18 @@ The `lang` attribute has a value that is not empty ("") and has a valid primary 
 </html>
 ```
 
+#### Passed Example 3
+
+The `lang` attribute value has a valid primary language subtag, but a syntactically invalid region subtag.
+
+```html
+<html>
+	<body>
+		<p lang="en-US-GB"></p>
+	</body>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -93,18 +109,6 @@ The `lang` attribute value is not a valid primary language subtag.
 ```
 
 #### Failed Example 2
-
-The `lang` attribute value has a valid primary language subtag, but a syntactically invalid region subtag.
-
-```html
-<html>
-	<body>
-		<p lang="en-US-GB"></p>
-	</body>
-</html>
-```
-
-#### Failed Example 3
 
 The `lang` attribute value is not empty ("") and is not a valid primary language subtag.
 
@@ -153,3 +157,6 @@ The `lang` attribute value consists of only [ASCII whitespace](https://infra.spe
 	</body>
 </html>
 ```
+
+[grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
+[bcp 47]: https://tools.ietf.org/html/bcp47#section-2.1

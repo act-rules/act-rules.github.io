@@ -11,13 +11,15 @@ Valid semantic roles are defined by standards. For web content and applications 
 
 The _semantic role_ of an element which is [included in the accessibility tree][] is the role this element has in the accessibility tree. Elements which are not [included in the accessibility tree][] have no semantic role.
 
-**Note:** In most cases, the semantic role of an element is its [explicit semantic role][] if it has any, otherwise, its [implicit semantic role][]. However, elements with an [explicit semantic role][] of `none` or `presentation` may still be [included in the accessibility tree][] with their [implicit semantic role][] if a [global ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#global_states) is specified, or if they are focusable or interactive ([Presentational Roles Conflict Resolution][])
+**Note:** In most cases, the semantic role of an element is its [explicit semantic role][] if it has any, otherwise, its [implicit semantic role][]. However, elements with an [explicit semantic role][] of `none` or `presentation` may still be [included in the accessibility tree][] with their [implicit semantic role][] if a [global ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#global_states) is specified, or if they are [focusable][] or interactive ([Presentational Roles Conflict Resolution][])
 
 #### Accessibility Support
 
-There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][].
+- There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][].
+- A similar conflict exists for [focusable][] elements with a `aria-hidden="true"` attribute. The WAI ARIA specification does not explain how to solve it. Some browsers give precedence to the element being focusable (and expose it in the accessibility tree) while some give precedence to the `aria-hidden` attribute (and hide the element).
 
 [explicit semantic role]: #explicit-role 'Definition of Explicit Role'
+[focusable]: #focusable 'Definition of Focusable'
 [implicit semantic role]: #implicit-role 'Definition of Implicit Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'

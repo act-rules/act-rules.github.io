@@ -16,6 +16,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
   - DOM Tree
   - CSS Styling
   - Language
@@ -45,7 +46,8 @@ The [accessible name][] of each target element together with its [programmatical
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+- There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][].
+- Some browsers expose elements which are [focusable][] but have an `aria-hidden="true"` attribute, while some hide them.
 
 ## Background
 
@@ -294,6 +296,16 @@ The [accessible name][] (from the link's text) does not describe the purpose of 
 </table>
 ```
 
+#### Failed Example 7
+
+This `a` element has an [explicit role][] of `none`. However, it is [focusable][] (by default). Thus it has a [semantic role][] of `link` due to [Presentational Roles Conflict Resolution][]. Its [accessible name][] (from the link's text), together with the absence of [programmatically determined link context][], does not describe the purpose of the link.
+
+```html
+<a href="#desc" role="none">More</a>
+
+<p id="desc">This product consists of several web pages.</p>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -323,8 +335,11 @@ An `a` element without the [semantic role][] `link`.
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
+[explicit role]: #explicit-role 'Definition of explicit role'
+[focusable]: #focusable 'Definition of focusable'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [link]: https://www.w3.org/TR/wai-aria/#link
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [programmatically determined link context]: #programmatically-determined-link-context 'Definition of programmatically determined link context'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [whitespace]: #whitespace 'Definition of whitespace'

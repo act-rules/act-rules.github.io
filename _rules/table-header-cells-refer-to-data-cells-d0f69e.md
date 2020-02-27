@@ -11,6 +11,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
   - DOM Tree
 acknowledgements:
   authors:
@@ -36,7 +37,7 @@ Each target element is [assigned][] to at least one element with a [semantic rol
 
 ## Assumptions
 
-This rule assumes that table header cells have a relationship conveyed through presentation with other cells within the same table.
+- This rule assumes that table header cells have a relationship conveyed through presentation with other cells within the same table.
 
 **Note:** This assumption helps exclude edge cases like:
 
@@ -45,7 +46,9 @@ This rule assumes that table header cells have a relationship conveyed through p
 
 ## Accessibility Support
 
-Table markup and header cell association is not well supported by some popular assistive technologies. Passing this rule can still cause issues for users of those assistive technologies.
+- Table markup and header cell association is not well supported by some popular assistive technologies. Passing this rule can still cause issues for users of those assistive technologies.
+- There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][].
+- Some browsers expose elements which are [focusable][] but have an `aria-hidden="true"` attribute, while some hide them.
 
 ## Background
 
@@ -219,6 +222,26 @@ The column header ('Col B') does not have an assigned cell within the same `tabl
 </div>
 ```
 
+#### Failed Example 4
+
+The column header ("Column 2") has an [explicit role][] of `none`. However, the [global][] [property][] `aria-label` is specified. Thus it has a [semantic role][] of `columnheader` due to [Presentational Roles Conflict Resolution][]. It does not have an assigned cell within the same `table` element.
+
+```html
+<table>
+	<thead>
+		<tr>
+			<th>Column 1</th>
+			<th role="none" aria-label="Column 2">Column 2</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>15%</td>
+		</tr>
+	</tbody>
+</table>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -325,3 +348,8 @@ The only element with a header [role][semantic role] is part of a table which is
 [grid]: https://www.w3.org/TR/wai-aria-1.1/#grid 'ARIA grid role'
 [columnheader]: https://www.w3.org/TR/wai-aria-1.1/#columnheader 'ARIA columnheader role'
 [rowheader]: https://www.w3.org/TR/wai-aria-1.1/#rowheader 'ARIA rowheader role'
+[explicit role]: #explicit-role 'Definition of Explicit Role'
+[focusable]: #focusable 'Definition of focusable'
+[global]: https://www.w3.org/TR/wai-aria-1.1/#global_states 'Definition of Global ARIA States and Properties'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[property]: https://www.w3.org/TR/wai-aria/#dfn-property 'Definition of ARIA Property'

@@ -50,7 +50,7 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Assumptions
 
-- The rule assumes that all links are [user interface components](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components) as defined by WCAG 2. When the link role is used incorrectly, this assumption may not be true.
+The rule assumes that all links are [user interface components](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components) as defined by WCAG 2. When the link role is used on elements that are not real links, failing this rule might not mean the success criteria is failed.
 
 ## Accessibility Support
 

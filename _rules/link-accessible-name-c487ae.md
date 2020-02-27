@@ -186,7 +186,7 @@ Image link with empty [accessible name][].
 
 #### Failed Example 2
 
-Image link where image is [marked as decorative](#marked-as-decorative).
+Image link where image has a role of `presentation` through empty `alt`.
 
 ```html
 <a href="http://www.w3.org/WAI"><img src="#" alt=""/></a>

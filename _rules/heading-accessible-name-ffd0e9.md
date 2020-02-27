@@ -109,7 +109,7 @@ This `h1` element has an empty [accessible name][] given by its `aria-labelledby
 
 #### Failed Example 2
 
-This `h1` element has an empty [accessible name][] because the `img` element is [marked as decorative][] through its [semantic role][] of `presentation`, and thus does not provide an [accessible name][] to the `h1` element.
+This `h1` element has an empty [accessible name][] because the `img` element has a [semantic role][] of `presentation`, and thus does not provide an [accessible name][] to the `h1` element. Note that the `alt` attribute does not trigger [Presentational Roles Conflict Resolution][] because it is not an ARIA attribute.
 
 ```html
 <h1><img src="#" alt="ACT rules" role="presentation" /></h1>
@@ -174,7 +174,6 @@ This `h1` element is not [included in the accessibility tree][].
 [focusable]: #focusable 'Definition of focusable'
 [global]: https://www.w3.org/TR/wai-aria-1.1/#global_states 'Definition of Global ARIA States and Properties'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[marked as decorative]: #marked-as-decorative 'Definition of marked as decorative'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [property]: https://www.w3.org/TR/wai-aria/#dfn-property 'Definition of ARIA Property'
 [semantic role]: #semantic-role 'Definition of semantic role'

@@ -130,7 +130,7 @@ Keyboard trap with "help" link that once clicked exposes the instructions.
 	</button>
 	<a id="helpLink" href="#" onclick="showHelpText()">How to go the next element</a>
 	<div id="helptext"></div>
-	<button id="btn2" class="target" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">
+	<button id="btn2" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">
 		Button 2
 	</button>
 </div>
@@ -202,7 +202,7 @@ Keyboard trap with help text, where the method advised doesn't work.
 	Button 1
 </button>
 <p>Press the M-key to Exit</p>
-<button id="btn2" class="target" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">
+<button id="btn2" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">
 	Button 2
 </button>
 <a id="link2" href="#">Link 2</a>

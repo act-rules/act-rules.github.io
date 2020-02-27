@@ -21,6 +21,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
   - DOM Tree
   - CSS Styling
   - Language
@@ -43,7 +44,8 @@ This rule assumes that the language of each test target can be correctly determi
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+- There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][].
+- Some browsers expose elements which are [focusable][] but have an `aria-hidden="true"` attribute, while some hide them.
 
 ## Background
 
@@ -98,6 +100,16 @@ The `input` element with a `type` of `image` has an [accessible name][] that mat
 </html>
 ```
 
+#### Failed Example 3
+
+This `img` element has an [explicit role][] of `none`. However, the [global][] [property][] `aria-label` is specified. Thus it has a [semantic role][] of `img` due to [Presentational Roles Conflict Resolution][]. Its [accessible name][] is not descriptive due to the redundant file extension.
+
+```html
+<html lang="en">
+	<img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" aria-label="w3c.png" role="none" />
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -145,4 +157,10 @@ The `img` element's `alt` attribute matches the filename but is overridden by th
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
+[explicit role]: #explicit-role 'Definition of Explicit Role'
+[focusable]: #focusable 'Definition of focusable'
+[global]: https://www.w3.org/TR/wai-aria-1.1/#global_states 'Definition of Global ARIA States and Properties'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[property]: https://www.w3.org/TR/wai-aria/#dfn-property 'Definition of ARIA Property'
+[semantic role]: #semantic-role 'Definition of Semantic Role'

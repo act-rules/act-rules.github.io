@@ -11,6 +11,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
   - DOM Tree
   - CSS Styling
 acknowledgements:
@@ -42,7 +43,8 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+- There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][].
+- Some browsers expose elements which are [focusable][] but have an `aria-hidden="true"` attribute, while some hide them.
 
 ## Background
 
@@ -102,6 +104,14 @@ Mathematical symbols cannot be substituted for text as [explicitly mentioned in 
 <a href="/" aria-label="Proof of two multiplied by two is four">Proof of 2&times;2=4</a>
 ```
 
+#### Failed Example 4
+
+This `a` element has an [explicit role][] of `none`. However, it is [focusable][] (by default). Thus it has a [semantic role][] of `link` due to [Presentational Roles Conflict Resolution][]. Its [visible][] label doesn't match its [accessible name][].
+
+```html
+<a role="none" aria-label="OK">Next</a>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -145,4 +155,8 @@ Non-text content.
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
+[focusable]: #focusable 'Definition of focusable'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [visible]: #visible 'Definition of visible'
+[explicit role]: #explicit-role 'Definition of explicit role'
+[semantic role]: #semantic-role 'Definition of semantic role'

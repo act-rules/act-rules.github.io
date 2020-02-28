@@ -19,6 +19,7 @@ accessibility_requirements:
     inapplicable: further testing needed
 
 input_aspects:
+  - Accessibility Tree
   - DOM Tree
   - CSS Styling
   - Language
@@ -58,7 +59,9 @@ For each test target, the [highest possible contrast](#highest-possible-contrast
 
 ## Accessibility Support
 
-Different browsers have different levels of support for CSS. This can cause contrast issues in one browser that do not appear in another. Because of that, this rule can produce different results depending on the browser that is used. For example, a text that is positioned using CSS transform may be on a different background in a browser that does not support CSS transform.
+- Different browsers have different levels of support for CSS. This can cause contrast issues in one browser that do not appear in another. Because of that, this rule can produce different results depending on the browser that is used. For example, a text that is positioned using CSS transform may be on a different background in a browser that does not support CSS transform.
+- There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][].
+- Some browsers expose elements which are [focusable][] but have an `aria-hidden="true"` attribute, while some hide them.
 
 ## Background
 
@@ -322,13 +325,21 @@ This text is part of a widget because it is a child of a `button` element.
 
 #### Inapplicable Example 7
 
+This `button` element has an [explicit role][] of `none`. However, it is [focusable][] (by default). Thus it has a [semantic role][] of `button` due to [Presentational Roles Conflict Resolution][]. The text is therefore part of a widget because it is a child of an element with a [semantic role][] of `button`.
+
+```html
+<button role="none">My button!</button>
+```
+
+#### Inapplicable Example 8
+
 This text is part of a widget because it is a child of an element with the `role` attribute set to `button`.
 
 ```html
 <div role="button">My button!</div>
 ```
 
-#### Inapplicable Example 8
+#### Inapplicable Example 9
 
 This text is part of a label of a [disabled][] widget, because it is in a `label` element that is the label for an `input` element with `type="text"`.
 
@@ -339,7 +350,7 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 </label>
 ```
 
-#### Inapplicable Example 9
+#### Inapplicable Example 10
 
 This text is part of a label of a [disabled][] widget, because it is in an element that is referenced by `aria-labelledby` from an element with `role="textbox"`.
 
@@ -357,7 +368,7 @@ This text is part of a label of a [disabled][] widget, because it is in an eleme
 </div>
 ```
 
-#### Inapplicable Example 10
+#### Inapplicable Example 11
 
 This text is part of a label of a [disabled][] widget, because it is in a `label` element that is the label for an `input` element in a `fieldset` element with the `disabled` attribute.
 
@@ -370,7 +381,7 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 </fieldset>
 ```
 
-#### Inapplicable Example 11
+#### Inapplicable Example 12
 
 This text is part of a label of a [disabled][] widget, because it is in a `label` element that is the label for an `input` element in an element with `role="group"` with the `aria-disabled="true"` attribute.
 
@@ -387,3 +398,7 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 [visible]: #visible 'Definition of visible'
 [text node]: https://dom.spec.whatwg.org/#text 'Definition of text node'
 [purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'Definition of purely decorative'
+[explicit role]: #explicit-role 'Definition of explicit role'
+[focusable]: #focusable 'Definition of focusable'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[semantic role]: #semantic-role 'Definition of semantic role'

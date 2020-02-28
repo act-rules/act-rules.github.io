@@ -76,7 +76,6 @@ Keyboard trap with help information in a paragraph before, and where the method 
 </button>
 <button
 	id="btn2"
-	class="target"
 	onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)"
 	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
 >
@@ -101,7 +100,6 @@ Keyboard trap with help information within the trap, and where the method advise
 <p>Press the M-key to Exit</p>
 <button
 	id="btn2"
-	class="target"
 	onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)"
 	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
 >
@@ -154,7 +152,6 @@ Keyboard trap with no instructions.
 </button>
 <button
 	id="btn2"
-	class="target"
 	onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)"
 	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
 >
@@ -179,7 +176,6 @@ Keyboard trap with instructions that doesn't give advise on the method for proce
 </button>
 <button
 	id="btn2"
-	class="target"
 	onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)"
 	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
 >

@@ -28,6 +28,11 @@ input_aspects:
 acknowledgements:
   authors:
     - Bryn Anderson
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  # needs to be skipped so that <img aria-label="foo" /> passes…
+  - 'alt-require'
 ---
 
 ## Applicability

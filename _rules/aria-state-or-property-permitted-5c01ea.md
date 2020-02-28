@@ -115,22 +115,18 @@ WAI-ARIA states and properties with empty value, specified as an empty string, a
 
 #### Passed Example 9
 
-This `li` element has an [explicit role][] of `none`. However, the [global][] [property][] `aria-label` is specified. Thus it has a [semantic role][] of `listitem` due to [Presentational Roles Conflict Resolution][]. The `aria-setsize` [property][] is [supported][] for the `listitem` role.
+This `aside` element has an [explicit role][] of `none`. However, the [global][] [property][] `aria-label` is specified. Thus it has a [semantic role][] of `complementary` due to [Presentational Roles Conflict Resolution][]. The `aria-expanded` [state][] is [inherited][] for the `complementary` role.
 
 ```html
-<ul>
-	<li role="none" aria-label="ACT rules" aria-setsize="1">ACT rules</li>
-</ul>
+<aside role="none" aria-label="About ACT rules" aria-expanded="true">ACT rules are cool!</aside>
 ```
 
 #### Passed Example 10
 
-This `li` element has an [explicit role][] of `none`. However, it is [focusable][] due to the `tabindex` attribute (even if it is excluded from sequential focus order). Thus it has a [semantic role][] of `listitem` due to [Presentational Roles Conflict Resolution][]. The `aria-setsize` [property][] is [supported][] for the `listitem` role.
+This `aside` element has an [explicit role][] of `none`. However, it is [focusable][] due to the `tabindex` attribute (even if it is excluded from sequential focus order). Thus it has a [semantic role][] of `complementary` due to [Presentational Roles Conflict Resolution][]. The `aria-expanded` [state][] is [supported][] for the `complementary` role.
 
 ```html
-<ul>
-	<li role="none" tabindex="-1" aria-setsize="1">ACT rules</li>
-</ul>
+<aside role="none" tabindex="-1" aria-expanded="true">ACT rules are cool!</aside>
 ```
 
 ### Failed
@@ -153,12 +149,10 @@ This `li` element has an [explicit role][] of `none`. However, it is [focusable]
 
 #### Failed Example 3
 
-This `li` element has an [explicit role][], and a [semantic role][], of `none`. The `aria-setsize` [property][] in neither [inherited][], [supported][] nor [required][] for this role.
+This `aside` element has an [explicit role][], and a [semantic role][], of `none`. The `aria-expanded` [state][] in neither [inherited][], [supported][] nor [required][] for this role.
 
 ```html
-<ul>
-	<li role="none" aria-setsize="1">ACT rules</li>
-</ul>
+<aside role="none" aria-expanded="true">ACT rules are cool!</aside>
 ```
 
 ### Inapplicable

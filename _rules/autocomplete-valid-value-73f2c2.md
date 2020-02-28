@@ -130,7 +130,7 @@ Full length autocomplete terms.
 
 #### Passed Example 8
 
-This `button` element has an [explicit role][] of `none`. However, it is [focusable][] (by default). Thus it has a [semantic role][] of `button` due to [Presentational Roles Conflict Resolution][]. It has a single autocomplete term.
+This `input` element has an [explicit role][] of `none`. However, it is [focusable][] (by default). Thus it has a [semantic role][] of `textbox` due to [Presentational Roles Conflict Resolution][]. It has a single autocomplete term.
 
 ```html
 <input role="none" autocomplete="username" />

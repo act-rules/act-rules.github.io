@@ -182,4 +182,5 @@ No [WAI-ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_d
 [property]: https://www.w3.org/TR/wai-aria/#dfn-property 'Definition of ARIA Property'
 [required]: https://www.w3.org/TR/wai-aria/#requiredState 'Definition of Required ARIA States and Properties'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
+[state]: https://www.w3.org/TR/wai-aria/#dfn-state 'Definition of ARIA State'
 [supported]: https://www.w3.org/TR/wai-aria/#supportedState 'Definition of Supported ARIA States and Properties'

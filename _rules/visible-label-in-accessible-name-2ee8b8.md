@@ -57,7 +57,7 @@ There are no major accessibility support issues known for this rule.
 [Visible][] label and [accessible name][] matches when trailing white spaces are removed.
 
 ```html
-<div role="link" aria-label="next page ">next page</div>
+<a aria-label="next page ">next page</a>
 ```
 
 #### Passed Example 2
@@ -65,7 +65,7 @@ There are no major accessibility support issues known for this rule.
 Character insensitivity between [visible][] label and [accessible name][].
 
 ```html
-<div role="link" aria-label="Next Page">next page</div>
+<a aria-label="Next Page">next page</a>
 ```
 
 #### Passed Example 3
@@ -83,7 +83,7 @@ Full [visible][] label is contained in the [accessible name][].
 [Visible][] label doesn't match [accessible name][].
 
 ```html
-<div role="link" aria-label="OK">Next</div>
+<a aria-label="OK">Next</a>
 ```
 
 #### Failed Example 2

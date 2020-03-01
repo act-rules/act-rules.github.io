@@ -391,25 +391,6 @@ These links have the same [accessible name][] and link to the [same resource][] 
 
 #### Inapplicable Example 4
 
-The first link is not [included in the accessibility tree][].
-
-```html
-<html lang="en">
-	<p>
-		Learn more (<a
-			href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html"
-			aria-hidden="true"
-			tabindex="-1"
-			>Contact Us</a
-		>) and get in touch (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html"
-			>Contact Us</a
-		>)
-	</p>
-</html>
-```
-
-#### Inapplicable Example 5
-
 These `span` elements do not have a [semantic role][] of link.
 
 ```html
@@ -428,7 +409,7 @@ These `span` elements do not have a [semantic role][] of link.
 </html>
 ```
 
-#### Inapplicable Example 6
+#### Inapplicable Example 5
 
 These links have empty [accessible names][accessible name].
 
@@ -436,7 +417,7 @@ These links have empty [accessible names][accessible name].
 <a href="http://facebook.com"></a> <a href="http://twitter.com"></a>
 ```
 
-#### Inapplicable Example 7
+#### Inapplicable Example 6
 
 These image links have empty [accessible names][accessible name].
 

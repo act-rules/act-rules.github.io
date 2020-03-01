@@ -3,7 +3,7 @@ id: 36b590
 name: Error message describes invalid form field value
 rule_type: atomic
 description: |
-  This rule checks that text descriptions are provided when the user completes a form field with invalid values or using an invalid format.
+  This rule checks that text error messages provided when the user completes a form field with invalid values or using an invalid format identify the cause of the error or how to fix the error.
 accessibility_requirements:
   wcag20:3.3.1: # Error Identification (A)
     forConformance: true
@@ -34,7 +34,7 @@ The rule applies to each HTML element that has one of the following [semantic ro
 
 For each test target with a [form field error indicator][], at least one of the [form field error indicators][form field error indicator] allows the identification of the related test target, through [text][], or [non-text content][], or through [presentation][].
 
-**Note**: This rule does not test [error indicators][form field error indicator] shown on a different page than the one of the test target.
+**Note**: This rule does not test [form field error indicators][form field error indicator] shown on a different page than the one of the test target.
 
 **Note**: A single [form field error indicator][] can be related to multiple test targets. For example, an error message at the top of a form can list all the form fields that are required and are empty.
 
@@ -90,17 +90,23 @@ The multiple `input` elements share a [form field error indicator][] that identi
 
 ```html
 <form>
-	<h2 id="error">Name and color cannot be left unfilled. Please complete all required fields.</h2>
-	<label for="name">Name (required)</label>
-	<input type="text" id="name" required />
-	<br />
-	<label for="address">Address</label>
-	<input type="text" id="address" />
-	<p>Pick a color (required)</p>
-	<label><input type="radio" name="color" value="blue" required />Blue</label>
-	<label><input type="radio" name="color" value="yellow" />Yellow</label>
-	<br />
-	<input type="button" value="Submit" />
+	<h2 id="error">
+		Name and color cannot be left unfilled. Please complete all required fields.
+	</h2>
+	<fieldset>
+		<legend>Your data</legend>
+		<label for="name">Name (required)</label>
+		<input type="text" id="name" required />
+		<br />
+		<label for="address">Address</label>
+		<input type="text" id="address" />
+	</fieldset>
+	<fieldset>
+		<legend>Pick a color (required)</legend>
+		<label><input type="radio" name="color" value="blue" required />Blue</label>
+		<label><input type="radio" name="color" value="yellow" />Yellow</label>
+	</fieldset>
+	<input type="button" value="Submit" aria-describedby="error" />
 </form>
 ```
 

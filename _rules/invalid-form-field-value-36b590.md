@@ -78,7 +78,7 @@ The `input` element has a [form field error indicator][] that identifies it (by 
 ```html
 <form>
 	<label for="age">Age (years)</label>
-	<input type="number" id="age" value="0" />
+	<input type="number" id="age" aria-describedby="error" value="0" />
 	<span id="error">Invalid value for age. Age must be at least 1.</span><br />
 	<input type="button" value="Submit" />
 </form>
@@ -141,7 +141,7 @@ The multiple `input` elements share a [form field error indicator][] but its mes
 
 #### Failed Example 2
 
-The `input` elements has a [form field error indicator][] but its message does not describe the cause of the error.
+The `input` element has a [form field error indicator][] but its message does not describe the cause of the error.
 
 ```html
 <form>

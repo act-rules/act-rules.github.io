@@ -38,10 +38,6 @@ For the test target there exists a [mechanism][] that might be used to:
 
 **Note**: If there is more than one test target, a single [mechanism][] may be used to pause, stop, hide or alter the frequency for all test targets.
 
-## Expectation 2
-
-The existing [mechanism][] is [visible][], has an [accessible name][] that is not only [whitespace][], and is [included in the accessibility tree][].
-
 ## Assumptions
 
 - This rule assumes that the auto-updating of the content is not [essential][], which is listed as valid exception to [Success Criterion 2.2.2: Pause, Stop, Hide][sc 2.2.2]. When the auto-updating of content is [essential][] this rule may produce incorrect results.
@@ -63,7 +59,7 @@ The existing [mechanism][] is [visible][], has an [accessible name][] that is no
 
 #### Passed Example 1
 
-The text content of the `span` element automatically updates after the page completes loading. A button is available to stop the automatic updates. The rule is not applicable to the first `p` element because it has a child (the `span` element) whose content updates.
+The text content of the `span` element automatically updates after the page completes loading. A button is available to stop the automatic updates. The rule is not applicable to the `p` element because it has a child (the `span` element) whose content updates.
 
 ```html
 <body onload="startUpdates()">
@@ -76,7 +72,7 @@ The text content of the `span` element automatically updates after the page comp
 
 #### Passed Example 2
 
-The text content of the `span` element automatically updates after the page completes loading. A button is available to pause and resume the automatic updates. The rule is not applicable to the first `p` element because it has a child (the `span` element) whose content updates.
+The text content of the `span` element automatically updates after the page completes loading. A button is available to pause and resume the automatic updates. The rule is not applicable to the `p` element because it has a child (the `span` element) whose content updates.
 
 ```html
 <body onload="startUpdates()">
@@ -89,7 +85,7 @@ The text content of the `span` element automatically updates after the page comp
 
 #### Passed Example 3
 
-The text content of the `span` element automatically updates after the page completes loading. A button is available to hide the automatically updating content. The rule is not applicable to the first `p` element because it has a child (the `span` element) whose content updates.
+The text content of the `span` element automatically updates after the page completes loading. A button is available to hide the automatically updating content. The rule is not applicable to the `p` element because it has a child (the `span` element) whose content updates.
 
 ```html
 <body onload="startUpdates()">
@@ -102,7 +98,7 @@ The text content of the `span` element automatically updates after the page comp
 
 #### Passed Example 4
 
-The text content of the `span` element automatically updates after the page completes loading. A [mechanism][] is available to change the update frequency. The rule is not applicable to the first `p` element because it has a child (the `span` element) whose content updates.
+The text content of the `span` element automatically updates after the page completes loading. A [mechanism][] is available to change the update frequency. The rule is not applicable to the `p` element because it has a child (the `span` element) whose content updates.
 
 ```html
 <body onload="startUpdates()">
@@ -131,38 +127,12 @@ The text content of the `span` element automatically updates after the page comp
 
 #### Failed Example 2
 
-The text content of the `span` element automatically updates after the page completes loading. A button is available to stop the automatic updates, but the button is not visible.
+The text content of the `span` element automatically updates after the page completes loading. A button is available to stop the automatic updates, but the button only stops the updates while it is focused.
 
 ```html
 <body onload="startUpdates()">
 	<p>Random number: <span id="target">1</span></p>
-	<input type="button" onclick="stopUpdates()" value="Stop updates" style="display:none" />
-
-	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
-</body>
-```
-
-#### Failed Example 3
-
-The text content of the `span` element automatically updates after the page completes loading. A button is available to stop the automatic updates, but the button does not have an accessible name.
-
-```html
-<body onload="startUpdates()">
-	<p>Random number: <span id="target">1</span></p>
-	<input type="button" onclick="stopUpdates()" />
-
-	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
-</body>
-```
-
-#### Failed Example 4
-
-The text content of the `span` element automatically updates after the page completes loading. A button is available to stop the automatic updates, but the button is not included in the accessibility tree.
-
-```html
-<body onload="startUpdates()">
-	<p>Random number: <span id="target">1</span></p>
-	<input type="button" onclick="stopUpdates()" aria-hidden="true" />
+	<input type="button" onfocus="stopUpdates()" onblur="startUpdates()" value="Stop updates" />
 
 	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>

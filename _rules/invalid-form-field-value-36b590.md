@@ -78,7 +78,7 @@ The `input` element has a [form field error indicator][] that identifies it (by 
 ```html
 <form>
 	<label for="age">Age (years)</label>
-	<input type="number" id="age" value="0" />
+	<input type="number" id="age" aria-describedby="error" value="0" />
 	<span id="error">Invalid value for age. Age must be at least 1.</span><br />
 	<input type="button" value="Submit" />
 </form>

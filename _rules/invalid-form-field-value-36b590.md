@@ -135,7 +135,7 @@ The multiple `input` elements share a [form field error indicator][] but its mes
 
 #### Failed Example 2
 
-The `input` elements has a [form field error indicator][] but its message does not describe the cause of the error.
+The `input` element has a [form field error indicator][] but its message does not describe the cause of the error.
 
 ```html
 <form>

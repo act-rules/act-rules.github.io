@@ -89,7 +89,7 @@ Applicability describes which (elements of) web pages should be tested using the
 
 Use objective, unambiguous definitions within applicability. Finding objective definitions to use in rules can be difficult, if not outright impossible in some cases. The intent here is to ensure repeatability of the rule. Not everything in WCAG testing is entirely repeatable, but when it comes to rule applicability, this is a hard requirement.
 
-> _For example:_ A rule testing that page titles are descriptive should only apply to specific `title` elements and this could be stated as _"This rule applies to the first HTML title element that is a descendant of the html element of a web page, and contains children that are text nodes that are not only whitespace."_.
+> _For example:_ A rule testing that page titles are descriptive should only apply to specific `title` elements and this could be stated as _"This rule applies to the first HTML `title` element that is a descendant of the html element of a web page, and contains children that are text nodes that are not only whitespace."_.
 
 For more details, see [ACT Rules Format: Applicability](https://www.w3.org/TR/act-rules-format/#applicability).
 

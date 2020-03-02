@@ -21,7 +21,7 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to elements that are [included in the accessibility tree][] and have a [semantic role](#semantic-role) of `button`, including `input` elements whose `type` attribute is in the [`Image Button` state](<https://html.spec.whatwg.org/#image-button-state-(type=image)>).
+The rule applies to all elements that are [included in the accessibility tree][] and have a [semantic role](#semantic-role) of `button`.
 
 **Note:** `input` elements have a `type` attribute in the `Image button` state if it is set to any case-insensitive match of `image` (most of the time, using `<input type="image">`).
 

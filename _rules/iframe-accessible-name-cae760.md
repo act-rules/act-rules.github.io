@@ -37,7 +37,8 @@ If an `iframe` is not perceived by the user as a single control, it does not qua
 
 ## Accessibility Support
 
-Some browsers include `iframe` elements in the [sequential focus navigation][]. This ensures that `iframe` elements can always be scrolled using the keyboard. When an `iframe` is removed from the accessibility tree, this rule is still applicable for those browsers, unless the `iframe` is explicitly removed from [sequential focus navigation][] (by having the `tabindex` attribute set to a negative value).
+- Some browsers include `iframe` elements in the [sequential focus navigation][]. This ensures that `iframe` elements can always be scrolled using the keyboard. When an `iframe` is removed from the accessibility tree, this rule is still applicable for those browsers, unless the `iframe` is explicitly removed from [sequential focus navigation][] (by having the `tabindex` attribute set to a negative value).
+- Certain assistive technologies can be set up to ignore the title attribute, which means that to some users the title attribute will not act as an [accessible name][].
 
 ## Background
 

@@ -18,9 +18,11 @@ The WCAG-ACT-RULES-CG rule design builds on WCAG 2.x and its supporting document
 
 7. **[Test cases](#test-cases)**: Define a range of code examples that demonstrate pass, fail and inapplicable outcomes for readers and for validating implementations.
 
+8. **Glossary**: A list of any defined terms used within the rule file.
+
 ## Rule Properties
 
-A rule file should have a unique hyphenated filename, created from condensing the name and the unique identifier of the rule, _e.g. "aria-attr-defined-5f99a7"_. A rule file should also have a number of metadata properties at the top of the file.
+A rule file should have a unique hyphenated filename, created from condensing the name and the unique identifier of the rule, and usually starting with the test target, _e.g. "aria-attr-defined-5f99a7"_. A rule file should also have the following metadata properties at the top of the file.
 
 For more details, see [ACT Rules Format: Structure](https://www.w3.org/TR/act-rules-format/#act-rule-structure).
 
@@ -30,7 +32,7 @@ The 6-digit identifier is created using a random hex generator, such as https://
 
 ### Rule name
 
-The agreed conventions for naming of rules are as follows:
+The rule name is its descriptive title. The agreed conventions for naming of rules are as follows:
 
 - Be succinct, direct and declarative, and avoid unnecessary words, _e.g. an, the_.
 - Use declarative verbs, _e.g. has, have, is_.
@@ -54,13 +56,13 @@ For more details, see [ACT Rules Format: Rule Types](https://www.w3.org/TR/act-r
 
 ### Description
 
-A brief description of what the rule does. This should be declarative rather than negative. It should begin with "This rule checks that..." or similar. It should use plain language, and be a well-formed grammatically correct sentence that finishes with a full stop/period.
+The description is a short synopsis of what the rule does. This should be declarative rather than negative. It should begin with "This rule checks that..." or similar. It should use plain language, and be a well-formed grammatically correct sentence that finishes with a full stop/period.
 
 > _For example: "This rule checks that each ARIA state or property has a valid value."_
 
 ### Accessibility requirements
 
-A list of all accessibility requirements that are not satisfied if one or more outcomes of a rule fails. This could be one or more WCAG success criteria, or a WAI-ARIA rule, for example.
+List all accessibility requirements that are not satisfied if one or more outcomes of a rule fails. For example, this could be one or more WCAG success criteria, or a WAI-ARIA rule. Each requirement should indicate the associated conformance level, and map the implications of each outcome, such as "satisfied", "not satisfied", or "further testing needed".
 
 **Note**: When linking to WCAG or other sources that may have several versions, use the version number where the relevant requirement was first introduced.
 
@@ -79,9 +81,9 @@ Other aspects may be necessary for testing. These can be added as long as they a
 
 For more details, see [ACT Rules Format: Input](https://www.w3.org/TR/act-rules-format/#input).
 
-### Authors
+### Acknowledgements
 
-Names of the Authors. These must be an exact match of names in `contributors` property in `package.json`. Note: If an author does not exist in `package.json`, they should be added to that file as part of the relevant PR.
+While optional, this can provide information on authors, previous authors, and other contributors who have helped with creation of a rule. When listing authors or other acknowledgements, names must be an exact match of names under the `contributors` property in `package.json`. Note: If an author does not exist in `package.json`, they should be added to that file as part of the relevant PR.
 
 ## Applicability
 
@@ -145,6 +147,6 @@ The description should:
 - use sentences that are well-formed, grammatically correct and finish with a full stop/period; and
 - use back ticks around any words from code and identify them as elements or attributes.
 
-> _For example:_ "This page has a `title` element with content."
+> _For example: "This page has a `title` element with content."_
 
 For more details, see [ACT Rules Format: Test Cases](https://www.w3.org/TR/act-rules-format/#test-cases).

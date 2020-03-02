@@ -262,7 +262,7 @@ The `button` element is tested separately from the `img` element. [Success Crite
 
 #### Inapplicable Example 3
 
-The `img` element is not a user interface component, and so is not tested for [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value).
+There is no element with a [semantic role][] of `button`.
 
 ```html
 <img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />

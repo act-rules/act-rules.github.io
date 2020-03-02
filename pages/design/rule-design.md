@@ -135,7 +135,7 @@ The test cases are snippets of code that help with understanding and can be used
 
 > \_For example, a passing example of a page with a `title` element might omit the `lang` attribute on the `html` element, and the `head` and `body` elements in order to be succinct. A failing example might also omit the `title` element. Meanwhile a passing example of a descriptive `title` element would include the `lang` attribute because it is relevant.
 
-Each test case should be simply and uniquely named, _e.g. "Passed Example 1"_. Each must also include a brief description that explains why the example has the outcome it claims to have.
+Each test case must be named, in the format _Passed/Failed/Inapplicable Example X"_ where X is a number, in increasing sequence for each of the three kinds of tests. Each must also include a brief description that explains why the example has the outcome it claims to have.
 
 The description should:
 

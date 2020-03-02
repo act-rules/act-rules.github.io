@@ -133,7 +133,7 @@ For more details, see [ACT Rules Format: Background](https://www.w3.org/TR/act-r
 
 The test cases are snippets of code that help with understanding and can be used for validating implementations of the rule. There must be at least one example for **pass**, **fail** and **inapplicable** outcomes, with reasonable coverage of all logically possible cases. All examples should demonstrate good practice, with allowances for omitting code not directly relevant for the rule, so as to be succinct. Additionally, a failing example should clearly fail in only one demonstrated aspect relevant for that rule.
 
-> \_For example, a passing example of a page with a `title` element might omit the `lang` attribute on the `html` element, and the `head` and `body` elements in order to be succinct. A failing example might also omit the `title` element. Meanwhile a passing example of a descriptive `title` element would include the `lang` attribute because it is relevant.\_
+> _For example_: a passing example of a page with a `title` element might omit the `lang` attribute on the `html` element, and the `head` and `body` elements in order to be succinct. A failing example might also omit the `title` element. Meanwhile a passing example of a descriptive `title` element would include the `lang` attribute because it is relevant.
 
 Each test case must be named in the format "Passed/Failed/Inapplicable Example X", where X is a number sequentially increasing for each of the three kinds of outcome, _e.g. "Passed Example 1"_. Each must also include a brief description that explains why the example has the outcome it claims to have.
 

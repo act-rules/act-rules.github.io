@@ -27,7 +27,6 @@ input_aspects:
 acknowledgements:
   authors:
     - Brian Bors
-    - Kasper Isager
     - Wilco Fiers
 ---
 

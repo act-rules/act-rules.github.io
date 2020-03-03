@@ -124,13 +124,6 @@ The HTML `img` element is [marked as decorative][] through `role="none"`.
 <img role="none" />
 ```
 
-#### Passed Example 8
-
-The HTML `img` element has an [accessible name][] that is not empty.
-
-```html
-<img alt=":-)" />
-```
 
 ### Failed
 

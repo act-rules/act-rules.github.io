@@ -50,7 +50,6 @@ This rule assumes that assistive technologies are exposing all links on the page
 
 ## Background
 
-- [CSS Scoping Module Level 1 (editor's draft)](https://drafts.csswg.org/css-scoping/)
 - [Understanding Success Criterion 2.4.4: Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
 - [HTML Specification - URL parsing](https://html.spec.whatwg.org/#resolving-urls)
 
@@ -60,7 +59,7 @@ This rule assumes that assistive technologies are exposing all links on the page
 
 #### Passed Example 1
 
-A set of two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context] and link to the [same resource][].
+The two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context] and link to the [same resource][].
 
 ```html
 <html lang="en">
@@ -75,7 +74,7 @@ A set of two HTML `a` elements have the same [accessible name][] and [context][p
 
 #### Passed Example 2
 
-A set of two HTML `a` elements the same [accessible name][] and [context][programmatically determined link context]. Both resolve to the [same resource][] after instant redirect.
+The two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context]. Both resolve to the [same resource][] after instant redirect.
 
 ```html
 <html lang="en">
@@ -91,7 +90,7 @@ A set of two HTML `a` elements the same [accessible name][] and [context][progra
 
 #### Passed Example 3
 
-These two links resolve to resources that are not the same (different URLs), but the resources are completely identical, thus serving the same purpose.
+The two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context]. They resolve to resources that are not the same (different URLs), but the resources are completely identical, thus serving the same purpose.
 
 ```html
 <html lang="en">
@@ -108,7 +107,7 @@ These two links resolve to resources that are not the same (different URLs), but
 
 #### Passed Example 4
 
-These two links go to pages where the content section is the same, but where the navigation options (bread crumbs and local sub menus) differ due to different placement in navigation hierarchy.
+The two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context]. They go to pages that serve the same purpose because the content section is the same, even if the navigation options (bread crumbs and local sub menus) differ due to different placement in navigation hierarchy.
 
 ```html
 <html lang="en">
@@ -124,7 +123,7 @@ These two links go to pages where the content section is the same, but where the
 
 #### Passed Example 5
 
-These two HTML `a` elements link to URLs that differ due to trailing slashes, but resolve to the [same resource][] after redirects caused by user agent.
+The two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context]. They link to URLs that differ due to trailing slashes, but resolve to the [same resource][] after redirects caused by user agent.
 
 ```html
 <html lang="en">
@@ -137,7 +136,7 @@ These two HTML `a` elements link to URLs that differ due to trailing slashes, bu
 
 #### Passed Example 6
 
-These two links go to pages that contain different amounts of information and/or differently worded information, but fulfill the same purpose in relation to the link.
+The two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context]. They go to pages that contain different amounts of information and/or differently worded information, but fulfill the same purpose in relation to the link.
 
 ```html
 <html lang="en">
@@ -152,7 +151,7 @@ These two links go to pages that contain different amounts of information and/or
 
 #### Passed Example 7
 
-These two links go to pages that have the same advertised key content but use different layouts.
+The two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context]. They go to pages that use different layouts but have the same advertised key content thus fulfilling the same purpose.
 
 ```html
 <html lang="en">
@@ -168,7 +167,7 @@ These two links go to pages that have the same advertised key content but use di
 
 #### Passed Example 8
 
-These two HTML `span` element have an [explicit role][] of link, and lead to the [same resource][].
+The two HTML `span` element have an [explicit role][] of link, the same [accessible name][], the same [context][programmatically determined link context], and lead to the [same resource][].
 
 ```html
 <html lang="en">
@@ -194,7 +193,7 @@ These two HTML `span` element have an [explicit role][] of link, and lead to t
 
 #### Passed Example 9
 
-A set of two SVG `a` elements have the same [accessible name][] and [context][programmatically determined link context] and link to the [same resource][].
+The two SVG `a` elements have the same [accessible name][], same [context][programmatically determined link context] and link to the [same resource][].
 
 ```html
 <html lang="en">
@@ -216,7 +215,7 @@ A set of two SVG `a` elements have the same [accessible name][] and [context][pr
 
 #### Passed Example 10
 
-A set of one SVG `a` element and one HTML `a` element that have the same [accessible name][] and [context][programmatically determined link context] and link to the [same resource][].
+The elements in the set comprised by one SVG `a` element and one HTML `a` element have the same [accessible name][], same [context][programmatically determined link context] and link to the [same resource][].
 
 ```html
 <html lang="en">
@@ -236,7 +235,7 @@ A set of one SVG `a` element and one HTML `a` element that have the same [access
 
 #### Failed Example 1
 
-Both links have the same [accessible name][] and [context][programmatically determined link context] but go to different resources.
+The two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context] but go to different resources.
 
 ```html
 <html lang="en">
@@ -250,7 +249,7 @@ Both links have the same [accessible name][] and [context][programmatically dete
 
 #### Failed Example 2
 
-The same [accessible name][] is used for two links in the same [context][programmatically determined link context] going to web pages that are similar, but have different information in their content.
+The two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context]. They link to web pages that are similar, but have different information in their content.
 
 ```html
 <html lang="en">
@@ -267,7 +266,7 @@ The same [accessible name][] is used for two links in the same [context][program
 
 #### Failed Example 3
 
-These two HTML `span` elements have an [explicit role][] of link, but lead to resources that offer different content.
+The two HTML `span` elements have an [explicit role][] of link, same [accessible name][] and [context][programmatically determined link context], but lead to resources that offer different content.
 
 ```html
 <html lang="en">
@@ -293,7 +292,7 @@ These two HTML `span` elements have an [explicit role][] of link, but lead to 
 
 #### Failed Example 4
 
-The same [accessible name][] is used for image links in the same [context][programmatically determined link context] going to different resources.
+The two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context] but link to different resources.
 
 ```html
 <html lang="en">
@@ -307,7 +306,7 @@ The same [accessible name][] is used for image links in the same [context][progr
 
 #### Failed Example 5
 
-A set of two SVG `a` elements that have the same [accessible name][] and [context][programmatically determined link context] but link to different resources.
+The two SVG `a` elements have the same [accessible name][] and [context][programmatically determined link context] but link to different resources.
 
 ```html
 <html lang="en">
@@ -329,7 +328,7 @@ A set of two SVG `a` elements that have the same [accessible name][] and [contex
 
 #### Failed Example 6
 
-Both links resolve to [same resource][] after redirect, but the redirect is not instant.
+The two HTML `a` elements with the same [accessible name][] and [context][programmatically determined link context] resolve to the [same resource][] after redirect, but the redirect is not instant.
 
 ```html
 <html lang="en">
@@ -348,7 +347,7 @@ Both links resolve to [same resource][] after redirect, but the redirect is not 
 
 #### Inapplicable Example 1
 
-These `a` and `area` elements do not have a role of `link`.
+The HTML `a` and `area` elements do not have a role of `link`.
 
 ```html
 <html lang="en">
@@ -359,7 +358,7 @@ These `a` and `area` elements do not have a role of `link`.
 
 #### Inapplicable Example 2
 
-These links have different [accessible names][accessible name]. The rule only applies to identical [accessible names][accessible name], not to identical link destinations.
+The two HTML `a` elements have different [accessible names][accessible name]. The rule only applies to identical [accessible names][accessible name], not to identical link destinations.
 
 **Note:** It is a best practice for [Success Criterion 2.4.4: Link Purpose (In Context)][sc244] that identical links have identical [accessible names][accessible name]. This is however not a requirement.
 
@@ -374,7 +373,7 @@ These links have different [accessible names][accessible name]. The rule only ap
 
 #### Inapplicable Example 3
 
-These links have the same [accessible name][] and link to the [same resource][] but different [programmatically determined link contexts][programmatically determined link context].
+The two HTML `a` elements have the same [accessible name][] and link to the [same resource][] but different [programmatically determined link contexts][programmatically determined link context].
 
 ```html
 <html lang="en">
@@ -393,7 +392,7 @@ These links have the same [accessible name][] and link to the [same resource][] 
 
 #### Inapplicable Example 4
 
-These `span` elements do not have a [semantic role][] of link.
+Neither of the two `span` elements has a [semantic role][] of link.
 
 ```html
 <html lang="en">
@@ -413,18 +412,10 @@ These `span` elements do not have a [semantic role][] of link.
 
 #### Inapplicable Example 5
 
-These links have empty [accessible names][accessible name].
+The two HTML `a` elements have empty [accessible names][accessible name].
 
 ```html
-<a href="http://facebook.com"></a> <a href="http://twitter.com"></a>
-```
-
-#### Inapplicable Example 6
-
-These image links have empty [accessible names][accessible name].
-
-```html
-<a href="http://facebook.com"><img src="facebook.jpg"/></a> <a href="http://twitter.com"><img src="twitter.jpg"/></a>
+<a href="http://facebook.com"></a> <a href="http://facebook.com"><img src="facebook.jpg"/></a>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

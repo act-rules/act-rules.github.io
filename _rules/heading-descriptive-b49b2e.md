@@ -193,15 +193,6 @@ Heading marked up with `h1` element that does not describe the topic or purpose 
 </html>
 ```
 
-#### Failed Example 5
-
-This `h1` element has an [explicit role][] of `none`. However, the [global][] [property][] `aria-label` is specified. Thus it has a [semantic role][] of `heading` due to [Presentational Roles Conflict Resolution][]. It does not describes the topic of its [section of the content][].
-
-```html
-<h1 role="none" aria-label="Weather">Weather</h1>
-<p>We are open Monday through Friday from 10 to 16</p>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1

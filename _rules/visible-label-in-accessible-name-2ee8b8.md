@@ -104,14 +104,6 @@ Mathematical symbols cannot be substituted for text as [explicitly mentioned in 
 <a href="/" aria-label="Proof of two multiplied by two is four">Proof of 2&times;2=4</a>
 ```
 
-#### Failed Example 4
-
-This `a` element has an [explicit role][] of `none`. However, it is [focusable][] (by default). Thus it has a [semantic role][] of `link` due to [Presentational Roles Conflict Resolution][]. Its [visible][] label doesn't match its [accessible name][].
-
-```html
-<a role="none" aria-label="OK">Next</a>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1

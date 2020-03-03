@@ -13,7 +13,7 @@ The _semantic role_ of an element which is [included in the accessibility tree][
 
 **Note:** In most cases, the semantic role of an element is its [explicit semantic role][] if it has any, otherwise, its [implicit semantic role][]. However, elements with an [explicit semantic role][] of `none` or `presentation` may still be [included in the accessibility tree][] with their [implicit semantic role][] if a [global ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#global_states) is specified, or if they are [focusable][] or interactive ([Presentational Roles Conflict Resolution][])
 
-#### Accessibility Support
+#### Accessibility Support for Definition of Semantic Role
 
 - There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][].
 - A similar conflict exists for [focusable][] elements with a `aria-hidden="true"` attribute. The WAI ARIA specification does not explain how to solve it. Some browsers give precedence to the element being focusable (and expose it in the accessibility tree) while some give precedence to the `aria-hidden` attribute (and hide the element).

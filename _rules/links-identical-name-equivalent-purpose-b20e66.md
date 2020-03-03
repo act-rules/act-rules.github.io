@@ -329,17 +329,6 @@ Both links resolve to [same resource][] after redirect, but the redirect is not 
 </html>
 ```
 
-#### Failed Example 7
-
-The first `a` element has an [explicit role][] of `none`. However, it is [focusable][] (by default). Thus it has a [semantic role][] of `link` due to [Presentational Roles Conflict Resolution][]. Both links have the same [accessible name][] but go to different resources.
-
-```html
-<html lang="en">
-	<a href="http://facebook.com" role="none">Follow us</a>
-	<a href="http://twitter.com">Follow us</a>
-</html>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1

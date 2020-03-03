@@ -28,11 +28,6 @@ input_aspects:
 acknowledgements:
   authors:
     - Bryn Anderson
-htmlHintIgnore:
-  # https://www.npmjs.com/package/htmlhint
-  # (used with `npm test` to ensure validity of code snippets)
-  # needs to be skipped so that <img aria-label="foo" /> passes…
-  - 'alt-require'
 ---
 
 ## Applicability
@@ -102,16 +97,6 @@ The `input` element with a `type` of `image` has an [accessible name][] that mat
 ```html
 <html lang="en">
 	<input type="image" src="https://www.w3.org/WAI/demos/bad/before/img/top_weather.gif" alt="top_weather.gif" />
-</html>
-```
-
-#### Failed Example 3
-
-This `img` element has an [explicit role][] of `none`. However, the [global][] [property][] `aria-label` is specified. Thus it has a [semantic role][] of `img` due to [Presentational Roles Conflict Resolution][]. Its [accessible name][] is not descriptive due to the redundant file extension.
-
-```html
-<html lang="en">
-	<img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" aria-label="w3c.png" role="none" />
 </html>
 ```
 

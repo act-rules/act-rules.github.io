@@ -221,16 +221,6 @@ Both the `div` and the `span` elements are [programmatic labels][programmatic la
 </html>
 ```
 
-#### Failed Example 6
-
-This `input` element has an [explicit role][] of `none`. However, it is [focusable][] (by default). Thus it has a [semantic role][] of `textbox` due to [Presentational Roles Conflict Resolution][]. The `label` element is its [programmatic label][] but does not describe it.
-
-```html
-<html lang="en">
-	<label>Menu<input id="fname" type="text" name="fname"/></label>
-</html>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1

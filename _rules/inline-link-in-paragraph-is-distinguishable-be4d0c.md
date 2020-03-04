@@ -13,9 +13,12 @@ accessibility_requirements: # Remove whatever is not applicable
     passed: further testing needed
     inapplicable: further testing needed
 
-input_aspects:
-  - DOM Tree
-  - CSS Styling
+input_rules:
+  - e7cc2b
+  - 88407d
+  - 36f116
+  - 66e9f0
+  - 548868
 
 acknowledgements:
   authors:

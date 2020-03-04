@@ -1,10 +1,10 @@
 ---
-id: 66e9f0
-name: Inline link has distinguishable box-shadow
+id: 2803b8
+name: Inline link has different background color and distinguishable style on hover and focus
 rule_type: atomic
 
 description: |
-  This rule checks that links that are embedded in a paragraph, list or cell have a box-shadow that distinguishes them from the surrounding text
+  This rule checks that links that are embedded in a paragraph, list or cell have a style on hover and focus that distinguishes them from the surrounding text
 
 input_aspects:
   - DOM Tree
@@ -29,7 +29,11 @@ This rule applies to any HTML element which:
 
 ## Expectation
 
-Each target element has a `box-shadow` style property with a [computed](https://drafts.csswg.org/css-cascade/#computed-value) [color value](https://drafts.csswg.org/css-backgrounds/#shadow-color) that makes it [visible][].
+Each target element has:
+
+- a [computed][] [background color][] different from the [computed][] [background color][] of the other [descendant][] [visible][] [text nodes][text node] of the same _ancestor_ element that are not [text nodes][text nodes] of elements with the [semantic role][] of ['link'][link] (if all have the same [background color][]);
+- a difference between the [background colors][background color] that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio); and
+- a [distinguishing style][] both when the target element [gains focus][focused] and the target element is [hovered][].
 
 ## Assumptions
 
@@ -37,7 +41,6 @@ Each target element has a `box-shadow` style property with a [computed](https://
 - This rule assumes that the 3:1 contrast difference between text is minimal to what would be sufficient to meet WCAG 2.0. This value is part of [technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183), but is not specified in the [1.4.1 success criterion](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
 - This rule assumes that any change in font is sufficiently distinguishable, and that fonts are loaded when they are present.
 - This rule assumes that if multiple colors are used in the visible text nodes of the _ancestor_ element then color can not be a distinguishing factor.
-- This rule assumes that if `box-shadow` is used in the different visible text nodes of the _ancestor_ element then `box-shadow` can not be a distinguishing factor.
 
 ## Accessibility Support
 
@@ -56,19 +59,24 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-This is a link that is a descendant of a paragraph element. The link has a distinguishing box-shadow.
+This is a link that is a descendant of a paragraph element. The link's text has a background color contrast of more than 3:1 compared to the other text in the paragraph. When the link receives focus, an underline appears. When the link receives hover, an underline appears.
 
 ```html
 <style>
-	* {
+	p {
 		text-decoration: none;
 	}
-	a.test {
+	a {
 		text-decoration: none;
-		box-shadow: 4px 4px;
+		color: #000;
+		background-color: #cf5e42;
+	}
+	a:hover,
+	a:focus {
+		text-decoration: underline;
 	}
 </style>
-<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
 ### Failed
@@ -157,12 +165,13 @@ This paragraph has no visible descendant text nodes apart from those in the link
 ```
 
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor
-[background color]: #background-colors-of-text 'Definition of background color'
+[background color]: https://drafts.csswg.org/css-backgrounds-3/#background-color
 [cell]: https://www.w3.org/TR/wai-aria/#cell
+[computed]: https://drafts.csswg.org/css-cascade/#computed-value
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
+[distinguishing style]: #distinguishing-styles 'Definition of distinguishing styles'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [focused]: #focused 'Definition of focused'
-[foreground color]: #foreground-colors-of-text 'Definition of foreground color'
 [hovered]: #hovered 'Definition of hovered'
 [link]: https://www.w3.org/TR/wai-aria/#link
 [listitem]: https://www.w3.org/TR/wai-aria/#listitem

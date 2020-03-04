@@ -1,6 +1,6 @@
 ---
 id: 36f116
-name: Inline link in paragraph has distinguishable border
+name: Inline link has distinguishable border
 rule_type: atomic
 
 description: |
@@ -29,15 +29,10 @@ This rule applies to any HTML element which:
 
 ## Expectation
 
-Each target element has a [border](https://drafts.csswg.org/css-backgrounds/#borders) with at least one of the `border-top-color`, `border-right-color`, `border-bottom-color` and `border-left-color` style properties with:
-
-- the respective `border-top-width`, `border-right-width`, `border-bottom-width` or `border-left-width` style properties with [width](https://drafts.csswg.org/css-backgrounds/#border-width) bigger than 0px; and
-- a [computed](https://drafts.csswg.org/css-cascade/#computed-value) [color value](https://drafts.csswg.org/css-backgrounds/#border-color) different from the [computed](https://drafts.csswg.org/css-cascade/#computed-value) `background-color` of the target element.
+Each target element has a [visible][] [border](https://drafts.csswg.org/css-backgrounds/#borders).
 
 ## Assumptions
 
-- This rule assumes that the link is distinguishable from the rest of the text with color, which means it fails SC 1.4.1 when there is not another way to distinguish it.
-- This rule assumes that the 3:1 contrast difference between text is minimal to what would be sufficient to meet WCAG 2.0. This value is part of [technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183), but is not specified in the [1.4.1 success criterion](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
 - This rule assumes that any change in font is sufficiently distinguishable, and that fonts are loaded when they are present.
 - This rule assumes that if multiple colors are used in the visible text nodes of the _ancestor_ element then color can not be a distinguishing factor.
 - This rule assumes that if `border` is used in the different visible text nodes of the _ancestor_ element then `border` can not be a distinguishing factor.

@@ -1,6 +1,6 @@
 ---
 id: be4d0c
-name: Inline link in paragraph is distinguishable
+name: Inline link is distinguishable
 rule_type: composite
 
 description: |
@@ -19,6 +19,7 @@ input_rules:
   - 36f116
   - 66e9f0
   - 548868
+  - 2803b8
 
 acknowledgements:
   authors:
@@ -45,7 +46,8 @@ For each test target, the [outcome][] of one of the following rules is "passed":
 - [Inline link in paragraph has distinguishable style not based on color alone](https://act-rules.github.io/rules/88407d)
 - [Inline link in paragraph has distinguishable border](https://act-rules.github.io/rules/36f116)
 - [Inline link in paragraph has distinguishable box-shadow](https://act-rules.github.io/rules/66e9f0)
-- [Inline link in paragraph has distinguishable style on hover and focus](https://act-rules.github.io/rules/548868)
+- [Inline link in paragraph has different foreground color and distinguishable style on hover and focus](https://act-rules.github.io/rules/548868)
+- [Inline link in paragraph has different background color and distinguishable style on hover and focus](https://act-rules.github.io/rules/2803b8)
 
 ## Assumptions
 

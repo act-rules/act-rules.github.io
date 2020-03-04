@@ -1,6 +1,6 @@
 ---
 id: e7cc2b
-name: Inline link in paragraph has distinguishable content
+name: Inline link has distinguishable content
 rule_type: atomic
 
 description: |

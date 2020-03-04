@@ -1,6 +1,6 @@
 ---
 id: 88407d
-name: Inline link in paragraph has distinguishable style not based on color alone
+name: Inline link has distinguishable style not based on color alone
 rule_type: atomic
 
 description: |

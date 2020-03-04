@@ -1,6 +1,6 @@
 ---
 id: 548868
-name: Inline link in paragraph has distinguishable style on hover and focus
+name: Inline link has different foreground color and distinguishable style on hover and focus
 rule_type: atomic
 
 description: |
@@ -29,10 +29,11 @@ This rule applies to any HTML element which:
 
 ## Expectation
 
-Each target element has one of the following:
+Each target element has:
 
-- a [foreground color][] different from the [foreground color][] of the other descendant visible text nodes of the same _ancestor_ element (if all have the same [foreground color][]), that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) and a [distinguishing style][] both when the target element [gains focus][focused] and the target element is [hovered][]; or
-- a [background color][] different from the [background color][] of the other descendant visible text nodes of the same _ancestor_ element (if all have the same [background color][]), that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) and a [distinguishing style][] both when the target element [gains focus][focused] and the target element is [hovered][].
+- a [computed][] [foreground color][] different from the [computed][] [foreground color][] of the other [descendant][] [visible][] [text nodes][text node] of the same _ancestor_ element that are not [text nodes][text nodes] of elements with the [semantic role][] of ['link'][link] (if all have the same [foreground color][]);
+- a difference between the [foreground colors][foreground color] that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio); and
+- a [distinguishing style][] both when the target element [gains focus][focused] and the target element is [hovered][].
 
 ## Assumptions
 
@@ -69,28 +70,6 @@ This is a link that is a descendant of a paragraph element. The link has a text 
 	a {
 		text-decoration: none;
 		color: #d14826;
-	}
-	a:hover,
-	a:focus {
-		text-decoration: underline;
-	}
-</style>
-<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
-```
-
-### Passed Example 2
-
-This is a link that is a descendant of a paragraph element. The link's text has a background color contrast of more than 3:1 compared to the other text in the paragraph. When the link receives focus, an underline appears. When the link receives hover, an underline appears.
-
-```html
-<style>
-	p {
-		text-decoration: none;
-	}
-	a {
-		text-decoration: none;
-		color: #000;
-		background-color: #cf5e42;
 	}
 	a:hover,
 	a:focus {
@@ -186,12 +165,13 @@ This paragraph has no visible descendant text nodes apart from those in the link
 ```
 
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor
-[background color]: #background-colors-of-text 'Definition of background color'
 [cell]: https://www.w3.org/TR/wai-aria/#cell
+[computed]: https://drafts.csswg.org/css-cascade/#computed-value
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
+[distinguishing style]: #distinguishing-styles 'Definition of distinguishing styles'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [focused]: #focused 'Definition of focused'
-[foreground color]: #foreground-colors-of-text 'Definition of foreground color'
+[foreground color]: https://www.w3.org/TR/css-color-3/#foreground
 [hovered]: #hovered 'Definition of hovered'
 [link]: https://www.w3.org/TR/wai-aria/#link
 [listitem]: https://www.w3.org/TR/wai-aria/#listitem

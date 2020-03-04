@@ -116,18 +116,6 @@ The `svg` element has an explicit role of `img` but has no [accessible name][].
 
 #### Failed Example 2
 
-The `svg` element has an explicit role of `img` but has only whitespace in the `title` element for the [accessible name][].
-
-```html
-<p>How many circles are there?</p>
-<svg xmlns="http://www.w3.org/2000/svg" role="img">
-	<title></title>
-	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
-</svg>
-```
-
-#### Failed Example 3
-
 The `svg` element has an explicit role of `img`, is included in the accessibility tree, but it has no [accessible name][] because the `title` element is empty.
 
 ```html
@@ -138,7 +126,7 @@ The `svg` element has an explicit role of `img`, is included in the accessibilit
 </svg>
 ```
 
-#### Failed Example 4
+#### Failed Example 3
 
 The `circle` element has an explicit role of `graphics-symbol` but does not have an [accessible name][].
 

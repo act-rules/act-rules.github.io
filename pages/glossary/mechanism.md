@@ -1,11 +1,11 @@
 ---
-title: Mechanism
-key: mechanism
+title: Mechanism to achieve an objective
+key: mechanism-to-achieve-an-objective
 unambiguous: true
 objective: false
 ---
 
-A mechanism is a set of [HTML elements][] and [scripting][] in an [HTML document][] that allow a user to achieve an objective. 
+A mechanism to achieve an objective is a set of [HTML elements][] and [scripting][] in an [HTML document][] that allow an end-user to achieve an objective. 
 
 This definition assumes that any changes to the [content][] of the [HTML document][] resulting from the mechanism are enabled by the [HTML elements][] and [scripting][] of the [HTML document][]. Changes originated by any other sources (e.g. browser shortcuts, browser extensions, browser settings, user agents, external browser applications) are not considered.
 

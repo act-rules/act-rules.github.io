@@ -229,7 +229,7 @@ The color of the element is updated, but not its `innerText` property.
 [html element]: https://html.spec.whatwg.org/multipage/dom.html#htmlelement
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [last activation timestamp]: https://html.spec.whatwg.org/#last-activation-timestamp
-[mechanism]: #mechanism 'Definition of mechanism'
+[mechanism]: #mechanism-to-achieve-an-objective 'Definition of mechanism to achieve an objective'
 [sc 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
 [visible text content]: #visible-text-content 'Definition of visible text content'
 [visible]: #visible 'Definition of visible'

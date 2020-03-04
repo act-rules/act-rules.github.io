@@ -1,9 +1,9 @@
---
+---
 title: Text style properties
 key: text-style-properties
 unambiguous: true
 objective: true
---
+---
 
 The following style properties are considered text style properties:
 

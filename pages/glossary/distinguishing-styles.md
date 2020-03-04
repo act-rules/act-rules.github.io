@@ -1,9 +1,9 @@
---
+---
 title: Distinguishing Styles
 key: distinguishing-styles
 unambiguous: true
 objective: true
---
+---
 
 Two elements have distinguishing styles if any of the following is true:
 

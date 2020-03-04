@@ -1,9 +1,9 @@
---
+---
 title: Distinguishing Borders
 key: distinguishing-borders
 unambiguous: true
 objective: true
---
+---
 
 Look at the [computed](https://drafts.csswg.org/css-cascade/#computed-value) values of the following style properties:
 

@@ -6,13 +6,6 @@ rule_type: atomic
 description: |
   This rule checks that links that are embedded in a paragraph, list or cell have a style on hover and focus that distinguishes them from the surrounding text
 
-accessibility_requirements: # Remove whatever is not applicable
-  wcag20:1.4.1: # Use of Color (A)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
-
 input_aspects:
   - DOM Tree
   - CSS Styling

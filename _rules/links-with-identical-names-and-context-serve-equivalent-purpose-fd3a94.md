@@ -276,21 +276,17 @@ The two HTML `span` elements have an [explicit role][] of link, same [accessib
 ```html
 <html lang="en">
 	<p>
-		<span
+		Learn more (<span
 			role="link"
 			tabindex="0"
 			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html'"
-		>
-			My university
-		</span>
-
-		<span
+			>Contact us</span
+		>) and get in touch (<span
 			role="link"
 			tabindex="0"
 			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html'"
-		>
-			My university
-		</span>
+			>Contact us</span
+		>)
 	</p>
 </html>
 ```
@@ -404,12 +400,10 @@ Neither of the two `span` elements has a [semantic role][] of link.
 	<p>
 		Learn more (<span
 			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html'"
-		>
-			Contact Us </span
+			>Contact Us </span
 		>) and get in touch (<span
 			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html'"
-		>
-			Contact Us </span
+			>Contact Us </span
 		>)
 	</p>
 </html>
@@ -417,10 +411,10 @@ Neither of the two `span` elements has a [semantic role][] of link.
 
 #### Inapplicable Example 5
 
-The two HTML `a` elements have empty [accessible names][accessible name].
+The second of the two HTML `a` elements has an empty [accessible name][].
 
 ```html
-<a href="http://facebook.com"></a> <a href="http://facebook.com"><img src="facebook.jpg"/></a>
+<a href="http://facebook.com">Follow us</a> <a href="http://facebook.com"><img src="facebook.jpg"/></a>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

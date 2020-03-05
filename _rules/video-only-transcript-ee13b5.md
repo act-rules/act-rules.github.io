@@ -1,4 +1,4 @@
-f---
+---
 id: ee13b5
 name: '`video` element visual-only content has transcript'
 rule_type: atomic
@@ -22,9 +22,7 @@ input_aspects:
 
 - 'tag-pair'
 
----
-
-## Applicability
+---## Applicability
 
 The rule applies to any [non-streaming](#non-streaming-media-element) `video` element [visible][] where the video doesn't contain audio.
 

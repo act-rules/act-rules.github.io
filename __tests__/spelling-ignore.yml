@@ -109,6 +109,7 @@
 - matrix3d
 - rowheader
 - columnheader
+- srcset
 
 # Unsure why the dictionary does not have these words
 - programmatically

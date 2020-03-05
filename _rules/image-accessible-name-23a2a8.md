@@ -159,6 +159,33 @@ The HTML `img` element displays a `src` image and has an empty [accessible name]
 <img src="/test-assets/shared/w3c-logo.png" alt=" " />
 ```
 
+#### Failed Example 5
+
+HTML `img` element displays a CSS `background-image` and has an empty [accessible name][].
+
+```html
+<img style="width:72px; height:48px; background-image: url(/test-assets/shared/w3c-logo.png)" />
+```
+
+#### Failed Example 6
+
+HTML `img` element displays a `srcset` image and has an empty [accessible name][].
+
+```html
+<img srcset="/test-assets/shared/w3c-logo.png" />
+```
+
+#### Failed Example 7
+
+HTML `img` element displays a `source` image and has an empty [accessible name][].
+
+```html
+<picture>
+    <source srcset="/test-assets/shared/w3c-logo.png" />
+    <img/>
+</picture>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1

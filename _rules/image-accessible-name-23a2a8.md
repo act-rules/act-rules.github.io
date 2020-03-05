@@ -222,6 +222,14 @@ The element is not an `img` element.
 <div aria-label="W3C logo"></div>
 ```
 
+#### Inapplicable Example 5
+
+HTML `img` element has no `src` attribute so displays no image.
+
+```html
+<img />
+```
+
 [accessible name]: #accessible-name 'Definition of accessible name'
 [marked as decorative]: #marked-as-decorative 'Definition of marked as decorative'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

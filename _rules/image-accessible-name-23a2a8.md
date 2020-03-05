@@ -35,7 +35,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to HTML `img` elements or any HTML element with the [semantic role][] of `img` that is [included in the accessibility tree][].
+The rule applies to HTML `img` elements or any HTML element with the [semantic role][] of `img` that is [included in the accessibility tree][] and displays an image.
 
 ## Expectation
 

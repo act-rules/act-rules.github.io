@@ -61,7 +61,7 @@ Heading marked up with `h1` element that describes the topic or purpose of its [
 
 ```html
 <html lang="en">
-	<h1 class="target">Opening Hours</h1>
+	<h1>Opening Hours</h1>
 	<p>We are open Monday through Friday from 10 to 16</p>
 </html>
 ```
@@ -94,7 +94,7 @@ Heading marked up with `h1` element with an image that describes the topic or pu
 
 ```html
 <html lang="en">
-	<h1 class="target">
+	<h1>
 		<img scr="/test-assets/descriptive-heading-b49b2e/opening_hours_icon.png" alt="Opening hours" />
 	</h1>
 	<p>We are open Monday through Friday from 10 to 16</p>
@@ -107,7 +107,7 @@ Heading marked up with `h1` element that is a single character that describes th
 
 ```html
 <html lang="en">
-	<h1 class="target">A</h1>
+	<h1>A</h1>
 	<dl>
 		<dt>airplane</dt>
 		<dd>
@@ -140,7 +140,7 @@ Heading marked up with `h1` element that describes the topic or purpose of its [
 
 ```html
 <html lang="en">
-	<h1 class="target" aria-hidden="true">Opening Hours</h1>
+	<h1 aria-hidden="true">Opening Hours</h1>
 	<p>We are open Monday through Friday from 10 to 16</p>
 </html>
 ```
@@ -153,7 +153,7 @@ Heading marked up with `h1` element that does not describe the topic or purpose 
 
 ```html
 <html lang="en">
-	<h1 class="target">Weather</h1>
+	<h1>Weather</h1>
 	<p>We are open Monday through Friday from 10 to 16</p>
 </html>
 ```
@@ -188,7 +188,7 @@ Heading marked up with `h1` element that does not describe the topic or purpose 
 
 ```html
 <html lang="en">
-	<h1 class="target" aria-hidden="true">Weather</h1>
+	<h1 aria-hidden="true">Weather</h1>
 	<p>We are open Monday through Friday from 10 to 16</p>
 </html>
 ```

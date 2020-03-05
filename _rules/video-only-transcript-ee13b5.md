@@ -1,24 +1,27 @@
----
+f---
 id: ee13b5
 name: '`video` element visual-only content has transcript'
 rule_type: atomic
 description: |
-  Non-streaming `video` elements without audio must have all visual information available in a transcript.
+Non-streaming `video` elements without audio must have all visual information available in a transcript.
 accessibility_requirements:
 input_aspects:
-  - DOM Tree
-  - CSS Styling
-  - Audio output
-  - Visual output
-  - Language
-acknowledgements:
-  authors:
-    - Wilco Fiers
-    - Brian Bors
-htmlHintIgnore:
-  # https://www.npmjs.com/package/htmlhint
-  # (used with `npm test` to ensure validity of code snippets)
-  - 'tag-pair'
+
+- DOM Tree
+- CSS Styling
+- Audio output
+- Visual output
+- Language
+  acknowledgements:
+  authors: - Wilco Fiers - Brian Bors
+  htmlHintIgnore:
+
+# https://www.npmjs.com/package/htmlhint
+
+# (used with `npm test` to ensure validity of code snippets)
+
+- 'tag-pair'
+
 ---
 
 ## Applicability
@@ -55,7 +58,7 @@ A silent video element with a text transcript on the same page.
 
 ```html
 <html lang="en">
-<video controls data-rule-target>
+<video controls>
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
@@ -71,7 +74,7 @@ A silent video element with a link to a text transcript on a different page.
 
 ```html
 <html lang="en">
-<video controls data-rule-target>
+<video controls>
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
@@ -87,7 +90,7 @@ A silent video element with an incorrect text transcript on the same page.
 
 ```html
 <html lang="en">
-<video controls data-rule-target>
+<video controls>
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
@@ -103,7 +106,7 @@ A silent video element with a link to an incorrect text transcript on a differen
 
 ```html
 <html lang="en">
-<video controls data-rule-target>
+<video controls>
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
@@ -117,7 +120,7 @@ A silent video element with a [non-visible][visible] text transcript on the same
 
 ```html
 <html lang="en">
-<video controls data-rule-target>
+<video controls>
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
@@ -133,7 +136,7 @@ A silent video element with a text transcript on the same page that is not [incl
 
 ```html
 <html lang="en">
-<video controls data-rule-target>
+<video controls>
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
@@ -151,7 +154,7 @@ A silent video element that is not [visible][] on the page.
 
 ```html
 <html lang="en">
-<video controls style="display: none;" data-rule-target>
+<video controls style="display: none;">
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
@@ -165,7 +168,7 @@ A video element with audio.
 
 ```html
 <html lang="en">
-<video controls data-rule-target>
+<video controls>
   <source src="/test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>

@@ -72,7 +72,7 @@ _There are currently no assumptions._
 The HTML `img` element has an [accessible name][] given by the `alt` attribute.
 
 ```html
-<img alt="W3C logo" />
+<img alt="W3C logo" src="/test-assets/shared/w3c-logo.png" />
 ```
 
 #### Passed Example 2
@@ -80,7 +80,7 @@ The HTML `img` element has an [accessible name][] given by the `alt` attribute.
 The element with a [semantic role][] of `img` has an [accessible name][] given by the `aria-label` attribute.
 
 ```html
-<div role="img" aria-label="W3C logo"></div>
+<div role="img" aria-label="W3C logo" style="width:72px; height:48px; background-image: url(/test-assets/shared/w3c-logo.png)" ></div>
 ```
 
 #### Passed Example 3
@@ -89,7 +89,7 @@ The element with a [semantic role][] of `img` has an [accessible name][] given b
 
 ```html
 <div style="display: none" id="img-label">W3C logo</div>
-<div role="img" aria-labelledby="img-label"></div>
+<div role="img" aria-labelledby="img-label" style="width:72px; height:48px; background-image: url(/test-assets/shared/w3c-logo.png)" ></div>
 ```
 
 #### Passed Example 4
@@ -97,7 +97,7 @@ The element with a [semantic role][] of `img` has an [accessible name][] given b
 The HTML `img` element has an [accessible name][] given by a `title` attribute, though the `title` attribute is not always accessibility supported.
 
 ```html
-<img title="W3C logo" />
+<img title="W3C logo" src="/test-assets/shared/w3c-logo.png" />
 ```
 
 #### Passed Example 5
@@ -105,7 +105,7 @@ The HTML `img` element has an [accessible name][] given by a `title` attribute, 
 The HTML `img` element is [marked as decorative][] through an empty `alt` attribute.
 
 ```html
-<img alt="" />
+<img alt="" src="https://www.w3.org/WAI/tutorials/img/topinfo_bg-42052e6c.png" />
 ```
 
 #### Passed Example 6
@@ -113,7 +113,7 @@ The HTML `img` element is [marked as decorative][] through an empty `alt` attrib
 The HTML `img` element is [marked as decorative][] through `role="presentation"`.
 
 ```html
-<img role="presentation" />
+<img role="presentation" style="width:72px; height:48px; background-image: url(https://www.w3.org/WAI/tutorials/img/topinfo_bg-42052e6c.png)" />
 ```
 
 #### Passed Example 7
@@ -121,7 +121,7 @@ The HTML `img` element is [marked as decorative][] through `role="presentation"`
 The HTML `img` element is [marked as decorative][] through `role="none"`.
 
 ```html
-<img role="none" />
+<img role="none" src="https://www.w3.org/WAI/tutorials/img/topinfo_bg-42052e6c.png" />
 ```
 
 
@@ -132,7 +132,7 @@ The HTML `img` element is [marked as decorative][] through `role="none"`.
 The HTML `img` element is not [marked as decorative][] and has an empty [accessible name][].
 
 ```html
-<img />
+<img src="/test-assets/shared/w3c-logo.png" />
 ```
 
 #### Failed Example 2
@@ -140,7 +140,7 @@ The HTML `img` element is not [marked as decorative][] and has an empty [accessi
 The element with role of `img` has an empty [accessible name][].
 
 ```html
-<div role="img"></div>
+<div role="img" style="width:72px; height:48px; background-image: url(/test-assets/shared/w3c-logo.png)"></div>
 ```
 
 #### Failed Example 3
@@ -148,15 +148,15 @@ The element with role of `img` has an empty [accessible name][].
 The `img` element inside a `div` positioned off screen has an empty [accessible name][] and is not [marked as decorative][].
 
 ```html
-<div style="margin-left:-9999px;"><img /></div>
+<div style="margin-left:-9999px;"><img src="/test-assets/shared/w3c-logo.png" /></div>
 ```
 
 #### Failed Example 4
 
-The HTML `img` element has an empty [accessible name][].
+The HTML `img` element displays a `src` image and has an empty [accessible name][].
 
 ```html
-<img alt=" " />
+<img src="/test-assets/shared/w3c-logo.png" alt=" " />
 ```
 
 ### Inapplicable
@@ -184,7 +184,7 @@ The element has a [semantic role][] of `img`, but is not [included in the access
 HTML `img` element is not [included in the accessibility tree][].
 
 ```html
-<img alt="W3C logo" aria-hidden="true" />
+<img src="/test-assets/shared/w3c-logo.png" aria-hidden="true" />
 ```
 
 #### Inapplicable Example 4

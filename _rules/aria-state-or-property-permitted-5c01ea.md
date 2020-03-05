@@ -74,7 +74,7 @@ The `aria-busy` [state][] is a [global][] [state][] that is [supported][] by all
 
 #### Passed Example 4
 
-The `aria-label` [state][] is [global][] and thus [inherited][] for all [semantic role][].
+The `aria-label` [state][] is a [global][] [state][] and thus [inherited][] for all [semantic role][].
 
 ```html
 <div role="button" aria-label="OK"></div>
@@ -82,7 +82,7 @@ The `aria-label` [state][] is [global][] and thus [inherited][] for all [semanti
 
 #### Passed Example 5
 
-The `aria-checked` [state][] is [required][] for the [semantic role][] `aria-checkbox`.
+The `aria-checked` [state][] is [required][] for the [semantic role][] `checkbox`.
 
 ```html
 <div role="checkbox" aria-checked="false">My checkbox</div>
@@ -90,7 +90,7 @@ The `aria-checked` [state][] is [required][] for the [semantic role][] `aria-che
 
 #### Passed Example 6
 
-The `aria-controls` [property][] is [supported][] for the [semantic role][] `combobox`.
+The `aria-controls` [property][] is [required][] for the [semantic role][] `combobox`.
 
 ```html
 <div role="combobox" aria-controls="id1">My combobox</div>
@@ -98,7 +98,7 @@ The `aria-controls` [property][] is [supported][] for the [semantic role][] `com
 
 #### Passed Example 7
 
-The `aria-controls` [property][] is [supported][] for the [semantic role][] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value are still applicable to this rule.
+The `aria-controls` [property][] is [required][] for the [semantic role][] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value are still applicable to this rule.
 
 ```html
 <div role="combobox" aria-controls>My combobox</div>
@@ -106,7 +106,7 @@ The `aria-controls` [property][] is [supported][] for the [semantic role][] `com
 
 #### Passed Example 8
 
-The `aria-controls` [property][] is [supported][] for the [semantic role][] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value (specified as an empty string) are still applicable to this rule.
+The `aria-controls` [property][] is [required][] for the [semantic role][] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value (specified as an empty string) are still applicable to this rule.
 
 ```html
 <div role="combobox" aria-controls="">My combobox</div>

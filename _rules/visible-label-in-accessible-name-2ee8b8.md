@@ -28,7 +28,7 @@ This rule applies to any element that has:
 - [visible text content][], and
 - an `aria-label` or `aria-labelledby` attribute.
 
-**Note:** [widget roles][] that [supports name from content][] are: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
+**Note:** [widget roles][] that [support name from content][supports name from content] are: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
 
 ## Expectation
 
@@ -96,7 +96,7 @@ This button has [visible][] text that is only partially included in the [accessi
 
 #### Failed Example 3
 
-This link has [visible][] text with mathematical symbols, this does not match the [accessible name][] because the mathematical symbols were written out in the accessible name. This is [explicitly mentioned in WCAG](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name#mathematical-expressions-and-formulae).
+This link has [visible][] text with mathematical symbols, that does not match the [accessible name][] because the mathematical symbols were written out in the accessible name. This is [explicitly mentioned in WCAG](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name#mathematical-expressions-and-formulae).
 
 ```html
 <a href="/" aria-label="Proof of two multiplied by two is four">Proof of 2&times;2=4</a>

@@ -114,7 +114,7 @@ This `nav` is not a widget, so the [visible][] text does not need to match the [
 
 #### Inapplicable Example 2
 
-This text field does not need to have its [visible][] text match the [accessible name][]. The content of a textfield shows its value instead of its label. The label is usually adjecent to the textfield instead.
+This text field does not need to have its [visible][] text match the [accessible name][]. The content of a textfield shows its value instead of its label. The label is usually adjacent to the textfield instead.
 
 ```html
 <div>E-mail</div>

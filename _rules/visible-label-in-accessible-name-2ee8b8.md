@@ -141,7 +141,7 @@ This link has no [visible text content][].
 
 #### Inapplicable Example 5
 
-This link has text content of the link is [non-text content][].
+The content of this link is [non-text content][].
 
 ```html
 <button aria-label="close">X</button>

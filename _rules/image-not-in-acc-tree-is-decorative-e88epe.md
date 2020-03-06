@@ -3,7 +3,7 @@ id: e88epe
 name: Image not in the accessibility tree is decorative
 rule_type: atomic
 description: |
-  This rule checks that visible images that are excluded from the accessibility tree are decorative
+  This rule checks that visible img, svg and canvas elements that are ignored by assistive technologies are decorative
 accessibility_requirements:
   wcag20:1.1.1: # Non-text content (A)
     forConformance: true
@@ -246,18 +246,17 @@ This `img` is [included in the accessibility tree][].
 
 **Note**: While it might be better for the PDF icon to be ignored by assistive technologies, because assistive technologies will announce "PDF" twice, the image is not [purely decorative][]. Having assistive technologies ignore it is not required by [Success Criterion 1.1.1 Non-text content][].
 
-``html
-<img src="pdf.gif" alt="PDF"> PDF document
-
+```html
+<img src="pdf.gif" alt="PDF" /> PDF document
 ```
 
 [visible]: #visible 'Definition of Visible'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the accessibility tree'
 [explicit semantic role]: #explicit-role 'Definition of Explicit semantic role'
 [purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of Pure decoration'
-[Success Criterion 1.1.1 Non-text content]: https://www.w3.org/TR/WCAG21/#non-text-content
+[success criterion 1.1.1 non-text content]: https://www.w3.org/TR/WCAG21/#non-text-content
 [conforming alternative version]: https://www.w3.org/TR/WCAG21/#dfn-conforming-alternate-version 'WCAG definition of Conforming alternative version'
-[conformance requirement 1 of WCAG 2.1]: https://www.w3.org/TR/WCAG21/#cc1 'WCAG section 5.2.1 Conformance Level'
+[conformance requirement 1 of wcag 2.1]: https://www.w3.org/TR/WCAG21/#cc1 'WCAG section 5.2.1 Conformance Level'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Scoping definition of Flat tree, working draft'
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant 'DOM definition of Descendant, 2020/03/06'
 [named from author]: https://www.w3.org/TR/wai-aria-1.1/#namecomputation 'WAI-ARIA definition of Named from author'
@@ -265,4 +264,3 @@ This `img` is [included in the accessibility tree][].
 [current request]: https://html.spec.whatwg.org/#current-request 'HTML definition of Current request, 2020/03/06'
 [image request state]: https://html.spec.whatwg.org/#img-req-state 'HTML definition of Image request state, 2020/03/06'
 [completely available]: https://html.spec.whatwg.org/#img-all 'HTML definition of Completely available, 2020/03/06'
-```

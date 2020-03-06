@@ -70,7 +70,7 @@ This link has [visible][] text that, ignoring case, matches the [accessible name
 
 #### Passed Example 3
 
-This link has [visible][] text that is included in the [accessible name][].
+This button has [visible][] text that is included in the [accessible name][].
 
 ```html
 <button aria-label="Next Page in the list">Next Page</button>

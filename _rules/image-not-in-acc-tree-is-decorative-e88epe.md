@@ -10,11 +10,6 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag-technique:Xxx: # <Technique title>
-    forConformance: false
-    failed: not satisfied
-    passed: satisfied | further testing needed
-    inapplicable: satisfied | further testing needed
 input_aspects:
   - DOM Tree
   - Accessibiliy tree
@@ -23,24 +18,33 @@ acknowledgements:
   authors:
     - Brian Bors
     - Wilco Fiers
+  assets:
+    - W3C
+    - Wikimedia
 ---
 
 ## Applicability
 
-Any `img`, `canvas` or `svg` element that is [visible][] and not [included in the accessibility tree][], except if
+Any `img`, `canvas` or `svg` element that is [visible][] and is not [included in the accessibility tree][], except if one of the following is true:
 
-- the element is an `img` that failed to load the `src`; or
-- the element is part of the content of an element which gets its accessible name from the author (i.e. aria-label)
+- **unloaded img**: the element is an `img` and it's [current request][]'s [state][image request state] is not [completely available][]; or
+- **ignored svg**: the element is an `svg` with an empty (`""`) [accessible name][] and a [semantic role][] of `graphics-document`; or
+- **ignored canvas**: the element is a `canvas` with an empty (`""`) [accessible name][] and no [explicit semantic role][]; or
+- **named from author**: the element is a [descendent][] in the [flat tree][] of an element that is [named from author][].
+
+**Note**: An example of an image ignored because of "named from author" is when it in a `button` element that uses `aria-label` for its accessible name.
 
 ## Expectation
 
 Each test target is [purely decorative][].
 
-**note**: It is relatively common for an informative image such as an icon to be marked up as decorative, if the text alternative is adjecent to the image. This is a conforming alternative version for the image. This fails the rule, but meets conformance requirement 1 of WCAG 2.1.
+**note**: It is relatively common for an informative image such as an icon to be marked up as decorative, if the text alternative is adjecent to the image. This is a [conforming alternative version][] for the image. This fails the rule, but meets [conformance requirement 1 of WCAG 2.1][].
 
 ## Assumptions
 
-- Images that convey information that is available in other places on the page are not by definition purely decorative.
+- `svg` elements with a [semantic role][] of `graphics-document` and with an empty (`""`) [accessible name][] are ignored by assistive technologies tested for this rule. If some assistive technology does not ignore these elements, and that assistive technology is required for conformance, passing this rule does not ensure all decorative `svg` elements can be ignored, and the [success criterion 1.1.1 Non-text content][] may still not be satisfied. The same is true for `canvas` elements with no [semantic role][] and an empty (`""`) [accessible name][].
+
+- A web page with informative images without an [accessible name][] may conform to WCAG 2.1 Level A when the information provided by that image is available elsewhere, either on the web page itself or on a [conforming alternative version][] of the page. For example if an equivalent text is adjecent to the image, or if the text alternative is included in the [accessible name][] of a parent element.
 
 ## Accessibility Support
 
@@ -48,7 +52,8 @@ _No accessibility support issues known._
 
 ## Background
 
-- (e.g. WCAG Techniques or links with background information mentioned in Applicability, Expectations or Assumptions)
+- [H67: Using null alt text and no title attribute on img elements for images that AT should ignore](https://www.w3.org/WAI/WCAG21/Techniques/html/H67.html)
+- [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 
 ## Test Cases
 
@@ -56,87 +61,208 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-Description...
+This decorative `img` element is ignored by assistive technologies because of the `alt` attribute is empty (`""`).
 
 ```html
-<!-- code -->
+Happy new year!<br />
+<img src="/test-assets/shared/fireworks.jpg" alt="" />
 ```
 
 #### Passed Example 2
 
-...
+This decorative `img` element is ignored by assistive technologies because `aria-hidden` is set to `true`.
+
+```html
+Happy new year!<br />
+<img src="/test-assets/shared/fireworks.jpg" aria-hidden="true" alt="decorative" />
+```
+
+#### Passed Example 3
+
+This decorative `img` element is ignored by assistive technologies because it has an [explicit semantic role][] of `none`.
+
+```html
+Happy new year!<br />
+<img src="/test-assets/shared/fireworks.jpg" role="none" alt="ignore me" />
+```
+
+#### Passed Example 4
+
+This decorative `svg` element is ignored by assisitve technologies because it has no attribute that would give it an [accessible name][].
+
+```html
+Happy new year!<br />
+<svg height="200" xmlns="http://www.w3.org/2000/svg">
+	<polygon points="100,10 40,180 190,60 10,60 160,180" fill="yellow" />
+</svg>
+```
+
+#### Passed Example 5
+
+This decorative `canvas` element is ignored by assisitve technologies because it has no attribute that would give it an [accessible name][].
+
+```html
+Happy new year!<br />
+<canvas id="newyear" width="200" height="200"></canvas>
+<script>
+	const ctx = document.querySelector('#newyear').getContext('2d')
+	ctx.fillStyle = 'yellow'
+	ctx.beginPath()
+	ctx.moveTo(100, 10)
+	ctx.lineTo(40, 180)
+	ctx.lineTo(190, 60)
+	ctx.lineTo(10, 60)
+	ctx.lineTo(160, 180)
+	ctx.fill()
+</script>
+```
 
 ### Failed
 
 #### Failed Example 1
 
-Description...
+This `img` element with an empty (`""`) `alt` is not [purely decorative][].
 
 ```html
-<!-- code -->
+<img src="/test-assets/shared/w3c-logo.png" alt="" />
 ```
 
 #### Failed Example 2
 
-...
+This `img` element with `aria-hidden` set to `true` is not [purely decorative][].
+
+```html
+<img src="/test-assets/shared/w3c-logo.png" aria-hidden="true" alt="W3C logo" />
+```
+
+#### Failed Example 3
+
+This `img` element with an [explicit semantic role][] of `none` is not [purely decorative][].
+
+```html
+<img src="/test-assets/shared/w3c-logo.png" role="none" alt="W3C logo" />
+```
+
+#### Failed Example 4
+
+This `svg` element which has a [semantic role][] of `graphics-document` and an empty (`""`) [accessible name][] is not [purely decorative][].
+
+```html
+Best W3C logo:<br />
+<svg viewBox="0 0 512 512">
+	<path
+		d="M108.4 0h23v22.8h21.2V0h23v69h-23V46h-21v23h-23.2M206 23h-20.3V0h63.7v23H229v46h-23M259.5 0h24.1l14.8 24.3L313.2 0h24.1v69h-23V34.8l-16.1 24.8l-16.1-24.8v34.2h-22.6M348.7 0h23v46.2h32.6V69h-55.6"
+	/>
+	<path fill="#e44d26" d="M107.6 471l-33-370.4h362.8l-33 370.2L255.7 512" />
+	<path fill="#f16529" d="M256 480.5V131H404.3L376 447" />
+	<path
+		fill="#ebebeb"
+		d="M142 176.3h114v45.4h-64.2l4.2 46.5h60v45.3H154.4M156.4 336.3H202l3.2 36.3 50.8 13.6v47.4l-93.2-26"
+	/>
+	<path fill="#fff" d="M369.6 176.3H255.8v45.4h109.6M361.3 268.2H255.8v45.4h56l-5.3 59-50.7 13.6v47.2l93-25.8" />
+</svg>
+```
+
+#### Failed Example 5
+
+This `canvas` element which has no [semantic role][] and an empty (`""`) [accessible name][] is not [purely decorative][].
+
+```html
+<canvas id="w3c" width="200" height="60"></canvas>
+<script>
+	const ctx = document.querySelector('#w3c').getContext('2d')
+	ctx.font = '30px Arial'
+	ctx.fillText('ACT Rules!', 20, 40)
+</script>
+```
 
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-Description...
+This `img` is [included in the accessibility tree][] because the `alt` attribute is not empty (`""`).
 
 ```html
-<!-- code -->
-```
-
-## Applicable
-
-```html
-<img src="" alt="" />
-```
-
-```html
-<img src="" aria-hidden="true" alt="W3C" />
-```
-
-```html
-<img src="" role="none" alt="W3C" />
-```
-
-## Inapplicable
-
-```html
-<img src="" style="display:none" />
-```
-
-```html
-<img src="" class="off-screen" alt="W3C" />
-```
-
-```html
-<img src="" alt="W3C" />
-```
-
-```html
-<img src="spacer.gif" alt="" />
-```
-
-```html
-<a href="//w3.org" aria-label="W3C">
-	<img src="w3-logo.gif" alt="" />
-</a>
-```
-
-``html
-<img src="pdf.gif" alt="pdf">PDF document
-
+<img src="/test-assets/shared/w3c-logo.png" alt="W3C" />
 ```
 
 #### Inapplicable Example 2
 
-...
+This `img` is neither [visible][] nor included in the [accessibility tree][].
 
-[visible]: #visible
-[included in the accessibili] #included-in-the-accessibility-tree
+```html
+<img src="/test-assets/shared/w3c-logo.png" style="display:none" alt="" />
+```
+
+#### Inapplicable Example 3
+
+This `img` is not [visible][] because it is positioned off screen.
+
+```html
+<style>
+	img {
+		position: absolute;
+		top: -9999em;
+	}
+</style>
+<img src="/test-assets/shared/w3c-logo.png" alt="" />
+```
+
+#### Inapplicable Example 4
+
+This `svg` is ignored because it is a child of a link that has provides its [accessible name][].
+
+```html
+<a href="//example.org" aria-label="SVG star">
+	<svg height="200" xmlns="http://www.w3.org/2000/svg">
+		<polygon points="100,10 40,180 190,60 10,60 160,180" fill="yellow" />
+	</svg>
+</a>
+```
+
+#### Inapplicable Example 5
+
+```html
+<svg role="img" aria-label="Hello"></svg>
+```
+
+#### Inapplicable Example 6
+
+This `canvas` is not [visible][] because it is completely transparent.
+
+```html
+<canvas width="200" height="200"></canvas>
+```
+
+#### Inapplicable Example 7
+
+```html
+<canvas role="img" aria-label="Hello"></canvas>
+```
+
+#### Inapplicable Example 8
+
+This `img` is [included in the accessibility tree][].
+
+**Note**: While it might be better for the PDF icon to be ignored by assistive technologies, because assistive technologies will announce "PDF" twice, the image is not [purely decorative][]. Having assistive technologies ignore it is not required by [Success Criterion 1.1.1 Non-text content][].
+
+``html
+<img src="pdf.gif" alt="PDF"> PDF document
+
+```
+
+[visible]: #visible 'Definition of Visible'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the accessibility tree'
+[explicit semantic role]: #explicit-role 'Definition of Explicit semantic role'
+[purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of Pure decoration'
+[Success Criterion 1.1.1 Non-text content]: https://www.w3.org/TR/WCAG21/#non-text-content
+[conforming alternative version]: https://www.w3.org/TR/WCAG21/#dfn-conforming-alternate-version 'WCAG definition of Conforming alternative version'
+[conformance requirement 1 of WCAG 2.1]: https://www.w3.org/TR/WCAG21/#cc1 'WCAG section 5.2.1 Conformance Level'
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Scoping definition of Flat tree, working draft'
+[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant 'DOM definition of Descendant, 2020/03/06'
+[named from author]: https://www.w3.org/TR/wai-aria-1.1/#namecomputation 'WAI-ARIA definition of Named from author'
+[fallback content]: https://html.spec.whatwg.org/#fallback-content 'HTML definition of Fallback content, 2020/03/06'
+[current request]: https://html.spec.whatwg.org/#current-request 'HTML definition of Current request, 2020/03/06'
+[image request state]: https://html.spec.whatwg.org/#img-req-state 'HTML definition of Image request state, 2020/03/06'
+[completely available]: https://html.spec.whatwg.org/#img-all 'HTML definition of Completely available, 2020/03/06'
 ```

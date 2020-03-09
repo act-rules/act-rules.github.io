@@ -1111,10 +1111,10 @@
       }
     },
     {
-      "testcaseId": "97ef7e7f7816732e5f564b71d93ffa4ae27473d1",
+      "testcaseId": "797e195f77480efbf1817c09b9cea1dc42f79a4c",
       "testcaseTitle": "Passed Example 1",
-      "url": "https://act-rules.github.io/testcases/5c01ea/97ef7e7f7816732e5f564b71d93ffa4ae27473d1.html",
-      "relativePath": "testcases/5c01ea/97ef7e7f7816732e5f564b71d93ffa4ae27473d1.html",
+      "url": "https://act-rules.github.io/testcases/5c01ea/797e195f77480efbf1817c09b9cea1dc42f79a4c.html",
+      "relativePath": "testcases/5c01ea/797e195f77480efbf1817c09b9cea1dc42f79a4c.html",
       "expected": "passed",
       "ruleId": "5c01ea",
       "ruleName": "ARIA state or property is permitted",
@@ -1130,10 +1130,10 @@
       }
     },
     {
-      "testcaseId": "797e195f77480efbf1817c09b9cea1dc42f79a4c",
+      "testcaseId": "97ef7e7f7816732e5f564b71d93ffa4ae27473d1",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/5c01ea/797e195f77480efbf1817c09b9cea1dc42f79a4c.html",
-      "relativePath": "testcases/5c01ea/797e195f77480efbf1817c09b9cea1dc42f79a4c.html",
+      "url": "https://act-rules.github.io/testcases/5c01ea/97ef7e7f7816732e5f564b71d93ffa4ae27473d1.html",
+      "relativePath": "testcases/5c01ea/97ef7e7f7816732e5f564b71d93ffa4ae27473d1.html",
       "expected": "passed",
       "ruleId": "5c01ea",
       "ruleName": "ARIA state or property is permitted",
@@ -1263,11 +1263,11 @@
       }
     },
     {
-      "testcaseId": "a730034d32a7c5780c917d037d084ad71f8a08f3",
-      "testcaseTitle": "Failed Example 1",
-      "url": "https://act-rules.github.io/testcases/5c01ea/a730034d32a7c5780c917d037d084ad71f8a08f3.html",
-      "relativePath": "testcases/5c01ea/a730034d32a7c5780c917d037d084ad71f8a08f3.html",
-      "expected": "failed",
+      "testcaseId": "2fb32b36f61ae9823bdaf5f065881c022a177c4d",
+      "testcaseTitle": "Passed Example 9",
+      "url": "https://act-rules.github.io/testcases/5c01ea/2fb32b36f61ae9823bdaf5f065881c022a177c4d.html",
+      "relativePath": "testcases/5c01ea/2fb32b36f61ae9823bdaf5f065881c022a177c4d.html",
+      "expected": "passed",
       "ruleId": "5c01ea",
       "ruleName": "ARIA state or property is permitted",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
@@ -1283,7 +1283,7 @@
     },
     {
       "testcaseId": "9fe60b403371e0e5d057f4f6c871dfed42f7ac4c",
-      "testcaseTitle": "Failed Example 2",
+      "testcaseTitle": "Failed Example 1",
       "url": "https://act-rules.github.io/testcases/5c01ea/9fe60b403371e0e5d057f4f6c871dfed42f7ac4c.html",
       "relativePath": "testcases/5c01ea/9fe60b403371e0e5d057f4f6c871dfed42f7ac4c.html",
       "expected": "failed",

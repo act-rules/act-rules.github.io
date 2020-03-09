@@ -149,7 +149,7 @@ This `aside` element has an [explicit role][] of `none`. However, it is [focusab
 
 #### Failed Example 3
 
-This `aside` element has an [explicit role][], and a [semantic role][], of `none`. The `aria-expanded` [state][] in neither [inherited][], [supported][] nor [required][] for this role.
+This `aside` element has an [explicit role][], and a [semantic role][], of `none`. The `aria-expanded` [state][] is neither [inherited][], [supported][] nor [required][] for this role.
 
 ```html
 <aside role="none" aria-expanded="true">ACT rules are cool!</aside>

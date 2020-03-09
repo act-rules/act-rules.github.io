@@ -29,7 +29,7 @@ This rules applies to any HTML element that:
 
 - has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`; and
 - is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of a `body` element; and
-- has a `lang` attribute that is neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
+- has a `lang` attribute that is not empty ("").
 
 ## Expectation
 
@@ -120,6 +120,20 @@ The `lang` attribute value is not empty ("") and is not a valid primary language
 </html>
 ```
 
+#### Failed Example 3
+
+The `lang` attribute value consists of only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace) and is not a valid primary language subtag.
+
+```html
+<html>
+	<body>
+		<article lang=" ">
+			The quick brown fox jumped over the lazy dog
+		</article>
+	</body>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -134,26 +148,12 @@ The rule applies to elements within the `body` of a webpage. `html` elements are
 
 #### Inapplicable Example 2
 
-An empty value for the `lang` attribute is ignored as the rule only applies to `lang` attributes that are neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
+An empty value for the `lang` attribute is ignored, as the rule only applies to `lang` attributes that are not empty ("").
 
 ```html
 <html>
 	<body>
 		<article lang=""></article>
-	</body>
-</html>
-```
-
-#### Inapplicable Example 3
-
-The `lang` attribute value consists of only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
-
-```html
-<html>
-	<body>
-		<article lang=" ">
-			The quick brown fox jumped over the lazy dog
-		</article>
 	</body>
 </html>
 ```

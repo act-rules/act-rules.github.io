@@ -17,7 +17,7 @@ The _semantic role_ of an element is determined by the first of these cases that
 
 #### Accessibility Support for Definition of Semantic Role
 
-- There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][]. These technologies will not [include in the accessibility tree][included in the accessibility tree] elements that should be, according to Specifications. Thus, some elements that should have their _semantic role_ fixed by case **(Conflict)** above are instead falling into case **(Explicit)** ànd are hidden for users of assistive technologies.
+- There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][]. These technologies will not [include in the accessibility tree][included in the accessibility tree] elements that should be, according to Specifications. Thus, some elements that should have their _semantic role_ fixed by case **(Conflict)** above are instead falling into case **(Explicit)** and are hidden for users of assistive technologies.
 - A similar conflict exists for [focusable][] elements with a `aria-hidden="true"` attribute. The WAI ARIA specification does not explain how to solve it. Some browsers give precedence to the element being focusable (and expose it in the accessibility tree) while some give precedence to the `aria-hidden` attribute (and hide the element).
 
 [explicit role]: #explicit-role 'Definition of Explicit Role'

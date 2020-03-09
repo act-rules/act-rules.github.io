@@ -198,13 +198,21 @@ Hidden to everyone.
 
 #### Inapplicable Example 2
 
+Hidden to assistive technologies.
+
+```html
+<input disabled aria-hidden="true" aria-label="firstname" />
+```
+
+#### Inapplicable Example 3
+
 Role has [explicitly](#explicit-role) been set to something that isn't a form field.
 
 ```html
 <input role="presentation" />
 ```
 
-#### Inapplicable Example 3
+#### Inapplicable Example 4
 
 Option inherits from input, but has a required context role of listbox which inherits from select. We should therefore not consider option as applicable.
 

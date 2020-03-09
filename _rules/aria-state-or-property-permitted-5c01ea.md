@@ -134,10 +134,10 @@ This `aside` element has an [explicit role][] of `none`. However, the [global][]
 
 #### Passed Example 11
 
-This `aside` element has an [explicit role][] of `none`. However, it is [focusable][] due to the `tabindex` attribute (even if it is excluded from sequential focus order). Thus it has a [semantic role][] of `complementary` due to [Presentational Roles Conflict Resolution][]. The `aria-expanded` [state][] is [supported][] for the `complementary` role.
+This `aside` element has an [explicit role][] of `none`. However, it is [focusable][] due to the `tabindex` attribute. Thus it has a [semantic role][] of `complementary` due to [Presentational Roles Conflict Resolution][]. The `aria-expanded` [state][] is [supported][] for the `complementary` role.
 
 ```html
-<aside role="none" tabindex="-1" aria-expanded="true">ACT rules are cool!</aside>
+<aside role="none" tabindex="0" aria-expanded="true">ACT rules are cool!</aside>
 ```
 
 ### Failed

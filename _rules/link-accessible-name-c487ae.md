@@ -56,8 +56,7 @@ The rule assumes that all links are [user interface components](https://www.w3.o
 ## Accessibility Support
 
 - For `area` elements that have a `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on whether the `area` is considered [included in the accessibility tree][] or not.
-- There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][].
-- Some browsers expose elements which are [focusable][] but have an `aria-hidden="true"` attribute, while some hide them.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `link` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 

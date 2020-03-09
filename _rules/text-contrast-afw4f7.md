@@ -59,8 +59,7 @@ For each test target, the [highest possible contrast](#highest-possible-contrast
 ## Accessibility Support
 
 - Different browsers have different levels of support for CSS. This can cause contrast issues in one browser that do not appear in another. Because of that, this rule can produce different results depending on the browser that is used. For example, a text that is positioned using CSS transform may be on a different background in a browser that does not support CSS transform.
-- There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][].
-- Some browsers expose elements which are [focusable][] but have an `aria-hidden="true"` attribute, while some hide them.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 

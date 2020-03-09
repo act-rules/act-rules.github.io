@@ -52,9 +52,8 @@ _There are currently no assumptions._
 
 - There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name][].
 - There are several popular browsers that do not treat images with empty `alt` attribute as having a role of `presentation` but instead add the `img` element to the accessibility tree with a [semantic role][] of either `img` or `graphic`.
-- There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][].
-- Some browsers expose elements which are [focusable][] but have an `aria-hidden="true"` attribute, while some hide them.
-- Images can have their role set to `presentation` through an empty `alt` attribute. [Presentational Roles Conflict Resolution][] does not specifies what to do if such an image is [focusable][] (it only specifies what to do in case of explicit `role="none"` or `role="presentation"`). Some browsers expose these images and some don't.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `img` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+- Images can have their role set to `presentation` through an empty `alt` attribute. [Presentational Roles Conflict Resolution][] does not specifies what to do if such an image is [focusable][] (it only specifies what to do in case of explicit `role="none"` or `role="presentation"`). Some browsers expose these images and some don't. Thus, this rule may fail for technologies that expose these without creating an accessibility issue for users of other technologies.
 
 ## Background
 

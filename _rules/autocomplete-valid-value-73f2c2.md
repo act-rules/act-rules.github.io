@@ -54,8 +54,7 @@ For this rule, it is assumed that the `autocomplete` attribute is not used on fo
 ## Accessibility Support
 
 - While `autocomplete` in a promising technique for supporting personalization in HTML, support for this is fairly limited.
-- There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][].
-- Some browsers expose elements which are [focusable][] but have an `aria-hidden="true"` attribute, while some hide them.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 

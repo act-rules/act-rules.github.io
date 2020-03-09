@@ -44,8 +44,7 @@ This rule assumes that the language of each test target can be correctly determi
 
 ## Accessibility Support
 
-- There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][].
-- Some browsers expose elements which are [focusable][] but have an `aria-hidden="true"` attribute, while some hide them.
+Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `img` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 

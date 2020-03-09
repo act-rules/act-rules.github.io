@@ -36,8 +36,7 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-- There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][].
-- Some browsers expose elements which are [focusable][] but have an `aria-hidden="true"` attribute, while some hide them.
+Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and their attributes fail this rule with some technologies but users of other technology would not experience any accessibility issue.
 
 ## Background
 
@@ -140,7 +139,7 @@ This `aside` element has an [explicit role][] of `none`. However, it is [focusab
 <aside role="none" tabindex="0" aria-expanded="true">ACT rules are cool!</aside>
 ```
 
-### Failed
+    ### Failed
 
 #### Failed Example 1
 

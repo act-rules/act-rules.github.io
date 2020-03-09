@@ -59,7 +59,7 @@ _There are currently no assumptions_
 [Visible][] label and [accessible name][] matches when trailing white spaces are removed.
 
 ```html
-<div role="link" aria-label="next page ">next page</div>
+<a href="https://act-rules.github.io/" aria-label="ACT rules ">ACT rules</a>
 ```
 
 #### Passed Example 2
@@ -67,7 +67,7 @@ _There are currently no assumptions_
 Character insensitivity between [visible][] label and [accessible name][].
 
 ```html
-<div role="link" aria-label="Next Page">next page</div>
+<a href="https://act-rules.github.io/" aria-label="act rules ">ACT rules</a>
 ```
 
 #### Passed Example 3
@@ -85,7 +85,7 @@ Full [visible][] label is contained in the [accessible name][].
 [Visible][] label doesn't match [accessible name][].
 
 ```html
-<div role="link" aria-label="OK">Next</div>
+<a href="https://act-rules.github.io/" aria-label="WCAG">ACT rules</a>
 ```
 
 #### Failed Example 2

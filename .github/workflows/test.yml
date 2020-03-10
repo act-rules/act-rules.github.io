@@ -14,7 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
-      - run: |
+      - name: Run tests
+        run: |
           npm install -D 
           npm test
         env:

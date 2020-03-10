@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 712,
+  "count": 711,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -7470,24 +7470,6 @@
       "testcaseTitle": "Passed Example 3",
       "url": "https://act-rules.github.io/testcases/cae760/82a527fd05059a55364d744bd9ea588f8e9c88ea.html",
       "relativePath": "testcases/cae760/82a527fd05059a55364d744bd9ea588f8e9c88ea.html",
-      "expected": "passed",
-      "ruleId": "cae760",
-      "ruleName": "`iframe` element has accessible name",
-      "rulePage": "https://act-rules.github.io/rules/cae760",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "43bafdd2cee24a29634383dcbda204221d1cd8b2",
-      "testcaseTitle": "Passed Example 4",
-      "url": "https://act-rules.github.io/testcases/cae760/43bafdd2cee24a29634383dcbda204221d1cd8b2.html",
-      "relativePath": "testcases/cae760/43bafdd2cee24a29634383dcbda204221d1cd8b2.html",
       "expected": "passed",
       "ruleId": "cae760",
       "ruleName": "`iframe` element has accessible name",

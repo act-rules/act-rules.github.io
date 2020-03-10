@@ -3,6 +3,8 @@ title: Standard keyboard navigation
 key: standard-keyboard-navigation
 unambiguous: true
 objective: true
+input_aspects:
+  - DOM tree
 ---
 
 _Standard keyboard navigation_ entails using one or more of the following:

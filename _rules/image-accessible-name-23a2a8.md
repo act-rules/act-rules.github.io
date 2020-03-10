@@ -41,7 +41,7 @@ The rule applies to HTML `img` elements or any HTML element with the [semantic r
 
 Each target element has an [accessible name][] that is not empty (`""`), or is [marked as decorative][].
 
-**Note:** Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
+**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
 
 ## Assumptions
 

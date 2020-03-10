@@ -87,7 +87,7 @@ The image button has an [accessible name][] through the `aria-label` attribute.
 
 The image button has an [accessible name][] through the `title` attribute.
 
-**note**: The `title` may not always be [accessibility supported](#accessibility-support).
+**note**: The `title` attribute may not always be [accessibility supported](#accessibility-support).
 
 ```html
 <input type="image" src="/test-assets/shared/search-icon.svg" title="Search" />

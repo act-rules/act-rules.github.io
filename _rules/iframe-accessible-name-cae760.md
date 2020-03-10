@@ -68,7 +68,7 @@ This `iframe` element gets its [accessible name][] from the `aria-label` attribu
 
 #### Passed Example 3
 
-This `iframe` element gets its [accessible name][] from the content of the `div` reerenced with the `aria-labelledby` attribute.
+This `iframe` element gets its [accessible name][] from the content of the `div` referenced with the `aria-labelledby` attribute.
 
 ```html
 <div id="frame-title-helper">Watch highlights of the Worldcup</div>

@@ -3,6 +3,8 @@ title: Programmatic Label
 key: programmatic-label
 unambiguous: true
 objective: true
+input_aspects:
+  - DOM tree
 ---
 
 Element L is a _programmatic label_ of target element T if either:

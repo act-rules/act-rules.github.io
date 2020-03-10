@@ -3,6 +3,8 @@ title: Explicit Semantic Role
 key: explicit-role
 unambiguous: true
 objective: true
+input_aspects:
+  - DOM tree
 ---
 
 The _explicit semantic role_ is the [semantic role](#semantic-role) of an element set by its [role attribute](https://www.w3.org/TR/role-attribute/).

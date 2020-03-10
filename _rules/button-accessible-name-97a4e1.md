@@ -198,7 +198,5 @@ There is no element with a semantic role of `button`.
 <div>Press Here</div>
 ```
 
-#### Passed Example 6
-
 [accessible name]: #accessible-name 'Definition of accessible name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

@@ -128,7 +128,7 @@ This `svg` element has an [explicit role][] of `img`, is included in the accessi
 
 #### Failed Example 3
 
-This `circle` element has an [explicit role][] of `graphics-symbol` but does not have an [accessible name][].
+This `circle` element has an [explicit role][] of `graphics-symbol` but has no [accessible name][].
 
 ```html
 <p>How many circles are there?</p>

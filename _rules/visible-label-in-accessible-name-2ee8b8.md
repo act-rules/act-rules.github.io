@@ -57,7 +57,7 @@ There are no major accessibility support issues known for this rule.
 This link has [visible][] text that, ignoring trailing whitespace, matches the [accessible name][].
 
 ```html
-<a href="//w3.org" aria-label="W3C Website ">W3C Website</div>
+<a href="//w3.org" aria-label="W3C Website ">W3C Website</a>
 ```
 
 #### Passed Example 2
@@ -135,7 +135,7 @@ This link has no [visible text content][].
 
 ```html
 <a href="//w3.org" aria-label="W3C homepage">
-  <img src="/test-assets/shared/w3c-logo.png" alt="w3c logo">
+	<img src="/test-assets/shared/w3c-logo.png" alt="w3c logo" />
 </a>
 ```
 
@@ -151,7 +151,7 @@ The content of this link is [non-text content][].
 [visible]: #visible 'Definition of visible'
 [semantic role]: #semantic-role 'Definition of Semantic role'
 [visible text content]: #visible-text-content 'Definition of Visible text content'
-[whitespace]: #whitespace 'Definition of Whitepsace'
+[whitespace]: #whitespace 'Definition of Whitespace'
 [widget roles]: https://www.w3.org/TR/wai-aria-1.1/#widget_roles 'Definition of Widget role'
-[supports name from content]: https://www.w3.org/TR/wai-aria-1.1/#namefromcontent  'Definition of Supports name from contents'
+[supports name from content]: https://www.w3.org/TR/wai-aria-1.1/#namefromcontent 'Definition of Supports name from contents'
 [non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content 'Definition of Non-text content'

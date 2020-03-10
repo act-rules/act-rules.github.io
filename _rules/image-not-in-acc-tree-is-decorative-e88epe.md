@@ -21,6 +21,10 @@ acknowledgements:
   assets:
     - W3C
     - Wikimedia
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'attr-lowercase'
 ---
 
 ## Applicability
@@ -30,7 +34,7 @@ Any `img`, `canvas` or `svg` element that is [visible][] and is not [included in
 - **unloaded img**: the element is an `img` and it's [current request][]'s [state][image request state] is not [completely available][]; or
 - **ignored svg**: the element is an `svg` with an empty (`""`) [accessible name][] and a [semantic role][] of `graphics-document`; or
 - **ignored canvas**: the element is a `canvas` with an empty (`""`) [accessible name][] and no [explicit semantic role][]; or
-- **named from author**: the element is a [descendent][] in the [flat tree][] of an element that is [named from author][].
+- **named from author**: the element is a [descendant][] in the [flat tree][] of an element that is [named from author][].
 
 **Note**: An example of an image ignored because of "named from author" is when it in a `button` element that uses `aria-label` for its accessible name.
 
@@ -38,13 +42,13 @@ Any `img`, `canvas` or `svg` element that is [visible][] and is not [included in
 
 Each test target is [purely decorative][].
 
-**note**: It is relatively common for an informative image such as an icon to be marked up as decorative, if the text alternative is adjecent to the image. This is a [conforming alternative version][] for the image. This fails the rule, but meets [conformance requirement 1 of WCAG 2.1][].
+**note**: It is relatively common for an informative image such as an icon to be marked up as decorative, if the text alternative is adjacent to the image. This is a [conforming alternative version][] for the image. This fails the rule, but meets [conformance requirement 1 of WCAG 2.1](https://www.w3.org/TR/WCAG21/#cc1).
 
 ## Assumptions
 
 - `svg` elements with a [semantic role][] of `graphics-document` and with an empty (`""`) [accessible name][] are ignored by assistive technologies tested for this rule. If some assistive technology does not ignore these elements, and that assistive technology is required for conformance, passing this rule does not ensure all decorative `svg` elements can be ignored, and the [success criterion 1.1.1 Non-text content][] may still not be satisfied. The same is true for `canvas` elements with no [semantic role][] and an empty (`""`) [accessible name][].
 
-- A web page with informative images without an [accessible name][] may conform to WCAG 2.1 Level A when the information provided by that image is available elsewhere, either on the web page itself or on a [conforming alternative version][] of the page. For example if an equivalent text is adjecent to the image, or if the text alternative is included in the [accessible name][] of a parent element.
+- A web page with informative images without an [accessible name][] may conform to WCAG 2.1 Level A when the information provided by that image is available elsewhere, either on the web page itself or on a [conforming alternative version][] of the page. For example if an equivalent text is adjacent to the image, or if the text alternative is included in the [accessible name][] of a parent element.
 
 ## Accessibility Support
 
@@ -88,7 +92,7 @@ Happy new year!<br />
 
 #### Passed Example 4
 
-This decorative `svg` element is ignored by assisitve technologies because it has no attribute that would give it an [accessible name][].
+This decorative `svg` element is ignored by assistive technologies because it has no attribute that would give it an [accessible name][].
 
 ```html
 Happy new year!<br />
@@ -99,7 +103,7 @@ Happy new year!<br />
 
 #### Passed Example 5
 
-This decorative `canvas` element is ignored by assisitve technologies because it has no attribute that would give it an [accessible name][].
+This decorative `canvas` element is ignored by assistive technologies because it has no attribute that would give it an [accessible name][].
 
 ```html
 Happy new year!<br />
@@ -188,7 +192,7 @@ This `img` is [included in the accessibility tree][] because the `alt` attribute
 
 #### Inapplicable Example 2
 
-This `img` is neither [visible][] nor included in the [accessibility tree][].
+This `img` is neither [visible][] nor [included in the accessibility tree][].
 
 ```html
 <img src="/test-assets/shared/w3c-logo.png" style="display:none" alt="" />
@@ -250,13 +254,14 @@ This `img` is [included in the accessibility tree][].
 <img src="pdf.gif" alt="PDF" /> PDF document
 ```
 
+[accessible name]: #accessible-name 'Definition of accessible name'
 [visible]: #visible 'Definition of Visible'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the accessibility tree'
+[semantic role]: #semantic-role 'Definition of Semantic Role'
 [explicit semantic role]: #explicit-role 'Definition of Explicit semantic role'
 [purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of Pure decoration'
 [success criterion 1.1.1 non-text content]: https://www.w3.org/TR/WCAG21/#non-text-content
 [conforming alternative version]: https://www.w3.org/TR/WCAG21/#dfn-conforming-alternate-version 'WCAG definition of Conforming alternative version'
-[conformance requirement 1 of wcag 2.1]: https://www.w3.org/TR/WCAG21/#cc1 'WCAG section 5.2.1 Conformance Level'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Scoping definition of Flat tree, working draft'
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant 'DOM definition of Descendant, 2020/03/06'
 [named from author]: https://www.w3.org/TR/wai-aria-1.1/#namecomputation 'WAI-ARIA definition of Named from author'

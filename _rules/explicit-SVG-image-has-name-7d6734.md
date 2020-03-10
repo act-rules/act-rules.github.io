@@ -28,7 +28,7 @@ The rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namesp
 
 Each target element has an [accessible name][] that is not empty.
 
-**Note:** Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
+**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
 
 ## Assumptions
 

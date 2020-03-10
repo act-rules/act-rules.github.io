@@ -105,7 +105,7 @@ This `iframe` element has an empty (`""`) [accessible name][] because the `title
 
 This `iframe` element has an empty (`""`) [accessible name][] because the `title` attribute value is trimmed of whitespace as part of the accessible name computation.
 
-**note**: Because `iframe` elements are part of [sequential focus navigation][], the [explicit semantic role][] of `none` will be ignored, due to the [Presentational Roles Conflict Resolution](https://www.w3.org/TR/wai-aria-1.1/#presentational-roles-conflict-resolution).
+**note**: Because `iframe` elements are part of [sequential focus navigation][], the [explicit semantic role](#explicit-role) of `none` will be ignored, due to the [Presentational Roles Conflict Resolution](https://www.w3.org/TR/wai-aria-1.1/#presentational-roles-conflict-resolution).
 
 ```html
 <iframe title=" " src="/test-assets/SC4-1-2-frame-doc.html" role="none" tabindex="0"> </iframe>

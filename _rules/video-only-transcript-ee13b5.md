@@ -5,6 +5,11 @@ rule_type: atomic
 description: |
   Non-streaming `video` elements without audio must have all visual information available in a transcript.
 accessibility_requirements:
+  wcag-technique:G159: # Providing an alternative for time-based media for video-only content
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling

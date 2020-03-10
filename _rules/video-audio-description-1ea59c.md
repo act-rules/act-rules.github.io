@@ -5,6 +5,21 @@ rule_type: atomic
 description: |
   This rule checks that non-streaming `video` elements have all visual information also contained in the audio.
 accessibility_requirements:
+  wcag-technique:G8: # Providing a movie with extended audio descriptions
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:G78: # Providing a second, user-selectable, audio track that includes audio descriptions
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:G173: # Providing a version of a movie with audio descriptions
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling

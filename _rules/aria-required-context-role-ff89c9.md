@@ -13,7 +13,7 @@ accessibility_requirements:
 input_aspects:
   - Accessibility tree
   - DOM Tree
-acknowledgements:
+acknowledgments:
   authors:
     - Wilco Fiers
     - Brian Bors

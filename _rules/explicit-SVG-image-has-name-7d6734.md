@@ -141,7 +141,7 @@ This `circle` element has an [explicit role][] of `graphics-symbol` but has no [
 
 #### Inapplicable Example 1
 
-Neither the `svg` element nor the `circle` element has an [explicit role][].
+Neither the `svg` element nor the `circle` element has any of the three [explicit role][] of  `img`, `graphics-document`, `graphics-symbol`.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg">

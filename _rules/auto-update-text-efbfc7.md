@@ -31,12 +31,14 @@ The rule applies to any [visible][] [HTML element][] in an [HTML document][] if:
 
 ## Expectation 1
 
-For the test target there exists a [mechanism][] that might be used to:
+For the test target there exists a [mechanism][] to achieve one of the following objectives:
 
-- pause, stop or hide the change of the [visible text content][]; or
+- pause and resume the change of the [visible text content][]; or
+- stop the change of the [visible text content][]; or
+- hide the content that changes; or
 - alter the frequency of the changes of the [visible text content][].
 
-**Note**: If there is more than one test target, a single [mechanism][] may be used to pause, stop, hide or alter the frequency for all test targets.
+**Note**: If there is more than one test target, a single [mechanism][] to pause, stop, hide or alter the frequency for all test targets is sufficient.
 
 ## Assumptions
 

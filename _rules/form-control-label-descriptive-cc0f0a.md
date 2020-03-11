@@ -19,7 +19,7 @@ input_aspects:
   - DOM Tree
   - CSS Styling
   - Language
-acknowledgements:
+acknowledgments:
   authors:
     - Jean-Yves Moyen
     - Wilco Fiers

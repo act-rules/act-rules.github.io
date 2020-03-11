@@ -20,7 +20,7 @@ acknowledgements:
     - Carlos Duarte
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
-	# (used with `npm test` to ensure validity of code snippets)
+  # (used with `npm test` to ensure validity of code snippets)
   - 'attr-lowercase'
   - 'alt-require'
 ---

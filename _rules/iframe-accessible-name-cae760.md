@@ -13,7 +13,7 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Jey Nandakumar
     - Wilco Fiers
@@ -73,14 +73,6 @@ Usage of `aria-labelledby` attribute to describe the `iframe` content.
 ```html
 <div id="frame-title-helper">Watch highlights of the Worldcup</div>
 <iframe aria-labelledby="frame-title-helper" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
-```
-
-#### Passed Example 4
-
-[Accessible name][] is not empty.
-
-```html
-<iframe title=":-)" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
 ### Failed

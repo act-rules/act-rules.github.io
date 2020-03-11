@@ -20,6 +20,7 @@ const badLinksAndRecommendations = {
 	'://www.w3.org/TR/wai-aria-1.0/': 'Use ARIA 1.1 reference - https://www.w3.org/TR/wai-aria-1.1/',
 	'://www.w3.org/TR/dom41/': 'Use http://dom.spec.whatwg.org',
 	'://www.w3.org/TR/html/': 'Use http://html.spec.whatwg.org',
+	'://www.w3.org/TR/html52/': 'Use http://html.spec.whatwg.org',
 }
 
 /**

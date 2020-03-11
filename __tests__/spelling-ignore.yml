@@ -24,6 +24,7 @@
 - CSS3
 - UA
 - UI
+- api # lowercase needed in reference list
 - APIs
 - MDN
 - BCP
@@ -37,6 +38,8 @@
 - DOCX
 - DPUB
 - DNS
+- BCP
+- bcp
 - Esc # esc key on a keyboard
 - url
 - voiceover
@@ -56,10 +59,14 @@
 - wai-aria-specifications
 - autoplay
 - autoplays
+- columnheader
+- rowheader
+- colspan
 - presentational
 - EARL10-Schema
 - labelable
 - merchantability
+- de-hello
 - 14pt
 - 18pt
 - Helvetica

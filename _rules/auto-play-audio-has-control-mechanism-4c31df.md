@@ -1,6 +1,6 @@
 ---
 id: 4c31df
-name: audio or video that plays automatically has a control mechanism
+name: '`audio` or `video` that plays automatically has a control mechanism'
 rule_type: atomic
 description: |
   audio or video that plays automatically must have a control mechanism.
@@ -29,8 +29,8 @@ htmlHintIgnore:
 
 This rule applies to any `audio` or `video` element that has:
 
-- an `autoplay` attribute that is equal to true, and
-- both `paused` and `muted` attributes equal to false, and
+- an `autoplay` attribute whose value is true, and
+- both `paused` and `muted` attributes whose values are both false, and
 - either a `src` attribute or a child `source` element that references content with a duration of more than 3 seconds that contains audio.
 
 **Note:**
@@ -68,7 +68,7 @@ The native `<video>` and `<audio>` controls in several browser and assistive tec
 The `<audio>` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
 
 ```html
-<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay="true" controls></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay controls></audio>
 ```
 
 #### Passed Example 2
@@ -76,7 +76,7 @@ The `<audio>` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechan
 The `<video>` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
 
 ```html
-<video autoplay="true" controls>
+<video autoplay controls>
 	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
@@ -103,7 +103,7 @@ The `<video>` element has a custom [mechanism](https://www.w3.org/TR/WCAG21/#dfn
 <body>
 	<div id="video-container">
 		<!-- Video -->
-		<video id="video" autoplay="true">
+		<video id="video" autoplay>
 			<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 			<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 		</video>
@@ -124,7 +124,7 @@ The `<video>` element has a custom [mechanism](https://www.w3.org/TR/WCAG21/#dfn
 The `<audio>` does not have a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
 
 ```html
-<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay="true"></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
 ```
 
 #### Failed Example 2
@@ -132,7 +132,7 @@ The `<audio>` does not have a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mech
 The `<video>` element autoplays and does not have a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
 
 ```html
-<video autoplay="true">
+<video autoplay>
 	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
@@ -160,7 +160,7 @@ The `<video>` has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to 
 <body>
 	<div id="video-container">
 		<!-- Video -->
-		<video id="video" autoplay="true">
+		<video id="video" autoplay>
 			<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 			<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 		</video>
@@ -195,7 +195,7 @@ The `<video>` has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to 
 <body>
 	<div id="video-container">
 		<!-- Video -->
-		<video id="video" autoplay="true">
+		<video id="video" autoplay>
 			<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 			<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 		</video>
@@ -230,7 +230,7 @@ The `<video>` has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to 
 <body>
 	<div id="video-container">
 		<!-- Video -->
-		<video id="video" autoplay="true">
+		<video id="video" autoplay>
 			<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 			<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 		</video>
@@ -248,10 +248,10 @@ The `<video>` has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to 
 
 #### Inapplicable Example 1
 
-The `<video>` element is `muted`.
+The `<video>` element audio autoplays for longer than 3 seconds, but is `muted`.
 
 ```html
-<video autoplay="true" muted="true">
+<video autoplay muted>
 	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
@@ -262,7 +262,7 @@ The `<video>` element is `muted`.
 The `<video>` element `src` file has no audio output.
 
 ```html
-<video autoplay="true">
+<video autoplay>
 	<source src="/test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm" />
 </video>

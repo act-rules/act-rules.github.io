@@ -16,15 +16,16 @@ input_aspects:
 acknowledgements:
   authors:
     - Anne Thyme Nørregaard
+    - Jean-Yves Moyen
 ---
 
 ## Applicability
 
-Any [WAI-ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) that is specified on an HTML or SVG element that is [included in the accessibility tree][].
+Any [WAI-ARIA state or property][] that is specified on an HTML or SVG element that is [included in the accessibility tree][].
 
 ## Expectation
 
-The attribute is either an [inherited](https://www.w3.org/TR/wai-aria/#inheritedattributes), [supported](https://www.w3.org/TR/wai-aria/#supportedState), or [required](https://www.w3.org/TR/wai-aria/#requiredState) [state](https://www.w3.org/TR/wai-aria/#dfn-state) or [property](https://www.w3.org/TR/wai-aria/#dfn-property) of the [semantic role](#semantic-role) of the element on which the attribute is specified. If the element has no semantic role, the attribute must be a [global state or property](https://www.w3.org/TR/wai-aria-1.1/#global_states).
+The attribute is either an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the attribute is specified. If the element has no [semantic role][], the attribute must be a [global state or property][global].
 
 **Note:** Assessing the value of the attribute is out of scope for this rule.
 
@@ -49,23 +50,23 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-`aria-pressed` state is supported for role `button`.
-
-```html
-<div role="button" aria-pressed="false">My button</div>
-```
-
-#### Passed Example 2
-
-`aria-pressed` state is supported for `role=button` that is the [implicit role](#implicit-role) for `button` element.
+The `aria-pressed` [state][] is [supported][] for the [semantic role][] `button`, which is the [implicit role][] for `button` elements.
 
 ```html
 <button aria-pressed="false">My button</button>
 ```
 
+#### Passed Example 2
+
+The `aria-pressed` [state][] is [supported][] for the [semantic role][] `button`, which is the [explicit role][] of this `div` element.
+
+```html
+<div role="button" aria-pressed="false">My button</div>
+```
+
 #### Passed Example 3
 
-Global state that is supported by all base markup elements.
+The `aria-busy` [state][] is a [global][] [state][] that is [supported][] by all elements, even without any [semantic role][].
 
 ```html
 <div aria-busy="true">My busy button</div>
@@ -73,7 +74,7 @@ Global state that is supported by all base markup elements.
 
 #### Passed Example 4
 
-`aria-label` state is inherited for role `button`
+The `aria-label` [state][] is a [global][] [state][] and thus [inherited][] for all [semantic role][].
 
 ```html
 <div role="button" aria-label="OK"></div>
@@ -81,7 +82,7 @@ Global state that is supported by all base markup elements.
 
 #### Passed Example 5
 
-`aria-checked` state is required for role `aria-checkbox`
+The `aria-checked` [state][] is [required][] for the [semantic role][] `checkbox`.
 
 ```html
 <div role="checkbox" aria-checked="false">My checkbox</div>
@@ -89,7 +90,7 @@ Global state that is supported by all base markup elements.
 
 #### Passed Example 6
 
-`aria-controls` property is supported for role `combobox`
+The `aria-controls` [property][] is [required][] for the [semantic role][] `combobox`.
 
 ```html
 <div role="combobox" aria-controls="id1">My combobox</div>
@@ -97,7 +98,7 @@ Global state that is supported by all base markup elements.
 
 #### Passed Example 7
 
-WAI-ARIA states and properties with empty value are also applicable to this rule
+The `aria-controls` [property][] is [required][] for the [semantic role][] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value are still applicable to this rule.
 
 ```html
 <div role="combobox" aria-controls>My combobox</div>
@@ -105,25 +106,27 @@ WAI-ARIA states and properties with empty value are also applicable to this rule
 
 #### Passed Example 8
 
-WAI-ARIA states and properties with empty value, specified as an empty string, are also applicable to this rule
+The `aria-controls` [property][] is [required][] for the [semantic role][] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value (specified as an empty string) are still applicable to this rule.
 
 ```html
 <div role="combobox" aria-controls="">My combobox</div>
+```
+
+#### Passed Example 9
+
+The `aria-label` [state][] is [global][] and thus [inherited][] for all [semantic role][], including the ones from the [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0). This rule is also applicable to SVG elements.
+
+```html
+<svg xmlns="http://www.w3.org/2000/svg" role="graphics-object" width="100" height="100" aria-label="yellow circle">
+	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
+</svg>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-`aria-sort` property is neither inherited, supported, nor required for role `button`.
-
-```html
-<div role="button" aria-sort="">Sort by year</div>
-```
-
-#### Failed Example 2
-
-`aria-sort` attribute is neither inherited, supported, nor required for `role=button` that is the implicit role for `button` element.
+The `aria-sort` [property][] is neither [inherited][], [supported][], nor [required][] for the [semantic role][] `button`, which is the [implicit role][] for the `button` element.
 
 ```html
 <button aria-sort="">Sort by year</button>
@@ -133,7 +136,7 @@ WAI-ARIA states and properties with empty value, specified as an empty string, a
 
 #### Inapplicable Example 1
 
-No [WAI-ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
+This `div` element has no [WAI-ARIA state or property][].
 
 ```html
 <div role="region">A region of content</div>
@@ -141,10 +144,20 @@ No [WAI-ARIA state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_d
 
 #### Inapplicable Example 2
 
-`aria-sort` property is neither inherited, supported, nor required for role `button`, but the element is not [included in the accessibility tree][].
+This `div` element is not [included in the accessibility tree][], hence its [WAI-ARIA state or property][] is not checked.
 
 ```html
 <div role="button" aria-sort="" style="display:none;"></div>
 ```
 
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[explicit role]: #explicit-role 'Definition of Explicit Role'
+[global]: https://www.w3.org/TR/wai-aria-1.1/#global_states 'Definition of Global ARIA States and Properties'
+[implicit role]: #implicit-role 'Definition of Implicit Role'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
+[inherited]: https://www.w3.org/TR/wai-aria/#inheritedattributes 'Definition of Inherited ARIA States and Properties'
+[property]: https://www.w3.org/TR/wai-aria/#dfn-property 'Definition of ARIA Property'
+[required]: https://www.w3.org/TR/wai-aria/#requiredState 'Definition of Required ARIA States and Properties'
+[semantic role]: #semantic-role 'Definition of Semantic Role'
+[state]: https://www.w3.org/TR/wai-aria/#dfn-state 'Definition of ARIA State'
+[supported]: https://www.w3.org/TR/wai-aria/#supportedState 'Definition of Supported ARIA States and Properties'
+[wai-aria state or property]: https://www.w3.org/TR/wai-aria-1.1/#state_prop_def 'Definition of ARIA States and Properties'

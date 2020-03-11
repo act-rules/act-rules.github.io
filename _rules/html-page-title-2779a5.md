@@ -22,7 +22,7 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-acknowledgements:
+acknowledgments:
   authors:
     - Wilco Fiers
     - Stein Erik Skotkjerra

@@ -8,7 +8,7 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Dagfinn Rømen
     - Geir Sindre Fossøy
@@ -76,7 +76,6 @@ Keyboard trap with help information in a paragraph before, and where the method 
 </button>
 <button
 	id="btn2"
-	class="target"
 	onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)"
 	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
 >
@@ -101,7 +100,6 @@ Keyboard trap with help information within the trap, and where the method advise
 <p>Press the M-key to Exit</p>
 <button
 	id="btn2"
-	class="target"
 	onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)"
 	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
 >
@@ -130,7 +128,7 @@ Keyboard trap with "help" link that once clicked exposes the instructions.
 	</button>
 	<a id="helpLink" href="#" onclick="showHelpText()">How to go the next element</a>
 	<div id="helptext"></div>
-	<button id="btn2" class="target" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">
+	<button id="btn2" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">
 		Button 2
 	</button>
 </div>
@@ -154,7 +152,6 @@ Keyboard trap with no instructions.
 </button>
 <button
 	id="btn2"
-	class="target"
 	onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)"
 	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
 >
@@ -179,7 +176,6 @@ Keyboard trap with instructions that doesn't give advise on the method for proce
 </button>
 <button
 	id="btn2"
-	class="target"
 	onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)"
 	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
 >
@@ -202,7 +198,7 @@ Keyboard trap with help text, where the method advised doesn't work.
 	Button 1
 </button>
 <p>Press the M-key to Exit</p>
-<button id="btn2" class="target" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">
+<button id="btn2" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">
 	Button 2
 </button>
 <a id="link2" href="#">Link 2</a>

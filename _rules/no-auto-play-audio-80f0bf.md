@@ -13,7 +13,7 @@ accessibility_requirements:
 input_rules:
   - 4c31df
   - aaa1bf
-acknowledgements:
+acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Bryn Anderson

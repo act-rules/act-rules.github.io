@@ -3,7 +3,7 @@ id: fd3a94
 name: Links with identical accessible names and context serve equivalent purpose
 rule_type: atomic
 description: |
-  This rule checks that links with identical accessible names and context resolve to the same resource or equivalent resources.
+  This rule checks that links with identical accessible names and context resolve to the same or equivalent resources.
 accessibility_requirements:
   wcag20:2.4.4: # Link Purpose (In Context) (A)
     forConformance: true

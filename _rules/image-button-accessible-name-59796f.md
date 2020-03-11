@@ -15,6 +15,16 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:G94: # Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:G95: # Providing short text alternatives that provide a brief description of the non-text content
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects: # Remove what is not applicable
   - DOM Tree
   - CSS Styling
@@ -29,13 +39,15 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to any HTML `input` element with a `type` attribute in the `Image Button` state, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+The rule applies to any HTML `input` element with a `type` attribute in the [`Image Button` state](<https://html.spec.whatwg.org/#image-button-state-(type=image)>), that is [included in the accessibility tree][].
 
 **Note:** The specification of the [`type`](https://html.spec.whatwg.org/#states-of-the-type-attribute) attribute describes in detail how to map the value of the attribute to its corresponding state.
 
 ## Expectation
 
 Each target element has an [accessible name][] that is not empty (`""`).
+
+**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
 
 ## Assumptions
 
@@ -57,92 +69,68 @@ There is a known combination of a popular browser and assistive technology that 
 
 #### Passed Example 1
 
-Image button element with [accessible name][] through `alt` attribute
+The image button has an [accessible name][] through the `alt` attribute.
 
 ```html
-<input type="image" name="submit" src="button.gif" alt="Submit" />
+<input type="image" src="/test-assets/shared/search-icon.svg" alt="Search" />
 ```
 
 #### Passed Example 2
 
-Image button element with [accessible name][] through `aria-label`
+The image button has an [accessible name][] through the `aria-label` attribute.
 
 ```html
-<input type="image" name="submit" src="button.gif" aria-label="Submit" />
+<input type="image" src="/test-assets/shared/search-icon.svg" aria-label="Search" />
 ```
 
 #### Passed Example 3
 
-Image button element with [accessible name][] through `title` attribute
+The image button has an [accessible name][] through the `title` attribute.
 
 ```html
-<input type="image" name="submit" src="button.gif" title="Submit" />
+<input type="image" src="/test-assets/shared/search-icon.svg" title="Search" />
 ```
 
 #### Passed Example 4
 
-Image button element with [accessible name][] through `aria-labelledby`
+The image button has an [accessible name][] through the `aria-labelledby` attribute.
 
 ```html
-<input type="image" name="submit" src="button.gif" aria-labelledby="id1" />
-<div id="id1">Submit</div>
-```
-
-#### Passed Example 5
-
-[accessible name][] is not empty.
-
-```html
-<input type="image" name="submit" src="button.gif" alt=":-)" />
-```
-
-#### Passed Example 6
-
-Image button element with [accessible name][] through `alt` attribute
-
-```html
-<input type="image" name="submit" src="button.gif" alt="123" />
+<input type="image" src="/test-assets/shared/search-icon.svg" aria-labelledby="id1" />
+<div id="id1">Search</div>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-Image button element with empty [accessible name][].
+The image button element has an empty [accessible name][]. The `name` attribute can not be used to provide an [accessible name][].
 
 ```html
-<input type="image" name="submit" src="button.gif" />
+<input type="image" name="search" src="/test-assets/shared/search-icon.svg" />
 ```
 
 #### Failed Example 2
 
-Image button element with empty [accessible name][].
+The image button has an empty `alt` attribute, and no other attributes that can give it an [accessible name][].
 
 ```html
-<input type="image" name="submit" src="button.gif" alt="" />
+<input type="image" src="/test-assets/shared/search-icon.svg" alt="" />
 ```
 
 #### Failed Example 3
 
-Image button with empty [accessible name][] because the `aria-labelledby` attribute does not reference an id that exists in the same document.
+The image button has an `aria-labelledby` attribute, but the referenced element does not exist. This gives the button an empty [accessible name][].
 
 ```html
-<input type="image" name="submit" src="button.gif" aria-labelledby="id1" />
-```
-
-#### Failed Example 4
-
-[accessible name][] is empty.
-
-```html
-<input type="image" name="submit" src="button.gif" alt=" " />
+<input type="image" src="/test-assets/shared/search-icon.svg" aria-labelledby="non-existing" />
 ```
 
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-HTML `button` element is not an image button
+The `button` element is not an image button. [Success Criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG21/#non-text-content) can not fail text buttons. Only non-text content is applicable.
 
 ```html
 <button>My button</button>
@@ -150,7 +138,7 @@ HTML `button` element is not an image button
 
 #### Inapplicable Example 2
 
-HTML `input` element with type with a `type` attribute in the `Button` state is not an image button
+The `input` element with type with a `type` attribute in the `Button` state is not an image button. [Success Criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG21/#non-text-content) can not fail text buttons. Only non-text content is applicable.
 
 ```html
 <input type="button" value="My button" />
@@ -158,27 +146,28 @@ HTML `input` element with type with a `type` attribute in the `Button` state is 
 
 #### Inapplicable Example 3
 
-Button with image inside is not an image button
+The `button` element is tested separately from the `img` element. [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value) is applied to the button, whereas the image is tested under [Success Criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG21/#non-text-content)
 
 ```html
-<button><img src="button.gif" /></button>
+<button><img src="/test-assets/shared/search-icon.svg" alt="Search" /></button>
 ```
 
 #### Inapplicable Example 4
 
-Image is not a button image
+The `img` element is not a user interface component, and so is not tested for [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value).
 
 ```html
-<img alt="W3C logo" />
+<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
 ```
 
 #### Inapplicable Example 5
 
-Image button is not included in the accessibility tree
+The image button is ignored by assistive technologies because it is not [included in the accessibility tree][]. These are not required to have an accessible name. If at some future state of the page the element gets [included in the accessibility tree][], an [accessible name][] will be necessary.
 
 ```html
-<input type="image" name="submit" src="button.gif" alt="Submit" aria-hidden="true" />
+<input type="image" src="/test-assets/shared/search-icon.svg" style="display: none;" />
 ```
 
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [accessible name]: #accessible-name 'Definition of accessible name'
 [whitespace]: #whitespace 'Definition of whitespace'

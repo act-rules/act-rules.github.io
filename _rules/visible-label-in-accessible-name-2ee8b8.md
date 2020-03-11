@@ -28,13 +28,13 @@ This rule applies to any element that has:
 - [visible text content](#visible-text-content), and
 - an `aria-label` or `aria-labelledby` attribute.
 
-**Note**: [widget roles](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent) are: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
+**Note:** [widget roles](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent) are: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
 
 ## Expectation
 
 The complete [visible text content](#visible-text-content) of the target element either matches or is contained within its [accessible name][].
 
-**Note**: Leading and trailing [whitespace](#whitespace) and difference in case sensitivity should be ignored.
+**Note:** Leading and trailing [whitespace](#whitespace) and difference in case sensitivity should be ignored.
 
 ## Assumptions
 
@@ -57,7 +57,7 @@ There are no major accessibility support issues known for this rule.
 [Visible][] label and [accessible name][] matches when trailing white spaces are removed.
 
 ```html
-<div role="link" aria-label="next page ">next page</div>
+<a href="https://act-rules.github.io/" aria-label="ACT rules ">ACT rules</a>
 ```
 
 #### Passed Example 2
@@ -65,7 +65,7 @@ There are no major accessibility support issues known for this rule.
 Character insensitivity between [visible][] label and [accessible name][].
 
 ```html
-<div role="link" aria-label="Next Page">next page</div>
+<a href="https://act-rules.github.io/" aria-label="act rules ">ACT rules</a>
 ```
 
 #### Passed Example 3
@@ -83,7 +83,7 @@ Full [visible][] label is contained in the [accessible name][].
 [Visible][] label doesn't match [accessible name][].
 
 ```html
-<div role="link" aria-label="OK">Next</div>
+<a href="https://act-rules.github.io/" aria-label="WCAG">ACT rules</a>
 ```
 
 #### Failed Example 2

@@ -55,7 +55,7 @@ in [text][] that is [included in the accessibility tree][] or included in the [a
 
 ## Assumptions
 
-This rule assumes that the apparent cause of a [form field error indicator][] is the actual cause for the [form field error indicator][] being shown. If the actual cause is different, then this rule may generate incorrect results.
+_There are currently no assumptions._
 
 ## Accessibility Support
 

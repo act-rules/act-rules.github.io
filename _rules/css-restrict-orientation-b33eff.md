@@ -12,7 +12,7 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-    - CSS Styling
+  - CSS Styling
 acknowledgements:
   authors:
     - Jey Nandakumar

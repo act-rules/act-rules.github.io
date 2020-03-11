@@ -75,14 +75,6 @@ Usage of `aria-labelledby` attribute to describe the `iframe` content.
 <iframe aria-labelledby="frame-title-helper" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
-#### Passed Example 4
-
-[Accessible name][] is not empty.
-
-```html
-<iframe title=":-)" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
-```
-
 ### Failed
 
 #### Failed Example 1

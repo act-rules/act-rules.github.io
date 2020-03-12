@@ -5,28 +5,23 @@ unambiguous: true
 objective: true
 ---
 
-An _implicit section of content_ is all the nodes of the [flat tree][], in tree order, between an initial element with a [semantic role][] of [`heading`][heading] and the next element (in tree order) which has both a [semantic role][] of [`heading`][heading] and an [`aria-level`][aria-level] property lower or equal to that of the initial [`heading`][heading] element, except for the first element with a [semantic role][] of [`heading`][heading] inside an [explicit section of content][].
+An _implicit section of content_ is all the nodes of the [flat tree][], in tree order, between an initial element with a [semantic role][] of [`heading`][heading] and the next element (in tree order) which has both a [semantic role][] of [`heading`][heading] and an [`aria-level`][aria-level] property lower or equal to that of the initial [`heading`][heading] element.
 
 If a node inside an implicit section of content is a [browsing context container][], then the full content of the associated [nested browsing context][] is also included in this implicit section of content.
-
-Implicit sections of content may contain nested [programmatic subsections of content][programmatic section of content].
 
 The heading defining an implicit section of content is always [associated][] with it.
 
 **Note:** Heading level indicates nesting of subsections, the lower the level, the higher the rank of its section. Thus, a level 3 heading (for example, a `h3` element) defines an implicit section of content that stop at the next heading of level 1, 2, or 3; but includes subsections defined by headings of level 4, 5, and 6.
 
-**Note:** The first heading inside an [explicit section of content][] is [associated][] with it. It does not create a new [programmatic section of content][] but gives a heading to the existing one. This association follows roughly the [algorithm for creating an outline][outline algorithm].
-
 #### Assumption
-
-- This definition assumes that the [semantic roles][semantic role] (including the level of headings) are used according to their semantics.
-- This definition assumes that [nested browsing contexts][nested browsing context] included in an implicit section of content do not contain any element with a role of `heading` and an `aria-level` lower or equal to the one of the `heading` defining this implicit section of content.
-
-**Note:** In short, the content of `iframe` and similar elements is included in the section of content. If an `iframe` is part of a section of content implicitly defined by an `h2` element, but does contain an `h1` element, the definition will include everything in the `h2` implicit section of content and not close it upon reaching the `h1` element, resulting in improper sections being detected.
 
 - This definition assumes that the `hgroup` element is not used.
 
-**Note:** The `hgroup` element, used to group headings, has no default role mapping ([HTML Accessibility API Mapping (work in progress)](https://www.w3.org/TR/html-aam-1.0/#details-id-48)). Furthermore, it was [deprecated in HTML 5.2](https://www.w3.org/TR/html52/dom.html#heading-content) (and [alternate way of marking up subheadings and alternate titles](https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements) are provided) but [still exists in the WHATWG living standard](https://html.spec.whatwg.org/multipage/dom.html#heading-content). It is generally not well supported by Assistive Technologies. Its key purpose is to affect the [algorithm for creating an outline][outline algorithm] which is itself poorly supported by browsers. For all these reasons, it is left out of this definition.
+**Note:** The `hgroup` element, used to group headings, has no default role mapping ([HTML Accessibility API Mapping (work in progress)](https://www.w3.org/TR/html-aam-1.0/#details-id-48)). Furthermore, it was [deprecated in HTML 5.2](https://www.w3.org/TR/html52/dom.html#heading-content) (and [alternate way of marking up subheadings and alternate titles](https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements) are provided) but [still exists in the WHATWG living standard](https://html.spec.whatwg.org/multipage/dom.html#heading-content). It is generally not well supported by Assistive Technologies and very rarely used. Its key purpose is to affect the [algorithm for creating an outline][outline algorithm] which is itself poorly supported by browsers. For all these reasons, it is left out of this definition.
+
+- This definition assumes that [nested browsing contexts][nested browsing context] included in an implicit section of content do not contain any element with a role of `heading` and an `aria-level` lower or equal to the one of the `heading` defining this implicit section of content.
+
+**Note:** In short, the content of `iframe` and similar elements is included in the section of content. If an `iframe` is part of a section of content implicitly defined by an `h2` element, but does contain an `h1` element, the definition will include everything in the `h2` implicit section of content and not close it upon reaching the `h1` element, resulting in improper sections being detected.
 
 [aria-level]: https://www.w3.org/TR/wai-aria-1.1/#aria-level 'The aria-level property'
 [associated]: #heading-section-association 'Definition of association between headings and sections'

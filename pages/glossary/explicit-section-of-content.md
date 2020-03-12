@@ -11,21 +11,15 @@ The sectioning roles considered here are: the [`document`][document] role; any r
 
 If a descendant of the root of an explicit section of content is a [browsing context container][], then the full content of the associated [nested browsing context][] is also included in this explicit section of content.
 
-Explicit sections of content may contain nested [programmatic subsections of content][programmatic section of content].
-
 Explicit sections of content may have zero or one heading [associated][] with them.
 
 **Note:** The `article` role (inheriting from `document`) is included in this definition because the `article` element is [sectioning content][] used by the [algorithm for creating an outline][outline algorithm].
 
 **Note:** The roles considered here are close but different from the [implicit roles][] of [sectioning content][] and [sectioning root][] elements. Notably, the `body` element itself does not define an explicit section of content.
 
-**Note:** When one of these elements is the single child of a similar element, they form a single [programmatic section of content][], rather than one each, because they have the exact same content.
+**Note:** When one of these elements is the single child of a similar element, they form a single [explicit section of content][], rather than one each, because they have the exact same content.
 
 **Note:** a subtree rooted at a node is this node and all its descendants.
-
-#### Assumption
-
-This definition assumes that the [semantic roles][semantic role] are used according to their semantics.
 
 [associated]: #heading-section-association 'Definition of association between headings and sections'
 [browsing context container]: https://html.spec.whatwg.org/multipage/browsers.html#browsing-context-container 'Definition of browsing context container'

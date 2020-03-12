@@ -5,7 +5,15 @@ unambiguous: true
 objective: true
 ---
 
-Each element with a [semantic role][] of [`heading`][heading] is _associated_ with exactly one [programmatic section of content][] in one of the following ways:
+Each [section of content][] is _associated_ with the first element (in tree order) with a [semantic role][] of `heading` within this section of content, if any.
+
+**Note:** [Implicit sections of content][implicit section of content] are always associated with the element defining them. [Explicit][explicit section of content][] and [visual sections of content][visual section of content] are associated with 0 or 1 heading.
+
+**Note:** A heading may have several [sections of content][section of content] associated with it, even several of the same kind (explicit or visual).
+
+**Note:** If the first heading is not located near the start of a [section of content][], this association will not necessarily be perceived by users.
+
+Each element with a [semantic role][] of [`heading`][heading] is _associated_ with exactly one [section of content][] in one of the following ways:
 
 - The first element with a [semantic role][] of [`heading`][heading] inside an [explicit section of content][] is associated with the [explicit section of content][] whose root is its closest ancestor.
 - Any other element with a [semantic role][] of [`heading`][heading] is associated with the [implicit section of content][] it creates.

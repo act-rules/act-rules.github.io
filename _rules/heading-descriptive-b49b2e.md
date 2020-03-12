@@ -15,7 +15,7 @@ input_aspects:
   - DOM Tree
   - CSS Styling
   - Language
-acknowledgements:
+acknowledgments:
   authors:
     - Dagfinn Rømen
     - Geir Sindre Fossøy

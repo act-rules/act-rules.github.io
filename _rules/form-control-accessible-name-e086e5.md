@@ -13,7 +13,7 @@ accessibility_requirements:
 input_aspects:
   - Accessibility Tree
   - DOM Tree
-acknowledgements:
+acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Bryn Anderson
@@ -34,7 +34,7 @@ This rule applies to any element that is [included in the accessibility tree](#i
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
-**Note:** Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
+**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
 
 ## Assumptions
 
@@ -143,10 +143,11 @@ No [accessible name][].
 
 #### Failed Example 4
 
-The label does not exist.
+`aria-labelledby` with empty text string.
 
 ```html
-<div aria-labelledby="non-existing" role="combobox">England</div>
+<div id="country"></div>
+<div aria-labelledby="country" role="combobox">England</div>
 ```
 
 #### Failed Example 5

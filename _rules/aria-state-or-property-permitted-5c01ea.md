@@ -14,7 +14,7 @@ accessibility_requirements:
 input_aspects:
   - Accessibility Tree
   - DOM Tree
-acknowledgements:
+acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Jean-Yves Moyen

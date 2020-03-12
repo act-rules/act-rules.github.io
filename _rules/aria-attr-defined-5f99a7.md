@@ -7,7 +7,7 @@ description: |
 accessibility_requirements:
 input_aspects:
   - DOM Tree
-acknowledgements:
+acknowledgments:
   authors:
     - Jey Nandakumar
 ---

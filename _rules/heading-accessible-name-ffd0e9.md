@@ -19,7 +19,7 @@ input_aspects:
   - Accessibility Tree
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Jean-Yves Moyen
 ---

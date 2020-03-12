@@ -17,7 +17,7 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-acknowledgements:
+acknowledgments:
   authors:
     - Bryn Anderson
     - Jey Nandakumar

@@ -13,7 +13,7 @@ accessibility_requirements:
 input_aspects:
   - Accessibility Tree
   - DOM Tree
-acknowledgements:
+acknowledgments:
   authors:
     - Jey Nandakumar
     - Audrey Maniez

@@ -219,8 +219,7 @@ The element is not an `img` element.
 [global]: https://www.w3.org/TR/wai-aria-1.1/#global_states 'Definition of Global ARIA States and Properties'
 [implicit role]: #implicit-role 'Definition of implicit role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-
-[marked as decorative]: #marked-as-decorative ’Definition of marked as decorative’
+[marked as decorative]: #marked-as-decorative 'Definition of marked as decorative'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [property]: https://www.w3.org/TR/wai-aria/#dfn-property 'Definition of ARIA Property'
 [semantic role]: #semantic-role 'Definition of semantic role'

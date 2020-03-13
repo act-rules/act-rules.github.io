@@ -29,20 +29,19 @@ This rule applies to any element with the [semantic role][] of heading that is e
 
 ## Expectation
 
-Each target element describes the topic or purpose of the [programmatic section of content][] it is [associated][] with.
+Each target element describes the topic or purpose of any [section of content][] [associated][] with it.
 
 **Note:** Headings do not need to be lengthy. A word, or even a single character, may suffice.
 
 ## Assumptions
 
 - This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
-- This rule assumes that the [semantic roles][semantic role] (including the level of headings) are used according to their semantics.
-- This rule assumes that [nested browsing contexts][nested browsing context] included in an implicit section of content do not contain any element with a role of `heading` and an `aria-level` lower or equal to the one of the `heading` defining this implicit section of content.
-- This rule assumes that the `hgroup` element is not used.
+- This rule assumes that the `hgroup` element is not used. If it is used, [implicit sections of content][implicit section of content] will not be correctly detected and this rule might fail even though the full heading group is descriptive.
+- This rule assumes that [nested browsing contexts][nested browsing context] included in an [implicit section of content][] do not contain any element with a role of `heading` and an `aria-level` lower or equal to the one of the `heading` defining this implicit section of content. Otherwise, the [implicit sections of content][implicit section of content] won’t match what is perceived by users and this rule will produce incorrect results
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+The different kinds of [sections of content][section of content] ([explicit][explicit section of content], [implicit][implicit section of content] and [visual][visual section of content]) are not necessarily perceived by all users. Therefore, this rule may fail for only one kind of [sections of content][section of content], without creating any accessibility issue for some users.
 
 ## Background
 
@@ -58,7 +57,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-Heading marked up with `h1` element that describes the topic or purpose of its [programmatic section of content][].
+Heading marked up with `h1` element that describes the topic or purpose of its [implicit section of content][].
 
 ```html
 <html lang="en">
@@ -69,7 +68,7 @@ Heading marked up with `h1` element that describes the topic or purpose of its [
 
 #### Passed Example 2
 
-Heading marked up with `role="heading"` that describes the topic or purpose of its [programmatic section of content][].
+Heading marked up with `role="heading"` that describes the topic or purpose of its [implicit section of content][].
 
 ```html
 <html lang="en">
@@ -80,7 +79,7 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 
 #### Passed Example 3
 
-Heading marked up with `role="heading"` that describes the topic or purpose of its [programmatic section of content][], with a default aria-level assigned.
+Heading marked up with `role="heading"` that describes the topic or purpose of its [implicit section of content][], with a default aria-level assigned.
 
 ```html
 <html lang="en">
@@ -91,7 +90,7 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 
 #### Passed Example 4
 
-Heading marked up with `h1` element with an image that describes the topic or purpose of its [programmatic section of content][].
+Heading marked up with `h1` element with an image that describes the topic or purpose of its [implicit section of content][].
 
 ```html
 <html lang="en">
@@ -104,7 +103,7 @@ Heading marked up with `h1` element with an image that describes the topic or pu
 
 #### Passed Example 5
 
-Heading marked up with `h1` element that is a single character that describes the topic or purpose of its [programmatic section of content][].
+Heading marked up with `h1` element that is a single character that describes the topic or purpose of its [implicit section of content][].
 
 ```html
 <html lang="en">
@@ -124,7 +123,7 @@ Heading marked up with `h1` element that is a single character that describes th
 
 #### Passed Example 6
 
-Heading marked up with `role="heading"` that describes the topic or purpose of its [programmatic section of content][]. The heading is positioned off screen and is [included in the accessibility tree][].
+Heading marked up with `role="heading"` that describes the topic or purpose of its [implicit section of content][]. The heading is positioned off screen and is [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -137,7 +136,7 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 
 #### Passed Example 7
 
-Heading marked up with `h1` element that describes the topic or purpose of its [programmatic section of content][]. The heading is [visible][], but is not [included in the accessibility tree][].
+Heading marked up with `h1` element that describes the topic or purpose of its [implicit section of content][]. The heading is [visible][], but is not [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -146,11 +145,13 @@ Heading marked up with `h1` element that describes the topic or purpose of its [
 </html>
 ```
 
+TODO: examples with explicit and visual sections of content.
+
 ### Failed
 
 #### Failed Example 1
 
-Heading marked up with `h1` element that does not describe the topic or purpose of its [programmatic section of content][].
+Heading marked up with `h1` element that does not describe the topic or purpose of its [implicit section of content][].
 
 ```html
 <html lang="en">
@@ -161,7 +162,7 @@ Heading marked up with `h1` element that does not describe the topic or purpose 
 
 #### Failed Example 2
 
-Heading marked up with `role="heading"` that does not describe the topic or purpose of its [programmatic section of content][].
+Heading marked up with `role="heading"` that does not describe the topic or purpose of its [implicit section of content][].
 
 ```html
 <html lang="en">
@@ -172,7 +173,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed Example 3
 
-Heading marked up with `role="heading"` that does not describe the topic or purpose of its [programmatic section of content][]. The heading is positioned off screen and is [included in the accessibility tree][].
+Heading marked up with `role="heading"` that does not describe the topic or purpose of its [implicit section of content][]. The heading is positioned off screen and is [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -185,7 +186,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed Example 4
 
-Heading marked up with `h1` element that does not describe the topic or purpose of its [programmatic section of content][]. The heading is [visible][], but is not [included in the accessibility tree][].
+Heading marked up with `h1` element that does not describe the topic or purpose of its [implicit section of content][]. The heading is [visible][], but is not [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -238,8 +239,11 @@ Empty heading marked up with `role="heading"` is not [visible][].
 ```
 
 [associated]: #heading-section-association 'Definition of association between headings and sections'
+[explicit section of content]: #explicit-section-of-content 'Definition of explicit section of content'
+[implicit section of content]: #implicit-section-of-content 'Definition of implicit section of content'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [nested browsing context]: https://html.spec.whatwg.org/multipage/browsers.html#nested-browsing-context 'Definition of nested browsing context'
-[programmatic section of content]: #programmatic-section-of-content 'Definition of programmatic section of content'
+[section of content]: #section-of-content 'Definition of section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'
+[visual section of content]: #visual-section-of-content 'Definition of visual section of content'

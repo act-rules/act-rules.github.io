@@ -2,7 +2,7 @@
 title: Correct nesting of sections of content
 key: correct-nesting-of-sections
 unambiguous: true
-objective: true
+objective: false
 ---
 
 Two [sections of content][] are _correctly nested_ if all the text content of one of them is included into the other.

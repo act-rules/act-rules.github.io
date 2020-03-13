@@ -2,7 +2,7 @@
 title: Association between headings and sections
 key: heading-section-association
 unambiguous: true
-objective: true
+objective: false
 ---
 
 Each [section of content][] is _associated_ with the first element (in tree order) with a [semantic role][] of `heading` within this section of content, if any.

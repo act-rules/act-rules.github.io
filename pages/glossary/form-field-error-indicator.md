@@ -11,7 +11,7 @@ Any [text][], or [non-text content][], or an element that has [presentation][] i
 - incorrect input, such as an invalid password
 - input not in an expected format, expected range, or of an allowed value
 - timing error, such as session timeouts or expiration of an allowed action
-- authentication or authorisation errors
+- authentication or authorization errors
 
 **Note**: An error indicator can be a separate element in the page, but it can also be part of a form control. For example a red outline on a form control is often used to indicate an error. Not all red outlines are indicators of an error though. This depends on the presentation of the form control in relation to other elements on the page.
 

@@ -217,10 +217,9 @@ No elements with the required [semantic roles][semantic role].
 [accessible description]: https://www.w3.org/TR/accname/#dfn-accessible-description
 [accessible name]: #accessible-name 'Definition of accessible name'
 [aria 1.1]: https://www.w3.org/TR/wai-aria-1.1/
-[error message]: #error-message 'Definition of error message'
 [form field error indicator]: #form-field-error-indicator
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[not-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content
+[non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content
 [presentation]: https://www.w3.org/TR/WCAG21/#dfn-presentation
 [required context]: https://www.w3.org/TR/wai-aria/#scope
 [semantic role]: #semantic-role 'Definition of semantic role'

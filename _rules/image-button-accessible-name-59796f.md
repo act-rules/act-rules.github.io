@@ -28,7 +28,7 @@ accessibility_requirements:
 input_aspects: # Remove what is not applicable
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Anne Thyme Nørregaard
 htmlHintIgnore:

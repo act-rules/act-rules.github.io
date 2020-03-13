@@ -21,7 +21,7 @@ input_aspects:
   - Audio output
   - Visual output
   - Language
-acknowledgements:
+acknowledgments:
   authors:
     - Wilco Fiers
     - Brian Bors

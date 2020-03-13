@@ -28,12 +28,12 @@ describe('frontmatter', () => {
  * @param {Object} metaData meta data
  */
 function validateRuleFrontmatter({ frontmatter }, metaData) {
-	const { rule_type, acknowledgements, accessibility_requirements, input_rules } = frontmatter
+	const { rule_type, acknowledgments, accessibility_requirements, input_rules } = frontmatter
 
 	/**
 	 * Check for `required` properties
 	 */
-	const requiredProps = ['id', 'name', 'rule_type', 'description', 'accessibility_requirements', 'acknowledgements']
+	const requiredProps = ['id', 'name', 'rule_type', 'description', 'accessibility_requirements', 'acknowledgments']
 	test.each(requiredProps)('has required property `%s`', requiredProp => {
 		expect(frontmatter).toHaveProperty(requiredProp)
 	})
@@ -61,7 +61,7 @@ function validateRuleFrontmatter({ frontmatter }, metaData) {
 	/**
 	 * Check if listed `authors` have meta data as contributors in package.json
 	 */
-	const { authors, previous_authors = [] } = acknowledgements
+	const { authors, previous_authors = [] } = acknowledgments
 	test.each([...authors, ...previous_authors])('has contributor data for author: `%s`', author => {
 		expect(metaData.contributors).toContain(author.toLowerCase())
 	})

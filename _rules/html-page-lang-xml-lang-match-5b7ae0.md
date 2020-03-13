@@ -12,7 +12,7 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree # The tree that HTML is parsed into.
-acknowledgements:
+acknowledgments:
   authors:
     - Jey Nandakumar
   previous_authors:

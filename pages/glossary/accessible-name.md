@@ -5,6 +5,7 @@ unambiguous: true
 objective: true
 input_aspects:
   - Accessibility tree
+  - CSS styling
   - DOM tree
 ---
 

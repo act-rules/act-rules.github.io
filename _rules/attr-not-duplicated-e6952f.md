@@ -17,7 +17,7 @@ accessibility_requirements:
     inapplicable: satisfied
 input_aspects:
   - Source code
-acknowledgements:
+acknowledgments:
   authors:
     - Wilco Fiers
     - Emma Pratt Richens

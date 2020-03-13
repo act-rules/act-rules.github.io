@@ -40,7 +40,7 @@ accessibility_requirements:
     inapplicable: satisfied | further testing needed
 input_aspects:
   -  # (e.g. HTTP Messages, DOM Tree, CSS Styling, Accessibility Tree, Language, etc.,)
-acknowledgements:
+acknowledgments:
   authors:
     -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
   previous_authors:
@@ -157,7 +157,7 @@ accessibility_requirements:
     inapplicable: satisfied | further testing needed
 input_rules:
   -
-acknowledgements:
+acknowledgments:
   authors:
     -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
   previous_authors:

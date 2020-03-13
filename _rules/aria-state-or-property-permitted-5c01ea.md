@@ -13,7 +13,7 @@ accessibility_requirements:
     inapplicable: satisfied
 input_aspects:
   - DOM Tree
-acknowledgements:
+acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Jean-Yves Moyen

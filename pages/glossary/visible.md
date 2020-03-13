@@ -5,6 +5,7 @@ unambiguous: true
 objective: true
 input_aspects:
   - CSS styling
+  - DOM tree
 ---
 
 Content perceivable through sight.

@@ -13,7 +13,7 @@ The heading defining an implicit section of content is always [associated][] wit
 
 **Note:** Heading level indicates nesting of subsections, the lower the level, the higher the rank of its section. Thus, a level 3 heading (for example, a `h3` element) defines an implicit section of content that stop at the next heading of level 1, 2, or 3; but includes subsections defined by headings of level 4, 5, and 6.
 
-#### Assumption
+#### Assumptions for implicit section of content
 
 - This definition assumes that the `hgroup` element is not used.
 

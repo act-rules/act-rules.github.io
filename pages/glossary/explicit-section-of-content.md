@@ -17,9 +17,11 @@ Explicit sections of content may have zero or one heading [associated][] with th
 
 **Note:** The roles considered here are close but different from the [implicit roles][] of [sectioning content][] and [sectioning root][] elements. Notably, the `body` element itself does not define an explicit section of content.
 
-**Note:** When one of these elements is the single child of a similar element, they form a single [explicit section of content][], rather than one each, because they have the exact same content.
+**Note:** When one of these elements is the single child of a similar element, they form a single explicit section of content, rather than one each, because they have the exact same content.
 
 **Note:** a subtree rooted at a node is this node and all its descendants.
+
+**Note:** Explicit sections of content are only useful for users of technologies that somehow expose these elements, for example by listing landmarks or providing a way to navigate directly to them.
 
 [associated]: #heading-section-association 'Definition of association between headings and sections'
 [browsing context container]: https://html.spec.whatwg.org/multipage/browsers.html#browsing-context-container 'Definition of browsing context container'

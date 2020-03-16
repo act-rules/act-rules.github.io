@@ -110,6 +110,8 @@
 - matrix3d
 - rowheader
 - columnheader
+- Viewport
+- dom-meta-content
 
 # Unsure why the dictionary does not have these words
 - programmatically

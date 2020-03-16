@@ -20,29 +20,29 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to each `meta` element with a `name` attribute whose value is a [case-insensitive](https://infra.spec.whatwg.org/#ascii-case-insensitive) match for [`viewport`](https://www.w3.org/TR/css-device-adapt-1/#viewport-meta) and has a `content` attribute.
+The rule applies to each [`meta`][meta] element with a `name` attribute whose value is a [case-insensitive][] match for [`viewport`][viewport] and has a [`content`][content] attribute.
 
 ## Expectation
 
-For each test target, the [`content`](https://html.spec.whatwg.org/#dom-meta-content) attribute, whose value is mapped to a list of property/value pairs in a user-agent specific manner, does not:
+For each test target, the [`content`][content] attribute, whose value is mapped to a list of property/value pairs in a user-agent specific manner, does not:
 
-- specify the property `user-scalable` with a value of `no`; nor
-- specify the property `maximum-scale` with a value of less than 2
+- specify the property [`user-scalable`][user-scalable] with a value of `no`; nor
+- specify the property [`maximum-scale`][maximum-scale] with a value of less than 2.
 
 ## Assumptions
 
-- The [page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) has [visible](#visible) [content](https://www.w3.org/TR/WCAG21/#dfn-content).
+- The [page][] has [visible][] [content][web content].
 
 ## Accessibility Support
 
-Desktop browsers ignore the viewport `meta` element, and most modern mobile browsers either ignore it by default, or have an accessibility option which will allow zooming. This rule is not relevant for desktop browsers, nor for most modern mobile browsers. Only users with older mobile browsers can experience issues tested by this rule.
+Desktop browsers ignore the viewport `meta` element, and most modern mobile browsers either ignore it by default or have an accessibility option which will allow zooming. This rule is not relevant for desktop browsers, nor for most modern mobile browsers. Only users with older mobile browsers can experience issues tested by this rule.
 
 ## Background
 
 - [Understanding Success Criterion 1.4.4: Resize text](https://www.w3.org/WAI/WCAG21/Understanding/resize-text)
-- [HTML Specification - The `meta` element](https://html.spec.whatwg.org/#the-meta-element)
-- [The initial-scale, minimum-scale, and maximum-scale properties](https://www.w3.org/TR/css-device-adapt-1/#min-scale-max-scale)
-- [The user-scalable property](https://www.w3.org/TR/css-device-adapt-1/#user-scalable)
+- [HTML Specification - The `meta` element][meta]
+- [The initial-scale, minimum-scale, and maximum-scale properties][maximum-scale]
+- [The user-scalable property][user-scalable]
 
 ## Test Cases
 
@@ -50,7 +50,7 @@ Desktop browsers ignore the viewport `meta` element, and most modern mobile brow
 
 #### Passed Example 1
 
-The `meta name="viewport"` element does not define the `maximum-scale` and `user-scalable` values.
+This `meta` element with a `name="viewport"` and `content` attributes does not specify the `maximum-scale` and `user-scalable` values.
 
 ```html
 <html>
@@ -68,7 +68,7 @@ The `meta name="viewport"` element does not define the `maximum-scale` and `user
 
 #### Passed Example 2
 
-The `meta name="viewport"` element defines the `user-scalable=yes` so the user can still zoom in.
+This `meta` element with a `name="viewport"` and `content` attributes specifies `user-scalable=yes` and does not specify the `maximum-scale` value.
 
 ```html
 <html>
@@ -86,7 +86,7 @@ The `meta name="viewport"` element defines the `user-scalable=yes` so the user c
 
 #### Passed Example 3
 
-The `meta name="viewport"` element defines the `maximum-scale=6.0` which allows the user to zoom.
+This `meta` element with a `name="viewport"` and `content` attributes specifies `maximum-scale=6.0` and does not specify the `user-scalable` value.
 
 ```html
 <html>
@@ -104,7 +104,7 @@ The `meta name="viewport"` element defines the `maximum-scale=6.0` which allows 
 
 #### Passed Example 4
 
-The `meta name="viewport"` element has an empty `content` attribute.
+This `meta` element with a `name="viewport"` attribute and an empty `content` attribute does not specify the `maximum-scale` and `user-scalable` values.
 
 ```html
 <html>
@@ -120,11 +120,29 @@ The `meta name="viewport"` element has an empty `content` attribute.
 </html>
 ```
 
+#### Passed Example 5
+
+This `meta` element with a `name="viewport"` and `content` attributes specifies `maximum-scale=-1` which results in this value being dropped.
+
+```html
+<html>
+	<head>
+		<title>Simple page showing random text</title>
+		<meta name="viewport" content="maximum-scale=-1" />
+	</head>
+	<body>
+		<p>
+			Lorem ipsum
+		</p>
+	</body>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1
 
-The `meta name="viewport"` element defines the `user-scalable=no` so the user can't zoom in.
+This `meta` element with a `name="viewport"` and `content` attributes specifies `user-scalable=no`.
 
 ```html
 <html>
@@ -142,7 +160,7 @@ The `meta name="viewport"` element defines the `user-scalable=no` so the user ca
 
 #### Failed Example 2
 
-The `meta name="viewport"` element defines the `user-scalable=yes`, but prevents `maximum-scale` to `1.5`.
+This `meta` element with a `name="viewport"` and `content` attributes specifies `maximum-scale=1.5`.
 
 ```html
 <html>
@@ -160,13 +178,13 @@ The `meta name="viewport"` element defines the `user-scalable=yes`, but prevents
 
 #### Failed Example 3
 
-The `meta name="viewport"` element sets the `maximum-scale=1.0` so the user can't zoom in.
+This `meta` element with a `name="viewport"` and `content` attributes specifies `maximum-scale=1.0`.
 
 ```html
 <html>
 	<head>
 		<title>Simple page showing random text</title>
-		<meta name="viewport" content=" maximum-scale=1.0" />
+		<meta name="viewport" content="maximum-scale=1.0" />
 	</head>
 	<body>
 		<p>
@@ -178,31 +196,13 @@ The `meta name="viewport"` element sets the `maximum-scale=1.0` so the user can'
 
 #### Failed Example 4
 
-The `meta name="viewport"` element sets the `maximum-scale=yes` which translates to 1.0, so the user can't zoom in.
+This `meta` element with a `name="viewport"` and `content` attributes specifies `maximum-scale=yes` which translates to 1.0.
 
 ```html
 <html>
 	<head>
 		<title>Simple page showing random text</title>
-		<meta name="viewport" content=" maximum-scale=yes" />
-	</head>
-	<body>
-		<p>
-			Lorem ipsum
-		</p>
-	</body>
-</html>
-```
-
-#### Failed Example 5
-
-The `meta name="viewport"` element sets the `maximum-scale=-1` which is dropped because it is a negative value.
-
-```html
-<html>
-	<head>
-		<title>Simple page showing random text</title>
-		<meta name="viewport" content=" maximum-scale=-1" />
+		<meta name="viewport" content="maximum-scale=yes" />
 	</head>
 	<body>
 		<p>
@@ -216,7 +216,7 @@ The `meta name="viewport"` element sets the `maximum-scale=-1` which is dropped 
 
 #### Inapplicable Example 1
 
-The `meta name="viewport"` element is not present within the page.
+There is no `meta` element with a `name="viewport"` attribute.
 
 ```html
 <html>
@@ -234,7 +234,7 @@ The `meta name="viewport"` element is not present within the page.
 
 #### Inapplicable Example 2
 
-The `meta name="viewport"` element does not have `content` attribute.
+This `meta` element with a `name="viewport"` attribute does not have a `content` attribute.
 
 ```html
 <html>
@@ -249,3 +249,13 @@ The `meta name="viewport"` element does not have `content` attribute.
 	</body>
 </html>
 ```
+
+[case-insensitive]: https://infra.spec.whatwg.org/#ascii-case-insensitive 'ASCII case-insensitive'
+[content]: https://html.spec.whatwg.org/#dom-meta-content '#dom-meta-content'
+[maximum-scale]: https://www.w3.org/TR/css-device-adapt-1/#min-scale-max-scale 'The initial-scale, minimum-scale, and maximum-scale properties'
+[meta]: https://html.spec.whatwg.org/#the-meta-element 'The meta element'
+[page]: https://www.w3.org/TR/WCAG21/#dfn-web-page-s 'Web page'
+[user-scalable]: https://www.w3.org/TR/css-device-adapt-1/#user-scalable 'The user-scalable property'
+[viewport]: https://www.w3.org/TR/css-device-adapt-1/#viewport-meta 'Viewport <META> element'
+[visible]: #visible 'Definition of visible'
+[web content]: https://www.w3.org/TR/WCAG21/#dfn-content 'content (Web content)'

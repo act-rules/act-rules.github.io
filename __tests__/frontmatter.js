@@ -5,7 +5,7 @@ describe('frontmatter', () => {
 	/**
 	 * Rules
 	 */
-	// describeRule('Rules', validateRuleFrontmatter)
+	describeRule('Rules', validateRuleFrontmatter)
 
 	/**
 	 * Other pages
@@ -53,8 +53,15 @@ function validateRuleFrontmatter({ frontmatter }, metaData) {
 	}
 	if (rule_type.toLowerCase() === `atomic`) {
 		test('has optional property `input_aspects` when `rule_type = atomic`', () => {
-			expect(frontmatter).toHaveProperty('input_aspects')
 			expect(frontmatter).not.toHaveProperty('input_rules')
+
+			expect(frontmatter).toHaveProperty('input_aspects')
+			expect(Array.isArray(frontmatter.input_aspects)).toBe(true)
+			expect(frontmatter.input_aspects.length > 0).toBe(true)
+			// check if every aspect is a `string`, and not nested arrat of other types
+			expect(
+				frontmatter.input_aspects.every(aspect => Object.prototype.toString.call(aspect) === '[object String]')
+			).toBe(true)
 		})
 	}
 

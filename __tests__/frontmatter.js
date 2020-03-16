@@ -93,10 +93,6 @@ function validateRuleFrontmatter({ frontmatter }, metaData) {
 	}
 }
 
-function areAllItemsInArrayOfTypeString(arr) {
-	return arr.every(aspect => Object.prototype.toString.call(aspect) === '[object String]')
-}
-
 /**
  * Helper to test frontmatter of glossary markdown file
  * @param {Object} data page data

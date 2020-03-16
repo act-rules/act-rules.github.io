@@ -23,7 +23,7 @@ input_aspects:
   - CSS Styling
   - Language
 
-acknowledgements:
+acknowledgments:
   authors:
     - Brian Bors
     - Wilco Fiers

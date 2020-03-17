@@ -79,8 +79,10 @@ This [document][] has one [section of content][] for the navigation links, and o
 
 		<!-- Main section of content starts here -->
 		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
+		<p>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</p>
 		<!-- Main section of content ends here -->
 	</body>
 </html>
@@ -104,8 +106,10 @@ In this [document][], headings are not the first elements of each [section of co
 		<main>
 			<hr />
 			<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -128,8 +132,10 @@ The image at the start of the second [section of content][] has an empty [access
 		<main>
 			<img src="../test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg" role="presentation" alt="" />
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -151,8 +157,10 @@ Each [section of content][] of this [document][] starts with a `div` element wit
 		</nav>
 		<main>
 			<div role="heading" aria-level="1">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</div>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -179,8 +187,10 @@ This [document][] is using image as heading, the [accessible name][] of the imag
 					alt="Three Heroes Swear Brotherhood at a Feast in the Peach Garden"
 				/>
 			</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -204,8 +214,10 @@ For the main [section of content][], the first node with a non-empty [accessible
 		</nav>
 		<main>
 			<strong style="font-size: 18pt">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</strong>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -227,8 +239,10 @@ The heading of the main [section of content][] is not [included in the accessibi
 		</nav>
 		<main>
 			<h1 aria-hidden="true">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -254,8 +268,10 @@ The `h1` element at the start of the main [section of content][] has an empty [a
 				src="../test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg"
 				alt="Three Heroes Swear Brotherhood at a Feast in the Peach Garden"
 			/>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -277,8 +293,10 @@ The `h1` element that starts the main [section of content][] is not [visible][] 
 		</nav>
 		<main>
 			<h1 style="position: absolute; top:-999px">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>

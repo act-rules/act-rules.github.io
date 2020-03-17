@@ -72,8 +72,10 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 		</nav>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -101,8 +103,10 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 		</aside>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -131,8 +135,10 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 		</aside>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -157,8 +163,10 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 		</nav>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -182,8 +190,10 @@ There is no [user interface component][] to toggle the navigational [section of 
 		</nav>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -207,8 +217,10 @@ The [user interface component][] to toggle the navigational [section of repeated
 		</nav>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -232,8 +244,10 @@ The [user interface component][] to toggle the navigational [section of repeated
 		</nav>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -258,8 +272,10 @@ The [user interface component][] only toggles the [visibility][visible] of the n
 		</nav>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -283,8 +299,10 @@ The [user interface component][] only toggles the [inclusion in the accessibilit
 		</nav>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>

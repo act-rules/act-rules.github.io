@@ -77,8 +77,10 @@ The complementary [section of repeated content][] starts with a `link` that jump
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -102,8 +104,10 @@ The link to skip the complementary [section of repeated content][] is the first 
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -128,8 +132,10 @@ The link to skip the complementary [section of repeated content][] is located be
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -154,8 +160,10 @@ The link to skip the complementary [section of repeated content][] is not normal
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -180,8 +188,10 @@ The `div` element just before the complementary [section of repeated content][] 
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -205,8 +215,10 @@ The link to skip the complementary [section of repeated content][] is the first 
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -231,8 +243,10 @@ The link to skip the complementary [section of repeated content][] is located be
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -257,8 +271,10 @@ There is no link to skip the complementary [section of repeated content][].
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -283,8 +299,10 @@ The link to skip the complementary [section of repeated content][] is not the la
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -308,8 +326,10 @@ The link to skip the complementary [section of repeated content][] is not the fi
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -334,8 +354,10 @@ The element to skip the complementary [section of repeated content][] does not h
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -359,8 +381,10 @@ The link to skip the complementary [section of repeated content][] is not [inclu
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -384,8 +408,10 @@ The link to skip the complementary [section of repeated content][] is not [visib
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -409,8 +435,10 @@ The element with a [semantic role][] of `link` which skips the complementary [se
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -440,8 +468,10 @@ The link at the start of the complementary [section of repeated content][] skips
 		</nav>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -465,8 +495,10 @@ The link to skip the complementary [section of repeated content][] has non-descr
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity suchceeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>

@@ -62,8 +62,10 @@ This [document][] has a one element with a [semantic role][] of `main`.
 	<body>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -81,19 +83,23 @@ This [document][] has several elements with a role of `main`, at least one of th
 	<body>
 		<div role="main" aria-label="Translation by C. H. Brewitt-Taylor (1925)" aria-hidden="true">
 			<h1>Three Heroes Swear Brotherhood in the Peach Garden</h1>
-			The world under heaven, after a long period of division, tends to unite; after a long period of union, tends to
-			divide.
+			<p>
+				The world under heaven, after a long period of division, tends to unite; after a long period of union, tends to
+				divide.
+			</p>
 		</div>
 
 		<div role="main" aria-label="Translation by Moss Roberts (1976)">
 			<h1>Three Bold Spirits Plight Mutual Faith in the Peach Garden</h1>
-			The empire, long divided, must unite; long united, must divide. Thus it has ever been.
+			<p>The empire, long divided, must unite; long united, must divide. Thus it has ever been.</p>
 		</div>
 
 		<div role="main" aria-label="Translation by Yu Sumei (2014)" aria-hidden="true">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</div>
 	</body>
 </html>
@@ -112,8 +118,10 @@ This [document][] has no element with a role of `main`.
 	</head>
 	<body>
 		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-		time.
+		<p>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</p>
 	</body>
 </html>
 ```
@@ -130,8 +138,10 @@ The `main` landmark is not [included in the accessibility tree][].
 	<body>
 		<main aria-hidden="true">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>

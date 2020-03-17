@@ -57,14 +57,16 @@ function validateRuleFrontmatter({ frontmatter }, metaData) {
 			expect(frontmatter).not.toHaveProperty('input_rules')
 
 			expect(frontmatter).toHaveProperty('input_aspects')
-			expect(Array.isArray(frontmatter.input_aspects)).toBe(true)
-			expect(frontmatter.input_aspects.length > 0).toBe(true)
+			expect(Array.isArray(frontmatter.input_aspects), `input_aspects should be a list`).toBe(true)
+			expect(frontmatter.input_aspects.length > 0, `should have atleast one item in input_aspects`).toBe(true)
+
 			expect(
 				frontmatter.input_aspects.every(aspect => {
 					const isTypeString = typeof aspect === 'string'
 					const isNotMultipleAspects = /\s-\s/.test(aspect) === false // ensure it is not concatantated aspects like `"DOM Tree - CSS Styling"`
 					return isTypeString && isNotMultipleAspects
-				})
+				}),
+				`input_aspects items shoud be of type string and not nested`
 			).toBe(true)
 		})
 	}

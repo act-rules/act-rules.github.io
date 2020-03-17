@@ -18,7 +18,7 @@ Any attribute that starts with `aria-`.
 
 ## Expectation
 
-Each target attribute is defined in [WAI-ARIA Specifications](#wai-aria-specifications).
+Each target attribute is defined in [WAI-ARIA Specifications][].
 
 ## Assumptions
 
@@ -42,7 +42,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-A valid ARIA 1.1 attribute `aria-atomic` is used on element `article`.
+This `article` element has an `aria-atomic` attribute which is defined in [WAI-ARIA Specifications][].
 
 ```html
 <article aria-atomic="true">This is a description of something cool...</article>
@@ -50,7 +50,7 @@ A valid ARIA 1.1 attribute `aria-atomic` is used on element `article`.
 
 #### Passed Example 2
 
-A valid ARIA 1.1 attribute `aria-modal` on element `div` with role `dialog`
+This `div` element with a role of `dialog` has an `aria-modal` attribute which is defined in [WAI-ARIA Specifications][].
 
 ```html
 <div role="dialog" aria-modal="true">Contains modal content...</div>
@@ -58,7 +58,7 @@ A valid ARIA 1.1 attribute `aria-modal` on element `div` with role `dialog`
 
 #### Passed Example 3
 
-A valid ARIA 1.1 attribute `aria-live` on element `div` with role `alert`
+This `div` element with a role of `alert` has an `aria-live` attribute which is defined in [WAI-ARIA Specifications][].
 
 ```html
 <div role="alert" aria-live="assertive">
@@ -68,7 +68,7 @@ A valid ARIA 1.1 attribute `aria-live` on element `div` with role `alert`
 
 #### Passed Example 4
 
-Multiple valid ARIA 1.1 attributes `aria-*` are specified on element `input` with role `spinbutton`
+This `input` element with a role of `spinbutton` has multiple `aria-*` attributes specified which are all defined in [WAI-ARIA Specifications][].
 
 ```html
 <input role="spinbutton" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" type="number" value="25" />
@@ -78,7 +78,7 @@ Multiple valid ARIA 1.1 attributes `aria-*` are specified on element `input` wit
 
 #### Failed Example 1
 
-`aria-not-checked` is not a defined attribute in ARIA 1.1.
+This `li` element with a role of `menuitemcheckbox` has an `aria-*` attribute which is not defined in [WAI-ARIA Specifications][].
 
 ```html
 <li role="menuitemcheckbox" aria-not-checked="true">List Item</li>
@@ -86,7 +86,7 @@ Multiple valid ARIA 1.1 attributes `aria-*` are specified on element `input` wit
 
 #### Failed Example 2
 
-`aria-labelled` is not a defined attribute in ARIA 1.1.
+This `div` element with a role of `searchbox` has an `aria-*` attribute which is not defined in [WAI-ARIA Specifications][].
 
 ```html
 <span id="label">Birthday:</span>
@@ -99,8 +99,10 @@ Multiple valid ARIA 1.1 attributes `aria-*` are specified on element `input` wit
 
 #### Inapplicable Example 1
 
-Element without `aria-*` attribute.
+This `canvas` element does not have an `aria-*` attribute specified.
 
 ```html
 <canvas> </canvas>
 ```
+
+[wai-aria specifications]: #wai-aria-specifications 'Definition of WAI-ARIA specifications'

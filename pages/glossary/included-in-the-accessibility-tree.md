@@ -3,6 +3,8 @@ title: Included in the accessibility tree
 key: included-in-the-accessibility-tree
 unambiguous: true
 objective: true
+input_aspects:
+  - Accessibility tree
 ---
 
 Elements included in the accessibility tree of platform specific accessibility APIs. Elements in the accessibility tree are exposed to assistive technologies, allowing users to interact with the elements in a way that meet the requirements of the individual user.

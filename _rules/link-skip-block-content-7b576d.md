@@ -14,7 +14,7 @@ input_aspects:
   - DOM Tree
   - CSS styling
   - Language
-acknowledgements:
+acknowledgments:
   authors:
     - Jean-Yves Moyen
     - Christina Adams

@@ -17,7 +17,7 @@ input_rules:
   - b40fd1
   - 3e12e1
   - e53727
-acknowledgements:
+acknowledgments:
   authors:
     - Jean-Yves Moyen
   assets:

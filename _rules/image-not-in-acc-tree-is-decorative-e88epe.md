@@ -31,18 +31,18 @@ htmlHintIgnore:
 
 Any `img`, `canvas` or `svg` element that is [visible][] and is not [included in the accessibility tree][], except if one of the following is true:
 
-- **unloaded img**: the element is an `img` and it's [current request][]'s [state][image request state] is not [completely available][]; or
+- **unloaded img**: the element is an `img` and its [current request][]'s [state][image request state] is not [completely available][]; or
 - **ignored svg**: the element is an `svg` with an empty (`""`) [accessible name][] and a [semantic role][] of `graphics-document`; or
 - **ignored canvas**: the element is a `canvas` with an empty (`""`) [accessible name][] and no [explicit semantic role][]; or
 - **named from author**: the element is a [descendant][] in the [flat tree][] of an element that is [named from author][].
 
-**Note**: An example of an image ignored because of "named from author" is when it in a `button` element that uses `aria-label` for its accessible name.
+**Note**: An example of an image ignored because of "named from author" is when the image is a descendant of a `button` element that uses `aria-label` for its accessible name.
 
 ## Expectation
 
 Each test target is [purely decorative][].
 
-**note**: It is relatively common for an informative image such as an icon to be marked up as decorative, if the text alternative is adjacent to the image. This is a [conforming alternative version][] for the image. This fails the rule, but meets [conformance requirement 1 of WCAG 2.1](https://www.w3.org/TR/WCAG21/#cc1).
+**Note**: It is relatively common for an informative image such as an icon to be marked up as decorative, if the text alternative is adjacent to the image. This is a [conforming alternative version][] for the image. This fails the rule but meets [conformance requirement 1 of WCAG 2.1](https://www.w3.org/TR/WCAG21/#cc1).
 
 ## Assumptions
 
@@ -65,7 +65,7 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-This decorative `img` element is ignored by assistive technologies because of the `alt` attribute is empty (`""`).
+This decorative `img` element is ignored by assistive technologies because the `alt` attribute is empty (`""`).
 
 ```html
 Happy new year!<br />
@@ -184,7 +184,7 @@ This `canvas` element which has no [semantic role][] and an empty (`""`) [access
 
 #### Inapplicable Example 1
 
-This `img` is [included in the accessibility tree][] because the `alt` attribute is not empty (`""`).
+This `img` element is [included in the accessibility tree][] and is a non-decorative image because the `alt` attribute is not empty (`""`).
 
 ```html
 <img src="/test-assets/shared/w3c-logo.png" alt="W3C" />
@@ -192,7 +192,7 @@ This `img` is [included in the accessibility tree][] because the `alt` attribute
 
 #### Inapplicable Example 2
 
-This `img` is neither [visible][] nor [included in the accessibility tree][].
+This `img` element is neither [visible][] nor [included in the accessibility tree][].
 
 ```html
 <img src="/test-assets/shared/w3c-logo.png" style="display:none" alt="" />
@@ -200,7 +200,7 @@ This `img` is neither [visible][] nor [included in the accessibility tree][].
 
 #### Inapplicable Example 3
 
-This `img` is not [visible][] because it is positioned off screen.
+This `img` element is not [visible][] because it is positioned off screen.
 
 ```html
 <style>
@@ -214,7 +214,7 @@ This `img` is not [visible][] because it is positioned off screen.
 
 #### Inapplicable Example 4
 
-This `svg` is ignored because it is a child of a link that has provides its [accessible name][].
+This `svg` is ignored because it is a child of a link that provides its [accessible name][].
 
 ```html
 <a href="//example.org" aria-label="SVG star">
@@ -232,7 +232,7 @@ This `svg` is ignored because it is a child of a link that has provides its [acc
 
 #### Inapplicable Example 6
 
-This `canvas` is not [visible][] because it is completely transparent.
+This `canvas` element is not [visible][] because it is completely transparent.
 
 ```html
 <canvas width="200" height="200"></canvas>
@@ -246,7 +246,7 @@ This `canvas` is not [visible][] because it is completely transparent.
 
 #### Inapplicable Example 8
 
-This `img` is [included in the accessibility tree][].
+This `img` element is [visible][] but [included in the accessibility tree][].
 
 **Note**: While it might be better for the PDF icon to be ignored by assistive technologies, because assistive technologies will announce "PDF" twice, the image is not [purely decorative][]. Having assistive technologies ignore it is not required by [Success Criterion 1.1.1 Non-text content][].
 

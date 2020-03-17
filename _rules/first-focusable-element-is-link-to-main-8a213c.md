@@ -35,7 +35,7 @@ The first [focusable][] element within the test target:
 - has a [semantic role][] of `link`; and
 - can be activated by use of keyboard only; and
 - when activated, moves focus to the main [section of content][] of the [document][]; and
-- has an [accessible name][] that communicates that it links to the main [section of content][].
+- has an [accessible name][] that communicates that it links to the [main section of content][].
 
 ## Assumptions
 
@@ -55,13 +55,13 @@ _There are no major accessibility support issues known for this rule._
 
 ## Test Cases
 
-**Note:** Unless specified otherwise, the main [section of content][] of each document is defined by the `main` element, and the complementary [section of content][] (`aside` element) does not include any [focusable][] element not shown explicitly.
+**Note:** Unless specified otherwise, the [main section of content][] of each document is defined by the `main` element, and the complementary [section of content][] (`aside` element) does not include any [focusable][] element not shown explicitly.
 
 ### Passed
 
 #### Passed Example 1
 
-The link to skip the complementary [section of repeated content][] is [visible][], is [included in the accessibility tree][], and when activated moves the focus to the main [section of content][]. Its [accessible name][] (coming from content) communicates that it skips to the main content.
+The link to skip the complementary [section of repeated content][] is [visible][], is [included in the accessibility tree][], and when activated moves the focus to the [main section of content][]. Its [accessible name][] (coming from content) communicates that it skips to the main content.
 
 ```html
 <html lang="en">
@@ -150,7 +150,7 @@ The element to skip the complementary [section of repeated content][] is [visibl
 
 #### Passed Example 4
 
-The link to skip the complementary [section of repeated content][] has an [accessible name][] that communicates that it links to the main [section of content][].
+The link to skip the complementary [section of repeated content][] has an [accessible name][] that communicates that it links to the [main section of content][].
 
 ```html
 <html lang="en">
@@ -208,7 +208,7 @@ Even though it is located after it, the link to skip the complementary [section 
 
 #### Passed Example 6
 
-The first [focusable][] element within this page is the link to the main [section of content][]. The link to W3C is located before in tree order but after in focus order due to the `tabindex` attributes.
+The first [focusable][] element within this page is the link to the [main section of content][]. The link to W3C is located before in tree order but after in focus order due to the `tabindex` attributes.
 
 ```html
 <html lang="en">
@@ -412,7 +412,7 @@ The element to skip the complementary [section of repeated content][] is [visibl
 
 #### Failed Example 7
 
-The link to skip the complementary [section of repeated content][] does not reference a valid `id` attribute and thus when activated will not move focus to the main [section of content][].
+The link to skip the complementary [section of repeated content][] does not reference a valid `id` attribute and thus when activated will not move focus to the [main section of content][].
 
 ```html
 <html lang="en">
@@ -470,7 +470,7 @@ The link to skip the complementary [section of repeated content][] does not have
 
 #### Failed Example 9
 
-The first [focusable][] element within this page is the link to W3C. The link to the main [section of content][] is located before in tree order but after in focus order due to the `tabindex` attributes.
+The first [focusable][] element within this page is the link to W3C. The link to the [main section of content][] is located before in tree order but after in focus order due to the `tabindex` attributes.
 
 ```html
 <html lang="en">
@@ -517,6 +517,7 @@ This [document][] is not an [HTML web page][].
 [focused]: https://html.spec.whatwg.org/#focused 'Definition of focused'
 [html web page]: #web-page-html 'Definition of web page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[main section of content]: #main-section-of-content 'Definition of main section of content'
 [section of content]: #section-of-content 'Definition of section of content'
 [section of repeated content]: #section-of-repeated-content 'Definition of section of repeated content'
 [semantic role]: #semantic-role 'Definition of semantic role'

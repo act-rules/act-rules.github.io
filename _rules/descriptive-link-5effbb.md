@@ -19,7 +19,7 @@ input_aspects:
   - DOM Tree
   - CSS Styling
   - Language
-acknowledgements:
+acknowledgments:
   authors:
     - Carlos Duarte
     - Marie Trudelle

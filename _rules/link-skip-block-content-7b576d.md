@@ -18,6 +18,8 @@ acknowledgements:
   authors:
     - Jean-Yves Moyen
     - Christina Adams
+  assets:
+    - _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014, ISBN 9780804843935)
 ---
 
 ## Applicability
@@ -52,8 +54,6 @@ _There are no major accessibility support issues known for this rule._
 - [CSS Scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
 
 ## Test Cases
-
-**Note:** The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
 
 **Note:** Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`aside` and `main` elements), and the complementary [section of content][] (`aside` element) is a [section of repeated content][] which does not include any [focusable][] element not shown explicitly.
 

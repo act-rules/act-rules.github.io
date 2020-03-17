@@ -11,6 +11,10 @@ input_aspects:
 acknowledgements:
   authors:
     - Jean-Yves Moyen
+  assets:
+    - _Romance of the Three Kingdoms_ by Charles H. Brewitt-Taylor (Tuttle Publishing, 1925, ISBN 9780804834674)
+    - _Three Kingdoms_ by Moss Roberts (Foreign Language Press, 1976, ISBN 7-119-00590-1)
+    - _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014, ISBN 9780804843935)
 ---
 
 ## Applicability
@@ -45,8 +49,6 @@ Having a `main` landmark is sufficient to pass [Success Criterion 2.4.1: Bypass 
 - [The `main` role](https://www.w3.org/TR/wai-aria-1.1/#main)
 
 ## Test Cases
-
-**Note:** Unless specified otherwise, the text of examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
 
 ### Passed
 

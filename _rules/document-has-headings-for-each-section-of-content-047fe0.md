@@ -16,6 +16,9 @@ input_aspects:
 acknowledgements:
   authors:
     - Jean-Yves Moyen
+  assets:
+    - _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014, ISBN 9780804843935)
+    - Image from a Ming Dynasty edition of the Romance of the Three Kingdoms, original kept in the library holdings of Peking University.
 ---
 
 **Note to reviewers:** I am not sure whether this rule maps to [2.4.10: Section Headings](https://www.w3.org/WAI/WCAG21/Understanding/section-headings.html). Because the SC says that "'Heading' is used in its general sense and includes titles and other ways to add a heading to different types of content." So I am not sure that not having element with a role of `heading` at the start of a section of content is enough to fail the SC. What is your opinion?
@@ -53,8 +56,6 @@ Having headings is sufficient to pass [Success Criterion 2.4.1: Bypass blocks][s
 - [CSS Scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
 
 ## Test Cases
-
-**Note:** The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014). The image is public domain, excerpt from a Ming Dynasty edition of the Romance of the Three Kingdoms, the original is kept in the library holdings of Peking University.
 
 **Note:** Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`main` and `nav` elements).
 

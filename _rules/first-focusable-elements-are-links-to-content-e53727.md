@@ -18,6 +18,8 @@ acknowledgements:
   authors:
     - Jean-Yves Moyen
     - Christina Adams
+  assets:
+    - _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014, ISBN 9780804843935)
 ---
 
 ## Applicability
@@ -64,8 +66,6 @@ _There are no major accessibility support issues known for this rule._
 - [G124: Adding links at the top of the page to each area of the content][tech g124]
 
 ## Test Cases
-
-**Note:** The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
 
 **Note:** Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`aside`, `header` and `main` elements), and neither the banner nor the complementary [sections of content][section of content] (`header` and `aside` elements) include any [focusable][] element not shown explicitly.
 

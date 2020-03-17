@@ -20,6 +20,8 @@ input_rules:
 acknowledgements:
   authors:
     - Jean-Yves Moyen
+  assets:
+    - _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014, ISBN 9780804843935)
 ---
 
 ## Applicability
@@ -61,8 +63,6 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
   - [SCR28: Using an expandable and collapsible menu to bypass block of content](https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR28)
 
 ## Test Cases
-
-**Note:** The text of the examples is from the translation of the first Chapter of _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014).
 
 **Note:** Unless specified otherwise, the [sections of content][] of each document are defined by the [landmarks][landmark]; the banner, complementary and navigational [sections of content][] (`header`, `aside` and `nav` elements) are [sections of repeated content][]; and the banner and complementary [sections of content][] do not include any [focusable][] element not shown explicitly.
 

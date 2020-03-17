@@ -1,11 +1,12 @@
 const describeRule = require('../test-utils/describe-rule')
 const describePage = require('../test-utils/describe-page')
+const getMarkdownAstNodesOfType = require('../utils/get-markdown-ast-nodes-of-type')
 
 describe('frontmatter', () => {
 	/**
 	 * Rules
 	 */
-	// describeRule('Rules', validateRuleFrontmatter)
+	describeRule('Rules', validateRuleFrontmatter)
 
 	/**
 	 * Other pages
@@ -53,8 +54,20 @@ function validateRuleFrontmatter({ frontmatter }, metaData) {
 	}
 	if (rule_type.toLowerCase() === `atomic`) {
 		test('has optional property `input_aspects` when `rule_type = atomic`', () => {
-			expect(frontmatter).toHaveProperty('input_aspects')
 			expect(frontmatter).not.toHaveProperty('input_rules')
+
+			expect(frontmatter).toHaveProperty('input_aspects')
+			expect(Array.isArray(frontmatter.input_aspects), `input_aspects should be a list`).toBe(true)
+			expect(frontmatter.input_aspects.length > 0, `should have atleast one item in input_aspects`).toBe(true)
+
+			expect(
+				frontmatter.input_aspects.every(aspect => {
+					const isTypeString = typeof aspect === 'string'
+					const isNotMultipleAspects = /\s-\s/.test(aspect) === false // ensure it is not concatantated aspects like `"DOM Tree - CSS Styling"`
+					return isTypeString && isNotMultipleAspects
+				}),
+				`input_aspects items shoud be of type string and not nested`
+			).toBe(true)
 		})
 	}
 

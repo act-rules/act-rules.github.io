@@ -17,7 +17,7 @@ accessibility_requirements:
     inapplicable: satisfied
 input_aspects:
   - DOM Tree
-acknowledgements:
+acknowledgments:
   authors:
     - Bryn Anderson
     - Anne Thyme Nørregaard

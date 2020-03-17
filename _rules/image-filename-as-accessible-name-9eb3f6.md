@@ -24,7 +24,7 @@ input_aspects:
   - DOM Tree
   - CSS Styling
   - Language
-acknowledgements:
+acknowledgments:
   authors:
     - Bryn Anderson
 ---

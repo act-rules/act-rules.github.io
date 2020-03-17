@@ -13,16 +13,16 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Bryn Anderson
 ---
 
 ## Applicability
 
-The rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namespace with an [explicit semantic role](#explicit-role) of either `img`, `graphics-document`, `graphics-symbol`, that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+The rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namespace with an [explicit semantic role][explicit role] of either `img`, `graphics-document`, `graphics-symbol`, that is [included in the accessibility tree][].
 
-**Note:** The [SVG Accessibility API Mappings](https://www.w3.org/TR/svg-aam-1.0/#include_elements) specifies that many elements in the SVG namespace are purely presentational and should not be included in the accessibility tree unless indicated otherwise through the use of text alternative content, an explicit WAI ARIA role, or a valid `tabindex` attribute.
+**Note:** The [SVG Accessibility API Mappings, Section 5.1.2 Including Elements in the Accessibility Tree](https://www.w3.org/TR/svg-aam-1.0/#include_elements) specifies that many elements in the SVG namespace are purely presentational and should not be included in the accessibility tree unless indicated otherwise through the use of text alternative content, an explicit WAI ARIA role, or a valid `tabindex` attribute.
 
 ## Expectation
 
@@ -36,18 +36,18 @@ This rule assumes that the presence of one of the roles outlined in the applicab
 
 ## Accessibility Support
 
-The [HTML Accessibility API Mappings](https://www.w3.org/TR/html-aam-1.0/#html-element-role-mappings) specify that the `<svg>` element has an implicit role of `graphics-document`. However browser support for the `graphics-document` role and the [SVG Accessibility API Mappings](https://www.w3.org/TR/svg-aam-1.0) is inconsistent.
+The [HTML Accessibility API Mappings](https://www.w3.org/TR/html-aam-1.0/#html-element-role-mappings) specify that the `<svg>` element has an implicit role of `graphics-document`. However browser support for the `graphics-document` role and the [SVG Accessibility API Mappings][] is inconsistent.
 
-This rule is limited to the explicit use of roles, as a clear indication that content should convey meaning, until the [SVG Accessibility API Mappings](https://www.w3.org/TR/svg-aam-1.0) is more stable and browser support is more consistent.
+This rule is limited to the explicit use of roles, as a clear indication that content should convey meaning, until the [SVG Accessibility API Mappings][] is more stable and browser support is more consistent.
 
 Browser and assistive technology support for SVG `<title>` and `<desc>` elements is currently inconsistent. Using WAI ARIA in combination with the `img` role for non-decorative `<svg>` elements significantly improves accessibility browser support.
 
-Until browser support for the [SVG Accessibility API Mappings](https://www.w3.org/TR/svg-aam-1.0) is more consistent it is recommended to explicitly remove decorative <svg> elements from the accessibility tree.
+Until browser support for the [SVG Accessibility API Mappings][] is more consistent it is recommended to explicitly remove decorative <svg> elements from the accessibility tree.
 
 ## Background
 
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
-- [SVG Accessibility API Mappings (working draft)](https://www.w3.org/TR/svg-aam-1.0)
+- [SVG Accessibility API Mappings (working draft)][svg accessibility api mappings]
 - [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0/)
 - [ARIA4: Using a WAI-ARIA role to expose the role of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA4)
 - [ARIA6: Using aria-label to provide labels for objects](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA6)
@@ -59,7 +59,7 @@ Until browser support for the [SVG Accessibility API Mappings](https://www.w3.or
 
 #### Passed Example 1
 
-The `svg` element has an explicit role of `img` and an [accessible name][] from the `title` element that is not empty.
+This `svg` element has an [explicit role][] of `img` and an [accessible name][] from the `title` element that is not empty.
 
 ```html
 <p>How many circles are there?</p>
@@ -71,7 +71,7 @@ The `svg` element has an explicit role of `img` and an [accessible name][] from 
 
 #### Passed Example 2
 
-The `circle` element has an explicit role of `graphics-symbol` and an [accessible name][] from the `aria-label` attribute that is not empty.
+This `circle` element has an [explicit role][] of `graphics-symbol` and an [accessible name][] from the `aria-label` attribute that is not empty.
 
 ```html
 <p>How many circles are there?</p>
@@ -91,7 +91,7 @@ The `circle` element has an explicit role of `graphics-symbol` and an [accessibl
 
 #### Passed Example 3
 
-The `svg` element has an explicit role of `graphics-document` and an [accessible name][] from the `title` element that is not empty.
+This `svg` element has an [explicit role][] of `graphics-document` and an [accessible name][] from the `title` element that is not empty.
 
 ```html
 <p>How many circles are there?</p>
@@ -105,7 +105,7 @@ The `svg` element has an explicit role of `graphics-document` and an [accessible
 
 #### Failed Example 1
 
-The `svg` element has an explicit role of `img` but has no [accessible name][].
+This `svg` element has an [explicit role][] of `img` but has no [accessible name][].
 
 ```html
 <p>How many circles are there?</p>
@@ -116,7 +116,7 @@ The `svg` element has an explicit role of `img` but has no [accessible name][].
 
 #### Failed Example 2
 
-The `svg` element has an explicit role of `img`, is included in the accessibility tree, but it has no [accessible name][] because the `title` element is empty.
+This `svg` element has an [explicit role][] of `img`, is included in the accessibility tree, but it has no [accessible name][] because the `title` element is empty.
 
 ```html
 <p>How many circles are there?</p>
@@ -128,7 +128,7 @@ The `svg` element has an explicit role of `img`, is included in the accessibilit
 
 #### Failed Example 3
 
-The `circle` element has an explicit role of `graphics-symbol` but does not have an [accessible name][].
+This `circle` element has an [explicit role][] of `graphics-symbol` but has no [accessible name][].
 
 ```html
 <p>How many circles are there?</p>
@@ -141,7 +141,7 @@ The `circle` element has an explicit role of `graphics-symbol` but does not have
 
 #### Inapplicable Example 1
 
-Both the `svg` and `circle` elements do not have an explicit role.
+Neither the `svg` element nor the `circle` element has any of the three [explicit role][] of  `img`, `graphics-document`, `graphics-symbol`.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg">
@@ -151,7 +151,7 @@ Both the `svg` and `circle` elements do not have an explicit role.
 
 #### Inapplicable Example 2
 
-The `svg` element has an explicit role of `img` but the `aria-hidden` attribute removes the element and its descendants from the accessibility tree.
+This `svg` element and its descendants are not [included in the accessibility tree][] because of the `aria-hidden` attribute.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
@@ -161,7 +161,7 @@ The `svg` element has an explicit role of `img` but the `aria-hidden` attribute 
 
 #### Inapplicable Example 3
 
-The `circle` element has an explicit role that is neither `img`, `graphics-document` or `graphics-symbol`.
+This `circle` element has an [explicit role][] that is neither `img`, `graphics-document` nor `graphics-symbol`.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg">
@@ -170,3 +170,6 @@ The `circle` element has an explicit role that is neither `img`, `graphics-docum
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
+[explicit role]: #explicit-role 'Definition of explicit role'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the accessibility tree'
+[svg accessibility api mappings]: https://www.w3.org/TR/svg-aam-1.0

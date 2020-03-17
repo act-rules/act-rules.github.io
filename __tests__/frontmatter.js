@@ -61,7 +61,7 @@ function validateRuleFrontmatter({ frontmatter }, metaData) {
 			expect(frontmatter.input_aspects.length > 0).toBe(true)
 			expect(
 				frontmatter.input_aspects.every(aspect => {
-					const isTypeString = Object.prototype.toString.call(aspect) === '[object String]'
+					const isTypeString = typeof aspect === 'string'
 					const isNotMultipleAspects = /\s-\s/.test(aspect) === false // ensure it is not concatantated aspects like `"DOM Tree - CSS Styling"`
 					return isTypeString && isNotMultipleAspects
 				})

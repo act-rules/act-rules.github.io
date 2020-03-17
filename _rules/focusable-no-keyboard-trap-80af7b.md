@@ -18,7 +18,7 @@ accessibility_requirements:
 input_rules:
   - a1b64e
   - ebe86a
-acknowledgements:
+acknowledgments:
   authors:
     - Geir Sindre Fossøy
     - Dagfinn Rømen

@@ -23,7 +23,7 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - Language
-acknowledgements:
+acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Corbb O'Connor

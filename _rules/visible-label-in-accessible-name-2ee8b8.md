@@ -13,7 +13,7 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Bryn Anderson
@@ -57,7 +57,7 @@ There are no major accessibility support issues known for this rule.
 This link has [visible][] text that, ignoring trailing whitespace, matches the [accessible name][].
 
 ```html
-<a href="//w3.org" aria-label="W3C Website ">W3C Website</a>
+<a href="https://act-rules.github.io/" aria-label="ACT rules ">ACT rules</a>
 ```
 
 #### Passed Example 2
@@ -65,7 +65,7 @@ This link has [visible][] text that, ignoring trailing whitespace, matches the [
 This link has [visible][] text that, ignoring case, matches the [accessible name][].
 
 ```html
-<div role="link" aria-label="Next Page">next page</div>
+<a href="https://act-rules.github.io/" aria-label="act rules ">ACT rules</a>
 ```
 
 #### Passed Example 3
@@ -83,7 +83,7 @@ This button has [visible][] text that is included in the [accessible name][].
 This link has [visible][] text that is different from the [accessible name][].
 
 ```html
-<div role="link" aria-label="OK">Next</div>
+<a href="https://act-rules.github.io/" aria-label="WCAG">ACT rules</a>
 ```
 
 #### Failed Example 2

@@ -12,7 +12,7 @@ Element L is a _programmatic label_ of target element T if either:
 
 **Note**: a given element may have more than one programmatic label.
 
-#### Examples of programmatic labels
+#### Examples
 
 The `input` element is a [labeled control][] of the `label` element (implicit label). Therefore the `label` element is a programmatic label of the `input` element.
 

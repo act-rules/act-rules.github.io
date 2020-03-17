@@ -11,7 +11,7 @@ The general rules for when elements are included in the accessibility tree are d
 
 **Note:** Users of assistive technologies might still be able to interact with elements that are not included in the accessibility tree. An example of this is a [focusable](#focusable) element with an `aria-hidden` attribute with a value of `true`. Such an element could still be interacted with using sequential keyboard navigation regardless of the assistive technologies used, even though the element would not be included in the accessibility tree.
 
-#### Examples of inclusion in the accessibility tree
+#### Examples
 
 **Note:** The examples presented here are non-normative and not testable. They serve to illustrate some common pitfalls about the definition and to help implementers of ACT rules understand it.
 

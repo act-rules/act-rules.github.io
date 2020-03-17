@@ -26,15 +26,16 @@ This rule applies to any [HTML web page][].
 
 ## Expectations
 
-For each [section of repeated content][] in the test target, there exists some [user interface component][] which:
+For each [section of repeated content][] in the test target, there exists some interactive element which:
 
 - is [visible][]; and
 - is [included in the accessibility tree][]; and
-- allows to toggle both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of this [section of repeated content][].
+- can be activated; and
+- when activated, allows to toggle both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of this [section of repeated content][].
 
-**Note:** the same [user interface component][] may be used for several or even all the [sections of repeated content][section of repeated content].
+**Note:** the same element may be used for several or even all the [sections of repeated content][section of repeated content].
 
-**Note:** [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does not require the [accessible name][] of the [user interface component][] to be descriptive. However, having a non-descriptive [accessible name][] is likely a failure of [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value).
+**Note:** [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does not require the [accessible name][] of the [user interface component][] (interactive element) to be descriptive. However, having a non-descriptive [accessible name][] is likely a failure of [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value).
 
 ## Assumptions
 
@@ -114,7 +115,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 
 #### Passed Example 3
 
-The [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of both the complementary and the navigational [sections of repeated content][section of repeated content] can be toggled on and off, each of them by a different [user interface component][].
+The [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of both the complementary and the navigational [sections of repeated content][section of repeated content] can be toggled on and off, each of them by a different element.
 
 ```html
 <html>
@@ -176,7 +177,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 
 #### Failed Example 1
 
-There is no [user interface component][] to toggle the navigational [section of repeated content][].
+There is no element to toggle the navigational [section of repeated content][].
 
 ```html
 <html>
@@ -201,7 +202,7 @@ There is no [user interface component][] to toggle the navigational [section of 
 
 #### Failed Example 2
 
-The [user interface component][] to toggle the navigational [section of repeated content][] is not [visible][].
+The element to toggle the navigational [section of repeated content][] is not [visible][].
 
 ```html
 <html>
@@ -228,7 +229,7 @@ The [user interface component][] to toggle the navigational [section of repeated
 
 #### Failed Example 3
 
-The [user interface component][] to toggle the navigational [section of repeated content][] is not [included in the accessibility tree][].
+The element to toggle the navigational [section of repeated content][] is not [included in the accessibility tree][].
 
 ```html
 <html>
@@ -255,7 +256,7 @@ The [user interface component][] to toggle the navigational [section of repeated
 
 #### Failed Example 4
 
-The [user interface component][] only toggles the [visibility][visible] of the navigational [section of repeated content][], not its [inclusion in the accessibility tree][included in the accessibility tree].
+The element only toggles the [visibility][visible] of the navigational [section of repeated content][], not its [inclusion in the accessibility tree][included in the accessibility tree].
 
 ```html
 <html>
@@ -283,7 +284,7 @@ The [user interface component][] only toggles the [visibility][visible] of the n
 
 #### Failed Example 5
 
-The [user interface component][] only toggles the [inclusion in the accessibility tree][included in the accessibility tree] of the navigational [section of repeated content][], not its [visibility][visible].
+The element only toggles the [inclusion in the accessibility tree][included in the accessibility tree] of the navigational [section of repeated content][], not its [visibility][visible].
 
 ```html
 <html>

@@ -13,7 +13,7 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Jey Nandakumar
     - Wilco Fiers
@@ -29,7 +29,7 @@ The rule applies to `iframe` elements that are [included in the accessibility tr
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
-**Note:** Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
+**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
 
 ## Assumptions
 
@@ -37,7 +37,8 @@ If an `iframe` is not perceived by the user as a single control, it does not qua
 
 ## Accessibility Support
 
-Some browsers include `iframe` elements in the [sequential focus navigation][]. This ensures that `iframe` elements can always be scrolled using the keyboard. When an `iframe` is removed from the accessibility tree, this rule is still applicable for those browsers, unless the `iframe` is explicitly removed from [sequential focus navigation][] (by having the `tabindex` attribute set to a negative value).
+- Some browsers include `iframe` elements in the [sequential focus navigation][]. This ensures that `iframe` elements can always be scrolled using the keyboard. When an `iframe` is removed from the accessibility tree, this rule is still applicable for those browsers, unless the `iframe` is explicitly removed from [sequential focus navigation][] (by having the `tabindex` attribute set to a negative value).
+- Certain assistive technologies can be set up to ignore the title attribute, which means that to some users the title attribute will not act as an [accessible name][].
 
 ## Background
 
@@ -72,14 +73,6 @@ Usage of `aria-labelledby` attribute to describe the `iframe` content.
 ```html
 <div id="frame-title-helper">Watch highlights of the Worldcup</div>
 <iframe aria-labelledby="frame-title-helper" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
-```
-
-#### Passed Example 4
-
-[Accessible name][] is not empty.
-
-```html
-<iframe title=":-)" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
 ### Failed

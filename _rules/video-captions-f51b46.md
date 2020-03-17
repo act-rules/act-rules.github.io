@@ -10,7 +10,7 @@ input_aspects:
   - CSS Styling
   - Audio output
   - Visual output
-acknowledgements:
+acknowledgments:
   authors:
     - Wilco Fiers
     - Brian Bors

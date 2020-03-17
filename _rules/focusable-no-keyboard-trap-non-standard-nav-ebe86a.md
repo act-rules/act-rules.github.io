@@ -8,7 +8,7 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Dagfinn Rømen
     - Geir Sindre Fossøy

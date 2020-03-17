@@ -18,7 +18,7 @@ accessibility_requirements:
 input_rules:
   - 2eb176
   - afb423
-acknowledgements:
+acknowledgments:
   authors:
     - Wilco Fiers
     - Brian Bors

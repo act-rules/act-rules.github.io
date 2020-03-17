@@ -5120,10 +5120,10 @@
       }
     },
     {
-      "testcaseId": "257e40b91efb7b60874f02320fd0768f093fe1be",
+      "testcaseId": "1ee82af93bb5a923492eb7bdb75ae8311f8ce65a",
       "testcaseTitle": "Failed Example 4",
-      "url": "https://act-rules.github.io/testcases/e086e5/257e40b91efb7b60874f02320fd0768f093fe1be.html",
-      "relativePath": "testcases/e086e5/257e40b91efb7b60874f02320fd0768f093fe1be.html",
+      "url": "https://act-rules.github.io/testcases/e086e5/1ee82af93bb5a923492eb7bdb75ae8311f8ce65a.html",
+      "relativePath": "testcases/e086e5/1ee82af93bb5a923492eb7bdb75ae8311f8ce65a.html",
       "expected": "failed",
       "ruleId": "e086e5",
       "ruleName": "Form control has accessible name",
@@ -14430,6 +14430,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G208": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -14445,6 +14451,12 @@
       "ruleAccessibilityRequirements": {
         "wcag21:2.5.3": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G208": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -14466,6 +14478,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G208": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -14481,6 +14499,12 @@
       "ruleAccessibilityRequirements": {
         "wcag21:2.5.3": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G208": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -14502,6 +14526,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G208": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -14517,6 +14547,12 @@
       "ruleAccessibilityRequirements": {
         "wcag21:2.5.3": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G208": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -14538,6 +14574,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G208": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -14553,6 +14595,12 @@
       "ruleAccessibilityRequirements": {
         "wcag21:2.5.3": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G208": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -14574,6 +14622,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G208": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -14592,6 +14646,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G208": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -14607,6 +14667,12 @@
       "ruleAccessibilityRequirements": {
         "wcag21:2.5.3": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G208": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"

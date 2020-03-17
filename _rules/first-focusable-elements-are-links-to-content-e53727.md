@@ -8,7 +8,7 @@ accessibility_requirements:
   wcag-technique:G124: # Adding links at the top of the page to each area of the content
     forConformance: false
     failed: not satisfied
-    passed: satisfied
+    passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
@@ -43,7 +43,7 @@ Within the test target, there is an [initial segment][] of the [focusable][] ele
 
 ## Expectation 2
 
-Each [section of content][] in the [document][] is the target of exactly one link from the [initial segment][] of [focusable][] elements found by Expectation 1.
+Each [section of content][] in the [document][] that is preceded (in tree order) by at least one [section of repeated content][] is the target of exactly one link from the [initial segment][] of [focusable][] elements found by Expectation 1.
 
 **Note:** While Expectation 1 can always be passed by an empty [initial segment][] (i.e. a set of zero [focusable][] elements), Expectation 2 forces that [initial segment][] to have one or more elements (unless the page itself is empty and has zero [section of content][]…)
 
@@ -51,6 +51,7 @@ Each [section of content][] in the [document][] is the target of exactly one lin
 
 - This rule assumes that description of the link is provided through its [accessible name][].
 - This rule assumes that that [Technique G124: Adding links at the top of the page to each area of the content][tech g124] requires the that the link can be activated by use of keyboard only (in order to be useful for keyboard users).
+- This rule assumes that [sections of repeated content][section of repeated content] have already been identified within the test target, for example by comparison with other test targets within the same website, or any other means.
 - This rule assumes that any global dismissible information that only appears once per site has already been acknowledged and is not displayed any more.
 
 **Note:** The aim of such links is to be able to skip [sections of repeated content][section of repeated content] (headers, navigation bar, ...) when viewing several pages of the same site. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually by viewing and accepting cookies policy). Since that content is _not_ repeated (is it only shown once for the full site), it is not a problem to have it, and it may appear on any page of the site (depending where the user first comes in).

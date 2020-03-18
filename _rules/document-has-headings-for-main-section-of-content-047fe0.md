@@ -214,7 +214,7 @@ This [document][] is using image as heading, the [accessible name][] of the imag
 </html>
 ```
 
-#### Failed Example 4
+#### Passed Example 7
 
 The [main section of content][] of this [document][] starts with a `h1` heading, even though it is not [visible][] (because it is off screen).
 

@@ -3,6 +3,9 @@ title: Visible
 key: visible
 unambiguous: true
 objective: true
+input_aspects:
+  - CSS styling
+  - DOM tree
 ---
 
 Content perceivable through sight.
@@ -11,7 +14,7 @@ Content is considered _visible_ if making it fully transparent would result in a
 
 [Content is defined in WCAG](https://www.w3.org/TR/WCAG21/#dfn-content).
 
-#### Examples of visible and invisible elements
+#### Examples
 
 **Note:** The examples presented here are non-normative and not testable. They serve to illustrate some common pitfalls about the definition and to help the implementers of ACT rules understand it.
 

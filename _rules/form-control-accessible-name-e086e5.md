@@ -12,7 +12,7 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-acknowledgements:
+acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Bryn Anderson
@@ -141,10 +141,11 @@ No [accessible name][].
 
 #### Failed Example 4
 
-The label does not exist.
+`aria-labelledby` with empty text string.
 
 ```html
-<div aria-labelledby="non-existing" role="combobox">England</div>
+<div id="country"></div>
+<div aria-labelledby="country" role="combobox">England</div>
 ```
 
 #### Failed Example 5

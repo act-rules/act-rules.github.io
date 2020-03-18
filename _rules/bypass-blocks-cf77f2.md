@@ -32,7 +32,7 @@ This rule applies to any [HTML web page][].
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [Document has headings for each section of content][]; or
+- [Document has heading for main section of content][]; or
 - [Document has a main landmark][]; or
 - [Link for skipping block of content][]; or
 - [Block of content is expandable and collapsible][]; or
@@ -70,9 +70,7 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 
 #### Passed Example 1
 
-This [HTML web page][] is passing rule [document has headings for each section of content][].
-
-**Note:** In this [document][], the [sections of content][] are identified by the level 1 heading at their start.
+This [HTML web page][] is passing rule [Document has heading for main section of content][].
 
 ```html
 <html>
@@ -80,18 +78,16 @@ This [HTML web page][] is passing rule [document has headings for each section o
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<!-- Navigational section of content starts here -->
-		<h1>Contents</h1>
-		<!-- list of links to each chapter -->
-		<!-- Navigational section of content ends here -->
-
-		<!-- Main section of content starts here -->
-		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-		<p>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
-		</p>
-		<!-- Main section of content ends here -->
+		<nav>
+			<!-- list of links to each chapter -->
+		</nav>
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
 	</body>
 </html>
 ```
@@ -280,7 +276,7 @@ This [document][] is not an [HTML web page][].
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [document element]: https://dom.spec.whatwg.org/#document-element 'Definition of document element'
 [document has a main landmark]: https://act-rules.github.io/rules/b40fd1 'Rule Document has a main landmark'
-[document has headings for each section of content]: https://act-rules.github.io/rules/047fe0 'Rule Document has headings for each section of content'
+[document has heading for main section of content]: https://act-rules.github.io/rules/047fe0 'Rule Document has heading for main section of content'
 [first focusable elements are links to sections of content]: https://act-rules.github.io/rules/e53727 'Rule First focusable elements are links to sections of content'
 [first focusable element is link to main content]: https://act-rules.github.io/rules/8a213c 'Rule First focusable element is link to main content'
 [focusable]: #focusable 'Definition of focusable'

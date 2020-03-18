@@ -20,7 +20,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to each [`meta`][meta] element with a `name` attribute whose value is a [case-insensitive][] match for [`viewport`][viewport] and has a [`content`][content] attribute.
+The rule applies to each `meta` element with a `name` attribute whose value is a [case-insensitive][] match for [`viewport`][viewport] and has a [`content`][content] attribute.
 
 ## Expectation
 

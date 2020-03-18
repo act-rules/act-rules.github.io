@@ -26,8 +26,8 @@ The rule applies to each `meta` element with a `name` attribute whose value is a
 
 For each test target, the [`content`][content] attribute, whose value is mapped to a list of property/value pairs in a user-agent specific manner, does not:
 
-- specify the property [`user-scalable`][user-scalable] with a value of `no`; nor
-- specify the property [`maximum-scale`][maximum-scale] with a value of less than 2.
+- specify the property `user-scalable` with a value of `no`; nor
+- specify the property `maximum-scale` with a value of less than 2.
 
 ## Assumptions
 

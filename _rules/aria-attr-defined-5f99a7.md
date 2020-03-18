@@ -86,7 +86,7 @@ This `li` element with a role of `menuitemcheckbox` has an `aria-*` attribute wh
 
 #### Failed Example 2
 
-This `div` element with a role of `searchbox` has an `aria-*` attribute which is not defined in [WAI-ARIA Specifications][].
+This `div` element with a role of `searchbox` has an `aria-*` attribute (`aria-labelled`) which is not defined in [WAI-ARIA Specifications][].
 
 ```html
 <span id="label">Birthday:</span>

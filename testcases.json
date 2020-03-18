@@ -4153,6 +4153,30 @@
       }
     },
     {
+      "testcaseId": "e0a8e368d7aba4e94771903d5e994766f6548348",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/de46e4/e0a8e368d7aba4e94771903d5e994766f6548348.html",
+      "relativePath": "testcases/de46e4/e0a8e368d7aba4e94771903d5e994766f6548348.html",
+      "expected": "failed",
+      "ruleId": "de46e4",
+      "ruleName": "Element within `body` has valid `lang` attribute",
+      "rulePage": "https://act-rules.github.io/rules/de46e4",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H58": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
       "testcaseId": "432c0b405c115c1bbf8819a8a9a7b58eeb62a289",
       "testcaseTitle": "Inapplicable Example 1",
       "url": "https://act-rules.github.io/testcases/de46e4/432c0b405c115c1bbf8819a8a9a7b58eeb62a289.html",
@@ -4181,30 +4205,6 @@
       "testcaseTitle": "Inapplicable Example 2",
       "url": "https://act-rules.github.io/testcases/de46e4/cd3a730e7cee34f8be352285d57c9f0a588c2b8d.html",
       "relativePath": "testcases/de46e4/cd3a730e7cee34f8be352285d57c9f0a588c2b8d.html",
-      "expected": "inapplicable",
-      "ruleId": "de46e4",
-      "ruleName": "Element within `body` has valid `lang` attribute",
-      "rulePage": "https://act-rules.github.io/rules/de46e4",
-      "ruleAccessibilityRequirements": {
-        "wcag20:3.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H58": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "e0a8e368d7aba4e94771903d5e994766f6548348",
-      "testcaseTitle": "Inapplicable Example 3",
-      "url": "https://act-rules.github.io/testcases/de46e4/e0a8e368d7aba4e94771903d5e994766f6548348.html",
-      "relativePath": "testcases/de46e4/e0a8e368d7aba4e94771903d5e994766f6548348.html",
       "expected": "inapplicable",
       "ruleId": "de46e4",
       "ruleName": "Element within `body` has valid `lang` attribute",

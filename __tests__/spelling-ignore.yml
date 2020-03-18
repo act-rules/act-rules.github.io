@@ -14,6 +14,8 @@
 - svg # `aria-query` dom tags does not list `svg`
 - xhtml
 - DOCTYPE
+- iFrame # used to demonstrate bad spelling
+- feImage
 
 # Domain-specific words, Definitions & other allowed terms
 - URI
@@ -115,13 +117,15 @@
 - columnheader
 
 # Unsure why the dictionary does not have these words
+- programmatically
+- Programmatically
+- personalization
 - Autofill
 - dismissible
 - implementers
 - Implementers
-- personalization
-- programmatically
-- Programmatically
+- backtick
+- camelCase
 
 # Parts of Unicode
 - 000A

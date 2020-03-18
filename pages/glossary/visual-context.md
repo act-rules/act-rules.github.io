@@ -3,6 +3,9 @@ title: Visual Context
 key: visual-context
 unambiguous: true
 objective: false
+input_aspects:
+  - CSS styling
+  - DOM tree
 ---
 
 The _visual context_ of a node is everything that is visually or logically located near it when the [document](https://dom.spec.whatwg.org/#concept-document) containing it is rendered. Only [visible](#visible) information may be part of the visual context.

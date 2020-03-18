@@ -20,18 +20,18 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to each `meta` element with a `name` attribute whose value is a [case-insensitive][] match for [`viewport`][viewport] and has a [`content`][content] attribute.
+The rule applies to each `meta` element with a `name` attribute whose value is a [case-insensitive][] match for `viewport` and has a `content` attribute.
 
 ## Expectation
 
-For each test target, the [`content`][content] attribute, whose value is mapped to a list of property/value pairs in a user-agent specific manner, does not:
+For each test target, the `content` attribute, whose value is mapped to a list of property/value pairs in a user-agent specific manner, does not:
 
 - specify the property `user-scalable` with a value of `no`; nor
 - specify the property `maximum-scale` with a value of less than 2.
 
 ## Assumptions
 
-- The [page][] has [visible][] [content][web content].
+- The [page][] has [visible][] [content][].
 
 ## Accessibility Support
 
@@ -50,7 +50,7 @@ Desktop browsers ignore the viewport `meta` element, and most modern mobile brow
 
 #### Passed Example 1
 
-This `meta` element with a `name="viewport"` and `content` attributes does not specify the `maximum-scale` and `user-scalable` values.
+This viewport `meta` element does not prevent user scaling because it does not specify the `maximum-scale` and `user-scalable` values.
 
 ```html
 <html>
@@ -68,7 +68,7 @@ This `meta` element with a `name="viewport"` and `content` attributes does not s
 
 #### Passed Example 2
 
-This `meta` element with a `name="viewport"` and `content` attributes specifies `user-scalable=yes` and does not specify the `maximum-scale` value.
+This viewport `meta` element does not prevent user scaling because it has `user-scalable` set to `yes`.
 
 ```html
 <html>
@@ -86,7 +86,7 @@ This `meta` element with a `name="viewport"` and `content` attributes specifies 
 
 #### Passed Example 3
 
-This `meta` element with a `name="viewport"` and `content` attributes specifies `maximum-scale=6.0` and does not specify the `user-scalable` value.
+This viewport `meta` element allows users to scale content up to 600% because it has `maximum-scale` set to 6.0.
 
 ```html
 <html>
@@ -104,7 +104,7 @@ This `meta` element with a `name="viewport"` and `content` attributes specifies 
 
 #### Passed Example 4
 
-This `meta` element with a `name="viewport"` attribute and an empty `content` attribute does not specify the `maximum-scale` and `user-scalable` values.
+This viewport `meta` element does not prevent user scaling because it does not specify the `maximum-scale` and `user-scalable` values.
 
 ```html
 <html>
@@ -122,7 +122,7 @@ This `meta` element with a `name="viewport"` attribute and an empty `content` at
 
 #### Passed Example 5
 
-This `meta` element with a `name="viewport"` and `content` attributes specifies `maximum-scale=-1` which results in this value being dropped.
+This viewport `meta` element does not prevent user scaling because it has `maximum-scale` set to -1 which results in this value being dropped.
 
 ```html
 <html>
@@ -142,7 +142,7 @@ This `meta` element with a `name="viewport"` and `content` attributes specifies 
 
 #### Failed Example 1
 
-This `meta` element with a `name="viewport"` and `content` attributes specifies `user-scalable=no`.
+This viewport `meta` element prevents user scaling because it has `user-scalable` set to `no`.
 
 ```html
 <html>
@@ -160,7 +160,7 @@ This `meta` element with a `name="viewport"` and `content` attributes specifies 
 
 #### Failed Example 2
 
-This `meta` element with a `name="viewport"` and `content` attributes specifies `maximum-scale=1.5`.
+This viewport `meta` element prevents users to scale content up to 200% because it has `maximum-scale` set to 1.5.
 
 ```html
 <html>
@@ -178,7 +178,7 @@ This `meta` element with a `name="viewport"` and `content` attributes specifies 
 
 #### Failed Example 3
 
-This `meta` element with a `name="viewport"` and `content` attributes specifies `maximum-scale=1.0`.
+This viewport `meta` element prevents users to scale content up to 200% because it has `maximum-scale` set to 1.0.
 
 ```html
 <html>
@@ -196,7 +196,7 @@ This `meta` element with a `name="viewport"` and `content` attributes specifies 
 
 #### Failed Example 4
 
-This `meta` element with a `name="viewport"` and `content` attributes specifies `maximum-scale=yes` which translates to 1.0.
+This viewport `meta` element prevents users to scale content up to 200% because it has `maximum-scale` set to `yes` which translates to 1.0.
 
 ```html
 <html>
@@ -216,7 +216,7 @@ This `meta` element with a `name="viewport"` and `content` attributes specifies 
 
 #### Inapplicable Example 1
 
-There is no `meta` element with a `name="viewport"` attribute.
+There is no viewport `meta` element.
 
 ```html
 <html>
@@ -234,7 +234,7 @@ There is no `meta` element with a `name="viewport"` attribute.
 
 #### Inapplicable Example 2
 
-This `meta` element with a `name="viewport"` attribute does not have a `content` attribute.
+This viewport `meta` element does not have a `content` attribute.
 
 ```html
 <html>
@@ -251,11 +251,9 @@ This `meta` element with a `name="viewport"` attribute does not have a `content`
 ```
 
 [case-insensitive]: https://infra.spec.whatwg.org/#ascii-case-insensitive 'ASCII case-insensitive'
-[content]: https://html.spec.whatwg.org/#dom-meta-content '#dom-meta-content'
+[content]: https://www.w3.org/TR/WCAG21/#dfn-content 'content (Web content)'
 [maximum-scale]: https://www.w3.org/TR/css-device-adapt-1/#min-scale-max-scale 'The initial-scale, minimum-scale, and maximum-scale properties'
 [meta]: https://html.spec.whatwg.org/#the-meta-element 'The meta element'
 [page]: https://www.w3.org/TR/WCAG21/#dfn-web-page-s 'Web page'
 [user-scalable]: https://www.w3.org/TR/css-device-adapt-1/#user-scalable 'The user-scalable property'
-[viewport]: https://www.w3.org/TR/css-device-adapt-1/#viewport-meta 'Viewport <META> element'
 [visible]: #visible 'Definition of visible'
-[web content]: https://www.w3.org/TR/WCAG21/#dfn-content 'content (Web content)'

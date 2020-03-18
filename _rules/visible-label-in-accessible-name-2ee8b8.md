@@ -10,6 +10,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:G208: # Including the text of the visible label as part of the accessible name
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - Accessibility Tree
   - DOM Tree
@@ -48,6 +53,7 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 ## Background
 
 - [Understanding Success Criterion 2.5.3: Label in Name](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)
+- [G208: Including the text of the visible label as part of the accessible name](https://www.w3.org/WAI/WCAG21/Techniques/general/G208)
 
 ## Test Cases
 

@@ -65,37 +65,37 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-This decorative `img` element is ignored by assistive technologies because the `alt` attribute is empty (`""`).
+This `img` element with an empty `alt` attribute which is not included in accessibility tree is decorative.
 
 ```html
-Happy new year!<br />
+<p>Happy new year!</p>
 <img src="/test-assets/shared/fireworks.jpg" alt="" />
 ```
 
 #### Passed Example 2
 
-This decorative `img` element is ignored by assistive technologies because `aria-hidden` is set to `true`.
+This `img` element that is ignored by assistive technologies because `aria-hidden` is set to `true` is [purely decorative][].
 
 ```html
-Happy new year!<br />
-<img src="/test-assets/shared/fireworks.jpg" aria-hidden="true" alt="decorative" />
+<p>Happy new year!</p>
+<img src="/test-assets/shared/fireworks.jpg" aria-hidden="true" role="img" alt="" />
 ```
 
 #### Passed Example 3
 
-This decorative `img` element is ignored by assistive technologies because it has an [explicit semantic role][] of `none`.
+This `img` element that is ignored by assistive technologies because it has an [explicit semantic role][] of `none` is [purely decorative][].
 
 ```html
-Happy new year!<br />
+<p>Happy new year!</p>
 <img src="/test-assets/shared/fireworks.jpg" role="none" alt="ignore me" />
 ```
 
 #### Passed Example 4
 
-This decorative `svg` element is ignored by assistive technologies because it has no attribute that would give it an [accessible name][].
+This `svg` element that is ignored by assistive technologies because it has no attribute that would give it an [accessible name][] is [purely decorative][].
 
 ```html
-Happy new year!<br />
+<p>Happy new year!</p>
 <svg height="200" xmlns="http://www.w3.org/2000/svg">
 	<polygon points="100,10 40,180 190,60 10,60 160,180" fill="yellow" />
 </svg>
@@ -103,10 +103,10 @@ Happy new year!<br />
 
 #### Passed Example 5
 
-This decorative `canvas` element is ignored by assistive technologies because it has no attribute that would give it an [accessible name][].
+This `canvas` element that is ignored by assistive technologies because it has no attribute that would give it an [accessible name][] is [purely decorative][].
 
 ```html
-Happy new year!<br />
+<p>Happy new year!</p>
 <canvas id="newyear" width="200" height="200"></canvas>
 <script>
 	const ctx = document.querySelector('#newyear').getContext('2d')
@@ -133,7 +133,7 @@ This `img` element with an empty (`""`) `alt` is not [purely decorative][].
 
 #### Failed Example 2
 
-This `img` element with `aria-hidden` set to `true` is not [purely decorative][].
+This `img` element which is not [included in the accessibility tree][] because `aria-hidden` is set to `true` is not [purely decorative][].
 
 ```html
 <img src="/test-assets/shared/w3c-logo.png" aria-hidden="true" alt="W3C logo" />
@@ -141,7 +141,7 @@ This `img` element with `aria-hidden` set to `true` is not [purely decorative][]
 
 #### Failed Example 3
 
-This `img` element with an [explicit semantic role][] of `none` is not [purely decorative][].
+This `img` element which is not [included in the accessibility tree][] because it has an [explicit semantic role][] of `none` is not [purely decorative][].
 
 ```html
 <img src="/test-assets/shared/w3c-logo.png" role="none" alt="W3C logo" />
@@ -152,7 +152,7 @@ This `img` element with an [explicit semantic role][] of `none` is not [purely d
 This `svg` element which has a [semantic role][] of `graphics-document` and an empty (`""`) [accessible name][] is not [purely decorative][].
 
 ```html
-Best W3C logo:<br />
+<p>Best W3C logo:</p>
 <svg viewBox="0 0 512 512">
 	<path
 		d="M108.4 0h23v22.8h21.2V0h23v69h-23V46h-21v23h-23.2M206 23h-20.3V0h63.7v23H229v46h-23M259.5 0h24.1l14.8 24.3L313.2 0h24.1v69h-23V34.8l-16.1 24.8l-16.1-24.8v34.2h-22.6M348.7 0h23v46.2h32.6V69h-55.6"
@@ -184,7 +184,7 @@ This `canvas` element which has no [semantic role][] and an empty (`""`) [access
 
 #### Inapplicable Example 1
 
-This `img` element is [included in the accessibility tree][] and is a non-decorative image because the `alt` attribute is not empty (`""`).
+This `img` element is [included in the accessibility tree][] because the `alt` attribute is not empty (`""`).
 
 ```html
 <img src="/test-assets/shared/w3c-logo.png" alt="W3C" />
@@ -214,7 +214,7 @@ This `img` element is not [visible][] because it is positioned off screen.
 
 #### Inapplicable Example 4
 
-This `svg` is ignored because it is a child of a link that provides its [accessible name][].
+This `svg` element is ignored because it is a child of a link that has provides its [accessible name][].
 
 ```html
 <a href="//example.org" aria-label="SVG star">
@@ -226,8 +226,21 @@ This `svg` is ignored because it is a child of a link that provides its [accessi
 
 #### Inapplicable Example 5
 
+This `svg` element has a [semantic role][] of `img` and an [accessible name][] from its `aria-label` attribute.
+
 ```html
-<svg role="img" aria-label="Hello"></svg>
+<svg viewBox="0 0 512 512" role="img" aria-label="HTML 5 logo">
+	<path
+		d="M108.4 0h23v22.8h21.2V0h23v69h-23V46h-21v23h-23.2M206 23h-20.3V0h63.7v23H229v46h-23M259.5 0h24.1l14.8 24.3L313.2 0h24.1v69h-23V34.8l-16.1 24.8l-16.1-24.8v34.2h-22.6M348.7 0h23v46.2h32.6V69h-55.6"
+	/>
+	<path fill="#e44d26" d="M107.6 471l-33-370.4h362.8l-33 370.2L255.7 512" />
+	<path fill="#f16529" d="M256 480.5V131H404.3L376 447" />
+	<path
+		fill="#ebebeb"
+		d="M142 176.3h114v45.4h-64.2l4.2 46.5h60v45.3H154.4M156.4 336.3H202l3.2 36.3 50.8 13.6v47.4l-93.2-26"
+	/>
+	<path fill="#fff" d="M369.6 176.3H255.8v45.4h109.6M361.3 268.2H255.8v45.4h56l-5.3 59-50.7 13.6v47.2l93-25.8" />
+</svg>
 ```
 
 #### Inapplicable Example 6
@@ -240,8 +253,15 @@ This `canvas` element is not [visible][] because it is completely transparent.
 
 #### Inapplicable Example 7
 
+This `canvas` element has a [semantic role][] of `img` and an [accessible name][] from its `aria-label` attribute.
+
 ```html
-<canvas role="img" aria-label="Hello"></canvas>
+<canvas id="w3c" width="200" height="60" role="img" aria-label="ACT Rules!"></canvas>
+<script>
+	const ctx = document.querySelector('#w3c').getContext('2d')
+	ctx.font = '30px Arial'
+	ctx.fillText('ACT Rules!', 20, 40)
+</script>
 ```
 
 #### Inapplicable Example 8
@@ -254,6 +274,15 @@ This `img` element is [visible][] but [included in the accessibility tree][].
 <img src="pdf.gif" alt="PDF" /> PDF document
 ```
 
+#### Inapplicable Example 9
+
+This `img` element has an `src` attribute which will cause the [image request state][] to be [Broken
+](https://html.spec.whatwg.org/#img-error).
+
+```html
+<img src="/test-assets/does-not-exist.png" alt="" />
+```
+
 [accessible name]: #accessible-name 'Definition of accessible name'
 [visible]: #visible 'Definition of Visible'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the accessibility tree'
@@ -264,7 +293,7 @@ This `img` element is [visible][] but [included in the accessibility tree][].
 [conforming alternative version]: https://www.w3.org/TR/WCAG21/#dfn-conforming-alternate-version 'WCAG definition of Conforming alternative version'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Scoping definition of Flat tree, working draft'
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant 'DOM definition of Descendant, 2020/03/06'
-[named from author]: https://www.w3.org/TR/wai-aria-1.1/#namecomputation 'WAI-ARIA definition of Named from author'
+[named from author]: https://www.w3.org/TR/wai-aria-1.1/#namecalculation 'WAI-ARIA definition of Named from author'
 [fallback content]: https://html.spec.whatwg.org/#fallback-content 'HTML definition of Fallback content, 2020/03/06'
 [current request]: https://html.spec.whatwg.org/#current-request 'HTML definition of Current request, 2020/03/06'
 [image request state]: https://html.spec.whatwg.org/#img-req-state 'HTML definition of Image request state, 2020/03/06'

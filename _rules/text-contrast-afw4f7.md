@@ -17,6 +17,16 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:G18: # Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text
+    forConformance: false
+    failed: not satisfied
+    passed: satisfied
+    inapplicable: further testing needed
+  wcag-technique:G145: # Ensuring that a contrast ratio of at least 3:1 exists between text (and images of text) and background behind the text
+    forConformance: false
+    failed: not satisfied
+    passed: satisfied
+    inapplicable: further testing needed
 
 input_aspects:
   - DOM Tree

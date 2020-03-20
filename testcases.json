@@ -1120,6 +1120,12 @@
       "ruleName": "ARIA state or property is permitted",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
         "aria11:state_property_processing": {
           "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
@@ -1139,6 +1145,12 @@
       "ruleName": "ARIA state or property is permitted",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
         "aria11:state_property_processing": {
           "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
@@ -1158,6 +1170,12 @@
       "ruleName": "ARIA state or property is permitted",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
         "aria11:state_property_processing": {
           "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
@@ -1177,6 +1195,12 @@
       "ruleName": "ARIA state or property is permitted",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
         "aria11:state_property_processing": {
           "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
@@ -1196,6 +1220,12 @@
       "ruleName": "ARIA state or property is permitted",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
         "aria11:state_property_processing": {
           "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
@@ -1215,6 +1245,12 @@
       "ruleName": "ARIA state or property is permitted",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
         "aria11:state_property_processing": {
           "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
@@ -1234,6 +1270,12 @@
       "ruleName": "ARIA state or property is permitted",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
         "aria11:state_property_processing": {
           "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
@@ -1253,6 +1295,12 @@
       "ruleName": "ARIA state or property is permitted",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
         "aria11:state_property_processing": {
           "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
@@ -1272,6 +1320,12 @@
       "ruleName": "ARIA state or property is permitted",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
         "aria11:state_property_processing": {
           "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
@@ -1291,6 +1345,12 @@
       "ruleName": "ARIA state or property is permitted",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
         "aria11:state_property_processing": {
           "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
@@ -1310,6 +1370,12 @@
       "ruleName": "ARIA state or property is permitted",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
         "aria11:state_property_processing": {
           "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
@@ -1329,6 +1395,12 @@
       "ruleName": "ARIA state or property is permitted",
       "rulePage": "https://act-rules.github.io/rules/5c01ea",
       "ruleAccessibilityRequirements": {
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
         "aria11:state_property_processing": {
           "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
           "forConformance": true,
@@ -11350,6 +11422,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G170": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -11365,6 +11449,18 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G170": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -11386,6 +11482,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G170": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -11401,6 +11509,18 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G170": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -11422,6 +11542,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G170": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -11437,6 +11569,18 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G170": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -11458,6 +11602,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G170": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -11473,6 +11629,18 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G170": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -11494,6 +11662,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA4": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G108": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -11509,6 +11689,18 @@
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA4": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G108": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -11530,6 +11722,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA4": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G108": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -11545,6 +11749,18 @@
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA4": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G108": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -11566,6 +11782,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA4": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G108": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -11581,6 +11809,18 @@
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA4": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G108": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -11602,6 +11842,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA4": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G108": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -11617,6 +11869,18 @@
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA4": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G108": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -11638,6 +11902,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA4": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G108": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -11653,6 +11929,18 @@
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA4": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G108": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -11674,6 +11962,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA4": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G108": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -11689,6 +11989,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -11710,6 +12016,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -11725,6 +12037,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -11746,6 +12064,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -11761,6 +12085,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -11782,6 +12112,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -11797,6 +12133,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -11818,6 +12160,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -11833,6 +12181,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -11854,6 +12208,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -11869,6 +12229,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -11890,6 +12256,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -11905,6 +12277,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -11926,6 +12304,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -11941,6 +12325,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -11962,6 +12352,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -11977,6 +12373,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -11998,6 +12400,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12013,6 +12421,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -12034,6 +12448,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12049,6 +12469,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -12070,6 +12496,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12085,6 +12517,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -12106,6 +12544,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12121,6 +12565,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -12142,6 +12592,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12157,6 +12613,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -12178,6 +12640,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12193,6 +12661,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -12214,6 +12688,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12229,6 +12709,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -12250,6 +12736,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12265,6 +12757,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -12286,6 +12784,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12301,6 +12805,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -12322,6 +12832,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12337,6 +12853,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -12358,6 +12880,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12373,6 +12901,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -12394,6 +12928,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12409,6 +12949,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -12430,6 +12976,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12445,6 +12997,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -12472,6 +13030,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12495,6 +13065,18 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -12520,6 +13102,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12543,6 +13137,18 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -12568,6 +13174,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12591,6 +13209,18 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -12616,6 +13246,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12639,6 +13281,18 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -12664,6 +13318,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12687,6 +13353,18 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -12712,6 +13390,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12735,6 +13425,18 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -12760,6 +13462,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12783,6 +13497,18 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -12808,6 +13534,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12831,6 +13569,18 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -12856,6 +13606,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12879,6 +13641,18 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -12904,6 +13678,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12927,6 +13713,18 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -12952,6 +13750,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -12975,6 +13785,18 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -13000,6 +13822,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -13023,6 +13857,18 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -13048,6 +13894,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -13071,6 +13929,18 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -13096,6 +13966,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -13120,6 +14002,18 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G145": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -13135,6 +14029,24 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G87": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G93": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H95": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -13156,6 +14068,24 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G87": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G93": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -13171,6 +14101,24 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G87": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G93": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H95": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -13192,6 +14140,24 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G87": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G93": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -13207,6 +14173,24 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G87": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G93": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H95": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -13228,6 +14212,24 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G87": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G93": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -13243,6 +14245,36 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.3": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -13264,6 +14296,36 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -13279,6 +14341,36 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.3": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -13300,6 +14392,36 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -13315,6 +14437,36 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.3": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -13336,6 +14488,36 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -13351,6 +14533,36 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.3": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -13372,6 +14584,36 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -13390,6 +14632,36 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -13405,6 +14677,36 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.3": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -13497,7 +14799,26 @@
       "ruleId": "1ea59c",
       "ruleName": "`video` element visual content has audio description",
       "rulePage": "https://act-rules.github.io/rules/1ea59c",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "1215f0593ff98672ea3288046b5a468d22b647aa",
@@ -13508,7 +14829,26 @@
       "ruleId": "1ea59c",
       "ruleName": "`video` element visual content has audio description",
       "rulePage": "https://act-rules.github.io/rules/1ea59c",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "7fdf40bcfe1ad00c419e52042d991ca04167ee7a",
@@ -13519,7 +14859,26 @@
       "ruleId": "1ea59c",
       "ruleName": "`video` element visual content has audio description",
       "rulePage": "https://act-rules.github.io/rules/1ea59c",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "7acb0df1cea1e056a611582a0bfa8e217602e0af",
@@ -13530,7 +14889,26 @@
       "ruleId": "1ea59c",
       "ruleName": "`video` element visual content has audio description",
       "rulePage": "https://act-rules.github.io/rules/1ea59c",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "e874973a89bd0284c1bda121f38f7465faac6c72",
@@ -13541,7 +14919,26 @@
       "ruleId": "1ea59c",
       "ruleName": "`video` element visual content has audio description",
       "rulePage": "https://act-rules.github.io/rules/1ea59c",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "29d541a8cf1cc14e8ab85dd20823dadb6bd63789",
@@ -13552,7 +14949,26 @@
       "ruleId": "1ea59c",
       "ruleName": "`video` element visual content has audio description",
       "rulePage": "https://act-rules.github.io/rules/1ea59c",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "d192a47f74ddc5fce571796a7ff0d6c4790063ab",
@@ -13563,7 +14979,26 @@
       "ruleId": "1ea59c",
       "ruleName": "`video` element visual content has audio description",
       "rulePage": "https://act-rules.github.io/rules/1ea59c",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "601393ff91b5c96d76a83e6897191eec8060ab2e",
@@ -13574,7 +15009,26 @@
       "ruleId": "f51b46",
       "ruleName": "`video` element auditory content has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G87": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G93": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "5422b7f5851c2cf212e71560bfaf9aa06ec5f8b5",
@@ -13585,7 +15039,26 @@
       "ruleId": "f51b46",
       "ruleName": "`video` element auditory content has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G87": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G93": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "52fbebdeb649fe794b9428d880a5381c228e9399",
@@ -13596,7 +15069,26 @@
       "ruleId": "f51b46",
       "ruleName": "`video` element auditory content has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G87": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G93": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "df819bb0502a77e3235a6f8e25133aea869cb2b9",
@@ -13607,7 +15099,26 @@
       "ruleId": "f51b46",
       "ruleName": "`video` element auditory content has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G87": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G93": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "3ea30bc4725e2c4d43ce716d2815e5427e3bbb45",
@@ -13618,7 +15129,26 @@
       "ruleId": "f51b46",
       "ruleName": "`video` element auditory content has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G87": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G93": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "e607aaf5db10510f0b6df07f6ebb28e12aa79ffd",
@@ -13629,7 +15159,26 @@
       "ruleId": "f51b46",
       "ruleName": "`video` element auditory content has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G87": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G93": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "b73b0ee52cb9c7e813f887f0cec6f7fd18c964b5",
@@ -13640,7 +15189,26 @@
       "ruleId": "f51b46",
       "ruleName": "`video` element auditory content has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G87": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G93": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "cac684e87985463e1134df2e8ad94ba7f01377e3",
@@ -13651,7 +15219,26 @@
       "ruleId": "f51b46",
       "ruleName": "`video` element auditory content has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G87": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G93": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "5bced10c9f182208dacf0071c35e99403a23013b",
@@ -13662,7 +15249,20 @@
       "ruleId": "f196ce",
       "ruleName": "`video` element visual content has description track",
       "rulePage": "https://act-rules.github.io/rules/f196ce",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "e100b751bd9a03c6e874239476027e792029c50b",
@@ -13673,7 +15273,20 @@
       "ruleId": "f196ce",
       "ruleName": "`video` element visual content has description track",
       "rulePage": "https://act-rules.github.io/rules/f196ce",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "7d8028be2134f6def96fab23f8c07b5ea6175b38",
@@ -13684,7 +15297,20 @@
       "ruleId": "f196ce",
       "ruleName": "`video` element visual content has description track",
       "rulePage": "https://act-rules.github.io/rules/f196ce",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "540ef897c00b6bce2ac0a522615df7ba8be6aadc",
@@ -13695,7 +15321,20 @@
       "ruleId": "f196ce",
       "ruleName": "`video` element visual content has description track",
       "rulePage": "https://act-rules.github.io/rules/f196ce",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "453c90aae9cc15233a77c81948324010d681f7d2",
@@ -13706,7 +15345,20 @@
       "ruleId": "f196ce",
       "ruleName": "`video` element visual content has description track",
       "rulePage": "https://act-rules.github.io/rules/f196ce",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "7d7a94d0ae749de98095b3af35f0adf65cb01bd1",
@@ -13720,6 +15372,24 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G159": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G166": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -13741,6 +15411,24 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G159": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G166": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -13756,6 +15444,24 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G159": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G166": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -13777,6 +15483,24 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G159": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G166": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -13792,6 +15516,24 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G159": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G166": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -13813,6 +15555,24 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G159": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G166": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -13828,6 +15588,24 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G159": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G166": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -13849,6 +15627,24 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G159": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G166": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -13867,6 +15663,24 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G159": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G166": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -13882,6 +15696,24 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G159": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G166": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -13974,7 +15806,14 @@
       "ruleId": "d7ba54",
       "ruleName": "`video` element visual-only content has audio track alternative",
       "rulePage": "https://act-rules.github.io/rules/d7ba54",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G166": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "a9a095faa3ed030e6dab5d1808eac01c6c7f5dcc",
@@ -13985,7 +15824,14 @@
       "ruleId": "d7ba54",
       "ruleName": "`video` element visual-only content has audio track alternative",
       "rulePage": "https://act-rules.github.io/rules/d7ba54",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G166": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "1b1e51c2aff8208b76b9c275c513d1ce8b409f34",
@@ -13996,7 +15842,14 @@
       "ruleId": "d7ba54",
       "ruleName": "`video` element visual-only content has audio track alternative",
       "rulePage": "https://act-rules.github.io/rules/d7ba54",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G166": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "7706e5b38f166440f27b877d7ad623714e7102d6",
@@ -14007,7 +15860,14 @@
       "ruleId": "d7ba54",
       "ruleName": "`video` element visual-only content has audio track alternative",
       "rulePage": "https://act-rules.github.io/rules/d7ba54",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G166": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "a56e070355a7524e70170151da11c783dabdce94",
@@ -14018,7 +15878,14 @@
       "ruleId": "d7ba54",
       "ruleName": "`video` element visual-only content has audio track alternative",
       "rulePage": "https://act-rules.github.io/rules/d7ba54",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G166": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "2c391535c73e7943fec5380e981c99cc4c1a7fb1",
@@ -14029,7 +15896,14 @@
       "ruleId": "ac7dc6",
       "ruleName": "`video` element visual-only content has description track",
       "rulePage": "https://act-rules.github.io/rules/ac7dc6",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "e68cdbe91c114225b5fd441fe00ea758ca3f1cf0",
@@ -14040,7 +15914,14 @@
       "ruleId": "ac7dc6",
       "ruleName": "`video` element visual-only content has description track",
       "rulePage": "https://act-rules.github.io/rules/ac7dc6",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "37a4612f75de804360b62ea77d1717d549b34ddb",
@@ -14051,7 +15932,14 @@
       "ruleId": "ac7dc6",
       "ruleName": "`video` element visual-only content has description track",
       "rulePage": "https://act-rules.github.io/rules/ac7dc6",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "e33bdd1fbdb40749eae23ee5cb90ec309fcf2646",
@@ -14062,7 +15950,14 @@
       "ruleId": "ac7dc6",
       "ruleName": "`video` element visual-only content has description track",
       "rulePage": "https://act-rules.github.io/rules/ac7dc6",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "f931e98962823c2ae50951afc5f3fc19e194cfb7",
@@ -14073,7 +15968,14 @@
       "ruleId": "ac7dc6",
       "ruleName": "`video` element visual-only content has description track",
       "rulePage": "https://act-rules.github.io/rules/ac7dc6",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "12ecb3fb2d4c8eee005512bcac58df3a8966a256",
@@ -14084,7 +15986,14 @@
       "ruleId": "ee13b5",
       "ruleName": "`video` element visual-only content has transcript",
       "rulePage": "https://act-rules.github.io/rules/ee13b5",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G159": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "866f176927d564fa237c31c1291e4c7db9e9b543",
@@ -14095,7 +16004,14 @@
       "ruleId": "ee13b5",
       "ruleName": "`video` element visual-only content has transcript",
       "rulePage": "https://act-rules.github.io/rules/ee13b5",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G159": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "3313d72b310a009046cdad668452fb10977b4c35",
@@ -14106,7 +16022,14 @@
       "ruleId": "ee13b5",
       "ruleName": "`video` element visual-only content has transcript",
       "rulePage": "https://act-rules.github.io/rules/ee13b5",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G159": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "fa6bda6cbbfcb7f3824ab40c5cfbf04ea594b185",
@@ -14117,7 +16040,14 @@
       "ruleId": "ee13b5",
       "ruleName": "`video` element visual-only content has transcript",
       "rulePage": "https://act-rules.github.io/rules/ee13b5",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G159": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "ae653367aba4e4b5262b5cc9cfdb637f500aa1c2",
@@ -14128,7 +16058,14 @@
       "ruleId": "ee13b5",
       "ruleName": "`video` element visual-only content has transcript",
       "rulePage": "https://act-rules.github.io/rules/ee13b5",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G159": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "a03d9dc076c9918b42a9056ffb77227b973571fb",
@@ -14139,7 +16076,14 @@
       "ruleId": "ee13b5",
       "ruleName": "`video` element visual-only content has transcript",
       "rulePage": "https://act-rules.github.io/rules/ee13b5",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G159": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "82a0aa825af5d4d97bec9039a0de8da3cd1159b7",
@@ -14150,7 +16094,14 @@
       "ruleId": "ee13b5",
       "ruleName": "`video` element visual-only content has transcript",
       "rulePage": "https://act-rules.github.io/rules/ee13b5",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G159": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "53283de0652d7b4132aa00dc2fdd3d60fbd657cf",
@@ -14161,7 +16112,14 @@
       "ruleId": "ee13b5",
       "ruleName": "`video` element visual-only content has transcript",
       "rulePage": "https://act-rules.github.io/rules/ee13b5",
-      "ruleAccessibilityRequirements": null
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G159": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
     },
     {
       "testcaseId": "d58a1772ea37b702630ffec4224ee843308f12db",
@@ -14175,6 +16133,30 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.5": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -14196,6 +16178,30 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -14211,6 +16217,30 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.5": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -14232,6 +16262,30 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -14247,6 +16301,30 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.5": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -14268,6 +16346,30 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -14283,6 +16385,30 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.5": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -14304,6 +16430,30 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -14319,6 +16469,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.8": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G69": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -14340,6 +16496,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -14355,6 +16517,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.8": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G69": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -14376,6 +16544,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -14394,6 +16568,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -14409,6 +16589,12 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.8": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G69": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"

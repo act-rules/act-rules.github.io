@@ -59,7 +59,7 @@ There are differences in how assistive technologies handle unknown and invalid l
 
 #### Passed Example 1
 
-The `lang` attribute has a value that is not empty ("") and has a valid primary language subtag.
+This `article` element has a `lang` attribute which is not empty ("") and is a valid primary language subtag.
 
 ```html
 <html>
@@ -71,7 +71,7 @@ The `lang` attribute has a value that is not empty ("") and has a valid primary 
 
 #### Passed Example 2
 
-The `lang` attribute has a value that is not empty ("") and has a valid primary language subtag. The region section in the value is ignored by the rule.
+This `blockquote` element has a `lang` attribute which is not empty ("") and has a valid primary language subtag. The region subtag is ignored by this rule.
 
 ```html
 <html>
@@ -83,7 +83,7 @@ The `lang` attribute has a value that is not empty ("") and has a valid primary 
 
 #### Passed Example 3
 
-The `lang` attribute value has a valid primary language subtag, but a syntactically invalid region subtag.
+This `p` element has a `lang` attribute which is not empty ("") and has a valid primary language subtag. The region and variant subtag are invalid syntactically, but is ignored by this rule.
 
 ```html
 <html>
@@ -97,7 +97,7 @@ The `lang` attribute value has a valid primary language subtag, but a syntactica
 
 #### Failed Example 1
 
-The `lang` attribute value is not a valid primary language subtag.
+This `article` element has a `lang` attribute which is not empty ("") but is an invalid primary language subtag.
 
 ```html
 <html>
@@ -109,7 +109,7 @@ The `lang` attribute value is not a valid primary language subtag.
 
 #### Failed Example 2
 
-The `lang` attribute value is not empty ("") and is not a valid primary language subtag.
+This `article` element has a `lang` attribute which is not empty ("") but is an invalid primary langage subtag.
 
 ```html
 <html>
@@ -121,7 +121,7 @@ The `lang` attribute value is not empty ("") and is not a valid primary language
 
 #### Failed Example 3
 
-The `lang` attribute value consists of only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace) and is not a valid primary language subtag.
+This `article` element has a `lang` attribute which consists only of [whitespace](#whitespace).
 
 ```html
 <html>
@@ -137,7 +137,7 @@ The `lang` attribute value consists of only [ASCII whitespace](https://infra.spe
 
 #### Inapplicable Example 1
 
-The rule applies to elements within the `body` of a webpage. `html` elements are ignored by the rule.
+This `html` element which has a `lang` attribute is not applicable to the rule. The rule is applicable to elements within the `body` of a webpage.
 
 ```html
 <html lang="en">
@@ -147,7 +147,7 @@ The rule applies to elements within the `body` of a webpage. `html` elements are
 
 #### Inapplicable Example 2
 
-An empty value for the `lang` attribute is ignored, as the rule only applies to `lang` attributes that are not empty ("").
+This `article` element which has a `lang` attribute is empty ("") and is not applicable to the rule.
 
 ```html
 <html>

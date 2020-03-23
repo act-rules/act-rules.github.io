@@ -3,7 +3,7 @@ id: 36b590
 name: Error message describes invalid form field value
 rule_type: atomic
 description: |
-  This rule checks that text error messages provided when the user completes a form field with invalid values or using an invalid format identify the cause of the error or how to fix the error.
+  This rule checks that text error messages provided when the user completes a form field with invalid values or using an invalid format, identify the cause of the error or how to fix the error.
 accessibility_requirements:
   wcag20:3.3.1: # Error Identification (A)
     forConformance: true
@@ -39,7 +39,7 @@ The rule applies to each HTML element that has one of the following [semantic ro
 **Note**: The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.1][] roles that:
 
 - inherit from the [abstract][] `input` or `select` role, and
-- do not have a [required context][] role that inherits from one of those roles.
+- do not have a [required context][] role that inherits from the [abstract][] `input` or `select` role.
 
 ## Expectation 1
 
@@ -53,12 +53,15 @@ For each test target with a [form field error indicator][], at least one of the 
 
 ## Expectation 2
 
-For each test target with a [form field error indicator][], at least one of the [form field error indicators][form field error indicator] describes, in [text][] that is [visible][], the cause of the error or how to resolve it.
+For each test target with a [form field error indicator][], at least one of the [form field error indicators][form field error indicator] describes:
+- the cause of the error, or
+- how to resolve it,
+
+in [text][] that is [visible][].
 
 ## Expectation 3
 
 For each test target with a [form field error indicator][], at least one of the [form field error indicators][form field error indicator] describes:
-
 - the cause of the error, or
 - how to resolve it,
 

@@ -10,6 +10,16 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:G60: # Playing a sound that turns off automatically within three seconds
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:G170: # Providing a control near the beginning of the Web page that turns off sounds that play automatically
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_rules:
   - 4c31df
   - aaa1bf

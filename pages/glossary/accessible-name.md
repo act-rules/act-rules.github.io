@@ -3,6 +3,10 @@ title: Accessible Name
 key: accessible-name
 unambiguous: true
 objective: true
+input_aspects:
+  - Accessibility tree
+  - CSS styling
+  - DOM tree
 ---
 
 The _accessible name_ is the programmatically determined name of a user interface element that is [included in the accessibility tree](#included-in-the-accessibility-tree).

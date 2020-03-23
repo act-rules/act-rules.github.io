@@ -4,7 +4,7 @@ name: Inline link is distinguishable
 rule_type: composite
 
 description: |
-  This rule checks that links that are embedded in a paragraph, list or cell have a way to distinguish them from the surrounding text
+  This rule checks that inline links have a way to distinguish them from the surrounding text
 
 accessibility_requirements: # Remove whatever is not applicable
   wcag20:1.4.1: # Use of Color (A)
@@ -33,11 +33,13 @@ acknowledgements:
 
 This rule applies to any HTML element which:
 
-- has the [semantic role][] of ['link'][link] or a [semantic role][] that inherits from the ['link'][link] role; and
-- has [descendant][] [text nodes][text node] in the [flat tree][] that are [visible][]; and
-- is a [descendant][] in the [flat tree][] of an HTML element (with the closest [ancestor][] in the [flat tree][] being henceforth referred to as the _ancestor_ element) that has a [computed value][] for the [display property][display] that is not one of the following: 'table', 'flex', 'grid', 'ruby', 'table-row-group', 'table-header-group', 'table-footer-group', 'table-row', table-column-group', 'table-column', 'ruby-base-container' and 'ruby-text-container'; and
-- the _ancestor_ element has other [descendant][] [visible][] [text nodes][text node] in the [flat tree][]; and
-- the [descendant][] [visible][] [text nodes][text node] of the _ancestor_ element belong to the same [inline formatting context][].
+- **(is a link)** has the [semantic role][] of ['link'][link] or a [semantic role][] that inherits from the ['link'][link] role; and
+- **(visible)** has [descendant][] [text nodes][text node] in the [flat tree][] that are [visible][]; and
+- **(belongs to a block container)** is a [descendant][] in the [flat tree][] of an HTML element (with the closest [ancestor][] in the [flat tree][] being henceforth referred to as the _ancestor_ element) that has a [computed value][] for the [display property][display] that is not one of the following: 'table', 'flex', 'grid', 'ruby', 'table-row-group', 'table-header-group', 'table-footer-group', 'table-row', table-column-group', 'table-column', 'ruby-base-container' and 'ruby-text-container'; and
+- **(other content in block)** the _ancestor_ element has other [descendant][] [visible][] [text nodes][text node] in the [flat tree][]; and
+- **(block is inline)** the [descendant][] [visible][] [text nodes][text node] of the _ancestor_ element belong to the same [inline formatting context][].
+
+**Note**: The test targets are visible link elements that are part of a block of content that is displayed inline .
 
 ## Expectation
 

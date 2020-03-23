@@ -14,6 +14,8 @@
 - svg # `aria-query` dom tags does not list `svg`
 - xhtml
 - DOCTYPE
+- iFrame # used to demonstrate bad spelling
+- feImage
 
 # Domain-specific words, Definitions & other allowed terms
 - URI
@@ -24,6 +26,7 @@
 - CSS3
 - UA
 - UI
+- api # lowercase needed in reference list
 - APIs
 - MDN
 - BCP
@@ -118,6 +121,8 @@
 - implementers
 - Implementers
 - Presentational
+- backtick
+- camelCase
 
 # Parts of Unicode
 - 000A

@@ -10,10 +10,25 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:G87: # Providing closed captions
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:G93: # Providing open (always visible) captions
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:H95: # Using the track element to provide captions
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_rules:
   - ab4d13
   - f51b46
-acknowledgements:
+acknowledgments:
   authors:
     - Wilco Fiers
     - Brian Bors

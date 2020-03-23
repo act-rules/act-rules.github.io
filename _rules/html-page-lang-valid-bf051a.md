@@ -17,7 +17,7 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-acknowledgements:
+acknowledgments:
   authors:
     - Annika Nietzio
     - Jey Nandakumar

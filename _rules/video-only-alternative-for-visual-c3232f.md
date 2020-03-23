@@ -10,12 +10,27 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:G159: # Providing an alternative for time-based media for video-only content
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:G166: # Providing audio that describes the important video content and describing it as such
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:H96: # Using the track element to provide audio descriptions
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_rules:
   - fd26cf
   - ac7dc6
   - ee13b5
   - d7ba54
-acknowledgements:
+acknowledgments:
   authors:
     - Wilco Fiers
     - Brian Bors

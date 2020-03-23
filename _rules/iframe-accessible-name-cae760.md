@@ -13,7 +13,7 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Jey Nandakumar
     - Wilco Fiers
@@ -29,7 +29,7 @@ The rule applies to `iframe` elements that are [included in the accessibility tr
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
-**Note:** Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
+**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
 
 ## Assumptions
 

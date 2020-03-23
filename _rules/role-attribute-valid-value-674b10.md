@@ -10,10 +10,20 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:ARIA4: # Using a WAI-ARIA role to expose the role of a user interface component
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:G108: # Using markup features to expose the name and role, allow user-settable properties to be directly set, and provide notification of changes
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Jey Nandakumar
 ---

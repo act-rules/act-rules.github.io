@@ -20,11 +20,11 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any [visible][] [HTML element][] in an [HTML document][] if:
+The rule applies to any [visible][] [HTML element][] if:
 
-- **(not alone)** it is not the only [content][] in the [HTML document][]; and
 - **(changed)** the `innerText` property of the [element][html element] changes; and
 - **(no child changed)** the [element][html element] does not have [children][child] whose `innerText` property also changes; and
+- **(not alone)** the [element][html element] has [sibling][] or [ancestor][] elements with non-empty `innerText` properties; and
 - the [document][html document] the [element][html element] belongs to:
   - **(ready)** has [readiness][document readiness] equal to "complete" before the change happens; and
   - **(inactive)** is associated with a [window][] that has the [last activation timestamp][] equal to "positive infinity".
@@ -221,6 +221,7 @@ The color of the element is updated, but not its `innerText` property.
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
+[ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor
 [child]: https://dom.spec.whatwg.org/#concept-tree-child
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
 [document readiness]: https://www.w3.org/TR/html53/dom.html#current-document-readiness
@@ -233,6 +234,7 @@ The color of the element is updated, but not its `innerText` property.
 [last activation timestamp]: https://html.spec.whatwg.org/#last-activation-timestamp
 [mechanism]: #mechanism-to-achieve-an-objective 'Definition of mechanism to achieve an objective'
 [sc 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
+[sibling]: https://dom.spec.whatwg.org/#concept-tree-sibling
 [visible text content]: #visible-text-content 'Definition of visible text content'
 [visible]: #visible 'Definition of visible'
 [whitespace]: #whitespace 'Definition of whitespace'

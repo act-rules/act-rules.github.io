@@ -13,7 +13,7 @@ accessibility_requirements: # Remove whatever is not applicable
 input_aspects:
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Carlos Duarte
 ---

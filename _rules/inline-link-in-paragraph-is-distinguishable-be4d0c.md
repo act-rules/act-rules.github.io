@@ -34,9 +34,10 @@ acknowledgements:
 This rule applies to any HTML element which:
 
 - has the [semantic role][] of ['link'][link] or a [semantic role][] that inherits from the ['link'][link] role; and
-- is a [descendant][] in the [flat tree][] of a `p`, `li` or `td` HTML elements or elements with a [semantic role][] of ['listitem'][listitem] or ['cell'][cell] (with the closest [ancestor][] in the [flat tree][] being henceforth referred to as the _ancestor_ element); and
 - has [descendant][] [text nodes][text node] in the [flat tree][] that are [visible][]; and
-- the _ancestor_ element has other [descendant][] [visible][] [text nodes][text node] in the [flat tree][].
+- is a [descendant][] in the [flat tree][] of an HTML element (with the closest [ancestor][] in the [flat tree][] being henceforth referred to as the _ancestor_ element) that has a [computed value][] for the [display property][display] that is not one of the following: 'table', 'flex', 'grid', 'ruby', 'table-row-group', 'table-header-group', 'table-footer-group', 'table-row', table-column-group', 'table-column', 'ruby-base-container' and 'ruby-text-container'; and
+- the _ancestor_ element has other [descendant][] [visible][] [text nodes][text node] in the [flat tree][]; and
+- the [descendant][] [visible][] [text nodes][text node] of the _ancestor_ element belong to the same [inline formatting context][].
 
 ## Expectation
 
@@ -51,6 +52,7 @@ For each test target, the [outcome][] of one of the following rules is "passed":
 
 ## Assumptions
 
+- This rule assumes that [`br` HTML elements][br] are only used for line breaks that are actually part of the content and not for separating thematic groups of the content. 
 - This rule assumes that the link is distinguishable from the rest of the text with color, which means it fails SC 1.4.1 when there is not another way to distinguish it.
 - This rule assumes that the 3:1 contrast difference between text is minimal to what would be sufficient to meet WCAG 2.0. This value is part of [technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183), but is not specified in the [1.4.1 success criterion](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
 - This rule assumes that any change in font is sufficiently distinguishable, and that fonts are loaded when they are present.
@@ -329,11 +331,15 @@ This paragraph has no visible descendant text nodes apart from those in the link
 
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor
 [background color]: #background-colors-of-text 'Definition of background color'
+[br]: https://html.spec.whatwg.org/#the-br-element
 [cell]: https://www.w3.org/TR/wai-aria/#cell
+[computed value]: https://drafts.csswg.org/css-cascade-4/#computed-value
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
+[display]: https://drafts.csswg.org/css-display/#the-display-properties
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [focused]: #focused 'Definition of focused'
 [foreground color]: #foreground-colors-of-text 'Definition of foreground color'
+[inline formatting context]: https://drafts.csswg.org/css-display/#inline-formatting-context
 [hovered]: #hovered 'Definition of hovered'
 [link]: https://www.w3.org/TR/wai-aria/#link
 [listitem]: https://www.w3.org/TR/wai-aria/#listitem

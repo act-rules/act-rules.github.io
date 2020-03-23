@@ -7,6 +7,21 @@ const isUrl = require('is-url')
 const getMarkdownAstNodesOfType = require('../utils/get-markdown-ast-nodes-of-type')
 const uniqueArray = require('../utils/unique-array')
 
+const whitelist = [
+	/^description$/,
+	/^#applicability$/,
+	/^#expectation(-[1-9][0-9]*)?$/,
+	/^#assumptions$/,
+	/^#accessibility-support$/,
+	/^#background$/,
+	/^#test-cases$/,
+	/^#passed(-example-[1-9][0-9]*)?$/,
+	/^#failed(-example-[1-9][0-9]*)?$/,
+	/^#inapplicable(-example-[1-9][0-9]*)?$/,
+	/^#glossary$/,
+	/^#acknowledgments$/,
+]
+
 describe(`Validate glossary references`, () => {
 	/**
 	 * Rules pages
@@ -46,10 +61,16 @@ function validateGlossaryReferences({ markdownAST }, { glossaryKeys = [] }) {
 	 * get all links that are not a URL (eg: #semantic-role)
 	 * -> this test does not cover normal valid URL's (see test - 'link-is-outdated.js')
 	 */
-	const links = uniqueArray([...pageLinks, ...definitionLinks].filter(link => !isUrl(link))).filter(link => {
-		const [firstCharacter] = link.split('')
-		return firstCharacter === '#'
-	})
+	const links = uniqueArray([...pageLinks, ...definitionLinks].filter(link => !isUrl(link)))
+		.filter(link => {
+			const [firstCharacter] = link.split('')
+			return firstCharacter === '#'
+		})
+		.filter(link => {
+			// Ignore internal links that are part of the default rule template
+			return whitelist.every(regex => !regex.test(link))
+		})
+
 	if (!links || !links.length) {
 		return
 	}

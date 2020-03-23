@@ -3313,26 +3313,8 @@
       }
     },
     {
-      "testcaseId": "e2c9974fad3a78071aef3c0accdc71905fd31f0b",
-      "testcaseTitle": "Passed Example 5",
-      "url": "https://act-rules.github.io/testcases/97a4e1/e2c9974fad3a78071aef3c0accdc71905fd31f0b.html",
-      "relativePath": "testcases/97a4e1/e2c9974fad3a78071aef3c0accdc71905fd31f0b.html",
-      "expected": "passed",
-      "ruleId": "97a4e1",
-      "ruleName": "Button has accessible name",
-      "rulePage": "https://act-rules.github.io/rules/97a4e1",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
       "testcaseId": "55660f4bda3d09bcb71301ab8c592d5108a3a03e",
-      "testcaseTitle": "Passed Example 6",
+      "testcaseTitle": "Passed Example 5",
       "url": "https://act-rules.github.io/testcases/97a4e1/55660f4bda3d09bcb71301ab8c592d5108a3a03e.html",
       "relativePath": "testcases/97a4e1/55660f4bda3d09bcb71301ab8c592d5108a3a03e.html",
       "expected": "passed",
@@ -3350,7 +3332,7 @@
     },
     {
       "testcaseId": "3b85f76d3bb6a9266944e3d90c8ffe0fda73df02",
-      "testcaseTitle": "Passed Example 7",
+      "testcaseTitle": "Passed Example 6",
       "url": "https://act-rules.github.io/testcases/97a4e1/3b85f76d3bb6a9266944e3d90c8ffe0fda73df02.html",
       "relativePath": "testcases/97a4e1/3b85f76d3bb6a9266944e3d90c8ffe0fda73df02.html",
       "expected": "passed",
@@ -3368,7 +3350,7 @@
     },
     {
       "testcaseId": "e324dcb57f827bee2cba21d3569f7c26ce95c092",
-      "testcaseTitle": "Passed Example 8",
+      "testcaseTitle": "Passed Example 7",
       "url": "https://act-rules.github.io/testcases/97a4e1/e324dcb57f827bee2cba21d3569f7c26ce95c092.html",
       "relativePath": "testcases/97a4e1/e324dcb57f827bee2cba21d3569f7c26ce95c092.html",
       "expected": "passed",
@@ -3497,6 +3479,24 @@
       "testcaseTitle": "Inapplicable Example 3",
       "url": "https://act-rules.github.io/testcases/97a4e1/abfff53dac0f85dab8d6f30a1f4d89d25efa0219.html",
       "relativePath": "testcases/97a4e1/abfff53dac0f85dab8d6f30a1f4d89d25efa0219.html",
+      "expected": "inapplicable",
+      "ruleId": "97a4e1",
+      "ruleName": "Button has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/97a4e1",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "577ffff2ede7faace8ac10e77e14e3bbb442fbd5",
+      "testcaseTitle": "Inapplicable Example 4",
+      "url": "https://act-rules.github.io/testcases/97a4e1/577ffff2ede7faace8ac10e77e14e3bbb442fbd5.html",
+      "relativePath": "testcases/97a4e1/577ffff2ede7faace8ac10e77e14e3bbb442fbd5.html",
       "expected": "inapplicable",
       "ruleId": "97a4e1",
       "ruleName": "Button has accessible name",

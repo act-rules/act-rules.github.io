@@ -3,6 +3,8 @@ title: Correct autocomplete field
 key: correct-autocomplete-field
 unambiguous: true
 objective: true
+input_aspects:
+  - DOM tree
 ---
 
 Any field name listed in the autocomplete fields table from the HTML 5.2 specification:

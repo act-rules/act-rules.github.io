@@ -3,6 +3,9 @@ title: Large Scale Text
 key: large-scale-text
 unambiguous: true
 objective: true
+input_aspects:
+  - CSS styling
+  - DOM tree
 ---
 
 Text nodes with a [computed](https://www.w3.org/TR/css-cascade-3/#computed-value) [font-size](https://www.w3.org/TR/css-fonts-3/#propdef-font-size) of:

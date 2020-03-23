@@ -10,10 +10,15 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:G208: # Including the text of the visible label as part of the accessible name
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Bryn Anderson
@@ -47,6 +52,7 @@ There are no major accessibility support issues known for this rule.
 ## Background
 
 - [Understanding Success Criterion 2.5.3: Label in Name](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)
+- [G208: Including the text of the visible label as part of the accessible name](https://www.w3.org/WAI/WCAG21/Techniques/general/G208)
 
 ## Test Cases
 
@@ -57,7 +63,7 @@ There are no major accessibility support issues known for this rule.
 [Visible][] label and [accessible name][] matches when trailing white spaces are removed.
 
 ```html
-<div role="link" aria-label="next page ">next page</div>
+<a href="https://act-rules.github.io/" aria-label="ACT rules ">ACT rules</a>
 ```
 
 #### Passed Example 2
@@ -65,7 +71,7 @@ There are no major accessibility support issues known for this rule.
 Character insensitivity between [visible][] label and [accessible name][].
 
 ```html
-<div role="link" aria-label="Next Page">next page</div>
+<a href="https://act-rules.github.io/" aria-label="act rules ">ACT rules</a>
 ```
 
 #### Passed Example 3
@@ -83,7 +89,7 @@ Full [visible][] label is contained in the [accessible name][].
 [Visible][] label doesn't match [accessible name][].
 
 ```html
-<div role="link" aria-label="OK">Next</div>
+<a href="https://act-rules.github.io/" aria-label="WCAG">ACT rules</a>
 ```
 
 #### Failed Example 2

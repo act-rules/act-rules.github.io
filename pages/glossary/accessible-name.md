@@ -3,6 +3,10 @@ title: Accessible Name
 key: accessible-name
 unambiguous: true
 objective: true
+input_aspects:
+  - Accessibility tree
+  - CSS styling
+  - DOM tree
 ---
 
 The _accessible name_ is the programmatically determined name of a user interface element that is [included in the accessibility tree](#included-in-the-accessibility-tree).
@@ -21,7 +25,7 @@ For native markup languages, such as HTML and SVG, additional information on how
 - There exists a popular browser which does not perform the same trimming and flattening depending whether the accessible name comes from content, an `aria-label` attribute, or an `alt` attribute.
 - There exists a popular browser which assign no accessible name (`null`) when none is provided, instead of assigned an empty accessible name (`""`).
 
-#### Examples of accessible names
+#### Examples
 
 **Note:** The examples presented here are non-normative and not testable. They serve to illustrate some common pitfalls about the definition and to help implementers of ACT rules understand it.
 

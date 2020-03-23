@@ -3,6 +3,8 @@ title: Owned by
 key: owned-by
 unambiguous: true
 objective: true
+input_aspects:
+  - Accessibility tree
 ---
 
 An element A is _owned by_ element B if element A is a child of element B in the [accessibility tree][].

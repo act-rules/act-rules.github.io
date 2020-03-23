@@ -45,7 +45,7 @@ The rule applies to each HTML element that has one of the following [semantic ro
 
 For each test target with a [form field error indicator][], at least one of the [form field error indicators][form field error indicator] allows the identification of the related test target, through [text][], or [non-text content][], or through [presentation][].
 
-**Note**: This rule does not test [form field error indicators][form field error indicator] shown on a different page than the one of the test target.
+**Note**: This rule does not test [form field error indicators][form field error indicator] shown on a different page than that of the test target.
 
 **Note**: A single [form field error indicator][] can be related to multiple test targets. For example, an error message at the top of a form can list all the form fields that are required and are empty.
 

@@ -5,6 +5,11 @@ rule_type: atomic
 description: |
   This rule checks that WAI-ARIA states or properties are allowed for the element they are specified on.
 accessibility_requirements:
+  wcag-technique:ARIA5: # Using WAI-ARIA state and property attributes to expose the state of a user interface component
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
   aria11:state_property_processing:
     title: ARIA 1.1, 7.6 State and Property Attribute Processing
     forConformance: true
@@ -13,7 +18,7 @@ accessibility_requirements:
     inapplicable: satisfied
 input_aspects:
   - DOM Tree
-acknowledgements:
+acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Jean-Yves Moyen
@@ -43,6 +48,7 @@ _There are no major accessibility support issues known for this rule._
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 - [WAI-ARIA 1.1, Supported States and Properties](https://www.w3.org/TR/wai-aria-1.1/#states_and_properties)
 - [WAI-ARIA 1.1, Global States and Properties](https://www.w3.org/TR/wai-aria-1.1/#global_states)
+- [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA5)
 
 ## Test Cases
 

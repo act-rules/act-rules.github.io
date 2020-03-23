@@ -23,7 +23,18 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to each HTML element that has one of the following [semantic roles][semantic role]: `checkbox`, `combobox`, `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch` or `textbox`.
+The rule applies to each HTML element that has one of the following [semantic roles][semantic role]: 
+- `checkbox`, 
+- `combobox`, 
+- `listbox`, 
+- `menuitemcheckbox`, 
+- `menuitemradio`, 
+- `radio`, 
+- `searchbox`, 
+- `slider`, 
+- `spinbutton`, 
+- `switch` or 
+- `textbox`.
 
 **Note**: The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.1][] roles that:
 

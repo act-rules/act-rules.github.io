@@ -2,7 +2,7 @@
 title: Visible Text Content
 key: visible-text-content
 unambiguous: true
-objective: true
+objective: false
 input_aspects:
   - CSS styling
   - DOM tree

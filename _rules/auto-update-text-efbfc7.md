@@ -3,7 +3,7 @@ id: efbfc7
 name: Text content that updates automatically can be paused, stopped or hidden
 rule_type: atomic
 description: |
-  This rule checks that there are mechanisms to pause, stop or hide the auto-updating of text content.
+  This rule checks that there are instruments to pause, stop or hide the auto-updating of text content.
 accessibility_requirements: # Remove whatever is not applicable
   wcag20:2.2.2: # Pause, Stop, Hide (A)
     forConformance: true
@@ -31,14 +31,14 @@ The rule applies to any [visible][] [HTML element][] if:
 
 ## Expectation
 
-For the test target there exists a [mechanism][] to achieve one of the following objectives:
+For the test target there exists an [instrument][] in the same [HTML document][] of the test target, or in another [HTML document][] that is [linked][hyperlink] from the [HTML document][] of the test target, to achieve one of the following objectives:
 
 - pause and resume the change of the [visible text content][]; or
 - stop the change of the [visible text content][]; or
 - hide the content that changes; or
 - alter the frequency of the changes of the [visible text content][].
 
-**Note**: If there is more than one test target, a single [mechanism][] to pause, stop, hide or alter the frequency for all test targets is sufficient.
+**Note**: If there is more than one test target, a single [instrument][] to pause, stop, hide or alter the frequency for all test targets is sufficient.
 
 ## Assumptions
 
@@ -100,7 +100,7 @@ The text content of the `span` element automatically updates after the page comp
 
 #### Passed Example 4
 
-The text content of the `span` element automatically updates after the page completes loading. A [mechanism][] is available to change the update frequency. The rule is not applicable to the `p` element because it has a child (the `span` element) whose content updates.
+The text content of the `span` element automatically updates after the page completes loading. An [instrument][] is available to change the update frequency. The rule is not applicable to the `p` element because it has a child (the `span` element) whose content updates.
 
 ```html
 <body onload="startUpdates()">
@@ -117,7 +117,7 @@ The text content of the `span` element automatically updates after the page comp
 
 #### Failed Example 1
 
-The text content of the `span` element automatically updates after the page completes loading. There is no [mechanism][] to stop, pause, hide or alter the frequency of the automatic updates.
+The text content of the `span` element automatically updates after the page completes loading. There is no [instrument][] to stop, pause, hide or alter the frequency of the automatic updates.
 
 ```html
 <body onload="startUpdates()">
@@ -230,12 +230,11 @@ The color of the element is updated, but not its `innerText` property.
 [g186]: https://www.w3.org/WAI/WCAG21/Techniques/general/G186
 [html document]: https://dom.spec.whatwg.org/#html-document
 [html element]: https://html.spec.whatwg.org/multipage/dom.html#htmlelement
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[hyperlink]: https://html.spec.whatwg.org/#hyperlink
 [last activation timestamp]: https://html.spec.whatwg.org/#last-activation-timestamp
-[mechanism]: #mechanism-to-achieve-an-objective 'Definition of mechanism to achieve an objective'
+[instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [sc 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
 [sibling]: https://dom.spec.whatwg.org/#concept-tree-sibling
 [visible text content]: #visible-text-content 'Definition of visible text content'
 [visible]: #visible 'Definition of visible'
-[whitespace]: #whitespace 'Definition of whitespace'
 [window]: https://html.spec.whatwg.org/#window

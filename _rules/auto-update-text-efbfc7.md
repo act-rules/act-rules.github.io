@@ -29,7 +29,7 @@ The rule applies to any [visible][] [HTML element][] if:
   - **(ready)** has [readiness][document readiness] equal to "complete" before the change happens; and
   - **(inactive)** is associated with a [window][] that has the [last activation timestamp][] equal to "positive infinity".
 
-## Expectation 1
+## Expectation
 
 For the test target there exists a [mechanism][] to achieve one of the following objectives:
 

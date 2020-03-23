@@ -39,7 +39,7 @@ The rule applies to each HTML element that has one of the following [semantic ro
 **Note**: The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.1][] roles that:
 
 - inherit from the [abstract][] `input` or `select` role, and
-- do not have a [required context][] role that itself inherits from one of those roles.
+- do not have a [required context][] role that inherits from one of those roles.
 
 ## Expectation 1
 

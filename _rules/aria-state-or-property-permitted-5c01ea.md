@@ -18,6 +18,7 @@ accessibility_requirements:
     inapplicable: satisfied
 input_aspects:
   - Accessibility Tree
+  - CSS styling
   - DOM Tree
 acknowledgments:
   authors:

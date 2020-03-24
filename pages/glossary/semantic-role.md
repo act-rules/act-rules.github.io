@@ -13,7 +13,7 @@ Valid semantic roles are defined by standards. For web content and applications 
 
 The _semantic role_ of an element is determined by the first of these cases that applies:
 
-1. **Conflict** If the element has an [explicit role][] which is either `none` or `presentation`, but the element is [included in the accessibility tree][], or would be when it is not [hidden](https://www.w3.org/TR/wai-aria-1.2/#dfn-hidden), then its _semantic role_ is its **[implicit role][]**.
+1. **Conflict** If the element has an [explicit role][] which is either `none` or `presentation`, but the element is [included in the accessibility tree][], or would be when it is not [excluded from the accessibility tree](https://w3c.github.io/aria/#tree_exclusion), then its _semantic role_ is its **[implicit role][]**.
 2. **Explicit** If the element has an [explicit role][], then its _semantic role_ is its [explicit role][].
 3. **Implicit** The _semantic role_ of the element is its [implicit role][].
 

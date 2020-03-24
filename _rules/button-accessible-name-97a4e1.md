@@ -87,21 +87,13 @@ This element with a `button` role has an [accessible name][] because of its `ari
 
 #### Passed Example 5
 
-This `summary` element with an [implicit role](#implicit-role) of `button` has an [accessible name][] because of its text content.
-
-```html
-<summary>Press Here</summary>
-```
-
-#### Passed Example 6
-
 This `button` element with the `disabled` attribute has an [accessible name][] because of its text content.
 
 ```html
 <button disabled>Delete</button>
 ```
 
-#### Passed Example 7
+#### Passed Example 6
 
 This off screen `button` element has an [accessible name][] because of its text content.
 
@@ -120,7 +112,7 @@ This off screen `button` element has an [accessible name][] because of its text 
 </html>
 ```
 
-#### Passed Example 8
+#### Passed Example 7
 
 This `input` element has an [accessible name][] because of the default accessible name for an `input` element with a `type` attribute set to `reset`.
 
@@ -208,6 +200,14 @@ This `button` element has a `link` role. Links are tested in a separate rule whi
 ```
 
 #### Inapplicable Example 4
+
+There is no element with a semantic role of `button`.
+
+```html
+<div>Press Here</div>
+```
+
+#### Inapplicable Example 5
 
 This `button` element has an [explicit role][] of `none`; it is not [focusable][] because it is `disabled`. Thus it has a [semantic role][] of `none`.
 

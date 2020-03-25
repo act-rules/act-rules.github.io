@@ -10,25 +10,36 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:G94: # Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:G95: # Providing short text alternatives that provide a brief description of the non-text content
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
-acknowledgements:
+  - Language
+acknowledgments:
   authors:
     - Bryn Anderson
 ---
 
 ## Applicability
 
-The rule applies to any HTML `input` element with a [`type`](https://html.spec.whatwg.org/#states-of-the-type-attribute) of `image`, or any HTML element with the [semantic role](#semantic-role) of `img`, that is [included in the accessibility tree][], and has an [accessible name][] that is equivalent to the [filename](#filename) specified in the `src` attribute. Difference in letter casing, and forward and trailing [whitespace](#whitespace) should be ignored.
+The rule applies to any HTML `input` element with a [`type`][type] of `image`, or any HTML element with the [semantic role][] of `img`, that is [included in the accessibility tree][], and has an [accessible name][] that is equivalent to the [filename][] specified in the `src` attribute. Difference in letter casing, and forward and trailing [whitespace][] should be ignored.
 
 ## Expectation
 
-Each test target has an [accessible name][] that serves an equivalent purpose to the [non-text content](https://www.w3.org/TR/WCAG21/#dfn-non-text-content).
+Each test target has an [accessible name][] that serves an equivalent purpose to the [non-text content][].
 
 ## Assumptions
 
-_There are currently no assumptions_
+This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
@@ -38,6 +49,8 @@ _There are no major accessibility support issues known for this rule._
 
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 - [F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)](https://www.w3.org/WAI/WCAG21/Techniques/failures/F30)
+- [G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content](https://www.w3.org/WAI/WCAG21/Techniques/general/G94)
+- [G95: Providing short text alternatives that provide a brief description of the non-text content](https://www.w3.org/WAI/WCAG21/Techniques/general/G95)
 
 ## Test Cases
 
@@ -45,77 +58,98 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The `img` element's [accessible name][] uses the filename which accurately describes the image.
+This `img` element has an [accessible name][] equivalent to the filename. The [accessible name][] accurately describes the image.
 
 ```html
-<img src="https://www.w3.org/WAI/demos/bad/img/w3c" alt="w3c" />
+<html lang="en">
+	<img src="https://www.w3.org/WAI/demos/bad/img/w3c" alt="w3c" />
+</html>
 ```
 
 #### Passed Example 2
 
-The `img` element's [accessible name][] includes the filename, which in combination with the text content of the `a` element accurately describes the image.
+This `img` element has an [accessible name][] equivalent to the filename. The [accessible name][] in combination with the text content of the `a` element accurately describes the image.
 
 ```html
-<a href="https://www.w3.org/WAI/demos/bad/img/w3c.png" download
-	>Download <img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png"
-/></a>
+<html lang="en">
+	<a href="https://www.w3.org/WAI/demos/bad/img/w3c.png" download
+		>Download <img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png"
+	/></a>
+</html>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-The `img` element's [accessible name][] matches the image filename. However the presence of the file extension in the [accessible name][] is redundant and results in the [accessible name][] not accurately describing the image.
+This `img` element has [accessible name][] matching the image filename. The presence of the file extension in the [accessible name][] is redundant and results in the [accessible name][] not accurately describing the image.
 
 ```html
-<img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png" />
+<html lang="en">
+	<img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png" />
+</html>
 ```
 
 #### Failed Example 2
 
-The `input` element with a `type` of `image` has an [accessible name][] that matches the filename. However the presence of the file extension in the [accessible name][] is redundant and results in the [accessible name][] not accurately describing the image.
+This `input` element with a `type` of `image` has a [semantic role][] of `img` and an [accessible name][] matching the filename. The presence of the file extension in the [accessible name][] is redundant and results in the [accessible name][] not accurately describing the image.
 
 ```html
-<input type="image" src="https://www.w3.org/WAI/demos/bad/before/img/top_weather.gif" alt="top_weather.gif" />
+<html lang="en">
+	<input type="image" src="https://www.w3.org/WAI/demos/bad/before/img/top_weather.gif" alt="top_weather.gif" />
+</html>
 ```
 
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-The `img` element doesn't have the semantic role of image.
+This `img` element has a [semantic role][] of `presentation`, not `img`.
 
 ```html
-<img role="presentation" alt="" />
+<html lang="en">
+	<img role="presentation" alt="" />
+</html>
 ```
 
 #### Inapplicable Example 2
 
-The `img` element is not [included in the accessibility tree][].
+This `img` element is not [included in the accessibility tree][].
 
 ```html
-<img style="display:none;" alt="" />
+<html lang="en">
+	<img style="display:none;" alt="" />
+</html>
 ```
 
 #### Inapplicable Example 3
 
-The `img` element's [accessible name][] is not equivalent to the file name specified in the `src` attribute.
+This `img` element has an [accessible name][] which is not equivalent to the filename.
 
 ```html
-<img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="modanna lily" />
+<html lang="en">
+	<img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="modanna lily" />
+</html>
 ```
 
 #### Inapplicable Example 4
 
-The `img` element's `alt` attribute matches the filename but is overridden by the `aria-label` value which takes precedence in the [accessible name][] calculation.
+This `img` element has an [accessible name][] which is not equivalent to the filename because the `aria-label` value takes precedence over the `alt` value in the [accessible name][] calculation.
 
 ```html
-<img
-	src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg"
-	alt="teaser_right2.jpg"
-	aria-label="modanna lily"
-/>
+<html lang="en">
+	<img
+		src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg"
+		alt="teaser_right2.jpg"
+		aria-label="modanna lily"
+	/>
+</html>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
+[filename]: #filename 'Definition of filename'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content
+[semantic role]: #semantic-role 'Definition of semantic role'
+[type]: https://html.spec.whatwg.org/#states-of-the-type-attribute
+[whitespace]: #whitespace 'Definition of whitespace'

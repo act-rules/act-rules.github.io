@@ -12,6 +12,10 @@
 
 # Tag(s)
 - svg # `aria-query` dom tags does not list `svg`
+- xhtml
+- DOCTYPE
+- iFrame # used to demonstrate bad spelling
+- feImage
 
 # Domain-specific words, Definitions & other allowed terms
 - URI
@@ -22,6 +26,7 @@
 - CSS3
 - UA
 - UI
+- api # lowercase needed in reference list
 - APIs
 - MDN
 - BCP
@@ -35,6 +40,8 @@
 - DOCX
 - DPUB
 - DNS
+- BCP
+- bcp
 - Esc # esc key on a keyboard
 - url
 - voiceover
@@ -47,16 +54,24 @@
 - unfocusable
 - tabindex
 - whitespace
+- Whitespace
 - namespace
 - namespaces
 - webpage
 - wai-aria-specifications
 - autoplay
 - autoplays
+- columnheader
+- rowheader
+- colspan
 - presentational
 - EARL10-Schema
 - labelable
 - merchantability
+- de-hello
+- 14pt
+- 18pt
+- Helvetica
 
 # Notes and acronyms
 - TODO
@@ -87,6 +102,7 @@
 - viewport
 - lang
 - xml:lang
+- xml:id
 - http-equiv
 - user-scalable
 - user-scalable=yes
@@ -94,6 +110,8 @@
 - rotate3d
 - rotateZ
 - matrix3d
+- rowheader
+- columnheader
 
 # Unsure why the dictionary does not have these words
 - programmatically
@@ -102,6 +120,8 @@
 - Autofill
 - implementers
 - Implementers
+- backtick
+- camelCase
 
 # Parts of Unicode
 - 000A

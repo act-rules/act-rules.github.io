@@ -24,7 +24,7 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Wilco Fiers
 ---
@@ -33,7 +33,7 @@ acknowledgements:
 
 The rule applies to any element with an `aria-hidden="true"` attribute.
 
-**Note**: Using `aria-hidden="false"` on a descendant of an element with `aria-hidden="true"` **does not** expose that element. `aria-hidden="true"` hides itself and all its content from assistive technologies.
+**Note:** Using `aria-hidden="false"` on a descendant of an element with `aria-hidden="true"` **does not** expose that element. `aria-hidden="true"` hides itself and all its content from assistive technologies.
 
 ## Expectation
 
@@ -49,7 +49,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-By adding `aria-hidden="true"` to an element, content authors ensure that assistive technologies will ignore the element. This can be used to hide [decorative](#decorative) parts of a web page, such as icon fonts - that are not meant to be read by assistive technologies.
+By adding `aria-hidden="true"` to an element, content authors ensure that assistive technologies will ignore the element. This can be used to hide parts of a web page that are [pure decoration](https://www.w3.org/TR/WCAG21/#dfn-pure-decoration), such as icon fonts - that are not meant to be read by assistive technologies.
 
 A [focusable][] element with `aria-hidden="true"` is ignored as part of the reading order, but still part of the focus order, making it's state of [visible](#visible) or hidden unclear.
 

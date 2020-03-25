@@ -17,7 +17,7 @@ const uniqueArray = require('../utils/unique-array')
 
 describe(`Validate link references`, () => {
 	describeRule('Rules', ({ markdownAST }) => validateLinkReferences(markdownAST))
-	describePage('Rules', ({ markdownAST }) => validateLinkReferences(markdownAST))
+	describePage('Pages', ({ markdownAST }) => validateLinkReferences(markdownAST))
 })
 
 function validateLinkReferences(markdownAST) {

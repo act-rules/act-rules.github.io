@@ -1,9 +1,11 @@
 ---
 title: Equivalent resource
 key: equivalent-resource
+unambiguous: true
+objective: false
 ---
 
-Non-identical resources can still be equivalent by equally complying to the expectation formed by the user when navigating to them, thus serving an equivalent purpose. This would usually involve that the advertised key content is the same.
+Non-identical resources can still be _equivalent resources_ by equally complying to the expectation formed by the user when navigating to them, thus serving an equivalent purpose. This would usually involve that the advertised key content is the same.
 
 Web pages and documents (e.g. PDFs, office formats etc.) may be equivalent resources, even if the resources:
 

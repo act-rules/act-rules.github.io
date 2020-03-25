@@ -141,7 +141,8 @@
 		"retext-syntax-urls": "^1.0.2",
 		"unified": "^8.4.2",
 		"unist-util-visit": "^2.0.2",
-		"vfile-reporter": "^6.0.0"
+		"vfile-reporter": "^6.0.0",
+		"html-tags": "^3.1.0"
 	},
 	"keywords": [
 		"WCAG",
@@ -202,8 +203,5 @@
 		"hooks": {
 			"pre-commit": "lint-staged"
 		}
-	},
-	"dependencies": {
-		"html-tags": "^3.1.0"
 	}
 }

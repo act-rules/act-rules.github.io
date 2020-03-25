@@ -14,3 +14,6 @@ An HTML element is _hidden_ if at least one of the following is true for itself 
 - has a [computed](https://www.w3.org/TR/css-cascade/#computed-value) CSS property `display` of `none`; or
 - has a [computed](https://www.w3.org/TR/css-cascade/#computed-value) CSS property `visibility` of `hidden`.
 - has an `aria-hidden` attribute set to `true`
+
+[ancestors]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'Definition Ancestor'
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'

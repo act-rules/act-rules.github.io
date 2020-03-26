@@ -11,6 +11,7 @@
 		"WebPage": "sch:WebPage",
 		"url": "dct:source",
 		"source": "dct:source",
+		"redirectedTo": "dct:source",
 		"assertions": {
 			"@reverse": "subject"
 		},

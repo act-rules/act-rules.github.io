@@ -129,7 +129,7 @@ This text field does not need to have its [visible][] text match the [accessible
 
 #### Inapplicable Example 3
 
-This `div` has does not have a widget role, so the [visible][] text does not need to match the [accessible name][].
+This `div` element does not have a widget role, so the [visible][] text does not need to match the [accessible name][].
 
 ```html
 <div role="tooltip" aria-label="OK">Next</div>

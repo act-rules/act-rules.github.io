@@ -28,5 +28,7 @@ ACT-R has conference calls every 4 weeks. If you are interested in becoming an a
 
 **[Join the ACT-Rules community group now!](https://www.w3.org/community/wp-login.php?redirect_to=%2Fcommunity%2Fact-r%2Fjoin)** or visit [w3.org/community/act-r/][act-r] for more information.
 
+For info on how to use this GitHub repository, see the [ACT-Rules GitHub Guidlines](github-guidelines.md).
+
 [wcag21]: https://www.w3.org/TR/WCAG21/
 [act-r]: https://www.w3.org/community/act-r/

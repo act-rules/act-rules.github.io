@@ -68,7 +68,7 @@ This rule assumes that the language of each test target can be correctly determi
 
 #### Passed Example 1
 
-This `<title>` element describes the content of the document.
+This `title` element describes the content of the document.
 
 ```html
 <html lang="en">
@@ -85,7 +85,7 @@ This `<title>` element describes the content of the document.
 
 #### Passed Example 2
 
-This `<title>` element, the first of two, describes the content of the document.
+This `title` element, the first of two, describes the content of the document.
 
 ```html
 <html lang="en">
@@ -103,7 +103,7 @@ This `<title>` element, the first of two, describes the content of the document.
 
 #### Passed Example 3
 
-This `<title>` element, which is within the `body`, describes the content of the document. Even though it is not placed within the `<head>` element, as expected [according to the HTML specification](https://html.spec.whatwg.org/#the-title-element), the rule still passes because the browser fixes it and it doesn't cause any known accessibility issues.
+This `title` element, which is within the `body`, describes the content of the document. Even though it is not placed within the `head` element, as expected [according to the HTML specification](https://html.spec.whatwg.org/#the-title-element), the rule still passes because the browser fixes it and it doesn't cause any known accessibility issues.
 
 ```html
 <html lang="en">
@@ -121,7 +121,7 @@ This `<title>` element, which is within the `body`, describes the content of the
 
 #### Failed Example 1
 
-This `<title>` element does not describe the content of the document.
+This `title` element does not describe the content of the document.
 
 ```html
 <html lang="en">
@@ -138,7 +138,7 @@ This `<title>` element does not describe the content of the document.
 
 #### Failed Example 2
 
-This `<title>` element, the first of two, does not describe the content of the document. Most browsers, and this rule, only look at the first `<title>` element.
+This `title` element, the first of two, does not describe the content of the document. Most browsers, and this rule, only look at the first `title` element.
 
 ```html
 <html lang="en">

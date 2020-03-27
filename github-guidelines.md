@@ -19,7 +19,7 @@ GitHub has excellent documentation. If you are new to GitHub, please see their d
   - 2 weeks for a new rule, or for major changes.
   - 1 week for smaller changes.
   - final call can be skipped for changes that do not change the meaning of the rule and don't change or remove test cases.
-- Review your own pull requests before you request changes
+- Review your own pull requests before you request changes.
 - Use the "reviewers wanted" label when the rule is ready for review.
 - For final calls, add the appropriate final call label, send an e-mail to the ACT-R mailing list, and remove the "reviewers wanted" label.
 
@@ -27,7 +27,7 @@ GitHub has excellent documentation. If you are new to GitHub, please see their d
 
 ## For people with write access
 
-- Don't edit or delete other people's posts
+- Don't edit or delete other people's posts.
 - Don't update, merge or close other people's pull requests.
 - Don't close other people's issues, unless you merged a pull request that completely resolves the issue.
 

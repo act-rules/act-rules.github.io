@@ -70,7 +70,7 @@ This `<audio>` element does not play automatically for more than 3 seconds.
 
 #### Passed Example 2
 
-The `audio` output of this `<video> element does not last longer than 3 seconds.
+This `video` element's `audio` output does not last longer than 3 seconds.
 
 ```html
 <video autoplay>
@@ -104,7 +104,7 @@ This `video` element plays some audio automatically for more than 3 seconds.
 
 #### Inapplicable Example 1
 
-The audio of this `<video>` element autoplays for longer than 3 seconds but is `muted`.
+This `video` element has audio that autoplays for longer than 3 seconds but is muted.
 
 ```html
 <video autoplay muted>
@@ -115,7 +115,7 @@ The audio of this `<video>` element autoplays for longer than 3 seconds but is `
 
 #### Inapplicable Example 2
 
-The `src` file of this `video` element has no audio output.
+This `video` element refers to a source file that has no audio output.
 
 ```html
 <video autoplay>

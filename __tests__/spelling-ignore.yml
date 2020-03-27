@@ -112,6 +112,14 @@
 - matrix3d
 - rowheader
 - columnheader
+- clientHeight
+- clientWidth
+- scrollbars
+- documentElement
+- rects
+- nowrap
+- javascript
+- Reflow
 
 # Unsure why the dictionary does not have these words
 - programmatically

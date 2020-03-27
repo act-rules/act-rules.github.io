@@ -3,7 +3,7 @@ id: 59br37
 name: Zoomed text node is not clipped with CSS overflow
 rule_type: atomic
 description: |
-  This rule checks that text nodes are not unintentionally clipped by overflow, when a page is zoomed to 200% on a 720p display;
+  This rule checks that text nodes are not unintentionally clipped by overflow, when a page is zoomed to 200% on 1280 by 1024 display;
 accessibility_requirements: # Remove whatever is not applicable
   wcag20:1.4.4: # Resize Text (AA)
     forConformance: true
@@ -13,39 +13,42 @@ accessibility_requirements: # Remove whatever is not applicable
 input_aspects:
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Wilco Fiers
+  assets:
+    - The raven, Edgar Allan Poe
 ---
 
 ## Applicability
 
-The rule applies to any [text node][] that:
+The rule applies to any [text node][] for which all of the following is true when in a [display size][] of 640 by 512:
 
-- is [visible][] in a [display size][] of 1280 by 1024; and
-- has an HTML element as a [parent][]; and
-- has an [ancestor][] with the a [computed][] [overflow][] of `none` or `clip`, when in a [display size][] of 640 by 512.
-- does not have an [ancestor][] with an `aria-hidden` attribute set to `true`
+- The [text node][] is [visible][]; and
+- The [text node][] has an HTML element as a [parent][] in the [flat tree][]; and
+- The [text node][] has an [ancestor][] in the [flat tree][] with the a [computed][] [overflow-x][overflow] or [overflow-y][overflow] of `none` or `clip`; and
+- The [text node][] does not have an [ancestor][] in the [flat tree][] with an `aria-hidden` attribute set to `true`
+
+**note**: A [display size][] of 640 by 512 is equivalent to a [display size][] of 1280 by 1024 zoomed 200%.
 
 ## Expectation
 
-Each test target is not [clipped by overflow][clipped] of an [ancestor][] when in a [display size][] of 640 by 512, except if the [clipping][clipped] [ancestor][] has one of the following:
+Each test target is not [clipped by overflow][clipped] of an [ancestor][] in the [flat tree][] when in a [display size][] of 640 by 512, except if the [clipping][clipped] [ancestor][] has one of the following:
 
-- **text-overflow**: A [computed][] [line-wrap][] of `nowrap`, and a [computed][] [text-overflow][] that is not `clip` or `clip clip`; or
+- **text-overflow**: A [computed][] [white-space][] of `nowrap`, and a [computed][] [text-overflow][] that is not `clip`; or
 
 - **line wrapping**: A [computed][] [line-height][] equal to or greater than its
-  height of its [bounding box][], or in case of a [computed][] [overflow][] of `clip`, its [content box][]; or
-
-- **hidden text**: A [clientWidth][] or [clientHeight][] of 1 or less.
+  height of its [bounding box][], or in case of a [computed][] [overflow][] of `clip`, its [content box][].
 
 ## Assumptions
 
-TODO: properly reword these:
+If any of the following assumptions is true, failing this rule may not result in a failure of [success criterion 1.4.4 Resize text](https://www.w3.org/TR/WCAG21/#resize-text):
 
-- There's no other mechanism to resize
-- Resizing is possible in the web page
-- Text nodes containing decorative content are marked up with aria-hidden=true
-- 200% at 720p is sufficient for this SC
+- There is no other mechanism for resizing text available on the page, that can be used to resize text to 200% without loss of information or functionality. This includes font resizing in the browser, or a javascript mechanism of resizing in the page.
+
+- [Text nodes][text node] can not be [clipped by overflow][clipped] without loss of information, except for [text nodes][text node] with an [ancestor][] with `aria-hidden` set to `true`, or when specific styles have been applied to ensure text is clipped cleanly (text-overflow, line wrapping or hidden text).
+
+- While [success criterion 1.4.4 Resize text](https://www.w3.org/TR/WCAG21/#resize-text) does not explicitly mention which display size has to be resized up to 200%, it is assumed that a [display size][] of 1280 by 1024 is applicable. A 1280 by 1024 [display size][] is explicitly mentioned under [success criterion 1.4.10 Reflow](https://www.w3.org/TR/WCAG21/#reflow).
 
 ## Accessibility Support
 
@@ -58,13 +61,11 @@ _No accessibility support issues known._
 
 ## Test Cases
 
-TODO: overflow: clip examples
-
 ### Passed
 
 #### Passed Example 1
 
-This [test target][meets / does not meet condition] [because optional reasons].
+This [text node][] is fully [visible][] at a [display size][] of 640 by 512.
 
 ```html
 <div style="white-space: nowrap; overflow: hidden;">
@@ -79,16 +80,19 @@ This [test target][meets / does not meet condition] [because optional reasons].
 
 #### Passed Example 2
 
-This [test target][meets / does not meet condition] [because optional reasons].
+This [text node][] is [clipped][] using `text-overflow: ellipsis` at a [display size][] of 640 by 512. A link to a full version of the poem is also provided.
 
 ```html
 <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
 	Once upon a midnight dreary, while I pondered, weak and weary, Over many a quaint and curious volume of forgotten
 	lore. While I nodded, nearly napping, suddenly there came a tapping.
 </div>
+<a href="/test-assets/59br37/poem.html">Full text of the poem</a>
 ```
 
 #### Passed Example 3
+
+This [text node][] is [clipped][] using `text-overflow: ellipsis` at a [display size][] of 640 by 512. A link to a full version of the poem is also provided.
 
 ```html
 <style>
@@ -103,32 +107,30 @@ This [test target][meets / does not meet condition] [because optional reasons].
 	Once upon a midnight dreary, while I pondered, weak and weary, Over many a quaint and curious volume of forgotten
 	lore. While I nodded, nearly napping, suddenly there came a tapping.
 </div>
+<a href="/test-assets/59br37/poem.html">Full text of the poem</a>
 ```
 
 #### Passed Example 4
 
+This [text node][] is not [clipped][] with `overflow: hidden` because it has a parent with `overflow: auto` at a [display size][] of 640 by 512.
+
 ```html
-<style>
-	@media screen and (max-width: 1024px) {
-		.mobile-hidden {
-			position: absolute;
-			width: 1px;
-			height: 1px;
-			overflow: hidden;
-		}
-	}
-</style>
-<a href="/"> Next<span class="mobile-hidden">: Web Content Accessibility Guidelines 2.1</span> </a>
+<div style="overflow: hidden; height: 2em;">
+	<div style="overflow: auto; height: 2em;">
+		Once upon a midnight dreary, while I pondered, weak and weary, Over many a quaint and curious volume of forgotten
+		lore. While I nodded, nearly napping, suddenly there came a tapping.
+	</div>
+</div>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-This text content is clipped because it has a fixed height that does not leave enough space for the content to wrap
+This [text node][] is [clipped][] because it has a fixed height that does not leave enough space for the content to wrap.
 
 ```html
-<div style="overflow: hidden; height: 1em;">
+<div style="overflow: hidden; height: 1.5em;">
 	Once upon a midnight dreary, while I pondered, weak and weary, Over many a quaint and curious volume of forgotten
 	lore. While I nodded, nearly napping, suddenly there came a tapping.
 </div>
@@ -136,7 +138,7 @@ This text content is clipped because it has a fixed height that does not leave e
 
 #### Failed Example 2
 
-This text content is clipped because its height has is relative to the viewport height, leaving insufficient space for the page to be zoomed to 200% at 720p.
+This [text node][] is [clipped][] because its height is relative to the viewport height, leaving insufficient space for the page to be zoomed to 200% at a [display size][] of 640 by 512.
 
 ```html
 <div style="overflow: hidden; height: 16vh">
@@ -151,11 +153,13 @@ This text content is clipped because its height has is relative to the viewport 
 
 #### Failed Example 3
 
+This [text node][] is [clipped][] by style that is applied at a [display size][] width of 640.
+
 ```html
 <style>
-	@media screen and (max-width: 1024px) {
+	@media screen and (max-width: 640px) {
 		.myContainer {
-			height: 1em;
+			height: 1.5em;
 			width: 50%;
 			overflow: hidden;
 		}
@@ -172,27 +176,72 @@ This text content is clipped because its height has is relative to the viewport 
 
 #### Inapplicable Example 1
 
-Description...
+This [text node][] is not [visible][] at a [display size][] of 640 by 512.
 
 ```html
-<!-- code -->
+<p style="display:none;">Last updated 2020/03/27 10:52pm</p>
 ```
 
 #### Inapplicable Example 2
 
-...
+This [text node][] has an SVG element as a [parent][].
+
+```html
+<svg>
+	<text x="0" y="15">I love SVG!</text>
+</svg>
+```
+
+#### Inapplicable Example 3
+
+This [text node][] has an [ancestor][] with `overflow: auto`.
+
+```html
+<div style="overflow: auto; height: 1.5em;">
+	Once upon a midnight dreary, while I pondered, weak and weary, Over many a quaint and curious volume of forgotten
+	lore. While I nodded, nearly napping, suddenly there came a tapping.
+</div>
+```
+
+#### Inapplicable Example 4
+
+This [text node][] has an [ancestor][] with `aria-hidden` set to `true`.
+
+```html
+<img src="/assets/shared/w3c-logo.png" alt="W3C logo" /> <span aria-hidden="true">(W3C Logo)</span>
+```
+
+#### Inapplicable Example 5
+
+This [text node][] with the text "Web Content Accessibility Guidelines 2.1" is fully hidden in a [display size][] of 640 by 512.
+
+```html
+<style>
+	@media screen and (max-width: 640px) {
+		.mobile-hidden {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+		}
+	}
+</style>
+<a href="/"> Next<span class="mobile-hidden">: Web Content Accessibility Guidelines 2.1</span> </a>
+```
 
 [clipped]: #clipped-by-overflow
 [visible]: #visible
 [display size]: #display-size
-[parent]: #parent
-[ancestor]: #ancestor
+[parent]: https://dom.spec.whatwg.org/#concept-tree-parent 'DOM parent, as of 2020/02/14'
+[ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'DOM ancestor, 2020/02/13'
 [text node]: https://dom.spec.whatwg.org/#text
 [computed]: https://www.w3.org/TR/css-cascade-3/#computed-value
 [clientwidth]: https://drafts.csswg.org/cssom-view/#dom-element-clientwidth 'CSS working draft, Element.clientWidth, 2020/02/14'
 [clientheight]: https://drafts.csswg.org/cssom-view/#dom-element-clientheight 'CSS working draft, Element.clientHeight, 2020/02/14'
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS draft, flat tree, 2020/02/14'
 [overflow]: https://www.w3.org/TR/CSS22/visufx.html#overflow
 [line-height]: https://www.w3.org/TR/CSS22/visudet.html#propdef-line-height
+[white-space]: https://www.w3.org/TR/CSS22/text.html#propdef-white-space
 [text-overflow]: https://www.w3.org/TR/css-ui-3/#text-overflow
 [bounding box]: https://www.w3.org/TR/css-ui-3/#valdef-box-sizing-border-box
 [content box]: https://www.w3.org/TR/css-ui-3/#valdef-box-sizing-content-box

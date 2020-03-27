@@ -14,7 +14,7 @@ input_aspects:
   - DOM Tree
   - Accessibiliy tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Brian Bors
     - Wilco Fiers

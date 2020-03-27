@@ -3,6 +3,9 @@ title: Programmatically Determined Link Context
 key: programmatically-determined-link-context
 unambiguous: true
 objective: true
+input_aspects:
+  - Accessibility tree
+  - DOM tree
 ---
 
 The _programmatically determined context_ of a link (or _programmatically determined link context_) is the set of all elements that are [included in the accessibility tree][], and have one of the following relationships to the link:

@@ -6,29 +6,29 @@ GitHub has excellent documentation. If you are new to GitHub, please see their d
 
 ## For reviewers
 
-- Submit a review with "changes requested" if any actions are needed from the author
+- Submit a review with "changes requested" if any actions are needed from the author.
 - Submit with "approved" if you agree with the change, unless someone else in your organisation already approved the pull request (1 approval per organisation). This does not prevent you from requesting changes.
-- In addition to checking that the change in the pull request is correct, check whether or not the final call period is indicated correctly in the pull request description
+- In addition to checking that the change in the pull request is correct, check whether or not the final call period is indicated correctly in the pull request description.
 - Keep your feedback relevant to the pull request. If you have feedback unrelated to the pull request, open an issue.
 
 ## For pull request authors
 
 - Keep changes in the pull request about one topic only.
-- When updating your pull request, unless it is editorial, dismiss all reviews
+- When updating your pull request, unless it is editorial, dismiss all reviews.
 - Indicate the final call period in the pull request description:
-  - 2 weeks for a new rule, or for major changes
-  - 1 week for smaller changes
+  - 2 weeks for a new rule, or for major changes.
+  - 1 week for smaller changes.
   - final call can be skipped for changes that do not change the meaning of the rule and don't change or remove test cases.
 - Review your own pull requests before you request changes
 - Use the "reviewers wanted" label when the rule is ready for review.
-- For final calls, add the apprpriate final call label, send an e-mail to the ACT-R mailing list, and remove the "reviewers wanted" label
+- For final calls, add the appropriate final call label, send an e-mail to the ACT-R mailing list, and remove the "reviewers wanted" label.
 
 **note**: If you do not have write access, you will not be able to add labels. Moderators are fairly pro-active about adding labels. If you find you need a label added, please ask the chair of the CG.
 
 ## For people with write access
 
 - Don't edit or delete other people's posts
-- Don't update, merge or close other people's pull requests
+- Don't update, merge or close other people's pull requests.
 - Don't close other people's issues, unless you merged a pull request that completely resolves the issue.
 
 If any of these need to happen, ask the ACT-R chair instead.

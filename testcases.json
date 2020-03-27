@@ -16596,10 +16596,10 @@
       }
     },
     {
-      "testcaseId": "e616ec28a9a2249ac106fc22a801d7e108af0843",
+      "testcaseId": "75cb0fc10579d314b43348e6fd7f4ade8504cc90",
       "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/2ee8b8/e616ec28a9a2249ac106fc22a801d7e108af0843.html",
-      "relativePath": "testcases/2ee8b8/e616ec28a9a2249ac106fc22a801d7e108af0843.html",
+      "url": "https://act-rules.github.io/testcases/2ee8b8/75cb0fc10579d314b43348e6fd7f4ade8504cc90.html",
+      "relativePath": "testcases/2ee8b8/75cb0fc10579d314b43348e6fd7f4ade8504cc90.html",
       "expected": "passed",
       "ruleId": "2ee8b8",
       "ruleName": "Visible label is part of accessible name",
@@ -16644,10 +16644,10 @@
       }
     },
     {
-      "testcaseId": "8d757536c745e323cf7a256304cc181537b1593c",
+      "testcaseId": "060681f077880448a5d8e1ebcb7532d99fdb411d",
       "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/2ee8b8/8d757536c745e323cf7a256304cc181537b1593c.html",
-      "relativePath": "testcases/2ee8b8/8d757536c745e323cf7a256304cc181537b1593c.html",
+      "url": "https://act-rules.github.io/testcases/2ee8b8/060681f077880448a5d8e1ebcb7532d99fdb411d.html",
+      "relativePath": "testcases/2ee8b8/060681f077880448a5d8e1ebcb7532d99fdb411d.html",
       "expected": "failed",
       "ruleId": "2ee8b8",
       "ruleName": "Visible label is part of accessible name",
@@ -16692,10 +16692,10 @@
       }
     },
     {
-      "testcaseId": "1bc9748d32b7850dda5c457a5b6e72a5e384fab4",
+      "testcaseId": "97c411f7ba63c4ca712f200eb8a845c9744e20a2",
       "testcaseTitle": "Inapplicable Example 1",
-      "url": "https://act-rules.github.io/testcases/2ee8b8/1bc9748d32b7850dda5c457a5b6e72a5e384fab4.html",
-      "relativePath": "testcases/2ee8b8/1bc9748d32b7850dda5c457a5b6e72a5e384fab4.html",
+      "url": "https://act-rules.github.io/testcases/2ee8b8/97c411f7ba63c4ca712f200eb8a845c9744e20a2.html",
+      "relativePath": "testcases/2ee8b8/97c411f7ba63c4ca712f200eb8a845c9744e20a2.html",
       "expected": "inapplicable",
       "ruleId": "2ee8b8",
       "ruleName": "Visible label is part of accessible name",
@@ -16716,10 +16716,10 @@
       }
     },
     {
-      "testcaseId": "d1d5196799c02c1dc8feb4aecccaa528bc4aa623",
+      "testcaseId": "3eb1c8196fecb3bf85ef375b77022a9f7ee0f5d4",
       "testcaseTitle": "Inapplicable Example 2",
-      "url": "https://act-rules.github.io/testcases/2ee8b8/d1d5196799c02c1dc8feb4aecccaa528bc4aa623.html",
-      "relativePath": "testcases/2ee8b8/d1d5196799c02c1dc8feb4aecccaa528bc4aa623.html",
+      "url": "https://act-rules.github.io/testcases/2ee8b8/3eb1c8196fecb3bf85ef375b77022a9f7ee0f5d4.html",
+      "relativePath": "testcases/2ee8b8/3eb1c8196fecb3bf85ef375b77022a9f7ee0f5d4.html",
       "expected": "inapplicable",
       "ruleId": "2ee8b8",
       "ruleName": "Visible label is part of accessible name",
@@ -16764,10 +16764,10 @@
       }
     },
     {
-      "testcaseId": "1e3d4e846f3eafb45f0a2437352da74953bdf7a8",
+      "testcaseId": "d99c16137d8c09932a14875a1b68cd8d0313623a",
       "testcaseTitle": "Inapplicable Example 4",
-      "url": "https://act-rules.github.io/testcases/2ee8b8/1e3d4e846f3eafb45f0a2437352da74953bdf7a8.html",
-      "relativePath": "testcases/2ee8b8/1e3d4e846f3eafb45f0a2437352da74953bdf7a8.html",
+      "url": "https://act-rules.github.io/testcases/2ee8b8/d99c16137d8c09932a14875a1b68cd8d0313623a.html",
+      "relativePath": "testcases/2ee8b8/d99c16137d8c09932a14875a1b68cd8d0313623a.html",
       "expected": "inapplicable",
       "ruleId": "2ee8b8",
       "ruleName": "Visible label is part of accessible name",

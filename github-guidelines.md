@@ -35,9 +35,9 @@ If any of these need to happen, ask the ACT-R chair instead.
 
 ## GitHub Permissions
 
-- By default, ACT-Rules members will not be made collaborators on Github. Everyone will still be able to review pull requests. But pull requests can not be approved, and new pull requests can only be created through a fork.
+- By default, ACT-Rules participants will not be made collaborators on Github. Everyone will still be able to review pull requests. But pull requests can not be approved, and new pull requests can only be created through a fork.
 
-- Anyone ACT-Rules member who is writing rules, or who is actively reviewing rules can be given "read" access to the repository. This enables us to assign issues and pull requests to them. Read access will be revoked if someone leaved the community group.
+- ACT-Rules participants who are writing rules, or who are actively reviewing rules can be given "read" access to the repository. This enables us to assign issues and pull requests to them. Read access will be revoked if someone leaved the community group.
 
 - Frequent contributors can be given write access upon request, and provided they have authored or reviewed up to three rules in the past year. The ACT-Rules chair will regularly review the list if people with write access and can revoke write access if they feel it is no longer necessary.
 

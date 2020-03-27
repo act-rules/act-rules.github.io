@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 711,
+  "count": 708,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -7610,62 +7610,8 @@
       }
     },
     {
-      "testcaseId": "60e8a60b355f80b20afce247f23e887530c9ef9e",
-      "testcaseTitle": "Failed Example 4",
-      "url": "https://act-rules.github.io/testcases/cae760/60e8a60b355f80b20afce247f23e887530c9ef9e.html",
-      "relativePath": "testcases/cae760/60e8a60b355f80b20afce247f23e887530c9ef9e.html",
-      "expected": "failed",
-      "ruleId": "cae760",
-      "ruleName": "`iframe` element has accessible name",
-      "rulePage": "https://act-rules.github.io/rules/cae760",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "10af67376ac341cec4d35717e91479ba16ce5af3",
-      "testcaseTitle": "Failed Example 5",
-      "url": "https://act-rules.github.io/testcases/cae760/10af67376ac341cec4d35717e91479ba16ce5af3.html",
-      "relativePath": "testcases/cae760/10af67376ac341cec4d35717e91479ba16ce5af3.html",
-      "expected": "failed",
-      "ruleId": "cae760",
-      "ruleName": "`iframe` element has accessible name",
-      "rulePage": "https://act-rules.github.io/rules/cae760",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "09e14194f92cc2ab83c134613d466226a83aeae8",
-      "testcaseTitle": "Failed Example 6",
-      "url": "https://act-rules.github.io/testcases/cae760/09e14194f92cc2ab83c134613d466226a83aeae8.html",
-      "relativePath": "testcases/cae760/09e14194f92cc2ab83c134613d466226a83aeae8.html",
-      "expected": "failed",
-      "ruleId": "cae760",
-      "ruleName": "`iframe` element has accessible name",
-      "rulePage": "https://act-rules.github.io/rules/cae760",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
       "testcaseId": "9ac428cbd668e462cac1b12b027747d8d54cd1c1",
-      "testcaseTitle": "Failed Example 7",
+      "testcaseTitle": "Failed Example 4",
       "url": "https://act-rules.github.io/testcases/cae760/9ac428cbd668e462cac1b12b027747d8d54cd1c1.html",
       "relativePath": "testcases/cae760/9ac428cbd668e462cac1b12b027747d8d54cd1c1.html",
       "expected": "failed",

@@ -42,7 +42,7 @@ This rule is limited to the explicit use of roles, as a clear indication that co
 
 Browser and assistive technology support for SVG `<title>` and `<desc>` elements is currently inconsistent. Using WAI ARIA in combination with the `img` role for non-decorative `<svg>` elements significantly improves accessibility browser support.
 
-Until browser support for the [SVG Accessibility API Mappings][] is more consistent it is recommended to explicitly remove decorative <svg> elements from the accessibility tree.
+Until browser support for the [SVG Accessibility API Mappings][] is more consistent it is recommended to explicitly remove decorative `<svg>` elements from the accessibility tree.
 
 ## Background
 

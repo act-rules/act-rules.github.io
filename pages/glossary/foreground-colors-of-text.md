@@ -3,6 +3,9 @@ title: Foreground Colors Of Text
 key: foreground-colors-of-text
 unambiguous: true
 objective: true
+input_aspects:
+  - CSS styling
+  - DOM tree
 ---
 
 The colors of all the pixels of a [visible](#visible) character in a [text node](https://dom.spec.whatwg.org/#text) that change color when the CSS `color` property is changed. This includes anti-aliased pixels.

@@ -13,7 +13,7 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Wilco Fiers
     - Stein Erik Skotkjerra
@@ -31,7 +31,7 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 **Note:** `input` elements of type `submit` and `reset` can get their [accessible name][] from a [default text](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset), as well as from a `value` or other attribute.
 
-**Note:** Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
+**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
 
 ## Assumptions
 
@@ -86,21 +86,13 @@ This element with a `button` role has an [accessible name][] because of its `ari
 
 #### Passed Example 5
 
-This `summary` element with an [implicit role](#implicit-role) of `button` has an [accessible name][] because of its text content.
-
-```html
-<summary>Press Here</summary>
-```
-
-#### Passed Example 6
-
 This `button` element with the `disabled` attribute has an [accessible name][] because of its text content.
 
 ```html
 <button disabled>Delete</button>
 ```
 
-#### Passed Example 7
+#### Passed Example 6
 
 This off screen `button` element has an [accessible name][] because of its text content.
 
@@ -119,7 +111,7 @@ This off screen `button` element has an [accessible name][] because of its text 
 </html>
 ```
 
-#### Passed Example 8
+#### Passed Example 7
 
 This `input` element has an [accessible name][] because of the default accessible name for an `input` element with a `type` attribute set to `reset`.
 
@@ -196,6 +188,14 @@ This `button` element has a `link` role. Links are tested in a separate rule whi
 
 ```html
 <button role="link">take me somewhere</button>
+```
+
+#### Inapplicable Example 4
+
+There is no element with a semantic role of `button`.
+
+```html
+<div>Press Here</div>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

@@ -10,12 +10,27 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:G159: # Providing an alternative for time-based media for video-only content
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:G166: # Providing audio that describes the important video content and describing it as such
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:H96: # Using the track element to provide audio descriptions
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_rules:
   - fd26cf
   - ac7dc6
   - ee13b5
   - d7ba54
-acknowledgements:
+acknowledgments:
   authors:
     - Wilco Fiers
     - Brian Bors
@@ -69,11 +84,7 @@ A video element without audio. The text on the page labels the video as an alter
 		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
 		Keyboard compatibility is described in WCAG. See the video below to watch the same information again in video form.
 	</p>
-	<video
-		data-rule-target
-		src="/test-assets/perspective-video/perspective-video-with-captions-silent.mp4"
-		controls
-	></video>
+	<video src="/test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls></video>
 </html>
 ```
 
@@ -97,7 +108,7 @@ A silent video element with a text transcript on the same page.
 
 ```html
 <html lang="en">
-<video controls data-rule-target>
+<video controls>
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
@@ -137,11 +148,7 @@ A video element that describes some of the text on the same page. The text on th
 		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
 		Keyboard compatibility is described in WCAG.
 	</p>
-	<video
-		data-rule-target
-		src="/test-assets/perspective-video/perspective-video-with-captions-silent.mp4"
-		controls
-	></video>
+	<video src="/test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls></video>
 </html>
 ```
 
@@ -165,7 +172,7 @@ A silent video element with a link to an incorrect text transcript on a differen
 
 ```html
 <html lang="en">
-<video controls data-rule-target>
+<video controls>
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
@@ -203,7 +210,7 @@ A video element with audio.
 		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
 		Keyboard compatibility is described in WCAG. See the video below to watch the same information again in video form.
 	</p>
-	<video data-rule-target src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+	<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
 </html>
 ```
 

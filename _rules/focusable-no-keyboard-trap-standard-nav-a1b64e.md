@@ -8,7 +8,7 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Dagfinn Rømen
     - Geir Sindre Fossøy
@@ -55,7 +55,7 @@ There are no major accessibility support issues known for this rule.
 No trap for keyboard navigation.
 
 ```html
-<a href="#">Link 1</a> <button class="target">Button1</button>
+<a href="#">Link 1</a> <button>Button1</button>
 ```
 
 #### Passed Example 2
@@ -82,7 +82,7 @@ Keyboard trap one element.
 
 ```html
 <a href="#">Link 1</a>
-<button class="target" onblur="setTimeout(() => this.focus(), 10)">
+<button onblur="setTimeout(() => this.focus(), 10)">
 	Button1
 </button>
 ```
@@ -92,10 +92,10 @@ Keyboard trap one element.
 Keyboard trap group.
 
 ```html
-<button class="target" onblur="setTimeout(() => this.nextElementSibling.focus(), 10)">
+<button onblur="setTimeout(() => this.nextElementSibling.focus(), 10)">
 	Button1
 </button>
-<button class="target" onblur="setTimeout(() => this.previousElementSibling.focus(), 10)">
+<button onblur="setTimeout(() => this.previousElementSibling.focus(), 10)">
 	Button2
 </button>
 <button>
@@ -109,7 +109,7 @@ A [focusable][] element between keyboard traps.
 
 ```html
 <button onblur="setTimeout(() => this.focus(), 10)">Button 1</button>
-<button class="target">Button 2</button>
+<button>Button 2</button>
 <button onblur="setTimeout(() => this.focus(), 10)">Button 3</button>
 ```
 
@@ -144,7 +144,7 @@ Hidden element using `display:none`.
 Hidden element using `visibility:hidden`.
 
 ```html
-<a href="#" style="visibility:hidden;">Link 1</a> <button class="target" style="visibility:hidden;">Button1</button>
+<a href="#" style="visibility:hidden;">Link 1</a> <button style="visibility:hidden;">Button1</button>
 ```
 
 [focusable]: #focusable 'Definition of focusable'

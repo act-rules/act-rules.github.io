@@ -17,7 +17,7 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-acknowledgements:
+acknowledgments:
   authors:
     - Annika Nietzio
     - Jey Nandakumar
@@ -34,7 +34,7 @@ This rule applies to any [document element](https://dom.spec.whatwg.org/#documen
 
 ## Expectation
 
-Each test target has a `lang` attribute that is neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
+Each test target has a `lang` attribute that is neither empty (`""`) nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 ## Assumptions
 
@@ -46,6 +46,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
+- [Understanding Success Criterion 3.1.1: Language of Page](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
 - [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG21/Techniques/html/H57)
 - [BCP 47: Tags for Identifying Languages](https://www.ietf.org/rfc/bcp/bcp47.txt)
 - [The `lang` and `xml:lang` attributes](https://html.spec.whatwg.org/multipage/dom.html#the-lang-and-xml:lang-attributes)

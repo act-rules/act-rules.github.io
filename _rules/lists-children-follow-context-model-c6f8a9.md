@@ -79,9 +79,9 @@ This `li` element is owned by `ul` element, which follows the [flow content mode
 </ul>
 ```
 
-#### Passed Example 3
+#### Passed Example 4
 
-This `span` element with an explicit role of `lisitem` is owned by `div` element with an explicit role of `list`, which follows the [flow content model][].
+This `span` element with an explicit role of `listitem` is owned by `div` element with an explicit role of `list`, which follows the [flow content model][].
 
 ```html
 <div role="list">

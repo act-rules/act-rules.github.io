@@ -55,6 +55,7 @@
 - tabindex
 - whitespace
 - Whitespace
+- textfield
 - namespace
 - namespaces
 - webpage
@@ -140,6 +141,7 @@
 - Autofill
 - implementers
 - Implementers
+- Presentational
 - backtick
 - camelCase
 

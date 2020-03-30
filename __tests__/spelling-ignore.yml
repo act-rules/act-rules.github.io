@@ -114,6 +114,8 @@
 - columnheader
 - clientHeight
 - clientWidth
+- innerHeight
+- innerWidth
 - scrollbars
 - documentElement
 - rects

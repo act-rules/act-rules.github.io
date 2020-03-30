@@ -16,7 +16,9 @@ input_aspects: + DOM Tree
 acknowledgements:
   authors:
     - Jey Nandakumar
----## Applicability
+---
+
+## Applicability
 
 The rule applies to every `ul` , `ol` , and `dl` HTML elements where the [semantic role][] is the same as the [implicit semantic role][].
 

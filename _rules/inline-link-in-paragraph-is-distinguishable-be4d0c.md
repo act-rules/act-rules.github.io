@@ -35,22 +35,34 @@ This rule applies to any HTML element which:
 
 - **(is a link)** has the [semantic role][] of ['link'][link] or a [semantic role][] that inherits from the ['link'][link] role; and
 - **(visible)** has [descendant][] [text nodes][text node] in the [flat tree][] that are [visible][]; and
-- **(belongs to a block container)** is a [descendant][] in the [flat tree][] of an HTML element (with the closest [ancestor][] in the [flat tree][] being henceforth referred to as the _ancestor_ element) that has a [computed value][] for the [display property][display] that is not one of the following: 'table', 'flex', 'grid', 'ruby', 'table-row-group', 'table-header-group', 'table-footer-group', 'table-row', table-column-group', 'table-column', 'ruby-base-container' and 'ruby-text-container'; and
+- **(belongs to a block container)** is a [descendant][] in the [flat tree][] of an HTML element (with the closest [ancestor][] in the [flat tree][] being henceforth referred to as the _ancestor_ element) that has a [computed value][] for the [display property][display] that is not one of the following:
+  - 'table',
+  - 'flex',
+  - 'grid',
+  - 'ruby',
+  - 'table-row-group',
+  - 'table-header-group',
+  - 'table-footer-group',
+  - 'table-row',
+  - 'table-column-group',
+  - 'table-column',
+  - 'ruby-base-container',
+  - 'ruby-text-container'; and
 - **(other content in block)** the _ancestor_ element has other [descendant][] [visible][] [text nodes][text node] in the [flat tree][]; and
 - **(block is inline)** the [descendant][] [visible][] [text nodes][text node] of the _ancestor_ element belong to the same [inline formatting context][].
 
-**Note**: The test targets are visible link elements that are part of a block of content that is displayed inline .
+**Note**: The test targets are visible link elements that are part of a block of content that is displayed inline.
 
 ## Expectation
 
 For each test target, the [outcome][] of one of the following rules is "passed":
 
-- [Inline link in paragraph has distinguishable content](https://act-rules.github.io/rules/e7cc2b)
-- [Inline link in paragraph has distinguishable style not based on color alone](https://act-rules.github.io/rules/88407d)
-- [Inline link in paragraph has distinguishable border](https://act-rules.github.io/rules/36f116)
-- [Inline link in paragraph has distinguishable box-shadow](https://act-rules.github.io/rules/66e9f0)
-- [Inline link in paragraph has different foreground color and distinguishable style on hover and focus](https://act-rules.github.io/rules/548868)
-- [Inline link in paragraph has different background color and distinguishable style on hover and focus](https://act-rules.github.io/rules/2803b8)
+- [Inline link has distinguishable content](https://act-rules.github.io/rules/e7cc2b)
+- [Inline link has distinguishable style not based on color alone](https://act-rules.github.io/rules/88407d)
+- [Inline link has distinguishable border](https://act-rules.github.io/rules/36f116)
+- [Inline link has distinguishable box-shadow](https://act-rules.github.io/rules/66e9f0)
+- [Inline link has different foreground color and distinguishable style on hover and focus](https://act-rules.github.io/rules/548868)
+- [Inline link has different background color and distinguishable style on hover and focus](https://act-rules.github.io/rules/2803b8)
 
 ## Assumptions
 

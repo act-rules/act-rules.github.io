@@ -10,10 +10,9 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-
-input_aspects: + DOM Tree
-
-acknowledgements:
+input_aspects:
+  - DOM Tree
+acknowledgments:
   authors:
     - Jey Nandakumar
 ---
@@ -26,7 +25,7 @@ The rule applies to every `ul` , `ol` , and `dl` HTML elements where the [semant
 
 Each target element:
 
-- is categorised to follow the [flow content model][], and;
+- is categorized to follow the [flow content model][], and;
 - that it's contents are its [descendants][] in the DOM, and;
 - has at least one node in its contents that is a [palpable content][], which does not have the `hidden` attribute specified.
 

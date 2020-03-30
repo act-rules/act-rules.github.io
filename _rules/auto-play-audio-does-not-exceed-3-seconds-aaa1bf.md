@@ -62,7 +62,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-This `<audio>` element does not play automatically for more than 3 seconds.
+This `audio` element does not play automatically for more than 3 seconds.
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3#t=25" autoplay></audio>

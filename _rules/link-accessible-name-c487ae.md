@@ -40,7 +40,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to any HTML element with the [semantic role](#semantic-role) of `link` that is [included in the accessibility tree][].
+The rule applies to any HTML element with the [semantic role][] of `link` that is [included in the accessibility tree][].
 
 ## Expectation
 
@@ -61,6 +61,7 @@ For `area` elements that have a `href` attribute, but are not nested inside a `m
 - [Understanding Success Criterion 2.4.4: Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context)
 - [ARIA7: Using aria-labelledby for link purpose](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA7)
 - [ARIA8: Using aria-label for link purpose](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA8)
+- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [F89: Failure of Success Criteria 2.4.4, 2.4.9 and 4.1.2 due to not providing an accessible name for an image which is the only content in a link](https://www.w3.org/WAI/WCAG21/Techniques/failures/F89)
 
 ## Test Cases
@@ -69,7 +70,7 @@ For `area` elements that have a `href` attribute, but are not nested inside a `m
 
 #### Passed Example 1
 
-`a` element with [accessible name][] through content.
+This `a` element has an [accessible name][] from its content.
 
 ```html
 <a href="http://www.w3.org/WAI"> Web Accessibility Initiative (WAI) </a>
@@ -77,64 +78,64 @@ For `area` elements that have a `href` attribute, but are not nested inside a `m
 
 #### Passed Example 2
 
-Element with [explicit role](#explicit-role) of link with [accessible name][] through content.
+This `div` element has an [explicit semantic role](#explicit-role) of `link` and an [accessible name][] from its content.
 
 ```html
-<div role="link">Web Accessibility Initiative (WAI)</div>
+<div role="link" onclick="window.location.href='https://www.w3.org/WAI/'">Web Accessibility Initiative (WAI)</div>
 ```
 
 #### Passed Example 3
 
-`Button` with an [explicit role](#explicit-role) of `link`.
+This `button` element has an [explicit semantic role](#explicit-role) of `link` and an [accessible name][] from its content.
 
 ```html
-<button role="link">Click me!</button>
+<button role="link" onclick="window.location.href='https://www.w3.org/WAI/'">Click me for WAI!</button>
 ```
 
 #### Passed Example 4
 
-[accessible name][] for link via `aria-label`
+This `a` element has an [accessible name][] via `aria-label`
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="#" aria-label="This is a link"/></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" aria-label="This is a link"/></a>
 ```
 
 #### Passed Example 5
 
-Link named via `title` on link.
+This `a` element has an [accessible name][] via `title`.
 
 ```html
-<a href="http://www.w3.org/WAI" title="This is a link"><img src="#"/></a>
+<a href="http://www.w3.org/WAI" title="This is a link"><img src="/test-assets/shared/w3c-logo.png"/></a>
 ```
 
 #### Passed Example 6
 
-Link named via `title` on image.
+This `a` element has an [accessible name][] from its content via the `title` on the `img` element.
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="#" title="This is a link"/></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" title="This is a link"/></a>
 ```
 
 #### Passed Example 7
 
-Link with both `image` and `text`.
+This `a` element has an [accessible name][] from its content.
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="#" />This is my link text</a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" />This is my link text</a>
 ```
 
 #### Passed Example 8
 
-[accessible name][] for link via `aria-labelledby`.
+This `a` element has an [accessible name][] from its content via `aria-labelledby` on the `img` element.
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="#" aria-labelledby="id1"/></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" aria-labelledby="id1"/></a>
 <div id="id1">This is my link text</div>
 ```
 
 #### Passed Example 9
 
-When `link` is off screen.
+This `a` element placed off screen has an [accessible name][] from its content.
 
 ```html
 <html>
@@ -153,7 +154,7 @@ When `link` is off screen.
 
 #### Passed Example 10
 
-`area` element with `href` attribute has [accessible name][].
+This `area` element has a [semantic role][] of `link` and an [accessible name][] via `alt`.
 
 ```html
 <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap" />
@@ -165,7 +166,7 @@ When `link` is off screen.
 
 #### Passed Example 11
 
-`a` element where [accessible name][] is not empty.
+This `a` element has an [accessible name][] from its content.
 
 ```html
 <a href="http://www.w3.org/WAI">:-)</a>
@@ -175,23 +176,23 @@ When `link` is off screen.
 
 #### Failed Example 1
 
-Image link with empty [accessible name][].
+This `a` element has an empty [accessible name][].
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="#"/></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png"/></a>
 ```
 
 #### Failed Example 2
 
-Image link where image is [marked as decorative](#marked-as-decorative).
+This `a` element with an image [marked as decorative](#marked-as-decorative) has an empty [accessible name][].
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="#" alt=""/></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" alt=""/></a>
 ```
 
 #### Failed Example 3
 
-Link with icon inserted via font-awesome.
+This `a` element with an icon inserted via font-awesome has an empty [accessible name][].
 
 ```html
 <a href="http://www.w3.org/WAI"><i class="fa fa-download"></i></a>
@@ -199,42 +200,42 @@ Link with icon inserted via font-awesome.
 
 #### Failed Example 4
 
-Link with image that has empty title.
+This `a` element with an `img` with an empty `title` has an empty [accessible name][].
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="#" title=""/></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" title=""/></a>
 ```
 
 #### Failed Example 5
 
-Link with image that has empty `aria-labelledby`.
+This `a` element with an `img` with an `aria-labelledby` has an empty [accessible name][].
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="#" aria-labelledy="id1"/></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" aria-labelledby="id1"/></a>
 <div id="id1"></div>
 ```
 
 #### Failed Example 6
 
-`aria-labelledby` references a non-existing id.
+This `a` element with an `img` with an `aria-labelledby` referencing a non-existing id has an empty [accessible name][].
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="#" aria-labelledby="id1"/></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" aria-labelledby="id1"/></a>
 ```
 
 #### Failed Example 7
 
-[Non-visible](#visible) link.
+This `a` element placed off screen has an empty [accessible name][].
 
 ```html
 <a href="http://www.w3.org/WAI" style="left: -9999px; position: absolute;">
-	<img src="#" />
+	<img src="/test-assets/shared/w3c-logo.png" />
 </a>
 ```
 
 #### Failed Example 8
 
-Link is completely empty, but still shows up in focus order, so it should have a non-empty [accessible name][].
+This `a` element, which shows up in the focus order, has an empty [accessible name][]
 
 ```html
 <a href="http://www.w3.org/WAI"></a>
@@ -242,7 +243,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 #### Failed Example 9
 
-`area` element with `href` attribute has an empty [accessible name][].
+This `area` element has a [semantic role][] of `link` and an empty [accessible name][].
 
 ```html
 <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap" />
@@ -254,7 +255,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 #### Failed Example 10
 
-`a` element where [accessible name][] through content is empty.
+This `a` element has an empty [accessible name][] from its content.
 
 ```html
 <a href="http://www.w3.org/WAI"> </a>
@@ -264,7 +265,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 #### Inapplicable Example 1
 
-`a` element that has had its role changed.
+This `a` element does not have a [semantic role][] of `link` because it has been changed to `button`.
 
 ```html
 <a href="http://www.w3.org/WAI" role="button">
@@ -274,7 +275,7 @@ Link is completely empty, but still shows up in focus order, so it should have a
 
 #### Inapplicable Example 2
 
-Not [included in the accessibility tree][] due to `display:none`.
+This `a` element in not [included in the accessibility tree][] due to `display: none`.
 
 ```html
 <a href="http://www.w3.org/WAI" style="display: none;"><img src="#"/></a>
@@ -282,7 +283,7 @@ Not [included in the accessibility tree][] due to `display:none`.
 
 #### Inapplicable Example 3
 
-Not [included in the accessibility tree][] due to `visibility: hidden`.
+This `a` element is not [included in the accessibility tree][] due to `visibility: hidden`.
 
 ```html
 <a href="http://www.w3.org/WAI" style="visibility: hidden;">Some text</a>
@@ -290,7 +291,7 @@ Not [included in the accessibility tree][] due to `visibility: hidden`.
 
 #### Inapplicable Example 4
 
-Not [included in the accessibility tree][] due to `aria-hidden="true"`.
+This `a` element is not [included in the accessibility tree][] due to `aria-hidden="true"`.
 
 ```html
 <a aria-hidden="true" href="http://www.w3.org/WAI">
@@ -300,12 +301,21 @@ Not [included in the accessibility tree][] due to `aria-hidden="true"`.
 
 #### Inapplicable Example 5
 
-`area` element without `href` attribute does not have role of `link`.
+This `area` element does not have the role of link because it does not have an `href` attribute.
 
 ```html
 <area shape="rect" coords="0,0,82,126" />
 ```
 
+#### Inapplicable Example 6
+
+This `a` element does not have the role of link because it does not have an `href` attribute.
+
+```html
+<a alt="not a link" />
+```
+
 [accessible name]: #accessible-name 'Definition of accessible name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[semantic role]: #semantic-role 'Definition of semantic role'
 [whitespace]: #whitespace 'Definition of whitespace'

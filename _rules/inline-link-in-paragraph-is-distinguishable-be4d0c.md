@@ -31,27 +31,9 @@ acknowledgements:
 
 ## Applicability
 
-This rule applies to any HTML element which:
+This rule applies to any [visible][] HTML element that is a [semantic link][], where the closest element (including itself) that generates an [inline box][] is part of a [line box][] that has [inline boxes][inline box] generated from an element containing [visible][] [text nodes][text node] that do not have a [semantic link][] as a [descendant][] in the [flat tree][].
 
-- **(is a link)** has the [semantic role][] of ['link'][link] or a [semantic role][] that inherits from the ['link'][link] role; and
-- **(visible)** has [descendant][] [text nodes][text node] in the [flat tree][] that are [visible][]; and
-- **(belongs to a block container)** is a [descendant][] in the [flat tree][] of an HTML element (with the closest [ancestor][] in the [flat tree][] being henceforth referred to as the _ancestor_ element) that has a [computed value][] for the [display property][display] that is not one of the following:
-  - 'table',
-  - 'flex',
-  - 'grid',
-  - 'ruby',
-  - 'table-row-group',
-  - 'table-header-group',
-  - 'table-footer-group',
-  - 'table-row',
-  - 'table-column-group',
-  - 'table-column',
-  - 'ruby-base-container',
-  - 'ruby-text-container'; and
-- **(other content in block)** the _ancestor_ element has other [descendant][] [visible][] [text nodes][text node] in the [flat tree][]; and
-- **(block is inline)** the [descendant][] [visible][] [text nodes][text node] of the _ancestor_ element belong to the same [inline formatting context][].
-
-**Note**: The test targets are visible link elements that are part of a block of content that is displayed inline.
+**Note:** The test targets are visible link elements that are part of a block of content that is displayed inline.
 
 ## Expectation
 
@@ -353,11 +335,14 @@ This paragraph has no visible descendant text nodes apart from those in the link
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [focused]: #focused 'Definition of focused'
 [foreground color]: #foreground-colors-of-text 'Definition of foreground color'
+[inline box]: https://drafts.csswg.org/css-display/#inline-box 'Definition of inline box'
 [inline formatting context]: https://drafts.csswg.org/css-display/#inline-formatting-context
 [hovered]: #hovered 'Definition of hovered'
+[line box]: https://drafts.csswg.org/css2/visuren.html#line-box 'Definition of line box'
 [link]: https://www.w3.org/TR/wai-aria/#link
 [listitem]: https://www.w3.org/TR/wai-aria/#listitem
 [outcome]: #outcome 'Definition of outcome'
+[semantic link]: #semantic-link 'Definition of semantic link'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [text node]: https://dom.spec.whatwg.org/#text
 [visible]: #visible 'Definition of visible'

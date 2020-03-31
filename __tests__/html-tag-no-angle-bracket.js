@@ -47,7 +47,7 @@ function getTextSurroundedByAngleBrackets(body) {
 		return []
 	}
 
-	const matches = getAllMatchesForRegex(/\<(.*?)\>/, body, false)
+	const matches = getAllMatchesForRegex(/\<(.*?)\>(?!\<\/)/, body, false)
 	if (!matches || !matches.length) {
 		return []
 	}

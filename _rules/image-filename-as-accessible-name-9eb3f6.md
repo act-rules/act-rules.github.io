@@ -32,7 +32,10 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any HTML `input` element with a [`type`][type] of `image`, or any HTML element with the [semantic role][] of `img`, that is [included in the accessibility tree][], and has an [accessible name][] that is equivalent to the [filename][] specified in the `src` attribute. Difference in letter casing, and forward and trailing [whitespace][] should be ignored.
+The rule applies to any HTML element with the [semantic role][] of `img` or any HTML `input` element with a [`type`][type] of `image` when each of the following is true:
+
+- the image is [included in the accessibility tree][]; and
+- the image has an [accessible name][] that is equivalent to the [filename][] specified in the `src` attribute. Difference in letter casing, leading and trailing [whitespace][] should be ignored.
 
 ## Expectation
 

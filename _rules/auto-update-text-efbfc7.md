@@ -22,14 +22,13 @@ acknowledgments:
 
 The rule applies to any [visible][] [HTML element][] with a [visible][] [text node][] if:
 
-- **changed:** the `innerText` property of the [element][html element] changes; and
+- **changed:** The `innerText` property of the [element][html element] changes multiple times within a 10 minute time span where there is no [user interaction][]; and
 - **no child changed:** the [element][html element] does not have [children][child] whose `innerText` property also changes; and
 - **not alone:** the [element][html element] has an [ancestor][] element with a non-empty `innerText` property whose value is different from the `innerText` of the test target; and
-- the [document][html document] the [element][html element] belongs to:
-  - **ready:** has [readiness][document readiness] equal to "complete" before the change happens; and
-  - **inactive:** is associated with a [window][] that has the [last activation timestamp][] equal to "positive infinity".
 
-Note: The test targets for this rule are elements that have their text content change, on a page with further content, if that change happens after the page loads and without user intervention.
+**Note:** The test targets for this rule are elements that have their text content change multiple times, on a page with further content, if that change happens without user intervention.
+
+**Note:** The 10 minute time span is arbitrary. Content that updates less frequently, or that doesn't update on a regular interval, may still not satisfy the success criteria, but testers generally don't wait hours to see if a page changes.
 
 ## Expectation
 
@@ -40,12 +39,13 @@ For the test target there exists an [instrument][] in the same [HTML document][]
 - hide the content that changes; or
 - alter the frequency of the changes of the [visible text content][].
 
-**Note**: If there is more than one test target, a single [instrument][] to pause, stop, hide or alter the frequency for all test targets is sufficient.
+**Note:** If there is more than one test target, a single [instrument][] to pause, stop, hide or alter the frequency for all test targets is sufficient.
 
 ## Assumptions
 
 - This rule assumes that the auto-updating of the content is not [essential][], which is listed as valid exception to [Success Criterion 2.2.2: Pause, Stop, Hide][sc 2.2.2]. When the auto-updating of content is [essential][] this rule may produce incorrect results.
 - This rule assumes that any [content][] changes are enabled by the content of [HTML document][] the test target belongs to. Changes originated by any other sources (e.g. browser shortcuts, browser extensions, browser settings, user agents, external browser applications) are not considered.
+- This rule assumes that all user actions are transmitted by the user agent to the [HTML document][]. If there are other event sources that result from a user action this rule might fail but the success criteria might still be met.
 - This rule assumes that available mechanisms for controlling the update of content rely on [activation][]. If there are other mechanisms that do not really on [activation][] the rule might fail but the success criteria might still be met.
 
 ## Accessibility Support
@@ -64,7 +64,7 @@ For the test target there exists an [instrument][] in the same [HTML document][]
 
 #### Passed Example 1
 
-The text content of the `span` element automatically updates after the page completes loading. A button is available to stop the automatic updates. The rule is not applicable to the `p` element because it has a child (the `span` element) whose content updates.
+The text content of the `span` element automatically updates multiple times without user intervention. A button is available to stop the automatic updates. The rule is not applicable to the `p` element because it has a child (the `span` element) whose content updates.
 
 ```html
 <body onload="startUpdates()">
@@ -77,7 +77,7 @@ The text content of the `span` element automatically updates after the page comp
 
 #### Passed Example 2
 
-The text content of the `span` element automatically updates after the page completes loading. A button is available to pause and resume the automatic updates. The rule is not applicable to the `p` element because it has a child (the `span` element) whose content updates.
+The text content of the `span` element automatically updates multiple times without user intervention. A button is available to pause and resume the automatic updates. The rule is not applicable to the `p` element because it has a child (the `span` element) whose content updates.
 
 ```html
 <body onload="startUpdates()">
@@ -90,7 +90,7 @@ The text content of the `span` element automatically updates after the page comp
 
 #### Passed Example 3
 
-The text content of the `span` element automatically updates after the page completes loading. A button is available to hide the automatically updating content. The rule is not applicable to the `p` element because it has a child (the `span` element) whose content updates.
+The text content of the `span` element automatically updates multiple times without user intervention. A button is available to hide the automatically updating content. The rule is not applicable to the `p` element because it has a child (the `span` element) whose content updates.
 
 ```html
 <body onload="startUpdates()">
@@ -103,7 +103,7 @@ The text content of the `span` element automatically updates after the page comp
 
 #### Passed Example 4
 
-The text content of the `span` element automatically updates after the page completes loading. An [instrument][] is available to change the update frequency. The rule is not applicable to the `p` element because it has a child (the `span` element) whose content updates.
+The text content of the `span` element automatically updates multiple times without user intervention. An [instrument][] is available to change the update frequency. The rule is not applicable to the `p` element because it has a child (the `span` element) whose content updates.
 
 ```html
 <body onload="startUpdates()">
@@ -120,7 +120,7 @@ The text content of the `span` element automatically updates after the page comp
 
 #### Failed Example 1
 
-The text content of the `span` element automatically updates after the page completes loading. There is no [instrument][] to stop, pause, hide or alter the frequency of the automatic updates.
+The text content of the `span` element automatically updates multiple times without user intervention. There is no [instrument][] to stop, pause, hide or alter the frequency of the automatic updates.
 
 ```html
 <body onload="startUpdates()">
@@ -132,7 +132,7 @@ The text content of the `span` element automatically updates after the page comp
 
 #### Failed Example 2
 
-The text content of the `span` element automatically updates after the page completes loading. A button is available to stop the automatic updates, but the button only stops the updates while it is focused.
+The text content of the `span` element automatically updates multiple times without user intervention. A button is available to stop the automatic updates, but the button only stops the updates while it is focused.
 
 ```html
 <body onload="startUpdates()">
@@ -147,23 +147,7 @@ The text content of the `span` element automatically updates after the page comp
 
 #### Inapplicable Example 1
 
-The text content automatically updates but the change happens before the [readiness][document readiness] is equal to "complete".
-
-```html
-<body>
-	<p>Random number: <span id="target">1</span></p>
-
-	<script type="text/javascript">
-		document.addEventListener('DOMContentLoaded', () => {
-			document.getElementById('target').innerText = 'Changed content'
-		})
-	</script>
-</body>
-```
-
-#### Inapplicable Example 2
-
-The text content automatically updates but only as a result of the user activating a button on the page, making the [last activation timestamp][] different from "positive infinity".
+The text content automatically updates but only as a result of the user activating a button on the page.
 
 ```html
 <body>
@@ -174,7 +158,7 @@ The text content automatically updates but only as a result of the user activati
 </body>
 ```
 
-#### Inapplicable Example 3
+#### Inapplicable Example 2
 
 The automatically updating text content is the only content in the document.
 
@@ -186,7 +170,7 @@ The automatically updating text content is the only content in the document.
 </body>
 ```
 
-#### Inapplicable Example 4
+#### Inapplicable Example 3
 
 The document does not have text content that updates automatically.
 
@@ -199,7 +183,7 @@ The document does not have text content that updates automatically.
 </body>
 ```
 
-#### Inapplicable Example 5
+#### Inapplicable Example 4
 
 The color of the element is updated, but not its `innerText` property.
 
@@ -240,6 +224,7 @@ The color of the element is updated, but not its `innerText` property.
 [sc 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
 [sibling]: https://dom.spec.whatwg.org/#concept-tree-sibling
 [text node]: https://dom.spec.whatwg.org/#text
+[user interation]: #user-interaction 'Definition of user interaction'
 [visible text content]: #visible-text-content 'Definition of visible text content'
 [visible]: #visible 'Definition of visible'
 [window]: https://html.spec.whatwg.org/#window

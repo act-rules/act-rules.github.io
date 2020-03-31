@@ -20,7 +20,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any [visible][] [HTML element][] if:
+The rule applies to any [visible][] [HTML element][] with a [visible][] [text node][] if:
 
 - **(changed)** the `innerText` property of the [element][html element] changes; and
 - **(no child changed)** the [element][html element] does not have [children][child] whose `innerText` property also changes; and
@@ -44,6 +44,7 @@ For the test target there exists an [instrument][] in the same [HTML document][]
 
 - This rule assumes that the auto-updating of the content is not [essential][], which is listed as valid exception to [Success Criterion 2.2.2: Pause, Stop, Hide][sc 2.2.2]. When the auto-updating of content is [essential][] this rule may produce incorrect results.
 - This rule assumes that any [content][] changes are enabled by the content of [HTML document][] the test target belongs to. Changes originated by any other sources (e.g. browser shortcuts, browser extensions, browser settings, user agents, external browser applications) are not considered.
+- This rule assumes that available mechanisms for controlling the update of content rely on [activation][]. If there are other mechanisms that do not really on [activation][] the rule might fail but the success criteria might still be met.
 
 ## Accessibility Support
 
@@ -222,6 +223,7 @@ The color of the element is updated, but not its `innerText` property.
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor
+[activation]: https://html.spec.whatwg.org/#activation
 [child]: https://dom.spec.whatwg.org/#concept-tree-child
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
 [document readiness]: https://www.w3.org/TR/html53/dom.html#current-document-readiness
@@ -235,6 +237,7 @@ The color of the element is updated, but not its `innerText` property.
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [sc 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
 [sibling]: https://dom.spec.whatwg.org/#concept-tree-sibling
+[text node]: https://dom.spec.whatwg.org/#text
 [visible text content]: #visible-text-content 'Definition of visible text content'
 [visible]: #visible 'Definition of visible'
 [window]: https://html.spec.whatwg.org/#window

@@ -224,7 +224,7 @@ The color of the element is updated, but not its `innerText` property.
 [sc 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
 [sibling]: https://dom.spec.whatwg.org/#concept-tree-sibling
 [text node]: https://dom.spec.whatwg.org/#text
-[user interation]: #user-interaction 'Definition of user interaction'
+[user interaction]: #user-interaction 'Definition of user interaction'
 [visible text content]: #visible-text-content 'Definition of visible text content'
 [visible]: #visible 'Definition of visible'
 [window]: https://html.spec.whatwg.org/#window

@@ -120,6 +120,7 @@
 - rowheader
 - columnheader
 - innerText
+- isTrusted
 
 # Unsure why the dictionary does not have these words
 - programmatically

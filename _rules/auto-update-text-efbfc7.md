@@ -22,12 +22,12 @@ acknowledgments:
 
 The rule applies to any [visible][] [HTML element][] with a [visible][] [text node][] if:
 
-- **(changed)** the `innerText` property of the [element][html element] changes; and
-- **(no child changed)** the [element][html element] does not have [children][child] whose `innerText` property also changes; and
-- **(not alone)** the [element][html element] has [sibling][] or [ancestor][] elements with non-empty `innerText` properties whose value is different from the `innerText` of the test target; and
+- **changed:** the `innerText` property of the [element][html element] changes; and
+- **no child changed:** the [element][html element] does not have [children][child] whose `innerText` property also changes; and
+- **not alone:** the [element][html element] has [sibling][] or [ancestor][] elements with non-empty `innerText` properties whose value is different from the `innerText` of the test target; and
 - the [document][html document] the [element][html element] belongs to:
-  - **(ready)** has [readiness][document readiness] equal to "complete" before the change happens; and
-  - **(inactive)** is associated with a [window][] that has the [last activation timestamp][] equal to "positive infinity".
+  - **ready:** has [readiness][document readiness] equal to "complete" before the change happens; and
+  - **inactive:** is associated with a [window][] that has the [last activation timestamp][] equal to "positive infinity".
 
 ## Expectation
 

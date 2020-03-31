@@ -10,21 +10,6 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag20:2.4.4: # Link Purpose (In Context) (A)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
-  wcag20:2.4.9: # Link Purpose (Link Only) (AAA)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
-  wcag-technique:G91: # Providing link text that describes the purpose of a link
-    forConformance: false
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -58,9 +43,6 @@ For `area` elements that have a `href` attribute, but are not nested inside a `m
 
 ## Background
 
-- [Understanding Success Criterion 2.4.4: Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context)
-- [ARIA7: Using aria-labelledby for link purpose](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA7)
-- [ARIA8: Using aria-label for link purpose](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA8)
 - [F89: Failure of Success Criteria 2.4.4, 2.4.9 and 4.1.2 due to not providing an accessible name for an image which is the only content in a link](https://www.w3.org/WAI/WCAG21/Techniques/failures/F89)
 
 ## Test Cases

@@ -2,15 +2,13 @@
 id: 88407d
 name: Inline link has distinguishable style not based on color alone
 rule_type: atomic
-
 description: |
   This rule checks that inline links have a style not based on color alone that distinguishes them from the surrounding text
-
+accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-
-acknowledgements:
+acknowledgments:
   authors:
     - Brian Bors
     - Carlos Duarte

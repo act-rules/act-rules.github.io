@@ -2,15 +2,13 @@
 id: 66e9f0
 name: Inline link has distinguishable box-shadow
 rule_type: atomic
-
 description: |
   This rule checks that inline links have a box-shadow that distinguishes them from the surrounding text
-
+accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-
-acknowledgements:
+acknowledgments:
   authors:
     - Brian Bors
     - Carlos Duarte

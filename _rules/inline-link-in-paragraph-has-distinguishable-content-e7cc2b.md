@@ -2,15 +2,13 @@
 id: e7cc2b
 name: Inline link has distinguishable content
 rule_type: atomic
-
 description: |
   This rule checks that inline links have content that distinguishes them from the surrounding text
-
+accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-
-acknowledgements:
+acknowledgments:
   authors:
     - Brian Bors
     - Carlos Duarte

@@ -2,15 +2,13 @@
 id: 36f116
 name: Inline link has distinguishable border
 rule_type: atomic
-
 description: |
   This rule checks that inline links have a border that distinguishes them from the surrounding text
-
+accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-
-acknowledgements:
+acknowledgments:
   authors:
     - Brian Bors
     - Carlos Duarte

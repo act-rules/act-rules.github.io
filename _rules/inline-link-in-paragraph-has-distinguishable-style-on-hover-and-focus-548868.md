@@ -2,15 +2,13 @@
 id: 548868
 name: Inline link has different foreground color and distinguishable style on hover and focus
 rule_type: atomic
-
 description: |
   This rule checks that inline links with different foreground color have a style on hover and focus that distinguishes them from the surrounding text
-
+accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-
-acknowledgements:
+acknowledgments:
   authors:
     - Brian Bors
     - Carlos Duarte

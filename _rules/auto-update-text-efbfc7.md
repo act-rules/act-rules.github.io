@@ -20,7 +20,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any [visible][] [HTML element][] with a [visible][] [text node][] if:
+The rule applies to any [HTML element][] with a [visible][] [text node][] if:
 
 - **changed:** The `innerText` property of the [element][html element] changes multiple times within a 10 minute time span where there is no [user interaction][]; and
 - **no child changed:** the [element][html element] does not have [children][child] whose `innerText` property also changes; and

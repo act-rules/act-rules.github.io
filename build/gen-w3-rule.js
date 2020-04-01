@@ -4,8 +4,10 @@
 const { config } = require('../package.json')
 const assert = require('assert')
 const program = require('commander')
+const { format } = require('date-fns')
 const getMarkdownData = require('../utils/get-markdown-data')
 const createFile = require('../utils/create-file')
+const getGitLog = require('../utils/get-git-log')
 
 /**
  * Parse `args`
@@ -39,8 +41,9 @@ async function init({ ruleFile, outputDir }) {
 	 * Get all rules `markdown` data
 	 */
 	const [ruleData] = getMarkdownData([ruleFile])
-	const { filename, frontmatter, body } = ruleData
+	const { path, filename, frontmatter, body } = ruleData
 	const ruleFilename = filename.replace('.md', '')
+	const [lastLog] = await getGitLog({ file: path, schema: { date: '%ct' } })
 	const inputAspectsUrls = config['rule-format-metadata']['input-aspects']
 
 	const output = `
@@ -62,7 +65,7 @@ async function init({ ruleFile, outputDir }) {
   :   ${frontmatter.id}
 
   Last modified:
-  :   March 5, 2020 --TODO--
+  :   ${format(new Date(lastLog.date * 1000), 'MMM dd, yyyy')}
 
   Accessibility Requirements Mapping
   --TODO--

@@ -32,7 +32,7 @@ The rule applies to any [HTML element][] with a [visible][] [text node][] if:
 
 ## Expectation
 
-For the test target there exists an [instrument][] in the same [HTML document][] of the test target, or in another [HTML document][] that is [linked][hyperlink] from the [HTML document][] of the test target, to achieve one of the following objectives:
+For each test target there exists an [instrument][] in the same [web page](#web-page-html), or in another [web page](#web-page-html) that is [linked][hyperlink] from the [web page](#web-page-html) of the test target, to achieve one of the following objectives:
 
 - pause and resume the change of the [visible text content][]; or
 - stop the change of the [visible text content][]; or

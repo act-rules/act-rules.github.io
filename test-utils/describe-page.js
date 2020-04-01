@@ -1,5 +1,6 @@
 const getMarkdownData = require('../utils/get-markdown-data')
-const pagesData = getMarkdownData(`./pages`, [
+const pagesData = getMarkdownData([
+	`./pages/**/*.md`,
 	`!**/**/license.md`, // Note: there is a lot of markdown(esque) verbiage in W3C license
 ])
 
@@ -13,7 +14,7 @@ const describePage = (groupName, runTests) => {
 	 * Create arbitrary meta data that can be used in various tests
 	 */
 	const metaData = {
-		glossaryKeys: getMarkdownData(`./pages/glossary`).map(({ frontmatter }) => frontmatter.key),
+		glossaryKeys: getMarkdownData([`./pages/glossary/**/*.md`]).map(({ frontmatter }) => frontmatter.key),
 	}
 	pagesData.forEach(pageData => {
 		const { filename } = pageData

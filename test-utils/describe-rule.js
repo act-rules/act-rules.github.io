@@ -1,6 +1,6 @@
 const { contributors } = require('../package.json')
 const getMarkdownData = require('../utils/get-markdown-data')
-const rulesData = getMarkdownData(`./_rules`)
+const rulesData = getMarkdownData([`./_rules/**/*.md`])
 
 /**
  * describe rule helper
@@ -14,7 +14,7 @@ const describeRule = (groupName, runTests) => {
 	const metaData = {
 		contributors: contributors.map(contributor => contributor.name.toLowerCase()),
 		atomicRuleIds: getRuleIdsOfRuleType(rulesData, 'atomic'),
-		glossaryKeys: getMarkdownData(`./pages/glossary`).map(({ frontmatter }) => frontmatter.key),
+		glossaryKeys: getMarkdownData([`./pages/glossary/**/*.md`]).map(({ frontmatter }) => frontmatter.key),
 	}
 
 	rulesData.forEach(ruleData => {

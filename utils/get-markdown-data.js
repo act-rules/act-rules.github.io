@@ -9,14 +9,12 @@ const remarkFrontmatter = require('remark-frontmatter')
 /**
  * Parse all markdown files in a given directory and construct metadata of each markdown file
  *
- * @param {String} dir path to directory containing markdown files
- * @param {Array} exclude (Optional) list of paths to exclude
+ * @param {String} glob glob pattern of files to match
  * @returns {Object}
  */
-const getMarkdownData = (dir, exclude = []) => {
-	return globby.sync([`${dir}/**/*.md`, ...exclude]).map(markdownPath => {
+const getMarkdownData = glob => {
+	return globby.sync(glob).map(markdownPath => {
 		const filename = path.parse(markdownPath).base
-
 		const fileContents = fs.readFileSync(markdownPath, { encoding: 'utf-8' })
 		const unifiedProcesser = unified()
 			.use(remarkParse)

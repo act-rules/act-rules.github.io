@@ -26,7 +26,7 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], w
 
 Each target element has:
 
-- a [computed][] [background color][] different from the [computed][] [background color][] of the other [descendant][] elements of the same [line box][] that do not contain [visible][] [text nodes][text nodes] of [semantic links][semantic link] (if all such elements have the same [background color][]);
+- a [computed][] [background color][] different from the [computed][] [background color][] of the other [descendant][] elements of the same [line box][] that do not contain [visible][] [text nodes][text node] of [semantic links][semantic link] (if all such elements have the same [background color][]);
 - a difference between the [background colors][background color] that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio); and
 - a [distinguishing style][] both when the target element [gains focus][focused] and the target element is [hovered][].
 

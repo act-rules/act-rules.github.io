@@ -32,8 +32,8 @@ Each target element has a [visible][] [border](https://drafts.csswg.org/css-back
 
 - This rule assumes that [`br` HTML elements][br] are only used for line breaks that are actually part of the content and not for separating thematic groups of the content. 
 - This rule assumes that any change in font is sufficiently distinguishable, and that fonts are loaded when they are present.
-- This rule assumes that if multiple colors are used in the visible text nodes of the _ancestor_ element then color can not be a distinguishing factor.
-- This rule assumes that if `border` is used in the different visible text nodes of the _ancestor_ element then `border` can not be a distinguishing factor.
+- This rule assumes that if multiple colors are used in the visible text nodes of the block of content then color can not be a distinguishing factor.
+- This rule assumes that if `border` is used in the different visible text nodes of the block of content then `border` can not be a distinguishing factor.
 
 ## Accessibility Support
 

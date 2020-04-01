@@ -412,7 +412,7 @@ These two `span` elements do not have a [semantic role][] of link.
 
 #### Inapplicable Example 5
 
-This second HTML `a` element has an empty [accessible name][].
+The second HTML `a` element has an empty [accessible name][].
 
 ```html
 <a href="http://facebook.com">Follow us</a> <a href="http://facebook.com"><img src="facebook.jpg"/></a>

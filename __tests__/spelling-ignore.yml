@@ -122,6 +122,22 @@
 - innerText
 - isTrusted
 
+# DOM Events
+- auxclick
+- compostionend
+- compositionstart
+- compositionupdate
+- dblclick
+- keydown
+- keyup
+- mousedown
+- mouseenter
+- mouseleave
+- mousemove
+- mouseout
+- mouseover
+- mouseup
+
 # Unsure why the dictionary does not have these words
 - programmatically
 - Programmatically

@@ -176,7 +176,7 @@ This `video` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechani
 
 #### Failed Example 4
 
-This `video` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off but its `<button>` elements do not have accessible names.
+This `video` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off but its `button` elements do not have accessible names.
 
 ```html
 <head>

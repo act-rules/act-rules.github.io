@@ -39,6 +39,7 @@
 - PDFs
 - DOCX
 - DPUB
+- CSSOM
 - DNS
 - BCP
 - bcp
@@ -117,6 +118,14 @@
 # Unsure why the dictionary does not have these words
 - programmatically
 - Programmatically
+- scrollable
+- Scrollable
+- scrollbars
+- scrollable-element
+- scrollWidth
+- scrollHeight
+- clientWidth
+- clientHeight
 - personalization
 - Autofill
 - implementers

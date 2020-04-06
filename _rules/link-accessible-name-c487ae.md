@@ -97,7 +97,9 @@ This `button` element has an [explicit semantic role](#explicit-role) of `link` 
 This `a` element has an [accessible name][] via `aria-label`
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" aria-label="Web Accessibility Initiative"/></a>
+<a href="http://www.w3.org/WAI"
+	><img src="/test-assets/shared/w3c-logo.png" aria-label="Web Accessibility Initiative"
+/></a>
 ```
 
 #### Passed Example 5
@@ -105,7 +107,9 @@ This `a` element has an [accessible name][] via `aria-label`
 This `a` element has an [accessible name][] via `title`.
 
 ```html
-<a href="http://www.w3.org/WAI" title="Web Accessibility Initiative"><img src="/test-assets/shared/w3c-logo.png" alt=""/></a>
+<a href="http://www.w3.org/WAI" title="Web Accessibility Initiative"
+	><img src="/test-assets/shared/w3c-logo.png" alt=""
+/></a>
 ```
 
 #### Passed Example 6
@@ -113,7 +117,7 @@ This `a` element has an [accessible name][] via `title`.
 This `a` element has an [accessible name][] from its content via the `title` on the `img` element.
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" title="Web Accessibility Initiative"/></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" title="Web Accessibility Initiative" /></a>
 ```
 
 #### Passed Example 7
@@ -121,7 +125,9 @@ This `a` element has an [accessible name][] from its content via the `title` on 
 This `a` element has an [accessible name][] from its content.
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" alt="" />Web Accessibility Initiative (WAI)</a>
+<a href="http://www.w3.org/WAI"
+	><img src="/test-assets/shared/w3c-logo.png" alt="" />Web Accessibility Initiative (WAI)</a
+>
 ```
 
 #### Passed Example 8
@@ -129,7 +135,7 @@ This `a` element has an [accessible name][] from its content.
 This `a` element has an [accessible name][] from its content via `aria-labelledby` on the `img` element.
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" aria-labelledby="id1"/></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" aria-labelledby="id1" /></a>
 <div id="id1">Web Accessibility Initiative (WAI)</div>
 ```
 
@@ -157,10 +163,10 @@ This `a` element placed off screen has an [accessible name][] from its content.
 This `area` element has a [semantic role][] of `link` and an [accessible name][] via `alt`.
 
 ```html
-<img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap" />
+<img src="/test-assets/c487ae/planets.jpg" width="145" height="126" alt="Planets" usemap="#planetmap" />
 
 <map name="planetmap">
-	<area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun" />
+	<area shape="rect" coords="0,0,30,100" href="sun.htm" alt="Sun" />
 </map>
 ```
 
@@ -171,7 +177,7 @@ This `area` element has a [semantic role][] of `link` and an [accessible name][]
 This `a` element has an empty [accessible name][].
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" role="none"/></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" role="none" /></a>
 ```
 
 #### Failed Example 2
@@ -179,7 +185,7 @@ This `a` element has an empty [accessible name][].
 This `a` element with an image [marked as decorative](#marked-as-decorative) has an empty [accessible name][].
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" alt=""/></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" alt="" /></a>
 ```
 
 #### Failed Example 3
@@ -196,7 +202,7 @@ This `a` element with an icon inserted via font-awesome has an empty [accessible
 This `a` element with an `img` with an empty `title` has an empty [accessible name][].
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" title=""/></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" title="" /></a>
 ```
 
 #### Failed Example 5
@@ -204,7 +210,7 @@ This `a` element with an `img` with an empty `title` has an empty [accessible na
 This `a` element with an `img` with an `aria-labelledby` has an empty [accessible name][].
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" aria-labelledby="id1"/></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" aria-labelledby="id1" /></a>
 <div id="id1"></div>
 ```
 
@@ -213,7 +219,7 @@ This `a` element with an `img` with an `aria-labelledby` has an empty [accessibl
 This `a` element with an `img` with an `aria-labelledby` referencing a non-existing id has an empty [accessible name][].
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" aria-labelledby="id1"/></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" aria-labelledby="id1" /></a>
 ```
 
 #### Failed Example 7
@@ -271,7 +277,7 @@ This `a` element does not have a [semantic role][] of `link` because it has been
 This `a` element is not [included in the accessibility tree][] due to `display: none`.
 
 ```html
-<a href="http://www.w3.org/WAI" style="display: none;"><img src="#"/></a>
+<a href="http://www.w3.org/WAI" style="display: none;"><img src="#" /></a>
 ```
 
 #### Inapplicable Example 3

@@ -43,7 +43,7 @@ The rule applies to each HTML element that has one of the following [semantic ro
 
 ## Expectation 1
 
-For each test target with a [form field error indicator][], at least one of the [form field error indicators][form field error indicator] allows the identification of the related test target, through [text][], or [non-text content][], or through [presentation][].
+For each test target with a [form field error indicator][], at least one of the [form field error indicators][form field error indicator] allows the identification of the related test target, through [text][], or through [non-text content][], or through [presentation][].
 
 **Note**: This rule does not test [form field error indicators][form field error indicator] shown on a different page than that of the test target.
 
@@ -87,7 +87,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The `input` element has a [form field error indicator][] that identifies it (by referencing its label), describes the cause of the error and how to resolve it.
+This `input` element has a [form field error indicator][] that identifies it (by referencing its label), describes the cause of the error and how to resolve it.
 
 ```html
 <form>
@@ -100,7 +100,7 @@ The `input` element has a [form field error indicator][] that identifies it (by 
 
 #### Passed Example 2
 
-The multiple `input` elements share a [form field error indicator][] that identifies the elements unfilled (by referencing their labels), describes the cause of the error and how to resolve it.
+This multiple `input` elements share a [form field error indicator][] that identifies the elements unfilled (by referencing their labels), describes the cause of the error and how to resolve it.
 
 ```html
 <form>
@@ -126,7 +126,7 @@ The multiple `input` elements share a [form field error indicator][] that identi
 
 #### Passed Example 3
 
-The `input` element does not have a [form field error indicator][].
+This `input` element does not have a [form field error indicator][].
 
 ```html
 <form>
@@ -140,7 +140,7 @@ The `input` element does not have a [form field error indicator][].
 
 #### Failed Example 1
 
-The multiple `input` elements share a [form field error indicator][] but its message does not identify the elements that caused the error nor describes the cause of the error.
+These multiple `input` elements share a [form field error indicator][] but its message does not identify the elements that caused the error nor describes the cause of the error.
 
 ```html
 <form>
@@ -155,7 +155,7 @@ The multiple `input` elements share a [form field error indicator][] but its mes
 
 #### Failed Example 2
 
-The `input` element has a [form field error indicator][] but its message does not describe the cause of the error.
+This `input` element has a [form field error indicator][] but its message does not describe the cause of the error.
 
 ```html
 <form>
@@ -168,7 +168,7 @@ The `input` element has a [form field error indicator][] but its message does no
 
 #### Failed Example 3
 
-The `input` element has a [form field error indicator][] that identifies it (by referencing its label) and describes the cause of the error but the message is not [visible][].
+This `input` element has a [form field error indicator][] that identifies it (by referencing its label) and describes the cause of the error but the message is not [visible][].
 
 ```html
 <form>
@@ -181,7 +181,7 @@ The `input` element has a [form field error indicator][] that identifies it (by 
 
 #### Failed Example 4
 
-The `input` element has a [form field error indicator][] that identifies it (by referencing its label) and describes the cause of the error but the message is not [included in the accessibility tree][].
+This `input` element has a [form field error indicator][] that identifies it (by referencing its label) and describes the cause of the error but the message is not [included in the accessibility tree][].
 
 ```html
 <form>
@@ -194,7 +194,7 @@ The `input` element has a [form field error indicator][] that identifies it (by 
 
 #### Failed Example 5
 
-The multiple `input` elements share a [form field error indicator][]. The message describes the cause of the error but does not allow to identify the elements that caused the error because the same label is used in different `fieldset`s.
+These multiple `input` elements share a [form field error indicator][]. The message describes the cause of the error but does not allow to identify the elements that caused the error because the same label is used in different `fieldset`s.
 
 ```html
 <form>

@@ -16,7 +16,7 @@ input_aspects:
   - Language
 acknowledgments:
   authors:
-	- Carlos Duarte
+    - Carlos Duarte
   previous_authors:
     - Anne Thyme Nørregaard	
 htmlHintIgnore:

@@ -13280,10 +13280,10 @@
       }
     },
     {
-      "testcaseId": "5a077b6ba48093c19552cd5fad8c9edeea792916",
+      "testcaseId": "1934f556cad7387ea81f1d59ab137ce3034abb23",
       "testcaseTitle": "Passed Example 10",
-      "url": "https://act-rules.github.io/testcases/afw4f7/5a077b6ba48093c19552cd5fad8c9edeea792916.html",
-      "relativePath": "testcases/afw4f7/5a077b6ba48093c19552cd5fad8c9edeea792916.html",
+      "url": "https://act-rules.github.io/testcases/afw4f7/1934f556cad7387ea81f1d59ab137ce3034abb23.html",
+      "relativePath": "testcases/afw4f7/1934f556cad7387ea81f1d59ab137ce3034abb23.html",
       "expected": "passed",
       "ruleId": "afw4f7",
       "ruleName": "Text has minimum contrast",

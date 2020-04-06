@@ -105,7 +105,7 @@ This `a` element has an [accessible name][] via `aria-label`
 This `a` element has an [accessible name][] via `title`.
 
 ```html
-<a href="http://www.w3.org/WAI" title="Web Accessibility Initiative"><img src="/test-assets/shared/w3c-logo.png"/></a>
+<a href="http://www.w3.org/WAI" title="Web Accessibility Initiative"><img src="/test-assets/shared/w3c-logo.png" alt=""/></a>
 ```
 
 #### Passed Example 6
@@ -121,7 +121,7 @@ This `a` element has an [accessible name][] from its content via the `title` on 
 This `a` element has an [accessible name][] from its content.
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" />Web Accessibility Initiative (WAI)</a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" alt="" />Web Accessibility Initiative (WAI)</a>
 ```
 
 #### Passed Example 8
@@ -171,7 +171,7 @@ This `area` element has a [semantic role][] of `link` and an [accessible name][]
 This `a` element has an empty [accessible name][].
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png"/></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" role="none"/></a>
 ```
 
 #### Failed Example 2
@@ -305,7 +305,7 @@ This `area` element does not have the role of link because it does not have an `
 This `a` element does not have the role of link because it does not have an `href` attribute.
 
 ```html
-<a alt="not a link" />
+<a />
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

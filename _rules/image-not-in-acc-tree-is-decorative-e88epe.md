@@ -21,6 +21,7 @@ acknowledgments:
   assets:
     - W3C
     - Wikimedia
+    - Adobe
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -29,12 +30,14 @@ htmlHintIgnore:
 
 ## Applicability
 
-Any `img`, `canvas` or `svg` element that is [visible][] and is not [included in the accessibility tree][], except if one of the following is true:
+Any `img`, `canvas` or `svg` element that is [visible][] and for which one of the following is true:
 
-- **unloaded img**: the element is an `img` and its [current request][]'s [state][image request state] is not [completely available][]; or
-- **ignored svg**: the element is an `svg` with an empty (`""`) [accessible name][] and a [semantic role][] of `graphics-document`; or
-- **ignored canvas**: the element is a `canvas` with an empty (`""`) [accessible name][] and no [explicit semantic role][]; or
-- **named from author**: the element is a [descendant][] in the [flat tree][] of an element that is [named from author][].
+- **excluded**: The element is not [included in the accessibility tree][]; or
+- **ignored svg**: The element is an `svg` with an empty (`""`) [accessible name][] and a [semantic role][] of `graphics-document`; or
+- **ignored canvas**: The element is a `canvas` with an empty (`""`) [accessible name][] and no [explicit semantic role][]; or
+- **named from author**: The element is a [descendant][] in the [flat tree][] of an element that is [named from author][].
+
+**Exception**: Exclude any `img` element where the [current request][]'s [state][image request state] is not [completely available][]; or
 
 **Note**: An example of an image ignored because of "named from author" is when the image is a descendant of a `button` element that uses `aria-label` for its accessible name.
 
@@ -209,7 +212,7 @@ This `img` element is not [visible][] because it is positioned off screen.
 		top: -9999em;
 	}
 </style>
-<img src="/test-assets/shared/w3c-logo.png" alt="" />
+<img src="/test-assets/shared/fireworks.jpg" alt="" />
 ```
 
 #### Inapplicable Example 4
@@ -271,10 +274,25 @@ This `img` element is [visible][] but [included in the accessibility tree][].
 **Note**: While it might be better for the PDF icon to be ignored by assistive technologies, because assistive technologies will announce "PDF" twice, the image is not [purely decorative][]. Having assistive technologies ignore it is not required by [Success Criterion 1.1.1 Non-text content][].
 
 ```html
-<img src="pdf.gif" alt="PDF" /> PDF document
+<img src="/test-assets/shared/pdf-icon.png" alt="PDF" /> PDF document
 ```
 
 #### Inapplicable Example 9
+
+This is a `div` element with a background image.
+
+```html
+<p>Happy new year!</p>
+<div
+	style="
+	width: 260px;
+	height: 260px;
+	background: url(/test-assets/shared/fireworks.jpg) no-repeat;
+"
+></div>
+```
+
+#### Inapplicable Example 10
 
 This `img` element has an `src` attribute which will cause the [image request state][] to be [Broken
 ](https://html.spec.whatwg.org/#img-error).

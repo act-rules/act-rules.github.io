@@ -221,7 +221,7 @@ These multiple `input` elements share a [form field error indicator][]. The mess
 
 #### Inapplicable Example 1
 
-No elements with the required [semantic roles][semantic role].
+There are no elements with any of the required [semantic roles][semantic role].
 
 ```html
 <p>This is a paragraph.</p>

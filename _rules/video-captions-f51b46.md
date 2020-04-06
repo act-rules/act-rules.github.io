@@ -5,12 +5,27 @@ rule_type: atomic
 description: |
   This rule checks that captions are available for audio information in non-streaming `video` elements.
 accessibility_requirements:
+  wcag-technique:G87: # Providing closed captions
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:G93: # Providing open (always visible) captions
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:H95: # Using the track element to provide captions
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
   - Audio output
   - Visual output
-acknowledgements:
+acknowledgments:
   authors:
     - Wilco Fiers
     - Brian Bors

@@ -5,13 +5,18 @@ rule_type: atomic
 description: |
   This rule checks that description tracks that come with non-streaming `video` elements, without audio, are descriptive.
 accessibility_requirements:
+  wcag-technique:H96: # Using the track element to provide audio descriptions
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
   - Audio output
   - Visual output
   - Language
-acknowledgements:
+acknowledgments:
   authors:
     - Wilco Fiers
     - Brian Bors

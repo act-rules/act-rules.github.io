@@ -13,7 +13,7 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Jey Nandakumar
     - Wilco Fiers
@@ -29,7 +29,7 @@ The rule applies to `iframe` elements that are [included in the accessibility tr
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
-**Note:** Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
+**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
 
 ## Assumptions
 
@@ -52,7 +52,7 @@ If an `iframe` is not perceived by the user as a single control, it does not qua
 
 #### Passed Example 1
 
-Usage of `title` attribute to describe the `iframe` content.
+This `iframe` element gets its [accessible name][] from the `title` attribute.
 
 ```html
 <iframe title="List of Contributors" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
@@ -60,7 +60,7 @@ Usage of `title` attribute to describe the `iframe` content.
 
 #### Passed Example 2
 
-Usage of `aria-label` attribute to describe the `iframe` content.
+This `iframe` element gets its [accessible name][] from the `aria-label` attribute.
 
 ```html
 <iframe aria-label="Advertisement of tours to Great Wall of China" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
@@ -68,26 +68,18 @@ Usage of `aria-label` attribute to describe the `iframe` content.
 
 #### Passed Example 3
 
-Usage of `aria-labelledby` attribute to describe the `iframe` content.
+This `iframe` element gets its [accessible name][] from the content of the `div` referenced with the `aria-labelledby` attribute.
 
 ```html
 <div id="frame-title-helper">Watch highlights of the Worldcup</div>
 <iframe aria-labelledby="frame-title-helper" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
-#### Passed Example 4
-
-[Accessible name][] is not empty.
-
-```html
-<iframe title=":-)" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
-```
-
 ### Failed
 
 #### Failed Example 1
 
-Usage of `name` attribute to describe the `iframe` content is not valid.
+This `iframe` element has an empty (`""`) [accessible name][]. The `name` attribute is not used in computing the [accessible name][] of `iframe` elements.
 
 ```html
 <iframe name="List of Contributors" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
@@ -95,7 +87,7 @@ Usage of `name` attribute to describe the `iframe` content is not valid.
 
 #### Failed Example 2
 
-`iframe` with no `title`, `aria-label` or `aria-labelledby` attribute to describe content is not valid.
+This `iframe` element has no attributes that would give it a non-empty (`""`) [accessible name][].
 
 ```html
 <iframe src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
@@ -103,7 +95,7 @@ Usage of `name` attribute to describe the `iframe` content is not valid.
 
 #### Failed Example 3
 
-Empty `title` attribute is not valid.
+This `iframe` element has an empty (`""`) [accessible name][] because the `title` attribute has an empty string as its value.
 
 ```html
 <iframe title="" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
@@ -111,31 +103,9 @@ Empty `title` attribute is not valid.
 
 #### Failed Example 4
 
-Empty `aria-label` attribute to describe the `frame` content is not valid.
+This `iframe` element has an empty (`""`) [accessible name][] because the `title` attribute value is trimmed of whitespace as part of the accessible name computation.
 
-```html
-<iframe aria-label="" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
-```
-
-#### Failed Example 5
-
-Usage of non existing `aria-labelledby` reference element to describe the `iframe` content is not valid.
-
-```html
-<iframe aria-labelledby="does-not-exist" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
-```
-
-#### Failed Example 6
-
-Usage of `alt` attribute to describe content is not valid.
-
-```html
-<iframe alt="List of Contributors" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
-```
-
-#### Failed Example 7
-
-This `iframe` that is part of [sequential focus navigation][] has an empty [Accessible name][].
+**note**: Because `iframe` elements are part of [sequential focus navigation][], the [explicit semantic role](#explicit-role) of `none` will be ignored, due to the [Presentational Roles Conflict Resolution](https://www.w3.org/TR/wai-aria-1.1/#presentational-roles-conflict-resolution).
 
 ```html
 <iframe title=" " src="/test-assets/SC4-1-2-frame-doc.html" role="none" tabindex="0"> </iframe>
@@ -145,7 +115,7 @@ This `iframe` that is part of [sequential focus navigation][] has an empty [Acce
 
 #### Inapplicable Example 1
 
-Does not apply to non `iframe` element.
+This page has no `iframe` element.
 
 ```html
 <button>take me somewhere</button>

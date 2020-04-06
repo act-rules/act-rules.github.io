@@ -28,7 +28,7 @@ accessibility_requirements:
 input_aspects: # Remove what is not applicable
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Anne Thyme Nørregaard
 htmlHintIgnore:
@@ -47,7 +47,7 @@ The rule applies to any HTML `input` element with a `type` attribute in the [`Im
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
-**Note:** Testing that the [accessible name][] is descriptive is not part of this rule and must be tested separately.
+**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
 
 ## Assumptions
 
@@ -86,6 +86,8 @@ The image button has an [accessible name][] through the `aria-label` attribute.
 #### Passed Example 3
 
 The image button has an [accessible name][] through the `title` attribute.
+
+**note**: The `title` attribute may not always be [accessibility supported](#accessibility-support).
 
 ```html
 <input type="image" src="/test-assets/shared/search-icon.svg" title="Search" />

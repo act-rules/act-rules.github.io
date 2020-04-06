@@ -1,11 +1,11 @@
 ---
 id: b8bb68
-name: Text spacing specified via CSS styles is below permissible minimum value or not set to `!important`
+name: Text spacing set in the `style` attribute is below permissible minimum value or not set to `!important`
 rule_type: atomic
 description: |
   This rule checks that
 accessibility_requirements:
-  wcag21:1.4.12: # Text Spacing - Level AA
+  wcag21:1.4.12: # Text Spacing (AA)
     forConformance: true
     failed: not satisfied
     passed: further testing needed
@@ -20,7 +20,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element that is [visible][] and has any of the below CSS properties:
+This rule applies to any HTML element that is [visible][] and has any of the below CSS properties set in the `style` attribute:
 
 - [word-spacing][]
 - [letter-spacing][]
@@ -34,11 +34,11 @@ The target element does not have an overriding property value with `!important` 
 
 ## Assumptions
 
-_There are currently no assumptions_
+If there is a mechanism available on the page by which text spacing can be adjusted, failing this rule might not mean [success criterion 1.4.12 Text spacing](https://www.w3.org/TR/WCAG21/#text-spacing) is not satisfied.
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+While some assistive technologies are able to set [user origin][] styles, others such as browser exteinsions are only able to set style with the [author origin][]. Such assistive technologies can not create styles with a high enough priority to override a `style` attribute with `!important`. If [accessibility support][] does not include assistive technologies that override text spacing through [author origin][], this rule should not be used.
 
 ## Background
 
@@ -62,7 +62,7 @@ This `p` element has a `line-height` of `1.2em` which is below the permissible m
 
 #### Passed Example 2
 
-This `span` element has a `letter-spacing` of `1.5em !important` which is less than or equal to the permissible minimum.
+This `span` element has a `letter-spacing` of `1.5em !important` which is equal to the permissible minimum.
 
 ```html
 <span style="letter-spacing: 1.5em !important;">

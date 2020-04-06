@@ -68,7 +68,7 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-This `img` element with an empty `alt` attribute which is not included in accessibility tree is decorative.
+This `img` element with an empty `alt` attribute which is not [included in the accessibility tree][] is [purely decorative][].
 
 ```html
 <p>Happy new year!</p>
@@ -217,7 +217,7 @@ This `img` element is not [visible][] because it is positioned off screen.
 
 #### Inapplicable Example 4
 
-This `svg` element is ignored because it is a child of a link that has provides its [accessible name][].
+This `svg` element is ignored because it is a child of a link that provides its [accessible name][].
 
 ```html
 <a href="//example.org" aria-label="SVG star">

@@ -16,8 +16,9 @@ input_aspects:
   - Language
 acknowledgments:
   authors:
-    - Anne Thyme Nørregaard
-    - Carlos Duarte
+	- Carlos Duarte
+  previous_authors:
+    - Anne Thyme Nørregaard	
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -65,7 +66,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-These` two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context] and link to the [same resource][].
+These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context] and link to the [same resource][].
 
 ```html
 <html lang="en">
@@ -80,7 +81,7 @@ These` two HTML `a` elements have the same [accessible name][] and [context][pro
 
 #### Passed Example 2
 
-These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context], and resolve to the [same resource][] after instant redirect.
+These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context], and resolve to the [same resource][] after an instant redirect.
 
 ```html
 <html lang="en">
@@ -129,19 +130,6 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 
 #### Passed Example 5
 
-These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context], and link to URLs that differ due to trailing slashes, but resolve to the [same resource][] after redirects caused by user agent.
-
-```html
-<html lang="en">
-	<p>
-		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/">Contact us</a>) and
-		get in touch (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66">Contact us</a>)
-	</p>
-</html>
-```
-
-#### Passed Example 6
-
 These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context], and go to pages that fulfill the same purpose in relation to the link because they contain the same relevant information.
 
 ```html
@@ -155,9 +143,9 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 </html>
 ```
 
-#### Passed Example 7
+#### Passed Example 6
 
-These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context], and go to pages that use different layouts but have the same advertised key content.
+These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context], and go to pages that use different layouts but have the same purpose.
 
 ```html
 <html lang="en">
@@ -171,7 +159,7 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 </html>
 ```
 
-#### Passed Example 8
+#### Passed Example 7
 
 These two HTML `span` elements have an [explicit role][] of link, the same [accessible name][], the same [context][programmatically determined link context], and link to the [same resource][].
 
@@ -197,29 +185,7 @@ These two HTML `span` elements have an [explicit role][] of link, the same [ac
 </html>
 ```
 
-#### Passed Example 9
-
-These two SVG `a` elements have the same [accessible name][], same [context][programmatically determined link context] and link to the [same resource][].
-
-```html
-<html lang="en">
-	<p>
-		<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-			<a href="http://facebook.com" aria-label="Follow us">
-				<circle cx="50" cy="40" r="35" />
-			</a>
-
-			<a href="http://facebook.com">
-				<text x="50" y="90" text-anchor="middle">
-					Follow us
-				</text>
-			</a>
-		</svg>
-	</p>
-</html>
-```
-
-#### Passed Example 10
+#### Passed Example 8
 
 These two SVG `a` and HTML `a` elements have the same [accessible name][], same [context][programmatically determined link context] and link to the [same resource][].
 
@@ -294,20 +260,6 @@ These two HTML `span` elements have an [explicit role][] of link, same [access
 
 #### Failed Example 4
 
-These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context] but link to different resources.
-
-```html
-<html lang="en">
-	<p>
-		We are on social media:
-		<a href="http://facebook.com"><img src="facebook.jpg" alt="Follow us"/></a>
-		<a href="http://twitter.com"><img src="twitter.jpg" alt="Follow us"/></a>
-	</p>
-</html>
-```
-
-#### Failed Example 5
-
 These two SVG `a` elements have the same [accessible name][] and [context][programmatically determined link context] but link to different resources.
 
 ```html
@@ -328,7 +280,7 @@ These two SVG `a` elements have the same [accessible name][] and [context][progr
 </html>
 ```
 
-#### Failed Example 6
+#### Failed Example 5
 
 These two HTML `a` elements with the same [accessible name][] and [context][programmatically determined link context] resolve to the [same resource][] after redirect, but the redirect is not instant.
 
@@ -415,7 +367,7 @@ These two `span` elements do not have a [semantic role][] of link.
 The second HTML `a` element has an empty [accessible name][].
 
 ```html
-<a href="http://facebook.com">Follow us</a> <a href="http://facebook.com"><img src="facebook.jpg"/></a>
+<a href="http://facebook.com">Follow us</a> <a href="http://facebook.com"><img src="facebook.jpg" /></a>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

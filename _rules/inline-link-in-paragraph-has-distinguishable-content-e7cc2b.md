@@ -28,8 +28,7 @@ Each target element has content (such as an image or text) visually located insi
 
 ## Assumptions
 
-- This rule assumes that [`br` HTML elements][br] are only used for line breaks that are actually part of the content and not for separating thematic groups of the content. 
-- This rule assumes that the link is distinguishable from the rest of the text with color, which means it fails SC 1.4.1 when there is not another way to distinguish it.
+- The link is distinguishable from the rest of the text with color, which means it fails SC 1.4.1 when there is not another way to distinguish it.
 
 ## Accessibility Support
 
@@ -52,7 +51,6 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 ```html
 <style>
-	*,
 	a.test {
 		text-decoration: none;
 	}
@@ -69,7 +67,6 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 ```html
 <style>
-	*,
 	a.test {
 		text-decoration: none;
 	}
@@ -85,7 +82,6 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 ```html
 <style>
-	*,
 	a.test {
 		text-decoration: none;
 	}

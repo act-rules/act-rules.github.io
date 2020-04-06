@@ -28,10 +28,9 @@ Each target element has a [visible][] [border](https://drafts.csswg.org/css-back
 
 ## Assumptions
 
-- This rule assumes that [`br` HTML elements][br] are only used for line breaks that are actually part of the content and not for separating thematic groups of the content. 
-- This rule assumes that any change in font is sufficiently distinguishable, and that fonts are loaded when they are present.
-- This rule assumes that if multiple colors are used in the visible text nodes of the block of content then color can not be a distinguishing factor.
-- This rule assumes that if `border` is used in the different visible text nodes of the block of content then `border` can not be a distinguishing factor.
+- Any change in font is sufficiently distinguishable, and that fonts are loaded when they are present.
+- If multiple colors are used in the visible text nodes of the block of content then color can not be a distinguishing factor.
+- If `border` is used in the different visible text nodes of the block of content then `border` can not be a distinguishing factor.
 
 ## Accessibility Support
 
@@ -54,11 +53,13 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 ```html
 <style>
-	* {
+	p {
 		color: black;
+		background-color: white;
 	}
 	a.test {
 		color: blue;
+		background-color: white;
 		text-decoration: none;
 		border-style: solid;
 		border-color: red;
@@ -77,7 +78,6 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 ```html
 <style>
-	*,
 	a.test {
 		text-decoration: none;
 	}
@@ -93,12 +93,36 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 <style>
 	* {
 		color: black;
+		background-color: white;
 	}
 	a.test {
 		text-decoration: none;
 		border-style: solid;
 		border-color: blue;
 		border-width: 0px;
+	}
+</style>
+<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
+```
+
+#### Failed Example 3
+
+This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. The link has a border but its color is transparent and, therefore, not visible.
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a.test {
+		color: blue;
+		background-color: white;
+		text-decoration: none;
+		border-style: solid;
+		border-color: #ff000000;
+		border-width: 0px;
+		border-bottom-width: 1px;
 	}
 </style>
 <p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>

@@ -24,16 +24,15 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], w
 
 ## Expectation
 
-Each target element has a `box-shadow` style property with a [computed](https://drafts.csswg.org/css-cascade/#computed-value) [color value](https://drafts.csswg.org/css-backgrounds/#shadow-color) that makes it [visible][].
+Each target element has a [visible] [`box-shadow`](https://drafts.csswg.org/css-backgrounds-3/#box-shadow).
 
 ## Assumptions
 
-- This rule assumes that [`br` HTML elements][br] are only used for line breaks that are actually part of the content and not for separating thematic groups of the content. 
-- This rule assumes that the link is distinguishable from the rest of the text with color, which means it fails SC 1.4.1 when there is not another way to distinguish it.
-- This rule assumes that the 3:1 contrast difference between text is minimal to what would be sufficient to meet WCAG 2.0. This value is part of [technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183), but is not specified in the [1.4.1 success criterion](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
-- This rule assumes that any change in font is sufficiently distinguishable, and that fonts are loaded when they are present.
-- This rule assumes that if multiple colors are used in the visible text nodes of the block of content then color can not be a distinguishing factor.
-- This rule assumes that if `box-shadow` is used in the different visible text nodes of the block of content then `box-shadow` can not be a distinguishing factor.
+- The link is distinguishable from the rest of the text with color, which means it fails SC 1.4.1 when there is not another way to distinguish it.
+- The 3:1 contrast difference between text is minimal to what would be sufficient to meet WCAG 2.0. This value is part of [technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183), but is not specified in the [1.4.1 success criterion](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
+- Any change in font is sufficiently distinguishable, and that fonts are loaded when they are present.
+- If multiple colors are used in the visible text nodes of the block of content then color can not be a distinguishing factor.
+- If `box-shadow` is used in the different visible text nodes of the block of content then `box-shadow` can not be a distinguishing factor.
 
 ## Accessibility Support
 
@@ -56,9 +55,6 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 ```html
 <style>
-	* {
-		text-decoration: none;
-	}
 	a.test {
 		text-decoration: none;
 		box-shadow: 4px 4px;
@@ -75,7 +71,6 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 ```html
 <style>
-	*,
 	a.test {
 		text-decoration: none;
 	}

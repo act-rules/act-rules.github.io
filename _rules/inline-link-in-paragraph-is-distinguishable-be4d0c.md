@@ -44,13 +44,12 @@ For each test target, the [outcome][] of one of the following rules is "passed":
 
 ## Assumptions
 
-- This rule assumes that [`br` HTML elements][br] are only used for line breaks that are actually part of the content and not for separating thematic groups of the content. 
-- This rule assumes that the link is distinguishable from the rest of the text with color, which means it fails SC 1.4.1 when there is not another way to distinguish it.
-- This rule assumes that the 3:1 contrast difference between text is minimal to what would be sufficient to meet WCAG 2.0. This value is part of [technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183), but is not specified in the [1.4.1 success criterion](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
-- This rule assumes that any change in font is sufficiently distinguishable, and that fonts are loaded when they are present.
-- This rule assumes that if multiple colors are used in the visible text nodes of the _ancestor_ element then color can not be a distinguishing factor.
-- This rule assumes that if `box-shadow` is used in the different visible text nodes of the _ancestor_ element then `box-shadow` can not be a distinguishing factor.
-- This rule assumes that if `border` is used in the different visible text nodes of the _ancestor_ element then `border` can not be a distinguishing factor.
+- The link is distinguishable from the rest of the text with color, which means it fails SC 1.4.1 when there is not another way to distinguish it.
+- The 3:1 contrast difference between text is minimal to what would be sufficient to meet WCAG 2.0. This value is part of [technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183), but is not specified in the [1.4.1 success criterion](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
+- Any change in font is sufficiently distinguishable, and that fonts are loaded when they are present.
+- If multiple colors are used in the visible text nodes of the _ancestor_ element then color can not be a distinguishing factor.
+- If `box-shadow` is used in the different visible text nodes of the _ancestor_ element then `box-shadow` can not be a distinguishing factor.
+- If `border` is used in the different visible text nodes of the _ancestor_ element then `border` can not be a distinguishing factor.
 
 ## Accessibility Support
 
@@ -69,49 +68,44 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
+This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. It uses the default styling of links which underlines them in most browsers, making it a distinguishing style.
+
+```html
+<style>
+	a {
+		text-decoration: underline;
+	}
+</style>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
+```
+
+#### Passed Example 2
+
 This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. An icon is added to distinguish it as a link.
 
 ```html
 <style>
-	*,
 	a.test {
 		text-decoration: none;
 	}
 </style>
 <p>
 	Read about WAI on the
-	<a class="test" href="http://w3.org/WAI">WAI webpage <img src="/test-assets/be4d0c/icon.png" alt=""/></a>.
+	<a class="test" href="http://w3.org/WAI">WAI webpage <img src="/test-assets/be4d0c/icon.png" alt="" /></a>.
 </p>
 ```
 
-#### Passed Example 2
+#### Passed Example 3
 
 This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. Text is added to distinguish it as a link.
 
 ```html
 <style>
-	*,
 	a.test {
 		text-decoration: none;
 	}
 </style>
 <p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage by following this link</a>.</p>
-```
-
-#### Passed Example 3
-
-This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. It uses the default styling of links which underlines them in most browsers, making it a distinguishing style.
-
-```html
-<style>
-	* {
-		text-decoration: none;
-	}
-	a {
-		text-decoration: underline;
-	}
-</style>
-<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
 #### Passed Example 4
@@ -120,9 +114,6 @@ The element with a [semantic role][] that inherits from link is a descendant of 
 
 ```html
 <style>
-	* {
-		text-decoration: none;
-	}
 	a {
 		text-decoration: underline;
 	}
@@ -141,11 +132,13 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 ```html
 <style>
-	* {
+	p {
 		color: black;
+		background-color: white;
 	}
 	a.test {
 		color: blue;
+		background-color: white;
 		text-decoration: none;
 		border-style: solid;
 		border-color: red;
@@ -162,9 +155,6 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 ```html
 <style>
-	* {
-		text-decoration: none;
-	}
 	a.test {
 		text-decoration: none;
 		box-shadow: 4px 4px;
@@ -180,12 +170,14 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 ```html
 <style>
 	p {
-		text-decoration: none;
-		color: #000;
+		color: black;
+		background-color: white;
+
 	}
 	a {
 		text-decoration: none;
 		color: #d14826;
+		background-color: white;
 	}
 	a:hover,
 	a:focus {
@@ -201,9 +193,6 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 ```html
 <style>
-	p {
-		text-decoration: none;
-	}
 	a {
 		text-decoration: none;
 		color: #000;
@@ -225,7 +214,6 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 ```html
 <style>
-	*,
 	a.test {
 		text-decoration: none;
 	}
@@ -241,12 +229,36 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 <style>
 	* {
 		color: black;
+		background-color: white;
 	}
 	a.test {
 		text-decoration: none;
 		border-style: solid;
 		border-color: blue;
 		border-width: 0px;
+	}
+</style>
+<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
+```
+
+#### Failed Example 3
+
+This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. The link has a border but its color is transparent and, therefore, not visible.
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a.test {
+		color: blue;
+		background-color: white;
+		text-decoration: none;
+		border-style: solid;
+		border-color: #ff000000;
+		border-width: 0px;
+		border-bottom-width: 1px;
 	}
 </style>
 <p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
@@ -262,7 +274,7 @@ There is no [semantic link][] element.
 <p>Read about WAI on the <u>underlined text</u>.</p>
 ```
 
-#### Inapplicable Example 2 
+#### Inapplicable Example 2
 
 This link is not [visible][].
 
@@ -297,22 +309,11 @@ There are only [semantic links][semantic link] in the inline block of content.
 <p><a href="https://www.w3.org">W3C </a><span role="link" onclick="location='https://www.w3.org/WAI/'">WAI</span></p>
 ```
 
-[ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor
-[background color]: #background-colors-of-text 'Definition of background color'
 [br]: https://html.spec.whatwg.org/#the-br-element
-[cell]: https://www.w3.org/TR/wai-aria/#cell
-[computed value]: https://drafts.csswg.org/css-cascade-4/#computed-value
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
-[display]: https://drafts.csswg.org/css-display/#the-display-properties
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
-[focused]: #focused 'Definition of focused'
-[foreground color]: #foreground-colors-of-text 'Definition of foreground color'
 [inline box]: https://drafts.csswg.org/css-display/#inline-box 'Definition of inline box'
-[inline formatting context]: https://drafts.csswg.org/css-display/#inline-formatting-context
-[hovered]: #hovered 'Definition of hovered'
 [line box]: https://drafts.csswg.org/css2/visuren.html#line-box 'Definition of line box'
-[link]: https://www.w3.org/TR/wai-aria/#link
-[listitem]: https://www.w3.org/TR/wai-aria/#listitem
 [outcome]: #outcome 'Definition of outcome'
 [semantic link]: #semantic-link 'Definition of semantic link'
 [semantic role]: #semantic-role 'Definition of semantic role'

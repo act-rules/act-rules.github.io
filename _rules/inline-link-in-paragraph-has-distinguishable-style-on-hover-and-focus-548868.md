@@ -32,11 +32,10 @@ Each target element has:
 
 ## Assumptions
 
-- This rule assumes that [`br` HTML elements][br] are only used for line breaks that are actually part of the content and not for separating thematic groups of the content. 
-- This rule assumes that the link is distinguishable from the rest of the text with color, which means it fails SC 1.4.1 when there is not another way to distinguish it.
-- This rule assumes that the 3:1 contrast difference between text is minimal to what would be sufficient to meet WCAG 2.0. This value is part of [technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183), but is not specified in the [1.4.1 success criterion](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
-- This rule assumes that any change in font is sufficiently distinguishable, and that fonts are loaded when they are present.
-- This rule assumes that if multiple colors are used in the visible text nodes of the block of content then color can not be a distinguishing factor.
+- The link is distinguishable from the rest of the text with color, which means it fails SC 1.4.1 when there is not another way to distinguish it.
+- The 3:1 contrast difference between text is minimal to what would be sufficient to meet WCAG 2.0. This value is part of [technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183), but is not specified in the [1.4.1 success criterion](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
+- Any change in font is sufficiently distinguishable, and that fonts are loaded when they are present.
+- If multiple colors are used in the visible text nodes of the block of content then color can not be a distinguishing factor.
 
 ## Accessibility Support
 
@@ -60,12 +59,13 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 ```html
 <style>
 	p {
-		text-decoration: none;
-		color: #000;
+		color: black;
+		background-color: white;
 	}
 	a {
 		text-decoration: none;
 		color: #d14826;
+		background-color: white;
 	}
 	a:hover,
 	a:focus {
@@ -83,7 +83,6 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 ```html
 <style>
-	*,
 	a.test {
 		text-decoration: none;
 	}

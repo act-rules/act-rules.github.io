@@ -129,9 +129,19 @@ function getSpellIgnored() {
 		}
 	})
 
-	const ignoreAria = ariaQuery.aria.keys()
-	const ignoreDom = ariaQuery.dom.keys()
-	const ignoreRoles = ariaQuery.roles.keys()
+	const ariaKeys = Array.from(ariaQuery.aria.keys())
+	const ignoreAria = [
+		...ariaKeys,
+		/**
+		 * `retext-spell` parses word nodes sometimes with an ending punctuation when the word is not a part of the dictionary.
+		 * See Issue: https://github.com/syntax-tree/nlcst/issues/4
+		 *
+		 * Below, we all aria keys ending with punctuation (.), to the ignore list
+		 */
+		...ariaKeys.map(key => `${key}.`),
+	]
+	const ignoreDom = Array.from(ariaQuery.dom.keys())
+	const ignoreRoles = Array.from(ariaQuery.roles.keys())
 
 	return [...ignoreConfigured, ...ignoreExtra, ...ignoreAria, ...ignoreDom, ...ignoreRoles]
 }

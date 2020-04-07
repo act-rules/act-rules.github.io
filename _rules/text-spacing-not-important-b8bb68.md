@@ -26,11 +26,19 @@ This rule applies to any HTML element that is [visible][] and has any of the bel
 - [letter-spacing][]
 - [line-height][]
 
-## Expectation
+## Expectation 1
 
-The target element does not have an overriding property value with `!important` specified for any of the above applicable CSS properties, except when value is below the permissible minimum respectively:
+The test target does not have "important" as its [word-spacing][] [priority][], unless the [computed][] [word-spacing][] is `0.16em` or greater.
 
-**Note**: The permissible minimum values are `0.16em` for [word-spacing][], `0.12em` for [letter-spacing][], and `1.5em` for [line-height][] respectively.
+## Expectation 2
+
+The test target does not have "important" as its [letter-spacing][] [priority][], unless the [computed][] [letter-spacing][] is `0.12em` or greater.
+
+## Expectation 3
+
+The test target does not have "important" as its [line-height][] [priority][], unless the [computed][] [line-height][] is `1.5em` or greater.
+
+**Note:** Font size conversations rely on the default pixel size for body (usually 16px), as defined by the user-agent stylesheet.
 
 ## Assumptions
 
@@ -52,34 +60,132 @@ While some assistive technologies are able to set [user origin][] styles, others
 
 #### Passed Example 1
 
-This `p` element has a `line-height` of `1.2em` which is below the permissible minimum.
+This `p` element has a `line-height` of `20px !important` (equals `1.25em`) which is below the permissible minimum, given the default pixel size of the body is `16px`.
 
 ```html
-<p style="line-height: 1.2em;">
-	The quick brown fox jumps over the lazy dog
+<p style="line-height: 20px !important;">
+	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
+	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
 </p>
 ```
 
 #### Passed Example 2
 
-This `span` element has a `letter-spacing` of `1.5em !important` which is equal to the permissible minimum.
+This `div` element has a `letter-spacing` of `0.12em !important` which is equal to the permissible minimum, given the default pixel size of the body is `16px`.
 
 ```html
-<span style="letter-spacing: 1.5em !important;">
-	The quick brown fox jumps over the lazy dog
-</span>
+<div style="letter-spacing: 0.12em !important;">
+	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
+	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
+</div>
+```
+
+#### Passed Example 3
+
+This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12em`) which is equal to the permissible value, given the default pixel size of the body is `16px`.
+
+```html
+<strong style="word-spacing: 1.92pt !important;">
+	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
+	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
+</strong>
+```
+
+#### Passed Example 4
+
+This `article` element has both `word-spacing` and `line-height` specified, which are both below the permissible minimum, given the default pixel size of the body is `16px`.
+
+```html
+<article style="word-spacing: 1.8pt !important; line-height: 1em !important;">
+	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
+	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
+</article>
+```
+
+#### Passed Example 5
+
+This `article` element has both `word-spacing` and `line-height` specified, which are both below the permissible minimum, given the element has an font-size of `16` pixels, which overrides the pixel size of the body.
+
+```html
+<head>
+	<style>
+		body {
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<article style="font-size: 16px; word-spacing: 1.8pt !important; line-height: 1em !important;">
+		The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
+		sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
+	</article>
+</body>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-This `p` element has a `word-spacing` of `0.15em !important` which has `!important` and is above the permissible minimum.
+This `p` element has a `line-height` of `30px !important` (equals `1.875em`) which is above the permissible minimum, given the default pixel size of the body is `16px`.
 
 ```html
-<p style="word-spacing: 0.15em !important;">
-	The quick brown fox jumps over the lazy dog
+<p style="line-height: 30px !important">
+	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
+	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
 </p>
+```
+
+#### Failed Example 2
+
+This `div` element has a `letter-spacing` of `1em !important` which is above to the permissible minimum, given the default pixel size of the body is `16px`.
+
+```html
+<div style="letter-spacing: 1em !important;">
+	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
+	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
+</div>
+```
+
+#### Failed Example 3
+
+This `strong` element has a `word-spacing` of `8px !important` (equals `0.5em`) which is above the permissible value, given the default pixel size of the body is `16px`.
+
+```html
+<strong style="word-spacing: 8px !important;">
+	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
+	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
+</strong>
+```
+
+#### Failed Example 4
+
+This `article` element has both `letter-spacing` and `line-height` specified, where `line-height` is above the permissible value, given the default pixel size of the body is `16px`.
+
+```html
+<article style="letter-spacing: 0.12em !important; line-height: 3em !important;">
+	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
+	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
+</article>
+```
+
+#### Failed Example 5
+
+This `p` element has a `line-height` of `1.25em !important`, which is greater than `1.5em` given the body has a default pixel size of `24px`.
+
+```html
+<head>
+	<style>
+		body {
+			font-size: 24px;
+		}
+	</style>
+</head>
+<body>
+	<p style="line-height: 1.25em !important">
+		The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
+		sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
+	</p>
+</body>
 ```
 
 ### Inapplicable
@@ -90,7 +196,8 @@ This `p` element is not [visible][] because of `display: none`.
 
 ```html
 <p style="display: none">
-	The quick brown fox jumps over the lazy dog
+	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
+	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
 </p>
 ```
 
@@ -100,7 +207,8 @@ This text is not [visible][] because it is positioned off screen.
 
 ```html
 <p style="position: absolute; top: -999em">
-	The quick brown fox jumps over the lazy dog
+	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
+	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
 </p>
 ```
 
@@ -108,3 +216,5 @@ This text is not [visible][] because it is positioned off screen.
 [word-spacing]: https://www.w3.org/TR/css-text-3/#word-spacing-property 'CSS Text Module Level 3 - Word Spacing: the word-spacing property'
 [letter-spacing]: https://www.w3.org/TR/css-text-3/#propdef-letter-spacing 'CSS Text Module Level 3 - Tracking: the letter-spacing property'
 [line-height]: https://drafts.csswg.org/css2/visudet.html#propdef-line-height 'CSS Visual formatting model details - line-height property'
+[priority]: https://www.w3.org/TR/cssom/#dom-cssstyledeclaration-getpropertypriority 'CSS Object Model (CSSOM) - Definition getComputedPriority'
+[computed]: https://www.w3.org/TR/css-cascade-3/#computed-value 'CSS Cascading and Inheritance Level 3 - Computed Values'

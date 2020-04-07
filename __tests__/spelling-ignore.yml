@@ -74,7 +74,27 @@
 - 18pt
 - Helvetica
 - DeviceOrientation
+- fieldsets
 
+# spell checker checks against strict casing & hence some repeated words here
+- Autocomplete
+- Focusable
+
+# Parts of url
+- http
+- https
+- github.com
+- www.w3.org
+- eval
+- html52
+- css-scoping
+- csswg
+- whatwg
+- dom
+- wai-aria
+- multipage
+- attr-input-type
+- wai-aria-1.1
 # Notes and acronyms
 - TODO
 - TBD

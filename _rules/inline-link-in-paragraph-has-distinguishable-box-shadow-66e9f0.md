@@ -24,7 +24,7 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], w
 
 ## Expectation
 
-Each target element has a [visible] [`box-shadow`](https://drafts.csswg.org/css-backgrounds-3/#box-shadow).
+Each target element has a [visible] [`box-shadow`][box-shadow].
 
 ## Assumptions
 
@@ -123,6 +123,7 @@ There are only [semantic links][semantic link] in the inline block of content.
 <p><a href="https://www.w3.org">W3C </a><span role="link" onclick="location='https://www.w3.org/WAI/'">WAI</span></p>
 ```
 
+[box-shadow]: https://drafts.csswg.org/css-backgrounds-3/#box-shadow
 [br]: https://html.spec.whatwg.org/#the-br-element
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'

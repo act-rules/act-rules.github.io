@@ -22,11 +22,11 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to an [HTML document][] with an associated [Window object][] that has a registered [device orientation event][device orientation] or [device motion event][device motion].
+The rule applies to an [HTML document][] with an associated [Window object][] that has one or more registered [device orientation events][device orientation] or [device motion events][device motion].
 
 ## Expectation 1
 
-For each test target, an [instrument][] is available supporting the same outcome of the registered [device orientation event][device orientation] or [device motion event][device motion].
+For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target, an [instrument][] is available supporting the same outcome of the event.
 
 ## Expectation 2
 

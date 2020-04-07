@@ -3,7 +3,7 @@ id: c249d5
 name: Device motion can be disabled
 rule_type: atomic
 description: |
-  This rule checks that functionality that can be operated by device motion, responding to the motion can be disabled to prevent accidental actuation.
+  This rule checks that it is possible to disable functionality that can be operated by device motion.
 accessibility_requirements:
   wcag21:2.5.4: # Motion Actuation (A)
     forConformance: true
@@ -22,20 +22,28 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any [HTML document][] that has [functionality][] that can be operated by [device motion][].
+The rule applies to an [HTML document][] with an associated [Window object][] that has a registered [device orientation event][device orientation] or [device motion event][device motion].
 
-## Expectation
+## Expectation 1
 
-For the test target, [device motion][] [can be disabled][] and the control for disabling it must be a [user interface component][] and it should be [visible][] and [included in the accessibility tree][] with an [accessible name][] that is not empty ("").
+For each test target, an [instrument][] is available to disable the registered [device orientation event][device orientation] or [device motion event][device motion].
+
+## Expectation 2
+
+The [instrument][] is [visible][].
+
+## Expectation 3
+
+The [instrument][] is [included in the accessibility tree][] with an [accessible name][] that is not empty ("").
 
 ## Assumptions
 
-- This test assumes that the motion to operate [functionality][] is not used through an [accessibility supported][] interface.
-- This test assumes that motion is not [essential][] for the [functionality][].
+- The motion to operate the device is not used through an [accessibility supported][] interface.
+- The motion is not [essential][] for the functionality it triggers.
 
 ## Accessibility Support
 
-- Device [orientation events][] may include sensitive data. Implementations must fire events only on [secure browsing contexts][]
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 
@@ -309,16 +317,17 @@ The document is not an [HTML document][].
 </svg>
 ```
 
-[orientation events]: https://www.w3.org/TR/orientation-event/
-[HTML document]: https://dom.spec.whatwg.org/#concept-document
-[essential]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-essential
-[functionality]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-functionality
-[secure browsing contexts]: https://www.w3.org/TR/secure-contexts/
+[accessibility supported]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation#dfn-accessibility-supported
+[accessible name]: #accessible-name 'Definition of accessible name'
 [can be disabled]: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#concept-fe-disabled
 [can't be disabled]: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#concept-fe-disabled
-[user interface component]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-user-interface-component
-[accessibility supported]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation#dfn-accessibility-supported
-[device motion]: https://www.w3.org/TR/orientation-event/#devicemotion
-[visible]: #visible 'Definition of visible'
-[accessible name]: #accessible-name 'Definition of accessible name'
+[device motion]: https://www.w3.org/TR/orientation-event/#devicemotion 'Definition of device motion event'
+[device orientation]: https://www.w3.org/TR/orientation-event/#deviceorientation 'Definition of device orientation event'
+[essential]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-essential
+[functionality]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-functionality
+[HTML document]: https://dom.spec.whatwg.org/#concept-document
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
+[user interface components]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-user-interface-component
+[visible]: #visible 'Definition of visible'
+[Window object]: https://html.spec.whatwg.org/multipage/window-object.html#dom-window

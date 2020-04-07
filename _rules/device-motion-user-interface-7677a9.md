@@ -302,6 +302,7 @@ This [HTML document][] is not operable by device motion.
 <p>ACT-Rules</p>
 ```
 
+[accessibility supported]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation#dfn-accessibility-supported
 [accessible name]: #accessible-name 'Definition of accessible name'
 [device motion]: https://www.w3.org/TR/orientation-event/#devicemotion 'Definition of device motion event'
 [device orientation]: https://www.w3.org/TR/orientation-event/#deviceorientation 'Definition of device orientation event'

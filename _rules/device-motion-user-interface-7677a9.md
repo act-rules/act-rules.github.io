@@ -22,11 +22,11 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to an [HTML document][] with an associated [Window object][] that has a registered [device motion event][device motion].
+The rule applies to an [HTML document][] with an associated [Window object][] that has a registered [device orientation event][device orientation] or [device motion event][device motion].
 
 ## Expectation 1
 
-For each test target, an [instrument][] supporting the same outcome of the registered [device motion event][device motion] is available.
+For each test target, an [instrument][] is available supporting the same outcome of the registered [device orientation event][device orientation] or [device motion event][device motion].
 
 ## Expectation 2
 
@@ -353,6 +353,7 @@ The document is not an [HTML document][].
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [device motion]: https://www.w3.org/TR/orientation-event/#devicemotion 'Definition of device motion event'
+[device orientation]: https://www.w3.org/TR/orientation-event/#deviceorientation 'Definition of device orientation event'
 [essential]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-essential
 [functionality]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-functionality
 [HTML document]: https://dom.spec.whatwg.org/#concept-document

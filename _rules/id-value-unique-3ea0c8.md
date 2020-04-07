@@ -29,7 +29,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-Any `id` attribute which is not the empty string (""), specified on an HTML or SVG element.
+Any `id` attribute which is not am empty string (`""`), specified on an HTML or SVG element.
 
 **Note:** Elements that are neither [included in the accessibility tree][] nor [visible][] are still considered for this rule.
 
@@ -142,6 +142,16 @@ The `xml:id` attribute is not considered by this rule.
 
 ```html
 <div xml:id="my-div">This is my first element</div>
+```
+
+
+#### Inapplicable Example 3
+
+These `id` attributes are empty.
+
+```html
+<span id="">Hello</span>
+<span id="">world!</span>
 ```
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

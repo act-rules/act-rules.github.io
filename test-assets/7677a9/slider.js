@@ -16,7 +16,26 @@ function handleOrientation(event) {
     }
 }
 
+function handleOrientationCanBeDisabled(event) {
+    const disableMotion = document.getElementById('disableMotion');
+    const gamma = !disableMotion.checked ? event.gamma : 0;
+
+    if (event.gamma > 20) {
+        increaseSlider();
+    } else if (event.gamma < -20) {
+        decreaseSlider();
+    }
+}
+
 function handleMotion(event) {
+    if (event.rotationRate.gamma > 5) {
+        increaseSlider();
+    } else if (event.rotationRate.gamma < -5) {
+        decreaseSlider();
+    }
+}
+
+function handleMotionCanBeDisabled(event) {
     if (event.rotationRate.gamma > 5) {
         increaseSlider();
     } else if (event.rotationRate.gamma < -5) {

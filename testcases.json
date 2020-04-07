@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 708,
+  "count": 717,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -9241,6 +9241,168 @@
         },
         "wcag-technique:G95": {
           "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "fa48ce6a3b0c47beb6f92cfa601759f27d893086",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/36b590/fa48ce6a3b0c47beb6f92cfa601759f27d893086.html",
+      "relativePath": "testcases/36b590/fa48ce6a3b0c47beb6f92cfa601759f27d893086.html",
+      "expected": "passed",
+      "ruleId": "36b590",
+      "ruleName": "Error message describes invalid form field value",
+      "rulePage": "https://act-rules.github.io/rules/36b590",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "78deab9c61239f5d696f3b287affdac3aeed1955",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/36b590/78deab9c61239f5d696f3b287affdac3aeed1955.html",
+      "relativePath": "testcases/36b590/78deab9c61239f5d696f3b287affdac3aeed1955.html",
+      "expected": "passed",
+      "ruleId": "36b590",
+      "ruleName": "Error message describes invalid form field value",
+      "rulePage": "https://act-rules.github.io/rules/36b590",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "55e841b9dc05acb848210f0f9b7a958cee658f5b",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/36b590/55e841b9dc05acb848210f0f9b7a958cee658f5b.html",
+      "relativePath": "testcases/36b590/55e841b9dc05acb848210f0f9b7a958cee658f5b.html",
+      "expected": "passed",
+      "ruleId": "36b590",
+      "ruleName": "Error message describes invalid form field value",
+      "rulePage": "https://act-rules.github.io/rules/36b590",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "8b142ff253acfebc90e4b93dc78a1137d0527ee9",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/36b590/8b142ff253acfebc90e4b93dc78a1137d0527ee9.html",
+      "relativePath": "testcases/36b590/8b142ff253acfebc90e4b93dc78a1137d0527ee9.html",
+      "expected": "failed",
+      "ruleId": "36b590",
+      "ruleName": "Error message describes invalid form field value",
+      "rulePage": "https://act-rules.github.io/rules/36b590",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "48484f481acd7c829c52465c4032d5e8d062ef67",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/36b590/48484f481acd7c829c52465c4032d5e8d062ef67.html",
+      "relativePath": "testcases/36b590/48484f481acd7c829c52465c4032d5e8d062ef67.html",
+      "expected": "failed",
+      "ruleId": "36b590",
+      "ruleName": "Error message describes invalid form field value",
+      "rulePage": "https://act-rules.github.io/rules/36b590",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "44dba9cf9b4dc698bbdfe549e6bb83c571586609",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/36b590/44dba9cf9b4dc698bbdfe549e6bb83c571586609.html",
+      "relativePath": "testcases/36b590/44dba9cf9b4dc698bbdfe549e6bb83c571586609.html",
+      "expected": "failed",
+      "ruleId": "36b590",
+      "ruleName": "Error message describes invalid form field value",
+      "rulePage": "https://act-rules.github.io/rules/36b590",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "ce0199d19d1e2e8f200ddde12c082c8ec0a24880",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/36b590/ce0199d19d1e2e8f200ddde12c082c8ec0a24880.html",
+      "relativePath": "testcases/36b590/ce0199d19d1e2e8f200ddde12c082c8ec0a24880.html",
+      "expected": "failed",
+      "ruleId": "36b590",
+      "ruleName": "Error message describes invalid form field value",
+      "rulePage": "https://act-rules.github.io/rules/36b590",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "4977fdb6035d541f22c46e26dcdcf5f2b00ae370",
+      "testcaseTitle": "Failed Example 5",
+      "url": "https://act-rules.github.io/testcases/36b590/4977fdb6035d541f22c46e26dcdcf5f2b00ae370.html",
+      "relativePath": "testcases/36b590/4977fdb6035d541f22c46e26dcdcf5f2b00ae370.html",
+      "expected": "failed",
+      "ruleId": "36b590",
+      "ruleName": "Error message describes invalid form field value",
+      "rulePage": "https://act-rules.github.io/rules/36b590",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "8f73a59ba8f4702af17edc87d44273afae859f42",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/36b590/8f73a59ba8f4702af17edc87d44273afae859f42.html",
+      "relativePath": "testcases/36b590/8f73a59ba8f4702af17edc87d44273afae859f42.html",
+      "expected": "inapplicable",
+      "ruleId": "36b590",
+      "ruleName": "Error message describes invalid form field value",
+      "rulePage": "https://act-rules.github.io/rules/36b590",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.3.1": {
+          "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"

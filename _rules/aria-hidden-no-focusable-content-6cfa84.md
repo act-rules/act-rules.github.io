@@ -15,10 +15,16 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  using-aria:fourth:
+    title: Fourth rule of ARIA use
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Wilco Fiers
 ---
@@ -27,7 +33,7 @@ acknowledgements:
 
 The rule applies to any element with an `aria-hidden="true"` attribute.
 
-**Note**: Using `aria-hidden="false"` on a descendant of an element with `aria-hidden="true"` **does not** expose that element. `aria-hidden="true"` hides itself and all its content from assistive technologies.
+**Note:** Using `aria-hidden="false"` on a descendant of an element with `aria-hidden="true"` **does not** expose that element. `aria-hidden="true"` hides itself and all its content from assistive technologies.
 
 ## Expectation
 
@@ -43,7 +49,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-By adding `aria-hidden="true"` to an element, content authors ensure that assistive technologies will ignore the element. This can be used to hide [decorative](#decorative) parts of a web page, such as icon fonts - that are not meant to be read by assistive technologies.
+By adding `aria-hidden="true"` to an element, content authors ensure that assistive technologies will ignore the element. This can be used to hide parts of a web page that are [pure decoration](https://www.w3.org/TR/WCAG21/#dfn-pure-decoration), such as icon fonts - that are not meant to be read by assistive technologies.
 
 A [focusable][] element with `aria-hidden="true"` is ignored as part of the reading order, but still part of the focus order, making it's state of [visible](#visible) or hidden unclear.
 
@@ -51,6 +57,7 @@ A [focusable][] element with `aria-hidden="true"` is ignored as part of the read
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [`aria-hidden` (state)](https://www.w3.org/TR/wai-aria-1.1/#aria-hidden)
+- [Fourth rule of ARIA use (work in progress)](https://www.w3.org/TR/using-aria/#fourth)
 
 ## Test Cases
 

@@ -12,8 +12,8 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-    - CSS Styling
-acknowledgements:
+  - CSS Styling
+acknowledgments:
   authors:
     - Jey Nandakumar
     - Audrey Maniez
@@ -98,33 +98,6 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 			@media (orientation: portrait) {
 				html {
 					transform: matrix(1, -1.22465e-15, 1.22465e-15, 1, 0, 0);
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<main>
-			Page Content
-		</main>
-	</body>
-</html>
-```
-
-#### Passed Example 3
-
-A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property has [rotate](https://www.w3.org/TR/css-transforms/#funcdef-transform-rotate) [transform function](https://www.w3.org/TR/css-transforms/#transform-functions) conditionally applied on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1) which matches the default CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) applied on the target element.
-
-```html
-<html lang="en">
-	<head>
-		<title>Page with some content</title>
-		<style>
-			body {
-				transform: rotate(90deg);
-			}
-			@media (orientation: portrait) {
-				body {
-					transform: rotate(90deg);
 				}
 			}
 		</style>

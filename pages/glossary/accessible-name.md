@@ -1,17 +1,23 @@
 ---
 title: Accessible Name
 key: accessible-name
+unambiguous: true
+objective: true
+input_aspects:
+  - Accessibility tree
+  - CSS styling
+  - DOM tree
 ---
 
-The programmatically determined name of a user interface element that is [included in the accessibility tree](#included-in-the-accessibility-tree).
+The _accessible name_ is the programmatically determined name of a user interface element that is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 The accessible name is calculated using the [accessible name and description computation](https://www.w3.org/TR/accname).
 
 For native markup languages, such as HTML and SVG, additional information on how to calculate the accessible name can be found in [HTML Accessibility API Mappings 1.0, Accessible Name and Description Computation (working draft)](https://www.w3.org/TR/html-aam/#accessible-name-and-description-computation) and [SVG Accessibility API Mappings, Name and Description (working draft)](https://www.w3.org/TR/svg-aam/#mapping_additional).
 
-**Note**: As per the [accessible name and description computation](https://www.w3.org/TR/accname), each element always has an accessible name. When no accessible name is provided, the element will nonetheless be assigned an empty (`""`) one.
+**Note:** As per the [accessible name and description computation](https://www.w3.org/TR/accname), each element always has an accessible name. When no accessible name is provided, the element will nonetheless be assigned an empty (`""`) one.
 
-**Note**: As per the [accessible name and description computation](https://www.w3.org/TR/accname), accessible names are [flat string](https://www.w3.org/TR/accname-1.1/#terminology) trimmed of leading and trailing whitespace. Notably, it is not possible for a non-empty accessible name to be composed only of whitespace since these must be trimmed.
+**Note:** As per the [accessible name and description computation](https://www.w3.org/TR/accname), accessible names are [flat string](https://www.w3.org/TR/accname-1.1/#terminology) trimmed of leading and trailing whitespace. Notably, it is not possible for a non-empty accessible name to be composed only of whitespace since these must be trimmed.
 
 #### Accessibility Support
 
@@ -21,7 +27,7 @@ For native markup languages, such as HTML and SVG, additional information on how
 
 #### Examples
 
-**Note**: The examples presented here are non-normative and not testable. They serve to illustrate some common pitfalls about the definition and help implementers of ACT rules understand it.
+**Note:** The examples presented here are non-normative and not testable. They serve to illustrate some common pitfalls about the definition and to help implementers of ACT rules understand it.
 
 The `input` elements have an accessible name of, respectively, "Billing Name" and "Billing Address". These accessible names are given by the `aria-labelledby` attributes and associated elements.
 
@@ -80,6 +86,6 @@ This `span` element has an empty accessible name (`""`) because `span` is not a 
 <label>ACT rules<span></span></label>
 ```
 
-**Note**: When the same element can have an accessible name from several sources, the order of precedence is: `aria-labelledby`, `aria-label`, own attributes, `label` element, name from content. The examples here are listed in the same order.
+**Note:** When the same element can have an accessible name from several sources, the order of precedence is: `aria-labelledby`, `aria-label`, own attributes, `label` element, name from content. The examples here are listed in the same order.
 
-**Note**: For more examples of accessible name computation, including many tricky cases, check the [Accessible Name Testable Statements](https://www.w3.org/wiki/AccName_1.1_Testable_Statements).
+**Note:** For more examples of accessible name computation, including many tricky cases, check the [Accessible Name Testable Statements](https://www.w3.org/wiki/AccName_1.1_Testable_Statements).

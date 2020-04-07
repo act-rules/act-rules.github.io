@@ -14,7 +14,7 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Wilco Fiers
     - Anne Thyme Nørregaard
@@ -266,7 +266,7 @@ Element has ARIA role, but no ARIA states or properties
 
 `aria-hidden` state on an element that is not an HTML or SVG element
 
-```html
+```xml
 <math aria-hidden="true"></math>
 ```
 

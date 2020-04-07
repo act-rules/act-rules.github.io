@@ -10,9 +10,14 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:H57: # Using the language attribute on the HTML element
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-acknowledgements:
+acknowledgments:
   authors:
     - Annika Nietzio
     - Jey Nandakumar
@@ -29,11 +34,11 @@ This rule applies to any [document element](https://dom.spec.whatwg.org/#documen
 
 ## Expectation
 
-Each test target has a `lang` attribute that is neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
+Each test target has a `lang` attribute that is neither empty (`""`) nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 ## Assumptions
 
-This rule assumes that the presence of a `lang` attribute is being used to comply to WCAG. This rule doesn't test if the attribute is needed to comply to WCAG.
+The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page).
 
 ## Accessibility Support
 
@@ -41,9 +46,10 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
+- [Understanding Success Criterion 3.1.1: Language of Page](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
 - [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG21/Techniques/html/H57)
 - [BCP 47: Tags for Identifying Languages](https://www.ietf.org/rfc/bcp/bcp47.txt)
-- [MDN: `lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang)
+- [The `lang` and `xml:lang` attributes](https://html.spec.whatwg.org/multipage/dom.html#the-lang-and-xml:lang-attributes)
 
 ## Test Cases
 
@@ -51,7 +57,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The `lang` attribute specified has a non-empty value.
+This `html` element has a `lang` attribute with a non-empty (`""`) value.
 
 ```html
 <html lang="en"></html>
@@ -61,7 +67,7 @@ The `lang` attribute specified has a non-empty value.
 
 #### Failed Example 1
 
-There is no `lang` attribute specified.
+This `html` element does not have a `lang` attribute.
 
 ```html
 <html></html>
@@ -69,7 +75,7 @@ There is no `lang` attribute specified.
 
 #### Failed Example 2
 
-The `lang` attribute specified is empty ("").
+This `html` element has a `lang` attribute with an empty (`""`) value.
 
 ```html
 <html lang=""></html>
@@ -77,7 +83,7 @@ The `lang` attribute specified is empty ("").
 
 #### Failed Example 3
 
-The `lang` attribute consists of only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
+This `html` element has a `lang` attribute whose value is only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 ```html
 <html lang=" "></html>
@@ -85,7 +91,7 @@ The `lang` attribute consists of only [ASCII whitespace](https://infra.spec.what
 
 #### Failed Example 4
 
-There is no `lang` attribute specified, only an `xml:lang` attribute.
+This `html` element has no `lang` attribute, only a `xml:lang` attribute.
 
 ```html
 <html xml:lang="en"></html>
@@ -95,7 +101,7 @@ There is no `lang` attribute specified, only an `xml:lang` attribute.
 
 #### Inapplicable Example 1
 
-The rule does not apply to `svg` element.
+This rule does not apply to `svg` element.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg"></svg>
@@ -103,8 +109,8 @@ The rule does not apply to `svg` element.
 
 #### Inapplicable Example 2
 
-The rule does not apply to `math` element.
+This rule does not apply to `math` element.
 
-```svg
+```xml
 <math></math>
 ```

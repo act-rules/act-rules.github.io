@@ -12,7 +12,7 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-acknowledgements:
+acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Bryn Anderson
@@ -22,16 +22,18 @@ acknowledgements:
 
 This rule applies to any element that is [included in the accessibility tree](#included-in-the-accessibility-tree), and that has one of the following [semantic roles][]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch`, `textbox`.
 
-**Note**: The list of roles is derived by taking all the roles from [WAI-ARIA Specifications](#wai-aria-specifications) that:
+**Note:** The list of roles is derived by taking all the roles from [WAI-ARIA Specifications](#wai-aria-specifications) that:
 
 - have a [semantic roles][] that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
 - does not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
 
-**Note**: The `option` role is not part of the list of applicable roles, because it does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an [accessible name][].
+**Note:** The `option` role is not part of the list of applicable roles, because it does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an [accessible name][].
 
 ## Expectation
 
 Each target element has an [accessible name][] that is not empty (`""`).
+
+**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
 
 ## Assumptions
 
@@ -39,14 +41,15 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-Certain assistive technologies can be set up to ignore the title attribute, which means that to some users the title attribute will not act as an [accessible name][].
+- Certain assistive technologies can be set up to ignore the title attribute, which means that to some users the title attribute will not act as an [accessible name][].
+- Several assistive technologies have a functionality to list all form fields on a page, including the `disabled` ones. Therefore this rule is still applicable to `disabled` form fields. If an assistive technology consistently ignores `disabled` form fields in all its interactions, then it is possible to have a `disabled` form field with no accessible name without creating accessibility issues for the user.
 
 ## Background
 
 - [Understanding Success Criterion 3.3.2: Labels or Instructions](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 
-**Note**: This rule does not fail 3.3.2 as there are sufficient techniques within 3.3.2 that don't need the elements to have an [accessible name][]. For example "G131: Providing descriptive labels" **AND** "G162: Positioning labels to maximize predictability of relationships" would be sufficient.
+**Note:** This rule does not fail 3.3.2 as there are sufficient techniques within 3.3.2 that don't need the elements to have an [accessible name][]. For example "G131: Providing descriptive labels" **AND** "G162: Positioning labels to maximize predictability of relationships" would be sufficient.
 
 ## Test Cases
 
@@ -138,10 +141,11 @@ No [accessible name][].
 
 #### Failed Example 4
 
-The label does not exist.
+`aria-labelledby` with empty text string.
 
 ```html
-<div aria-labelledby="non-existing" role="combobox">England</div>
+<div id="country"></div>
+<div aria-labelledby="country" role="combobox">England</div>
 ```
 
 #### Failed Example 5
@@ -211,5 +215,5 @@ Option inherits from input, but has a required context role of listbox which inh
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
-[semantic role]: #semantic-role 'Definition of semantic role'
+[semantic roles]: #semantic-role 'Definition of semantic role'
 [whitespace]: #whitespace 'Definition of whitespace'

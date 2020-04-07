@@ -10,9 +10,14 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:ARIA5: # Using WAI-ARIA state and property attributes to expose the state of a user interface component
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-acknowledgements:
+acknowledgments:
   authors:
     - Anne Thyme Nørregaard
 ---
@@ -91,7 +96,7 @@ Element has required properties, and required state `aria-expanded` has an impli
 
 #### Passed Example 6
 
-Element has required properties, but with incorrect value since no element with with the given id(s) exists in the document
+Element has required properties, but with incorrect value since no element with the given id(s) exists in the document
 
 ```html
 <div role="combobox" aria-controls="foo"></div>

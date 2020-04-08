@@ -1,6 +1,8 @@
 ---
 title: Non-printable characters
 key: non-printable-characters
+unambiguous: true
+objective: true
 ---
 
-Non-printable characters, are all the characters that are not [printable characters](https://act-rules.github.io/pages/glossary/printable-characters.md).
+_Non-printable characters_, are all the characters that are not [printable characters](https://act-rules.github.io/pages/glossary/printable-characters.md).

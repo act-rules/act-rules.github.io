@@ -7,7 +7,7 @@ description: |
 accessibility_requirements: 
   wcag21:2.1.4: # Character Key Shortcuts (A)
     forConformance: true
-    failed: not satisfied
+    failed: further testing needed
     passed: satisfied
     inapplicable: further testing needed
 input_aspects:
@@ -21,21 +21,21 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any [HTML document][] with at least one [keyboard shortcut][] that requires pressing only [printable character][] keys to trigger an action on a [user interface component][].
+The rule applies to any [keyboard shortcut][] that requires pressing only [printable character][] keys to trigger an [event][] within a [HTML document][].
 
 ## Expectation 1
 
-For each [user interface component][] that is a [descendant][] of the root node of the test target, each [printable character][] [shortcut][keyboard shortcut] that triggers the action of that [user interface component][] can be remapped to use one or more [non-printable characters][].
+For each test target, an [instrument][] to remap to use one or more [non-printable characters][] is available.
 
-**Note:** If multiple single [printable character][] [shortcuts][keyboard shortcut] exist, they all can be remapped by a single [user interface component][].
+**Note:** If multiple single [printable character][] [shortcuts][keyboard shortcut] exist, they all can be remapped by a single [instrument][].
 
 ## Expectation 2
 
-The [user interface component][] used to disable the [shortcut][keyboard shortcut] must be [visible][] and [included in the accessibility tree][] with an [accessible name][] that is not empty (`""`).
+The [instrument][] used to remap the [shortcut][keyboard shortcut] must be [visible][] and [included in the accessibility tree][] with an [accessible name][] that is not empty (`""`).
 
 ## Assumptions
 
-This rule assumes as applicable [keyboard shortcuts][keyboard shortcut] those implemented by the test target [content][]. Any other means (e.g. browser extensions, browser settings, user agents, external browser applications) are not considered.
+This rule assumes as applicable [keyboard shortcuts][keyboard shortcut] those implemented by the [HTML document][] [content][]. Any other means (e.g. browser extensions, browser settings, user agents, external browser applications) are not considered.
 
 ## Accessibility Support
 
@@ -61,7 +61,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Passed Example 1 for rule aa8b52</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="registerShortcut({id: 'singleShortcut'}); activateShortcuts();">
+  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
     <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <div>
@@ -84,7 +84,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Passed Example 2
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][], and it can be remapped to use a shortcut with a [non-printable character][non-printable characters], and another [keyboard shortcut][] that requires pressing one [non-printable character][non-printable characters].
+The [HTML document][] has two [keyboard shortcut][] using only a [printable character][], and each one of them can be remapped to use a shortcut with a [non-printable character][non-printable characters].
 
 ```html
 <html>
@@ -92,38 +92,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Passed Example 2 for rule aa8b52</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="registerShortcut({id: 'singleShortcut'}); registerShortcut({shortcutKey: 'a' , ctrlKey: true}); activateShortcuts();">
-    <label for="target">Add to list (press "+" or "ctrl+a" to add):</label>
-    <input type="text" id="target" />
-    <div>
-      <div>Remap shortcut</div>
-      <div>
-        <label>
-          <input id="remap" type="checkbox" onclick="toggleModifier('singleShortcut', this.checked)" />
-          Use "ctrl" key together with the "+" key
-        </label>
-      </div>
-    </div>
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Passed Example 3
-
-The [HTML document][] has two [keyboard shortcut][] using only a [printable character][], and each one of them can be remapped to use a shortcut with a [non-printable character][non-printable characters].
-
-```html
-<html>
-  <head>
-    <title>Passed Example 3 for rule aa8b52</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-  <body onload="registerShortcut({id: 'firstShortcut'}); registerShortcut({id: 'secondShortcut', shortcutKey: 'a'}); activateShortcuts();">
+  <body onload="registerShortcut({id: 'firstShortcut', shortcutKey: '+'}); registerShortcut({id: 'secondShortcut', shortcutKey: 'a'}); activateShortcuts();">
     <label for="target">Add to list (press "+" or "a" to add):</label>
     <input type="text" id="target" />
     <div>
@@ -148,17 +117,17 @@ The [HTML document][] has two [keyboard shortcut][] using only a [printable char
 </html>
 ```
 
-#### Passed Example 4
+#### Passed Example 3
 
 The [HTML document][] has two [keyboard shortcut][] using only a [printable character][] that can be remapped to use a shortcut with a [non-printable character][non-printable characters].
 
 ```html
 <html>
   <head>
-    <title>Passed Example 4 for rule aa8b52</title>
+    <title>Passed Example 3 for rule aa8b52</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="registerShortcut({id: 'firstShortcut'}); registerShortcut({id: 'secondShortcut', shortcutKey: 'a'}); activateShortcuts();">
+  <body onload="registerShortcut({id: 'firstShortcut', shortcutKey: '+'}); registerShortcut({id: 'secondShortcut', shortcutKey: 'a'}); activateShortcuts();">
     <label for="target">Add to list (press "+" or "a" to add):</label>
     <input type="text" id="target" />
     <div>
@@ -191,7 +160,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Failed Example 1 for rule aa8b52</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="registerShortcut(); activateShortcuts();">
+  <body onload="registerShortcut({shortcutKey: '+'}); activateShortcuts();">
     <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <br />
@@ -205,7 +174,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 2
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that cannot be remapped, and another [keyboard shortcut][] using only a [printable character][] that can be remapped to use a shortcut with a [non-printable character][non-printable characters].
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [instrument][] is not [visible][].
 
 ```html
 <html>
@@ -213,38 +182,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Failed Example 2 for rule aa8b52</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="registerShortcut(); registerShortcut({id: 'singleShortcut', shortcutKey: 'a'}); activateShortcuts();">
-    <label for="target">Add to list (press "+" or "a" to add):</label>
-    <input type="text" id="target" />
-    <div>
-      <div>Remap shortcut</div>
-      <div>
-        <label>
-          <input id="remap" type="checkbox" onclick="toggleModifier('singleShortcut', this.checked)">
-          Use "ctrl" key together with the "a" key
-        </label>
-      </div>
-    </div>
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Failed Example 3
-
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [user interface component][] is not [visible][].
-
-```html
-<html>
-  <head>
-    <title>Failed Example 3 for rule aa8b52</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-  <body onload="registerShortcut({id: 'singleShortcut'}); activateShortcuts();">
+  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
     <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <div>
@@ -265,17 +203,17 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 </html>
 ```
 
-#### Failed Example 4
+#### Failed Example 3
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [user interface component][] is not [included in the accessibility tree][].
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [instrument][] is not [included in the accessibility tree][].
 
 ```html
 <html>
   <head>
-    <title>Failed Example 5 for rule aa8b52</title>
+    <title>Failed Example 3 for rule aa8b52</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="registerShortcut({id: 'singleShortcut'}); activateShortcuts();">
+  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
     <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <div>
@@ -296,17 +234,17 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 </html>
 ```
 
-#### Failed Example 5
+#### Failed Example 4
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [user interface component][] has an empty (`""`) [accessible name][].
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [instrument][] has an empty (`""`) [accessible name][].
 
 ```html
 <html>
   <head>
-    <title>Failed Example 5 for rule aa8b52</title>
+    <title>Failed Example 4 for rule aa8b52</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="registerShortcut({id: 'singleShortcut'}); activateShortcuts();">
+  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
     <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <div>
@@ -326,16 +264,6 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Inapplicable Example 1
 
-The [HTML document][] does not use [keyboard shortcuts][keyboard shortcut].
-
-```html
-<html>
-  <div>Document content</div>
-</html>
-```
-
-#### Inapplicable Example 2
-
 The document is not an [HTML document][].
 
 ```html
@@ -345,14 +273,14 @@ The document is not an [HTML document][].
 </svg>
 ```
 
-#### Inapplicable Example 3
+#### Inapplicable Example 2
 
 The [HTML document][] has a [keyboard shortcut][] that requires pressing one [non-printable character][non-printable characters].
 
 ```html
 <html>
   <head>
-    <title>Inapplicable Example 3 for rule 1e9941</title>
+    <title>Inapplicable Example 2 for rule 1e9941</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
@@ -368,14 +296,14 @@ The [HTML document][] has a [keyboard shortcut][] that requires pressing one [no
 </html>
 ```
 
-#### Inapplicable Example 4
+#### Inapplicable Example 3
 
 The [HTML document][] has an element with the attribute `accesskey`. Accesskeys use [non-printable characters][].
 
 ```html
 <html>
   <head>
-    <title>Inapplicable Example 4 for rule aa8b52</title>
+    <title>Inapplicable Example 3 for rule aa8b52</title>
     <script>
       function shortcut() {
         const button = document.querySelector("button");
@@ -404,42 +332,11 @@ The [HTML document][] has an element with the attribute `accesskey`. Accesskeys 
 </html>
 ```
 
-#### Inapplicable Example 5
-
-The [HTML document][] has a [keyboard shortcut][] that requires pressing a single [printable character][] and doesn't trigger an action on a [user interface component][].
-
-```html
-<html>
-  <head>
-    <title>Inapplicable Example 5 for rule aa8b52</title>
-  </head>
-  <style>
-    div {
-      height: 2000px;
-    }
-  </style>
-  <script>
-    function goToShortcut() {
-      document.body.addEventListener("keydown", function(event) {
-        if (event.key === "+") {
-          document.getElementById('text').scrollIntoView();
-        }
-      });
-    }
-  </script>
-  <body onload="goToShortcut();">
-    <p>Press "+" key to go to the text at the bottom of the page.</p>
-    <div></div>
-    <p id="text">Some text at the bottom of the page.</p>
-  </body>
-</html>
-```
-
 [HTML document]: https://dom.spec.whatwg.org/#concept-document
 [keyboard shortcut]: https://www.w3.org/TR/WCAG21/#dfn-keyboard-shortcuts
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
-[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
-[user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
+[event]: https://dom.spec.whatwg.org/#events
+[instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [printable character]: #printable-characters 'Definition of printable characters'
 [non-printable characters]: #non-printable-characters 'Definition of non-printable characters'
 [visible]: #visible 'Definition of visible'

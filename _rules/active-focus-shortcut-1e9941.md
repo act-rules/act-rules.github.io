@@ -3,11 +3,11 @@ id: 1e9941
 name: Printable key shortcut is only active when component has focus
 rule_type: atomic
 description: |
-  This rule checks that if keyboard shortcuts for a user interface component are implemented using only printable characters, then they are only available when that component has focus.
+  This rule checks that keyboard shortcuts for user interface components using only printable characters are only available when the component has focus.
 accessibility_requirements: # Remove whatever is not applicable
   wcag21:2.1.4: # Character Key Shortcuts (A)
     forConformance: true
-    failed: not satisfied
+    failed: further testing needed
     passed: satisfied
     inapplicable: further testing needed
 input_aspects:
@@ -21,15 +21,15 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any [HTML document][] with at least one [keyboard shortcut][] that requires pressing only [printable character][] keys to trigger an action on a [user interface component][].
+The rule applies to any [keyboard shortcut][] that requires pressing only [printable character][] keys to trigger an [event][] in an [HTML element][] that can receive [focus][] within a [HTML document][].
 
 ## Expectation
 
-For each [user interface component][] that is a [descendant][] of the root node of the test target, each [printable character][] [shortcut][keyboard shortcut] that triggers the action of that [user interface component][] can only be triggered when that component has [focus][].
+For each test target, it can only be triggered when the [HTML element][] associated with the test target has [focus][].
 
 ## Assumptions
 
-This rule assumes as applicable [keyboard shortcuts][keyboard shortcut] those implemented by the test target [content][]. Any other means (e.g. browser extensions, browser settings, user agents, external browser applications) are not considered.
+This rule assumes as applicable [keyboard shortcuts][keyboard shortcut] those implemented by the [HTML document][] [content][]. Any other means (e.g. browser extensions, browser settings, user agents, external browser applications, ...) are not considered.
 
 ## Accessibility Support
 
@@ -45,7 +45,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The [HTML document][] has a single [printable character][] [keyboard shortcut][] for a [user interface component][], which is only available when that component has focus.
+This [HTML document][] has a single [printable character][] [keyboard shortcut][] for a [HTML element][] (using the `+` character), which is only available when that [HTML element][] has [focus][].
 
 ```html
 <html>
@@ -54,65 +54,10 @@ The [HTML document][] has a single [printable character][] [keyboard shortcut][]
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
-  <body onload="registerShortcut({focusOnly: true}); activateShortcuts();">
+  <body onload="registerShortcut({shortcutKey: '+', focusOnly: true}); activateShortcuts();">
     <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Passed Example 2
-
-The [HTML document][] has a single [printable character][] [keyboard shortcut][] for a [user interface component][], which is only available when that component has focus, and another [keyboard shortcut][] that requires pressing one [non-printable character][non-printable characters].
-
-```html
-<html>
-  <head>
-    <title>Passed Example 2 for rule 1e9941</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-
-  <body onload="registerShortcut({focusOnly: true}); registerShortcut({shortcutKey: 'a' , ctrlKey: true}); activateShortcuts();">
-    <label for="target">Add to list (press "+" or "ctrl+a" to add):</label>
-    <input type="text" id="target" />
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Passed Example 3
-
-The [HTML document][] has a single [printable character][] [keyboard shortcut][] for a [user interface component][], which is only available when that component has focus, and another [keyboard shortcut][] that requires pressing one [non-printable character][non-printable characters].
-
-```html
-<html>
-  <head>
-    <title>Passed Example 3 for rule 1e9941</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-    <script>
-      function addToTList() {
-        const target = document.getElementById("target2");
-        document.getElementById("list").innerHTML += "<li>" + target.value + "</li>";
-        target.value = "";
-      }
-    </script>
-  </head>
-
-  <body onload="registerShortcut({focusOnly: true}); activateShortcuts();">
-    <label for="target">Add to list (press "+" to add):</label>
-    <input type="text" id="target">
-    <label for="target2">Add to list:</label>
-    <input type="text" id="target2">
-    <button onclick="addToList()">Add</button>
     <div>
       To do list
     </div>
@@ -125,7 +70,7 @@ The [HTML document][] has a single [printable character][] [keyboard shortcut][]
 
 #### Failed Example 1
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] for a [user interface component][] which is available even when the component does not have focus.
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] for a [HTML element][] which is available even when the [HTML element][] does not have [focus][].
 
 ```html
 <html>
@@ -134,31 +79,8 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
-  <body onload="registerShortcut(); activateShortcuts();">
+  <body onload="registerShortcut({shortcutKey: '+', focusOnly: false}); activateShortcuts();">
     <label for="target">Add to list (press "+" to add):</label>
-    <input type="text" id="target" />
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Failed Example 2
-
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] for a [user interface component][] which is available even when the component does not have focus, and another [keyboard shortcut][] using only a [printable character][] for a [user interface component][] which is only available when that component has focus.
-
-```html
-<html>
-  <head>
-    <title>Failed Example 2 for rule 1e9941</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-
-  <body onload="registerShortcut(); registerShortcut({focusOnly: true, shortcutKey: 'a'}); activateShortcuts();">
-    <label for="target">Add to list (press "+" or "a" to add):</label>
     <input type="text" id="target" />
     <br />
     <div>
@@ -173,16 +95,6 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Inapplicable Example 1
 
-The [HTML document][] does not use [keyboard shortcuts][keyboard shortcut].
-
-```html
-<html>
-  <div>Document content</div>
-</html>
-```
-
-#### Inapplicable Example 2
-
 The document is not an [HTML document][].
 
 ```html
@@ -192,18 +104,18 @@ The document is not an [HTML document][].
 </svg>
 ```
 
-#### Inapplicable Example 3
+#### Inapplicable Example 2
 
-The [HTML document][] has a [keyboard shortcut][] that requires pressing one [non-printable character][non-printable characters].
+This [HTML document][] has no [keyboard shortcut][] that requires pressing only [printable character][printable characters] (the only [keyboard shortcut][] requires pressing one [non-printable character][non-printable characters]).
 
 ```html
 <html>
   <head>
-    <title>Inapplicable Example 3 for rule 1e9941</title>
+    <title>Inapplicable Example 2 for rule 1e9941</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
-  <body onload="registerShortcut({ctrlKey: true}); activateShortcuts();">
+  <body onload="registerShortcut({shortcutKey: '+', ctrlKey: true}); activateShortcuts();">
     <label for="target">Add to list (press "ctrl" and "+" to add):</label>
     <input type="text" id="target" />
     <br />
@@ -215,14 +127,14 @@ The [HTML document][] has a [keyboard shortcut][] that requires pressing one [no
 </html>
 ```
 
-#### Inapplicable Example 4
+#### Inapplicable Example 3
 
-The [HTML document][] has an element with the attribute `accesskey`. Accesskeys use [non-printable characters][].
+This [HTML document][] has no [keyboard shortcut][] that requires pressing only [printable character][printable characters] (the only [keyboard shortcut][] uses the attribute `accesskey` and accesskeys use [non-printable characters][]).
 
 ```html
 <html>
   <head>
-    <title>Inapplicable Example 4 for rule 1e9941</title>
+    <title>Inapplicable Example 3 for rule 1e9941</title>
     <script>
       function shortcut() {
         const button = document.querySelector("button");
@@ -251,37 +163,12 @@ The [HTML document][] has an element with the attribute `accesskey`. Accesskeys 
 </html>
 ```
 
-#### Inapplicable Example 5
-
-The [HTML document][] has a [keyboard shortcut][] that requires pressing a single [printable character][] and doesn't trigger an action on a [user interface component][].
-
-```html
-<html>
-  <head>
-    <title>Inapplicable Example 5 for rule 1e9941</title>
-  </head>
-  <script>
-    function goToShortcut() {
-      document.body.addEventListener("keydown", function(event) {
-        if (event.key === "+") {
-          document.getElementById('text').scrollIntoView();
-        }
-      });
-    }
-  </script>
-  <body onload="goToShortcut();">
-    <p>Press "+" key to go to the text at the bottom of the page.</p>
-    <div style="height: 2000px"></div>
-    <p id="text">Some text at the bottom of the page.</p>
-  </body>
-</html>
-```
-
 [html document]: https://dom.spec.whatwg.org/#concept-document
 [keyboard shortcut]: https://www.w3.org/TR/WCAG21/#dfn-keyboard-shortcuts
-[user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
-[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
+[focus]: https://html.spec.whatwg.org/#focusable-area
+[HTML element]: https://html.spec.whatwg.org/multipage/dom.html#htmlelement
+[event]: https://dom.spec.whatwg.org/#events
+[instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [printable character]: #printable-characters 'Definition of printable characters'
 [non-printable characters]: #non-printable-characters 'Definition of non-printable characters'
-[focus]: https://html.spec.whatwg.org/#focusable-area

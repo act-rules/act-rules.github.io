@@ -22,7 +22,7 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any [HTML document][] with at least one [keyboard shortcut][] that requires pressing only [printable character][] keys to trigger an action on a [user interface component][].
+The rule applies to any [keyboard shortcut][] that requires pressing only [printable character][] keys to trigger within a [HTML document][].
 
 ## Expectation
 
@@ -34,7 +34,7 @@ For the test target, the outcome of at least one of the following rules is passe
 
 ## Assumptions
 
-This rule assumes as applicable [keyboard shortcuts][keyboard shortcut] those implemented by the test target [content][]. Any other means (e.g. browser extensions, browser settings, user agents, external browser applications) are not considered.
+This rule assumes as applicable [keyboard shortcuts][keyboard shortcut] those implemented by the [HTML document][] [content][]. Any other means (e.g. browser extensions, browser settings, user agents, external browser applications) are not considered.
 
 ## Accessibility Support
 
@@ -52,7 +52,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The [HTML document][] has a single [printable character][] [keyboard shortcut][] for a [user interface component][], which is only available when that component has focus.
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that can be disabled by an [instrument][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][].
 
 ```html
 <html>
@@ -60,30 +60,7 @@ The [HTML document][] has a single [printable character][] [keyboard shortcut][]
     <title>Passed Example 1</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-
-  <body onload="registerShortcut({focusOnly: true}); activateShortcuts();">
-    <label for="target">Add to list (press "+" to add):</label>
-    <input type="text" id="target" />
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Passed Example 2
-
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that can be disabled by a [user interface component][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][].
-
-```html
-<html>
-  <head>
-    <title>Passed Example 2</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-  <body onload="registerShortcut({id: 'singleShortcut'}); activateShortcuts();">
+  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
     <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <label>
@@ -99,9 +76,39 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 </html>
 ```
 
+#### Passed Example 2
+
+The [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][] and each one of them can be disabled by a [instrument][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][]. In this case, each [keyboard shortcut][] is disabled by a different [instrument][].
+
+```html
+<html>
+  <head>
+    <title>Passed Example 2</title>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
+  </head>
+  <body onload="registerShortcut({id: 'firstShortcut', shortcutKey: '+'}); registerShortcut({id: 'secondShortcut', shortcutKey: 'a'}); activateShortcuts();">
+    <label for="target">Add to list (press "+" or "a" to add):</label>
+    <input type="text" id="target" />
+    <label>
+      <input type="checkbox" onclick="toggleDisabled('firstShortcut', !this.checked)" checked>
+      Toggle "+" single character keyboard shortcut
+    </label>
+    <label>
+      <input type="checkbox" onclick="toggleDisabled('secondShortcut', !this.checked)" checked>
+      Toggle "a" single character keyboard shortcut
+    </label>
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
+  </body>
+</html>
+```
+
 #### Passed Example 3
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that can be remapped to use a shortcut with a [non-printable character][non-printable characters].
+The [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][] that can be disabled by a [instrument][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][]. In this case, both [keyboard shortcuts][keyboard shortcut] are disabled by the same [instrument][].
 
 ```html
 <html>
@@ -109,7 +116,33 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Passed Example 3</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="registerShortcut({id: 'singleShortcut'}); activateShortcuts();">
+  <body onload="registerShortcut({id: 'firstShortcut', shortcutKey: '+'}); registerShortcut({id: 'secondShortcut', shortcutKey: 'a'}); activateShortcuts();">
+    <label for="target">Add to list (press "+" or "a" to add):</label>
+    <input type="text" id="target" />
+    <label>
+      <input type="checkbox" onclick="toggleDisabled('firstShortcut', !this.checked); toggleDisabled('secondShortcut', !this.checked)" checked>
+      Toggle single character keyboard shortcuts
+    </label>
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
+  </body>
+</html>
+```
+
+#### Passed Example 4
+
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that can be remapped to use a shortcut with a [non-printable character][non-printable characters].
+
+```html
+<html>
+  <head>
+    <title>Passed Example 4</title>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
+  </head>
+  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
     <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <div>
@@ -130,32 +163,9 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 </html>
 ```
 
-#### Passed Example 4
-
-The [HTML document][] has a single [printable character][] [keyboard shortcut][] for a [user interface component][], which is only available when that component has focus, and another [keyboard shortcut][] that requires pressing one [non-printable character][non-printable characters].
-
-```html
-<html>
-  <head>
-    <title>Passed Example 4</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-
-  <body onload="registerShortcut({focusOnly: true}); registerShortcut({shortcutKey: 'a' , ctrlKey: true}); activateShortcuts();">
-    <label for="target">Add to list (press "+" or "ctrl+a" to add):</label>
-    <input type="text" id="target" />
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
 #### Passed Example 5
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that can be disabled by a [user interface component][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][], and another [keyboard shortcut][] that requires pressing one [non-printable character][non-printable characters].
+The [HTML document][] has two [keyboard shortcut][] using only a [printable character][], and each one of them can be remapped to use a shortcut with a [non-printable character][non-printable characters].
 
 ```html
 <html>
@@ -163,126 +173,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Passed Example 5</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="registerShortcut({id: 'singleShortcut'}); registerShortcut({shortcutKey: 'a' , ctrlKey: true}); activateShortcuts();">
-    <label for="target">Add to list (press "+ or "ctrl+a" to add):</label>
-    <input type="text" id="target" />
-    <label>
-      <input type="checkbox" onclick="toggleDisabled('singleShortcut', !this.checked)" checked>
-      Toggle single character keyboard shortcut
-    </label>
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Passed Example 6
-
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][], and it can be remapped to use a shortcut with a [non-printable character][non-printable characters], and another [keyboard shortcut][] that requires pressing one [non-printable character][non-printable characters].
-
-```html
-<html>
-  <head>
-    <title>Passed Example 6</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-  <body onload="registerShortcut({id: 'singleShortcut'}); registerShortcut({shortcutKey: 'a' , ctrlKey: true}); activateShortcuts();">
-    <label for="target">Add to list (press "+" or "ctrl+a" to add):</label>
-    <input type="text" id="target" />
-    <div>
-      <div>Remap shortcut</div>
-      <div>
-        <label>
-          <input id="remap" type="checkbox" onclick="toggleModifier('singleShortcut', this.checked)" />
-          Use "ctrl" key together with the "+" key
-        </label>
-      </div>
-    </div>
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Passed Example 7
-
-The [HTML document][] has a single [printable character][] [keyboard shortcut][] for a [user interface component][], which is only available when that component has focus, and another [keyboard shortcut][] that requires pressing one [non-printable character][non-printable characters].
-
-```html
-<html>
-  <head>
-    <title>Passed Example 7</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-    <script>
-      function addToTList() {
-        const target = document.getElementById("target2");
-        document.getElementById("list").innerHTML += "<li>" + target.value + "</li>";
-        target.value = "";
-      }
-    </script>
-  </head>
-
-  <body onload="registerShortcut({focusOnly: true}); activateShortcuts();">
-    <label for="target">Add to list (press "+" to add):</label>
-    <input type="text" id="target">
-    <label for="target2">Add to list:</label>
-    <input type="text" id="target2">
-    <button onclick="addToList()">Add</button>
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Passed Example 8
-
-The [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][] and each one of them can be disabled by a [user interface component][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][].
-
-```html
-<html>
-  <head>
-    <title>Passed Example 8</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-  <body onload="registerShortcut({id: 'firstShortcut'}); registerShortcut({id: 'secondShortcut', shortcutKey: 'a'}); activateShortcuts();">
-    <label for="target">Add to list (press "+" or "a" to add):</label>
-    <input type="text" id="target" />
-    <label>
-      <input type="checkbox" onclick="toggleDisabled('firstShortcut', !this.checked)" checked>
-      Toggle "+" single character keyboard shortcut
-    </label>
-    <label>
-      <input type="checkbox" onclick="toggleDisabled('secondShortcut', !this.checked)" checked>
-      Toggle "a" single character keyboard shortcut
-    </label>
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Passed Example 9
-
-The [HTML document][] has two [keyboard shortcut][] using only a [printable character][], and each one of them can be remapped to use a shortcut with a [non-printable character][non-printable characters].
-
-```html
-<html>
-  <head>
-    <title>Passed Example 9</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-  <body onload="registerShortcut({id: 'firstShortcut'}); registerShortcut({id: 'secondShortcut', shortcutKey: 'a'}); activateShortcuts();">
+  <body onload="registerShortcut({id: 'firstShortcut', shortcutKey: '+'}); registerShortcut({id: 'secondShortcut', shortcutKey: 'a'}); activateShortcuts();">
     <label for="target">Add to list (press "+" or "a" to add):</label>
     <input type="text" id="target" />
     <div>
@@ -307,43 +198,17 @@ The [HTML document][] has two [keyboard shortcut][] using only a [printable char
 </html>
 ```
 
-#### Passed Example 10
-
-The [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][] that can be disabled by a [user interface component][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][].
-
-```html
-<html>
-  <head>
-    <title>Passed Example 10</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-  <body onload="registerShortcut({id: 'firstShortcut'}); registerShortcut({id: 'secondShortcut', shortcutKey: 'a'}); activateShortcuts();">
-    <label for="target">Add to list (press "+" or "a" to add):</label>
-    <input type="text" id="target" />
-    <label>
-      <input type="checkbox" onclick="toggleDisabled('firstShortcut', !this.checked); toggleDisabled('secondShortcut', !this.checked)" checked>
-      Toggle single character keyboard shortcuts
-    </label>
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Passed Example 11
+#### Passed Example 6
 
 The [HTML document][] has two [keyboard shortcut][] using only a [printable character][] that can be remapped to use a shortcut with a [non-printable character][non-printable characters].
 
 ```html
 <html>
   <head>
-    <title>Passed Example 11</title>
+    <title>Passed Example 6</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="registerShortcut({id: 'firstShortcut'}); registerShortcut({id: 'secondShortcut', shortcutKey: 'a'}); activateShortcuts();">
+  <body onload="registerShortcut({id: 'firstShortcut', shortcutKey: '+'}); registerShortcut({id: 'secondShortcut', shortcutKey: 'a'}); activateShortcuts();">
     <label for="target">Add to list (press "+" or "a" to add):</label>
     <input type="text" id="target" />
     <div>
@@ -355,6 +220,29 @@ The [HTML document][] has two [keyboard shortcut][] using only a [printable char
         </label>
       </div>
     </div>
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
+  </body>
+</html>
+```
+
+#### Passed Example 7
+
+This [HTML document][] has a single [printable character][] [keyboard shortcut][] for a [HTML element][] (using the `+` character), which is only available when that [HTML element][] has [focus][].
+
+```html
+<html>
+  <head>
+    <title>Passed Example 7</title>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
+  </head>
+
+  <body onload="registerShortcut({shortcutKey: '+', focusOnly: true}); activateShortcuts();">
+    <label for="target">Add to list (press "+" to add):</label>
+    <input type="text" id="target" />
     <br />
     <div>
       To do list
@@ -376,7 +264,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Failed Example 1</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="registerShortcut(); activateShortcuts();">
+  <body onload="registerShortcut({shortcutKey: '+', disabled: false}); activateShortcuts();">
     <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <br />
@@ -390,7 +278,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 2
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that cannot be disabled, and another [keyboard shortcut][] using only a [printable character][] that can be disabled by a [user interface component][].
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [instrument][] is not [visible][].
 
 ```html
 <html>
@@ -398,33 +286,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
     <title>Failed Example 2</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="registerShortcut(); registerShortcut({id: 'singleShortcut', shortcutKey: 'a'}); activateShortcuts();">
-    <label for="target">Add to list (press "+" or "a" to add):</label>
-    <input type="text" id="target" />
-    <label>
-      <input type="checkbox" onclick="toggleDisabled('singleShortcut', !this.checked)" checked>
-      Toggle "a" single character keyboard shortcut
-    </label>
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Failed Example 3
-
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [user interface component][] is not [visible][].
-
-```html
-<html>
-  <head>
-    <title>Failed Example 3</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-  <body onload="registerShortcut({id: 'singleShortcut'}); activateShortcuts();">
+  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+', disabled: false}); activateShortcuts();">
     <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <div style="position: absolute; margin-left: -9999px;">
@@ -442,17 +304,17 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 </html>
 ```
 
-#### Failed Example 4
+#### Failed Example 3
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [user interface component][] is not [included in the accessibility tree][].
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [instrument][] is not [included in the accessibility tree][].
 
 ```html
 <html>
   <head>
-    <title>Failed Example 4</title>
+    <title>Failed Example 3</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="registerShortcut({id: 'singleShortcut'}); activateShortcuts();">
+  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+', disabled: false}); activateShortcuts();">
     <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <div aria-hidden="true">
@@ -470,17 +332,17 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 </html>
 ```
 
-#### Failed Example 5
+#### Failed Example 4
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [user interface component][] has an empty (`""`) [accessible name][].
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [instrument][] has an empty (`""`) [accessible name][].
 
 ```html
 <html>
   <head>
-    <title>Failed Example 5</title>
+    <title>Failed Example 4</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="registerShortcut({id: 'singleShortcut'}); activateShortcuts();">
+  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
     <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <div>
@@ -497,17 +359,17 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 </html>
 ```
 
-#### Failed Example 6
+#### Failed Example 5
 
 The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that cannot be remapped.
 
 ```html
 <html>
   <head>
-    <title>Failed Example 6</title>
+    <title>Failed Example 5</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="registerShortcut(); activateShortcuts();">
+  <body onload="registerShortcut({shortcutKey: '+'}); activateShortcuts();">
     <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <br />
@@ -519,48 +381,17 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 </html>
 ```
 
-#### Failed Example 7
+#### Failed Example 6
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that cannot be remapped, and another [keyboard shortcut][] using only a [printable character][] that can be remapped to use a shortcut with a [non-printable character][non-printable characters].
-
-```html
-<html>
-  <head>
-    <title>Failed Example 7</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-  <body onload="registerShortcut(); registerShortcut({id: 'singleShortcut', shortcutKey: 'a'}); activateShortcuts();">
-    <label for="target">Add to list (press "+" or "a" to add):</label>
-    <input type="text" id="target" />
-    <div>
-      <div>Remap shortcut</div>
-      <div>
-        <label>
-          <input id="remap" type="checkbox" onclick="toggleModifier('singleShortcut', this.checked)">
-          Use "ctrl" key together with the "a" key
-        </label>
-      </div>
-    </div>
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Failed Example 8
-
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [user interface component][] is not [visible][].
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [instrument][] is not [visible][].
 
 ```html
 <html>
   <head>
-    <title>Failed Example 8</title>
+    <title>Failed Example 6</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="registerShortcut({id: 'singleShortcut'}); activateShortcuts();">
+  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
     <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <div>
@@ -581,17 +412,17 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 </html>
 ```
 
-#### Failed Example 9
+#### Failed Example 7
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [user interface component][] is not [included in the accessibility tree][].
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [instrument][] is not [included in the accessibility tree][].
 
 ```html
 <html>
   <head>
-    <title>Failed Example 9</title>
+    <title>Failed Example 7</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="registerShortcut({id: 'singleShortcut'}); activateShortcuts();">
+  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
     <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <div>
@@ -612,17 +443,17 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 </html>
 ```
 
-#### Failed Example 10
+#### Failed Example 8
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [user interface component][] has an empty (`""`) [accessible name][].
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [instrument][] has an empty (`""`) [accessible name][].
 
 ```html
 <html>
   <head>
-    <title>Failed Example 10</title>
+    <title>Failed Example 8</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
-  <body onload="registerShortcut({id: 'singleShortcut'}); activateShortcuts();">
+  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
     <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <div>
@@ -638,42 +469,19 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 </html>
 ```
 
-#### Failed Example 11
+#### Failed Example 9
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] for a [user interface component][] which is available even when the component does not have focus.
+The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] for a [HTML element][] which is available even when the [HTML element][] does not have [focus][].
 
 ```html
 <html>
   <head>
-    <title>Failed Example 11</title>
+    <title>Failed Example 9</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
-  <body onload="registerShortcut(); activateShortcuts();">
+  <body onload="registerShortcut({shortcutKey: '+', focusOnly: false}); activateShortcuts();">
     <label for="target">Add to list (press "+" to add):</label>
-    <input type="text" id="target" />
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Failed Example 12
-
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] for a [user interface component][] which is available even when the component does not have focus, and another [keyboard shortcut][] using only a [printable character][] for a [user interface component][] which is only available when that component has focus.
-
-```html
-<html>
-  <head>
-    <title>Failed Example 12</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-
-  <body onload="registerShortcut(); registerShortcut({focusOnly: true, shortcutKey: 'a'}); activateShortcuts();">
-    <label for="target">Add to list (press "+" or "a" to add):</label>
     <input type="text" id="target" />
     <br />
     <div>
@@ -688,16 +496,6 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Inapplicable Example 1
 
-The [HTML document][] does not use [keyboard shortcuts][keyboard shortcut].
-
-```html
-<html>
-  <div>Document content</div>
-</html>
-```
-
-#### Inapplicable Example 2
-
 The document is not an [HTML document][].
 
 ```html
@@ -707,14 +505,14 @@ The document is not an [HTML document][].
 </svg>
 ```
 
-#### Inapplicable Example 3
+#### Inapplicable Example 2
 
 The [HTML document][] has a [keyboard shortcut][] that requires pressing one [non-printable character][non-printable characters].
 
 ```html
 <html>
   <head>
-    <title>Inapplicable Example 3</title>
+    <title>Inapplicable Example 2</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
@@ -730,14 +528,14 @@ The [HTML document][] has a [keyboard shortcut][] that requires pressing one [no
 </html>
 ```
 
-#### Inapplicable Example 4
+#### Inapplicable Example 3
 
 The [HTML document][] has an element with the attribute `accesskey`. Accesskeys use [non-printable characters][].
 
 ```html
 <html>
   <head>
-    <title>Inapplicable Example 4</title>
+    <title>Inapplicable Example 3</title>
     <script>
       function shortcut() {
         const button = document.querySelector("button");
@@ -766,36 +564,13 @@ The [HTML document][] has an element with the attribute `accesskey`. Accesskeys 
 </html>
 ```
 
-#### Inapplicable Example 5
-
-The [HTML document][] has a [keyboard shortcut][] that requires pressing a single [printable character][] and doesn't trigger an action on a [user interface component][].
-
-```html
-<html>
-  <head>
-    <title>Inapplicable Example 5</title>
-  </head>
-  <script>
-    function goToShortcut() {
-      document.body.addEventListener("keydown", function(event) {
-        if (event.key === "+") {
-          document.getElementById('text').scrollIntoView();
-        }
-      });
-    }
-  </script>
-  <body onload="goToShortcut();">
-    <p>Press "+" key to go to the text at the bottom of the page.</p>
-    <div style="height: 2000px;"></div>
-    <p id="text">Some text at the bottom of the page.</p>
-  </body>
-</html>
-```
-
 [HTML document]: https://dom.spec.whatwg.org/#concept-document
 [keyboard shortcut]: https://www.w3.org/TR/WCAG21/#dfn-keyboard-shortcuts
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
-[user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
+[focus]: https://html.spec.whatwg.org/#focusable-area
+[HTML element]: https://html.spec.whatwg.org/multipage/dom.html#htmlelement
+[event]: https://dom.spec.whatwg.org/#events
+[instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [printable character]: #printable-characters 'Definition of printable characters'
 [non-printable characters]: #non-printable-characters 'Definition of non-printable characters'
 [visible]: #visible 'Definition of visible'

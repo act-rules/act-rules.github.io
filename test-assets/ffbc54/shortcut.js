@@ -10,7 +10,7 @@ const shortcutDefinitions = new Array();
 
 function activateShortcuts() {
   document.body.addEventListener("keydown", function(event) {
-    for (const settings of shortcutDefinitions || []) {
+    for (const settings of shortcutDefinitions) {
       if (!settings.disabled) {
         const target = document.getElementById(settings.target);
 

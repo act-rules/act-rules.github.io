@@ -1,9 +1,11 @@
 ---
 title: Printable characters
 key: printable-characters
+unambiguous: true
+objective: true
 ---
 
-A printable character is a character that occupies a printing position on a display.
+A _printable character_ is a character that occupies a printing position on a display.
 
 These characters correspond to the following [Unicode categories](https://www.unicode.org/versions/Unicode12.0.0/ch04.pdf):
 

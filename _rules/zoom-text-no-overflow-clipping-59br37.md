@@ -8,8 +8,8 @@ accessibility_requirements: # Remove whatever is not applicable
   wcag20:1.4.4: # Resize Text (AA)
     forConformance: true
     failed: not satisfied
-    passed: urther testing needed
-    inapplicable: urther testing needed
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -17,7 +17,7 @@ acknowledgments:
   authors:
     - Wilco Fiers
   assets:
-    - The raven, Edgar Allan Poe
+    - The Raven, poem by Edgar Allan Poe
 ---
 
 ## Applicability
@@ -29,7 +29,7 @@ The rule applies to any [text node][] for which all of the following is true whe
 - The [text node][] has an [ancestor][] in the [flat tree][] with the a [computed][] [overflow-x][overflow] or [overflow-y][overflow] of `none` or `clip`; and
 - The [text node][] does not have an [ancestor][] in the [flat tree][] with an `aria-hidden` attribute set to `true`
 
-**note**: A [display size][] of 640 by 512 is equivalent to a [display size][] of 1280 by 1024 zoomed 200%.
+**Note**: A [display size][] of 640 by 512 is equivalent to a [display size][] of 1280 by 1024 zoomed 200%.
 
 ## Expectation
 

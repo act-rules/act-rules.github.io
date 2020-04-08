@@ -21,7 +21,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to `iframe` elements that are [included in the accessibility tree][] or that are part of [sequential focus navigation][].
+The rule applies to `iframe` elements that are [included in the accessibility tree][] and has contents that can be accessed by [sequential focus navigation][].
 
 **Note:** `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
 
@@ -29,7 +29,7 @@ The rule applies to `iframe` elements that are [included in the accessibility tr
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
-**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
+**Note:** This rule does not verify if a given [accessible name][] describes the purpose of the element.
 
 ## Assumptions
 
@@ -37,7 +37,7 @@ If an `iframe` is not perceived by the user as a single control, it does not qua
 
 ## Accessibility Support
 
-- Some browsers include `iframe` elements in the [sequential focus navigation][]. This ensures that `iframe` elements can always be scrolled using the keyboard. When an `iframe` is removed from the accessibility tree, this rule is still applicable for those browsers, unless the `iframe` is explicitly removed from [sequential focus navigation][] (by having the `tabindex` attribute set to a negative value).
+- Some browsers include `iframe` elements in the [sequential focus navigation][]. This ensures that the contents of `iframe` element can be scrolled and accessed by using the keyboard. When an `iframe` is removed from the accessibility tree, this rule is still applicable for those browsers, unless the `iframe` is explicitly removed from [sequential focus navigation][] (by having the `tabindex` attribute set to a negative value).
 - Certain assistive technologies can be set up to ignore the title attribute, which means that to some users the title attribute will not act as an [accessible name][].
 
 ## Background
@@ -75,6 +75,14 @@ This `iframe` element gets its [accessible name][] from the content of the `div`
 <iframe aria-labelledby="frame-title-helper" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
+#### Passed Example 4
+
+This `iframe` element gets its [accessible name][] from the `title` attribute. Note, that specifying a positive `tabindex` value only alters the order of the [sequential focus navigation][], and as such the contents of the `iframe` element can be accessed.
+
+```html
+<iframe title="Top 5 Marathon runners" src="/test-assets/SC4-1-2-frame-doc.html" tabindex="5"> </iframe>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -103,12 +111,12 @@ This `iframe` element has an empty (`""`) [accessible name][] because the `title
 
 #### Failed Example 4
 
-This `iframe` element has an empty (`""`) [accessible name][] because the `title` attribute value is trimmed of whitespace as part of the accessible name computation.
+This `iframe` element has an empty (`""`) [accessible name][] because the `title` attribute value is trimmed of whitespace by the [accessible name computation][accessible name and description computation].
 
-**note**: Because `iframe` elements are part of [sequential focus navigation][], the [explicit semantic role](#explicit-role) of `none` will be ignored, due to the [Presentational Roles Conflict Resolution](https://www.w3.org/TR/wai-aria-1.1/#presentational-roles-conflict-resolution).
+**Note:**: Because `iframe` elements are part of [sequential focus navigation][], the [explicit semantic role](#explicit-role) of `none` will be ignored, due to the [Presentational Roles Conflict Resolution](https://www.w3.org/TR/wai-aria-1.1/#presentational-roles-conflict-resolution).
 
 ```html
-<iframe title=" " src="/test-assets/SC4-1-2-frame-doc.html" role="none" tabindex="0"> </iframe>
+<iframe title=" " src="/test-assets/SC4-1-2-frame-doc.html" role="none"> </iframe>
 ```
 
 ### Inapplicable
@@ -123,15 +131,23 @@ This page has no `iframe` element.
 
 #### Inapplicable Example 2
 
-This `iframe` is neither part of [sequential focus navigation][], nor [included in the accessibility tree][] because of `display: none;`.
+This `iframe` is not[included in the accessibility tree][] because of setting a style of `display: none;`.
 
 ```html
-<iframe style="display:none;" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
+<iframe style="display:none;" src="/test-assets/SC4-1-2-frame-doc.html"></iframe>
 ```
 
 #### Inapplicable Example 3
 
-This `iframe` is not part of [sequential focus navigation][] because it has `tabindex="-1"` and not [included in the accessibility tree][] because of `role="presentation"`
+This `iframe` is not[included in the accessibility tree][] because of `role="presentation"`.
+
+```html
+<iframe style="display:none;" src="/test-assets/SC4-1-2-frame-doc.html"></iframe>
+```
+
+#### Inapplicable Example 4
+
+This `iframe` element has a negative `tabindex` and therefore its contents are not accessible via [sequential focus navigation][].
 
 ```html
 <iframe tabindex="-1" role="presentation" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
@@ -142,3 +158,4 @@ This `iframe` is not part of [sequential focus navigation][] because it has `tab
 [whitespace]: #whitespace 'Definition of whitespace'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
+[accessible name and description computation]: https://www.w3.org/TR/accname

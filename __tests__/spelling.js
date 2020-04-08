@@ -129,9 +129,16 @@ function getSpellIgnored() {
 		}
 	})
 
-	const ignoreAria = ariaQuery.aria.keys()
-	const ignoreDom = ariaQuery.dom.keys()
-	const ignoreRoles = ariaQuery.roles.keys()
+	/**
+	 * `retext-spell` by default checks spelling of individual words before ensuring validity of a composite word.
+	 * Eg: `aria-valuenow` is first checked for spelling for `aria` then `valuenow`, and if both of those fail, then validity of the entire word is checked.
+	 *
+	 * Below we are setting individual aria keys as valid (ignore list), thereby bypassing a composite word check.
+	 * This is to circumvent isses when `aria-*` attribues are followed by other characters eg: punctuation
+	 */
+	const ignoreAria = ['aria', ...Array.from(ariaQuery.aria.keys())].map(key => key.replace(/aria-/, ''))
+	const ignoreDom = Array.from(ariaQuery.dom.keys())
+	const ignoreRoles = Array.from(ariaQuery.roles.keys())
 
 	return [...ignoreConfigured, ...ignoreExtra, ...ignoreAria, ...ignoreDom, ...ignoreRoles]
 }

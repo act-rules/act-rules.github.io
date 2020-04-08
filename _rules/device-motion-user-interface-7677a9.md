@@ -26,11 +26,13 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to an [HTML document][] with an associated [Window object][] that has one or more registered [device orientation events][device orientation] or [device motion events][device motion].
+The rule applies to an [HTML document][] with an associated [Window object][] that has an [event listener list][] with one or more [event listeners][event listener] for [device orientation events][device orientation] or [device motion events][device motion].
 
 ## Expectation 1
 
-For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target, an [instrument][] is available supporting the same outcome of the event.
+For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target, an [instrument][] is available supporting the same outcomes of the event.
+
+**Note:** The same [instrument][] can be used to disable more than one event.
 
 ## Expectation 2
 
@@ -177,45 +179,6 @@ This [HTML document][] that can be operated through the device's orientation to 
 
 #### Failed Example 2
 
-This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider has the same functionality available through `button` elements but these are not [included in the accessibility tree][].
-
-```html
-<html>
-	<head>
-		<title>Failed Example 2</title>
-		<script src="/test-assets/7677a9/slider.js"></script>
-		<script>
-			function activateSlider() {
-				document.getElementById('decreaseSlider').addEventListener('click', decreaseSlider)
-				document.getElementById('increaseSlider').addEventListener('click', increaseSlider)
-				window.addEventListener('deviceorientation', handleOrientation)
-			}
-		</script>
-	</head>
-
-	<body onload="activateSlider();">
-		<pre class="output"></pre>
-
-		<h1>Slider Motion Sensor Example</h1>
-
-		<p>
-			Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the right
-			and left to adjust the slider value. The decrease and increase buttons also adjust the value.
-		</p>
-		<p>Note: This example may not work across all browsers.</p>
-
-		<div>
-			<button id="decreaseSlider" type="button" aria-hidden="true">Decrease Value</button>
-			<input type="range" min="1" max="100" value="50" id="motionSlider" disabled />
-			<button id="increaseSlider" type="button" aria-hidden="true">Increase Value</button>
-			<p aria-live="polite">Slider Value: <span id="output">50</span></p>
-		</div>
-	</body>
-</html>
-```
-
-#### Failed Example 3
-
 This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider has the same functionality available through `button` elements but these are not [visible][].
 
 ```html
@@ -249,6 +212,45 @@ This [HTML document][] that can be operated through the device's orientation to 
 			<button id="increaseSlider" type="button" style="position: absolute; margin-left: -9999px;">
 				Increase Value
 			</button>
+			<p aria-live="polite">Slider Value: <span id="output">50</span></p>
+		</div>
+	</body>
+</html>
+```
+
+#### Failed Example 3
+
+This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider has the same functionality available through `button` elements but these are not [included in the accessibility tree][].
+
+```html
+<html>
+	<head>
+		<title>Failed Example 2</title>
+		<script src="/test-assets/7677a9/slider.js"></script>
+		<script>
+			function activateSlider() {
+				document.getElementById('decreaseSlider').addEventListener('click', decreaseSlider)
+				document.getElementById('increaseSlider').addEventListener('click', increaseSlider)
+				window.addEventListener('deviceorientation', handleOrientation)
+			}
+		</script>
+	</head>
+
+	<body onload="activateSlider();">
+		<pre class="output"></pre>
+
+		<h1>Slider Motion Sensor Example</h1>
+
+		<p>
+			Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the right
+			and left to adjust the slider value. The decrease and increase buttons also adjust the value.
+		</p>
+		<p>Note: This example may not work across all browsers.</p>
+
+		<div>
+			<button id="decreaseSlider" type="button" aria-hidden="true">Decrease Value</button>
+			<input type="range" min="1" max="100" value="50" id="motionSlider" disabled />
+			<button id="increaseSlider" type="button" aria-hidden="true">Increase Value</button>
 			<p aria-live="polite">Slider Value: <span id="output">50</span></p>
 		</div>
 	</body>

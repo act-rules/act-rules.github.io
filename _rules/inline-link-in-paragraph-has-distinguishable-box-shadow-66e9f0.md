@@ -18,7 +18,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [visible][] HTML element that is a [semantic link][], where the closest element (including itself) that generates an [inline box][] is part of a [line box][] that has [inline boxes][inline box] generated from an element containing [visible][] [text nodes][text node] that do not have a [semantic link][] as a [descendant][] in the [flat tree][].
+This rule applies to:
+- **(visible link)** any [visible][] HTML element that is a [semantic link][],
+- **(belongs to a line box)** where the closest element (including itself) that generates an [inline box][] is part of a [line box][], 
+- **(with other elements)** which has [inline boxes][inline box] generated from an element containing [visible][] [text nodes][text node], 
+- **(that are not links)** which do not have a [semantic link][] as a [descendant][] in the [flat tree][].
 
 **Note:** The test targets are visible link elements that are part of a block of content that is displayed inline.
 
@@ -30,7 +34,7 @@ Each target element has a [visible] [`box-shadow`][box-shadow].
 
 - The link is distinguishable from the rest of the text with color, which means it fails SC 1.4.1 when there is not another way to distinguish it.
 - The 3:1 contrast difference between text is minimal to what would be sufficient to meet WCAG 2.0. This value is part of [technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183), but is not specified in the [1.4.1 success criterion](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
-- Any change in font is sufficiently distinguishable, and that fonts are loaded when they are present.
+- Any change in font is sufficiently distinguishable, and fonts are loaded when they are present.
 - If multiple colors are used in the visible text nodes of the block of content then color can not be a distinguishing factor.
 - If `box-shadow` is used in the different visible text nodes of the block of content then `box-shadow` can not be a distinguishing factor.
 
@@ -51,7 +55,7 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. The link has a distinguishing box-shadow.
+This link, that is a descendant of a paragraph element, has a distinguishing box-shadow.
 
 ```html
 <style>
@@ -67,7 +71,7 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 #### Failed Example 1
 
-This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. The underline is removed and the link has no visual cues of being recognized as a link.
+This link, that is a descendant of a paragraph element, has no visual cues of being recognized as a link with the underline removed.
 
 ```html
 <style>

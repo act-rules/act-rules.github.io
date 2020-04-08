@@ -18,7 +18,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [visible][] HTML element that is a [semantic link][], where the closest element (including itself) that generates an [inline box][] is part of a [line box][] that has [inline boxes][inline box] generated from an element containing [visible][] [text nodes][text node] that do not have a [semantic link][] as a [descendant][] in the [flat tree][].
+This rule applies to:
+- **(visible link)** any [visible][] HTML element that is a [semantic link][],
+- **(belongs to a line box)** where the closest element (including itself) that generates an [inline box][] is part of a [line box][], 
+- **(with other elements)** which has [inline boxes][inline box] generated from an element containing [visible][] [text nodes][text node], 
+- **(that are not links)** which do not have a [semantic link][] as a [descendant][] in the [flat tree][].
 
 **Note:** The test targets are visible link elements that are part of a block of content that is displayed inline.
 
@@ -28,7 +32,7 @@ Each target element has a [visible][] [border](https://drafts.csswg.org/css-back
 
 ## Assumptions
 
-- Any change in font is sufficiently distinguishable, and that fonts are loaded when they are present.
+- Any change in font is sufficiently distinguishable, and fonts are loaded when they are present.
 - If multiple colors are used in the visible text nodes of the block of content then color can not be a distinguishing factor.
 - If `border` is used in the different visible text nodes of the block of content then `border` can not be a distinguishing factor.
 
@@ -49,7 +53,7 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. The link has a distinguishing bottom border in addition to being distinguishable by color.
+This link, that is a descendant of a paragraph element, has a distinguishing bottom border in addition to being distinguishable by color.
 
 ```html
 <style>
@@ -74,7 +78,7 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 #### Failed Example 1
 
-This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. The underline is removed and the link has no visual cues of being recognized as a link.
+This link, that is a descendant of a paragraph element, has no visual cues of being recognized as a link with the underline removed.
 
 ```html
 <style>
@@ -87,7 +91,7 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 #### Failed Example 2
 
-This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. The link has a border but the border's width is zero and, therefore, not visible.
+This link, that is a descendant of a paragraph element, has a border not visible because it has a width of zero.
 
 ```html
 <style>
@@ -107,7 +111,7 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 #### Failed Example 3
 
-This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. The link has a border but its color is transparent and, therefore, not visible.
+This link, that is a descendant of a paragraph element, has a border not visible because its color is transparent.
 
 ```html
 <style>

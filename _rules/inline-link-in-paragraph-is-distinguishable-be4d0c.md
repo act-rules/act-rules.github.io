@@ -27,7 +27,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [visible][] HTML element that is a [semantic link][], where the closest element (including itself) that generates an [inline box][] is part of a [line box][] that has [inline boxes][inline box] generated from an element containing [visible][] [text nodes][text node] that do not have a [semantic link][] as a [descendant][] in the [flat tree][].
+This rule applies to:
+- **(visible link)** any [visible][] HTML element that is a [semantic link][],
+- **(belongs to a line box)** where the closest element (including itself) that generates an [inline box][] is part of a [line box][], 
+- **(with other elements)** which has [inline boxes][inline box] generated from an element containing [visible][] [text nodes][text node], 
+- **(that are not links)** which do not have a [semantic link][] as a [descendant][] in the [flat tree][].
 
 **Note:** The test targets are visible link elements that are part of a block of content that is displayed inline.
 
@@ -46,7 +50,7 @@ For each test target, the [outcome][] of one of the following rules is "passed":
 
 - The link is distinguishable from the rest of the text with color, which means it fails SC 1.4.1 when there is not another way to distinguish it.
 - The 3:1 contrast difference between text is minimal to what would be sufficient to meet WCAG 2.0. This value is part of [technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183), but is not specified in the [1.4.1 success criterion](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
-- Any change in font is sufficiently distinguishable, and that fonts are loaded when they are present.
+- Any change in font is sufficiently distinguishable, and fonts are loaded when they are present.
 - If multiple colors are used in the visible text nodes of the _ancestor_ element then color can not be a distinguishing factor.
 - If `box-shadow` is used in the different visible text nodes of the _ancestor_ element then `box-shadow` can not be a distinguishing factor.
 - If `border` is used in the different visible text nodes of the _ancestor_ element then `border` can not be a distinguishing factor.
@@ -68,7 +72,7 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. It uses the default styling of links which underlines them in most browsers, making it a distinguishing style.
+This link, that is a descendant of a paragraph element, uses the default styling of links which underlines them in most browsers, making it a distinguishing style.
 
 ```html
 <style>
@@ -81,7 +85,7 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 #### Passed Example 2
 
-This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. An icon is added to distinguish it as a link.
+This link, that is a descendant of a paragraph element, has an icon that makes it distinguishable as a link.
 
 ```html
 <style>
@@ -97,7 +101,7 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 #### Passed Example 3
 
-This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. Text is added to distinguish it as a link.
+This link, that is a descendant of a paragraph element, has text that makes it distinguishable as a link.
 
 ```html
 <style>
@@ -110,7 +114,7 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 #### Passed Example 4
 
-The element with a [semantic role][] that inherits from link is a descendant of a paragraph element, and therefore in an inline block of content. It uses the default styling of links which underlines them in most browsers, making it a distinguishing style.
+This element with a [semantic role][] that inherits from link, that is a descendant of a paragraph element, uses the default styling of links which underlines them in most browsers, making it a distinguishing style.
 
 ```html
 <style>
@@ -128,7 +132,7 @@ The element with a [semantic role][] that inherits from link is a descendant of 
 
 #### Passed Example 5
 
-This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. The link has a distinguishing bottom border in addition to being distinguishable by color.
+This link, that is a descendant of a paragraph element, has a distinguishing bottom border in addition to being distinguishable by color.
 
 ```html
 <style>
@@ -151,7 +155,7 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 #### Passed Example 6
 
-This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. The link has a distinguishing box-shadow.
+This link, that is a descendant of a paragraph element, has a distinguishing box-shadow.
 
 ```html
 <style>
@@ -165,7 +169,7 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 #### Passed Example 7
 
-This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. The link has a text contrast of more than 3:1 compared to the other text in the paragraph. When the link receives focus, an underline appears. When the link receives hover, an underline appears.
+This link, that is a descendant of a paragraph element, has a text contrast of more than 3:1 compared to the other text in the paragraph. When the link receives focus, an underline appears. When the link receives hover, an underline appears.
 
 ```html
 <style>
@@ -189,7 +193,7 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 #### Passed Example 8
 
-This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. The link's text has a background color contrast of more than 3:1 compared to the other text in the paragraph. When the link receives focus, an underline appears. When the link receives hover, an underline appears.
+This link, that is a descendant of a paragraph element, has text that has a background color contrast of more than 3:1 compared to the other text in the paragraph. When the link receives focus, an underline appears. When the link receives hover, an underline appears.
 
 ```html
 <style>
@@ -210,7 +214,7 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 #### Failed Example 1
 
-This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. The underline is removed and the link has no visual cues of being recognized as a link.
+This link, that is a descendant of a paragraph element, has no visual cues of being recognized as a link with the underline removed.
 
 ```html
 <style>
@@ -223,7 +227,7 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 #### Failed Example 2
 
-This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. The link has a border but the border's width is zero and, therefore, not visible.
+This link, that is a descendant of a paragraph element, has a border not visible because it has a width of zero.
 
 ```html
 <style>
@@ -243,7 +247,7 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 #### Failed Example 3
 
-This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. The link has a border but its color is transparent and, therefore, not visible.
+This link, that is a descendant of a paragraph element, has a border not visible because its color is transparent.
 
 ```html
 <style>

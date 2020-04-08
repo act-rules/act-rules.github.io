@@ -18,7 +18,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [visible][] HTML element that is a [semantic link][], where the closest element (including itself) that generates an [inline box][] is part of a [line box][] that has [inline boxes][inline box] generated from an element containing [visible][] [text nodes][text node] that do not have a [semantic link][] as a [descendant][] in the [flat tree][].
+This rule applies to:
+- **(visible link)** any [visible][] HTML element that is a [semantic link][],
+- **(belongs to a line box)** where the closest element (including itself) that generates an [inline box][] is part of a [line box][], 
+- **(with other elements)** which has [inline boxes][inline box] generated from an element containing [visible][] [text nodes][text node], 
+- **(that are not links)** which do not have a [semantic link][] as a [descendant][] in the [flat tree][].
 
 **Note:** The test targets are visible link elements that are part of a block of content that is displayed inline.
 
@@ -47,7 +51,7 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. An icon is added to distinguish it as a link.
+This link, that is a descendant of a paragraph element, has an icon that makes it distinguishable as a link.
 
 ```html
 <style>
@@ -63,7 +67,7 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 #### Passed Example 2
 
-This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. Text is added to distinguish it as a link.
+This link, that is a descendant of a paragraph element, has text that makes it distinguishable as a link.
 
 ```html
 <style>
@@ -78,7 +82,7 @@ This is a link that is a descendant of a paragraph element, and therefore in an 
 
 #### Failed Example 1
 
-This is a link that is a descendant of a paragraph element, and therefore in an inline block of content. The underline is removed and the link has no visual cues of being recognized as a link.
+This link, that is a descendant of a paragraph element, has no visual cues of being recognized as a link with the underline removed.
 
 ```html
 <style>

@@ -26,7 +26,7 @@ function handleOrientation(event) {
 function handleOrientationCanBeDisabled(event) {
     const disableMotion = document.getElementById('disableMotion');
     if (!disableMotion.checked) {
-        applyChange(event.gamma);
+        applyChange(event.gamma, 20);
     }
 }
 

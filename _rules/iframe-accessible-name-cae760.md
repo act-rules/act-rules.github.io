@@ -131,7 +131,7 @@ This page has no `iframe` element.
 
 #### Inapplicable Example 2
 
-This `iframe` is not[included in the accessibility tree][] because of setting a style of `display: none;`.
+This `iframe` is not [included in the accessibility tree][] because of setting a style of `display: none;`.
 
 ```html
 <iframe style="display:none;" src="/test-assets/SC4-1-2-frame-doc.html"></iframe>
@@ -139,7 +139,7 @@ This `iframe` is not[included in the accessibility tree][] because of setting a 
 
 #### Inapplicable Example 3
 
-This `iframe` is not[included in the accessibility tree][] because of `role="presentation"`.
+This `iframe` is not [included in the accessibility tree][] because of `role="presentation"`.
 
 ```html
 <iframe style="display:none;" src="/test-assets/SC4-1-2-frame-doc.html"></iframe>

@@ -18,11 +18,11 @@ function handleOrientation(event) {
 
 function handleOrientationCanBeDisabled(event) {
     const disableMotion = document.getElementById('disableMotion');
-    const gamma = !disableMotion.checked ? event.gamma : 0;
+    const gamma = disableMotion.checked ? 0 : event.gamma;
 
-    if (event.gamma > 20) {
+    if (gamma > 20) {
         increaseSlider();
-    } else if (event.gamma < -20) {
+    } else if (gamma < -20) {
         decreaseSlider();
     }
 }

@@ -32,6 +32,8 @@ acknowledgments:
   authors:
     - Wilco Fiers
     - Anne Thyme Nørregaard
+  image:
+    - Image used in passed example 10 and failed example 9 is courtesy of NASA/JPL-Caltech.
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -245,7 +247,7 @@ This `a` element, which shows up in the focus order, has an empty [accessible na
 This `area` element has a [semantic role][] of `link` and an empty [accessible name][].
 
 ```html
-<img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap" />
+<img src="/test-assets/c487ae/planets.jpg" width="145" height="126" alt="Planets" usemap="#planetmap" />
 
 <map name="planetmap">
 	<area shape="rect" coords="0,0,82,126" href="sun.htm" />

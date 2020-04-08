@@ -129,17 +129,14 @@ function getSpellIgnored() {
 		}
 	})
 
-	const ariaKeys = Array.from(ariaQuery.aria.keys())
-	const ignoreAria = [
-		...ariaKeys,
-		/**
-		 * `retext-spell` parses word nodes sometimes with an ending punctuation when the word is not a part of the dictionary.
-		 * See Issue: https://github.com/syntax-tree/nlcst/issues/4
-		 *
-		 * Below, we all aria keys ending with punctuation (.), to the ignore list
-		 */
-		...ariaKeys.map(key => `${key}.`),
-	]
+	/**
+	 * `retext-spell` by default checks spelling of individual words before ensuring validity of a composite word.
+	 * Eg: `aria-valuenow` is first checked for spelling for `aria` then `valuenow`, and if both of those fail, then validity of the entire word is checked.
+	 *
+	 * Below we are setting individual aria keys as valid (ignore list), thereby bypassing a composite word check.
+	 * This is to circumvent isses when `aria-*` attribues are followed by other characters eg: punctuation
+	 */
+	const ignoreAria = ['aria', ...Array.from(ariaQuery.aria.keys())].map(key => key.replace(/aria-/, ''))
 	const ignoreDom = Array.from(ariaQuery.dom.keys())
 	const ignoreRoles = Array.from(ariaQuery.roles.keys())
 

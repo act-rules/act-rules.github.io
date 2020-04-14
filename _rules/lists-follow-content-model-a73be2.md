@@ -10,14 +10,13 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-input_aspects:
-  - DOM Tree
+
+input_aspects: + DOM Tree
+
 acknowledgments:
   authors:
     - Jey Nandakumar
----
-
-## Applicability
+---## Applicability
 
 The rule applies to every `ul` , `ol` , and `dl` HTML elements where the [semantic role][] is the same as the [implicit semantic role][].
 
@@ -49,7 +48,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This `ul` element contains palpable content `li` element.
+This `ul` element contains [palpable content][] `li` element.
 
 ```html
 <ul>
@@ -70,11 +69,12 @@ This `dl` element contains palpable content(s), which are name-value group forme
 
 #### Passed Example 3
 
-This `ol` element contains palpable content, with an explicit role of `listitem`.
+This `ol` element contains atleast one `li` element, which is a valid [palpable content][].
 
 ```html
 <ol>
 	<span role="listitem">Eggs</span>
+	<li>Bread</li>
 	<span role="listitem">Milk</span>
 </ol>
 ```
@@ -83,7 +83,7 @@ This `ol` element contains palpable content, with an explicit role of `listitem`
 
 #### Failed Example 1
 
-This `ul` element contains palpable content `li` element, that is [hidden][].
+This `ul` element contains [palpable content][] `li` element, that is [hidden][].
 
 ```html
 <ul>
@@ -114,7 +114,7 @@ This `dl` element does not contain a complete name-value groups formed by using 
 
 #### Failed Example 4
 
-This `ol` element does not contain expected palpable content, here the `li` element has an overriding role specified.
+This `ol` element does not contain expected palpable content, here the `li` element has an explicit role of `menuitem` specified.
 
 ```html
 <ol>

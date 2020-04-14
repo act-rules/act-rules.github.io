@@ -22,14 +22,14 @@ describe(`Validate link references`, () => {
 
 function validateLinkReferences(markdownAST) {
 	const linkReferences = uniqueArray(
-		getMarkdownAstNodesOfType(markdownAST, 'linkReference').map(({ identifier }) => identifier)
+		getMarkdownAstNodesOfType(markdownAST, 'linkReference').map(({ identifier }) => identifier.replace(/`/g, ''))
 	)
 	if (!linkReferences || !linkReferences.length) {
 		return
 	}
 
 	const definitions = uniqueArray(
-		getMarkdownAstNodesOfType(markdownAST, 'definition').map(({ identifier }) => identifier)
+		getMarkdownAstNodesOfType(markdownAST, 'definition').map(({ identifier }) => identifier.replace(/`/g, ''))
 	)
 
 	test.each(linkReferences)('%s', linkRef => {

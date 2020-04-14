@@ -50,11 +50,11 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This `span` element with an explicit semantic role of `listitem`, is contained by an `ol` element, which follows the [flow content model][].
+This `li` element with an implicit semantic role of `listitem`, is contained by an `ol` element, which follows the [flow content model][].
 
 ```html
 <ol>
-	<span role="listitem">Eggs</span>
+	<li>Eggs</span>
 </ol>
 ```
 
@@ -79,21 +79,11 @@ This `li` element is owned by `ul` element, which follows the [flow content mode
 </ul>
 ```
 
-#### Passed Example 4
-
-This `span` element with an explicit role of `listitem` is owned by `div` element with an explicit role of `list`, which follows the [flow content model][].
-
-```html
-<div role="list">
-	<span role="listitem">Complete online form</span>
-</div>
-```
-
 ### Failed
 
 #### Failed Example 1
 
-This `li` element is not owned by an element that follows the [flow content model][].
+This `li` element is not owned by an element that follows the [flow content model][]. Here the `ul` element has an explicit semantic role of `menu`, which does not own `listitem`.
 
 ```html
 <ul role="menu">

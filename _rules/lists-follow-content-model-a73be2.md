@@ -10,13 +10,14 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-
-input_aspects: + DOM Tree
-
+input_aspects:
+  - DOM Tree
 acknowledgments:
   authors:
     - Jey Nandakumar
----## Applicability
+---
+
+## Applicability
 
 The rule applies to every `ul` , `ol` , and `dl` HTML elements where the [semantic role][] is the same as the [implicit semantic role][].
 
@@ -69,7 +70,7 @@ This `dl` element contains palpable content(s), which are name-value group forme
 
 #### Passed Example 3
 
-This `ol` element contains atleast one `li` element, which is a valid [palpable content][].
+This `ol` element contains at least one `li` element, which is a valid [palpable content][].
 
 ```html
 <ol>

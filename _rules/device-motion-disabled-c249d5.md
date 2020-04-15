@@ -180,7 +180,7 @@ This [HTML document][] that can be operated through the device's orientation to 
 ```html
 <html>
 	<head>
-		<title>Failed Example 3</title>
+		<title>Failed Example 2</title>
 		<script src="/test-assets/7677a9/slider.js"></script>
 		<script>
 			function activateSlider() {
@@ -217,7 +217,7 @@ This [HTML document][] that can be operated through the device's orientation to 
 ```html
 <html>
 	<head>
-		<title>Failed Example 2</title>
+		<title>Failed Example 3</title>
 		<script src="/test-assets/7677a9/slider.js"></script>
 		<script>
 			function activateSlider() {

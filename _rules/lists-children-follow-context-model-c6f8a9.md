@@ -54,7 +54,7 @@ This `li` element with an implicit semantic role of `listitem`, is contained by 
 
 ```html
 <ol>
-	<li>Eggs</span>
+	<li>Eggs</li>
 </ol>
 ```
 

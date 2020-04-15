@@ -72,11 +72,15 @@
 - de-hello
 - Helvetica
 - stylesheet
+- Helvetica
+- fieldsets
 
 - 14pt
 - 18pt
-- Helvetica
-- fieldsets
+- 20px
+- 30px
+- 1em
+- 8px
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete

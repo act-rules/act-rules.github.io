@@ -70,9 +70,15 @@
 - labelable
 - merchantability
 - de-hello
+- Helvetica
+- stylesheet
+
 - 14pt
 - 18pt
-- Helvetica
+- 20px
+- 30px
+- 1em
+- 8px
 
 # Notes and acronyms
 - TODO
@@ -140,3 +146,6 @@
 - cantTell
 - TestSubject
 - earl:cantTell
+
+# fns
+- getComputedPriority

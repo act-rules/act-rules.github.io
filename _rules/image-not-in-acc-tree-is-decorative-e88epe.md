@@ -37,7 +37,7 @@ Any `img`, `canvas` or `svg` element that is [visible][] and for which one of th
 - **ignored canvas**: The element is a `canvas` with an empty (`""`) [accessible name][] and no [explicit semantic role][]; or
 - **named from author**: The element is a [descendant][] in the [flat tree][] of an element that is [named from author][].
 
-**Exception**: Exclude any `img` element where the [current request][]'s [state][image request state] is not [completely available][]; or
+**Exception**: Exclude any `img` element where the [current request][]'s [state][image request state] is not [completely available][].
 
 **Note**: An example of an image ignored because of "named from author" is when the image is a descendant of a `button` element that uses `aria-label` for its accessible name.
 
@@ -51,7 +51,7 @@ Each test target is [purely decorative][].
 
 - `svg` elements with a [semantic role][] of `graphics-document` and with an empty (`""`) [accessible name][] are ignored by assistive technologies tested for this rule. If some assistive technology does not ignore these elements, and that assistive technology is required for conformance, passing this rule does not ensure all decorative `svg` elements can be ignored, and the [success criterion 1.1.1 Non-text content][] may still not be satisfied. The same is true for `canvas` elements with no [semantic role][] and an empty (`""`) [accessible name][].
 
-- A web page with informative images without an [accessible name][] may conform to WCAG 2.1 Level A when the information provided by that image is available elsewhere, either on the web page itself or on a [conforming alternative version][] of the page. For example if an equivalent text is adjacent to the image, or if the text alternative is included in the [accessible name][] of a parent element.
+- A web page with informative images without an [accessible name][] may conform to WCAG 2.1 Level A when the information provided by that image is available elsewhere on the web page itself. For example if an equivalent text is adjacent to the image, or if the text alternative is included in the [accessible name][] of a parent element.
 
 ## Accessibility Support
 

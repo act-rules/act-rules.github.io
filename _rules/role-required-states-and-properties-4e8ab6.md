@@ -103,7 +103,7 @@ This `combobox` has an empty value for the required `aria-controls` property.
 
 #### Inapplicable Example 1
 
-This `div` does not have a [semantic role][].
+This `div` does not have a [semantic role](#semantic-role).
 
 ```html
 <div>Some Content</div>

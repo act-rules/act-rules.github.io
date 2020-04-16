@@ -3,6 +3,10 @@ title: Implicit section of content
 key: implicit-section-of-content
 unambiguous: true
 objective: true
+oudatedLinksIgnore:
+  # ignore below links from `link-is-outdated` test
+  - 'https://www.w3.org/TR/html52/dom.html#heading-content'
+  - 'https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements'
 ---
 
 An _implicit section of content_ is all the nodes of the [flat tree][], in tree order, between an initial element with a [semantic role][] of [`heading`][heading] and the next element (in tree order) which has both a [semantic role][] of [`heading`][heading] and an [`aria-level`][aria-level] property lower or equal to that of the initial [`heading`][heading] element.

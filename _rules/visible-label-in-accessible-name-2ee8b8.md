@@ -10,6 +10,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:G208: # Including the text of the visible label as part of the accessible name
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -24,17 +29,17 @@ acknowledgments:
 
 This rule applies to any element that has:
 
-- a [semantic role](#semantic-role) that is a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent), and
-- [visible text content](#visible-text-content), and
+- a [semantic role][] that is a [widget][widget roles] that [supports name from content][], and
+- [visible text content][], and
 - an `aria-label` or `aria-labelledby` attribute.
 
-**Note:** [widget roles](https://www.w3.org/TR/wai-aria-1.1/#widget_roles) that [supports name from content](https://www.w3.org/TR/wai-aria-1.1/#namefromcontent) are: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
+**Note:** [widget roles][] that [support name from content][supports name from content] are: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
 
 ## Expectation
 
-The complete [visible text content](#visible-text-content) of the target element either matches or is contained within its [accessible name][].
+The complete [visible text content][] of the target element either matches or is contained within its [accessible name][].
 
-**Note:** Leading and trailing [whitespace](#whitespace) and difference in case sensitivity should be ignored.
+**Note:** Leading and trailing [whitespace][] and difference in case sensitivity should be ignored.
 
 ## Assumptions
 
@@ -47,6 +52,7 @@ There are no major accessibility support issues known for this rule.
 ## Background
 
 - [Understanding Success Criterion 2.5.3: Label in Name](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)
+- [G208: Including the text of the visible label as part of the accessible name](https://www.w3.org/WAI/WCAG21/Techniques/general/G208)
 
 ## Test Cases
 
@@ -54,7 +60,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-[Visible][] label and [accessible name][] matches when trailing white spaces are removed.
+This link has [visible][] text that, ignoring trailing whitespace, matches the [accessible name][].
 
 ```html
 <a href="https://act-rules.github.io/" aria-label="ACT rules ">ACT rules</a>
@@ -62,7 +68,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 2
 
-Character insensitivity between [visible][] label and [accessible name][].
+This link has [visible][] text that, ignoring case, matches the [accessible name][].
 
 ```html
 <a href="https://act-rules.github.io/" aria-label="act rules ">ACT rules</a>
@@ -70,17 +76,17 @@ Character insensitivity between [visible][] label and [accessible name][].
 
 #### Passed Example 3
 
-Full [visible][] label is contained in the [accessible name][].
+This button has [visible][] text that is included in the [accessible name][].
 
 ```html
-<button name="link" aria-label="Next Page in the list">Next Page</button>
+<button aria-label="Next Page in the list">Next Page</button>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-[Visible][] label doesn't match [accessible name][].
+This link has [visible][] text that is different from the [accessible name][].
 
 ```html
 <a href="https://act-rules.github.io/" aria-label="WCAG">ACT rules</a>
@@ -88,15 +94,15 @@ Full [visible][] label is contained in the [accessible name][].
 
 #### Failed Example 2
 
-Not all of [visible][] label is included in [accessible name][].
+This button has [visible][] text that is only partially included in the [accessible name][].
 
 ```html
-<button name="link" aria-label="the full">The full label</button>
+<button aria-label="the full">The full label</button>
 ```
 
 #### Failed Example 3
 
-Mathematical symbols cannot be substituted for text as [explicitly mentioned in WCAG](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name#mathematical-expressions-and-formulae).
+This link has [visible][] text with mathematical symbols, that does not match the [accessible name][] because the mathematical symbols were written out in the accessible name. This is [explicitly mentioned in WCAG](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name#mathematical-expressions-and-formulae).
 
 ```html
 <a href="/" aria-label="Proof of two multiplied by two is four">Proof of 2&times;2=4</a>
@@ -106,23 +112,24 @@ Mathematical symbols cannot be substituted for text as [explicitly mentioned in 
 
 #### Inapplicable Example 1
 
-Not a widget role.
+This `nav` is not a widget, so the [visible][] text does not need to match the [accessible name][].
 
 ```html
-<a aria-label="OK">Next</a>
+<nav aria-label="main nav">W3C navigation</nav>
 ```
 
 #### Inapplicable Example 2
 
-Widget role that does not support name from content.
+This text field does not need to have its [visible][] text match the [accessible name][]. The content of a textfield shows its value instead of its label. The label is usually adjacent to the textfield instead.
 
 ```html
+<div>E-mail</div>
 <input type="email" aria-label="E-mail" value="Contact" />
 ```
 
 #### Inapplicable Example 3
 
-Non-widget role that supports name from content.
+This `div` element does not have a widget role, so the [visible][] text does not need to match the [accessible name][].
 
 ```html
 <div role="tooltip" aria-label="OK">Next</div>
@@ -130,15 +137,17 @@ Non-widget role that supports name from content.
 
 #### Inapplicable Example 4
 
-No [rendered text](#rendered-text) in name from content.
+This link has no [visible text content][].
 
 ```html
-<div role="tooltip" aria-label="OK"></div>
+<a href="//w3.org" aria-label="W3C homepage">
+	<img src="/test-assets/shared/w3c-logo.png" alt="w3c logo" />
+</a>
 ```
 
 #### Inapplicable Example 5
 
-Non-text content.
+The content of this link is [non-text content][].
 
 ```html
 <button aria-label="close">X</button>
@@ -146,3 +155,9 @@ Non-text content.
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [visible]: #visible 'Definition of visible'
+[semantic role]: #semantic-role 'Definition of Semantic role'
+[visible text content]: #visible-text-content 'Definition of Visible text content'
+[whitespace]: #whitespace 'Definition of Whitespace'
+[widget roles]: https://www.w3.org/TR/wai-aria-1.1/#widget_roles 'Definition of Widget role'
+[supports name from content]: https://www.w3.org/TR/wai-aria-1.1/#namefromcontent 'Definition of Supports name from contents'
+[non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content 'Definition of Non-text content'

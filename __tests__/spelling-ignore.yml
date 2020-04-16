@@ -14,6 +14,8 @@
 - svg # `aria-query` dom tags does not list `svg`
 - xhtml
 - DOCTYPE
+- iFrame # used to demonstrate bad spelling
+- feImage
 
 # Domain-specific words, Definitions & other allowed terms
 - URI
@@ -53,6 +55,7 @@
 - tabindex
 - whitespace
 - Whitespace
+- textfield
 - namespace
 - namespaces
 - webpage
@@ -71,7 +74,28 @@
 - 18pt
 - Helvetica
 - WHATWG
+- fieldsets
 
+# spell checker checks against strict casing & hence some repeated words here
+- Autocomplete
+- Focusable
+
+# Parts of url
+- http
+- https
+- github.com
+- www.w3.org
+- eval
+- html52
+- css-scoping
+- csswg
+- whatwg
+- dom
+- wai-aria
+- multipage
+- attr-input-type
+- wai-aria-1.1
+-
 # Notes and acronyms
 - TODO
 - TBD
@@ -120,6 +144,9 @@
 - implementers
 - Implementers
 - subtree
+- Presentational
+- backtick
+- camelCase
 
 # Parts of Unicode
 - 000A

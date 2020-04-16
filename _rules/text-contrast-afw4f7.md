@@ -17,6 +17,16 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:G18: # Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text
+    forConformance: false
+    failed: not satisfied
+    passed: satisfied
+    inapplicable: further testing needed
+  wcag-technique:G145: # Ensuring that a contrast ratio of at least 3:1 exists between text (and images of text) and background behind the text
+    forConformance: false
+    failed: not satisfied
+    passed: satisfied
+    inapplicable: further testing needed
 
 input_aspects:
   - DOM Tree
@@ -175,7 +185,7 @@ This dark gray text has a contrast ratio of 12.6:1 on the white background in a 
 <p style="color: #CCC; background: #fff;" id="p"></p>
 <script>
 	const shadowRoot = document.getElementById('p').attachShadow({ mode: 'open' })
-	shadowRoot.textContent = '<span style="color: #333;">Some text in English</span>'
+	shadowRoot.innerHTML = '<span style="color: #333;">Some text in English</span>'
 </script>
 ```
 

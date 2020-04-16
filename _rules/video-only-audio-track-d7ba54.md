@@ -5,6 +5,11 @@ rule_type: atomic
 description: |
   Non-streaming `video` elements without audio must have an audio alternative.
 accessibility_requirements:
+  wcag-technique:G166: # Providing audio that describes the important video content and describing it as such
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling

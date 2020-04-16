@@ -91,7 +91,7 @@ This link, that is a descendant of a paragraph element, has no visual cues of be
 
 #### Failed Example 2
 
-This link, that is a descendant of a paragraph element, has a border not visible because it has a width of zero.
+This link, that is a descendant of a paragraph element, has a not visible border because it has a width of zero.
 
 ```html
 <style>
@@ -111,7 +111,7 @@ This link, that is a descendant of a paragraph element, has a border not visible
 
 #### Failed Example 3
 
-This link, that is a descendant of a paragraph element, has a border not visible because its color is transparent.
+This link, that is a descendant of a paragraph element, has a not visible border because its color is transparent.
 
 ```html
 <style>

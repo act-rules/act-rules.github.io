@@ -294,8 +294,7 @@ This is a `div` element with a background image.
 
 #### Inapplicable Example 10
 
-This `img` element has an `src` attribute which will cause the [image request state][] to be [Broken
-](https://html.spec.whatwg.org/#img-error).
+This `img` element has an `src` attribute which will cause the [image request state][] to be [Broken](https://html.spec.whatwg.org/#img-error).
 
 ```html
 <img src="/test-assets/does-not-exist.png" alt="" />

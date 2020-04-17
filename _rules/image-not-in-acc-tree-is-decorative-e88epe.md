@@ -35,9 +35,11 @@ Any `img`, `canvas` or `svg` element that is [visible][] and for which one of th
 - **excluded**: The element is not [included in the accessibility tree][]; or
 - **ignored svg**: The element is an `svg` with an empty (`""`) [accessible name][] and a [semantic role][] of `graphics-document`; or
 - **ignored canvas**: The element is a `canvas` with an empty (`""`) [accessible name][] and no [explicit semantic role][]; or
-- **named from author**: The element is a [descendant][] in the [flat tree][] of an element that is [named from author][].
 
-**Exception**: Exclude any `img` element where the [current request][]'s [state][image request state] is not [completely available][].
+**Exception**: Elements for which one of the following is true are always inapplicable:
+
+- The element has an [ancestor][] in the [flat tree][] of an element that is [named from author][]; or
+- The element is an `img` element where the [current request][]'s [state][image request state] is not [completely available][].
 
 **Note**: An example of an image ignored because of "named from author" is when the image is a descendant of a `button` element that uses `aria-label` for its accessible name.
 
@@ -279,7 +281,7 @@ This `img` element is [visible][] but [included in the accessibility tree][].
 
 #### Inapplicable Example 9
 
-This is a `div` element with a background image.
+This is a `div` element with a background image. Background images must be tested separate from this rule.
 
 ```html
 <p>Happy new year!</p>
@@ -309,7 +311,7 @@ This `img` element has an `src` attribute which will cause the [image request st
 [success criterion 1.1.1 non-text content]: https://www.w3.org/TR/WCAG21/#non-text-content
 [conforming alternative version]: https://www.w3.org/TR/WCAG21/#dfn-conforming-alternate-version 'WCAG definition of Conforming alternative version'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Scoping definition of Flat tree, working draft'
-[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant 'DOM definition of Descendant, 2020/03/06'
+[ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'DOM definition of ancestor, 2020/03/06'
 [named from author]: https://www.w3.org/TR/wai-aria-1.1/#namecalculation 'WAI-ARIA definition of Named from author'
 [fallback content]: https://html.spec.whatwg.org/#fallback-content 'HTML definition of Fallback content, 2020/03/06'
 [current request]: https://html.spec.whatwg.org/#current-request 'HTML definition of Current request, 2020/03/06'

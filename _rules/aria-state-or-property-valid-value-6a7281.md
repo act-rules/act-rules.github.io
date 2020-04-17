@@ -96,15 +96,8 @@ _There are no major accessibility support issues known for this rule._
 ```html
 <h1>Shopping list</h1>
 <div role="list" aria-owns="item1 item2"></div>
-<div id="item1">
-	Apples
-	<div>
-		<div id="item2">
-			Bananas
-			<div></div>
-		</div>
-	</div>
-</div>
+<div id="item1">Apples</div>
+<div id="item2">Bananas</div>
 ```
 
 #### Passed Example 6

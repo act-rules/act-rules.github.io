@@ -59,7 +59,7 @@ This rule relies on browsers and assistive technologies to support leaving out [
 This `checkbox` has the required property `aria-checked`.
 
 ```html
-<div role="checkbox" aria-checked="false"><div></div></div>
+<div role="checkbox" aria-checked="false"></div>
 ```
 
 #### Passed Example 2

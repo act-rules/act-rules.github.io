@@ -147,7 +147,7 @@ The `xml:id` attribute is not considered by this rule.
 
 #### Inapplicable Example 3
 
-These `id` attribute has an empty value.
+These `id` attributes have an empty value.
 
 ```html
 <span id="">Hello</span>

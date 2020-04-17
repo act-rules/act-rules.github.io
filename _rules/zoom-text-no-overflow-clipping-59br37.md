@@ -3,7 +3,7 @@ id: 59br37
 name: Zoomed text node is not clipped with CSS overflow
 rule_type: atomic
 description: |
-  This rule checks that text nodes are not unintentionally clipped by overflow, when a page is zoomed to 200% on 1280 by 1024 display;
+  This rule checks that text nodes are not unintentionally clipped by overflow, when a page is zoomed to 200% on 1280 by 1024 viewport;
 accessibility_requirements: # Remove whatever is not applicable
   wcag20:1.4.4: # Resize Text (AA)
     forConformance: true
@@ -16,24 +16,24 @@ input_aspects:
 acknowledgments:
   authors:
     - Wilco Fiers
-  assets:
+  citations:
     - The Raven, poem by Edgar Allan Poe
 ---
 
 ## Applicability
 
-The rule applies to any [text node][] for which all of the following is true when in a [display size][] of 640 by 512:
+The rule applies to any [text node][] for which all of the following is true when in a [viewport size][] of 640 by 512:
 
 - The [text node][] is [visible][]; and
 - The [text node][] has an HTML element as a [parent][] in the [flat tree][]; and
-- The [text node][] has an [ancestor][] in the [flat tree][] with the a [computed][] [overflow-x][overflow] or [overflow-y][overflow] of `none` or `clip`; and
+- The [text node][] has an [ancestor][] in the [flat tree][] with the a [computed][] [overflow-x][overflow] or [overflow-y][overflow] of `hidden` or `clip`; and
 - The [text node][] does not have an [ancestor][] in the [flat tree][] with an `aria-hidden` attribute set to `true`
 
-**Note**: A [display size][] of 640 by 512 is equivalent to a [display size][] of 1280 by 1024 zoomed 200%.
+**Note**: A [viewport size][] of 640 by 512 is equivalent to a [viewport size][] of 1280 by 1024 zoomed 200%.
 
 ## Expectation
 
-Each test target is not [clipped by overflow][clipped] of an [ancestor][] in the [flat tree][] when in a [display size][] of 640 by 512, except if the [clipping][clipped] [ancestor][] has one of the following:
+Each test target is not [clipped by overflow][clipped] of an [ancestor][] in the [flat tree][] when in a [viewport size][] of 640 by 512, except if the [clipping][clipped] [ancestor][] has one of the following:
 
 - **text-overflow**: A [computed][] [white-space][] of `nowrap`, and a [computed][] [text-overflow][] that is not `clip`; or
 
@@ -48,7 +48,7 @@ If any of the following assumptions is true, failing this rule may not result in
 
 - [Text nodes][text node] can not be [clipped by overflow][clipped] without loss of information, except for [text nodes][text node] with an [ancestor][] with `aria-hidden` set to `true`, or when specific styles have been applied to ensure text is clipped cleanly (text-overflow, line wrapping or hidden text).
 
-- While [success criterion 1.4.4 Resize text](https://www.w3.org/TR/WCAG21/#resize-text) does not explicitly mention which display size has to be resized up to 200%, it is assumed that a [display size][] of 1280 by 1024 is applicable. A 1280 by 1024 [display size][] is explicitly mentioned under [success criterion 1.4.10 Reflow](https://www.w3.org/TR/WCAG21/#reflow).
+- While [success criterion 1.4.4 Resize text](https://www.w3.org/TR/WCAG21/#resize-text) does not explicitly mention which viewport size has to be resized up to 200%, it is assumed that a [viewport size][] of 1280 by 1024 is applicable. A 1280 by 1024 [viewport size][] is explicitly mentioned under [success criterion 1.4.10 Reflow](https://www.w3.org/TR/WCAG21/#reflow).
 
 ## Accessibility Support
 
@@ -65,7 +65,7 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-This [text node][] is fully [visible][] at a [display size][] of 640 by 512.
+This [text node][] is fully [visible][] at a [viewport size][] of 640 by 512.
 
 ```html
 <div style="white-space: nowrap; overflow: hidden;">
@@ -80,7 +80,7 @@ This [text node][] is fully [visible][] at a [display size][] of 640 by 512.
 
 #### Passed Example 2
 
-This [text node][] is [clipped][] using `text-overflow: ellipsis` at a [display size][] of 640 by 512. A link to a full version of the poem is also provided.
+This [text node][] is [clipped][] using `text-overflow: ellipsis` at a [viewport size][] of 640 by 512. A link to a full version of the poem is also provided.
 
 ```html
 <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
@@ -92,7 +92,7 @@ This [text node][] is [clipped][] using `text-overflow: ellipsis` at a [display 
 
 #### Passed Example 3
 
-This [text node][] is [clipped][] using `text-overflow: ellipsis` at a [display size][] of 640 by 512. A link to a full version of the poem is also provided.
+This [text node][] is restricted to a single line, by setting a `line-height` that is the same as the `height`. A link to a full version of the poem is also provided.
 
 ```html
 <style>
@@ -112,7 +112,7 @@ This [text node][] is [clipped][] using `text-overflow: ellipsis` at a [display 
 
 #### Passed Example 4
 
-This [text node][] is not [clipped][] with `overflow: hidden` because it has a parent with `overflow: auto` at a [display size][] of 640 by 512.
+This [text node][] is not [clipped][] with `overflow: hidden` because it has a parent with `overflow: auto` at a [viewport size][] of 640 by 512.
 
 ```html
 <div style="overflow: hidden; height: 2em;">
@@ -138,7 +138,7 @@ This [text node][] is [clipped][] because it has a fixed height that does not le
 
 #### Failed Example 2
 
-This [text node][] is [clipped][] because its height is relative to the viewport height, leaving insufficient space for the page to be zoomed to 200% at a [display size][] of 640 by 512.
+This [text node][] is [clipped][] because its height is relative to the viewport height, leaving insufficient space for the page to be zoomed to 200% at a [viewport size][] of 640 by 512.
 
 ```html
 <div style="overflow: hidden; height: 16vh">
@@ -153,7 +153,7 @@ This [text node][] is [clipped][] because its height is relative to the viewport
 
 #### Failed Example 3
 
-This [text node][] is [clipped][] by style that is applied at a [display size][] width of 640.
+This [text node][] is [clipped][] by style that is applied at a [viewport size][] width of 640.
 
 ```html
 <style>
@@ -176,7 +176,7 @@ This [text node][] is [clipped][] by style that is applied at a [display size][]
 
 #### Inapplicable Example 1
 
-This [text node][] is not [visible][] at a [display size][] of 640 by 512.
+This [text node][] is not [visible][] at a [viewport size][] of 640 by 512.
 
 ```html
 <p style="display:none;">Last updated 2020/03/27 10:52pm</p>
@@ -213,7 +213,7 @@ This [text node][] has an [ancestor][] with `aria-hidden` set to `true`.
 
 #### Inapplicable Example 5
 
-This [text node][] with the text "Web Content Accessibility Guidelines 2.1" is fully hidden in a [display size][] of 640 by 512.
+This [text node][] with the text "Web Content Accessibility Guidelines 2.1" is fully hidden in a [viewport size][] of 640 by 512.
 
 ```html
 <style>
@@ -231,7 +231,7 @@ This [text node][] with the text "Web Content Accessibility Guidelines 2.1" is f
 
 [clipped]: #clipped-by-overflow
 [visible]: #visible
-[display size]: #display-size
+[viewport size]: #viewport-size
 [parent]: https://dom.spec.whatwg.org/#concept-tree-parent 'DOM parent, as of 2020/02/14'
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'DOM ancestor, 2020/02/13'
 [text node]: https://dom.spec.whatwg.org/#text

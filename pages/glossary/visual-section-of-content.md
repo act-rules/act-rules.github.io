@@ -16,7 +16,7 @@ A _visual section of content_ is a distinct part of the [visible][] content of a
   4. **separators**: there is [decorative][] non-text content before or after it;
   5. **whitespace separators**: the spacing before or after it is greater than the default spacing between paragraphs;
   6. **headings**: its first [text][] content has larger font size or greater font weight the rest of the text;
-  7. **Text styling**: its [text][] has a styling different fom the rest of the text (text color, font, size, weight, shadow, outline, …)
+  7. **Text styling**: its [text][] has a styling different from the rest of the text (text color, font, size, weight, shadow, outline, …)
 
 **Note:** The precise splitting of a document into its visual sections of content is a subjective matter. For example, [decorative][] lines can be used to let the text "breath" without necessarily creating a new visual section of content. Each document can use any number of the visual cues to separate its sections of content.
 
@@ -31,10 +31,11 @@ A _visual section of content_ is a distinct part of the [visible][] content of a
 **Note:** A visual section of content may contain nested (visual) subsections of content.
 
 [decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of Pure decoration'
-[embedded content]: https://html.spec.whatwg.org/multipage/dom.html#embedded-content-2 'Definition fo Embedded content elements'
+[embedded content]: https://html.spec.whatwg.org/multipage/dom.html#embedded-content-2 'Definition of Embedded content elements'
 [implicit section of content]: #implicit-section-of-content 'Definition of implicit section of content'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content 'WCAG definition of Non-text content'
 [paragraph]: https://html.spec.whatwg.org/multipage/dom.html#paragraph 'Definition of paragraph'
 [rendering of sections and headings]: https://html.spec.whatwg.org/multipage/rendering.html#sections-and-headings 'Suggestions for rendering sections and headings elements'
 [text]: https://www.w3.org/TR/WCAG21/#dfn-text 'WCAG definition of Text'
+[visible]: #visible 'Definition of visible'

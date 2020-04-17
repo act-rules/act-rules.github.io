@@ -5,12 +5,36 @@ unambiguous: true
 objective: false
 ---
 
-Something in the line of "a subtree rooted at an element with distinguishing style" using https://github.com/act-rules/act-rules.github.io/blob/896b28caeb240171d3b2db626506a7c6034ce20b/pages/glossary/distinguishing-styles.md
+A _visual section of content_ is a distinct part of the [visible][] content of a document which:
 
-+note that these only make sense for sighted users and users of AT need to rely on something else.
+- **uninterrupted** all the content of a visual section of content must be rendered together, without being interrupted by content from another visual section of content, except if it is fully included in the visual section of content (subsection); and
+- **large enough** a visual section of content must contain at least all the content of one [paragraph][], or at least all the content of one [embedded content][] element; and
+- **separated** a visual section of content must be separated from surrounding content by one or more of the following visual cues:
+  1. **boundaries**: it has borders, box shadow, or different backgrounds;
+  2. **layout**: it is displayed in separate column or row;
+  3. **indentation**: it has a greater indentation than surrounding content;
+  4. **separators**: there is [decorative][] non-text content before or after it;
+  5. **whitespace separators**: the spacing before or after it is greater than the default spacing between paragraphs;
+  6. **headings**: its first [text][] content has larger font size or greater font weight the rest of the text;
+  7. **Text styling**: its [text][] has a styling different fom the rest of the text (text color, font, size, weight, shadow, outline, …)
 
-Problem: the def linked above is about distinguishing between two elements. This def should be about the element being distinguishable from the surrounding.
+**Note:** The precise splitting of a document into its visual sections of content is a subjective matter. For example, [decorative][] lines can be used to let the text "breath" without necessarily creating a new visual section of content. Each document can use any number of the visual cues to separate its sections of content.
 
-Problem: this def needs some sort of "minimal size" for the section of content (otherwise, a link within a paragraph would be a visual section of content). Can likely be solved by requiring the section to contain at least one block level element.
+**Note:** Headings elements (`h1`-`h6`) are usually [rendered][rendering of sections and headings] with a larger and heavier font than normal text. When this is the case, they do fulfill the **headings** case of the **separated** condition, and they define visual sections of content that match the [implicit ones][implicit section of content].
 
-Problem: getting a complete list of what can be used to distinguish a section of content might be difficult… We'll probably have to stop at "good enough" and be ready to expand the list if needed…
+**Note:** The **large enough** condition prevents, for example, a single word in bold in a paragraph to be a visual section of content.
+
+**Note:** While [embedded content][] may be part of a [paragraph][], a [paragraph][] may not be composed solely of [embedded content][]. The second part of the **large enough** condition allows visual sections of content to be composed solely of, for example, videos (only `video` elements).
+
+**Note:** A visual section of content may contain both [text][] and [non-text content][]. It may also contain [decorative][] content.
+
+**Note:** A visual section of content may contain nested (visual) subsections of content.
+
+[decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of Pure decoration'
+[embedded content]: https://html.spec.whatwg.org/multipage/dom.html#embedded-content-2 'Definition fo Embedded content elements'
+[implicit section of content]: #implicit-section-of-content 'Definition of implicit section of content'
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
+[non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content 'WCAG definition of Non-text content'
+[paragraph]: https://html.spec.whatwg.org/multipage/dom.html#paragraph 'Definition of paragraph'
+[rendering of sections and headings]: https://html.spec.whatwg.org/multipage/rendering.html#sections-and-headings 'Suggestions for rendering sections and headings elements'
+[text]: https://www.w3.org/TR/WCAG21/#dfn-text 'WCAG definition of Text'

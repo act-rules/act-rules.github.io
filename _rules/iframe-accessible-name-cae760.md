@@ -55,7 +55,7 @@ If an `iframe` is not perceived by the user as a single control, it does not qua
 This `iframe` element gets its [accessible name][] from the `title` attribute.
 
 ```html
-<iframe title="List of Contributors" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
+<iframe title="List of some popular Disney characters" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
 #### Passed Example 2
@@ -63,7 +63,7 @@ This `iframe` element gets its [accessible name][] from the `title` attribute.
 This `iframe` element gets its [accessible name][] from the `aria-label` attribute.
 
 ```html
-<iframe aria-label="Advertisement of tours to Great Wall of China" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
+<iframe aria-label="List of some popular Disney characters" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
 #### Passed Example 3
@@ -71,7 +71,7 @@ This `iframe` element gets its [accessible name][] from the `aria-label` attribu
 This `iframe` element gets its [accessible name][] from the content of the `div` referenced with the `aria-labelledby` attribute.
 
 ```html
-<div id="frame-title-helper">Watch highlights of the Worldcup</div>
+<div id="frame-title-helper">List of some popular Disney characters</div>
 <iframe aria-labelledby="frame-title-helper" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
@@ -80,7 +80,7 @@ This `iframe` element gets its [accessible name][] from the content of the `div`
 This `iframe` element gets its [accessible name][] from the `title` attribute. Note, that specifying a positive `tabindex` value only alters the order of the [sequential focus navigation][], and as such the contents of the `iframe` element can be accessed.
 
 ```html
-<iframe title="Top 5 Marathon runners" src="/test-assets/SC4-1-2-frame-doc.html" tabindex="5"> </iframe>
+<iframe title="List of some popular Disney characters" src="/test-assets/SC4-1-2-frame-doc.html" tabindex="5"> </iframe>
 ```
 
 ### Failed
@@ -90,7 +90,7 @@ This `iframe` element gets its [accessible name][] from the `title` attribute. N
 This `iframe` element has an empty (`""`) [accessible name][]. The `name` attribute is not used in computing the [accessible name][] of `iframe` elements.
 
 ```html
-<iframe name="List of Contributors" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
+<iframe name="List of some popular Disney characters" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
 #### Failed Example 2
@@ -139,18 +139,10 @@ This `iframe` is not [included in the accessibility tree][] because of setting a
 
 #### Inapplicable Example 3
 
-This `iframe` is not [included in the accessibility tree][] because of `role="presentation"`.
-
-```html
-<iframe style="display:none;" src="/test-assets/SC4-1-2-frame-doc.html"></iframe>
-```
-
-#### Inapplicable Example 4
-
 This `iframe` element has a negative `tabindex` and therefore its contents are not accessible via [sequential focus navigation][].
 
 ```html
-<iframe tabindex="-1" role="presentation" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
+<iframe tabindex="-1" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

@@ -51,11 +51,9 @@
 - testrunner
 - color
 - focusable
-- Focusable
 - unfocusable
 - tabindex
 - whitespace
-- Whitespace
 - textfield
 - namespace
 - namespaces
@@ -76,10 +74,6 @@
 - Helvetica
 - fieldsets
 
-# spell checker checks against strict casing & hence some repeated words here
-- Autocomplete
-- Focusable
-
 # Parts of url
 - http
 - https
@@ -95,6 +89,7 @@
 - multipage
 - attr-input-type
 - wai-aria-1.1
+
 # Notes and acronyms
 - TODO
 - TBD
@@ -134,25 +129,21 @@
 - matrix3d
 - rowheader
 - columnheader
-
-# Unsure why the dictionary does not have these words
-- programmatically
-- Programmatically
-- scrollable
-- Scrollable
-- scrollbars
 - scrollable-element
 - scrollWidth
 - scrollHeight
 - clientWidth
 - clientHeight
+
+# Unsure why the dictionary does not have these words
+- programmatically
 - personalization
-- Autofill
+- autofill
 - implementers
-- Implementers
-- Presentational
 - backtick
 - camelCase
+- scrollable
+- scrollbars
 
 # Parts of Unicode
 - 000A

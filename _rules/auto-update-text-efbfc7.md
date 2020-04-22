@@ -41,6 +41,8 @@ For each test target there exists an [instrument][] in the same [web page](#web-
 
 **Note:** If there is more than one test target, the same [instrument][] may be used to pause, stop, hide or alter the frequency of several or even all test targets.
 
+**Note:** For the instrument to be available in the same web page, the user might have to perform an action (e.g. opening a modal dialog).
+
 ## Assumptions
 
 - This rule assumes that the auto-updating of the content is not [essential][], which is listed as valid exception to [Success Criterion 2.2.2: Pause, Stop, Hide][sc 2.2.2]. When the auto-updating of content is [essential][] this rule may produce incorrect results.

@@ -236,7 +236,7 @@ This `a` element placed off screen has an empty [accessible name][].
 
 #### Failed Example 8
 
-This `a` element, which shows up in the focus order, has an empty [accessible name][]
+This `a` element has an empty [accessible name][].
 
 ```html
 <a href="http://www.w3.org/WAI"></a>
@@ -252,14 +252,6 @@ This `area` element has a [semantic role][] of `link` and an empty [accessible n
 <map name="planetmap">
 	<area shape="rect" coords="0,0,82,126" href="sun.htm" />
 </map>
-```
-
-#### Failed Example 10
-
-This `a` element has an empty [accessible name][] from its content.
-
-```html
-<a href="http://www.w3.org/WAI"> </a>
 ```
 
 ### Inapplicable

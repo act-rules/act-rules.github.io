@@ -30,7 +30,9 @@ This rule applies to any `headers` attribute specified on a [`cell`][] within a 
 
 ## Expectation
 
-Each target attribute is [a set of space separated IDs][], each of which is the ID of an element, that is a [`cell`][] of the same [`table`][] as the target element.
+Each target attribute is [a set of space separated IDs][], each of which is the ID of an element, that is a [`cell`][] of the same [`table`][] as the target element different from the target.
+
+**Note:** `headers` attribute referencing to the cell itself are ignored when [assigning header cells (step 6)](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells).
 
 ## Assumptions
 
@@ -217,7 +219,7 @@ The `td` element has a `headers` attribute referring to an ID that does not exis
 
 #### Failed Example 2
 
-The `td` element has a `headers` attribute referring to it's own ID.
+The `td` element has a `headers` attribute referring to its own ID.
 
 ```html
 <table>

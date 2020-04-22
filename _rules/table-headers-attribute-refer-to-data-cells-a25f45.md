@@ -28,9 +28,13 @@ acknowledgments:
 
 This rule applies to any `headers` attribute specified on a [`cell`][] within a [`table`][] element, where the [`table`][] element is [visible][] and [included in the accessibility tree][].
 
-## Expectation
+## Expectation 1
 
-Each target attribute is [a set of space separated IDs][], each of which is the ID of an element, that is a [`cell`][] of the same [`table`][] as the target element different from the target.
+Each target attribute is [a set of space separated IDs][], each of which is the ID of an element, that is a [`cell`][] of the same [`table`][].
+
+## Expectation 2
+
+Each target attribute is [a set of space separated IDs][], none of which is the ID of the element on which the test target is specified.
 
 **Note:** `headers` attribute referencing to the cell itself are ignored when [assigning header cells (step 6)](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells).
 

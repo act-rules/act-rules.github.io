@@ -217,9 +217,9 @@ This [scrollable][] `section` element has no [visible][] content.
 This `section` element has a [horizontal scroll distance][scrollable] that is less than its horizontal [padding][], and [vertical scroll distance][scrollable] that is less than its vertical [padding][].
 
 ```html
-<section style="height: 250px; width: 500px; overflow: scroll; padding: 30px;">
-	<h1>WCAG 2.1 Abstract</h1>
-	<p style="width: 530px">
+<section style="height: 210px; width: 500px; overflow: scroll; padding: 30px;">
+	<div role="heading" aria-level="1">WCAG 2.1 Abstract</div>
+	<div style="width: 520px">
 		Web Content Accessibility Guidelines (WCAG) 2.1 covers a wide range of recommendations for making Web content more
 		accessible. Following these guidelines will make content more accessible to a wider range of people with
 		disabilities, including accommodations for blindness and low vision, deafness and hearing loss, limited movement,
@@ -227,7 +227,7 @@ This `section` element has a [horizontal scroll distance][scrollable] that is le
 		and cognitive limitations; but will not address every user need for people with these disabilities. These guidelines
 		address accessibility of web content on desktops, laptops, tablets, and mobile devices. Following these guidelines
 		will also often make Web content more usable to users in general.
-	</p>
+	</div>
 </section>
 ```
 

@@ -166,7 +166,7 @@ This `section` element has a [computed][] [overflow][] of `visible`.
 
 #### Inapplicable Example 2
 
-This `section` element has a [horizontal][scrollable] and [vertical scroll distance][scrollable] of 0.
+This `section` element has a [scroll distance][scrollable] of 0 in both directions.
 
 ```html
 <section style="height: 95px; width: 500px; overflow: auto;">

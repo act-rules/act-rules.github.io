@@ -20,11 +20,11 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any [HTML element][] with a [visible][] [text node][] if:
+The rule applies to any [HTML element][] that has a descendant in the [flat tree][] if:
 
 - **changed:** The `innerText` property of the [element][html element] changes multiple times within a 10 minute time span where there is no [user interaction][]; and
-- **no child changed:** the [element][html element] does not have [children][child] whose `innerText` property also changes; and
-- **not alone:** the [element][html element] has an [ancestor][] element with a non-empty `innerText` property whose value is different from the `innerText` of the test target.
+- **no child changed:** the [element][html element] does not have [children][child] in the [flat tree][] whose `innerText` property also changes; and
+- **not alone:** the [element][html element] has an [ancestor][] element in the [flat tree][] with a non-empty `innerText` property whose value is different from the `innerText` of the test target.
 
 **Note:** The test targets for this rule are elements that have their text content change multiple times, on a page with further content, if that change happens without user intervention.
 
@@ -260,6 +260,7 @@ This `span` element has updated color but not its `innerText` property.
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
 [document readiness]: https://www.w3.org/TR/html53/dom.html#current-document-readiness
 [essential]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html#dfn-essential
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [f16]: https://www.w3.org/WAI/WCAG21/Techniques/failures/F16
 [g186]: https://www.w3.org/WAI/WCAG21/Techniques/general/G186
 [html document]: https://dom.spec.whatwg.org/#html-document

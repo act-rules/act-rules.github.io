@@ -14,7 +14,7 @@ GitHub has excellent documentation. If you are new to GitHub, please see their d
 ## For pull request authors
 
 - Keep changes in the pull request about one topic only.
-- When updating your pull request, unless it is editorial, dismiss all reviews.
+- When updating your pull request, unless it is editorial, dismiss all reviews and re-request a review from the same reviewers.
 - Indicate the final call period in the pull request description:
   - 2 weeks for a new rule, or for major changes.
   - 1 week for smaller changes.

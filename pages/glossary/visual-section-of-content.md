@@ -20,7 +20,7 @@ A _visual section of content_ is a distinct part of the [visible][] content of a
 
 **Note:** The precise splitting of a document into its visual sections of content is a subjective matter. For example, [decorative][] lines can be used to let the text "breath" without necessarily creating a new visual section of content. Each document can use any number of the visual cues to separate its sections of content.
 
-**Note:** Headings elements (`h1`-`h6`) are usually [rendered][rendering of sections and headings] with a larger and heavier font than normal text. When this is the case, they do fulfill the **headings** case of the **separated** condition, and they define visual sections of content that match the [implicit ones][implicit section of content].
+**Note:** Heading elements (`h1`-`h6`) are usually [rendered][rendering of sections and headings] with a larger and heavier font than normal text. When this is the case, they do fulfill the **headings** case of the **separated** condition, and they define visual sections of content that match the [implicit ones][implicit section of content].
 
 **Note:** The **large enough** condition prevents, for example, a single word in bold in a paragraph to be a visual section of content.
 

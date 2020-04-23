@@ -7,7 +7,7 @@ objective: false
 
 Each [section of content][] is _associated_ with the first element (in tree order) with a [semantic role][] of `heading` within this section of content, if any.
 
-**Note:** [Implicit sections of content][implicit section of content] are always associated with the element defining them. [Explicit][explicit section of content][] and [visual sections of content][visual section of content] are associated with 0 or 1 heading.
+**Note:** [Implicit sections of content][implicit section of content] are always associated with the element defining them. [Explicit][explicit section of content] and [visual sections of content][visual section of content] are associated with 0 or 1 heading.
 
 **Note:** A heading may have several [sections of content][section of content] associated with it, even several of the same kind (explicit or visual).
 

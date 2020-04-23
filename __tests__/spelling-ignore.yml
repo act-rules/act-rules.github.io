@@ -50,11 +50,9 @@
 - testrunner
 - color
 - focusable
-- Focusable
 - unfocusable
 - tabindex
 - whitespace
-- Whitespace
 - textfield
 - namespace
 - namespaces
@@ -76,10 +74,6 @@
 - DeviceOrientation
 - fieldsets
 
-# spell checker checks against strict casing & hence some repeated words here
-- Autocomplete
-- Focusable
-
 # Parts of url
 - http
 - https
@@ -95,6 +89,7 @@
 - multipage
 - attr-input-type
 - wai-aria-1.1
+
 # Notes and acronyms
 - TODO
 - TBD
@@ -137,12 +132,9 @@
 
 # Unsure why the dictionary does not have these words
 - programmatically
-- Programmatically
 - personalization
-- Autofill
+- autofill
 - implementers
-- Implementers
-- Presentational
 - backtick
 - camelCase
 

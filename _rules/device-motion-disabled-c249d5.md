@@ -1,6 +1,6 @@
 ---
 id: c249d5
-name: Device motion can be disabled
+name: Device motion based functionality can be disabled
 rule_type: atomic
 description: |
   This rule checks that it is possible to disable functionality that can be operated by device motion.
@@ -28,24 +28,19 @@ htmlHintIgnore:
 
 The rule applies to an [HTML document][] with an associated [Window object][] that has an [event listener list][] with one or more [event listeners][event listener] for [device orientation events][device orientation] or [device motion events][device motion].
 
-## Expectation 1
+## Expectation
 
-For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target, an [instrument][] is available to disable the event.
+For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target, an [instrument][] to prevent the outcome of the event is available in the same [web page][], or in another [web page][] that is [linked][hyperlink] from the [web page][] of the test target.
 
 **Note:** The same [instrument][] can be used to disable more than one event.
 
-## Expectation 2
-
-The [instrument][] is [visible][].
-
-## Expectation 3
-
-The [instrument][] is [included in the accessibility tree][] with an [accessible name][] that is not empty ("").
+**Note:** Preventing the outcome of the event can be done in multiple ways (e.g. removing the event listener; handling the event in a different manner) but the way in which it is done is not relevant for this rule.
 
 ## Assumptions
 
-- The motion to operate the device is not used through an [accessibility supported][] interface.
-- The motion is not [essential][] for the functionality it triggers.
+- The motion to operate the device is not used through an [accessibility supported][] interface, which is listed as a valid exception to SC 2.5.4.
+- The motion is not [essential][] for the functionality it triggers, which is listed as a valid exception to SC 2.5.4.
+- The event listeners listening to device motion events trigger a funcionality in the web page. If they do not trigger any such functionality failing this rule might not be a failure of the success criterion.
 
 ## Accessibility Support
 
@@ -173,117 +168,6 @@ This [HTML document][] that can be operated through the device's orientation to 
 </html>
 ```
 
-#### Failed Example 2
-
-This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider has a control to disable the functionality but it is not [visible][].
-
-```html
-<html>
-	<head>
-		<title>Failed Example 2</title>
-		<script src="/test-assets/7677a9/slider.js"></script>
-		<script>
-			function activateSlider() {
-				window.addEventListener('deviceorientation', handleOrientationCanBeDisabled)
-			}
-		</script>
-	</head>
-
-	<body onload="activateSlider();">
-		<h1>Slider Motion Sensor Example</h1>
-
-		<p>
-			Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the right
-			and left to adjust the slider value. The check box disables the motion sensing adjustment.
-		</p>
-		<p>Note: This example may not work across all browsers.</p>
-
-		<div>
-			<input type="range" min="1" max="100" value="50" id="motionSlider" disabled />
-			<p aria-live="polite">Slider Value: <span id="output">50</span></p>
-		</div>
-		<div style="position: absolute;margin-left: -9999px;">
-			<input type="checkbox" id="disableMotion" />
-			<label for="disableMotion">Disable Motion Actuation</label>
-		</div>
-	</body>
-</html>
-```
-
-#### Failed Example 3
-
-This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider has a control to disable the functionality but it is not [included in the accessibility tree][].
-
-```html
-<html>
-	<head>
-		<title>Failed Example 3</title>
-		<script src="/test-assets/7677a9/slider.js"></script>
-		<script>
-			function activateSlider() {
-				window.addEventListener('deviceorientation', handleOrientationCanBeDisabled)
-			}
-		</script>
-	</head>
-
-	<body onload="activateSlider();">
-		<h1>Slider Motion Sensor Example</h1>
-
-		<p>
-			Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the right
-			and left to adjust the slider value. The check box disables the motion sensing adjustment.
-		</p>
-		<p>Note: This example may not work across all browsers.</p>
-
-		<div>
-			<input type="range" min="1" max="100" value="50" id="motionSlider" disabled />
-			<p aria-live="polite">Slider Value: <span id="output">50</span></p>
-		</div>
-		<div aria-hidden="true">
-			<input type="checkbox" id="disableMotion" />
-			<label for="disableMotion">Disable Motion Actuation</label>
-		</div>
-	</body>
-</html>
-```
-
-#### Failed Example 4
-
-This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider has a control to disable the functionality but it is has an [accessible name][] that is empty ("").
-
-```html
-<html>
-	<head>
-		<title>Failed Example 4</title>
-		<script src="/test-assets/7677a9/slider.js"></script>
-		<script>
-			function activateSlider() {
-				window.addEventListener('deviceorientation', handleOrientationCanBeDisabled)
-			}
-		</script>
-	</head>
-
-	<body onload="activateSlider();">
-		<h1>Slider Motion Sensor Example</h1>
-
-		<p>
-			Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the right
-			and left to adjust the slider value. The check box disables the motion sensing adjustment.
-		</p>
-		<p>Note: This example may not work across all browsers.</p>
-
-		<div>
-			<input type="range" min="1" max="100" value="50" id="motionSlider" disabled />
-			<p aria-live="polite">Slider Value: <span id="output">50</span></p>
-		</div>
-		<div>
-			<input type="checkbox" id="disableMotion" />
-			<label for="disableMotion"></label>
-		</div>
-	</body>
-</html>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -302,7 +186,9 @@ This [HTML document][] is not operable by device motion.
 [event listener]: https://dom.spec.whatwg.org/#concept-event-listener
 [event listener list]: https://dom.spec.whatwg.org/#eventtarget-event-listener-list
 [html document]: https://dom.spec.whatwg.org/#concept-document
+[hyperlink]: https://html.spec.whatwg.org/#hyperlink
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [visible]: #visible 'Definition of visible'
+[web page]: #web-page-html 'Definition of web page'
 [window object]: https://html.spec.whatwg.org/multipage/window-object.html#dom-window

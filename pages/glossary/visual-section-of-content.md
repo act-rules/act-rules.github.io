@@ -12,7 +12,7 @@ A _visual section of content_ is a distinct part of the [visible][] content of a
 - **separated** a visual section of content must be separated from surrounding content by one or more of the following visual cues:
   1. **boundaries**: it has borders, box shadow, or different backgrounds;
   2. **layout**: it is displayed in separate column or row;
-  3. **indentation**: it has a greater indentation than surrounding content;
+  3. **indentation**: it has a different indentation than surrounding content;
   4. **separators**: there is [decorative][] non-text content before or after it;
   5. **whitespace separators**: the spacing before or after it is greater than the default spacing between paragraphs;
   6. **headings**: its first [text][] content has larger font size or greater font weight the rest of the text;

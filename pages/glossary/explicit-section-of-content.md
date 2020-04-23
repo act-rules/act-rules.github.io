@@ -19,7 +19,7 @@ Explicit sections of content may have zero or one heading [associated][] with th
 
 **Note:** When one of these elements is the single child of a similar element, they form a single explicit section of content, rather than one each, because they have the exact same content.
 
-**Note:** a subtree rooted at a node is this node and all its descendants.
+**Note:** A subtree rooted at a node is this node and all its descendants.
 
 **Note:** Explicit sections of content are only useful for users of technologies that somehow expose these elements, for example by listing landmarks or providing a way to navigate directly to them.
 

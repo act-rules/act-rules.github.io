@@ -42,7 +42,7 @@ This rule is limited to the explicit use of roles, as a clear indication that co
 
 Browser and assistive technology support for SVG `<title>` and `<desc>` elements is currently inconsistent. Using WAI ARIA in combination with the `img` role for non-decorative `<svg>` elements significantly improves accessibility browser support.
 
-Until browser support for the [SVG Accessibility API Mappings][] is more consistent it is recommended to explicitly remove decorative <svg> elements from the accessibility tree.
+Until browser support for the [SVG Accessibility API Mappings][] is more consistent it is recommended to explicitly remove decorative `<svg>` elements from the accessibility tree.
 
 ## Background
 
@@ -141,7 +141,7 @@ This `circle` element has an [explicit role][] of `graphics-symbol` but has no [
 
 #### Inapplicable Example 1
 
-Neither the `svg` element nor the `circle` element has any of the three [explicit role][] of  `img`, `graphics-document`, `graphics-symbol`.
+Neither the `svg` element nor the `circle` element has any of the three [explicit roles][explicit role] of `img`, `graphics-document`, `graphics-symbol`.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg">

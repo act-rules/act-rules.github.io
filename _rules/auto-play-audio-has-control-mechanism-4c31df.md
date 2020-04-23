@@ -211,7 +211,7 @@ This `video` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechani
 
 #### Failed Example 5
 
-This `video` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to paus, stop, or turn the audio volume off but the mechanism is not included in the accessibility tree.
+This `video` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off but the mechanism is not included in the accessibility tree.
 
 ```html
 <head>

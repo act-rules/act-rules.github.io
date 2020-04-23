@@ -32,7 +32,7 @@ acknowledgments:
 
 Any `role` attribute that is neither empty ("") nor only [ASCII whitespace][], and that is specified on an HTML or SVG element that is [included in the accessibility tree][].
 
-**Note:** The `role` attribute is a set of [space separated tokens][]. Having it contain at least one non-[ASCII whitespace][] character ensure that there is at least one token in that set.
+**Note:** The `role` attribute is a set of [space separated tokens][]. Having it contain at least one non-[ASCII whitespace][] character ensures that there is at least one token in that set.
 
 **Note:** Having a [whitespace](#whitespace) separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role](#semantic-role) of the element, and so forth.
 

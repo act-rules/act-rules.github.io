@@ -36,7 +36,7 @@ Each target attribute is [a set of space separated IDs][], each of which is the 
 
 Each target attribute is [a set of space separated IDs][], none of which is the ID of the element on which the test target is specified.
 
-**Note:** `headers` attribute referencing to the cell itself are ignored when [assigning header cells (step 6)](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells).
+**Note:** `headers` attribute referencing to the cell itself are ignored when [assigning header cells (step 3, first case, point 2)](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells).
 
 ## Assumptions
 

@@ -1,6 +1,6 @@
 ---
 id: 7677a9
-name: Device motion can be operated by user interface
+name: Device motion based functionality can also be operated from the user interface
 rule_type: atomic
 description: |
   This rule checks that functionality that can be operated by device motion can also be operated by user interface components.
@@ -28,24 +28,14 @@ htmlHintIgnore:
 
 The rule applies to an [HTML document][] with an associated [Window object][] that has an [event listener list][] with one or more [event listeners][event listener] for [device orientation events][device orientation] or [device motion events][device motion].
 
-## Expectation 1
+## Expectation
 
 For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target, an [instrument][] is available supporting the same outcomes of the event.
 
-**Note:** The same [instrument][] can be used to disable more than one event.
-
-## Expectation 2
-
-The [instrument][] is [visible][].
-
-## Expectation 3
-
-The [instrument][] is [included in the accessibility tree][] with an [accessible name][] that is not empty ("").
-
 ## Assumptions
 
-- The motion to operate the device is not used through an [accessibility supported][] interface.
-- The motion is not [essential][] for the functionality it triggers.
+- The motion to operate the device is not used through an [accessibility supported][] interface, which is listed as a valid exception to SC 2.5.4.
+- The motion is not [essential][] for the functionality it triggers, which is listed as a valid exception to SC 2.5.4.
 
 ## Accessibility Support
 
@@ -171,123 +161,6 @@ This [HTML document][] that can be operated through the device's orientation to 
 		<div>
 			<input type="range" min="1" max="100" value="50" id="motionSlider" disabled />
 			<button id="increaseSlider" type="button">Increase Value</button>
-			<p aria-live="polite">Slider Value: <span id="output">50</span></p>
-		</div>
-	</body>
-</html>
-```
-
-#### Failed Example 2
-
-This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider has the same functionality available through `button` elements but these are not [visible][].
-
-```html
-<html>
-	<head>
-		<title>Failed Example 2</title>
-		<script src="/test-assets/7677a9/slider.js"></script>
-		<script>
-			function activateSlider() {
-				document.getElementById('decreaseSlider').addEventListener('click', decreaseSlider)
-				document.getElementById('increaseSlider').addEventListener('click', increaseSlider)
-				window.addEventListener('deviceorientation', handleOrientation)
-			}
-		</script>
-	</head>
-
-	<body onload="activateSlider();">
-		<h1>Slider Motion Sensor Example</h1>
-
-		<p>
-			Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the right
-			and left to adjust the slider value. The decrease and increase buttons also adjust the value.
-		</p>
-		<p>Note: This example may not work across all browsers.</p>
-
-		<div>
-			<button id="decreaseSlider" type="button" style="position: absolute; margin-left: -9999px;">
-				Decrease Value
-			</button>
-			<input type="range" min="1" max="100" value="50" id="motionSlider" disabled />
-			<button id="increaseSlider" type="button" style="position: absolute; margin-left: -9999px;">
-				Increase Value
-			</button>
-			<p aria-live="polite">Slider Value: <span id="output">50</span></p>
-		</div>
-	</body>
-</html>
-```
-
-#### Failed Example 3
-
-This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider has the same functionality available through `button` elements but these are not [included in the accessibility tree][].
-
-```html
-<html>
-	<head>
-		<title>Failed Example 3</title>
-		<script src="/test-assets/7677a9/slider.js"></script>
-		<script>
-			function activateSlider() {
-				document.getElementById('decreaseSlider').addEventListener('click', decreaseSlider)
-				document.getElementById('increaseSlider').addEventListener('click', increaseSlider)
-				window.addEventListener('deviceorientation', handleOrientation)
-			}
-		</script>
-	</head>
-
-	<body onload="activateSlider();">
-		<pre class="output"></pre>
-
-		<h1>Slider Motion Sensor Example</h1>
-
-		<p>
-			Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the right
-			and left to adjust the slider value. The decrease and increase buttons also adjust the value.
-		</p>
-		<p>Note: This example may not work across all browsers.</p>
-
-		<div>
-			<button id="decreaseSlider" type="button" aria-hidden="true">Decrease Value</button>
-			<input type="range" min="1" max="100" value="50" id="motionSlider" disabled />
-			<button id="increaseSlider" type="button" aria-hidden="true">Increase Value</button>
-			<p aria-live="polite">Slider Value: <span id="output">50</span></p>
-		</div>
-	</body>
-</html>
-```
-
-#### Failed Example 4
-
-This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider has the same functionality available through `button` elements but these have an [accessible name][] that is empty ("").
-
-```html
-<html>
-	<head>
-		<title>Failed Example 4</title>
-		<script src="/test-assets/7677a9/slider.js"></script>
-		<script>
-			function activateSlider() {
-				document.getElementById('decreaseSlider').addEventListener('click', decreaseSlider)
-				document.getElementById('increaseSlider').addEventListener('click', increaseSlider)
-				window.addEventListener('deviceorientation', handleOrientation)
-			}
-		</script>
-	</head>
-
-	<body onload="activateSlider();">
-		<h1>Slider Motion Sensor Example</h1>
-
-		<p>
-			Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the right
-			and left to adjust the slider value. The decrease and increase buttons also adjust the value.
-		</p>
-		<p>Note: This example may not work across all browsers.</p>
-
-		<div>
-			<button id="decreaseSlider" type="button"></button>
-			<input type="range" min="1" max="100" value="50" id="motionSlider" disabled />
-			<button id="increaseSlider" type="button"></button>
 			<p aria-live="polite">Slider Value: <span id="output">50</span></p>
 		</div>
 	</body>

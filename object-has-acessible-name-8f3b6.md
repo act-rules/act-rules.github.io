@@ -58,7 +58,7 @@ This `object` element has a non-empty [accessible name][] through its `aria-labe
 
 #### Passed Example 2
 
-This `object` element has a non-empty [accessible name][] through title.
+This `object` element has a non-empty [accessible name][] through its `title` attribute.
 
 ```html
 <object

@@ -47,7 +47,7 @@ Non supported media formats make screen readers render the text content of the e
 
 #### Passed Example 1
 
-This `object` element has a non-empty [accessible name][] through aria-label.
+This `object` element has a non-empty [accessible name][] through its `aria-label` attribute.
 
 ```html
 <object

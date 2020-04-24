@@ -194,5 +194,17 @@ This `object` element is is not [included in the accessibility tree][] because i
 </object>
 ```
 
+#### Inapplicable Example 5
+
+There is no `object` element.
+
+```html
+<audio
+  title="Moon speech"
+  src="/test-assets/contrast/example.png"
+>
+</audio>
+```
+
 [accessible name]: #accessible-name "Definition of accessible name"
 [included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"

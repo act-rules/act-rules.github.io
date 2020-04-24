@@ -101,29 +101,37 @@ Both `id` attributes are the same (`my-elt`), but they are in different [documen
 
 #### Failed Example 1
 
-The `id` attribute `my-div` is not unique among all `id` attributes in the document.
+The `id` attribute `label` is not unique among all `id` attributes in the document, resulting in a wrong [programmatic label][] on the input field.
 
 ```html
-<div id="my-div">This is my first element</div>
-<div id="my-div">This is my second element</div>
+<div id="label">Name</div>
+<div id="label">City</div>
+
+<input aria-labelledby="label" type="text" name="city" />
 ```
 
 #### Failed Example 2
 
-The `id` attribute `my-div` is not unique among all `id` attributes in the document.
+The `id` attribute `label` is not unique among all `id` attributes in the document, resulting in a wrong [programmatic label][] on the input field.
 
 ```html
-<div id="my-div">This is my first element</div>
-<svg id="my-div">This is my second element</svg>
+<div id="label">Name</div>
+<svg id="label">
+	<text x="0" y="15">City</text>
+</svg>
+
+<input aria-labelledby="label" type="text" name="city" />
 ```
 
 #### Failed Example 3
 
-The `id` attribute `my-div` is not unique among all `id` attributes in the document. This rule still considers element that are neither [included in the accessibility tree][] nor [visible][].
+The `id` attribute `label` is not unique among all `id` attributes in the document, resulting in a wrong [programmatic label][] on the input field.
 
 ```html
-<div id="my-div" style="display:none">This is my first element</div>
-<svg id="my-div">This is my second element</svg>
+<span id="label" style="display: none;">Name</span>
+<span id="label">City</span>
+
+<input aria-labelledby="label" type="text" name="city" />
 ```
 
 ### Inapplicable
@@ -145,4 +153,5 @@ The `xml:id` attribute is not considered by this rule.
 ```
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[programmatic label]: #programmatic-label 'Definition of programmatic label'
 [visible]: #visible 'Definition of visible'

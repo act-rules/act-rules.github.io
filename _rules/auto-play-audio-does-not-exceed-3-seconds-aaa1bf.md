@@ -70,7 +70,7 @@ This `audio` element does not play automatically for more than 3 seconds.
 
 #### Passed Example 2
 
-This `video` element's `audio` output does not last longer than 3 seconds.
+This `video` element's audio output does not last longer than 3 seconds.
 
 ```html
 <video autoplay>

@@ -125,7 +125,7 @@ The `id` attribute `label` is not unique among all `id` attributes in the docume
 
 #### Failed Example 3
 
-The `id` attribute `label` is not unique among all `id` attributes in the document, resulting in a wrong [programmatic label][] on the input field.
+The `id` attribute `label` is not unique among all `id` attributes in the document, resulting in a wrong [programmatic label][] on the input field. This rule still considers elements that are neither [included in the accessibility tree][] nor [visible][].
 
 ```html
 <span id="label" style="display: none;">Name</span>

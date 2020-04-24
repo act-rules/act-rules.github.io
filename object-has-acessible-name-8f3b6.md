@@ -69,7 +69,7 @@ This `object` element has a non-empty [accessible name][] through its `title` at
 
 #### Passed Example 3
 
-This `object` element has a non-empty [accessible name][] through aria-labelledby.
+This `object` element has a non-empty [accessible name][] through its `aria-labelledby` attribute.
 
 ```html
 <span id="label">Moon speech</span>

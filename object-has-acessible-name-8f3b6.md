@@ -126,7 +126,7 @@ This `object` element has an empty [accessible name][].
 
 #### Failed Example 3
 
-This `object` element has an empty [accessible name][] because the `aria-labelledby` references a non-existing id.
+This `object` element has an empty [accessible name][] because the `aria-labelledby` attribute references a non-existing id.
 
 ```html
 <object

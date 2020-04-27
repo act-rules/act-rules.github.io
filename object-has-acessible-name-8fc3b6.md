@@ -15,6 +15,7 @@ input_aspects:
   - CSS Styling
   - Accessibility Tree
 acknowledgments:
+audio is excerpt from JFK's 'Moon Speech'
   authors:
     - António Estriga
 ---

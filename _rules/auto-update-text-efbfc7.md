@@ -30,9 +30,9 @@ The rule applies to any [HTML element][] that has a [visible][] [text node][] as
 
 **Note:** The 10 minute time span is an arbitrary limit which is not included in WCAG. Content that updates less frequently, or that doesn't update on a regular interval, will be inapplicable for this rule but may nonetheless fail [Success Criterion 2.2.2: Pause, Stop, Hide][sc 2.2.2]. It is however a much lesser accessibility issue, and without any time limit this rule would be virtually untestable.
 
-## Expectation
+## Expectation 1
 
-For each test target there exists an [instrument][] in the same [web page](#web-page-html), or in another [web page](#web-page-html) that is [linked][hyperlink] from the [web page](#web-page-html) of the test target, to achieve one of the following objectives:
+For each test target there exists an [instrument][] to achieve one of the following objectives:
 
 - pause and resume the change of the [visible text content][]; or
 - stop the change of the [visible text content][]; or
@@ -41,7 +41,13 @@ For each test target there exists an [instrument][] in the same [web page](#web-
 
 **Note:** If there is more than one test target, the same [instrument][] may be used to pause, stop, hide or alter the frequency of several or even all test targets.
 
-**Note:** For the instrument to be available in the same web page, the user might have to perform an action (e.g. opening a modal dialog).
+## Expectation 2
+
+The [instrument][] from Expectation 1 is in one of the following:
+
+- the same [web page](#web-page-html) of the test target; or
+- the same [web page](#web-page-html) of the test target as a result of an action from the user; or
+- another [web page](#web-page-html) that is [linked][hyperlink] from the [web page](#web-page-html) of the test target.
 
 ## Assumptions
 
@@ -136,6 +142,51 @@ This `span` element has text content that automatically updates multiple times w
 	<input type="button" onclick="changeFrequency(document.getElementById('interval').value)" value="Change frequency" />
 
 	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
+</body>
+```
+
+#### Passed Example 5
+
+This `span` element has text content that automatically updates multiple times without user intervention and there is an [instrument][] to control the updates available in the same window after the user activates the "Control updates" `button`.
+
+```html
+<body onload="startUpdates()">
+	<p>
+		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
+		implement accessibility.
+	</p>
+
+	<p>Random number: <span id="target">1</span></p>
+	<input type="button" onclick="openModal()" value="Control updates" />
+
+	<div
+		style="
+      display: none;
+      position: fixed;
+      top: 2em;
+      left: 10em;
+      background-color: #505050;
+      color: white;
+      padding: 1em;
+      padding-top: 0em;
+    "
+		id="overlay"
+	>
+		<p>Control updates</p>
+		<input type="button" id="control" onclick="toggleUpdates()" value="Pause updates" />
+		<input type="button" onclick="hide()" value="Hide updates" />
+		<button onclick="closeModal();">Dismiss</button>
+	</div>
+
+	<script type="text/javascript">
+		function openModal() {
+			document.getElementById('overlay').style.display = 'block'
+		}
+		function closeModal() {
+			document.getElementById('overlay').style.display = 'none'
+		}
+	</script>
+	<script type="text/javascript" src="test-assets/efbfc7/script.js"></script>
 </body>
 ```
 

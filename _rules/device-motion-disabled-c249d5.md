@@ -34,13 +34,13 @@ For each registered [device orientation event][device orientation] or [device mo
 
 **Note:** The same [instrument][] can be used to disable more than one event.
 
-**Note:** Preventing the outcome of the event can be done in multiple ways (e.g. removing the event listener; handling the event in a different manner) but the way in which it is done is not relevant for this rule.
+**Note:** Preventing the outcome of the event can be done in multiple ways (e.g. removing the event listener; handling the event in a different manner; …) but the way in which it is done is not relevant for this rule.
 
 ## Assumptions
 
 - The motion to operate the device is not used through an [accessibility supported][] interface, which is listed as a valid exception to SC 2.5.4.
 - The motion is not [essential][] for the functionality it triggers, which is listed as a valid exception to SC 2.5.4.
-- The event listeners listening to device motion events trigger a funcionality in the web page. If they do not trigger any such functionality failing this rule might not be a failure of the success criterion.
+- The event listeners listening to device motion events trigger a functionality in the web page. If they do not trigger any such functionality failing this rule might not be a failure of the success criterion.
 
 ## Accessibility Support
 

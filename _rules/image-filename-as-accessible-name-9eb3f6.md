@@ -27,8 +27,9 @@ input_aspects:
 acknowledgments:
   authors:
     - Bryn Anderson
-  image:
-    - The picture of Nyhavn used in examples is authored by [Jorge Franganillo](https://500px.com/franganillo), licensed under the [Creative Commons Attribution 3.0 Unported](https://creativecommons.org/licenses/by/3.0/deed.en) license.
+  assets:
+    - The picture of Nyhavn (Copenhagen) is authored by [Jorge Franganillo](https://500px.com/franganillo), licensed under the [Creative Commons Attribution 3.0 Unported](https://creativecommons.org/licenses/by/3.0/deed.en) license.
+    - The picture of bread is a public domain [picture by Bicanski](https://pixnio.com/media/bread-breakfast-fresh-homemade-wheat).
 ---
 
 ## Applicability
@@ -42,9 +43,11 @@ The rule applies to any HTML element with the [semantic role][] of `img` or any 
 
 Each test target has an [accessible name][] that serves an equivalent purpose to the [non-text content][].
 
+**Note:** It is fairly common for CMS or other tools to default the alt-text of an image to its filename if no alt-text is provided. However, these names are usually not descriptive (often due to the presence of the file extension). This rule uses this heuristic to pinpoints cases where the [accessible name][] should be looked at by human testers. This rule does not automatically decide in which case a filename is correct (notably, it does not automatically decide whether adding the file extension is acceptable).
+
 ## Assumptions
 
-This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
+This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content).
 
 ## Accessibility Support
 
@@ -93,9 +96,29 @@ This image button has an [accessible name][] equivalent to the filename. The [ac
 </html>
 ```
 
+#### Passed Example 4
+
+This `img` element has an [accessible name][] equivalent to the filename. The [accessible name][] accurately describes the image in the language of the element (French, same as the language of the page).
+
+```html
+<html lang="fr">
+	<img src="test-assets/image-filename-as-accessible-name-9eb3f6/pain" alt="pain" />
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1
+
+This `img` element has [accessible name][] matching the image filename. The name does not describe the image.
+
+```html
+<html lang="en">
+	<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/paris" alt="paris" />
+</html>
+```
+
+#### Failed Example 2
 
 This `img` element has [accessible name][] matching the image filename. The name is just a checksum and does not describe the image.
 
@@ -108,7 +131,7 @@ This `img` element has [accessible name][] matching the image filename. The name
 </html>
 ```
 
-#### Failed Example 2
+#### Failed Example 3
 
 This `img` element has [accessible name][] matching the image filename. The presence of the file extension in the [accessible name][] is confusing and results in the [accessible name][] not accurately describing the image.
 
@@ -118,7 +141,7 @@ This `img` element has [accessible name][] matching the image filename. The pres
 </html>
 ```
 
-#### Failed Example 3
+#### Failed Example 4
 
 This `input` element with a `type` of `image` has a [semantic role][] of `img` and an [accessible name][] matching the filename. The presence of the file extension in the [accessible name][] is confusing and results in the [accessible name][] not accurately describing the image.
 

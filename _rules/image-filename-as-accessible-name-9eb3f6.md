@@ -27,6 +27,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Bryn Anderson
+  image:
+    - The picture of Nyhavn used in examples is authored by [Jorge Franganillo](https://500px.com/franganillo), licensed under the [Creative Commons Attribution 3.0 Unported](https://creativecommons.org/licenses/by/3.0/deed.en) license.
 ---
 
 ## Applicability
@@ -65,19 +67,29 @@ This `img` element has an [accessible name][] equivalent to the filename. The [a
 
 ```html
 <html lang="en">
-	<img src="https://www.w3.org/WAI/demos/bad/img/w3c" alt="w3c" />
+	<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn" alt="nyhavn" />
 </html>
 ```
 
 #### Passed Example 2
 
-This `img` element has an [accessible name][] equivalent to the filename. The [accessible name][] in combination with the text content of the `a` element accurately describes the image.
+This `img` element has an [accessible name][] equivalent to the filename. Because the image is used in a download link, the presence of the file extension is a relevant part of its description.
 
 ```html
 <html lang="en">
-	<a href="https://www.w3.org/WAI/demos/bad/img/w3c.png" download
-		>Download <img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png"
+	<a href="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg" download
+		>Download <img src="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg" alt="nyhavn.jpeg"
 	/></a>
+</html>
+```
+
+#### Passed Example 3
+
+This image button has an [accessible name][] equivalent to the filename. The [accessible name][] accurately describes the purpose of the button.
+
+```html
+<html lang="en">
+	<input type="image" src="test-assets/image-filename-as-accessible-name-9eb3f6/login" alt="login" />
 </html>
 ```
 
@@ -85,21 +97,34 @@ This `img` element has an [accessible name][] equivalent to the filename. The [a
 
 #### Failed Example 1
 
-This `img` element has [accessible name][] matching the image filename. The presence of the file extension in the [accessible name][] is redundant and results in the [accessible name][] not accurately describing the image.
+This `img` element has [accessible name][] matching the image filename. The name is just a checksum and does not describe the image.
 
 ```html
 <html lang="en">
-	<img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png" />
+	<img
+		src="/test-assets/image-filename-as-accessible-name-9eb3f6/94251e110d24a4c2b6e6ce76e7203374"
+		alt="94251e110d24a4c2b6e6ce76e7203374"
+	/>
 </html>
 ```
 
 #### Failed Example 2
 
-This `input` element with a `type` of `image` has a [semantic role][] of `img` and an [accessible name][] matching the filename. The presence of the file extension in the [accessible name][] is redundant and results in the [accessible name][] not accurately describing the image.
+This `img` element has [accessible name][] matching the image filename. The presence of the file extension in the [accessible name][] is confusing and results in the [accessible name][] not accurately describing the image.
 
 ```html
 <html lang="en">
-	<input type="image" src="https://www.w3.org/WAI/demos/bad/before/img/top_weather.gif" alt="top_weather.gif" />
+	<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg" alt="nyhavn.jpeg" />
+</html>
+```
+
+#### Failed Example 3
+
+This `input` element with a `type` of `image` has a [semantic role][] of `img` and an [accessible name][] matching the filename. The presence of the file extension in the [accessible name][] is confusing and results in the [accessible name][] not accurately describing the image.
+
+```html
+<html lang="en">
+	<input type="image" src="test-assets/image-filename-as-accessible-name-9eb3f6/login.png" alt="login.png" />
 </html>
 ```
 

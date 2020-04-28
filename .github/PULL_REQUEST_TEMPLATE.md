@@ -24,8 +24,12 @@ This will require a 2 weeks Final Call << new rule, or substantial changes affec
 
 - [ ] Add yourself (and co-authors) as "Assignees" for PR.
 - [ ] Add label to indicate if it's a `Rule`, `Definition` or `Chore`.
-- [ ] Close the issue that the PR resolves (and make sure the issue is referenced in the top of this comment)
+- [ ] Reference any issue that the PR resolves at the top of this comment, but leave it open.
 - [ ] Optionally request feedback from anyone in particular by assigning them as "Reviewers".
+
+### **When merging a PR:\***
+
+- [ ] Close any issue that the PR resolves. This should happen automatically upon merging if the issue is referenced at the top of this comment.
 
 ## How to Review And Approve
 

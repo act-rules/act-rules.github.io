@@ -1359,17 +1359,6 @@
               "WebPage"
             ],
             "id": "_:struct_20",
-            "description": "https://act-rules.github.io/testcases/b20e66/8216b77a5add68e2aabc39dcbc3ec0a8e54d7661.html",
-            "source": "https://act-rules.github.io/testcases/b20e66/8216b77a5add68e2aabc39dcbc3ec0a8e54d7661.html",
-            "title": "8216b77a5add68e2aabc39dcbc3ec0a8e54d7661",
-            "tested": false
-          },
-          {
-            "type": [
-              "TestSubject",
-              "WebPage"
-            ],
-            "id": "_:struct_21",
             "description": "https://act-rules.github.io/testcases/b20e66/e7d5a781c70386d5efaf1e4d9d547bd8e3300ac2.html",
             "source": "https://act-rules.github.io/testcases/b20e66/e7d5a781c70386d5efaf1e4d9d547bd8e3300ac2.html",
             "title": "e7d5a781c70386d5efaf1e4d9d547bd8e3300ac2",
@@ -1380,7 +1369,7 @@
               "TestSubject",
               "WebPage"
             ],
-            "id": "_:struct_22",
+            "id": "_:struct_21",
             "description": "https://act-rules.github.io/testcases/b20e66/5fa09c8edfd3ca72576148461a7fd1568090926d.html",
             "source": "https://act-rules.github.io/testcases/b20e66/5fa09c8edfd3ca72576148461a7fd1568090926d.html",
             "title": "5fa09c8edfd3ca72576148461a7fd1568090926d",
@@ -1391,7 +1380,7 @@
               "TestSubject",
               "WebPage"
             ],
-            "id": "_:struct_23",
+            "id": "_:struct_22",
             "description": "https://act-rules.github.io/testcases/b20e66/7b5b11a3e48cb4e9bfcd0ecf093e0c5204abd375.html",
             "source": "https://act-rules.github.io/testcases/b20e66/7b5b11a3e48cb4e9bfcd0ecf093e0c5204abd375.html",
             "title": "7b5b11a3e48cb4e9bfcd0ecf093e0c5204abd375",

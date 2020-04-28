@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 735,
+  "count": 740,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -1315,6 +1315,56 @@
       "testcaseTitle": "Passed Example 9",
       "url": "https://act-rules.github.io/testcases/5c01ea/2fb32b36f61ae9823bdaf5f065881c022a177c4d.html",
       "relativePath": "testcases/5c01ea/2fb32b36f61ae9823bdaf5f065881c022a177c4d.html",
+      "expected": "passed",
+      "ruleId": "5c01ea",
+      "ruleName": "ARIA state or property is permitted",
+      "rulePage": "https://act-rules.github.io/rules/5c01ea",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "aria11:state_property_processing": {
+          "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
+        }
+      }
+    },
+    {
+      "testcaseId": "f987641039742b2b939359bbda7d32e1610f1b10",
+      "testcaseTitle": "Passed Example 10",
+      "url": "https://act-rules.github.io/testcases/5c01ea/f987641039742b2b939359bbda7d32e1610f1b10.html",
+      "relativePath": "testcases/5c01ea/f987641039742b2b939359bbda7d32e1610f1b10.html",
+      "expected": "passed",
+      "ruleId": "5c01ea",
+      "ruleName": "ARIA state or property is permitted",
+      "rulePage": "https://act-rules.github.io/rules/5c01ea",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "aria11:state_property_processing": {
+          "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
+        }
+      }
+    },
+    {
+      "testcaseId": "dd59fc39dd5c0decc6485f60e0e21d86c52554da",
+      "testcaseTitle": "Passed Example 11",
+      "url": "https://act-rules.github.io/testcases/5c01ea/dd59fc39dd5c0decc6485f60e0e21d86c52554da.html",
+      "relativePath": "testcases/5c01ea/dd59fc39dd5c0decc6485f60e0e21d86c52554da.html",
       "expected": "passed",
       "ruleId": "5c01ea",
       "ruleName": "ARIA state or property is permitted",
@@ -3097,26 +3147,8 @@
       }
     },
     {
-      "testcaseId": "5f1f62517490a2b0949f851ed26183ff9bf17619",
-      "testcaseTitle": "Inapplicable Example 4",
-      "url": "https://act-rules.github.io/testcases/73f2c2/5f1f62517490a2b0949f851ed26183ff9bf17619.html",
-      "relativePath": "testcases/73f2c2/5f1f62517490a2b0949f851ed26183ff9bf17619.html",
-      "expected": "inapplicable",
-      "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
-      "rulePage": "https://act-rules.github.io/rules/73f2c2",
-      "ruleAccessibilityRequirements": {
-        "wcag21:1.3.5": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
       "testcaseId": "ecd347eb1a467c8eb22433d0a12bba2ed4b87f27",
-      "testcaseTitle": "Inapplicable Example 5",
+      "testcaseTitle": "Inapplicable Example 4",
       "url": "https://act-rules.github.io/testcases/73f2c2/ecd347eb1a467c8eb22433d0a12bba2ed4b87f27.html",
       "relativePath": "testcases/73f2c2/ecd347eb1a467c8eb22433d0a12bba2ed4b87f27.html",
       "expected": "inapplicable",
@@ -3134,7 +3166,7 @@
     },
     {
       "testcaseId": "2a7eb60f6749a8ea7da43af70a10f6f16cbb4f13",
-      "testcaseTitle": "Inapplicable Example 6",
+      "testcaseTitle": "Inapplicable Example 5",
       "url": "https://act-rules.github.io/testcases/73f2c2/2a7eb60f6749a8ea7da43af70a10f6f16cbb4f13.html",
       "relativePath": "testcases/73f2c2/2a7eb60f6749a8ea7da43af70a10f6f16cbb4f13.html",
       "expected": "inapplicable",
@@ -3152,7 +3184,7 @@
     },
     {
       "testcaseId": "5aa32a698d54506d830bdf078a38728c4b3d2860",
-      "testcaseTitle": "Inapplicable Example 7",
+      "testcaseTitle": "Inapplicable Example 6",
       "url": "https://act-rules.github.io/testcases/73f2c2/5aa32a698d54506d830bdf078a38728c4b3d2860.html",
       "relativePath": "testcases/73f2c2/5aa32a698d54506d830bdf078a38728c4b3d2860.html",
       "expected": "inapplicable",
@@ -3170,7 +3202,7 @@
     },
     {
       "testcaseId": "e57986c93c3f6d77859c497916e757ae9675306d",
-      "testcaseTitle": "Inapplicable Example 8",
+      "testcaseTitle": "Inapplicable Example 7",
       "url": "https://act-rules.github.io/testcases/73f2c2/e57986c93c3f6d77859c497916e757ae9675306d.html",
       "relativePath": "testcases/73f2c2/e57986c93c3f6d77859c497916e757ae9675306d.html",
       "expected": "inapplicable",
@@ -3187,28 +3219,10 @@
       }
     },
     {
-      "testcaseId": "92d0505a85857825954eee5da7e678f591bba069",
-      "testcaseTitle": "Inapplicable Example 9",
-      "url": "https://act-rules.github.io/testcases/73f2c2/92d0505a85857825954eee5da7e678f591bba069.html",
-      "relativePath": "testcases/73f2c2/92d0505a85857825954eee5da7e678f591bba069.html",
-      "expected": "inapplicable",
-      "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
-      "rulePage": "https://act-rules.github.io/rules/73f2c2",
-      "ruleAccessibilityRequirements": {
-        "wcag21:1.3.5": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "58423149067f7eacc24b50f01805ac54342a95b5",
-      "testcaseTitle": "Inapplicable Example 10",
-      "url": "https://act-rules.github.io/testcases/73f2c2/58423149067f7eacc24b50f01805ac54342a95b5.html",
-      "relativePath": "testcases/73f2c2/58423149067f7eacc24b50f01805ac54342a95b5.html",
+      "testcaseId": "ad9b14c45b5282aaca84223c09ea735417fbd199",
+      "testcaseTitle": "Inapplicable Example 8",
+      "url": "https://act-rules.github.io/testcases/73f2c2/ad9b14c45b5282aaca84223c09ea735417fbd199.html",
+      "relativePath": "testcases/73f2c2/ad9b14c45b5282aaca84223c09ea735417fbd199.html",
       "expected": "inapplicable",
       "ruleId": "73f2c2",
       "ruleName": "`autocomplete` attribute has valid value",
@@ -3224,7 +3238,7 @@
     },
     {
       "testcaseId": "8342fbb149f4faa1d7139fcc90dace6ab2df3ba7",
-      "testcaseTitle": "Inapplicable Example 11",
+      "testcaseTitle": "Inapplicable Example 9",
       "url": "https://act-rules.github.io/testcases/73f2c2/8342fbb149f4faa1d7139fcc90dace6ab2df3ba7.html",
       "relativePath": "testcases/73f2c2/8342fbb149f4faa1d7139fcc90dace6ab2df3ba7.html",
       "expected": "inapplicable",
@@ -3439,6 +3453,24 @@
       }
     },
     {
+      "testcaseId": "dd67d60b965d8304888ade8e4619de6b08e705ca",
+      "testcaseTitle": "Failed Example 5",
+      "url": "https://act-rules.github.io/testcases/97a4e1/dd67d60b965d8304888ade8e4619de6b08e705ca.html",
+      "relativePath": "testcases/97a4e1/dd67d60b965d8304888ade8e4619de6b08e705ca.html",
+      "expected": "failed",
+      "ruleId": "97a4e1",
+      "ruleName": "Button has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/97a4e1",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
       "testcaseId": "3251186b0dde2577c5bd3c8760ff60416051d6a4",
       "testcaseTitle": "Inapplicable Example 1",
       "url": "https://act-rules.github.io/testcases/97a4e1/3251186b0dde2577c5bd3c8760ff60416051d6a4.html",
@@ -3497,6 +3529,24 @@
       "testcaseTitle": "Inapplicable Example 4",
       "url": "https://act-rules.github.io/testcases/97a4e1/577ffff2ede7faace8ac10e77e14e3bbb442fbd5.html",
       "relativePath": "testcases/97a4e1/577ffff2ede7faace8ac10e77e14e3bbb442fbd5.html",
+      "expected": "inapplicable",
+      "ruleId": "97a4e1",
+      "ruleName": "Button has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/97a4e1",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "6f944bcb8ab65f381d1c080f639de43242efb7f5",
+      "testcaseTitle": "Inapplicable Example 5",
+      "url": "https://act-rules.github.io/testcases/97a4e1/6f944bcb8ab65f381d1c080f639de43242efb7f5.html",
+      "relativePath": "testcases/97a4e1/6f944bcb8ab65f381d1c080f639de43242efb7f5.html",
       "expected": "inapplicable",
       "ruleId": "97a4e1",
       "ruleName": "Button has accessible name",
@@ -5264,6 +5314,24 @@
       }
     },
     {
+      "testcaseId": "d66cecf816502bf473ed12757d0fccde4d2bc2be",
+      "testcaseTitle": "Failed Example 8",
+      "url": "https://act-rules.github.io/testcases/e086e5/d66cecf816502bf473ed12757d0fccde4d2bc2be.html",
+      "relativePath": "testcases/e086e5/d66cecf816502bf473ed12757d0fccde4d2bc2be.html",
+      "expected": "failed",
+      "ruleId": "e086e5",
+      "ruleName": "Form control has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/e086e5",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
       "testcaseId": "b33d341ade65ba30970c4fa4fe30ce8d1dd70867",
       "testcaseTitle": "Inapplicable Example 1",
       "url": "https://act-rules.github.io/testcases/e086e5/b33d341ade65ba30970c4fa4fe30ce8d1dd70867.html",
@@ -5282,10 +5350,10 @@
       }
     },
     {
-      "testcaseId": "5d0ef38766b390d0962591c58f5fec61ca623a18",
+      "testcaseId": "8380e12e7ec9301447fc5ff381c069e7affc6c1d",
       "testcaseTitle": "Inapplicable Example 2",
-      "url": "https://act-rules.github.io/testcases/e086e5/5d0ef38766b390d0962591c58f5fec61ca623a18.html",
-      "relativePath": "testcases/e086e5/5d0ef38766b390d0962591c58f5fec61ca623a18.html",
+      "url": "https://act-rules.github.io/testcases/e086e5/8380e12e7ec9301447fc5ff381c069e7affc6c1d.html",
+      "relativePath": "testcases/e086e5/8380e12e7ec9301447fc5ff381c069e7affc6c1d.html",
       "expected": "inapplicable",
       "ruleId": "e086e5",
       "ruleName": "Form control has accessible name",
@@ -5916,6 +5984,30 @@
       "testcaseTitle": "Failed Example 5",
       "url": "https://act-rules.github.io/testcases/ffd0e9/ea1570a1439bc115da156585e18a4fadb4b04d01.html",
       "relativePath": "testcases/ffd0e9/ea1570a1439bc115da156585e18a4fadb4b04d01.html",
+      "expected": "failed",
+      "ruleId": "ffd0e9",
+      "ruleName": "Heading has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/ffd0e9",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "480d36e5d476b319c92b06dbda6422abe35e06fa",
+      "testcaseTitle": "Failed Example 6",
+      "url": "https://act-rules.github.io/testcases/ffd0e9/480d36e5d476b319c92b06dbda6422abe35e06fa.html",
+      "relativePath": "testcases/ffd0e9/480d36e5d476b319c92b06dbda6422abe35e06fa.html",
       "expected": "failed",
       "ruleId": "ffd0e9",
       "ruleName": "Heading has accessible name",
@@ -8456,6 +8548,36 @@
       }
     },
     {
+      "testcaseId": "89a64d4fc2e8eb15097ad5e7f88acf87f2823628",
+      "testcaseTitle": "Failed Example 5",
+      "url": "https://act-rules.github.io/testcases/23a2a8/89a64d4fc2e8eb15097ad5e7f88acf87f2823628.html",
+      "relativePath": "testcases/23a2a8/89a64d4fc2e8eb15097ad5e7f88acf87f2823628.html",
+      "expected": "failed",
+      "ruleId": "23a2a8",
+      "ruleName": "Image has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/23a2a8",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
       "testcaseId": "855b0c4fdec6b0fd67290b86213f1327382be5a2",
       "testcaseTitle": "Inapplicable Example 1",
       "url": "https://act-rules.github.io/testcases/23a2a8/855b0c4fdec6b0fd67290b86213f1327382be5a2.html",
@@ -10166,6 +10288,42 @@
       }
     },
     {
+      "testcaseId": "fea0a4b56d9205a5154ea246e65efa42545da31d",
+      "testcaseTitle": "Failed Example 11",
+      "url": "https://act-rules.github.io/testcases/c487ae/fea0a4b56d9205a5154ea246e65efa42545da31d.html",
+      "relativePath": "testcases/c487ae/fea0a4b56d9205a5154ea246e65efa42545da31d.html",
+      "expected": "failed",
+      "ruleId": "c487ae",
+      "ruleName": "Link has accessible name",
+      "rulePage": "https://act-rules.github.io/rules/c487ae",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G91": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
       "testcaseId": "3a99d4cfbeb9fab0f625e2a4e03f0497677c8fc0",
       "testcaseTitle": "Inapplicable Example 1",
       "url": "https://act-rules.github.io/testcases/c487ae/3a99d4cfbeb9fab0f625e2a4e03f0497677c8fc0.html",
@@ -10274,44 +10432,8 @@
       }
     },
     {
-      "testcaseId": "7c36a41a034c15ceeb7277ffe08f562043e4ba7d",
-      "testcaseTitle": "Inapplicable Example 4",
-      "url": "https://act-rules.github.io/testcases/c487ae/7c36a41a034c15ceeb7277ffe08f562043e4ba7d.html",
-      "relativePath": "testcases/c487ae/7c36a41a034c15ceeb7277ffe08f562043e4ba7d.html",
-      "expected": "inapplicable",
-      "ruleId": "c487ae",
-      "ruleName": "Link has accessible name",
-      "rulePage": "https://act-rules.github.io/rules/c487ae",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G91": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
       "testcaseId": "5116f124fc0436a5aed081a2a58362b9eb408575",
-      "testcaseTitle": "Inapplicable Example 5",
+      "testcaseTitle": "Inapplicable Example 4",
       "url": "https://act-rules.github.io/testcases/c487ae/5116f124fc0436a5aed081a2a58362b9eb408575.html",
       "relativePath": "testcases/c487ae/5116f124fc0436a5aed081a2a58362b9eb408575.html",
       "expected": "inapplicable",
@@ -10706,26 +10828,8 @@
       }
     },
     {
-      "testcaseId": "8216b77a5add68e2aabc39dcbc3ec0a8e54d7661",
-      "testcaseTitle": "Inapplicable Example 3",
-      "url": "https://act-rules.github.io/testcases/b20e66/8216b77a5add68e2aabc39dcbc3ec0a8e54d7661.html",
-      "relativePath": "testcases/b20e66/8216b77a5add68e2aabc39dcbc3ec0a8e54d7661.html",
-      "expected": "inapplicable",
-      "ruleId": "b20e66",
-      "ruleName": "Links with identical accessible names have equivalent purpose",
-      "rulePage": "https://act-rules.github.io/rules/b20e66",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
       "testcaseId": "e7d5a781c70386d5efaf1e4d9d547bd8e3300ac2",
-      "testcaseTitle": "Inapplicable Example 4",
+      "testcaseTitle": "Inapplicable Example 3",
       "url": "https://act-rules.github.io/testcases/b20e66/e7d5a781c70386d5efaf1e4d9d547bd8e3300ac2.html",
       "relativePath": "testcases/b20e66/e7d5a781c70386d5efaf1e4d9d547bd8e3300ac2.html",
       "expected": "inapplicable",
@@ -10743,7 +10847,7 @@
     },
     {
       "testcaseId": "5fa09c8edfd3ca72576148461a7fd1568090926d",
-      "testcaseTitle": "Inapplicable Example 5",
+      "testcaseTitle": "Inapplicable Example 4",
       "url": "https://act-rules.github.io/testcases/b20e66/5fa09c8edfd3ca72576148461a7fd1568090926d.html",
       "relativePath": "testcases/b20e66/5fa09c8edfd3ca72576148461a7fd1568090926d.html",
       "expected": "inapplicable",
@@ -10761,7 +10865,7 @@
     },
     {
       "testcaseId": "7b5b11a3e48cb4e9bfcd0ecf093e0c5204abd375",
-      "testcaseTitle": "Inapplicable Example 6",
+      "testcaseTitle": "Inapplicable Example 5",
       "url": "https://act-rules.github.io/testcases/b20e66/7b5b11a3e48cb4e9bfcd0ecf093e0c5204abd375.html",
       "relativePath": "testcases/b20e66/7b5b11a3e48cb4e9bfcd0ecf093e0c5204abd375.html",
       "expected": "inapplicable",
@@ -12870,6 +12974,30 @@
       "testcaseTitle": "Failed Example 3",
       "url": "https://act-rules.github.io/testcases/d0f69e/875afbae421429b342a8057de08a511668b91a40.html",
       "relativePath": "testcases/d0f69e/875afbae421429b342a8057de08a511668b91a40.html",
+      "expected": "failed",
+      "ruleId": "d0f69e",
+      "ruleName": "All table header cells have assigned data cells",
+      "rulePage": "https://act-rules.github.io/rules/d0f69e",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "f554157f018e55bf9d9a94b0c522a0e7fa4a9502",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/d0f69e/f554157f018e55bf9d9a94b0c522a0e7fa4a9502.html",
+      "relativePath": "testcases/d0f69e/f554157f018e55bf9d9a94b0c522a0e7fa4a9502.html",
       "expected": "failed",
       "ruleId": "d0f69e",
       "ruleName": "All table header cells have assigned data cells",

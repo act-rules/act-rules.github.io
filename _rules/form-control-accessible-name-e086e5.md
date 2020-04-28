@@ -11,6 +11,8 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
+  - CSS styling
   - DOM Tree
 acknowledgments:
   authors:
@@ -43,6 +45,7 @@ _There are currently no assumptions_
 
 - Certain assistive technologies can be set up to ignore the title attribute, which means that to some users the title attribute will not act as an [accessible name][].
 - Several assistive technologies have a functionality to list all form fields on a page, including the `disabled` ones. Therefore this rule is still applicable to `disabled` form fields. If an assistive technology consistently ignores `disabled` form fields in all its interactions, then it is possible to have a `disabled` form field with no accessible name without creating accessibility issues for the user.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 
@@ -176,6 +179,14 @@ The [accessible name][] is empty.
 <label> <input /></label>
 ```
 
+#### Failed Example 8
+
+This `input` element has an [explicit role][] of `none`. However, it is [focusable][] (by default). Thus it has a [semantic role][] of `textbox` due to [Presentational Roles Conflict Resolution][]. It has an empty [accessible name][].
+
+```html
+<input role="none" />
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -191,7 +202,7 @@ Hidden to everyone.
 Hidden to assistive technologies.
 
 ```html
-<input aria-hidden="true" aria-label="firstname" />
+<input disabled aria-hidden="true" aria-label="firstname" />
 ```
 
 #### Inapplicable Example 3
@@ -215,5 +226,10 @@ Option inherits from input, but has a required context role of listbox which inh
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
+[explicit role]: #explicit-role 'Definition of Explicit Role'
+[focusable]: #focusable 'Definition of focusable'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[semantic role]: #semantic-role 'Definition of Semantic Role'
 [semantic roles]: #semantic-role 'Definition of semantic role'
 [whitespace]: #whitespace 'Definition of whitespace'

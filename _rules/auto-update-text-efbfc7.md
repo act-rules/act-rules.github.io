@@ -32,7 +32,7 @@ The rule applies to any [HTML element][] that has a [visible][] [text node][] as
 
 ## Expectation 1
 
-For each test target there exists an [instrument][] to achieve one of the following objectives:
+For each test target there exists a set of [instruments][instrument] to achieve one of the following objectives:
 
 - pause and resume the change of the [visible text content][]; or
 - stop the change of the [visible text content][]; or
@@ -43,7 +43,7 @@ For each test target there exists an [instrument][] to achieve one of the follow
 
 ## Expectation 2
 
-The [instrument][] from Expectation 1 is in one of the following:
+The set of [instruments][instrument] from Expectation 1 is in one of the following:
 
 - the same [web page](#web-page-html) of the test target; or
 - the same [web page](#web-page-html) of the test target as a result of an action from the user; or

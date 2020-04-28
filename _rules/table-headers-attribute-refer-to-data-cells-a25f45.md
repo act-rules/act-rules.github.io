@@ -344,7 +344,6 @@ The `table` is not [included in the accessibility tree][].
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [visible]: #visible 'Definition of visible'
 [`cell`]: https://html.spec.whatwg.org/#concept-cell 'Definition of cell'
-[semantic role]: #semantic-role 'Definition of semantic role'
 [a set of space separated ids]: https://html.spec.whatwg.org/#set-of-space-separated-tokens 'Space separated tokens'
 [`table`]: https://html.spec.whatwg.org/#concept-table 'Definition of table'
 [computes an adequate fallback header]: https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics 'Forming relationships between data cells and header cells'

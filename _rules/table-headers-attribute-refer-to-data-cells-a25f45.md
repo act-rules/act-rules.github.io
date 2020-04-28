@@ -272,7 +272,7 @@ There is no `headers` attribute.
 
 #### Inapplicable Example 2
 
-The `table` has a `role="presentation"` and thus is [decorative][].
+The `table` has a `role="presentation"` and thus is not [included in the accessibility tree][].
 
 ```html
 <table role="presentation">
@@ -343,7 +343,6 @@ The `table` is not [included in the accessibility tree][].
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [visible]: #visible 'Definition of visible'
-[decorative]: #marked-as-decorative 'Definition of marked as decorative'
 [`cell`]: https://html.spec.whatwg.org/#concept-cell 'Definition of cell'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [a set of space separated ids]: https://html.spec.whatwg.org/#set-of-space-separated-tokens 'Space separated tokens'

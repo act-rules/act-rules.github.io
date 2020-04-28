@@ -1,6 +1,6 @@
 ---
 id: 8fc3b6
-name: Object element in the accessibility tree has non-empty accessible name
+name: Object element has non-empty accessible name
 rule_type: atomic
 description: |
   This rule checks that each object has a non-empty accessible name.

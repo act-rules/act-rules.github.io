@@ -10,17 +10,16 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-input_aspects:
-  - DOM Tree
-  - CSS Styling
+
+input_aspects: + DOM Tree
+  + CSS Styling
+
 acknowledgments:
   authors:
     - Jey Nandakumar
----
+---## Applicability
 
-## Applicability
-
-This rule applies to any HTML element that is [visible][] and has any of the below CSS properties set in the `style` attribute:
+This rule applies to any HTML element that is [visible][] and has one of the following CSS properties set by the `style` attribute:
 
 - [word-spacing][]
 - [letter-spacing][]
@@ -28,15 +27,15 @@ This rule applies to any HTML element that is [visible][] and has any of the bel
 
 ## Expectation 1
 
-The test target does not have "important" as its [word-spacing][] [priority][], unless the [computed][] [word-spacing][] is `0.16em` or greater.
+The test target does not have "important" as its [word-spacing][] [priority][], unless the [computed][] [word-spacing][] is greater than `0.16em` .
 
 ## Expectation 2
 
-The test target does not have "important" as its [letter-spacing][] [priority][], unless the [computed][] [letter-spacing][] is `0.12em` or greater.
+The test target does not have "important" as its [letter-spacing][] [priority][], unless the [computed][] [letter-spacing][] is greater than `0.12em` .
 
 ## Expectation 3
 
-The test target does not have "important" as its [line-height][] [priority][], unless the [computed][] [line-height][] is `1.5em` or greater.
+The test target does not have "important" as its [line-height][] [priority][], unless the [computed][] [line-height][] is greater than `1.5em` .
 
 **Note:** Font size conversations rely on the default pixel size for body (usually 16 pixels), as defined by the [user agent origin][] stylesheet.
 
@@ -46,7 +45,7 @@ If there is a mechanism available on the page by which text spacing can be adjus
 
 ## Accessibility Support
 
-While some assistive technologies are able to set [user origin][] styles, others such as browser extensions are only able to set style with the [author origin][]. Such assistive technologies can not create styles with a high enough priority to override a `style` attribute with `!important`. If accessibility support does not include assistive technologies that override text spacing through [author origin][], this rule should not be used.
+While some assistive technologies are able to set [user origin][] styles, others such as browser extensions are only able to set style with the [author origin][]. Such assistive technologies can not create styles with a high enough priority to override a `style` attribute with `!important` . If accessibility support does not include assistive technologies that override text spacing through [author origin][], this rule should not be used.
 
 ## Background
 
@@ -60,10 +59,10 @@ While some assistive technologies are able to set [user origin][] styles, others
 
 #### Passed Example 1
 
-This `p` element has a `line-height` of `20px !important` (equals `1.25em`) which is below the permissible minimum, given the default pixel size of the body is 16 pixels.
+This `p` element has a `line-height` of `20px` (equals `1.25em` ) which is below the permissible minimum, given the default pixel size of the body is 16 pixels.
 
 ```html
-<p style="line-height: 20px !important;">
+<p style="line-height: 20px;">
 	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
 	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
 </p>
@@ -71,10 +70,10 @@ This `p` element has a `line-height` of `20px !important` (equals `1.25em`) whic
 
 #### Passed Example 2
 
-This `div` element has a `letter-spacing` of `0.12em !important` which is equal to the permissible minimum, given the default pixel size of the body is 16 pixels.
+This `div` element has a `letter-spacing` of `0.12em` which is equal to the permissible minimum, given the default pixel size of the body is 16 pixels.
 
 ```html
-<div style="letter-spacing: 0.12em !important;">
+<div style="letter-spacing: 0.12em;">
 	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
 	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
 </div>
@@ -82,7 +81,7 @@ This `div` element has a `letter-spacing` of `0.12em !important` which is equal 
 
 #### Passed Example 3
 
-This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12em`) which is equal to the permissible value, given the default pixel size of the body is 16 pixels.
+This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12em` ) which is equal to the permissible value, given the default pixel size of the body is 16 pixels. Given the computed valuevalue is equal to the permissible value, the [priority][] is not taken into consideration.
 
 ```html
 <strong style="word-spacing: 1.92pt !important;">
@@ -96,7 +95,7 @@ This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12e
 This `article` element has both `word-spacing` and `line-height` specified, which are both below the permissible minimum, given the default pixel size of the body is 16 pixels.
 
 ```html
-<article style="word-spacing: 1.8pt !important; line-height: 1em !important;">
+<article style="word-spacing: 1.8pt; line-height: 1em;">
 	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
 	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
 </article>
@@ -109,7 +108,7 @@ This `article` element has both `word-spacing` and `line-height` specified, whic
 ```html
 <html>
 	<body style="font-size: 20px">
-		<article style="font-size: 16px; word-spacing: 1.8pt !important; line-height: 1em !important;">
+		<article style="font-size: 16px; word-spacing: 1.8pt; line-height: 1em;">
 			The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
 			sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
 		</article>
@@ -121,7 +120,7 @@ This `article` element has both `word-spacing` and `line-height` specified, whic
 
 #### Failed Example 1
 
-This `p` element has a `line-height` of `30px !important` (equals `1.875em`) which is above the permissible minimum, given the default pixel size of the body is 16 pixels.
+This `p` element has a `line-height` of `30px !important` (equals `1.875em` ) which is above the permissible minimum, given the default pixel size of the body is 16 pixels.
 
 ```html
 <p style="line-height: 30px !important">
@@ -143,7 +142,7 @@ This `div` element has a `letter-spacing` of `1em !important` which is above to 
 
 #### Failed Example 3
 
-This `strong` element has a `word-spacing` of `8px !important` (equals `0.5em`) which is above the permissible value, given the default pixel size of the body is 16 pixels.
+This `strong` element has a `word-spacing` of `8px !important` (equals `0.5em` ) which is above the permissible value, given the default pixel size of the body is 16 pixels.
 
 ```html
 <strong style="word-spacing: 8px !important;">
@@ -165,7 +164,7 @@ This `article` element has both `letter-spacing` and `line-height` specified, wh
 
 #### Failed Example 5
 
-This `p` element has a `line-height` of `1.25em !important`, which is greater than `1.5em` given the body has a default pixel size of 24 pixels.
+This `p` element has a `line-height` of `1.25em !important` , which is greater than `1.5em` given the body has a default pixel size of 24 pixels.
 
 ```html
 <html>
@@ -182,7 +181,7 @@ This `p` element has a `line-height` of `1.25em !important`, which is greater th
 
 #### Inapplicable Example 1
 
-This `p` element is not [visible][] because of `display: none`.
+This `p` element is not [visible][] because of `display: none` .
 
 ```html
 <p style="display: none">
@@ -200,6 +199,25 @@ This text is not [visible][] because it is positioned off screen.
 	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
 	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
 </p>
+```
+
+#### Inapplicable Example 3
+
+This `body` element does not have `style` attribute specified.
+
+```html
+<html>
+	<style>
+		body {
+			line-height: 50px;
+		}
+	</style>
+
+	<body>
+		The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
+		sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
+	</body>
+</html>
 ```
 
 [visible]: #visible 'Definition of visible'

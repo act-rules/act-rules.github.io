@@ -27,6 +27,10 @@ input_aspects:
 acknowledgments:
   authors:
     - Bryn Anderson
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'alt-require'
 ---
 
 ## Applicability
@@ -89,7 +93,7 @@ This `img` element has an [accessible name][] equivalent to the filename. The [a
 
 This `img` element has 3 [image sources][] for [device-pixel-ratio][]-based selection, through its `src` and `srcset` attributes. Its [accessible name][] is equivalent to the [filename][] of one of its [image sources][] and accurately describes each of them.
 
-**Note:** All images used as [image sources][] in this example are actually copies of the same image, thus making the [image source][] selection a bit artificial and only for the purpose of illustrating the rule.
+**Note:** All images used as [image sources][] in this example are actually copies of the same image, thus making the [image source][image sources] selection a bit artificial and only for the purpose of illustrating the rule.
 
 ```html
 <html lang="en">
@@ -104,11 +108,11 @@ This `img` element has 3 [image sources][] for [device-pixel-ratio][]-based sele
 </html>
 ```
 
-#### Passed Example 4
+#### Passed Example 4
 
 This `img` element has 3 [image sources][] for [Art direction][]-based selection, through its `src` attribute and its siblings `source` elements with the same `picture` parent. Its [accessible name][] is equivalent to the [filename][] of one of its [image sources][] and accurately describes each of them.
 
-**Note:** All images used as [image sources][image source] in this example are actually copies of the same image, thus making the [image source][] selection a bit artificial and only for the purpose of illustrating the rule.
+**Note:** All images used as [image sources][] in this example are actually copies of the same image, thus making the [image source][image sources] selection a bit artificial and only for the purpose of illustrating the rule.
 
 ```html
 <html lang="en">
@@ -146,7 +150,7 @@ This `input` element with a `type` of `image` has a [semantic role][] of `img` a
 
 This `img` element has 3 [image sources][] for [Art direction][]-based selection, through its `src` attribute and its siblings `source` elements with the same `picture` parent. Its [accessible name][] is equivalent to the [filename][] of one of its [image sources][] but does not describe the second one (`pain`).
 
-**Note:** Two of the images used as [image sources][image source] in this example are actually copies of the same image, thus making the [image source][] selection a bit artificial and only for the purpose of illustrating the rule.
+**Note:** Two of the images used as [image sources][] in this example are actually copies of the same image, thus making the [image source][image sources] selection a bit artificial and only for the purpose of illustrating the rule.
 
 ```html
 <html lang="en">

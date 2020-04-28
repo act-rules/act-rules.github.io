@@ -70,7 +70,7 @@ This `img` element has an [accessible name][] equivalent to the filename. The [a
 
 ```html
 <html lang="en">
-	<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/copenhagen" alt="copenhagen" />
+	<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn" alt="nyhavn" />
 </html>
 ```
 
@@ -80,8 +80,8 @@ This `img` element has an [accessible name][] equivalent to the filename. Becaus
 
 ```html
 <html lang="en">
-	<a href="/test-assets/image-filename-as-accessible-name-9eb3f6/copenhagen.jpeg" download
-		>Download <img src="/test-assets/image-filename-as-accessible-name-9eb3f6/copenhagen.jpeg" alt="copenhagen.jpeg"
+	<a href="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg" download
+		>Download <img src="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg" alt="nyhavn.jpeg"
 	/></a>
 </html>
 ```
@@ -137,7 +137,7 @@ This `img` element has [accessible name][] matching the image filename. The pres
 
 ```html
 <html lang="en">
-	<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/copenhagen.jpeg" alt="copenhagen.jpeg" />
+	<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg" alt="nyhavn.jpeg" />
 </html>
 ```
 

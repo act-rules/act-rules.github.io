@@ -18,7 +18,7 @@ acknowledgments:
   authors:
     - Carlos Duarte
   previous_authors:
-    - Anne Thyme Nørregaard	
+    - Anne Thyme Nørregaard
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -367,7 +367,7 @@ These two `span` elements do not have a [semantic role][] of link.
 The second HTML `a` element has an empty [accessible name][].
 
 ```html
-<a href="http://facebook.com">Follow us</a> <a href="http://facebook.com"><img src="facebook.jpg" /></a>
+<a href="http://facebook.com">Follow us</a> <a href="http://facebook.com"><img src="facebook.jpg"/></a>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

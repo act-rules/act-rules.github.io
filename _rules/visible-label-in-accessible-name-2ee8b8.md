@@ -16,6 +16,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
   - DOM Tree
   - CSS Styling
 acknowledgments:
@@ -47,7 +48,7 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 
@@ -154,10 +155,13 @@ The content of this link is [non-text content][].
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
-[visible]: #visible 'Definition of visible'
+[explicit role]: #explicit-role 'Definition of explicit role'
+[focusable]: #focusable 'Definition of focusable'
+[non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content 'Definition of Non-text content'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic role'
+[supports name from content]: https://www.w3.org/TR/wai-aria-1.1/#namefromcontent 'Definition of Supports name from contents'
+[visible]: #visible 'Definition of visible'
 [visible text content]: #visible-text-content 'Definition of Visible text content'
 [whitespace]: #whitespace 'Definition of Whitespace'
 [widget roles]: https://www.w3.org/TR/wai-aria-1.1/#widget_roles 'Definition of Widget role'
-[supports name from content]: https://www.w3.org/TR/wai-aria-1.1/#namefromcontent 'Definition of Supports name from contents'
-[non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content 'Definition of Non-text content'

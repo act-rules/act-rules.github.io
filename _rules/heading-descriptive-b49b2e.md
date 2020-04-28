@@ -11,6 +11,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
   - DOM Tree
   - CSS Styling
   - Language
@@ -39,7 +40,7 @@ This rule assumes that the language of each test target can be correctly determi
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `heading` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 
@@ -234,7 +235,12 @@ Empty heading marked up with `role="heading"` is not [visible][].
 </html>
 ```
 
+[explicit role]: #explicit-role 'Definition of explicit role'
+[focusable]: #focusable 'Definition of focusable'
+[global]: https://www.w3.org/TR/wai-aria-1.1/#global_states 'Definition of Global ARIA States and Properties'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[property]: https://www.w3.org/TR/wai-aria/#dfn-property 'Definition of ARIA Property'
 [section of the content]: #section-of-content 'Definition of section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'

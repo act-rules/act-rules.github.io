@@ -140,5 +140,22 @@ function getSpellIgnored() {
 	const ignoreDom = Array.from(ariaQuery.dom.keys())
 	const ignoreRoles = Array.from(ariaQuery.roles.keys())
 
-	return [...ignoreConfigured, ...ignoreExtra, ...ignoreAria, ...ignoreDom, ...ignoreRoles]
+	return [
+		...ignoreConfigured,
+		...ignoreConfigured.map(capitalizeWord),
+		...ignoreExtra,
+		...ignoreAria,
+		...ignoreDom,
+		...ignoreRoles,
+	]
+}
+
+/**
+ * Helper to capitalise first character of a word
+ */
+function capitalizeWord(word) {
+	if (typeof word !== 'string') {
+		return ''
+	}
+	return word.charAt(0).toUpperCase() + word.slice(1)
 }

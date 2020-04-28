@@ -31,14 +31,18 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any HTML element with the [semantic role][] of `img` or any HTML `input` element with a [`type`][type] of `image` when each of the following is true:
+The rule applies to any HTML `img` element or any HTML `input` element in the [Image Button][] state when each of the following is true:
 
 - the image is [included in the accessibility tree][]; and
-- the image has an [accessible name][] that is equivalent to the [filename][] specified in the `src` attribute. Difference in letter casing, leading and trailing [whitespace][] should be ignored.
+- the image has a non-empty [accessible name][] that is equivalent to the [filename][] of at least one of the [image sources][] in its [source set][] (for `img` elements), or to the [filename][] specified in its `src` attribute (for [Image Buttons][image button]. Difference in letter casing, leading and trailing [whitespace][] should be ignored.
+
+**Note:** `img` elements have a [source set][] which always includes the `src` attribute. [Image Buttons][image button] do not have a [source set][] and only have a `src` attribute.
+
+**Note:** The content of the [source set][] is computed according to the [Algorithm to update the source set][update source set]. It mostly contains the `src`, and `srcset` attributes, as well as preceding `source` siblings with the same `picture` parent.
 
 ## Expectation
 
-Each test target has an [accessible name][] that serves an equivalent purpose to the [non-text content][].
+Each test target has an [accessible name][] that serves an equivalent purpose to the [non-text content][]. If there are several [image sources][], then the [accessible name][] must accurately describe all of them.
 
 ## Assumptions
 
@@ -81,6 +85,41 @@ This `img` element has an [accessible name][] equivalent to the filename. The [a
 </html>
 ```
 
+#### Passed Example 3
+
+This `img` element has 3 [image sources][] for [device-pixel-ratio][]-based selection, through its `src` and `srcset` attributes. Its [accessible name][] is equivalent to the [filename][] of one of its [image sources][] and accurately describes each of them.
+
+**Note:** All images used as [image sources][] in this example are actually copies of the same image, thus making the [image source][] selection a bit artificial and only for the purpose of illustrating the rule.
+
+```html
+<html lang="en">
+	<img
+		src="test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg"
+		srcset="
+			test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn 1.5x,
+			test-assets/image-filename-as-accessible-name-9eb3f6/paris  2x
+		"
+		alt="Nyhavn"
+	/>
+</html>
+```
+
+#### Passed Example 4
+
+This `img` element has 3 [image sources][] for [Art direction][]-based selection, through its `src` attribute and its siblings `source` elements with the same `picture` parent. Its [accessible name][] is equivalent to the [filename][] of one of its [image sources][] and accurately describes each of them.
+
+**Note:** All images used as [image sources][image source] in this example are actually copies of the same image, thus making the [image source][] selection a bit artificial and only for the purpose of illustrating the rule.
+
+```html
+<html lang="en">
+	<picture>
+		<source media="(min-width: 45em)" srcset="test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn" />
+		<source media="(min-width: 32em)" srcset="test-assets/image-filename-as-accessible-name-9eb3f6/paris" />
+		<img src="test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg" alt="Nyhavn" />
+	</picture>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -100,6 +139,22 @@ This `input` element with a `type` of `image` has a [semantic role][] of `img` a
 ```html
 <html lang="en">
 	<input type="image" src="https://www.w3.org/WAI/demos/bad/before/img/top_weather.gif" alt="top_weather.gif" />
+</html>
+```
+
+#### Failed Example 3
+
+This `img` element has 3 [image sources][] for [Art direction][]-based selection, through its `src` attribute and its siblings `source` elements with the same `picture` parent. Its [accessible name][] is equivalent to the [filename][] of one of its [image sources][] but does not describe the second one (`pain`).
+
+**Note:** Two of the images used as [image sources][image source] in this example are actually copies of the same image, thus making the [image source][] selection a bit artificial and only for the purpose of illustrating the rule.
+
+```html
+<html lang="en">
+	<picture>
+		<source media="(min-width: 45em)" srcset="test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn" />
+		<source media="(min-width: 32em)" srcset="test-assets/image-filename-as-accessible-name-9eb3f6/pain" />
+		<img src="test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg" alt="Nyhavn" />
+	</picture>
 </html>
 ```
 
@@ -149,10 +204,25 @@ This `img` element has an [accessible name][] which is not equivalent to the fil
 </html>
 ```
 
+#### Inapplicable Example 5
+
+This `img` element has an empty [accessible name][].
+
+```html
+<html lang="en">
+	<img src="?" aria-label="" />
+</html>
+```
+
 [accessible name]: #accessible-name 'Definition of accessible name'
+[art direction]: https://html.spec.whatwg.org/multipage/images.html#art-direction 'Illustration of art direction'
+[device-pixel-ratio]: https://html.spec.whatwg.org/multipage/images.html#device-pixel-ratio 'Illustration of device-pixel-ratio'
 [filename]: #filename 'Definition of filename'
+[image button]: https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image) 'Definition of the Image Button state'
+[image sources]: https://html.spec.whatwg.org/multipage/images.html#image-source 'Definition of image source'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content
 [semantic role]: #semantic-role 'Definition of semantic role'
-[type]: https://html.spec.whatwg.org/#states-of-the-type-attribute
+[source set]: https://html.spec.whatwg.org/multipage/images.html#source-set 'Definition of source set'
+[update source set]: https://html.spec.whatwg.org/multipage/images.html#update-the-source-set 'Algorithm to update the source set'
 [whitespace]: #whitespace 'Definition of whitespace'

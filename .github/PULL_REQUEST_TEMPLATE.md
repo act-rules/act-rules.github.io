@@ -27,7 +27,7 @@ This will require a 2 weeks Final Call << new rule, or substantial changes affec
 - [ ] Reference any issue that the PR resolves at the top of this comment, but leave it open.
 - [ ] Optionally request feedback from anyone in particular by assigning them as "Reviewers".
 
-### **When merging a PR:\***
+### **When merging a PR:**
 
 - [ ] Close any issue that the PR resolves. This should happen automatically upon merging if the issue is referenced at the top of this comment.
 

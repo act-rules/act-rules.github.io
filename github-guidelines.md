@@ -9,7 +9,7 @@ GitHub has excellent documentation. If you are new to GitHub, please see their d
 - Submit a review with "changes requested" if any actions are needed from the author.
 - Submit with "approved" if you agree with the change, unless someone else in your organisation already approved the pull request (1 approval per organisation). This does not prevent you from requesting changes.
 - In addition to checking that the change in the pull request is correct, check whether or not the final call period is indicated correctly in the pull request description.
-- Keep your feedback relevant to the pull request. If you have feedback unrelated to the pull request, open an issue.
+- Keep your feedback relevant to the pull request. If you have feedback unrelated to the pull request, [open an issue](https://github.com/act-rules/act-rules.github.io/issues/new).
 
 ## For pull request authors
 
@@ -35,9 +35,9 @@ If any of these need to happen, ask the ACT-R chair instead.
 
 ## GitHub Permissions
 
-- By default, ACT-Rules participants will not be made collaborators on Github. Everyone will still be able to review pull requests. But pull requests can not be approved, and new pull requests can only be created through a fork.
+- By default, ACT-Rules participants will not be made collaborators on Github. Pull requests can not be approved. New pull requests can only be created via a code fork. Everyone will still be able to review pull requests.
 
-- ACT-Rules participants who are writing rules, or who are actively reviewing rules can be given "read" access to the repository. This enables us to assign issues and pull requests to them. Read access will be revoked if someone leaves the community group.
+- ACT-Rules participants who are writing rules or actively reviewing rules can be given "read" access to the repository. This enables us to assign issues and pull requests to them. Read access will be revoked if someone leaves the community group.
 
 - Frequent contributors can be given write access upon request, and provided they have authored or reviewed up to three rules in the past year. The ACT-Rules chair will regularly review the list of people with write access and can revoke write access if they feel it is no longer necessary.
 

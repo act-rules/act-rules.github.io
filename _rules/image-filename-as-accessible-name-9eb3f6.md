@@ -38,11 +38,11 @@ htmlHintIgnore:
 The rule applies to any HTML `img` element or any HTML `input` element in the [Image Button][] state when each of the following is true:
 
 - the image is [included in the accessibility tree][]; and
-- the image has a non-empty [accessible name][] that is equivalent to the [filename][] of at least one of the [image sources][] in its [source set][] (for `img` elements), or to the [filename][] specified in its `src` attribute (for [Image Buttons][image button]. Difference in letter casing, leading and trailing [whitespace][] should be ignored.
+- the image has a non-empty [accessible name][] that is equivalent to the [filename][] of at least one of the [image sources][] in its [source set][] (for `img` elements), or to the [filename][] specified in its `src` attribute (for [Image Buttons][image button]). Difference in letter casing, leading and trailing [whitespace][] should be ignored.
 
 **Note:** `img` elements have a [source set][] which always includes the `src` attribute. [Image Buttons][image button] do not have a [source set][] and only have a `src` attribute.
 
-**Note:** The content of the [source set][] is computed according to the [Algorithm to update the source set][update source set]. It mostly contains the `src`, and `srcset` attributes, as well as preceding `source` siblings with the same `picture` parent.
+**Note:** The content of the [source set][] is computed according to the [Algorithm to update the source set][update source set]. It essentially contains the `src`, and `srcset` attributes, as well as preceding `source` siblings with the same `picture` parent.
 
 ## Expectation
 

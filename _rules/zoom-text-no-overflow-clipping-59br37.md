@@ -37,8 +37,7 @@ Each test target is not [clipped by overflow][clipped] of an [ancestor][] in the
 
 - **text-overflow**: A [computed][] [white-space][] of `nowrap`, and a [computed][] [text-overflow][] that is not `clip`; or
 
-- **line wrapping**: A [computed][] [line-height][] equal to or greater than its
-  height of its [bounding box][], or in case of a [computed][] [overflow][] of `clip`, its [content box][].
+- **line wrapping**: A [computed][] [line-height][] equal to or greater than the height of its [bounding box][], or in case of a [computed][] [overflow][] of `clip`, its [content box][].
 
 ## Assumptions
 
@@ -138,7 +137,7 @@ This [text node][] is [clipped][] because it has a fixed height that does not le
 
 #### Failed Example 2
 
-This [text node][] is [clipped][] because its height is relative to the viewport height, leaving insufficient space for the page to be zoomed to 200% at a [viewport size][] of 640 by 512.
+This [text node][] is [clipped][] because its height is relative to the viewport height, leaving insufficient space for the page to be zoomed to 200% at a [viewport size][] of 1280 by 1024.
 
 ```html
 <div style="overflow: hidden; height: 16vh">

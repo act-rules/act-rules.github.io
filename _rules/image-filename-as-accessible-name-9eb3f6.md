@@ -98,7 +98,7 @@ This image button has an [accessible name][] equivalent to the filename. The [ac
 </html>
 ```
 
-#### Passed Example 4
+#### Passed Example 4
 
 This `img` element has an [accessible name][] equivalent to the filename. The [accessible name][] accurately describes the image in the language of the element (French, same as the language of the page).
 

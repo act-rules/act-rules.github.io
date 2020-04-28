@@ -50,11 +50,9 @@
 - testrunner
 - color
 - focusable
-- Focusable
 - unfocusable
 - tabindex
 - whitespace
-- Whitespace
 - textfield
 - namespace
 - namespaces
@@ -101,6 +99,7 @@
 - multipage
 - attr-input-type
 - wai-aria-1.1
+
 # Notes and acronyms
 - TODO
 - TBD
@@ -143,12 +142,9 @@
 
 # Unsure why the dictionary does not have these words
 - programmatically
-- Programmatically
 - personalization
-- Autofill
+- autofill
 - implementers
-- Implementers
-- Presentational
 - backtick
 - camelCase
 

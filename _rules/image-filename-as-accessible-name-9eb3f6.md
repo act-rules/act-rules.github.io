@@ -26,6 +26,8 @@ input_aspects:
   - Language
 acknowledgments:
   authors:
+    - Jean-Yves Moyen
+  previous_authors:
     - Bryn Anderson
   assets:
     - The picture of Nyhavn (Copenhagen) is authored by [Jorge Franganillo](https://500px.com/franganillo), licensed under the [Creative Commons Attribution 3.0 Unported](https://creativecommons.org/licenses/by/3.0/deed.en) license.

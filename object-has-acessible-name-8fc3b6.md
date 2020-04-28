@@ -3,7 +3,7 @@ id: 8fc3b6
 name: Object element has non-empty accessible name
 rule_type: atomic
 description: |
-  This rule checks that each object has a non-empty accessible name.
+  This rule checks that each `object` element  has a non-empty accessible name.
 accessibility_requirements:
   wcag20:1.1.1: # Non-text Content (A)
     forConformance: true

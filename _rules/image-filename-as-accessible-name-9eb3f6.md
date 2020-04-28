@@ -66,11 +66,11 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This `img` element has an [accessible name][] equivalent to the filename. The [accessible name][] accurately describes the image.
+This `img` element has an [accessible name][] equivalent to the filename (up to letter casing). The [accessible name][] accurately describes the image.
 
 ```html
 <html lang="en">
-	<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn" alt="nyhavn" />
+	<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn" alt="Nyhavn" />
 </html>
 ```
 
@@ -114,7 +114,7 @@ This `img` element has [accessible name][] matching the image filename. The name
 
 ```html
 <html lang="en">
-	<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/paris" alt="paris" />
+	<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/paris" alt="Paris" />
 </html>
 ```
 
@@ -179,7 +179,7 @@ This `img` element has an [accessible name][] which is not equivalent to the fil
 
 ```html
 <html lang="en">
-	<img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="modanna lily" />
+	<img src="test-assets/image-filename-as-accessible-name-9eb3f6/94251e110d24a4c2b6e6ce76e7203374" alt="Nyhavn" />
 </html>
 ```
 
@@ -190,9 +190,9 @@ This `img` element has an [accessible name][] which is not equivalent to the fil
 ```html
 <html lang="en">
 	<img
-		src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg"
-		alt="teaser_right2.jpg"
-		aria-label="modanna lily"
+		src="test-assets/image-filename-as-accessible-name-9eb3f6/94251e110d24a4c2b6e6ce76e7203374"
+		alt="94251e110d24a4c2b6e6ce76e7203374"
+		aria-label="Nyhavn"
 	/>
 </html>
 ```

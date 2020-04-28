@@ -23,18 +23,17 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to each HTML element that has one of the following [semantic roles][semantic role]:
-
-- `checkbox`,
-- `combobox`,
-- `listbox`,
-- `menuitemcheckbox`,
-- `menuitemradio`,
-- `radio`,
-- `searchbox`,
-- `slider`,
-- `spinbutton`,
-- `switch` or
+The rule applies to each HTML element that has one of the following [semantic roles][semantic role]: 
+- `checkbox`, 
+- `combobox`, 
+- `listbox`, 
+- `menuitemcheckbox`, 
+- `menuitemradio`, 
+- `radio`, 
+- `searchbox`, 
+- `slider`, 
+- `spinbutton`, 
+- `switch` or 
 - `textbox`.
 
 **Note**: The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.1][] roles that:
@@ -55,7 +54,6 @@ For each test target with a [form field error indicator][], at least one of the 
 ## Expectation 2
 
 For each test target with a [form field error indicator][], at least one of the [form field error indicators][form field error indicator] describes:
-
 - the cause of the error, or
 - how to resolve it,
 
@@ -64,7 +62,6 @@ in [text][] that is [visible][].
 ## Expectation 3
 
 For each test target with a [form field error indicator][], at least one of the [form field error indicators][form field error indicator] describes:
-
 - the cause of the error, or
 - how to resolve it,
 

@@ -153,7 +153,6 @@ This `object` element is not [included in the accessibility tree][] due to `disp
 
 ```html
 <object
-  title=""
   data="/test-assets/moon-audio/moon-speech.mp3"
   style="display: none;"
 ></object>
@@ -165,7 +164,6 @@ This `object` element is not [included in the accessibility tree][] due to `visi
 
 ```html
 <object
-  title=""
   data="/test-assets/moon-audio/moon-speech.mp3"
   style="visibility: hidden;"
 ></object>
@@ -177,7 +175,6 @@ This `object` element is not [included in the accessibility tree][] due to `aria
 
 ```html
 <object
-  title=""
   data="/test-assets/moon-audio/moon-speech.mp3"
   aria-hidden="true"
 ></object>

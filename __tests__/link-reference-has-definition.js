@@ -17,7 +17,7 @@ const uniqueArray = require('../utils/unique-array')
 
 describe(`Validate link references`, () => {
 	describeRule('Rules', ({ markdownAST }) => validateLinkReferences(markdownAST))
-	describePage('Pages', ({ markdownAST }) => validateLinkReferences(markdownAST))
+	// describePage('Pages', ({ markdownAST }) => validateLinkReferences(markdownAST))
 })
 
 function validateLinkReferences(markdownAST) {
@@ -35,6 +35,12 @@ function validateLinkReferences(markdownAST) {
 	test.each(linkReferences)('%s', linkRef => {
 		const actual = definitions.includes(linkRef)
 		const msg = `Link reference -> [${linkRef}] is not defined`
+		expect(actual, msg).toBe(true)
+	})
+
+	test.each(definitions)('%s', dfn => {
+		const actual = linkReferences.includes(dfn)
+		const msg = `Definition -> [${dfn}] is declared but not used`
 		expect(actual, msg).toBe(true)
 	})
 }

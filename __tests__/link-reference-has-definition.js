@@ -15,9 +15,9 @@ const describePage = require('../test-utils/describe-page')
 const getMarkdownAstNodesOfType = require('../utils/get-markdown-ast-nodes-of-type')
 const uniqueArray = require('../utils/unique-array')
 
-describe(`Validate link references`, () => {
+describe(`Validate link references and definitions`, () => {
 	describeRule('Rules', ({ markdownAST }) => validateLinkReferences(markdownAST))
-	// describePage('Pages', ({ markdownAST }) => validateLinkReferences(markdownAST))
+	describePage('Pages', ({ markdownAST }) => validateLinkReferences(markdownAST))
 })
 
 function validateLinkReferences(markdownAST) {

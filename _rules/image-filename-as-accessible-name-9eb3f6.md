@@ -66,7 +66,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This `img` element has an [accessible name][] equivalent to the filename (up to letter casing). The [accessible name][] accurately describes the image.
+This `img` element has an [accessible name][] equivalent to the filename (ignoring letter casing). The [accessible name][] accurately describes the image.
 
 ```html
 <html lang="en">
@@ -110,7 +110,7 @@ This `img` element has an [accessible name][] equivalent to the filename. The [a
 
 #### Failed Example 1
 
-This `img` element has [accessible name][] matching the image filename. The name does not describe the image.
+This `img` element has [accessible name][] matching the image filename (ignoring letter casing). The name does not describe the image.
 
 ```html
 <html lang="en">

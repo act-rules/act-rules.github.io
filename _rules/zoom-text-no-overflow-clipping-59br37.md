@@ -26,7 +26,7 @@ The rule applies to any [text node][] for which all of the following is true whe
 
 - The [text node][] is [visible][]; and
 - The [text node][] has an HTML element as a [parent][] in the [flat tree][]; and
-- The [text node][] has an [ancestor][] in the [flat tree][] with the a [computed][] [overflow-x][overflow] or [overflow-y][overflow] of `hidden` or `clip`; and
+- The [text node][] has an [ancestor][] in the [flat tree][] with a [computed][] [overflow-x][overflow] or [overflow-y][overflow] of `hidden` or `clip`; and
 - The [text node][] does not have an [ancestor][] in the [flat tree][] with an `aria-hidden` attribute set to `true`
 
 **Note**: A [viewport size][] of 640 by 512 is equivalent to a [viewport size][] of 1280 by 1024 zoomed 200%.

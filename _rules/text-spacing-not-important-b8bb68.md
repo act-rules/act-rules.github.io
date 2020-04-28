@@ -11,13 +11,16 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 
-input_aspects: + DOM Tree
-  + CSS Styling
+input_aspects:
+  - DOM Tree
+  - CSS Styling
 
 acknowledgments:
   authors:
     - Jey Nandakumar
----## Applicability
+---
+
+## Applicability
 
 This rule applies to any HTML element that is [visible][] and has one of the following CSS properties set by the `style` attribute:
 
@@ -81,7 +84,7 @@ This `div` element has a `letter-spacing` of `0.12em` which is equal to the perm
 
 #### Passed Example 3
 
-This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12em` ) which is equal to the permissible value, given the default pixel size of the body is 16 pixels. Given the computed valuevalue is equal to the permissible value, the [priority][] is not taken into consideration.
+This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12em` ) which is equal to the permissible value, given the default pixel size of the body is 16 pixels. Given the computed value is equal to the permissible value, the [priority][] is not taken into consideration.
 
 ```html
 <strong style="word-spacing: 1.92pt !important;">

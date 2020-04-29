@@ -7,11 +7,7 @@ input_aspects:
   - DOM tree
 ---
 
-A _semantic association_, also called [role][], indicates an object's type. This allows tools to present and support interaction with the object in a manner that is consistent with user expectations about other objects of that type.
-
-Valid semantic associations are defined by standards. For web content and applications these are defined within the various [WAI-ARIA specifications][].
-
-The _semantic role_ of an element is one way to give it a semantic association. It is determined by the first of these cases that applies:
+The _semantic role_ of an element is determined by the first of these cases that applies:
 
 1. **Conflict** If the element has an [explicit role][] which is either `none` or `presentation`, but the element is [included in the accessibility tree][]; or would be [included in the accessibility tree][] when its [hidden state](#hidden-state) is false, then its _semantic role_ is its **[implicit role][]**.
 1. **Explicit** If the element has an [explicit role][], then its _semantic role_ is its [explicit role][].
@@ -28,5 +24,3 @@ The _semantic role_ of an element is one way to give it a semantic association. 
 [implicit role]: #implicit-role 'Definition of Implicit Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
-[role]: https://www.w3.org/TR/wai-aria-1.1/#dfn-role 'WAI-ARIA definition of role'
-[wai-aria specifications]: #wai-aria-specifications 'Definition of WAI-ARIA specifications'

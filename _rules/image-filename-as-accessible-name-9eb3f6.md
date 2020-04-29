@@ -209,16 +209,6 @@ This `img` element has an [accessible name][] which is not equivalent to the fil
 </html>
 ```
 
-#### Inapplicable Example 5
-
-This `img` element has an empty [accessible name][].
-
-```html
-<html lang="en">
-	<img src="?" aria-label="" />
-</html>
-```
-
 [accessible name]: #accessible-name 'Definition of accessible name'
 [art direction]: https://html.spec.whatwg.org/multipage/images.html#art-direction 'Illustration of art direction'
 [device-pixel-ratio]: https://html.spec.whatwg.org/multipage/images.html#device-pixel-ratio 'Illustration of device-pixel-ratio'

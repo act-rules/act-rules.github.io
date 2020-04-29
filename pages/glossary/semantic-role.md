@@ -13,9 +13,10 @@ Valid semantic associations are defined by standards. For web content and applic
 
 The _semantic role_ of an element is one way to give it a semantic association. It is determined by the first of these cases that applies:
 
+1. **Conflict** If the element has an [explicit role][] which is either `none` or `presentation`, but the element is [included in the accessibility tree][]; or would be [included in the accessibility tree][] when its [hidden state](#hidden-state) is false, then its _semantic role_ is its **[implicit role][]**.
 1. **Conflict** If the element has an [explicit role][] which is either `none` or `presentation`, but the element is [included in the accessibility tree][]; or would be [included in the accessibility tree][] when its [hidden state][] is true, then its _semantic role_ is its **[implicit role][]**.
-2. **Explicit** If the element has an [explicit role][], then its _semantic role_ is its [explicit role][].
-3. **Implicit** The _semantic role_ of the element is its [implicit role][].
+1. **Explicit** If the element has an [explicit role][], then its _semantic role_ is its [explicit role][].
+1. **Implicit** The _semantic role_ of the element is its [implicit role][].
 
 #### Accessibility Support for Definition of Semantic Role
 

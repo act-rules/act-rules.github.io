@@ -30,13 +30,15 @@ This rule applies to any element with the [semantic role][] of heading that is e
 
 ## Expectation
 
-Each target element describes the topic or purpose of its [section of the content][].
+Each target element describes the topic or purpose of its [implicit section of content][].
 
 **Note:** Headings do not need to be lengthy. A word, or even a single character, may suffice.
 
 ## Assumptions
 
-This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
+- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
+- This definition assumes that the `hgroup` element is not used.
+- This definition assumes that [nested browsing contexts][] included in an [implicit section of content][] do not contain any element with a role of `heading` and an `aria-level` lower or equal to the one of the `heading` defining this [implicit section of content][].
 
 ## Accessibility Support
 
@@ -56,7 +58,7 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 
 #### Passed Example 1
 
-Heading marked up with `h1` element that describes the topic or purpose of its [section of the content][].
+Heading marked up with `h1` element that describes the topic or purpose of its [implicit section of content][].
 
 ```html
 <html lang="en">
@@ -67,7 +69,7 @@ Heading marked up with `h1` element that describes the topic or purpose of its [
 
 #### Passed Example 2
 
-Heading marked up with `role="heading"` that describes the topic or purpose of its [section of the content][].
+Heading marked up with `role="heading"` that describes the topic or purpose of its [implicit section of content][].
 
 ```html
 <html lang="en">
@@ -78,7 +80,7 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 
 #### Passed Example 3
 
-Heading marked up with `role="heading"` that describes the topic or purpose of its [section of the content][], with a default aria-level assigned.
+Heading marked up with `role="heading"` that describes the topic or purpose of its [implicit section of content][], with a default aria-level assigned.
 
 ```html
 <html lang="en">
@@ -89,7 +91,7 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 
 #### Passed Example 4
 
-Heading marked up with `h1` element with an image that describes the topic or purpose of its [section of the content][].
+Heading marked up with `h1` element with an image that describes the topic or purpose of its [implicit section of content][].
 
 ```html
 <html lang="en">
@@ -102,7 +104,7 @@ Heading marked up with `h1` element with an image that describes the topic or pu
 
 #### Passed Example 5
 
-Heading marked up with `h1` element that is a single character that describes the topic or purpose of its [section of the content][].
+Heading marked up with `h1` element that is a single character that describes the topic or purpose of its [implicit section of content][].
 
 ```html
 <html lang="en">
@@ -122,7 +124,7 @@ Heading marked up with `h1` element that is a single character that describes th
 
 #### Passed Example 6
 
-Heading marked up with `role="heading"` that describes the topic or purpose of its [section of the content][]. The heading is positioned off screen and is [included in the accessibility tree][].
+Heading marked up with `role="heading"` that describes the topic or purpose of its [implicit section of content][]. The heading is positioned off screen and is [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -135,7 +137,7 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 
 #### Passed Example 7
 
-Heading marked up with `h1` element that describes the topic or purpose of its [section of the content][]. The heading is [visible][], but is not [included in the accessibility tree][].
+Heading marked up with `h1` element that describes the topic or purpose of its [implicit section of content][]. The heading is [visible][], but is not [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -148,7 +150,7 @@ Heading marked up with `h1` element that describes the topic or purpose of its [
 
 #### Failed Example 1
 
-Heading marked up with `h1` element that does not describe the topic or purpose of its [section of the content][].
+Heading marked up with `h1` element that does not describe the topic or purpose of its [implicit section of content][].
 
 ```html
 <html lang="en">
@@ -159,7 +161,7 @@ Heading marked up with `h1` element that does not describe the topic or purpose 
 
 #### Failed Example 2
 
-Heading marked up with `role="heading"` that does not describe the topic or purpose of its [section of the content][].
+Heading marked up with `role="heading"` that does not describe the topic or purpose of its [implicit section of content][].
 
 ```html
 <html lang="en">
@@ -170,7 +172,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed Example 3
 
-Heading marked up with `role="heading"` that does not describe the topic or purpose of its [section of the content][]. The heading is positioned off screen and is [included in the accessibility tree][].
+Heading marked up with `role="heading"` that does not describe the topic or purpose of its [implicit section of content][]. The heading is positioned off screen and is [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -183,7 +185,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed Example 4
 
-Heading marked up with `h1` element that does not describe the topic or purpose of its [section of the content][]. The heading is [visible][], but is not [included in the accessibility tree][].
+Heading marked up with `h1` element that does not describe the topic or purpose of its [implicit section of content][]. The heading is [visible][], but is not [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -239,8 +241,9 @@ Empty heading marked up with `role="heading"` is not [visible][].
 [focusable]: #focusable 'Definition of focusable'
 [global]: https://www.w3.org/TR/wai-aria-1.1/#global_states 'Definition of Global ARIA States and Properties'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[nested browsing contexts]: https://html.spec.whatwg.org/multipage/browsers.html#nested-browsing-context 'Definition of nested browsing context'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [property]: https://www.w3.org/TR/wai-aria/#dfn-property 'Definition of ARIA Property'
-[section of the content]: #section-of-content 'Definition of section of content'
+[implicit section of content]: #implicit-section-of-content 'Definition of implicit section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'

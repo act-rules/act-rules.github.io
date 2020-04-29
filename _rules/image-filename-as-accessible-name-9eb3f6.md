@@ -145,7 +145,7 @@ This `img` element has [accessible name][] matching the image filename. The pres
 
 #### Failed Example 4
 
-This `input` element with a `type` of `image` has a [semantic role][] of `img` and an [accessible name][] matching the filename. The presence of the file extension in the [accessible name][] is confusing and results in the [accessible name][] not accurately describing the image.
+This image button has an [accessible name][] matching the filename. The presence of the file extension in the [accessible name][] is confusing and results in the [accessible name][] not accurately describing the image.
 
 ```html
 <html lang="en">

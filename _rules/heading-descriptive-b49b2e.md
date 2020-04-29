@@ -11,6 +11,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
   - DOM Tree
   - CSS Styling
   - Language
@@ -41,7 +42,8 @@ Each target element describes the topic or purpose of any [section of content][]
 
 ## Accessibility Support
 
-The different kinds of [sections of content][section of content] ([explicit][explicit section of content], [implicit][implicit section of content] and [visual][visual section of content]) are not necessarily perceived by all users. Therefore, this rule may fail for only one kind of [sections of content][section of content], without creating any accessibility issue for some users.
+- The different kinds of [sections of content][section of content] ([explicit][explicit section of content], [implicit][implicit section of content] and [visual][visual section of content]) are not necessarily perceived by all users. Therefore, this rule may fail for only one kind of [sections of content][section of content], without creating any accessibility issue for some users.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `heading` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 
@@ -241,8 +243,13 @@ Empty heading marked up with `role="heading"` is not [visible][].
 [associated]: #heading-section-association 'Definition of association between headings and sections'
 [explicit section of content]: #explicit-section-of-content 'Definition of explicit section of content'
 [implicit section of content]: #implicit-section-of-content 'Definition of implicit section of content'
+[explicit role]: #explicit-role 'Definition of explicit role'
+[focusable]: #focusable 'Definition of focusable'
+[global]: https://www.w3.org/TR/wai-aria-1.1/#global_states 'Definition of Global ARIA States and Properties'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [nested browsing context]: https://html.spec.whatwg.org/multipage/browsers.html#nested-browsing-context 'Definition of nested browsing context'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[property]: https://www.w3.org/TR/wai-aria/#dfn-property 'Definition of ARIA Property'
 [section of content]: #section-of-content 'Definition of section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'

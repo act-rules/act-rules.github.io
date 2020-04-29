@@ -50,11 +50,9 @@
 - testrunner
 - color
 - focusable
-- Focusable
 - unfocusable
 - tabindex
 - whitespace
-- Whitespace
 - textfield
 - namespace
 - namespaces
@@ -75,10 +73,6 @@
 - Helvetica
 - WHATWG
 - fieldsets
-
-# spell checker checks against strict casing & hence some repeated words here
-- Autocomplete
-- Focusable
 
 # Parts of url
 - http
@@ -142,6 +136,7 @@
 - autofill
 - implementers
 - subtree
+- presentational
 - backtick
 - camelCase
 

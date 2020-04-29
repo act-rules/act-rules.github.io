@@ -12,7 +12,7 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-  - Accessibiliy tree
+  - Accessibility tree
   - CSS Styling
 acknowledgments:
   authors:
@@ -36,9 +36,9 @@ Any `img`, `canvas` or `svg` element that is [visible][] and for which one of th
 - **ignored svg**: The element is an `svg` with an empty (`""`) [accessible name][] and a [semantic role][] of `graphics-document`; or
 - **ignored canvas**: The element is a `canvas` with an empty (`""`) [accessible name][] and no [explicit semantic role][]; or
 
-**Exception**: Elements for which one of the following is true are always inapplicable:
+**Exception**: This rule never applies to elements for which one of the following is true:
 
-- The element has an [ancestor][] in the [flat tree][] of an element that is [named from author][]; or
+- The element has an [ancestor][] in the [flat tree][] that is [named from author][]; or
 - The element is an `img` element where the [current request][]'s [state][image request state] is not [completely available][].
 
 **Note**: An example of an image ignored because of "named from author" is when the image is a descendant of a `button` element that uses `aria-label` for its accessible name.

@@ -6,7 +6,7 @@ description: |
   This rule checks that each ARIA state or property has a valid value.
 accessibility_requirements:
   aria11:state_prop_values:
-    title: ARIA 1.1, 6.3 Values for States and Properties
+    title: ARIA 1.1, 6.3 Valaues for States and Properties
     forConformance: true
     failed: not satisfied
     passed: satisfied
@@ -257,6 +257,8 @@ Element has ARIA role, but no ARIA states or properties
 #### Inapplicable Example 3
 
 `aria-checked` state with empty value
+
+**Note**: The HTML validator flags an `aria-checked` attribute with an empty value as an issue. However WAI-ARIA 1.1 indicates `aria-checked` has a default value of `undefined`.
 
 ```html
 <div role="checkbox" aria-checked>Accept terms and conditions</div>

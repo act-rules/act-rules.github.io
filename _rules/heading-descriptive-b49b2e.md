@@ -37,8 +37,8 @@ Each target element describes the topic or purpose of its [implicit section of c
 ## Assumptions
 
 - This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
-- This definition assumes that the `hgroup` element is not used.
-- This definition assumes that [nested browsing contexts][] included in an [implicit section of content][] do not contain any element with a role of `heading` and an `aria-level` lower or equal to the one of the `heading` defining this [implicit section of content][].
+- This rule assumes that the `hgroup` element is not used.
+- This rule assumes that [nested browsing contexts][] included in an [implicit section of content][] do not contain any element with a role of `heading` and an `aria-level` lower or equal to the one of the `heading` defining this [implicit section of content][].
 
 ## Accessibility Support
 

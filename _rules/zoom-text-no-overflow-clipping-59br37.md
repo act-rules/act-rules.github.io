@@ -67,7 +67,7 @@ _No accessibility support issues known._
 This [text node][] is fully [visible][] at a [viewport size][] of 640 by 512.
 
 ```html
-<div style="white-space: nowrap; overflow: hidden;">
+<div style="white-space: nowrap; overflow: hidden; font-size: 16px;">
 	Once upon a midnight dreary, while I pondered, weak and weary,<br />
 	Over many a quaint and curious volume of forgotten lore.<br />
 	While I nodded, nearly napping, suddenly there came a tapping,<br />
@@ -82,7 +82,7 @@ This [text node][] is fully [visible][] at a [viewport size][] of 640 by 512.
 This [text node][] is [clipped][] using `text-overflow: ellipsis` at a [viewport size][] of 640 by 512. A link to a full version of the poem is also provided.
 
 ```html
-<div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+<div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 16px;">
 	Once upon a midnight dreary, while I pondered, weak and weary, Over many a quaint and curious volume of forgotten
 	lore. While I nodded, nearly napping, suddenly there came a tapping.
 </div>
@@ -100,6 +100,7 @@ This [text node][] is restricted to a single line, by setting a `line-height` th
 		word-wrap: break-word;
 		height: 16px;
 		line-height: 16px;
+		font-size: 16px;
 	}
 </style>
 <div class="wordClip">
@@ -114,7 +115,7 @@ This [text node][] is restricted to a single line, by setting a `line-height` th
 This [text node][] is not [clipped][] with `overflow: hidden` because it has a parent with `overflow: auto` at a [viewport size][] of 640 by 512.
 
 ```html
-<div style="overflow: hidden; height: 2em;">
+<div style="overflow: hidden; height: 2em; font-size: 16px;">
 	<div style="overflow: auto; height: 2em;">
 		Once upon a midnight dreary, while I pondered, weak and weary, Over many a quaint and curious volume of forgotten
 		lore. While I nodded, nearly napping, suddenly there came a tapping.
@@ -129,7 +130,7 @@ This [text node][] is not [clipped][] with `overflow: hidden` because it has a p
 This [text node][] is [clipped][] because it has a fixed height that does not leave enough space for the content to wrap.
 
 ```html
-<div style="overflow: hidden; height: 1.5em;">
+<div style="overflow: hidden; height: 1.5em; font-size: 16px;">
 	Once upon a midnight dreary, while I pondered, weak and weary, Over many a quaint and curious volume of forgotten
 	lore. While I nodded, nearly napping, suddenly there came a tapping.
 </div>
@@ -140,7 +141,7 @@ This [text node][] is [clipped][] because it has a fixed height that does not le
 This [text node][] is [clipped][] because its height is relative to the viewport height, leaving insufficient space for the page to be zoomed to 200% at a [viewport size][] of 1280 by 1024.
 
 ```html
-<div style="overflow: hidden; height: 16vh">
+<div style="overflow: hidden; height: 16vh; font-size: 16px;">
 	Once upon a midnight dreary, while I pondered, weak and weary,<br />
 	Over many a quaint and curious volume of forgotten lore.<br />
 	While I nodded, nearly napping, suddenly there came a tapping,<br />
@@ -161,6 +162,7 @@ This [text node][] is [clipped][] by style that is applied at a [viewport size][
 			height: 1.5em;
 			width: 50%;
 			overflow: hidden;
+			font-size: 16px;
 		}
 	}
 </style>
@@ -196,7 +198,7 @@ This [text node][] has an SVG element as a [parent][].
 This [text node][] has an [ancestor][] with `overflow: auto`.
 
 ```html
-<div style="overflow: auto; height: 1.5em;">
+<div style="overflow: auto; height: 1.5em; font-size: 16px;">
 	Once upon a midnight dreary, while I pondered, weak and weary, Over many a quaint and curious volume of forgotten
 	lore. While I nodded, nearly napping, suddenly there came a tapping.
 </div>
@@ -222,6 +224,7 @@ This [text node][] with the text "Web Content Accessibility Guidelines 2.1" is f
 			width: 1px;
 			height: 1px;
 			overflow: hidden;
+			font-size: 16px;
 		}
 	}
 </style>

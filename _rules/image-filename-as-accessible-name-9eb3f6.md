@@ -21,6 +21,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
   - DOM Tree
   - CSS Styling
   - Language
@@ -54,7 +55,7 @@ This rule assumes that the language of each test target can be correctly determi
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `img` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 
@@ -221,11 +222,16 @@ This `img` element has an empty [accessible name][].
 [accessible name]: #accessible-name 'Definition of accessible name'
 [art direction]: https://html.spec.whatwg.org/multipage/images.html#art-direction 'Illustration of art direction'
 [device-pixel-ratio]: https://html.spec.whatwg.org/multipage/images.html#device-pixel-ratio 'Illustration of device-pixel-ratio'
+[explicit role]: #explicit-role 'Definition of Explicit Role'
 [filename]: #filename 'Definition of filename'
 [image button]: https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image) 'Definition of the Image Button state'
 [image sources]: https://html.spec.whatwg.org/multipage/images.html#image-source 'Definition of image source'
+[focusable]: #focusable 'Definition of focusable'
+[global]: https://www.w3.org/TR/wai-aria-1.1/#global_states 'Definition of Global ARIA States and Properties'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[property]: https://www.w3.org/TR/wai-aria/#dfn-property 'Definition of ARIA Property'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [source set]: https://html.spec.whatwg.org/multipage/images.html#source-set 'Definition of source set'
 [update source set]: https://html.spec.whatwg.org/multipage/images.html#update-the-source-set 'Algorithm to update the source set'

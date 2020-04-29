@@ -329,4 +329,3 @@ An `a` element without the [semantic role][] `link`.
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [programmatically determined link context]: #programmatically-determined-link-context 'Definition of programmatically determined link context'
 [semantic role]: #semantic-role 'Definition of semantic role'
-[whitespace]: #whitespace 'Definition of whitespace'

@@ -111,7 +111,7 @@ This [document][] has one [section of content][] for the navigation links, and t
 
 #### Passed Example 3
 
-In this [document][], the headings is not the first element of the [main section of content][], but it is the first with a non-empty [accessible name][] (inherited from its content).
+In this [document][], the heading is not the first element of the [main section of content][], but it is the first with a non-empty [accessible name][] (inherited from its content).
 
 ```html
 <html>

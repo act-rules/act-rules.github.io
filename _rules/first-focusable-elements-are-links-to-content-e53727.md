@@ -49,7 +49,7 @@ Each [section of content][] in the [document][] that is preceded (in tree order)
 
 ## Assumptions
 
-- This rule assumes that description of the link is provided through its [accessible name][].
+- This rule assumes that the description of the link is provided through its [accessible name][].
 - This rule assumes that that [Technique G124: Adding links at the top of the page to each area of the content][tech g124] requires the that the link can be activated by use of keyboard only (in order to be useful for keyboard users).
 - This rule assumes that [sections of repeated content][section of repeated content] have already been identified within the test target, for example by comparison with other test targets within the same website, or any other means.
 - This rule assumes that any global dismissible information that only appears once per site has already been acknowledged and is not displayed any more.

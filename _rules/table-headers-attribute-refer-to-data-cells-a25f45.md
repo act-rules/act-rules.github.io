@@ -28,9 +28,17 @@ acknowledgments:
 
 This rule applies to any `headers` attribute specified on a [`cell`][] within a [`table`][] element, where the [`table`][] element is [visible][] and [included in the accessibility tree][].
 
-## Expectation
+## Expectation 1
 
-Each target attribute is [a set of space separated IDs][], each of which is the ID of an element, that is a [`cell`][] of the same [`table`][] as the target element.
+Each target attribute is [a set of space separated IDs][], each of which is the ID of an element, that is a [`cell`][] of the same [`table`][].
+
+**Note:** `headers` attribute referencing elements that are non-existent or not in the table are ignored when [assigning header cells (step 3, first case, point 2)](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells).
+
+## Expectation 2
+
+Each target attribute is [a set of space separated IDs][], none of which is the ID of the element on which the test target is specified.
+
+**Note:** `headers` attribute referencing to the cell itself are ignored when [assigning header cells (step 3, first case, point 2)](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells).
 
 ## Assumptions
 
@@ -217,7 +225,7 @@ The `td` element has a `headers` attribute referring to an ID that does not exis
 
 #### Failed Example 2
 
-The `td` element has a `headers` attribute referring to it's own ID.
+The `td` element has a `headers` attribute referring to its own ID.
 
 ```html
 <table>
@@ -272,7 +280,7 @@ There is no `headers` attribute.
 
 #### Inapplicable Example 2
 
-The `table` has a `role="presentation"` and thus is [decorative][].
+The `table` has a `role="presentation"` and thus is not [included in the accessibility tree][].
 
 ```html
 <table role="presentation">
@@ -343,9 +351,7 @@ The `table` is not [included in the accessibility tree][].
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [visible]: #visible 'Definition of visible'
-[decorative]: #marked-as-decorative 'Definition of marked as decorative'
 [`cell`]: https://html.spec.whatwg.org/#concept-cell 'Definition of cell'
-[semantic role]: #semantic-role 'Definition of semantic role'
 [a set of space separated ids]: https://html.spec.whatwg.org/#set-of-space-separated-tokens 'Space separated tokens'
 [`table`]: https://html.spec.whatwg.org/#concept-table 'Definition of table'
 [computes an adequate fallback header]: https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics 'Forming relationships between data cells and header cells'

@@ -33,12 +33,10 @@ An element is considered disabled when it has been rendered [inoperable][] using
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [disabled]: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-disabled
 [fieldset]: https://html.spec.whatwg.org/multipage/form-elements.html#the-fieldset-element
-[focusable]: https://html.spec.whatwg.org/multipage/interaction.html#focusable-area
 [form-associated custom element]: https://html.spec.whatwg.org/multipage/custom-elements.html#form-associated-custom-element
 [input]: https://html.spec.whatwg.org/multipage/input.html#the-input-element
 [legend]: https://html.spec.whatwg.org/multipage/form-elements.html#the-legend-element
 [inoperable]: https://www.w3.org/TR/wai-aria/#dfn-operable
-[perceivable]: https://www.w3.org/TR/wai-aria/#dfn-perceivable
 [pointer-events]: https://www.w3.org/TR/SVG2/interact.html#PointerEventsProperty
 [select]: https://html.spec.whatwg.org/multipage/form-elements.html#the-select-element
 [shadow-including descendant]: https://dom.spec.whatwg.org/#concept-shadow-including-descendant

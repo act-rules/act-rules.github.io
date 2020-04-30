@@ -12874,10 +12874,10 @@
       }
     },
     {
-      "testcaseId": "9edd50994d1304396c7913849dc3c250878f0338",
+      "testcaseId": "15d27cf0b188b398cb3a6fae685ca6ae5bbed81d",
       "testcaseTitle": "Passed Example 4",
-      "url": "https://act-rules.github.io/testcases/d0f69e/9edd50994d1304396c7913849dc3c250878f0338.html",
-      "relativePath": "testcases/d0f69e/9edd50994d1304396c7913849dc3c250878f0338.html",
+      "url": "https://act-rules.github.io/testcases/d0f69e/15d27cf0b188b398cb3a6fae685ca6ae5bbed81d.html",
+      "relativePath": "testcases/d0f69e/15d27cf0b188b398cb3a6fae685ca6ae5bbed81d.html",
       "expected": "passed",
       "ruleId": "d0f69e",
       "ruleName": "All table header cells have assigned data cells",

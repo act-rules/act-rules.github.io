@@ -23,7 +23,7 @@ This rule applies to any [HTML web page][].
 
 ## Expectations
 
-Within the test target, there is at least on element which:
+Within the test target, there is at least one element which:
 
 - has [semantic role][] of `main`; and
 - is [included in the accessibility tree][].

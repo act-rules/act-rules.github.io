@@ -143,7 +143,7 @@ The links in the [initial segment][] (composed of the first three focusable elem
 
 #### Passed Example 3
 
-The first three [focusable][] elements have a [semantic role][] of `link` and can be activated by keyboard only.
+The first three [focusable][] elements have a [semantic role][] of `link` and can be activated by keyboard.
 
 ```html
 <html lang="en">

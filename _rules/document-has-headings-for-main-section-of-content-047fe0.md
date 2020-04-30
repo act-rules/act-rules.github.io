@@ -30,20 +30,19 @@ This rule applies to any [HTML web page][].
 The first node in the [flat tree][] which is inside the [main section of content][] of the test target and has a non-empty [accessible name][]:
 
 - has a [semantic role][] of `heading`; and
+- is [visible][]; and
 - is [included in the accessibility tree][].
 
 **Note** Neither this rule, nor technique [H69: Providing heading elements at the beginning of each section of content][tech h69], expects the heading to accurately describe its corresponding section. However, having non descriptive headings fails [Success Criterion 2.4.6: Headings and Labels](https://www.w3.org/TR/WCAG21/#headings-and-labels)
 
 ## Assumptions
 
-- This rule assumes that headings used to pass technique [H69: Providing heading elements at the beginning of each section of content][tech h69] have to be [included in the accessibility tree][] in order to be beneficial to users of assistive technologies.
-- This rule assumes that headings used to pass technique [H69: Providing heading elements at the beginning of each section of content][tech h69] do not need to be [visible][]. Sighted users often have other ways to locate the [main section of content][] (presentational cues, layout of the page, …) If there is no other ways to locate the [main section of content][], users without assistive technologies will still encounter accessibility issues.
+- This rule assumes that headings used to pass [Technique H69: Providing heading elements at the beginning of each section of content][tech h69] have to be [included in the accessibility tree][] in order to be beneficial to users of assistive technologies.
 
 ## Accessibility Support
 
 - Having a heading for the [main section of content][] is sufficient to pass [Success Criterion 2.4.1: Bypass blocks][sc241]. However, if headings are used for that goal, they will only benefit users who can actually navigate from heading to heading (such a functionality can be provided by browsers, browsers plugins, screen readers or other assistive technologies). Users without any possibility for heading navigation will be left without way of bypassing blocks of repeated content and will still experience accessibility issues. Therefore, it is recommended to provide other ways of bypassing blocks.
-
-**Note to reviewers**: In its current state, the definition of [section of content][] would include, e.g. an advertising sidebar as a specific section of content. However, it is not clear that the lack of heading on it would be a breach of H69 or SC 2.4.1… Idea?
+- When headings are rendered without sufficient visual cues, they are not perceived as headings by sighted users. In this case, passing this rule might still fail [Technique H69: Providing heading elements at the beginning of each section of content][tech h69] and [Success Criterion 2.4.1: Bypass blocks][sc241]. Additionally, this is likely a failure of [Success Criterion 1.3.1: Info and Relationships][sc131].
 
 ## Background
 
@@ -83,6 +82,32 @@ This [document][] has a `h1` heading at the start of its [main section of conten
 
 #### Passed Example 2
 
+This [document][] has a `h2` heading at the start of its [main section of content][].
+
+```html
+<html>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<h1>The Three Kingdoms, Chapter 1</h1>
+		<nav>
+			<h2>Table of content</h2>
+			<!-- list of links to each chapter -->
+		</nav>
+		<main>
+			<h2>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h2>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
+#### Passed Example 3
+
 This [document][] has one [section of content][] for the navigation links, and the [main section of content][]. Each starts with a `h1` heading.
 
 **Note:** In this [document][], the [sections of content][section of content] are identified by the level 1 heading at their start.
@@ -109,7 +134,7 @@ This [document][] has one [section of content][] for the navigation links, and t
 </html>
 ```
 
-#### Passed Example 3
+#### Passed Example 4
 
 In this [document][], the heading is not the first element of the [main section of content][], but it is the first with a non-empty [accessible name][] (inherited from its content).
 
@@ -134,7 +159,7 @@ In this [document][], the heading is not the first element of the [main section 
 </html>
 ```
 
-#### Passed Example 4
+#### Passed Example 5
 
 The image at the start of the [main section of content][] has an empty [accessible name][]. Thus, the first node with a non-empty [accessible name][] is the `h1` element and the rule passes.
 
@@ -160,7 +185,7 @@ The image at the start of the [main section of content][] has an empty [accessib
 </html>
 ```
 
-#### Passed Example 5
+#### Passed Example 6
 
 The [main section of content][] of this [document][] starts with a `div` element with a role of `heading`.
 
@@ -185,7 +210,7 @@ The [main section of content][] of this [document][] starts with a `div` element
 </html>
 ```
 
-#### Passed Example 6
+#### Passed Example 7
 
 This [document][] is using image as heading, the [accessible name][] of the image (given by the `alt` attribute) is also the [accessible name][] of the heading.
 
@@ -205,30 +230,6 @@ This [document][] is using image as heading, the [accessible name][] of the imag
 					alt="Three Heroes Swear Brotherhood at a Feast in the Peach Garden"
 				/>
 			</h1>
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</main>
-	</body>
-</html>
-```
-
-#### Passed Example 7
-
-The [main section of content][] of this [document][] starts with a `h1` heading, even though it is not [visible][] (because it is off screen).
-
-```html
-<html>
-	<head>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<nav>
-			<!-- list of links to each chapter -->
-		</nav>
-		<main>
-			<h1 style="position: absolute; top:-999px">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -266,6 +267,30 @@ For the [main section of content][], the first node with a non-empty [accessible
 
 #### Failed Example 2
 
+The [main section of content][] of this [document][] starts with a `h1` heading, but it is not [visible][] (because it is off screen).
+
+```html
+<html>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<!-- list of links to each chapter -->
+		</nav>
+		<main>
+			<h1 style="position: absolute; top:-999px">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
+#### Failed Example 3
+
 The heading of the [main section of content][] is not [included in the accessibility tree][] because of the `aria-hidden` attribute.
 
 ```html
@@ -288,7 +313,7 @@ The heading of the [main section of content][] is not [included in the accessibi
 </html>
 ```
 
-#### Failed Example 3
+#### Failed Example 4
 
 The `h1` element at the start of the [main section of content][] has an empty [accessible name][] (because of the `aria-labelledby` attribute). Therefore, the first node with a non-empty [accessible name][] is the `img` element which does not have a [semantic role][] of `heading`.
 
@@ -337,6 +362,7 @@ This [document][] is not an [HTML web page][].
 [main section of content]: #main-section-of-content 'Definition of main section of content'
 [section of content]: #section-of-content 'Definition of section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'
+[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'Success Criterion 1.3.1: Info and Relationships'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1: Bypass blocks'
 [tech h69]: https://www.w3.org/WAI/WCAG21/Techniques/html/H69 'Technique H69: Providing heading elements at the beginning of each section of content'
 [usc241]: https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html 'Understanding Success Criterion 2.4.1: Bypass blocks'

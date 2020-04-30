@@ -41,10 +41,8 @@ For each test target, the outcome of at least one of the following rules is pass
 
 ## Assumptions
 
-This rule assumes that one of the techniques listed here is used to comply to WCAG. Other methods could be used to pass this Success Criterion, notably:
-
-- server side scripting can provide a functionality similar to [Block of content is expandable and collapsible][] by serving a modified version of the page;
-- `frameset` and `frame` elements can be used to organize content as per [H70: Using frame elements to group blocks of repeated material](https://www.w3.org/WAI/WCAG21/Techniques/html/H70) and [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64) but are ignored here given that they are deprecated in HTML5.
+- This rule assumes that the mean to bypass blocks is included in the content of the [HTML web page][]. For example, server side scripting can provide a functionality similar to [Block of content is expandable and collapsible][] by serving a modified version of the page; in which case this rule would fail but [Success Criterion 2.4.1: Bypass blocks][sc241] could nonetheless be satisfied.
+- This rule assumes that `frame` and `frameset` elements are not used, given that they are deprecated in HTML5. They can be used to organize content as per [H70: Using frame elements to group blocks of repeated material](https://www.w3.org/WAI/WCAG21/Techniques/html/H70) and [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64), in which case this rule would fail but [Success Criterion 2.4.1: Bypass blocks][sc241] could nonetheless be satisfied.
 
 ## Accessibility Support
 

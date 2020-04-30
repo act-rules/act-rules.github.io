@@ -145,34 +145,6 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 </html>
 ```
 
-#### Passed Example 4
-
-The [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of the navigational [section of repeated content][] can be toggled on and off by the link at the start of the document.
-
-```html
-<html>
-	<head>
-		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
-		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<a href="#" onclick="toggleVisibility('navigation'); toggleAriaHidden('navigation')">Toggle table of content</a>
-		<nav id="navigation">
-			<h1>Contents</h1>
-			<!-- list of links to each chapter, repeated on each page -->
-		</nav>
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</main>
-	</body>
-</html>
-```
-
 ### Failed
 
 #### Failed Example 1

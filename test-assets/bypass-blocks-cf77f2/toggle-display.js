@@ -5,6 +5,16 @@ function toggleHidden(...ids) {
 	})
 }
 
+function hide(id) {
+	const element = document.getElementById(id)
+	element.style.display = 'none'
+}
+
+function show(id) {
+	const element = document.getElementById(id)
+	element.style.display = ''
+}
+
 function toggleVisibility(id) {
 	const element = document.getElementById(id)
 	element.className = element.className === 'off-screen' ? '' : 'off-screen'

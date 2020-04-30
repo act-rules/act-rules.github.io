@@ -161,12 +161,9 @@ This [document][] is not an [HTML web page][].
 </svg>
 ```
 
-[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant 'Definition of descendant'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
-[document element]: https://dom.spec.whatwg.org/#document-element 'Definition of document element'
 [html web page]: #web-page-html 'Definition of web page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1: Bypass blocks'
 [section of content]: #section-of-content 'Definition of section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'

@@ -274,7 +274,6 @@ This [document][] is not an [HTML web page][].
 
 [block of content is expandable and collapsible]: https://act-rules.github.io/rules/3e12e1 'Rule Block of content is expandable and collapsible'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
-[document element]: https://dom.spec.whatwg.org/#document-element 'Definition of document element'
 [document has a main landmark]: https://act-rules.github.io/rules/b40fd1 'Rule Document has a main landmark'
 [document has heading for main section of content]: https://act-rules.github.io/rules/047fe0 'Rule Document has heading for main section of content'
 [first focusable elements are links to sections of content]: https://act-rules.github.io/rules/e53727 'Rule First focusable elements are links to sections of content'

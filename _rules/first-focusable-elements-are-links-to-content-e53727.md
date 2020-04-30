@@ -854,7 +854,6 @@ This [document][] is not an [HTML web page][].
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
-[document element]: https://dom.spec.whatwg.org/#document-element 'Definition of document element'
 [focusable]: #focusable 'Definition of focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'Definition of focused'
 [html web page]: #web-page-html 'Definition of web page (HTML)'

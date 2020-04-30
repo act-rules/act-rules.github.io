@@ -54,7 +54,7 @@ Having a `main` landmark is sufficient to pass [Success Criterion 2.4.1: Bypass 
 
 #### Passed Example 1
 
-This [document][] has a one element with a [semantic role][] of `main`.
+This [document][] has one element with a [semantic role][] of `main`.
 
 ```html
 <html>

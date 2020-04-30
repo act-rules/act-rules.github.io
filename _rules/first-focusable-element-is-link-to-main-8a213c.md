@@ -179,7 +179,7 @@ The link to skip the complementary [section of repeated content][] has an [acces
 
 #### Passed Example 5
 
-Even though it is located after it, the link to skip the complementary [section of repeated content][] is still the first [focusable][] element within the page.
+Even though it is located after it in tree order, the link to skip the complementary [section of repeated content][] is still the first [focusable][] element within the page.
 
 ```html
 <html lang="en">

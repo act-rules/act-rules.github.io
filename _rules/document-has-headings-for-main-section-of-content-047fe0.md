@@ -9,7 +9,7 @@ accessibility_requirements:
     forConformance: false
     failed: not satisfied
     passed: further testing needed
-    inapplicable: further testing neededX
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS styling

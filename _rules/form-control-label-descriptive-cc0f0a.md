@@ -16,6 +16,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
   - DOM Tree
   - CSS Styling
   - Language
@@ -71,7 +72,7 @@ Each test target, together with its [visual context][], describes the purpose of
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 
@@ -269,6 +270,7 @@ The `span` element is not a [programmatic label][] of any element.
 [aria11]: https://www.w3.org/TR/wai-aria-1.1/ 'Accessible Rich Internet Applications 1.1'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [label]: https://www.w3.org/TR/WCAG21/#dfn-labels 'Definition of label'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [programmatic label]: #programmatic-label 'Definition of programmatic label'
 [sc246]: https://www.w3.org/WAI/WCAG21/#headings-and-labels.html 'Success Criterion 2.4.6: Heading and Labels'
 [sc253]: https://www.w3.org/WAI/WCAG21/label-in-name 'Success Criterion 2.5.3: Label in Name'

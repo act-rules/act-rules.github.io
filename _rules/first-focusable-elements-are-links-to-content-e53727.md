@@ -3,7 +3,7 @@ id: e53727
 name: First focusable elements are links to sections of content
 rule_type: atomic
 description: |
-  This rule checks that the first focusable elements are links referring to sections of content on the same page
+  This rule checks that the first focusable elements are links to sections of content on the same page
 accessibility_requirements:
   wcag-technique:G124: # Adding links at the top of the page to each area of the content
     forConformance: false

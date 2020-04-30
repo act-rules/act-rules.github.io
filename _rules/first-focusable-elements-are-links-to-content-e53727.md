@@ -214,7 +214,7 @@ The links in the [initial segment][] (composed of the first three focusable elem
 
 #### Passed Example 5
 
-Even though they are after the form [section of repeated content][], the three links are still the first [focusable][] elements and thus are an [initial segment][] of [focusable][] elements fulfilling the expectations.
+Even though they are after the first [section of repeated content][], the three links are still the first [focusable][] elements and thus are an [initial segment][] of [focusable][] elements fulfilling the expectations.
 
 ```html
 <html lang="en">

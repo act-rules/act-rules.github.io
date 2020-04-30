@@ -441,7 +441,7 @@ The link to skip the complementary [section of repeated content][] does not refe
 
 #### Failed Example 8
 
-The link to skip the complementary [section of repeated content][] does not have an [accessible name][] that communicates its intend.
+The link to skip the complementary [section of repeated content][] does not have an [accessible name][] that communicates its intent.
 
 ```html
 <html lang="en">

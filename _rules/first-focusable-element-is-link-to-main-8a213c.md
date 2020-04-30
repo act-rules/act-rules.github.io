@@ -3,7 +3,7 @@ id: 8a213c
 name: First focusable element is link to main content
 rule_type: atomic
 description: |
-  This rule checks that the first focusable element is a link referring to the main content of the page
+  This rule checks that the first focusable element is a link to the main content of the page
 accessibility_requirements:
   wcag-technique:G1: # Adding a link at the top of each page that goes directly to the main content area
     forConformance: false

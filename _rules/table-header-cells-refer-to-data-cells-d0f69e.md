@@ -10,7 +10,14 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:H43: # Using id and headers attributes to associate data cells with header cells in data tables
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
+  - CSS styling
   - DOM Tree
 acknowledgments:
   authors:
@@ -45,7 +52,8 @@ This rule assumes that table header cells have a relationship conveyed through p
 
 ## Accessibility Support
 
-Table markup and header cell association is not well supported by some popular assistive technologies. Passing this rule can still cause issues for users of those assistive technologies.
+- Table markup and header cell association is not well supported by some popular assistive technologies. Passing this rule can still cause issues for users of those assistive technologies.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 
@@ -219,6 +227,26 @@ The column header ('Col B') does not have an assigned cell within the same `tabl
 </div>
 ```
 
+#### Failed Example 4
+
+The column header ("Column 2") has an [explicit role][] of `none`. However, it is [focusable][] due to the `tabindex` attribute. Thus it has a [semantic role][] of `columnheader` due to [Presentational Roles Conflict Resolution][]. It does not have an assigned cell within the same `table` element.
+
+```html
+<table>
+	<thead>
+		<tr>
+			<th>Column 1</th>
+			<th role="none" tabindex="0">Column 2</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>15%</td>
+		</tr>
+	</tbody>
+</table>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -325,3 +353,6 @@ The only element with a header [role][semantic role] is part of a table which is
 [grid]: https://www.w3.org/TR/wai-aria-1.1/#grid 'ARIA grid role'
 [columnheader]: https://www.w3.org/TR/wai-aria-1.1/#columnheader 'ARIA columnheader role'
 [rowheader]: https://www.w3.org/TR/wai-aria-1.1/#rowheader 'ARIA rowheader role'
+[explicit role]: #explicit-role 'Definition of Explicit Role'
+[focusable]: #focusable 'Definition of focusable'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'

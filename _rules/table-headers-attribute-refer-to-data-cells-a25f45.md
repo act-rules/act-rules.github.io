@@ -10,6 +10,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:H43: # Using id and headers attributes to associate data cells with header cells in data tables
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -267,7 +272,7 @@ There is no `headers` attribute.
 
 #### Inapplicable Example 2
 
-The `table` has a `role="presentation"` and thus is [decorative][].
+The `table` has a `role="presentation"` and thus is not [included in the accessibility tree][].
 
 ```html
 <table role="presentation">
@@ -338,9 +343,7 @@ The `table` is not [included in the accessibility tree][].
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [visible]: #visible 'Definition of visible'
-[decorative]: #marked-as-decorative 'Definition of marked as decorative'
 [`cell`]: https://html.spec.whatwg.org/#concept-cell 'Definition of cell'
-[semantic role]: #semantic-role 'Definition of semantic role'
 [a set of space separated ids]: https://html.spec.whatwg.org/#set-of-space-separated-tokens 'Space separated tokens'
 [`table`]: https://html.spec.whatwg.org/#concept-table 'Definition of table'
 [computes an adequate fallback header]: https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics 'Forming relationships between data cells and header cells'

@@ -41,7 +41,7 @@ Any `img`, `canvas` or `svg` element that is [visible][] and for which one of th
 - The element has an [ancestor][] in the [flat tree][] that is [named from author][]; or
 - The element is an `img` element where the [current request][]'s [state][image request state] is not [completely available][].
 
-**Note**: An example of an image ignored because of "named from author" is when the image is a descendant of a `button` element that uses `aria-label` for its accessible name.
+**Note**: An example of an image ignored because of an [ancestor][] with [named from author][] is when the image is a descendant of a `button` element that uses `aria-label` for its accessible name.
 
 ## Expectation
 

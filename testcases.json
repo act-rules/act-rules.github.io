@@ -12334,38 +12334,8 @@
       }
     },
     {
-      "testcaseId": "c6e80108a6b09b606569dabc910e358f120b9bcb",
-      "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/674b10/c6e80108a6b09b606569dabc910e358f120b9bcb.html",
-      "relativePath": "testcases/674b10/c6e80108a6b09b606569dabc910e358f120b9bcb.html",
-      "expected": "failed",
-      "ruleId": "674b10",
-      "ruleName": "`role` attribute has valid value",
-      "rulePage": "https://act-rules.github.io/rules/674b10",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:ARIA4": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G108": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
       "testcaseId": "bc744b047ccc6f46cbe1666024afa2c88036a1cf",
-      "testcaseTitle": "Failed Example 4",
+      "testcaseTitle": "Failed Example 3",
       "url": "https://act-rules.github.io/testcases/674b10/bc744b047ccc6f46cbe1666024afa2c88036a1cf.html",
       "relativePath": "testcases/674b10/bc744b047ccc6f46cbe1666024afa2c88036a1cf.html",
       "expected": "failed",
@@ -12424,8 +12394,38 @@
       }
     },
     {
-      "testcaseId": "e85561e433618bd6ef98744417c10f15d62ec793",
+      "testcaseId": "c6e80108a6b09b606569dabc910e358f120b9bcb",
       "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/674b10/c6e80108a6b09b606569dabc910e358f120b9bcb.html",
+      "relativePath": "testcases/674b10/c6e80108a6b09b606569dabc910e358f120b9bcb.html",
+      "expected": "inapplicable",
+      "ruleId": "674b10",
+      "ruleName": "`role` attribute has valid value",
+      "rulePage": "https://act-rules.github.io/rules/674b10",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:ARIA4": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G108": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "e85561e433618bd6ef98744417c10f15d62ec793",
+      "testcaseTitle": "Inapplicable Example 3",
       "url": "https://act-rules.github.io/testcases/674b10/e85561e433618bd6ef98744417c10f15d62ec793.html",
       "relativePath": "testcases/674b10/e85561e433618bd6ef98744417c10f15d62ec793.html",
       "expected": "inapplicable",
@@ -12455,7 +12455,7 @@
     },
     {
       "testcaseId": "5f2fe96c4ca0e1778b07d3c05d14d9df3998ab40",
-      "testcaseTitle": "Inapplicable Example 3",
+      "testcaseTitle": "Inapplicable Example 4",
       "url": "https://act-rules.github.io/testcases/674b10/5f2fe96c4ca0e1778b07d3c05d14d9df3998ab40.html",
       "relativePath": "testcases/674b10/5f2fe96c4ca0e1778b07d3c05d14d9df3998ab40.html",
       "expected": "inapplicable",
@@ -12485,7 +12485,7 @@
     },
     {
       "testcaseId": "4e914fd7a11371b22e9b6b03a02d093addf3e654",
-      "testcaseTitle": "Inapplicable Example 4",
+      "testcaseTitle": "Inapplicable Example 5",
       "url": "https://act-rules.github.io/testcases/674b10/4e914fd7a11371b22e9b6b03a02d093addf3e654.html",
       "relativePath": "testcases/674b10/4e914fd7a11371b22e9b6b03a02d093addf3e654.html",
       "expected": "inapplicable",

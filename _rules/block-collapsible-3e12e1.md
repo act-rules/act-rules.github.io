@@ -102,7 +102,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 		</nav>
 		<aside id="biography">
 			<h1>About the authors</h1>
-			<!-- short biography of the author and translator -->
+			<!-- biography of the author and translator -->
 		</aside>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -134,7 +134,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 		</nav>
 		<aside id="biography">
 			<h1>About the authors</h1>
-			<!-- short biography of the author and translator -->
+			<!-- biography of the author and translator -->
 		</aside>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>

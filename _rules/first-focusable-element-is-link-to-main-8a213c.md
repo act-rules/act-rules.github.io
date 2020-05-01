@@ -72,7 +72,7 @@ The link to skip the complementary [section of repeated content][] is [visible][
 		</nav>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -102,7 +102,7 @@ The link to skip the complementary [section of repeated content][] is [included 
 		</nav>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -132,7 +132,7 @@ The element to skip the complementary [section of repeated content][] is [visibl
 		</nav>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -161,7 +161,7 @@ The link to skip the complementary [section of repeated content][] has an [acces
 		</nav>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -187,7 +187,7 @@ Even though it is located after it in tree order, the link to skip the complemen
 	<body>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<nav>
@@ -220,7 +220,7 @@ The first [focusable][] element within this page is the link to the [main sectio
 		</nav>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -248,7 +248,7 @@ There is no link to skip the complementary [section of repeated content][].
 	<body>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -278,7 +278,7 @@ The link to skip the complementary [section of repeated content][] is not the fi
 		</nav>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -307,7 +307,7 @@ The link to skip the complementary [section of repeated content][] is not [inclu
 		</nav>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -336,7 +336,7 @@ The link to skip the complementary [section of repeated content][] is not [visib
 		</nav>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -365,7 +365,7 @@ The element with a click event to skip the complementary [section of repeated co
 		</nav>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -394,7 +394,7 @@ The element to skip the complementary [section of repeated content][] is [visibl
 		</nav>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -423,7 +423,7 @@ The link to skip the complementary [section of repeated content][] does not refe
 		</nav>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -452,7 +452,7 @@ The link to skip the complementary [section of repeated content][] does not have
 		</nav>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -482,7 +482,7 @@ The first [focusable][] element within this page is the link to W3C. The link to
 		</nav>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">

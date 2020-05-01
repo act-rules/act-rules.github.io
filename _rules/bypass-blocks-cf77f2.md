@@ -124,7 +124,7 @@ This [HTML web page][] is passing rule [link for skipping block of content][].
 		<aside>
 			<a href="#main">Skip additional information</a>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- description of the book and biography of the authors, repeated on each page -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -180,7 +180,7 @@ This [HTML web page][] is passing rule [first focusable element is link to main 
 		</nav>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -215,7 +215,7 @@ This [HTML web page][] is passing rule [first focusable elements are links to se
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -246,7 +246,7 @@ This [HTML web page][] does not pass any of the input rules.
 			<!-- does not include any focusable element -->
 		</header>
 		<aside id="about">
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<strong style="font-size: 18pt">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</strong>

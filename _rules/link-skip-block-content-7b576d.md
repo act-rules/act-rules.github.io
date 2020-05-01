@@ -74,7 +74,7 @@ The complementary [section of repeated content][] starts with a `link` that jump
 		<aside>
 			<a href="#main">Skip additional information</a>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- description of the book and biography of the authors, repeated on each page -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -101,7 +101,7 @@ The link to skip the complementary [section of repeated content][] is the first 
 		<aside>
 			<h1>About the book</h1>
 			<a href="#main">Skip additional information</a>
-			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- description of the book and biography of the authors, repeated on each page -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -129,7 +129,7 @@ The link to skip the complementary [section of repeated content][] is located be
 		<div>Chapter 1</div>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- description of the book and biography of the authors, repeated on each page -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -157,7 +157,7 @@ The link to skip the complementary [section of repeated content][] is not normal
 		<aside>
 			<a href="#main" class="visible-on-focus">Skip additional information</a>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- description of the book and biography of the authors, repeated on each page -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -185,7 +185,7 @@ The `div` element just before the complementary [section of repeated content][] 
 		<div role="link" onclick="location.href='#main';" tabindex="1" id="skip-link">Skip additional information</div>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- description of the book and biography of the authors, repeated on each page -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -212,7 +212,7 @@ The link to skip the complementary [section of repeated content][] is the first 
 		<aside>
 			<h1 tabindex="2">About the book</h1>
 			<a href="#main" tabindex="1">Skip additional information</a>
-			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- description of the book and biography of the authors, repeated on each page -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -240,7 +240,7 @@ The link to skip the complementary [section of repeated content][] is located be
 		<div tabindex="1">Chapter 1</div>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- description of the book and biography of the authors, repeated on each page -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -268,7 +268,7 @@ There is no link to skip the complementary [section of repeated content][].
 	<body>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- description of the book and biography of the authors, repeated on each page -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -296,7 +296,7 @@ The link to skip the complementary [section of repeated content][] is not the la
 		<div tabindex="2">Chapter 1</div>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- description of the book and biography of the authors, repeated on each page -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -323,7 +323,7 @@ The link to skip the complementary [section of repeated content][] is not the fi
 		<aside>
 			<h1 tabindex="1">About the book</h1>
 			<a href="#main" tabindex="2">Skip additional information</a>
-			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- description of the book and biography of the authors, repeated on each page -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -351,7 +351,7 @@ The element to skip the complementary [section of repeated content][] does not h
 		<div onclick="location.href='#main';" tabindex="1" id="skip-link">Skip additional information</div>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- description of the book and biography of the authors, repeated on each page -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -378,7 +378,7 @@ The link to skip the complementary [section of repeated content][] is not [inclu
 		<aside>
 			<a href="#main" aria-hidden="true">Skip additional information</a>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- description of the book and biography of the authors, repeated on each page -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -405,7 +405,7 @@ The link to skip the complementary [section of repeated content][] is not [visib
 		<aside>
 			<a href="#main" style="position: absolute; top: -999px">Skip additional information</a>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- description of the book and biography of the authors, repeated on each page -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -432,7 +432,7 @@ The element with a [semantic role][] of `link` which skips the complementary [se
 		<div role="link" onclick="location.href='#main';" tabindex="1">Skip additional information</div>
 		<aside>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- description of the book and biography of the authors, repeated on each page -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -461,7 +461,7 @@ The link at the start of the complementary [section of repeated content][] skips
 		<aside>
 			<a href="#main">Skip additional information</a>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- description of the book and biography of the authors, repeated on each page -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<nav>
@@ -492,7 +492,7 @@ The link to skip the complementary [section of repeated content][] has non-descr
 		<aside>
 			<a href="#main">Read text</a>
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the authors, repeated on each page -->
+			<!-- description of the book and biography of the authors, repeated on each page -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">

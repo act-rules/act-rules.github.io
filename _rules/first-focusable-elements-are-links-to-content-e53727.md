@@ -91,7 +91,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -125,7 +125,7 @@ The links in the [initial segment][] (composed of the first three focusable elem
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -161,7 +161,7 @@ The first three [focusable][] elements have a [semantic role][] of `link` and ca
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -196,7 +196,7 @@ The links in the [initial segment][] (composed of the first three focusable elem
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -231,7 +231,7 @@ Even though they are after the first [section of repeated content][], the three 
 		</ul>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -267,7 +267,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -303,7 +303,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -339,7 +339,7 @@ The first three [focusable][] elements are the links to the various [sections of
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -367,7 +367,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 		<aside id="about">
 			<h1>About the book</h1>
 			<a href="#about">Skip to additional information</a>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -400,7 +400,7 @@ This [HTML web page][] has no link to skip to the various [sections of content][
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -434,7 +434,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -470,7 +470,7 @@ The second, third and fourth links form a set that fulfills Expectation 2 and mo
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -505,7 +505,7 @@ The first three [focusable][] elements in this [document][] form an [initial seg
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -540,7 +540,7 @@ The first [focusable][] element form an [initial segment][] that fulfills Expect
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -575,7 +575,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -611,7 +611,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -647,7 +647,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -682,7 +682,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -717,7 +717,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -752,7 +752,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -788,7 +788,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">
@@ -824,7 +824,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 		</header>
 		<aside id="about">
 			<h1>About the book</h1>
-			<!-- short description of the book and biography of the author and translator -->
+			<!-- description of the book and biography of the author and translator -->
 			<!-- does not include any focusable element -->
 		</aside>
 		<main id="main">

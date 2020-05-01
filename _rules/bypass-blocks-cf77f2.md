@@ -176,7 +176,7 @@ This [HTML web page][] is passing rule [first focusable element is link to main 
 	</head>
 	<body>
 		<nav>
-			<a href="#main">Skip to text</a>
+			<a href="#main">Skip to main content</a>
 		</nav>
 		<aside>
 			<h1>About the book</h1>

@@ -7474,10 +7474,10 @@
       }
     },
     {
-      "testcaseId": "1f76b15e8ded16b764a4d939f3ca62b7bc025549",
+      "testcaseId": "205b890bb3484334349effd8a88b1681f2b0ecdc",
       "testcaseTitle": "Failed Example 1",
-      "url": "https://act-rules.github.io/testcases/3ea0c8/1f76b15e8ded16b764a4d939f3ca62b7bc025549.html",
-      "relativePath": "testcases/3ea0c8/1f76b15e8ded16b764a4d939f3ca62b7bc025549.html",
+      "url": "https://act-rules.github.io/testcases/3ea0c8/205b890bb3484334349effd8a88b1681f2b0ecdc.html",
+      "relativePath": "testcases/3ea0c8/205b890bb3484334349effd8a88b1681f2b0ecdc.html",
       "expected": "failed",
       "ruleId": "3ea0c8",
       "ruleName": "`id` attribute value is unique",
@@ -7498,10 +7498,10 @@
       }
     },
     {
-      "testcaseId": "121a3046f2e8ce3e0633df5977ea44dd14d41bc0",
+      "testcaseId": "a07feb1cb84ed1e2337ce4e2141371392cb7857f",
       "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/3ea0c8/121a3046f2e8ce3e0633df5977ea44dd14d41bc0.html",
-      "relativePath": "testcases/3ea0c8/121a3046f2e8ce3e0633df5977ea44dd14d41bc0.html",
+      "url": "https://act-rules.github.io/testcases/3ea0c8/a07feb1cb84ed1e2337ce4e2141371392cb7857f.html",
+      "relativePath": "testcases/3ea0c8/a07feb1cb84ed1e2337ce4e2141371392cb7857f.html",
       "expected": "failed",
       "ruleId": "3ea0c8",
       "ruleName": "`id` attribute value is unique",
@@ -7522,10 +7522,10 @@
       }
     },
     {
-      "testcaseId": "9200a235e55fe5cb8743b61a8989a605c7a7def2",
+      "testcaseId": "717472889322dc9243ad16a9e0b537116280c3ba",
       "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/3ea0c8/9200a235e55fe5cb8743b61a8989a605c7a7def2.html",
-      "relativePath": "testcases/3ea0c8/9200a235e55fe5cb8743b61a8989a605c7a7def2.html",
+      "url": "https://act-rules.github.io/testcases/3ea0c8/717472889322dc9243ad16a9e0b537116280c3ba.html",
+      "relativePath": "testcases/3ea0c8/717472889322dc9243ad16a9e0b537116280c3ba.html",
       "expected": "failed",
       "ruleId": "3ea0c8",
       "ruleName": "`id` attribute value is unique",

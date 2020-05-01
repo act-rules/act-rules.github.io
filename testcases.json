@@ -12658,10 +12658,10 @@
       }
     },
     {
-      "testcaseId": "52b0f4990ff8b2a4dbc4e62fdddd291e0951def8",
+      "testcaseId": "2d7dadf8c1245fb59907fb770e7a2ac55c6de6d3",
       "testcaseTitle": "Failed Example 1",
-      "url": "https://act-rules.github.io/testcases/4e8ab6/52b0f4990ff8b2a4dbc4e62fdddd291e0951def8.html",
-      "relativePath": "testcases/4e8ab6/52b0f4990ff8b2a4dbc4e62fdddd291e0951def8.html",
+      "url": "https://act-rules.github.io/testcases/4e8ab6/2d7dadf8c1245fb59907fb770e7a2ac55c6de6d3.html",
+      "relativePath": "testcases/4e8ab6/2d7dadf8c1245fb59907fb770e7a2ac55c6de6d3.html",
       "expected": "failed",
       "ruleId": "4e8ab6",
       "ruleName": "Element with `role` attribute has required states and properties",
@@ -12682,10 +12682,10 @@
       }
     },
     {
-      "testcaseId": "2ea8f890a6f3bd9a7eb98e09bfb68dc9404efb12",
+      "testcaseId": "da13a6ea7c396248be37fd2c1b724bef551b5e02",
       "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/4e8ab6/2ea8f890a6f3bd9a7eb98e09bfb68dc9404efb12.html",
-      "relativePath": "testcases/4e8ab6/2ea8f890a6f3bd9a7eb98e09bfb68dc9404efb12.html",
+      "url": "https://act-rules.github.io/testcases/4e8ab6/da13a6ea7c396248be37fd2c1b724bef551b5e02.html",
+      "relativePath": "testcases/4e8ab6/da13a6ea7c396248be37fd2c1b724bef551b5e02.html",
       "expected": "failed",
       "ruleId": "4e8ab6",
       "ruleName": "Element with `role` attribute has required states and properties",

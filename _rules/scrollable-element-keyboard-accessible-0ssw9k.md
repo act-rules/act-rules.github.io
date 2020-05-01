@@ -34,9 +34,11 @@ Any HTML element that has [visible][] [children][] in the [flat tree][] for whic
 
 Each test target is either included in [sequential focus navigation][] or has a [descendant][] in the [flat tree][] that is included in [sequential focus navigation][].
 
+**Note:** Focus must be on or in a scrollable region, to ensure there is some element from which arrow keys can be used control the scroll position. This can still create an issue if scripts are used to prevent the keyboard events from reaching the scrollable region. This must be tested separately.
+
 ## Assumptions
 
-This rule assumes that all [scrollable elements][scrollable] with visible content need to be keyboard accessible. [Scrollable elements][scrollable] that do not need to be keyboard accessible, perhaps because its content is [purely decorative][], may fail this rule but still satisfy [success criterion 2.1.1 Keyboard][].
+This rule assumes that all [scrollable elements][scrollable] with visible content need to be keyboard accessible. [Scrollable elements][scrollable] that do not need to be keyboard accessible, perhaps because its content is [purely decorative][] or because it scroll can be controlled some other way, may fail this rule but still satisfy [success criterion 2.1.1 Keyboard][].
 
 ## Accessibility Support
 

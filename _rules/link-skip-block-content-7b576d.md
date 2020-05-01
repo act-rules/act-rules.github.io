@@ -33,9 +33,9 @@ For each [section of repeated content][] within the test target, either the last
 - has a [semantic role][] of `link`; and
 - is [included in the accessibility tree][]; and
 - is [visible][] when [focused][]; and
-- can be activated by use of keyboard only; and
+- can be [activated][] by use of keyboard only; and
 - has an [accessible name][] that communicates that it skips this [section of content][]; and
-- when activated, moves keyboard focus to a node which:
+- when [activated][], moves keyboard focus to a node which:
   - is an ancestor in the [flat tree][] of the first text node after this [section of repeated content][]; and
   - is not an ancestor of any node within this [section of repeated content][].
 
@@ -519,6 +519,7 @@ This [document][] is not an [HTML web page][].
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
+[activated]: https://html.spec.whatwg.org/#activation 'Definition of activation'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [focusable]: #focusable 'Definition of focusable'

@@ -33,8 +33,8 @@ Within the test target, there is an [initial segment][] of the [focusable][] ele
 - is [included in the accessibility tree][]; and
 - is [visible][] when [focused][]; and
 - has a [semantic role][] of link; and
-- can be activated by use of keyboard only; and
-- when activated, moves focus to a [section of content][] within the same [document][]; and
+- can be [activated][] by use of keyboard only; and
+- when [activated][], moves focus to a [section of content][] within the same [document][]; and
 - has an [accessible name][] that communicates that it links to that specific [section of content][].
 
 **Note:** There is no requirement on how many [focusable][] elements are part of that [initial segment][], nor any requirement to provide a way to determine (programmatically or not) where that [initial segment][] stops. Technique [G124: Adding links at the top of the page to each area of the content](https://www.w3.org/WAI/WCAG21/Techniques/general/G124), and this rule, only require that such a set exists.
@@ -52,9 +52,7 @@ Each [section of content][] in the [document][] that is preceded (in tree order)
 - This rule assumes that the description of the link is provided through its [accessible name][].
 - This rule assumes that [Technique G124: Adding links at the top of the page to each area of the content][tech g124] requires that the link can be activated by use of keyboard only (in order to be useful for keyboard users).
 - This rule assumes that [sections of repeated content][section of repeated content] have already been identified within the test target, for example by comparison with other test targets within the same website, or any other means.
-- This rule assumes that any global dismissible information that only appears once per site has already been acknowledged and is not displayed any more.
-
-**Note:** The aim of such links is to be able to skip [sections of repeated content][section of repeated content] (headers, navigation bar, ...) when viewing several pages of the same site. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually by viewing and accepting cookies policy). Since that content is _not_ repeated (is it only shown once for the full site), it is not a problem to have it, and it may appear on any page of the site (depending where the user first comes in).
+- This rule assumes that any global dismissible information that only appears once per site has already been acknowledged and is not displayed anymore. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually by viewing and accepting cookies policy). Since that content is _not_ repeated (is it only shown once for the full site), it is not a problem to have it, and it may appear on any page of the site (depending where the user first comes in). If such a banner is taken into account, the rule may fail incorrectly.
 
 ## Accessibility Support
 
@@ -853,6 +851,7 @@ This [document][] is not an [HTML web page][].
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
+[activated]: https://html.spec.whatwg.org/#activation 'Definition of activation'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [focusable]: #focusable 'Definition of focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'Definition of focused'

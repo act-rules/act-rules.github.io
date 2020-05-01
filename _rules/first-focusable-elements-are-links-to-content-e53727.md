@@ -50,7 +50,7 @@ Each [section of content][] in the [document][] that is preceded (in tree order)
 ## Assumptions
 
 - This rule assumes that the description of the link is provided through its [accessible name][].
-- This rule assumes that [Technique G124: Adding links at the top of the page to each area of the content][tech g124] requires that the link can be activated by use of keyboard only (in order to be useful for keyboard users).
+- This rule assumes that [Technique G124: Adding links at the top of the page to each area of the content][tech g124] requires that the link can be [activated][] by use of keyboard only (in order to be useful for keyboard users).
 - This rule assumes that [sections of repeated content][section of repeated content] have already been identified within the test target, for example by comparison with other test targets within the same website, or any other means.
 - This rule assumes that any global dismissible information that only appears once per site has already been acknowledged and is not displayed anymore. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually by viewing and accepting cookies policy). Since that content is _not_ repeated (is it only shown once for the full site), it is not a problem to have it, and it may appear on any page of the site (depending where the user first comes in). If such a banner is taken into account, the rule may fail incorrectly.
 
@@ -141,7 +141,7 @@ The links in the [initial segment][] (composed of the first three focusable elem
 
 #### Passed Example 3
 
-The first three [focusable][] elements have a [semantic role][] of `link` and can be activated by keyboard.
+The first three [focusable][] elements have a [semantic role][] of `link` and can be [activated][] by keyboard.
 
 ```html
 <html lang="en">
@@ -627,7 +627,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 
 #### Failed Example 8
 
-The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element does not fulfill Expectation 1 because it cannot be activated by keyboard. Thus, no [initial segment][] fulfills both Expectations.
+The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the main [section of content][]. The third [focusable][] element does not fulfill Expectation 1 because it cannot be [activated][] by keyboard. Thus, no [initial segment][] fulfills both Expectations.
 
 ```html
 <html lang="en">

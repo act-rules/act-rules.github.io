@@ -30,15 +30,15 @@ This rule applies to any HTML element that is [visible][] and has one of the fol
 
 ## Expectation 1
 
-The test target does not have "important" as its [word-spacing][] [priority][], unless the [computed][] [word-spacing][] is greater than `0.16em` .
+The test target does not have "important" as its [word-spacing][] [priority][], unless the [computed][] [word-spacing][] is greater than `0.16` times the computed [font-size][] of the test target.
 
 ## Expectation 2
 
-The test target does not have "important" as its [letter-spacing][] [priority][], unless the [computed][] [letter-spacing][] is greater than `0.12em` .
+The test target does not have "important" as its [letter-spacing][] [priority][], unless the [computed][] [letter-spacing][] is greater than `0.12` times the computed [font-size][] of the test target.
 
 ## Expectation 3
 
-The test target does not have "important" as its [line-height][] [priority][], unless the [computed][] [line-height][] is greater than `1.5em` .
+The test target does not have "important" as its [line-height][] [priority][], unless the [computed][] [line-height][] is greater than `1.5` times the computed [font-size][] of the test target.
 
 **Note:** Font size conversations rely on the default pixel size for body (usually 16 pixels), as defined by the [user agent origin][] stylesheet.
 
@@ -232,3 +232,4 @@ This `body` element does not have `style` attribute specified.
 [author origin]: https://drafts.csswg.org/css-cascade-4/#cascade-origin-author 'CSS Cascading and Inheritance Level 4 - Cascading Origins - Author Origin'
 [user origin]: https://drafts.csswg.org/css-cascade-4/#cascade-origin-user 'CSS Cascading and Inheritance Level 4 - Cascading Origins - User Origin'
 [user agent origin]: https://drafts.csswg.org/css-cascade-4/#cascade-origin-ua 'CSS Cascading and Inheritance Level 4 - Cascading Origins - User Agent Origin'
+[font-size]: https://www.w3.org/TR/css-fonts-3/#propdef-font-size 'CSS Fonts Module Level 3- Font size: the font-size property'

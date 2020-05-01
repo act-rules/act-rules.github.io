@@ -12,6 +12,7 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - Accessibility tree
+  - CSS styling
   - DOM Tree
 acknowledgments:
   authors:

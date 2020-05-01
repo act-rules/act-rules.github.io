@@ -68,7 +68,7 @@ The link to skip the complementary [section of repeated content][] is [visible][
 	</head>
 	<body>
 		<nav>
-			<a href="#main">Skip to text</a>
+			<a href="#main">Skip to main content</a>
 		</nav>
 		<aside>
 			<h1>About the book</h1>
@@ -98,7 +98,7 @@ The link to skip the complementary [section of repeated content][] is [included 
 	</head>
 	<body>
 		<nav class="visible-on-focus">
-			<a href="#main">Skip to text</a>
+			<a href="#main">Skip to main content</a>
 		</nav>
 		<aside>
 			<h1>About the book</h1>
@@ -128,7 +128,7 @@ The element to skip the complementary [section of repeated content][] is [visibl
 	</head>
 	<body onload="ClickOnEnter('skip-link')">
 		<nav>
-			<div role="link" onclick="location.href='#main';" tabindex="1" id="skip-link">Skip to text</div>
+			<div role="link" onclick="location.href='#main';" tabindex="1" id="skip-link">Skip to main content</div>
 		</nav>
 		<aside>
 			<h1>About the book</h1>
@@ -157,7 +157,7 @@ The link to skip the complementary [section of repeated content][] has an [acces
 	</head>
 	<body>
 		<nav>
-			<a href="#main" aria-label="Skip to text">📖</a>
+			<a href="#main" aria-label="Skip to main content">📖</a>
 		</nav>
 		<aside>
 			<h1>About the book</h1>
@@ -191,7 +191,7 @@ Even though it is located after it in tree order, the link to skip the complemen
 			<!-- does not include any focusable element -->
 		</aside>
 		<nav>
-			<a href="#main">Skip to text</a>
+			<a href="#main">Skip to main content</a>
 		</nav>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -216,7 +216,7 @@ The first [focusable][] element within this page is the link to the [main sectio
 	<body>
 		<nav>
 			<a href="https://www.w3.org/" tabindex="2">Check out the W3C</a>
-			<a href="#main" tabindex="1">Skip to text</a>
+			<a href="#main" tabindex="1">Skip to main content</a>
 		</nav>
 		<aside>
 			<h1>About the book</h1>
@@ -274,7 +274,7 @@ The link to skip the complementary [section of repeated content][] is not the fi
 	<body>
 		<a href="https://www.w3.org/">Check out the W3C</a>
 		<nav>
-			<a href="#main">Skip to text</a>
+			<a href="#main">Skip to main content</a>
 		</nav>
 		<aside>
 			<h1>About the book</h1>
@@ -303,7 +303,7 @@ The link to skip the complementary [section of repeated content][] is not [inclu
 	</head>
 	<body>
 		<nav>
-			<a href="#main" aria-hidden="true">Skip to text</a>
+			<a href="#main" aria-hidden="true">Skip to main content</a>
 		</nav>
 		<aside>
 			<h1>About the book</h1>
@@ -332,7 +332,7 @@ The link to skip the complementary [section of repeated content][] is not [visib
 	</head>
 	<body>
 		<nav>
-			<a href="#main" style="position: absolute; top: -999px">Skip to text</a>
+			<a href="#main" style="position: absolute; top: -999px">Skip to main content</a>
 		</nav>
 		<aside>
 			<h1>About the book</h1>
@@ -361,7 +361,7 @@ The element with a click event to skip the complementary [section of repeated co
 	</head>
 	<body>
 		<nav>
-			<span onclick="document.getElementById('main').focus()">Skip to text</span>
+			<span onclick="document.getElementById('main').focus()">Skip to main content</span>
 		</nav>
 		<aside>
 			<h1>About the book</h1>
@@ -390,7 +390,7 @@ The element to skip the complementary [section of repeated content][] is [visibl
 	</head>
 	<body>
 		<nav>
-			<div role="link" onclick="location.href='#main';" tabindex="1" id="skip-link">Skip to text</div>
+			<div role="link" onclick="location.href='#main';" tabindex="1" id="skip-link">Skip to main content</div>
 		</nav>
 		<aside>
 			<h1>About the book</h1>
@@ -419,7 +419,7 @@ The link to skip the complementary [section of repeated content][] does not refe
 	</head>
 	<body>
 		<nav>
-			<a href="#InvalidId">Skip to text</a>
+			<a href="#invalid-id">Skip to main content</a>
 		</nav>
 		<aside>
 			<h1>About the book</h1>
@@ -477,7 +477,7 @@ The first [focusable][] element within this page is the link to W3C. The link to
 	</head>
 	<body>
 		<nav>
-			<a href="#main" tabindex="2">Skip to text</a>
+			<a href="#main" tabindex="2">Skip to main content</a>
 			<a href="https://www.w3.org/" tabindex="1">Check out the W3C</a>
 		</nav>
 		<aside>

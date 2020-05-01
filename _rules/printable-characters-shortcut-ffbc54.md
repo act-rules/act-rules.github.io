@@ -35,6 +35,7 @@ For the test target, the outcome of at least one of the following rules is passe
 ## Assumptions
 
 This rule assumes as applicable [keyboard shortcuts][keyboard shortcut] those implemented by the [HTML document][] [content][]. Any other means (e.g. browser extensions, browser settings, user agents, external browser applications) are not considered.
+This rule assumes as applicable [keyboard shortcuts][keyboard shortcut], those who result in an outcome.
 
 ## Accessibility Support
 
@@ -52,7 +53,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that can be disabled by an [instrument][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][].
+This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that can be disabled by an [instrument][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][].
 
 ```html
 <html>
@@ -78,7 +79,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Passed Example 2
 
-The [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][] and each one of them can be disabled by a [instrument][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][]. In this case, each [keyboard shortcut][] is disabled by a different [instrument][].
+This [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][] and each one of them can be disabled by a [instrument][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][]. In this case, each [keyboard shortcut][] is disabled by a different [instrument][].
 
 ```html
 <html>
@@ -108,7 +109,7 @@ The [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only
 
 #### Passed Example 3
 
-The [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][] that can be disabled by a [instrument][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][]. In this case, both [keyboard shortcuts][keyboard shortcut] are disabled by the same [instrument][].
+This [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][] that can be disabled by a [instrument][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][]. In this case, both [keyboard shortcuts][keyboard shortcut] are disabled by the same [instrument][].
 
 ```html
 <html>
@@ -134,7 +135,7 @@ The [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only
 
 #### Passed Example 4
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that can be remapped to use a shortcut with a [non-printable character][non-printable characters].
+This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that can be remapped to a shortcut with a [non-printable character][non-printable characters].
 
 ```html
 <html>
@@ -165,7 +166,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Passed Example 5
 
-The [HTML document][] has two [keyboard shortcut][] using only a [printable character][], and each one of them can be remapped to use a shortcut with a [non-printable character][non-printable characters].
+This [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][], and each one of them can be remapped to a shortcut with a [non-printable character][non-printable characters].
 
 ```html
 <html>
@@ -200,7 +201,7 @@ The [HTML document][] has two [keyboard shortcut][] using only a [printable char
 
 #### Passed Example 6
 
-The [HTML document][] has two [keyboard shortcut][] using only a [printable character][] that can be remapped to use a shortcut with a [non-printable character][non-printable characters].
+This [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][] that can be remapped to a shortcut with a [non-printable character][non-printable characters].
 
 ```html
 <html>
@@ -231,7 +232,7 @@ The [HTML document][] has two [keyboard shortcut][] using only a [printable char
 
 #### Passed Example 7
 
-This [HTML document][] has a single [printable character][] [keyboard shortcut][] for a [HTML element][] (using the `+` character), which is only available when that [HTML element][] has [focus][].
+This [HTML document][] has a single [printable character][] [keyboard shortcut][] for a [event target][] (using the `+` character), which is only available when that [event target][] has [focus][].
 
 ```html
 <html>
@@ -256,7 +257,7 @@ This [HTML document][] has a single [printable character][] [keyboard shortcut][
 
 #### Failed Example 1
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that cannot be disabled.
+This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that cannot be disabled.
 
 ```html
 <html>
@@ -278,7 +279,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 2
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [instrument][] is not [visible][].
+This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [instrument][] is not [visible][].
 
 ```html
 <html>
@@ -306,7 +307,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 3
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [instrument][] is not [included in the accessibility tree][].
+This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [instrument][] is not [included in the accessibility tree][].
 
 ```html
 <html>
@@ -334,7 +335,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 4
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [instrument][] has an empty (`""`) [accessible name][].
+This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [instrument][] has an empty (`""`) [accessible name][].
 
 ```html
 <html>
@@ -361,7 +362,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 5
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that cannot be remapped.
+This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that cannot be remapped.
 
 ```html
 <html>
@@ -383,7 +384,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 6
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [instrument][] is not [visible][].
+This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [instrument][] is not [visible][].
 
 ```html
 <html>
@@ -414,7 +415,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 7
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [instrument][] is not [included in the accessibility tree][].
+This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [instrument][] is not [included in the accessibility tree][].
 
 ```html
 <html>
@@ -445,7 +446,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 8
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [instrument][] has an empty (`""`) [accessible name][].
+This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [instrument][] has an empty (`""`) [accessible name][].
 
 ```html
 <html>
@@ -471,7 +472,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 9
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] for a [HTML element][] which is available even when the [HTML element][] does not have [focus][].
+This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] for a [event target][] which is available even when the [event target][] does not have [focus][].
 
 ```html
 <html>
@@ -496,7 +497,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Inapplicable Example 1
 
-The document is not an [HTML document][].
+This document is not an [HTML document][].
 
 ```html
 <svg height="100" width="100">
@@ -507,7 +508,7 @@ The document is not an [HTML document][].
 
 #### Inapplicable Example 2
 
-The [HTML document][] has a [keyboard shortcut][] that requires pressing one [non-printable character][non-printable characters].
+This [HTML document][] has a [keyboard shortcut][] that requires pressing one [non-printable character][non-printable characters].
 
 ```html
 <html>
@@ -530,7 +531,7 @@ The [HTML document][] has a [keyboard shortcut][] that requires pressing one [no
 
 #### Inapplicable Example 3
 
-The [HTML document][] has an element with the attribute `accesskey`. Accesskeys use [non-printable characters][].
+This [HTML document][] has an element with the attribute `accesskey`. Accesskeys use [non-printable characters][].
 
 ```html
 <html>
@@ -565,10 +566,10 @@ The [HTML document][] has an element with the attribute `accesskey`. Accesskeys 
 ```
 
 [HTML document]: https://dom.spec.whatwg.org/#concept-document
-[keyboard shortcut]: https://www.w3.org/TR/WCAG21/#dfn-keyboard-shortcuts
+[keyboard shortcut]: #keyboard-shortcut 'Keyboard shortcut'
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
 [focus]: https://html.spec.whatwg.org/#focusable-area
-[HTML element]: https://html.spec.whatwg.org/multipage/dom.html#htmlelement
+[event target]: https://dom.spec.whatwg.org/#eventtarget 
 [event]: https://dom.spec.whatwg.org/#events
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [printable character]: #printable-characters 'Definition of printable characters'

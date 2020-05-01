@@ -6,7 +6,7 @@ description: |
   This rule checks that keyboard shortcuts for user interface components using only printable characters are only available when the component has focus.
 accessibility_requirements: # Remove whatever is not applicable
   wcag21:2.1.4: # Character Key Shortcuts (A)
-    forConformance: true
+    forConformance: false
     failed: further testing needed
     passed: satisfied
     inapplicable: further testing needed
@@ -21,11 +21,11 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any [keyboard shortcut][] that requires pressing only [printable character][] keys to trigger an [event][] in an [HTML element][] that can receive [focus][] within a [HTML document][].
+The rule applies to any [keyboard shortcut][] that requires pressing only [printable character][] keys within an [HTML document][] and whose [event target][] can receive [focus][].
 
 ## Expectation
 
-For each test target, it can only be triggered when the [HTML element][] associated with the test target has [focus][].
+For each test target, if its [event target][] does not have [focus][] the outcome of the event is prevented.
 
 ## Assumptions
 
@@ -45,7 +45,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This [HTML document][] has a single [printable character][] [keyboard shortcut][] for a [HTML element][] (using the `+` character), which is only available when that [HTML element][] has [focus][].
+This [HTML document][] has a single [printable character][] [keyboard shortcut][] for a [event target][] (using the `+` character), which is only available when that [event target][] has [focus][].
 
 ```html
 <html>
@@ -70,7 +70,7 @@ This [HTML document][] has a single [printable character][] [keyboard shortcut][
 
 #### Failed Example 1
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] for a [HTML element][] which is available even when the [HTML element][] does not have [focus][].
+This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] for a [event target][] which is available even when the [event target][] does not have [focus][].
 
 ```html
 <html>
@@ -95,7 +95,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Inapplicable Example 1
 
-The document is not an [HTML document][].
+This document is not an [HTML document][].
 
 ```html
 <svg height="100" width="100">
@@ -129,7 +129,7 @@ This [HTML document][] has no [keyboard shortcut][] that requires pressing only 
 
 #### Inapplicable Example 3
 
-This [HTML document][] has no [keyboard shortcut][] that requires pressing only [printable character][printable characters] (the only [keyboard shortcut][] uses the attribute `accesskey` and accesskeys use [non-printable characters][]).
+This [HTML document][] has a [keyboard shortcut][] by means of the attribute `accesskey` and accesskeys use [non-printable characters][].
 
 ```html
 <html>
@@ -164,11 +164,11 @@ This [HTML document][] has no [keyboard shortcut][] that requires pressing only 
 ```
 
 [html document]: https://dom.spec.whatwg.org/#concept-document
-[keyboard shortcut]: https://www.w3.org/TR/WCAG21/#dfn-keyboard-shortcuts
+[keyboard shortcut]: #keyboard-shortcut 'Keyboard shortcut'
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
 [focus]: https://html.spec.whatwg.org/#focusable-area
-[HTML element]: https://html.spec.whatwg.org/multipage/dom.html#htmlelement
 [event]: https://dom.spec.whatwg.org/#events
+[event target]: https://dom.spec.whatwg.org/#eventtarget 
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [printable character]: #printable-characters 'Definition of printable characters'
 [non-printable characters]: #non-printable-characters 'Definition of non-printable characters'

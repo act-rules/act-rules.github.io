@@ -6,7 +6,7 @@ description: |
   This rule checks that if keyboard shortcuts are implemented using only printable characters, a mechanism to remap the shortcut to use one or more non-printable characters exists.
 accessibility_requirements: 
   wcag21:2.1.4: # Character Key Shortcuts (A)
-    forConformance: true
+    forConformance: false
     failed: further testing needed
     passed: satisfied
     inapplicable: further testing needed
@@ -25,9 +25,9 @@ The rule applies to any [keyboard shortcut][] that requires pressing only [print
 
 ## Expectation 1
 
-For each test target, an [instrument][] to remap to use one or more [non-printable characters][] is available.
+For each test target, an [instrument][] to remap the [keyboard shortcut][] to use one or more [non-printable characters][] is available.
 
-**Note:** If multiple single [printable character][] [shortcuts][keyboard shortcut] exist, they all can be remapped by a single [instrument][].
+**Note:** If multiple single [printable character][] [shortcuts][keyboard shortcut] exist, each one can be remapped by the respective [instrument][], or all of them can be remapped by the same [instrument][].
 
 ## Expectation 2
 
@@ -53,7 +53,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that can be remapped to use a shortcut with a [non-printable character][non-printable characters].
+This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that can be remapped to a shortcut with a [non-printable character][non-printable characters].
 
 ```html
 <html>
@@ -84,7 +84,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Passed Example 2
 
-The [HTML document][] has two [keyboard shortcut][] using only a [printable character][], and each one of them can be remapped to use a shortcut with a [non-printable character][non-printable characters].
+This [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][], and each one of them can be remapped to a shortcut with a [non-printable character][non-printable characters].
 
 ```html
 <html>
@@ -119,7 +119,7 @@ The [HTML document][] has two [keyboard shortcut][] using only a [printable char
 
 #### Passed Example 3
 
-The [HTML document][] has two [keyboard shortcut][] using only a [printable character][] that can be remapped to use a shortcut with a [non-printable character][non-printable characters].
+This [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][] that can be remapped to a shortcut with a [non-printable character][non-printable characters].
 
 ```html
 <html>
@@ -152,7 +152,7 @@ The [HTML document][] has two [keyboard shortcut][] using only a [printable char
 
 #### Failed Example 1
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that cannot be remapped.
+This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that cannot be remapped.
 
 ```html
 <html>
@@ -174,7 +174,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 2
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [instrument][] is not [visible][].
+This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [instrument][] is not [visible][].
 
 ```html
 <html>
@@ -205,7 +205,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 3
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [instrument][] is not [included in the accessibility tree][].
+This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [instrument][] is not [included in the accessibility tree][].
 
 ```html
 <html>
@@ -236,7 +236,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 4
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [instrument][] has an empty (`""`) [accessible name][].
+This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [instrument][] has an empty (`""`) [accessible name][].
 
 ```html
 <html>
@@ -264,7 +264,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Inapplicable Example 1
 
-The document is not an [HTML document][].
+This document is not an [HTML document][].
 
 ```html
 <svg height="100" width="100">
@@ -275,7 +275,7 @@ The document is not an [HTML document][].
 
 #### Inapplicable Example 2
 
-The [HTML document][] has a [keyboard shortcut][] that requires pressing one [non-printable character][non-printable characters].
+This [HTML document][] has a [keyboard shortcut][] that requires pressing one [non-printable character][non-printable characters].
 
 ```html
 <html>
@@ -298,7 +298,7 @@ The [HTML document][] has a [keyboard shortcut][] that requires pressing one [no
 
 #### Inapplicable Example 3
 
-The [HTML document][] has an element with the attribute `accesskey`. Accesskeys use [non-printable characters][].
+This [HTML document][] has an element with the attribute `accesskey`. Accesskeys use [non-printable characters][].
 
 ```html
 <html>
@@ -333,7 +333,7 @@ The [HTML document][] has an element with the attribute `accesskey`. Accesskeys 
 ```
 
 [HTML document]: https://dom.spec.whatwg.org/#concept-document
-[keyboard shortcut]: https://www.w3.org/TR/WCAG21/#dfn-keyboard-shortcuts
+[keyboard shortcut]: #keyboard-shortcut 'Keyboard shortcut'
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
 [event]: https://dom.spec.whatwg.org/#events
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'

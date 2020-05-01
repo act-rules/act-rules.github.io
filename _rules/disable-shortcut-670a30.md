@@ -6,7 +6,7 @@ description: |
   This rule checks that if keyboard shortcuts are implemented using only printable characters, a mechanism to disable the shortcut exists.
 accessibility_requirements: # Remove whatever is not applicable
   wcag21:2.1.4: # Character Key Shortcuts (A)
-    forConformance: true
+    forConformance: false
     failed: further testing needed
     passed: satisfied
     inapplicable: further testing needed
@@ -25,9 +25,9 @@ The rule applies to any [keyboard shortcut][] that requires pressing only [print
 
 ## Expectation 1
 
-For each test target, an [instrument][] to disable it is available.
+For each test target, an [instrument][] to prevent the outcome of the event is available in the same [web page][], or in another [web page][] that is [linked][hyperlink] from the [web page][] of the test target.
 
-**Note:** If multiple single [printable character][] [shortcuts][keyboard shortcut] exist, they all can be disabled by a single [instrument][].
+**Note:** If multiple single [printable character][] [shortcuts][keyboard shortcut] exist, each one can be disabled by the respective [instrument][], or all of them can be disabled by the same [instrument][].
 
 ## Expectation 2
 
@@ -53,7 +53,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that can be disabled by an [instrument][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][].
+This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that can be disabled by an [instrument][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][].
 
 ```html
 <html>
@@ -79,7 +79,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Passed Example 2
 
-The [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][] and each one of them can be disabled by a [instrument][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][]. In this case, each [keyboard shortcut][] is disabled by a different [instrument][].
+This [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][] and each one of them can be disabled by a [instrument][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][]. In this case, each [keyboard shortcut][] is disabled by a different [instrument][].
 
 ```html
 <html>
@@ -109,7 +109,7 @@ The [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only
 
 #### Passed Example 3
 
-The [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][] that can be disabled by a [instrument][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][]. In this case, both [keyboard shortcuts][keyboard shortcut] are disabled by the same [instrument][].
+This [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][] that can be disabled by a [instrument][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][]. In this case, both [keyboard shortcuts][keyboard shortcut] are disabled by the same [instrument][].
 
 ```html
 <html>
@@ -159,7 +159,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 2
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [instrument][] is not [visible][].
+This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [instrument][] is not [visible][].
 
 ```html
 <html>
@@ -187,7 +187,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 3
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [instrument][] is not [included in the accessibility tree][].
+This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [instrument][] is not [included in the accessibility tree][].
 
 ```html
 <html>
@@ -215,7 +215,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Failed Example 4
 
-The [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [instrument][] has an empty (`""`) [accessible name][].
+This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [instrument][] has an empty (`""`) [accessible name][].
 
 ```html
 <html>
@@ -244,7 +244,7 @@ The [HTML document][] has a [keyboard shortcut][] using only a [printable charac
 
 #### Inapplicable Example 1
 
-The document is not an [HTML document][].
+This document is not an [HTML document][].
 
 ```html
 <svg height="100" width="100">
@@ -313,12 +313,14 @@ This [HTML document][] has no [keyboard shortcut][] that requires pressing only 
 ```
 
 [HTML document]: https://dom.spec.whatwg.org/#concept-document
-[keyboard shortcut]: https://www.w3.org/TR/WCAG21/#dfn-keyboard-shortcuts
+[keyboard shortcut]: #keyboard-shortcut 'Keyboard shortcut'
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
 [event]: https://dom.spec.whatwg.org/#events
+[hyperlink]: https://html.spec.whatwg.org/#hyperlink
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [printable character]: #printable-characters 'Definition of printable characters'
 [visible]: #visible 'Definition of visible'
 [accessible name]: #accessible-name 'Definition of accessible name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [non-printable characters]: #non-printable-characters 'Definition of non-printable characters'
+[web page]: #web-page-html 'Definition of web page'

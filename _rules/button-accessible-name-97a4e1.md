@@ -132,7 +132,7 @@ This `button` element has no [accessible name][] because it has no content or at
 
 #### Failed Example 2
 
-This `button` element has no [accessible name][]. The `value` attribute does not provide an [accessible name][] for `button` elements, only for `input` elements in the `button`, `submit` or `reset` [state of the `type` attribute](https://html.spec.whatwg.org/multipage/input.html#states-of-the-type-attribute).
+This `button` element has no [accessible name][]. The `value` attribute does not provide an [accessible name][] for `button` elements, only when an `input` element's [state of the `type` attribute](https://html.spec.whatwg.org/multipage/input.html#states-of-the-type-attribute) is `button`, `submit` or `reset`.
 
 ```html
 <button type="button" value="read more"></button>

@@ -37,6 +37,8 @@ The rule applies to any HTML element that is [visible](#visible) and has a CSS [
 
 The target element is neither rotated clockwise nor counter clockwise around the Z-axis at an angle corresponding to 90 degrees relative from the position of the element in `landscape` orientation to the position of the element in `portrait` orientation, and vice versa.
 
+**Note:** Imagine the display of a smartphone with an upwards pointing arrow its center. If we turn the smartphone a quarter turn, that is move from one orientation to the other, we would want the arrow to continue pointing upwards. This is done by rotating it a quarter turn to counter our change in orientation. In effect, the arrow has remained in place and its rotation relative from one orientation to the other is 0 degrees. Now imagine that we rotate the arrow by a quarter turn _only_ when in one orientation and not the other; its rotation relative from one orientation to the other would then be 90 degrees and it would appear stuck, or locked, as we move between orientations. What we've done is effectively counter the smartphones attempt at countering our change in orientation.
+
 ## Assumptions
 
 This rule does not consider and may produce incorrect results for:
@@ -120,7 +122,13 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 <html lang="en">
 	<head>
 		<title>Page with some content</title>
-		<link rel="stylesheet" href="/test-assets/b33eff/style.css" />
+		<style>
+			@media (orientation: portrait) {
+				html {
+					transform: rotate(1.5708rad);
+				}
+			}
+		</style>
 	</head>
 	<body>
 		Page Content
@@ -140,6 +148,32 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 			@media (orientation: landscape) {
 				body {
 					transform: matrix3d(0, -1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		Page Content
+	</body>
+</html>
+```
+
+#### Failed Example 3
+
+This page appears rotated at a slight angle of 2.5 degrees for stylistic purposes, but is locked in portrait orientation by applying a 92.5 degree rotation when in landscape orientation:
+
+```html
+<html lang="en">
+	<head>
+		<title>Page with some content</title>
+		<style>
+			body {
+				transform: rotate(2.5deg);
+			}
+
+			@media (orientation: landscape) {
+				body {
+					transform: rotate(92.5deg);
 				}
 			}
 		</style>

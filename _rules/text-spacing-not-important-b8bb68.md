@@ -38,8 +38,6 @@ The test target does not have "important" as its [letter-spacing][] [priority][]
 
 The test target does not have "important" as its [line-height][] [priority][], unless the [computed][] [line-height][] is greater than `1.5` times the [computed][] [font-size][] of the test target.
 
-**Note:** Font size conversions rely on the default pixel size for body (usually 16 pixels), as defined by the [user agent origin][] stylesheet.
-
 ## Assumptions
 
 If there is a mechanism available on the page by which text spacing can be adjusted, failing this rule might not mean [success criterion 1.4.12 Text spacing](https://www.w3.org/TR/WCAG21/#text-spacing) is not satisfied.

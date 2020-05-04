@@ -1,20 +1,18 @@
 ---
 id: b8bb68
-name: Text spacing set in the `style` attribute is below permissible minimum value or not set to `!important`
+name: Text spacing in `style` attributes is not `!important`
 rule_type: atomic
 description: |
-  This rule checks that
+  This rule checks that text spacing set in the `style` attribute is below permissible minimum value or not set to `!important`
 accessibility_requirements:
   wcag21:1.4.12: # Text Spacing (AA)
     forConformance: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-
 input_aspects:
   - DOM Tree
   - CSS Styling
-
 acknowledgments:
   authors:
     - Jey Nandakumar
@@ -30,17 +28,17 @@ This rule applies to any HTML element that is [visible][] and has one of the fol
 
 ## Expectation 1
 
-The test target does not have "important" as its [word-spacing][] [priority][], unless the [computed][] [word-spacing][] is greater than `0.16` times the computed [font-size][] of the test target.
+The test target does not have "important" as its [word-spacing][] [priority][], unless the [computed][] [word-spacing][] is greater than `0.16` times the [computed][] [font-size][] of the test target.
 
 ## Expectation 2
 
-The test target does not have "important" as its [letter-spacing][] [priority][], unless the [computed][] [letter-spacing][] is greater than `0.12` times the computed [font-size][] of the test target.
+The test target does not have "important" as its [letter-spacing][] [priority][], unless the [computed][] [letter-spacing][] is greater than `0.12` times the [computed][] [font-size][] of the test target.
 
 ## Expectation 3
 
-The test target does not have "important" as its [line-height][] [priority][], unless the [computed][] [line-height][] is greater than `1.5` times the computed [font-size][] of the test target.
+The test target does not have "important" as its [line-height][] [priority][], unless the [computed][] [line-height][] is greater than `1.5` times the [computed][] [font-size][] of the test target.
 
-**Note:** Font size conversations rely on the default pixel size for body (usually 16 pixels), as defined by the [user agent origin][] stylesheet.
+**Note:** Font size conversions rely on the default pixel size for body (usually 16 pixels), as defined by the [user agent origin][] stylesheet.
 
 ## Assumptions
 
@@ -48,7 +46,7 @@ If there is a mechanism available on the page by which text spacing can be adjus
 
 ## Accessibility Support
 
-While some assistive technologies are able to set [user origin][] styles, others such as browser extensions are only able to set style with the [author origin][]. Such assistive technologies can not create styles with a high enough priority to override a `style` attribute with `!important` . If accessibility support does not include assistive technologies that override text spacing through [author origin][], this rule should not be used.
+While some assistive technologies are able to set [user origin][] styles, others such as browser extensions are only able to set style with the [author origin][]. Such assistive technologies can not create styles with a high enough priority to override a `style` attribute with `!important`. If accessibility support does not include assistive technologies that override text spacing through [author origin][], this rule should not be used.
 
 ## Background
 

@@ -43,11 +43,13 @@ For each test target there exists a set of [instruments][instrument] to achieve 
 
 ## Expectation 2
 
-The set of [instruments][instrument] from Expectation 1 is in one of the following:
+Each [instrument][] in the set of [instruments][instrument] from Expectation 1 is in one of the following:
 
 - the same [web page](#web-page-html) of the test target; or
 - the same [web page](#web-page-html) of the test target as a result of an action from the user; or
 - another [web page](#web-page-html) that is [linked][hyperlink] from the [web page](#web-page-html) of the test target.
+
+**Note:** If the set of instruments has more than one instrument, not all instruments of the set need to be located in the same location.
 
 ## Assumptions
 

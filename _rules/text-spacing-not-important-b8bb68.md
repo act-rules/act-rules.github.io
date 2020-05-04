@@ -63,10 +63,21 @@ While some assistive technologies are able to set [user origin][] styles, others
 This `p` element has a `line-height` of `20px` (equals `1.25em` ) which is below the permissible minimum, given the default pixel size of the body is 16 pixels.
 
 ```html
-<p style="line-height: 20px;">
-	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
-	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
-</p>
+<html>
+	<head>
+		<style>
+			body {
+				font-size: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<p style="line-height: 20px;">
+			The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
+			sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
+		</p>
+	</body>
+</html>
 ```
 
 #### Passed Example 2
@@ -74,10 +85,21 @@ This `p` element has a `line-height` of `20px` (equals `1.25em` ) which is below
 This `div` element has a `letter-spacing` of `0.12em` which is equal to the permissible minimum, given the default pixel size of the body is 16 pixels.
 
 ```html
-<div style="letter-spacing: 0.12em;">
-	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
-	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
-</div>
+<html>
+	<head>
+		<style>
+			body {
+				font-size: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="letter-spacing: 0.12em;">
+			The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
+			sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
+		</div>
+	</body>
+</html>
 ```
 
 #### Passed Example 3
@@ -85,10 +107,21 @@ This `div` element has a `letter-spacing` of `0.12em` which is equal to the perm
 This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12em` ) which is equal to the permissible value, given the default pixel size of the body is 16 pixels. Given the computed value is equal to the permissible value, the [priority][] is not taken into consideration.
 
 ```html
-<strong style="word-spacing: 1.92pt !important;">
-	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
-	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
-</strong>
+<html>
+	<head>
+		<style>
+			body {
+				font-size: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<strong style="word-spacing: 1.92pt !important;">
+			The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
+			sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
+		</strong>
+	</body>
+</html>
 ```
 
 #### Passed Example 4
@@ -96,10 +129,21 @@ This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12e
 This `article` element has both `word-spacing` and `line-height` specified, which are both below the permissible minimum, given the default pixel size of the body is 16 pixels.
 
 ```html
-<article style="word-spacing: 1.8pt; line-height: 1em;">
-	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
-	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
-</article>
+<html>
+	<head>
+		<style>
+			body {
+				font-size: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<article style="word-spacing: 1.8pt; line-height: 1em;">
+			The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
+			sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
+		</article>
+	</body>
+</html>
 ```
 
 #### Passed Example 5
@@ -124,10 +168,21 @@ This `article` element has both `word-spacing` and `line-height` specified, whic
 This `p` element has a `line-height` of `30px !important` (equals `1.875em` ) which is above the permissible minimum, given the default pixel size of the body is 16 pixels.
 
 ```html
-<p style="line-height: 30px !important">
-	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
-	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
-</p>
+<html>
+	<head>
+		<style>
+			body {
+				font-size: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<p style="line-height: 30px !important">
+			The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
+			sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
+		</p>
+	</body>
+</html>
 ```
 
 #### Failed Example 2
@@ -135,10 +190,21 @@ This `p` element has a `line-height` of `30px !important` (equals `1.875em` ) wh
 This `div` element has a `letter-spacing` of `1em !important` which is above to the permissible minimum, given the default pixel size of the body is 16 pixels.
 
 ```html
-<div style="letter-spacing: 1em !important;">
-	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
-	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
-</div>
+<html>
+	<head>
+		<style>
+			body {
+				font-size: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="letter-spacing: 1em !important;">
+			The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
+			sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
+		</div>
+	</body>
+</html>
 ```
 
 #### Failed Example 3
@@ -146,10 +212,21 @@ This `div` element has a `letter-spacing` of `1em !important` which is above to 
 This `strong` element has a `word-spacing` of `8px !important` (equals `0.5em` ) which is above the permissible value, given the default pixel size of the body is 16 pixels.
 
 ```html
-<strong style="word-spacing: 8px !important;">
-	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
-	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
-</strong>
+<html>
+	<head>
+		<style>
+			body {
+				font-size: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<strong style="word-spacing: 8px !important;">
+			The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
+			sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
+		</strong>
+	</body>
+</html>
 ```
 
 #### Failed Example 4
@@ -157,10 +234,21 @@ This `strong` element has a `word-spacing` of `8px !important` (equals `0.5em` )
 This `article` element has both `letter-spacing` and `line-height` specified, where `line-height` is above the permissible value, given the default pixel size of the body is 16 pixels.
 
 ```html
-<article style="letter-spacing: 0.12em !important; line-height: 3em !important;">
-	The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
-	sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
-</article>
+<html>
+	<head>
+		<style>
+			body {
+				font-size: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<article style="letter-spacing: 0.12em !important; line-height: 3em !important;">
+			The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
+			sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
+		</article>
+	</body>
+</html>
 ```
 
 #### Failed Example 5
@@ -213,7 +301,6 @@ This `body` element does not have `style` attribute specified.
 			line-height: 50px;
 		}
 	</style>
-
 	<body>
 		The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
 		sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.

@@ -309,13 +309,11 @@ This `span` element has updated color but not its `innerText` property.
 </body>
 ```
 
-[accessible name]: #accessible-name 'Definition of accessible name'
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor
 [activation]: https://html.spec.whatwg.org/#activation
 [child]: https://dom.spec.whatwg.org/#concept-tree-child
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
-[document readiness]: https://www.w3.org/TR/html53/dom.html#current-document-readiness
 [essential]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html#dfn-essential
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [f16]: https://www.w3.org/WAI/WCAG21/Techniques/failures/F16
@@ -323,12 +321,9 @@ This `span` element has updated color but not its `innerText` property.
 [html document]: https://dom.spec.whatwg.org/#html-document
 [html element]: https://html.spec.whatwg.org/multipage/dom.html#htmlelement
 [hyperlink]: https://html.spec.whatwg.org/#hyperlink
-[last activation timestamp]: https://html.spec.whatwg.org/#last-activation-timestamp
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [sc 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
-[sibling]: https://dom.spec.whatwg.org/#concept-tree-sibling
 [text node]: https://dom.spec.whatwg.org/#text
 [user interaction]: #user-interaction 'Definition of user interaction'
 [visible text content]: #visible-text-content 'Definition of visible text content'
 [visible]: #visible 'Definition of visible'
-[window]: https://html.spec.whatwg.org/#window

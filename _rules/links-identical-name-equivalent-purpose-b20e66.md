@@ -11,6 +11,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
   - DOM Tree
   - CSS Styling
   - Language
@@ -48,7 +49,8 @@ When followed, the links in each set of target elements resolve to the [same res
 
 ## Accessibility Support
 
-This rule assumes that assistive technologies are exposing all links on the page in the same way no matter which [document tree](https://dom.spec.whatwg.org/#document-trees) they are in. If an assistive technology requires the user to "enter" an `iframe` or a [shadow tree][] before exposing its links, then it is possible for two links to have identical name but resolve to different resources without failing [Success Criterion 2.4.9 Link Purpose (Link Only)][sc249] (if said links are in separate [documents][document] or [shadow trees][shadow tree])
+- This rule assumes that assistive technologies are exposing all links on the page in the same way no matter which [document tree](https://dom.spec.whatwg.org/#document-trees) they are in. If an assistive technology requires the user to "enter" an `iframe` or a [shadow tree][] before exposing its links, then it is possible for two links to have identical name but resolve to different resources without failing [Success Criterion 2.4.9 Link Purpose (Link Only)][sc249] (if said links are in separate [documents][document] or [shadow trees][shadow tree]).
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `link` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 
@@ -354,22 +356,6 @@ These links have different [accessible names][accessible name]. The rule only ap
 
 #### Inapplicable Example 3
 
-The first link is not [included in the accessibility tree][].
-
-```html
-<html lang="en">
-	<a
-		href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page1.html"
-		aria-hidden="true"
-		tabindex="-1"
-		>Contact Us</a
-	>
-	<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/page2.html">Contact Us</a>
-</html>
-```
-
-#### Inapplicable Example 4
-
 These `span` elements do not have a [semantic role][] of link.
 
 ```html
@@ -384,7 +370,7 @@ These `span` elements do not have a [semantic role][] of link.
 </html>
 ```
 
-#### Inapplicable Example 5
+#### Inapplicable Example 4
 
 These links have empty [accessible names][accessible name].
 
@@ -392,7 +378,7 @@ These links have empty [accessible names][accessible name].
 <a href="http://facebook.com"></a> <a href="http://twitter.com"></a>
 ```
 
-#### Inapplicable Example 6
+#### Inapplicable Example 5
 
 These image links have empty [accessible names][accessible name].
 
@@ -408,6 +394,7 @@ These image links have empty [accessible names][accessible name].
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [light tree]: https://dom.spec.whatwg.org/#concept-light-tree 'Definition of light tree'
 [matching]: #matching-characters 'Definition of matching characters'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [same resource]: #same-resource 'Definition of same resource'
 [sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9: Link Purpose (link only)'
 [semantic role]: #semantic-role 'Definition of semantic role'

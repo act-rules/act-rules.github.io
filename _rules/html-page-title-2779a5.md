@@ -84,7 +84,7 @@ This page has a `title` element with content.
 
 #### Passed Example 2
 
-This page has a `title` element that is for the entire page, including content in the `iframe` without its own `title`.
+This page has a `title` element that serves as the title for the page and the `iframe` since it does not have its own.
 
 ```html
 <html>

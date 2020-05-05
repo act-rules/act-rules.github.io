@@ -34,12 +34,12 @@ Within the test target, there is at least one element which:
 
 ## Assumptions
 
-- This rule assumes that the main landmark is correctly used to identify the primary content of the page.
-- This rule assume that landmarks are intended to users of Assistive Technologies and are not necessarily rendered in a visible way. Therefore, it does not require the main landmark to be [visible][]. Similarly, technique [ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11] does not require landmarks to be [visible][] or have [visible][] content.
+- This rule assumes that the `main` [landmark][] is correctly used to identify the [main section of content][] of the page.
+- This rule assumes that [landmarks][landmark] are intended to users of Assistive Technologies and are not necessarily rendered in a visible way. Therefore, it does not require the main landmark to be [visible][]. Similarly, technique [ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11] does not require landmarks to be [visible][] or have [visible][] content.
 
 ## Accessibility Support
 
-Having a `main` landmark is sufficient to pass [Success Criterion 2.4.1: Bypass blocks][sc241] by identifying the main content of a page. However, this will only benefit users who can actually navigate using landmark roles (such a functionality is usually provided by assistive technologies, but could also be provided by browsers or browsers plugins). Users without any possibility for landmark navigation will be left without way of bypassing blocks of repeated content and will still experience accessibility issues. Therefore, it is recommended to provide other ways of bypassing blocks.
+Having a `main` [landmark][] is sufficient to pass [Success Criterion 2.4.1: Bypass blocks][sc241] by identifying the [main section of content][] of a page. However, this will only benefit users who can actually navigate using landmark roles (such a functionality is usually provided by assistive technologies, but could also be provided by browsers or browsers plugins). Users without any possibility for landmark navigation will be left without way of bypassing blocks of repeated content and will still experience accessibility issues. Therefore, it is recommended to provide other ways of bypassing blocks.
 
 ## Background
 
@@ -164,6 +164,8 @@ This [document][] is not an [HTML web page][].
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [html web page]: #web-page-html 'Definition of web page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of landmark roles'
+[main section of content]: #main-section-of-content 'Definition of main section of content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1: Bypass blocks'
 [section of content]: #section-of-content 'Definition of section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'

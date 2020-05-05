@@ -34,7 +34,7 @@ The first [focusable][] element within the test target:
 - is [visible][] when [focused][]; and
 - has a [semantic role][] of `link`; and
 - can be [activated][] by use of keyboard only; and
-- when [activated][], moves focus to the [main section of content][] of the [document][]; and
+- when [activated][], moves focus [at the start][] of the [main section of content][] of the [document][]; and
 - has an [accessible name][] that communicates that it links to the [main section of content][].
 
 ## Assumptions
@@ -233,6 +233,10 @@ The first [focusable][] element within this page is the link to the [main sectio
 	</body>
 </html>
 ```
+
+jumps to in previous section
+
+jumps to after a hr
 
 ### Failed
 
@@ -496,6 +500,10 @@ The first [focusable][] element within this page is the link to W3C. The link to
 </html>
 ```
 
+jumps too early.
+
+jumps too late.
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -510,6 +518,7 @@ This [document][] is not an [HTML web page][].
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [activated]: https://html.spec.whatwg.org/#activation 'Definition of activation'
+[at the start]: #start-end-content 'Definition of start and end of content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [focusable]: #focusable 'Definition of focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'Definition of focused'

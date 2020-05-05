@@ -34,7 +34,7 @@ Within the test target, there is an [initial segment][] of the [focusable][] ele
 - is [visible][] when [focused][]; and
 - has a [semantic role][] of link; and
 - can be [activated][] by use of keyboard only; and
-- when [activated][], moves focus to a [section of content][] within the same [document][]; and
+- when [activated][], moves focus [at the start][] of a [section of content][] within the same [document][]; and
 - has an [accessible name][] that communicates that it links to that specific [section of content][].
 
 **Note:** There is no requirement on how many [focusable][] elements are part of that [initial segment][], nor any requirement to provide a way to determine (programmatically or not) where that [initial segment][] stops. Technique [G124: Adding links at the top of the page to each area of the content](https://www.w3.org/WAI/WCAG21/Techniques/general/G124), and this rule, only require that such a set exists.
@@ -381,6 +381,8 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 	</body>
 </html>
 ```
+
+one move in previous + one skip a hr
 
 ### Failed
 
@@ -838,6 +840,8 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 </html>
 ```
 
+one jumps too early + one jumps too late
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -852,6 +856,7 @@ This [document][] is not an [HTML web page][].
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [activated]: https://html.spec.whatwg.org/#activation 'Definition of activation'
+[at the start]: #start-end-content 'Definition of start and end of content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [focusable]: #focusable 'Definition of focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'Definition of focused'

@@ -36,7 +36,7 @@ For each [section of repeated content][] within the test target, either the last
 - is [visible][] when [focused][]; and
 - can be [activated][] by use of keyboard only; and
 - has an [accessible name][] that communicates that it skips this [section of content][]; and
-- when [activated][], moves keyboard focus to a node which is located (in [tree order][]) between the last [perceivable content][] of this [section of repeated content][] and the first [perceivable content][] after it.
+- when [activated][], moves keyboard focus to a node which is [at the end][] of this [section of repeated content][].
 
 **Note:** "last" and "first" [focusable][] elements are to be taken in focus order, not in [tree order][].
 
@@ -256,7 +256,7 @@ The link to skip the complementary [section of repeated content][] is located be
 
 #### Passed Example 8
 
-The link at the start of the complementary [section of repeated content][] jumps to after its last [perceivable content][].
+The link at the start of the complementary [section of repeated content][] jumps [at its end][at the end].
 
 ```html
 <html lang="en">
@@ -284,7 +284,7 @@ The link at the start of the complementary [section of repeated content][] jumps
 
 #### Passed Example 9
 
-The link to skip the complementary [section of repeated content][] jumps before the first [perceivable content][] of the next section because the `hr` element is not [palpable content][], hence not [perceivable content][].
+The link to skip the complementary [section of repeated content][] jumps [at its end][at the end] (at the first [perceivable content][] after it, because the `hr` element is not [palpable content][], hence not [perceivable content][]).
 
 ```html
 <html lang="en">
@@ -312,7 +312,7 @@ The link to skip the complementary [section of repeated content][] jumps before 
 
 #### Passed Example 10
 
-The link to skip the complementary [section of repeated content][] jumps before the first [perceivable content][] of the next section because the `img` element has a [semantic role][] of `presentation`, hence is not [perceivable content][].
+The link to skip the complementary [section of repeated content][] jumps [at its end][at the end] (at the first [perceivable content][] after it, because the `img` element has a [semantic role][] of `presentation`, hence is not [perceivable content][]).
 
 ```html
 <html lang="en">
@@ -340,7 +340,7 @@ The link to skip the complementary [section of repeated content][] jumps before 
 
 #### Passed Example 11
 
-The link to skip the complementary [section of repeated content][] jumps before the first [perceivable content][] of the next section because the `div` element is neither [visible][] nor [included in the accessibility tree][], hence it is not [perceivable content][].
+The link to skip the complementary [section of repeated content][] jumps [at its end][at the end] (at the first [perceivable content][] after it, because the `div` element is neither [visible][] nor [included in the accessibility tree][], hence it is not [perceivable content][]).
 
 ```html
 <html lang="en">
@@ -633,8 +633,7 @@ The link to skip the complementary [section of repeated content][] jumps before 
 			<h1>About the book</h1>
 			<!-- description of the book and biography of the authors, repeated on each page -->
 			<!-- does not include any focusable element -->
-			<div id="end-aside" />
-			<p>The text presented here is from a 2014 translation</p>
+			<p id="end-aside">The text presented here is from a 2014 translation</p>
 		</aside>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -692,6 +691,7 @@ This [document][] is not an [HTML web page][].
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [activated]: https://html.spec.whatwg.org/#activation 'Definition of activation'
+[at the end]: #start-end-content 'Definition of at the end'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [focusable]: #focusable 'Definition of focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'Definition of focused'

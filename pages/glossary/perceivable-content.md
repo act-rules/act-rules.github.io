@@ -3,6 +3,10 @@ title: Perceivable content
 key: perceivable-content
 unambiguous: true
 objective: true
+input_aspects:
+  - Accessibility tree
+  - CSS styling
+  - DOM tree
 ---
 
 A node is _perceivable content_ if all the following are true:

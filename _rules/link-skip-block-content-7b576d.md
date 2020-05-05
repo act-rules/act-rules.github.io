@@ -20,6 +20,7 @@ acknowledgments:
     - Christina Adams
   assets:
     - _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014, ISBN 9780804843935)
+    - Image from a Ming Dynasty edition of the Romance of the Three Kingdoms, original kept in the library holdings of Peking University.
 ---
 
 ## Applicability
@@ -35,16 +36,15 @@ For each [section of repeated content][] within the test target, either the last
 - is [visible][] when [focused][]; and
 - can be [activated][] by use of keyboard only; and
 - has an [accessible name][] that communicates that it skips this [section of content][]; and
-- when [activated][], moves keyboard focus to a node which:
-  - is an ancestor in the [flat tree][] of the first text node after this [section of repeated content][]; and
-  - is not an ancestor of any node within this [section of repeated content][].
+- when [activated][], moves keyboard focus to a node which is located (in [tree order][]) between the last [perceivable content][] of this [section of repeated content][] and the first [perceivable content][] after it.
 
-**Note:** "last" and "first" [focusable][] elements are to be taken in focus order, not in tree order.
+**Note:** "last" and "first" [focusable][] elements are to be taken in focus order, not in [tree order][].
 
 ## Assumptions
 
 - This rule assumes that [sections of repeated content][section of repeated content] have already been identified within the test target, for example by comparison with other test targets within the same website, or any other means.
 - This rule assumes that that [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123] requires the that the link can be activated by use of keyboard only (in order to be useful for keyboard users).
+- This rule assumes that elements with a [semantic role][] of `none` or `presentation` are [pure decoration][] and that elements which are [pure decoration][] either have no [semantic role][] or a [semantic role][] of `none` or `presentation`. Otherwise, [perceivable content][] might be wrongly detected.
 
 ## Accessibility Support
 
@@ -245,6 +245,118 @@ The link to skip the complementary [section of repeated content][] is located be
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
+#### Passed Example 8
+
+The link at the start of the complementary [section of repeated content][] jumps to after its last [perceivable content][].
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<aside>
+			<a href="#end-aside">Skip additional information</a>
+			<h1>About the book</h1>
+			<!-- description of the book and biography of the authors, repeated on each page -->
+			<!-- does not include any focusable element -->
+			<div id="end-aside" />
+		</aside>
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
+#### Passed Example 9
+
+The link to skip the complementary [section of repeated content][] jumps before the first [perceivable content][] of the next section because the `hr` element is not [palpable content][], hence not [perceivable content][].
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<aside>
+			<a href="#main">Skip additional information</a>
+			<h1>About the book</h1>
+			<!-- description of the book and biography of the authors, repeated on each page -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main>
+			<hr />
+			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
+#### Passed Example 10
+
+The link to skip the complementary [section of repeated content][] jumps before the first [perceivable content][] of the next section because the `img` element has a [semantic role][] of `presentation`, hence is not [perceivable content][].
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<aside>
+			<a href="#main">Skip additional information</a>
+			<h1>About the book</h1>
+			<!-- description of the book and biography of the authors, repeated on each page -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main>
+			<img src="../test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg" role="presentation" alt="" />
+			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
+#### Passed Example 11
+
+The link to skip the complementary [section of repeated content][] jumps before the first [perceivable content][] of the next section because the `div` element is neither [visible][] nor [included in the accessibility tree][], hence it is not [perceivable content][].
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<aside>
+			<a href="#main">Skip additional information</a>
+			<h1>About the book</h1>
+			<!-- description of the book and biography of the authors, repeated on each page -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main>
+			<div hidden>This is the start of Chapter 1</div>
+			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -506,6 +618,66 @@ The link to skip the complementary [section of repeated content][] has non-descr
 </html>
 ```
 
+#### Failed Example 10
+
+The link to skip the complementary [section of repeated content][] jumps before the last [perceivable content][] in it.
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<aside>
+			<a href="#end-aside">Skip additional information</a>
+			<h1>About the book</h1>
+			<!-- description of the book and biography of the authors, repeated on each page -->
+			<!-- does not include any focusable element -->
+			<div id="end-aside" />
+			<p>The text presented here is from a 2014 translation</p>
+		</aside>
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
+#### Failed Example 11
+
+The link to skip the complementary [section of repeated content][] jumps after the first [perceivable content][] in the next section (the image).
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<aside>
+			<a href="#main">Skip additional information</a>
+			<h1>About the book</h1>
+			<!-- description of the book and biography of the authors, repeated on each page -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main>
+			<img
+				src="../test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg"
+				alt="Ming dynasty illustration of the Peach Garden Oath"
+			/>
+			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -521,14 +693,17 @@ This [document][] is not an [HTML web page][].
 [accessible name]: #accessible-name 'Definition of accessible name'
 [activated]: https://html.spec.whatwg.org/#activation 'Definition of activation'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
-[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [focusable]: #focusable 'Definition of focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'Definition of focused'
+[html web page]: #web-page-html 'Definition of web page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of landmark roles'
+[palpable content]: https://html.spec.whatwg.org/multipage/dom.html#palpable-content 'HTML specification of palpable content'
+[perceivable content]: #perceivable-content 'Definition of perceivable content'
+[pure decoration]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of pure decoration'
 [tech g123]: (https://www.w3.org/WAI/WCAG21/Techniques/general/G123) 'Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block'
 [section of content]: #section-of-content 'Definition of section of content'
 [section of repeated content]: #section-of-repeated-content 'Definition of section of repeated content'
 [semantic role]: #semantic-role 'Definition of semantic role'
+[tree order]: https://dom.spec.whatwg.org/#concept-tree-order 'DOM specification of tree order'
 [visible]: #visible 'Definition of visible'
-[html web page]: #web-page-html 'Definition of web page (HTML)'

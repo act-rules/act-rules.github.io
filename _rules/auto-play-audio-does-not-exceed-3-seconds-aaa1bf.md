@@ -1,9 +1,9 @@
 ---
 id: aaa1bf
-name: '`Audio` or `video` that plays automatically has no audio lasting more than 3 seconds'
+name: '`Audio` or `video` that plays automatically has no audio that lasts more than 3 seconds'
 rule_type: atomic
 description: |
-  content that plays automatically does not output audio for more than 3 seconds.
+  `audio` or `video` that plays automatically does not output audio for more than 3 seconds.
 accessibility_requirements:
   wcag-technique:G60: # Playing a sound that turns off automatically within three seconds
     forConformance: false

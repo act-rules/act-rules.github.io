@@ -62,13 +62,11 @@ This `p` element has a `line-height` of `20px` (equals `1.25em` ) which is below
 
 ```html
 <html>
-	<head>
-		<style>
-			body {
-				font-size: 16px;
-			}
-		</style>
-	</head>
+	<style>
+		body {
+			font-size: 16px;
+		}
+	</style>
 	<body>
 		<p style="line-height: 20px;">
 			The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
@@ -84,13 +82,11 @@ This `div` element has a `letter-spacing` of `0.12em` which is equal to the perm
 
 ```html
 <html>
-	<head>
-		<style>
-			body {
-				font-size: 16px;
-			}
-		</style>
-	</head>
+	<style>
+		body {
+			font-size: 16px;
+		}
+	</style>
 	<body>
 		<div style="letter-spacing: 0.12em;">
 			The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
@@ -106,13 +102,11 @@ This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12e
 
 ```html
 <html>
-	<head>
-		<style>
-			body {
-				font-size: 16px;
-			}
-		</style>
-	</head>
+	<style>
+		body {
+			font-size: 16px;
+		}
+	</style>
 	<body>
 		<strong style="word-spacing: 1.92pt !important;">
 			The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
@@ -128,13 +122,11 @@ This `article` element has both `word-spacing` and `line-height` specified, whic
 
 ```html
 <html>
-	<head>
-		<style>
-			body {
-				font-size: 16px;
-			}
-		</style>
-	</head>
+	<style>
+		body {
+			font-size: 16px;
+		}
+	</style>
 	<body>
 		<article style="word-spacing: 1.8pt; line-height: 1em;">
 			The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
@@ -167,13 +159,11 @@ This `p` element has a `line-height` of `30px !important` (equals `1.875em` ) wh
 
 ```html
 <html>
-	<head>
-		<style>
-			body {
-				font-size: 16px;
-			}
-		</style>
-	</head>
+	<style>
+		body {
+			font-size: 16px;
+		}
+	</style>
 	<body>
 		<p style="line-height: 30px !important">
 			The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
@@ -189,13 +179,11 @@ This `div` element has a `letter-spacing` of `1em !important` which is above to 
 
 ```html
 <html>
-	<head>
-		<style>
-			body {
-				font-size: 16px;
-			}
-		</style>
-	</head>
+	<style>
+		body {
+			font-size: 16px;
+		}
+	</style>
 	<body>
 		<div style="letter-spacing: 1em !important;">
 			The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
@@ -211,13 +199,11 @@ This `strong` element has a `word-spacing` of `8px !important` (equals `0.5em` )
 
 ```html
 <html>
-	<head>
-		<style>
-			body {
-				font-size: 16px;
-			}
-		</style>
-	</head>
+	<style>
+		body {
+			font-size: 16px;
+		}
+	</style>
 	<body>
 		<strong style="word-spacing: 8px !important;">
 			The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
@@ -233,13 +219,11 @@ This `article` element has both `letter-spacing` and `line-height` specified, wh
 
 ```html
 <html>
-	<head>
-		<style>
-			body {
-				font-size: 16px;
-			}
-		</style>
-	</head>
+	<style>
+		body {
+			font-size: 16px;
+		}
+	</style>
 	<body>
 		<article style="letter-spacing: 0.12em !important; line-height: 3em !important;">
 			The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
@@ -314,5 +298,4 @@ This `body` element does not have `style` attribute specified.
 [computed]: https://www.w3.org/TR/css-cascade-3/#computed-value 'CSS Cascading and Inheritance Level 3 - Computed Values'
 [author origin]: https://drafts.csswg.org/css-cascade-4/#cascade-origin-author 'CSS Cascading and Inheritance Level 4 - Cascading Origins - Author Origin'
 [user origin]: https://drafts.csswg.org/css-cascade-4/#cascade-origin-user 'CSS Cascading and Inheritance Level 4 - Cascading Origins - User Origin'
-[user agent origin]: https://drafts.csswg.org/css-cascade-4/#cascade-origin-ua 'CSS Cascading and Inheritance Level 4 - Cascading Origins - User Agent Origin'
 [font-size]: https://www.w3.org/TR/css-fonts-3/#propdef-font-size 'CSS Fonts Module Level 3- Font size: the font-size property'

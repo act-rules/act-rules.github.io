@@ -109,7 +109,7 @@ Element has required properties, but with incorrect value since no element with 
 Element does not list required states and properties (`aria-controls` is required property for `combobox`)
 
 ```html
-<div role="combobox"></div>
+<div role="combobox" aria-expanded="true"></div>
 ```
 
 #### Failed Example 2
@@ -117,7 +117,7 @@ Element does not list required states and properties (`aria-controls` is require
 Required states and properties do not have a value that is not empty ("")
 
 ```html
-<div role="combobox" aria-controls=""></div>
+<div role="combobox" aria-controls="" aria-expanded="true"></div>
 ```
 
 ### Inapplicable

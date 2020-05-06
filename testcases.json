@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 737,
+  "count": 738,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -7598,6 +7598,30 @@
       "testcaseTitle": "Inapplicable Example 2",
       "url": "https://act-rules.github.io/testcases/3ea0c8/415be88a584bd2672659faf8dce7276c57584048.html",
       "relativePath": "testcases/3ea0c8/415be88a584bd2672659faf8dce7276c57584048.html",
+      "expected": "inapplicable",
+      "ruleId": "3ea0c8",
+      "ruleName": "`id` attribute value is unique",
+      "rulePage": "https://act-rules.github.io/rules/3ea0c8",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H93": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
+        }
+      }
+    },
+    {
+      "testcaseId": "e276b0ca08851f6ce0ea0ab1280d9fbe26119868",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/3ea0c8/e276b0ca08851f6ce0ea0ab1280d9fbe26119868.html",
+      "relativePath": "testcases/3ea0c8/e276b0ca08851f6ce0ea0ab1280d9fbe26119868.html",
       "expected": "inapplicable",
       "ruleId": "3ea0c8",
       "ruleName": "`id` attribute value is unique",

@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 736,
+  "count": 737,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -2358,6 +2358,30 @@
       "testcaseTitle": "Inapplicable Example 2",
       "url": "https://act-rules.github.io/testcases/e7aa44/2dfa209363c9d1edab2e7bcd5448a0f21db78300.html",
       "relativePath": "testcases/e7aa44/2dfa209363c9d1edab2e7bcd5448a0f21db78300.html",
+      "expected": "inapplicable",
+      "ruleId": "e7aa44",
+      "ruleName": "`audio` element content has text alternative",
+      "rulePage": "https://act-rules.github.io/rules/e7aa44",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.2.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G158": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a712845ae1efc5353a374239dd9c4c51522e0927",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/e7aa44/a712845ae1efc5353a374239dd9c4c51522e0927.html",
+      "relativePath": "testcases/e7aa44/a712845ae1efc5353a374239dd9c4c51522e0927.html",
       "expected": "inapplicable",
       "ruleId": "e7aa44",
       "ruleName": "`audio` element content has text alternative",

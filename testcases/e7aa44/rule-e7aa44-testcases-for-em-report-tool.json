@@ -1198,6 +1198,17 @@
             "source": "https://act-rules.github.io/testcases/e7aa44/2dfa209363c9d1edab2e7bcd5448a0f21db78300.html",
             "title": "2dfa209363c9d1edab2e7bcd5448a0f21db78300",
             "tested": false
+          },
+          {
+            "type": [
+              "TestSubject",
+              "WebPage"
+            ],
+            "id": "_:struct_6",
+            "description": "https://act-rules.github.io/testcases/e7aa44/a712845ae1efc5353a374239dd9c4c51522e0927.html",
+            "source": "https://act-rules.github.io/testcases/e7aa44/a712845ae1efc5353a374239dd9c4c51522e0927.html",
+            "title": "a712845ae1efc5353a374239dd9c4c51522e0927",
+            "tested": false
           }
         ]
       }

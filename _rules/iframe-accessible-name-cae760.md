@@ -139,6 +139,5 @@ This `iframe` is not part of [sequential focus navigation][] because it has `tab
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[whitespace]: #whitespace 'Definition of whitespace'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components

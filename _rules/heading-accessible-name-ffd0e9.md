@@ -16,6 +16,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
   - DOM Tree
   - CSS Styling
 acknowledgments:
@@ -37,9 +38,11 @@ _There are currently no assumptions._
 
 ## Accessibility Support
 
-Some assistive technologies may hide headings with empty [accessible name][] from the users. This depends both on the user agent and how the [accessible name][] was computed (the [accessible name and description computation][] is not clear concerning which characters should be trimmed) and of the assistive technology itself. Hence, there are cases where the outcome of this rule is _failed_, but users of certain assistive technology and browser combinations will not experience an issue.
+- Some assistive technologies may hide headings with empty [accessible name][] from the users. This depends both on the user agent and how the [accessible name][] was computed (the [accessible name and description computation][] is not clear concerning which characters should be trimmed) and of the assistive technology itself. Hence, there are cases where the outcome of this rule is _failed_, but users of certain assistive technology and browser combinations will not experience an issue.
 
 **Note:** Completely empty headings (`<h1></h1>`) seem to be consistently ignored by assistive technologies. However, they fail [Technique H42: Using h1-h6 to identify headings][tech h42] (by using heading markup for content which is not heading). Moreover, they may be rendered on screen (by breaking flow content, or because of custom styling), thus causing concerns for sighted users. Therefore, this rule also fails on these.
+
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `heading` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 
@@ -105,7 +108,7 @@ This `h1` element has an empty [accessible name][] given by its `aria-labelledby
 
 #### Failed Example 2
 
-This `h1` element has an empty [accessible name][] because the `img` element is [marked as decorative][] through its [semantic role][] of `presentation`, and thus does not provide an [accessible name][] to the `h1` element.
+This `h1` element has an empty [accessible name][] because the `img` element has a [semantic role][] of `presentation`, and thus does not provide an [accessible name][] to the `h1` element. Note that the `alt` attribute does not trigger [Presentational Roles Conflict Resolution][] because it is not an ARIA attribute.
 
 ```html
 <h1><img src="#" alt="ACT rules" role="presentation" /></h1>
@@ -137,6 +140,15 @@ This `div` element with a [semantic role][] of `heading` has an empty [accessibl
 <div role="heading" aria-level="1" style="border-style: solid"></div>
 ```
 
+#### Failed Example 6
+
+This `h1` element has an [explicit role][] of `none`. However, the [global][] [property][] `aria-labelledby` is specified. Thus it has a [semantic role][] of `heading` due to [Presentational Roles Conflict Resolution][]. It has an empty [accessible name][] given by its `aria-labelledby` attribute.
+
+```html
+<span id="label"></span>
+<h1 aria-labelledby="label" role="none">ACT rules</h1>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -157,10 +169,13 @@ This `h1` element is not [included in the accessibility tree][].
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [accessible name and description computation]: https://www.w3.org/TR/accname
-[marked as decorative]: #marked-as-decorative 'Definition of marked as decorative'
+[explicit role]: #explicit-role 'Definition of explicit role'
+[global]: https://www.w3.org/TR/wai-aria-1.1/#global_states 'Definition of Global ARIA States and Properties'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[property]: https://www.w3.org/TR/wai-aria/#dfn-property 'Definition of ARIA Property'
+[semantic role]: #semantic-role 'Definition of semantic role'
 [tech h42]: https://www.w3.org/WAI/WCAG21/Techniques/html/H42 'Technique H42: Using h1-h6 to identify headings'
 [usc131]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'
 [usc246]: https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html 'Understanding Success Criterion 2.4.6: Headings and Labels'
-[semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'

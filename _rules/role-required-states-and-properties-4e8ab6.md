@@ -88,7 +88,7 @@ This `combobox` is missing the required `aria-controls` property.
 **Note**: In [WAI-ARIA 1.2][], `combobox` will also require `aria-expanded`.
 
 ```html
-<div role="combobox"></div>
+<div role="combobox" aria-expanded="true"></div>
 ```
 
 #### Failed Example 2
@@ -96,7 +96,7 @@ This `combobox` is missing the required `aria-controls` property.
 This `combobox` has an empty value for the required `aria-controls` property.
 
 ```html
-<div role="combobox" aria-controls=""></div>
+<div role="combobox" aria-controls="" aria-expanded="true"></div>
 ```
 
 ### Inapplicable

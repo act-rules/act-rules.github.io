@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 740,
+  "count": 736,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -1161,10 +1161,10 @@
       }
     },
     {
-      "testcaseId": "46d48aac72a1afdec5ea64fc58286e7c7c7654df",
+      "testcaseId": "8892c9716f91e889225826f36e7cf1b47788a06e",
       "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/5c01ea/46d48aac72a1afdec5ea64fc58286e7c7c7654df.html",
-      "relativePath": "testcases/5c01ea/46d48aac72a1afdec5ea64fc58286e7c7c7654df.html",
+      "url": "https://act-rules.github.io/testcases/5c01ea/8892c9716f91e889225826f36e7cf1b47788a06e.html",
+      "relativePath": "testcases/5c01ea/8892c9716f91e889225826f36e7cf1b47788a06e.html",
       "expected": "passed",
       "ruleId": "5c01ea",
       "ruleName": "ARIA state or property is permitted",
@@ -1186,10 +1186,10 @@
       }
     },
     {
-      "testcaseId": "0ef6c7d2c5b2d5685dac0c73f28271a415e439d0",
+      "testcaseId": "cd5bc068d31630964e98a6c4092abcd95224227d",
       "testcaseTitle": "Passed Example 4",
-      "url": "https://act-rules.github.io/testcases/5c01ea/0ef6c7d2c5b2d5685dac0c73f28271a415e439d0.html",
-      "relativePath": "testcases/5c01ea/0ef6c7d2c5b2d5685dac0c73f28271a415e439d0.html",
+      "url": "https://act-rules.github.io/testcases/5c01ea/cd5bc068d31630964e98a6c4092abcd95224227d.html",
+      "relativePath": "testcases/5c01ea/cd5bc068d31630964e98a6c4092abcd95224227d.html",
       "expected": "passed",
       "ruleId": "5c01ea",
       "ruleName": "ARIA state or property is permitted",
@@ -1236,10 +1236,10 @@
       }
     },
     {
-      "testcaseId": "3a9462a56889b5bbf3a5ac07d892cfa35b1b579a",
+      "testcaseId": "60980ff603a84125c82e4bb9eeabe947104ae907",
       "testcaseTitle": "Passed Example 6",
-      "url": "https://act-rules.github.io/testcases/5c01ea/3a9462a56889b5bbf3a5ac07d892cfa35b1b579a.html",
-      "relativePath": "testcases/5c01ea/3a9462a56889b5bbf3a5ac07d892cfa35b1b579a.html",
+      "url": "https://act-rules.github.io/testcases/5c01ea/60980ff603a84125c82e4bb9eeabe947104ae907.html",
+      "relativePath": "testcases/5c01ea/60980ff603a84125c82e4bb9eeabe947104ae907.html",
       "expected": "passed",
       "ruleId": "5c01ea",
       "ruleName": "ARIA state or property is permitted",
@@ -1261,10 +1261,10 @@
       }
     },
     {
-      "testcaseId": "5e87dbb6240d445c89f892f16fe98202e5b186c1",
+      "testcaseId": "c8adcc1398d15cf8bf95441441a6d1097db13f51",
       "testcaseTitle": "Passed Example 7",
-      "url": "https://act-rules.github.io/testcases/5c01ea/5e87dbb6240d445c89f892f16fe98202e5b186c1.html",
-      "relativePath": "testcases/5c01ea/5e87dbb6240d445c89f892f16fe98202e5b186c1.html",
+      "url": "https://act-rules.github.io/testcases/5c01ea/c8adcc1398d15cf8bf95441441a6d1097db13f51.html",
+      "relativePath": "testcases/5c01ea/c8adcc1398d15cf8bf95441441a6d1097db13f51.html",
       "expected": "passed",
       "ruleId": "5c01ea",
       "ruleName": "ARIA state or property is permitted",
@@ -1286,10 +1286,10 @@
       }
     },
     {
-      "testcaseId": "b1256eff48ac94217cb87b2462db0cb3a4d44cf8",
+      "testcaseId": "9a5b54d5955477bf826a395997cb3300806ab59f",
       "testcaseTitle": "Passed Example 8",
-      "url": "https://act-rules.github.io/testcases/5c01ea/b1256eff48ac94217cb87b2462db0cb3a4d44cf8.html",
-      "relativePath": "testcases/5c01ea/b1256eff48ac94217cb87b2462db0cb3a4d44cf8.html",
+      "url": "https://act-rules.github.io/testcases/5c01ea/9a5b54d5955477bf826a395997cb3300806ab59f.html",
+      "relativePath": "testcases/5c01ea/9a5b54d5955477bf826a395997cb3300806ab59f.html",
       "expected": "passed",
       "ruleId": "5c01ea",
       "ruleName": "ARIA state or property is permitted",
@@ -1537,10 +1537,10 @@
       }
     },
     {
-      "testcaseId": "fd54649b8dcf21d986860f3ddec2b50cd83afad0",
+      "testcaseId": "995accefb5d704169f628c3fb872e993f29d3b88",
       "testcaseTitle": "Passed Example 5",
-      "url": "https://act-rules.github.io/testcases/6a7281/fd54649b8dcf21d986860f3ddec2b50cd83afad0.html",
-      "relativePath": "testcases/6a7281/fd54649b8dcf21d986860f3ddec2b50cd83afad0.html",
+      "url": "https://act-rules.github.io/testcases/6a7281/995accefb5d704169f628c3fb872e993f29d3b88.html",
+      "relativePath": "testcases/6a7281/995accefb5d704169f628c3fb872e993f29d3b88.html",
       "expected": "passed",
       "ruleId": "6a7281",
       "ruleName": "ARIA state or property has valid value",
@@ -1594,10 +1594,10 @@
       }
     },
     {
-      "testcaseId": "c661a7126fda23d1720a426dad68ab96696089d2",
+      "testcaseId": "6e3ed1ee9967fad97492ec854b506cb07d4f5e63",
       "testcaseTitle": "Passed Example 8",
-      "url": "https://act-rules.github.io/testcases/6a7281/c661a7126fda23d1720a426dad68ab96696089d2.html",
-      "relativePath": "testcases/6a7281/c661a7126fda23d1720a426dad68ab96696089d2.html",
+      "url": "https://act-rules.github.io/testcases/6a7281/6e3ed1ee9967fad97492ec854b506cb07d4f5e63.html",
+      "relativePath": "testcases/6a7281/6e3ed1ee9967fad97492ec854b506cb07d4f5e63.html",
       "expected": "passed",
       "ruleId": "6a7281",
       "ruleName": "ARIA state or property has valid value",
@@ -12514,10 +12514,10 @@
       }
     },
     {
-      "testcaseId": "d83bace3838691764fef6ff36e2da48ac7e5208d",
+      "testcaseId": "2549eb63af24ea8b5d659afd53374c96bc344278",
       "testcaseTitle": "Passed Example 1",
-      "url": "https://act-rules.github.io/testcases/4e8ab6/d83bace3838691764fef6ff36e2da48ac7e5208d.html",
-      "relativePath": "testcases/4e8ab6/d83bace3838691764fef6ff36e2da48ac7e5208d.html",
+      "url": "https://act-rules.github.io/testcases/4e8ab6/2549eb63af24ea8b5d659afd53374c96bc344278.html",
+      "relativePath": "testcases/4e8ab6/2549eb63af24ea8b5d659afd53374c96bc344278.html",
       "expected": "passed",
       "ruleId": "4e8ab6",
       "ruleName": "Element with `role` attribute has required states and properties",
@@ -12538,10 +12538,10 @@
       }
     },
     {
-      "testcaseId": "e7da5cf5d4f42673ee9b86e26a90149c28f5317e",
+      "testcaseId": "9131439ea2fa6ebb37e3c8ccadffabef4762eefe",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/4e8ab6/e7da5cf5d4f42673ee9b86e26a90149c28f5317e.html",
-      "relativePath": "testcases/4e8ab6/e7da5cf5d4f42673ee9b86e26a90149c28f5317e.html",
+      "url": "https://act-rules.github.io/testcases/4e8ab6/9131439ea2fa6ebb37e3c8ccadffabef4762eefe.html",
+      "relativePath": "testcases/4e8ab6/9131439ea2fa6ebb37e3c8ccadffabef4762eefe.html",
       "expected": "passed",
       "ruleId": "4e8ab6",
       "ruleName": "Element with `role` attribute has required states and properties",
@@ -12562,82 +12562,10 @@
       }
     },
     {
-      "testcaseId": "8924e37172e60fca068aa1a4d6ba1117be033777",
+      "testcaseId": "6c8f7ec672c71b94f4ba517049208f66b4ec2dc1",
       "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/4e8ab6/8924e37172e60fca068aa1a4d6ba1117be033777.html",
-      "relativePath": "testcases/4e8ab6/8924e37172e60fca068aa1a4d6ba1117be033777.html",
-      "expected": "passed",
-      "ruleId": "4e8ab6",
-      "ruleName": "Element with `role` attribute has required states and properties",
-      "rulePage": "https://act-rules.github.io/rules/4e8ab6",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:ARIA5": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "cb5e9d5bb821328cc5d55f10ada4602e55a6d3a2",
-      "testcaseTitle": "Passed Example 4",
-      "url": "https://act-rules.github.io/testcases/4e8ab6/cb5e9d5bb821328cc5d55f10ada4602e55a6d3a2.html",
-      "relativePath": "testcases/4e8ab6/cb5e9d5bb821328cc5d55f10ada4602e55a6d3a2.html",
-      "expected": "passed",
-      "ruleId": "4e8ab6",
-      "ruleName": "Element with `role` attribute has required states and properties",
-      "rulePage": "https://act-rules.github.io/rules/4e8ab6",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:ARIA5": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "ec7775b9d67e6fa4214c51300ff37eb5efbeeb8f",
-      "testcaseTitle": "Passed Example 5",
-      "url": "https://act-rules.github.io/testcases/4e8ab6/ec7775b9d67e6fa4214c51300ff37eb5efbeeb8f.html",
-      "relativePath": "testcases/4e8ab6/ec7775b9d67e6fa4214c51300ff37eb5efbeeb8f.html",
-      "expected": "passed",
-      "ruleId": "4e8ab6",
-      "ruleName": "Element with `role` attribute has required states and properties",
-      "rulePage": "https://act-rules.github.io/rules/4e8ab6",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:ARIA5": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "384008af27c9e8aa0ce78f5c898563521406b0db",
-      "testcaseTitle": "Passed Example 6",
-      "url": "https://act-rules.github.io/testcases/4e8ab6/384008af27c9e8aa0ce78f5c898563521406b0db.html",
-      "relativePath": "testcases/4e8ab6/384008af27c9e8aa0ce78f5c898563521406b0db.html",
+      "url": "https://act-rules.github.io/testcases/4e8ab6/6c8f7ec672c71b94f4ba517049208f66b4ec2dc1.html",
+      "relativePath": "testcases/4e8ab6/6c8f7ec672c71b94f4ba517049208f66b4ec2dc1.html",
       "expected": "passed",
       "ruleId": "4e8ab6",
       "ruleName": "Element with `role` attribute has required states and properties",
@@ -12730,32 +12658,8 @@
       }
     },
     {
-      "testcaseId": "b929cbb7f11ce09f5554e1bc55d87b64f822589c",
-      "testcaseTitle": "Inapplicable Example 2",
-      "url": "https://act-rules.github.io/testcases/4e8ab6/b929cbb7f11ce09f5554e1bc55d87b64f822589c.html",
-      "relativePath": "testcases/4e8ab6/b929cbb7f11ce09f5554e1bc55d87b64f822589c.html",
-      "expected": "inapplicable",
-      "ruleId": "4e8ab6",
-      "ruleName": "Element with `role` attribute has required states and properties",
-      "rulePage": "https://act-rules.github.io/rules/4e8ab6",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:ARIA5": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
       "testcaseId": "398f52dc30a9d2ed3a0cf7169e0ff53013d3c0fd",
-      "testcaseTitle": "Inapplicable Example 3",
+      "testcaseTitle": "Inapplicable Example 2",
       "url": "https://act-rules.github.io/testcases/4e8ab6/398f52dc30a9d2ed3a0cf7169e0ff53013d3c0fd.html",
       "relativePath": "testcases/4e8ab6/398f52dc30a9d2ed3a0cf7169e0ff53013d3c0fd.html",
       "expected": "inapplicable",
@@ -12779,7 +12683,7 @@
     },
     {
       "testcaseId": "647fb4efbab4b870ae5bdd2b3781196d2d49ffc9",
-      "testcaseTitle": "Inapplicable Example 4",
+      "testcaseTitle": "Inapplicable Example 3",
       "url": "https://act-rules.github.io/testcases/4e8ab6/647fb4efbab4b870ae5bdd2b3781196d2d49ffc9.html",
       "relativePath": "testcases/4e8ab6/647fb4efbab4b870ae5bdd2b3781196d2d49ffc9.html",
       "expected": "inapplicable",

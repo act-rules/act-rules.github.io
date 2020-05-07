@@ -152,14 +152,12 @@ The `xml:id` attribute is not considered by this rule.
 <div xml:id="my-div">This is my first element</div>
 ```
 
-
 #### Inapplicable Example 3
 
 These `id` attributes have an empty value.
 
 ```html
-<span id="">Hello</span>
-<span id="">world!</span>
+<span id="">Hello</span> <span id="">world!</span>
 ```
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

@@ -1,9 +1,9 @@
 ---
 id: 97a4e1
-name: Button has accessible name
+name: Button has non-empty accessible name
 rule_type: atomic
 description: |
-  This rule checks that each `button` element has an accessible name.
+  This rule checks that each `button` element has a non-empty accessible name.
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true

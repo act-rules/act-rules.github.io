@@ -1,9 +1,9 @@
 ---
 id: 23a2a8
-name: Image has accessible name
+name: Image has non-empty accessible name
 rule_type: atomic
 description: |
-  This rule checks that each image either has an accessible name or is marked up as decorative
+  This rule checks that each image either has a non-empty accessible name or is marked up as decorative
 accessibility_requirements:
   wcag20:1.1.1: # Non-Text Content
     forConformance: true

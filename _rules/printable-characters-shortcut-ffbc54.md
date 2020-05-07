@@ -1,7 +1,7 @@
 ---
 id: ffbc54
 name: No keyboard shortcuts use only printable characters
-rule_type: composite
+rule_type: atomic
 description: |
   This rule checks that if keyboard shortcuts are implemented using only printable characters, then there is a mechanism to disable the shortcut, or to remap the shortcut to use one or more non-printable characters keys, or the shortcut for a user interface component is only available when that component has focus.
 accessibility_requirements:
@@ -10,10 +10,6 @@ accessibility_requirements:
     failed: not satisfied
     passed: satisfied
     inapplicable: further testing needed
-input_rules:
-  - 670a30
-  - aa8b52
-  - 1e9941
 acknowledgements:
   authors:
     - João Vicente
@@ -22,29 +18,28 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any [keyboard shortcut][] that requires pressing only [printable character][] keys to trigger within a [HTML document][].
+The rule applies to any [keyboard event][]: 
+ - where the attribute `key` is a [printable character][] key; and
+ - the attribute `isComposing` is set to `false`; or the [keyboard event][] is part of an [composition event][] whose attribute `data` includes at least one [non-printable character][] key; and
+ - is [dispatched][] to an [event target][] within a [HTML document][].
 
 ## Expectation
 
-For the test target, the outcome of at least one of the following rules is passed:
-
-- [Printable keys only shortcut can be disabled](https://act-rules.github.io/rules/670a30)
-- [Printable keys only shortcut can be remapped](https://act-rules.github.io/rules/aa8b52) 
-- [Printable key shortcut is only active when component has focus](https://act-rules.github.io/rules/1e9941)
+For each test target:
+ - an [instrument][] to prevent the outcome of the [keyboard event][] is available; or
+ - if the [event target][] does not have [focus], the outcome of the event is prevented; or
+ - an [instrument][] is available to force the [keyboard event][] to be part of an [composition event][] whose attribute `data` must include at least one [non-printable character][] key.
 
 ## Assumptions
 
-This rule assumes as applicable [keyboard shortcuts][keyboard shortcut] those implemented by the [HTML document][] [content][]. Any other means (e.g. browser extensions, browser settings, user agents, external browser applications) are not considered.
-This rule assumes as applicable [keyboard shortcuts][keyboard shortcut], those who result in an outcome.
-
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+Currently [keyboard events][keyboard event] only support the types `keydown` and `keyup`. [Keyboard events][keyboard event] of type `keypressed` are considered [legacy keyboard events][].
 
 ## Background
 
 - [Understanding Success Criterion 2.1.4: Character Key Shortcuts](https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html)
-- [G127 Providing a mechanism to allow users to remap or turn off character key shortcuts](https://www.w3.org/WAI/WCAG21/Techniques/general/G217)
+- [G217 Providing a mechanism to allow users to remap or turn off character key shortcuts](https://www.w3.org/WAI/WCAG21/Techniques/general/G217)
 - [F99 Failure of Success Criterion 2.1.4 due to implementing character key shortcuts that cannot be turned off or remapped](https://www.w3.org/WAI/WCAG21/Techniques/failures/F99)
 
 ## Test Cases
@@ -566,11 +561,12 @@ This [HTML document][] has an element with the attribute `accesskey`. Accesskeys
 ```
 
 [HTML document]: https://dom.spec.whatwg.org/#concept-document
-[keyboard shortcut]: #keyboard-shortcut 'Keyboard shortcut'
-[content]: https://www.w3.org/TR/WCAG21/#dfn-content
 [focus]: https://html.spec.whatwg.org/#focusable-area
 [event target]: https://dom.spec.whatwg.org/#eventtarget 
 [event]: https://dom.spec.whatwg.org/#events
+[composition event]: https://www.w3.org/TR/uievents/#compositionevent
+[keyboard event]: https://www.w3.org/TR/uievents/#events-keyboardevents
+[legacy keyboard events]: https://www.w3.org/TR/uievents/#legacy-keyboardevent-events
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [printable character]: #printable-characters 'Definition of printable characters'
 [non-printable characters]: #non-printable-characters 'Definition of non-printable characters'

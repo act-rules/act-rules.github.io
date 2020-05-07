@@ -26,6 +26,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
   - DOM Tree
   - CSS Styling
 acknowledgments:
@@ -56,7 +57,8 @@ The rule assumes that all links are [user interface components](https://www.w3.o
 
 ## Accessibility Support
 
-For `area` elements that have a `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on whether the `area` is considered [included in the accessibility tree][] or not.
+- For `area` elements that have a `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on whether the `area` is considered [included in the accessibility tree][] or not.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `link` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 
@@ -260,6 +262,14 @@ This `area` element has a [semantic role][] of `link` and an empty [accessible n
 </map>
 ```
 
+#### Failed Example 10
+
+This `a` element has an [explicit role][] of `none`. However, it is [focusable][] (by default). Thus it has a [semantic role][] of `link` due to [Presentational Roles Conflict Resolution][]. It has an empty [accessible name][].
+
+```html
+<a href="http://www.w3.org/WAI" role="none"> </a>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -315,6 +325,9 @@ This `a` element does not have the role of link because it does not have an `hre
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
+[explicit role]: #explicit-role 'Definition of Explicit Role'
+[focusable]: #focusable 'Definition of focusable'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[semantic role]: #semantic-role 'Definition of semantic role'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[semantic role]: #semantic-role 'Definition of Semantic Role'
 [whitespace]: #whitespace 'Definition of whitespace'

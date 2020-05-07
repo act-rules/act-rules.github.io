@@ -114,6 +114,8 @@ This `a` element has an [accessible name][] via `title`.
 /></a>
 ```
 
+**Note**: There are assistive technologies that do not support using the `title` attribute for an [accessible name][], or in which this feature can be disabled.
+
 #### Passed Example 6
 
 This `a` element has an [accessible name][] from its content via the `title` on the `img` element.
@@ -121,6 +123,8 @@ This `a` element has an [accessible name][] from its content via the `title` on 
 ```html
 <a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" title="Web Accessibility Initiative" /></a>
 ```
+
+**Note**: There are assistive technologies that do not support using the `title` attribute for an [accessible name][], or in which this feature can be disabled.
 
 #### Passed Example 7
 
@@ -207,6 +211,8 @@ This `a` element with an `img` with an empty `title` has an empty [accessible na
 <a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" title="" /></a>
 ```
 
+**Note**: There are assistive technologies that do not support using the `title` attribute for an [accessible name][], or in which this feature can be disabled.
+
 #### Failed Example 5
 
 This `a` element with an `img` with an `aria-labelledby` has an empty [accessible name][].
@@ -271,7 +277,7 @@ This `a` element does not have a [semantic role][] of `link` because it has been
 This `a` element is not [included in the accessibility tree][] due to `display: none`.
 
 ```html
-<a href="http://www.w3.org/WAI" style="display: none;"><img src="#" /></a>
+<a href="http://www.w3.org/WAI" style="display: none;"><img src="/test-assets/shared/w3c-logo.png" /></a>
 ```
 
 #### Inapplicable Example 3

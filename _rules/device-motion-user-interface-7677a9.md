@@ -32,6 +32,8 @@ The rule applies to an [HTML document][] with an associated [Window object][] th
 
 For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target, a set of one or more [instruments][instrument] is available in the same [web page][] supporting the same outcomes of the event.
 
+**Note:** The outcomes considered in this expectation are all the outcomes that result from the device motion operated functionality.
+
 ## Expectation 2
 
 Each [instrument][] from expectation 1 is [visible][].

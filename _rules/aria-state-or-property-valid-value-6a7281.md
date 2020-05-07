@@ -94,7 +94,10 @@ _There are no major accessibility support issues known for this rule._
 `aria-owns` property with valid ID reference list value
 
 ```html
-<div role="combobox" aria-owns="my-textbox my-grid" aria-label="Search within the website"></div>
+<h1>Shopping list</h1>
+<div role="list" aria-owns="item1 item2"></div>
+<div id="item1">Apples</div>
+<div id="item2">Bananas</div>
 ```
 
 #### Passed Example 6
@@ -118,7 +121,7 @@ _There are no major accessibility support issues known for this rule._
 `aria-placeholder` property with valid string value
 
 ```html
-<div role="searchbox" aria-placeholder="MM-DD-YYYY" aria-label="Your birthdate">
+<div role="textbox" aria-placeholder="MM-DD-YYYY" aria-label="Your birthdate">
 	MM-DD-YYYY
 </div>
 ```
@@ -257,6 +260,8 @@ Element has ARIA role, but no ARIA states or properties
 #### Inapplicable Example 3
 
 `aria-checked` state with empty value
+
+**Note**: The HTML validator flags an `aria-checked` attribute with an empty value as an issue. However WAI-ARIA 1.1 indicates `aria-checked` has a default value of `undefined`.
 
 ```html
 <div role="checkbox" aria-checked>Accept terms and conditions</div>

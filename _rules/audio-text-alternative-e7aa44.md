@@ -162,7 +162,6 @@ An audio element that describes some of the text on the same page. The text on t
 </html>
 ```
 
-
 #### Inapplicable Example 3
 
 This `a` element links to an audio file, but there is no `audio` element on this page.

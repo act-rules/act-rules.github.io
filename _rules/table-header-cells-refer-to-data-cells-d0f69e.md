@@ -134,9 +134,9 @@ Each row and column header element has assigned cells, within the same element h
 	<thead>
 		<tr role="row">
 			<td></td>
-			<th role="columnheader">Breakfast</th>
-			<th role="columnheader">Lunch</th>
-			<th role="columnheader">Dinner</th>
+			<th scope="col" role="columnheader">Breakfast</th>
+			<th scope="col" role="columnheader">Lunch</th>
+			<th scope="col" role="columnheader">Dinner</th>
 		</tr>
 	</thead>
 	<tbody>

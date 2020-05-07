@@ -172,4 +172,3 @@ The image button is ignored by assistive technologies because it is not [include
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [accessible name]: #accessible-name 'Definition of accessible name'
-[whitespace]: #whitespace 'Definition of whitespace'

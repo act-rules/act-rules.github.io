@@ -268,8 +268,6 @@ The `span` element is not a [programmatic label][] of any element.
 [abstract]: https://www.w3.org/TR/wai-aria/#abstract_roles 'List of abstract roles'
 [accessible name]: #accessible-name 'Definition of accessible name'
 [aria11]: https://www.w3.org/TR/wai-aria-1.1/ 'Accessible Rich Internet Applications 1.1'
-[explicit role]: #explicit-role 'Definition of explicit role'
-[focusable]: #focusable 'Definition of focusable'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [label]: https://www.w3.org/TR/WCAG21/#dfn-labels 'Definition of label'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'

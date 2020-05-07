@@ -175,7 +175,7 @@ This `img` element inside a `div` positioned off screen has an empty [accessible
 
 #### Failed Example 4
 
-This `img` element has an empty [accessible name][] because the space in the `alt` attribute is trimmed off by the [accessible name computation](https://www.w3.org/TR/accname-1.1/).
+This `img` element has an empty [accessible name][] because the space in the `alt` attribute is trimmed off by the [accessible name computation](https://www.w3.org/TR/accname-1.1/). Because of the space, the `alt` attribute is not empty (`""`) which gives the element the [implicit role][] of `img`.
 
 ```html
 <img src="/test-assets/shared/w3c-logo.png" alt=" " />

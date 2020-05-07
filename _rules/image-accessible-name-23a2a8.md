@@ -123,7 +123,7 @@ This `img` element has an [implicit role][] of `presentation` because of the emp
 
 #### Passed Example 6
 
-The `img` element has an [explicit role][] of `presentation` because of the value of the `role` attribute.
+This `img` element has an [explicit role][] of `presentation` because of the value of the `role` attribute.
 
 ```html
 <img role="presentation" style="width:72px; height:48px; background-image: url(/test-assets/shared/background.png)" />
@@ -131,7 +131,7 @@ The `img` element has an [explicit role][] of `presentation` because of the valu
 
 #### Passed Example 7
 
-The `img` element has an [explicit role][] of `none` because of the value of the `role` attribute.
+This `img` element has an [explicit role][] of `none` because of the value of the `role` attribute.
 
 ```html
 <img role="none" src="/test-assets/shared/background.png" />
@@ -186,14 +186,14 @@ This `img` element has an empty [accessible name][] because the space in the `al
 This `img` element has an [explicit role][] of `none`. However, it is [focusable][] due to the `tabindex` attribute. Because of this it has a [semantic role][] of `img` due to [Presentational Roles Conflict Resolution][]. It does not have an accessible name.
 
 ```html
-<img role="none" tabindex="0" />
+<img role="none" tabindex="0" src="/test-assets/shared/w3c-logo.png"/>
 ```
 
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-The `svg` element has an [implicit role][] of `graphic-document`.
+This `svg` element has an [implicit role][] of `graphics-document`.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
@@ -206,7 +206,7 @@ The `svg` element has an [implicit role][] of `graphic-document`.
 This element has a [semantic role][] of `img`, but is not [included in the accessibility tree][].
 
 ```html
-<div role="img" aria-hidden="true"></div>
+<div role="img" aria-hidden="true" style="width:72px; height:48px; background-image: url(/test-assets/shared/w3c-logo.png)"></div>
 ```
 
 #### Inapplicable Example 3
@@ -219,7 +219,7 @@ This `img` element is not [included in the accessibility tree][].
 
 #### Inapplicable Example 4
 
-This element is not an `img` element.
+This element is neither an `img` element nor has a role of `img`.
 
 ```html
 <div aria-label="W3C logo"></div>

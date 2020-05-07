@@ -30,15 +30,15 @@ The rule applies to an [HTML document][] with an associated [Window object][] th
 
 ## Expectation 1
 
-For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target, a set of one or more [instruments][instrument] is available supporting the same outcomes of the event.
+For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target, a set of one or more [instruments][instrument] is available in the same [web page][] supporting the same outcomes of the event.
 
 ## Expectation 2
 
-The [instrument][] is [visible][].
+Each [instrument][] from expectation 1 is [visible][].
 
 ## Expectation 3
 
-The [instrument][] is [included in the accessibility tree][] with an [accessible name][] that is not empty (""). 
+Each [instrument][] from expectation 1 is [included in the accessibility tree][] with an [accessible name][] that is not empty (""). 
 
 ## Assumptions
 
@@ -313,4 +313,5 @@ This [HTML document][] is not operable by device motion.
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [visible]: #visible 'Definition of visible'
+[web page]: #web-page-html 'Definition of web page'
 [window object]: https://html.spec.whatwg.org/multipage/window-object.html#dom-window

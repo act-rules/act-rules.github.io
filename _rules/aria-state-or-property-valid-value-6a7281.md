@@ -261,6 +261,8 @@ Element has ARIA role, but no ARIA states or properties
 
 `aria-checked` state with empty value
 
+**Note**: The HTML validator flags an `aria-checked` attribute with an empty value as an issue. However WAI-ARIA 1.1 indicates `aria-checked` has a default value of `undefined`.
+
 ```html
 <div role="checkbox" aria-checked>Accept terms and conditions</div>
 ```

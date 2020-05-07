@@ -201,14 +201,10 @@ This `img` element has an [accessible name][] which is not equivalent to the fil
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
-[explicit role]: #explicit-role 'Definition of Explicit Role'
 [filename]: #filename 'Definition of filename'
-[focusable]: #focusable 'Definition of focusable'
-[global]: https://www.w3.org/TR/wai-aria-1.1/#global_states 'Definition of Global ARIA States and Properties'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
-[property]: https://www.w3.org/TR/wai-aria/#dfn-property 'Definition of ARIA Property'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [type]: https://html.spec.whatwg.org/#states-of-the-type-attribute
 [whitespace]: #whitespace 'Definition of whitespace'

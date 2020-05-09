@@ -25,6 +25,3 @@ This `img` element has an [ancestor][] `div` element with an `overflow` of `none
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS draft, flat tree, 2020/02/14'
 [computed]: https://www.w3.org/TR/css-cascade-3/#computed-value
 [overflow]: https://www.w3.org/TR/CSS22/visufx.html#overflow
-[client rects]: https://drafts.csswg.org/cssom-view/#dom-element-getclientrects 'CSS working draft, node.getClientRects, 2020/02/14'
-[bounding box]: https://www.w3.org/TR/css-ui-3/#valdef-box-sizing-border-box
-[content box]: https://www.w3.org/TR/css-ui-3/#valdef-box-sizing-content-box

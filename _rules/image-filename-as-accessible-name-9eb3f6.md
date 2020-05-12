@@ -36,11 +36,10 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to:
+The rule applies to any HTML element that is [included in the accessibility tree][] and has a non-empty (`""`) [accessible name][], for which one of the following is true:
 
-- any HTML `img` element which is [included in the accessibility tree][], and has a non-empty [accessible name][] that is equivalent to the [filename][] of at least one of the [image sources][] in its [source set][]; and
-- any HTML `input` element in the [Image Button][] state which is [included in the accessibility tree][], and
-  has a non-empty [accessible name][] that is equivalent to the [filename][] specified in its `src` attribute.
+- **img**: the element is an `img` with an [accessible name][] that is equivalent to the [filename][] of at least one of the [image sources][] in its [source set][]; or
+- **input image**: the element is an `input` element in the [Image Button][] state with an [accessible name][] that is equivalent to the [filename][] specified in its `src` attribute.
 
 When comparing [accessible name][] and [filename][], difference in letter casing, leading and trailing [whitespace][] should be ignored.
 

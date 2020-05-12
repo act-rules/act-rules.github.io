@@ -9,6 +9,7 @@
 - http
 - https
 - wai-aria
+- validator
 
 # Tag(s)
 - svg # `aria-query` dom tags does not list `svg`
@@ -73,6 +74,7 @@
 - Helvetica
 - DeviceOrientation
 - fieldsets
+- ascii # lowercase needed in reference list
 
 # Parts of url
 - http

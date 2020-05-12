@@ -320,7 +320,6 @@ This `span` element has updated color but not its `innerText` property.
 [g186]: https://www.w3.org/WAI/WCAG21/Techniques/general/G186
 [html document]: https://dom.spec.whatwg.org/#html-document
 [html element]: https://html.spec.whatwg.org/multipage/dom.html#htmlelement
-[hyperlink]: https://html.spec.whatwg.org/#hyperlink
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [sc 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
 [text node]: https://dom.spec.whatwg.org/#text

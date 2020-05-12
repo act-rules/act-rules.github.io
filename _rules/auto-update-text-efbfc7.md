@@ -148,7 +148,7 @@ This `span` element has text content that automatically updates multiple times w
 
 #### Passed Example 5
 
-This `span` element has text content that automatically updates multiple times without user intervention and there is an [instrument][] to control the updates available in the same window after the user activates the "Control updates" `button`.
+This `span` element has text content that automatically updates multiple times without user intervention and there are instructions in the same web page on how to access an [instrument][] to control the updates.
 
 ```html
 <body onload="startUpdates()">

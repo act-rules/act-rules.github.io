@@ -36,8 +36,8 @@ For each registered [device orientation event][device orientation] or [device mo
 
 For each [instrument][] in the set of [instruments][instrument] from Expectation 1, one of the following is true:
 
-- the [instrument][] is in the same [web page](#web-page-html) of the test target; or
-- instructions for the user to locate the [instrument][] are in the same [web page](#web-page-html) of the test target.
+- the [instrument][] is in the same [web page][] of the test target; or
+- instructions for the user to locate the [instrument][] are in the same [web page][] of the test target.
 
 **Note:** If the set of instruments has more than one instrument, not every instrument of the set needs to be located in the same location.
 
@@ -187,15 +187,12 @@ This [HTML document][] is not operable by device motion.
 ```
 
 [accessibility supported]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation#dfn-accessibility-supported
-[accessible name]: #accessible-name 'Definition of accessible name'
 [device motion]: https://www.w3.org/TR/orientation-event/#devicemotion 'Definition of device motion event'
 [device orientation]: https://www.w3.org/TR/orientation-event/#deviceorientation 'Definition of device orientation event'
 [essential]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-essential
 [event listener]: https://dom.spec.whatwg.org/#concept-event-listener
 [event listener list]: https://dom.spec.whatwg.org/#eventtarget-event-listener-list
 [html document]: https://dom.spec.whatwg.org/#concept-document
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
-[visible]: #visible 'Definition of visible'
 [web page]: #web-page-html 'Definition of web page'
 [window object]: https://html.spec.whatwg.org/multipage/window-object.html#dom-window

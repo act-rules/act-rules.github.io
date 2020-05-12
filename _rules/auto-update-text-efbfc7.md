@@ -22,7 +22,7 @@ acknowledgments:
 
 The rule applies to any [HTML element][] that has a [visible][] [text node][] as a [descendant][] in the [flat tree][] if:
 
-- **changed:** The `innerText` property of the [element][html element] changes multiple times within a 10 minute time span where there is no [user interaction][]; and
+- **changed:** the `innerText` property of the [element][html element] changes multiple times within a 10 minute time span where there is no [user interaction][]; and
 - **no child changed:** the [element][html element] does not have [children][child] in the [flat tree][] whose `innerText` property also changes; and
 - **not alone:** the [element][html element] has an [ancestor][] element in the [flat tree][] with a non-empty `innerText` property whose value is different from the `innerText` of the test target.
 
@@ -43,19 +43,18 @@ For each test target there exists a set of [instruments][instrument] to achieve 
 
 ## Expectation 2
 
-Each [instrument][] in the set of [instruments][instrument] from Expectation 1 is in one of the following:
+For each [instrument][] in the set of [instruments][instrument] from Expectation 1, one of the following is true:
 
-- the same [web page](#web-page-html) of the test target; or
-- the same [web page](#web-page-html) of the test target as a result of an action from the user; or
-- another [web page](#web-page-html) that is [linked][hyperlink] from the [web page](#web-page-html) of the test target.
+- the [instrument][] is in the same [web page](#web-page-html) of the test target; or
+- instructions for the user to locate the [instrument][] are in the same [web page](#web-page-html) of the test target.
 
-**Note:** If the set of instruments has more than one instrument, not all instruments of the set need to be located in the same location.
+**Note:** If the set of instruments has more than one instrument, not every instrument of the set needs to be located in the same location.
 
 ## Assumptions
 
 - The auto-updating of the content is not [essential][], which is listed as valid exception to [Success Criterion 2.2.2: Pause, Stop, Hide][sc 2.2.2]. When the auto-updating of content is [essential][] this rule may produce incorrect results.
 - The content being auto-updated is information. If the auto-update is not information (for example, an ASCII rendered spinning icon that does not provide information on what time is left for a process to end or how much progress has been made) the rule might fail but the success criterion might still be satisfied.
-- Any [content][] changes are enabled by the content of [HTML document][] the test target belongs to. Changes originated by any other sources (e.g. browser shortcuts, browser extensions, browser settings, user agents, external browser applications) are not considered.
+- Any [content][] changes are enabled by the content of the [HTML document][] the test target belongs to. Changes originating from any other sources (e.g. browser shortcuts, browser extensions, browser settings, user agents, external browser applications) are not considered.
 - All user actions are transmitted by the user agent to the [HTML document][]. If there are other event sources that result from a user action this rule might fail but the success criterion might still be satisfied.
 - Available mechanisms for controlling the update of content rely on [activation][]. If there are other mechanisms that do not really on [activation][] the rule might fail but the success criterion might still be satisfied.
 
@@ -159,6 +158,7 @@ This `span` element has text content that automatically updates multiple times w
 	</p>
 
 	<p>Random number: <span id="target">1</span></p>
+	<p>To control the random number updates activate the "Control updates" button.</p>
 	<input type="button" onclick="openModal()" value="Control updates" />
 
 	<div

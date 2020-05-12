@@ -32,8 +32,6 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 **Note:** `input` elements of type `submit` and `reset` can get their [accessible name][] from a [default text](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset), as well as from a `value` or other attribute.
 
-**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
-
 ## Assumptions
 
 - The rule assumes that all buttons are [user interface components as defined by WCAG 2](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components).

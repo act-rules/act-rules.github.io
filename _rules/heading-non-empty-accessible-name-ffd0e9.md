@@ -32,8 +32,6 @@ This rule applies to any HTML element with the [semantic role][] of `heading` th
 
 Each test target has a non-empty (`""`) [accessible name][].
 
-**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
-
 ## Assumptions
 
 _There are currently no assumptions._

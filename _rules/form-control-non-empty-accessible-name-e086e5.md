@@ -35,8 +35,6 @@ This rule applies to any element that is [included in the accessibility tree](#i
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
-**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
-
 ## Assumptions
 
 _There are currently no assumptions_

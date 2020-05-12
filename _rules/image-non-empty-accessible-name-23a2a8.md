@@ -42,8 +42,6 @@ The rule applies to HTML `img` elements and HTML elements with the [semantic rol
 
 Each target element has an [accessible name][] that is not empty (`""`), or has a [semantic role][] of `none` or `presentation`.
 
-**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
-
 ## Assumptions
 
 _There are currently no assumptions._

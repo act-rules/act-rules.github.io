@@ -30,19 +30,20 @@ The rule applies to an [HTML document][] with an associated [Window object][] th
 
 ## Expectation 1
 
-For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target, an [instrument][] to prevent the outcome of the event is available in the same [web page][], or in another [web page][] that is [linked][hyperlink] from the [web page][] of the test target.
+For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target there exists a set of one or more [instruments][instrument] to prevent the results of the event.
 
 **Note:** The same [instrument][] can be used to disable more than one event.
 
-**Note:** Preventing the outcome of the event can be done in multiple ways (e.g. removing the event listener; handling the event in a different manner; ...) but the way in which it is done is not relevant for this rule.
+**Note:** Preventing the results of the event can be done in multiple ways (e.g. removing the event listener; handling the event in a different manner; ...) but the way in which it is done is not relevant for this rule.
 
 ## Expectation 2
 
-The [instrument][] is [visible][].
+For each [instrument][] in the set of [instruments][instrument] from Expectation 1, one of the following is true:
 
-## Expectation 3
+- the [instrument][] is in the same [web page][] of the test target; or
+- instructions for the user to locate the [instrument][] are in the same [web page][] of the test target.
 
-The [instrument][] is [included in the accessibility tree][] with an [accessible name][] that is not empty ("").
+**Note:** If the set of instruments has more than one instrument, not every instrument of the set needs to be located in the same location.
 
 ## Assumptions
 
@@ -172,117 +173,6 @@ This [HTML document][] that can be operated through the device's orientation to 
 			<input type="range" min="1" max="100" value="50" id="motionSlider" disabled />
 			<button id="increaseSlider" type="button">Increase Value</button>
 			<p aria-live="polite">Slider Value: <span id="output">50</span></p>
-		</div>
-	</body>
-</html>
-```
-
-#### Failed Example 2
-
-This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider has a control to disable the functionality but it is not [visible][].
-
-```html
-<html>
-	<head>
-		<title>Failed Example 2</title>
-		<script src="/test-assets/7677a9/slider.js"></script>
-		<script>
-			function activateSlider() {
-				window.addEventListener('deviceorientation', handleOrientationCanBeDisabled)
-			}
-		</script>
-	</head>
-
-	<body onload="activateSlider();">
-		<h1>Slider Motion Sensor Example</h1>
-
-		<p>
-			Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the right
-			and left to adjust the slider value. The check box disables the motion sensing adjustment.
-		</p>
-		<p>Note: This example may not work across all browsers.</p>
-
-		<div>
-			<input type="range" min="1" max="100" value="50" id="motionSlider" disabled />
-			<p aria-live="polite">Slider Value: <span id="output">50</span></p>
-		</div>
-		<div style="position: absolute;margin-left: -9999px;">
-			<input type="checkbox" id="disableMotion" />
-			<label for="disableMotion">Disable Motion Actuation</label>
-		</div>
-	</body>
-</html>
-```
-
-#### Failed Example 3
-
-This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider has a control to disable the functionality but it is not [included in the accessibility tree][].
-
-```html
-<html>
-	<head>
-		<title>Failed Example 3</title>
-		<script src="/test-assets/7677a9/slider.js"></script>
-		<script>
-			function activateSlider() {
-				window.addEventListener('deviceorientation', handleOrientationCanBeDisabled)
-			}
-		</script>
-	</head>
-
-	<body onload="activateSlider();">
-		<h1>Slider Motion Sensor Example</h1>
-
-		<p>
-			Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the right
-			and left to adjust the slider value. The check box disables the motion sensing adjustment.
-		</p>
-		<p>Note: This example may not work across all browsers.</p>
-
-		<div>
-			<input type="range" min="1" max="100" value="50" id="motionSlider" disabled />
-			<p aria-live="polite">Slider Value: <span id="output">50</span></p>
-		</div>
-		<div aria-hidden="true">
-			<input type="checkbox" id="disableMotion" />
-			<label for="disableMotion">Disable Motion Actuation</label>
-		</div>
-	</body>
-</html>
-```
-
-#### Failed Example 4
-
-This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider has a control to disable the functionality but it is has an [accessible name][] that is empty ("").
-
-```html
-<html>
-	<head>
-		<title>Failed Example 4</title>
-		<script src="/test-assets/7677a9/slider.js"></script>
-		<script>
-			function activateSlider() {
-				window.addEventListener('deviceorientation', handleOrientationCanBeDisabled)
-			}
-		</script>
-	</head>
-
-	<body onload="activateSlider();">
-		<h1>Slider Motion Sensor Example</h1>
-
-		<p>
-			Open this slider on a device with a motion sensor, such as a smart phone or tablet. Tilt the device to the right
-			and left to adjust the slider value. The check box disables the motion sensing adjustment.
-		</p>
-		<p>Note: This example may not work across all browsers.</p>
-
-		<div>
-			<input type="range" min="1" max="100" value="50" id="motionSlider" disabled />
-			<p aria-live="polite">Slider Value: <span id="output">50</span></p>
-		</div>
-		<div>
-			<input type="checkbox" id="disableMotion" />
-			<label for="disableMotion"></label>
 		</div>
 	</body>
 </html>

@@ -28,7 +28,7 @@ The rule applies to any [HTML element][] that has a [visible][] [text node][] as
 
 **Note:** The test targets for this rule are elements that have their text content change multiple times, on a page with further content, if that change happens without user intervention.
 
-**Note:** The 10 minute time span is an arbitrary limit which is not included in WCAG. Content that updates less frequently, or that doesn't update on a regular interval, will be inapplicable for this rule but may nonetheless fail [Success Criterion 2.2.2: Pause, Stop, Hide][sc 2.2.2]. It is however a much lesser accessibility issue, and without any time limit this rule would be virtually untestable.
+**Note:** The 10 minute time span is an arbitrary limit which is not included in WCAG. Content that updates less frequently, or that doesn't update on a regular interval, will be inapplicable for this rule but may nonetheless fail [Success Criterion 2.2.2: Pause, Stop, Hide][sc 2.2.2]. The accessibility problem tends to be less severe for longer time periods, and without a time limit, testing this rule consistently would be impractical.
 
 ## Expectation 1
 

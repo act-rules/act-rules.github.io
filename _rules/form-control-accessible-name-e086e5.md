@@ -218,7 +218,7 @@ Role has [explicitly](#explicit-role) been set to something that isn't a form fi
 Option inherits from input, but has a required context role of listbox which inherits from select. We should therefore not consider option as applicable.
 
 ```html
-<select role="none">
+<select>
 	<option value="volvo">Volvo</option>
 	<option value="saab">Saab</option>
 	<option value="opel">Opel</option>

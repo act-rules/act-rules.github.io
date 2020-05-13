@@ -30,11 +30,11 @@ The rule applies to an [HTML document][] with an associated [Window object][] th
 
 ## Expectation 1
 
-For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target there exists a set of one or more [instruments][instrument] to prevent the results of the event.
+For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target there exists a set of one or more [instruments][instrument] to prevent any results of the event.
 
 **Note:** The same [instrument][] can be used to disable more than one event.
 
-**Note:** Preventing the results of the event can be done in multiple ways (e.g. removing the event listener; handling the event in a different manner; ...) but the way in which it is done is not relevant for this rule.
+**Note:** Preventing results of the event can be done in multiple ways (e.g. removing the event listener; handling the event in a different manner; ...) but the way in which it is done is not relevant for this rule.
 
 ## Expectation 2
 
@@ -43,7 +43,7 @@ For each [instrument][] in the set of [instruments][instrument] from Expectation
 - the [instrument][] is in the same [web page][] of the test target; or
 - instructions for the user to locate the [instrument][] are in the same [web page][] of the test target.
 
-**Note:** If the set of instruments has more than one instrument, not every instrument of the set needs to be located in the same location.
+**Note:** If the set of instruments has more than one instrument, not every instrument of the set needs to be in the same location.
 
 ## Assumptions
 

@@ -2234,6 +2234,246 @@
       "ruleAccessibilityRequirements": null
     },
     {
+      "testcaseId": "baf99ce14eac43fcd9240adea389200100287691",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/80f0bf/baf99ce14eac43fcd9240adea389200100287691.html",
+      "relativePath": "testcases/80f0bf/baf99ce14eac43fcd9240adea389200100287691.html",
+      "expected": "passed",
+      "ruleId": "80f0bf",
+      "ruleName": "`audio` or `video` avoids automatically playing audio",
+      "rulePage": "https://act-rules.github.io/rules/80f0bf",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G170": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "cc5c2900c8d128d3ca25d8443f1f3e0a0e5f58e6",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/80f0bf/cc5c2900c8d128d3ca25d8443f1f3e0a0e5f58e6.html",
+      "relativePath": "testcases/80f0bf/cc5c2900c8d128d3ca25d8443f1f3e0a0e5f58e6.html",
+      "expected": "passed",
+      "ruleId": "80f0bf",
+      "ruleName": "`audio` or `video` avoids automatically playing audio",
+      "rulePage": "https://act-rules.github.io/rules/80f0bf",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G170": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "85c01775d802057e6f43c2248b8a5eb916c50c74",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/80f0bf/85c01775d802057e6f43c2248b8a5eb916c50c74.html",
+      "relativePath": "testcases/80f0bf/85c01775d802057e6f43c2248b8a5eb916c50c74.html",
+      "expected": "passed",
+      "ruleId": "80f0bf",
+      "ruleName": "`audio` or `video` avoids automatically playing audio",
+      "rulePage": "https://act-rules.github.io/rules/80f0bf",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G170": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "37070c2165bf6380c3f79aea7865a8589ab24de6",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/80f0bf/37070c2165bf6380c3f79aea7865a8589ab24de6.html",
+      "relativePath": "testcases/80f0bf/37070c2165bf6380c3f79aea7865a8589ab24de6.html",
+      "expected": "failed",
+      "ruleId": "80f0bf",
+      "ruleName": "`audio` or `video` avoids automatically playing audio",
+      "rulePage": "https://act-rules.github.io/rules/80f0bf",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G170": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "63df2c2d14957cfa0957844313864dd15273c8a3",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/80f0bf/63df2c2d14957cfa0957844313864dd15273c8a3.html",
+      "relativePath": "testcases/80f0bf/63df2c2d14957cfa0957844313864dd15273c8a3.html",
+      "expected": "failed",
+      "ruleId": "80f0bf",
+      "ruleName": "`audio` or `video` avoids automatically playing audio",
+      "rulePage": "https://act-rules.github.io/rules/80f0bf",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G170": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "766a470116dc76c4f56cb2fcf26ba75e9f0a4505",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/80f0bf/766a470116dc76c4f56cb2fcf26ba75e9f0a4505.html",
+      "relativePath": "testcases/80f0bf/766a470116dc76c4f56cb2fcf26ba75e9f0a4505.html",
+      "expected": "inapplicable",
+      "ruleId": "80f0bf",
+      "ruleName": "`audio` or `video` avoids automatically playing audio",
+      "rulePage": "https://act-rules.github.io/rules/80f0bf",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G170": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "6a0fc31d6bea6ceced58d1ef97713935e4fd2717",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/80f0bf/6a0fc31d6bea6ceced58d1ef97713935e4fd2717.html",
+      "relativePath": "testcases/80f0bf/6a0fc31d6bea6ceced58d1ef97713935e4fd2717.html",
+      "expected": "inapplicable",
+      "ruleId": "80f0bf",
+      "ruleName": "`audio` or `video` avoids automatically playing audio",
+      "rulePage": "https://act-rules.github.io/rules/80f0bf",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G170": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a8c2fcf03cc5d141a531aac6e4d4662d624df475",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/80f0bf/a8c2fcf03cc5d141a531aac6e4d4662d624df475.html",
+      "relativePath": "testcases/80f0bf/a8c2fcf03cc5d141a531aac6e4d4662d624df475.html",
+      "expected": "inapplicable",
+      "ruleId": "80f0bf",
+      "ruleName": "`audio` or `video` avoids automatically playing audio",
+      "rulePage": "https://act-rules.github.io/rules/80f0bf",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G60": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G170": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
       "testcaseId": "b50bb4758857f30b71688dedba190ae2dc2a358e",
       "testcaseTitle": "Passed Example 1",
       "url": "https://act-rules.github.io/testcases/e7aa44/b50bb4758857f30b71688dedba190ae2dc2a358e.html",
@@ -2529,7 +2769,7 @@
       "relativePath": "testcases/aaa1bf/e8a48b617a529bd77a77693eddc7212655da60ab.html",
       "expected": "passed",
       "ruleId": "aaa1bf",
-      "ruleName": "`audio` or `video` that plays automatically does not exceed 3 seconds",
+      "ruleName": "`Audio` or `video` that plays automatically has no audio that lasts more than 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G60": {
@@ -2547,7 +2787,7 @@
       "relativePath": "testcases/aaa1bf/19ebd0fed367ae04538cbd14453d24677605b4d1.html",
       "expected": "passed",
       "ruleId": "aaa1bf",
-      "ruleName": "`audio` or `video` that plays automatically does not exceed 3 seconds",
+      "ruleName": "`Audio` or `video` that plays automatically has no audio that lasts more than 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G60": {
@@ -2565,7 +2805,7 @@
       "relativePath": "testcases/aaa1bf/8f236da8cd1d5500f183090c931924082872828b.html",
       "expected": "failed",
       "ruleId": "aaa1bf",
-      "ruleName": "`audio` or `video` that plays automatically does not exceed 3 seconds",
+      "ruleName": "`Audio` or `video` that plays automatically has no audio that lasts more than 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G60": {
@@ -2583,7 +2823,7 @@
       "relativePath": "testcases/aaa1bf/e5ff765dbde9dbed20468768a7d3309b55118bca.html",
       "expected": "failed",
       "ruleId": "aaa1bf",
-      "ruleName": "`audio` or `video` that plays automatically does not exceed 3 seconds",
+      "ruleName": "`Audio` or `video` that plays automatically has no audio that lasts more than 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G60": {
@@ -2601,7 +2841,7 @@
       "relativePath": "testcases/aaa1bf/d809d976abb2a380cad56f475137e02eef84efc0.html",
       "expected": "inapplicable",
       "ruleId": "aaa1bf",
-      "ruleName": "`audio` or `video` that plays automatically does not exceed 3 seconds",
+      "ruleName": "`Audio` or `video` that plays automatically has no audio that lasts more than 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G60": {
@@ -2619,7 +2859,7 @@
       "relativePath": "testcases/aaa1bf/83842286ad2ec56764a060bde6dcad15a2ebe556.html",
       "expected": "inapplicable",
       "ruleId": "aaa1bf",
-      "ruleName": "`audio` or `video` that plays automatically does not exceed 3 seconds",
+      "ruleName": "`Audio` or `video` that plays automatically has no audio that lasts more than 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G60": {
@@ -2637,7 +2877,7 @@
       "relativePath": "testcases/aaa1bf/789efe6174e5200636a3799d7448729781d797db.html",
       "expected": "inapplicable",
       "ruleId": "aaa1bf",
-      "ruleName": "`audio` or `video` that plays automatically does not exceed 3 seconds",
+      "ruleName": "`Audio` or `video` that plays automatically has no audio that lasts more than 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G60": {
@@ -11985,246 +12225,6 @@
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.4": {
           "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "baf99ce14eac43fcd9240adea389200100287691",
-      "testcaseTitle": "Passed Example 1",
-      "url": "https://act-rules.github.io/testcases/80f0bf/baf99ce14eac43fcd9240adea389200100287691.html",
-      "relativePath": "testcases/80f0bf/baf99ce14eac43fcd9240adea389200100287691.html",
-      "expected": "passed",
-      "ruleId": "80f0bf",
-      "ruleName": "`audio` or `video` has no audio that plays automatically",
-      "rulePage": "https://act-rules.github.io/rules/80f0bf",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.4.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G60": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G170": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "cc5c2900c8d128d3ca25d8443f1f3e0a0e5f58e6",
-      "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/80f0bf/cc5c2900c8d128d3ca25d8443f1f3e0a0e5f58e6.html",
-      "relativePath": "testcases/80f0bf/cc5c2900c8d128d3ca25d8443f1f3e0a0e5f58e6.html",
-      "expected": "passed",
-      "ruleId": "80f0bf",
-      "ruleName": "`audio` or `video` has no audio that plays automatically",
-      "rulePage": "https://act-rules.github.io/rules/80f0bf",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.4.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G60": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G170": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "85c01775d802057e6f43c2248b8a5eb916c50c74",
-      "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/80f0bf/85c01775d802057e6f43c2248b8a5eb916c50c74.html",
-      "relativePath": "testcases/80f0bf/85c01775d802057e6f43c2248b8a5eb916c50c74.html",
-      "expected": "passed",
-      "ruleId": "80f0bf",
-      "ruleName": "`audio` or `video` has no audio that plays automatically",
-      "rulePage": "https://act-rules.github.io/rules/80f0bf",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.4.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G60": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G170": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "37070c2165bf6380c3f79aea7865a8589ab24de6",
-      "testcaseTitle": "Failed Example 1",
-      "url": "https://act-rules.github.io/testcases/80f0bf/37070c2165bf6380c3f79aea7865a8589ab24de6.html",
-      "relativePath": "testcases/80f0bf/37070c2165bf6380c3f79aea7865a8589ab24de6.html",
-      "expected": "failed",
-      "ruleId": "80f0bf",
-      "ruleName": "`audio` or `video` has no audio that plays automatically",
-      "rulePage": "https://act-rules.github.io/rules/80f0bf",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.4.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G60": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G170": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "63df2c2d14957cfa0957844313864dd15273c8a3",
-      "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/80f0bf/63df2c2d14957cfa0957844313864dd15273c8a3.html",
-      "relativePath": "testcases/80f0bf/63df2c2d14957cfa0957844313864dd15273c8a3.html",
-      "expected": "failed",
-      "ruleId": "80f0bf",
-      "ruleName": "`audio` or `video` has no audio that plays automatically",
-      "rulePage": "https://act-rules.github.io/rules/80f0bf",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.4.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G60": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G170": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "766a470116dc76c4f56cb2fcf26ba75e9f0a4505",
-      "testcaseTitle": "Inapplicable Example 1",
-      "url": "https://act-rules.github.io/testcases/80f0bf/766a470116dc76c4f56cb2fcf26ba75e9f0a4505.html",
-      "relativePath": "testcases/80f0bf/766a470116dc76c4f56cb2fcf26ba75e9f0a4505.html",
-      "expected": "inapplicable",
-      "ruleId": "80f0bf",
-      "ruleName": "`audio` or `video` has no audio that plays automatically",
-      "rulePage": "https://act-rules.github.io/rules/80f0bf",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.4.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G60": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G170": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "6a0fc31d6bea6ceced58d1ef97713935e4fd2717",
-      "testcaseTitle": "Inapplicable Example 2",
-      "url": "https://act-rules.github.io/testcases/80f0bf/6a0fc31d6bea6ceced58d1ef97713935e4fd2717.html",
-      "relativePath": "testcases/80f0bf/6a0fc31d6bea6ceced58d1ef97713935e4fd2717.html",
-      "expected": "inapplicable",
-      "ruleId": "80f0bf",
-      "ruleName": "`audio` or `video` has no audio that plays automatically",
-      "rulePage": "https://act-rules.github.io/rules/80f0bf",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.4.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G60": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G170": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "a8c2fcf03cc5d141a531aac6e4d4662d624df475",
-      "testcaseTitle": "Inapplicable Example 3",
-      "url": "https://act-rules.github.io/testcases/80f0bf/a8c2fcf03cc5d141a531aac6e4d4662d624df475.html",
-      "relativePath": "testcases/80f0bf/a8c2fcf03cc5d141a531aac6e4d4662d624df475.html",
-      "expected": "inapplicable",
-      "ruleId": "80f0bf",
-      "ruleName": "`audio` or `video` has no audio that plays automatically",
-      "rulePage": "https://act-rules.github.io/rules/80f0bf",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.4.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G60": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G170": {
-          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"

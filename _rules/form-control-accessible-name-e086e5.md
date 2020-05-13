@@ -210,7 +210,7 @@ Hidden to assistive technologies.
 Role has [explicitly](#explicit-role) been set to something that isn't a form field.
 
 ```html
-<input role="presentation" />
+<input role="banner" />
 ```
 
 #### Inapplicable Example 4

@@ -46,7 +46,7 @@ For each test target there exists a set of [instruments][instrument] to achieve 
 For each [instrument][] in the set of [instruments][instrument] from Expectation 1, one of the following is true:
 
 - the [instrument][] is in the same [web page](#web-page-html) of the test target; or
-- instructions for the user to locate the [instrument][] are in the same [web page](#web-page-html) of the test target.
+- the [instrument][] can be found in a [clearly labelled location][].
 
 **Note:** If the set of instruments has more than one instrument, not every instrument of the set needs to be located in the same location.
 
@@ -312,6 +312,7 @@ This `span` element has updated color but not its `innerText` property.
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor
 [activation]: https://html.spec.whatwg.org/#activation
 [child]: https://dom.spec.whatwg.org/#concept-tree-child
+[clearly labelled location]: #clearly-labelled-location 'Definition of clearly labelled location'
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [essential]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html#dfn-essential

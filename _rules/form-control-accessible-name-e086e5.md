@@ -210,7 +210,7 @@ Hidden to assistive technologies.
 Role has [explicitly](#explicit-role) been set to something that isn't a form field.
 
 ```html
-<input role="banner" />
+<input role="presentation" disabled />
 ```
 
 #### Inapplicable Example 4
@@ -218,7 +218,7 @@ Role has [explicitly](#explicit-role) been set to something that isn't a form fi
 Option inherits from input, but has a required context role of listbox which inherits from select. We should therefore not consider option as applicable.
 
 ```html
-<select>
+<select role="none" disabled>
 	<option value="volvo">Volvo</option>
 	<option value="saab">Saab</option>
 	<option value="opel">Opel</option>

@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 738,
+  "count": 758,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -9651,6 +9651,366 @@
         },
         "wcag-technique:G95": {
           "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "fdc91cd65be10f2ff361158ce5f2312c7be38f21",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/e88epe/fdc91cd65be10f2ff361158ce5f2312c7be38f21.html",
+      "relativePath": "testcases/e88epe/fdc91cd65be10f2ff361158ce5f2312c7be38f21.html",
+      "expected": "passed",
+      "ruleId": "e88epe",
+      "ruleName": "Image not in the accessibility tree is decorative",
+      "rulePage": "https://act-rules.github.io/rules/e88epe",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "90f579fe2b01db999b270d6dfe818cce8c715b65",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/e88epe/90f579fe2b01db999b270d6dfe818cce8c715b65.html",
+      "relativePath": "testcases/e88epe/90f579fe2b01db999b270d6dfe818cce8c715b65.html",
+      "expected": "passed",
+      "ruleId": "e88epe",
+      "ruleName": "Image not in the accessibility tree is decorative",
+      "rulePage": "https://act-rules.github.io/rules/e88epe",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "c97ef443ad5d5423ba20802a88bdc8003670727d",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/e88epe/c97ef443ad5d5423ba20802a88bdc8003670727d.html",
+      "relativePath": "testcases/e88epe/c97ef443ad5d5423ba20802a88bdc8003670727d.html",
+      "expected": "passed",
+      "ruleId": "e88epe",
+      "ruleName": "Image not in the accessibility tree is decorative",
+      "rulePage": "https://act-rules.github.io/rules/e88epe",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "e147f8068869c19af0f53ec109711d587ab3e1f0",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/e88epe/e147f8068869c19af0f53ec109711d587ab3e1f0.html",
+      "relativePath": "testcases/e88epe/e147f8068869c19af0f53ec109711d587ab3e1f0.html",
+      "expected": "passed",
+      "ruleId": "e88epe",
+      "ruleName": "Image not in the accessibility tree is decorative",
+      "rulePage": "https://act-rules.github.io/rules/e88epe",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "fbe64b24bd2d6abbc60ca11c10d72e06202a2f19",
+      "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/e88epe/fbe64b24bd2d6abbc60ca11c10d72e06202a2f19.html",
+      "relativePath": "testcases/e88epe/fbe64b24bd2d6abbc60ca11c10d72e06202a2f19.html",
+      "expected": "passed",
+      "ruleId": "e88epe",
+      "ruleName": "Image not in the accessibility tree is decorative",
+      "rulePage": "https://act-rules.github.io/rules/e88epe",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "6c3ff41e67b0f85a4e52e5bba278e4e279bea034",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/e88epe/6c3ff41e67b0f85a4e52e5bba278e4e279bea034.html",
+      "relativePath": "testcases/e88epe/6c3ff41e67b0f85a4e52e5bba278e4e279bea034.html",
+      "expected": "failed",
+      "ruleId": "e88epe",
+      "ruleName": "Image not in the accessibility tree is decorative",
+      "rulePage": "https://act-rules.github.io/rules/e88epe",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "50aec1c628901752fcfbf956ff8c69b07d07ec7b",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/e88epe/50aec1c628901752fcfbf956ff8c69b07d07ec7b.html",
+      "relativePath": "testcases/e88epe/50aec1c628901752fcfbf956ff8c69b07d07ec7b.html",
+      "expected": "failed",
+      "ruleId": "e88epe",
+      "ruleName": "Image not in the accessibility tree is decorative",
+      "rulePage": "https://act-rules.github.io/rules/e88epe",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "8910ef2a7c2d5c9ad2280350dceb439f7e3849cf",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/e88epe/8910ef2a7c2d5c9ad2280350dceb439f7e3849cf.html",
+      "relativePath": "testcases/e88epe/8910ef2a7c2d5c9ad2280350dceb439f7e3849cf.html",
+      "expected": "failed",
+      "ruleId": "e88epe",
+      "ruleName": "Image not in the accessibility tree is decorative",
+      "rulePage": "https://act-rules.github.io/rules/e88epe",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "b3d0cb478e276209c5cf3492b3b7d43d016edec4",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/e88epe/b3d0cb478e276209c5cf3492b3b7d43d016edec4.html",
+      "relativePath": "testcases/e88epe/b3d0cb478e276209c5cf3492b3b7d43d016edec4.html",
+      "expected": "failed",
+      "ruleId": "e88epe",
+      "ruleName": "Image not in the accessibility tree is decorative",
+      "rulePage": "https://act-rules.github.io/rules/e88epe",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "6d71ae8ab8aecc7a08faacde77de09b4bd8dd131",
+      "testcaseTitle": "Failed Example 5",
+      "url": "https://act-rules.github.io/testcases/e88epe/6d71ae8ab8aecc7a08faacde77de09b4bd8dd131.html",
+      "relativePath": "testcases/e88epe/6d71ae8ab8aecc7a08faacde77de09b4bd8dd131.html",
+      "expected": "failed",
+      "ruleId": "e88epe",
+      "ruleName": "Image not in the accessibility tree is decorative",
+      "rulePage": "https://act-rules.github.io/rules/e88epe",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "700fb4c77a30aa7b74e2cf1345db10d7016bf056",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/e88epe/700fb4c77a30aa7b74e2cf1345db10d7016bf056.html",
+      "relativePath": "testcases/e88epe/700fb4c77a30aa7b74e2cf1345db10d7016bf056.html",
+      "expected": "inapplicable",
+      "ruleId": "e88epe",
+      "ruleName": "Image not in the accessibility tree is decorative",
+      "rulePage": "https://act-rules.github.io/rules/e88epe",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "676e3afca2d1f65d7f364a8b3631bdbc2492dbc2",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/e88epe/676e3afca2d1f65d7f364a8b3631bdbc2492dbc2.html",
+      "relativePath": "testcases/e88epe/676e3afca2d1f65d7f364a8b3631bdbc2492dbc2.html",
+      "expected": "inapplicable",
+      "ruleId": "e88epe",
+      "ruleName": "Image not in the accessibility tree is decorative",
+      "rulePage": "https://act-rules.github.io/rules/e88epe",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "3cb6585fa0024becb2c0738f723073a1283ddd88",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/e88epe/3cb6585fa0024becb2c0738f723073a1283ddd88.html",
+      "relativePath": "testcases/e88epe/3cb6585fa0024becb2c0738f723073a1283ddd88.html",
+      "expected": "inapplicable",
+      "ruleId": "e88epe",
+      "ruleName": "Image not in the accessibility tree is decorative",
+      "rulePage": "https://act-rules.github.io/rules/e88epe",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "bf711bd5d2354ea860af4241de86a31d4df8b38b",
+      "testcaseTitle": "Inapplicable Example 4",
+      "url": "https://act-rules.github.io/testcases/e88epe/bf711bd5d2354ea860af4241de86a31d4df8b38b.html",
+      "relativePath": "testcases/e88epe/bf711bd5d2354ea860af4241de86a31d4df8b38b.html",
+      "expected": "inapplicable",
+      "ruleId": "e88epe",
+      "ruleName": "Image not in the accessibility tree is decorative",
+      "rulePage": "https://act-rules.github.io/rules/e88epe",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "262a7b5bab0fcb38fe86ec20206b2b16256b365e",
+      "testcaseTitle": "Inapplicable Example 5",
+      "url": "https://act-rules.github.io/testcases/e88epe/262a7b5bab0fcb38fe86ec20206b2b16256b365e.html",
+      "relativePath": "testcases/e88epe/262a7b5bab0fcb38fe86ec20206b2b16256b365e.html",
+      "expected": "inapplicable",
+      "ruleId": "e88epe",
+      "ruleName": "Image not in the accessibility tree is decorative",
+      "rulePage": "https://act-rules.github.io/rules/e88epe",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "357d6afecdc6360f342bd3307e4ee71bb9d03397",
+      "testcaseTitle": "Inapplicable Example 6",
+      "url": "https://act-rules.github.io/testcases/e88epe/357d6afecdc6360f342bd3307e4ee71bb9d03397.html",
+      "relativePath": "testcases/e88epe/357d6afecdc6360f342bd3307e4ee71bb9d03397.html",
+      "expected": "inapplicable",
+      "ruleId": "e88epe",
+      "ruleName": "Image not in the accessibility tree is decorative",
+      "rulePage": "https://act-rules.github.io/rules/e88epe",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a4090eb483a51ef90dc9ae9f9bdf05f068e5690a",
+      "testcaseTitle": "Inapplicable Example 7",
+      "url": "https://act-rules.github.io/testcases/e88epe/a4090eb483a51ef90dc9ae9f9bdf05f068e5690a.html",
+      "relativePath": "testcases/e88epe/a4090eb483a51ef90dc9ae9f9bdf05f068e5690a.html",
+      "expected": "inapplicable",
+      "ruleId": "e88epe",
+      "ruleName": "Image not in the accessibility tree is decorative",
+      "rulePage": "https://act-rules.github.io/rules/e88epe",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "d484d9cb905b9ad2e73b69f687af28eadc52e340",
+      "testcaseTitle": "Inapplicable Example 8",
+      "url": "https://act-rules.github.io/testcases/e88epe/d484d9cb905b9ad2e73b69f687af28eadc52e340.html",
+      "relativePath": "testcases/e88epe/d484d9cb905b9ad2e73b69f687af28eadc52e340.html",
+      "expected": "inapplicable",
+      "ruleId": "e88epe",
+      "ruleName": "Image not in the accessibility tree is decorative",
+      "rulePage": "https://act-rules.github.io/rules/e88epe",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "c934e3dcba80f4e29531bab6621e29cb8a774573",
+      "testcaseTitle": "Inapplicable Example 9",
+      "url": "https://act-rules.github.io/testcases/e88epe/c934e3dcba80f4e29531bab6621e29cb8a774573.html",
+      "relativePath": "testcases/e88epe/c934e3dcba80f4e29531bab6621e29cb8a774573.html",
+      "expected": "inapplicable",
+      "ruleId": "e88epe",
+      "ruleName": "Image not in the accessibility tree is decorative",
+      "rulePage": "https://act-rules.github.io/rules/e88epe",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "99e3d033665b0a89ed706113576df48b41f0ac5a",
+      "testcaseTitle": "Inapplicable Example 10",
+      "url": "https://act-rules.github.io/testcases/e88epe/99e3d033665b0a89ed706113576df48b41f0ac5a.html",
+      "relativePath": "testcases/e88epe/99e3d033665b0a89ed706113576df48b41f0ac5a.html",
+      "expected": "inapplicable",
+      "ruleId": "e88epe",
+      "ruleName": "Image not in the accessibility tree is decorative",
+      "rulePage": "https://act-rules.github.io/rules/e88epe",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"

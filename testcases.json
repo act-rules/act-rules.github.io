@@ -12586,6 +12586,24 @@
       }
     },
     {
+      "testcaseId": "42bfbd40933a0aa7954e841ec0b239de643e8d2a",
+      "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/b4f0c3/42bfbd40933a0aa7954e841ec0b239de643e8d2a.html",
+      "relativePath": "testcases/b4f0c3/42bfbd40933a0aa7954e841ec0b239de643e8d2a.html",
+      "expected": "passed",
+      "ruleId": "b4f0c3",
+      "ruleName": "`meta` `viewport` does not prevent zoom",
+      "rulePage": "https://act-rules.github.io/rules/b4f0c3",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
       "testcaseId": "31f334557a025bf43ca166fc34a28fdcfcae5aab",
       "testcaseTitle": "Failed Example 1",
       "url": "https://act-rules.github.io/testcases/b4f0c3/31f334557a025bf43ca166fc34a28fdcfcae5aab.html",
@@ -12622,10 +12640,10 @@
       }
     },
     {
-      "testcaseId": "f13febf5cc9ab5395f0372313bc016fa19d30e5e",
+      "testcaseId": "52463746d10d2bf67ea6f0e579a2f76bde9346ca",
       "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/b4f0c3/f13febf5cc9ab5395f0372313bc016fa19d30e5e.html",
-      "relativePath": "testcases/b4f0c3/f13febf5cc9ab5395f0372313bc016fa19d30e5e.html",
+      "url": "https://act-rules.github.io/testcases/b4f0c3/52463746d10d2bf67ea6f0e579a2f76bde9346ca.html",
+      "relativePath": "testcases/b4f0c3/52463746d10d2bf67ea6f0e579a2f76bde9346ca.html",
       "expected": "failed",
       "ruleId": "b4f0c3",
       "ruleName": "`meta` `viewport` does not prevent zoom",
@@ -12640,28 +12658,10 @@
       }
     },
     {
-      "testcaseId": "d3a84d77379b2f6d4f1b5c4014dcfbecf7fb53d3",
+      "testcaseId": "94bfda6abb6966e3681e234b88daf04c095ff3be",
       "testcaseTitle": "Failed Example 4",
-      "url": "https://act-rules.github.io/testcases/b4f0c3/d3a84d77379b2f6d4f1b5c4014dcfbecf7fb53d3.html",
-      "relativePath": "testcases/b4f0c3/d3a84d77379b2f6d4f1b5c4014dcfbecf7fb53d3.html",
-      "expected": "failed",
-      "ruleId": "b4f0c3",
-      "ruleName": "`meta` `viewport` does not prevent zoom",
-      "rulePage": "https://act-rules.github.io/rules/b4f0c3",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.4.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "c349f9f0d343612aeaeefe3331048efef2a39dd2",
-      "testcaseTitle": "Failed Example 5",
-      "url": "https://act-rules.github.io/testcases/b4f0c3/c349f9f0d343612aeaeefe3331048efef2a39dd2.html",
-      "relativePath": "testcases/b4f0c3/c349f9f0d343612aeaeefe3331048efef2a39dd2.html",
+      "url": "https://act-rules.github.io/testcases/b4f0c3/94bfda6abb6966e3681e234b88daf04c095ff3be.html",
+      "relativePath": "testcases/b4f0c3/94bfda6abb6966e3681e234b88daf04c095ff3be.html",
       "expected": "failed",
       "ruleId": "b4f0c3",
       "ruleName": "`meta` `viewport` does not prevent zoom",

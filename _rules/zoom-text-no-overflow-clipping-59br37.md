@@ -238,8 +238,6 @@ This [text node][] with the text "Web Content Accessibility Guidelines 2.1" is f
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'DOM ancestor, 2020/02/13'
 [text node]: https://dom.spec.whatwg.org/#text
 [computed]: https://www.w3.org/TR/css-cascade-3/#computed-value
-[clientwidth]: https://drafts.csswg.org/cssom-view/#dom-element-clientwidth 'CSS working draft, Element.clientWidth, 2020/02/14'
-[clientheight]: https://drafts.csswg.org/cssom-view/#dom-element-clientheight 'CSS working draft, Element.clientHeight, 2020/02/14'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS draft, flat tree, 2020/02/14'
 [overflow]: https://www.w3.org/TR/CSS22/visufx.html#overflow
 [line-height]: https://www.w3.org/TR/CSS22/visudet.html#propdef-line-height

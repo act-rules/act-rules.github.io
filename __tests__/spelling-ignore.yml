@@ -9,6 +9,7 @@
 - http
 - https
 - wai-aria
+- validator
 
 # Tag(s)
 - svg # `aria-query` dom tags does not list `svg`
@@ -50,11 +51,9 @@
 - testrunner
 - color
 - focusable
-- Focusable
 - unfocusable
 - tabindex
 - whitespace
-- Whitespace
 - textfield
 - namespace
 - namespaces
@@ -74,10 +73,8 @@
 - 18pt
 - Helvetica
 - fieldsets
-
-# spell checker checks against strict casing & hence some repeated words here
-- Autocomplete
-- Focusable
+- ascii # lowercase needed in reference list
+- CMS
 
 # Parts of url
 - http
@@ -94,6 +91,7 @@
 - multipage
 - attr-input-type
 - wai-aria-1.1
+
 # Notes and acronyms
 - TODO
 - TBD
@@ -143,15 +141,15 @@
 - nowrap
 - javascript
 - Reflow
+- Viewport
+- dom-meta-content
 
 # Unsure why the dictionary does not have these words
 - programmatically
-- Programmatically
 - personalization
-- Autofill
+- autofill
 - implementers
-- Implementers
-- Presentational
+- presentational
 - backtick
 - camelCase
 

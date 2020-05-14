@@ -21,6 +21,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
   - DOM Tree
   - CSS Styling
 acknowledgments:
@@ -35,11 +36,11 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to HTML `img` elements or any HTML element with the [semantic role][] of `img` that is [included in the accessibility tree][].
+The rule applies to HTML `img` elements and HTML elements with the [semantic role][] of `img`, except for elements that are not [included in the accessibility tree][].
 
 ## Expectation
 
-Each target element has an [accessible name][] that is not empty (`""`), or is [marked as decorative][].
+Each target element has an [accessible name][] that is not empty (`""`), or has a [semantic role][] of `none` or `presentation`.
 
 **Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
 
@@ -51,9 +52,12 @@ _There are currently no assumptions._
 
 - There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name][].
 - There are several popular browsers that do not treat images with empty `alt` attribute as having a role of `presentation` but instead add the `img` element to the accessibility tree with a [semantic role][] of either `img` or `graphic`.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `img` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+- Images can have their role set to `presentation` through an empty `alt` attribute. [Presentational Roles Conflict Resolution][] does not specifies what to do if such an image is [focusable][] (it only specifies what to do in case of explicit `role="none"` or `role="presentation"`). Some browsers expose these images and some don't. Thus, this rule may fail for technologies that expose these without creating an accessibility issue for users of other technologies.
 
 ## Background
 
+- [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 - [G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content](https://www.w3.org/WAI/WCAG21/Techniques/general/G94)
 - [G95: Providing short text alternatives that provide a brief description of the non-text content](https://www.w3.org/WAI/WCAG21/Techniques/general/G95)
 - [H37: Using alt attributes on img elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H37)
@@ -102,7 +106,7 @@ The HTML `img` element has an [accessible name][] given by a `title` attribute, 
 
 #### Passed Example 5
 
-The HTML `img` element is [marked as decorative][] through an empty `alt` attribute.
+The HTML `img` element has a [semantic role][] of `presentation` through an empty `alt` attribute.
 
 ```html
 <img alt="" />
@@ -110,7 +114,7 @@ The HTML `img` element is [marked as decorative][] through an empty `alt` attrib
 
 #### Passed Example 6
 
-The HTML `img` element is [marked as decorative][] through `role="presentation"`.
+The HTML `img` element has a [semantic role][] of `presentation` through [explicit role][].
 
 ```html
 <img role="presentation" />
@@ -118,7 +122,7 @@ The HTML `img` element is [marked as decorative][] through `role="presentation"`
 
 #### Passed Example 7
 
-The HTML `img` element is [marked as decorative][] through `role="none"`.
+The HTML `img` element has a [semantic role][] of `none` through [explicit role][].
 
 ```html
 <img role="none" />
@@ -136,7 +140,7 @@ The HTML `img` element has an [accessible name][] that is not empty.
 
 #### Failed Example 1
 
-The HTML `img` element is not [marked as decorative][] and has an empty [accessible name][].
+The HTML `img` element with [implicit role][] of `img` has an empty [accessible name][].
 
 ```html
 <img />
@@ -152,7 +156,7 @@ The element with role of `img` has an empty [accessible name][].
 
 #### Failed Example 3
 
-The `img` element inside a `div` positioned off screen has an empty [accessible name][] and is not [marked as decorative][].
+The `img` element inside a `div` positioned off screen has an empty [accessible name][] and an [implicit role][] of `img`.
 
 ```html
 <div style="margin-left:-9999px;"><img /></div>
@@ -164,6 +168,14 @@ The HTML `img` element has an empty [accessible name][].
 
 ```html
 <img alt=" " />
+```
+
+#### Failed Example 5
+
+This `img` element has an [explicit role][] of `none`. However, it is [focusable][] due to the `tabindex` attribute. Thus it has a [semantic role][] of `img` due to [Presentational Roles Conflict Resolution][]. It does not have an accessible name.
+
+```html
+<img role="none" tabindex="0" />
 ```
 
 ### Inapplicable
@@ -203,7 +215,9 @@ The element is not an `img` element.
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
-[marked as decorative]: #marked-as-decorative 'Definition of marked as decorative'
+[explicit role]: #explicit-role 'Definition of explicit role'
+[focusable]: #focusable 'Definition of focusable'
+[implicit role]: #implicit-role 'Definition of implicit role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of semantic role'
-[whitespace]: #whitespace 'Definition of whitespace'

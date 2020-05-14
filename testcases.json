@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 758,
+  "count": 762,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -9418,10 +9418,10 @@
       }
     },
     {
-      "testcaseId": "2e69af018a64e810e15782c8a3c2fed99bd64d51",
+      "testcaseId": "cfd1636ab41c1418d1ad510eb9802c31fb2c5c5e",
       "testcaseTitle": "Passed Example 1",
-      "url": "https://act-rules.github.io/testcases/9eb3f6/2e69af018a64e810e15782c8a3c2fed99bd64d51.html",
-      "relativePath": "testcases/9eb3f6/2e69af018a64e810e15782c8a3c2fed99bd64d51.html",
+      "url": "https://act-rules.github.io/testcases/9eb3f6/cfd1636ab41c1418d1ad510eb9802c31fb2c5c5e.html",
+      "relativePath": "testcases/9eb3f6/cfd1636ab41c1418d1ad510eb9802c31fb2c5c5e.html",
       "expected": "passed",
       "ruleId": "9eb3f6",
       "ruleName": "Image filename is accessible name for image",
@@ -9448,10 +9448,10 @@
       }
     },
     {
-      "testcaseId": "89c4a207e1417cf9cd85e923212eea69fa9dac53",
+      "testcaseId": "499be2117059dba5f38526df06b711d0125eccd7",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/9eb3f6/89c4a207e1417cf9cd85e923212eea69fa9dac53.html",
-      "relativePath": "testcases/9eb3f6/89c4a207e1417cf9cd85e923212eea69fa9dac53.html",
+      "url": "https://act-rules.github.io/testcases/9eb3f6/499be2117059dba5f38526df06b711d0125eccd7.html",
+      "relativePath": "testcases/9eb3f6/499be2117059dba5f38526df06b711d0125eccd7.html",
       "expected": "passed",
       "ruleId": "9eb3f6",
       "ruleName": "Image filename is accessible name for image",
@@ -9478,10 +9478,70 @@
       }
     },
     {
-      "testcaseId": "9e9d4a8ef9fc7f3b3f515eab77c6283232e8d625",
+      "testcaseId": "69aca91aef080e1f6a50b2ce05ed640aea25aa04",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/9eb3f6/69aca91aef080e1f6a50b2ce05ed640aea25aa04.html",
+      "relativePath": "testcases/9eb3f6/69aca91aef080e1f6a50b2ce05ed640aea25aa04.html",
+      "expected": "passed",
+      "ruleId": "9eb3f6",
+      "ruleName": "Image filename is accessible name for image",
+      "rulePage": "https://act-rules.github.io/rules/9eb3f6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "139feeccca883311f62497af2edd815addc668eb",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/9eb3f6/139feeccca883311f62497af2edd815addc668eb.html",
+      "relativePath": "testcases/9eb3f6/139feeccca883311f62497af2edd815addc668eb.html",
+      "expected": "passed",
+      "ruleId": "9eb3f6",
+      "ruleName": "Image filename is accessible name for image",
+      "rulePage": "https://act-rules.github.io/rules/9eb3f6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "f7406b89f8e6769c01da5c305e3e6c921fd7c1e4",
       "testcaseTitle": "Failed Example 1",
-      "url": "https://act-rules.github.io/testcases/9eb3f6/9e9d4a8ef9fc7f3b3f515eab77c6283232e8d625.html",
-      "relativePath": "testcases/9eb3f6/9e9d4a8ef9fc7f3b3f515eab77c6283232e8d625.html",
+      "url": "https://act-rules.github.io/testcases/9eb3f6/f7406b89f8e6769c01da5c305e3e6c921fd7c1e4.html",
+      "relativePath": "testcases/9eb3f6/f7406b89f8e6769c01da5c305e3e6c921fd7c1e4.html",
       "expected": "failed",
       "ruleId": "9eb3f6",
       "ruleName": "Image filename is accessible name for image",
@@ -9508,10 +9568,70 @@
       }
     },
     {
-      "testcaseId": "6a09f82aa441115851ce931896bcef0095287f87",
+      "testcaseId": "a2333ec76e676624212dcd616ed11ae576ab775e",
       "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/9eb3f6/6a09f82aa441115851ce931896bcef0095287f87.html",
-      "relativePath": "testcases/9eb3f6/6a09f82aa441115851ce931896bcef0095287f87.html",
+      "url": "https://act-rules.github.io/testcases/9eb3f6/a2333ec76e676624212dcd616ed11ae576ab775e.html",
+      "relativePath": "testcases/9eb3f6/a2333ec76e676624212dcd616ed11ae576ab775e.html",
+      "expected": "failed",
+      "ruleId": "9eb3f6",
+      "ruleName": "Image filename is accessible name for image",
+      "rulePage": "https://act-rules.github.io/rules/9eb3f6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "556be1533c3f4388dc6c8dd1c8bce9c0e9c4f06c",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/9eb3f6/556be1533c3f4388dc6c8dd1c8bce9c0e9c4f06c.html",
+      "relativePath": "testcases/9eb3f6/556be1533c3f4388dc6c8dd1c8bce9c0e9c4f06c.html",
+      "expected": "failed",
+      "ruleId": "9eb3f6",
+      "ruleName": "Image filename is accessible name for image",
+      "rulePage": "https://act-rules.github.io/rules/9eb3f6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "4d70a122992b17d69afbf05e92b8c953eccfbd03",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/9eb3f6/4d70a122992b17d69afbf05e92b8c953eccfbd03.html",
+      "relativePath": "testcases/9eb3f6/4d70a122992b17d69afbf05e92b8c953eccfbd03.html",
       "expected": "failed",
       "ruleId": "9eb3f6",
       "ruleName": "Image filename is accessible name for image",
@@ -9598,10 +9718,10 @@
       }
     },
     {
-      "testcaseId": "cd573b7355a161560db462881a1433c0182b5de1",
+      "testcaseId": "50bc301a1b62b9850538c6b4bfa1e67b695df0fc",
       "testcaseTitle": "Inapplicable Example 3",
-      "url": "https://act-rules.github.io/testcases/9eb3f6/cd573b7355a161560db462881a1433c0182b5de1.html",
-      "relativePath": "testcases/9eb3f6/cd573b7355a161560db462881a1433c0182b5de1.html",
+      "url": "https://act-rules.github.io/testcases/9eb3f6/50bc301a1b62b9850538c6b4bfa1e67b695df0fc.html",
+      "relativePath": "testcases/9eb3f6/50bc301a1b62b9850538c6b4bfa1e67b695df0fc.html",
       "expected": "inapplicable",
       "ruleId": "9eb3f6",
       "ruleName": "Image filename is accessible name for image",
@@ -9628,10 +9748,10 @@
       }
     },
     {
-      "testcaseId": "4705528482fca0add701364cf420227677d3bcc4",
+      "testcaseId": "0c831b81254b27f0a7f05e8ec76735fd9ddb8cb7",
       "testcaseTitle": "Inapplicable Example 4",
-      "url": "https://act-rules.github.io/testcases/9eb3f6/4705528482fca0add701364cf420227677d3bcc4.html",
-      "relativePath": "testcases/9eb3f6/4705528482fca0add701364cf420227677d3bcc4.html",
+      "url": "https://act-rules.github.io/testcases/9eb3f6/0c831b81254b27f0a7f05e8ec76735fd9ddb8cb7.html",
+      "relativePath": "testcases/9eb3f6/0c831b81254b27f0a7f05e8ec76735fd9ddb8cb7.html",
       "expected": "inapplicable",
       "ruleId": "9eb3f6",
       "ruleName": "Image filename is accessible name for image",

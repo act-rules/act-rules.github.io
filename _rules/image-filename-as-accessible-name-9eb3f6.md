@@ -27,7 +27,12 @@ input_aspects:
   - Language
 acknowledgments:
   authors:
+    - Jean-Yves Moyen
+  previous_authors:
     - Bryn Anderson
+  assets:
+    - The picture of Nyhavn (Copenhagen) is authored by [Jorge Franganillo](https://500px.com/franganillo), licensed under the [Creative Commons Attribution 3.0 Unported](https://creativecommons.org/licenses/by/3.0/deed.en) license.
+    - The picture of bread is a public domain [picture by Bicanski](https://pixnio.com/media/bread-breakfast-fresh-homemade-wheat).
 ---
 
 ## Applicability
@@ -41,9 +46,11 @@ The rule applies to any HTML element with the [semantic role][] of `img` or any 
 
 Each test target has an [accessible name][] that serves an equivalent purpose to the [non-text content][].
 
+**Note:** It is fairly common for CMS or other tools to default the alt-text of an image to its filename if no alt-text is provided. However, these names are usually not descriptive (often due to the presence of the file extension). This rule uses this heuristic to pinpoints cases where the [accessible name][] should be looked at by human testers. This rule does not automatically decide in which case a filename is correct (notably, it does not automatically decide whether adding the file extension is acceptable).
+
 ## Assumptions
 
-This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
+This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content).
 
 ## Accessibility Support
 
@@ -62,23 +69,43 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 
 #### Passed Example 1
 
-This `img` element has an [accessible name][] equivalent to the filename. The [accessible name][] accurately describes the image.
+This `img` element has an [accessible name][] equivalent to the filename (ignoring letter casing). The [accessible name][] accurately describes the image.
 
 ```html
 <html lang="en">
-	<img src="https://www.w3.org/WAI/demos/bad/img/w3c" alt="w3c" />
+	<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn" alt="Nyhavn" />
 </html>
 ```
 
 #### Passed Example 2
 
-This `img` element has an [accessible name][] equivalent to the filename. The [accessible name][] in combination with the text content of the `a` element accurately describes the image.
+This `img` element has an [accessible name][] equivalent to the filename. Because the image is used in a download link, the presence of the file extension is a relevant part of its description.
 
 ```html
 <html lang="en">
-	<a href="https://www.w3.org/WAI/demos/bad/img/w3c.png" download
-		>Download <img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png"
+	<a href="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg" download
+		>Download <img src="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg" alt="nyhavn.jpeg"
 	/></a>
+</html>
+```
+
+#### Passed Example 3
+
+This image button has an [accessible name][] equivalent to the filename. The [accessible name][] accurately describes the purpose of the button.
+
+```html
+<html lang="en">
+	<input type="image" src="test-assets/image-filename-as-accessible-name-9eb3f6/login" alt="login" />
+</html>
+```
+
+#### Passed Example 4
+
+This `img` element has an [accessible name][] equivalent to the filename. The [accessible name][] accurately describes the image in the language of the element (French, same as the language of the page).
+
+```html
+<html lang="fr">
+	<img src="test-assets/image-filename-as-accessible-name-9eb3f6/pain" alt="pain" />
 </html>
 ```
 
@@ -86,21 +113,44 @@ This `img` element has an [accessible name][] equivalent to the filename. The [a
 
 #### Failed Example 1
 
-This `img` element has [accessible name][] matching the image filename. The presence of the file extension in the [accessible name][] is redundant and results in the [accessible name][] not accurately describing the image.
+This `img` element has [accessible name][] matching the image filename (ignoring letter casing). The name does not describe the image.
 
 ```html
 <html lang="en">
-	<img src="https://www.w3.org/WAI/demos/bad/img/w3c.png" alt="w3c.png" />
+	<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/paris" alt="Paris" />
 </html>
 ```
 
 #### Failed Example 2
 
-This `input` element with a `type` of `image` has a [semantic role][] of `img` and an [accessible name][] matching the filename. The presence of the file extension in the [accessible name][] is redundant and results in the [accessible name][] not accurately describing the image.
+This `img` element has [accessible name][] matching the image filename. The name is just a checksum and does not describe the image.
 
 ```html
 <html lang="en">
-	<input type="image" src="https://www.w3.org/WAI/demos/bad/before/img/top_weather.gif" alt="top_weather.gif" />
+	<img
+		src="/test-assets/image-filename-as-accessible-name-9eb3f6/94251e110d24a4c2b6e6ce76e7203374"
+		alt="94251e110d24a4c2b6e6ce76e7203374"
+	/>
+</html>
+```
+
+#### Failed Example 3
+
+This `img` element has [accessible name][] matching the image filename. The presence of the file extension in the [accessible name][] is confusing and results in the [accessible name][] not accurately describing the image.
+
+```html
+<html lang="en">
+	<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg" alt="nyhavn.jpeg" />
+</html>
+```
+
+#### Failed Example 4
+
+This image button has an [accessible name][] matching the filename. The presence of the file extension in the [accessible name][] is confusing and results in the [accessible name][] not accurately describing the image.
+
+```html
+<html lang="en">
+	<input type="image" src="test-assets/image-filename-as-accessible-name-9eb3f6/login.png" alt="login.png" />
 </html>
 ```
 
@@ -132,7 +182,7 @@ This `img` element has an [accessible name][] which is not equivalent to the fil
 
 ```html
 <html lang="en">
-	<img src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg" alt="modanna lily" />
+	<img src="test-assets/image-filename-as-accessible-name-9eb3f6/94251e110d24a4c2b6e6ce76e7203374" alt="Nyhavn" />
 </html>
 ```
 
@@ -143,22 +193,18 @@ This `img` element has an [accessible name][] which is not equivalent to the fil
 ```html
 <html lang="en">
 	<img
-		src="https://www.w3.org/WAI/demos/bad/after/img/teaser_right2.jpg"
-		alt="teaser_right2.jpg"
-		aria-label="modanna lily"
+		src="test-assets/image-filename-as-accessible-name-9eb3f6/94251e110d24a4c2b6e6ce76e7203374"
+		alt="94251e110d24a4c2b6e6ce76e7203374"
+		aria-label="Nyhavn"
 	/>
 </html>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
-[explicit role]: #explicit-role 'Definition of Explicit Role'
 [filename]: #filename 'Definition of filename'
-[focusable]: #focusable 'Definition of focusable'
-[global]: https://www.w3.org/TR/wai-aria-1.1/#global_states 'Definition of Global ARIA States and Properties'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
-[property]: https://www.w3.org/TR/wai-aria/#dfn-property 'Definition of ARIA Property'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [type]: https://html.spec.whatwg.org/#states-of-the-type-attribute
 [whitespace]: #whitespace 'Definition of whitespace'

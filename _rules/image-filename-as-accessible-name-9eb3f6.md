@@ -34,9 +34,9 @@ htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
   - 'alt-require'
-  assets:
-    - The picture of Nyhavn (Copenhagen) is authored by [Jorge Franganillo](https://500px.com/franganillo), licensed under the [Creative Commons Attribution 3.0 Unported](https://creativecommons.org/licenses/by/3.0/deed.en) license.
-    - The picture of bread is a public domain [picture by Bicanski](https://pixnio.com/media/bread-breakfast-fresh-homemade-wheat).
+assets:
+  - The picture of Nyhavn (Copenhagen) is authored by [Jorge Franganillo](https://500px.com/franganillo), licensed under the [Creative Commons Attribution 3.0 Unported](https://creativecommons.org/licenses/by/3.0/deed.en) license.
+  - The picture of bread is a public domain [picture by Bicanski](https://pixnio.com/media/bread-breakfast-fresh-homemade-wheat).
 ---
 
 ## Applicability
@@ -197,7 +197,7 @@ This image button has an [accessible name][] matching the filename. The presence
 </html>
 ```
 
-#### Failed Example 3
+#### Failed Example 5
 
 This `img` element has 3 [image sources][] for [Art direction][]-based selection, through its `src` attribute and its siblings `source` elements with the same `picture` parent. Its [accessible name][] is equivalent to the [filename][] of one of its [image sources][] but does not describe the second one (`pain`).
 

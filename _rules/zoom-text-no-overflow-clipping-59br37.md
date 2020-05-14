@@ -195,7 +195,7 @@ This [text node][] has an SVG element as a [parent][].
 
 #### Inapplicable Example 3
 
-This [text node][] has an [ancestor][] with `overflow: auto`.
+This [text node][] has no [ancestor][] with `overflow: hidden` or `clip`.
 
 ```html
 <div style="overflow: auto; height: 1.5em; font-size: 16px;">

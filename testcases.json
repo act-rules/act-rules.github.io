@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 762,
+  "count": 774,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -17851,6 +17851,222 @@
         },
         "wcag-technique:G208": {
           "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "0b144da5835b8f44b8733ab34b5da6b77ec4235b",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/59br37/0b144da5835b8f44b8733ab34b5da6b77ec4235b.html",
+      "relativePath": "testcases/59br37/0b144da5835b8f44b8733ab34b5da6b77ec4235b.html",
+      "expected": "passed",
+      "ruleId": "59br37",
+      "ruleName": "Zoomed text node is not clipped with CSS overflow",
+      "rulePage": "https://act-rules.github.io/rules/59br37",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "e83b0416156f7d31d564f1c3a4a5e1eab683280a",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/59br37/e83b0416156f7d31d564f1c3a4a5e1eab683280a.html",
+      "relativePath": "testcases/59br37/e83b0416156f7d31d564f1c3a4a5e1eab683280a.html",
+      "expected": "passed",
+      "ruleId": "59br37",
+      "ruleName": "Zoomed text node is not clipped with CSS overflow",
+      "rulePage": "https://act-rules.github.io/rules/59br37",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a8473bbdd1332f9265e6f14bf9311406b530120c",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/59br37/a8473bbdd1332f9265e6f14bf9311406b530120c.html",
+      "relativePath": "testcases/59br37/a8473bbdd1332f9265e6f14bf9311406b530120c.html",
+      "expected": "passed",
+      "ruleId": "59br37",
+      "ruleName": "Zoomed text node is not clipped with CSS overflow",
+      "rulePage": "https://act-rules.github.io/rules/59br37",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "574400ce6b2d062780b7044a728727203bc9574e",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/59br37/574400ce6b2d062780b7044a728727203bc9574e.html",
+      "relativePath": "testcases/59br37/574400ce6b2d062780b7044a728727203bc9574e.html",
+      "expected": "passed",
+      "ruleId": "59br37",
+      "ruleName": "Zoomed text node is not clipped with CSS overflow",
+      "rulePage": "https://act-rules.github.io/rules/59br37",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a31c043aa6948beb73ef2453cb103d177be03a48",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/59br37/a31c043aa6948beb73ef2453cb103d177be03a48.html",
+      "relativePath": "testcases/59br37/a31c043aa6948beb73ef2453cb103d177be03a48.html",
+      "expected": "failed",
+      "ruleId": "59br37",
+      "ruleName": "Zoomed text node is not clipped with CSS overflow",
+      "rulePage": "https://act-rules.github.io/rules/59br37",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "d8cabd702d361c095199b81eb015318b9aa0c906",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/59br37/d8cabd702d361c095199b81eb015318b9aa0c906.html",
+      "relativePath": "testcases/59br37/d8cabd702d361c095199b81eb015318b9aa0c906.html",
+      "expected": "failed",
+      "ruleId": "59br37",
+      "ruleName": "Zoomed text node is not clipped with CSS overflow",
+      "rulePage": "https://act-rules.github.io/rules/59br37",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "0413dfd271c1fba476c3e73d82f8d79a75c7300f",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/59br37/0413dfd271c1fba476c3e73d82f8d79a75c7300f.html",
+      "relativePath": "testcases/59br37/0413dfd271c1fba476c3e73d82f8d79a75c7300f.html",
+      "expected": "failed",
+      "ruleId": "59br37",
+      "ruleName": "Zoomed text node is not clipped with CSS overflow",
+      "rulePage": "https://act-rules.github.io/rules/59br37",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "236b6dc5e9bbe6eed6dc325039ce3a91223d936f",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/59br37/236b6dc5e9bbe6eed6dc325039ce3a91223d936f.html",
+      "relativePath": "testcases/59br37/236b6dc5e9bbe6eed6dc325039ce3a91223d936f.html",
+      "expected": "inapplicable",
+      "ruleId": "59br37",
+      "ruleName": "Zoomed text node is not clipped with CSS overflow",
+      "rulePage": "https://act-rules.github.io/rules/59br37",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a54d3baafc0b2dd4883df666cf465f6df0301b11",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/59br37/a54d3baafc0b2dd4883df666cf465f6df0301b11.html",
+      "relativePath": "testcases/59br37/a54d3baafc0b2dd4883df666cf465f6df0301b11.html",
+      "expected": "inapplicable",
+      "ruleId": "59br37",
+      "ruleName": "Zoomed text node is not clipped with CSS overflow",
+      "rulePage": "https://act-rules.github.io/rules/59br37",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "37993258eb563b1de7cead3947bc6dffc7b705ad",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/59br37/37993258eb563b1de7cead3947bc6dffc7b705ad.html",
+      "relativePath": "testcases/59br37/37993258eb563b1de7cead3947bc6dffc7b705ad.html",
+      "expected": "inapplicable",
+      "ruleId": "59br37",
+      "ruleName": "Zoomed text node is not clipped with CSS overflow",
+      "rulePage": "https://act-rules.github.io/rules/59br37",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "fc553e4d1fcc26bb5471ab383182abd25408958c",
+      "testcaseTitle": "Inapplicable Example 4",
+      "url": "https://act-rules.github.io/testcases/59br37/fc553e4d1fcc26bb5471ab383182abd25408958c.html",
+      "relativePath": "testcases/59br37/fc553e4d1fcc26bb5471ab383182abd25408958c.html",
+      "expected": "inapplicable",
+      "ruleId": "59br37",
+      "ruleName": "Zoomed text node is not clipped with CSS overflow",
+      "rulePage": "https://act-rules.github.io/rules/59br37",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "ba6172a2b0e5709cfae4c2b71d29bb5d6ba63548",
+      "testcaseTitle": "Inapplicable Example 5",
+      "url": "https://act-rules.github.io/testcases/59br37/ba6172a2b0e5709cfae4c2b71d29bb5d6ba63548.html",
+      "relativePath": "testcases/59br37/ba6172a2b0e5709cfae4c2b71d29bb5d6ba63548.html",
+      "expected": "inapplicable",
+      "ruleId": "59br37",
+      "ruleName": "Zoomed text node is not clipped with CSS overflow",
+      "rulePage": "https://act-rules.github.io/rules/59br37",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"

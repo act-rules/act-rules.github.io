@@ -48,8 +48,6 @@ The rule applies to any HTML element that is [included in the accessibility tree
 
 When comparing [accessible name][] and [filename][], difference in letter casing, leading and trailing [whitespace][] should be ignored.
 
-**Note:** The content of the [source set][] is computed according to the [Algorithm to update the source set][update source set]. It essentially contains the `src`, and `srcset` attributes, as well as preceding `source` siblings with the same `picture` parent.
-
 ## Expectation
 
 Each test target has an [accessible name][] that serves an equivalent purpose to the [non-text content][]. If there are several [image sources][], then the [accessible name][] must accurately describe all of them.
@@ -121,8 +119,6 @@ This `img` element has an [accessible name][] equivalent to the filename. The [a
 
 This `img` element has 3 [image sources][] for [device-pixel-ratio][]-based selection, through its `src` and `srcset` attributes. Its [accessible name][] is equivalent to the [filename][] of one of its [image sources][] and accurately describes each of them.
 
-**Note:** All images used as [image sources][] in this example are actually copies of the same image, thus making the [image source][image sources] selection a bit artificial and only for the purpose of illustrating the rule.
-
 ```html
 <html lang="en">
 	<img
@@ -139,8 +135,6 @@ This `img` element has 3 [image sources][] for [device-pixel-ratio][]-based sele
 #### Passed Example 6
 
 This `img` element has 3 [image sources][] for [Art direction][]-based selection, through its `src` attribute and its siblings `source` elements with the same `picture` parent. Its [accessible name][] is equivalent to the [filename][] of one of its [image sources][] and accurately describes each of them.
-
-**Note:** All images used as [image sources][] in this example are actually copies of the same image, thus making the [image source][image sources] selection a bit artificial and only for the purpose of illustrating the rule.
 
 ```html
 <html lang="en">
@@ -200,8 +194,6 @@ This image button has an [accessible name][] matching the filename. The presence
 #### Failed Example 5
 
 This `img` element has 3 [image sources][] for [Art direction][]-based selection, through its `src` attribute and its siblings `source` elements with the same `picture` parent. Its [accessible name][] is equivalent to the [filename][] of one of its [image sources][] but does not describe the second one (`pain`).
-
-**Note:** Two of the images used as [image sources][] in this example are actually copies of the same image, thus making the [image source][image sources] selection a bit artificial and only for the purpose of illustrating the rule.
 
 ```html
 <html lang="en">
@@ -269,5 +261,4 @@ This `img` element has an [accessible name][] which is not equivalent to the fil
 [non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content
 [semantic role]: #semantic-role 'Definition of semantic role'
 [source set]: https://html.spec.whatwg.org/multipage/images.html#source-set 'Definition of source set'
-[update source set]: https://html.spec.whatwg.org/multipage/images.html#update-the-source-set 'Algorithm to update the source set'
 [whitespace]: #whitespace 'Definition of whitespace'

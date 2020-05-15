@@ -81,6 +81,7 @@
 - Helvetica
 - fieldsets
 - ascii # lowercase needed in reference list
+- CMS
 
 # Parts of url
 - http
@@ -155,6 +156,18 @@
 - mouseout
 - mouseover
 - mouseup
+- clientHeight
+- clientWidth
+- innerHeight
+- innerWidth
+- scrollbars
+- documentElement
+- rects
+- nowrap
+- javascript
+- Reflow
+- Viewport
+- dom-meta-content
 
 # Unsure why the dictionary does not have these words
 - programmatically

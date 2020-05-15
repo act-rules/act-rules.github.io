@@ -30,11 +30,13 @@ The rule applies to an [HTML document][] with an associated [Window object][] th
 
 ## Expectation 1
 
-For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target there exists a set of one or more [instruments][instrument] to prevent any results of the event.
+For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target there exists a set of one or more [instruments][instrument] to prevent any results of the event within a 10 minute time span.
 
 **Note:** The same [instrument][] can be used to disable more than one event.
 
 **Note:** Preventing results of the event can be done in multiple ways (e.g. removing the event listener; handling the event in a different manner; ...) but the way in which it is done is not relevant for this rule.
+
+**Note:** The 10 minute time span is an arbitrary limit which is not included in WCAG. Results that happen after this period will not fail this rule but may nonetheless fail [Success Criterion 2.5.4: Motion Actuation][sc 2.5.4]. The accessibility problem tends to be less severe for longer time periods, and without a time limit, testing this rule consistently would be impractical.
 
 ## Expectation 2
 
@@ -58,7 +60,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- [Understanding Success Criterion 2.5.4: Motion Actuation](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html)
+- [Understanding Success Criterion 2.5.4: Motion Actuation][sc 2.5.4]
 - [G213: Provide conventional controls and an application setting for motion activated input](https://www.w3.org/WAI/WCAG21/Techniques/general/G213.html)
 - [DeviceOrientation Event Specification](https://www.w3.org/TR/orientation-event/)
 
@@ -196,5 +198,6 @@ This [HTML document][] is not operable by device motion.
 [event listener list]: https://dom.spec.whatwg.org/#eventtarget-event-listener-list
 [html document]: https://dom.spec.whatwg.org/#concept-document
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
+[sc 2.5.4]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html
 [web page]: #web-page-html 'Definition of web page'
 [window object]: https://html.spec.whatwg.org/multipage/window-object.html#dom-window

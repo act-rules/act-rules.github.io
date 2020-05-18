@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 774,
+  "count": 784,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -13226,6 +13226,246 @@
           "inapplicable": "further testing needed"
         },
         "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "f4bae76f863ab8a57b21abd20ca6f90ce30b796a",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/0ssw9k/f4bae76f863ab8a57b21abd20ca6f90ce30b796a.html",
+      "relativePath": "testcases/0ssw9k/f4bae76f863ab8a57b21abd20ca6f90ce30b796a.html",
+      "expected": "passed",
+      "ruleId": "0ssw9k",
+      "ruleName": "Scrollable element is keyboard accessible",
+      "rulePage": "https://act-rules.github.io/rules/0ssw9k",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G202": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "ffd30f07c111f5d42dbe3a37c9d0488d181fec85",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/0ssw9k/ffd30f07c111f5d42dbe3a37c9d0488d181fec85.html",
+      "relativePath": "testcases/0ssw9k/ffd30f07c111f5d42dbe3a37c9d0488d181fec85.html",
+      "expected": "passed",
+      "ruleId": "0ssw9k",
+      "ruleName": "Scrollable element is keyboard accessible",
+      "rulePage": "https://act-rules.github.io/rules/0ssw9k",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G202": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "bb02a546c1736f5ab2330293a59f05e0083d1051",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/0ssw9k/bb02a546c1736f5ab2330293a59f05e0083d1051.html",
+      "relativePath": "testcases/0ssw9k/bb02a546c1736f5ab2330293a59f05e0083d1051.html",
+      "expected": "failed",
+      "ruleId": "0ssw9k",
+      "ruleName": "Scrollable element is keyboard accessible",
+      "rulePage": "https://act-rules.github.io/rules/0ssw9k",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G202": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "665a4c72dfcd3773039ed46b29997c32ff313a3d",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/0ssw9k/665a4c72dfcd3773039ed46b29997c32ff313a3d.html",
+      "relativePath": "testcases/0ssw9k/665a4c72dfcd3773039ed46b29997c32ff313a3d.html",
+      "expected": "failed",
+      "ruleId": "0ssw9k",
+      "ruleName": "Scrollable element is keyboard accessible",
+      "rulePage": "https://act-rules.github.io/rules/0ssw9k",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G202": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "83114ef31b3511e3d086f4bba95c2344c2a8225a",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/0ssw9k/83114ef31b3511e3d086f4bba95c2344c2a8225a.html",
+      "relativePath": "testcases/0ssw9k/83114ef31b3511e3d086f4bba95c2344c2a8225a.html",
+      "expected": "inapplicable",
+      "ruleId": "0ssw9k",
+      "ruleName": "Scrollable element is keyboard accessible",
+      "rulePage": "https://act-rules.github.io/rules/0ssw9k",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G202": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "bd253ba132dfe834a6bf7df580f9b657f40923f2",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/0ssw9k/bd253ba132dfe834a6bf7df580f9b657f40923f2.html",
+      "relativePath": "testcases/0ssw9k/bd253ba132dfe834a6bf7df580f9b657f40923f2.html",
+      "expected": "inapplicable",
+      "ruleId": "0ssw9k",
+      "ruleName": "Scrollable element is keyboard accessible",
+      "rulePage": "https://act-rules.github.io/rules/0ssw9k",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G202": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "439ce3681ff8e08d304d7123293b16cb9a044fe2",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/0ssw9k/439ce3681ff8e08d304d7123293b16cb9a044fe2.html",
+      "relativePath": "testcases/0ssw9k/439ce3681ff8e08d304d7123293b16cb9a044fe2.html",
+      "expected": "inapplicable",
+      "ruleId": "0ssw9k",
+      "ruleName": "Scrollable element is keyboard accessible",
+      "rulePage": "https://act-rules.github.io/rules/0ssw9k",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G202": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "c74b4a1ff01a2937a19be98e95f14dd43814fea7",
+      "testcaseTitle": "Inapplicable Example 4",
+      "url": "https://act-rules.github.io/testcases/0ssw9k/c74b4a1ff01a2937a19be98e95f14dd43814fea7.html",
+      "relativePath": "testcases/0ssw9k/c74b4a1ff01a2937a19be98e95f14dd43814fea7.html",
+      "expected": "inapplicable",
+      "ruleId": "0ssw9k",
+      "ruleName": "Scrollable element is keyboard accessible",
+      "rulePage": "https://act-rules.github.io/rules/0ssw9k",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G202": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "9646f97144271b3e95b6648f5814085ddaa8ee08",
+      "testcaseTitle": "Inapplicable Example 5",
+      "url": "https://act-rules.github.io/testcases/0ssw9k/9646f97144271b3e95b6648f5814085ddaa8ee08.html",
+      "relativePath": "testcases/0ssw9k/9646f97144271b3e95b6648f5814085ddaa8ee08.html",
+      "expected": "inapplicable",
+      "ruleId": "0ssw9k",
+      "ruleName": "Scrollable element is keyboard accessible",
+      "rulePage": "https://act-rules.github.io/rules/0ssw9k",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G202": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "cca6e8a151a80015ba524d257473f369add5b11d",
+      "testcaseTitle": "Inapplicable Example 6",
+      "url": "https://act-rules.github.io/testcases/0ssw9k/cca6e8a151a80015ba524d257473f369add5b11d.html",
+      "relativePath": "testcases/0ssw9k/cca6e8a151a80015ba524d257473f369add5b11d.html",
+      "expected": "inapplicable",
+      "ruleId": "0ssw9k",
+      "ruleName": "Scrollable element is keyboard accessible",
+      "rulePage": "https://act-rules.github.io/rules/0ssw9k",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G202": {
           "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",

@@ -20,15 +20,28 @@ acknowledgements:
 
 The rule applies to any [keyboard event][]: 
  - where the attribute `key` is a [printable character][] key; and
- - the attribute `isComposing` is set to `false`; or the [keyboard event][] is part of an [composition event][] whose attribute `data` includes at least one [non-printable character][] key; and
+ - the method `getModifierState` returns `false`; and
  - is [dispatched][] to an [event target][] within a [HTML document][].
 
-## Expectation
+## Expectation 1
 
 For each test target:
- - an [instrument][] to prevent the outcome of the [keyboard event][] is available; or
- - if the [event target][] does not have [focus], the outcome of the event is prevented; or
- - an [instrument][] is available to force the [keyboard event][] to be part of an [composition event][] whose attribute `data` must include at least one [non-printable character][] key.
+ - an [instrument][] to prevent any result of the [keyboard event][] is available; or
+ - if the [event target][] doesn't have [focus][], any result of the event is prevented; or
+ - an [instrument][] is available to force the [keyboard event][] to have the method `getModifierState` return `true`
+
+**Note:** The same [instrument][] can be used to disable/force more than one event.
+
+**Note:** Preventing results of the event can be done in multiple ways (e.g. removing the event listener; handling the event in a different manner; ...) but the way in which it is done is not relevant for this rule.
+
+## Expectation 2
+
+For each [instrument][] in the set of [instruments][instrument] from Expectation 1, one of the following is true:
+
+- the [instrument][] is in the same [web page][] of the test target; or
+- instructions for the user to locate the [instrument][] are in the same [web page][] of the test target.
+
+**Note:** If the set of instruments has more than one instrument, not every instrument of the set needs to be in the same location.
 
 ## Assumptions
 
@@ -564,9 +577,9 @@ This [HTML document][] has an element with the attribute `accesskey`. Accesskeys
 [focus]: https://html.spec.whatwg.org/#focusable-area
 [event target]: https://dom.spec.whatwg.org/#eventtarget 
 [event]: https://dom.spec.whatwg.org/#events
-[composition event]: https://www.w3.org/TR/uievents/#compositionevent
 [keyboard event]: https://www.w3.org/TR/uievents/#events-keyboardevents
 [legacy keyboard events]: https://www.w3.org/TR/uievents/#legacy-keyboardevent-events
+[web page]: #web-page-html 'Definition of web page'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [printable character]: #printable-characters 'Definition of printable characters'
 [non-printable characters]: #non-printable-characters 'Definition of non-printable characters'

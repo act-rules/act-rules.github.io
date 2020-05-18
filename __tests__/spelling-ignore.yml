@@ -9,6 +9,7 @@
 - http
 - https
 - wai-aria
+- validator
 
 # Tag(s)
 - svg # `aria-query` dom tags does not list `svg`
@@ -74,6 +75,7 @@
 - Helvetica
 - fieldsets
 - ascii # lowercase needed in reference list
+- CMS
 
 # Parts of url
 - http
@@ -133,8 +135,18 @@
 - scrollable-element
 - scrollWidth
 - scrollHeight
-- clientWidth
 - clientHeight
+- clientWidth
+- innerHeight
+- innerWidth
+- scrollbars
+- documentElement
+- rects
+- nowrap
+- javascript
+- Reflow
+- Viewport
+- dom-meta-content
 
 # Unsure why the dictionary does not have these words
 - programmatically

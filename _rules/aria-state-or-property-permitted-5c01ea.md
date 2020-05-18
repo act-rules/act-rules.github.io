@@ -77,7 +77,7 @@ The `aria-pressed` [state][] is [supported][] for the [semantic role][] `button`
 The `aria-busy` [state][] is a [global][] [state][] that is [supported][] by all elements, even without any [semantic role][].
 
 ```html
-<div aria-busy="true">My busy button</div>
+<div aria-busy="true">My busy div</div>
 ```
 
 #### Passed Example 4
@@ -85,7 +85,7 @@ The `aria-busy` [state][] is a [global][] [state][] that is [supported][] by all
 The `aria-label` [state][] is a [global][] [state][] and thus [inherited][] for all [semantic role][].
 
 ```html
-<div role="button" aria-label="OK"></div>
+<div role="button" aria-label="OK">✓</div>
 ```
 
 #### Passed Example 5
@@ -101,7 +101,7 @@ The `aria-checked` [state][] is [required][] for the [semantic role][] `checkbox
 The `aria-controls` [property][] is [required][] for the [semantic role][] `combobox`.
 
 ```html
-<div role="combobox" aria-controls="id1">My combobox</div>
+<div role="combobox" aria-controls="id1" aria-expanded="false">My combobox</div>
 ```
 
 #### Passed Example 7
@@ -109,7 +109,7 @@ The `aria-controls` [property][] is [required][] for the [semantic role][] `comb
 The `aria-controls` [property][] is [required][] for the [semantic role][] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value are still applicable to this rule.
 
 ```html
-<div role="combobox" aria-controls>My combobox</div>
+<div role="combobox" aria-expanded="false" aria-controls>My combobox</div>
 ```
 
 #### Passed Example 8
@@ -117,7 +117,7 @@ The `aria-controls` [property][] is [required][] for the [semantic role][] `comb
 The `aria-controls` [property][] is [required][] for the [semantic role][] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value (specified as an empty string) are still applicable to this rule.
 
 ```html
-<div role="combobox" aria-controls="">My combobox</div>
+<div role="combobox" aria-expanded="false" aria-controls="">My combobox</div>
 ```
 
 #### Passed Example 9

@@ -40,6 +40,7 @@
 - PDFs
 - DOCX
 - DPUB
+- CSSOM
 - DNS
 - BCP
 - bcp
@@ -75,6 +76,7 @@
 - DeviceOrientation
 - fieldsets
 - ascii # lowercase needed in reference list
+- CMS
 
 # Parts of url
 - http
@@ -131,6 +133,21 @@
 - matrix3d
 - rowheader
 - columnheader
+- scrollable-element
+- scrollWidth
+- scrollHeight
+- clientHeight
+- clientWidth
+- innerHeight
+- innerWidth
+- scrollbars
+- documentElement
+- rects
+- nowrap
+- javascript
+- Reflow
+- Viewport
+- dom-meta-content
 
 # Unsure why the dictionary does not have these words
 - programmatically
@@ -140,6 +157,8 @@
 - presentational
 - backtick
 - camelCase
+- scrollable
+- scrollbars
 
 # Parts of Unicode
 - 000A

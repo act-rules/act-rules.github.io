@@ -1,9 +1,9 @@
 ---
 id: 80f0bf
-name: '`audio` or `video` has no audio that plays automatically'
+name: '`audio` or `video` avoids automatically playing audio'
 rule_type: composite
 description: |
-  This rule checks that automatically playing audio does not last for more than 3 seconds, or the audio has a control mechanism to stop or mute it.
+  This rule checks that audio or video that plays automatically does not have audio that lasts for more than 3 seconds or has an audio control mechanism to stop or mute it.
 accessibility_requirements:
   wcag20:1.4.2: # Audio Control (A)
     forConformance: true
@@ -58,7 +58,7 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-The native `<video>` and `<audio>` controls in several browser and assistive technology combinations are not keyboard accessible and the `<video>` or `<audio>` element itself may not be announced. Authors are recommended to use custom controls for keyboard navigation and cross browser accessibility support in general.
+The native `video` and `audio` controls in several browser and assistive technology combinations are not keyboard accessible and the `video` or `audio` element itself may not be announced. Authors are recommended to use custom controls for keyboard navigation and cross browser accessibility support in general.
 
 ## Background
 
@@ -71,7 +71,7 @@ The native `<video>` and `<audio>` controls in several browser and assistive tec
 
 #### Passed Example 1
 
-The `<audio>` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
+This `audio` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off.
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay controls></audio>
@@ -79,7 +79,7 @@ The `<audio>` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechan
 
 #### Passed Example 2
 
-The `<video>` element does not play for longer than 3 seconds.
+This `video` element does not play for longer than 3 seconds.
 
 ```html
 <video autoplay>
@@ -90,7 +90,7 @@ The `<video>` element does not play for longer than 3 seconds.
 
 #### Passed Example 3
 
-The `<video>` element autoplays, and has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
+This `video` element autoplays and has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off.
 
 ```html
 <head>
@@ -127,7 +127,7 @@ The `<video>` element autoplays, and has a [mechanism](https://www.w3.org/TR/WCA
 
 #### Failed Example 1
 
-The `<audio>` element autoplays, lasts for more than 3 seconds, and does not have a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
+This `audio` element autoplays, lasts for more than 3 seconds, and does not have a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off.
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
@@ -135,7 +135,7 @@ The `<audio>` element autoplays, lasts for more than 3 seconds, and does not hav
 
 #### Failed Example 2
 
-The `<video>` element audio autoplays for longer than 3 seconds, and does not have a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
+This `video` element audio autoplays for longer than 3 seconds, and does not have a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off.
 
 ```html
 <video autoplay>
@@ -148,7 +148,7 @@ The `<video>` element audio autoplays for longer than 3 seconds, and does not ha
 
 #### Inapplicable Example 1
 
-The `<video>` element audio autoplays for longer than 3 seconds, but is `muted`.
+This `video` element audio autoplays for longer than 3 seconds but is `muted`.
 
 ```html
 <video autoplay muted>
@@ -159,7 +159,7 @@ The `<video>` element audio autoplays for longer than 3 seconds, but is `muted`.
 
 #### Inapplicable Example 2
 
-The `<video>` element has no audio output.
+This `video` element has no audio output.
 
 ```html
 <video autoplay>
@@ -170,7 +170,7 @@ The `<video>` element has no audio output.
 
 #### Inapplicable Example 3
 
-The `audio` element does not play automatically.
+This `audio` element does not play automatically.
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>

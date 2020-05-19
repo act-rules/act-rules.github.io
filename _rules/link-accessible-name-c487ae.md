@@ -57,6 +57,7 @@ The rule assumes that all links are [user interface components](https://www.w3.o
 
 ## Accessibility Support
 
+- There are assistive technologies that do not support using the `title` attribute for an [accessible name][], or in which this feature can be disabled.
 - For `area` elements that have a `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on whether the `area` is considered [included in the accessibility tree][] or not.
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `link` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
@@ -116,8 +117,6 @@ This `a` element has an [accessible name][] via `title`.
 /></a>
 ```
 
-**Note**: There are assistive technologies that do not support using the `title` attribute for an [accessible name][], or in which this feature can be disabled.
-
 #### Passed Example 6
 
 This `a` element has an [accessible name][] from its content via the `title` on the `img` element.
@@ -125,8 +124,6 @@ This `a` element has an [accessible name][] from its content via the `title` on 
 ```html
 <a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" title="Web Accessibility Initiative" /></a>
 ```
-
-**Note**: There are assistive technologies that do not support using the `title` attribute for an [accessible name][], or in which this feature can be disabled.
 
 #### Passed Example 7
 
@@ -212,8 +209,6 @@ This `a` element with an `img` with an empty `title` has an empty [accessible na
 ```html
 <a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" title="" /></a>
 ```
-
-**Note**: There are assistive technologies that do not support using the `title` attribute for an [accessible name][], or in which this feature can be disabled.
 
 #### Failed Example 5
 

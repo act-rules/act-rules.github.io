@@ -187,7 +187,7 @@ This `a` element has an empty [accessible name][].
 
 #### Failed Example 2
 
-This `a` element with an image [marked as decorative](#marked-as-decorative) has an empty [accessible name][].
+This `a` element with a decorative image has an empty [accessible name][].
 
 ```html
 <a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" alt="" /></a>

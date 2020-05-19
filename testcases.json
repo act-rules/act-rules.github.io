@@ -8476,10 +8476,10 @@
       }
     },
     {
-      "testcaseId": "4f4de07d908680bbce14f501530fb9a3c4bce400",
+      "testcaseId": "3d88001b930f22492878469bdcf7589f3aa3094d",
       "testcaseTitle": "Passed Example 1",
-      "url": "https://act-rules.github.io/testcases/23a2a8/4f4de07d908680bbce14f501530fb9a3c4bce400.html",
-      "relativePath": "testcases/23a2a8/4f4de07d908680bbce14f501530fb9a3c4bce400.html",
+      "url": "https://act-rules.github.io/testcases/23a2a8/3d88001b930f22492878469bdcf7589f3aa3094d.html",
+      "relativePath": "testcases/23a2a8/3d88001b930f22492878469bdcf7589f3aa3094d.html",
       "expected": "passed",
       "ruleId": "23a2a8",
       "ruleName": "Image has accessible name",
@@ -8506,10 +8506,10 @@
       }
     },
     {
-      "testcaseId": "0b10a4a59a9b93a1299732ec3ec9e12ff046f044",
+      "testcaseId": "601fd846212e9d6ad950112168fdf047049002d9",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/23a2a8/0b10a4a59a9b93a1299732ec3ec9e12ff046f044.html",
-      "relativePath": "testcases/23a2a8/0b10a4a59a9b93a1299732ec3ec9e12ff046f044.html",
+      "url": "https://act-rules.github.io/testcases/23a2a8/601fd846212e9d6ad950112168fdf047049002d9.html",
+      "relativePath": "testcases/23a2a8/601fd846212e9d6ad950112168fdf047049002d9.html",
       "expected": "passed",
       "ruleId": "23a2a8",
       "ruleName": "Image has accessible name",
@@ -8536,10 +8536,10 @@
       }
     },
     {
-      "testcaseId": "03145028b74e3f36f78cf99e239294e4554d674d",
+      "testcaseId": "8c00e249b0d8cbbb17b01a5e7d9d482a1214207b",
       "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/23a2a8/03145028b74e3f36f78cf99e239294e4554d674d.html",
-      "relativePath": "testcases/23a2a8/03145028b74e3f36f78cf99e239294e4554d674d.html",
+      "url": "https://act-rules.github.io/testcases/23a2a8/8c00e249b0d8cbbb17b01a5e7d9d482a1214207b.html",
+      "relativePath": "testcases/23a2a8/8c00e249b0d8cbbb17b01a5e7d9d482a1214207b.html",
       "expected": "passed",
       "ruleId": "23a2a8",
       "ruleName": "Image has accessible name",
@@ -8566,10 +8566,10 @@
       }
     },
     {
-      "testcaseId": "31c2ad0bfd13fb259e545ec09df5945785c034aa",
+      "testcaseId": "f64a0c37568ff76357b62b98e733638245445409",
       "testcaseTitle": "Passed Example 4",
-      "url": "https://act-rules.github.io/testcases/23a2a8/31c2ad0bfd13fb259e545ec09df5945785c034aa.html",
-      "relativePath": "testcases/23a2a8/31c2ad0bfd13fb259e545ec09df5945785c034aa.html",
+      "url": "https://act-rules.github.io/testcases/23a2a8/f64a0c37568ff76357b62b98e733638245445409.html",
+      "relativePath": "testcases/23a2a8/f64a0c37568ff76357b62b98e733638245445409.html",
       "expected": "passed",
       "ruleId": "23a2a8",
       "ruleName": "Image has accessible name",
@@ -8596,10 +8596,10 @@
       }
     },
     {
-      "testcaseId": "c245be6091a18b99684153c5dfe2ede07d62e49a",
+      "testcaseId": "d9fbc7c66b6d5bf00173952211353dd3ebfa21d1",
       "testcaseTitle": "Passed Example 5",
-      "url": "https://act-rules.github.io/testcases/23a2a8/c245be6091a18b99684153c5dfe2ede07d62e49a.html",
-      "relativePath": "testcases/23a2a8/c245be6091a18b99684153c5dfe2ede07d62e49a.html",
+      "url": "https://act-rules.github.io/testcases/23a2a8/d9fbc7c66b6d5bf00173952211353dd3ebfa21d1.html",
+      "relativePath": "testcases/23a2a8/d9fbc7c66b6d5bf00173952211353dd3ebfa21d1.html",
       "expected": "passed",
       "ruleId": "23a2a8",
       "ruleName": "Image has accessible name",
@@ -8626,10 +8626,10 @@
       }
     },
     {
-      "testcaseId": "122dd01f5cae3626f99e44b9ea6afcb4d54d5bd3",
+      "testcaseId": "dd1237d1676032dd2e89531f7c0c5c76abeb19aa",
       "testcaseTitle": "Passed Example 6",
-      "url": "https://act-rules.github.io/testcases/23a2a8/122dd01f5cae3626f99e44b9ea6afcb4d54d5bd3.html",
-      "relativePath": "testcases/23a2a8/122dd01f5cae3626f99e44b9ea6afcb4d54d5bd3.html",
+      "url": "https://act-rules.github.io/testcases/23a2a8/dd1237d1676032dd2e89531f7c0c5c76abeb19aa.html",
+      "relativePath": "testcases/23a2a8/dd1237d1676032dd2e89531f7c0c5c76abeb19aa.html",
       "expected": "passed",
       "ruleId": "23a2a8",
       "ruleName": "Image has accessible name",
@@ -8656,10 +8656,10 @@
       }
     },
     {
-      "testcaseId": "54325d0c4d85dab367b1a6126ed084cc8c79cba5",
+      "testcaseId": "d0f14d0af325e5884f505681ae2de654a3fb2ae6",
       "testcaseTitle": "Passed Example 7",
-      "url": "https://act-rules.github.io/testcases/23a2a8/54325d0c4d85dab367b1a6126ed084cc8c79cba5.html",
-      "relativePath": "testcases/23a2a8/54325d0c4d85dab367b1a6126ed084cc8c79cba5.html",
+      "url": "https://act-rules.github.io/testcases/23a2a8/d0f14d0af325e5884f505681ae2de654a3fb2ae6.html",
+      "relativePath": "testcases/23a2a8/d0f14d0af325e5884f505681ae2de654a3fb2ae6.html",
       "expected": "passed",
       "ruleId": "23a2a8",
       "ruleName": "Image has accessible name",
@@ -8686,10 +8686,10 @@
       }
     },
     {
-      "testcaseId": "2f0134c79e024ce3ef68f1e9f60d39cb6266e231",
+      "testcaseId": "3a62cd2f89ce3ba11c288c38ae5ae10c168ff15b",
       "testcaseTitle": "Passed Example 8",
-      "url": "https://act-rules.github.io/testcases/23a2a8/2f0134c79e024ce3ef68f1e9f60d39cb6266e231.html",
-      "relativePath": "testcases/23a2a8/2f0134c79e024ce3ef68f1e9f60d39cb6266e231.html",
+      "url": "https://act-rules.github.io/testcases/23a2a8/3a62cd2f89ce3ba11c288c38ae5ae10c168ff15b.html",
+      "relativePath": "testcases/23a2a8/3a62cd2f89ce3ba11c288c38ae5ae10c168ff15b.html",
       "expected": "passed",
       "ruleId": "23a2a8",
       "ruleName": "Image has accessible name",
@@ -8716,10 +8716,10 @@
       }
     },
     {
-      "testcaseId": "c0f38cd23a1186e63c729b685cf0791e2aa06e36",
+      "testcaseId": "7bf5216283e689e97550c18f5bcab90a8e65cf2d",
       "testcaseTitle": "Failed Example 1",
-      "url": "https://act-rules.github.io/testcases/23a2a8/c0f38cd23a1186e63c729b685cf0791e2aa06e36.html",
-      "relativePath": "testcases/23a2a8/c0f38cd23a1186e63c729b685cf0791e2aa06e36.html",
+      "url": "https://act-rules.github.io/testcases/23a2a8/7bf5216283e689e97550c18f5bcab90a8e65cf2d.html",
+      "relativePath": "testcases/23a2a8/7bf5216283e689e97550c18f5bcab90a8e65cf2d.html",
       "expected": "failed",
       "ruleId": "23a2a8",
       "ruleName": "Image has accessible name",
@@ -8746,10 +8746,10 @@
       }
     },
     {
-      "testcaseId": "4aade3ec48caa9149df1a22bbeab11a46312d6ea",
+      "testcaseId": "0ff974acaa04b13774d731e66b0ac93335325e38",
       "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/23a2a8/4aade3ec48caa9149df1a22bbeab11a46312d6ea.html",
-      "relativePath": "testcases/23a2a8/4aade3ec48caa9149df1a22bbeab11a46312d6ea.html",
+      "url": "https://act-rules.github.io/testcases/23a2a8/0ff974acaa04b13774d731e66b0ac93335325e38.html",
+      "relativePath": "testcases/23a2a8/0ff974acaa04b13774d731e66b0ac93335325e38.html",
       "expected": "failed",
       "ruleId": "23a2a8",
       "ruleName": "Image has accessible name",
@@ -8776,10 +8776,10 @@
       }
     },
     {
-      "testcaseId": "fea77b562f0d1ef3e05c06363b75ae5acc5c6cfa",
+      "testcaseId": "d08f71c9a0b65d318a9d442f5fb0e8b21c7cd2e5",
       "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/23a2a8/fea77b562f0d1ef3e05c06363b75ae5acc5c6cfa.html",
-      "relativePath": "testcases/23a2a8/fea77b562f0d1ef3e05c06363b75ae5acc5c6cfa.html",
+      "url": "https://act-rules.github.io/testcases/23a2a8/d08f71c9a0b65d318a9d442f5fb0e8b21c7cd2e5.html",
+      "relativePath": "testcases/23a2a8/d08f71c9a0b65d318a9d442f5fb0e8b21c7cd2e5.html",
       "expected": "failed",
       "ruleId": "23a2a8",
       "ruleName": "Image has accessible name",
@@ -8806,10 +8806,10 @@
       }
     },
     {
-      "testcaseId": "67d7bb676ab59054ebf234a46cc64b4209bf9030",
+      "testcaseId": "58427934e6646e0c93e1bf97a1634df1d75f7e9c",
       "testcaseTitle": "Failed Example 4",
-      "url": "https://act-rules.github.io/testcases/23a2a8/67d7bb676ab59054ebf234a46cc64b4209bf9030.html",
-      "relativePath": "testcases/23a2a8/67d7bb676ab59054ebf234a46cc64b4209bf9030.html",
+      "url": "https://act-rules.github.io/testcases/23a2a8/58427934e6646e0c93e1bf97a1634df1d75f7e9c.html",
+      "relativePath": "testcases/23a2a8/58427934e6646e0c93e1bf97a1634df1d75f7e9c.html",
       "expected": "failed",
       "ruleId": "23a2a8",
       "ruleName": "Image has accessible name",
@@ -8836,10 +8836,10 @@
       }
     },
     {
-      "testcaseId": "89a64d4fc2e8eb15097ad5e7f88acf87f2823628",
+      "testcaseId": "b4d009c69c53db00b6e096513ac9150f6e9b6e61",
       "testcaseTitle": "Failed Example 5",
-      "url": "https://act-rules.github.io/testcases/23a2a8/89a64d4fc2e8eb15097ad5e7f88acf87f2823628.html",
-      "relativePath": "testcases/23a2a8/89a64d4fc2e8eb15097ad5e7f88acf87f2823628.html",
+      "url": "https://act-rules.github.io/testcases/23a2a8/b4d009c69c53db00b6e096513ac9150f6e9b6e61.html",
+      "relativePath": "testcases/23a2a8/b4d009c69c53db00b6e096513ac9150f6e9b6e61.html",
       "expected": "failed",
       "ruleId": "23a2a8",
       "ruleName": "Image has accessible name",
@@ -8866,10 +8866,10 @@
       }
     },
     {
-      "testcaseId": "855b0c4fdec6b0fd67290b86213f1327382be5a2",
+      "testcaseId": "dca0fbd9962861f98bb8c61a6f379dcee50f436f",
       "testcaseTitle": "Inapplicable Example 1",
-      "url": "https://act-rules.github.io/testcases/23a2a8/855b0c4fdec6b0fd67290b86213f1327382be5a2.html",
-      "relativePath": "testcases/23a2a8/855b0c4fdec6b0fd67290b86213f1327382be5a2.html",
+      "url": "https://act-rules.github.io/testcases/23a2a8/dca0fbd9962861f98bb8c61a6f379dcee50f436f.html",
+      "relativePath": "testcases/23a2a8/dca0fbd9962861f98bb8c61a6f379dcee50f436f.html",
       "expected": "inapplicable",
       "ruleId": "23a2a8",
       "ruleName": "Image has accessible name",
@@ -8896,10 +8896,10 @@
       }
     },
     {
-      "testcaseId": "c26d0bd2994ee5ec26b0d52197d3121da4a03d02",
+      "testcaseId": "a2afba5afe05069ed1b017dc95f41be560d82796",
       "testcaseTitle": "Inapplicable Example 2",
-      "url": "https://act-rules.github.io/testcases/23a2a8/c26d0bd2994ee5ec26b0d52197d3121da4a03d02.html",
-      "relativePath": "testcases/23a2a8/c26d0bd2994ee5ec26b0d52197d3121da4a03d02.html",
+      "url": "https://act-rules.github.io/testcases/23a2a8/a2afba5afe05069ed1b017dc95f41be560d82796.html",
+      "relativePath": "testcases/23a2a8/a2afba5afe05069ed1b017dc95f41be560d82796.html",
       "expected": "inapplicable",
       "ruleId": "23a2a8",
       "ruleName": "Image has accessible name",
@@ -8926,10 +8926,10 @@
       }
     },
     {
-      "testcaseId": "127b23f84af0a61a04eac6a8057a4a4dd84be810",
+      "testcaseId": "58f2fc4ecaee890180b53ec4e4afa24834ebd8a2",
       "testcaseTitle": "Inapplicable Example 3",
-      "url": "https://act-rules.github.io/testcases/23a2a8/127b23f84af0a61a04eac6a8057a4a4dd84be810.html",
-      "relativePath": "testcases/23a2a8/127b23f84af0a61a04eac6a8057a4a4dd84be810.html",
+      "url": "https://act-rules.github.io/testcases/23a2a8/58f2fc4ecaee890180b53ec4e4afa24834ebd8a2.html",
+      "relativePath": "testcases/23a2a8/58f2fc4ecaee890180b53ec4e4afa24834ebd8a2.html",
       "expected": "inapplicable",
       "ruleId": "23a2a8",
       "ruleName": "Image has accessible name",

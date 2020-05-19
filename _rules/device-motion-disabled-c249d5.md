@@ -30,7 +30,7 @@ The rule applies to an [HTML document][] with an associated [Window object][] th
 
 ## Expectation 1
 
-For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target there exists a set of one or more [instruments][instrument] to prevent any results of the event within a 10 minute time span.
+For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target there exists a set of one or more [instruments][instrument] to prevent any results of the event within a 10 minute time span of the [event firing][].
 
 **Note:** The same [instrument][] can be used to disable more than one event.
 
@@ -194,6 +194,7 @@ This [HTML document][] is not operable by device motion.
 [device motion]: https://www.w3.org/TR/orientation-event/#devicemotion 'Definition of device motion event'
 [device orientation]: https://www.w3.org/TR/orientation-event/#deviceorientation 'Definition of device orientation event'
 [essential]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-essential
+[event firing]: https://dom.spec.whatwg.org/#concept-event-fire
 [event listener]: https://dom.spec.whatwg.org/#concept-event-listener
 [event listener list]: https://dom.spec.whatwg.org/#eventtarget-event-listener-list
 [html document]: https://dom.spec.whatwg.org/#concept-document

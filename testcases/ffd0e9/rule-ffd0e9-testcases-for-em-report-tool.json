@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Heading has accessible name",
+      "title": "Report for ACT-R Rule - Heading has accessible non-empty name",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Heading has accessible name",
+          "siteName": "ACT-R Rule - Heading has accessible non-empty name",
           "siteScope": "https://act-rules.github.io/testcases/ffd0e9/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

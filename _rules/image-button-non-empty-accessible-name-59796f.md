@@ -1,9 +1,9 @@
 ---
 id: 59796f
-name: Image button has accessible name
+name: Image button has accessible non-empty name
 rule_type: atomic
 description: |
-  This rule checks that each image button element has an accessible name.
+  This rule checks that each image button element has a non-empty accessible name.
 accessibility_requirements:
   wcag20:1.1.1: # Non-Text Content (A)
     forConformance: true
@@ -46,8 +46,6 @@ The rule applies to any HTML `input` element with a `type` attribute in the [`Im
 ## Expectation
 
 Each target element has an [accessible name][] that is not empty (`""`).
-
-**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
 
 ## Assumptions
 

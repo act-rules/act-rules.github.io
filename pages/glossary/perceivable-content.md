@@ -19,7 +19,7 @@ A node is _perceivable content_ if all the following are true:
 
 #### Assumptions
 
-This definition assumes that elements with a [semantic role][] of `none` or `presentation` are [pure decoration][] and that elements which are [pure decoration][] either have no [semantic role][] or a [semantic role][] of `none` or `presentation`. Note that if this is not the case, then [Success Criterion 1.3.1: Info and Relationship][sc131] is likely not satisfied.
+This definition assumes that elements with a [semantic role][] of `none` or `presentation` are [pure decoration][] and that elements which are [pure decoration][] either are not [included in the accessibility tree][] or have a [semantic role][] of `none` or `presentation`. Note that if this is not the case, then [Success Criterion 1.3.1: Info and Relationship][sc131] is likely not satisfied.
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [palpable content]: https://html.spec.whatwg.org/multipage/dom.html#palpable-content 'HTML specification of palpable content'

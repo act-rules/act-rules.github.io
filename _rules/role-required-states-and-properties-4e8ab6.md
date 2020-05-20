@@ -28,9 +28,9 @@ Any HTML or SVG element that has an [explicit semantic role][], except if the el
 
 ## Expectation
 
-For each test target, the [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) for the role are present, unless the state or property has a default value listed under [WAI-ARIA implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole).
+For each test target, the [WAI-ARIA required states and properties][] for the role are set and not empty (`""`), unless the state or property has a default value listed under [WAI-ARIA implicit value for role][].
 
-**Note:** This rule does not test whether the required states and properties have correct values, only that the attributes are present and are not empty ("").
+**Note**: In [WAI-ARIA 1.2][], required states and properties will no longer have a default value.
 
 ## Assumptions
 
@@ -40,7 +40,7 @@ For each test target, the [WAI-ARIA required states and properties](https://www.
 
 ## Accessibility Support
 
-This rule relies on browsers and assistive technologies to support leaving out [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) when a [WAI-ARIA implicit value for role](https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole) is specified in [WAI-ARIA Specifications](#wai-aria-specifications).
+This rule relies on browsers and assistive technologies to support leaving out [WAI-ARIA required states and properties][] when a [WAI-ARIA implicit value for role][] is specified in [WAI-ARIA Specifications](#wai-aria-specifications).
 
 **Note:** The required states and properties with implicit values can be found in the Core Accessibility API Mappings 1.1 [Overview of default values for missing required attributes](https://www.w3.org/TR/core-aam-1.1/#authorErrorDefaultValuesTable).
 
@@ -56,57 +56,36 @@ This rule relies on browsers and assistive technologies to support leaving out [
 
 #### Passed Example 1
 
-Element has required states (no properties required for this role)
+This `checkbox` has the required property `aria-checked`.
 
 ```html
-<div role="option" aria-selected="false"></div>
+<div role="checkbox" aria-checked="false"></div>
 ```
 
 #### Passed Example 2
 
-Implicit value for roles: `option` role has an implicit value (`false`) specified for the required state `aria-selected`
+This `scrollbar` has the required properties `aria-controls` and `aria-valuenow`. `aria-valuemin` has a default value of 0 and `aria-valuemax` of 100.
 
 ```html
-<div role="option"></div>
+<div role="scrollbar" aria-controls="content" aria-valuenow="0"></div>
+<main id="content"></main>
 ```
 
 #### Passed Example 3
 
-Implicit value for roles: `option` role has an implicit value (`false`) specified for the required state `aria-selected`, here defined without value
+This `combobox` has required properties `aria-controls` and `aria-expanded`. `aria-controls` references an element that does not exist, but may be added to the page when expanded.
 
 ```html
-<div role="option" aria-selected></div>
-```
-
-#### Passed Example 4
-
-Implicit value for roles: `option` role has an implicit value (`false`) specified for the required state `aria-selected`, here defined with only [whitespace](#whitespace) instead of a value
-
-```html
-<div role="option" aria-selected=" "></div>
-```
-
-#### Passed Example 5
-
-Element has required properties, and required state `aria-expanded` has an implicit value
-
-```html
-<div role="combobox" aria-controls="someElementId"></div>
-```
-
-#### Passed Example 6
-
-Element has required properties, but with incorrect value since no element with the given id(s) exists in the document
-
-```html
-<div role="combobox" aria-controls="foo"></div>
+<div role="combobox" aria-controls="someElementId" aria-expanded="false"></div>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-Element does not list required states and properties (`aria-controls` is required property for `combobox`)
+This `combobox` is missing the required `aria-controls` property.
+
+**Note**: In [WAI-ARIA 1.2][], `combobox` will also require `aria-expanded`.
 
 ```html
 <div role="combobox" aria-expanded="true"></div>
@@ -114,7 +93,7 @@ Element does not list required states and properties (`aria-controls` is require
 
 #### Failed Example 2
 
-Required states and properties do not have a value that is not empty ("")
+This `combobox` has an empty value for the required `aria-controls` property.
 
 ```html
 <div role="combobox" aria-controls="" aria-expanded="true"></div>
@@ -124,7 +103,7 @@ Required states and properties do not have a value that is not empty ("")
 
 #### Inapplicable Example 1
 
-Element does not have a semantic role
+This `div` does not have a [semantic role](#semantic-role).
 
 ```html
 <div>Some Content</div>
@@ -132,23 +111,15 @@ Element does not have a semantic role
 
 #### Inapplicable Example 2
 
-Element does not have an [explicit semantic role](#explicit-role)
-
-```html
-<nav></nav>
-```
-
-#### Inapplicable Example 3
-
-Element has an [implicit semantic role](#implicit-role) that is identical to the [explicit semantic role](#explicit-role)
+This `checkbox` has an [implicit semantic role](#implicit-role) that is identical to the [explicit semantic role](#explicit-role).
 
 ```html
 <input type="checkbox" role="checkbox" />
 ```
 
-#### Inapplicable Example 4
+#### Inapplicable Example 3
 
-Element does not list required states and properties (`aria-controls` is required property for `combobox`), but the element is not included in the accessibility tree
+This `combobox` is hidden.
 
 ```html
 <div role="combobox" style="display:none;"></div>
@@ -156,3 +127,6 @@ Element does not list required states and properties (`aria-controls` is require
 
 [explicit semantic role]: #explicit-role 'Definition of explicit semantic role'
 [implicit semantic role]: #implicit-role 'Definition of implicit semantic role'
+[wai-aria required states and properties]: https://www.w3.org/TR/wai-aria-1.1/#requiredState
+[wai-aria implicit value for role]: https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole
+[wai-aria 1.2]: https://www.w3.org/TR/wai-aria-1.2/

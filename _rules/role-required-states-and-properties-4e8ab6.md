@@ -30,7 +30,7 @@ Any HTML or SVG element that has an [explicit semantic role][], except if the el
 
 For each test target, the [WAI-ARIA required states and properties][] for the role are set and not empty (`""`), unless the state or property has a default value listed under [WAI-ARIA implicit value for role][].
 
-**Note**: In [WAI-ARIA 1.2][], required states and properties no longer have a default value.
+**Note**: In [WAI-ARIA 1.2][], required states and properties will no longer have a default value.
 
 ## Assumptions
 

@@ -1,9 +1,9 @@
 ---
 id: ffd0e9
-name: Heading has accessible name
+name: Heading has accessible non-empty name
 rule_type: atomic
 description: |
-  This rule checks that each heading has an accessible name.
+  This rule checks that each heading has a non-empty accessible name.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true

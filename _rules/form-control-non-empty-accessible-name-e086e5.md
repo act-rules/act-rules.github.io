@@ -1,9 +1,9 @@
 ---
 id: e086e5
-name: Form control has accessible name
+name: Form control has non-empty accessible name
 rule_type: atomic
 description: |
-  This rule checks that each form field element has an accessible name.
+  This rule checks that each form field element has a non-empty accessible name.
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true
@@ -34,8 +34,6 @@ This rule applies to any element that is [included in the accessibility tree](#i
 ## Expectation
 
 Each target element has an [accessible name][] that is not empty (`""`).
-
-**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
 
 ## Assumptions
 

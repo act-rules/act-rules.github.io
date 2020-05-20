@@ -1,9 +1,9 @@
 ---
 id: 23a2a8
-name: Image has accessible name
+name: Image has non-empty accessible name
 rule_type: atomic
 description: |
-  This rule checks that each image either has an accessible name or is marked up as decorative
+  This rule checks that each image either has a non-empty accessible name or is marked up as decorative
 accessibility_requirements:
   wcag20:1.1.1: # Non-Text Content
     forConformance: true
@@ -42,8 +42,6 @@ The rule applies to HTML `img` elements and HTML elements with the [semantic rol
 
 Each target element has an [accessible name][] that is not empty (`""`), or has a [semantic role][] of `none` or `presentation`.
 
-**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
-
 ## Assumptions
 
 _There are currently no assumptions._
@@ -73,142 +71,154 @@ _There are currently no assumptions._
 
 #### Passed Example 1
 
-The HTML `img` element has an [accessible name][] given by the `alt` attribute.
+This HTML `img` element has an [accessible name][] because of the `alt` attribute.
 
 ```html
-<img alt="W3C logo" />
+<img alt="W3C logo" src="/test-assets/shared/w3c-logo.png" />
 ```
 
 #### Passed Example 2
 
-The element with a [semantic role][] of `img` has an [accessible name][] given by the `aria-label` attribute.
+This element with a [semantic role][] of `img` has an [accessible name][] because of the `aria-label` attribute.
 
 ```html
-<div role="img" aria-label="W3C logo"></div>
+<div
+	role="img"
+	aria-label="W3C logo"
+	style="width:72px; height:48px; background-image: url(/test-assets/shared/w3c-logo.png)"
+></div>
 ```
 
 #### Passed Example 3
 
-The element with a [semantic role][] of `img` has an [accessible name][] given by an `aria-labelledby` attribute and an element with matching `id`.
+This element with a [semantic role][] of `img` has an [accessible name][] because of an `aria-labelledby` attribute and an element with matching `id`.
 
 ```html
 <div style="display: none" id="img-label">W3C logo</div>
-<div role="img" aria-labelledby="img-label"></div>
+<div
+	role="img"
+	aria-labelledby="img-label"
+	style="width:72px; height:48px; background-image: url(/test-assets/shared/w3c-logo.png)"
+></div>
 ```
 
 #### Passed Example 4
 
-The HTML `img` element has an [accessible name][] given by a `title` attribute, though the `title` attribute is not always accessibility supported.
+This `img` element has an [accessible name][] because of a `title` attribute.
+
+**Note**: There are assistive technologies that do not support using the `title` attribute for an [accessible name][], or in which this feature can be disabled.
 
 ```html
-<img title="W3C logo" />
+<img title="W3C logo" src="/test-assets/shared/w3c-logo.png" />
 ```
 
 #### Passed Example 5
 
-The HTML `img` element has a [semantic role][] of `presentation` through an empty `alt` attribute.
+This `img` element has an [implicit role][] of `presentation` because of the empty `alt` attribute.
 
 ```html
-<img alt="" />
+<img alt="" src="/test-assets/shared/background.png" />
 ```
 
 #### Passed Example 6
 
-The HTML `img` element has a [semantic role][] of `presentation` through [explicit role][].
+This `img` element has an [explicit role][] of `presentation` because of the value of the `role` attribute.
 
 ```html
-<img role="presentation" />
+<img role="presentation" style="width:72px; height:48px; background-image: url(/test-assets/shared/background.png)" />
 ```
 
 #### Passed Example 7
 
-The HTML `img` element has a [semantic role][] of `none` through [explicit role][].
+This `img` element has an [explicit role][] of `none` because of the value of the `role` attribute.
 
 ```html
-<img role="none" />
+<img role="none" src="/test-assets/shared/background.png" />
 ```
 
 #### Passed Example 8
 
-The HTML `img` element has an [accessible name][] that is not empty.
+This `img` element inside a `div` positioned off screen has an [implicit role][] of `img` because of the empty `alt` attribute.
 
 ```html
-<img alt=":-)" />
+<div style="margin-left:-9999px;">
+	<img alt="" src="/test-assets/shared/background.png" />
+</div>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-The HTML `img` element with [implicit role][] of `img` has an empty [accessible name][].
+This `img` element has an empty [accessible name][] and an [implicit role][] of `img` because it is missing an empty `alt` attribute.
 
 ```html
-<img />
+<img src="/test-assets/shared/w3c-logo.png" />
 ```
 
 #### Failed Example 2
 
-The element with role of `img` has an empty [accessible name][].
+This element with role of `img` has an empty [accessible name][].
 
 ```html
-<div role="img"></div>
+<div role="img" style="width:72px; height:48px; background-image: url(/test-assets/shared/w3c-logo.png)"></div>
 ```
 
 #### Failed Example 3
 
-The `img` element inside a `div` positioned off screen has an empty [accessible name][] and an [implicit role][] of `img`.
+This `img` element inside a `div` positioned off screen has an empty [accessible name][] and an [implicit role][] of `img`.
 
 ```html
-<div style="margin-left:-9999px;"><img /></div>
+<div style="margin-left:-9999px;"><img src="/test-assets/shared/w3c-logo.png" /></div>
 ```
 
 #### Failed Example 4
 
-The HTML `img` element has an empty [accessible name][].
+This `img` element has an empty [accessible name][] because the space in the `alt` attribute is trimmed off by the [accessible name computation](https://www.w3.org/TR/accname-1.1/). Because of the space, the `alt` attribute is not empty (`""`) which gives the element the [implicit role][] of `img`.
 
 ```html
-<img alt=" " />
+<img src="/test-assets/shared/w3c-logo.png" alt=" " />
 ```
 
 #### Failed Example 5
 
-This `img` element has an [explicit role][] of `none`. However, it is [focusable][] due to the `tabindex` attribute. Thus it has a [semantic role][] of `img` due to [Presentational Roles Conflict Resolution][]. It does not have an accessible name.
+This `img` element has an [explicit role][] of `none`. However, it is [focusable][] due to the `tabindex` attribute. Because of this it has a [semantic role][] of `img` due to [Presentational Roles Conflict Resolution][]. It does not have an accessible name.
 
 ```html
-<img role="none" tabindex="0" />
+<img role="none" tabindex="0" src="/test-assets/shared/w3c-logo.png"/>
 ```
 
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-The element does not have the [semantic role][] of `img`.
+This `svg` element has an [implicit role][] of `graphics-document`.
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" role="img" width="100" height="100">
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
 	<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
 </svg>
 ```
 
 #### Inapplicable Example 2
 
-The element has a [semantic role][] of `img`, but is not [included in the accessibility tree][].
+This element has a [semantic role][] of `img`, but is not [included in the accessibility tree][].
 
 ```html
-<div role="img" aria-hidden="true"></div>
+<div role="img" aria-hidden="true" style="width:72px; height:48px; background-image: url(/test-assets/shared/w3c-logo.png)"></div>
 ```
 
 #### Inapplicable Example 3
 
-HTML `img` element is not [included in the accessibility tree][].
+This `img` element is not [included in the accessibility tree][].
 
 ```html
-<img alt="W3C logo" aria-hidden="true" />
+<img src="/test-assets/shared/w3c-logo.png" aria-hidden="true" />
 ```
 
 #### Inapplicable Example 4
 
-The element is not an `img` element.
+This element is neither an `img` element nor has a role of `img`.
 
 ```html
 <div aria-label="W3C logo"></div>

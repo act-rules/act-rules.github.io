@@ -40,6 +40,7 @@
 - PDFs
 - DOCX
 - DPUB
+- CSSOM
 - DNS
 - BCP
 - bcp
@@ -132,6 +133,9 @@
 - matrix3d
 - rowheader
 - columnheader
+- scrollable-element
+- scrollWidth
+- scrollHeight
 - clientHeight
 - clientWidth
 - innerHeight
@@ -153,6 +157,8 @@
 - presentational
 - backtick
 - camelCase
+- scrollable
+- scrollbars
 
 # Parts of Unicode
 - 000A

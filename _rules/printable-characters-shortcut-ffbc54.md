@@ -28,7 +28,7 @@ The rule applies to any [keyboard event][]:
 For each test target:
  - an [instrument][] to prevent any result of the [keyboard event][] is available; or
  - if the [event target][] doesn't have [focus][], any result of the event is prevented; or
- - an [instrument][] is available to force the [keyboard event][] to have the method `getModifierState` return `true`
+ - an [instrument][] is available to prevent any result of the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`.
 
 **Note:** The same [instrument][] can be used to disable/force more than one event.
 
@@ -39,11 +39,14 @@ For each test target:
 For each [instrument][] in the set of [instruments][instrument] from Expectation 1, one of the following is true:
 
 - the [instrument][] is in the same [web page][] of the test target; or
-- instructions for the user to locate the [instrument][] are in the same [web page][] of the test target.
+- the [instrument][] can be found in a [clearly labeled location][].
 
 **Note:** If the set of instruments has more than one instrument, not every instrument of the set needs to be in the same location.
 
 ## Assumptions
+
+- The event listeners listening to device motion events trigger a functionality in the web page. If they do not trigger any such functionality failing this rule might not be a failure of the success criterion.
+- If there are ways to disable the device motion based functionality that do not require the user to interact with the web page (e.g. a setting at the operating system level), failing this rule might not be a failure of the success criterion.
 
 ## Accessibility Support
 
@@ -61,7 +64,7 @@ Currently [keyboard events][keyboard event] only support the types `keydown` and
 
 #### Passed Example 1
 
-This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that can be disabled by an [instrument][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][].
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to prevent any result of the [keyboard event][].
 
 ```html
 <html>
@@ -87,7 +90,7 @@ This [HTML document][] has a [keyboard shortcut][] using only a [printable chara
 
 #### Passed Example 2
 
-This [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][] and each one of them can be disabled by a [instrument][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][]. In this case, each [keyboard shortcut][] is disabled by a different [instrument][].
+This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and for each [keyboard event][] exists an [instrument][] to prevent any result of the [keyboard event][].
 
 ```html
 <html>
@@ -117,7 +120,7 @@ This [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using onl
 
 #### Passed Example 3
 
-This [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][] that can be disabled by a [instrument][] which is [visible][], [included in the accessibility tree][], and has a non-empty [accessible name][]. In this case, both [keyboard shortcuts][keyboard shortcut] are disabled by the same [instrument][].
+This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to prevent any result of the [keyboard event][]. In this case, the same [instrument][] is used to prevent the result of both [keyboard events][keyboard event].
 
 ```html
 <html>
@@ -143,7 +146,7 @@ This [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using onl
 
 #### Passed Example 4
 
-This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that can be remapped to a shortcut with a [non-printable character][non-printable characters].
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to prevent any result of the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`.
 
 ```html
 <html>
@@ -174,7 +177,7 @@ This [HTML document][] has a [keyboard shortcut][] using only a [printable chara
 
 #### Passed Example 5
 
-This [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][], and each one of them can be remapped to a shortcut with a [non-printable character][non-printable characters].
+This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and for each [keyboard event][] exists an [instrument][] to prevent any result of the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`.
 
 ```html
 <html>
@@ -209,7 +212,7 @@ This [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using onl
 
 #### Passed Example 6
 
-This [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using only a [printable character][] that can be remapped to a shortcut with a [non-printable character][non-printable characters].
+This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to prevent any result of the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`. In this case, the same [instrument][] is used to prevent the result of both [keyboard events][keyboard event]
 
 ```html
 <html>
@@ -240,7 +243,7 @@ This [HTML document][] has two [keyboard shortcuts][keyboard shortcut] using onl
 
 #### Passed Example 7
 
-This [HTML document][] has a single [printable character][] [keyboard shortcut][] for a [event target][] (using the `+` character), which is only available when that [event target][] has [focus][].
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and the result is not prevented because the [event target][] has [focus][].
 
 ```html
 <html>
@@ -265,7 +268,10 @@ This [HTML document][] has a single [printable character][] [keyboard shortcut][
 
 #### Failed Example 1
 
-This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that cannot be disabled.
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and:
+ - doesn't exist any [instrument][] to prevent any result of the [keyboard event][]; nor
+ - the result of the [keyboard event][] is prevented when the [event target][] doesn't have [focus][]; nor
+ - exists any any [instrument][] to prevent any result of the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`.
 
 ```html
 <html>
@@ -274,222 +280,6 @@ This [HTML document][] has a [keyboard shortcut][] using only a [printable chara
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
   <body onload="registerShortcut({shortcutKey: '+', disabled: false}); activateShortcuts();">
-    <label for="target">Add to list (press "+" to add):</label>
-    <input type="text" id="target" />
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Failed Example 2
-
-This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [instrument][] is not [visible][].
-
-```html
-<html>
-  <head>
-    <title>Failed Example 2</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+', disabled: false}); activateShortcuts();">
-    <label for="target">Add to list (press "+" to add):</label>
-    <input type="text" id="target" />
-    <div style="position: absolute; margin-left: -9999px;">
-      <label>
-        <input type="checkbox" onclick="toggleDisabled('singleShortcut', !this.checked)" checked>
-        Toggle single character keyboard shortcut
-      </label>
-    </div>
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Failed Example 3
-
-This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [instrument][] is not [included in the accessibility tree][].
-
-```html
-<html>
-  <head>
-    <title>Failed Example 3</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+', disabled: false}); activateShortcuts();">
-    <label for="target">Add to list (press "+" to add):</label>
-    <input type="text" id="target" />
-    <div aria-hidden="true">
-      <label>
-        <input type="checkbox" onclick="toggleDisabled('singleShortcut', !this.checked)" checked>
-        Toggle single character keyboard shortcut
-      </label>
-    </div>
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Failed Example 4
-
-This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be disabled, but the disabling [instrument][] has an empty (`""`) [accessible name][].
-
-```html
-<html>
-  <head>
-    <title>Failed Example 4</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
-    <label for="target">Add to list (press "+" to add):</label>
-    <input type="text" id="target" />
-    <div>
-      <label>
-        <input type="checkbox" onclick="toggleDisabled('singleShortcut', !this.checked)" checked>
-      </label>
-    </div>
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Failed Example 5
-
-This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] that cannot be remapped.
-
-```html
-<html>
-  <head>
-    <title>Failed Example 5</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-  <body onload="registerShortcut({shortcutKey: '+'}); activateShortcuts();">
-    <label for="target">Add to list (press "+" to add):</label>
-    <input type="text" id="target" />
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Failed Example 6
-
-This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [instrument][] is not [visible][].
-
-```html
-<html>
-  <head>
-    <title>Failed Example 6</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
-    <label for="target">Add to list (press "+" to add):</label>
-    <input type="text" id="target" />
-    <div>
-      <div>Remap shortcut</div>
-      <div style="position: absolute; margin-left: -9999px;">
-        <label>
-          <input id="remap" type="checkbox" onclick="toggleModifier('singleShortcut', this.checked)">
-          Use "ctrl" key together with the "+" key
-        </label>
-      </div>
-    </div>
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Failed Example 7
-
-This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [instrument][] is not [included in the accessibility tree][].
-
-```html
-<html>
-  <head>
-    <title>Failed Example 7</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
-    <label for="target">Add to list (press "+" to add):</label>
-    <input type="text" id="target" />
-    <div>
-      <div>Remap shortcut</div>
-      <div aria-hidden="true">
-        <label>
-          <input id="remap" type="checkbox" onclick="toggleModifier('singleShortcut', this.checked)">
-          Use "ctrl" key together with the "+" key
-        </label>
-      </div>
-    </div>
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Failed Example 8
-
-This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] which can be remapped, but the remapping [instrument][] has an empty (`""`) [accessible name][].
-
-```html
-<html>
-  <head>
-    <title>Failed Example 8</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
-    <label for="target">Add to list (press "+" to add):</label>
-    <input type="text" id="target" />
-    <div>
-      <div>Remap shortcut</div>
-      <input id="remap" type="checkbox" onclick="toggleModifier('singleShortcut', this.checked)">
-    </div>
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Failed Example 9
-
-This [HTML document][] has a [keyboard shortcut][] using only a [printable character][] for a [event target][] which is available even when the [event target][] does not have [focus][].
-
-```html
-<html>
-  <head>
-    <title>Failed Example 9</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-
-  <body onload="registerShortcut({shortcutKey: '+', focusOnly: false}); activateShortcuts();">
     <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <br />
@@ -516,12 +306,35 @@ This document is not an [HTML document][].
 
 #### Inapplicable Example 2
 
-This [HTML document][] has a [keyboard shortcut][] that requires pressing one [non-printable character][non-printable characters].
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returns `true`.
 
 ```html
 <html>
   <head>
     <title>Inapplicable Example 2</title>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
+  </head>
+
+  <body onload="registerShortcut({shortcutKey: '+', ctrlKey: true}); activateShortcuts();">
+    <label for="target">Add to list (press "ctrl" and "+" to add):</label>
+    <input type="text" id="target" />
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
+  </body>
+</html>
+```
+
+#### Inapplicable Example 3
+
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [non-printable character][].
+
+```html
+<html>
+  <head>
+    <title>Inapplicable Example 3</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
@@ -537,14 +350,40 @@ This [HTML document][] has a [keyboard shortcut][] that requires pressing one [n
 </html>
 ```
 
-#### Inapplicable Example 3
+#### Inapplicable Example 4
+
+This [HTML document][] has a [keyboard event][] that is not [dispatched][] to an [event target][].
+
+```html
+<html>
+  <head>
+    <title>Inapplicable Example 4</title>
+    <script>
+      function shortcut() {
+        const event = new KeyboardEvent('keydown');
+      }
+    </script>
+  </head>
+
+  <body>
+    <button onload="shortcut()">Add item to the list</button>
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
+  </body>
+</html>
+```
+
+#### Inapplicable Example 5
 
 This [HTML document][] has an element with the attribute `accesskey`. Accesskeys use [non-printable characters][].
 
 ```html
 <html>
   <head>
-    <title>Inapplicable Example 3</title>
+    <title>Inapplicable Example 5</title>
     <script>
       function shortcut() {
         const button = document.querySelector("button");
@@ -576,13 +415,11 @@ This [HTML document][] has an element with the attribute `accesskey`. Accesskeys
 [HTML document]: https://dom.spec.whatwg.org/#concept-document
 [focus]: https://html.spec.whatwg.org/#focusable-area
 [event target]: https://dom.spec.whatwg.org/#eventtarget 
-[event]: https://dom.spec.whatwg.org/#events
 [keyboard event]: https://www.w3.org/TR/uievents/#events-keyboardevents
 [legacy keyboard events]: https://www.w3.org/TR/uievents/#legacy-keyboardevent-events
+[dispatched]: https://dom.spec.whatwg.org/#dispatching-events
+[clearly labeled location]: #clearly-labeled-location 'Definition of clearly labeled location'
 [web page]: #web-page-html 'Definition of web page'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [printable character]: #printable-characters 'Definition of printable characters'
 [non-printable characters]: #non-printable-characters 'Definition of non-printable characters'
-[visible]: #visible 'Definition of visible'
-[accessible name]: #accessible-name 'Definition of accessible name'
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

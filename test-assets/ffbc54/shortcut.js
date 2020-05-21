@@ -1,7 +1,7 @@
 const defaultParams = {
   target: 'target',
   focusOnly: false, 
-  shortcutKey: '+', 
+  shortcutKey: '', 
   ctrlKey: false,
   disabled: false
 };
@@ -16,7 +16,7 @@ function activateShortcuts() {
 
         if (
           event.key === settings.shortcutKey &&
-          (!settings.ctrlKey || event.ctrlKey) &&
+          (!settings.ctrlKey || event.getModifierState()) &&
           (!settings.focusOnly || document.activeElement === target)
         ) {
           document.getElementById("list").innerHTML += "<li>" + target.value + "</li>";

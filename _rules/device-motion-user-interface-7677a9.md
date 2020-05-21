@@ -37,7 +37,7 @@ For each registered [device orientation event][device orientation] or [device mo
 For each [instrument][] in the set of [instruments][instrument] from Expectation 1, one of the following is true:
 
 - the [instrument][] is in the same [web page][] of the test target; or
-- instructions for the user to locate the [instrument][] are in the same [web page][] of the test target.
+- the [instrument][] can be found in a [clearly labeled location][].
 
 **Note:** If the set of instruments has more than one instrument, not every instrument of the set needs to be located in the same location.
 
@@ -45,6 +45,7 @@ For each [instrument][] in the set of [instruments][instrument] from Expectation
 
 - The motion to operate the device is not used through an [accessibility supported][] interface, which is listed as a valid exception to SC 2.5.4.
 - The motion is not [essential][] for the functionality it triggers, which is listed as a valid exception to SC 2.5.4.
+- If there is more than one [instrument][] in the set, this rule assumes that each [instrument][] fulfils a different part of the event's result. If more than one [instrument][] fulfils the same part of the result, then only one of those [instruments][instrument] needs to meet expectation 2. In this instance, this rule will fail while success criterion 2.5.4 might still be satisfied.
 
 ## Accessibility Support
 
@@ -187,6 +188,7 @@ This [HTML document][] is not operable by device motion.
 ```
 
 [accessibility supported]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation#dfn-accessibility-supported
+[clearly labeled location]: #clearly-labeled-location 'Definition of clearly labeled location'
 [device motion]: https://www.w3.org/TR/orientation-event/#devicemotion 'Definition of device motion event'
 [device orientation]: https://www.w3.org/TR/orientation-event/#deviceorientation 'Definition of device orientation event'
 [essential]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-essential

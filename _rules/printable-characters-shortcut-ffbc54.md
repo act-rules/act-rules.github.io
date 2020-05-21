@@ -243,12 +243,73 @@ This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] 
 
 #### Passed Example 7
 
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and:
+ - exists an [instrument][] to prevent any result of the [keyboard event][]; and
+ - exists an [instrument][] to prevent any result of the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`; and
+ - both [instruments][instrument] can be found in a [clearly labeled location][].
+
+```html
+<html>
+  <head>
+    <title>Passed Example 1</title>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
+    <script>
+      function openModal() {
+        document.getElementById('overlay').style.display = 'block'
+      }
+      function closeModal() {
+        document.getElementById('overlay').style.display = 'none'
+      }
+    </script>
+  </head>
+  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
+    <div
+      style="
+        display: none;
+        position: fixed;
+        top: 2em;
+        left: 10em;
+        background-color: #505050;
+        color: white;
+        padding: 1em;
+        padding-top: 0em;
+      "
+		  id="overlay"
+	  >
+      <p>Disable/remap shortcut</p>
+      <label>
+        <input type="checkbox" onclick="toggleDisabled('singleShortcut', !this.checked)" checked>
+        Toggle single character keyboard shortcut
+      </label>
+      <br>
+      <label>
+        <input id="remap" type="checkbox" onclick="toggleModifier('singleShortcut', this.checked)">
+        Use "ctrl" key together with the "+" key
+      </label>
+      <br>
+      <button onclick="closeModal();">Dismiss</button>
+    </div>
+    <p>To control the shortcuts activate the "Control shortcuts" button.</p>
+    <input type="button" onclick="openModal()" value="Control shortcuts" />
+    
+    <label for="target">Add to list (press "+" to add):</label>
+    <input type="text" id="target" />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
+  </body>
+</html>
+```
+
+#### Passed Example 8
+
 This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and the result is not prevented because the [event target][] has [focus][].
 
 ```html
 <html>
   <head>
-    <title>Passed Example 7</title>
+    <title>Passed Example 8</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 

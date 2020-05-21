@@ -21,7 +21,7 @@ acknowledgments:
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
-  - 'attr-lowercase'    
+  - 'attr-lowercase'
 ---
 
 ## Applicability
@@ -134,6 +134,65 @@ This [HTML document][] that can be operated by rotating the device to increase a
 			<input type="range" min="1" max="100" value="50" id="motionSlider" disabled />
 			<button id="increaseSlider" type="button">Increase Value</button>
 			<p aria-live="polite">Slider Value: <span id="output">50</span></p>
+		</div>
+	</body>
+</html>
+```
+
+#### Passed Example 3
+
+This [HTML document][] can be operated by rotating the device to increase and decrease the value of a slider and the location of an [instrument][] to control the updates is clearly available.
+
+```html
+<html>
+	<head>
+		<title>Passed Example 2</title>
+		<script src="/test-assets/7677a9/slider.js"></script>
+		<script>
+			function activateSlider() {
+				document.getElementById('decreaseSlider').addEventListener('click', decreaseSlider)
+				document.getElementById('increaseSlider').addEventListener('click', increaseSlider)
+				window.addEventListener('devicemotion', handleMotion)
+			}
+			function openModal() {
+				document.getElementById('overlay').style.display = 'block'
+			}
+			function closeModal() {
+				document.getElementById('overlay').style.display = 'none'
+			}
+		</script>
+	</head>
+
+	<body onload="activateSlider();">
+		<pre class="output"></pre>
+
+		<h1>Slider Motion Sensor Example</h1>
+
+		<p>
+			Open this slider on a device with a motion sensor, such as a smart phone or tablet. Rotate the device to adjust
+			the slider value. Active the control panel to access decrease and increase buttons that also adjust the value.
+		</p>
+		<input type="button" onclick="openModal()" value="Control panel" />
+		<p>Note: This example may not work across all browsers.</p>
+
+		<input type="range" min="1" max="100" value="50" id="motionSlider" disabled />
+		<p aria-live="polite">Slider Value: <span id="output">50</span></p>
+
+		<div
+			style="
+        display: none;
+        position: fixed;
+        top: 17em;
+        left: 1em;
+        background-color: #505050;
+        color: white;
+        padding: 0.5em;
+      "
+			id="overlay"
+		>
+			<button id="decreaseSlider" type="button">Decrease Value</button>
+			<button id="increaseSlider" type="button">Increase Value</button>
+			<button onclick="closeModal();">Dismiss</button>
 		</div>
 	</body>
 </html>

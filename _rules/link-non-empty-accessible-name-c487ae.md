@@ -1,9 +1,9 @@
 ---
 id: c487ae
-name: Link has accessible name
+name: Link has non-empty accessible name
 rule_type: atomic
 description: |
-  This rule checks that each link has an accessible name.
+  This rule checks that each link has a non-empty accessible name.
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true
@@ -48,8 +48,6 @@ The rule applies to any HTML element with the [semantic role][] of `link` that i
 ## Expectation
 
 Each target element has an [accessible name][] that is not empty (`""`).
-
-**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
 
 ## Assumptions
 

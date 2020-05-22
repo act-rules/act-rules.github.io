@@ -40,6 +40,7 @@
 - PDFs
 - DOCX
 - DPUB
+- CSSOM
 - DNS
 - BCP
 - bcp
@@ -156,6 +157,9 @@
 - mouseout
 - mouseover
 - mouseup
+- scrollable-element
+- scrollWidth
+- scrollHeight
 - clientHeight
 - clientWidth
 - innerHeight
@@ -178,6 +182,8 @@
 - backtick
 - camelCase
 - untestable
+- scrollable
+- scrollbars
 
 # Parts of Unicode
 - 000A

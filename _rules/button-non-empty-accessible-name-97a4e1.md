@@ -1,9 +1,9 @@
 ---
 id: 97a4e1
-name: Button has accessible name
+name: Button has non-empty accessible name
 rule_type: atomic
 description: |
-  This rule checks that each `button` element has an accessible name.
+  This rule checks that each `button` element has a non-empty accessible name.
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true
@@ -31,8 +31,6 @@ The rule applies to elements that are [included in the accessibility tree][] and
 Each target element has an [accessible name][] that is not empty (`""`).
 
 **Note:** `input` elements of type `submit` and `reset` can get their [accessible name][] from a [default text](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset), as well as from a `value` or other attribute.
-
-**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
 
 ## Assumptions
 

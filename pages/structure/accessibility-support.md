@@ -48,6 +48,7 @@ Five SC require that content must be "programmatically determinable." This means
 
 - 1.3.1: Info and Relationships
 - 1.3.2: Meaningful Sequence
+- 1.3.5: Identify Input Purpose (AA)
 - 3.1.1: Language of Page
 - 3.1.2: Language of Parts (AA)
 - 4.1.2: Name, Role, Value

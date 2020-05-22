@@ -44,7 +44,7 @@ There are two concepts that must work together to ensure that information can be
 
 Content: MUST Work with AT:
 
-Five SC require that content must be "programmatically determinable." This means that the content is authored in such a way that user agents, including assistive technologies, can access the information.
+Six SC require that content must be "programmatically determinable." This means that the content is authored in such a way that user agents, including assistive technologies, can access the information.
 
 - 1.3.1: Info and Relationships
 - 1.3.2: Meaningful Sequence

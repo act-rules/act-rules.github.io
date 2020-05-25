@@ -3,7 +3,7 @@ id: 9bd38c
 name: Non-visual reference alternative
 rule_type: atomic
 description: |
-  This rule checks that when there is a visual reference of content, there are also non-visual indicators of the location.
+  This rule checks that when content is identified through a visual reference, there are also non-visual references identifying the same content.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true
@@ -16,7 +16,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag-technique:G96: # Providing textual identification of items that otherwise rely only on sensory information to be understood.
-    forConformance: true
+    forConformance: false
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
@@ -32,18 +32,18 @@ acknowledgements:
 
 ## Applicability
 
-Any text node that includes one of the [visual reference words](#visual-reference-words), that is [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree)
+Any [text node](https://dom.spec.whatwg.org/#text) that includes one of the [visual reference words](#visual-reference-words), that is [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree)
 
 ## Expectation
 
-Each test target that describes any [web content](https://www.w3.org/TR/WCAG21/#dfn-content) through the use of the [visual reference words](#visual-reference-words), is on the same [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) with a [textual](https://www.w3.org/TR/WCAG21/#dfn-text) instruction that also describes that [web content](https://www.w3.org/TR/WCAG21/#dfn-content) by a non-visual characteristic, except if:
+Each test target that describes any [web content](https://www.w3.org/TR/WCAG21/#dfn-content) on this website, through the use of the [visual reference words](#visual-reference-words), is on the same [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) with a [textual](https://www.w3.org/TR/WCAG21/#dfn-text) instruction that also identifies that [web content](https://www.w3.org/TR/WCAG21/#dfn-content) by a non-visual characteristic, except if:
 
 - The target is not part of an instruction about [web content](https://www.w3.org/TR/WCAG21/#dfn-content); or
 - The visual reference word is [visible](#visible) in the described content.
 
 **Note**: The expectation doesn't mention the fact that the non-visual characteristic description should be included in the accessibility tree. This rule can be passed with alternatives that are not included in the accessibility tree. Those sorts of solutions would only fail Success Criteria 1.3.1 instead of both 1.3.3 and 1.3.1.
 
-**Note**: The described web content does not have to be positioned on the same web page.
+**Note**: The described web content does not have to be positioned on the same web page and doesn´t need to be linked to from the tested web page.
 
 ## Assumptions
 
@@ -274,36 +274,6 @@ The user is told to find the navigation on the right (a visual reference word) a
 ```html
 <head>
 	<title>Failed example 13 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css" />
-</head>
-<body>
-	<div class="col-container">
-		<div class="col">
-			<p>Find the navigation on the right, for the non-essential links</p>
-		</div>
-		<nav>
-			<div class="col">
-				<ul>
-					<li>
-						<a href="https://www.w3.org/Consortium/contact">Contact</a>
-					</li>
-					<li>
-						<a href="https://www.w3.org/Help/">Help and FAQ</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-	</div>
-</body>
-```
-
-#### Passed Example 13
-
-The user is told to find the navigation on the right (a visual reference word) and the navigation is correctly identified by a `nav` element.
-
-```html
-<head>
-	<title>Passed example 13 9bd38c</title>
 	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css" />
 </head>
 <body>

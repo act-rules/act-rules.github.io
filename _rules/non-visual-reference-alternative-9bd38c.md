@@ -297,6 +297,36 @@ The user is told to find the navigation on the right (a visual reference word) a
 </body>
 ```
 
+#### Passed Example 13
+
+The user is told to find the navigation on the right (a visual reference word) and the navigation is correctly identified by a `nav` element.
+
+```html
+<head>
+	<title>Passed example 13 9bd38c</title>
+	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css" />
+</head>
+<body>
+	<div class="col-container">
+		<div class="col">
+			<p>Find the navigation on the right, for the non-essential links</p>
+		</div>
+		<nav>
+			<div class="col">
+				<ul>
+					<li>
+						<a href="https://www.w3.org/Consortium/contact">Contact</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/Help/">Help and FAQ</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</body>
+```
+
 ### Failed
 
 #### Failed Example 1

@@ -90,7 +90,7 @@ Orientation:
 
 Color
 
-- Any single word color name in the X11 standard, omitting duplicates:
+- Any single word color name in the [X11 standard](https://gitlab.freedesktop.org/xorg/app/rgb/raw/master/rgb.txt), omitting duplicates:
   - Almond
   - Aqua
   - Aquamarine

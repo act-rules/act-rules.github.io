@@ -32,11 +32,11 @@ acknowledgements:
 
 ## Applicability
 
-Any [text node](https://dom.spec.whatwg.org/#text) that includes one of the [visual reference words](#visual-reference-words), that is [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree)
+Any [text node](https://dom.spec.whatwg.org/#text) that includes at least one of the [visual reference words](#visual-reference-words), that is [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree)
 
 ## Expectation
 
-Each test target that describes any [web content](https://www.w3.org/TR/WCAG21/#dfn-content) on this website, through the use of the [visual reference words](#visual-reference-words), is on the same [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) with a [textual](https://www.w3.org/TR/WCAG21/#dfn-text) instruction that also identifies that [web content](https://www.w3.org/TR/WCAG21/#dfn-content) by a non-visual characteristic, except if:
+Each test target that describes any [web content](https://www.w3.org/TR/WCAG21/#dfn-content) on this website, through the use of any [visual reference words](#visual-reference-words), is on the same [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) of a [textual](https://www.w3.org/TR/WCAG21/#dfn-text) instruction that also identifies that [web content](https://www.w3.org/TR/WCAG21/#dfn-content) by a non-visual characteristic, except if:
 
 - The target is not part of an instruction about [web content](https://www.w3.org/TR/WCAG21/#dfn-content); or
 - The visual reference word is [visible](#visible) in the described content.
@@ -191,7 +191,7 @@ The button is indicated by the word "round". But the word is also included in th
 
 #### Passed Example 7
 
-The images are indicated by the visual indicator words "narrow" and "wide". These words are also included in the accessible names of the images. Even through that indication is not visible, it is included in the accessibility tree which is sufficient to pass this rule.
+The images are indicated by the visual reference words "narrow" and "wide". These words are also included in the accessible names of the images. Even though that indication is not visible, it is included in the accessibility tree which is sufficient to pass this rule.
 
 ```html
 <p>The wide image is awesome. But the narrow image isn't.</p>
@@ -201,7 +201,7 @@ The images are indicated by the visual indicator words "narrow" and "wide". Thes
 
 #### Passed Example 8
 
-This document is using "triangle" which is included in the heading of the menu; the fact that the described content is one another page does not restrict this rule.
+This document is using "triangle" which is included in the heading of the menu; the fact that the described content is one another page of the same website does not restrict this rule.
 
 ```html
 <p>
@@ -237,7 +237,7 @@ This document is using the word "circle" but in this case it is no instruction s
 
 #### Passed Example 11
 
-This document is using the word "circle" but in this case it is no instruction so it passes. Note that this example is not inapplicable despite the fact that the text is not visible.
+This document is using the word "circle" but in this case it is no instruction so it passes. Note that this example is not inapplicable because, despite the fact that the text is not visible, it is included in the accessibility tree.
 
 ```html
 <p style="position:absolute; top:-9999em">
@@ -253,7 +253,7 @@ This document is using the word "circle" but in this case it is no instruction s
 
 #### Passed Example 12
 
-This document is using the word "circle" but in this case it is no instruction so it passes. Note that this example is not inapplicable despite the fact that the text is not in the accessibility tree.
+This document is using the word "circle" but in this case it is no instruction so it passes. Note that this example is not inapplicable because, despite the fact that the text is not in the accessibility tree, it is visible.
 
 ```html
 <p aria-hidden="true">
@@ -273,7 +273,7 @@ The user is told to find the navigation on the right (a visual reference word) a
 
 ```html
 <head>
-	<title>Failed example 13 9bd38c</title>
+	<title>Passed example 13 9bd38c</title>
 	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css" />
 </head>
 <body>
@@ -369,7 +369,7 @@ The user is told to find the navigation on the right (a visual reference word) a
 
 #### Failed Example 3
 
-This document is using the word "triangle" and no other indication is present so the rule fails. The fact that the triangle menu is on a different page does not restrict the rule. 
+This document is using the word "triangle" and no other indication is present so the rule fails. The fact that the triangle menu is on a different page of the same website does not restrict the rule. 
 
 ```html
 <body>
@@ -404,7 +404,7 @@ There is no visual reference word on the page.
 
 #### Inapplicable Example 2
 
-The content is indicated with the word "box" (a visual reference word), but this indication is hidden and not included in the accessibility three because it has 'display:none'.
+The content is indicated with the word "box" (a visual reference word), but this indication is hidden and not included in the accessibility tree because it has 'display:none'.
 
 ```html
 <p style="display:none">Click the box, for a surprise</p>

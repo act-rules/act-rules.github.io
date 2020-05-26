@@ -36,10 +36,10 @@ Any [text node](https://dom.spec.whatwg.org/#text) that includes at least one of
 
 ## Expectation
 
-Each test target that describes any [web content](https://www.w3.org/TR/WCAG21/#dfn-content) on this website, through the use of any [visual reference words](#visual-reference-words), is on the same [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) of a [textual](https://www.w3.org/TR/WCAG21/#dfn-text) instruction that also identifies that [web content](https://www.w3.org/TR/WCAG21/#dfn-content) by a non-visual characteristic, except if:
+Each test target that identifies any [web content](https://www.w3.org/TR/WCAG21/#dfn-content) on this website, through the use of any [visual reference words](#visual-reference-words), is on the same [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) of a [textual](https://www.w3.org/TR/WCAG21/#dfn-text) instruction that also identifies that [web content](https://www.w3.org/TR/WCAG21/#dfn-content) by a non-visual characteristic, except if:
 
 - The target is not part of an instruction about [web content](https://www.w3.org/TR/WCAG21/#dfn-content); or
-- The visual reference word is [visible](#visible) in the described content.
+- The visual reference word is [visible](#visible) in the identified content.
 
 **Note**: The expectation doesn't mention the fact that the non-visual characteristic description should be included in the accessibility tree. This rule can be passed with alternatives that are not included in the accessibility tree. Those sorts of solutions would only fail Success Criteria 1.3.1 instead of both 1.3.3 and 1.3.1.
 
@@ -74,7 +74,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-The content in the second column is indicated with the word "right" (a visual reference word) but also indicated by referencing the word "howdy".
+This paragraph holds the visual reference word "right". The content in the second column is identified with the word "right" but also identified by referencing the word "howdy".
 
 ```html
 <head>
@@ -95,23 +95,16 @@ The content in the second column is indicated with the word "right" (a visual re
 
 #### Passed Example 2
 
-The button in the second column is indicated with the word "box" (a visual reference word) but also indicated by referencing that the content can be found below this content in the DOM order. Note that "below" is also a visual reference word but in this case it can also be accurately interpreted as "further in the DOM tree order" which does not rely on visual attributes alone.
+This paragraph holds the visual reference word "box". The button is identified with the word "box" but also identified by referencing that the content can be found below this content in the DOM order. Note that "below" is also a visual reference word but in this case it can also be accurately interpreted as "further in the DOM tree order" which does not rely on visual attributes alone.
 
 ```html
-<div class="col-container">
-	<div class="col">
-		<p>Interact with the box below this paragraph, for a surprise</p>
-	</div>
-
-	<div class="col">
-		<button onclick="alert('Surprise!')">Howdy</button>
-	</div>
-</div>
+	<p>Interact with the box below this paragraph, for a surprise</p>
+	<button onclick="alert('Surprise!')">Howdy</button>
 ```
 
 #### Passed Example 3
 
-The visual reference made by the word "right" is complemented by the non-visual reference made by the word "menu" to the content identified by the "Menu" heading.
+This paragraph holds the visual reference word "right". The visual reference made by the word "right" is complemented by the non-visual reference made by the word "menu" to the content identified by the "Menu" heading.
 
 ```html
 <head>
@@ -140,7 +133,7 @@ The visual reference made by the word "right" is complemented by the non-visual 
 
 #### Passed Example 4
 
-This document is using the word "square" but in this case it is not describing web content.
+This paragraph holds the visual reference word "square" but in this case it is not identifying web content.
 
 ```html
 <p>A square is a regular quadrilateral with four equal sides and four right angles.</p>
@@ -148,7 +141,7 @@ This document is using the word "square" but in this case it is not describing w
 
 #### Passed Example 5
 
-The following text is tilted and describes web content. But the [section of content](#section-of-content) also includes this word "this" which makes it apparent that the description is about the same content.
+This text holds the visual reference word "tiled" and identifies web content (namely itself). But the text also includes this word "this" which makes it apparent that the description is about the same content.
 
 ```html
 <head>
@@ -170,7 +163,7 @@ The following text is tilted and describes web content. But the [section of cont
 
 #### Passed Example 6
 
-The button is indicated by the word "round". But the word is also included in the text of the element.
+This parapgraph holds the visual reference word "round". The button is identified by the word "round". But the word is also included in the text of the element.
 
 ```html
 <head>
@@ -191,28 +184,28 @@ The button is indicated by the word "round". But the word is also included in th
 
 #### Passed Example 7
 
-The images are indicated by the visual reference words "narrow" and "wide". These words are also included in the accessible names of the images. Even though that indication is not visible, it is included in the accessibility tree which is sufficient to pass this rule.
+This parapgraph holds the visual reference words "wide" and "narrow". The images are indicated by these visual reference words. These words are also included in the accessible names of the images. Even though that indication is not visible, it is included in the accessibility tree which is sufficient to pass this rule.
 
 ```html
-<p>The wide image is awesome. But the narrow image isn't.</p>
+<p>Look at the the wide image which is awesome. Now compare it with the narrow image which isn't.</p>
 <img scr="/test-assets/images/awesome_wide.jfif" alt="Wide photo of an awesome landscape." />
 <img scr="/test-assets/images/Non_awesome_narrow.jpg" alt="Narrow photo of a dull landscape." />
 ```
 
 #### Passed Example 8
 
-This document is using "triangle" which is included in the heading of the menu; the fact that the described content is one another page of the same website does not restrict this rule.
+This paragraph hold the visual reference word "triangle" which is included in the heading of the menu; the fact that the described content is one another page of the same website does not restrict this rule.
 
 ```html
 <p>
 	On the <a href="/test-assets/SC1.3.3-triangle-menu-with-heading.html">information page</a> you can find more examples
-	within the triangle menu
+	within the triangle menu.
 </p>
 ```
 
 #### Passed Example 9
 
-This document is using "star" but there is also a heading "examples" that can be referenced; the fact that the described content is in an iframe does not restrict this rule.
+This paragraph hold the visual reference word "star" but there is also a heading "examples" that can be referenced; the fact that the identified content is in an iframe does not restrict this rule.
 
 ```html
 <p>More examples can be found when you look underneath the star or you can search for the "Examples" heading</p>
@@ -221,7 +214,7 @@ This document is using "star" but there is also a heading "examples" that can be
 
 #### Passed Example 10
 
-This document is using the word "circle" but in this case it is no instruction so it passes.
+This parapgraph holds the visual reference word "circle" but in this case it is no instruction so it passes.
 
 ```html
 <p>
@@ -237,7 +230,7 @@ This document is using the word "circle" but in this case it is no instruction s
 
 #### Passed Example 11
 
-This document is using the word "circle" but in this case it is no instruction so it passes. Note that this example is not inapplicable because, despite the fact that the text is not visible, it is included in the accessibility tree.
+This parapgraph holds the visual reference word "circle" but in this case it is no instruction so it passes. Note that this example is not inapplicable because, despite the fact that the text is not visible, it is included in the accessibility tree.
 
 ```html
 <p style="position:absolute; top:-9999em">
@@ -253,7 +246,7 @@ This document is using the word "circle" but in this case it is no instruction s
 
 #### Passed Example 12
 
-This document is using the word "circle" but in this case it is no instruction so it passes. Note that this example is not inapplicable because, despite the fact that the text is not in the accessibility tree, it is visible.
+This parapgraph holds the visual reference word "circle" but in this case it is no instruction so it passes. Note that this example is not inapplicable because, despite the fact that the text is not in the accessibility tree, it is visible.
 
 ```html
 <p aria-hidden="true">
@@ -269,7 +262,7 @@ This document is using the word "circle" but in this case it is no instruction s
 
 #### Passed Example 13
 
-The user is told to find the navigation on the right (a visual reference word) and the navigation is correctly identified by a `nav` element.
+This parapgraph holds the visual reference word "right". The user is told to find the navigation on the right and the navigation is also correctly identified by a `nav` element.
 
 ```html
 <head>
@@ -301,7 +294,7 @@ The user is told to find the navigation on the right (a visual reference word) a
 
 #### Failed Example 1
 
-The user is told to find the menu on the right (a visual reference word) but the menu is not identified in any other way.
+This parapgraph holds the visual reference word "right". The user is told to find the menu on the right but the menu is not identified in any other way.
 
 ```html
 <head>
@@ -329,7 +322,7 @@ The user is told to find the menu on the right (a visual reference word) but the
 
 #### Failed Example 2
 
-The user is told to find the navigation on the right (a visual reference word) and the navigation is correctly identified by a `nav` element, but there are 2 `nav` elements on the page so the user doesn't know which one to use.
+This parapgraph holds the visual reference word "right". The user is told to find the navigation on the right and the navigation is correctly identified by a `nav` element, but there are 2 `nav` elements on the page so the user doesn't know which one to use.
 
 ```html
 <head>
@@ -369,7 +362,7 @@ The user is told to find the navigation on the right (a visual reference word) a
 
 #### Failed Example 3
 
-This document is using the word "triangle" and no other indication is present so the rule fails. The fact that the triangle menu is on a different page of the same website does not restrict the rule. 
+This parapgraph holds the visual reference word "triangle" and no other indication is present so the rule fails. The fact that the triangle menu is on a different page of the same website does not restrict the rule. 
 
 ```html
 <body>
@@ -382,7 +375,7 @@ This document is using the word "triangle" and no other indication is present so
 
 #### Failed Example 4
 
-This document is using the word "star" and there is no other indication. The content described is in an iframe.
+This parapgraph holds the visual reference word "star" and there is no other indication. The content described is in an iframe.
 
 ```html
 <body>

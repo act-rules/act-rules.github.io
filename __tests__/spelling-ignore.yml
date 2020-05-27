@@ -114,6 +114,7 @@
 # Attributes (repeated words with casing as retext-spell has no config to ignore casing)
 - href
 - src
+- srcset
 - aria-labelled # used to demonstrate wrong attribute
 - autofill-field
 - autocomplete

@@ -30,21 +30,27 @@ acknowledgments:
     - Jean-Yves Moyen
   previous_authors:
     - Bryn Anderson
-  assets:
-    - The picture of Nyhavn (Copenhagen) is authored by [Jorge Franganillo](https://500px.com/franganillo), licensed under the [Creative Commons Attribution 3.0 Unported](https://creativecommons.org/licenses/by/3.0/deed.en) license.
-    - The picture of bread is a public domain [picture by Bicanski](https://pixnio.com/media/bread-breakfast-fresh-homemade-wheat).
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'alt-require'
+assets:
+  - The picture of Nyhavn (Copenhagen) is authored by [Jorge Franganillo](https://500px.com/franganillo), licensed under the [Creative Commons Attribution 3.0 Unported](https://creativecommons.org/licenses/by/3.0/deed.en) license.
+  - The picture of bread is a public domain [picture by Bicanski](https://pixnio.com/media/bread-breakfast-fresh-homemade-wheat).
 ---
 
 ## Applicability
 
-The rule applies to any HTML element with the [semantic role][] of `img` or any HTML `input` element with a [`type`][type] of `image` when each of the following is true:
+The rule applies to any HTML element that is [included in the accessibility tree][] and has a non-empty (`""`) [accessible name][], for which one of the following is true:
 
-- the image is [included in the accessibility tree][]; and
-- the image has an [accessible name][] that is equivalent to the [filename][] specified in the `src` attribute. Difference in letter casing, leading and trailing [whitespace][] should be ignored.
+- **img**: the element is an `img` with an [accessible name][] that is equivalent to the [filename][] of at least one of the [image sources][] in its [source set][]; or
+- **input image**: the element is an `input` element in the [Image Button][] state with an [accessible name][] that is equivalent to the [filename][] specified in its `src` attribute.
+
+When comparing [accessible name][] and [filename][], difference in letter casing, leading and trailing [whitespace][] should be ignored.
 
 ## Expectation
 
-Each test target has an [accessible name][] that serves an equivalent purpose to the [non-text content][].
+Each test target has an [accessible name][] that serves an equivalent purpose to the [non-text content][]. If there are several [image sources][], then the [accessible name][] must accurately describe all of them.
 
 **Note:** It is fairly common for CMS or other tools to default the alt-text of an image to its filename if no alt-text is provided. However, these names are usually not descriptive (often due to the presence of the file extension). This rule uses this heuristic to pinpoints cases where the [accessible name][] should be looked at by human testers. This rule does not automatically decide in which case a filename is correct (notably, it does not automatically decide whether adding the file extension is acceptable).
 
@@ -54,7 +60,7 @@ This rule assumes that the language of each test target can be correctly determi
 
 ## Accessibility Support
 
-Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `img` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 
@@ -109,6 +115,37 @@ This `img` element has an [accessible name][] equivalent to the filename. The [a
 </html>
 ```
 
+#### Passed Example 5
+
+This `img` element has 3 [image sources][] for [device-pixel-ratio][]-based selection, through its `src` and `srcset` attributes. Its [accessible name][] is equivalent to the [filename][] of one of its [image sources][] and accurately describes each of them.
+
+```html
+<html lang="en">
+	<img
+		src="test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg"
+		srcset="
+			test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn 1.5x,
+			test-assets/image-filename-as-accessible-name-9eb3f6/paris  2x
+		"
+		alt="Nyhavn"
+	/>
+</html>
+```
+
+#### Passed Example 6
+
+This `img` element has 3 [image sources][] for [Art direction][]-based selection, through its `src` attribute and its siblings `source` elements with the same `picture` parent. Its [accessible name][] is equivalent to the [filename][] of one of its [image sources][] and accurately describes each of them.
+
+```html
+<html lang="en">
+	<picture>
+		<source media="(min-width: 45em)" srcset="test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn" />
+		<source media="(min-width: 32em)" srcset="test-assets/image-filename-as-accessible-name-9eb3f6/paris" />
+		<img src="test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg" alt="Nyhavn" />
+	</picture>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -151,6 +188,20 @@ This image button has an [accessible name][] matching the filename. The presence
 ```html
 <html lang="en">
 	<input type="image" src="test-assets/image-filename-as-accessible-name-9eb3f6/login.png" alt="login.png" />
+</html>
+```
+
+#### Failed Example 5
+
+This `img` element has 3 [image sources][] for [Art direction][]-based selection, through its `src` attribute and its siblings `source` elements with the same `picture` parent. Its [accessible name][] is equivalent to the [filename][] of one of its [image sources][] but does not describe the second one (`pain`).
+
+```html
+<html lang="en">
+	<picture>
+		<source media="(min-width: 45em)" srcset="test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn" />
+		<source media="(min-width: 32em)" srcset="test-assets/image-filename-as-accessible-name-9eb3f6/pain" />
+		<img src="test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg" alt="Nyhavn" />
+	</picture>
 </html>
 ```
 
@@ -201,10 +252,13 @@ This `img` element has an [accessible name][] which is not equivalent to the fil
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
+[art direction]: https://html.spec.whatwg.org/multipage/images.html#art-direction 'Illustration of art direction'
+[device-pixel-ratio]: https://html.spec.whatwg.org/multipage/images.html#device-pixel-ratio 'Illustration of device-pixel-ratio'
 [filename]: #filename 'Definition of filename'
+[image button]: https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image) 'Definition of the Image Button state'
+[image sources]: https://html.spec.whatwg.org/multipage/images.html#image-source 'Definition of image source'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of semantic role'
-[type]: https://html.spec.whatwg.org/#states-of-the-type-attribute
+[source set]: https://html.spec.whatwg.org/multipage/images.html#source-set 'Definition of source set'
 [whitespace]: #whitespace 'Definition of whitespace'

@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 784,
+  "count": 787,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -9028,6 +9028,66 @@
       }
     },
     {
+      "testcaseId": "f345da41e90ec26c8644e1208526c7fb895af23d",
+      "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/9eb3f6/f345da41e90ec26c8644e1208526c7fb895af23d.html",
+      "relativePath": "testcases/9eb3f6/f345da41e90ec26c8644e1208526c7fb895af23d.html",
+      "expected": "passed",
+      "ruleId": "9eb3f6",
+      "ruleName": "Image filename is accessible name for image",
+      "rulePage": "https://act-rules.github.io/rules/9eb3f6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "273a0e1d4e4875b9b5119d6b1b2635f052783a0e",
+      "testcaseTitle": "Passed Example 6",
+      "url": "https://act-rules.github.io/testcases/9eb3f6/273a0e1d4e4875b9b5119d6b1b2635f052783a0e.html",
+      "relativePath": "testcases/9eb3f6/273a0e1d4e4875b9b5119d6b1b2635f052783a0e.html",
+      "expected": "passed",
+      "ruleId": "9eb3f6",
+      "ruleName": "Image filename is accessible name for image",
+      "rulePage": "https://act-rules.github.io/rules/9eb3f6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
       "testcaseId": "f7406b89f8e6769c01da5c305e3e6c921fd7c1e4",
       "testcaseTitle": "Failed Example 1",
       "url": "https://act-rules.github.io/testcases/9eb3f6/f7406b89f8e6769c01da5c305e3e6c921fd7c1e4.html",
@@ -9122,6 +9182,36 @@
       "testcaseTitle": "Failed Example 4",
       "url": "https://act-rules.github.io/testcases/9eb3f6/4d70a122992b17d69afbf05e92b8c953eccfbd03.html",
       "relativePath": "testcases/9eb3f6/4d70a122992b17d69afbf05e92b8c953eccfbd03.html",
+      "expected": "failed",
+      "ruleId": "9eb3f6",
+      "ruleName": "Image filename is accessible name for image",
+      "rulePage": "https://act-rules.github.io/rules/9eb3f6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "46df235c655a197fd2ae89ec63deda61e53a40e6",
+      "testcaseTitle": "Failed Example 5",
+      "url": "https://act-rules.github.io/testcases/9eb3f6/46df235c655a197fd2ae89ec63deda61e53a40e6.html",
+      "relativePath": "testcases/9eb3f6/46df235c655a197fd2ae89ec63deda61e53a40e6.html",
       "expected": "failed",
       "ruleId": "9eb3f6",
       "ruleName": "Image filename is accessible name for image",

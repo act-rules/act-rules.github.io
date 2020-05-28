@@ -50,7 +50,7 @@ describeRule('testcases', ruleData => {
 		if (errors.length) {
 			console.log(`Rule Name: ${name} \n`)
 			console.log(`Rule Id: ${id} \n`)
-			console.table(errors)
+			console.table(errors.map(({ message, raw, line, col, rule }) => ({ message, raw, line, col, rule: rule.id })))
 		}
 
 		expect(errors.length).toEqual(0)

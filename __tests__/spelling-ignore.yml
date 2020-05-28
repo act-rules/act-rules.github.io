@@ -40,6 +40,7 @@
 - PDFs
 - DOCX
 - DPUB
+- CSSOM
 - DNS
 - BCP
 - bcp
@@ -74,6 +75,7 @@
 - Helvetica
 - fieldsets
 - ascii # lowercase needed in reference list
+- CMS
 
 - 14pt
 - 18pt
@@ -123,6 +125,7 @@
 # Attributes (repeated words with casing as retext-spell has no config to ignore casing)
 - href
 - src
+- srcset
 - aria-labelled # used to demonstrate wrong attribute
 - autofill-field
 - autocomplete
@@ -141,6 +144,21 @@
 - matrix3d
 - rowheader
 - columnheader
+- scrollable-element
+- scrollWidth
+- scrollHeight
+- clientHeight
+- clientWidth
+- innerHeight
+- innerWidth
+- scrollbars
+- documentElement
+- rects
+- nowrap
+- javascript
+- Reflow
+- Viewport
+- dom-meta-content
 
 # Unsure why the dictionary does not have these words
 - programmatically
@@ -150,6 +168,8 @@
 - presentational
 - backtick
 - camelCase
+- scrollable
+- scrollbars
 
 # Parts of Unicode
 - 000A

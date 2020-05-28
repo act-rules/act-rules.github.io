@@ -41,7 +41,7 @@ Non supported media formats make screen readers render the text content of the e
 
 ## Background
 
-- [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html>)
+- [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 
 ## Test Cases
 

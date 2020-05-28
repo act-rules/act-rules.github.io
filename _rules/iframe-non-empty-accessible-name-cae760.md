@@ -41,7 +41,7 @@ If an `iframe` is not perceived by the user as a single control, it does not qua
 
 - Browser and assistive technology support for `iframe` elements is currently **inconsistent**. Some examples of inconsistencies include (but is not limited to):
   - Assistive technologies being set up to ignore the `title` attribute, which means that to some users the `title` attribute will not act as an [accessible name][],
-  - VoiceOver on Safari browser ignores `aria-label` and only announces `title` attribute as an [accessible name][]
+  - There is a known combination of a popular browser and assistive technology that ignores `aria-label` and only announces `title` attribute as an [accessible name][]
   - Some assistive technologies ignore empty `iframe` elements from [sequential focus navigation][].
 
 ## Background
@@ -115,7 +115,7 @@ This `iframe` element has an empty (`""`) [accessible name][] because the `title
 
 #### Failed Example 4
 
-This `iframe` element has an empty (`""`) [accessible name][] because the `title` attribute value is trimmed of whitespace by the [accessible name computation][accessible name and description computation].
+This `iframe` element has an empty (`""`) [accessible name][] because the `title` attribute value is trimmed of [whitespace][] by the [accessible name computation][accessible name and description computation].
 
 **Note:**: Because `iframe` elements are part of [sequential focus navigation][], the [explicit semantic role](#explicit-role) of `none` will be ignored, due to the [Presentational Roles Conflict Resolution](https://www.w3.org/TR/wai-aria-1.1/#presentational-roles-conflict-resolution).
 

@@ -58,12 +58,16 @@ This `div` element with a role of `dialog` has an `aria-modal` attribute which i
 
 #### Passed Example 3
 
-This `div` element with a role of `alert` has an `aria-live` attribute which is defined in [WAI-ARIA Specifications][].
+This `div` element with a role of `textbox` has multiple `aria-*` attributes which is defined in [WAI-ARIA Specifications][].
 
 ```html
-<div role="alert" aria-live="assertive">
-	Your session will expire in 60 seconds.
-</div>
+<div
+	role="textbox"
+	contenteditable="true"
+	aria-multiline="true"
+	aria-label="Enter your hobbies"
+	aria-required="true"
+></div>
 ```
 
 #### Passed Example 4

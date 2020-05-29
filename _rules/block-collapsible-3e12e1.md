@@ -26,7 +26,7 @@ This rule applies to any [HTML web page][].
 
 ## Expectation 1
 
-For each [section of repeated content][] in the test target, there exists a [visible][] [instrument][] to make of this [section of repeated content][] not [visible][].
+For each [section of repeated content][] in the test target, there exists a [visible][] [instrument][] to make this [section of repeated content][] not [visible][].
 
 ## Expectation 2
 

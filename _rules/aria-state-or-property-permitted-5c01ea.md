@@ -32,7 +32,7 @@ Any [WAI-ARIA state or property][] that is specified on an HTML or SVG element t
 
 ## Expectation
 
-The attribute is either an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the attribute is specified. If the element has no [semantic role][], the attribute must be a [global state or property][global].
+Each test target is either an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the attribute is specified. If the element has no [semantic role][], the attribute must be a [global state or property][global].
 
 **Note:** Assessing the value of the attribute is out of scope for this rule.
 

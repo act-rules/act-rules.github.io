@@ -32,7 +32,7 @@ For each [section of repeated content][] in the test target, there exists a [vis
 
 For each [section of repeated content][] in the test target, there exists an [instrument][], [included in the accessibility tree][], to remove this [section of repeated content][] from the [accessibility tree][included in the accessibility tree].
 
-**Note:** The same [instrument][] may be used to remove both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of a given [section of repeated content].
+**Note:** The same [instrument][] may be used to remove both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of a given [section of repeated content][].
 
 **Note:** The same [instrument][] may be used for several or even all the [sections of repeated content][section of repeated content].
 

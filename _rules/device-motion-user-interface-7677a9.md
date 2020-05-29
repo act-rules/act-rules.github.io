@@ -201,7 +201,7 @@ This [HTML document][] can be operated by rotating the device to increase and de
 
 #### Failed Example 1
 
-This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider but has not other way to achieve the same functionality.
+This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider has not other way to achieve the same functionality.
 
 ```html
 <html>

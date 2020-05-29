@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 787,
+  "count": 800,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -12794,6 +12794,240 @@
       "rulePage": "https://act-rules.github.io/rules/b4f0c3",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "d9669b826d3d100faad3df0c0087bd963df2b04b",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/8fc3b6/d9669b826d3d100faad3df0c0087bd963df2b04b.html",
+      "relativePath": "testcases/8fc3b6/d9669b826d3d100faad3df0c0087bd963df2b04b.html",
+      "expected": "passed",
+      "ruleId": "8fc3b6",
+      "ruleName": "Object element has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/8fc3b6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "1b6900ad86f3e701291cdb3cca5d6d4cb3b193e8",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/8fc3b6/1b6900ad86f3e701291cdb3cca5d6d4cb3b193e8.html",
+      "relativePath": "testcases/8fc3b6/1b6900ad86f3e701291cdb3cca5d6d4cb3b193e8.html",
+      "expected": "passed",
+      "ruleId": "8fc3b6",
+      "ruleName": "Object element has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/8fc3b6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "7bbbc0710ad2cb4ded7c5e8181a23140f70c5517",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/8fc3b6/7bbbc0710ad2cb4ded7c5e8181a23140f70c5517.html",
+      "relativePath": "testcases/8fc3b6/7bbbc0710ad2cb4ded7c5e8181a23140f70c5517.html",
+      "expected": "passed",
+      "ruleId": "8fc3b6",
+      "ruleName": "Object element has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/8fc3b6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "2539c3c0e8804de69a413c8c1c299e07c97895b8",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/8fc3b6/2539c3c0e8804de69a413c8c1c299e07c97895b8.html",
+      "relativePath": "testcases/8fc3b6/2539c3c0e8804de69a413c8c1c299e07c97895b8.html",
+      "expected": "passed",
+      "ruleId": "8fc3b6",
+      "ruleName": "Object element has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/8fc3b6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "d89f2505eb5d5dbe2b1838558ab5a7e83e47c665",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/8fc3b6/d89f2505eb5d5dbe2b1838558ab5a7e83e47c665.html",
+      "relativePath": "testcases/8fc3b6/d89f2505eb5d5dbe2b1838558ab5a7e83e47c665.html",
+      "expected": "failed",
+      "ruleId": "8fc3b6",
+      "ruleName": "Object element has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/8fc3b6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a7014f65948443038d153621a411edab33a290bb",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/8fc3b6/a7014f65948443038d153621a411edab33a290bb.html",
+      "relativePath": "testcases/8fc3b6/a7014f65948443038d153621a411edab33a290bb.html",
+      "expected": "failed",
+      "ruleId": "8fc3b6",
+      "ruleName": "Object element has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/8fc3b6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "358271acbe8d353ca18ee72d4a79dc97f2aaa28a",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/8fc3b6/358271acbe8d353ca18ee72d4a79dc97f2aaa28a.html",
+      "relativePath": "testcases/8fc3b6/358271acbe8d353ca18ee72d4a79dc97f2aaa28a.html",
+      "expected": "failed",
+      "ruleId": "8fc3b6",
+      "ruleName": "Object element has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/8fc3b6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "e65a5306672e7e3e0571d35fd37df576a9b28668",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/8fc3b6/e65a5306672e7e3e0571d35fd37df576a9b28668.html",
+      "relativePath": "testcases/8fc3b6/e65a5306672e7e3e0571d35fd37df576a9b28668.html",
+      "expected": "failed",
+      "ruleId": "8fc3b6",
+      "ruleName": "Object element has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/8fc3b6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "34c748340c91cc02742a37869196edf916239ddb",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/8fc3b6/34c748340c91cc02742a37869196edf916239ddb.html",
+      "relativePath": "testcases/8fc3b6/34c748340c91cc02742a37869196edf916239ddb.html",
+      "expected": "inapplicable",
+      "ruleId": "8fc3b6",
+      "ruleName": "Object element has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/8fc3b6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "460cd7eb48ac9286b4ef3aee32bbd3e803abd63e",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/8fc3b6/460cd7eb48ac9286b4ef3aee32bbd3e803abd63e.html",
+      "relativePath": "testcases/8fc3b6/460cd7eb48ac9286b4ef3aee32bbd3e803abd63e.html",
+      "expected": "inapplicable",
+      "ruleId": "8fc3b6",
+      "ruleName": "Object element has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/8fc3b6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "2951771b6a4cb805efd8da94e3ae758f580b25d0",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/8fc3b6/2951771b6a4cb805efd8da94e3ae758f580b25d0.html",
+      "relativePath": "testcases/8fc3b6/2951771b6a4cb805efd8da94e3ae758f580b25d0.html",
+      "expected": "inapplicable",
+      "ruleId": "8fc3b6",
+      "ruleName": "Object element has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/8fc3b6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "7ad19d6b6c63a10a2612b5bc29d43a1d1754e938",
+      "testcaseTitle": "Inapplicable Example 4",
+      "url": "https://act-rules.github.io/testcases/8fc3b6/7ad19d6b6c63a10a2612b5bc29d43a1d1754e938.html",
+      "relativePath": "testcases/8fc3b6/7ad19d6b6c63a10a2612b5bc29d43a1d1754e938.html",
+      "expected": "inapplicable",
+      "ruleId": "8fc3b6",
+      "ruleName": "Object element has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/8fc3b6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "697b943fde788ab0ee9d2303ac78afd61fe1b864",
+      "testcaseTitle": "Inapplicable Example 5",
+      "url": "https://act-rules.github.io/testcases/8fc3b6/697b943fde788ab0ee9d2303ac78afd61fe1b864.html",
+      "relativePath": "testcases/8fc3b6/697b943fde788ab0ee9d2303ac78afd61fe1b864.html",
+      "expected": "inapplicable",
+      "ruleId": "8fc3b6",
+      "ruleName": "Object element has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/8fc3b6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",

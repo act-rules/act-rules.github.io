@@ -8,7 +8,7 @@ accessibility_requirements:
   wcag-technique:SCR28: # Using an expandable and collapsible menu to bypass block of content
     forConformance: false
     failed: not satisfied
-    passed: satisfied
+    passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree

@@ -26,7 +26,7 @@ acknowledgments:
 
 This rule applies to any [HTML web page][].
 
-## Expectation 1
+## Expectation
 
 The first [focusable][] element within the test target:
 

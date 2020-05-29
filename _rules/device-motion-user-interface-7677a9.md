@@ -34,7 +34,7 @@ For each registered [device orientation event][device orientation] or [device mo
 
 ## Expectation 2
 
-For each [instrument][] in the set of [instruments][instrument] from Expectation 1, one of the following is true:
+For at least one set of [instruments][instrument] from Expectation 1, all of the [instruments][instrument] in such set meet one of the following conditions:
 
 - the [instrument][] is in the same [web page][] of the test target; or
 - the [instrument][] can be found in a [clearly labeled location][].
@@ -45,7 +45,6 @@ For each [instrument][] in the set of [instruments][instrument] from Expectation
 
 - The motion to operate the device is not used through an [accessibility supported][] interface, which is listed as a valid exception to [SC 2.5.4][SC2.5.4].
 - The motion is not [essential][] for the functionality it triggers, which is listed as a valid exception to [SC 2.5.4][SC2.5.4].
-- If there is more than one [instrument][] in the set found by Expectation 1, this rule assumes that each [instrument][] fulfils a different part of the event's result. If more than one [instrument][] fulfils the same part of the result, then only one of those [instruments][instrument] needs to meet expectation 2. In this instance, this rule will fail while [success criterion 2.5.4][SC2.5.4] might still be satisfied.
 
 ## Accessibility Support
 

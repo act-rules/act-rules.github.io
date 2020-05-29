@@ -58,7 +58,7 @@ This `div` element with a role of `dialog` has an `aria-modal` attribute which i
 
 #### Passed Example 3
 
-This `div` element with a role of `textbox` have multiple `aria-*` attributes which are defined in [WAI-ARIA Specifications][].
+This `div` element with a role of `textbox` has multiple `aria-*` attributes which are defined in [WAI-ARIA Specifications][].
 
 ```html
 <div

@@ -182,7 +182,7 @@ This `object` element is not [included in the accessibility tree][] due to `aria
 
 #### Inapplicable Example 4
 
-This `object` element is is not [included in the accessibility tree][] because it is marked as decorative through `role="presentation"`.
+This `object` element is not [included in the accessibility tree][] because it is marked as decorative through `role="presentation"`.
 
 ```html
 <object

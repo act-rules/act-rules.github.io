@@ -45,7 +45,7 @@ For each [instrument][] in the set of [instruments][instrument] from Expectation
 
 - The motion to operate the device is not used through an [accessibility supported][] interface, which is listed as a valid exception to SC 2.5.4.
 - The motion is not [essential][] for the functionality it triggers, which is listed as a valid exception to SC 2.5.4.
-- If there is more than one [instrument][] in the set, this rule assumes that each [instrument][] fulfils a different part of the event's result. If more than one [instrument][] fulfils the same part of the result, then only one of those [instruments][instrument] needs to meet expectation 2. In this instance, this rule will fail while success criterion 2.5.4 might still be satisfied.
+- If there is more than one [instrument][] in the set found by Expectation 1, this rule assumes that each [instrument][] fulfils a different part of the event's result. If more than one [instrument][] fulfils the same part of the result, then only one of those [instruments][instrument] needs to meet expectation 2. In this instance, this rule will fail while success criterion 2.5.4 might still be satisfied.
 
 ## Accessibility Support
 

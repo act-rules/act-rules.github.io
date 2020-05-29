@@ -28,7 +28,7 @@ Within the test target, there is at least one element which:
 - has [semantic role][] of `main`; and
 - is [included in the accessibility tree][].
 
-**Note:** Authors SHOULD not use more than one element with a [semantic role][] of `main`. This is, however, a not a requirement for this rule and can be valid in certain cases.
+**Note:** Authors SHOULD not use more than one element with a [semantic role][] of `main`. This is, however, not a requirement for this rule and can be valid in certain cases.
 
 **Note:** Technique [ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11] does not require the use of landmarks, nor the use of a main one. It only requires that if landmarks are used they identify the correct [section of content][]. Hence it is not listed as an accessibility mapping for this rule. However, having a landmark to identify the primary content of a page is enough to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241].
 

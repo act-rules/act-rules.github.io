@@ -10,9 +10,11 @@ const allTestAssetPaths = uniqueArrayItems(globby.sync(`./test-assets/**/*.*`).m
 
 describeRule('check if referenced test assets exists', ruleData => {
 	const codeBlocks = gfmCodeBlocks(ruleData.body)
-	const usedAssetPaths = getUniqueTestAssetsUsedInCodeBlocks(codeBlocks)
+	const usedAssetPaths = getUniqueTestAssetsUsedInCodeBlocks(codeBlocks).filter(
+		path => !path.includes('does-not-exist')
+	)
 
-	if (usedAssetPaths && usedAssetPaths.length) {
+	if (usedAssetPaths.length) {
 		test.each(usedAssetPaths)('%s', assetPath => {
 			const message = `Asset at path -> ${assetPath} does not exist`
 			expect(allTestAssetPaths.includes(assetPath), message).toBe(true)
@@ -37,7 +39,7 @@ function getUniqueTestAssetsUsedInCodeBlocks(codeBlocks) {
 			 * Ignore URL
 			 */
 			if (!assetPath || isUrl(assetPath)) {
-				return
+				return []
 			}
 
 			/**

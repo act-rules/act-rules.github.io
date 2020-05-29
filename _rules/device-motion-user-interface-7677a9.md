@@ -170,7 +170,7 @@ This [HTML document][] can be operated by rotating the device to increase and de
 
 		<p>
 			Open this slider on a device with a motion sensor, such as a smart phone or tablet. Rotate the device to adjust
-			the slider value. Active the control panel to access decrease and increase buttons that also adjust the value.
+			the slider value. Activate the control panel to access decrease and increase buttons that also adjust the value.
 		</p>
 		<input type="button" onclick="openModal()" value="Control panel" />
 		<p>Note: This example may not work across all browsers.</p>

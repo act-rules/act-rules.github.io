@@ -43,9 +43,9 @@ For each [instrument][] in the set of [instruments][instrument] from Expectation
 
 ## Assumptions
 
-- The motion to operate the device is not used through an [accessibility supported][] interface, which is listed as a valid exception to SC 2.5.4.
-- The motion is not [essential][] for the functionality it triggers, which is listed as a valid exception to SC 2.5.4.
-- If there is more than one [instrument][] in the set found by Expectation 1, this rule assumes that each [instrument][] fulfils a different part of the event's result. If more than one [instrument][] fulfils the same part of the result, then only one of those [instruments][instrument] needs to meet expectation 2. In this instance, this rule will fail while success criterion 2.5.4 might still be satisfied.
+- The motion to operate the device is not used through an [accessibility supported][] interface, which is listed as a valid exception to [SC 2.5.4][SC2.5.4].
+- The motion is not [essential][] for the functionality it triggers, which is listed as a valid exception to [SC 2.5.4][SC2.5.4].
+- If there is more than one [instrument][] in the set found by Expectation 1, this rule assumes that each [instrument][] fulfils a different part of the event's result. If more than one [instrument][] fulfils the same part of the result, then only one of those [instruments][instrument] needs to meet expectation 2. In this instance, this rule will fail while [success criterion 2.5.4][SC2.5.4] might still be satisfied.
 
 ## Accessibility Support
 
@@ -53,7 +53,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- [Understanding Success Criterion 2.5.4: Motion Actuation](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html)
+- [Understanding Success Criterion 2.5.4: Motion Actuation][SC2.5.4]
 - [G213: Provide conventional controls and an application setting for motion activated input](https://www.w3.org/WAI/WCAG21/Techniques/general/G213.html)
 - [DeviceOrientation Event Specification](https://www.w3.org/TR/orientation-event/)
 
@@ -255,5 +255,6 @@ This [HTML document][] is not operable by device motion.
 [event listener list]: https://dom.spec.whatwg.org/#eventtarget-event-listener-list
 [html document]: https://dom.spec.whatwg.org/#concept-document
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
+[SC2.5.4]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html
 [web page]: #web-page-html 'Definition of web page'
 [window object]: https://html.spec.whatwg.org/multipage/window-object.html#dom-window

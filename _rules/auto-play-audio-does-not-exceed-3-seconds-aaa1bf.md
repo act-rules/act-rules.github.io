@@ -1,9 +1,9 @@
 ---
 id: aaa1bf
-name: '`audio` or `video` that plays automatically does not exceed 3 seconds'
+name: '`Audio` or `video` that plays automatically has no audio that lasts more than 3 seconds'
 rule_type: atomic
 description: |
-  content that plays automatically does not output audio for more than 3 seconds.
+  `audio` or `video` that plays automatically does not output audio for more than 3 seconds.
 accessibility_requirements:
   wcag-technique:G60: # Playing a sound that turns off automatically within three seconds
     forConformance: false
@@ -29,17 +29,13 @@ This rule applies to any `audio` or `video` element that has:
 - both `paused` and `muted` attributes whose values are both false, and
 - either a `src` attribute or a child `source` element that references content with a duration of more than 3 seconds that contains audio.
 
-**Note:**
-
-The default value of both `paused` and `muted` attributes is `false`.
+**Note:** The default value of both `paused` and `muted` attributes is `false`.
 
 ## Expectation
 
 For each test target the total audio output does not last more than 3 seconds.
 
-**Note:**
-
-This rule does not cover single audio instances that play repeatedly for more than three seconds, or multiple audio instances for more than three seconds. The [WCAG Understanding documentation for 1.4.2 Audio Controls](https://www.w3.org/WAI/WCAG21/Understanding/audio-control.html) is ambiguous about how to handle these scenarios.
+**Note:** This rule does not cover single audio instances that play repeatedly for more than three seconds, or multiple audio instances for more than three seconds. The [WCAG Understanding documentation for 1.4.2 Audio Controls](https://www.w3.org/WAI/WCAG21/Understanding/audio-control.html) is ambiguous about how to handle these scenarios.
 
 ## Assumptions
 
@@ -62,7 +58,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-The `<audio>` element does not play automatically for more than 3 seconds.
+This `audio` element does not play automatically for more than 3 seconds.
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3#t=25" autoplay></audio>
@@ -70,7 +66,7 @@ The `<audio>` element does not play automatically for more than 3 seconds.
 
 #### Passed Example 2
 
-The `<video>` element audio output does not last longer than 3 seconds.
+This `video` element's audio output does not last longer than 3 seconds.
 
 ```html
 <video autoplay>
@@ -83,7 +79,7 @@ The `<video>` element audio output does not last longer than 3 seconds.
 
 #### Failed Example 1
 
-The `audio` element plays automatically for more than 3 seconds.
+This `audio` element plays automatically for more than 3 seconds.
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay controls></audio>
@@ -91,7 +87,7 @@ The `audio` element plays automatically for more than 3 seconds.
 
 #### Failed Example 2
 
-The `video` element automatically plays some audio for more than 3 seconds.
+This `video` element plays some audio automatically for more than 3 seconds.
 
 ```html
 <video autoplay>
@@ -104,7 +100,7 @@ The `video` element automatically plays some audio for more than 3 seconds.
 
 #### Inapplicable Example 1
 
-The `<video>` element audio autoplays for longer than 3 seconds, but is `muted`.
+This `video` element has audio that autoplays for longer than 3 seconds but is muted.
 
 ```html
 <video autoplay muted>
@@ -115,7 +111,7 @@ The `<video>` element audio autoplays for longer than 3 seconds, but is `muted`.
 
 #### Inapplicable Example 2
 
-The `video` element `src` file has no audio output.
+This `video` element refers to a source file that has no audio output.
 
 ```html
 <video autoplay>
@@ -126,7 +122,7 @@ The `video` element `src` file has no audio output.
 
 #### Inapplicable Example 3
 
-The `audio` element does not autoplay.
+This `audio` element does not autoplay.
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>

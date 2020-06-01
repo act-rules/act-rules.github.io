@@ -1,9 +1,9 @@
 ---
 id: cae760
-name: '`iframe` element has accessible name'
+name: '`iframe` element has non-empty accessible name'
 rule_type: atomic
 description: |
-  This rule checks that each `iframe` element has an accessible name.
+  This rule checks that each `iframe` element has a non-empty accessible name.
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true
@@ -28,8 +28,6 @@ The rule applies to `iframe` elements that are [included in the accessibility tr
 ## Expectation
 
 Each target element has an [accessible name][] that is not empty (`""`).
-
-**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
 
 ## Assumptions
 
@@ -139,6 +137,5 @@ This `iframe` is not part of [sequential focus navigation][] because it has `tab
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[whitespace]: #whitespace 'Definition of whitespace'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components

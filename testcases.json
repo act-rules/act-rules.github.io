@@ -8482,7 +8482,7 @@
       "relativePath": "testcases/59796f/bd1c895bd29e87165b7e3bb21d7a3412975893c3.html",
       "expected": "passed",
       "ruleId": "59796f",
-      "ruleName": "Image button has accessible non-empty name",
+      "ruleName": "Image button has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/59796f",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -8518,7 +8518,7 @@
       "relativePath": "testcases/59796f/0b219e427b84db4c85edc337a456f482a0b0cf0d.html",
       "expected": "passed",
       "ruleId": "59796f",
-      "ruleName": "Image button has accessible non-empty name",
+      "ruleName": "Image button has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/59796f",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -8554,7 +8554,7 @@
       "relativePath": "testcases/59796f/7fcd19a5b5ab7cb081df0e33cd5fda2c0bee4915.html",
       "expected": "passed",
       "ruleId": "59796f",
-      "ruleName": "Image button has accessible non-empty name",
+      "ruleName": "Image button has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/59796f",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -8590,7 +8590,7 @@
       "relativePath": "testcases/59796f/4a28f28d32d2a13a41b1d23eea24ee406f3952d8.html",
       "expected": "passed",
       "ruleId": "59796f",
-      "ruleName": "Image button has accessible non-empty name",
+      "ruleName": "Image button has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/59796f",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -8626,7 +8626,7 @@
       "relativePath": "testcases/59796f/0c1bc54a75b855978ab9dc36995aa7b4aa989093.html",
       "expected": "failed",
       "ruleId": "59796f",
-      "ruleName": "Image button has accessible non-empty name",
+      "ruleName": "Image button has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/59796f",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -8662,7 +8662,7 @@
       "relativePath": "testcases/59796f/f77e42583860e422fd19a03fc3a3d49749c11074.html",
       "expected": "failed",
       "ruleId": "59796f",
-      "ruleName": "Image button has accessible non-empty name",
+      "ruleName": "Image button has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/59796f",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -8698,7 +8698,7 @@
       "relativePath": "testcases/59796f/e5ca3711c3a3ce76e765dbc52b2d0ce370df2042.html",
       "expected": "failed",
       "ruleId": "59796f",
-      "ruleName": "Image button has accessible non-empty name",
+      "ruleName": "Image button has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/59796f",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -8734,7 +8734,7 @@
       "relativePath": "testcases/59796f/f11d77fb406c27bc8889222f421cdd5e190de735.html",
       "expected": "inapplicable",
       "ruleId": "59796f",
-      "ruleName": "Image button has accessible non-empty name",
+      "ruleName": "Image button has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/59796f",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -8770,7 +8770,7 @@
       "relativePath": "testcases/59796f/e270162cd127ee4276c4b66f272879aab3d9573c.html",
       "expected": "inapplicable",
       "ruleId": "59796f",
-      "ruleName": "Image button has accessible non-empty name",
+      "ruleName": "Image button has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/59796f",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -8806,7 +8806,7 @@
       "relativePath": "testcases/59796f/3b874b8bb79623367359108cfbfb5ed9484838ce.html",
       "expected": "inapplicable",
       "ruleId": "59796f",
-      "ruleName": "Image button has accessible non-empty name",
+      "ruleName": "Image button has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/59796f",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -8842,7 +8842,7 @@
       "relativePath": "testcases/59796f/70340723cc57ffa99ada29332025eecac5f56848.html",
       "expected": "inapplicable",
       "ruleId": "59796f",
-      "ruleName": "Image button has accessible non-empty name",
+      "ruleName": "Image button has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/59796f",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -8878,7 +8878,7 @@
       "relativePath": "testcases/59796f/8c8112b6818dea48235bc4ef7b23b47f58a77be1.html",
       "expected": "inapplicable",
       "ruleId": "59796f",
-      "ruleName": "Image button has accessible non-empty name",
+      "ruleName": "Image button has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/59796f",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {

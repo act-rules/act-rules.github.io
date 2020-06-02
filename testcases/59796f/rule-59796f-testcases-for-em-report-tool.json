@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Image button has accessible non-empty name",
+      "title": "Report for ACT-R Rule - Image button has non-empty accessible name",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Image button has accessible non-empty name",
+          "siteName": "ACT-R Rule - Image button has non-empty accessible name",
           "siteScope": "https://act-rules.github.io/testcases/59796f/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

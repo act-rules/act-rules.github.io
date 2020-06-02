@@ -155,8 +155,6 @@ The content of this link is [non-text content][].
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
-[explicit role]: #explicit-role 'Definition of explicit role'
-[focusable]: #focusable 'Definition of focusable'
 [non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content 'Definition of Non-text content'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic role'

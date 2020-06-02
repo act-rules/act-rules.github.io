@@ -14,4 +14,3 @@ _Note:_ This definition intentionally differs from the [BCP 47][] syntax as user
 [language subtag registry]: http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
 [primary language subtag]: https://tools.ietf.org/html/bcp47#section-2.2.1
 [selectors level 3]: https://drafts.csswg.org/selectors-3/#lang-pseudo
-[subtag]: https://tools.ietf.org/html/bcp47#section-2.2

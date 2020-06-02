@@ -398,7 +398,5 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 [visible]: #visible 'Definition of visible'
 [text node]: https://dom.spec.whatwg.org/#text 'Definition of text node'
 [purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'Definition of purely decorative'
-[explicit role]: #explicit-role 'Definition of explicit role'
-[focusable]: #focusable 'Definition of focusable'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of semantic role'

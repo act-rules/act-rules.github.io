@@ -1,9 +1,9 @@
 ---
 id: ffd0e9
-name: Heading has accessible name
+name: Heading has accessible non-empty name
 rule_type: atomic
 description: |
-  This rule checks that each heading has an accessible name.
+  This rule checks that each heading has a non-empty accessible name.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true
@@ -170,7 +170,6 @@ This `h1` element is not [included in the accessibility tree][].
 [accessible name]: #accessible-name 'Definition of accessible name'
 [accessible name and description computation]: https://www.w3.org/TR/accname
 [explicit role]: #explicit-role 'Definition of explicit role'
-[focusable]: #focusable 'Definition of focusable'
 [global]: https://www.w3.org/TR/wai-aria-1.1/#global_states 'Definition of Global ARIA States and Properties'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'

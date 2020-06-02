@@ -139,12 +139,9 @@ There are only [semantic links][semantic link] in the inline block of content.
 <p><a href="https://www.w3.org">W3C </a><span role="link" onclick="location='https://www.w3.org/WAI/'">WAI</span></p>
 ```
 
-[br]: https://html.spec.whatwg.org/#the-br-element
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [distinguishing style]: #distinguishing-styles 'Definition of distinguishing styles'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
-[inline box]: https://drafts.csswg.org/css-display/#inline-box 'Definition of inline box'
-[line box]: https://drafts.csswg.org/css2/visuren.html#line-box 'Definition of line box'
 [rendered on a line]: #rendered-on-a-line 'Definition of rendered on a line'
 [semantic link]: #semantic-link 'Definition of semantic link'
 [semantic role]: #semantic-role 'Definition of semantic role'

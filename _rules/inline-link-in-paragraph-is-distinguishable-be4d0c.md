@@ -333,7 +333,6 @@ There are only [semantic links][semantic link] in the inline block of content.
 
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
-[inline box]: https://drafts.csswg.org/css-display/#inline-box 'Definition of inline box'
 [outcome]: #outcome 'Definition of outcome'
 [rendered on a line]: #rendered-on-a-line 'Definition of rendered on a line'
 [semantic link]: #semantic-link 'Definition of semantic link'

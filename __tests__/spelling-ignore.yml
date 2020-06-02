@@ -76,6 +76,8 @@
 - fieldsets
 - ascii # lowercase needed in reference list
 - CMS
+- clientRects
+- getClientRects
 
 # Parts of url
 - http
@@ -96,20 +98,6 @@
 # Notes and acronyms
 - TODO
 - TBD
-
-# Parts of url
-- http
-- https
-- github.com
-- www.w3.org
-- eval
-- html52
-- css-scoping
-- csswg
-- whatwg
-- dom
-- wai-aria
-- multipage
 
 # Tool and library names
 - axe-core

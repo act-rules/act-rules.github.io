@@ -263,6 +263,29 @@ This link, that is a descendant of a paragraph element, has a not visible border
 <p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
+#### Failed Example 4
+
+This link, that is a descendant of a paragraph element, does not have a text contrast of more than 3:1 compared to the other text in the paragraph.
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a {
+		text-decoration: none;
+		color: #555555;
+		background-color: white;
+	}
+	a:hover,
+	a:focus {
+		text-decoration: underline;
+	}
+</style>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -298,6 +321,14 @@ Each link is the only content in the inline block of content it belongs to.
 	<li><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html">SC 1.1.1</a></li>
 	<li><a href="https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded">SC 1.2.1</a></li>
 </ul>
+```
+
+#### Inapplicable Example 5
+
+There are only [semantic links][semantic link] in the inline block of content.
+
+```html
+<p><a href="https://www.w3.org">W3C </a><span role="link" onclick="location='https://www.w3.org/WAI/'">WAI</span></p>
 ```
 
 #### Inapplicable Example 5

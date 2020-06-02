@@ -32,14 +32,12 @@ Within the test target, there is an [initial segment][] of the [focusable][] ele
 
 - is [included in the accessibility tree][]; and
 - is [visible][] when [focused][]; and
-- has a [semantic role][] of link; and
-- can be [activated][] by use of keyboard only; and
+- has a [semantic role][] of `link`; and
+- can be [activated][] by use of keyboard; and
 - when [activated][], moves focus [at the start][] of a [section of content][] within the same [document][]; and
 - has an [accessible name][] that communicates that it links to that specific [section of content][].
 
 **Note:** There is no requirement on how many [focusable][] elements are part of that [initial segment][], nor any requirement to provide a way to determine (programmatically or not) where that [initial segment][] stops. Technique [G124: Adding links at the top of the page to each area of the content](https://www.w3.org/WAI/WCAG21/Techniques/general/G124), and this rule, only require that such a set exists.
-
-**Note for reviewers**: An attempt to clarify what this initial segment has to be is done in the second expectation: it must contain exactly one link for each section of content in the page. I am still not very happy with the formulation, nor with the order of these two expectations. Any suggestions to improve that are welcome…
 
 ## Expectation 2
 

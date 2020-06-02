@@ -356,6 +356,7 @@ This [document][] is not an [HTML web page][].
 [accessible name]: #accessible-name 'Definition of accessible name'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[instrument]: #instrument 'Definition of instrument'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of landmark roles'
 [tech scr28]: https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR28 'Technique SCR28: Using an expandable and collapsible menu to bypass block of content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1: Bypass blocks'

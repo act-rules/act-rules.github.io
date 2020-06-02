@@ -165,7 +165,6 @@ This [document][] is not an [HTML web page][].
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of landmark roles'
 [main section of content]: #main-section-of-content 'Definition of main section of content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1: Bypass blocks'
-[section of content]: #section-of-content 'Definition of section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [tech aria11]: https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11
 [visible]: #visible 'Definition of visible'

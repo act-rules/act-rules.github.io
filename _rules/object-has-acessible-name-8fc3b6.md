@@ -52,10 +52,7 @@ Non supported media formats make screen readers render the text content of the e
 This `object` element has a non-empty [accessible name][] through its `aria-label` attribute.
 
 ```html
-<object
-  aria-label="Moon speech"
-  data="/test-assets/moon-audio/moon-speech.mp3"
-></object>
+<object aria-label="Moon speech" data="/test-assets/moon-audio/moon-speech.mp3"></object>
 ```
 
 #### Passed Example 2
@@ -63,10 +60,7 @@ This `object` element has a non-empty [accessible name][] through its `aria-labe
 This `object` element has a non-empty [accessible name][] through its `title` attribute.
 
 ```html
-<object
-  title="Moon speech"
-  data="/test-assets/moon-audio/moon-speech.mp3"
-></object>
+<object title="Moon speech" data="/test-assets/moon-audio/moon-speech.mp3"></object>
 ```
 
 #### Passed Example 3
@@ -75,10 +69,7 @@ This `object` element has a non-empty [accessible name][] through its `aria-labe
 
 ```html
 <span id="label">Moon speech</span>
-<object
-  aria-labelledby="label"
-  data="/test-assets/moon-audio/moon-speech.mp3"
-></object>
+<object aria-labelledby="label" data="/test-assets/moon-audio/moon-speech.mp3"></object>
 ```
 
 #### Passed Example 4
@@ -87,20 +78,16 @@ This `object` element placed off screen has a non-empty [accessible name][].
 
 ```html
 <html>
-  <style>
-    .offScreen {
-      position: absolute;
-      left: -9999px;
-      top: -9999px;
-    }
-  </style>
-  <body>
-    <object
-      title="Moon speech"
-      data="/test-assets/moon-audio/moon-speech.mp3"
-      class="offScreen"
-    ></object>
-  </body>
+	<style>
+		.offScreen {
+			position: absolute;
+			left: -9999px;
+			top: -9999px;
+		}
+	</style>
+	<body>
+		<object title="Moon speech" data="/test-assets/moon-audio/moon-speech.mp3" class="offScreen"></object>
+	</body>
 </html>
 ```
 
@@ -119,11 +106,7 @@ This `object` element has an empty [accessible name][].
 This `object` element has an empty [accessible name][].
 
 ```html
-<span id="label"></span>
-<object
-  aria-labelledby="label"
-  data="/test-assets/moon-audio/moon-speech.mp3"
-></object>
+<span id="label"></span> <object aria-labelledby="label" data="/test-assets/moon-audio/moon-speech.mp3"></object>
 ```
 
 #### Failed Example 3
@@ -131,10 +114,7 @@ This `object` element has an empty [accessible name][].
 This `object` element has an empty [accessible name][] because the `aria-labelledby` attribute references a non-existing id.
 
 ```html
-<object
-  aria-labelledby="download"
-  data="/test-assets/moon-audio/moon-speech.mp3"
-></object>
+<object aria-labelledby="download" data="/test-assets/moon-audio/moon-speech.mp3"></object>
 ```
 
 #### Failed Example 4
@@ -152,10 +132,7 @@ This `object` element has an empty [accessible name][].
 This `object` element is not [included in the accessibility tree][] due to `display:none`.
 
 ```html
-<object
-  data="/test-assets/moon-audio/moon-speech.mp3"
-  style="display: none;"
-></object>
+<object data="/test-assets/moon-audio/moon-speech.mp3" style="display: none;"></object>
 ```
 
 #### Inapplicable Example 2
@@ -163,10 +140,7 @@ This `object` element is not [included in the accessibility tree][] due to `disp
 This `object` element is not [included in the accessibility tree][] due to `visibility: hidden`.
 
 ```html
-<object
-  data="/test-assets/moon-audio/moon-speech.mp3"
-  style="visibility: hidden;"
-></object>
+<object data="/test-assets/moon-audio/moon-speech.mp3" style="visibility: hidden;"></object>
 ```
 
 #### Inapplicable Example 3
@@ -174,10 +148,7 @@ This `object` element is not [included in the accessibility tree][] due to `visi
 This `object` element is not [included in the accessibility tree][] due to `aria-hidden="true"`.
 
 ```html
-<object
-  data="/test-assets/moon-audio/moon-speech.mp3"
-  aria-hidden="true"
-></object>
+<object data="/test-assets/moon-audio/moon-speech.mp3" aria-hidden="true"></object>
 ```
 
 #### Inapplicable Example 4
@@ -185,12 +156,7 @@ This `object` element is not [included in the accessibility tree][] due to `aria
 This `object` element is not [included in the accessibility tree][] because it is marked as decorative through `role="presentation"`.
 
 ```html
-<object
-  type="image/png"
-  role="presentation"
-  data="/test-assets/contrast/example.png"
->
-</object>
+<object type="image/png" role="presentation" data="/test-assets/contrast/example.png"> </object>
 ```
 
 #### Inapplicable Example 5
@@ -198,12 +164,8 @@ This `object` element is not [included in the accessibility tree][] because it i
 There is no `object` element.
 
 ```html
-<audio
-  title="Moon speech"
-  src="/test-assets/contrast/example.png"
->
-</audio>
+<audio title="Moon speech" src="/test-assets/contrast/example.png"></audio>
 ```
 
-[accessible name]: #accessible-name "Definition of accessible name"
-[included in the accessibility tree]: #included-in-the-accessibility-tree "Definition of included in the accessibility tree"
+[accessible name]: #accessible-name 'Definition of accessible name'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

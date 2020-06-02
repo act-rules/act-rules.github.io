@@ -1,9 +1,9 @@
 ---
 id: de46e4
-name: Element within `body` has valid `lang` attribute
+name: Element with `lang` attribute has valid language tag
 rule_type: atomic
 description: |
-  This rule checks that the `lang` attribute of an element in the page body has a valid primary language subtag.
+  This rule checks that a non-empty `lang` attribute of an element in the page body has a has a language tag with a known primary language subtag.
 accessibility_requirements:
   wcag20:3.1.2: # Language of Parts (AA)
     forConformance: true
@@ -33,18 +33,18 @@ This rules applies to any HTML element that:
 
 ## Expectation
 
-For each test target, the `lang` attribute has a [valid language subtag](#valid-language-subtag).
+For each test target, the `lang` attribute has a [valid language tag][].
 
 ## Assumptions
 
 - The `lang` attribute is assumed to be used to indicate the language of a section of the content. If the `lang` attribute is used for something else (for example to indicate a `code` element contains CSS), the content may still conform to WCAG despite failing this rule.
-- This rule assumes that user agents and assistive technologies can programmatically determine [valid language subtags](#valid-language-subtag) even if these do not conform to the [BCP 47][] syntax.
-- This rule assumes that [grandfathered tags][] are not used as these will not be recognized as [valid language subtags](#valid-language-subtag).
+- This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags](#valid-language-tag) even if these do not conform to the [BCP 47][] syntax.
+- This rule assumes that [grandfathered tags][] are not used as these will not be recognized as [valid language tags](#valid-language-tag).
 - The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page).
 
 ## Accessibility Support
 
-There are differences in how assistive technologies handle unknown and invalid language subtags. Some will default to the language of the page, whereas others will default to the closest ancestor with a valid lang attribute.
+There are differences in how assistive technologies handle unknown and invalid language tags. Some will default to the language of the page, whereas others will default to the closest ancestor with a valid lang attribute.
 
 ## Background
 
@@ -59,7 +59,7 @@ There are differences in how assistive technologies handle unknown and invalid l
 
 #### Passed Example 1
 
-The `lang` attribute has a value that is not empty ("") and has a valid primary language subtag.
+The `lang` attribute has a value that is not empty ("") and has a valid language tag.
 
 ```html
 <html>
@@ -71,7 +71,7 @@ The `lang` attribute has a value that is not empty ("") and has a valid primary 
 
 #### Passed Example 2
 
-The `lang` attribute has a value that is not empty ("") and has a valid primary language subtag. The region section in the value is ignored by the rule.
+The `lang` attribute has a value that is not empty ("") and has a valid language tag. The region section in the value is ignored by the rule.
 
 ```html
 <html>
@@ -83,7 +83,7 @@ The `lang` attribute has a value that is not empty ("") and has a valid primary 
 
 #### Passed Example 3
 
-The `lang` attribute value has a valid primary language subtag, but a syntactically invalid region subtag.
+The `lang` attribute value has a valid language tag, but a syntactically invalid region subtag.
 
 ```html
 <html>
@@ -97,7 +97,7 @@ The `lang` attribute value has a valid primary language subtag, but a syntactica
 
 #### Failed Example 1
 
-The `lang` attribute value is not a valid primary language subtag.
+The `lang` attribute value is not a primary language subtag.
 
 ```html
 <html>
@@ -109,7 +109,7 @@ The `lang` attribute value is not a valid primary language subtag.
 
 #### Failed Example 2
 
-The `lang` attribute value is not empty ("") and is not a valid primary language subtag.
+The `lang` attribute value is not empty ("") and is not a primary language subtag.
 
 ```html
 <html>
@@ -121,7 +121,7 @@ The `lang` attribute value is not empty ("") and is not a valid primary language
 
 #### Failed Example 3
 
-The `lang` attribute value consists of only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace) and is not a valid primary language subtag.
+The `lang` attribute value consists of only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace) and is not a [valid language tag][].
 
 ```html
 <html>
@@ -159,3 +159,4 @@ An empty value for the `lang` attribute is ignored, as the rule only applies to 
 
 [grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
 [bcp 47]: https://tools.ietf.org/html/bcp47#section-2.1
+[valid language tag]: #valid-language-tag

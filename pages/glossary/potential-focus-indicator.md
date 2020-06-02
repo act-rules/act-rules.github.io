@@ -7,7 +7,7 @@ input_aspects:
   - DOM tree
 ---
 
-An element I is a _potential focus indicator_ for a [focusable][] element F is one of the following conditions is true:
+An element I is a _potential focus indicator_ for a [focusable][] element F if one of the following conditions is true:
 
 - **isolating common ancestor** I and F have a common [inclusive ancestor][] in the [flat tree][] which is not the [inclusive ancestor][] in the [flat tree][] of any other [focusable][] element, except descendants of F; or
 - **neighbours** I has an [inclusive ancestor][] in the [flat tree][], I', and F has an [inclusive ancestor][] in the [flat tree][], F', such that:

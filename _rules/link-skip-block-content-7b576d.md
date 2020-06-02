@@ -35,7 +35,7 @@ For each [section of repeated content][] within the test target, either the last
 - is [included in the accessibility tree][]; and
 - is [visible][] when [focused][]; and
 - can be [activated][] by use of keyboard; and
-- has an [accessible name][] that communicates that it skips this [section of content][]; and
+- has an [accessible name][] that communicates that it skips this [section of repeated content][]; and
 - when [activated][], moves keyboard focus to a node which is [at the end][] of this [section of repeated content][].
 
 **Note:** "last" and "first" [focusable][] elements are to be taken in focus order, not in [tree order][].

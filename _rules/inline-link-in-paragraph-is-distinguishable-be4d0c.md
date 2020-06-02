@@ -331,14 +331,6 @@ There are only [semantic links][semantic link] in the inline block of content.
 <p><a href="https://www.w3.org">W3C </a><span role="link" onclick="location='https://www.w3.org/WAI/'">WAI</span></p>
 ```
 
-#### Inapplicable Example 5
-
-There are only [semantic links][semantic link] in the inline block of content.
-
-```html
-<p><a href="https://www.w3.org">W3C </a><span role="link" onclick="location='https://www.w3.org/WAI/'">WAI</span></p>
-```
-
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [inline box]: https://drafts.csswg.org/css-display/#inline-box 'Definition of inline box'

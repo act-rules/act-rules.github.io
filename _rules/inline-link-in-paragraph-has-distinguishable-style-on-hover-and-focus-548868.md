@@ -26,8 +26,7 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], f
 
 Each target element has:
 
-- a [computed][] [foreground color][] different from the [computed][] [foreground color][] of the other [descendant][] elements of the same [line box][] that do not contain [visible][] [text nodes][text node] of [semantic links][semantic link] (if all such elements have the same [foreground color][]);
-- a difference between the [foreground colors][foreground color] that has at least a 3:1 [contrast ratio](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio); and
+- a [highest possible contrast][] that is at least 3.0:1 between its [foreground color][] and the [foreground color][] of the [visible][] [text nodes][text node] [rendered on the same line][rendered on a line] that are not [descendants][descendant] in the [flat tree][] of a [semantic link][]; and
 - a [distinguishing style][] both when the target element [gains focus][focused] and the target element is [hovered][].
 
 ## Assumptions
@@ -90,6 +89,29 @@ This link, that is a descendant of a paragraph element, has no visual cues of be
 <p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
+#### Failed Example 2
+
+This link, that is a descendant of a paragraph element, does not have a text contrast of more than 3:1 compared to the other text in the paragraph.
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a {
+		text-decoration: none;
+		color: #555555;
+		background-color: white;
+	}
+	a:hover,
+	a:focus {
+		text-decoration: underline;
+	}
+</style>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -100,7 +122,7 @@ There is no [semantic link][] element.
 <p>Read about WAI on the <u>underlined text</u>.</p>
 ```
 
-#### Inapplicable Example 2 
+#### Inapplicable Example 2
 
 This link is not [visible][].
 
@@ -141,7 +163,7 @@ There are only [semantic links][semantic link] in the inline block of content.
 [distinguishing style]: #distinguishing-styles 'Definition of distinguishing styles'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [focused]: #focused 'Definition of focused'
-[foreground color]: https://www.w3.org/TR/css-color-3/#foreground
+[foreground color]: #foreground-colors-of-text 'Definition of foreground colors of text'
 [hovered]: #hovered 'Definition of hovered'
 [inline box]: https://drafts.csswg.org/css-display/#inline-box 'Definition of inline box'
 [line box]: https://drafts.csswg.org/css2/visuren.html#line-box 'Definition of line box'

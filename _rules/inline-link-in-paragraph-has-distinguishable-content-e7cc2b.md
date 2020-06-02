@@ -12,19 +12,15 @@ acknowledgments:
   authors:
     - Brian Bors
     - Carlos Duarte
-  previous authors:
     - Wilco Fiers
 ---
 
 ## Applicability
 
-This rule applies to:
-- **(visible link)** any [visible][] HTML element that is a [semantic link][],
-- **(belongs to a line box)** where the closest element (including itself) that generates an [inline box][] is part of a [line box][], 
-- **(with other elements)** which has [inline boxes][inline box] generated from an element containing [visible][] [text nodes][text node], 
-- **(that are not links)** which do not have a [semantic link][] as a [descendant][] in the [flat tree][].
+This rule applies to any [visible][] HTML element that is a [semantic link][], for which all the following is true:
 
-**Note:** The test targets are visible link elements that are part of a block of content that is displayed inline.
+- **link text**: The element has [visible][] [text nodes][text node] as [descendants][descendant] in the [flat tree][]; and
+- **non-link line text**: The element is [rendered on a line][] containing [visible][] [text nodes][text node] that are not [descendants][descendant] in the [flat tree][] of a [semantic link][].
 
 ## Expectation
 
@@ -143,6 +139,7 @@ There are only [semantic links][semantic link] in the inline block of content.
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [inline box]: https://drafts.csswg.org/css-display/#inline-box 'Definition of inline box'
 [line box]: https://drafts.csswg.org/css2/visuren.html#line-box 'Definition of line box'
+[rendered on a line]: #rendered-on-a-line 'Definition of rendered on a line'
 [semantic link]: #semantic-link 'Definition of semantic link'
 [text node]: https://dom.spec.whatwg.org/#text
 [visible]: #visible 'Definition of visible'

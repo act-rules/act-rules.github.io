@@ -41,7 +41,7 @@ Non supported media formats make screen readers render the text content of the e
 
 ## Background
 
-- [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html>)
+- [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 
 ## Test Cases
 
@@ -153,7 +153,7 @@ This `object` element is not [included in the accessibility tree][] due to `aria
 
 #### Inapplicable Example 4
 
-This `object` element is is not [included in the accessibility tree][] because it is marked as decorative through `role="presentation"`.
+This `object` element is not [included in the accessibility tree][] because it is marked as decorative through `role="presentation"`.
 
 ```html
 <object type="image/png" role="presentation" data="/test-assets/contrast/example.png"> </object>

@@ -96,6 +96,8 @@ This link, that is a descendant of a paragraph element, has a not visible border
 		background-color: white;
 	}
 	a.test {
+		color: blue;
+		background-color: white;
 		text-decoration: none;
 		border-style: solid;
 		border-color: blue;

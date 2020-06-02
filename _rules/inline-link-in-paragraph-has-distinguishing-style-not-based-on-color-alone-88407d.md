@@ -104,7 +104,7 @@ There is no [semantic link][] element.
 <p>Read about WAI on the <u>underlined text</u>.</p>
 ```
 
-#### Inapplicable Example 2 
+#### Inapplicable Example 2
 
 This link is not [visible][].
 

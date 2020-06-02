@@ -15,7 +15,7 @@ Any [flat tree][] [descendants][] of _line rendering nodes_ are also considered 
 
 [absolute]: https://drafts.csswg.org/css-position-3/#valdef-position-absolute 'Definition of absolute'
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'Definition of ancestor'
-[clientRects]: https://drafts.csswg.org/cssom-view/#dom-element-getclientrects 'Definition of getClientRects'
+[clientrects]: https://drafts.csswg.org/cssom-view/#dom-element-getclientrects 'Definition of getClientRects'
 [descendants]: https://dom.spec.whatwg.org/#concept-tree-descendant 'Definition of descendant'
 [fixed]: https://drafts.csswg.org/css-position-3/#valdef-position-fixed 'Definition of fixed'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'

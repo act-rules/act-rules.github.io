@@ -20,7 +20,7 @@ input_rules:
 acknowledgments:
   authors:
     - Brian Bors
-	- Carlos Duarte
+    - Carlos Duarte
     - Wilco Fiers
 ---
 

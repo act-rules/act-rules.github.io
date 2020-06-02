@@ -57,7 +57,7 @@ This link, that is a descendant of a paragraph element, has an icon that makes i
 </style>
 <p>
 	Read about WAI on the
-	<a class="test" href="http://w3.org/WAI">WAI webpage <img src="/test-assets/be4d0c/icon.png" alt=""/></a>.
+	<a class="test" href="http://w3.org/WAI">WAI webpage <img src="/test-assets/be4d0c/icon.png" alt="" /></a>.
 </p>
 ```
 
@@ -99,7 +99,7 @@ There is no [semantic link][] element.
 <p>Read about WAI on the <u>underlined text</u>.</p>
 ```
 
-#### Inapplicable Example 2 
+#### Inapplicable Example 2
 
 This link is not [visible][].
 

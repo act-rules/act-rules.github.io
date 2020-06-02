@@ -9,4 +9,3 @@ input_aspects:
 ---
 
 The colors of all pixels, excluding the [foreground colors](#foreground-colors-of-text) pixels, in the element's [bounding client rectangle](https://drafts.csswg.org/cssom-view/#dom-element-getboundingclientrect).
-

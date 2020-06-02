@@ -24,7 +24,7 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], f
 
 ## Expectation
 
-Each target element has a [visible] [`box-shadow`][box-shadow].
+Each target element has a [visible][`box-shadow`][box-shadow].
 
 ## Assumptions
 
@@ -88,7 +88,7 @@ There is no [semantic link][] element.
 <p>Read about WAI on the <u>underlined text</u>.</p>
 ```
 
-#### Inapplicable Example 2 
+#### Inapplicable Example 2
 
 This link is not [visible][].
 

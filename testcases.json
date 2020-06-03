@@ -6304,7 +6304,7 @@
       "relativePath": "testcases/ffd0e9/40cdb61e90c0625bbdb387c69146aae445c09260.html",
       "expected": "passed",
       "ruleId": "ffd0e9",
-      "ruleName": "Heading has accessible non-empty name",
+      "ruleName": "Heading has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/ffd0e9",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -6328,7 +6328,7 @@
       "relativePath": "testcases/ffd0e9/18a3021648c1a2641ac73b0d5afb3cd3e94d8566.html",
       "expected": "passed",
       "ruleId": "ffd0e9",
-      "ruleName": "Heading has accessible non-empty name",
+      "ruleName": "Heading has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/ffd0e9",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -6352,7 +6352,7 @@
       "relativePath": "testcases/ffd0e9/8abda5f6b5abbb9e7817326564623288748b8d76.html",
       "expected": "passed",
       "ruleId": "ffd0e9",
-      "ruleName": "Heading has accessible non-empty name",
+      "ruleName": "Heading has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/ffd0e9",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -6376,7 +6376,7 @@
       "relativePath": "testcases/ffd0e9/69502e77fd11eb9140262596a47ccec9af307480.html",
       "expected": "passed",
       "ruleId": "ffd0e9",
-      "ruleName": "Heading has accessible non-empty name",
+      "ruleName": "Heading has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/ffd0e9",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -6400,7 +6400,7 @@
       "relativePath": "testcases/ffd0e9/cf2817803717c986d3c8dc9873acd47b26c1d038.html",
       "expected": "passed",
       "ruleId": "ffd0e9",
-      "ruleName": "Heading has accessible non-empty name",
+      "ruleName": "Heading has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/ffd0e9",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -6424,7 +6424,7 @@
       "relativePath": "testcases/ffd0e9/60b1321f0983c812f029e4fef6e20f6336cc52ad.html",
       "expected": "failed",
       "ruleId": "ffd0e9",
-      "ruleName": "Heading has accessible non-empty name",
+      "ruleName": "Heading has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/ffd0e9",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -6448,7 +6448,7 @@
       "relativePath": "testcases/ffd0e9/7d48a81a053600271e09c448e9dcdb0826ffeb8b.html",
       "expected": "failed",
       "ruleId": "ffd0e9",
-      "ruleName": "Heading has accessible non-empty name",
+      "ruleName": "Heading has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/ffd0e9",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -6472,7 +6472,7 @@
       "relativePath": "testcases/ffd0e9/4ef34f13e11aebb02d5eded74c5484fc0fbe4586.html",
       "expected": "failed",
       "ruleId": "ffd0e9",
-      "ruleName": "Heading has accessible non-empty name",
+      "ruleName": "Heading has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/ffd0e9",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -6496,7 +6496,7 @@
       "relativePath": "testcases/ffd0e9/844509125cecc49eac42403d1fbbc84f49a74ca2.html",
       "expected": "failed",
       "ruleId": "ffd0e9",
-      "ruleName": "Heading has accessible non-empty name",
+      "ruleName": "Heading has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/ffd0e9",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -6520,7 +6520,7 @@
       "relativePath": "testcases/ffd0e9/ea1570a1439bc115da156585e18a4fadb4b04d01.html",
       "expected": "failed",
       "ruleId": "ffd0e9",
-      "ruleName": "Heading has accessible non-empty name",
+      "ruleName": "Heading has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/ffd0e9",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -6544,7 +6544,7 @@
       "relativePath": "testcases/ffd0e9/480d36e5d476b319c92b06dbda6422abe35e06fa.html",
       "expected": "failed",
       "ruleId": "ffd0e9",
-      "ruleName": "Heading has accessible non-empty name",
+      "ruleName": "Heading has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/ffd0e9",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -6568,7 +6568,7 @@
       "relativePath": "testcases/ffd0e9/390ada12306aa86ba4da3131617f1b0a98111b7f.html",
       "expected": "inapplicable",
       "ruleId": "ffd0e9",
-      "ruleName": "Heading has accessible non-empty name",
+      "ruleName": "Heading has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/ffd0e9",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -6592,7 +6592,7 @@
       "relativePath": "testcases/ffd0e9/02156af5ed0fd0b6ffb49e8ff87649cd199ad9bc.html",
       "expected": "inapplicable",
       "ruleId": "ffd0e9",
-      "ruleName": "Heading has accessible non-empty name",
+      "ruleName": "Heading has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/ffd0e9",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {

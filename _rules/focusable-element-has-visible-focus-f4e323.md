@@ -24,7 +24,7 @@ The rule applies to any [focusable][] element.
 
 ## Expectation
 
-For each target element, there exists a set of [focus indicators][focus indicator] which are not all also [potential focus indicators][potential focus indicator] for another [focusable][] element (the same for all the indicators).
+For each target element, there exists a set of [focus indicators][focus indicator] which are not all also [focus indicators][potential focus indicator] for another [focusable][] element (the same for all the indicators).
 
 ## Assumptions
 

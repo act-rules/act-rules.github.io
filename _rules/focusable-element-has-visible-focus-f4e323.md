@@ -46,10 +46,23 @@ WCAG does not have any requirement of how big or small focus indicator should be
 
 #### Passed Example 1
 
-Description...
+All of the focusable elements in this document are [focus indicator][] for themselves as default User Agent's styling makes the focus visible.
 
 ```html
-<!-- code -->
+<input type="text" name="address" placeholder="address" /> <input type="checkbox" /><span>I love WCAG!</span>
+<button>Click me!</button>
+<a href="https://act-rules.github.io/">ACT rules</a>
+
+<select>
+	<option value="volvo">Volvo</option>
+	<option value="saab">Saab</option>
+	<option value="opel">Opel</option>
+</select>
+
+<form>
+	<input type="radio" name="sex" value="male" id="sm" class="show-label" /> <label for="sm">Male</label><br />
+	<input type="radio" name="sex" value="female" id="sf" /> <label for="sf">Female</label>
+</form>
 ```
 
 #### Passed Example 2

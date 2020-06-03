@@ -24,7 +24,7 @@ The rule applies to any [focusable][] element.
 
 ## Expectation
 
-For each target element, there exists a set of [focus indicators][focus indicator] which are not all also [focus indicators][focus indicator] for another [focusable][] element.
+For each target element, there exists a set of [focus indicators][focus indicator] which are not all also [potential focus indicators][potential focus indicator] for another [focusable][] element (the same for all the indicators).
 
 ## Assumptions
 
@@ -86,6 +86,7 @@ Description...
 
 [focusable]: #focusable 'Definition of Focusable'
 [focus indicator]: #focus-indicator 'Definition of Focus Indicator'
+[potential focus indicator]: #potential-focus-indicator 'Definition of Potential focus Indicator'
 [sc247]: https://www.w3.org/TR/WCAG21/#focus-visible 'Success Criterion 2.4.7: Focus Visible'
 [usc247]: https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html 'Understanding Success Criterion 2.4.7: Focus Visible'
 [usc2411]: https://w3c.github.io/wcag/understanding/focus-visible-enhanced.html 'Understanding Success Criterion 2.4.11: Focus Visible (Enhanced) (WCAG 2.2 proposal)'

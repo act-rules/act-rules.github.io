@@ -1,0 +1,18 @@
+.indicator {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+}
+
+.solid.active {
+	background-color: navy;
+}
+
+.border.active {
+	border: medium solid navy;
+}
+
+.no-focus-default:focus {
+	/* Never do that without defining other focus indication! */
+	outline: none;
+}

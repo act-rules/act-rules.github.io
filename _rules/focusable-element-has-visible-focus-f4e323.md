@@ -343,7 +343,8 @@ This document contains no [focusable][] element.
 <span>ACT rules</span>
 ```
 
-[distinguishing styles]: #distinguishing-styles 'Definition of Distinguishing styles'[focusable]: #focusable 'Definition of Focusable'
+[distinguishing styles]: #distinguishing-styles 'Definition of Distinguishing styles'
+[focusable]: #focusable 'Definition of Focusable'
 [focus indicator]: #focus-indicator 'Definition of Focus Indicator'
 [potential focus indicator]: #potential-focus-indicator 'Definition of Potential focus Indicator'
 [sc247]: https://www.w3.org/TR/WCAG21/#focus-visible 'Success Criterion 2.4.7: Focus Visible'

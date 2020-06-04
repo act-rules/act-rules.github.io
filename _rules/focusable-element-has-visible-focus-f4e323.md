@@ -75,7 +75,7 @@ All the [focusable][] elements in this document are [focus indicator][] for them
 <span tabindex="0">Act rules</span>
 ```
 
-### Passed Example 2
+#### Passed Example 2
 
 This [focusable][] element has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**isolating common ancestor**) condition).
 
@@ -343,7 +343,7 @@ This document contains no [focusable][] element.
 <span>ACT rules</span>
 ```
 
-[focusable]: #focusable 'Definition of Focusable'
+[distinguishing styles]: #distinguishing-styles 'Definition of Distinguishing styles'[focusable]: #focusable 'Definition of Focusable'
 [focus indicator]: #focus-indicator 'Definition of Focus Indicator'
 [potential focus indicator]: #potential-focus-indicator 'Definition of Potential focus Indicator'
 [sc247]: https://www.w3.org/TR/WCAG21/#focus-visible 'Success Criterion 2.4.7: Focus Visible'

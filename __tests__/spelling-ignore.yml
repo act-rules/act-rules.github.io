@@ -76,6 +76,9 @@
 - fieldsets
 - ascii # lowercase needed in reference list
 - CMS
+- MathML
+- 2D # used for referencing step in accessible name computation
+- 2d # used for referencing step in accessible name computation
 
 # Parts of url
 - http

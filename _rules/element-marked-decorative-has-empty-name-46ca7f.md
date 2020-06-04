@@ -50,6 +50,7 @@ _No accessibility support issues known._
 - [Understanding Success Criterion 1.1.1: Non-text Content][usc111]
 - [Technique F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them][f38]
 - [Technique F39: Failure of Success Criterion 1.1.1 due to providing a text alternative that is not null (e.g., alt="spacer" or alt="image") for images that should be ignored by assistive technology][f39]
+- [Technique H67: Using null alt text and no title attribute on img elements for images that AT should ignore][h67]
 
 ## Test Cases
 

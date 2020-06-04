@@ -1,6 +1,6 @@
 ---
 id: ffd0e9
-name: Heading has accessible non-empty name
+name: Heading has non-empty accessible name
 rule_type: atomic
 description: |
   This rule checks that each heading has a non-empty accessible name.

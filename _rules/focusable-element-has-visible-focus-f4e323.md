@@ -50,7 +50,7 @@ WCAG does not have any requirement of how big or small focus indicator should be
 
 All the [focusable][] elements in this document are [focus indicator][] for themselves as default User Agent's styling makes the focus visible (this depends on user agents). They are not [focus indicator][] for any other [focusable][] element.
 
-**Note to reviewers:** The default blinking cursor of focused `<input type="text" />` is not a [distinguishing style][]. Thus, the rule currently fail on that element, which is clearly not good. I am not sure how to handle that visual cue, quite clearly by adding something to the [focus indicator][] definition, but not sure what ("blinking cursor" seems a bit too specific…)
+**Note to reviewers:** The default blinking cursor of focused `<input type="text" />` is not a [distinguishing style][distinguishing styles]. Thus, the rule currently fail on that element, which is clearly not good. I am not sure how to handle that visual cue, quite clearly by adding something to the [focus indicator][] definition, but not sure what ("blinking cursor" seems a bit too specific…)
 
 ```html
 <a href="https://act-rules.github.io/">ACT rules</a><br />

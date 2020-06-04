@@ -15,6 +15,10 @@ input_aspects:
 acknowledgments:
   authors:
     - Jean-Yves Moyen
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'alt-require'
 ---
 
 ## Applicability

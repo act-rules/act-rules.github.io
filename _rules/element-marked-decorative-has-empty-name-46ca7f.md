@@ -48,7 +48,7 @@ _No accessibility support issues known._
 
 - [Success Criterion 1.1.1: Non-text Content][sc111]
 - [Understanding Success Criterion 1.1.1: Non-text Content][usc111]
-- [Techinque F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them][f38]
+- [Technique F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them][f38]
 - [Technique F39: Failure of Success Criterion 1.1.1 due to providing a text alternative that is not null (e.g., alt="spacer" or alt="image") for images that should be ignored by assistive technology][f39]
 
 ## Test Cases
@@ -145,7 +145,7 @@ This `img` element is not [marked as decorative][].
 
 [accessible name]: #accessible-name 'Definition of Accessible name'
 [embedded content]: https://html.spec.whatwg.org/multipage/dom.html#embedded-content-category 'Definition of embedded content'
-[f38]: https://www.w3.org/WAI/WCAG21/Techniques/failures/F38 'Techinque F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them'
+[f38]: https://www.w3.org/WAI/WCAG21/Techniques/failures/F38 'Technique F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them'
 [f39]: https://www.w3.org/WAI/WCAG21/Techniques/failures/F39 'Technique F39: Failure of Success Criterion 1.1.1 due to providing a text alternative that is not null (e.g., alt="spacer" or alt="image") for images that should be ignored by assistive technology'
 [h67]: https://www.w3.org/WAI/WCAG21/Techniques/html/H67 'Technique H67: Using null alt text and no title attribute on img elements for images that AT should ignore'
 [marked as decorative]: #marked-as-decorative 'Definition of Marked as decorative'

@@ -28,7 +28,7 @@ For each target element, there exists a set of [focus indicators][focus indicato
 
 ## Assumptions
 
-The definition of [focus indicator][] is based on the tree order but users are likely to perceive relationship based on position on the rendered page. If these are greatly different, the rule will produce incorrect results.
+The definition of [focus indicator][] is based on the tree order but users are likely to perceive relationship based on position on the rendered page. If these are different, the rule may produce incorrect results. Notably, if styling is used to mimic a table layout where focus indicators are located in the same "column", the definition won't detect these as [focus indicators][focus indicator] and the rule will produce incorrect results.
 
 ## Accessibility Support
 

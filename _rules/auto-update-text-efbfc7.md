@@ -315,3 +315,4 @@ This `span` element has updated color but not its `innerText` property.
 [user interaction]: #user-interaction 'Definition of user interaction'
 [visible text content]: #visible-text-content 'Definition of visible text content'
 [visible]: #visible 'Definition of visible'
+[web page]: #web-page-html 'Definition of web page'

@@ -5,7 +5,7 @@ unambiguous: true
 objective: true
 ---
 
-A user interaction is any action that causes the [user agent][] to fire one of the following [DOM events][event]:
+A user interaction is any action that causes the user agent to fire one of the following [DOM events][event]:
 
 - auxclick
 - click

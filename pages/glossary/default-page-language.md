@@ -1,0 +1,36 @@
+---
+title: Default Page Language
+key: default-page-language
+unambiguous: true
+objective: true
+input_aspects:
+  - DOM tree
+  - Accessibility tree
+  - CSS Styling
+  - Language
+---
+
+The default page language is the _most common language_ used in a [web page][]. If there are no _words_ in the page, the default language is undefined.
+
+The _most common language_ is determined by counting the number of _words_ in the [web page][] that are part of any of the languages in the [language subtag registry][]. The same word can be part of multiple languages. If the number of words is the same, the default language is undefined.
+
+The _words_ used in the following texts should be counted for the _most common language_:
+
+- **page title**: The value of the [document title][] of the [document][] in the [top-level browsing context][].
+- **default language content**: The value of any [text nodes][] and the [accessible name][] of any [elements][] for which all of the following is true:
+  - The [node][] is [included in the accessibility tree][]; and
+  - The [node][] does not have an [ancestor][] in the [flat tree][] with a non-empty (`""`) `lang` attribute, except for the [root node][].
+
+[web page]: #web-page-html
+[included in the accessibility tree]: #included-in-the-accessibility-tree
+[accessible name]: #accessible-name
+[language subtag registry]: http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
+[document title]: https://html.spec.whatwg.org/multipage/dom.html#document.title 'HTML document title, as of 2020/06/05'
+[document]: https://dom.spec.whatwg.org/#document-element 'DOM document element, as of 2020/06/05'
+[text nodes]: https://dom.spec.whatwg.org/#text 'DOM text, as of 2020/06/05'
+[elements]: https://dom.spec.whatwg.org/#element 'DOM element, as of 2020/06/05'
+[node]: https://dom.spec.whatwg.org/#node 'DOM node, as of 2020/06/05'
+[ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'DOM ancestor, as of 2020/06/05'
+[top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'HTML top-level browsing context, as of 2020/06/05'
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS draft, flat tree, 2020/06/05'
+[root node]: https://dom.spec.whatwg.org/#concept-tree-root 'DOM tree root, as of 2020/06/05'

@@ -3,7 +3,7 @@ id: efbfc7
 name: Text content that updates automatically can be paused, stopped or hidden
 rule_type: atomic
 description: |
-  This rule checks that for any auto-updating text content, there are instruments to pause, stop, or hide it or to control its update frequency.
+  This rule checks that for any text content that auto-updates in a 10 minute time span, there are instruments to pause, stop, or hide it or to control its update frequency. The arbitrary 10 minute time span, selected so that testing this rule would not be impractical, is not included in WCAG. Content that updates less frequently may fail success criteria 2.2.2 without failing this rule.
 accessibility_requirements: # Remove whatever is not applicable
   wcag20:2.2.2: # Pause, Stop, Hide (A)
     forConformance: true
@@ -25,8 +25,6 @@ The rule applies to any [HTML element][] that has a [visible][] [text node][] as
 - **changed:** the `innerText` property of the [element][html element] changes multiple times within a 10 minute time span where there is no [user interaction][]; and
 - **no child changed:** the [element][html element] does not have [children][child] in the [flat tree][] whose `innerText` property also changes; and
 - **not alone:** the [element][html element] has an [ancestor][] element in the [flat tree][] with a non-empty `innerText` property whose value is different from the `innerText` of the test target.
-
-**Note:** The 10 minute time span is an arbitrary limit which is not included in WCAG. Content that updates less frequently, or that doesn't update on a regular interval, will be inapplicable for this rule but may nonetheless fail [Success Criterion 2.2.2: Pause, Stop, Hide][sc 2.2.2]. The accessibility problem tends to be less severe for longer time periods, and without a time limit, testing this rule consistently would be impractical.
 
 ## Expectation
 

@@ -28,9 +28,8 @@ Each target element has a [visible][] [border](https://drafts.csswg.org/css-back
 
 ## Assumptions
 
-- Any change in font is sufficiently distinguishable, and fonts are loaded when they are present.
-- If multiple colors are used in the visible text nodes of the block of content then color can not be a distinguishing factor.
-- If `border` is used in the different visible text nodes of the block of content then `border` can not be a distinguishing factor.
+- The link is distinguishable from the rest of the text with color, which means it fails SC 1.4.1 when there is not another way to distinguish it.
+- If `border` is used in the different visible non-link text nodes of the block of content then `border` can not be a distinguishing factor.
 
 ## Accessibility Support
 

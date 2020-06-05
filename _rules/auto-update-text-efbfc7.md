@@ -28,9 +28,9 @@ The rule applies to any [HTML element][] that has a [visible][] [text node][] as
 
 **Note:** The 10 minute time span is an arbitrary limit which is not included in WCAG. Content that updates less frequently, or that doesn't update on a regular interval, will be inapplicable for this rule but may nonetheless fail [Success Criterion 2.2.2: Pause, Stop, Hide][sc 2.2.2]. The accessibility problem tends to be less severe for longer time periods, and without a time limit, testing this rule consistently would be impractical.
 
-## Expectation 1
+## Expectation
 
-For each test target there exists a set of [instruments][instrument] to achieve one of the following objectives:
+For each test target there is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] as the test target or can be found in a [clearly labeled location][] from that [web page][], to achieve one of the following objectives:
 
 - pause and resume the change of the [visible text content][]; or
 - stop the change of the [visible text content][]; or
@@ -38,12 +38,6 @@ For each test target there exists a set of [instruments][instrument] to achieve 
 - alter the frequency of the changes of the [visible text content][].
 
 **Note:** If there is more than one test target, the same [instrument][] may be used to pause, stop, hide or alter the frequency of several or even all test targets.
-
-## Expectation 2
-
-Each [instrument][] in the set of [instruments][instrument] from Expectation 1 is either in the same [web page][] as the test target, or can be found in a [clearly labeled location][] from that [web page][].
-
-**Note:** If the set of instruments has more than one instrument, not every instrument of the set needs to be located in the same location.
 
 ## Assumptions
 

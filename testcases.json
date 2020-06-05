@@ -4425,7 +4425,7 @@
       "relativePath": "testcases/de46e4/cf9de7d82f732973e3fddb430d85fa8789c48131.html",
       "expected": "passed",
       "ruleId": "de46e4",
-      "ruleName": "Element within `body` has valid `lang` attribute",
+      "ruleName": "Element with `lang` attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -4449,7 +4449,7 @@
       "relativePath": "testcases/de46e4/b92841001ea5d712b9b62589e4e48dff7e393f51.html",
       "expected": "passed",
       "ruleId": "de46e4",
-      "ruleName": "Element within `body` has valid `lang` attribute",
+      "ruleName": "Element with `lang` attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -4473,7 +4473,7 @@
       "relativePath": "testcases/de46e4/07b24ea5197c5ac348381651c9b71b43c5752b5b.html",
       "expected": "passed",
       "ruleId": "de46e4",
-      "ruleName": "Element within `body` has valid `lang` attribute",
+      "ruleName": "Element with `lang` attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -4497,7 +4497,7 @@
       "relativePath": "testcases/de46e4/69ae4863a438c961dc871a3b8e2e90fef9548aa1.html",
       "expected": "failed",
       "ruleId": "de46e4",
-      "ruleName": "Element within `body` has valid `lang` attribute",
+      "ruleName": "Element with `lang` attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -4521,7 +4521,7 @@
       "relativePath": "testcases/de46e4/829f78eec122ba83ecefd1426be1af5ae7b33e15.html",
       "expected": "failed",
       "ruleId": "de46e4",
-      "ruleName": "Element within `body` has valid `lang` attribute",
+      "ruleName": "Element with `lang` attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -4545,7 +4545,7 @@
       "relativePath": "testcases/de46e4/e0a8e368d7aba4e94771903d5e994766f6548348.html",
       "expected": "failed",
       "ruleId": "de46e4",
-      "ruleName": "Element within `body` has valid `lang` attribute",
+      "ruleName": "Element with `lang` attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -4569,7 +4569,7 @@
       "relativePath": "testcases/de46e4/432c0b405c115c1bbf8819a8a9a7b58eeb62a289.html",
       "expected": "inapplicable",
       "ruleId": "de46e4",
-      "ruleName": "Element within `body` has valid `lang` attribute",
+      "ruleName": "Element with `lang` attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -4593,7 +4593,7 @@
       "relativePath": "testcases/de46e4/cd3a730e7cee34f8be352285d57c9f0a588c2b8d.html",
       "expected": "inapplicable",
       "ruleId": "de46e4",
-      "ruleName": "Element within `body` has valid `lang` attribute",
+      "ruleName": "Element with `lang` attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -6784,7 +6784,7 @@
       "relativePath": "testcases/bf051a/dfb5c0b5168f4b961f2f7a1c5bfa4cd1d96faf0a.html",
       "expected": "passed",
       "ruleId": "bf051a",
-      "ruleName": "HTML page language is valid",
+      "ruleName": "HTML page `lang` attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/bf051a",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -6808,7 +6808,7 @@
       "relativePath": "testcases/bf051a/73848bd985bde636a3d21962036d1541cad24a9e.html",
       "expected": "passed",
       "ruleId": "bf051a",
-      "ruleName": "HTML page language is valid",
+      "ruleName": "HTML page `lang` attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/bf051a",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -6832,7 +6832,7 @@
       "relativePath": "testcases/bf051a/a0e1c0cf69971fb9faf31a5a1180cf9124aa8db9.html",
       "expected": "failed",
       "ruleId": "bf051a",
-      "ruleName": "HTML page language is valid",
+      "ruleName": "HTML page `lang` attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/bf051a",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -6856,7 +6856,7 @@
       "relativePath": "testcases/bf051a/e806126ba40cc2ee3da9d01afb217bded3b816bc.html",
       "expected": "failed",
       "ruleId": "bf051a",
-      "ruleName": "HTML page language is valid",
+      "ruleName": "HTML page `lang` attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/bf051a",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -6880,7 +6880,7 @@
       "relativePath": "testcases/bf051a/059ada2b641d9bc6989b2c0c69809311f65f2a39.svg",
       "expected": "inapplicable",
       "ruleId": "bf051a",
-      "ruleName": "HTML page language is valid",
+      "ruleName": "HTML page `lang` attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/bf051a",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {

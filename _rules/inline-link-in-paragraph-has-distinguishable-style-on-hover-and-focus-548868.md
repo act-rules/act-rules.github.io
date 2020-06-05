@@ -34,7 +34,7 @@ For each test target all the following are true:
 - The link is distinguishable from the rest of the text with color, which means it fails SC 1.4.1 when there is not another way to distinguish it.
 - The 3:1 contrast difference between text is minimal to what would be sufficient to meet WCAG 2.0. This value is part of [technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183), but is not specified in the [1.4.1 success criterion](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
 - Any change in font is sufficiently distinguishable, and fonts are loaded when they are present.
-- If multiple colors are used in the visible text nodes of the block of content then color can not be a distinguishing factor.
+- If different foreground colors are used by the different visible non-link text nodes then the foreground color can not be a distinguishing factor.
 
 ## Accessibility Support
 

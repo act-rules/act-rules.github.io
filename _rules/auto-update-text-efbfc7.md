@@ -52,6 +52,7 @@ Each [instrument][] in the set of [instruments][instrument] from Expectation 1 i
 - Any [content][] changes are enabled by the content of the [HTML document][] the test target belongs to. Changes originating from any other sources (e.g. browser shortcuts, browser extensions, browser settings, user agents, external browser applications) are not considered.
 - All user actions are transmitted by the user agent to the [HTML document][]. If there are other event sources that result from a user action this rule might fail but the success criterion might still be satisfied.
 - Available mechanisms for controlling the update of content rely on [activation][]. If there are other mechanisms that do not rely on [activation][] then the rule might fail but the success criterion might still be satisfied.
+- If there are other ways to control the auto-updating that do not require the user to interact with the web page, failing this rule might not be a failure of the success criterion.
 
 ## Accessibility Support
 

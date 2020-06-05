@@ -1,9 +1,9 @@
 ---
 id: c249d5
-name: Device motion based functionality can be disabled
+name: Device motion based events can be disabled
 rule_type: atomic
 description: |
-  This rule checks that it is possible to disable functionality that can be operated by device motion.
+  This rule checks that it is possible to disable any presentation of results that result from device motion based events.
 accessibility_requirements:
   wcag21:2.5.4: # Motion Actuation (A)
     forConformance: true
@@ -28,24 +28,14 @@ htmlHintIgnore:
 
 The rule applies to an [HTML document][] with an associated [Window object][] that has an [event listener list][] with one or more [event listeners][event listener] for [device orientation events][device orientation] or [device motion events][device motion].
 
-## Expectation 1
+## Expectation
 
-For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target there exists a set of one or more [instruments][instrument] to prevent any results of the event within a 10 minute time span of the [event firing][].
+For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target one of the following is true:
 
-**Note:** The same [instrument][] can be used to disable more than one event.
-
-**Note:** Preventing results of the event can be done in multiple ways (e.g. removing the event listener; handling the event in a different manner; ...) but the way in which it is done is not relevant for this rule.
+- **no result:** The registered event does not present to the user results within a 10 minute time span of the [event firing][event firing]; or
+- **disabled:** There is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] of the registered event or can be found in a [clearly labeled location][] from that [web page][], to prevent the presentation to the user of results resulting from the event within a 10 minute time span of the [event firing][].
 
 **Note:** The 10 minute time span is an arbitrary limit which is not included in WCAG. Results that happen after this period will not fail this rule but may nonetheless fail [Success Criterion 2.5.4: Motion Actuation][sc 2.5.4]. The accessibility problem tends to be less severe for longer time periods, and without a time limit, testing this rule consistently would be impractical.
-
-## Expectation 2
-
-For each [instrument][] in the set of [instruments][instrument] from Expectation 1, one of the following is true:
-
-- the [instrument][] is in the same [web page][] of the test target; or
-- the [instrument][] can be found in a [clearly labeled location][].
-
-**Note:** If the set of instruments has more than one instrument, not every instrument of the set needs to be in the same location.
 
 ## Assumptions
 

@@ -29,14 +29,14 @@ acknowledgments:
 
 This rule applies to any [document element][] if it is an `html` element for which one of the following is true:
 
-- The [document element][] has a `lang` attribute with a value that is a [valid language subtag][]; and
+- The [document element][] has a `lang` attribute with a value that is a [valid language tag][]; and
 - The [document element][] is in a [top-level browsing context][]; and
 - The [document element][] has a [node document][] with a [content type][] of `text/html`; and
 - The [document element][] has a defined [default page language][].
 
 ## Expectation
 
-For each test target, the [primary language][] of the [valid language subtag][] matches the [default page language][] of the test target.
+For each test target, the [primary language][] of the [valid language tag][] matches the [default page language][] of the test target.
 
 ## Assumptions
 
@@ -44,9 +44,9 @@ For each test target, the [primary language][] of the [valid language subtag][] 
 
 - The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page).
 
-- This rule assumes that user agents and assistive technologies can programmatically determine [valid language subtags](#valid-language-subtag) even if these do not conform to the [BCP 47][] syntax.
+- This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags](#valid-language-tag) even if these do not conform to the [BCP 47][] syntax.
 
-- This rule assumes that [grandfathered tags][] are not used as these will not be recognized as [valid language subtags](#valid-language-subtag).
+- This rule assumes that [grandfathered tags][] are not used as these will not be recognized as [valid language tags](#valid-language-tag).
 
 ## Accessibility Support
 
@@ -215,7 +215,7 @@ In page has an undefined [default language][default page language] can not be de
 </html>
 ```
 
-[valid language subtag]: #valid-language-subtag
+[valid language tag]: #valid-language-tag
 [default page language]: #default-page-language
 [primary language]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
 [grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8

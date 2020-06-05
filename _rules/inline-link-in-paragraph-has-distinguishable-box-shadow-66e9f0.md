@@ -24,7 +24,7 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], f
 
 ## Expectation
 
-Each target element has a [visible][`box-shadow`][box-shadow].
+Each target element has a [visible][] [`box-shadow`][box-shadow].
 
 ## Assumptions
 

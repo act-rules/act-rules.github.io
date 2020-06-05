@@ -28,18 +28,12 @@ htmlHintIgnore:
 
 The rule applies to any [HTML document][] with an associated [Window object][] that has an [event listener list][] with one or more [event listeners][event listener] for [device orientation events][device orientation] or [device motion events][device motion].
 
-## Expectation 1
+## Expectation
 
-For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target there exists a set of one or more [instruments][instrument] supporting indistinguishable results of those from the event.
+For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target one of the following is true:
 
-## Expectation 2
-
-For at least one set of [instruments][instrument] from Expectation 1, all of the [instruments][instrument] in such set meet one of the following conditions:
-
-- the [instrument][] is in the same [web page][] of the test target; or
-- the [instrument][] can be found in a [clearly labeled location][].
-
-**Note:** If the set of instruments has more than one instrument, not every instrument of the set needs to be located in the same location.
+- **no result:** The registered event does not have results perceivable by the user; or
+- **same result:** There is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] of the registered event or can be found in a [clearly labeled location][] from that [web page][], supporting indistinguishable results of those from the event.
 
 ## Assumptions
 

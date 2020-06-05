@@ -1,6 +1,6 @@
 ---
-title: Valid Language Subtag
-key: valid-language-subtag
+title: Valid Language Tag
+key: valid-language-tag
 unambiguous: true
 objective: true
 ---

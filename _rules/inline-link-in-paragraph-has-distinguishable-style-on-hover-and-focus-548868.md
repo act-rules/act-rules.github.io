@@ -24,7 +24,7 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], f
 
 ## Expectation
 
-Each target element has:
+For each test target all the following are true:
 
 - a [highest possible contrast][] that is at least 3.0:1 between its [foreground color][] and the [foreground color][] of the [visible][] [text nodes][text node] [rendered on the same line][rendered on a line] that are not [descendants][descendant] in the [flat tree][] of a [semantic link][]; and
 - a [distinguishing style][] both when the target element [gains focus][focused] and the target element is [hovered][].

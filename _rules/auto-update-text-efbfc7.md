@@ -41,10 +41,7 @@ For each test target there exists a set of [instruments][instrument] to achieve 
 
 ## Expectation 2
 
-For each [instrument][] in the set of [instruments][instrument] from Expectation 1, one of the following is true:
-
-- the [instrument][] is in the same [web page](#web-page-html) of the test target; or
-- the [instrument][] can be found in a [clearly labeled location][].
+Each [instrument][] in the set of [instruments][instrument] from Expectation 1 is either in the same [web page][] as the test target, or can be found in a [clearly labeled location][] from that [web page][].
 
 **Note:** If the set of instruments has more than one instrument, not every instrument of the set needs to be located in the same location.
 

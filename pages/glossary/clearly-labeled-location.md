@@ -5,7 +5,7 @@ unambiguous: true
 objective: false
 ---
 
-Secondary information and alternative controls or functionality are often not displayed together with primary information or functionality. For example, an option to change a web page to dark mode may be placed on an options page instead of being available on every page and page state of a website. Another example is a maps application, where, instead of using GPS, an option is available in a dropdown menu to set the current location of the device. Such content should be placed in a clearly labeled location.
+Secondary information and alternative controls of functionality are often not displayed together with primary information or functionality. For example, an option to change a web page to dark mode may be placed on an options page instead of being available on every page and page state of a website. Another example is a maps application, where, instead of using GPS, an option is available in a dropdown menu to set the current location of the device. Such content should be placed in a clearly labeled location.
 
 The location of a target is said to be _clearly labeled_ when the target can be found by activating [instruments][] whose purpose, indicated by their [label][], leads the user to find the target or to another [page][web page] or page state from which this action can be repeated until the target is found.
 

@@ -9,6 +9,7 @@
 - http
 - https
 - wai-aria
+- validator
 
 # Tag(s)
 - svg # `aria-query` dom tags does not list `svg`
@@ -39,6 +40,7 @@
 - PDFs
 - DOCX
 - DPUB
+- CSSOM
 - DNS
 - BCP
 - bcp
@@ -50,11 +52,9 @@
 - testrunner
 - color
 - focusable
-- Focusable
 - unfocusable
 - tabindex
 - whitespace
-- Whitespace
 - textfield
 - namespace
 - namespaces
@@ -74,10 +74,8 @@
 - 18pt
 - Helvetica
 - fieldsets
-
-# spell checker checks against strict casing & hence some repeated words here
-- Autocomplete
-- Focusable
+- ascii # lowercase needed in reference list
+- CMS
 
 # Parts of url
 - http
@@ -94,6 +92,7 @@
 - multipage
 - attr-input-type
 - wai-aria-1.1
+
 # Notes and acronyms
 - TODO
 - TBD
@@ -115,6 +114,7 @@
 # Attributes (repeated words with casing as retext-spell has no config to ignore casing)
 - href
 - src
+- srcset
 - aria-labelled # used to demonstrate wrong attribute
 - autofill-field
 - autocomplete
@@ -133,17 +133,32 @@
 - matrix3d
 - rowheader
 - columnheader
+- scrollable-element
+- scrollWidth
+- scrollHeight
+- clientHeight
+- clientWidth
+- innerHeight
+- innerWidth
+- scrollbars
+- documentElement
+- rects
+- nowrap
+- javascript
+- Reflow
+- Viewport
+- dom-meta-content
 
 # Unsure why the dictionary does not have these words
 - programmatically
-- Programmatically
 - personalization
-- Autofill
+- autofill
 - implementers
-- Implementers
-- Presentational
+- presentational
 - backtick
 - camelCase
+- scrollable
+- scrollbars
 
 # Parts of Unicode
 - 000A

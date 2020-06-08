@@ -11,6 +11,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
   - DOM Tree
   - CSS Styling
 acknowledgments:
@@ -52,7 +53,8 @@ For this rule, it is assumed that the `autocomplete` attribute is not used on fo
 
 ## Accessibility Support
 
-While `autocomplete` in a promising technique for supporting personalization in HTML, support for this is fairly limited.
+- While `autocomplete` in a promising technique for supporting personalization in HTML, support for this is fairly limited.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 
@@ -127,7 +129,7 @@ Full length autocomplete terms.
 
 #### Passed Example 8
 
-The `input` element does not have a semantic role that is a widget role, but still participates in sequential focus navigation, and has a single autocomplete term.
+This `input` element has an [explicit role][] of `none`. However, it is [focusable][] (by default). Thus it has a [semantic role][] of `textbox` due to [Presentational Roles Conflict Resolution][]. It has a single autocomplete term.
 
 ```html
 <input role="none" autocomplete="username" />
@@ -143,10 +145,10 @@ The `input` element does not participates in sequential focus navigation, but st
 
 #### Passed Example 10
 
-The `input` element does not have a semantic role that is a widget role, but still participates in sequential focus navigation since the [`tabindex` attribute](https://html.spec.whatwg.org/#the-tabindex-attribute) value is not a [valid integer](https://html.spec.whatwg.org/#valid-integer), and has a single autocomplete term.
+The `input` element does not have a semantic role that is a widget role, but still participates in sequential focus navigation because of the [`tabindex` attribute](https://html.spec.whatwg.org/#the-tabindex-attribute), and has a single autocomplete term.
 
 ```html
-<input role="none" tabindex="-1.5" autocomplete="username" />
+<input role="none" tabindex="0" autocomplete="username" />
 ```
 
 ### Failed
@@ -219,21 +221,13 @@ The element is hidden through `display:none`.
 
 #### Inapplicable Example 4
 
-The element is positioned off screen and hidden to assistive technologies
-
-```html
-<input autocomplete="username" aria-hidden="true" style="position:absolute; top:-9999em" />
-```
-
-#### Inapplicable Example 5
-
 The `input` element has a `type` attribute that is in the `button` state.
 
 ```html
 <input type="button" autocomplete="username" />
 ```
 
-#### Inapplicable Example 6
+#### Inapplicable Example 5
 
 The `input` element has a `type` attribute that is in the `hidden` state.
 
@@ -241,7 +235,7 @@ The `input` element has a `type` attribute that is in the `hidden` state.
 <input type="hidden" autocomplete="username" />
 ```
 
-#### Inapplicable Example 7
+#### Inapplicable Example 6
 
 The `input` element has an HTML `disabled` attribute.
 
@@ -249,7 +243,7 @@ The `input` element has an HTML `disabled` attribute.
 <input autocomplete="username" disabled />
 ```
 
-#### Inapplicable Example 8
+#### Inapplicable Example 7
 
 The `input` element has an `aria-disabled` attribute with value `true`.
 
@@ -257,26 +251,23 @@ The `input` element has an `aria-disabled` attribute with value `true`.
 <input autocomplete="username" aria-disabled="true" />
 ```
 
+#### Inapplicable Example 8
+
+Non-widget element that does not participate in sequential focus navigation.
+
+```html
+<input type="button" role="none" disabled autocomplete="username" />
+```
+
 #### Inapplicable Example 9
-
-Non-widget element that does not participate in sequential focus navigation.
-
-```html
-<input type="button" role="none" tabindex="-1" autocomplete="username" />
-```
-
-#### Inapplicable Example 10
-
-Non-widget element that does not participate in sequential focus navigation.
-
-```html
-<input type="button" role="none" tabindex="-2" autocomplete="username" />
-```
-
-#### Inapplicable Example 11
 
 Autocomplete attribute contains no tokens.
 
 ```html
 <input autocomplete=" " />
 ```
+
+[explicit role]: #explicit-role 'Definition of explicit role'
+[focusable]: #focusable 'Definition of focusable'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[semantic role]: #semantic-role 'Definition of Semantic Role'

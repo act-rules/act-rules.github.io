@@ -185,7 +185,7 @@ This `img` element has an empty [accessible name][] because the space in the `al
 This `img` element has an [explicit role][] of `none`. However, it is [focusable][] due to the `tabindex` attribute. Because of this it has a [semantic role][] of `img` due to [Presentational Roles Conflict Resolution][]. It does not have an accessible name.
 
 ```html
-<img role="none" tabindex="0" src="/test-assets/shared/w3c-logo.png"/>
+<img role="none" tabindex="0" src="/test-assets/shared/w3c-logo.png" />
 ```
 
 ### Inapplicable
@@ -205,7 +205,11 @@ This `svg` element has an [implicit role][] of `graphics-document`.
 This element has a [semantic role][] of `img`, but is not [included in the accessibility tree][].
 
 ```html
-<div role="img" aria-hidden="true" style="width:72px; height:48px; background-image: url(/test-assets/shared/w3c-logo.png)"></div>
+<div
+	role="img"
+	aria-hidden="true"
+	style="width:72px; height:48px; background-image: url(/test-assets/shared/w3c-logo.png)"
+></div>
 ```
 
 #### Inapplicable Example 3

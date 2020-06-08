@@ -77,14 +77,6 @@ This `iframe` element gets its [accessible name][] from the content of the `div`
 <iframe aria-labelledby="frame-title-helper" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
-#### Passed Example 4
-
-This `iframe` element gets its [accessible name][] from the `title` attribute. Note, that specifying a positive `tabindex` value only alters the order of the [sequential focus navigation][], and as such the `iframe` element can be accessed through keyboard navigation.
-
-```html
-<iframe title="Grocery List" src="/test-assets/SC4-1-2-frame-doc.html" tabindex="5"> </iframe>
-```
-
 ### Failed
 
 #### Failed Example 1

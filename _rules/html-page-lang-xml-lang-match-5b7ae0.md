@@ -25,7 +25,7 @@ This rule applies to any [document element](https://dom.spec.whatwg.org/#documen
 
 - is in a [top-level browsing context][]; and
 - has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type][] of `text/html`; and
-- has a `lang` attribute that has a [valid language subtag][]; and
+- has a `lang` attribute that has a [valid language tag][]; and
 - has a non-empty `xml:lang` attribute.
 
 **Note:** `html` elements within `iframe` and `object` elements are not applicable as `iframe` and `object` elements create [nested browsing contexts](https://html.spec.whatwg.org/#nested-browsing-context). However, as these elements are meant to provide a layer of isolation, the declared language of their [parent browsing context](https://html.spec.whatwg.org/#parent-browsing-context) will likely not be inherited, making it possible for non-matching `lang` and `xml:lang` attributes in [nested browsing contexts](https://html.spec.whatwg.org/#nested-browsing-context) to also cause accessibility issues.
@@ -40,9 +40,9 @@ For each test target, the values of the [primary language subtags][], if any exi
 
 - The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page).
 
-- This rule assumes that user agents and assistive technologies can programmatically determine [valid language subtags](#valid-language-subtag) even if these do not conform to the [BCP 47][] syntax.
+- This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags](#valid-language-tag) even if these do not conform to the [BCP 47][] syntax.
 
-- This rule assumes that [grandfathered tags][] are not used as these will not be recognized as [valid language subtags](#valid-language-subtag).
+- This rule assumes that [grandfathered tags][] are not used as these will not be recognized as [valid language tags](#valid-language-tag).
 
 ## Accessibility Support
 
@@ -141,7 +141,7 @@ This rule only applies to documents with a [content type][] of `text/html`
 
 #### Inapplicable Example 5
 
-This rule does not apply to `html` elements whose `lang` attribute is not a [valid language subtag][].
+This rule does not apply to `html` elements whose `lang` attribute is not a [valid language tag][].
 
 ```html
 <html lang="em" xml:lang="en"></html>
@@ -178,6 +178,6 @@ This rule does not apply to `html` elements with an empty (`""`) `xml:lang` attr
 [nested browsing context]: https://html.spec.whatwg.org/#nested-browsing-context 'Definition of nested browsing context'
 [primary language subtags]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
 [top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'Definition of top-level browsing context'
-[valid language subtag]: #valid-language-subtag 'Definition of valid language subtag'
+[valid language tag]: #valid-language-tag 'Definition of valid language tag'
 [grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
 [bcp 47]: https://tools.ietf.org/html/bcp47#section-2.1

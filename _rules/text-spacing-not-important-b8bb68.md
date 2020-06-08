@@ -58,7 +58,7 @@ While some assistive technologies are able to set [user origin][] styles, others
 
 #### Passed Example 1
 
-This `p` element has a `line-height` of `20px` (equals `1.25em` ) which is below the permissible minimum, given the default pixel size of the body is 16 pixels.
+This `p` element has a `line-height` of `20px` (equals `1.25em` ) which is below the permissible minimum, given the default pixel size of the body is 16 pixels. Since the priority is not set to `important` the user can increase the `line-height` above the permissible minimum value.
 
 ```html
 <html>
@@ -78,7 +78,7 @@ This `p` element has a `line-height` of `20px` (equals `1.25em` ) which is below
 
 #### Passed Example 2
 
-This `div` element has a `letter-spacing` of `0.12em` which is equal to the permissible minimum, given the default pixel size of the body is 16 pixels.
+This `div` element has a `letter-spacing` of `0.12em` which is equal to the permissible minimum, given the default pixel size of the body is 16 pixels. Since the priority is not set to `important` the user can increase the `letter-spacing` above the permissible minimum value.
 
 ```html
 <html>
@@ -118,7 +118,7 @@ This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12e
 
 #### Passed Example 4
 
-This `article` element has both `word-spacing` and `line-height` specified, which are both below the permissible minimum, given the default pixel size of the body is 16 pixels.
+This `article` element has both `word-spacing` and `line-height` specified, which are both below the permissible minimum, given the default pixel size of the body is 16 pixels. Since the priority is not set to `important` for either the `line-height` or `word-spacing`, the user can increase them to be above the permissible minimum value.
 
 ```html
 <html>
@@ -129,21 +129,6 @@ This `article` element has both `word-spacing` and `line-height` specified, whic
 	</style>
 	<body>
 		<article style="word-spacing: 1.8pt; line-height: 1em;">
-			The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
-			sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
-		</article>
-	</body>
-</html>
-```
-
-#### Passed Example 5
-
-This `article` element has both `word-spacing` and `line-height` specified, which are both below the permissible minimum, given the element has an font-size of 16 pixels, which overrides the pixel size of the body.
-
-```html
-<html>
-	<body style="font-size: 20px">
-		<article style="font-size: 16px; word-spacing: 1.8pt; line-height: 1em;">
 			The boy walked down the street in a carefree way, playing without notice of what was about him. He didn't hear the
 			sound of the car as his ball careened into the road. He took a step toward it, and in doing so sealed his fate.
 		</article>

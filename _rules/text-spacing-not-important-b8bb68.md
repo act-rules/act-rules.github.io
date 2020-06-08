@@ -28,15 +28,15 @@ This rule applies to any HTML element that is [visible][] and has one of the fol
 
 ## Expectation 1
 
-The test target does not have "important" as its [word-spacing][] [priority][], unless the [computed][] [word-spacing][] is greater than `0.16` times the [computed][] [font-size][] of the test target.
+The test target does not have the [important flag][] set for the CSS [word-spacing][] property, unless the [computed][] [word-spacing][] is greater than `0.16` times the [computed][] [font-size][] of the test target.
 
 ## Expectation 2
 
-The test target does not have "important" as its [letter-spacing][] [priority][], unless the [computed][] [letter-spacing][] is greater than `0.12` times the [computed][] [font-size][] of the test target.
+The test target does not have the [important flag][] set for the CSS [letter-spacing][] property, unless the [computed][] [letter-spacing][] is greater than `0.12` times the [computed][] [font-size][] of the test target.
 
 ## Expectation 3
 
-The test target does not have "important" as its [line-height][] [priority][], unless the [computed][] [line-height][] is greater than `1.5` times the [computed][] [font-size][] of the test target.
+The test target does not have the [important flag][] set for the CSS [line-height][] property, unless the [computed][] [line-height][] is greater than `1.5` times the [computed][] [font-size][] of the test target.
 
 ## Assumptions
 
@@ -44,7 +44,7 @@ If there is a mechanism available on the page by which text spacing can be adjus
 
 ## Accessibility Support
 
-While some assistive technologies are able to set [user origin][] styles, others such as browser extensions are only able to set style with the [author origin][]. Such assistive technologies can not create styles with a high enough priority to override a `style` attribute with `!important`. If accessibility support does not include assistive technologies that override text spacing through [author origin][], this rule should not be used.
+While some assistive technologies are able to set [user origin][] styles, others such as browser extensions are only able to set style with the [author origin][]. Such assistive technologies can not create styles with a high enough [priority][] to override a `style` attribute with the [important flag][]. If accessibility support does not include assistive technologies that override text spacing through [author origin][], this rule should not be used.
 
 ## Background
 
@@ -58,7 +58,7 @@ While some assistive technologies are able to set [user origin][] styles, others
 
 #### Passed Example 1
 
-This `p` element has a `line-height` of `20px` (equals `1.25em` ) which is below the permissible minimum, given the default pixel size of the body is 16 pixels. Since the priority is not set to `important` the user can increase the `line-height` above the permissible minimum value.
+This `p` element has a `line-height` of `20px` (equals `1.25em` ) which is below the permissible minimum, given the default pixel size of the body is 16 pixels. Since the [important flag][] is not set, the user can increase the `line-height` above the permissible minimum value.
 
 ```html
 <html>
@@ -78,7 +78,7 @@ This `p` element has a `line-height` of `20px` (equals `1.25em` ) which is below
 
 #### Passed Example 2
 
-This `div` element has a `letter-spacing` of `0.12em` which is equal to the permissible minimum, given the default pixel size of the body is 16 pixels. Since the priority is not set to `important` the user can increase the `letter-spacing` above the permissible minimum value.
+This `div` element has a `letter-spacing` of `0.12em` which is equal to the permissible minimum, given the default pixel size of the body is 16 pixels. Since the [important flag][] is not set, the user can increase the `letter-spacing` above the permissible minimum value.
 
 ```html
 <html>
@@ -98,7 +98,7 @@ This `div` element has a `letter-spacing` of `0.12em` which is equal to the perm
 
 #### Passed Example 3
 
-This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12em` ) which is equal to the permissible value, given the default pixel size of the body is 16 pixels. Given the computed value is equal to the permissible value, the [priority][] is not taken into consideration.
+This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12em` ) which is equal to the permissible value, given the default pixel size of the body is 16 pixels.
 
 ```html
 <html>
@@ -118,7 +118,7 @@ This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12e
 
 #### Passed Example 4
 
-This `article` element has both `word-spacing` and `line-height` specified, which are both below the permissible minimum, given the default pixel size of the body is 16 pixels. Since the priority is not set to `important` for either the `line-height` or `word-spacing`, the user can increase them to be above the permissible minimum value.
+This `article` element has both `word-spacing` and `line-height` specified, which are both below the permissible minimum, given the default pixel size of the body is 16 pixels. Since the [important flag][] is not set for either the `line-height` or `word-spacing`, the user can increase them to be above the permissible minimum value.
 
 ```html
 <html>
@@ -284,3 +284,4 @@ This `body` element does not have `style` attribute specified.
 [author origin]: https://drafts.csswg.org/css-cascade-4/#cascade-origin-author 'CSS Cascading and Inheritance Level 4 - Cascading Origins - Author Origin'
 [user origin]: https://drafts.csswg.org/css-cascade-4/#cascade-origin-user 'CSS Cascading and Inheritance Level 4 - Cascading Origins - User Origin'
 [font-size]: https://www.w3.org/TR/css-fonts-3/#propdef-font-size 'CSS Fonts Module Level 3- Font size: the font-size property'
+[important flag]: https://www.w3.org/TR/cssom/#css-declaration-important-flag 'CSS Object Model (CSSOM) - important flag'

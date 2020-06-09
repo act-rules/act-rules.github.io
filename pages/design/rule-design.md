@@ -150,3 +150,23 @@ The description should:
 > _For example: "This page has a `title` element with content."_
 
 For more details, see [ACT Rules Format: Test Cases](https://www.w3.org/TR/act-rules-format/#test-cases).
+
+## Listed conditions
+
+In the applicability and expectations, something often has multiple conditions that need to be met for something to be applicable / passed. If there are more than three conditions, it can become difficult to read if this is all in one text. Instead, these should be listed out. Listed conditions should follow this format:
+
+> Some condition... for which (all | one of) the following is true:
+> 
+> * (**label 1**:) The (X) has condition A; (and | or)
+> * (**label 2**:) The (X) has condition B; (and | or)
+> * (**label 3**:) The (X) has condition C.
+
+This phrasing is designed to be easilly readable, but may not work in every situation. In all cases prefer readability over prescriptive formatting. Additionally to this, keep the following in mind when listing conditions:
+
+- The phrasing "for which (all | one of) the following is" can be modified based on use, such as "to achieve one of the following objectives".
+- Labels are optional, not recommended for lists of 2, and recommended for lists of 4 or more conditions. Keep the labels short, 1 or 2 words. If the label does not help clarify the list, don't use them even for longer lists.
+- The subject must be referenced in some way in each conditional. For example by starting with "the element has", or by using phrasing like "The innerText of the element has...". The subject must be a single word that is referenced in the phrase preceding the conditional list.
+- Tend towards using a lists if there are more than three conditions. Keep the most important condition(s) in the phrase, not in the list. If something is about `img` elements for example, use "Each `img` element for which all the following is true`, instead of putting "`img` element" in the condition list itself.
+- Put things in order of how common they likely are. Even for unordered lists, this helps understand the list
+- Avoid nested conditional lists. These are difficult to read. Instead try to restructure the conditionals. The can be done by either moving some of the list items into the condition phrase, or putting all the subconditions in a single phrase in the condition item. In expectations, use multiple conditions.
+- Group similar concepts into the same list item. For example, if something can have `absolute` or `fixed`, these two are closely related so putting them down as one item helps limit the number of conditions.

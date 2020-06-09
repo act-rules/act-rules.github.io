@@ -1,9 +1,9 @@
 ---
 id: c249d5
-name: Device motion based events can be disabled
+name: Device motion based changes to the content can be disabled
 rule_type: atomic
 description: |
-  This rule checks that it is possible to disable any presentation of results that result from device motion based events.
+  This rule checks that it is possible to disable any changes to the content of the web page resulting from device motion based events.
 accessibility_requirements:
   wcag21:2.5.4: # Motion Actuation (A)
     forConformance: true
@@ -32,8 +32,8 @@ The rule applies to an [HTML document][] with an associated [Window object][] th
 
 For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target one of the following is true:
 
-- **no result:** The registered event does not present to the user results within a 10 minute time span of the [event firing][event firing]; or
-- **disabled:** There is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] of the registered event or can be found in a [clearly labeled location][] from that [web page][], to prevent the presentation to the user of results resulting from the event within a 10 minute time span of the [event firing][].
+- **no result:** The registered event does not cause [changes to the content][changes in content] of the [web page][] within a 10 minute time span of the [event firing][event firing]; or
+- **disabled:** There is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] of the registered event or can be found in a [clearly labeled location][] from that [web page][], to prevent [changes to the content][changes in content] of the [web page][] resulting from the event within a 10 minute time span of the [event firing][].
 
 **Note:** The 10 minute time span is an arbitrary limit which is not included in WCAG. Results that happen after this period will not fail this rule but may nonetheless fail [Success Criterion 2.5.4: Motion Actuation][sc 2.5.4]. The accessibility problem tends to be less severe for longer time periods, and without a time limit, testing this rule consistently would be impractical.
 
@@ -181,6 +181,7 @@ This [HTML document][] is not operable by device motion.
 ```
 
 [accessibility supported]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation#dfn-accessibility-supported
+[changes in content]: #changes-in-content 'Definition of changes in content'
 [clearly labeled location]: #clearly-labeled-location 'Definition of clearly labeled location'
 [device motion]: https://www.w3.org/TR/orientation-event/#devicemotion 'Definition of device motion event'
 [device orientation]: https://www.w3.org/TR/orientation-event/#deviceorientation 'Definition of device orientation event'

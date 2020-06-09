@@ -39,9 +39,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to any HTML `input` element with a `type` attribute in the [`Image Button` state](<https://html.spec.whatwg.org/#image-button-state-(type=image)>), that is [included in the accessibility tree][].
-
-**Note:** The specification of the [`type`](https://html.spec.whatwg.org/#states-of-the-type-attribute) attribute describes in detail how to map the value of the attribute to its corresponding state.
+The rule applies to any HTML `input` element with a `type` attribute set to [`image`](<https://html.spec.whatwg.org/#image-button-state-(type=image)>), that is [included in the accessibility tree][].
 
 ## Expectation
 

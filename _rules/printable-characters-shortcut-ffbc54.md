@@ -25,32 +25,34 @@ The rule applies to any [keyboard event][]:
 
 ## Expectation 1
 
-For each test target:
- - an [instrument][] to prevent any result of the [keyboard event][] is available; or
- - if the [event target][] doesn't have [focus][], any result of the event is prevented; or
- - an [instrument][] is available to prevent any result of the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`.
+For each test target at least one of the following is true:
+ - (**Disable**:) a set of one or more [instruments][instrument] are available to prevent any result of the [keyboard event][] within a 10 minute time span of the [event firing][]; or
+ - (**Focus**:) any result of the event is prevented if the [event target][] doesn't have [focus][] within a 10 minute time span of the [event firing][]; or
+ - (**Remap**:) a set of one or more [instruments][instrument] are available to prevent any result of the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false` within a 10 minute time span of the [event firing][].
 
-**Note:** The same [instrument][] can be used to disable/force more than one event.
+**Note:** The same [instrument][] can be used to **disable**/**remap** more than one event.
 
 **Note:** Preventing results of the event can be done in multiple ways (e.g. removing the event listener; handling the event in a different manner; ...) but the way in which it is done is not relevant for this rule.
 
+**Note:** The 10 minute time span is an arbitrary limit which is not included in WCAG. Results that happen after this period will not fail this rule but may nonetheless fail [Success Criterion 2.1.4: Character Key Shortcuts][sc 2.1.4]. The accessibility problem tends to be less severe for longer time periods, and without a time limit, testing this rule consistently would be impractical.
+
 ## Expectation 2
 
-For each [instrument][] in the set of [instruments][instrument] from Expectation 1, one of the following is true:
+For each test target that is not related to **focus**, then for at least one set of [instruments][instrument] from Expectation 1, all of the [instruments][instrument] in such set meet one of the following conditions:
 
 - the [instrument][] is in the same [web page][] of the test target; or
 - the [instrument][] can be found in a [clearly labeled location][].
 
-**Note:** If the set of instruments has more than one instrument, not every instrument of the set needs to be in the same location.
+**Note:** If the set of instruments has more than one instrument, not every instrument of the set needs to be located in the same location.
 
 ## Assumptions
 
-- The event listeners listening to device motion events trigger a functionality in the web page. If they do not trigger any such functionality failing this rule might not be a failure of the success criterion.
-- If there are ways to disable the device motion based functionality that do not require the user to interact with the web page (e.g. a setting at the operating system level), failing this rule might not be a failure of the success criterion.
+- The event listeners listening to [keyboard events][keyboard event] trigger a functionality in the web page. If they do not trigger any such functionality failing this rule might not be a failure of the success criterion.
+- If there are ways to disable the result of [keyboard events][keyboard event] that do not require the user to interact with the web page (e.g. a setting at the operating system level), failing this rule might not be a failure of the success criterion.
 
 ## Accessibility Support
 
-Currently [keyboard events][keyboard event] only support the types `keydown` and `keyup`. [Keyboard events][keyboard event] of type `keypressed` are considered [legacy keyboard events][].
+Currently [keyboard events][keyboard event] only support the types `keydown` and `keyup`. [Keyboard events][keyboard event] of type `keypressed` are considered [legacy keyboard events][] and are thus ignored by this rule.
 
 ## Background
 
@@ -64,7 +66,7 @@ Currently [keyboard events][keyboard event] only support the types `keydown` and
 
 #### Passed Example 1
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to prevent any result of the [keyboard event][].
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to **disable** the [keyboard event][].
 
 ```html
 <html>
@@ -90,7 +92,7 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 
 #### Passed Example 2
 
-This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and for each [keyboard event][] exists an [instrument][] to prevent any result of the [keyboard event][].
+This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and for each [keyboard event][] exists an [instrument][] to **disable** the [keyboard event][].
 
 ```html
 <html>
@@ -120,7 +122,7 @@ This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] 
 
 #### Passed Example 3
 
-This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to prevent any result of the [keyboard event][]. In this case, the same [instrument][] is used to prevent the result of both [keyboard events][keyboard event].
+This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to **disable** the [keyboard event][]. In this case, the same [instrument][] is used to **disable** both [keyboard events][keyboard event].
 
 ```html
 <html>
@@ -146,7 +148,7 @@ This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] 
 
 #### Passed Example 4
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to prevent any result of the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`.
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`.
 
 ```html
 <html>
@@ -177,7 +179,7 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 
 #### Passed Example 5
 
-This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and for each [keyboard event][] exists an [instrument][] to prevent any result of the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`.
+This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and for each [keyboard event][] exists an [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`.
 
 ```html
 <html>
@@ -212,7 +214,7 @@ This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] 
 
 #### Passed Example 6
 
-This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to prevent any result of the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`. In this case, the same [instrument][] is used to prevent the result of both [keyboard events][keyboard event]
+This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`. In this case, the same [instrument][] is used to **remap** both [keyboard events][keyboard event]
 
 ```html
 <html>
@@ -243,15 +245,38 @@ This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] 
 
 #### Passed Example 7
 
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, but the result is prevented when the [event target][] doesn't have [focus][].
+
+```html
+<html>
+  <head>
+    <title>Passed Example 7</title>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
+  </head>
+
+  <body onload="registerShortcut({shortcutKey: '+', focusOnly: true}); activateShortcuts();">
+    <label for="target">Add to list (press "+" to add):</label>
+    <input type="text" id="target" />
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
+  </body>
+</html>
+```
+
+#### Passed Example 8
+
 This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and:
- - exists an [instrument][] to prevent any result of the [keyboard event][]; and
- - exists an [instrument][] to prevent any result of the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`; and
+ - there exists an [instrument][] to **disable** the [keyboard event][]; and
+ - there exists an [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`; and
  - both [instruments][instrument] can be found in a [clearly labeled location][].
 
 ```html
 <html>
   <head>
-    <title>Passed Example 1</title>
+    <title>Passed Example 8</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
     <script>
       function openModal() {
@@ -302,37 +327,14 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 </html>
 ```
 
-#### Passed Example 8
-
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and the result is not prevented because the [event target][] has [focus][].
-
-```html
-<html>
-  <head>
-    <title>Passed Example 8</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-
-  <body onload="registerShortcut({shortcutKey: '+', focusOnly: true}); activateShortcuts();">
-    <label for="target">Add to list (press "+" to add):</label>
-    <input type="text" id="target" />
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
 ### Failed
 
 #### Failed Example 1
 
 This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and:
- - doesn't exist any [instrument][] to prevent any result of the [keyboard event][]; nor
+ - there doesn't exist any [instrument][] to **disable** the [keyboard event][]; nor
  - the result of the [keyboard event][] is prevented when the [event target][] doesn't have [focus][]; nor
- - exists any any [instrument][] to prevent any result of the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`.
+ - there doesn't exists any [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`.
 
 ```html
 <html>
@@ -344,6 +346,67 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
     <label for="target">Add to list (press "+" to add):</label>
     <input type="text" id="target" />
     <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
+  </body>
+</html>
+```
+
+#### Failed Example 2
+
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and:
+ - there exists an [instrument][] to **disable** the [keyboard event][]; and
+ - there exists an [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`; and
+ - both [instruments][instrument] cannot be found in a [clearly labeled location][].
+
+```html
+<html>
+  <head>
+    <title>Failed Example 2</title>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
+    <script>
+      function openModal() {
+        document.getElementById('overlay').style.display = 'block'
+      }
+      function closeModal() {
+        document.getElementById('overlay').style.display = 'none'
+      }
+    </script>
+  </head>
+  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
+    <div
+      style="
+        display: none;
+        position: fixed;
+        top: 2em;
+        left: 10em;
+        background-color: #505050;
+        color: white;
+        padding: 1em;
+        padding-top: 0em;
+      "
+		  id="overlay"
+	  >
+      <p>Disable/remap shortcut</p>
+      <label>
+        <input type="checkbox" onclick="toggleDisabled('singleShortcut', !this.checked)" checked>
+        Toggle single character keyboard shortcut
+      </label>
+      <br>
+      <label>
+        <input id="remap" type="checkbox" onclick="toggleModifier('singleShortcut', this.checked)">
+        Use "ctrl" key together with the "+" key
+      </label>
+      <br>
+      <button onclick="closeModal();">Dismiss</button>
+    </div>
+    
+    <input type="button" onclick="openModal()" value="Open modal" />
+    
+    <label for="target">Add to list (press "+" to add):</label>
+    <input type="text" id="target" />
     <div>
       To do list
     </div>
@@ -421,13 +484,22 @@ This [HTML document][] has a [keyboard event][] that is not [dispatched][] to an
     <title>Inapplicable Example 4</title>
     <script>
       function shortcut() {
-        const event = new KeyboardEvent('keydown');
+        window.addEventListener('keydown', function(event) {
+          const target = document.getElementById("target");
+
+          if (event.key === "+") {
+            document.getElementById("list").innerHTML += "<li>" + target.value + "</li>";
+            target.value = "";
+            event.preventDefault();
+          }
+        });
       }
     </script>
   </head>
 
-  <body>
-    <button onload="shortcut()">Add item to the list</button>
+  <body onload="shortcut()">
+    <label for="target">Add to list (press "+" to add):</label>
+    <input type="text" id="target" />
     <br />
     <div>
       To do list
@@ -479,6 +551,8 @@ This [HTML document][] has an element with the attribute `accesskey`. Accesskeys
 [keyboard event]: https://www.w3.org/TR/uievents/#events-keyboardevents
 [legacy keyboard events]: https://www.w3.org/TR/uievents/#legacy-keyboardevent-events
 [dispatched]: https://dom.spec.whatwg.org/#dispatching-events
+[event firing]: https://dom.spec.whatwg.org/#concept-event-fire
+[sc 2.1.4]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-process
 [clearly labeled location]: #clearly-labeled-location 'Definition of clearly labeled location'
 [web page]: #web-page-html 'Definition of web page'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'

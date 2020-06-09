@@ -1,9 +1,9 @@
 ---
 id: 7677a9
-name: Device motion based functionality can also be operated from the user interface
+name: Device motion based changes to the content can also be created from the user interface
 rule_type: atomic
 description: |
-  This rule checks that functionality that can be operated by device motion can also be operated by user interface components.
+  This rule checks that changes to the content of a web page that result from device motion events can also be caused by user interface components.
 accessibility_requirements:
   wcag21:2.5.4: # Motion Actuation (A)
     forConformance: true
@@ -32,8 +32,8 @@ The rule applies to any [HTML document][] with an associated [Window object][] t
 
 For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target one of the following is true:
 
-- **no result:** The registered event does not have results perceivable by the user; or
-- **same result:** There is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] of the registered event or can be found in a [clearly labeled location][] from that [web page][], supporting indistinguishable results of those from the event.
+- **no result:** The registered event does not cause [changes to the content][changes in content] of the [web page][]; or
+- **same result:** There is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] of the registered event or can be found in a [clearly labeled location][] from that [web page][], causing the same [changes in content][] as the event.
 
 ## Assumptions
 
@@ -240,6 +240,7 @@ This [HTML document][] is not operable by device motion.
 ```
 
 [accessibility supported]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation#dfn-accessibility-supported
+[changes in content]: #changes-in-content 'Definition of changes in content'
 [clearly labeled location]: #clearly-labeled-location 'Definition of clearly labeled location'
 [device motion]: https://www.w3.org/TR/orientation-event/#devicemotion 'Definition of device motion event'
 [device orientation]: https://www.w3.org/TR/orientation-event/#deviceorientation 'Definition of device orientation event'

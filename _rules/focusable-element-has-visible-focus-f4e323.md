@@ -20,7 +20,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any element which is part of [sequential focus navigation][].
+The rule applies to any [focusable][] element in a document with several [focusable][] elements when the element is part of [sequential focus navigation][].
 
 ## Expectation
 
@@ -28,11 +28,14 @@ For each target element, there exists a set of [focus indicators][focus indicato
 
 ## Assumptions
 
-The definition of [focus indicator][] is based on the tree order but users are likely to perceive relationship based on position on the rendered page. If these are different, the rule may produce incorrect results. Notably, if styling is used to mimic a table layout where focus indicators are located in the same "column", the definition won't detect these as [focus indicators][focus indicator] and the rule will produce incorrect results.
+- The definition of [focus indicator][] is based on the tree order but users are likely to perceive relationship based on position on the rendered page. If these are different, the rule may produce incorrect results. Notably, if styling is used to mimic a table layout where focus indicators are located in the same "column", the definition won't detect these as [focus indicators][focus indicator] and the rule will produce incorrect results.
+- This rule assumes that the [focus indicator][] has to be located in proximity with the related [focusable][] element. WCAG says nothing about where in the page they should be. Thus, a page with, say, a line of circles at the top lighting up to indicate that various elements have focus (and no other indication) would fail this rule but arguably pass [Success Criterion 2.4.7: Focus Visible][sc247]. Note that doing so would nonetheless be an accessibility issue as it would become difficult to remember which indicator corresponds to which element.
+- This rule assumes that the same set of [focus indicators][focus indicator] cannot be to indicate focus for different [focusable][] elements in different ways. Thus, a page with, say, a circle with filling to indicate focus of one element and border to indicate focus of another element would fail this rule but arguably pass [Success Criterion 2.4.7: Focus Visible][sc247]. Note that doing so would nonetheless be an accessibility issue as it would become difficult to remember which indication corresponds to which element.
 
 ## Accessibility Support
 
-WCAG does not have any requirement of how big or small focus indicator should be and it is possible to pass this rule and [Success Criterion 2.4.7: Focus Visible][sc247] with barely perceptible changes that would thus still be an accessibility issue. WCAG 2.2 is working on an extended Success Criterion 2.4.11 specifying how big the focus indicator should be. See the [Understanding Success Criterion 2.4.11: Focus Visible (Enhanced)][usc2411] proposal.
+- WCAG does not have any requirement of how big or small focus indicator should be, and it is possible to pass this rule and [Success Criterion 2.4.7: Focus Visible][sc247] with barely perceptible changes that would thus still be an accessibility issue. WCAG 2.2 is working on an extended Success Criterion 2.4.11 specifying how big the focus indicator should be. See the [Understanding Success Criterion 2.4.11: Focus Visible (Enhanced)][usc2411] proposal.
+- WCAG [Understanding Success Criterion 2.4.7: Focus Visible][usc247] explicitly states that "[i]f there is only one keyboard actionable control on the screen, the success criterion would be met". Therefore, this rule only consider documents with several [focusable][] elements.
 
 ## Background
 
@@ -49,8 +52,6 @@ WCAG does not have any requirement of how big or small focus indicator should be
 #### Passed Example 1
 
 All the [focusable][] elements in this document are part of [sequential focus navigation][]. They are [focus indicator][] for themselves as default User Agent's styling makes the focus visible (this may depend on user agents). They are not [focus indicator][] for any other [focusable][] element.
-
-**Note to reviewers:** The default blinking cursor of focused `<input type="text" />` is not a [distinguishing style][distinguishing styles]. Thus, the rule currently fail on that element, which is clearly not good. I am not sure how to handle that visual cue, quite clearly by adding something to the [focus indicator][] definition, but not sure what ("blinking cursor" seems a bit too specific…)
 
 ```html
 <a href="https://act-rules.github.io/">ACT rules</a><br />
@@ -77,7 +78,15 @@ All the [focusable][] elements in this document are part of [sequential focus na
 
 #### Passed Example 2
 
-This [focusable][] element, part of [sequential focus navigation][] due to its `tabindex`, has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**isolating common ancestor**) condition).
+The first [focusable][] element is part of [sequential foc]
+
+```html
+<a href="https://act-rules.github.io/">ACT rules</a> <button tabindex="-1">Dummy button</button>
+```
+
+#### Passed Example 2
+
+The first [focusable][] element, part of [sequential focus navigation][] due to its `tabindex`, has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**isolating common ancestor**) condition).
 
 ```html
 <link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
@@ -93,21 +102,23 @@ This [focusable][] element, part of [sequential focus navigation][] due to its `
 		>ACt rules</span
 	>
 </span>
+<button>Dummy button</button>
 ```
 
 #### Passed Example 3
 
-This [focusable][] `p` element is a [potential focus indicator][] for itself despite being an ancestor of another [focusable][] element (the link), because that other [focusable][] is a descendant of the `p` element. Thus, the `p` element matches the (**isolating common ancestor**) condition. Default styling makes it a [focus indicator][] for itself and no other [focusable][] element. Similarly, the `a` element is a [focus indicator][] for itself.
+The [focusable][] `p` element is a [potential focus indicator][] for itself despite being an ancestor of another [focusable][] element (the link), because that other [focusable][] is a descendant of the `p` element. Thus, the `p` element matches the (**isolating common ancestor**) condition. Default styling makes it a [focus indicator][] for itself and no other [focusable][] element. Similarly, the `a` element is a [focus indicator][] for itself.
 
 ```html
 <p tabindex="0">
 	<a href="https://act-rules.github.io/">ACT rules</a>
 </p>
+<button>Dummy button</button>
 ```
 
 #### Passed Example 4
 
-This [focusable][] element has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**neighbors**) condition), and for no other.
+The first [focusable][] element has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**neighbors**) condition), and for no other.
 
 ```html
 <link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
@@ -122,6 +133,7 @@ This [focusable][] element has a [focus indicator][]. The element with `id` "ind
 	tabindex="0"
 	>ACT rules</span
 >
+<button>Dummy button</button>
 ```
 
 #### Passed Example 5
@@ -232,13 +244,21 @@ Both these [focusable][] elements have a [focus indicator][] in the cell above t
 
 #### Failed Example 1
 
-This [focusable][] element has no [focus indicator][] because the default styling has been overwritten.
+None of these [focusable][] elements have a [focus indicator][] because the default styling has been overwritten.
 
 ```html
-<span class="no-focus-default" tabindex="0">ACT rules</span>
+<span class="no-focus-default" tabindex="0">ACT rules</span> <span class="no-focus-default" tabindex="0">WCAG</span>
 ```
 
 #### Failed Example 2
+
+The first [focusable][] element is part of [sequential focus navigation][] and has no [focus indicator][]. The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the `tabindex` attribute. Its presence is nonetheless enough to make the first one applicable.
+
+```html
+<span class="no-focus-default" tabindex="0">ACT rules</span> <button tabindex="-1">Dummy button</button>
+```
+
+#### Failed Example 3
 
 None of these [focusable][] elements have a [focus indicator][]. The `p` element is not a [potential focus indicator][] for any of the `span` elements; it does not match the (**isolating common ancestor**) due to being ancestor to both of them.
 
@@ -259,7 +279,7 @@ None of these [focusable][] elements have a [focus indicator][]. The `p` element
 </p>
 ```
 
-#### Failed Example 3
+#### Failed Example 4
 
 None of these [focusable][] elements have a [focus indicator][]. The element with `id` "indicator-wcag" is not a [potential focus indicator][] for the element with `id` "wcag"; it does not match the (**neighbors**) condition due to the presence of another [focusable][] element between them.
 
@@ -279,7 +299,7 @@ None of these [focusable][] elements have a [focus indicator][]. The element wit
 >
 ```
 
-#### Failed Example 4
+#### Failed Example 5
 
 None of these [focusable][] elements have a [focus indicator][] which is not also [focus indicator][] for another element. The element with `id` "indicator" is a [focus indicator][] for both of them and they have no other [focus indicator][].
 
@@ -306,7 +326,7 @@ None of these [focusable][] elements have a [focus indicator][] which is not als
 >
 ```
 
-#### Failed Example 5
+#### Failed Example 6
 
 None of these [focusable][] elements have a [focus indicator][]. The element with `id` "indicator-wcag" is not a [potential focus indicator][] for the element with `id` "wcag" due to the presence of another focusable element in the same column between them.
 
@@ -341,6 +361,23 @@ This document contains no [focusable][] element.
 
 ```html
 <span>ACT rules</span>
+```
+
+#### Inapplicable Example 2
+
+This document contains only one [focusable][] element.
+
+```html
+<a href="https://act-rules.github.io/">ACT rules</a>
+```
+
+#### Inapplicable Example 3
+
+None of the [focusable][] elements in this document is part of [sequential focus navigation][].
+
+```html
+<a tabindex="-1" href="https://act-rules.github.io/">ACT rules</a>
+<a tabindex="-1" href="https://www.w3.org/TR/WCAG21/">WCAG</a>
 ```
 
 [distinguishing styles]: #distinguishing-styles 'Definition of Distinguishing styles'

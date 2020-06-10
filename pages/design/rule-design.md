@@ -161,7 +161,7 @@ In the applicability and expectations, something often has multiple conditions t
 > * (**label 2**:) The (X) has condition B; (and | or)
 > * (**label 3**:) The (X) has condition C.
 
-This phrasing is designed to be easilly readable, but may not work in every situation. In all cases prefer readability over prescriptive formatting. Additionally to this, keep the following in mind when listing conditions:
+This phrasing is designed to be easily readable, but may not work in every situation. In all cases prefer readability over prescriptive formatting. Additionally to this, keep the following in mind when listing conditions:
 
 - The phrasing "for which (all | one of) the following is" can be modified based on use, such as "to achieve one of the following objectives".
 - Labels are optional, not recommended for lists of 2, and recommended for lists of 4 or more conditions. Keep the labels short, 1 or 2 words. If the label does not help clarify the list, don't use them even for longer lists.

@@ -48,7 +48,7 @@ WCAG does not have any requirement of how big or small focus indicator should be
 
 #### Passed Example 1
 
-All the [focusable][] elements in this document are [focus indicator][] for themselves as default User Agent's styling makes the focus visible (this depends on user agents). They are not [focus indicator][] for any other [focusable][] element.
+All the [focusable][] elements in this document are part of [sequential focus navigation][]. They are [focus indicator][] for themselves as default User Agent's styling makes the focus visible (this may depend on user agents). They are not [focus indicator][] for any other [focusable][] element.
 
 **Note to reviewers:** The default blinking cursor of focused `<input type="text" />` is not a [distinguishing style][distinguishing styles]. Thus, the rule currently fail on that element, which is clearly not good. I am not sure how to handle that visual cue, quite clearly by adding something to the [focus indicator][] definition, but not sure what ("blinking cursor" seems a bit too specific…)
 
@@ -77,7 +77,7 @@ All the [focusable][] elements in this document are [focus indicator][] for them
 
 #### Passed Example 2
 
-This [focusable][] element has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**isolating common ancestor**) condition).
+This [focusable][] element, part of [sequential focus navigation][] due to its `tabindex`, has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**isolating common ancestor**) condition).
 
 ```html
 <link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />

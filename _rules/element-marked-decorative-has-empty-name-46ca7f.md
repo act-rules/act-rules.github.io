@@ -29,7 +29,7 @@ The rule applies to any element for which all the following are true:
 - the element is not an `iframe` element; and
 - the element is [marked as decorative][].
 
-**Note:** The list of elements matching the first two conditions is `audio`, `canvas`, `embed`, `img`, `object`, `picture`, `svg`, and `video`. `iframe` elements and `math` elements from the MathML namespace are ignored because they often embed text content.
+**Note:** The list of elements matching the first two conditions is `audio`, `canvas`, `embed`, `img`, `object`, `picture`, `svg`, and `video`. `iframe` elements, and `math` elements from the MathML namespace are ignored because they often embed text content.
 
 ## Expectation
 

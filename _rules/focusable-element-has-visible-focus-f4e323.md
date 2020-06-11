@@ -35,7 +35,7 @@ For each target element, there exists a set of [focus indicators][focus indicato
 ## Accessibility Support
 
 - WCAG does not have any requirement of how big or small focus indicator should be, and it is possible to pass this rule and [Success Criterion 2.4.7: Focus Visible][sc247] with barely perceptible changes that would thus still be an accessibility issue. WCAG 2.2 is working on an extended Success Criterion 2.4.11 specifying how big the focus indicator should be. See the [Understanding Success Criterion 2.4.11: Focus Visible (Enhanced)][usc2411] proposal.
-- WCAG [Understanding Success Criterion 2.4.7: Focus Visible][usc247] explicitly states that "[i]f there is only one keyboard actionable control on the screen, the success criterion would be met". Therefore, this rule only consider documents with several [focusable][] elements.
+- WCAG [Understanding Success Criterion 2.4.7: Focus Visible][usc247] explicitly states that "if there is only one keyboard actionable control on the screen, the success criterion would be met". Therefore, this rule only consider documents with several [focusable][] elements.
 
 ## Background
 
@@ -84,7 +84,7 @@ The first [focusable][] element is part of [sequential focus navigation] and is 
 <a href="https://act-rules.github.io/">ACT rules</a> <button tabindex="-1">Dummy button</button>
 ```
 
-#### Passed Example 2
+#### Passed Example 3
 
 The first [focusable][] element, part of [sequential focus navigation][] due to its `tabindex`, has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**neighbors**) condition).
 
@@ -105,7 +105,7 @@ The first [focusable][] element, part of [sequential focus navigation][] due to 
 <button>Dummy button</button>
 ```
 
-#### Passed Example 3
+#### Passed Example 4
 
 The [focusable][] `p` element is a [potential focus indicator][] for itself despite being an ancestor of another [focusable][] element (the link), because that other [focusable][] is a descendant of the `p` element. Thus, the `p` element matches the (**ancestor**) condition. Default styling makes it a [focus indicator][] for itself and no other [focusable][] element. Similarly, the `a` element is a [focus indicator][] for itself.
 
@@ -115,7 +115,7 @@ The [focusable][] `p` element is a [potential focus indicator][] for itself desp
 </p>
 ```
 
-#### Passed Example 4
+#### Passed Example 5
 
 The first [focusable][] element has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**neighbors**) condition), and for no other.
 
@@ -135,7 +135,7 @@ The first [focusable][] element has a [focus indicator][]. The element with `id`
 <button>Dummy button</button>
 ```
 
-#### Passed Example 5
+#### Passed Example 6
 
 Both these [focusable][] elements have a [focus indicator][]. The element with `id` "indicator-wcag" is a [potential focus indicator][] for both of them, but a [focus indicator][] only for the element with "id` "wcag".
 
@@ -163,7 +163,7 @@ Both these [focusable][] elements have a [focus indicator][]. The element with `
 >
 ```
 
-#### Passed Example 6
+#### Passed Example 7
 
 Each of these three [focusable][] elements has a set of [focus indicators][focus indicator] which are not all [focus indicator][] for the same other element. The element with `id` "wcag" has two [focus indicators][focus indicator] (with `id`s "indicator-wcag" and "indicator-w3c"). Both of them are also [focus indicator][] for another [focusable][] element, but each for a different element. Thus, the set composed of these two [focus indicator][] passes the expectation.
 
@@ -201,7 +201,7 @@ Each of these three [focusable][] elements has a set of [focus indicators][focus
 <span id="indicator-final" class="indicator solid"></span>
 ```
 
-#### Passed Example 7
+#### Passed Example 8
 
 Both these [focusable][] elements have a [focus indicator][] in the cell above their, due to the (**table neighbors**) condition.
 
@@ -381,7 +381,6 @@ None of the [focusable][] elements in this document is part of [sequential focus
 <a tabindex="-1" href="https://www.w3.org/TR/WCAG21/">WCAG</a>
 ```
 
-[distinguishing styles]: #distinguishing-styles 'Definition of Distinguishing styles'
 [focusable]: #focusable 'Definition of Focusable'
 [focus indicator]: #focus-indicator 'Definition of Focus Indicator'
 [potential focus indicator]: #potential-focus-indicator 'Definition of Potential focus Indicator'

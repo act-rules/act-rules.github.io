@@ -78,7 +78,7 @@ All the [focusable][] elements in this document are part of [sequential focus na
 
 #### Passed Example 2
 
-The first [focusable][] element is part of [sequential foc]
+The first [focusable][] element is part of [sequential focus navigation] and is a [focus indicator][] for itself due to default User Agent's styling. Even though the second [focusable][] element is not part of [sequential focus navigation][], it's presence is enough to make the first one applicable.
 
 ```html
 <a href="https://act-rules.github.io/">ACT rules</a> <button tabindex="-1">Dummy button</button>
@@ -113,7 +113,6 @@ The [focusable][] `p` element is a [potential focus indicator][] for itself desp
 <p tabindex="0">
 	<a href="https://act-rules.github.io/">ACT rules</a>
 </p>
-<button>Dummy button</button>
 ```
 
 #### Passed Example 4

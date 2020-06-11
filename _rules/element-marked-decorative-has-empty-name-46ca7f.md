@@ -23,7 +23,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to any element for which all of the following are true:
+The rule applies to any element for which all the following are true:
 
 - the element is [embedded content][] in the HTML or SVG namespace; and
 - the element is not an `iframe` element; and

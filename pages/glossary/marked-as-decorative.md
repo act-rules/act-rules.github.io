@@ -10,7 +10,7 @@ input_aspects:
 An element is _marked as decorative_ if one of the following conditions is true:
 
 - it has a `role` attribute whose first valid token is either "none" or "presentation"; or
-- it is an `img` element with an `alt` attribute whose value is the empty string (`alt=""`).
+- it is an `img` element with an `alt` attribute whose value is the empty string (`alt=""`), and whose `role` attribute (if it exists) contains no valid token.
 
 Elements are marked as decorative as a way to convey the intention of the author that they are [pure decoration][]. It is different from the element actually being [pure decoration][] as authors may make mistakes. It is different from the element being effectively ignored by assistive technologies as rules such as [presentational roles conflict resolution][] may overwrite this intention.
 

@@ -40,7 +40,7 @@ For each test target, the [primary language][] of the [valid language tag][] mat
 
 ## Assumptions
 
-- The way to determine the default language of a page should be done by counting the number of visible words used in each language. If the default language needs to be derived in some other way, this rule may produce incorrect results.
+- The way to determine the default language of a page, as described in WCAG 2, should be done by counting the number of visible words used in each language. If the default language needs to be derived in some other way, this rule may produce incorrect results.
 
 - The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page).
 
@@ -68,7 +68,6 @@ _There are no major accessibility support issues known for this rule._
 This page has a [default language][default page language] of English, which matches the language indicated in the `lang` attribute.
 
 ```html
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>ACT Rules Format 1.0 - Abstract</title>
@@ -90,13 +89,33 @@ This page has a [default language][default page language] of English, which matc
 This page has a [default language][default page language] of English because most words are English. The [default page language][] matches the language indicated in the `lang` attribute.
 
 ```html
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>Gelukkig</title>
 	</head>
 	<body>
 		<p>The Dutch word "gelukkig" has no equivalent in English.</p>
+	</body>
+</html>
+```
+
+#### Passed Example 3
+
+This page has a [default language][default page language] of Dutch because all English text is wrapped in a `p` element with a `lang` attribute set to `en`. Dutch ("nl") is set as the language of the page by the `lang` attribute on the `html` element.
+
+```html
+<html lang="nl">
+	<head>
+		<title>Met de kippen op stok</title>
+	</head>
+	<body>
+		<blockquote>
+			<p>"Hij ging met de kippen op stok"</p>
+		</blockquote>
+		<p lang="en">
+			This Dutch phrase literally translates into "He went to roost with the chickens", but it means that he went to bed
+			early.
+		</p>
 	</body>
 </html>
 ```
@@ -108,7 +127,6 @@ This page has a [default language][default page language] of English because mos
 This page has a [default language][default page language] of English, which is not the language indicated in the `lang` attribute.
 
 ```html
-<!DOCTYPE html>
 <html lang="da">
 	<head>
 		<title>ACT Rules Format 1.0 - Abstract</title>
@@ -130,7 +148,6 @@ This page has a [default language][default page language] of English, which is n
 This page has a [default language][default page language] of English because most words are English. This does not match the language indicated in the `lang` attribute.
 
 ```html
-<!DOCTYPE html>
 <html lang="nl">
 	<head>
 		<title>Gelukkig</title>
@@ -146,7 +163,6 @@ This page has a [default language][default page language] of English because mos
 This page has a [default language][default page language] of Dutch because all English text is wrapped in a `p` element with a `lang` attribute set to `en`. Dutch ("nl") is not set as the language of the page by the `lang` attribute on the `html` element.
 
 ```html
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>Met de kippen op stok</title>
@@ -167,19 +183,18 @@ This page has a [default language][default page language] of Dutch because all E
 
 #### Inapplicable Example 1
 
-This page has an undefined [default language][default page language] because it has no content or [document title][].
-
-```html
-<!DOCTYPE html>
-<html></html>
-```
-
-#### Inapplicable Example 2
-
 This is an SVG [document][document element], not an HTML document.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" lang="fr"></svg>
+```
+
+#### Inapplicable Example 2
+
+This page has an undefined [default language][default page language] because it has no content or [document title][].
+
+```html
+<html></html>
 ```
 
 #### Inapplicable Example 3
@@ -187,7 +202,6 @@ This is an SVG [document][document element], not an HTML document.
 This page has an undefined [default language][default page language] because it has no [document title][] all its content is wrapped in element with a `lang` attribute.
 
 ```html
-<!DOCTYPE html>
 <html>
 	<p lang="en">
 		The Accessibility Conformance Testing (ACT) Rules Format 1.0 defines a format for writing accessibility test rules.
@@ -204,7 +218,6 @@ This page has an undefined [default language][default page language] because it 
 In page has an undefined [default language][default page language] because it can either be English or French.
 
 ```html
-<!DOCTYPE html>
 <html lang="fr">
 	<head>
 		<title>Paul put dire comment on tape</title>

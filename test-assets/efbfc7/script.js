@@ -25,11 +25,11 @@ function changeFrequency(interval = 1) {
 function toggleUpdates() {
     var control = document.getElementById('control')
     if (updating) {
-        control.value = 'Resume updates'
+        control.value = 'Resume changes'
         updating = false
         clearInterval(updates)
     } else {
-        control.value = 'Pause updates'
+        control.value = 'Pause changes'
         updating = true
         updates = setInterval(change, 1000)
     }

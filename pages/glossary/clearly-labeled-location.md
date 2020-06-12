@@ -9,9 +9,9 @@ Secondary information and alternative controls of functionality are often not di
 
 The location of a target is said to be _clearly labeled_ when the target can be found by activating [instruments][] whose "description" either leads the user to find the target, or to another [page][web page] or page state from which this action can be repeated until the target is found.
 
-Whether or not the content is "clearly labeled" depends on the starting point of the search. If page A has a link with a clear "label" to some piece of content, then the location of the content is clearly labeled. Page B, which can be in the same website, may not have such a link or may have a link with an ambiguous link text, and so the location of the content starting from page B is not clearly labeled.
+Whether or not the content is "clearly labeled" depends on the starting point of the search. If page A has a link with a clear "description" to some piece of content, then the location of the content is clearly labeled. Page B, which can be in the same website, may not have such a link or may have a link with an ambiguous link text, and so the location of the content starting from page B is not clearly labeled.
 
-For the purpose of the definition of "Clearly labeled location", a "description" is any text or other content with a [text alternative][], that allows any user to identify an element with a [semantic role][] that inherits from `widget`.
+For the purpose of this definition, a _description_ is any text or other content with a [text alternative][], that allows any user to identify an element with a [semantic role][] that inherits from `widget`.
 
 A [web page][] changes state when the [document's body][body] changes without a change in the [document's URL][URL].
 

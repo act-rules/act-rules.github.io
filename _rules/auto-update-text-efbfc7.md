@@ -1,9 +1,9 @@
 ---
 id: efbfc7
-name: Text content that updates automatically can be paused, stopped or hidden
+name: Text content that changes automatically can be paused, stopped or hidden
 rule_type: atomic
 description: |
-  This rule checks that for any text content that auto-updates in a 10 minute time span, there are instruments to pause, stop, or hide it or to control its update frequency. The arbitrary 10 minute time span, selected so that testing this rule would not be impractical, is not included in WCAG. Content that updates less frequently may fail success criteria 2.2.2 without failing this rule.
+  This rule checks that for any text content that automatically changes in a 10 minute time span, there are instruments to pause, stop, or hide it or to control its changing frequency. The arbitrary 10 minute time span, selected so that testing this rule would not be impractical, is not included in WCAG. Content that changes less frequently may fail success criteria 2.2.2 without failing this rule.
 accessibility_requirements: # Remove whatever is not applicable
   wcag20:2.2.2: # Pause, Stop, Hide (A)
     forConformance: true
@@ -32,19 +32,20 @@ For each test target there is at least one set of [instruments][instrument], whe
 
 - pause and resume the change of the [visible text content][]; or
 - stop the change of the [visible text content][]; or
-- hide the content that changes; or
-- alter the frequency of the changes of the [visible text content][].
+- hide the changing [visible text content][]; or
+- control the frequency of the changes of the [visible text content][].
 
-**Note:** If there is more than one test target, the same [instrument][] may be used to pause, stop, hide or alter the frequency of several or even all test targets.
+**Note:** If there is more than one test target, the same [instrument][] may be used to pause (or stop, or hide or alter the frequency) of several or even all test targets.
 
 ## Assumptions
 
 - The auto-updating of the content is not [essential][], which is listed as valid exception to [Success Criterion 2.2.2: Pause, Stop, Hide][sc 2.2.2]. When the auto-updating of content is [essential][] this rule may produce incorrect results.
-- The content being auto-updated is information. If the auto-update is not information (for example, an ASCII rendered spinning icon that does not provide information on what time is left for a process to end or how much progress has been made) the rule might fail but the success criterion might still be satisfied.
+- The content being changed automatically is information. If the automatically changing content is not information (for example, an ASCII rendered spinning icon that does not provide information on what time is left for a process to end or how much progress has been made) the rule might fail but the success criterion might still be satisfied.
 - Any [content][] changes are enabled by the content of the [HTML document][] the test target belongs to. Changes originating from any other sources (e.g. browser shortcuts, browser extensions, browser settings, user agents, external browser applications) are not considered.
 - All user actions are transmitted by the user agent to the [HTML document][]. If there are other event sources that result from a user action this rule might fail but the success criterion might still be satisfied.
-- Available mechanisms for controlling the update of content rely on [activation][]. If there are other mechanisms that do not rely on [activation][] then the rule might fail but the success criterion might still be satisfied.
-- If there are other ways to control the auto-updating that do not require the user to interact with the web page, failing this rule might not be a failure of the success criterion.
+- Available mechanisms for controlling the content changes rely on [activation][]. If there are other mechanisms that do not rely on [activation][] then the rule might fail but the success criterion might still be satisfied.
+- If there are other ways to control the automatically changing content that do not require the user to interact with the web page, failing this rule might not be a failure of the success criterion.
+- This rule does not check that the pausing instrument does not tie up the user focus. If that happens, then this rule might pass but the success criterion would not be satisfied.
 
 ## Accessibility Support
 
@@ -62,7 +63,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This `span` element contains text content that automatically updates multiple times without user intervention and there is a button available to stop the automatic updates. The rule is not applicable to the second `p` element because it has a child (the `span` element) whose content updates.
+This `span` element contains text content that is automatically **changed** multiple times without user intervention and there is a button available to stop the automatic changes. The rule is not applicable to the second `p` element because it has a **child changed** (the `span` element).
 
 ```html
 <body onload="startUpdates()">
@@ -72,7 +73,7 @@ This `span` element contains text content that automatically updates multiple ti
 	</p>
 
 	<p>Random number: <span id="target">1</span></p>
-	<input type="button" onclick="stopUpdates()" value="Stop updates" />
+	<input type="button" onclick="stopUpdates()" value="Stop changes" />
 
 	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>
@@ -80,7 +81,7 @@ This `span` element contains text content that automatically updates multiple ti
 
 #### Passed Example 2
 
-This `span` element contains text content that automatically updates multiple times without user intervention and there is a button available to pause and resume the automatic updates. The rule is not applicable to the second `p` element because it has a child (the `span` element) whose content updates.
+This `span` element contains text content that is automatically **changed** multiple times without user intervention and there is a button available to pause and resume the automatic changes. The rule is not applicable to the second `p` element because it has a **child changed** (the `span` element).
 
 ```html
 <body onload="startUpdates()">
@@ -90,7 +91,7 @@ This `span` element contains text content that automatically updates multiple ti
 	</p>
 
 	<p>Random number: <span id="target">1</span></p>
-	<input type="button" id="control" onclick="toggleUpdates()" value="Pause updates" />
+	<input type="button" id="control" onclick="toggleUpdates()" value="Pause changes" />
 
 	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>
@@ -98,7 +99,7 @@ This `span` element contains text content that automatically updates multiple ti
 
 #### Passed Example 3
 
-This `span` element contains text content that automatically updates multiple times without user intervention and there is a button available to hide the automatically updating content. The rule is not applicable to the second `p` element because it has a child (the `span` element) whose content updates.
+This `span` element contains text content that is automatically **changed** multiple times without user intervention and there is a button available to hide the automatically updating content. The rule is not applicable to the second `p` element because it has a **child changed** (the `span` element).
 
 ```html
 <body onload="startUpdates()">
@@ -108,7 +109,7 @@ This `span` element contains text content that automatically updates multiple ti
 	</p>
 
 	<p>Random number: <span id="target">1</span></p>
-	<input type="button" onclick="hide()" value="Hide updating content" />
+	<input type="button" onclick="hide()" value="Hide changing content" />
 
 	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>
@@ -116,7 +117,7 @@ This `span` element contains text content that automatically updates multiple ti
 
 #### Passed Example 4
 
-This `span` element contains text content that automatically updates multiple times without user intervention and there is an [instrument][] available to change the update frequency. The rule is not applicable to the second `p` element because it has a child (the `span` element) whose content updates.
+This `span` element contains text content that is automatically **changed** multiple times without user intervention and there is an [instrument][] available to modify the frequency of the changes. The rule is not applicable to the second `p` element because it has a **child changed** (the `span` element).
 
 ```html
 <body onload="startUpdates()">
@@ -126,7 +127,7 @@ This `span` element contains text content that automatically updates multiple ti
 	</p>
 
 	<p>Random number: <span id="target">1</span></p>
-	<label for="interval">Content update frequency (seconds):</label>
+	<label for="interval">Content change frequency (seconds):</label>
 	<input type="text" id="interval" />
 	<input type="button" onclick="changeFrequency(document.getElementById('interval').value)" value="Change frequency" />
 
@@ -136,7 +137,7 @@ This `span` element contains text content that automatically updates multiple ti
 
 #### Passed Example 5
 
-This `span` element contains text content that automatically updates multiple times without user intervention and the location of an [instrument][] to control the updates is clearly available.
+This `span` element contains text content that is automatically **changed** multiple times without user intervention and the location of an [instrument][] to control the changes is clearly available.
 
 ```html
 <body onload="startUpdates()">
@@ -146,8 +147,8 @@ This `span` element contains text content that automatically updates multiple ti
 	</p>
 
 	<p>Random number: <span id="target">1</span></p>
-	<p>To control the random number updates activate the "Control updates" button.</p>
-	<input type="button" onclick="openModal()" value="Control updates" />
+	<p>To control the random number updates activate the "Control changes" button.</p>
+	<input type="button" onclick="openModal()" value="Control changes" />
 
 	<div
 		style="
@@ -162,9 +163,9 @@ This `span` element contains text content that automatically updates multiple ti
     "
 		id="overlay"
 	>
-		<p>Control updates</p>
-		<input type="button" id="control" onclick="toggleUpdates()" value="Pause updates" />
-		<input type="button" onclick="hide()" value="Hide updates" />
+		<p>Control changes</p>
+		<input type="button" id="control" onclick="toggleUpdates()" value="Pause changes" />
+		<input type="button" onclick="hide()" value="Hide changes" />
 		<button onclick="closeModal();">Dismiss</button>
 	</div>
 
@@ -184,7 +185,7 @@ This `span` element contains text content that automatically updates multiple ti
 
 #### Failed Example 1
 
-This `span` element contains text content that automatically updates multiple times without user intervention and there is no [instrument][] available to stop, pause, hide or alter the frequency of the automatic updates.
+This `span` element contains text content that is automatically **changed** multiple times without user intervention and there is no [instrument][] available to stop, pause, hide or alter the frequency of the automatic changes.
 
 ```html
 <body onload="startUpdates()">
@@ -194,24 +195,6 @@ This `span` element contains text content that automatically updates multiple ti
 	</p>
 
 	<p>Random number: <span id="target">1</span></p>
-
-	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
-</body>
-```
-
-#### Failed Example 2
-
-This `span` element contains text content that automatically updates multiple times without user intervention and there is a button available to stop the automatic updates, but the button only stops the updates while it is focused.
-
-```html
-<body onload="startUpdates()">
-	<p>
-		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
-		implement accessibility.
-	</p>
-
-	<p>Random number: <span id="target">1</span></p>
-	<input type="button" onfocus="stopUpdates()" onblur="startUpdates()" value="Stop updates" />
 
 	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>
@@ -221,50 +204,30 @@ This `span` element contains text content that automatically updates multiple ti
 
 #### Inapplicable Example 1
 
-This `span` element contains text content that automatically updates multiple times but only as a result of the user activating a button on the page.
+This document does not have any visible text node.
 
 ```html
-<body>
-	<p>
-		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
-		implement accessibility.
-	</p>
-
-	<p>Random number: <span id="target">1</span></p>
-	<input type="button" id="control" onclick="toggleUpdates()" value="Start updates" />
-
-	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
-</body>
+<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
+<p style="display: none">
+	The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
+	implement accessibility.
+</p>
 ```
 
 #### Inapplicable Example 2
 
-This `span` element with text content that automatically updates multiple times is the only content in the document.
+This document does not have text content that is automatically **changed**.
 
 ```html
-<body onload="startUpdates()">
-	<span id="target">1</span>
-
-	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
-</body>
+<p>
+	The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
+	implement accessibility.
+</p>
 ```
 
 #### Inapplicable Example 3
 
-This document does not have text content that updates automatically.
-
-```html
-<body>
-	<p>
-		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
-		implement accessibility.
-	</p>
-</body>
-```
-
-#### Inapplicable Example 4
-
-This `span` element has updated color but not its `innerText` property.
+This `span` element changes color but not its `innerText` property.
 
 ```html
 <body onload="startColorUpdates()">
@@ -294,6 +257,36 @@ This `span` element has updated color but not its `innerText` property.
 			clearInterval(updates)
 		}
 	</script>
+</body>
+```
+
+#### Inapplicable Example 4
+
+This `span` element contains text content that is automatically **changed** but only as a result of the user activating a button on the page.
+
+```html
+<body>
+	<p>
+		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
+		implement accessibility.
+	</p>
+
+	<p>Random number: <span id="target">1</span></p>
+	<input type="button" id="control" onclick="toggleUpdates()" value="Start changes" />
+
+	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
+</body>
+```
+
+#### Inapplicable Example 5
+
+This `span` element with text content that automatically changes multiple times is **alone** in the document.
+
+```html
+<body onload="startUpdates()">
+	<span id="target">1</span>
+
+	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
 </body>
 ```
 

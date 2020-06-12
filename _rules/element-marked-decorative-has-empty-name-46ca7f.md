@@ -23,13 +23,13 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to any element for which all the following are true:
+The rule applies to any element in the [HTML][html namespace] or [SVG namespace][] that:
 
-- the element is [embedded content][] in the HTML or SVG namespace; and
-- the element is not an `iframe` element; and
-- the element is [marked as decorative][].
+- is [embedded content][]; and
+- is not an `iframe` element; and
+- is [marked as decorative][].
 
-**Note:** The list of elements matching the first two conditions is `audio`, `canvas`, `embed`, `img`, `object`, `picture`, `svg`, and `video`. `iframe` elements, and `math` elements from the MathML namespace are ignored because they often embed text content.
+**Note:** The list of elements matching the conditions is `audio`, `canvas`, `embed`, `img`, `object`, `picture`, `svg`, and `video`.
 
 ## Expectation
 
@@ -39,6 +39,7 @@ Each target element as an empty [accessible name][].
 
 - This rule assumes that the applicable elements embed [non-text content][]. If this is not the case, the rule may fails while [Success Criterion 1.1.1][sc111] is still satisfied because it is only concerned with [non-text content][]. Note that the mismatch between [marking as decorative][marked as decorative] and providing an [accessible name][] is not necessarily an accessibility issue for text content, but is nonetheless bad practice and should be avoided.
 - This rule assumes that elements which are [marked as decorative][] are [pure decoration][]. If this is not the case, this rule may fail while [Success Criterion 1.1.1][sc111] is still satisfied. Note that [marking as decorative][marked as decorative] an element which is not [pure decoration][] is not necessarily an accessibility issue but is nonetheless bad practice and should be avoided.
+- This rule assumes that `iframe` elements, and `math` elements from the [MathML namespace][], which are also [embedded content][], embed text content and thus are not applicable. When these elements are used to embed non-text content, then the rule may pass while [Success Criterion 1.1.1][sc111] is not satisfied.
 
 ## Accessibility Support
 
@@ -149,9 +150,12 @@ This `img` element is not [marked as decorative][].
 [f38]: https://www.w3.org/WAI/WCAG21/Techniques/failures/F38 'Technique F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them'
 [f39]: https://www.w3.org/WAI/WCAG21/Techniques/failures/F39 'Technique F39: Failure of Success Criterion 1.1.1 due to providing a text alternative that is not null (e.g., alt="spacer" or alt="image") for images that should be ignored by assistive technology'
 [h67]: https://www.w3.org/WAI/WCAG21/Techniques/html/H67 'Technique H67: Using null alt text and no title attribute on img elements for images that AT should ignore'
+[html namespace]: https://infra.spec.whatwg.org/#html-namespace
 [marked as decorative]: #marked-as-decorative 'Definition of Marked as decorative'
+[mathml namespace]: https://infra.spec.whatwg.org/#mathml-namespace
 [non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content 'WCAG definition of Non-text content'
 [pure decoration]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of Pure decoration'
 [sc111]: https://www.w3.org/TR/WCAG21/#non-text-content 'Success Criterion 1.1.1: Non-text Content'
 [step 2d of accessible name computation]: https://www.w3.org/TR/accname-1.1/#step2D 'Step 2D of accessible name computation'
+[svg namespace]: https://infra.spec.whatwg.org/#svg-namespace
 [usc111]: https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html 'Understanding Success Criterion 1.1.1: Non-text Content'

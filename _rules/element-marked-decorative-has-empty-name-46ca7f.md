@@ -23,11 +23,11 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to any element in the [HTML][html namespace] or [SVG namespace][] that:
+The rule applies to any element in the [HTML][html namespace] or [SVG namespace][] for which all the following are true:
 
-- is [embedded content][]; and
-- is not an `iframe` element; and
-- is [marked as decorative][].
+- the element is [embedded content][]; and
+- the element is not an `iframe` element; and
+- the element is [marked as decorative][].
 
 **Note:** The list of elements matching the conditions is `audio`, `canvas`, `embed`, `img`, `object`, `picture`, `svg`, and `video`.
 

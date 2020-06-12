@@ -201,7 +201,7 @@ This page has an undefined [default language][default page language] because it 
 
 #### Inapplicable Example 4
 
-In page has an undefined [default language][default page language] can not be defined because it can either be English or French.
+In page has an undefined [default language][default page language] because it can either be English or French.
 
 ```html
 <!DOCTYPE html>

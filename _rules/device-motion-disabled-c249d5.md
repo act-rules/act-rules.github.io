@@ -32,7 +32,7 @@ The rule applies to an [HTML document][] with an associated [Window object][] th
 
 For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target one of the following is true:
 
-- **no result:** The registered event does not cause [changes to the content][changes in content] of the [web page][] within a 10 minute time span of the [event firing][event firing]; or
+- **no changes:** The registered event does not cause [changes to the content][changes in content] of the [web page][] within a 10 minute time span of the [event firing][event firing]; or
 - **disabled:** There is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] of the registered event or can be found in a [clearly labeled location][] from that [web page][], to prevent [changes to the content][changes in content] of the [web page][] resulting from the event within a 10 minute time span of the [event firing][].
 
 **Note:** The 10 minute time span is an arbitrary limit which is not included in WCAG. Results that happen after this period will not fail this rule but may nonetheless fail [Success Criterion 2.5.4: Motion Actuation][sc 2.5.4]. The accessibility problem tends to be less severe for longer time periods, and without a time limit, testing this rule consistently would be impractical.
@@ -60,12 +60,37 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider has a control to disable that functionality.
+This [HTML document][] has device orientation events that cause **no changes** to the content of the web page.
 
 ```html
 <html>
 	<head>
 		<title>Passed Example 1</title>
+		<script>
+			function activateEvent() {
+				let counter = 0
+				window.addEventListener('deviceorientation', () => {
+					counter++
+				})
+			}
+		</script>
+	</head>
+
+	<body onload="activateEvent();">
+		<p>ACT-R</p>
+		<p>Note: This example may not work across all browsers.</p>
+	</body>
+</html>
+```
+
+#### Passed Example 2
+
+This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider has a control to **disable** that functionality.
+
+```html
+<html>
+	<head>
+		<title>Passed Example 2</title>
 		<script src="/test-assets/7677a9/slider.js"></script>
 		<script>
 			function activateSlider() {
@@ -95,14 +120,14 @@ This [HTML document][] that can be operated through the device's orientation to 
 </html>
 ```
 
-#### Passed Example 2
+#### Passed Example 3
 
-This [HTML document][] that can be operated by rotating the device to increase and decrease the value of a slider has a control to disable that functionality.
+This [HTML document][] that can be operated by rotating the device to increase and decrease the value of a slider has a control to **disable** that functionality.
 
 ```html
 <html>
 	<head>
-		<title>Passed Example 1</title>
+		<title>Passed Example 3</title>
 		<script src="/test-assets/7677a9/slider.js"></script>
 		<script>
 			function activateSlider() {
@@ -136,7 +161,7 @@ This [HTML document][] that can be operated by rotating the device to increase a
 
 #### Failed Example 1
 
-This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider but has no way to disable this functionality.
+This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider but has no way to **disable** this functionality.
 
 ```html
 <html>

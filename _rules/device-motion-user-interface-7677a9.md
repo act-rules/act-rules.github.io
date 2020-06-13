@@ -32,13 +32,13 @@ The rule applies to any [HTML document][] with an associated [Window object][] t
 
 For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target one of the following is true:
 
-- **no result:** The registered event does not cause [changes to the content][changes in content] of the [web page][]; or
+- **no changes:** The registered event does not cause [changes to the content][changes in content] of the [web page][]; or
 - **same result:** There is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] of the registered event or can be found in a [clearly labeled location][] from that [web page][], causing the same [changes in content][] as the event.
 
 ## Assumptions
 
-- The motion to operate the device is not used through an [accessibility supported][] interface, which is listed as a valid exception to [SC 2.5.4][SC2.5.4].
-- The motion is not [essential][] for the functionality it triggers, which is listed as a valid exception to [SC 2.5.4][SC2.5.4].
+- The motion to operate the device is not used through an [accessibility supported][] interface, which is listed as a valid exception to [SC 2.5.4][sc2.5.4].
+- The motion is not [essential][] for the functionality it triggers, which is listed as a valid exception to [SC 2.5.4][sc2.5.4].
 
 ## Accessibility Support
 
@@ -46,7 +46,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- [Understanding Success Criterion 2.5.4: Motion Actuation][SC2.5.4]
+- [Understanding Success Criterion 2.5.4: Motion Actuation][sc2.5.4]
 - [G213: Provide conventional controls and an application setting for motion activated input](https://www.w3.org/WAI/WCAG21/Techniques/general/G213.html)
 - [DeviceOrientation Event Specification](https://www.w3.org/TR/orientation-event/)
 
@@ -56,12 +56,37 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider has the same functionality available through `button` elements.
+This [HTML document][] has device orientation events that cause **no changes** to the content of the web page.
 
 ```html
 <html>
 	<head>
 		<title>Passed Example 1</title>
+		<script>
+			function activateEvent() {
+				let counter = 0
+				window.addEventListener('deviceorientation', () => {
+					counter++
+				})
+			}
+		</script>
+	</head>
+
+	<body onload="activateEvent();">
+		<p>ACT-R</p>
+		<p>Note: This example may not work across all browsers.</p>
+	</body>
+</html>
+```
+
+#### Passed Example 2
+
+This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider has the **same result** available through `button` elements.
+
+```html
+<html>
+	<head>
+		<title>Passed Example 2</title>
 		<script src="/test-assets/7677a9/slider.js"></script>
 		<script>
 			function activateSlider() {
@@ -93,14 +118,14 @@ This [HTML document][] that can be operated through the device's orientation to 
 </html>
 ```
 
-#### Passed Example 2
+#### Passed Example 3
 
-This [HTML document][] that can be operated by rotating the device to increase and decrease the value of a slider has the same functionality available through `button` elements.
+This [HTML document][] that can be operated by rotating the device to increase and decrease the value of a slider has the **same result** available through `button` elements.
 
 ```html
 <html>
 	<head>
-		<title>Passed Example 2</title>
+		<title>Passed Example 3</title>
 		<script src="/test-assets/7677a9/slider.js"></script>
 		<script>
 			function activateSlider() {
@@ -132,14 +157,14 @@ This [HTML document][] that can be operated by rotating the device to increase a
 </html>
 ```
 
-#### Passed Example 3
+#### Passed Example 4
 
-This [HTML document][] can be operated by rotating the device to increase and decrease the value of a slider and the location of an [instrument][] to control the updates is clearly available.
+This [HTML document][] can be operated by rotating the device to increase and decrease the value of a slider and the location of an [instrument][] to support the **same results** is clearly available.
 
 ```html
 <html>
 	<head>
-		<title>Passed Example 2</title>
+		<title>Passed Example 4</title>
 		<script src="/test-assets/7677a9/slider.js"></script>
 		<script>
 			function activateSlider() {
@@ -195,7 +220,7 @@ This [HTML document][] can be operated by rotating the device to increase and de
 
 #### Failed Example 1
 
-This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider has not other way to achieve the same functionality.
+This [HTML document][] that can be operated through the device's orientation to increase and decrease the value of a slider has not other way to achieve the **same result**.
 
 ```html
 <html>
@@ -249,6 +274,6 @@ This [HTML document][] is not operable by device motion.
 [event listener list]: https://dom.spec.whatwg.org/#eventtarget-event-listener-list
 [html document]: https://dom.spec.whatwg.org/#concept-document
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
-[SC2.5.4]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html
+[sc2.5.4]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html
 [web page]: #web-page-html 'Definition of web page'
 [window object]: https://html.spec.whatwg.org/multipage/window-object.html#dom-window

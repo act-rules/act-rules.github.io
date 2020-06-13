@@ -101,7 +101,7 @@ This image button has an [accessible name][] equivalent to the filename. The [ac
 
 ```html
 <html lang="en">
-	<input type="image" src="test-assets/image-filename-as-accessible-name-9eb3f6/login" alt="login" />
+	<input type="image" src="/test-assets/image-filename-as-accessible-name-9eb3f6/login" alt="login" />
 </html>
 ```
 
@@ -111,7 +111,7 @@ This `img` element has an [accessible name][] equivalent to the filename. The [a
 
 ```html
 <html lang="fr">
-	<img src="test-assets/image-filename-as-accessible-name-9eb3f6/pain" alt="pain" />
+	<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/pain" alt="pain" />
 </html>
 ```
 
@@ -122,7 +122,7 @@ This `img` element has 3 [image sources][] for [device-pixel-ratio][]-based sele
 ```html
 <html lang="en">
 	<img
-		src="test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg"
+		src="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg"
 		srcset="
 			test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn 1.5x,
 			test-assets/image-filename-as-accessible-name-9eb3f6/paris  2x
@@ -139,9 +139,9 @@ This `img` element has 3 [image sources][] for [Art direction][]-based selection
 ```html
 <html lang="en">
 	<picture>
-		<source media="(min-width: 45em)" srcset="test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn" />
-		<source media="(min-width: 32em)" srcset="test-assets/image-filename-as-accessible-name-9eb3f6/paris" />
-		<img src="test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg" alt="Nyhavn" />
+		<source media="(min-width: 45em)" srcset="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn" />
+		<source media="(min-width: 32em)" srcset="/test-assets/image-filename-as-accessible-name-9eb3f6/paris" />
+		<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg" alt="Nyhavn" />
 	</picture>
 </html>
 ```
@@ -187,7 +187,7 @@ This image button has an [accessible name][] matching the filename. The presence
 
 ```html
 <html lang="en">
-	<input type="image" src="test-assets/image-filename-as-accessible-name-9eb3f6/login.png" alt="login.png" />
+	<input type="image" src="/test-assets/image-filename-as-accessible-name-9eb3f6/login.png" alt="login.png" />
 </html>
 ```
 
@@ -198,9 +198,9 @@ This `img` element has 3 [image sources][] for [Art direction][]-based selection
 ```html
 <html lang="en">
 	<picture>
-		<source media="(min-width: 45em)" srcset="test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn" />
-		<source media="(min-width: 32em)" srcset="test-assets/image-filename-as-accessible-name-9eb3f6/pain" />
-		<img src="test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg" alt="Nyhavn" />
+		<source media="(min-width: 45em)" srcset="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn" />
+		<source media="(min-width: 32em)" srcset="/test-assets/image-filename-as-accessible-name-9eb3f6/pain" />
+		<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg" alt="Nyhavn" />
 	</picture>
 </html>
 ```
@@ -233,7 +233,7 @@ This `img` element has an [accessible name][] which is not equivalent to the fil
 
 ```html
 <html lang="en">
-	<img src="test-assets/image-filename-as-accessible-name-9eb3f6/94251e110d24a4c2b6e6ce76e7203374" alt="Nyhavn" />
+	<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/94251e110d24a4c2b6e6ce76e7203374" alt="Nyhavn" />
 </html>
 ```
 
@@ -244,7 +244,7 @@ This `img` element has an [accessible name][] which is not equivalent to the fil
 ```html
 <html lang="en">
 	<img
-		src="test-assets/image-filename-as-accessible-name-9eb3f6/94251e110d24a4c2b6e6ce76e7203374"
+		src="/test-assets/image-filename-as-accessible-name-9eb3f6/94251e110d24a4c2b6e6ce76e7203374"
 		alt="94251e110d24a4c2b6e6ce76e7203374"
 		aria-label="Nyhavn"
 	/>

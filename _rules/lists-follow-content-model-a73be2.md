@@ -11,7 +11,9 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
-  - DOM Tree
+	- Accessibility tree
+	- CSS Styling
+	- DOM Tree
 acknowledgments:
   authors:
     - Jey Nandakumar

@@ -71,10 +71,16 @@ This `div` element with a role of `alert` has an `aria-live` attribute which is 
 This `input` element with a role of `spinbutton` has multiple `aria-*` attributes specified which are all defined in [WAI-ARIA Specifications][].
 
 ```html
-<label
-	>Enter a number between 0 and 100:
-	<input role="spinbutton" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" type="number" value="25" />
-</label>
+<label for="spinbutton">Enter a number between 0 and 100:</label>
+<input
+	id="spinbutton"
+	role="spinbutton"
+	aria-valuemax="100"
+	aria-valuemin="0"
+	aria-valuenow="25"
+	type="number"
+	value="25"
+/>
 ```
 
 ### Failed

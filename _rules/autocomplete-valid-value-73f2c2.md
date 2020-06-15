@@ -100,7 +100,7 @@ Autocomplete term, only valid for textarea.
 Two autocomplete terms.
 
 ```html
-<label>Work email<input autocomplete="Work EMail"/></label>
+<label>Work email<input autocomplete="Work Email"/></label>
 ```
 
 #### Passed Example 5

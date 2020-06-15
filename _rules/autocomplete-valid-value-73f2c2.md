@@ -148,7 +148,7 @@ The `input` element does not participates in sequential focus navigation, but st
 The `input` element does not have a semantic role that is a widget role, but still participates in sequential focus navigation because of the [`tabindex` attribute](https://html.spec.whatwg.org/#the-tabindex-attribute), and has a single autocomplete term.
 
 ```html
-<label>Username<input role="none" tabindex="0" autocomplete="username"/></label>
+<label>Username<input role="banner" tabindex="0" autocomplete="username"/></label>
 ```
 
 ### Failed

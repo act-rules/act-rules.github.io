@@ -38,7 +38,7 @@ Each test target has at least one token which is a valid value corresponding to 
 
 ## Assumptions
 
-- The ARIA `role` is being used to comply to WCAG.
+The ARIA `role` is being used to comply to WCAG. If compliance to WCAG is done in other ways, this rule may fail while [Success Criterion 4.1.2 Name, Role, Value][sc412] is still satisfied.
 
 ## Accessibility Support
 
@@ -152,4 +152,5 @@ Element that is not [included in the accessibility tree][].
 
 [ascii whitespace]: https://infra.spec.whatwg.org/#ascii-whitespace 'Definition of ASCII whitespace'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[sc412]: https://www.w3.org/TR/WCAG21/#name-role-value 'Success Criterion 4.1.2 Name, Role, Value'
 [space separated tokens]: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#space-separated-tokens 'Definition of space separated tokens'

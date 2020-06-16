@@ -32,10 +32,6 @@ acknowledgments:
 
 Any `role` attribute that is neither empty ("") nor only [ASCII whitespace][], and that is specified on an HTML or SVG element that is [included in the accessibility tree][].
 
-**Note:** The `role` attribute is a set of [space separated tokens][]. Having it contain at least one non-[ASCII whitespace][] character ensures that there is at least one token in that set.
-
-**Note:** Having a [whitespace](#whitespace) separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role](#semantic-role) of the element, and so forth.
-
 ## Expectation
 
 Each test target has at least one token which is a valid value corresponding to a non-abstract role from [WAI-ARIA Specifications](#wai-aria-specifications).
@@ -49,6 +45,10 @@ Each test target has at least one token which is a valid value corresponding to 
 Older browsers do not support more than one token in the value for a role attribute. If multiple values are used in the role attribute, the attribute is ignored in these browsers.
 
 ## Background
+
+The `role` attribute is a set of [space separated tokens][]. Having a [whitespace](#whitespace) separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role](#semantic-role) of the element, and so forth. Having the rule target attributes containing at least one non-[ASCII whitespace][] character ensures that there is at least one token in the set.
+
+Further reading:
 
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 - [WAI-ARIA 1.1 Categorization of Roles](https://www.w3.org/TR/wai-aria-1.1/#roles_categorization)

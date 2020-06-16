@@ -19,8 +19,8 @@ A _change in the content_ of a [web page][] caused by an event occurs when, by c
 **Assumptions:**
 
 - If the [web page][] is rendering time-based media, rendered pixels and audio will be changing as part of the playback. The comparison in this instance should compare the pixels and audio that are rendered if the event is not fired, with the ones that are rendered if the event is fired.
-- For the purpose of this definition, it is assumed that the event causing the changes is the only origin of changes to the [web page][] and therefore the page does not change if there is no such event.
-- For the purpose of this definition, it is assumed that the changes happen instantly after the event firing and therefore the comparison between the page before and after the event firing can be made at any time after the firing of the event.
+- This definition assumes that the event causing the changes is the only origin of changes to the [web page][] and therefore the page does not change if there is no such event. If this is not the case, changes may be attributed to the wrong event.
+- This definition assumes that the changes happen instantly after the event firing and therefore the comparison between the page before and after the event firing can be made at any time after the firing of the event. If there is a significant delay between firing the event and the changes happening, this definition may not detect them.
 
 [accessible object]: https://www.w3.org/TR/accname-1.1/#dfn-accessible-object 'Definition of accessible object'
 [accessibilitree tree]: https://www.w3.org/TR/accname-1.1/#dfn-accessibility-tree 'Definition of accessibility tree'

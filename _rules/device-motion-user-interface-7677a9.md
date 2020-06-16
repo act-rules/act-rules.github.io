@@ -40,8 +40,8 @@ For each registered [device orientation event][device orientation] or [device mo
 - The motion to operate the device is not used through an [accessibility supported][] interface, which is listed as a valid exception to [SC 2.5.4][sc2.5.4].
 - The motion is not [essential][] for the functionality it triggers, which is listed as a valid exception to [SC 2.5.4][sc2.5.4].
 - If the [web page][] is rendering time-based media, rendered pixels and audio will be changing as part of the playback. The comparison in this instance should compare the pixels and audio that are rendered if the event is not fired, with the ones that are rendered if the event is fired.
-- For the purpose of this definition, it is assumed that the event causing the changes is the only origin of changes to the [web page][] and therefore the page does not change if there is no such event.
-- For the purpose of this definition, it is assumed that the changes happen instantly after the event firing and therefore the comparison between the page before and after the event firing can be made at any time after the firing of the event.
+- This rule assumes that the event causing the changes is the only origin of changes to the [web page][] and therefore the page does not change if there is no such event. If this is not the case, changes may be attributed to the wrong event and the rule may fail while [SC 2.5.4][sc2.5.4] is still satisfied.
+- This rule assumes that the changes happen instantly after the event firing and therefore the comparison between the page before and after the event firing can be made at any time after the firing of the event. If there is a significant delay between firing the event and the changes happening, they may not be detected as [changes in content][] and the rule may pass but [SC 2.5.4][sc2.5.4] is not satisfied.
 
 ## Accessibility Support
 

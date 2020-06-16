@@ -30,11 +30,14 @@ acknowledgments:
 
 ## Applicability
 
-Any `role` attribute that is neither empty ("") nor only [ASCII whitespace][], and that is specified on an HTML or SVG element that is [included in the accessibility tree][].
+Any [`role` attribute][role attribute] for which all the following are true:
+
+- the attribute has a value that is neither empty ("") nor only [ASCII whitespace][]; and
+- the attribute is specified on an HTML or SVG element that is [included in the accessibility tree][].
 
 ## Expectation
 
-Each test target has at least one token which is a valid value corresponding to a non-abstract role from [WAI-ARIA Specifications](#wai-aria-specifications).
+Each test target has at least one token which is a valid value corresponding to a non-abstract role from [WAI-ARIA Specifications][].
 
 ## Assumptions
 
@@ -50,6 +53,8 @@ The `role` attribute is a set of [space separated tokens][]. Having a [whitespac
 
 Further reading:
 
+- [List of WAI-ARIA Roles][wai-aria role] and [List of Graphics ARIA Roles](https://www.w3.org/TR/graphics-aria-1.0/#role_definitions)
+- [Specification of the `role` attribute][role attribute]
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 - [WAI-ARIA 1.1 Categorization of Roles](https://www.w3.org/TR/wai-aria-1.1/#roles_categorization)
 - [WAI-ARIA Roles](https://www.w3.org/TR/wai-aria-1.1/#usage_intro)
@@ -60,7 +65,7 @@ Further reading:
 
 #### Passed Example 1
 
-Element with valid `role` value.
+This [`role` attribute][role attribute] contains one token, and this token is a valid [WAI-ARIA role][].
 
 ```html
 <input type="text" role="textbox" />
@@ -68,7 +73,7 @@ Element with valid `role` value.
 
 #### Passed Example 2
 
-Element with multiple valid `role` values.
+This [`role` attribute][role attribute] contains two tokens, and these tokens are both valid [WAI-ARIA roles][wai-aria role].
 
 ```html
 <span role="button link"></span>
@@ -76,7 +81,7 @@ Element with multiple valid `role` values.
 
 #### Passed Example 3
 
-Element with at least one valid `role` value.
+This [`role` attribute][role attribute] contains two tokens, and one of these tokens is a valid [WAI-ARIA role][].
 
 ```html
 <img role="img xyz" src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
@@ -86,7 +91,7 @@ Element with at least one valid `role` value.
 
 #### Failed Example 1
 
-Element with invalid `role` value.
+This [`role` attribute][role attribute] contains one token, but this token is not a valid role in any of the [WAI-ARIA specifications][].
 
 ```html
 <input role="invalid" value="123" />
@@ -94,7 +99,7 @@ Element with invalid `role` value.
 
 #### Failed Example 2
 
-Element with multiple invalid `role` value.
+This [`role` attribute][role attribute] contains two tokens, but none of these tokens is a valid role in any of the [WAI-ARIA specifications][].
 
 ```html
 <input type="text" role="invalid role" />
@@ -102,7 +107,7 @@ Element with multiple invalid `role` value.
 
 #### Failed Example 3
 
-Element with role attribute that is not empty (""), neither a valid `role` value.
+This [`role` attribute][role attribute] contains one token, but this token is not a valid role in any of the [WAI-ARIA specifications][].
 
 ```html
 <input type="text" role="#" />
@@ -112,7 +117,7 @@ Element with role attribute that is not empty (""), neither a valid `role` value
 
 #### Inapplicable Example 1
 
-Element with `role` attribute that is empty ("").
+This [`role` attribute][role attribute] is empty ("").
 
 ```html
 <div role="">Some Content</div>
@@ -120,7 +125,7 @@ Element with `role` attribute that is empty ("").
 
 #### Inapplicable Example 2
 
-Element with role attribute that is only [ASCII whitespace][].
+This [`role` attribute][role attribute] is only [ASCII whitespace][].
 
 ```html
 <input type="text" role=" " />
@@ -128,7 +133,7 @@ Element with role attribute that is only [ASCII whitespace][].
 
 #### Inapplicable Example 3
 
-Element does not have `role` attribute.
+There is no [`role` attribute][role attribute].
 
 ```html
 <div>Some Content</div>
@@ -136,7 +141,7 @@ Element does not have `role` attribute.
 
 #### Inapplicable Example 4
 
-Element with null `role` attribute.
+This [`role` attribute][role attribute] has no value.
 
 ```html
 <div role>Some Content</div>
@@ -144,7 +149,7 @@ Element with null `role` attribute.
 
 #### Inapplicable Example 5
 
-Element that is not [included in the accessibility tree][].
+This [`role` attribute][role attribute] is specified on an element which is not [included in the accessibility tree][].
 
 ```html
 <div aria-hidden="true" role="banner">Some Content</div>
@@ -152,5 +157,8 @@ Element that is not [included in the accessibility tree][].
 
 [ascii whitespace]: https://infra.spec.whatwg.org/#ascii-whitespace 'Definition of ASCII whitespace'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[role attribute]: https://www.w3.org/TR/role-attribute/ 'Specification of the Role attribute'
 [sc412]: https://www.w3.org/TR/WCAG21/#name-role-value 'Success Criterion 4.1.2 Name, Role, Value'
 [space separated tokens]: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#space-separated-tokens 'Definition of space separated tokens'
+[wai-aria role]: https://www.w3.org/TR/wai-aria-1.1/#role_definitions 'List of WAI-ARIA roles'
+[wai-aria specifications]: #wai-aria-specifications 'Definition of WAI-ARIA Specifications'

@@ -9,7 +9,7 @@ Secondary information and alternative controls of functionality are often not di
 
 The location of a target is said to be _clearly labeled_ when the target can be found by activating "identifiable" [instruments][] which either lead the user to find the target, or to another [page][web page] or page state from which this action can be repeated until the target is found.
 
-Whether or not the content is "clearly labeled" depends on the starting point of the search. If page A has a link which clearly "identifies" some piece of content, then the location of the content is clearly labeled. Page B, which can be in the same website, may not have such a link or may have a link with an ambiguous link text, and so the location of the content starting from page B is not clearly labeled.
+Whether or not the content is "clearly labeled" depends on the starting point of the search. If page A has a link which clearly "identifies" some piece of content, then the location of the content is clearly labeled. Page B, which can be in the same website, may not have such a link or may have a link with a link text that does not "identify" target content or which can be interpreted to "identify" more than one target, and so the location of the content starting from page B is not clearly labeled.
 
 For the purpose of this definition, an [instrument][] is _identifiable_ if any text or other content with a [text alternative][], allows any user to identify an element with a [semantic role][] that inherits from `widget`.
 

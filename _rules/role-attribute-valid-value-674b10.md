@@ -117,34 +117,34 @@ This [`role` attribute][role attribute] contains one token, but this token is no
 
 #### Inapplicable Example 1
 
-This [`role` attribute][role attribute] is empty ("").
-
-```html
-<div role="">Some Content</div>
-```
-
-#### Inapplicable Example 2
-
-This [`role` attribute][role attribute] is only [ASCII whitespace][].
-
-```html
-<input type="text" role=" " />
-```
-
-#### Inapplicable Example 3
-
 There is no [`role` attribute][role attribute].
 
 ```html
 <div>Some Content</div>
 ```
 
-#### Inapplicable Example 4
+#### Inapplicable Example 2
 
 This [`role` attribute][role attribute] has no value.
 
 ```html
 <div role>Some Content</div>
+```
+
+#### Inapplicable Example 3
+
+This [`role` attribute][role attribute] is empty ("").
+
+```html
+<div role="">Some Content</div>
+```
+
+#### Inapplicable Example 4
+
+This [`role` attribute][role attribute] is only [ASCII whitespace][].
+
+```html
+<input type="text" role=" " />
 ```
 
 #### Inapplicable Example 5

@@ -3,7 +3,7 @@ id: 46ca7f
 name: Element marked as decorative has empty accessible name
 rule_type: atomic
 description: |
-  This rule checks that elements marked as decorative have an empty accessible name
+  This rule checks that elements marked as decorative have an empty accessible name.
 accessibility_requirements: # Remove whatever is not applicable
   wcag20:1.1.1: # Non-text Content (A)
     forConformance: true

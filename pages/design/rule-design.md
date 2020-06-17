@@ -153,7 +153,7 @@ For more details, see [ACT Rules Format: Test Cases](https://www.w3.org/TR/act-r
 
 ## Listed conditions
 
-In the applicability and expectations, something often has multiple conditions that need to be met for something to be applicable / passed. If there are more than three conditions, it can become difficult to read if this is all in one text. Instead, these should be listed out. Listed conditions should follow this format:
+Applicability and expectations, often have multiple conditions that need to be met for something to be applicable / passed. When there are more than three conditions, listing them all in the running text can be difficult to read and understand. Instead, use a bullet-point list following this format:
 
 > Some condition... for which (all | one of) the following is true:
 > 

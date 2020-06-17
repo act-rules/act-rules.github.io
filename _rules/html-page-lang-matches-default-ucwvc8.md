@@ -40,7 +40,7 @@ For each test target, the [primary language][] of the [valid language tag][] mat
 
 ## Assumptions
 
-- The way to determine the default language of a page, as described in WCAG 2, should be done by counting the number of visible words used in each language. If the default language needs to be derived in some other way, this rule may produce incorrect results.
+- This rule assumes that the default human language of a page, as described in WCAG 2, can be determined by counting the number of words used in each language. If the default language needs to be derived in some other way (such as frequency analysis, mutual information based distance, …), this rule may fail while [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page) is still satisfied.
 
 - The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page).
 
@@ -215,7 +215,7 @@ This page has an undefined [default language][default page language] because it 
 
 #### Inapplicable Example 4
 
-In page has an undefined [default language][default page language] because it can either be English or French.
+This page has an undefined [default language][default page language] because it can either be English or French.
 
 ```html
 <html lang="fr">

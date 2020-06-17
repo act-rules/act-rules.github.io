@@ -27,7 +27,7 @@ The rule applies to any [text node][] for which all of the following is true whe
 - The [text node][] is [visible][]; and
 - The [text node][] has an HTML element as a [parent][] in the [flat tree][]; and
 - The [text node][] has an [ancestor][] in the [flat tree][] with a [computed][] [overflow-x][overflow] or [overflow-y][overflow] of `hidden` or `clip`; and
-- The [text node][] does not have an [ancestor][] in the [flat tree][] with an `aria-hidden` attribute set to `true`
+- The [text node][] does not have an [ancestor][] in the [flat tree][] with an `aria-hidden` attribute whose value is a case-insensitive match for `true`
 
 **Note**: A [viewport size][] of 640 by 512 is equivalent to a [viewport size][] of 1280 by 1024 zoomed 200%.
 
@@ -51,7 +51,7 @@ If any of the following assumptions is true, failing this rule may not result in
 
 ## Accessibility Support
 
-_No accessibility support issues known._
+Some user agents treat the value of the `aria-hidden` attribute as case-sensitive.
 
 ## Background
 

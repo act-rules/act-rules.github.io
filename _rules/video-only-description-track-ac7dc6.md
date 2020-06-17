@@ -24,7 +24,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any [non-streaming](#non-streaming-media-element) `video` element [visible][] where the video doesn't contain audio and does contain a `track` element with a `kind="descriptions"` attribute.
+The rule applies to any [non-streaming](#non-streaming-media-element) `video` element [visible][] where the video doesn't contain audio and does contain a `track` element with a [`kind` attribute](https://html.spec.whatwg.org/multipage/media.html#attr-track-kind) in the "Descriptions" state.
 
 ## Expectation
 

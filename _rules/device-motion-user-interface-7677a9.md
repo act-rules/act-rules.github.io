@@ -39,8 +39,8 @@ For each registered [device orientation event][device orientation] or [device mo
 
 - The motion to operate the device is not used through an [accessibility supported][] interface, which is listed as a valid exception to [SC 2.5.4][sc2.5.4].
 - The motion is not [essential][] for the functionality it triggers, which is listed as a valid exception to [SC 2.5.4][sc2.5.4].
-- This rule assumes that the event causing the changes is the only origin of changes to the [web page][] and therefore the page does not change if there is no such event. If this is not the case, changes may be attributed to the wrong event and the rule may fail while [SC 2.5.4][sc2.5.4] is still satisfied.
-- This rule assumes that the changes happen within a 1 minute time span after the event firing and therefore the comparison between the page before and after the event firing can be made at any time after that time span elapses. If there are changes after this time span, they may not be detected as [changes in content][] and the rule may pass but [SC 2.5.4][sc2.5.4] is not satisfied. The arbitrary 1 minute time span, selected so that testing this rule would not be impractical, is not included in WCAG.
+- This rule assumes that the [event][] causing the changes is the only origin of changes to the [web page][] and therefore the page does not change if there is no such [event][]. If this is not the case, changes may be attributed to the wrong [event][] and the rule may fail while [SC 2.5.4][sc2.5.4] is still satisfied.
+- This rule assumes that the changes happen within a 1 minute time span after the [event][] [firing][] and therefore the comparison between the page before and after the [event][] [firing][] can be made at any time after that time span elapses. If there are changes after this time span, they may not be detected as [changes in content][] and the rule may pass but [SC 2.5.4][sc2.5.4] is not satisfied. The arbitrary 1 minute time span, selected so that testing this rule would not be impractical, is not included in WCAG.
 
 ## Accessibility Support
 
@@ -272,8 +272,10 @@ This [HTML document][] is not operable by device motion.
 [device motion]: https://www.w3.org/TR/orientation-event/#devicemotion 'Definition of device motion event'
 [device orientation]: https://www.w3.org/TR/orientation-event/#deviceorientation 'Definition of device orientation event'
 [essential]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-essential
+[event]: https://dom.spec.whatwg.org/#concept-event 'Definition of event'
 [event listener]: https://dom.spec.whatwg.org/#concept-event-listener
 [event listener list]: https://dom.spec.whatwg.org/#eventtarget-event-listener-list
+[firing]: https://dom.spec.whatwg.org/#concept-event-fire 'Definition of event firing'
 [html document]: https://dom.spec.whatwg.org/#concept-document
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [sc2.5.4]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html

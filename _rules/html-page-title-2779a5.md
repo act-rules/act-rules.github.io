@@ -3,7 +3,7 @@ id: 2779a5
 name: HTML page has title
 rule_type: atomic
 description: |
-  This rule checks that a non-embedded HTML page has a title. HTML pages embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not web pages according to the definition in WCAG.
+  This rule checks that a non-embedded HTML page has a title.
 accessibility_requirements:
   wcag20:2.4.2: # Page Titled (A)
     forConformance: true
@@ -56,6 +56,8 @@ This rule assumes that [Success Criterion 2.4.2 Page Titled](https://www.w3.org/
 _There are no major accessibility support issues known for this rule._
 
 ## Background
+
+This rule is only applicable to non-embedded HTML pages. HTML pages embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not [web pages](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) according to the definition in WCAG.
 
 - [Understanding Success Criterion 2.4.2: Page Titled](https://www.w3.org/WAI/WCAG21/Understanding/page-titled)
 - [G88: Providing descriptive titles for Web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G88)

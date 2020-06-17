@@ -3,7 +3,7 @@ id: 5b7ae0
 name: HTML page `lang` and `xml:lang` attributes have matching values
 rule_type: atomic
 description: |
-  This rule checks that a non-embedded HTML page with both a `lang` and `xml:lang` attributes on the root element, have the same primary language subtag. HTML pages embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not web pages according to the definition in WCAG.
+  This rule checks that a non-embedded HTML page with both a `lang` and `xml:lang` attributes on the root element, have the same primary language subtag.
 accessibility_requirements:
   wcag20:3.1.1: # Language of Page (A)
     forConformance: true
@@ -47,6 +47,8 @@ For each test target, the values of the [primary language subtags][], if any exi
 Since most assistive technologies will consistently use `lang` over `xml:lang` when both are used, violation of this rule may not necessarily be a violation of WCAG 2. Only when there are inconsistencies between assistive technologies as to which attribute is used to determine the language does this lead to a violation of SC 3.1.1.
 
 ## Background
+
+This rule is only applicable to non-embedded HTML pages. HTML pages embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not [web pages](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) according to the definition in WCAG.
 
 - [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG21/Techniques/html/H57)
 - [BCP 47: Tags for Identifying Languages](https://www.ietf.org/rfc/bcp/bcp47.txt)

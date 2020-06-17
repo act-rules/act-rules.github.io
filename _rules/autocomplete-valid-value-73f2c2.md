@@ -24,8 +24,8 @@ acknowledgments:
 The rule applies to any HTML `input`, `select` and `textarea` element with an `autocomplete` attribute that is a set of one or more [space separated tokens](https://html.spec.whatwg.org/#set-of-space-separated-tokens), except if one of the following is true:
 
 - The element is not [visible](#visible), and not [included in the accessibility tree](#included-in-the-accessibility-tree)
-- The element is an `input` element with a `type` property of `hidden`, `button`, `submit` or `reset`
-- The element has an `aria-disabled="true"` attribute
+- The element is an `input` element whose `type` attribute is in the [`Hidden`](<https://html.spec.whatwg.org/multipage/input.html#hidden-state-(type=hidden)>), [`Button`](<https://html.spec.whatwg.org/multipage/input.html#button-state-(type=button)>), [`Submit Button`](<https://html.spec.whatwg.org/multipage/input.html#submit-button-state-(type=submit)>) or [`Reset Button`](<https://html.spec.whatwg.org/multipage/input.html#reset-button-state-(type=reset)>) state
+- The element has an `aria-disabled` attribute whose value is a case-insensitive match of "true"
 - The element is not part of [sequential focus navigation](https://html.spec.whatwg.org/#sequential-focus-navigation) and has a [semantic role](#semantic-role) that is not a [widget role](https://www.w3.org/TR/wai-aria-1.1/#widget_roles).
 
 ## Expectation 1
@@ -55,6 +55,7 @@ For this rule, it is assumed that the `autocomplete` attribute is not used on fo
 
 - While `autocomplete` in a promising technique for supporting personalization in HTML, support for this is fairly limited.
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+- Some user agents treat the value of `aria-disabled` attribute as case-sensitive.
 
 ## Background
 

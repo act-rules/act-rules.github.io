@@ -28,7 +28,7 @@ The rule applies to any HTML or SVG element that is [included in the accessibili
 
 - the element has an [implicit semantic role][] that is identical to its [explicit semantic role][]; or
 - the element has a [semantic role][] of `combobox`; or
-- the element has the `aria-busy` state set to `true`, or has an [ancestor][] in the accessibility tree with this state.
+- the element has the `aria-busy` state whose value is a case-insensitive match for `true`, or has an [ancestor][] in the accessibility tree with this state.
 
 **Note:** An example of an element that has a [required owned element][] is [`tablist`](https://www.w3.org/TR/wai-aria-1.1/#tablist) which has `tab` as a [required owned element][].
 
@@ -57,6 +57,7 @@ If the [explicit semantic role][] on the target element is incorrectly used, and
 - User agents do not all have the same accessibility tree. Particularly the method of deriving which element owns which other elements varies between browsers. This can lead to different results for this rule, depending on which accessibility tree is used as input.
 - `aria-owns` has limited support in some user agents.
 - Assistive technologies are not consistent in how they handle situations where a [required owned element][] has a missing or incorrect role. This can lead to situations where inaccurate owned elements behave as expected in one assistive technology, but not in another.
+- Some user agents treat the value of `aria-busy` as case-sensitive.
 
 ## Background
 

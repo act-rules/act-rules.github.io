@@ -3,7 +3,7 @@ id: bf051a
 name: HTML page `lang` attribute has valid language tag
 rule_type: atomic
 description: |
-  This rule checks that the `lang` attribute of the root element of a non-embedded HTML page has a language tag with a known primary language subtag. HTML pages embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not web pages according to the definition in WCAG.
+  This rule checks that the `lang` attribute of the root element of a non-embedded HTML page has a language tag with a known primary language subtag.
 accessibility_requirements:
   wcag20:3.1.1: # Language of Page (A)
     forConformance: true
@@ -48,6 +48,8 @@ For each test target, the `lang` attribute has a [valid language tag][].
 _There are no major accessibility support issues known for this rule._
 
 ## Background
+
+This rule is only applicable to non-embedded HTML pages. HTML pages embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not [web pages](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) according to the definition in WCAG.
 
 - [Understanding Success Criterion 3.1.1: Language of Page](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
 - [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG21/Techniques/html/H57)

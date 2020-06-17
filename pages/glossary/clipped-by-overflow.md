@@ -12,7 +12,6 @@ changing the [overflow][] of all such [ancestors][ancestor] to `visible` would c
 
 This `img` element has an [ancestor][] `div` element with an `overflow` of `none` (both `overflow-x` and `overflow-y`). The height of the `img` is greater than that of the [ancestor][] `div`, and so is clipped by the `overflow` property of the `div`.
 
-
 ```html
 <div style="height: 100px; overflow: none;">
 	<img src="/test-assets/w3c-logo.png" height="150" alt="Partial W3C Logo" />

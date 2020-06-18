@@ -41,7 +41,7 @@ Each test target has at least one token which is a valid value corresponding to 
 
 ## Assumptions
 
-This rule assumes that the [implicit role][] of elements is not enough to satisfy [Success Criterion 4.1.2 Name, Role, Value][sc412]. In case of invalid `role` attribute, the [semantic role][] defaults to the [implicit role]. If this is the correct role for the element, the rule will fail but [Success Criterion 4.1.2 Name, Role, Value][sc412] is still satisfied. For example, the element `<img role="image img" src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />` will fail this rule (because `image` is not a valid role) but satisfies [Success Criterion 4.1.2 Name, Role, Value][sc412] because the element defaults to its implicit role of `img`.
+This rule assumes that the [implicit role][] of elements is not enough to satisfy [Success Criterion 4.1.2 Name, Role, Value][sc412]. In case of invalid `role` attribute, the [semantic role][] defaults to the [implicit role]. If this is the correct role for the element, the rule will fail but [Success Criterion 4.1.2 Name, Role, Value][sc412] is still satisfied. For example, the element `<img role="image" src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />` will fail this rule (because `image` is not a valid role) but satisfies [Success Criterion 4.1.2 Name, Role, Value][sc412] because the element defaults to its [implicit role][] of `img`.
 
 ## Accessibility Support
 

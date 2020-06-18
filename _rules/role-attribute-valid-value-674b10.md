@@ -30,7 +30,7 @@ acknowledgments:
 
 ## Applicability
 
-Any [`role` attribute][role attribute] for which all the following are true:
+Any `role` attribute for which all the following are true:
 
 - the attribute has a value that is neither empty ("") nor only [ASCII whitespace][]; and
 - the attribute is specified on an HTML or SVG element that is [included in the accessibility tree][].
@@ -65,7 +65,7 @@ Further reading:
 
 #### Passed Example 1
 
-This [`role` attribute][role attribute] contains one token, and this token is a valid [WAI-ARIA role][].
+This `role` attribute contains one token, and this token is a valid [WAI-ARIA role][].
 
 ```html
 <input type="text" role="textbox" />
@@ -73,7 +73,7 @@ This [`role` attribute][role attribute] contains one token, and this token is a 
 
 #### Passed Example 2
 
-This [`role` attribute][role attribute] contains two tokens, and these tokens are both valid [WAI-ARIA roles][wai-aria role].
+This `role` attribute contains two tokens, and these tokens are both valid [WAI-ARIA roles][wai-aria role].
 
 ```html
 <span role="button link"></span>
@@ -81,43 +81,35 @@ This [`role` attribute][role attribute] contains two tokens, and these tokens ar
 
 #### Passed Example 3
 
-This [`role` attribute][role attribute] contains two tokens, and one of these tokens is a valid [WAI-ARIA role][].
+This `role` attribute contains two tokens, and one of these tokens (`img`) is a valid [WAI-ARIA role][].
 
 ```html
-<img role="img xyz" src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
+<img role="image img" src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-This [`role` attribute][role attribute] contains one token, but this token is not a valid role in any of the [WAI-ARIA specifications][].
+This `role` attribute contains one token, but this token is not a valid role in any of the [WAI-ARIA specifications][].
 
 ```html
-<input role="invalid" value="123" />
+<img role="image" src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
 ```
 
 #### Failed Example 2
 
-This [`role` attribute][role attribute] contains two tokens, but none of these tokens is a valid role in any of the [WAI-ARIA specifications][].
+This `role` attribute contains two tokens, but none of these tokens is a valid role in any of the [WAI-ARIA specifications][].
 
 ```html
-<input type="text" role="invalid role" />
-```
-
-#### Failed Example 3
-
-This [`role` attribute][role attribute] contains one token, but this token is not a valid role in any of the [WAI-ARIA specifications][].
-
-```html
-<input type="text" role="#" />
+<img role="image graphics" src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
 ```
 
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-There is no [`role` attribute][role attribute].
+There is no `role` attribute.
 
 ```html
 <div>Some Content</div>
@@ -125,7 +117,7 @@ There is no [`role` attribute][role attribute].
 
 #### Inapplicable Example 2
 
-This [`role` attribute][role attribute] has no value.
+This `role` attribute has no value.
 
 ```html
 <div role>Some Content</div>
@@ -133,7 +125,7 @@ This [`role` attribute][role attribute] has no value.
 
 #### Inapplicable Example 3
 
-This [`role` attribute][role attribute] is empty ("").
+This `role` attribute is empty ("").
 
 ```html
 <div role="">Some Content</div>
@@ -141,7 +133,7 @@ This [`role` attribute][role attribute] is empty ("").
 
 #### Inapplicable Example 4
 
-This [`role` attribute][role attribute] is only [ASCII whitespace][].
+This `role` attribute is only [ASCII whitespace][].
 
 ```html
 <input type="text" role=" " />
@@ -149,7 +141,7 @@ This [`role` attribute][role attribute] is only [ASCII whitespace][].
 
 #### Inapplicable Example 5
 
-This [`role` attribute][role attribute] is specified on an element which is not [included in the accessibility tree][].
+This `role` attribute is specified on an element which is not [included in the accessibility tree][].
 
 ```html
 <div aria-hidden="true" role="banner">Some Content</div>

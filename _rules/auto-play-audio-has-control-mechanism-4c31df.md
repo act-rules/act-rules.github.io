@@ -29,14 +29,12 @@ htmlHintIgnore:
 
 This rule applies to any `audio` or `video` element that has:
 
-- an `autoplay` attribute, and
-- no `muted` attribute, and
+- an `autoplay` [attribute value][] of `true`, and
+- a `muted` [attribute value][] of `false`, and
 - a `paused` attribute whose value is false, and
 - either a `src` attribute or a child `source` element that references content with a duration of more than 3 seconds that contains audio.
 
-**Note:** The default value of `muted` attribute is `false`.
-
-**Note**: [`autoplay`](https://html.spec.whatwg.org/multipage/media.html#attr-media-autoplay) and [`muted`](https://html.spec.whatwg.org/multipage/media.html#attr-media-muted) are both HTML attribute set on elements. They are both [boolean attributes](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#boolean-attribute), hence they take no value and their presence means "true". On the other hand, [`paused`](https://html.spec.whatwg.org/multipage/media.html#dom-media-paused) is a DOM attribute which is not specified in HTML.
+**Note**: [`autoplay`](https://html.spec.whatwg.org/multipage/media.html#attr-media-autoplay) and [`muted`](https://html.spec.whatwg.org/multipage/media.html#attr-media-muted) are both HTML attribute set on elements. On the other hand, [`paused`](https://html.spec.whatwg.org/multipage/media.html#dom-media-paused) is a DOM attribute which is not specified in HTML.
 
 ## Expectation 1
 
@@ -276,3 +274,5 @@ This `audio` element does not autoplay.
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
+
+[attribute value]: #attribute-value 'Definition of Attribute Value'

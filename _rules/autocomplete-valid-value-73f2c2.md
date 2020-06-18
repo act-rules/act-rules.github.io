@@ -24,8 +24,8 @@ acknowledgments:
 The rule applies to any HTML `input`, `select` and `textarea` element with an `autocomplete` attribute that is a set of one or more [space separated tokens](https://html.spec.whatwg.org/#set-of-space-separated-tokens), except if one of the following is true:
 
 - The element is not [visible](#visible), and not [included in the accessibility tree](#included-in-the-accessibility-tree)
-- The element is an `input` element whose `type` attribute is in the [`Hidden`](<https://html.spec.whatwg.org/multipage/input.html#hidden-state-(type=hidden)>), [`Button`](<https://html.spec.whatwg.org/multipage/input.html#button-state-(type=button)>), [`Submit Button`](<https://html.spec.whatwg.org/multipage/input.html#submit-button-state-(type=submit)>) or [`Reset Button`](<https://html.spec.whatwg.org/multipage/input.html#reset-button-state-(type=reset)>) state
-- The element has an `aria-disabled` attribute whose value is a case-insensitive match of "true"
+- The element is an `input` element with a `type` [attribute value][] of either `hidden`, `button`, `submit` or `reset`
+- The element has an `aria-disabled` [attribute value][] of `true`
 - The element is not part of [sequential focus navigation](https://html.spec.whatwg.org/#sequential-focus-navigation) and has a [semantic role](#semantic-role) that is not a [widget role](https://www.w3.org/TR/wai-aria-1.1/#widget_roles).
 
 ## Expectation 1
@@ -268,6 +268,7 @@ Autocomplete attribute contains no tokens.
 <label>Username<input autocomplete=" "/></label>
 ```
 
+[attribute value]: #attribute-value 'Definition of Attribute Value'
 [explicit role]: #explicit-role 'Definition of explicit role'
 [focusable]: #focusable 'Definition of focusable'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'

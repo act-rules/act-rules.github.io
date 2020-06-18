@@ -28,7 +28,7 @@ The rule applies to any HTML or SVG element that is [included in the accessibili
 
 - the element has an [implicit semantic role][] that is identical to its [explicit semantic role][]; or
 - the element has a [semantic role][] of `combobox`; or
-- the element has the `aria-busy` state whose value is a case-insensitive match for `true`, or has an [ancestor][] in the accessibility tree with this state.
+- the element has the `aria-busy` [attribute value][] of `true`, or has an [ancestor][] in the accessibility tree with this state.
 
 **Note:** An example of an element that has a [required owned element][] is [`tablist`](https://www.w3.org/TR/wai-aria-1.1/#tablist) which has `tab` as a [required owned element][].
 
@@ -266,6 +266,7 @@ This element with the `combobox` role conforms to [WAI-ARIA 1.1][] without owned
 <label for="combo">My Combobox</label> <input role="combobox" aria-expanded="false" id="combo" />
 ```
 
+[attribute value]: #attribute-value 'Definition of Attribute Value'
 [required owned element]: https://www.w3.org/TR/wai-aria-1.1/#mustContain 'Define Required owned element'
 [required owned elements]: https://www.w3.org/TR/wai-aria-1.1/#mustContain 'Define Required owned element'
 [owns]: #owned-by

@@ -31,7 +31,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any element with an `aria-hidden` attribute whose value is a case-insensitive match for "true".
+The rule applies to any element with an `aria-hidden` [attribute value][] of `true`.
 
 **Note:** Using `aria-hidden="false"` on a descendant of an element with `aria-hidden="true"` **does not** expose that element. `aria-hidden="true"` hides itself and all its content from assistive technologies.
 
@@ -202,4 +202,5 @@ Incorrect value of `aria-hidden`.
 </div>
 ```
 
+[attribute value]: #attribute-value 'Definition of Attribute Value'
 [focusable]: #focusable 'Definition of focusable'

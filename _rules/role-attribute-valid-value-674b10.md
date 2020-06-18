@@ -41,7 +41,7 @@ Each test target has at least one token which is a valid value corresponding to 
 
 ## Assumptions
 
-The ARIA `role` is being used to comply to WCAG. If compliance to WCAG is done in other ways, this rule may fail while [Success Criterion 4.1.2 Name, Role, Value][sc412] is still satisfied.
+If the `role` attribute is used for something other than giving elements an [explicit role][], the success criterion could be satisfied even if the rule failed. For example, if for some reason the `role` attribute contains a date, this rule will fail. The implicit role of such an element may mean be sufficient to satisfy the success criterion.```
 
 ## Accessibility Support
 

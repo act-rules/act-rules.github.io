@@ -43,7 +43,7 @@ For each registered [device orientation event][device orientation] or [device mo
 - The motion is not [essential][] for the functionality it triggers, which is listed as a valid exception to SC 2.5.4.
 - The event listeners listening to device motion events trigger a functionality in the web page. If they do not trigger any such functionality failing this rule might not be a failure of the success criterion.
 - If there are ways to disable the device motion based functionality that do not require the user to interact with the web page (e.g. a setting at the operating system level), failing this rule might not be a failure of the success criterion.
-- This rule assumes that the [event][] causing the changes is the only origin of changes to the [web page][] and therefore the page does not change if there is no such [event][]. If this is not the case, changes may be attributed to the wrong [event][] and the rule may fail while [SC 2.5.4][sc2.5.4] is still satisfied.
+- This rule assumes that there are no changes in the content of the [web page][] caused by another [event][]. If this is not the case, changes may be attributed to the wrong [event][] and the rule may fail while [SC 2.5.4][sc2.5.4] is still satisfied.
 - This rule assumes that the changes happen within a 1 minute time span after the [event][] [firing][] and therefore the comparison between the page before and after the [event][] [firing][] can be made at any time after that time span elapses. If there are changes after this time span, they may not be detected as [changes in content][] and the rule may pass but [SC 2.5.4][sc2.5.4] is not satisfied. The arbitrary 1 minute time span, selected so that testing this rule would not be impractical, is not included in WCAG.
 
 

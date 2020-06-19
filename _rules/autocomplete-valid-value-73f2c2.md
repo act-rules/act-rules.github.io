@@ -55,7 +55,7 @@ For this rule, it is assumed that the `autocomplete` attribute is not used on fo
 
 - While `autocomplete` in a promising technique for supporting personalization in HTML, support for this is fairly limited.
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
-- Some user agents treat the value of `aria-disabled` attribute as case-sensitive.
+- Some user agents treat the value of the `aria-disabled` attribute as case-sensitive.
 
 ## Background
 

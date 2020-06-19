@@ -24,7 +24,7 @@ A _[event][] originated change in the content_ of a [web page][] occurs when, by
 - This definition assumes that the changes happen within a 1 minute time span after the event firing and therefore the comparison between the page before and after the event firing can be made at any time after that time span elapses. If there are changes after this time span, this definition may not detect them. The arbitrary 1 minute time span, selected so that testing this rule would not be impractical, is not included in WCAG. 
 
 [accessible object]: https://www.w3.org/TR/accname-1.1/#dfn-accessible-object 'Definition of accessible object'
-[accessibilitree tree]: https://www.w3.org/TR/accname-1.1/#dfn-accessibility-tree 'Definition of accessibility tree'
+[accessibility tree]: https://www.w3.org/TR/accname-1.1/#dfn-accessibility-tree 'Definition of accessibility tree'
 [event]: https://dom.spec.whatwg.org/#concept-event 'Definition of event'
 [firing]: https://dom.spec.whatwg.org/#concept-event-fire 'Definition of event firing'
 [viewport]: https://drafts.csswg.org/css2/visuren.html#viewport 'Definition of viewport'

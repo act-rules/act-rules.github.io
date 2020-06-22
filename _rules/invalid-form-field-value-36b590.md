@@ -44,7 +44,7 @@ The rule applies to each HTML element that has one of the following [semantic ro
 
 ## Expectation 1
 
-For each test target with a [form field error indicator][], at least one of the [form field error indicators][form field error indicator] allows the identification of the related test target, through [text][], or through [non-text content][], or through [presentation][].
+Each test target either has no [form field error indicators][form field error indicator], or at least one of the [form field error indicators][form field error indicator] allows the identification of the related test target, through [text][], or through [non-text content][], or through [presentation][].
 
 **Note**: This rule does not test [form field error indicators][form field error indicator] shown on a different page than that of the test target.
 
@@ -54,7 +54,7 @@ For each test target with a [form field error indicator][], at least one of the 
 
 ## Expectation 2
 
-For each test target with a [form field error indicator][], at least one of the [form field error indicators][form field error indicator] describes:
+Each test target either has no [form field error indicators][form field error indicator], or at least one of the [form field error indicators][form field error indicator] describes:
 
 - the cause of the error, or
 - how to resolve it,
@@ -63,7 +63,7 @@ in [text][] that is [visible][].
 
 ## Expectation 3
 
-For each test target with a [form field error indicator][], at least one of the [form field error indicators][form field error indicator] describes:
+Each test target either has no [form field error indicators][form field error indicator], or at least one of the [form field error indicators][form field error indicator] describes:
 
 - the cause of the error, or
 - how to resolve it,

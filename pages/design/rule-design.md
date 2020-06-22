@@ -172,4 +172,4 @@ This phrasing is designed to be easily readable, but may not work in every situa
 - Group similar concepts into the same list item. For example, if something can have `absolute` or `fixed`, these two are closely related so putting them down as one item helps limit the number of conditions.
 - Write test cases that check each condition of the list individually, this help understand what that specific condition is needed.
 - Refer to the labels of the condition in the test case description to make the link explicit.
-- Order the test cases in the same order than the conditions they check, with conditions order to most important to least important, this implies that test cases are also ordered by importance.
+- Order the test cases in the same order than the conditions they check, with conditions ordered from most important to least important, this implies that test cases are also ordered by importance.

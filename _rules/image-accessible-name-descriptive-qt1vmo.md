@@ -3,7 +3,7 @@ id: qt1vmo
 name: Image accessible name is descriptive
 rule_type: atomic
 description: |
-  This rule checks that images with an accessible name describe the topic or purpose
+  This rule checks that images with an accessible name describe the topic or purpose.
 accessibility_requirements:
   wcag20:1.1.1: # Non-Text Content (A)
     forConformance: true
@@ -28,14 +28,15 @@ input_aspects:
 acknowledgments:
   authors:
     - Wilco Fiers
+  assets:
+    - W3C; HTML and W3C logo
+    - Wikimedia; Fireworks image
+    - Adobe; PDF logo
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
   - 'alt-require'
   - 'attr-lowercase'
-assets:
-  - The picture of Nyhavn (Copenhagen) is authored by [Jorge Franganillo](https://500px.com/franganillo), licensed under the [Creative Commons Attribution 3.0 Unported](https://creativecommons.org/licenses/by/3.0/deed.en) license.
-  - The picture of bread is a public domain [picture by Bicanski](https://pixnio.com/media/bread-breakfast-fresh-homemade-wheat).
 ---
 
 ## Applicability
@@ -243,7 +244,7 @@ This `img` element is has no [accessible name][] because it is not [included in 
 
 ```html
 <html lang="en">
-	<img aria-hidden="true" src="/test-assets/shared/fireworks.jpg" />
+	<img aria-hidden="true" src="/test-assets/shared/fireworks.jpg" alt="some picgure" />
 </html>
 ```
 

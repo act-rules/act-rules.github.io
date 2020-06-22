@@ -3,7 +3,7 @@ id: 5b7ae0
 name: HTML page `lang` and `xml:lang` attributes have matching values
 rule_type: atomic
 description: |
-  This rule checks that both `lang` and `xml:lang` attributes on the root element of a a non-embedded HTML page, have the same primary language subtag.
+  This rule checks that both `lang` and `xml:lang` attributes on the root element of a non-embedded HTML page, have the same primary language subtag.
 accessibility_requirements:
   wcag20:3.1.1: # Language of Page (A)
     forConformance: true

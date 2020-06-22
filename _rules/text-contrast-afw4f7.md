@@ -110,7 +110,7 @@ This light gray text has a contrast ratio between 13:1 and 5:1 on the background
 
 ```html
 <p
-	style="color: #CCC; height:50px; padding-top:15px; background: #000 no-repeat -20px -20px url('../test-assets/contrast/black-hole.jpeg');"
+	style="color: #CCC; height:50px; padding-top:15px; background: #000 no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');"
 >
 	Black hole sun
 </p>
@@ -219,7 +219,7 @@ This light gray text has a contrast ratio between 2.7:1 and 3:1 on the backgroun
 
 ```html
 <p
-	style="color: #555; height:50px; padding-top:20px; background: black no-repeat -20px -20px url('../test-assets/contrast/black-hole.jpeg');"
+	style="color: #555; height:50px; padding-top:20px; background: black no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');"
 >
 	Black hole sun
 </p>
@@ -319,7 +319,7 @@ This text not part of a [text node][].
 
 ```html
 <p>
-	<img scr="../test-assets/contrast/example.png" alt="example" />
+	<img scr="/test-assets/contrast/example.png" alt="example" />
 </p>
 ```
 

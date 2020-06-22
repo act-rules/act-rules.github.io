@@ -3,7 +3,7 @@ id: 5b7ae0
 name: HTML page `lang` and `xml:lang` attributes have matching values
 rule_type: atomic
 description: |
-  This rule checks that a non-embedded HTML page with both a `lang` and `xml:lang` attributes on the root element, have the same primary language subtag.
+  This rule checks that both `lang` and `xml:lang` attributes on the root element of a a non-embedded HTML page, have the same primary language subtag.
 accessibility_requirements:
   wcag20:3.1.1: # Language of Page (A)
     forConformance: true
@@ -40,7 +40,7 @@ For each test target, the values of the [primary language subtags][], if any exi
 
 - This rule assumes that [grandfathered tags][] are not used as these will not be recognized as [valid language tags](#valid-language-tag).
 
-- The rule assumes that having matching [primary language subtags][] of the `lang` and `xml:lang` attribute, but non-matching [language tags](https://tools.ietf.org/html/bcp47#section-2) overall, will not cause accessibility issues unless there's a sufficiently large difference between the two [language tags](https://tools.ietf.org/html/bcp47#section-2). One notable case is the [language tags](https://tools.ietf.org/html/bcp47#section-2) for Cantonese (`zh-yue`) and Mandarin (`zh-cmn`) where the [primary language subtags][] match, but the [extended language subtags][] don't. Such a case would not fail this rule, but could lead to accessibility issues.
+- The rule assumes that having `lang` and `xml:lang` attributes with matching [primary language subtags][] but non-matching [language tags](https://tools.ietf.org/html/bcp47#section-2) overall, will not cause accessibility issues. This is not necessarily the case for all languages. One notable case is the [language tags](https://tools.ietf.org/html/bcp47#section-2) for Cantonese (`zh-yue`) and Mandarin (`zh-cmn`) where the [primary language subtags][] match, but the [extended language subtags][] don't. Such a case would not fail this rule, but could lead to accessibility issues.
 
 ## Accessibility Support
 

@@ -36,7 +36,7 @@ The test target does not have the [important flag][] set for the CSS [letter-spa
 
 ## Expectation 3
 
-The test target does not have the [important flag][] set for the CSS [line-height][] property, unless the [computed][] [line-height][] is at least `1.5` times the [computed][] [font-size][] of the test target.
+The test target does not have the [important flag][] set for the [declared value][] of the CSS [line-height][] property that is specified by the `style` attribute of the test target, unless the [computed][] [line-height][] is at least `1.5` times the [computed][] [font-size][] of the test target.
 
 ## Assumptions
 
@@ -285,3 +285,4 @@ This `body` element does not have `style` attribute specified.
 [user origin]: https://drafts.csswg.org/css-cascade-4/#cascade-origin-user 'CSS Cascading and Inheritance Level 4 - Cascading Origins - User Origin'
 [font-size]: https://www.w3.org/TR/css-fonts-3/#propdef-font-size 'CSS Fonts Module Level 3- Font size: the font-size property'
 [important flag]: https://www.w3.org/TR/cssom/#css-declaration-important-flag 'CSS Object Model (CSSOM) - important flag'
+[declared value]: https://drafts.csswg.org/css-cascade/#declared 'CSS Cascading and Inheritance Level 4 - Declared Values'

@@ -32,7 +32,7 @@ The test target does not have the [important flag][] set for the [declared value
 
 ## Expectation 2
 
-The test target does not have the [important flag][] set for the [declared value][] of the the CSS [letter-spacing][] property that is specified by the `style` attribute of the test target, unless the [computed][] [letter-spacing][] is at least `0.12` times the [computed][] [font-size][] of the test target.
+The test target does not have the [important flag][] set for the [declared value][] of the CSS [letter-spacing][] property that is specified by the `style` attribute of the test target, unless the [computed][] [letter-spacing][] is at least `0.12` times the [computed][] [font-size][] of the test target.
 
 ## Expectation 3
 

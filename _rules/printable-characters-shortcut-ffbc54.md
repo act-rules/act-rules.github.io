@@ -23,27 +23,14 @@ The rule applies to any [keyboard event][]:
  - the method `getModifierState` returns `false`; and
  - is [dispatched][] to an [event target][] within a [HTML document][].
 
-## Expectation 1
+## Expectation
 
 For each test target at least one of the following is true:
- - (**Disable**:) a set of one or more [instruments][instrument] are available to prevent any result of the [keyboard event][] within a 10 minute time span of the [event firing][]; or
- - (**Focus**:) any result of the event is prevented if the [event target][] doesn't have [focus][] within a 10 minute time span of the [event firing][]; or
- - (**Remap**:) a set of one or more [instruments][instrument] are available to prevent any result of the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false` within a 10 minute time span of the [event firing][].
-
-**Note:** The same [instrument][] can be used to **disable**/**remap** more than one event.
-
-**Note:** Preventing results of the event can be done in multiple ways (e.g. removing the event listener; handling the event in a different manner; ...) but the way in which it is done is not relevant for this rule.
+ - (**Disable**:) There is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] of the registered event or can be found in a [clearly labeled location][] from that [web page][]. The set of [instruments][instrument] can be used to prevent [changes to the content][changes in content] of the [web page][] resulting from the [keyboard event][] within a 10 minute time span of the [event firing][]; or
+ - (**Focus**:) If the [event target][] doesn't have [focus][] there are no [changes to the content][changes in content] resulting from the [keyboard event][] within a 10 minute time span of the [event firing][]; or
+ - (**Remap**:) There is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] of the registered event or can be found in a [clearly labeled location][] from that [web page][]. The set of [instruments][instrument] can be used to prevent [changes to the content][changes in content] of the [web page][] within a 10 minute time span of the [event firing][] when the [keyboard event][] method `getModifierState` returns `false`;
 
 **Note:** The 10 minute time span is an arbitrary limit which is not included in WCAG. Results that happen after this period will not fail this rule but may nonetheless fail [Success Criterion 2.1.4: Character Key Shortcuts][sc 2.1.4]. The accessibility problem tends to be less severe for longer time periods, and without a time limit, testing this rule consistently would be impractical.
-
-## Expectation 2
-
-For each test target that is not related to **focus**, then for at least one set of [instruments][instrument] from Expectation 1, all of the [instruments][instrument] in such set meet one of the following conditions:
-
-- the [instrument][] is in the same [web page][] of the test target; or
-- the [instrument][] can be found in a [clearly labeled location][].
-
-**Note:** If the set of instruments has more than one instrument, not every instrument of the set needs to be located in the same location.
 
 ## Assumptions
 
@@ -333,7 +320,7 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 
 This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and:
  - there doesn't exist any [instrument][] to **disable** the [keyboard event][]; nor
- - the result of the [keyboard event][] is prevented when the [event target][] doesn't have [focus][]; nor
+ - [changes to the content][changes in content] by the [keyboard event][] are prevented when the [event target][] doesn't have [focus][]; nor
  - there doesn't exists any [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`.
 
 ```html
@@ -359,7 +346,7 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and:
  - there exists an [instrument][] to **disable** the [keyboard event][]; and
  - there exists an [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`; and
- - both [instruments][instrument] cannot be found in a [clearly labeled location][].
+ - none of the [instruments][instrument] can be found in a [clearly labeled location][].
 
 ```html
 <html>
@@ -453,7 +440,7 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 
 #### Inapplicable Example 3
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [non-printable character][].
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [non-printable character][non-printable characters].
 
 ```html
 <html>
@@ -553,6 +540,7 @@ This [HTML document][] has an element with the attribute `accesskey`. Accesskeys
 [dispatched]: https://dom.spec.whatwg.org/#dispatching-events
 [event firing]: https://dom.spec.whatwg.org/#concept-event-fire
 [sc 2.1.4]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-process
+[changes in content]: #changes-in-content 'Definition of changes in content'
 [clearly labeled location]: #clearly-labeled-location 'Definition of clearly labeled location'
 [web page]: #web-page-html 'Definition of web page'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'

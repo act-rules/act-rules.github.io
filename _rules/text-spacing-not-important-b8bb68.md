@@ -28,11 +28,11 @@ This rule applies to any HTML element that is [visible][] and has one of the fol
 
 ## Expectation 1
 
-The test target does not have the [important flag][] set for the CSS [word-spacing][] property, unless the [computed][] [word-spacing][] is at least `0.16` times the [computed][] [font-size][] of the test target.
+The test target does not have the [important flag][] set for the [declared value][] of the CSS [word-spacing][] property that is specified by the `style` attribute of the test target, unless the [computed][] [word-spacing][] is at least `0.16` times the [computed][] [font-size][] of the test target.
 
 ## Expectation 2
 
-The test target does not have the [important flag][] set for the CSS [letter-spacing][] property, unless the [computed][] [letter-spacing][] is at least `0.12` times the [computed][] [font-size][] of the test target.
+The test target does not have the [important flag][] set for the [declared value][] of the the CSS [letter-spacing][] property that is specified by the `style` attribute of the test target, unless the [computed][] [letter-spacing][] is at least `0.12` times the [computed][] [font-size][] of the test target.
 
 ## Expectation 3
 

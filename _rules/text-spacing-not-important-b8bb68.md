@@ -44,7 +44,7 @@ If there is a mechanism available on the page by which text spacing can be adjus
 
 ## Accessibility Support
 
-While some assistive technologies are able to set [user origin][] styles, others such as browser extensions are only able to set style with the [author origin][]. Such assistive technologies can not create styles with a high enough [priority][] to override a `style` attribute with the [important flag][]. If accessibility support does not include assistive technologies that override text spacing through [author origin][], this rule should not be used.
+While some assistive technologies are able to set [user origin][] styles, others, such as browser extensions, are only able to set style with the [author origin][]. Such assistive technologies can not create styles with a high enough [priority][] to override a `style` attribute with the [important flag][]. If accessibility support does not include assistive technologies that override text spacing through [author origin][], this rule should not be used.
 
 ## Background
 
@@ -58,7 +58,7 @@ While some assistive technologies are able to set [user origin][] styles, others
 
 #### Passed Example 1
 
-This `p` element has a `line-height` of `20px` (equals `1.25em` ) which is below the permissible minimum, given the default pixel size of the body is 16 pixels. Since the [important flag][] is not set, the user can increase the `line-height` above the permissible minimum value.
+This `p` element has a `line-height` of `20px` (equals `1.25em`) which is below the permissible minimum, given the pixel size of the body is 16 pixels. Since the [important flag][] is not set, the user can increase the `line-height` above the permissible minimum value.
 
 ```html
 <html>
@@ -78,7 +78,7 @@ This `p` element has a `line-height` of `20px` (equals `1.25em` ) which is below
 
 #### Passed Example 2
 
-This `div` element has a `letter-spacing` of `0.12em` which is equal to the permissible minimum, given the default pixel size of the body is 16 pixels. Since the [important flag][] is not set, the user can increase the `letter-spacing` above the permissible minimum value.
+This `div` element has a `letter-spacing` of `0.12em` which is equal to the permissible minimum, given the pixel size of the body is 16 pixels. Since the [important flag][] is not set, the user can increase the `letter-spacing` above the permissible minimum value.
 
 ```html
 <html>
@@ -98,7 +98,7 @@ This `div` element has a `letter-spacing` of `0.12em` which is equal to the perm
 
 #### Passed Example 3
 
-This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12em` ) which is equal to the permissible value, given the default pixel size of the body is 16 pixels.
+This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12em`) which is equal to the permissible value, given the pixel size of the body is 16 pixels.
 
 ```html
 <html>
@@ -118,7 +118,7 @@ This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12e
 
 #### Passed Example 4
 
-This `article` element has both `word-spacing` and `line-height` specified, which are both below the permissible minimum, given the default pixel size of the body is 16 pixels. Since the [important flag][] is not set for either the `line-height` or `word-spacing`, the user can increase them to be above the permissible minimum value.
+This `article` element has both `word-spacing` and `line-height` specified, which are both below the permissible minimum, given the pixel size of the body is 16 pixels. Since the [important flag][] is not set for either the `line-height` or `word-spacing`, the user can increase them to be above the permissible minimum value.
 
 ```html
 <html>
@@ -140,7 +140,7 @@ This `article` element has both `word-spacing` and `line-height` specified, whic
 
 #### Failed Example 1
 
-This `p` element has a `line-height` of `30px !important` (equals `1.875em` ) which is above the permissible minimum, given the default pixel size of the body is 16 pixels.
+This `p` element has a `line-height` of `30px !important` (equals `1.875em`) which is above the permissible minimum, given the pixel size of the body is 16 pixels.
 
 ```html
 <html>
@@ -160,7 +160,7 @@ This `p` element has a `line-height` of `30px !important` (equals `1.875em` ) wh
 
 #### Failed Example 2
 
-This `div` element has a `letter-spacing` of `1em !important` which is above to the permissible minimum, given the default pixel size of the body is 16 pixels.
+This `div` element has a `letter-spacing` of `1em !important` which is above to the permissible minimum, given the pixel size of the body is 16 pixels.
 
 ```html
 <html>
@@ -180,7 +180,7 @@ This `div` element has a `letter-spacing` of `1em !important` which is above to 
 
 #### Failed Example 3
 
-This `strong` element has a `word-spacing` of `8px !important` (equals `0.5em` ) which is above the permissible value, given the default pixel size of the body is 16 pixels.
+This `strong` element has a `word-spacing` of `8px !important` (equals `0.5em` ) which is above the permissible value, given the pixel size of the body is 16 pixels.
 
 ```html
 <html>
@@ -200,7 +200,7 @@ This `strong` element has a `word-spacing` of `8px !important` (equals `0.5em` )
 
 #### Failed Example 4
 
-This `article` element has both `letter-spacing` and `line-height` specified, where `line-height` is above the permissible value, given the default pixel size of the body is 16 pixels.
+This `article` element has both `letter-spacing` and `line-height` specified, where `line-height` is above the permissible value, given the pixel size of the body is 16 pixels.
 
 ```html
 <html>
@@ -220,7 +220,7 @@ This `article` element has both `letter-spacing` and `line-height` specified, wh
 
 #### Failed Example 5
 
-This `p` element has a `line-height` of `1.25em !important` , which is greater than `1.5em` given the body has a default pixel size of 24 pixels.
+This `p` element has a `line-height` of `1.25em !important` , which is greater than `1.5em` given the body has a pixel size of 24 pixels.
 
 ```html
 <html>
@@ -237,7 +237,7 @@ This `p` element has a `line-height` of `1.25em !important` , which is greater t
 
 #### Inapplicable Example 1
 
-This `p` element is not [visible][] because of `display: none` .
+This `p` element is not [visible][] because of `display: none`.
 
 ```html
 <p style="display: none">
@@ -259,7 +259,7 @@ This text is not [visible][] because it is positioned off screen.
 
 #### Inapplicable Example 3
 
-This `body` element does not have `style` attribute specified.
+This `body` element does not have a `style` attribute specified.
 
 ```html
 <html>

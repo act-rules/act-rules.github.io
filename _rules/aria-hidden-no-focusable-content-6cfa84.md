@@ -31,7 +31,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any element with an `aria-hidden="true"` attribute.
+The rule applies to any element with an `aria-hidden` attribute with a value that is an ASCII case-insensitive match for "true".
 
 **Note:** Using `aria-hidden="false"` on a descendant of an element with `aria-hidden="true"` **does not** expose that element. `aria-hidden="true"` hides itself and all its content from assistive technologies.
 

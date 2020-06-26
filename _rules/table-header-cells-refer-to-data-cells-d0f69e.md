@@ -39,16 +39,9 @@ The rule applies to any HTML element that
 
 Each target element is [assigned][] to at least one element with a [semantic role][] of [cell][] or [gridcell][].
 
-**Note:** The assigned cell is a [descendant][] in the [flat tree][] of the same [table][] or [grid][] element.
-
 ## Assumptions
 
-This rule assumes that table header cells have a relationship conveyed through presentation with other cells within the same table.
-
-**Note:** This assumption helps exclude edge cases like:
-
-- a table definition where there is only one header cell, or
-- a table definition where there are multiple headers and no other cells
+This rule assumes that table header cells have a relationship conveyed through presentation with other cells within the same table. This excludes edge cases such as a table definition where there is only one header cell, or a table definition where there are multiple headers and no other cells.
 
 ## Accessibility Support
 

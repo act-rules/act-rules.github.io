@@ -140,6 +140,7 @@
 - clientWidth
 - innerHeight
 - innerWidth
+- innerText
 - scrollbars
 - documentElement
 - rects

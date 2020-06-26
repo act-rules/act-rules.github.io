@@ -27,13 +27,13 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any HTML element that
+The rule applies to any HTML element for which all of the following is true:
 
-- has the [semantic role][] of [rowheader][] or [columnheader][] and;
-- is [visible][] and;
-- is [included in the accessibility tree][] and;
-- has at least one ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][]; and
-- whose closest ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][] is [included in the accessibility tree][].
+- The element has the [semantic role][] of [rowheader][] or [columnheader][]; and
+- The element is [visible][]; and
+- The element is [included in the accessibility tree][]; and
+- The element has at least one ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][]; and
+- The element's closest ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][] is [included in the accessibility tree][].
 
 ## Expectation
 

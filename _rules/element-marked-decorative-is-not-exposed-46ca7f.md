@@ -3,8 +3,8 @@ id: 46ca7f
 name: Element marked as decorative is not exposed
 rule_type: atomic
 description: |
-  This rule checks that elements marked as decorative are not exposed in the accessibility tree, or with a presentational role.
-accessibility_requirements: # Remove whatever is not applicable
+  This rule checks that elements marked as decorative either are not included in the accessibility tree, or have a presentational role.
+accessibility_requirements:
 input_aspects:
   - DOM tree
 acknowledgments:
@@ -39,10 +39,6 @@ Elements are normally [marked as decorative][] to convey intention of the author
 Whenever such a conflict occurs, this indicates at the very least mismatching intentions. Such a conflict should be avoided.
 
 When these conflicts arise on [decorative][] [non-text content][], this is also a failure of [Success Criterion 1.1.1: Non-text Content][sc111] because [decorative][] [non-text content][] must be implemented in a way that allows assistive technologies to ignore it. When this conflicts arise on text content, or on content which is not [decorative][], this is not a failure of WCAG. Therefore this rule is not mapping to any specific WCAG Success Criterion, and is not an accessibility requirement for WCAG.
-
-- [Success Criterion 1.1.1: Non-text Content][sc111]
-- [Technique F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them][f38]
-- [Technique F39: Failure of Success Criterion 1.1.1 due to providing a text alternative that is not null (e.g., alt="spacer" or alt="image") for images that should be ignored by assistive technology][f39]
 
 ## Test Cases
 
@@ -137,8 +133,6 @@ This `img` element is not [marked as decorative][].
 ```
 
 [decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of Pure decoration'
-[f38]: https://www.w3.org/WAI/WCAG21/Techniques/failures/F38 'Technique F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them'
-[f39]: https://www.w3.org/WAI/WCAG21/Techniques/failures/F39 'Technique F39: Failure of Success Criterion 1.1.1 due to providing a text alternative that is not null (e.g., alt="spacer" or alt="image") for images that should be ignored by assistive technology'
 [focusable]: #focusable 'Definition of Focusable'
 [global aria attribute]: https://www.w3.org/TR/wai-aria-1.1/#global_states 'List of Global ARIA States and Properties'
 [implicit role]: #implicit-role 'Definition of Implicit Role'

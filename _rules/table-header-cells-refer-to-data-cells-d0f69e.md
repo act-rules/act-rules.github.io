@@ -27,9 +27,8 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any HTML element for which all of the following is true:
+The rule applies to any HTML element with the [semantic role][] of [rowheader][] or [columnheader][] for which all of the following is true:
 
-- The element has the [semantic role][] of [rowheader][] or [columnheader][]; and
 - The element is [visible][]; and
 - The element is [included in the accessibility tree][]; and
 - The element has at least one ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][]; and
@@ -41,7 +40,7 @@ Each target element is [assigned][] to at least one element with a [semantic rol
 
 ## Assumptions
 
-This rule assumes that table header cells have a relationship conveyed through presentation with other cells within the same table. This excludes edge cases such as a table definition where there is only one header cell, or a table definition where there are multiple headers and no other cells. In such scenarios the rule fails, but [success criterion 1.3.1 Info and Relationships][] could still be satisfied.
+This rule assumes that table header cells have a relationship conveyed through presentation with other cells within the same table. This excludes edge cases such as a table definition where there is only one header cell, or a table definition where there are multiple headers and no other cells. In such scenarios the rule fails, but [success criterion 1.3.1 Info and Relationships][sc1.3.1] could still be satisfied.
 
 ## Accessibility Support
 
@@ -50,7 +49,7 @@ This rule assumes that table header cells have a relationship conveyed through p
 
 ## Background
 
-- [Understanding Success Criterion 1.3.1: Information and relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
+- [Understanding Success Criterion 1.3.1: Information and relationships][sc1.3.1]
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H43)
 - [Forming relationships between data cells and header cells][assigned]
 
@@ -347,3 +346,4 @@ This `th` element is part of a table which is not [included in the accessibility
 [rowheader]: https://www.w3.org/TR/wai-aria-1.1/#rowheader 'ARIA rowheader role'
 [explicit role]: #explicit-role 'Definition of Explicit Role'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[sc1.3.1]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships' 

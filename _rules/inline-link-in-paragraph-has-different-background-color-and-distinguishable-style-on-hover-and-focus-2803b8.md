@@ -57,6 +57,10 @@ This link, that is a descendant of a paragraph element, has text that has a back
 
 ```html
 <style>
+	p {
+		color: #000;
+		background-color: #fff;
+	}
 	a {
 		text-decoration: none;
 		color: #000;
@@ -74,15 +78,44 @@ This link, that is a descendant of a paragraph element, has text that has a back
 
 #### Failed Example 1
 
-This link, that is a descendant of a paragraph element, has no visual cues of being recognized as a link with the underline removed.
+This link, that is a descendant of a paragraph element, has text that does not have a background color contrast of more than 3:1 compared to the other text in the paragraph.
 
 ```html
 <style>
-	a.test {
+	p {
+		color: #000;
+		background-color: #fff;
+	}
+	a {
 		text-decoration: none;
+		color: #000;
+		background-color: #eee;
+	}
+	a:hover,
+	a:focus {
+		text-decoration: underline;
 	}
 </style>
-<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
+```
+
+#### Failed Example 2
+
+This link, that is a descendant of a paragraph element, has no distinguishing style on focus or hover.
+
+```html
+<style>
+	p {
+		color: #000;
+		background-color: #fff;
+	}
+	a {
+		text-decoration: none;
+		color: #000;
+		background-color: #cf5e42;
+	}
+</style>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
 ### Inapplicable

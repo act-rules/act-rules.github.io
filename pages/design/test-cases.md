@@ -1,13 +1,13 @@
 # ACT Test Case Design
 
-The goal of test cases in ACT rules is allow implementors to varify that their implementation is sufficiently consistent with the ACT rule. This requires that a rule has test cases for all of the "important" parts of it. Beyond that, it is up to the rule authors to determine how extensive to make the list of test cases. A list of test cases full of edge cases is going to ensure greater consistency between implementors, but may result in fewer implementors deciding to adopt the rule.
+The goal of test cases in ACT rules is to allow implementors to verify that their implementation is sufficiently consistent with the ACT rule. This requires that a rule has test cases for all of the "important" aspects of it. Beyond that, it is up to the rule authors to determine how extensive to make the list of test cases. A list of test cases full of edge cases would ensure greater consistency between implementors, but may result in fewer implementors deciding to adopt the rule.
 
 To strike a good balance in test cases, the following principles should be considered:
 
 1. Test every "condition" in the rule
 1. Test one thing at a time
 1. Ensure consistency with accessibility 
-1. Tests should be small
+1. Keep test cases small
 1. Test definitions superficially
 1. Avoid tests cases contested by (accessibility) support
 
@@ -27,7 +27,7 @@ Providing these test cases ensures that an implementor that correctly tests `img
 
 A test case should only test one "condition" at a time. This keeps them focused and easy to reason about. It may be tempting to combine multiple cases in one example, but then if that example does not get the expected outcome, it is difficult to identify the cause of the issue.
 
-When writing test cases, it is important to look at conditional logic. For example if the expectation says an element is applicable if it is "_visible_ and _included in the accessibility tree_", in addition to a passed and failed example, there are three ways for this to not be true, all of which have to be tested:
+When writing test cases, it is important to look at conditional logic. For example if the applicability says an element is applicable if it is "_visible_ and _included in the accessibility tree_", in addition to a passed and failed example, there are three ways for this to not be true, all of which have to be tested:
 
 - inapplicable: visible, but **not** included in the accessibility tree
 - inapplicable: **not** visible, but included in the accessibility tree
@@ -47,7 +47,7 @@ An exception to that, is that ACT Rules should strive to show good accessibility
 
 ## Superficial Definition Testing
 
-ACT rules use definition to avoid duplication, and to "hide" away the details. Definitions such as "semantic role", "visible" and "accessible name" are used in many rules, and are fundamental building blocks of ACT. To avoid having a lot of similar test cases in every rule that uses a particular definition, it is best to keep definition testing to a minimum.
+ACT rules use definitions to avoid duplication, and to "hide" away the details. Definitions such as "semantic role", "visible" and "accessible name" are used in many rules, and are fundamental building blocks of ACT. To avoid having a lot of similar test cases in every rule that uses a particular definition, it is best to keep definition testing to a minimum.
 
 As an example, the "X has non-empty accessible name" rules all have test cases that check for the different ways that element can have an accessible name. For `img`, that is `alt`, `title`, and `aria-label(ledby)` attributes. That creates sufficient coverage to ensure the basics are understood. But those rules do not go into the details of ensuring accessible name computation is done right. Whether an implementor considers `aria-owns` in the accessible name computation is not relevant for "non-empty accessible name" rules.
 

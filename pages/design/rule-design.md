@@ -28,7 +28,7 @@ For more details, see [ACT Rules Format: Structure](https://www.w3.org/TR/act-ru
 
 ### Rule identifier
 
-The 6-character identifier is created using a random alpha-numeric generator, such as [random.org/strings](https://www.random.org/strings/?num=1&len=6&digits=on&loweralpha=on&unique=on&format=html&rnd=new). The identifier remains the same if the rule name changes.
+The 6-character identifier is created using a random alpha-numeric generator, such as [random.org/strings](https://www.random.org/strings/?num=1&len=6&digits=on&loweralpha=on&format=html&rnd=new). The identifier remains the same if the rule name changes.
 
 ### Rule name
 

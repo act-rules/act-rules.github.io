@@ -67,7 +67,7 @@ This rule assumes that table header cells have a relationship conveyed through p
 
 #### Passed Example 1
 
-The column header element has an [assigned][] cell.
+This `th` element has an assigned `td` element.
 
 ```html
 <table>
@@ -82,7 +82,7 @@ The column header element has an [assigned][] cell.
 
 #### Passed Example 2
 
-Each column header element has assigned cells.
+Each of the 2 `span` elements with role of [columnheader][] has assigned `span` elements with a role of [cell][].
 
 ```html
 <div role="table">
@@ -107,7 +107,7 @@ Each column header element has assigned cells.
 
 #### Passed Example 3
 
-Each column header element has assigned cells within the same table element. In this example the column headers have cells that span multiple columns.
+Each of the 2 `th` elements has an assigned `td` element because this `td` element spans 2 columns.
 
 ```html
 <table>
@@ -127,7 +127,7 @@ Each column header element has assigned cells within the same table element. In 
 
 #### Passed Example 4
 
-Each row and column header element has assigned cells, within the same element having a [semantic role][] of `grid`.
+Each of the 4 `th` elements has an assigned `td` element, within the same `table` element having a [semantic role][] of `grid`.
 
 ```html
 <table role="grid">
@@ -152,7 +152,7 @@ Each row and column header element has assigned cells, within the same element h
 
 #### Passed Example 5
 
-Each column header is assigned to a cell. Usage of `headers` attribute changes the relationship between column headers and cells.
+Each of the 2 `th` elements has an assigned `td` element because the `headers` attribute assigns the `th` with `id` equal to "col2" to the `td` element.
 
 ```html
 <table>
@@ -173,7 +173,7 @@ Each column header is assigned to a cell. Usage of `headers` attribute changes t
 
 #### Failed Example 1
 
-The column header ("Column 2"), does not have an assigned cell within the same `table` element.
+The `th` element with text "Column 2" does not have an assigned cell within the same `table` element.
 
 ```html
 <table>
@@ -193,7 +193,7 @@ The column header ("Column 2"), does not have an assigned cell within the same `
 
 #### Failed Example 2
 
-The column header ('Column2') does not have an assigned cell within the same `table` element. In this case the usage of `headers` attribute removes cell association to the column.
+This `th` element with `id` equal to "Column2" does not have an assigned cell within the same `table` element because the `headers` attribute removes the cell association from its column.
 
 ```html
 <table>
@@ -210,7 +210,7 @@ The column header ('Column2') does not have an assigned cell within the same `ta
 
 #### Failed Example 3
 
-The column header ('Col B') does not have an assigned cell within the same `table` element.
+This `div` with role of [columnheader][] and text equal to "Col B" does not have an assigned cell within the same `table` element.
 
 ```html
 <div role="grid">
@@ -229,7 +229,7 @@ The column header ('Col B') does not have an assigned cell within the same `tabl
 
 #### Failed Example 4
 
-The column header ("Column 2") has an [explicit role][] of `none`. However, it is [focusable][] due to the `tabindex` attribute. Thus it has a [semantic role][] of `columnheader` due to [Presentational Roles Conflict Resolution][]. It does not have an assigned cell within the same `table` element.
+This `th` element with role of `none` and `tabindex` equal to zero, due to the [Presentational Roles Conflict Resolution][] has a [semantic role][] of [columnheader][] and therefore needed to have an assigned cell within the same `table` element.
 
 ```html
 <table>
@@ -251,7 +251,7 @@ The column header ("Column 2") has an [explicit role][] of `none`. However, it i
 
 #### Inapplicable Example 1
 
-There are no elements with a [semantic role][] of header within the table.
+There are no elements with a [semantic role][] of header within the `table` element.
 
 ```html
 <table>
@@ -263,7 +263,7 @@ There are no elements with a [semantic role][] of header within the table.
 
 #### Inapplicable Example 2
 
-There are no elements with a [semantic role][] of header.
+There are no elements with a [semantic role][] of header within the `table` element.
 
 ```html
 <table></table>
@@ -271,7 +271,7 @@ There are no elements with a [semantic role][] of header.
 
 #### Inapplicable Example 3
 
-There are no elements with a [role][semantic role] of header within the table.
+This `th` element has an [explicit role][] of `cell` and there are no more elements with a [semantic role][] of header within the `table` element.
 
 ```html
 <table>
@@ -286,7 +286,7 @@ There are no elements with a [role][semantic role] of header within the table.
 
 #### Inapplicable Example 4
 
-The only element with a [role][semantic role] of header is neither [visible][] nor [included in the accessibility tree][].
+This `th` element is neither [visible][] nor [included in the accessibility tree][] and there are no more elements with a [semantic role][] of header within the `table` element.
 
 ```html
 <table>
@@ -301,7 +301,7 @@ The only element with a [role][semantic role] of header is neither [visible][] n
 
 #### Inapplicable Example 5
 
-The only element with a [role][semantic role] of header is not [included in the accessibility tree][].
+This `th` element is not [included in the accessibility tree][] and there are no more elements with a [semantic role][] of header within the `table` element.
 
 ```html
 <table>
@@ -316,7 +316,7 @@ The only element with a [role][semantic role] of header is not [included in the 
 
 #### Inapplicable Example 6
 
-The only element with a [role][semantic role] of header does not have a closest ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][]
+This `th` element is not a descendant in the [flat tree][] of an element with a [semantic role][] of either [table][] or [grid][]
 
 ```html
 <div>
@@ -328,7 +328,7 @@ The only element with a [role][semantic role] of header does not have a closest 
 
 #### Inapplicable Example 7
 
-The only element with a header [role][semantic role] is part of a table which is not [included in the accessibility tree][].
+This `th` element is part of a table which is not [included in the accessibility tree][].
 
 ```html
 <table role="presentation">

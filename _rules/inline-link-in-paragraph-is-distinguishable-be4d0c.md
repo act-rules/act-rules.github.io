@@ -3,7 +3,7 @@ id: be4d0c
 name: Inline link is distinguishable
 rule_type: composite
 description: |
-  This rule checks that inline links have a way to distinguish them from the surrounding text
+  This rule checks that inline links have a way to distinguish them from any surrounding text other than color alone.
 accessibility_requirements: # Remove whatever is not applicable
   wcag20:1.4.1: # Use of Color (A)
     forConformance: true

@@ -3,7 +3,7 @@ id: qt1vmo
 name: Image accessible name is descriptive
 rule_type: atomic
 description: |
-  This rule checks that images with an accessible name describe their topic or purpose.
+  This rule checks that the accessible names of images describe their topic or purpose.
 accessibility_requirements:
   wcag20:1.1.1: # Non-Text Content (A)
     forConformance: true
@@ -85,7 +85,7 @@ This `svg` element has an `aria-label` attribute that describes the image.
 
 ```html
 <html lang="en">
-	<svg viewBox="0 0 512 512" aria-label="HTML 5 logo">
+	<svg viewBox="0 0 512 512" aria-label="HTML 5">
 		<path
 			d="M108.4 0h23v22.8h21.2V0h23v69h-23V46h-21v23h-23.2M206 23h-20.3V0h63.7v23H229v46h-23M259.5 0h24.1l14.8 24.3L313.2 0h24.1v69h-23V34.8l-16.1 24.8l-16.1-24.8v34.2h-22.6M348.7 0h23v46.2h32.6V69h-55.6"
 		/>
@@ -133,7 +133,7 @@ This `svg` element has an `aria-label` attribute that incorrectly describes the 
 
 ```html
 <html lang="en">
-	<svg viewBox="0 0 512 512" aria-label="W3C logo">
+	<svg viewBox="0 0 512 512" aria-label="W3C">
 		<path
 			d="M108.4 0h23v22.8h21.2V0h23v69h-23V46h-21v23h-23.2M206 23h-20.3V0h63.7v23H229v46h-23M259.5 0h24.1l14.8 24.3L313.2 0h24.1v69h-23V34.8l-16.1 24.8l-16.1-24.8v34.2h-22.6M348.7 0h23v46.2h32.6V69h-55.6"
 		/>
@@ -154,7 +154,7 @@ This `canvas` element has an `aria-label` attribute that incorrectly describes t
 
 ```html
 <html lang="en">
-	<canvas id="act" width="200" height="60" aria-label="HTML 5 logo"></canvas>
+	<canvas id="act" width="200" height="60" aria-label="HTML 5"></canvas>
 	<script>
 		const ctx = document.querySelector('#act').getContext('2d')
 		ctx.font = '30px Arial'

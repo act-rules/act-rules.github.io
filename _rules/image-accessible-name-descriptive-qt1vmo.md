@@ -3,7 +3,7 @@ id: qt1vmo
 name: Image accessible name is descriptive
 rule_type: atomic
 description: |
-  This rule checks that images with an accessible name describe the topic or purpose.
+  This rule checks that images with an accessible name describe their topic or purpose.
 accessibility_requirements:
   wcag20:1.1.1: # Non-Text Content (A)
     forConformance: true
@@ -119,7 +119,7 @@ This `canvas` element has an `aria-label` attribute that describes the image.
 
 #### Failed Example 1
 
-This `img` element has an `alt` attribute that incorrectly describe the image.
+This `img` element has an `alt` attribute that incorrectly describes the image.
 
 ```html
 <html lang="en">
@@ -129,7 +129,7 @@ This `img` element has an `alt` attribute that incorrectly describe the image.
 
 #### Failed Example 2
 
-This `svg` element has an `aria-label` attribute that incorrectly describe the image.
+This `svg` element has an `aria-label` attribute that incorrectly describes the image.
 
 ```html
 <html lang="en">
@@ -150,7 +150,7 @@ This `svg` element has an `aria-label` attribute that incorrectly describe the i
 
 #### Failed Example 3
 
-This `canvas` element has an `aria-label` attribute that incorrectly describe the image.
+This `canvas` element has an `aria-label` attribute that incorrectly describes the image.
 
 ```html
 <html lang="en">
@@ -167,7 +167,7 @@ This `canvas` element has an `aria-label` attribute that incorrectly describe th
 
 #### Inapplicable Example 1
 
-This `img` element has an empty (`""`) [accessible name][]. The image is described by an adjacent text.
+This `img` element has an empty (`""`) [accessible name][]. The image is described by the adjacent text.
 
 ```html
 <img src="/test-assets/shared/pdf-icon.png" alt="" /> PDF document
@@ -175,7 +175,7 @@ This `img` element has an empty (`""`) [accessible name][]. The image is describ
 
 #### Inapplicable Example 2
 
-This `img` element has an empty (`""`) [accessible name][] because of its `presentation` role.
+This decorative `img` element has an empty (`""`) [accessible name][] because it has no attributes or content to provide an accessible name.
 
 ```html
 <html lang="en">
@@ -240,11 +240,11 @@ This `canvas` element is not [visible][] because it is completely transparent.
 
 #### Inapplicable Example 7
 
-This `img` element is has no [accessible name][] because it is not [included in the accessibility tree][].
+This `img` element has no [accessible name][] because it is not [included in the accessibility tree][].
 
 ```html
 <html lang="en">
-	<img aria-hidden="true" src="/test-assets/shared/fireworks.jpg" alt="some picgure" />
+	<img aria-hidden="true" src="/test-assets/shared/fireworks.jpg" alt="fireworks" />
 </html>
 ```
 
@@ -262,7 +262,7 @@ This `svg` element is ignored because it is a child of a link that provides its 
 
 #### Inapplicable Example 9
 
-This `img` element has an `src` attribute which will cause the [image request state][] to be [Broken](https://html.spec.whatwg.org/#img-error).
+This `img` element has a `src` attribute which will cause the [image request state][] to be [Broken](https://html.spec.whatwg.org/#img-error).
 
 ```html
 <img src="/test-assets/does-not-exist.png" alt="" />

@@ -7,6 +7,7 @@ description: |
 accessibility_requirements:
 input_aspects:
   - Accessiblity tree
+  - CSS styling
   - DOM tree
 acknowledgments:
   authors:
@@ -63,10 +64,12 @@ This `img` element is [marked as decorative][] through its `alt` attribute and i
 
 #### Passed Example 3
 
-This `img` element is [marked as decorative][] through its `role` attribute and has a [semantic role][] of `none`.
+This `nav` element is [marked as decorative][] through its `role` attribute and has a [semantic role][] of `none`.
 
 ```html
-<img src="test-assets/shared/w3c-logo.png" role="none" />
+<nav role="none">
+	<a href="https://act-rules.github.io/" aria-label="ACT rules">ACT rules</a>
+</nav>
 ```
 
 #### Passed Example 4
@@ -99,10 +102,12 @@ This `svg` element is [marked as decorative][] through its `role` attribute and 
 
 #### Failed Example 1
 
-This `img` element is [marked as decorative][] through its `role` attribute but has a non-empty `aria-label` attribute causing it to be [included in the accessibility tree][] with its [implicit role][] of `img`.
+This `nav` element is [marked as decorative][] through its `role` attribute but has a non-empty `aria-label` attribute causing it to be [included in the accessibility tree][] with its [implicit role][] of `navigation`.
 
 ```html
-<img src="test-assets/shared/w3c-logo.png" role="none" aria-label="W3C logo" />
+<nav role="none" aria-label="global">
+	<a href="https://act-rules.github.io/" aria-label="ACT rules">ACT rules</a>
+</nav>
 ```
 
 #### Failed Example 2

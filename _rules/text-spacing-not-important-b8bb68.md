@@ -3,7 +3,7 @@ id: b8bb68
 name: Text spacing in `style` attributes is not `!important`
 rule_type: atomic
 description: |
-  This rule checks that text spacing set in the `style` attribute is below permissible minimum value or not set to `!important`
+  This rule checks that text spacing set in the `style` attribute is not set to `!important` or that at least one of the  relevant text styles has exceeded the specified metric for retaining content visibility and functionality.
 accessibility_requirements:
   wcag21:1.4.12: # Text Spacing (AA)
     forConformance: true
@@ -58,7 +58,7 @@ While some assistive technologies are able to set [user origin][] styles, others
 
 #### Passed Example 1
 
-This `p` element has a `line-height` of `20px` (equals `1.25em`) which is below the permissible minimum, given the pixel size of the body is 16 pixels. Since the [important flag][] is not set, the user can increase the `line-height` above the permissible minimum value.
+This `p` element has a `line-height` of `20px` (equals `1.25em`) which is below the recommended metric, given the pixel size of the body is 16 pixels. Since the [important flag][] is not set, the user can increase the `line-height`.
 
 ```html
 <html>

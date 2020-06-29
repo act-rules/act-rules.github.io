@@ -168,8 +168,8 @@ This phrasing is designed to be easily readable, but may not work in every situa
 - The subject must be referenced in some way in each conditional. For example by starting with "the element has", or by using phrasing like "The innerText of the element has...". The subject must be a single word that is referenced in the phrase preceding the conditional list.
 - Tend towards using a list if there are more than three conditions. Keep the most important condition(s) in the phrase, not in the list. For example, if something is about `img` elements, use "Each `img` element for which all the following is true, instead of putting "`img` element" in the condition list itself.
 - Put things in order of how common they likely are. Even for unordered lists, this helps understand the list.
-- Avoid nested conditional lists. These are difficult to read. Instead try to restructure the conditionals. The can be done by either moving some of the list items into the condition phrase, or putting all the subconditions in a single phrase in the condition item. In expectations, use multiple conditions.
+- Avoid nested conditional lists. These are difficult to read. Instead try to restructure the conditionals. This can be done by either moving some of the list items into the condition phrase, or putting all the subconditions in a single phrase in the condition item. In expectations, use multiple conditions.
 - Group similar concepts into the same list item. For example, if something can have `absolute` or `fixed`, these two are closely related so putting them down as one item helps limit the number of conditions.
-- Write test cases that check each condition of the list individually, this help understand what that specific condition is needed.
+- Write test cases that check each condition of the list individually. This helps understand why that specific condition is needed.
 - Refer to the labels of the condition in the test case description to make the link explicit.
 - Order the test cases in the same order than the conditions they check, with conditions ordered from most important to least important, this implies that test cases are also ordered by importance.

@@ -35,7 +35,7 @@ Implementation of the [Presentational Roles Conflict Resolution][] differs sligh
 
 ## Background
 
-Elements are normally [marked as decorative][] to convey intention of the author that they are [pure decoration][decorative] and thus shouldn't be exposed by assistive technologies. On the other hand, elements that are [focusable][] are important to know for anybody and should be exposed to assistive technologies; and elements that are defining any [global ARIA attribute][] indicate intention to communicate something to the assistive technologies (through the `aria-*` attribute). When an element is both [marked as decorative][] and either [focusable][] or defining a [global ARIA attribute][], a conflict arise between these two intentions. The [conflict is resolved][presentational roles conflict resolution] by exposing the element.
+Elements are normally [marked as decorative][] to convey the intention of the author that they are [pure decoration][decorative] and thus shouldn't be exposed to assistive technologies. On the other hand, elements that are [focusable][] are important to know for anybody and should be exposed to assistive technologies; and elements that are defining any [global ARIA attribute][] indicate an intention to communicate something to the assistive technologies (through the `aria-*` attribute). When an element is both [marked as decorative][] and either [focusable][] or defining a [global ARIA attribute][], a conflict arises between these two intentions. The [conflict is resolved][presentational roles conflict resolution] by exposing the element.
 
 Whenever such a conflict occurs, this indicates at the very least mismatching intentions. Such a conflict should be avoided.
 

@@ -56,7 +56,7 @@ The rule assumes that all links are [user interface components](https://www.w3.o
 ## Accessibility Support
 
 - There are assistive technologies that do not support using the `title` attribute for an [accessible name][], or in which this feature can be disabled.
-- For `area` elements that have a `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on whether the `area` is considered [included in the accessibility tree][] or not.
+- For `area` elements that have an `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on if the `area` is [included in the accessibility tree][].
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `link` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background

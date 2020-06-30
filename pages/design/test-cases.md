@@ -1,6 +1,6 @@
 # ACT Test Case Design
 
-The goal of test cases in ACT rules is to allow implementors to verify that their implementation is sufficiently consistent with the ACT rule. This requires that a rule has test cases for all of the "important" aspects of it. Beyond that, it is up to the rule authors to determine how extensive to make the list of test cases. A list of test cases full of edge cases would ensure greater consistency between implementors, but may result in fewer implementors deciding to adopt the rule.
+The goal of test cases in ACT rules is to allow implementors to verify that their implementation is consistent with the ACT rule. This requires that a rule has test cases for all of the "important" aspects of it. Beyond that, it is up to the rule authors to determine how extensive to make the list of test cases. A list of test cases full of edge cases would ensure greater consistency between implementors, but may result in fewer implementors deciding to adopt the rule.
 
 To strike a good balance in test cases, the following principles should be considered:
 
@@ -51,7 +51,7 @@ ACT rules use definitions to avoid duplication, and to "hide" away the details. 
 
 As an example, the "X has non-empty accessible name" rules all have test cases that check for the different ways that element can have an accessible name. For `img`, that is `alt`, `title`, and `aria-label(ledby)` attributes. That creates sufficient coverage to ensure the basics are understood. But those rules do not go into the details of ensuring accessible name computation is done right. Whether an implementor considers `aria-owns` in the accessible name computation is not relevant for "non-empty accessible name" rules.
 
-That is not to say edge cases in definition should never have test cases. If there are **real-world examples** of a particular edge case affecting the outcome of a rule, test cases should be added to the rule to cover that edge case.
+That is not to say edge cases in definitions should never have test cases. If there are **real-world examples** of a particular edge case affecting the outcome of a rule, test cases should be added to the rule to cover that edge case.
 
 ## Avoid (Accessibility) Support Issues
 

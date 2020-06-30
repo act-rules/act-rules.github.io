@@ -46,7 +46,7 @@ The list of roles in the applicability is derived by taking all the roles from [
 - have a [semantic roles][] that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
 - does not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
 
-This rule does not map to [3.3.2 Labels or Instructions](https://www.w3.org/TR/WCAG21/#labels-or-instructions) as there are sufficient techniques within 3.3.2 that don't need the elements to have an [accessible name][]. For example "G131: Providing descriptive labels" **AND** "G162: Positioning labels to maximize predictability of relationships" would be sufficient.
+This rule does not map to [3.3.2 Labels or Instructions](https://www.w3.org/TR/WCAG21/#labels-or-instructions) as there are sufficient techniques within 3.3.2 that don't need the elements to have an [accessible name][]. For example "[G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG21/Techniques/general/G131)" **AND** "[G162: Positioning labels to maximize predictability of relationships](https://www.w3.org/WAI/WCAG21/Techniques/general/G162)" would be sufficient.
 
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [H91: Using HTML form controls and links](https://www.w3.org/WAI/WCAG21/Techniques/html/H91)
@@ -59,7 +59,7 @@ This rule does not map to [3.3.2 Labels or Instructions](https://www.w3.org/TR/W
 
 #### Passed Example 1
 
-This `input` element has an [accessible name][] because of its implicit label.
+This `input` element has an [accessible name][] because of its [programmatic label](#programmatic-label).
 
 ```html
 <label>
@@ -79,12 +79,11 @@ This `input` element has an [accessible name][] because of its `aria-label` attr
 
 #### Passed Example 3
 
-This `select` element has an [accessible name][] because of its explicit label.
+This `select` element has an [accessible name][] because of its [programmatic label](#programmatic-label).
 
 ```html
 <label for="country">Country</label>
 <select id="country">
-	<option></option>
 	<option>England</option>
 	<option>Scotland</option>
 	<option>Wales</option>
@@ -123,10 +122,10 @@ This `input` element has no attribute to give it an [accessible name][].
 
 #### Failed Example 2
 
-This [non-focusable](#focusable) `input` element has no attribute to give it an [accessible name][].
+This disabled `input` element has no attribute to give it an [accessible name][].
 
 ```html
-<input tabindex="-1" />
+<input disabled />
 ```
 
 #### Failed Example 3
@@ -161,7 +160,7 @@ This element with a `textbox` [role][semantic role] has an empty (`""`) [accessi
 
 #### Failed Example 6
 
-This element with a `textbox` [role][semantic role] has an empty (`""`) [accessible name][]. The explicit `label` element does not give it an [accessible name][], this only works for native form controls.
+This element with a `textbox` [role][semantic role] has an empty (`""`) [accessible name][]. The `label` element does not give it an [accessible name][], this only works for native form controls.
 
 ```html
 <label for="lastname">first name</label>

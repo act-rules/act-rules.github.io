@@ -52,7 +52,7 @@ Each test target has an [accessible name][] that serves an equivalent purpose to
 
 ## Assumptions
 
-This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content).
+This rule assumes that the language of the [accessible name][] of each test target can be correctly determined (either programmatically or by analyzing the content).
 
 ## Accessibility Support
 

@@ -30,7 +30,6 @@ The rule applies to any HTML or SVG element that is [included in the accessibili
 - the element has a [semantic role][] of `combobox`; or
 - the element has the `aria-busy` state set to `true`, or has an [ancestor][] in the accessibility tree with this state.
 
-
 ## Expectation
 
 Each test target only [owns][] elements with a [semantic role][] from the [required owned element][] list for the test target's [semantic role]().
@@ -57,12 +56,11 @@ If the [explicit semantic role][] on the target element is incorrectly used, and
 - [Required Owned Element](https://www.w3.org/TR/wai-aria-1.1/#mustContain)
 - [Owned Element](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element)
 
-HTML elemements with an [implicit semantic role][] corresponding with [explicit semantic role][] are not tested in this rule because some of these elements have additional requirements. For example, an element that has an implicit semantic role that is identical to its explicit semantic role is a `ul` element that has `role="list"`. However, there is no native HTML element to "group" `li` elements in a `ul` element.
+HTML elements with an [implicit semantic role][] corresponding with [explicit semantic role][] are not tested in this rule because some of these elements have additional requirements. For example, an element that has an implicit semantic role that is identical to its explicit semantic role is a `ul` element that has `role="list"`. However, there is no native HTML element to "group" `li` elements in a `ul` element.
 
 The unresolved issues with how [Digital Publishing WAI-ARIA Module][] (DPUB ARIA 1.1) uses role inheritance to define the [required owned element][] is limiting the scope of this rule to [WAI-ARIA 1.1][] roles only. It is because of the deviations between DPUB ARIA 1.1 and [WAI-ARIA 1.1][] models. The [WAI-ARIA Graphics Module][] does not include any [required owned element][].
 
 The combobox role is excluded from this rule, because the design pattern for it as described in ARIA 1.1 has proven problematic. The combobox will be significantly different for ARIA 1.2, where it does not have [required owned elements][].
-
 
 ## Test Cases
 

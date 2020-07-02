@@ -5,6 +5,11 @@ rule_type: atomic
 description: |
   This rule checks that each element in sequential focus order has some visible focus indication.
 accessibility_requirements:
+  wcag20:2.4.7: # Focus Visible (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - CSS styling
   - DOM tree
@@ -19,7 +24,9 @@ The rule applies to any [focusable][] element in a document with several [focusa
 
 ## Expectation
 
-For each target element, there exists a set of [focus indicators][focus indicator] which are not all also [focus indicators][focus indicator] for another [focusable][] element (the same for all the indicators).
+For each target element, and each other [focusable][] element in the document, the set of pixels whose color is different when the test target is [focused][] and when it is not, and the set of pixels whose color is different when the other element is [focused][] and when it is not, are different.
+
+**Note:** Some of the pixels might be the same, but the sets have to be unique for each test target.
 
 ## Assumptions
 

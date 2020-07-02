@@ -1,15 +1,10 @@
 ---
 id: f4e323
-name: Focusable element has visible focus
+name: Element in sequential focus order has visible focus though styling
 rule_type: atomic
 description: |
-  This rule checks that each focusable element has visible focus indication
-accessibility_requirements: # Remove whatever is not applicable
-  wcag20:2.4.7: # Focus Visible (AA)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: satisfied
+  This rule checks that each element in sequential focus order has some visible focus indication through styling of elements in close proximity.
+accessibility_requirements:
 input_aspects:
   - CSS styling
   - DOM tree

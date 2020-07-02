@@ -91,8 +91,8 @@ The first [focusable][] element is part of [sequential focus navigation] and is 
 The first [focusable][] element (the `a` element) is part of [sequential focus navigation][] and has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**ancestor**) condition). The second [focusable][] element (the `button` element) is a [focus indicator][] for itself due to default styling.
 
 ```html
-<link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
-<script src="test-assets/focus-visible-f4e323/script.js" />
+<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
+<script src="../test-assets/focus-visible/script.js" />
 
 <span id="indicator" class="border">
 	<a
@@ -112,8 +112,8 @@ The first [focusable][] element (the `a` element) is part of [sequential focus n
 The first [focusable][] element (the `a` element) is part of [sequential focus navigation][] and has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**descendant**) condition). The second [focusable][] element (the `button` element) is a [focus indicator][] for itself due to default styling.
 
 ```html
-<link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
-<script src="test-assets/focus-visible-f4e323/script.js" />
+<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
+<script src="../test-assets/focus-visible/script.js" />
 
 <a
 	id="act"
@@ -131,8 +131,8 @@ The first [focusable][] element (the `a` element) is part of [sequential focus n
 The [focusable][] `p` element is a [potential focus indicator][] for itself despite being an ancestor of another [focusable][] element (the `a`), because that other [focusable][] is a descendant of the `p` element. Thus, the `p` element matches the (**ancestor**) condition. Default styling makes it a [focus indicator][] for itself and no other [focusable][] element. The `span` element is a [potential focus indicator][] for the `a` element despite being a descendant of another [focusable][] element (the `p`), because that other [focusable][] is an ancestor of the `a` element. Thus, the `span` matches the (**descendant**) condition.
 
 ```html
-<link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
-<script src="test-assets/focus-visible-f4e323/script.js" />
+<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
+<script src="../test-assets/focus-visible/script.js" />
 
 <p tabindex="0">
 	<a
@@ -151,8 +151,8 @@ The [focusable][] `p` element is a [potential focus indicator][] for itself desp
 The first [focusable][] element (the `a` element) is part of [sequential focus navigation][] and has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**neighbors**) condition). The second [focusable][] element (the `button` element) is a [focus indicator][] for itself due to default styling.
 
 ```html
-<link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
-<script src="test-assets/focus-visible-f4e323/script.js" />
+<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
+<script src="../test-assets/focus-visible/script.js" />
 
 <span id="indicator" class="indicator solid"></span>
 <a
@@ -171,8 +171,8 @@ The first [focusable][] element (the `a` element) is part of [sequential focus n
 Both these [focusable][] elements have a [focus indicator][] in the cell above their, due to the (**table neighbors**) condition.
 
 ```html
-<link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
-<script src="test-assets/focus-visible-f4e323/script.js" />
+<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
+<script src="../test-assets/focus-visible/script.js" />
 
 <table>
 	<tr>
@@ -209,8 +209,8 @@ Both these [focusable][] elements have a [focus indicator][] in the cell above t
 Both these [focusable][] elements have a [focus indicator][]. The element with `id` "indicator-wcag" is a [potential focus indicator][] for both of them, but a [focus indicator][] only for the element with "id` "wcag".
 
 ```html
-<link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
-<script src="test-assets/focus-visible-f4e323/script.js" />
+<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
+<script src="../test-assets/focus-visible/script.js" />
 
 <span id="indicator-act" class="indicator solid"></span>
 <a
@@ -237,8 +237,8 @@ Both these [focusable][] elements have a [focus indicator][]. The element with `
 Each of these three [focusable][] elements has a set of [focus indicators][focus indicator] which are not all [focus indicator][] for the same other element. The element with `id` "wcag" has two [focus indicators][focus indicator] (with `id`s "indicator-wcag" and "indicator-w3c"). Both of them are also [focus indicator][] for another [focusable][] element, but each for a different element. Thus, the set composed of these two [focus indicator][] passes the expectation.
 
 ```html
-<link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
-<script src="test-assets/focus-visible-f4e323/script.js" />
+<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
+<script src="../test-assets/focus-visible/script.js" />
 
 <span id="indicator-act" class="indicator solid"></span>
 <a
@@ -277,6 +277,8 @@ Each of these three [focusable][] elements has a set of [focus indicators][focus
 None of these [focusable][] elements have a [focus indicator][] because the default styling has been overwritten.
 
 ```html
+<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
+
 <a class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a>
 <a class="no-focus-default" href="https://www.w3.org/TR/WCAG21/">WCAG</a>
 ```
@@ -286,6 +288,8 @@ None of these [focusable][] elements have a [focus indicator][] because the defa
 The first [focusable][] element is part of [sequential focus navigation][] and has no [focus indicator][]. The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the `tabindex` attribute. Its presence is nonetheless enough to make the first one applicable.
 
 ```html
+<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
+
 <a class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a>
 <button tabindex="-1">Dummy button</button>
 ```
@@ -295,8 +299,8 @@ The first [focusable][] element is part of [sequential focus navigation][] and h
 None of these [focusable][] elements have a [focus indicator][]. The `p` element is not a [potential focus indicator][] for any of the `span` elements; it does not match the (**ancestor**) condition due to being ancestor to both of them.
 
 ```html
-<link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
-<script src="test-assets/focus-visible-f4e323/script.js" />
+<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
+<script src="../test-assets/focus-visible/script.js" />
 
 <p id="indicator border">
 	<a
@@ -316,8 +320,8 @@ None of these [focusable][] elements have a [focus indicator][]. The `p` element
 None of these [focusable][] elements have a [focus indicator][]. The `span` element is not a [potential focus indicator][] for the `p` element; it does not match the (**descendant**) condition due to also being descendant of another [focusable][] element.
 
 ```html
-<link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
-<script src="test-assets/focus-visible-f4e323/script.js" />
+<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
+<script src="../test-assets/focus-visible/script.js" />
 
 <p tabindex="0" class="no-focus-default" onfocus="toggleActivation('indicator')" onblur="toggleActivation('indicator')">
 	<a id="act" class="no-focus-default" href="https://act-rules.github.io/"
@@ -331,8 +335,8 @@ None of these [focusable][] elements have a [focus indicator][]. The `span` elem
 None of these [focusable][] elements have a [focus indicator][]. The element with `id` "indicator-wcag" is not a [potential focus indicator][] for the element with `id` "wcag"; it does not match the (**neighbors**) condition due to the presence of another [focusable][] element between them.
 
 ```html
-<link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
-<script src="test-assets/focus-visible-f4e323/script.js" />
+<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
+<script src="../test-assets/focus-visible/script.js" />
 
 <span id="indicator-wcag" class="indicator solid"></span>
 <a id="act" class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a>
@@ -351,8 +355,8 @@ None of these [focusable][] elements have a [focus indicator][]. The element wit
 None of these [focusable][] elements have a set of [focus indicators][focus indicator] which are not all also [focus indicator][] for another element. The element with `id` "indicator" is a [focus indicator][] for both of them and they have no other [focus indicator][].
 
 ```html
-<link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
-<script src="test-assets/focus-visible-f4e323/script.js" />
+<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
+<script src="../test-assets/focus-visible/script.js" />
 
 <a
 	id="act"
@@ -378,6 +382,9 @@ None of these [focusable][] elements have a set of [focus indicators][focus indi
 None of these [focusable][] elements have a [focus indicator][]. The element with `id` "indicator-wcag" is not a [potential focus indicator][] for the element with `id` "wcag" due to the presence of another focusable element in the same column between them.
 
 ```html
+<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
+<script src="../test-assets/focus-visible/script.js" />
+
 <table>
 	<tr>
 		<td><span id="indicator-wcag" class="indicator solid"></span></td>

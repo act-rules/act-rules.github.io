@@ -32,6 +32,6 @@ An element I is a _potential focus indicator_ for a [focusable][] element F if o
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of Flat tree'
 [focusable]: #focusable 'Definition of Focusable'
 [inclusive ancestor]: https://dom.spec.whatwg.org/#concept-tree-inclusive-ancestor 'Definition of Inclusive ancestor'
-[inclusive ancestor]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'Definition of Inclusive descendant'
+[inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'Definition of Inclusive descendant'
 [slot]: https://html.spec.whatwg.org/multipage/tables.html#concept-slots 'Specification of the Slot concept'
 [table]: https://html.spec.whatwg.org/multipage/tables.html#concept-table 'Specification of the Table concept'

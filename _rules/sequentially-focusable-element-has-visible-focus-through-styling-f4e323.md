@@ -80,15 +80,7 @@ All the [focusable][] elements in this document are part of [sequential focus na
 
 #### Passed Example 2
 
-The first [focusable][] element is part of [sequential focus navigation] and is a [focus indicator][] for itself due to default User Agent's styling. The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the `tabindex` attribute. Its presence is nonetheless enough to make the first one applicable.
-
-```html
-<a href="https://act-rules.github.io/">ACT rules</a> <button tabindex="-1">Dummy button</button>
-```
-
-#### Passed Example 3
-
-The first [focusable][] element (the `a` element) is part of [sequential focus navigation][] and has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**ancestor**) condition). The second [focusable][] element (the `button` element) is a [focus indicator][] for itself due to default styling.
+This [focusable][] `a` element is part of [sequential focus navigation][] and has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**ancestor**) condition).
 
 ```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
@@ -104,12 +96,11 @@ The first [focusable][] element (the `a` element) is part of [sequential focus n
 		>ACT rules</a
 	>
 </span>
-<button>Dummy button</button>
 ```
 
-#### Passed Example 4
+#### Passed Example 3
 
-The first [focusable][] element (the `a` element) is part of [sequential focus navigation][] and has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**descendant**) condition). The second [focusable][] element (the `button` element) is a [focus indicator][] for itself due to default styling.
+This [focusable][] `a` element is part of [sequential focus navigation][] and has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**descendant**) condition).
 
 ```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
@@ -123,10 +114,9 @@ The first [focusable][] element (the `a` element) is part of [sequential focus n
 	href="https://act-rules.github.io/"
 	><span id="indicator" class="border">ACT rules</span></a
 >
-<button>Dummy button</button>
 ```
 
-#### Passed Example 5
+#### Passed Example 4
 
 The [focusable][] `p` element is a [potential focus indicator][] for itself despite being an ancestor of another [focusable][] element (the `a`), because that other [focusable][] is a descendant of the `p` element. Thus, the `p` element matches the (**ancestor**) condition. Default styling makes it a [focus indicator][] for itself and no other [focusable][] element. The `span` element is a [potential focus indicator][] for the `a` element despite being a descendant of another [focusable][] element (the `p`), because that other [focusable][] is an ancestor of the `a` element. Thus, the `span` matches the (**descendant**) condition.
 
@@ -146,9 +136,9 @@ The [focusable][] `p` element is a [potential focus indicator][] for itself desp
 </p>
 ```
 
-#### Passed Example 6
+#### Passed Example 5
 
-The first [focusable][] element (the `a` element) is part of [sequential focus navigation][] and has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**neighbors**) condition). The second [focusable][] element (the `button` element) is a [focus indicator][] for itself due to default styling.
+This [focusable][] `a` element is part of [sequential focus navigation][] and has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**neighbors**) condition).
 
 ```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
@@ -163,10 +153,9 @@ The first [focusable][] element (the `a` element) is part of [sequential focus n
 	href="https://act-rules.github.io/"
 	>ACT rules</a
 >
-<button>Dummy button</button>
 ```
 
-#### Passed Example 7
+#### Passed Example 6
 
 Both these [focusable][] elements have a [focus indicator][] in the cell above their, due to the (**table neighbors**) condition.
 
@@ -204,7 +193,7 @@ Both these [focusable][] elements have a [focus indicator][] in the cell above t
 </table>
 ```
 
-#### Passed Example 8
+#### Passed Example 7
 
 Both these [focusable][] elements have a [focus indicator][]. The element with `id` "indicator-wcag" is a [potential focus indicator][] for both of them, but a [focus indicator][] only for the element with "id` "wcag".
 
@@ -232,7 +221,7 @@ Both these [focusable][] elements have a [focus indicator][]. The element with `
 >
 ```
 
-#### Passed Example 9
+#### Passed Example 8
 
 Each of these three [focusable][] elements has a set of [focus indicators][focus indicator] which are not all [focus indicator][] for the same other element. The element with `id` "wcag" has two [focus indicators][focus indicator] (with `id`s "indicator-wcag" and "indicator-w3c"). Both of them are also [focus indicator][] for another [focusable][] element, but each for a different element. Thus, the set composed of these two [focus indicator][] passes the expectation.
 
@@ -274,27 +263,15 @@ Each of these three [focusable][] elements has a set of [focus indicators][focus
 
 #### Failed Example 1
 
-None of these [focusable][] elements have a [focus indicator][] because the default styling has been overwritten.
+This [focusable][] element does not have a [focus indicator][] because the default styling has been overwritten.
 
 ```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
 
 <a class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a>
-<a class="no-focus-default" href="https://www.w3.org/TR/WCAG21/">WCAG</a>
 ```
 
 #### Failed Example 2
-
-The first [focusable][] element is part of [sequential focus navigation][] and has no [focus indicator][]. The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the `tabindex` attribute. Its presence is nonetheless enough to make the first one applicable.
-
-```html
-<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
-
-<a class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a>
-<button tabindex="-1">Dummy button</button>
-```
-
-#### Failed Example 3
 
 None of these [focusable][] elements have a [focus indicator][]. The `p` element is not a [potential focus indicator][] for any of the `span` elements; it does not match the (**ancestor**) condition due to being ancestor to both of them.
 
@@ -315,7 +292,7 @@ None of these [focusable][] elements have a [focus indicator][]. The `p` element
 </p>
 ```
 
-#### Failed Example 4
+#### Failed Example 3
 
 None of these [focusable][] elements have a [focus indicator][]. The `span` element is not a [potential focus indicator][] for the `p` element; it does not match the (**descendant**) condition due to also being descendant of another [focusable][] element.
 
@@ -330,7 +307,7 @@ None of these [focusable][] elements have a [focus indicator][]. The `span` elem
 </p>
 ```
 
-#### Failed Example 5
+#### Failed Example 4
 
 None of these [focusable][] elements have a [focus indicator][]. The element with `id` "indicator-wcag" is not a [potential focus indicator][] for the element with `id` "wcag"; it does not match the (**neighbors**) condition due to the presence of another [focusable][] element between them.
 
@@ -350,7 +327,7 @@ None of these [focusable][] elements have a [focus indicator][]. The element wit
 >
 ```
 
-#### Failed Example 6
+#### Failed Example 5
 
 None of these [focusable][] elements have a set of [focus indicators][focus indicator] which are not all also [focus indicator][] for another element. The element with `id` "indicator" is a [focus indicator][] for both of them and they have no other [focus indicator][].
 
@@ -377,7 +354,7 @@ None of these [focusable][] elements have a set of [focus indicators][focus indi
 >
 ```
 
-#### Failed Example 7
+#### Failed Example 6
 
 None of these [focusable][] elements have a [focus indicator][]. The element with `id` "indicator-wcag" is not a [potential focus indicator][] for the element with `id` "wcag" due to the presence of another focusable element in the same column between them.
 
@@ -419,19 +396,10 @@ This document contains no [focusable][] element.
 
 #### Inapplicable Example 2
 
-This document contains only one [focusable][] element.
-
-```html
-<a href="https://act-rules.github.io/">ACT rules</a>
-```
-
-#### Inapplicable Example 3
-
-None of the [focusable][] elements in this document is part of [sequential focus navigation][].
+This [focusable][] element is not part of [sequential focus navigation][].
 
 ```html
 <a tabindex="-1" href="https://act-rules.github.io/">ACT rules</a>
-<a tabindex="-1" href="https://www.w3.org/TR/WCAG21/">WCAG</a>
 ```
 
 [focusable]: #focusable 'Definition of Focusable'

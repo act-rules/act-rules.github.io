@@ -22,7 +22,11 @@ acknowledgments:
 
 The rule applies to any element which is part of [sequential focus navigation][] in a document with several [focusable][] elements.
 
-## Expectation
+## Expectation 1
+
+For each target element, there is at least one pixel whose color is different when the element is [focused][] and when it is not.
+
+## Expectation 2
 
 For each target element, and each other [focusable][] element in the document, the set of pixels whose color is different when the test target is [focused][] and when it is not, and the set of pixels whose color is different when the other element is [focused][] and when it is not, are different.
 
@@ -54,7 +58,7 @@ WCAG [Understanding Success Criterion 2.4.7: Focus Visible][usc247] explicitly s
 
 #### Passed Example 1
 
-All the [focusable][] elements in this document are part of [sequential focus navigation][]. The set of pixels that change color when they are [focused][] is unique for each of them.
+All the [focusable][] elements in this document are part of [sequential focus navigation][]. The set of pixels that change color when they are [focused][] (due to default User Agent's styling) is unique for each of them.
 
 ```html
 <a href="https://act-rules.github.io/">ACT rules</a><br />
@@ -81,7 +85,7 @@ All the [focusable][] elements in this document are part of [sequential focus na
 
 #### Passed Example 2
 
-The first [focusable][] element is part of [sequential focus navigation] and is a [focus indicator][] for itself due to default User Agent's styling. The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the `tabindex` attribute. Its presence is nonetheless enough to make the first one applicable.
+The first [focusable][] element is part of [sequential focus navigation]. The set of pixels that change color when it is [focused][] (due to default User Agent's styling) is unique. The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the `tabindex` attribute. Its presence is nonetheless enough to make the first one applicable.
 
 ```html
 <a href="https://act-rules.github.io/">ACT rules</a> <button tabindex="-1">Dummy button</button>
@@ -89,7 +93,7 @@ The first [focusable][] element is part of [sequential focus navigation] and is 
 
 #### Passed Example 3
 
-The first [focusable][] element, part of [sequential focus navigation][] due to its `tabindex`, has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**neighbors**) condition).
+The first [focusable][] element, is part of [sequential focus navigation][]. The set of pixels that change color when it is [focused][] (the borrder of the `span` element) is unique (it does not change when any other element is [focused][]).
 
 ```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
@@ -110,65 +114,7 @@ The first [focusable][] element, part of [sequential focus navigation][] due to 
 
 #### Passed Example 4
 
-The [focusable][] `p` element is a [potential focus indicator][] for itself despite being an ancestor of another [focusable][] element (the link), because that other [focusable][] is a descendant of the `p` element. Thus, the `p` element matches the (**ancestor**) condition. Default styling makes it a [focus indicator][] for itself and no other [focusable][] element. Similarly, the `a` element is a [focus indicator][] for itself.
-
-```html
-<p tabindex="0">
-	<a href="https://act-rules.github.io/">ACT rules</a>
-</p>
-```
-
-#### Passed Example 5
-
-The first [focusable][] element has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**neighbors**) condition), and for no other.
-
-```html
-<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
-<script src="../test-assets/focus-visible/script.js" />
-
-<span id="indicator" class="indicator solid"></span>
-<a
-	id="act"
-	class="no-focus-default"
-	onfocus="toggleActivation('indicator')"
-	onblur="toggleActivation('indicator')"
-	href="https://act-rules.github.io/"
-	>ACT rules</a
->
-<button>Dummy button</button>
-```
-
-#### Passed Example 6
-
-Both these [focusable][] elements have a [focus indicator][]. The element with `id` "indicator-wcag" is a [potential focus indicator][] for both of them, but a [focus indicator][] only for the element with "id` "wcag".
-
-```html
-<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
-<script src="../test-assets/focus-visible/script.js" />
-
-<span id="indicator-act" class="indicator solid"></span>
-<a
-	id="act"
-	class="no-focus-default"
-	onfocus="toggleActivation('indicator-act')"
-	onblur="toggleActivation('indicator-act')"
-	href="https://act-rules.github.io/"
-	>ACT rules</a
->
-<span id="indicator-wcag" class="indicator solid"></span>
-<a
-	id="wcag"
-	class="no-focus-default"
-	onfocus="toggleActivation('indicator-wcag')"
-	onblur="toggleActivation('indicator-wcag')"
-	href="https://www.w3.org/TR/WCAG21/"
-	>WCAG</a
->
-```
-
-#### Passed Example 7
-
-Each of these three [focusable][] elements has a set of [focus indicators][focus indicator] which are not all [focus indicator][] for the same other element. The element with `id` "wcag" has two [focus indicators][focus indicator] (with `id`s "indicator-wcag" and "indicator-w3c"). Both of them are also [focus indicator][] for another [focusable][] element, but each for a different element. Thus, the set composed of these two [focus indicator][] passes the expectation.
+For each of these three [focusable][] elements, the set of pixels changing color when it is [focused][] is unique. For the element with `id` "wcag", each of these pixels also change color when another element is [focused][], but they do not all change color for the same other element. Thus, the set of pixels changing color is also unique for this one.
 
 ```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
@@ -204,49 +150,11 @@ Each of these three [focusable][] elements has a set of [focus indicators][focus
 <span id="indicator-final" class="indicator solid"></span>
 ```
 
-#### Passed Example 8
-
-Both these [focusable][] elements have a [focus indicator][] in the cell above their, due to the (**table neighbors**) condition.
-
-```html
-<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
-<script src="../test-assets/focus-visible/script.js" />
-
-<table>
-	<tr>
-		<td><span id="indicator-act" class="indicator solid"></span></td>
-		<td><span id="indicator-wcag" class="indicator solid"></span></td>
-	</tr>
-	<tr>
-		<td>
-			<a
-				id="act"
-				class="no-focus-default"
-				onfocus="toggleActivation('indicator-act')"
-				onblur="toggleActivation('indicator-act')"
-				href="https://act-rules.github.io/"
-				>ACT rules</a
-			>
-		</td>
-		<td>
-			<a
-				id="wcag"
-				class="no-focus-default"
-				onfocus="toggleActivation('indicator-wcag')"
-				onblur="toggleActivation('indicator-wcag')"
-				href="https://www.w3.org/TR/WCAG21/"
-				>WCAG</a
-			>
-		</td>
-	</tr>
-</table>
-```
-
 ### Failed
 
 #### Failed Example 1
 
-None of these [focusable][] elements have a [focus indicator][] because the default styling has been overwritten.
+None of these [focusable][] elements have any pixel changing color when they are [focused][] because the default styling has been overwritten.
 
 ```html
 <a class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a>
@@ -255,7 +163,7 @@ None of these [focusable][] elements have a [focus indicator][] because the defa
 
 #### Failed Example 2
 
-The first [focusable][] element is part of [sequential focus navigation][] and has no [focus indicator][]. The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the `tabindex` attribute. Its presence is nonetheless enough to make the first one applicable.
+The first [focusable][] element is part of [sequential focus navigation][] and has no pixel changing color when it is [focused][]. The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the `tabindex` attribute. Its presence is nonetheless enough to make the first one applicable.
 
 ```html
 <a class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a>
@@ -264,48 +172,7 @@ The first [focusable][] element is part of [sequential focus navigation][] and h
 
 #### Failed Example 3
 
-None of these [focusable][] elements have a [focus indicator][]. The `p` element is not a [potential focus indicator][] for any of the `span` elements; it does not match the (**ancestor**) due to being ancestor to both of them.
-
-```html
-<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
-<script src="../test-assets/focus-visible/script.js" />
-
-<p id="indicator border">
-	<a
-		id="act"
-		class="no-focus-default"
-		onfocus="toggleActivation('indicator')"
-		onblur="toggleActivation('indicator')"
-		href="https://act-rules.github.io/"
-		>ACT rules</span
-	>
-	<a id="wcag" class="no-focus-default" href="https://www.w3.org/TR/WCAG21/">WCAG</a>
-</p>
-```
-
-#### Failed Example 4
-
-None of these [focusable][] elements have a [focus indicator][]. The element with `id` "indicator-wcag" is not a [potential focus indicator][] for the element with `id` "wcag"; it does not match the (**neighbors**) condition due to the presence of another [focusable][] element between them.
-
-```html
-<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
-<script src="../test-assets/focus-visible/script.js" />
-
-<span id="indicator-wcag" class="indicator solid"></span>
-<a id="act" class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a>
-<a
-	id="wcag"
-	class="no-focus-default"
-	onfocus="toggleActivation('indicator-wcag')"
-	onblur="toggleActivation('indicator-wcag')"
-	href="https://www.w3.org/TR/WCAG21/"
-	>WCAG</a
->
-```
-
-#### Failed Example 5
-
-None of these [focusable][] elements have a set of [focus indicators][focus indicator] which are not all also [focus indicator][] for another element. The element with `id` "indicator" is a [focus indicator][] for both of them and they have no other [focus indicator][].
+Both of these [focusable][] elements have the exact same set of pixels changing color when they are [focused][].
 
 ```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
@@ -328,33 +195,6 @@ None of these [focusable][] elements have a set of [focus indicators][focus indi
 	href="https://www.w3.org/TR/WCAG21/"
 	>WCAG</a
 >
-```
-
-#### Failed Example 6
-
-None of these [focusable][] elements have a [focus indicator][]. The element with `id` "indicator-wcag" is not a [potential focus indicator][] for the element with `id` "wcag" due to the presence of another focusable element in the same column between them.
-
-```html
-<table>
-	<tr>
-		<td><span id="indicator-wcag" class="indicator solid"></span></td>
-	</tr>
-	<tr>
-		<td><a id="act" class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a></td>
-	</tr>
-	<tr>
-		<td>
-			<a
-				id="wcag"
-				class="no-focus-default"
-				onfocus="toggleActivation('indicator-wcag')"
-				onblur="toggleActivation('indicator-wcag')"
-				href="https://www.w3.org/TR/WCAG21/"
-				>WCAG</a
-			>
-		</td>
-	</tr>
-</table>
 ```
 
 ### Inapplicable

@@ -29,10 +29,10 @@ acknowledgments:
 
 The rule applies to any HTML element with the [semantic role][] of [rowheader][] or [columnheader][] for which all of the following is true:
 
-- The element is [visible][]; and
-- The element is [included in the accessibility tree][]; and
-- The element has at least one ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][]; and
-- The element's closest ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][] is [included in the accessibility tree][].
+- the element is [visible][]; and
+- the element is [included in the accessibility tree][]; and
+- the element has at least one ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][]; and
+- the element's closest ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][] is [included in the accessibility tree][].
 
 ## Expectation
 
@@ -74,7 +74,7 @@ This `th` element has an assigned `td` element.
 
 #### Passed Example 2
 
-Each of the 2 `span` elements with role of [columnheader][] has assigned `span` elements with a role of [cell][].
+Each of the 2 `span` elements with role of `columnheader` has assigned `span` elements with a role of `cell`.
 
 ```html
 <div role="table">
@@ -149,14 +149,14 @@ Each of the 2 `th` elements has an assigned `td` element because the `headers` a
 ```html
 <table>
 	<tr>
-		<th id="col1">Column 1</th>
-		<th id="col2">Column 2</th>
+		<th id="col1">Cities</th>
+		<th id="col2">Count</th>
 	</tr>
 	<tr>
-		<td></td>
+		<td>Paris</td>
 	</tr>
 	<tr>
-		<td headers="col2"></td>
+		<td headers="col2">1</td>
 	</tr>
 </table>
 ```
@@ -165,14 +165,14 @@ Each of the 2 `th` elements has an assigned `td` element because the `headers` a
 
 #### Failed Example 1
 
-The `th` element with text "Column 2" does not have an assigned cell within the same `table` element.
+The `th` element with text "Value" does not have an assigned cell within the same `table` element.
 
 ```html
 <table>
 	<thead>
 		<tr>
-			<th>Column 1</th>
-			<th>Column 2</th>
+			<th>Rate</th>
+			<th>Value</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -185,30 +185,30 @@ The `th` element with text "Column 2" does not have an assigned cell within the 
 
 #### Failed Example 2
 
-This `th` element with `id` equal to "Column2" does not have an assigned cell within the same `table` element because the `headers` attribute removes the cell association from its column.
+This `th` element with `id` equal to "col2" does not have an assigned cell within the same `table` element because the `headers` attribute removes the cell association from its column.
 
 ```html
 <table>
 	<tr>
-		<th id="col1">Column 1</th>
-		<th id="Column2">Column 2</th>
+		<th id="col1">Country</th>
+		<th id="col2">Starting with a Z</th>
 	</tr>
 	<tr>
-		<td></td>
-		<td headers="col1"></td>
+		<td>Zambia</td>
+		<td headers="col1">Zimbabwe</td>
 	</tr>
 </table>
 ```
 
 #### Failed Example 3
 
-This `div` with role of [columnheader][] and text equal to "Col B" does not have an assigned cell within the same `table` element.
+This `div` with role of `columnheader` and text equal to "Occupant" does not have an assigned cell within the same `table` element.
 
 ```html
 <div role="grid">
 	<div role="row">
-		<div role="columnheader">Col A</div>
-		<div role="columnheader">Col B</div>
+		<div role="columnheader">Room</div>
+		<div role="columnheader">Occupant</div>
 	</div>
 	<div role="row">
 		<div role="gridcell">1A</div>
@@ -219,31 +219,11 @@ This `div` with role of [columnheader][] and text equal to "Col B" does not have
 </div>
 ```
 
-#### Failed Example 4
-
-This `th` element with role of `none` and `tabindex` equal to zero, due to the [Presentational Roles Conflict Resolution][] has a [semantic role][] of [columnheader][] and therefore needed to have an assigned cell within the same `table` element.
-
-```html
-<table>
-	<thead>
-		<tr>
-			<th>Column 1</th>
-			<th role="none" tabindex="0">Column 2</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>15%</td>
-		</tr>
-	</tbody>
-</table>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-There are no elements with a [semantic role][] of header within the `table` element.
+There are no elements with a [semantic role][] of `header` within the `table` element.
 
 ```html
 <table>
@@ -255,7 +235,7 @@ There are no elements with a [semantic role][] of header within the `table` elem
 
 #### Inapplicable Example 2
 
-There are no elements with a [semantic role][] of header within the `table` element.
+There are no elements with a [semantic role][] of `header` within the `table` element.
 
 ```html
 <table></table>
@@ -263,7 +243,7 @@ There are no elements with a [semantic role][] of header within the `table` elem
 
 #### Inapplicable Example 3
 
-This `th` element has an [explicit role][] of `cell` and there are no more elements with a [semantic role][] of header within the `table` element.
+This `th` element has an [explicit role][] of `cell` and there are no more elements with a [semantic role][] of `header` within the `table` element.
 
 ```html
 <table>
@@ -278,37 +258,37 @@ This `th` element has an [explicit role][] of `cell` and there are no more eleme
 
 #### Inapplicable Example 4
 
-This `th` element is neither [visible][] nor [included in the accessibility tree][] and there are no more elements with a [semantic role][] of header within the `table` element.
+This `th` element is neither [visible][] nor [included in the accessibility tree][] and there are no more elements with a [semantic role][] of `header` within the `table` element.
 
 ```html
 <table>
 	<tr>
-		<th style="display: none;">Column A</th>
+		<th style="display: none;">Organization</th>
 	</tr>
 	<tr>
-		<td>Cell A</td>
+		<td>W3C</td>
 	</tr>
 </table>
 ```
 
 #### Inapplicable Example 5
 
-This `th` element is not [included in the accessibility tree][] and there are no more elements with a [semantic role][] of header within the `table` element.
+This `th` element is not [included in the accessibility tree][] and there are no more elements with a [semantic role][] of `header` within the `table` element.
 
 ```html
 <table>
 	<tr>
-		<th aria-hidden="true">Column A</th>
+		<th aria-hidden="true">Organization</th>
 	</tr>
 	<tr>
-		<td>Cell A</td>
+		<td>W3C</td>
 	</tr>
 </table>
 ```
 
 #### Inapplicable Example 6
 
-This `th` element is not a descendant in the [flat tree][] of an element with a [semantic role][] of either [table][] or [grid][]
+This `th` element is not a descendant in the [flat tree][] of an element with a [semantic role][] of either `table` or `grid`.
 
 ```html
 <div>

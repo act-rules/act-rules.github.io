@@ -21,6 +21,8 @@ The rule applies to any element which is part of [sequential focus navigation][]
 
 For each target element, there exists a set of [focus indicators][focus indicator] which are not all also [focus indicators][focus indicator] for another [focusable][] element (the same for all the indicators).
 
+**Note:** Each of the [focus indicators][focus indicator] for a given test target may be a [focus indicator][] for one or more other test target as long as they are not all [focus indicator][] for the same other test target.
+
 ## Assumptions
 
 This rule assumes that the DOM proximity of the [focus indicator][] and the elements it relates to results in visual proximity of the elements. The definition of [focus indicator][] is based on the tree order but users are likely to perceive relationship based on position on the rendered page. If these are different, the rule may produce incorrect results. Notably, if styling is used to mimic a table layout where focus indicators are located in the same "column", the definition won't detect these as [focus indicators][focus indicator] and the rule will produce incorrect results. Similarly, positioning can be used to "move" elements that are far away in the DOM and render them in close proximity. These won't be detected as [focus indicators][focus indicator] but could be perceived as such, thus the rule would produce incorrect result. Note that
@@ -86,7 +88,7 @@ The first [focusable][] element is part of [sequential focus navigation] and is 
 
 #### Passed Example 3
 
-The first [focusable][] element, part of [sequential focus navigation][] due to its `tabindex`, has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**neighbors**) condition).
+The first [focusable][] element (the `a` element) is part of [sequential focus navigation][] and has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**ancestor**) condition). The second [focusable][] element (the `button` element) is a [focus indicator][] for itself due to default styling.
 
 ```html
 <link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
@@ -107,17 +109,46 @@ The first [focusable][] element, part of [sequential focus navigation][] due to 
 
 #### Passed Example 4
 
-The [focusable][] `p` element is a [potential focus indicator][] for itself despite being an ancestor of another [focusable][] element (the link), because that other [focusable][] is a descendant of the `p` element. Thus, the `p` element matches the (**ancestor**) condition. Default styling makes it a [focus indicator][] for itself and no other [focusable][] element. Similarly, the `a` element is a [focus indicator][] for itself.
+The first [focusable][] element (the `a` element) is part of [sequential focus navigation][] and has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**descendant**) condition). The second [focusable][] element (the `button` element) is a [focus indicator][] for itself due to default styling.
 
 ```html
-<p tabindex="0">
-	<a href="https://act-rules.github.io/">ACT rules</a>
-</p>
+<link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
+<script src="test-assets/focus-visible-f4e323/script.js" />
+
+<a
+	id="act"
+	class="no-focus-default"
+	onfocus="toggleActivation('indicator')"
+	onblur="toggleActivation('indicator')"
+	href="https://act-rules.github.io/"
+	><span id="indicator" class="border">ACT rules</span></a
+>
+<button>Dummy button</button>
 ```
 
 #### Passed Example 5
 
-The first [focusable][] element has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**neighbors**) condition), and for no other.
+The [focusable][] `p` element is a [potential focus indicator][] for itself despite being an ancestor of another [focusable][] element (the `a`), because that other [focusable][] is a descendant of the `p` element. Thus, the `p` element matches the (**ancestor**) condition. Default styling makes it a [focus indicator][] for itself and no other [focusable][] element. The `span` element is a [potential focus indicator][] for the `a` element despite being a descendant of another [focusable][] element (the `p`), because that other [focusable][] is an ancestor of the `a` element. Thus, the `span` matches the (**descendant**) condition.
+
+```html
+<link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
+<script src="test-assets/focus-visible-f4e323/script.js" />
+
+<p tabindex="0">
+	<a
+		id="act"
+		class="no-focus-default"
+		onfocus="toggleActivation('indicator')"
+		onblur="toggleActivation('indicator')"
+		href="https://act-rules.github.io/"
+		><span id="indicator" class="border">ACT rules</span></a
+	>
+</p>
+```
+
+#### Passed Example 6
+
+The first [focusable][] element (the `a` element) is part of [sequential focus navigation][] and has a [focus indicator][]. The element with `id` "indicator" is a [focus indicator][] for it (due to the (**neighbors**) condition). The second [focusable][] element (the `button` element) is a [focus indicator][] for itself due to default styling.
 
 ```html
 <link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
@@ -135,73 +166,7 @@ The first [focusable][] element has a [focus indicator][]. The element with `id`
 <button>Dummy button</button>
 ```
 
-#### Passed Example 6
-
-Both these [focusable][] elements have a [focus indicator][]. The element with `id` "indicator-wcag" is a [potential focus indicator][] for both of them, but a [focus indicator][] only for the element with "id` "wcag".
-
-```html
-<link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
-<script src="test-assets/focus-visible-f4e323/script.js" />
-
-<span id="indicator-act" class="indicator solid"></span>
-<a
-	id="act"
-	class="no-focus-default"
-	onfocus="toggleActivation('indicator-act')"
-	onblur="toggleActivation('indicator-act')"
-	href="https://act-rules.github.io/"
-	>ACT rules</a
->
-<span id="indicator-wcag" class="indicator solid"></span>
-<a
-	id="wcag"
-	class="no-focus-default"
-	onfocus="toggleActivation('indicator-wcag')"
-	onblur="toggleActivation('indicator-wcag')"
-	href="https://www.w3.org/TR/WCAG21/"
-	>WCAG</a
->
-```
-
 #### Passed Example 7
-
-Each of these three [focusable][] elements has a set of [focus indicators][focus indicator] which are not all [focus indicator][] for the same other element. The element with `id` "wcag" has two [focus indicators][focus indicator] (with `id`s "indicator-wcag" and "indicator-w3c"). Both of them are also [focus indicator][] for another [focusable][] element, but each for a different element. Thus, the set composed of these two [focus indicator][] passes the expectation.
-
-```html
-<link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
-<script src="test-assets/focus-visible-f4e323/script.js" />
-
-<span id="indicator-act" class="indicator solid"></span>
-<a
-	id="act"
-	class="no-focus-default"
-	onfocus="toggleActivation('indicator-act'); toggleActivation('indicator-wcag')"
-	onblur="toggleActivation('indicator-act'); toggleActivation('indicator-wcag')"
-	href="https://act-rules.github.io/"
-	>ACT rules</a
->
-<span id="indicator-wcag" class="indicator solid"></span>
-<a
-	id="wcag"
-	class="no-focus-default"
-	onfocus="toggleActivation('indicator-wcag'); toggleActivation('indicator-w3c')"
-	onblur="toggleActivation('indicator-wcag'); toggleActivation('indicator-w3c')"
-	href="https://www.w3.org/TR/WCAG21/"
-	>WCAG</a
->
-<span id="indicator-w3c" class="indicator solid"></span>
-<a
-	id="w3c"
-	class="no-focus-default"
-	onfocus="toggleActivation('indicator-w3c'); toggleActivation('indicator-final')"
-	onblur="toggleActivation('indicator-w3c'); toggleActivation('indicator-final')"
-	href="https://www.w3.org/"
-	>WCAG</a
->
-<span id="indicator-final" class="indicator solid"></span>
-```
-
-#### Passed Example 8
 
 Both these [focusable][] elements have a [focus indicator][] in the cell above their, due to the (**table neighbors**) condition.
 
@@ -239,6 +204,72 @@ Both these [focusable][] elements have a [focus indicator][] in the cell above t
 </table>
 ```
 
+#### Passed Example 8
+
+Both these [focusable][] elements have a [focus indicator][]. The element with `id` "indicator-wcag" is a [potential focus indicator][] for both of them, but a [focus indicator][] only for the element with "id` "wcag".
+
+```html
+<link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
+<script src="test-assets/focus-visible-f4e323/script.js" />
+
+<span id="indicator-act" class="indicator solid"></span>
+<a
+	id="act"
+	class="no-focus-default"
+	onfocus="toggleActivation('indicator-act')"
+	onblur="toggleActivation('indicator-act')"
+	href="https://act-rules.github.io/"
+	>ACT rules</a
+>
+<span id="indicator-wcag" class="indicator solid"></span>
+<a
+	id="wcag"
+	class="no-focus-default"
+	onfocus="toggleActivation('indicator-wcag')"
+	onblur="toggleActivation('indicator-wcag')"
+	href="https://www.w3.org/TR/WCAG21/"
+	>WCAG</a
+>
+```
+
+#### Passed Example 9
+
+Each of these three [focusable][] elements has a set of [focus indicators][focus indicator] which are not all [focus indicator][] for the same other element. The element with `id` "wcag" has two [focus indicators][focus indicator] (with `id`s "indicator-wcag" and "indicator-w3c"). Both of them are also [focus indicator][] for another [focusable][] element, but each for a different element. Thus, the set composed of these two [focus indicator][] passes the expectation.
+
+```html
+<link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
+<script src="test-assets/focus-visible-f4e323/script.js" />
+
+<span id="indicator-act" class="indicator solid"></span>
+<a
+	id="act"
+	class="no-focus-default"
+	onfocus="toggleActivation('indicator-act'); toggleActivation('indicator-wcag')"
+	onblur="toggleActivation('indicator-act'); toggleActivation('indicator-wcag')"
+	href="https://act-rules.github.io/"
+	>ACT rules</a
+>
+<span id="indicator-wcag" class="indicator solid"></span>
+<a
+	id="wcag"
+	class="no-focus-default"
+	onfocus="toggleActivation('indicator-wcag'); toggleActivation('indicator-w3c')"
+	onblur="toggleActivation('indicator-wcag'); toggleActivation('indicator-w3c')"
+	href="https://www.w3.org/TR/WCAG21/"
+	>WCAG</a
+>
+<span id="indicator-w3c" class="indicator solid"></span>
+<a
+	id="w3c"
+	class="no-focus-default"
+	onfocus="toggleActivation('indicator-w3c'); toggleActivation('indicator-final')"
+	onblur="toggleActivation('indicator-w3c'); toggleActivation('indicator-final')"
+	href="https://www.w3.org/"
+	>WCAG</a
+>
+<span id="indicator-final" class="indicator solid"></span>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -261,7 +292,7 @@ The first [focusable][] element is part of [sequential focus navigation][] and h
 
 #### Failed Example 3
 
-None of these [focusable][] elements have a [focus indicator][]. The `p` element is not a [potential focus indicator][] for any of the `span` elements; it does not match the (**ancestor**) due to being ancestor to both of them.
+None of these [focusable][] elements have a [focus indicator][]. The `p` element is not a [potential focus indicator][] for any of the `span` elements; it does not match the (**ancestor**) condition due to being ancestor to both of them.
 
 ```html
 <link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
@@ -277,6 +308,21 @@ None of these [focusable][] elements have a [focus indicator][]. The `p` element
 		>ACT rules</span
 	>
 	<a id="wcag" class="no-focus-default" href="https://www.w3.org/TR/WCAG21/">WCAG</a>
+</p>
+```
+
+#### Failed Example 4
+
+None of these [focusable][] elements have a [focus indicator][]. The `span` element is not a [potential focus indicator][] for the `p` element; it does not match the (**descendant**) condition due to also being descendant of another [focusable][] element.
+
+```html
+<link rel="stylesheet" href="test-assets/focus-visible-f4e323/styles.css" />
+<script src="test-assets/focus-visible-f4e323/script.js" />
+
+<p tabindex="0" class="no-focus-default" onfocus="toggleActivation('indicator')" onblur="toggleActivation('indicator')">
+	<a id="act" class="no-focus-default" href="https://act-rules.github.io/"
+		><span id="indicator" class="border">ACT rules</span></a
+	>
 </p>
 ```
 

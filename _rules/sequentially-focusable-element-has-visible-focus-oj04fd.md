@@ -93,7 +93,7 @@ The first [focusable][] element is part of [sequential focus navigation]. The se
 
 #### Passed Example 3
 
-The first [focusable][] element, is part of [sequential focus navigation][]. The set of pixels that change color when it is [focused][] (the borrder of the `span` element) is unique (it does not change when any other element is [focused][]).
+The first [focusable][] element, is part of [sequential focus navigation][]. The set of pixels that change color when it is [focused][] (the border of the `span` element) is unique (it does not change when any other element is [focused][]).
 
 ```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />

@@ -225,9 +225,7 @@ None of the [focusable][] elements in this document is part of [sequential focus
 ```
 
 [focusable]: #focusable 'Definition of Focusable'
-[focus indicator]: #focus-indicator 'Definition of Focus Indicator'
 [focused]: #focused 'Definition of Focused'
-[potential focus indicator]: #potential-focus-indicator 'Definition of Potential focus Indicator'
 [sc247]: https://www.w3.org/TR/WCAG21/#focus-visible 'Success Criterion 2.4.7 Focus Visible'
 [sequential focus navigation]: https://html.spec.whatwg.org/#sequential-focus-navigation 'HTML specification of Sequential focus navigation'
 [usc247]: https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html 'Understanding Success Criterion 2.4.7: Focus Visible'

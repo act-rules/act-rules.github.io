@@ -326,7 +326,7 @@ None of these [focusable][] elements have a [focus indicator][]. The `span` elem
 </p>
 ```
 
-#### Failed Example 4
+#### Failed Example 5
 
 None of these [focusable][] elements have a [focus indicator][]. The element with `id` "indicator-wcag" is not a [potential focus indicator][] for the element with `id` "wcag"; it does not match the (**neighbors**) condition due to the presence of another [focusable][] element between them.
 
@@ -346,7 +346,7 @@ None of these [focusable][] elements have a [focus indicator][]. The element wit
 >
 ```
 
-#### Failed Example 5
+#### Failed Example 6
 
 None of these [focusable][] elements have a set of [focus indicators][focus indicator] which are not all also [focus indicator][] for another element. The element with `id` "indicator" is a [focus indicator][] for both of them and they have no other [focus indicator][].
 
@@ -373,7 +373,7 @@ None of these [focusable][] elements have a set of [focus indicators][focus indi
 >
 ```
 
-#### Failed Example 6
+#### Failed Example 7
 
 None of these [focusable][] elements have a [focus indicator][]. The element with `id` "indicator-wcag" is not a [potential focus indicator][] for the element with `id` "wcag" due to the presence of another focusable element in the same column between them.
 

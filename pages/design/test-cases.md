@@ -1,6 +1,6 @@
 # ACT Test Case Design
 
-The goal of test cases in ACT rules is to allow implementors to verify that their implementation is consistent with the ACT rule. This requires that a rule has test cases for all of the "important" aspects of it. Beyond that, it is up to the rule authors to determine how extensive to make the list of test cases. A list of test cases full of edge cases would ensure greater consistency between implementors, but may result in fewer implementors deciding to adopt the rule.
+The goal of test cases in ACT rules is to allow implementers to verify that their implementation is consistent with the ACT rule. This requires that a rule has test cases for all of the "important" aspects of it. Beyond that, it is up to the rule authors to determine how extensive to make the list of test cases. A list of test cases full of edge cases would ensure greater consistency between implementers, but may result in fewer implementers deciding to adopt the rule.
 
 To strike a good balance in test cases, the following principles should be considered:
 
@@ -23,7 +23,7 @@ At a minimum, every "condition" in the applicability and expectation has to have
 - `svg` that fails the rule
 - some other element that is inapplicable
 
-Providing these test cases ensures that an implementor that correctly tests `img` elements, but passes every `svg` element can be identified as a partial implementation, and one where it fails all `svg` elements is identified as an inconsistent implementation.
+Providing these test cases ensures that an implementer that correctly tests `img` elements, but passes every `svg` element can be identified as a partial implementation, and one where it fails all `svg` elements is identified as an inconsistent implementation.
 
 ## One Thing At A Time
 
@@ -51,7 +51,7 @@ An exception to that, is that ACT Rules should strive to show good accessibility
 
 ACT rules use definitions to avoid duplication, and to "hide" away the details. Definitions such as "semantic role", "visible" and "accessible name" are used in many rules, and are fundamental building blocks of ACT. To avoid having a lot of similar test cases in every rule that uses a particular definition, it is best to keep definition testing to a minimum.
 
-As an example, the "X has non-empty accessible name" rules all have test cases that check for the different ways that an element can have an accessible name. For `img`, that is `alt`, `title`, and `aria-label(ledby)` attributes. That creates sufficient coverage to ensure the basics are understood. But those rules do not go into the details of ensuring accessible name computation is done right. Whether an implementor considers `aria-owns` in the accessible name computation is not relevant for "non-empty accessible name" rules.
+As an example, the "X has non-empty accessible name" rules all have test cases that check for the different ways that an element can have an accessible name. For `img`, that is `alt`, `title`, and `aria-label(ledby)` attributes. That creates sufficient coverage to ensure the basics are understood. But those rules do not go into the details of ensuring accessible name computation is done right. Whether an implementer considers `aria-owns` in the accessible name computation is not relevant for "non-empty accessible name" rules.
 
 That is not to say edge cases in definitions should never have test cases. If there are **real-world examples** of a particular edge case affecting the outcome of a rule, test cases should be added to the rule to cover that edge case.
 
@@ -67,4 +67,4 @@ Technologies that are widely supported can be used in all test cases. In all sit
 
 It is important to know that there are exceptions to all of these principles. There may be technical reasons not to include a certain test case, or the number of combinations may require an unreasonable number of tests. It may sometimes not make logical sense for some passed test cases to satisfy all accessibility requirements. Some definitions may not require tests, and others can be argued to need extensive tests. Etc.
 
-Letting **real-world** examples drive consistency forward also means rule authors should not get stuck in trying to write test cases for every conceivable situation. Rule authors should strive for a 95% consistency between implementors on first publication. As more examples are discovered, this number will go up over time.
+Letting **real-world** examples drive consistency forward also means rule authors should not get stuck in trying to write test cases for every conceivable situation. Rule authors should strive for a 95% consistency between implementers on first publication. As more examples are discovered, this number will go up over time.

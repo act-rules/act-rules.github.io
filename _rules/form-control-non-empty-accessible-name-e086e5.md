@@ -130,7 +130,7 @@ This disabled `input` element has no attribute to give it an [accessible name][]
 
 #### Failed Example 3
 
-This element with a `combobox` [role][semantic role] has an empty (`""`) [accessible name][] because the space in the `aria-label` [attribute value][] is trimmed.
+This `input` element has an empty (`""`) [accessible name][] because the space in the `aria-label` [attribute value][] is trimmed.
 
 ```html
 <input aria-label=" " />

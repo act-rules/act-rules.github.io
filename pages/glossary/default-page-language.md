@@ -17,13 +17,15 @@ The _most common language_ is determined by counting the number of _words_ in th
 The _words_ used in the following texts should be counted for the _most common language_:
 
 - **page title**: The value of the [document title][] of the [document][] in the [top-level browsing context][].
-- **default language content**: The value of any [text nodes][] and the [accessible name][] of any [elements][] for which all of the following is true:
-  - The [node][] is [included in the accessibility tree][]; and
-  - The [node][] does not have an [ancestor][] in the [flat tree][] with a non-empty (`""`) `lang` attribute, except for the [root node][].
+- **text nodes**: The value of any [text nodes][] that is [visible][] or [included in the accessibility tree][]
+- **accessible text**: The [accessible name][] and [accessible description][] of any element included in the [accessibility tree][]
+
+**Exception**: Words in text that comes from nodes that have an [ancestor][] in the [flat tree][] with a non-empty (`""`) `lang` attribute, except for the [root node][].
 
 [web page]: #web-page-html
 [included in the accessibility tree]: #included-in-the-accessibility-tree
 [accessible name]: #accessible-name
+[accessible description]: https://www.w3.org/TR/accname-1.1/#dfn-accessible-description 'Definition of Accessible description'
 [language subtag registry]: http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
 [document title]: https://html.spec.whatwg.org/multipage/dom.html#document.title 'HTML document title, as of 2020/06/05'
 [document]: https://dom.spec.whatwg.org/#document-element 'DOM document element, as of 2020/06/05'

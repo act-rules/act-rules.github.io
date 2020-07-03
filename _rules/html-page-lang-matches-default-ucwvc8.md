@@ -122,6 +122,24 @@ This page has a [default language][default page language] of Dutch because all E
 </html>
 ```
 
+#### Passed Example 4
+
+This page has a [default language][default page language] of English because the `title` element and the [accessible name][] of the `img` element are English. The [visible][] text Dutch text does not count as its parent element has a `lang` attribute.
+
+```html
+<html lang="en">
+	<head>
+		<title>Fireworks over Paris</title>
+	</head>
+	<body>
+		<img src="/test-assets/shared/fireworks.jpg" alt="Fireworks over Paris" />
+		<p lang="nl">
+			Gelukkig nieuwjaar!
+		</p>
+	</body>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -176,6 +194,24 @@ This page has a [default language][default page language] of Dutch because all E
 		<p lang="en">
 			This Dutch phrase literally translates into "He went to roost with the chickens", but it means that he went to bed
 			early.
+		</p>
+	</body>
+</html>
+```
+
+#### Failed Example 4
+
+This page has a [default language][default page language] of English because the `title` element and the [accessible name][] of the `img` element are English. English ("en") is not set as the language of the page by the `lang` attribute on the `html` element.
+
+```html
+<html lang="nl">
+	<head>
+		<title>Fireworks over Paris</title>
+	</head>
+	<body>
+		<img src="/test-assets/shared/fireworks.jpg" alt="Fireworks over Paris" />
+		<p lang="nl">
+			Gelukkig nieuwjaar!
 		</p>
 	</body>
 </html>

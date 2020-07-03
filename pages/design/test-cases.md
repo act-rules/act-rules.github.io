@@ -6,10 +6,12 @@ To strike a good balance in test cases, the following principles should be consi
 
 1. Test every "condition" in the rule
 1. Test one thing at a time
-1. Ensure consistency with accessibility 
+1. Ensure consistency with accessibility
 1. Keep test cases small
 1. Test definitions superficially
 1. Avoid tests cases contested by (accessibility) support
+
+Keep in mind, there are exceptions to all of these.
 
 ## Test Every Condition
 
@@ -35,13 +37,13 @@ When writing test cases, it is important to look at conditional logic. For examp
 
 ## Consistency With Accessibility Requirements
 
-In order for the mapping of implementations to the rules to work, test cases need to be consistent with the accessibility requirement. This requires that **passed and inapplicable test cases should satisfy the accessibility requirements** of the rule, as well as the accessibility requirement of any composite rule this rule is designed for. Inapplicable conditions that do not satisfy the accessibility requirements should not be included.
+In order for the mapping of implementations to the rules to work, test cases need to be consistent with the accessibility requirement. This requires that **passed and inapplicable test cases should satisfy the accessibility requirements** of the rule, as well as the accessibility requirement of any composite rule this rule is designed for. Inapplicable conditions that do not satisfy the accessibility requirements should not be included. For example when testing [2.4.2 Page Titled](https://www.w3.org/TR/WCAG21/#page-titled), a rule that tests that titles are descriptive can not have an inapplicable example of a page that should have a title but does not.
 
 Related to this, failed test cases should only fail the accessibility requirements for one reason. A failed test case for 4.1.2 Name, Role, Value should not have issues with both the accessible name, and the role. If the rule is about accessible names, the role and value must be correct.
 
 ## Small Test Cases
 
-A general principle in test case creation is to keep test cases small. Avoid any unnecessary content, as it may cause unexpected side effects in the outcome. For example, a rule about buttons does not require that all test cases have an HTML element with a `lang` attribute and a `title` element. Those elements do not affect the accessibility of a button.
+A general principle in test design is to keep test cases small. Avoid any unnecessary content, as it may cause unexpected side effects in the outcome. For example, a rule about buttons does not require that all test cases have an HTML element with a `lang` attribute and a `title` element. Those elements do not affect the accessibility of a button. All code in the test case should be relevant to the rule or its accessibility requirements.
 
 An exception to that, is that ACT Rules should strive to show good accessibility practices. A rule about valid `autocomplete` attributes should still provide labels for the form controls with the `autocomplete` attribute. Those labels both provide context, showing the intended purpose of the input, and they show good practice of providing labels for form controls.
 
@@ -49,7 +51,7 @@ An exception to that, is that ACT Rules should strive to show good accessibility
 
 ACT rules use definitions to avoid duplication, and to "hide" away the details. Definitions such as "semantic role", "visible" and "accessible name" are used in many rules, and are fundamental building blocks of ACT. To avoid having a lot of similar test cases in every rule that uses a particular definition, it is best to keep definition testing to a minimum.
 
-As an example, the "X has non-empty accessible name" rules all have test cases that check for the different ways that element can have an accessible name. For `img`, that is `alt`, `title`, and `aria-label(ledby)` attributes. That creates sufficient coverage to ensure the basics are understood. But those rules do not go into the details of ensuring accessible name computation is done right. Whether an implementor considers `aria-owns` in the accessible name computation is not relevant for "non-empty accessible name" rules.
+As an example, the "X has non-empty accessible name" rules all have test cases that check for the different ways that an element can have an accessible name. For `img`, that is `alt`, `title`, and `aria-label(ledby)` attributes. That creates sufficient coverage to ensure the basics are understood. But those rules do not go into the details of ensuring accessible name computation is done right. Whether an implementor considers `aria-owns` in the accessible name computation is not relevant for "non-empty accessible name" rules.
 
 That is not to say edge cases in definitions should never have test cases. If there are **real-world examples** of a particular edge case affecting the outcome of a rule, test cases should be added to the rule to cover that edge case.
 
@@ -63,6 +65,6 @@ Technologies that are widely supported can be used in all test cases. In all sit
 
 ## Exceptions
 
-It is important to know that there are exceptions to all of these principles. There may be technical reasons not to include a certain test case. It may not make logical sense for some passed test cases to satisfy all accessibility requirements. Some definitions may not require tests, and others can be argued to need extensive tests. 
+It is important to know that there are exceptions to all of these principles. There may be technical reasons not to include a certain test case, or the number of combinations may require an unreasonable number of tests. It may sometimes not make logical sense for some passed test cases to satisfy all accessibility requirements. Some definitions may not require tests, and others can be argued to need extensive tests. Etc.
 
 Letting **real-world** examples drive consistency forward also means rule authors should not get stuck in trying to write test cases for every conceivable situation. Rule authors should strive for a 95% consistency between implementors on first publication. As more examples are discovered, this number will go up over time.

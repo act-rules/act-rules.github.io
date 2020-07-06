@@ -11,6 +11,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility tree
   - DOM Tree
 acknowledgments:
   authors:
@@ -23,11 +24,11 @@ The rule applies to every `li`, `dd` and `dt` HTML elements where the [semantic 
 
 ## Expectation
 
-Each target element:
+Each test target element:
 
-- is a [palpable content][], and;
-- is contained by a node which follows the [flow content model][], and;
-- has an [explicit semantic role][] or [implicit semantic role][] that that is an allowed role by the owner element.
+- is [owned by][] a node which;
+  - is categorized as [flow content][]; and
+  - has a [semantic role][] from the [required owned element][] list for the test target's [semantic role]().
 
 ## Assumptions
 
@@ -50,7 +51,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This `li` element with an implicit semantic role of `listitem`, is contained by an `ol` element, which follows the [flow content model][].
+This `li` element with an implicit semantic role of `listitem`, is [owned by][] an `ol` element, which follows the [flow content][] model & has an [implicit semantic role][] from the [required owned element][] list.
 
 ```html
 <ol>
@@ -60,7 +61,7 @@ This `li` element with an implicit semantic role of `listitem`, is contained by 
 
 #### Passed Example 2
 
-This `dd` element is owned by `dl` element, which follows the [flow content model][].
+These `dd` & `dt` elements are [owned by][] a `dl` element, which follows the [flow content][] model & has an [implicit semantic role][] from the [required owned element][] list.
 
 ```html
 <dl>
@@ -71,7 +72,7 @@ This `dd` element is owned by `dl` element, which follows the [flow content mode
 
 #### Passed Example 3
 
-This `li` element is owned by `ul` element, which follows the [flow content model][].
+This `li` element is [owned by][] an `ul` element, which follows the [flow content][] model & has an [implicit semantic role][] from the [required owned element][] list.
 
 ```html
 <ul>
@@ -83,22 +84,22 @@ This `li` element is owned by `ul` element, which follows the [flow content mode
 
 #### Failed Example 1
 
-This `li` element is not owned by an element that follows the [flow content model][]. Here the `ul` element has an explicit semantic role of `menu`, which does not own `listitem`.
+This `li` element is not [owned by][] an element that follows the [flow content][] model.
 
 ```html
-<ul role="menu">
+<label>
 	<li>Milk</li>
-</ul>
+</label>
 ```
 
 #### Failed Example 2
 
-This `dt` element is not owned by an element that follows the [flow content model][].
+This `dt` element is [owned by][] an element that follows the [flow content][] model, but has an [explicit semantic role][] that is not in the [required owned element][] list.
 
 ```html
-<ol>
+<dl role="columnheader">
 	<dt>Physics</dt>
-</ol>
+</dl>
 ```
 
 ### Inapplicable
@@ -126,5 +127,7 @@ This rule is not applicable to `li` elements where the [semantic role][] is not 
 [semantic role]: #semantic-role 'Definition of semantic role'
 [explicit semantic role]: #explicit-role 'Definition of semantic role'
 [implicit semantic role]: #implicit-role 'Definition of implicit semantic role'
-[flow content model]: https://html.spec.whatwg.org/#flow-content 'HTML Specification - Flow content model'
+[flow content]: https://html.spec.whatwg.org/#flow-content 'HTML Specification - Flow content model'
 [palpable content]: https://html.spec.whatwg.org/#palpable-content 'HTML Specification - Palpable content'
+[required owned element]: https://www.w3.org/TR/wai-aria-1.1/#mustContain 'Define Required owned element'
+[owned by]: #owned-by 'Definition of owned by'

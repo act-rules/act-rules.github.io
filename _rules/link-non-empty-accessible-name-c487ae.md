@@ -56,7 +56,7 @@ The rule assumes that all links are [user interface components](https://www.w3.o
 ## Accessibility Support
 
 - There are assistive technologies that do not support using the `title` attribute for an [accessible name][], or in which this feature can be disabled.
-- For `area` elements that have a `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on whether the `area` is considered [included in the accessibility tree][] or not.
+- For `area` elements that have an `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on if the `area` is [included in the accessibility tree][].
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `link` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
@@ -120,7 +120,7 @@ This `a` element has an [accessible name][] via `title`.
 This `a` element has an [accessible name][] from its content via the `title` on the `img` element.
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" title="Web Accessibility Initiative" /></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" title="Web Accessibility Initiative"/></a>
 ```
 
 #### Passed Example 7
@@ -138,7 +138,7 @@ This `a` element has an [accessible name][] from its content.
 This `a` element has an [accessible name][] from its content via `aria-labelledby` on the `img` element.
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" aria-labelledby="id1" /></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" aria-labelledby="id1"/></a>
 <div id="id1">Web Accessibility Initiative (WAI)</div>
 ```
 
@@ -180,7 +180,7 @@ This `area` element has a [semantic role][] of `link` and an [accessible name][]
 This `a` element has an empty [accessible name][].
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" role="none" /></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" role="none"/></a>
 ```
 
 #### Failed Example 2
@@ -188,7 +188,7 @@ This `a` element has an empty [accessible name][].
 This `a` element with a decorative image has an empty [accessible name][].
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" alt="" /></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" alt=""/></a>
 ```
 
 #### Failed Example 3
@@ -205,7 +205,7 @@ This `a` element with an icon inserted via font-awesome has an empty [accessible
 This `a` element with an `img` with an empty `title` has an empty [accessible name][].
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" title="" /></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" title=""/></a>
 ```
 
 #### Failed Example 5
@@ -213,7 +213,7 @@ This `a` element with an `img` with an empty `title` has an empty [accessible na
 This `a` element with an `img` with an `aria-labelledby` has an empty [accessible name][].
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" aria-labelledby="id1" /></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" aria-labelledby="id1"/></a>
 <div id="id1"></div>
 ```
 
@@ -222,7 +222,7 @@ This `a` element with an `img` with an `aria-labelledby` has an empty [accessibl
 This `a` element with an `img` with an `aria-labelledby` referencing a non-existing id has an empty [accessible name][].
 
 ```html
-<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" aria-labelledby="id1" /></a>
+<a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" aria-labelledby="id1"/></a>
 ```
 
 #### Failed Example 7
@@ -280,7 +280,7 @@ This `a` element does not have a [semantic role][] of `link` because it has been
 This `a` element is not [included in the accessibility tree][] due to `display: none`.
 
 ```html
-<a href="http://www.w3.org/WAI" style="display: none;"><img src="/test-assets/shared/w3c-logo.png" /></a>
+<a href="http://www.w3.org/WAI" style="display: none;"><img src="/test-assets/shared/w3c-logo.png"/></a>
 ```
 
 #### Inapplicable Example 3

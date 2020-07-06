@@ -1,9 +1,9 @@
 ---
 id: 97a4e1
-name: Button has accessible name
+name: Button has non-empty accessible name
 rule_type: atomic
 description: |
-  This rule checks that each `button` element has an accessible name.
+  This rule checks that each `button` element has a non-empty accessible name.
 accessibility_requirements:
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true
@@ -11,6 +11,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
   - DOM Tree
   - CSS Styling
 acknowledgments:
@@ -31,15 +32,13 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 **Note:** `input` elements of type `submit` and `reset` can get their [accessible name][] from a [default text](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset), as well as from a `value` or other attribute.
 
-**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
-
 ## Assumptions
 
 - The rule assumes that all buttons are [user interface components as defined by WCAG 2](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components).
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `button` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 
@@ -131,7 +130,7 @@ This `button` element has no [accessible name][] because it has no content or at
 
 #### Failed Example 2
 
-This `button` element has no [accessible name][]. The `value` attribute does not provide an [accessible name][] for `button` elements, only for `input` elements.
+This `button` element has no [accessible name][]. The `value` attribute does not provide an [accessible name][] for `button` elements, only when an `input` element's [state of the `type` attribute](https://html.spec.whatwg.org/multipage/input.html#states-of-the-type-attribute) is `button`, `submit` or `reset`.
 
 ```html
 <button type="button" value="read more"></button>
@@ -162,6 +161,14 @@ This off screen `button` element has no [accessible name][] because it has no co
 		<button class="notInPage" value="delete"></button>
 	</body>
 </html>
+```
+
+#### Failed Example 5
+
+This `button` element has an [explicit role][] of `none`. However, it is [focusable][] (by default). Thus it has a [semantic role][] of `button` due to [Presentational Roles Conflict Resolution][]. It has an empty [accessible name][].
+
+```html
+<button role="none"></button>
 ```
 
 ### Inapplicable
@@ -198,5 +205,17 @@ There is no element with a semantic role of `button`.
 <div>Press Here</div>
 ```
 
+#### Inapplicable Example 5
+
+This `button` element has an [explicit role][] of `none`; it is not [focusable][] because it is `disabled`. Thus it has a [semantic role][] of `none`.
+
+```html
+<button role="none" disabled></button>
+```
+
 [accessible name]: #accessible-name 'Definition of accessible name'
+[explicit role]: #explicit-role 'Definition of explicit role'
+[focusable]: #focusable 'Definition of focusable'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[semantic role]: #semantic-role 'Definition of Semantic Role'

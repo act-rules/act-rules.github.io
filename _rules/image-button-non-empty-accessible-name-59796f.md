@@ -1,9 +1,9 @@
 ---
 id: 59796f
-name: Image button has accessible name
+name: Image button has non-empty accessible name
 rule_type: atomic
 description: |
-  This rule checks that each image button element has an accessible name.
+  This rule checks that each image button element has a non-empty accessible name.
 accessibility_requirements:
   wcag20:1.1.1: # Non-Text Content (A)
     forConformance: true
@@ -39,15 +39,11 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to any HTML `input` element with a `type` attribute in the [`Image Button` state](<https://html.spec.whatwg.org/#image-button-state-(type=image)>), that is [included in the accessibility tree][].
-
-**Note:** The specification of the [`type`](https://html.spec.whatwg.org/#states-of-the-type-attribute) attribute describes in detail how to map the value of the attribute to its corresponding state.
+The rule applies to any `input` element where the [state of the `type` attribute](https://html.spec.whatwg.org/multipage/input.html#states-of-the-type-attribute) is `image`, and that is [included in the accessibility tree][].
 
 ## Expectation
 
 Each target element has an [accessible name][] that is not empty (`""`).
-
-**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
 
 ## Assumptions
 
@@ -172,4 +168,3 @@ The image button is ignored by assistive technologies because it is not [include
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [accessible name]: #accessible-name 'Definition of accessible name'
-[whitespace]: #whitespace 'Definition of whitespace'

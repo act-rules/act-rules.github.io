@@ -3,7 +3,7 @@ id: b8bb68
 name: Text spacing in `style` attributes is not `!important`
 rule_type: atomic
 description: |
-  This rule checks that the text spacing styles are able to be adjusted, ie. `!important` is not applied to the style, unless the style has already exceeded the specified metric for retaining content visibility and functionality.
+  This rule checks that the text spacing styles are able to be adjusted, i.e. `!important` is not applied to the style, unless the style has already exceeded the specified metric for retaining content visibility and functionality.
 accessibility_requirements:
   wcag21:1.4.12: # Text Spacing (AA)
     forConformance: true
@@ -11,8 +11,8 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
-	- DOM Tree
-    - CSS Styling
+  - DOM Tree
+  - CSS Styling
 acknowledgments:
   authors:
     - Jey Nandakumar
@@ -21,10 +21,11 @@ acknowledgments:
 ## Applicability
 
 This rule applies to any HTML element that is [visible][] and has a [declared value][] for any of the following CSS properties:
+
 - [word-spacing][],
 - [letter-spacing][],
 - [line-height][];
-which are set by the `style` attribute, and have the [important] flag.
+  which are set by the `style` attribute, and have the [important flag][].
 
 ## Expectation 1
 
@@ -48,9 +49,9 @@ While some assistive technologies are able to set [user origin][] styles, others
 
 ## Background
 
-* [Understanding Success Criterion 1.4.12: Text Spacing](https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html)
-* [CSS Text Module Level 3 - Spacing](https://www.w3.org/TR/css-text-3/#spacing)
-* [CSS Visual formatting model details](https://drafts.csswg.org/css2/visudet.html)
+- [Understanding Success Criterion 1.4.12: Text Spacing](https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html)
+- [CSS Text Module Level 3 - Spacing](https://www.w3.org/TR/css-text-3/#spacing)
+- [CSS Visual formatting model details](https://drafts.csswg.org/css2/visudet.html)
 
 ## Test Cases
 
@@ -60,20 +61,19 @@ While some assistive technologies are able to set [user origin][] styles, others
 
 This `p` element has a `line-height` of `32px` (equals `2em` ) which is above the recommended metric, given the default pixel size is 16 pixels.
 
-``` html
+```html
 <html>
-<style>
-    body {
-        font-size: 16px;
-    }
-</style>
+	<style>
+		body {
+			font-size: 16px;
+		}
+	</style>
 
-<body>
-    <p style="line-height: 32px; !important">
-        The toy brought back fond memories of being lost in the rain forest.
-    </p>
-</body>
-
+	<body>
+		<p style="line-height: 32px; !important">
+			The toy brought back fond memories of being lost in the rain forest.
+		</p>
+	</body>
 </html>
 ```
 
@@ -81,20 +81,19 @@ This `p` element has a `line-height` of `32px` (equals `2em` ) which is above th
 
 This `div` element has a `letter-spacing` of `0.12em` which is equal to the permissible minimum, given the default pixel size is 16 pixels.
 
-``` html
+```html
 <html>
-<style>
-    body {
-        font-size: 16px;
-    }
-</style>
+	<style>
+		body {
+			font-size: 16px;
+		}
+	</style>
 
-<body>
-    <div style="letter-spacing: 0.12em; !important">
-        The toy brought back fond memories of being lost in the rain forest.
-    </div>
-</body>
-
+	<body>
+		<div style="letter-spacing: 0.12em; !important">
+			The toy brought back fond memories of being lost in the rain forest.
+		</div>
+	</body>
 </html>
 ```
 
@@ -102,20 +101,19 @@ This `div` element has a `letter-spacing` of `0.12em` which is equal to the perm
 
 This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12em` ) which is equal to the permissible value, given the default pixel size is 16 pixels.
 
-``` html
+```html
 <html>
-<style>
-    body {
-        font-size: 16px;
-    }
-</style>
+	<style>
+		body {
+			font-size: 16px;
+		}
+	</style>
 
-<body>
-    <strong style="word-spacing: 1.92pt !important;">
-        The toy brought back fond memories of being lost in the rain forest.
-    </strong>
-</body>
-
+	<body>
+		<strong style="word-spacing: 1.92pt !important;">
+			The toy brought back fond memories of being lost in the rain forest.
+		</strong>
+	</body>
 </html>
 ```
 
@@ -125,20 +123,19 @@ This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12e
 
 This `p` element has a `line-height` of `10px !important` (equals `0.625em` ) which is below the permissible minimum, given the default pixel size of the body is 16 pixels.
 
-``` html
+```html
 <html>
-<style>
-    body {
-        font-size: 16px;
-    }
-</style>
+	<style>
+		body {
+			font-size: 16px;
+		}
+	</style>
 
-<body>
-    <p style="line-height: 30px !important">
-        The toy brought back fond memories of being lost in the rain forest.
-    </p>
-</body>
-
+	<body>
+		<p style="line-height: 30px !important">
+			The toy brought back fond memories of being lost in the rain forest.
+		</p>
+	</body>
 </html>
 ```
 
@@ -146,20 +143,19 @@ This `p` element has a `line-height` of `10px !important` (equals `0.625em` ) wh
 
 This `div` element has a `letter-spacing` of `1.5px !important` (equals `0.09375em`) which is below to the permissible minimum, given the default pixel size is 16 pixels.
 
-``` html
+```html
 <html>
-<style>
-    body {
-        font-size: 16px;
-    }
-</style>
+	<style>
+		body {
+			font-size: 16px;
+		}
+	</style>
 
-<body>
-    <div style="letter-spacing: 1.5px !important;">
-        The toy brought back fond memories of being lost in the rain forest.
-    </div>
-</body>
-
+	<body>
+		<div style="letter-spacing: 1.5px !important;">
+			The toy brought back fond memories of being lost in the rain forest.
+		</div>
+	</body>
 </html>
 ```
 
@@ -167,20 +163,19 @@ This `div` element has a `letter-spacing` of `1.5px !important` (equals `0.09375
 
 This `strong` element has a `word-spacing` of `2.5px !important` (equals `0.15625em` ) which is below the permissible value, given the default pixel size is 16 pixels.
 
-``` html
+```html
 <html>
-<style>
-    body {
-        font-size: 16px;
-    }
-</style>
+	<style>
+		body {
+			font-size: 16px;
+		}
+	</style>
 
-<body>
-    <strong style="word-spacing: 8px !important;">
-        The toy brought back fond memories of being lost in the rain forest.
-    </strong>
-</body>
-
+	<body>
+		<strong style="word-spacing: 8px !important;">
+			The toy brought back fond memories of being lost in the rain forest.
+		</strong>
+	</body>
 </html>
 ```
 
@@ -190,9 +185,9 @@ This `strong` element has a `word-spacing` of `2.5px !important` (equals `0.1562
 
 This `p` element is not [visible][] because of `display: none` .
 
-``` html
+```html
 <p style="display: none">
-    The toy brought back fond memories of being lost in the rain forest.
+	The toy brought back fond memories of being lost in the rain forest.
 </p>
 ```
 
@@ -200,9 +195,9 @@ This `p` element is not [visible][] because of `display: none` .
 
 This text is not [visible][] because it is positioned off screen.
 
-``` html
+```html
 <p style="position: absolute; top: -999em">
-    The toy brought back fond memories of being lost in the rain forest.
+	The toy brought back fond memories of being lost in the rain forest.
 </p>
 ```
 
@@ -210,39 +205,37 @@ This text is not [visible][] because it is positioned off screen.
 
 This `body` element does not have a `style` attribute specified.
 
-``` html
+```html
 <html>
-<style>
-    body {
-        line-height: 50px;
-    }
-</style>
+	<style>
+		body {
+			line-height: 50px;
+		}
+	</style>
 
-<body>
-    The toy brought back fond memories of being lost in the rain forest.
-</body>
-
+	<body>
+		The toy brought back fond memories of being lost in the rain forest.
+	</body>
 </html>
 ```
 
 #### Inapplicable Example 4
 
-This `p` element has a [line-height][]  of `24px` specified via the style attribute, but does not have the [important flag][].
+This `p` element has a [line-height][] of `24px` specified via the style attribute, but does not have the [important flag][].
 
-``` html
+```html
 <html>
-<style>
-    body {
-        font-size: 16px;
-    }
-</style>
+	<style>
+		body {
+			font-size: 16px;
+		}
+	</style>
 
-<body>
-    <p style="line-height: 24px;">
-        The toy brought back fond memories of being lost in the rain forest.
-    </p>
-</body>
-
+	<body>
+		<p style="line-height: 24px;">
+			The toy brought back fond memories of being lost in the rain forest.
+		</p>
+	</body>
 </html>
 ```
 

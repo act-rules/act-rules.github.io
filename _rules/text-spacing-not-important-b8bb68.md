@@ -20,7 +20,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element that is [visible][] and has a [declared value][] for any of the following CSS properties:
+This rule applies to any HTML element that is [visible][] and has a [declared][] value for any of the following CSS properties:
 
 - [word-spacing][],
 - [letter-spacing][],
@@ -29,15 +29,24 @@ This rule applies to any HTML element that is [visible][] and has a [declared va
 
 ## Expectation 1
 
-The test target's [computed][] [word-spacing][] either does not have the [important flag][] or is at least `0.16` times its [computed][] [font-size][].
+For the test target's [word-spacing][] property, either:
+
+- its [declared][] value does not have the [important flag][]; or
+- its [computed][] value is at least `0.16` times its [computed][] [font-size][].
 
 ## Expectation 2
 
-The test target's [computed][] [letter-spacing][] either does not have the [important flag][] or is at least `0.12` times its [computed][] [font-size][].
+For the test target's [letter-spacing][] property, either:
+
+- its [declared][] value does not have the [important flag][]; or
+- its [computed][] value is at least `0.12` times its [computed][] [font-size][].
 
 ## Expectation 3
 
-The test target's [computed][] [line-height][] either does not have the [important flag][] or is at least `1.5` times its [computed][] [font-size][] of the test target.
+For the test target's [line-height][] property, either:
+
+- its [declared][] value does not have the [important flag][]; or
+- its [computed][] value is at least `1.5` times its [computed][] [font-size][].
 
 ## Assumptions
 
@@ -249,4 +258,4 @@ This `p` element has a [line-height][] of `24px` specified via the style attribu
 [user origin]: https://drafts.csswg.org/css-cascade-4/#cascade-origin-user 'CSS Cascading and Inheritance Level 4 - Cascading Origins - User Origin'
 [font-size]: https://www.w3.org/TR/css-fonts-3/#propdef-font-size 'CSS Fonts Module Level 3- Font size: the font-size property'
 [important flag]: https://www.w3.org/TR/cssom/#css-declaration-important-flag 'CSS Object Model (CSSOM) - important flag'
-[declared value]: https://drafts.csswg.org/css-cascade/#declared 'CSS Cascading and Inheritance Level 4 - Declared Values'
+[declared]: https://www.w3.org/TR/css-cascade-3/#declared 'CSS Cascading and Inheritance Level 3 - Declared Values'

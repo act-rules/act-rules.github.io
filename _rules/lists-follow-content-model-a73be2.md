@@ -11,9 +11,9 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
-	- Accessibility tree
-	- CSS Styling
-	- DOM Tree
+  - Accessibility tree
+  - CSS Styling
+  - DOM Tree
 acknowledgments:
   authors:
     - Jey Nandakumar
@@ -25,11 +25,7 @@ The rule applies to every `ul` , `ol` , and `dl` HTML elements where the [semant
 
 ## Expectation
 
-Each target element:
-
-- is categorized to follow the [flow content model][], and;
-- that it's contents are its [descendants][] in the DOM, and;
-- has at least one node in its contents that is a [palpable content][], which does not have the `hidden` attribute specified.
+Each test target has at least one [descendant][] in the [flat tree][] that is categorized as [palpable content][], which does not have the [hidden][] attribute specified.
 
 ## Assumptions
 
@@ -51,17 +47,19 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This `ul` element contains [palpable content][] `li` element.
+This `ul` element has a [descendant][] of type [palpable content][].
 
 ```html
 <ul>
-	<li>Complete online form</li>
+	<li>
+		<a href="http://facebook.com">Follow us</a>
+	</li>
 </ul>
 ```
 
 #### Passed Example 2
 
-This `dl` element contains palpable content(s), which are name-value group formed by using `dt` and `dd` elements.
+This `dl` element contains at least one [descendant][] of type [palpable content][].
 
 ```html
 <dl>
@@ -72,13 +70,14 @@ This `dl` element contains palpable content(s), which are name-value group forme
 
 #### Passed Example 3
 
-This `ol` element contains at least one `li` element, which is a valid [palpable content][].
+This `ol` element contains at least one [descendant][] of type [palpable content][].
 
 ```html
 <ol>
-	<span role="listitem">Eggs</span>
-	<li>Bread</li>
-	<span role="listitem">Milk</span>
+	<span role="listitem"></span>
+	<span role="listitem">
+		<p>Milk</p>
+	</span>
 </ol>
 ```
 
@@ -90,38 +89,19 @@ This `ul` element contains [palpable content][] `li` element, that is [hidden][]
 
 ```html
 <ul>
-	<li aria-hidden="true"></li>
+	<li>
+		<p hidden>Brocolli</p>
+	</li>
 </ul>
 ```
 
 #### Failed Example 2
 
-This `ol` element does not contain expected palpable content.
+This `ol` element does not any [descendant][] of type [palpable content][].
 
 ```html
 <ol>
-	<span>Get some Spinach</span>
-</ol>
-```
-
-#### Failed Example 3
-
-This `dl` element does not contain a complete name-value groups formed by using `dt` and `dd` elements.
-
-```html
-<dl>
-	<dt>Physics</dt>
-	<span>10/10</span>
-</dl>
-```
-
-#### Failed Example 4
-
-This `ol` element does not contain expected palpable content, here the `li` element has an explicit role of `menuitem` specified.
-
-```html
-<ol>
-	<li role="menuitem">Milk</li>
+	<li></li>
 </ol>
 ```
 
@@ -149,7 +129,7 @@ This rule is not applicable to `ul` element where the [semantic role][] is not t
 
 [semantic role]: #semantic-role 'Definition of semantic role'
 [implicit semantic role]: #implicit-role 'Definition of implicit semantic role'
-[flow content model]: https://html.spec.whatwg.org/#flow-content 'HTML Specification - Flow content model'
 [palpable content]: https://html.spec.whatwg.org/#palpable-content 'HTML Specification - Palpable content'
-[descendants]: https://dom.spec.whatwg.org/#concept-tree-descendant 'HTML Specification - Descendants'
+[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant 'HTML Specification - Descendants'
 [hidden]: https://html.spec.whatwg.org/#the-hidden-attribute 'HTML Specification - The hidden attribute'
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'

@@ -25,19 +25,19 @@ This rule applies to any HTML element that is [visible][] and has a [declared va
 - [word-spacing][],
 - [letter-spacing][],
 - [line-height][];
-  which are set by the `style` attribute, and have the [important flag][].
+  which are set by the `style` attribute.
 
 ## Expectation 1
 
-The test target's [computed][] [word-spacing][] is at least `0.16` times its [computed][] [font-size][].
+The test target's [computed][] [word-spacing][] either does not have the [important flag][] or is at least `0.16` times its [computed][] [font-size][].
 
 ## Expectation 2
 
-The test target's [computed][] [letter-spacing][] is at least `0.12` times its [computed][] [font-size][].
+The test target's [computed][] [letter-spacing][] either does not have the [important flag][] or is at least `0.12` times its [computed][] [font-size][].
 
 ## Expectation 3
 
-The test target's [computed][] [line-height][] is at least `1.5` times its [computed][] [font-size][] of the test target.
+The test target's [computed][] [line-height][] either does not have the [important flag][] or is at least `1.5` times its [computed][] [font-size][] of the test target.
 
 ## Assumptions
 

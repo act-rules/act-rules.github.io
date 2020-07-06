@@ -3,7 +3,7 @@ id: b8bb68
 name: Text spacing in `style` attributes is not `!important`
 rule_type: atomic
 description: |
-  This rule checks that the text spacing styles are able to be adjusted, i.e. `!important` is not applied to the style, unless the style has already exceeded the specified metric for retaining content visibility and functionality.
+  This rule checks that the text spacing styles can be adjusted by user, i.e. that `!important` is not applied to the style, unless the style has already exceeded the specified metric for retaining content visibility and functionality.
 accessibility_requirements:
   wcag21:1.4.12: # Text Spacing (AA)
     forConformance: true
@@ -29,15 +29,15 @@ This rule applies to any HTML element that is [visible][] and has a [declared va
 
 ## Expectation 1
 
-The test target's [computed][] [word-spacing][] is at least `0.16` times it's [computed][] [font-size][].
+The test target's [computed][] [word-spacing][] is at least `0.16` times its [computed][] [font-size][].
 
 ## Expectation 2
 
-The test target's [computed][] [letter-spacing][] is at least `0.12` times it's [computed][] [font-size][].
+The test target's [computed][] [letter-spacing][] is at least `0.12` times its [computed][] [font-size][].
 
 ## Expectation 3
 
-The test target's [computed][] [line-height][] is at least `1.5` times it's [computed][] [font-size][] of the test target.
+The test target's [computed][] [line-height][] is at least `1.5` times its [computed][] [font-size][] of the test target.
 
 ## Assumptions
 
@@ -79,7 +79,7 @@ This `p` element has a `line-height` of `32px` (equals `2em` ) which is above th
 
 #### Passed Example 2
 
-This `div` element has a `letter-spacing` of `0.12em` which is equal to the permissible minimum, given the default pixel size is 16 pixels.
+This `div` element has a `letter-spacing` of `0.12em` which is equal to the recommended minimum, given the default pixel size is 16 pixels.
 
 ```html
 <html>
@@ -99,7 +99,7 @@ This `div` element has a `letter-spacing` of `0.12em` which is equal to the perm
 
 #### Passed Example 3
 
-This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12em` ) which is equal to the permissible value, given the default pixel size is 16 pixels.
+This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12em`) which is equal to the recommended minimum, given the default pixel size is 16 pixels.
 
 ```html
 <html>
@@ -121,7 +121,7 @@ This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12e
 
 #### Failed Example 1
 
-This `p` element has a `line-height` of `10px !important` (equals `0.625em` ) which is below the permissible minimum, given the default pixel size of the body is 16 pixels.
+This `p` element has a `line-height` of `10px !important` (equals `0.625em` ) which is below the recommended minimum, given the default pixel size of the body is 16 pixels.
 
 ```html
 <html>
@@ -141,7 +141,7 @@ This `p` element has a `line-height` of `10px !important` (equals `0.625em` ) wh
 
 #### Failed Example 2
 
-This `div` element has a `letter-spacing` of `1.5px !important` (equals `0.09375em`) which is below to the permissible minimum, given the default pixel size is 16 pixels.
+This `div` element has a `letter-spacing` of `1.5px !important` (equals `0.09375em`) which is below to the recommended minimum, given the default pixel size is 16 pixels.
 
 ```html
 <html>
@@ -161,7 +161,7 @@ This `div` element has a `letter-spacing` of `1.5px !important` (equals `0.09375
 
 #### Failed Example 3
 
-This `strong` element has a `word-spacing` of `2.5px !important` (equals `0.15625em` ) which is below the permissible value, given the default pixel size is 16 pixels.
+This `strong` element has a `word-spacing` of `2.5px !important` (equals `0.15625em` ) which is below the recommended minimum, given the default pixel size is 16 pixels.
 
 ```html
 <html>
@@ -183,7 +183,7 @@ This `strong` element has a `word-spacing` of `2.5px !important` (equals `0.1562
 
 #### Inapplicable Example 1
 
-This `p` element is not [visible][] because of `display: none` .
+This `p` element is not [visible][] because of `display: none`.
 
 ```html
 <p style="display: none">

@@ -6,17 +6,22 @@ name: publish
 
 on:
   repository_dispatch:
+  push:
+    branches:
+      - develop
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: 'master'
       - uses: actions/setup-node@v1
       - run: |
           git config user.name "${{ secrets.USER_NAME }}"
           git config user.email "${{ secrets.USER_EMAIL }}"
-          git clone -b master "https://${{ secrets.USER_PAT }}@github.com/act-rules/act-rules-web"
+          git clone -b master "https://82fc6b9d6b970ad0ace26f922dcb90dba83477bf@github.com/act-rules/act-rules-web"
           cp -r act-rules-web/* .
           rm -rf act-rules-web/
           git add -fA

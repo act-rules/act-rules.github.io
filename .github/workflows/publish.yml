@@ -6,9 +6,6 @@ name: publish
 
 on:
   repository_dispatch:
-  pull_request:
-    branches:
-      - develop
 
 jobs:
   publish:

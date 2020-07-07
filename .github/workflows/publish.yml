@@ -6,7 +6,7 @@ name: publish
 
 on:
   repository_dispatch:
-  push:
+  pull_request:
     branches:
       - develop
 

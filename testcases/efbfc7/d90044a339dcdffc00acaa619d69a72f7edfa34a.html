@@ -1,0 +1,39 @@
+<!DOCTYPE html> <body onload="startUpdates()">
+	<p>
+		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
+		implement accessibility.
+	</p>
+
+	<p>Random number: <span id="target">1</span></p>
+	<p>To control the random number updates activate the "Control changes" button.</p>
+	<input type="button" onclick="openModal()" value="Control changes" />
+
+	<div
+		style="
+      display: none;
+      position: fixed;
+      top: 2em;
+      left: 10em;
+      background-color: #505050;
+      color: white;
+      padding: 1em;
+      padding-top: 0em;
+    "
+		id="overlay"
+	>
+		<p>Control changes</p>
+		<input type="button" id="control" onclick="toggleUpdates()" value="Pause changes" />
+		<input type="button" onclick="hide()" value="Hide changes" />
+		<button onclick="closeModal();">Dismiss</button>
+	</div>
+
+	<script type="text/javascript">
+		function openModal() {
+			document.getElementById('overlay').style.display = 'block'
+		}
+		function closeModal() {
+			document.getElementById('overlay').style.display = 'none'
+		}
+	</script>
+	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
+</body>

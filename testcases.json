@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 800,
+  "count": 811,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -3080,6 +3080,204 @@
       "ruleAccessibilityRequirements": {
         "wcag-technique:G170": {
           "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "9930d3f2863fb8d1a18b75a472ffad5348f5e306",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/efbfc7/9930d3f2863fb8d1a18b75a472ffad5348f5e306.html",
+      "relativePath": "testcases/efbfc7/9930d3f2863fb8d1a18b75a472ffad5348f5e306.html",
+      "expected": "passed",
+      "ruleId": "efbfc7",
+      "ruleName": "Text content that changes automatically can be paused, stopped or hidden",
+      "rulePage": "https://act-rules.github.io/rules/efbfc7",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "3b397886e6023db709549a8979f77ee3dda183f6",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/efbfc7/3b397886e6023db709549a8979f77ee3dda183f6.html",
+      "relativePath": "testcases/efbfc7/3b397886e6023db709549a8979f77ee3dda183f6.html",
+      "expected": "passed",
+      "ruleId": "efbfc7",
+      "ruleName": "Text content that changes automatically can be paused, stopped or hidden",
+      "rulePage": "https://act-rules.github.io/rules/efbfc7",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "c042f5e46d79c3f1cc5944154fc67a090828a1f6",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/efbfc7/c042f5e46d79c3f1cc5944154fc67a090828a1f6.html",
+      "relativePath": "testcases/efbfc7/c042f5e46d79c3f1cc5944154fc67a090828a1f6.html",
+      "expected": "passed",
+      "ruleId": "efbfc7",
+      "ruleName": "Text content that changes automatically can be paused, stopped or hidden",
+      "rulePage": "https://act-rules.github.io/rules/efbfc7",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "02293637d2d6ebda2bf0c4bb1e286cb79c5ac461",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/efbfc7/02293637d2d6ebda2bf0c4bb1e286cb79c5ac461.html",
+      "relativePath": "testcases/efbfc7/02293637d2d6ebda2bf0c4bb1e286cb79c5ac461.html",
+      "expected": "passed",
+      "ruleId": "efbfc7",
+      "ruleName": "Text content that changes automatically can be paused, stopped or hidden",
+      "rulePage": "https://act-rules.github.io/rules/efbfc7",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "d90044a339dcdffc00acaa619d69a72f7edfa34a",
+      "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/efbfc7/d90044a339dcdffc00acaa619d69a72f7edfa34a.html",
+      "relativePath": "testcases/efbfc7/d90044a339dcdffc00acaa619d69a72f7edfa34a.html",
+      "expected": "passed",
+      "ruleId": "efbfc7",
+      "ruleName": "Text content that changes automatically can be paused, stopped or hidden",
+      "rulePage": "https://act-rules.github.io/rules/efbfc7",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "1de4a772dda023401b97cfcb4a7d1be555602ed4",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/efbfc7/1de4a772dda023401b97cfcb4a7d1be555602ed4.html",
+      "relativePath": "testcases/efbfc7/1de4a772dda023401b97cfcb4a7d1be555602ed4.html",
+      "expected": "failed",
+      "ruleId": "efbfc7",
+      "ruleName": "Text content that changes automatically can be paused, stopped or hidden",
+      "rulePage": "https://act-rules.github.io/rules/efbfc7",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "bf50692db5d276c37e3249788563712dc1b52f39",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/efbfc7/bf50692db5d276c37e3249788563712dc1b52f39.html",
+      "relativePath": "testcases/efbfc7/bf50692db5d276c37e3249788563712dc1b52f39.html",
+      "expected": "inapplicable",
+      "ruleId": "efbfc7",
+      "ruleName": "Text content that changes automatically can be paused, stopped or hidden",
+      "rulePage": "https://act-rules.github.io/rules/efbfc7",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "1c8982d14dcef75e2f0203226e43a3acde2c4d7a",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/efbfc7/1c8982d14dcef75e2f0203226e43a3acde2c4d7a.html",
+      "relativePath": "testcases/efbfc7/1c8982d14dcef75e2f0203226e43a3acde2c4d7a.html",
+      "expected": "inapplicable",
+      "ruleId": "efbfc7",
+      "ruleName": "Text content that changes automatically can be paused, stopped or hidden",
+      "rulePage": "https://act-rules.github.io/rules/efbfc7",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a17bc1f4dc07ac0926cddc5b3e5768ac4175835d",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/efbfc7/a17bc1f4dc07ac0926cddc5b3e5768ac4175835d.html",
+      "relativePath": "testcases/efbfc7/a17bc1f4dc07ac0926cddc5b3e5768ac4175835d.html",
+      "expected": "inapplicable",
+      "ruleId": "efbfc7",
+      "ruleName": "Text content that changes automatically can be paused, stopped or hidden",
+      "rulePage": "https://act-rules.github.io/rules/efbfc7",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "304156a6b0e660bcedf7eb545e9412dca95a14b3",
+      "testcaseTitle": "Inapplicable Example 4",
+      "url": "https://act-rules.github.io/testcases/efbfc7/304156a6b0e660bcedf7eb545e9412dca95a14b3.html",
+      "relativePath": "testcases/efbfc7/304156a6b0e660bcedf7eb545e9412dca95a14b3.html",
+      "expected": "inapplicable",
+      "ruleId": "efbfc7",
+      "ruleName": "Text content that changes automatically can be paused, stopped or hidden",
+      "rulePage": "https://act-rules.github.io/rules/efbfc7",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "452cb4a9dbb1fd936a3896e8eed169e30b512722",
+      "testcaseTitle": "Inapplicable Example 5",
+      "url": "https://act-rules.github.io/testcases/efbfc7/452cb4a9dbb1fd936a3896e8eed169e30b512722.html",
+      "relativePath": "testcases/efbfc7/452cb4a9dbb1fd936a3896e8eed169e30b512722.html",
+      "expected": "inapplicable",
+      "ruleId": "efbfc7",
+      "ruleName": "Text content that changes automatically can be paused, stopped or hidden",
+      "rulePage": "https://act-rules.github.io/rules/efbfc7",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.2": {
+          "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"

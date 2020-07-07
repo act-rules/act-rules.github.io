@@ -1,0 +1,28 @@
+<!DOCTYPE html> <body onload="startColorUpdates()">
+	<p>
+		The W3C Web Accessibility Initiative (WAI) develops standards and support materials to help you understand and
+		implement accessibility.
+	</p>
+
+	<p>Number: <span id="target">1</span></p>
+	<input type="button" onclick="stop()" value="Stop color changes" />
+
+	<script>
+		const myColors = ['red', 'green', 'blue', 'black']
+		let updates
+
+		function startColorUpdates() {
+			updates = setInterval(change, 1000)
+		}
+
+		function change() {
+			let randomColor = myColors[Math.floor(Math.random() * myColors.length)]
+			var target = document.getElementById('target')
+			target.style.color = randomColor
+		}
+
+		function stop() {
+			clearInterval(updates)
+		}
+	</script>
+</body>

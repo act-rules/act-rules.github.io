@@ -26,6 +26,8 @@ input_aspects:
   - CSS Styling
 acknowledgments:
   authors:
+    - Wilco Fiers
+  previous_authors:
     - Anne Thyme Nørregaard
     - Stein Erik Skotkjerra
 htmlHintIgnore:
@@ -36,7 +38,11 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to HTML `img` elements and HTML elements with the [semantic role][] of `img`, except for elements that are not [included in the accessibility tree][].
+The rule applies to HTML `img` elements and HTML elements with the [semantic role][] of `img`, for which all the following is true about it and all its [ancestors][] in the [flat tree][]:
+
+- the element does not have an `aria-hidden` [attribute value][] of "true"; and
+- the element does not have a [computed][] [display][] property of "none"; and
+- the element does not have a [computed][] [visibility][] property of "hidden".
 
 ## Expectation
 
@@ -202,7 +208,7 @@ This `svg` element has an [implicit role][] of `graphics-document`.
 
 #### Inapplicable Example 2
 
-This element has a [semantic role][] of `img`, but is not [included in the accessibility tree][].
+This element with a [semantic role][] of `img` is hidden with `aria-hidden` set to "true".
 
 ```html
 <div
@@ -214,7 +220,7 @@ This element has a [semantic role][] of `img`, but is not [included in the acces
 
 #### Inapplicable Example 3
 
-This `img` element is not [included in the accessibility tree][].
+This `img` element is hidden with `aria-hidden` set to "true".
 
 ```html
 <img src="/test-assets/shared/w3c-logo.png" aria-hidden="true" />
@@ -232,6 +238,11 @@ This element is neither an `img` element nor has a role of `img`.
 [explicit role]: #explicit-role 'Definition of explicit role'
 [focusable]: #focusable 'Definition of focusable'
 [implicit role]: #implicit-role 'Definition of implicit role'
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[attribute value]: #attribute-value 'Definition of attribute value'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of semantic role'
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS draft, flat tree, 2020/07/08'
+[computed]: https://www.w3.org/TR/css-cascade-3/#computed-value
+[ancestors]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'DOM ancestor, 2020/07/08'
+[display]: https://www.w3.org/TR/CSS22/visuren.html#display-prop 'CSS display property'
+[visibility]: https://www.w3.org/TR/CSS22/visufx.html#visibility 'CSS visibility property'

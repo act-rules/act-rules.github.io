@@ -1,6 +1,6 @@
 # ACT Test Case Design
 
-The goal of test cases in ACT rules is to allow implementers to verify that their implementation is consistent with the ACT rule. This requires that a rule has test cases for all of the "important" aspects of it. Beyond that, it is up to the rule authors to determine how extensive to make the list of test cases. A list of test cases full of edge cases would ensure greater consistency between implementers, but may result in fewer implementers deciding to adopt the rule.
+The goal of test cases in ACT rules is to allow implementers to verify that their implementation is consistent with the ACT rule. This requires that a rule has test cases for all of the "important" aspects of it. Beyond that, it is up to the rule authors to determine how extensive to make the list of test cases. The dicision of wha edge cases to test should be based on issues in **real-world** examples.
 
 To strike a good balance in test cases, the following principles should be considered:
 
@@ -67,4 +67,4 @@ Technologies that are widely supported can be used in all test cases. In all sit
 
 It is important to know that there are exceptions to all of these principles. There may be technical reasons not to include a certain test case, or the number of combinations may require an unreasonable number of tests. It may sometimes not make logical sense for some passed test cases to satisfy all accessibility requirements. Some definitions may not require tests, and others can be argued to need extensive tests. Etc.
 
-Letting **real-world** examples drive consistency forward also means rule authors should not get stuck in trying to write test cases for every conceivable situation. Rule authors should strive for a 95% consistency between implementers on first publication. As more examples are discovered, this number will go up over time.
+Letting **real-world** examples drive consistency forward also means rule authors should not get stuck in trying to write test cases for every conceivable situation. Rule authors should strive for a 95% consistency between implementers on first publication. This percentage does not need to be measured, it is intended to give a idea of what to aim for. As more examples are discovered, this number will go up over time.

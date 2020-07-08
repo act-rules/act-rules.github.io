@@ -17,8 +17,19 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:G18: # Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text
+    forConformance: false
+    failed: not satisfied
+    passed: satisfied
+    inapplicable: further testing needed
+  wcag-technique:G145: # Ensuring that a contrast ratio of at least 3:1 exists between text (and images of text) and background behind the text
+    forConformance: false
+    failed: not satisfied
+    passed: satisfied
+    inapplicable: further testing needed
 
 input_aspects:
+  - Accessibility Tree
   - DOM Tree
   - CSS Styling
   - Language
@@ -57,7 +68,8 @@ For each test target, the [highest possible contrast](#highest-possible-contrast
 
 ## Accessibility Support
 
-Different browsers have different levels of support for CSS. This can cause contrast issues in one browser that do not appear in another. Because of that, this rule can produce different results depending on the browser that is used. For example, a text that is positioned using CSS transform may be on a different background in a browser that does not support CSS transform.
+- Different browsers have different levels of support for CSS. This can cause contrast issues in one browser that do not appear in another. Because of that, this rule can produce different results depending on the browser that is used. For example, a text that is positioned using CSS transform may be on a different background in a browser that does not support CSS transform.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 
@@ -98,7 +110,7 @@ This light gray text has a contrast ratio between 13:1 and 5:1 on the background
 
 ```html
 <p
-	style="color: #CCC; height:50px; padding-top:15px; background: #000 no-repeat -20px -20px url('../test-assets/contrast/black-hole.jpeg');"
+	style="color: #CCC; height:50px; padding-top:15px; background: #000 no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');"
 >
 	Black hole sun
 </p>
@@ -175,7 +187,7 @@ This dark gray text has a contrast ratio of 12.6:1 on the white background in a 
 <p style="color: #CCC; background: #fff;" id="p"></p>
 <script>
 	const shadowRoot = document.getElementById('p').attachShadow({ mode: 'open' })
-	shadowRoot.textContent = '<span style="color: #333;">Some text in English</span>'
+	shadowRoot.innerHTML = '<span style="color: #333;">Some text in English</span>'
 </script>
 ```
 
@@ -207,7 +219,7 @@ This light gray text has a contrast ratio between 2.7:1 and 3:1 on the backgroun
 
 ```html
 <p
-	style="color: #555; height:50px; padding-top:20px; background: black no-repeat -20px -20px url('../test-assets/contrast/black-hole.jpeg');"
+	style="color: #555; height:50px; padding-top:20px; background: black no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');"
 >
 	Black hole sun
 </p>
@@ -307,7 +319,7 @@ This text not part of a [text node][].
 
 ```html
 <p>
-	<img scr="../test-assets/contrast/example.png" alt="example" />
+	<img scr="/test-assets/contrast/example.png" alt="example" />
 </p>
 ```
 
@@ -386,3 +398,5 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 [visible]: #visible 'Definition of visible'
 [text node]: https://dom.spec.whatwg.org/#text 'Definition of text node'
 [purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'Definition of purely decorative'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[semantic role]: #semantic-role 'Definition of semantic role'

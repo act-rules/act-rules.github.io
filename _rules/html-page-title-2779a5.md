@@ -3,7 +3,7 @@ id: 2779a5
 name: HTML page has title
 rule_type: atomic
 description: |
-  This rule checks that an HTML page has a title.
+  This rule checks that a non-embedded HTML page has a title.
 accessibility_requirements:
   wcag20:2.4.2: # Page Titled (A)
     forConformance: true
@@ -39,15 +39,9 @@ htmlHintIgnore:
 
 The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element.
 
-**Note:** Documents embedded into other documents, such as through `iframe` or `object` elements are not applicable and do not require page titles, because they are not web pages according to the definition in WCAG.
-
 ## Expectation 1
 
-Each target element has at least one [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) that is an HTML `title` element.
-
-**Note:** The `title` element exists in other namespaces such as SVG. These are not HTML `title` elements and should be ignored for this rule.
-
-**Note:** The [HTML specification - The `title` element](https://html.spec.whatwg.org/#the-title-element) requires that a document only has one `title` element, and that it is a child of the `head` element of a document. However, HTML 5.2 also describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG.
+Each target element has at least one [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) that is a [`title` element](https://html.spec.whatwg.org/multipage/semantics.html#htmltitleelement).
 
 ## Expectation 2
 
@@ -55,13 +49,15 @@ For each target element, the first HTML `title` element that is a [descendant](h
 
 ## Assumptions
 
-_There are currently no assumptions_
+This rule assumes that [Success Criterion 2.4.2 Page Titled](https://www.w3.org/TR/WCAG21/#page-titled) does not require that a document only has one `title` element, nor that it is a child of the `head` element of a document. While this is invalid in HTML, the HTML 5.2 specification describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG. Regardless of whether this is required by 2.4.2 Page Titled, failing this rule means the success criterion is not satisfied.
 
 ## Accessibility Support
 
 _There are no major accessibility support issues known for this rule._
 
 ## Background
+
+This rule is only applicable to non-embedded HTML pages. HTML pages embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not [web pages](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) according to the definition in WCAG.
 
 - [Understanding Success Criterion 2.4.2: Page Titled](https://www.w3.org/WAI/WCAG21/Understanding/page-titled)
 - [G88: Providing descriptive titles for Web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G88)
@@ -84,7 +80,7 @@ This page has a `title` element with content.
 
 #### Passed Example 2
 
-This page has a `title` element that is for the entire page, including content in the `iframe` without its own `title`.
+This page has a `title` element that serves as the title for the page and the `iframe` since it does not have its own.
 
 ```html
 <html>

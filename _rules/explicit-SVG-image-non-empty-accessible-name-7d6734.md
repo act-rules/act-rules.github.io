@@ -1,9 +1,9 @@
 ---
 id: 7d6734
-name: '`svg` element with explicit role has accessible name'
+name: '`svg` element with explicit role has non-empty accessible name'
 rule_type: atomic
 description: |
-  This rule checks that each SVG image element that is explicitly included in the accessibility tree has an accessible name.
+  This rule checks that each SVG image element that is explicitly included in the accessibility tree has a non-empty accessible name.
 accessibility_requirements:
   wcag20:1.1.1: # Non-Text Content (A)
     forConformance: true
@@ -22,13 +22,9 @@ acknowledgments:
 
 The rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namespace with an [explicit semantic role][explicit role] of either `img`, `graphics-document`, `graphics-symbol`, that is [included in the accessibility tree][].
 
-**Note:** The [SVG Accessibility API Mappings, Section 5.1.2 Including Elements in the Accessibility Tree](https://www.w3.org/TR/svg-aam-1.0/#include_elements) specifies that many elements in the SVG namespace are purely presentational and should not be included in the accessibility tree unless indicated otherwise through the use of text alternative content, an explicit WAI ARIA role, or a valid `tabindex` attribute.
-
 ## Expectation
 
 Each target element has an [accessible name][] that is not empty.
-
-**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
 
 ## Assumptions
 
@@ -42,7 +38,7 @@ This rule is limited to the explicit use of roles, as a clear indication that co
 
 Browser and assistive technology support for SVG `<title>` and `<desc>` elements is currently inconsistent. Using WAI ARIA in combination with the `img` role for non-decorative `<svg>` elements significantly improves accessibility browser support.
 
-Until browser support for the [SVG Accessibility API Mappings][] is more consistent it is recommended to explicitly remove decorative <svg> elements from the accessibility tree.
+Until browser support for the [SVG Accessibility API Mappings][] is more consistent it is recommended to explicitly remove decorative `<svg>` elements from the accessibility tree.
 
 ## Background
 
@@ -141,7 +137,7 @@ This `circle` element has an [explicit role][] of `graphics-symbol` but has no [
 
 #### Inapplicable Example 1
 
-Neither the `svg` element nor the `circle` element has any of the three [explicit role][] of  `img`, `graphics-document`, `graphics-symbol`.
+Neither the `svg` element nor the `circle` element has any of the three [explicit roles][explicit role] of `img`, `graphics-document`, `graphics-symbol`.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg">

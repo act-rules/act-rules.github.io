@@ -5,6 +5,11 @@ rule_type: atomic
 description: |
   This rule checks that WAI-ARIA states or properties are allowed for the element they are specified on.
 accessibility_requirements:
+  wcag-technique:ARIA5: # Using WAI-ARIA state and property attributes to expose the state of a user interface component
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
   aria11:state_property_processing:
     title: ARIA 1.1, 7.6 State and Property Attribute Processing
     forConformance: true
@@ -12,6 +17,8 @@ accessibility_requirements:
     passed: satisfied
     inapplicable: satisfied
 input_aspects:
+  - Accessibility Tree
+  - CSS styling
   - DOM Tree
 acknowledgments:
   authors:
@@ -25,7 +32,7 @@ Any [WAI-ARIA state or property][] that is specified on an HTML or SVG element t
 
 ## Expectation
 
-The attribute is either an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the attribute is specified. If the element has no [semantic role][], the attribute must be a [global state or property][global].
+Each test target is either an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the attribute is specified. If the element has no [semantic role][], the attribute must be a [global state or property][global].
 
 **Note:** Assessing the value of the attribute is out of scope for this rule.
 
@@ -35,7 +42,7 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and their attributes fail this rule with some technologies but users of other technology would not experience any accessibility issue.
 
 ## Background
 
@@ -43,6 +50,7 @@ _There are no major accessibility support issues known for this rule._
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 - [WAI-ARIA 1.1, Supported States and Properties](https://www.w3.org/TR/wai-aria-1.1/#states_and_properties)
 - [WAI-ARIA 1.1, Global States and Properties](https://www.w3.org/TR/wai-aria-1.1/#global_states)
+- [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA5)
 
 ## Test Cases
 
@@ -69,7 +77,7 @@ The `aria-pressed` [state][] is [supported][] for the [semantic role][] `button`
 The `aria-busy` [state][] is a [global][] [state][] that is [supported][] by all elements, even without any [semantic role][].
 
 ```html
-<div aria-busy="true">My busy button</div>
+<div aria-busy="true">My busy div</div>
 ```
 
 #### Passed Example 4
@@ -77,7 +85,7 @@ The `aria-busy` [state][] is a [global][] [state][] that is [supported][] by all
 The `aria-label` [state][] is a [global][] [state][] and thus [inherited][] for all [semantic role][].
 
 ```html
-<div role="button" aria-label="OK"></div>
+<div role="button" aria-label="OK">✓</div>
 ```
 
 #### Passed Example 5
@@ -93,7 +101,7 @@ The `aria-checked` [state][] is [required][] for the [semantic role][] `checkbox
 The `aria-controls` [property][] is [required][] for the [semantic role][] `combobox`.
 
 ```html
-<div role="combobox" aria-controls="id1">My combobox</div>
+<div role="combobox" aria-controls="id1" aria-expanded="false">My combobox</div>
 ```
 
 #### Passed Example 7
@@ -101,7 +109,7 @@ The `aria-controls` [property][] is [required][] for the [semantic role][] `comb
 The `aria-controls` [property][] is [required][] for the [semantic role][] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value are still applicable to this rule.
 
 ```html
-<div role="combobox" aria-controls>My combobox</div>
+<div role="combobox" aria-expanded="false" aria-controls>My combobox</div>
 ```
 
 #### Passed Example 8
@@ -109,7 +117,7 @@ The `aria-controls` [property][] is [required][] for the [semantic role][] `comb
 The `aria-controls` [property][] is [required][] for the [semantic role][] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value (specified as an empty string) are still applicable to this rule.
 
 ```html
-<div role="combobox" aria-controls="">My combobox</div>
+<div role="combobox" aria-expanded="false" aria-controls="">My combobox</div>
 ```
 
 #### Passed Example 9
@@ -120,6 +128,22 @@ The `aria-label` [state][] is [global][] and thus [inherited][] for all [semanti
 <svg xmlns="http://www.w3.org/2000/svg" role="graphics-object" width="100" height="100" aria-label="yellow circle">
 	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
 </svg>
+```
+
+#### Passed Example 10
+
+This `aside` element has an [explicit role][] of `none`. However, the [global][] [property][] `aria-label` is specified. Thus it has a [semantic role][] of `complementary` due to [Presentational Roles Conflict Resolution][]. The `aria-expanded` [state][] is [inherited][] for the `complementary` role.
+
+```html
+<aside role="none" aria-label="About ACT rules" aria-expanded="true">ACT rules are cool!</aside>
+```
+
+#### Passed Example 11
+
+This `aside` element has an [explicit role][] of `none`. However, it is [focusable][] due to the `tabindex` attribute. Thus it has a [semantic role][] of `complementary` due to [Presentational Roles Conflict Resolution][]. The `aria-expanded` [state][] is [supported][] for the `complementary` role.
+
+```html
+<aside role="none" tabindex="0" aria-expanded="true">ACT rules are cool!</aside>
 ```
 
 ### Failed
@@ -151,10 +175,12 @@ This `div` element is not [included in the accessibility tree][], hence its [WAI
 ```
 
 [explicit role]: #explicit-role 'Definition of Explicit Role'
+[focusable]: #focusable 'Definition of focusable'
 [global]: https://www.w3.org/TR/wai-aria-1.1/#global_states 'Definition of Global ARIA States and Properties'
 [implicit role]: #implicit-role 'Definition of Implicit Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [inherited]: https://www.w3.org/TR/wai-aria/#inheritedattributes 'Definition of Inherited ARIA States and Properties'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [property]: https://www.w3.org/TR/wai-aria/#dfn-property 'Definition of ARIA Property'
 [required]: https://www.w3.org/TR/wai-aria/#requiredState 'Definition of Required ARIA States and Properties'
 [semantic role]: #semantic-role 'Definition of Semantic Role'

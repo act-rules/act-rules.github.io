@@ -1,9 +1,9 @@
 ---
 id: 2779a5
-name: HTML page has title
+name: HTML page has non-empty title
 rule_type: atomic
 description: |
-  This rule checks that a non-embedded HTML page has a title.
+  This rule checks that a non-embedded HTML page has a non-empty title.
 accessibility_requirements:
   wcag20:2.4.2: # Page Titled (A)
     forConformance: true

@@ -36,7 +36,12 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to HTML `img` elements and HTML elements with the [semantic role][] of `img`, except for elements that are not [included in the accessibility tree][].
+The rule applies to HTML `img` elements and HTML elements with the [semantic role][] of `img` which render an image and are [included in the accessibility tree][].
+
+HTML elements render an image if any of the following are true:
+
+- The element is an `img` element where the [current request][]'s [state][image request state] is [completely available][].
+- The element has a CSS `background-image` that does not [draw nothing](https://www.w3.org/TR/css-backgrounds-3/#the-background-image).
 
 ## Expectation
 
@@ -235,3 +240,7 @@ This element is neither an `img` element nor has a role of `img`.
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of semantic role'
+[current request]: https://html.spec.whatwg.org/#current-request 'HTML definition of Current request, 2020/03/06'
+[image request state]: https://html.spec.whatwg.org/#img-req-state 'HTML definition of Image request state, 2020/03/06'
+[completely available]: https://html.spec.whatwg.org/#img-all 'HTML definition of Completely available, 2020/03/06'
+

@@ -155,7 +155,7 @@ This page has a `title` element that is empty.
 
 #### Failed Example 3
 
-This page does not have a `title` element for the whole page.
+This page does not have a `title` element. The `title` element in the `iframe` does not function as the title for the entire page.
 
 ```html
 <html>

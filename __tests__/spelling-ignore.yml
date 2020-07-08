@@ -19,13 +19,14 @@
 - feImage
 
 # Domain-specific words, Definitions & other allowed terms
+- ABNF
 - URI
 - UA/AT
 - WCAG
-- WCAG2
+- WCAG2 
 - WCAG21
-- CSS3
-- UA
+- CSS3 
+- UA 
 - UI
 - api # lowercase needed in reference list
 - APIs
@@ -66,6 +67,13 @@
 - rowheader
 - colspan
 - presentational
+- sc
+- dropdown
+
+# spell checker checks against strict casing & hence some repeated words here
+- Autocomplete
+- Focusable
+- ascii
 - EARL10-Schema
 - labelable
 - merchantability
@@ -133,6 +141,24 @@
 - matrix3d
 - rowheader
 - columnheader
+- innerText
+- isTrusted
+
+# DOM Events
+- auxclick
+- compostionend
+- compositionstart
+- compositionupdate
+- dblclick
+- keydown
+- keyup
+- mousedown
+- mouseenter
+- mouseleave
+- mousemove
+- mouseout
+- mouseover
+- mouseup
 - scrollable-element
 - scrollWidth
 - scrollHeight
@@ -157,6 +183,7 @@
 - presentational
 - backtick
 - camelCase
+- untestable
 - scrollable
 - scrollbars
 

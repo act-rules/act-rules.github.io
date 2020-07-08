@@ -1,4 +1,4 @@
-# ACT Test Case Design
+# ACT Rules Test Case Design
 
 The goal of test cases in ACT rules is to allow implementers to verify that their implementation is consistent with the ACT rule. This requires that a rule has test cases for all of the "important" aspects of it. Beyond that, it is up to the rule authors to determine how extensive to make the list of test cases. A list of test cases full of edge cases would ensure greater consistency between implementers, but may result in fewer implementers deciding to adopt the rule.
 

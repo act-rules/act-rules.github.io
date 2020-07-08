@@ -234,6 +234,26 @@ This element is neither an `img` element nor has a role of `img`.
 <div aria-label="W3C logo"></div>
 ```
 
+#### Inapplicable Example 5
+
+This `img` element is hidden with `display: none`.
+
+```html
+<div style="display: none">
+	<img src="/test-assets/shared/w3c-logo.png" />
+</div>
+```
+
+#### Inapplicable Example 6
+
+This `img` element is hidden with `visibility: hidden`.
+
+```html
+<div style="visibility: hidden">
+	<img src="/test-assets/shared/w3c-logo.png" />
+</div>
+```
+
 [accessible name]: #accessible-name 'Definition of accessible name'
 [explicit role]: #explicit-role 'Definition of explicit role'
 [focusable]: #focusable 'Definition of focusable'

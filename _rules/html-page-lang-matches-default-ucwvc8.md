@@ -48,7 +48,7 @@ For each test target, the [primary language][] of the [valid language tag][] mat
 
 - This rule assumes that [grandfathered tags][] are not used as these will not be recognized as [valid language tags](#valid-language-tag).
 
-- This rule assumes that `iframe` title elements are not exposed to assistive technologies and so does not consider them as part of the language of the page.
+- This rule assumes that `iframe` title elements are not exposed to assistive technologies and so does not consider them as part of the [default page language][].
 
 ## Accessibility Support
 

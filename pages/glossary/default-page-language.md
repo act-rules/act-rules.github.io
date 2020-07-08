@@ -20,7 +20,7 @@ The _words_ used in the following texts should be counted for the _most common l
 - **text nodes**: The value of any [text nodes][] that is [visible][] or [included in the accessibility tree][]
 - **accessible text**: The [accessible name][] and [accessible description][] of any element included in the [accessibility tree][]
 
-**Exception**: Words in text that comes from nodes that have an [ancestor][] in the [flat tree][] with a non-empty (`""`) `lang` attribute, except for the [root node][].
+**Exception**: Do not count words in text that comes from nodes that have an [ancestor][] in the [flat tree][] which has a non-empty (`""`) `lang` attribute and is not the [root node][].
 
 [web page]: #web-page-html
 [included in the accessibility tree]: #included-in-the-accessibility-tree

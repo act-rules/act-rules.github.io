@@ -292,7 +292,7 @@ This element is neither an `img` element nor has a role of `img`.
 
 #### Inapplicable Example 5
 
-This `img` element has no `src` attribute so displays no image.
+This `img` element has no `src` attribute so does not render an image.
 
 ```html
 <img />

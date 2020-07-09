@@ -25,14 +25,14 @@ This rule applies to any HTML element that is [visible][] and has a [declared][]
 - [word-spacing][],
 - [letter-spacing][],
 - [line-height][];
-  which are set by the `style` attribute.
+  which are specified via the `style` attribute.
 
 ## Expectation 1
 
 For the test target's [word-spacing][] property, either:
 
 - it has no [declared][] value; or
-- its [declared][] value does not have the [important flag][]; or
+- its [declared][] value specified via the `style` attribute does not have the [important flag][]; or
 - its [computed][] value is at least `0.16` times its [computed][] [font-size][].
 
 ## Expectation 2
@@ -40,7 +40,7 @@ For the test target's [word-spacing][] property, either:
 For the test target's [letter-spacing][] property, either:
 
 - it has no [declared][] value; or
-- its [declared][] value does not have the [important flag][]; or
+- its [declared][] value specified via the `style` attribute does not have the [important flag][]; or
 - its [computed][] value is at least `0.12` times its [computed][] [font-size][].
 
 ## Expectation 3
@@ -48,7 +48,7 @@ For the test target's [letter-spacing][] property, either:
 For the test target's [line-height][] property, either:
 
 - it has no [declared][] value; or
-- its [declared][] value does not have the [important flag][]; or
+- its [declared][] value specified via the `style` attribute does not have the [important flag][]; or
 - its [computed][] value is at least `1.5` times its [computed][] [font-size][].
 
 ## Assumptions

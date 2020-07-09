@@ -20,12 +20,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element that is [visible][] and has a [declared][] value for any of the following CSS properties:
+This rule applies to any HTML element that is [visible][] and has a [declared][] value specified via the `style` attribute for any of the following CSS properties:
 
 - [word-spacing][],
 - [letter-spacing][],
-- [line-height][];
-  which are specified via the `style` attribute.
+- [line-height][].
 
 ## Expectation 1
 
@@ -71,7 +70,7 @@ While some assistive technologies are able to set [user origin][] styles, others
 
 #### Passed Example 1
 
-This `p` element has a `line-height` of `32px` (equals `2em` ) which is above the recommended metric, given the default pixel size is 16 pixels.
+This `p` element has a `line-height` of `32px` (equals `2em` ) which is above the recommended metric, given the specified font size is 16 pixels.
 
 ```html
 <html>

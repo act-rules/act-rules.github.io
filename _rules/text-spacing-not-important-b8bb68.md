@@ -90,7 +90,7 @@ This `p` element has a `line-height` of `32px` (equals `2em` ) which is above th
 
 #### Passed Example 2
 
-This `div` element has a `letter-spacing` of `0.12em` which is equal to the recommended minimum, given the default pixel size is 16 pixels.
+This `div` element has a `letter-spacing` of `0.12em` which is equal to the recommended minimum, given the specified font size is 16 pixels.
 
 ```html
 <html>
@@ -110,7 +110,7 @@ This `div` element has a `letter-spacing` of `0.12em` which is equal to the reco
 
 #### Passed Example 3
 
-This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12em`) which is equal to the recommended minimum, given the default pixel size is 16 pixels.
+This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12em`) which is equal to the recommended minimum, given the specified font size is 16 pixels.
 
 ```html
 <html>
@@ -132,7 +132,7 @@ This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12e
 
 #### Failed Example 1
 
-This `p` element has a `line-height` of `10px !important` (equals `0.625em` ) which is below the recommended minimum, given the default pixel size of the body is 16 pixels.
+This `p` element has a `line-height` of `10px !important` (equals `0.625em` ) which is below the recommended minimum, given the specified font size of the body is 16 pixels.
 
 ```html
 <html>
@@ -152,7 +152,7 @@ This `p` element has a `line-height` of `10px !important` (equals `0.625em` ) wh
 
 #### Failed Example 2
 
-This `div` element has a `letter-spacing` of `1.5px !important` (equals `0.09375em`) which is below to the recommended minimum, given the default pixel size is 16 pixels.
+This `div` element has a `letter-spacing` of `1.5px !important` (equals `0.09375em`) which is below to the recommended minimum, given the specified font size is 16 pixels.
 
 ```html
 <html>
@@ -172,7 +172,7 @@ This `div` element has a `letter-spacing` of `1.5px !important` (equals `0.09375
 
 #### Failed Example 3
 
-This `strong` element has a `word-spacing` of `2.5px !important` (equals `0.15625em` ) which is below the recommended minimum, given the default pixel size is 16 pixels.
+This `strong` element has a `word-spacing` of `2.5px !important` (equals `0.15625em` ) which is below the recommended minimum, given the specified font size is 16 pixels.
 
 ```html
 <html>

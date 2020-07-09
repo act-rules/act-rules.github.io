@@ -38,7 +38,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to HTML `img` elements and HTML elements with the [semantic role][] of `img`, for which all the following is true about it and all its [ancestors][] in the [flat tree][]:
+The rule applies to HTML `img` elements and HTML elements with the [semantic role][] of `img`, for which all the following is true about them and all their [ancestors][] in the [flat tree][]:
 
 - the element does not have an `aria-hidden` [attribute value][] of "true"; and
 - the element does not have a [computed][] [display][] property of "none"; and

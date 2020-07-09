@@ -46,7 +46,9 @@ If the [explicit semantic role](#explicit-role) on the target element is incorre
 
 ## Accessibility Support
 
-- Given the variance in the representation of accssibility tree object model between different Some user agents and assistive technologies, the support for deriving [owned by](#owned-by) relatioship is **inconsistent**, thereby yeilding different results for this rule. Some examples of inconsistencies include, but are not limited to: - Varied and incoherent support for the `aria-owns` attribute. - Some popular browser and assistive technology combinations ignore to announce elements related contextually by usage of either [explicit](#explicit-role) or [implicit](#implicit-role) roles.
+- Given the variance in the representation of accssibility tree object model between different Some user agents and assistive technologies, the support for deriving [owned by](#owned-by) relatioship is **inconsistent**, thereby yeilding different results for this rule. Some examples of inconsistencies include, but are not limited to:
+  - Varied and incoherent support for the `aria-owns` attribute.
+  - Some popular browser and assistive technology combinations ignore to announce elements related contextually by usage of either [explicit](#explicit-role) or [implicit](#implicit-role) roles.
 
 ## Background
 

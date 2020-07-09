@@ -46,8 +46,7 @@ If the [explicit semantic role](#explicit-role) on the target element is incorre
 
 ## Accessibility Support
 
-- User agents do not all have the same accessibility tree. Particularly the method of deriving which element owns which other elements varies between browsers. This can lead to different results for this rule, depending on which accessibility tree is used as input.
-- `aria-owns` has limited support in some user agents.
+- Given the variance in the representation of accssibility tree object model between different Some user agents and assistive technologies, the support for deriving [owned by](#owned-by) relatioship is **inconsistent**, thereby yeilding different results for this rule. Some examples of inconsistencies include, but are not limited to: - Varied and incoherent support for the `aria-owns` attribute.
 
 ## Background
 
@@ -65,6 +64,7 @@ Element with [explicit semantic role](#explicit-role) `listitem` is contained wi
 ```html
 <div role="list">
 	<div role="listitem">List item 1</div>
+	<div role="listitem">List item 2</div>
 </div>
 ```
 
@@ -86,6 +86,7 @@ Element contained within its [required context role](https://www.w3.org/TR/wai-a
 <div role="list">
 	<div role="presentation">
 		<div role="listitem">List item 1</div>
+		<div role="listitem">List item 2</div>
 	</div>
 </div>
 ```
@@ -107,6 +108,9 @@ The `aria-owns` attribute override normal DOM tree relationship. Thus, the inner
 <div role="list" aria-owns="item">
 	<div role="navigation">
 		<div id="item" role="listitem">List item 1</div>
+		<div id="item" role="listitem">List item 2</div>
+		<div id="item" role="listitem">List item 3</div>
+		<div id="item" role="listitem">List item 4</div>
 	</div>
 </div>
 ```
@@ -143,6 +147,8 @@ The `listitem` is owned by the `tabpanel`, because it is the closest ancestor, b
 <div role="list">
 	<div role="tabpanel">
 		<div role="listitem">List item 1</div>
+		<div role="listitem">List item 2</div>
+		<div role="listitem">List item 3</div>
 	</div>
 </div>
 ```
@@ -155,6 +161,8 @@ The `listitem` is owned by the `aria-label="menu"` div, rather than the `list`.
 <div role="list">
 	<div aria-label="menu">
 		<div role="listitem">List item 1</div>
+		<div role="listitem">List item 2</div>
+		<div role="listitem">List item 3</div>
 	</div>
 </div>
 ```

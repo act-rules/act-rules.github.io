@@ -228,14 +228,6 @@ This `img` element is hidden with `aria-hidden` set to "true".
 
 #### Inapplicable Example 4
 
-This element is neither an `img` element nor has a role of `img`.
-
-```html
-<div aria-label="W3C logo"></div>
-```
-
-#### Inapplicable Example 5
-
 This `img` element is hidden with `display: none`.
 
 ```html
@@ -244,7 +236,7 @@ This `img` element is hidden with `display: none`.
 </div>
 ```
 
-#### Inapplicable Example 6
+#### Inapplicable Example 5
 
 This `img` element is hidden with `visibility: hidden`.
 

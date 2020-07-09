@@ -33,7 +33,7 @@ This rules applies to any HTML element that:
 
 ## Expectation
 
-For each test target, the `lang` attribute has a [valid language tag][].
+For each test target, the value of the `lang` attribute is a [valid language tag][].
 
 ## Assumptions
 

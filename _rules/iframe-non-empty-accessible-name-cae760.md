@@ -21,7 +21,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to `iframe` elements that are [included in the accessibility tree][] and that can be accessed by [sequential focus navigation][].
+The rule applies to `iframe` elements that are [included in the accessibility tree][].
 
 **Note:** `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
 
@@ -37,10 +37,11 @@ If an `iframe` is not perceived by the user as a single control, it does not qua
 
 - Some browsers include `iframe` elements in the [sequential focus navigation][]. This ensures that the contents of `iframe` elements can be scrolled and accessed by using the keyboard. When an `iframe` is removed from the accessibility tree, this rule is still applicable for those browsers, unless the `iframe` is explicitly removed from [sequential focus navigation][] (by having the `tabindex` attribute set to a negative value).
 
-- Browser and assistive technology support for `iframe` elements is currently **inconsistent**. Some examples of inconsistencies include (but are not limited to):
-  - Assistive technologies being set up to ignore the `title` attribute, which means that to some users the `title` attribute will not act as an [accessible name][],
-  - There is a known combination of a popular browser and assistive technology that ignores `aria-label` and only announces `title` attribute as an [accessible name][]
-  - Some assistive technologies ignore empty `iframe` elements, regardless of if they are focusable or if they have an accessible name.
+- Browser and assistive technology support for `iframe` elements is currently **inconsistent**. Some examples of inconsistencies include, but are not limited to:
+  - When assistive technoligies are being set up to ignore the `title` attribute, which means that to some users the `title` attribute will not act as an [accessible name][].
+  - Some assistive technologies ignores `aria-label` and only announces `title` attribute as an [accessible name][].
+  - Some assistive technologies ignore empty `iframe` elements, regardless of if they are [focusable][] or if they have an [accessible name][].
+  - Some assistive technologies ignore non empty `iframe` elements that are both [focusable][] and have an [accessible name][].
 
 ## Background
 
@@ -107,7 +108,7 @@ This `iframe` element has an empty (`""`) [accessible name][] because the `title
 
 This `iframe` element has an empty (`""`) [accessible name][] because the `title` attribute value is trimmed of [whitespace][] by the [accessible name computation][accessible name and description computation].
 
-**Note:**: Because `iframe` elements are part of [sequential focus navigation][], the [explicit semantic role](#explicit-role) of `none` will be ignored, due to the [Presentational Roles Conflict Resolution](https://www.w3.org/TR/wai-aria-1.1/#presentational-roles-conflict-resolution).
+**Note:**: The [explicit semantic role](#explicit-role) of `none` will be ignored, due to the [Presentational Roles Conflict Resolution][].
 
 ```html
 <iframe title=" " src="/test-assets/SC4-1-2-frame-doc.html" role="none"> </iframe>
@@ -131,17 +132,11 @@ This `iframe` is not [included in the accessibility tree][] because of setting a
 <iframe style="display:none;" src="/test-assets/SC4-1-2-frame-doc.html"></iframe>
 ```
 
-#### Inapplicable Example 3
-
-This `iframe` element has a negative `tabindex` and therefore is not included in the [sequential focus navigation][].
-
-```html
-<iframe tabindex="-1" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
-```
-
 [accessible name]: #accessible-name 'Definition of accessible name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [whitespace]: #whitespace 'Definition of whitespace'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
 [accessible name and description computation]: https://www.w3.org/TR/accname
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#presentational-roles-conflict-resolution
+[focusable]: #focusable 'Definition of focusable'

@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 811,
+  "count": 810,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -11038,44 +11038,8 @@
       }
     },
     {
-      "testcaseId": "db06694502d16e2c236499a083a9a5ba899b9aef",
-      "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/c487ae/db06694502d16e2c236499a083a9a5ba899b9aef.html",
-      "relativePath": "testcases/c487ae/db06694502d16e2c236499a083a9a5ba899b9aef.html",
-      "expected": "failed",
-      "ruleId": "c487ae",
-      "ruleName": "Link has non-empty accessible name",
-      "rulePage": "https://act-rules.github.io/rules/c487ae",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G91": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
       "testcaseId": "f9597eed86766f9eb8a45e47fc90c0e85b3e8a3e",
-      "testcaseTitle": "Failed Example 4",
+      "testcaseTitle": "Failed Example 3",
       "url": "https://act-rules.github.io/testcases/c487ae/f9597eed86766f9eb8a45e47fc90c0e85b3e8a3e.html",
       "relativePath": "testcases/c487ae/f9597eed86766f9eb8a45e47fc90c0e85b3e8a3e.html",
       "expected": "failed",
@@ -11111,7 +11075,7 @@
     },
     {
       "testcaseId": "58f4527f6510d58a3cefc8978c6e61e651225cb7",
-      "testcaseTitle": "Failed Example 5",
+      "testcaseTitle": "Failed Example 4",
       "url": "https://act-rules.github.io/testcases/c487ae/58f4527f6510d58a3cefc8978c6e61e651225cb7.html",
       "relativePath": "testcases/c487ae/58f4527f6510d58a3cefc8978c6e61e651225cb7.html",
       "expected": "failed",
@@ -11147,7 +11111,7 @@
     },
     {
       "testcaseId": "b91527922e9f374fc7ee87c2fda7cab489ece76f",
-      "testcaseTitle": "Failed Example 6",
+      "testcaseTitle": "Failed Example 5",
       "url": "https://act-rules.github.io/testcases/c487ae/b91527922e9f374fc7ee87c2fda7cab489ece76f.html",
       "relativePath": "testcases/c487ae/b91527922e9f374fc7ee87c2fda7cab489ece76f.html",
       "expected": "failed",
@@ -11183,7 +11147,7 @@
     },
     {
       "testcaseId": "b12cb4d5f8a63c577fac96089483c7eb79efe378",
-      "testcaseTitle": "Failed Example 7",
+      "testcaseTitle": "Failed Example 6",
       "url": "https://act-rules.github.io/testcases/c487ae/b12cb4d5f8a63c577fac96089483c7eb79efe378.html",
       "relativePath": "testcases/c487ae/b12cb4d5f8a63c577fac96089483c7eb79efe378.html",
       "expected": "failed",
@@ -11219,7 +11183,7 @@
     },
     {
       "testcaseId": "113298e42bd5a240371affac3747a470c617610b",
-      "testcaseTitle": "Failed Example 8",
+      "testcaseTitle": "Failed Example 7",
       "url": "https://act-rules.github.io/testcases/c487ae/113298e42bd5a240371affac3747a470c617610b.html",
       "relativePath": "testcases/c487ae/113298e42bd5a240371affac3747a470c617610b.html",
       "expected": "failed",
@@ -11255,7 +11219,7 @@
     },
     {
       "testcaseId": "7453d6a6491ddfe546eabb9f9cf1f01a96b9a805",
-      "testcaseTitle": "Failed Example 9",
+      "testcaseTitle": "Failed Example 8",
       "url": "https://act-rules.github.io/testcases/c487ae/7453d6a6491ddfe546eabb9f9cf1f01a96b9a805.html",
       "relativePath": "testcases/c487ae/7453d6a6491ddfe546eabb9f9cf1f01a96b9a805.html",
       "expected": "failed",
@@ -11291,7 +11255,7 @@
     },
     {
       "testcaseId": "fea0a4b56d9205a5154ea246e65efa42545da31d",
-      "testcaseTitle": "Failed Example 10",
+      "testcaseTitle": "Failed Example 9",
       "url": "https://act-rules.github.io/testcases/c487ae/fea0a4b56d9205a5154ea246e65efa42545da31d.html",
       "relativePath": "testcases/c487ae/fea0a4b56d9205a5154ea246e65efa42545da31d.html",
       "expected": "failed",

@@ -113,7 +113,7 @@ This element with a `combobox` [role][semantic role] has an [accessible name][] 
 
 #### Failed Example 1
 
-This `input` element has no attribute to give it an [accessible name][].
+This `input` element does not have an attribute that gives an [accessible name][] to it.
 
 ```html
 <div>last name</div>
@@ -122,7 +122,7 @@ This `input` element has no attribute to give it an [accessible name][].
 
 #### Failed Example 2
 
-This disabled `input` element has no attribute to give it an [accessible name][].
+This disabled `input` element does not have an attribute that gives an [accessible name][] to it.
 
 ```html
 <input disabled />

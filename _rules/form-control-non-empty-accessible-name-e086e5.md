@@ -171,7 +171,7 @@ This element with a `textbox` [role][semantic role] has an empty (`""`) [accessi
 
 #### Inapplicable Example 1
 
-This `input` element is not [included in the accessibility tree][] because of its `style` attribute.
+This `input` element is not [included in the accessibility tree][] because of its `style` attribute which sets `display` to `none`.
 
 ```html
 <input aria-label="firstname" style="display:none;" />

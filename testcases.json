@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 810,
+  "count": 806,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -5938,10 +5938,10 @@
       }
     },
     {
-      "testcaseId": "922dad44827f6c5f274f1aa66ab4db93bd1cd5a5",
+      "testcaseId": "e71ccce6c5750132902bdaeccd223da5619cf2a0",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/e086e5/922dad44827f6c5f274f1aa66ab4db93bd1cd5a5.html",
-      "relativePath": "testcases/e086e5/922dad44827f6c5f274f1aa66ab4db93bd1cd5a5.html",
+      "url": "https://act-rules.github.io/testcases/e086e5/e71ccce6c5750132902bdaeccd223da5619cf2a0.html",
+      "relativePath": "testcases/e086e5/e71ccce6c5750132902bdaeccd223da5619cf2a0.html",
       "expected": "passed",
       "ruleId": "e086e5",
       "ruleName": "Form control has non-empty accessible name",
@@ -5956,10 +5956,10 @@
       }
     },
     {
-      "testcaseId": "a6c173e359eb2ff079eb5cbb3304d6dccc49112e",
+      "testcaseId": "5797606738d1d693408ce8fb6b72569b6e1d8f4c",
       "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/e086e5/a6c173e359eb2ff079eb5cbb3304d6dccc49112e.html",
-      "relativePath": "testcases/e086e5/a6c173e359eb2ff079eb5cbb3304d6dccc49112e.html",
+      "url": "https://act-rules.github.io/testcases/e086e5/5797606738d1d693408ce8fb6b72569b6e1d8f4c.html",
+      "relativePath": "testcases/e086e5/5797606738d1d693408ce8fb6b72569b6e1d8f4c.html",
       "expected": "passed",
       "ruleId": "e086e5",
       "ruleName": "Form control has non-empty accessible name",
@@ -5992,10 +5992,10 @@
       }
     },
     {
-      "testcaseId": "3f8800ebb135a62397b4c28a50e3c865d05a1cd4",
+      "testcaseId": "349a744f30b0601acbf12f43a7b8443c0018d903",
       "testcaseTitle": "Passed Example 5",
-      "url": "https://act-rules.github.io/testcases/e086e5/3f8800ebb135a62397b4c28a50e3c865d05a1cd4.html",
-      "relativePath": "testcases/e086e5/3f8800ebb135a62397b4c28a50e3c865d05a1cd4.html",
+      "url": "https://act-rules.github.io/testcases/e086e5/349a744f30b0601acbf12f43a7b8443c0018d903.html",
+      "relativePath": "testcases/e086e5/349a744f30b0601acbf12f43a7b8443c0018d903.html",
       "expected": "passed",
       "ruleId": "e086e5",
       "ruleName": "Form control has non-empty accessible name",
@@ -6010,28 +6010,10 @@
       }
     },
     {
-      "testcaseId": "6733c05fcd7f40e4e37961d8787cc12be405e152",
-      "testcaseTitle": "Passed Example 6",
-      "url": "https://act-rules.github.io/testcases/e086e5/6733c05fcd7f40e4e37961d8787cc12be405e152.html",
-      "relativePath": "testcases/e086e5/6733c05fcd7f40e4e37961d8787cc12be405e152.html",
-      "expected": "passed",
-      "ruleId": "e086e5",
-      "ruleName": "Form control has non-empty accessible name",
-      "rulePage": "https://act-rules.github.io/rules/e086e5",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "02850864df0a0129e789f6178884853a2d9510c1",
+      "testcaseId": "2531f5fa4a4c2f8f357de91cc8a54e244fd1e3d1",
       "testcaseTitle": "Failed Example 1",
-      "url": "https://act-rules.github.io/testcases/e086e5/02850864df0a0129e789f6178884853a2d9510c1.html",
-      "relativePath": "testcases/e086e5/02850864df0a0129e789f6178884853a2d9510c1.html",
+      "url": "https://act-rules.github.io/testcases/e086e5/2531f5fa4a4c2f8f357de91cc8a54e244fd1e3d1.html",
+      "relativePath": "testcases/e086e5/2531f5fa4a4c2f8f357de91cc8a54e244fd1e3d1.html",
       "expected": "failed",
       "ruleId": "e086e5",
       "ruleName": "Form control has non-empty accessible name",
@@ -6046,10 +6028,10 @@
       }
     },
     {
-      "testcaseId": "1a7947896922a005124b087a644c69a7cb106801",
+      "testcaseId": "41595c4b33d1b0f57d8acddf80fcdb3f45e50259",
       "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/e086e5/1a7947896922a005124b087a644c69a7cb106801.html",
-      "relativePath": "testcases/e086e5/1a7947896922a005124b087a644c69a7cb106801.html",
+      "url": "https://act-rules.github.io/testcases/e086e5/41595c4b33d1b0f57d8acddf80fcdb3f45e50259.html",
+      "relativePath": "testcases/e086e5/41595c4b33d1b0f57d8acddf80fcdb3f45e50259.html",
       "expected": "failed",
       "ruleId": "e086e5",
       "ruleName": "Form control has non-empty accessible name",
@@ -6064,10 +6046,10 @@
       }
     },
     {
-      "testcaseId": "14b18b1ef2e54db1569a2945cd6238d7cc776e92",
+      "testcaseId": "84e492b81cec73eb4b9996290cc34fb01a911d0c",
       "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/e086e5/14b18b1ef2e54db1569a2945cd6238d7cc776e92.html",
-      "relativePath": "testcases/e086e5/14b18b1ef2e54db1569a2945cd6238d7cc776e92.html",
+      "url": "https://act-rules.github.io/testcases/e086e5/84e492b81cec73eb4b9996290cc34fb01a911d0c.html",
+      "relativePath": "testcases/e086e5/84e492b81cec73eb4b9996290cc34fb01a911d0c.html",
       "expected": "failed",
       "ruleId": "e086e5",
       "ruleName": "Form control has non-empty accessible name",
@@ -6082,10 +6064,10 @@
       }
     },
     {
-      "testcaseId": "1ee82af93bb5a923492eb7bdb75ae8311f8ce65a",
+      "testcaseId": "ac208d5116efc2a0fb06d2a414cd8a600a5b3723",
       "testcaseTitle": "Failed Example 4",
-      "url": "https://act-rules.github.io/testcases/e086e5/1ee82af93bb5a923492eb7bdb75ae8311f8ce65a.html",
-      "relativePath": "testcases/e086e5/1ee82af93bb5a923492eb7bdb75ae8311f8ce65a.html",
+      "url": "https://act-rules.github.io/testcases/e086e5/ac208d5116efc2a0fb06d2a414cd8a600a5b3723.html",
+      "relativePath": "testcases/e086e5/ac208d5116efc2a0fb06d2a414cd8a600a5b3723.html",
       "expected": "failed",
       "ruleId": "e086e5",
       "ruleName": "Form control has non-empty accessible name",
@@ -6136,42 +6118,6 @@
       }
     },
     {
-      "testcaseId": "adf030cbf092074e294d7a7c96d48bb3a9c6519a",
-      "testcaseTitle": "Failed Example 7",
-      "url": "https://act-rules.github.io/testcases/e086e5/adf030cbf092074e294d7a7c96d48bb3a9c6519a.html",
-      "relativePath": "testcases/e086e5/adf030cbf092074e294d7a7c96d48bb3a9c6519a.html",
-      "expected": "failed",
-      "ruleId": "e086e5",
-      "ruleName": "Form control has non-empty accessible name",
-      "rulePage": "https://act-rules.github.io/rules/e086e5",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "d66cecf816502bf473ed12757d0fccde4d2bc2be",
-      "testcaseTitle": "Failed Example 8",
-      "url": "https://act-rules.github.io/testcases/e086e5/d66cecf816502bf473ed12757d0fccde4d2bc2be.html",
-      "relativePath": "testcases/e086e5/d66cecf816502bf473ed12757d0fccde4d2bc2be.html",
-      "expected": "failed",
-      "ruleId": "e086e5",
-      "ruleName": "Form control has non-empty accessible name",
-      "rulePage": "https://act-rules.github.io/rules/e086e5",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
       "testcaseId": "b33d341ade65ba30970c4fa4fe30ce8d1dd70867",
       "testcaseTitle": "Inapplicable Example 1",
       "url": "https://act-rules.github.io/testcases/e086e5/b33d341ade65ba30970c4fa4fe30ce8d1dd70867.html",
@@ -6208,26 +6154,8 @@
       }
     },
     {
-      "testcaseId": "f2c637fa390e645eaf7b9f04059a427c379907f0",
-      "testcaseTitle": "Inapplicable Example 3",
-      "url": "https://act-rules.github.io/testcases/e086e5/f2c637fa390e645eaf7b9f04059a427c379907f0.html",
-      "relativePath": "testcases/e086e5/f2c637fa390e645eaf7b9f04059a427c379907f0.html",
-      "expected": "inapplicable",
-      "ruleId": "e086e5",
-      "ruleName": "Form control has non-empty accessible name",
-      "rulePage": "https://act-rules.github.io/rules/e086e5",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
       "testcaseId": "09b08d811784ac228154dd08863441b11222a597",
-      "testcaseTitle": "Inapplicable Example 4",
+      "testcaseTitle": "Inapplicable Example 3",
       "url": "https://act-rules.github.io/testcases/e086e5/09b08d811784ac228154dd08863441b11222a597.html",
       "relativePath": "testcases/e086e5/09b08d811784ac228154dd08863441b11222a597.html",
       "expected": "inapplicable",

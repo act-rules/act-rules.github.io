@@ -26,11 +26,9 @@ The rule applies to any [keyboard event][]:
 ## Expectation
 
 For each test target at least one of the following is true:
- - (**Disable**:) There is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] of the registered event or can be found in a [clearly labeled location][] from that [web page][]. The set of [instruments][instrument] can be used to prevent [changes to the content][changes in content] of the [web page][] resulting from the [keyboard event][] within a 10 minute time span of the [event firing][]; or
- - (**Focus**:) If the [event target][] doesn't have [focus][] there are no [changes to the content][changes in content] resulting from the [keyboard event][] within a 10 minute time span of the [event firing][]; or
- - (**Remap**:) There is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] of the registered event or can be found in a [clearly labeled location][] from that [web page][]. The set of [instruments][instrument] can be used to prevent [changes to the content][changes in content] of the [web page][] within a 10 minute time span of the [event firing][] when the [keyboard event][] method `getModifierState` returns `false`;
-
-**Note:** The 10 minute time span is an arbitrary limit which is not included in WCAG. Results that happen after this period will not fail this rule but may nonetheless fail [Success Criterion 2.1.4: Character Key Shortcuts][sc 2.1.4]. The accessibility problem tends to be less severe for longer time periods, and without a time limit, testing this rule consistently would be impractical.
+ - (**Disable**:) There is at least one [set of clearly labelled instruments][] to [block the event][blocked event]; or
+ - (**Remap**:) There is at least one [set of clearly labelled instruments][] to [block the event][blocked event] when the [keyboard event][] method `getModifierState` doesn't return `true`; or
+ - (**Focus**:) If the [event target][] doesn't have [focus][] the [event is blocked][blocked event].
 
 ## Assumptions
 
@@ -135,7 +133,7 @@ This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] 
 
 #### Passed Example 4
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`.
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` doesn't return `true`.
 
 ```html
 <html>
@@ -166,7 +164,7 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 
 #### Passed Example 5
 
-This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and for each [keyboard event][] exists an [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`.
+This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and for each [keyboard event][] exists an [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` doesn't return `true`.
 
 ```html
 <html>
@@ -201,7 +199,7 @@ This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] 
 
 #### Passed Example 6
 
-This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`. In this case, the same [instrument][] is used to **remap** both [keyboard events][keyboard event]
+This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` doesn't return `true`. In this case, the same [instrument][] is used to **remap** both [keyboard events][keyboard event]
 
 ```html
 <html>
@@ -232,7 +230,7 @@ This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] 
 
 #### Passed Example 7
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, but the result is prevented when the [event target][] doesn't have [focus][].
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, but the [event is blocked][blocked event] when the [event target][] doesn't have [focus][].
 
 ```html
 <html>
@@ -257,7 +255,7 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 
 This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and:
  - there exists an [instrument][] to **disable** the [keyboard event][]; and
- - there exists an [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`; and
+ - there exists an [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` doesn't return `true`; and
  - both [instruments][instrument] can be found in a [clearly labeled location][].
 
 ```html
@@ -320,8 +318,8 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 
 This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and:
  - there doesn't exist any [instrument][] to **disable** the [keyboard event][]; nor
- - [changes to the content][changes in content] by the [keyboard event][] are prevented when the [event target][] doesn't have [focus][]; nor
- - there doesn't exists any [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`.
+ - the [event is blocked][blocked event] when the [event target][] doesn't have [focus][]; nor
+ - there doesn't exists any [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` doesn't return `true`.
 
 ```html
 <html>
@@ -417,7 +415,7 @@ This document is not an [HTML document][].
 
 #### Inapplicable Example 2
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returns `true`.
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` doesn't return `false`.
 
 ```html
 <html>
@@ -539,10 +537,11 @@ This [HTML document][] has an element with the attribute `accesskey`. Accesskeys
 [legacy keyboard events]: https://www.w3.org/TR/uievents/#legacy-keyboardevent-events
 [dispatched]: https://dom.spec.whatwg.org/#dispatching-events
 [event firing]: https://dom.spec.whatwg.org/#concept-event-fire
-[sc 2.1.4]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html#dfn-process
 [changes in content]: #changes-in-content 'Definition of changes in content'
 [clearly labeled location]: #clearly-labeled-location 'Definition of clearly labeled location'
 [web page]: #web-page-html 'Definition of web page'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
+[set of clearly labelled instruments]: #set-of-clearly-labelled-instruments 'Definition of set of clearly labelled instruments'
+[blocked event]: #blocked-event 'Definition of blocked event'
 [printable character]: #printable-characters 'Definition of printable characters'
 [non-printable characters]: #non-printable-characters 'Definition of non-printable characters'

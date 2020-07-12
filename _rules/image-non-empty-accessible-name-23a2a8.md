@@ -222,8 +222,7 @@ This `img` element has an [explicit role][] of `none`. However, it is [focusable
 
 #### Failed Example 6
 
-This `img` element displays a CSS `background-image`, has an empty [accessible name][] and an [implicit role][] of `img` because it is missing 
-an empty `alt` attribute.
+This `img` element displays a CSS `background-image`, has an empty [accessible name][] and an [implicit role][] of `img` because it is missing an empty `alt` attribute.
 
 ```html
 <img style="width:72px; height:48px; background-image: url(/test-assets/shared/w3c-logo.png)" />

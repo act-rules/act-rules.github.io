@@ -291,6 +291,10 @@ This element is neither an `img` element nor has a role of `img`.
 
 This `img` element has no `src` attribute and no `alt` attribute so does not render an image and [represents nothing][].
 
+```html
+<img />
+```
+
 #### Inapplicable Example 6
 
 This `img` element does not display a CSS `background-image`, has no `src` attribute and no `alt` attribute so does not render an image and [represents nothing][].
@@ -304,7 +308,7 @@ This `img` element does not display a CSS `background-image`, has no `src` attri
 This `img` element has an `src` attribute which will cause the [image request state][] to be [Broken](https://html.spec.whatwg.org/#img-error).
 
 ```html
-<img />
+<img src="/test-assets/does-not-exist.png" />
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

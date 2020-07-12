@@ -230,8 +230,7 @@ This `img` element displays a CSS `background-image`, has an empty [accessible n
 
 #### Failed Example 7
 
-This `img` element displays a `srcset`, has an empty [accessible name][] and an [implicit role][] of `img` because it is missing 
-an empty `alt` attribute.
+This `img` element displays a `srcset`, has an empty [accessible name][] and an [implicit role][] of `img`.
 
 ```html
 <img srcset="/test-assets/shared/w3c-logo.png" />

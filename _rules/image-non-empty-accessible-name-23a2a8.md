@@ -289,7 +289,19 @@ This element is neither an `img` element nor has a role of `img`.
 
 #### Inapplicable Example 5
 
-This `img` element has no `src` attribute so does not render an image.
+This `img` element has no `src` attribute and no `alt` attribute so does not render an image and [represents nothing][].
+
+#### Inapplicable Example 6
+
+This `img` element does not display a CSS `background-image`, has no `src` attribute and no `alt` attribute so does not render an image and [represents nothing][].
+
+```html
+<img style="width:72px; height:48px; background-image: none" />
+```
+
+#### Inapplicable Example 7
+
+This `img` element has an `src` attribute which will cause the [image request state][] to be [Broken](https://html.spec.whatwg.org/#img-error).
 
 ```html
 <img />
@@ -305,3 +317,4 @@ This `img` element has no `src` attribute so does not render an image.
 [current request]: https://html.spec.whatwg.org/#current-request 'HTML definition of Current request, 2020/03/06'
 [image request state]: https://html.spec.whatwg.org/#img-req-state 'HTML definition of Image request state, 2020/03/06'
 [completely available]: https://html.spec.whatwg.org/#img-all 'HTML definition of Completely available, 2020/03/06'
+[represents nothing]: https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element:attr-img-src-9 'HTML definition of Represents Nothing, 2020/03/06'

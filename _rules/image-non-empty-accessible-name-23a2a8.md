@@ -238,8 +238,7 @@ This `img` element displays a `srcset`, has an empty [accessible name][] and an 
 
 #### Failed Example 8
 
-This `picture` element displays a `srcset`, has an empty [accessible name][] and an [implicit role][] of `img` because it is missing 
-an empty `alt` attribute.
+This `picture` element displays a `srcset`, has an empty [accessible name][] and an [implicit role][] of `img`.
 
 ```html
 <picture>

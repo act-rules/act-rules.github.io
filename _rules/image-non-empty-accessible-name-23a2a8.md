@@ -169,7 +169,7 @@ This `img` element displays a `srcset` and has an [accessible name][] because of
 
 #### Passed Example 11
 
-This `picture` element displays a `srcset` and has an [accessible name][] because of the `alt` attribute.
+This `img` element displays a `srcset` and has an [accessible name][] because of the `alt` attribute.
 
 ```html
 <picture>
@@ -222,7 +222,7 @@ This `img` element has an [explicit role][] of `none`. However, it is [focusable
 
 #### Failed Example 6
 
-This `img` element displays a CSS `background-image`, has an empty [accessible name][] and an [implicit role][] of `img` because it is missing an empty `alt` attribute.
+This `img` element displays a CSS `background-image`, has an empty [accessible name][] and an [implicit role][] of `img`.
 
 ```html
 <img style="width:72px; height:48px; background-image: url(/test-assets/shared/w3c-logo.png)" />
@@ -238,7 +238,7 @@ This `img` element displays a `srcset`, has an empty [accessible name][] and an 
 
 #### Failed Example 8
 
-This `picture` element displays a `srcset`, has an empty [accessible name][] and an [implicit role][] of `img`.
+This `img` element displays a `srcset`, has an empty [accessible name][] and an [implicit role][] of `img`.
 
 ```html
 <picture>

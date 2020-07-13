@@ -166,6 +166,7 @@
 - clientWidth
 - innerHeight
 - innerWidth
+- innerText
 - scrollbars
 - documentElement
 - rects
@@ -186,6 +187,7 @@
 - untestable
 - scrollable
 - scrollbars
+- subconditions
 
 # Parts of Unicode
 - 000A

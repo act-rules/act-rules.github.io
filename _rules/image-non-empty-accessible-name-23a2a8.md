@@ -144,7 +144,7 @@ This `img` element has an [explicit role][] of `none` because of the value of th
 
 #### Passed Example 8
 
-This `img` element inside a `div` positioned off screen has an [implicit role][] of `img` because of the empty `alt` attribute.
+This off screen `img` element has an [implicit role][] of `presentation` because of the empty `alt` attribute.
 
 ```html
 <div style="margin-left:-9999px;">

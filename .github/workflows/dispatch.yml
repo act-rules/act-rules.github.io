@@ -1,6 +1,8 @@
+# This workflow runs when:
+# - A push lands on develop branch
+# - It notifies the website repo with a repository_dispatch event (this event starts a new website build)
 name: dispatch
 
-# Run on push/commit targetting `develop` branch
 on:
   push:
     branches:
@@ -11,7 +13,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v1
-      - shell: bash
-        name: send 'repository_dispatch' trigger to ACT W repository
-        run: |
+      - run: |
           curl -XPOST -u "${{ secrets.USER_NAME }}:${{ secrets.USER_PAT }}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/act-rules/act-rules-web/dispatches --data '{ "event_type": "build_application" }'

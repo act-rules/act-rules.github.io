@@ -24,8 +24,8 @@ acknowledgments:
 The rule applies to any HTML `input`, `select` and `textarea` element with an `autocomplete` attribute that is a set of one or more [space separated tokens](https://html.spec.whatwg.org/#set-of-space-separated-tokens), except if one of the following is true:
 
 - The element is not [visible](#visible), and not [included in the accessibility tree](#included-in-the-accessibility-tree)
-- The element is an `input` element with a `type` property of `hidden`, `button`, `submit` or `reset`
-- The element has an `aria-disabled="true"` attribute
+- The element is an `input` element with a `type` [attribute value][] of either `hidden`, `button`, `submit` or `reset`
+- The element has an `aria-disabled` [attribute value][] of `true`
 - The element is not part of [sequential focus navigation](https://html.spec.whatwg.org/#sequential-focus-navigation) and has a [semantic role](#semantic-role) that is not a [widget role](https://www.w3.org/TR/wai-aria-1.1/#widget_roles).
 
 ## Expectation 1
@@ -55,6 +55,7 @@ For this rule, it is assumed that the `autocomplete` attribute is not used on fo
 
 - While `autocomplete` in a promising technique for supporting personalization in HTML, support for this is fairly limited.
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+- Some user agents treat the value of the `aria-disabled` attribute as case-sensitive.
 
 ## Background
 
@@ -73,7 +74,7 @@ The intent of this rule is to ensure that the `autocomplete` attribute can be us
 Single autocomplete term.
 
 ```html
-<input autocomplete="username" />
+<label>Username<input autocomplete="username"/></label>
 ```
 
 #### Passed Example 2
@@ -100,7 +101,7 @@ Autocomplete term, only valid for textarea.
 Two autocomplete terms.
 
 ```html
-<input autocomplete="Work EMail" />
+<label>Work email<input autocomplete="Work Email"/></label>
 ```
 
 #### Passed Example 5
@@ -108,7 +109,7 @@ Two autocomplete terms.
 Autocomplete using section-\*
 
 ```html
-<input autocomplete="section-partner email" />
+<label>Email<input autocomplete="section-partner email"/></label>
 ```
 
 #### Passed Example 6
@@ -116,7 +117,7 @@ Autocomplete using section-\*
 Triple autocomplete terms.
 
 ```html
-<input type="text" autocomplete="section-primary billing address-line1" />
+<label>Address<input type="text" autocomplete="section-primary billing address-line1"/></label>
 ```
 
 #### Passed Example 7
@@ -124,7 +125,7 @@ Triple autocomplete terms.
 Full length autocomplete terms.
 
 ```html
-<input autocomplete="section-primary shipping work email" />
+<label>Email<input autocomplete="section-primary shipping work email"/></label>
 ```
 
 #### Passed Example 8
@@ -132,7 +133,7 @@ Full length autocomplete terms.
 This `input` element has an [explicit role][] of `none`. However, it is [focusable][] (by default). Thus it has a [semantic role][] of `textbox` due to [Presentational Roles Conflict Resolution][]. It has a single autocomplete term.
 
 ```html
-<input role="none" autocomplete="username" />
+<label>Username<input role="none" autocomplete="username"/></label>
 ```
 
 #### Passed Example 9
@@ -140,7 +141,7 @@ This `input` element has an [explicit role][] of `none`. However, it is [focusab
 The `input` element does not participates in sequential focus navigation, but still has a semantic role that is a widget role, and has a single autocomplete term.
 
 ```html
-<input tabindex="-1" autocomplete="username" />
+<label>Username<input tabindex="-1" autocomplete="username"/></label>
 ```
 
 #### Passed Example 10
@@ -148,7 +149,7 @@ The `input` element does not participates in sequential focus navigation, but st
 The `input` element does not have a semantic role that is a widget role, but still participates in sequential focus navigation because of the [`tabindex` attribute](https://html.spec.whatwg.org/#the-tabindex-attribute), and has a single autocomplete term.
 
 ```html
-<input role="none" tabindex="0" autocomplete="username" />
+<label>Username<input role="banner" tabindex="0" autocomplete="username"/></label>
 ```
 
 ### Failed
@@ -158,7 +159,7 @@ The `input` element does not have a semantic role that is a widget role, but sti
 Unknown autocomplete term.
 
 ```html
-<input autocomplete="badterm" />
+<label>Username<input autocomplete="badterm"/></label>
 ```
 
 #### Failed Example 2
@@ -166,7 +167,7 @@ Unknown autocomplete term.
 Term `work` not allowed before `photo`.
 
 ```html
-<input autocomplete="work photo" />
+<label>Photo<input autocomplete="work photo"/></label>
 ```
 
 #### Failed Example 3
@@ -174,7 +175,7 @@ Term `work` not allowed before `photo`.
 Invalid order of terms.
 
 ```html
-<input autocomplete="work shipping email" />
+<label>Email<input autocomplete="work shipping email"/></label>
 ```
 
 #### Failed Example 4
@@ -182,7 +183,7 @@ Invalid order of terms.
 Comma separated rather than space separated list.
 
 ```html
-<input autocomplete="work,email" />
+<label>Email<input autocomplete="work,email"/></label>
 ```
 
 #### Failed Example 5
@@ -190,7 +191,7 @@ Comma separated rather than space separated list.
 Autocomplete is inappropriate for the type of field.
 
 ```html
-<input type="number" autocomplete="email" />
+<label>Email<input type="number" autocomplete="email"/></label>
 ```
 
 ### Inapplicable
@@ -208,7 +209,7 @@ Inapplicable element.
 Autocomplete attribute is empty ("").
 
 ```html
-<input autocomplete="" />
+<label>Username<input autocomplete=""/></label>
 ```
 
 #### Inapplicable Example 3
@@ -216,7 +217,7 @@ Autocomplete attribute is empty ("").
 The element is hidden through `display:none`.
 
 ```html
-<input autocomplete="username" style="display:none" />
+<label>Username<input autocomplete="username" style="display:none"/></label>
 ```
 
 #### Inapplicable Example 4
@@ -224,7 +225,7 @@ The element is hidden through `display:none`.
 The `input` element has a `type` attribute that is in the `button` state.
 
 ```html
-<input type="button" autocomplete="username" />
+<label>Username<input type="button" autocomplete="username"/></label>
 ```
 
 #### Inapplicable Example 5
@@ -232,7 +233,7 @@ The `input` element has a `type` attribute that is in the `button` state.
 The `input` element has a `type` attribute that is in the `hidden` state.
 
 ```html
-<input type="hidden" autocomplete="username" />
+<label>Username<input type="hidden" autocomplete="username"/></label>
 ```
 
 #### Inapplicable Example 6
@@ -240,7 +241,7 @@ The `input` element has a `type` attribute that is in the `hidden` state.
 The `input` element has an HTML `disabled` attribute.
 
 ```html
-<input autocomplete="username" disabled />
+<label>Username<input autocomplete="username" disabled/></label>
 ```
 
 #### Inapplicable Example 7
@@ -248,7 +249,7 @@ The `input` element has an HTML `disabled` attribute.
 The `input` element has an `aria-disabled` attribute with value `true`.
 
 ```html
-<input autocomplete="username" aria-disabled="true" />
+<label>Username<input autocomplete="username" aria-disabled="true"/></label>
 ```
 
 #### Inapplicable Example 8
@@ -256,7 +257,7 @@ The `input` element has an `aria-disabled` attribute with value `true`.
 Non-widget element that does not participate in sequential focus navigation.
 
 ```html
-<input type="button" role="none" disabled autocomplete="username" />
+<label>Username<input type="button" role="none" disabled autocomplete="username"/></label>
 ```
 
 #### Inapplicable Example 9
@@ -264,9 +265,10 @@ Non-widget element that does not participate in sequential focus navigation.
 Autocomplete attribute contains no tokens.
 
 ```html
-<input autocomplete=" " />
+<label>Username<input autocomplete=" "/></label>
 ```
 
+[attribute value]: #attribute-value 'Definition of Attribute Value'
 [explicit role]: #explicit-role 'Definition of explicit role'
 [focusable]: #focusable 'Definition of focusable'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'

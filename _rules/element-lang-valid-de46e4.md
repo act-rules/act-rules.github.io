@@ -25,11 +25,10 @@ acknowledgments:
 
 ## Applicability
 
-This rules applies to any HTML element that:
+This rules applies to any HTML element with a `lang` [attribute value][] that is not empty (`""`) and for which all the following is true:
 
-- has a [node document][] with a [content type][] of `text/html`; and
-- is a [descendant][] in the [flat tree][] of a `body` element; and
-- has a `lang` attribute that is not empty (`""`).
+- the element is a [descendant][] in the [flat tree][] of a `body` element; and
+- the element has a [node document][] with a [content type][] of `text/html`.
 
 ## Expectation
 
@@ -110,7 +109,7 @@ The `lang` attribute value is not a primary language subtag.
 <html>
 	<body>
 		<article lang="dutch">
-			They wandered into a strange Tiki bar on the edge of the small beach town.
+			Zij liepen een vreemde Tiki bar binnen, aan de rand van een dorpje aan het strand.
 		</article>
 	</body>
 </html>

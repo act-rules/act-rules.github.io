@@ -10,6 +10,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:1.4.10: # Reflow (AA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
 acknowledgments:
@@ -32,6 +37,7 @@ For each test target, the `content` attribute, whose value is mapped to a list o
 ## Assumptions
 
 - The [page][] has [visible][] [content][].
+- There is no other [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) available to resize the text content.
 
 ## Accessibility Support
 

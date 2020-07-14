@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 816,
+  "count": 821,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -4627,6 +4627,96 @@
           "inapplicable": "further testing needed"
         },
         "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "562a50f7c09f0abee7d731a9db8b920484fcf89c",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/c249d5/562a50f7c09f0abee7d731a9db8b920484fcf89c.html",
+      "relativePath": "testcases/c249d5/562a50f7c09f0abee7d731a9db8b920484fcf89c.html",
+      "expected": "passed",
+      "ruleId": "c249d5",
+      "ruleName": "Device motion based changes to the content can be disabled",
+      "rulePage": "https://act-rules.github.io/rules/c249d5",
+      "ruleAccessibilityRequirements": {
+        "wcag21:2.5.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "da66b85680371a437fb2f8bbf7e0777a1ed610a3",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/c249d5/da66b85680371a437fb2f8bbf7e0777a1ed610a3.html",
+      "relativePath": "testcases/c249d5/da66b85680371a437fb2f8bbf7e0777a1ed610a3.html",
+      "expected": "passed",
+      "ruleId": "c249d5",
+      "ruleName": "Device motion based changes to the content can be disabled",
+      "rulePage": "https://act-rules.github.io/rules/c249d5",
+      "ruleAccessibilityRequirements": {
+        "wcag21:2.5.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "079abe6ec53d863e7936b1b3cc62b7fd6e1a8c61",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/c249d5/079abe6ec53d863e7936b1b3cc62b7fd6e1a8c61.html",
+      "relativePath": "testcases/c249d5/079abe6ec53d863e7936b1b3cc62b7fd6e1a8c61.html",
+      "expected": "passed",
+      "ruleId": "c249d5",
+      "ruleName": "Device motion based changes to the content can be disabled",
+      "rulePage": "https://act-rules.github.io/rules/c249d5",
+      "ruleAccessibilityRequirements": {
+        "wcag21:2.5.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "1956586fadcd64aa29e8bab805711cc4d11b8156",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/c249d5/1956586fadcd64aa29e8bab805711cc4d11b8156.html",
+      "relativePath": "testcases/c249d5/1956586fadcd64aa29e8bab805711cc4d11b8156.html",
+      "expected": "failed",
+      "ruleId": "c249d5",
+      "ruleName": "Device motion based changes to the content can be disabled",
+      "rulePage": "https://act-rules.github.io/rules/c249d5",
+      "ruleAccessibilityRequirements": {
+        "wcag21:2.5.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "7d33f77ef4b11921c75bd93fc270e6d58398ecd0",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/c249d5/7d33f77ef4b11921c75bd93fc270e6d58398ecd0.html",
+      "relativePath": "testcases/c249d5/7d33f77ef4b11921c75bd93fc270e6d58398ecd0.html",
+      "expected": "inapplicable",
+      "ruleId": "c249d5",
+      "ruleName": "Device motion based changes to the content can be disabled",
+      "rulePage": "https://act-rules.github.io/rules/c249d5",
+      "ruleAccessibilityRequirements": {
+        "wcag21:2.5.4": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",

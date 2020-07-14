@@ -1,0 +1,30 @@
+<!DOCTYPE html> <html>
+	<head>
+		<title>Passed Example 3</title>
+		<script src="/test-assets/7677a9/slider.js"></script>
+		<script>
+			function activateSlider() {
+				window.addEventListener('devicemotion', handleMotionCanBeDisabled)
+			}
+		</script>
+	</head>
+
+	<body onload="activateSlider();">
+		<h1>Slider Motion Sensor Example</h1>
+
+		<p>
+			Open this slider on a device with a motion sensor, such as a smart phone or tablet. Rotate the device to adjust
+			the slider value. The check box disables the motion sensing adjustment.
+		</p>
+		<p>Note: This example may not work across all browsers.</p>
+
+		<div>
+			<input type="range" min="1" max="100" value="50" id="motionSlider" disabled />
+			<p aria-live="polite">Slider Value: <span id="output">50</span></p>
+		</div>
+		<div>
+			<input type="checkbox" id="disableMotion" />
+			<label for="disableMotion">Disable Motion Actuation</label>
+		</div>
+	</body>
+</html>

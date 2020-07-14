@@ -1,0 +1,29 @@
+<!DOCTYPE html> <html>
+	<head>
+		<title>Failed Example 1</title>
+		<script src="/test-assets/7677a9/slider.js"></script>
+		<script>
+			function activateSlider() {
+				window.addEventListener('deviceorientation', handleOrientation)
+			}
+		</script>
+	</head>
+
+	<body onload="activateSlider();">
+		<pre class="output"></pre>
+
+		<h1>Slider Motion Sensor Example</h1>
+
+		<p>
+			Open this slider on a device with a motion sensor, such as a smartphone or tablet. Tilt the device to the right
+			and left to adjust the slider value.
+		</p>
+		<p>Note: This example may not work across all browsers.</p>
+
+		<div>
+			<input type="range" min="1" max="100" value="50" id="motionSlider" disabled />
+			<button id="increaseSlider" type="button">Increase Value</button>
+			<p aria-live="polite">Slider Value: <span id="output">50</span></p>
+		</div>
+	</body>
+</html>

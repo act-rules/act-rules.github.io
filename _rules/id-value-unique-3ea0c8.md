@@ -29,7 +29,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-Any `id` attribute which is not an empty string (`""`), specified on a HTML or SVG element.
+Any `id` attribute whose value is not an empty string (`""`), specified on a HTML or SVG element.
 
 **Note:** Elements that are neither [included in the accessibility tree][] nor [visible][] are still considered for this rule.
 

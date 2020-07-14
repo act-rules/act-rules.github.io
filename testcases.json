@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 806,
+  "count": 816,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -4825,6 +4825,116 @@
           "inapplicable": "further testing needed"
         }
       }
+    },
+    {
+      "testcaseId": "d2376f664c3f9fa50d812e6c0be2da80f05351ae",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/46ca7f/d2376f664c3f9fa50d812e6c0be2da80f05351ae.html",
+      "relativePath": "testcases/46ca7f/d2376f664c3f9fa50d812e6c0be2da80f05351ae.html",
+      "expected": "passed",
+      "ruleId": "46ca7f",
+      "ruleName": "Element marked as decorative is not exposed",
+      "rulePage": "https://act-rules.github.io/rules/46ca7f",
+      "ruleAccessibilityRequirements": null
+    },
+    {
+      "testcaseId": "3e7e68027e4a9faee951621fdc95d4e3e76fa25c",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/46ca7f/3e7e68027e4a9faee951621fdc95d4e3e76fa25c.html",
+      "relativePath": "testcases/46ca7f/3e7e68027e4a9faee951621fdc95d4e3e76fa25c.html",
+      "expected": "passed",
+      "ruleId": "46ca7f",
+      "ruleName": "Element marked as decorative is not exposed",
+      "rulePage": "https://act-rules.github.io/rules/46ca7f",
+      "ruleAccessibilityRequirements": null
+    },
+    {
+      "testcaseId": "5d4c468cccb5696ac52e23f1b1544f8f27b3c830",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/46ca7f/5d4c468cccb5696ac52e23f1b1544f8f27b3c830.html",
+      "relativePath": "testcases/46ca7f/5d4c468cccb5696ac52e23f1b1544f8f27b3c830.html",
+      "expected": "passed",
+      "ruleId": "46ca7f",
+      "ruleName": "Element marked as decorative is not exposed",
+      "rulePage": "https://act-rules.github.io/rules/46ca7f",
+      "ruleAccessibilityRequirements": null
+    },
+    {
+      "testcaseId": "9a8dab22acd170c003ed2bb9ac71d94dcb41b5f0",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/46ca7f/9a8dab22acd170c003ed2bb9ac71d94dcb41b5f0.html",
+      "relativePath": "testcases/46ca7f/9a8dab22acd170c003ed2bb9ac71d94dcb41b5f0.html",
+      "expected": "passed",
+      "ruleId": "46ca7f",
+      "ruleName": "Element marked as decorative is not exposed",
+      "rulePage": "https://act-rules.github.io/rules/46ca7f",
+      "ruleAccessibilityRequirements": null
+    },
+    {
+      "testcaseId": "90bd58b1ff496fea3d6ccae7763f170a063ab9c3",
+      "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/46ca7f/90bd58b1ff496fea3d6ccae7763f170a063ab9c3.html",
+      "relativePath": "testcases/46ca7f/90bd58b1ff496fea3d6ccae7763f170a063ab9c3.html",
+      "expected": "passed",
+      "ruleId": "46ca7f",
+      "ruleName": "Element marked as decorative is not exposed",
+      "rulePage": "https://act-rules.github.io/rules/46ca7f",
+      "ruleAccessibilityRequirements": null
+    },
+    {
+      "testcaseId": "9ab6e71391047a65761ba719964a1b17a06b10d0",
+      "testcaseTitle": "Passed Example 6",
+      "url": "https://act-rules.github.io/testcases/46ca7f/9ab6e71391047a65761ba719964a1b17a06b10d0.html",
+      "relativePath": "testcases/46ca7f/9ab6e71391047a65761ba719964a1b17a06b10d0.html",
+      "expected": "passed",
+      "ruleId": "46ca7f",
+      "ruleName": "Element marked as decorative is not exposed",
+      "rulePage": "https://act-rules.github.io/rules/46ca7f",
+      "ruleAccessibilityRequirements": null
+    },
+    {
+      "testcaseId": "c38bd0fb2bbbbbc1accb78b8553876455d376626",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/46ca7f/c38bd0fb2bbbbbc1accb78b8553876455d376626.html",
+      "relativePath": "testcases/46ca7f/c38bd0fb2bbbbbc1accb78b8553876455d376626.html",
+      "expected": "failed",
+      "ruleId": "46ca7f",
+      "ruleName": "Element marked as decorative is not exposed",
+      "rulePage": "https://act-rules.github.io/rules/46ca7f",
+      "ruleAccessibilityRequirements": null
+    },
+    {
+      "testcaseId": "1bb3c615f8639cee0364df19d59492763cdf64f0",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/46ca7f/1bb3c615f8639cee0364df19d59492763cdf64f0.html",
+      "relativePath": "testcases/46ca7f/1bb3c615f8639cee0364df19d59492763cdf64f0.html",
+      "expected": "failed",
+      "ruleId": "46ca7f",
+      "ruleName": "Element marked as decorative is not exposed",
+      "rulePage": "https://act-rules.github.io/rules/46ca7f",
+      "ruleAccessibilityRequirements": null
+    },
+    {
+      "testcaseId": "baa8fcdcf15e343cd41191c69107306ad821c500",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/46ca7f/baa8fcdcf15e343cd41191c69107306ad821c500.html",
+      "relativePath": "testcases/46ca7f/baa8fcdcf15e343cd41191c69107306ad821c500.html",
+      "expected": "failed",
+      "ruleId": "46ca7f",
+      "ruleName": "Element marked as decorative is not exposed",
+      "rulePage": "https://act-rules.github.io/rules/46ca7f",
+      "ruleAccessibilityRequirements": null
+    },
+    {
+      "testcaseId": "6cbbb6526b978c74150a01149d955574a22ab2e2",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/46ca7f/6cbbb6526b978c74150a01149d955574a22ab2e2.html",
+      "relativePath": "testcases/46ca7f/6cbbb6526b978c74150a01149d955574a22ab2e2.html",
+      "expected": "inapplicable",
+      "ruleId": "46ca7f",
+      "ruleName": "Element marked as decorative is not exposed",
+      "rulePage": "https://act-rules.github.io/rules/46ca7f",
+      "ruleAccessibilityRequirements": null
     },
     {
       "testcaseId": "0fd9df3029d10e81ef1e453902e8f61670939b52",

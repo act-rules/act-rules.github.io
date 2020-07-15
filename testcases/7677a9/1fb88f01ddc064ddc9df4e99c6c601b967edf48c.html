@@ -1,0 +1,32 @@
+<!DOCTYPE html> <html>
+	<head>
+		<title>Passed Example 3</title>
+		<script src="/test-assets/7677a9/slider.js"></script>
+		<script>
+			function activateSlider() {
+				document.getElementById('decreaseSlider').addEventListener('click', decreaseSlider)
+				document.getElementById('increaseSlider').addEventListener('click', increaseSlider)
+				window.addEventListener('devicemotion', handleMotion)
+			}
+		</script>
+	</head>
+
+	<body onload="activateSlider();">
+		<pre class="output"></pre>
+
+		<h1>Slider Motion Sensor Example</h1>
+
+		<p>
+			Open this slider on a device with a motion sensor, such as a smart phone or tablet. Rotate the device to adjust
+			the slider value. The decrease and increase buttons also adjust the value.
+		</p>
+		<p>Note: This example may not work across all browsers.</p>
+
+		<div>
+			<button id="decreaseSlider" type="button">Decrease Value</button>
+			<input type="range" min="1" max="100" value="50" id="motionSlider" disabled />
+			<button id="increaseSlider" type="button">Increase Value</button>
+			<p aria-live="polite">Slider Value: <span id="output">50</span></p>
+		</div>
+	</body>
+</html>

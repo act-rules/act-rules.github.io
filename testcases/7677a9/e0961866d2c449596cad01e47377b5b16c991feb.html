@@ -1,0 +1,18 @@
+<!DOCTYPE html> <html>
+	<head>
+		<title>Passed Example 1</title>
+		<script>
+			function activateEvent() {
+				let counter = 0
+				window.addEventListener('deviceorientation', () => {
+					counter++
+				})
+			}
+		</script>
+	</head>
+
+	<body onload="activateEvent();">
+		<p>ACT-R</p>
+		<p>Note: This example may not work across all browsers.</p>
+	</body>
+</html>

@@ -12,8 +12,10 @@ Look at the [computed](https://drafts.csswg.org/css-cascade/#computed-value) val
 
 Two elements have distinguishing borders if one of the following is true:
 
-- One of the element's `-width` attribute is larger than zero and the other is not, and the element with the `-width` attribute larger than zero has the value of the `-style` attribute not set to `none` and the value of the `-color` attribute with an [alpha component](https://drafts.csswg.org/css-color/#alpha-channel) different from 0; or
-- Both elements have their `-width` attribute larger than zero and with different values, as long as both elements don't have the value of the `-style` attribute set to `none` and the value of the `-color` attribute with an [alpha component](https://drafts.csswg.org/css-color/#alpha-channel) different from 0; or
+- One of the element's `-width` attribute is larger than zero and the other is not, and the element with the `-width` attribute larger than zero has a border that is not invisible; or
+- Both elements have their `-width` attribute larger than zero and with different values, as long as at least one element has a border that is not invisible; or
 - Both elements have their `-width` attribute larger than zero, the value of `-style` set to different values or the value of the `-color` attribute set to different values.
 
 If either `border`, `border-bottom`, `border-left`, `border-right`, `border-top`, or `outline` are distinguishable, the elements have distinguishing borders.
+
+A border is invisible when the value of the `-style` attribute is set to `none` or the value of the `-color` attribute has an [alpha component](https://drafts.csswg.org/css-color/#alpha-channel) equal to 0.

@@ -32,10 +32,8 @@ The rule applies to an [HTML document][] with an associated [Window object][] th
 
 For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target one of the following is true:
 
-- **no changes:** The registered event does not cause [changes to the content][changes in content] of the [web page][] within a 10 minutes time span of the [event firing][event firing]; or
-- **disabled:** There is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] of the registered event or can be found in a [clearly labeled location][] from that [web page][]. The set of [instruments][instrument] can be used to prevent [changes to the content][changes in content] of the [web page][] resulting from the event within a 10 minutes time span of the [event firing][].
-
-**Note:** The 10 minutes time span is an arbitrary limit which is not included in WCAG. Results that happen after this period will not fail this rule but may nonetheless fail [Success Criterion 2.5.4: Motion Actuation][sc2.5.4]. The accessibility problem tends to be less severe for longer time periods, and without a time limit, testing this rule consistently would be impractical.
+- **no changes:** The registered event does not cause [changes to the content][changes in content] of the [web page][] within a 1 minutes time span of the [event firing][event firing]; or
+- **disabled:** There is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] of the registered event or can be found in a [clearly labeled location][] from that [web page][]. The set of [instruments][instrument] can be used to prevent [changes to the content][changes in content] of the [web page][] resulting from the event within a 1 minutes time span of the [event firing][].
 
 ## Assumptions
 

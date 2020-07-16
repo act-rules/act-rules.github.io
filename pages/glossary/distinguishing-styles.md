@@ -5,7 +5,7 @@ unambiguous: true
 objective: true
 ---
 
-Two elements have distinguishing styles if any of the following is true:
+Two elements have distinguishing styles if one of the following is true:
 
 - they have [distinguishing borders](#distinguishing-borders); or
 - they have [distinguishing box-shadows](#distinguishing-box-shadows); or

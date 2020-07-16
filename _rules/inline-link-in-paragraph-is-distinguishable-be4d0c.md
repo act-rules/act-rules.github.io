@@ -30,6 +30,7 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], f
 
 - **link text**: The element has [visible][] [text nodes][text node] as [descendants][descendant] in the [flat tree][]; and
 - **non-link line text**: The element is [rendered on a line][] containing [visible][] [text nodes][text node] that are not [descendants][descendant] in the [flat tree][] of a [semantic link][].
+- **different color**: The element's [foreground color][] and the [foreground color][] of the **non-link line text** elements have a [highest possible contrast][] that is at least 3.0:1, or the element's [background color][] and the [background color][] of the **non-link line text** elements have a [highest possible contrast][] that is at least 3.0:1.
 
 ## Expectation
 
@@ -44,8 +45,7 @@ For each test target, the [outcome][] of one of the following rules is "passed":
 
 ## Assumptions
 
-- The link is distinguishable from the rest of the text with color, which means it fails SC 1.4.1 when there is not another way to distinguish it.
-- The 3:1 contrast difference between text is minimal to what would be sufficient to meet WCAG 2.0. This value is part of [technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183), but is not specified in the [1.4.1 success criterion](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
+- The 3:1 contrast difference between text is minimal to what would be sufficient to meet WCAG 2.0. This value is part of [technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183) but is not specified in the [1.4.1 success criterion](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
 - Any change in font is sufficiently distinguishable, and fonts are loaded when they are present.
 - If multiple colors are used in the visible text nodes of the _ancestor_ element then color can not be a distinguishing factor.
 - If `box-shadow` is used in the different visible text nodes of the _ancestor_ element then `box-shadow` can not be a distinguishing factor.
@@ -373,8 +373,10 @@ There are only [semantic links][semantic link] in the inline block of content.
 <p><a href="https://www.w3.org">W3C </a><span role="link" onclick="location='https://www.w3.org/WAI/'">WAI</span></p>
 ```
 
+[background color]: #background-colors-of-element 'Definition of background colors of element'
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
+[foreground color]: #foreground-colors-of-text 'Definition of foreground colors of text'
 [outcome]: #outcome 'Definition of outcome'
 [rendered on a line]: #rendered-on-a-line 'Definition of rendered on a line'
 [semantic link]: #semantic-link 'Definition of semantic link'

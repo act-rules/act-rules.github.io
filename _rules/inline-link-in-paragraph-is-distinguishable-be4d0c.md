@@ -36,20 +36,17 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], f
 
 For each test target, the [outcome][] of one of the following rules is "passed":
 
-- [Inline link has distinguishable content](https://act-rules.github.io/rules/e7cc2b)
-- [Inline link has distinguishable style not based on color alone](https://act-rules.github.io/rules/88407d)
-- [Inline link has distinguishable border](https://act-rules.github.io/rules/36f116)
-- [Inline link has distinguishable box-shadow](https://act-rules.github.io/rules/66e9f0)
-- [Inline link has different foreground color and distinguishable style on hover and focus](https://act-rules.github.io/rules/548868)
-- [Inline link has different background color and distinguishable style on hover and focus](https://act-rules.github.io/rules/2803b8)
+- [Inline link has distinguishable style or content not based on color alone](https://act-rules.github.io/rules/88407d)
+- [Inline link has distinguishing style or content on hover and focus](https://act-rules.github.io/rules/548868)
+
 
 ## Assumptions
 
 - The 3:1 contrast difference between text is minimal to what would be sufficient to meet WCAG 2.0. This value is part of [technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183) but is not specified in the [1.4.1 success criterion](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
 - Any change in font is sufficiently distinguishable, and fonts are loaded when they are present.
-- If multiple colors are used in the visible text nodes of the _ancestor_ element then color can not be a distinguishing factor.
-- If `box-shadow` is used in the different visible text nodes of the _ancestor_ element then `box-shadow` can not be a distinguishing factor.
-- If `border` is used in the different visible text nodes of the _ancestor_ element then `border` can not be a distinguishing factor.
+- The same foreground color and the same background color is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise color can not be a distinguishing factor.
+- The same `box-shadow` is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise `box-shadow` can not be a distinguishing factor.
+- The same `border` is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise `border` can not be a distinguishing factor.
 
 ## Accessibility Support
 
@@ -68,11 +65,17 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-This link, that is a descendant of a paragraph element, uses the default styling of links which underlines them in most browsers, making it a distinguishing style.
+This link, that is distinguishable by color from the other text in the same line, uses the default styling of links which underlines them in most browsers, making it a distinguishing style. This example passes rule "[Inline link has distinguishable style or content not based on color alone](https://act-rules.github.io/rules/88407d)".
 
 ```html
 <style>
+	p {
+		color: black;
+		background-color: white;
+	}
 	a {
+		color: blue;
+		background-color: white;
 		text-decoration: underline;
 	}
 </style>
@@ -81,40 +84,36 @@ This link, that is a descendant of a paragraph element, uses the default styling
 
 #### Passed Example 2
 
-This link, that is a descendant of a paragraph element, has an icon that makes it distinguishable as a link.
+This link, that is distinguishable by the background color from the other text in the same line, uses the default styling of links which underlines them in most browsers, making it a distinguishing style. This example passes rule "[Inline link has distinguishable style or content not based on color alone](https://act-rules.github.io/rules/88407d)".
 
 ```html
 <style>
-	a.test {
-		text-decoration: none;
+	p {
+		color: black;
+		background-color: white;
+	}
+	a {
+		color: black;
+		background-color: #C84D32;
+		text-decoration: underline;
 	}
 </style>
-<p>
-	Read about WAI on the
-	<a class="test" href="http://w3.org/WAI">WAI webpage <img src="/test-assets/be4d0c/icon.png" alt="" /></a>.
-</p>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
 #### Passed Example 3
 
-This link, that is a descendant of a paragraph element, has text that makes it distinguishable as a link.
+This element with a [semantic role][] that inherits from link, that is distinguishable by color from the other text in the same line, uses the default styling of links which underlines them in most browsers, making it a distinguishing style. This example passes rule "[Inline link has distinguishable style or content not based on color alone](https://act-rules.github.io/rules/88407d)".
 
 ```html
 <style>
-	a.test {
-		text-decoration: none;
+	p {
+		color: black;
+		background-color: white;
 	}
-</style>
-<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage by following this link</a>.</p>
-```
-
-#### Passed Example 4
-
-This element with a [semantic role][] that inherits from link, that is a descendant of a paragraph element, uses the default styling of links which underlines them in most browsers, making it a distinguishing style.
-
-```html
-<style>
 	a {
+		color: blue;
+		background-color: white;
 		text-decoration: underline;
 	}
 </style>
@@ -126,9 +125,9 @@ This element with a [semantic role][] that inherits from link, that is a descend
 </p>
 ```
 
-#### Passed Example 5
+#### Passed Example 4
 
-This link, that is a descendant of a paragraph element, has a distinguishing bottom border in addition to being distinguishable by color.
+This link, that is distinguishable by color from the other text in the same line, has a distinguishing bottom border. This example passes rule "[Inline link has distinguishable style or content not based on color alone](https://act-rules.github.io/rules/88407d)".
 
 ```html
 <style>
@@ -149,100 +148,9 @@ This link, that is a descendant of a paragraph element, has a distinguishing bot
 <p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
-#### Passed Example 6
+#### Passed Example 5
 
-This link, that is a descendant of a paragraph element, has a distinguishing box-shadow.
-
-```html
-<style>
-	a.test {
-		text-decoration: none;
-		box-shadow: 4px 4px;
-	}
-</style>
-<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
-```
-
-#### Passed Example 7
-
-This link, that is a descendant of a paragraph element, has a text contrast of more than 3:1 compared to the other text in the paragraph. When the link receives focus, an underline appears. When the link receives hover, an underline appears.
-
-```html
-<style>
-	p {
-		color: black;
-		background-color: white;
-	}
-	a {
-		text-decoration: none;
-		color: #d14826;
-		background-color: white;
-	}
-	a:hover,
-	a:focus {
-		text-decoration: underline;
-	}
-</style>
-<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
-```
-
-#### Passed Example 8
-
-This link, that is a descendant of a paragraph element, has text that has a background color contrast of more than 3:1 compared to the other text in the paragraph. When the link receives focus, an underline appears. When the link receives hover, an underline appears.
-
-```html
-<style>
-	a {
-		text-decoration: none;
-		color: #000;
-		background-color: #cf5e42;
-	}
-	a:hover,
-	a:focus {
-		text-decoration: underline;
-	}
-</style>
-<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
-```
-
-### Failed
-
-#### Failed Example 1
-
-This link, that is a descendant of a paragraph element, has no visual cues of being recognized as a link with the underline removed.
-
-```html
-<style>
-	a.test {
-		text-decoration: none;
-	}
-</style>
-<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
-```
-
-#### Failed Example 2
-
-This link, that is a descendant of a paragraph element, has a not visible border because it has a width of zero.
-
-```html
-<style>
-	* {
-		color: black;
-		background-color: white;
-	}
-	a.test {
-		text-decoration: none;
-		border-style: solid;
-		border-color: blue;
-		border-width: 0px;
-	}
-</style>
-<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
-```
-
-#### Failed Example 3
-
-This link, that is a descendant of a paragraph element, has a not visible border because its color is transparent.
+This link, that is distinguishable by color from the other text in the same line, has a distinguishing box-shadow. This example passes rule "[Inline link has distinguishable style or content not based on color alone](https://act-rules.github.io/rules/88407d)".
 
 ```html
 <style>
@@ -254,18 +162,76 @@ This link, that is a descendant of a paragraph element, has a not visible border
 		color: blue;
 		background-color: white;
 		text-decoration: none;
-		border-style: solid;
-		border-color: #ff000000;
-		border-width: 0px;
-		border-bottom-width: 1px;
+		box-shadow: 4px 4px;
 	}
 </style>
 <p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
-#### Failed Example 4
+#### Passed Example 6
 
-This link, that is a descendant of a paragraph element, does not have a text contrast of more than 3:1 compared to the other text in the paragraph.
+This link, that is distinguishable by color from the other text in the same line, has a distinguishing font-style. This example passes rule "[Inline link has distinguishable style or content not based on color alone](https://act-rules.github.io/rules/88407d)".
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a {
+		color: blue;
+		background-color: white;
+		text-decoration: none;
+		font-style: italic;
+	}
+</style>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
+```
+
+#### Passed Example 7
+
+This link, that is distinguishable by color from the other text in the same line, has an icon that makes it distinguishable as a link. This example passes rule "[Inline link has distinguishable style or content not based on color alone](https://act-rules.github.io/rules/88407d)".
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a.test {
+		color: blue;
+		background-color: white;
+		text-decoration: none;
+	}
+</style>
+<p>
+	Read about WAI on the
+	<a class="test" href="http://w3.org/WAI">WAI webpage <img src="/test-assets/be4d0c/icon.png" alt="" /></a>.
+</p>
+```
+
+#### Passed Example 8
+
+This link, that is distinguishable by color from the other text in the same line, has text that makes it distinguishable as a link. This example passes rule "[Inline link has distinguishable style or content not based on color alone](https://act-rules.github.io/rules/88407d)".
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a.test {
+		color: blue;
+		background-color: white;
+		text-decoration: none;
+	}
+</style>
+<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage by following this link</a>.</p>
+```
+
+#### Passed Example 9
+
+This link, that is distinguishable by color from the other text in the same line, uses the default styling of links (underline) when it is focused or hovered. This example passes rule "[Inline link has distinguishing style or content on hover and focus](https://act-rules.github.io/rules/548868)".
 
 ```html
 <style>
@@ -275,7 +241,7 @@ This link, that is a descendant of a paragraph element, does not have a text con
 	}
 	a {
 		text-decoration: none;
-		color: #555555;
+		color: blue;
 		background-color: white;
 	}
 	a:hover,
@@ -286,46 +252,173 @@ This link, that is a descendant of a paragraph element, does not have a text con
 <p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
-#### Failed Example 5
+#### Passed Example 10
 
-This link, that is a descendant of a paragraph element, has text that does not have a background color contrast of more than 3:1 compared to the other text in the paragraph.
+This link, that is distinguishable by the background color from the other text in the same line, uses the default styling of links (underline) when it is focused or hovered. This example passes rule "[Inline link has distinguishing style or content on hover and focus](https://act-rules.github.io/rules/548868)".
 
 ```html
 <style>
 	p {
-		color: #000;
-		background-color: #fff;
+		color: black;
+		background-color: white;
 	}
 	a {
-		text-decoration: none;
-		color: #000;
-		background-color: #eee;
-	}
-	a:hover,
-	a:focus {
+		color: black;
+		background-color: #C84D32;
 		text-decoration: underline;
 	}
 </style>
 <p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
-#### Failed Example 6
+#### Passed Example 11
 
-This link, that is a descendant of a paragraph element, has no distinguishing style on focus or hover.
+This element with a [semantic role][] that inherits from link, that is distinguishable by color from the other text in the same line, uses the default styling of links (underline) when it is focused or hovered. This example passes rule "[Inline link has distinguishing style or content on hover and focus](https://act-rules.github.io/rules/548868)".
 
 ```html
 <style>
 	p {
-		color: #000;
-		background-color: #fff;
+		color: black;
+		background-color: white;
 	}
 	a {
+		color: blue;
+		background-color: white;
 		text-decoration: none;
-		color: #000;
-		background-color: #cf5e42;
+	}
+	a:hover,
+	a:focus {
+		text-decoration: underline;
+	}
+</style>
+<p>This is indicated in the cost of a <a href="#bcc0f155" role="doc-glossref">credit default swap</a>.</p>
+<h1>Glossary</h1>
+<p id="bcc0f155">
+	A credit default swap (CDS) is a financial derivative or contract that allows an investor to "swap" or offset his or
+	her credit risk with that of another investor.
+</p>
+```
+
+#### Passed Example 12
+
+This link, that is distinguishable by color from the other text in the same line, has a distinguishing bottom border when it is hovered or focused. This example passes rule "[Inline link has distinguishing style or content on hover and focus](https://act-rules.github.io/rules/548868)".
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a {
+		color: blue;
+		background-color: white;
+		text-decoration: none;
+	}
+	a:hover,
+	a:focus {
+		border-style: solid;
+		border-color: red;
+		border-width: 0px;
+		border-bottom-width: 1px;
 	}
 </style>
 <p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
+```
+
+#### Passed Example 13
+
+This link, that is distinguishable by color from the other text in the same line, has a distinguishing box-shadow when it is hovered or focused. This example passes rule "[Inline link has distinguishing style or content on hover and focus](https://act-rules.github.io/rules/548868)".
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a {
+		color: blue;
+		background-color: white;
+		text-decoration: none;
+	}
+	a:hover,
+	a:focus {
+		box-shadow: 4px 4px;
+	}
+</style>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
+```
+
+#### Passed Example 14
+
+This link, that is distinguishable by color from the other text in the same line, has a distinguishing font-style when it is hovered or focused. This example passes rule "[Inline link has distinguishing style or content on hover and focus](https://act-rules.github.io/rules/548868)".
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a {
+		color: blue;
+		background-color: white;
+		text-decoration: none;
+	}
+	a:hover,
+	a:focus {
+		font-style: italic;
+	}
+</style>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
+```
+
+#### Passed Example 15
+
+This link, that is distinguishable by color from the other text in the same line, has an icon that appears when the link it focused or hovered. This icon distinguishes the element as a link. This example passes rule "[Inline link has distinguishing style or content on hover and focus](https://act-rules.github.io/rules/548868)".
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a {
+		color: blue;
+		background-color: white;
+		text-decoration: none;
+	}
+	.hide {
+		display: none;
+	}
+	a:hover img.hide,
+	a:focus img.hide {
+		display: inline;
+	}
+</style>
+<p>
+	Read about WAI on the
+	<a href="http://w3.org/WAI">WAI webpage <img class="hide" src="/test-assets/be4d0c/icon.png" alt="" /></a>.
+</p>
+```
+
+### Failed
+
+#### Failed Example 1
+
+This link, that is distinguishable by color from the other text in the same line, has no other visual cues of being recognized as a link with the underline removed.
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a.test {
+		color: blue;
+		background-color: white;
+		text-decoration: none;
+	}
+</style>
+<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
 ### Inapplicable
@@ -348,7 +441,7 @@ This link is not [visible][].
 
 #### Inapplicable Example 3
 
-This link is the only content in the inline block of content it belongs to.
+This link is the only text rendered in its line.
 
 ```html
 <p><a href="http://w3.org/WAI">WAI webpage</a></p>
@@ -356,7 +449,7 @@ This link is the only content in the inline block of content it belongs to.
 
 #### Inapplicable Example 4
 
-Each link is the only content in the inline block of content it belongs to.
+Each link is the only text rendered in their respective line.
 
 ```html
 <ul>
@@ -367,10 +460,28 @@ Each link is the only content in the inline block of content it belongs to.
 
 #### Inapplicable Example 5
 
-There are only [semantic links][semantic link] in the inline block of content.
+There is no text belonging to non [semantic links][semantic link] in this line.
 
 ```html
 <p><a href="https://www.w3.org">W3C </a><span role="link" onclick="location='https://www.w3.org/WAI/'">WAI</span></p>
+```
+
+#### Inapplicable Example 6
+
+This link is not distinguishable by color from the other text rendered in its line.
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a {
+		color: black;
+		background-color: white;
+	}
+</style>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
 [background color]: #background-colors-of-element 'Definition of background colors of element'

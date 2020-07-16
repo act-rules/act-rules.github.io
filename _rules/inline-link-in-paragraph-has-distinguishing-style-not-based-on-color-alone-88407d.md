@@ -1,9 +1,9 @@
 ---
 id: 88407d
-name: Inline link has distinguishable style not based on color alone
+name: Inline link has distinguishable style or content not based on color alone
 rule_type: atomic
 description: |
-  This rule checks that inline links have a style not based on color alone that distinguishes them from the surrounding text
+  This rule checks that inline links are distinguishable from the surrounding text through a difference in style not based on color alone or have content that indicates they are links.
 accessibility_requirements:
 input_aspects:
   - DOM Tree
@@ -19,18 +19,24 @@ acknowledgments:
 
 This rule applies to any [visible][] HTML element that is a [semantic link][], for which all the following is true:
 
-- **link text**: The element has [visible][] [text nodes][text node] as [descendants][descendant] in the [flat tree][]; and
-- **non-link line text**: The element is [rendered on a line][] containing [visible][] [text nodes][text node] that are not [descendants][descendant] in the [flat tree][] of a [semantic link][].
+- **link text**: the element has [visible][] [text nodes][text node] as [descendants][descendant] in the [flat tree][]; and
+- **non-link line text**: the element is [rendered on a line][] containing [visible][] [text nodes][text node] that are not [descendants][descendant] in the [flat tree][] of a [semantic link][]; and
+- **different color**: the element's [foreground color][] and the [foreground color][] of the **non-link line text** elements have a [highest possible contrast][] that is at least 3.0:1, or the element's [background color][] and the [background color][] of the **non-link line text** elements have a [highest possible contrast][] that is at least 3.0:1.
 
 ## Expectation
 
-Each target element has a [distinguishing style][] not based on color alone.
+For each test target, at least one of the following is true:
+
+- **distinguishing style**: the element has a [distinguishing style][] not based on color alone from the **non-link line text** elements; or
+- **distinguishing content**: element has content (such as an image or text), located in the proximity of the element (i.e. there is no other content visually in between this content and the target element), that indicates the test target is a link.
 
 ## Assumptions
 
-- The link is distinguishable from the rest of the text with color, which means it fails SC 1.4.1 when there is not another way to distinguish it.
+- The 3:1 contrast difference between text is minimal to what would be sufficient to meet WCAG 2.0. This value is part of [technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183) but is not specified in the [1.4.1 success criterion](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
 - Any change in font is sufficiently distinguishable, and fonts are loaded when they are present.
-- If multiple colors are used in the visible non-link text nodes of the block of content then color can not be a distinguishing factor.
+- The same foreground color and the same background color is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise color can not be a distinguishing factor.
+- The same `box-shadow` is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise `box-shadow` can not be a distinguishing factor.
+- The same `border` is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise `border` can not be a distinguishing factor.
 
 ## Accessibility Support
 
@@ -49,11 +55,17 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-This link, that is a descendant of a paragraph element, uses the default styling of links which underlines them in most browsers, making it a distinguishing style.
+This link, that is distinguishable by color from the other text in the same line, uses the default styling of links which underlines them in most browsers, making it a distinguishing style.
 
 ```html
 <style>
+	p {
+		color: black;
+		background-color: white;
+	}
 	a {
+		color: blue;
+		background-color: white;
 		text-decoration: underline;
 	}
 </style>
@@ -62,11 +74,17 @@ This link, that is a descendant of a paragraph element, uses the default styling
 
 #### Passed Example 2
 
-This element with a [semantic role][] that inherits from link, that is a descendant of a paragraph element, uses the default styling of links which underlines them in most browsers, making it a distinguishing style.
+This element with a [semantic role][] that inherits from link, that is distinguishable by color from the other text in the same line, uses the default styling of links which underlines them in most browsers, making it a distinguishing style.
 
 ```html
 <style>
+	p {
+		color: black;
+		background-color: white;
+	}
 	a {
+		color: blue;
+		background-color: white;
 		text-decoration: underline;
 	}
 </style>
@@ -78,15 +96,125 @@ This element with a [semantic role][] that inherits from link, that is a descend
 </p>
 ```
 
+#### Passed Example 3
+
+This link, that is distinguishable by color from the other text in the same line, has a distinguishing bottom border.
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a.test {
+		color: blue;
+		background-color: white;
+		text-decoration: none;
+		border-style: solid;
+		border-color: red;
+		border-width: 0px;
+		border-bottom-width: 1px;
+	}
+</style>
+<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
+```
+
+#### Passed Example 4
+
+This link, that is distinguishable by color from the other text in the same line, has a distinguishing box-shadow.
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a.test {
+		color: blue;
+		background-color: white;
+		text-decoration: none;
+		box-shadow: 4px 4px;
+	}
+</style>
+<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
+```
+
+#### Passed Example 5
+
+This link, that is distinguishable by color from the other text in the same line, has a distinguishing font-style.
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a {
+		color: blue;
+		background-color: white;
+		text-decoration: none;
+		font-style: italic;
+	}
+</style>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
+```
+
+#### Passed Example 6
+
+This link, that is distinguishable by color from the other text in the same line, has an icon that makes it distinguishable as a link.
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a.test {
+		color: blue;
+		background-color: white;
+		text-decoration: none;
+	}
+</style>
+<p>
+	Read about WAI on the
+	<a class="test" href="http://w3.org/WAI">WAI webpage <img src="/test-assets/be4d0c/icon.png" alt="" /></a>.
+</p>
+```
+
+#### Passed Example 7
+
+This link, that is distinguishable by color from the other text in the same line, has text that makes it distinguishable as a link.
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a.test {
+		color: blue;
+		background-color: white;
+		text-decoration: none;
+	}
+</style>
+<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage by following this link</a>.</p>
+```
+
 ### Failed
 
 #### Failed Example 1
 
-This link, that is a descendant of a paragraph element, has no visual cues of being recognized as a link with the underline removed.
+This link, that is distinguishable by color from the other text in the same line, has no other visual cues of being recognized as a link with the underline removed.
 
 ```html
 <style>
+	p {
+		color: black;
+		background-color: white;
+	}
 	a.test {
+		color: blue;
+		background-color: white;
 		text-decoration: none;
 	}
 </style>
@@ -113,7 +241,7 @@ This link is not [visible][].
 
 #### Inapplicable Example 3
 
-This link is the only content in the inline block of content it belongs to.
+This link is the only text rendered in its line.
 
 ```html
 <p><a href="http://w3.org/WAI">WAI webpage</a></p>
@@ -121,7 +249,7 @@ This link is the only content in the inline block of content it belongs to.
 
 #### Inapplicable Example 4
 
-Each link is the only content in the inline block of content it belongs to.
+Each link is the only text rendered in their respective line.
 
 ```html
 <ul>
@@ -132,15 +260,36 @@ Each link is the only content in the inline block of content it belongs to.
 
 #### Inapplicable Example 5
 
-There are only [semantic links][semantic link] in the inline block of content.
+There is not text belonging to non [semantic links][semantic link] in this line.
 
 ```html
 <p><a href="https://www.w3.org">W3C </a><span role="link" onclick="location='https://www.w3.org/WAI/'">WAI</span></p>
 ```
 
+#### Inapplicable Example 6
+
+This link is not distinguishable be color from the other text rendered in its line.
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a {
+		color: black;
+		background-color: white;
+	}
+</style>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
+```
+
+[background color]: #background-colors-of-element 'Definition of background colors of element'
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [distinguishing style]: #distinguishing-styles 'Definition of distinguishing styles'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
+[foreground color]: #foreground-colors-of-text 'Definition of foreground colors of text'
+[highest possible contrast]: #highest-possible-contrast 'Definition of highest possible contrast'
 [rendered on a line]: #rendered-on-a-line 'Definition of rendered on a line'
 [semantic link]: #semantic-link 'Definition of semantic link'
 [semantic role]: #semantic-role 'Definition of semantic role'

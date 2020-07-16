@@ -74,6 +74,25 @@ This link, that is distinguishable by color from the other text in the same line
 
 #### Passed Example 2
 
+This link, that is distinguishable by the background color from the other text in the same line, uses the default styling of links which underlines them in most browsers, making it a distinguishing style.
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a {
+		color: black;
+		background-color: #C84D32;
+		text-decoration: underline;
+	}
+</style>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
+```
+
+#### Passed Example 3
+
 This element with a [semantic role][] that inherits from link, that is distinguishable by color from the other text in the same line, uses the default styling of links which underlines them in most browsers, making it a distinguishing style.
 
 ```html
@@ -96,7 +115,7 @@ This element with a [semantic role][] that inherits from link, that is distingui
 </p>
 ```
 
-#### Passed Example 3
+#### Passed Example 4
 
 This link, that is distinguishable by color from the other text in the same line, has a distinguishing bottom border.
 
@@ -119,7 +138,7 @@ This link, that is distinguishable by color from the other text in the same line
 <p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
-#### Passed Example 4
+#### Passed Example 5
 
 This link, that is distinguishable by color from the other text in the same line, has a distinguishing box-shadow.
 
@@ -139,7 +158,7 @@ This link, that is distinguishable by color from the other text in the same line
 <p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
-#### Passed Example 5
+#### Passed Example 6
 
 This link, that is distinguishable by color from the other text in the same line, has a distinguishing font-style.
 
@@ -159,7 +178,7 @@ This link, that is distinguishable by color from the other text in the same line
 <p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
-#### Passed Example 6
+#### Passed Example 7
 
 This link, that is distinguishable by color from the other text in the same line, has an icon that makes it distinguishable as a link.
 
@@ -181,7 +200,7 @@ This link, that is distinguishable by color from the other text in the same line
 </p>
 ```
 
-#### Passed Example 7
+#### Passed Example 8
 
 This link, that is distinguishable by color from the other text in the same line, has text that makes it distinguishable as a link.
 
@@ -260,7 +279,7 @@ Each link is the only text rendered in their respective line.
 
 #### Inapplicable Example 5
 
-There is not text belonging to non [semantic links][semantic link] in this line.
+There is no text belonging to non [semantic links][semantic link] in this line.
 
 ```html
 <p><a href="https://www.w3.org">W3C </a><span role="link" onclick="location='https://www.w3.org/WAI/'">WAI</span></p>
@@ -268,7 +287,7 @@ There is not text belonging to non [semantic links][semantic link] in this line.
 
 #### Inapplicable Example 6
 
-This link is not distinguishable be color from the other text rendered in its line.
+This link is not distinguishable by color from the other text rendered in its line.
 
 ```html
 <style>

@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 827,
+  "count": 843,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -8921,6 +8921,486 @@
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "be6b29e220d6afbd827625c602ec49027e73fdf1",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/qt1vmo/be6b29e220d6afbd827625c602ec49027e73fdf1.html",
+      "relativePath": "testcases/qt1vmo/be6b29e220d6afbd827625c602ec49027e73fdf1.html",
+      "expected": "passed",
+      "ruleId": "qt1vmo",
+      "ruleName": "Image accessible name is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/qt1vmo",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "dd2f262645db0f473e294a02dff5576c6ccfe133",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/qt1vmo/dd2f262645db0f473e294a02dff5576c6ccfe133.html",
+      "relativePath": "testcases/qt1vmo/dd2f262645db0f473e294a02dff5576c6ccfe133.html",
+      "expected": "passed",
+      "ruleId": "qt1vmo",
+      "ruleName": "Image accessible name is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/qt1vmo",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "ae213da4816dd48515ff973df1579788bf1c1f33",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/qt1vmo/ae213da4816dd48515ff973df1579788bf1c1f33.html",
+      "relativePath": "testcases/qt1vmo/ae213da4816dd48515ff973df1579788bf1c1f33.html",
+      "expected": "passed",
+      "ruleId": "qt1vmo",
+      "ruleName": "Image accessible name is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/qt1vmo",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "530266c6116fcfad12561e9e1a407fa0a0da3435",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/qt1vmo/530266c6116fcfad12561e9e1a407fa0a0da3435.html",
+      "relativePath": "testcases/qt1vmo/530266c6116fcfad12561e9e1a407fa0a0da3435.html",
+      "expected": "failed",
+      "ruleId": "qt1vmo",
+      "ruleName": "Image accessible name is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/qt1vmo",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a4b5c0fab27d0ca16b93e8c374c96ad13172e94e",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/qt1vmo/a4b5c0fab27d0ca16b93e8c374c96ad13172e94e.html",
+      "relativePath": "testcases/qt1vmo/a4b5c0fab27d0ca16b93e8c374c96ad13172e94e.html",
+      "expected": "failed",
+      "ruleId": "qt1vmo",
+      "ruleName": "Image accessible name is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/qt1vmo",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "4fba9938782523d464380318c97357e2eaed9cec",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/qt1vmo/4fba9938782523d464380318c97357e2eaed9cec.html",
+      "relativePath": "testcases/qt1vmo/4fba9938782523d464380318c97357e2eaed9cec.html",
+      "expected": "failed",
+      "ruleId": "qt1vmo",
+      "ruleName": "Image accessible name is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/qt1vmo",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "c1f626c67e8260ee8772b66ef5f9e20708719547",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/qt1vmo/c1f626c67e8260ee8772b66ef5f9e20708719547.html",
+      "relativePath": "testcases/qt1vmo/c1f626c67e8260ee8772b66ef5f9e20708719547.html",
+      "expected": "inapplicable",
+      "ruleId": "qt1vmo",
+      "ruleName": "Image accessible name is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/qt1vmo",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "0d650d35e4f2920b9e6496db64f48657fc465694",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/qt1vmo/0d650d35e4f2920b9e6496db64f48657fc465694.html",
+      "relativePath": "testcases/qt1vmo/0d650d35e4f2920b9e6496db64f48657fc465694.html",
+      "expected": "inapplicable",
+      "ruleId": "qt1vmo",
+      "ruleName": "Image accessible name is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/qt1vmo",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a72201fd013b7bce9c81bf71dcaa0ff5da05f53b",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/qt1vmo/a72201fd013b7bce9c81bf71dcaa0ff5da05f53b.html",
+      "relativePath": "testcases/qt1vmo/a72201fd013b7bce9c81bf71dcaa0ff5da05f53b.html",
+      "expected": "inapplicable",
+      "ruleId": "qt1vmo",
+      "ruleName": "Image accessible name is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/qt1vmo",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "91f76cb178ce3ed9df8257b4717d0e5f44b4b647",
+      "testcaseTitle": "Inapplicable Example 4",
+      "url": "https://act-rules.github.io/testcases/qt1vmo/91f76cb178ce3ed9df8257b4717d0e5f44b4b647.html",
+      "relativePath": "testcases/qt1vmo/91f76cb178ce3ed9df8257b4717d0e5f44b4b647.html",
+      "expected": "inapplicable",
+      "ruleId": "qt1vmo",
+      "ruleName": "Image accessible name is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/qt1vmo",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "c23abbdcfd6eac72d1e0cd81d8e7861f186de84c",
+      "testcaseTitle": "Inapplicable Example 5",
+      "url": "https://act-rules.github.io/testcases/qt1vmo/c23abbdcfd6eac72d1e0cd81d8e7861f186de84c.html",
+      "relativePath": "testcases/qt1vmo/c23abbdcfd6eac72d1e0cd81d8e7861f186de84c.html",
+      "expected": "inapplicable",
+      "ruleId": "qt1vmo",
+      "ruleName": "Image accessible name is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/qt1vmo",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "001254f2e5a4f661d6abd4534a921c200b19f5e4",
+      "testcaseTitle": "Inapplicable Example 6",
+      "url": "https://act-rules.github.io/testcases/qt1vmo/001254f2e5a4f661d6abd4534a921c200b19f5e4.html",
+      "relativePath": "testcases/qt1vmo/001254f2e5a4f661d6abd4534a921c200b19f5e4.html",
+      "expected": "inapplicable",
+      "ruleId": "qt1vmo",
+      "ruleName": "Image accessible name is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/qt1vmo",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "176b55978e41a84e0fb2f09605f84cdbc6004950",
+      "testcaseTitle": "Inapplicable Example 7",
+      "url": "https://act-rules.github.io/testcases/qt1vmo/176b55978e41a84e0fb2f09605f84cdbc6004950.html",
+      "relativePath": "testcases/qt1vmo/176b55978e41a84e0fb2f09605f84cdbc6004950.html",
+      "expected": "inapplicable",
+      "ruleId": "qt1vmo",
+      "ruleName": "Image accessible name is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/qt1vmo",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "7cc883f626110ec98d191bd61166167cf3f275ec",
+      "testcaseTitle": "Inapplicable Example 8",
+      "url": "https://act-rules.github.io/testcases/qt1vmo/7cc883f626110ec98d191bd61166167cf3f275ec.html",
+      "relativePath": "testcases/qt1vmo/7cc883f626110ec98d191bd61166167cf3f275ec.html",
+      "expected": "inapplicable",
+      "ruleId": "qt1vmo",
+      "ruleName": "Image accessible name is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/qt1vmo",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "96471b44c91fe8200f159d0890889e2e10cc7d44",
+      "testcaseTitle": "Inapplicable Example 9",
+      "url": "https://act-rules.github.io/testcases/qt1vmo/96471b44c91fe8200f159d0890889e2e10cc7d44.html",
+      "relativePath": "testcases/qt1vmo/96471b44c91fe8200f159d0890889e2e10cc7d44.html",
+      "expected": "inapplicable",
+      "ruleId": "qt1vmo",
+      "ruleName": "Image accessible name is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/qt1vmo",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "2ff8f65284c144bb9aaca30e88f32154e4a6a4d8",
+      "testcaseTitle": "Inapplicable Example 10",
+      "url": "https://act-rules.github.io/testcases/qt1vmo/2ff8f65284c144bb9aaca30e88f32154e4a6a4d8.html",
+      "relativePath": "testcases/qt1vmo/2ff8f65284c144bb9aaca30e88f32154e4a6a4d8.html",
+      "expected": "inapplicable",
+      "ruleId": "qt1vmo",
+      "ruleName": "Image accessible name is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/qt1vmo",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"

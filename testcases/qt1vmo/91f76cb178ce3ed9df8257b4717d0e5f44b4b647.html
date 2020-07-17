@@ -1,0 +1,15 @@
+<!DOCTYPE html> <html lang="en">
+	<p>Happy new year!</p>
+	<canvas id="newyear" width="200" height="200"></canvas>
+	<script>
+		const ctx = document.querySelector('#newyear').getContext('2d')
+		ctx.fillStyle = 'yellow'
+		ctx.beginPath()
+		ctx.moveTo(100, 10)
+		ctx.lineTo(40, 180)
+		ctx.lineTo(190, 60)
+		ctx.lineTo(10, 60)
+		ctx.lineTo(160, 180)
+		ctx.fill()
+	</script>
+</html>

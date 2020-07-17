@@ -3,7 +3,7 @@ id: qt1vmo
 name: Image accessible name is descriptive
 rule_type: atomic
 description: |
-  This rule checks that the accessible names of images describe their topic or purpose.
+  This rule checks that the accessible names of images serves an equivalent purpose to the image.
 accessibility_requirements:
   wcag20:1.1.1: # Non-Text Content (A)
     forConformance: true

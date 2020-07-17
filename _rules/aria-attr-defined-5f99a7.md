@@ -94,7 +94,9 @@ This `input` element with a role of `spinbutton` has multiple `aria-*` attribute
 This `li` element with a role of `menuitemcheckbox` has an `aria-*` attribute which is not defined in [WAI-ARIA Specifications][].
 
 ```html
-<li role="menuitemcheckbox" aria-not-checked="true">List Item</li>
+<ul>
+	<li role="menuitemcheckbox" aria-not-checked="true">List Item</li>
+</ul>
 ```
 
 #### Failed Example 2

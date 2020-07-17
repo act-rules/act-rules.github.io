@@ -69,6 +69,7 @@
 - presentational
 - sc
 - dropdown
+- hoverable
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete

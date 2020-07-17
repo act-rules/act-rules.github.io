@@ -5,7 +5,7 @@ rule_type: atomic
 description: |
   This rule checks that any additional content that was triggered by hovering an element remains available to the user while the mouse pointer is over that content
 accessibility_requirements:
-  wcag21:1.4.13: Content on Hover or Focus (AA)
+  wcag21:1.4.13: # Content on Hover or Focus (AA)
     forConformance: true 
     failed: not satisfied
     passed: further testing needed

@@ -20,16 +20,16 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any element that when [hovered][] causes [changes in content][].
+The rule applies to any element that when [hovered][] causes [visible changes in content][].
 
 ## Expectation
 
-There are no [changes in content][] while the target element is [hovered][] or the mouse pointer remains inside a rectangle defined by the following coordinates:
+There are no [visible changes in content][] while the target element is [hovered][] or the mouse pointer remains inside a rectangle defined by the following coordinates:
 
-- **top**: the lowest value of the y coordinate of any pixel affected by the [changes in content][]; and
-- **left**: the lowest value of the x coordinate of any pixel affected by the [changes in content][]; and
-- **bottom**: the highest value of the y coordinate of any pixel affected by the [changes in content][]; and
-- **right**: the highest value of the x coordinate of any pixel affected by the [changes in content][].
+- **top**: the lowest value of the y coordinate of any pixel affected by the [visible changes in content][]; and
+- **left**: the lowest value of the x coordinate of any pixel affected by the [visible changes in content][]; and
+- **bottom**: the highest value of the y coordinate of any pixel affected by the [visible changes in content][]; and
+- **right**: the highest value of the x coordinate of any pixel affected by the [visible changes in content][].
 
 ## Assumptions
 
@@ -89,6 +89,6 @@ Description...
 
 ...
 
-[changes in content]: #changes-in-content 'Definition of changes in content'
 [hovered]: #hovered 'Definition of hovered'
 [sc1.4.13]: https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html 'Understanding Success Criterion 1.4.13: Content on Hover or Focus'
+[visible changes in content]: #visible-changes-in-content 'Definition of visible changes in content'

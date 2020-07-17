@@ -38,11 +38,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to HTML `img` elements and HTML elements with the [semantic role][] of `img`, for which all the following is true about them and all their [ancestors][] in the [flat tree][]:
-
-- the element does not have an `aria-hidden` [attribute value][] of "true"; and
-- the element does not have a [computed][] [display][] property of "none"; and
-- the element does not have a [computed][] [visibility][] property of "hidden".
+The rule applies to HTML `img` elements and HTML elements with the [semantic role][] of `img`, except if the element has a [hidden state][] of "true".
 
 ## Expectation
 
@@ -228,7 +224,7 @@ This `img` element is hidden with `aria-hidden` set to "true".
 
 #### Inapplicable Example 4
 
-This `img` element is hidden with `display: none`.
+This `img` element is hidden because its parent has `display: none`.
 
 ```html
 <div style="display: none">
@@ -250,11 +246,6 @@ This `img` element is hidden with `visibility: hidden`.
 [explicit role]: #explicit-role 'Definition of explicit role'
 [focusable]: #focusable 'Definition of focusable'
 [implicit role]: #implicit-role 'Definition of implicit role'
-[attribute value]: #attribute-value 'Definition of attribute value'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[hidden state]: #hidden-state 'Definitino of hidden state'
 [semantic role]: #semantic-role 'Definition of semantic role'
-[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS draft, flat tree, 2020/07/08'
-[computed]: https://www.w3.org/TR/css-cascade-3/#computed-value
-[ancestors]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'DOM ancestor, 2020/07/08'
-[display]: https://www.w3.org/TR/CSS22/visuren.html#display-prop 'CSS display property'
-[visibility]: https://www.w3.org/TR/CSS22/visufx.html#visibility 'CSS visibility property'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'

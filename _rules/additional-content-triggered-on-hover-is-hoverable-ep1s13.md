@@ -22,9 +22,10 @@ acknowledgments:
 
 The rule applies to any element that when [hovered][] causes [changes in content][].
 
-## Expectation 
+## Expectation
 
 There are no [changes in content][] while the target element is [hovered][] or the mouse pointer remains inside a rectangle defined by the following coordinates:
+
 - **top**: the lowest value of the y coordinate of any pixel affected by the [changes in content][]; and
 - **left**: the lowest value of the x coordinate of any pixel affected by the [changes in content][]; and
 - **bottom**: the highest value of the y coordinate of any pixel affected by the [changes in content][]; and

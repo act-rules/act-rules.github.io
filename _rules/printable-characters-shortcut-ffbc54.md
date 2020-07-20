@@ -10,6 +10,8 @@ accessibility_requirements:
     failed: not satisfied
     passed: satisfied
     inapplicable: further testing needed
+input_aspects:
+  - DOM Tree
 acknowledgements:
   authors:
     - João Vicente
@@ -18,16 +20,16 @@ acknowledgements:
 
 ## Applicability
 
-The rule applies to any [keyboard event][]: 
- - where the attribute `key` is a [printable character][] key; and
- - the method `getModifierState` returns `false`; and
- - is [dispatched][] to an [event target][] within a [HTML document][].
+The rule applies to any [keyboard event][] for which all is true: 
+- the event's attribute `key` is a [printable character][] key; and
+- the event's method `getModifierState` returns `false`; and
+- the event is [dispatched][] to an [event target][] within a [HTML document][].
 
 ## Expectation
 
 For each test target at least one of the following is true:
  - (**Disable**:) There is at least one [set of clearly labelled instruments][] to [block the event][blocked event]; or
- - (**Remap**:) There is at least one [set of clearly labelled instruments][] to [block the event][blocked event] when the [keyboard event][] method `getModifierState` doesn't return `true`; or
+ - (**Remap**:) There is at least one [set of clearly labelled instruments][] to [block the event][blocked event] when the [keyboard event][] method `getModifierState` returns `false` for any of the [valid modifier keys][]; or
  - (**Focus**:) If the [event target][] doesn't have [focus][] the [event is blocked][blocked event].
 
 ## Assumptions
@@ -253,10 +255,7 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 
 #### Passed Example 8
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and:
- - there exists an [instrument][] to **disable** the [keyboard event][]; and
- - there exists an [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` doesn't return `true`; and
- - both [instruments][instrument] can be found in a [clearly labeled location][].
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and there is an [instrument][] to **disable** the [keyboard event][] and another [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` doesn't return `true`. The [instruments][instrument] can be found from a [clearly labeled location][].
 
 ```html
 <html>
@@ -316,10 +315,7 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 
 #### Failed Example 1
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and:
- - there doesn't exist any [instrument][] to **disable** the [keyboard event][]; nor
- - the [event is blocked][blocked event] when the [event target][] doesn't have [focus][]; nor
- - there doesn't exists any [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` doesn't return `true`.
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, but there is no [instrument][] to **disable** or **remap** the [keyboard event][] and the [keyboard event][] is not [blocked][blocked event] when the [event target][] does not have [focus][].
 
 ```html
 <html>
@@ -341,10 +337,7 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 
 #### Failed Example 2
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and:
- - there exists an [instrument][] to **disable** the [keyboard event][]; and
- - there exists an [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` returns `false`; and
- - none of the [instruments][instrument] can be found in a [clearly labeled location][].
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and there is an [instrument][] to **disable** the [keyboard event][] and another [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` doesn't return `true`, but the [instruments][instrument] are not in [clearly labeled location][].
 
 ```html
 <html>
@@ -415,7 +408,7 @@ This document is not an [HTML document][].
 
 #### Inapplicable Example 2
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` doesn't return `false`.
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `true`.
 
 ```html
 <html>
@@ -545,3 +538,4 @@ This [HTML document][] has an element with the attribute `accesskey`. Accesskeys
 [blocked event]: #blocked-event 'Definition of blocked event'
 [printable character]: #printable-characters 'Definition of printable characters'
 [non-printable characters]: #non-printable-characters 'Definition of non-printable characters'
+[valid modifier keys]: https://www.w3.org/TR/uievents-key/#keys-modifier 'Definition of modifier keys'

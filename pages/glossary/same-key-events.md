@@ -7,7 +7,7 @@
 
 Two [keyboard events][] are _same key events_ if they have the same value for all the following attributes:
 - `key`
-- code`
+- `code`
 - `location`
 - `repeat`
 - `isComposing`

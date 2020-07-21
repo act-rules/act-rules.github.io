@@ -22,16 +22,15 @@ acknowledgements:
 
 The rule applies to any [keyboard event][] for which all is true: 
 - the event's attribute `key` is a [printable character][] key; and
-- the event's method `getModifierState` returns `false`; and
-- the event is [dispatched][] to an [event target][] within a [HTML document][];
-- the event causes [changes in content] of the [HTML document][].
+- the event's method `getModifierState` returns `false` for any of the [valid modifier keys][]; and
+- the event is [dispatched][] to an [event target][] within a [HTML document][].
 
 ## Expectation
 
 For each test target at least one of the following is true:
- - **Disable**: there is at least one [set of clearly labelled instruments][] to [block events][blocked event] that use the [same key][same key events] of the test target; or
- - **Remap**: there is at least one [set of clearly labelled instruments][] to [block events][blocked event] that use the [same key][same key events] of the test target, unless the non-test target event `getModifierState` method returns `true` for any of the [valid modifier keys][]; or
- - **Focus**: if the [event target][] doesn't have [focus][] the [event is blocked][blocked event].
+ - **Disable**: there is at least one [set of clearly labelled instruments][] to [block events][blocked event] that use the [same key][same key events] as the test target; or
+ - **Remap**: there is at least one [set of clearly labelled instruments][] to [block events][blocked event] that use the [same key][same key events] as the test target and whose `getModifierState` method returns `false` for any of the [valid modifier keys][]; or
+ - **Focus**: if the [event target][] doesn't have [focus][] the event does not cause [changes in content][] of the [HTML document][].
 
 ## Assumptions
 

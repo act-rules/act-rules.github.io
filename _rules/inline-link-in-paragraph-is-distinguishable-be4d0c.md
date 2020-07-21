@@ -43,6 +43,7 @@ For each test target, the [outcome][] of one of the following rules is "passed":
 - The same foreground color and the same background color is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise color can not be a distinguishing factor.
 - The same `box-shadow` is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise `box-shadow` can not be a distinguishing factor.
 - The same `border` is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise `border` can not be a distinguishing factor.
+- The perceived visual styling of elements is the result of CSS styling applied to those elements and their _ancestor_ elements. If, through manipulation of the CSS styles of elements that are not rendered on the same line, an element ends up with a distinguishing style then this rule might fail while the success criteria might still be satisfied.
 
 ## Accessibility Support
 

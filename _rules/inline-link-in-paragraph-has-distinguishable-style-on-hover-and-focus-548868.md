@@ -56,7 +56,7 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-This link, that is distinguishable by color from the other text in the same line, uses the default styling of links (underline) when it is focused or hovered.
+This link, that is distinguishable by color from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered.
 
 ```html
 <style>
@@ -79,7 +79,7 @@ This link, that is distinguishable by color from the other text in the same line
 
 #### Passed Example 2
 
-This link, that is distinguishable by the background color from the other text in the same line, uses the default styling of links (underline) when it is focused or hovered.
+This link, that is distinguishable by the background color from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered.
 
 ```html
 <style>
@@ -98,7 +98,7 @@ This link, that is distinguishable by the background color from the other text i
 
 #### Passed Example 3
 
-This element with a [semantic role][] that inherits from link, that is distinguishable by color from the other text in the same line, uses the default styling of links (underline) when it is focused or hovered.
+This element with a [semantic role][] that inherits from link, that is distinguishable by color from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered.
 
 ```html
 <style>

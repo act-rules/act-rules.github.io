@@ -62,7 +62,7 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-This link, that is distinguishable by color from the other text in the same line, uses the default styling of links which underlines them in most browsers, making it a distinguishing style. This example passes rule "[Inline link has distinguishable style or content not based on color alone](https://act-rules.github.io/rules/88407d)".
+This link, that is distinguishable by color from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishing style. This example passes rule "[Inline link has distinguishable style or content not based on color alone](https://act-rules.github.io/rules/88407d)".
 
 ```html
 <style>
@@ -81,7 +81,7 @@ This link, that is distinguishable by color from the other text in the same line
 
 #### Passed Example 2
 
-This link, that is distinguishable by the background color from the other text in the same line, uses the default styling of links which underlines them in most browsers, making it a distinguishing style. This example passes rule "[Inline link has distinguishable style or content not based on color alone](https://act-rules.github.io/rules/88407d)".
+This link, that is distinguishable by the background color from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishing style. This example passes rule "[Inline link has distinguishable style or content not based on color alone](https://act-rules.github.io/rules/88407d)".
 
 ```html
 <style>
@@ -100,7 +100,7 @@ This link, that is distinguishable by the background color from the other text i
 
 #### Passed Example 3
 
-This element with a [semantic role][] that inherits from link, that is distinguishable by color from the other text in the same line, uses the default styling of links which underlines them in most browsers, making it a distinguishing style. This example passes rule "[Inline link has distinguishable style or content not based on color alone](https://act-rules.github.io/rules/88407d)".
+This element with a [semantic role][] that inherits from link, that is distinguishable by color from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishing style. This example passes rule "[Inline link has distinguishable style or content not based on color alone](https://act-rules.github.io/rules/88407d)".
 
 ```html
 <style>
@@ -228,7 +228,7 @@ This link, that is distinguishable by color from the other text in the same line
 
 #### Passed Example 9
 
-This link, that is distinguishable by color from the other text in the same line, uses the default styling of links (underline) when it is focused or hovered. This example passes rule "[Inline link has distinguishing style or content on hover and focus](https://act-rules.github.io/rules/548868)".
+This link, that is distinguishable by color from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered. This example passes rule "[Inline link has distinguishing style or content on hover and focus](https://act-rules.github.io/rules/548868)".
 
 ```html
 <style>
@@ -251,7 +251,7 @@ This link, that is distinguishable by color from the other text in the same line
 
 #### Passed Example 10
 
-This link, that is distinguishable by the background color from the other text in the same line, uses the default styling of links (underline) when it is focused or hovered. This example passes rule "[Inline link has distinguishing style or content on hover and focus](https://act-rules.github.io/rules/548868)".
+This link, that is distinguishable by the background color from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered. This example passes rule "[Inline link has distinguishing style or content on hover and focus](https://act-rules.github.io/rules/548868)".
 
 ```html
 <style>
@@ -270,7 +270,7 @@ This link, that is distinguishable by the background color from the other text i
 
 #### Passed Example 11
 
-This element with a [semantic role][] that inherits from link, that is distinguishable by color from the other text in the same line, uses the default styling of links (underline) when it is focused or hovered. This example passes rule "[Inline link has distinguishing style or content on hover and focus](https://act-rules.github.io/rules/548868)".
+This element with a [semantic role][] that inherits from link, that is distinguishable by color from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered. This example passes rule "[Inline link has distinguishing style or content on hover and focus](https://act-rules.github.io/rules/548868)".
 
 ```html
 <style>

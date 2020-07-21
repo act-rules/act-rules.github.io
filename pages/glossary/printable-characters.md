@@ -9,9 +9,9 @@ A _printable character_ is a character that occupies a printing position on a di
 
 These characters correspond to the following [Unicode categories](https://www.unicode.org/versions/Unicode12.0.0/ch04.pdf):
 
-- Letters: 'LC', 'Ll', 'Lm', 'Lo', 'Lt', 'Lu'
-- Numbers: 'Nd', 'Nl', 'No'
-- Marks: 'Mc', 'Me', 'Mn'
-- Punctuations: 'Pc', 'Pd', 'Pe', 'Pf', 'Pi', 'Po', 'Ps'
-- Symbols: 'Sc', 'Sk', 'Sm', 'So'
+- Letter: 'LC', 'Ll', 'Lm', 'Lo', 'Lt', 'Lu'
+- Number: 'Nd', 'Nl', 'No'
+- Mark: 'Mc', 'Me', 'Mn'
+- Punctuation: 'Pc', 'Pd', 'Pe', 'Pf', 'Pi', 'Po', 'Ps'
+- Symbol: 'Sc', 'Sk', 'Sm', 'So'
 - Space: 'Zs'

@@ -28,7 +28,6 @@ The rule applies to any [keyboard event][] for which all is true:
 ## Expectation
 
 For each test target at least one of the following is true:
- - **Disable**: there is at least one [set of clearly labelled instruments][] to [block events][blocked event] that use the [same key][same key events] as the test target; or
  - **Remap**: there is at least one [set of clearly labelled instruments][] to [block events][blocked event] that use the [same key][same key events] as the test target and whose `getModifierState` method returns `false` for any of the [valid modifier keys][]; or
  - **Focus**: if the [event target][] doesn't have [focus][] the event does not cause [changes in content][] of the [HTML document][].
 
@@ -53,94 +52,12 @@ Currently [keyboard events][keyboard event] only support the types `keydown` and
 
 #### Passed Example 1
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to **disable** the [keyboard event][].
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to **remap** the [keyboard event][] so that it requires that the method `getModifierState` returns `true`.
 
 ```html
 <html>
   <head>
     <title>Passed Example 1</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
-    <label for="target">Add to list (press "+" to add):</label>
-    <input type="text" id="target" />
-    <label>
-      <input type="checkbox" onclick="toggleDisabled('singleShortcut', !this.checked)" checked>
-      Toggle single character keyboard shortcut
-    </label>
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Passed Example 2
-
-This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and for each [keyboard event][] exists an [instrument][] to **disable** the [keyboard event][].
-
-```html
-<html>
-  <head>
-    <title>Passed Example 2</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-  <body onload="registerShortcut({id: 'firstShortcut', shortcutKey: '+'}); registerShortcut({id: 'secondShortcut', shortcutKey: 'a'}); activateShortcuts();">
-    <label for="target">Add to list (press "+" or "a" to add):</label>
-    <input type="text" id="target" />
-    <label>
-      <input type="checkbox" onclick="toggleDisabled('firstShortcut', !this.checked)" checked>
-      Toggle "+" single character keyboard shortcut
-    </label>
-    <label>
-      <input type="checkbox" onclick="toggleDisabled('secondShortcut', !this.checked)" checked>
-      Toggle "a" single character keyboard shortcut
-    </label>
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Passed Example 3
-
-This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to **disable** the [keyboard event][]. In this case, the same [instrument][] is used to **disable** both [keyboard events][keyboard event].
-
-```html
-<html>
-  <head>
-    <title>Passed Example 3</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-  <body onload="registerShortcut({id: 'firstShortcut', shortcutKey: '+'}); registerShortcut({id: 'secondShortcut', shortcutKey: 'a'}); activateShortcuts();">
-    <label for="target">Add to list (press "+" or "a" to add):</label>
-    <input type="text" id="target" />
-    <label>
-      <input type="checkbox" onclick="toggleDisabled('firstShortcut', !this.checked); toggleDisabled('secondShortcut', !this.checked)" checked>
-      Toggle single character keyboard shortcuts
-    </label>
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Passed Example 4
-
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` doesn't return `true`.
-
-```html
-<html>
-  <head>
-    <title>Passed Example 4</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
   <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
@@ -164,14 +81,40 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 </html>
 ```
 
-#### Passed Example 5
+#### Passed Example 2
 
-This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and for each [keyboard event][] exists an [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` doesn't return `true`.
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to disable the [keyboard event][]. A disabled event implies that the event is disabled when the `getModifierKey` method returns `false`, therefore meeting the **remap** expectation.
 
 ```html
 <html>
   <head>
-    <title>Passed Example 5</title>
+    <title>Passed Example 2</title>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
+  </head>
+  <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
+    <label for="target">Add to list (press "+" to add):</label>
+    <input type="text" id="target" />
+    <label>
+      <input type="checkbox" onclick="toggleDisabled('singleShortcut', !this.checked)" checked>
+      Toggle single character keyboard shortcut
+    </label>
+    <br />
+    <div>
+      To do list
+    </div>
+    <ul id="list"></ul>
+  </body>
+</html>
+```
+
+#### Passed Example 3
+
+This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and for each [keyboard event][] exists an [instrument][] to **remap** the [keyboard event][] so that it requires that the method `getModifierState` returns `true`.
+
+```html
+<html>
+  <head>
+    <title>Passed Example 3</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
   <body onload="registerShortcut({id: 'firstShortcut', shortcutKey: '+'}); registerShortcut({id: 'secondShortcut', shortcutKey: 'a'}); activateShortcuts();">
@@ -199,14 +142,14 @@ This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] 
 </html>
 ```
 
-#### Passed Example 6
+#### Passed Example 4
 
-This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` doesn't return `true`. In this case, the same [instrument][] is used to **remap** both [keyboard events][keyboard event]
+This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to **remap** the [keyboard event][] so that it requires that the method `getModifierState` returns `true`. In this example, the same [instrument][] is used to **remap** both [keyboard events][keyboard event]
 
 ```html
 <html>
   <head>
-    <title>Passed Example 6</title>
+    <title>Passed Example 4</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
   <body onload="registerShortcut({id: 'firstShortcut', shortcutKey: '+'}); registerShortcut({id: 'secondShortcut', shortcutKey: 'a'}); activateShortcuts();">
@@ -230,14 +173,14 @@ This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] 
 </html>
 ```
 
-#### Passed Example 7
+#### Passed Example 5
 
 This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, but the [event is blocked][blocked event] when the [event target][] doesn't have [focus][].
 
 ```html
 <html>
   <head>
-    <title>Passed Example 7</title>
+    <title>Passed Example 5</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
@@ -253,14 +196,14 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 </html>
 ```
 
-#### Passed Example 8
+#### Passed Example 6
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and there is an [instrument][] to **disable** the [keyboard event][] and another [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` doesn't return `true`. The [instruments][instrument] can be found from a [clearly labeled location][].
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and there is an [instrument][] to disable the [keyboard event][] and another [instrument][] to **remap** the [keyboard event][] so that it requires that the method `getModifierState` returns `true`. The [instruments][instrument] can be found from a [clearly labeled location][].
 
 ```html
 <html>
   <head>
-    <title>Passed Example 8</title>
+    <title>Passed Example 6</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
     <script>
       function openModal() {
@@ -315,7 +258,7 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 
 #### Failed Example 1
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, but there is no [instrument][] to **disable** or **remap** the [keyboard event][] and the [keyboard event][] is not [blocked][blocked event] when the [event target][] does not have [focus][].
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, but there is no [instrument][] to **remap** the [keyboard event][] and the [keyboard event][] is not [blocked][blocked event] when the [event target][] does not have [focus][].
 
 ```html
 <html>
@@ -337,7 +280,7 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 
 #### Failed Example 2
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and there is an [instrument][] to **disable** the [keyboard event][] and another [instrument][] to **remap** the [keyboard event][] when the [keyboard event][] method `getModifierState` doesn't return `true`, but the [instruments][instrument] are not in [clearly labeled location][].
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and there is an [instrument][] to disable the [keyboard event][] and another [instrument][] to **remap** the [keyboard event][] so that it requires that the method `getModifierState` returns `true`, but the [instruments][instrument] are not in a [clearly labeled location][].
 
 ```html
 <html>

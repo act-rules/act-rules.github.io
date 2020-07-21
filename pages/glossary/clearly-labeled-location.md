@@ -13,10 +13,10 @@ Whether or not the content is "clearly labeled" depends on the starting point of
 
 For the purpose of this definition, an [instrument][] is _identifiable_ if any text or other content with a [text alternative][], allows any user to identify an element with a [semantic role][] that inherits from `widget`.
 
-A [web page][] changes state when the [document's body][body] changes without a change in the [document's URL][URL].
+A [web page][] changes state when the [document's body][body] changes without a change in the [document's URL][url].
 
 [body]: https://html.spec.whatwg.org/#dom-document-body
-[URL]: https://url.spec.whatwg.org/#concept-url
+[url]: https://url.spec.whatwg.org/#concept-url
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [text alternative]: https://www.w3.org/TR/WCAG21/#dfn-text-alternative 'Definition of text alternative'

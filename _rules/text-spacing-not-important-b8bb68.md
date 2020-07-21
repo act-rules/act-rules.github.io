@@ -20,11 +20,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element that is [visible][] and has a [declared][] value specified via the `style` attribute for any of the following CSS properties:
+This rule applies to any HTML element that is [visible][], for which one of the following is true:
 
-- [word-spacing][]; or
-- [letter-spacing][]; or
-- [line-height][].
+- the `style` attribute [declares][declared][][word-spacing][] CSS property; or
+- the `style` attribute [declares][declared][][letter-spacing][] CSS property; or
+- the `style` attribute [declares][declared][][line-height][] CSS property.
 
 ## Expectation 1
 

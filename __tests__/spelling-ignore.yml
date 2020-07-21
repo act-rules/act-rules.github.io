@@ -71,6 +71,7 @@
 - dropdown
 - getModifierState
 - accesskey
+- Accesskeys
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete
@@ -157,6 +158,7 @@
 - dblclick
 - keydown
 - keyup
+- keypressed
 - mousedown
 - mouseenter
 - mouseleave

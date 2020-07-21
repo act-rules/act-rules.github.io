@@ -69,6 +69,8 @@
 - presentational
 - sc
 - dropdown
+- getModifierState
+- accesskey
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete
@@ -145,6 +147,7 @@
 - columnheader
 - innerText
 - isTrusted
+- isComposing
 
 # DOM Events
 - auxclick

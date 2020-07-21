@@ -31,7 +31,7 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Assumptions
 
-If an `iframe` is not perceived by the user as a single control, it does not qualify as a [user interface component][] under WCAG 2. In such a scenario, failing this rule would not fail [success criterion 4.1.2](https://www.w3.org/TR/WCAG21/#name-role-value). Unless the `iframe` is both removed from the accessibility tree and removed from [sequential focus navigation][], they usually are considered to be [user interface components][user interface component].
+If an `iframe` is not perceived by the user as a single control, it does not qualify as a [user interface component][] under WCAG 2. In such a scenario, failing this rule would not fail [success criterion 4.1.2](https://www.w3.org/TR/WCAG21/#name-role-value). Unless the `iframe` is removed from the accessibility tree they usually are considered to be [user interface components][user interface component].
 
 ## Accessibility Support
 
@@ -112,6 +112,14 @@ This `iframe` element has an empty (`""`) [accessible name][] because the `title
 
 ```html
 <iframe title=" " src="/test-assets/SC4-1-2-frame-doc.html" role="none"> </iframe>
+```
+
+#### Failed Example 5
+
+This `iframe` element is taken out of [sequential focus navigation][] using `tabindex`.
+
+```html
+<iframe tabindex="-1" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
 ### Inapplicable

@@ -12,7 +12,7 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-acknowledgements:
+acknowledgments:
   authors:
     - João Vicente
     - Carlos Duarte

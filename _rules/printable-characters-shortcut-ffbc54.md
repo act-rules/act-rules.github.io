@@ -28,7 +28,7 @@ The rule applies to any [keyboard event][] for which all is true:
 ## Expectation
 
 For each test target at least one of the following is true:
- - **Remap**: there is at least one [set of clearly labelled instruments][] to [block events][blocked event] that use the [same key][same key events] as the test target and whose `getModifierState` method returns `false` for any of the [valid modifier keys][]; or
+ - **Remap**: there is at least one [set of clearly labeled instruments][] to [block events][blocked event] that use the [same key][same key events] as the test target and whose `getModifierState` method returns `false` for any of the [valid modifier keys][]; or
  - **Focus**: if the [event target][] doesn't have [focus][] the event does not cause [changes in content][] of the [HTML document][].
 
 ## Assumptions
@@ -477,7 +477,7 @@ This [HTML document][] has an element with the attribute `accesskey`. Accesskeys
 [clearly labeled location]: #clearly-labeled-location 'Definition of clearly labeled location'
 [web page]: #web-page-html 'Definition of web page'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
-[set of clearly labelled instruments]: #set-of-clearly-labelled-instruments 'Definition of set of clearly labelled instruments'
+[set of clearly labeled instruments]: #set-of-clearly-labeled-instruments 'Definition of set of clearly labeled instruments'
 [blocked event]: #blocked-event 'Definition of blocked event'
 [printable character]: #printable-characters 'Definition of printable characters'
 [non-printable characters]: #non-printable-characters 'Definition of non-printable characters'

@@ -23,10 +23,10 @@
 - URI
 - UA/AT
 - WCAG
-- WCAG2 
+- WCAG2
 - WCAG21
-- CSS3 
-- UA 
+- CSS3
+- UA
 - UI
 - api # lowercase needed in reference list
 - APIs
@@ -80,9 +80,11 @@
 - de-hello
 - Helvetica
 - stylesheet
+- DeviceOrientation
 - fieldsets
 - ascii # lowercase needed in reference list
 - CMS
+- dropdown
 
 - 14pt
 - 18pt

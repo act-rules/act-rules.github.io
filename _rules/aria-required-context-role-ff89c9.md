@@ -12,12 +12,13 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - Accessibility tree
+  - CSS styling
   - DOM Tree
-acknowledgements:
+acknowledgments:
   authors:
     - Wilco Fiers
     - Brian Bors
-  previous_authros:
+  previous_authors:
     - Anne Thyme Nørregaard
 ---
 

@@ -3,16 +3,26 @@ id: 2779a5
 name: HTML page has title
 rule_type: atomic
 description: |
-  This rule checks that an HTML page has a title.
+  This rule checks that a non-embedded HTML page has a title.
 accessibility_requirements:
   wcag20:2.4.2: # Page Titled (A)
     forConformance: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:G88: # Providing descriptive titles for Web pages
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:H25: # Providing a title using the title element
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
-acknowledgements:
+acknowledgments:
   authors:
     - Wilco Fiers
     - Stein Erik Skotkjerra
@@ -29,15 +39,9 @@ htmlHintIgnore:
 
 The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element.
 
-**Note**: Documents embedded into other documents, such as through `iframe` or `object` elements are not applicable and do not require page titles, because they are not web pages according to the definition in WCAG.
-
 ## Expectation 1
 
-Each target element has at least one [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) that is an HTML `title` element.
-
-**Note**: The `title` element exists in other namespaces such as SVG. These are not HTML `title` elements and should be ignored for this rule.
-
-**Note**: The [HTML 5.2 specification](https://www.w3.org/TR/html52/document-metadata.html#the-title-element) requires that a document only has one `title` element, and that it is a child of the `head` element of a document. However, HTML 5.2 also describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG.
+Each target element has at least one [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) that is a [`title` element](https://html.spec.whatwg.org/multipage/semantics.html#htmltitleelement).
 
 ## Expectation 2
 
@@ -45,7 +49,7 @@ For each target element, the first HTML `title` element that is a [descendant](h
 
 ## Assumptions
 
-_There are currently no assumptions_
+This rule assumes that [Success Criterion 2.4.2 Page Titled](https://www.w3.org/TR/WCAG21/#page-titled) does not require that a document only has one `title` element, nor that it is a child of the `head` element of a document. While this is invalid in HTML, the HTML 5.2 specification describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG. Regardless of whether this is required by 2.4.2 Page Titled, failing this rule means the success criterion is not satisfied.
 
 ## Accessibility Support
 
@@ -53,10 +57,12 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
+This rule is only applicable to non-embedded HTML pages. HTML pages embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not [web pages](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) according to the definition in WCAG.
+
 - [Understanding Success Criterion 2.4.2: Page Titled](https://www.w3.org/WAI/WCAG21/Understanding/page-titled)
 - [G88: Providing descriptive titles for Web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G88)
 - [H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG21/Techniques/html/H25)
-- [HTML 5.2: the `title` element](https://www.w3.org/TR/html52/document-metadata.html#the-title-element)
+- [HTML Specification - The `title` element](https://html.spec.whatwg.org/#the-title-element)
 
 ## Test Cases
 
@@ -64,7 +70,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This page has a `title` with content.
+This page has a `title` element with content.
 
 ```html
 <html>
@@ -74,7 +80,7 @@ This page has a `title` with content.
 
 #### Passed Example 2
 
-This page `title` element is for the entire page, including content in the `iframe` without its own `title`.
+This page has a `title` element that serves as the title for the page and the `iframe` since it does not have its own.
 
 ```html
 <html>
@@ -85,7 +91,7 @@ This page `title` element is for the entire page, including content in the `ifra
 
 #### Passed Example 3
 
-This page has two `title` elements.
+This page has two `title` elements with content.
 
 ```html
 <html>
@@ -100,7 +106,7 @@ This page has two `title` elements.
 
 #### Passed Example 4
 
-The `title` is in the `body`.
+This page has one `title` element with content, which is within the `body` element.
 
 ```html
 <html>
@@ -112,7 +118,7 @@ The `title` is in the `body`.
 
 #### Passed Example 5
 
-The first `title` element has content.
+This page has two `title` elements and only the first has content.
 
 ```html
 <html>
@@ -129,7 +135,7 @@ The first `title` element has content.
 
 #### Failed Example 1
 
-The page has no `title`.
+This page does not have a `title` element.
 
 ```html
 <html>
@@ -139,7 +145,7 @@ The page has no `title`.
 
 #### Failed Example 2
 
-The `title` element is empty.
+This page has a `title` element that is empty.
 
 ```html
 <html>
@@ -149,7 +155,7 @@ The `title` element is empty.
 
 #### Failed Example 3
 
-The page has no `title`.
+This page does not have a `title` element for the whole page.
 
 ```html
 <html>
@@ -159,7 +165,7 @@ The page has no `title`.
 
 #### Failed Example 4
 
-The first `title` element is empty.
+This page has two `title` elements and the first is empty.
 
 ```html
 <html>
@@ -174,7 +180,7 @@ The first `title` element is empty.
 
 #### Failed Example 5
 
-The `title` only contains a separator character.
+This page has a `title` element that only contains a separator character.
 
 ```html
 <html>
@@ -186,7 +192,7 @@ The `title` only contains a separator character.
 
 #### Inapplicable Example 1
 
-This rule is not applicable to `svg` elements.
+This `title` element is a child of an `svg` element.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">

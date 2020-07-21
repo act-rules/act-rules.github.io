@@ -15,26 +15,32 @@ const describePage = require('../test-utils/describe-page')
 const getMarkdownAstNodesOfType = require('../utils/get-markdown-ast-nodes-of-type')
 const uniqueArray = require('../utils/unique-array')
 
-describe(`Validate link references`, () => {
+describe(`Validate link references and definitions`, () => {
 	describeRule('Rules', ({ markdownAST }) => validateLinkReferences(markdownAST))
-	describePage('Rules', ({ markdownAST }) => validateLinkReferences(markdownAST))
+	describePage('Pages', ({ markdownAST }) => validateLinkReferences(markdownAST))
 })
 
 function validateLinkReferences(markdownAST) {
 	const linkReferences = uniqueArray(
-		getMarkdownAstNodesOfType(markdownAST, 'linkReference').map(({ identifier }) => identifier)
+		getMarkdownAstNodesOfType(markdownAST, 'linkReference').map(({ identifier }) => identifier.replace(/`/g, ''))
 	)
 	if (!linkReferences || !linkReferences.length) {
 		return
 	}
 
 	const definitions = uniqueArray(
-		getMarkdownAstNodesOfType(markdownAST, 'definition').map(({ identifier }) => identifier)
+		getMarkdownAstNodesOfType(markdownAST, 'definition').map(({ identifier }) => identifier.replace(/`/g, ''))
 	)
 
 	test.each(linkReferences)('%s', linkRef => {
 		const actual = definitions.includes(linkRef)
 		const msg = `Link reference -> [${linkRef}] is not defined`
+		expect(actual, msg).toBe(true)
+	})
+
+	test.each(definitions)('%s', dfn => {
+		const actual = linkReferences.includes(dfn)
+		const msg = `Definition -> [${dfn}] is declared but not used`
 		expect(actual, msg).toBe(true)
 	})
 }

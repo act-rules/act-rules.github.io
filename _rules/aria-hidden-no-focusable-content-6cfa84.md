@@ -24,16 +24,16 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Wilco Fiers
 ---
 
 ## Applicability
 
-The rule applies to any element with an `aria-hidden="true"` attribute.
+The rule applies to any element with an `aria-hidden` [attribute value][] of `true`.
 
-**Note**: Using `aria-hidden="false"` on a descendant of an element with `aria-hidden="true"` **does not** expose that element. `aria-hidden="true"` hides itself and all its content from assistive technologies.
+**Note:** Using `aria-hidden="false"` on a descendant of an element with `aria-hidden="true"` **does not** expose that element. `aria-hidden="true"` hides itself and all its content from assistive technologies.
 
 ## Expectation
 
@@ -45,13 +45,13 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+Some user agents treat the value of `aria-hidden` attribute as case-sensitive.
 
 ## Background
 
-By adding `aria-hidden="true"` to an element, content authors ensure that assistive technologies will ignore the element. This can be used to hide [decorative](#decorative) parts of a web page, such as icon fonts - that are not meant to be read by assistive technologies.
+By adding `aria-hidden="true"` to an element, content authors ensure that assistive technologies will ignore the element. This can be used to hide parts of a web page that are [pure decoration](https://www.w3.org/TR/WCAG21/#dfn-pure-decoration), such as icon fonts - that are not meant to be read by assistive technologies.
 
-A [focusable][] element with `aria-hidden="true"` is ignored as part of the reading order, but still part of the focus order, making it's state of [visible](#visible) or hidden unclear.
+A [focusable][] element with `aria-hidden="true"` is ignored as part of the reading order, but still part of the focus order, making its state of [visible](#visible) or hidden unclear.
 
 - [CSS Scoping Module Level 1 (editor's draft)](https://drafts.csswg.org/css-scoping/)
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships)
@@ -202,4 +202,5 @@ Incorrect value of `aria-hidden`.
 </div>
 ```
 
+[attribute value]: #attribute-value 'Definition of Attribute Value'
 [focusable]: #focusable 'Definition of focusable'

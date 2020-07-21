@@ -9,11 +9,17 @@
 - http
 - https
 - wai-aria
+- validator
 
 # Tag(s)
 - svg # `aria-query` dom tags does not list `svg`
+- xhtml
+- DOCTYPE
+- iFrame # used to demonstrate bad spelling
+- feImage
 
 # Domain-specific words, Definitions & other allowed terms
+- ABNF
 - URI
 - UA/AT
 - WCAG
@@ -22,6 +28,7 @@
 - CSS3
 - UA
 - UI
+- api # lowercase needed in reference list
 - APIs
 - MDN
 - BCP
@@ -34,7 +41,10 @@
 - PDFs
 - DOCX
 - DPUB
+- CSSOM
 - DNS
+- BCP
+- bcp
 - Esc # esc key on a keyboard
 - url
 - voiceover
@@ -43,20 +53,55 @@
 - testrunner
 - color
 - focusable
-- Focusable
 - unfocusable
 - tabindex
 - whitespace
+- textfield
 - namespace
 - namespaces
 - webpage
 - wai-aria-specifications
 - autoplay
 - autoplays
+- columnheader
+- rowheader
+- colspan
 - presentational
+- sc
+- dropdown
+
+# spell checker checks against strict casing & hence some repeated words here
+- Autocomplete
+- Focusable
+- ascii
 - EARL10-Schema
 - labelable
 - merchantability
+- de-hello
+- 14pt
+- 18pt
+- Helvetica
+- DeviceOrientation
+- fieldsets
+- ascii # lowercase needed in reference list
+- CMS
+- dropdown
+
+# Parts of url
+- http
+- https
+- github.com
+- www.w3.org
+- eval
+- html52
+- css-scoping
+- csswg
+- whatwg
+- dom
+- wai-aria
+- multipage
+- attr-input-type
+- wai-aria-1.1
 
 # Notes and acronyms
 - TODO
@@ -79,6 +124,7 @@
 # Attributes (repeated words with casing as retext-spell has no config to ignore casing)
 - href
 - src
+- srcset
 - aria-labelled # used to demonstrate wrong attribute
 - autofill-field
 - autocomplete
@@ -87,6 +133,7 @@
 - viewport
 - lang
 - xml:lang
+- xml:id
 - http-equiv
 - user-scalable
 - user-scalable=yes
@@ -94,14 +141,55 @@
 - rotate3d
 - rotateZ
 - matrix3d
+- rowheader
+- columnheader
+- innerText
+- isTrusted
+
+# DOM Events
+- auxclick
+- compostionend
+- compositionstart
+- compositionupdate
+- dblclick
+- keydown
+- keyup
+- mousedown
+- mouseenter
+- mouseleave
+- mousemove
+- mouseout
+- mouseover
+- mouseup
+- scrollable-element
+- scrollWidth
+- scrollHeight
+- clientHeight
+- clientWidth
+- innerHeight
+- innerWidth
+- innerText
+- scrollbars
+- documentElement
+- rects
+- nowrap
+- javascript
+- Reflow
+- Viewport
+- dom-meta-content
 
 # Unsure why the dictionary does not have these words
 - programmatically
-- Programmatically
 - personalization
-- Autofill
+- autofill
 - implementers
-- Implementers
+- presentational
+- backtick
+- camelCase
+- untestable
+- scrollable
+- scrollbars
+- subconditions
 
 # Parts of Unicode
 - 000A

@@ -8,7 +8,7 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-acknowledgements:
+acknowledgments:
   authors:
     - Dagfinn Rømen
     - Geir Sindre Fossøy
@@ -23,13 +23,13 @@ acknowledgements:
 
 The rule applies to any HTML or SVG element that is [focusable](#focusable) where focus cannot cycle to the browser UI by using [standard keyboard navigation](#standard-keyboard-navigation).
 
-**Note**: This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
+**Note:** This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
 
 ## Expectation 1
 
 For each target element help information is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree) or can be accessed from within the keyboard trap.
 
-**Note**: As per WCAG 2.0 Success Criterion 2.1.1 Keyboard the help information should be accessible through a keyboard interface.
+**Note:** As per WCAG 2.0 Success Criterion 2.1.1 Keyboard the help information should be accessible through a keyboard interface.
 
 ## Expectation 2
 
@@ -39,7 +39,7 @@ The help information explains how to cycle to the browser UI, or on how to get t
 
 For each target element focus can cycle to the browser UI by using the method advised in the help information.
 
-**Note**: Cycling back to the browser UI can be done both by moving forward through the tab order and by moving backwards. It is not possible to fulfill this expectation by using browser specific shortcuts to return to the browser UI.
+**Note:** Cycling back to the browser UI can be done both by moving forward through the tab order and by moving backwards. It is not possible to fulfill this expectation by using browser specific shortcuts to return to the browser UI.
 
 ## Assumptions
 
@@ -76,7 +76,6 @@ Keyboard trap with help information in a paragraph before, and where the method 
 </button>
 <button
 	id="btn2"
-	class="target"
 	onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)"
 	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
 >
@@ -101,7 +100,6 @@ Keyboard trap with help information within the trap, and where the method advise
 <p>Press the M-key to Exit</p>
 <button
 	id="btn2"
-	class="target"
 	onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)"
 	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
 >
@@ -130,7 +128,7 @@ Keyboard trap with "help" link that once clicked exposes the instructions.
 	</button>
 	<a id="helpLink" href="#" onclick="showHelpText()">How to go the next element</a>
 	<div id="helptext"></div>
-	<button id="btn2" class="target" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">
+	<button id="btn2" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">
 		Button 2
 	</button>
 </div>
@@ -154,7 +152,6 @@ Keyboard trap with no instructions.
 </button>
 <button
 	id="btn2"
-	class="target"
 	onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)"
 	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
 >
@@ -179,7 +176,6 @@ Keyboard trap with instructions that doesn't give advise on the method for proce
 </button>
 <button
 	id="btn2"
-	class="target"
 	onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)"
 	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
 >
@@ -202,7 +198,7 @@ Keyboard trap with help text, where the method advised doesn't work.
 	Button 1
 </button>
 <p>Press the M-key to Exit</p>
-<button id="btn2" class="target" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">
+<button id="btn2" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">
 	Button 2
 </button>
 <a id="link2" href="#">Link 2</a>

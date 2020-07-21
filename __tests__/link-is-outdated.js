@@ -20,17 +20,19 @@ const badLinksAndRecommendations = {
 	'://www.w3.org/TR/wai-aria-1.0/': 'Use ARIA 1.1 reference - https://www.w3.org/TR/wai-aria-1.1/',
 	'://www.w3.org/TR/dom41/': 'Use http://dom.spec.whatwg.org',
 	'://www.w3.org/TR/html/': 'Use http://html.spec.whatwg.org',
+	'://www.w3.org/TR/html52/': 'Use http://html.spec.whatwg.org',
 }
 
 /**
  * Validate `Rules` and `Pages` markdown files
  */
 describe('Validate links are not outdated', () => {
-	describeRule('Rules', ({ markdownAST }) => validateIfLinksAreOutdated(markdownAST))
-	describePage('Pages', ({ markdownAST }) => validateIfLinksAreOutdated(markdownAST))
+	describeRule('Rules', validateIfLinksAreOutdated)
+	describePage('Pages', validateIfLinksAreOutdated)
 })
 
-function validateIfLinksAreOutdated(markdownAST) {
+function validateIfLinksAreOutdated({ markdownAST, frontmatter }) {
+	const { oudatedLinksIgnore = [] } = frontmatter
 	/**
 	 * get all links
 	 * -> eg: [Alpha](https://....)
@@ -52,7 +54,12 @@ function validateIfLinksAreOutdated(markdownAST) {
 	}
 
 	test.each(links)('%s', link => {
-		const badLink = Object.keys(badLinksAndRecommendations).find(badLink => link.includes(badLink))
-		expect(!!badLink, badLinksAndRecommendations[badLink]).toBe(false)
+		let badLink = !!Object.keys(badLinksAndRecommendations).find(badLink => link.includes(badLink))
+		// if blacklisted outdated link but in ignore list, then reset to false
+		if (badLink && !!oudatedLinksIgnore.find(ignoreLink => link.includes(ignoreLink))) {
+			badLink = false
+		}
+
+		expect(badLink, badLinksAndRecommendations[badLink]).toBe(false)
 	})
 }

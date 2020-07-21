@@ -124,11 +124,11 @@ This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] 
       <div>Remap shortcut</div>
       <div>
         <label>
-          <input id="remap" type="checkbox" onclick="toggleModifier('firstShortcut', this.checked)">
+          <input id="remap1" type="checkbox" onclick="toggleModifier('firstShortcut', this.checked)">
           Use "ctrl" key together with the "+" key
         </label>
         <label>
-          <input id="remap" type="checkbox" onclick="toggleModifier('secondShortcut', this.checked)">
+          <input id="remap2" type="checkbox" onclick="toggleModifier('secondShortcut', this.checked)">
           Use "ctrl" key together with the "a" key
         </label>
       </div>

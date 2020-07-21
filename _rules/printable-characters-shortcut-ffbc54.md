@@ -83,7 +83,7 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 
 #### Passed Example 2
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to disable the [keyboard event][]. A disabled event implies that the event is disabled when the `getModifierKey` method returns `false`, therefore meeting the **remap** expectation.
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to disable the [keyboard event][]. A disabled event implies that the event is disabled when the `getModifierState` method returns `false`, therefore meeting the **remap** expectation.
 
 ```html
 <html>
@@ -472,10 +472,8 @@ This [HTML document][] has an element with the attribute `accesskey`. Accesskeys
 [keyboard event]: https://www.w3.org/TR/uievents/#events-keyboardevents
 [legacy keyboard events]: https://www.w3.org/TR/uievents/#legacy-keyboardevent-events
 [dispatched]: https://dom.spec.whatwg.org/#dispatching-events
-[event firing]: https://dom.spec.whatwg.org/#concept-event-fire
 [changes in content]: #changes-in-content 'Definition of changes in content'
 [clearly labeled location]: #clearly-labeled-location 'Definition of clearly labeled location'
-[web page]: #web-page-html 'Definition of web page'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [set of clearly labeled instruments]: #set-of-clearly-labeled-instruments 'Definition of set of clearly labeled instruments'
 [blocked event]: #blocked-event 'Definition of blocked event'

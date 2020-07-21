@@ -1,6 +1,6 @@
 ---
-title: Distinguishing Borders
-key: distinguishing-borders
+title: Distinguishable Borders
+key: distinguishable-borders
 unambiguous: true
 objective: true
 ---
@@ -10,7 +10,7 @@ Look at the [computed](https://drafts.csswg.org/css-cascade/#computed-value) val
 - `border`, and the related shorthand properties `border-bottom`, `border-left`, `border-right,` `border-top`, and
 - `outline`.
 
-Two elements have distinguishing borders if one of the following is true:
+Two elements have distinguishable borders if one of the following is true:
 
 - The `-width` longhand sub-property of one element is larger than zero and of the other is not, and the element with the `-width` longhand sub-property larger than zero has a border that is not invisible; or
 - Both elements have their `-width` longhand sub-properties larger than zero and with different values, as long as at least one element has a border that is not invisible; or

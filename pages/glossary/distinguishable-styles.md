@@ -1,14 +1,14 @@
 ---
-title: Distinguishing Styles
-key: distinguishing-styles
+title: Distinguishable Styles
+key: distinguishable-styles
 unambiguous: true
 objective: true
 ---
 
-Two elements have distinguishing styles if one of the following is true:
+Two elements have distinguishable styles if one of the following is true:
 
-- they have [distinguishing borders](#distinguishing-borders); or
-- they have [distinguishing box-shadows](#distinguishing-box-shadows); or
+- they have [distinguishable borders](#distinguishable-borders); or
+- they have [distinguishable box-shadows](#distinguishable-box-shadows); or
 - they have different computed values for the `background-image` property; or
 - they have different computed values for at least one [text style property](#text-style-properties).
 

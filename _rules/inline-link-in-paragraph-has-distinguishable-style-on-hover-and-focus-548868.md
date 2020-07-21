@@ -1,6 +1,6 @@
 ---
 id: 548868
-name: Inline link has distinguishing style or content on hover and focus
+name: Inline link has distinguishable style or content on hover and focus
 rule_type: atomic
 description: |
   This rule checks that inline links are distinguishable from the surrounding text through a difference in style or content when the links are hovered or focused.
@@ -27,7 +27,7 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], f
 
 For each test target, at least one of the following is true when it is [focused][] or [hovered][]:
 
-- **distinguishing style**: the element has a [distinguishing style][] not based on color alone from the **non-link line text** elements; or
+- **distinguishing style**: the element has a [distinguishable style][] not based on color alone from the **non-link line text** elements; or
 - **distinguishing content**: the element has content (such as an image or text), located in the proximity of the element (i.e. there is no other content visually in between this content and the target element), that indicates the test target is a link.
 
 ## Assumptions
@@ -37,7 +37,7 @@ For each test target, at least one of the following is true when it is [focused]
 - The same foreground color and the same background color is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise color can not be a distinguishing factor.
 - The same `box-shadow` is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise `box-shadow` can not be a distinguishing factor.
 - The same `border` is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise `border` can not be a distinguishing factor.
-- The perceived visual styling of elements is the result of CSS styling applied to those elements and their _ancestor_ elements. If, through manipulation of the CSS styles of elements that are not rendered on the same line, an element ends up with a distinguishing style then this rule might fail while the success criteria might still be satisfied.
+- The perceived visual styling of elements is the result of CSS styling applied to those elements and their _ancestor_ elements. If, through manipulation of the CSS styles of elements that are not rendered on the same line, an element ends up with a distinguishable style then this rule might fail while the success criteria might still be satisfied.
 
 ## Accessibility Support
 
@@ -126,7 +126,7 @@ This element with a [semantic role][] that inherits from link, that is distingui
 
 #### Passed Example 4
 
-This link, that is distinguishable by color from the other text in the same line, has a distinguishing bottom border when it is hovered or focused.
+This link, that is distinguishable by color from the other text in the same line, has a distinguishable bottom border when it is hovered or focused.
 
 ```html
 <style>
@@ -152,7 +152,7 @@ This link, that is distinguishable by color from the other text in the same line
 
 #### Passed Example 5
 
-This link, that is distinguishable by color from the other text in the same line, has a distinguishing box-shadow when it is hovered or focused.
+This link, that is distinguishable by color from the other text in the same line, has a distinguishable box-shadow when it is hovered or focused.
 
 ```html
 <style>
@@ -175,7 +175,7 @@ This link, that is distinguishable by color from the other text in the same line
 
 #### Passed Example 6
 
-This link, that is distinguishable by color from the other text in the same line, has a distinguishing font-style when it is hovered or focused.
+This link, that is distinguishable by color from the other text in the same line, has a distinguishable font-style when it is hovered or focused.
 
 ```html
 <style>
@@ -305,7 +305,7 @@ This link is not distinguishable by color from the other text rendered in its li
 
 [background color]: #background-colors-of-element 'Definition of background colors of element'
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
-[distinguishing style]: #distinguishing-styles 'Definition of distinguishing styles'
+[distinguishable style]: #distinguishable-styles 'Definition of distinguishable styles'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [focused]: #focused 'Definition of focused'
 [foreground color]: #foreground-colors-of-text 'Definition of foreground colors of text'

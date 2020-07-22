@@ -22,14 +22,13 @@ acknowledgments:
 
 The rule applies to any [keyboard event][] for which all is true: 
 - the event's attribute `key` is a [printable character][] key; and
-- the event's method `getModifierState` returns `false` for any of the [valid modifier keys][]; and
-- the event is [dispatched][] to an [event target][] within a [HTML document][].
+- the event's method `getModifierState` returns `false` for any of the [valid modifier keys][].
 
 ## Expectation
 
 For each test target at least one of the following is true:
- - **Remap**: there is at least one [set of clearly labeled instruments][] to [block events][blocked event] that use the [same key][same key events] as the test target and whose `getModifierState` method returns `false` for any of the [valid modifier keys][]; or
- - **Focus**: if the [event target][] doesn't have [focus][] the event does not cause [changes in content][] of the [HTML document][].
+ - (**Remap**:) there is at least one [set of clearly labeled instruments][] to [block events][blocked event] that use the [same key][same key events] as the test target and whose `getModifierState` method returns `false` for any of the [valid modifier keys][]; or
+ - (**Focus**:) if the [event target][] does not have a [semantic role][] that inherits from the [abstract role](https://www.w3.org/TR/wai-aria/#abstract_roles) of `widget` the event does not cause [changes in content][] of the [HTML document][].
 
 ## Assumptions
 
@@ -481,3 +480,4 @@ This [HTML document][] has an element with the attribute `accesskey`. Accesskeys
 [non-printable characters]: #non-printable-characters 'Definition of non-printable characters'
 [valid modifier keys]: https://www.w3.org/TR/uievents-key/#keys-modifier 'Definition of modifier keys'
 [same key events]: #same-key-events 'Definition of same key events'
+[semantic role]: #semantic-role 'Definition of Semantic Role'

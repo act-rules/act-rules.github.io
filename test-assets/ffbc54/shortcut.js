@@ -16,7 +16,7 @@ function activateShortcuts() {
 
         if (
           event.key === settings.shortcutKey &&
-          (!settings.ctrlKey || event.getModifierState()) &&
+          (!settings.ctrlKey || event.getModifierState("Control")) &&
           (!settings.focusOnly || document.activeElement === target)
         ) {
           document.getElementById("list").innerHTML += "<li>" + target.value + "</li>";

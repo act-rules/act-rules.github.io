@@ -5,4 +5,4 @@ unambiguous: true
 objective: true
 ---
 
-_Non-printable characters_, are all the characters that are not [printable characters](https://act-rules.github.io/pages/glossary/printable-characters.md).
+_Non-printable characters_, are all the characters that are not [printable characters](#printable-characters).

@@ -28,7 +28,7 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], f
 For each test target, when it is neither [focused][] nor [hovered][], at least one of the following is true:
 
 - **distinguishing style**: the element has a [distinguishable style][] not based on color alone from the **non-link line text** elements; or
-- **distinguishing content**: the element has content (such as an image or text), located in the proximity of the element (i.e. there is no other content visually in between this content and the target element), that indicates the test target is a link.
+- **distinguishing content**: the element has content (such as an image or text) located in the proximity of the element (i.e. there is no other content visually in between this content and the target element), that indicates the test target is a link.
 
 ## Assumptions
 

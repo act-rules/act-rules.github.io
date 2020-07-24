@@ -1,34 +1,23 @@
-class Tooltip {
-    constructor(element) {
-      this.element = element;
-      this.button = element.querySelector("button");
-      this.tooltip = element.querySelector("[role=tooltip]");
-      this.bindEvents();
-    }
+function bindEvents(bind) {
+    let container;
+    if (bind.tooltipRemains)
+        container = document.querySelector(".tooltip-container");
+    else
+        container = document.querySelector("button");
+    container.addEventListener("mouseenter", () => {
+        showTooltip();
+    });
+    container.addEventListener("mouseleave", () => {
+        hideTooltip();
+    });
+}
 
-    bindEvents() {
-      this.element.addEventListener("mouseenter", this.open.bind(this));
-      this.button.addEventListener("focus", this.open.bind(this));
-      this.element.addEventListener("mouseleave", this.close.bind(this));
-      this.button.addEventListener("blur", this.close.bind(this));
-    }
+function showTooltip() {
+    const tooltip = document.querySelector("[role=tooltip]");
+    tooltip.removeAttribute("hidden");
+}
 
-    open() {
-      this.showTooltip();
-    }
-
-    close() {
-      this.hideTooltip();
-    }
-    showTooltip() {
-      this.tooltip.removeAttribute("hidden");
-    }
-
-    hideTooltip() {
-      this.tooltip.setAttribute("hidden", "hidden");
-    }
-  }
-
-  Array.from(document.querySelectorAll(".tooltip-container")).forEach(
-    (element) => new Tooltip(element)
-  );
+function hideTooltip() {
+    const tooltip = document.querySelector("[role=tooltip]");
+    tooltip.setAttribute("hidden", "hidden");
+}

@@ -96,15 +96,11 @@ This button element causes [changes in content][] by presenting a tooltip when [
 
 #### Inapplicable Example 1
 
-Description...
+This element does not cause [changes in content][] when [hovered][].
 
 ```html
-<!-- code -->
+<button>WCAG</button>
 ```
-
-#### Inapplicable Example 2
-
-...
 
 [hovered]: #hovered 'Definition of hovered'
 [sc1.4.13]: https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html 'Understanding Success Criterion 1.4.13: Content on Hover or Focus, July 24, 2020'

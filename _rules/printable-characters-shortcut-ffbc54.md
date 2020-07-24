@@ -1,6 +1,6 @@
 ---
 id: ffbc54
-name: No keyboard shortcuts use only printable characters
+name: No keyboard shortcut uses only printable characters
 rule_type: atomic
 description: |
   This rule checks that if keyboard shortcuts are implemented using only printable characters, then there is a mechanism to disable the shortcut, or to remap the shortcut to use one or more non-printable characters keys, or the shortcut for a user interface component is only available when that component has focus.
@@ -20,7 +20,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any [keyboard event][] for which all is true: 
+The rule applies to any [keyboard event][] for which all of the following is true: 
 - the event's attribute `key` is a [printable character][] key; and
 - the event's method `getModifierState` returns `false` for any of the [valid modifier keys][].
 
@@ -28,7 +28,8 @@ The rule applies to any [keyboard event][] for which all is true:
 
 For each test target at least one of the following is true:
  - (**Remap**:) there is at least one [set of clearly labeled instruments][] to [block events][blocked event] that use the [same key][same key events] as the test target and whose `getModifierState` method returns `false` for any of the [valid modifier keys][]; or
- - (**Focus**:) if the [event target][] does not have a [semantic role][] that inherits from the [abstract role](https://www.w3.org/TR/wai-aria/#abstract_roles) of `widget` the event does not cause [changes in content][] of the [HTML document][].
+- (**No changes**:) the event does not cause [changes in content][] of the [HTML document][]; or
+  - (**Focus**:) the [event target][] has a [semantic role][] that inherits from the [abstract role](https://www.w3.org/TR/wai-aria/#abstract_roles) of `widget`.
 
 ## Assumptions
 
@@ -51,7 +52,7 @@ Currently [keyboard events][keyboard event] only support the types `keydown` and
 
 #### Passed Example 1
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to **remap** the [keyboard event][] so that it requires that the method `getModifierState` returns `true`.
+This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and there exists an [instrument][] to **remap** the [keyboard event][] so that [same key][] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`.
 
 ```html
 <html>
@@ -82,7 +83,7 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 
 #### Passed Example 2
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to disable the [keyboard event][]. A disabled event implies that the event is disabled when the `getModifierState` method returns `false`, therefore meeting the **remap** expectation.
+This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and there exists an [instrument][] to disable the [keyboard event][] (completely [blocked][blocked event] it). A disabled event implies that the event is [blocked][blocked event] when the `getModifierState` method returns `false`, therefore meeting the **remap** expectation.
 
 ```html
 <html>
@@ -108,7 +109,7 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 
 #### Passed Example 3
 
-This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and for each [keyboard event][] exists an [instrument][] to **remap** the [keyboard event][] so that it requires that the method `getModifierState` returns `true`.
+This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and for each [keyboard event][] causing [changes in content][], there exists an [instrument][] to **remap** it so that [same key][] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`.
 
 ```html
 <html>
@@ -143,7 +144,7 @@ This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] 
 
 #### Passed Example 4
 
-This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and exists an [instrument][] to **remap** the [keyboard event][] so that it requires that the method `getModifierState` returns `true`. In this example, the same [instrument][] is used to **remap** both [keyboard events][keyboard event]
+This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and there exists an [instrument][] to **remap** those [keyboard events][keyboard event] that cause [change in content][] so that [same key][] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`. In this example, the same [instrument][] is used to **remap** all [keyboard events][keyboard event].
 
 ```html
 <html>
@@ -174,7 +175,7 @@ This [HTML document][] has two [keyboard events][keyboard event] [dispatched][] 
 
 #### Passed Example 5
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, but the [event is blocked][blocked event] when the [event target][] doesn't have [focus][].
+This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, but the [events are blocked][blocked event] when no `widget` has [focus][].
 
 ```html
 <html>
@@ -257,7 +258,7 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 
 #### Failed Example 1
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, but there is no [instrument][] to **remap** the [keyboard event][] and the [keyboard event][] is not [blocked][blocked event] when the [event target][] does not have [focus][].
+This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`. There is no [instrument][] to **remap** the [keyboard event][] and the [keyboard events][keyboard event] are not [blocked][blocked event] when no `widget` has [focus][].
 
 ```html
 <html>
@@ -383,7 +384,7 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
   </head>
 
   <body onload="registerShortcut({ctrlKey: true}); activateShortcuts();">
-    <label for="target">Add to list (press "ctrl" and "+" to add):</label>
+    <label for="target">Add to list (press "ctrl" to add):</label>
     <input type="text" id="target" />
     <br />
     <div>

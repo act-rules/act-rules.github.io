@@ -22,18 +22,17 @@ acknowledgments:
 
 The rule applies to any [keyboard event][] for which all of the following is true: 
 - the event's attribute `key` is a [printable character][] key; and
-- the event's method `getModifierState` returns `false` for any of the [valid modifier keys][].
+- the event's method `getModifierState` returns `false` for any of the [valid modifier keys][]; and
+- the event causes [changes in the content][changes in content] of the [HTML document][].
 
 ## Expectation
 
 For each test target at least one of the following is true:
- - (**Remap**:) there is at least one [set of clearly labeled instruments][] to [block events][blocked event] that use the [same key][same key events] as the test target and whose `getModifierState` method returns `false` for any of the [valid modifier keys][]; or
-- (**No changes**:) the event does not cause [changes in content][] of the [HTML document][]; or
-  - (**Focus**:) the [event target][] has a [semantic role][] that inherits from the [abstract role](https://www.w3.org/TR/wai-aria/#abstract_roles) of `widget`.
+- (**Remap**:) there is at least one [set of clearly labeled instruments][] to [block events][blocked event] that use the [same key][same key events] as the test target and whose `getModifierState` method returns `false` for any of the [valid modifier keys][]; or
+- (**Focus**:) the [event target][] has a [semantic role][] that inherits from the [abstract role](https://www.w3.org/TR/wai-aria/#abstract_roles) of `widget`.
 
 ## Assumptions
 
-- The event listeners listening to [keyboard events][keyboard event] trigger a functionality in the web page. If they do not trigger any such functionality failing this rule might not be a failure of the success criterion.
 - If there are ways to disable the result of [keyboard events][keyboard event] that do not require the user to interact with the web page (e.g. a setting at the operating system level), failing this rule might not be a failure of the success criterion.
 
 ## Accessibility Support
@@ -52,7 +51,7 @@ Currently [keyboard events][keyboard event] only support the types `keydown` and
 
 #### Passed Example 1
 
-This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and there exists an [instrument][] to **remap** the [keyboard event][] so that [same key][] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`.
+This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false` that cause [changes in content][]. There exists an [instrument][] to **remap** the [keyboard event][] so that [same key][] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`.
 
 ```html
 <html>
@@ -83,7 +82,7 @@ This [HTML document][] is listening to [keyboard events][keyboard event] with th
 
 #### Passed Example 2
 
-This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and there exists an [instrument][] to disable the [keyboard event][] (completely [blocked][blocked event] it). A disabled event implies that the event is [blocked][blocked event] when the `getModifierState` method returns `false`, therefore meeting the **remap** expectation.
+This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false` that cause [changes in content][]. There exists an [instrument][] to disable the [keyboard event][]. A disabled event implies that the event is disabled when the `getModifierState` method returns `false`, therefore meeting the **remap** expectation.
 
 ```html
 <html>
@@ -109,7 +108,7 @@ This [HTML document][] is listening to [keyboard events][keyboard event] with th
 
 #### Passed Example 3
 
-This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and for each [keyboard event][] causing [changes in content][], there exists an [instrument][] to **remap** it so that [same key][] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`.
+This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false` that cause [changes in content][]. For each [keyboard event][] causing [changes in content][], there exists an [instrument][] to **remap** it so that [same key][] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`.
 
 ```html
 <html>
@@ -144,7 +143,7 @@ This [HTML document][] is listening to [keyboard events][keyboard event] with th
 
 #### Passed Example 4
 
-This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and there exists an [instrument][] to **remap** those [keyboard events][keyboard event] that cause [change in content][] so that [same key][] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`. In this example, the same [instrument][] is used to **remap** all [keyboard events][keyboard event].
+This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false` that cause [changes in content][]. There exists an [instrument][] to **remap** those [keyboard events][keyboard event] that cause [change in content][] so that [same key][] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`. In this example, the same [instrument][] is used to **remap** all [keyboard events][keyboard event].
 
 ```html
 <html>
@@ -175,7 +174,7 @@ This [HTML document][] is listening to [keyboard events][keyboard event] with th
 
 #### Passed Example 5
 
-This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, but the [events are blocked][blocked event] when no `widget` has [focus][].
+This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false` that cause [changes in content][], but the [events are blocked][blocked event] when no `widget` has [focus][].
 
 ```html
 <html>
@@ -198,36 +197,17 @@ This [HTML document][] is listening to [keyboard events][keyboard event] with th
 
 #### Passed Example 6
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and there is an [instrument][] to disable the [keyboard event][] and another [instrument][] to **remap** the [keyboard event][] so that it requires that the method `getModifierState` returns `true`. The [instruments][instrument] can be found from a [clearly labeled location][].
+This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false` that cause [changes in content][]. There exists a [set of clearly labeled instruments][] to disable the [keyboard event][] or to **remap** the [keyboard event][] so that [same key][] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`.
 
 ```html
 <html>
   <head>
     <title>Passed Example 6</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-    <script>
-      function openModal() {
-        document.getElementById('overlay').style.display = 'block'
-      }
-      function closeModal() {
-        document.getElementById('overlay').style.display = 'none'
-      }
-    </script>
+    <link rel="stylesheet" type="text/css" href="/test-assets/ffbc54/styles.css" />
+    <script src="/test-assets/ffbc54/shortcut.js"></script
   </head>
   <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
-    <div
-      style="
-        display: none;
-        position: fixed;
-        top: 2em;
-        left: 10em;
-        background-color: #505050;
-        color: white;
-        padding: 1em;
-        padding-top: 0em;
-      "
-		  id="overlay"
-	  >
+    <div id="overlay">
       <p>Disable/remap shortcut</p>
       <label>
         <input type="checkbox" onclick="toggleDisabled('singleShortcut', !this.checked)" checked>
@@ -258,7 +238,7 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 
 #### Failed Example 1
 
-This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`. There is no [instrument][] to **remap** the [keyboard event][] and the [keyboard events][keyboard event] are not [blocked][blocked event] when no `widget` has [focus][].
+This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false` that cause [changes in content][]. There is no [instrument][] to **remap** the [keyboard event][] and the [keyboard events][keyboard event] are not [blocked][blocked event] when no `widget` has [focus][].
 
 ```html
 <html>
@@ -280,36 +260,17 @@ This [HTML document][] is listening to [keyboard events][keyboard event] with th
 
 #### Failed Example 2
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false`, and there is an [instrument][] to disable the [keyboard event][] and another [instrument][] to **remap** the [keyboard event][] so that it requires that the method `getModifierState` returns `true`, but the [instruments][instrument] are not in a [clearly labeled location][].
+This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false` that cause [changes in content][]. There is an [instrument][] to **remap** the [keyboard event][] so that [same key][] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`, but the [instrument][] is not in a [clearly labeled location][].
 
 ```html
 <html>
   <head>
     <title>Failed Example 2</title>
+    <link rel="stylesheet" type="text/css" href="/test-assets/ffbc54/styles.css" />
     <script src="/test-assets/ffbc54/shortcut.js"></script>
-    <script>
-      function openModal() {
-        document.getElementById('overlay').style.display = 'block'
-      }
-      function closeModal() {
-        document.getElementById('overlay').style.display = 'none'
-      }
-    </script>
   </head>
   <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
-    <div
-      style="
-        display: none;
-        position: fixed;
-        top: 2em;
-        left: 10em;
-        background-color: #505050;
-        color: white;
-        padding: 1em;
-        padding-top: 0em;
-      "
-		  id="overlay"
-	  >
+    <div id="overlay">
       <p>Disable/remap shortcut</p>
       <label>
         <input type="checkbox" onclick="toggleDisabled('singleShortcut', !this.checked)" checked>
@@ -340,46 +301,12 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 
 #### Inapplicable Example 1
 
-This document is not an [HTML document][].
-
-```html
-<svg height="100" width="100">
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
-  Sorry, your browser does not support inline SVG.  
-</svg>
-```
-
-#### Inapplicable Example 2
-
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `true`.
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] but it only causes [changes in content][] if the event's attribute `key` is a [non-printable character][non-printable characters].
 
 ```html
 <html>
   <head>
-    <title>Inapplicable Example 2</title>
-    <script src="/test-assets/ffbc54/shortcut.js"></script>
-  </head>
-
-  <body onload="registerShortcut({shortcutKey: '+', ctrlKey: true}); activateShortcuts();">
-    <label for="target">Add to list (press "ctrl" and "+" to add):</label>
-    <input type="text" id="target" />
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Inapplicable Example 3
-
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [non-printable character][non-printable characters].
-
-```html
-<html>
-  <head>
-    <title>Inapplicable Example 3</title>
+    <title>Inapplicable Example 1</title>
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
@@ -395,68 +322,20 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 </html>
 ```
 
-#### Inapplicable Example 4
+#### Inapplicable Example 2
 
-This [HTML document][] has a [keyboard event][] that is not [dispatched][] to an [event target][].
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] with the attribute `key` being a [printable character][] but it does not cause [changes in content][] unless the `getModifierState` returns `true`.
 
 ```html
 <html>
   <head>
-    <title>Inapplicable Example 4</title>
-    <script>
-      function shortcut() {
-        window.addEventListener('keydown', function(event) {
-          const target = document.getElementById("target");
-
-          if (event.key === "+") {
-            document.getElementById("list").innerHTML += "<li>" + target.value + "</li>";
-            target.value = "";
-            event.preventDefault();
-          }
-        });
-      }
-    </script>
+    <title>Inapplicable Example 2</title>
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
-  <body onload="shortcut()">
-    <label for="target">Add to list (press "+" to add):</label>
+  <body onload="registerShortcut({shortcutKey: '+', ctrlKey: true}); activateShortcuts();">
+    <label for="target">Add to list (press "ctrl" and "+" to add):</label>
     <input type="text" id="target" />
-    <br />
-    <div>
-      To do list
-    </div>
-    <ul id="list"></ul>
-  </body>
-</html>
-```
-
-#### Inapplicable Example 5
-
-This [HTML document][] has an element with the attribute `accesskey`. Accesskeys use [non-printable characters][].
-
-```html
-<html>
-  <head>
-    <title>Inapplicable Example 5</title>
-    <script>
-      function shortcut() {
-        const button = document.querySelector("button");
-
-        button.addEventListener("click", function() {
-          document.getElementById("list").innerHTML +=
-            "<li>Item</li>";
-          event.preventDefault();
-        });
-
-        button.textContent = button.accessKeyLabel
-          ? "Add item to list (" + button.accessKeyLabel + ")"
-          : "Add item to list (accesskey +" + button.accessKey + ")";
-      }
-    </script>
-  </head>
-
-  <body onload="shortcut()">
-    <button type="button" accesskey="+"></button>
     <br />
     <div>
       To do list

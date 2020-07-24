@@ -23,13 +23,11 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any `object` element that is [included in the accessibility tree][].
+This rule applies to any `object` element that is [included in the accessibility tree][].
 
 ## Expectation
 
 Each target element has an [accessible name][] that is not empty (`""`).
-
-**Note:** Testing that the [accessible name][] describes the purpose of the element is not part of this rule and must be tested separately.
 
 ## Assumptions
 
@@ -40,6 +38,8 @@ _There are currently no assumptions._
 Non supported media formats make screen readers render the text content of the element instead of other attributes.
 
 ## Background
+
+Testing that the [accessible name][] describes the purpose of the `object` element is not part of this rule and must be tested separately.
 
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 
@@ -74,7 +74,7 @@ This `object` element has a non-empty [accessible name][] through its `aria-labe
 
 #### Passed Example 4
 
-This `object` element placed off screen has a non-empty [accessible name][].
+This `object` element placed off screen has a non-empty [accessible name][] through its `title` attribute.
 
 ```html
 <html>
@@ -137,7 +137,7 @@ This `object` element is not [included in the accessibility tree][] due to `disp
 
 #### Inapplicable Example 2
 
-This `object` element is not [included in the accessibility tree][] due to `visibility: hidden`.
+This `object` element is not [included in the accessibility tree][] due to `visibility:hidden`.
 
 ```html
 <object data="/test-assets/moon-audio/moon-speech.mp3" style="visibility: hidden;"></object>

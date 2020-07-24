@@ -56,28 +56,41 @@ This button element causes [changes in content][] by presenting a tooltip when [
 
 ```html
 <link rel="stylesheet" type="text/css" href="/test-assets/ep1s13/styles.css" />
-<div class="tooltip-container">
-	<button aria-labelledby="tooltip">
-		<span aria-hidden>WCAG</span>
-	</button>
-	<p id="tooltip" role="tooltip" hidden>Web Content Accessibility Guidelines</p>
-</div>
 <script src="/test-assets/ep1s13/scripts.js"></script>
+
+<body onload="bindEvents({tooltipRemains: true})">
+	<div class="tooltip-container">
+		<button aria-labelledby="tooltip">
+			<span aria-hidden>WCAG</span>
+		</button>
+		<p id="tooltip" role="tooltip" hidden>
+			Web Content Accessibility Guidelines
+		</p>
+	</div>
+</body>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-Description...
+This button element causes [changes in content][] by presenting a tooltip when [hovered][]. When the mouse pointer leaves the button's boundaries the tool is removed resulting in [changes in content][].
 
 ```html
-<!-- code -->
+<link rel="stylesheet" type="text/css" href="/test-assets/ep1s13/styles.css" />
+<script src="/test-assets/ep1s13/scripts.js"></script>
+
+<body onload="bindEvents({tooltipRemains: false})">
+	<div class="tooltip-container">
+		<button aria-labelledby="tooltip">
+			<span aria-hidden>WCAG</span>
+		</button>
+		<p id="tooltip" role="tooltip" hidden>
+			Web Content Accessibility Guidelines
+		</p>
+	</div>
+</body>
 ```
-
-#### Failed Example 2
-
-...
 
 ### Inapplicable
 

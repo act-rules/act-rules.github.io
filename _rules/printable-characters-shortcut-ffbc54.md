@@ -204,7 +204,7 @@ This [HTML document][] is listening to [keyboard events][keyboard event] with th
   <head>
     <title>Passed Example 6</title>
     <link rel="stylesheet" type="text/css" href="/test-assets/ffbc54/styles.css" />
-    <script src="/test-assets/ffbc54/shortcut.js"></script
+    <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
   <body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
     <div id="overlay">

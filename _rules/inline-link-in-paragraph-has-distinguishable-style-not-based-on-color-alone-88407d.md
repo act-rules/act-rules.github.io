@@ -25,7 +25,7 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], f
 
 ## Expectation
 
-For each test target, at least one of the following is true:
+For each test target, when it is neither [focused][] nor [hovered][], at least one of the following is true:
 
 - **distinguishing style**: the element has a [distinguishable style][] not based on color alone from the **non-link line text** elements; or
 - **distinguishing content**: the element has content (such as an image or text), located in the proximity of the element (i.e. there is no other content visually in between this content and the target element), that indicates the test target is a link.
@@ -308,8 +308,10 @@ This link is not distinguishable by color from the other text rendered in its li
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [distinguishable style]: #distinguishable-styles 'Definition of distinguishable styles'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
+[focused]: #focused 'Definition of focused'
 [foreground color]: #foreground-colors-of-text 'Definition of foreground colors of text'
 [highest possible contrast]: #highest-possible-contrast 'Definition of highest possible contrast'
+[hovered]: #hovered 'Definition of hovered'
 [rendered on a line]: #rendered-on-a-line 'Definition of rendered on a line'
 [semantic link]: #semantic-link 'Definition of semantic link'
 [semantic role]: #semantic-role 'Definition of semantic role'

@@ -52,7 +52,7 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-This button element causes [changes in content][] by presenting a tooltip when [hovered][]. The tooltip remains displayed, resulting in no further [changes in content][] while the mouse pointer does not leave its boundaries or the button's boundaries.
+This button element causes [visible changes in content][] by presenting a tooltip when [hovered][]. The tooltip remains displayed, resulting in no further [visible changes in content][] while the mouse pointer does not leave its boundaries or the button's boundaries.
 
 ```html
 <link rel="stylesheet" type="text/css" href="/test-assets/ep1s13/styles.css" />
@@ -74,7 +74,7 @@ This button element causes [changes in content][] by presenting a tooltip when [
 
 #### Failed Example 1
 
-This button element causes [changes in content][] by presenting a tooltip when [hovered][]. When the mouse pointer leaves the button's boundaries the tool is removed resulting in [changes in content][].
+This button element causes [visible changes in content][] by presenting a tooltip when [hovered][]. When the mouse pointer leaves the button's boundaries the tool is removed resulting in [visible changes in content][].
 
 ```html
 <link rel="stylesheet" type="text/css" href="/test-assets/ep1s13/styles.css" />
@@ -96,7 +96,7 @@ This button element causes [changes in content][] by presenting a tooltip when [
 
 #### Inapplicable Example 1
 
-This element does not cause [changes in content][] when [hovered][].
+This element does not cause [visible changes in content][] when [hovered][].
 
 ```html
 <button>WCAG</button>

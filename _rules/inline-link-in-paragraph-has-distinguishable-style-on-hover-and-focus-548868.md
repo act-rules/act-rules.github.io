@@ -37,7 +37,7 @@ For each test target, at least one of the following is true when it is [focused]
 - The same foreground color and the same background color is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise color can not be a distinguishing factor.
 - The same `box-shadow` is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise `box-shadow` can not be a distinguishing factor.
 - The same `border` is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise `border` can not be a distinguishing factor.
-- The perceived visual styling of elements is the result of CSS styling applied to those elements and their _ancestor_ elements. Through manipulation of the positioning and styles of other elements, an element may end up with a perceived distinguishable style not resulting from its own or ancestors styling. In that case, this rule might fail while the [Success Criterion 1.4.1 Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) might still be satisfied.
+- The perceived visual styling of elements is the result of CSS styling applied to those elements and inherited from their _ancestor_ elements. Through manipulation of the positioning and styles of other elements, including non inherited styles of _ancestor_ elements, an element may end up with a perceived distinguishable style not resulting from its own and inherited styling. In that case, this rule might fail while the [Success Criterion 1.4.1 Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) might still be satisfied.
 
 ## Accessibility Support
 

@@ -6,7 +6,7 @@ description: |
   This rule checks that any additional content that was triggered by hovering an element remains available to the user while the mouse pointer is over that content
 accessibility_requirements:
   wcag21:1.4.13: # Content on Hover or Focus (AA)
-    forConformance: true 
+    forConformance: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
@@ -16,7 +16,7 @@ input_aspects:
   - Mouse pointer
 acknowledgments:
   authors:
-    -  Carlos Duarte
+    - Carlos Duarte
 ---
 
 ## Applicability
@@ -52,15 +52,18 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-Description...
+This button element causes [changes in content][] by presenting a tooltip when [hovered][]. The tooltip remains displayed, resulting in no further [changes in content][] while the mouse pointer does not leave its boundaries or the button's boundaries.
 
 ```html
-<!-- code -->
+<link rel="stylesheet" type="text/css" href="/test-assets/ep1s13/styles.css" />
+<div class="tooltip-container">
+	<button aria-labelledby="tooltip">
+		<span aria-hidden>WCAG</span>
+	</button>
+	<p id="tooltip" role="tooltip" hidden>Web Content Accessibility Guidelines</p>
+</div>
+<script src="/test-assets/ep1s13/scripts.js"></script>
 ```
-
-#### Passed Example 2
-
-...
 
 ### Failed
 
@@ -91,5 +94,5 @@ Description...
 ...
 
 [hovered]: #hovered 'Definition of hovered'
-[sc1.4.13]: https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html 'Understanding Success Criterion 1.4.13: Content on Hover or Focus'
+[sc1.4.13]: https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html 'Understanding Success Criterion 1.4.13: Content on Hover or Focus, July 24, 2020'
 [visible changes in content]: #visible-changes-in-content 'Definition of visible changes in content'

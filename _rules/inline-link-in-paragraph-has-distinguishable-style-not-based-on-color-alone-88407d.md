@@ -32,7 +32,7 @@ For each test target, at least one of the following is true:
 
 ## Assumptions
 
-- The 3:1 contrast difference between text color is the minimum required to meet WCAG 2.0. This value is part of [technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183) but is not specified in the [1.4.1 success criterion](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
+- A 3:1 contrast difference, which is the minimum required to meet WCAG 2.0, between the colors of the link text and the non-link text is enough for [Success Criterion 1.4.1 Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html). This value is part of [technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183) but is not specified in the [1.4.1 success criterion](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
 - Any change in font is sufficiently distinguishable, and fonts are loaded when they are present.
 - The same foreground color and the same background color is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise color can not be a distinguishing factor.
 - The same `box-shadow` is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise `box-shadow` can not be a distinguishing factor.

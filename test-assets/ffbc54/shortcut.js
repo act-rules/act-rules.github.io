@@ -43,3 +43,10 @@ function toggleDisabled(id, value) {
 function toggleModifier(id, value) {
   changeShortcutParameter(id, "ctrlKey", value)
 }
+
+function openModal() {
+  document.getElementById('overlay').style.display = 'block'
+}
+function closeModal() {
+  document.getElementById('overlay').style.display = 'none'
+}

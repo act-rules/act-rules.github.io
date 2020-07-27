@@ -18,7 +18,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][], where the video doesn't contain audio.
+The rule applies to any [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video does not contain audio.
 
 ## Expectation 1
 
@@ -32,12 +32,10 @@ Each target element is labeled as a video alternative for text on the page.
 
 The label (from expectation 2) is [visible][] and [included in the accessibility tree][].
 
-**Note:** The term label does not refer to the `label` element.
-
 ## Assumptions
 
-- This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
-- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
+- A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- The language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
@@ -45,6 +43,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
+- The term label used in expectations 2 and 3 does not refer to the `label` element.
 - [Understanding Success Criterion 1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded)
 
 ## Test Cases
@@ -53,7 +52,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-A video element without audio. The text on the page labels the video as an alternative.
+This `video` element, which has no audio, is a media alternative for the text in the page and labeled as such.
 
 ```html
 <html lang="en">
@@ -70,7 +69,7 @@ A video element without audio. The text on the page labels the video as an alter
 
 #### Failed Example 1
 
-A video element that describes some of the text on the same page. The video contains more information than the text does.
+This `video` element, which has no audio, has more information than the text on the page.
 
 ```html
 <html lang="en">
@@ -85,7 +84,7 @@ A video element that describes some of the text on the same page. The video cont
 
 #### Failed Example 2
 
-A video element that describes some of the text on the same page. The text is not [visible][].
+This `video` element, which has no audio, is a media alternative for the text in the page and labeled as such, but the text is not [visible][].
 
 ```html
 <html lang="en">
@@ -100,7 +99,7 @@ A video element that describes some of the text on the same page. The text is no
 
 #### Failed Example 3
 
-A video element that describes some of the text on the same page. The text on the page does not label the video as an alternative.
+This `video` element, which has no audio, is a media alternative for the text in the page but not labeled as such.
 
 ```html
 <html lang="en">
@@ -115,7 +114,7 @@ A video element that describes some of the text on the same page. The text on th
 
 #### Failed Example 4
 
-A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the label is not [visible][].
+This `video` element, which has no audio, is a media alternative for the text in the page and labeled as such, but the label is not [visible][].
 
 ```html
 <html lang="en">
@@ -135,7 +134,7 @@ A video element that describes some of the text on the same page. The text on th
 
 #### Inapplicable Example 1
 
-A video element with audio.
+This `video` element has audio.
 
 ```html
 <html lang="en">
@@ -150,7 +149,7 @@ A video element with audio.
 
 #### Inapplicable Example 2
 
-A video element that describes some of the text on the same page. The text on the page labels the video as an alternative but the video is not [visible][].
+This `video` element is not [visible][].
 
 ```html
 <html lang="en">

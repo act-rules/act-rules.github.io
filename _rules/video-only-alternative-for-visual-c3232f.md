@@ -44,7 +44,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to any [non-streaming](#non-streaming-media-element) `video` element [visible][], where the video doesn't contain audio.
+The rule applies to any [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video does not contain audio.
 
 ## Expectation
 
@@ -57,8 +57,8 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 
 ## Assumptions
 
-- This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
-- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
+- A mechanism is available to start the video and the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- The language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
@@ -67,6 +67,8 @@ See [Video Only Element Has Description Track: accessibility support](https://ac
 ## Background
 
 - [Understanding Success Criterion 1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded)
+- [G159: Providing an alternative for time-based media for video-only content](https://www.w3.org/WAI/WCAG21/Techniques/general/G159.html)
+- [G166: Providing audio that describes the important video content and describing it as such](https://www.w3.org/WAI/WCAG21/Techniques/general/G166.html)
 - [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/html/H96)
 
 ## Test Cases
@@ -75,7 +77,7 @@ See [Video Only Element Has Description Track: accessibility support](https://ac
 
 #### Passed Example 1
 
-A video element without audio. The text on the page labels the video as an alternative.
+This `video` element, which has no audio, is a media alternative for the text in the page and labeled as such. (Passes rule [`Video` Element Visual-Only Content Is Media Alternative For Text](https://act-rules.github.io/rules/fd26cf))
 
 ```html
 <html lang="en">
@@ -90,7 +92,7 @@ A video element without audio. The text on the page labels the video as an alter
 
 #### Passed Example 2
 
-A video only element with a track element that contains descriptions.
+This `video` element, which has no audio, has a `track` element with descriptions. (Passes rule [`Video` Element Visual-Only Content Has Description Track](https://act-rules.github.io/rules/ac7dc6))
 
 ```html
 <html lang="en">
@@ -104,7 +106,7 @@ A video only element with a track element that contains descriptions.
 
 #### Passed Example 3
 
-A silent video element with a text transcript on the same page.
+This `video` element, which has no audio, has a text transcript available on the same page. (Passes rule [`Video` Element Visual-Only Content Has Transcript](https://act-rules.github.io/rules/ee13b5))
 
 ```html
 <html lang="en">
@@ -120,7 +122,7 @@ Then he stops to scratch his bottom.</p>
 
 #### Passed Example 4
 
-A video element without audio has a separate audio track that describes the visual information.
+This `video` element, which has no audio, has a separate audio track that describes the visual information. (Passes rule [`Video` Element Visual-Only Content Has Audio Track Alternative](https://act-rules.github.io/rules/d7ba54))
 
 ```html
 <html lang="en">
@@ -139,7 +141,7 @@ A video element without audio has a separate audio track that describes the visu
 
 #### Failed Example 1
 
-A video element that describes some of the text on the same page. The text on the page does not label the video as an alternative.
+This `video` element, which has no audio, is a media alternative for the text in the page but not labeled as such.
 
 ```html
 <html lang="en">
@@ -154,7 +156,7 @@ A video element that describes some of the text on the same page. The text on th
 
 #### Failed Example 2
 
-A video only element with a track element that contains incorrect descriptions.
+This `video` element, which has no audio, has a `track` element with incorrect descriptions.
 
 ```html
 <html lang="en">
@@ -168,7 +170,7 @@ A video only element with a track element that contains incorrect descriptions.
 
 #### Failed Example 3
 
-A silent video element with a link to an incorrect text transcript on a different page.
+This `video` element, which has no audio, has a incorrect text transcript available through a link on the same page.
 
 ```html
 <html lang="en">
@@ -182,7 +184,7 @@ A silent video element with a link to an incorrect text transcript on a differen
 
 #### Failed Example 4
 
-A video element without audio has a separate audio track that incorrectly describes the visual information.
+This `video` element, which has no audio, has a separate audio track that incorrectly describes the visual information.
 
 ```html
 <html lang="en">
@@ -201,7 +203,7 @@ A video element without audio has a separate audio track that incorrectly descri
 
 #### Inapplicable Example 1
 
-A video element with audio.
+This `video` element has audio.
 
 ```html
 <html lang="en">
@@ -216,7 +218,7 @@ A video element with audio.
 
 #### Inapplicable Example 2
 
-A video only element that is not [visible][].
+This `video` element is not [visible][].
 
 ```html
 <html lang="en">

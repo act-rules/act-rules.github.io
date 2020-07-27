@@ -43,7 +43,7 @@ This rule catches values that are undefined in [WAI-ARIA Specifications][], and 
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+Some user agents treat the value of `aria-*` attribute as case-sensitive (even when these are not ID) while some treat them as case-insensitive.
 
 ## Background
 

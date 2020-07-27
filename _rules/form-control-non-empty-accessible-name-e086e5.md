@@ -24,13 +24,6 @@ acknowledgments:
 
 This rule applies to any element that is [included in the accessibility tree](#included-in-the-accessibility-tree), and that has one of the following [semantic roles][]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch`, `textbox`.
 
-**Note:** The list of roles is derived by taking all the roles from [WAI-ARIA Specifications](#wai-aria-specifications) that:
-
-- have a [semantic roles][] that inherits from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
-- does not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
-
-**Note:** The `option` role is not part of the list of applicable roles, because it does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means [WCAG 2.1](https://www.w3.org/TR/WCAG21/) does not require it to have an [accessible name][].
-
 ## Expectation
 
 Each target element has an [accessible name][] that is not empty (`""`).
@@ -44,13 +37,21 @@ _There are currently no assumptions_
 - Certain assistive technologies can be set up to ignore the title attribute, which means that to some users the title attribute will not act as an [accessible name][].
 - Several assistive technologies have a functionality to list all form fields on a page, including the `disabled` ones. Therefore this rule is still applicable to `disabled` form fields. If an assistive technology consistently ignores `disabled` form fields in all its interactions, then it is possible to have a `disabled` form field with no accessible name without creating accessibility issues for the user.
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+- Elements with the `option` role are not tested in this rule because they do not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). If these elements are presented as user interface components, these need to be tested separately from this rule.
 
 ## Background
 
-- [Understanding Success Criterion 3.3.2: Labels or Instructions](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions)
-- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
+The list of roles in the applicability is derived by taking all the roles from [WAI-ARIA Specifications](#wai-aria-specifications) that:
 
-**Note:** This rule does not fail 3.3.2 as there are sufficient techniques within 3.3.2 that don't need the elements to have an [accessible name][]. For example "G131: Providing descriptive labels" **AND** "G162: Positioning labels to maximize predictability of relationships" would be sufficient.
+- have [semantic roles][] that inherit from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
+- do not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
+
+This rule does not map to [3.3.2 Labels or Instructions](https://www.w3.org/TR/WCAG21/#labels-or-instructions) as there are sufficient techniques within 3.3.2 that don't need the elements to have an [accessible name][]. For example "[G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG21/Techniques/general/G131)" **AND** "[G162: Positioning labels to maximize predictability of relationships](https://www.w3.org/WAI/WCAG21/Techniques/general/G162)" would be sufficient.
+
+- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
+- [H91: Using HTML form controls and links](https://www.w3.org/WAI/WCAG21/Techniques/html/H91)
+- [H44: Using label elements to associate text labels with form controls](https://www.w3.org/WAI/WCAG21/Techniques/html/H44)
+- [H65: Using the title attribute to identify form controls when the label element cannot be used](https://www.w3.org/WAI/WCAG21/Techniques/html/H65)
 
 ## Test Cases
 
@@ -58,7 +59,7 @@ _There are currently no assumptions_
 
 #### Passed Example 1
 
-[Implicit role](#implicit-role) with implicit label.
+This `input` element has an [accessible name][] because of its [programmatic label](#programmatic-label).
 
 ```html
 <label>
@@ -69,26 +70,30 @@ _There are currently no assumptions_
 
 #### Passed Example 2
 
-[Implicit role](#implicit-role) with aria-label
+This `input` element has an [accessible name][] because of its `aria-label` attribute.
 
 ```html
+<div>last name</div>
 <input aria-label="last name" disabled />
 ```
 
 #### Passed Example 3
 
-[Implicit role](#implicit-role) with explicit label
+This `select` element has an [accessible name][] because of its [programmatic label](#programmatic-label).
 
 ```html
 <label for="country">Country</label>
 <select id="country">
-	<option></option>
+	<option>England</option>
+	<option>Scotland</option>
+	<option>Wales</option>
+	<option>Northern Ireland</option>
 </select>
 ```
 
 #### Passed Example 4
 
-[Implicit role](#implicit-role) with `aria-labelledby`.
+This `textarea` element has an [accessible name][] because of its `aria-labelledby` attribute.
 
 ```html
 <div id="country">Country</div>
@@ -97,61 +102,54 @@ _There are currently no assumptions_
 
 #### Passed Example 5
 
-[Explicit role](#explicit-role).
+This element with a `combobox` [role][semantic role] has an [accessible name][] because of its `aria-label` attribute.
 
 ```html
+<div>Country</div>
 <div aria-label="country" role="combobox" aria-disabled="true">England</div>
-```
-
-#### Passed Example 6
-
-The [accessible name][] is not only [whitespace][].
-
-```html
-<label>
-	:-)
-	<input />
-</label>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-No [accessible name][].
+This `input` element does not have an attribute that gives an [accessible name][] to it.
 
 ```html
+<div>last name</div>
 <input />
 ```
 
 #### Failed Example 2
 
-[Non-focusable](#focusable) element still needs an [accessible name][].
+This disabled `input` element does not have an attribute that gives an [accessible name][] to it.
 
 ```html
-<input tabindex="-1" />
+<input disabled />
 ```
 
 #### Failed Example 3
 
-`aria-label` with empty text string
+This `input` element has an empty (`""`) [accessible name][] because the space in the `aria-label` [attribute value][] is trimmed.
 
 ```html
-<div aria-label=" " role="combobox">England</div>
+<input aria-label=" " />
 ```
 
 #### Failed Example 4
 
-`aria-labelledby` with empty text string.
+This `select` element has an empty (`""`) [accessible name][] because the `div` has no text content.
 
 ```html
 <div id="country"></div>
-<div aria-labelledby="country" role="combobox">England</div>
+<select aria-labelledby="country">
+	<option>England</option>
+</select>
 ```
 
 #### Failed Example 5
 
-The implicit label is not supported on `div` elements.
+This element with a `textbox` [role][semantic role] has an empty (`""`) [accessible name][]. The parent `label` element does not give it an [accessible name][], this only works for native form controls.
 
 ```html
 <label>
@@ -162,34 +160,18 @@ The implicit label is not supported on `div` elements.
 
 #### Failed Example 6
 
-The explicit label is not supported on `div` elements.
+This element with a `textbox` [role][semantic role] has an empty (`""`) [accessible name][]. The `label` element does not give it an [accessible name][], this only works for native form controls.
 
 ```html
 <label for="lastname">first name</label>
 <div role="textbox" id="lastname"></div>
 ```
 
-#### Failed Example 7
-
-The [accessible name][] is empty.
-
-```html
-<label> <input /></label>
-```
-
-#### Failed Example 8
-
-This `input` element has an [explicit role][] of `none`. However, it is [focusable][] (by default). Thus it has a [semantic role][] of `textbox` due to [Presentational Roles Conflict Resolution][]. It has an empty [accessible name][].
-
-```html
-<input role="none" />
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-Hidden to everyone.
+This `input` element is not [included in the accessibility tree][] because of its `style` attribute which sets `display` to `none`.
 
 ```html
 <input aria-label="firstname" style="display:none;" />
@@ -197,7 +179,7 @@ Hidden to everyone.
 
 #### Inapplicable Example 2
 
-Hidden to assistive technologies.
+This `input` element is not [included in the accessibility tree][] because of its `aria-hidden` attribute.
 
 ```html
 <input disabled aria-hidden="true" aria-label="firstname" />
@@ -205,15 +187,7 @@ Hidden to assistive technologies.
 
 #### Inapplicable Example 3
 
-Role has [explicitly](#explicit-role) been set to something that isn't a form field.
-
-```html
-<input role="presentation" disabled />
-```
-
-#### Inapplicable Example 4
-
-Option inherits from input, but has a required context role of listbox which inherits from select. We should therefore not consider option as applicable.
+This `select` element is not [included in the accessibility tree][] because it is `disabled` and has a `role` attribute value of "presentation".
 
 ```html
 <select role="none" disabled>
@@ -224,9 +198,9 @@ Option inherits from input, but has a required context role of listbox which inh
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
-[explicit role]: #explicit-role 'Definition of Explicit Role'
-[focusable]: #focusable 'Definition of focusable'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[attribute value]: #attribute-value 'Definition of attribute value'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict 
+Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [semantic roles]: #semantic-role 'Definition of semantic role'
-[whitespace]: #whitespace 'Definition of whitespace'

@@ -1,6 +1,7 @@
 ---
 id: 88407d
-name: Inline link has distinguishable style or content not based on color alone
+name: Inline link has distinguishable style not based on color alone
+or content that indicates it is a link
 rule_type: atomic
 description: |
   This rule checks that inline links are distinguishable from the surrounding text through a difference in style not based on color alone or have content that indicates they are links.

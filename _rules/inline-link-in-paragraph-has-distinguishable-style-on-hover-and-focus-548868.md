@@ -198,7 +198,7 @@ This link, that is distinguishable by color from the other text in the same line
 
 #### Passed Example 7
 
-This link, that is distinguishable by color from the other text in the same line, has an icon that appears when the link it focused or hovered. This icon distinguishes the element as a link.
+This link, that is distinguishable by color from the other text in the same line, has an icon that appears when the link is focused or hovered. This icon distinguishes the element as a link.
 
 ```html
 <style>

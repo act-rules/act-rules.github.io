@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 842,
+  "count": 843,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -10770,10 +10770,40 @@
       }
     },
     {
-      "testcaseId": "8e664d4e472d1e3a4bf4e97d65da50e8f4a60285",
+      "testcaseId": "1a5b1327fd34c16cff7c5a1e5ad54425a49c1fb8",
       "testcaseTitle": "Inapplicable Example 4",
-      "url": "https://act-rules.github.io/testcases/23a2a8/8e664d4e472d1e3a4bf4e97d65da50e8f4a60285.html",
-      "relativePath": "testcases/23a2a8/8e664d4e472d1e3a4bf4e97d65da50e8f4a60285.html",
+      "url": "https://act-rules.github.io/testcases/23a2a8/1a5b1327fd34c16cff7c5a1e5ad54425a49c1fb8.html",
+      "relativePath": "testcases/23a2a8/1a5b1327fd34c16cff7c5a1e5ad54425a49c1fb8.html",
+      "expected": "inapplicable",
+      "ruleId": "23a2a8",
+      "ruleName": "Image has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/23a2a8",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G94": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G95": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "0f773d7c780fa768eaba86aff6392d3e8dd7f239",
+      "testcaseTitle": "Inapplicable Example 5",
+      "url": "https://act-rules.github.io/testcases/23a2a8/0f773d7c780fa768eaba86aff6392d3e8dd7f239.html",
+      "relativePath": "testcases/23a2a8/0f773d7c780fa768eaba86aff6392d3e8dd7f239.html",
       "expected": "inapplicable",
       "ruleId": "23a2a8",
       "ruleName": "Image has non-empty accessible name",

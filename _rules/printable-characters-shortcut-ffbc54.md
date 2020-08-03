@@ -51,7 +51,7 @@ Currently [keyboard events][keyboard event] only support the types `keydown` and
 
 #### Passed Example 1
 
-This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false` that cause [changes in content][]. There exists an [instrument][] to **remap** the [keyboard event][] so that [same key][same key events] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`.
+This [HTML document][] is listening to [keyboard events][keyboard event] for which the attribute `key` is a [printable character][] and the method `getModifierState` returns `false`, and which cause [changes in content][]. There exists an [instrument][] to **remap** the [keyboard event][] so that [same key][same key events] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`.
 
 ```html
 <html>
@@ -82,7 +82,7 @@ This [HTML document][] is listening to [keyboard events][keyboard event] with th
 
 #### Passed Example 2
 
-This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false` that cause [changes in content][]. There exists an [instrument][] to disable the [keyboard event][]. A disabled event implies that the event is disabled when the `getModifierState` method returns `false`, therefore meeting the **remap** expectation.
+This [HTML document][] is listening to [keyboard events][keyboard event] for which the attribute `key` is a [printable character][] and the method `getModifierState` returns `false`, and which cause [changes in content][]. There exists an [instrument][] to disable the [keyboard event][]. A disabled event implies that the event is disabled when the `getModifierState` method returns `false`, therefore meeting the **remap** expectation.
 
 ```html
 <html>
@@ -108,7 +108,7 @@ This [HTML document][] is listening to [keyboard events][keyboard event] with th
 
 #### Passed Example 3
 
-This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false` that cause [changes in content][]. For each [keyboard event][] causing [changes in content][], there exists an [instrument][] to **remap** it so that [same key][same key events] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`.
+This [HTML document][] is listening to [keyboard events][keyboard event] for which the attribute `key` is a [printable character][] and the method `getModifierState` returns `false`, and which cause [changes in content][]. For each [keyboard event][] causing [changes in content][], there exists an [instrument][] to **remap** it so that [same key][same key events] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`.
 
 ```html
 <html>
@@ -143,7 +143,7 @@ This [HTML document][] is listening to [keyboard events][keyboard event] with th
 
 #### Passed Example 4
 
-This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false` that cause [changes in content][]. There exists an [instrument][] to **remap** those [keyboard events][keyboard event] that cause [changes in content][] so that [same key][same key events] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`. In this example, the same [instrument][] is used to **remap** all [keyboard events][keyboard event].
+This [HTML document][] is listening to [keyboard events][keyboard event] for which the attribute `key` is a [printable character][] and the method `getModifierState` returns `false`, and which cause [changes in content][]. There exists an [instrument][] to **remap** those [keyboard events][keyboard event] that cause [changes in content][] so that [same key][same key events] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`. In this example, the same [instrument][] is used to **remap** all [keyboard events][keyboard event].
 
 ```html
 <html>
@@ -174,7 +174,7 @@ This [HTML document][] is listening to [keyboard events][keyboard event] with th
 
 #### Passed Example 5
 
-This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false` that cause [changes in content][], but the [events are blocked][blocked event] when no `widget` has [focus][].
+This [HTML document][] is listening to [keyboard events][keyboard event] for which the attribute `key` is a [printable character][] and the method `getModifierState` returns `false`, and which cause [changes in content][], but the [events are blocked][blocked event] when no `widget` has [focus][].
 
 ```html
 <html>
@@ -238,7 +238,7 @@ This [HTML document][] is listening to [keyboard events][keyboard event] for whi
 
 #### Failed Example 1
 
-This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false` that cause [changes in content][]. There is no [instrument][] to **remap** the [keyboard event][] and the [keyboard events][keyboard event] are not [blocked][blocked event] when no `widget` has [focus][].
+This [HTML document][] is listening to [keyboard events][keyboard event] for which the attribute `key` is a [printable character][] and the method `getModifierState` returns `false`, and which cause [changes in content][]. There is no [instrument][] to **remap** the [keyboard event][] and the [keyboard events][keyboard event] are not [blocked][blocked event] when no `widget` has [focus][].
 
 ```html
 <html>
@@ -260,7 +260,7 @@ This [HTML document][] is listening to [keyboard events][keyboard event] with th
 
 #### Failed Example 2
 
-This [HTML document][] is listening to [keyboard events][keyboard event] with the attribute `key` being a [printable character][] and the method `getModifierState` returning `false` that cause [changes in content][]. There is an [instrument][] to **remap** the [keyboard event][] so that [same key][same key events] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`, but the [instrument][] is not in a [clearly labeled location][].
+This [HTML document][] is listening to [keyboard events][keyboard event] for which the attribute `key` is a [printable character][] and the method `getModifierState` returns `false`, and which cause [changes in content][]. There is an [instrument][] to **remap** the [keyboard event][] so that [same key][same key events] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`, but the [instrument][] is not in a [clearly labeled location][].
 
 ```html
 <html>

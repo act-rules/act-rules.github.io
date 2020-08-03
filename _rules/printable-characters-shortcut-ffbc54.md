@@ -3,7 +3,7 @@ id: ffbc54
 name: No keyboard shortcut uses only printable characters
 rule_type: atomic
 description: |
-  This rule checks that if keyboard shortcuts are implemented using only printable characters, then there is a mechanism to disable the shortcut, or to remap the shortcut to use one or more non-printable characters keys, or the shortcut for a user interface component is only available when that component has focus.
+  This rule checks that if keyboard shortcuts are implemented using only printable characters, then there is a mechanism to disable the shortcut, or to remap the shortcut to use one or more non-printable character keys, or the shortcut for a user interface component is only available when that component has focus.
 accessibility_requirements:
   wcag21:2.1.4: # Character Key Shortcuts (A)
     forConformance: true
@@ -28,8 +28,8 @@ The rule applies to any [keyboard event][] for which all of the following is tru
 ## Expectation
 
 For each test target at least one of the following is true:
-- (**Remap**:) there is at least one [set of clearly labeled instruments][] to [block events][blocked event] that use the [same key][same key events] as the test target and whose `getModifierState` method returns `false` for any of the [valid modifier keys][]; or
-- (**Focus**:) the [event target][] has a [semantic role][] that inherits from the [abstract role](https://www.w3.org/TR/wai-aria/#abstract_roles) of `widget`.
+- (**remap**:) there is at least one [set of clearly labeled instruments][] to [block events][blocked event] that use the [same key][same key events] as the test target and whose `getModifierState` method returns `false` for any of the [valid modifier keys][]; or
+- (**focus**:) the [event target][] has a [semantic role][] that inherits from the [abstract role](https://www.w3.org/TR/wai-aria/#abstract_roles) of `widget`.
 
 ## Assumptions
 

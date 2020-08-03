@@ -30,7 +30,7 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], f
 
 ## Expectation
 
-For at least one element of the set comprised by the test target and all of its [visible][] [descendant][] elements, the [outcome][] of one of the following rules is "passed":
+For at least one element of the set comprised by the test target and all of its [visible][] [descendant][] elements in the [flat tree][], the [outcome][] of one of the following rules is "passed":
 
 - [Inline link has distinguishable style or content not based on color alone](https://act-rules.github.io/rules/88407d)
 - [Inline link has distinguishable style or content on hover and focus](https://act-rules.github.io/rules/548868)

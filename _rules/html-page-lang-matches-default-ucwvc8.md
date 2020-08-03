@@ -237,7 +237,7 @@ This page has an undefined [default language][default page language] because it 
 
 #### Inapplicable Example 3
 
-This page has an undefined [default language][default page language] because it has no [document title][] all its content is wrapped in element with a `lang` attribute.
+This page has an undefined [default language][default page language] because it has no [document title][] and all its content is wrapped in an element with a `lang` attribute.
 
 ```html
 <html>

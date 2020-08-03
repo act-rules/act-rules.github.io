@@ -17,7 +17,7 @@ The _most common language_ is determined by counting the number of _words_ in th
 The _words_ used in the following texts should be counted for the _most common language_:
 
 - **page title**: The value of the [document title][] of the [document][] in the [top-level browsing context][].
-- **text nodes**: The value of any [text nodes][] that is [visible][] or [included in the accessibility tree][]
+- **text nodes**: The value of any [text nodes][] that are [visible][] or [included in the accessibility tree][]
 - **accessible text**: The [accessible name][] and [accessible description][] of any element included in the [accessibility tree][]
 
 **Exception**: Do not count words in text that comes from nodes that have an [ancestor][] in the [flat tree][] which has a non-empty (`""`) `lang` attribute and is not the [root node][].

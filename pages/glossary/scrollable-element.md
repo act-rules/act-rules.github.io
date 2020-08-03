@@ -7,9 +7,9 @@ objective: true
 
 A scrollable element is an [element][] with a _horizontal scroll distance_ or a _vertical scroll distance_ greater than 0.
 
-- **horizontal scroll distance**: The difference between [scrollWidth][] and [clientWidth] for elements where the [computed][] [overflow-x][] is `auto`, `clip` or `scroll`. Undefined for other elements.
+- **horizontal scroll distance**: The difference between [scrollWidth][] and [clientWidth] for elements where the [computed][] [overflow-x][] is `auto` or `scroll`. Undefined for other elements.
 
-- **vertical scroll distance**: The difference between [scrollHeight][] and [clientHeight] for elements where the [computed][] [overflow-y][] is `auto`, `clip` or `scroll`. Undefined for other elements.
+- **vertical scroll distance**: The difference between [scrollHeight][] and [clientHeight] for elements where the [computed][] [overflow-y][] is `auto` or `scroll`. Undefined for other elements.
 
 **note**: Elements such as `iframe` which can render a [nested browsing context][] are not _scrollable elements_. The scrollbars on some `iframe` elements come from the content inside the [nested browsing context][].
 

@@ -399,7 +399,7 @@ This link, that is distinguishable by color from the other text in the same line
 
 #### Passed Example 16
 
-This link had a descendent element that is distinguishable by color from the other text in the same line and has a distinguishable bottom border when it is hovered or focused. This example passes rule "[Inline link has distinguishable style or content on hover and focus](https://act-rules.github.io/rules/548868)".
+This link had a descendant element that is distinguishable by color from the other text in the same line and has a distinguishable bottom border when it is hovered or focused. This example passes rule "[Inline link has distinguishable style or content on hover and focus](https://act-rules.github.io/rules/548868)".
 
 ```html
 <style>

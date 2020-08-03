@@ -227,7 +227,7 @@ This link, that is distinguishable by color from the other text in the same line
 
 #### Passed Example 8
 
-This link had a descendent element that is distinguishable by color from the other text in the same line and has a distinguishable bottom border when it is hovered or focused.
+This link had a descendant element that is distinguishable by color from the other text in the same line and has a distinguishable bottom border when it is hovered or focused.
 
 ```html
 <style>

@@ -25,7 +25,7 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], f
 
 ## Expectation
 
-For each test target, at least one of the following is true when it is neither [focused][] nor [hovered][]:
+For at least one element of the set comprised by the test target and all of its [visible][] [descendant][] elements, at least one of the following is true when the element is neither [focused][] nor [hovered][]:
 
 - **distinguishing style**: the element has a [distinguishable style][] not based on color alone from the **non-link line text** elements; or
 - **distinguishing content**: the element has adjacent content (such as an image or text) that indicates the test target is a link.

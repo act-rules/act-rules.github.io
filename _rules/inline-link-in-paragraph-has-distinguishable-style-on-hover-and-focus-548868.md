@@ -25,7 +25,7 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], f
 
 ## Expectation
 
-For each test target, at least one of the following is true when it is [focused][] or [hovered][]:
+For at least one element of the set comprised by the test target and all of its [visible][] [descendant][] elements, at least one of the following is true when the element is [focused][] or [hovered][]:
 
 - **distinguishing style**: the element has a [distinguishable style][] not based on color alone from the **non-link line text** elements; or
 - **distinguishing content**: the element has adjacent content (such as an image or text) that indicates the test target is a link.
@@ -89,7 +89,7 @@ This link, that is distinguishable by the background color from the other text i
 	}
 	a {
 		color: black;
-		background-color: #C84D32;
+		background-color: #c84d32;
 		text-decoration: underline;
 	}
 </style>
@@ -222,6 +222,28 @@ This link, that is distinguishable by color from the other text in the same line
 <p>
 	Read about WAI on the
 	<a href="http://w3.org/WAI">WAI webpage <img class="hide" src="/test-assets/be4d0c/icon.png" alt="" /></a>.
+</p>
+```
+
+#### Passed Example 8
+
+This link had a descendent element that is distinguishable by color from the other text in the same line and has a distinguishable bottom border when it is hovered or focused.
+
+```html
+<style>
+	a {
+		text-decoration: none;
+	}
+
+	a:hover span,
+	a:focus span {
+		border-bottom: 2px solid currentColor;
+	}
+</style>
+
+<p>
+	Read about WAI on the <a href="http://w3.org/WAI"><span>WAI webpage</span></a
+	>.
 </p>
 ```
 

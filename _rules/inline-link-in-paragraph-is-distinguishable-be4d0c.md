@@ -30,7 +30,7 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], f
 
 ## Expectation
 
-For each test target, the [outcome][] of one of the following rules is "passed":
+For at least one element of the set comprised by the test target and all of its [visible][] [descendant][] elements, the [outcome][] of one of the following rules is "passed":
 
 - [Inline link has distinguishable style or content not based on color alone](https://act-rules.github.io/rules/88407d)
 - [Inline link has distinguishable style or content on hover and focus](https://act-rules.github.io/rules/548868)
@@ -394,6 +394,28 @@ This link, that is distinguishable by color from the other text in the same line
 <p>
 	Read about WAI on the
 	<a href="http://w3.org/WAI">WAI webpage <img class="hide" src="/test-assets/be4d0c/icon.png" alt="" /></a>.
+</p>
+```
+
+#### Passed Example 16
+
+This link had a descendent element that is distinguishable by color from the other text in the same line and has a distinguishable bottom border when it is hovered or focused. This example passes rule "[Inline link has distinguishable style or content on hover and focus](https://act-rules.github.io/rules/548868)".
+
+```html
+<style>
+	a {
+		text-decoration: none;
+	}
+
+	a:hover span,
+	a:focus span {
+		border-bottom: 2px solid currentColor;
+	}
+</style>
+
+<p>
+	Read about WAI on the <a href="http://w3.org/WAI"><span>WAI webpage</span></a
+	>.
 </p>
 ```
 

@@ -9960,10 +9960,10 @@
       }
     },
     {
-      "testcaseId": "b7f692d05b8446aa7254f62834cdcbbc62488da0",
+      "testcaseId": "1ff696703e7e7393a5d05cdcd3229cb050594998",
       "testcaseTitle": "Passed Example 5",
-      "url": "https://act-rules.github.io/testcases/9eb3f6/b7f692d05b8446aa7254f62834cdcbbc62488da0.html",
-      "relativePath": "testcases/9eb3f6/b7f692d05b8446aa7254f62834cdcbbc62488da0.html",
+      "url": "https://act-rules.github.io/testcases/9eb3f6/1ff696703e7e7393a5d05cdcd3229cb050594998.html",
+      "relativePath": "testcases/9eb3f6/1ff696703e7e7393a5d05cdcd3229cb050594998.html",
       "expected": "passed",
       "ruleId": "9eb3f6",
       "ruleName": "Image filename is accessible name for image",
@@ -9990,10 +9990,10 @@
       }
     },
     {
-      "testcaseId": "1445920070a4f88ba5df578879b3b6402c5efd58",
+      "testcaseId": "28d908a951edb6fe7768d69b10460c7cfff251b1",
       "testcaseTitle": "Passed Example 6",
-      "url": "https://act-rules.github.io/testcases/9eb3f6/1445920070a4f88ba5df578879b3b6402c5efd58.html",
-      "relativePath": "testcases/9eb3f6/1445920070a4f88ba5df578879b3b6402c5efd58.html",
+      "url": "https://act-rules.github.io/testcases/9eb3f6/28d908a951edb6fe7768d69b10460c7cfff251b1.html",
+      "relativePath": "testcases/9eb3f6/28d908a951edb6fe7768d69b10460c7cfff251b1.html",
       "expected": "passed",
       "ruleId": "9eb3f6",
       "ruleName": "Image filename is accessible name for image",
@@ -10140,10 +10140,10 @@
       }
     },
     {
-      "testcaseId": "36da2b1c9dbb64505ab0fecadb788663f0973f00",
+      "testcaseId": "f636f815cba63087a142086b3b9791fe464300cc",
       "testcaseTitle": "Failed Example 5",
-      "url": "https://act-rules.github.io/testcases/9eb3f6/36da2b1c9dbb64505ab0fecadb788663f0973f00.html",
-      "relativePath": "testcases/9eb3f6/36da2b1c9dbb64505ab0fecadb788663f0973f00.html",
+      "url": "https://act-rules.github.io/testcases/9eb3f6/f636f815cba63087a142086b3b9791fe464300cc.html",
+      "relativePath": "testcases/9eb3f6/f636f815cba63087a142086b3b9791fe464300cc.html",
       "expected": "failed",
       "ruleId": "9eb3f6",
       "ruleName": "Image filename is accessible name for image",

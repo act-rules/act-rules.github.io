@@ -22,6 +22,7 @@ The _words_ used in the following texts should be counted for the _most common l
 
 **Exception**: Do not count words in text that comes from nodes that have an [ancestor][] in the [flat tree][] which has a non-empty (`""`) `lang` attribute and is not the [root node][]. For accessible texts, only ancestors of the node with the accessible name is considered, the ancestry of nodes used in producing the accessible text are ignored, such as those referenced with aria-labelledby.
 
+[visible]: #visible
 [web page]: #web-page-html
 [included in the accessibility tree]: #included-in-the-accessibility-tree
 [accessible name]: #accessible-name

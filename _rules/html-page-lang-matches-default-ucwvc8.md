@@ -266,6 +266,8 @@ This page has an undefined [default language][default page language] because it 
 </html>
 ```
 
+[visible]: #visible
+[accessible name]: #accessible-name
 [valid language tag]: #valid-language-tag
 [default page language]: #default-page-language
 [primary language]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'

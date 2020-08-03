@@ -7590,7 +7590,7 @@
       "relativePath": "testcases/2779a5/6fdbb34a1afc74db4c8f9423e3b04361de5c2eb1.html",
       "expected": "passed",
       "ruleId": "2779a5",
-      "ruleName": "HTML page has title",
+      "ruleName": "HTML page has non-empty title",
       "rulePage": "https://act-rules.github.io/rules/2779a5",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.2": {
@@ -7620,7 +7620,7 @@
       "relativePath": "testcases/2779a5/1533146d80e1436c93eb9aae92e509027b329113.html",
       "expected": "passed",
       "ruleId": "2779a5",
-      "ruleName": "HTML page has title",
+      "ruleName": "HTML page has non-empty title",
       "rulePage": "https://act-rules.github.io/rules/2779a5",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.2": {
@@ -7650,7 +7650,7 @@
       "relativePath": "testcases/2779a5/ae8bead0eb2ba7b474b56f3253549974eefa469b.html",
       "expected": "passed",
       "ruleId": "2779a5",
-      "ruleName": "HTML page has title",
+      "ruleName": "HTML page has non-empty title",
       "rulePage": "https://act-rules.github.io/rules/2779a5",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.2": {
@@ -7680,7 +7680,7 @@
       "relativePath": "testcases/2779a5/2d775d11ea501f97cf182fa8091373ebaddc7b9a.html",
       "expected": "passed",
       "ruleId": "2779a5",
-      "ruleName": "HTML page has title",
+      "ruleName": "HTML page has non-empty title",
       "rulePage": "https://act-rules.github.io/rules/2779a5",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.2": {
@@ -7710,7 +7710,7 @@
       "relativePath": "testcases/2779a5/efb8841af81101bafdce67d4b7cf1893f300073b.html",
       "expected": "passed",
       "ruleId": "2779a5",
-      "ruleName": "HTML page has title",
+      "ruleName": "HTML page has non-empty title",
       "rulePage": "https://act-rules.github.io/rules/2779a5",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.2": {
@@ -7740,7 +7740,7 @@
       "relativePath": "testcases/2779a5/608ba7121512d21500aac49678407bb9f2f42c05.html",
       "expected": "failed",
       "ruleId": "2779a5",
-      "ruleName": "HTML page has title",
+      "ruleName": "HTML page has non-empty title",
       "rulePage": "https://act-rules.github.io/rules/2779a5",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.2": {
@@ -7770,7 +7770,7 @@
       "relativePath": "testcases/2779a5/40e536cc7e242b50eba02f75b08a322cbcacfd4d.html",
       "expected": "failed",
       "ruleId": "2779a5",
-      "ruleName": "HTML page has title",
+      "ruleName": "HTML page has non-empty title",
       "rulePage": "https://act-rules.github.io/rules/2779a5",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.2": {
@@ -7800,7 +7800,7 @@
       "relativePath": "testcases/2779a5/c57827350f8a82aa11cebdce3ac5e7f8a536bc0f.html",
       "expected": "failed",
       "ruleId": "2779a5",
-      "ruleName": "HTML page has title",
+      "ruleName": "HTML page has non-empty title",
       "rulePage": "https://act-rules.github.io/rules/2779a5",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.2": {
@@ -7830,7 +7830,7 @@
       "relativePath": "testcases/2779a5/55c70bff5756ba6287b4f3096baf6ffcc22cac23.html",
       "expected": "failed",
       "ruleId": "2779a5",
-      "ruleName": "HTML page has title",
+      "ruleName": "HTML page has non-empty title",
       "rulePage": "https://act-rules.github.io/rules/2779a5",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.2": {
@@ -7860,7 +7860,7 @@
       "relativePath": "testcases/2779a5/3e323dce62702058007bf2e045076f03a6c62c21.html",
       "expected": "failed",
       "ruleId": "2779a5",
-      "ruleName": "HTML page has title",
+      "ruleName": "HTML page has non-empty title",
       "rulePage": "https://act-rules.github.io/rules/2779a5",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.2": {
@@ -7890,7 +7890,7 @@
       "relativePath": "testcases/2779a5/39be33320e28784dabe83c32689346ce51b552e5.svg",
       "expected": "inapplicable",
       "ruleId": "2779a5",
-      "ruleName": "HTML page has title",
+      "ruleName": "HTML page has non-empty title",
       "rulePage": "https://act-rules.github.io/rules/2779a5",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.2": {

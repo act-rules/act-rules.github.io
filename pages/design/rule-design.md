@@ -156,10 +156,10 @@ For more details, see [ACT Rules Format: Test Cases](https://www.w3.org/TR/act-r
 Applicability and expectations, often have multiple conditions that need to be met for something to be applicable / passed. When there are more than three conditions, listing them all in the running text can be difficult to read and understand. Instead, use a bullet-point list following this format:
 
 > Some condition... for which (all | one of) the following is true:
-> 
-> * (**label 1**:) the (X) has condition A; (and | or)
-> * (**label 2**:) the (X) has condition B; (and | or)
-> * (**label 3**:) the (X) has condition C.
+>
+> - (**label 1**:) the (X) has condition A; (and | or)
+> - (**label 2**:) the (X) has condition B; (and | or)
+> - (**label 3**:) the (X) has condition C.
 
 This phrasing is designed to be easily readable, but may not work in every situation. In all cases prefer readability over prescriptive formatting. Additionally to this, keep the following in mind when listing conditions:
 

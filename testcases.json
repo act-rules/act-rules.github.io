@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 843,
+  "count": 842,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -1336,35 +1336,10 @@
       }
     },
     {
-      "testcaseId": "f987641039742b2b939359bbda7d32e1610f1b10",
+      "testcaseId": "da191373f044d7c309cafdf03485c61d2f91e1ee",
       "testcaseTitle": "Passed Example 10",
-      "url": "https://act-rules.github.io/testcases/5c01ea/f987641039742b2b939359bbda7d32e1610f1b10.html",
-      "relativePath": "testcases/5c01ea/f987641039742b2b939359bbda7d32e1610f1b10.html",
-      "expected": "passed",
-      "ruleId": "5c01ea",
-      "ruleName": "ARIA state or property is permitted",
-      "rulePage": "https://act-rules.github.io/rules/5c01ea",
-      "ruleAccessibilityRequirements": {
-        "wcag-technique:ARIA5": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "aria11:state_property_processing": {
-          "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "satisfied"
-        }
-      }
-    },
-    {
-      "testcaseId": "dd59fc39dd5c0decc6485f60e0e21d86c52554da",
-      "testcaseTitle": "Passed Example 11",
-      "url": "https://act-rules.github.io/testcases/5c01ea/dd59fc39dd5c0decc6485f60e0e21d86c52554da.html",
-      "relativePath": "testcases/5c01ea/dd59fc39dd5c0decc6485f60e0e21d86c52554da.html",
+      "url": "https://act-rules.github.io/testcases/5c01ea/da191373f044d7c309cafdf03485c61d2f91e1ee.html",
+      "relativePath": "testcases/5c01ea/da191373f044d7c309cafdf03485c61d2f91e1ee.html",
       "expected": "passed",
       "ruleId": "5c01ea",
       "ruleName": "ARIA state or property is permitted",

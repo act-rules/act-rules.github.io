@@ -67,7 +67,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This page has a [default language][default page language] of English, which matches the language indicated in the `lang` attribute.
+This page has `lang` attribute value of `en` (English), which matches the [default language of the page][default page language]. The default language is English because all words are English.
 
 ```html
 <html lang="en">
@@ -88,7 +88,7 @@ This page has a [default language][default page language] of English, which matc
 
 #### Passed Example 2
 
-This page has a [default language][default page language] of English because most words are English. The [default page language][] matches the language indicated in the `lang` attribute.
+This page has `lang` attribute value of `en` (English), which matches the [default language of the page][default page language]. The default langage is English because all but a few words are English.
 
 ```html
 <html lang="en">
@@ -103,7 +103,7 @@ This page has a [default language][default page language] of English because mos
 
 #### Passed Example 3
 
-This page has a [default language][default page language] of Dutch because all English text is wrapped in a `p` element with a `lang` attribute set to `en`. Dutch ("nl") is set as the language of the page by the `lang` attribute on the `html` element.
+This page has `lang` attribute value of `nl` (Dutch), which matches the [default language of the page][default page language]. The default language is Dutch because all English words are in a `p` element with a `lang` attribute value of `en`.
 
 ```html
 <html lang="nl">
@@ -124,7 +124,7 @@ This page has a [default language][default page language] of Dutch because all E
 
 #### Passed Example 4
 
-This page has a [default language][default page language] of English because the `title` element and the [accessible name][] of the `img` element are English. The [visible][] text Dutch text does not count as its parent element has a `lang` attribute.
+This page has `lang` attribute value of `en` (English), which matches the [default language of the page][default page language]. The default language is English because the accessible texts are English, and all other text is in a `p` element with a `lang` attribute value of `en`.
 
 ```html
 <html lang="en">
@@ -144,7 +144,7 @@ This page has a [default language][default page language] of English because the
 
 #### Failed Example 1
 
-This page has a [default language][default page language] of English, which is not the language indicated in the `lang` attribute.
+This page has `lang` attribute value of `da` (Danish), which does not matches the [default language of the page][default page language]. The default language is English because all words are English.
 
 ```html
 <html lang="da">
@@ -165,7 +165,7 @@ This page has a [default language][default page language] of English, which is n
 
 #### Failed Example 2
 
-This page has a [default language][default page language] of English because most words are English. This does not match the language indicated in the `lang` attribute.
+This page has `lang` attribute value of `nl` (Dutch), which does not matches the [default language of the page][default page language]. The default langage is English because all but a few words are English.
 
 ```html
 <html lang="nl">
@@ -180,7 +180,7 @@ This page has a [default language][default page language] of English because mos
 
 #### Failed Example 3
 
-This page has a [default language][default page language] of Dutch because all English text is wrapped in a `p` element with a `lang` attribute set to `en`. Dutch ("nl") is not set as the language of the page by the `lang` attribute on the `html` element.
+This page has `lang` attribute value of `en` (English), which does not matches the [default language of the page][default page language]. The default language is Dutch because all English words are in a `p` element with a `lang` attribute value of `en`.
 
 ```html
 <html lang="en">
@@ -201,7 +201,7 @@ This page has a [default language][default page language] of Dutch because all E
 
 #### Failed Example 4
 
-This page has a [default language][default page language] of English because the `title` element and the [accessible name][] of the `img` element are English. English ("en") is not set as the language of the page by the `lang` attribute on the `html` element.
+This page has `lang` attribute value of `nl` (Dutch), which does not matche the [default language of the page][default page language]. The default language is English because the accessible texts are English, and all other text is in a `p` element with a `lang` attribute value of `nl`.
 
 ```html
 <html lang="nl">

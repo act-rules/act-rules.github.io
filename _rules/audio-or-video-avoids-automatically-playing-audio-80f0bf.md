@@ -10,6 +10,12 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-text:cc5: # Non-interference due to mapping to 1.4.2
+    title: WCAG Non-Interference
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
   wcag-technique:G60: # Playing a sound that turns off automatically within three seconds
     forConformance: false
     failed: not satisfied
@@ -37,13 +43,12 @@ htmlHintIgnore:
 
 This rule applies to any `audio` or `video` element that has:
 
-- an `autoplay` attribute whose value is true, and
-- both `paused` and `muted` attributes whose values are both false, and
+- an `autoplay` [attribute value][] of `true`, and
+- a `muted` [attribute value][] of `false`, and
+- a `paused` attribute whose value is false, and
 - either a `src` attribute or a child `source` element that references content with a duration of more than 3 seconds that contains audio.
 
-**Note:**
-
-The default value of both `paused` and `muted` attributes is `false`.
+**Note**: [`autoplay`](https://html.spec.whatwg.org/multipage/media.html#attr-media-autoplay) and [`muted`](https://html.spec.whatwg.org/multipage/media.html#attr-media-muted) are both HTML attributes set on elements. On the other hand, [`paused`](https://html.spec.whatwg.org/multipage/media.html#dom-media-paused) is a DOM attribute which is not specified in HTML.
 
 ## Expectation
 
@@ -175,3 +180,5 @@ This `audio` element does not play automatically.
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 ```
+
+[attribute value]: #attribute-value 'Definition of Attribute Value'

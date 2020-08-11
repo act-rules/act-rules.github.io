@@ -30,7 +30,7 @@ For each target element, there is at least one pixel whose color is different wh
 
 For each target element and each other [focusable][] element in the document, the set of pixels whose color is different when the test target is [focused][] and when it is not, and the set of pixels whose color is different when the other element is [focused][] and when it is not, are different.
 
-**Note:** Some of the pixels might be the same, but the sets have to be unique for each test target.
+**Note:** Some pixels might be the same, but the sets have to be unique for each test target.
 
 ## Assumptions
 
@@ -93,7 +93,7 @@ The first [focusable][] element is part of [sequential focus navigation][]. The 
 
 #### Passed Example 3
 
-The first [focusable][] element, is part of [sequential focus navigation][]. The set of pixels that change color when it is [focused][] (the border of the `span` element) is unique (it does not change when any other element is [focused][]).
+The first [focusable][] element, is part of [sequential focus navigation][]. The set of pixels that change color when it is [focused][] (the border of the `span` element) is unique (it does not change when any other element is [focused][]). The second [focusable][] element is also part of [sequential focus navigation][] and has a unique focus indicator due to default styling.
 
 ```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
@@ -156,27 +156,23 @@ For each of these three [focusable][] elements, the set of pixels changing color
 
 None of these [focusable][] elements have any pixel changing color when they are [focused][] because the default styling has been overwritten by a style that removes the outline.
 
-```html
+````html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
 
 <a class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a>
 <a class="no-focus-default" href="https://www.w3.org/TR/WCAG21/">WCAG</a>
 
-#### Failed Example 2
-
-The first [focusable][] element is part of [sequential focus navigation][] and has no pixel changing color when it is [focused][]. The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the `tabindex` attribute. Its presence is nonetheless enough to make the first one applicable.
-
-```html
+#### Failed Example 2 The first [focusable][] element is part of [sequential focus navigation][] and has no pixel
+changing color when it is [focused][]. The second [focusable][] element is not applicable because it has been removed
+from [sequential focus navigation][] due to the `tabindex` attribute. Its presence is nonetheless enough to make the
+first one applicable. ```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
 
 <a class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a>
 <button tabindex="-1">Dummy button</button>
 
-#### Failed Example 3
-
-Both of these [focusable][] elements have the exact same set of pixels changing color when they are [focused][].
-
-```html
+#### Failed Example 3 Both of these [focusable][] elements have the exact same set of pixels changing color when they
+are [focused][]. ```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
 <script src="../test-assets/focus-visible/script.js" />
 
@@ -197,7 +193,7 @@ Both of these [focusable][] elements have the exact same set of pixels changing 
 	href="https://www.w3.org/TR/WCAG21/"
 	>WCAG</a
 >
-```
+````
 
 ### Inapplicable
 

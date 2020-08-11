@@ -24,7 +24,7 @@ The rule applies to any element which is part of [sequential focus navigation][]
 
 ## Expectation 1
 
-For each target element, there is at least one pixel whose color is different when the element is [focused][] and when it is not.
+For each target element, there is at least one pixel inside the [scrolling area][] of the [viewport][] whose color is different when the element is [focused][] and when it is not.
 
 ## Expectation 2
 
@@ -225,6 +225,8 @@ None of the [focusable][] elements in this document is part of [sequential focus
 [focusable]: #focusable 'Definition of Focusable'
 [focused]: #focused 'Definition of Focused'
 [sc247]: https://www.w3.org/TR/WCAG21/#focus-visible 'Success Criterion 2.4.7 Focus Visible'
+[scrolling area]: https://drafts.csswg.org/cssom-view/#scrolling-area 'CSS specification of Scrolling Area'
 [sequential focus navigation]: https://html.spec.whatwg.org/#sequential-focus-navigation 'HTML specification of Sequential focus navigation'
 [usc247]: https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html 'Understanding Success Criterion 2.4.7: Focus Visible'
 [usc2411]: https://w3c.github.io/wcag/understanding/focus-visible-enhanced.html 'Understanding Success Criterion 2.4.11: Focus Visible (Enhanced) (WCAG 2.2 proposal)'
+[viewport]: https://drafts.csswg.org/css2/#viewport 'CSS definition of Viewport'

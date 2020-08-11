@@ -22,15 +22,13 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to elements that are [included in the accessibility tree][] and have a [semantic role](#semantic-role) of `button`, except for `input` elements whose `type` attribute is in the [`Image Button` state](<https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image)>).
-
-**Note:** `input` elements have a `type` attribute in the `Image button` state if it is set to any case-insensitive match of `image` (most of the time, using `<input type="image">`).
+The rule applies to elements that are [included in the accessibility tree][] and have a [semantic role](#semantic-role) of `button`, except for `input` elements with a `type` [attribute value] of `image`.
 
 ## Expectation
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
-**Note:** `input` elements of type `submit` and `reset` can get their [accessible name][] from a [default text](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset), as well as from a `value` or other attribute.
+**Note:** `input` elements with a type [attribute value][] of either `submit` or `reset` can get their [accessible name][] from a [default text](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset), as well as from a `value` or other attribute.
 
 ## Assumptions
 
@@ -214,6 +212,7 @@ This `button` element has an [explicit role][] of `none`; it is not [focusable][
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
+[attribute value]: #attribute-value 'Definition of Attribute Value'
 [explicit role]: #explicit-role 'Definition of explicit role'
 [focusable]: #focusable 'Definition of focusable'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

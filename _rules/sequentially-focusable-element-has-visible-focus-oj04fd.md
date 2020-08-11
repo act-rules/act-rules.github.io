@@ -20,7 +20,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any element which is part of [sequential focus navigation][] in a document with several [focusable][] elements.
+The rule applies to any element which is part of [sequential focus navigation][] in a document with at least two [focusable][] elements.
 
 ## Expectation 1
 
@@ -28,7 +28,7 @@ For each target element, there is at least one pixel whose color is different wh
 
 ## Expectation 2
 
-For each target element, and each other [focusable][] element in the document, the set of pixels whose color is different when the test target is [focused][] and when it is not, and the set of pixels whose color is different when the other element is [focused][] and when it is not, are different.
+For each target element and each other [focusable][] element in the document, the set of pixels whose color is different when the test target is [focused][] and when it is not, and the set of pixels whose color is different when the other element is [focused][] and when it is not, are different.
 
 **Note:** Some of the pixels might be the same, but the sets have to be unique for each test target.
 
@@ -85,7 +85,7 @@ All the [focusable][] elements in this document are part of [sequential focus na
 
 #### Passed Example 2
 
-The first [focusable][] element is part of [sequential focus navigation]. The set of pixels that change color when it is [focused][] (due to default User Agent's styling) is unique. The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the `tabindex` attribute. Its presence is nonetheless enough to make the first one applicable.
+The first [focusable][] element is part of [sequential focus navigation][]. The set of pixels that change color when it is [focused][] (due to default User Agent's styling) is unique. The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the negative value for the `tabindex` attribute. Its presence is nonetheless enough to make the first one applicable.
 
 ```html
 <a href="https://act-rules.github.io/">ACT rules</a> <button tabindex="-1">Dummy button</button>
@@ -97,7 +97,7 @@ The first [focusable][] element, is part of [sequential focus navigation][]. The
 
 ```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
-<script src="../test-assets/focus-visible/script.js" />
+<script src="../test-assets/focus-visible/script.js"></script>
 
 <span id="indicator" class="border">
 	<a
@@ -118,7 +118,7 @@ For each of these three [focusable][] elements, the set of pixels changing color
 
 ```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
-<script src="../test-assets/focus-visible/script.js" />
+<script src="../test-assets/focus-visible/script.js"></script>
 
 <span id="indicator-act" class="indicator solid"></span>
 <a
@@ -154,21 +154,23 @@ For each of these three [focusable][] elements, the set of pixels changing color
 
 #### Failed Example 1
 
-None of these [focusable][] elements have any pixel changing color when they are [focused][] because the default styling has been overwritten.
+None of these [focusable][] elements have any pixel changing color when they are [focused][] because the default styling has been overwritten by a style that removes the outline.
 
 ```html
+<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
+
 <a class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a>
 <a class="no-focus-default" href="https://www.w3.org/TR/WCAG21/">WCAG</a>
-```
 
 #### Failed Example 2
 
 The first [focusable][] element is part of [sequential focus navigation][] and has no pixel changing color when it is [focused][]. The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the `tabindex` attribute. Its presence is nonetheless enough to make the first one applicable.
 
 ```html
+<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
+
 <a class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a>
 <button tabindex="-1">Dummy button</button>
-```
 
 #### Failed Example 3
 

@@ -20,7 +20,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element that is [visible][], for which the `style` attribute [declares][declared][][letter-spacing][] CSS property.
+This rule applies to any HTML element that is [visible][], for which the `style` attribute [declares][declared] the [letter-spacing][] CSS property.
 
 ## Expectation 1
 
@@ -31,7 +31,7 @@ For the test target's [letter-spacing][] property, one of the following is true:
 
 ## Assumptions
 
-If there is a mechanism available on the page by which letter spacing can be adjusted, failing this rule might not mean [success criterion 1.4.12 Text spacing](https://www.w3.org/TR/WCAG21/#text-spacing) is not satisfied.
+There is no mechanism available on the page to adjust letter spacing. If there is such a mechanism, failing this rule might not mean [success criterion 1.4.12 Text spacing](https://www.w3.org/TR/WCAG21/#text-spacing) is not satisfied.
 
 ## Accessibility Support
 

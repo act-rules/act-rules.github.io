@@ -21,7 +21,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any `autocomplete` [attribute value][] that is neither empty (`""`) nor only [ASCII whitespace][], specified on a HTML `input`, `select` or `textarea` element, except if one of the following is true:
+The rule applies to any HTML `input`, `select` or `textarea` element with an `autocomplete` [attribute value][] that is neither empty (`""`) nor only [ASCII whitespace][], except if one of the following is true:
 
 - The element is not [visible][], and not [included in the accessibility tree][]; or
 - The element is an `input` element with a `type` [attribute value][] of either `hidden`, `button`, `submit` or `reset`; or
@@ -30,7 +30,7 @@ The rule applies to any `autocomplete` [attribute value][] that is neither empty
 
 ## Expectation 1
 
-Each test target is a [space separated][] list of one or more tokens that follow the [HTML specification for Autofill detail tokens][], which requires that the token list match the following in the correct order:
+Each test target's `autocomplete` [attribute value][] is a [space separated][] list of one or more tokens that follow the [HTML specification for Autofill detail tokens][], which requires that the token list match the following in the correct order:
 
 1. An optional token that starts with "section-"; then
 2. An optional token of either "shipping" or "billing"; then
@@ -39,7 +39,7 @@ Each test target is a [space separated][] list of one or more tokens that follow
 
 ## Expectation 2
 
-Each test target has a [correct autocomplete field][] that is an [appropriate field for the form control][].
+Each test target's `autocomplete` [attribute value][] has a [correct autocomplete field][] that is an [appropriate][appropriate field for the form control] for that test target.
 
 ## Assumptions
 

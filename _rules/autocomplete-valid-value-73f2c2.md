@@ -21,39 +21,33 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any HTML `input`, `select` and `textarea` element with an `autocomplete` attribute that is a set of one or more [space separated tokens](https://html.spec.whatwg.org/#set-of-space-separated-tokens), except if one of the following is true:
+The rule applies to any `autocomplete` [attribute value][] that is neither empty (`""`) nor only [ASCII whitespace][], specified on a HTML `input`, `select` or `textarea` element, except if one of the following is true:
 
-- The element is not [visible](#visible), and not [included in the accessibility tree](#included-in-the-accessibility-tree)
-- The element is an `input` element with a `type` [attribute value][] of either `hidden`, `button`, `submit` or `reset`
-- The element has an `aria-disabled` [attribute value][] of `true`
-- The element is not part of [sequential focus navigation](https://html.spec.whatwg.org/#sequential-focus-navigation) and has a [semantic role](#semantic-role) that is not a [widget role](https://www.w3.org/TR/wai-aria-1.1/#widget_roles).
+- The element is not [visible][], and not [included in the accessibility tree][]; or
+- The element is an `input` element with a `type` [attribute value][] of either `hidden`, `button`, `submit` or `reset`; or
+- The element has an `aria-disabled` [attribute value][] of `true`; or
+- The element is not part of [sequential focus navigation][] and has a [semantic role][] that is not a [widget role][].
 
 ## Expectation 1
 
-The `autocomplete` attribute is a single term, or a space separated list of terms.
+Each test target is a [space separated][] list of one or more tokens that follow the [HTML specification for Autofill detail tokens][], which requires that the token list match the following in the correct order:
+
+1. An optional token that starts with "section-"; then
+2. An optional token of either "shipping" or "billing"; then
+3. An optional token of either "home", "work", "mobile", "fax" or "pager", only if the last token is "email", "impp", "tel" or "tel-*"; then
+4. A required token from the [correct autocomplete field][].
 
 ## Expectation 2
 
-The autocomplete term(s) follow the [HTML specification - Autofill detail tokens](https://html.spec.whatwg.org/#autofill-detail-tokens), which requires that it/they match the following in the correct order:
-
-1. Has a value that starts with "section-" _(optional)_
-2. Has either "shipping" or "billing" _(optional)_
-3. Has either "home", "work", "mobile", "fax" or "pager" _(optional, only for "email", "impp", "tel" or "tel-\*")_
-4. Has a [correct autocomplete field](#correct-autocomplete-field) _(required)_
-
-**Note:** Autocomplete terms are case insensitive. When multiple terms are used, they must be used in the correct order.
-
-## Expectation 3
-
-The [correct autocomplete field](#correct-autocomplete-field) is an [appropriate field for the form control](#appropriate-field-for-the-form-control).
+Each test target has a [correct autocomplete field][] that is an [appropriate field for the form control][].
 
 ## Assumptions
 
-For this rule, it is assumed that the `autocomplete` attribute is not used on form fields that do not correspond to an autocomplete field described in the HTML 5.2 specification. If the `autocomplete` field is used to describe "custom" taxonomy, rather than that described in the specification, this rule may produce incorrect results.
+For this rule, it is assumed that the `autocomplete` attribute is not used on form fields that do not correspond to an autocomplete field described in the HTML 5.2 specification. If the `autocomplete` field is used to describe "custom" taxonomy, rather than that described in the specification, the [1.3.5: Identify Input Purpose][sc135] may be satisfied even if this rule failed.
 
 ## Accessibility Support
 
-- While `autocomplete` in a promising technique for supporting personalization in HTML, support for this is fairly limited.
+- While `autocomplete` in a promising technique for supporting personalization in HTML, support for this in assistive technologies is fairly limited.
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 - Some user agents treat the value of the `aria-disabled` attribute as case-sensitive.
 
@@ -71,7 +65,7 @@ The intent of this rule is to ensure that the `autocomplete` attribute can be us
 
 #### Passed Example 1
 
-Single autocomplete term.
+This `autocomplete` [attribute value][] is only has the required token, and is valid for an `input` element wich has a default type of `text`.
 
 ```html
 <label>Username<input autocomplete="username"/></label>
@@ -79,7 +73,7 @@ Single autocomplete term.
 
 #### Passed Example 2
 
-Single autocomplete term for select.
+This `autocomplete` [attribute value][] is only has the required token, and is valid for a `select` element.
 
 ```html
 <select autocomplete="bday-month">
@@ -90,7 +84,7 @@ Single autocomplete term for select.
 
 #### Passed Example 3
 
-Autocomplete term, only valid for textarea.
+This `autocomplete` [attribute value][] only has the required token, and is valid for a `textarea` element. Mising upper and lower case letters is allwed for `autocomplete` attributes.
 
 ```html
 <textarea autocomplete="Street-Address"></textarea>
@@ -98,7 +92,7 @@ Autocomplete term, only valid for textarea.
 
 #### Passed Example 4
 
-Two autocomplete terms.
+This `autocomplete` [attribute value][] has a `work` token, allowed because it is used before `email`. The `email` taken is allowed on `input` elements with a `type` [attribute value][] of `text`.
 
 ```html
 <label>Work email<input autocomplete="Work Email"/></label>
@@ -106,7 +100,7 @@ Two autocomplete terms.
 
 #### Passed Example 5
 
-Autocomplete using section-\*
+This `autocomplete` [attribute value][] has a `section-` token, which can preface any [correct autocomplete field][]. The `email` taken is allowed on `input` elements with a `type` [attribute value][] of `text`.
 
 ```html
 <label>Email<input autocomplete="section-partner email"/></label>
@@ -114,7 +108,7 @@ Autocomplete using section-\*
 
 #### Passed Example 6
 
-Triple autocomplete terms.
+This `autocomplete` [attribute value][] has `section-`  and `billing` tokens. These tokens can preface any [correct autocomplete field][]. The `email` taken is allowed on `input` elements with a `type` [attribute value][] of `text`.
 
 ```html
 <label>Address<input type="text" autocomplete="section-primary billing address-line1"/></label>
@@ -122,7 +116,7 @@ Triple autocomplete terms.
 
 #### Passed Example 7
 
-Full length autocomplete terms.
+This `autocomplete` [attribute value][] has all allowed types of tokens in the correct order. The `email` taken is allowed on `input` elements with a `type` [attribute value][] of `text`.
 
 ```html
 <label>Email<input autocomplete="section-primary shipping work email"/></label>
@@ -130,23 +124,7 @@ Full length autocomplete terms.
 
 #### Passed Example 8
 
-This `input` element has an [explicit role][] of `none`. However, it is [focusable][] (by default). Thus it has a [semantic role][] of `textbox` due to [Presentational Roles Conflict Resolution][]. It has a single autocomplete term.
-
-```html
-<label>Username<input role="none" autocomplete="username"/></label>
-```
-
-#### Passed Example 9
-
-The `input` element does not participates in sequential focus navigation, but still has a semantic role that is a widget role, and has a single autocomplete term.
-
-```html
-<label>Username<input tabindex="-1" autocomplete="username"/></label>
-```
-
-#### Passed Example 10
-
-The `input` element does not have a semantic role that is a widget role, but still participates in sequential focus navigation because of the [`tabindex` attribute](https://html.spec.whatwg.org/#the-tabindex-attribute), and has a single autocomplete term.
+The `autocomplete` attribute value is on an `input` element that does not have a semantic role that is a widget role, but still participates in sequential focus navigation because of the [`tabindex` attribute](https://html.spec.whatwg.org/#the-tabindex-attribute).
 
 ```html
 <label>Username<input role="banner" tabindex="0" autocomplete="username"/></label>
@@ -156,7 +134,7 @@ The `input` element does not have a semantic role that is a widget role, but sti
 
 #### Failed Example 1
 
-Unknown autocomplete term.
+This `autocomplete` [attribute value][] does not have a [correct autocomplete field][].
 
 ```html
 <label>Username<input autocomplete="badterm"/></label>
@@ -164,7 +142,7 @@ Unknown autocomplete term.
 
 #### Failed Example 2
 
-Term `work` not allowed before `photo`.
+This `autocomplete` [attribute value][] has the `work` token on a [correct autocomplete field][] that does not support this.
 
 ```html
 <label>Photo<input autocomplete="work photo"/></label>
@@ -172,7 +150,7 @@ Term `work` not allowed before `photo`.
 
 #### Failed Example 3
 
-Invalid order of terms.
+This `autocomplete` [attribute value][] includes the `work` token before the `shipping` token, instead of the other way around.
 
 ```html
 <label>Email<input autocomplete="work shipping email"/></label>
@@ -180,7 +158,7 @@ Invalid order of terms.
 
 #### Failed Example 4
 
-Comma separated rather than space separated list.
+This `autocomplete` [attribute value][] is comma separated instead of space using [ascii-whitespace][].
 
 ```html
 <label>Email<input autocomplete="work,email"/></label>
@@ -188,7 +166,7 @@ Comma separated rather than space separated list.
 
 #### Failed Example 5
 
-Autocomplete is inappropriate for the type of field.
+This `autocomplete` [attribute value][] is not appropriate for the field. It is not possible to type an e-mail using just numbers.
 
 ```html
 <label>Email<input type="number" autocomplete="email"/></label>
@@ -198,7 +176,7 @@ Autocomplete is inappropriate for the type of field.
 
 #### Inapplicable Example 1
 
-Inapplicable element.
+This `button` element does not support `autocomplete` attributes.
 
 ```html
 <button autocomplete="username"></button>
@@ -206,7 +184,7 @@ Inapplicable element.
 
 #### Inapplicable Example 2
 
-Autocomplete attribute is empty ("").
+This `autocomplete` [attribute value][] is empty ("").
 
 ```html
 <label>Username<input autocomplete=""/></label>
@@ -214,31 +192,31 @@ Autocomplete attribute is empty ("").
 
 #### Inapplicable Example 3
 
-The element is hidden through `display:none`.
+This `autocomplete` [attribute value][] contains only [asiii whitespace][].
+
+```html
+<label>Username<input autocomplete=" "/></label>
+```
+
+#### Inapplicable Example 4
+
+This `autocomplete` [attribute value][] is on an element is hidden through `display:none`.
 
 ```html
 <label>Username<input autocomplete="username" style="display:none"/></label>
 ```
 
-#### Inapplicable Example 4
+#### Inapplicable Example 5
 
-The `input` element has a `type` attribute that is in the `button` state.
+This `autocomplete` attribute is on an `input` element with a `type` [attribute value][] that does not support autocomplete.
 
 ```html
 <label>Username<input type="button" autocomplete="username"/></label>
 ```
 
-#### Inapplicable Example 5
-
-The `input` element has a `type` attribute that is in the `hidden` state.
-
-```html
-<label>Username<input type="hidden" autocomplete="username"/></label>
-```
-
 #### Inapplicable Example 6
 
-The `input` element has an HTML `disabled` attribute.
+This `autocomplete` attribute is on an `input` element that has the `disabled` attribute.
 
 ```html
 <label>Username<input autocomplete="username" disabled/></label>
@@ -246,7 +224,7 @@ The `input` element has an HTML `disabled` attribute.
 
 #### Inapplicable Example 7
 
-The `input` element has an `aria-disabled` attribute with value `true`.
+This `autocomplete` attribute is on an `input` element that has the `aria-disabled` [attribute value][] of `true`.
 
 ```html
 <label>Username<input autocomplete="username" aria-disabled="true"/></label>
@@ -254,18 +232,10 @@ The `input` element has an `aria-disabled` attribute with value `true`.
 
 #### Inapplicable Example 8
 
-Non-widget element that does not participate in sequential focus navigation.
+This `autocomplete` attribute is ignored because it is on an element with a [semantic role][] of `none`. The `disabled` attribute is required to ensure [presentational role conflict resolution][] does not cause the `none` role to be ignored.
 
 ```html
-<label>Username<input type="button" role="none" disabled autocomplete="username"/></label>
-```
-
-#### Inapplicable Example 9
-
-Autocomplete attribute contains no tokens.
-
-```html
-<label>Username<input autocomplete=" "/></label>
+<label>Username<input type="text" role="none" disabled autocomplete="username"/></label>
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
@@ -273,3 +243,13 @@ Autocomplete attribute contains no tokens.
 [focusable]: #focusable 'Definition of focusable'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
+[space separated]: https://html.spec.whatwg.org/#set-of-space-separated-tokens 'TODO'
+[ASCII whitespace]: https://infra.spec.whatwg.org/#ascii-whitespace
+[visible]: #visible
+[included in the accessibility tree]: #included-in-the-accessibility-tree
+[HTML specification for Autofill detail tokens]: https://html.spec.whatwg.org/#autofill-detail-tokens
+[sc135]: https://www.w3.org/TR/WCAG21/#identify-input-purpose
+[correct autocomplete field]: #correct-autocomplete-field
+[appropriate field for the form control]: #appropriate-field-for-the-form-control
+[sequential focus navigation]: https://html.spec.whatwg.org/#sequential-focus-navigation
+[widget role]: https://www.w3.org/TR/wai-aria-1.1/#widget_roles

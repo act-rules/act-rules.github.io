@@ -2,10 +2,8 @@
 id: afw4f7
 name: Text has minimum contrast
 rule_type: atomic
-
 description: |
-  This rule checks that the highest possible contrast of every text character with its background meets the minimal contrast requirement
-
+  This rule checks that the highest possible contrast of every text character with its background meets the minimal contrast requirement.
 accessibility_requirements:
   wcag20:1.4.3: # Contrast (Minimum)
     forConformance: true
@@ -27,13 +25,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: satisfied
     inapplicable: further testing needed
-
 input_aspects:
   - Accessibility Tree
   - DOM Tree
   - CSS Styling
   - Language
-
 acknowledgments:
   authors:
     - Brian Bors
@@ -42,27 +38,21 @@ acknowledgments:
 
 ## Applicability
 
-Any [visible][] character in a [text node][] that is a [child](https://dom.spec.whatwg.org/#concept-tree-child) (in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree)) of an HTML element, except if the [text node][] is a [descendant](https://dom.spec.whatwg.org/#concept-shadow-including-descendant) of an element that:
+The rule applies to any [visible][] character in a [text node][] that is a [child][] in the [flat tree][] of an HTML element, except if the [text node][] has an [ancestor][] in the [flat tree][] for which one of the following is true:
 
-- has a [semantic role](#semantic-role) that inherits from [widget](https://www.w3.org/TR/wai-aria-1.1/#widget); or
-- is used in the [accessible name](#accessible-name) of a [widget](https://www.w3.org/TR/wai-aria-1.1/#widget) that is [disabled][]; or
-- has a [semantic role](#semantic-role) of [group](https://www.w3.org/TR/wai-aria-1.1/#group) and is [disabled][].
-
-**Note:** When the [foreground color](#foreground-colors-of-text) is the same as the [background color](#background-colors-of-text), this rule deems the character not [visible][], so it does not need to be tested for contrast.
+- **widget**: the ancestor has a [semantic role][] that inherits from `widget`; or
+- **disabled label**: the ancestor is used in the [accessible name][] of a `widget` that is [disabled][]; or
+- **disabled group**: the ancestor has a [semantic role][] of `group` and is [disabled][].
 
 ## Expectation
 
-For each test target, the [highest possible contrast](#highest-possible-contrast) between the [foreground colors](#foreground-colors-of-text) and [background colors](#background-colors-of-text) is at least 4.5:1 or 3.0:1 for [larger scale text](#large-scale-text), except if the test target is part of a [text node][] that is [purely decorative][], or does not express anything in [human language](https://www.w3.org/TR/WCAG21/#dfn-human-language-s).
-
-**Note:** Passing this rule does not mean that the text has sufficient color contrast. If all background pixels have a low contrast with all foreground pixels, the success criterion is guaranteed to not be satisfied. When some pixels have sufficient contrast, and others do not, legibility should be considered. There is no clear method for determining legibility, which is why this is out of scope for this rule.
-
-**Note:** When the text color or background color is not specified in the web page, colors from other [origins](https://www.w3.org/TR/css3-cascade/#cascading-origins) will be used. Testers must ensure colors are not effected by styles from a [user origin](https://www.w3.org/TR/css3-cascade/#cascade-origin-user). Contrast issues cause by specifying the text color but not the background or vise versa, must be tested separately from this rule.
+For each test target, the [highest possible contrast][] between the [foreground colors][] and [background colors][] is at least 4.5:1 or 3.0:1 for [larger scale text][], except if the test target is part of a [text node][] that is [purely decorative][] or does not express anything in [human language][].
 
 ## Assumptions
 
-- [Success criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/TR/WCAG21/#contrast-minimum) has exceptions for "incidental" text, which includes inactive user interface components and decorative texts. The rule assumes that [text nodes](https://dom.spec.whatwg.org/#text) that should be ignored are [disabled]() or hidden from assistive technologies. If this isn't the case, the rule may produce incorrect results.
+- [Success criterion 1.4.3: Contrast (Minimum)][sc143] has exceptions for "incidental" text, which includes inactive user interface components and decorative texts. The rule assumes that [text nodes][text node] that should be ignored are [disabled][] or hidden from assistive technologies. If this isn't the case, the text node could fail this rule while the success criterion could still be satisfied.
 
-- [Success criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/TR/WCAG21/#contrast-minimum) also has an exception for logos and brand names. Since logos and brand names are usually displayed through images to ensure correct rendering, this rule does not take logos or brand names into consideration. If a logo or brand name is included using [text nodes](https://dom.spec.whatwg.org/#text), this rule may produce incorrect results.
+- [Success criterion 1.4.3: Contrast (Minimum)][sc143] also has an exception for logos and brand names. Since logos and brand names are usually displayed through images to ensure correct rendering, this rule does not take logos or brand names into consideration. If a logo or brand name is included using [text nodes][text node], the text node could fail while the success criterion could still be satisfied.
 
 - Text that has the same foreground and background color (a contrast ratio of 1:1) is not considered to be "visual presentation of text", making it inapplicable to the success criterion. Text hidden in this way can still cause accessibility issues under other success criteria, depending on the content.
 
@@ -72,6 +62,10 @@ For each test target, the [highest possible contrast](#highest-possible-contrast
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
+
+Passing this rule does not mean that the text has sufficient color contrast. If all background pixels have a low contrast with all foreground pixels, the success criterion is guaranteed to not be satisfied. When some pixels have sufficient contrast, and others do not, legibility should be considered. There is no clear method for determining legibility, which is why this is out of scope for this rule.
+
+When the text color or background color is not specified in the web page, colors from other [origins][] will be used. Testers must ensure colors are not affected by styles from a [user origin][], such as a custom style sheet. Contrast issues cause by specifying the text color but not the background or vise versa, must be tested separately from this rule.
 
 - [Understanding Success Criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
 - [Understanding Success Criterion 1.4.6: Contrast (Enhanced)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html)
@@ -110,7 +104,7 @@ This light gray text has a contrast ratio between 13:1 and 5:1 on the background
 
 ```html
 <p
-	style="color: #CCC; height:50px; padding-top:15px; background: #000 no-repeat -20px -20px url('../test-assets/contrast/black-hole.jpeg');"
+	style="color: #CCC; height:50px; padding-top:15px; background: #000 no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');"
 >
 	Black hole sun
 </p>
@@ -219,7 +213,7 @@ This light gray text has a contrast ratio between 2.7:1 and 3:1 on the backgroun
 
 ```html
 <p
-	style="color: #555; height:50px; padding-top:20px; background: black no-repeat -20px -20px url('../test-assets/contrast/black-hole.jpeg');"
+	style="color: #555; height:50px; padding-top:20px; background: black no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');"
 >
 	Black hole sun
 </p>
@@ -319,7 +313,7 @@ This text not part of a [text node][].
 
 ```html
 <p>
-	<img scr="../test-assets/contrast/example.png" alt="example" />
+	<img scr="/test-assets/contrast/example.png" alt="example" />
 </p>
 ```
 
@@ -394,9 +388,21 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 </div>
 ```
 
-[disabled]: #disabled-element 'Definition of disabled'
-[visible]: #visible 'Definition of visible'
-[text node]: https://dom.spec.whatwg.org/#text 'Definition of text node'
-[purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'Definition of purely decorative'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
-[semantic role]: #semantic-role 'Definition of semantic role'
+[accessible name]: #accessible-name 'Definition of Accessible Name'
+[ancestor]: https://dom.spec.whatwg.org/#concept-shadow-including-ancestor 'DOM, ancestor, 2020/07/23'
+[background colors]: #background-colors-of-text 'Definition of Background color of text'
+[child]: https://dom.spec.whatwg.org/#concept-tree-child 'DOM, child, 2020/07/23'
+[disabled]: #disabled-element 'Definition of Disabled'
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS draft, flat tree, 2020/07/23'
+[foreground colors]: #foreground-colors-of-text 'Definition of Foreground color of text'
+[highest possible contrast]: #highest-possible-contrast 'Definition of Highest possible contrast'
+[human language]: https://www.w3.org/TR/WCAG21/#dfn-human-language-s 'WCAG 2.1, Human language'
+[larger scale text]: #large-scale-text 'Definition of Large scale text'
+[origins]: https://www.w3.org/TR/css3-cascade/#cascading-origins 'CSS 3, origin'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'WAI-ARIA, Presentational Roles Conflict Resolution'
+[purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG 2.1, Purely decorative'
+[text node]: https://dom.spec.whatwg.org/#text 'DOM, text node, 2020/07/23'
+[sc143]: https://www.w3.org/TR/WCAG21/#contrast-minimum 'WCAG 2.1, Success criterion 1.4.3 Contrast (Minimum)'
+[semantic role]: #semantic-role 'Definition of Semantic role'
+[user origin]: https://www.w3.org/TR/css3-cascade/#cascade-origin-user 'CSS 3, user origin'
+[visible]: #visible 'Definition of Visible'

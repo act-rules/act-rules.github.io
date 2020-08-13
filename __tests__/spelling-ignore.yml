@@ -19,6 +19,7 @@
 - feImage
 
 # Domain-specific words, Definitions & other allowed terms
+- ABNF
 - URI
 - UA/AT
 - WCAG
@@ -66,6 +67,13 @@
 - rowheader
 - colspan
 - presentational
+- sc
+- dropdown
+
+# spell checker checks against strict casing & hence some repeated words here
+- Autocomplete
+- Focusable
+- ascii
 - EARL10-Schema
 - labelable
 - merchantability
@@ -73,9 +81,11 @@
 - 14pt
 - 18pt
 - Helvetica
+- DeviceOrientation
 - fieldsets
 - ascii # lowercase needed in reference list
 - CMS
+- dropdown
 
 # Parts of url
 - http
@@ -133,6 +143,24 @@
 - matrix3d
 - rowheader
 - columnheader
+- innerText
+- isTrusted
+
+# DOM Events
+- auxclick
+- compostionend
+- compositionstart
+- compositionupdate
+- dblclick
+- keydown
+- keyup
+- mousedown
+- mouseenter
+- mouseleave
+- mousemove
+- mouseout
+- mouseover
+- mouseup
 - scrollable-element
 - scrollWidth
 - scrollHeight
@@ -140,6 +168,7 @@
 - clientWidth
 - innerHeight
 - innerWidth
+- innerText
 - scrollbars
 - documentElement
 - rects
@@ -157,8 +186,10 @@
 - presentational
 - backtick
 - camelCase
+- untestable
 - scrollable
 - scrollbars
+- subconditions
 
 # Parts of Unicode
 - 000A

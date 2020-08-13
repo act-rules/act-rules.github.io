@@ -43,7 +43,7 @@ Each test target's `autocomplete` [attribute value][] has a [correct autocomplet
 
 ## Assumptions
 
-For this rule, it is assumed that the `autocomplete` attribute is not used on form fields that do not correspond to an autocomplete field described in the HTML 5.2 specification. If the `autocomplete` field is used to describe "custom" taxonomy, rather than that described in the specification, the [1.3.5: Identify Input Purpose][sc135] may be satisfied even if this rule failed.
+The `autocomplete` attribute is not used on form fields that do not correspond to an autocomplete field described in the HTML 5.2 specification. If the `autocomplete` field is used to describe "custom" taxonomy, rather than that described in the specification, Success Criterion [1.3.5 Identify Input Purpose][sc135] may be satisfied even if this rule failed.
 
 ## Accessibility Support
 
@@ -65,7 +65,7 @@ The intent of this rule is to ensure that the `autocomplete` attribute can be us
 
 #### Passed Example 1
 
-This `autocomplete` [attribute value][] is only has the required token, and is valid for an `input` element which has a default type of `text`.
+This `autocomplete` [attribute value][] only has the required token, and is valid for an `input` element which has a default type of `text`.
 
 ```html
 <label>Username<input autocomplete="username"/></label>
@@ -73,7 +73,7 @@ This `autocomplete` [attribute value][] is only has the required token, and is v
 
 #### Passed Example 2
 
-This `autocomplete` [attribute value][] is only has the required token, and is valid for a `select` element.
+This `autocomplete` [attribute value][] only has the required token, and is valid for a `select` element.
 
 ```html
 <select autocomplete="bday-month">
@@ -84,7 +84,7 @@ This `autocomplete` [attribute value][] is only has the required token, and is v
 
 #### Passed Example 3
 
-This `autocomplete` [attribute value][] only has the required token, and is valid for a `textarea` element. Missing upper and lower case letters is allwed for `autocomplete` attributes.
+This `autocomplete` [attribute value][] only has the required token, and is valid for a `textarea` element. Mixing upper and lower case letters is allowed for `autocomplete` attributes.
 
 ```html
 <textarea autocomplete="Street-Address"></textarea>
@@ -92,7 +92,7 @@ This `autocomplete` [attribute value][] only has the required token, and is vali
 
 #### Passed Example 4
 
-This `autocomplete` [attribute value][] has a `work` token, allowed because it is used before `email`. The `email` taken is allowed on `input` elements with a `type` [attribute value][] of `text`.
+This `autocomplete` [attribute value][] has a `work` token, allowed because it is used before `email`. The `email` token is allowed on `input` elements with a `type` [attribute value][] of `text`.
 
 ```html
 <label>Work email<input autocomplete="Work Email"/></label>
@@ -100,7 +100,7 @@ This `autocomplete` [attribute value][] has a `work` token, allowed because it i
 
 #### Passed Example 5
 
-This `autocomplete` [attribute value][] has a `section-` token, which can preface any [correct autocomplete field][]. The `email` taken is allowed on `input` elements with a `type` [attribute value][] of `text`.
+This `autocomplete` [attribute value][] has a `section-` token, which can preface any [correct autocomplete field][]. The `email` token is allowed on `input` elements with a `type` [attribute value][] of `text`.
 
 ```html
 <label>Email<input autocomplete="section-partner email"/></label>
@@ -108,7 +108,7 @@ This `autocomplete` [attribute value][] has a `section-` token, which can prefac
 
 #### Passed Example 6
 
-This `autocomplete` [attribute value][] has `section-`  and `billing` tokens. These tokens can preface any [correct autocomplete field][]. The `email` taken is allowed on `input` elements with a `type` [attribute value][] of `text`.
+This `autocomplete` [attribute value][] has `section-`  and `billing` tokens. These tokens can preface any [correct autocomplete field][]. The `email` token is allowed on `input` elements with a `type` [attribute value][] of `text`.
 
 ```html
 <label>Address<input type="text" autocomplete="section-primary billing address-line1"/></label>
@@ -116,7 +116,7 @@ This `autocomplete` [attribute value][] has `section-`  and `billing` tokens. Th
 
 #### Passed Example 7
 
-This `autocomplete` [attribute value][] has all allowed types of tokens in the correct order. The `email` taken is allowed on `input` elements with a `type` [attribute value][] of `text`.
+This `autocomplete` [attribute value][] has all allowed types of tokens in the correct order. The `email` token is allowed on `input` elements with a `type` [attribute value][] of `text`.
 
 ```html
 <label>Email<input autocomplete="section-primary shipping work email"/></label>
@@ -124,7 +124,7 @@ This `autocomplete` [attribute value][] has all allowed types of tokens in the c
 
 #### Passed Example 8
 
-The `autocomplete` attribute value is on an `input` element that does not have a semantic role that is a widget role, but still participates in sequential focus navigation because of the [`tabindex` attribute](https://html.spec.whatwg.org/#the-tabindex-attribute).
+The `autocomplete` attribute value is on an `input` element that does not have a semantic role that is a widget role, but still participates in [sequential focus navigation][] because of the `tabindex` attribute.
 
 ```html
 <label>Username<input role="banner" tabindex="0" autocomplete="username"/></label>
@@ -200,7 +200,7 @@ This `autocomplete` [attribute value][] contains only [ASCII whitespace][].
 
 #### Inapplicable Example 4
 
-This `autocomplete` [attribute value][] is on an element is hidden through `display:none`.
+This `autocomplete` [attribute value][] is on an element that is not [visible][] through `display:none`.
 
 ```html
 <label>Username<input autocomplete="username" style="display:none"/></label>

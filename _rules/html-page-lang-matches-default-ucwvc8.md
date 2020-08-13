@@ -23,6 +23,10 @@ input_aspects:
 acknowledgments:
   authors:
     - Wilco Fiers
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # using aria-labelledby instead
+  - 'alt-require'
 ---
 
 ## Applicability
@@ -67,7 +71,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This page has a `lang` [attribute value](#attribute-value) of `en` (English), which matches the [default language of the page][default page language]. The default language is English because all words are English.
+This page has a `lang` [attribute value][] of `en` (English), which matches the [default language of the page][default page language]. The default language is English because all words are English.
 
 ```html
 <html lang="en">
@@ -88,7 +92,7 @@ This page has a `lang` [attribute value](#attribute-value) of `en` (English), wh
 
 #### Passed Example 2
 
-This page has `lang` attribute value of `en` (English), which matches the [default language of the page][default page language]. The default langage is English because all but a few words are English.
+This page has `lang` attribute value of `en` (English), which matches the [default language of the page][default page language]. The default language is English because all but a few words are English.
 
 ```html
 <html lang="en">
@@ -165,7 +169,7 @@ This page has `lang` attribute value of `da` (Danish), which does not matches th
 
 #### Failed Example 2
 
-This page has `lang` attribute value of `nl` (Dutch), which does not matches the [default language of the page][default page language]. The default langage is English because all but a few words are English.
+This page has `lang` attribute value of `nl` (Dutch), which does not matches the [default language of the page][default page language]. The default language is English because all but a few words are English.
 
 ```html
 <html lang="nl">
@@ -201,7 +205,7 @@ This page has `lang` attribute value of `en` (English), which does not matches t
 
 #### Failed Example 4
 
-This page has `lang` attribute value of `nl` (Dutch), which does not matche the [default language of the page][default page language]. The default language is English because the accessible texts are English, and all other text is in a `p` element with a `lang` attribute value of `nl`.
+This page has `lang` attribute value of `nl` (Dutch), which does not match the [default language of the page][default page language]. The default language is English because the accessible texts are English, and all other text is in a `p` element with a `lang` attribute value of `nl`.
 
 ```html
 <html lang="nl">
@@ -212,6 +216,24 @@ This page has `lang` attribute value of `nl` (Dutch), which does not matche the 
 		<img src="/test-assets/shared/fireworks.jpg" alt="Fireworks over Paris" />
 		<p lang="nl">
 			Gelukkig nieuwjaar!
+		</p>
+	</body>
+</html>
+```
+
+#### Failed Example 5
+
+This page has `lang` attribute value of `nl` (Dutch), which does not match the [default language of the page][default page language]. The default language is English because the accessible name of the `img` element is English. The `lang` attribute on the `p` element is effectively ignored.
+
+```html
+<html lang="nl">
+	<head>
+		<title>Paris</title>
+	</head>
+	<body>
+		<img src="/test-assets/shared/fireworks.jpg" aria-labelledby="caption" />
+		<p lang="en" id="caption" hidden>
+			Fireworks over Paris!
 		</p>
 	</body>
 </html>
@@ -266,15 +288,13 @@ This page has an undefined [default language][default page language] because it 
 </html>
 ```
 
-[visible]: #visible
-[accessible name]: #accessible-name
 [valid language tag]: #valid-language-tag
 [default page language]: #default-page-language
+[attribute value]: #attribute-value
 [primary language]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
 [grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
 [bcp 47]: https://tools.ietf.org/html/bcp47#section-2.1
 [document element]: https://dom.spec.whatwg.org/#document-element 'DOM document element, as of 2020/06/05'
-[node document]: https://dom.spec.whatwg.org/#concept-node-document 'DOM node document, as of 2020/06/05'
 [content type]: https://dom.spec.whatwg.org/#concept-document-content-type 'DOM content type, as of 2020/06/05'
 [document title]: https://html.spec.whatwg.org/multipage/dom.html#document.title 'HTML document title, as of 2020/06/05'
 [top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'HTML top-level browsing context, as of 2020/06/05'

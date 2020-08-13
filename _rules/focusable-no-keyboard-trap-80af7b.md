@@ -10,6 +10,12 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-text:cc5: # Non-interference due to mapping to 2.1.2
+    title: WCAG Non-Interference
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
   wcag-technique:G21: # Ensuring that users are not trapped in content
     forConformance: false
     failed: not satisfied

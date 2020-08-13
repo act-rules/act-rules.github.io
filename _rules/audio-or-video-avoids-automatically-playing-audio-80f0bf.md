@@ -10,6 +10,12 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-text:cc5: # Non-interference due to mapping to 1.4.2
+    title: WCAG Non-Interference
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
   wcag-technique:G60: # Playing a sound that turns off automatically within three seconds
     forConformance: false
     failed: not satisfied

@@ -67,7 +67,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This page has `lang` attribute value of `en` (English), which matches the [default language of the page][default page language]. The default language is English because all words are English.
+This page has a `lang` [attribute value](#attribute-value) of `en` (English), which matches the [default language of the page][default page language]. The default language is English because all words are English.
 
 ```html
 <html lang="en">
@@ -124,7 +124,7 @@ This page has `lang` attribute value of `nl` (Dutch), which matches the [default
 
 #### Passed Example 4
 
-This page has `lang` attribute value of `en` (English), which matches the [default language of the page][default page language]. The default language is English because the accessible texts are English, and all other text is in a `p` element with a `lang` attribute value of `en`.
+This page has `lang` attribute value of `en` (English), which matches the [default language of the page][default page language]. The default language is English because the accessible texts are English, and all other text is in a `p` element with a `lang` attribute value of `nl`.
 
 ```html
 <html lang="en">

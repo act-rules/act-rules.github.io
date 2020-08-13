@@ -25,7 +25,7 @@ acknowledgments:
 
 ## Applicability
 
-This rules applies to any HTML element with a `lang` [attribute value][] that is not empty (`""`) and for which all the following is true:
+This rules applies to any HTML element with a `lang` [attribute value][] that is not empty (`""`) and for which the following are all true:
 
 - the element is a [descendant][] in the [flat tree][] of a `body` element; and
 - the element has a [node document][] with a [content type][] of `text/html`.
@@ -79,7 +79,7 @@ The `lang` attribute has a value that is not empty (`""`) and has a valid langua
 <html>
 	<body>
 		<blockquote lang="fr-CH">
-			They wandered into a strange Tiki bar on the edge of the small beach town.
+			Ils se sont promenés dans un étrange bar Tiki en bordure de la petite ville balnéaire.
 		</blockquote>
 	</body>
 </html>

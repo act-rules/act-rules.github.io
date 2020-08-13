@@ -1,6 +1,13 @@
 ---
-title: Instrument
-key: instrument
+title: Instrument to achieve an objective
+key: instrument-to-achieve-an-objective
+unambiguous: true
+objective: false
 ---
 
-Placeholder for https://github.com/act-rules/act-rules.github.io/blob/54c6814c49cd4ef631444de8a63521f56f6f03e8/pages/glossary/instrument.md
+An [HTML element][] that when [activated][] allows an end-user to achieve an objective.
+
+**Note**: Any rule that uses this definition must provide an unambiguous description of the objective the instrument is used to achieve.
+
+[activated]: https://html.spec.whatwg.org/#activation
+[html element]: https://html.spec.whatwg.org/multipage/dom.html#htmlelement

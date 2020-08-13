@@ -356,7 +356,7 @@ This [document][] is not an [HTML web page][].
 [accessible name]: #accessible-name 'Definition of accessible name'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[instrument]: #instrument 'Definition of instrument'
+[instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of landmark roles'
 [tech scr28]: https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR28 'Technique SCR28: Using an expandable and collapsible menu to bypass block of content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1: Bypass blocks'
@@ -365,5 +365,3 @@ This [document][] is not an [HTML web page][].
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components 'Definition of user interface component'
 [visible]: #visible 'Definition of visible'
 [html web page]: #web-page-html 'Definition of web page (HTML)'
-
-[instrument]: Voluntarily failing tests. Will be same as https://github.com/act-rules/act-rules.github.io/blob/268480e9f7ecb3491f8ec03f7952389690e7fad4/pages/glossary/instrument.md

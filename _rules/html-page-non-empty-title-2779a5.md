@@ -1,9 +1,9 @@
 ---
 id: 2779a5
-name: HTML page has title
+name: HTML page has non-empty title
 rule_type: atomic
 description: |
-  This rule checks that a non-embedded HTML page has a title.
+  This rule checks that a non-embedded HTML page has a non-empty title.
 accessibility_requirements:
   wcag20:2.4.2: # Page Titled (A)
     forConformance: true
@@ -155,7 +155,7 @@ This page has a `title` element that is empty.
 
 #### Failed Example 3
 
-This page does not have a `title` element for the whole page.
+This page does not have a `title` element. The `title` element in the content of the `iframe` does not function as the title for the entire page.
 
 ```html
 <html>

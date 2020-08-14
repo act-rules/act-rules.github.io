@@ -23,10 +23,10 @@
 - URI
 - UA/AT
 - WCAG
-- WCAG2 
+- WCAG2
 - WCAG21
-- CSS3 
-- UA 
+- CSS3
+- UA
 - UI
 - api # lowercase needed in reference list
 - APIs
@@ -81,9 +81,11 @@
 - 14pt
 - 18pt
 - Helvetica
+- DeviceOrientation
 - fieldsets
 - ascii # lowercase needed in reference list
 - CMS
+- dropdown
 
 # Parts of url
 - http
@@ -166,6 +168,7 @@
 - clientWidth
 - innerHeight
 - innerWidth
+- innerText
 - scrollbars
 - documentElement
 - rects
@@ -186,6 +189,7 @@
 - untestable
 - scrollable
 - scrollbars
+- subconditions
 
 # Parts of Unicode
 - 000A

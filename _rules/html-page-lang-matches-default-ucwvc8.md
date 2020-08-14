@@ -92,7 +92,7 @@ This page has a `lang` [attribute value][] of `en` (English), which matches the 
 
 #### Passed Example 2
 
-This page has `lang` attribute value of `en` (English), which matches the [default language of the page][default page language]. The default language is English because all but a few words are English.
+This page has a `lang` attribute value of `en` (English), which matches the [default language of the page][default page language]. The default language is English because all but a few words are English.
 
 ```html
 <html lang="en">
@@ -128,7 +128,7 @@ This page has `lang` attribute value of `nl` (Dutch), which matches the [default
 
 #### Passed Example 4
 
-This page has `lang` attribute value of `en` (English), which matches the [default language of the page][default page language]. The default language is English because the accessible texts are English, and all other text is in a `p` element with a `lang` attribute value of `nl`.
+This page has a `lang` attribute value of `en` (English), which matches the [default language of the page][default page language]. The default language is English because the accessible texts are English, and all other text is in a `p` element with a `lang` attribute value of `nl`.
 
 ```html
 <html lang="en">
@@ -169,7 +169,7 @@ This page has `lang` attribute value of `da` (Danish), which does not matches th
 
 #### Failed Example 2
 
-This page has `lang` attribute value of `nl` (Dutch), which does not matches the [default language of the page][default page language]. The default language is English because all but a few words are English.
+This page has a `lang` attribute value of `nl` (Dutch), which does not matches the [default language of the page][default page language]. The default language is English because all but a few words are English.
 
 ```html
 <html lang="nl">
@@ -205,7 +205,7 @@ This page has `lang` attribute value of `en` (English), which does not matches t
 
 #### Failed Example 4
 
-This page has `lang` attribute value of `nl` (Dutch), which does not match the [default language of the page][default page language]. The default language is English because the accessible texts are English, and all other text is in a `p` element with a `lang` attribute value of `nl`.
+This page has a `lang` attribute value of `nl` (Dutch), which does not match the [default language of the page][default page language]. The default language is English because the accessible texts are English, and all other text is in a `p` element with a `lang` attribute value of `nl`.
 
 ```html
 <html lang="nl">
@@ -223,7 +223,7 @@ This page has `lang` attribute value of `nl` (Dutch), which does not match the [
 
 #### Failed Example 5
 
-This page has `lang` attribute value of `nl` (Dutch), which does not match the [default language of the page][default page language]. The default language is English because the accessible name of the `img` element is English. The `lang` attribute on the `p` element is effectively ignored.
+This page has a `lang` attribute value of `nl` (Dutch), which does not match the [default language of the page][default page language]. The default language is English because the accessible name of the `img` element is English. The `lang` attribute on the `p` element is effectively ignored.
 
 ```html
 <html lang="nl">

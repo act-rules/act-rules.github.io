@@ -169,7 +169,7 @@ This page has `lang` attribute value of `da` (Danish), which does not matches th
 
 #### Failed Example 2
 
-This page has a `lang` attribute value of `nl` (Dutch), which does not matches the [default language of the page][default page language]. The default language is English because all but a few words are English.
+This page has a `lang` attribute value of `nl` (Dutch), which does not match the [default language of the page][default page language]. The default language is English because all but a few words are English.
 
 ```html
 <html lang="nl">

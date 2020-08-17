@@ -11,9 +11,11 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
   - DOM Tree
   - CSS Styling
-acknowledgements:
+  - Language
+acknowledgments:
   authors:
     - Dagfinn Rømen
     - Geir Sindre Fossøy
@@ -24,21 +26,21 @@ acknowledgements:
 
 This rule applies to any element with the [semantic role][] of heading that is either [visible][] or [included in the accessibility tree][].
 
-**Note**: This rule only applies to elements with the [semantic role][] of heading. Thus, it is a partial check for WCAG 2.0 success criterion 2.4.6, which applies to all headings. "Heading" is used in its general sense and includes headlines and other ways to add a heading to different types of content. This includes elements that are not marked up as headings in the code, but still act visually as headings, e.g. by larger and/or bolder text.
+**Note:** This rule only applies to elements with the [semantic role][] of heading. Thus, it is a partial check for WCAG 2.0 success criterion 2.4.6, which applies to all headings. "Heading" is used in its general sense and includes headlines and other ways to add a heading to different types of content. This includes elements that are not marked up as headings in the code, but still act visually as headings, e.g. by larger and/or bolder text.
 
 ## Expectation
 
 Each target element describes the topic or purpose of its [section of the content][].
 
-**Note**: Headings do not need to be lengthy. A word, or even a single character, may suffice.
+**Note:** Headings do not need to be lengthy. A word, or even a single character, may suffice.
 
 ## Assumptions
 
-_There are currently no assumptions._
+This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `heading` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 
@@ -46,7 +48,7 @@ _There are no major accessibility support issues known for this rule._
 - [G130: Providing descriptive headings](https://www.w3.org/WAI/WCAG21/Techniques/general/G130)
 - [H42: Using h1-h6 to identify headings](https://www.w3.org/WAI/WCAG21/Techniques/html/H42)
 - [ARIA12: Using role=heading to identify headings](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA12)
-- [HTML 5.2 Standard - Heading content](https://www.w3.org/TR/html52/dom.html#heading-content)
+- [HTML Specification - Heading content](https://html.spec.whatwg.org/#heading-content)
 
 ## Test Cases
 
@@ -57,8 +59,10 @@ _There are no major accessibility support issues known for this rule._
 Heading marked up with `h1` element that describes the topic or purpose of its [section of the content][].
 
 ```html
-<h1 class="target">Opening Hours</h1>
-<p>We are open Monday through Friday from 10 to 16</p>
+<html lang="en">
+	<h1>Opening Hours</h1>
+	<p>We are open Monday through Friday from 10 to 16</p>
+</html>
 ```
 
 #### Passed Example 2
@@ -66,8 +70,10 @@ Heading marked up with `h1` element that describes the topic or purpose of its [
 Heading marked up with `role="heading"` that describes the topic or purpose of its [section of the content][].
 
 ```html
-<span role="heading" aria-level="1">Opening Hours</span>
-<p>We are open Monday through Friday from 10 to 16</p>
+<html lang="en">
+	<span role="heading" aria-level="1">Opening Hours</span>
+	<p>We are open Monday through Friday from 10 to 16</p>
+</html>
 ```
 
 #### Passed Example 3
@@ -75,8 +81,10 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 Heading marked up with `role="heading"` that describes the topic or purpose of its [section of the content][], with a default aria-level assigned.
 
 ```html
-<span role="heading">Opening Hours</span>
-<p>We are open Monday through Friday from 10 to 16</p>
+<html lang="en">
+	<span role="heading">Opening Hours</span>
+	<p>We are open Monday through Friday from 10 to 16</p>
+</html>
 ```
 
 #### Passed Example 4
@@ -84,10 +92,12 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 Heading marked up with `h1` element with an image that describes the topic or purpose of its [section of the content][].
 
 ```html
-<h1 class="target">
-	<img scr="/test-assets/descriptive-heading-b49b2e/opening_hours_icon.png" alt="Opening hours" />
-</h1>
-<p>We are open Monday through Friday from 10 to 16</p>
+<html lang="en">
+	<h1>
+		<img scr="/test-assets/descriptive-heading-b49b2e/opening_hours_icon.png" alt="Opening hours" />
+	</h1>
+	<p>We are open Monday through Friday from 10 to 16</p>
+</html>
 ```
 
 #### Passed Example 5
@@ -95,17 +105,19 @@ Heading marked up with `h1` element with an image that describes the topic or pu
 Heading marked up with `h1` element that is a single character that describes the topic or purpose of its [section of the content][].
 
 ```html
-<h1 class="target">A</h1>
-<dl>
-	<dt>airplane</dt>
-	<dd>
-		a powered flying vehicle with fixed wings and a weight greater than that of the air it displaces.
-	</dd>
-	<dt>apple</dt>
-	<dd>
-		the round fruit of a tree of the rose family, which typically has thin green or red skin and crisp flesh.
-	</dd>
-</dl>
+<html lang="en">
+	<h1>A</h1>
+	<dl>
+		<dt>airplane</dt>
+		<dd>
+			a powered flying vehicle with fixed wings and a weight greater than that of the air it displaces.
+		</dd>
+		<dt>apple</dt>
+		<dd>
+			the round fruit of a tree of the rose family, which typically has thin green or red skin and crisp flesh.
+		</dd>
+	</dl>
+</html>
 ```
 
 #### Passed Example 6
@@ -113,10 +125,12 @@ Heading marked up with `h1` element that is a single character that describes th
 Heading marked up with `role="heading"` that describes the topic or purpose of its [section of the content][]. The heading is positioned off screen and is [included in the accessibility tree][].
 
 ```html
-<span role="heading" aria-level="1" style="position: absolute; top: -9999px; left: -9999px;">Opening Hours</span>
-<p style="position: absolute; top: -9999px; left: -9999px;">
-	We are open Monday through Friday from 10 to 16
-</p>
+<html lang="en">
+	<span role="heading" aria-level="1" style="position: absolute; top: -9999px; left: -9999px;">Opening Hours</span>
+	<p style="position: absolute; top: -9999px; left: -9999px;">
+		We are open Monday through Friday from 10 to 16
+	</p>
+</html>
 ```
 
 #### Passed Example 7
@@ -124,8 +138,10 @@ Heading marked up with `role="heading"` that describes the topic or purpose of i
 Heading marked up with `h1` element that describes the topic or purpose of its [section of the content][]. The heading is [visible][], but is not [included in the accessibility tree][].
 
 ```html
-<h1 class="target" aria-hidden="true">Opening Hours</h1>
-<p>We are open Monday through Friday from 10 to 16</p>
+<html lang="en">
+	<h1 aria-hidden="true">Opening Hours</h1>
+	<p>We are open Monday through Friday from 10 to 16</p>
+</html>
 ```
 
 ### Failed
@@ -135,8 +151,10 @@ Heading marked up with `h1` element that describes the topic or purpose of its [
 Heading marked up with `h1` element that does not describe the topic or purpose of its [section of the content][].
 
 ```html
-<h1 class="target">Weather</h1>
-<p>We are open Monday through Friday from 10 to 16</p>
+<html lang="en">
+	<h1>Weather</h1>
+	<p>We are open Monday through Friday from 10 to 16</p>
+</html>
 ```
 
 #### Failed Example 2
@@ -144,8 +162,10 @@ Heading marked up with `h1` element that does not describe the topic or purpose 
 Heading marked up with `role="heading"` that does not describe the topic or purpose of its [section of the content][].
 
 ```html
-<span role="heading" aria-level="1">Weather</span>
-<p>We are open Monday through Friday from 10 to 16</p>
+<html lang="en">
+	<span role="heading" aria-level="1">Weather</span>
+	<p>We are open Monday through Friday from 10 to 16</p>
+</html>
 ```
 
 #### Failed Example 3
@@ -153,10 +173,12 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 Heading marked up with `role="heading"` that does not describe the topic or purpose of its [section of the content][]. The heading is positioned off screen and is [included in the accessibility tree][].
 
 ```html
-<span role="heading" style="position: absolute; top: -9999px; left: -9999px;">Weather</span>
-<p style="position: absolute; top: -9999px; left: -9999px;">
-	We are open Monday through Friday from 10 to 16
-</p>
+<html lang="en">
+	<span role="heading" style="position: absolute; top: -9999px; left: -9999px;">Weather</span>
+	<p style="position: absolute; top: -9999px; left: -9999px;">
+		We are open Monday through Friday from 10 to 16
+	</p>
+</html>
 ```
 
 #### Failed Example 4
@@ -164,8 +186,10 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 Heading marked up with `h1` element that does not describe the topic or purpose of its [section of the content][]. The heading is [visible][], but is not [included in the accessibility tree][].
 
 ```html
-<h1 class="target" aria-hidden="true">Weather</h1>
-<p>We are open Monday through Friday from 10 to 16</p>
+<html lang="en">
+	<h1 aria-hidden="true">Weather</h1>
+	<p>We are open Monday through Friday from 10 to 16</p>
+</html>
 ```
 
 ### Inapplicable
@@ -175,7 +199,9 @@ Heading marked up with `h1` element that does not describe the topic or purpose 
 No heading.
 
 ```html
-<p>We are open Monday through Friday from 10 to 16</p>
+<html lang="en">
+	<p>We are open Monday through Friday from 10 to 16</p>
+</html>
 ```
 
 #### Inapplicable Example 2
@@ -183,8 +209,10 @@ No heading.
 Heading that is neither [visible][] to users, nor [included in the accessibility tree][].
 
 ```html
-<h1 style="display: none;">Opening hours</h1>
-<p>We are open Monday through Friday from 10 to 16</p>
+<html lang="en">
+	<h1 style="display: none;">Opening hours</h1>
+	<p>We are open Monday through Friday from 10 to 16</p>
+</html>
 ```
 
 #### Inapplicable Example 3
@@ -192,7 +220,9 @@ Heading that is neither [visible][] to users, nor [included in the accessibility
 Empty heading marked up with `h1` is not [visible][].
 
 ```html
-<h1></h1>
+<html lang="en">
+	<h1></h1>
+</html>
 ```
 
 #### Inapplicable Example 4
@@ -200,10 +230,13 @@ Empty heading marked up with `h1` is not [visible][].
 Empty heading marked up with `role="heading"` is not [visible][].
 
 ```html
-<p role="heading" aria-level="1"></p>
+<html lang="en">
+	<p role="heading" aria-level="1"></p>
+</html>
 ```
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [section of the content]: #section-of-content 'Definition of section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'

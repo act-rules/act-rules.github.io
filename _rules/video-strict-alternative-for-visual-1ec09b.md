@@ -10,11 +10,31 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:G8: # Providing a movie with extended audio descriptions
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:G78: # Providing a second, user-selectable, audio track that includes audio descriptions
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:G173: # Providing a version of a movie with audio descriptions
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:H96: # Using the track element to provide audio descriptions
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_rules:
   - 1ea59c
   - ab4d13
   - f196ce
-acknowledgements:
+acknowledgments:
   authors:
     - Wilco Fiers
     - Brian Bors
@@ -34,7 +54,8 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 
 ## Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
@@ -58,10 +79,12 @@ See [Video element description track: accessibility support](https://act-rules.g
 A video element with a voiceover that describes the visual information.
 
 ```html
-<video controls>
-	<source src="/test-assets/rabbit-video/video-with-voiceover.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/video-with-voiceover.webm" type="video/webm" />
-</video>
+<html lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/video-with-voiceover.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/video-with-voiceover.webm" type="video/webm" />
+	</video>
+</html>
 ```
 
 #### Passed Example 2
@@ -69,11 +92,13 @@ A video element with a voiceover that describes the visual information.
 A video element with a track element that contains descriptions.
 
 ```html
-<video controls>
-	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
-	<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
-</video>
+<html lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+		<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
+	</video>
+</html>
 ```
 
 #### Passed Example 3
@@ -81,12 +106,14 @@ A video element with a track element that contains descriptions.
 A video element that describes some of the text on the same page. The text on the page labels the video as an alternative.
 
 ```html
-<p>
-	Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the keyboard
-	to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility. Keyboard
-	compatibility is described in WCAG. See the video below to watch the same information again in video form.
-</p>
-<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+<html lang="en">
+	<p>
+		Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the
+		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
+		Keyboard compatibility is described in WCAG. See the video below to watch the same information again in video form.
+	</p>
+	<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
+</html>
 ```
 
 ### Failed
@@ -96,10 +123,12 @@ A video element that describes some of the text on the same page. The text on th
 A video element with an incorrect audio description.
 
 ```html
-<video controls>
-	<source src="/test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm" />
-</video>
+<html lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm" />
+	</video>
+</html>
 ```
 
 #### Failed Example 2
@@ -107,11 +136,13 @@ A video element with an incorrect audio description.
 A video element with a track element that contains incorrect descriptions.
 
 ```html
-<video controls>
-	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
-	<track kind="descriptions" src="/test-assets/rabbit-video/incorrect-descriptions.vtt" />
-</video>
+<html lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+		<track kind="descriptions" src="/test-assets/rabbit-video/incorrect-descriptions.vtt" />
+	</video>
+</html>
 ```
 
 #### Failed Example 3
@@ -119,11 +150,13 @@ A video element with a track element that contains incorrect descriptions.
 A video element with a link to a text transcript.
 
 ```html
-<video controls>
-	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
-</video>
-<a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
+<html lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+	</video>
+	<a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
+</html>
 ```
 
 ### Inapplicable
@@ -133,10 +166,12 @@ A video element with a link to a text transcript.
 A video element without audio.
 
 ```html
-<video controls>
-	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-</video>
+<html lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
+	</video>
+</html>
 ```
 
 #### Inapplicable Example 2
@@ -144,10 +179,12 @@ A video element without audio.
 A video element that is not [visible][].
 
 ```html
-<video controls style="display: none;">
-	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
-</video>
+<html lang="en">
+	<video controls style="display: none;">
+		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+	</video>
+</html>
 ```
 
 [visible]: #visible 'Definition of visible'

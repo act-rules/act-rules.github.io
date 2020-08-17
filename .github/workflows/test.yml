@@ -1,6 +1,9 @@
+# This workflow runs:
+# - tests, when;
+#   - A push lands on develop branch
+#   - A pull request is opened to develop branch
 name: test
 
-# Run on PR's targetting `develop` branch
 on:
   push:
     branches:
@@ -13,11 +16,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-      - name: npm install & build
-        run: |
+      - run: |
           npm install
-          npm run test
-        env:
-          CI: true
+          npm test

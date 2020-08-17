@@ -1,6 +1,8 @@
 ---
 title: Visual Reference Words
 key: visual-reference-words
+unambiguous: true
+objective: false
 ---
 
 Any word in a text node that is included in the translated version of the following lists, where the language of the translation is the programmatically determinable language of the text node. Some words can be translated in multiple ways or have plural forms. In such cases each translation or form must be included. Some words can be spelled in multiple ways (For example: sometimes the word is capitalized and sometimes it isn't). In such cases each spelling must be included.

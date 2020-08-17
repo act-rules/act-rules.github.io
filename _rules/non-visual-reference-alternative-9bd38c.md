@@ -23,7 +23,7 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - Language
-acknowledgements:
+acknowledgments:
   authors:
     - Brian Bors
     - Daniël Strik
@@ -219,27 +219,31 @@ This paragraph holds the visual reference word "circle" but in this case it is n
 ```html
 <p>
 	This circle is nice.
-	<span style="height: 25px;
+	<span
+		style="height: 25px;
 		     width: 25px;
 		     background-color: #bbb;
 		     border-radius: 50%;
-		     display: inline-block;">
+		     display: inline-block;"
+	>
 	</span>
 </p>
 ```
 
 #### Passed Example 11
 
-This parapgraph holds the visual reference word "circle" but in this case it is no instruction so it passes. Note that this example is not inapplicable because, despite the fact that the text is not visible, it is included in the accessibility tree.
+This paragraph holds the visual reference word "circle" but in this case it is no instruction so it passes. Note that this example is not inapplicable because, despite the fact that the text is not visible, it is included in the accessibility tree.
 
 ```html
 <p style="position:absolute; top:-9999em">
 	This circle is nice.
-	<span style="height: 25px;
+	<span
+		style="height: 25px;
 		     width: 25px;
 		     background-color: #bbb;
 		     border-radius: 50%;
-		     display: inline-block;">
+		     display: inline-block;"
+	>
 	</span>
 </p>
 ```
@@ -251,18 +255,20 @@ This paragraph holds the visual reference word "circle" but in this case it is n
 ```html
 <p aria-hidden="true">
 	This circle is nice.
-	<span style="height: 25px;
+	<span
+		style="height: 25px;
 		     width: 25px;
 		     background-color: #bbb;
 		     border-radius: 50%;
-		     display: inline-block;">
+		     display: inline-block;"
+	>
 	</span>
 </p>
 ```
 
 #### Passed Example 13
 
-This parapgraph holds the visual reference word "right". The user is told to find the navigation on the right and the navigation is also correctly identified by a `nav` element.
+This paragraph holds the visual reference word "right". The user is told to find the navigation on the right and the navigation is also correctly identified by a `nav` element.
 
 ```html
 <head>
@@ -362,7 +368,7 @@ This paragraph holds the visual reference word "right". The user is told to find
 
 #### Failed Example 3
 
-This paragraph holds the visual reference word "triangle" and no other indication is present so the rule fails. The fact that the triangle menu is on a different page of the same website does not restrict the rule. 
+This paragraph holds the visual reference word "triangle" and no other indication is present so the rule fails. The fact that the triangle menu is on a different page of the same website does not restrict the rule.
 
 ```html
 <body>

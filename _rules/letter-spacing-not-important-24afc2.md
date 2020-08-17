@@ -49,7 +49,7 @@ While some assistive technologies are able to set [user origin][] styles, others
 
 #### Passed Example 1
 
-This `div` element has a `letter-spacing` of `0.12em` which is equal to the recommended minimum, given the specified font size is 16 pixels.
+This `div` element has a `letter-spacing` of `0.12em` which is equal to the recommended minimum given the specified font size is 16 pixels.
 
 ```html
 <html>
@@ -67,11 +67,31 @@ This `div` element has a `letter-spacing` of `0.12em` which is equal to the reco
 </html>
 ```
 
+#### Passed Example 2
+
+This `p` element has a `letter-spacing` of `24px` specified via the style attribute, which is above to the recommended minimum given the specified font size is 16 pixels.
+
+```html
+<html>
+	<style>
+		body {
+			font-size: 16px;
+		}
+	</style>
+
+	<body>
+		<p style="letter-spacing: 24px;">
+			The toy brought back fond memories of being lost in the rain forest.
+		</p>
+	</body>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1
 
-This `div` element has a `letter-spacing` of `1.5px !important` (equals `0.09375em`) which is below to the recommended minimum, given the specified font size is 16 pixels.
+This `div` element has a `letter-spacing` of `1.5px !important` (equals `0.09375em`) which is below to the recommended minimum given the specified font size is 16 pixels.
 
 ```html
 <html>
@@ -125,26 +145,6 @@ This `body` element does not have a `style` attribute specified.
 
 	<body>
 		The toy brought back fond memories of being lost in the rain forest.
-	</body>
-</html>
-```
-
-#### Inapplicable Example 4
-
-This `p` element has a [letter-spacing][] of `24px` specified via the style attribute, but does not have the [important flag][].
-
-```html
-<html>
-	<style>
-		body {
-			font-size: 16px;
-		}
-	</style>
-
-	<body>
-		<p style="letter-spacing: 24px;">
-			The toy brought back fond memories of being lost in the rain forest.
-		</p>
 	</body>
 </html>
 ```

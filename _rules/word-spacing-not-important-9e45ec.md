@@ -67,6 +67,26 @@ This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12e
 </html>
 ```
 
+#### Passed Example 2
+
+This `p` element has a [word-spacing][] of `12px` specified via the style attribute, which is above the recommended minimum given the specified font size is 16 pixels.
+
+```html
+<html>
+	<style>
+		body {
+			font-size: 16px;
+		}
+	</style>
+
+	<body>
+		<p style="word-spacing: 12px;">
+			The toy brought back fond memories of being lost in the rain forest.
+		</p>
+	</body>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -124,26 +144,6 @@ This `body` element does not have a `style` attribute specified.
 	</style>
 	<body>
 		The toy brought back fond memories of being lost in the rain forest.
-	</body>
-</html>
-```
-
-#### Inapplicable Example 4
-
-This `p` element has a [word-spacing][] of `12px` specified via the style attribute, but does not have the [important flag][].
-
-```html
-<html>
-	<style>
-		body {
-			font-size: 16px;
-		}
-	</style>
-
-	<body>
-		<p style="word-spacing: 12px;">
-			The toy brought back fond memories of being lost in the rain forest.
-		</p>
 	</body>
 </html>
 ```

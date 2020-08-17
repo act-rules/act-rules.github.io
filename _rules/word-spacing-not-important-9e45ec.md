@@ -49,13 +49,13 @@ While some assistive technologies are able to set [user origin][] styles, others
 
 #### Passed Example 1
 
-This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12em`) which is equal to the recommended minimum, given the specified font size is 16 pixels.
+This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12em`) which is equal to the recommended minimum, given the specified font size is `1em`.
 
 ```html
 <html>
 	<style>
 		body {
-			font-size: 16px;
+			font-size: 1em;
 		}
 	</style>
 
@@ -69,13 +69,13 @@ This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12e
 
 #### Passed Example 2
 
-This `p` element has a [word-spacing][] of `12px` specified via the style attribute, which is above the recommended minimum given the specified font size is 16 pixels.
+This `p` element has a [word-spacing][] of `12px` specified via the style attribute, which is above the recommended minimum given the specified font size is `1em`.
 
 ```html
 <html>
 	<style>
 		body {
-			font-size: 16px;
+			font-size: 1em;
 		}
 	</style>
 

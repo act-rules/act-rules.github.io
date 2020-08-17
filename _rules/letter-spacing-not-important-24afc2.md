@@ -49,13 +49,13 @@ While some assistive technologies are able to set [user origin][] styles, others
 
 #### Passed Example 1
 
-This `div` element has a `letter-spacing` of `0.12em` which is equal to the recommended minimum given the specified font size is 16 pixels.
+This `div` element has a `letter-spacing` of `0.12em` which is equal to the recommended minimum given the specified font size is `1em`.
 
 ```html
 <html>
 	<style>
 		body {
-			font-size: 16px;
+			font-size: 1em;
 		}
 	</style>
 
@@ -91,13 +91,13 @@ This `p` element has a `letter-spacing` of `24px` specified via the style attrib
 
 #### Failed Example 1
 
-This `div` element has a `letter-spacing` of `1.5px !important` (equals `0.09375em`) which is below to the recommended minimum given the specified font size is 16 pixels.
+This `div` element has a `letter-spacing` of `1.5px !important` (equals `0.09375em`) which is below to the recommended minimum given the specified font size is `1em`.
 
 ```html
 <html>
 	<style>
 		body {
-			font-size: 16px;
+			font-size: 1em;
 		}
 	</style>
 
@@ -139,7 +139,7 @@ This `body` element does not have a `style` attribute specified.
 <html>
 	<style>
 		body {
-			letter-spacing: 50px;
+			letter-spacing: 25em;
 		}
 	</style>
 

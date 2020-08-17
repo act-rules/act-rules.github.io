@@ -49,18 +49,18 @@ While some assistive technologies are able to set [user origin][] styles, others
 
 #### Passed Example 1
 
-This `p` element has a `line-height` of `32px` (equals `2em` ) which is above the recommended metric, given the specified font size is 16 pixels.
+This `p` element has a `line-height` of `32px` (equals `2em` ) which is above the recommended metric, given the specified font size is `1em`.
 
 ```html
 <html>
 	<style>
 		body {
-			font-size: 16px;
+			font-size: 1em;
 		}
 	</style>
 
 	<body>
-		<p style="line-height: 32px; !important">
+		<p style="line-height: 2em; !important">
 			The toy brought back fond memories of being lost in the rain forest.
 		</p>
 	</body>
@@ -91,18 +91,18 @@ This `p` element has a [line-height][] of `24px` specified via the style attribu
 
 #### Failed Example 1
 
-This `p` element has a `line-height` of `10px !important` (equals `0.625em` ) which is below the recommended minimum, given the specified font size of the body is 16 pixels.
+This `p` element has a `line-height` of `10px !important` (equals `0.625em` ) which is below the recommended minimum, given the specified font size of the body is `1em`.
 
 ```html
 <html>
 	<style>
 		body {
-			font-size: 16px;
+			font-size: 1em;
 		}
 	</style>
 
 	<body>
-		<p style="line-height: 30px !important">
+		<p style="line-height: 1.875em !important">
 			The toy brought back fond memories of being lost in the rain forest.
 		</p>
 	</body>
@@ -139,7 +139,7 @@ This `body` element does not have a `style` attribute specified.
 <html>
 	<style>
 		body {
-			line-height: 50px;
+			line-height: 30em;
 		}
 	</style>
 

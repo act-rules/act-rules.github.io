@@ -36,7 +36,9 @@ This rule applies to any element for which all the following is true:
 
 ## Expectation
 
-The complete [visible text content][] of the target element either matches or is contained within its [accessible name][]. Leading and trailing [whitespace][] and difference in case sensitivity should be ignored.
+The complete [visible text content][] of the target element either matches or is contained within its [accessible name][].
+
+**Note:** Leading and trailing [whitespace][] and difference in case sensitivity should be ignored.
 
 ## Assumptions
 

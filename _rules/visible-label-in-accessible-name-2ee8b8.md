@@ -38,9 +38,7 @@ This rule applies to any element that has:
 
 ## Expectation
 
-The complete [visible text content][] of the target element either matches or is contained within its [accessible name][].
-
-**Note:** Leading and trailing [whitespace][] and difference in case sensitivity should be ignored.
+All [text nodes][] in the [visible text content][] of each target element matches, or is contained within the [accessible name][] of the target element, except for [text nodes][] contains [non-text content][]. Leading and trailing [whitespace][] and difference in case sensitivity should be ignored.
 
 ## Assumptions
 
@@ -81,6 +79,14 @@ This button has [visible][] text that is included in the [accessible name][].
 
 ```html
 <button aria-label="Next Page in the list">Next Page</button>
+```
+
+#### Passed Example 4
+
+This button has [visible][] text that does not need to be included in the [accessible name][], because the "x" text node is [non-text content][].
+
+```html
+<button aria-label="close">X</button>
 ```
 
 ### Failed
@@ -146,16 +152,8 @@ This link has no [visible text content][].
 </a>
 ```
 
-#### Inapplicable Example 5
-
-The content of this link is [non-text content][].
-
-```html
-<button aria-label="close">X</button>
-```
-
 [accessible name]: #accessible-name 'Definition of accessible name'
-[non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content 'Definition of Non-text content'
+[non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content 'WCAG Definition of Non-text content'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic role'
 [supports name from content]: https://www.w3.org/TR/wai-aria-1.1/#namefromcontent 'Definition of Supports name from contents'

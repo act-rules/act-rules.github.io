@@ -38,7 +38,7 @@ This rule applies to any element that has:
 
 ## Expectation
 
-All [text nodes][] in the [visible text content][] of each target element matches, or is contained within the [accessible name][] of the target element, except for [text nodes][] contains [non-text content][]. Leading and trailing [whitespace][] and difference in case sensitivity should be ignored.
+All [text nodes][] in the [visible text content][] of each target element matches, or is contained within the [accessible name][] of the target element, except for characters used to express [non-text content][]. Leading and trailing [whitespace][] and difference in case sensitivity should be ignored.
 
 ## Assumptions
 
@@ -87,6 +87,20 @@ This button has [visible][] text that does not need to be included in the [acces
 
 ```html
 <button aria-label="close">X</button>
+```
+
+#### Passed Example 5
+
+This `button` element has the text "search" rendered as an hourglass icon by the font. Because the text is rendered as [non-text content][], the text does not need to be included in the [accessible name][].
+
+```html
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+	button {
+		font-family: 'Material Icons';
+	}
+</style>
+<button aria-label="Find">search</button>
 ```
 
 ### Failed
@@ -161,3 +175,4 @@ This link has no [visible text content][].
 [visible text content]: #visible-text-content 'Definition of Visible text content'
 [whitespace]: #whitespace 'Definition of Whitespace'
 [widget roles]: https://www.w3.org/TR/wai-aria-1.1/#widget_roles 'Definition of Widget role'
+[text nodes]: https://dom.spec.whatwg.org/#text 'DOM text, 2020/08/18'

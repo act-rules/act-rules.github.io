@@ -108,7 +108,7 @@ This `input` element has an [accessible name][] because of its `placeholder` att
 
 ```html
 <input placeholder="Your search query" />
-<button type="submit">search</button
+<button type="submit">search</button>
 ```
 
 #### Passed Example 6

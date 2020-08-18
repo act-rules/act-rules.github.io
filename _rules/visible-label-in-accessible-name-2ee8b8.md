@@ -28,19 +28,15 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any element that has:
+This rule applies to any element for which all the following is true:
 
-- a [semantic role][] that is a [widget][widget roles] that [supports name from content][], and
-- [visible text content][], and
-- an `aria-label` or `aria-labelledby` attribute.
-
-**Note:** [widget roles][] that [support name from content][supports name from content] are: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
+- The element has a [semantic role][] that is a [widget][widget roles] that [supports name from content][]; and
+- The element has [visible text content][]; and
+- The element has an `aria-label` or `aria-labelledby` attribute.
 
 ## Expectation
 
-The complete [visible text content][] of the target element either matches or is contained within its [accessible name][].
-
-**Note:** Leading and trailing [whitespace][] and difference in case sensitivity should be ignored.
+The complete [visible text content][] of the target element either matches or is contained within its [accessible name][]. Leading and trailing [whitespace][] and difference in case sensitivity should be ignored.
 
 ## Assumptions
 
@@ -51,6 +47,8 @@ _There are currently no assumptions_
 Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
+
+This rule applies to elements with a [widget roles][] that [support name from content][supports name from content]. This includes the following: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
 
 - [Understanding Success Criterion 2.5.3: Label in Name](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)
 - [G208: Including the text of the visible label as part of the accessible name](https://www.w3.org/WAI/WCAG21/Techniques/general/G208)

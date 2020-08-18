@@ -39,7 +39,7 @@ This rule applies to any [text node][] that is either [visible][] or [included i
 For each test target that includes at least one of the [visual reference words][], one of the following is true:
 
 - (**no indication**) the test target does not identify any [web content][] through the use of any [visual reference words][]; or
-- (**non-visual reference**) the test target is on the same [web page][] as a [textual][wcag text] instruction that also identifies that [web content][] by a non-visual characteristic; or
+- (**non-visual reference**) the test target is on the same [web page][] as a [textual][text] instruction that also identifies that [web content][] by a non-visual characteristic; or
 - (**visible words**) each [visual reference word][] in the test target is included in the [visible text content][] of the identified content; or
 - (**accessible words**) each [visual reference word][] in the test target is included in the [accessible name][] of the identified content.
 
@@ -370,7 +370,7 @@ This paragraph includes the [visual reference word][] "right". The user is told 
 
 #### Failed Example 3
 
-This paragraph includes the [visual reference word][] "triangle" and no other indication is present so the rule fails. The fact that the triangle menu is on a different page of the same website does not restrict the rule.
+This paragraph includes the [visual reference word][] "triangle" (which is not included in the identified content) and no other indication is present so the rule fails. The fact that the triangle menu is on a different page of the same website does not restrict the rule.
 
 ```html
 <body>
@@ -383,7 +383,7 @@ This paragraph includes the [visual reference word][] "triangle" and no other in
 
 #### Failed Example 4
 
-This paragraph includes the [visual reference word][] "star" and there is no other indication. The content described is in an `iframe`.
+This paragraph includes the [visual reference word][] "star" (which is not included in the identified content) and there is no other indication. The content described is in an `iframe`.
 
 ```html
 <body>
@@ -422,6 +422,6 @@ The content is indicated with the word "box" (a visual reference word), but this
 [visible text content]: #visible-text-content 'Definition of Visible Text Content'
 [visual reference words]: #visual-reference-words 'Definition of Visual Reference Words'
 [visual reference word]: #visual-reference-words 'Definition of Visual Reference Words'
-[wcag text]: https://www.w3.org/TR/WCAG21/#dfn-text 'WCAG definition of Text'
+[text]: https://www.w3.org/TR/WCAG21/#dfn-text 'WCAG definition of Text'
 [web content]: https://www.w3.org/TR/WCAG21/#dfn-content 'WCAG definition of Web Content'
 [web page]: https://www.w3.org/TR/WCAG21/#dfn-web-page-s 'WCAG definition of Web Page'

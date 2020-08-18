@@ -32,16 +32,18 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [text node](https://dom.spec.whatwg.org/#text) that includes at least one of the [visual reference words](#visual-reference-words); and that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree).
+This rule applies to any [text node](https://dom.spec.whatwg.org/#text) that is either [visible](#visible) or [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ## Expectation
 
-Each test target that identifies any [web content](https://www.w3.org/TR/WCAG21/#dfn-content) on this website, through the use of any [visual reference words](#visual-reference-words), is on the same [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) of a [textual](https://www.w3.org/TR/WCAG21/#dfn-text) instruction that also identifies that [web content](https://www.w3.org/TR/WCAG21/#dfn-content) by a non-visual characteristic, except if:
+For each test target that includes at least one of the [visual reference words](#visual-reference-words), one of the following is true:
 
-- The target is not part of an instruction about [web content](https://www.w3.org/TR/WCAG21/#dfn-content); or
-- The visual reference word is [visible](#visible) in the identified content.
+- (**no indication**) the test target does not identify any [web content](https://www.w3.org/TR/WCAG21/#dfn-content) through the use of any [visual reference words](#visual-reference-words); or
+- (**non-visual reference**) the test target is on the same [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) as a [textual](https://www.w3.org/TR/WCAG21/#dfn-text) instruction that also identifies that [web content](https://www.w3.org/TR/WCAG21/#dfn-content) by a non-visual characteristic; or
+- (**visible words**) each [visual reference word][] in the test target is included in the [visible text content][] of the identified content; or
+- (**accessible words**) each [visual reference word][] in the test target is included in the [accessible name][] of the identified content.
 
-**Note**: The expectation doesn't mention the fact that the non-visual characteristic description should be included in the accessibility tree. This rule can be passed with alternatives that are not included in the accessibility tree. Those sorts of solutions would only fail Success Criteria 1.3.1 instead of both 1.3.3 and 1.3.1.
+**Note**: The rule doesn't require the non-visual characteristic description to be included in the accessibility tree. If the alternatives are not included in the accessibility tree, only [Success Criteria 1.3.1 Info and Relationships][sc131] would fail instead of both [Success Criterion 1.3.3 Sensory Characteristics][sc133] and [1.3.1][sc131]. Hence, the rule passes in these cases as it is not a failure of all accessibility requirements.
 
 **Note**: The identified web content does not have to be positioned on the same web page and doesn't need to be linked to from the tested web page.
 
@@ -214,7 +216,7 @@ This paragraph holds the visual reference word "star" but there is also a headin
 
 #### Passed Example 10
 
-This paragraph holds the visual reference word "circle" but in this case it is not an instruction so it passes.
+This paragraph holds the visual reference word "circle" but in this case it is not an instruction, so it passes.
 
 ```html
 <p>
@@ -232,7 +234,7 @@ This paragraph holds the visual reference word "circle" but in this case it is n
 
 #### Passed Example 11
 
-This paragraph holds the visual reference word "circle" but in this case it is no instruction so it passes. Note that this example is not inapplicable because, despite the fact that the text is not visible, it is included in the accessibility tree.
+This paragraph holds the visual reference word "circle" but in this case it is no instruction, so it passes. Note that this example is not inapplicable because, despite the fact that the text is not visible, it is included in the accessibility tree.
 
 ```html
 <p style="position:absolute; top:-9999em">
@@ -250,7 +252,7 @@ This paragraph holds the visual reference word "circle" but in this case it is n
 
 #### Passed Example 12
 
-This paragraph holds the visual reference word "circle" but in this case it is no instruction so it passes. Note that this example is not inapplicable because, despite the fact that the text is not in the accessibility tree, it is visible.
+This paragraph holds the visual reference word "circle" but in this case it is no instruction, so it passes. Note that this example is not inapplicable because, despite the fact that the text is not in the accessibility tree, it is visible.
 
 ```html
 <p aria-hidden="true">
@@ -409,3 +411,6 @@ The content is indicated with the word "box" (a visual reference word), but this
 <p style="display:none">Click the box, for a surprise</p>
 <button onclick="alert('Surprise!')">Howdy</button>
 ```
+
+[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationships'
+[sc133]: https://www.w3.org/TR/WCAG21/#sensory-characteristics 'Success Criterion 1.3.3 Sensory Characteristics'

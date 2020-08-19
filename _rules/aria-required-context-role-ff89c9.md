@@ -26,19 +26,9 @@ acknowledgments:
 
 The rule applies to any HTML or SVG element that is [included in the accessibility tree][] and has a [WAI-ARIA 1.1][aria 1.1] [explicit semantic role][] with a [required context role][], except if the element has an [implicit semantic role][] that is identical to its [explicit semantic role][].
 
-**Note:** An example of an element that has a [required context role][] is `tab` that has `tablist` as a [required context role][].
-
-**Note:** An example of an element that has an [implicit semantic role][] that is identical to its [explicit semantic role][] is an `li` element that has `role="listitem"`. These elements are not applicable.
-
-**Note:** The applicability of this rule is limited to only the [WAI-ARIA 1.1 Recommendation][aria 1.1] roles, since there are unresolved issues with how [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0] uses role inheritance to define the [required context roles][], which makes it deviate from the model defined in [WAI-ARIA 1.1][aria 1.1]. The [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0/) does not include any [required context roles][].
-
 ## Expectation
 
 Each test target is [owned by][] an element that has a [semantic role][] that is one of the [required context roles][] of the target element.
-
-**Note:** The definition of [owned by][] used in this rule is different than the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element). See more in the [owned by][] definition.
-
-**Note:** [Subclass roles](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) of [required context roles][] are not automatically included as possible [required context roles][]. E.g. the [`feed`](https://www.w3.org/TR/wai-aria-1.1/#feed) role is not a possible [required context role][] for [`listitem`](https://www.w3.org/TR/wai-aria-1.1/#listitem), even though [`feed`](https://www.w3.org/TR/wai-aria-1.1/#feed) is a [subclass role](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) of the [`list`](https://www.w3.org/TR/wai-aria-1.1/#list) role.
 
 ## Assumptions
 
@@ -50,6 +40,14 @@ If the [explicit semantic role][] on the target element is incorrectly used, and
 - `aria-owns` has limited support in some user agents.
 
 ## Background
+
+The applicability of this rule is limited to only the [WAI-ARIA 1.1 Recommendation][aria 1.1] roles, since there are unresolved issues with how [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0] uses role inheritance to define the [required context roles][], which makes it deviate from the model defined in [WAI-ARIA 1.1][aria 1.1]. The [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0/) does not include any [required context roles][].
+
+An example of an element that has an [implicit semantic role][] that is identical to its [explicit semantic role][] is an `li` element that has `role="listitem"`. These elements are not applicable because they have extra requirements and should thus be checked separately.
+
+The definition of [owned by][] used in this rule is different from the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element). See more in the [owned by][] definition.
+
+[Subclass roles][] of [required context roles][] are not automatically included as possible [required context roles][]. For example, the [`feed`](https://www.w3.org/TR/wai-aria-1.1/#feed) role is not a possible [required context role][] for [`listitem`](https://www.w3.org/TR/wai-aria-1.1/#listitem), even though [`feed`](https://www.w3.org/TR/wai-aria-1.1/#feed) is a [subclass role][] of the [`list`](https://www.w3.org/TR/wai-aria-1.1/#list) role.
 
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [Required Context Role][]
@@ -238,3 +236,4 @@ The `doc-biblioentry` has a role from the [Digital Publishing WAI-ARIA Module (D
 [required context role]: https://www.w3.org/TR/wai-aria-1.1/#scope 'WAI ARIA definition of Required Context Role'
 [required context roles]: https://www.w3.org/TR/wai-aria-1.1/#scope 'WAI ARIA definition of Required Context Role'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
+[subclass role]: https://www.w3.org/TR/wai-aria-1.1/#subclassroles 'ARIA Specification of Subclass Role'

@@ -16,8 +16,9 @@ input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
-    - Wilco Fiers
     - Brian Bors
+    - Jean-Yves Moyen
+    - Wilco Fiers
   previous_authors:
     - Anne Thyme Nørregaard
 ---

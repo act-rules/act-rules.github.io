@@ -42,6 +42,8 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
+Default styling in most user agents is providing perfectly valid focus indication for focusable elements (even those that are not focusable by default), as shown in Passed Example 1. Many examples in this rule need to **remove** that indicator in order to illustrate various situations. This is bad practice and should normally be avoided.
+
 WCAG does not have any requirement of how big or small focus indicator should be, or how far or near from the [focusable][] element it should be. Thus it is possible to pass this rule and [Success Criterion 2.4.7 Focus Visible][sc247] with barely perceptible changes at the other end of the page. That would however still be an accessibility issue. WCAG 2.2 is working on an extended Success Criterion 2.4.11 specifying how big the focus indicator should be. See the [Understanding Success Criterion 2.4.11: Focus Visible (Enhanced)][usc2411] proposal. All Examples in this rule avoid focus indications that are too small, too far away, too weak, …
 
 WCAG [Understanding Success Criterion 2.4.7: Focus Visible][usc247] explicitly states that "if there is only one keyboard actionable control on the screen, the success criterion would be met". Therefore, this rule only consider documents with several [focusable][] elements.
@@ -51,8 +53,6 @@ WCAG [Understanding Success Criterion 2.4.7: Focus Visible][usc247] explicitly s
 - [Understanding Success Criterion 2.4.11: Focus Visible (Enhanced) (WCAG 2.2 proposal)][usc2411]
 
 ## Test Cases
-
-**Note:** Default styling in most user agents is providing perfectly valid focus indication for focusable elements (even those that are not focusable by default), as shown in Passed Example 1. Many examples in this rule need to **remove** that indicator in order to illustrate various situations. This is bad practice and should normally be avoided.
 
 ### Passed
 
@@ -156,23 +156,33 @@ For each of these three [focusable][] elements, the set of pixels changing color
 
 None of these [focusable][] elements have any pixel changing color when they are [focused][] because the default styling has been overwritten by a style that removes the outline.
 
-````html
+```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
 
 <a class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a>
 <a class="no-focus-default" href="https://www.w3.org/TR/WCAG21/">WCAG</a>
+```
 
-#### Failed Example 2 The first [focusable][] element is part of [sequential focus navigation][] and has no pixel
+#### Failed Example 2
+
+The first [focusable][] element is part of [sequential focus navigation][] and has no pixel
 changing color when it is [focused][]. The second [focusable][] element is not applicable because it has been removed
 from [sequential focus navigation][] due to the `tabindex` attribute. Its presence is nonetheless enough to make the
-first one applicable. ```html
+first one applicable.
+
+```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
 
 <a class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a>
 <button tabindex="-1">Dummy button</button>
+```
 
-#### Failed Example 3 Both of these [focusable][] elements have the exact same set of pixels changing color when they
-are [focused][]. ```html
+#### Failed Example 3
+
+Both of these [focusable][] elements have the exact same set of pixels changing color when they
+are [focused][].
+
+```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
 <script src="../test-assets/focus-visible/script.js" />
 
@@ -193,7 +203,7 @@ are [focused][]. ```html
 	href="https://www.w3.org/TR/WCAG21/"
 	>WCAG</a
 >
-````
+```
 
 ### Inapplicable
 

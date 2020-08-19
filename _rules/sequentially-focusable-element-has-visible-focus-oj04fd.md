@@ -42,7 +42,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-WCAG does not have any requirement of how big or small focus indicator should be, or how far or near from the [focusable][] element it should be. Thus it is possible to pass this rule and [Success Criterion 2.4.7 Focus Visible][sc247] with barely perceptible changes at the other end of the page. That would however still be an accessibility issue. WCAG 2.2 is working on an extended Success Criterion 2.4.11 specifying how big the focus indicator should be. See the [Understanding Success Criterion 2.4.11: Focus Visible (Enhanced)][usc2411] proposal. All Examples in this rule are voluntarily avoiding very bad practices and thus avoid focus indications that are too small, too far away, too weak, …
+WCAG does not have any requirement of how big or small focus indicator should be, or how far or near from the [focusable][] element it should be. Thus it is possible to pass this rule and [Success Criterion 2.4.7 Focus Visible][sc247] with barely perceptible changes at the other end of the page. That would however still be an accessibility issue. WCAG 2.2 is working on an extended Success Criterion 2.4.11 specifying how big the focus indicator should be. See the [Understanding Success Criterion 2.4.11: Focus Visible (Enhanced)][usc2411] proposal. All Examples in this rule avoid focus indications that are too small, too far away, too weak, …
 
 WCAG [Understanding Success Criterion 2.4.7: Focus Visible][usc247] explicitly states that "if there is only one keyboard actionable control on the screen, the success criterion would be met". Therefore, this rule only consider documents with several [focusable][] elements.
 

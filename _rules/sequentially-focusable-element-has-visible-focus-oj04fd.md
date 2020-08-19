@@ -42,7 +42,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-Default styling in most user agents is providing perfectly valid focus indication for focusable elements (even those that are not focusable by default), as shown in Passed Example 1. Many examples in this rule need to **remove** that indicator in order to illustrate various situations. This is bad practice and should normally be avoided.
+Default styling in most user agents is providing perfectly valid focus indication for focusable elements (even those that are not focusable by default), as shown in Passed Examples 1 and 2. Many examples in this rule need to **remove** that indicator in order to illustrate various situations. This is bad practice and should normally be avoided.
 
 WCAG does not have any requirement of how big or small focus indicator should be, or how far or near from the [focusable][] element it should be. Thus it is possible to pass this rule and [Success Criterion 2.4.7 Focus Visible][sc247] with barely perceptible changes at the other end of the page. That would however still be an accessibility issue. WCAG 2.2 is working on an extended Success Criterion 2.4.11 specifying how big the focus indicator should be. See the [Understanding Success Criterion 2.4.11: Focus Visible (Enhanced)][usc2411] proposal. All Examples in this rule avoid focus indications that are too small, too far away, too weak, …
 
@@ -56,29 +56,10 @@ WCAG does not have any requirement of how big or small focus indicator should be
 
 #### Passed Example 1
 
-All the [focusable][] elements in this document are part of [sequential focus navigation][]. The set of pixels that change color when they are [focused][] (due to default User Agent's styling) is unique for each of them.
+The first [focusable][] element is part of [sequential focus navigation][]. The set of pixels that change color when it is [focused][] (due to default User Agent's styling) is unique. The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the negative value for the `tabindex` attribute. Its presence is nonetheless enough to make the first one applicable.
 
 ```html
-<a href="https://act-rules.github.io/">ACT rules</a><br />
-<form>
-	<input type="text" name="address" placeholder="address" /><br />
-	<input type="checkbox" id="checkbox" /><label for="checkbox">I love WCAG!</label><br />
-
-	<label for="principles">Select a WCAG principle:</label>
-	<select id="principles">
-		<option value="perceivable">Perceivable</option>
-		<option value="operable">Operable</option>
-		<option value="understandable">Understandable</option>
-		<option value="robust">Robust</option> </select
-	><br />
-
-	<label for="level">Select a compliance level:</label>
-	<input type="radio" name="level" value="A" id="a" /> <label for="a">A</label><br />
-	<input type="radio" name="level" value="AA" id="aa" /> <label for="aa">AA</label><br />
-	<input type="radio" name="level" value="AAA" id="aaa" /> <label for="aaa">AAA</label>
-</form>
-<button type="submit">Submit</button><br />
-<span tabindex="0">Act rules</span>
+<a href="https://act-rules.github.io/">ACT rules</a> <button tabindex="-1">Dummy button</button>
 ```
 
 #### Passed Example 2
@@ -86,7 +67,7 @@ All the [focusable][] elements in this document are part of [sequential focus na
 The first [focusable][] element is part of [sequential focus navigation][]. The set of pixels that change color when it is [focused][] (due to default User Agent's styling) is unique. The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the negative value for the `tabindex` attribute. Its presence is nonetheless enough to make the first one applicable.
 
 ```html
-<a href="https://act-rules.github.io/">ACT rules</a> <button tabindex="-1">Dummy button</button>
+<span tabindex="0">Act rules</span> <button tabindex="-1">Dummy button</button>
 ```
 
 #### Passed Example 3

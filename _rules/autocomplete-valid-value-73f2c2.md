@@ -43,7 +43,9 @@ Each test target's `autocomplete` [attribute value][] has a [correct autocomplet
 
 ## Assumptions
 
-The `autocomplete` attribute is not used on form fields that do not correspond to an autocomplete field described in the HTML 5.2 specification. If the `autocomplete` field is used to describe "custom" taxonomy, rather than that described in the specification, Success Criterion [1.3.5 Identify Input Purpose][sc135] may be satisfied even if this rule failed.
+The `autocomplete` attribute is not used on form fields that do not correspond to an autocomplete field described in the HTML 5.2 specification. If the `autocomplete` field is used to describe "custom" taxonomy, rather than that described in the specification, success Criterion [1.3.5 Identify Input Purpose][sc135] may be satisfied even if this rule failed. 
+
+If an incorrect `type` attribute is used for `input` elements, this rule may fail elements that satisfy success Criterion [1.3.5 Identify Input Purpose][sc135]. For example if an `input` element has a `type` of `number`, but is expecting an e-mail address.
 
 ## Accessibility Support
 
@@ -169,7 +171,7 @@ This `autocomplete` [attribute value][] is comma separated instead of space usin
 This `autocomplete` [attribute value][] is not appropriate for the field. It is not possible to type an e-mail using just numbers.
 
 ```html
-<label>Email<input type="number" autocomplete="email"/></label>
+<label>Quantity<input type="number" autocomplete="email"/></label>
 ```
 
 ### Inapplicable

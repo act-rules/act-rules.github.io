@@ -188,6 +188,14 @@ These elements with an [explicit role][] of `listitem` are not [owned by][] an e
 
 #### Inapplicable Example 1
 
+This element with an [explicit role][] of `listitem` is not [included in the accessibility tree][].
+
+```html
+<div role="listitem" style="display:none;">List item 1</div>
+```
+
+#### Inapplicable Example 2
+
 There is no element with an [explicit role][].
 
 ```html
@@ -196,34 +204,7 @@ There is no element with an [explicit role][].
 </ul>
 ```
 
-#### Inapplicable Example 2
-
-This element with an [explicit role][] of `listitem` is not [included in the accessibility tree][].
-
-```html
-<div role="listitem" style="display:none;">List item 1</div>
-```
-
 #### Inapplicable Example 3
-
-There is no element whose role has [required context role][] because the `header` role does not have one.
-
-```html
-<div role="header" aria-level="1">Hello!</div>
-<p>Welcome to my homepage!</p>
-```
-
-#### Inapplicable Example 4
-
-There is no element wit an [explicit role][] different from its [implicit role][]. This `li` element has an [explicit role][] of `listitem` which is identical to its [implicit role][].
-
-```html
-<ul>
-	<li role="listitem">List item 1</li>
-</ul>
-```
-
-#### Inapplicable Example 5
 
 This `section` element with an [explicit role][] of `doc-biblioentry` has a role from the [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0], not the [WAI-ARIA 1.1 Recommendation][aria 1.1].
 
@@ -236,6 +217,25 @@ This `section` element with an [explicit role][] of `doc-biblioentry` has a role
 		</p>
 	</div>
 </section>
+```
+
+#### Inapplicable Example 4
+
+There is no element whose role has [required context role][] because the `header` role does not have one.
+
+```html
+<div role="header" aria-level="1">Hello!</div>
+<p>Welcome to my homepage!</p>
+```
+
+#### Inapplicable Example 5
+
+There is no element wit an [explicit role][] different from its [implicit role][]. This `li` element has an [explicit role][] of `listitem` which is identical to its [implicit role][].
+
+```html
+<ul>
+	<li role="listitem">List item 1</li>
+</ul>
 ```
 
 [aria 1.1]: https://www.w3.org/TR/wai-aria-1.1/ 'WAI ARIA 1.1 specifications'

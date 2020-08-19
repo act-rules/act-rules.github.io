@@ -30,8 +30,8 @@ input_rules:
   - f51b46
 acknowledgments:
   authors:
-    - Wilco Fiers
     - Brian Bors
+    - Wilco Fiers
 ---
 
 ## Applicability

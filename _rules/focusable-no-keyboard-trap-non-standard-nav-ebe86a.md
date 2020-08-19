@@ -10,12 +10,12 @@ input_aspects:
   - CSS Styling
 acknowledgments:
   authors:
+    - Anne Thyme Nørregaard
+    - Carlos Duarte
     - Dagfinn Rømen
     - Geir Sindre Fossøy
     - Malin Øvrebø
     - Shadi Abou-Zahra
-    - Carlos Duarte
-    - Anne Thyme Nørregaard
     - Stein Erik Skotkjerra
 ---
 

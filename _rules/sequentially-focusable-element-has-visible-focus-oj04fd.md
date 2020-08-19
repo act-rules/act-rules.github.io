@@ -24,7 +24,7 @@ The rule applies to any element which is part of [sequential focus navigation][]
 
 ## Expectation 1
 
-For each target element, there is at least one pixel inside the [scrolling area][] of the [viewport][] whose color is different when the element is [focused][] and when it is not.
+For each target element, there is at least one pixel inside the [scrolling area][] of the [viewport][] whose color is different when the element is [focused][] from when it is not.
 
 ## Expectation 2
 

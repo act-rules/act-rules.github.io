@@ -88,7 +88,7 @@ The first [focusable][] element, is part of [sequential focus navigation][]. The
 		>ACT rules</a
 	>
 </span>
-<button>Dummy button</button>
+<button tabindex="-1">Dummy button</button>
 ```
 
 #### Passed Example 4
@@ -133,21 +133,7 @@ For each of these three [focusable][] elements, the set of pixels changing color
 
 #### Failed Example 1
 
-None of these [focusable][] elements have any pixel changing color when they are [focused][] because the default styling has been overwritten by a style that removes the outline.
-
-```html
-<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
-
-<a class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a>
-<a class="no-focus-default" href="https://www.w3.org/TR/WCAG21/">WCAG</a>
-```
-
-#### Failed Example 2
-
-The first [focusable][] element is part of [sequential focus navigation][] and has no pixel
-changing color when it is [focused][]. The second [focusable][] element is not applicable because it has been removed
-from [sequential focus navigation][] due to the `tabindex` attribute. Its presence is nonetheless enough to make the
-first one applicable.
+The first [focusable][] element does not have any pixel changing color when it is [focused][] because the default styling has been overwritten by a style that removes the outline.
 
 ```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
@@ -156,7 +142,7 @@ first one applicable.
 <button tabindex="-1">Dummy button</button>
 ```
 
-#### Failed Example 3
+#### Failed Example 2
 
 Both of these [focusable][] elements have the exact same set of pixels changing color when they
 are [focused][].

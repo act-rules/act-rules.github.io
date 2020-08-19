@@ -38,7 +38,7 @@ This rule applies to any element that has:
 
 ## Expectation
 
-All [text nodes][] in the [visible text content][] of each target element matches, or is contained within the [accessible name][] of the target element, except for characters used to express [non-text content][]. Leading and trailing [whitespace][] and difference in case sensitivity should be ignored.
+For each target element, all [text nodes][] in the [visible text content][] either matches or is contained within the [accessible name][] of this target element, except for characters in the [text nodes][] used to express [non-text content][]. Leading and trailing [whitespace][] and difference in case sensitivity should be ignored.
 
 ## Assumptions
 

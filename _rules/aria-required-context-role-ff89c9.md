@@ -36,17 +36,17 @@ This rule assumes that the `role` attribute is used to give a [semantic role][] 
 
 ## Accessibility Support
 
-- User agents do not all have the same accessibility tree. Particularly the method of deriving which element owns which other elements varies between browsers. This can lead to different results for this rule, depending on which accessibility tree is used as input.
+- User agents do not all have the same accessibility tree. Particularly the method of deriving which element [owns][owned by] which other elements varies between browsers. This can lead to different results for this rule, depending on which accessibility tree is used as input.
 - `aria-owns` has limited support in some user agents.
 - There exist some combination of popular browsers and assistive technologies who do not announce correctly relationships based on a mix of [implicit][implicit role] and [explicit][explicit role] roles.
 
 ## Background
 
-The applicability of this rule is limited to only the [WAI-ARIA 1.1 Recommendation][aria 1.1] roles, since there are unresolved issues with how [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0] uses role inheritance to define the [required context roles][], which makes it deviate from the model defined in [WAI-ARIA 1.1][aria 1.1]. The [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0/) does not include any [required context roles][].
+The applicability of this rule is limited to the [WAI-ARIA 1.1 Recommendation][aria 1.1] roles, since there are unresolved issues with how [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0] uses role inheritance to define the [required context roles][], which makes it deviate from the model defined in [WAI-ARIA 1.1][aria 1.1]. The [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0/) does not include any [required context roles][].
 
-An example of an element that has an [implicit semantic role][] that is identical to its [explicit semantic role][] is an `li` element that has `role="listitem"`. These elements are not applicable because they have extra requirements and should thus be checked separately.
+An example of an element that has an [implicit semantic role][] that is identical to its [explicit semantic role][] is a `<li`role="listitem">` element. These elements are not applicable because they have extra requirements and should thus be checked separately.
 
-The definition of [owned by][] used in this rule is different from the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element). See more in the [owned by][] definition.
+The definition of [owned by][] used in this rule is different from the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element).
 
 [Subclass roles][] of [required context roles][] are not automatically included as possible [required context roles][]. For example, the [`feed`](https://www.w3.org/TR/wai-aria-1.1/#feed) role is not a possible [required context role][] for [`listitem`](https://www.w3.org/TR/wai-aria-1.1/#listitem), even though [`feed`](https://www.w3.org/TR/wai-aria-1.1/#feed) is a [subclass role][] of the [`list`](https://www.w3.org/TR/wai-aria-1.1/#list) role.
 
@@ -61,7 +61,7 @@ Some user agents try to correct missing [required context roles][] or incorrect 
 
 #### Passed Example 1
 
-Element with [explicit semantic role][] `listitem` is contained within its [required context role][] `list`, expressed as an [explicit semantic role][].
+These elements with an [explicit semantic role][] of `listitem` are [owned by][] an element with their [required context role][], `list`, expressed as an [explicit semantic role][].
 
 ```html
 <div role="list">
@@ -72,7 +72,7 @@ Element with [explicit semantic role][] `listitem` is contained within its [requ
 
 #### Passed Example 2
 
-Element with [explicit semantic role][] `listitem` is contained within its [required context role][] `list`, through the [implicit semantic role][] of `ul`. Note that this example does not satisfy [Success Criterion 4.1.1 Parsing][sc411] because the [`ul` element][ul] does not respect its [content model][].
+These elements with an [explicit semantic role][] of `listitem` are [owned by][] an element with their [required context role][], `list`, expressed as an [implicit semantic role][] of `ul`. Note that this test case does not satisfy [Success Criterion 4.1.1 Parsing][sc411] because the [`ul` element][ul] does not respect its [content model][].
 
 ```html
 <ul>
@@ -83,7 +83,7 @@ Element with [explicit semantic role][] `listitem` is contained within its [requ
 
 #### Passed Example 3
 
-Element contained within its [required context role][] even though it is not a direct child of the [context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
+These elements with an [explicit semantic role][] of `listitem` are [owned by][] an element with their [required context role][] even though they are not direct DOM children of it. ARIA [ownership][owned by] "skips" through presentational nodes because they are not [included in the accessibility tree][].
 
 ```html
 <div role="list">
@@ -96,7 +96,7 @@ Element contained within its [required context role][] even though it is not a d
 
 #### Passed Example 4
 
-`aria-owns` used to give the target element the right [context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
+These elements with an [explicit semantic role][] of `listitem` are [owned by][] an element with their [required context role][] even though they are not DOM descendants of it. The `aria-owns` attribute is used to alter the accessibility tree and place the target elements in their [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
 
 ```html
 <div role="list" aria-owns="item1 item2"></div>
@@ -106,7 +106,7 @@ Element contained within its [required context role][] even though it is not a d
 
 #### Passed Example 5
 
-The `aria-owns` attribute override normal DOM tree relationship. Thus, the innermost `div` element (`item`) is not owned by the intermediate one (with a `role="navigation"`) and has the correct [context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
+These elements with an [explicit semantic role][] of `listitem` are [owned by][] an element with their [required context role][] even though they are not direct DOM descendants of it. The `aria-owns` attribute is used to alter the accessibility tree and place the target elements in their [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
 
 ```html
 <div role="list" aria-owns="item1 item2">
@@ -119,7 +119,7 @@ The `aria-owns` attribute override normal DOM tree relationship. Thus, the inner
 
 #### Passed Example 6
 
-Since implicit ownership can cross shadow boundaries, the element with the [explicit semantic role][] of `listitem` is contained within its [required context role][] of `list`.
+These elements with an [explicit semantic role][] of `listitem` are [owned by][] an element with their [required context role][] because implicit [ownership][owned by] (inherited from DOM tree structure) crosses shadow boundaries.
 
 ```html
 <div id="host" role="list"></div>
@@ -135,7 +135,7 @@ Since implicit ownership can cross shadow boundaries, the element with the [expl
 
 #### Failed Example 1
 
-The `listitem` has no [context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
+This element with an [explicit semantic role][] of `listitem` is not [owned by][] an element with its [required context role][].
 
 ```html
 <div role="listitem">List item 1</div>
@@ -143,7 +143,7 @@ The `listitem` has no [context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
 
 #### Failed Example 2
 
-The `listitem` are owned by the `tabpanel`, because it is the closest ancestor, but `tabpanel` is not the correct [context](https://www.w3.org/TR/wai-aria-1.1/#scope) for `listitem`.
+These elements with an [explicit semantic role][] of `listitem` are not [owned by][] an element with their [required context role][]. They are [owned by][] the `tabpanel` element, because it is the closest ancestor.
 
 ```html
 <div role="list">
@@ -156,7 +156,7 @@ The `listitem` are owned by the `tabpanel`, because it is the closest ancestor, 
 
 #### Failed Example 3
 
-The `listitem` are owned by the `aria-label="menu"` div, rather than the `list`.
+These elements with an [explicit semantic role][] of `listitem` are [owned by][] an element with their [required context role][]. They are instead [owned by][] the `div` with an `aria-label` attribute; even though this `div` has no role, it has a global ARIA attribute and is thus [included in the accessibility tree][].
 
 ```html
 <div role="list">
@@ -169,17 +169,17 @@ The `listitem` are owned by the `aria-label="menu"` div, rather than the `list`.
 
 #### Failed Example 4
 
-Since explicit ownership cannot cross shadow boundaries, the element with the [explicit semantic role][] of `listitem` does not have a [context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
+These elements with an [explicit semantic role][] of `listitem` are not [owned by][] an element with their [required context role][] because explicit [ownership][owned by] (set by `aria-owns`) does not cross shadow boundaries.
 
 ```html
-<div role="list" aria-owns="item"></div>
+<div role="list" aria-owns="item1 item2"></div>
 
 <div id="host"></div>
 
 <script>
 	const host = document.querySelector('#host')
 	const root = host.attachShadow({ mode: 'open' })
-	root.innerHTML = '<div id="item" role="listitem">List item 1</div>'
+	root.innerHTML = '<div id="item1" role="listitem">List item 1</div> <div id="item2" role="listitem">List item 2</div>'
 </script>
 ```
 
@@ -197,7 +197,7 @@ There is no element with an [explicit semantic role][].
 
 #### Inapplicable Example 2
 
-The `listitem` is not [included in the accessibility tree][].
+This element with an [explicit semantic role][] of `listitem` is not [included in the accessibility tree][].
 
 ```html
 <div role="listitem" style="display:none;">List item 1</div>
@@ -205,7 +205,7 @@ The `listitem` is not [included in the accessibility tree][].
 
 #### Inapplicable Example 3
 
-The `header` role does not have a [required context role][].
+There is no element whose role has [required conteyt role][] because the `header` role does not have one.
 
 ```html
 <div role="header" aria-level="1">Hello!</div>
@@ -214,7 +214,7 @@ The `header` role does not have a [required context role][].
 
 #### Inapplicable Example 4
 
-The `listitem` has an [explicit semantic role][], but it is identical to the [implicit semantic role][], making the element inapplicable.
+There is no element wit an [explicit semantic role][] different from its [implicit semantic role][]. This `li` element has an [explicit semantic role][] of `listitem` which is identical to its [implicit semantic role][].
 
 ```html
 <ul>
@@ -224,7 +224,7 @@ The `listitem` has an [explicit semantic role][], but it is identical to the [im
 
 #### Inapplicable Example 5
 
-The `doc-biblioentry` has a role from the [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0], not the [WAI-ARIA 1.1 Recommendation][aria 1.1], and it is therefore inapplicable.
+This `section` element with an [explicit semantic role][] of `doc-biblioentry` has a role from the [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0], not the [WAI-ARIA 1.1 Recommendation][aria 1.1].
 
 ```html
 <section role="doc-bibliography">

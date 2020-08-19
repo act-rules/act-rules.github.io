@@ -5,7 +5,7 @@ rule_type: atomic
 description: |
   This rule checks that each element in sequential focus order has some visible focus indication.
 accessibility_requirements:
-  wcag20:2.4.7: # Focus Visible (A)
+  wcag20:2.4.7: # Focus Visible (AA)
     forConformance: true
     failed: not satisfied
     passed: further testing needed

@@ -30,7 +30,11 @@ This rule applies to any element with the [semantic role][] of heading that is e
 
 ## Expectation
 
-Each target element describes the topic or purpose of its [section of the content][].
+Each target element describes the topic or purpose of the first [palpable content][] which is:
+
+- after the target, in tree order in the [flat tree][]; and
+- [visible][], if the target is [visible][]; and
+- [included in the accessibility tree][], if the target is [included in the accessibility tree][].
 
 **Note:** Headings do not need to be lengthy. A word, or even a single character, may suffice.
 
@@ -144,6 +148,18 @@ Heading marked up with `h1` element that describes the topic or purpose of its [
 </html>
 ```
 
+### Passed Example 8
+
+This heading describes the first [palpable content][] after it. The next one (the second `p` element) is not considered by this rule.
+
+```html
+<html lang="en">
+	<h1>Opening Hours</h1>
+	<p>We are open Monday through Friday from 10 to 16</p>
+	<p>We are open Saturday from 10 to 13</p>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -192,6 +208,18 @@ Heading marked up with `h1` element that does not describe the topic or purpose 
 </html>
 ```
 
+### Passed Example 8
+
+This heading does not describe the first [palpable content][] after it. The next one (the second `p` element) is not considered by this rule.
+
+```html
+<html lang="en">
+	<h1>Weather</h1>
+	<p>We are open Monday through Friday from 10 to 16</p>
+	<p>It is going to rain tomorrow</p>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -235,7 +263,9 @@ Empty heading marked up with `role="heading"` is not [visible][].
 </html>
 ```
 
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[palpable content]: https://html.spec.whatwg.org/multipage/dom.html#palpable-content 'HTML definition of Palpable Content'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [section of the content]: #section-of-content 'Definition of section of content'
 [semantic role]: #semantic-role 'Definition of semantic role'

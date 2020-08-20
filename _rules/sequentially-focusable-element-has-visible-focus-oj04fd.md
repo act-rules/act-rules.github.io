@@ -44,7 +44,9 @@ For each target element and each other [focusable][] element in the document, th
 
 ## Assumptions
 
-This rule assumes that documents with only one focusble element automatically satisfies [Success Criterion 2.4.7 Focus Visible][sc247], as stated in [Understanding Success Criterion 2.4.7: Focus Visible][usc247]: "if there is only one keyboard actionable control on the screen, the success criterion would be met".
+This rule assumes that documents with only one focusable element automatically satisfies [Success Criterion 2.4.7 Focus Visible][sc247], as stated in [Understanding Success Criterion 2.4.7: Focus Visible][usc247]: "if there is only one keyboard actionable control on the screen, the success criterion would be met".
+
+This rule assumes that it is not possible to satisfy [Success Criterion 2.4.7 Focus Visible][sc247] if two or more focusable elements have the exact same focus indication area. If this is not the case, it is possible to fail Expectation 2 while still satisfying [Success Criterion 2.4.7 Focus Visible][sc247].
 
 ## Accessibility Support
 

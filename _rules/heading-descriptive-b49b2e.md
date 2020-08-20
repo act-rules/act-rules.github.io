@@ -30,7 +30,7 @@ This rule applies to any element with the [semantic role][] of heading that is e
 
 ## Expectation
 
-Each target element describes the topic or purpose of the first [palpable content][] which is:
+Each target element describes the topic or purpose of the first non-[decorative][] [palpable content][] which is:
 
 - after the target, in tree order in the [flat tree][]; and
 - [visible][], if the target is [visible][]; and
@@ -263,6 +263,7 @@ Empty heading marked up with `role="heading"` is not [visible][].
 </html>
 ```
 
+[decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of Pure decoration'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [palpable content]: https://html.spec.whatwg.org/multipage/dom.html#palpable-content 'HTML definition of Palpable Content'

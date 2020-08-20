@@ -148,7 +148,7 @@ Heading marked up with `h1` element that describes the topic or purpose of its [
 </html>
 ```
 
-### Passed Example 8
+#### Passed Example 8
 
 This heading describes the first [palpable content][] after it. The next one (the second `p` element) is not considered by this rule.
 
@@ -208,7 +208,7 @@ Heading marked up with `h1` element that does not describe the topic or purpose 
 </html>
 ```
 
-### Passed Example 8
+#### Failed Example 5
 
 This heading does not describe the first [palpable content][] after it. The next one (the second `p` element) is not considered by this rule.
 

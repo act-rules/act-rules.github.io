@@ -10,6 +10,16 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag22:2.4.11: # Focus Appearance (Minimum) (AA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag22:2.4.12: # Focus Appearance (Enhanced) (AAA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - CSS styling
   - DOM tree
@@ -44,11 +54,14 @@ There are no major accessibility support issues known for this rule.
 
 Default styling in most user agents is providing perfectly valid focus indication for focusable elements (even those that are not focusable by default), as shown in Passed Examples 1 and 2. Many examples in this rule need to **remove** that indicator in order to illustrate various situations. This is bad practice and should normally be avoided.
 
-WCAG does not have any requirement of how big or small focus indicator should be, or how far or near from the [focusable][] element it should be. Thus it is possible to pass this rule and [Success Criterion 2.4.7 Focus Visible][sc247] with barely perceptible changes at the other end of the page. That would however still be an accessibility issue. WCAG 2.2 is working on an extended Success Criterion 2.4.11 specifying how big the focus indicator should be. See the [Understanding Success Criterion 2.4.11: Focus Visible (Enhanced)][usc2411] proposal. All Examples in this rule avoid focus indications that are too small, too far away, too weak, …
+WCAG does not have any requirement of how big or small focus indicator should be, or how far or near from the [focusable][] element it should be. Thus it is possible to pass this rule and [Success Criterion 2.4.7 Focus Visible][sc247] with barely perceptible changes at the other end of the page. That would however still be an accessibility issue. WCAG 2.2 includes [Success Criterion 2.4.11 Focus Appearance (Minimum)][sc2411] and [Success Criterion 2.4.12 Focus Appearance (Enhanced)][sc2412] specifying how big the focus indicator should be. All Examples in this rule avoid focus indications that are too small, too far away, too weak, …
 
 - [Success Criterion 2.4.7 Focus Visible][sc247]
+- [Success Criterion 2.4.11 Focus Appearance (Minimum)][sc2411]
+- [Success Criterion 2.4.12 Focus Appearance (Enhanced)][sc2412]
 - [Understanding Success Criterion 2.4.7: Focus Visible][usc247]
-- [Understanding Success Criterion 2.4.11: Focus Visible (Enhanced) (WCAG 2.2 proposal)][usc2411]
+- [Understanding Success Criterion 2.4.11: Focus Appearance (Minimum)][usc2411]
+- [Understanding Success Criterion 2.4.12: Focus Appearance (Enhanced)][usc2412]
 
 ## Test Cases
 
@@ -200,8 +213,11 @@ None of the [focusable][] elements in this document is part of [sequential focus
 [focusable]: #focusable 'Definition of Focusable'
 [focused]: #focused 'Definition of Focused'
 [sc247]: https://www.w3.org/TR/WCAG21/#focus-visible 'Success Criterion 2.4.7 Focus Visible'
-[scrolling area]: https://drafts.csswg.org/cssom-view/#scrolling-area 'CSS specification of Scrolling Area'
+[sc2411]: https://www.w3.org/TR/WCAG22/#focus-appearance-minimum 'Success Criterion 2.4.11 Focus Appearance (Minimum)'
+[sc2412]: https://www.w3.org/TR/WCAG22/#focus-appearance-enhanced 'Success Criterion 2.4.12 Focus Appearance (Enhanced)'
+[scrolling area]: https://drafts.csswg.org/cssom-view/#scrolling-area 'CSS specification of Scrolling Area'
 [sequential focus navigation]: https://html.spec.whatwg.org/#sequential-focus-navigation 'HTML specification of Sequential focus navigation'
 [usc247]: https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html 'Understanding Success Criterion 2.4.7: Focus Visible'
-[usc2411]: https://w3c.github.io/wcag/understanding/focus-visible-enhanced.html 'Understanding Success Criterion 2.4.11: Focus Visible (Enhanced) (WCAG 2.2 proposal)'
+[usc2411]: https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance-minimum.html 'Understanding Success Criterion 2.4.11: Focus Appearance (Minimum)'
+[usc2412]: https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance-enhanced.html 'Understanding Success Criterion 2.4.12: Focus Appearance (Enhanced)'
 [viewport]: https://drafts.csswg.org/css2/#viewport 'CSS definition of Viewport'

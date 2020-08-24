@@ -20,8 +20,8 @@ input_aspects:
   - CSS Styling
 acknowledgments:
   authors:
-    - Jey Nandakumar
     - Audrey Maniez
+    - Jey Nandakumar
 ---
 
 ## Applicability

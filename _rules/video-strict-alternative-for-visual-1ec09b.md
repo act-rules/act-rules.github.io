@@ -36,8 +36,8 @@ input_rules:
   - f196ce
 acknowledgments:
   authors:
-    - Wilco Fiers
     - Brian Bors
+    - Wilco Fiers
 ---
 
 ## Applicability

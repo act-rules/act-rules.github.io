@@ -17,7 +17,7 @@ input_aspects:
 acknowledgments:
   authors:
     - Wilco Fiers
-  previous_authros:
+  previous_authors:
     - Audrey Maniez
     - Jey Nandakumar
 ---

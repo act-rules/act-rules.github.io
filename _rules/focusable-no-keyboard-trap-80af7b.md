@@ -26,9 +26,9 @@ input_rules:
   - ebe86a
 acknowledgments:
   authors:
-    - Geir Sindre Fossøy
-    - Dagfinn Rømen
     - Anne Thyme Nørregaard
+    - Dagfinn Rømen
+    - Geir Sindre Fossøy
 ---
 
 ## Applicability

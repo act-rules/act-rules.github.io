@@ -3,7 +3,7 @@ id: 24afc2
 name: Letter spacing in `style` attributes is not `!important`
 rule_type: atomic
 description: |
-	This rule checks that the letter spacing can be adjusted by the user, i.e. that `!important` is not applied to the style, unless the style has already exceeded the specified metric for retaining content visibility and functionality.
+  This rule checks that the letter spacing can be adjusted by the user, i.e. that `!important` is not applied to the style, unless the style has already exceeded the specified metric for retaining content visibility and functionality.
 accessibility_requirements:
   wcag21:1.4.12: # Text Spacing (AA)
     forConformance: true
@@ -60,7 +60,7 @@ This `div` element has a `letter-spacing` of `0.12em` which is equal to the reco
 	</style>
 
 	<body>
-		<div style="letter-spacing: 0.12em; !important">
+		<div style="letter-spacing: 0.12em !important">
 			The toy brought back fond memories of being lost in the rain forest.
 		</div>
 	</body>
@@ -91,7 +91,7 @@ This `p` element has a `letter-spacing` of `24px` specified via the style attrib
 
 #### Failed Example 1
 
-This `div` element has a `letter-spacing` of `1.5px !important` (equals `0.09375em`) which is below to the recommended minimum given the specified font size is `1em`.
+This `div` element has a `letter-spacing` of `0.094em !important` which is below to the recommended minimum given the specified font size is `1em`.
 
 ```html
 <html>
@@ -102,7 +102,7 @@ This `div` element has a `letter-spacing` of `1.5px !important` (equals `0.09375
 	</style>
 
 	<body>
-		<div style="letter-spacing: 1.5px !important;">
+		<div style="letter-spacing: 0.094em !important;">
 			The toy brought back fond memories of being lost in the rain forest.
 		</div>
 	</body>

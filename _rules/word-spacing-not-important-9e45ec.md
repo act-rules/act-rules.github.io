@@ -49,7 +49,7 @@ While some assistive technologies are able to set [user origin][] styles, others
 
 #### Passed Example 1
 
-This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12em`) which is equal to the recommended minimum, given the specified font size is `1em`.
+This `strong` element has a `word-spacing` of `0.12em !important` which is equal to the recommended minimum, given the specified font size is `1em`.
 
 ```html
 <html>
@@ -60,7 +60,7 @@ This `strong` element has a `word-spacing` of `1.92pt !important` (equals `0.12e
 	</style>
 
 	<body>
-		<strong style="word-spacing: 1.92pt !important;">
+		<strong style="word-spacing: 0.12em !important;">
 			The toy brought back fond memories of being lost in the rain forest.
 		</strong>
 	</body>

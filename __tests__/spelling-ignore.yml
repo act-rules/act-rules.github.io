@@ -197,7 +197,7 @@
 - 000C
 - 000D
 
-# JSON attributes/ metadata
+# JSON attributes/ metadata/ methods
 - testcases
 - ruleId
 - ruleName
@@ -206,3 +206,12 @@
 - cantTell
 - TestSubject
 - earl:cantTell
+- getComputedPriority
+
+# sizes
+- 1em
+- 2em
+- 12px
+- 32px
+- 24px
+- 10px

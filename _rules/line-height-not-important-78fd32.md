@@ -91,7 +91,7 @@ This `p` element has a [line-height][] of `24px` specified via the style attribu
 
 #### Failed Example 1
 
-This `p` element has a `line-height` of `10px !important` (equals `0.625em` ) which is below the recommended minimum, given the specified font size of the body is `1em`.
+This `p` element has a `line-height` of `0.625em !important` which is below the recommended minimum, given the specified font size of the body is `1em`.
 
 ```html
 <html>
@@ -102,7 +102,7 @@ This `p` element has a `line-height` of `10px !important` (equals `0.625em` ) wh
 	</style>
 
 	<body>
-		<p style="line-height: 1.875em !important">
+		<p style="line-height: 0.625em !important">
 			The toy brought back fond memories of being lost in the rain forest.
 		</p>
 	</body>

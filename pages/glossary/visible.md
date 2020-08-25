@@ -4,7 +4,7 @@ key: visible
 unambiguous: true
 objective: true
 input_aspects:
-  - CSS styling
+  - CSS styling
   - DOM tree
 ---
 

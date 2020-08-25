@@ -27,7 +27,7 @@ This rule applies to any [HTML web page][].
 
 ## Expectations
 
-The first node in the [flat tree][] which is inside the [main block of content][] of the test target and has a non-empty [accessible name][]:
+Either the test target has no [main block of content][], or the first node in the [flat tree][] which is inside the [main block of content][] of the test target and has a non-empty [accessible name][]:
 
 - has a [semantic role][] of `heading`; and
 - is [visible][]; and
@@ -237,6 +237,14 @@ This [document][] is using image as heading, the [accessible name][] of the imag
 		</main>
 	</body>
 </html>
+```
+
+#### Passed Example 8
+
+This [document][] is empty and therefore has no [main block of content][].
+
+```html
+<html></html>
 ```
 
 ### Failed

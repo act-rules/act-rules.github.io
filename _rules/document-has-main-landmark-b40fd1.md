@@ -28,8 +28,6 @@ Within the test target, there is at least one element which:
 - has [semantic role][] of `main`; and
 - is [included in the accessibility tree][].
 
-**Note:** Authors SHOULD not use more than one element with a [semantic role][] of `main`. This is, however, not a requirement for this rule and can be valid in certain cases.
-
 ## Assumptions
 
 - This rule assumes that the `main` [landmark][] is correctly used to identify the [main section of content][] of the page.
@@ -41,9 +39,11 @@ Having a `main` [landmark][] is sufficient to pass [Success Criterion 2.4.1: Byp
 
 ## Background
 
+Authors SHOULD not use more than one element with a [semantic role][] of `main`. This is, however, not a requirement for this rule and can be valid in certain cases.
+
 - [ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11]
 - [ARIA Landmarks Example](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html)
-- [CSS scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
+- [CSS scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
 - [The `main` role](https://www.w3.org/TR/wai-aria-1.1/#main)
 
 ## Test Cases

@@ -51,9 +51,9 @@ The first node in the [flat tree][] which is inside the [main block of content][
 - [H69: Providing heading elements at the beginning of each section of content][tech h69]
 - [CSS Scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
 
-## Test Cases
+Unless otherwise specified, the [main block of content][] in the test cases corresponds to the `main` element. The `nav` element is another [block of content][].
 
-**Note:** Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`main` and `nav` elements).
+## Test Cases
 
 ### Passed
 
@@ -67,8 +67,11 @@ This [document][] has a `h1` heading at the start of its [main block of content]
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<!-- list of links to each chapter -->
+		<nav id="chapters-navigation">
+			<ol>
+				<li>Chapter 1</li>
+				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+			</ol>
 		</nav>
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -93,8 +96,13 @@ This [document][] has a `h2` heading at the start of its [main block of content]
 	<body>
 		<h1>The Three Kingdoms, Chapter 1</h1>
 		<nav>
-			<h2>Table of content</h2>
-			<!-- list of links to each chapter -->
+			<nav id="chapters-navigation">
+				<h2>Content</h2>
+				<ol>
+					<li>Chapter 1</li>
+					<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+				</ol>
+			</nav>
 		</nav>
 		<main>
 			<h2>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h2>
@@ -109,9 +117,9 @@ This [document][] has a `h2` heading at the start of its [main block of content]
 
 #### Passed Example 3
 
-This [document][] has one [section of content][] for the navigation links, and the [main block of content][]. Each starts with a `h1` heading.
+This [document][] has one [block of content][] for the navigation links, and the [main block of content][]. Each starts with a `h1` heading.
 
-**Note:** In this [document][], the [sections of content][section of content] are identified by the level 1 heading at their start.
+**Note:** In this [document][], the [blocks of content][block of content] are identified by the level 1 heading at their start.
 
 ```html
 <html>
@@ -120,8 +128,11 @@ This [document][] has one [section of content][] for the navigation links, and t
 	</head>
 	<body>
 		<!-- Navigational section of content starts here -->
-		<h1>Contents</h1>
-		<!-- list of links to each chapter -->
+		<h1>Content</h1>
+		<ol>
+			<li>Chapter 1</li>
+			<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+		</ol>
 		<!-- Navigational section of content ends here -->
 
 		<!-- Main section of content starts here -->
@@ -145,8 +156,11 @@ In this [document][], the heading is not the first element of the [main block of
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<!-- list of links to each chapter -->
+		<nav id="chapters-navigation">
+			<ol>
+				<li>Chapter 1</li>
+				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+			</ol>
 		</nav>
 		<main>
 			<hr />
@@ -170,9 +184,12 @@ The image at the start of the [main block of content][] has an empty [accessible
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<h1>Contents</h1>
-			<!-- list of links to each chapter -->
+		<nav id="chapters-navigation">
+			<h1>Content</h1>
+			<ol>
+				<li>Chapter 1</li>
+				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+			</ol>
 		</nav>
 		<main>
 			<img src="../test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg" role="presentation" alt="" />
@@ -196,9 +213,12 @@ The [main block of content][] of this [document][] starts with a `div` element w
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
+		<nav id="chapters-navigation">
 			<div role="heading" aria-level="1">Contents</div>
-			<!-- list of links to each chapter -->
+			<ol>
+				<li>Chapter 1</li>
+				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+			</ol>
 		</nav>
 		<main>
 			<div role="heading" aria-level="1">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</div>
@@ -221,8 +241,11 @@ This [document][] is using image as heading, the [accessible name][] of the imag
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<!-- list of links to each chapter -->
+		<nav id="chapters-navigation">
+			<ol>
+				<li>Chapter 1</li>
+				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+			</ol>
 		</nav>
 		<main>
 			<h1>
@@ -252,8 +275,11 @@ For the [main block of content][], the first node with a non-empty [accessible n
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<!-- list of links to each chapter -->
+		<nav id="chapters-navigation">
+			<ol>
+				<li>Chapter 1</li>
+				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+			</ol>
 		</nav>
 		<main>
 			<strong style="font-size: 18pt">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</strong>
@@ -276,8 +302,11 @@ The [main block of content][] of this [document][] starts with a `h1` heading, b
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<!-- list of links to each chapter -->
+		<nav id="chapters-navigation">
+			<ol>
+				<li>Chapter 1</li>
+				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+			</ol>
 		</nav>
 		<main>
 			<h1 style="position: absolute; top:-999px">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -300,8 +329,11 @@ The heading of the [main block of content][] is not [included in the accessibili
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<!-- list of links to each chapter -->
+		<nav id="chapters-navigation">
+			<ol>
+				<li>Chapter 1</li>
+				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+			</ol>
 		</nav>
 		<main>
 			<h1 aria-hidden="true">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -324,8 +356,11 @@ The `h1` element at the start of the [main block of content][] has an empty [acc
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<!-- list of links to each chapter -->
+		<nav id="chapters-navigation">
+			<ol>
+				<li>Chapter 1</li>
+				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+			</ol>
 		</nav>
 		<main>
 			<span id="label"></span>
@@ -356,13 +391,12 @@ This [document][] is not an [HTML web page][].
 ```
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
+[block of content]: #block-of-content 'Definition of Block of Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS definition of Flat Tree'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
-[landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of Landmark Roles'
 [main block of content]: #main-block-of-content 'Definition of Main Block of Content'
-[section of content]: #section-of-content 'Definition of Section of Content'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationships'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1: Bypass Blocks'

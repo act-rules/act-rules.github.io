@@ -159,12 +159,12 @@ This [document][] is not an [HTML web page][].
 </svg>
 ```
 
-[document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
-[html web page]: #web-page-html 'Definition of web page (HTML)'
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of landmark roles'
-[main section of content]: #main-section-of-content 'Definition of main section of content'
-[sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1: Bypass blocks'
-[semantic role]: #semantic-role 'Definition of semantic role'
-[tech aria11]: https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11
-[visible]: #visible 'Definition of visible'
+[document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
+[html web page]: #web-page-html 'Definition of Web Page (HTML)'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
+[landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of Landmark Roles'
+[main section of content]: #main-section-of-content 'Definition of Main Section of Content'
+[sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
+[semantic role]: #semantic-role 'Definition of Semantic Role'
+[tech aria11]: https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11 'Technique ARIA11: Using ARIA Landmarks to Identify Regions of a Page'
+[visible]: #visible 'Definition of Visible'

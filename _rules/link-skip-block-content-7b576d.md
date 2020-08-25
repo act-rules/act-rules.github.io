@@ -63,7 +63,7 @@ In the test cases, the link to the second Chapter is added in order to turn the 
 
 #### Passed Example 1
 
-The complementary [block of repeated content][] starts with a `link` that jumps to after it. Note that even if the target of the link is not itself a [focusable][] element, keyboard focus is still moving there and sequential focus navigation will continue from that point after activating the link.
+In this [document][], the complementary [block of repeated content][] starts with a `link` that jumps to after it. Note that even if the target of the link is not itself a [focusable][] element, keyboard focus is still moving there and sequential focus navigation will continue from that point after activating the link.
 
 ```html
 <html lang="en">
@@ -90,7 +90,7 @@ The complementary [block of repeated content][] starts with a `link` that jumps 
 
 #### Passed Example 2
 
-The link to skip the complementary [block of repeated content][] is the first [focusable][] element inside it (in focus order), even if it is not the first element in tree order.
+In this [document][], the link to skip the complementary [block of repeated content][] is the first [focusable][] element inside it (in focus order), even if it is not the first element in tree order.
 
 ```html
 <html lang="en">
@@ -117,7 +117,7 @@ The link to skip the complementary [block of repeated content][] is the first [f
 
 #### Passed Example 3
 
-The link to skip the complementary [block of repeated content][] is located before it and is the last [focusable][] element before it.
+In this [document][], the link to skip the complementary [block of repeated content][] is located before it and is the last [focusable][] element before it.
 
 ```html
 <html lang="en">
@@ -145,7 +145,7 @@ The link to skip the complementary [block of repeated content][] is located befo
 
 #### Passed Example 4
 
-The link to skip the complementary [block of repeated content][] is not normally [visible][] but becomes so when [focused][].
+In this [document][], the link to skip the complementary [block of repeated content][] is not normally [visible][] but becomes so when [focused][].
 
 ```html
 <html lang="en">
@@ -173,7 +173,7 @@ The link to skip the complementary [block of repeated content][] is not normally
 
 #### Passed Example 5
 
-The `div` element just before the complementary [block of repeated content][] has a [semantic role][] of `link`, can be [focused][] and activated by keyboard only, and skips the [block of repeated content][].
+In this [document][], the `div` element just before the complementary [block of repeated content][] has a [semantic role][] of `link`, can be [focused][] and activated by keyboard only, and skips the [block of repeated content][].
 
 ```html
 <html lang="en">
@@ -201,7 +201,7 @@ The `div` element just before the complementary [block of repeated content][] ha
 
 #### Passed Example 6
 
-The link to skip the complementary [block of repeated content][] is the first [focusable][] element inside it (in focus order).
+In this [document][], the link to skip the complementary [block of repeated content][] is the first [focusable][] element inside it (in focus order).
 
 ```html
 <html lang="en">
@@ -228,7 +228,7 @@ The link to skip the complementary [block of repeated content][] is the first [f
 
 #### Passed Example 7
 
-The link to skip the complementary [block of repeated content][] is located before it and is the last [focusable][] element before it.
+In this [document][], the link to skip the complementary [block of repeated content][] is located before it and is the last [focusable][] element before it.
 
 ```html
 <html lang="en">
@@ -256,7 +256,7 @@ The link to skip the complementary [block of repeated content][] is located befo
 
 #### Passed Example 8
 
-The link at the start of the complementary [block of repeated content][] jumps [at its end][at the end].
+In this [document][], the link at the start of the complementary [block of repeated content][] jumps [at its end][at the end].
 
 ```html
 <html lang="en">
@@ -284,7 +284,7 @@ The link at the start of the complementary [block of repeated content][] jumps [
 
 #### Passed Example 9
 
-The link to skip the complementary [block of repeated content][] jumps [at its end][at the end] (at the first [perceivable content][] after it, because the `hr` element is not [palpable content][], hence not [perceivable content][]).
+In this [document][], the link to skip the complementary [block of repeated content][] jumps [at its end][at the end] (at the first [perceivable content][] after it, because the `hr` element is not [palpable content][], hence not [perceivable content][]).
 
 ```html
 <html lang="en">
@@ -312,7 +312,7 @@ The link to skip the complementary [block of repeated content][] jumps [at its e
 
 #### Passed Example 10
 
-The link to skip the complementary [block of repeated content][] jumps [at its end][at the end] (at the first [perceivable content][] after it, because the `img` element has a [semantic role][] of `presentation`, hence is not [perceivable content][]).
+In this [document][], the link to skip the complementary [block of repeated content][] jumps [at its end][at the end] (at the first [perceivable content][] after it, because the `img` element has a [semantic role][] of `presentation`, hence is not [perceivable content][]).
 
 ```html
 <html lang="en">
@@ -340,7 +340,7 @@ The link to skip the complementary [block of repeated content][] jumps [at its e
 
 #### Passed Example 11
 
-The link to skip the complementary [block of repeated content][] jumps [at its end][at the end] (at the first [perceivable content][] after it, because the `div` element is neither [visible][] nor [included in the accessibility tree][], hence it is not [perceivable content][]).
+In this [document][], the link to skip the complementary [block of repeated content][] jumps [at its end][at the end] (at the first [perceivable content][] after it, because the `div` element is neither [visible][] nor [included in the accessibility tree][], hence it is not [perceivable content][]).
 
 ```html
 <html lang="en">
@@ -368,7 +368,7 @@ The link to skip the complementary [block of repeated content][] jumps [at its e
 
 #### Passed Example 12
 
-This [document][] has no [block fo repeated content][] because there is no other page linked from it.
+This [document][] has no [block of repeated content][] because there is no other page linked from it.
 
 ```html
 <html lang="en">
@@ -395,7 +395,7 @@ This [document][] has no [block fo repeated content][] because there is no other
 
 #### Failed Example 1
 
-There is no link to skip the complementary [block of repeated content][].
+In this [document][], there is no link to skip the complementary [block of repeated content][].
 
 ```html
 <html lang="en">
@@ -421,7 +421,7 @@ There is no link to skip the complementary [block of repeated content][].
 
 #### Failed Example 2
 
-The link to skip the complementary [block of repeated content][] is not the last [focusable][] element before it, in focus order.
+In this [document][], the link to skip the complementary [block of repeated content][] is not the last [focusable][] element before it, in focus order.
 
 ```html
 <html lang="en">
@@ -449,7 +449,7 @@ The link to skip the complementary [block of repeated content][] is not the last
 
 #### Failed Example 3
 
-The link to skip the complementary [block of repeated content][] is not the first [focusable][] element inside it (in focus order).
+In this [document][], the link to skip the complementary [block of repeated content][] is not the first [focusable][] element inside it (in focus order).
 
 ```html
 <html lang="en">
@@ -476,7 +476,7 @@ The link to skip the complementary [block of repeated content][] is not the firs
 
 #### Failed Example 4
 
-The element to skip the complementary [block of repeated content][] does not have a role of `link`.
+In this [document][], the element to skip the complementary [block of repeated content][] does not have a role of `link`.
 
 ```html
 <html lang="en">
@@ -504,7 +504,7 @@ The element to skip the complementary [block of repeated content][] does not hav
 
 #### Failed Example 5
 
-The link to skip the complementary [block of repeated content][] is not [included in the accessibility tree][].
+In this [document][], the link to skip the complementary [block of repeated content][] is not [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -531,7 +531,7 @@ The link to skip the complementary [block of repeated content][] is not [include
 
 #### Failed Example 6
 
-The link to skip the complementary [block of repeated content][] is not [visible][] even when [focused][].
+In this [document][], the link to skip the complementary [block of repeated content][] is not [visible][] even when [focused][].
 
 ```html
 <html lang="en">
@@ -558,7 +558,7 @@ The link to skip the complementary [block of repeated content][] is not [visible
 
 #### Failed Example 7
 
-The element with a [semantic role][] of `link` which skips the complementary [block of repeated content][] cannot be activated by keyboard only.
+In this [document][], the element with a [semantic role][] of `link` which skips the complementary [block of repeated content][] cannot be activated by keyboard only.
 
 ```html
 <html lang="en">
@@ -585,7 +585,7 @@ The element with a [semantic role][] of `link` which skips the complementary [bl
 
 #### Failed Example 8
 
-The link at the start of the first complementary [block of repeated content][] skips more than just this [block of repeated content][] (it also skips the second complementary [block of repeated content][]).
+In this [document][], the link at the start of the first complementary [block of repeated content][] skips more than just this [block of repeated content][] (it also skips the second complementary [block of repeated content][]).
 
 ```html
 <html lang="en">
@@ -616,7 +616,38 @@ The link at the start of the first complementary [block of repeated content][] s
 
 #### Failed Example 9
 
-The link to skip the complementary [block of repeated content][] has non-descriptive name.
+In this [document][], there is a link to skip the first complementary [block of repeated content][], but not the second one.
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+		<aside id="about-book">
+			<a href="#bio-translator">Skip additional information</a>
+			<h1>About the book</h1>
+			The Romance of the Three Kingdoms is a 14th century historical novel.
+		</aside>
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			Yu Sumei is a professor of English at East China Normal University.
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
+#### Failed Example 10
+
+In this [document][], the link to skip the complementary [block of repeated content][] has non-descriptive name.
 
 ```html
 <html lang="en">
@@ -641,9 +672,9 @@ The link to skip the complementary [block of repeated content][] has non-descrip
 </html>
 ```
 
-#### Failed Example 10
+#### Failed Example 11
 
-The link to skip the complementary [block of repeated content][] jumps before the last [perceivable content][] in it.
+In this [document][], the link to skip the complementary [block of repeated content][] jumps before the last [perceivable content][] in it.
 
 ```html
 <html lang="en">
@@ -669,9 +700,9 @@ The link to skip the complementary [block of repeated content][] jumps before th
 </html>
 ```
 
-#### Failed Example 11
+#### Failed Example 12
 
-The link to skip the complementary [block of repeated content][] jumps after the first [perceivable content][] in the next section (the image).
+In this [document][], the link to skip the complementary [block of repeated content][] jumps after the first [perceivable content][] in the next section (the image).
 
 ```html
 <html lang="en">

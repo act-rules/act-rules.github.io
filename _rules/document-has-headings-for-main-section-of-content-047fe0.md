@@ -27,7 +27,7 @@ This rule applies to any [HTML web page][].
 
 ## Expectations
 
-The first node in the [flat tree][] which is inside the [main section of content][] of the test target and has a non-empty [accessible name][]:
+The first node in the [flat tree][] which is inside the [main block of content][] of the test target and has a non-empty [accessible name][]:
 
 - has a [semantic role][] of `heading`; and
 - is [visible][]; and
@@ -41,7 +41,7 @@ The first node in the [flat tree][] which is inside the [main section of content
 
 ## Accessibility Support
 
-- Having a heading for the [main section of content][] is sufficient to pass [Success Criterion 2.4.1: Bypass blocks][sc241]. However, if headings are used for that goal, they will only benefit users who can actually navigate from heading to heading (such a functionality can be provided by browsers, browsers plugins, screen readers or other assistive technologies). Users without any possibility for heading navigation will be left without way of bypassing blocks of repeated content and will still experience accessibility issues. Therefore, it is recommended to provide other ways of bypassing blocks.
+- Having a heading for the [main block of content][] is sufficient to pass [Success Criterion 2.4.1: Bypass blocks][sc241]. However, if headings are used for that goal, they will only benefit users who can actually navigate from heading to heading (such a functionality can be provided by browsers, browsers plugins, screen readers or other assistive technologies). Users without any possibility for heading navigation will be left without way of bypassing blocks of repeated content and will still experience accessibility issues. Therefore, it is recommended to provide other ways of bypassing blocks.
 - When headings are rendered without sufficient visual cues, they are not perceived as headings by sighted users. In this case, passing this rule might still fail [Technique H69: Providing heading elements at the beginning of each section of content][tech h69] and [Success Criterion 2.4.1: Bypass blocks][sc241]. Additionally, this is likely a failure of [Success Criterion 1.3.1: Info and Relationships][sc131].
 
 ## Background
@@ -58,7 +58,7 @@ The first node in the [flat tree][] which is inside the [main section of content
 
 #### Passed Example 1
 
-This [document][] has a `h1` heading at the start of its [main section of content][].
+This [document][] has a `h1` heading at the start of its [main block of content][].
 
 ```html
 <html>
@@ -82,7 +82,7 @@ This [document][] has a `h1` heading at the start of its [main section of conten
 
 #### Passed Example 2
 
-This [document][] has a `h2` heading at the start of its [main section of content][].
+This [document][] has a `h2` heading at the start of its [main block of content][].
 
 ```html
 <html>
@@ -108,7 +108,7 @@ This [document][] has a `h2` heading at the start of its [main section of conten
 
 #### Passed Example 3
 
-This [document][] has one [section of content][] for the navigation links, and the [main section of content][]. Each starts with a `h1` heading.
+This [document][] has one [section of content][] for the navigation links, and the [main block of content][]. Each starts with a `h1` heading.
 
 **Note:** In this [document][], the [sections of content][section of content] are identified by the level 1 heading at their start.
 
@@ -136,7 +136,7 @@ This [document][] has one [section of content][] for the navigation links, and t
 
 #### Passed Example 4
 
-In this [document][], the heading is not the first element of the [main section of content][], but it is the first with a non-empty [accessible name][] (inherited from its content).
+In this [document][], the heading is not the first element of the [main block of content][], but it is the first with a non-empty [accessible name][] (inherited from its content).
 
 ```html
 <html>
@@ -161,7 +161,7 @@ In this [document][], the heading is not the first element of the [main section 
 
 #### Passed Example 5
 
-The image at the start of the [main section of content][] has an empty [accessible name][]. Thus, the first node with a non-empty [accessible name][] is the `h1` element and the rule passes.
+The image at the start of the [main block of content][] has an empty [accessible name][]. Thus, the first node with a non-empty [accessible name][] is the `h1` element and the rule passes.
 
 ```html
 <html>
@@ -187,7 +187,7 @@ The image at the start of the [main section of content][] has an empty [accessib
 
 #### Passed Example 6
 
-The [main section of content][] of this [document][] starts with a `div` element with a role of `heading`.
+The [main block of content][] of this [document][] starts with a `div` element with a role of `heading`.
 
 ```html
 <html>
@@ -243,7 +243,7 @@ This [document][] is using image as heading, the [accessible name][] of the imag
 
 #### Failed Example 1
 
-For the [main section of content][], the first node with a non-empty [accessible name][] does not have a [semantic role][] of `heading`, even though it is styled to appear as one.
+For the [main block of content][], the first node with a non-empty [accessible name][] does not have a [semantic role][] of `heading`, even though it is styled to appear as one.
 
 ```html
 <html>
@@ -267,7 +267,7 @@ For the [main section of content][], the first node with a non-empty [accessible
 
 #### Failed Example 2
 
-The [main section of content][] of this [document][] starts with a `h1` heading, but it is not [visible][] (because it is off screen).
+The [main block of content][] of this [document][] starts with a `h1` heading, but it is not [visible][] (because it is off screen).
 
 ```html
 <html>
@@ -291,7 +291,7 @@ The [main section of content][] of this [document][] starts with a `h1` heading,
 
 #### Failed Example 3
 
-The heading of the [main section of content][] is not [included in the accessibility tree][] because of the `aria-hidden` attribute.
+The heading of the [main block of content][] is not [included in the accessibility tree][] because of the `aria-hidden` attribute.
 
 ```html
 <html>
@@ -315,7 +315,7 @@ The heading of the [main section of content][] is not [included in the accessibi
 
 #### Failed Example 4
 
-The `h1` element at the start of the [main section of content][] has an empty [accessible name][] (because of the `aria-labelledby` attribute). Therefore, the first node with a non-empty [accessible name][] is the `img` element which does not have a [semantic role][] of `heading`.
+The `h1` element at the start of the [main block of content][] has an empty [accessible name][] (because of the `aria-labelledby` attribute). Therefore, the first node with a non-empty [accessible name][] is the `img` element which does not have a [semantic role][] of `heading`.
 
 ```html
 <html>
@@ -360,7 +360,7 @@ This [document][] is not an [HTML web page][].
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of Landmark Roles'
-[main section of content]: #main-section-of-content 'Definition of Main Section of Content'
+[main block of content]: #main-block-of-content 'Definition of Main Block of Content'
 [section of content]: #section-of-content 'Definition of Section of Content'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationships'

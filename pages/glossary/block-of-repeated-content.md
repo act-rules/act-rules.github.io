@@ -1,5 +1,5 @@
 ---
-title: Block of content
+title: Block of repeated content
 key: block-of-repeated-content
 unambiguous: true
 objective: false

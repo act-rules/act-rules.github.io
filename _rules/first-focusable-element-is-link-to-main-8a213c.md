@@ -26,7 +26,11 @@ acknowledgments:
 
 This rule applies to any [HTML web page][].
 
-## Expectation
+## Expectation 1
+
+There is at least one [focusable][] element within the test target.
+
+## Expectation 2
 
 The first [focusable][] element within the test target:
 

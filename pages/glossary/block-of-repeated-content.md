@@ -15,6 +15,8 @@ A [block of content][], B, inside an [HTML web page][], P, is a _block of repeat
 - (**repeated**) there exist in P' a [block of content][] which is [equivalent][equivalent resource] to B; and
 - (**maximal**) B is not strictly included in another block of repeated content.
 
+Note that this definition only consider pages at "distance 1" from the current page. The instrument leading there will usually be either a link, sometimes a button. Note also that P' can be any page and is not restricted, for example, to pages of the same website.
+
 [block of content]: #block-of-content 'Definition of Block of Content'
 [equivalent resource]: #equivalent-resource 'Definition of Equivalent Resource'
 [html web page]: #web-page-html 'Definition of Web Page'

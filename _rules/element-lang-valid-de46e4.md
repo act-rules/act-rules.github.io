@@ -152,7 +152,7 @@ The `lang` attribute value has a valid language tag, but does not have a [visibl
 		<p lang="en">
 			<span style="display: none;">
 				They wandered into a strange Tiki bar on the edge of the small beach town.
-			<span>
+			</span>
 		</p>
 	</body>
 </html>
@@ -194,8 +194,7 @@ An empty value for the `lang` attribute is ignored, as the rule only applies to 
 [bcp 47]: https://tools.ietf.org/html/bcp47#section-2.1
 [valid language tag]: #valid-language-tag
 [whitespace]: #whitespace 'Definition of Whitespace'
-[success criterion 3.1.1: language of page]: https://www.w3.org/TR/WCAG21/#language-of-page
-[visible text content]: #visible-text-content 'Definition of visible text content'
 [visible]: #visible 'Definition of visible'
 [text node]: https://dom.spec.whatwg.org/#text
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
+[attribute value]: #attribute-value 'Definition of Attribute Value'

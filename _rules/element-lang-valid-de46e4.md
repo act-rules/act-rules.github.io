@@ -25,18 +25,17 @@ acknowledgments:
 
 ## Applicability
 
-This rules applies to any HTML element with a `lang` [attribute value][] that is not empty (`""`) and for which the following are all true:
+This rules applies to any HTML element with a `lang` [attribute value][] that is not empty (`""`) and for which all of the following is true:
 
 - the element is a [descendant][] in the [flat tree][] of a `body` element; and
 - the element has a [node document][] with a [content type][] of `text/html`.
+- the element has a [visible][] [text node][] as a [descendant][] in the [flat tree][].
 
 ## Expectation
 
 For each test target, the value of the `lang` attribute is a [valid language tag][].
 
 ## Assumptions
-
-- The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page][].
 
 - This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags](#valid-language-tag) even if these do not conform to the [BCP 47][] syntax.
 
@@ -143,6 +142,22 @@ The `lang` attribute value consists of only [whitespace][] and is not a [valid l
 </html>
 ```
 
+#### Failed Example 4
+
+The `lang` attribute value has a valid language tag, but does not have a [visible][] [text node][] as a [descendant][] in the [flat tree][].
+
+```html
+<html>
+	<body>
+		<p lang="en">
+			<span style="display: none;">
+				They wandered into a strange Tiki bar on the edge of the small beach town.
+			<span>
+		</p>
+	</body>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -180,3 +195,7 @@ An empty value for the `lang` attribute is ignored, as the rule only applies to 
 [valid language tag]: #valid-language-tag
 [whitespace]: #whitespace 'Definition of Whitespace'
 [success criterion 3.1.1: language of page]: https://www.w3.org/TR/WCAG21/#language-of-page
+[visible text content]: #visible-text-content 'Definition of visible text content'
+[visible]: #visible 'Definition of visible'
+[text node]: https://dom.spec.whatwg.org/#text
+[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant

@@ -27,7 +27,7 @@ This rule applies to any [HTML web page][].
 
 ## Expectations
 
-Either the test target has no [main block of content][], or the first node in the [flat tree][] which is inside the [main block of content][] of the test target and has a non-empty [accessible name][]:
+The first node in the [flat tree][] which is inside the [main block of content][] of the test target and has a non-empty [accessible name][]:
 
 - has a [semantic role][] of `heading`; and
 - is [visible][]; and
@@ -38,6 +38,7 @@ Either the test target has no [main block of content][], or the first node in th
 ## Assumptions
 
 - This rule assumes that headings used to pass [Technique H69: Providing heading elements at the beginning of each section of content][tech h69] have to be [included in the accessibility tree][] in order to be beneficial to users of assistive technologies.
+- This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
 
 ## Accessibility Support
 
@@ -237,14 +238,6 @@ This [document][] is using image as heading, the [accessible name][] of the imag
 		</main>
 	</body>
 </html>
-```
-
-#### Passed Example 8
-
-This [document][] is empty and therefore has no [main block of content][].
-
-```html
-<html></html>
 ```
 
 ### Failed

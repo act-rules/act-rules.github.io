@@ -16,8 +16,8 @@ input_aspects:
   - Language
 acknowledgments:
   authors:
-    - Jean-Yves Moyen
     - Christina Adams
+    - Jean-Yves Moyen
   assets:
     - _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014, ISBN 9780804843935)
     - Image from a Ming Dynasty edition of the Romance of the Three Kingdoms, original kept in the library holdings of Peking University.

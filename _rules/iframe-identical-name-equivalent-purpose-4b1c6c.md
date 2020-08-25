@@ -16,9 +16,9 @@ input_aspects:
   - Language
 acknowledgments:
   authors:
-    - Jey Nandakumar
     - Audrey Maniez
     - Jean-Yves Moyen
+    - Jey Nandakumar
 ---
 
 ## Applicability

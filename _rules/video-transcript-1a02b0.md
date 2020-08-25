@@ -23,8 +23,8 @@ input_aspects:
   - Language
 acknowledgments:
   authors:
-    - Wilco Fiers
     - Brian Bors
+    - Wilco Fiers
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)

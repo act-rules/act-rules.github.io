@@ -1,6 +1,6 @@
 ---
 title: Block of content
-key: block-of-content
+key: block-of-repeated-content
 unambiguous: true
 objective: false
 input_aspects:
